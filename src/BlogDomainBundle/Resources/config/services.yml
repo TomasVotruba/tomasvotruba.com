@@ -1,0 +1,9 @@
+services:
+    blog.controller.blog_controller:
+        class: BlogDomainBundle\Controller\BlogController
+
+    blog.controller.rss_controller:
+        class: BlogDomainBundle\Controller\RssController
+
+    blog.controller.security_controller:
+        class: BlogDomainBundle\Controller\SecurityController

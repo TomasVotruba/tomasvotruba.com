@@ -1,0 +1,36 @@
+imports:
+    - { resource: assetic.yml }
+    - { resource: doctrine.yml }
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: twig.yml }
+    - { resource: framework.yml }
+
+framework:
+    assets:         true
+    ide: sublime
+#    esi:             ~
+#    translator:      { fallback: "%locale%" }
+    secret:          "%secret%"
+#    router:
+#        resource: "%kernel.root_dir%/config/routing.yml"
+#        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+#    validation:      { enable_annotations: true }
+    templating:
+        engines: ['twig', 'php']
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # handler_id set to null will use default session handler from php.ini
+        handler_id:  ~
+    fragments:       ~
+    http_method_override: true
+
+# Twig Configuration (used for rendering application templates)
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    form_themes:
+        - "bootstrap_3_layout.html.twig"

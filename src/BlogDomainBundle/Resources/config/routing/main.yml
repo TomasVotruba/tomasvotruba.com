@@ -1,0 +1,17 @@
+blog_index:
+    path: /blog
+    defaults:
+        _controller: blog.controller.blog_controller:indexAction
+        template:    'blog/index.html.twig'
+
+blog_rss:
+    path: /rss
+    defaults:
+        _controller: blog.controller.rss_controller:indexAction
+        template:    'rss/index.html.twig'
+
+login:
+    path: /login
+    defaults:
+        _controller: blog.controller.security_controller:loginAction
+        template:    'security/login.html.twig'

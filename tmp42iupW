@@ -1,0 +1,14 @@
+<?php
+
+require_once __DIR__.'/vendor/deployer/deployer/recipe/symfony.php';
+
+server('symfonisti', '178.62.140.4', 22)
+    ->user('root')
+    ->identityFile('~/.ssh/digoce.pub', '~/.ssh/digoce')
+    ->forwardAgent()
+    ->env('deploy_path', '/var/www/hosts/symfonisti.cz')
+    ->env('branch', 'master')
+    ->stage('production');
+
+// how to connect private repository?
+set('repository', 'git@github.com:TomasVotruba/symfonisti.cz.git');
