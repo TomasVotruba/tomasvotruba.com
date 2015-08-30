@@ -24,6 +24,7 @@ framework:
     # and any custom configuration string, such as: "phpstorm://open?file=%%f&line=%%l"
     # See http://symfony.com/doc/current/reference/configuration/framework.html#ide
     ide: sublime
+    assets: true
 
     # esi:             ~
     translator:      { fallback: "%locale%" }
@@ -85,11 +86,3 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
-
-# Swiftmailer Configuration (used to send emails)
-swiftmailer:
-    transport: "%mailer_transport%"
-    host:      "%mailer_host%"
-    username:  "%mailer_user%"
-    password:  "%mailer_password%"
-    spool:     { type: memory }

@@ -1199,8 +1199,8 @@ $requestUri = $this->getRequestUri();
 if ($baseUrl && false !== $prefix = $this->getUrlencodedPrefix($requestUri, $baseUrl)) {
 return $prefix;
 }
-if ($baseUrl && false !== $prefix = $this->getUrlencodedPrefix($requestUri, rtrim(dirname($baseUrl),'/').'/')) {
-return rtrim($prefix,'/');
+if ($baseUrl && false !== $prefix = $this->getUrlencodedPrefix($requestUri, rtrim(dirname($baseUrl),'/'.DIRECTORY_SEPARATOR).'/')) {
+return rtrim($prefix,'/'.DIRECTORY_SEPARATOR);
 }
 $truncatedRequestUri = $requestUri;
 if (false !== $pos = strpos($requestUri,'?')) {
@@ -1213,7 +1213,7 @@ return'';
 if (strlen($requestUri) >= strlen($baseUrl) && (false !== $pos = strpos($requestUri, $baseUrl)) && $pos !== 0) {
 $baseUrl = substr($requestUri, 0, $pos + strlen($baseUrl));
 }
-return rtrim($baseUrl,'/');
+return rtrim($baseUrl,'/'.DIRECTORY_SEPARATOR);
 }
 protected function prepareBasePath()
 {
@@ -1279,7 +1279,7 @@ private static function createRequestFromFactory(array $query = array(), array $
 {
 if (self::$requestFactory) {
 $request = call_user_func(self::$requestFactory, $query, $request, $attributes, $cookies, $files, $server, $content);
-if (!$request instanceof Request) {
+if (!$request instanceof self) {
 throw new \LogicException('The Request factory must return an instance of Symfony\Component\HttpFoundation\Request.');
 }
 return $request;
@@ -1393,9 +1393,6 @@ $this->headers = new ResponseHeaderBag($headers);
 $this->setContent($content);
 $this->setStatusCode($status);
 $this->setProtocolVersion('1.0');
-if (!$this->headers->has('Date')) {
-$this->setDate(new \DateTime(null, new \DateTimeZone('UTC')));
-}
 }
 public static function create($content ='', $status = 200, $headers = array())
 {
@@ -1457,6 +1454,9 @@ public function sendHeaders()
 {
 if (headers_sent()) {
 return $this;
+}
+if (!$this->headers->has('Date')) {
+$this->setDate(new \DateTime());
 }
 header(sprintf('HTTP/%s %s %s', $this->version, $this->statusCode, $this->statusText), true, $this->statusCode);
 foreach ($this->headers->allPreserveCase() as $name => $values) {
@@ -1568,11 +1568,14 @@ return $this;
 }
 public function mustRevalidate()
 {
-return $this->headers->hasCacheControlDirective('must-revalidate') || $this->headers->has('proxy-revalidate');
+return $this->headers->hasCacheControlDirective('must-revalidate') || $this->headers->hasCacheControlDirective('proxy-revalidate');
 }
 public function getDate()
 {
-return $this->headers->getDate('Date', new \DateTime());
+if (!$this->headers->has('Date')) {
+$this->setDate(new \DateTime());
+}
+return $this->headers->getDate('Date');
 }
 public function setDate(\DateTime $date)
 {
@@ -2002,6 +2005,7 @@ const SCOPE_PROTOTYPE ='prototype';
 public function set($id, $service, $scope = self::SCOPE_CONTAINER);
 public function get($id, $invalidBehavior = self::EXCEPTION_ON_INVALID_REFERENCE);
 public function has($id);
+public function initialized($id);
 public function getParameter($name);
 public function hasParameter($name);
 public function setParameter($name, $value);
@@ -2014,22 +2018,23 @@ public function isScopeActive($name);
 }
 namespace Symfony\Component\DependencyInjection
 {
-interface IntrospectableContainerInterface extends ContainerInterface
+interface ResettableContainerInterface extends ContainerInterface
 {
-public function initialized($id);
+public function reset();
 }
 }
 namespace Symfony\Component\DependencyInjection
 {
 use Symfony\Component\DependencyInjection\Exception\InactiveScopeException;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
+use Symfony\Component\DependencyInjection\Exception\LogicException;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 use Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\DependencyInjection\ParameterBag\FrozenParameterBag;
-class Container implements IntrospectableContainerInterface
+class Container implements ResettableContainerInterface
 {
 protected $parameterBag;
 protected $services = array();
@@ -2072,12 +2077,15 @@ $this->parameterBag->set($name, $value);
 }
 public function set($id, $service, $scope = self::SCOPE_CONTAINER)
 {
+if (!in_array($scope, array('container','request')) || ('request'=== $scope &&'request'!== $id)) {
+@trigger_error('The concept of container scopes is deprecated since version 2.8 and will be removed in 3.0. Omit the third parameter.', E_USER_DEPRECATED);
+}
 if (self::SCOPE_PROTOTYPE === $scope) {
 throw new InvalidArgumentException(sprintf('You cannot set service "%s" of scope "prototype".', $id));
 }
 $id = strtolower($id);
 if ('service_container'=== $id) {
-return;
+throw new InvalidArgumentException('You cannot set service "service_container".');
 }
 if (self::SCOPE_CONTAINER !== $scope) {
 if (!isset($this->scopedServices[$scope])) {
@@ -2086,9 +2094,6 @@ throw new RuntimeException(sprintf('You cannot set service "%s" of inactive scop
 $this->scopedServices[$scope][$id] = $service;
 }
 $this->services[$id] = $service;
-if (method_exists($this, $method ='synchronize'.strtr($id, $this->underscoreMap).'Service')) {
-$this->$method();
-}
 if (null === $service) {
 if (self::SCOPE_CONTAINER !== $scope) {
 unset($this->scopedServices[$scope][$id]);
@@ -2171,12 +2176,19 @@ public function initialized($id)
 {
 $id = strtolower($id);
 if ('service_container'=== $id) {
-return true;
+return false;
 }
 if (isset($this->aliases[$id])) {
 $id = $this->aliases[$id];
 }
 return isset($this->services[$id]) || array_key_exists($id, $this->services);
+}
+public function reset()
+{
+if (!empty($this->scopedServices)) {
+throw new LogicException('Resetting the container is not allowed when a scope is active.');
+}
+$this->services = array();
 }
 public function getServiceIds()
 {
@@ -2192,6 +2204,9 @@ return array_unique(array_merge($ids, array_keys($this->services)));
 }
 public function enterScope($name)
 {
+if ('request'!== $name) {
+@trigger_error('The '.__METHOD__.' method is deprecated since version 2.8 and will be removed in 3.0.', E_USER_DEPRECATED);
+}
 if (!isset($this->scopes[$name])) {
 throw new InvalidArgumentException(sprintf('The scope "%s" does not exist.', $name));
 }
@@ -2218,6 +2233,9 @@ $this->scopedServices[$name] = array();
 }
 public function leaveScope($name)
 {
+if ('request'!== $name) {
+@trigger_error('The '.__METHOD__.' method is deprecated since version 2.8 and will be removed in 3.0.', E_USER_DEPRECATED);
+}
 if (!isset($this->scopedServices[$name])) {
 throw new InvalidArgumentException(sprintf('The scope "%s" is not active.', $name));
 }
@@ -2247,6 +2265,9 @@ public function addScope(ScopeInterface $scope)
 {
 $name = $scope->getName();
 $parentScope = $scope->getParentName();
+if ('request'!== $name) {
+@trigger_error('The '.__METHOD__.' method is deprecated since version 2.8 and will be removed in 3.0.', E_USER_DEPRECATED);
+}
 if (self::SCOPE_CONTAINER === $name || self::SCOPE_PROTOTYPE === $name) {
 throw new InvalidArgumentException(sprintf('The scope "%s" is reserved.', $name));
 }
@@ -2265,10 +2286,14 @@ $parentScope = $this->scopes[$parentScope];
 }
 public function hasScope($name)
 {
+if ('request'!== $name) {
+@trigger_error('The '.__METHOD__.' method is deprecated since version 2.8 and will be removed in 3.0.', E_USER_DEPRECATED);
+}
 return isset($this->scopes[$name]);
 }
 public function isScopeActive($name)
 {
+@trigger_error('The '.__METHOD__.' method is deprecated since version 2.8 and will be removed in 3.0.', E_USER_DEPRECATED);
 return isset($this->scopedServices[$name]);
 }
 public static function camelize($id)
@@ -2278,6 +2303,9 @@ return strtr(ucwords(strtr($id, array('_'=>' ','.'=>'_ ','\\'=>'_ '))), array(' 
 public static function underscore($id)
 {
 return strtolower(preg_replace(array('/([A-Z]+)([A-Z][a-z])/','/([a-z\d])([A-Z])/'), array('\\1_\\2','\\1_\\2'), strtr($id,'_','.')));
+}
+private function __clone()
+{
 }
 }
 }
@@ -2304,7 +2332,6 @@ public function registerContainerConfiguration(LoaderInterface $loader);
 public function boot();
 public function shutdown();
 public function getBundles();
-public function isClassInActiveBundle($class);
 public function getBundle($name, $first = true);
 public function locateResource($name, $dir = null, $first = true);
 public function getName();
@@ -2339,7 +2366,9 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\DependencyInjection\Loader\IniFileLoader;
 use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use Symfony\Component\DependencyInjection\Loader\DirectoryLoader;
 use Symfony\Component\DependencyInjection\Loader\ClosureLoader;
+use Symfony\Component\DependencyInjection\ResettableContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
@@ -2363,12 +2392,12 @@ protected $booted = false;
 protected $name;
 protected $startTime;
 protected $loadClassCache;
-const VERSION ='2.7.3';
-const VERSION_ID ='20703';
-const MAJOR_VERSION ='2';
-const MINOR_VERSION ='7';
-const RELEASE_VERSION ='3';
-const EXTRA_VERSION ='';
+const VERSION ='3.0.0-DEV';
+const VERSION_ID ='30000';
+const MAJOR_VERSION ='3';
+const MINOR_VERSION ='0';
+const RELEASE_VERSION ='0';
+const EXTRA_VERSION ='DEV';
 const END_OF_MAINTENANCE ='05/2018';
 const END_OF_LIFE ='05/2019';
 public function __construct($environment, $debug)
@@ -2380,16 +2409,6 @@ $this->name = $this->getName();
 if ($this->debug) {
 $this->startTime = microtime(true);
 }
-$defClass = new \ReflectionMethod($this,'init');
-$defClass = $defClass->getDeclaringClass()->name;
-if (__CLASS__ !== $defClass) {
-@trigger_error(sprintf('Calling the %s::init() method is deprecated since version 2.3 and will be removed in 3.0. Move your logic to the constructor method instead.', $defClass), E_USER_DEPRECATED);
-$this->init();
-}
-}
-public function init()
-{
-@trigger_error('The '.__METHOD__.' method is deprecated since version 2.3 and will be removed in 3.0. Move your logic to the constructor method instead.', E_USER_DEPRECATED);
 }
 public function __clone()
 {
@@ -2434,6 +2453,9 @@ foreach ($this->getBundles() as $bundle) {
 $bundle->shutdown();
 $bundle->setContainer(null);
 }
+if ($this->container instanceof ResettableContainerInterface) {
+$this->container->reset();
+}
 $this->container = null;
 }
 public function handle(Request $request, $type = HttpKernelInterface::MASTER_REQUEST, $catch = true)
@@ -2450,16 +2472,6 @@ return $this->container->get('http_kernel');
 public function getBundles()
 {
 return $this->bundles;
-}
-public function isClassInActiveBundle($class)
-{
-@trigger_error('The '.__METHOD__.' method is deprecated since version 2.6 and will be removed in version 3.0.', E_USER_DEPRECATED);
-foreach ($this->getBundles() as $bundle) {
-if (0 === strpos($class, $bundle->getNamespace())) {
-return true;
-}
-}
-return false;
 }
 public function getBundle($name, $first = true)
 {
@@ -2729,6 +2741,7 @@ new XmlFileLoader($container, $locator),
 new YamlFileLoader($container, $locator),
 new IniFileLoader($container, $locator),
 new PhpFileLoader($container, $locator),
+new DirectoryLoader($container, $locator),
 new ClosureLoader($container),
 ));
 return new DelegatingLoader($resolver);
@@ -2983,11 +2996,6 @@ public function __construct($file, $debug)
 $this->file = $file;
 $this->debug = (bool) $debug;
 }
-public function __toString()
-{
-@trigger_error('ConfigCache::__toString() is deprecated since version 2.7 and will be removed in 3.0. Use the getPath() method instead.', E_USER_DEPRECATED);
-return $this->file;
-}
 public function getPath()
 {
 return $this->file;
@@ -3018,13 +3026,13 @@ public function write($content, array $metadata = null)
 $mode = 0666;
 $umask = umask();
 $filesystem = new Filesystem();
-$filesystem->dumpFile($this->file, $content, null);
+$filesystem->dumpFile($this->file, $content);
 try {
 $filesystem->chmod($this->file, $mode, $umask);
 } catch (IOException $e) {
 }
 if (null !== $metadata && true === $this->debug) {
-$filesystem->dumpFile($this->getMetaFile(), serialize($metadata), null);
+$filesystem->dumpFile($this->getMetaFile(), serialize($metadata));
 try {
 $filesystem->chmod($this->getMetaFile(), $mode, $umask);
 } catch (IOException $e) {
@@ -3187,47 +3195,6 @@ if (true === $var) {
 return'true';
 }
 return (string) $var;
-}
-}
-}
-namespace Symfony\Component\HttpKernel\DependencyInjection
-{
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\HttpKernel\HttpKernelInterface;
-use Symfony\Component\HttpKernel\HttpKernel;
-use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\DependencyInjection\Scope;
-class ContainerAwareHttpKernel extends HttpKernel
-{
-protected $container;
-public function __construct(EventDispatcherInterface $dispatcher, ContainerInterface $container, ControllerResolverInterface $controllerResolver, RequestStack $requestStack = null, $triggerDeprecation = true)
-{
-parent::__construct($dispatcher, $controllerResolver, $requestStack);
-if ($triggerDeprecation) {
-@trigger_error('The '.__CLASS__.' class is deprecated since version 2.7 and will be removed in 3.0. Use the Symfony\Component\HttpKernel\HttpKernel class instead.', E_USER_DEPRECATED);
-}
-$this->container = $container;
-if (!$container->hasScope('request')) {
-$container->addScope(new Scope('request'));
-}
-}
-public function handle(Request $request, $type = HttpKernelInterface::MASTER_REQUEST, $catch = true)
-{
-$this->container->enterScope('request');
-$this->container->set('request', $request,'request');
-try {
-$response = parent::handle($request, $type, $catch);
-} catch (\Exception $e) {
-$this->container->set('request', null,'request');
-$this->container->leaveScope('request');
-throw $e;
-}
-$this->container->set('request', null,'request');
-$this->container->leaveScope('request');
-return $response;
 }
 }
 }
