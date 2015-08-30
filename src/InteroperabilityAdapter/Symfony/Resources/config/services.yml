@@ -1,3 +1,0 @@
-services:
-    interop.command_bus:
-        class: Interoperability\CommandBus\SimpleBusCommandBusAdapter

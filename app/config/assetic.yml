@@ -1,9 +1,0 @@
-assetic:
-    debug:          "%kernel.debug%"
-    use_controller: false
-    bundles:        [ ]
-    filters:
-        cssrewrite: ~
-        jsqueeze: ~
-        scssphp:
-            formatter: "Leafo\\ScssPhp\\Formatter\\Compressed"
