@@ -8,11 +8,11 @@
 #}
 <div class="section source-code">
     <p>
-        {{ 'help.show_code'|trans|raw }}
+        {{ 'help.show_code'|raw }}
     </p>
 
     <button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#sourceCodeModal">
-      <i class="fa fa-cogs"></i> {{ 'action.show_code'|trans }}
+      <i class="fa fa-cogs"></i> {{ 'action.show_code' }}
     </button>
 
     <div class="modal fade" id="sourceCodeModal" tabindex="-1">
@@ -22,19 +22,19 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title"><i class="fa fa-code"></i> {{ 'title.source_code'|trans }}</h4>
+                    <h4 class="modal-title"><i class="fa fa-code"></i> {{ 'title.source_code' }}</h4>
                 </div>
 
                 <div class="modal-body">
                     {% if controller %}
-                        <h3>{{ 'title.controller_code'|trans }}<small class="pull-right">{{ controller.file_path|format_file(controller.starting_line) }}</small></h3>
+                        <h3>{{ 'title.controller_code' }}<small class="pull-right">{{ controller.file_path|format_file(controller.starting_line) }}</small></h3>
                         <pre><code class="php">{{ controller.source_code }}</code></pre>
                     {% else %}
-                        <h3>{{ 'title.controller_code'|trans }}</h3>
-                        <pre><code>{{ 'not_available'|trans }}</code></pre>
+                        <h3>{{ 'title.controller_code' }}</h3>
+                        <pre><code>{{ 'not_available' }}</code></pre>
                     {% endif %}
 
-                    <h3>{{ 'title.twig_template_code'|trans }}<small class="pull-right">{{ template.file_path|format_file(template.starting_line) }}</small></h3>
+                    <h3>{{ 'title.twig_template_code' }}<small class="pull-right">{{ template.file_path|format_file(template.starting_line) }}</small></h3>
                     <pre><code class="twig">{{ template.source_code }}</code></pre>
                 </div>
             </div>

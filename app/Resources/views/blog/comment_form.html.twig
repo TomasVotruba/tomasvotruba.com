@@ -14,7 +14,7 @@
     #}
 
     <fieldset>
-        <legend>{{ 'title.add_comment'|trans }}</legend>
+        <legend>{{ 'title.add_comment' }}</legend>
 
         <div class="form-group{% if not form.vars.valid %} has-error{% endif %}">
             {{ form_label(form.content, 'Content', { label_attr: { class: 'hidden' }}) }}
@@ -27,7 +27,7 @@
         </div>
 
         <div class="form-group">
-            {{ form_widget(form.submit, { attr: { class: 'btn-primary pull-right' }, label: 'action.publish_comment'|trans }) }}
+            {{ form_widget(form.submit, { attr: { class: 'btn-primary pull-right' }, label: 'action.publish_comment' }) }}
         </div>
     </fieldset>
 {{ form_end(form) }}
