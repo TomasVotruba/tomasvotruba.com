@@ -68,9 +68,6 @@
             "BlogDomainBundle\\": "src/BlogDomainBundle"
         }
     },
-    "require-dev": {
-        "sensio/generator-bundle": "~2.3"
-    },
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -94,7 +91,9 @@
     },
     "extra": {
         "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
         "symfony-web-dir": "web",
+        "symfony-var-dir": "var",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         }

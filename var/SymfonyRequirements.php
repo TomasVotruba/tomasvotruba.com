@@ -543,7 +543,7 @@ class SymfonyRequirements extends RequirementCollection
         /* optional recommendations follow */
 
         if (file_exists(__DIR__.'/../vendor/composer')) {
-            require_once __DIR__ . '/../vendor/autoload.php';
+            require_once __DIR__.'/../vendor/autoload.php';
 
             try {
                 $r = new \ReflectionClass('Sensio\Bundle\DistributionBundle\SensioDistributionBundle');
