@@ -11,18 +11,15 @@
 
 {% block body %}
     <div class="page-header">
-        <h1>{{ 'title.homepage'|raw }}</h1>
+        <h1>Tomas Votruba | Open Source Lover</h1>
     </div>
 
     <div class="row">
         <div class="col-sm-6">
             <div class="jumbotron">
                 <p>
-                    {{ 'help.browse_app'|raw }}
-                </p>
-                <p>
                     <a class="btn btn-primary btn-lg" href="{{ path('blog_index') }}">
-                        <i class="fa fa-users"></i> {{ 'action.browse_app' }}
+                        <i class="fa fa-users"></i> Blog
                     </a>
                 </p>
             </div>
@@ -31,11 +28,8 @@
         <div class="col-sm-6">
             <div class="jumbotron">
                 <p>
-                    {{ 'help.browse_admin'|raw }}
-                </p>
-                <p>
                     <a class="btn btn-primary btn-lg" href="{{ path('admin_index') }}">
-                        <i class="fa fa-lock"></i> {{ 'action.browse_admin' }}
+                        <i class="fa fa-lock"></i> Admin
                     </a>
                 </p>
             </div>
