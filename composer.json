@@ -11,7 +11,7 @@
         "symfony/symfony"                      : "~2.7",
         "twig/extensions"                      : "~1.2",
 
-        "sensio/distribution-bundle": "dev-symfony-3 as 3.0",
+        "sensio/distribution-bundle": "dev-master as 3.0",
         "sensio/framework-extra-bundle" : "~3.0",
 
         "symfony/framework-bundle": "dev-master as 2.7",
@@ -50,18 +50,10 @@
         "symnedi/autowiring-bundle": "~0.0.2",
         "ramsey/uuid": "~2.8"
     },
-    "repositories": [
-        { "type": "vcs", "url": "http://github.com/TomasVotruba/SensioDistributionBundle" }
-    ],
     "autoload": {
         "psr-4": {
             "App\\": "app",
-            "AppBundle\\": "src/AppBundle",
-            "Project\\": "src/Project",
-            "Interoperability\\": "src/Interoperability",
-            "InteroperabilityAdapter\\": "src/InteroperabilityAdapter",
-            "BlogDomain\\": "src/BlogDomain",
-            "BlogDomainBundle\\": "src/BlogDomainBundle"
+            "AppBundle\\": "src/AppBundle"
         }
     },
     "scripts": {
