@@ -10,9 +10,3 @@ framework:
 web_profiler:
     toolbar: %kernel.debug%
     intercept_redirects: false
-
-assetic:
-    use_controller: true
-
-#swiftmailer:
-#    delivery_address: me@example.com

@@ -1,3 +1,7 @@
 services:
     app.controller.blog:
         class: AppBundle\Controller\BlogController
+
+    # note: manually added, try to fix it propperly
+    security.csrf.token_manager:
+        class: Symfony\Component\Security\Csrf\CsrfTokenManager

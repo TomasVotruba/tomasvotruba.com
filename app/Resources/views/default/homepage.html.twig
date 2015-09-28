@@ -11,28 +11,80 @@
 
 {% block body %}
     <div class="page-header">
-        <h1>Tomas Votruba | Open Source Lover</h1>
+        <h1>Tomáš Votruba</h1>
+        <h2>Osobní PHP kouč && Open Source Lover</h2>
     </div>
+
+    <br>
+    <br>
+    <br>
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="jumbotron">
-                <p>
-                    <a class="btn btn-primary btn-lg" href="{{ path('blog_index') }}">
-                        <i class="fa fa-users"></i> Blog
-                    </a>
-                </p>
+                <a href="http://www.naucmese.cz/kurz/penetrujeme-nette-framework">Zaplním tvé mezery v Nette, Symfony i Doctrine</a>
             </div>
         </div>
-
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="jumbotron">
-                <p>
-                    <a class="btn btn-primary btn-lg" href="{{ path('admin_index') }}">
-                        <i class="fa fa-lock"></i> Admin
-                    </a>
-                </p>
+                <a href="http://lekarna.cz">Spisuji čistý SOLID kód</a>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="jumbotron">
+                <a href="http://www.symfony.cz">Ladím českou Symfony komunitu</a>
             </div>
         </div>
     </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="row text-center">
+        <div class="col-md-12">
+            <p>Napiš mi info@tomasvotruba.cz<br>nebo zavolej 776 778 332.</p>
+        </div>
+    </div>
+
+
+
+
+    <p>
+    <ul>
+
+    {#About me:#}
+        {#Github |#}
+        {#Symfony community - SO answers#}
+        {#Linked in#}
+
+    {#---#}
+
+    {#<li>Nette vývojář od 2010</li>#}
+        {#<li>Symfony vývojář od 2014</li>#}
+    {#</ul>#}
+    {#</p>#}
+
+    {#<div class="row">#}
+        {#<div class="col-sm-6">#}
+            {#<div class="jumbotron">#}
+                {#<p>#}
+                    {#<a class="btn btn-primary btn-lg" href="{{ path('blog_index') }}">#}
+                        {#<i class="fa fa-users"></i> Blog#}
+                    {#</a>#}
+                {#</p>#}
+            {#</div>#}
+        {#</div>#}
+
+        {#<div class="col-sm-6">#}
+            {#<div class="jumbotron">#}
+                {#<p>#}
+                    {#<a class="btn btn-primary btn-lg" href="{{ path('admin_index') }}">#}
+                        {#<i class="fa fa-lock"></i> Admin#}
+                    {#</a>#}
+                {#</p>#}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
 {% endblock %}

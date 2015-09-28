@@ -11,15 +11,14 @@ class AppKernel extends Kernel
         // application, you must add it in the following array to register it
         // in the application. Otherwise, the bundle won't be enabled and you
         // won't be able to use it.
-        $bundles = array(
+        $bundles = [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
-        );
+        ];
 
         // Some bundles are only used while developing the application or during
         // the unit and functional tests. Therefore, they are only registered
