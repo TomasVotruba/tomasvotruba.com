@@ -33,7 +33,7 @@
         "symfony/http-kernel" : "dev-master as 3.0",
         "symfony/security-acl" : "dev-master as 3.0",
         "symfony/security-core" : "dev-master as 3.0",
-        "symfony/security" : "dev-master as 2.7",
+        "symfony/security" : "dev-master as 2.8",
         "symfony/security-csrf" : "dev-master as 3.0",
         "symfony/routing": "dev-master as 3.0",
         "symfony/stopwatch": "dev-master as 3.0",
