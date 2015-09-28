@@ -1,9 +1,3 @@
-# This is the main configuration file of your application. It stores all the
-# common options for every execution environment ('prod', 'dev', 'test').
-
-# To avoid creating configuration files that are too long, we first import some
-# files that define the values for important parts of the Symfony application,
-# such as the security component and the dependency injection services
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
@@ -11,10 +5,3 @@ imports:
     - { resource: framework.yml }
     - { resource: doctrine.yml }
     - { resource: twig.yml }
-
-# These are the configuration parameters that define the application's behavior
-# and which are independent from the underlying technical infrastructure
-# See http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
-parameters:
-    # This parameter defines the codes of the locales (languages) enabled in the application
-    app_locales: en|fr|de|es|cs|ru|uk|ro|pt_BR

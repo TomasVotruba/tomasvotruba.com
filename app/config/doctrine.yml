@@ -1,10 +1,5 @@
-# Doctrine Configuration (used to access databases and manipulate their information)
 doctrine:
     dbal:
-        # instead of configuring the database access options in this file, we pull
-        # them from the app/config/parameters.yml file. The reason is that config.yml
-        # stores options that change the application behavior and parameters.yml
-        # stores options that change from one server to another
         driver:   "%database_driver%"
         host:     "%database_host%"
         port:     "%database_port%"
