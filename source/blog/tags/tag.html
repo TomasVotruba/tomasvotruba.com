@@ -1,0 +1,47 @@
+---
+layout: default
+title: Tag Archive
+generator: [posts_tag_index, pagination]
+pagination:
+    provider: page.tag_posts
+
+---
+
+{% block head_meta %}
+    <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/blog/tags/{{ page.tag|url_encode(true) }}.xml" title="{{ site.title }} '{{ page.tag }}' tag feed" />
+    <meta name="robots" content="noindex, follow">
+{% endblock %}
+
+{% block title %}{{ page.title }} "{{ page.tag }}"{% endblock %}
+{% block content %}
+{% set year = '0' %}
+<h2>"{{ page.tag }}"</h2>
+{% for post in page.pagination.items %}
+{% set this_year %}{{ post.date | date("Y") }}{% endset %}
+{% if year != this_year %}
+  {% set month = '0' %}
+  {% set year = this_year %}
+{% endif %}
+{% set this_month %}{{ post.date | date("F") }}{% endset %}
+{% if month != this_month %}
+  {% set month = this_month %}
+  <h3>{{ month }} {{ year }}</h3>
+{% endif %}
+<article>
+  <div><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></div>
+</article>
+{% endfor %}
+
+<div>
+{% if page.pagination.previous_page or page.pagination.next_page %}
+    <nav class="article clearfix">
+    {% if page.pagination.previous_page %}
+    <a class="previous" href="{{ site.url }}{{ page.pagination.previous_page.url }}" title="Previous Page"><span class="title">Previous Page</span></a>
+    {% endif %}
+    {% if page.pagination.next_page %}
+    <a class="next" href="{{ site.url }}{{ page.pagination.next_page.url }}" title="Next Page"><span class="title">Next Page</span></a>
+    {% endif %}
+    </nav>
+{% endif %}
+</div>
+{% endblock content %}

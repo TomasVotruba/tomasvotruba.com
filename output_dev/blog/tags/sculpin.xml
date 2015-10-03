@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Sculpin Blog Skeleton]]></title>
+    <link href="/blog/tags/sculpin.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2015-10-04T00:38:55+02:00</updated>
+    <id>/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[And Then There Was Textile Support]]></title>
+            <link href="/blog/2012/11/26/and-then-there-was-textile-support"/>
+            <updated>2012-11-26T00:00:00+01:00</updated>
+            <id>/blog/2012/11/26/and-then-there-was-textile-support</id>
+            <content type="html"><![CDATA[<p><a href="https://github.com/netcarver/textile">Textile</a> support was added on November 26th, 2012. Markdown is great, but so is choice. More converters for all!</p>
+
+<p>In honor of this milestone, this post is written in <strong>Textile</strong>.</p>]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[Happy Birthday Sculpin!]]></title>
+            <link href="/blog/2011/12/20/happy-birthday-sculpin"/>
+            <updated>2011-12-20T00:00:00+01:00</updated>
+            <id>/blog/2011/12/20/happy-birthday-sculpin</id>
+            <content type="html"><![CDATA[<p>The first commit to the Sculpin repository was made on December 20th, 2011.
+What a trip since then!</p>
+
+<p>Sculpin has always been a big fan of <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. So this post was
+written in Markdown. :)</p>
+]]></content>
+        </entry>
+    </feed>

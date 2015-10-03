@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{{ page.title }}{% endblock %} &mdash; {{ site.title }} &mdash; {{ site.subtitle }}</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block head_meta %}
+            <meta name="robots" content="noindex, follow">
+        {% endblock %}
+        <link href="{{ site.url }}/components/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ site.url }}/components/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ site.url }}/css/style.css" rel="stylesheet" type="text/css" />
+
+        <link href="https://webmozart.io/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://webmozart.io/css/prism.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!--<link rel="stylesheet" href="{{ site.url }}/components/highlightjs/styles/github.css" />-->
+        <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml" title="{{ site.title }} activity feed" />
+        {% block head_styles %}
+        {% endblock %}
+        {% block head_scripts %}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="brand" href="{{ site.url }}/">{{ site.title }}</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li><a href="{{ site.url }}/blog">Archiv</a></li>
+                                <li><a href="{{ site.url }}/blog/categories">Kategorie</a></li>
+                                <li><a href="{{ site.url }}/about">About</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="mainContent container">
+            <div class="row-fluid">
+                <div class="span8">
+                    {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+                </div>
+                <div class="span4 sidebar">
+                    <div class="well">
+                        <h4>{{ site.title }}{% if site.subtitle %} <small>{{ site.subtitle }}</small>{% endif %}</h4>
+                    </div>
+                    <div class="well sidebar-nav">
+                        <h4>Links</h4>
+                        <ul class="nav">
+                            <li><a href="http://sculpin.io">sculpin.io</a></li>
+                            <li><a href="http://twitter.com/getsculpin">@getsculpin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container">
+            &copy; {{ "now"|date("Y") }} {{ site.title }}
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ site.url }}/components/jquery/jquery.min.js"><\/script>')</script>
+        <script src="{{ site.url }}/components/bootstrap/js/bootstrap.min.js"></script>
+        {% block scripts %}
+        {% endblock %}
+
+        {% if site.google_analytics_tracking_id %}
+
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '{{site.google_analytics_tracking_id}}', 'auto');
+            ga('send', 'pageview');
+        </script>
+        {% endif %}
+        <script src="{{ site.url }}/components/highlightjs/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        {% block scripts_after %}
+        {% endblock %}
+    </body>
+</html>

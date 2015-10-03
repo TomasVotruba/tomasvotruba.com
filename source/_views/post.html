@@ -1,0 +1,76 @@
+{% extends "default" %}
+
+{% block head_meta %}
+    <meta name="robots" content="index, follow">
+{% endblock %}
+
+{% block content_wrapper %}
+    <article>
+        <header>
+            <h2>{{ page.title }} <small>post</small></h2>
+        </header>
+        <div>
+            {{ page.blocks.content|raw }}
+        </div>
+        {% if page.categories %}
+            <p class="categories">
+            Categories:
+            {% for category in page.categories %}
+            <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+        {% if page.tags %}
+            <p class="tags">
+            Tags:
+            {% for tag in page.tags %}
+            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+            </p>
+        {% endif %}
+
+        {% if page.previous_post or page.next_post %}
+            <nav class="article">
+                <ul>
+                    {% if page.next_post %}
+                        <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
+                    {% endif %}
+                    {% if page.previous_post %}
+                        <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+    </article>
+
+
+{% if site.disqus.shortname and site.disqus.shortname != '' %}
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = '{{site.disqus.shortname}}'; // required: replace example with your forum shortname
+
+
+    {% if page.disqus.identifier  %}var disqus_identifier = '{{page.disqus.identifier}}'; {% endif %}
+
+    {% if page.disqus.title %}var disqus_title = '{{page.disqus.title}}';{% endif %}
+
+    {% if page.disqus.url %}var disqus_url = '{{page.disqus.url}}';{% endif %}
+
+    {% if page.disqus.category_id %}var disqus_category_id = '{{page.disqus.category_id}}';{% endif %}
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered byDisqus.</a>
+</noscript>
+{% endif %}
+
+{% endblock %}

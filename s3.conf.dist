@@ -1,0 +1,14 @@
+# Path to s3cmd configuration file for your Amazon S3 bucket
+# This is useful if you have multiple sets of credentials - you can give Sculpin a locked-down IAM key for deployments
+S3_CONFIG=./.s3/s3cmd.conf
+
+# Delete files from S3 bucket that are not created by sculpin (e.g., if you delete a blog post, this will remove the corresponding HTML files for you)
+# NOTE: If you ever upload files to your bucket that are not a part of your sculpin deployment, THIS SETTING WILL DELETE THEM.
+#       This is why it is set to "false" by default; change to "true" in order to have sculpin fully manage your bucket contents.
+S3_DELETE=false
+
+# Region for S3. Set to Oregon by default, because Oregon S3 has special read-after-write consistency.
+S3_REGION=us-west-2
+
+# The name of your S3 bucket
+S3_BUCKET=www.mydomain.com

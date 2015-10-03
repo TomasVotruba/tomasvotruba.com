@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title><![CDATA[Sculpin Blog Skeleton]]></title>
+    <link href="/blog/categories/features.xml" rel="self"/>
+    <link href="/"/>
+    <updated>2015-10-04T00:38:55+02:00</updated>
+    <id>/</id>
+        <generator uri="http://sculpin.io/">Sculpin</generator>
+            <entry>
+            <title type="html"><![CDATA[Syntax Highlighting]]></title>
+            <link href="/blog/2013/02/04/highlight"/>
+            <updated>2013-02-04T00:00:00+01:00</updated>
+            <id>/blog/2013/02/04/highlight</id>
+            <content type="html"><![CDATA[<p>You're all programmers, right? And you're writing code snippets on your Sculpin
+powered blog? Yeah. So you want some highlighting with your static site generation?
+Here you go!</p>
+
+<pre><code>namespace Foo;
+
+/**
+ * Awesome Contrived Example.
+ */
+class Bar implements BarInterface
+{
+    private $baz;
+
+    public function __construct(BazInterface $baz)
+    {
+        $this-&gt;baz = $baz;
+    }
+
+    public function doIt()
+    {
+        return $this-&gt;baz-&gt;do('it');
+    }
+}
+</code></pre>
+
+<p>You can also use <a href="http://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks">fenced code blocks</a> with a syntax declaration at the top.
+You can use either <code>~</code> or <code>`</code> to mark them.</p>
+
+<pre><code class="php">if ($fencedCodeBlock-&gt;syntax !== 'PHP') {
+    throw new UnexpectedValueException("wat");
+}
+</code></pre>
+
+<p>Like this addition to the skeleton? You can thank for <a href="https://github.com/Pawka">@Pawka</a>
+for suggesting it. :)</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[This is a draft!]]></title>
+            <link href="/blog/2012/12/14/a-draft-post"/>
+            <updated>2012-12-14T00:00:00+01:00</updated>
+            <id>/blog/2012/12/14/a-draft-post</id>
+            <content type="html"><![CDATA[<p>This is a draft post. You will only see this if you are running the <code>dev</code>
+environment (<code>dev</code> is the default).</p>
+
+<p>All draft posts will automatically be tagged <code>draft</code> so they are easy to
+find.</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[And Then There Was Textile Support]]></title>
+            <link href="/blog/2012/11/26/and-then-there-was-textile-support"/>
+            <updated>2012-11-26T00:00:00+01:00</updated>
+            <id>/blog/2012/11/26/and-then-there-was-textile-support</id>
+            <content type="html"><![CDATA[<p><a href="https://github.com/netcarver/textile">Textile</a> support was added on November 26th, 2012. Markdown is great, but so is choice. More converters for all!</p>
+
+<p>In honor of this milestone, this post is written in <strong>Textile</strong>.</p>]]></content>
+        </entry>
+    </feed>
