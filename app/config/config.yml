@@ -1,7 +1,0 @@
-imports:
-    - { resource: parameters.yml }
-    - { resource: security.yml }
-    - { resource: services.yml }
-    - { resource: framework.yml }
-    - { resource: doctrine.yml }
-    - { resource: twig.yml }

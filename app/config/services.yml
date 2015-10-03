@@ -1,9 +1,0 @@
-services:
-    markdown:
-        class: AppBundle\Utils\Markdown
-
-    app.twig.markdown_filter:
-        public: false
-        class: AppBundle\Twig\MarkdownFilterExtension
-        tags:
-            - { name: twig.extension }
