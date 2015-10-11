@@ -1,33 +1,72 @@
 ---
 layout: default
 title: Home
-generator: pagination
-pagination:
-    max_per_page: 3
-use:
-    - posts
 ---
-{% for post in page.pagination.items %}
-    <article>
-        <header>
-            <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-        </header>
-        <div>
-            {{ post.blocks.content|raw }}
+
+{% block content_wrapper %}
+
+<div class="portrait-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <section class="portrait-text">
+                    <header class="page-header">
+                        <h1>Tomáš Votruba <small>Nette & Symfony</small>
+                        </h1>
+                    </header>
+
+                    <p class="lead">
+                        Ahoj, jmenuji se Tomáš Votruba. <strong>Školím Nette, Symfony a Doctrine
+                        <a href="{{ site.url }}/firemni-skoleni">ve&nbsp;firmách</a> i
+                        <a href="http://www.naucmese.cz/kurz/penetrujeme-nette-framework">individuálně</a></strong>.
+                    </p>
+
+                    <p class="lead">
+                        Mám rád lidi a open-source, proto pomáhám organizovat <a href="http://www.symfony.cz">Českou Symfony komunitu</a>. Sám přispívám do
+                        zdrojového kódu <a href="https://github.com/symfony">Symfony</a> a <a href="https://github.com/doctrine">Doctrine</a>.
+                    </p>
+
+                    <p class="lead">
+                        Taky bych rád viděl více žen v IT. Spustil jsem <a href="http://www.naucmese.cz/kurz/nette-zenam">kurz "Nette ženám"</a>, který je pro programátorky zdarma.
+                    </p>
+
+                    <ul class="list-inline list-inline-box">
+                        <li>
+                            <em class="fa fa-linkedin fa-fw"></em>
+                            <a href="https://www.linkedin.com/in/tomasvotruba1" title="Mé zkušenosti">
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <em class="fa fa-github fa-fw"></em>
+                            <a href="https://github.com/TomasVotruba" title="Mé projekty na GitHubu">
+                                GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <em class="fa fa-envelope fa-fw"></em>
+                            <a href="mailto:info@tomasvotruba.cz" title="Napište mi">
+                                info@tomasvotruba.cz
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col-sm-4 portrait-image">
+                <img src="{{ site.url }}/images/tomas-big.jpg">
+            </div>
         </div>
-        {% if post.meta.tags %}
-            <p class="tags">
-            Tags:
-            {% for tag in post.meta.tags %}
-            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
-    </article>
-{% endfor %}
-{% if page.pagination.previous_page or page.pagination.next_page %}
-    <nav>
-        {% if page.pagination.previous_page %}<a href="{{ site.url }}{{ page.pagination.previous_page.url }}">Newer Posts</a>{% endif %}<br />
-        {% if page.pagination.next_page %}<a href="{{ site.url }}{{ page.pagination.next_page.url }}">Older Posts</a>{% endif %}<br />
-    </nav>
-{% endif %}
+    </div>
+
+    <br>
+    <br>
+    <br>
+</div>
+
+<!--<div class="container">-->
+    <!--<div class="col-sm-8">-->
+        <!--test-->
+    <!--</div>-->
+<!--</div>-->
+
+{% endblock %}

@@ -3,14 +3,14 @@
     <title><![CDATA[Sculpin Blog Skeleton]]></title>
     <link href="/atom.xml" rel="self"/>
     <link href="/"/>
-    <updated>2015-10-04T00:38:55+02:00</updated>
+    <updated>2015-10-12T01:39:46+02:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Zenify/DoctrineMigrations]]></title>
-            <link href="/blog/2015/10/05/symfonisti-0-praha"/>
+            <link href="/blog/2015/10/05/zenify-doctrine-migrations"/>
             <updated>2015-10-05T00:00:00+02:00</updated>
-            <id>/blog/2015/10/05/symfonisti-0-praha</id>
+            <id>/blog/2015/10/05/zenify-doctrine-migrations</id>
             <content type="html"><![CDATA[<h1 id="hello-world.">Hello world.</h1>
 
 <p>I am in the future.</p>
@@ -63,18 +63,6 @@ for suggesting it. :)</p>
 ]]></content>
         </entry>
             <entry>
-            <title type="html"><![CDATA[This is a draft!]]></title>
-            <link href="/blog/2012/12/14/a-draft-post"/>
-            <updated>2012-12-14T00:00:00+01:00</updated>
-            <id>/blog/2012/12/14/a-draft-post</id>
-            <content type="html"><![CDATA[<p>This is a draft post. You will only see this if you are running the <code>dev</code>
-environment (<code>dev</code> is the default).</p>
-
-<p>All draft posts will automatically be tagged <code>draft</code> so they are easy to
-find.</p>
-]]></content>
-        </entry>
-            <entry>
             <title type="html"><![CDATA[Lorem Ipsum]]></title>
             <link href="/blog/2012/11/27/lorem-ipsum"/>
             <updated>2012-11-27T00:00:00+01:00</updated>
@@ -120,47 +108,6 @@ vitae nisi sodales ultrices. Etiam ultricies blandit lorem, id accumsan eros
 facilisis vel. Praesent nulla sapien, laoreet sit amet dapibus sit amet,
 tincidunt vitae neque. Vestibulum aliquam sollicitudin urna, in facilisis dui
 aliquam id.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[And Then There Was Textile Support]]></title>
-            <link href="/blog/2012/11/26/and-then-there-was-textile-support"/>
-            <updated>2012-11-26T00:00:00+01:00</updated>
-            <id>/blog/2012/11/26/and-then-there-was-textile-support</id>
-            <content type="html"><![CDATA[<p><a href="https://github.com/netcarver/textile">Textile</a> support was added on November 26th, 2012. Markdown is great, but so is choice. More converters for all!</p>
-
-<p>In honor of this milestone, this post is written in <strong>Textile</strong>.</p>]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Balrog]]></title>
-            <link href="/blog/2012/10/16/balrog"/>
-            <updated>2012-10-16T00:00:00+02:00</updated>
-            <id>/blog/2012/10/16/balrog</id>
-            <content type="html"><![CDATA[<p>Found out about <a href="http://github.com/igorw/balrog">Balrog</a> today! It looks
-like a really nice micro static site generator. Maybe Sculpin and Balrog
-can be friends?</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Symfony Live Hacking Day!]]></title>
-            <link href="/blog/2012/09/29/symfony-live-hacking-day"/>
-            <updated>2012-09-29T00:00:00+02:00</updated>
-            <id>/blog/2012/09/29/symfony-live-hacking-day</id>
-            <content type="html"><![CDATA[<p>Fun times at the Symfony Live San Francisco 2012 Hacking Day! Code
-was hacked and pizza was had. Some pics of the conference are
-available on the <a href="https://www.facebook.com/media/set/?set=a.450514941665306.112810.129739647076172">Sensio Labs Facebook page</a>.</p>
-]]></content>
-        </entry>
-            <entry>
-            <title type="html"><![CDATA[Happy Birthday Sculpin!]]></title>
-            <link href="/blog/2011/12/20/happy-birthday-sculpin"/>
-            <updated>2011-12-20T00:00:00+01:00</updated>
-            <id>/blog/2011/12/20/happy-birthday-sculpin</id>
-            <content type="html"><![CDATA[<p>The first commit to the Sculpin repository was made on December 20th, 2011.
-What a trip since then!</p>
-
-<p>Sculpin has always been a big fan of <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. So this post was
-written in Markdown. :)</p>
 ]]></content>
         </entry>
     </feed>

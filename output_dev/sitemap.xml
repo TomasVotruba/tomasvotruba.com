@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc></loc>
-    <lastmod>2015-10-04</lastmod>
+    <lastmod>2015-10-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
     <url>
-    <loc>/blog/2015/10/05/symfonisti-0-praha</loc>
+    <loc>/blog/2015/10/05/zenify-doctrine-migrations</loc>
     <lastmod>2015-10-05T00:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -19,38 +19,8 @@
     <priority>1.0</priority>
   </url>
     <url>
-    <loc>/blog/2012/12/14/a-draft-post</loc>
-    <lastmod>2012-12-14T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-    <url>
     <loc>/blog/2012/11/27/lorem-ipsum</loc>
     <lastmod>2012-11-27T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-    <url>
-    <loc>/blog/2012/11/26/and-then-there-was-textile-support</loc>
-    <lastmod>2012-11-26T00:00:00+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-    <url>
-    <loc>/blog/2012/10/16/balrog</loc>
-    <lastmod>2012-10-16T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-    <url>
-    <loc>/blog/2012/09/29/symfony-live-hacking-day</loc>
-    <lastmod>2012-09-29T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-    <url>
-    <loc>/blog/2011/12/20/happy-birthday-sculpin</loc>
-    <lastmod>2011-12-20T00:00:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

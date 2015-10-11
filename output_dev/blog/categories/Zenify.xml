@@ -3,14 +3,14 @@
     <title><![CDATA[Sculpin Blog Skeleton]]></title>
     <link href="/blog/categories/Zenify.xml" rel="self"/>
     <link href="/"/>
-    <updated>2015-10-04T00:38:55+02:00</updated>
+    <updated>2015-10-12T01:39:46+02:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Zenify/DoctrineMigrations]]></title>
-            <link href="/blog/2015/10/05/symfonisti-0-praha"/>
+            <link href="/blog/2015/10/05/zenify-doctrine-migrations"/>
             <updated>2015-10-05T00:00:00+02:00</updated>
-            <id>/blog/2015/10/05/symfonisti-0-praha</id>
+            <id>/blog/2015/10/05/zenify-doctrine-migrations</id>
             <content type="html"><![CDATA[<h1 id="hello-world.">Hello world.</h1>
 
 <p>I am in the future.</p>
