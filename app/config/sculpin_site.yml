@@ -1,8 +1,8 @@
 # The contents of this file are parsed and made available as
 # via `site.*`. So for example, {{ site.title }} can be used
 # in a template to get the contents of the `title` key.
-title: Sculpin Blog Skeleton
-subtitle: To Get You Started
+title: Tomáš Votruba
+subtitle: Nette a Symfony školení
 
 # Insert your disqus shortname
 #disqus:
