@@ -39,6 +39,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
                             </button>
                         </div>
 
@@ -49,7 +50,9 @@
                                 <li {% if page.id == "edu_company" %}class="active"{% endif %}>
                                     <a href="{{ site.url }}/firemni-skoleni">Firemní školení</a>
                                 </li>
-                                <!--<li><a href="{{ site.url }}/blog">Blog</a></li>-->
+                                <li {% if page.id == "blog" %}class="active"{% endif %}>
+                                    <a href="{{ site.url }}/blog">Blog</a>
+                                </li>
                                 <li {% if page.id == "contact" %}class="active"{% endif %}>
                                     <a href="{{ site.url }}/kontakt">Kontakt</a>
                                 </li>
