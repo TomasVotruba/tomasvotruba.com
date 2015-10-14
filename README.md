@@ -12,5 +12,5 @@ And open `http://localhost:8001`.
 ## For production?
 
 ```sh
-sculpin generate --env=prod
+vendor/bin/sculpin generate --env=prod
 ```
