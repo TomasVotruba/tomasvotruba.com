@@ -1,6 +1,11 @@
 services:
+    blog.template_renderer:
+        class: TomasVotruba\SculpinBlogBundle\Twig\TemplateRenderer
+
     blog.twig_extension:
         class: TomasVotruba\SculpinBlogBundle\Twig\BlogTwigExtension
-        public: false
+        arguments:
+            - @blog.template_renderer
+            - %sculpin_blog.disqus_id%
         tags:
             - { name: twig.extension }

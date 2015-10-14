@@ -69,6 +69,8 @@ use:
         <div class="main">
             {% set lastPost = data.posts.first() %}
 
+            {{ lastPost|singlePost }}
+
             <article class="blog-post">
                 <header>
                     <h1>

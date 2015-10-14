@@ -1,7 +1,7 @@
 <?php
 
 use Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKernel;
-use TomasVotruba\SculpinBlogBundle\BlogBundle;
+use TomasVotruba\SculpinBlogBundle\SculpinBlogBundle;
 
 class SculpinKernel extends AbstractKernel
 {
@@ -11,7 +11,7 @@ class SculpinKernel extends AbstractKernel
     protected function getAdditionalSculpinBundles()
     {
         return [
-            BlogBundle::class
+            SculpinBlogBundle::class
         ];
     }
 }
