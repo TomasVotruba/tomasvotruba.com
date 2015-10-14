@@ -1,0 +1,19 @@
+{
+    "require": {
+        "sculpin/sculpin": "^2.0",
+        "dflydev/embedded-composer-console": "1.0.*@dev",
+        "dflydev/embedded-composer-core": "1.0.*@dev",
+        "composer/composer": "dev-master",
+
+        "tomasvotruba/sculpin-blog-bundle": "@dev"
+    },
+    "repositories": [
+        { "type": "path", "url": "packages/tomasvotruba/sculpin-blog-bundle" }
+    ],
+    "config": {
+        "component-dir": "source/components"
+    },
+    "autoload": {
+        "classmap": ["app"]
+    }
+}

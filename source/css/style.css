@@ -20,7 +20,7 @@
 }
 
 
-.btn-primary {
+.btn-primary, .btn-primary:active {
     background-color: #08c;
     border-color: #08c;
 }

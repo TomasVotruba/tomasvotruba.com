@@ -1,0 +1,6 @@
+services:
+    blog.twig_extension:
+        class: TomasVotruba\SculpinBlogBundle\Twig\BlogTwigExtension
+        public: false
+        tags:
+            - { name: twig.extension }
