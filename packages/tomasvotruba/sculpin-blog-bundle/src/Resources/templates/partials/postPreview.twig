@@ -4,26 +4,6 @@
             <a href="{{ post.url }}">{{ post.title }}</a>
         </h1>
 
-        <ul class="list-inline list-inline-box">
-            <li>
-                <span class="hidden-xs">Sepsáno </span>
-                {% set postYear = post.date|date("Y") %}
-                <time class="hidden-xs" datetime="{{ post.date | date('Y-m-D') }}">{{ post.date | date("j. n.") }}{% if postYear != 2015 %} {{ postYear }}{% endif %}</time>
-            </li>
-
-            {% if post.categories %}
-                <li>
-                    <span class="hidden-xs">O čem:</span>
-                    {% for category in post.categories %}
-                        <a href="/blog/clanky-o/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
-                    {% endfor %}
-                </li>
-            {% endif %}
-
-            <li>
-                <em class="fa fa-fw fa-comments"></em>
-                <a href="{{ post.url }}#disqus_thread">komentáře</a>
-            </li>
-        </ul>
+        {{ include('partials/postMetadataLine.twig') }}
     </header>
 </article>
