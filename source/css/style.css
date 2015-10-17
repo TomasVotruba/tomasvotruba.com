@@ -31,7 +31,7 @@
 }
 
 
-    /* true colors */
+/* true colors */
 .navbar {
     background-color: #08c;
 }
@@ -42,6 +42,16 @@
 
 .navbar-default .navbar-nav > li > a {
     color: #87CEFA;
+}
+
+.logo {
+    margin-left: -1.6em;
+    font-size: 1.3em;
+}
+
+.navbar-default .navbar-nav > li.logo a {
+    color: #FFF;
+    font-weight: 600;
 }
 
 .page-header h1 {

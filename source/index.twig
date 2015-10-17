@@ -67,44 +67,7 @@ use:
 <div class="page">
     <div class="container">
         <div class="main">
-            {% set lastPost = data.posts.first() %}
-
-            {{ lastPost|singlePost }}
-
-            <article class="blog-post">
-                <header>
-                    <h1>
-                        <a href="{{ site.url }}{{ lastPost.url }}">{{ lastPost.title }}</a>
-                    </h1>
-
-                    <ul class="list-inline list-inline-box">
-                        <li>
-                            <span class="hidden-xs">Sepsáno </span>
-                            {% set lastPostYear = lastPost.date|date("Y") %}
-                            <time class="hidden-xs" datetime="{{ lastPost.date | date('Y-m-D') }}">{{ lastPost.date | date("j. n.") }}{% if lastPostYear != 2015 %} {{ lastPostYear }}{% endif %}</time>
-                        </li>
-
-                        {% if lastPost.categories %}
-                            <li>
-                                <span class="hidden-xs">Kategorie:</span>
-                                {% for category in lastPost.categories %}
-                                    <a href="{{ site.url }}/blog/kategorie/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
-                                {% endfor %}
-                            </li>
-                        {% endif %}
-
-                        <li>
-                            <em class="fa fa-fw fa-comments"></em>
-                            <a href="{{ site.url }}{{ lastPost.url }}#disqus_thread">komentáře</a>
-                        </li>
-                    </ul>
-                </header>
-
-                <div>
-                    {{ lastPost.blocks.content|raw }}
-                </div>
-
-            </article>
+            {{ include('partials/post.twig', {'post': data.posts.first()}) }}
 
             <p>
                 <a href="{{ site.url }}/blog" class="btn btn-primary">
@@ -115,18 +78,5 @@ use:
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = '{{ site.disqus_shortname }}'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
 
 {% endblock %}
