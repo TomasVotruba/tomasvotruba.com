@@ -15,7 +15,7 @@
                 <li>
                     <span class="hidden-xs">O čem:</span>
                     {% for category in post.categories %}
-                        <a href="/blog/kategorie/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
+                        <a href="/blog/clanky-o/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
                     {% endfor %}
                 </li>
             {% endif %}

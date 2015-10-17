@@ -4,9 +4,7 @@
         <title>{% block title %}{{ page.title }}{% endblock %} | {{ site.title }}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% block head_meta %}
-            <meta name="robots" content="noindex, follow">
-        {% endblock %}
+        <meta name="robots" content="index, follow">
 
         <!--<link href="{{ site.url }}/components/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
 
@@ -70,7 +68,7 @@
             <footer class="footer">
                 <div class="container">
                     <p>
-                        &copy; {{ "now"|date("Y") }} Tomáš Votruba. Jede na <a href="https://sculpin.io/">Sculpin</a> a <a href="https://symfony.com">Symfony</a>.<br>
+                        &copy; {{ "now"|date("Y") }} Tomáš Votruba. Jede na <a href="https://sculpin.io/">Sculpin</a>, <a href="https://symfony.com">Symfony</a> a <a href="http://twig.sensiolabs.org/">Twig</a>.<br>
                         Nádherná šablona inspirována <a href="http://webmozart.io">webmozart.io</a> - díky!
                     </p>
                 </div>

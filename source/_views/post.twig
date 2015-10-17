@@ -1,34 +1,30 @@
 {% extends "default" %}
 
-{% block head_meta %}
-    <meta name="robots" content="index, follow">
-{% endblock %}
+{% block content %}
 
-{% block content_wrapper %}
+<div class="page">
+    <div class="container">
+        <div class="main">
+            {{ include('partials/post.twig', {'post': page}) }}
 
-    <div class="page">
-        <div class="container">
-            <div class="main">
-                {{ include('partials/post.twig', {'post': page}) }}
+            {#<a name="disqus_thread"></a>#}
+            <h2>Tvůj názor mě zajímá</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = '{{ site.disqus_shortname }}';
 
-                {#<a name="disqus_thread"></a>#}
-                <h2>Tvůj názor mě zajímá</h2>
-                <div id="disqus_thread"></div>
-                <script type="text/javascript">
-                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                    var disqus_shortname = '{{ site.disqus_shortname }}';
-
-                    /* * * DON'T EDIT BELOW THIS LINE * * */
-                    (function () {
-                        var dsq = document.createElement('script');
-                        dsq.type = 'text/javascript';
-                        dsq.async = true;
-                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    })();
-                </script>
-            </div>
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function () {
+                    var dsq = document.createElement('script');
+                    dsq.type = 'text/javascript';
+                    dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
         </div>
     </div>
+</div>
 
 {% endblock %}
