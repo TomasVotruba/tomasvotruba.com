@@ -24,12 +24,11 @@ Stejně jako [Kdyby\Doctrine](https://github.com/Kdyby/Doctrine) integruje origi
 Ten si denně [stáhne přes 8 000 programátorů](https://packagist.org/packages/doctrine/migrations/stats), kteří potřebují, aby balíček opravdu fungoval. 
 
 
-Github TIP: Celý proces si můžete prohlédnout v commitech [repositáře na Githubu](https://github.com/TomasVotruba/doctrine-migrations-sandbox/commits/master).
-
-
 ## Instalace ve 2 krocích
- 
-Balíček nám instaluje `composer`:
+
+*Celý postup si můžete prohlédnout v commitech [repositáře na Githubu](https://github.com/TomasVotruba/doctrine-migrations-sandbox/commits/master)*.
+
+Balíček nainstalujeme přes `composer`:
 
 ```sh
 composer require zenify/doctrine-migrations
@@ -60,6 +59,7 @@ Pokud vidíme přehled příkazů, máme vyhráno:
 
 A můžeme používat!
 
+---
 
 ## Profi workflow ve 4 krocích
 
@@ -95,7 +95,7 @@ Název migrace je generován automaticky dle timestampu. Tady je použita defaul
 
 Více bude jasnější ze samotného SQL zápisu:
 
-```php
+~~~language-php
 namespace Migrations;
 
 use Doctrine\DBAL\Migrations\AbstractMigration;
@@ -125,13 +125,13 @@ class Version20151019192347 extends AbstractMigration
 	}
 
 }
-```
+~~~
 
 A je to!
 
 Když znovu dáme znovu status, uvidíme, že máme jednu novou migraci.
 
-```sh
+```
 php www/index.php migrations:status
 ```
 
@@ -150,8 +150,13 @@ php www/index.php migrations:migrate
 ![Nová migrace](../../../../images/posts/2015/09/15/5-migrate-success.png)
 
 
-A máme hotovo!
+A je to! Gratuluju, jste připraveni migrovat!
 
+![Skvělá práce!](../../../../images/posts/2015/09/15/7-success-meme.jpg)
+
+---
+
+### Tip na závěr: Manuální migrace jedné migrace
 
 Pokud migrujeme více zásahů a cheme mít celý proces pod kontrolou, můžeme migrovat i po jedné:
 
@@ -166,7 +171,3 @@ Pro vrácení zpět, stačí přidat `--down`.
 ```sh
 php www/index.php migrations:execute 20151019192347 --down
 ```
-
-Gratuluju! Jste připraveni migrovat!
-
-![Skvělá práce!](../../../../images/posts/2015/09/15/7-success-meme.jpg)

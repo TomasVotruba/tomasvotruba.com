@@ -31,6 +31,17 @@
 }
 
 
+pre {
+    border: none;
+    border-radius: 2px;
+}
+
+
+.blog-post img {
+    border-radius: 2px;
+}
+
+
 /* true colors */
 .navbar {
     background-color: #08c;
