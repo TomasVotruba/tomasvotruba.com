@@ -55,7 +55,7 @@ php www/index.php list migrations
 
 Pokud vidíme přehled příkazů, máme vyhráno:
 
-![Příkazy pro migrace](../../../../images/posts/2015/09/15/1-list-migrations.png)
+![Příkazy pro migrace](/../../../../images/posts/2015/09/15/1-list-migrations.png)
 
 A můžeme používat!
 
@@ -73,7 +73,7 @@ V [Lékárně.cz](http://lekarna.cz/) používáme jednoduchý proces, který po
 php www/index.php migrations:status
 ```
 
-![Jaký máme status](../../../../images/posts/2015/09/15/2-migrations-status.png)
+![Jaký máme status](/../../../../images/posts/2015/09/15/2-migrations-status.png)
 
 Důležitá jsou poslední 2 čísla. Vypadá to, že vše je aktuální, tak můžeme pokračovat.
 
@@ -83,7 +83,7 @@ Důležitá jsou poslední 2 čísla. Vypadá to, že vše je aktuální, tak m�
 php www/index.php migrations:generate
 ```
 
-![Nová migrace](../../../../images/posts/2015/09/15/3-generate.png)
+![Nová migrace](/../../../../images/posts/2015/09/15/3-generate.png)
 
 Název migrace je generován automaticky dle timestampu. Tady je použita defaultní cesta, složka `/migrations`. Mrknem tam!
 
@@ -135,7 +135,7 @@ Když znovu dáme znovu status, uvidíme, že máme jednu novou migraci.
 php www/index.php migrations:status
 ```
 
-![Nová migrace](../../../../images/posts/2015/09/15/4-status-with-new-migration.png)
+![Nová migrace](/../../../../images/posts/2015/09/15/4-status-with-new-migration.png)
 
 Ukáže se nám mezi "New migrations" právě díky tomu, že nebyla aplikována na databázi.
 
@@ -147,12 +147,12 @@ Aplikujeme všechny nové změny:
 php www/index.php migrations:migrate
 ```
 
-![Nová migrace](../../../../images/posts/2015/09/15/5-migrate-success.png)
+![Nová migrace](/../../../../images/posts/2015/09/15/5-migrate-success.png)
 
 
 A je to! Gratuluju, jste připraveni migrovat!
 
-![Skvělá práce!](../../../../images/posts/2015/09/15/7-success-meme.jpg)
+![Skvělá práce!](/../../../../images/posts/2015/09/15/7-success-meme.jpg)
 
 ---
 
@@ -164,7 +164,7 @@ Pokud migrujeme více zásahů a cheme mít celý proces pod kontrolou, můžeme
 php www/index.php migrations:execute 20151019192347
 ```
 
-![Po jedné](../../../../images/posts/2015/09/15/6-migrate-single.png)
+![Po jedné](/../../../../images/posts/2015/09/15/6-migrate-single.png)
 
 Pro vrácení zpět, stačí přidat `--down`.
 
