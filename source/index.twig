@@ -62,20 +62,20 @@ use:
     </div>
 </div>
 
-{#<div class="page">#}
-    {#<div class="container">#}
-        {#<div class="main">#}
-            {#{{ include('partials/post.twig', {'post': data.posts.first()}) }}#}
+<div class="page">
+    <div class="container">
+        <div class="main">
+            {{ include('partials/post.twig', {'post': data.posts.first()}) }}
 
-            {#<p>#}
-                {#<a href="{{ site.url }}/blog" class="btn btn-primary">#}
-                    {#&nbsp;Mrkni i na další články#}
-                    {#<em class="fa fa-arrow-circle-o-right fa-fw"></em>#}
-                {#</a>#}
-            {#</p>#}
-        {#</div>#}
-    {#</div>#}
-{#</div>#}
+            <p>
+                <a href="{{ site.url }}/blog" class="btn btn-primary">
+                    &nbsp;Mrkni i na další články
+                    <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
