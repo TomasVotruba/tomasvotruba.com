@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|PT+Sans:400,700|PT+Serif:400&subset=latin,latin-ext");
+@import url("ě");
 
+/* todo: find latin font, font for headlines */
 
 .portrait-image img {
     margin-top: 2.85em;
@@ -77,3 +78,24 @@ a:hover {
     color: #8CD02C;
 }
 
+
+.perex {
+    font-size: 1.3em;
+    margin: 1em 0;
+}
+
+
+.h3, h3 {
+    font-size: 1.23em;
+}
+
+.h4, h4 {
+    margin-top: 1.4em;
+    font-size: 1.08em;
+}
+
+
+blockquote {
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    margin: .7em 0;
+}
