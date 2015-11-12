@@ -1,11 +1,15 @@
 ---
+id: 1
 title: Ovládni Doctrine migrace v Nette
 categories:
     - Doctrine
     - Nette
+perex: "Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budou se vám hodit migrace."
 ---
 
-Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budou se vám hodit migrace.
+<p class="perex" markdown="1">
+    Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budou se vám hodit migrace.
+</p>
 
 Stejně jako Kdyby/Doctrine využívá doctrine/doctrine2, my použijeme [doctrine/migrations](https://github.com/doctrine/migrations). Ty si [denně stáhne přes 9 000 programátorů](https://packagist.org/packages/doctrine/migrations/stats), takže se nemusíte bát o jeho kvalitu.
 

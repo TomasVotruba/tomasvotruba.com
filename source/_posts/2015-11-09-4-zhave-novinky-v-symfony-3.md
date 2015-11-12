@@ -1,7 +1,9 @@
 ---
+id: 2
 title: 4 žhavé novinky v Symfony 3
 categories:
     - Symfony
+perex: "V listopadu 2015 má kromě PHP 7 a Drupalu 8, vyjít i Symfony 3. Jaké přináší změny a novinky?"
 ---
 
 <p class="perex" markdown="1">
@@ -260,7 +262,6 @@ Proto se snaží, aby jeho použití bylo bez překážek.
 
 Už máš chuť si to vyzkoušet? Hned v příštím článku si ukážeme, *jak to rozjet v Symfony 3*.
 
-
 <br>
 
 <div class="text-center">
@@ -268,4 +269,3 @@ Už máš chuť si to vyzkoušet? Hned v příštím článku si ukážeme, *jak
 </div>
 
 <br>
-

@@ -1,6 +1,4 @@
-@import url("ě");
-
-/* todo: find latin font, font for headlines */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400&subset=latin,latin-ext");
 
 .portrait-image img {
     margin-top: 2.85em;
@@ -21,12 +19,12 @@
 }
 
 
-.btn-primary, .btn-primary:active {
+.btn-primary, .btn-primary:active, .btn-primary:focus {
     background-color: #08c;
     border-color: #08c;
 }
 
-.btn-primary:hover {
+.btn-primary:hover  {
     background-color: #0af;
     border-color: #0af;
 }
@@ -70,12 +68,14 @@ pre {
     color: #08c;
 }
 
-a {
+a, a:active {
     color: #64991a;
+    text-decoration: none;
 }
 
-a:hover {
+a:hover, a:focus {
     color: #8CD02C;
+    text-decoration: none;
 }
 
 
@@ -84,6 +84,28 @@ a:hover {
     margin: 1em 0;
 }
 
+h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    font-family: source-sans-pro, sans-serif;
+}
+
+.page-header h1 {
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.blog-post h1 {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+
+article h2 {
+    font-size: 1.8em;
+}
+
+article h2, article h3 {
+    font-weight: 600;
+}
 
 .h3, h3 {
     font-size: 1.23em;

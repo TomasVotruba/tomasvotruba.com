@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
 
+        <script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9:all.js"></script>
+
         <link href="{{ site.url }}/css/theme/webmozart/style.css" rel="stylesheet" type="text/css" />
         <link href="{{ site.url }}/css/theme/webmozart/prism.css" rel="stylesheet" type="text/css" />
         <link href="{{ site.url }}/css/style.css" rel="stylesheet" type="text/css" />
@@ -73,9 +75,6 @@
 
             <script src="{{ site.url }}/js/prism.js"></script>
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-            <script>
-                window.jQuery || document.write('<script src="{{ site.url }}/components/jquery/jquery.min.js"><\/script>')
-            </script>
 
             {% if site.google_analytics_tracking_id %}
                 <script type="text/javascript">
@@ -88,19 +87,8 @@
                     ga('send', 'pageview');
                 </script>
             {% endif %}
-
-            <script type="text/javascript">
-                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                var disqus_shortname = '{{ site.disqus_shortname }}'; // required: replace example with your forum shortname
-
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function () {
-                    var s = document.createElement('script'); s.async = true;
-                    s.type = 'text/javascript';
-                    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-                    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-                }());
-            </script>
         </div>
+
+        <script id="dsq-count-scr" src="http://itsworthsharing.disqus.com/count.js" async></script>
     </body>
 </html>
