@@ -187,7 +187,7 @@ Velkou radost budou mít vývojáři menších aplikací, kteří si rádi uží
 
 Ten je vhodný právě na aplikace, které vyžadují jednoduchou konfiguraci, bundly a na které Silex nestačí.
 
-kMicro Kernel konkrétně:
+Micro Kernel konkrétně:
 
 - nevyžaduje žádné další konfigurační soubory
 - umožňuje přidání extension bez bundlů 
@@ -252,7 +252,7 @@ class ConcreteMicroKernel extends Kernel
 - Jak ti autowiring ušetří práci při psaní definicí služeb.
 - Jak si uklidit složku `/app`, aby to dávalo smysl.
 - Že práce s profilerem bude daleko přehlednější.
-- A že pro malé aplikace máš k dispozici Mikro Kernel.
+- A že pro malé aplikace máš k dispozici Micro Kernel.
 
 ## V Symfony zase vědí...
 
