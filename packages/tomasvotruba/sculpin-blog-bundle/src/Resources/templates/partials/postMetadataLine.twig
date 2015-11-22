@@ -15,6 +15,11 @@
     {% endif %}
 
     <li>
+        <em class="fa fa-clock-o fa-fw"></em>
+        <strong>{{ post.blocks.content|readTimeInMinutes }}</strong>
+    </li>
+
+    <li>
         <em class="fa fa-fw fa-comments"></em>
         <a href="http://tomasvotruba.cz{{ post.url }}/#disqus_thread">komentáře</a>
     </li>

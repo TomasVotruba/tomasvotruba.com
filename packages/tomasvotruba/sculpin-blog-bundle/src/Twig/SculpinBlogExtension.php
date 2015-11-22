@@ -6,6 +6,7 @@ use Twig_Environment;
 use Twig_ExtensionInterface;
 use Twig_Loader_Chain;
 use Twig_Loader_Filesystem;
+use Twig_SimpleFilter;
 
 final class SculpinBlogExtension implements Twig_ExtensionInterface
 {
@@ -14,6 +15,18 @@ final class SculpinBlogExtension implements Twig_ExtensionInterface
         $twigLoaderChain->addLoader(
             new Twig_Loader_Filesystem([__DIR__ . '/../Resources/templates'])
         );
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getFilters()
+    {
+        return [
+            new Twig_SimpleFilter('readTimeInMinutes', function ($text) {
+                return $this->readTimeInMinutes($text);
+            })
+        ];
     }
 
     /**
@@ -35,14 +48,6 @@ final class SculpinBlogExtension implements Twig_ExtensionInterface
      * {@inheritdoc}
      */
     public function getNodeVisitors()
-    {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFilters()
     {
         return [];
     }
@@ -85,5 +90,42 @@ final class SculpinBlogExtension implements Twig_ExtensionInterface
     public function getName()
     {
         return self::class;
+    }
+
+    /**
+     * @param int $text
+     * @return int
+     */
+    private function readTimeInMinutes($text)
+    {
+        $wordCount = $this->wordCount($text);
+        $minutesCount = ceil($wordCount/260);
+
+        switch ($minutesCount) {
+		    case 1:
+                $minutesLocalized = 'minuta';
+                break;
+            case 2:
+            case 3:
+            case 4:
+                $minutesLocalized = 'minuty';
+                break;
+            default:
+                $minutesLocalized = 'minut';
+                break;
+        }
+
+        return $minutesCount . ' ' . $minutesLocalized . ' čtení';
+    }
+
+    /**
+     * @param string $text
+     * @return int
+     */
+    private function wordCount($text)
+    {
+        $text = strip_tags($text);
+        $wordCount = count(explode(' ', $text));
+        return $wordCount;
     }
 }
