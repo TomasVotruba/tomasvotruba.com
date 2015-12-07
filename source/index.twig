@@ -11,15 +11,15 @@ use:
 <div class="portrait-box">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-7">
                 <section class="portrait-text">
                     <header class="page-header">
-                        <h1>Tomáš Votruba <small>Nette & Symfony</small>
+                        <h1>Tomáš Votruba <small>PHP Kouč</small>
                         </h1>
                     </header>
 
                     <p class="lead">
-                        Ahoj, jmenuji se Tomáš Votruba. <strong>Školím Nette, Symfony a Doctrine
+                        Ahoj, jmenuji se Tomáš Votruba. <strong>Školím Symfony, Doctrine a Nette
                         <a href="{{ site.url }}/firemni-skoleni">ve&nbsp;firmách</a> i
                         <a href="http://www.naucmese.cz/kurz/penetrujeme-nette-framework">individuálně</a></strong>.
                     </p>
@@ -55,8 +55,8 @@ use:
                     </ul>
                 </section>
             </div>
-            <div class="col-sm-4 portrait-image">
-                <img src="{{ site.url }}/images/tomas-big.jpg">
+            <div class="col-sm-5 portrait-image">
+                <img src="{{ site.url }}/images/talking-big.jpg">
             </div>
         </div>
     </div>
@@ -66,6 +66,9 @@ use:
     <div class="container">
         <div class="main">
             {{ include('partials/post.twig', {'post': data.posts.first()}) }}
+
+            <br>
+            <br>
 
             <p>
                 <a href="{{ site.url }}/blog" class="btn btn-primary">
