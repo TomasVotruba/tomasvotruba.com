@@ -1,23 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400&subset=latin,latin-ext");
+body {
+    font-family: "source-sans-pro", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.5em;
+}
 
 .portrait-image img {
     margin-top: 4.85em;
     border: 1px solid #e0e5eb;
 }
 
-/* edu */
+.lead {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
 .edu-nette-logo {
     margin-top: 1em;
     width: 14em;
 }
-
-
-/* reset */
-.portrait-box {
-    /*background-image: none;*/
-    /*border: none;*/
-}
-
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
     background-color: #08c;
@@ -55,8 +55,13 @@ pre {
 }
 
 .logo {
-    margin-left: -1.6em;
     font-size: 1.3em;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        margin-left: -1.6em;
+    }
 }
 
 .navbar-default .navbar-nav > li.logo a {
@@ -118,6 +123,6 @@ article h2, article h3 {
 
 
 blockquote {
-    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-family: "source-sans-pro", Helvetica, Arial, sans-serif;
     margin: .7em 0;
 }

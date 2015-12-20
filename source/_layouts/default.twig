@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
 
+        {# fonts #}
         <script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9:all.js"></script>
+        {#<script src="https://use.typekit.net/ttp7vfo.js"></script>#}
+        {#<script>try{Typekit.load({ async: true });}catch(e){}</script>#}
 
         <link href="{{ site.url }}/css/theme/webmozart/style.css" rel="stylesheet" type="text/css" />
         <link href="{{ site.url }}/css/theme/webmozart/prism.css" rel="stylesheet" type="text/css" />
@@ -35,7 +38,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
+                                {#<span class="icon-bar"></span>#}
                             </button>
                         </div>
 
@@ -46,6 +49,9 @@
                                 <li {% if page.id == "edu_company" %}class="active"{% endif %}>
                                     <a href="{{ site.url }}/firemni-skoleni">Firemní školení</a>
                                 </li>
+                                {#<li {% if page.id == "satisfy" %}class="active"{% endif %}>#}
+                                    {#<a href="{{ site.url }}/spokojenost">Spokojení klienti</a>#}
+                                {#</li>#}
                                 <li {% if page.id == "blog" %}class="active"{% endif %}>
                                     <a href="{{ site.url }}/blog">Blog</a>
                                 </li>
@@ -74,7 +80,10 @@
             </footer>
 
             <script src="{{ site.url }}/js/prism.js"></script>
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
             {% if site.google_analytics_tracking_id %}
                 <script type="text/javascript">

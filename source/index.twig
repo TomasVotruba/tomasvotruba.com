@@ -65,7 +65,7 @@ use:
 <div class="page">
     <div class="container">
         <div class="main">
-            {{ include('partials/post.twig', {'post': data.posts.first()}) }}
+            {{ include('partials/post.twig', {'post': data.posts.first(), 'short': true}) }}
 
             <br>
             <br>
