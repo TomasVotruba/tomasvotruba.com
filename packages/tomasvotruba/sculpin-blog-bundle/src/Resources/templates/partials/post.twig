@@ -2,8 +2,9 @@
     <header>
         <h1>
             <a href="{{ post.url }}">{{ post.title }}</a>
+
             {% if short is defined %}
-                <a href="{{ site.url }}" class="btn btn-success pull-right">
+                <a href="{{ post.url }}" class="btn btn-success pull-right">
                     Přečti si&nbsp;
                     <em class="fa fa-hand-o-right fa-fw"></em>
                 </a>

@@ -1,6 +1,6 @@
 ---
 id: 4
-title: To nejlepší ze Symfonyconu 2015
+title: To nejlepší ze SymfonyConu 2015
 categories:
     - Symfony
     - konference
@@ -26,9 +26,9 @@ A teď k dění. V krásném divadle a přidruženém kinosále se odehrálo př
 Dnes se spolu podíváme na 4 nejlepší.
 
 
-## 1. Fabien Potencier - 10 years of Symfony
+## 1. 10 years of Symfony
 
-Symfony už je tu s námi 10 let. Projekt sice založil Fabien, ale stojí za ním daleko víc osobností, které jej posouvají směrem k větší srozumitelnosti a použitelnosti.
+Symfony už je tu s námi 10 let. Projekt sice založil Fabien Potencier, ale stojí za ním daleko víc osobností, které jej posouvají směrem k větší srozumitelnosti a použitelnosti.
 
 Fabien zmínil přes 20 lidí, které na své cestě postupně potkal, a ukázal, kdo s čím do Symfony přispěl. V jeho podání to znělo jako hračka. Velmi inspirující pro ty, kteří chtějí škálovat své open-source projekty a dopřát jim dlouhý život.
 
@@ -77,7 +77,7 @@ Jejich microservices nevyužívají interní API, ktére jim přišlo zbytečně
 
 Říkají mu **The Gateway** ([slajd](https://speakerdeck.com/odolbeau/symfony-at-blablacar?slide=64)) a jeho předností jsou DDD, oddělení business logiky a přístwupu k datům a přehledné organizaci. Zajímavá myšlenka. 
 
-Máš taky startup a řešíš něco podobného? Mrkni [na slajdy](https://speakerdeck.com/odolbeau/symfony-at-blablacar).
+> Máš taky startup a řešíš něco podobného? Mrkni [na slajdy](https://speakerdeck.com/odolbeau/symfony-at-blablacar).
 
 
 ## 3. New Symfony Tips and Tricks
@@ -105,7 +105,9 @@ Za mě to byla ta nejzajímavější přednáška, ze které jsem si odnesl velk
 - nested Doctrine transactions
 - custom logger formatter - už žádné ošklivé nepřehledné logy
 
-Přednáška byla nabitá užitečnými tipy, které se jednoduše nedaly pobrat všechny naráz. **Naštěstí [jsou ve slajdech](http://www.slideshare.net/javier.eguiluz/new-symfony-tips-tricks-symfonycon-paris-2015)**, kam si pro ně můžem sáhnout.
+Přednáška byla nabitá užitečnými tipy, které se jednoduše nedaly pobrat všechny naráz.
+
+> Naštěstí [jsou ve slajdech](http://www.slideshare.net/javier.eguiluz/new-symfony-tips-tricks-symfonycon-paris-2015), kam si pro ně můžeš sáhnout.
 
 Potěšilo mě, že pár tipů bylo i od [Martina Hasoně](https://twitter.com/hasonm).
 
@@ -174,6 +176,15 @@ Kromě 5 slonů, 1 trička a kontaktů na lead vývojáře open-sources projekt�
 - s lidmi s z open-source prostředí, které jsem dříve znal jen z avatara na Githubu
 
 A spoustu chuťových zážitků bizardní francouzské kuchyně :).
+
+
+<br>
+
+<div class="text-center">
+    <img src="/../../../../images/posts/2015-12-20/symfonycon-stage.jpg" alt="Co uděláš wifi v divadle?">
+</div>
+
+<br>
 
 
 ### Pojeď za rok taky, vždyť je to kousek
