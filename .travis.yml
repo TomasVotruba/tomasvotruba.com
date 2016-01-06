@@ -1,0 +1,6 @@
+env:
+  global:
+    secure: GSEHdzdaNdK1orIB+yA0BQ/6QkcKSnjTKnskk1/BHuaiEYBQUSqIrVISwRNor+l+Qpl+dyobZIbtMDs2/6j0Trvoq7PkzSsrw8es6bcDca8z1k16+XCo4WWgf+oCl6+Bde6q33Qr1ncj+PcP3EIwHx+Hj2czNaNdM6C+TQ+5ntbIV+/GBSYPNTjvI/mfi8o01bYe2FKOhhuKRQYtq623hYhgQnLnXDIzMkvaGHBqiSetFzbdobpuYbJ1N7mp2ahXDGxbkuRoqh9p+9Ffm89JR+w+v4Ao7gJM2QbHBkV4yeruWXjNig8SN8kgGltK4QMzOYicvQ5Cwyn/M9ObOrUfYhIMgEGxHy5OpxmRiZ7rA+VIplA5Kl1JLPV5gx9ZecDc4JQvnWRmLbi9sF2d7e/5R8qoSQw4BOjeutqYtMi2iSqo+9MCEKrY01UaSiS407qHflgVN6/2O84/oeT4U0nl2Aee1AX8tIEZG7CKggmZUYSf6Ka9EejGkNjgS6H3aNSMFYT8WmHfkXCBxn++i1rME1bW8IVb7lrE/cgxLqSkAMFjLEUlLAMWTxFTvEWuErCywzrPX7FlSfEvbsp5+ZaJPGe/Ceq3vqmtcQMxYaPlJJdfOhqSP9+ZnmtoC0Cdn+Fquppj5IvG2L5hCUgDM7wEgUyhDChHvLmEQ/EpOTuAxL4=
+
+script:
+    - ./bin/generate-output.sh
