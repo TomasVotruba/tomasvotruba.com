@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Build settings
-REPOSITORY="https://${GH_TOKEN}@github.com/TomasVotruba/tomasvotruba.cz.git"}
+REPOSITORY="https://${GH_TOKEN}@github.com/TomasVotruba/tomasvotruba.cz.git"
 
 # Git identity
 git config --global user.email "travis@travis-ci.org"
