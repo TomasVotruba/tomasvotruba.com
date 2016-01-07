@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Build settings
-REPOSITORY=${REPOSITORY:-"https://${GH_TOKEN}@github.com/TomasVotruba/tomasvotruba.cz.git"}
+#REPOSITORY=${REPOSITORY:-"https://${GH_TOKEN}@github.com/TomasVotruba/tomasvotruba.cz.git"}
 BRANCH=${BRANCH:-"gh-pages"}
 BUILD_DIR=${BUILD_DIR:-"build"}
 
