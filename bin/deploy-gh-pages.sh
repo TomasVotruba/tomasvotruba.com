@@ -4,8 +4,8 @@
 REPOSITORY=${REPOSITORY:-"https://${GH_TOKEN}@github.com/TomasVotruba/tomasvotruba.cz.git"}
 
 # Git identity
-GIT_AUTHOR_NAME=${GIT_AUTHOR_NAME:-"Travis"}
-GIT_AUTHOR_EMAIL=${GIT_AUTHOR_EMAIL:-"travis@travis-ci.org"}
+git config --global user.email "travis@travis-ci.org"
+git config --global user.name "Travis"
 
 # Generate API
 ./vendor/bin/sculpin generate --env=prod
