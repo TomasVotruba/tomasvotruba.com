@@ -15,4 +15,5 @@ cd output_prod
 git init
 git add .
 git commit -m "Regenerated output"
-git push --force --quiet "${REPOSITORY}" master:gh-pages > /dev/null 2>&1
+git push --force --quiet "${REPOSITORY}" master:gh-pages
+# > /dev/null 2>&1
