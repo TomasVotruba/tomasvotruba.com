@@ -18,4 +18,4 @@ cd "${BUILD_DIR}/output_prod"
 git init
 git add .
 git commit -m "Regenerated output"
-git push origin "${BRANCH}"
+git push origin "${BRANCH}" -f
