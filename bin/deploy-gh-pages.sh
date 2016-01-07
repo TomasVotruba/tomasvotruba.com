@@ -10,7 +10,7 @@ GIT_AUTHOR_NAME=${GIT_AUTHOR_NAME:-"Travis"}
 GIT_AUTHOR_EMAIL=${GIT_AUTHOR_EMAIL:-"travis@travis-ci.org"}
 
 # Generate API
-git clone "${REPOSITORY}" "${BUILD_DIR}" --branch "${BRANCH}" --depth 1
+#git clone "${REPOSITORY}" "${BUILD_DIR}" --branch "${BRANCH}" --depth 1
 ./vendor/bin/sculpin generate --env=prod
 
 ## Commit & push
