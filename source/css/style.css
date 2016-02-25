@@ -126,3 +126,7 @@ blockquote {
     font-family: "source-sans-pro", Helvetica, Arial, sans-serif;
     margin: .7em 0;
 }
+
+code {
+    font-size: .97em;
+}
