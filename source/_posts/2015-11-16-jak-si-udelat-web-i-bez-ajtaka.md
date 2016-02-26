@@ -86,7 +86,7 @@ Teď už máme doménu a stránky online, ale zatím jsou od sebe vzájemně odd
         <em>Napiš svou doménu</em>
     </div>
     <br>
-ě3. ve složce uprav `CNAME` soubor 
+3. ve složce uprav `CNAME` soubor 
 
     <div class="text-center">
         <img src="/../../../../images/posts/2015-11-16/github-4.png" alt="Otevři soubor CNAME">
@@ -117,7 +117,7 @@ Teď už ti zbývá poslední krok.
         <em>Edituj DNS záznamy</em>
     </div>
     <br>
-4. změň A záznam
+4. změň A záznam a smaž AAAA záznamy
 
     <div class="text-center">
         <img src="/../../../../images/posts/2015-11-16/domain-dns-2.png" alt="Edituj DNS záznamy" style="max-width:270px">
