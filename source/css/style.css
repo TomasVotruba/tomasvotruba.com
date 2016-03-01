@@ -130,3 +130,34 @@ blockquote {
 code {
     font-size: .97em;
 }
+
+#references .face {
+    margin-right: 1em;
+    float: left;
+    border-radius: 50%;
+}
+
+#references h2 {
+    font-size: 1.6em;
+    color: #8CD02C;
+}
+
+#references h3 {
+    margin-bottom: 0em;
+}
+
+#references h3 a {
+    text-decoration: underline;
+}
+
+#references h3 a:hover {
+    text-decoration: none;
+}
+
+#references h4 {
+    margin-bottom: 1.5em;
+}
+
+.main > .row > * {
+    margin-top: 1em;
+}
