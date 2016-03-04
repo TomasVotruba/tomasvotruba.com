@@ -57,7 +57,7 @@ Na Zend srazu jsem potkal [Ondru Machuldu](https://twitter.com/OndraM) z Jobs.cz
 
 *Díky Ondro za naučení trpělivosti, dodání odvahy a zábavné moderování srazů!*
 
-# Zrození 1. společného místa - web Symfony.cz 
+## Zrození 1. společného místa - web Symfony.cz 
 
 Přes léto tak alespoň vznikly stránky. Přes doménu Symfony.cz jsem se dostal k [Dennisovi Fridrichovi](http://www.defr.cz/). Hned na prvním obědě jsem poznal, že jednou budeme dobří přátelé. A taky že jo - o pár měsíců později jsme spolu byli [v Paříži na SymfonyConu](http://pariscon2015.symfony.com/). Dennis dal dohromady [první verzi stránek](symfony.cz), která fakt měla šťávu.
 
@@ -67,14 +67,14 @@ Přes léto tak alespoň vznikly stránky. Přes doménu Symfony.cz jsem se dost
 
 Přišlo září a 0. sraz - rozhodli jsme se, že to bude poslední čtvrtek v měsíci. Jako brněnská náplavka jsem v Praze neznal žádnou hospodu, už vůbec ne pro 20-30 lidí, které jsme čekali. Podaří se nám vůbec najít nějákou hospodu s takovou kapacitou, rychlým internetem a dobrým pivem? 
 
-Tady patří velké díky [Martinovi Hujerovi](https://www.martinhujer.cz/), který mi nakonec pomohl první hospodu zamluvit.
+*Tady patří velké díky [Martinovi Hujerovi](https://www.martinhujer.cz/), který mi nakonec pomohl první hospodu zamluvit.*
 
 <br>
 
 
 Na sraz se nám přihlásilo přes 50 lidí. Co teď? Kam ty lidi dáme? 
 
-Díky [Petře Pavle](http://pepa.info/) za nalezení lepšího místa na poslední chvíli a záchranu 0. srazu - jinak bychom si asi seděli na klíně.
+*Díky [Petře Pavle](http://pepa.info/) za nalezení lepšího místa na poslední chvíli a záchranu 0. srazu - jinak bychom si asi seděli na klíně.*
 
 
 ## Kdo se k nám ještě přidal na cestě k Symfony komunitě?
