@@ -14,13 +14,13 @@ Po prvním přažském srazu v Jobs.cz už to začalo vypadat, že tu naše komu
 
 ## Jak to všechno začalo?
 
-[Filip Procházka](filip-prochazka.com) integroval Symfony\Console do Nette. Kdyby nebylo Filipa, tak se se Symfony nikdy nepotkám.
+[Filip Procházka](https://filip-prochazka.com) integroval Symfony\Console do Nette. Kdyby nebylo Filipa, tak se se Symfony nikdy nepotkám.
 
 *Díky Ti, Filipe, žes mi pomohl udělat první krok!*
 
 <br>
 
-Když jsem pak přebíral roční službu maintainrea [ApiGenu](https://github.com/ApiGen), troufale jsem se odvážil přepsat custom CLI skript na Symfony\Console. Příjemně mě překvapilo, že jsem ji stihl celou nastudovat během jedné cesty autobusem z Prahy do Liberce.
+Když jsem pak přebíral roční službu maintainera [ApiGenu](https://github.com/ApiGen), troufale jsem se odvážil přepsat custom CLI skript na Symfony\Console. Příjemně mě překvapilo, že jsem ji stihl celou nastudovat během jedné cesty autobusem z Prahy do Liberce.
 
 *Díky vám [Jardo Hanslíku](https://twitter.com/kukulich) a [Ondřeji Nešpore](https://twitter.com/andrewsville) za předání tohohle projektu!*
 
@@ -59,7 +59,7 @@ Na Zend srazu jsem potkal [Ondru Machuldu](https://twitter.com/OndraM) z Jobs.cz
 
 ## Zrození 1. společného místa - web Symfony.cz 
 
-Přes léto tak alespoň vznikly stránky. Přes doménu Symfony.cz jsem se dostal k [Dennisovi Fridrichovi](http://www.defr.cz/). Hned na prvním obědě jsem poznal, že jednou budeme dobří přátelé. A taky že jo - o pár měsíců později jsme spolu byli [v Paříži na SymfonyConu](http://pariscon2015.symfony.com/). Dennis dal dohromady [první verzi stránek](symfony.cz), která fakt měla šťávu.
+Přes léto tak alespoň vznikly stránky. Přes doménu Symfony.cz jsem se dostal k [Dennisovi Fridrichovi](http://www.defr.cz/). Hned na prvním obědě jsem poznal, že jednou budeme dobří přátelé. A taky že jo - o pár měsíců později jsme spolu byli [v Paříži na SymfonyConu](http://pariscon2015.symfony.com/). Dennis dal dohromady [první verzi stránek](http://www.symfony.cz), která fakt měla šťávu.
 
 *Díky Dennisi za dobrý vkus, investovaný čas a sestříhání nádherných záznamů ze srazů!*
 
