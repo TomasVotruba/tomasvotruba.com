@@ -9,7 +9,7 @@ perex: "CEO České Symfony komunity. Vedoucí, evangelista, ten co dělá tu Sy
 
 <p class="perex">CEO České Symfony komunity. Vedoucí, evangelista, ten co dělá tu Symfony komunitu... Tak mi mnozí z vás občas říkají. Já se však pořád nemůžu zbavit pocitu, že za Symfony komunitou, tak jak ji známe v její dnešní podobě, nejsou vidět ty desítky dalších tváří, na kterých to celé stojí. Tváří lidí, kteří k ní přispěli malým či velkým dílem, kteří mě nakopli, a kteří mi pomáhají víc, než si sami vůbec uvědomují. Bez nich by tady totiž dnes nebylo vůbec nic. A proto bych vám o nich dnes rád řekl.</p>  
 
-Po prvním přažském srazu v Jobs.cz už to začalo vypadat, že tu naše komunita je, a že se jí daří. Že za tím nestojím jen já, ale dalších 15-20 lidí, to už vidět není. Co všechno tomu předcházelo a o jakých lidech, kteří přinesli Symfony k nám, tady mluvím?
+Po prvním pražském srazu v Jobs.cz už to začalo vypadat, že tu naše komunita je, a že se jí daří. Že za tím nestojím jen já, ale dalších 15-20 lidí, to už vidět není. Co všechno tomu předcházelo a o jakých lidech, kteří přinesli Symfony k nám, tady mluvím?
 
 
 ## Jak to všechno začalo?
@@ -99,7 +99,7 @@ Už jsme docela slušně rozjetí, takže dál už jen stručně:
 - Díky [Kačce Bláhové](https://www.linkedin.com/in/ka%C4%8Dka-bl%C3%A1hov%C3%A1-828677a6) za inspiraci a rozšíření obzorů, kam dál je možné komunitu vést!
 - Díky [Honzovi Klatovi](https://twitter.com/klatys) za nápad na Symfony foundation, za to, že se mnou půjde přednášet na [Devel konferenci](http://devel.cz/konference), a taky za to, že dává do kupy první českou Symfony konferenci!
 - Díky [Davidovi Matějkovi](https://twitter.com/matej_21), že i když patří mezi nejaktivnější přispěvatele na Nette fóru, tak si ve svém srdci našel kus místa i pro Symfony!  
-- Díky [Martinovi Zemanovi](https://twitter.com/zemistr) za shánění speakrů, dodávání přednášek pro začátečníky, nápad využít [sli.do](https://www.sli.do/home) a [vytvoření skupiny na pracovní nabídky](https://www.facebook.com/groups/ceska.symfony.komunita.prace)!
+- Díky [Martinovi Zemanovi](https://twitter.com/zemistr) za shánění speakerů, dodávání přednášek pro začátečníky, nápad využít [sli.do](https://www.sli.do/home) a [vytvoření skupiny na pracovní nabídky](https://www.facebook.com/groups/ceska.symfony.komunita.prace)!
 - Díky [Jirkovi Kneslovi](http://www.knesl.com/) za možnost jít školit Symfony do firem!
 - Díky [Nikole Ježkové](https://twitter.com/roxtri_cz) za zařizování prvního srazu v Českých Budějovicích!
 - Díky [VímVíc.cz](https://www.vimvic.cz/) a [Monice Vrbové](https://www.instagram.com/monikavrbova) za [krásné promo video](https://www.facebook.com/symfonisti/videos/969858443063966/)!
