@@ -14,7 +14,7 @@ Po prvním přažském srazu v Jobs.cz už to začalo vypadat, že tu naše komu
 
 ## Jak to všechno začalo?
 
-[Filip Procházka](filip-prochazka.com) integroval Symfony\Console do Nette. Kdyby nebylo Filipa, tak se se Symfony nikdy nepotkám.
+[Filip Procházka](https://filip-prochazka.com) integroval Symfony\Console do Nette. Kdyby nebylo Filipa, tak se se Symfony nikdy nepotkám.
 
 *Díky Ti, Filipe, žes mi pomohl udělat první krok!*
 
