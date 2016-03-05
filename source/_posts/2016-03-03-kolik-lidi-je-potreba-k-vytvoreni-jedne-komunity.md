@@ -59,7 +59,7 @@ Na Zend srazu jsem potkal [Ondru Machuldu](https://twitter.com/OndraM) z Jobs.cz
 
 ## Zrození 1. společného místa - web Symfony.cz 
 
-Přes léto tak alespoň vznikly stránky. Přes doménu Symfony.cz jsem se dostal k [Dennisovi Fridrichovi](http://www.defr.cz/). Hned na prvním obědě jsem poznal, že jednou budeme dobří přátelé. A taky že jo - o pár měsíců později jsme spolu byli [v Paříži na SymfonyConu](http://pariscon2015.symfony.com/). Dennis dal dohromady [první verzi stránek](symfony.cz), která fakt měla šťávu.
+Přes léto tak alespoň vznikly stránky. Přes doménu Symfony.cz jsem se dostal k [Dennisovi Fridrichovi](http://www.defr.cz/). Hned na prvním obědě jsem poznal, že jednou budeme dobří přátelé. A taky že jo - o pár měsíců později jsme spolu byli [v Paříži na SymfonyConu](http://pariscon2015.symfony.com/). Dennis dal dohromady [první verzi stránek](http://www.symfony.cz), která fakt měla šťávu.
 
 *Díky Dennisi za dobrý vkus, investovaný čas a sestříhání nádherných záznamů ze srazů!*
 
