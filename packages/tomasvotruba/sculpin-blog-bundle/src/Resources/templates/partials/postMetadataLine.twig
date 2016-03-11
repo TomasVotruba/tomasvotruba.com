@@ -16,11 +16,17 @@
 
     <li>
         <em class="fa fa-clock-o fa-fw"></em>
-        <strong>{{ post.blocks.content|readTimeInMinutes }}</strong>
+        <strong>{{ post.blocks.content|readTimeInMinutes(post.lang) }}</strong>
     </li>
 
     <li>
         <em class="fa fa-fw fa-comments"></em>
-        <a href="http://tomasvotruba.cz{{ post.url }}/#disqus_thread">komentáře</a>
+        <a href="http://tomasvotruba.cz{{ post.url }}/#disqus_thread">
+            {% if post.lang == "en" %}
+                comments
+            {% else %}
+                komentáře
+            {% endif %}
+        </a>
     </li>
 </ul>

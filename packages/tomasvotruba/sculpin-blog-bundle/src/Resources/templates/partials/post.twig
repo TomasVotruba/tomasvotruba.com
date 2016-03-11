@@ -5,7 +5,11 @@
 
             {% if short is defined %}
                 <a href="{{ post.url }}" class="btn btn-success pull-right">
-                    Přečti si&nbsp;
+                    {% if post.lang == "en" %}
+                        Read on&nbsp;
+                    {% else %}
+                        Přečti si&nbsp;
+                    {% endif %}
                     <em class="fa fa-hand-o-right fa-fw"></em>
                 </a>
             {% endif %}
@@ -13,7 +17,6 @@
 
         {{ include('partials/postMetadataLine.twig') }}
     </header>
-
 
     <div>
         {% if short is defined %}

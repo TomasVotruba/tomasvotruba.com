@@ -23,8 +23,8 @@ final class SculpinBlogExtension implements Twig_ExtensionInterface
     public function getFilters()
     {
         return [
-            new Twig_SimpleFilter('readTimeInMinutes', function ($text) {
-                return $this->readTimeInMinutes($text);
+            new Twig_SimpleFilter('readTimeInMinutes', function ($text, $lang) {
+                return $this->readTimeInMinutes($text, $lang);
             })
         ];
     }
@@ -96,26 +96,27 @@ final class SculpinBlogExtension implements Twig_ExtensionInterface
      * @param int $text
      * @return int
      */
-    private function readTimeInMinutes($text)
+    private function readTimeInMinutes($text, $lang)
     {
         $wordCount = $this->wordCount($text);
         $minutesCount = ceil($wordCount/260);
 
         switch ($minutesCount) {
 		    case 1:
-                $minutesLocalized = 'minuta';
+                $minutesLocalized = $lang === 'en' ? 'minute' : 'minuta';
                 break;
             case 2:
             case 3:
             case 4:
-                $minutesLocalized = 'minuty';
+                $minutesLocalized = $lang === 'en' ? 'minutes' : 'minuty';
                 break;
             default:
-                $minutesLocalized = 'minut';
+                $minutesLocalized = $lang === 'en' ? 'minutes' : 'minut';
                 break;
         }
 
-        return $minutesCount . ' ' . $minutesLocalized . ' čtení';
+        return $minutesCount . ' ' . $minutesLocalized . ' '
+            . ($lang === 'en' ? 'of reading' : 'čtení');
     }
 
     /**
