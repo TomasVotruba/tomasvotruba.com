@@ -94,6 +94,7 @@ final class SculpinBlogExtension implements Twig_ExtensionInterface
 
     /**
      * @param int $text
+     * @param string $lang
      * @return int
      */
     private function readTimeInMinutes($text, $lang)
