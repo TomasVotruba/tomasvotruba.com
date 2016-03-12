@@ -8,11 +8,12 @@ id: blog
 
 <div class="page">
     <div class="container">
-        <div class="main">
-            <header class="page-header">
-                <h1>Přečti si o Symfony a programování</h1>
-            </header>
+        <header class="page-header text-center">
+            <h1>Přečti si o Symfony, programování a komunitě</h1>
+            <br>
+        </header>
 
+        <div class="main">
             {% for post in data.posts %}
                 {{ include('partials/postPreview.twig', {'post': post}) }}
             {% endfor %}
