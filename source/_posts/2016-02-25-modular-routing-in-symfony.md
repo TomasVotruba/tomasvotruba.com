@@ -9,7 +9,7 @@ categories:
 perex: "Modular routing in Symfony is bounded to routing.yml. Adding few lines for each new module can create large mess. Can we make it bit simpler? Sure we do and I will show you how."
 ---
 
-<p class="perex">Modular routing in Symfony is bounded to routing.yml. Adding few lines for each new module can create large mess. Can we make it bit simpler? Sure we do and I will show you how.</p>
+<p class="perex">{{ page.perex }}</p>
 
 Let's say you have fairly standalone module or package and you want to add its routes as simple as:
 
