@@ -1,0 +1,17 @@
+{
+    "name": "tomasvotruba/sculpin-translation-bundle",
+    "require": {
+        "symfony/config": "^2.8|^3.0",
+        "symfony/dependency-injection": "^2.8|^3.0",
+        "symfony/finder": "^2.8",
+        "symfony/http-kernel": "^2.8|^3.0",
+        "symfony/translation": "^2.8|^3.0",
+        "twig/twig": "^1.22|^2.0",
+        "nette/utils": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "TomasVotruba\\SculpinTranslationBundle\\": "src"
+        }
+    }
+}

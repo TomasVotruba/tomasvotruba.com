@@ -5,10 +5,12 @@
         "dflydev/embedded-composer-core": "1.0.*@dev",
         "composer/composer": "dev-master",
 
-        "tomasvotruba/sculpin-blog-bundle": "@dev"
+        "tomasvotruba/sculpin-blog-bundle": "@dev",
+        "tomasvotruba/sculpin-translation-bundle": "@dev"
     },
     "repositories": [
-        { "type": "path", "url": "packages/tomasvotruba/sculpin-blog-bundle" }
+        { "type": "path", "url": "packages/tomasvotruba/sculpin-blog-bundle" },
+        { "type": "path", "url": "packages/tomasvotruba/sculpin-translation-bundle" }
     ],
     "config": {
         "component-dir": "source/components"

@@ -5,11 +5,7 @@
 
             {% if short is defined %}
                 <a href="{{ post.url }}" class="btn btn-success pull-right">
-                    {% if post.lang == "en" %}
-                        Read on&nbsp;
-                    {% else %}
-                        Přečti si&nbsp;
-                    {% endif %}
+                    {{ "post.read_on"|trans(post.lang) }}
                     <em class="fa fa-hand-o-right fa-fw"></em>
                 </a>
             {% endif %}

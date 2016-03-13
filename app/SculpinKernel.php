@@ -2,6 +2,7 @@
 
 use Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKernel;
 use TomasVotruba\SculpinBlogBundle\SculpinBlogBundle;
+use TomasVotruba\SculpinTranslationBundle\SculpinTranslationBundle;
 
 class SculpinKernel extends AbstractKernel
 {
@@ -11,7 +12,8 @@ class SculpinKernel extends AbstractKernel
     protected function getAdditionalSculpinBundles()
     {
         return [
-            SculpinBlogBundle::class
+            SculpinBlogBundle::class,
+            SculpinTranslationBundle::class
         ];
     }
 }

@@ -7,11 +7,7 @@
         <div class="main">
             {{ include('partials/post.twig', {'post': page}) }}
 
-            {% if page.lang == "en" %}
-                <h2>I care about your opinion</h2>
-            {% else %}
-                <h2>Tvůj názor mě zajímá</h2>
-            {% endif %}
+            <h2>{{ "post.i_want_your_opinion"|trans(page.lang) }}</h2>
 
             <div id="disqus_thread"></div>
             <script type="text/javascript">
