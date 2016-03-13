@@ -17,8 +17,5 @@
     },
     "autoload": {
         "classmap": ["app"]
-    },
-    "require-dev": {
-        "mmoreram/translation-server": "^1.0"
     }
 }
