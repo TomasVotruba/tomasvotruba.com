@@ -1,0 +1,22 @@
+services:
+    translation.twig_extension:
+        class: TomasVotruba\SculpinTranslationBundle\Twig\SculpinTranslationExtension
+        autowire: true
+        tags:
+            - { name: twig.extension }
+
+    simple_translator_factory:
+        class: TomasVotruba\SculpinTranslationBundle\Translation\TranslatorFactory
+        arguments:
+            - "%kernel.root_dir%/../translations"
+        autowire: true
+
+    simple_translator:
+        class: Symfony\Component\Translation\Translator
+        factory: [@simple_translator_factory, create]
+
+    translation.message_analyzer:
+        class: TomasVotruba\SculpinTranslationBundle\Translation\MessageAnalyzer
+
+    translation.resource_finder:
+        class: TomasVotruba\SculpinTranslationBundle\Filesystem\ResourceFinder

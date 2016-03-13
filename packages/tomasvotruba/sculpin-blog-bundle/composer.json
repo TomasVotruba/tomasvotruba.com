@@ -1,10 +1,10 @@
 {
     "name": "tomasvotruba/sculpin-blog-bundle",
     "require": {
-        "symfony/config": "^2.7",
-        "symfony/dependency-injection": "^2.7",
-        "symfony/http-kernel": "^2.7",
-        "twig/twig": "^1.22"
+        "symfony/config": "^2.8|^3.0",
+        "symfony/dependency-injection": "^2.8|^3.0",
+        "symfony/http-kernel": "^2.8|^3.0",
+        "twig/twig": "^1.22|^2.0"
     },
     "autoload": {
         "psr-4": {

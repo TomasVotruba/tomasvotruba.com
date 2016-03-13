@@ -4,11 +4,7 @@
             <a href="{{ post.url }}">{{ post.title }}</a>
 
             <a href="{{ post.url }}" class="btn btn-success pull-right">
-                {% if page.lang == "en" %}
-                    Read on&nbsp;
-                {% else %}
-                    Přečti si&nbsp;
-                {% endif %}
+                {{ "post.read_on"|trans(post.lang) }}&nbsp;
                 <em class="fa fa-hand-o-right fa-fw"></em>
             </a>
         </h2>

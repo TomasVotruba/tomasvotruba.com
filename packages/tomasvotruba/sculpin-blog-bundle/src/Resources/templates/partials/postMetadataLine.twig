@@ -22,11 +22,7 @@
     <li>
         <em class="fa fa-fw fa-comments"></em>
         <a href="http://tomasvotruba.cz{{ post.url }}/#disqus_thread">
-            {% if post.lang == "en" %}
-                comments
-            {% else %}
-                komentáře
-            {% endif %}
+            {{ "post.comments"|trans(post.lang) }}
         </a>
     </li>
 </ul>
