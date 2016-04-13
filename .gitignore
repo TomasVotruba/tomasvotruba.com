@@ -6,3 +6,4 @@
 /vendor
 composer.lock
 sculpin.lock
+/source/_drafts
