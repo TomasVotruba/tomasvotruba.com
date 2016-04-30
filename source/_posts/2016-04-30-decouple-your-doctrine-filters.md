@@ -44,7 +44,7 @@ For better understanding what is really important, let's break down the purpose 
 
 That's all it does. Everything else is just syntax sugar, glue code or entry point to work with them.
  
-Saying that, we can get rid of Controllers, Subscribers, DoctrineBundle, `app/config/config.yml` and yet still make use of them. 
+Saying that, we can **get rid of Controllers, Subscribers, DoctrineBundle, `app/config/config.yml`** and yet still make use of them. 
 
 
 ## Decouple Your Doctrine Filter... to Service
