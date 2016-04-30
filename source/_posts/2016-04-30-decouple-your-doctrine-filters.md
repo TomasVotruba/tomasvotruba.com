@@ -27,7 +27,7 @@ You have to do all these steps just to turn something on. Imagine you'd have to 
 
 ## Could We Make It Easier?
 
-In the tutorial from KnpUniversity, there is way to skip enabling filters in controller. By creating own [BeforeRequestListener](https://knpuniversity.com/screencast/doctrine-queries/filters#enabling-a-filter-globally), you can skip the controllers part. 
+In the tutorial from KnpUniversity, there is way to skip enabling filters in controller - by creating own [BeforeRequestListener](https://knpuniversity.com/screencast/doctrine-queries/filters#enabling-a-filter-globally). 
 
 It's quite nice, but it just moves all these steps from controller's responsibility somewhere else. So you have to enable them again, just in different place.
 
