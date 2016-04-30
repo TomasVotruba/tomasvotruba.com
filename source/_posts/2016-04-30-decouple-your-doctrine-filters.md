@@ -112,6 +112,8 @@ class AppKernel extends Kernel
 // src/SomeBundle/Doctrine/Filter/SoftdeletableFilter.php
 namespace SomeBundle\Doctrine\Filter;
 
+use Symplify\DoctrineFilters\Contract\Filter\FilterInterface;
+
 final class SoftdeletableFilter implements FilterInterface
 {
     /**
