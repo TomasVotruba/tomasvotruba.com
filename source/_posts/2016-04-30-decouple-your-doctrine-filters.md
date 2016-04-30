@@ -2,8 +2,8 @@
 title: Decouple Your Doctrine Filters
 categories:
     - Symfony
-    - Symplify
     - Doctrine
+    - Symplify
 perex: "Doctrine filters are powerful tool. Yet their management, turning on and off is bit overcomplicated. Today I will show you how to decouple them to standalone services that can take care of everything you need." 
 lang: "en"
 ---
@@ -13,7 +13,7 @@ lang: "en"
   
 ## Standard Process to Enable Filter
 
-If you don't know Doctrine Filters, KnpUniversity has very nice, short and funny tutorial about them. [Go check it](https://knpuniversity.com/screencast/doctrine-queries/filters), I'll wait here.
+If you don't know Doctrine Filters, [KnpUniversity](https://knpuniversity.com/) has very nice, short and funny tutorial about them. [Go check it](https://knpuniversity.com/screencast/doctrine-queries/filters), I'll wait here.
 
 So now you know, that to enable filter in Symfony you have to:
 
@@ -51,7 +51,7 @@ Saying that, we can get rid of Controllers, Subscribers, DoctrineBundle, `app/co
 
 When we remove everything we don't need, we could end up with simple service:
 
-```php
+```language-php
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Symplify\DoctrineFilters\Contract\Filter\FilterInterface;
 
@@ -69,7 +69,7 @@ final class ActiveFilter implements FilterInterface
 
 And register it as service:
 
-```yaml
+```language-yaml
 # Resoureces/config.yml
 services:
     module.softdeletable_filter:
