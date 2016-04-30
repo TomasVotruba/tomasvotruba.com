@@ -4,7 +4,7 @@ categories:
     - Symfony
     - Doctrine
     - Symplify
-perex: "Doctrine filters are powerful tool. Yet their management, turning on and off is bit overcomplicated. Today I will show you how to decouple them to standalone services that can take care of everything you need." 
+perex: "Doctrine filters are powerful tool. Yet their registration and management are bit overcomplicated. Today I will show you how to decouple them to standalone services that can take care of everything you need." 
 lang: "en"
 ---
 
@@ -13,7 +13,7 @@ lang: "en"
   
 ## Standard Process to Enable Filter
 
-If you don't know Doctrine Filters, [KnpUniversity](https://knpuniversity.com/) has very nice, short and funny tutorial about them. [Go check it](https://knpuniversity.com/screencast/doctrine-queries/filters), I'll wait here.
+If you don't know Doctrine Filters, [KnpUniversity](https://knpuniversity.com/) has very nice, short and funny tutorial about them. [Go check it](https://knpuniversity.com/screencast/doctrine-queries/filters), I'll wait here...
 
 So now you know, that to enable filter in Symfony you have to:
 
@@ -29,7 +29,7 @@ You have to do all these steps just to turn something on. Imagine you'd have to 
 
 In the tutorial from KnpUniversity, there is way to skip enabling filters in controller. By creating own [BeforeRequestListener](https://knpuniversity.com/screencast/doctrine-queries/filters#enabling-a-filter-globally), you can skip the controllers part. 
 
-It quite nice, but it just moves all these steps from controller's responsibility somewhere else. So you have to to them again, just in different place.
+It's quite nice, but it just moves all these steps from controller's responsibility somewhere else. So you have to enable them again, just in different place.
 
 Let's say this is fine enough. **But what about modular applications with own per module filters?** Not so easy.
 
@@ -127,6 +127,8 @@ final class SoftdeletableFilter implements FilterInterface
     }
 }
 ```
+
+> This could be filter for [Softdeletable](https://github.com/KnpLabs/DoctrineBehaviors#softDeletable) from [DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors).
 
 ### 4. Register it as a service to your module
 
