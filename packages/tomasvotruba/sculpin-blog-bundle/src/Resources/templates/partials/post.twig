@@ -1,4 +1,8 @@
 <article class="blog-post">
+    {% if post.thumbnail %}
+        <img src="/images/posts/thumbnail/{{ post.thumbnail }}" class="pull-left post-thumbnail">
+    {% endif %}
+
     <header>
         <h1>
             <a href="{{ post.url }}">{{ post.title }}</a>

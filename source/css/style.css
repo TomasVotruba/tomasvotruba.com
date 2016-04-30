@@ -35,11 +35,13 @@ pre {
     border-radius: 2px;
 }
 
-
 .blog-post img {
     border-radius: 2px;
 }
 
+.blog-post img.post-thumbnail, .post-thumbnail {
+    margin: 0 .9em .2em 0;
+}
 
 /* true colors */
 .navbar {

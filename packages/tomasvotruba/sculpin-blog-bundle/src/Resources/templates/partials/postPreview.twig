@@ -1,16 +1,21 @@
 <article class="blog-post">
     <header>
+        {% if post.thumbnail %}
+            <img src="/images/posts/thumbnail/{{ post.thumbnail }}" class="pull-left post-thumbnail">
+            <meta property="og:image" content="/images/posts/thumbnail/{{ post.thumbnail }}" />
+        {% endif %}
+
         <h2>
             <a href="{{ post.url }}">{{ post.title }}</a>
-
             <a href="{{ post.url }}" class="btn btn-success pull-right">
                 {{ "post.read_on"|trans(post.lang) }}&nbsp;
                 <em class="fa fa-hand-o-right fa-fw"></em>
             </a>
         </h2>
 
-        <p>{{ post.meta.perex }}</p>
-
         {{ include('partials/postMetadataLine.twig') }}
     </header>
+
+    <p>{{ post.meta.perex }}</p>
+    <div class="clearfix"></div>
 </article>
