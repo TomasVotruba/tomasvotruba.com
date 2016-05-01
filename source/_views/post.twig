@@ -35,3 +35,16 @@
 </div>
 
 {% endblock %}
+
+
+{% block socialTags %}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.perex }}" />
+    <meta property="og:image" content="{{ site.url }}/images/posts/thumbnail/{{ page.thumbnail }}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.perex }}" />
+    <meta name="twitter:image" content="{{ site.url }}/images/posts/thumbnail/{{ page.thumbnail }}" />
+{% endblock %}
