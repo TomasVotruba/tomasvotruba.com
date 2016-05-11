@@ -89,7 +89,7 @@ Let's try it together!
 ### 1. Install package
 
 ```language-bash
-composer require symplify/modular-routing
+composer require symplify/modular-doctrine-filters
 ```
 
 ### 2. Register Bundle
