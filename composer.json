@@ -3,6 +3,7 @@
         "sculpin/sculpin": "^2.0",
         "dflydev/embedded-composer-console": "1.0.*@dev",
         "dflydev/embedded-composer-core": "1.0.*@dev",
+        "sculpin/sculpin-theme-composer-plugin": "1.0.*@dev",
 
         "tomasvotruba/sculpin-blog-bundle": "@dev",
         "tomasvotruba/sculpin-translation-bundle": "@dev"
