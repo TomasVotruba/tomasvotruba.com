@@ -40,7 +40,7 @@ use Nette\Database\Table\Selection;
 use Zenify\NetteDatabaseFilters\Contract\FilterInterface;
 
 
-final class SoftdeletableFilter implements FilterInterface
+final class SoftDeletableFilter implements FilterInterface
 {
     public function __construct(Application $application)
     {
@@ -60,7 +60,7 @@ final class SoftdeletableFilter implements FilterInterface
         }
 
         // 2. skip for admin presenters
-        // add your custom method, that detects admin presentervia name or class inheritance
+        // add your custom method, that detects admin presenter via name or class inheritance
         if ($this->isAdminPresenter($this->application->getPresenter())) {
             return;
         }
@@ -92,7 +92,7 @@ composer require zenify/nette-database-filters
 ```language-yaml
 # app/config/config.neon
 extensions:
-    - Zenify\NetteDatabaseFilters\DI\Zenify\NetteDatabaseFiltersExtension
+    - Zenify\NetteDatabaseFilters\DI\NetteDatabaseFiltersExtension
 ```
 
 ### 3. Create your filter
