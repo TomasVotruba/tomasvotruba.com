@@ -31,7 +31,7 @@ use Nette\Database\Context;
 use Nette\Database\Table\Selection;
 
 
-final class CommentRepository
+class CommentRepository
 {
 
     /**
@@ -89,6 +89,8 @@ So you can be sure you'll never forget to add the condition.
 There is not much to talk about, because filters are made to be simple. So here is filter:
 
 ```language-php
+# app/Database/Filter/SoftDeletableFilter.php
+
 namespace App\Database\Filter;
 
 use Nette\Application\Application;
@@ -96,7 +98,7 @@ use Nette\Database\Table\Selection;
 use Zenify\NetteDatabaseFilters\Contract\FilterInterface;
 
 
-final class SoftDeletableFilter implements FilterInterface
+class SoftDeletableFilter implements FilterInterface
 {
 
     public function __construct(Application $application)
@@ -170,13 +172,15 @@ And that's it! Now your filter will be reflected in whole application.
 So you can reduce your repository code and use `fetchComments()` in all places.
 
 ```language-php
+# app/Repository/CommentRepository.php
+
 namespace App\Repository;
 
 use Nette\Database\Context;
 use Nette\Database\Table\Selection;
 
 
-final class CommentRepository
+class CommentRepository
 {
 
     /**
@@ -200,6 +204,45 @@ final class CommentRepository
 ```
 
 For further use just **check Readme for [Zenify/NetteDatabaseFilters](https://github.com/Zenify/NetteDatabaseFilters#nette-database-filters)**.
+
+## Protip for multiple tables with the same column!
+
+What if you have **multiple tables with "is_deleted" column**? "comment", "article", "page" table... maybe "banner", "user" in the furture.
+
+- Do you have to create filter for every one of them? **No.**
+- Do you have to name them all in the filter class? **No.**
+
+- Do you need to check the column presence only? **YES!**
+
+And I will show you how do it:
+
+```language-php
+# app/Database/Filter/SoftDeletableFilter.php
+
+// ...
+
+public function applyFilter(Selection $selection)
+{
+    if (!$this->isSoftdelable($selection)) {
+        return;
+    }
+
+    // ... condition code
+}
+
+/**
+ * @return bool
+ */
+private function isSoftdelable(Selection $selection)
+{
+    $selectionToCheck = clone $selection;
+    return $selectionToCheck->fetch()
+        ->offsetExists('is_deleted');
+}
+```
+
+Pretty neat, huh?
+
 
 ## What Have You Learned Today?
 
