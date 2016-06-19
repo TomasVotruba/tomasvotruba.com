@@ -107,9 +107,6 @@ class SoftDeletableFilter implements FilterInterface
     }
 
 
-    /**
-     * {@inheritdoc}
-     */
     public function applyFilter(Selection $selection)
     {
         // 1. apply only to "comment" table
