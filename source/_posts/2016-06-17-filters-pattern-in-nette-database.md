@@ -1,5 +1,5 @@
 ---
-title: Soft delete in Nette Database for dummies
+title: Filters Pattern in Nette Database
 categories:
     - Nette
     - Filters
