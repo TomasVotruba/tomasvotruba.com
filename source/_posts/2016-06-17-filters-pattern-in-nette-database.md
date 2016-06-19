@@ -14,8 +14,64 @@ thumbnail: "nette.png"
 ---
 
 <p class="perex">{{ page.perex }}</p>
-  
+
+## Current way to do this
+
+Let's say we have a `CommentRepository` class, where we put all methods that work with "comment" table.
+
+In it, we have 2 methods:
+
+- 1 for frontend
+- 1 for administration
+
+```language-php
+namespace App\Repository;
+
+use Nette\Database\Context;
+use Nette\Database\Table\Selection;
+
+
+final class CommentRepository
+{
+
+    /**
+     * @var Selection
+     */
+    private $commentTable;
+
+
+    public function __construct(Context $database)
+    {
+        $this->commentTable = $database->table('comment');
+    }
+
+
+    /**
+     * Returns only comments, that are not deleted.
+     */
+    public function fetchCommentsForFrontend()
+    {
+        return $this->commentTable->where('is_deleted = ?', FALSE)
+            ->fetchAll();
+    }
+
+
+    public function fetchCommentsForAdministration()
+    {
+        return $this->commentTable->fetchAll();
+    }
+
+}
+```
+
+And **decide manually**, where to use `fetchCommentsForFrontend()` and where to use `fetchAllCommentsForAdministration()`.
+
+This approach is bad practise, because it will eventually **make your every repository class double its size**.
+
+No need for that! This has been already solved somewhere else.
+
 Do you know Doctrine Filters? No? Go check [this short article to get the clue](/blog/2016/04/30/decouple-your-doctrine-filters). I'll wait here.
+
 
 ## Soft delete filter - in theory
 
@@ -42,6 +98,7 @@ use Zenify\NetteDatabaseFilters\Contract\FilterInterface;
 
 final class SoftDeletableFilter implements FilterInterface
 {
+
     public function __construct(Application $application)
     {
         $this->application = $application;
@@ -109,6 +166,38 @@ services:
 ```
 
 And that's it! Now your filter will be reflected in whole application.
+
+So you can reduce your repository code and use `fetchComments()` in all places.
+
+```language-php
+namespace App\Repository;
+
+use Nette\Database\Context;
+use Nette\Database\Table\Selection;
+
+
+final class CommentRepository
+{
+
+    /**
+     * @var Selection
+     */
+    private $commentTable;
+
+
+    public function __construct(Context $database)
+    {
+        $this->commentTable = $database->table('comment');
+    }
+
+
+    public function fetchComments()
+    {
+        return $this->commentTable->fetchAll();
+    }
+
+}
+```
 
 For further use just **check Readme for [Zenify/NetteDatabaseFilters](https://github.com/Zenify/NetteDatabaseFilters#nette-database-filters)**.
 
