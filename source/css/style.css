@@ -164,3 +164,8 @@ code {
 .main > .row > * {
     margin-top: 1em;
 }
+
+#contact-lead p {
+    font-size: 1.5em;
+    line-height: 2.5em;
+}

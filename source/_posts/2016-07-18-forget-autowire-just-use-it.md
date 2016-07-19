@@ -34,11 +34,11 @@ If you use autowiring daily, you might came across this thinking process before 
 - No => add `autowiring_types` for specific name to required service, [which is pretty difficult at the moment](https://github.com/symfony/symfony/issues/17783)
 - Yes => autowire
 
-*4) Has the constructor changed?*
+*4) Has the constructor changed during development?*
 
 - Start from point 1.
 
-And some more for edge cases.
++ And some more for edge cases.
 
 
 ## Seems like function... Could this be automated?
