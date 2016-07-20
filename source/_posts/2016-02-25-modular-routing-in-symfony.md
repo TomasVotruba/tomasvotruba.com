@@ -138,15 +138,13 @@ final class SomeRouteCollectionProvider extends AbstractRouteCollectionProvider
 }
 ```
 
-### 4. Register it as a service to your module and tag it
+### 4. Register it as a service to your module
 
 ```language-yaml
 # src/SomeBundle/Resources/config/services.yml
 services:
     some_module.route_provider:
         class: SomeBundle\Routing\SomeRouteCollectionProvider
-        tags:
-            - { name: symplify.route_collection_provider }
 ```
 
 And that's it! Now all routes are loaded along with your bundle registration.
