@@ -7,5 +7,5 @@ disqus_shortname: itsworthsharing
 
 google_analytics_tracking_id: "UA-46082345-1"
 
-#url: "http://www.tomasvotruba.cz" # prod
-url: "http://localhost:8001" # dev
+url: "http://www.tomasvotruba.cz" # prod
+#url: "http://localhost:8001" # dev
