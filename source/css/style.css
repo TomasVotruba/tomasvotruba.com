@@ -4,14 +4,32 @@ body {
     line-height: 1.5em;
 }
 
+
+.portrait-box .page-header {
+    padding-bottom: 10px;
+    margin: 1.2em 0 22px;
+}
+
+.portrait-text {
+    padding-top: .2em;
+}
+
 .portrait-image img {
-    margin-top: 4.85em;
-    border: 1px solid #e0e5eb;
+    margin-top: 2.5em;
+    border: 1px solid #EEE;
 }
 
 .lead {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    line-height: 1.5em;
     font-weight: 400;
+}
+
+#first-action-step {
+    margin-top: .3em;
+    padding-top: 1.3em;
+    border-top: 1px solid #CCC;
+    padding-bottom: .3em;
 }
 
 .edu-nette-logo {
@@ -73,6 +91,8 @@ pre {
 
 .page-header h1 {
     color: #08c;
+    font-size: 2.2em;
+    font-weight: 600;
 }
 
 a, a:active {
@@ -94,11 +114,6 @@ a:hover, a:focus {
 
 h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
     font-family: source-sans-pro, sans-serif;
-}
-
-.page-header h1 {
-    font-size: 2.2em;
-    font-weight: 600;
 }
 
 .blog-post h1 {
