@@ -1,8 +1,8 @@
 <ul class="list-inline list-inline-box">
     <li>
         <em class="fa fa-calendar fa-fw"></em>
-        {% set postYear = post.date|date("Y") %}
-        <time class="hidden-xs" datetime="{{ post.date | date('Y-m-D') }}">{{ post.date | date("j. n.") }}{% if postYear != 2015 %} {{ postYear }}{% endif %}</time>
+        {#{% set postYear = post.date|date("Y") %}#}
+        <time class="hidden-xs" datetime="{{ post.date | date('Y-m-D') }}">{{ post.date | date("j. n. Y") }}</time>
     </li>
 
     {% if post.categories %}

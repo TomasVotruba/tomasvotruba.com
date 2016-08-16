@@ -14,6 +14,13 @@ id: blog
         </header>
 
         <div class="main">
+            <p>
+                <a href="{{ site.url }}/atom.xml" class="btn btn-primary">
+                    <em class="fa fa-rss fa-fw"></em>
+                    Hod si mě do RSS čtečky&nbsp;
+                </a>
+            </p>
+
             {% for post in data.posts %}
                 {{ include('partials/postPreview.twig', {'post': post}) }}
             {% endfor %}

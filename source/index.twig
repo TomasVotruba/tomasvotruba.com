@@ -49,32 +49,50 @@ use:
 
     <div class="container" id="first-action-step">
         <div class="row">
-            <div class="lead action-step text-center">
-                <p>
-                    Máte zájem se posunout z místa a chcete s tím pomoc?
-                </p>
-                <p>
-                    <a href="{{ site.url }}/kontakt" class="btn btn-lg btn-success">Kontaktujte mě</a>
-                </p>
+            <div class="col-md-12">
+                <div class="lead action-step text-center">
+                    <p>
+                        Máte zájem se posunout z místa a chcete s tím pomoc?
+                    </p>
+                    <p>
+                        <a href="{{ site.url }}/kontakt" class="btn btn-lg btn-success">
+                            Kontaktujte mě
+                            &nbsp;
+                            <em class="fa fa-comments fa-fw"></em>
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="page">
-    <div class="container">
-        <div class="main">
-            {{ include('partials/post.twig', {'post': data.posts.first(), 'short': true}) }}
+<div class="container page">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>
+                <em class="fa fa-book fa-fw"></em>
+                &nbsp;
+                Taky rád píšu
+            </h2>
+            <p>Poslední dobou nejradši na o...</p>
 
-            <br>
+            <ul>
+                {% for post in data.posts | slice(0, 3) %}
+                    <li>
+                        <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
+                    </li>
+                {% endfor %}
+            </ul>
+
             <br>
 
             <p>
-                <a href="{{ site.url }}/blog" class="btn btn-primary">
-                    &nbsp;Mrkni i na další články
-                    <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-                </a>
+                Dalších {{ data.posts|length -3 }} článků na téma PHP, vzdělávání, open-source a komunity najdeš na blogu.
+                <br>
+                <a href="/blog">Mrkni se tam!</a>
             </p>
+
         </div>
     </div>
 </div>
