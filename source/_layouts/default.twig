@@ -56,6 +56,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
                             </button>
                         </div>
 
@@ -63,6 +64,9 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li class="logo"><a href="/">Tomáš Votruba</a></li>
+                                <li {% if page.id == "mentoring" %}class="active"{% endif %}>
+                                    <a href="{{ site.url }}/zkus-si-mentoring">Mentoring (nové)</a>
+                                </li>
                                 <li {% if page.id == "satisfy" %}class="active"{% endif %}>
                                     <a href="{{ site.url }}/reference">Reference</a>
                                 </li>
