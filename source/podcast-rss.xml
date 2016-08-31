@@ -14,16 +14,16 @@ permalink: podcast-rss.xml
         <link><![CDATA[https://www.youtube.com/watch?list=PLqRXa8pInSUqxMhNhzJsV-1_FZ-YsrSYM&v=1BjVVGmSdCw]]></link>
         <language>cs</language>
         <copyright><![CDATA[© 2016 Tomáš Votruba and Honza Černý]]></copyright>
-        <description><![CDATA[The unofficial Symfony podcast]]></description>
+        <description><![CDATA[Povídání o všem možném kolem PHP, komunit, vzdělání a firem u nás.]]></description>
 
         <itunes:subtitle><![CDATA[Tomáš a Honza si povídají nejen o PHP]]></itunes:subtitle>
         <itunes:author><![CDATA[Tomáš a Honza]]></itunes:author>
-        <itunes:summary><![CDATA[Povídání o všem možném kolem PHP, komunit, vzdělání a firem u nás]]></itunes:summary>
+        <itunes:summary><![CDATA[Povídání o všem možném kolem PHP, komunit, vzdělání a firem u nás.]]></itunes:summary>
         <itunes:owner>
             <itunes:name>Tomáš Votruba</itunes:name>
             <itunes:email>info@tomasvotruba.cz</itunes:email>
         </itunes:owner>
-        <itunes:image href="http://www.tomasvotruba.com/images/podcast/tomas-a-honza-nejen-o-php.jpg"/>
+        <itunes:image href="http://www.tomasvotruba.cz/images/podcast/tomas-a-honza-nejen-o-php.jpg"/>
         <itunes:category text="Technology"/>
         <itunes:explicit>clean</itunes:explicit>
 
@@ -38,7 +38,7 @@ permalink: podcast-rss.xml
 
                     <itunes:subtitle>{{ post.perex }}</itunes:subtitle>
                     <itunes:author><![CDATA[Tomáš a Honza nejen o PHP]]></itunes:author>
-                    <itunes:image href="http://www.tomasvotruba.com/images/podcast/tomas-a-honza-nejen-o-php.jpg"/>
+                    <itunes:image href="http://www.tomasvotruba.cz/images/podcast/tomas-a-honza-nejen-o-php.jpg"/>
                     <itunes:duration>{{ post.podcast.mp3_duration }}</itunes:duration>
                 </item>
             {% endif %}
