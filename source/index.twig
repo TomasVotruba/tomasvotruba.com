@@ -69,10 +69,9 @@ use:
 
 <div class="container page">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <h2>
                 <em class="fa fa-book fa-fw"></em>
-                &nbsp;
                 Taky rád píšu
             </h2>
             <p>Poslední dobou nejradši na o...</p>
@@ -85,14 +84,21 @@ use:
                 {% endfor %}
             </ul>
 
-            <br>
+            <p>
+                Dalších {{ data.posts|length -3 }} článků na téma PHP, vzdělávání, open-source a komunity najdeš na
+                <a href="/blog">na blogu</a>.
+            </p>
+        </div>
+
+        <div class="col-md-6">
+            <h2>
+                <em class="fa fa-volume-up fa-fw"></em>
+                Mám i něco pro uši
+            </h2>
 
             <p>
-                Dalších {{ data.posts|length -3 }} článků na téma PHP, vzdělávání, open-source a komunity najdeš na blogu.
-                <br>
-                <a href="/blog">Mrkni se tam!</a>
+                S Honzou Černým děláme podcast. <a href="/podcast-rss.xml">Odebírej ho tady</a>.
             </p>
-
         </div>
     </div>
 </div>

@@ -1,0 +1,46 @@
+: ["posts"]
+permalink: podcast-rss.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:feedpress="https://feed.press/xmlns" version="2.0">
+    <channel>
+        <feedpress:locale>cs</feedpress:locale>
+        <feedpress:newsletterId>tomasahonzanejenophp</feedpress:newsletterId>
+        <atom:link rel="self" href="http://www.tomasvotruba.cz/podcast-rss.xml" />
+
+        <title><![CDATA[Tomáš a Honza nejen o PHP]]></title>
+        <link><![CDATA[https://www.youtube.com/watch?list=PLqRXa8pInSUqxMhNhzJsV-1_FZ-YsrSYM&v=1BjVVGmSdCw]]></link>
+        <language>cs</language>
+        <copyright><![CDATA[© 2016 Tomáš Votruba and Honza Černý]]></copyright>
+        <description><![CDATA[The unofficial Symfony podcast]]></description>
+
+        <itunes:subtitle><![CDATA[Tomáš a Honza si povídají nejen o PHP]]></itunes:subtitle>
+        <itunes:author><![CDATA[Tomáš a Honza]]></itunes:author>
+        <itunes:summary><![CDATA[Povídání o všem možném kolem PHP, komunit, vzdělání a firem u nás]]></itunes:summary>
+        <itunes:owner>
+            <itunes:name>Tomáš Votruba</itunes:name>
+            <itunes:email>info@tomasvotruba.cz</itunes:email>
+        </itunes:owner>
+        <itunes:image href="http://www.tomasvotruba.com/images/podcast/tomas-a-honza-nejen-o-php.jpg"/>
+        <itunes:category text="Technology"/>
+        <itunes:explicit>clean</itunes:explicit>
+
+        {% for post in data.posts %}
+            {% if post.podcast %}
+                <item>
+                    <title>{{ post.podcast.title }}</title>
+                    <enclosure url="{{ post.podcast.mp3_url }}" length="{{ post.podcast.mp3_size_in_b }}" type="audio/mpeg"/>
+                    <guid>{{ site.url }}{{ post.url }}</guid>
+                    <pubDate>{{ post.podcast.publish_date }} 11:00:00 +0000</pubDate>
+                    <description>{{ post.perex }}</description>
+
+                    <itunes:subtitle>{{ post.perex }}</itunes:subtitle>
+                    <itunes:author><![CDATA[Tomáš a Honza nejen o PHP]]></itunes:author>
+                    <itunes:image href="http://www.tomasvotruba.com/images/podcast/tomas-a-honza-nejen-o-php.jpg"/>
+                    <itunes:duration>{{ post.podcast.mp3_duration }}</itunes:duration>
+                </item>
+            {% endif %}
+        {% endfor %}
+    </channel>
+</rss>
