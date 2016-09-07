@@ -6624,12 +6624,3 @@ pre {
     word-wrap: normal;
     white-space: pre;
     border-radius: 6px; }
-
-.presentation {
-    margin: 22px 0;
-    width: 100%;
-    background: url("/images/loading-lg.gif") no-repeat center; }
-
-@media (min-width: 768px) {
-    .presentation {
-        min-height: 522px; } }

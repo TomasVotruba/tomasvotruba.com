@@ -4,7 +4,6 @@ body {
     line-height: 1.5em;
 }
 
-
 .portrait-box .page-header {
     padding-bottom: 10px;
     margin: 1.2em 0 22px;
@@ -84,10 +83,6 @@ pre {
     }
 }
 
-.navbar-default .navbar-nav > li.logo a {
-    color: #FFF;
-    font-weight: 600;
-}
 
 .page-header h1 {
     color: #08c;
@@ -183,4 +178,13 @@ code {
 #contact-lead p {
     font-size: 1.5em;
     line-height: 2.5em;
+}
+
+a.navbar-toggle, a.navbar-toggle:active {
+    color: white;
+    font-size: 1.5em;
+}
+
+a.navbar-toggle:hover {
+    cursor: pointer;
 }

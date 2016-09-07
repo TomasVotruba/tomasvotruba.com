@@ -9,15 +9,12 @@
         {# fonts #}
         <script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9:all.js"></script>
 
-        <link href="{{ site.url }}/css/theme/webmozart/style.css" rel="stylesheet" type="text/css" />
-        <link href="{{ site.url }}/css/theme/webmozart/prism.css" rel="stylesheet" type="text/css" />
-        <link href="{{ site.url }}/css/style.css" rel="stylesheet" type="text/css" />
-        <link href="{{ site.url }}/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="/css/theme/webmozart/style.css" rel="stylesheet" type="text/css" />
 
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        {# code highlighter #}
+        <link href="/css/theme/webmozart/prism.css" rel="stylesheet" type="text/css" />
+        <link href="/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,7 +23,7 @@
         {% block socialTags %}
         {% endblock %}
 
-        <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml" title="{{ site.title }} články" />
+        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="{{ site.title }} články" />
 
         <!-- Facebook Pixel Code -->
         <script>
@@ -49,15 +46,11 @@
                 <nav class="navbar navbar-default">
                     <div class="container">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Menu</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
+                            <a class="navbar-toggle collapsed" data-toggle="collapse"
+                               data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <em class="fa fa-align-justify fa-fw"></em>
+                                Menu
+                            </a>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,22 +58,22 @@
                             <ul class="nav navbar-nav">
                                 <li class="logo"><a href="/">Tomáš Votruba</a></li>
                                 <li {% if page.id == "mentoring" %}class="active"{% endif %}>
-                                    <a href="{{ site.url }}/zkus-si-mentoring">Mentoring (nové)</a>
+                                    <a href="/zkus-si-mentoring">Mentoring</a>
                                 </li>
                                 <li {% if page.id == "satisfy" %}class="active"{% endif %}>
-                                    <a href="{{ site.url }}/reference">Reference</a>
+                                    <a href="/reference">Spokojení klienti</a>
                                 </li>
                                 <li {% if page.id == "skills" %}class="active"{% endif %}>
-                                    <a href="{{ site.url }}/skoleni">Co vám můžu předat</a>
+                                    <a href="/skoleni">Co vám můžu předat</a>
                                 </li>
                                 <li {% if page.id == "blog" %}class="active"{% endif %}>
-                                    <a href="{{ site.url }}/blog">Blog</a>
+                                    <a href="/blog">Blog</a>
                                 </li>
                                 <li {% if page.id == "price" %}class="active"{% endif %}>
-                                    <a href="{{ site.url }}/cenik">Ceník</a>
+                                    <a href="/cenik">Ceník</a>
                                 </li>
                                 <li {% if page.id == "contact" %}class="active"{% endif %}>
-                                    <a href="{{ site.url }}/kontakt">Kontakt</a>
+                                    <a href="/kontakt">Kontakt</a>
                                 </li>
                             </ul>
                         </div>
@@ -103,7 +96,7 @@
                 </div>
             </footer>
 
-            <script src="{{ site.url }}/js/prism.js"></script>
+            <script src="/js/prism.js"></script>
             <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
             <!-- Latest compiled and minified JavaScript -->
