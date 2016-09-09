@@ -12,6 +12,6 @@
         {{ include('partials/postMetadataLine.twig') }}
     </header>
 
-    <p>{{ post.meta.perex }}</p>
+    <p>{{ post.meta.perex|raw }}</p>
     <div class="clearfix"></div>
 </article>
