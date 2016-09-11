@@ -1,12 +1,12 @@
 ---
-title: "How to write OS in PHP 1: Create a repository on Github"
+title: "How to write open-source in PHP 1: Create a repository on Github"
 categories:
     - Open source
     - PHP
 perex: > # multi-line string
     Do you have some code you want to share but you don't know exactly how? Well, writing open-source is complex process.
     In this series, I'll break it down to <strong>the smallest steps possible</strong>, so that you 
-    can <strong>start your own OS project with zero-knowledge</strong>.
+    can <strong>start your own OS project with zero-knowledge</strong> (OS = open-source).
     Ready? Let's start with creating a Github repository!
 thumbnail: "open-source.jpg"
 lang: en
@@ -37,6 +37,14 @@ That's all you need now. Hit "Create repository" and you are done!
 
 ## Little book of git
 
+Now we practise first few git lines.
+
+### Get to the right place
+
+Move to the directory, where you want to host your package locally.
+Open command line or Terminal in PHPStorm. Actually the PHPStorm way will open terminal already in right place. So you don't have to browse directories via `cd` command. I use that.
+And call these commands there.  
+
 Do you know git? 
 
 Just follow commands, that appeared on your Github repository and <a href="#your-code-is-online">skip to next headline</a>.
@@ -50,34 +58,33 @@ Just follow commands, that appeared on your Github repository and <a href="#your
     
 ### You don't understand those geek lines? I'll explain
 
-Move to the directory, where you want to host your package locally. Open command line or Terminal in PHPStorm.
-Actually the second one will open terminal already in right place, so you don't have to browse directories via all those `cd`s. 
-I use that.
+These commits can be divided into 2 groups: 
 
-And call these commands there.  
- 
-Lines with asterix (*) you will do repeatedly later.
-The rest just once to setup repository = you don't have to remember them now.
+1. to setup repository, **just once**
+2. to add some code, **use repeatedly**  
 
-    # create a file README.md and add "# OpenSourcePackageDemo" in it
-    # you can do this manually in your PHPStorm of cource (I do!) 
-    echo "# OpenSourcePackageDemo" >> README.md
-    
+#### 1. Setup repository
+
     # create an empty repository git repostiry
     git init
+
+    # add ONLINE address where we want publish your code  
+    git remote add origin git@github.com:TomasVotruba/OpenSourcePackageDemo.git
+
+#### 2. Add some code
+
+    # create a file README.md and add "# OpenSourcePackageDemo" in it; this is just command line for geeks
+    # I do this manually in my PHPStorm of cource 
+    echo "# OpenSourcePackageDemo" >> README.md
     
     #* tell git you want him to NOTICE this file to be added later
     git add README.md
     
-    #* group all NOTICED files to single COMMIT (group of changes files)  
+    #* group all added files to single COMMIT (group of changes)  
     git commit -m "first commit"
-    
-    # add ONLINE address where we want publish your code  
-    git remote add origin git@github.com:TomasVotruba/OpenSourcePackageDemo.git
     
     #* send all those COMMITS online, now your local system and Github repository are synced 1:1
     git push -u origin master
-
 
 <a name="your-code-is-online"></a>
 
@@ -114,9 +121,9 @@ It's great for deeper understanding of package maintenance. If this is your firs
 
 What have you learned today?
 
-- That OS stands for open-source. You can find OSS as for OS software.
-- How to create proper OS repository.
-- How to add few lines there with a bit of git.
+- That OS stands for open-source. You can also find *OSS* as for *open-source software*.
+- How to **create proper OS repository**.
+- How to **add few lines there with git**.
 
 ## What is coming next?
 
