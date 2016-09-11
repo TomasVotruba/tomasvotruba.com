@@ -65,26 +65,32 @@ These commits can be divided into 2 groups:
 
 #### 1. Setup repository
 
-    # create an empty repository git repostiry
+Create an empty repository git repository
+
     git init
 
-    # add ONLINE address where we want publish your code  
+Add ONLINE address where we want publish your code  
+
     git remote add origin git@github.com:TomasVotruba/OpenSourcePackageDemo.git
 
 #### 2. Add some code
 
-    # create a file README.md and add "# OpenSourcePackageDemo" in it; this is just command line for geeks
-    # I do this manually in my PHPStorm of cource 
-    echo "# OpenSourcePackageDemo" >> README.md
+Create a file README.md and add "Unziping Package" in it (this is just command line for geeks, I do this manually in my PHPStorm of course) 
+
+    echo "Unziping Package" >> README.md
     
-    #* tell git you want him to NOTICE this file to be added later
+Tell git to NOTICE this file to be added later
+
     git add README.md
     
-    #* group all added files to single COMMIT (group of changes)  
+Group all NOTICED files to single COMMIT (group of changes)  
+
     git commit -m "first commit"
     
-    #* send all those COMMITS online, now your local system and Github repository are synced 1:1
+Send ALL COMMITS online. Now your local system and Github repository are synced 1:1
+
     git push -u origin master
+
 
 <a name="your-code-is-online"></a>
 
