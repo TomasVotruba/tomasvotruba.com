@@ -117,7 +117,7 @@ Do you know *Clean Code*? If you really do, you know it has way too detailed and
 you get by reading it. If just there would be something less than 16 years old, not about Java but PHP and 6 times shorter...
  
 There is! [Mathias Noback](http://php-and-symfony.matthiasnoback.nl/), used to be Symfony popularizator, wrote a book about of [Principles of Package Design](https://leanpub.com/principles-of-package-design).
-It's great for deeper understanding of package maintenance. If this is your first OS step, read it 3 articles later. Now it would be to much detailed for you.
+It's great for deeper understanding of package maintenance. If this is your first OS step, read it 3 articles later. Now it would be too much detailed for you.
 
 > There is actually contest about paper version on Czech and Slovak Symfony group Twitter - [go check it and win one](https://twitter.com/Symfonisti/status/773042292479393792)!
 
