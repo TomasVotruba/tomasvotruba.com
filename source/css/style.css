@@ -1,7 +1,21 @@
 body {
-    font-family: "source-sans-pro", Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 17px;
     line-height: 1.5em;
+}
+
+h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    font-family: sans-serif;
+}
+
+@media (min-width: 1000px) {
+    h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
+        font-family: source-sans-pro, sans-serif;
+    }
+
+    body {
+        font-family: "source-sans-pro", sans-serif;
+    }
 }
 
 .portrait-box .page-header {
@@ -107,9 +121,6 @@ a:hover, a:focus {
     margin: 1em 0;
 }
 
-h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
-    font-family: source-sans-pro, sans-serif;
-}
 
 .blog-post h1 {
     font-size: 2.2em;
@@ -187,4 +198,9 @@ a.navbar-toggle, a.navbar-toggle:active {
 
 a.navbar-toggle:hover {
     cursor: pointer;
+}
+
+.mentor-action {
+    font-size: .8em;
+    margin: 1em 0 .5em 0;
 }
