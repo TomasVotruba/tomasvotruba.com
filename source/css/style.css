@@ -204,3 +204,10 @@ a.navbar-toggle:hover {
     font-size: .8em;
     margin: 1em 0 .5em 0;
 }
+
+/* article helpers */
+.arrow-down-on-list {
+    margin-left: .7em;
+    font-size: 1.6em;
+    font-family: Arial, sans-serif;
+}
