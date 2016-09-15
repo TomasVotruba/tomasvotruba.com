@@ -124,7 +124,8 @@ What have you learned today?
 - How does package skeleton make your work much easier.
 - What are **repository meta files**.
 - How and why to **use badges**.
-- How to target min PHP version and package version in composer.
+
+---
 
 ## Hate me, please!
 

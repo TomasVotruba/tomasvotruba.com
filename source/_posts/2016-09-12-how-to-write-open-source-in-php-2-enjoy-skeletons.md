@@ -5,7 +5,7 @@ categories:
     - PHP
 perex: > # multi-line string
     After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some <strong>metadata files</strong>.
-    What are they for? Is there some prepared code we can use? <strong>I will answer these today.</strong> 
+    What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer these today.</strong> 
 thumbnail: "php-podcast.png"
 lang: en
 ---
@@ -215,18 +215,49 @@ Just to remind you, the end user is interested in:
 
 So that are all files and their purpose.
 
+## No time! Fast! Now! → Tell your story with an image
+
+Today people are rather scanning then reading. That's why badges are so important!
+
+Look on these 2 - what information can we get?
+
+<img src="/../../../../images/posts/2016/open-source/badge-2.png" alt="Confusing badge">
+
+- Test are passing - **GOOD**
+- There is stable tag with "?" coverage - **CONFUSING**
+- Master has 89% test coverage - **GOOD**
+- Last version is probably 2.5, but not sure. Do they update manually? - **CONFUSING**
+- Why is master promoted on first place? Should I use that? - **CONFUSING**
+
+<small>Can be found on [Doctrine2 repository](https://github.com/doctrine/doctrine2).</small>
+
+<img src="/../../../../images/posts/2016/open-source/badge-1.png" alt="Well informative badge">
+
+- Test are passing - **GOOD** 
+- Code quality is 10 - **GOOD**
+- Code coverage 93% test coverage - **GOOD**
+- It has 166 downloads. Here it depends on the age of package. → Go check release date! - **GOOD**
+- It's tagged and has stable version. - **GOOD**
 
 ## What have we done today?
 
-- building on other projects is main idea of open-source, do it from the start
-- what is meaning of every meta file and how to enable it
+- Where to go when **starting a new repository**
+- What is **purpose meta files**.
+- How to **enable online services** that help us to build better code. 
 
-### What's next?
+## What's next?
 
-- we'll peak on coding standards
-- what are releases 
-- and how to set minimal required version by composer
+- We'll peak on **coding standards**.
+- How do **releases** work a what is **semantic versioning**. 
+- How to **pick min PHP version and package versions in composer**.
 
-Look forward to it!
+---
 
-Again, hate me please to the comments. I need your feedback to make this better.
+## Hate me, please!
+
+Did you came across some error or wtf? Is it boring, too long or too vague?
+Just write me a comment. I want to make this series bulletproof and as much as helpful as possible.
+
+**You will help thousands of others if you help me to fix one issue.**
+
+Thank you!
