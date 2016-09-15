@@ -6,7 +6,7 @@ categories:
 perex: > # multi-line string
     After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some <strong>metadata files</strong>.
     What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer these today.</strong> 
-thumbnail: "php-podcast.png"
+thumbnail: "open-source.jpg"
 lang: en
 ---
 
@@ -229,7 +229,7 @@ Look on these 2 - what information can we get?
 - Last version is probably 2.5, but not sure. Do they update manually? - **CONFUSING**
 - Why is master promoted on first place? Should I use that? - **CONFUSING**
 
-<small>Can be found on [Doctrine2 repository](https://github.com/doctrine/doctrine2).</small>
+<small>From [Doctrine2 repository](https://github.com/doctrine/doctrine2/blob/master/README.md).</small>
 
 <img src="/../../../../images/posts/2016/open-source/badge-1.png" alt="Well informative badge">
 
@@ -238,6 +238,9 @@ Look on these 2 - what information can we get?
 - Code coverage 93% test coverage - **GOOD**
 - It has 166 downloads. Here it depends on the age of package. → Go check release date! - **GOOD**
 - It's tagged and has stable version. - **GOOD**
+
+<small>From [Symplify/ControllerAutowire repository](https://github.com/Symplify/ControllerAutowire/blob/master/README.md).</small>
+
 
 ## What have we done today?
 
