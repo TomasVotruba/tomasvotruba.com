@@ -40,10 +40,12 @@ Pick one you understand the best.
 - Then *Download a ZIP*
 - Unzip the zip file to your local repository
 - And push new files to Github 
-
+    
+    ```language-bash
     git add .
     git commit -m "add metadata files"
     git push origin master
+    ```
 
 ### Great for start, yet obsolete later 
 
@@ -126,7 +128,7 @@ Just to remind you, the end user is interested in:
 - **Trust**: Without this I would not trust you know anything about open-source. 
 
 
-### `.scrutinzer`
+### `.scrutinzer.yml`
 
 - configuration for [Scrutinizer](https://scrutinizer-ci.com/) - code quality and code coverage tool
 - to enable it, [login](https://scrutinizer-ci.com/login) and new repository
