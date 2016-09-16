@@ -216,3 +216,13 @@ a.navbar-toggle:hover {
 .indent-less {
     margin-left: -.7em;
 }
+
+.grey-content {
+    background: #f5f5f5;
+    padding: 1.5em 1.5em .7em 1.5em;
+    margin: 2em 0;
+}
+
+.grey-content h2 {
+    margin-top: 0em;
+}
