@@ -34,34 +34,16 @@ From my point of view, **there is too much unnecessary code**, so I've prepared 
 
 Pick one you understand the best.
 
-## Lets import the code
+## How to get skeleton code to your local repository in 4 steps
 
-So we have some skeleton repository on Github, but how to get that into your open-source project?
+- Go to repository on Github and click on *Clone or download*
+- Then *Download a ZIP*
+- Unzip the zip file to your local repository
+- And push new files to Github 
 
-Github now support importing code from other repositories by just adding `/import` to your repository.
-
-So for repository:
- 
-    https://github.com/TomasVotruba/OpenSourcePackageDemo/
- 
-the import url is:
- 
-    https://github.com/TomasVotruba/OpenSourcePackageDemo/import
-
-Paste your skeleton url there:
- 
-    https://github.com/TomasVotruba/skeleton-for-starters
-    
-And run import. It might take some time.
-
-After the process of import, just get it to your local machine:
-
-```bash
-git pull
-```
-
-Done! Great job.
-
+    git add .
+    git commit -m "add metadata files"
+    git push origin master
 
 ### Great for start, yet obsolete later 
 
@@ -72,10 +54,10 @@ directories and I'm ready to roll. This is because:
  
 - I upgrade my package more often then some `skeleton` package
 - and because my preferences and required code are evolving
-    - e.g. I new PHP version is out, I tune my continuous integration (CI) setup etc.
+    - e.g. A new PHP version is out, I tune my continuous integration (CI) setup etc.
 
 
-## What is purpose of these files
+## What is the purpose of these files
 
 Now we look on every directory and file and how it's related to 4 key questions.
 Just to remind you, the end user is interested in:
@@ -141,7 +123,7 @@ Just to remind you, the end user is interested in:
 
 <span class="arrow-down-on-list">↓</span>
 
-- **Trush**: Without this I would not trust you know anything about open-source. 
+- **Trust**: Without this I would not trust you know anything about open-source. 
 
 
 ### `.scrutinzer`
@@ -160,12 +142,12 @@ Just to remind you, the end user is interested in:
 </div>
 <br>
 
-- **Quality**: Tests are fine, but with 5 % coverage, they have to added value. When you have 90% coverage, you got attention.
+- **Quality**: Tests are fine, but with 5 % coverage, they have no added value. When you have 90% coverage, you got attention.
     Also there is some code quality score from 0 to 10, which tells about duplicated code, long methods etc. Also factor to get attention.
     It's easy to get 10 with bit of practise.
 
 
-### `.travis`
+### `.travis.yml`
 
 - configuration for [Travis](https://travis-ci.org/) - continuous integration tool for tests
 - to enable it, go register there and add the repository 
@@ -182,7 +164,7 @@ Just to remind you, the end user is interested in:
     - go there
     - add repository
     - go to settings of package, **Integration and services** and **Add Service**
-    - add there your name and token you in find in your [user profile](https://packagist.org/profile/) on Packagist
+    - select "Packagist" and add your name and token from your [user profile](https://packagist.org/profile/)
 
 ### `LICENSE`
 
@@ -244,8 +226,8 @@ Look on these 2 - what information can we get?
 
 ## What have we done today?
 
-- Where to go when **starting a new repository**
-- What is **purpose meta files**.
+- Where to go when **starting a new repository**.
+- What is **the purpose meta files**.
 - How to **enable online services** that help us to build better code. 
 
 ## What's next?
