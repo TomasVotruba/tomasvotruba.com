@@ -2,13 +2,13 @@
 
 namespace TomasVotruba\SculpinBlogBundle\Twig;
 
-use Twig_Environment;
-use Twig_ExtensionInterface;
+use Sculpin\Contrib\ProxySourceCollection\ProxySourceItem;
+use Twig_Extension;
 use Twig_Loader_Chain;
 use Twig_Loader_Filesystem;
 use Twig_SimpleFilter;
 
-final class SculpinBlogExtension implements Twig_ExtensionInterface
+final class SculpinBlogExtension extends Twig_Extension
 {
     public function __construct(Twig_Loader_Chain $twigLoaderChain)
     {
@@ -25,63 +25,13 @@ final class SculpinBlogExtension implements Twig_ExtensionInterface
         return [
             new Twig_SimpleFilter('readTimeInMinutes', function ($text, $lang) {
                 return $this->readTimeInMinutes($text, $lang);
+            }),
+            new Twig_SimpleFilter('githubEditPostUrl', function ($post) {
+                return
+                    'https://github.com/TomasVotruba/tomasvotruba.cz/edit/master/source/_posts/'.
+                    $this->getFileNameFromPost($post);
             })
         ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function initRuntime(Twig_Environment $environment)
-    {
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getTokenParsers()
-    {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getNodeVisitors()
-    {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getTests()
-    {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getFunctions()
-    {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getOperators()
-    {
-        return [];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getGlobals()
-    {
-        return [];
     }
 
     /**
@@ -93,12 +43,14 @@ final class SculpinBlogExtension implements Twig_ExtensionInterface
     }
 
     /**
-     * @param int $text
-     * @param string $lang
-     * @return int
+     * @return string|void
      */
-    private function readTimeInMinutes($text, $lang)
+    private function readTimeInMinutes(string $text = null, string $lang = null)
     {
+        if ($text === null) {
+            return;
+        }
+
         $wordCount = $this->wordCount($text);
         $minutesCount = ceil($wordCount/260);
 
@@ -116,18 +68,35 @@ final class SculpinBlogExtension implements Twig_ExtensionInterface
                 break;
         }
 
-        return $minutesCount . ' ' . $minutesLocalized . ' '
-            . ($lang === 'en' ? 'of reading' : 'čtení');
+        return $minutesCount . ' ' . $minutesLocalized . ' ' . ($lang === 'en' ? 'of reading' : 'čtení');
     }
 
-    /**
-     * @param string $text
-     * @return int
-     */
-    private function wordCount($text)
+    private function wordCount(string $text = null) : int
     {
         $text = strip_tags($text);
         $wordCount = count(explode(' ', $text));
         return $wordCount;
+    }
+
+    /**
+     * @param array|ProxySourceItem $post
+     */
+    private function getFileNameFromPost($post) : string
+    {
+        if (isset($post['next_post'])) {
+            $nextPost = $post['next_post'];
+            if ($nextPost instanceof ProxySourceItem) {
+                return $nextPost->previousItem()['filename'];
+            }
+        }
+
+        if (isset($post['previous_post'])) {
+            $nextPost = $post['previous_post'];
+            if ($nextPost instanceof ProxySourceItem) {
+                return $nextPost->nextItem()['filename'];
+            }
+        }
+
+        return '';
     }
 }
