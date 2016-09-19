@@ -6,10 +6,7 @@ use TomasVotruba\SculpinTranslationBundle\SculpinTranslationBundle;
 
 class SculpinKernel extends AbstractKernel
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected function getAdditionalSculpinBundles()
+    protected function getAdditionalSculpinBundles() : array
     {
         return [
             SculpinBlogBundle::class,

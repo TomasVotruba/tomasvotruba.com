@@ -13,7 +13,7 @@ services:
 
     simple_translator:
         class: Symfony\Component\Translation\Translator
-        factory: [@simple_translator_factory, create]
+        factory: ["@simple_translator_factory", create]
 
     translation.message_analyzer:
         class: TomasVotruba\SculpinTranslationBundle\Translation\MessageAnalyzer

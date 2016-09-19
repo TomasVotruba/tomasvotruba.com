@@ -2,7 +2,7 @@
     <header>
         {% if post.thumbnail %}
             <img src="/images/posts/thumbnail/{{ post.thumbnail }}" class="pull-left post-thumbnail hidden-xs">
-            <meta property="og:image" content="{{ site.url }}/images/posts/thumbnail/{{ post.thumbnail }}" />
+            <meta property="og:image" content="/images/posts/thumbnail/{{ post.thumbnail }}" />
         {% endif %}
 
         <a href="{{ post.url }}">
