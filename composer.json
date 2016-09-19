@@ -1,21 +1,15 @@
 {
     "require": {
-        "sculpin/sculpin": "^2.0",
-        "dflydev/embedded-composer-console": "1.0.*@dev",
-        "dflydev/embedded-composer-core": "1.0.*@dev",
-        "sculpin/sculpin-theme-composer-plugin": "1.0.*@dev",
-
+        "php": "~7.0",
+        "symplify/php7_sculpin": "~0.1.2",
         "tomasvotruba/sculpin-blog-bundle": "@dev",
         "tomasvotruba/sculpin-translation-bundle": "@dev"
+    },
+    "require-dev": {
+        "tracy/tracy": "^2.4"
     },
     "repositories": [
         { "type": "path", "url": "packages/tomasvotruba/sculpin-blog-bundle" },
         { "type": "path", "url": "packages/tomasvotruba/sculpin-translation-bundle" }
-    ],
-    "config": {
-        "component-dir": "source/components"
-    },
-    "autoload": {
-        "classmap": ["app"]
-    }
+    ]
 }

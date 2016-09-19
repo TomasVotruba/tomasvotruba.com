@@ -8,10 +8,10 @@ git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis"
 
 # Generate API
-./vendor/bin/sculpin generate --env=prod
+./vendor/bin/sculpin generate
 
 # Commit & push
-cd output_prod
+cd output
 git init
 git add .
 git commit -m "Regenerated output"
