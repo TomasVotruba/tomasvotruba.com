@@ -12,7 +12,7 @@ lang: en
 
 <p class="perex">{{ page.perex|raw }}</p>
 
-Other programmer might want to use your package. They are usually looking for **long term value**. 
+Other programmers might want to use your package. They are usually looking for **long term value**. 
 To estimate the value they need **to answer 4 important questions**.
 
 1. **What is quality of package?** 
@@ -20,7 +20,7 @@ To estimate the value they need **to answer 4 important questions**.
 3. **Is it trustworthy?** 
 4. **How well maintained is it?**
 
-Even if you know your code is the best and the cleanest, if I don't trust you, I will never use it.
+Even if you know your code is the best and the cleanest, if they don't trust you, they will never use it.
 
 I will let you think about them a little bit. We will relate with specific files to them in second part of this article.
 
@@ -61,7 +61,7 @@ directories and I'm ready to roll. This is because:
 
 ## What is the purpose of these files
 
-Now we look on every directory and file and how it's related to 4 key questions.
+Now we look on every directory and file and how it's related to the 4 key questions.
 Just to remind you, the end user is interested in:
 
 1. Quality - **What is quality of package?** 
@@ -90,7 +90,7 @@ Just to remind you, the end user is interested in:
 - all tests for your code in `/src`
 - basically 1:1 mirror, just every file has `Test` suffix, e.g.
     - `src/Cleaner.php`
-    - `tests/Cleaner.php`
+    - `tests/CleanerTest.php`
 
 <span class="arrow-down-on-list">↓</span>
 
@@ -145,8 +145,8 @@ Just to remind you, the end user is interested in:
 <br>
 
 - **Quality**: Tests are fine, but with 5 % coverage, they have no added value. When you have 90% coverage, you got attention.
-    Also there is some code quality score from 0 to 10, which tells about duplicated code, long methods etc. Also factor to get attention.
-    It's easy to get 10 with bit of practise.
+    Also there is code quality score from 0 to 10. It tells you about code complexity, which is the most important. **Simple code is easier to maintain and debug**.
+    I will show you how to get 10 with bit of practise later.
 
 
 ### `.travis.yml`
