@@ -10,11 +10,11 @@ h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 @media (min-width: 1000px) {
     h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
-        font-family: source-sans-pro, sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
     }
 
     body {
-        font-family: "source-sans-pro", sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
     }
 }
 
@@ -147,7 +147,7 @@ article h2, article h3 {
 
 
 blockquote {
-    font-family: "source-sans-pro", Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     margin: .7em 0;
 }
 
