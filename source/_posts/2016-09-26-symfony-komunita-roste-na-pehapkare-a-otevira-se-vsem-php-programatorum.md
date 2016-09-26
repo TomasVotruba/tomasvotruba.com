@@ -34,14 +34,14 @@ Máme potřebu ti to vysvětlit, abys byl v obraze.
 
 - Téma *PHP* odpovídá obsahu akcí za poslední rok lépe než *Symfony*
 - Je to přirozený vývoj úzce zaměřených komunit. Ptali jsme se u nás i v zahraničí
-- Chceme podpořit PHP vzdělání u nás
+- Chceme podpořit PHP vzdělávání u nás
 
 A teď trochu podrobněji.
 
 
 ## 1. Téma *PHP* odpovídá obsahu akcí za poslední rok lépe než *Symfony*
 
-Během srazů **v Praze** občas zazněly zmatné hlasy: *"Proč není na Symfony srazu nic o Symfony?"* Mrkli jsme proto na [témata přednášek](https://www.youtube.com/channel/UCTBgI1P8xIn2pp2BBHbv5mg/videos) za první rok.
+Během srazů **v Praze** občas zazněly zmatené hlasy: *"Proč není na Symfony srazu nic o Symfony?"* Mrkli jsme proto na [témata přednášek](https://www.youtube.com/channel/UCTBgI1P8xIn2pp2BBHbv5mg/videos) za první rok.
 
 **Pouze 6 z 21 přednášek bylo o Symfony**.
 
@@ -104,7 +104,7 @@ Ze srazů, newsletterů, školení, vaší zpětné vazby a reakcí [na podcasty
 
 **Něco jako kdyby byla jen základní a vysoká škola a ty 4 volné roky mezi nimi si každý musí nějak zmáknout po svém.**
 
-Vyzkoušeli jsem si to i na [PHP/Symfony školení s Czechitas](https://www.facebook.com/events/129438077476969/), že Symfony je moc a PHP stačí. 
+Vyzkoušeli jsme si to i na [PHP/Symfony školení s Czechitas](https://www.facebook.com/events/129438077476969/), že Symfony je moc a PHP stačí. 
 
 
 ## Bonusový bod: jako sjednocená PHP komunita dokážeme divy 
