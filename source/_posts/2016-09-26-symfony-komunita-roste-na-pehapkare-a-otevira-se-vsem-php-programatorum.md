@@ -13,6 +13,22 @@ thumbnail: "php.jpg"
 
 <p class="perex">{{ page.perex|raw }}</p>  
 
+Od září 2016 měníme název komunity *Symfonisti* na *Péhápkaři*.
+Vítáme tak všechny, kteří **jakkoliv dělají s PHP**, v České republice a na Slovensku.
+
+## Čeho se to týká
+
+- Přejmenovali jsme Twitter na **[@pehapkari](http://twitter.com/pehapkari)**
+- Twitter hashtag na [#pehapkari](http://twitter.com/#pehapkari)
+- A Facebook stránku na **[Péhápkaři](https://www.facebook.com/pehapkari)**
+- Symfony srazy budou PHP srazy
+
+Zbyte se dozvíš na webu *pehapkari.cz*, který bude do konce září.
+
+<br>
+<br>
+
+Máme potřebu ti to vysvětlit, abys byl v obraze.
 
 ## 3 důvody, proč vyrůst na PHP komunitu
 
