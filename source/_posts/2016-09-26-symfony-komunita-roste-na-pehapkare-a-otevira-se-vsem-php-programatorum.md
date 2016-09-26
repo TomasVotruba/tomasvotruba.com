@@ -109,7 +109,7 @@ Vyzkoušeli jsme si to i na [PHP/Symfony školení s Czechitas](https://www.face
 
 ## Bonusový bod: jako sjednocená PHP komunita dokážeme divy 
 
-Někde jsme slyšeli, že **čeští programátoři jsou ve světě opravdu špička**. Taky si to myslím a teď vidíme příležitost, 
+Někde jsme slyšeli, že **čeští programátoři jsou ve světě opravdu špička**. Taky si to myslíme a teď vidíme příležitost, 
 jak to dát vědět o něco více. Myslíme si, že je to otázka času. Však za poslední rok u nás vzniklo hned několik komunit a vzdělávacích projektů kolem programování.
 
 Začínáme žít a budeme vidět :)
