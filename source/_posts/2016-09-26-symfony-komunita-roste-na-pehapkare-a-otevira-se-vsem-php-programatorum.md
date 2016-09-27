@@ -75,7 +75,7 @@ Včetně bratrů ze Slovenska!
 ### Zend meetupy už nejsou
 
 [Tomáš Fejfar](https://twitter.com/tomasfejfar) nám řekl, že Zend meetupy na tom byly podobně.
-Témata kolem Zend Frameworku byla brzo vyčerpána, a proto se srazy pořádali méně častěji a nad jinými tématy. Poslední Zend sraz v Praze byl vlastně -1. Symfony sraz.
+Témata kolem Zend Frameworku byla brzo vyčerpána, a proto se srazy pořádaly méně častěji a nad jinými tématy. Poslední Zend sraz v Praze byl vlastně -1. Symfony sraz.
 
 ### Posoboty už nejsou jen o Nette
 
