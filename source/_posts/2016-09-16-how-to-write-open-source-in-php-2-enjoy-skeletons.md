@@ -5,14 +5,14 @@ categories:
     - PHP
 perex: > # multi-line string
     After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some <strong>metadata files</strong>.
-    What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer these today.</strong> 
+    What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer all these questions today.</strong> 
 thumbnail: "open-source.jpg"
 lang: en
 ---
 
 <p class="perex">{{ page.perex|raw }}</p>
 
-Other programmers might want to use your package. They are usually looking for **long term value**. 
+Other programmers who want to use your package are usually looking for **long term value**. 
 To estimate the value they need **to answer 4 important questions**.
 
 1. **What is quality of package?** 
@@ -26,7 +26,7 @@ I will let you think about them a little bit. We will relate with specific files
 
 ## Use solid skeleton → start solid brand
 
-Now, the first step you can positively influence all 4 answer is **using a skeleton** with prepared metadata files. 
+Now, the first step you can positively influence all the 4 answers with is **using a skeleton** with prepared metadata files. 
 
 Guys from [The PHP League](https://thephpleague.com/) already did the job for you and created a [skeleton](https://github.com/thephpleague/skeleton) package.
  
@@ -51,10 +51,10 @@ Pick one you understand the best.
 
 This skeleton is great for start and to learn about metadata files. 
 
-But when I create my package now, **I just copy my most recent package I made**, delete `/src` and `/tests`
+But when I create my package now, **I just copy the most recent package I made**, delete `/src` and `/tests`
 directories and I'm ready to roll. This is because:
  
-- I upgrade my package more often then some `skeleton` package
+- I upgrade my packages more often then some `skeleton` package
 - and because my preferences and required code are evolving
     - e.g. A new PHP version is out, I tune my continuous integration (CI) setup etc.
 
@@ -104,7 +104,7 @@ Just to remind you, the end user is interested in:
 
 *Meaning*
 
-- here are all files that are ignored by composer
+- here are all files that are ignored by composer (with `export-ignore` flag)
 - when somebody will install your package via `composer require you/your-package`, they won't get these files downloaded to `/vendor` directory 
 - usually its metadata files and tests, because application of end user does not need them
 
@@ -132,7 +132,7 @@ Just to remind you, the end user is interested in:
 
 - configuration for [Scrutinizer](https://scrutinizer-ci.com/) - code quality and code coverage tool
 - to enable it, [login](https://scrutinizer-ci.com/login) and new repository
-    - I recommend login via Github, since it adds hooks to your repository 
+    - I recommend you to login in via Github, since it adds hooks to your repository 
 - it would be triggered every time your commit to master or create a PR
 
 <span class="arrow-down-on-list">↓</span>
@@ -170,7 +170,8 @@ Just to remind you, the end user is interested in:
 
 ### `LICENSE`
 
-- code for license, good to add as every country has different default approach, when this file is missing
+- license goes here
+- it's important to have it as every country has different default approach, when this file is missing
 - [MIT](https://opensource.org/licenses/MIT) is the easiest to understand open-source license
 
 <span class="arrow-down-on-list">↓</span>
@@ -194,14 +195,14 @@ Just to remind you, the end user is interested in:
 
 <span class="arrow-down-on-list">↓</span>
 
-- **Usability**: If I understand the usage, I can rely to my issue I want to solve. 
+- **Usability**: If I understand the usage, I can rely to the issue I want to solve. 
 - **Trust**: Having code quality, Travis and coverage badges helps to identify the quality of the package.
 
 So that are all files and their purpose.
 
 ## No time! Fast! Now! → Tell your story with an image
 
-Today people are rather scanning then reading. That's why badges are so important!
+Today people are scanning the text rather then actually reading. That's why badges are so important!
 
 Look on these 2 - what information can we get?
 
@@ -234,7 +235,7 @@ Look on these 2 - what information can we get?
 
 ## What's next?
 
-- We'll peak on **coding standards**.
+- We'll peek on **coding standards**.
 - How do **releases** work a what is **semantic versioning**. 
 - How to **pick min PHP version and package versions in composer**.
 
@@ -243,7 +244,7 @@ Look on these 2 - what information can we get?
 ## Hate me, please!
 
 Did you came across some error or wtf? Is it boring, too long or too vague?
-Just write me a comment. I want to make this series bulletproof and as much as helpful as possible.
+Just send me a comment. I want to make this series bulletproof and as helpful as possible.
 
 **You will help thousands of others if you help me to fix one issue.**
 
