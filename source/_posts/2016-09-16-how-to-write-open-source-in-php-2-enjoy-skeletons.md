@@ -26,7 +26,7 @@ I will let you think about them a little bit. We will relate with specific files
 
 ## Use solid skeleton → start solid brand
 
-Now, the first step you can positively influence all the 4 answers with is **using a skeleton** with prepared metadata files. 
+Now, the first step that can positively influence all the 4 answers is **using a skeleton** with prepared metadata files. 
 
 Guys from [The PHP League](https://thephpleague.com/) already did the job for you and created a [skeleton](https://github.com/thephpleague/skeleton) package.
  
@@ -104,7 +104,7 @@ Just to remind you, the end user is interested in:
 
 *Meaning*
 
-- here are all files that are ignored by composer (with `export-ignore` flag)
+- here are all files that are ignored by composer (using the `export-ignore` attribute)
 - when somebody will install your package via `composer require you/your-package`, they won't get these files downloaded to `/vendor` directory 
 - usually its metadata files and tests, because application of end user does not need them
 
