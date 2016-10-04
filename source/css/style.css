@@ -167,7 +167,7 @@ code {
 }
 
 #references h3 {
-    margin-bottom: 0em;
+    margin-bottom: .3em;
 }
 
 #references h3 a {
@@ -225,4 +225,8 @@ a.navbar-toggle:hover {
 
 .grey-content h2 {
     margin-top: 0em;
+}
+
+.bigger {
+    font-size: 1.2em;
 }
