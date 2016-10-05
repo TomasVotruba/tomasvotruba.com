@@ -15,7 +15,7 @@ lang: "en"
 
 To be specific: 
 
-- In Nette you use [Nette\DI package](https://github.com/nette/di) and make an **extension**
+- In Nette you use [Nette\DI package](https://github.com/nette/di) and make an **extension**.
 - In Symfony, you have to use [Symfony\DependencyInjection package](http://symfony.com/doc/current/components/dependency_injection.html) and create a **bundle**.
 
 So when you hear somebody saying:
@@ -68,7 +68,7 @@ Common for all packages.
 
 ### 2. Decorate already registered services
 
-Add setter, pass an arguments, add reference to other service, collect services of certain type.
+Add setter, pass arguments, add reference to other service, collect services of certain type.
 Used less often, yet still very useful.
   
 - Nette: `beforeCompile()` method
