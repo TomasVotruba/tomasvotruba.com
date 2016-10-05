@@ -84,7 +84,7 @@ services:
 
 ### 1. Install package
 
-```langauge-yml
+```language-yaml
 composer require symplify/default-autowire
 ```
 

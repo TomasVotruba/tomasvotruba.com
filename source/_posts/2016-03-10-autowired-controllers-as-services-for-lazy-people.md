@@ -124,7 +124,7 @@ Let's try it together.
 
 ### 1. Install package
 
-```langauge-yml
+```language-yaml
 composer require symplify/controller-autowire
 ```
 
