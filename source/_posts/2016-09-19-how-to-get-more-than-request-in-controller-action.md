@@ -153,7 +153,7 @@ To make this happened, I made [Symplify\ActionAutowire bundle](https://github.co
 
 ### 1. Install package 
 
-```langauge-yml
+```language-yaml
 composer require symplify/action-autowire
 ```
 
