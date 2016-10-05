@@ -25,7 +25,7 @@ So when you hear somebody saying:
 you know it won't be easy.
 
 
-## DRY (Do-Reapeat-Youself) in Package Ratio
+## DRY (Do-Repeat-Yourself) in Package Ratio
 
 That's why you see "double" integrations for 3rd party packages like:
 
@@ -50,7 +50,7 @@ And so on. Let's ignore the syntax sugar that every programmer adds to his own i
 
 - **lot of duplicated code** (register event subscribers, commands and all the services from 3rd party package)
 - **lot of duplicated maintenance** (fix compatibility with new version of 3rd party package)
-- greater possibility of **burnout syndrom**
+- greater possibility of **burnout syndrome**
 
 ## Is this really needed?
 
@@ -87,11 +87,11 @@ Usually workarounds, hacks, tweaks or performance tuning. Quite rare.
 
 Okay, okay... These are last few lines before the code, I promise.
  
-Thanks to 1. and 2. I could create bundle, that will **take any Symfony bundle and registers it's services into your Nette application**: [Symplify/NetteAdapterForSymfonyBundles](https://github.com/Symplify/NetteAdapterForSymfonyBundles)
+Thanks to step 1. and 2. I could create an extension, that will **take any Symfony bundle and register its services into the Nette application**: [Symplify/NetteAdapterForSymfonyBundles](https://github.com/Symplify/NetteAdapterForSymfonyBundles)
 
 (The other way round is also possible, but no bundle for that. Yet. Let me know, if you would like to create that.)
 
-## How to Symfony Bundle in your Nette Application in 3 setps 
+## How to register a Symfony Bundle into your Nette Application in 3 steps 
 
 ### 1. Install package
 
