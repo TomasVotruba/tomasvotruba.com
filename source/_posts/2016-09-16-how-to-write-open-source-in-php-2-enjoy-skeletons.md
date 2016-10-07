@@ -26,11 +26,7 @@ I will let you think about them a little bit. We will relate with specific files
 
 ## Use solid skeleton → start solid brand
 
-Now, the first step that can positively influence all the 4 answers is **using a skeleton** with prepared metadata files. 
-
-Guys from [The PHP League](https://thephpleague.com/) already did the job for you and created a [skeleton](https://github.com/thephpleague/skeleton) package.
- 
-From my point of view, **there is too much unnecessary code**, so I've prepared [clear version for you](https://github.com/TomasVotruba/open-source-pakage-skeleton).
+Now, the first step that can positively influence all the 4 answers is **using a skeleton** with prepared metadata files. Guys from [The PHP League](https://thephpleague.com/) already did the job for you and created a [skeleton](https://github.com/thephpleague/skeleton) package. From my point of view, **there is too much unnecessary code**, so I've prepared [clear version for you](https://github.com/TomasVotruba/open-source-pakage-skeleton).
 
 Pick one you understand the best.
 
