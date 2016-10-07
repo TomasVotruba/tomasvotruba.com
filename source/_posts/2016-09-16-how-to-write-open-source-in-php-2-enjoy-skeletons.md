@@ -32,10 +32,10 @@ Pick one you understand the best.
 
 ## How to get skeleton code to your local repository in 4 steps
 
-- Go to repository on Github and click on *Clone or download*
-- Then *Download a ZIP*
-- Unzip the zip file to your local repository
-- And push new files to Github 
+1. Go to repository on Github and click on *Clone or download*
+2. Then *Download a ZIP*
+3. Unzip the zip file to your local repository
+4. And push new files to Github 
     
     ```language-bash
     git add .
@@ -72,8 +72,6 @@ Just to remind you, the end user is interested in:
 
 - all your PHP source code will go here
 
-<span class="arrow-down-on-list">↓</span>
-
 *Profit*
 
 - musthave :) 
@@ -87,8 +85,6 @@ Just to remind you, the end user is interested in:
 - basically 1:1 mirror, just every file has `Test` suffix, e.g.
     - `src/Cleaner.php`
     - `tests/CleanerTest.php`
-
-<span class="arrow-down-on-list">↓</span>
 
 *Profit*
 
@@ -104,8 +100,6 @@ Just to remind you, the end user is interested in:
 - when somebody will install your package via `composer require you/your-package`, they won't get these files downloaded to `/vendor` directory 
 - usually its metadata files and tests, because application of end user does not need them
 
-<span class="arrow-down-on-list">↓</span>
-
 *Profit*
 
 - **Usability**: Since your package save some internet trafic and space on hard drives, it's a bit more usable.
@@ -119,19 +113,21 @@ Just to remind you, the end user is interested in:
 - for packages ignore `composer.lock`, for applications rather not - on Stackoverflow you can find [more detailed answer](http://stackoverflow.com/questions/12896780/should-composer-lock-be-committed-to-version-control)
 - also `/vendor` is there, as dependencies are installed by composer
 
-<span class="arrow-down-on-list">↓</span>
+*Profit*
 
 - **Trust**: Without this I would not trust you know anything about open-source. 
 
 
 ### `.scrutinzer.yml`
 
+*Meaning*
+
 - configuration for [Scrutinizer](https://scrutinizer-ci.com/) - code quality and code coverage tool
 - to enable it, [login](https://scrutinizer-ci.com/login) and new repository
     - I recommend you to login in via Github, since it adds hooks to your repository 
 - it would be triggered every time your commit to master or create a PR
 
-<span class="arrow-down-on-list">↓</span>
+*Profit*
 
 <div>
     <img src="/../../../../images/posts/2016/open-source/quality-and-coverage.png" alt="Code quality and coverage badges in README">
@@ -147,10 +143,12 @@ Just to remind you, the end user is interested in:
 
 ### `.travis.yml`
 
+*Meaning*
+
 - configuration for [Travis](https://travis-ci.org/) - continuous integration tool for tests
 - to enable it, go register there and add the repository 
 
-<span class="arrow-down-on-list">↓</span>
+*Profit*
 
 - **Trust**: Do you have test but you don't run them for every change? How can I know the code works? 
 
@@ -166,30 +164,36 @@ Just to remind you, the end user is interested in:
 
 ### `LICENSE`
 
+*Meaning*
+
 - license goes here
 - it's important to have it as every country has different default approach, when this file is missing
 - [MIT](https://opensource.org/licenses/MIT) is the easiest to understand open-source license
 
-<span class="arrow-down-on-list">↓</span>
+*Profit*
 
 - **Usability**: With licence, I know what I can do with the code. Usually everything.
 
 ### `phpunit.xml`
 
+*Meaning*
+
 - configuration for [PHPUnit](https://phpunit.de/) - testing tool
 - this can be used either by end user or Travis 
 
-<span class="arrow-down-on-list">↓</span>
+*Profit*
 
 - **Usability**: I can run `vendor/bin/phpunit` with no manual configuration. It makes life easy.
 
 ### `README`
 
+*Meaning*
+
 - last but the most important - your welcome article for user
 - THE MOST IMPORTANT FILE IN THE PACKAGE!
 - Don't worry. We'll talk about writing a good readme later. 
 
-<span class="arrow-down-on-list">↓</span>
+*Profit*
 
 - **Usability**: If I understand the usage, I can rely to the issue I want to solve. 
 - **Trust**: Having code quality, Travis and coverage badges helps to identify the quality of the package.
