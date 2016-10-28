@@ -1,9 +1,5 @@
 ---
 title: How to get more than Request in Controller Action
-categories:
-    - Symfony
-    - Symplify
-    - controller
 perex: >
     You already know you can get <code>Request</code> object in your controller action. Cool, but there is more. 
     In <em>Symfony 3.1</em> is new <a href="http://symfony.com/doc/current/controller/argument_value_resolver.html">Action Argument Resolving feature</a>,

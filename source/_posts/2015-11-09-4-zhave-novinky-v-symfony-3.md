@@ -1,8 +1,6 @@
 ---
 id: 2
 title: 4 žhavé novinky v Symfony 3
-categories:
-    - Symfony
 perex: "V listopadu 2015 má kromě PHP 7 a Drupalu 8, vyjít i Symfony 3. Jaké přináší změny a novinky?"
 ---
 

@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /blog/tags/
-Disallow: /blog/categories/
-
 Sitemap: {$siteUrl}/sitemap.xml

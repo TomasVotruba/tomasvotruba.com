@@ -12,15 +12,6 @@
         </time>
     </li>
 
-    {% if post.categories %}
-        <li>
-            <em class="fa fa-tags fa-fw"></em>
-            {% for category in post.categories %}
-                <a href="/blog/clanky-o/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {/if}
-            {% endfor %}
-        </li>
-    {/if}
-
     <li>
         <em class="fa fa-clock-o fa-fw"></em>
         <strong>{{ post.blocks.content|readTimeInMinutes(post.lang) }}</strong>

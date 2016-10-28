@@ -1,9 +1,5 @@
 ---
 title: Forget "autowire" and just use it
-categories:
-    - Symfony
-    - DI
-    - Symplify
 perex: > # multi-line string
     Autowiring is a great feature that was added in Symfony 2.8. It moves Dependency Injection pattern to the next level.
     If you want to use it to its full potential, you still have to add 1 extra line to every service configuration.

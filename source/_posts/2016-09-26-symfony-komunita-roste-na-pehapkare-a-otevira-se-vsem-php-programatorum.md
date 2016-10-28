@@ -1,9 +1,5 @@
 ---
 title: "Symfony komunita roste na PéHáPkaře a otevírá se všem PHP programátorům"
-categories:
-    - PHP
-    - Symfony
-    - komunita
 perex: >
     Symfony komunita mění svůj název, jinak vše zůstane stejné jako dosud.
     <strong>Říkáš si proč?</strong> To se dnes dozvíš. 

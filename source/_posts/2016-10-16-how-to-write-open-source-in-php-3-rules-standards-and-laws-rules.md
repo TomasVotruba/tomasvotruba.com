@@ -1,8 +1,5 @@
 ---
 title: "How to write OS in PHP 3: Rules, standards and laws rules"
-categories:
-    - Open source
-    - PHP
 perex: > # multi-line string
     ...
 thumbnail: "php-podcast.png"

@@ -1,9 +1,6 @@
 ---
 id: 1
 title: Ovládni Doctrine migrace v Nette
-categories:
-    - Doctrine
-    - Nette
 perex: "Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budou se vám hodit migrace."
 ---
 

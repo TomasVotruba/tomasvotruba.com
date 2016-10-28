@@ -1,9 +1,5 @@
 ---
 title: Decouple Your Doctrine Filters
-categories:
-    - Symfony
-    - Doctrine
-    - Symplify
 perex: "Doctrine filters are powerful tool. Yet their registration and management are bit overcomplicated. Today I will show you how to decouple them to standalone services that can take care of everything you need." 
 lang: "en"
 thumbnail: "doctrine.jpg" 

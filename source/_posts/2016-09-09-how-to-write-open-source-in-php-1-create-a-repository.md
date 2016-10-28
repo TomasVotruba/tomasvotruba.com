@@ -1,8 +1,5 @@
 ---
 title: "How to write open-source in PHP 1: Create a repository on Github"
-categories:
-    - Open source
-    - PHP
 perex: > # multi-line string
     Do you have some code you want to share but you don't know exactly how? Well, writing open-source is complex process.
     In this series, I'll break it down to <strong>the smallest steps possible</strong>, so that you 

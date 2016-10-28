@@ -1,11 +1,6 @@
 ---
 id: 5
 title: Modular Routing in Symfony
-categories:
-    - Symfony
-    - routing
-    - modularity
-    - Symplify
 perex: "Modular routing in Symfony is bounded to routing.yml. Adding few lines for each new module can create large mess. Can we make it bit simpler? Sure we do and I will show you how."
 lang: en
 ---
