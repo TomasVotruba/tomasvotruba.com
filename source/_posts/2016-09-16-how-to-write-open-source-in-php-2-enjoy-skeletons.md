@@ -10,7 +10,7 @@ thumbnail: "open-source.jpg"
 lang: en
 ---
 
-<p class="perex">{{ page.perex|raw }}</p>
+<p class="perex">{$post['perex']|noescape}</p>
 
 Other programmers who want to use your package are usually looking for **long term value**. 
 To estimate the value they need **to answer 4 important questions**.

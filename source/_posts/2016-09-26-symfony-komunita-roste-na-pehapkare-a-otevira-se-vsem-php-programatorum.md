@@ -10,8 +10,7 @@ perex: >
 thumbnail: "php.jpg"
 ---
 
-
-<p class="perex">{{ page.perex|raw }}</p>  
+<p class="perex">{$post['perex']|noescape}</p>
 
 Od září 2016 měníme název komunity *Symfonisti* na *Péhápkaři*.
 Vítáme tak všechny, kteří **jakkoliv dělají s PHP**, v České republice a na Slovensku.

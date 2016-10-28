@@ -1,0 +1,41 @@
+<ul class="list-inline list-inline-box">
+    <li>
+        <em class="fa fa-calendar fa-fw"></em>
+        {% set postYear = post.date|date("Y") %}
+        {% set nowYear = "now"|date("Y") %}
+        <time datetime="{{ post.date | date('Y-m-D') }}">
+            {% if postYear == nowYear %}
+                {{ post.date | date("j. n") }}
+            {% else %}
+                {{ post.date | date("j. n. Y") }}
+            {/if}
+        </time>
+    </li>
+
+    {% if post.categories %}
+        <li>
+            <em class="fa fa-tags fa-fw"></em>
+            {% for category in post.categories %}
+                <a href="/blog/clanky-o/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {/if}
+            {% endfor %}
+        </li>
+    {/if}
+
+    <li>
+        <em class="fa fa-clock-o fa-fw"></em>
+        <strong>{{ post.blocks.content|readTimeInMinutes(post.lang) }}</strong>
+    </li>
+
+    <li>
+        <em class="fa fa-fw fa-comments"></em>
+        <a href="http://tomasvotruba.cz{{ post.url }}/#disqus_thread">
+            {{ "post.comments"|trans(post.lang) }}
+        </a>
+    </li>
+    <li>
+        <a href="{{ post|githubEditPostUrl }}">
+            <em class="fa fa-fw fa-github"></em>
+            {{ "post.send_pr"|trans(post.lang) }}
+        </a>
+    </li>
+</ul>

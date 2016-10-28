@@ -1,0 +1,21 @@
+---
+layout: default
+title: Články o
+---
+{block title}{$title} "{$page['category']}"{/block}
+
+{block content}
+    <div class="page">
+        <div class="container">
+            <div class="main">
+                <header class="page-header">
+                    <h1>Přečti si o "{{ page.category }}"</h1>
+                </header>
+
+                {foreach $posts as $post}
+                    {{ include('partials/postPreview.twig', {'post': post}) }}
+                {/foreach}
+            </div>
+        </div>
+    </div>
+{/block}

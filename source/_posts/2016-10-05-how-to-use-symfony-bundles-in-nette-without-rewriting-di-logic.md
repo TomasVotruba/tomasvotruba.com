@@ -11,7 +11,7 @@ thumbnail: "nette.png"
 lang: "en"
 ---
 
-<p class="perex">{{ page.perex|raw }}</p>
+<p class="perex">{$post['perex']|noescape}</p>
 
 To be specific: 
 

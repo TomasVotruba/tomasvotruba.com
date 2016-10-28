@@ -1,7 +1,7 @@
 {
     "require": {
         "php": "~7.0",
-        "symplify/php7_sculpin": "~0.1.2",
+        "symplify/php7_sculpin": "~1.0",
         "tomasvotruba/sculpin-blog-bundle": "@dev",
         "tomasvotruba/sculpin-translation-bundle": "@dev"
     },

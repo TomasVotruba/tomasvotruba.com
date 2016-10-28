@@ -12,7 +12,7 @@ thumbnail: "symfony.png"
 lang: "en"
 ---
 
-<p class="perex">{{ page.perex|raw }}</p>  
+<p class="perex">{$post['perex']|noescape}</p>
 
 ## Disclaimer: What happened to controller constructor injection?
 

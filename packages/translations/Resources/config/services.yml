@@ -1,0 +1,10 @@
+services:
+    - TomasVotruba\SculpinTranslationBundle\Twig\SculpinTranslationExtension
+    - TomasVotruba\SculpinTranslationBundle\Translation\TranslatorFactory("%kernel.root_dir%/../translations")
+
+    simple_translator:
+        class: Symfony\Component\Translation\Translator
+        factory: ["@simple_translator_factory", create]
+
+    - TomasVotruba\SculpinTranslationBundle\Translation\MessageAnalyzer
+    - TomasVotruba\SculpinTranslationBundle\Filesystem\ResourceFinder
