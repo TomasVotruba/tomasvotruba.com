@@ -1,14 +1,16 @@
+{contentType application/xml}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[{$siteTitle}]]></title>
-    <link href="{$siteUrl}/atom.xml" rel="self"/>
-    <link href="{$siteUrl}/"/>
+    <link href="{$siteUrl}/atom.xml" rel="self" />
+    <link href="{$siteUrl}/" />
     <id>{$siteUrl}/</id>
     <author>
         <name><![CDATA["Tomáš Votruba"]]></name>
         <email><![CDATA[tomas.vot@gmail.com]]></email>
     </author>
     <generator uri="https://github.com/Symplify/PHP7_Sculpin">PHP7_Sculpin</generator>
+
     <entry n:foreach="$posts as $post">
         <title type="html"><![CDATA[{$post['title']}]]></title>
         <link href="{$siteUrl}/{$post['relativeUrl']}"/>

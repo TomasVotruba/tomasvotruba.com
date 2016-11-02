@@ -3,7 +3,7 @@ layout: default
 title: Ušetři počet pokusů-omylů
 id: price
 ---
-<div class="container">
+<div n:block="content" class="container">
     <div class="page">
         <div class="main" id="references">
             <header class="page-header text-center">
@@ -30,9 +30,16 @@ id: price
 
             <hr>
 
-            <p class="text-center">
-                Potřebujete jen <strong>krátkou konzultaci</strong>? Jsem vám k dispozici za <strong>1500 Kč/hod</strong>.
-            </p>
+            <div class="text-center">
+                <p>
+                    Potřebujete jen <strong>krátkou konzultaci</strong>? Jsem vám k dispozici za <strong>1500 Kč/hod</strong>.
+                </p>
+
+                <a href="/kontakt" class="btn btn-primary">
+                    &nbsp;Napište mi
+                    <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+                </a>
+            </div>
 
             <hr>
 

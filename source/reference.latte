@@ -3,7 +3,7 @@ layout: default
 title: Vaše spokojenost je mým posláním
 id: satisfy
 ---
-<div class="container">
+<div n:block="content" class="container">
     <div class="page">
         <div class="main" id="references">
             <header class="page-header text-center">
@@ -20,160 +20,41 @@ id: satisfy
             <a name="skoleni-pro-firmy"></a>
             <h2>Školení a konzultace pro firmy</h2>
 
-            <h3>
-                <a href="https://meditorial.cz/">Meditorial</a>
-            </h3>
+            {* todo: use references in system!!! *}
+            {foreach $references as $referenceId => $reference}
+                <h3>
+                    <a href="{$reference['url']}">{$reference['company']}</a>
+                </h3>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <ul>
-                        <li>6 hodin školení</li>
-                        <li>1 krásný den v <a href="http://pracovna.cz/">Pracovně na Žižkově</a></li>
-                        <li>2 školitelné - Git Expert <a href="http://www.tomasfejfar.cz/">Tomáš Fejfar</a></li>
-                        <li> přísun kafe díky pečujícímu personálu</li>
-                    </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            {foreach $reference['copy_items'] as $copyItem}
+                                <li>{$copyItem|noescape}</li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            „{$reference['testimonial']}“
+                        </p>
+
+                        <p>
+                            <strong>{$reference['feedbacker_name']}</strong>, {$reference['feedbacker_position']}
+                        </p>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <p>
-                        „Ještě jednou díky za přednášky. Líbilo se nám to. GIT nás bavil a já jsem začal commitovat častěji :).“
-                    </p>
 
-                    <p>
-                        <strong>Marek Mencl</strong>, Vedoucí programátorského týmu
-                    </p>
-                </div>
-            </div>
+                {if $referenceId === 2}
+                    {include callToAction}
+                {/if}
 
-            <hr>
-            <div class="row">
-                <div class="col-md-6">
-                    <ul>
-                        <li>8 hodin školení</li>
-                        <li>4 účastníci</li>
-                        <li>1 cesta do Brna</li>
-                        <li>1 dotace z EU</li>
-                        <li>3 témata: sebevzdělávání, refaktoring a Nette pro tipy</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <p>
-                        „Chtěl bych ti ještě jednou poděkovat za školení. Věřím, že pro nás mělo velký přínos hlavně v nových nápadech, jak se některé věci ulehčit nebo jak je dělat efektivněji. Určitě budeme chtít školení po nějaké době zopakovat.“
-                    </p>
+                {if $referenceId === 5}
+                    {include callToAction2}
+                {/if}
 
-                    <p>
-                        <strong>Jakub Horký</strong>, Vedoucí vývoje
-                    </p>
-                </div>
-            </div>
-
-            <hr>
-
-            <h3>
-                <a href="http://www.igalileo.cz/">Galileo Corporation s.r.o.</a>
-            </h3>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <ul>
-                        <li>7 hodin školení</li>
-                        <li>6 účastníků</li>
-                        <li>1 konzultační schůzka předem</li>
-                        <li>2 cesty do Plzně</li>
-                        <li>30+ dotazů na refaktoring legacy do Symfony</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <p>
-                    <p>„Co jsme se dozvěděli? PHPStorm, best practices, DI atd. Vyzkoušeli jsme si
-                        implementaci Symfony do našeho systému - což pro mě znamená fakt velké plus.“</p>
-
-                    <p>
-                        <strong>Jaroslav Ševčík</strong>, Vedoucí vývojářů
-                    </p>
-                </div>
-            </div>
-
-            <hr>
-
-            <p class="text-center bigger">
-                „Určitě budeme chtít školení po nějaké době zopakovat.“
-                <br>
-                A co Vy?
-            </p>
-
-            <p class="text-center">
-                <a href="/kontakt" class="btn btn-lg btn-success">
-                    &nbsp;Ozvěte se mi
-                    <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-                </a>
-            </p>
-
-            <hr>
-
-            <h3>
-                <a href="http://www.lekarna.cz">Lékarna.cz</a>
-            </h3>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <ul>
-                        <li>14 hodin školení</li>
-                        <li>11 účastníků</li>
-                        <li>40+ probraných témat z Nette</li>
-                        <li>1 workshop Doctrine</li>
-                        <li>2x laser game (jako odměna za dobře odvedenou práci)</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <p>„Napojení Nette na Doctrine je nyní jednoduché. Líbily se mi také postřehy k testovaní a nástrojům - co k čemu používat, např. PHPStorm a jeho použití v praxi. Super školení, které celý tým posunulo dopředu.“</p>
-
-                    <p>
-                        <strong>Ing. Tomáš Bek</strong>, Šéf technického vývoje
-                    </p>
-                </div>
-            </div>
-
-            <hr>
-
-            <h3>
-                <a href="http://www.erudio.cz">ERUDIO s.r.o</a>
-            </h3>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <ul>
-                        <li>24 hodin školení</li>
-                        <li>8 účastníků</li>
-                        <li>3 témata: git, Doctrine a Symfony</li>
-                        <li>5 navazujících konzultací</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <p>
-                        „Potřebovali jsme individuální školení Symfony a Tomáš nám byl doporučen. Rychle připravil školení přímo na míru, kde se zaměřil na naše konkrétní problémy.
-                        Tomáš neříkal teorii, kterou si můžeme přečíst kdekoliv na internetu, ale předal nám tipy z praxe. Doporučuji ho všem, kteří hledají specialistu.“
-                    </p>
-
-                    <p>
-                        <strong>Radek Strnad</strong>, Vedoucí programátorského týmu
-                    </p>
-                </div>
-            </div>
-
-            <hr>
-
-            <p class="text-center bigger">
-                „Doporučuji ho všem, kteří hledají specialistu.“
-                <br>
-                Hledáte?
-            </p>
-
-            <p class="text-center">
-                <a href="/kontakt" class="btn btn-lg btn-success">
-                    &nbsp;Napište mi
-                    <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-                </a>
-            </p>
+                {sep}<hr>{/sep}
+            {/foreach}
 
             <hr>
 
@@ -182,14 +63,14 @@ id: satisfy
 
             <div class="row">
                 <div class="col-md-6">
-                    <img src="/../../../../images/spokojenost/pavla-curdova.jpg" alt="Pavla Čurdová" class="face thumbnail">
+                    <img src="/../../../../assets/images/spokojenost/pavla-curdova.jpg" alt="Pavla Čurdová" class="face thumbnail">
                     <p>„Tomáš umí mluvit stejně dobře s lidmi i s počítači.“</p>
                     <p>
                         <strong>Pavla Čurdová</strong>, <a href="http://www.curdka.cz/">curdka.cz</a>
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <img src="/../../../../images/spokojenost/simon-podlipsky.jpg" alt="Šimon Podlipský" class="face thumbnail">
+                    <img src="/../../../../assets/images/spokojenost/simon-podlipsky.jpg" alt="Šimon Podlipský" class="face thumbnail">
                     <p>„Jako samouk jsem měl v některých Nette věcech zmatek. Díky konzultaci jsem si je mohl ujasnit. Doporučuju!“</p>
                     <p>
                         <strong>Šimon Podlipský</strong>, spoluzakladatel <a href="http://lidskasila.cz">lidskasila.cz</a>
@@ -199,7 +80,7 @@ id: satisfy
 
             <div class="row">
                 <div class="col-md-6">
-                    <img src="/../../../../images/spokojenost/jan-nerold.jpg" alt="Jan Neřold" class="face thumbnail">
+                    <img src="/../../../../assets/images/spokojenost/jan-nerold.jpg" alt="Jan Neřold" class="face thumbnail">
 
                     <p>„Školení na téma Nette pro mne bylo velice přínosné. Přestože jsem často přeskakoval, dostával jsem ucelené odpovědi, které mi hodně pomohly. Po pár konzultacích jsem byl schopen se postavit na vlastní nohy.“</p>
 
@@ -208,7 +89,7 @@ id: satisfy
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <img src="/../../../../images/spokojenost/vaclav-kvasnicka.jpg" alt="Václav Kvasnička" class="face thumbnail">
+                    <img src="/../../../../assets/images/spokojenost/vaclav-kvasnicka.jpg" alt="Václav Kvasnička" class="face thumbnail">
                     <p>„Během školení mě Tomáš doslova vystřelil z místa, kde jsem stagnoval už delší dobu. Naučil mě nové postupy, díky kterým se mi teď pracuje mnohem líp a efektivněji.“</p>
 
                     <p>
@@ -236,3 +117,39 @@ id: satisfy
         </div>
     </div>
 </div>
+
+
+{define callToAction}
+    <hr>
+
+    <p class="text-center bigger">
+        „Určitě budeme chtít školení po nějaké době zopakovat.“
+        <br>
+        A co Vy?
+    </p>
+
+    <p class="text-center">
+        <a href="/kontakt" class="btn btn-lg btn-success">
+            &nbsp;Ozvěte se mi
+            <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+        </a>
+    </p>
+{/define}
+
+
+{define callToAction2}
+    <hr>
+
+    <p class="text-center bigger">
+        „Doporučuji ho všem, kteří hledají specialistu.“
+        <br>
+        Hledáte?
+    </p>
+
+    <p class="text-center">
+        <a href="/kontakt" class="btn btn-lg btn-success">
+            &nbsp;Napište mi
+            <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+        </a>
+    </p>
+{/define}

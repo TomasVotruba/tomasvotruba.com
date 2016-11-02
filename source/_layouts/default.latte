@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{block title}{$page['title']}{/block} | {$siteTitle}</title>
+        <title>{block title}{$title}{/block} | {$siteTitle}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
@@ -54,22 +54,22 @@
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li class="logo"><a href="/">Tomáš Votruba</a></li>
-                                <li n:class="$page['id'] === mentoring ? active">
+                                <li n:class="isset($id) && $id === mentoring ? active">
                                     <a href="/zkus-si-mentoring">Mentoring</a>
                                 </li>
-                                <li n:class="$page['id'] === satisfy ? active">
+                                <li n:class="isset($id) && $id === satisfy ? active">
                                     <a href="/reference">Spokojení klienti</a>
                                 </li>
-                                <li n:class="$page['id'] === skills ? active">
+                                <li n:class="isset($id) && $id === skills ? active">
                                     <a href="/skoleni">Co vám můžu předat</a>
                                 </li>
-                                <li n:class="$page['id'] === blog ? active">
+                                <li n:class="isset($id) && $id === blog ? active">
                                     <a href="/blog">Blog</a>
                                 </li>
-                                <li n:class="$page['id'] === price ? active">
+                                <li n:class="isset($id) && $id === price ? active">
                                     <a href="/cenik">Ceník</a>
                                 </li>
-                                <li n:class="$page['id'] === contact ? active">
+                                <li n:class="isset($id) && $id === contact ? active">
                                     <a href="/kontakt">Kontakt</a>
                                 </li>
                             </ul>
@@ -93,8 +93,8 @@
                 </div>
             </footer>
 
-            <script src="/js/prism.js"></script>
-            {*<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>*}
+            <script src="/assets/js/prism.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> {* for Menu toggling *}
 
             <!-- Latest compiled and minified JavaScript -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
