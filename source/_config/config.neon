@@ -1,6 +1,5 @@
 # use in a template as {$disqusShortname} etc.
 disqusShortname: itsworthsharing
-#disqusShortname: itsworthsharing
 googleAnalyticsTrackingId: "UA-46082345-1"
 fbTrackingId: 201338863559186
 siteTitle: Tomáš Votruba - Nette a Symfony školení
@@ -9,3 +8,4 @@ siteUrl: "http://www.tomasvotruba.cz"
 # sculpin configuration
 configuration:
     postRoute: blog/:year/:month/:day/:filename
+    githubRepositorySlug: TomasVotruba/tomasvotruba.cz

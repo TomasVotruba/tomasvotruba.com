@@ -2,15 +2,20 @@
 
 {block content_wrapper}
 
+{include "postSnippets"}
+
 <div class="page">
     <div class="container">
         <div class="main">
-            {{ include('partials/post.twig', {'post': page}) }}
-            <h2>{"post.i_want_your_opinion"|trans: $page['lang']}</h2>
+            {include postHeader, post => $post}
+
+            {$post['content']|noescape}
+
+            <h2>{="post.i_want_your_opinion"|translate: $post['lang'] ?? 'cs'}</h2>
 
             <div id="disqus_thread"></div>
             <script type="text/javascript">
-                {if $page['lang'] === "en"}
+                {if isset($post['lang']) && $post['lang'] === "en"}
                     var disqus_config = function () {
                         this.language = "en";
                     };
@@ -40,11 +45,11 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{$post['title']}" />
     <meta property="og:description" content="{$post['perex']}" />
-    <meta property="og:image" content="{$siteUrl}/images/posts/thumbnail/{ $post['thumbnail']}" />
-    <meta property="og:url" content="{$siteUrl}/{$post['perex']}" />
+    <meta property="og:image" content="{$siteUrl}/images/posts/thumbnail/{$post['thumbnail']}" />
+    <meta property="og:url" content="{$siteUrl}/{$post['relativeUrl']}" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{$post['title']}" />
     <meta name="twitter:description" content="{$post['perex']}" />
-    <meta name="twitter:image" content="{$siteUrl}/images/posts/thumbnail/{ $post['thumbnail']}" />
+    <meta name="twitter:image" content="{$siteUrl}/images/posts/thumbnail/{$post['thumbnail']}" />
 {/block}
