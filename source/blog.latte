@@ -1,34 +1,35 @@
 ---
 layout: default
-title: Přečti si o PHP a programování
+title: "Přečti si o PHP, programování a komunitách"
 id: blog
 ---
 
-<div n:block="content" class="page">
+{block content}
+    <div class="page">
+        {import "postSnippets"}
 
-    {import "postSnippets"}
+        <div class="container">
+            <header class="page-header text-center">
+                <h1>{$title}</h1>
+                <br>
+            </header>
 
-    <div class="container">
-        <header class="page-header text-center">
-            <h1>{$title}</h1>
-            <br>
-        </header>
+            <div class="main">
+                {include addRss}
 
-        <div class="main">
-            {include addRss}
+                {foreach $posts as $post}
+                    {include postHeader, 'post' => $post}
+                    {sep}<hr>{/sep}
+                {/foreach}
 
-            {foreach $posts as $post}
-                {include postHeader, 'post' => $post}
-                {sep}<hr>{/sep}
-            {/foreach}
+                <br>
+                <br>
 
-            <br>
-            <br>
-
-            {include addRss}
+                {include addRss}
+            </div>
         </div>
     </div>
-</div>
+{/block}
 
 
 {define addRss}
@@ -39,7 +40,6 @@ id: blog
         </a>
     </p>
 {/define}
-
 
 
 {block additionalJavascript}
