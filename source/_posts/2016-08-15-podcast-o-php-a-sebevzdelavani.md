@@ -1,10 +1,10 @@
 ---
 title: Poslechni si podcast o PHP a sebevzdělávání
-perex: > # multi-line string
+perex: '''
     S Honzou Černým, který pořádá Nette srazy, nám vadilo, že je u nás nouze o kvalitní a aktuální informace. Jako jsou moderní technologie, srazy, možnosti školení nebo pracovní nabídky a úroveň firem.
     Chápeme, že ne každý má čas a chuť vést komunity nebo sledovat, co se kde šustne. Proto jsme dali hlavy dohromady a založili podcast. V něm s tebou tyto informace budeme sdílet. 
 thumbnail: "php-podcast.png"
-
+'''
 podcast:
     title: "#1 - O sebevzdělání, školení, brandovaném obsahu a mentoringu"
     publish_date: "Mon, 15 Aug 2016"

@@ -1,9 +1,6 @@
 {
     "require": {
-        "php": "~7.0",
-        "symplify/php7_sculpin": "~1.0",
-        "zenify/modular-latte-filters": "^0.2.1",
-        "symfony/translation": "^3.1"
+        "symplify/statie": "~1.2"
     },
     "require-dev": {
         "tracy/tracy": "^2.4"

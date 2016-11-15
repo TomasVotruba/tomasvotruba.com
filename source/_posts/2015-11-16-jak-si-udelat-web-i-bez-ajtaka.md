@@ -1,6 +1,6 @@
 ---
 id: 3
-title: Jak si levně udělat živý web, i když nejsi ajťák
+title: "Jak si levně udělat živý web, i když nejsi ajťák"
 perex: "Znáš pojmy jako hosting, doména, HTML, CSS, FTP, šablona, Wordpress nebo Github? Máš vyhráno, dál nečti a běž se podívat na svou krásnou online vizitku."
 ---
 

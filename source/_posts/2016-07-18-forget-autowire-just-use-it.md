@@ -1,9 +1,10 @@
 ---
 title: Forget "autowire" and just use it
-perex: > # multi-line string
+perex: '''
     Autowiring is a great feature that was added in Symfony 2.8. It moves Dependency Injection pattern to the next level.
     If you want to use it to its full potential, you still have to add 1 extra line to every service configuration.
     Today I will show you, how to get rid of that line.
+'''
 lang: "en"
 thumbnail: "symfony.png"
 ---
