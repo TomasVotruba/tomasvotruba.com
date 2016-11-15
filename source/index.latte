@@ -22,11 +22,10 @@ title: Začni se vzdělávat
                             Ahoj, jmenuji se Tomáš Votruba.
                             <br>
                             <br>
-                            <strong>Školím</strong> PHP (Symfony, Nette a Doctrine...)
-                            <a href="{$siteUrl}/reference/#skoleni-pro-firmy">ve&nbsp;firmách</a> a
-                            <a href="{$siteUrl}/reference/#konzultace-pro-jednotlivce">individuálně</a>,
-                            dělám <strong>externí code-review</strong>, radím firmám jak psát <strong>trvale udržitelný
-                                kód</strong> a <strong>efektivně hajrovat</strong>.
+                            <a href="/reference"><strong>Školím</strong></a> PHP (Symfony, Nette a Doctrine...),
+                            dělám <strong>externí code-review</strong>,
+                            radím firmám jak psát <strong>trvale udržitelný kód</strong>
+                            a <strong>efektivně a lidsky hajrovat</strong>.
                         </p>
 
                         <p class="lead">
@@ -68,16 +67,16 @@ title: Začni se vzdělávat
 
     <div class="container page">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12">
                 <h2>
                     <em class="fa fa-book fa-fw"></em>
-                    Taky rád píšu
+                    Píšu rád, názorně a k věci
                 </h2>
                 <p>Poslední dobou nejradši na o...</p>
 
                 <ul>
                     {foreach $posts as $post}
-                        {breakIf $iterator->getCounter() > 3} {* display only recent 3 posts *}
+                        {breakIf $iterator->getCounter() > $blogPostOnHomepageCount} {* display only recent X posts *}
                         <li>
                             <strong><a href="{$post['relativeUrl']}">{$post['title']}</a></strong>
                         </li>
@@ -85,36 +84,18 @@ title: Začni se vzdělávat
                 </ul>
 
                 <p>
-                    Dalších {=count($posts)-3} článků na téma PHP, vzdělávání, open-source a komunity najdeš na
-                    <a href="/blog">na blogu</a>.
-                </p>
-            </div>
-
-            <div class="col-md-5">
-                <h2>
-                    <em class="fa fa-volume-up fa-fw"></em>
-                    Mám něco i pro tvé uši
-                </h2>
-
-                <p>
-                    S <a href="http://honzacerny.com/">Honzou Černým</a> natáčíme podcast o PHP komunitách a vzdělávání.
-                    <br>
-                    <br>
-                    <strong>Mrkni se na <a href="http://nejenophp.cz/">nejenophp.cz</a> a buď vzdělanější než konkurence</strong>
+                    Dalších {=count($posts)-$blogPostOnHomepageCount} článků najdeš na <a href="/blog">na blogu</a>.
                 </p>
             </div>
         </div>
     </div>
 
     <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = {$disqusShortname};
-
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function () {
             var s = document.createElement('script'); s.async = true;
             s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            s.src = '//' + {$disqusShortname} + '.disqus.com/count.js';
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
     </script>
