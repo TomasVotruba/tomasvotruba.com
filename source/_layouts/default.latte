@@ -87,20 +87,21 @@
                     </p>
                 </div>
             </footer>
-
-            <script src="/assets/js/prism.js"></script>
-            {* for Menu toggling *}
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" async></script>
-
-            {* what for? *}
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" async></script>
-
-            {* iconds from FontAwesome *}
-            <script src="https://use.fontawesome.com/8e94b18a91.js" async></script>
-
-            {include "googleAnalytics"}
         </div>
 
-        <script id="dsq-count-scr" src="http://{$disqusShortname}.disqus.com/count.js" async defer></script>
+        {* code highlighting *}
+        <script src="/assets/js/prism.js"></script>
+
+        {* for Menu toggling *}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" async></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" async></script>
+
+        {* icons from FontAwesome *}
+        <script src="https://use.fontawesome.com/8e94b18a91.js" async></script>
+
+        {include "googleAnalytics"}
+
+        {block additionalJavascript}
+        {/block}
     </body>
 </html>
