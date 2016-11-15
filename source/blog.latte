@@ -19,6 +19,7 @@ id: blog
 
             {foreach $posts as $post}
                 {include postHeader, 'post' => $post}
+                {sep}<hr>{/sep}
             {/foreach}
 
             <br>

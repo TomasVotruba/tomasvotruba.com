@@ -9,7 +9,7 @@ lang: "en"
 thumbnail: "nette.png"
 ---
 
-<p class="perex">{{ page.perex }}</p>
+<p class="perex">{$perex|noescape}</p>
 
 ## Current way to do this
 

@@ -7,7 +7,7 @@ thumbnail: "nette.png"
 lang: "en"
 ---
 
-<p class="perex">{$post['perex']|noescape}</p>
+<p class="perex">{$perex|noescape}</p>
 
 To be specific: 
 

@@ -2,13 +2,14 @@
 id: 4
 title: To nejlepší ze SymfonyConu 2015
 perex: "Každoročně pořádaný SymfonyCon se letos konal v Paříži. Přes všechny útoky Paříž žije dál. Možná o to víc. Důkazem toho může být i 1000 návštěvníků, kteří na akci dorazili. Čechy jsem reprezentoval spolu s Dennisem, a taky Petrem a Kubou z Lmc.eu"
+thumbnail: "symfony.png"
 ---
 
 <p style="font-size:0.9em">
     <em>S psaním článku mi pomohl <a href="http://defr.cz/">Dennis</a>.</em>
 </p>
 
-<p class="perex">Každoročně pořádaný SymfonyCon se letos konal v Paříži. Přes všechny útoky Paříž žije dál. Možná o to víc. Důkazem toho může být i 1000 návštěvníků, kteří na akci dorazili.<br><br>Čechy jsem reprezentoval spolu s Dennisem, a taky Petrem a Kubou z Lmc.eu.</p>
+<p class="perex">{$perex|noescape}</p>
 
 <div class="text-center">
     <img src="/../../../../images/posts/2015-12-20/symfonycon-divadlo.jpg" alt="Šatny, jídelna a coffee tables">

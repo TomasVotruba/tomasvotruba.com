@@ -5,7 +5,7 @@ lang: "en"
 thumbnail: "doctrine.jpg" 
 ---
 
-<p class="perex">{{ page.perex }}</p>
+<p class="perex">{$perex|noescape}</p>
   
 ## Standard Process to Enable Filter
 

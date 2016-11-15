@@ -9,7 +9,7 @@ lang: "en"
 thumbnail: "symfony.png"
 ---
 
-<p class="perex">{{ page.perex }}</p>
+<p class="perex">{$perex|noescape}</p>
 
 
 ## When to autowire?

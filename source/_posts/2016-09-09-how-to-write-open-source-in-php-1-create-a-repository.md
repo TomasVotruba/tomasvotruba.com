@@ -10,7 +10,7 @@ thumbnail: "open-source.jpg"
 lang: en
 ---
 
-<p class="perex">{$post['perex']|noescape}</p>
+<p class="perex">{$perex|noescape}</p>
 
 ## Meet Github, OS's best friend  
 
