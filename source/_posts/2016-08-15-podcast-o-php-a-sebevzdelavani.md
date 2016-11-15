@@ -13,7 +13,7 @@ podcast:
     mp3_duration: "33:39"
 ---
 
-<p class="perex">{{ page.perex }}</p>
+<p class="perex">{$perex}</p>
 
 ## Tomáš a Honza nejen o PHP - klapka poprvé
 

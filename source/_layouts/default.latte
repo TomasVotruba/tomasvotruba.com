@@ -12,11 +12,13 @@
         <link href="/assets/css/theme/webmozart/style.css" rel="stylesheet" type="text/css" />
 
         {*code highlighter*}
-        <link href="/assets/css/theme/webmozart/prism.css" rel="stylesheet" type="text/css" />
         <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
 
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
+
+        {block additionalCss}
+        {/block}
 
         {block socialTags}
         {/block}
@@ -77,11 +79,8 @@
             </footer>
         </div>
 
-        {* code highlighting *}
-        <script src="/assets/js/prism.js"></script>
-
         {* for Menu toggling *}
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" async></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" async></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" async></script>
 
         {* icons from FontAwesome *}
