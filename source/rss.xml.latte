@@ -1,0 +1,19 @@
+{contentType application/xml}
+<?xml version="1.0" ?>
+<rss version="2.0">
+<channel>
+    <title><![CDATA[{$siteTitle}]]></title>
+    <link>{$siteUrl}/blog</link>
+    <description>"Přečti si o PHP (Nette, Symfony & Doctrine) a komunitách./Read about PHP (Nette, Symfony & Doctrine) and communities."</description>
+    <title>Tomáš Votruba</title>
+    <item n:foreach="$posts as $post">
+        <title><![CDATA[{$post['title']}]]></title>
+        <link0>{$siteUrl}/{$post['relativeUrl']}></link0>
+        <description><![CDATA[{$post['perex']|noescape}]]></description>
+        <pubDate>{$post['date']|date: 'c'}</pubDate>
+        <dc:creator>Tomáš Votruba</dc:creator>
+        <guid>{$siteUrl}/{$post['relativeUrl']}</guid>
+    </item>
+</channel>
+
+{* validate here: http://www.feedvalidator.org *}
