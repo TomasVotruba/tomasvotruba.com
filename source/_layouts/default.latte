@@ -24,7 +24,7 @@
         {block socialTags}
         {/block}
 
-        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="{$siteTitle} články" />
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="{$siteTitle} články" />
     </head>
     <body>
         <div class="body">
@@ -32,17 +32,17 @@
                 <nav class="navbar navbar-default">
                     <div class="container">
                         <div class="navbar-header">
-                            <a class="navbar-toggle collapsed" data-toggle="collapse"
-                               data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                 <em class="fa fa-align-justify fa-fw"></em>
                                 Menu
                             </a>
                         </div>
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="logo"><a href="/">Tomáš Votruba</a></li>
+                                <li n:class="isset($id) && $id === index ? active, logo">
+                                    <a href="/">Tomáš Votruba</a>
+                                </li>
                                 <li n:class="isset($id) && $id === satisfy ? active">
                                     <a href="/reference">Spokojení klienti</a>
                                 </li>
@@ -55,7 +55,7 @@
                                 <li n:class="isset($id) && $id === price ? active">
                                     <a href="/cenik">Ceník</a>
                                 </li>
-                                <li n:class="isset($id) && $id === contact ? active">
+                                <li>
                                     <a href="/#kontakt">Kontakt</a>
                                 </li>
                             </ul>
@@ -69,19 +69,6 @@
                     {block content}{/block}
                 {/block}
             </div>
-
-            <footer class="footer text-center" id="kontakt">
-                <div class="container">
-                    <h3>Chcete první info schůzku zdarma? Stačí 1 klik!</h3>
-                    <p>
-                        <em class="fa fa-envelope-o fa-fw"></em>
-                        <a href="mailto:info@tomasvotruba.cz">info@tomasvotruba.cz</a>
-                        <br>
-                        <em class="fa fa-phone fa-fw"></em>
-                        <a href="tel:+420776778332">+420 <strong>776 778 332</strong></a>
-                    </p>
-                </div>
-            </footer>
         </div>
 
         {* for Menu toggling *}
