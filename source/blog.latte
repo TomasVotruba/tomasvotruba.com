@@ -8,25 +8,22 @@ id: blog
     <div class="page">
         {import "postSnippets"}
 
-        <div class="container">
-            <header class="page-header text-center">
+        <div class="container page">
+            <header>
                 <h1>{$title}</h1>
-                <br>
             </header>
 
-            <div class="main">
-                {include addRss}
+            {include addRss}
 
-                {foreach $posts as $post}
-                    {include postHeader, 'post' => $post}
-                    {sep}<hr>{/sep}
-                {/foreach}
+            {foreach $posts as $post}
+                {include postHeader, 'post' => $post}
+                {sep}<hr>{/sep}
+            {/foreach}
 
-                <br>
-                <br>
+            <br>
+            <br>
 
-                {include addRss}
-            </div>
+            {include addRss}
         </div>
     </div>
 {/block}

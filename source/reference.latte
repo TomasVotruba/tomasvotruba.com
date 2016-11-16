@@ -4,71 +4,68 @@ title: Vaše spokojenost je mým posláním
 id: satisfy
 ---
 {block content}
-    <div class="container">
-        <div class="page">
-            <div class="main" id="references">
-                <header class="page-header text-center">
-                    <h1>{$title}</h1>
-                    <br>
-                </header>
+    <div class="container page">
+        <div class="main" id="references">
+            <header>
+                <h1>{$title}</h1>
+            </header>
 
-                <p class="text-center">
-                    Školil jsem <strong>ve více jak 10 firmách</strong> a potkal jsem se <strong>s více jak 100 programátory</strong>.
-                    Přečtěte si, jak se jim to líbilo.
-                </p>
+            <p class="text-center">
+                Školil jsem <strong>ve více jak 10 firmách</strong> a potkal jsem se <strong>s více jak 100 programátory</strong>.
+                Přečtěte si, jak se jim to líbilo.
+            </p>
 
-                <hr>
+            <hr>
 
-                {foreach $references as $referenceId => $reference}
-                    <h3>
-                        <a href="{$reference['url']}">{$reference['company']}</a>
-                    </h3>
+            {foreach $references as $referenceId => $reference}
+                <h3>
+                    <a href="{$reference['url']}">{$reference['company']}</a>
+                </h3>
 
-                    <div class="row">
-                        <div class="col-md-6" n:ifset="$reference['copy_items']">
-                            <ul>
-                                {foreach $reference['copy_items'] as $copyItem}
-                                    <li>{$copyItem|noescape}</li>
-                                {/foreach}
-                            </ul>
-                        </div>
-                        <div n:class="isset($reference['copy_items']) ? col-md-6 : col-md-12">
-                            <p>
-                                „{$reference['testimonial']}“
-                            </p>
-
-                            <p>
-                                <strong>{$reference['feedbacker_name']}</strong>, {$reference['feedbacker_position']}
-                            </p>
-                        </div>
+                <div class="row">
+                    <div class="col-md-6" n:ifset="$reference['copy_items']">
+                        <ul>
+                            {foreach $reference['copy_items'] as $copyItem}
+                                <li>{$copyItem|noescape}</li>
+                            {/foreach}
+                        </ul>
                     </div>
+                    <div n:class="isset($reference['copy_items']) ? col-md-6 : col-md-12">
+                        <p>
+                            „{$reference['testimonial']}“
+                        </p>
 
-                    {if $referenceId === 2}
-                        {include callToAction}
-                    {/if}
+                        <p>
+                            <strong>{$reference['feedbacker_name']}</strong>, {$reference['feedbacker_position']}
+                        </p>
+                    </div>
+                </div>
 
-                    {if $referenceId === 5}
-                        {include callToAction2}
-                    {/if}
+                {if $referenceId === 2}
+                    {include callToAction}
+                {/if}
 
-                    {sep}<hr>{/sep}
-                {/foreach}
+                {if $referenceId === 5}
+                    {include callToAction2}
+                {/if}
 
-                <hr>
+                {sep}<hr>{/sep}
+            {/foreach}
 
-                <p class="bigger text-center">
-                    Taky potřebuješ doplnit pár znalostí nebo rovnou zkonzultovat projekt?
-                </p>
+            <hr>
 
-                <p class="text-center">
-                    <a href="/#kontakt" class="btn btn-lg btn-success">
-                        &nbsp;Napiš mi
-                        <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-                    </a>
-                </p>
+            <p class="bigger text-center">
+                Taky potřebuješ doplnit pár znalostí nebo rovnou zkonzultovat projekt?
+            </p>
 
-                <hr>
-            </div>
+            <p class="text-center">
+                <a href="/#kontakt" class="btn btn-lg btn-success">
+                    &nbsp;Napiš mi
+                    <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+                </a>
+            </p>
+
+            <hr>
         </div>
     </div>
 {/block}

@@ -9,6 +9,7 @@
         {*fonts*}
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700&subset=latin-ext" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="/assets/css/theme/webmozart/style.css" rel="stylesheet" type="text/css" />
 
         {*code highlighter*}
@@ -55,7 +56,7 @@
                                     <a href="/cenik">Ceník</a>
                                 </li>
                                 <li n:class="isset($id) && $id === contact ? active">
-                                    <a href="/kontakt">Kontakt</a>
+                                    <a href="/#kontakt">Kontakt</a>
                                 </li>
                             </ul>
                         </div>
@@ -69,11 +70,15 @@
                 {/block}
             </div>
 
-            <footer class="footer text-center">
+            <footer class="footer text-center" id="kontakt">
                 <div class="container">
+                    <h3>Chcete první info schůzku zdarma? Stačí 1 klik!</h3>
                     <p>
-                        &copy; {=date('Y')} Tomáš Votruba. Jede na <a href="https://github.com/Symplify/Statie">Statie</a>.<br>
-                        Nádherná šablona inspirována <a href="http://webmozart.io">webmozart.io</a> - díky!
+                        <em class="fa fa-envelope-o fa-fw"></em>
+                        <a href="mailto:info@tomasvotruba.cz">info@tomasvotruba.cz</a>
+                        <br>
+                        <em class="fa fa-phone fa-fw"></em>
+                        <a href="tel:+420776778332">+420 <strong>776 778 332</strong></a>
                     </p>
                 </div>
             </footer>

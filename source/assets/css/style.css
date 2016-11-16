@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-    margin-bottom: 11px;
+    font-size: 2.2em;
 }
 
 h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
@@ -22,36 +22,11 @@ h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
     }
 }
 
-.portrait-box .page-header {
-    padding-bottom: 10px;
-    margin: 1.2em 0 22px;
-}
-
-.portrait-text {
-    padding-top: .2em;
-}
-
-.portrait-image img {
-    margin-top: 2.5em;
-    border: 1px solid #EEE;
-}
-
-.lead {
-    font-size: 1.2em;
-    line-height: 1.5em;
-    font-weight: 400;
-}
-
 #first-action-step {
     margin-top: .3em;
     padding-top: 1.3em;
     border-top: 1px solid #CCC;
     padding-bottom: .3em;
-}
-
-.edu-nette-logo {
-    margin-top: 1em;
-    width: 14em;
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
@@ -89,23 +64,6 @@ pre {
 
 .navbar-default .navbar-nav > li > a {
     color: #87CEFA;
-}
-
-.logo {
-    font-size: 1.3em;
-}
-
-@media (min-width: 768px) {
-    .logo {
-        margin-left: -1.6em;
-    }
-}
-
-
-.page-header h1 {
-    color: #08c;
-    font-size: 2.2em;
-    font-weight: 600;
 }
 
 a, a:active {
@@ -159,12 +117,6 @@ code {
     font-size: .97em;
 }
 
-#references .face {
-    margin-right: 1em;
-    float: left;
-    border-radius: 50%;
-}
-
 #references h2 {
     font-size: 1.6em;
     color: #8CD02C;
@@ -182,17 +134,8 @@ code {
     text-decoration: none;
 }
 
-#references h4 {
-    margin-bottom: 1.5em;
-}
-
 .main > .row > * {
     margin-top: 1em;
-}
-
-#contact-lead p {
-    font-size: 1.5em;
-    line-height: 2.5em;
 }
 
 a.navbar-toggle, a.navbar-toggle:active {
@@ -202,12 +145,6 @@ a.navbar-toggle, a.navbar-toggle:active {
 
 a.navbar-toggle:hover {
     cursor: pointer;
-}
-
-.mentor-action {
-    font-size: .6em;
-    margin: 1em 0 .5em 0;
-    white-space: normal;
 }
 
 /* article helpers */
@@ -221,20 +158,25 @@ a.navbar-toggle:hover {
     margin-left: -.7em;
 }
 
-.grey-content {
-    background: #f5f5f5;
-    padding: 1.5em 1.5em .7em 1.5em;
-    margin: 2em 0;
-}
-
-.grey-content h2 {
-    margin-top: 0em;
-}
-
 .bigger {
     font-size: 1.2em;
 }
 
 footer {
-    line-height: 2em;
+    line-height: 3em;
+}
+
+/* new */
+
+.page header {
+    text-align: center;
+    margin: -2.2em 0 1.2em;
+    padding-bottom: .4em;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.page header h1 {
+    color: #08C;
+    font-weight: 600;
+    margin: 1em 0;
 }
