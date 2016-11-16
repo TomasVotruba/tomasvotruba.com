@@ -12,13 +12,12 @@ id: satisfy
                     <br>
                 </header>
 
-                <p>
-                    Přečtěte si názory firem a jednotlivců, kteří už mají školení se mnou úspěšně za sebou.
+                <p class="text-center">
+                    Školil jsem <strong>ve více jak 10 firmách</strong> a potkal jsem se <strong>s více jak 100 programátory</strong>.
+                    Přečtěte si, jak se jim to líbilo.
                 </p>
 
                 <hr>
-
-                <h2>Školení a konzultace pro firmy</h2>
 
                 {foreach $references as $referenceId => $reference}
                     <h3>
@@ -26,14 +25,14 @@ id: satisfy
                     </h3>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" n:ifset="$reference['copy_items']">
                             <ul>
                                 {foreach $reference['copy_items'] as $copyItem}
                                     <li>{$copyItem|noescape}</li>
                                 {/foreach}
                             </ul>
                         </div>
-                        <div class="col-md-6">
+                        <div n:class="isset($reference['copy_items']) ? col-md-6 : col-md-12">
                             <p>
                                 „{$reference['testimonial']}“
                             </p>
@@ -57,37 +56,12 @@ id: satisfy
 
                 <hr>
 
-                <h2>Konzultace pro jednotlivce</h2>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>„Jako samouk jsem měl v některých Nette věcech zmatek. Díky konzultaci jsem si je mohl ujasnit. Doporučuju!“</p>
-                        <p>
-                            <strong>Šimon Podlipský</strong>, spoluzakladatel <a href="http://lidskasila.cz">lidskasila.cz</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>„Školení na téma Nette pro mne bylo velice přínosné. Přestože jsem často přeskakoval, dostával jsem ucelené odpovědi, které mi hodně pomohly. Po pár konzultacích jsem byl schopen se postavit na vlastní nohy.“</p>
-
-                        <p>
-                            <strong>Jan Neřold</strong>, <a href="http://www.nk-translators.com">NK Translators</a>
-                        </p>
-                    </div>
-                </div>
-
-                <br>
-
-                <hr>
-
                 <p class="bigger text-center">
                     Taky potřebuješ doplnit pár znalostí nebo rovnou zkonzultovat projekt?
                 </p>
 
                 <p class="text-center">
-                    <a href="/kontakt" class="btn btn-lg btn-success">
+                    <a href="/#kontakt" class="btn btn-lg btn-success">
                         &nbsp;Napiš mi
                         <em class="fa fa-arrow-circle-o-right fa-fw"></em>
                     </a>
@@ -110,7 +84,7 @@ id: satisfy
     </p>
 
     <p class="text-center">
-        <a href="/kontakt" class="btn btn-lg btn-success">
+        <a href="/#kontakt" class="btn btn-lg btn-success">
             &nbsp;Ozvěte se mi
             <em class="fa fa-arrow-circle-o-right fa-fw"></em>
         </a>
@@ -128,7 +102,7 @@ id: satisfy
     </p>
 
     <p class="text-center">
-        <a href="/kontakt" class="btn btn-lg btn-success">
+        <a href="/#kontakt" class="btn btn-lg btn-success">
             &nbsp;Napište mi
             <em class="fa fa-arrow-circle-o-right fa-fw"></em>
         </a>

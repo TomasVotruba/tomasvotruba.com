@@ -57,3 +57,15 @@ references:
             - 8 účastníků
             - "3 témata: git, Doctrine a Symfony"
             - 5 navazujících konzultací
+    6:
+        company: "Lidská Síla"
+        url: http://lidskasila.cz
+        testimonial: "Jako samouk jsem měl v některých Nette věcech zmatek. Díky konzultaci jsem si je mohl ujasnit. Doporučuju!"
+        feedbacker_name: Šimon Podlipský
+        feedbacker_position: "spoluzakladatel LidskáSíla.cz"
+    7:
+        company: "NKTranslators s.r.o."
+        url: http://www.nk-translators.com
+        testimonial: "Školení na téma Nette pro mne bylo velice přínosné. Přestože jsem často přeskakoval, dostával jsem ucelené odpovědi, které mi hodně pomohly. Po pár konzultacích jsem byl schopen se postavit na vlastní nohy."
+        feedbacker_name: Jan Neřold
+        feedbacker_position: "spoluzakladatel a hlavní programátor"
