@@ -4,6 +4,10 @@ body {
     line-height: 1.5em;
 }
 
+h1 {
+    margin-bottom: 11px;
+}
+
 h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
     font-family: sans-serif;
 }
@@ -229,4 +233,8 @@ a.navbar-toggle:hover {
 
 .bigger {
     font-size: 1.2em;
+}
+
+footer {
+    line-height: 2em;
 }
