@@ -19,7 +19,7 @@ id: satisfy
 
             {foreach $references as $referenceId => $reference}
                 <h3>
-                    <a href="{$reference['url']}">{$reference['company']}</a>
+                    <a href="{$reference['url']}">{=$reference['company'] ?? $reference['feedbacker_name']}</a>
                 </h3>
 
                 <div class="row">
@@ -35,17 +35,17 @@ id: satisfy
                             „{$reference['testimonial']}“
                         </p>
 
-                        <p>
+                        <p n:ifset="$reference['company']">
                             <strong>{$reference['feedbacker_name']}</strong>, {$reference['feedbacker_position']}
                         </p>
                     </div>
                 </div>
 
-                {if $referenceId === 2}
+                {if $iterator->getCounter() === 2}
                     {include callToAction}
                 {/if}
 
-                {if $referenceId === 5}
+                {if $iterator->getCounter() === 5}
                     {include callToAction2}
                 {/if}
 

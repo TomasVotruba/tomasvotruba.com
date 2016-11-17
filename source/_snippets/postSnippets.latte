@@ -2,8 +2,9 @@
     <article class="blog-post">
         <header>
             {ifset $post['thumbnail']}
-                <img src="/assets/images/posts/thumbnail/{$post['thumbnail']}" class="pull-left post-thumbnail hidden-xs">
-                <meta content="/assets/images/posts/thumbnail/{$post['thumbnail']}" property="og:image" />
+                {var $thumbnailFullPath = '/assets/images/posts/thumbnail/' . $post['thumbnail']}
+                <img src="{$thumbnailFullPath}" class="pull-left post-thumbnail hidden-xs">
+                <meta content="{$thumbnailFullPath}" property="og:image" />
             {/ifset}
 
             <a href="{$post['relativeUrl']}">
@@ -27,7 +28,7 @@
             {var $nowYear = date("Y")}
             <time datetime="{$post->getDateInFormat('Y-m-D')}">
                 {if $postYear === $nowYear}
-                    {$post->getDateInFormat('j. n')}
+                    {$post->getDateInFormat('j. n.')}
                 {else}
                     {$post->getDateInFormat('j. n. Y')}
                 {/if}
@@ -45,7 +46,7 @@
                 {="post.comments"|translate: $post['lang'] ?? 'cs'}
             </a>
         </li>
-        <li>
+        <li n:ifset="$showPullRequestLink">
             <a href="{$post|githubEditPostUrl}">
                 <em class="fa fa-fw fa-github"></em>
                 {="post.send_pr"|translate: $post['lang'] ?? 'cs'}

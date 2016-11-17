@@ -1,5 +1,5 @@
 references:
-    1:
+    -
         company: Meditorial
         url: https://meditorial.cz/
         testimonial: "Ještě jednou díky za přednášky. Líbilo se nám to. GIT nás bavil a já jsem začal commitovat častěji :)."
@@ -10,7 +10,8 @@ references:
             - '1 krásný den v <a href="http://pracovna.cz/">Pracovně na Žižkově</a>'
             - '2 školitelné - Git Expert <a href="http://www.tomasfejfar.cz/">Tomáš Fejfar</a>'
             - &infin; přísun kafe díky pečujícímu personálu
-    2:
+
+    -
         company: "igloonet, s. r. o."
         url: https://igloonet.cz
         testimonial: "Chtěl bych ti ještě jednou poděkovat za školení. Věřím, že pro nás mělo velký přínos hlavně v nových nápadech, jak se některé věci ulehčit nebo jak je dělat efektivněji. Určitě budeme chtít školení po nějaké době zopakovat."
@@ -22,7 +23,8 @@ references:
             - 1 cesta do Brna
             - 1 dotace z EU
             - "3 témata: sebevzdělávání, refaktoring a Nette pro tipy"
-    3:
+
+    -
         company: Galileo Corporation s.r.o.
         url: http://www.igalileo.cz/
         testimonial: "Co jsme se dozvěděli? PHPStorm, best practices, DI atd. Vyzkoušeli jsme si implementaci Symfony do našeho systému - což pro mě znamená fakt velké plus."
@@ -34,7 +36,8 @@ references:
             - 1 konzultační schůzka předem
             - 2 cesty do Plzně
             - 30+ dotazů na refaktoring legacy do Symfony
-    4:
+
+    -
         company: Lékarna.cz
         url: http://www.lekarna.cz
         testimonial: "Napojení Nette na Doctrine je nyní jednoduché. Líbily se mi také postřehy k testovaní a nástrojům - co k čemu používat, např. PHPStorm a jeho použití v praxi. Super školení, které celý tým posunulo dopředu."
@@ -46,7 +49,8 @@ references:
             - 40+ probraných témat z Nette
             - 1 workshop Doctrine
             - "2x laser game (jako odměna za dobře odvedenou práci)"
-    5:
+
+    -
         company: ERUDIO s.r.o
         url: http://www.erudio.cz
         testimonial: "Potřebovali jsme individuální školení Symfony a Tomáš nám byl doporučen. Rychle připravil školení přímo na míru, kde se zaměřil na naše konkrétní problémy. Tomáš neříkal teorii, kterou si můžeme přečíst kdekoliv na internetu, ale předal nám tipy z praxe. Doporučuji ho všem, kteří hledají specialistu."
@@ -57,15 +61,34 @@ references:
             - 8 účastníků
             - "3 témata: git, Doctrine a Symfony"
             - 5 navazujících konzultací
-    6:
+
+    -
         company: "Lidská Síla"
         url: http://lidskasila.cz
         testimonial: "Jako samouk jsem měl v některých Nette věcech zmatek. Díky konzultaci jsem si je mohl ujasnit. Doporučuju!"
         feedbacker_name: Šimon Podlipský
         feedbacker_position: "spoluzakladatel LidskáSíla.cz"
-    7:
+
+    -
         company: "NKTranslators s.r.o."
         url: http://www.nk-translators.com
         testimonial: "Školení na téma Nette pro mne bylo velice přínosné. Přestože jsem často přeskakoval, dostával jsem ucelené odpovědi, které mi hodně pomohly. Po pár konzultacích jsem byl schopen se postavit na vlastní nohy."
         feedbacker_name: Jan Neřold
         feedbacker_position: "spoluzakladatel a hlavní programátor"
+
+    -
+        url: http://fenekpr.cz
+        testimonial: "Tom je nejsympatičtější ajťák, proto pořádá PHP srazy a buduje komunity."
+        feedbacker_name: "Jirka Vycherek"
+
+    -
+        url: https://twitter.com/javiereguiluz
+        testimonial: "I'd like to tell you that as much I hate email... in your case it's different. I like that your emails are always positive and that you send me intereseting references to all the things that you do. Like writing articles, recoding screencasts, publishing bundles etc. So I love recieving emails from you and I wanted to tell that to you!"
+        feedbacker_name: "Javier Eguiluz"
+
+    -
+        url: https://github.com/Olicek
+        testimonial: '''
+           Sleduju tě od té doby, co jsem ti poslal svůj úplně první PR. Musím říct, že to, co děláš, je skvělý. Neber to jako pochlebování, ale jako feedback tvé práce pro komunitu. Hlavně se mi strašně líbí tvůj styl komunikace s lidma. Otočit flame do něčeho konstruktivního, vtáhnout lidi do přispívání, hromada open-sourc,e články... Skvělá práce, díky za ni!
+        '''
+        feedbacker_name: "Petr Olišar"

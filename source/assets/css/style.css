@@ -6,18 +6,11 @@ body {
 
 h1 {
     font-size: 2.2em;
+    font-weight: normal;
 }
 
-h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
-    font-family: sans-serif;
-}
-
-@media (min-width: 1000px) {
-    h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
-        font-family: 'Source Sans Pro', sans-serif;
-    }
-
-    body {
+@media (min-width: 600px) {
+    h1, h2, h3, .navbar {
         font-family: 'Source Sans Pro', sans-serif;
     }
 }
@@ -45,9 +38,9 @@ pre {
     border-radius: 2px;
 }
 
-.blog-post img {
-    border-radius: 2px;
-}
+/*.blog-post img {*/
+    /*border-radius: 2px;*/
+/*}*/
 
 .blog-post img.post-thumbnail, .post-thumbnail {
     margin: 0 .9em .2em 0;
@@ -56,6 +49,11 @@ pre {
 /* true colors */
 .navbar {
     background-color: #08c;
+}
+
+.navbar .logo {
+    font-size: 1.4em;
+    margin-left: -1.7em;
 }
 
 .navbar-default {
@@ -179,4 +177,8 @@ footer {
     color: #08C;
     font-weight: 600;
     margin: 1em 0;
+}
+
+h1 p.green {
+    color: #08C;
 }
