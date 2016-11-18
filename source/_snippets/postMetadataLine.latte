@@ -1,0 +1,56 @@
+{define postHeader}
+    <article class="blog-post">
+        <header>
+            <a href="{$post['relativeUrl']}">
+                <h2>{$post['title']}</h2>
+            </a>
+
+            {ifset $post['thumbnail']}
+                {var $thumbnailFullPath = '/assets/images/posts/thumbnail/' . $post['thumbnail']}
+                <img src="{$thumbnailFullPath}" class="pull-left post-thumbnail hidden-xs">
+                <meta content="{$thumbnailFullPath}" property="og:image" />
+            {/ifset}
+
+            {include postMetadataLine, post => $post}
+        </header>
+
+        <p n:ifset="$showPerex">{$post['perex']|noescape}</p>
+        <div class="clearfix"></div>
+    </article>
+{/define}
+
+
+{define postMetadataLine}
+    <ul class="list-inline list-inline-box">
+        <li>
+            <em class="fa fa-calendar fa-fw"></em>
+            {var $postYear = $post->getDateInFormat('Y')}
+            {var $nowYear = date("Y")}
+            <time datetime="{$post->getDateInFormat('Y-m-D')}">
+                {if $postYear === $nowYear}
+                    {$post->getDateInFormat('j. n.')}
+                {else}
+                    {$post->getDateInFormat('j. n. Y')}
+                {/if}
+            </time>
+        </li>
+
+        <li>
+            <em class="fa fa-clock-o fa-fw"></em>
+            <strong>{$post['content']|readTimeInMinutes} min</strong>
+        </li>
+
+        <li>
+            <em class="fa fa-fw fa-comments"></em>
+            <a href="http://tomasvotruba.cz/{$post['relativeUrl']}/#disqus_thread">
+                {="post.comments"|translate: $post['lang'] ?? 'cs'}
+            </a>
+        </li>
+        <li n:ifset="$showPullRequestLink">
+            <a href="{$post|githubEditPostUrl}">
+                <em class="fa fa-fw fa-github"></em>
+                {="post.send_pr"|translate: $post['lang'] ?? 'cs'}
+            </a>
+        </li>
+    </ul>
+{/define}

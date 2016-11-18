@@ -1,20 +1,20 @@
 {define postHeader}
     <article class="blog-post">
         <header>
+            <a href="{$post['relativeUrl']}">
+                <h2>{$post['title']}</h2>
+            </a>
+
             {ifset $post['thumbnail']}
                 {var $thumbnailFullPath = '/assets/images/posts/thumbnail/' . $post['thumbnail']}
                 <img src="{$thumbnailFullPath}" class="pull-left post-thumbnail hidden-xs">
                 <meta content="{$thumbnailFullPath}" property="og:image" />
             {/ifset}
 
-            <a href="{$post['relativeUrl']}">
-                <h2>{$post['title']}</h2>
-            </a>
-
             {include postMetadataLine, post => $post}
         </header>
 
-        <p>{$post['perex']|noescape}</p>
+        <p n:ifset="$showPerex">{$post['perex']|noescape}</p>
         <div class="clearfix"></div>
     </article>
 {/define}
@@ -37,7 +37,7 @@
 
         <li>
             <em class="fa fa-clock-o fa-fw"></em>
-            <strong>{$post['content']|readTimeInMinutes: $post['lang'] ?? 'cs'}</strong>
+            <strong>{$post['content']|readTimeInMinutes} min</strong>
         </li>
 
         <li>
