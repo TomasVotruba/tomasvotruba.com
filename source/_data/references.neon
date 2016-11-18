@@ -70,16 +70,9 @@ references:
         feedbacker_position: "spoluzakladatel LidskáSíla.cz"
 
     -
-        company: "NKTranslators s.r.o."
-        url: http://www.nk-translators.com
-        testimonial: "Školení na téma Nette pro mne bylo velice přínosné. Přestože jsem často přeskakoval, dostával jsem ucelené odpovědi, které mi hodně pomohly. Po pár konzultacích jsem byl schopen se postavit na vlastní nohy."
-        feedbacker_name: Jan Neřold
-        feedbacker_position: "spoluzakladatel a hlavní programátor"
-
-    -
         url: http://fenekpr.cz
         testimonial: "Tom je nejsympatičtější ajťák, proto pořádá PHP srazy a buduje komunity."
-        feedbacker_name: "Jirka Vycherek"
+        feedbacker_name: "Jirka Vicherek"
 
     -
         url: https://twitter.com/javiereguiluz

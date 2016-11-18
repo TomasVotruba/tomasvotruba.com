@@ -9,17 +9,10 @@ h1 {
     font-weight: normal;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 481px) {
     h1, h2, h3, .navbar {
         font-family: 'Source Sans Pro', sans-serif;
     }
-}
-
-#first-action-step {
-    margin-top: .3em;
-    padding-top: 1.3em;
-    border-top: 1px solid #CCC;
-    padding-bottom: .3em;
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
@@ -38,10 +31,6 @@ pre {
     border-radius: 2px;
 }
 
-/*.blog-post img {*/
-    /*border-radius: 2px;*/
-/*}*/
-
 .blog-post img.post-thumbnail, .post-thumbnail {
     margin: 0 .9em .2em 0;
 }
@@ -51,9 +40,15 @@ pre {
     background-color: #08c;
 }
 
+
 .navbar .logo {
     font-size: 1.4em;
-    margin-left: -1.7em;
+}
+
+@media (min-width: 900px) {
+    .navbar .logo {
+        margin-left: -1.7em;
+    }
 }
 
 .navbar-default {
@@ -152,16 +147,13 @@ a.navbar-toggle:hover {
     font-family: Arial, sans-serif;
 }
 
-.indent-less {
-    margin-left: -.7em;
+.bigger, .bigger .btn {
+    font-size: 1.1em;
 }
 
-.bigger {
-    font-size: 1.2em;
-}
-
-footer {
-    line-height: 3em;
+.much-bigger {
+    font-size: 1.3em;
+    line-height: 1.8em;
 }
 
 /* new */
@@ -181,4 +173,16 @@ footer {
 
 h1 p.green {
     color: #08C;
+}
+
+#kontakt {
+    color: #DDD;
+    background: black;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    line-height: 3em;
+}
+
+#kontakt p {
+    font-size: 1.3em;
 }
