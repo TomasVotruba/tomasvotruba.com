@@ -20,5 +20,5 @@ before_script:
   - composer update
 
 script:
-  - vendor/bin/sculpin generate
-  - vendor/bin/sculpin push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
+  - vendor/bin/statie generate
+  - vendor/bin/statie push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
