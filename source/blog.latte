@@ -11,7 +11,17 @@ id: blog
         </header>
 
         {foreach $posts as $post}
-            {include "postHeader", 'post' => $post}
+            {var $postYear = $post->getDateInFormat('Y')}
+            {if $postYear != date('Y') && !isset($dateLines[$postYear])}
+                <div class="yearLine">
+                    {$postYear}
+                    {var $dateLines[$postYear] = $postYear}
+                </div>
+            {/if}
+
+            <article>
+                {include "postHeader", 'post' => $post}
+            </article>
         {/foreach}
     </div>
 {/block}

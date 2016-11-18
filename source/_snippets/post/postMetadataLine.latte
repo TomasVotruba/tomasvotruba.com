@@ -1,5 +1,10 @@
 <ul class="list-inline">
     <li>
+        <em class="fa fa-clock-o fa-fw"></em>
+        <strong>{$post['content']|readTimeInMinutes} {="post.min_of_reading"|translate: $post['lang'] ?? 'cs'}</strong>
+    </li>
+
+    <li>
         <em class="fa fa-calendar fa-fw"></em>
         {var $postYear = $post->getDateInFormat('Y')}
         {var $nowYear = date("Y")}
@@ -10,11 +15,6 @@
                 {$post->getDateInFormat('j. n. Y')}
             {/if}
         </time>
-    </li>
-
-    <li>
-        <em class="fa fa-clock-o fa-fw"></em>
-        <strong>{$post['content']|readTimeInMinutes} min {="post.of_reading"|translate: $post['lang'] ?? 'cs'}</strong>
     </li>
 
     <li>

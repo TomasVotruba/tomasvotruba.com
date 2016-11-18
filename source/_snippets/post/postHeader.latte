@@ -1,15 +1,11 @@
-<article class="blog-post">
-    {*<header>*}
-        <a href="{$post['relativeUrl']}">
+<header n:tag-ifset="$singlePost">
+    <a href="{$post['relativeUrl']}">
+        {ifset $singlePost}
+            <h1>{$post['title']}</h1>
+        {else}
             <h2>{$post['title']}</h2>
-        </a>
-
-        {ifset $post['thumbnail']}
-            <meta content="/assets/images/posts/thumbnail/{$post['thumbnail']}" property="og:image" />
         {/ifset}
+    </a>
 
-        {include "postMetadataLine", post => $post}
-    {*</header>*}
-
-    <p n:ifset="$showPerex">{$post['perex']|noescape}</p>
-</article>
+    {include "postMetadataLine", post => $post}
+</header>

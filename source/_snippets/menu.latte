@@ -16,7 +16,7 @@
         <li n:class="isset($id) && $id === skills ? active">
             <a href="/skoleni">Co vám můžu předat</a>
         </li>
-        <li n:class="isset($id) && $id === blog ? active">
+        <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
             <a href="/blog">Blog</a>
         </li>
         <li n:class="isset($id) && $id === price ? active">

@@ -1,15 +1,9 @@
 ---
-id: 4
+layout: post
 title: To nejlepší ze SymfonyConu 2015
 perex: "Každoročně pořádaný SymfonyCon se letos konal v Paříži. Přes všechny útoky Paříž žije dál. Možná o to víc. Důkazem toho může být i 1000 návštěvníků, kteří na akci dorazili. Čechy jsem reprezentoval spolu s Dennisem, a taky Petrem a Kubou z Lmc.eu"
 thumbnail: "symfony.png"
 ---
-
-<p style="font-size:0.9em">
-    <em>S psaním článku mi pomohl <a href="http://defr.cz/">Dennis</a>.</em>
-</p>
-
-<p class="perex">{$perex|noescape}</p>
 
 <div class="text-center">
     <img src="/../../../../assets/images/posts/2015-12-20/symfonycon-divadlo.jpg" alt="Šatny, jídelna a coffee tables">
@@ -193,5 +187,9 @@ A spoustu chuťových zážitků bizardní francouzské kuchyně :).
 Příští Symfonycon bude v Berlíně, což je vlakem z Prahy jen 4,5 hoďky. Registrace sice zatím otevřena není, ale stačí sledovat [@Symfonycon](https://twitter.com/SymfonyCon) a budeš o tom vědet mezi prvními.
 
 Vyplatí se to! Tento rok byly early birds lístky za 209 €.
+
+<p style="font-size:0.9em">
+    <em>S psaním článku mi pomohl <a href="http://defr.cz/">Dennis</a>.</em>
+</p>
 
 <div class="clearfix"></div>

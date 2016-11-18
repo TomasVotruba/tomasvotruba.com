@@ -1,4 +1,5 @@
 ---
+layout: post
 title: How to get more than Request in Controller Action
 perex: '''
     You already know you can get <code>Request</code> object in your controller action. Cool, but there is more. 
@@ -8,8 +9,6 @@ perex: '''
 thumbnail: "symfony.png"
 lang: "en"
 ---
-
-<p class="perex">{$perex|noescape}</p>
 
 ## Disclaimer: What happened to controller constructor injection?
 

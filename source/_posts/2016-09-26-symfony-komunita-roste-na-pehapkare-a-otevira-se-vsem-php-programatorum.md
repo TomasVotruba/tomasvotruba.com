@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Symfony komunita roste na PéHáPkaře a otevírá se všem PHP programátorům"
 perex: '''
     Symfony komunita mění svůj název, jinak vše zůstane stejné jako dosud.
@@ -6,8 +7,6 @@ perex: '''
 '''
 thumbnail: "php.jpg"
 ---
-
-<p class="perex">{$perex|noescape}</p>
 
 Od září 2016 měníme název komunity *Symfonisti* na *Péhápkaři*.
 Vítáme tak všechny, kteří **jakkoliv dělají s PHP**, v České republice a na Slovensku.

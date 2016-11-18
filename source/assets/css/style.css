@@ -202,3 +202,10 @@ h1 strong {
 #kontakt p {
     font-size: 1.3em;
 }
+
+.yearLine {
+    font-size: 3em;
+    text-align: center;
+    color: #00aaff;
+    font-family: 'Lato', Arial, sans-serif;
+}

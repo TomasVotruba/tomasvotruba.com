@@ -1,12 +1,11 @@
 ---
+layout: post
 title: Decouple Your Doctrine Filters
 perex: "Doctrine filters are powerful tool. Yet their registration and management are bit overcomplicated. Today I will show you how to decouple them to standalone services that can take care of everything you need." 
 lang: "en"
 thumbnail: "doctrine.jpg" 
 ---
 
-<p class="perex">{$perex|noescape}</p>
-  
 ## Standard Process to Enable Filter
 
 If you don't know Doctrine Filters, [KnpUniversity](https://knpuniversity.com/) has very nice, short and funny tutorial about them. [Go check it](https://knpuniversity.com/screencast/doctrine-queries/filters), I'll wait here...

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "How to write open-source in PHP 2: Rise value of your package with help of skeleton"
 perex: '''
     After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some <strong>metadata files</strong>.
@@ -7,8 +8,6 @@ perex: '''
 thumbnail: "open-source.jpg"
 lang: en
 ---
-
-<p class="perex">{$perex|noescape}</p>
 
 Other programmers who want to use your package are usually looking for **long term value**. 
 To estimate the value they need **to answer 4 important questions**.
