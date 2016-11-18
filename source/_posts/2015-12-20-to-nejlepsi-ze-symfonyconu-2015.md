@@ -1,21 +1,12 @@
 ---
-id: 4
+layout: post
 title: To nejlepší ze SymfonyConu 2015
-categories:
-    - Symfony
-    - konference
-    - komunita
 perex: "Každoročně pořádaný SymfonyCon se letos konal v Paříži. Přes všechny útoky Paříž žije dál. Možná o to víc. Důkazem toho může být i 1000 návštěvníků, kteří na akci dorazili. Čechy jsem reprezentoval spolu s Dennisem, a taky Petrem a Kubou z Lmc.eu"
+thumbnail: "symfony.png"
 ---
 
-<p style="font-size:0.9em">
-    <em>S psaním článku mi pomohl <a href="http://defr.cz/">Dennis</a>.</em>
-</p>
-
-<p class="perex">Každoročně pořádaný SymfonyCon se letos konal v Paříži. Přes všechny útoky Paříž žije dál. Možná o to víc. Důkazem toho může být i 1000 návštěvníků, kteří na akci dorazili.<br><br>Čechy jsem reprezentoval spolu s Dennisem, a taky Petrem a Kubou z Lmc.eu.</p>
-
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-12-20/symfonycon-divadlo.jpg" alt="Šatny, jídelna a coffee tables">
+    <img src="/../../../../assets/images/posts/2015-12-20/symfonycon-divadlo.jpg" alt="Šatny, jídelna a coffee tables">
     <br>
     <em>Fronta na Symfony slony. Za 2 hodiny už žádný nezbyl.</em>
 </div>
@@ -37,7 +28,7 @@ Fabien zmínil přes 20 lidí, které na své cestě postupně potkal, a ukázal
 Mezi lidmi představil i [nový release process](http://symfony.com/blog/improving-the-symfony-release-process), který usnadní <em>continuous upgrade</em>.
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-12-20/symfonycon-release-process.jpg" alt="Nový relase proces">
+    <img src="/../../../../assets/images/posts/2015-12-20/symfonycon-release-process.jpg" alt="Nový relase proces">
 </div>
 <br>
 
@@ -56,7 +47,7 @@ Přechod na nové major verze bude pod mnohem větší kontrolou než kdy dřív
 Tato zdánlivě random-generated firma se zabývá bla bla bla… ridesharingem, tedy spolujízdou.
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-12-20/symfonycon-bla-bla-car.png" alt="Ušetři za spolujízdu">
+    <img src="/../../../../assets/images/posts/2015-12-20/symfonycon-bla-bla-car.png" alt="Ušetři za spolujízdu">
 </div>
 <br>
 
@@ -85,14 +76,14 @@ Jejich microservices nevyužívají interní API, ktére jim přišlo zbytečně
 A teď pro něco pro každého:
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-12-20/symfonycon-tips-and-tricks.jpg" alt="Tipy a triky">
+    <img src="/../../../../assets/images/posts/2015-12-20/symfonycon-tips-and-tricks.jpg" alt="Tipy a triky">
 </div>
 <br>
 
 [Javier Eguiluz](https://twitter.com/javiereguiluz), kterého všichni známe jako:
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-12-20/symfonycon-javier.png" alt="Seflie?">
+    <img src="/../../../../assets/images/posts/2015-12-20/symfonycon-javier.png" alt="Seflie?">
 </div>
 <br>
 
@@ -181,7 +172,7 @@ A spoustu chuťových zážitků bizardní francouzské kuchyně :).
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-12-20/symfonycon-stage.jpg" alt="Co uděláš wifi v divadle?">
+    <img src="/../../../../assets/images/posts/2015-12-20/symfonycon-stage.jpg" alt="Co uděláš wifi v divadle?">
 </div>
 
 <br>
@@ -190,11 +181,15 @@ A spoustu chuťových zážitků bizardní francouzské kuchyně :).
 ### Pojeď za rok taky, vždyť je to kousek
 
 <div class="pull-left" style="margin-right:1.2em">
-    <img src="/../../../../images/posts/2015-12-20/symfonycon-to-berlin.jpg" alt="Do Berlína!">
+    <img src="/../../../../assets/images/posts/2015-12-20/symfonycon-to-berlin.jpg" alt="Do Berlína!">
 </div>
 
 Příští Symfonycon bude v Berlíně, což je vlakem z Prahy jen 4,5 hoďky. Registrace sice zatím otevřena není, ale stačí sledovat [@Symfonycon](https://twitter.com/SymfonyCon) a budeš o tom vědet mezi prvními.
 
 Vyplatí se to! Tento rok byly early birds lístky za 209 €.
+
+<p style="font-size:0.9em">
+    <em>S psaním článku mi pomohl <a href="http://defr.cz/">Dennis</a>.</em>
+</p>
 
 <div class="clearfix"></div>

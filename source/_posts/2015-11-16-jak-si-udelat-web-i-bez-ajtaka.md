@@ -1,17 +1,9 @@
 ---
-id: 3
-title: Jak si levně udělat živý web, i když nejsi ajťák
-categories:
-    - Gihub
-    - web
-    - BeEager
+layout: post
+title: "Jak si levně udělat živý web, i když nejsi ajťák"
 perex: "Znáš pojmy jako hosting, doména, HTML, CSS, FTP, šablona, Wordpress nebo Github? Máš vyhráno, dál nečti a běž se podívat na svou krásnou online vizitku."
+thumbnail: "github.jpg"
 ---
-
-<p class="perex">
-    Znáš pojmy jako hosting, doména, HTML, CSS, FTP, šablona, Wordpress nebo Github?<br>
-    Máš vyhráno, dál nečti a běž se podívat na svou krásnou online vizitku.
-</p>
 
 Na [MyEagers konferenci](http://myeagers.beeager.com/) jsem se stal svědkem workshopu [Lekce svádění aneb jak to udělat online tak, aby Tě chtěli](https://www.facebook.com/events/885079758208224/permalink/896505960398937/). **Kopa šikovných hacků, které ti dají světelný náskok na tvé pracovní cestě**.
 
@@ -54,7 +46,7 @@ Stránky můžeš mít umístěné na Github zdarma. Github je sociální síť 
 2. "forkni" si mé [ukázkové stránky](https://github.com/TomasVotruba/php7.cz) - tím si **základ pro vlastní stránku překopíruješ k sobě** a můžeš si ji dál upravovat, jak budeš chtít
 
     <div class="text-center">
-        <img src="/../../../../images/posts/2015-11-16/github-1.png" alt="Forkneme = stáhneme k sobě">
+        <img src="/../../../../assets/images/posts/2015-11-16/github-1.png" alt="Forkneme = stáhneme k sobě">
         <br>
         <em>Klikni na tlačítko "fork"</em>
     </div>
@@ -73,7 +65,7 @@ Teď už máme doménu a stránky online, ale zatím jsou od sebe vzájemně odd
 1. otevři si nastavení svého webu
 
     <div class="text-center">
-        <img src="/../../../../images/posts/2015-11-16/github-2.png" alt="Otevři 'Settings'">
+        <img src="/../../../../assets/images/posts/2015-11-16/github-2.png" alt="Otevři 'Settings'">
         <br>
         <em>Otevři "Settings"</em>
     </div>
@@ -81,7 +73,7 @@ Teď už máme doménu a stránky online, ale zatím jsou od sebe vzájemně odd
 2. přejmenuj složku na název tvé nové domény (v mém případě `php7.cz`)
 
     <div class="text-center">
-        <img src="/../../../../images/posts/2015-11-16/github-3.png" alt="Napiš svou doménu">
+        <img src="/../../../../assets/images/posts/2015-11-16/github-3.png" alt="Napiš svou doménu">
         <br>
         <em>Napiš svou doménu</em>
     </div>
@@ -89,13 +81,13 @@ Teď už máme doménu a stránky online, ale zatím jsou od sebe vzájemně odd
 3. ve složce uprav `CNAME` soubor 
 
     <div class="text-center">
-        <img src="/../../../../images/posts/2015-11-16/github-4.png" alt="Otevři soubor CNAME">
+        <img src="/../../../../assets/images/posts/2015-11-16/github-4.png" alt="Otevři soubor CNAME">
         <br>
         <em>Otevři CNAME soubor</em>
     </div>
     <br>
     <div class="text-center">
-        <img src="/../../../../images/posts/2015-11-16/github-5.png" alt="Dej editovat">
+        <img src="/../../../../assets/images/posts/2015-11-16/github-5.png" alt="Dej editovat">
         <br>
         <em>Dej editovat</em>
     </div>
@@ -112,7 +104,7 @@ Teď už ti zbývá poslední krok.
 3. dej "editovat DNS záznamy"
 
     <div class="text-center">
-        <img src="/../../../../images/posts/2015-11-16/domain-dns-1.png" alt="Edituj DNS záznamy">
+        <img src="/../../../../assets/images/posts/2015-11-16/domain-dns-1.png" alt="Edituj DNS záznamy">
         <br>
         <em>Edituj DNS záznamy</em>
     </div>
@@ -120,7 +112,7 @@ Teď už ti zbývá poslední krok.
 4. změň A záznam a smaž AAAA záznamy
 
     <div class="text-center">
-        <img src="/../../../../images/posts/2015-11-16/domain-dns-2.png" alt="Edituj DNS záznamy" style="max-width:270px">
+        <img src="/../../../../assets/images/posts/2015-11-16/domain-dns-2.png" alt="Edituj DNS záznamy" style="max-width:270px">
         <br>
         <em>Uprav oba záznamy - jeden s hvězdičkou a druhý bez</em>
     </div>
@@ -128,7 +120,7 @@ Teď už ti zbývá poslední krok.
 5. IP adresu změň na `192.30.252.153` - to je adresa Githubu, tam kde tvé stránky teď sídlí
 
     <div class="text-center">
-        <img src="/../../../../images/posts/2015-11-16/domain-dns-3.png" alt="Změň IP adresu">
+        <img src="/../../../../assets/images/posts/2015-11-16/domain-dns-3.png" alt="Změň IP adresu">
         <br>
         <em>Změň IP adresu</em>
     </div>
@@ -136,7 +128,7 @@ Teď už ti zbývá poslední krok.
 6. klikni na tlačítko "Aplikovat změny"
     
     <div class="text-center">
-        <img src="/../../../../images/posts/2015-11-16/domain-dns-4.png" alt="Aplikuj změny">
+        <img src="/../../../../assets/images/posts/2015-11-16/domain-dns-4.png" alt="Aplikuj změny">
         <br>
         <em>Aplikuj změny</em>
     </div>

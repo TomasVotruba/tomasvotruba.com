@@ -1,0 +1,11 @@
+<header n:tag-ifset="$singlePost">
+    <a href="{$post['relativeUrl']}">
+        {ifset $singlePost}
+            <h1>{$post['title']}</h1>
+        {else}
+            <h2>{$post['title']}</h2>
+        {/ifset}
+    </a>
+
+    {include "postMetadataLine", post => $post}
+</header>

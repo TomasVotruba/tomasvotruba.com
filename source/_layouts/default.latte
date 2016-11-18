@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{$title} | {$siteTitle}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+
+        {* Font Awesome *}
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+        {* Twitter Bootstrap *}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="/assets/css/theme/webmozart/style.css" rel="stylesheet" type="text/css" />
+
+        {* code highlighter *}
+        <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        {block additionalCss}
+        {/block}
+
+        {block socialTags}
+        {/block}
+
+        <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="{$siteTitle} články" />
+    </head>
+    <body>
+        <div class="body">
+            <header class="header">
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        {include "menu"}
+                    </div>
+                </nav>
+            </header>
+
+            <div class="mainContent">
+                {block content_wrapper}
+                    {block content}
+                    {/block}
+                {/block}
+            </div>
+        </div>
+
+        {block additionalJavascript}
+        {/block}
+
+        {* for Menu toggling *}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" async></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous" async></script>
+
+        {include "googleAnalytics"}
+    </body>
+</html>

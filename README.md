@@ -1,18 +1,13 @@
-# Tomas Votruba - Sculpin Blog
+# Tomas Votruba - Symplify\Statie Website
 
 [![Build Status](https://img.shields.io/travis/TomasVotruba/tomasvotruba.cz.svg?style=flat-square)](https://travis-ci.org/TomasVotruba/tomasvotruba.cz)
+
 
 ## How to run it?
 
 ```sh
 composer update
-vendor/bin/sculpin generate --watch --server --port 8001 # it needs to be run from vendor, to autoload all composer classes 
+vendor/bin/statie generate --server
 ```
 
-And open `http://localhost:8001`.
-
-## For production?
-
-```sh
-vendor/bin/sculpin generate --env=prod
-```
+And open `http://localhost:8000`.

@@ -1,13 +1,9 @@
 ---
+layout: post
 title: Kolik lidí je potřeba k vytvoření jedné komunity?
-categories:
-    - Symfony
-    - komunita
-    - přátelé
 perex: "CEO České Symfony komunity. Vedoucí, evangelista, ten co dělá tu Symfony komunitu... Tak mi mnozí z vás občas říkají. Já se však pořád nemůžu zbavit pocitu, že za Symfony komunitou, tak jak ji známe v její dnešní podobě, nejsou vidět ty desítky dalších tváří, na kterých to celé stojí. Tváří lidí, kteří k ní přispěli malým či velkým dílem, kteří mě nakopli, a kteří mi pomáhají víc, než si sami vůbec uvědomují. Bez nich by tady totiž dnes nebylo vůbec nic. A proto bych vám o nich dnes rád řekl." 
+thumbnail: "php.jpg"
 ---
-
-<p class="perex">{{ page.perex }}</p>  
 
 Po prvním pražském srazu v Jobs.cz už to začalo vypadat, že tu naše komunita je, a že se jí daří. Že za tím nestojím jen já, ale dalších 15-20 lidí, to už vidět není. Co všechno tomu předcházelo a o jakých lidech, kteří přinesli Symfony k nám, tady mluvím?
 

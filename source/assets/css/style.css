@@ -1,0 +1,215 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.5em;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: normal;
+}
+
+@media (min-width: 481px) {
+    h1, h2, h3, .navbar {
+        font-family: 'Lato', Arial, sans-serif;
+    }
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:focus {
+    background-color: #08c;
+    border-color: #08c;
+}
+
+.btn-primary:hover  {
+    background-color: #0af;
+    border-color: #0af;
+}
+
+
+pre {
+    border: none;
+    border-radius: 2px;
+}
+
+/* true colors */
+.navbar {
+    background-color: #08c;
+}
+
+
+.navbar .logo {
+    font-size: 1.4em;
+}
+
+@media (min-width: 900px) {
+    .navbar .logo {
+        margin-left: -1.7em;
+    }
+}
+
+.navbar-default {
+    border-color: #0af;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #87CEFA;
+}
+
+a, a:active {
+    color: #64991a;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #8CD02C;
+    text-decoration: none;
+}
+
+
+.perex {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    margin: 1em 0;
+}
+
+
+.blog-post h1 {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+
+article {
+    text-align: center;
+    padding: .5em 0 2em;
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+article h2 {
+    font-size: 1.8em;
+}
+
+article h2, article h3 {
+    font-weight: 600;
+}
+
+.h3, h3 {
+    font-size: 1.23em;
+}
+
+.h4, h4 {
+    margin-top: 1.4em;
+    font-size: 1.08em;
+}
+
+
+blockquote {
+    margin: .7em 0;
+}
+
+code {
+    font-size: .97em;
+}
+
+#references h2 {
+    font-size: 1.6em;
+    color: #8CD02C;
+}
+
+#references h3 {
+    margin-bottom: .3em;
+}
+
+#references h3 a {
+    text-decoration: underline;
+}
+
+#references h3 a:hover {
+    text-decoration: none;
+}
+
+.main > .row > * {
+    margin-top: 1em;
+}
+
+a.navbar-toggle, a.navbar-toggle:active {
+    color: white;
+    font-size: 1.5em;
+}
+
+a.navbar-toggle:hover {
+    cursor: pointer;
+}
+
+/* article helpers */
+.arrow-down-on-list {
+    margin-left: .7em;
+    font-size: 1.6em;
+    font-family: Arial, sans-serif;
+}
+
+.bigger {
+    font-size: 1.1em;
+}
+
+#welcome-drink {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+#welcome-drink ul {
+    padding-top: 0;
+    margin-top: .3em;
+}
+
+#welcome-drink img {
+    max-width: 100%;
+}
+
+/* new */
+
+.page header {
+    text-align: center;
+    margin: -2.2em 0 1.2em;
+    padding-bottom: .4em;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.page header h1 {
+    color: #08C;
+    font-weight: 600;
+    margin: 1em 0;
+}
+
+h1 p.green {
+    color: #08C;
+}
+
+h1 strong {
+    font-weight: 800;
+}
+
+#kontakt {
+    color: #DDD;
+    background: black;
+    padding-top: 1em;
+    padding-bottom: 10em;
+    line-height: 3em;
+}
+
+#kontakt p {
+    font-size: 1.3em;
+}
+
+.yearLine {
+    font-size: 3em;
+    text-align: center;
+    color: #00aaff;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+pre code {
+    color: inherit;
+}

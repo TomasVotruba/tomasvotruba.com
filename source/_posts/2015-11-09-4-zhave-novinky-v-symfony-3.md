@@ -1,14 +1,11 @@
 ---
-id: 2
+layout: post
 title: 4 žhavé novinky v Symfony 3
-categories:
-    - Symfony
-perex: "V listopadu 2015 má kromě PHP 7 a Drupalu 8, vyjít i Symfony 3. Jaké přináší změny a novinky?"
+perex: '''
+    V listopadu 2015 má kromě <a href="https://wiki.php.net/rfc/php7timeline">PHP 7</a> a <a href="https://www.drupal.org/node/2605142">Drupalu 8</a>, vyjít i Symfony 3. <strong>Jaké přináší změny a novinky?</strong>
+'''
+thumbnail: "symfony.png"
 ---
-
-<p class="perex" markdown="1">
-    V listopadu 2015 má kromě [PHP 7](https://wiki.php.net/rfc/php7timeline) a [Drupalu 8](https://www.drupal.org/node/2605142), vyjít i Symfony 3. Jaké přináší změny a novinky?
-</p>
 
 Symfony už toho umí opravdu hodně. Nová verze klade velký důraz především na [DX (developer experience)](http://symfony.com/blog/making-the-symfony-experience-exceptional). Přináší nám **jednodušší a jednoznačné API**, **lepší decoupling komponent**, **integraci standardů [PSR-3](http://www.php-fig.org/psr/psr-3/) a [PSR-7](http://symfony.com/doc/current/cookbook/psr7.html)**. A spoustu dalších novinek, díky kterým bude psaní aplikací zase o něco zábavnější.
 
@@ -17,7 +14,6 @@ Symfony už toho umí opravdu hodně. Nová verze klade velký důraz předevš�
 
 - kdy vyjde která verze a jaký bude jejich praktický dopad
 - jaké jsou 4 nejzajímavější novinky
-
 
 ## Kdy vyjde která verze?
 
@@ -28,7 +24,7 @@ Migrace Symfony 2 na 3 bude značně zjednodušena tím, že **spolu s verzí 3 
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-11-08/release-plan.png" alt="Release plan">
+    <img src="/../../../../assets/images/posts/2015-11-08/release-plan.png" alt="Release plan">
     <br>
     <em>Verze 2.8 bude LTS. První LTS nové série bude až 3.3 (vyjde v květnu 2017).</em>
 </div>
@@ -119,7 +115,7 @@ Dočasné soubory, logy, nastavení pro PHPUnit, konzolové soubory...
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-11-08/directory-structure.png" alt="Release plan">
+    <img src="/../../../../assets/images/posts/2015-11-08/directory-structure.png" alt="Release plan">
     <br>
     <em>
         Console skripty najdeš nyní ve složce <code>/bin</code>.
@@ -145,7 +141,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-11-08/profiler-before-after.png" alt="Nový design" style="max-width:60%">
+    <img src="/../../../../assets/images/posts/2015-11-08/profiler-before-after.png" alt="Nový design" style="max-width:60%">
     <br>
     <em>Srovnání staré a nové verze</em>
 </div>
@@ -153,7 +149,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-11-08/profiler-old-new.png" alt="Starý a nový design">
+    <img src="/../../../../assets/images/posts/2015-11-08/profiler-old-new.png" alt="Starý a nový design">
     <br>
     <em>
         Dříve bylo těžké se rychle zorientovat ve velkém množství informací.
@@ -164,7 +160,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-11-08/profiler-go-back.gif" alt="Odkaz na stránku" style="max-width:60%">
+    <img src="/../../../../assets/images/posts/2015-11-08/profiler-go-back.gif" alt="Odkaz na stránku" style="max-width:60%">
     <br>
     <em>Snadno se dostaneš z profileru zpět na stránku</em>
 </div>
@@ -265,7 +261,7 @@ Už máš chuť si to vyzkoušet? Hned v příštím článku si ukážeme, *jak
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015-11-08/you-got-this-meme.png" alt="A máš to">
+    <img src="/../../../../assets/images/posts/2015-11-08/you-got-this-meme.png" alt="A máš to">
 </div>
 
 <br>

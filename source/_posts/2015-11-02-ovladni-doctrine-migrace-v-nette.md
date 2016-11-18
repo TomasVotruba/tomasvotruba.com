@@ -1,13 +1,9 @@
 ---
-id: 1
+layout: post
 title: Ovládni Doctrine migrace v Nette
-categories:
-    - Doctrine
-    - Nette
 perex: "Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budou se vám hodit migrace."
+thumbnail: "nette.png"
 ---
-
-<p class="perex">{{ page.perex }}</p>
 
 Stejně jako Kdyby/Doctrine využívá doctrine/doctrine2, my použijeme [doctrine/migrations](https://github.com/doctrine/migrations). Ty si [denně stáhne přes 9 000 programátorů](https://packagist.org/packages/doctrine/migrations/stats), takže se nemusíte bát o jeho kvalitu.
 
@@ -18,7 +14,7 @@ Do Nette jsem připravil integraci pomocí balíčku [Zenify/DoctrineMigrations]
 ### 1. Balíček nainstalujeme přes `composer`:
 
 ```language-bash
-$ composer require zenify/doctrine-migrations
+composer require zenify/doctrine-migrations
 ```
 
 ### 2. Přidáme rozšíření do `config.neon`:
@@ -49,10 +45,7 @@ Pokud vidíme přehled příkazů, máme vyhráno a můžeme používat.
 Available commands for the "migrations" namespace:
   migrations:diff      Generate a migration by comparing your current database to your mapping information.
   migrations:execute   Execute a single migration version up or down manually.
-  migrations:generate  Generate a blank migration class.
-  migrations:migrate   Execute a migration to a specified version or the latest available version.
-  migrations:status    View the status of a set of migrations.
-  migrations:version   Manually add and delete migration versions from the version table.
+  ...
 ```
 
 
@@ -81,17 +74,7 @@ Důležité je číslo v posledním řádku ("New Migrations"). Vypadá to, že 
 
     >> Name:                                               Doctrine Database Migrations
     >> Database Driver:                                    pdo_sqlite
-    >> Database Name:
-    >> Configuration Source:                               manually configured
-    >> Version Table Name:                                 doctrine_migrations
-    >> Migrations Namespace:                               Migrations
-    >> Migrations Directory:                               /var/www/doctrine-migrations-sandbox/app/../migrations
-    >> Previous Version:                                   Already at first version
-    >> Current Version:                                    0
-    >> Next Version:                                       Already at latest version
-    >> Latest Version:                                     0
-    >> Executed Migrations:                                0
-    >> Executed Unavailable Migrations:                    0
+    ...
     >> Available Migrations:                               0
     >> New Migrations:                                     0
 ```
@@ -166,7 +149,7 @@ $ php www/index.php migrations:status
 
 ```language-bash
 # ...
-
+    
     >> Executed Migrations:                                0
     >> Executed Unavailable Migrations:                    0
     >> Available Migrations:                               1
@@ -218,5 +201,5 @@ A vidíme, že tabulka `article` byla úspěšně vytvořena.
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2015/09/15/7-success-meme.jpg" alt="You own this!">
+    <img src="/../../../../assets/images/posts/2015/09/15/7-success-meme.jpg" alt="You own this!">
 </div>

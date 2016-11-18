@@ -1,16 +1,10 @@
 ---
-id: 5
+layout: post
 title: Modular Routing in Symfony
-categories:
-    - Symfony
-    - routing
-    - modularity
-    - Symplify
 perex: "Modular routing in Symfony is bounded to routing.yml. Adding few lines for each new module can create large mess. Can we make it bit simpler? Sure we do and I will show you how."
 lang: en
+thumbnail: "symfony.png"
 ---
-
-<p class="perex">{{ page.perex }}</p>
 
 Let's say you have fairly standalone module or package and you want to add its routes as simple as:
 
@@ -37,7 +31,7 @@ class AppKernel extends Kernel
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2016/modular-router/mess.jpg" alt="Wow, so many options!">
+    <img src="/../../../../assets/images/posts/2016/modular-router/mess.jpg" alt="Wow, so many options!">
     <br>
     <em>Wow, so many options!</em>
 </div>
@@ -156,7 +150,7 @@ For further use, **just check [Readme for Symplify/ModularRouting](https://githu
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2016/modular-router/you-are-king.jpg">
+    <img src="/../../../../assets/images/posts/2016/modular-router/you-are-king.jpg">
 </div>
 
 <br>

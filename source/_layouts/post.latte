@@ -1,0 +1,50 @@
+{extends "default"}
+
+{block content_wrapper}
+    <div class="page">
+        <div class="container">
+            <div class="main">
+                {include "postHeader", 'post' => $post, 'singlePost' => TRUE}
+
+                <p class="perex">{$post['perex']|noescape}</p>
+
+                {$post['content']|noescape}
+
+                <h2>{="post.i_want_your_opinion"|translate: $post['lang'] ?? 'cs'}</h2>
+
+                {include "disqusComments", 'post' => $post}
+            </div>
+        </div>
+    </div>
+{/block}
+
+
+{block socialTags}
+    {* Facebook sharing *}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{$post['title']}" />
+    <meta property="og:description" content="{$post['perex']}" />
+    <meta property="og:url" content="{$siteUrl}/{$post['relativeUrl']}" />
+    {ifset $post['thumbnail']}
+        <meta property="og:image" content="{$siteUrl}/assets/images/posts/thumbnail/{$post['thumbnail']}" />
+    {/ifset}
+
+    {* Twitter sharing *}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{$post['title']}" />
+    <meta name="twitter:description" content="{$post['perex']}" />
+    {ifset $post['thumbnail']}
+        <meta name="twitter:image" content="{$siteUrl}/assets/images/posts/thumbnail/{$post['thumbnail']}" />
+    {/ifset}
+{/block}
+
+
+{block additionalJavascript}
+    <script src="/assets/js/prism.js"></script>
+    <script id="dsq-count-scr" src="http://{$disqusShortname}.disqus.com/count.js" async defer></script>
+{/block}
+
+
+{block additionalCss}
+    <link href="/assets/css/prism.css" rel="stylesheet" type="text/css" />
+{/block}

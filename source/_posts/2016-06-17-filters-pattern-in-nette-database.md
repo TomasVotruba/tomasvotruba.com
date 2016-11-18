@@ -1,19 +1,14 @@
 ---
+layout: post
 title: Filters Pattern in Nette Database
-categories:
-    - Nette
-    - Filters
-    - Zenify
-perex: > # multi-line string
+perex: '''
     You want to delete comments, so your readers won't see any spam or violent content.
     But you want to see them in administration. So you would have to create 2 different methods.
     Today I will show you, how to make only single one.
-
+'''
 lang: "en"
 thumbnail: "nette.png"
 ---
-
-<p class="perex">{{ page.perex }}</p>
 
 ## Current way to do this
 

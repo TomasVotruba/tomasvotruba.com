@@ -1,0 +1,107 @@
+---
+layout: default
+title: Vaše spokojenost je mým posláním
+id: satisfy
+---
+{block content}
+    <div class="container page">
+        <div class="main" id="references">
+            <header>
+                <h1>{$title}</h1>
+            </header>
+
+            <p class="text-center">
+                Školil jsem <strong>ve více jak 10 firmách</strong> a potkal jsem se <strong>s více jak 100 programátory</strong>.
+                Přečtěte si, jak se jim to líbilo.
+            </p>
+
+            <hr>
+
+            {foreach $references as $referenceId => $reference}
+                <h3>
+                    <a href="{$reference['url']}">{=$reference['company'] ?? $reference['feedbacker_name']}</a>
+                </h3>
+
+                <div class="row">
+                    <div class="col-md-6" n:ifset="$reference['copy_items']">
+                        <ul>
+                            {foreach $reference['copy_items'] as $copyItem}
+                                <li>{$copyItem|noescape}</li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                    <div n:class="isset($reference['copy_items']) ? col-md-6 : col-md-12">
+                        <p>
+                            „{$reference['testimonial']}“
+                        </p>
+
+                        <p n:ifset="$reference['company']">
+                            <strong>{$reference['feedbacker_name']}</strong>, {$reference['feedbacker_position']}
+                        </p>
+                    </div>
+                </div>
+
+                {if $iterator->getCounter() === 2}
+                    {include callToAction}
+                {/if}
+
+                {if $iterator->getCounter() === 5}
+                    {include callToAction2}
+                {/if}
+
+                {sep}<hr>{/sep}
+            {/foreach}
+
+            <hr>
+
+            <p class="bigger text-center">
+                Taky potřebuješ doplnit pár znalostí nebo rovnou zkonzultovat projekt?
+            </p>
+
+            <p class="text-center">
+                <a href="/#kontakt" class="btn btn-lg btn-success">
+                    &nbsp;Napiš mi
+                    <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+                </a>
+            </p>
+
+            <hr>
+        </div>
+    </div>
+{/block}
+
+
+{define callToAction}
+    <hr>
+
+    <p class="text-center bigger">
+        „Určitě budeme chtít školení po nějaké době zopakovat.“
+        <br>
+        A co Vy?
+    </p>
+
+    <p class="text-center">
+        <a href="/#kontakt" class="btn btn-lg btn-success">
+            &nbsp;Ozvěte se mi
+            <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+        </a>
+    </p>
+{/define}
+
+
+{define callToAction2}
+    <hr>
+
+    <p class="text-center bigger">
+        „Doporučuji ho všem, kteří hledají specialistu.“
+        <br>
+        Hledáte?
+    </p>
+
+    <p class="text-center">
+        <a href="/#kontakt" class="btn btn-lg btn-success">
+            &nbsp;Napište mi
+            <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+        </a>
+    </p>
+{/define}

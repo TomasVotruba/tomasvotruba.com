@@ -1,0 +1,32 @@
+<ul class="list-inline">
+    <li>
+        <em class="fa fa-clock-o fa-fw"></em>
+        <strong>{$post['content']|readTimeInMinutes} {="post.min_of_reading"|translate: $post['lang'] ?? 'cs'}</strong>
+    </li>
+
+    <li>
+        <em class="fa fa-calendar fa-fw"></em>
+        {var $postYear = $post->getDateInFormat('Y')}
+        {var $nowYear = date("Y")}
+        <time datetime="{$post->getDateInFormat('Y-m-D')}">
+            {if $postYear === $nowYear}
+                {$post->getDateInFormat('j. n.')}
+            {else}
+                {$post->getDateInFormat('j. n. Y')}
+            {/if}
+        </time>
+    </li>
+
+    <li>
+        <em class="fa fa-fw fa-comments"></em>
+        <a href="http://tomasvotruba.cz/{$post['relativeUrl']}/#disqus_thread">X</a>
+        {="post.comment_count"|translate: $post['lang'] ?? 'cs'}
+    </li>
+
+    <li n:ifset="$showPullRequestLink">
+        <a href="{$post|githubEditPostUrl}">
+            <em class="fa fa-fw fa-github"></em>
+            {="post.send_pr"|translate: $post['lang'] ?? 'cs'}
+        </a>
+    </li>
+</ul>

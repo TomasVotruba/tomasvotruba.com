@@ -1,6 +1,0 @@
-services:
-    blog.twig_extension:
-        class: TomasVotruba\SculpinBlogBundle\Twig\SculpinBlogExtension
-        autowire: true
-        tags:
-            - { name: twig.extension }

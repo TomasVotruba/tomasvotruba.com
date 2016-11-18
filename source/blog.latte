@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Tvého času si vážím - mé články se vejdou do 5 minut"
+id: blog
+---
+
+{block content}
+    <div class="container page">
+        <header>
+            <h1>{$title}</h1>
+        </header>
+
+        {foreach $posts as $post}
+            {var $postYear = $post->getDateInFormat('Y')}
+            {if $postYear != date('Y') && !isset($dateLines[$postYear])}
+                <div class="yearLine">
+                    <br>
+                    <br>
+                    {$postYear}
+                    {var $dateLines[$postYear] = $postYear}
+                </div>
+            {/if}
+
+            <article>
+                {include "postHeader", 'post' => $post}
+            </article>
+        {/foreach}
+    </div>
+{/block}
+
+
+{block additionalJavascript}
+    <script id="dsq-count-scr" src="http://{$disqusShortname}.disqus.com/count.js" async defer></script>
+{/block}
