@@ -5,14 +5,11 @@
         </a>
 
         {ifset $post['thumbnail']}
-            {var $thumbnailFullPath = '/assets/images/posts/thumbnail/' . $post['thumbnail']}
-            <img src="{$thumbnailFullPath}" class="pull-left post-thumbnail hidden-xs">
-            <meta content="{$thumbnailFullPath}" property="og:image" />
+            <meta content="/assets/images/posts/thumbnail/{$post['thumbnail']}" property="og:image" />
         {/ifset}
 
         {include "postMetadataLine", post => $post}
     </header>
 
     <p n:ifset="$showPerex">{$post['perex']|noescape}</p>
-    <div class="clearfix"></div>
 </article>

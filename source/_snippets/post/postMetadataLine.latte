@@ -1,4 +1,4 @@
-<ul class="list-inline list-inline-box">
+<ul class="list-inline">
     <li>
         <em class="fa fa-calendar fa-fw"></em>
         {var $postYear = $post->getDateInFormat('Y')}
@@ -14,7 +14,7 @@
 
     <li>
         <em class="fa fa-clock-o fa-fw"></em>
-        <strong>{$post['content']|readTimeInMinutes} min</strong>
+        <strong>{$post['content']|readTimeInMinutes} min {="post.of_reading"|translate: $post['lang'] ?? 'cs'}</strong>
     </li>
 
     <li>
@@ -22,7 +22,9 @@
         <a href="http://tomasvotruba.cz/{$post['relativeUrl']}/#disqus_thread">
             {="post.comments"|translate: $post['lang'] ?? 'cs'}
         </a>
+        {="post.comment_count"|translate: $post['lang'] ?? 'cs'}
     </li>
+
     <li n:ifset="$showPullRequestLink">
         <a href="{$post|githubEditPostUrl}">
             <em class="fa fa-fw fa-github"></em>

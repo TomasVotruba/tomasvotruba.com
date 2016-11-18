@@ -101,10 +101,9 @@ article h2, article h3 {
 }
 
 
-/*blockquote {*/
-    /*font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;*/
-    /*margin: .7em 0;*/
-/*}*/
+blockquote {
+    margin: .7em 0;
+}
 
 code {
     font-size: .97em;
