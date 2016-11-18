@@ -6,18 +6,13 @@ id: blog
 
 {block content}
     <div class="container page">
-        <div class="row">
-            <div class="col-md-12">
-                <header>
-                    <h1>{$title}</h1>
-                </header>
+        <header>
+            <h1>{$title}</h1>
+        </header>
 
-                {foreach $posts as $post}
-                    {include "postHeader", 'post' => $post}
-                    {sep}<hr>{/sep}
-                {/foreach}
-            </div>
-        </div>
+        {foreach $posts as $post}
+            {include "postHeader", 'post' => $post}
+        {/foreach}
     </div>
 {/block}
 
