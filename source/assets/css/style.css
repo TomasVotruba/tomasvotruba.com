@@ -101,10 +101,10 @@ article h2, article h3 {
 }
 
 
-blockquote {
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    margin: .7em 0;
-}
+/*blockquote {*/
+    /*font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;*/
+    /*margin: .7em 0;*/
+/*}*/
 
 code {
     font-size: .97em;
@@ -151,9 +151,19 @@ a.navbar-toggle:hover {
     font-size: 1.1em;
 }
 
-.much-bigger {
+#welcome-drink {
     font-size: 1.3em;
-    line-height: 1.8em;
+    line-height: 1.5em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#welcome-drink ul {
+    padding-top: 0em;
+    margin-top: .3em;
+}
+
+#welcome-drink img {
+    max-width: 100%;
 }
 
 /* new */
@@ -179,7 +189,7 @@ h1 p.green {
     color: #DDD;
     background: black;
     padding-top: 1em;
-    padding-bottom: 3em;
+    padding-bottom: 10em;
     line-height: 3em;
 }
 
