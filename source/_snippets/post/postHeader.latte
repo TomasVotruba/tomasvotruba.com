@@ -1,5 +1,5 @@
 <article class="blog-post">
-    <header>
+    {*<header>*}
         <a href="{$post['relativeUrl']}">
             <h2>{$post['title']}</h2>
         </a>
@@ -9,7 +9,7 @@
         {/ifset}
 
         {include "postMetadataLine", post => $post}
-    </header>
+    {*</header>*}
 
     <p n:ifset="$showPerex">{$post['perex']|noescape}</p>
 </article>

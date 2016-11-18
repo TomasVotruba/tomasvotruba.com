@@ -33,7 +33,7 @@ class AppKernel extends Kernel
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2016/modular-router/mess.jpg" alt="Wow, so many options!">
+    <img src="/../../../../assets/images/posts/2016/modular-router/mess.jpg" alt="Wow, so many options!">
     <br>
     <em>Wow, so many options!</em>
 </div>
@@ -152,7 +152,7 @@ For further use, **just check [Readme for Symplify/ModularRouting](https://githu
 <br>
 
 <div class="text-center">
-    <img src="/../../../../images/posts/2016/modular-router/you-are-king.jpg">
+    <img src="/../../../../assets/images/posts/2016/modular-router/you-are-king.jpg">
 </div>
 
 <br>

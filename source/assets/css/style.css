@@ -11,7 +11,7 @@ h1 {
 
 @media (min-width: 481px) {
     h1, h2, h3, .navbar {
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Lato', Arial, sans-serif;
     }
 }
 
@@ -29,10 +29,6 @@ h1 {
 pre {
     border: none;
     border-radius: 2px;
-}
-
-.blog-post img.post-thumbnail, .post-thumbnail {
-    margin: 0 .9em .2em 0;
 }
 
 /* true colors */
@@ -82,6 +78,13 @@ a:hover, a:focus {
     font-weight: 600;
     margin-bottom: .5em;
 }
+
+article {
+    text-align: center;
+    padding: .5em 0 2em;
+    border-bottom: 1px solid #eeeeee;
+}
+
 
 article h2 {
     font-size: 1.8em;
@@ -153,11 +156,11 @@ a.navbar-toggle:hover {
 #welcome-drink {
     font-size: 1.3em;
     line-height: 1.5em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
 }
 
 #welcome-drink ul {
-    padding-top: 0em;
+    padding-top: 0;
     margin-top: .3em;
 }
 
@@ -182,6 +185,10 @@ a.navbar-toggle:hover {
 
 h1 p.green {
     color: #08C;
+}
+
+h1 strong {
+    font-weight: 800;
 }
 
 #kontakt {
