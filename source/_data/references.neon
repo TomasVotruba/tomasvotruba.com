@@ -23,6 +23,8 @@ references:
             - 1 cesta do Brna
             - 1 dotace z EU
             - "3 témata: sebevzdělávání, refaktoring a Nette pro tipy"
+        # todo: add to website later + make social campaign
+        github_repository: "https://github.com/TomasVotruba/igloonet-se-skoli"
 
     -
         company: Galileo Corporation s.r.o.
@@ -49,6 +51,9 @@ references:
             - 40+ probraných témat z Nette
             - 1 workshop Doctrine
             - "2x laser game (jako odměna za dobře odvedenou práci)"
+        github_repository:
+            - "https://github.com/TomasVotruba/lekarna-se-skoli"
+            - "https://github.com/TomasVotruba/lekarna-se-skoli-doctrine"
 
     -
         company: ERUDIO s.r.o
@@ -61,6 +66,7 @@ references:
             - 8 účastníků
             - "3 témata: git, Doctrine a Symfony"
             - 5 navazujících konzultací
+        github_repository: "https://github.com/TomasVotruba/erudio-se-skoli"
 
     -
         company: "Lidská Síla"
