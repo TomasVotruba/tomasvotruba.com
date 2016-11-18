@@ -209,3 +209,7 @@ h1 strong {
     color: #00aaff;
     font-family: 'Lato', Arial, sans-serif;
 }
+
+pre code {
+    color: inherit;
+}

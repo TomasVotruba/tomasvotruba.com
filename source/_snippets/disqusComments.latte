@@ -1,10 +1,10 @@
 <div id="disqus_thread"></div>
+
+{var $lang = $post['lang'] ?? 'cs'}
+
 <script type="text/javascript">
-    {if isset($post['lang']) && $post['lang'] === "en"}
-    var disqus_config = function () {
-        this.language = "en";
-    };
-    {/if}
+    {* todo: fix *}
+    var disqus_config = function(){l} this.language = {$lang}; };
 
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -13,7 +13,7 @@
     (function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
 
-        s.src = '//{$disqusShortname}.disqus.com/embed.js';
+        s.src = '//' + {$disqusShortname} + '.disqus.com/embed.js';
 
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);

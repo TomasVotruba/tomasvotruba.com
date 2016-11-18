@@ -12,7 +12,7 @@
 
                 <h2>{="post.i_want_your_opinion"|translate: $post['lang'] ?? 'cs'}</h2>
 
-                {include "disqusComments"}
+                {include "disqusComments", 'post' => $post}
             </div>
         </div>
     </div>
@@ -40,11 +40,11 @@
 
 
 {block additionalJavascript}
+    <script src="/assets/js/prism.js"></script>
     <script id="dsq-count-scr" src="http://{$disqusShortname}.disqus.com/count.js" async defer></script>
 {/block}
 
 
 {block additionalCss}
     <link href="/assets/css/prism.css" rel="stylesheet" type="text/css" />
-    <script src="/assets/js/prism.js"></script>
 {/block}
