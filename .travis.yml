@@ -19,7 +19,6 @@ env:
 before_script:
   - composer update
 
-# temporary disable
-#script:
-#  - vendor/bin/sculpin generate
-#  - vendor/bin/sculpin push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
+script:
+  - vendor/bin/sculpin generate
+  - vendor/bin/sculpin push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
