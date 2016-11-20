@@ -94,6 +94,10 @@ article h2, article h3 {
     font-weight: 600;
 }
 
+.page img {
+    max-width: 100%;
+}
+
 .h3, h3 {
     font-size: 1.23em;
 }
