@@ -1,10 +1,9 @@
 <div id="disqus_thread"></div>
 
-{var $lang = $post['lang'] ?? 'cs'}
-
 <script type="text/javascript">
-    {* todo: fix *}
-    var disqus_config = function(){l} this.language = {$lang}; };
+    var disqus_config = function () {
+        this.language = {=$post['lang'] ?? 'cs'}
+    };
 
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
