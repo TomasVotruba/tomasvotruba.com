@@ -235,70 +235,6 @@ ol {
         padding-top: 24px;
         padding-bottom: 24px; } }
 
-.navbar-form {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding: 10px 20px;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-    margin-top: 17px;
-    margin-bottom: 17px; }
-@media (min-width: 768px) {
-    .navbar-form .form-group {
-        display: inline-block;
-        margin-bottom: 0;
-        vertical-align: middle; }
-    .navbar-form .form-control {
-        display: inline-block;
-        width: auto;
-        vertical-align: middle; }
-    .navbar-form .form-control-static {
-        display: inline-block; }
-    .navbar-form .input-group {
-        display: inline-table;
-        vertical-align: middle; }
-    .navbar-form .input-group .input-group-addon,
-    .navbar-form .input-group .input-group-btn,
-    .navbar-form .input-group .form-control {
-        width: auto; }
-    .navbar-form .input-group > .form-control {
-        width: 100%; }
-    .navbar-form .control-label {
-        margin-bottom: 0;
-        vertical-align: middle; }
-    .navbar-form .radio,
-    .navbar-form .checkbox {
-        display: inline-block;
-        margin-top: 0;
-        margin-bottom: 0;
-        vertical-align: middle; }
-    .navbar-form .radio label,
-    .navbar-form .checkbox label {
-        padding-left: 0; }
-    .navbar-form .radio input[type="radio"],
-    .navbar-form .checkbox input[type="checkbox"] {
-        position: relative;
-        margin-left: 0; }
-    .navbar-form .has-feedback .form-control-feedback {
-        top: 0; } }
-@media (max-width: 767px) {
-    .navbar-form .form-group {
-        margin-bottom: 5px; }
-    .navbar-form .form-group:last-child {
-        margin-bottom: 0; } }
-@media (min-width: 768px) {
-    .navbar-form {
-        width: auto;
-        border: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        -webkit-box-shadow: none;
-        box-shadow: none; } }
-
 .navbar-nav > li > .dropdown-menu {
     margin-top: 0;
     border-top-right-radius: 0;
@@ -348,6 +284,7 @@ ol {
 .navbar-default .navbar-brand:focus {
     color: white;
     background-color: transparent; }
+
 .navbar-default .navbar-text {
     color: #e6b7c4; }
 .navbar-default .navbar-nav > li > a {
@@ -356,48 +293,12 @@ ol {
 .navbar-default .navbar-nav > li > a:focus {
     color: white;
     background-color: transparent; }
+
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: white;
     background-color: transparent; }
-.navbar-default .navbar-nav > .disabled > a,
-.navbar-default .navbar-nav > .disabled > a:hover,
-.navbar-default .navbar-nav > .disabled > a:focus {
-    color: #ccc;
-    background-color: transparent; }
-.navbar-default .navbar-toggle {
-    border-color: #ddd; }
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: #ddd; }
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #eeeeee; }
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-    border-color: #ddd; }
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-    background-color: transparent;
-    color: white; }
-@media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: #e6b7c4; }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: white;
-        background-color: transparent; }
-    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-        color: white;
-        background-color: transparent; }
-    .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
-    .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-        color: #ccc;
-        background-color: transparent; } }
 
 .navbar {
     border-width: 0 0 1px 0;
@@ -414,9 +315,9 @@ ol {
     padding-top: 40px;
     padding-bottom: 197px; }
 
-@media (min-width: 768px) {
-    .page {
-        padding-bottom: 177px; } }
+/*@media (min-width: 768px) {*/
+    /*.page {*/
+        /*padding-bottom: 177px; } }*/
 
 /* Always show scrollbar */
 html {
@@ -430,29 +331,30 @@ body {
     min-height: 100%;
     position: relative; }
 
-time {
-    white-space: nowrap; }
+/*time {*/
+    /*white-space: nowrap; }*/
 
 /*!* Typography *!*/
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 700; }
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
-    display: block;
-    margin-top: 5px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 0.85em;
-    color: inherit; }
-h1 a, h1 a:hover, h1 a:focus, h2 a, h2 a:hover, h2 a:focus, h3 a, h3 a:hover, h3 a:focus, h4 a, h4 a:hover, h4 a:focus, h5 a, h5 a:hover, h5 a:focus, h6 a, h6 a:hover, h6 a:focus, .h1 a, .h1 a:hover, .h1 a:focus, .h2 a, .h2 a:hover, .h2 a:focus, .h3 a, .h3 a:hover, .h3 a:focus, .h4 a, .h4 a:hover, .h4 a:focus, .h5 a, .h5 a:hover, .h5 a:focus, .h6 a, .h6 a:hover, .h6 a:focus {
+/*h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {*/
+    /*display: block;*/
+    /*margin-top: 5px;*/
+    /*font-family: 'Lato', sans-serif;*/
+    /*font-weight: 300;*/
+    /*font-size: 0.85em;*/
+    /*color: inherit; }*/
+
+h1 a, h1 a:hover, h1 a:focus, h2 a, h2 a:hover, h2 a:focus, h3 a, h3 a:hover, h3 a:focus {
     color: inherit;
     text-decoration: none; }
 
-h1, .h1 {
+h1 {
     margin-top: 40px; }
 
-h2, .h2 {
+h2 {
     margin-top: 40px; }
 
-h3, .h3 {
+h3 {
     margin-top: 30px; }
