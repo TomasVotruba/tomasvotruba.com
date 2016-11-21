@@ -113,7 +113,7 @@ blockquote {
 }
 
 code {
-    font-size: .97em;
+    font-size: .93em;
 }
 
 #references h2 {
@@ -214,6 +214,14 @@ h1 strong {
     font-family: 'Lato', Arial, sans-serif;
 }
 
-pre code {
-    color: inherit;
+
+pre {
+    font-size: 1em;
+    background-color: #fdf6e3;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+    border-radius: 6px;
 }

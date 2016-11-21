@@ -469,18 +469,6 @@ body {
     min-height: 100%;
     position: relative; }
 
-/* Standard tags */
-code {
-    font-size: 0.9375em;
-    padding: 0 2px;
-    color: #cf1748; }
-
-a > code {
-    color: #326ab3; }
-
-a:hover > code {
-    color: #224777; }
-
 time {
     white-space: nowrap; }
 
@@ -507,13 +495,3 @@ h2, .h2 {
 
 h3, .h3 {
     margin-top: 30px; }
-
-pre {
-    font-size: 15px;
-    background-color: black;
-    padding-bottom: 10px;
-    padding-left: 12px;
-    overflow: auto;
-    word-wrap: normal;
-    white-space: pre;
-    border-radius: 6px; }
