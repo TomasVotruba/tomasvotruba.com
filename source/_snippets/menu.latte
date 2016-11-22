@@ -1,17 +1,7 @@
-<div class="navbar-header">
-    <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <em class="fa fa-align-justify fa-fw"></em>
-        Menu
-    </a>
-</div>
-
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<div class="navbar-collapse">
     <ul class="nav navbar-nav">
         <li n:class="logo, isset($id) && $id === index ? active">
             <a href="/">Tomáš Votruba</a>
-        </li>
-        <li n:class="isset($id) && $id === satisfy ? active">
-            <a href="/reference">Spokojení klienti</a>
         </li>
         <li n:class="isset($id) && $id === skills ? active">
             <a href="/skoleni">Co vám můžu předat</a>
@@ -24,12 +14,6 @@
         </li>
         <li>
             <a href="/#kontakt">Kontakt</a>
-        </li>
-        <li n:if="isset($id) && $id === blog">
-            <a href="/rss.xml">
-                <em class="fa fa-rss fa-fw"></em>
-                {="layout.add_to_rss"|translate: $lang}
-            </a>
         </li>
     </ul>
 </div>

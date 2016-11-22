@@ -98,18 +98,17 @@ article h2, article h3 {
     max-width: 100%;
 }
 
-.h3, h3 {
+h3 {
     font-size: 1.23em;
 }
 
-.h4, h4 {
-    margin-top: 1.4em;
-    font-size: 1.08em;
-}
-
-
 blockquote {
     margin: .7em 0;
+    background: url("/assets/images/quote.gif") no-repeat top left;
+    padding: 0 0 0 3em;
+    min-height: 3em;
+    border-left: none;
+    font-size: 1em;
 }
 
 code {
@@ -157,7 +156,7 @@ a.navbar-toggle:hover {
     font-size: 1.1em;
 }
 
-#welcome-drink {
+.welcome-drink {
     font-size: 1.3em;
     line-height: 1.5em;
     font-family: 'Lato', Arial, sans-serif;
