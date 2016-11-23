@@ -1,12 +1,91 @@
 body {
+    font-family: "Arial", "PT Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.42;
+    color: #333333;
+    background-color: #fff;
+}
+
+a {
+    color: #326ab3;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #224777;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+hr {
+    margin: 1.2em 0;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+}
+
+p {
+    margin-bottom: .5em;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 980px;
+    }
+}
+
+/* Layout */
+.page {
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 3em;
+}
+
+/*!* Typography *!*/
+h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+h1 a, h1 a:hover, h1 a:focus, h2 a, h2 a:hover, h2 a:focus, h3 a, h3 a:hover, h3 a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+h2 {
+    color: #8CD02C;
+    margin: 1em 0;
+}
+
+
+/* custom */
+
+body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 17px;
     line-height: 1.5em;
 }
 
 h1 {
+    color: #08C;
+    font-weight: 600;
+    margin: 1em 0;
     font-size: 2.1em;
-    font-weight: normal;
 }
 
 @media (min-width: 481px) {
@@ -25,30 +104,18 @@ h1 {
     border-color: #0af;
 }
 
-
 pre {
     border: none;
     border-radius: 2px;
 }
 
+.navbar {
+    border-radius: 0;
+}
+
 /* true colors */
 .navbar {
     background-color: #08c;
-}
-
-
-.navbar .logo {
-    font-size: 1.4em;
-}
-
-@media (min-width: 900px) {
-    .navbar .logo {
-        margin-left: -1.7em;
-    }
-}
-
-.navbar-default {
-    border-color: #0af;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -65,13 +132,11 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-
 .perex {
     font-size: 1.3em;
     line-height: 1.5em;
     margin: 1em 0;
 }
-
 
 .blog-post h1 {
     font-size: 2.2em;
@@ -85,7 +150,6 @@ article {
     border-bottom: 1px solid #eeeeee;
 }
 
-
 article h2 {
     font-size: 1.7em;
 }
@@ -94,26 +158,21 @@ article h2, article h3 {
     font-weight: 600;
 }
 
-.page img {
-    max-width: 100%;
-}
-
-.h3, h3 {
+h3 {
     font-size: 1.23em;
 }
 
-.h4, h4 {
-    margin-top: 1.4em;
-    font-size: 1.08em;
-}
-
-
 blockquote {
     margin: .7em 0;
+    background: url("/assets/images/quote.gif") no-repeat top left;
+    padding: 0 0 0 3em;
+    min-height: 3em;
+    border-left: none;
+    font-size: 1em;
 }
 
 code {
-    font-size: .93em;
+    font-size: .9em;
 }
 
 #references h2 {
@@ -133,19 +192,6 @@ code {
     text-decoration: none;
 }
 
-.main > .row > * {
-    margin-top: 1em;
-}
-
-a.navbar-toggle, a.navbar-toggle:active {
-    color: white;
-    font-size: 1.5em;
-}
-
-a.navbar-toggle:hover {
-    cursor: pointer;
-}
-
 /* article helpers */
 .arrow-down-on-list {
     margin-left: .7em;
@@ -157,18 +203,18 @@ a.navbar-toggle:hover {
     font-size: 1.1em;
 }
 
-#welcome-drink {
+.welcome-drink {
     font-size: 1.3em;
     line-height: 1.5em;
     font-family: 'Lato', Arial, sans-serif;
 }
 
-#welcome-drink ul {
+.welcome-drink ul {
     padding-top: 0;
     margin-top: .3em;
 }
 
-#welcome-drink img {
+img {
     max-width: 100%;
 }
 
@@ -181,30 +227,20 @@ a.navbar-toggle:hover {
     border-bottom: 1px solid #eeeeee;
 }
 
-.page header h1 {
-    color: #08C;
-    font-weight: 600;
-    margin: 1em 0;
-}
-
-h1 p.green {
-    color: #08C;
-}
-
-h1 strong {
-    font-weight: 800;
-}
-
 #kontakt {
     color: #DDD;
     background: black;
-    padding-top: 1em;
-    padding-bottom: 10em;
-    line-height: 3em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+#kontakt h2 {
+    line-height: 2em;
 }
 
 #kontakt p {
     font-size: 1.3em;
+    line-height: 1.6em;
 }
 
 .yearLine {
@@ -224,4 +260,45 @@ pre {
     word-wrap: normal;
     white-space: pre;
     border-radius: 6px;
+}
+
+
+/* menu */
+nav {
+    background: #08c;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: block;
+    float: left;
+    padding-left: 0;
+    padding-top: .5em;
+}
+
+nav ul li {
+    float: left;
+    display: block;
+    position: relative;
+}
+
+nav ul li a {
+    padding: .81em 1em;
+}
+
+nav a {
+    display: block;
+    color: #87CEFA;
+    padding: .81em 0;
+}
+
+nav a:hover, nav ul li.active a, nav a.active  {
+    color: #FFF;
+}
+
+nav .logo {
+    font-size: 1.4em;
+    margin: -.15em 0 -.2em -1em;
 }

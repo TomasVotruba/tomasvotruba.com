@@ -14,15 +14,15 @@ references:
     -
         company: "igloonet, s. r. o."
         url: https://igloonet.cz
-        testimonial: "Chtěl bych ti ještě jednou poděkovat za školení. Věřím, že pro nás mělo velký přínos hlavně v nových nápadech, jak se některé věci ulehčit nebo jak je dělat efektivněji. Určitě budeme chtít školení po nějaké době zopakovat."
+        testimonial: "Chtěl bych ti ještě jednou poděkovat za školení. Věřím, že pro nás mělo velký přínos hlavně v nových nápadech, jak si některé věci ulehčit nebo jak je dělat efektivněji. Určitě budeme chtít školení po nějaké době zopakovat."
         feedbacker_name: Jakub Horký
         feedbacker_position: Vedoucí vývoje
         copy_items:
-            - 8 hodin školení
+            - 8 hodin školení ve 2 dnech
             - 4 účastníci
-            - 1 cesta do Brna
             - 1 dotace z EU
             - "3 témata: sebevzdělávání, refaktoring a Nette pro tipy"
+        topped_testimonial: "Školení pro nás mělo velký přínos hlavně v nových nápadech, jak si některé věci ulehčit nebo jak je dělat efektivněji. Určitě budeme chtít školení po nějaké době zopakovat."
         # todo: add to website later + make social campaign
         github_repository: "https://github.com/TomasVotruba/igloonet-se-skoli"
 
@@ -42,7 +42,7 @@ references:
     -
         company: Lékarna.cz
         url: http://www.lekarna.cz
-        testimonial: "Napojení Nette na Doctrine je nyní jednoduché. Líbily se mi také postřehy k testovaní a nástrojům - co k čemu používat, např. PHPStorm a jeho použití v praxi. Super školení, které celý tým posunulo dopředu."
+        testimonial: "Napojení Nette na Doctrine je nyní hračka. Líbily se mi také postřehy k testovaní a nástrojům - co k čemu používat, např. PHPStorm a jeho použití v praxi. Super školení, které celý tým posunulo dopředu."
         feedbacker_name: Ing. Tomáš Bek
         feedbacker_position: Šéf technického vývoje
         copy_items:
@@ -51,6 +51,7 @@ references:
             - 40+ probraných témat z Nette
             - 1 workshop Doctrine
             - "2x laser game (jako odměna za dobře odvedenou práci)"
+        topped_testimonial: "Super školení, které celý tým posunulo dopředu. Napojení Nette na Doctrine je nyní hračka."
         github_repository:
             - "https://github.com/TomasVotruba/lekarna-se-skoli"
             - "https://github.com/TomasVotruba/lekarna-se-skoli-doctrine"
@@ -66,6 +67,7 @@ references:
             - 8 účastníků
             - "3 témata: git, Doctrine a Symfony"
             - 5 navazujících konzultací
+        topped_testimonial: "Tomáš neříkal teorii, kterou si můžeme přečíst kdekoliv na internetu, ale předal nám tipy z praxe. Doporučuji ho všem, kteří hledají specialistu."
         github_repository: "https://github.com/TomasVotruba/erudio-se-skoli"
 
     -

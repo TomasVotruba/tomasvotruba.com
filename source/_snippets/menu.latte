@@ -1,35 +1,54 @@
-<div class="navbar-header">
-    <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <em class="fa fa-align-justify fa-fw"></em>
-        Menu
-    </a>
-</div>
+<nav>
+    <div class="container">
+        {* normal menu *}
+        <ul class="hidden-xs">
+            <li n:class="logo, isset($id) && $id === index ? active">
+                <a href="/">Tomáš Votruba</a>
+            </li>
+            <li n:class="isset($id) && $id === satisfy ? active">
+                <a href="/reference">Spokojení klienti</a>
+            </li>
+            <li n:class="isset($id) && $id === skills ? active">
+                <a href="/skoleni">Co vám můžu předat</a>
+            </li>
+            <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
+                <a href="/blog">Blog</a>
+            </li>
+            <li n:class="isset($id) && $id === price ? active">
+                <a href="/cenik">Ceník</a>
+            </li>
+            <li>
+                <a href="/#kontakt">Kontakt</a>
+            </li>
+        </ul>
 
-<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-        <li n:class="logo, isset($id) && $id === index ? active">
-            <a href="/">Tomáš Votruba</a>
-        </li>
-        <li n:class="isset($id) && $id === satisfy ? active">
-            <a href="/reference">Spokojení klienti</a>
-        </li>
-        <li n:class="isset($id) && $id === skills ? active">
-            <a href="/skoleni">Co vám můžu předat</a>
-        </li>
-        <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
-            <a href="/blog">Blog</a>
-        </li>
-        <li n:class="isset($id) && $id === price ? active">
-            <a href="/cenik">Ceník</a>
-        </li>
-        <li>
-            <a href="/#kontakt">Kontakt</a>
-        </li>
-        <li n:if="isset($id) && $id === blog">
-            <a href="/rss.xml">
-                <em class="fa fa-rss fa-fw"></em>
-                {="layout.add_to_rss"|translate: $lang}
+        {* mobile menu *}
+        <div class="row text-center hidden-md hidden-sm hidden-lg">
+            <a href="/" n:class="col-xs-2, col-xs-offset-1, isset($id) && $id === index ? active">
+                <em class="fa fa-home"></em>
+                <br>
+                Začni
             </a>
-        </li>
-    </ul>
-</div>
+            <a href="/reference" n:class="col-xs-2, isset($id) && $id === satisfy ? active">
+                <em class="fa fa-thumbs-up"></em>
+                <br>
+                Reference
+            </a>
+            <a href="/skoleni" n:class="col-xs-2, isset($id) && $id === skills ? active">
+                <em class="fa fa-info"></em>
+                <br>
+                Co školím
+            </a>
+            <a href="/blog" n:class="col-xs-2, (isset($id) && $id === blog) || $layout === post ? active">
+                <em class="fa fa-book"></em>
+                <br>
+                Blog
+            </a>
+            <a href="/#kontakt" class="col-xs-2">
+                <em class="fa fa-phone"></em>
+                <br>
+                Kontakt
+            </a>
+        </div>
+    </div>
+</nav>

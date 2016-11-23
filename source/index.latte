@@ -18,7 +18,7 @@ id: index
             </div>
         </div>
 
-        <div class="row" id="welcome-drink">
+        <div class="row welcome-drink">
             <div class="col-sm-8">
                 <p>
                     Ahoj, jmenuji se Tomáš Votruba a nejradši dělám 3 věci:
@@ -37,15 +37,41 @@ id: index
                 </p>
 
                 <p>
-                    Mým slovům věřit nemusíte &ndash; <strong>zeptejte se <a href="/reference">mých klientů</a></strong>.
+                    A nemyslím si to jen já....
                 </p>
             </div>
-            <div class="col-sm-4">
-                <img src="/assets/images/talking-big.jpg" alt="Tomáš Votruba přednáší na 1. Symfony srazu v Praze">
+
+            <div class="col-sm-4 text-center">
+                <img src="/assets/images/talking-big.jpg" alt="Tady přednáším na 1. Symfony srazu v Praze (Lmc, 2015)">
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            ...zeptej se mých klientů
+        </h2>
+
+        <div class="row welcome-drink">
+            <div class="col-md-12">
+                {foreach $references as $reference}
+                    {if isset($reference['topped_testimonial'])}
+                        <blockquote>
+                            „{$reference['topped_testimonial']}“
+                        </blockquote>
+                        <p class="text-right">
+                            <strong>{$reference['feedbacker_name']}</strong>, {$reference['company']}
+                        </p>
+                        {sep}<br>{/sep}
+                    {/if}
+                {/foreach}
+
+                <p>
+                    Chceš více referencí? Podívej se na <a href="/reference">pečlivý výběr těch nejlepších </a>
+                </p>
             </div>
         </div>
     </div>
-
 
     {include "contact"}
 {/block}
