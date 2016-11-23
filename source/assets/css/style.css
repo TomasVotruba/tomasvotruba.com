@@ -294,11 +294,16 @@ nav a {
     padding: .81em 0;
 }
 
-nav a:hover, nav ul li.active a, nav a.active  {
+nav a:hover, nav ul li.active a, nav a.active, nav a:active  {
     color: #FFF;
 }
 
 nav .logo {
     font-size: 1.4em;
     margin: -.15em 0 -.2em -1em;
+}
+
+#mobile-menu a {
+    padding-left: 0;
+    padding-right: 0;
 }

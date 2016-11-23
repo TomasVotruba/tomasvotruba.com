@@ -23,28 +23,23 @@
         </ul>
 
         {* mobile menu *}
-        <div class="row text-center hidden-md hidden-sm hidden-lg">
-            <a href="/" n:class="col-xs-2, col-xs-offset-1, isset($id) && $id === index ? active">
+        <div id="mobile-menu" class="row text-center hidden-md hidden-sm hidden-lg">
+            <a href="/" n:class="col-xs-3, isset($id) && $id === index ? active">
                 <em class="fa fa-home"></em>
                 <br>
                 Začni
             </a>
-            <a href="/reference" n:class="col-xs-2, isset($id) && $id === satisfy ? active">
+            <a href="/reference" n:class="col-xs-3, isset($id) && $id === satisfy ? active">
                 <em class="fa fa-thumbs-up"></em>
                 <br>
                 Reference
             </a>
-            <a href="/skoleni" n:class="col-xs-2, isset($id) && $id === skills ? active">
-                <em class="fa fa-info"></em>
-                <br>
-                Co školím
-            </a>
-            <a href="/blog" n:class="col-xs-2, (isset($id) && $id === blog) || $layout === post ? active">
+            <a href="/blog" n:class="col-xs-3, (isset($id) && $id === blog) || $layout === post ? active">
                 <em class="fa fa-book"></em>
                 <br>
                 Blog
             </a>
-            <a href="/#kontakt" class="col-xs-2">
+            <a href="/#kontakt" class="col-xs-3">
                 <em class="fa fa-phone"></em>
                 <br>
                 Kontakt
