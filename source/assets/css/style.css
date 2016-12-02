@@ -232,6 +232,7 @@ img {
     background: black;
     padding-top: 3em;
     padding-bottom: 3em;
+    font-family: 'Lato', sans-serif;
 }
 
 #kontakt h2 {
@@ -306,4 +307,22 @@ nav .logo {
 #mobile-menu a {
     padding-left: 0;
     padding-right: 0;
+}
+
+#socials-call-to-action {
+    font-size: .8em;
+    padding-top: 5em;
+}
+
+#socials-call-to-action h3 {
+    line-height: 2em;
+    font-weight: 400;
+}
+
+#socials-call-to-action a {
+    margin: 0 .2em;
+}
+
+#socials-call-to-action .btn-success {
+    color: black;
 }
