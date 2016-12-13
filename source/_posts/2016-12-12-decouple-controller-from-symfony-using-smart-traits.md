@@ -62,7 +62,7 @@ There are some trials to make this bit more decoupled:
 - [[FrameworkBundle] Split abstract Controller class into traits](https://github.com/symfony/symfony/pull/16863) - opened in December 2015 and without attention 
 - [[FrameworkBundle] Introduce autowirable ControllerTrait](https://github.com/symfony/symfony/pull/18193) - similar to previous one, but depending on reverted setter injection 
 
-So there are some trials, but I guess **this feature is not coming anytime soon**.
+There are some trials, but I guess **this feature is not coming anytime soon**.
 
 
 ### How to make a Change 
@@ -112,7 +112,7 @@ final class ProductController
 }
 ```
 
-**You can use few small traits** or **just 1** - `ControllerAwareTrait`. Pick what fits your needs the best.
+**You can use few small traits** or **just 1** - `ControllerTrait`. Pick what fits your needs the best.
 
 You will [find them in repository](https://github.com/Symplify/ControllerAutowire/tree/master/src/Controller) or just type `ControllerTrait` in your IDE: 
 
