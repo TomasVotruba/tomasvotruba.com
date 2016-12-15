@@ -86,8 +86,7 @@ Thank you Petr!
 Now you can do use bare Controller with only what you need:
 
 ```language-php 
-namespace Symfony\Bundle\FrameworkBundle\Controller;
-namespace Symplify\ControllerAutowire\Controller\Templating\ControllerRenderTrait;
+use Symplify\ControllerAutowire\Controller\Templating\ControllerRenderTrait;
 
 final class ProductController
 {
