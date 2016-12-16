@@ -5,6 +5,16 @@
         <meta charset="utf-8">
         <meta name="robots" content="index, follow">
 
+        {* mobile *}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        {block socialTags}
+        {/block}
+
+        <link rel="alternate" type="application/rss+xml" title="Tomáš Votruba Blog RSS" href="/rss.xml">
+
         {* Font Awesome - locally for css classes autocomplete *}
         <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
@@ -13,15 +23,7 @@
 
         <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
 
-        {* mobile *}
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-
         {block additionalCss}
-        {/block}
-
-        {block socialTags}
         {/block}
     </head>
     <body>
