@@ -67,7 +67,7 @@ services:
 
 ## Your Code is Seen as Manual How to Write 
 
-Why? Because "what you see is what you write". New programmer joins the teams, sees this handy @inject feature and uses when possible and handy.
+Why? Because "what you see is what you write". New programmer joins the teams, sees this handy `@inject` feature and uses when possible and handy.
 
 Some of you, who already talked about `@inject` method usage already there are some and only few specific places to use it.
 
@@ -93,7 +93,7 @@ abstract class AbstractBasePresenter extends Nette\Application\UI\Presenter
 }
 ```
 
-And I can use it `ProductPresenter` alongside with constructor injection
+And I can use it in `ProductPresenter` along with constructor injection
  
 ```language-php
 // app/Presenter/ProductPresenter.php
@@ -158,12 +158,12 @@ And specific repository with some dependency:
 
 namespace App\Repository;
 
-use App\Model\Product\ProductSorer;
+use App\Model\Product\ProductSorter;
 
 final ProductRepository extends AbstractBaseRepository
 {
     /**
-     * @var ProductSorer
+     * @var ProductSorter
      */
     private $productSorter;
     
@@ -235,15 +235,15 @@ decorator: # keyword used by Nette
 That's it!
 
 
-## What have you learn today?
+## What Have You Learned Today?
 
-- It easy to overuse `@inject` in places where it doesn't solve any problem
+- It is easy to overuse `@inject` in places where it doesn't solve any problem
 - The problem `@inject`/`inject<method>` method were born to solve is called *dependency hell*
 - If you need to **decorate service of some type**, use *Decorator Extension*
 - This will lead **to better framework understandability and usability**
 - ...and world peace in time :)
 
-In next article, we will look on other practical use cases for Decorator Extension.
+In next article, we will look at other practical use cases for Decorator Extension.
 
 
 ### P.S.: What about Symfony?
