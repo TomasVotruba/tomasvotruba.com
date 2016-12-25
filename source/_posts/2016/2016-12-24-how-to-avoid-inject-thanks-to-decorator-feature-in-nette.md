@@ -224,7 +224,7 @@ How does it work?
 decorator: # keyword used by Nette
     App\Repository\AbstractBaseRepository: # 1. find every service this type
         setup: # same setup as we use in service configuration
-            - setEntityManagerf # 2. call this setter injection on it
+            - setEntityManager # 2. call this setter injection on it
             
     # or do you need to call "setTranslator" on every component?
     App\Component\AbstractBaseControl:
