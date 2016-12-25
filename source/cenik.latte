@@ -1,15 +1,14 @@
 ---
 layout: default
-title: Ušetři počet pokusů-omylů
+title: Ušetřím ti desítky pokusů-omylů
 id: price
 ---
-<div n:block="content" class="container page">
-    <div class="main" id="references">
-        <header>
-            <h1>{$title}</h1>
-        </header>
 
-        <h2>In-house školení = 100% pozornost pro Váše potřeby</h2>
+{block content}
+    <div class="container" id="references">
+        <h1>{$title}</h1>
+
+        <h2>In-house školení = 100% pozornost pro Vaše potřeby</h2>
 
         <p>
             Školení zajistím přímo u vás ve firmě. Obsah přizpůsobím vašim prioritám, požadavkům a zkušenostem.
@@ -18,7 +17,8 @@ id: price
         <p><strong>S čím můžete počítat:</strong></p>
 
         <ul>
-            <li>předem vždy dělám výzkum potřeb účastníků &ndash; školení tak pokaždé reaguje na úroveň znalostí všech zúčastněných</li>
+            <li>předem vždy dělám výzkum potřeb účastníků</li>
+            <li>školení tak pokaždé reaguje na úroveň znalostí všech zúčastněných</li>
             <li>počet účastníků není omezen a nemá na cenu vliv</li>
         </ul>
 
@@ -66,10 +66,10 @@ id: price
         </p>
 
         <p class="text-center">
-            <a href="/#kontakt" class="btn btn-lg btn-success">
+            <a href="/kontakt" class="btn btn-lg btn-success">
                 &nbsp;Napište mi
                 <em class="fa fa-arrow-circle-o-right fa-fw"></em>
             </a>
         </p>
     </div>
-</div>
+{/block}

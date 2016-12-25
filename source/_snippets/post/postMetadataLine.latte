@@ -1,7 +1,9 @@
 <ul class="list-inline">
     <li>
         <em class="fa fa-clock-o fa-fw"></em>
-        <strong>{$post->getReadingTimeInMinutes()} {="post.min_of_reading"|translate: $post['lang'] ?? 'cs'}</strong>
+        <strong>{$post->getReadingTimeInMinutes()} min
+            {*{="post.min_of_reading"|translate: $post['lang'] ?? 'cs'}*}
+        </strong>
     </li>
 
     <li>

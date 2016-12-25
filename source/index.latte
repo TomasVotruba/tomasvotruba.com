@@ -4,21 +4,10 @@ title: Pomůžu ti objevit tvůj potenciál a rozvinout ho naplno
 id: index
 ---
 {block content}
-    <div class="container page">
-        <div class="row">
-            <div class="col-md-12">
-                <header>
-                    <h1>
-                        Pomůžu Ti rozvíjet Tvé silné stránky
-                        {*"What happens if we train them and they leave?"*}
-                        {*<br>*}
-                        {*"What happens if we don’t and they stay?"*}
-                    </h1>
-                </header>
-            </div>
-        </div>
+    <div class="container">
+        <h1>Pomůžu Ti rozvíjet Tvé silné stránky</h1>
 
-        <div class="row welcome-drink">
+        <div class="row">
             <div class="col-sm-8">
                 <p>
                     Ahoj, jmenuji se Tomáš Votruba a nejradši dělám 3 věci:
@@ -46,30 +35,41 @@ id: index
 
         <hr>
 
-        <h2>
-            ...zeptej se mých klientů
-        </h2>
+        <h2>...ale i moji klienti</h2>
 
-        <div class="row welcome-drink">
-            <div class="col-md-12">
-                {foreach $references as $reference}
-                    {if isset($reference['topped_testimonial'])}
-                        <blockquote>
-                            „{$reference['topped_testimonial']}“
-                        </blockquote>
-                        <p class="text-right">
-                            <strong>{$reference['feedbacker_name']}</strong>, {$reference['company']}
-                        </p>
-                        {sep}<br>{/sep}
-                    {/if}
-                {/foreach}
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>„Ještě jednou díky za školení. Velký přínos mělo hlavně v nápadech, jak si práci ulehčit a dělat ji efektivněji. Určitě budeme chtít školení časem zopakovat.“</p>
 
-                <p>
-                    <a href="/reference">Chci vidět více referencí</a>
+                <p class="text-right">
+                    <strong>Jakub Horký, Vedoucí vývoje</strong> v igloonet, s. r. o.
                 </p>
             </div>
         </div>
+
+        <p class="text-center bigger">
+            Školil jsem všude možně.
+        </p>
+
+        <p class="text-center">
+            <a href="/reference" class="btn btn-lg btn-primary">
+                &nbsp;Podívat se na další reference
+                <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+            </a>
+        </p>
     </div>
 
-    {include "contact"}
+    <hr>
+
+    <div class="container">
+        <h2>Chceš první info schůzku zdarma? Dělí tě od ní 1 klik</h2>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12 text-left">
+                {include "contactOptions"}
+            </div>
+        </div>
+    </div>
 {/block}

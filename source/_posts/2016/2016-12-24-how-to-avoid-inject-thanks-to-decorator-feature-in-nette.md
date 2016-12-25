@@ -204,6 +204,7 @@ Wait! Before any premature conclusion, let's set the goal first.
 
 ```language-yaml
 # app/config.config.neon
+
 services:
     - App\Repository\ProductRepository
     - App\Repository\UserRepository
