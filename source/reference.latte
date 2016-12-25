@@ -11,16 +11,15 @@ id: satisfy
             </header>
 
             <p class="text-center">
-                Školil jsem <strong>ve více jak 10 firmách</strong> a potkal jsem se <strong>s více jak 100 programátory</strong>.
-                Přečtěte si, jak se jim to líbilo.
+                 Tady si projeďte, <strong>kde jsem co školil</strong> a <strong>co jim školení přineslo</strong>.
             </p>
 
             <hr>
 
             {foreach $references as $referenceId => $reference}
-                <h3>
+                <h2>
                     <a href="{$reference['url']}">{=$reference['company'] ?? $reference['feedbacker_name']}</a>
-                </h3>
+                </h2>
 
                 <div class="row">
                     <div class="col-md-6" n:ifset="$reference['copy_items']">
@@ -45,12 +44,28 @@ id: satisfy
                     {include callToAction}
                 {/if}
 
-                {if $iterator->getCounter() === 5}
+                {if $iterator->getCounter() === 4}
                     {include callToAction2}
                 {/if}
 
                 {sep}<hr>{/sep}
             {/foreach}
+
+            <hr>
+
+            <p>
+                Mezi mé další skvělé klienty patří
+                <a href="https://mall.cz">MALL.CZ</a>,
+                <a href="https://costlocker.com/">Costlocker</a>,
+                <a href="http://www.igalileo.cz/">Galileo Corporation s.r.o.</a>,
+                <a href="http://www.bepositive.cz/">BePositive s.r.o.</a>,
+                <a href="http://www.apsaz.cz/">APSAZ Consulting a.s.</a>,
+                <a href="https://www.acamar.cz/">Acamar Outsourcing Services, s.r.o.</a>
+                <a href="http://www.ikon.cz/">IKON spol. s r.o.</a>,
+                <a href="http://www.nk-translators.com/">NK Translators s.r.o.</a>,
+                <a href="http://lidskasila.cz">Lidská Síla</a> nebo
+                <a href="http://www.sprintmasters.cz/">Sprint Masters s.r.o.</a>
+            </p>
 
             <hr>
 
