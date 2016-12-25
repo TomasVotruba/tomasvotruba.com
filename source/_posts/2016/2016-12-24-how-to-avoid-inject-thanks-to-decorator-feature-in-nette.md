@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to avoid @inject thanks to Decorator feature in Nette"
-perex: "I often find <code>@inject</code> being overused in projects I review while mentoring. They often bring less writing, but in exchange they break SOLID principals. Today I will show you solution that will <strong>keep your code both small and clean</strong> - <strong>Decorator feature in Nette</strong>."
+perex: "I often find <code>@inject</code> being overused in projects I review while mentoring. They often bring less writing, but in exchange they break <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID principals</a>. Today I will show you solution that will <strong>keep your code both small and clean</strong> - <strong>Decorator feature in Nette</strong>."
 lang: en
 ---
 
@@ -9,9 +9,7 @@ As [Derek Simons says](https://www.ted.com/talks/simon_sinek_how_great_leaders_i
 
 ## ...Start with "Why"
 
-Why am I writing this article? I try to improve knowledge interoperability between frameworks by finding the common lowest denominator, so it **is easier to understand and use each other**.
-
-I understand every framework has its own specific way how to solve same issues, but it creates *knowledge vendor lock*. So even if I know how to solve some problem in Nette, I cannot do that in Symfony and have to re-learn it again.
+Why am I writing this article? I try to improve knowledge interoperability between frameworks so it **is easier to understand and use each other**. The goal is to discourage Nette- (or any framework-) specific things **in favor of those that may be common**.
  
 Today, I will try to agree on setter injection with you. 
 
@@ -114,8 +112,9 @@ final class ProductPresenter extends AbstractBasePresenter
 }
 ```
 
-This is quite clean and easy to use, because presenters in Nette are [injected to by default](https://github.com/nette/application/blob/3165d3a8dab876f4364cdcba450a33ab0182049a/src/Bridges/ApplicationDI/ApplicationExtension.php#L111-L116).
+This is quite clean and easy to use, because presenters have injects [enabled by default](https://github.com/nette/application/blob/3165d3a8dab876f4364cdcba450a33ab0182049a/src/Bridges/ApplicationDI/ApplicationExtension.php#L111-L116).
  
+
 ## Level up
 
 But what if we have other objects that:
@@ -197,7 +196,7 @@ services:
 
 ### SO much writing! 
 
-It is clean but with so much writing? Thanks, but no, thanks. Let's go back to `@inject`...
+It is cleaner, but with so much writing? Thanks, but no, thanks. Let's go back to `@inject`...
 
 Wait! Before any premature conclusion, let's set the goal first.
 
