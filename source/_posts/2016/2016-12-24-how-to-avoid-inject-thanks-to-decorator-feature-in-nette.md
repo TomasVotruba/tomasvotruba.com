@@ -203,7 +203,7 @@ Wait! Before any premature conclusion, let's set the goal first.
 ### What is Desired Result?
 
 ```language-yaml
-// app/config.config.neon
+# app/config.config.neon
 services:
     - App\Repository\ProductRepository
     - App\Repository\UserRepository
@@ -219,7 +219,7 @@ This feature is in Nette [since 2014](https://github.com/nette/di/commit/28fdac3
 How does it work? 
 
 ```language-yaml
-// app/config/config.neon
+# app/config/config.neon
 decorator: # keyword used by Nette
     App\Repository\AbstractBaseRepository: # 1. find every service this type
         setup: # same setup as we use in service configuration
