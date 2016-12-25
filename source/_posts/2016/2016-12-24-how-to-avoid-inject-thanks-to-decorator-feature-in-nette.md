@@ -77,7 +77,7 @@ The best use case is `AbstractBasePresenter`.
 Let's say I need `Translator` service in all of my presenters.
 
 ```language-php
-// app\Presenter\AbstractBasePresenter.php
+// app/Presenter/AbstractBasePresenter.php
 
 namespace App\Presenter;
 
@@ -220,6 +220,7 @@ How does it work?
 
 ```language-yaml
 # app/config/config.neon
+
 decorator: # keyword used by Nette
     App\Repository\AbstractBaseRepository: # 1. find every service this type
         setup: # same setup as we use in service configuration
