@@ -1,9 +1,7 @@
 <ul class="list-inline">
     <li>
         <em class="fa fa-clock-o fa-fw"></em>
-        <strong>{$post->getReadingTimeInMinutes()} min
-            {*{="post.min_of_reading"|translate: $post['lang'] ?? 'cs'}*}
-        </strong>
+        <strong>{$post->getReadingTimeInMinutes()} min</strong>
     </li>
 
     <li>
@@ -26,8 +24,9 @@
     </li>
 
     <li n:ifset="$showPullRequestLink">
+        <em class="fa fa-fw fa-github"></em>
+
         <a href="{$post|githubEditPostUrl}">
-            <em class="fa fa-fw fa-github"></em>
             {="post.send_pr"|translate: $post['lang'] ?? 'cs'}
         </a>
     </li>

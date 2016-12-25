@@ -10,12 +10,11 @@
 */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.3em;
+    font-family: Arial, sans-serif;
     color: #333;
-    background-color: #fff;
     padding-bottom: 2em;
+    font-size: 17px;
+    line-height: 1.5em;
 }
 
 a, a:active {
@@ -62,7 +61,6 @@ ul {
 
 /*!* Typography *!*/
 h1, h2, h3 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -80,24 +78,18 @@ h3 {
     font-size: 1.3em;
 }
 
-
-/* custom */
-
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.5em;
-}
-
 h1 {
     font-weight: 600;
     margin: .9em 0 .6em 0;
-    font-size: 2.1em;
+    font-size: 2em;
     line-height: 1.3em;
-    color: rgba(39,58,75,.97);
     text-align: center;
     padding-bottom: 1em;
     border-bottom: 1px solid #EEE;
+}
+
+h1, h3 {
+    color: rgba(39,58,75,.97);
 }
 
 h2 {
@@ -127,12 +119,6 @@ pre {
 
 .navbar-default .navbar-nav > li > a {
     color: #87CEFA;
-}
-
-.blog-post h1 {
-    font-size: 2.2em;
-    font-weight: 600;
-    margin-bottom: .5em;
 }
 
 article {
@@ -172,7 +158,7 @@ code {
     padding-bottom: .5em;
 }
 
-    /* article helpers */
+/* article helpers */
 .arrow-down-on-list {
     margin-left: .7em;
     font-size: 1.6em;
@@ -180,32 +166,11 @@ code {
 }
 
 .bigger {
-    font-size: 1.1em;
-}
-
-.welcome-drink {
-    font-size: 1.3em;
-    line-height: 1.5em;
-    font-family: Arial, sans-serif;
-}
-
-.welcome-drink ul {
-    padding-top: 0;
-    margin-top: .3em;
+    font-size: 1.07em;
 }
 
 img {
     max-width: 100%;
-}
-
-#kontakt {
-    padding-top: 3em;
-    padding-bottom: 3em;
-}
-
-#kontakt p {
-    font-size: 1.3em;
-    line-height: 1.6em;
 }
 
 .yearLine {
@@ -215,7 +180,6 @@ img {
     padding: .5em 0;
     font-weight: 200;
 }
-
 
 pre {
     font-size: 1em;
@@ -241,7 +205,6 @@ nav ul {
     float: left;
     padding: 0;
     margin-bottom: 0;
-    /*padding-top: .5em;*/
 }
 
 nav ul li {
