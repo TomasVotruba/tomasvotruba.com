@@ -1,72 +1,67 @@
 ---
 layout: default
-title: Vaše spokojenost je mým posláním
+title: Tvoje spokojenost je mým posláním
 id: satisfy
 ---
 {block content}
-    <div class="container page">
-        <div class="main" id="references">
-            <header>
-                <h1>{$title}</h1>
-            </header>
+    <div class="container" id="references">
+        <h1>{$title}</h1>
 
-            <p class="text-center">
-                Školil jsem <strong>ve více jak 10 firmách</strong> a potkal jsem se <strong>s více jak 100 programátory</strong>.
-                Přečtěte si, jak se jim to líbilo.
-            </p>
+        <p class="text-center">
+             Tady si v klidu projeď, <strong>kde jsem co školil</strong> a <strong>co jim školení přineslo</strong>.
+        </p>
 
-            <hr>
+        <hr>
 
-            {foreach $references as $referenceId => $reference}
-                <h3>
-                    <a href="{$reference['url']}">{=$reference['company'] ?? $reference['feedbacker_name']}</a>
-                </h3>
+        {foreach $references as $referenceId => $reference}
+            <h2>
+                <a href="{$reference['url']}">{$reference['company']}</a>
+            </h2>
 
-                <div class="row">
-                    <div class="col-md-6" n:ifset="$reference['copy_items']">
-                        <ul>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul>
+                        <li>
                             {foreach $reference['copy_items'] as $copyItem}
-                                <li>{$copyItem|noescape}</li>
+                                <strong n:tag-first>{$copyItem|noescape}</strong>
+                                {sep} &ndash; {/sep}
                             {/foreach}
-                        </ul>
-                    </div>
-                    <div n:class="isset($reference['copy_items']) ? col-md-6 : col-md-12">
-                        <p>
-                            „{$reference['testimonial']}“
-                        </p>
+                        </li>
+                    </ul>
 
-                        <p n:ifset="$reference['company']">
-                            <strong>{$reference['feedbacker_name']}</strong>, {$reference['feedbacker_position']}
-                        </p>
-                    </div>
+                    <p>
+                        „{$reference['testimonial']|noescape}“
+                    </p>
+
+                    <p class="text-right">
+                        <strong>{$reference['feedbacker_name']}, {$reference['feedbacker_position']}</strong>
+                    </p>
                 </div>
+            </div>
 
-                {if $iterator->getCounter() === 2}
-                    {include callToAction}
-                {/if}
+            {sep}<hr>{/sep}
+        {/foreach}
 
-                {if $iterator->getCounter() === 5}
-                    {include callToAction2}
-                {/if}
+        <br>
+        <br>
 
-                {sep}<hr>{/sep}
-            {/foreach}
+        {* consider black/white logo row *}
 
-            <hr>
+        <p>
+            Mezi mé další skvělé klienty patří
+            <a href="https://mall.cz">MALL.CZ</a>,
+            <a href="https://costlocker.com/">Costlocker</a>,
+            <a href="http://www.igalileo.cz/">Galileo Corporation</a>,
+            <a href="http://www.bepositive.cz/">BePositive</a>,
+            <a href="http://www.apsaz.cz/">APSAZ Consulting</a>,
+            <a href="https://www.acamar.cz/">Acamar</a>,
+            <a href="http://www.ikon.cz/">IKON</a>,
+            <a href="http://www.nk-translators.com/">NK Translators</a>,
+            <a href="https://lidskasila.cz">Lidská Síla</a> nebo
+            <a href="http://www.sprintmasters.cz/">Sprint Masters</a>
+        </p>
 
-            <p class="bigger text-center">
-                Taky potřebuješ doplnit pár znalostí nebo rovnou zkonzultovat projekt?
-            </p>
-
-            <p class="text-center">
-                <a href="/#kontakt" class="btn btn-lg btn-success">
-                    &nbsp;Napiš mi
-                    <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-                </a>
-            </p>
-
-            <hr>
-        </div>
+        {include callToAction}
     </div>
 {/block}
 
@@ -75,33 +70,12 @@ id: satisfy
     <hr>
 
     <p class="text-center bigger">
-        „Určitě budeme chtít školení po nějaké době zopakovat.“
-        <br>
-        A co Vy?
+        Potřebujete něco podobného?
     </p>
 
     <p class="text-center">
-        <a href="/#kontakt" class="btn btn-lg btn-success">
-            &nbsp;Ozvěte se mi
-            <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-        </a>
-    </p>
-{/define}
-
-
-{define callToAction2}
-    <hr>
-
-    <p class="text-center bigger">
-        „Doporučuji ho všem, kteří hledají specialistu.“
-        <br>
-        Hledáte?
-    </p>
-
-    <p class="text-center">
-        <a href="/#kontakt" class="btn btn-lg btn-success">
-            &nbsp;Napište mi
-            <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+        <a href="/kontakt" class="btn btn-success bigger">
+            Není problém, domluvme se <em class="fa fa-arrow-circle-o-right fa-fw"></em>
         </a>
     </p>
 {/define}

@@ -1,13 +1,12 @@
 ---
 layout: default
-title: "Naučím vás přesně to, co právě potřebujete"
+title: "Naučím tě přesně to, co právě potřebuješ"
 id: skills
 ---
-<div n:block="content" class="container page">
-    <div class="main" id="references">
-        <header>
-            <h1>{$title}</h1>
-        </header>
+
+{block content}
+    <div class="container" id="references">
+        <h1>{$title}</h1>
 
         <p class="text-center">
             Školím jen ty oblasti, s kterými poslední roky <strong>aktivně pracuji a kterým rozumím nejlépe</strong>.                   <br>
@@ -46,7 +45,7 @@ id: skills
             Chcete začít využívat sílu open-source na plno?
         </p>
         <p class="text-center">
-            <a href="/#kontakt" class="btn btn-success bigger">
+            <a href="/kontakt" class="btn btn-success bigger">
                 &nbsp;Kontaktujte mne
                 <em class="fa fa-arrow-circle-o-right fa-fw"></em>
             </a>
@@ -81,7 +80,7 @@ id: skills
         </p>
 
         <p class="text-center">
-            <a href="/reference" class="btn btn-lg btn-primary">
+            <a href="/reference" class="btn btn-primary bigger">
                 &nbsp;Mrkněte jak se líbilo ostatním
                 <em class="fa fa-arrow-circle-o-right fa-fw"></em>
             </a>
@@ -95,7 +94,7 @@ id: skills
 
         <div class="row">
             <div class="col-md-6">
-                <h3>Začněte si s Gitem</h3>
+                <h3>Začni si s Gitem</h3>
                 <ul>
                     <li>rozdíly oproti SVN</li>
                     <li>změny snadno a bez konfliktů</li>
@@ -104,7 +103,7 @@ id: skills
                 </ul>
             </div>
             <div class="col-md-6">
-                <h3>Pochopte základy testování</h3>
+                <h3>Zažij základy testování</h3>
                 <ul>
                     <li>první unit test</li>
                     <li>jak používat PHPUnit</li>
@@ -118,7 +117,7 @@ id: skills
 
         <div class="row">
             <div class="col-md-6">
-                <h3>Pište čistý kód a škálujte architekturu</h3>
+                <h3>Piš čistý kód a škálovatelnou architekturu</h3>
                 <ul>
                     <li>principy SOLID</li>
                     <li>jak na postupný refaktoring</li>
@@ -127,7 +126,7 @@ id: skills
                 </ul>
             </div>
             <div class="col-md-6">
-                <h3>Posuňte svou PHP kariéru</h3>
+                <h3>Posuň svou PHP kariéru</h3>
                 <ul>
                     <li>kde najít práci</li>
                     <li>jak dát o sobě vědět</li>
@@ -151,13 +150,13 @@ id: skills
                 </ul>
             </div>
             <div class="col-md-6">
-                <h3>Začněte dělat open-source</h3>
+                <h3>Začni dělat open-source</h3>
                 <ul>
                     <li>kde je hodnota práce na open-source</li>
                     <li>package design principles</li>
-                    <li>PSR - PHP Standards Recommendations - co to je?</li>
-                    <li>jak pracovat s Githubem</li>
-                    <li>Travis CI - nechte tesování na stroji</li>
+                    <li>co a k čemu ti je PSR?</li>
+                    <li>jak pracovat s Githubem a Travisem</li>
+                    <li>empatie a vyjednávání</li>
                 </ul>
             </div>
         </div>
@@ -168,10 +167,10 @@ id: skills
             Už víš, jaký mix dovedností potřebuješ získat?
         </p>
         <p class="text-center">
-            <a href="/#kontakt" class="btn btn-lg btn-success">
+            <a href="/kontakt" class="btn btn-success bigger">
                 &nbsp;Napiš mi
                 <em class="fa fa-arrow-circle-o-right fa-fw"></em>
             </a>
         </p>
     </div>
-</div>
+{/block}

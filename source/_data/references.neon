@@ -1,95 +1,50 @@
 references:
     -
-        company: Meditorial
-        url: https://meditorial.cz/
-        testimonial: "Ještě jednou díky za přednášky. Líbilo se nám to. GIT nás bavil a já jsem začal commitovat častěji :)."
-        feedbacker_name: Marek Mencl
-        feedbacker_position: Vedoucí programátorského týmu
-        copy_items:
-            - 6 hodin školení
-            - '1 krásný den v <a href="http://pracovna.cz/">Pracovně na Žižkově</a>'
-            - '2 školitelné - Git Expert <a href="http://www.tomasfejfar.cz/">Tomáš Fejfar</a>'
-            - &infin; přísun kafe díky pečujícímu personálu
-
-    -
-        company: "igloonet, s. r. o."
-        url: https://igloonet.cz
-        testimonial: "Chtěl bych ti ještě jednou poděkovat za školení. Věřím, že pro nás mělo velký přínos hlavně v nových nápadech, jak si některé věci ulehčit nebo jak je dělat efektivněji. Určitě budeme chtít školení po nějaké době zopakovat."
-        feedbacker_name: Jakub Horký
-        feedbacker_position: Vedoucí vývoje
-        copy_items:
-            - 8 hodin školení ve 2 dnech
-            - 4 účastníci
-            - 1 dotace z EU
-            - "3 témata: sebevzdělávání, refaktoring a Nette pro tipy"
-        topped_testimonial: "Školení pro nás mělo velký přínos hlavně v nových nápadech, jak si některé věci ulehčit nebo jak je dělat efektivněji. Určitě budeme chtít školení po nějaké době zopakovat."
-        # todo: add to website later + make social campaign
-        github_repository: "https://github.com/TomasVotruba/igloonet-se-skoli"
-
-    -
-        company: Galileo Corporation s.r.o.
-        url: http://www.igalileo.cz/
-        testimonial: "Co jsme se dozvěděli? PHPStorm, best practices, DI atd. Vyzkoušeli jsme si implementaci Symfony do našeho systému - což pro mě znamená fakt velké plus."
-        feedbacker_name: Jaroslav Ševčík
-        feedbacker_position: Vedoucí vývojářů
-        copy_items:
-            - 7 hodin školení
-            - 6 účastníků
-            - 1 konzultační schůzka předem
-            - 2 cesty do Plzně
-            - 30+ dotazů na refaktoring legacy do Symfony
-
-    -
         company: Lékarna.cz
-        url: http://www.lekarna.cz
-        testimonial: "Napojení Nette na Doctrine je nyní hračka. Líbily se mi také postřehy k testovaní a nástrojům - co k čemu používat, např. PHPStorm a jeho použití v praxi. Super školení, které celý tým posunulo dopředu."
+        url: https://www.lekarna.cz
+        testimonial: "Napojení Nette na Doctrine je po školení hračka. Líbily se mi taky postřehy k testovaní a PHPStorm triky z praxe. Super školení, které posunulo celý tým."
         feedbacker_name: Ing. Tomáš Bek
-        feedbacker_position: Šéf technického vývoje
+        feedbacker_position: šéf technického vývoje
         copy_items:
+            - "Nette a Doctrine"
             - 14 hodin školení
-            - 11 účastníků
-            - 40+ probraných témat z Nette
-            - 1 workshop Doctrine
-            - "2x laser game (jako odměna za dobře odvedenou práci)"
-        topped_testimonial: "Super školení, které celý tým posunulo dopředu. Napojení Nette na Doctrine je nyní hračka."
+            - 11 účastíků
         github_repository:
             - "https://github.com/TomasVotruba/lekarna-se-skoli"
             - "https://github.com/TomasVotruba/lekarna-se-skoli-doctrine"
 
     -
+        company: Meditorial
+        url: http://meditorial.cz/
+        testimonial: "Ještě jednou díky za přednášky &ndash; líbilo se nám to. GIT nás bavil a já jsem začal častěji commitovat."
+        feedbacker_name: Marek Mencl
+        feedbacker_position: vedoucí programátorského týmu
+        copy_items:
+            - "Nette, Symfony, Silex a Git"
+            - 6 hodin školení
+            - 'pomáhal mi expert na Git, <a href="http://www.tomasfejfar.cz/">Tomáš Fejfar</a>'
+
+    -
+        company: "igloonet, s. r. o."
+        url: https://igloonet.cz
+        testimonial: "Ještě jednou díky za školení. Velký přínos mělo hlavně v nápadech, jak si práci ulehčit a dělat ji efektivněji. Určitě budeme chtít školení časem zopakovat."
+        feedbacker_name: Jakub Horký
+        feedbacker_position: vedoucí vývoje
+        copy_items:
+            - "sebevzdělávání, Nette a refaktoring"
+            - 8 hodin školení ve 2 dnech
+            - 4 účastníci
+        # todo: add to website later + make social campaign
+        github_repository: "https://github.com/TomasVotruba/igloonet-se-skoli"
+
+    -
         company: ERUDIO s.r.o
         url: http://www.erudio.cz
-        testimonial: "Potřebovali jsme individuální školení Symfony a Tomáš nám byl doporučen. Rychle připravil školení přímo na míru, kde se zaměřil na naše konkrétní problémy. Tomáš neříkal teorii, kterou si můžeme přečíst kdekoliv na internetu, ale předal nám tipy z praxe. Doporučuji ho všem, kteří hledají specialistu."
+        testimonial: "Tomáš neříká teorii, kterou si můžete přečíst na internetu &ndash; ale předává své zkušenosti z praxe. Doporučuji ho všem, kteří hledají specialistu."
         feedbacker_name: Radek Strnad
-        feedbacker_position: Vedoucí programátorského týmu
+        feedbacker_position: vedoucí programátorského týmu
         copy_items:
-            - 24 hodin školení
-            - 8 účastníků
-            - "3 témata: git, Doctrine a Symfony"
-            - 5 navazujících konzultací
-        topped_testimonial: "Tomáš neříkal teorii, kterou si můžeme přečíst kdekoliv na internetu, ale předal nám tipy z praxe. Doporučuji ho všem, kteří hledají specialistu."
+            - "Symfony, Doctrine a git"
+            - "přes 40 hodin školení (a přibývá)"
+            - 2 programátorské týmy
         github_repository: "https://github.com/TomasVotruba/erudio-se-skoli"
-
-    -
-        company: "Lidská Síla"
-        url: http://lidskasila.cz
-        testimonial: "Jako samouk jsem měl v některých Nette věcech zmatek. Díky konzultaci jsem si je mohl ujasnit. Doporučuju!"
-        feedbacker_name: Šimon Podlipský
-        feedbacker_position: "spoluzakladatel LidskáSíla.cz"
-
-    -
-        url: http://fenekpr.cz
-        testimonial: "Tom je nejsympatičtější ajťák, proto pořádá PHP srazy a buduje komunity."
-        feedbacker_name: "Jirka Vicherek"
-
-    -
-        url: https://twitter.com/javiereguiluz
-        testimonial: "I'd like to tell you that as much I hate email... in your case it's different. I like that your emails are always positive and that you send me interesting references to all the things that you do. Like writing articles, recoding screencasts, publishing bundles etc. So I love recieving emails from you and I wanted to tell that to you!"
-        feedbacker_name: "Javier Eguiluz"
-
-    -
-        url: https://github.com/Olicek
-        testimonial: '''
-           Sleduju tě od té doby, co jsem ti poslal svůj úplně první PR. Musím říct, že to, co děláš, je skvělý. Neber to jako pochlebování, ale jako feedback tvé práce pro komunitu. Hlavně se mi strašně líbí tvůj styl komunikace s lidma. Otočit flame do něčeho konstruktivního, vtáhnout lidi do přispívání, hromada open-source, články... Skvělá práce, díky za ni!
-        '''
-        feedbacker_name: "Petr Olišar"

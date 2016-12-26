@@ -1,20 +1,22 @@
 {extends "default"}
 
 {block content_wrapper}
-    <div class="page">
-        <div class="container">
-            <div class="main">
-                {include "postHeader", 'post' => $post, 'singlePost' => TRUE}
+    <div class="container" id="post">
+        <h1>{$post['title']}</h1>
 
-                <p class="perex">{$post['perex']|noescape}</p>
+        {include "postMetadataLine", "post" => $post, "showPullRequestLink" => TRUE}
 
-                {$post['content']|noescape}
-
-                <h2>{="post.i_want_your_opinion"|translate: $post['lang'] ?? 'cs'}</h2>
-
-                {include "disqusComments", 'post' => $post}
+        <div class="panel panel-default">
+            <div class="panel-body perex">
+                {$post['perex']|noescape}
             </div>
         </div>
+
+        {$post['content']|noescape}
+
+        <h2>{="post.i_want_your_opinion"|translate: $post['lang'] ?? 'cs'}</h2>
+
+        {include "disqusComments", 'post' => $post}
     </div>
 {/block}
 

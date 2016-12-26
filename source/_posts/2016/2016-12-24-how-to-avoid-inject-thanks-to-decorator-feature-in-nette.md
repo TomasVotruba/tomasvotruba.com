@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to avoid @inject thanks to Decorator feature in Nette"
-perex: "I often find <code>@inject</code> being overused in projects I review while mentoring. They often bring less writing, but in exchange they break <a href='https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)'>SOLID principals</a>. Today I will show you solution that will <strong>keep your code both small and clean</strong> - <strong>Decorator feature in Nette</strong>."
+perex: "I often find <code>@inject</code> being overused in projects I review while mentoring. They often bring less writing, but in exchange they break <a href='https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)'>SOLID principles</a>. Today I will show you solution that will <strong>keep your code both small and clean</strong> - <strong>Decorator feature in Nette</strong>."
 lang: en
 ---
 
@@ -77,7 +77,7 @@ The best use case is `AbstractBasePresenter`.
 Let's say I need `Translator` service in all of my presenters.
 
 ```language-php
-// app\Presenter\AbstractBasePresenter.php
+// app/Presenter/AbstractBasePresenter.php
 
 namespace App\Presenter;
 
@@ -203,7 +203,8 @@ Wait! Before any premature conclusion, let's set the goal first.
 ### What is Desired Result?
 
 ```language-yaml
-// app/config.config.neon
+# app/config.config.neon
+
 services:
     - App\Repository\ProductRepository
     - App\Repository\UserRepository
@@ -219,11 +220,12 @@ This feature is in Nette [since 2014](https://github.com/nette/di/commit/28fdac3
 How does it work? 
 
 ```language-yaml
-// app/config/config.neon
+# app/config/config.neon
+
 decorator: # keyword used by Nette
     App\Repository\AbstractBaseRepository: # 1. find every service this type
         setup: # same setup as we use in service configuration
-            - setEntityManagerf # 2. call this setter injection on it
+            - setEntityManager # 2. call this setter injection on it
             
     # or do you need to call "setTranslator" on every component?
     App\Component\AbstractBaseControl:
