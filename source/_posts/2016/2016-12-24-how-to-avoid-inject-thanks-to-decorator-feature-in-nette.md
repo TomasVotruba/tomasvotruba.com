@@ -60,7 +60,7 @@ and
 services:
     -
         class: App\Repository\ProductRepository
-            inject: on
+        inject: on
 ```
 
 ## Your Code is Seen as Manual How to Write 
@@ -71,7 +71,7 @@ Some of you, who already talked about `@inject` method usage already there are s
 
 ## Where to only @inject?
 
-**To prevent constructor hell**. If you meet this term first time, go read [this short explanation](https://phpfashion.com/di-a-predavani-zavislosti#toc-constructor-hell) from David Grudl.
+**To prevent constructor hell**. If you meet this term first time, go read [this short explanation](https://phpfashion.com/di-a-predavani-zavislosti#toc-constructor-hell) by David Grudl.
 
 The best use case is `AbstractBasePresenter`.  
 Let's say I need `Translator` service in all of my presenters.
