@@ -19,7 +19,7 @@ In it, we have 2 methods:
 - 1 for frontend
 - 1 for administration
 
-```language-php
+```php
 namespace App\Repository;
 
 use Nette\Database\Context;
@@ -83,7 +83,7 @@ So you can be sure you'll never forget to add the condition.
 
 There is not much to talk about, because filters are made to be simple. So here is filter:
 
-```language-php
+```php
 # app/Database/Filter/SoftDeletableFilter.php
 
 namespace App\Database\Filter;
@@ -134,13 +134,13 @@ Do you want to try it for yourself? Let's go.
 
 ### 1. Install package
 
-```language-bash
+```bash
 composer require zenify/nette-database-filters
 ```
 
 ### 2. Register Extension
 
-```language-yaml
+```yaml
 # app/config/config.neon
 extensions:
     - Zenify\NetteDatabaseFilters\DI\NetteDatabaseFiltersExtension
@@ -153,7 +153,7 @@ The one above...
 
 ### 4. Register it as a service
 
-```language-yaml
+```yaml
 # app/config/config.neon
 services:
     - App\Database\Filter\SoftDeletableFilter
@@ -163,7 +163,7 @@ And that's it! Now your filter will be reflected in whole application.
 
 So you can reduce your repository code and use `fetchComments()` in all places.
 
-```language-php
+```php
 # app/Repository/CommentRepository.php
 
 namespace App\Repository;
@@ -208,7 +208,7 @@ What if you have **multiple tables with "is_deleted" column**? "comment", "artic
 
 And I will show you how do it:
 
-```language-php
+```php
 # app/Database/Filter/SoftDeletableFilter.php
 
 // ...

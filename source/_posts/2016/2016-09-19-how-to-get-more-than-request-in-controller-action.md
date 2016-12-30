@@ -40,7 +40,7 @@ To be honest, first I was completely ignoring this second group, but [Jáchym](h
 
 Typical controller in Symfony looks like this:
 
-```language-php
+```php
 // src/AppBundle/Controller/MeetupController.php
 namespace AppBundle\Controller;
 
@@ -61,7 +61,7 @@ class MeetupController extends Controller
 
 These 2 lines are the most important:
 
-```language-php
+```php
 $meetupRepository = $this->get('meetup_repository');
 ['meetups' => $meetupRepository->findAll()]
 ```
@@ -86,7 +86,7 @@ But how to get that there? We can use constructor injection with typehints, **bu
 
 Compare yourself this:
 
-```language-php
+```php
 /**
  * @var MeetupRepository
  */
@@ -105,7 +105,7 @@ public function listAction()
 
 to this:
 
-```language-php
+```php
 public function listAction()
 {
     // $this->get('meetup_repository');
@@ -123,7 +123,7 @@ I must admit, this is killer argument **why not to use constructor injection in 
 
 What if you could inject the service via method?
 
-```language-php
+```php
 public function listAction(MeetupRepository $meetupRepository)
 {
     $meetups = $meetupRepository->findAll();
@@ -149,13 +149,13 @@ To make this happened, I made [Symplify\ActionAutowire bundle](https://github.co
 
 ### 1. Install package 
 
-```language-yaml
+```yaml
 composer require symplify/action-autowire
 ```
 
 ### 2. Register bundle
 
-```language-php
+```php
 // app/AppKernel.php
 class AppKernel extends Kernel
 {
@@ -171,7 +171,7 @@ class AppKernel extends Kernel
 
 ### 3. Add some dependency for your controller via constructor 
 
-```language-php
+```php
 // src/AppBundle/Controller/MeetupController.php
 namespace AppBundle\Controller;
 

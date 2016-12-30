@@ -8,7 +8,7 @@ thumbnail: "symfony.png"
 
 Let's say you have fairly standalone module or package and you want to add its routes as simple as:
 
-```language-php
+```php
 // app/AppKernel.php
 class AppKernel extends Kernel
 {
@@ -53,7 +53,7 @@ Routes are usually in form of a simple array with `url` → `controller` records
 
 **What if loading of this simple array could be done via simple service? Something as simple as:**
 
-```language-php
+```php
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
@@ -89,13 +89,13 @@ Let's try it together.
 
 ### 1. Install package
 
-```language-bash
+```bash
 composer require symplify/modular-routing
 ```
 
 ### 2. Register bundles
 
-```language-php
+```php
 // app/AppKernel.php
 class AppKernel extends Kernel
 {
@@ -113,7 +113,7 @@ class AppKernel extends Kernel
 
 ### 3. Create services to load your YAML file
 
-```language-php
+```php
 // src/SomeBundle/Routing/SomeRouteCollectionProvider.php
 namespace SomeBundle\Routing;
 
@@ -134,7 +134,7 @@ final class SomeRouteCollectionProvider extends AbstractRouteCollectionProvider
 
 ### 4. Register it as a service to your module
 
-```language-yaml
+```yaml
 # src/SomeBundle/Resources/config/services.yml
 services:
     some_module.route_provider:

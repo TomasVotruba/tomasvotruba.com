@@ -109,7 +109,7 @@ Tento skvělý přehled mě inspiroval mrknout i [na verzi z minulého roku](htt
 
 Pokud přebíráš aplikaci bez testů a chceš přidat aspoň nějakou kontrolu, bude se ti hodit "smoke testing" pro všechny služby:
 
-```language-php
+```php
 public function testContainerServices()
 {
 	$client = static::createClient();

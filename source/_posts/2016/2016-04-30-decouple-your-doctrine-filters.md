@@ -48,7 +48,7 @@ Saying that, we can **get rid of Controllers, Subscribers, DoctrineBundle, `app/
 
 When we remove everything we don't need, we could end up with simple service:
 
-```language-php
+```php
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Symplify\DoctrineFilters\Contract\Filter\FilterInterface;
 
@@ -66,7 +66,7 @@ final class ActiveFilter implements FilterInterface
 
 And register it as service:
 
-```language-yaml
+```yaml
 # Resoureces/config.yml
 services:
     module.softdeletable_filter:
@@ -83,13 +83,13 @@ Let's try it together!
 
 ### 1. Install package
 
-```language-bash
+```bash
 composer require symplify/modular-doctrine-filters
 ```
 
 ### 2. Register Bundle
 
-```language-php
+```php
 // app/AppKernel.php
 class AppKernel extends Kernel
 {
@@ -105,7 +105,7 @@ class AppKernel extends Kernel
 
 ### 3. Create Service
 
-```language-php
+```php
 // src/SomeBundle/Doctrine/Filter/SoftdeletableFilter.php
 namespace SomeBundle\Doctrine\Filter;
 
@@ -131,7 +131,7 @@ final class SoftdeletableFilter implements FilterInterface
 
 ### 4. Register it as a service to your module
 
-```language-yaml
+```yaml
 # src/SomeBundle/Resources/config/services.yml
 services:
     some_module.softdeletable_filter:

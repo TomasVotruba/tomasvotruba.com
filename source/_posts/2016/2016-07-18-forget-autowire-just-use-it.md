@@ -44,7 +44,7 @@ This is exactly what [Symplify/DefaultAutowire](https://github.com/Symplify/Defa
 
 Apart handling feature above for you, it will turn this...
 
-```language-yaml
+```yaml
 # app/config/config.yml
 services:
     price_calculator:
@@ -62,7 +62,7 @@ services:
 
 ...into this:
 
-```language-yaml
+```yaml
 # app/config/config.yml
 services:
     price_calculator:
@@ -79,13 +79,13 @@ services:
 
 ### 1. Install package
 
-```language-yaml
+```yaml
 composer require symplify/default-autowire
 ```
 
 ### 2. Register bundle
 
-```language-php
+```php
 // app/AppKernel.php
 class AppKernel extends Kernel
 {

@@ -34,7 +34,7 @@ Pick one you understand the best.
 3. Unzip the zip file to your local repository
 4. And push new files to Github 
     
-    ```language-bash
+    ```bash
     git add .
     git commit -m "add metadata files"
     git push origin master

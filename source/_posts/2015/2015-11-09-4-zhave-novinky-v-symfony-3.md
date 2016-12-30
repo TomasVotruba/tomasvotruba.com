@@ -47,7 +47,7 @@ V českém prostředí je autowiring poměrně populární díky bundlům jako [
 
 Dřívější dlouhý zápis
 
-```language-yaml
+```yaml
 # services.yml 
 
 services:
@@ -64,7 +64,7 @@ services:
 
 nyní můžeš zkrátit na
 
-```language-yaml
+```yaml
 # services.yml
 
 services:
@@ -84,7 +84,7 @@ Dependency Injection container zanalyzuje konstruktor služby a:
 
 Místo konkretního typu služby můžeš vyžádat interface, který služba implementuje. Ale co když máme více služeb jednoho interface (typické pro chain pattern)? Stačí u dané služby explicitně uvést:
 
-```language-yaml
+```yaml
 # services.yml
 
 services:   
@@ -191,7 +191,7 @@ Micro Kernel konkrétně:
 
 #### Jak takový Micro Kernel vypadá?
 
-```language-php
+```php
 <?php
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;

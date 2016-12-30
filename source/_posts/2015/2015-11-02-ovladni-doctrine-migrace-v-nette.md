@@ -13,13 +13,13 @@ Do Nette jsem připravil integraci pomocí balíčku [Zenify/DoctrineMigrations]
 
 ### 1. Balíček nainstalujeme přes `composer`:
 
-```language-bash
+```bash
 composer require zenify/doctrine-migrations
 ```
 
 ### 2. Přidáme rozšíření do `config.neon`:
 
-```language-yaml
+```yaml
 extensions:
     migrations: Zenify\DoctrineMigrations\DI\MigrationsExtension
     eventDispatcher: Symnedi\EventDIspatcher\DI\EventDispatcherExtension
@@ -33,13 +33,13 @@ Ověření provedeme spuštěním z přikazového řádku. V Nette to znamená v
 
 Zkusíme vypsat všechny příkazy týkající se migrací.
 
-```language-bash
+```bash
 $ php www/index.php list migrations
 ```
 
 Pokud vidíme přehled příkazů, máme vyhráno a můžeme používat.
 
-```language-bash
+```bash
 # ...
 
 Available commands for the "migrations" namespace:
@@ -63,13 +63,13 @@ Od šéfa jsme dostali zadání: *vytvořit tabulku na články*.
 
 ### 1. Zkontrolujeme status
 
-```language-bash
+```bash
 $ php www/index.php migrations:status
 ```
 
 Důležité je číslo v posledním řádku ("New Migrations"). Vypadá to, že vše je aktuální, tak můžeme pokračovat.
 
-```language-bash
+```bash
  == Configuration
 
     >> Name:                                               Doctrine Database Migrations
@@ -84,13 +84,13 @@ Pokud máme "New Migrations" větší než 0, tak je nejdříve aplikujeme ([viz
 
 ### 2. Vytvoříme si prázdnou migraci
 
-```language-bash
+```bash
 $ php www/index.php migrations:generate
 ```
 
 Název migrace je generován automaticky dle timestampu. Tady je použita defaultní složka `/migrations`.
 
-```language-bash
+```bash
 Loading configuration from the integration code of your framework (setter).
 Generated new migration class to "/var/www/doctrine-migrations-sandbox/app/../migrations/Version20151031185405.php"
 ```
@@ -104,7 +104,7 @@ Otevřeme si novou migraci `/migrations/Version20151031185405.php` a doplníme m
 
 Více bude jasnější ze samotného SQL zápisu:
 
-```language-php
+```php
 namespace Migrations;
 
 use Doctrine\DBAL\Migrations\AbstractMigration;
@@ -147,7 +147,7 @@ $ php www/index.php migrations:status
 
 ...vidíme, že máme jednu novou migraci (dosud neaplikovanou na databázi).
 
-```language-bash
+```bash
 # ...
     
     >> Executed Migrations:                                0
@@ -163,11 +163,11 @@ $ php www/index.php migrations:status
 
 Aplikujeme všechny nové změny:
 
-```language-bash
+```bash
 php www/index.php migrations:migrate
 ```
 
-```language-bash
+```bash
 Loading configuration from the integration code of your framework (setter).
 
                     Doctrine Database Migrations
@@ -180,7 +180,7 @@ Are you sure you wish to continue? (y/n)
 Potvrdíme, že cheme opravdu migrovat: "y"
 
 
-```language-bash
+```bash
 Migrating up to 20151031185555 from 0
 
   ++ migrating 20151031185555

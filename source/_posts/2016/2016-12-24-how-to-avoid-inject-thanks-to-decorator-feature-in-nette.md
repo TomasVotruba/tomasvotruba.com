@@ -18,7 +18,7 @@ Today, I will try to agree on setter injection with you.
 
 This code is common to 80 % Nette applications I came across in last year:
 
-```language-php
+```php
 // app/Presenter/ProductPresenter.php
 
 namespace App\Presenter;
@@ -37,7 +37,7 @@ Using `@inject` annotations over constructor injection is **fast, short and it j
 
 Ok, why not use it everywhere:
 
-```language-php
+```php
 // app/Repository/ProductRepository.php
 
 namespace App\Repository;
@@ -54,7 +54,7 @@ class ProductRepository
 
 and 
 
-```language-yaml
+```yaml
 # app/config/config.neon
 
 services:
@@ -76,7 +76,7 @@ Some of you, who already talked about `@inject` method usage already there are s
 The best use case is `AbstractBasePresenter`.  
 Let's say I need `Translator` service in all of my presenters.
 
-```language-php
+```php
 // app/Presenter/AbstractBasePresenter.php
 
 namespace App\Presenter;
@@ -93,7 +93,7 @@ abstract class AbstractBasePresenter extends Nette\Application\UI\Presenter
 
 And I can use it in `ProductPresenter` along with constructor injection
  
-```language-php
+```php
 // app/Presenter/ProductPresenter.php
 
 namespace App\Presenter;
@@ -129,7 +129,7 @@ But what if we have other objects that:
 
 Let's take the first one:
 
-```language-php
+```php
 // app/Repository/AbstractBaseRepository.php
 
 namespace App\Repository;
@@ -152,7 +152,7 @@ abstract class AbstractBaseRepository
 
 And specific repository with some dependency:
 
-```language-php
+```php
 // app/Repository/ProductRepository.php
 
 namespace App\Repository;
@@ -175,7 +175,7 @@ final ProductRepository extends AbstractBaseRepository
 
 So our config would look like:
 
-```language-yaml
+```yaml
 # app/config/config.neon
 
 services:
@@ -202,7 +202,7 @@ Wait! Before any premature conclusion, let's set the goal first.
 
 ### What is Desired Result?
 
-```language-yaml
+```yaml
 # app/config.config.neon
 
 services:
@@ -219,7 +219,7 @@ This feature is in Nette [since 2014](https://github.com/nette/di/commit/28fdac3
 
 How does it work? 
 
-```language-yaml
+```yaml
 # app/config/config.neon
 
 decorator: # keyword used by Nette

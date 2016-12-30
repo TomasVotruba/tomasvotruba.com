@@ -23,7 +23,7 @@ But now, back to the topic.
 
 With [autowire feature](https://dunglas.fr/2015/10/new-in-symfony-2-83-0-services-autowiring/), managing dependencies for services is now as simple as:
 
-```language-yaml
+```yaml
 services:
     post.publisher:
         class: PostPublisher
@@ -37,7 +37,7 @@ Managing dependencies for controllers in same way is complicated. To apply the s
 
 1. Register controller manually as service to the config
 
-    ```language-yaml
+    ```yaml
     # app/config/services.yml
     services:
         post_controller: # you have to use this name everywhere, so pick it wisely
@@ -47,7 +47,7 @@ Managing dependencies for controllers in same way is complicated. To apply the s
 
 2. Add `@Route` annotation with service name
 
-    ```language-php
+    ```php
     // src/AppBundle/Controller/PostController.php
     namespace AppBundle\Controller\PostController;
     
@@ -66,7 +66,7 @@ Managing dependencies for controllers in same way is complicated. To apply the s
     
     or route using service name:
     
-    ```language-yaml
+    ```yaml
     # app/config/routing.yml
     post_list:
         path: /post-list
@@ -80,7 +80,7 @@ Managing dependencies for controllers in same way is complicated. To apply the s
 
 3. Finally, you have to use service name and single colon for referring:
 
-    ```language-php
+    ```php
     // any controller
     $this->forward('post_controller:listAction'));
     ```
@@ -118,13 +118,13 @@ Let's try it together.
 
 ### 1. Install package
 
-```language-yaml
+```yaml
 composer require symplify/controller-autowire
 ```
 
 ### 2. Register bundle
 
-```language-php
+```php
 // app/AppKernel.php
 class AppKernel extends Kernel
 {
@@ -140,7 +140,7 @@ class AppKernel extends Kernel
 
 ### 3. Add some dependency for your controller via constructor 
 
-```language-php
+```php
 // src/AppBundle/Controller/DefaultController.php
 namespace AppBundle\Controller;
 

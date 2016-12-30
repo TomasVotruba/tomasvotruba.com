@@ -14,7 +14,7 @@ Today it's not about which one is better and when to use it, but about consisten
 
 Let's see an example:
 
-```language-php
+```php
 namespace Symfony\Bundle\FrameworkBundle\Controller;
 
 final class ProductController extends Controller
@@ -42,7 +42,7 @@ final class ProductController extends Controller
 
 Seeing this code anyone could easily extends it like this, and I would not blame him.
 
-```language-php
+```php
 public function actionList()
 {
     return $this->render('mytemplate.html.twig', [
@@ -85,7 +85,7 @@ Thank you Petr!
 
 Now you can do use bare Controller with only what you need:
 
-```language-php 
+```php 
 use Symplify\ControllerAutowire\Controller\Templating\ControllerRenderTrait;
 
 final class ProductController

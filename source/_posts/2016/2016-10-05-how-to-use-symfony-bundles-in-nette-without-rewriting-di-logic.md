@@ -90,13 +90,13 @@ Thanks to step 1. and 2. I could create an extension, that will **take any Symfo
 
 ### 1. Install package
 
-```language-yaml
+```yaml
 composer require symplify/nette-adapter-for-symfony-bundles
 ```
   
 ### 2. Register extension
 
-```language-yaml
+```yaml
 # app/config/config.neon
 extensions:
     symfonyBundles: Symplify\NetteAdapterForSymfonyBundles\DI\NetteAdapterForSymfonyBundlesExtension
@@ -104,7 +104,7 @@ extensions:
 
 ### 3. Register desired Symfony Bundle
 
-```language-yaml
+```yaml
 # app/config/config.neon
 symfonyBundles:
     bundles:
