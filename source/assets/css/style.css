@@ -239,3 +239,27 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     font-size: .7em;
     color: #BBB;
 }
+
+
+/* anchors for post headlines */
+.anchor {
+    padding-right: .3em;
+    float: left;
+    margin-left: -.9em;
+}
+
+.anchor, .anchor:hover {
+    text-decoration: none;
+}
+
+h1 .anchor .anchor-icon, h2 .anchor .anchor-icon, h3 .anchor .anchor-icon {
+    visibility: hidden;
+}
+
+h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon {
+    visibility: inherit;
+}
+
+.anchor-icon {
+    display: inline-block;
+}

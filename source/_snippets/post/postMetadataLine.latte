@@ -24,10 +24,10 @@
     </li>
 
     <li n:ifset="$showPullRequestLink">
-        <em class="fa fa-fw fa-github"></em>
+        <em class="fa fa-fw fa-pencil"></em>
 
         <a href="{$post|githubEditPostUrl}">
-            {="post.send_pr"|translate: $post['lang'] ?? 'cs'}
+            {="post.edit"|translate: $post['lang'] ?? 'cs'}
         </a>
     </li>
 </ul>

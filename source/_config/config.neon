@@ -10,6 +10,7 @@ blogPostOnHomepageCount: 3
 configuration:
     postRoute: blog/:year/:month/:day/:title
     githubRepositorySlug: TomasVotruba/tomasvotruba.cz
+    markdownHeadlineAnchors: TRUE
 
 # translations
 lang: cs
