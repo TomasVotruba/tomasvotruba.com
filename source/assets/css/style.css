@@ -263,3 +263,7 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon {
 .anchor-icon {
     display: inline-block;
 }
+
+#post img {
+    margin: 1em 0;
+}
