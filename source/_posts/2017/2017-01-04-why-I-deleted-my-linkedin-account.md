@@ -10,15 +10,15 @@ lang: en
 
 *Disclaimer: even if I get few abroad offers, my experience is related to work environment in the Czech Republic.*
 
-I was reviewing my 2016 on social networks disconnection: I reduced 350 friends on Facebook to 20, unfollowed all but 2 groups and I dropped all people I follow on Twitter. 
-My attention got better and I could focus on things that really mattered to me. That's why I started though about the next step.
+I was reviewing my 2016 and how I started to disconnect from social networks: I reduced 350 friends on Facebook to 20, unfollowed all but 2 groups and I dropped all people I follow on Twitter. 
+My attention got better and I could focus on things that really matter to me &ndas; reading books and writing. That's when I started to focus on quality of my environment.
 
-And LinkedIn account was something scratching on my mind for a long time.
+And the LinkedIn account was scratching my mind for a long time.
 
 So I asked myself?
 
 
-## What is LinkedIn good for me?
+## What is LinkedIn Good for?
 
 - It helped me in my first 3 years in paid PHP programming field. 
 - I got some references and up-votes for my skills, I attended university so I thought it gives me credibility.
@@ -26,29 +26,29 @@ So I asked myself?
 - Everybody did it, so did I (like that time I jumped out of the window :).
 
 
-## Where LinkedIn Fails for me  
+## Where LinkedIn Fails  
 
 ### It's kinda Broken and Stuck Service
 
-I was getting fake notifications of new connections. I got over 20 pings for 6 moths-old and answered message.
-Also, I didn't notice many changes between 2008 and 2016. It could be much more further. Btw, do you remember MySpace?
+I was getting fake notifications of new connections. I got over 20 pings for 6 moths old and answered message.
+Also, I didn't notice many changes between 2008 and 2016. It could be so more more. Btw, do you remember MySpace?
  
 
 ### Irrelevant Messages - 95 % Job Offers are Spam 
 
-I only got **2 jobs I wanted** in the whole 8 years. Most of offers are general random messages from bots or people,
+Only **2 jobs offers end up in real contract** during the whole 8 years. Most of offers are general random messages from bots or people,
 who don't even read descriptions like *part-time only* or *Symfony project only*.
 
 
 ### Target group Bias
 
 I never look for PHP full-time job. I wanted part-times only. Not really favorite position on LinkedIn, is it?
-last 2 years I only offered consultancy and lecturing. Well, is that a full-time position? 
+Last 2 years I only offered consultancy and lecturing. Well, is that a full-time position? 
 
 
 ### More info sources = more outdated info  
 
-I put my work information on my website, Facebook and LinkedIn. The more I have, the more outdated they are. And I'm not alone.
+I put my work information on my website, Facebook and LinkedIn. The more I have, the more outdated they become in time. And I'm not alone.
 I often see friends who have 3 years empty space on LinkedIn and website, yet still looking for new job.
 
 
@@ -107,7 +107,7 @@ But when you answered *NO* to all of these, here what you could do:
 
 - Build personal brand on good old relationships.
 - Talk with people.
-- Find active social networks where you interact with you peers - for me it is Facebook or our PHP Comminity [Péhápkaři Slack](http://pehapkari.slack.com).
+- Find active social networks where you interact with peers - for me it is Facebook or our Czech & Slovak PHP Community [Péhápkaři Slack](http://pehapkari.slack.com).
 - Go to meetup.
 
 But this is my story, my personal needs and my personal experience. It probably [won't work for everybody](https://en.wikipedia.org/wiki/Anecdotal_evidence). Your experience might be different. 
