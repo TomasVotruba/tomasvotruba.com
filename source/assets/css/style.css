@@ -117,7 +117,7 @@ pre {
     background-color: #571B3C;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus {
     color: #87CEFA;
 }
 
