@@ -11,7 +11,7 @@ reviewed_by: [1, 2]
 
 *Disclaimer: even if I get few abroad offers, my experience is related to work environment in the Czech Republic.*
 
-I was reviewing my 2016 and how **I started to disconnect from social networks**: I reduced 350 friends on Facebook to 20, unfollowed all but 2 groups and I dropped all people I follow on Twitter. 
+I was reviewing my 2016 and how **I started to disconnect from social networks** ([thanks Steve](http://www.stevepavlina.com/blog/2015/07/one-year-without-social-media/): I reduced 350 friends on Facebook to 20, unfollowed all but 2 groups and I dropped all people I follow on Twitter. 
 **My attention got better and I could focus** on things that really matter to me &ndas; reading books, writing and real friends. That's when I started to focus on quality of my environment.
 
 And the LinkedIn account was scratching my mind for a long time.
@@ -86,6 +86,7 @@ Moreover, I've got quite a long profile:
 > As friend of mine Albert once said:
 > "Once you stop learning you start dying."
 
+I want to try to be better thanks to [limits](https://zenhabits.net/limits/) I set.
 
 This is the greatest change I took from deleting this account. 
 
