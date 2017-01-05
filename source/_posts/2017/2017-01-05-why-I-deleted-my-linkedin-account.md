@@ -49,7 +49,13 @@ Last 2 years I only offered consultancy and lecturing. Well, is that a full-time
 
 ### More info sources = more outdated info  
 
-I put my work information on my website, Facebook and LinkedIn. **The more I have, the more outdated they become in time**. And I'm not alone.
+I put my work information on places like my website, Facebook and LinkedIn. In the begging it's all up-to-date. But in time...  
+
+- on website there is last reference from 2014
+- on LinkedIn I'm still in university
+- and on Facebook I just left job I started in 2015
+ 
+**The more such places I have, the more outdated they will become**. And I'm not alone.
 I often see friends who have 3 years empty space on LinkedIn and website, yet still looking for new job.
 
 
@@ -65,7 +71,7 @@ it looks like I'm 3× better in Git. No, I'm not. **So when I got new skill, it 
 
 ## Dying in Comfort Zone
 
-**This is the most important take away.**
+**This is the most important takeaway.**
 
 **LinkedIn was my comfort zone. It's like being a woman on Tinder**. When I want sex, I have it. And I get many messages and attention from females with not much work.
 This backfires.  
@@ -87,9 +93,7 @@ As friend of mine Albert once said:
 
 > "Once you stop learning you start dying."
 
-I want to improve inside [limits](https://zenhabits.net/limits/) I set.
-
-This is the greatest change I took from deleting this account. **Now I naturally tend to build something real.**
+I want to improve inside [limits](https://zenhabits.net/limits/) I set. **Now I naturally tend to build something real.**
   
 
 ## Is it Your Time to Let Go?
@@ -113,7 +117,7 @@ But when you answered *NO* to all of these, here what you could do:
 - **Find active social networks where you interact with peers** - for me it is Facebook or our Czech & Slovak PHP Community [Péhápkaři Slack](http://pehapkari.slack.com).
 - Go to meetup.
 
-But this is my story, my personal needs and my personal experience. It probably [won't work for everybody](https://en.wikipedia.org/wiki/Anecdotal_evidence). Your experience might be different. 
+But this is my story, my personal needs and my personal experience. It probably won't work for everybody. Your experience might be different. 
 
 So, what about you? 
 
