@@ -10,8 +10,8 @@ lang: en
 
 *Disclaimer: even if I get few abroad offers, my experience is related to work environment in the Czech Republic.*
 
-I was reviewing my 2016 and how I started to disconnect from social networks: I reduced 350 friends on Facebook to 20, unfollowed all but 2 groups and I dropped all people I follow on Twitter. 
-My attention got better and I could focus on things that really matter to me &ndas; reading books and writing. That's when I started to focus on quality of my environment.
+I was reviewing my 2016 and how **I started to disconnect from social networks**: I reduced 350 friends on Facebook to 20, unfollowed all but 2 groups and I dropped all people I follow on Twitter. 
+**My attention got better and I could focus** on things that really matter to me &ndas; reading books, writing and real friends. That's when I started to focus on quality of my environment.
 
 And the LinkedIn account was scratching my mind for a long time.
 
@@ -20,10 +20,10 @@ So I asked myself?
 
 ## What is LinkedIn Good for?
 
-- It helped me in my first 3 years in paid PHP programming field. 
-- I got some references and up-votes for my skills, I attended university so I thought it gives me credibility.
-- It gave me self-confidence when talking about money.
-- Everybody did it, so did I (like that time I jumped out of the window :).
+- It helped me in **first 3 years in paid** PHP programming field. 
+- I got some references and up-votes for my skills, I attended university so I thought **it gives me credibility**.
+- It gave me **self-confidence when talking about money**.
+- **Everybody did it**, so did I (like that time I jumped out of the window ;)).
 
 
 ## Where LinkedIn Fails  
@@ -42,13 +42,13 @@ who don't even read descriptions like *part-time only* or *Symfony project only*
 
 ### Target group Bias
 
-I never look for PHP full-time job. I wanted part-times only. Not really favorite position on LinkedIn, is it?
+**I never look for PHP full-time job**. I wanted part-times only. Not really favorite position on LinkedIn, is it?
 Last 2 years I only offered consultancy and lecturing. Well, is that a full-time position? 
 
 
 ### More info sources = more outdated info  
 
-I put my work information on my website, Facebook and LinkedIn. The more I have, the more outdated they become in time. And I'm not alone.
+I put my work information on my website, Facebook and LinkedIn. **The more I have, the more outdated they become in time**. And I'm not alone.
 I often see friends who have 3 years empty space on LinkedIn and website, yet still looking for new job.
 
 
@@ -59,19 +59,19 @@ What can you tell about me from this picture?
 <img src="/assets/images/posts/2017/linked-in/skills.png" class="thumbnail" alt="Skill list">
 
 The oldest skills are upvoted the most. Also short and traditional, like Git. Even if I excel in coaching and open-source,
-it looks like I'm 3× better in Git. No, I'm not. So when I got new skill, it took LinkedIn 3 years to reflect. In that time, I'm already somewhere else.
+it looks like I'm 3× better in Git. No, I'm not. **So when I got new skill, it took LinkedIn 3 years to reflect that**. In that time, I'm already somewhere else.
 
 
 ## Dying in Comfort Zone
 
 **This is the most important take away.**
 
-LinkedIn was my comfort zone. It's like being woman on a Tinder. When I want sex, I have it. And I get many messages and attention from females with not much work.
+**LinkedIn was my comfort zone. It's like being a woman on Tinder**. When I want sex, I have it. And I get many messages and attention from females with not much work.
 This backfires.  
 
 Having so much attention and job position anytime I want makes me lazy. I don't need to improve. With this state of mind I would not probably reach the dream job as if I would be **proactive**.
 
-Moreover when I've got quite long profile:
+Moreover, I've got quite a long profile:
 
 - 5 great jobs
 - 3 startups
@@ -80,11 +80,11 @@ Moreover when I've got quite long profile:
 - 25 skills
 - 7 recommendations
 
-As friend of mine Albert once said:
-"Once you stop learning you start dying."
+> As friend of mine Albert once said:
+> "Once you stop learning you start dying."
 
 
-This is the greatest change I take from deleting this account. 
+This is the greatest change I took from deleting this account. 
 
 Now I want to build something real.
   
@@ -105,9 +105,9 @@ But when you answered *NO* to all of these, here what you could do:
 
 ## Be Proactive &ndash; Find Yourself better Job
 
-- Build personal brand on good old relationships.
+- **Build personal brand on good old relationships**.
 - Talk with people.
-- Find active social networks where you interact with peers - for me it is Facebook or our Czech & Slovak PHP Community [Péhápkaři Slack](http://pehapkari.slack.com).
+- **Find active social networks where you interact with peers** - for me it is Facebook or our Czech & Slovak PHP Community [Péhápkaři Slack](http://pehapkari.slack.com).
 - Go to meetup.
 
 But this is my story, my personal needs and my personal experience. It probably [won't work for everybody](https://en.wikipedia.org/wiki/Anecdotal_evidence). Your experience might be different. 
