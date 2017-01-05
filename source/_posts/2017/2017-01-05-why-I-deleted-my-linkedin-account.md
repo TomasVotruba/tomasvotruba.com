@@ -83,14 +83,13 @@ Moreover, I've got quite a long profile:
 - 25 skills
 - 7 recommendations
 
-> As friend of mine Albert once said:
+As friend of mine Albert once said:
+
 > "Once you stop learning you start dying."
 
-I want to try to be better thanks to [limits](https://zenhabits.net/limits/) I set.
+I want to improve inside [limits](https://zenhabits.net/limits/) I set.
 
-This is the greatest change I took from deleting this account. 
-
-Now I want to build something real.
+This is the greatest change I took from deleting this account. **Now I naturally tend to build something real.**
   
 
 ## Is it Your Time to Let Go?
