@@ -72,6 +72,8 @@ This backfires.
 
 Having so much attention and job position anytime I want makes me lazy. I don't need to improve. With this state of mind I would not probably reach the dream job as if I would be **proactive**.
 
+<img src="/assets/images/posts/2017/linked-in/allstar.jpg" alt="The Fake Allstar">
+
 Moreover, I've got quite a long profile:
 
 - 5 great jobs
