@@ -32,7 +32,7 @@ So I asked myself?
 ### It's kinda Broken and Stuck Service
 
 I was getting fake notifications of new connections. I got over 20 pings for 6 moths old and answered message.
-Also, I didn't notice many changes between 2008 and 2016. It could be so more more. Btw, do you remember MySpace?
+Also, I didn't notice many changes between 2008 and 2016. It could be so much more. Btw, do you remember MySpace?
  
 
 ### Irrelevant Messages - 95 % Job Offers are Spam 
