@@ -8,6 +8,10 @@ thumbnail: "nette.png"
 lang: "en"
 ---
 
+
+> EDIT: This package has been deprecated on January 2017 [because of low usage](https://packagist.org/packages/symplify/nette-adapter-for-symfony-bundles/stats). It is still available [here for inspiration](https://github.com/TomasVotruba/NetteAdapterForSymfonyBundles).
+
+
 To be specific: 
 
 - In Nette you use [Nette\DI package](https://github.com/nette/di) and make an **extension**.
@@ -82,9 +86,7 @@ Usually workarounds, hacks, tweaks or performance tuning. Quite rare.
 
 Okay, okay... These are last few lines before the code, I promise.
  
-Thanks to step 1. and 2. I could create an extension, that will **take any Symfony bundle and register its services into the Nette application**: [Symplify/NetteAdapterForSymfonyBundles](https://github.com/Symplify/NetteAdapterForSymfonyBundles)
-
-(The other way round is also possible, but no bundle for that. Yet. Let me know, if you would like to create that.)
+Thanks to step 1. and 2. I could create an extension, that will **take any Symfony bundle and register its services into the Nette application**: [TomasVotruba/NetteAdapterForSymfonyBundles](https://github.com/TomasVotruba/NetteAdapterForSymfonyBundles)
 
 ## How to register a Symfony Bundle into your Nette Application in 3 steps 
 
