@@ -2,7 +2,7 @@
 layout: post
 title: "Jak psát zajímavé inzeráty pro ajťáky"
 perex: '''
-    Už pár let sleduji pracovní PHP trh z pozice programátorů i z pohledu firem. S oběma stranami mám dobrý vztah. Tuším, co potřebují a co je trápí. Vidím, že se navzájem chtějí, jen komuniace trochu vázne.<br>Původně z toho měl být feedback na inzeráty Jobs.cz a Skrz.cz. Při jejich čtení mě ale napadlo spoustu dalších tipů, o které se chci podělit. Dnes se mrkneme na jejich inzerát a jak je dělat líp.
+    Už pár let sleduji pracovní PHP trh z pozice programátorů i z pohledu firem. S oběma stranami mám dobrý vztah. Tuším, co potřebují a co je trápí. <strong>Vidím, že se navzájem chtějí, jen komuniace trochu vázne</strong>.<br><br>Původně z toho měl být feedback na inzeráty Jobs.cz a Skrz.cz. Při jejich čtení mě ale napadlo <strong>spoustu dalších tipů, o které se chci podělit</strong>. Dnes se mrkneme na jejich inzeráty a jak je dělat líp.
 '''
 ---
 
@@ -44,13 +44,13 @@ Sám si pamatuju tyhle dvojice (i když už tam někteří nepracují):
 
 „Co tě nakonec dovedlo k nám místo ke konkurenci?“
 
-**2. Dejte to přečíst někomu zvenční**
+**2. Dejte to přečíst někomu zvenčí**
 
-Vaši zaměstnanci vás přirozeně vidí lépe než někdo, koho neživíte. Lidé zvenčí vám dají upřímější zpětnou vazbu a spíše řeknou, co potřebují pro navázání vztahu.
+Vaši zaměstnanci vás přirozeně vidí lépe než někdo, koho neživíte. Lidé zvenčí vám dají upřímnější zpětnou vazbu a spíše řeknou, co potřebují pro navázání vztahu.
  
-**3. Které dvě věci se ti nejvíc líbí a které 2 bys zlepšil?**    
+**3. Které dvě věci se ti nejvíc líbí a které dvě bys zlepšil?**    
     
-Napište 3 lidem z cílovky. Tak máte šanci se dozvědět, jak působíte navenek, očima člověka, kterého hledáte.
+Napište 3 lidem z cílovky. Tak máte šanci se dozvědět, jak působíte navenek &ndash; očima člověka, kterého hledáte.
 
        
 ### Svlékněte se
@@ -59,17 +59,17 @@ Ukažte, jak to doopravdy děláte. Důkaz místo slibů.
 
 **Děláte open-source?** Ven s ním. Vím, že Skrz, Jobs, Slevomat, PeckaDesign nebo Shopsys mají balíčky na Githubu. Bohužel, ani u jednoho z inzerátů jsem odkaz nenašel.
 
-Více informací mi může dát jenom náhled do zdrojáků aplikace. **Open-source je velmi podceňovaný hiring nástroj.  **
+Více informací mi může dát jenom náhled do zdrojáků aplikace. **Open-source je velmi podceňovaný hiring nástroj.**
     
 ### Odlište se
 
-Prodejte své odlišnosti. Proto k vám lidi jdou, ne protože stejně jako ostatní děláte v PHP, Symfony, Nette a Doctrine. Taková informace by tam měla být (nejlíp v rámci open-source), ale určitě ne na předních místech.
+Prodejte své odlišnosti. Proto k vám lidi jdou, ne protože stejně jako ostatní děláte v PHP, Symfony, Nette a Doctrine. Taková informace by tam měla být, ale určitě ne na předních místech.
 
 ### Příklady přitažlivých odlišností
 
 Znám firmy, které:
 
-- **Každý měsíc mají půldenní školení** - dobrovolné a na přání programátorů! 
+- **Každý měsíc mají půldenní školení** - dobrovolné a na přání programátorů.
 
 - Znám taky **„každý měsíc máme půldenní školení“**. To je ale povinné a zadání volí ředitel nebo jiné oddělení. Není větší pain, než být na školení „Jak dělat marketing na Instagramu“, když se chci naučit škálovat výkon přes sharding serverů. 
 
@@ -77,11 +77,11 @@ Znám firmy, které:
 - **Každý poslední pátek v měsící dávají programátorům možnost refaktorovat** jakoukoliv část kódu chtějí.
        
 
-## Na velikosti a věku nezáleží
+### Na velikosti a věku nezáleží
  
 Pojmy jako junior a senior mi nedávají smysl. Proč?
  
-Představte si, že máme 2 lidi, hledající práci.
+Představte si, že máme 2 lidi, kteří hledají práci:
 
 A. Senior může být **vývojář s 10 lety praxe**, zná 1 framework, který se učil sám a nechce zkoušet druhý, protože ten jeden mu stačí. 
 
@@ -89,24 +89,26 @@ B. Junior může být **19letý borec** před výškou, který říká, že ješ
 
 **Koho byste vzali?**
 
-A teď si vemzměte, že do inzerátu napíšte *Senior*. Který z nich se vám přihlásí? Lidé se podceňují a o programátorech to platí desetinásob.
+A teď si vemzměte, že do inzerátu napíšte *Senior*. Který z nich se vám přihlásí? Lidé se podceňují a o programátorech to platí desetinásob. Myslete na to.
 
 <img src="/assets/images/posts/2017/job-offers/attitude.jpg" class="thumbnail" alt="Attitude for skill">
 
 Zmínil jsem všechno, co jsem chtěl, tak se teď pojďme podívat na konkrétní inzeráty.
 
 
-## Co zlepšit na [Jobs.cz](http://lmc.jobs.cz/pridej-se-k-nam/detail/?id=G2-1151391350-aden_brand0&rps=186) 
+## Co zlepšit na Jobs.cz 
+
+Konkrétně na [tomto inzerátu](http://lmc.jobs.cz/pridej-se-k-nam/detail/?id=G2-1151391350-aden_brand0&rps=186).
 
 ### Líbí se mi
 
 - *A co tě u nás bude dělat šťastným?* - Parádní nadpis!
 
-- „Místo CV nám klidně můžeš poslat jen link na tvůj profil na LinkedIn“ - super, použití běžného nástroje pro CV! Překvapuje mě, jak málo vidím.
+- „Místo CV nám klidně můžeš poslat jen link na tvůj profil na LinkedIn“ - super, použití běžného nástroje pro CV! Překvapuje mě, jak málo to vidím.
 
 - Děláte open-source zaměřený na testování - někam bych tam [Stewarda](https://github.com/lmc-eu/steward) hodil.
 
-- V práci máte velkou monitorovací obrazovku. Tu bych do inzerátu přidal, určitě zaujme a ujistí, že to s testy myslíte vážně. Jinde říkají, že testují, ale když chcete vidět testy, tak nějak nejsou. 
+- V práci máte velkou monitorovací obrazovku. Tu bych do inzerátu přidal. Určitě zaujme a ujistí, že to s testy myslíte vážně. Jinde říkají, že testují, ale když chcete vidět testy, tak nějak nejsou. 
 
 
 ### Změnil bych
@@ -118,7 +120,9 @@ Zmínil jsem všechno, co jsem chtěl, tak se teď pojďme podívat na konkrétn
 - Cokoliv po „spíš“ působí nejistě a nejasně. Upravil bych to do jednoznačného sdělení. 
 
 
-## Co zlepšit na [Skrz.cz](https://www.startupjobs.cz/nabidka/5101/senior-php-developer-ka-chces-proniknout-do-automatizace-v-projektu-postavenem-na-symfony)
+## Co zlepšit na Skrz.cz
+
+Konkrétně na [tomto inzerátu](https://www.startupjobs.cz/nabidka/5101/senior-php-developer-ka-chces-proniknout-do-automatizace-v-projektu-postavenem-na-symfony)
 
 ### Líbí se mi
 
@@ -147,11 +151,9 @@ Na závěr na odlehčení 2 inzeráty, které se mi líbí.
 
 Tento inzerát je 7 měsíců starý a najdeš ho na [www.delejcoumis.cz](http://www.delejcoumis.cz/).
 
-Co je killer? **Jeho zdrojáky jsou open-source** - [mrkni](https://github.com/peckadesign/DelejCoUmis.cz). 
+Co je killer? **Jeho zdrojáky jsou open-source** - [mrkni](https://github.com/peckadesign/DelejCoUmis.cz). To mi umožní si hned a snadno zjistit, jaká je úroveň kódu - jestli mu vůbec rozumím nebo jestli se tam mám co naučit. A v [`composer.json`](https://github.com/peckadesign/DelejCoUmis.cz/blob/master/composer.json) najdu, co používají za technologie.
 
-To mi umožní si hned a snadno zjistit, jaká je úroveň kódu - jestli mu vůbec rozumím nebo jestli se tam mám co naučit. A v [`comopser.json`](https://github.com/peckadesign/DelejCoUmis.cz/blob/master/composer.json) najdu, co používají za technologie.
-
-A **tohle je 100% výhoda proti všem ostatím** inzerátům, které jsem tu zmínil:
+A **tohle je 100% výhoda proti všem ostatním** inzerátům, které jsem tu zmínil:
 
 <img src="/assets/images/posts/2017/job-offers/naucime-te.png" class="thumbnail" alt="Pečujeme">
 
@@ -160,7 +162,7 @@ A **tohle je 100% výhoda proti všem ostatím** inzerátům, které jsem tu zm�
 
 Zrovna včera mi padl do oka [tento inzerát](https://www.startupjobs.cz/en/offer/3319/php-developer-lidskasila-cz):
 
-Barvené a s logy - nemusím luštit text, jen proskenuju loga. Je to stručné a čtivé - mám z toho pocit, že se s nimi půjde domluvit na čemkoliv a že mě ocení 
+Barevné a s logy - nemusím luštit text, **jen proskenuju loga**. Je to stručné a čtivé - mám z toho pocit, že se s nimi **půjde domluvit na čemkoliv a že mě ocení**. 
 
 Vůbec jsem netušil, že Startupjobs.cz **umožňují stylování barev*. Divím se, že tohle je 1. inzerát, který toho využívá.
 
