@@ -2,7 +2,7 @@
 layout: post
 title: "Jak psát zajímavé inzeráty pro ajťáky"
 perex: '''
-    Už pár let sleduji pracovní PHP trh z pozice programátorů i z pohledu firem. S oběma stranami mám dobrý vztah. Tuším, co potřebují a co je trápí. <strong>Vidím, že se navzájem chtějí, jen komuniace trochu vázne</strong>.<br><br>Původně z toho měl být feedback na inzeráty Jobs.cz a Skrz.cz. Při jejich čtení mě ale napadlo <strong>spoustu dalších tipů, o které se chci podělit</strong>. Dnes se mrkneme na jejich inzeráty a jak je dělat líp.
+    Už pár let sleduji pracovní PHP trh z pozice programátorů i z pohledu firem. S oběma stranami mám dobrý vztah. Tuším, co potřebují a co je trápí. <strong>Vidím, že se navzájem chtějí, jen komuniace trochu vázne</strong>.<br><br>Původně z toho měl být feedback na inzeráty Jobs.cz a Skrz.cz. Při jejich čtení mě ale napadlo <strong>spoustu dalších tipů, o které se chci podělit</strong>.
 '''
 reviewed_by: [3, 4]
 ---
@@ -14,16 +14,13 @@ reviewed_by: [3, 4]
 
 Celý inzerát je jedno svádění. Na konci musíte kandidáta dostat do postele, tak aby se mu to líbilo. Až tak, že vám druhý den ráno napíše. 
  
-## Jak na to? Není to o vás, je to o tom, kdo hledá
+## Není to o vás, je to o tom, kdo vás hledá
 
-Spousta inzerátu je psáno spíše jako sebeprezentace firmy - co umí, v čem je nejlepší a co dokázala. **Lidi čtou, protože chtějí něco pro sebe** - informace, peníze nebo zábavu. **Co ze článku nebo pracovní pozice budou mít, hledají hned na začátku. Dejte jim to do první třetiny!**
-
-Tip na to, jak lépe psát najdeš tady: 
-[3 minižíky od Otty](http://ottocopy.cz/ebook-zdarma) - hledej sekci *O nás*.
+Spousta inzerátu je psáno spíše jako sebeprezentace firmy - co umí, v čem je nejlepší a co dokázala. **Lidi čtou, protože chtějí něco pro sebe** - informace, peníze nebo zábavu. **Co z pracovní pozice budou mít, hledají hned na začátku. Dejte jim to do první třetiny!**
 
 ### Buďte upřímní
 
-Uvádějte jen technologie, které opravdu máte. Ne ty, které plánujte nebo chcete, ale ty které opravdu máte. Když vám na pohovor přijde člověk, který se těší na PHP 7, a vy ho budete teprve nasazovat (kdo ví kdy), začne mít pocit, že vaříte z vody.
+Uvádějte jen technologie, které opravdu máte. Ne ty, které plánujte nebo chcete, ale ty které opravdu máte. Když vám na pohovor přijde člověk, který se těší na PHP 7, a vy ho budete teprve nasazovat, začne mít pocit, že vaříte z vody.
 
 **Text musí být upřímný, aby čtenář dostal to, co očekává. Jedině tak vám bude věřit a vrátí se k vám.**
 
@@ -62,9 +59,9 @@ Ukažte, jak to doopravdy děláte. Důkaz místo slibů.
 
 Více informací mi může dát jenom náhled do zdrojáků aplikace. **Open-source je velmi podceňovaný hiring nástroj.**
     
-### Odlište se
+### Prodejte své odlišnosti 
 
-Prodejte své odlišnosti. Proto k vám lidi jdou, ne protože stejně jako ostatní děláte v PHP, Symfony, Nette a Doctrine. Taková informace by tam měla být, ale určitě ne na předních místech.
+Proto k vám lidi jdou, ne protože stejně jako ostatní děláte v PHP, Symfony, Nette a Doctrine.
 
 ### Příklady přitažlivých odlišností
 
@@ -130,7 +127,7 @@ Konkrétně na [tomto inzerátu](https://www.startupjobs.cz/nabidka/5101/senior-
 - Líbí se mi tučně zvýrazněné důležité texty, nadpisy působí přehledně a odkazy lákají ke klinutí.
 
 - Pěkně a konkrétně rozepsané, co můžu získat:
-    - „společné páteční snídaně“ &dash; mňam - k tomu fotku a už mě máte :).
+    - „společné páteční snídaně“ &dash; mňam - k tomu fotku a už mě máte
     - „ovoce, zelenina, káva a čaj volně dostupné :)“ 
     - „jistotu, domácí prostředí, otevřený přístup, **otevřenou komunikaci**, **prostor k seberealizaci** i **vzdělání**, na kterém si hodně zakládáme“ - tučné body zní fakt dobře, klidně bych je rozepsal. Taky bych nezapomněl na vlastního hapiness managera. 
 
@@ -150,13 +147,13 @@ Na závěr na odlehčení 2 inzeráty, které se mi líbí.
 
 ### PeckaDesign jde do naha a ještě tě naučí
 
-Tento inzerát je 7 měsíců starý a najdeš ho na [www.delejcoumis.cz](http://www.delejcoumis.cz/).
+Tento inzerát najdeš ho na [www.delejcoumis.cz](http://www.delejcoumis.cz/).
 
-Co je killer? **Jeho zdrojáky jsou open-source** - [mrkni](https://github.com/peckadesign/DelejCoUmis.cz). To mi umožní si hned a snadno zjistit, jaká je úroveň kódu - jestli mu vůbec rozumím nebo jestli se tam mám co naučit. A v [`composer.json`](https://github.com/peckadesign/DelejCoUmis.cz/blob/master/composer.json) najdu, co používají za technologie.
+Co je killer? [Jeho zdrojáky jsou open-source](https://github.com/peckadesign/DelejCoUmis.cz). To mi umožní si snadno zjistit, jaká je úroveň kódu - jestli mu rozumím nebo jestli se tam mám co naučit. A v [`composer.json`](https://github.com/peckadesign/DelejCoUmis.cz/blob/master/composer.json) najdu používané technologie.
 
-A **tohle je 100% výhoda proti všem ostatním** inzerátům, které jsem tu zmínil:
+A **tohle je 100% výhoda proti všem ostatním inzerátům**:
 
-<img src="/assets/images/posts/2017/job-offers/naucime-te.png" class="thumbnail" alt="Pečujeme">
+<img src="/assets/images/posts/2017/job-offers/naucime-te.png" class="thumbnail">
 
 
 ### Lidská Síla hledá posilu
@@ -165,7 +162,7 @@ Zrovna včera mi padl do oka [tento inzerát](https://www.startupjobs.cz/en/offe
 
 Barevné a s logy - nemusím luštit text, **jen proskenuju loga**. Je to stručné a čtivé - mám z toho pocit, že se s nimi **půjde domluvit na čemkoliv a že mě ocení**. 
 
-Vůbec jsem netušil, že Startupjobs.cz **umožňují stylování barev*. Divím se, že tohle je 1. inzerát, který toho využívá.
+Netušil jsem, že Startupjobs.cz umožňují stylování barev. Divím se, že tohle je 1. inzerát, který toho využívá.
 
 > „Jeden obrázek řekne více než tisíc slov.“ 
 
@@ -174,7 +171,6 @@ Vůbec jsem netušil, že Startupjobs.cz **umožňují stylování barev*. Diví
 Co jste z něj poznali? Já odhaduju, že:
 
 - projekt jde s dobou &ndash; PHP 7.1 vyšlo v prosinci 2016
-- se někdo zajímá o ekosystém PHP a ví, že s nullable types bude kódování větší zábava 
 - je tam někdo, kdo ví, že první stable verze není tolik stable, protože není otestovaná v praxi
 
 
