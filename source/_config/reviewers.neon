@@ -1,7 +1,12 @@
 reviewers:
-	1:
-		name: Pavel Janda
-		github_username: "@paveljanda"
-	2:
-		name: "Martina Hynková"
-		github_username: "@mahyn89"
+    1:
+        name: Pavel Janda
+        github_username: "@paveljanda"
+    2:
+        name: "Martina Hynková"
+        github_username: "@mahyn89"
+    3:
+        name: "Petr Vácha"
+        github_username: "@petrvacha"
+    4:
+        name: "Kačka Bláhová"
