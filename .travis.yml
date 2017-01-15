@@ -3,24 +3,29 @@ language: php
 php: 7.0
 
 branches:
-  only:
-    - master
+    only:
+        - master
 
 env:
-  global:
-    # Go to: Gitub User => Settings => Personal Access Token => Generate New Token
-    # Select "Repo" scope
-    
-    # Download Travis CLI tool locally: https://github.com/travis-ci/travis.rb#installation
-    # Run in shell in repository root: travis encrypt GH_TOKEN=<code>
+    global:
+        # Go to: Gitub User => Settings => Personal Access Token => Generate New Token
+        # Select "Repo" scope
 
-    # If repo is not recognized by travis api, go to https://travis-ci.org/<repository-slug>, like githu.com/<repository-slug>
-    # And add it there; like you do when you want to run tests on some repository
-    - secure: f34vQfFKWjJC6RAT1652qF79185ghDpvQbpSBvdJ7aZC5dx2tE7LA+pm7BhDhJdaPslUYIAVW90TGV2WoGL5+tT2HBNzCkdVJEEQ4QeulSMoEQnVs0RHz3YApo99x8zSNU8QT9q8C1Wo5fH+vYtCufsUK4ahoUCgsM8Ey6pkKMfedNpbJ6gLuovgCWO5VlHBRdK96xRmTVfPD4cGlYilmsjeNWrV89aK4Wa958q+2n/tfH07U2onLFeuBrGlqbZ/8co8fWNE0zLAUVnUvrwSZE3MP0JUx4om9Cq3WzCln5jLs+u7CVCJUD49J9V9zw4llgTZGnefgaBBqbDpZO0RpppyFgiV4I6QtlDU7fcvAqb5GJgJUqsOpfYZ538WVPmbMoNl0Nw8I/maJmX2HgWuI524dtviJC8O52DY7b+Q/uX76cG4JCavvA8RImK/JLIzpqHu1cdLu5tni0Og1fLFarMNdpcFzGLXpHfi0I23u1iiFMLgxKp5+e8QmfOX9AvGhThkcK1nxKW1lXONcG058YZksQiDVB89LssamCXTQUjtIF3qqDPFmeGKbpjWgnBm4jdU9JmQVwBlJ2YQuSa1G/YXD2ntphQ6jguqc4hdMhYClICO+vqKS+3IUX6r//mOt1yaf0fS6nKL5LIvy6mzKlJc2GpMKcmazovUmOU6Pa0=
+        # Download Travis CLI tool locally: https://github.com/travis-ci/travis.rb#installation
+        # Run in shell in repository root: travis encrypt GH_TOKEN=<code>
+
+        # If repo is not recognized by travis api, go to https://travis-ci.org/<repository-slug>, like githu.com/<repository-slug>
+        # And add it there; like you do when you want to run tests on some repository
+        - secure: f34vQfFKWjJC6RAT1652qF79185ghDpvQbpSBvdJ7aZC5dx2tE7LA+pm7BhDhJdaPslUYIAVW90TGV2WoGL5+tT2HBNzCkdVJEEQ4QeulSMoEQnVs0RHz3YApo99x8zSNU8QT9q8C1Wo5fH+vYtCufsUK4ahoUCgsM8Ey6pkKMfedNpbJ6gLuovgCWO5VlHBRdK96xRmTVfPD4cGlYilmsjeNWrV89aK4Wa958q+2n/tfH07U2onLFeuBrGlqbZ/8co8fWNE0zLAUVnUvrwSZE3MP0JUx4om9Cq3WzCln5jLs+u7CVCJUD49J9V9zw4llgTZGnefgaBBqbDpZO0RpppyFgiV4I6QtlDU7fcvAqb5GJgJUqsOpfYZ538WVPmbMoNl0Nw8I/maJmX2HgWuI524dtviJC8O52DY7b+Q/uX76cG4JCavvA8RImK/JLIzpqHu1cdLu5tni0Og1fLFarMNdpcFzGLXpHfi0I23u1iiFMLgxKp5+e8QmfOX9AvGhThkcK1nxKW1lXONcG058YZksQiDVB89LssamCXTQUjtIF3qqDPFmeGKbpjWgnBm4jdU9JmQVwBlJ2YQuSa1G/YXD2ntphQ6jguqc4hdMhYClICO+vqKS+3IUX6r//mOt1yaf0fS6nKL5LIvy6mzKlJc2GpMKcmazovUmOU6Pa0=
 
 before_script:
-  - composer update
+    - composer update
 
 script:
-  - vendor/bin/statie generate
-  - vendor/bin/statie push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
+    # test that website is generated
+    - vendor/bin/statie generate
+    # re-build website when on master only
+    - |
+      if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
+          vendor/bin/statie push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
+      fi
