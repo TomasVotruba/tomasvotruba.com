@@ -39,7 +39,7 @@ Bez větších potíží na vysoké **snadno získáš 3 roky času**. Nájem a 
 - **ochutnej rozmanitost zvyků, kterou ti přinesou vrstevníci z jiných měst či zemi** 
 - **riskuj, nikdy nebude neúspěch levnější** - s přítelkyní, ženou, firmou, smlouvou, full-time prací, dítětem nebo hypotékou už to nebude zadarmo
 
-Já tohle využil tak, že jsem při výšce začal podnikat. Kde jsem riskoval nejvíc? **Začal jsem si říkat o větší peníze**, než vrstveníci. Riskoval jsem nezaměstnanost, ale to mi mohlo být jedno (nebylo, byl jsem strašně vystrašenej, že mě odmítnou). Kdybych měl velké měsíční náklady, které musím zaplatit, určitě bych si to netroufnul. Paradoxní, že?
+Já tohle využil tak, že jsem při výšce začal podnikat. Kde jsem riskoval nejvíc? **Začal jsem si říkat o větší peníze**, než vrstevníci. Riskoval jsem nezaměstnanost, ale to mi mohlo být jedno (nebylo, byl jsem strašně vystrašenej, že mě odmítnou). Kdybych měl velké měsíční náklady, které musím zaplatit, určitě bych si to netroufnul. Paradoxní, že?
 
 Díky tomu jsem se naučil, **že cena je smluvní**. Jak se domluvíme, taková bude. Když se domluvíme na 100 Kč/hod., tak to tak bude. Když se domluvíme na 800 Kč/hod., tak to tak bude.
 
@@ -51,7 +51,7 @@ V prváku budeš zažívat hodně změn, kterým budeš muset věnovat čas a ú
 
 ## 4. Měj školu jako jednu z možností
 
-Spousta mých vrstveníku se věnovalo 90 % času škole, protože neměli výrazné boční zájmy.
+Spousta mých vrstevníků se věnovalo 90 % času škole, protože neměli výrazné boční zájmy.
 Zbytečně.
 
 Je to podobně jako s prací:
@@ -72,7 +72,7 @@ Trvalo mi asi 1,5 roku, než jsem pochopil, že známka opravdu nevypovídá o m
 
 Stejně jako IQ je jen ukazatel schopnosti dosáhnout vysokého skóre v IQ testu, je známka ukazatel schopnosti uspět v daném testu.
 
-Zvaž, co je pro tebe důležité a jestli těch 60 % energie chceš investovat do **zvyšování písmenek a čísel v databázi nebo do rozvojete sebe sama*.
+Zvaž, co je pro tebe důležité a jestli těch 60 % energie chceš investovat do **zvyšování písmenek a čísel v databázi nebo do rozvoje sebe sama*.
 
 
 ## 6. Na vysoké škole jsou vyučení učitelé, ne lidé z praxe
@@ -91,7 +91,7 @@ To všechno znamená...
  
 Čekal jsem, že se naučím něco aktuálního z oboru, kterému se chci věnovat. **Dostalo se vzdělání spíše v historii mého oboru.**
 
-Webové technologiie byly zakázané téma. To nevadí, že na [PHP jede 82 % webů](https://w3techs.com/technologies/details/pl-php/all/all), budeš se učit elektrické obvody a programování procesorů.
+Webové technologie byly zakázané téma. To nevadí, že na [PHP jede 82 % webů](https://w3techs.com/technologies/details/pl-php/all/all), budeš se učit elektrické obvody a programování procesorů.
 
 Tento *know-how-lag* je ještě větší než na základní a střední škole. Pro aktuální informace musíš na internet nebo mezi lidi.
 
