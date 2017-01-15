@@ -65,8 +65,8 @@ Na to navazuje...
  
 Nebo taky [Paretovo pravidlo](https://cs.wikipedia.org/wiki/Paret%C5%AFv_princip).
 
-**Abys prošel, stačí 20 % práce**
-**Abys prošel na A, potřebuje 80 % práce.**
+- **Abys prošel, stačí 20 % práce**
+- **Abys prošel na A, potřebuje 80 % práce.**
 
 Trvalo mi asi 1,5 roku, než jsem pochopil, že známka opravdu nevypovídá o mé inteligenci, společenském postavení a schopnostech. Je to jen číslo z nějakého testu. Tím to končí.
 
