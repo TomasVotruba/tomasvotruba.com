@@ -51,7 +51,7 @@ V prváku budeš zažívat hodně změn, kterým budeš muset věnovat čas a ú
 
 ## 4. Měj školu jako jednu z možností
 
-Spousta mých vrstevníků se věnovalo 90 % času škole, protože neměli výrazné boční zájmy.
+Spousta mých vrstevníků věnovalo 90 % času škole, protože neměli výrazné boční zájmy.
 Zbytečně.
 
 Je to podobně jako s prací:
