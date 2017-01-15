@@ -14,11 +14,11 @@ Disclaimer: Moje závěry plynou ze zkušeností ze studia v Brně na FIT VUT a 
 
 Často jsem dostával informace od rodičů (mamka výšku má) nebo od učitelů na střední (tam ji mají všichni). **To je jako se ptát na náboženství křesťanského kněze**. Nejspíš bude vědět hodně o křesťanství, ale o budhismu ti sám od sebe neřekne.
 
-Tomu se říká [Confirmtion Bias](https://cs.wikipedia.org/wiki/Konfirma%C4%8Dn%C3%AD_zkreslen%C3%AD) - lídé mají tendenci přijímat ty informace, které podporují jejich vlastní názor. Bacha na něj :) 
+Tomu se říká [Confirmation Bias](https://cs.wikipedia.org/wiki/Konfirma%C4%8Dn%C3%AD_zkreslen%C3%AD) - lidé mají tendenci přijímat ty informace, které podporují jejich vlastní názor. Bacha na něj :) 
 
 ## 2. Najdi si zkušené lidi z oboru, který tě baví 
 
-Já tohle neudělal, protože jsem nikoho takového neznal. Nebo jsem netušil, že je to důležité. Dneska bych šel na Facebook a vygooglil si "podnikatel php programování" a pozval první 3 výsledky na kafe.
+Já tohle neudělal, protože jsem nikoho takového neznal. Nebo jsem netušil, že je to důležité. Dneska bych šel na Facebook a vyhledal si "podnikatel php programování" a pozval první 3 výsledky na kafe.
    
 ### Kde takové lidi najít?
  
@@ -76,24 +76,21 @@ Zvaž, co je pro tebe důležité a jestli těch 60 % energie chceš investovat 
 
 ## 6. Na vysoké škole jsou vyučení učitelé, ne lidé z praxe
 
-Co mě nejvíc mrzí je, že na škole učí učitelé, To jsou lidé, kteří byli dříve doktoranti, ještě dříve magistři, bakaláři, studenti... jako ty. Víš, kam tím mířím? 
- 
-Často mají minimální praxi z oboru, který učí.
+Co mě nejvíc mrzí je, že na škole učí učitelé. Lidé, kteří na škole zůstali už od svých studentských let. Často pak mají minimální praxi z oboru, který učí. Jak to vypadlo?
 
 O počítačích nás neučil člověk, který navrhuje efektivní procesory...
 O lidské psychice nás neučil terapeut s 10letou praxí, který pomohl stovkám lidí...
 
-..ale profesor, co píše výzkumy, opravuje písemky a jeho hlavní praxí je přednášení a vedení seminářů.
-
-Jak fungují solární panely? Co robotika? Vesmírný výzkum? Jak se dá vybudovat důvěra? Jak si zlepšit empatii? To si musíš najít doma sám.
+...ale profesor, co píše výzkumy, opravuje písemky a jeho hlavní praxí je přednášení a vedení seminářů.
 
 To všechno znamená...
 
+
 ## 7. Připrav se na know-how-lag
  
-Čekal jsem, že se naučím něco aktuálního z oboru, do kterého chci vystoupit. **Dostalo se vzdělání spíše v historii mého oboru.**
+Čekal jsem, že se naučím něco aktuálního z oboru, kterému se chci věnovat. **Dostalo se vzdělání spíše v historii mého oboru.**
 
-Webové technologiie byly zakázané téma. To nevadí, že na [PHP jede 82 % webů](https://w3techs.com/technologies/details/pl-php/all/all), budeš se učit elektrické obdovy a programování procesorů.
+Webové technologiie byly zakázané téma. To nevadí, že na [PHP jede 82 % webů](https://w3techs.com/technologies/details/pl-php/all/all), budeš se učit elektrické obvody a programování procesorů.
 
 Tento *know-how-lag* je ještě větší než na základní a střední škole. Pro aktuální informace musíš na internet nebo mezi lidi.
 
