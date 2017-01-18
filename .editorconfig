@@ -1,11 +1,9 @@
 root = true
 
-[*.{php,neon,yml,yaml}]
+[*.{css,html,js,json,latte,neon,php,twig,xml,yaml,yml}]
 charset = utf-8
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
-
-[*.{js,json,latte,html,css}]
 indent_style = space
 indent_size = 4
