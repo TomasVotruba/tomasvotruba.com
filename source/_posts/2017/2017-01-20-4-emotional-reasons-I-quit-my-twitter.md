@@ -85,12 +85,14 @@ That's why I switched from Tweetdeck-hashtag-group-following based to regular ne
 I started to follow: 
 
 - [PHP Annotated Monthly](https://info.jetbrains.com/PHP-Annotated-Subscription.html) from JetBrains (PHPStorm guys)
-- PHP Weekly
-- [Web Development Reading List](https://wdrl.info/) (thanks Jakub Kratina) 
-- ocean circle sth shit
-- medium v méidíích, ihned
-- lenni krsová
+- [PHP Weekly](http://www.phpweekly.com/)
 - [Měsíčník pro Péhápkaře](pehapkari.cz/#newsletter)
+- [Web Development Reading List](https://wdrl.info/) (thanks [Jakub Kratina](http://jakubkratina.cz/) for the tip 
+- [The Open Circle](http://marketmeditations.com/theopencircle/)
+- [Jan Růžička - Týden v Médiích](https://www.respekt.cz/echo/neco-konci-neco-zacina)
+- [Eliška Vyhnánková](http://vyhnankova.cz/)
+
+And it's much better.
 
 
 ### I Love Experiments
