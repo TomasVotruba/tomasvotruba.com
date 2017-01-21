@@ -95,7 +95,7 @@ I started to follow:
 And it's much better.
 
 
-### I Love Experiments
+## I Love Experiments
 
 Leo Babauta happily dropped Twitter in 2013. In [Simplify the internet](Simplify the Internet) he wrotes
 
@@ -112,13 +112,13 @@ Followed by [a year later reflection](http://www.stevepavlina.com/blog/2015/07/o
 I love social experiments. After polyphasic sleep, switching main job focus after 8 years, having a baby while being infertile, dropping from university, moving to Prague after settling down in Brno, [droping LinkedIn](todo linkg) and moving completely alone for first time, I really look forward to this one.
 
 
-### Where do I find you then?
+## Where do I find you then?
 
 As you can see I love newsletters. I'll be starting my soon and I'm still on Facebook.
 Both you can find on my website [tomasvotruba.cz](https://www.tomasvotruba.cz/#socials).
 
 
-# What about Your Socials Experiments?
+## What about Your Socials Experiments?
 
 I've already asked, why and what social networks do you use. 
 
