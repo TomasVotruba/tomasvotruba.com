@@ -8,7 +8,7 @@ perex: '''
 reviewed_by: [2]
 ---
 
-Disclaimer: Moje závěry plynou ze zkušeností ze studia v Brně na FIT VUT a FSS MUNI a kolem 300 rozhovorů se spolužáky a (po)vysokoškoláky z Brna, Prahy a Liberce.  
+**Disclaimer: Moje závěry plynou ze zkušeností ze studia v Brně na FIT VUT a FSS MUNI a kolem 300 rozhovorů se spolužáky a (po)vysokoškoláky z Brna, Prahy a Liberce. Pokud je to na tvé škole jinak, budu rád za tvůj pohled a tipy.**   
 
 
 ## 1. Zeptej se někoho, kdo na vysokou nešel
