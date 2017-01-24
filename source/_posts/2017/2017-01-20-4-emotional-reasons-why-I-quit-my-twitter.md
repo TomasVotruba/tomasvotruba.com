@@ -9,9 +9,13 @@ reviwed_by: [2, 5, 6, 7]
 ---
 
 Before I started this article, I read 
-[I Quit Twitter And My Life Got Better. Here's Why I'm Going Back](http://www.forbes.com/sites/laurenorsini/2015/11/11/i-quit-twitter-and-my-life-got-better-heres-why-im-going-back). In the article Lauren describes what was it like to have 1 week without Twitter and why she got back. If you use Twitter, read it too. There are some great insights on autopilot behavior. 
+[I Quit Twitter And My Life Got Better. Here's Why I'm Going Back](http://www.forbes.com/sites/laurenorsini/2015/11/11/i-quit-twitter-and-my-life-got-better-heres-why-im-going-back). In the article Lauren describes **what was it like to have 1 week without Twitter and why she got back**. If you use Twitter, I recommend you reading it. There are some great insights on autopilot behavior.
+ 
+Now here is my story...
 
-So, I felt bad using Twitter last few months. I wasn't sure if I really want to quit Twitter, so I tried small experiments: 
+I felt bad using Twitter last few months. **I wasn't sure** if I really want to quit Twitter. 
+
+### I Tried Small Experiments Hoping To Get Better
 
 - I un-followed people down to zero.
 - I limited my time there to 10 minutes in the evening. 
@@ -29,7 +33,7 @@ I really tried, but none of these made me feel significantly better. So last exp
 
 *Interesting. This is very similar to my approach to crisis in relationships.*
 
-What were those deal breakers that tear us apart?
+**What were those deal breakers that tear us apart?**
 
 
 ## 1. I was Addicted - Give me my Dopamine Shot!
