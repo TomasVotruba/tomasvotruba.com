@@ -58,13 +58,11 @@ I know I can't do something for only 50 %. I either do it close to 100 % or go a
 - I have read many how-to-tweet articles.
 - I tweeted only valuable and positive stuffs. Not in relation to reality, really. 
 
-Few month later I realized **I'm turning into news machine**.
+Few month later I realized **I'm turning into news machine**. So I asked my followers, [how do you use Twitter](https://twitter.com/VotrubaT/status/816753682482085896)?
 
-So I asked my followers, [how do you use Twitter](https://twitter.com/VotrubaT/status/816753682482085896)?
+I found there are many news channel that already cover this field.
 
-I found there are many news channel so field is already covered.
-
-Second, I found I have reactive-response syndrome: for every message I have to have an answer. It's close to [fear of missing out](https://zenhabits.net/miss/). 
+Second, **I found I have reactive-response syndrome: for every message I have to have an answer**. It's close to [fear of missing out](https://zenhabits.net/miss/). 
 
 That included conversations under tweets, checking Twitter often for new answers, and trials to explain complex problems and miss-understandings under 140 characters. 
 
@@ -72,16 +70,12 @@ That included conversations under tweets, checking Twitter often for new answers
 ## 3. It's Boring
 
 Twitter innovated its service maybe twice since I used it, not much news. Also social adaptions is slow - not many new people are joining Twitter. 
-ě
-I was trying to find fun in service that didn't gave it to me.
- 
-It's like seeking a passion in relationship with woman I'm not attracted to.
 
+I was trying to find fun in service that didn't gave it to me. **It's like seeking a passion in relationship with woman I'm not attracted to.**
 
 What I like about Facebook, Github or PHPStorm is that **they evolve and innovate**. Sometimes I like it, sometimes I don't, but **I know they are trying to be better**.
   
 If Twitter was a person, it would be fearful virgin in his 30ties sticking to first job with no girlfriend.  
-
  
 
 ## 4. I already Love Somebody Else
@@ -96,11 +90,10 @@ I started to follow:
 
 - [PHP Annotated Monthly](https://info.jetbrains.com/PHP-Annotated-Subscription.html) from JetBrains (PHPStorm guys)
 - [PHP Weekly](http://www.phpweekly.com/)
-- [Měsíčník pro Péhápkaře](pehapkari.cz/#newsletter)
+- [Měsíčník pro Péhápkaře](https://pehapkari.cz/#newsletter)
 - [Web Development Reading List](https://wdrl.info/) (thanks [Jakub Kratina](http://jakubkratina.cz/) for the tip 
 - [The Open Circle](http://marketmeditations.com/theopencircle/)
-- [Jan Růžička - Týden v Médiích](https://www.respekt.cz/echo/neco-konci-neco-zacina)
-- [Eliška Vyhnánková](http://vyhnankova.cz/)
+- [Jan Růžička - Týden v Médiích](https://www.respekt.cz/echo/neco-konci-neco-zacina) (in the bottom)
 - [Pink Cast](http://www.danpink.com/pinkcast/)
 
 And it's much better.
@@ -108,11 +101,11 @@ And it's much better.
 
 ## I Love Experiments
 
-Leo Babauta happily dropped Twitter in 2013. In [Simplify the internet](Simplify the Internet) he wrotes
+Leo Babauta happily dropped Twitter in 2013. In [Simplify the internet](https://zenhabits.net/unline/) he wrotes:
 
 > If you’re going to do Facebook, don’t do other ones too. You can quit Twitter and Instagram. Really you can!
 
-Reading this first time in December, I felt it's the right thing to do, yet brain opposing with "that is insane!".
+Reading this first time in December, I felt it's the right thing to do, yet brain was opposing with "that is insane!".
 
 My great inspiration from polyphasic sleep days Steve Pavlina [got social media dumped hard](http://www.stevepavlina.com/blog/2014/07/social-media-you-got-dumped/).
 
@@ -120,21 +113,21 @@ My great inspiration from polyphasic sleep days Steve Pavlina [got social media 
 
 Followed by [a year later reflection](http://www.stevepavlina.com/blog/2015/07/one-year-without-social-media/).
 
-I love social experiments. After polyphasic sleep, switching main job focus after 8 years, having a baby while being infertile, dropping from university, moving to Prague after settling down in Brno, [droping LinkedIn](todo linkg) and moving completely alone for first time, I really look forward to this one.
+**I love social experiments.** After [polyphasic sleep](https://psychologie.cz/serialy/polyfazicky-spanek/), switching main job focus after 8 years, having a baby while being infertile, dropping from university, moving to Prague after settling down in Brno, [dropping LinkedIn](/blog/2017/01/05/why-I-deleted-my-linkedin-account) and moving completely alone for the first time, **I really look forward to this one**.
 
 
-## Where do I find you then?
+### Where Do You Find Me?
 
-As you can see I love newsletters. I'll be starting my soon - be sure to [subscribe here](http://eepurl.com/cpKuMT). And I'm [still on Facebook](https://www.facebook.com/nauc.se.nette.symfony.a.doctrine) where I post weekly about programming and self-education tips.
+- As you can see I love newsletters. **I'll be starting my soon - [be sure to subscribe here](http://eepurl.com/cpKuMT).**
+ 
+- **And I'm [still on Facebook](https://www.facebook.com/nauc.se.nette.symfony.a.doctrine) where I post weekly about programming and self-education tips.**
 
 Both you can find on my website [tomasvotruba.cz](https://www.tomasvotruba.cz/#socials).
 
 
-## What about Your Socials Experiments?
+### What about Your Socials Experiments?
 
-I've already asked, why and what social networks do you use. 
-
-Now, I would like to know, **have you made any social network experiment?**
+I've already asked, why and what social networks do you use. Now, I would like to know, **have you made any social network experiment?**
 How did it go? Did you like that?
 
 I look forward to your answers!
