@@ -91,7 +91,6 @@ I started to follow:
 - [PHP Annotated Monthly](https://info.jetbrains.com/PHP-Annotated-Subscription.html) from JetBrains (PHPStorm guys)
 - [PHP Weekly](http://www.phpweekly.com/)
 - [Měsíčník pro Péhápkaře](https://pehapkari.cz/#newsletter)
-- [Web Development Reading List](https://wdrl.info/) (thanks [Jakub Kratina](http://jakubkratina.cz/) for the tip 
 - [The Open Circle](http://marketmeditations.com/theopencircle/)
 - [Jan Růžička - Týden v Médiích](https://www.respekt.cz/echo/neco-konci-neco-zacina) (in the bottom)
 - [Pink Cast](http://www.danpink.com/pinkcast/)
