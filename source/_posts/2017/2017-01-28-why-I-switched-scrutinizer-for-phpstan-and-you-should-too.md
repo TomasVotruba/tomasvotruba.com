@@ -33,7 +33,7 @@ I can use it for private packages. I can download it, extend it and write own ch
 
 
 
-For all these reasons I support [PHPStan on Patreon](https://www.patreon.com/phpstan). Try giving **50 % of your hourly rate** a month. It can mage a huge impact on PHP world.  
+For all these reasons I support [PHPStan on Patreon](https://www.patreon.com/phpstan). Try giving **50 % of your hourly rate** a month. It can make a huge impact on PHP world.
 
 
 ## How to Switch From Scrutinizer to PHPStan in 4 Steps
