@@ -2,6 +2,7 @@
 layout: post
 title: Poslechni si podcast o PHP a sebevzdělávání
 perex: ""
+redirect: true
 ---
 
 <!-- redirect to new page -->
