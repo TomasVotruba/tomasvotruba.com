@@ -90,7 +90,7 @@ This allowed me to **put PHPStan to action without any huge work**. I start with
 
 Next week, when I'm rested and full of joy, I can go to level 1, fix another 8 errors.
 
-I love this approach over traditional overwhelming "50 errors found. Fix them all or CI will keep failing.". That usually leads to removing the tool and to very long fixing process. I remember my long night hours with Scrutinizer just to get from code quality from 6 to 10.
+I love this approach over traditional overwhelming "500 errors found. Fix them all or CI will keep failing.". That usually leads to removing the tool and to very long fixing process. I remember my long night hours with Scrutinizer just to get from code quality from 6 to 10.
 
 
 ### Try It Out...
