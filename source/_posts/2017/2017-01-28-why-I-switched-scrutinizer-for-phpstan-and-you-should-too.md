@@ -12,7 +12,7 @@ lang: en
 ## What is PHPStan
 
 **PHPStan is a tool for static analysis of PHP code**. It's open source and free to use.
-You can read more about it in post with very true title - [PHPStan: Find Bugs In Your Code Without Writing Tests!](https://medium.com/@ondrejmirtes/phpstan-2939cd0ad0e3)
+You can read more about it in this post with very true title - [PHPStan: Find Bugs In Your Code Without Writing Tests!](https://medium.com/@ondrejmirtes/phpstan-2939cd0ad0e3)
 
 <img src="https://raw.githubusercontent.com/phpstan/phpstan/master/build/phpstan.gif" alt="PHPStan in action" class="thumbnail">
 
@@ -21,11 +21,11 @@ You can read more about it in post with very true title - [PHPStan: Find Bugs In
 
 ### It Is Open-Source
 
-**I can improve it, I can add an issue, I can see its development**. That's all I can't do in Scrutinizer. It used to be [open-source](https://github.com/scrutinizer-ci/scrutinizer) but got hidden. That's was a huge step back.
+**I can improve it, I can add an issue, I can see its development**. I can't do anything like that with Scrutinizer. It used to be [open-source](https://github.com/scrutinizer-ci/scrutinizer) but got closed. That's was a huge step back.
 
 ### It Focuses Just on PHP
 
-**It's PHP tool that checks PHP code.** Scrutinizer, on the other hand, focuses on various languages - Python, Ruby, soon Java and Scala. That's definitelly a good direction, but not it if simple `composer install` command breaks and is not fixed for months.
+**It's a PHP tool that checks PHP code.** Scrutinizer, on the other hand, focuses on various languages - Python, Ruby, soon Java and Scala. That's definitely a good direction, but not if a simple `composer install` command breaks and is not fixed for months.
 
 ### I Can Control It
 
