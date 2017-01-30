@@ -25,9 +25,9 @@ You can read more about it in post with very true title - [PHPStan: Find Bugs In
 
 ### It Focuses just on PHP
 
-**It's PHP tool that checks PHP code.** Scrutinizer, on the other hand, focuses on various languages - Python, Ruby, soon Java and Scala. That's definitelly a good direction, but not it if simple `composer install` command breaks and is not fixed for months.   
+**It's PHP tool that checks PHP code.** Scrutinizer, on the other hand, focuses on various languages - Python, Ruby, soon Java and Scala. That's definitelly a good direction, but not it if simple `composer install` command breaks and is not fixed for months.
 
-### I Can Control It 
+### I Can Control It
 
 I can use it for private packages. I can download it, extend it and write own checks.
 
@@ -40,13 +40,13 @@ For all these reasons I support [PHPStan on Patreon](https://www.patreon.com/php
 
 ### 1. Disable Scrutinizer Code Rating
 
-Drop this from `.scrutinizer.yml`: 
+Drop this from `.scrutinizer.yml`:
 
 ```yaml
 checks:
     php:
-        code_rating: true 
-``` 
+        code_rating: true
+```
 
 ### 2. Add PHPStan dependency
 
@@ -67,7 +67,7 @@ This step is optional and it might seem weird seeing it for the first time, but 
 ```
 
 Now you can run with the same script, even if the settings changes (and it will):
- 
+
 ```bash
 composer phpstan
 ```
@@ -78,26 +78,26 @@ composer phpstan
 script:
   - composer phpstan
 ```
- 
+
 Commit and... push! Now you are running PHPStan on your open-source project. Congrats!
 
- 
+
 ## The One Thing I love about PHPStan
- 
+
 One last thing. You may have noticed the `level` option. What's that for? PHPStan has now 5 levels (in time of writing this article) - **1 = least strict, 5 = the most strict**.
- 
+
 This allowed me to **put PHPStan to action without any huge work**. I start with level 1, 12 errors were found and fixed them.
 
 Next week, when I'm rested and full of joy, I can go to level 2, fix another 8 errors.
-  
+
 I love this approach over traditional overwhelming "50 errors found. Fix them all or CI will keep failing.". That usually leads to removing the tool and to very long fixing process. I remember my long night hours with Scrutinizer just to get from code quality from 6 to 10.
 
 
 ### Try it out...
 
 ...on your open-source or local projects and let me know how you like it.
- 
-Happy coding! 
+
+Happy coding!
 
 
 
