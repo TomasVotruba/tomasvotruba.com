@@ -29,7 +29,7 @@ You can read more about it in this post with very true title - [PHPStan: Find Bu
 
 ### I Can Control It
 
-I can use it for private packages. I can download it, extend it and write own checks.
+I can use it for private packages. I can download it, extend it in various ways (I can define magic behaviour of my classes) and even write my own checks.
 
 
 
