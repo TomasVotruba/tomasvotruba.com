@@ -61,7 +61,7 @@ This step is optional and it might seem weird seeing it for the first time, but 
 ```json
 {
     "scripts": {
-        "phpstan": "vendor/bin/phpstan analyse src --level=1"
+        "phpstan": "vendor/bin/phpstan analyse src --level=0"
     }
 }
 ```
@@ -84,11 +84,11 @@ Commit and... push! Now you are running PHPStan on your open-source project. Con
 
 ## The One Thing I Love About PHPStan
 
-One last thing. You may have noticed the `level` option. What's that for? PHPStan has now 5 levels (in time of writing this article) - **1 = least strict, 5 = the most strict**.
+One last thing. You may have noticed the `level` option. What's that for? PHPStan has now 6 levels (in time of writing this article) - **0 = least strict, 5 = the most strict**.
 
-This allowed me to **put PHPStan to action without any huge work**. I start with level 1, 12 errors were found and fixed them.
+This allowed me to **put PHPStan to action without any huge work**. I start with level 0, 12 errors were found and fixed them.
 
-Next week, when I'm rested and full of joy, I can go to level 2, fix another 8 errors.
+Next week, when I'm rested and full of joy, I can go to level 1, fix another 8 errors.
 
 I love this approach over traditional overwhelming "50 errors found. Fix them all or CI will keep failing.". That usually leads to removing the tool and to very long fixing process. I remember my long night hours with Scrutinizer just to get from code quality from 6 to 10.
 
