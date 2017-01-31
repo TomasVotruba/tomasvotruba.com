@@ -2,19 +2,18 @@
 layout: post
 title: "How Monolithic Repository in Open Source saved my Lazyness"
 perex: '''
-    I've started creating open-source about 6 years ago. Now I'm maintaining over 20 repositories. I used classic standalone
-    repositories, but with each new package I wanted to add I realized, how much work it needs to keep everything up-to-date and consistent. So I didn't and got stuck.
-    Fortunately, I noticed talk from Fabien about some *monorepo* and Symfony. I said to myself: "I don't know a think about it. Let's try it out. I can return if it sucks."
+    I've started creating open-source about 6 years ago. Now I'm maintaining over 20 repositories. I used classic standalone repositories, but with each new package I wanted to add, I realized, how much work it needs to keep everything up-to-date and consistent. So I didn't and got stuck.
+    <br><br>
+    Fortunately, I noticed <a href="https://www.youtube.com/watch?v=4w3-f6Xhvu8">talk from Fabien about monorepo and Symfony</a>. I said to myself: "I don't know a thing about it. Let's try it out. I can always return if it sucks."
     <br><br>
     I never dit. Today I will show you <strong>why I see monorepo approach in open-source so awesome</strong>.
 '''
 lang: en
 ---
 
-If you have 50 minutes, [check the talk about Symfony monorepo](https://www.youtube.com/watch?v=4w3-f6Xhvu8) by Fabien. If you don't (my case), here are **[40 slides](https://speakerdeck.com/fabpot/a-monorepo-vs-manyrepos) from the talk**.
+If you don't have 50 minutes to watch the talk (my case), here are **[40 slides](https://speakerdeck.com/fabpot/a-monorepo-vs-manyrepos)** from it.
 
-The talk references a tool, that helps you with splits - [splitsh](https://github.com/splitsh/lite). Do you understand it? Me neither.
-Splitsh a complex tool to maintain Symfony and Blackfire ecosystem. **All we need is one git command**.
+Fabien introduces a tool, that helps you with splits - [splitsh](https://github.com/splitsh/lite). Do you understand it? Me neither. Splitsh is fast yet complex tool to maintain Symfony and Blackfire ecosystem. **All we need is one git command**.
 
 But we'll get to that later. First things first.
 
@@ -46,7 +45,7 @@ So how does this monorepo work?
 
 ## From One Hearth to Many Arteries
 
-Imagine flow of a oxygenated blood from heart to arteries. Every blood that was in heart, will drift to all arteries.
+Imagine flow of a oxygenated blood from heart to arteries. All blood that was in heart, will drift to all arteries.
 
 <img src="/assets/images/posts/2017/monorepo/blood-vein.png" alt="Blod vein" class="thumbnail">
 
@@ -87,12 +86,12 @@ Another thing I love is testing both monorepo (all packages together) and manyre
 
 On the other hand, monorepo testing is also important. When Nette [was split from monorepo to manyrepo only](https://phpfashion.com/prave-jsem-smazal-nette-framework), all tests were passing packages were standalone. But in combination some of them didn't.
 
-This not issue of the code itself, but of the testing architecture.
+This is not issue of the code itself, but of the testing architecture.
 
 
 ### 4. The Burnout is Much More Harder
 
-When maintaining 15 own packages, [ApiGen](https://github.com/Apigen) and co-maintaining few more repositories, I spend a lot of time by package management and not coding. It's was not fun and I contributed less and less.
+When maintaining 15 own packages, [ApiGen](https://github.com/Apigen) and co-maintaining few more repositories, I spent a lot of time by package management and not coding. It wasn't fun and I contributed less and less.
 
 Many packages like [Doctrine](http://github.com/doctrine) or [Kdyby](https://github.com/Kdyby) are slowing down in evolution because of this.
 
@@ -148,8 +147,7 @@ That's it! Could it be simpler?
 
 I recommend to read [Monolithic Repositories with PHP and Composer](http://www.whitewashing.de/2015/04/11/monolithic_repositories_with_php_and_composer.html) by Benjamin Eberlei (Doctrine Core Maintainer). It's surpassed by composer *local packages*, but points remain the same. Don't worry, I will write about *local packages* in the near future.
 
-If you like monorepo approach, but prefer own tagging per package, Martin Zlámal recently wrote about [git subtree approach](http://zlml.cz/vy-jeste-nemate-svuj-superprojekt) (in Czech).
-
+If you like monorepo approach, but prefer own tagging per package, Martin Zlámal recently wrote about [git submodule approach](http://zlml.cz/vy-jeste-nemate-svuj-superprojekt) (in Czech).
 
 
 ### How do you like this?
