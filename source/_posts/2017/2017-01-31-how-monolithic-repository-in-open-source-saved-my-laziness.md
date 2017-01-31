@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How Monolithic Repository in Open Source saved my Lazyness"
+title: "How Monolithic Repository in Open Source saved my Laziness"
 perex: '''
     I've started creating open-source about 6 years ago. Now I'm maintaining over 20 repositories. I used classic standalone repositories, but with each new package I wanted to add, I realized, how much work it needs to keep everything up-to-date and consistent. So I didn't and got stuck.
     <br><br>
