@@ -6,7 +6,7 @@ perex: '''
     <br><br>
     Fortunately, I noticed <a href="https://www.youtube.com/watch?v=4w3-f6Xhvu8">talk from Fabien about monorepo and Symfony</a>. I said to myself: "I don't know a thing about it. Let's try it out. I can always return if it sucks."
     <br><br>
-    I never dit. Today I will show you <strong>why I see monorepo approach in open-source so awesome</strong>.
+    I never did. Today I will show you <strong>why I see monorepo approach in open-source so awesome</strong>.
 '''
 lang: en
 ---
@@ -68,19 +68,19 @@ You have one repo to maintain.
 - Changing name of method that is used by 10 other packages? Easier than ever.
 - Starting a framework? Ideal.
 
-That's the way Nette, Symfony and Laravel started and grow so much, even if only one person was behind majority of commits.
+That's the way Nette, Symfony and Laravel started and grew so much, even if only one person was behind majority of commits.
 
 
 ### 2. Upgrade Fast, Upgrade Safe
 
-It's easy to make changes in that affect all packages - bump to PHP 7.1, Symfony 3.2 or Nette 3.0 is matter of minutes.
+It's easy to make changes that affect all packages - bump to PHP 7.1, Symfony 3.2 or Nette 3.0 is a matter of minutes.
 And I know it works on all packages. Before monorepo, I had to upgrade every package manually, which resulted in dissonance:
 one package used Symfony\Console 3.2, but other only 2.8 and it got messy for no reason.
 
 
 ### 3. Test Both on Monorepo and Manyrepo Level With Ease
 
-Another thing I love is testing both monorepo (all packages together) and manyrepo level. Once I spend 5 hours over bug in Symfony\Process. It was difficult to find, because all tests were passing. Even for testing just the Symfony\Process directory made it pass. But when I copied only the Symfony\Process code to the standalone directory, it failed. Few hours later I found out, it's somehow related to having Symfony\Stopwatch presenter. Yea, WTF.
+Another thing I love is testing both monorepo (all packages together) and manyrepo level. Once I spend 5 hours fixing a bug in Symfony\Process. It was difficult to find, because all tests were passing. Even for testing just the Symfony\Process directory made it pass. But when I copied only the Symfony\Process code to the standalone directory, it failed. Few hours later I found out, it's somehow related to having Symfony\Stopwatch package. Yea, WTF.
 
 **That could be caught testing on monorepo level.**
 
@@ -95,7 +95,7 @@ When maintaining 15 own packages, [ApiGen](https://github.com/Apigen) and co-mai
 
 Many packages like [Doctrine](http://github.com/doctrine) or [Kdyby](https://github.com/Kdyby) are slowing down in evolution because of this.
 
-Again, it's rather matter of project  architecture, not the code or maintainers.
+Again, it's a matter of project architecture rather than the code or maintainers.
 
 
 These are the best for me, but there are many more described in [those slides](https://speakerdeck.com/fabpot/a-monorepo-vs-manyrepos) by Fabien.
