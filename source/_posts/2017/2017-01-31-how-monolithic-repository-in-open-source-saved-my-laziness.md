@@ -138,7 +138,7 @@ As a result, we have this:
 ```bash
 /src
 /tests
-/composer.json
+composer.json
 ```
 
 That's it! Could it be simpler?
