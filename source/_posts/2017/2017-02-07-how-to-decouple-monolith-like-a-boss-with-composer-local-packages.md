@@ -4,9 +4,9 @@ title: "How to Decouple Monolith like a Boss with Composer Local Packages"
 perex: '''
     While building PHP applications that grows and grows, you often get to the situation when there is too much code. You get easily lost, duplicate and code smells and rottens. The cognitive upkeep to add a new class is bigger every day.
     <br><br>
-There are 3 solutions: put code <code>/libs</code> subdirectcories, decouple to private packages using Satis or (the best) create an open-source packages.
+There are 3 solutions: put code <code>/libs</code> subdirectories, decouple to private packages using Satis or (the best) create an open-source packages.
     <br><br>
-    All of them are overkill to the solution I will show you to day - composer local packages.
+<strong>All of them are overkill to the solution I will show you to day - composer local packages.</strong>
 '''
 lang: en
 reviwed_by: [5]
@@ -14,10 +14,10 @@ reviwed_by: [5]
 
 I found first [article about this topic](http://www.whitewashing.de/2015/04/11/monolithic_repositories_with_php_and_composer.html) in 2015, when Benjamin Eberlei created a tool called Fiddler. I was using similar approach in that time for a few months and I was happy I'm not alone.
 
-Benjamin wrote about an idea, that is **now integrated in composer by default**. To my surprise, nobody know about it!
+Benjamin wrote about an idea, that is **now integrated in composer by default**. To my surprise, nobody knows about it!
 That's similar case for great Composer tools like [prestissimo](https://github.com/hirak/prestissimo) or [versions-check](https://github.com/Soullivaneuh/composer-versions-check).
 
-But first, look at current version and why I don't see them scalable. We all tried them in Lekarna.cz and learned by painful experience they don't work. Hopefully this will save you from the pain!
+But first, we'll look at current solutions and why I don't see them scalable. We all tried them in Lekarna.cz and learned by painful experience that they don't work.
 
 
 ## 1. Just Put The Code to `/libs` or `/src` Directory
@@ -33,10 +33,10 @@ Add it to `$robotLoader` (Nette) or Composer in Symfony and it works.
 ### Disadvantages
 
 - still coupled to the application, just now on 2 different places instead of 1
-- service/route registration is in `app` - this is cyclic dependency (also called vicious circle!)
+- service/route registration is in `app` - this is cyclic dependency (also known as "vicious circle")
 - it shows others that putting code to 2 or 3 places is ok
-- the "package" is coupled to the application and it's not easy to use it somehwere else
-- dependencies of this "packages" are unknown
+- the "package" is coupled to the application and it's not easy too use it somewhere else
+- dependencies of this "package" are unknown
 
 
 **It doesn't scale!**
@@ -44,7 +44,7 @@ Add it to `$robotLoader` (Nette) or Composer in Symfony and it works.
 
 ## 2. Create Private Packages
 
-This way is a bit pro. We used Gitlab and Satis - it took a month to set up all access rights correctly (Gitlab CI and Satis server). It's so much pain, there is even [official paid service](https://packagist.com/) for it.
+This way is a bit pro. We used Gitlab and Satis - it took a month to set up all access rights correctly (Gitlab CI and Satis server tend to argue). It's so much pain, there is even [official paid service](https://packagist.com/) for it.
 
 ### Advantages
 
@@ -55,17 +55,17 @@ This way is a bit pro. We used Gitlab and Satis - it took a month to set up all 
 ### Disadvantages
 
 - development is 4 step hell:
-    - 1. add feature to the package
-    - 2. push and tag package
-    - 3. wait
-    - 4. composer update in application and see the results
-- it requires lot of maintainer skills - at least 1 year in open-source - to do it fine
+    - add feature to the package
+    - push and tag package
+    - wait
+    - run `composer update` in application and see the results
+- it requires lot of maintainer skills (I would say at least 1 year in open-source) to do it fine
 - it's premature decoupling that doesn't bring joy
 
 **It doesn't scale!**
 
 
-### 3. Publish Open-source Packages
+## 3. Publish Open-source Packages
 
 I love this most and it was great for some packages. That's how many [Zenify](https://github.com/Zenify/) Doctrine-related packages were born.
 
@@ -73,7 +73,7 @@ I love this most and it was great for some packages. That's how many [Zenify](ht
 
 - you feel great for giving back to community
 - people will help improve the package
-- open-source packages tend to have longer life-span then private ones
+- open-source packages tend to have longer lifespan than private packages
 
 ### Disadvantages
 
@@ -89,14 +89,13 @@ During this path of packages we started to feel desperate. Nothing was good enou
 
 ## Composer Saved my Life!
 
-Not sure why and how, but in composer some ["path" feature](https://getcomposer.org/doc/05-repositories.md#path) was added. And it was exactly what we looked for.
+Not sure why and how, but in composer ["path" feature](https://getcomposer.org/doc/05-repositories.md#path) was added. **And it was exactly what we looked for!**
 
+This is so simple that many people find it hard to believe. Forget private and open-sourced packages. Forget Gitlab, Satis and Github. This is **local filesystem only** solution. **All you need is comopser*.*
 
 ### Lets create First Local Package - Filesystem
 
-Remember, this is so simple that many people find it hard to believe. Forget private and open-source packages. Forget Gitlab, Satis and Github. This is **local filesystem only** solution.
-
-Back to Lekarna.cz. We had application that used own filesystem services. It was registered in `app/config/config.neon` (Nette app) and it was used in various scenarios. Once we needed to crate directory, store image, create image from database, download remote `.xml` etc. It was growing and huge coupling was born.
+Back to Lekarna.cz. We had application that used own *filesystem services*. It was registered in `app/config/config.neon` (Nette app) and it was used in various scenarios. Once we needed to create directory, store image, create image from database, download remote `.xml` etc. **It was growing and more and more coupled.**
 
 People started to create new classes and methods for what was already there, because there was too much code and nobody knew about it.
 
@@ -112,7 +111,7 @@ So I started to decouple this filesytem logic. How?
         /filesystem
 ```
 
-### 2. Add basic package directories and setup
+### 2. Add Basic Package Directories and Files
 
 ```bash
 /packages
@@ -124,7 +123,7 @@ So I started to decouple this filesytem logic. How?
             composer.json
 ```
 
-### 3. Name the package in its composer.json
+### 3. Name the Package in its `composer.json`
 
 The file is `packages/lekarna/filesystem/composer.json`:
 
@@ -143,7 +142,7 @@ The file is `packages/lekarna/filesystem/composer.json`:
 }
 ```
 
-### 4. Finally, register package to main `composer.json`
+### 4. Register Package to Main `composer.json`
 
 ```json
 {
@@ -162,10 +161,6 @@ Run
 composer update
 ```
 
-and your package is ready.
+and your package is ready. That's it! Easy, step-by-step maturing and scalable architecture pattern.
 
-That's it!
-
-Easy, step-by-step maturing architecture pattern.
-
-How do you maintain huge code bases?
+**How do you maintain huge code bases?**
