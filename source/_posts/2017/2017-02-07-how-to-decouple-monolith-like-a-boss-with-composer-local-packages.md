@@ -35,7 +35,7 @@ Add it to `$robotLoader` (Nette) or Composer in Symfony and it works.
 - still coupled to the application, just now on 2 different places instead of 1
 - service/route registration is in `app` - this is cyclic dependency (also known as "vicious circle")
 - it shows others that putting code to 2 or 3 places is ok
-- the "package" is coupled to the application and it's not easy too use it somewhere else
+- the "package" is coupled to the application and it's not easy to use somewhere else
 - dependencies of this "package" are unknown
 
 
@@ -91,7 +91,7 @@ During this path of packages we started to feel desperate. Nothing was good enou
 
 Not sure why and how, but in composer ["path" feature](https://getcomposer.org/doc/05-repositories.md#path) was added. **And it was exactly what we looked for!**
 
-This is so simple that many people find it hard to believe. Forget private and open-sourced packages. Forget Gitlab, Satis and Github. This is **local filesystem only** solution. **All you need is comopser*.*
+This is so simple that many people find it hard to believe. Forget private and open-sourced packages. Forget Gitlab, Satis and Github. This is **local filesystem only** solution. **All you need is composer**.
 
 ### Lets create First Local Package - Filesystem
 
