@@ -145,7 +145,7 @@ This is what I did, before I used Decorator and before I dropped tags from my co
 
 ## Get Rid of Tagging in Symfony
 
-Symfony has very [developed system of service tagging](http://symfony.com/doc/current/reference/dic_tags.html) that is coupled to many internal parts. This is barely half of it:
+Symfony [has over 40 tags](http://symfony.com/doc/current/reference/dic_tags.html) that are coupled to many internal parts. This is barely half of it:
 
 <img src="/assets/images/posts/2017/decorator/symfony-tags-half.png" class="thumbnail" alt="Tag list">
 
@@ -187,7 +187,6 @@ can be simplified as in Nette**:
 ```yaml
 # app/config/config.yml
 
-```yaml
 services:
     app.console.first_command:
         class: App\Console\FirstCommand
@@ -212,13 +211,21 @@ decorator:
 ```
 
 
-
 I recommend putting Decorator setup to `app/config/decorator.neon` or `app/config/decorator.yml`, so it's easy to
 find and programmer know about it.
 
+Don't forget to include `decorator.yml` in main `config.yml`:
+
+```yaml
+# app/config/config.yml
+
+imports:
+    - { resource: decorator.yml }
+```
+
 ### Symfony Decorator Autowire Minitip
 
-Autowiring is on by default in Nette, but in Symfony you have to enabled it manually. You can use
+Autowiring is on by default in Nette, but in Symfony you have to enable it manually. You can use
 [Symplify\DefaultAutowire](https://github.com/Symplify/DefaultAutowire) to mimic the Nette behavior, but in Symfony
 it is trend to control everything.
 
@@ -226,13 +233,13 @@ So you can decide, you want to **autowire just some type of classes**:
 
 ```yaml
 # app/config/decorator.yml
+
 decorator:
     Symfony\Component\EventDispatcher\EventSubscriberInterface:
         autowire: true
 ```
 
 This is very useful for huge legacy applications, where you need stability with changes in small steps.
-
 
 ## How do you Approach This?
 
