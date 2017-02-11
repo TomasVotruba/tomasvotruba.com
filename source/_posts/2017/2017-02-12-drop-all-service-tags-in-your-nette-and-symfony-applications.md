@@ -105,11 +105,11 @@ services:
 
 So much reading, huh? Imagine 50 more of these.
 
-If you can't switch to [Symplify\SymfonyEventDispatcher](https://github.com/Symplify/SymfonyEventDispatcher), that
-already dropped tags, you can use Nette integrated Decorator.
+If you can't switch to [Symplify\SymfonyEventDispatcher](https://github.com/Symplify/SymfonyEventDispatcher), that already dropped tags, you can use Nette integrated Decorator.
 
 ```yaml
-# app/config/config.yml
+# app/config/config.neon
+
 services:
     - App\Console\FirstCommand
     - App\Console\SecondCommand
@@ -130,20 +130,20 @@ The more services you have, the more cleaner and readable code this approach bri
 
 ### Minitip
 
-If you don't like the decorator and don't like to one servcie take 3 lines of config instead of 1, you can use this
+If you don't like the decorator and don't like to one service take 3 lines of config instead of 1, you can use this
 shortage:
 
 ```yaml
 # app/config/config.neon
 
 services:
-- { class: App\Console\FirstCommand, tags: [kdyby.console.command] }
+    - { class: App\Console\FirstCommand, tags: [kdyby.console.command] }
 ```
 
 This is what I did, before I used Decorator and before I dropped tags from my coding habbits.
 
 
-## Get Rig of Tagging in Symfony
+## Get Rid of Tagging in Symfony
 
 Symfony has very [developed system of service tagging](http://symfony.com/doc/current/reference/dic_tags.html) that is coupled to many internal parts. This is barely half of it:
 
