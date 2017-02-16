@@ -2,49 +2,52 @@
 layout: post
 title: "Minimalistic Way to Create Your First Nette Extension"
 perex: '''
-    Nette extension allows you not only to create open-source packages, but also to <strong>split your application so small and logical chunks of code</strong>.
+    Nette extension allows you not only to create open-source packages, but also to <strong>split your application to small and logical chunks of code</strong>.
     <br><br>
-Open-source extensions are more complex and using many cool Nette\DI features, but today I will show you, how to <strong>start with one Nette\DI method and one service only</strong>.
+Open-source extensions are more complex ěusing many Nette\DI features, but today I will show you, how to <strong>start with one Nette\DI method and one service only</strong>.
 '''
 lang: en
 ---
 
-First, I will tell you bit self-learning theory. After this one headline we get to the code. It might be useful to you, because **it makes learning for me much more easier**.
+First, I will tell you a little trick, **how to make learning faster and easier**. Don't worry, after this one headline we get to the code.
 
 ## Set The Smallest Step Possible
 
-When I want to learn new information, I try to realize what is **the smallest step possible**. Also called *lean method*, or in software [Lean Software Development](https://en.wikipedia.org/wiki/Lean_software_development) (LSD).
+When I want to learn new skill, I try to realize: what is **the smallest step possible**? Also called *lean method*, or in software [Lean Software Development](https://en.wikipedia.org/wiki/Lean_software_development) (LSD, right?).
 
 ### I Learned Extensions the Hard Way
 
-1. **Reading Nette documentation** [that describes over 20 features and uses cases it has](https://doc.nette.org/en/last/di-extensions). That is information, which is useful, because I can use the tool to it's potential.
-2. **Reading extension of open-source packages** - mostly Nella, Kdyby and Venne. Those are similar to documentation: many features on various use cases I didn't understand yet.
+1. **By Reading Nette documentation** [that describes over 20 features and uses cases it has](https://doc.nette.org/en/last/di-extensions). That is information, which is useful, because I can use the tool to it's potential, but not the best adopt the skill.
 
-That would lead to **overstretching your brain muscle**. It hurts and disables you the same way overstretching your leg muscle does.
+2. **By Reading extension of open-source packages**. They are similar to documentation: many features on various use cases I didn't understand yet.
+
+That lead to **overstretching my brain muscle**. It's like trying to jump over huge hole before even walking.
+
 
 ### It made me think: "Could it be simpler?"
 
-What is extension? Extension registers services to Nette Service Container.
+What is essential purpose of the extension? It registers services to Nette Service Container.
 
 - Register services to Nette Container?
 - Register services?
-- Register service...
+- **Register 1 service** - that's the one and only step we'll make today.
 
-**Register 1 service** - that's the one and only step we'll make today.
+So next time you'll think "gosh, this is so hard, I don't understand it, I'm so slow/lazy/...", stop for a moment and carefully look at the problem. There might be an easier way.
+
+**And now to the code!**
+
 
 ## Register service in Nette Sandbox
 
 I consider [Nette Sandbox](https://github.com/nette/sandbox) the best way to show learn any Nette feature. Let's use it.
 
-If you want to register `App\Repository\UserRepository` service, what will you do?
+If you want to register a service, what will you do?
 
 ```yaml
 # app/config/config.neon
 
 services:
-    - App\Model\UserManager
-    # ...
-    - App\Repository\UserRepository
+    - App\Model\UserManager # put it there
 ```
 
 File `app/config/config.neon` is like a socket.
@@ -57,89 +60,150 @@ But what if your want to **plug in computer and mobile charger** in the same tim
 
 <img src="/assets/images/posts/2017/nette-extension/multi-socket.jpg" class="thumbnail">
 
-To load more services, we use the same interface as `app/config/config.neon`: a file with service section that lists services.
+To load more services, we use the same interface as `app/config/config.neon`: **a file with service section that lists services**.
 
-### Use Standalone Config
 
-This is smaller pre-steps to this - [`includes` section](https://doc.nette.org/en/2.4/configuring#toc-multiple-configuration-files). A decoupling I do when there are dozens of services and when I'm not sure, what to decouple yet.
+## Create Local Extension in 5 Steps
+
+Let's say we want to decouple a FileSystem utilities.
+
+### 1. Pick a Name for Directory
+
+What about "FileSystem"? If you agree, create `src/FileSystem` directory.
+We will put configuration (sevices.neon) and classes there.
+
+
+### 2. Create or move Related Classes there
+
+Starting small, one service will do. When it grows, we can decouple it later.
+
+```php
+# src/FileSystem/FileSystem.php
+
+<?php declare(strict_types=1);
+
+namespace FileSystem;
+
+final class FileSystem
+{
+    // some awesome methods!
+}
+
+```
+
+### 3. Create config
+
+This is similar to `app/config/services.neon`, just in different location:
+
+```yaml
+# src/FileSystem/config/services.neon
+
+services:
+    - FileSystem\FileSystem
+```
+
+### 4. Create an Extension
+
+```php
+# src/FileSystem/DI/FileSystemExtension.php
+
+<?php declare(strict_types=1);
+
+namespace FileSystem\DI;
+
+use Nette\DI\Compiler;
+use Nette\DI\CompilerExtension;
+
+final class FileSystemExtension extends CompilerExtension
+{
+    public function loadConfiguration()
+    {
+        // this method loads servcies from config and registers them do Nette\DI Container
+        Compiler::loadDefinitions(
+            $this->getContainerBuilder(),
+            $this->loadFromFile(__DIR__.'/../config/services.neon')['services']
+        );
+    }
+}
+```
+
+### 5. Register it in Application
 
 ```yaml
 # app/config/config.neon
 
-includes:
-    - repositories.neon
-
-services:
-    - App\Model\UserManager
+extensions:
+    - FileSystem\DI\FileSystemExtension
 ```
 
-```yaml
-# app/config/repositories.neon
+That's it!
 
-services:
-    - App\Repository\UserRepository
+
+## Try it Out
+
+Now try using `FileSystem\FileSystem` in HomepagePresenter:
+
+```php
+# app/presenters/HomepagePresenter.php
+
+<?php declare(strict_types=1);
+
+namespace App\Presenters;
+
+use FileSystem\FileSystem;
+
+class HomepagePresenter extends BasePresenter
+{
+    public function __construct(FileSystem $fileSystem)
+    {
+        $this->fileSystem = $fileSystem;
+    }
+}
 ```
 
-Nice and clear, right?
+and running application:
 
-Extension is the same pro process - *it does the same thing just on different place**.
+<img src="/assets/images/posts/2017/nette-extension/bug.png" class="thumbnail">
 
-## Create Local Extension in 3 Steps
+**Fails**? Damn, I can't put this on my blog.
 
-### 1. Move to ``src/Repository`
+Oh, **we need to tell composer about these classes**. He doesn't know, where to find it.
+```javascript
+{
+    "require-dev": {
+        "..."
+    },
+    "autoload": {
+        "psr-4": {
+            "FileSystem\\": "src/FileSystem"
+        }
+    }
+}
+```
 
-Where `Repository` is name of our package.
+And manually rebuild `autoload.php` (composer does by default only after `composer update`):
 
 ```bash
-app/config/repositories.neon => src/Repository/config/services.neon
+composer dump-autoload
 ```
 
-```bash
-app/Model/UserRepository.php => src/Repository/UserRepository.php
-```
+Refresh and...
 
-src/
+<img src="/assets/images/posts/2017/nette-extension/good.png" class="thumbnail">
 
-Moving files (stěhování ?)
+...it works!
 
-Now we move the config and the class inside to new place.
+Phew! That would have been embarrassing
 
 
+### To Sum Up
 
-Security  config services neom
+**Now you know how to do your first extension**.
 
+- create a directory in `/src`
+- add `/src/<package-name>/services.neon`
+- add `/src/DI/<package-name>Extension.neon`
+- register extension to `app/config/config.neon`
+- and extend `autoload` section in `composer.json` (prevents from putting failing code to public blog :))
 
-Let's try app, doesn't work
-
-2. Create extension
-All it does it implelemts cooler etenaion.
-
-How to load services?
-
-Instead of neon import there is PHP load condigiraotn. Weload neon and add it to Nette, our multizasuvla by PHP. Like this
-
-….Code….
-
-And register there extension like tjis = plugging it in.
-
-Refresh and it…
-
-@obr: fail red screen autoload
-
-Fails? Damn, I can't put this on my blog :(
-
-
-3. Load missing classes
-
-Add this code tocomposer.json
-
-@Link to pehapkari článek
-
-
-
-Obr: it works and shines
-
-
-That's all.
-
-
+**Let me know if you get stuck somewhere**. I want this tutorial to be as easy to understand as possible.
