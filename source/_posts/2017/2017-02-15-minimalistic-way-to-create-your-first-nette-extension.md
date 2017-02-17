@@ -4,7 +4,7 @@ title: "Minimalistic Way to Create Your First Nette Extension"
 perex: '''
     Nette extension allows you not only to create open-source packages, but also to <strong>split your application to small and logical chunks of code</strong>.
     <br><br>
-Open-source extensions are more complex ěusing many Nette\DI features, but today I will show you, how to <strong>start with one Nette\DI method and one service only</strong>.
+Open-source extensions are more complex using many Nette\DI features, but today I will show you, how to <strong>start with one Nette\DI method and one service only</strong>.
 '''
 lang: en
 ---
@@ -26,9 +26,9 @@ That lead to **overstretching my brain muscle**. It's like trying to jump over h
 
 ### It made me think: "Could it be simpler?"
 
-What is essential purpose of the extension? It registers services to Nette Service Container.
+What is essential purpose of the extension? It registers services to Nette Dependency Injection Container.
 
-- Register services to Nette Container?
+- Register services to Container?
 - Register services?
 - **Register 1 service** - that's the one and only step we'll make today.
 
@@ -98,8 +98,7 @@ This is similar to `app/config/services.neon`, just in different location:
 ```yaml
 # src/FileSystem/config/services.neon
 
-services:
-    - FileSystem\FileSystem
+- FileSystem\FileSystem
 ```
 
 ### 4. Create an Extension
@@ -121,7 +120,7 @@ final class FileSystemExtension extends CompilerExtension
         // this method loads servcies from config and registers them do Nette\DI Container
         Compiler::loadDefinitions(
             $this->getContainerBuilder(),
-            $this->loadFromFile(__DIR__.'/../config/services.neon')['services']
+            $this->loadFromFile(__DIR__.'/../config/services.neon')
         );
     }
 }
@@ -193,7 +192,7 @@ Refresh and...
 
 ...it works!
 
-Phew! That would have been embarrassing
+Phew! That would have been embarrassing.
 
 
 ### To Sum Up
