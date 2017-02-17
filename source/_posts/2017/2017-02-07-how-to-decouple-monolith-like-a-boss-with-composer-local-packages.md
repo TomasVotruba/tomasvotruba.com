@@ -127,7 +127,7 @@ So I started to decouple this filesytem logic. How?
 
 The file is `packages/lekarna/filesystem/composer.json`:
 
-```json
+```javascript
 {
     "name": "lekarna/filesystem",
     "require": {
@@ -144,7 +144,7 @@ The file is `packages/lekarna/filesystem/composer.json`:
 
 ### 4. Register Package to Main `composer.json`
 
-```json
+```javascript
 {
     "require": {
         "lekarna/filesystem": "@dev"
