@@ -7,6 +7,7 @@ perex: '''
 Open-source extensions are more complex using many Nette\DI features, but today I will show you, how to <strong>start with one Nette\DI method and one service only</strong>.
 '''
 lang: en
+reviwed_by: [5, 8]
 ---
 
 First, I will tell you a little trick, **how to make learning faster and easier**. Don't worry, after this one headline we get to the code.
