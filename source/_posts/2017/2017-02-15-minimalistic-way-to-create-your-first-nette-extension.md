@@ -10,37 +10,12 @@ lang: en
 reviwed_by: [5, 8]
 ---
 
-First, I will tell you a little trick, **how to make learning faster and easier**. Don't worry, after this one headline we get to the code.
+<!-- link to fast and easy learning post -->
 
-## Set The Smallest Step Possible
-
-When I want to learn new skill, I try to realize: what is **the smallest step possible**? Also called *lean method*, or in software [Lean Software Development](https://en.wikipedia.org/wiki/Lean_software_development) (LSD, right?).
-
-### I Learned Extensions the Hard Way
-
-1. **By Reading Nette documentation** [that describes over 20 features and uses cases it has](https://doc.nette.org/en/last/di-extensions). That is information, which is useful, because I can use the tool to it's potential, but not the best adopt the skill.
-
-2. **By Reading extension of open-source packages**. They are similar to documentation: many features on various use cases I didn't understand yet.
-
-That lead to **overstretching my brain muscle**. It's like trying to jump over huge hole before even walking.
-
-
-### It made me think: "Could it be simpler?"
-
-What is essential purpose of the extension? It registers services to Nette Dependency Injection Container.
-
-- Register services to Container?
-- Register services?
-- **Register 1 service** - that's the one and only step we'll make today.
-
-So next time you'll think "gosh, this is so hard, I don't understand it, I'm so slow/lazy/...", stop for a moment and carefully look at the problem. There might be an easier way.
-
-**And now to the code!**
-
-
-## Register service in Nette Sandbox
 
 I consider [Nette Sandbox](https://github.com/nette/sandbox) the best way to show learn any Nette feature. Let's use it.
+
+## Register service in Nette Sandbox
 
 If you want to register a service, what will you do?
 

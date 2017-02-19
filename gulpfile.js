@@ -1,3 +1,4 @@
+// install: npm install -g gulp gulp-watch
 // run: gulp
 
 var gulp = require('gulp');
