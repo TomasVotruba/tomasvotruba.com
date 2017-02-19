@@ -2,14 +2,17 @@
 layout: post
 title: "Statie: How to run it Locally"
 perex: '''
-    <a href="https://github.com/Symplify/Statie">Statie</a> is tool to create semi-static webpages. It allows you to host your website on Github for free. Event with own domain and https. It was created in late 2016 based on Scuplin and its mayor feature is simplicity.
+    <a href="https://github.com/Symplify/Statie">Statie</a> is tool to create semi-static webpages. It allows you to host your website on Github for free. Event with own domain and https. It was created in late 2016 based on Scuplin and its major feature is simplicity.
     <br><br>
     That was the "pitch", now I will show you how to use it.
 '''
 lang: en
 ---
 
-### Create Empty Project
+### Create Empty Project...
+
+...and require [Statie](https://github.com/Symplify/Statie) package.
+
 
 ```bash
 composer require symplify/statie
@@ -17,27 +20,126 @@ composer require symplify/statie
 
 
 
-### Statie Life-Cycle
+### 3 Steps Life-Cycle
 
-There only 3 steps to complete process.
+Statie has very simple life-cycle:
 
 1. Create code in `/source` directory, using HTML, Latte and Markdown
 2. Generate HTML code via console
 3. See the generated HTML output code in `/output` via local PHP server
 
-Later, you can push output code to Github Pages or your server via FTP or SSH.
+Later, you can push output code to Github Pages or your server via FTP or SSH. But let's start with small step.
 
 
-## 1. Create...
+## 1. Create your Code
 
-@todo
+Statie supports **HTML**, **[Latte](https://github.com/nette/latte)** (like Smarty or Twig, just bit different syntax) and **Markdown** (in `.md` files only).
+
+For most of pages, HTML and Latte is enough. Markdown is useful for repeated items like posts.
+
+Let's create our index page.
+
+```html
+# source/index.latte
+
+Hi!
+```
+
+### Use Layout if you Like
+
+```html
+# source/_layouts/index.latte
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        ❴block content❵❴/block❵
+    </body>
+</html>
+```
+
+And add layout and block content to the `index.latte`:
+
+```html
+---
+layout: default
+---
+
+❴block content❵
+    Hi, my job is to help you grow any direction you choose!
+❴/block❵
+```
+
+**Section between `---` is used to configure system or own variables**. I will tell you more about that later.
 
 
-## 2. Generate...
+## 2. Generate Final HTML Code
 
-@todo
+Run in project root in CLI:
+
+```bash
+vendor/bin/statie generate
+```
+
+## 3. See Generate Code
+
+Create PHP local server in CLI:
+
+```bash
+php -S localhost:8000 -t output
+```
+
+and open [localhost:8000](https://localhost:8000) in your browser.
+
+Voilá!
 
 
-## 3. Generate...
+<div class="text-center">
+    <img src="/../../../../assets/images/posts/2017/statie-1/statie-cycle.gif" style="width:100%">
+</div>
 
-@todo
+
+## Minitip: Use Gulp Work For You
+
+It is quite annoying to refresh regenerate content manually every time you change the code.
+
+Simple Gulp script can regenerate content for use.
+
+Install `gulp` and `gulp-watch`:
+
+```bash
+npm install -g gulp gulp-watch
+```
+
+```json
+var gulp = require('gulp');
+var watch = require('gulp-watch');
+var exec = require('child_process').exec;
+
+gulp.task('default', function () {
+    // Run local server, open localhost:8000 in your browser
+    exec('php -S localhost:8000 -t output');
+
+    return watch(['source/**/*', '!**/*___jb_tmp___'], { ignoreInitial: false })
+    // For the second arg see: https://github.com/floatdrop/gulp-watch/issues/242#issuecomment-230209702
+        .on('change', function() {
+            exec('vendor/bin/statie generate', function (err, stdout, stderr) {
+            console.log(stdout);
+            console.log(stderr);
+        });
+    });
+});
+```
+
+And run the script via:
+
+```bash
+gulp
+```
+
+Now open [localhost:8000](http://localhost:8000] and change `source/index.latte`.
+
+It works!
