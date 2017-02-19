@@ -58,7 +58,7 @@ composer require phpstan/phpstan --dev
 
 This step is optional and it might seem weird seeing it for the first time, but I like the united usage (on all different projects and environments).
 
-```json
+```javascript
 {
     "scripts": {
         "phpstan": "vendor/bin/phpstan analyse src --level=0"
