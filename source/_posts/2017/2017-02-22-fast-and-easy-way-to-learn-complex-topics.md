@@ -11,7 +11,7 @@ lang: en
 
 ## Philosophy Everywhere
 
-Do you know [Occam's razor](https://simple.wikipedia.org/wiki/Occam's_razor), [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle or [Lowest common denominator](https://en.wikipedia.org/wiki/Lowest_common_denominator)?
+Do you know [Occam's razor](https://simple.wikipedia.org/wiki/Occam's_razor), [Pareto principle](https://en.wikipedia.org/wiki/Pareto_principle) or [Lowest common denominator](https://en.wikipedia.org/wiki/Lowest_common_denominator)?
 
 This is the term from their neighborhood. Don't be scared it's of those philosophers. Those are actually mind hack useful in everyday life.
 
