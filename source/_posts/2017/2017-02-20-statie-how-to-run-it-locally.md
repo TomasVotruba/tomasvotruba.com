@@ -114,7 +114,7 @@ Install `gulp` and `gulp-watch`:
 npm install -g gulp gulp-watch
 ```
 
-```json
+```javascript
 var gulp = require('gulp');
 var watch = require('gulp-watch');
 var exec = require('child_process').exec;
