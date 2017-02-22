@@ -48,7 +48,7 @@ Hi!
 ### Use Layout if you Like
 
 ```html
-# source/_layouts/index.latte
+# source/_layouts/default.latte
 
 <!DOCTYPE html>
 <html>
