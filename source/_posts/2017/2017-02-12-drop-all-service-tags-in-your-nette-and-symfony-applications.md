@@ -75,7 +75,7 @@ Nette and Symfony application were doomed to use this anti-pattern.
 Now there is Decorator in Symfony as well. Let's see.
 
 
-## Get Rig of Tagging in Nette
+## Get Rid of Tagging in Nette
 
 In you Nette Application, you probably already use
 
