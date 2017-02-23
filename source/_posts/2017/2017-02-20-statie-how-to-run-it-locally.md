@@ -127,6 +127,10 @@ gulp.task('default', function () {
     // For the second arg see: https://github.com/floatdrop/gulp-watch/issues/242#issuecomment-230209702
         .on('change', function() {
             exec('vendor/bin/statie generate', function (err, stdout, stderr) {
+            
+            // For Windows use
+            // exec('vendor\\bin\\statie generate', function (err, stdout, stderr) {
+            
             console.log(stdout);
             console.log(stderr);
         });
