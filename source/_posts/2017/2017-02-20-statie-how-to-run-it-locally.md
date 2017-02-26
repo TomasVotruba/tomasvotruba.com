@@ -144,6 +144,6 @@ And run the script via:
 gulp
 ```
 
-Now open [localhost:8000](http://localhost:8000] and change `source/index.latte`.
+Now open [localhost:8000](http://localhost:8000) and change `source/index.latte`.
 
 It works!
