@@ -4,7 +4,7 @@ title: "How Monolithic Repository in Open Source saved my Laziness"
 perex: '''
     I've started creating open-source about 6 years ago. Now I'm maintaining over 20 repositories. I used classic standalone repositories, but with each new package I wanted to add, I realized, how much work it needs to keep everything up-to-date and consistent. So I didn't and got stuck.
     <br><br>
-    Fortunately, I noticed <a href="https://www.youtube.com/watch?v=4w3-f6Xhvu8">talk from Fabien about monorepo and Symfony</a>. I said to myself: "I don't know a thing about it. Let's try it out. I can always return if it sucks."
+    Fortunately, I noticed <a href="https://www.youtube.com/watch?v=4w3-f6Xhvu8">talk from Fabien</a> about <a href="http://danluu.com/monorepo/">monorepo</a> and Symfony. I said to myself: "I don't know a thing about it. Let's try it out. I can always return if it sucks."
     <br><br>
     I never did. Today I will show you <strong>why I see monorepo approach in open-source so awesome</strong>.
 '''
