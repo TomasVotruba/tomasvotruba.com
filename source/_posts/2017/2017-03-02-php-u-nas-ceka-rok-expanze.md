@@ -4,7 +4,7 @@ title: "PHP u nás čeká rok expanze"
 perex: '''
     Za minulý rok naše php komunita vyrostla jako nikdy předtím. Přestali jsem řešit, kdo má větší framework, <strong>začali jsme sdílet online i offline a spojovat se napříč republikou</strong>. Mám z toho ohromnou radost!
     <br><br>
-    Dnes se s tebou chci podělit o to, kam jsme zatím došli a jaká velká cesta nás ještě čeká
+    Dnes se s tebou chci podělit o to, kam jsme zatím došli a jaká velká cesta nás ještě čeká.
 '''
 ---
 
