@@ -2,9 +2,9 @@
 layout: post
 title: "PHP u nás čeká rok expanze"
 perex: '''
-    Za minulý rok naše php komunita vyrostla jako nikdo předtím. Přestali jsem řešit, kdo má větší framework, <strong>začali jsme sdílet online i offline a spojovat se napříč republikou</strong>. Mám z toho ohromnou radost!
+    Za minulý rok naše php komunita vyrostla jako nikdy předtím. Přestali jsem řešit, kdo má větší framework, <strong>začali jsme sdílet online i offline a spojovat se napříč republikou</strong>. Mám z toho ohromnou radost!
     <br><br>
-    Dnes se s tebou chci podělit o to, kam jsme zatím došli a jaká velká cesta nás
+    Dnes se s tebou chci podělit o to, kam jsme zatím došli a jaká velká cesta nás ještě čeká
 '''
 ---
 
@@ -12,7 +12,7 @@ perex: '''
 
 První 3 srazy, které jsem organizoval v Brně ještě v roce 2015, byli 3 lidi a já. Dnes se dívám na srazy za poslední rok, přijde mi fascinující (tím radostným způsobem), **jak rádi se PHP programátoři scházejí a povídají si**. Stačí jen zarezervovat hospodu nebo napsat do firmy.
 
-Praha, Pardubice, Hradec Králové, Ostrava, České Budějovice a Ostrava. Tento rok taky **[PHP hory](https://www.facebook.com/events/1145689815543939/), [indický oběd](https://www.facebook.com/events/690537214452439/) nebo [mini hackaton](https://www.facebook.com/events/203723420110018/)**.
+Praha, Pardubice, Hradec Králové, České Budějovice a Ostrava. Tento rok taky **[PHP hory](https://www.facebook.com/events/1145689815543939/), [indický oběd](https://www.facebook.com/events/690537214452439/) nebo [mini hackaton](https://www.facebook.com/events/203723420110018/)**.
 
 <div class="text-center">
     <img src="/../../../../assets/images/posts/2017/php-boom/hory.jpg" style="width:100%">
@@ -33,7 +33,7 @@ Největší pohodlí je to, že když chceš napsat někomu z PHP komunity, najd
 
 ## PHP je na technologickém vrcholu
 
-Nikdy nebylo jednodduší začít dělat v PHP. Ekosystém je bohatý, stabilní a od PHP 7.1 s vyspělými scalar a return types přebírá velkou míru zodpovědnosti za programátora.
+Nikdy nebylo jednodušší začít dělat v PHP. Ekosystém je bohatý, stabilní a od PHP 7.1 s vyspělými scalar a return types přebírá velkou míru zodpovědnosti za programátora.
 
 Po pokecu s [Davidem Grudlem](https://twitter.com/geekovo) bude i **[Nette 3.0](https://forum.nette.org/en/28023-nette-3-0-0-alpha-released) na PHP 7.1**. Myslím, že to bude odvážný a skvělý příklad ostatním PHP frameworkům.
 
@@ -82,7 +82,7 @@ Ještě týden se můžeš [zúčastnit soutěže](https://pehapkari.cz/napis-cl
 Chci zmínit 3 firmy, které různou formou podporují rozvoj PHP komunity a ještě tu sehrají velkou roli:
 
 - **[OLAP](http://olap.cz/)** - firma tohoto typu tu už léta chyběla. HR se vzděláváním. Win-win-win pro všechny strany-  **díky Aničko za zapojení.**
-- **[ShopSys](https://www.shopsys.cz)** - **firma, která nás podporuje od samotných začátku. Za to jim patří velké díky - díky Petře**. A jedna z mála firem, kam bych doporučil jít. Ještě to minimálně půlroku potrvá, ale [ShopSys Framework](http://www.shopsys-framework.com/) bude další velký výkop ČR do světa.
+- **[ShopSys](https://www.shopsys.cz)** - **firma, která nás podporuje od samotných začátku. Za to jim patří velké díky - díky Petře**. A jedna z mála firem, kam bych doporučil jít. Ještě to minimálně půl roku potrvá, ale [ShopSys Framework](http://www.shopsys-framework.com/) bude další velký výkop ČR do světa.
 - Poslední **díky patří [Lmc](https://www.lmc.eu/)**, kde se zajímají nejen o práci, ale i o vzdělávání. Už jsme dlouho v kontaktu a myslím, že časem něco rozjedeme. **Díky Kubo za podnětné diskuse**.
 
 
@@ -98,10 +98,10 @@ Zatím prozradím, že se můžete těšit na [Ondru Mirtese](https://ondrej.mir
 
 ### Kam půjdeme dále?
 
-Tento článek jsem začal psát na konci roku 2016 a mezitím přibily další 2/3 obsahu.
+Tento článek jsem začal psát na konci roku 2016 a mezitím přibyly další 2/3 obsahu.
 Kam to bude směřovat netuším, ale **jestli to půjde tímhle tempem, máme se na co těšit**.
 
-Ještě připomenu, že tento rok tě čeká **2. ročník konference [PHP Prague](https://pehapkari.cz/konference/php-prague-2016-v-paralelnim-polis/)**. Jestli překonáme 120 návštěv z minulého rok, tak opravdu nevím kam se vejdeme :).
+Ještě připomenu, že tento rok tě čeká **2. ročník konference [PHP Prague](https://pehapkari.cz/konference/php-prague-2016-v-paralelnim-polis/)**. Jestli překonáme 120 návštěv z minulého roku, tak opravdu nevím, kam se vejdeme :).
 
 
 ## A jak ovlivníš svět ty?
