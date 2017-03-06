@@ -82,7 +82,7 @@ Ještě týden se můžeš [zúčastnit soutěže](https://pehapkari.cz/napis-cl
 Chci zmínit 3 firmy, které různou formou podporují rozvoj PHP komunity a ještě tu sehrají velkou roli:
 
 - **[OLAP](http://olap.cz/)** - firma tohoto typu tu už léta chyběla. HR se vzděláváním. Win-win-win pro všechny strany-  **díky Aničko za zapojení.**
-- **[ShopSys](https://www.shopsys.cz)** - **firma, která nás podporuje od samotných začátku. Za to jim patří velké díky - díky Petře**. A jedna z mála firem, kam bych doporučil jít. Ještě to minimálně půl roku potrvá, ale [ShopSys Framework](http://www.shopsys-framework.com/) bude další velký výkop ČR do světa.
+- **[ShopSys](https://www.shopsys.cz)** - **firma, která nás podporuje od samotného začátku. Za to jim patří velké díky - díky Petře**. A jedna z mála firem, kam bych doporučil jít. Ještě to minimálně půl roku potrvá, ale [ShopSys Framework](http://www.shopsys-framework.com/) bude další velký výkop ČR do světa.
 - Poslední **díky patří [Lmc](https://www.lmc.eu/)**, kde se zajímají nejen o práci, ale i o vzdělávání. Už jsme dlouho v kontaktu a myslím, že časem něco rozjedeme. **Díky Kubo za podnětné diskuse**.
 
 
