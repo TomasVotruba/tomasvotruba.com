@@ -35,7 +35,7 @@ The file name is relevant to the url - this file will be accessible at `/contact
 
 <br>
 
-If you use [smart Gulp script](/blog/2017/02/20/statie-how-to-run-it-locally#minitip-use-gulp-work-for-you), you can already check its works at [localhost:8000/contact](http://localhost:8000/contact).
+If you use [smart Gulp script](/blog/2017/02/20/statie-how-to-run-it-locally#minitip-use-gulp-work-for-you), you can already check the page at [localhost:8000/contact](http://localhost:8000/contact).
 
 <div class="text-center">
     <img src="/../../../../assets/images/posts/2017/statie-2/statie-contact.png" class="thumbnail">
@@ -199,7 +199,7 @@ I would use this option in this case.
 
 Statie **scans the `/source` directory for all `.neon` files**. All **data stored in them are added as variables** to every template.
 
-As convention, I put global configuration to `/source/_config` directory and data (like this example to) `/source/_data` directory. But it's up to you, where you put it.
+As convention, I put global configuration to `/source/_config` directory and data `/source/_data` directory. But it's up to you, where you put it.
 
 ### How to Use it?
 
