@@ -84,7 +84,7 @@ When you click a post title:
 
 
 
-### ProTip #1: Change url?
+### ProTip: Change Post Url
 
 You see the url for the post is:
 
@@ -111,7 +111,7 @@ Where `:year`, `:month`, `:day` and `:title` are all variables.
 
 For example:
 
-```bash
+```yaml
 configuration:
     postRoute: my-blog/:year/:title
 ```
