@@ -29,6 +29,7 @@ cyan      #2aa198
 green     #859900
 */
 
+pre > code,
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #657b83; /* base00 */
