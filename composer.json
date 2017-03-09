@@ -1,6 +1,7 @@
 {
     "name": "tomasvotruba/website",
     "require": {
+        "php": "^7.1",
         "symplify/statie": "~1.4"
     }
 }
