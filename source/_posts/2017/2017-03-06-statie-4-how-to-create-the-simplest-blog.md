@@ -126,7 +126,7 @@ Go it? I know you do! **You are smart.**
 
 
 
-In the next post, I will you some cool `Post` object features.
+In one of the next posts, I will you some cool `Post` object features.
 
 
 ## Now You Know
