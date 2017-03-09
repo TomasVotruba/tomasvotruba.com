@@ -1,4 +1,5 @@
 {
+    "name": "tomasvotruba/website",
     "require": {
         "symplify/statie": "~1.4"
     }

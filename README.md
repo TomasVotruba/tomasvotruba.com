@@ -6,7 +6,7 @@
 ## Install
 
 ```sh
-composer create-project pehapkari/website pehapkari.cz @dev
+composer create-project tomasvotruba/website tomasvotruba.cz @dev
 ```
 
 To enabled live reload after any change, we need one more thing - *gulp*:
@@ -20,7 +20,7 @@ npm install -g gulp gulp-watch
 Now all you gotta do it move to the directory and run the gulp (see [gulpfile.js](/gulpfile.js) for more details):
 
 ```sh
-cd pehapkari.cz
+cd tomasvotruba.cz
 gulp
 ```
 
