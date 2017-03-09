@@ -94,7 +94,7 @@ First, we create the snippet file and move the Google Analytics code there:
 
 Then clean the layout:
 
-```html
+```twig
 <!-- source/_layouts/default.latte -->
 
 <!DOCTYPE html>
