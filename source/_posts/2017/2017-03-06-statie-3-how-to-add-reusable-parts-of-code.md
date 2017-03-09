@@ -4,8 +4,6 @@ title: "Statie 3: How to Add Reusable Parts of Code"
 perex: '''
     You already know <a href="/blog/2017/02/20/statie-how-to-run-it-locally">how to run Statie with layout</a> and <a href="/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data">how to add data structures</a>.
     <br><br>
-    So far so good? ... Good.
-    <br><br>
 Today I will show you: how to use <strong>decouple big templates to smaller and reusable snippets</strong>. Like Google Analytics code.
 '''
 lang: en
@@ -72,7 +70,9 @@ With Statie you can!
 
 ### How does it Work?
 
-Statie scans `/_snippets` directory and turns all files to snippets. Name of these files are also names for including the snippets.
+Statie scans `/_snippets` directory and turns all files to snippets. Name of the file represents key for including the snippets.
+
+- "googleAnalytics" => `googleAnalytics.latte`
 
 
 ### Decoupling the Snippet
@@ -121,17 +121,15 @@ Can you see it?
 
 When you start using static site generator, you'll **appreciate its power in scaling**:
 
-- First web might be a bit rought to setup.
+- First web might take some time to setup.
 - Second is mostly copy-pasting previous settings and changing only layout and content.
 - And third? Way too easy and well paid job.
 
-To allow this flow, I recommend **keeping all IDs** that change from site to site - Google Analytics, Facebook Pixel, Disqus ID, website URL, author name, email and phone... - in `_config/config.neon` file.
-
-**Why?** Because when you create a new website, **all you have to do is change one file** and it works and is (almost) fully customized.
+To allow this flow, I recommend **keeping all IDs** that change from site to site - Google Analytics, Facebook Pixel, Disqus ID... - in `_config/config.neon` file. When you create a new website, **all you have to do is change one file** to make it customized.
 
 ### How To Do It
 
-I wrote about config in previous post - (go read it, if you missed it)[/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data#2-global-or-bigger-amount-of-data].
+I wrote about config in previous post - [go read it, if you missed it](/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data#2-global-or-bigger-amount-of-data).
 
 So you should end up with this:
 
