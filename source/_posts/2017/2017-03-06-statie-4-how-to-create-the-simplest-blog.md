@@ -125,19 +125,15 @@ my-blog/2017/my-last-post/
 Go it? I know you do! **You are smart.**
 
 
-### ProTip #2: Show last 3 on homepage?
 
-- todo: find on tomasvotruba.cz history
-
-
-In next post, I will you some cool post features.
+In the next post, I will you some cool `Post` object features.
 
 
 ## Now You Know
 
 - **That all posts are placed in `/source/_posts` directory and in `$posts` variable**.
 - That post has to be in **named as `YYYY-MM-DD-title.md` format**
-- That you can change the post generated url in `source/config/_config.neon` in "postRoute".
+- That you can change the post generated url in `source/config/_config.neon` in `postRoute`.
 
 
 Happy coding!
