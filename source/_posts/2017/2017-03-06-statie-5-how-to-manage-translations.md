@@ -7,18 +7,12 @@ perex: '''
 lang: en
 ---
 
-
 use case?
 
-- double web
-- double posts
-
+- posts in two languages
 
 in code
 
 in direcories
 
-
-
 ...in practise?
-
