@@ -206,7 +206,7 @@ As convention, I put global configuration to `/source/_config` directory and dat
 We simple move whole `contactMethods` to this file:
 
 ```yaml
-# /source/_config/contacts.neon
+# /source/_data/contacts.neon
 contactMethods:
     ...
 ```
@@ -225,7 +225,7 @@ Save file, [look on the contact page](http://localhost:8000/contact) and it stil
 
 - How to add data to your Statie page.
 - **Where to put them for local and global access**.
-- **That it's convention** to use `/source/_config/<some-data>.neon` naming.
+- **That it's convention** to use `/source/_data/<some-data>.neon` naming.
 
 
 Happy coding!
