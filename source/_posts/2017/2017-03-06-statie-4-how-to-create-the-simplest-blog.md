@@ -12,7 +12,7 @@ lang: en
 
 ## Create a Blog Page
 
-This might be the simplest page to show all you posts:
+This might be the simplest page to show all your posts:
 
 
 ```html
@@ -23,11 +23,11 @@ layout: default
 ---
 
 ❴block content❵
-    <h1>Shouts Too Loud from My Hearth</h1>
+    <h2>Shouts Too Loud from My Hearth</h2>
 
     ❴foreach $posts as $post❵
         <a href="/❴$post['relativeUrl']❵/">
-            <h2>❴$post['title']❵</h2>
+            <h3>❴$post['title']❵</h3>
         </a>
     ❴/foreach❵
 ❴/block❵
@@ -53,22 +53,47 @@ Statie will do 3 steps:
 
 ## How does a Post Content Look Like?
 
-```twig
+```html
 <!-- source/_posts/2017-03-05-my-last-post.md -->
 
 ---
+layout: "post"
 title: "This my Last Post, Ever!"
 ---
 
-# Begin by Letting Go
-
-- I was always afraid of writing my feelings. I though everybody would hate me.
-
-Not really a problem anymoogre.
-
-I realized, *feelings are like color of skin*.
-**You are born with them and they are part you nature...**
+This is my last post to all
 ```
+
+### How to Show Post in Own Layout
+
+As you can see, post has `layout: post`. It means it's displayed in `_layouts/post.latte`:
+
+```twig
+<!-- /source/_layouts/post.latte -->
+
+❴extends "default"❵
+
+❴block content_wrapper❵
+    <h2>❴$post['title']❵</h2>
+
+    ❴$post['content']|noescape❵
+❴/block❵
+```
+
+We have to also modify `default.latte, to include our post layout and replacte `❴block content}❴/block❵` with.
+
+```twig
+<!-- /source/_layouts/default.latte -->
+...
+
+❴block content_wrapper❵
+    ❴block content}❴/block❵
+❴/block❵
+
+...
+```
+
+That should be it.
 
 Save file, [look on the blog page](http://localhost:8000/blog) and see:
 
@@ -122,11 +147,11 @@ Would produce url:
 my-blog/2017/my-last-post/
 ```
 
-Go it? I know you do! **You are smart.**
+Got it? I know you do! **You are smart.**
 
 
 
-In one of the next posts, I will you some cool `Post` object features.
+In one of the next posts, I will show you some cool `PostFile` object features.
 
 
 ## Now You Know
