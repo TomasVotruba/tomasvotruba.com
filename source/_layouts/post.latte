@@ -18,6 +18,8 @@
     <div class="container" id="post">
         <h1>{$post['title']|noescape}</h1>
 
+        {include "postYouMightAlsoLike", "post" => $post}
+
         {include "postMetadataLine",
             "post" => $post,
             "showPullRequestLink" => TRUE,
