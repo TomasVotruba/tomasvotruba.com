@@ -13,9 +13,9 @@ I've been thinking over 2 years about this post. I wasn't sure if it's only nega
 ## Doctrine is Awesome Tool
 
 To be clear, I use Doctrine for many years and it is **the best ORM there is**. Of course there is [Propel ORM](http://propelorm.org/) and [Eloquent](https://laravel.com/docs/eloquent) from Laravel,
-**but they don't use active record**.
+**but they use active record**.
 
-I'm not expert in databases, co active record might be actually useful patter, even architectonly, but I don't favor it now.
+I'm not expert in databases, so active record might be actually useful pattern, even architectonly, but I don't favor it now.
 
 
 ## Doctrine is stuck in its Legacy, Unable to Evolve
