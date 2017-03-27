@@ -72,7 +72,7 @@ There is no more powerful motivation than concurrent. More over in man's worlds.
 
 ### 2. Using Monolithic Repository
 
-I see Symfony, Laravel and many huge projects [using this pattern](blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/) and profiting a lot from it. After ~8 years in open-source, I've tried too (don't judge, just try for yourself) and it's the best! Trust me.
+I see Symfony, Laravel and many huge projects [using this pattern](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/) and profiting a lot from it. After ~8 years in open-source, I've tried too (don't judge, just try for yourself) and it's the best! Trust me.
 
 **Having Doctrine (or any other project) split in over 20 repositories requires lot of work**.
 
