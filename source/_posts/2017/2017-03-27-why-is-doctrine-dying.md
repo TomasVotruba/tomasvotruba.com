@@ -2,7 +2,7 @@
 layout: post
 title: "Why Is Doctrine Dying"
 perex: '''
-Do you use Doctrine ORM? If so, do you follow its evolution on Github? Symfony is evolving, Laravel is evolving, Nette is evolving, world is evolving... Doctrine not. Today I will show you 3 reasons, why it is obvious it isn't.
+Do you use Doctrine ORM? If so, do you follow its evolution on Github? Symfony is evolving, Laravel is evolving, Nette is evolving, world is evolving... Doctrine not. Today I will show you 3 reasons why.
 '''
 lang: en
 ---
@@ -56,7 +56,7 @@ Of course you can write an extra card saying "Take my organs when I die", but wh
 Where is death, there is life. I believe Doctrine or any slowly dying project can be saved - by just system setup.
 
 
-### 1. Create a Concurrent
+### 1. Create a Competition
 
 "Where you are the best, there is no one to learn from, so you stop."
 
