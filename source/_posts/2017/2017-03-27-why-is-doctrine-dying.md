@@ -121,5 +121,5 @@ I recommend taking some time to reflect, where your project goes and what is the
 
 ## Let me Know Your Opinion
 
-What do you think? Do you see prosperity? Or [alternative](https://github.com/atlasphp/Atlas.Orm)? Or even different pattern than ORM?
+What do you think? Do you see prosperity? Or alternatives like [NextrasORM](https://github.com/nextras/orm) or [Atlas ORM](https://github.com/atlasphp/Atlas.Orm)? Or even different pattern than ORM?
 Let me know. My knowledge is very limited and I'd be happy to learn something new. Thank you!
