@@ -240,6 +240,6 @@ services:
 
 ### How do You Make your Packages Easy to Extend?
 
-Let me know if you use any of these pattern. Or do you use something else? I'd love to hear that!
+Let me know if you use any of these patterns. Or do you use something else? I'd love to hear about that!
 
 
