@@ -14,13 +14,13 @@ lang: en
 
 There is a big mind-shift from closed-source to open-source. To make it really work, you need to move from *my ego first* to *other people's feelings first*.
 
-It is like building Matrix open to everybody. **You have to predict future and unexpected use cases**. Your code have to be **extendable without making any changes to it**.
+It is like building Matrix open to everybody. **You have to predict future and unexpected use cases**. Your code have to be **extendable without making any changes in it**.
 
 ### "Opened for Extension, Closed for Modification"
 
-Now, I should refer to [**Open/closed principle** on Wikipedia](https://en.wikipedia.org/wiki/Open/closed_principle), which is the worst way to explain it.
+Now, I can refer to [**Open/closed principle** on Wikipedia](https://en.wikipedia.org/wiki/Open/closed_principle), which is the worst way to explain it.
 
-Instead, **I took a time to find simple example** (pro tip: Google with "simple") and actually found one - [go check it](https://github.com/wataridori/solid-php-example/blob/b84657cb736f86dda1453061d15df01f260e5140/2-open-closed-principle.php#L20-L32), it clearly show wrong approach.
+Instead, **I took a time to find simple example** (pro tip: Google with "simple") and actually found one - [go check it](https://github.com/wataridori/solid-php-example/blob/b84657cb736f86dda1453061d15df01f260e5140/2-open-closed-principle.php#L20-L32), it clearly shows wrong approach.
 
 Today I will show you 3 ways to create such entrances.
 
@@ -50,7 +50,7 @@ class ComputerEntrance extends BoothCallEntrance
 }
 ```
 
-**always [mark you classes final](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. There is event [sniff for that](https://github.com/Symplify/CodingStandard/blob/master/src/Sniffs/Classes/FinalInterfaceSniff.php). Use it.
+**always [mark your classes final](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. There is event [sniff for that](https://github.com/Symplify/CodingStandard/blob/master/src/Sniffs/Classes/FinalInterfaceSniff.php). Use it.
 
 ```php
 final class BoothCallEntrance implements MatrixEntranceInterface
@@ -64,7 +64,7 @@ final ComputerEntrance implements MatrixEntranceInterface
 }
 ```
 
-Programmers won't have to think about raping your classes in the night and they just the interface you provide.
+Programmers won't have to think about raping your classes in the night - **they just use the interface you provide**.
 
 <div class="text-center">
     <img src="/../../../../assets/images/posts/2017/extendable-open-source/overide.jpg" class="thumbnail">
@@ -86,7 +86,7 @@ This approach is implemented in PHP under name of EventDispatcher. While working
 
 Do you want simple example of such listening script? [Check this tested post](https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/) with all code snippets you need.
 
-### While on Event, Listen Carefuly
+### While on Event, Listen Carefully
 
 Matrix situation above would look like this:
 
@@ -123,7 +123,7 @@ final class BoothSpy
 
 ### Why is this Useful?
 
-- You can introduce entriy point via event.
+- You can introduce entry point via event.
 - You can **also pass metadata**, like location. Those data **can be open to change**, but don't have to be.
 
 It might be confusing while using at first, but after few weeks I get used to it. Trust me, it's the best.
@@ -132,7 +132,7 @@ It might be confusing while using at first, but after few weeks I get used to it
 ## 3. Like Collecting stamps, just on Steroids
 
 
-This is most powerfol and less know architecture pattern.
+This is most powerful and less known architecture pattern.
 
 **1 service collects all services of specific type**
 
@@ -159,7 +159,7 @@ All services of `EventSubscriber` type are collected by EventDispatcher.
 - [Security Voters](http://symfony.com/doc/current/security/voters.html) → Access Decision Manager
 
 
-As for tags - [they often promote bad practise of duplicated information](https://www.tomasvotruba.cz/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/#bare-tagging-is-duplicated-information). Don't use it if don't have to.
+As for tags - [they often promote bad practise of duplicated information](https://www.tomasvotruba.cz/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/#bare-tagging-is-duplicated-information). Don't use it if you don't have to.
 
 
 ### Why is this Useful?
@@ -171,7 +171,7 @@ As for tags - [they often promote bad practise of duplicated information](https:
 services:
     - YourSubscriber
 ```
-- It gaves you powers of constructor injection. **Your service can use any other services.**
+- It gives you powers of constructor injection. **Your service can use any other services.**
 - It's the best prevention and antidote to [God classes](http://sahandsaba.com/nine-anti-patterns-every-programmer-should-be-aware-of-with-examples.html#god-class).
 
 
@@ -239,5 +239,7 @@ services:
 
 
 ### How do You Make your Packages Easy to Extend?
+
+Let me know if you use any of these pattern. Or do you use something else? I'd love to hear that!
 
 
