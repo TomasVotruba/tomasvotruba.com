@@ -63,8 +63,6 @@ Naposled jsme vysílali [workshop Filipa Procházky o Doctrine](https://www.face
 
 **Potřebuješ s někým probrat své pracovní postupy? Na webu najdeš [přes 20 mentorů](https://pehapkari.cz/mentori/)**, kteří ti pomůžou offline i online s širokou škálou témat. Každé 2 týdny se tam objeví někdo nový.
 
-Nebo si chceš **přečíst něco do hloubky**? Pro tebe **[je tu knihovnička](https://pehapkari.cz/knihovnicka/)**. Stačí si napsat o knížku na Slacku. Sám jsem si už jednu knížku půjčil. A další brzy přibudou.
-
 
 ## PHP programátory baví psát
 
