@@ -39,7 +39,7 @@ When I first saw Laravel, I've noticed one big difference to other PHP projects 
 To promote using interfaces instead of extending your classes like this:
 
 ```php
-class BoothCallEntrance extends MatrixEntranceInterface
+class BoothCallEntrance implements MatrixEntranceInterface
 {
 
 }
