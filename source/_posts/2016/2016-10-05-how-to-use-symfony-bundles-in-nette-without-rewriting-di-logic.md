@@ -6,11 +6,16 @@ perex: '''
 ''' 
 thumbnail: "nette.png"
 lang: "en"
+
+deprecated: true
+deprecated_since: "January 2017"
+deprecated_message: '''
+    This package was <strong>too complex and not easy to use for Nette programmers</strong>. It was downloaded only 20 times during past 2 years,
+    so it was deprecated.
+    <br><br>
+    It is still available <a href="https://github.com/DeprecatedPackages/NetteAdapterForSymfonyBundles">here for inspiration</a> though.
+'''
 ---
-
-
-> EDIT: This package has been deprecated on January 2017 [because of low usage](https://packagist.org/packages/symplify/nette-adapter-for-symfony-bundles/stats). It is still available [here for inspiration](https://github.com/TomasVotruba/NetteAdapterForSymfonyBundles).
-
 
 To be specific: 
 
