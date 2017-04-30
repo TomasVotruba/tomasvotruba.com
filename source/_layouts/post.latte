@@ -6,11 +6,28 @@
 
         {include "postMetadataLine", "post" => $post, "showPullRequestLink" => TRUE}
 
-        <div class="panel panel-default">
-            <div class="panel-body perex">
-                {$post['perex']|noescape}
+        {if isset($post['deprecated'])}
+            <br>
+            <br>
+
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <strong>Content of this post is deprecated since {$post['deprecated_since']}</strong>
+                </div>
+                <div class="panel-body">
+                    {$post['deprecated_message']|noescape}
+                </div>
             </div>
-        </div>
+
+            <br>
+            <br>
+        {else}
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {$post['perex']|noescape}
+                </div>
+            </div>
+        {/if}
 
         {$post['content']|noescape}
 

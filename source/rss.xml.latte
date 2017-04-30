@@ -5,9 +5,9 @@
     xmlns:atom="http://www.w3.org/2005/Atom"
 >
     <channel>
-        <title>Tomáš Votruba Blog</title>
+        <title>Tomas Votruba writes about PHP and education</title>
         <link>{$siteUrl}/blog/</link>
-        <description>PHP, Communities and Communication posts by Tomáš Votruba</description>
+        <description>PHP, Communities and Communication posts by Tomas Votruba</description>
         <pubDate>{=date('r')}</pubDate>
         <atom:link href="{$siteUrl}/rss.xml" rel="self" type="application/rss+xml" />
 
@@ -23,7 +23,7 @@
                 <link>{$siteUrl}/{$post['relativeUrl']}/</link>
                 <description><![CDATA[ {$post['perex']|striptags} ]]></description>
                 <guid isPermaLink="false">{$siteUrl}/{$post['relativeUrl']}/</guid>
-                <dc:creator><![CDATA[ Tomáš Votruba ]]></dc:creator>
+                <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
                 <pubDate>{$post->getDateInFormat('r')}</pubDate>
                 <comments>{$siteUrl}/{$post['relativeUrl']}#disqus_thread</comments>
             </item>
