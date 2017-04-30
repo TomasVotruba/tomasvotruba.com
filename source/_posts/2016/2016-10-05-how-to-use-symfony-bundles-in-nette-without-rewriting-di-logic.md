@@ -4,7 +4,6 @@ title: "How to Use Symfony Bundles in Nette Without Rewriting DI Logic"
 perex: '''
     Every framework has its own unique Dependency Injection Container (DIC), where you register your services. <strong>Imagine a set of special glues that are required to add the same paper on different surfaces.</strong> Today I will show you how to use universal glue for Nette surface.
 ''' 
-thumbnail: "nette.png"
 lang: "en"
 
 deprecated: true

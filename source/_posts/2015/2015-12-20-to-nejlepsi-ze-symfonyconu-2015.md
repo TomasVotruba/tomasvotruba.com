@@ -2,7 +2,6 @@
 layout: post
 title: To nejlepší ze SymfonyConu 2015
 perex: "Každoročně pořádaný SymfonyCon se letos konal v Paříži. Přes všechny útoky Paříž žije dál. Možná o to víc. Důkazem toho může být i 1000 návštěvníků, kteří na akci dorazili. Čechy jsem reprezentoval spolu s Dennisem, a taky Petrem a Kubou z Lmc.eu"
-thumbnail: "symfony.png"
 ---
 
 <div class="text-center">

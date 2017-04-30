@@ -7,7 +7,6 @@ perex: '''
     Today I will show you, how to make only single one.
 '''
 lang: "en"
-thumbnail: "nette.png"
 
 deprecated: true
 deprecated_since: "January 2017"

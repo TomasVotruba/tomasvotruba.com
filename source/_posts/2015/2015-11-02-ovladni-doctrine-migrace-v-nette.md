@@ -2,7 +2,6 @@
 layout: post
 title: Ovládni Doctrine migrace v Nette
 perex: "Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budou se vám hodit migrace."
-thumbnail: "nette.png"
 
 deprecated: true
 deprecated_since: "January 2017"

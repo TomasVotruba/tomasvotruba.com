@@ -7,7 +7,6 @@ perex: '''
     can <strong>start your own OS project with zero-knowledge</strong> (OS = open-source).
     Ready? Let's start with creating a Github repository!
 '''
-thumbnail: "open-source.jpg"
 lang: en
 ---
 

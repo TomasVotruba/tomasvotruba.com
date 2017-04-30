@@ -7,7 +7,6 @@ perex: '''
     Today I will show you, how to get rid of that line.
 '''
 lang: "en"
-thumbnail: "symfony.png"
 ---
 
 ## When to autowire?
