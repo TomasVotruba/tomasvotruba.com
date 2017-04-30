@@ -22,6 +22,17 @@
             <br>
             <br>
         {else}
+            {if isset($post['updated'])}
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <strong>Content of this post was updated in {$post['updated_since']}</strong>
+                    </div>
+                    <div class="panel-body">
+                        {$post['updated_message']|noescape}
+                    </div>
+                </div>
+            {/if}
+
             <div class="panel panel-default">
                 <div class="panel-body">
                     {$post['perex']|noescape}
