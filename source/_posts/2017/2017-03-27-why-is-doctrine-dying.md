@@ -108,7 +108,7 @@ That why I'm dropping my packages built on Doctrine.
 
 - [Zenify/DoctrineFixtures](https://github.com/Zenify/DoctrineFixtures) - use [Nelmio/Alice](https://github.com/nelmio/alice) instead
 - [Zenify/DoctrineBehaviors](https://github.com/Zenify/DoctrineBehaviors)
-- [Zenify/DoctrineExtensionsTree](https://github.com/Zenify/DoctrineExtensionsTree) - use [rixxi/gedmo](https://github.com/rixxi/gedmo) instead
+- [Zenify/DoctrineExtensionsTree](https://github.com/Zenify/DoctrineExtensionsTree) - use [minetro/doctrine-extensions](https://github.com/minetro/doctrine-extensions) instead
 - [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations) - use
 https://github.com/robmorgan/phinx instead, they are [awesome and alive](https://php.libhunt.com/project/phinx/vs/doctrine-migrations)
 
