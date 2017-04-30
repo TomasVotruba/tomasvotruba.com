@@ -3,16 +3,22 @@ layout: post
 title: Modular Routing in Symfony
 perex: "Modular routing in Symfony is bounded to routing.yml. Adding few lines for each new module can create large mess. Can we make it bit simpler? Sure we do and I will show you how."
 lang: en
-thumbnail: "symfony.png"
+
+updated: true
+updated_since: "May 2017"
+updated_message: '''
+    New Symfony 3.3 features <a href="http://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration">class based service naming</a> and PHP 7.
+'''
 ---
 
 Let's say you have fairly standalone module or package and you want to add its routes as simple as:
 
 ```php
 // app/AppKernel.php
-class AppKernel extends Kernel
+
+final class AppKernel extends Kernel
 {
-    public function registerBundles()
+    public function registerBundles(): array
     {
         $bundles = [
             new App\MeetupModule\AppMeetupModuleBundle(),
@@ -57,20 +63,17 @@ Routes are usually in form of a simple array with `url` → `controller` records
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
-/**
- * @return RouteCollection
- */
-public function getRouteCollection()
+public function getRouteCollection(): RouteCollection
 {
-    return $this->loadRouteCollectionFromFile(__DIR__.'/routes.yml');
+    return $this->loadRouteCollectionFromFile(__DIR__ . '/routes.yml');
 
     // OR xml
-    return $this->loadRouteCollectionFromFile(__DIR__.'/routes.xml');
+    return $this->loadRouteCollectionFromFile(__DIR__ . '/routes.xml');
 
     // OR even multiple files
     return $this->loadRouteCollectionFromFiles([
-        __DIR__.'/front_routes.yml',
-        __DIR__.'/admin_routes.yml'
+        __DIR__ . '/front_routes.yml',
+        __DIR__ . '/admin_routes.yml'
     ]);
 
     // OR pure PHP with some tweaks
@@ -97,11 +100,11 @@ composer require symplify/modular-routing
 
 ```php
 // app/AppKernel.php
-class AppKernel extends Kernel
+final class AppKernel extends Kernel
 {
-    public function registerBundles()
+    public function registerBundles(): array
     {
-        $bundles = [
+        return [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
             new Symplify\ModularRouting\SymplifyModularRoutingBundle(),
@@ -117,17 +120,15 @@ class AppKernel extends Kernel
 // src/SomeBundle/Routing/SomeRouteCollectionProvider.php
 namespace SomeBundle\Routing;
 
+use Symfony\Component\Routing\RouteCollection;
 use Symplify\ModularRouting\Routing\AbstractRouteCollectionProvider;
 
 final class SomeRouteCollectionProvider extends AbstractRouteCollectionProvider
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getRouteCollection()
+    public function getRouteCollection(): RouteCollection
     {
         # routes.yml is the file, where all your routes are located
-        return $this->loadRouteCollectionFromFile(__DIR__.'/routes.yml');
+        return $this->loadRouteCollectionFromFile(__DIR__ . '/routes.yml');
     }
 }
 ```
@@ -137,8 +138,7 @@ final class SomeRouteCollectionProvider extends AbstractRouteCollectionProvider
 ```yaml
 # src/SomeBundle/Resources/config/services.yml
 services:
-    some_module.route_provider:
-        class: SomeBundle\Routing\SomeRouteCollectionProvider
+    SomeBundle\Routing\SomeRouteCollectionProvider: ~
 ```
 
 And that's it! Now all routes are loaded along with your bundle registration.

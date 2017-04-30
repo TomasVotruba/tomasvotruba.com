@@ -2,7 +2,16 @@
 layout: post
 title: Ovládni Doctrine migrace v Nette
 perex: "Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budou se vám hodit migrace."
-thumbnail: "nette.png"
+
+deprecated: true
+deprecated_since: "January 2017"
+deprecated_message: '''
+    Because I see Doctrine ORM as over-complex tool not useful for new projects - <strong><a href="/blog/2017/03/27/why-is-doctrine-dying/">read a post here</a></strong>, I have deprecated this package.
+    <br><br>
+    <strong>I recommend using more robust and active <a href="https://phinx.org/">Phinx migration tool</a> instead.</strong> I already do and it is great!
+    <br><br>
+    It is still available <a href="https://github.com/DeprecatedPackages/DoctrineMigrations">here for inspiration</a> though.
+'''
 ---
 
 Stejně jako Kdyby/Doctrine využívá doctrine/doctrine2, my použijeme [doctrine/migrations](https://github.com/doctrine/migrations). Ty si [denně stáhne přes 9 000 programátorů](https://packagist.org/packages/doctrine/migrations/stats), takže se nemusíte bát o jeho kvalitu.

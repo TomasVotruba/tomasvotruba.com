@@ -3,6 +3,15 @@ layout: post
 title: "Decouple Controller from Symfony using Traits"
 perex: "If you start using controllers as services, you still <strong>often need helpers methods of Controller from FrameworkBundle</strong>. So your code still depends on service locator and decoupling is not really happening.<br><br>Today I will show you <strong>how to remove the dependency on Controller and keep those fancy methods at the same time</strong>."
 lang: en
+
+deprecated: true
+deprecated_since: "May 2017"
+deprecated_message: '''
+    Since <strong>Symfony 3.3</strong> you can use <a href="https://github.com/symfony/symfony/pull/22157">AbstractController</a>.
+    It does pretty much the same thing - <strong>in even cleaner way</strong> - and it has native support in Symfony.
+    <br><br>
+    I recommend using it!
+'''
 ---
 
 ## Typical use case of Mixing Principles

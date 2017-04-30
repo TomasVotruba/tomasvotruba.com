@@ -5,7 +5,6 @@ perex: '''
     After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some <strong>metadata files</strong>.
     What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer all these questions today.</strong> 
 '''
-thumbnail: "open-source.jpg"
 lang: en
 ---
 

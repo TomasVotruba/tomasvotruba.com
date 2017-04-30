@@ -5,7 +5,6 @@ perex: '''
     Symfony komunita mění svůj název, jinak vše zůstane stejné jako dosud.
     <strong>Říkáš si proč?</strong> To se dnes dozvíš. 
 '''
-thumbnail: "php.jpg"
 ---
 
 Od září 2016 měníme název komunity *Symfonisti* na *Péhápkaři*.

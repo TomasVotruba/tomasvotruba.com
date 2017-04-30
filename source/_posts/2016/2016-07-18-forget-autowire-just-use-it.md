@@ -7,8 +7,15 @@ perex: '''
     Today I will show you, how to get rid of that line.
 '''
 lang: "en"
-thumbnail: "symfony.png"
+
+updated: true
+updated_since: "May 2015"
+updated_message: '''
+    New Symfony 3.3 features <a href="http://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration">class based service naming</a>
+    and <a href="https://github.com/symfony/symfony/pull/21494">alias instead of autowiring-types</a> were added.
+'''
 ---
+
 
 ## When to autowire?
 
@@ -26,14 +33,14 @@ If you use autowiring daily, you might came across this thinking process before 
 
 *3) Is it unique service type?*
 
-- No => add `autowiring_types` for specific name to required service, [which is pretty difficult at the moment](https://github.com/symfony/symfony/issues/17783)
+- No => add [`alias` for specific name to required service](https://github.com/symfony/symfony/pull/21494)
 - Yes => autowire
 
 *4) Has the constructor changed during development?*
 
 - Start from point 1.
 
-+ And some more for edge cases.
+Plus some more logic for edge cases like parameters and factories.
 
 
 ## Seems like function... Could this be automated?
@@ -47,16 +54,13 @@ Apart handling feature above for you, it will turn this...
 ```yaml
 # app/config/config.yml
 services:
-    price_calculator:
-        class: PriceCalculator
+    PriceCalculator:
         autowire: true
 
-    product_repository:
-        class: ProductRepository
+    ProductRepository:
         autowire: true
 
-    user_factory:
-        class: UserFactory
+    UserFactory:
         autowire: true
 ```
 
@@ -65,14 +69,11 @@ services:
 ```yaml
 # app/config/config.yml
 services:
-    price_calculator:
-        class: PriceCalculator
+    PriceCalculator: ~
 
-    product_repository:
-        class: ProductRepository
+    ProductRepository: ~
 
-    user_factory:
-        class: UserFactory
+    UserFactory: ~
 ```
 
 ## Get It Done in 2 steps
@@ -87,9 +88,10 @@ composer require symplify/default-autowire
 
 ```php
 // app/AppKernel.php
-class AppKernel extends Kernel
+
+final class AppKernel extends Kernel
 {
-    public function registerBundles()
+    public function registerBundles(): array
     {
         $bundles = [
             new Symplify\DefaultAutowire\SymplifyDefaultAutowireBundle(),
