@@ -40,7 +40,7 @@ If you use autowiring daily, you might came across this thinking process before 
 
 - Start from point 1.
 
-+ And some more for edge cases.
+Plus some more logic for edge cases like parameters and factories.
 
 
 ## Seems like function... Could this be automated?

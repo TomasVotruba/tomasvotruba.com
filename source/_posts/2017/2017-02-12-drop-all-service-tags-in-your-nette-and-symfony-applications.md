@@ -6,6 +6,17 @@ perex: '''
     Today I will show you, how to do it gradually without breaking the application.
 '''
 lang: en
+
+updated: true
+updated_since: "May 2017"
+updated_message: '''
+    Updated with <strong>new Symfony 3.3 features <a href="http://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration">class based service naming, <code>_instanceof</code> configuration</a>
+    and <a href="http://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration">autoconfiguration</a></strong> (plus PHP 7).
+    <br><br>
+    It does pretty much the same, so package ServiceDefinitionDecorator for Symfony was deprecated. 
+    <br><br>    
+    It is still available <a href="https://github.com/DeprecatedPackages/ServiceDefinitionDecorator">here for inspiration</a> though.
+'''
 ---
 
 This post is follow up to *[How to Avoid Inject Thanks to Decorator feature in Nette](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/)*. Go read it if you missed it.
@@ -60,7 +71,7 @@ services:
     simple_console_command:
     class: "App\Command\SimpleConsoleCommand"
     tags:
-        - "console.command"
+        name: "console.command"
         priority: 20
 ```
 
@@ -105,7 +116,7 @@ services:
 
 So much reading, huh? Imagine 50 more of these.
 
-If you can't switch to [Symplify\SymfonyEventDispatcher](https://github.com/Symplify/SymfonyEventDispatcher), that already dropped tags, you can use Nette integrated Decorator.
+If you can't switch to [Symplify\SymfonyEventDispatcher](https://github.com/Symplify/SymfonyEventDispatcher), that already dropped tags, you can use Nette [Decorator feature]().
 
 ```yaml
 # app/config/config.neon
@@ -152,94 +163,51 @@ Symfony [has over 40 tags](http://symfony.com/doc/current/reference/dic_tags.htm
 If we use the same setup as we used in Nette above, in Symfony it would look like this:
 
 ```yaml
+# app/config/config.yml
+
 services:
-    app.console.first_command:
-        class: App\Console\FirstCommand
+    App\Console\FirstCommand: 
         tags:
             - { name: console.command }
-    app.console.second_command:
-        class: App\Console\SecondCommand
+    App\Console\SecondCommand:
         tags:
             - { name: console.command }
-    app.console.third_command:
-        class: App\Console\ThirdCommand
+    App\Console\ThirdCommand:
         tags:
             - { name: console.command }
-    app.event_subscriber.first_event_subscriber:
-        class: App\EventSubscriber\FirstEventSubscriber
+    App\EventSubscriber\FirstEventSubscriber:
         tags:
             - { name: kernel.event_subscriber }
-    app.event_subscriber.second_event_subscriber:
-        class: App\EventSubscriber\SecondEventSubscriber
+    App\EventSubscriber\SecondEventSubscriber:
         tags:
             - { name: kernel.event_subscriber }
-    app.event_subscriber.third_event_subscriber:
-        class: App\EventSubscriber\ThirdEventSubscriber
+    App\EventSubscriber\ThirdEventSubscriber:
         tags:
             - { name: kernel.event_subscriber }
 ```
 
 I want to quit this project already... but wait!
 
-**If you use [Symplify\ServiceDefinitionDecorator](https://github.com/Symplify/ServiceDefinitionDecorator#install), it
-can be simplified as in Nette**:
+### You can use new [autoconfigure](http://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration) since Symfony 3.3
 
 ```yaml
 # app/config/config.yml
 
 services:
-    app.console.first_command:
-        class: App\Console\FirstCommand
-    app.console.second_command:
-        class: App\Console\SecondCommand
-    app.console.third_command:
-        class: App\Console\ThirdCommand
-    app.event_subscriber.first_event_subscriber:
-        class: App\EventSubscriber\FirstEventSubscriber
-    app.event_subscriber.second_event_subscriber:
-        class: App\EventSubscriber\SecondEventSubscriber
-    app.event_subscriber.third_event_subscriber:
-        class: App\EventSubscriber\ThirdEventSubscriber
+    _defaults:
+        autowire: true # recommended
+        autoconfigure: true
 
-decorator:
-    Symfony\Component\Console\Command\Command:
-        tags:
-            - { name: "console.command" }
-    Symfony\Component\EventDispatcher\EventSubscriberInterface:
-        tags:
-            - { name: "kernel.event_subscriber" }
+    App\Console\FirstCommand: ~
+    App\Console\SecondCommand: ~
+    App\Console\ThirdCommand: ~
+    App\EventSubscriber\FirstEventSubscriber: ~
+    App\EventSubscriber\SecondEventSubscriber: ~
+    App\EventSubscriber\ThirdEventSubscriber: ~
 ```
 
+That's it. Pretty cool, huh?
 
-I recommend putting Decorator setup to `app/config/decorator.neon` or `app/config/decorator.yml`, so it's easy to
-find and programmer know about it.
-
-Don't forget to include `decorator.yml` in main `config.yml`:
-
-```yaml
-# app/config/config.yml
-
-imports:
-    - { resource: decorator.yml }
-```
-
-### Symfony Decorator Autowire Minitip
-
-Autowiring is on by default in Nette, but in Symfony you have to enable it manually. You can use
-[Symplify\DefaultAutowire](https://github.com/Symplify/DefaultAutowire) to mimic the Nette behavior, but in Symfony
-it is trend to control everything.
-
-So you can decide, you want to **autowire just some type of classes**:
-
-```yaml
-# app/config/decorator.yml
-
-decorator:
-    Symfony\Component\EventDispatcher\EventSubscriberInterface:
-        autowire: true
-```
-
-This is very useful for huge legacy applications, where you need stability with changes in small steps.
 
 ## How do you Approach This?
 

@@ -8,7 +8,6 @@
 
         {if isset($post['deprecated'])}
             <br>
-            <br>
 
             <div class="panel panel-danger">
                 <div class="panel-heading">
@@ -20,25 +19,28 @@
             </div>
 
             <br>
-            <br>
-        {else}
-            {if isset($post['updated'])}
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <strong>Content of this post was updated in {$post['updated_since']}</strong>
-                    </div>
-                    <div class="panel-body">
-                        {$post['updated_message']|noescape}
-                    </div>
-                </div>
-            {/if}
+        {/if}
 
-            <div class="panel panel-default">
+        {if isset($post['updated'])}
+            <br>
+
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <strong>Content of this post was updated in {$post['updated_since']}</strong>
+                </div>
                 <div class="panel-body">
-                    {$post['perex']|noescape}
+                    {$post['updated_message']|noescape}
                 </div>
             </div>
+
+            <br>
         {/if}
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                {$post['perex']|noescape}
+            </div>
+        </div>
 
         {$post['content']|noescape}
 
