@@ -9,7 +9,7 @@ lang: en
 ---
 
 use: https://github.com/colinkeenan/silentcast
-
+C
 
 When using coding standard, you can pick of 2 tools
 
