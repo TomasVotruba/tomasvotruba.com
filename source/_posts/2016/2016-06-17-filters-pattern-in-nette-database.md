@@ -11,8 +11,7 @@ lang: "en"
 deprecated: true
 deprecated_since: "January 2017"
 deprecated_message: '''
-    This package was not very active. It was downloaded only 5 times during past 4 months,
-    so it was deprecated.
+    I have deprecated this package, because it was not very active - it has been downloaded only 5 times during past 4 months.
     <br><br>
     It is still available <a href="https://github.com/DeprecatedPackages/NetteDatabaseFilters">here for inspiration</a> though.
 '''

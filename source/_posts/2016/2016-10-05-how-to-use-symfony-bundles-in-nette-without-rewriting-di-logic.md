@@ -9,8 +9,7 @@ lang: "en"
 deprecated: true
 deprecated_since: "January 2017"
 deprecated_message: '''
-    This package was <strong>too complex and not easy to use for Nette programmers</strong>. It was downloaded only 20 times during past 2 years,
-    so it was deprecated.
+    This package was <strong>too complex and difficult to use</strong>. I have deprecated it, because it has been downloaded only 20 times during past 2 years.
     <br><br>
     It is still available <a href="https://github.com/DeprecatedPackages/NetteAdapterForSymfonyBundles">here for inspiration</a> though.
 '''

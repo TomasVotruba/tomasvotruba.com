@@ -16,7 +16,7 @@ deprecated_message: '''
     <br><br>
     It has no added value to autowire methods with such a great native support in Symfony.
     <br><br>
-    I recommend using it!
+    I recommend using it instead!
 '''
 ---
 

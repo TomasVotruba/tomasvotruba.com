@@ -7,8 +7,7 @@ lang: "en"
 deprecated: true
 deprecated_since: "March 2017"
 deprecated_message: '''
-    Because I see Doctrine ORM as over-complex tool not useful for new projects - <strong><a href="/blog/2017/03/27/why-is-doctrine-dying/">read a post here</a></strong>,
-    I have deprecated this package.
+    I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - <strong><a href="/blog/2017/03/27/why-is-doctrine-dying/">read a post here</a></strong>.
     <br><br>
     It is still available <a href="https://github.com/deprecatedPackages/DoctrineFilters">here for inspiration</a> though.
 '''
