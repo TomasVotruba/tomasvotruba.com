@@ -11,10 +11,11 @@ lang: "en"
 deprecated: true
 deprecated_since: "May 2017"
 deprecated_message: '''
-    Since <strong>Symfony 3.3</strong> you can use <a href="https://github.com/symfony/symfony/pull/21289">PSR4-based service discovery and registration</a>.
-    It <strong>registers controllers and autowires</strong> them for you (and more).
+    You can <a href="https://github.com/symfony/symfony/pull/21771">inject services into actions</a> using <code>controller.service_arguments</code> tag
+    since <strong>Symfony 3.3</strong>. 
     <br><br>
-    It has no added value to autowire methods with such a great native support in Symfony.
+    Combined with <a href="https://github.com/symfony/symfony/pull/21289">PSR4-based service discovery and registration</a>
+    and <a href="http://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration">autoconfiguration</a> this is amazing feature.
     <br><br>
     I recommend using it instead!
 '''
