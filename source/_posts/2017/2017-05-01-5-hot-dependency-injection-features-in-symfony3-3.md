@@ -30,6 +30,8 @@ Because of tehre wre  os many, there are asleom some extra:
 
 - psr4 servie autodiscreory
     - using nette? here is one
+        - https://github.com/contributte/di
+        - https://github.com/ublaboo/directory-register
 - action arugmetn injection
     - Symplfiy package
     - 
