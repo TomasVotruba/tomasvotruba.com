@@ -67,19 +67,19 @@ checkers:
     - PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer
 ```
 
-I recommend you to add a comment to groups, so everyone can easily orientate when there are more checkers added in time.
+You can add a comment to groups, so everyone can easily orientate when there are more checkers.
 
 
 ### Be Lazy with NEON
 
-Do you use PHPStorm? If so, you can use [NEON Plugin](https://plugins.jetbrains.com/plugin/7060-neon-support). It allows you 1 amazing thing:
+Do you use PHPStorm? If so, you can use [NEON Plugin](https://plugins.jetbrains.com/plugin/7060-neon-support). It allows you one amazing thing:
 
 <div class="text-center">
     <img src="/../../../../assets/images/posts/2017/easy-coding-standard-intro/neon-autocomplete.gif" class="thumbnail">
 </div>
 
 
-**To fuzzy type classes!**
+**It autocompletes class names!**
 
 No more looking to documentation, what string matches what sniff or fixer, if there are any checkers for arrays or debugging typos.
 
@@ -109,7 +109,7 @@ Well, unless you like videos...
 
 ## Watch 🕑 11 min Intro Talks from Dresden PHP Meetup
 
-I've spoken about ECS last week in Dresden. **If you have 11 minutes and you want to know more about it, [go watch it here it here](https://www.facebook.com/pehapkari/videos/vl.1877987242460289/1321227224593751/?type=1).**
+I spoke about ECS last week in Dresden. **If you have 11 minutes and you want to know more about it, [go watch it here it here](https://www.facebook.com/pehapkari/videos/vl.1877987242460289/1321227224593751/?type=1).**
 
 That's all for short intro of this tool. I'll post more articles about how to use it, about fast caching or how to write own checkers - both sniffs and fixers. 
 
