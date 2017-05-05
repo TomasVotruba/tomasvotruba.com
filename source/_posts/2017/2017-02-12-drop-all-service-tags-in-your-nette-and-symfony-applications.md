@@ -116,7 +116,7 @@ services:
 
 So much reading, huh? Imagine 50 more of these.
 
-If you can't switch to [Symplify\SymfonyEventDispatcher](https://github.com/Symplify/SymfonyEventDispatcher), that already dropped tags, you can use Nette [Decorator feature]().
+This is exactly the place to use [Nette Decorator feature](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/).
 
 ```yaml
 # app/config/config.neon
