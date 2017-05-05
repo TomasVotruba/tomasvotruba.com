@@ -49,10 +49,11 @@ I will show how to install it, run it and how nice and clear reports it geneates
 
 ```bash
 composer require symplify/easy-coding-standard:2.0-RC2 \
-    squizlabs/php_codesniffer:"3.0.0RC4 as 2.8.1"
+    squizlabs/php_codesniffer:"3.0.0 as 2.8.1"
 ```
 
-EasyCodingStandard is built on top of *PHP_CodeSniffer 3*. It release is in RC state since fall 2016 and still not ready, so for now we have to use it. 
+EasyCodingStandard is built on top of *PHP_CodeSniffer 3* (released **just 2 days ago**), 
+but some dependencies still require version 2.8. 
 
 
 ### 2. Add `easy-coding-standard.neon` and Configure
