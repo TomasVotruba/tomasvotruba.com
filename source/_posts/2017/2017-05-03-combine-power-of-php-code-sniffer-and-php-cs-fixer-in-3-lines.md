@@ -3,10 +3,10 @@ layout: post
 title: "Combine power of PHP_CodeSniffer and PHP-CS-Fixer in 3 lines"
 perex: '''
     PHP_CodeSniffer has over <strong>3 400 stars</strong> on Github and <strong>210 default sniffs</strong>,
-    PHP-CS-Fixer with <strong>4 423 stars</strong> brings you <strong>142 fixers</strong> to this day.
+    PHP-CS-Fixer with <strong>4 423 stars</strong> brings you <strong>142 fixers</strong>.
     <br><br>
     Both powerful tools dealing with coding standards with <strong>huge communities behind them</strong>.
-    Can you imagine using them both and actually enjoy it? Today, I will show you how.
+    Can you imagine using them both and actually enjoy it? Today I will show you how.
 '''
 lang: en
 ---
@@ -40,8 +40,8 @@ checkers:
 
 Great job! **You have just combined PHP_CodeSniffer and PHP-CS-Fixer in 3 lines.**
 
-With a help of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard). Now, when title promise was fulfilled, 
-I will show how to install it, run it and how nice and clear reports it geneates.   
+With a help of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard). Now, when title promise is fulfilled, 
+I will show how to install it, run it and how nice and clear reports it generates.   
 
 ## How to add EasyCodingStandard in 3 steps   
 
