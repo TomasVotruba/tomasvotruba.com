@@ -48,13 +48,8 @@ I will show how to install it, run it and how nice and clear reports it generate
 ### 1. Install Package
 
 ```bash
-composer require symplify/easy-coding-standard:2.0-RC2 \
-    squizlabs/php_codesniffer:"3.0.0 as 2.8.1"
+composer require symplify/easy-coding-standard:v2.0.0-RC3
 ```
-
-EasyCodingStandard is built on top of *PHP_CodeSniffer 3* (released **just 2 days ago**), 
-but some dependencies still require version 2.8. 
-
 
 ### 2. Add `easy-coding-standard.neon` and Configure
 
