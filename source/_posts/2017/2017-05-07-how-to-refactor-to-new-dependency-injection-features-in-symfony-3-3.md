@@ -5,7 +5,7 @@ perex: '''
     This May will be released Symfony 3.3 with many DependencyInjection improvements.
     Each of them is quite nice, <strong>but combined together - they are huge jump</strong> compare to what we have now.
     <br><br>
-    Today I will you what code can you drop and how to migrate it.
+    Today I will show you what code can you drop and how to migrate it.
 '''
 lang: en
 ---
@@ -31,7 +31,7 @@ more detailed way. But I think there is **quicker way to learn them**...
 
 <br>
 
-### "A full code examples is worth ten thousand words of explanation."
+### "A full code example is worth ten thousand words of explanation."
 
 *Stephen P. Thomas*
 
@@ -211,7 +211,7 @@ services:
         autoconfigure: true
         
     App\: # no more manual registration of similar groups of services 
-        resource: ../{ Controller, Command, Subscriber }
+        resource: ../❴Controller,Command,Subscriber❵
 
     App\SomeService: ~
     
@@ -239,13 +239,13 @@ services:
                 - ["setEntityManager", ["@entity_manager"]]
         
     App\:
-        resource: ../{ Controller, Command, Subscriber, Repository }
+        resource: ../❴Controller,Command,Subscriber,Repository❵
 
     App\SomeService: ~
 ```
 
-That awesome, isn't it?
+That is awesome, isn't it?
 
-Now made full use of Symfony 3.3 Dependency Injection features.
+Now you are using all the shiny new Symfony 3.3 Dependency Injection features.
 
-**Do you like it? Do you plan to skip some of those and stick to the current version?** 
+**Do you like it? Do you plan to skip some of those and stick to the current syntax?** 
