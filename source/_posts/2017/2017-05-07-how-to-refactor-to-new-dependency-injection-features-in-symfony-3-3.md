@@ -248,4 +248,8 @@ That is awesome, isn't it?
 
 Now you are using all the shiny new Symfony 3.3 Dependency Injection features.
 
+### More in Symfony Flex
+
+If you need more examples, check out the default [app.yaml file defined by Symfony Flex](https://github.com/symfony/recipes/blob/master/symfony/framework-bundle/3.3/etc/packages/app.yaml). 
+
 **Do you like it? Do you plan to skip some of those and stick to the current syntax?** 
