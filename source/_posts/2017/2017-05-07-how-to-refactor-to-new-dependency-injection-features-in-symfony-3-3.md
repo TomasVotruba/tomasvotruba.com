@@ -61,7 +61,7 @@ services:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
     second_repository:
-        class: App\Repository\FirstRepository
+        class: App\Repository\SecondRepository
         autowired: true
         calls:
             - ["setEntityManager", ["@entity_manager"]]
@@ -110,7 +110,7 @@ services:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
     second_repository:
-        class: App\Repository\FirstRepository
+        class: App\Repository\SecondRepository
         calls:
             - ["setEntityManager", ["@entity_manager"]]
          
@@ -155,7 +155,7 @@ services:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
     second_repository:
-        class: App\Repository\FirstRepository
+        class: App\Repository\SecondRepository
         calls:
             - ["setEntityManager", ["@entity_manager"]]
          
@@ -188,7 +188,7 @@ services:
     App\Repository\FirstRepository: 
         calls:
             - ["setEntityManager", ["@entity_manager"]]
-    App\Repository\FirstRepository: 
+    App\Repository\SecondRepository: 
         calls:
             - ["setEntityManager", ["@entity_manager"]]
          
@@ -218,7 +218,7 @@ services:
     App\Repository\FirstRepository: 
         calls:
             - ["setEntityManager", ["@entity_manager"]]
-    App\Repository\FirstRepository: 
+    App\Repository\SecondRepository: 
         calls:
             - ["setEntityManager", ["@entity_manager"]]
 ```
