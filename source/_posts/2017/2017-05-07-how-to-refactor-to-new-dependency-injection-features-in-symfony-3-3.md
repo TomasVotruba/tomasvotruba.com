@@ -49,44 +49,44 @@ We apply all features we can and I always add a small `# comment` to the code wi
 services:
     some_service:
         class: App\SomeService
-        autowired: true
+        autowire: true
 
     some_controller:
         class: App\Controller\SomeController
-        autowired: true
+        autowire: true
     
     first_repository:
         class: App\Repository\FirstRepository
-        autowired: true
+        autowire: true
         calls:
             - ["setEntityManager", ["@entity_manager"]]
     second_repository:
         class: App\Repository\SecondRepository
-        autowired: true
+        autowire: true
         calls:
             - ["setEntityManager", ["@entity_manager"]]
          
     # console commands
     first_command:
         class: App\Command\FirstCommand
-        autowired: true
+        autowire: true
         tags:
             - { name: console.command }
     second_command:
         class: App\Command\SecondCommand
-        autowired: true
+        autowire: true
         tags:
             - { name: console.command }
          
     # event subscribers
     first_subscriber:
         class: App\EventSubscriber\FirstSubscriber
-        autowired: true
+        autowire: true
         tags:
             - { name: kernel.event_subscriber }
     second_command:
         class: App\EventSubscriber\SecondSubscriber
-        autowired: true
+        autowire: true
         tags:
             - { name: kernel.event_subscriber }
 ```
@@ -97,7 +97,7 @@ services:
 # app/config/services.yml
 services:
     _defaults:
-        autowired: true # all services in this config are now autowired
+        autowire: true # all services in this config are now autowired
         
     some_service:
         class: App\SomeService
@@ -141,7 +141,7 @@ services:
 # app/config/services.yml
 services:
     _defaults:
-        autowired: true
+        autowire: true
         autoconfigure: true # all Symfony native tags are now added automatically  
         
     some_service:
@@ -178,7 +178,7 @@ services:
 # app/config/services.yml
 services:
     _defaults:
-        autowired: true
+        autowire: true
         autoconfigure: true
         
     App\SomeService: ~ # no more thinking about creative and unique service name
@@ -207,7 +207,7 @@ services:
 # app/config/services.yml
 services:
     _defaults:
-        autowired: true
+        autowire: true
         autoconfigure: true
         
     App\: # no more manual registration of similar groups of services 
@@ -230,7 +230,7 @@ services:
 # app/config/services.yml
 services:
     _defaults:
-        autowired: true
+        autowire: true
         autoconfigure: true
 
     _instanceof: # clean and explicit dependency injection to abstract services
