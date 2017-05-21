@@ -17,8 +17,12 @@ but community, feedback and intuition inspired long process to mature.
  
 If you only want to see before/after changes in you application, you can [skip right to the code](#a-href-https-github-com-deprecatedpackages-defaultautowire-defaultautowire-a). 
 
+<div class="text-center">
+    <img src="/../../../../assets/images/posts/2017/symplify-deprecations/pr-notes.png" style="max-width:100%" class="thumbnail">
+</div>
 
-## Bringing The Wood to the Forest in Open Source
+
+## Bringing The Wood to the Open Source Forest
 
 One of motivations to create and build open-source project is <strong>competition</strong>. You wan't to create better software
 than there already is, to push the society further in the development. If my project is the best, there is much less motivation to develop it.
