@@ -25,3 +25,8 @@ script:
       if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
           vendor/bin/statie push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
       fi
+
+# do not send success notifications, they have no value
+notifications:
+  email:
+    on_success: never
