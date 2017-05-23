@@ -244,6 +244,50 @@ services:
     App\SomeService: ~
 ```
 
+### 6. Use Setter Injection
+
+You can even remove the `_instanceof` with setter injection.
+
+First, modify the abstract repository to add the `@required` annotation to `setEntityManager`:
+
+```php
+namespace App\Repository;
+
+use Doctrine\ORM\EntityManager;
+
+abstract class AbstractRepository
+{
+    private $em;
+
+    // ...
+
+    /**
+     * @required
+     */
+    public function setEntityManager(EntityManager $em): void
+    {
+        $this->em = $em;
+    }
+
+    // ...
+}
+```
+
+Now, remove the `_instanceof` in your `services.yml`:
+
+```yaml
+# app/config/services.yml
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        
+    App\:
+        resource: ../❴Controller,Command,Subscriber,Repository❵
+
+    App\SomeService: ~
+```
+
 That is awesome, isn't it?
 
 Now you are using all the shiny new Symfony 3.3 Dependency Injection features.
