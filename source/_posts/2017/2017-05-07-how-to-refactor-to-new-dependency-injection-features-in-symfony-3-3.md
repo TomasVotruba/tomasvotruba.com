@@ -253,20 +253,23 @@ First, modify the abstract repository to add the `@required` annotation to `setE
 ```php
 namespace App\Repository;
 
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 abstract class AbstractRepository
 {
-    private $em;
+    /**
+     * @var EntityManagerInterface
+     */
+    private $entityManager;
 
     // ...
 
     /**
      * @required
      */
-    public function setEntityManager(EntityManager $em): void
+    public function setEntityManager(EntityManagerInterface $entityManager): void
     {
-        $this->em = $em;
+        $this->entityManager = $entityManager;
     }
 
     // ...
