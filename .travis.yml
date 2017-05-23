@@ -2,10 +2,6 @@ language: php
 
 php: 7.1
 
-branches:
-    only:
-        - master
-
 env:
     global:
         # Go to: Gitub User => Settings => Personal Access Token => Generate New Token
