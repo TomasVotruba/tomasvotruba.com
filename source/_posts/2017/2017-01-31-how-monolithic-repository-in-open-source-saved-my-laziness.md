@@ -44,7 +44,7 @@ and almost everybody else.
 So how does this monorepo work?
 
 
-## From One Hearth to Many Arteries
+## From One Heart to Many Arteries
 
 Imagine flow of a oxygenated blood from heart to arteries. All blood that was in heart, will drift to all arteries.
 
