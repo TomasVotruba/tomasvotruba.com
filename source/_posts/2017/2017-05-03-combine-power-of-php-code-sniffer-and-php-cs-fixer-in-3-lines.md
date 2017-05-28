@@ -40,8 +40,13 @@ checkers:
 
 Great job! **You have just combined PHP_CodeSniffer and PHP-CS-Fixer in 3 lines.**
 
+<<<<<<< HEAD
 With a help of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard). Now, when title promise is fulfilled, 
 I will show how to install it, run it and how nice and clear reports it generates.   
+=======
+With a help of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard). Now, when title promise was fulfilled, 
+I will show how to install it, run it and how nice and clear reports it geneates.   
+>>>>>>> [blog] ecs - 3rd version
 
 ## How to add EasyCodingStandard in 3 steps   
 
@@ -64,10 +69,7 @@ checkers:
 
 You can add a comment to groups, so everyone can easily orientate when there are more checkers.
 
-
-### Be Lazy with NEON
-
-Do you use PHPStorm? If so, you can use [NEON Plugin](https://plugins.jetbrains.com/plugin/7060-neon-support). It allows you one amazing thing:
+Do you use PHPStorm? If so, you can use [NEON Plugin](https://plugins.jetbrains.com/plugin/7060-neon-support). It allows you 1 amazing thing:
 
 <div class="text-center">
     <img src="/../../../../assets/images/posts/2017/easy-coding-standard-intro/neon-autocomplete.gif" class="thumbnail">
