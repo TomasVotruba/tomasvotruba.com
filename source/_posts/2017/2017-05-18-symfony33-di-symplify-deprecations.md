@@ -12,8 +12,8 @@ perex: '''
 lang: en
 ---
 
-I will give you some insight behind deprecations first. It was not instant decision based on few Symfony blog posts,
-but community, feedback and intuition inspired long process to mature.
+I will provide you some insights behind deprecations first. It was not an instant decision based on few Symfony blog posts,
+but a long process of maturing inspired by community, feedback and intuition.
  
 If you only want to see before/after changes in you application, you can [skip right to the code](#a-href-https-github-com-deprecatedpackages-defaultautowire-defaultautowire-a). 
 
@@ -24,7 +24,7 @@ If you only want to see before/after changes in you application, you can [skip r
 
 ## Bringing The Wood to the Open Source Forest
 
-One of motivations to create and build open-source project is <strong>competition</strong>. You wan't to create better software
+One of motivations to create and build open-source project is <strong>competition</strong>. You want to create better software
 than there already is, to push the society further in the development. If my project is the best, there is much less motivation to develop it.
 
 That's why it's the best to have **2 elements of similar level so they push each other forward**, like:
@@ -33,15 +33,14 @@ Google & Facebook, USA & Russia, Symfony & Laravel or PHP & Javascript (in a way
 ## Swallowing My Open-Source Ego
  
 When [Symfony 3.3 introduced new Dependency Injection features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/),
-I realized they're 90 % similar to feature I created my packages for.
- to
+I realized they have 90% similar to feature I created my packages for.
 
 Internal dialog of my Ego and inner Zen master started:
 
 - "It's still not the same, I should keep them and promote them."
 - "But I can do much greater good than adding 10% value. I could focus on completely new packages that bring 100 % value."
-- "But I created them and took care of them for a long time. People should use them."
-- "It's ok, they were good in a time, but things have changed."
+- "But I have created them and I have been taking care of them for a long time. People should use them."
+- "It's ok, they were good in the past, but things have changed."
 - "Ok, maybe I could ask community, what they think about it."
 
 
@@ -53,12 +52,12 @@ I must say, it was much easier to decide after getting such feedback. **Thank yo
 [theofidry](https://github.com/symfony/symfony/pull/22234#issuecomment-297999703),
 [Jachym Tousek](https://github.com/enumag), [Jan Mikes](https://github.com/lexinek)
 and [Javier Eguilez](https://github.com/Symplify/Symplify/pull/162#issuecomment-299441503)**
-for help with this.
+for your help with this.
 
   
 ## Letting Package Go
 
-I realized I could let packages go and made few PRs:
+I realized I could let packages go and I made these PRs:
  
 - [drop DefaultAutowire](https://github.com/Symplify/Symplify/pull/162#issuecomment-299441503)
 - [drop ServiceDefinitionDecorator, AutoServiceRegistration, ControllerAutowire and SymfonyEventDispatcher](https://github.com/Symplify/Symplify/pull/155) 
@@ -94,12 +93,12 @@ services:
         autowire: true
 ```
 
-All services in this config will be now autowired. You can use it in any `.yml` file.
+All services in this config will be autowired now. You can use it in any `.yml` file.
 
 
 ## [ServiceDefinitionDecorator](https://github.com/DeprecatedPackages/ServiceDefinitionDecorator)
 
-This packages helped with service tagging and method calls by type.
+This package helped with service tagging and method calls by type.
 
 
 ### Before
@@ -174,5 +173,5 @@ And just like that, you can drop 4 of Symplify bundles and use Symfony 3.3 happi
 
 ---
 
-That's it for today. In next post, I will show you, **how to deprecate package without letting anyone behind**.
-Not even your blog readers that could came across and old post about it.
+That's all for today. In next post I will show you **how to deprecate package without letting anyone behind**.
+Not even your blog readers that could come across and old post about it.
