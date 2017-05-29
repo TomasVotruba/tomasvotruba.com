@@ -77,6 +77,11 @@ I consider master peace to combine entertainment and education in one piece. To 
  
  Maybe that's the reason I still love Nette and your work, even when I know Symfony on the same level and bit of Laravel. 
  
+ ## To sum up
+ 
+ It's easy to blame others who do somehting, without every realizing that is not the way be happy or to improve anything.
+ Thanks to you I could look on the other side and realize, we both have responsibility.
+ 
  
  Well, I just wanted to say you few words, just so you know, how important your work and you is for me.
  
