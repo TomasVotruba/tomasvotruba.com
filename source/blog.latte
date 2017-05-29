@@ -5,52 +5,6 @@ id: blog
 ---
 
 {block content}
-    <div class="container" id="blog">
-        <h1>{$title|noescape}</h1>
-
-        {include rssButton, "callToAction" => "Get the RSS feed"}
-
-        <div class="row text-left">
-            <div class="col-md-12">
-                {foreach $posts as $post}
-                    {continueIf $post->getDateInFormat('Y-m-d') > date('Y-m-d') || isset($post['redirect']) || isset($post['deprecated'])}
-
-                    {var $postYear = $post->getDateInFormat('Y')}
-                    {if $postYear != date('Y') && !isset($dateLines[$postYear])}
-                        <div class="yearLine" id="year-{$postYear}">
-                            <br>
-                            <br>
-                            {$postYear}
-                            {var $dateLines[$postYear] = $postYear}
-                        </div>
-                    {/if}
-
-                    <article class="text-left">
-                        <a href="/{$post['relativeUrl']}/">
-                            <h2>{$post['title']|noescape}</h2>
-                        </a>
-
-                        {include "postMetadataLine", post => $post}
-                    </article>
-                {/foreach}
-            </div>
-        </div>
-
-        <br>
-
-        <p class="text-center">
-            <strong>Do you want to know about new posts?</strong>
-            {include rssButton, "callToAction" => "Add me to your RSS feed"}
-        </p>
-    </div>
+    <!-- redirect from blog to index page -->
+    <meta http-equiv="refresh" content="0; url=/" />
 {/block}
-
-
-{define rssButton}
-    <div class="text-center">
-        <a href="/rss.xml" class="btn btn-warning">
-            <em class="fa fa-fw fa-rss"></em>
-            {$callToAction}
-        </a>
-    </div>
-{/define}
