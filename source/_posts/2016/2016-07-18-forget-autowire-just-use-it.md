@@ -7,7 +7,6 @@ perex: '''
     If you want to use it to its full potential, you still have to add 1 extra line to every service configuration.
     Today I will show you, how to get rid of that line.
 '''
-lang: "en"
 
 deprecated: true
 deprecated_since: "May 2017"
