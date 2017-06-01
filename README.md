@@ -24,6 +24,6 @@ cd tomasvotruba.cz
 gulp
 ```
 
-And open [http://localhost:8000](http://localhost:8000) in your browser.
+And open [http://localhost:8000](localhost:8000) in your browser.
 
 That's all!
