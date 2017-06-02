@@ -7,7 +7,7 @@ perex: '''
     <br><br>
     But if our application is smooth and ready, do we love and say thank you?
     <br><br>
-    I'd like to express <strong>my gratitude and tribute for you, David - you made my programming life very joyful and curious experience</strong>.
+    I'd like to express <strong>my gratitude and tribute for you, <a href="https://davidgrudl.com/">David</a> - you made my programming life very joyful and curious experience</strong>.
 '''
 lang: en
 ---
