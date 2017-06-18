@@ -131,6 +131,18 @@ checkers:
 - **Look for public properties**. CodeSniffer uses them to set any configuration. 
 
 
+## Thanks to all Contributors
+
+Last but not least, I'd like to personally thank contributors who helped to make this version happen as it is:
+
+- [@frenck](https://github.com/frenck)
+- [@mihaeu](https://github.com/mihaeu)
+- [@roukmoute](https://github.com/roukmoute)
+- [@UFOMelkor](https://github.com/UFOMelkor)
+
+Without your help, this would not have been possible.
+Thank you guys.
+
 
 ## To Sum up Object Calisthenics 3.0
 
