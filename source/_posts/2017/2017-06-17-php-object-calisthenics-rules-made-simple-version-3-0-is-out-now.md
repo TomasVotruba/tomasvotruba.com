@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PHP Object Calisthenics 3.0 Released!"
+title: "PHP Object Calisthenics Made Simple - Version 3.0 is Out Now"
 perex: '''
     Object Calisthenics are 9 language-agnostic rules to help you write better and cleaner code.
     They help you to get rid of else, method chaining, long classes or functions, unreadable short names and so on.
@@ -12,17 +12,17 @@ lang: en
 
 If you are coding standard nerd like me, you'll probably more than PSR2 standards in your ruleset. But even if you fon't, [Object Calisthenics](https://github.com/object-calisthenics/phpcs-calisthenics-rules) is developer-friendly game changer for your code.
 
-## Why Developer-Friendly Game Changer?
+## Much Simpler than 2.0
 
-### 1. You don't have to know single thing about CodeSniffer to start
+**1. You don't have to know single thing about CodeSniffer to start**
 
-### 2. You can start use right now
+**2. Simple to install**
 
 ```bash
 composer require object-calisthenics/phpcs-calisthenics-rules
 ```
 
-### 3. You can run only 1 sniff for start
+**3. You can start with 1 sniff**
 
 Quick quiz: what is this variable?
 
@@ -30,11 +30,11 @@ Quick quiz: what is this variable?
 $this->di->...;
 ```
 
-*Dependency Injection? Dependency Injection Container?* Who would guess it's Donation Iterator! 
+*Dependency Injection? Dependency Injection Container?* Who would guess it's *Donation Invoice*! 
 
 **[Rule #6 - Do Not Abbreviate](https://github.com/object-calisthenics/phpcs-calisthenics-rules#6-do-not-abbreviate)** checks these cases. **It detects short names that are ambiguous and hard to decode.**
 
-To run it in CLI: 
+To run it in CLI just include Object Calisthenics' `ruleset.xml` and specify the sniff name: 
 
 ``` bash
 vendor/bin/phpcs src -sp \
@@ -49,13 +49,19 @@ Nothing complicated.
 
 ## Fancy Readme With Examples
 
-We put lot of work to README examples, so it's not boring text describing what exactly the rule does, but instead right to the point **YES code and NO code snippets**.
+We put lot of work to README for new release. It isn't a long text describing what exactly the rule does and how it originated - there is already [blog post for that](http://williamdurand.fr/2013/06/03/object-calisthenics/). 
+
+Instead, README goes right to the point:
+ 
+- **YES and NO code snippets**,
+- **how to use them** - copy/paste CLI command 
+- and **how to configure them** - link to particular lines in `ruleset.xml` and `easy-coding-standard.neon`.
    
 <img src="/assets/images/posts/2017/object-calisthenics/rule6.png" class="thumbnail">
 
 ### Configure What You Need
 
-As you can see in the bottom, most of rules are configurable. **You can adapt their strictness to your specific needs and needs of your project**.
+As you can see in the bottom part of screenshot, most of rules are configurable. It allows you **to adapt their strictness to your specific needs and needs of your project**.
  
 *Do you prefer to require min 4 chars?*
 
@@ -75,7 +81,7 @@ Configure **in CodeSniffer:**
 </ruleset>
 ```
 
-Configure **in EasyCodingStandard:**
+Configure **in [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard):**
 
 ```yaml
 # easy-coding-standard.neon
@@ -106,7 +112,7 @@ Configure **in CodeSniffer:**
 </ruleset>
 ```
 
-Configure **in EasyCodingStandard:**
+Configure **in [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard):**
 
 ```yaml
 # easy-coding-standard.neon
@@ -129,8 +135,9 @@ checkers:
 ## To Sum up Object Calisthenics 3.0
 
 - This release focuses **on simple setup** rather than on academic explanation of their meaning.  
-- Rules are explained on examples.
-- You can choose a **level of strictness that suits you**.
+- Rules are *explained in examples*.
+- 0-setup. You can just **copy-paste CLI command and run it**.
+- You can choose a **level of strictness that suits you** thanks to flexible configuration.
 
 
 To find more details about this release see [Release notes on Github](https://github.com/object-calisthenics/phpcs-calisthenics-rules/releases/tag/v3.0.0).
