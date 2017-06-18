@@ -106,7 +106,7 @@ Configure **in CodeSniffer:**
         <properties>
             <property name="minLength" value="4"/> 
             <property name="allowedShortNames" type="array" value="y,i,id,to,up"/>
-            <!-- default: i,id,to,up ->
+            <!-- default: i,id,to,up -->
         </properties>
     </rule>
 </ruleset>
