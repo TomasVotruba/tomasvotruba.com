@@ -48,7 +48,7 @@ I will show how to install it, run it and how nice and clear reports it generate
 ### 1. Install Package
 
 ```bash
-composer require symplify/easy-coding-standard:v2.0.0-RC3
+composer require symplify/easy-coding-standard
 ```
 
 ### 2. Add `easy-coding-standard.neon` and Configure
