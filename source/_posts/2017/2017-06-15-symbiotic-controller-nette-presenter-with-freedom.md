@@ -1,29 +1,24 @@
 ---
 layout: post
-title: "Symbitoic Controller: Nette Presenter with Freedom"
+title: "Symbiotic Controller: Nette Presenter with Freedom"
 perex: '''
-    Symfony and Laravel have decoupled controllers by default, thanks to simple principle of controller = callback. No required base class nor interface. 
+    Symfony and Laravel have decoupled controllers by default thanks to simple principle: controller/presenter = callback. No base class nor interface is required. 
     <br><br>
     People around me are already using single action presenters, but still depend on Nette. Why? Coupling of <code>IPresenter</code> in Application and Router. 
     <br><br>
-    I always struggle for freedom and to framework use me, not <strong>Today, I will show you when how addictive and sexy presenters independent are and get them event to Nette</strong>.
+    I think framework should help you and not limit you in a way how you write your code.
+    <strong>Today we look look how to make that happen event for Nette presenters and how to set them free</strong>.
 '''
 lang: en
 ---
 
-@todo ask Honza Mikeš on feedback
-@todo wait for Symplify 2.0 stable before release this
-@todo update example repository o Github
-@todo complete gifs
- 
- 
+## 3 Misconceptions First
 
-
-When first I talked about [single action or rather invokable presenters in Nette](https://www.facebook.com/pehapkari/videos/1285464581503349/) on 8x. posobota in Prague, **people were talking about 3 miss-conceptions**. I'd like clarify them first.
+When I talked about [single action or rather invokable presenters in Nette](https://www.facebook.com/pehapkari/videos/1285464581503349/) on 87. Posobota meetup in Prague, **people were talking about 3 miss-conceptions**. I'd like clarify them first.
  
-### Nette needs `IPreseneter`
+### 1. Nette needs `IPreseneter`
 
-My first attempt decouple presenter from Nette failed `PresenterFactory`:
+My first attempt decouple presenter from Nette [failed on `PresenterFactory`](https://github.com/nette/application/blob/0941b6b7023a43ddd0627ad5ac3ffba606709ef5/src/Application/PresenterFactory.php#L78-L79):
 
 ```php
 // ...
@@ -32,62 +27,72 @@ if (!$reflection->implementsInterface(IPresenter::class)) {
 }
 ```
 
-This took me few weeks to figure out, because coupling to latte, providers and layout autodiscovery. 
-But when you modify `PresenterFactory`, `Application->run()` and create own `PresneterRoute`, it can be done.   
+This took me few weeks to figure out because of coupling to latte, providers and layout autodiscovery. 
+I needed to modify `PresenterFactory`, `Application->run()` and create own `PresneterRoute`.
+   
+**So yes, when you modify few places, you can use it without `IPresenter` interface.**
 
 
-### What about ajax? What about Components?
+### 2. What about ajax? What about Components?
 
-If you use ajax and components, this approach is not probably for you application. 
-I thought it's impossible to use Nette without components as well, but Ondrej Mirtes from Slevomat take me out of my misery. "We don't use components in Slevomat, just presenters." So feel free to ask him how they do it. It helpled me a lot to move forward.
+**If you use ajax and components, this approach is not probably for you application**. 
+
+I thought it's impossible to use Nette without components as well, but [Ondrej Mirtes](https://ondrej.mirtes.cz) from Slevomat take me out of my misery: "We don't use components in Slevomat, just presenters." So feel free to ask him how they do it.
 
 **You'll appreciate this approach in applications, where**:
  
-- front-end is managed not by Nette ajax, but by ReactJS, Angular or any other frontent
-- API is the main entry point to the application
-- your application is growing and you want to avoid god classes like presenters with 10 actions methods in next 2-3 years
+- front-end is managed not by Nette ajax, but by **ReactJS, Angular or any other frontent framework**  
+- **API, Rest or GraphQL** is the main entry point to the application
+- your application is growing and you want to **avoid god classes like presenters with 10 actions methods** in next couple of year
 
 
-### There should be and Interface for that
+### 3. There should be and Interface for that
 
-Even if some people agreed with invokable/single action approach, they still missed some interface, that would enforce a method. `__invoked()` seemed to weird for them. I actually remember I had similar idea to make it standard somehow.
+Even when some people agreed with invokable/single action approach, they still missed some interface that would enforce a method. I must say `__invoke()` method seemed to weird to me at first too.
 
-But I've learned what `__invoke()` is and that is used by Symfony and Laravel for years. And using and interface would not really make it independent. Moreover for presenter/controller, which every framework bend to it's own need.
+**Give `invoke()` a try, it's Fine**
+
+But I've learned what [`__invoke()` is](http://php.net/manual/en/language.oop5.magic.php#object.invoke) and that [Symfony](http://symfony.com/doc/current/controller/service.html#invokable-controllers) and [Laravel use](https://laravel.com/docs/5.4/controllers#single-action-controllers) it for years. 
+
+Also, **using an interface would only create a new dependency** for something that is already used in specific way. Moreover for controller which [every](https://book.cakephp.org/2.0/en/controllers.html#controller-actions) [framework](http://www.yiiframework.com/doc-2.0/guide-structure-controllers.html#actions) [bend](https://book.cakephp.org/3.0/en/controllers.html) [to](https://laravel.com/docs/5.4/controllers#defining-controllers) [its](https://doc.nette.org/en/2.4/presenters#toc-processing-presenter-action) [own](http://symfony.com/doc/current/best_practices/controllers.html#what-does-the-controller-look-like) needs.
  
-`__invoke()` is normal method, just like `__constructor()` is normal for passing dependencies nowadays. But in static days, it "was too much writing", remember?
+`__invoke()` is normal method, just like `__constructor()` is normal for passing dependencies nowadays.
 
 
 ## How did Symfony community moved to Decoupling
 
-### Why Decouple Controller From Framework?
+**Why Decouple Controller From Framework?**
 
-If you look for more reasons to decouple from framework, read this [3 parts series: Framework Independend Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller/) by Matthias Noback about Symfony controlelrs. 
+If you look for more reasons to decouple from framework, read [this 3 parts series: Framework Independend Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller/) by [Matthias Noback](https://matthiasnoback.nl) about Symfony controllers and why to make them framework agnostics. 
 
-### Why are Single Action Presenters Great for Growing Projects
+**Why are Single Action Presenters Great for Growing Projects?**
 
-Exactly 1,5 year ago, similar package and [post](https://dunglas.fr/2016/01/dunglasactionbundle-symfony-controllers-redesigned/) was made by Kevin Dunglas.    
+Similar [package and post](https://dunglas.fr/2016/01/dunglasactionbundle-symfony-controllers-redesigned/) was made by Kevin Dunglas exactly 1,5 year ago. You'll find your answers there.
 
+No more questions, right to the code.
 
 ## How it looks like?
 
 The goal was:
 
-- don't depend on any interface or class
-- have single public method `__invoke()`
+- **don't depend on any interface or class**
+- have **1 public method** `__invoke()`
+
+Ideal code for Nette-agnostic presenter would look like this:
 
 ```php
 namespace App\Presenter;
 
-use Symplify\SymbioticController\Contract\Template\TemplateRendererInterface;
+use Symplify\SymbioticController\Adapter\Nette\Template\TemplateRenderer;
 
 final class StandalonePresenter
 {
     /**
-     * @var TemplateRendererInterface
+     * @var TemplateRenderer
      */
     private $templateRenderer;
 
-    public function __construct(TemplateRendererInterface $templateRenderer)
+    public function __construct(TemplateRenderer $templateRenderer)
     {
         $this->templateRenderer = $templateRenderer;
     }
@@ -101,9 +106,6 @@ final class StandalonePresenter
 }
 ```
 
-@todo: add gif for file click-through
-
-
 Or if you use API and json:
 
 ```php
@@ -111,7 +113,7 @@ namespace App\Presenter;
 
 use Nette\Application\Responses\JsonResponse;
 
-final class ContactPresenter
+final class ApiPresenter
 {
     public function __invoke(): TextResponse
     {
@@ -119,6 +121,22 @@ final class ContactPresenter
     }
 }
 ```
+
+
+### Clickable template paths as Positive Side-Effect
+
+I'Module:Presenter:template' => `__DIR__ . '/templates/template.latte`  
+
+Instead of using magic notation, you can go right with absolute path for templates.
+
+If this would be used by every controller and framework, there would be much lower entry barrier for front-end developers. Another new way to use your IDE the right-way:
+
+<div class="text-center">
+    <img src="/../../../../assets/images/posts/2017/symbiotic-controller/presenter.gif" class="thumbnail">
+</div>
+
+
+## And Router?
 
 But how to register this presenter in router? Since the called action is now *not a method in a class* but *a class*, we cannot use common way to add route:
 
@@ -129,13 +147,14 @@ $routes[] = new Route('/contact', 'Contact:__invoke');
 ```
 
 We need to use presenter as target:
-  
+
 ```php
 use App\Presenter\ContactPresenter; 
 
-# this won't work either, as Route require <presenter>:<method>, format for target
 $routes[] = new Route('/contact', ContactPresenter::class);
 ```
+
+But that won't work either as `Route` class requires `<presenter>:<method>` format for target.
 
 ### Preseneter Route
 
@@ -165,23 +184,37 @@ It has 2 important tasks:
 - **it validates that class has `__invoke()` method**
 - you can **click right to the presenter class** in your IDE
 
-@todo: add gif for route click-through
+
+## From Stringly Route to Strongly Route 
+
+Same way you can use your IDE to open the template, you can use it to open presenter target.
+
+From magic `Homepage:default` to clickable class: 
+
+<div class="text-center">
+    <img src="/../../../../assets/images/posts/2017/symbiotic-controller/router.gif" class="thumbnail">
+</div>
+
+## Do you want to try this?
+
+You have 2 options: check [nette/sandbox based demo on Github](https://github.com/TomasVotruba/nette-single-action-presenter) or install to your application yourself:
 
 ## 3 Steps To Your First Framework Agnostic Presenter in Nette 
 
-### 1. Install package
+### 1. Install Symplify\SymbioticController](https://github.com/Symplify/SymbioticController) package 
 
 ```yaml
 composer require symplify/symbiotic-controller
 ```
   
-### 2. Register extension
+### 2. Register Needed Extensions
 
 ```yaml
 # app/config/config.neon
+
 extensions:
-    - Symplify\SymbioticController\DI\IndependentSingleActionPresenterExtension
-    - Symplify\SymfonyEventDispatcher\Adapter\Nette\DI\SymfonyEventDispatcherExtension
+    - Symplify\SymbioticController\Adapter\Nette\DI\SymbioticControllerExtension
+    - Contributte\EventDispatcher\DI\EventDispatcherExtension
 ```
 
 ### 3. Create Your Presenter and Use It
@@ -189,19 +222,17 @@ extensions:
 That's all :)
 
 
-## Check Live Demo on Github
+## Takeaways
 
-I've also prepared demo based on Nette Sandbox on Github - see [TomasVotruba/nette-single-action-presenter](https://github.com/TomasVotruba/nette-single-action-presenter).
+- Using framework agnostics controllers has its use cases. **The best are: API, backend-mostly and fast growing applications**. 
+- Don't be afraid of `__invoke()`. It is your friend, mainly for future.
+- **Use Strong types over String types and forget the magic**. 
 
-Or click right on [HomepagePresenter](https://github.com/TomasVotruba/nette-single-action-presenter/blob/master/app/presenters/HomepagePresenter.php)
 
-
-## How is Your Presenter Doing?
-
-And how do you approach using presenters/controllers in Nette?
+### How do YOU approach using controller (in Nette)?
 
 - Do you use components?
 - Do you know why you depend on Nette?
 - Do you try some other approach than traditional one?
 
-Let me know in the comments please.
+Let me know in the comments. I always like to here different opinions.
