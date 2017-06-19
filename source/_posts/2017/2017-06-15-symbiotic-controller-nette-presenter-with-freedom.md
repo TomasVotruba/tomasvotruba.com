@@ -2,7 +2,7 @@
 layout: post
 title: "Symbiotic Controller: Nette Presenter with Freedom"
 perex: '''
-    Symfony and Laravel have decoupled controllers by default thanks to simple principle: controller/presenter = callback. No base class nor interface is required. 
+    Symfony and Laravel allow decoupled controllers by default thanks to simple principle: <em>controller/presenter = callback</em>. No base class or interface is needed. 
     <br><br>
     People around me are already using single action presenters, but still depend on Nette. Why? Coupling of <code>IPresenter</code> in Application and Router. 
     <br><br>
@@ -14,9 +14,9 @@ lang: en
 
 ## 3 Misconceptions First
 
-When I talked about [single action or rather invokable presenters in Nette](https://www.facebook.com/pehapkari/videos/1285464581503349/) on 87. Posobota meetup in Prague, **people were talking about 3 miss-conceptions**. I'd like clarify them first.
+When I talked about [single action or rather invokable presenters in Nette](https://www.facebook.com/pehapkari/videos/1285464581503349/) on 87. Posobota meetup in Prague, **people were talking about 3 missconceptions**. I'd like clarify them first.
  
-### 1. Nette needs `IPreseneter`
+### 1. Nette needs `IPresenter`
 
 My first attempt decouple presenter from Nette [failed on `PresenterFactory`](https://github.com/nette/application/blob/0941b6b7023a43ddd0627ad5ac3ffba606709ef5/src/Application/PresenterFactory.php#L78-L79):
 
@@ -63,7 +63,7 @@ Also, **using an interface would only create a new dependency** for something th
 
 **Why Decouple Controller From Framework?**
 
-If you look for more reasons to decouple from framework, read [this 3 parts series: Framework Independend Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller/) by [Matthias Noback](https://matthiasnoback.nl) about Symfony controllers and why to make them framework agnostics. 
+If you look for more reasons to decouple from framework, read [this 3 parts series: Framework Independent Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller/) by [Matthias Noback](https://matthiasnoback.nl) about Symfony controllers and why to make them framework agnostics. 
 
 **Why are Single Action Presenters Great for Growing Projects?**
 
@@ -125,7 +125,7 @@ final class ApiPresenter
 
 ### Clickable template paths as Positive Side-Effect
 
-I'Module:Presenter:template' => `__DIR__ . '/templates/template.latte`  
+`Module:Presenter:template` => `__DIR__ . '/templates/template.latte`  
 
 Instead of using magic notation, you can go right with absolute path for templates.
 
@@ -156,7 +156,7 @@ $routes[] = new Route('/contact', ContactPresenter::class);
 
 But that won't work either as `Route` class requires `<presenter>:<method>` format for target.
 
-### Preseneter Route
+### Presenter Route
 
 To solve this, **we'll use custom Route that accepts Presenter class as argument**.
 
@@ -201,7 +201,7 @@ You have 2 options: check [nette/sandbox based demo on Github](https://github.co
 
 ## 3 Steps To Your First Framework Agnostic Presenter in Nette 
 
-### 1. Install Symplify\SymbioticController](https://github.com/Symplify/SymbioticController) package 
+### 1. Install [Symplify\SymbioticController](https://github.com/Symplify/SymbioticController) package 
 
 ```yaml
 composer require symplify/symbiotic-controller
@@ -235,4 +235,4 @@ That's all :)
 - Do you know why you depend on Nette?
 - Do you try some other approach than traditional one?
 
-Let me know in the comments. I always like to here different opinions.
+Let me know in the comments. I always like to hear different opinions.
