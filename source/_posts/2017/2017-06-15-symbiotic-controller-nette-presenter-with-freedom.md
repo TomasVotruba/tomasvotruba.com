@@ -7,7 +7,7 @@ perex: '''
     People around me are already using single action presenters, but still depend on Nette. Why? Coupling of <code>IPresenter</code> in Application and Router. 
     <br><br>
     I think framework should help you and not limit you in a way how you write your code.
-    <strong>Today we look look how to make that happen event for Nette presenters and how to set them free</strong>.
+    <strong>Today we look how to make that happen even for Nette presenters and how to set them free</strong>.
 '''
 lang: en
 ---
@@ -41,14 +41,14 @@ I thought it's impossible to use Nette without components as well, but [Ondrej M
 
 **You'll appreciate this approach in applications, where**:
  
-- front-end is managed not by Nette ajax, but by **ReactJS, Angular or any other frontent framework**  
+- frontend is managed not by Nette ajax, but by **ReactJS, Angular or any other frontend framework**  
 - **API, Rest or GraphQL** is the main entry point to the application
-- your application is growing and you want to **avoid god classes like presenters with 10 actions methods** in next couple of year
+- your application is growing and you want to **avoid god classes like presenters with 10 actions methods** in next couple of years
 
 
-### 3. There should be and Interface for that
+### 3. There should be an Interface for that
 
-Even when some people agreed with invokable/single action approach, they still missed some interface that would enforce a method. I must say `__invoke()` method seemed to weird to me at first too.
+Even when some people agreed with invokable/single action approach, they still missed some interface that would enforce a method. I must say `__invoke()` method seemed weird to me at first too.
 
 **Give `invoke()` a try, it's Fine**
 
