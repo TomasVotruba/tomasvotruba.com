@@ -116,7 +116,7 @@ use Nette\Application\Responses\JsonResponse;
 
 final class ApiPresenter
 {
-    public function __invoke(): TextResponse
+    public function __invoke(): JsonResponse
     {
         return new JsonResponse('Hi!');
     }
