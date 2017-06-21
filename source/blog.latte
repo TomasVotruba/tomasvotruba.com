@@ -25,7 +25,7 @@ id: blog
 
                     <article class="text-left">
                         <a href="/{$post['relativeUrl']}/">
-                            <h2>{$post['title']}</h2>
+                            <h2>{$post['title']|noescape}</h2>
                         </a>
 
                         {include "postMetadataLine", post => $post}
