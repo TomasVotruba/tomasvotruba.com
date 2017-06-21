@@ -63,7 +63,7 @@ Also, **using an interface would only create a new dependency** for something th
 
 **Why Decouple Controller From Framework?**
 
-If you look for reasons to decouple from framework, read [this 3 parts series: Framework Independent Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller/) by [Matthias Noback](https://matthiasnoback.nl) about Symfony controllers and why to make them framework agnostics.
+If you look for reasons to decouple from framework, read [this 3 parts series: Framework Independent Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller/) by [Matthias Noback](https://matthiasnoback.nl) about independent controllers in Symfony.
 
 **Why are Single Action Presenters Great for Growing Projects?**
 
