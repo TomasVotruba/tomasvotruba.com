@@ -1,4 +1,4 @@
-# TomasVotruba.cz - [Statie](https://github.com/Symplify/Statie) based web
+# [TomasVotruba.cz](https://www.tomasvotruba.cz) - [Statie](https://github.com/Symplify/Statie) based web
 
 [![Build Status](https://img.shields.io/travis/TomasVotruba/tomasvotruba.cz.svg?style=flat-square)](https://travis-ci.org/TomasVotruba/tomasvotruba.cz)
 
