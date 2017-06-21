@@ -2,7 +2,7 @@
 
 {block content_wrapper}
     <div class="container" id="post">
-        <h1>{$post['title']}</h1>
+        <h1>{$post['title']|noescape}</h1>
 
         {include "postMetadataLine", "post" => $post, "showPullRequestLink" => TRUE}
 
