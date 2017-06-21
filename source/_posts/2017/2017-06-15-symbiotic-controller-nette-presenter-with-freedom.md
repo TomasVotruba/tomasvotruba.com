@@ -59,11 +59,11 @@ Also, **using an interface would only create a new dependency** for something th
 `__invoke()` is normal method, just like `__constructor()` is normal for passing dependencies nowadays.
 
 
-## How did Symfony community moved to Decoupling
+## Inspiration from Symfony Community - Matthias Noback & Keving Dunglas
 
 **Why Decouple Controller From Framework?**
 
-If you look for more reasons to decouple from framework, read [this 3 parts series: Framework Independent Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller/) by [Matthias Noback](https://matthiasnoback.nl) about Symfony controllers and why to make them framework agnostics. 
+If you look for reasons to decouple from framework, read [this 3 parts series: Framework Independent Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller/) by [Matthias Noback](https://matthiasnoback.nl) about Symfony controllers and why to make them framework agnostics.
 
 **Why are Single Action Presenters Great for Growing Projects?**
 
@@ -71,7 +71,8 @@ Similar [package and post](https://dunglas.fr/2016/01/dunglasactionbundle-symfon
 
 No more questions, right to the code.
 
-## How it looks like?
+
+## How Single Action Controller looks like?
 
 The goal was:
 
