@@ -19,7 +19,7 @@
             {continueIf $post->getDateInFormat('Y-m-d') > date('Y-m-d') || isset($post['redirect']) || isset($post['deprecated'])}
 
             <item>
-                <title><![CDATA[ {$post['title']} ]]></title>
+                <title><![CDATA[ {$post['title']||noescape} ]]></title>
                 <link>{$siteUrl}/{$post['relativeUrl']}/</link>
                 <description><![CDATA[ {$post['perex']|striptags} ]]></description>
                 <guid isPermaLink="false">{$siteUrl}/{$post['relativeUrl']}/</guid>
