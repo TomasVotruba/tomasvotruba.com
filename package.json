@@ -1,0 +1,12 @@
+{
+  "name": "tomasvotruba.cz",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "write-good": "^0.10",
+    "child_process": "^1.0.2",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11"
+  }
+}
