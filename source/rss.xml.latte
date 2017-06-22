@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0"
+<rss version="2.0
     xmlns:content="http://purl.org/rss/1.0/modules/content/"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:atom="http://www.w3.org/2005/Atom"
@@ -19,7 +19,7 @@
             {continueIf $post->getDateInFormat('Y-m-d') > date('Y-m-d') || isset($post['redirect']) || isset($post['deprecated'])}
 
             <item>
-                <title><![CDATA[ {$post['title']||noescape} ]]></title>
+                <title><![CDATA[ {$post['title']|noescape} ]]></title>
                 <link>{$siteUrl}/{$post['relativeUrl']}/</link>
                 <description><![CDATA[ {$post['perex']|striptags} ]]></description>
                 <guid isPermaLink="false">{$siteUrl}/{$post['relativeUrl']}/</guid>
