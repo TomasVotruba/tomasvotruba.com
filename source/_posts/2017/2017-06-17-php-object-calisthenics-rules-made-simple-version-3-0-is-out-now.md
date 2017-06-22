@@ -3,18 +3,18 @@ layout: post
 title: "PHP Object Calisthenics Made Simple - Version 3.0 is Out Now"
 perex: '''
     Object Calisthenics are 9 language-agnostic rules to help you write better and cleaner code.
-    They help you to get rid of else, method chaining, long classes or functions, unreadable short names and so on.
+    They help you to get rid of "else" statements, method chaining, long classes or functions, unreadable short names and much more.
     <br><br>
-    <strong>Object Calisthenics 3.0 runs on CodeSniffer 3.0, PHP 7.1 and brings 6 of them with fancy configuration and code examples</strong>.
+    <strong>Object Calisthenics 3.0 runs on CodeSniffer 3.0 and PHP 7.1. It brings 6 of them with fancy configuration and code examples</strong>.
 '''
 lang: en
 ---
 
-If you are coding standard nerd like me, you'll probably more than PSR2 standards in your ruleset. But even if you fon't, [Object Calisthenics](https://github.com/object-calisthenics/phpcs-calisthenics-rules) is developer-friendly game changer for your code.
+If you are a coding standard nerd like me, you'll probably have more than just PSR-2 standard in your ruleset. But even if you don't, [Object Calisthenics](https://github.com/object-calisthenics/phpcs-calisthenics-rules) is a developer-friendly game changer for your code.
 
 ## Much Simpler than 2.0
 
-**1. You don't have to know single thing about CodeSniffer to start**
+**1. You don't have to know a single thing about CodeSniffer to start**
 
 **2. Simple to install**
 
@@ -34,7 +34,7 @@ $this->di->...;
 
 **[Rule #6 - Do Not Abbreviate](https://github.com/object-calisthenics/phpcs-calisthenics-rules#6-do-not-abbreviate)** checks these cases. **It detects short names that are ambiguous and hard to decode.**
 
-To run it in CLI just include Object Calisthenics' `ruleset.xml` and specify the sniff name: 
+To run it from the command line just include Object Calisthenics' `ruleset.xml` and specify the sniff's name:
 
 ``` bash
 vendor/bin/phpcs src -sp \
@@ -42,14 +42,14 @@ vendor/bin/phpcs src -sp \
 --sniffs=ObjectCalisthenics.NamingConventions.ElementNameMinimalLength
 ```
 
-You can run this locally or put to your CI integration and you are ready to go.
+You can run this locally or put to your CI and you are ready to go.
 
 Nothing complicated.
 
 
 ## Fancy Readme With Examples
 
-We put lot of work to README for new release. It isn't a long text describing what exactly the rule does and how it originated - there is already [blog post for that](http://williamdurand.fr/2013/06/03/object-calisthenics/). 
+We put lots of work to README for the new release. It isn't a long text describing what exactly the rule does and how it originated - there is already [a blog post for that](http://williamdurand.fr/2013/06/03/object-calisthenics/).
 
 Instead, README goes right to the point:
  
@@ -146,9 +146,9 @@ Thank you guys.
 
 ## To Sum up Object Calisthenics 3.0
 
-- This release focuses **on simple setup** rather than on academic explanation of their meaning.  
+- **Simple setup over boring academic explanations**.
 - Rules are *explained in examples*.
-- 0-setup. You can just **copy-paste CLI command and run it**.
+- 0-setup. You can just **copy-paste CLI commands and run it**.
 - You can choose a **level of strictness that suits you** thanks to flexible configuration.
 
 
