@@ -167,21 +167,22 @@ private function ensureIsAllInstanceOf(array $objects, string $type)
 <em class="fa fa-fw fa-times"></em>
 
 ```php
-if ($isEnabled) {
-    return true;
+if ($status == self::DONE) {
+    $this->finish();
 } else {
-    return false;
+    $this->advance();
 }
 ```
 
 <em class="fa fa-fw fa-check"></em>
 
 ```php
-if ($isEnabled) {
-    return true;
+if ($status == self::DONE) {
+    $this->finish();
+    return;
 }
 
-return false;
+$this->advance();
 ```
 
 ### 5. Use Only One Object Operator (`->`) per Line
