@@ -130,6 +130,213 @@ checkers:
 - Open `ElementNameMinimalLengthSniff` class in your IDE.
 - **Look for public properties**. CodeSniffer uses them to set any configuration. 
 
+That was Rule 6.
+
+## 5 more Rules
+
+### 1. Only X Level of Indentation per Method
+
+<em class="fa fa-fw fa-times"></em>
+
+```php
+foreach ($sniffGroups as $sniffGroup) {
+    foreach ($sniffGroup as $sniffKey => $sniffClass) {
+        if (! $sniffClass instanceof Sniff) {
+            throw new InvalidClassTypeException;
+        }
+    }
+}
+```
+
+<em class="fa fa-fw fa-check"></em>
+
+```php
+foreach ($sniffGroups as $sniffGroup) {
+    $this->ensureIsAllInstanceOf($sniffGefroup, Sniff::class);
+}
+
+// ...
+private function ensureIsAllInstanceOf(array $objects, string $type)
+{
+    // ...
+}
+```
+
+### 2. Do Not Use "else" Keyword
+
+<em class="fa fa-fw fa-times"></em>
+
+```php
+if ($isEnabled) {
+    return true;
+} else {
+    return false;
+}
+```
+
+<em class="fa fa-fw fa-check"></em>
+
+```php
+if ($isEnabled) {
+    return true;
+}
+
+return false;
+```
+
+### 5. Use Only One Object Operator (`->`) per Line
+
+<em class="fa fa-fw fa-times"></em>
+
+```php
+$this->container->getBuilder()->addDefinition(SniffRunner::class);
+```
+
+<em class="fa fa-fw fa-check"></em>
+
+```php
+$containerBuilder = $this->getContainerBuilder();
+$containerBuilder->addDefinition(SniffRunner::class);
+```
+
+### 7. Keep Your Classes Small
+
+<em class="fa fa-fw fa-times"></em>
+
+```php
+class SimpleStartupController
+{
+    // 300 lines of code
+}
+```
+
+<em class="fa fa-fw fa-check"></em>
+
+```php
+class SimpleStartupController
+{
+    // 50 lines of code
+}
+```
+
+<em class="fa fa-fw fa-times"></em>
+
+```php
+class SomeClass
+{
+    public function simpleLogic()
+    {
+        // 30 lines of code
+    }
+}
+```
+
+<em class="fa fa-fw fa-check"></em>
+
+```php
+class SomeClass
+{
+    public function simpleLogic()
+    {
+        // 10 lines of code
+    }
+}
+```
+
+<em class="fa fa-fw fa-times"></em>
+
+```php
+class SomeClass
+{
+    // 20 properties
+}
+```
+
+<em class="fa fa-fw fa-check"></em>
+
+```php
+class SomeClass
+{
+    // 5 properties
+}
+```
+
+<em class="fa fa-fw fa-times"></em>
+
+```php
+class SomeClass
+{
+    // 20 methods
+}
+```
+
+<em class="fa fa-fw fa-check"></em>
+
+```php
+class SomeClass
+{
+    // 5 methods
+}
+```
+
+### 9. Do not Use Getters and Setters
+  
+Classes should not contain public properties.
+
+<em class="fa fa-fw fa-times"></em>
+
+```php
+class ImmutableBankAccount
+{
+    public $currency = 'USD';
+```
+
+<em class="fa fa-fw fa-check"></em>
+
+```php
+class ImmutableBankAccount
+{
+    private $currency = 'USD';
+```
+
+Method should represent behavior, not set values.
+
+<em class="fa fa-fw fa-times"></em>
+
+```php
+    private $amount;
+
+    public function setAmount(int $amount)
+    {
+        $this->amount = $amount;
+    }
+}
+```
+
+<em class="fa fa-fw fa-check"></em>
+
+```php
+    private $amount;
+
+    public function withdrawAmount(int $withdrawnAmount)
+    {
+        $this->amount -= $withdrawnAmount;
+    }
+}
+```
+
+Check [the README](https://github.com/object-calisthenics/phpcs-calisthenics-rules#implemented-rule-sniffs) to see how to use them and configure them.
+
+
+## 9 &ndash; 6 = 3... Where is the Rest of Rules?
+
+There are 3 more rules to complete the list from [the original manifesto](https://pragprog.com/book/twa/thoughtworks-anthology):
+
+3. Wrap Primitive Types and Strings
+4. Use First Class Collections
+8. Do Not Use Classes With More Than Two Instance Variables
+
+They are mostly related to DDD ([Domain Driven Design](https://github.com/dddinphp)), [too strict to use in practise or too vague to cover them with semantic rule](https://github.com/object-calisthenics/phpcs-calisthenics-rules#not-implemented-rules---too-strict-vague-or-annoying).
 
 ## Thanks to all Contributors
 
