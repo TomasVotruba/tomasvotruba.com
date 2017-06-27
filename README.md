@@ -7,12 +7,7 @@
 
 ```sh
 composer create-project tomasvotruba/website tomasvotruba.cz @dev
-```
-
-To enabled live reload after any change, we need one more thing - *gulp*:
-
-```bash
-npm install -g gulp gulp-watch
+npm install
 ```
 
 ## Run the website
@@ -27,3 +22,20 @@ gulp
 And open [http://localhost:8000](localhost:8000) in your browser.
 
 That's all!
+
+
+## Check The Grammar
+
+If your English has some blind spots like mine, you can cheat with [write-good](https://github.com/btford/write-good). 
+
+```bash
+node_modules/write-good/bin/write-good.js some-file
+```
+
+E.g.
+
+```bash
+node_modules/write-good/bin/write-good.js source/_posts/2017/2017-06-17-php-object-calisthenics-rules-made-simple-version-3-0-is-out-now.md
+```
+
+Thanks [@mihaeu](https://github.com/mihaeu) for the tip!
