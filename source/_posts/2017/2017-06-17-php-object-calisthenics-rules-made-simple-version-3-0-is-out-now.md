@@ -167,7 +167,7 @@ private function ensureIsAllInstanceOf(array $objects, string $type)
 <em class="fa fa-fw fa-times"></em>
 
 ```php
-if ($status == self::DONE) {
+if ($status === self::DONE) {
     $this->finish();
 } else {
     $this->advance();
@@ -177,7 +177,7 @@ if ($status == self::DONE) {
 <em class="fa fa-fw fa-check"></em>
 
 ```php
-if ($status == self::DONE) {
+if ($status === self::DONE) {
     $this->finish();
     return;
 }
