@@ -1,50 +1,51 @@
-references:
-    -
-        company: Lékarna.cz
-        url: https://www.lekarna.cz
-        testimonial: "Napojení Nette na Doctrine je po školení hračka. Líbily se mi taky postřehy k testovaní a PHPStorm triky z praxe. Super školení, které posunulo celý tým."
-        feedbacker_name: Ing. Tomáš Bek
-        feedbacker_position: šéf technického vývoje
-        copy_items:
-            - "Nette a Doctrine"
-            - 14 hodin školení
-            - 11 účastíků
-        github_repository:
-            - "https://github.com/TomasVotruba/lekarna-se-skoli"
-            - "https://github.com/TomasVotruba/lekarna-se-skoli-doctrine"
+parameters:
+    references:
+        -
+            company: Lékarna.cz
+            url: https://www.lekarna.cz
+            testimonial: "Napojení Nette na Doctrine je po školení hračka. Líbily se mi taky postřehy k testovaní a PHPStorm triky z praxe. Super školení, které posunulo celý tým."
+            feedbacker_name: Ing. Tomáš Bek
+            feedbacker_position: šéf technického vývoje
+            copy_items:
+                - "Nette a Doctrine"
+                - 14 hodin školení
+                - 11 účastíků
+            github_repository:
+                - "https://github.com/TomasVotruba/lekarna-se-skoli"
+                - "https://github.com/TomasVotruba/lekarna-se-skoli-doctrine"
 
-    -
-        company: Meditorial
-        url: http://meditorial.cz/
-        testimonial: "Ještě jednou díky za přednášky &ndash; líbilo se nám to. GIT nás bavil a já jsem začal častěji commitovat."
-        feedbacker_name: Marek Mencl
-        feedbacker_position: vedoucí programátorského týmu
-        copy_items:
-            - "Nette, Symfony, Silex a Git"
-            - 6 hodin školení
-            - 'pomáhal mi expert na Git, <a href="http://www.tomasfejfar.cz/">Tomáš Fejfar</a>'
+        -
+            company: Meditorial
+            url: http://meditorial.cz/
+            testimonial: "Ještě jednou díky za přednášky &ndash; líbilo se nám to. GIT nás bavil a já jsem začal častěji commitovat."
+            feedbacker_name: Marek Mencl
+            feedbacker_position: vedoucí programátorského týmu
+            copy_items:
+                - "Nette, Symfony, Silex a Git"
+                - 6 hodin školení
+                - 'pomáhal mi expert na Git, <a href="http://www.tomasfejfar.cz/">Tomáš Fejfar</a>'
 
-    -
-        company: "igloonet, s. r. o."
-        url: https://igloonet.cz
-        testimonial: "Ještě jednou díky za školení. Velký přínos mělo hlavně v nápadech, jak si práci ulehčit a dělat ji efektivněji. Určitě budeme chtít školení časem zopakovat."
-        feedbacker_name: Jakub Horký
-        feedbacker_position: vedoucí vývoje
-        copy_items:
-            - "sebevzdělávání, Nette a refaktoring"
-            - 8 hodin školení ve 2 dnech
-            - 4 účastníci
-        # todo: add to website later + make social campaign
-        github_repository: "https://github.com/TomasVotruba/igloonet-se-skoli"
+        -
+            company: "igloonet, s. r. o."
+            url: https://igloonet.cz
+            testimonial: "Ještě jednou díky za školení. Velký přínos mělo hlavně v nápadech, jak si práci ulehčit a dělat ji efektivněji. Určitě budeme chtít školení časem zopakovat."
+            feedbacker_name: Jakub Horký
+            feedbacker_position: vedoucí vývoje
+            copy_items:
+                - "sebevzdělávání, Nette a refaktoring"
+                - 8 hodin školení ve 2 dnech
+                - 4 účastníci
+            # todo: add to website later + make social campaign
+            github_repository: "https://github.com/TomasVotruba/igloonet-se-skoli"
 
-    -
-        company: ERUDIO s.r.o
-        url: http://www.erudio.cz
-        testimonial: "Tomáš neříká teorii, kterou si můžete přečíst na internetu &ndash; ale předává své zkušenosti z praxe. Doporučuji ho všem, kteří hledají specialistu."
-        feedbacker_name: Radek Strnad
-        feedbacker_position: vedoucí programátorského týmu
-        copy_items:
-            - "Symfony, Doctrine a git"
-            - "přes 40 hodin školení (a přibývá)"
-            - 2 programátorské týmy
-        github_repository: "https://github.com/TomasVotruba/erudio-se-skoli"
+        -
+            company: ERUDIO s.r.o
+            url: http://www.erudio.cz
+            testimonial: "Tomáš neříká teorii, kterou si můžete přečíst na internetu &ndash; ale předává své zkušenosti z praxe. Doporučuji ho všem, kteří hledají specialistu."
+            feedbacker_name: Radek Strnad
+            feedbacker_position: vedoucí programátorského týmu
+            copy_items:
+                - "Symfony, Doctrine a git"
+                - "přes 40 hodin školení (a přibývá)"
+                - 2 programátorské týmy
+            github_repository: "https://github.com/TomasVotruba/erudio-se-skoli"

@@ -6,10 +6,10 @@
 >
     <channel>
         <title>Tomas Votruba writes about PHP and education</title>
-        <link>{$siteUrl}/blog/</link>
+        <link>{$site_url}/blog/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
         <pubDate>{=date('r')}</pubDate>
-        <atom:link href="{$siteUrl}/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="{$site_url}/rss.xml" rel="self" type="application/rss+xml" />
 
         {foreach $posts as $post}
             {first}
@@ -20,12 +20,12 @@
 
             <item>
                 <title><![CDATA[ {$post['title']|replace:"&nbsp;", " "} ]]></title>
-                <link>{$siteUrl}/{$post['relativeUrl']}/</link>
+                <link>{$site_url}/{$post['relativeUrl']}/</link>
                 <description><![CDATA[ {$post['perex']|striptags} ]]></description>
-                <guid isPermaLink="false">{$siteUrl}/{$post['relativeUrl']}/</guid>
+                <guid isPermaLink="false">{$site_url}/{$post['relativeUrl']}/</guid>
                 <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
                 <pubDate>{$post->getDateInFormat('r')}</pubDate>
-                <comments>{$siteUrl}/{$post['relativeUrl']}#disqus_thread</comments>
+                <comments>{$site_url}/{$post['relativeUrl']}#disqus_thread</comments>
             </item>
         {/foreach}
     </channel>

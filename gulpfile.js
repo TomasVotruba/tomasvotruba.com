@@ -7,7 +7,7 @@ var exec = require('child_process').exec;
 
 gulp.task('default', function () {
     // Generate current version
-    exec('vendor/bin/statie generate', function (err, stdout, stderr) {
+    exec('vendor/bin/statie generate source', function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
     });
@@ -18,7 +18,7 @@ gulp.task('default', function () {
     // For the second arg see: https://github.com/floatdrop/gulp-watch/issues/242#issuecomment-230209702
     return watch(['source/**/*', '!**/*___jb_tmp___'], { ignoreInitial: false })
         .on('change', function() {
-            exec('vendor/bin/statie generate', function (err, stdout, stderr) {
+            exec('vendor/bin/statie generate source', function (err, stdout, stderr) {
                 console.log(stdout);
                 console.log(stderr);
             });

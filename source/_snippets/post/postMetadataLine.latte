@@ -6,28 +6,23 @@
 
     <li>
         <em class="fa fa-calendar fa-fw"></em>
-        {var $postYear = $post->getDateInFormat('Y')}
-        {var $nowYear = date("Y")}
-        <time datetime="{$post->getDateInFormat('Y-m-D')}">
-            {if $postYear === $nowYear}
-                {$post->getDateInFormat('j. n.')}
-            {else}
-                {$post->getDateInFormat('j. n. Y')}
-            {/if}
-        </time>
+        <time datetime="{$post->getDateInFormat('Y-m-D')}">{$post->getDateInFormat('l, F j, Y')}</time>
     </li>
 
-    <li>
-        <em class="fa fa-fw fa-comments"></em>
-        <a href="{$siteUrl}/{$post['relativeUrl']}/#disqus_thread">X</a>
-        {="post.comment_count"|translate: $post['lang'] ?? 'cs'}
-    </li>
+    {ifset $showCommentCount}
+        <li>
+            <em class="fa fa-fw fa-comments"></em>
+            <a href="{$site_url}/{$post['relativeUrl']}/#disqus_thread">X</a> comments
+        </li>
+    {/ifset}
 
-    <li n:ifset="$showPullRequestLink">
-        <em class="fa fa-fw fa-pencil"></em>
+    {ifset $showPullRequestLink}
+        <li>
+            <em class="fa fa-fw fa-pencil"></em>
 
-        <a href="{$post|githubEditPostUrl}">
-            {="post.edit"|translate: $post['lang'] ?? 'cs'}
-        </a>
-    </li>
+            <a href="{$post|githubEditPostUrl}">
+                Improve this Post
+            </a>
+        </li>
+    {/ifset}
 </ul>

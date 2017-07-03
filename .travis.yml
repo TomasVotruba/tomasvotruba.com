@@ -19,7 +19,7 @@ before_script:
 
 script:
     # test that website is generated
-    - vendor/bin/statie generate
+    - vendor/bin/statie generate source
     # re-build website when on master only
     - |
       if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
