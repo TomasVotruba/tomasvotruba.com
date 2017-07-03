@@ -100,7 +100,7 @@ How many places are there to get in contact with your package? Programmer A adde
 
 To make sure there are no deprecation leaks, put a sign on all sources:
 
-**Packagist**
+#### Packagist
 
 - Go to your package on Packagist, in my case [symplify/symfony-event-dispatcher](https://packagist.org/packages/symplify/symfony-event-dispatcher)
 - Hit "Abandon" button
@@ -121,7 +121,7 @@ Composer will tell you for every `composer require/update` that includes this pa
 
 <img src="/assets/images/posts/2017/deprecate/composer-info.png" class="thumbnail">
 
-**Githug**
+#### Githug Repository
 
 The best way to make people know the package is deprecated on Github **is not by a note in `README`**. Nobody reads readme if he doesn't use the package first time. Note in a description is also small to spot.
 
@@ -146,21 +146,21 @@ This is the most obvious way to let people know on Github.
 If this process is too difficult for you, you can [add a "deprecated" note to README title](https://github.com/DeprecatedPackages/ControllerAutowire#controller-autowire---deprecated-in-core-of-symfony-33) as well.   
 
 
-### The League of Deprecated Packages
+**The League of Deprecated Packages**
 
 <a href="https://github.com/DeprecatedPackages">
     <img src="https://avatars0.githubusercontent.com/u/22506867?v=3&s=200" class="thumbnail">
 </a>
 
-*Thanks to [Milan Šulc](https://f3l1x.io/) for making this beautiful logo that tells all the story.
+*Thanks to [Milan Šulc](https://f3l1x.io/) for making this beautiful logo that tells all the story.*
 
-I've come with this organization a year ago, when me and my friend needed to deprecate more package together. As some of you already figured out, it's a place to put all deprecated packages into.
+I've come with this organization a year ago, when me and my friends needed to deprecate more package together. As some of you already figured out, it's a place to put all deprecated packages into.
 
-**Blog Post(s) about Package**
+#### Blog Post(s) about Package
 
 One the most underestimated places is a blog post. I consider it the most important place for people who don't know the package yet, but might start using it. I'd feel bad if people would start using package **after I deprecated them**, instead of reaching out for the replacement right away.
  
-So I've [created a simple warning system](https://github.com/TomasVotruba/tomasvotruba.cz/pull/88) on my blog:
+I've [created a simple warning system](https://github.com/TomasVotruba/tomasvotruba.cz/pull/88) on my blog:
 
 - Open post about the package.
 - Add warning above the perex with reasoning and suggested replacement: 
@@ -168,3 +168,17 @@ So I've [created a simple warning system](https://github.com/TomasVotruba/tomasv
     <img src="/assets/images/posts/2017/deprecate/blog-deprecate-note.png" class="thumbnail">
     
 - Profit! Thousands of programmer pain-hours saved.
+
+
+## What's in it For You as Maintainer?
+
+This all you do is for package users - what a great and altruistic person you are!
+**But it has one great upside for you as well.** When I've [deprecated 5 of Symplify packages](/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33/) I was sad to loose a legacy, my baby, my work... **But it's worth it!**
+
+In following weeks I found:
+
+- I have **more energy** to work on the rest of packages,
+- I have **much less responsibility** so I can breathe more lightly,
+- and I can put more work into less projectsq
+
+Thanks to that, I've [added new features to EasyCodingStandard](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/), released [Object Calisthenics Coding Standard 3.0](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) and [released ApiGen 5.0-RC2](https://github.com/ApiGen/ApiGen/releases/tag/v5.0.0-RC2). The last one is secret in progress, so don't tell anybody.
