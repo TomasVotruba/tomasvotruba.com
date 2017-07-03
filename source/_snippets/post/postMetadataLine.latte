@@ -6,15 +6,7 @@
 
     <li>
         <em class="fa fa-calendar fa-fw"></em>
-        {var $postYear = $post->getDateInFormat('Y')}
-        {var $nowYear = date("Y")}
-        <time datetime="{$post->getDateInFormat('Y-m-D')}">
-            {if $postYear === $nowYear}
-                {$post->getDateInFormat('j. n.')}
-            {else}
-                {$post->getDateInFormat('j. n. Y')}
-            {/if}
-        </time>
+        <time datetime="{$post->getDateInFormat('Y-m-D')}">{$post->getDateInFormat('l, F j, Y')}</time>
     </li>
 
     {ifset $showCommentCount}
