@@ -17,16 +17,20 @@
         </time>
     </li>
 
-    <li>
-        <em class="fa fa-fw fa-comments"></em>
-        <a href="{$siteUrl}/{$post['relativeUrl']}/#disqus_thread">X</a> comments
-    </li>
+    {ifset $showCommentCount}
+        <li>
+            <em class="fa fa-fw fa-comments"></em>
+            <a href="{$siteUrl}/{$post['relativeUrl']}/#disqus_thread">X</a> comments
+        </li>
+    {/ifset}
 
-    <li n:ifset="$showPullRequestLink">
-        <em class="fa fa-fw fa-pencil"></em>
+    {ifset $showPullRequestLink}
+        <li>
+            <em class="fa fa-fw fa-pencil"></em>
 
-        <a href="{$post|githubEditPostUrl}">
-            Improve this Post
-        </a>
-    </li>
+            <a href="{$post|githubEditPostUrl}">
+                Improve this Post
+            </a>
+        </li>
+    {/ifset}
 </ul>

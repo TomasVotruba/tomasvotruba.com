@@ -4,7 +4,11 @@
     <div class="container" id="post">
         <h1>{$post['title']|noescape}</h1>
 
-        {include "postMetadataLine", "post" => $post, "showPullRequestLink" => TRUE}
+        {include "postMetadataLine",
+            "post" => $post,
+            "showPullRequestLink" => TRUE,
+            "showCommentCount" => TRUE
+        }
 
         {if isset($post['deprecated'])}
             <br>
