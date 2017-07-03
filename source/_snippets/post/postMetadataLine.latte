@@ -19,15 +19,14 @@
 
     <li>
         <em class="fa fa-fw fa-comments"></em>
-        <a href="{$siteUrl}/{$post['relativeUrl']}/#disqus_thread">X</a>
-        {="post.comment_count"|translate: $post['lang'] ?? 'cs'}
+        <a href="{$siteUrl}/{$post['relativeUrl']}/#disqus_thread">X</a> comments
     </li>
 
     <li n:ifset="$showPullRequestLink">
         <em class="fa fa-fw fa-pencil"></em>
 
         <a href="{$post|githubEditPostUrl}">
-            {="post.edit"|translate: $post['lang'] ?? 'cs'}
+            Improve this Post
         </a>
     </li>
 </ul>
