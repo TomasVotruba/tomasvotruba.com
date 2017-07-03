@@ -3,7 +3,7 @@ layout: post
 title: "How to Deprecate PHP Package Without Leaving Anyone Behind"
 perex: '''
     You create PHP open-source packages because you personally use them in your projects. <strong>And you take care of them.</strong>
-    In time you change a job or switch a programming language and you don't have time to take care of them properly. Number of issues and PRs grows and <strong>package is slowly getting obsolete</strong>. 
+    In time you change a job or switch a programming language and you don't have time to take care of them properly. Number of issues and PRs grows and <strong>package is getting obsolete</strong>. 
     <br><br>
     You can do 2 things in this situation: nothing like most people do or <strong>take responsibility, deprecate package and inform your users about better alternative</strong>.
 '''
@@ -12,15 +12,15 @@ lang: en
 
 ## Why Care About Deprecation as a Maintainer
 
-I created few packages for [Nette](https://nette.org) in the past, mostly under *Zenify* namespace. I used them in my projects extensively and they were slowly growing in downloads. Then I switched to [Symfony](https://symfony.com) and I worked mostly with Symfony projects.
+I created over 10 packages for [Nette](https://nette.org) in the past under *Zenify* namespace. I used them in my projects extensively and they were growing in downloads. Then I switched to [Symfony](https://symfony.com) and I worked mostly with Symfony projects.
 
-If I tell you this in person, you'd know that future of *Zenify* is not based on daily usage of it's author and therefore you'd consider switching to concurrent packages.
+If I tell you this in person, you'd know that future of *Zenify* is not based on daily usage of it's author and you'd consider switching to concurrent packages.
 
 **The thing is: 95 % of users of your package don't know about your personal development and life path. They use `composer require vendor/package-name` and that's it.** Of course, few people follow issues and PRs around your package and they might notice 6-months gap in activity. 
 
 ### Open-Source Holidays  
 
-But in open-source these *pauses* are quite often: you need to finish your work project, focus on boost of another package, you have some personal or family events (wedding, newborn child, break-up, moving to another country etc.), so you take a break.
+But in open-source these *pauses* are normal: you need to finish your work project, focus on boost of another package, you have some personal or family events (wedding, newborn child, break-up, moving to another country etc.), so you take a break.
 
 **6-months pause gap and 6-months end-of-development pause look the same. But they are way different.** 
 
@@ -35,7 +35,7 @@ As [No more Mr. Nice Guy](https://www.amazon.com/No-More-Mr-Nice-Guy/dp/07624153
 - build new open-source or application that depends **on non-supported package**
 - integrate your package deeply in their architecture 
 - **promote bad practice** that you don't support anymore but don't have time to put them in the package
-- **wait in darkness** thinking "It's only on a vacation"
+- **wait in darkness** thinking "Author is on a vacation"
  
 ### B. If you DO inform people, they will:
 
@@ -78,14 +78,14 @@ It works the same for releases. When you release version 2.0 that [requires PHP 
 
 ### 1. Explain Why
 
-"This package is deprecated" isn't really satisfying, is it?
+"This package is deprecated" isn't satisfying, is it?
 
-It common effect that people most likely accept change with [**an explanation behind it**](https://startwithwhy.com/).
+It's common psychological effect that people accept change with [**an explanation behind it**](https://startwithwhy.com/) more than without it.
 
 ### 2. Suggest Replacement
 
 Software develops all the time. New and better packages are born everyday. 
-It so much helpful if you suggest a way to go. It doesn't have to share 100 % features of your package. **A package that you'd use if your package won't exist is just fine**.
+It so much helpful if you suggest a way to go. It doesn't have to share 100 % features of your package. **A package that you'd use if your package won't exist is fine**.
 
 You can combine both [like this](/blog/2016/03/10/autowired-controllers-as-services-for-lazy-people/): 
 
@@ -96,7 +96,7 @@ same thing - registers autowired controllers (and more) - and it has native supp
 
 ### 3. Inform People on All Possible Places They can Meet Your Package
 
-There are many various sources to get in contact with your package. Programmer A added package to his composer, programmer B read about it on Github, programmer C saw a blog post that your wrote about it.
+How many places are there to get in contact with your package? Programmer A added package to his composer, programmer B read about it on Github, programmer C saw a blog post that your wrote about it.
 
 To make sure there are no deprecation leaks, put a sign on all sources:
 
@@ -115,7 +115,7 @@ To make sure there are no deprecation leaks, put a sign on all sources:
 
     <img src="/assets/images/posts/2017/deprecate/packagist-abandoned.png" class="thumbnail">
 
-Now you only hope that everybody is going to packagist to check if any of packages they're using are abandoned and seek their replacement... No it's not so painful.
+Now you hope that everybody is going to packagist to check if any of packages they're using are abandoned and seek their replacement... No it's not so painful.
 
 Composer will tell you for every `composer require/update` that includes this package from now on:
 
@@ -127,9 +127,9 @@ The best way to make people know the package is deprecated on Github **is not by
 
 Much more effective **by changing an organization**.
 
-(And if you still need an access to the package just let me know. I'll add it for you.)
+(And if you still need an access to the package, let me know. I'll add it for you.)
 
-- Go to your package on Github, in my case it was [Symplify/SymfonyEventDispatcher](https://github.com/Symplify/SymfonyEventDispatcher)
+- Go to your package on Github, in my case [Symplify/SymfonyEventDispatcher](https://github.com/Symplify/SymfonyEventDispatcher)
 - Go to *Settings*
 - Scroll down to *Danger Zone* and Pick *Transfer*
 
@@ -143,7 +143,7 @@ Much more effective **by changing an organization**.
 
 This is the most obvious way to let people know on Github. 
 
-If this process is too difficult for you, you can only [add a "deprecated" note to README title](https://github.com/DeprecatedPackages/ControllerAutowire#controller-autowire---deprecated-in-core-of-symfony-33) as well.   
+If this process is too difficult for you, you can [add a "deprecated" note to README title](https://github.com/DeprecatedPackages/ControllerAutowire#controller-autowire---deprecated-in-core-of-symfony-33) as well.   
 
 
 ### The League of Deprecated Packages
@@ -154,11 +154,11 @@ If this process is too difficult for you, you can only [add a "deprecated" note 
 
 *Thanks to [Milan Šulc](https://f3l1x.io/) for making this beautiful logo that tells all the story.
 
-I've come with this organization few years ago, when me and my friend needed to deprecate more package together. As some of you already figured out, it's a place to put all deprecated packages into.
+I've come with this organization a year ago, when me and my friend needed to deprecate more package together. As some of you already figured out, it's a place to put all deprecated packages into.
 
-**Blog**
+**Blog Post(s) about Package**
 
-Last but not least, the blog post. I consider the most important place for people who don't know the package yet, but might start using it. I'd feel very bad if people would start using package **after it was deprecated**, instead of reaching out for the replacement right away.
+One the most underestimated places is a blog post. I consider it the most important place for people who don't know the package yet, but might start using it. I'd feel bad if people would start using package **after I deprecated them**, instead of reaching out for the replacement right away.
  
 So I've create a simple warning system on my blog: 
 
