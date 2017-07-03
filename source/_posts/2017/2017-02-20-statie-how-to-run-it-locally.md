@@ -6,7 +6,6 @@ perex: '''
     <br><br>
     That was the "pitch", now I will show you how to use it.
 '''
-lang: en
 ---
 
 ### Create Empty Project...

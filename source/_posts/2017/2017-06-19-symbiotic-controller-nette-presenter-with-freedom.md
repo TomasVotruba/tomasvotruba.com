@@ -9,7 +9,6 @@ perex: '''
     I think framework should help you and not limit you in a way how you write your code.
     <strong>Today we look how to make that happen even for Nette presenters and how to set them free</strong>.
 '''
-lang: en
 ---
 
 ## 3 Misconceptions First

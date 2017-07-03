@@ -9,7 +9,7 @@
                 <a href="/skoleni/">Školím a mentoruji</a>
             </li>
             <li n:class="isset($id) && $id === satisfy ? active">
-                <a href="/reference/">Spokojení klienti</a>
+                <a href="/references/">Spokojení klienti</a>
             </li>
             <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
                 <a href="/blog/">Blog</a>
@@ -18,7 +18,12 @@
                 <a href="/cenik/">Ceník</a>
             </li>
             <li n:class="isset($id) && $id === contact ? active">
-                <a href="/kontakt/">Kontakt</a>
+                <a href="/contact/">Kontakt</a>
+            </li>
+            <li>
+                <a href="https://github.com/tomasvotruba/">
+                    <em class="fa fa-github fa-fw"></em>
+                </a>
             </li>
         </ul>
 
@@ -39,7 +44,7 @@
                 <br>
                 Píšu blog
             </a>
-            <a href="/kontakt/"  n:class="col-xs-3, isset($id) && $id === contact ? active">
+            <a href="/contact/"  n:class="col-xs-3, isset($id) && $id === contact ? active">
                 <em class="fa fa-phone"></em>
                 <br>
                 Kontakt

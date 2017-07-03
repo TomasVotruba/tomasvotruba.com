@@ -5,8 +5,6 @@ perex: '''
     I used LinkedIn since 2008 when it was sending spam to all my friends. After 8 years of tuning my profile to 95 % score, reading mostly copy-pasted messages,
     checking false notifications, flirting with HR girls and hoping for up votes for my recent skills, <strong>I've decided it is time to let it go</strong>. Why and what I'm gonna do now?
 '''
-lang: en
-reviewed_by: [1, 2]
 ---
 
 *Disclaimer: even if I get few abroad offers, my experience is related to work environment in the Czech Republic.*

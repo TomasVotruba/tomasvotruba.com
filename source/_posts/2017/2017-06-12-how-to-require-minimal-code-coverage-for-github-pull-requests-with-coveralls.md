@@ -6,7 +6,6 @@ perex: '''
     <br><br>
     I will show you how to let Travis and Coveralls do this job for you.
 '''
-lang: en
 ---
 
 ## Why Code Coverage Shouldn't be Ignored

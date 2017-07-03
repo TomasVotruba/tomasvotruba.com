@@ -7,7 +7,6 @@ perex: '''
     <br><br>
     <strong>Object Calisthenics 3.0 runs on CodeSniffer 3.0 and PHP 7.1. It brings 6 of them with fancy configuration and code examples</strong>.
 '''
-lang: en
 ---
 
 If you are a coding standard nerd like me, you'll probably have more than just PSR-2 standard in your ruleset. But even if you don't, [Object Calisthenics](https://github.com/object-calisthenics/phpcs-calisthenics-rules) is a developer-friendly game changer for your code.

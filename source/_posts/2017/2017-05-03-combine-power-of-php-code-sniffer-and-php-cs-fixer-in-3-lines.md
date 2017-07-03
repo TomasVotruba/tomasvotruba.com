@@ -8,7 +8,6 @@ perex: '''
     Both powerful tools dealing with coding standards with <strong>huge communities behind them</strong>.
     Can you imagine using them both and actually enjoy it? Today I will show you how.
 '''
-lang: en
 ---
 
 <div class="text-center">

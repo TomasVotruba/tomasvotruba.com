@@ -5,7 +5,6 @@ perex: '''
     What is tagging for? Why we should get rid of it?
     Today I will show you, how to do it gradually without breaking the application.
 '''
-lang: en
 
 updated: true
 updated_since: "May 2017"

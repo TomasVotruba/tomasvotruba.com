@@ -8,8 +8,6 @@ There are 3 solutions: put code <code>/libs</code> subdirectories, decouple to p
     <br><br>
 <strong>All of them are overkill to the solution I will show you to day - composer local packages.</strong>
 '''
-lang: en
-reviwed_by: [5]
 ---
 
 I found first [article about this topic](http://www.whitewashing.de/2015/04/11/monolithic_repositories_with_php_and_composer.html) in 2015, when Benjamin Eberlei created a tool called Fiddler. I was using similar approach in that time for a few months and I was happy I'm not alone.

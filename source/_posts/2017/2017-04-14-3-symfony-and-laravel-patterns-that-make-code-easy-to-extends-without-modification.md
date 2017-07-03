@@ -7,7 +7,6 @@ You can add them and increase project complexity or deny them and increase peopl
     <br><br>
 Magic? No, <strong>just patterns</strong>! Today we look on 3 of them I found and fond in Symfony and Laravel world.
 '''
-lang: en
 ---
 
 ## How is Open-Source Different from Private Code
