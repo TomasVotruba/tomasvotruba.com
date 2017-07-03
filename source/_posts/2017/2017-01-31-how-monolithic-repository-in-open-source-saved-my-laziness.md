@@ -8,7 +8,6 @@ perex: '''
     <br><br>
     I never did. Today I will show you <strong>why I see monorepo approach in open-source so awesome</strong>.
 '''
-lang: en
 reviwed_by: [8, 9, 10]
 ---
 

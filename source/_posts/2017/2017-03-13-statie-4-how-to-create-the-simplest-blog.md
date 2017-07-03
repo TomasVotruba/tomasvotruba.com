@@ -6,7 +6,6 @@ Statie is very powerful tool for creating small sites. But you will use just sma
     <br><br>
     Today I will show you, <strong>how to put your first post</strong>.
 '''
-lang: en
 ---
 
 

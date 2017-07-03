@@ -8,7 +8,6 @@ There are 3 solutions: put code <code>/libs</code> subdirectories, decouple to p
     <br><br>
 <strong>All of them are overkill to the solution I will show you to day - composer local packages.</strong>
 '''
-lang: en
 reviwed_by: [5]
 ---
 
