@@ -1,7 +1,3 @@
-# use in a template as {$disqusShortname} etc.
-disqusShortname: itsworthsharing
-
-
 # Statie configuration
 configuration:
     postRoute: blog/:year/:month/:day/:title
