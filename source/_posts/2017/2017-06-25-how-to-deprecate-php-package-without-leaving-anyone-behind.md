@@ -160,12 +160,12 @@ I've come with this organization a year ago, when me and my friend needed to dep
 
 One the most underestimated places is a blog post. I consider it the most important place for people who don't know the package yet, but might start using it. I'd feel bad if people would start using package **after I deprecated them**, instead of reaching out for the replacement right away.
  
-So I've create a simple warning system on my blog: 
+So I've [created a simple warning system](https://github.com/TomasVotruba/tomasvotruba.cz/pull/88) on my blog:
 
 - Open post about the package.
 - Add warning above the perex with reasoning and suggested replacement: 
 
-    <img src="/assets/images/posts/2017/deprecate/github-transfer.png" class="thumbnail">
+    <img src="/assets/images/posts/2017/deprecate/blog-deprecate-note.png" class="thumbnail">
     
 - Profit! Thousands of programmer pain-hours saved.
 
