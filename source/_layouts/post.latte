@@ -14,7 +14,7 @@
     </body>
 </html>
 
-{block content}
+{define content}
     <div class="container" id="post">
         <h1>{$post['title']|noescape}</h1>
 
@@ -66,7 +66,7 @@
 
         {include "disqusComments", 'post' => $post}
     </div>
-{/block}
+{/define}
 
 
 {block socialTags}
