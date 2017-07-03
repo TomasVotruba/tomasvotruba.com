@@ -168,4 +168,3 @@ So I've [created a simple warning system](https://github.com/TomasVotruba/tomasv
     <img src="/assets/images/posts/2017/deprecate/blog-deprecate-note.png" class="thumbnail">
     
 - Profit! Thousands of programmer pain-hours saved.
-
