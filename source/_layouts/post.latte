@@ -1,6 +1,20 @@
-{extends "default"}
+<!DOCTYPE html>
+<html>
+    {include "head"}
+    <body>
+        {include "menu"}
 
-{block content_wrapper}
+        <div class="mainContent">
+            {include content}
+        </div>
+
+        {include additionalJavascript}
+
+        {include "footer"}
+    </body>
+</html>
+
+{block content}
     <div class="container" id="post">
         <h1>{$post['title']|noescape}</h1>
 
