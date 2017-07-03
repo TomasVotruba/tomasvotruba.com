@@ -1,3 +1,6 @@
 # to be used with newer Statie
 parameters:
     fb_tracking_id: "201338863559186"
+    google_analytics_tracking_id: "UA-46082345-1"
+    site_title: Tomas Votruba
+    site_url: "https://www.tomasvotruba.cz"

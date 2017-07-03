@@ -1,9 +1,6 @@
 # use in a template as {$disqusShortname} etc.
 disqusShortname: itsworthsharing
-googleAnalyticsTrackingId: "UA-46082345-1"
-siteTitle: Tomáš Votruba # - Nette a Symfony školení
-siteUrl: "https://www.tomasvotruba.cz"
-blogPostOnHomepageCount: 3
+
 
 # Statie configuration
 configuration:
