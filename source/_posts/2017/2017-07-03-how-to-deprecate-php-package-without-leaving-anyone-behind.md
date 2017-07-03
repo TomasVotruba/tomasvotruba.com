@@ -63,7 +63,7 @@ Actually, **B builds foundations of great and strong relationship**, because peo
 
 ## Deprecate Package !== Delete Package 
 
-I though when I deprecate package, application who use it as a dependency stops working. This could be **caused by deleting a package**, but not by deprecating it. Imagine **dropping from level 50 to 20**. 
+I thought when I deprecate package, application who use it as a dependency stops working. This could be **caused by deleting a package**, but not by deprecating it. Imagine **dropping from level 50 to 20**. 
 
 **Deprecating a package** is like **having level 50 and staying there** forever. It will never be worse, but it won't be better either. Deprecation won't break anything and won't improve anything.
 
@@ -121,7 +121,7 @@ Composer will tell you for every `composer require/update` that includes this pa
 
 <img src="/assets/images/posts/2017/deprecate/composer-info.png" class="thumbnail">
 
-#### Githug Repository
+#### Github Repository
 
 The best way to make people know the package is deprecated on Github **is not by a note in `README`**. Nobody reads readme if he doesn't use the package first time. Note in a description is also small to spot.
 
@@ -179,6 +179,6 @@ In following weeks I found:
 
 - I have **more energy** to work on the rest of packages,
 - I have **much less responsibility** so I can breathe more lightly,
-- and I can put more work into less projectsq
+- and I can put more work into less projects
 
 Thanks to that, I've [added new features to EasyCodingStandard](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/), released [Object Calisthenics Coding Standard 3.0](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) and [released ApiGen 5.0-RC2](https://github.com/ApiGen/ApiGen/releases/tag/v5.0.0-RC2). The last one is secret in progress, so don't tell anybody.
