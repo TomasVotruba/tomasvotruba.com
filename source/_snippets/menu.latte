@@ -5,17 +5,14 @@
             <li n:class="logo, isset($id) && $id === index ? active">
                 <a href="/">Tomáš Votruba</a>
             </li>
+            <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
+                <a href="/blog/">Blog</a>
+            </li>
             <li n:class="isset($id) && $id === skills ? active">
                 <a href="/skoleni/">Školím a mentoruji</a>
             </li>
             <li n:class="isset($id) && $id === satisfy ? active">
                 <a href="/references/">Spokojení klienti</a>
-            </li>
-            <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
-                <a href="/blog/">Blog</a>
-            </li>
-            <li n:class="isset($id) && $id === price ? active">
-                <a href="/cenik/">Ceník</a>
             </li>
             <li n:class="isset($id) && $id === contact ? active">
                 <a href="/contact/">Kontakt</a>
