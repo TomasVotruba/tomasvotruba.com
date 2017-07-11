@@ -1,5 +1,0 @@
-# Statie configuration
-configuration:
-    postRoute: blog/:year/:month/:day/:title
-    githubRepositorySlug: TomasVotruba/tomasvotruba.cz
-    markdownHeadlineAnchors: TRUE

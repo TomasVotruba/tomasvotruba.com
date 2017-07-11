@@ -8,3 +8,9 @@ parameters:
     site_title: "Tomas Votruba"
     site_url: "https://www.tomasvotruba.cz"
     disqus_shortname: "itsworthsharing"
+
+    # Statie settings
+    amp: true
+    markdown_headline_anchors: true
+    post_route: "blog/:year/:month/:day/:title"
+    github_repository_slug: "TomasVotruba/tomasvotruba.cz"
