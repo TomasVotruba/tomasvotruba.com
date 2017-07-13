@@ -16,9 +16,9 @@ The file name is relevant to the url - this file will be accessible at `/contact
 ```html
 <!-- source/contact.latte -->
 
-❴layout "default"❵
+{layout "default"}
 
-❴block content❵
+{block content}
     <h1>First Hour is on me - Call me now!</h1>
 
     <ul>
@@ -29,7 +29,7 @@ The file name is relevant to the url - this file will be accessible at `/contact
         <li>LinkedIn: <a href="https://linkedin.com/wise-programmer">Wise Programmer</a></li>
         <li>Github: <a href="https://github.com/wise-programmer">@WiseProgrammer</a></li>
     </ul>
-❴/block❵
+{/block}
 ```
 
 <br>
@@ -60,23 +60,23 @@ In both cases, we modify the template the same way:
 ```html
 <!-- source/contact.latte -->
 
-❴layout "default"❵
+{layout "default"}
 
-❴block content❵
+{block content}
     <h1>First Hour is on me - Call me now!</h1>
 
     <ul>
-        ❴foreach $contactMethods as $contactMethod❵
+        {foreach $contactMethods as $contactMethod}
             <li>
-                ❴$contactMethod['type']❵:
-                <a href="❴$contactMethod['link']❵">❴$contactMethod['name']❵</a>
+                {$contactMethod['type']}:
+                <a href="{$contactMethod['link']}">{$contactMethod['name']}</a>
             </li>
-        ❴/foreach}
+        {/foreach}
 
         <!-- or shorter -->
         <!-- <li n:foreach="$contactMethods as $contactMethod"> -->
     </ul>
-❴/block❵
+{/block}
 ```
 
 ## 1. Local Values in between `---`
@@ -92,7 +92,7 @@ In *code words*:
 key: "value"
 ---
 
-❴$key❵ <!-- shows "value" -->
+{$key} <!-- shows "value" -->
 ```
 
 ### How to Use it?
@@ -162,20 +162,20 @@ contactMethods:
         link: https://github.com/wise-programmer
         name: @WiseProgrammer
 ---
-❴layout "default"❵
+{layout "default"}
 
-❴block content❵
+{block content}
     <h1>First Hour is on me - Call me now!</h1>
 
     <ul>
-        ❴foreach $contactMethods as $contactMethod❵
+        {foreach $contactMethods as $contactMethod}
             <li>
-                ❴$contactMethod['type']❵:
-                <a href="❴$contactMethod['link']❵">❴$contactMethod['name']❵</a>
+                {$contactMethod['type']}:
+                <a href="{$contactMethod['link']}">{$contactMethod['name']}</a>
             </li>
-        ❴/foreach}
+        {/foreach}
     </ul>
-❴/block❵
+{/block}
 ```
 
 Save file and [look on the contact page](http://localhost:8000/contact).

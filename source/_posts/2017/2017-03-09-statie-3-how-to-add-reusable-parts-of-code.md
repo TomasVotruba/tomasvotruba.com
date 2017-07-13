@@ -39,7 +39,7 @@ We put into layout:
         <meta charset="utf-8">
     </head>
     <body>
-        ❴block content❵❴/block❵
+        {block content}{/block}
 
         <script>
             ga=function(){ ga.q.push(arguments) };
@@ -64,7 +64,7 @@ What if you could use some "include googleAnalytics snippet" command?
 With Statie you can!
 
 ```twig
-❴include "googleAnalytics"❵
+{include "googleAnalytics"}
 ```
 
 ### How does it Work?
@@ -102,8 +102,8 @@ Then clean the layout:
         <meta charset="utf-8">
     </head>
     <body>
-        ❴block content❵❴/block❵
-        ❴include "googleAnalytics"❵
+        {block content}{/block}
+        {include "googleAnalytics"}
     </body>
 </html>
 ```
@@ -133,7 +133,7 @@ I wrote about config in previous post - [go read it, if you missed it](/blog/201
 So you should end up with this:
 
 ```javascript
-ga('create', ❴$googleAnalytics❵, 'auto');
+ga('create', {$googleAnalytics}, 'auto');
 ```
 
 Nice work!
@@ -172,7 +172,7 @@ There is no need for that. You can group them to subdirs as you like. Nothing ch
 ## Now You Know
 
 - That using snippets will save lot of time.
-- **That snippets are named by their filename**: `❴include "fileName"❵`.
+- **That snippets are named by their filename**: `{include "fileName"}`.
 - **That snippets work the best with [global configuration](/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data#2-global-or-bigger-amount-of-data)**.
 
 
