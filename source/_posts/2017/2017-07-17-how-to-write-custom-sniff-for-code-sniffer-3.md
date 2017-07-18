@@ -20,18 +20,18 @@ With a Sniff you can change `array()` to `[]`. And more then that. Coding Standa
 You can use them to [refactor to newer version of your framework](https://daniel-siepmann.de/Posts/2017/2017-03-20-phpcs-code-migration.html),
  [upgrade your codebase to newer PHP](https://github.com/wimg/PHPCompatibility) or [add PHP 7.1 typehints to your methods](https://github.com/kukulich/php-type-hints-convertor).       
     
-That's laziness on a completely different level :) and even better than AI will ever be, because you have the control. 
+That's laziness on a completely different level :)
 
 
+## So Much for The Hype
 
 <div class="text-center">
     <img src="https://content.artofmanliness.com/uploads/2015/08/Small-Things-Over-Time-2.jpg" style="max-width:100%">
 </div>
 
-*This is true about quality of code as well.*
+It's is possible a lot with these tools and I'll write about that in the future, but today we'll start with a much [smaller step](/blog/2017/02/22/fast-and-easy-way-to-learn-complex-topics/): a Sniff that will inform us about coding standard violation. No changes, no refactoring.
 
- 
-The whole journey starts with one sniff and 3 words: *token*, *dispatcher* and *subscriber*.
+To know how to build a sniff you need to understand 3 terms: *token*, *dispatcher* and *subscriber*.
 
 I'll explain them one by one and in the end we'll put them together.
 
@@ -170,7 +170,7 @@ I think now you are ready for the real code.
 
 ## Let's make `ExceptionNameSniff` Together 
 
-[Martin Hujer](https://www.martinhujer.cz/) told be about sniff that checks that all exception classes have "Exception" suffix. 
+[Martin Hujer](https://www.martinhujer.cz/) told me about sniff that checks that all exception classes have "Exception" suffix.
 
 I said: How is it useful in practise? We all know that is common knowledge to write them this way. He replied: Well, we found some even in our code base.
  
@@ -209,7 +209,7 @@ A `register()` method returns list of tokens to subscribe to. Which token should
 
 *Note: You can find all tokens in [PHP manual](http://php.net/manual/en/tokens.php).*
 
-From "An exception class should have "Exception" suffix." I though, the `T_CLASS` would be ideal: 
+From "An exception class should have "Exception" suffix." I thought the `T_CLASS` would be ideal:
 
 
 ```php
@@ -222,15 +222,17 @@ public function register(): array
 It would match this part of php code:
 
 ```php
-**class** SomeException extends Exception
+**class** SomeException extends Exception { # this is one line in your the code
 ```
 
-It might be a little tricky to find out the easiest way to check the rule. This would also match anonymous classes and classes without parent, so you'd have to somehow detect them and skip them as well.
+`T_CLASS` would match also these false positives:
 
 ```php
-new **class** extends Exception;
-**class** SomeClass;
+new **class**() extends Exception { # anonymous class
+**class** SomeClass { # class without parent
 ```
+
+It might be a little tricky to find out the easiest way to check the rule. Here you'd have to detect these cases and skip them as well.
 
 
 What is exception in natural language description (not PHP)? *A class that extends another class that has suffix "Exception".*
@@ -385,7 +387,7 @@ final class ExceptionNameSniff implements Sniff
     
     private function stringEndsWith(string $name, string $needle): bool 
     {
-        return (substr($classNamePosition['content'], -strlen('Exception')) === 'Exception');
+        return (substr($name, -strlen($needle)) === $needle);
     }
 }
 ```
