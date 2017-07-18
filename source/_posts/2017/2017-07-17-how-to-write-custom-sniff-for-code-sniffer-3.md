@@ -29,7 +29,7 @@ That's laziness on a completely different level :)
     <img src="https://content.artofmanliness.com/uploads/2015/08/Small-Things-Over-Time-2.jpg" style="max-width:100%">
 </div>
 
-It's possible a lot with these tools and I'll write about that in the future, but today we'll start with a much [smaller step](/blog/2017/02/22/fast-and-easy-way-to-learn-complex-topics/): a Sniff that will inform us about coding standard violation. No changes, no refactoring.
+A lot is possible to do with these tools and I'll write about that in the future, but today we'll start with a much [smaller step](/blog/2017/02/22/fast-and-easy-way-to-learn-complex-topics/): a Sniff that will inform us about coding standard violation. No changes, no refactoring.
 
 To know how to build a sniff you need to understand 3 terms: *token*, *dispatcher* and *subscriber*.
 
@@ -222,7 +222,7 @@ public function register(): array
 It would match this part of php code:
 
 ```php
-**class** SomeException extends Exception { # this is one line in your the code
+**class** SomeException extends Exception { # this is one line in your code
 ```
 
 `T_CLASS` would match also these false positives:
