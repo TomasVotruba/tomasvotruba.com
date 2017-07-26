@@ -21,15 +21,15 @@ This might be the simplest page to show all your posts:
 layout: default
 ---
 
-❴block content❵
+{block content}
     <h2>Shouts Too Loud from My Hearth</h2>
 
-    ❴foreach $posts as $post❵
-        <a href="/❴$post['relativeUrl']❵/">
-            <h3>❴$post['title']❵</h3>
+    {foreach $posts as $post}
+        <a href="/{$post['relativeUrl']}/">
+            <h3>{$post['title']}</h3>
         </a>
-    ❴/foreach❵
-❴/block❵
+    {/foreach}
+{/block}
 ```
 
 ### You already see
@@ -70,24 +70,24 @@ As you can see, post has `layout: post`. It means it's displayed in `_layouts/po
 ```twig
 <!-- /source/_layouts/post.latte -->
 
-❴extends "default"❵
+{extends "default"}
 
-❴block content_wrapper❵
-    <h2>❴$post['title']❵</h2>
+{block content_wrapper}
+    <h2>{$post['title']}</h2>
 
-    ❴$post['content']|noescape❵
-❴/block❵
+    {$post['content']|noescape}
+{/block}
 ```
 
-We have to also modify `default.latte, to include our post layout and replacte `❴block content}❴/block❵` with.
+We have to also modify `default.latte, to include our post layout and replacte `{block content}{/block}` with.
 
 ```twig
 <!-- /source/_layouts/default.latte -->
 ...
 
-❴block content_wrapper❵
-    ❴block content}❴/block❵
-❴/block❵
+{block content_wrapper}
+    {block content}{/block}
+{/block}
 
 ...
 ```

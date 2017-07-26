@@ -210,7 +210,7 @@ services:
         autoconfigure: true
         
     App\: # no more manual registration of similar groups of services 
-        resource: ../❴Controller,Command,Subscriber❵
+        resource: ../{Controller,Command,Subscriber}
 
     App\SomeService: ~
     
@@ -238,7 +238,7 @@ services:
                 - ["setEntityManager", ["@entity_manager"]]
         
     App\:
-        resource: ../❴Controller,Command,Subscriber,Repository❵
+        resource: ../{Controller,Command,Subscriber,Repository}
 
     App\SomeService: ~
 ```
@@ -285,7 +285,7 @@ services:
         autoconfigure: true
         
     App\:
-        resource: ../❴Controller,Command,Subscriber,Repository❵
+        resource: ../{Controller,Command,Subscriber,Repository}
 
     App\SomeService: ~
 ```

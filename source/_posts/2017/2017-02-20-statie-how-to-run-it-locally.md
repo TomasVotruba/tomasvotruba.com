@@ -55,7 +55,7 @@ Hi!
         <meta charset="utf-8">
     </head>
     <body>
-        ❴block content❵❴/block❵
+        {block content}{/block}
     </body>
 </html>
 ```
@@ -67,9 +67,9 @@ And add layout and block content to the `index.latte`:
 layout: default
 ---
 
-❴block content❵
+{block content}
     Hi, my job is to help you grow any direction you choose!
-❴/block❵
+{/block}
 ```
 
 **Section between `---` is used to configure system or own variables**. I will tell you more about that later.

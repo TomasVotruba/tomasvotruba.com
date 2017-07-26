@@ -166,7 +166,7 @@ Use [PSR-4 based service autodiscovery and registration](/blog/2017/05/07/how-to
 
 services:
     App\: # no more manual registration of similar groups of services 
-        resource: ../❴Controller,Command,Subscriber❵
+        resource: ../{Controller,Command,Subscriber}
 ```
 
 Tada!
