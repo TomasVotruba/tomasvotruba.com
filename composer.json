@@ -2,6 +2,6 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.1",
-        "symplify/statie": "dev-master"
+        "symplify/statie": "^2.2"
     }
 }
