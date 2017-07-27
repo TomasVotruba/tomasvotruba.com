@@ -6,7 +6,7 @@ perex: '''
     <br><br>
     PSR-2 is great for start, but main power is in those own sniffs. Every project has their own need, every person has different preferences.
     <br><rb>   
-    I Google then and found outdated or complicated sources, so I've decided to write down a reference post fo1r those, who want to start with sniffs.
+    I Google then and found outdated or complicated sources, so I've decided to write down a reference post for those, who want to start with sniffs.
     Let's look what will show all you need (and nothing more) to <strong>know to write your first sniff</strong>.
 '''
 ---
