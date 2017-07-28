@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Write Custom Fixer for PHP-CS-Fixer"
+title: "How to Write Custom Fixer for PHP-CS-Fixer 2.4"
 perex: '''
     You already know <a href="/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/">how coding standard tools work with tokens and how to write a Sniff</a>.
      <br><br>
