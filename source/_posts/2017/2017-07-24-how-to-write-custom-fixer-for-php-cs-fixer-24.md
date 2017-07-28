@@ -8,15 +8,15 @@ perex: '''
 '''
 ---
 
-When a coding standard tool finds over 1000 violations in our code it is nice to know, but it doesn't save us any time and energy we need for <a href="@todo">a deep work</a>.
+When a coding standard tool finds over 1000 violations in our code is nice to know, but it doesn't save us any time and energy we need for <a href="@todo">a deep work</a>.
 
 ### Find & Fix It
 
-That main difference of PHP-CS-Fixer to PHP_CodeSniffer is that **every Fixer has to fix issues it finds**. That's why there is no `LineLenghtFixer`, because fixing line length is very difficult to automate.
+That main difference of PHP-CS-Fixer to PHP_CodeSniffer is that **every Fixer has to fix issues it finds**. That's why there is no `LineLenghtFixer`, because fixing line length is difficult to automate.
  
 Personally I like PHP-CS-Fixer a bit more, because of more friendlier API, active community and openness to 3rd party packages. Working with tokens is still too painful to use practise, but I'll write about that later.
 
-Apart that, they are quite similar: they share [tokens](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#1-token), 
+Apart that, they are similar: they share [tokens](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#1-token),
 [dispatcher](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#2-dispatcher)
  and [subscribers](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#2-dispatcher).
 
@@ -44,7 +44,7 @@ Today we'll add one more step:
 
 Create a fixer class and implement a `PhpCsFixer\FixerDefinition\FixerDefinitionInterface` interface. 
 
-It covers 7 required methods. It's quite a lot, but most of them are just easy one liners: 
+It covers 7 required methods, but most of them are easy one-liners:
 
 ```php
 use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
@@ -125,13 +125,13 @@ class SomeClass extends Exception
         return false;
     }        
 
-    // in case you would like to support only some files
+    // in case you would like to support some specific files
     public function supports(SplFileInfo $file): bool
     {
         return true;
     }        
 
-    // it is used to order all fixers before running them
+    // it's used to order all fixers before running them
     // `0` by default, higher value is first
     public function getPriority(): int
     {
@@ -174,7 +174,7 @@ Let's take it one a by one:
 
 *A class that extends another class that has suffix "Exception".*
 
-There is a bit different paradigm compared to PHP_CodeSniffer. We don't get position of the `extends` token, but all the tokens. So we need to iterate through them with conditions:
+There is a bit different paradigm compared to PHP_CodeSniffer. We don't get position of the `extends` token, but **all the tokens**. Instead of investigating one token and it's relation to other, **we need to iterate through all tokens and match them with conditions**:
 
 ```php
 public function fix(SplFileInfo $file, Tokens $tokens): void
@@ -204,7 +204,7 @@ First of them is `getNextMeaningfulToken()`, which skips spaces and comments an 
 private function isException(Tokens $tokens, int $index): bool
 {
     $parentClassNamePosition = $tokens->getNextMeaningfulToken($index);
-    // $tokens support array access - to get a token with some index, just call $tokens[25]
+    // $tokens support array access - to get a token with some index, call $tokens[25]
     $parentClassNameToken = $tokens[$parentClassNamePosition];
     $parentClassName = $parentClassNameToken->getContent();
 
@@ -219,7 +219,7 @@ private function stringEndsWith(string $name, string $needle): bool
 
 Back to iteration! When this passes, we know we have a class that extends an exception.
 
-Do you know what we need to do now? You're right, **we have to check the name of it**. We can use another helper method just with different direction: `getPrevMeaningfulToken()`.
+Do you know what we need to do now? You're right, **we have to check the name of it**. We can use another helper method: `getPrevMeaningfulToken()`.
 
 ```php
 public function fix(SplFileInfo $file, Tokens $tokens): void
@@ -251,7 +251,7 @@ public function fix(SplFileInfo $file, Tokens $tokens): void
 
 **Fixing the error**
 
-Fixing is right to the point. To change a name, just replace `T_STRING` new `Token` object with different value:
+Fixing is right to the point. To change a name, replace old name (`T_STRING` `Token`) with new `Token` object with different value:
 
 ```php
 // Token(token type, value)
