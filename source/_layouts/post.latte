@@ -18,8 +18,6 @@
     <div class="container" id="post">
         <h1>{$post['title']|noescape}</h1>
 
-        {include "postYouMightAlsoLike", "post" => $post}
-
         {include "postMetadataLine",
             "post" => $post,
             "showPullRequestLink" => TRUE,
@@ -64,20 +62,7 @@
 
         {$post['content']|noescape}
 
-        <hr>
-
-        <div class="panel">
-            <div class="panel-heading">
-                <h3>{="post.you_might_also_like"}</h3>
-            </div>
-            <div class="panel-body">
-                {capture $similarPosts}{$post|similarPosts: 3}{/capture}
-
-                {foreach $similarPosts as $similarPost}
-                    <li>{$similarPost['title']}</li>
-                {/foreach}
-            </div>
-        </div>
+        {include "postYouMightAlsoLike", "post" => $post}
 
         <hr>
 

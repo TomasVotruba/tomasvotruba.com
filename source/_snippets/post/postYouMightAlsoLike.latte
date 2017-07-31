@@ -1,12 +1,12 @@
-<div class="panel">
-    <div class="panel-heading">
-        <h3>{="post.you_might_also_like"}</h3>
-    </div>
-    <div class="panel-body">
-        {capture $similarPosts}{$post|similarPosts: 3}{/capture}
+{var $similarPosts = call_user_func($this->filters->similarPosts, $post, 3)}
 
+<div n:if="count($similarPosts)" class="panel">
+    <h4>{="post.you_might_also_like"}</h4>
+    <ul>
         {foreach $similarPosts as $similarPost}
-            <li>{$similarPost['title']}</li>
+            <li>
+                <a href="{$similarPost['relativeUrl']}">{$similarPost['title']}</a>
+            </li>
         {/foreach}
-    </div>
+    </ul>
 </div>
