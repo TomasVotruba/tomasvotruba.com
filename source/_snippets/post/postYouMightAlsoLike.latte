@@ -1,0 +1,12 @@
+{var $similarPosts = call_user_func($this->filters->similarPosts, $post, 3)}
+
+<div n:if="count($similarPosts)" class="panel">
+    <h4>{="post.you_might_also_like"}</h4>
+    <ul>
+        {foreach $similarPosts as $similarPost}
+            <li>
+                <a href="{$similarPost['relativeUrl']}">{$similarPost['title']}</a>
+            </li>
+        {/foreach}
+    </ul>
+</div>

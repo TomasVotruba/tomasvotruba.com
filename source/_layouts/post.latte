@@ -62,6 +62,10 @@
 
         {$post['content']|noescape}
 
+        {include "postYouMightAlsoLike", "post" => $post}
+
+        <hr>
+
         <h2>I Care about Your Opinion</h2>
 
         {include "disqusComments", 'post' => $post}
