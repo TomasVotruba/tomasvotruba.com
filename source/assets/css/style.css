@@ -136,6 +136,15 @@ article {
     margin: 1.5em 0;
 }
 
+.panel#relatedPosts {
+    font-size: 1.1em;
+}
+
+.panel#relatedPosts .panel-body {
+    padding: .7em 0 .3em 0;
+    line-height: 2em;
+}
+
 blockquote.special {
     margin: .7em 0;
     background: url("/assets/images/quote.gif") no-repeat top left;
