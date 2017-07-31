@@ -11,27 +11,24 @@ perex: '''
 '''
 ---
 
-Are you new to coding stanards...?
-Read ...
+**Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
+q<br>
 
-
-## Let's make `ExceptionNameSniff` Together 
-
-[Martin Hujer](https://www.martinhujer.cz/) told me about sniff that checks that all exception classes have "Exception" suffix.
+Today we'll pick an example a from my friend [Martin Hujer](https://www.martinhujer.cz/). Once told me about sniff that checks **that all exception classes have "Exception" suffix**.
 
 I said: How is it useful in practise? We all know that is common knowledge to write them this way. He replied: Well, we found some even in our code base.
  
- The point is not in count of fixed cases, but in **CI based responsibility*. From now on, **they'll NEVER have to think about it** and they can **focus on more valuable processes** that CI cannot do, like writing AliPay integration.  
+ The point is not in the count of fixed cases, but in *CI based responsibility*. From now on, **people'll NEVER have to think about it** and they can **focus on more valuable processes** that CI cannot do, like writing AliPay integration.  
 
  
-### What we need?
+## 6 Steps To `ExceptionNameSniff`
 
-1. I start with sentence, that declares what sniff does.
+### 1. Start Sentence That Declares What Sniff Does
 
 "An exception class should have "Exception" suffix."
- 
 
-2. Create a sniff class and implement a `PHP_CodeSniffer\Sniffs\Sniff` interface. 
+### 2. Create a Sniff Class and Implement a `PHP_CodeSniffer\Sniffs\Sniff` interface
+ 
 It covers 2 required methods: 
 
 ```php
@@ -95,8 +92,7 @@ public function register(): array
 ```
  
 
-3. Create `process()` method
- 
+### 3. Create `process()` Method
 
 This method has 2 arguments. 
 
@@ -118,7 +114,7 @@ There are 2 parts while writing a sniff:
 
 Let's take it one a by one:
 
-### 1. Detect the Exception Class
+### 4. Detect the Exception Class
 
 *A class that extends another class that has suffix "Exception".*
 
@@ -147,7 +143,7 @@ if (substr($parentClassNameToken['content'], -strlen('Exception')) !== 'Exceptio
 When the code gets pass this check, we know we have exception there.
  
   
-### 2. Make sure it ends with Exception
+### 5. Make Sure it Ends with "Exception"
  
 Would you what to do know? The process will be the same - to check if class name ends with "Exception" -, but instead of `findNext()` method we'll use `findPrevious()`:
 
@@ -194,7 +190,7 @@ $file->addFixableError(
 Tada!
 
 
-### Put Together The Final Sniff
+### 6. Put Together The Final Sniff
 
 And extract `stringEndsWith()` method to make code more readable.
 
@@ -259,8 +255,6 @@ vendor/bin/ecs check src
 ```
 
 
-That was your first sniff - congrats. How do you like it?
-
-Please let me know if you don't understand any part. I'd be happy to improve it.
+Congrats to your first sniffs! How do you like it?
 
 Happy coding!

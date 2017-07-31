@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Secret Behind PHP Coding Standard Tools Workflow"
+title: "How PHP Coding Standard Tools Actually Work"
 perex: '''
     Do you use <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">PHP-CS-Fixer</a> or <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>? Do you they are ~80 % similar in way the work? Do you wonder how they work under the hood?
     <br><br>
@@ -8,17 +8,13 @@ perex: '''
 '''
 ---
 
-I already wrote on this topic:
- 
-- how to write own Sniff for PHP_CodeSniffer 3+? [Check this post](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
-- or own Fixer for PHP-CS-Fixer 2.4+? [Check this one](/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24/).
+Why are these 3 pillars even important for their common users? **I was able to write better Sniffs and Fixers** (*Checkers* further on) when I understood tools behind them and their basic principals.
 
+## Write 1 Checker, Save Hundreds Hours of Work
 
-## Write 1 Sniff, Save Hundreds Hours of Work
+Coding Standards are my greatest passion for last couple of years. I love their efficiency: **with one rule (class) you can improve thousands of lines in your code** in matters of milliseconds. And not only yours if you share it in a package.
 
-Coding Standards are my greatest passion last couple of years. I love their efficiency: **with one rule (class) you can improve thousands of lines in your code** in matters of milliseconds. And not only yours if you share it in a package.
-
-With a Sniff you can change `array()` to `[]`. And more then that. Coding Standard are not exclusively about spaces, tabs and brackets nowadays.
+With a Checker you can change `array()` to `[]`. And more then that. Coding Standard are not exclusively about spaces, tabs and brackets nowadays.
 
 You can use them to [refactor to newer version of your framework](https://daniel-siepmann.de/Posts/2017/2017-03-20-phpcs-code-migration.html),
  [upgrade your codebase to newer PHP](https://github.com/wimg/PHPCompatibility) or [add PHP 7.1 typehints to your methods](https://github.com/kukulich/php-type-hints-convertor).       
@@ -32,11 +28,11 @@ That's laziness on a completely different level :)
     <img src="https://content.artofmanliness.com/uploads/2015/08/Small-Things-Over-Time-2.jpg" style="max-width:100%">
 </div>
 
-A lot is possible to do with these tools and I'll write about that in the future, but today we'll start with a much [smaller step](/blog/2017/02/22/fast-and-easy-way-to-learn-complex-topics/): a Sniff that will inform us about coding standard violation. No changes, no refactoring.
+A lot is possible to do with these tools and I'll write about that in the future, but today we'll start with a much [smaller step](/blog/2017/02/22/fast-and-easy-way-to-learn-complex-topics/): a Checker that will inform us about coding standard violation. No changes, no refactoring.
 
-To know how to build a sniff you need to understand 3 terms: *token*, *dispatcher* and *subscriber*.
+To know how to build a Checker you need to understand 3 terms: *token*, *dispatcher* and *subscriber*.
 
-I'll explain them one by one and in the end we'll put them together.
+I'll explain them one by one.
 
 
 
@@ -125,7 +121,7 @@ $dispatcher->dispatch('order_finished');
 For Coding Standard tools **it works the same** but with different naming: 
 
 - Event <=> *Token*
-- Subscriber <=> *Sniff*
+- Subscriber <=> *Checker*
 
  
 Almost there.
@@ -134,12 +130,12 @@ Almost there.
 ## 3. Subscriber
 
 
-You already know that *subscriber* is a *Sniff*. Sniff is a class that waits for a specific token. 
+You already know that *subscriber* is a *Checker*. Checker is a class that waits for a specific token. 
 
 In pseudo code:
   
 ```php
-class Sniff
+class Checker
 {
     public function subscribeToToken()
     {
@@ -164,9 +160,15 @@ foreach ($tokens as $token) {
 }
 ```
 
-When the dispatcher gets a token with type `T_ECHO` (= `328`) it will call  `Sniff::someMethodThatWillBeCalled()` method.
+When the dispatcher gets a token with type `T_ECHO` (= `328`) it will call  `Checker::someMethodThatWillBeCalled()` method.
 
 
 I think now you are ready for the real code.
 
+### Do You Want Real Code?
 
+I already wrote [how to write a Sniff for PHP_CodeSniffer](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/) or [how to write a Fixer for PHP-CS-Fixer](/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24/) on this topic where I write code to solve  real life use cases.
+
+Enjoy saved time by writing a code that works for you.
+
+Happy coding!
