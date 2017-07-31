@@ -8,7 +8,11 @@ perex: '''
 '''
 ---
 
-When a coding standard tool finds over 1000 violations in our code is nice to know, but it doesn't save us any time and energy we need for <a href="@todo">a deep work</a>.
+**Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
+
+<br>
+
+When a coding standard tool finds over 1000 violations in our code is nice to know, but it doesn't save us any time and energy we need for <a href="http://calnewport.com/books/deep-work/">a deep work</a>.
 
 ### Find & Fix It
 
