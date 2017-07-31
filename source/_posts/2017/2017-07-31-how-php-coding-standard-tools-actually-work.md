@@ -8,7 +8,7 @@ perex: '''
 '''
 ---
 
-Why are these 3 pillars even important for their common users? **I was able to write better Sniffs and Fixers** (*Checkers* further on) when I understood tools behind them and their basic principals.
+Why should these 3 pillars be even important for you? When I understood tools behind them and their basic principals, **I was able to more effective Sniffs and Fixers** (*Checkers* further on) **that were clear to their communities**.
 
 ## Write 1 Checker, Save Hundreds Hours of Work
 

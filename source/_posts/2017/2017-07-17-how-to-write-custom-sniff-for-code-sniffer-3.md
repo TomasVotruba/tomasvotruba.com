@@ -12,7 +12,7 @@ perex: '''
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
-q<br>
+<br>
 
 Today we'll pick an example a from my friend [Martin Hujer](https://www.martinhujer.cz/). Once told me about sniff that checks **that all exception classes have "Exception" suffix**.
 
@@ -23,7 +23,7 @@ I said: How is it useful in practise? We all know that is common knowledge to wr
  
 ## 6 Steps To `ExceptionNameSniff`
 
-### 1. Start Sentence That Declares What Sniff Does
+### 1. Start With Sentence That Declares What Sniff Does
 
 "An exception class should have "Exception" suffix."
 
