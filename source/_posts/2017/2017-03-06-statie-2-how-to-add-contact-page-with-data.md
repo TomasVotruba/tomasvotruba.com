@@ -4,6 +4,12 @@ title: "Statie 2: How add Contact Page With Data"
 perex: '''
     <a href="/blog/2017/02/20/statie-how-to-run-it-locally">In first post about Statie</a> you generated simple index with layout. Today we look on first semi-dynamic feature: <strong>data structures</strong>.
 '''
+
+updated: true
+updated_since: "Agust 2017"
+updated_message: '''
+    Updated with <a href="https://github.com/Symplify/Symplify/pull/197">Statie 2.2</a> and <code>parameters</code> section in <code>statie.neon</code> config for loading global data. 
+'''
 ---
 
 ## Contact Page with Socials Accounts Data Separated
@@ -15,8 +21,9 @@ The file name is relevant to the url - this file will be accessible at `/contact
 
 ```html
 <!-- source/contact.latte -->
-
-{layout "default"}
+---
+layout: default
+---
 
 {block content}
     <h1>First Hour is on me - Call me now!</h1>
@@ -59,8 +66,10 @@ In both cases, we modify the template the same way:
 
 ```html
 <!-- source/contact.latte -->
+---
+layout: default
+---
 
-{layout "default"}
 
 {block content}
     <h1>First Hour is on me - Call me now!</h1>
@@ -134,8 +143,8 @@ Now we put this data to <a href="https://ne-on.org">NEON format</a> and place th
 
 ```yaml
 <!-- source/contact.latte -->
-
 ---
+layout: default
 contactMethods:
     -
         type: Phone
@@ -162,7 +171,6 @@ contactMethods:
         link: https://github.com/wise-programmer
         name: @WiseProgrammer
 ---
-{layout "default"}
 
 {block content}
     <h1>First Hour is on me - Call me now!</h1>
@@ -196,9 +204,9 @@ I would use this option in this case.
 
 ### How does it Work?
 
-Statie **scans the `/source` directory for all `.neon` files**. All **data stored in them are added as variables** to every template.
+Statie uses `statie.neon` in the root directory and its `parameters` section.
 
-As convention, I put global configuration to `/source/_config` directory and data `/source/_data` directory. But it's up to you, where you put it.
+As convention, I put global data to `/source/_data` directory. But it's up to you, where you put it.
 
 ### How to Use it?
 
@@ -206,8 +214,17 @@ We simple move whole `contactMethods` to this file:
 
 ```yaml
 # /source/_data/contacts.neon
-contactMethods:
-    ...
+parameters:
+    contactMethods:
+        ...
+```
+
+And include it in `statie.neon`:
+
+```yaml
+# /statie.neon
+includes:
+    - source/_data/contacts.neon
 ```
 
 And that's it!
@@ -224,7 +241,7 @@ Save file, [look on the contact page](http://localhost:8000/contact) and it stil
 
 - How to add data to your Statie page.
 - **Where to put them for local and global access**.
-- **That it's convention** to use `/source/_data/<some-data>.neon` naming.
+- **That its convention** to use `/source/_data/<some-data>.neon` naming.
 
 
 Happy coding!
