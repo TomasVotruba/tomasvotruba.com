@@ -1,4 +1,5 @@
 ---
+id: 13
 layout: post
 title: "How to write open-source in PHP 2: Rise value of your package with help of skeleton"
 perex: '''

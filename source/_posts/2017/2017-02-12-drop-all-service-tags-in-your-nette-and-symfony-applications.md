@@ -1,4 +1,5 @@
 ---
+id: 27
 layout: post
 title: "Drop all Service Tags in Your Nette and Symfony Applications"
 perex: '''

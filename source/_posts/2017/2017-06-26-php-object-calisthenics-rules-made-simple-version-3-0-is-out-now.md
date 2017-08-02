@@ -1,4 +1,5 @@
 ---
+id: 44
 layout: post
 title: "PHP Object Calisthenics Made Simple - Version 3.0 is Out Now"
 perex: '''

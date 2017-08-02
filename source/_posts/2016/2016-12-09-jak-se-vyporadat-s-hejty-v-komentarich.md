@@ -1,4 +1,5 @@
 ---
+id: 17
 layout: post
 title: "Jak se vypořádat s hejty v komentářích"
 perex: "Na to se mě včera zeptal už asi pátý člověk. Jak se vypořádat s tím, když píšu článek, Tweetuju, prostě dělám bohulibou osvětu dobrým věcem, a někomu se to nelíbí a háže na mě špínu?"

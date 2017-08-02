@@ -1,4 +1,5 @@
 ---
+id: 12
 layout: post
 title: "How to write open-source in PHP 1: Create a repository on Github"
 perex: '''

@@ -1,4 +1,5 @@
 ---
+id: 42
 layout: post
 title: "How to Require Minimal Code Coverage for Github Pull-Requests with Coveralls"
 perex: '''

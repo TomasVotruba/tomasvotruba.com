@@ -1,4 +1,5 @@
 ---
+id: 29
 layout: post
 title: "Statie: How to run it Locally"
 perex: '''

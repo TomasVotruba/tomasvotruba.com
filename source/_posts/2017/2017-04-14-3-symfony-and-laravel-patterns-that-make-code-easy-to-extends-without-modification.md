@@ -1,4 +1,5 @@
 ---
+id: 36
 layout: post
 title: "3 Symfony and Laravel Patterns that Make Code Easy to Extend Without Modification"
 perex: '''

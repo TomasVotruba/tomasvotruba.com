@@ -1,4 +1,4 @@
-{var $similarPosts = call_user_func($this->filters->similarPosts, $post, 3)}
+{var $similarPosts = ($post|similarPosts)}
 
 <div n:if="count($similarPosts)" class="panel panel-warning" id="relatedPosts">
     <div class="panel-heading">

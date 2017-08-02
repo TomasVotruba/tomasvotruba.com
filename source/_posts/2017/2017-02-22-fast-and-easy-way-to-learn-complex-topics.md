@@ -1,4 +1,5 @@
 ---
+id: 30
 layout: post
 title: "Fast and Easy Way to Learn Complex Topics"
 perex: '''

@@ -1,4 +1,5 @@
 ---
+id: 32
 layout: post
 title: "Statie 2: How add Contact Page With Data"
 perex: '''
