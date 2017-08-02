@@ -1,4 +1,5 @@
 ---
+id: 24
 layout: post
 title: "Why I Switched Scrutinizer for PHPStan and You Should Too"
 perex: '''

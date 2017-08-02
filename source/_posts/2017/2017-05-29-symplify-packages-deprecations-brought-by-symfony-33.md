@@ -1,4 +1,5 @@
 ---
+id: 39
 layout: post
 title: "Symplify packages deprecations brought by Symfony 3.3"
 

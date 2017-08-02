@@ -1,4 +1,5 @@
 ---
+id: 28
 layout: post
 title: "Minimalistic Way to Create Your First Nette Extension"
 perex: '''

@@ -1,4 +1,5 @@
 ---
+id: 38
 layout: post
 title: "How to refactor to new Dependency Injection features in Symfony 3.3"
 perex: '''

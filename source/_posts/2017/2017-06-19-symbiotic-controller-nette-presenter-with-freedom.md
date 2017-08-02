@@ -1,4 +1,5 @@
 ---
+id: 43
 layout: post
 title: "Symbiotic Controller: Nette&nbsp;Presenter&nbsp;with&nbsp;Freedom"
 perex: '''

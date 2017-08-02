@@ -1,4 +1,5 @@
 ---
+id: 37
 layout: post
 title: "Combine power of PHP_CodeSniffer and PHP-CS-Fixer in 3 lines"
 perex: '''

@@ -1,4 +1,5 @@
 ---
+id: 10
 layout: post
 title: Forget "autowire" and just use it
 perex: '''

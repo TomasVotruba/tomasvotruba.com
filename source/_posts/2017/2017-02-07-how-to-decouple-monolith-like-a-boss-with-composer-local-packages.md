@@ -1,4 +1,5 @@
 ---
+id: 26
 layout: post
 title: "How to Decouple Monolith like a Boss with Composer Local Packages"
 perex: '''

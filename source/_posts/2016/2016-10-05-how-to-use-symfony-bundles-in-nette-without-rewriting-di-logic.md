@@ -1,4 +1,5 @@
 ---
+id: 16
 layout: post
 title: "How to Use Symfony Bundles in Nette Without Rewriting DI Logic"
 perex: '''

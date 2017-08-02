@@ -1,4 +1,5 @@
 ---
+id: 8
 layout: post
 title: Decouple Your Doctrine Filters
 perex: "Doctrine filters are powerful tool. Yet their registration and management are bit overcomplicated. Today I will show you how to decouple them to standalone services that can take care of everything you need." 

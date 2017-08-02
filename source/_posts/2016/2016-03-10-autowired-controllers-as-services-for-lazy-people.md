@@ -1,4 +1,5 @@
 ---
+id: 7
 layout: post
 title: Autowired controllers as services for lazy people
 perex: "With new autowiring feature in Symfony 2.8+, it is now easier to manage dependencies for services. But what about for controllers? Unfortunately, there are 3 annoying steps you have to do. Today I will show you, how to reduce them to 0." 

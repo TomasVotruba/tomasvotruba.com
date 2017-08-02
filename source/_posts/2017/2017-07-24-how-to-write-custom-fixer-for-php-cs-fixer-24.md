@@ -1,4 +1,5 @@
 ---
+id: 47
 layout: post
 title: "How to Write Custom Fixer for PHP-CS-Fixer 2.4"
 perex: '''
@@ -6,6 +7,7 @@ perex: '''
      <br><br>
      Today we'll explore a bit younger tool - <a href="https://github.com/friendsofphp/php-cs-fixer">PHP-CS-Fixer</a> and we get <strong>from only finding the smelly spot to fixing it</strong>.
 '''
+related_posts: [48, 46]
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...

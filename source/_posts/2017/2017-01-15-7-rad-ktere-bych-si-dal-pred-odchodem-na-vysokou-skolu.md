@@ -1,4 +1,5 @@
 ---
+id: 22
 layout: post
 title: "7 rad, které bych si dal před odchodem na vysokou školu"
 perex: '''

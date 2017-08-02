@@ -1,4 +1,5 @@
 ---
+id: 34
 layout: post
 title: "Statie 4: How to Create The Simplest Blog"
 perex: '''
