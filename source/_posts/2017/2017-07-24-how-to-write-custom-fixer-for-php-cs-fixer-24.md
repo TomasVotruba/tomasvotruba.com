@@ -128,24 +128,28 @@ final class ExceptionNameFixer implements DefinedFixerInterface
     // and it might include a sample code, that would fix it
     public function getDefinition(): FixerDefinitionInterface
     {
-        return new FixerDefinition('Exception classes should have suffix "Exception".', [
-            new CodeSample(
-                '<?php
-class SomeClass extends Exception
-{
-}'
-            ),
-        ]);
+        return new FixerDefinition(
+            'Exception classes should have suffix "Exception".',
+            [
+                new CodeSample(
+                    '<?php
+    class SomeClass extends Exception
+    {
+    }'
+                ),
+            ]
+        );
     }        
 
-    // if you think this change code in any way, that changes behavior, return "true"
+    // if the fixer changes code behavior in any way, return "true"
     // changing a class name is such case
     public function isRisky(): bool
     {
         return true;
     }        
 
-    // in case you would like to support some specific files
+    // in 99.9% this is true, since only *.php are passed
+    // you can detect specific names, e.g. "*Repository.php"
     public function supports(SplFileInfo $file): bool
     {
         return true;
@@ -162,7 +166,7 @@ class SomeClass extends Exception
 
 ### 3. Subscribe the Fixer
 
-Now we get to more interesting parts. Method `isCandidate(Tokens $tokens): bool` is like a **subscriber**. It get all tokens of the file. We can check **more than one token and create more strict conditions** thanks to that:
+Now we get to more interesting parts. Method `isCandidate(Tokens $tokens): bool` is like a **subscriber**. It gets all tokens of the file. We can check **more than one token and create more strict conditions** thanks to that:
 
 ```php
 public function isCandidate(Tokens $tokens): bool
@@ -234,13 +238,13 @@ private function isException(Tokens $tokens, int $index): bool
 
 private function stringEndsWith(string $name, string $needle): bool 
 {
-    return (substr($name, -strlen($needle)) === $needle);
+    return substr($name, -strlen($needle)) === $needle;
 }
 ```
 
 Back to iteration! When this passes, we know **we have a class that extends an exception**.
 
-Do you know what we need to do now? You're right, **we have to check the name of it**. We can use another helper method: `getPrevMeaningfulToken()`.
+Do you know what we need to do now? You're right, **we have to check its name**. We can use another helper method: `getPrevMeaningfulToken()`.
 
 ```php
 public function fix(SplFileInfo $file, Tokens $tokens): void
@@ -302,14 +306,17 @@ final class ExceptionNameFixer implements DefinedFixerInterface
 
     public function getDefinition(): FixerDefinitionInterface
     {
-        return new FixerDefinition('Exception classes should have suffix "Exception".', [
-            new CodeSample(
-                '<?php
-class SomeClass extends Exception
-{
-}'
-            ),
-        ]);
+        return new FixerDefinition(
+            'Exception classes should have suffix "Exception".',
+            [
+                new CodeSample(
+                    '<?php
+    class SomeClass extends Exception
+    {
+    }'
+                ),
+            ]
+        );
     }
 
     public function isCandidate(Tokens $tokens): bool
@@ -345,7 +352,7 @@ class SomeClass extends Exception
 
             $classNamePosition = (int) $tokens->getPrevMeaningfulToken($index);
             $classNameToken = $tokens[$classNamePosition];
-            if (Strings::endsWith($classNameToken->getContent(), 'Exception')) {
+            if ($this->stringEndsWith($classNameToken->getContent(), 'Exception')) {
                 continue;
             }
 
@@ -369,9 +376,28 @@ class SomeClass extends Exception
 }
 ```
 
-*How to run it?*
+## How to run it?
 
-With [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) put the class to `easy-coding-standard.neon`: 
+### The PHP-CS-Fixer way
+
+Create `.php_cs` config and register fixer with `registerCustomFixers()` method, like here in [`shopsys/coding-standard`](https://github.com/shopsys/coding-standards/blob/5f7c5e61f3a5ddd279887ac51a2bcb5f6bc81d78/build/phpcs-fixer.php_cs#L54).
+
+```php
+return PhpCsFixer\Config::create()
+    ->registerCustomFixers([
+        new App\CodingStandard\Fixer\ExceptionNameFixer,
+    ]);
+```
+
+And run:
+
+```bash
+vendor/bin/php-cs-fixer fix src --config=.php_cs --dry-run
+```
+
+### The [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) way
+
+Put the class to `easy-coding-standard.neon`:
 
 ```yaml
 checkers:
@@ -387,3 +413,6 @@ vendor/bin/ecs check src
 That was your first fixer.
 
 Happy fixing!
+
+
+And if you want **more detailed tutorial**, there is one in [official cookbook](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/COOKBOOK-FIXERS.md).

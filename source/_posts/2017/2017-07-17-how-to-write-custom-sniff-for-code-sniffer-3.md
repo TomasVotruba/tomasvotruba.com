@@ -239,7 +239,7 @@ final class ExceptionNameSniff implements Sniff
 You can find [final Sniff on Github](https://github.com/Symplify/Symplify/blob/master/packages/CodingStandard/src/Sniffs/Naming/ExceptionNameSniff.php) and use it right away of course.
 
 
-*How to run it?*
+## How to run it?
 
 With [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) put the class to `easy-coding-standard.neon`: 
 
@@ -253,7 +253,6 @@ And run:
 ```bash
 vendor/bin/ecs check src
 ```
-
 
 Congrats to your first sniffs! How do you like it?
 
