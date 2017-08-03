@@ -225,7 +225,7 @@ public function fix(SplFileInfo $file, Tokens $tokens): void
 
 `Tokens` (like `File` in PHP_CodeSniffer) has helper methods to make our life easier.
  
-**First of them is `getNextMeaningfulToken()`, which skips spaces and comments an seeks for first useful one**. In our case, after `extends` we look for a parent class name.
+**First of them is `getNextMeaningfulToken()`, which skips spaces and comments and seeks for first useful one**. In our case, after `extends` we look for a parent class name.
 
 ```php 
 private function isException(Tokens $tokens, int $index): bool
