@@ -5,6 +5,7 @@ title: "4 Emotional and Honest Reasons Why I Quit my Twitter"
 perex: '''
     Nowadays we tend to live busy life with all those social networks, notifications and pings. So busy, we don't have emotional space to just evaluate "How do I like that?". In my life, this creates cycles, where I keep doing over and over the same thing without any progress.<br><br>After few months feeling bad with Twitter, I've finally decided to quit. Instead of technical point of view <strong>I will focus on my feelings - because that's what matters the most</strong>.
 '''
+related_posts: [20]
 ---
 
 Before I started this article, I read 

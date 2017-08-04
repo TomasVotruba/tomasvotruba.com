@@ -10,7 +10,7 @@ perex: '''
     I Google then and found outdated or complicated sources, so I've decided to write down a reference post for those, who want to start with sniffs.
     Let's look what will show all you need (and nothing more) to <strong>know to write your first sniff</strong>.
 '''
-related_posts: [48, 47]
+related_posts: [48, 47, 37]
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...

@@ -17,6 +17,7 @@ updated_message: '''
     <br><br>    
     It is still available <a href="https://github.com/DeprecatedPackages/ServiceDefinitionDecorator">here for inspiration</a> though.
 '''
+related_posts: [19]
 ---
 
 This post is follow up to *[How to Avoid Inject Thanks to Decorator feature in Nette](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/)*. Go read it if you missed it.

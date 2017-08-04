@@ -7,6 +7,7 @@ perex: '''
     <br><br>
     That was the "pitch", now I will show you how to use it.
 '''
+related_posts: [32, 33, 34]
 ---
 
 ### Create Empty Project...
