@@ -13,6 +13,7 @@ perex: '''
     I will show <strong>why and what packages were deprecated and how to upgrade your app
     to use Symfony 3.3 instead</strong>.
 '''
+related_posts: [40]
 ---
 
 I will provide you some insights behind deprecations first. It was not an instant decision based on few Symfony blog posts,

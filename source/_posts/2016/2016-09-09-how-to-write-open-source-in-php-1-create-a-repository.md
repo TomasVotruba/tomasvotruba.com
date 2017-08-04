@@ -8,6 +8,7 @@ perex: '''
     can <strong>start your own OS project with zero-knowledge</strong> (OS = open-source).
     Ready? Let's start with creating a Github repository!
 '''
+related_posts: [13, 25, 26, 45]
 ---
 
 ## Meet Github, OS's best friend  

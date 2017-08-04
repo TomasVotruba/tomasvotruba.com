@@ -7,7 +7,7 @@ perex: '''
     <br><br>
     Today I will share <strong>3 main pillars of their architecture</strong>. 
 '''
-related_posts: [46, 47]
+related_posts: [46, 47, 37]
 ---
 
 Why should these 3 pillars be even important for you? When I understood tools behind them and their basic principals, **I was able to more effective Sniffs and Fixers** (*Checkers* further on) **that were clear to their communities**.

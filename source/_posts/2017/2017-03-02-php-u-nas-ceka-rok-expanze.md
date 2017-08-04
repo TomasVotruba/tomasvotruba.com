@@ -7,6 +7,7 @@ perex: '''
     <br><br>
     Dnes se s tebou chci podělit o to, kam jsme zatím došli a jaká velká cesta nás ještě čeká.
 '''
+related_posts: [15, 6]
 ---
 
 ## Scházíme se čím dál víc

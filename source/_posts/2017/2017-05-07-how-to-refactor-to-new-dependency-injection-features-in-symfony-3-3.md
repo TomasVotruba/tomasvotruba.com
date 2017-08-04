@@ -8,6 +8,7 @@ perex: '''
     <br><br>
     Today I will show you what code can you drop and how to migrate it.
 '''
+related_posts: [39]
 ---
 
 ## What is new?
