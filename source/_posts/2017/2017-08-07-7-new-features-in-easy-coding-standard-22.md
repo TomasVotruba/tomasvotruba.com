@@ -1,20 +1,20 @@
 ---
 id: 49
 layout: post
-title: "Prepared Configs, Small Setup and more News in Easy Coding Standard 2.2"
+title: "7 New Features in Easy Coding Standard 2.2"
 perex: '''
-    After extensive cooperation with <a href="https://twitter.com/geekovo/status/885152407948333056">David Grudl on Nette\CodingStandard</a> EasyCodingStandard got many new features, that <strong>moved the project to completely new level of comfort</strong>.  
+    After extensive cooperation with <a href="https://twitter.com/geekovo/status/885152407948333056">David Grudl on Nette\CodingStandard</a> EasyCodingStandard got 7 new features, that <strong>moved the project to completely new level of comfort</strong>.  
     <br><br>
     Prepared configs, reduction of config to few lines, <code>--config</code> option and more.       
 '''
 related_posts: [37]
 ---
 
-Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, ideas and Windows bug fixes while working on [Nette\CodingStandard](https://github.com/nette/coding-standard) package. I'll write how to for Nette\CodingStandard later, but today we'll look on **new features it uses from EasyCodingStandard 2.2**. 
+Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, ideas and Windows bug fixes while working on [Nette\CodingStandard](https://github.com/nette/coding-standard) package. I'll write "how to" for Nette\CodingStandard later, but today we'll look on **new features it uses from EasyCodingStandard 2.2**. 
 
 ## 1. Shorter Bin
 
-Are you tired of tyops in `vendor/bin/easy-coding-standard`? **Just use `ecs` bin instead**: 
+Are you tired of tyops in `vendor/bin/easy-coding-standard`? **Now you can use `ecs` bin instead**: 
 
 ```bash
 vendor/bin/ecs
@@ -51,7 +51,7 @@ This **shortened Symplify config from [256 lines](https://github.com/Symplify/Sy
 
 ## 3. Use Whole Set But 1 Checker
 
-I like Symfony set from PHP-CS-Fixer, but **I'd like to remove few checkers**. Do I have to put all checkers I want to use explicitly to the config?
+I like Symfony set from PHP-CS-Fixer, but **I'd like to remove 4 checkers**. Do I have to put all checkers I want to use explicitly to the config?
  
 Not anymore! Just **use `exclude_checkers` option for classes you want to skip**: 
 
@@ -102,9 +102,9 @@ This is rather debug or info tool, but it might come handy.
 
 ## 6. Scan `*.php` and `*.phpt` Files
 
-EasyCodingStandard take only `*.php` files by default. But what if you want to check `*.phpt` as well as in case of [Nette\CodingStandard](https://github.com/nette/coding-standard)?
+EasyCodingStandard checks only `*.php` files by default. But what if you want to check `*.phpt` as well as in case of [Nette\CodingStandard](https://github.com/nette/coding-standard)?
 
-Just add **own source provider**:
+To add files with another suffixes, you need to add **own source provider**:
 
 ```php
 namespace App\Finder;
