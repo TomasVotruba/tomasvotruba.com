@@ -3,7 +3,7 @@ id: 49
 layout: post
 title: "7 New Features in Easy Coding Standard 2.2"
 perex: '''
-    After extensive cooperation with <a href="https://twitter.com/geekovo/status/885152407948333056">David Grudl on Nette\CodingStandard</a> EasyCodingStandard got 7 new features, that <strong>moved the project to completely new level of comfort</strong>.  
+    After extensive cooperation with <a href="https://twitter.com/geekovo/status/885152407948333056">David Grudl on Nette\CodingStandard</a> EasyCodingStandard got new features, that <strong>moved the project to completely new level of comfort</strong>.  
     <br><br>
     Prepared configs, reduction of config to few lines, <code>--config</code> option and more.       
 '''
@@ -14,7 +14,9 @@ Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, id
 
 ## 1. Shorter Bin
 
-Are you tired of tyops in `vendor/bin/easy-coding-standard`? **Now you can use `ecs` bin instead**: 
+Are you tired of tyops in `vendor/bin/easy-coding-standard`?
+
+**Now you can use `ecs` bin instead**: 
 
 ```bash
 vendor/bin/ecs
@@ -25,9 +27,9 @@ vendor/bin/ecs
 
 Before you had to name all the checkers manually in your config. There was no *PSR2* group nor *Symfony* like there is in other tools.
 
-Now you can pick from **9 prepared configs**.
+**Now you can pick from 9 prepared configs**.
 
-**PHP_CodeSniffer + PHP-CS-Fixer** 
+*PHP_CodeSniffer + PHP-CS-Fixer* 
 
 ```yaml
 vendor/symplify/easy-coding-standard/php54-checkers.neon
@@ -38,7 +40,7 @@ vendor/symplify/easy-coding-standard/symfony-checkers.neon
 vendor/symplify/easy-coding-standard/symfony-risky-checkers.neon
 ```
 
-**Custom**
+*Custom*
 
 ```
 vendor/symplify/easy-coding-standard/symplify.neon
@@ -46,14 +48,16 @@ vendor/symplify/easy-coding-standard/spaces.neon
 vendor/symplify/easy-coding-standard/common.neon
 ```
 
-This **shortened Symplify config from [256 lines](https://github.com/Symplify/Symplify/blob/v2.0.0/easy-coding-standard.neon#L1-L256) to [just 22](https://github.com/Symplify/Symplify/blob/458082a5d534182e4ad723958c417399442abc82/easy-coding-standard.neon#L1-L22)**.
+This shortened Symplify config from [256 lines](https://github.com/Symplify/Symplify/blob/v2.0.0/easy-coding-standard.neon#L1-L256) **to [just 22 lines](https://github.com/Symplify/Symplify/blob/458082a5d534182e4ad723958c417399442abc82/easy-coding-standard.neon#L1-L22)**.
 
 
 ## 3. Use Whole Set But 1 Checker
 
 I like Symfony set from PHP-CS-Fixer, but **I'd like to remove 4 checkers**. Do I have to put all checkers I want to use explicitly to the config?
  
-Not anymore! Just **use `exclude_checkers` option for classes you want to skip**: 
+Not anymore!
+
+**Use the set and exclude unwanted checkers in `exclude_checkers` option**: 
 
 ```yaml
 includes:
@@ -97,14 +101,14 @@ vendor/bin/ecs show --config vendor/nette/coding-standard/coding-standard-php71.
 
 This is rather debug or info tool, but it might come handy.
 
-**You can find [more options of this command in README](https://github.com/Symplify/EasyCodingStandard#show-command-to-display-all-checkers)**ě. 
+**You can find [more options of this command in README](https://github.com/Symplify/EasyCodingStandard#show-command-to-display-all-checkers)**. 
 
 
 ## 6. Scan `*.php` and `*.phpt` Files
 
 EasyCodingStandard checks only `*.php` files by default. But what if you want to check `*.phpt` as well as in case of [Nette\CodingStandard](https://github.com/nette/coding-standard)?
 
-To add files with another suffixes, you need to add **own source provider**:
+**To add files with another suffixes you need to add own source provider**:
 
 ```php
 namespace App\Finder;
@@ -148,6 +152,20 @@ parameters:
     indentation: tab # "spaces" by default
 ```
 
+
+<br>
+
 You can find [these features in README](https://github.com/Symplify/EasyCodingStandard) with more detailed use examples.
   
 
+### Like it? Try It
+
+If you find these 7 news useful, you can try [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) right now:
+ 
+
+```bash
+composer require symplify/easy-coding-standard
+vendor/bin/ecs
+```
+
+Happy code-style checking!
