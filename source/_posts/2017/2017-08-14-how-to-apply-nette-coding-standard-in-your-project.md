@@ -7,14 +7,14 @@ perex: '''
     <br><br>
     This year I started to work on a Nette Coding Standard (*NCS*) you can put to CLI.
     <br><br>
-    Today, you'll <strong>be able set it up in in your project, either open-source or closed</strong>. 
+    You'll <strong>be able set it up in in your project either open-source or closed</strong> today.
 '''
 related_posts: [49]
 ---
 
 [Nette\CodingStandard](https://github.com/nette/coding-standard/) version [0.5](https://github.com/nette/coding-standard/releases/tag/v0.5.0) with important bug-fixes was released a week ago. This version **is ready to use, includes all important checkers and is used on all `Nette\*` packages in Travis**.
   
-**NCS checks any pull-request you make to Nette**:
+**NCS checks every pull-request you make to Nette**:
 
 <div>
     <a href="https://travis-ci.org/nette/application/jobs/261987910#L349">
@@ -23,7 +23,7 @@ related_posts: [49]
 </div>
 
 
-All that is needed is [stage in `travis.yml`](https://github.com/nette/application/blob/2f545e64fc4bfc941d7e48a95e3faca7c468ac35/.travis.yml#L31-L41):
+All that need is to [define stage in `travis.yml`](https://github.com/nette/application/blob/2f545e64fc4bfc941d7e48a95e3faca7c468ac35/.travis.yml#L31-L41):
 
 <div>
     <img src="/assets/images/posts/2017/nette-coding-standard/travis-setup.png" class="thumbnail">
@@ -48,7 +48,7 @@ You have 2 options how to use NCS in your project.
 
 ### 1. As a Composer Project
 
-Nette packages require this approach, because NCS depends on many Nette packages. **NCS has to be installed to standalone directory**, so changing the Nette code by NCS doesn't break NCS. Same case as for [PHPStan](https://github.com/phpstan/phpstan).
+Nette packages require this approach, because NCS depends on many Nette packages. **NCS should be installed to standalone directory**, so changing the Nette code by NCS doesn't break NCS. Same case as for [PHPStan](https://github.com/phpstan/phpstan).
 
 The easiest way is to setup `.travis.yml`: 
 
