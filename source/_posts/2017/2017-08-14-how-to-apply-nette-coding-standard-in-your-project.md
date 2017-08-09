@@ -12,9 +12,9 @@ perex: '''
 related_posts: [49]
 ---
 
-[Nette\CodingStandard](https://github.com/nette/coding-standard/) version [0.5](https://github.com/nette/coding-standard/releases/tag/v0.5.0) with many bug-fixes was released a week ago. This version **is ready to use, includes all important checkers and is used on all `Nette\*` packages in Travis**.
+[Nette\CodingStandard](https://github.com/nette/coding-standard/) version [0.5](https://github.com/nette/coding-standard/releases/tag/v0.5.0) with important bug-fixes was released a week ago. This version **is ready to use, includes all important checkers and is used on all `Nette\*` packages in Travis**.
   
-**Any pull-request you make to Nette is checked** by this package:
+**NCS checks any pull-request you make to Nette**:
 
 <div>
     <a href="https://travis-ci.org/nette/application/jobs/261987910#L349">
@@ -36,7 +36,7 @@ But first...
 
 ## PHP 7.1+
 
-This packages requires PHP 7.1 as the rest of the Nette, so your project has to be able to run on it. 
+This packages requires PHP 7.1 to run as the rest of the Nette (mostly current `master` or `3.0`).
 
 If you still don't know why should you **join [Symfony, Nette, Doctrine, Zend or Sylius](https://gophp71.org/)**, you can read [this post](/blog/2017/06/05/go-php-71/#why-go-right-to-php-7-1) or wait a bit longer. It's up to you.  
 
@@ -48,7 +48,7 @@ You have 2 options how to use NCS in your project.
 
 ### 1. As a Composer Project
 
-This is required way for Nette packages, because it checks itself by using their own packages. **NCS has to be installed to standalone directory**, so changing the Nette code by NCS doesn't break NCS. Same case as for [PHPStan](https://github.com/phpstan/phpstan). 
+Nette packages require this approach, because NCS depends on many Nette packages. **NCS has to be installed to standalone directory**, so changing the Nette code by NCS doesn't break NCS. Same case as for [PHPStan](https://github.com/phpstan/phpstan).
 
 The easiest way is to setup `.travis.yml`: 
 
