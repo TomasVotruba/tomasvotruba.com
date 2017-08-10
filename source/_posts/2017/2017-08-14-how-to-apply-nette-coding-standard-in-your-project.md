@@ -3,11 +3,9 @@ id: 50
 layout: post
 title: "How to Apply Nette Coding Standard in Your Project"
 perex: '''
-    Coding standards help you to <strong>focus on architecture issues rather than code details in pull-requests</strong>, moreover in open-source. <strong>I wanted to make this possible in Nette</strong>, but Coding Standards could be found only in <a href="https://nette.org/en/coding-standard">documentation</a>.
+    <strong>Pull-requests are more fun</strong> thanks to automated coding standard. You don't have explain where to put space or bracket. You <strong>can talk about architecture or meaning of the code</strong> instead. Moreover in open-source. <strong>I wanted to make this possible in Nette</strong>, but Coding Standards could be found only in <a href="https://nette.org/en/coding-standard">documentation</a>.
     <br><br>
-    This year I started to work on a Nette Coding Standard (*NCS*) you can put to CLI.
-    <br><br>
-    You'll <strong>be able set it up in in your project either open-source or closed</strong> today.
+    This year I started to work on a Nette Coding Standard (<em>NCS</em>) that you can put to CLI. And you'll <strong>be able set it up in in your project</strong> yourself today.
 '''
 related_posts: [49]
 ---
@@ -48,7 +46,7 @@ You have 2 options how to use NCS in your project.
 
 ### 1. As a Composer Project
 
-Nette packages require this approach, because NCS depends on many Nette packages. **NCS should be installed to standalone directory**, so changing the Nette code by NCS doesn't break NCS. Same case as for [PHPStan](https://github.com/phpstan/phpstan).
+Nette packages require this approach, because NCS depends on many Nette packages. **NCS should be installed to standalone directory**, so changing the Nette code by NCS doesn't break NCS.
 
 The easiest way is to setup `.travis.yml`: 
 
