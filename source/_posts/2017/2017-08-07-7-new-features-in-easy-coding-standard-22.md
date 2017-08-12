@@ -32,20 +32,20 @@ Before you had to name all the checkers manually in your config. There was no *P
 *PHP_CodeSniffer + PHP-CS-Fixer* 
 
 ```yaml
-vendor/symplify/easy-coding-standard/php54-checkers.neon
-vendor/symplify/easy-coding-standard/php70-checkers.neon
-vendor/symplify/easy-coding-standard/php71-checkers.neon
-vendor/symplify/easy-coding-standard/psr2-checkers.neon
-vendor/symplify/easy-coding-standard/symfony-checkers.neon
-vendor/symplify/easy-coding-standard/symfony-risky-checkers.neon
+vendor/symplify/easy-coding-standard/config/php54-checkers.neon
+vendor/symplify/easy-coding-standard/config/php70-checkers.neon
+vendor/symplify/easy-coding-standard/config/php71-checkers.neon
+vendor/symplify/easy-coding-standard/config/psr2-checkers.neon
+vendor/symplify/easy-coding-standard/config/symfony-checkers.neon
+vendor/symplify/easy-coding-standard/config/symfony-risky-checkers.neon
 ```
 
 *Custom*
 
 ```
-vendor/symplify/easy-coding-standard/symplify.neon
-vendor/symplify/easy-coding-standard/spaces.neon
-vendor/symplify/easy-coding-standard/common.neon
+vendor/symplify/easy-coding-standard/config/symplify.neon
+vendor/symplify/easy-coding-standard/config/spaces.neon
+vendor/symplify/easy-coding-standard/config/common.neon
 ```
 
 This shortened Symplify config from [256 lines](https://github.com/Symplify/Symplify/blob/v2.0.0/easy-coding-standard.neon#L1-L256) **to [just 22 lines](https://github.com/Symplify/Symplify/blob/458082a5d534182e4ad723958c417399442abc82/easy-coding-standard.neon#L1-L22)**.
@@ -61,7 +61,7 @@ Not anymore!
 
 ```yaml
 includes:
-    - vendor/symplify/easy-coding-standard/symfony-checkers.neon
+    - vendor/symplify/easy-coding-standard/config/symfony-checkers.neon
 
 parameters:
     exclude_checkers:
