@@ -1,23 +1,23 @@
 <ul class="list-inline">
-    <li>
+    <li class="list-inline-item">
         <em class="fa fa-clock-o fa-fw"></em>
         <strong>{$post->getReadingTimeInMinutes()} min</strong>
     </li>
 
-    <li>
+    <li class="list-inline-item">
         <em class="fa fa-calendar fa-fw"></em>
         <time datetime="{$post->getDateInFormat('Y-m-D')}">{$post->getDateInFormat('l, F j, Y')}</time>
     </li>
 
     {ifset $showCommentCount}
-        <li>
+        <li class="list-inline-item">
             <em class="fa fa-fw fa-comments"></em>
             <a href="{$site_url}/{$post['relativeUrl']}/#disqus_thread">X</a> comments
         </li>
     {/ifset}
 
     {ifset $showPullRequestLink}
-        <li>
+        <li class="list-inline-item">
             <em class="fa fa-fw fa-pencil"></em>
 
             <a href="{$post|githubEditPostUrl}">

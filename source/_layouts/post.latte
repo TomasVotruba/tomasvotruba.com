@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     {include "head"}
     <body>
         {include "menu"}
@@ -25,13 +25,11 @@
         }
 
         {if isset($post['deprecated'])}
-            <br>
-
-            <div class="panel panel-danger">
-                <div class="panel-heading">
+            <div class="card border-danger">
+                <div class="card-header text-white bg-danger border-danger">
                     <strong>Content of this post is deprecated since {$post['deprecated_since']}</strong>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
                     {$post['deprecated_message']|noescape}
                 </div>
             </div>
@@ -40,13 +38,11 @@
         {/if}
 
         {if isset($post['updated'])}
-            <br>
-
-            <div class="panel panel-success">
-                <div class="panel-heading">
+            <div class="card border-success">
+                <div class="card-header text-white bg-success border-success">
                     <strong>Content of this post was updated on {$post['updated_since']}</strong>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
                     {$post['updated_message']|noescape}
                 </div>
             </div>
@@ -54,8 +50,8 @@
             <br>
         {/if}
 
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="card">
+            <div class="card-body">
                 {$post['perex']|noescape}
             </div>
         </div>
