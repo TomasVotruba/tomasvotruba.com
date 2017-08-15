@@ -13,7 +13,7 @@ related_posts: [46, 47, 48]
 ---
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/easy-coding-standard-intro/together.png" class="thumbnail">
+    <img src="/../../../../assets/images/posts/2017/easy-coding-standard-intro/together.png" class="img-thumbnail">
 </div>
 
 
@@ -71,7 +71,7 @@ You can add a comment to groups, so everyone can easily orientate when there are
 Do you use PHPStorm? If so, you can use [NEON Plugin](https://plugins.jetbrains.com/plugin/7060-neon-support). It allows you one amazing thing:
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/easy-coding-standard-intro/neon-autocomplete.gif" class="thumbnail">
+    <img src="/../../../../assets/images/posts/2017/easy-coding-standard-intro/neon-autocomplete.gif" class="img-thumbnail">
 </div>
 
 
@@ -94,7 +94,7 @@ vendor/bin/easy-coding-standard check src --fix
 ```
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/easy-coding-standard-intro/run-and-fix.gif" class="thumbnail">
+    <img src="/../../../../assets/images/posts/2017/easy-coding-standard-intro/run-and-fix.gif" class="img-thumbnail">
 </div>
 
 

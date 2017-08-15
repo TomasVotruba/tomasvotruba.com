@@ -58,7 +58,7 @@ Instead, README goes right to the point:
 - **how to use them** - copy/paste CLI command 
 - and **how to configure them** - link to particular lines in `ruleset.xml` and `easy-coding-standard.neon`.
    
-<img src="/assets/images/posts/2017/object-calisthenics/rule6.png" class="thumbnail">
+<img src="/assets/images/posts/2017/object-calisthenics/rule6.png" class="img-thumbnail">
 
 ### Configure What You Need
 

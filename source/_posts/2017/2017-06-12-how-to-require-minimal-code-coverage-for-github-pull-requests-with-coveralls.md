@@ -22,7 +22,7 @@ perex: '''
 - check it against your minimal requirement
 - fails CI if it is lower than that
  
-<img src="/assets/images/posts/2017/coveralls/coverage-checker.png" class="thumbnail">
+<img src="/assets/images/posts/2017/coveralls/coverage-checker.png" class="img-thumbnail">
 
 Simple setup to let computer handle "please, add tests" response for you.
 
@@ -76,7 +76,7 @@ after_script:
 
 Add your repository on [Coveralls.io](https://coveralls.io), go to "Settings" and find "Coverage Treshold fo Failure".
 
-<img src="/assets/images/posts/2017/coveralls/coveralls-treshold.png" class="thumbnail">
+<img src="/assets/images/posts/2017/coveralls/coveralls-treshold.png" class="img-thumbnail">
 
 **There you can put a value you're ok with**. No need to push yourself too hard.
 I personally start with coverage bit bellow current level.
@@ -90,11 +90,11 @@ That's all setup you need. Just push your pull-request and see the result.
 
 Travis or Scrutinizer appear there right after you create a PR, because they're set up as services (*Settings → Integrations & Services*).
 
-<img src="/assets/images/posts/2017/coveralls/build-checks-scrutinizer.png" class="thumbnail">
+<img src="/assets/images/posts/2017/coveralls/build-checks-scrutinizer.png" class="img-thumbnail">
 
 This is not the case for Coverrals.
 
-<img src="/assets/images/posts/2017/coveralls/report-at-first.png" class="thumbnail">
+<img src="/assets/images/posts/2017/coveralls/report-at-first.png" class="img-thumbnail">
 
 Don't worry, it's there. It will appear when Travis will upload `coverage.xml` to it:
 
@@ -104,7 +104,7 @@ after_script:
   - php coveralls.phar --verbose
 ```
 
-<img src="/assets/images/posts/2017/coveralls/report-after-ping.png" class="thumbnail">
+<img src="/assets/images/posts/2017/coveralls/report-after-ping.png" class="img-thumbnail">
 
 
 ### 2. "There is no Report about Required Limit under PR"

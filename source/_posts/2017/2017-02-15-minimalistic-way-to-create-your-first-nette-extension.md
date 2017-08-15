@@ -25,13 +25,13 @@ services:
 
 File `app/config/config.neon` is like a socket.
 
-<img src="/assets/images/posts/2017/nette-extension/single-socket.jpg" class="thumbnail">
+<img src="/assets/images/posts/2017/nette-extension/single-socket.jpg" class="img-thumbnail">
 
 There is **one place to active your computer**, when you plug it in.
 
 But what if your want to **plug in computer and mobile charger** in the same time?
 
-<img src="/assets/images/posts/2017/nette-extension/multi-socket.jpg" class="thumbnail">
+<img src="/assets/images/posts/2017/nette-extension/multi-socket.jpg" class="img-thumbnail">
 
 To load more services, we use the same interface as `app/config/config.neon`: **a file with service section that lists services**.
 
@@ -135,7 +135,7 @@ class HomepagePresenter extends BasePresenter
 
 and running application:
 
-<img src="/assets/images/posts/2017/nette-extension/bug.png" class="thumbnail">
+<img src="/assets/images/posts/2017/nette-extension/bug.png" class="img-thumbnail">
 
 **Fails**? Damn, I can't put this on my blog.
 
@@ -161,7 +161,7 @@ composer dump-autoload
 
 Refresh and...
 
-<img src="/assets/images/posts/2017/nette-extension/good.png" class="thumbnail">
+<img src="/assets/images/posts/2017/nette-extension/good.png" class="img-thumbnail">
 
 ...it works!
 

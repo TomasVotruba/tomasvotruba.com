@@ -46,7 +46,7 @@ As [No more Mr. Nice Guy](https://www.amazon.com/No-More-Mr-Nice-Guy/dp/07624153
 
 <br>
 
-<img src="/assets/images/posts/2017/deprecate/trust.jpg" class="thumbnail">
+<img src="/assets/images/posts/2017/deprecate/trust.jpg" class="img-thumbnail">
 
 ## Packages like Relationships Stand on Trust
 
@@ -69,7 +69,7 @@ I thought when I deprecate package, application who use it as a dependency stops
 **Deprecating a package** is like **having level 50 and staying there** forever. It will never be worse, but it won't be better either. Deprecation won't break anything and won't improve anything.
 
 <a href="https://seld.be/notes/php-versions-stats-2016-2-edition">
-<img src="https://seld.be/images/update-reqs.png" class="thumbnail">
+<img src="https://seld.be/images/update-reqs.png" class="img-thumbnail">
 </a>
 
 It works the same for releases. When you release version 2.0 that [requires PHP 7.1](/blog/2017/06/05/go-php-71/), it doesn't mean your package won't work on PHP 5.6. Version 1.0 still does.
@@ -106,21 +106,21 @@ To make sure there are no deprecation leaks, put a sign on all sources:
 - Go to your package on Packagist, in my case [symplify/symfony-event-dispatcher](https://packagist.org/packages/symplify/symfony-event-dispatcher)
 - Hit "Abandon" button
 
-    <img src="/assets/images/posts/2017/deprecate/packagist-abandon.png" class="thumbnail">
+    <img src="/assets/images/posts/2017/deprecate/packagist-abandon.png" class="img-thumbnail">
 
 - Pick a replacement
 
-    <img src="/assets/images/posts/2017/deprecate/packagist-replacement.png" class="thumbnail">
+    <img src="/assets/images/posts/2017/deprecate/packagist-replacement.png" class="img-thumbnail">
 
 - And confirm
 
-    <img src="/assets/images/posts/2017/deprecate/packagist-abandoned.png" class="thumbnail">
+    <img src="/assets/images/posts/2017/deprecate/packagist-abandoned.png" class="img-thumbnail">
 
 Now you hope that everybody is going to packagist to check if any of packages they're using are abandoned and seek their replacement... No it's not so painful.
 
 Composer will tell you for every `composer require/update` that includes this package from now on:
 
-<img src="/assets/images/posts/2017/deprecate/composer-info.png" class="thumbnail">
+<img src="/assets/images/posts/2017/deprecate/composer-info.png" class="img-thumbnail">
 
 #### Github Repository
 
@@ -134,11 +134,11 @@ Much more effective **by changing an organization**.
 - Go to *Settings*
 - Scroll down to *Danger Zone* and Pick *Transfer*
 
-    <img src="/assets/images/posts/2017/deprecate/github-danger-zone.png" class="thumbnail">
+    <img src="/assets/images/posts/2017/deprecate/github-danger-zone.png" class="img-thumbnail">
 
 - Fill in the package name and ["DeprecatedPackages" organization](https://github.com/DeprecatedPackages)
 
-    <img src="/assets/images/posts/2017/deprecate/github-transfer.png" class="thumbnail">
+    <img src="/assets/images/posts/2017/deprecate/github-transfer.png" class="img-thumbnail">
 
 - And you're done!
 
@@ -150,7 +150,7 @@ If this process is too difficult for you, you can [add a "deprecated" note to RE
 **The League of Deprecated Packages**
 
 <a href="https://github.com/DeprecatedPackages">
-    <img src="https://avatars0.githubusercontent.com/u/22506867?v=3&s=200" class="thumbnail">
+    <img src="https://avatars0.githubusercontent.com/u/22506867?v=3&s=200" class="img-thumbnail">
 </a>
 
 *Thanks to [Milan Šulc](https://f3l1x.io/) for making this beautiful logo that tells all the story.*
@@ -166,7 +166,7 @@ I've [created a simple warning system](https://github.com/TomasVotruba/tomasvotr
 - Open post about the package.
 - Add warning above the perex with reasoning and suggested replacement: 
 
-    <img src="/assets/images/posts/2017/deprecate/blog-deprecate-note.png" class="thumbnail">
+    <img src="/assets/images/posts/2017/deprecate/blog-deprecate-note.png" class="img-thumbnail">
     
 - Profit! Thousands of programmer pain-hours saved.
 

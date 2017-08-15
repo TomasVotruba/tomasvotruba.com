@@ -22,7 +22,7 @@ but a long process of maturing inspired by community, feedback and intuition.
 If you only want to see before/after changes in you application, you can [skip right to the code](#a-href-https-github-com-deprecatedpackages-defaultautowire-defaultautowire-a). 
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/symplify-deprecations/pr-notes.png" style="max-width:100%" class="thumbnail">
+    <img src="/../../../../assets/images/posts/2017/symplify-deprecations/pr-notes.png" style="max-width:100%" class="img-thumbnail">
 </div>
 
 

@@ -23,12 +23,12 @@ That main difference of PHP-CS-Fixer to PHP_CodeSniffer is that **every Fixer ha
 Personally I like PHP-CS-Fixer a bit more, **because of more friendlier API, active community and openness to 3rd party packages**: 
 
  <div>
-    <img src="/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png" class="thumbnail">
+    <img src="/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png" class="img-thumbnail">
     <em><code>composer.json</code> from PHP-CS-Fixer</em> 
  </div>
 
  <div>
-    <img src="/assets/images/posts/2017/php-cs-fixer-intro/code-sniffer-require.png" class="thumbnail">
+    <img src="/assets/images/posts/2017/php-cs-fixer-intro/code-sniffer-require.png" class="img-thumbnail">
     <em><code>composer.json</code> from PHP_CodeSniffer</em> 
  </div>
 
