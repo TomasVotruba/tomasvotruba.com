@@ -1,10 +1,10 @@
 {var $similarPosts = ($post|similarPosts)}
 
-<div n:if="count($similarPosts)" class="panel panel-warning" id="relatedPosts">
-    <div class="panel-heading">
+<div n:if="count($similarPosts)" class="card border-warning" id="relatedPosts">
+    <div class="card-header text-white bg-warning border-warning">
         <strong>Continue Reading</strong>
     </div>
-    <div class="panel-body">
+    <div class="card-body">
         <ul>
             {foreach $similarPosts as $similarPost}
                 <li>

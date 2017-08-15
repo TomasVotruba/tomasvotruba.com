@@ -1,51 +1,57 @@
-<nav>
-    <div class="container">
-        {* normal menu *}
-        <ul class="hidden-xs">
-            <li n:class="logo, isset($id) && $id === index ? active">
-                <a href="/">Tomáš Votruba</a>
-            </li>
-            <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
-                <a href="/blog/">Blog</a>
-            </li>
-            <li n:class="isset($id) && $id === skills ? active">
-                <a href="/skoleni/">Školím a mentoruji</a>
-            </li>
-            <li n:class="isset($id) && $id === satisfy ? active">
-                <a href="/references/">Spokojení klienti</a>
-            </li>
-            <li n:class="isset($id) && $id === contact ? active">
-                <a href="/contact/">Kontakt</a>
-            </li>
-            <li>
-                <a href="https://github.com/tomasvotruba/">
-                    <em class="fa fa-github fa-fw"></em>
-                </a>
-            </li>
-        </ul>
+{* normal menu *}
+<div class="hidden-sm-down">
+    <nav class="navbar ">
+        <div class="container-fluid">
+            <ul>
+                <li n:class="logo, isset($id) && $id === index ? active">
+                    <a href="/">Tomáš Votruba</a>
+                </li>
+                <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
+                    <a href="/blog/">Blog</a>
+                </li>
+                <li n:class="isset($id) && $id === skills ? active">
+                    <a href="/skoleni/">Školím a mentoruji</a>
+                </li>
+                <li n:class="isset($id) && $id === satisfy ? active">
+                    <a href="/references/">Spokojení klienti</a>
+                </li>
+                <li n:class="isset($id) && $id === contact ? active">
+                    <a href="/contact/">Kontakt</a>
+                </li>
+                <li>
+                    <a href="https://github.com/tomasvotruba/">
+                        <em class="fa fa-github fa-fw"></em>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
-        {* mobile menu *}
-        <div id="mobile-menu" class="row text-center hidden-md hidden-sm hidden-lg">
-            <a href="/" n:class="col-xs-3, isset($id) && $id === index ? active">
+{* mobile menu *}
+<div class="hidden-md-up">
+    <nav class="navbar" id="mobile-menu">
+        <div class="container">
+            <a href="/" n:class="col-3, col-sm-3, isset($id) && $id === index ? active">
                 <em class="fa fa-home"></em>
                 <br>
                 Začni
             </a>
-            <a href="/skoleni/" n:class="col-xs-3, isset($id) && $id === skills ? active">
+            <a href="/skoleni/" n:class="col-3, col-sm-3, isset($id) && $id === skills ? active">
                 <em class="fa fa-thumbs-up"></em>
                 <br>
                 Školím
             </a>
-            <a href="/blog/" n:class="col-xs-3, (isset($id) && $id === blog) || $layout === post ? active">
+            <a href="/blog/" n:class="col-3, col-sm-3, (isset($id) && $id === blog) || $layout === post ? active">
                 <em class="fa fa-book"></em>
                 <br>
                 Píšu blog
             </a>
-            <a href="/contact/"  n:class="col-xs-3, isset($id) && $id === contact ? active">
+            <a href="/contact/"  n:class="col-3, col-sm-3, isset($id) && $id === contact ? active">
                 <em class="fa fa-phone"></em>
                 <br>
                 Kontakt
             </a>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>

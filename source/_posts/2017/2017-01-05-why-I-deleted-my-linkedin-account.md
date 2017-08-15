@@ -63,7 +63,7 @@ I often see friends who have 3 years empty space on LinkedIn and website, yet st
 
 What can you tell about me from this picture?
 
-<img src="/assets/images/posts/2017/linked-in/skills.png" class="thumbnail" alt="Skill list">
+<img src="/assets/images/posts/2017/linked-in/skills.png" class="img-thumbnail" alt="Skill list">
 
 The oldest skills are upvoted the most. Also short and traditional, like Git. Even if I excel in coaching and open-source,
 it looks like I'm 3× better in Git. No, I'm not. **So when I got new skill, it took LinkedIn 3 years to reflect that**. In that time, I'm already somewhere else.

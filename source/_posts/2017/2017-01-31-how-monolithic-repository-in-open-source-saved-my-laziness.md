@@ -48,7 +48,7 @@ So how does this monorepo work?
 
 Imagine flow of a oxygenated blood from heart to arteries. All blood that was in heart, will drift to all arteries.
 
-<img src="/assets/images/posts/2017/monorepo/blood-vein.png" alt="Blod vein" class="thumbnail">
+<img src="/assets/images/posts/2017/monorepo/blood-vein.png" alt="Blod vein" class="img-thumbnail">
 
 From **1 heart** to **many arteries** in one direction. Same relation is between **1 monolithic repository** and **many repositories**.
 
