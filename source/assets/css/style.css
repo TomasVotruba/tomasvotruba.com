@@ -71,11 +71,12 @@ h1 a, h1 a:hover, h1 a:focus, h2 a, h2 a:hover, h2 a:focus, h3 a, h3 a:hover, h3
 
 h2 {
     font-size: 1.45em;
-    margin: 1em 0;
+    margin: 1em 0 .5em;
 }
 
 h3 {
     font-size: 1.3em;
+    margin: .8em 0 .4em;
 }
 
 h1 {
@@ -130,17 +131,13 @@ article {
     margin-bottom: .2em;
 }
 
-.panel {
-    font-size: 1.2em;
+.card {
+    font-size: 1.1em;
     line-height: 1.5em;
     margin: 1.5em 0;
 }
 
-.panel#relatedPosts {
-    font-size: 1.1em;
-}
-
-.panel#relatedPosts .panel-body {
+.card#relatedPosts .card-body {
     padding: .7em 0 .3em 0;
     line-height: 2em;
 }
