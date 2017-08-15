@@ -49,13 +49,21 @@ ul {
 
 @media (min-width: 768px) {
     .container {
-        width: 100%;
+        max-width: 100%;
+    }
+
+    .container-fluid {
+        max-width: 100%;
     }
 }
 
 @media (min-width: 992px) {
     .container {
-        width: 800px;
+        max-width: 800px;
+    }
+
+    .container-fluid {
+        max-width: 800px;
     }
 }
 
@@ -102,12 +110,6 @@ h2 a:hover {
     text-decoration: underline;
 }
 
-@media (min-width: 481px) {
-    h1, h2, h3, .navbar {
-        font-family: Arial, sans-serif;
-    }
-}
-
 pre {
     border: none;
     border-radius: 2px;
@@ -115,11 +117,12 @@ pre {
 
 .navbar {
     border-radius: 0;
-    background-color: #571B3C;
+    background-color: #7A1E48;
+    padding: 0;
 }
 
-.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus {
-    color: #87CEFA;
+.navbar li a, .navbar li a:active, .navbar li a:focus {
+    color: #f6f6f6;
 }
 
 article {
@@ -165,12 +168,6 @@ code {
 }
 
 /* article helpers */
-.arrow-down-on-list {
-    margin-left: .7em;
-    font-size: 1.6em;
-    font-family: Arial, sans-serif;
-}
-
 .bigger {
     font-size: 1.07em;
 }
@@ -236,9 +233,20 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     background: #9D2053;
 }
 
+#mobile-menu {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#mobile-menu .container {
+    padding: 0px;
+    max-width: 100%;
+}
+
 #mobile-menu a {
-    padding-left: 0;
-    padding-right: 0;
+    float: left;
+    width: 100%;
 }
 
 .ico-note {
@@ -272,4 +280,17 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon {
 
 #post img {
     margin: 1em 0;
+}
+
+
+/* show/hidden menu; ref https://stackoverflow.com/a/35362821/1348344 */
+@media (max-width: 768px) {
+    .hidden-sm-down {
+        display: none !important;
+    }
+}
+@media (min-width: 769px) {
+    .hidden-md-up {
+        display: none !important;
+    }
 }
