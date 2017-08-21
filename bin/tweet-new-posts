@@ -15,7 +15,7 @@ try {
 
     $tweetPublisher = $container->get(TweetPublisher::class);
 
-    $recentTweets = $tweetPublisher->getRecentTweets();
+    $recentTweets = $tweetPublisher->run();
     // get all the posts
     dump($recentTweets);
     die;

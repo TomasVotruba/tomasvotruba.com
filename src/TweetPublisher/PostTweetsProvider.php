@@ -128,8 +128,6 @@ final class PostTweetsProvider
             return;
         }
 
-        // "text + 23 chars have to be under.."
-
         throw new TweetTooLongException(sprintf(
             'Tweet message "%s" is too long, after adding its url. It has %d chars, shorten it under %d.' .
                 PHP_EOL .

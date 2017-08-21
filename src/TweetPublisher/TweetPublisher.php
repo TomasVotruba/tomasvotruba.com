@@ -3,7 +3,6 @@
 namespace TomasVotruba\Website\TweetPublisher;
 
 use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
-use Tracy\Debugger;
 
 /**
  * @inspire https://gist.github.com/petrvacha/28ec8f5eac39283f1e7dce350f5a65ad
@@ -27,22 +26,19 @@ final class TweetPublisher
         $this->twitterApiWrapper = $twitterApiWrapper;
     }
 
-    /**
-     * @return string[]
-     */
-    public function getRecentTweets(): array
+    public function run(): void
     {
         $allPostTweets = $this->postTweetsProvider->provide();
-
         $allPublishedTweets = $this->twitterApiWrapper->getPublishedTweets();
 
         $tweetsToPublish = $this->excludeAlreadyPublishedTweets($allPostTweets, $allPublishedTweets);
 
-        dump($tweetsToPublish);
-        die;
+        if (! count($tweetsToPublish)) {
+            return;
+        }
 
-//        $publishedPostTweets = $this->tweetFilter->filterOnlyPostTweets($allPublishedTweets);
-        dump(array_pop($publishedPostTweets));
+        dump($tweetsToPublish);
+        // get date of last tweet, is it allowed to publsieh new one?
         die;
 
         // is ready? -> pick the best one...
@@ -56,10 +52,6 @@ final class TweetPublisher
      */
     private function excludeAlreadyPublishedTweets(array $allPostTweets, array $allPublishedTweets): array
     {
-        Debugger::$maxLength = 1525;
-
-        dump($allPostTweets);
-        dump($allPublishedTweets);
-        die;
+        return array_diff_assoc($allPostTweets, $allPublishedTweets);
     }
 }
