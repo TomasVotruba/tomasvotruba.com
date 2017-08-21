@@ -59,9 +59,10 @@
         {$post['content']|noescape}
 
         <br>
-        <br>
 
         {include "postYouMightAlsoLike", "post" => $post}
+
+        {include "hireMe"}
 
         <br>
 
@@ -84,6 +85,7 @@
 
     {* Twitter sharing *}
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@votrubaT">
     <meta name="twitter:title" content="{$post['title']}" />
     <meta name="twitter:description" content="{$post['perex']|striptags}" />
     {ifset $post['thumbnail']}

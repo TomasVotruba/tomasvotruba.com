@@ -282,6 +282,16 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon {
     margin: 1em 0;
 }
 
+.hireMe {
+	font-size: 1.6rem;
+	margin: 2rem auto;
+}
+
+.hireMe a {
+    color: #f6f6f6;
+    display: block;
+}
+
 
 /* show/hidden menu; ref https://stackoverflow.com/a/35362821/1348344 */
 @media (max-width: 768px) {
