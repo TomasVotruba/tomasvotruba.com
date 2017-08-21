@@ -18,9 +18,27 @@ The simplest would be...
 
 ### 1. Array property should have default value `[]` to prevent undefined array issues
 
-<div>
-    <img src="/assets/images/posts/2017/symplify-coding-standard/array-default.png" class="img-thumbnail">
-</div>
+<em class="fa fa-lg fa-times text-danger"></em>
+
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class SomeTest extends TestCase
+{
+}
+```
+
+<em class="fa fa-lg fa-check text-success"></em>
+
+```php
+use PHPUnit\Framework\TestCase;
+
+final class SomeTest extends TestCase
+{
+}
+```
+
 
 **Use it**
 
@@ -39,9 +57,21 @@ Once I read [When to declare classes final](https://ocramius.github.io/blog/when
 
 I was working at [Lekarna.cz](https://www.lekarna.cz/) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and had lots of code reviews. **So I made a sniff to save us some work.** 
 
-<div>
-    <img src="/assets/images/posts/2017/symplify-coding-standard/final-interface.png" class="img-thumbnail">
-</div>
+<em class="fa fa-lg fa-times text-danger"></em>
+
+```php
+class SomeClass implements SomeInterface
+{
+}
+```
+
+<em class="fa fa-lg fa-check text-success"></em>
+
+```php
+final class SomeClass implements SomeInterface
+{
+}
+```
 
 **Use it**
 
@@ -58,9 +88,18 @@ checkers:
 
 Well, since PHP 5.5, you can use `::class` constant instead of string.
 
-<div>
-    <img src="/assets/images/posts/2017/symplify-coding-standard/class-constant.png" class="img-thumbnail">
-</div>
+<em class="fa fa-lg fa-times text-danger"></em>
+
+```php
+$className = 'DateTime';
+```
+
+<em class="fa fa-lg fa-check text-success"></em>
+
+```php
+$className = DateTime::class;
+```
+
 
 **Use it**
 
@@ -75,9 +114,25 @@ checkers:
 
 This is lighter version of **Final Interface rule**. No brainer. 
 
-<div>
-    <img src="/assets/images/posts/2017/symplify-coding-standard/final-test-case.png" class="img-thumbnail">
-</div>
+<em class="fa fa-lg fa-times text-danger"></em>
+
+```php
+use PHPUnit\Framework\TestCase;
+
+class SomeTest extends TestCase
+{
+}
+```
+
+<em class="fa fa-lg fa-check text-success"></em>
+
+```php
+use PHPUnit\Framework\TestCase;
+
+final class SomeTest extends TestCase
+{
+}
+```
 
 **Use it**
 
@@ -86,7 +141,6 @@ This is lighter version of **Final Interface rule**. No brainer.
 checkers:
     - Symplify\CodingStandard\Sniffs\PHPUnit\FinalTestCaseSniff
 ```
-
 
 
 ### 5. Equal Interface
@@ -99,9 +153,41 @@ David Grudl recently wrote about [`$template` methods suggestion in Nette](https
 
 This sniff helps you to avoid such cases:
 
-<div>
-    <img src="/assets/images/posts/2017/symplify-coding-standard/complete-implementation.png" class="img-thumbnail">
-</div>
+<em class="fa fa-lg fa-times text-danger"></em>
+
+```php
+interface SomeInterface
+{
+    public function run(): void;
+}
+
+final class SomeClass implements SomeInterface
+{
+    public function run(): void
+    {
+    }
+    
+    public function extra(): void
+    {
+    }
+}
+```
+
+<em class="fa fa-lg fa-check text-success"></em>
+
+```php
+interface SomeInterface
+{
+    public function run(): void;
+}
+
+final class SomeClass implements SomeInterface
+{
+    public function run(): void
+    {
+    }
+}
+```
 
 
 **Use it**
@@ -119,9 +205,35 @@ checkers:
 
 Putting annotations back to constructor is quite a work, but this Fixer will help you with that.
 
-<div>
-    <img src="/assets/images/posts/2017/symplify-coding-standard/inject-to-construct.png" class="img-thumbnail">
-</div>
+<em class="fa fa-lg fa-times text-danger"></em>
+
+```php
+class SomeClass
+{
+    /**
+     * @inject
+     * @var RequiredDependencyClass
+     */
+    public $requiredDependencyClass;
+}
+```
+
+<em class="fa fa-lg fa-check text-success"></em>
+
+```php
+class SomeClass
+{
+    /**
+     * @var RequiredDependencyClass
+     */
+    private $requiredDependencyClass;
+    
+    public function __construct(RequiredDependencyClass $requiredDependencyClass)
+    {
+        $this->requiredDependencyClass = $requiredDependencyClass;
+    }
+}
+```
 
 **Use it**
 
