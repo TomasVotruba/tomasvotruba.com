@@ -37,7 +37,7 @@ Once I read [When to declare classes final](https://ocramius.github.io/blog/when
 
 *Make your classes always final, if they implement an interface, and no other public methods are defined.*
 
-I was working at [Lekarna.cz](https://www.lekarna.cz/) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and lot's of code reviews. **So I made a sniff to save us some work.** 
+I was working at [Lekarna.cz](https://www.lekarna.cz/) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and had lots of code reviews. **So I made a sniff to save us some work.** 
 
 <div>
     <img src="/assets/images/posts/2017/symplify-coding-standard/final-interface.png" class="img-thumbnail">
