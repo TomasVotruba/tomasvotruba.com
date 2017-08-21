@@ -1,0 +1,12 @@
+includes:
+    - vendor/symplify/easy-coding-standard/config/psr2-checkers.neon
+    - vendor/symplify/easy-coding-standard/config/php70-checkers.neon
+    - vendor/symplify/easy-coding-standard/config/php71-checkers.neon
+    - vendor/symplify/easy-coding-standard/config/common.neon
+    - vendor/symplify/easy-coding-standard/config/spaces.neon
+    - vendor/symplify/easy-coding-standard/config/symplify-checkers.neon
+
+parameters:
+    exclude_checkers:
+        # buggy, fix first
+        - Symplify\CodingStandard\Fixer\ArrayNotation\StandaloneLineInMultilineArrayFixer

@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use Symplify\Statie\DependencyInjection\ContainerFactory;
+use TomasVotruba\Website\TweetPublisher\TweetPublisher;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$symfonyStyle = SymfonyStyleFactory::create();
+
+try {
+    $containerFactory = new ContainerFactory;
+    $container = $containerFactory->createWithConfig(__DIR__ . '/../statie.neon');
+
+    $tweetPublisher = $container->get(TweetPublisher::class);
+
+    $recentTweets = $tweetPublisher->getRecentTweets();
+    // get all the posts
+    dump($recentTweets);
+    die;
+
+} catch (Throwable $throwable) {
+    $symfonyStyle->error($throwable->getMessage());
+    exit(1);
+}
