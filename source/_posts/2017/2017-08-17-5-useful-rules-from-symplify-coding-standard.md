@@ -3,55 +3,66 @@ id: 50
 layout: post
 title: "5 Useful Rules From Symplify Coding Standard"
 perex: '''
-    ...
+     <a href="http://github.com/Symplify/CodingStandard">Symplify Coding Standard</a> was born from Zenify, back from the days I was only Nette programmer. It focuses on <strong>maintainability and clean architecture</strong>. I try to make them simple: <strong>each of them does one job</strong>.  
+     <br><br>
+     With over 13 000 downloads I think I should write about 5 of them you can use in your projects today. 
 '''
 ---
 
-With over 13 000 downloads I should write about them
-  
-- they were born as time went by and I came the smae issues agian an
+I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
+   
+**Symplify Coding standard is complete opposite.** You can start with 1st checker today and your code will be probably able to handle it. It's combination of 23 sniffs and fixers.
 
-https://github.com/Symplify/CodingStandard
-
-
-
-...
-What Symplify cosign standard?
-
-Rules, very simple in structure, yet powerful in functionality.
-
-I picket 5 of them that you can use projects by themselfes today.
+The simplest would be... 
 
 
+### 1. Array property should have default value `[]` to prevent undefined array issues
+
+<div>
+    <img src="/assets/images/posts/2017/symplify-coding-standard/array-default.png" class="img-thumbnail">
+</div>
+
+**Use it**
+
+```yaml
+# easy-coding-standard.neon
+checkers:
+  - Symplify\CodingStandard\Fixer\Property/ArrayPropertyDefaultValueFixer
+```
 
 
+### 2. Final Interface 
 
-1. Final interface lvl 50
-- Symplify\CodingStandard\Sniffs\Classes\FinalInterfaceSniff
+Once I read [When to declare classes final](https://ocramius.github.io/blog/when-to-declare-classes-final) by [Marco Pivetta](http://ocramius.github.io/) with **tl;dr;**:
 
-- reference final interface @ocramius
-- reference final method @ocramius issue
+*Make your classes always final, if they implement an interface, and no other public methods are defined.*
 
+I was working at [Lekarna.cz](https://www.lekarna.cz/) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and lot's of code reviews. **So I made a sniff to save us some work.** 
 
 <div>
     <img src="/assets/images/posts/2017/symplify-coding-standard/final-interface.png" class="img-thumbnail">
 </div>
 
+**Use it**
+
 ```yaml
 # easy-coding-standard.neon
 checkers:
     - Symplify\CodingStandard\Sniffs\Classes\FinalInterfaceSniff
-``
+```
 
 
-2. Class constant fixer
-::class references should be used over string for classes and interfaces
+### 3. Class constant fixer
 
+**Are you on PHP 5.5?** I hope you're [PHP 7.1](/blog/2017/06/05/go-php-71/) already.
+
+Well, since PHP 5.5, you can use `::class` constant instead of string.
 
 <div>
     <img src="/assets/images/posts/2017/symplify-coding-standard/class-constant.png" class="img-thumbnail">
 </div>
 
+**Use it**
 
 ```yaml
 # easy-coding-standard.neon
@@ -60,50 +71,15 @@ checkers:
 ```
 
 
-3. Equal interface
-... Symplify\CodingStandard\Sniffs\Classes\EqualInterfaceImplementationSniff
+### 4. Test should be final
 
-<div>
-    <img src="/assets/images/posts/2017/symplify-coding-standard/complete-implementation.png" class="img-thumbnail">
-</div>
-
-
-use case? nette template a itemplate
-... vs ...
-
-once this than that?
-
-David even had to write about ti...
-
-```yaml
-# easy-coding-standard.neon
-checkers:
-    -  Symplify\CodingStandard\Sniffs\Classes\EqualInterfaceImplementationSniff
-```
-
-
-
-4. @inject to cosntructor!!!in Nette
-
-<div>
-    <img src="/assets/images/posts/2017/symplify-coding-standard/inject-to-construct.png" class="img-thumbnail">
-</div>
-
-```yaml
-# easy-coding-standard.neon
-checkers:
-    -  Symplify\CodingStandard\Fixer\DependencyInjection\InjectToConstructorInjectionFixer
-```
-
-
-5. Test shoudl be final, phputni
-
-- no brainer
+This is lighter version of **Final Interface rule**. No brainer. 
 
 <div>
     <img src="/assets/images/posts/2017/symplify-coding-standard/final-test-case.png" class="img-thumbnail">
 </div>
 
+**Use it**
 
 ```yaml
 # easy-coding-standard.neon
@@ -112,53 +88,77 @@ checkers:
 ```
 
 
-## Are you Coding Standard Ninja?
+
+### 4. Equal Interface
+
+What happens if you implement and interface and add few extra public methods?
+
+**Your IDE autocomplete won't work**, if you don't type hint the class and not the interface.
+
+David Grudl recently wrote about [`$template` methods suggestion in Nette](https://phpfashion.com/phpstorm-a-napovidani-nad-this-template).
+
+This sniff helps you to avoid such cases:
+
+<div>
+    <img src="/assets/images/posts/2017/symplify-coding-standard/complete-implementation.png" class="img-thumbnail">
+</div>
 
 
-You can use them all by 
+**Use it**
+
+```yaml
+# easy-coding-standard.neon
+checkers:
+    - Symplify\CodingStandard\Sniffs\Classes\EqualInterfaceImplementationSniff
+```
+
+
+## Experimental Bonus: Refactoring Sniff
+
+`@inject` annotations in Nette have their use cases, but **they are mostly overused and breaking SOLID principles** left and right from my consultancy experience.
+
+Putting annotations back to constructor is quite a work, but this Fixer will help you with that.
+
+<div>
+    <img src="/assets/images/posts/2017/symplify-coding-standard/inject-to-construct.png" class="img-thumbnail">
+</div>
+
+**Use it**
+
+```yaml
+# easy-coding-standard.neon
+checkers:
+    -  Symplify\CodingStandard\Fixer\DependencyInjection\InjectToConstructorInjectionFixer
+```
+
+
+### Sold? Try them 
+
+
+They are used the best with [EasyCodingStandard](/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/): 
  
-```
-composer require --dev symplify/coding-standard
-composer require --dev symplify/easy-coding-standard
+```bash
+composer require --dev symplify/easy-coding-standard symplify/coding-standard
 ```
 
+Check your code: 
 
-```php
+```bash
 vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify-checkers.neon
+```
 
-# and fix like this
+Fix your code: 
+
+```bash
 vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify-checkers.neon --fix
 ```
+
 
 Let me know how much errors will you find in the comments. I dare you to get to 0! :)
 
 
-
-
-
-
-
 ## Rest of the Rules
 
-@todo: complete specific links
+You can find more rules like Abstract Class, Exception, Trait and Interface naming, indexed array indentation, Controllers with 1 method or invoke and so on in [README](https://github.com/Symplify/CodingStandard).
 
-- Architecture
-- Naming
-    - Abstract class
-    - Exception suffix
-    - Interfcae suffix
-    - Trait suffix
-- Structure
-    - indexed array
-    - new class withotu ()
-- Simple PHP rules
-    - empty array
-    - native method (`__CONSTRUCT`)
-- Commenting
-    - Property and Constant types
-- Controllers method
-    - 1 method 
-    - __invoke method
-- Debug
-    - no commented out code
-    - no dump() function left-overs
+Happy coding!
