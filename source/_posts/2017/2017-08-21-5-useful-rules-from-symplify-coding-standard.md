@@ -89,7 +89,7 @@ checkers:
 
 
 
-### 4. Equal Interface
+### 5. Equal Interface
 
 What happens if you implement and interface and add few extra public methods?
 
