@@ -1,0 +1,42 @@
+parameters:
+    twitter_name: "VotrubaT"
+    posts_source: "%kernel.project_dir%/../../../source/_posts"
+    minimal_gap_in_days: 7 # how many days to wait before publishing another Tweet
+
+    twitter_consumer_key: "..."
+    twitter_consumer_secret: "..."
+    twitter_oauth_access_token: "..."
+    twitter_oauth_access_token_secret: "..."
+
+services:
+    _defaults:
+        autowire: true
+
+    # PSR-4 autodiscovery
+    TomasVotruba\Website\TweetPublisher\:
+        resource: "%kernel.project_dir%/../../../src/TweetPublisher"
+
+    TomasVotruba\Website\TweetPublisher\PostTweetsProvider:
+        arguments:
+            - %posts_source%
+            - %site_url%
+
+    TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper:
+        arguments:
+            - %twitter_name%
+
+    TomasVotruba\Website\TweetPublisher\TweetPublisher:
+        arguments:
+            - %minimal_gap_in_days%
+
+    # Twitter API
+    TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiFactory:
+        arguments:
+            - %twitter_consumer_key%
+            - %twitter_consumer_secret%
+            - %twitter_oauth_access_token%
+            - %twitter_oauth_access_token_secret%
+
+    TwitterAPIExchange:
+        class: TwitterAPIExchange
+        factory: ['@TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiFactory', 'create']

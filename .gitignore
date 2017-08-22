@@ -2,3 +2,4 @@
 /vendor
 composer.lock
 /node_modules
+/src/TweetPublisher/config/config.local.neon
