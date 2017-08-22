@@ -58,7 +58,7 @@ final class TweetPublisher
         }
 
         $tweet = $this->pickTweetCandidate($tweetsToPublish);
-        $this->publishTweet($tweet);
+        $this->twitterApiWrapper->publishTweet($tweet);
     }
 
     /**

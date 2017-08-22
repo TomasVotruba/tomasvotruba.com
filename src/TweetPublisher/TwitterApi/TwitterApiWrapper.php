@@ -119,7 +119,6 @@ final class TwitterApiWrapper
     /**
      * @param mixed[] $data
      * @return mixed[]
-     *
      */
     private function callPost(string $endPoint, array $data): array
     {
