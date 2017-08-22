@@ -145,15 +145,6 @@ article {
     line-height: 2em;
 }
 
-blockquote.special {
-    margin: .7em 0;
-    background: url("/assets/images/quote.gif") no-repeat top left;
-    padding: 0 0 0 3em;
-    min-height: 3em;
-    border-left: none;
-    font-size: 1em;
-}
-
 code {
     font-size: .9em;
 }
@@ -169,7 +160,7 @@ code {
 
 /* article helpers */
 .bigger {
-    font-size: 1.07em;
+    font-size: 1.1em;
 }
 
 img {
