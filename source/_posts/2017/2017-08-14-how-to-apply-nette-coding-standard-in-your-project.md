@@ -8,6 +8,7 @@ perex: '''
     This year I started to work on a Nette Coding Standard (<em>NCS</em>) that you can put to CLI. And you'll <strong>be able set it up in in your project</strong> yourself today.
 '''
 related_posts: [49]
+tweet: "How to setup #nettefw Coding Standard in your project? Local #ci or #travisci"
 ---
 
 [Nette\CodingStandard](https://github.com/nette/coding-standard/) version [0.5](https://github.com/nette/coding-standard/releases/tag/v0.5.0) with important bug-fixes was released a week ago. This version **is ready to use, includes all important checkers and is used on all `Nette\*` packages in Travis**.

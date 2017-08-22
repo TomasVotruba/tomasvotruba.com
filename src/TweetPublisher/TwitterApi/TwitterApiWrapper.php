@@ -100,20 +100,19 @@ final class TwitterApiWrapper
     }
 
     /**
-     * @param mixed[] $options
+     * @param mixed[] $data
      * @return mixed[]
      */
-    private function callGet(string $endPoint, string $query, array $options): array
+    private function callGet(string $endPoint, string $query, array $data): array
     {
-        $jsonResponse = $this->twitterAPIExchange->setGetfield(sprintf(
-            '?q=%s&%s',
-            $query,
-            http_build_query($options)
-        ))
+        $data['q'] = $query;
+
+        $jsonResponse = $this->getTwitterApiExchange()
+            ->setGetfield('?' . http_build_query($data))
             ->buildOauth($endPoint, 'GET')
             ->performRequest();
 
-        return Json::decode($jsonResponse, Json::FORCE_ARRAY);
+        return $this->decodeJson($jsonResponse);
     }
 
     /**
@@ -122,10 +121,27 @@ final class TwitterApiWrapper
      */
     private function callPost(string $endPoint, array $data): array
     {
-        $jsonResponse = $this->twitterAPIExchange->setPostfields($data)
+        $jsonResponse = $this->getTwitterApiExchange()
+            ->setPostfields($data)
             ->buildOauth($endPoint, 'POST')
             ->performRequest();
 
+        return $this->decodeJson($jsonResponse);
+    }
+
+    /**
+     * This is needed, because setting setGetfield() prevents using setPostfields()
+     */
+    private function getTwitterApiExchange(): TwitterAPIExchange
+    {
+        return clone $this->twitterAPIExchange;
+    }
+
+    /**
+     * @return mixed[]
+     */
+    private function decodeJson(string $jsonResponse): array
+    {
         return Json::decode($jsonResponse, Json::FORCE_ARRAY);
     }
 }

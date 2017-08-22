@@ -54,11 +54,17 @@ final class TweetPublisher
 
         $tweetsToPublish = $this->excludeAlreadyPublishedTweets($allPostTweets, $allPublishedTweets);
         if (! count($tweetsToPublish)) {
+            $this->symfonyStyle->warning('There is no new tweet to publish. Add a new one to one of your post under "tweet:" option.');
             return;
         }
 
         $tweet = $this->pickTweetCandidate($tweetsToPublish);
         $this->twitterApiWrapper->publishTweet($tweet);
+
+        $this->symfonyStyle->success(sprintf(
+            'Tweet "%s" was succesfully published.',
+            $tweet
+        ));
     }
 
     /**
@@ -68,7 +74,7 @@ final class TweetPublisher
      */
     private function excludeAlreadyPublishedTweets(array $allPostTweets, array $allPublishedTweets): array
     {
-        return array_diff_assoc($allPostTweets, $allPublishedTweets);
+        return array_diff($allPostTweets, $allPublishedTweets);
     }
 
     /**
