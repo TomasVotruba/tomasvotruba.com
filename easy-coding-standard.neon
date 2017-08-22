@@ -1,0 +1,27 @@
+includes:
+    - vendor/symplify/easy-coding-standard/config/psr2-checkers.neon
+    - vendor/symplify/easy-coding-standard/config/php70-checkers.neon
+    - vendor/symplify/easy-coding-standard/config/php71-checkers.neon
+    - vendor/symplify/easy-coding-standard/config/common.neon
+    - vendor/symplify/easy-coding-standard/config/spaces.neon
+    - vendor/symplify/easy-coding-standard/config/symplify-checkers.neon
+
+checkers:
+    SlevomatCodingStandard\Sniffs\Namespaces\ReferenceUsedNamesOnlySniff:
+        allowPartialUses: false
+    - SlevomatCodingStandard\Sniffs\ControlStructures\AssignmentInConditionSniff
+    SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
+        enableEachParameterAndReturnInspection: true
+
+    # Complexity limits
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff:
+        absoluteLineLimit: 120
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff:
+        absoluteComplexity: 3
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\NestingLevelSniff:
+        absoluteNestingLevel: 2
+
+parameters:
+    exclude_checkers:
+        # buggy, fix first
+        - Symplify\CodingStandard\Fixer\ArrayNotation\StandaloneLineInMultilineArrayFixer

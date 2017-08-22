@@ -44,7 +44,7 @@ Do you need your liver when you die? Somebody else might does, but it depends on
 - In some countries you are just dead.
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/dying-doctrine/organ-donation.jpg" class="thumbnail">
+    <img src="/../../../../assets/images/posts/2017/dying-doctrine/organ-donation.jpg" class="img-thumbnail">
 </div>
 
 Of course you can write an extra card saying "Take my organs when I die", but who will actually do it?

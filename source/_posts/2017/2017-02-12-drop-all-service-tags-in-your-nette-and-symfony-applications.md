@@ -159,7 +159,7 @@ This is what I did, before I used Decorator and before I dropped tags from my co
 
 Symfony [has over 40 tags](http://symfony.com/doc/current/reference/dic_tags.html) that are coupled to many internal parts. This is barely half of it:
 
-<img src="/assets/images/posts/2017/decorator/symfony-tags-half.png" class="thumbnail" alt="Tag list">
+<img src="/assets/images/posts/2017/decorator/symfony-tags-half.png" class="img-thumbnail" alt="Tag list">
 
 If we use the same setup as we used in Nette above, in Symfony it would look like this:
 

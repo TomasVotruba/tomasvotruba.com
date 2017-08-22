@@ -46,7 +46,7 @@ layout: default
 If you use [smart Gulp script](/blog/2017/02/20/statie-how-to-run-it-locally#minitip-use-gulp-work-for-you), you can already check the page at [localhost:8000/contact](http://localhost:8000/contact).
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/statie-2/statie-contact.png" class="thumbnail">
+    <img src="/../../../../assets/images/posts/2017/statie-2/statie-contact.png" class="img-thumbnail">
 </div>
 
 
@@ -191,7 +191,7 @@ contactMethods:
 Save file and [look on the contact page](http://localhost:8000/contact).
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/statie-2/statie-contact.png" class="thumbnail">
+    <img src="/../../../../assets/images/posts/2017/statie-2/statie-contact.png" class="img-thumbnail">
 </div>
 
 
@@ -235,7 +235,7 @@ And that's it!
 Save file, [look on the contact page](http://localhost:8000/contact) and it still works!
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/statie-2/statie-contact.png" class="thumbnail">
+    <img src="/../../../../assets/images/posts/2017/statie-2/statie-contact.png" class="img-thumbnail">
 </div>
 
 

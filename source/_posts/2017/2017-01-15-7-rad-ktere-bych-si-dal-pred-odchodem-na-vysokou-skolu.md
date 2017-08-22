@@ -56,7 +56,7 @@ Zbytečně.
 
 Je to podobně jako s prací:
   
-<img src="/assets/images/posts/2017/university/procrastination.png" class="thumbnail">
+<img src="/assets/images/posts/2017/university/procrastination.png" class="img-thumbnail">
 
 Na to navazuje...
  

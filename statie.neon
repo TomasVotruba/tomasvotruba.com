@@ -1,5 +1,6 @@
 includes:
     - source/_data/references.neon
+    - src/TweetPublisher/config/config.neon
 
 parameters:
     # global templates variables

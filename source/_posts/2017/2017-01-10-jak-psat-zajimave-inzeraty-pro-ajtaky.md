@@ -89,7 +89,7 @@ B. Junior může být **19letý borec** před výškou, který říká, že ješ
 
 A teď si vemzměte, že do inzerátu napíšte *Senior*. Který z nich se vám přihlásí? Lidé se podceňují a o programátorech to platí desetinásob. Myslete na to.
 
-<img src="/assets/images/posts/2017/job-offers/attitude.jpg" class="thumbnail" alt="Attitude for skill">
+<img src="/assets/images/posts/2017/job-offers/attitude.jpg" class="img-thumbnail" alt="Attitude for skill">
 
 Zmínil jsem všechno, co jsem chtěl, tak se teď pojďme podívat na konkrétní inzeráty.
 
@@ -153,7 +153,7 @@ Co je killer? [Jeho zdrojáky jsou open-source](https://github.com/peckadesign/D
 
 A **tohle je 100% výhoda proti všem ostatním inzerátům**:
 
-<img src="/assets/images/posts/2017/job-offers/naucime-te.png" class="thumbnail">
+<img src="/assets/images/posts/2017/job-offers/naucime-te.png" class="img-thumbnail">
 
 
 ### Lidská Síla hledá posilu
@@ -166,7 +166,7 @@ Netušil jsem, že Startupjobs.cz umožňují stylování barev. Divím se, že 
 
 > „Jeden obrázek řekne více než tisíc slov.“ 
 
-<img src="/assets/images/posts/2017/job-offers/php7.png" class="thumbnail" alt="PHP 7.1 when stable">
+<img src="/assets/images/posts/2017/job-offers/php7.png" class="img-thumbnail" alt="PHP 7.1 when stable">
 
 Co jste z něj poznali? Já odhaduju, že:
 
