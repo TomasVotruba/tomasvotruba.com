@@ -7,7 +7,6 @@ perex: '''
     In <em>Symfony 3.1</em> is new <a href="http://symfony.com/doc/current/controller/argument_value_resolver.html">Action Argument Resolving feature</a>,
     so you can <strong>get any service you need</strong>. With a bit of work. Today I will show you how. 
 '''
-lang: "en"
 
 deprecated: true
 deprecated_since: "May 2017"
