@@ -6,14 +6,11 @@
                 <li n:class="logo, isset($id) && $id === index ? active">
                     <a href="/">Tomáš Votruba</a>
                 </li>
-                <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
-                    <a href="/blog/">Blog</a>
+                <li n:class="isset($id) && $id === skills">
+                    <a href="/mentoring-and-lectures/">Learn PHP</a>
                 </li>
-                <li n:class="isset($id) && $id === skills ? active">
-                    <a href="/skoleni/">Školím a mentoruji</a>
-                </li>
-                <li n:class="isset($id) && $id === satisfy ? active">
-                    <a href="/references/">Spokojení klienti</a>
+                <li n:class="isset($id) && $id === about ? active">
+                    <a href="/about/">About</a>
                 </li>
                 <li n:class="isset($id) && $id === contact ? active">
                     <a href="/contact/">Contact</a>
@@ -30,22 +27,22 @@
             <a href="/" n:class="col-3, col-sm-3, isset($id) && $id === index ? active">
                 <em class="fa fa-home"></em>
                 <br>
-                Začni
+                Blog
             </a>
-            <a href="/skoleni/" n:class="col-3, col-sm-3, isset($id) && $id === skills ? active">
+            <a href="/mentoring-and-lectures/" n:class="col-3, col-sm-3, isset($id) && $id === skills ? active">
                 <em class="fa fa-thumbs-up"></em>
                 <br>
-                Školím
+                Lectures
             </a>
-            <a href="/blog/" n:class="col-3, col-sm-3, (isset($id) && $id === blog) || $layout === post ? active">
-                <em class="fa fa-book"></em>
+            <a href="/about/" n:class="col-3, col-sm-3, isset($id) && $id === about ? active">
+                <em class="fa fa-heart-o"></em>
                 <br>
-                Píšu blog
+                About
             </a>
             <a href="/contact/" n:class="col-3, col-sm-3, isset($id) && $id === contact ? active">
                 <em class="fa fa-phone"></em>
                 <br>
-                Contact
+                Contact me
             </a>
         </div>
     </nav>

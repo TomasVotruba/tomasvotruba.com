@@ -1,0 +1,42 @@
+---
+layout: default
+title: "Are You Busy? Read a Post Under 5 mins"
+id: archive
+---
+
+{block content}
+    <div class="container" id="blog">
+        <h1>{$title}</h1>
+
+        <div class="row text-left">
+            <div class="col-md-12">
+                {foreach $posts as $post}
+                    {continueIf $post->getDateInFormat('Y-m-d') > date('Y-m-d') || isset($post['redirect']) || isset($post['deprecated'])}
+
+                    {var $postYear = $post->getDateInFormat('Y')}
+                    {if $postYear != date('Y') && !isset($dateLines[$postYear])}
+                        <div class="yearLine" id="year-{$postYear}">
+                            <br>
+                            <br>
+                            {$postYear}
+                            {var $dateLines[$postYear] = $postYear}
+                        </div>
+                    {/if}
+
+                    <article class="text-left">
+                        <a href="/{$post['relativeUrl']}/">
+                            <h2>{$post['title']}</h2>
+                        </a>
+
+                        {include "postMetadataLine", post => $post}
+                    </article>
+                {/foreach}
+            </div>
+        </div>
+    </div>
+{/block}
+
+
+{block additionalJavascript}
+    <script id="dsq-count-scr" src="https://{$disqus_shortname}.disqus.com/count.js" async defer></script>
+{/block}
