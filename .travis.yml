@@ -14,9 +14,9 @@ script:
     - |
       if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
           vendor/bin/statie push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
+          # tweet new posts, if any
+          bin/tweet-new-posts
       fi
-    # tweet new posts, if any
-    - bin/tweet-new-posts
 
 notifications:
     email: never
