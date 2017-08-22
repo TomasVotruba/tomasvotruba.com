@@ -54,7 +54,9 @@ final class TweetPublisher
 
         $tweetsToPublish = $this->excludeAlreadyPublishedTweets($allPostTweets, $allPublishedTweets);
         if (! count($tweetsToPublish)) {
-            $this->symfonyStyle->warning('There is no new tweet to publish. Add a new one to one of your post under "tweet:" option.');
+            $this->symfonyStyle->warning(
+                'There is no new tweet to publish. Add a new one to one of your post under "tweet:" option.'
+            );
             return;
         }
 
