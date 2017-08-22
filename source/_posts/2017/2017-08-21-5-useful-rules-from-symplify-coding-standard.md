@@ -22,20 +22,31 @@ The simplest would be...
 
 
 ```php
-use PHPUnit\Framework\TestCase;
-
-class SomeTest extends TestCase
+class SomeClass
 {
+    /**
+     * @var string[]
+     */
+    public $apples;
+    
+    public function run()
+    {
+        foreach ($this->apples as $mac) {
+            // ...
+        }
+    }
 }
 ```
 
 <em class="fa fa-lg fa-check text-success"></em>
 
 ```php
-use PHPUnit\Framework\TestCase;
-
-final class SomeTest extends TestCase
+class SomeClass
 {
+    /**
+     * @var string[]
+     */
+    public $apples = [];
 }
 ```
 
