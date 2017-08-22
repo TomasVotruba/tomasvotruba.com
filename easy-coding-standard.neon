@@ -11,10 +11,7 @@ checkers:
         allowPartialUses: false
     - SlevomatCodingStandard\Sniffs\ControlStructures\AssignmentInConditionSniff
     SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
-        usefulAnnotations:
-            - @dataProvider
         enableEachParameterAndReturnInspection: true
-    - SlevomatCodingStandard\Sniffs\Exceptions\ReferenceThrowableOnlySniff
 
     # Complexity limits
     PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff:
