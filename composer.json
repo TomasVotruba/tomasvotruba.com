@@ -14,6 +14,7 @@
         }
     },
     "require-dev": {
-        "symplify/easy-coding-standard": "^2.2"
+        "symplify/easy-coding-standard": "^2.2",
+        "phpstan/phpstan": "^0.8.3"
     }
 }

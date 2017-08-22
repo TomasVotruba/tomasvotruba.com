@@ -2,6 +2,7 @@
 
 namespace TomasVotruba\Website\TweetPublisher;
 
+use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
 use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
 
@@ -25,6 +26,11 @@ final class TweetPublisher
      * @var TwitterApiWrapper
      */
     private $twitterApiWrapper;
+
+    /**
+     * @var SymfonyStyle
+     */
+    private $symfonyStyle;
 
     public function __construct(
         int $minimalGapInDays,

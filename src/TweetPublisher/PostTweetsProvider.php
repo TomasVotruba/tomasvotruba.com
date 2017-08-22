@@ -3,7 +3,9 @@
 namespace TomasVotruba\Website\TweetPublisher;
 
 use Nette\Utils\Finder;
+use SplFileInfo;
 use Symplify\Statie\Renderable\Configuration\ConfigurationDecorator;
+use Symplify\Statie\Renderable\File\AbstractFile;
 use Symplify\Statie\Renderable\File\FileFactory;
 use Symplify\Statie\Renderable\File\PostFile;
 use Symplify\Statie\Renderable\Routing\RouteFileDecorator;
@@ -85,7 +87,7 @@ final class PostTweetsProvider
     }
 
     /**
-     * @return PostFile[]
+     * @return PostFile[]|AbstractFile[]
      */
     private function getPosts(): array
     {
@@ -93,7 +95,7 @@ final class PostTweetsProvider
     }
 
     /**
-     * @return PostFile[]
+     * @return PostFile[]|AbstractFile[]
      */
     private function getPostsWithConfigurationFromSource(string $postSource): array
     {
@@ -106,19 +108,14 @@ final class PostTweetsProvider
     }
 
     /**
-     * @return string[]
+     * @return SplFileInfo[]
      */
     private function findMdFilesInDirectory(string $postSource): array
     {
         /** @var Finder $finder */
         $finder = Finder::findFiles('*.md')->from($postSource);
 
-        $files = [];
-        foreach ($finder as $key => $file) {
-            $files[$key] = $file;
-        }
-
-        return $files;
+        return iterator_to_array($finder->getIterator());
     }
 
     private function ensureTweetFitsAllowedLength(string $tweet, PostFile $postFile): void
