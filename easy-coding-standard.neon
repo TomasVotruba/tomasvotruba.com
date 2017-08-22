@@ -20,9 +20,9 @@ checkers:
     PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff:
         absoluteLineLimit: 120
     PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff:
-        absoluteComplexity: 10
+        absoluteComplexity: 3
     PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\NestingLevelSniff:
-        absoluteNestingLevel: 4
+        absoluteNestingLevel: 2
 
 parameters:
     exclude_checkers:
