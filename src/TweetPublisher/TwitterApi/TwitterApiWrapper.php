@@ -2,6 +2,7 @@
 
 namespace TomasVotruba\Website\TweetPublisher\TwitterApi;
 
+use Nette\Utils\DateTime;
 use Nette\Utils\Json;
 use TomasVotruba\Website\TweetPublisher\TweetEntityCompleter;
 use TwitterAPIExchange;
@@ -50,26 +51,52 @@ final class TwitterApiWrapper
     }
 
     /**
-     * @return mixed[]
+     * @return string[]
      */
     public function getPublishedTweets(): array
     {
-        $fullTweets =  $this->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, [
+        $rawTweets = $this->getPublishedTweetsRaw();
+
+        $rawTweets = $this->tweetEntityCompleter->completeOriginalUrlsToText($rawTweets);
+
+        $tweets = [];
+        foreach ($rawTweets as $fullTweet) {
+            $tweets[] = $fullTweet['text'];
+        }
+
+        return $tweets;
+    }
+
+    public function publishTweet(string $status): void
+    {
+        $this->callPost(self::UPDATE_URL, [
+            'status' => $status
+        ]);
+    }
+
+    public function getDaysSinceLastTweet(): int
+    {
+        $rawTweets = $this->getPublishedTweetsRaw();
+        $lastRawTweet = array_pop($rawTweets);
+
+        $tweetPublishDate = DateTime::from($lastRawTweet['created_at']);
+        $dateDiff = $tweetPublishDate->diff(new DateTime('today'));
+
+        return (int) $dateDiff->format('%a');
+    }
+
+    /**
+     * @return mixed[]
+     */
+    private function getPublishedTweetsRaw(): array
+    {
+        return $this->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, [
             'count' => 70, // these will be filtered down by following conditions; at least number of posts
             'trim_user' => true, // we don't need any user info
             'exclude_replies' => true, // we don't need replies
             'include_rts' => false, // we don't need retweets
             'since_id' => 824225319879987203 // this started at 2017-08-20, nothing before
         ]);
-
-        $fullTweets = $this->tweetEntityCompleter->completeOriginalUrlsToText($fullTweets);
-
-        $tweets = [];
-        foreach ($fullTweets as $fullTweet) {
-            $tweets[] = $fullTweet['text'];
-        }
-
-        return $tweets;
     }
 
     /**
@@ -89,15 +116,10 @@ final class TwitterApiWrapper
         return Json::decode($jsonResponse, Json::FORCE_ARRAY);
     }
 
-    public function publishTweet(string $status): void
-    {
-        $this->callPost(self::UPDATE_URL, [
-            'status' => $status
-        ]);
-    }
-
     /**
+     * @param mixed[] $data
      * @return mixed[]
+     *
      */
     private function callPost(string $endPoint, array $data): array
     {

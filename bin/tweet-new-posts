@@ -13,12 +13,9 @@ try {
     $containerFactory = new ContainerFactory;
     $container = $containerFactory->createWithConfig(__DIR__ . '/../statie.neon');
 
+    /** @var TweetPublisher $tweetPublisher */
     $tweetPublisher = $container->get(TweetPublisher::class);
-
-    $recentTweets = $tweetPublisher->run();
-    // get all the posts
-    dump($recentTweets);
-    die;
+    $tweetPublisher->run();
 
 } catch (Throwable $throwable) {
     $symfonyStyle->error($throwable->getMessage());

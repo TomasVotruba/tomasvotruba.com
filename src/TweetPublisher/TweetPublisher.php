@@ -2,6 +2,7 @@
 
 namespace TomasVotruba\Website\TweetPublisher;
 
+use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
 use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
 
 /**
@@ -10,6 +11,11 @@ use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
  */
 final class TweetPublisher
 {
+    /**
+     * @var int
+     */
+    private $minimalGapInDays;
+
     /**
      * @var PostTweetsProvider
      */
@@ -20,28 +26,38 @@ final class TweetPublisher
      */
     private $twitterApiWrapper;
 
-    public function __construct(PostTweetsProvider $postTweetsProvider, TwitterApiWrapper $twitterApiWrapper)
-    {
+    public function __construct(
+        int $minimalGapInDays,
+        PostTweetsProvider $postTweetsProvider,
+        TwitterApiWrapper $twitterApiWrapper
+    ) {
+        $this->minimalGapInDays = $minimalGapInDays;
         $this->postTweetsProvider = $postTweetsProvider;
         $this->twitterApiWrapper = $twitterApiWrapper;
+        $this->symfonyStyle = SymfonyStyleFactory::create();
     }
 
     public function run(): void
     {
+        $daysSinceLastTweet = $this->twitterApiWrapper->getDaysSinceLastTweet();
+        if ($daysSinceLastTweet < $this->minimalGapInDays) {
+            $this->symfonyStyle->warning(sprintf(
+                'It is only %d days since last tweet. Minimal gap is %d days, so no tweet until then.',
+                $daysSinceLastTweet,
+                $this->minimalGapInDays
+            ));
+            return;
+        }
+
         $allPostTweets = $this->postTweetsProvider->provide();
         $allPublishedTweets = $this->twitterApiWrapper->getPublishedTweets();
 
         $tweetsToPublish = $this->excludeAlreadyPublishedTweets($allPostTweets, $allPublishedTweets);
-
         if (! count($tweetsToPublish)) {
             return;
         }
 
-        dump($tweetsToPublish);
-        // get date of last tweet, is it allowed to publsieh new one?
-        die;
-
-        // is ready? -> pick the best one...
+        $tweet = $this->pickTweetCandidate($tweetsToPublish);
         $this->publishTweet($tweet);
     }
 
@@ -53,5 +69,13 @@ final class TweetPublisher
     private function excludeAlreadyPublishedTweets(array $allPostTweets, array $allPublishedTweets): array
     {
         return array_diff_assoc($allPostTweets, $allPublishedTweets);
+    }
+
+    /**
+     * @param string[] $tweetsToPublish
+     */
+    private function pickTweetCandidate(array $tweetsToPublish): string
+    {
+        return array_pop($tweetsToPublish); // most recent one?
     }
 }

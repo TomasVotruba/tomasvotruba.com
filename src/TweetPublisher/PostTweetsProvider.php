@@ -75,7 +75,7 @@ final class PostTweetsProvider
             }
 
             $url = $this->getAbsoluteUrlForPost($post);
-            $postTweet = $postConfiguration['tweet'] . ' '. $url . '/';
+            $postTweet = $postConfiguration['tweet'] . ' ' . $url . '/';
             $this->ensureTweetFitsAllowedLength($postConfiguration['tweet'], $post);
 
             $postTweets[] = $postTweet;
