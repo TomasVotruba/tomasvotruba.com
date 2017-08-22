@@ -3,6 +3,11 @@ parameters:
     posts_source: "%kernel.project_dir%/../../../source/_posts"
     minimal_gap_in_days: 7 # how many days to wait before publishing another Tweet
 
+    twitter_consumer_key: "..."
+    twitter_consumer_secret: "..."
+    twitter_oauth_access_token: "..."
+    twitter_oauth_access_token_secret: "..."
+
 services:
     _defaults:
         autowire: true
@@ -19,6 +24,10 @@ services:
     TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper:
         arguments:
             - %twitter_name%
+
+    TomasVotruba\Website\TweetPublisher\TweetPublisher:
+        arguments:
+            - %minimal_gap_in_days%
 
     # Twitter API
     TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiFactory:

@@ -38,7 +38,7 @@ final class TwitterApiFactory
         $this->consumerKey = getenv('TWITTER_CONSUMER_KEY') ?: $consumerKey;
         $this->consumerSecret = getenv('TWITTER_CONSUMER_SECRET')?: $consumerSecret;
         $this->oauthAccessToken = getenv('TWITTER_OAUTH_ACCESS_TOKEN')?: $oauthAccessToken;
-        $this->oauthAccessTokenSecret = getenv('TWITTER_ACCESS_TOKEN_SECRET')?: $oauthAccessTokenSecret;
+        $this->oauthAccessTokenSecret = getenv('TWITTER_OAUTH_ACCESS_TOKEN_SECRET')?: $oauthAccessTokenSecret;
     }
 
     public function create(): TwitterAPIExchange
