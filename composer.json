@@ -6,7 +6,8 @@
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0",
-        "symplify/package-builder": "^2.2"
+        "symplify/package-builder": "^2.2",
+        "google/apiclient": "^2.2"
     },
     "autoload": {
         "psr-4": {

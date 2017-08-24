@@ -1,6 +1,7 @@
 includes:
     - source/_data/references.neon
     - src/TweetPublisher/config/config.neon
+    - src/GoogleAnalyticsPostViews/config/config.neon
 
 parameters:
     # global templates variables

@@ -1,0 +1,40 @@
+#parameters:
+#    google:
+#        client:
+#            id: 808605461775-m19jkn5f93mighmkidq7uq6vm39il86g.apps.googleusercontent.com
+#            secret: dyF2gJC6egoLQrtziYfTSSLo
+#            url: https://www.fbman.cz/analytics/homepage/authorize
+#        api:
+#            key: AIzaSyAsM9-Q-Pmmsud_ZQHXtcTjZsHYomf6np4
+#
+services:
+    _defaults:
+        autowire: true
+
+    # PSR-4 autodiscovery
+    TomasVotruba\Website\GoogleAnalyticsPostViews\:
+        resource: "%kernel.project_dir%/../../../src/GoogleAnalyticsPostViews"
+
+#    App\Analytics\Model\GoogleRepository:
+#        arguments:
+#            - %google%
+#    App\Analytics\Model\GoogleAnalyticsRepository:
+#        arguments:
+#            - %google_analytics%
+#    App\Analytics\Model\GoogleAnalyticsDataRepository:
+#        arguments:
+#            - %google_analytics_data%
+#    App\Analytics\Model\GoogleFacade: ~
+
+    # tutorial: https://bitbucket.org/myps/levnedvere/src/8da712edd40bcf8b1de13feb0838ee73bf42efcc/app/DoorCaseModule/resources/config/components.neon?at=master
+#    -
+#        implement: App\Analytics\IAnalyticsSettingsFactory
+#        parameters: [competitionKey]
+#        arguments: {competitionKey: %competitionKey%}
+
+#    api:
+#        class: App\Analytics\API
+#        setup:
+#            - setConfig(%google%)
+#            - addScope('https://www.googleapis.com/auth/analytics.readonly')
+#            - setClient()

@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use Symplify\Statie\DependencyInjection\ContainerFactory;
+use TomasVotruba\Website\GoogleAnalyticsPostViews\PostViewsFetcher;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$symfonyStyle = SymfonyStyleFactory::create();
+
+try {
+    $containerFactory = new ContainerFactory;
+    $container = $containerFactory->createWithConfig(__DIR__ . '/../statie.neon');
+
+    /** @var PostViewsFetcher $postViewsFetcher */
+    $postViewsFetcher = $container->get(PostViewsFetcher::class);
+    $postViewsFetcher->run();
+
+} catch (Throwable $throwable) {
+    $symfonyStyle->error($throwable->getMessage());
+    exit(1);
+}
