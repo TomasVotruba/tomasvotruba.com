@@ -49,7 +49,7 @@ I will show how to install it, run it and how nice and clear reports it generate
 ### 1. Install Package
 
 ```bash
-composer require symplify/easy-coding-standard
+composer require --dev symplify/easy-coding-standard
 ```
 
 ### 2. Add `easy-coding-standard.neon` and Configure
