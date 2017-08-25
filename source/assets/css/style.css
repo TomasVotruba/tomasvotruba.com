@@ -149,6 +149,15 @@ code {
     font-size: .9em;
 }
 
+#references h2 {
+    margin-bottom: .5em;
+}
+
+#references ul {
+    margin-left: -1em;
+    padding-bottom: .5em;
+}
+
 /* article helpers */
 .bigger {
     font-size: 1.1em;

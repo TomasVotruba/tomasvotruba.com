@@ -9,8 +9,11 @@
                 <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
                     <a href="/blog/">Blog</a>
                 </li>
-                <li n:class="isset($id) && $id === skill ? active">
-                    <a href="/mentoring-and-lectures/">Mentoring & Lectures</a>
+                <li n:class="isset($id) && $id === skills ? active">
+                    <a href="/skoleni/">Školím a mentoruji</a>
+                </li>
+                <li n:class="isset($id) && $id === satisfy ? active">
+                    <a href="/references/">Spokojení klienti</a>
                 </li>
                 <li n:class="isset($id) && $id === contact ? active">
                     <a href="/contact/">Contact</a>
@@ -29,10 +32,10 @@
                 <br>
                 Začni
             </a>
-            <a href="/mentoring-and-lectures/" n:class="col-3, col-sm-3, isset($id) && $id === skill ? active">
+            <a href="/skoleni/" n:class="col-3, col-sm-3, isset($id) && $id === skills ? active">
                 <em class="fa fa-thumbs-up"></em>
                 <br>
-                Mentoring & Lectures
+                Školím
             </a>
             <a href="/blog/" n:class="col-3, col-sm-3, (isset($id) && $id === blog) || $layout === post ? active">
                 <em class="fa fa-book"></em>
