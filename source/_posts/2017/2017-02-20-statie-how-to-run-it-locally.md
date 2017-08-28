@@ -82,7 +82,7 @@ layout: default
 Run in project root in CLI:
 
 ```bash
-vendor/bin/statie generate
+vendor/bin/statie generate source/
 ```
 
 ## 3. See Generate Code
