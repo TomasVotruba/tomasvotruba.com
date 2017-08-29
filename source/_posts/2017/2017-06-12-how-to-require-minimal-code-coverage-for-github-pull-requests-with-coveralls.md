@@ -7,6 +7,7 @@ perex: '''
     <br><br>
     I will show you how to let Travis and Coveralls do this job for you.
 '''
+tweet: "Code Coverage under control with #coveralls #github #php #opensource"
 ---
 
 ## Why Code Coverage Shouldn't be Ignored

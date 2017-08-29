@@ -11,6 +11,7 @@ perex: '''
     <strong>Today we look how to make that happen even for Nette presenters and how to set them free</strong>.
 '''
 related_posts: [28]
+tweet: "How to get #nettefw presenter naked (without parents)? #api #php"
 ---
 
 ## 3 Misconceptions First

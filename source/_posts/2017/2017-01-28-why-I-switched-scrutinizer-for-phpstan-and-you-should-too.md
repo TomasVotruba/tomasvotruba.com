@@ -7,6 +7,7 @@ perex: '''
     <br><br>
     But last week I had an issue with simple <code>composer install</code> command and I have had enough. Then <strong>my attention turned to PHPStan</strong>, soon-to-be its replacement.
 '''
+tweet: "Why I switched from #scrutinizer to #phpstan? #staticAnalysis #php"
 ---
 
 ## What is PHPStan

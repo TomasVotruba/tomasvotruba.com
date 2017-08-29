@@ -8,6 +8,7 @@ perex: '''
     Today I will share <strong>3 main pillars of their architecture</strong>. 
 '''
 related_posts: [46, 47, 37]
+tweet: "How #php #codingstandard Tools Actually Works #tokens"
 ---
 
 Why should these 3 pillars be even important for you? When I understood tools behind them and their basic principals, **I was able to more effective Sniffs and Fixers** (*Checkers* further on) **that were clear to their communities**.
