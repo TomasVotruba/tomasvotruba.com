@@ -48,7 +48,7 @@ From over 50 various metrics I've picked 4 metrics. After reading them, you'll h
 </div>
 
 <div class="col-5">
-    <a href="http://sylius.org/"> 
+    <a href="https://spryker.com/">
         <img src="/assets/images/posts/2017/shopsys-static-anal/spryker.png">
     </a>
 </div>
