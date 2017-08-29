@@ -193,20 +193,18 @@ Let's look at the metrics of methods:
 
 *Shopsys*
 
-- Maximum Method Length: **261 lines**
-- Maximum Method Cyclomatic Complexity: **12**
-
+- Max. Method Length: **261 lines**
+- Max. Method Cyclomatic Complexity: **12**
 
 *Sylius*
 
-- Maximum Method Length: **26 lines**
-- Maximum Method Cyclomatic Complexity: **22**
-
+- Max. Method Length: **26 lines**
+- Max. Method Cyclomatic Complexity: **22**
 
 *Spryker*
 
-- Maximum Method Length: **117 lines**
-- Maximum Method Cyclomatic Complexity: **64**
+- Max. Method Length: **117 lines**
+- Max. Method Cyclomatic Complexity: **64**
 
 
 <br>
