@@ -9,6 +9,7 @@ perex: '''
     You can do 2 things in this situation: nothing like most people do or <strong>take responsibility, deprecate package and inform your users about better alternative</strong>.
 '''
 related_posts: [25, 26]
+tweet: "Deprecating #github #php package? This is safe and kind way to do it"
 ---
 
 ## Why Care About Deprecation as a Maintainer

@@ -7,6 +7,7 @@ perex: '''
     <br><br>
     Prepared configs, reduction of config to few lines, <code>--config</code> option and more.       
 '''
+tweet: "7 New Features in Easy Coding Standard #codingStandard #php #solid"
 related_posts: [37]
 ---
 

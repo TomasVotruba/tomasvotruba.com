@@ -2,9 +2,6 @@
 id: 39
 layout: post
 title: "Symplify packages deprecations brought by Symfony 3.3"
-
-# limit perex to 140 signs!
-
 perex: '''
     <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">Symfony 3.3 brings new Dependency Injection features</a>,
     that were supplemented by few of Symplify packages in Symfony 3.2 and bellow.
@@ -14,6 +11,7 @@ perex: '''
     to use Symfony 3.3 instead</strong>.
 '''
 related_posts: [40]
+tweet: "What was changed and dropped from #symplify thanks to #symfony 3.3?"
 ---
 
 I will provide you some insights behind deprecations first. It was not an instant decision based on few Symfony blog posts,

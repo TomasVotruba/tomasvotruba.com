@@ -36,15 +36,21 @@ From over 50 various metrics I've picked 4 metrics. After reading them, you'll h
 <br>
 
 <div class="col-6 mb-3">
-    <img src="/assets/images/posts/2017/shopsys-static-anal/shopsys.png">
+    <a href="https://www.shopsys-framework.com/">
+        <img src="/assets/images/posts/2017/shopsys-static-anal/shopsys.png">
+    </a>
 </div>
 
 <div class="col-5">
-    <img src="/assets/images/posts/2017/shopsys-static-anal/sylius.png">
+    <a href="http://sylius.org/">
+        <img src="/assets/images/posts/2017/shopsys-static-anal/sylius.png">
+    </a>
 </div>
 
 <div class="col-5">
-    <img src="/assets/images/posts/2017/shopsys-static-anal/spryker.png">
+    <a href="https://spryker.com/">
+        <img src="/assets/images/posts/2017/shopsys-static-anal/spryker.png">
+    </a>
 </div>
 
 
@@ -193,20 +199,18 @@ Let's look at the metrics of methods:
 
 *Shopsys*
 
-- Maximum Method Length: **261 lines**
-- Maximum Method Cyclomatic Complexity: **12**
-
+- Max. Method Length: **261 lines**
+- Max. Method Cyclomatic Complexity: **12**
 
 *Sylius*
 
-- Maximum Method Length: **26 lines**
-- Maximum Method Cyclomatic Complexity: **22**
-
+- Max. Method Length: **26 lines**
+- Max. Method Cyclomatic Complexity: **22**
 
 *Spryker*
 
-- Maximum Method Length: **117 lines**
-- Maximum Method Cyclomatic Complexity: **64**
+- Max. Method Length: **117 lines**
+- Max. Method Cyclomatic Complexity: **64**
 
 
 <br>

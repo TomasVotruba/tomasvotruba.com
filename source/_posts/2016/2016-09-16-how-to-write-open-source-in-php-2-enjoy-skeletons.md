@@ -7,6 +7,7 @@ perex: '''
     What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer all these questions today.</strong> 
 '''
 related_posts: [12, 25, 26, 45]
+tweet: "How to write #openSource in #php 2: Use package skeleton @travisCI"
 ---
 
 Other programmers who want to use your package are usually looking for **long term value**. 

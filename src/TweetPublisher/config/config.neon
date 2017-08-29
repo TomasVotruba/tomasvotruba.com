@@ -1,7 +1,7 @@
 parameters:
     twitter_name: "VotrubaT"
     posts_source: "%kernel.project_dir%/../../../source/_posts"
-    minimal_gap_in_days: 7 # how many days to wait before publishing another Tweet
+    minimal_gap_in_days: 1 # how many days to wait before publishing another Tweet
 
     twitter_consumer_key: "..."
     twitter_consumer_secret: "..."

@@ -8,13 +8,13 @@ Statie is very powerful tool for creating small sites. But you will use just sma
     Today I will show you, <strong>how to put your first post</strong>.
 '''
 related_posts: [29, 32, 33]
+tweet: "#Statie 4: How to create blog #php #static #github"
 ---
 
 
 ## Create a Blog Page
 
 This might be the simplest page to show all your posts:
-
 
 ```html
 <!-- /source/blog.latte -->
@@ -81,7 +81,7 @@ As you can see, post has `layout: post`. It means it's displayed in `_layouts/po
 {/block}
 ```
 
-We have to also modify `default.latte, to include our post layout and replacte `{block content}{/block}` with.
+We have to also modify `default.latte`, to include our post layout and replacte `{block content}{/block}` with.
 
 ```twig
 <!-- /source/_layouts/default.latte -->

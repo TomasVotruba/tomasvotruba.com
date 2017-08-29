@@ -10,6 +10,7 @@ perex: '''
     Can you imagine using them both and actually enjoy it? Today I will show you how.
 '''
 related_posts: [46, 47, 48]
+tweet: "#ecs - tool to use both #phpCodeSniffer and #phpCsFixer in 3 lines #php #codingstandard"
 ---
 
 <div class="text-center">

@@ -12,6 +12,8 @@ updated_message: '''
     Updated with <a href="https://github.com/Symplify/Symplify/pull/197">Statie 2.2</a> and <code>parameters</code> section in <code>statie.neon</code> config for loading global data. 
 '''
 related_posts: [29, 33, 34]
+
+tweet: "#Statie 2: Data sets #php #static #github"
 ---
 
 ## Contact Page with Socials Accounts Data Separated

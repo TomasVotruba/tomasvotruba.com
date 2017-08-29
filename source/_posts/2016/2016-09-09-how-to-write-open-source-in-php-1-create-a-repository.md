@@ -9,6 +9,7 @@ perex: '''
     Ready? Let's start with creating a Github repository!
 '''
 related_posts: [13, 25, 26, 45]
+tweet: "How to write #openSource in #php 1: Create a repository on @Github"
 ---
 
 ## Meet Github, OS's best friend  

@@ -9,6 +9,7 @@ perex: '''
     Today I will show you what code can you drop and how to migrate it.
 '''
 related_posts: [39]
+tweet: "How to refactor to new #symfony 3.3 DI features? #examples #php"
 ---
 
 ## What is new?

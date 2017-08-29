@@ -7,6 +7,7 @@ perex: '''
     checking false notifications, flirting with HR girls and hoping for up votes for my recent skills, <strong>I've decided it is time to let it go</strong>. Why and what I'm gonna do now?
 '''
 related_posts: [23]
+tweet: "Why I deleted my #LinkedIn account? #deepWork"
 ---
 
 *Disclaimer: even if I get few abroad offers, my experience is related to work environment in the Czech Republic.*
