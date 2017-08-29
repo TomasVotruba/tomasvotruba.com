@@ -15,7 +15,6 @@ related_posts: [29, 32, 33]
 
 This might be the simplest page to show all your posts:
 
-
 ```html
 <!-- /source/blog.latte -->
 
@@ -81,7 +80,7 @@ As you can see, post has `layout: post`. It means it's displayed in `_layouts/po
 {/block}
 ```
 
-We have to also modify `default.latte, to include our post layout and replacte `{block content}{/block}` with.
+We have to also modify `default.latte`, to include our post layout and replacte `{block content}{/block}` with.
 
 ```twig
 <!-- /source/_layouts/default.latte -->

@@ -36,15 +36,21 @@ From over 50 various metrics I've picked 4 metrics. After reading them, you'll h
 <br>
 
 <div class="col-6 mb-3">
-    <img src="/assets/images/posts/2017/shopsys-static-anal/shopsys.png">
+    <a href="https://www.shopsys-framework.com/">
+        <img src="/assets/images/posts/2017/shopsys-static-anal/shopsys.png">
+    </a>
 </div>
 
 <div class="col-5">
-    <img src="/assets/images/posts/2017/shopsys-static-anal/sylius.png">
+    <a href="http://sylius.org/">
+        <img src="/assets/images/posts/2017/shopsys-static-anal/sylius.png">
+    </a>
 </div>
 
 <div class="col-5">
-    <img src="/assets/images/posts/2017/shopsys-static-anal/spryker.png">
+    <a href="http://sylius.org/"> 
+        <img src="/assets/images/posts/2017/shopsys-static-anal/spryker.png">
+    </a>
 </div>
 
 
