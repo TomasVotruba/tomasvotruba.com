@@ -1,5 +1,7 @@
 includes:
     - src/TweetPublisher/config/config.neon
+    # enable on localhost only
+    # - src/TweetPublisher/config/config.local.neon
 
 parameters:
     # global templates variables

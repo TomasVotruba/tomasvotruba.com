@@ -16,7 +16,7 @@ final class TweetEntityCompleter
                 continue;
             }
 
-            $tweets[$key]['text'] = $this->replaceShortUrlsWithOriginalOnes($entities, $tweet);
+            $tweets[$key]['text'] = $this->replaceShortUrlsWithOriginalOnes($entities, $tweet['text']);
         }
 
         return $tweets;
@@ -25,12 +25,12 @@ final class TweetEntityCompleter
     /**
      * @param mixed[] $entities
      */
-    private function replaceShortUrlsWithOriginalOnes(array $entities, string $tweet): string
+    private function replaceShortUrlsWithOriginalOnes(array $entities, string $tweetText): string
     {
         foreach ($entities['urls'] as $url) {
-            $tweet['text'] = str_replace($url['url'], $url['expanded_url'], $tweet['text']);
+            $tweetText = str_replace($url['url'], $url['expanded_url'], $tweetText);
         }
 
-        return $tweet;
+        return $tweetText;
     }
 }

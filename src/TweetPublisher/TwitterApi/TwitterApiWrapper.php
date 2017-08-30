@@ -78,7 +78,7 @@ final class TwitterApiWrapper
     public function getDaysSinceLastTweet(): int
     {
         $rawTweets = $this->getPublishedTweetsRaw();
-        $lastRawTweet = array_pop($rawTweets);
+        $lastRawTweet = reset($rawTweets);
 
         $tweetPublishDate = DateTime::from($lastRawTweet['created_at']);
         $dateDiff = $tweetPublishDate->diff(new DateTime('today'));

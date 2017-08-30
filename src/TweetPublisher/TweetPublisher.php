@@ -90,6 +90,7 @@ final class TweetPublisher
      */
     private function pickTweetCandidate(array $tweetsToPublish): string
     {
-        return array_pop($tweetsToPublish); // most recent one?
+        $randomKey = array_rand($tweetsToPublish);
+        return $tweetsToPublish[$randomKey];
     }
 }
