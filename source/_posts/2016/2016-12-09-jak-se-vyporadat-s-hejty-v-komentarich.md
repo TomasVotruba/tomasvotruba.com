@@ -3,6 +3,10 @@ id: 17
 layout: post
 title: "Jak se vypořádat s hejty v komentářích"
 perex: "Na to se mě včera zeptal už asi pátý člověk. Jak se vypořádat s tím, když píšu článek, Tweetuju, prostě dělám bohulibou osvětu dobrým věcem, a někomu se to nelíbí a háže na mě špínu?"
+
+deprecated: true
+deprecated_since: "August 2017"
+deprecated_message: "This post is available only in Czech and whole website was moved to English."
 ---
 
 Tenhle proces jsem se učil 1 rok jako maintainer [ApiGenu](github.com/apigen/apigen), kdy jsem s desítkami lidí vedl online-hate-wars a zjistil, že to nikam nevede. Pak jsem zkoušel jiné cesty. Úspěšnější.

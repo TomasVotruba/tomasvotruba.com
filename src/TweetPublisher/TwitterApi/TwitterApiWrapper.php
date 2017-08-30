@@ -4,6 +4,7 @@ namespace TomasVotruba\Website\TweetPublisher\TwitterApi;
 
 use Nette\Utils\DateTime;
 use Nette\Utils\Json;
+use TomasVotruba\Website\TweetPublisher\Exception\TwitterApi\TwitterApiException;
 use TomasVotruba\Website\TweetPublisher\TweetEntityCompleter;
 use TwitterAPIExchange;
 
@@ -90,13 +91,17 @@ final class TwitterApiWrapper
      */
     private function getPublishedTweetsRaw(): array
     {
-        return $this->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, [
+        $result = $this->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, [
             'count' => 70, // these will be filtered down by following conditions; at least number of posts
             'trim_user' => true, // we don't need any user info
             'exclude_replies' => true, // we don't need replies
             'include_rts' => false, // we don't need retweets
             'since_id' => 824225319879987203 // this started at 2017-08-20, nothing before
         ]);
+
+        $this->ensureNoError($result);
+
+        return $result;
     }
 
     /**
@@ -143,5 +148,19 @@ final class TwitterApiWrapper
     private function decodeJson(string $jsonResponse): array
     {
         return Json::decode($jsonResponse, Json::FORCE_ARRAY);
+    }
+
+    /**
+     * @param mixed[] $result
+     */
+    private function ensureNoError(array $result): void
+    {
+        if (! isset($result['errors'])) {
+            return;
+        }
+
+        $errors = $result['errors'];
+
+        throw new TwitterApiException('Twitter API failed due to: ' . $errors[0]['message']);
     }
 }
