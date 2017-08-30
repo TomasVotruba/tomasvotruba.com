@@ -4,13 +4,16 @@
         <div class="container-fluid">
             <ul>
                 <li n:class="logo, isset($id) && $id === index ? active">
-                    <a href="/">Tomáš Votruba</a>
+                    <a href="/">Tomas Votruba</a>
                 </li>
                 <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
                     <a href="/blog/">Blog</a>
                 </li>
                 <li n:class="isset($id) && $id === skill ? active">
                     <a href="/mentoring-and-lectures/">Mentoring & Lectures</a>
+                </li>
+                <li n:class="isset($id) && $id === about ? active">
+                    <a href="/about/">About</a>
                 </li>
                 <li n:class="isset($id) && $id === contact ? active">
                     <a href="/contact/">Contact</a>
@@ -27,7 +30,7 @@
             <a href="/" n:class="col-3, col-sm-3, isset($id) && $id === index ? active">
                 <em class="fa fa-home"></em>
                 <br>
-                Začni
+                Start
             </a>
             <a href="/mentoring-and-lectures/" n:class="col-3, col-sm-3, isset($id) && $id === skill ? active">
                 <em class="fa fa-thumbs-up"></em>
@@ -37,7 +40,7 @@
             <a href="/blog/" n:class="col-3, col-sm-3, (isset($id) && $id === blog) || $layout === post ? active">
                 <em class="fa fa-book"></em>
                 <br>
-                Píšu blog
+                PHP Blog
             </a>
             <a href="/contact/" n:class="col-3, col-sm-3, isset($id) && $id === contact ? active">
                 <em class="fa fa-phone"></em>

@@ -286,3 +286,14 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon {
         display: none !important;
     }
 }
+
+
+#about-quote {
+    font-size: 1.4em;
+    line-height: 1.6em;
+}
+
+#about-items {
+    font-size: 1.2em;
+    line-height: 1.7em;
+}
