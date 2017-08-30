@@ -1,74 +1,61 @@
 ---
 layout: default
-title: Pomůžu ti objevit tvůj potenciál a rozvinout ho naplno
-id: index
+title: "PHP Lectures, Mentoring, Communities and Posts"
+id: blog
 ---
 
 {block content}
-    <div class="container-fluid">
-        <h1>Pomůžu Ti rozvíjet Tvé silné stránky</h1>
+    <div class="container-fluid" id="blog">
+        <h1>Read about PHP, Symfony & Coding Standards</h1>
 
-        <div class="row">
-            <div class="col-sm-8">
-                <p>
-                    Ahoj, jmenuji se Tomáš Votruba a nejradši dělám 3 věci:
+        {include rssButton, "callToAction" => "Get the RSS feed"}
 
-                    <ul>
-                        <li><a href="/skoleni/"><strong>školím a konzultuji</strong> PHP</a> - Symfony, Nette a Doctrine</li>
-                        <li>o tom, co školím, <strong>píšu <a href="/blog">krátké a stručné {* otestované *}články</a></strong></li>
-                        <li><strong>starám se o <a href="https://pehapkari.cz">Péhápkaře</a></strong> - česko-slovenskou PHP komunitu</a></li>
-                    </ul>
-                </p>
+        <div class="row text-left">
+            <div class="col-md-12">
+                {foreach $posts as $post}
+                    {continueIf $post->getDateInFormat('Y-m-d') > date('Y-m-d') || isset($post['redirect']) || isset($post['deprecated'])}
 
-                <br>
+                    {var $postYear = $post->getDateInFormat('Y')}
+                    {if $postYear != date('Y') && !isset($dateLines[$postYear])}
+                        <div class="yearLine" id="year-{$postYear}">
+                            <br>
+                            <br>
+                            {$postYear}
+                            {var $dateLines[$postYear] = $postYear}
+                        </div>
+                    {/if}
 
-                <p>
-                    Díky <strong>studiu psychologie</strong> na <a href="http://psych.fss.muni.cz/">Masarykově Univerzitě</a> a <strong>koučovacím výcviku</strong> <a href="http://www.gestaltessence.cz/">Gestalt Essence</a> mi jde předávání znalostí stejně dobře jako programování.
-                </p>
+                    <article class="text-left">
+                        <a href="/{$post['relativeUrl']}/">
+                            <h2>{$post['title']|noescape}</h2>
+                        </a>
 
-                <p>A nemyslím si to jen já...</p>
-            </div>
-
-            <div class="col-sm-4 text-center">
-                <img src="/assets/images/talking-square.jpg" class="img-thumbnail">
-            </div>
-        </div>
-
-        <hr>
-
-        <h2>...ale i moji klienti</h2>
-
-        <div class="card">
-            <div class="card-body">
-                <p>„Ještě jednou díky za školení. Velký přínos mělo hlavně v nápadech, jak si práci ulehčit a dělat ji efektivněji. Určitě budeme chtít školení časem zopakovat.“</p>
-
-                <p class="text-right">
-                    <strong>Jakub Horký, vedoucí vývoje</strong> v igloonet, s. r. o.
-                </p>
+                        {include "postMetadataLine", post => $post}
+                    </article>
+                {/foreach}
             </div>
         </div>
 
-        <p class="text-center bigger">
-            A jak se to líbilo dalším klientům?
-        </p>
+        <br>
 
         <p class="text-center">
-            <a href="/references/" class="btn btn-primary bigger">
-                &nbsp;Podívat se na další reference
-                <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-            </a>
+            <strong>Do you want to be first to know about new posts?</strong>
+            {include rssButton, "callToAction" => "Add me to your RSS feed"}
         </p>
     </div>
-
-    <br>
-
-    <hr>
-
-    <br>
-
-    <div class="container-fluid">
-        <h2>Chceš první info schůzku zdarma?</h2>
-
-        <p class="bigger">Dělí tě od ní <a href="/contact">1 klik</a></p>
-    </div>
 {/block}
+
+
+{define rssButton}
+    <div class="text-center">
+        <a href="/rss.xml" class="btn btn-warning">
+            <em class="fa fa-fw fa-rss"></em>
+            {$callToAction}
+        </a>
+
+        <a href="https://twitter.com/votrubaT" class="btn btn-primary ml-3">
+            <em class="fa fa-fw fa-twitter"></em>
+            Get posts on Twitter
+        </a>
+    </div>
+{/define}

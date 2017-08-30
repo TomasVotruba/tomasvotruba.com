@@ -198,14 +198,14 @@ nav ul li {
     position: relative;
 }
 
-nav ul li a {
+nav ul li a, nav #logo {
     padding: .81em 1em;
-}
-
-nav a {
     display: block;
     color: #FFF;
-    padding: .81em 0;
+}
+
+nav #logo {
+    background-color: #64163f;
 }
 
 nav a:hover, nav ul li.active a, nav a.active, nav a:active

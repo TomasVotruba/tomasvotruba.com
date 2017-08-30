@@ -151,7 +151,7 @@ final class TwitterApiWrapper
     }
 
     /**
-     * @param mixed $result
+     * @param mixed[] $result
      */
     private function ensureNoError(array $result): void
     {
