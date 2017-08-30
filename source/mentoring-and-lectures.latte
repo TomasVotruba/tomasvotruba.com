@@ -17,7 +17,7 @@ id: skill
 
         <p><em>"Tomas doesn't speak about theory you can read on the Internet. He passes all experiences from his practise. I recommend him to everyone who's looking for a specialist."</em></p>
         <p class="text-right">
-            Radek Strnad, PHP Teamleader in @ <a href="http://erudio.cz/">Erudio.cz</a> (creators of <a href="http://www.cuni.cz/">Charles University IS</a>)
+            Radek Strnad, PHP Teamleader at <a href="http://erudio.cz/">Erudio.cz</a> (creators of <a href="http://www.cuni.cz/">Charles University IS</a>)
         </p>
 
         {* ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout *}
@@ -73,37 +73,47 @@ id: skill
         <hr>
 
 
-        <h3 class="text-center">From my Clients</h3>
+        <h2 class="text-center">From my Clients</h2>
 
-        <div class="row">
-            <div class="col-4">
-                <img src="/assets/images/references/lekarna-old.jpg">
-            </div>
-            <div class="col-4">
-                <img src="/assets/images/references/mall.png">
-            </div>
-            <div class="col-4">
-                <img src="/assets/images/references/lidskasila.svg">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="/assets/images/references/shopsys.png">
-            </div>
-            <div class="col-4">
-                <img src="/assets/images/references/igloonet.png">
-            </div>
-            <div class="col-4">
-                <img src="/assets/images/references/naucmese.png">
-            </div>
-        </div>
+        <table style="height:100px" class="mt-4 mb-4">
+            <tbody>
+                <tr class="row">
+                    <td class="col-4 align-middle">
+                        <img src="/assets/images/references/lekarna-old.jpg">
+                    </td>
+                    <td class="col-4 align-middle">
+                        <img src="/assets/images/references/mall.png">
+                    </td>
+                    <td class="col-4 align-bottom">
+                        <br>
+                        <img src="/assets/images/references/lidskasila.svg">
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="col-4 align-middle ">
+                        <img src="/assets/images/references/shopsys.png">
+                    </td>
+                    <td class="col-4 align-middle">
+                        <img src="/assets/images/references/igloonet.png">
+                    </td>
+                    <td class="col-4 align-middle">
+                        <img src="/assets/images/references/naucmese.png">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="text-center bigger">
+            Do you want to be next?
+        </p>
+
+        <p class="text-center">
+            <a href="/contact/" class="btn btn-success bigger">
+                Let me know <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+            </a>
+        </p>
 
         <hr>
-
-        {include callToAction}
-
-        <hr>
-
 
         <h2>Open-Source, Static Control, Soft-skills, Git, Unit Testing...</h2>
 
@@ -170,16 +180,3 @@ id: skill
     </div>
 {/block}
 
-
-
-{define callToAction}
-    <p class="text-center bigger">
-        Do you need something similar?
-    </p>
-
-    <p class="text-center">
-        <a href="/contact/" class="btn btn-success bigger">
-            Let me know, I'll help you <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-        </a>
-    </p>
-{/define}
