@@ -6,6 +6,10 @@ perex: '''
     V listopadu 2015 má kromě <a href="https://wiki.php.net/rfc/php7timeline">PHP 7</a> a <a href="https://www.drupal.org/node/2605142">Drupalu 8</a>, vyjít i Symfony 3. <strong>Jaké přináší změny a novinky?</strong>
 '''
 related_posts: [4]
+
+deprecated: true
+deprecated_since: "August 2017"
+deprecated_message: "This post is available only in Czech and whole website was moved to English."
 ---
 
 Symfony už toho umí opravdu hodně. Nová verze klade velký důraz především na [DX (developer experience)](http://symfony.com/blog/making-the-symfony-experience-exceptional). Přináší nám **jednodušší a jednoznačné API**, **lepší decoupling komponent**, **integraci standardů [PSR-3](http://www.php-fig.org/psr/psr-3/) a [PSR-7](http://symfony.com/doc/current/cookbook/psr7.html)**. A spoustu dalších novinek, díky kterým bude psaní aplikací zase o něco zábavnější.

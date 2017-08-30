@@ -3,6 +3,11 @@ id: 3
 layout: post
 title: "Jak si levně udělat živý web, i když nejsi ajťák"
 perex: "Znáš pojmy jako hosting, doména, HTML, CSS, FTP, šablona, Wordpress nebo Github? Máš vyhráno, dál nečti a běž se podívat na svou krásnou online vizitku."
+
+
+deprecated: true
+deprecated_since: "August 2017"
+deprecated_message: "This post is available only in Czech and whole website was moved to English."
 ---
 
 Na [MyEagers konferenci](http://myeagers.beeager.com/) jsem se stal svědkem workshopu [Lekce svádění aneb jak to udělat online tak, aby Tě chtěli](https://www.facebook.com/events/885079758208224/permalink/896505960398937/). **Kopa šikovných hacků, které ti dají světelný náskok na tvé pracovní cestě**.
