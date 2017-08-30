@@ -21,17 +21,17 @@ Therefore, I wanted to make this post different. To have you in control, not the
 
 ### Try It Yourself
 
-I've put all the used data and methodology in an open-source way in a [Github repository](https://github.com/TomasVotruba/shopsys-spryker-and-sylius-analysis), where **you can install it and re-run for yourself**. You'll need to [ask for a access to open-beta of Shopsys Framework](https://www.shopsys-framework.com/#contact) - that's the one extra step. I will update both this post and repository after Shopsys Framework is open-source in late 2017.
+I've put all the used data and methodology in an open-source way in a [Github repository](https://github.com/TomasVotruba/shopsys-spryker-and-sylius-analysis), where **you can install it and re-run on your own**. You'll need to [ask for a access to open-beta of Shopsys Framework](https://www.shopsys-framework.com/#contact) - that's the one extra step. I will update both this post and repository after Shopsys Framework is open-source in late 2017.
 
 
 ### No Black and White
 
 The aim of posts like these is usually just to put together arguments supporting author's opinion, so they are pretty useless for you if you disagree with the author.
 
-To be clear, I work with Shopsys as an open-source consultant. I try to be as strict and honest with them as possible in order to make the product better. And this articleis another example of if.
+To be clear, I work with Shopsys as an open-source consultant. I try to be as strict and honest with them as possible in order to make the product better. And this article is another example of if.
 
 There is no winner and no loser, as you'll see. **Let's dive into the numbers now**.
-From over 50 various metrics I've picked 4 metrics. After reading them, you'll have a bit better picture of the code quality of these projects.
+From over 50 various metrics, I've picked 4 of them. After reading them, you'll have a bit better picture of the code quality of these projects.
 
 <br>
 
@@ -76,7 +76,7 @@ Duplicated code can be a sign of coupled code and flaws in reusability.
 
 ## 3. Cyclomatic Complexity
 
-Cyclomatic Complexity is something like train path with switches.
+Cyclomatic Complexity is something like a train path with switches.
 
 **The number of paths you can take in the method.** 
 
@@ -94,11 +94,11 @@ Cyclomatic Complexity is something like train path with switches.
 </div>
 
 
-Which one would you pick if you'd be a programmer in method you never saw? 
+Which one would you pick if you'd be a programmer, in a method you never saw? 
 
 
 
-Cyclomatic complexity in PHP code would look like for example B like this:
+Cyclomatic complexity in PHP code would, for the example A, look like this:
 
 ```php
 final class ProductController extends Controller
@@ -134,7 +134,7 @@ final class ProductController extends Controller
 
 ...**6 in total**.
 
-And For example B like this:
+And for the example B like this:
 
 ```php
 final class ProductController extends Controller
@@ -157,7 +157,7 @@ final class ProductController extends Controller
 This metric can give you a decent overview of hot spots that might need refactoring.
 **When looking at this score, the lower the number the better**. This applies to areas as readability, maintainability and testability. 
 
-**Consider writing a unit test and you have a function with an cyclomatic complexity of 12**. This means that **if you want 100% code coverage** you need to test every of these 12 paths and end up in pretty messy tests.
+**Consider writing a unit test and having a function with a cyclomatic complexity of 12**. This means that, **if you want 100% code coverage**, you need to test every of these 12 paths and end up in pretty messy tests.
 
 The results are:
 
@@ -181,7 +181,7 @@ The results are:
 
 ### Extreme Is Never Good
 
-However, having **cyclomatic complexity = 1 in combination with low co-location** could lead issue like [*ehnto* describes](https://news.ycombinator.com/item?id=13364649):
+However, having the **cyclomatic complexity = 1 in combination with low co-location** could lead to issues like [*ehnto* describes](https://news.ycombinator.com/item?id=13364649):
 
 *"What you want is never nearby, and thanks to the Facade system used for service location it also isn't always clear which class is actually being used without digging through some configuration files...*
 
@@ -192,7 +192,7 @@ You can [read similar comparison of Code Complexity in Symfony and Laravel](http
 
 ## 4. It's All About Methods
 
-Last metrics focuses on the most used parts of the code - methods. Even if a projects is small, long and complex methods can make it very difficult to use. On the other hand: **huge projects with lines of clean and narrow methods can be fun and easy to work with**.
+Last metrics focuses on the most used parts of the code - methods. Even if a project is small, long and complex methods can make it very difficult to use. On the other hand: **huge projects with lines of clean and narrow methods can be fun and easy to work with**.
 
 Let's look at the metrics of methods:
 
@@ -221,6 +221,6 @@ Finally, I have a question for you. Based just on these numbers and without pers
 
 ## Stay Tuned!
 
-In the follow up post we'll look these project under PHPStan and Easy Coding Standard with PSR2 rulesets.
+In the follow up post, we'll look at these projects under PHPStan and Easy Coding Standard with PSR2 rulesets.
 
 Happy coding!
