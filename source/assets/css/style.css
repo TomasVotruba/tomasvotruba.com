@@ -198,7 +198,7 @@ nav ul li {
     position: relative;
 }
 
-nav ul li a, nav #logo {
+nav ul li a, nav #logo, nav a {
     padding: .81em 1em;
     display: block;
     color: #FFF;
