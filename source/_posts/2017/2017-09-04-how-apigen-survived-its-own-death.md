@@ -134,7 +134,7 @@ Personally, I felt <strike>bit</strike> burned out. What now? Give up the projec
 
 What helped me was a [release-candidate](https://github.com/dbrock/semver-howto#release-candidates-100-foo). An illusion of milestone, that closes huge part of dev work.
 
-I released [ApiGen 5.0-RC1](https://github.com/ApiGen/ApiGen/releases/tag/v5.0.0-RC1) on June 3rd 2017. It **actually brought more attention then I expected**. RC candidates are apparently sign that project is back to life. 
+I released [ApiGen 5.0-RC1](https://github.com/ApiGen/ApiGen/releases/tag/v5.0.0-RC1) on June 3rd 2017. It **actually brought more attention then I expected**. Release Candidates are apparently sign that project is back to life.
 
 
 
