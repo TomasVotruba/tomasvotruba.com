@@ -5,7 +5,7 @@ title: "How ApiGen Survived its Death"
 perex: '''
     <a href="https://github.com/apigen/apigen">ApiGen</a> was broken for a long time. It depended on Reflection package, that was not developed since 2013 and was unable to parse <em>newer</em> code. When I say newer, I mean <em>hot</em> PHP features like `::class` in 5.5. I don't ever talk about 5.6 or 7.
     <br><br>
-    I was frustrated. I spent year on a project that is still not working out of the box. So I took spring off to change it. <strong>My goal was to replace reflection or let the project die in peace</strong>.
+    I got frustrated. I spent year on a project that is still not working out of the box. So I took spring off to change it. <strong>My goal was to replace reflection or let the project die in peace</strong>.
     <br><br>
     This is story about the whole journey of ups and downs.
 '''
@@ -17,7 +17,7 @@ Prepare for deep darkness, (almost) burning out and maybe... making it to the en
 
 ## Step 1: Bump to PHP 7.1
 
-I love PHP 7.1 and I use it everywhere since it's release in 2016. This year [more and more big projects are migrating]([https://www.tomasvotruba.cz/blog/2017/06/05/go-php-71/), yet this is still very low % of all packages.
+I love PHP 7.1 and I use it everywhere since it's release in 2016. This year [more and more big projects are migrating]([https://www.tomasvotruba.cz/blog/2017/06/05/go-php-71/), yet this is still low % of all packages.
 
 So my condition was to [bump minimal requirement to PHP 7.1](https://github.com/ApiGen/ApiGen/issues/779#issuecomment-285960383). Current maintainers agreed, so I had green on. Thank you [Alexander Jank](https://github.com/jankal) for your support in my first PRs to ApiGen this year. 
 
@@ -26,11 +26,12 @@ So my condition was to [bump minimal requirement to PHP 7.1](https://github.com/
 
 ApiGen uses reflection to analyze classes, their methods, interfaces, traits, parent class of the class, their methods etc.
 
-**Pure PHP reflection is very weak for advanced tasks like the last one**, so I'd have to rewrite whole package myself. That's not a way to go, if you need to maintain another huge package and keep your mind well.
+**Pure PHP reflection can be barely used for advanced tasks like the last one**, so I'd have to rewrite whole package myself. That's not a way to go, if you want to have a calm life and normal sleep.
 
 The question was, **where to find the right one?**
 
-I knew few, but not any that would be able to parse PHP 7.1 by itself. I was aware of [nikic/php-parser](https://github.com/nikic/PHP-Parser), that was maintained and future-compatible (few PHP 7.2 features were added recently), but it only parsing tool, not preparing reflection.
+I knew few, but not any that would be able to parse PHP 7.1 by itself. I was aware of [nikic/php-parser](https://github.com/nikic/PHP-Parser), that was maintained and future-compatible (Nikic even added PHP 7.2 features recently). But it was only parsing tool, not smart reflection wrapper.
+
 
 ### Reaching out for Help
 
@@ -43,11 +44,11 @@ I'm bit suspicious to projects that were lastly tagged a half year ago, but I fe
 
 ## Step 3: Replace Reflection
 
-Package was picked, the <strike>fun</strike> hell was about to begin.
+All right, package picked! The <strike>fun</strike> hell was about to begin.
 
 Imagine your whole application uses everywhere a package, that got stuck 4 PHP versions ago.You feel it more and more. Everyday you need to patch it, because there are other packages that are up-to-date. You know, like PHP itself.
 
-My past me in 2014 (when I maintained the ApiGen) knew I had to start [interface everything](https://ocramius.github.io/blog/when-to-declare-classes-final/) luckily for my present me. All reflection classes were interfaced, and there was somewhat of a bridge between TokenReflection (the old package) and ApiGen value objects for Reflections.
+When I maintained the ApiGen in 2014, I felt I should [interface everything](https://ocramius.github.io/blog/when-to-declare-classes-final/) - thank you for that *past me*. All reflection classes were interfaced, and there was somewhat of a bridge between TokenReflection (the old package) and ApiGen value objects for Reflections.
 
 Still, I could not drop all old reflections without having prepared all new ones.
 
@@ -79,7 +80,7 @@ Having this setup ApiGen could:
 - 2. match specific classes and reparse them with BetterReflection
 - 3. output ApiGen Reflection value objects 
 
-In time, I've added more and more BetterReflection transformers, like [ClassReflectionTransformer](https://github.com/ApiGen/ApiGen/blob/a6f56691d87f74a64b31a15b7866d5a839aecb60/packages/Reflection/src/Transformer/BetterReflection/Class_/ClassReflectionTransformer.php#L46) that handles Class only.
+In time, I've added more and more BetterReflection transformers, like [ClassReflectionTransformer](https://github.com/ApiGen/ApiGen/blob/a6f56691d87f74a64b31a15b7866d5a839aecb60/packages/Reflection/src/Transformer/BetterReflection/Class_/ClassReflectionTransformer.php#L46) that handles ClassReflection.
 
 *[10 PRs later...](https://github.com/ApiGen/ApiGen/issues/817)*
 
@@ -123,9 +124,11 @@ This gave me a dopamine shot, yet worsts was about to come.
 
 ## Step 6. Burnout 
 
-It was June 2017. The main issue was solved and there was plenty space to improve ApiGen. **But not motivation**. I didn't use it personally and I knew I was there only to replace reflection. I was looking for co-maintainer and somebody who's using the project to took over me.
+It was June 2017. The main issue was solved and there was plenty space to improve ApiGen. **But not motivation**. I didn't use it personally and I felt I was there mainly to replace reflection, because I was the one was responsible fot its design.
 
-I felt <strike>bit</strike> burned out. What now? Delete project? Go to cinema? Go to a coach? ✓ 
+After I finished that, I was looking for co-maintainer and somebody who's using the project to took over me.
+
+Personally, I felt <strike>bit</strike> burned out. What now? Give up the project? Go to cinema? Go to a coach? ✓
 
 What helped me was an [release-candidate](https://github.com/dbrock/semver-howto#release-candidates-100-foo). An illusion of milestone, that closes huge part of dev work.
 
@@ -158,8 +161,8 @@ Now to the shorter practical part...
 If I should mention 4 most important changes you should now about, it would be: 
 
 - Version 4.0 worked fine with PHP 5.4 code - newer usually crashed it. ApiGen **can deal with PHP 5.5, 5.6, 7.0 and 7.1 code** now. 
-- Min PHP version was bumped **from PHP 5.4 to PHP 7.1**. ApiGen is still able to parse older code. 
-- **TokenReflection refactored to BetterReflection** - huge thanks to James and Marco for fast responses on our issues and pull-requests.
+- Min PHP version bumped **from PHP 5.4 to PHP 7.1**. ApiGen is still able to parse older code.
+- **TokenReflection refactored to BetterReflection** - thanks to James and Marco for fast responses on our issues and pull-requests.
 - Switched to [Symfony 3.3 Dependecy Injection](https://github.com/ApiGen/ApiGen/pull/880) with [time-saving features](https://www.tomasvotruba.cz/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) - thanks [Martin Hujer](https://martinhujer.cz) for the idea.
 
 
