@@ -9,7 +9,7 @@ perex: '''
     <br><br>
     This is story about the whole journey of ups and downs.
 '''
-tweet: "How ApiGen Survived its Death #php #apigen #phpdoc @roave"
+tweet: "How ApiGen Survived its Death #php #apigen #phpdoc #teamwork"
 ---
 
 Prepare for deep darkness, (almost) burning out and... team work that helped me to make it to the end.
