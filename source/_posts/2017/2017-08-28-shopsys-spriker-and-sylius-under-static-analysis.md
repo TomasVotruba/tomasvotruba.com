@@ -1,5 +1,5 @@
 ---
-id: 50
+id: 52
 layout: post
 title: "Shopsys, Spryker & Sylius under Static Analysis"
 perex: '''

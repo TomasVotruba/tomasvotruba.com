@@ -1,5 +1,5 @@
 ---
-id: 50
+id: 51
 layout: post
 title: "5 Useful Rules From Symplify Coding Standard"
 perex: '''
