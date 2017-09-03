@@ -12,7 +12,9 @@ perex: '''
 tweet: "How ApiGen Survived its Death #php #apigen #phpdoc @roave"
 ---
 
-Prepare for deep darkness, (almost) burning out and maybe... making it to the end.
+Prepare for deep darkness, (almost) burning out and... team work that helped me to make it to the end.
+
+<img src="/assets/images/posts/2017/apigen-revival/apigen.png" class="img-thumbnail">
 
 
 ## Step 1: Bump to PHP 7.1
