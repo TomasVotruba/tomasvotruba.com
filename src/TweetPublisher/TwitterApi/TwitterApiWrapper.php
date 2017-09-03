@@ -81,7 +81,7 @@ final class TwitterApiWrapper
         $lastRawTweet = reset($rawTweets);
 
         $tweetPublishDate = DateTime::from($lastRawTweet['created_at']);
-        $dateDiff = $tweetPublishDate->diff(new DateTime('today'));
+        $dateDiff = $tweetPublishDate->diff(DateTime::from('today'));
 
         return (int) $dateDiff->format('%a');
     }
