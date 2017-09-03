@@ -95,7 +95,7 @@ There was light in the of the tunnel.
 
 ## Step 4: Is Ship Going Down?
 
-I had dilemma about global constants that BetterReflection doesn't support, yet TokenReflection does. I didn't know what to do with that and what was frozen.
+I had dilemma about global constants that BetterReflection doesn't support, yet TokenReflection does. I didn't know what to do with that and I was stuck.
 
 Then, Jan Tvrdik and I have a chat at one grill party about this. Jan helped me to realize, **that single issue should not stand in a way of saving the project**. I could drop it and if anyone needs it, he or she might implement it. That was a huge step forward for me and the project.
 
