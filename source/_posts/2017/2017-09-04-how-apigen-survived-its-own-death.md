@@ -37,7 +37,7 @@ I knew a few, but not any that would be able to parse PHP 7.1 by itself. I was a
 
 ### Reaching out for Help
 
-In that time, I came across [Projects using the PHP Parser](https://github.com/nikic/PHP-Parser/wiki/Projects-using-the-PHP-Parser) on Wiki of PHP-Parse, I consulted with [Jan Tvrdik](https://github.com/jantvrdik) and [https://twitter.com/omirtes](Ondrej Mirtes). 
+In that time, I came across [Projects using the PHP Parser](https://github.com/nikic/PHP-Parser/wiki/Projects-using-the-PHP-Parser) on Wiki of PHP-Parse, I consulted with [Jan Tvrdik](https://github.com/jantvrdik) and [Ondrej Mirtes](https://twitter.com/omirtes). 
 
 This all [led me to a package](https://github.com/ApiGen/ApiGen/issues/817) called [Roave/BetterReflection](https://github.com/roave/better-reflection) by [James Titcumb](https://www.jamestitcumb.com/) and [Marco Pivetta](https://ocramius.github.io/).
  
