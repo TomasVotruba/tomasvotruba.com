@@ -13,10 +13,6 @@ id: blog
         <div class="row text-left">
             <div class="col-md-12">
                 {foreach $posts as $post}
-                    debug:
-                    {$post->getDateInFormat('Y-m-d')} >
-                    {date('Y-m-d')}
-
                     {continueIf $post->getDate() > (new DateTime) || isset($post['redirect']) || isset($post['deprecated'])}
 
                     {var $postYear = $post->getDateInFormat('Y')}
