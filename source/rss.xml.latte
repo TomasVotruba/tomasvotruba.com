@@ -16,7 +16,7 @@
                 <lastBuildDate>{$post->getDateInFormat('r')}</lastBuildDate>
             {/first}
 
-            {continueIf $post->getDateInFormat('Y-m-d') > date('Y-m-d') || isset($post['redirect']) || isset($post['deprecated'])}
+            {continueIf $post->getDate() > (new DateTime) || isset($post['redirect']) || isset($post['deprecated'])}
 
             <item>
                 <title><![CDATA[ {$post['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"} ]]></title>
