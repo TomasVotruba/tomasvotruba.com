@@ -3,7 +3,7 @@ id: 48
 layout: post
 title: "How to write Open-Source in PHP 3: Deprecating Code"
 perex: '''
-    Humans, world and PHP Frameworks constantly evolve - they code functionality changes. Class or method is renamed, method has 1 new argument or new class is decoupled.   
+    Humans, world and PHP Frameworks constantly evolve - their code functionality changes. Class or method is renamed, method has 1 new argument or new class is decoupled.
     <br><br>
     In Symfony world you probably know about <a href="https://symfony.com/doc/current/contributing/code/bc.html">Backward Compatibility Promise</a>.
     It <strong>prevents from unexpected and frustrating BC breaks</strong> and helps users to upgrade gradually thanks to deprecation messages.
@@ -17,13 +17,13 @@ This technique is quite rare to see (apart PHP frameworks). It's very simple to 
 
 ## Why Write Deprecation Messages?
 
-## If you don't
+### If you DON'T
 
-- people will have to find themselves in commits - from programmer to detective
-- you'll find issues like "autowire() method missing - what should I do?" on Github
+- people will have to find deprecations themselves in the commits - **from programmer to detective**
+- you'll **find issues** like "autowire() method missing - what should I do?" at your package on Github
 - you'll have to remember, when you upgrade some project using your package few months later    
 
-## If you do
+### If you DO
 
 - people will like you 
 - you'll be able to do more BC breaks in your code, because people will know they're taken care off 
@@ -120,9 +120,7 @@ class Html
 }
 ```
 
-This is the least you can do. 
-
-But you could do better, right?
+This is the least you can do. But you could do better, right?
 
 ```php
 /**
@@ -131,9 +129,7 @@ But you could do better, right?
 public function add(...)
 ```
 
-Hm. I should probably delete all those methods calls in my code and hope it still works...
-
-...or maybe there is solution to my pain:
+Should I delete all those methods calls in my code?
 
 ```php
 /**
@@ -143,23 +139,15 @@ public function add(...)
 ```
 
 
-**Nice!** Even I can understand this now and I'm very poor English.
+**A-ha, that's better!**
 
+<br>
 
-
-### I Have 1 Question for you
-
-**What happens when programmer runs `$html->add(...)` method with your code?**
+I Have 1 Question for you: **What happens when programmer runs `$html->add(...)` method now?**
 
 ...
 
-Well, exactly... Nothing. It will work and he or she won't even know that there is some deprecation going.
-
-
-*Thanks Captain Obvious.*
-
-
-That's because annotation have no influence on code run.
+Well, exactly... **nothing**. **Annotations have no influence on code run**, so it will work and programmer won't notice anything.
 
 <br>
 
@@ -171,7 +159,7 @@ Luckily, there is option that **will actually inform about the deprecation**.
 
 A [`trigger_error()`](http://php.net/manual/en/function.trigger-error.php) is native PHP function, that can inform user about changes in the code. 
 
-With 2nd argument is level of these messages - there is special constant `E_USER_DEPRECATED` destined for this case.
+With the 2nd argument is level of these messages - there is special constant `E_USER_DEPRECATED` destined for this case.
 
 ```php
 namespace Nette\Utils;
@@ -197,9 +185,8 @@ class Html
 You can [see it used in similar way](https://github.com/nette/utils/blob/f1584033b5af945b470533b466b81a789d532034/src/Utils/Html.php#L362) in the original code. 
 
 
-### I Have 1 Question for you
 
-**What happens when programmer runs `$html->add(...)` method with your code?** 
+**What happens when programmer runs `$html->add(...)` method with this type of deprecation?**
 
 2 things:
 
@@ -219,7 +206,7 @@ error_reporting(~E_USER_DEPRECATED);
 
 I said...
 
-> It's very simple to add to your open-source code workflow...
+*It's very simple to add to your open-source code workflow...*
 
 ...and this is it!
 
