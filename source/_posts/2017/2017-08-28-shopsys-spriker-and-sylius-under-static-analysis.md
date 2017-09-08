@@ -37,6 +37,8 @@ From over 50 various metrics, I've picked 4 of them. After reading them, you'll 
 
 We are going to analyze 3 e-commerce projects build on Symfony components:
 
+<br>
+
 <div class="col-6 mb-3">
     <a href="https://www.shopsys-framework.com/">
         <img src="/assets/images/posts/2017/shopsys-static-anal/shopsys.png">
