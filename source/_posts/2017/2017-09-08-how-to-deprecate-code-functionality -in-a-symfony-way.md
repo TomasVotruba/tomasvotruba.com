@@ -1,102 +1,316 @@
 ---
 id: 48
 layout: post
-title: "How to Deprecate Code Functionality in a Symfony Way"
+title: "How to write Open-Source in PHP 3: Deprecating Code"
 perex: '''
-    When you develop open-source package, you evolve, the code evolves.
-      You need to use new class, or remove parameter, and you stick to semver.
-      <br><br>
-      I will show you how to make such changes safely with gradual deprecation and major version bumps.
+    Humans, world and PHP Frameworks constantly evolve - they code functionality changes. Class or method is renamed, method has 1 new argument or new class is decoupled.   
+    <br><br>
+    In Symfony world you probably know about <a href="https://symfony.com/doc/current/contributing/code/bc.html">Backward Compatibility Promise</a>.
+    It <strong>prevents from unexpected and frustrating BC breaks</strong> and helps users to upgrade gradually thanks to deprecation messages.
+    <br><br>
+    In this post I will show you <strong>how to work with deprecation messages</strong>.
 '''
-related_posts: [46, 47, 37]
 ---
 
-
-I learned a lot about deprecations from 
-- bc promise: https://symfony.com/doc/current/contributing/code/bc.html
-- 3.4 => 4.0 remove code
-- and reading Symfony code.
+This technique is quite rare to see (apart PHP frameworks). It's very simple to add to your open-source code workflow though - let me convince you.
 
 
-You can see it here...
+## Why Write Deprecation Messages?
+
+## If you don't
+
+- people will have to find themselves in commits - from programmer to detective
+- you'll find issues like "autowire() method missing - what should I do?" on Github
+- you'll have to remember, when you upgrade some project using your package few months later    
+
+## If you do
+
+- people will like you 
+- you'll be able to do more BC breaks in your code, because people will know they're taken care off 
+- **upgrade of your package will be much easier**
+- **machine-readable messages will allow automate upgrades**
 
 
-## Prepare Deprecation Trigger in the Code
+To explain last point a bit more: if you write your message in a way, that some parser would be able to understand it, **it would be able to refactor other code accordingly**.
+
+1. Read 
+
+    ```bash
+    SomeClass::oldMethod => SomeClass::newMethod
+    ```
+
+2. Run
+
+    ```bash
+    bin/refactor app src
+    ```
+
+3. Enjoy new code! 
 
 
-```php
-public function getName()
-{
-}
-```
-
-into
-
-```php
-public function getFullName()
-{
-}
-
-public function getFirstName()
-{
-}
-
-public function getSurname()
-{,
-}
-```
+That was the future, now back to the present.
 
 
-```php
-public function getName()
-{
-    @trigger_error('Error message', E_USER_DEPRECATED);
-    return $this->getFullName();
-}
+## Today's topic: Changed Method Name 
 
-```
+Let's take real example from real code - a class from [`Nette\Utils` 2.4](https://doc.nette.org/en/2.4/html-elements#toc-elements-content).
 
+What we need to know?
 
-Notice `@`.
-
-It's because we don't want to code show errors just yet. The right time is last version before major version bump. In Symfony case, `@` is used in version 3.1, 3.2 and 3.3. 
-Version 3.4 will report these errors right away without supression `@`.
-
-
-
-...
-
-
-## 3 Most Popular Deprecations
-
-
-### 1. Deprecate Class
-
-...
-
-### 2. Deprecate Interface
-
-...
-
-### 3. Deprecate Method argument
-
-...
-
-
-## Write Descriptive Messages
-
-"This class is deprecated."
-
-Ehm, what should do with that?
-
-Don't make the programmer think, make it easier for him.
+- **a method name has changed**
+- from "add" to "addHtml"
+- on `Nette\Utils\Html` object  
  
-  
-"This class is deprecated. Use ThisClass"
+ 
+**Before** this change you used:
 
-"This class is deprecated. Use @see ThisClass".
+```php
+$html = Html::el('div');
+$html->add('<strong>I am brand new!</strong>');
+```
+ 
+And **after** this change you will use:
 
-link in PHPStorm... (gif)
+```php
+$html = Html::el('div');
+$html->addHtml('<strong>I am brand new!</strong>');
+```
 
 
+This is the snippet from the `Nette\Util\Html` class we are interested in: 
+
+
+```php
+namespace Nette\Utils;
+
+class Html
+{
+    public function add(...)
+    {
+        // ...
+    }
+}
+```
+
+So how to inform all ends users about this?
+
+You can choose from **2 ways to write deprecations messages**, based on your preference.
+ 
+
+### 1. A `@deprecate` annotation 
+
+
+```php
+namespace Nette\Utils;
+
+class Html
+{
+    /**
+     * @deprecated
+     */
+    public function add(...)
+    {
+        $this->addHtml(...);
+    }
+    
+    public function addHtml(...)
+    {
+        // ...
+    }
+}
+```
+
+This is the least you can do. 
+
+But you could do better, right?
+
+```php
+/**
+ * @deprecated Method add() is deprecated.
+ */
+public function add(...)
+```
+
+Hm. I should probably delete all those methods calls in my code and hope it still works...
+
+...or maybe there is solution to my pain:
+
+```php
+/**
+ * @deprecated Method add() is deprecated, use addHtml() instead.
+ */
+public function add(...)
+```
+
+
+**Nice!** Even I can understand this now and I'm very poor English.
+
+
+
+### I Have 1 Question for you
+
+**What happens when programmer runs `$html->add(...)` method with your code?**
+
+...
+
+Well, exactly... Nothing. It will work and he or she won't even know that there is some deprecation going.
+
+
+*Thanks Captain Obvious.*
+
+
+That's because annotation have no influence on code run.
+
+<br>
+
+Luckily, there is option that **will actually inform about the deprecation**.
+
+
+
+### 2. A `trigger_error()`   
+
+A [`trigger_error()`](http://php.net/manual/en/function.trigger-error.php) is native PHP function, that can inform user about changes in the code. 
+
+With 2nd argument is level of these messages - there is special constant `E_USER_DEPRECATED` destined for this case.
+
+```php
+namespace Nette\Utils;
+
+class Html
+{
+    public function add(...)
+    {
+        # we already know how to write useful mesagges
+        trigger_error('Method add() is deprecated, use addHtml() instead.', E_USER_DEPRECATED);
+        
+        $this->addHtml(...);
+    })
+    
+    public function addHtml(...)
+    {
+        // ...
+    }
+}
+```
+
+
+You can [see it used in similar way](https://github.com/nette/utils/blob/f1584033b5af945b470533b466b81a789d532034/src/Utils/Html.php#L362) in the original code. 
+
+
+### I Have 1 Question for you
+
+**What happens when programmer runs `$html->add(...)` method with your code?** 
+
+2 things:
+
+- The code will run
+- **The programmer will be informed**
+
+
+In case he or she is not ready for upgrade, it can be disabled in application `bootstrap` file:
+
+```php
+error_reporting(~E_USER_DEPRECATED);
+```
+
+[Source](https://phpfashion.com/jak-spravne-updatovat-nette) (Czech only)
+
+
+
+I said...
+
+> It's very simple to add to your open-source code workflow...
+
+...and this is it!
+
+
+
+## Bonus: Gradual Deprecation
+
+You can see [the same technique in Symfony](https://github.com/symfony/symfony/blob/c9bee848c5e009de190a8cc4ca85948a93ded129/src/Symfony/Component/Config/Definition/ArrayNode.php#L254) with 1 difference: 
+
+```php
+@trigger_error('Method add() is deprecated, use addHtml() instead.', E_USER_DEPRECATED);
+```
+
+Notice `@`!
+
+So the error is there for the user, but it is suppressed? WTF!
+
+
+### Step by Step
+
+It's related to release process. Just imagine this life cycle of `add()` method:
+ 
+- 3.0 - method `add()` was added
+- 3.1 - method `add()` will be replace by `addHtml()`, but it's BC break, so `add()` will be here until 4.0
+- 3.2 - **both methods should work with no error** - `@` sign helps with that
+- 3.3 - **`add()` won't work from next version** (major), so we remove `@` to inform the user
+- 4.0 - only `addHtml()`
+   
+Now in code:
+
+
+**3.0**
+
+```php
+public function add(...)
+{
+}
+```
+
+**3.1**
+
+```php
+public function add(...)
+{
+    @trigger_error('Method add() is deprecated, use addHtml() instead.', E_USER_DEPRECATED);
+    $this->addHtml(...);
+}
+
+public function addHtml(...)
+{
+}
+```
+
+**3.2** (same as 3.1)
+
+```php
+public function add(...)
+{
+    @trigger_error('Method add() is deprecated, use addHtml() instead.', E_USER_DEPRECATED);
+    $this->addHtml(...);
+}
+
+public function addHtml(...)
+{
+}
+```
+
+**3.3**
+
+```php
+public function add(...)
+{
+    trigger_error('Method add() is deprecated, use addHtml() instead.', E_USER_DEPRECATED);
+    $this->addHtml(...);
+}
+
+public function addHtml(...)
+{
+}
+```
+
+**4.0**
+
+```php
+public function addHtml(...)
+{
+}
+```
+
+
+That was [Symfony's Our Backward Compatibility Promise](https://symfony.com/doc/current/contributing/code/bc.html) in a nutshell.
+
+Happy coding!
 
