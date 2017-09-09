@@ -48,7 +48,7 @@ To explain last point a bit more: if you write your message in a way, that some 
 3. Enjoy new code! 
 
 
-That was the future, now back to the present.
+That was [the future](https://github.com/tomasvotruba/Rector), now back to the present.
 
 
 ## Today's topic: Changed Method Name 
