@@ -297,3 +297,8 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon {
     font-size: 1.2em;
     line-height: 1.7em;
 }
+
+#contact .bigger {
+    font-size: 1.2em;
+    line-height: 2.3em;
+}
