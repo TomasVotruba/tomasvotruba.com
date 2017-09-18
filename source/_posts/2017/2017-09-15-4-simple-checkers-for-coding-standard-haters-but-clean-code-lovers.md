@@ -8,6 +8,7 @@ perex: '''
     <br><br>
     Great! This post is for you. There are <a href="/blog/2017/07/31/how-php-coding-standard-tools-actually-work/#write-1-checke-save-hundreds-hours-of-work">other ways to use coding standard</a> and <strong>clean code</strong> is one of them.
 '''
+tweet: "Do you hate Coding Standards, but love #cleancode? Check these 4 helpful rules #php"
 ---
 
 
@@ -16,7 +17,7 @@ There are some checkers in coding standard world, that don't check spaces, tabs,
 
 I use a set of 4 checkers to **check open-source packages to help them keeping their code clean**. 
 
-In Sylius it [removed 500 lines of unused code](https://github.com/Sylius/Sylius/pull/8557) just few days ago.
+In Sylius they [removed 500 lines of unused code](https://github.com/Sylius/Sylius/pull/8557) just few days ago.
 
 Among others it **removed dead constructor dependencies**.
 
