@@ -217,4 +217,3 @@ That was [Symfony's Backward Compatibility Promise](https://symfony.com/doc/curr
 
 
 Happy coding!
-
