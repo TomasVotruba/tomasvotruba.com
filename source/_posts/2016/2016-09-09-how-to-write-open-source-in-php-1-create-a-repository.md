@@ -8,7 +8,7 @@ perex: '''
     can <strong>start your own OS project with zero-knowledge</strong> (OS = open-source).
     Ready? Let's start with creating a Github repository!
 '''
-related_posts: [13, 25, 26, 45]
+related_posts: [13, 25, 26, 45, 54]
 tweet: "How to write #openSource in #php 1: Create a repository on @Github"
 ---
 
