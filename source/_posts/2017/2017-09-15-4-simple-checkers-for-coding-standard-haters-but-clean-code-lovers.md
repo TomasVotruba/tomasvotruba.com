@@ -8,4 +8,4 @@ redirect: true
 ---
 
 <!-- redirect to new page -->
-<meta content="0; url=https://tomasvotruba.cz/blog/2017/09/15/4-simple-checkers-for-coding-standard-haters-but-clean-code-lovers/">
+<meta content="0; url=https://tomasvotruba.cz/blog/2017/09/18/4-simple-checkers-for-coding-standard-haters-but-clean-code-lovers/">
