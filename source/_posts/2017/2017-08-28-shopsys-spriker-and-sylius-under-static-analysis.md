@@ -102,7 +102,7 @@ Which one would you pick if you'd be a programmer, in a method you never saw?
 
 
 
-Cyclomatic complexity in PHP code would, for the example A, look like this:
+Cyclomatic complexity in PHP code would, **for the example B**, look like this:
 
 ```php
 final class ProductController extends Controller
@@ -138,7 +138,7 @@ final class ProductController extends Controller
 
 ...**6 in total**.
 
-And for the example B like this:
+And for **the example A** like this:
 
 ```php
 final class ProductController extends Controller
