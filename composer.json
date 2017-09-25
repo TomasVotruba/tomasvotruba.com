@@ -2,11 +2,11 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.1",
-        "symplify/statie": "^2.2",
+        "symplify/statie": "^2.4",
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0",
-        "symplify/package-builder": "^2.2"
+        "symplify/package-builder": "^2.4"
     },
     "autoload": {
         "psr-4": {
@@ -14,7 +14,7 @@
         }
     },
     "require-dev": {
-        "symplify/easy-coding-standard": "^2.2",
-        "phpstan/phpstan": "^0.8.3"
+        "symplify/easy-coding-standard": "^2.4",
+        "phpstan/phpstan": "^0.8.4"
     }
 }
