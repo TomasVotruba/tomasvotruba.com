@@ -1,5 +1,5 @@
 ---
-id: 48
+id: 55
 layout: post
 title: "4 Simple Checkers for Coding Standard Haters but Clean Code Lovers"
 perex: '''
@@ -9,6 +9,7 @@ perex: '''
     Great! This post is for you. There are <a href="/blog/2017/07/31/how-php-coding-standard-tools-actually-work/#write-1-checke-save-hundreds-hours-of-work">other ways to use coding standard</a> and <strong>clean code</strong> is one of them.
 '''
 tweet: "Do you hate Coding Standards, but love #cleancode? Check these 4 helpful rules #php"
+related_posts: [51, 48]
 ---
 
 

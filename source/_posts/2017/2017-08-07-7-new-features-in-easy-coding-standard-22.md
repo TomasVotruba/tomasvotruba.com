@@ -8,7 +8,7 @@ perex: '''
     Prepared configs, reduction of config to few lines, <code>--config</code> option and more.       
 '''
 tweet: "7 New Features in Easy Coding Standard #codingStandard #php #solid"
-related_posts: [37]
+related_posts: [37, 51]
 ---
 
 Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, ideas and Windows bug fixes while working on [Nette\CodingStandard](https://github.com/nette/coding-standard) package. I'll write "how to" for Nette\CodingStandard later, but today we'll look on **new features it uses from EasyCodingStandard 2.2**. 
