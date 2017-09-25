@@ -137,8 +137,8 @@ final class PostTweetsProvider
         ));
     }
 
-    private function getAbsoluteUrlForPost(PostFile $post): string
+    private function getAbsoluteUrlForPost(PostFile $postFile): string
     {
-        return $this->siteUrl . '/' . $post->getRelativeUrl();
+        return $this->siteUrl . '/' . $postFile->getRelativeUrl();
     }
 }
