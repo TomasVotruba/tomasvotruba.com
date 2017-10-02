@@ -76,7 +76,7 @@
 {block socialTags}
     {* Facebook sharing *}
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{$post['title']}" />
+    <meta property="og:title" content="{$post['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}" />
     <meta property="og:description" content="{$post['perex']|striptags}" />
     <meta property="og:url" content="{$site_url}/{$post['relativeUrl']}" />
     {ifset $post['thumbnail']}
@@ -86,7 +86,7 @@
     {* Twitter sharing *}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@votrubaT">
-    <meta name="twitter:title" content="{$post['title']}" />
+    <meta name="twitter:title" content="{$post['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}" />
     <meta name="twitter:description" content="{$post['perex']|striptags}" />
     {ifset $post['thumbnail']}
         <meta name="twitter:image" content="{$site_url}/assets/images/posts/thumbnail/{$post['thumbnail']}" />
