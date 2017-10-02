@@ -38,7 +38,7 @@ I've updated [the repository on Github](https://github.com/TomasVotruba/shopsys-
 </div>
 
 
-*(Tip: logos lead to projects' lading pages. Be sure to explore.)*
+*(Tip: logos lead to projects' landing pages. Be sure to explore.)*
 
 
 
@@ -224,7 +224,7 @@ As we have seen in [the previous article](/blog/2017/08/28/shopsys-spriker-and-s
 
 <br>
 
-This point of view shows that, on the less strict levels of analysis, **Sylius and Shopsys are ahead of Spryker in terms of PHPStan violations**. During the second level of analysis this changes and number of problems found notably rises, only **Shopsys stands out** with less than a half of the issues of both other frameworks. This trend does not change even while moving tothe higher levels of scrutiny from mr. PHPStan.
+This point of view shows that, on the less strict levels of analysis, **Sylius and Shopsys are ahead of Spryker in terms of PHPStan violations**. During the second level of analysis this changes and number of problems found notably rises, only **Shopsys stands out** with less than a half of the issues of both other frameworks. This trend does not change even while moving to the higher levels of scrutiny from mr. PHPStan.
 
 Shopsys has long way to passing level 7 with 0 errors, but it has still [some time till the release](https://blog.shopsys.com/we-have-started-with-our-regular-releases-public-beta-coming-soon-c1f879657bd4) to improve this.
 
