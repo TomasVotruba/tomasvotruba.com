@@ -1,7 +1,7 @@
 ---
 id: 57
 layout: post
-title: "EasyCodingStandard and PHPStan meets 3 Symfony E-Commerce Projects"
+title: "EasyCodingStandard and PHPStan meet 3 Symfony E-Commerce Projects"
 perex: '''
     [In the last post](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis/), we looked at the static analysis of 3 Symfony E-Commerce projects.
 
@@ -9,10 +9,9 @@ perex: '''
 
     Today, I am going to show you how you can check them with tools that can help you keep your code better on daily basis - EasyCodingStandard and PHPStan.
 '''
-tweet_: "..."
+tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects #numbers #php"
 related_posts: [52]
 ---
-
 
 ## Try It Yourself
 
@@ -37,6 +36,10 @@ I've updated [the repository on Github](https://github.com/TomasVotruba/shopsys-
         <img src="/assets/images/posts/2017/shopsys-static-anal/spryker.png">
     </a>
 </div>
+
+
+*(Tip: logos lead to projects' lading pages. Be sure to explore.)*
+
 
 
 ## Why These Tools?
