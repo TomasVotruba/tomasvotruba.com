@@ -183,7 +183,7 @@ To have an idea about real numbers, **I picked results for lvl 0 and lvl 7**:
 
 As you can see, both **Shopsys and Sylius are doing great**. Sylius is just falling bit behind in higher levels.
 
-As we have seen in [the previous article](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis/), **not all the projects are of the same size**. It might not be fair to Spryker to count only PHPStan violations as its codebase is considerably larger. **If count violations relative to the size of the project** (measured in lines of code) the graph changes significantly:
+As we have seen in [the previous article](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis/), **not all the projects are of the same size**. It might not be fair to Spryker to count only PHPStan violations as its codebase is considerably larger. **If we count violations relative to the size of the project** (measured in lines of code) the graph changes significantly:
 
 <br>
 
