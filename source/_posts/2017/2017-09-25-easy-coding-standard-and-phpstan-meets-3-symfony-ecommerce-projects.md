@@ -56,20 +56,25 @@ To get the idea how it improves your code in practice, just [check this commit](
 **PSR-2 is the most spread coding standard in PHP**, described in [PHP-FIG guide](http://www.php-fig.org/psr/psr-2/). Both PHP_CodeSniffer and PHP-CS-Fixer have a set of ~30 rules, so why not to [combine them](https://github.com/Symplify/EasyCodingStandard/blob/master/config/psr2-checkers.neon) and use them on our projects?
 
 
-**Shopys**
-
-- 0 errors
+<br>
 
 
-**Spryker**
+<table class="table table-bordered table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Shopsys</th>
+            <th>Spryker</th>
+            <th>Sylius</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>0 errors</td>
+        <td>9 723 errors</td>
+        <td>133 errors</td>
+    </tr>
+</table>
 
-- 9723 errors - all fixable
-
- 
-**Sylius**
-
-- 133 errors - all are fixable
-
+<br>
 
 ### What Would Be the Takeaways?
 
@@ -101,22 +106,28 @@ checkers:
     - PhpCsFixer\Fixer\Import\OrderedImportsFixer 
 ```
 
+<br>
+
 And results for our 3 projects?
 
-**Shopsys**
+<br>
 
-- 39 errors - 1 is fixable
+<table class="table table-bordered table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th>Shopsys</th>
+            <th>Spryker</th>
+            <th>Sylius</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>39 errors</td>
+        <td>97 errors</td>
+        <td>7 errors</td>
+    </tr>
+</table>
 
-
-**Spryker**
-
-- 97 errors - 89 are fixable
-
-
-**Sylius**
-
-- 7 errors - 4 are fixable
-
+<br>
 
 
 ## Code Violations with PHPStan
@@ -124,30 +135,91 @@ And results for our 3 projects?
 **There are 8 levels in PHPStan to this day** - from 0 to 7. Level 0 being *the starter* and 7 *the Mission Impossible* for most projects.
 
 If you never used this tools before, **you probably don’t know how strict PHPStan is**.
-Doctrine2 has now level 1 and successfully passes it, thanks to [Majkl578](https://github.com/Majkl578). In order to get the idea of what had to be done, [see the PR](https://github.com/doctrine/doctrine2/pull/6535/files.
+Doctrine2 has now level 1 and successfully passes it, thanks to [Majkl578](https://github.com/Majkl578). In order to get the idea of what had to be done, [see the PR](https://github.com/doctrine/doctrine2/pull/6535/files).
 
 Do you want to add PHPStan to your project? [Read this short intro](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/).
 
 
-@todo image
+<div class="text-center">
+    <img src="/assets/images/posts/2017/shopsys-static-anal-2/phpstan.png" style="max-width:100%" class="img-thumbnail">
+</div>
+
+<br>
 
 To have an idea about real numbers, **I picked results for lvl 0 and lvl 7**:
 
-@todo table
+
+<br>
+
+<table class="table table-bordered table-responsive table-striped">
+    <tr>
+        <thead class="thead-inverse">
+            <th>PHPStan levels \ Projects</th>
+            <th>Shopsys</th>
+            <th>Spryker</th>
+            <th>Sylius</th>
+        </thead>
+    </tr>
+    <tr>
+        <th>0</td>
+        <td>1406 errors</td>
+        <td>7905 errors</td>
+        <td>1404 errors</td>
+    </tr>
+    <tr>
+        <th>7</td>
+        <td>1413 errors</td>
+        <td>12977 errors</td>
+        <td>3715 errors</td>
+    </tr>
+</table>
+
+<br>
+
 
 
 As you can see, both **Shopsys and Sylius are doing great**. Sylius is just falling bit behind in higher levels.
 
 As we have seen in [the previous article](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis/), **not all the projects are of the same size**. It might not be fair to Spryker to count only PHPStan violations as its codebase is considerably larger. **If count violations relative to the size of the project** (measured in lines of code) the graph changes significantly:
 
-@todo another image
+<br>
+
+<div class="text-center">
+    <img src="/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png" style="max-width:100%" class="img-thumbnail">
+</div>
+
+<br>
 
 
 **Results for lvl 0 and lvl 7**:
 
 
-@todo table
+<br>
 
+<table class="table table-bordered table-responsive table-striped">
+    <tr>
+        <thead class="thead-inverse">
+            <th>Relative to LOC</th>
+            <th>Shopsys</th>
+            <th>Spryker</th>
+            <th>Sylius</th>
+        </thead>
+    </tr>
+    <tr>
+        <th>0</td>
+        <td>0.014</td>
+        <td>0.021</td>
+        <td>0.012</td>
+    </tr>
+    <tr>
+        <th>7</td>
+        <td>0.014</td>
+        <td>0.035</td>
+        <td>0.033</td>
+    </tr>
+</table>
+
+<br>
 
 This point of view shows that, on the less strict levels of analysis, **Sylius and Shopsys are ahead of Spryker in terms of PHPStan violations**. During the second level of analysis this changes and number of problems found notably rises, only **Shopsys stands out** with less than a half of the issues of both other frameworks. This trend does not change even while moving tothe higher levels of scrutiny from mr. PHPStan.
 

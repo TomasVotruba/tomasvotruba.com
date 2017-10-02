@@ -48,7 +48,7 @@ ul {
 }
 
 @media (min-width: 768px) {
-    .container {
+    .conta+iner {
         max-width: 100%;
     }
 
