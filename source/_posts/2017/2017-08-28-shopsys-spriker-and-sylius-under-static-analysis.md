@@ -8,6 +8,7 @@ perex: '''
      Lines of code, cyclomatic complexity, method count per class, length of method, number of interfaces relative to classes - these all can be just a superficial number or a <strong>quick measure how well is the project built</strong>. 
 '''
 tweet: "#Shopsys, #Spryker & #Sylius under Static Analysis #symfony #php #ecommerce"
+related_posts: [57]
 ---
  
 
