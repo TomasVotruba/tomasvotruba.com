@@ -7,7 +7,7 @@ perex: '''
 
     **Lines of code, Duplicated code, Cyclomatic complexity or Method length**. These metrics are very rarely used in practise (even though there is a [sniff for that](https://github.com/Symplify/Symplify/blob/bf802422b9528946a8bd7e7f0331d858a9bf5740/easy-coding-standard.neon#L27-L28)).
 
-    Today, I am going to show you how you can check them with tools that can help you keep your code better on daily basis - EasyCodingStandard and PHPStan.
+    Today, I am going to show you how you can check them with tools that can help you keep your code better on daily basis - [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) and [PHPStan](https://github.com/phpstan/phpstan).
 '''
 tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects #numbers #php"
 related_posts: [52]
@@ -165,15 +165,15 @@ To have an idea about real numbers, **I picked results for lvl 0 and lvl 7**:
     </tr>
     <tr>
         <th>0</td>
-        <td>1406 errors</td>
-        <td>7905 errors</td>
-        <td>1404 errors</td>
+        <td>1 406 errors</td>
+        <td>7 905 errors</td>
+        <td>1 404 errors</td>
     </tr>
     <tr>
         <th>7</td>
-        <td>1413 errors</td>
-        <td>12977 errors</td>
-        <td>3715 errors</td>
+        <td>1 413 errors</td>
+        <td>12 977 errors</td>
+        <td>3 715 errors</td>
     </tr>
 </table>
 
