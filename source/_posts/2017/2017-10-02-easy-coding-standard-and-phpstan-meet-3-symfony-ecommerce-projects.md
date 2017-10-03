@@ -85,7 +85,7 @@ If you’re used to PSR2 style, you probably use PHPStorm to check it and **cont
 
 Spryker has [own package just for coding-standard](https://github.com/spryker/code-sniffer) build on PHP_CodeSnifer, but they don't comply with some rules of PHP-CS-Fixer. **This might be issue if you're in the Symfony world** and you use that tool in your projects.
 
-Shopsys might have more errors than Sylius, **but it also has own [coding-standard package](https://github.com/shopsys/coding-standards) build on both tools** - PHP-CS-Fixer and PHP_CodeSniffer. I'd say that's the best solution, because you have **the least responsibility as a contributor**. CI tools will handle the code style for you.
+Shopsys **has its own [coding-standard package](https://github.com/shopsys/coding-standards) build on both tools** - PHP-CS-Fixer and PHP_CodeSniffer - compatble with PSR-2. I'd say that's the best solution, because you have **the least responsibility as a contributor**. CI tools will handle the code style for you.
 
 
 
