@@ -5,19 +5,19 @@ title: "How to Get the Most Valuable Feedback You Can Get"
 perex: '''
     Feedback is one of the best way to improve yourself. To make it really work it have to be able to get to you. "That's wrong" usually doesn't work as the person giving the feedback intended.
     <br><br>
-    If it is honest, understandable, from trustful person, with progressive language and by somebody who knows your history, language and values it can make your mind shine for the brighter future with gratitude attitude.
+    If the feedback is **honest, understandable, from trustful person who knows your history and values** it can make your mind shine for the brighter future with gratitude.
     <br><br>
     How to get such feedback?
 '''
-tweet_todo: "..."
+tweet: "How to Get the Most Valuable Feedback You Can Ever Have? Only from your @futureme #selfdevelopment #feedback"
 ---
 
 
-**We meet with feedback everyday**. In work on how to improve your task, with your spouse on how to be emphatic to her or with your mentoring skills with your students.
+**We meet with feedback everyday**. In work on how to improve your project, with your spouse on how to be emphatic or with your mentoring skills with your students.
 
 Feedback is great! You can improve your weak points and make them stronger.
 
-**The longer you know the person, the better feedback can get** (and give). You know his or her weak points, traumas, know the language they understand, the metaphors and **have a trust bond** - the most important thing when it comes to learning.
+**The longer you know the person, the better feedback can get** (and give). You know his or her weak points, traumas, know the language they understand and - the most important thing when it comes to learning - **have a trust bond**.
 
 
 ## How Do You Know?
@@ -28,14 +28,14 @@ Thing is, we can barely process present moment and reflecting the past isn't muc
  
 And do you *know it* or do you *imagine it*?
 
-How do you know you made a progress?
+How do you *know* you made a progress?
  
-But more important, how can you **really appreciate yourself** for making it throught.
+But more important, how can you **really appreciate yourself** for making it through.
 
 
 ## The One Person
 
-Putting this 2 base stones together, I get the best feedback when:
+Putting these question together, I get the best feedback when:
 
 - I get it from the person, **who knows me the longest**
 - I actually **feel his or her feelings** while giving the feedback
@@ -47,9 +47,11 @@ Sounds like *futuristic empath* skills?
 
 ## Who is it?
 
-You probably know where this is going. Your spouse, your sister or brother or your partners?
+Your spouse? Your sister or brother or your partners?
 
 Almost there...
+
+<br>
 
 Actually everyone can do it themselves. **You can do it right now.**
 
@@ -63,6 +65,7 @@ This is what I do for past 10 years and I'm very happy to share this little hack
 
 **I write every 6 months with letter arrival a 1 year in the future**. If I write today, the letter would arrive October 8th, 2018.
 
+<img src="/assets/images/posts/2017/futureme/past.png" class="img-thumbnail">
  
  
 ## What I write about?
