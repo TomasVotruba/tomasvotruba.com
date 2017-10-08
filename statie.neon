@@ -12,7 +12,6 @@ parameters:
     disqus_shortname: "itsworthsharing"
 
     # Statie settings
-    amp: true
     markdown_headline_anchors: true
     post_route: "blog/:year/:month/:day/:title"
     github_repository_slug: "TomasVotruba/tomasvotruba.cz"
