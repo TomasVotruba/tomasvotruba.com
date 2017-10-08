@@ -63,7 +63,7 @@ Actually everyone can do it themselves. **You can do it right now.**
 
 This is what I do for past 10 years and I'm very happy to share this little hack with you.
 
-**I write every 6 months with letter arrival a 1 year in the future**. If I write today, the letter would arrive October 8th, 2018.
+**I write every 6 months (at least) with letter arrival a 1 year in the future**. If I write today, the letter would arrive October 8th, 2018.
 
 <img src="/assets/images/posts/2017/futureme/past.png" class="img-thumbnail">
  
