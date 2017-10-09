@@ -18,6 +18,11 @@ final class TwitterApiWrapper
     /**
      * @var string
      */
+    private const IMAGE_UPLOAD_URL = 'https://upload.twitter.com/' . self::API_VERSION . '/media/upload.json';
+
+    /**
+     * @var string
+     */
     private const UPDATE_URL = 'https://api.twitter.com/' . self::API_VERSION . '/statuses/update.json';
 
     /**
@@ -52,7 +57,7 @@ final class TwitterApiWrapper
     }
 
     /**
-     * @return string[]
+     * @return string[][]
      */
     public function getPublishedTweets(): array
     {
@@ -62,7 +67,9 @@ final class TwitterApiWrapper
 
         $tweets = [];
         foreach ($rawTweets as $fullTweet) {
-            $tweets[] = $fullTweet['text'];
+            $tweets[] = [
+                'text' => $fullTweet['text']
+            ];
         }
 
         return $tweets;
@@ -72,6 +79,22 @@ final class TwitterApiWrapper
     {
         $this->callPost(self::UPDATE_URL, [
             'status' => $status
+        ]);
+    }
+
+    /**
+     * Ref: https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload and
+     * https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html "media_ids"
+     */
+    public function publishTweetWithImage(string $status, string $imageFile): void
+    {
+        $media = $this->callPost(self::IMAGE_UPLOAD_URL, [
+            'media' => base64_encode(file_get_contents($imageFile)),
+        ]);
+
+        $this->callPost(self::UPDATE_URL, [
+            'status' => $status,
+            'media_ids' => $media['media_id']
         ]);
     }
 

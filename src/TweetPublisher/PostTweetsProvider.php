@@ -3,6 +3,7 @@
 namespace TomasVotruba\Website\TweetPublisher;
 
 use Symplify\Statie\Renderable\File\PostFile;
+use TomasVotruba\Website\TweetPublisher\Exception\TweetImageNotFoundException;
 use TomasVotruba\Website\TweetPublisher\Exception\TweetTooLongException;
 
 final class PostTweetsProvider
@@ -36,7 +37,7 @@ final class PostTweetsProvider
 
     /**
      * @todo Make sure the order is from the newest to the oldest, like Twitter API.
-     * @return string[]
+     * @return string[][]
      */
     public function provide(): array
     {
@@ -47,11 +48,15 @@ final class PostTweetsProvider
                 continue;
             }
 
-            $url = $this->getAbsoluteUrlForPost($post);
-            $postTweet = $postConfiguration['tweet'] . ' ' . $url . '/';
+            $postTweet = $this->appendAbsoluteUrlToTweet($post, $postConfiguration);
             $this->ensureTweetFitsAllowedLength($postConfiguration['tweet'], $post);
 
-            $postTweets[] = $postTweet;
+            $tweetImage = $this->resolveTweetImage($post, $postConfiguration);
+
+            $postTweets[] = [
+                'text' => $postTweet,
+                'image' => $tweetImage
+            ];
         }
 
         return $postTweets;
@@ -76,8 +81,46 @@ final class PostTweetsProvider
         ));
     }
 
+    /**
+     * @param mixed[] $postConfiguration
+     */
+    private function appendAbsoluteUrlToTweet(PostFile $postFile, array $postConfiguration): string
+    {
+        $url = $this->getAbsoluteUrlForPost($postFile);
+
+        return $postConfiguration['tweet'] . ' ' . $url . '/';
+    }
+
     private function getAbsoluteUrlForPost(PostFile $postFile): string
     {
         return $this->siteUrl . '/' . $postFile->getRelativeUrl();
+    }
+
+    /**
+     * @param mixed[] $postConfiguration
+     */
+    private function resolveTweetImage(PostFile $postFile, array $postConfiguration): ?string
+    {
+        if (! isset($postConfiguration['tweet_image'])) {
+            return null;
+        }
+
+        $sourceDirectory = __DIR__ . '/../../source/';
+        $localFilePath = $sourceDirectory . $postConfiguration['tweet_image'];
+
+        $this->ensureTweetImageExists($postFile, $localFilePath);
+
+        return $this->siteUrl . '/' . $postConfiguration['tweet_image'];
+    }
+
+    private function ensureTweetImageExists(PostFile $postFile, string $localFilePath): void
+    {
+        if (! file_exists($localFilePath)) {
+            throw new TweetImageNotFoundException(sprintf(
+                'Tweet image "%s" for "%s" file not found. Check "tweet_image" option.',
+                $localFilePath,
+                realpath($postFile->getFilePath())
+            ));
+        }
     }
 }
