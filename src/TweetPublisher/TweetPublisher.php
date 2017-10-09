@@ -55,10 +55,11 @@ final class TweetPublisher
             return;
         }
 
-        $allPostTweets = $this->postTweetsProvider->provide();
-        $allPublishedTweets = $this->twitterApiWrapper->getPublishedTweets();
+        $tweetsToPublish = $this->excludePublishedTweets(
+            $this->postTweetsProvider->provide(),
+            $this->twitterApiWrapper->getPublishedTweets()
+        );
 
-        $tweetsToPublish = $this->excludeAlreadyPublishedTweets($allPostTweets, $allPublishedTweets);
         if (! count($tweetsToPublish)) {
             $this->symfonyStyle->warning(
                 'There is no new tweet to publish. Add a new one to one of your post under "tweet:" option.'
@@ -67,30 +68,56 @@ final class TweetPublisher
         }
 
         $tweet = $this->pickTweetCandidate($tweetsToPublish);
-        $this->twitterApiWrapper->publishTweet($tweet);
+
+        $this->tweet($tweet);
 
         $this->symfonyStyle->success(sprintf(
             'Tweet "%s" was succesfully published.',
-            $tweet
+            $tweet['text']
         ));
     }
 
     /**
-     * @param string[] $allPostTweets
-     * @param string[] $allPublishedTweets
-     * @return string[]
+     * @param string[][] $allTweets
+     * @param string[][] $publishedTweets
+     * @return string[][]
      */
-    private function excludeAlreadyPublishedTweets(array $allPostTweets, array $allPublishedTweets): array
+    private function excludePublishedTweets(array $allTweets, array $publishedTweets): array
     {
-        return array_diff($allPostTweets, $allPublishedTweets);
+        $unpublishedTweets = [];
+
+        foreach ($allTweets as $tweet) {
+            foreach ($publishedTweets as $publishedTweet) {
+                if ($tweet['text'] === $publishedTweet['text']) {
+                    continue 2;
+                }
+            }
+
+            $unpublishedTweets[] = $tweet;
+        }
+
+        return $unpublishedTweets;
     }
 
     /**
-     * @param string[] $tweetsToPublish
+     * @param string[][] $tweetsToPublish
+     * @return string[]
      */
-    private function pickTweetCandidate(array $tweetsToPublish): string
+    private function pickTweetCandidate(array $tweetsToPublish): array
     {
         $randomKey = array_rand($tweetsToPublish);
         return $tweetsToPublish[$randomKey];
+    }
+
+    /**
+     * @param mixed[] $tweet
+     */
+    private function tweet(array $tweet): void
+    {
+        if ($tweet['image']) {
+            $this->twitterApiWrapper->publishTweetWithImage($tweet['text'], $tweet['image']);
+        } else {
+            $this->twitterApiWrapper->publishTweet($tweet['text']);
+        }
     }
 }

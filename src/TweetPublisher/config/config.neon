@@ -16,9 +16,12 @@ services:
     TomasVotruba\Website\TweetPublisher\:
         resource: "%kernel.project_dir%/../../../src/TweetPublisher"
 
-    TomasVotruba\Website\TweetPublisher\PostTweetsProvider:
+    TomasVotruba\Website\TweetPublisher\PostsProvider:
         arguments:
             - %posts_source%
+
+    TomasVotruba\Website\TweetPublisher\PostTweetsProvider:
+        arguments:
             - %site_url%
 
     TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper:

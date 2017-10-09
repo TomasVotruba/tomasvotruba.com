@@ -6,7 +6,8 @@
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0",
-        "symplify/package-builder": "^2.5"
+        "symplify/package-builder": "^2.5",
+        "ricoa/copywriting-correct": "^0.1.2"
     },
     "autoload": {
         "psr-4": {
@@ -14,7 +15,7 @@
         }
     },
     "require-dev": {
-        "symplify/easy-coding-standard": "^2.4",
-        "phpstan/phpstan": "^0.8.4"
+        "symplify/easy-coding-standard": "^2.5",
+        "phpstan/phpstan": "^0.8"
     }
 }
