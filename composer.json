@@ -6,8 +6,7 @@
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0",
-        "symplify/package-builder": "^2.5",
-        "ricoa/copywriting-correct": "^0.1.2"
+        "symplify/package-builder": "^2.5"
     },
     "autoload": {
         "psr-4": {
