@@ -102,7 +102,9 @@ How many places are there to get in contact with your package? Programmer A adde
 
 To make sure there are no deprecation leaks, put a sign on all sources:
 
-#### Packagist
+<br>
+
+**Packagist**
 
 - Go to your package on Packagist, in my case [symplify/symfony-event-dispatcher](https://packagist.org/packages/symplify/symfony-event-dispatcher)
 - Hit "Abandon" button
@@ -123,7 +125,9 @@ Composer will tell you for every `composer require/update` that includes this pa
 
 <img src="/assets/images/posts/2017/deprecate/composer-info.png" class="img-thumbnail">
 
-#### Github Repository
+<br>
+
+**Github Repository**
 
 The best way to make people know the package is deprecated on Github **is not by a note in `README`**. Nobody reads readme if he doesn't use the package first time. Note in a description is also small to spot.
 
@@ -158,7 +162,9 @@ If this process is too difficult for you, you can [add a "deprecated" note to RE
 
 I've come with this organization a year ago, when me and my friends needed to deprecate more package together. As some of you already figured out, it's a place to put all deprecated packages into.
 
-#### Blog Post(s) about Package
+<br>
+
+**Blog Post(s) about Package**
 
 One the most underestimated places is a blog post. I consider it the most important place for people who don't know the package yet, but might start using it. I'd feel bad if people would start using package **after I deprecated them**, instead of reaching out for the replacement right away.
  

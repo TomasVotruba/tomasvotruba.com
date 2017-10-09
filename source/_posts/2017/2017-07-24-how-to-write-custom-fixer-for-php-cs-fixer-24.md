@@ -9,6 +9,7 @@ perex: '''
 '''
 related_posts: [48, 46, 37]
 tweet: "How to Write Custom Fixer for #phpcsfixer"
+tweet_image: "assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png"
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
@@ -23,15 +24,17 @@ That main difference of PHP-CS-Fixer to PHP_CodeSniffer is that **every Fixer ha
  
 Personally I like PHP-CS-Fixer a bit more, **because of more friendlier API, active community and openness to 3rd party packages**: 
 
- <div>
-    <img src="/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png" class="img-thumbnail">
-    <em><code>composer.json</code> from PHP-CS-Fixer</em> 
- </div>
+<img src="/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png" class="img-thumbnail">
+<p>
+    <em><code>composer.json</code> from PHP-CS-Fixer</em>
+</p>
 
- <div>
-    <img src="/assets/images/posts/2017/php-cs-fixer-intro/code-sniffer-require.png" class="img-thumbnail">
-    <em><code>composer.json</code> from PHP_CodeSniffer</em> 
- </div>
+<br>
+
+<img src="/assets/images/posts/2017/php-cs-fixer-intro/code-sniffer-require.png" class="img-thumbnail">
+<p>
+    <em><code>composer.json</code> from PHP_CodeSniffer</em>
+</p>
 
 <br>
 
