@@ -68,7 +68,7 @@ final class TweetPublisher
 
         $tweet = $this->pickTweetCandidate($tweetsToPublish);
 
-//        $this->twitterApiWrapper->publishTweet($tweet);
+        $this->twitterApiWrapper->publishTweet($tweet);
 
         $this->symfonyStyle->success(sprintf(
             'Tweet "%s" was succesfully published.',
