@@ -1,0 +1,35 @@
+parameters:
+    talks:
+        # todo add more
+        -
+            title: "Jak zdarma hostovat na Githubu jemně dynamické stránky?"
+            year: 2016
+            event_name: "83. PoSobota @ Liberci"
+            event_link: "https://www.facebook.com/events/387267941396841"
+            video_link: "https://www.youtube.com/watch?v=y0mTpH5vtJc"
+            slides_link: "https://drive.google.com/open?id=1nDFqW6QiW56d9q4zSFr0JoVD4_axOMlhjU-6NZrKLhE"
+            lang: cs
+
+        -
+            title: "Jako Vinnetou a Old Shatterhand – refaktoruj nenávist v přátelství"
+            year: 2016
+            event_name: "PHP Live 2016"
+            event_link: "http://www.phplive.cz/"
+            video_link: "https://www.youtube.com/watch?v=D827D5ILfh8"
+            slides_link: "https://www.slideshare.net/phplive/tom-votruba-jako-vinnetou-a-old-shatterhand-refaktoruj-nenvist-v-ptelstv"
+            lang: cs
+        -
+            title: "Sex na jednu noc vs. láska na celý život"
+            year: 2016
+            event_name: "Devel Conferene 2016"
+            event_link: "https://devel.cz/konference/2016"
+            slides_link: "https://www.slideshare.net/TomVotruba/tom-votruba-sex-na-jednu-noc-vs-lska-na-cel-ivot-devel-2016"
+            lang: cs
+        -
+            title: "Jak přežít Symfony 3"
+            year: 2015
+            event_name: "1. Péhápkaři @ LMC"
+            event_link: "https://www.facebook.com/events/1077169292307738"
+            video_link: "https://www.youtube.com/watch?v=N-4HIjWfRQ0"
+            slides_link: "https://www.slideshare.net/pehapkari/tom-votruba-jak-pet-symfony-3-1-sraz-ptel-symfony-v-praze"
+            lang: cs

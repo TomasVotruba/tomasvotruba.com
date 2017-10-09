@@ -1,4 +1,5 @@
 includes:
+    - source/_data/talks.neon
     - src/TweetPublisher/config/config.neon
     # enable on localhost only
     # - src/TweetPublisher/config/config.local.neon
