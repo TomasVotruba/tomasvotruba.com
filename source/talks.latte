@@ -1,0 +1,55 @@
+---
+layout: default
+title: "Dive in Talks"
+id: talks
+---
+
+{block content}
+    <div class="container">
+        <h1>{$title}</h1>
+
+        <table class="table table-bordered table-striped table-responsive">
+            <thead class="thead-inverse">
+                <th>
+                    <em class="fa fa-youtube-play"></em>
+                    &nbsp;
+                    Talk
+                </th>
+                <th class="text-nowrap">
+                    <em class="fa fa-calendar-o"></em>
+                    &nbsp;
+                    Year
+                </th>
+                <th class="text-nowrap">
+                    <em class="fa fa-location-arrow"></em>
+                    &nbsp;
+                    Event
+                </th>
+                <th class="text-nowrap">
+                    <em class="fa fa-slideshare"></em>
+                    &nbsp;
+                    Slides
+                </th>
+            </thead>
+
+            {foreach $talks as $talk}
+                <tr>
+                    <td>
+                        <a n:tag-ifset="$talk['video_link']" href="{$talk['video_link']}">
+                            {$talk['title']}
+                        </a>
+                    </td>
+                    <td>{$talk['year']}</td>
+                    <td>
+                        <a href="{$talk['event_link']}">{$talk['event_name']}</a>
+                    </td>
+                    <td>
+                        {ifset $talk['slides_link']}
+                            <a href="{$talk['slides_link']}">See</a>
+                        {/ifset}
+                    </td>
+                </tr>
+            {/foreach}
+        </table>
+    </div>
+{/block}

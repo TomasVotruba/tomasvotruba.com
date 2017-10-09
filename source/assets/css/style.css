@@ -302,3 +302,20 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon {
     font-size: 1.2em;
     line-height: 2.3em;
 }
+
+.card-normal .card-title {
+    margin-top: 0.3em;
+    margin-bottom: 0.9em;
+}
+
+.card-normal .card-body p, .card-normal .card-body li {
+    font-size: 0.9em;
+}
+
+.card-normal .card-body p {
+    line-height: 1.5em;
+}
+
+.card-normal ul {
+    padding-left: 1em;
+}
