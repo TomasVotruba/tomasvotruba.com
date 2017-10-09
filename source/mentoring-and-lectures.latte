@@ -37,7 +37,7 @@ id: skill
         <hr>
 
         {* ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout *}
-        <div class="card-deck" id="frameworks">
+        <div class="card-deck card-normal">
             <div class="card">
                 <div class="card-header text-center">
                     <img src="/assets/images/skills/nette.png" class="card-img-top col-8 mb-4 mt-4">
@@ -79,7 +79,7 @@ id: skill
                         <li>All arounds <strong>Controllers</strong> - services, <code>_invoke</code></li>
                         <li><strong>Twig</strong> templating system</li>
                         <li><strong>Dependency Injection</strong>, <code>_defaults</code>, <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">PSR-4 service auto-discovery</a> and more</li>
-                        <li>Hooking Events via <strong>EventDispatcher</strong></li>
+                        <li>Hooking Events via <a href="https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/"><strong>EventDispatcher</strong></a></li>
                         <li><strong>Commands</strong> in CLI made easy</li>
                     </ul>
                 </div>
@@ -123,7 +123,7 @@ id: skill
         </table>
 
         <p class="text-center bigger">
-            Do you want to be next?
+            <em>Do you want to be next?</em>
         </p>
 
         <p class="text-center">
@@ -134,64 +134,60 @@ id: skill
 
         <hr>
 
-        <h2>Open-Source, Static Control, Soft-skills, Git, Unit Testing...</h2>
+        <p class="text-center mb-4 mt-4 bigger">
+            I can also help you with...
+        </p>
 
-        <div class="card-deck">
-            <div class="card">
-                <div class="card-body">
-                    <h3>How to write Clean Code and Scaleable Architecture</h3>
-                    <ul>
-                        <li>SOLID principals</li>
-                        <li>How to approach gradualrefactoring</li>
-                        <li>Continuous integration</li>
-                        <li>How Coding Standard Tools Saves time - EasyCodingStandard (PHP_CodeSniffer & PHP-CS-Fixer)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h3>Level up your Career</h3>
-                    <ul>
-                        <li>Where to seek for a job you desire</li>
-                        <li>How to promote yourself</li>
-                        <li>How social networks can help you</li>
-                        <li>How to get money and technologies you want</li>
-                    </ul>
-                </div>
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <em class="fa fa-line-chart"></em>
+                    &nbsp;
+                    How to write Clean Code and Scaleable Architecture
+                </h3>
+                <ul>
+                    <li>How to <strong>refactor legacy code</strong></li>
+                    <li><strong>SOLID principals</strong> and <strong>design patterns</strong> in real life <strong>examples</strong></li>
+                    <li>How to <strong>save time with static analysis</strong>: <a href="https://github.com/Symplify/EasyCodingStandard">EasyCodingStandard</a> and <a href="/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/">PHPStan</a></li>
+                </ul>
             </div>
         </div>
 
-        <div class="card-deck">
-            <div class="card">
-                <div class="card-body">
-                    <h3>Start you Career with Open-Source</h3>
-                    <ul>
-                        <li>Composer useful features you didn't know about</li>
-                        <li>Values of open-source in your education</li>
-                        <li>Package design principles</li>
-                        <li>Why use Standards?</li>
-                        <li>versioning, <a href="/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/">local packages</a></li>
-                        <li><a href="https://github.com/">Github</a> & <a href="https://travis-ci.org/">Travis</a> - best friends</li>
-                    </ul>
-                </div>
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <em class="fa fa-dollar"></em>
+                    &nbsp;
+                    Level up your Career
+                </h3>
+                <ul>
+                    <li>What are the <strong>most effective strategies</strong> to find a job you desire</li>
+                    <li>How to <strong>sell your top skill</strong></li>
+                    <li>How <strong>master negotiation</strong> with your employer</li>
+                </ul>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h3>Git and Testing</h3>
-                    <ul>
-                        <li>Git-flow, <a href="http://nvie.com/posts/a-successful-git-branching-model/">Feature-branching</a> model</li>
-                        <li>Testing with <a href="https://phpunit.de/">PHPUnit</a></li>
-                        <li>When to test your code</li>
-                    </ul>
-                </div>
+        </div>
+
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <em class="fa fa-envelope-open-o"></em>
+                    &nbsp;
+                    Get the best out of Open-Source for your Project
+                </h3>
+                <ul>
+                    <li><a href="https://leanpub.com/principles-of-package-design">Package design principles</a> and <a href="http://phppackagechecklist.com/#1,2,3,4,5,6,7,8,9,10,11,12,13,14">useful PHP standards</a></li>
+                    <li>How to approach versioning, <strong><a href="/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/">local packages</a> and use <a href="/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/">power of monorepo</a></strong></li>
+                    <li><a href="https://travis-ci.org/">Travis</a>, <a href="https://phpunit.de/">PHPUnit</a>, <strong>testing</strong> and code coverage</li>
+                </ul>
             </div>
         </div>
 
         <p class="text-center bigger">
-            Do you know what skill-mix do you need?
+            <em>Do you know what skill-mix do you need?</em>
         </p>
         <p class="text-center">
-            <a href="/contact/" class="btn btn-success bigger">
+            <a href="/contact/" class="btn btn-success bigger mt-2 mb-2">
                 &nbsp;Write me
                 <em class="fa fa-arrow-circle-o-right fa-fw"></em>
             </a>

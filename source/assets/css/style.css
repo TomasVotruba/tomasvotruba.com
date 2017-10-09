@@ -303,19 +303,19 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon {
     line-height: 2.3em;
 }
 
-#frameworks .card-title {
+.card-normal .card-title {
     margin-top: 0.3em;
     margin-bottom: 0.9em;
 }
 
-#frameworks .card-body p, #frameworks .card-body li {
+.card-normal .card-body p, .card-normal .card-body li {
     font-size: 0.9em;
 }
 
-#frameworks .card-body p {
+.card-normal .card-body p {
     line-height: 1.5em;
 }
 
-#frameworks ul {
+.card-normal ul {
     padding-left: 1em;
 }
