@@ -21,23 +21,32 @@ id: skill
 
         <p>
             I focus on <strong>PHP frameworks - Nette & Symfony - and automatization of coding standards and refactoring from old versions</strong>.
+        </p>
+        <p>
             <br>Lately I'm consulting with <a href="http://shopsys-framework.com/">Shopsys Framework</a>, an e-commerce platform on top of Symfony.
+
+
+        </p>
+
+        <p class="text-center">
+            <a href="https://github.com/shopsys">
+                <img src="https://www.shopsys-framework.com/assets/images/logo.png" class="text-center mb-4 mt-4 col-6">
+            </a>
         </p>
 
         <hr>
 
         {* ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout *}
-        <div class="card-deck">
+        <div class="card-deck" id="frameworks">
             <div class="card">
-                <div class="card-header">
-                    <img src="/assets/images/skills/nette.png" class="card-img-top">
+                <div class="card-header text-center">
+                    <img src="/assets/images/skills/nette.png" class="card-img-top col-8 mb-4 mt-4">
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">Become Nette Master</h3>
                     <p>
                         You'll understand strong features of framework and in the end of lecture you'll be able to build application on last version.
                     </p>
-
 
                     <ul>
                         <li>Directory Structure - where to put what</li>
@@ -54,8 +63,8 @@ id: skill
                 </div>
             </div>
             <div class="card">
-                <div class="card-header">
-                    <img src="/assets/images/skills/symfony.png">
+                <div class="card-header text-center">
+                    <img src="/assets/images/skills/symfony.png" class="col-10 mb-3 mt-3">
                 </div>
                 <div class="card-body">
                     <h3 class="card-title">Dive into Symfony</h3>
@@ -64,11 +73,15 @@ id: skill
                         We'll focus exactly on your project's level and how to integrate Symfony there.
                     </p>
 
-                    <li><strong>Request & Response</strong> life cycle</li>
+                    <ul>
+                        <li><strong>Request & Response</strong> life cycle</li>
 
-                    <li>All arounds <strong>Controllers</strong> - services, <code>_invoke</code></li>
-                    <li><strong>Twig</strong> templating system</li>
-                    <li><strong>Dependency Injection</strong>, <code>_defaults</code>, <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">PSR-4 service auto-discovery</a> and more</li>
+                        <li>All arounds <strong>Controllers</strong> - services, <code>_invoke</code></li>
+                        <li><strong>Twig</strong> templating system</li>
+                        <li><strong>Dependency Injection</strong>, <code>_defaults</code>, <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">PSR-4 service auto-discovery</a> and more</li>
+                        <li>Hooking Events via <strong>EventDispatcher</strong></li>
+                        <li><strong>Commands</strong> in CLI made easy</li>
+                    </ul>
                 </div>
                 <div class="card-footer text-center">
                     <small class="text-muted">Symfony 3.3 and 4.0</small>
@@ -81,7 +94,7 @@ id: skill
 
         <h2 class="text-center">From my Clients</h2>
 
-        <table style="height:100px" class="mt-4 mb-4">
+        <table class="mt-4 mb-4">
             <tbody>
                 <tr class="row">
                     <td class="col-4 align-middle">
@@ -114,7 +127,7 @@ id: skill
         </p>
 
         <p class="text-center">
-            <a href="/contact/" class="btn btn-success bigger">
+            <a href="/contact/" class="btn btn-success bigger mt-2 mb-2">
                 Let me know <em class="fa fa-arrow-circle-o-right fa-fw"></em>
             </a>
         </p>
