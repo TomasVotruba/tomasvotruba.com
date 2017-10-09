@@ -2,13 +2,7 @@
 
 namespace TomasVotruba\Website\TweetPublisher;
 
-use Nette\Utils\Finder;
-use SplFileInfo;
-use Symplify\Statie\Renderable\Configuration\ConfigurationDecorator;
-use Symplify\Statie\Renderable\File\AbstractFile;
-use Symplify\Statie\Renderable\File\FileFactory;
 use Symplify\Statie\Renderable\File\PostFile;
-use Symplify\Statie\Renderable\Routing\RouteFileDecorator;
 use TomasVotruba\Website\TweetPublisher\Exception\TweetTooLongException;
 
 final class PostTweetsProvider
@@ -27,40 +21,17 @@ final class PostTweetsProvider
     /**
      * @var string
      */
-    private $postSource;
-
-    /**
-     * @var FileFactory
-     */
-    private $fileFactory;
-
-    /**
-     * @var ConfigurationDecorator
-     */
-    private $configurationDecorator;
-
-    /**
-     * @var RouteFileDecorator
-     */
-    private $routeFileDecorator;
-
-    /**
-     * @var string
-     */
     private $siteUrl;
 
-    public function __construct(
-        string $postSource,
-        string $siteUrl,
-        FileFactory $fileFactory,
-        ConfigurationDecorator $configurationDecorator,
-        RouteFileDecorator $routeFileDecorator
-    ) {
-        $this->fileFactory = $fileFactory;
-        $this->configurationDecorator = $configurationDecorator;
-        $this->postSource = $postSource;
-        $this->routeFileDecorator = $routeFileDecorator;
+    /**
+     * @var PostsProvider
+     */
+    private $postsProvider;
+
+    public function __construct(string $siteUrl, PostsProvider $postsProvider)
+    {
         $this->siteUrl = $siteUrl;
+        $this->postsProvider = $postsProvider;
     }
 
     /**
@@ -70,7 +41,7 @@ final class PostTweetsProvider
     public function provide(): array
     {
         $postTweets = [];
-        foreach ($this->getPosts() as $post) {
+        foreach ($this->postsProvider->provide() as $post) {
             $postConfiguration = $post->getConfiguration();
             if (! isset($postConfiguration['tweet'])) {
                 continue;
@@ -84,38 +55,6 @@ final class PostTweetsProvider
         }
 
         return $postTweets;
-    }
-
-    /**
-     * @return PostFile[]|AbstractFile[]
-     */
-    private function getPosts(): array
-    {
-        return $this->getPostsWithConfigurationFromSource($this->postSource);
-    }
-
-    /**
-     * @return PostFile[]|AbstractFile[]
-     */
-    private function getPostsWithConfigurationFromSource(string $postSource): array
-    {
-        $files = $this->findMdFilesInDirectory($postSource);
-        $posts = $this->fileFactory->createFromFileInfos($files);
-        $this->configurationDecorator->decorateFiles($posts);
-        $this->routeFileDecorator->decorateFiles($posts);
-
-        return $posts;
-    }
-
-    /**
-     * @return SplFileInfo[]
-     */
-    private function findMdFilesInDirectory(string $postSource): array
-    {
-        /** @var Finder $finder */
-        $finder = Finder::findFiles('*.md')->from($postSource);
-
-        return iterator_to_array($finder->getIterator());
     }
 
     private function ensureTweetFitsAllowedLength(string $tweet, PostFile $postFile): void
