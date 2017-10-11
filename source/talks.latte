@@ -41,7 +41,9 @@ id: talks
                     </td>
                     <td>{$talk['year']}</td>
                     <td>
-                        <a href="{$talk['event_link']}">{$talk['event_name']}</a>
+                        <a n:tag-ifset="$talk['event_link']" href="{$talk['event_link']}">
+                            {$talk['event_name']}
+                        </a>
                     </td>
                     <td>
                         {ifset $talk['slides_link']}

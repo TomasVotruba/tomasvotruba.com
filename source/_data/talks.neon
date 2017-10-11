@@ -1,10 +1,55 @@
 parameters:
     talks:
         # todo add more
+
+        -
+            title: "Symfony Forms on a Healthy Diet"
+            year: 2017
+            event_name: "Erudio private lecture"
+            event_link: "http://erudio.cz/"
+            slides_link: "https://docs.google.com/presentation/d/17xgk_xSDdEcfvtm5cNqbx-AckDC1iCD61zXWrMav2GM/edit?usp=sharing"
+            lang: en
+
+        -
+            title: "Combine the best of PHP_CodeSniffer and PHP-CS-Fixer in 3 lines"
+            year: 2017
+            event_name: "Vienna PHP UG May"
+            event_link: "https://www.meetup.com/viennaphp/events/237296390/"
+            video_link: "https://www.facebook.com/pehapkari/videos/vl.1769747516670517/1341201322596341/?type=1"
+            slides_link: "https://docs.google.com/presentation/d/1EL3Vo9A7zphWYwG1tDuGpcMt-3F_DwVwWDpdata5nUw/edit?usp=sharing"
+            lang: en
+
+        -
+            title: "Static sites in PHP? Simple with Statie"
+            year: 2017
+            event_name: "Berin PHP UG April"
+            event_link: "http://www.bephpug.de/2017/04/04/april.html"
+            video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/?type=1"
+            slides_link: "https://docs.google.com/presentation/d/1Org07oQWbokCe6Q1FU8o0fe5iEfMGuDfZjKGcnI72BA/edit?usp=sharing"
+            lang: en
+
+        -
+            title: "How to combine PHP_CodeSniffer and PHP-CS-Fixer with Love"
+            year: 2017
+            event_name: "Dresden PHP UG April"
+            event_link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/238473452"
+            video_link: "https://www.facebook.com/pehapkari/videos/vl.1877987242460289/1321227224593751/?type=1"
+            slides_link: "https://docs.google.com/presentation/d/1jHSWF-lMlbb30XO-uf4el_k1HB7mK6Br93MI4CS_n6Y/edit?usp=sharing"
+            lang: en
+
+        -
+            title: "KISS Presenter bez Nette"
+            year: 2017
+            event_name: "87. PoSobota @ Prague"
+            event_link: "https://www.facebook.com/events/1247727315323628"
+            video_link: "https://www.facebook.com/pehapkari/videos/vl.1807365449529253/1285464581503349/?type=1"
+            slides_link: "https://docs.google.com/presentation/d/1cFZYl41bFjaJxeheQ7NqhPptBDx4OopJXdLfqPc-Zo0/edit?usp=sharing"
+            lang: cs
+
         -
             title: "Jak zdarma hostovat na Githubu jemně dynamické stránky?"
             year: 2016
-            event_name: "83. PoSobota @ Liberci"
+            event_name: "83. PoSobota @ Liberec"
             event_link: "https://www.facebook.com/events/387267941396841"
             video_link: "https://www.youtube.com/watch?v=y0mTpH5vtJc"
             slides_link: "https://drive.google.com/open?id=1nDFqW6QiW56d9q4zSFr0JoVD4_axOMlhjU-6NZrKLhE"
