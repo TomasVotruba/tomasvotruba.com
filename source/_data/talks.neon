@@ -3,6 +3,15 @@ parameters:
         # todo add more
 
         -
+            title: "Can we upgrade from Symfony 3 to 4 with just composer update?"
+            year: 2017
+            event_name: "22. Péhápkaři @ LMC"
+            event_link: "https://www.facebook.com/events/715989818601779/"
+            video_link: "https://www.facebook.com/pehapkari/videos/vl.802019319979040/1476103672439438/?type=1"
+            slides_link: "https://docs.google.com/presentation/d/1uCn1a6VloYze40DlItVMsXP65PhFwUahRGpk-FHA51s/edit?usp=sharing"
+            lang: cs
+
+        -
             title: "Symfony Forms on a Healthy Diet"
             year: 2017
             event_name: "Erudio private lecture"
