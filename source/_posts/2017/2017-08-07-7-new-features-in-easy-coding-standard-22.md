@@ -30,7 +30,7 @@ Before you had to name all the checkers manually in your config. There was no *P
 
 **Now you can pick from 9 prepared configs**.
 
-*PHP_CodeSniffer + PHP-CS-Fixer* 
+*PHP_CodeSniffer + PHP CS Fixer*
 
 ```yaml
 vendor/symplify/easy-coding-standard/config/php54-checkers.neon
@@ -54,7 +54,7 @@ This shortened Symplify config from [256 lines](https://github.com/Symplify/Symp
 
 ## 3. Use Whole Set But 1 Checker
 
-I like Symfony set from PHP-CS-Fixer, but **I'd like to remove 4 checkers**. Do I have to put all checkers I want to use explicitly to the config?
+I like Symfony set from PHP CS Fixer, but **I'd like to remove 4 checkers**. Do I have to put all checkers I want to use explicitly to the config?
  
 Not anymore!
 
@@ -66,7 +66,7 @@ includes:
 
 parameters:
     exclude_checkers:
-        # from PHP-CS-Fixer Symfony set
+        # from PHP CS Fixer Symfony set
         - PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer
         - PhpCsFixer\Fixer\Operator\NewWithBracesFixer
         - PhpCsFixer\Fixer\Phpdoc\PhpdocAlignFixer

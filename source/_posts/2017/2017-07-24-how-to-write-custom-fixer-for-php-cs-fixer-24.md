@@ -1,11 +1,11 @@
 ---
 id: 47
 layout: post
-title: "How to Write Custom Fixer for PHP-CS-Fixer 2.4"
+title: "How to Write Custom Fixer for PHP CS Fixer 2.4"
 perex: '''
     You already know <a href="/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/">how coding standard tools work with tokens and how to write a Sniff</a>.
      <br><br>
-     Today we'll explore a bit younger tool - <a href="https://github.com/friendsofphp/php-cs-fixer">PHP-CS-Fixer</a> and we get <strong>from only finding the smelly spot to fixing it</strong>.
+     Today we'll explore a bit younger tool - <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">PHP CS Fixer</a> and we get <strong>from only finding the smelly spot to fixing it</strong>.
 '''
 related_posts: [48, 46, 37]
 tweet: "How to Write Custom Fixer for #phpcsfixer"
@@ -20,13 +20,13 @@ When a coding standard tool finds over 1000 violations in our code is nice to kn
 
 ### Find & Fix It
 
-That main difference of PHP-CS-Fixer to PHP_CodeSniffer is that **every Fixer has to fix issues it finds**. That's why there is no `LineLenghtFixer`, because fixing line length is difficult to automate.
+That main difference of PHP CS Fixer to PHP_CodeSniffer is that **every Fixer has to fix issues it finds**. That's why there is no `LineLenghtFixer`, because fixing line length is difficult to automate.
  
-Personally I like PHP-CS-Fixer a bit more, **because of more friendlier API, active community and openness to 3rd party packages**: 
+Personally I like PHP CS Fixer a bit more, **because of more friendlier API, active community and openness to 3rd party packages**:
 
 <img src="/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png" class="img-thumbnail">
 <p>
-    <em><code>composer.json</code> from PHP-CS-Fixer</em>
+    <em><code>composer.json</code> from PHP CS Fixer</em>
 </p>
 
 <br>
@@ -384,7 +384,7 @@ final class ExceptionNameFixer implements DefinedFixerInterface
 
 ## How to run it?
 
-### The PHP-CS-Fixer way
+### The PHP CS Fixer way
 
 Create `.php_cs` config and register fixer with `registerCustomFixers()` method, like here in [`shopsys/coding-standard`](https://github.com/shopsys/coding-standards/blob/5f7c5e61f3a5ddd279887ac51a2bcb5f6bc81d78/build/phpcs-fixer.php_cs#L54).
 
