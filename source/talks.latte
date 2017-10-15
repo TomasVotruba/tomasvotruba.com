@@ -41,7 +41,7 @@ id: talks
 
             {var $postYear = $talk['year']}
             {if $postYear != date('Y') && !isset($dateLines[$postYear])}
-                <thead class="thead-inverse">
+                <thead>
                     <tr>
                         <th colspan="4" id="year-{$postYear}" class="text-center">
                             <em class="fa fa-calendar-o"></em>
@@ -60,14 +60,14 @@ id: talks
                     <br>
 
                     {ifset $talk['video_link']}
-                        <a href="{$talk['video_link']}" class="btn btn-danger btn-sm mt-3 mr-2">
+                        <a href="{$talk['video_link']}" class="btn btn-danger btn-sm mt-3 mr-2 mb-2">
                             <em class="fa fa-fw fa-youtube-play"></em>
                             Watch Talk
                         </a>
                     {/ifset}
 
                     {ifset $talk['slides_link']}
-                        <a href="{$talk['slides_link']}" class="btn btn-warning btn-sm mt-3">
+                        <a href="{$talk['slides_link']}" class="btn btn-warning btn-sm mt-3 mb-2">
                             <em class="fa fa-fw fa-slideshare"></em>
                             See Slides
                         </a>
