@@ -139,7 +139,12 @@ Instead of registration to Symfony container like any other service, the Doctrin
 
 ### 3. Use in Controller
 
-You have to use this [complicated service registration in YAML](https://matthiasnoback.nl/2014/05/inject-a-repository-instead-of-an-entity-manager/#factory-service) or just pass `EntityManager`.
+You have to use this [complicated service registration in YAML](https://matthiasnoback.nl/2014/05/inject-a-repository-instead-of-an-entity-manager/#factory-service):
+
+ @todo screen
+
+or just pass `EntityManager`.
+
 
 ```php
 <?php declare(strict_types=1);
