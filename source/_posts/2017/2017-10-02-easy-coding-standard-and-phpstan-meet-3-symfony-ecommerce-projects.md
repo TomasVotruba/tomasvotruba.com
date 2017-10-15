@@ -57,7 +57,7 @@ To get the idea how it improves your code in practice, just [check this commit](
 
 ### PSR2
 
-**PSR-2 is the most spread coding standard in PHP**, described in [PHP-FIG guide](http://www.php-fig.org/psr/psr-2/). Both PHP_CodeSniffer and PHP-CS-Fixer have a set of ~30 rules, so why not to [combine them](https://github.com/Symplify/EasyCodingStandard/blob/master/config/psr2-checkers.neon) and use them on our projects?
+**PSR-2 is the most spread coding standard in PHP**, described in [PHP-FIG guide](http://www.php-fig.org/psr/psr-2/). Both PHP_CodeSniffer and PHP CS Fixer have a set of ~30 rules, so why not to [combine them](https://github.com/Symplify/EasyCodingStandard/blob/master/config/psr2-checkers.neon) and use them on our projects?
 
 
 <br>
@@ -84,9 +84,9 @@ To get the idea how it improves your code in practice, just [check this commit](
 
 If you’re used to PSR2 style, you probably use PHPStorm to check it and **contributing to Sylius would mean no extra work for you**. [Sylius' ruleset](https://github.com/Sylius/Sylius/blob/b5f6a4e4383fcbf5b1b9730094d1e1aa756de7a2/etc/phpcs/.php_cs) contains just handful of checkers though.
 
-Spryker has [own package just for coding-standard](https://github.com/spryker/code-sniffer) build on PHP_CodeSnifer, but they don't comply with some rules of PHP-CS-Fixer. **This might be issue if you're in the Symfony world** and you use that tool in your projects.
+Spryker has [own package just for coding-standard](https://github.com/spryker/code-sniffer) build on PHP_CodeSnifer, but they don't comply with some rules of PHP CS Fixer. **This might be issue if you're in the Symfony world** and you use that tool in your projects.
 
-Shopsys **has its own [coding-standard package](https://github.com/shopsys/coding-standards) build on both tools** - PHP-CS-Fixer and PHP_CodeSniffer - compatble with PSR-2. I'd say that's the best solution, because you have **the least responsibility as a contributor**. CI tools will handle the code style for you.
+Shopsys **has its own [coding-standard package](https://github.com/shopsys/coding-standards) build on both tools** - PHP CS Fixer and PHP_CodeSniffer - compatble with PSR-2. I'd say that's the best solution, because you have **the least responsibility as a contributor**. CI tools will handle the code style for you.
 
 
 

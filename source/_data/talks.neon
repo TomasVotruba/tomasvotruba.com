@@ -20,7 +20,7 @@ parameters:
             lang: en
 
         -
-            title: "Combine the best of PHP_CodeSniffer and PHP-CS-Fixer in 3 lines"
+            title: "Combine the best of PHP_CodeSniffer and PHP CS Fixer in 3 lines"
             year: 2017
             event_name: "Vienna PHP UG May"
             event_link: "https://www.meetup.com/viennaphp/events/237296390/"
@@ -38,7 +38,7 @@ parameters:
             lang: en
 
         -
-            title: "How to combine PHP_CodeSniffer and PHP-CS-Fixer with Love"
+            title: "How to combine PHP_CodeSniffer and PHP CS Fixer with Love"
             year: 2017
             event_name: "Dresden PHP UG April"
             event_link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/238473452"
