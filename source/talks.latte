@@ -8,59 +8,71 @@ id: talks
     <div class="container">
         <h1>{$title}</h1>
 
-        <table class="table table-bordered table-striped table-responsive">
-            <thead class="thead-inverse">
-                <th>
-                    <em class="fa fa-youtube-play"></em>
-                    &nbsp;
-                    Talk
-                </th>
-                <th class="text-nowrap">
-                    <em class="fa fa-location-arrow"></em>
-                    &nbsp;
-                    Event
-                </th>
-                <th class="text-nowrap">
-                    <em class="fa fa-slideshare"></em>
-                    &nbsp;
-                    Slides
-                </th>
-            </thead>
+        <h2 class="text-center mb-4">English</h2>
 
-            {foreach $talks as $talk}
+        {include talksTable, lang => "en"}
 
-                {var $postYear = $talk['year']}
-                {if $postYear != date('Y') && !isset($dateLines[$postYear])}
-                    <thead class="thead-inverse">
-                        <tr>
+        <h2 class="text-center mb-4">Czech</h2>
 
-                            <th colspan="4" id="year-{$postYear}" class="text-center">
-                                <em class="fa fa-calendar-o"></em>
-                                &nbsp;
-                                {$postYear}
-                                {var $dateLines[$postYear] = $postYear}
-                        </tr>
-                    </thead>
-                {/if}
-
-                <tr>
-                    <td>
-                        <a n:tag-ifset="$talk['video_link']" href="{$talk['video_link']}">
-                            {$talk['title']}
-                        </a>
-                    </td>
-                    <td>
-                        <a n:tag-ifset="$talk['event_link']" href="{$talk['event_link']}">
-                            {$talk['event_name']}
-                        </a>
-                    </td>
-                    <td>
-                        {ifset $talk['slides_link']}
-                            <a href="{$talk['slides_link']}">See</a>
-                        {/ifset}
-                    </td>
-                </tr>
-            {/foreach}
-        </table>
+        {include talksTable, lang => "cs"}
     </div>
 {/block}
+
+
+{define talksTable}
+    <table class="table table-bordered table-striped table-responsive">
+        <thead class="thead-inverse">
+            <th>
+                <em class="fa fa-youtube-play"></em>
+                &nbsp;
+                Talk
+            </th>
+            <th class="text-nowrap">
+                <em class="fa fa-location-arrow"></em>
+                &nbsp;
+                Event
+            </th>
+            <th class="text-nowrap">
+                <em class="fa fa-slideshare"></em>
+                &nbsp;
+                Slides
+            </th>
+        </thead>
+
+        {foreach $talks as $talk}
+            {continueIf $talk['lang'] !== $lang}
+
+            {var $postYear = $talk['year']}
+            {if $postYear != date('Y') && !isset($dateLines[$postYear])}
+                <thead class="thead-inverse">
+                    <tr>
+                        <th colspan="4" id="year-{$postYear}" class="text-center">
+                            <em class="fa fa-calendar-o"></em>
+                            &nbsp;
+                            {$postYear}
+                            {var $dateLines[$postYear] = $postYear}
+                        </th>
+                    </tr>
+                </thead>
+            {/if}
+
+            <tr>
+                <td>
+                    <a n:tag-ifset="$talk['video_link']" href="{$talk['video_link']}">
+                        {$talk['title']}
+                    </a>
+                </td>
+                <td>
+                    <a n:tag-ifset="$talk['event_link']" href="{$talk['event_link']}">
+                        {$talk['event_name']}
+                    </a>
+                </td>
+                <td>
+                    {ifset $talk['slides_link']}
+                    <a href="{$talk['slides_link']}">See</a>
+                    {/ifset}
+                </td>
+            </tr>
+        {/foreach}
+    </table>
+{/define}

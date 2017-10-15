@@ -1,7 +1,5 @@
 parameters:
     talks:
-        # todo add more
-
         -
             title: "Can we upgrade from Symfony 3 to 4 with just composer update?"
             year: 2017
@@ -83,7 +81,7 @@ parameters:
         -
             title: "PHP TIPY a TRIKY - Jak využít plný potenciál toho, co už máte a ušetřit si čas"
             year: 2016
-            event_name: "Meditorial @ private"
+            event_name: "Meditorial private lecture"
             event_link: "http://www.meditorial.cz/"
             slides_link: "https://docs.google.com/presentation/d/1i4lhWFVNZNyzwlcqe-yv4hFjZsnBzGrRDM0GyHV2DA4/edit?usp=sharing"
             lang: cs
