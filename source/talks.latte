@@ -16,11 +16,6 @@ id: talks
                     Talk
                 </th>
                 <th class="text-nowrap">
-                    <em class="fa fa-calendar-o"></em>
-                    &nbsp;
-                    Year
-                </th>
-                <th class="text-nowrap">
                     <em class="fa fa-location-arrow"></em>
                     &nbsp;
                     Event
@@ -33,13 +28,27 @@ id: talks
             </thead>
 
             {foreach $talks as $talk}
+
+                {var $postYear = $talk['year']}
+                {if $postYear != date('Y') && !isset($dateLines[$postYear])}
+                    <thead class="thead-inverse">
+                        <tr>
+
+                            <th colspan="4" id="year-{$postYear}" class="text-center">
+                                <em class="fa fa-calendar-o"></em>
+                                &nbsp;
+                                {$postYear}
+                                {var $dateLines[$postYear] = $postYear}
+                        </tr>
+                    </thead>
+                {/if}
+
                 <tr>
                     <td>
                         <a n:tag-ifset="$talk['video_link']" href="{$talk['video_link']}">
                             {$talk['title']}
                         </a>
                     </td>
-                    <td>{$talk['year']}</td>
                     <td>
                         <a n:tag-ifset="$talk['event_link']" href="{$talk['event_link']}">
                             {$talk['event_name']}
