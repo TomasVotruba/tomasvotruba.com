@@ -8,50 +8,77 @@ id: talks
     <div class="container">
         <h1>{$title}</h1>
 
-        <table class="table table-bordered table-striped table-responsive">
-            <thead class="thead-inverse">
-                <th>
-                    <em class="fa fa-youtube-play"></em>
-                    &nbsp;
-                    Talk
-                </th>
-                <th class="text-nowrap">
-                    <em class="fa fa-calendar-o"></em>
-                    &nbsp;
-                    Year
-                </th>
-                <th class="text-nowrap">
-                    <em class="fa fa-location-arrow"></em>
-                    &nbsp;
-                    Event
-                </th>
-                <th class="text-nowrap">
-                    <em class="fa fa-slideshare"></em>
-                    &nbsp;
-                    Slides
-                </th>
-            </thead>
+        <h2 class="text-center mb-4">English</h2>
 
-            {foreach $talks as $talk}
-                <tr>
-                    <td>
-                        <a n:tag-ifset="$talk['video_link']" href="{$talk['video_link']}">
-                            {$talk['title']}
-                        </a>
-                    </td>
-                    <td>{$talk['year']}</td>
-                    <td>
-                        <a n:tag-ifset="$talk['event_link']" href="{$talk['event_link']}">
-                            {$talk['event_name']}
-                        </a>
-                    </td>
-                    <td>
-                        {ifset $talk['slides_link']}
-                            <a href="{$talk['slides_link']}">See</a>
-                        {/ifset}
-                    </td>
-                </tr>
-            {/foreach}
-        </table>
+        {include talksTable, lang => "en"}
+
+        <br>
+
+        <h2 class="text-center mb-4">Czech</h2>
+
+        {include talksTable, lang => "cs"}
     </div>
 {/block}
+
+
+{define talksTable}
+    <table class="table table-bordered table-striped table-responsive">
+        <thead class="thead-inverse">
+            <th class="text-center">
+                <em class="fa fa-volume-up"></em>
+                &nbsp;
+                Talk
+            </th>
+            <th class="text-nowrap text-center">
+                <em class="fa fa-map-marker"></em>
+                &nbsp;
+                Event
+            </th>
+        </thead>
+
+        {foreach $talks as $talk}
+            {continueIf $talk['lang'] !== $lang}
+
+            {var $postYear = $talk['year']}
+            {if $postYear != date('Y') && !isset($dateLines[$postYear])}
+                <thead>
+                    <tr>
+                        <th colspan="4" id="year-{$postYear}" class="text-center">
+                            <em class="fa fa-calendar-o"></em>
+                            &nbsp;
+                            {$postYear}
+                            {var $dateLines[$postYear] = $postYear}
+                        </th>
+                    </tr>
+                </thead>
+            {/if}
+
+            <tr>
+                <td>
+                    {$talk['title']}
+
+                    <br>
+
+                    {ifset $talk['video_link']}
+                        <a href="{$talk['video_link']}" class="btn btn-danger btn-sm mt-3 mr-2 mb-2">
+                            <em class="fa fa-fw fa-youtube-play"></em>
+                            Watch Talk
+                        </a>
+                    {/ifset}
+
+                    {ifset $talk['slides_link']}
+                        <a href="{$talk['slides_link']}" class="btn btn-warning btn-sm mt-3 mb-2">
+                            <em class="fa fa-fw fa-slideshare"></em>
+                            See Slides
+                        </a>
+                    {/ifset}
+                </td>
+                <td>
+                    <a n:tag-ifset="$talk['event_link']" href="{$talk['event_link']}">
+                        {$talk['event_name']}
+                    </a>
+                </td>
+            </tr>
+        {/foreach}
+    </table>
+{/define}

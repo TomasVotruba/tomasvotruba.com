@@ -1,7 +1,5 @@
 parameters:
     talks:
-        # todo add more
-
         -
             title: "Can we upgrade from Symfony 3 to 4 with just composer update?"
             year: 2017
@@ -10,6 +8,14 @@ parameters:
             video_link: "https://www.facebook.com/pehapkari/videos/vl.802019319979040/1476103672439438/?type=1"
             slides_link: "https://docs.google.com/presentation/d/1uCn1a6VloYze40DlItVMsXP65PhFwUahRGpk-FHA51s/edit?usp=sharing"
             lang: cs
+
+        -
+            title: "From Single Stupid Sniff to Solid Architecture Control"
+            year: 2017
+            event_name: "Nette Camp"
+            event_link: "https://www.nettecamp.cz/"
+            slides_link: "https://docs.google.com/presentation/d/1Cx0W9Fj8AYrBzDyJjnFU_EXW9py_j-yFqxo8ztdaldk/edit?usp=sharing"
+            lang: en
 
         -
             title: "Symfony Forms on a Healthy Diet"
@@ -56,12 +62,44 @@ parameters:
             lang: cs
 
         -
+            title: "Hot news in PHP 7, 7.1, Symfony 3.1, 3.2 (3.3)"
+            year: 2017
+            event_name: "Erudio private lecture"
+            event_link: "http://erudio.cz/"
+            slides_link: "https://docs.google.com/presentation/d/1f3WokfmgBTRtUssWj7fupxjMBZzI6BuocrWSMg8skAU/edit?usp=sharing"
+            lang: cs
+
+        -
             title: "Jak zdarma hostovat na Githubu jemně dynamické stránky?"
             year: 2016
             event_name: "83. PoSobota @ Liberec"
             event_link: "https://www.facebook.com/events/387267941396841"
             video_link: "https://www.youtube.com/watch?v=y0mTpH5vtJc"
             slides_link: "https://drive.google.com/open?id=1nDFqW6QiW56d9q4zSFr0JoVD4_axOMlhjU-6NZrKLhE"
+            lang: cs
+
+        -
+            title: "PHP TIPY a TRIKY - Jak využít plný potenciál toho, co už máte a ušetřit si čas"
+            year: 2016
+            event_name: "Meditorial private lecture"
+            event_link: "http://www.meditorial.cz/"
+            slides_link: "https://docs.google.com/presentation/d/1i4lhWFVNZNyzwlcqe-yv4hFjZsnBzGrRDM0GyHV2DA4/edit?usp=sharing"
+            lang: cs
+
+        -
+            title: "Jak nezakrnout v IT"
+            year: 2016
+            event_name: "Meditorial private lecture"
+            event_link: "http://www.meditorial.cz/"
+            slides_link: "https://docs.google.com/presentation/d/1xmZBhDcPie5J3rRDE8sykKo-G-22tibUS4mq0PqZPlU/edit?usp=sharing"
+            lang: cs
+
+        -
+            title: "Jak vydělat na open-source"
+            year: 2016
+            event_name: "Erudio private lecture"
+            event_link: "http://erudio.cz/"
+            slides_link: "https://docs.google.com/presentation/d/1yX0am3xLLmmg_z1g3vBZ2g5V40UIjQDVX3wyNw6Eppg/edit?usp=sharing"
             lang: cs
 
         -
