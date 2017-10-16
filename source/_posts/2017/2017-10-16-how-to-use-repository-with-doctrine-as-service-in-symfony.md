@@ -268,7 +268,7 @@ It's spread in most of documentation, both in Doctrine and Symfony and in many p
 No brain, no gain.
 
 
-## <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+## <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages Summary
 
 We **cannot use autowiring**.
 
