@@ -20,7 +20,7 @@ Prepare for deep darkness, (almost) burning out and... team work that helped me 
 
 ## Step 1: Bump to PHP 7.1
 
-I love PHP 7.1 and I use it everywhere since its release in 2016. This year [more and more big projects are migrating]([https://www.tomasvotruba.cz/blog/2017/06/05/go-php-71/), yet this is still low % of all packages.
+I love PHP 7.1 and I use it everywhere since its release in 2016. This year [more and more big projects are migrating](/blog/2017/06/05/go-php-71/), yet this is still low % of all packages.
 
 So my condition was to [bump minimal requirement to PHP 7.1](https://github.com/ApiGen/ApiGen/issues/779#issuecomment-285960383). Current maintainers agreed, so I had green on. Thank you [Alexander Jank](https://github.com/jankal) for your support in my first PRs to ApiGen this year. 
 
