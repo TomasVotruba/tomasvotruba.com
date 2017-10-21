@@ -108,13 +108,13 @@ Because parent constructor [requires `EntityManager` and `ClassMetadata` instanc
 Those prepared methods like `findBy()` **don't have argument nor return typehints**, so this would pass:
 
 ```php
-$this->postRepository->get('someString');
+$this->postRepository->find('someString');
 ```
 
 And we don't know what object we get back:
 
 ```php
-$post = $this->postRepository->get(1);
+$post = $this->postRepository->find(1);
 $post->whatMethods()!
 ```
 
