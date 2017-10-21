@@ -378,7 +378,7 @@ final class PostRepository
     
     public function get(int $id): Post
     {
-        $this->repository->get($id);
+        return $this->repository->get($id);
     }
 }
 ```
