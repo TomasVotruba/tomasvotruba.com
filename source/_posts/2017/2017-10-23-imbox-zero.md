@@ -65,9 +65,13 @@ And you don't have to stop at SMS. I talk about smartphones, remember?
 
 <img src="/assets/images/posts/2017/imbox-zero/messenger.png" class="img-thumbnail">
 
+<br>
+
 **WhatsApp**
 
 <img src="/assets/images/posts/2017/imbox-zero/whatsapp.png" class="img-thumbnail col-md-4">
+
+<br>
 
 **Hangouts**
 
