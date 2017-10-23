@@ -7,8 +7,8 @@ perex: '''
     <br><br>
     Let's take it a step further into 2017 - **to instant messaging**. 
 '''
-tweet: "Improve your productivity by cleaning your Messenger, WhatApp and SMS #gtd #inboxzero #neurohacking #zen"
-tweet_image: "..."
+tweet: "Cleanup your #Messenger, #WhatApp and SMS to Improve your Productivity #facebook #imboxzero"
+tweet_image: "assets/images/posts/2017/imbox-zero/messenger.png"
 ---
 
 My huge inspiration [Leo Babauta](https://zenhabits.net/) has [popularized](https://zenhabits.net/email-zen-clear-out-your-inbox/) Inbox Zero [concept](https://zenhabits.net/email-sanity/) of **having 0 emails after every visit of your inbox**. 
