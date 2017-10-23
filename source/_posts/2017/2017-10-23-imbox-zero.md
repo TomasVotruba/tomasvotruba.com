@@ -32,8 +32,8 @@ This applies to email.
 
 ## What is Zero IM-box then?
 
-Ever since smartphones went viral, it is normal to have **7 SMS on single display. 1 new, 6 already resolved**. 
-That would be ok, if you're used to full inbox, where your brain is programmed to filter the noise (aka "ad block plugin"). But not if you're appling inbox zero method.
+Ever since smartphones went viral, it is common to have **7 SMS on single display. 1 new, 6 already resolved**. 
+That would be ok, if you're used to full inbox, where your brain is programmed to filter the noise. **But not if you're appling inbox zero method**.
 
 That is my case too and **I was tired of having 2 contradictive approaches** in my brain.
 
@@ -43,16 +43,16 @@ That is my case too and **I was tired of having 2 contradictive approaches** in 
 
 <img src="/assets/images/posts/2017/imbox-zero/sms.png" class="img-thumbnail col-md-4">
 
-And it works like a charm. My ability to response sms rise and blood pressure from switching visual modes decreased :)
+And it works like a charm. My ability to response sms rise and blood pressure from switching visual modes decreases :)
 
 
-## Give Your Brain a Spa 
+## Give Your Brain a Comfort Spa 
 
-Now it much easier for me to:
+Now it's much easier for me to:
 
 - **remember what to resolve**
 - **know who to response**
-- approach sms just few times a day **in chunks** - just like in Google Inbox - that's the best
+- approach sms just few times a day **in chunks** - just like in Google Inbox
 - and resolve messages **more quickly**
 
 
@@ -64,6 +64,10 @@ And you don't have to stop at SMS. I talk about smartphones, remember?
 **[Messenger](https://messenger.com)**
 
 <img src="/assets/images/posts/2017/imbox-zero/messenger.png" class="img-thumbnail">
+
+**WhatsApp**
+
+<img src="/assets/images/posts/2017/imbox-zero/whatsapp.png" class="img-thumbnail col-md-4">
 
 **Hangouts**
 
