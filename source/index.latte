@@ -8,7 +8,7 @@ id: blog
     <div class="container-fluid" id="blog">
         <h1>Read about PHP, Symfony & Coding Standards</h1>
 
-        {include rssButton, "callToAction" => "Get the RSS feed"}
+        {include subscribe}
 
         <div class="row text-left">
             <div class="col-md-12">
@@ -40,22 +40,34 @@ id: blog
 
         <p class="text-center">
             <strong>Do you want to be first to know about new posts?</strong>
-            {include rssButton, "callToAction" => "Add me to your RSS feed"}
+            {include subscribe}
         </p>
     </div>
 {/block}
 
 
-{define rssButton}
+{define subscribe}
     <div class="text-center">
         <a href="/rss.xml" class="btn btn-warning">
             <em class="fa fa-fw fa-rss"></em>
-            {$callToAction}
+
+            <span class="hidden-sm-down">
+                Get the RSS feed
+            </span>
+            <span class="hidden-md-up">
+                Add RSS
+            </span>
         </a>
 
         <a href="https://twitter.com/votrubaT" class="btn btn-primary ml-3">
             <em class="fa fa-fw fa-twitter"></em>
-            Get posts on Twitter
+
+            <span class="hidden-sm-down">
+                Get posts on Twitter
+            </span>
+            <span class="hidden-md-up">
+                Folow Me
+            </span>
         </a>
     </div>
 {/define}
