@@ -1,15 +1,15 @@
-{var $similarPosts = ($post|similarPosts)}
+{var $relatedPosts = ($post|relatedPosts)}
 
-<div n:if="count($similarPosts)" class="card border-warning" id="relatedPosts">
+<div n:if="count($relatedPosts)" class="card border-warning" id="relatedPosts">
     <div class="card-header text-white bg-warning border-warning">
         <strong>Continue Reading</strong>
     </div>
     <div class="card-body">
         <ul>
-            {foreach $similarPosts as $similarPost}
+            {foreach $relatedPosts as $relatedPost}
                 <li>
-                    <a href="/{$similarPost['relativeUrl']}">
-                        {$similarPost['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}
+                    <a href="/{$relatedPost['relativeUrl']}">
+                        {$relatedPost['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}
                     </a>
                 </li>
             {/foreach}
