@@ -11,16 +11,20 @@ tweet: "Improve your productivity by cleaning your Messenger, WhatApp and SMS #g
 tweet_image: "..."
 ---
 
-My huge inspiration [Leo Babauta](https://zenhabits.net/) has [popularized](https://zenhabits.net/email-zen-clear-out-your-inbox/) this [concept](https://zenhabits.net/email-sanity/) of **having 0 emails after every visit of your inbox**. 
+My huge inspiration [Leo Babauta](https://zenhabits.net/) has [popularized](https://zenhabits.net/email-zen-clear-out-your-inbox/) Inbox Zero [concept](https://zenhabits.net/email-sanity/) of **having 0 emails after every visit of your inbox**. 
 
 All emails are resolved, postponed (will return in 5 days) or archived:
 
 <img src="/assets/images/posts/2017/imbox-zero/inbox.png" class="img-thumbnail">
 
 
-**The less noise you let to your brain, the better and [deeper your can focus](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport) on single task**. The state you try to avoid is *cognitive overflow*:
+**The less noise you let to your brain, the better and [deeper your can focus](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport) on single task**. 
+
+<br>
+
+The state you try to avoid is called *cognitive overflow*:
  
-<img src="/assets/images/posts/2017/imbox-zero/full-inbox.png" class="img-thumbnail">
+<img src="/assets/images/posts/2017/imbox-zero/full-inbox.jpg" class="img-thumbnail">
  
 
 This applies to email.
@@ -31,8 +35,9 @@ This applies to email.
 Ever since smartphones went viral, it is normal to have **7 SMS on single display. 1 new, 6 already resolved**. 
 That would be ok, if you're used to full inbox, where your brain is programmed to filter the noise (aka "ad block plugin"). But not if you're appling inbox zero method.
 
-That is my case too and I was tired of having 2 contradictive approaches in my brain.
+That is my case too and **I was tired of having 2 contradictive approaches** in my brain.
 
+<br>
 
 **So I've tried to archive all messages.**
 
@@ -41,7 +46,7 @@ That is my case too and I was tired of having 2 contradictive approaches in my b
 And it works like a charm. My ability to response sms rise and blood pressure from switching visual modes decreased :)
 
 
-### Give Your Brain a Spa 
+## Give Your Brain a Spa 
 
 Now it much easier for me to:
 
@@ -51,12 +56,9 @@ Now it much easier for me to:
 - and resolve messages **more quickly**
 
 
-You don't have to stop at SMS. I talk about smartphones, remember?
+And you don't have to stop at SMS. I talk about smartphones, remember?
 
-
-**WhatsApp**
-
-<img src="/assets/images/posts/2017/imbox-zero/whatsapp.png" class="img-thumbnail col-md-4">
+<br>
 
 
 **[Messenger](https://messenger.com)**
@@ -72,8 +74,10 @@ You don't have to stop at SMS. I talk about smartphones, remember?
 Same rules applied, same profit got ;)
 
 
+<br>
 
-### Gain for Brains
+
+## Gain for Brains
 
 Once I've read [The Universe in a Nutshell](https://en.wikipedia.org/wiki/The_Universe_in_a_Nutshell) by this guy Stephen Hawking in my before-teenage days. I still remember single quote from it: 
 
@@ -84,17 +88,11 @@ Once I've read [The Universe in a Nutshell](https://en.wikipedia.org/wiki/The_Un
 <img src="/assets/images/posts/2017/imbox-zero/universe.jpg" class="img-thumbnail">
 
 
-I didn't know what that mean, but my dad talked nicely about Steve, so I though he might be a smart guy. So tried to.
-
-*Btw, if you don't know much about universe, definitely read this easy-to-understand intro book.*
-
-
-In our use case, **instead of having 2 or more brain algorithms to resolve incoming message, we will have only 1**.
-
-Thus having more neurons to do job we need them to do thanks to neuroplasticity. 
+I didn't know what that means, but my dad talked nicely about Steve, so I though he might be a smart guy - so tried to. In our use case, **instead of having 2 algorithms to resolve incoming message, we will have 1**. Thus having more neurons to do job we need them to do thanks to neuroplasticity. 
 
 Like finding a good coffee anywhere you are :)
 
+<br>
 
 Happy thinking!
 
