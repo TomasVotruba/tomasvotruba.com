@@ -1,4 +1,4 @@
-// install: npm install -g gulp gulp-watch
+// install: npm install
 // run: gulp
 
 var gulp = require('gulp');
@@ -9,7 +9,7 @@ gulp.task('default', function () {
     // Generate current version
     exec('vendor/bin/statie generate source', function (err, stdout, stderr) {
         console.log(stdout);
-        console.log(stderr);
+        console.error(stderr);
     });
 
     // Run local server, open localhost:8000 in your browser
@@ -20,7 +20,7 @@ gulp.task('default', function () {
         .on('change', function() {
             exec('vendor/bin/statie generate source', function (err, stdout, stderr) {
                 console.log(stdout);
-                console.log(stderr);
+                console.error(stderr);
             });
         });
 });
