@@ -5,56 +5,54 @@ title: "IMbox Zero"
 perex: '''
     You have probably heard about Inbox Zero. [ZTD](https://zenhabits.net/zen-to-done-ztd-the-ultimate-simple-productivity-system/) technique, **to keep your email inbox clean and your brain well rested**.
     <br><br>
-    Let's take it a step further - **to instant messaging**. 
+    Let's take it a step further into 2017 - **to instant messaging**. 
 '''
 tweet: "Improve your productivity by cleaning your Messenger, WhatApp and SMS #gtd #inboxzero #neurohacking #zen"
 tweet_image: "..."
 ---
 
-@todo noise inbox with milions of messages
+My huge inspiration [Leo Babauta](https://zenhabits.net/) has [popularized](https://zenhabits.net/email-zen-clear-out-your-inbox/) this [concept](https://zenhabits.net/email-sanity/) of **having 0 emails after every visit of your inbox**. 
+
+All emails are resolved, postponed (will return in 5 days) or archived:
+
+<img src="/assets/images/posts/2017/imbox-zero/inbox.png" class="img-thumbnail">
 
 
-leo babauta
-popularized this copcept of having 0 emails after you've visited the inbox - resolved, posponed (e.g. will return in 5 days) or achived
+**The less noise you let to your brain, the better and [deeper your can focus](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport) on single task**. The state you try to avoid is *cognitive overflow*:
+ 
+<img src="/assets/images/posts/2017/imbox-zero/full-inbox.png" class="img-thumbnail">
+ 
 
-- https://zenhabits.net/email-zen-clear-out-your-inbox/
-- https://zenhabits.net/email-sanity/
-
-
-It looks like this
-
-<img src="/assets/images/posts/2017/imbox-zero/gmail.png" class="img-thumbnail">
+This applies to email.
 
 
-trick is the less noise you have, the more performance your brain can focus on single tasks.
+## What is Zero IM-box then?
 
-it applies in email
+Ever since smartphones went viral, it is normal to have **7 SMS on single display. 1 new, 6 already resolved**. 
+That would be ok, if you're used to full inbox, where your brain is programmed to filter the noise (aka "ad block plugin"). But not if you're appling inbox zero method.
 
-
-## so what is Zero IM-box?
-
-Since smartpohesn, I usually have **7 SMS on single display. 1 new, 6 already resolved**. That would be ok, if your brain is filtering the noise, but not if you're applin inbox zero method
+That is my case too and I was tired of having 2 contradictive approaches in my brain.
 
 
-I've tried to archive all message.
+**So I've tried to archive all messages.**
 
 <img src="/assets/images/posts/2017/imbox-zero/sms.png" class="img-thumbnail col-md-4">
 
-And it works like a charm. My ability to response sms rise, and blood pressure from switching visual modes decresed :)
-
-You can
-
-- remember what to resolve
-- know who to response
-- can approach all sms per der in chunks with same approach as in google inbox
-- get wider attention span over time
-- be more focused on single message at a time 
-- and resolve messages more quickyl
+And it works like a charm. My ability to response sms rise and blood pressure from switching visual modes decreased :)
 
 
+### Give Your Brain a Spa 
+
+Now it much easier for me to:
+
+- **remember what to resolve**
+- **know who to response**
+- approach sms just few times a day **in chunks** - just like in Google Inbox - that's the best
+- and resolve messages **more quickly**
 
 
-But also
+You don't have to stop at SMS. I talk about smartphones, remember?
+
 
 **WhatsApp**
 
@@ -71,12 +69,13 @@ But also
 
 
 
-same rules applied, same profit got ;)
+Same rules applied, same profit got ;)
+
 
 
 ### Gain for Brains
 
-Once I've read (https://en.wikipedia.org/wiki/The_Universe_in_a_Nutshell) in my teenage days. I remember single quote from it: 
+Once I've read [The Universe in a Nutshell](https://en.wikipedia.org/wiki/The_Universe_in_a_Nutshell) by this guy Stephen Hawking in my before-teenage days. I still remember single quote from it: 
 
 <blockquote class="blockquote">
     "Think in structures."
@@ -85,18 +84,17 @@ Once I've read (https://en.wikipedia.org/wiki/The_Universe_in_a_Nutshell) in my 
 <img src="/assets/images/posts/2017/imbox-zero/universe.jpg" class="img-thumbnail">
 
 
-I didn't know what that mean, but thotu that Steve might be a smart guy, so tried to.
+I didn't know what that mean, but my dad talked nicely about Steve, so I though he might be a smart guy. So tried to.
 
-Btw, if you don't know much about universe, definitely read this easy-to-understand intro book.
+*Btw, if you don't know much about universe, definitely read this easy-to-understand intro book.*
 
 
-In our use case, instead of having 2 and probably more brain algorithms to resolve incoming message, we will have only 1.
+In our use case, **instead of having 2 or more brain algorithms to resolve incoming message, we will have only 1**.
 
-Thus having more neurons to do job we need them to do.
+Thus having more neurons to do job we need them to do thanks to neuroplasticity. 
 
 Like finding a good coffee anywhere you are :)
 
 
-Bless neuroplasticity and happy thinking!
+Happy thinking!
 
-    
