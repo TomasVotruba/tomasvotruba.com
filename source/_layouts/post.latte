@@ -27,7 +27,7 @@
         {if isset($post['deprecated'])}
             <div class="card border-danger">
                 <div class="card-header text-white bg-danger border-danger">
-                    <strong>Content of this post is deprecated since {$post['deprecated_since']}</strong>
+                    <strong>This post is deprecated since {$post['deprecated_since']}</strong>
                 </div>
                 <div class="card-body">
                     {$post['deprecated_message']|noescape}
@@ -40,7 +40,7 @@
         {if isset($post['updated'])}
             <div class="card border-success">
                 <div class="card-header text-white bg-success border-success">
-                    <strong>Content of this post was updated on {$post['updated_since']}</strong>
+                    <strong>This post was updated on {$post['updated_since']}</strong>
                 </div>
                 <div class="card-body">
                     {$post['updated_message']|noescape}
