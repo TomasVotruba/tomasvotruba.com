@@ -32,7 +32,7 @@ services:
         autowire: true
 
     App\Repository\:
-        source: ../Repository
+        resource: ../Repository
 ```
 
 **IDE plugins an other workarounds put aside**, because this code can be written just with typehints.
@@ -483,7 +483,7 @@ services:
         autowire: true
 
     App\Repository\:
-        source: ../Repository
+        resource: ../Repository
 ```
 
 <br>
