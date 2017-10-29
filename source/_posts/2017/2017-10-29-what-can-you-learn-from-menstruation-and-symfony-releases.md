@@ -1,12 +1,14 @@
 ---
-id: 60
+id: 61
 layout: post
-title: "Be Predictable In Versioning"
+title: "What can You Learn from Menstruation and Symfony Releases"
 perex: '''
-    to save your users brain 
+    ... 
 '''
-tweet: "..."
-tweet_image: "..."
+_tweet: "..."
+_tweet_image: "..."
+related_posts: [
+]
 ---
 
 
