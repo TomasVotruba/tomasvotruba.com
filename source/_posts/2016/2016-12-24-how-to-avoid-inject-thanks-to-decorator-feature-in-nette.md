@@ -3,8 +3,10 @@ id: 19
 layout: post
 title: "How to avoid @inject thanks to Decorator feature in Nette"
 perex: '''
-I often find `@inject` being overused in projects I review while mentoring. They often bring less writing, but in exchange they break [SOLID principles](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)). Today I will show you solution that will **keep your code both small and clean** - **Decorator feature in Nette**.
-'''    
+    I often find `@inject` being overused in projects I review while mentoring. They often bring less writing, but in exchange they break [SOLID principles](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)).
+    <br><br>
+    Today I will show you solution that will **keep your code both small and clean** - **Decorator feature in Nette**.
+'''
 related_posts: [27]
 tweet: "How to avoid @inject by using Decorator in #nettefw?"
 ---
@@ -14,7 +16,7 @@ As [Derek Simons says](https://www.ted.com/talks/simon_sinek_how_great_leaders_i
 ## ...Start with "Why"
 
 Why am I writing this article? I try to improve knowledge interoperability between frameworks so it **is easier to understand and use each other**. The goal is to discourage Nette- (or any framework-) specific things **in favor of those that may be common**.
- 
+
 Today, I will try to agree on setter injection with you. 
 
 
