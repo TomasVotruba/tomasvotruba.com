@@ -10,8 +10,8 @@ perex: '''
     <br><br>
     Are you ready?
 '''
-_tweet: "..."
-_tweet_image: "..."
+tweet: "What can we learn from nature cycles that #symfony and #php already naturally did? #monorepo #nature"
+tweet_image: "assets/images/posts/2017/menstruation/together.png"
 related_posts: [25]
 ---
 
