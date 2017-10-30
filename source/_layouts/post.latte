@@ -81,18 +81,12 @@
     <meta property="og:title" content="{$post['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}" />
     <meta property="og:description" content="{$post['perex']|striptags}" />
     <meta property="og:url" content="{$site_url}/{$post['relativeUrl']}" />
-    {ifset $post['thumbnail']}
-        <meta property="og:image" content="{$site_url}/assets/images/posts/thumbnail/{$post['thumbnail']}" />
-    {/ifset}
 
     {* Twitter sharing *}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@votrubaT">
     <meta name="twitter:title" content="{$post['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}" />
     <meta name="twitter:description" content="{$post['perex']|striptags}" />
-    {ifset $post['thumbnail']}
-        <meta name="twitter:image" content="{$site_url}/assets/images/posts/thumbnail/{$post['thumbnail']}" />
-    {/ifset}
 {/block}
 
 
