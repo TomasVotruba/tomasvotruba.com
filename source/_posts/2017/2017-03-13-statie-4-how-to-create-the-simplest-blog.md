@@ -99,13 +99,13 @@ That should be it.
 Save file, [look on the blog page](http://localhost:8000/blog) and see:
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/statie-4/statie-blog.png" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/statie-4/statie-blog.png" class="img-thumbnail">
 </div>
 
 When you click a post title:
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/statie-4/statie-post.png" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/statie-4/statie-post.png" class="img-thumbnail">
 </div>
 
 

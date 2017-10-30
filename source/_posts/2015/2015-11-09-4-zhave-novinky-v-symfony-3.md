@@ -29,7 +29,7 @@ Migrace Symfony 2 na 3 bude značně zjednodušena tím, že **spolu s verzí 3 
 <br>
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/symfony3/release-plan.png" alt="Release plan">
+    <img src="/assets/images/posts/symfony3/release-plan.png" alt="Release plan">
     <br>
     <em>Verze 2.8 bude LTS. První LTS nové série bude až 3.3 (vyjde v květnu 2017).</em>
 </div>
@@ -120,7 +120,7 @@ Dočasné soubory, logy, nastavení pro PHPUnit, konzolové soubory...
 <br>
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/symfony3/directory-structure.png" alt="Release plan">
+    <img src="/assets/images/posts/symfony3/directory-structure.png" alt="Release plan">
     <br>
     <em>
         Console skripty najdeš nyní ve složce <code>/bin</code>.
@@ -146,7 +146,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/symfony3/profiler-before-after.png" alt="Nový design" style="max-width:60%">
+    <img src="/assets/images/posts/symfony3/profiler-before-after.png" alt="Nový design" style="max-width:60%">
     <br>
     <em>Srovnání staré a nové verze</em>
 </div>
@@ -154,7 +154,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/symfony3/profiler-old-new.png" alt="Starý a nový design">
+    <img src="/assets/images/posts/symfony3/profiler-old-new.png" alt="Starý a nový design">
     <br>
     <em>
         Dříve bylo těžké se rychle zorientovat ve velkém množství informací.
@@ -165,7 +165,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/symfony3/profiler-go-back.gif" alt="Odkaz na stránku" style="max-width:60%">
+    <img src="/assets/images/posts/symfony3/profiler-go-back.gif" alt="Odkaz na stránku" style="max-width:60%">
     <br>
     <em>Snadno se dostaneš z profileru zpět na stránku</em>
 </div>
@@ -266,7 +266,7 @@ Už máš chuť si to vyzkoušet? Hned v příštím článku si ukážeme, *jak
 <br>
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/symfony3/you-got-this-meme.png" alt="A máš to">
+    <img src="/assets/images/posts/symfony3/you-got-this-meme.png" alt="A máš to">
 </div>
 
 <br>

@@ -128,7 +128,7 @@ Just to remind you, the end user is interested in:
 *Profit*
 
 <div>
-    <img src="/../../../../assets/images/posts/2016/open-source/quality-and-coverage.png" alt="Code quality and coverage badges in README">
+    <img src="/assets/images/posts/2016/open-source/quality-and-coverage.png" alt="Code quality and coverage badges in README">
     <br>
     <em>Code quality and coverage badges in README</em>
 </div>
@@ -204,7 +204,7 @@ Today people are scanning the text rather then actually reading. That's why badg
 
 Look on these 2 - what information can we get?
 
-<img src="/../../../../assets/images/posts/2016/open-source/badge-2.png" alt="Confusing badge">
+<img src="/assets/images/posts/2016/open-source/badge-2.png" alt="Confusing badge">
 
 - Test are passing - **GOOD**
 - There is stable tag with "?" coverage - **CONFUSING**
@@ -214,7 +214,7 @@ Look on these 2 - what information can we get?
 
 <small>From [Doctrine2 repository](https://github.com/doctrine/doctrine2/blob/master/README.md).</small>
 
-<img src="/../../../../assets/images/posts/2016/open-source/badge-1.png" alt="Well informative badge">
+<img src="/assets/images/posts/2016/open-source/badge-1.png" alt="Well informative badge">
 
 - Test are passing - **GOOD** 
 - Code quality is 10 - **GOOD**

@@ -100,7 +100,7 @@ Voilá!
 
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/statie-1/statie-cycle.gif" style="width:100%">
+    <img src="/assets/images/posts/2017/statie-1/statie-cycle.gif" style="width:100%">
 </div>
 
 

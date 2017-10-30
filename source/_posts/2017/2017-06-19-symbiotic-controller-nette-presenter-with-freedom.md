@@ -144,7 +144,7 @@ Instead of using magic notation, you can go right with absolute path for templat
 If this would be used by every controller and framework, there would be much lower entry barrier for front-end developers. Another new way to use your IDE the right-way:
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/symbiotic-controller/presenter.gif" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/symbiotic-controller/presenter.gif" class="img-thumbnail">
 </div>
 
 
@@ -204,7 +204,7 @@ Same way you can use your IDE to open the template, you can use it to open prese
 From magic `Homepage:default` to clickable class: 
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/symbiotic-controller/router.gif" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/symbiotic-controller/router.gif" class="img-thumbnail">
 </div>
 
 ## Do you want to try this?

@@ -211,5 +211,5 @@ A vidíme, že tabulka `article` byla úspěšně vytvořena.
 <br>
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2015/doctrine-migrations/success-meme.jpg" alt="You own this!">
+    <img src="/assets/images/posts/2015/doctrine-migrations/success-meme.jpg" alt="You own this!">
 </div>

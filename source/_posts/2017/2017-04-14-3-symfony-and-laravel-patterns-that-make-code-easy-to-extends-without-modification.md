@@ -68,7 +68,7 @@ final ComputerEntrance implements MatrixEntranceInterface
 Programmers won't have to think about raping your classes in the night - **they just use the interface you provide**.
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/extendable-open-source/overide.jpg" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/extendable-open-source/overide.jpg" class="img-thumbnail">
 </div>
 
 **This is code-embodied composition over inheritance**. No documentation nor Wikipedia links required.
@@ -80,7 +80,7 @@ Programmers won't have to think about raping your classes in the night - **they 
 Back to Matrix world: imagine you can listen to every phone booth. Let's say you **write a script, that sends you sms with geo location of the booth everytime it gets called** (favorite tool for agent Smith ;-)).
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/extendable-open-source/booth.png" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/extendable-open-source/booth.png" class="img-thumbnail">
 </div>
 
 This approach is implemented in PHP under name of EventDispatcher. While working with Symfony, **events gave me very similar feeling of freedom** - [in docs](http://symfony.com/doc/current/reference/events.html#kernel-events) as well in small book [A Year with Symfony](https://leanpub.com/a-year-with-symfony).
@@ -179,7 +179,7 @@ services:
 ### Back to the Matrix
 
 <div class="text-center">
-    <img src="/../../../../assets/images/posts/2017/extendable-open-source/renderer.jpg" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/extendable-open-source/renderer.jpg" class="img-thumbnail">
 </div>
 
 Let's say we have a service to render Matrix. It might look like this:
