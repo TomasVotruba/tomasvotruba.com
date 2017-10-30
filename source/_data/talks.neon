@@ -1,6 +1,15 @@
 parameters:
     talks:
         -
+            title: "AST a líná budoucnost upgradování aneb z Nette 0.9 na Nette 3.0 s composer update"
+            year: 2017
+            event_name: "91. Posobota @ Brno"
+            event_link: "https://www.facebook.com/events/481076475625278/"
+            video_link: "https://www.facebook.com/pehapkari/videos/1491668110882994/"
+            slides_link: "https://docs.google.com/presentation/d/1KZaieCmfMNSXNKOGq70PxBdmt3PkyCG_CJtxWY4CBv4/edit?usp=sharing"
+            lang: cs
+
+        -
             title: "Can we upgrade from Symfony 3 to 4 with just composer update?"
             year: 2017
             event_name: "22. Péhápkaři @ LMC"

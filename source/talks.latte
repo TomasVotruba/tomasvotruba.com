@@ -8,13 +8,13 @@ id: talks
     <div class="container">
         <h1>{$title}</h1>
 
-        <h2 class="text-center mb-4">English</h2>
+        <h2 class="text-center mb-4" id="in-english">English</h2>
 
         {include talksTable, lang => "en"}
 
         <br>
 
-        <h2 class="text-center mb-4">Czech</h2>
+        <h2 class="text-center mb-4" id="in-czech">Czech</h2>
 
         {include talksTable, lang => "cs"}
     </div>
