@@ -7,13 +7,23 @@
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0"
     },
+    "require-dev": {
+        "symplify/easy-coding-standard": "^2.5",
+        "phpunit/phpunit": "^6.4",
+        "nikic/php-parser": "v4.0.0alpha1 as 3.1.1"
+    },
     "autoload": {
         "psr-4": {
             "TomasVotruba\\Website\\": "src"
         }
     },
-    "require-dev": {
-        "symplify/easy-coding-standard": "^2.5",
-        "phpstan/phpstan": "^0.8"
+    "autoload-dev": {
+        "psr-4": {
+            "TomasVotruba\\Website\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "check-cs": "vendor/bin/ecs check bin src tests",
+        "fix-cs": "vendor/bin/ecs check bin src tests --fix"
     }
 }
