@@ -7,6 +7,9 @@ perex: '''
 '''
 _tweet: "..."
 _tweet_image: "..."
+
+tested: true
+test_slug: Ast
 ---
 
 *native php-ast* vs. *AST in PHP*
