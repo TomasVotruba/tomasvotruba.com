@@ -9,7 +9,6 @@
     },
     "require-dev": {
         "symplify/easy-coding-standard": "^2.5",
-        "phpstan/phpstan": "^0.8",
         "phpunit/phpunit": "^6.4",
         "nikic/php-parser": "v4.0.0alpha1 as 3.1.1"
     },
@@ -20,12 +19,11 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotuba\\Website\\Tests\\": "tests"
+            "TomasVotruba\\Website\\Tests\\": "tests"
         }
     },
     "scripts": {
         "check-cs": "vendor/bin/ecs check bin src tests",
-        "fix-cs": "vendor/bin/ecs check bin src tests --fix",
-        "phpstan": "vendor/bin/phpstan analyse bin src tests --level max"
+        "fix-cs": "vendor/bin/ecs check bin src tests --fix"
     }
 }
