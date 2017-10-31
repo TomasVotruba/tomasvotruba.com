@@ -45,7 +45,6 @@ final class ModifyTest extends TestCase
     public function testParse(): void
     {
         $nodes = $this->parser->parse(file_get_contents($this->srcDirectory . '/SomeClass.php'));
-
         $this->assertNotSame([], $nodes);
 
         $classNode = $nodes[1]->stmts[0];
