@@ -4,12 +4,12 @@
 >
     <testsuites>
         <testsuite>
-            <directory>tests</directory>
+            <directory>tests/Posts</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
-            <directory>src</directory>
+            <directory>src/Posts</directory>
         </whitelist>
     </filter>
 </phpunit>
