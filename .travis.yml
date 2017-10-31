@@ -38,6 +38,7 @@ jobs:
             - type IN (push)
         php: 7.1
         script:
+            - vendor/bin/statie generate source
             - vendor/bin/statie push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
             - bin/tweet-new-posts
 
