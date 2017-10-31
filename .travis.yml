@@ -10,19 +10,19 @@ before_install:
 install:
     - composer update
 
-script:
-    - vendor/bin/phpunit -v
-    # test that website is generated
-    - vendor/bin/statie generate source
-
 jobs:
     include:
+      -
+        script:
+            - vendor/bin/phpunit -v
+            # test that website is generated
+            - vendor/bin/statie generate source
+
       - stage: static analysis and code coverage
         php: 7.1
         script:
             - vendor/bin/ecs check bin src tests
             - vendor/bin/phpstan analyse bin src tests --level max
-
       -
         php: 7.1
         script:

@@ -4,7 +4,7 @@ namespace TomasVotruba\Website\Posts\Year2017\Ast;
 
 final class SomeClass
 {
-    public function someMethod()
+    public function someMethod(): void
     {
     }
 }
