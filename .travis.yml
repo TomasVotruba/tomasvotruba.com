@@ -2,6 +2,13 @@ language: php
 
 php: 7.1
 
+matrix:
+  include:
+    # run extra build with PHP 7.1
+    - php: 7.1
+      # add variables to enable coverage, coding standard check and static analysis
+      env: PHPUNIT_FLAGS="--coverage-clover coverage.xml"
+
 install:
     - composer update
 
