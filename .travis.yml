@@ -6,10 +6,14 @@ install:
     - composer update
 
 script:
+    # run tests for tested posts (with "tested: true" in header configuration)
+    - vendor/bin/phpunit $PHPUNIT_FLAGS
+    # turn off XDebug
+    - phpenv config-rm xdebug.ini || return 0
     # check Coding Standard
-    - vendor/bin/ecs check bin src
+    - vendor/bin/ecs check bin src tests
     # check PHPStan
-    - vendor/bin/phpstan analyse bin src --level max
+    - vendor/bin/phpstan analyse bin src tests --level max
     # test that website is generated
     - vendor/bin/statie generate source
     # re-build website when on master only
@@ -19,6 +23,14 @@ script:
           # tweet new posts, if any
           bin/tweet-new-posts
       fi
+
+after_script:
+  # upload coverage.xml file to Coveralls to analyze it
+  - |
+    if [[ $PHPUNIT_FLAGS != "" ]]; then
+      wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
+      php coveralls.phar --verbose
+    fi
 
 notifications:
     email: never
