@@ -23,7 +23,7 @@ We will look on release management. Non from traditional technical point of view
 
 **Why?** When I'm stuck with complicated architectural problem and can't figure it out, I take a break and **go for a walk**. **Just observing world around me**, absorbing inspiration without expectations - *serendipity*. 
 
-To be honest, **many technology we use originated from the nature**. Processor and hard drives from brain, camera lenses from eyes and design pattern from pattern of nature. What else are falling leaves of tree in autumn? An **event subscriber**.
+To be honest, **many technologies we use originated from the nature**. Processor and hard drives from brain, camera lenses from eyes and design pattern from pattern of nature. What else are falling leaves of tree in autumn? An **event subscriber**.
 
 
 ### Menstruation Cycle as Inspiration
@@ -73,7 +73,7 @@ I first realized this at Fabien's talk about Symfony new release cycle on [Symfo
 
 - **Major versions every 2 years, minor every 6 months.**
 
-So simple yet so amazing. I don't think about "when will the new Symfony come?" no more.
+So simple yet so amazing. I don't think about "when will the new Symfony come?" any more.
 
 
 ### What about PHP?
@@ -94,7 +94,7 @@ I think they're doing **the right thing** right.
 
 ## Why We Should Menstruate Together?
 
-We're getting back software, to releases and monorepo. (If you see term *monorepo* first time, read [this legendary post by *danluu*](http://danluu.com/monorepo/)). 
+We're getting back to software releases and monorepo. (If you see term *monorepo* first time, read [this legendary post by *danluu*](http://danluu.com/monorepo/)). 
 
 Some people say that big disadvantage of monorepo is that **they have to tag their packages all together** (like Symfony) even if nothing changed in any of them. 
 
@@ -203,7 +203,7 @@ On the other hand a *package user*, I bet you recall at least one package you **
 
 I like this synchronization, predictability, stability and maturation in our PHP ecosystem. That's why I'm trying to **synchronize with Symfony release cycles**. As from huge to small, as from seasons of year to menstruation, as from PHP to Symfony,
 
-I bet you didn't notice, but with [Symplify](https://github.com/Symplify) I try to **release mayor version to minor of Symfony**. Version 2.0 was released on [July 6th 2017](https://github.com/Symplify/Symplify/releases/tag/v2.0.0), right after [Symfony 3.3 release](https://symfony.com/roadmap?version=3.3#checker) in May.
+I bet you didn't notice, but with [Symplify](https://github.com/Symplify) I try to **release major version to minor of Symfony**. Version 2.0 was released on [July 6th 2017](https://github.com/Symplify/Symplify/releases/tag/v2.0.0), right after [Symfony 3.3 release](https://symfony.com/roadmap?version=3.3#checker) in May.
 
 Being predictable with BC breaks, support for older version and consistent with adding new version.
 
