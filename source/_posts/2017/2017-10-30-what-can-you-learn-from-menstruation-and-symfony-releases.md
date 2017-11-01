@@ -127,7 +127,7 @@ Which of these 3 applications would you pick to maintain and upgrade based on th
 
 <br>
 
-or **B** with *per-vendor-sync*
+or **B** with [*per-vendor-sync*](https://getcomposer.org/doc/04-schema.md#name)
 
 ```javascript
 {
