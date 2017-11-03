@@ -1,6 +1,22 @@
 parameters:
     talks:
         -
+            title: "Continual Upgrading with AST and Rector"
+            year: 2017
+            event_name: "PHP Central Europe Conference 2017 @ Poland"
+            event_link: "https://2017.phpce.eu/"
+            slides_link: "https://docs.google.com/presentation/d/1jAmvsXAavK4P4KlUASxxsmYbYHk153Dv5LmfqyZFmVI/edit?usp=sharing"
+            lang: en
+
+        -
+            title: "Easy Coding Stadard - Setup Coding Standards under 5 minutes"
+            year: 2017
+            event_name: "PHP Central Europe Conference 2017 @ Poland"
+            event_link: "https://2017.phpce.eu/"
+            slides_link: "https://docs.google.com/presentation/d/1MLVUNdukSMXTCIDf1mndajiDKvuI5vgf1Y_Uer1IWQE/edit?usp=sharing"
+            lang: en
+
+        -
             title: "AST a líná budoucnost upgradování aneb z Nette 0.9 na Nette 3.0 s composer update"
             year: 2017
             event_name: "91. Posobota @ Brno"
