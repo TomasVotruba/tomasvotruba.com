@@ -3,16 +3,18 @@ id: 63
 layout: post
 title: "How to change PHP code with Abstract Syntax Tree"
 perex: '''
-    ...
+    Today we can do amazing things with PHP. Thanks to AST and [nikic/php-parser](https://github.com/nikic/PHP-Parser) we can create very **narrow artificial intelligence, which can work for us**.
+    <br><br>
+    Let's create first its synapse! 
 '''
-_tweet: "..."
-_tweet_image: "..."
+tweet: "Let AST change code for you #php #phpparser #ast #ai" 
+tweet_image: "..."
 
 tested: true
 test_slug: Ast
 ---
 
-We need to make clear what are we talking about right at the beginning. When we say "PHP ast" There are 2 things that most of us can imagine:
+We need to make clear what are we talking about right at the beginning. When we say "PHP AST", you can talk about 2 things:
 
 
 ### 1. php-ast 
@@ -32,14 +34,14 @@ Nikita explains [differences between those 2 in more detailed technical way](htt
 </blockquote>
 
 
- Which one would you pick? If you're lazy like me and hate reading code and writing code, the 2nd one.
+ Which one would you pick? If you're **lazy like me and hate reading code and writing code** over and over again, the 2nd one.
   
   
 ## What work can `nikic/PHP-Parser` do for us?
  
-Saying that, we skip the read-feature of this package. To drop at least one awesome packages that is using it like that - [PHPStan](https://github.com/phpstan/phpstan). Btw, back in 2012, even [Fabien wanted to use it in PHP CS Fixer](https://github.com/nikic/PHP-Parser/issues/41), but it wasn't ready yet.
+Saying that, **we skip the read-feature** of this package - it's used by [PHPStan](https://github.com/phpstan/phpstan) or [BetterReflection](https://github.com/Roave/BetterReflection) - and **move right to the writing-feature**. Btw, back in 2012, even [Fabien wanted to use it in PHP CS Fixer](https://github.com/nikic/PHP-Parser/issues/41), but it wasn't ready yet.
 
-### Ok, so when we say *modify* and *AST* together, what can you brainstorm?
+### When we say *modify* and *AST* together, what can you brainstorm?
 
 - change method name
 - change class name
@@ -66,7 +68,6 @@ composer require nikic/php-rector
 Create parser and parse the file:
 
 ```php
-
 use PhpParser\Parser;
 use PhpParser\ParserFactory;
 
@@ -77,7 +78,7 @@ $nodes = $parser->parse(file_get_contents(__DIR__ . '/SomeClass.php'));
 
 ### 2. Find Method Node
 
-A conventions to work with Nodes is to traverse them. We don't need to do that manually with nested `foreach()` shenanigans. Instead we can use [`PhpParser\NodeTraverser`](https://github.com/nikic/PHP-Parser/blob/master/lib/PhpParser/NodeTraverser.php):
+The best way to work with Nodes is to **traverse them with [`PhpParser\NodeTraverser`](https://github.com/nikic/PHP-Parser/blob/master/lib/PhpParser/NodeTraverser.php)**:
 
 ```php
 $nodeTraverser = new PhpParser\NodeTraverser;
@@ -86,21 +87,17 @@ $traversedNodes = $nodeTraverser->traverse($nodes);
 
 Now we traversed all nodes, but nothing actually happened. Do you think we forgot to invite somebody in?
 
-Yes, we need [`PhpParser\NodeVisitor`](https://github.com/nikic/PHP-Parser/blob/master/lib/PhpParser/NodeVisitor.php) - an interface with 4 methods. We can either implement all 4 of them, or use [`PhpParser\NodeVisitorAbstract`](https://github.com/nikic/PHP-Parser/blob/master/lib/PhpParser/NodeVisitorAbstract.php) to save some work.
+Yes, **we need [`PhpParser\NodeVisitor`](https://github.com/nikic/PHP-Parser/blob/master/lib/PhpParser/NodeVisitor.php)** - an interface with 4 methods. We can either implement all 4 of them, or use [`PhpParser\NodeVisitorAbstract`](https://github.com/nikic/PHP-Parser/blob/master/lib/PhpParser/NodeVisitorAbstract.php) to save some work:
 
-I'm lazy, so:
- 
 ```php
 use PhpParser\NodeVisitorAbstract;
 
-final class ChangeMethodNameNodeVisitor extend NodeVisitorAbstract
+final class ChangeMethodNameNodeVisitor extends NodeVisitorAbstract
 {
 }
 ```
 
-We need to find a `ClassMethod` node. I know that, because I use this package often, **but you can [find all nodes here](https://github.com/nikic/PHP-Parser/tree/master/lib/PhpParser/Node)**:
-
-To do that, we'll use `enterNode()` method.
+We need to find a `ClassMethod` node. I know that, because I use this package often, **but you can [find all nodes here](https://github.com/nikic/PHP-Parser/tree/master/lib/PhpParser/Node)**. To do that, we'll use `enterNode()` method:
 
 ```php
 use PhpParser\Node;
@@ -148,9 +145,9 @@ final class ChangeMethodNameNodeVisitor extend NodeVisitorAbstract
 ```
 
 
-To work with class names, interface names, trait names, method names and so on, we need to use `PhpParser\Node\Name` (at least since `nikic/php-parser` v4; before they were mostly bare strings).
+To work with **class names, interface names, method names** etc., we need to **use `PhpParser\Node\Name`**.
 
-Oh, almost forgot, we need to actually invite visitor to the `NodeTraverser`:
+Oh, I almost forgot, we need to actually **invite visitor to the `NodeTraverser`** like this:
  
 ```php
 $nodeTraverser = new PhpParser\NodeTraverser;
@@ -162,8 +159,9 @@ $traversedNodes = $nodeTraverser->traverse($nodes);
 
 Last step is saving the file ([see docs](https://github.com/nikic/PHP-Parser/blob/master/doc/component/Pretty_printing.markdown)). We have 2 options here:
 
+<br>
 
-### 1. Bare Saving
+**A. Dumb Saving**
 
 ```php
 $prettyPrinter = new PhpParser\PrettyPrinter\Standard;
@@ -172,9 +170,11 @@ $newCode = $prettyPrinter->prettyPrintFile($traversedNodes);
 file_put_contents(__DIR__ . '/SomeClass.php', $newCode);
 ```
 
-But this will actually modify spaces, removes comments and other things, that AST doesn't support. How to make it right?
+But this will actually **removes spaces and comments**. How to make it right?
 
-### 2. Format-Preserving Printer
+<br>
+
+**B. Format-Preserving Printer**
 
 It requires more steps, but you will have output much more under control.
 
@@ -220,11 +220,24 @@ $newCode = $printer->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
 
 Congrats, now you've successfully renamed method to `newName`! 
 
-Do you want to see more advanced operations, like those we brainstormed in the beginning? Look at package I'm working on which should **automate application upgrades** - **[RectorPHP](https://github.com/RectorPHP/Rector)**.
 
+## Advanced Changes? With Rector!
 
-Let me know in the comments, what would you like to read about AST and it's Traversing and Modification. I might inspire by your ideas.
+Do you want to see more advanced operaheretions, like those we [brainstormed in the beginning](#when-we-say-em-modify-em-and-em-ast-em-together-what-can-you-brainstorm)? Look at package I'm working on which should **automate application upgrades** - **[RectorPHP](https://github.com/RectorPHP/Rector)**.
+
 
 <br>
+
+### This post is Tested
+
+This is the first [tested post](https://pehapkari.cz/blog/2017/01/12/why-articles-with-code-examples-should-be-CI-tested/) I've added to my blog.
+ It means **it will be updated as new versions of code used here will appear** → *LTS post* that will work with newer `nikic/php-parser` versions. 
+ 
+ Do you want to see those tests? Just click *Tested* badge in the top. 
+
+<br>
+
+Let me know in the comments, what would you like to read about AST and its Traversing and Modification. I might inspire by your ideas.
+
 
 Happy traversing!
