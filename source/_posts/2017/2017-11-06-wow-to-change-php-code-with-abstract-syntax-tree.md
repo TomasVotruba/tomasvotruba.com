@@ -1,7 +1,7 @@
 ---
 id: 63
 layout: post
-title: "How to change PHP code with Abstract Syntax Tree" # todo: rename
+title: "How to change PHP code with Abstract Syntax Tree"
 perex: '''
     ...
 '''
