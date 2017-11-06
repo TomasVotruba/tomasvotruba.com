@@ -54,7 +54,7 @@ Saying that, **we skip the read-feature** of this package - it's used by [PHPSta
 - refactor Laravel App to Symfony App
 - ...
 
-It can to many things for you, depends on how much work you put it it. Today we will try to **change method name**. 
+It can do many things for you, depends on how much work you put in it. Today we will try to **change method name**. 
 
 
 ## 4 Steps to Changing a name
