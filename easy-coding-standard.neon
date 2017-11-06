@@ -25,3 +25,7 @@ parameters:
     exclude_checkers:
         # buggy, fix first
         - Symplify\CodingStandard\Fixer\ArrayNotation\StandaloneLineInMultilineArrayFixer
+
+    skip:
+        Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
+            - */src/Posts/Year2017/Ast/*
