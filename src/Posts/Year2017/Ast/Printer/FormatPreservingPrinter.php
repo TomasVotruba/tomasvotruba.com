@@ -7,20 +7,13 @@ use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor;
 use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
-use PhpParser\PrettyPrinter;
 use PhpParser\PrettyPrinter\Standard;
 
 final class FormatPreservingPrinter
 {
     public function traverseWithVisitorAndPrint(NodeVisitor $nodeVisitor, string $code): string
     {
-        $lexer = new Emulative([
-            'usedAttributes' => [
-                'comments',
-                'startLine', 'endLine',
-                'startTokenPos', 'endTokenPos',
-            ],
-        ]);
+        $lexer = $this->createLexer();
 
         $parser = new Php7($lexer);
         $traverser = new NodeTraverser;
@@ -41,5 +34,16 @@ final class FormatPreservingPrinter
         // our code end
 
         return (new Standard)->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
+    }
+
+    private function createLexer(): Emulative
+    {
+        return new Emulative([
+            'usedAttributes' => [
+                'comments',
+                'startLine', 'endLine',
+                'startTokenPos', 'endTokenPos',
+            ],
+        ]);
     }
 }

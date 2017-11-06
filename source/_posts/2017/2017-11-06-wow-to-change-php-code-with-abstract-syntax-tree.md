@@ -182,13 +182,14 @@ It requires more steps, but you will have output much more under control.
 Without our code, it would look like this:
 
 ```php
-use PhpParser\Lexer;
+use PhpParser\Lexer\Emulative;
 use PhpParser\NodeTraverser;
 use PhpParser\NodeVisitor;
-use PhpParser\Parser;
-use PhpParser\PrettyPrinter;
+use PhpParser\NodeVisitor\CloningVisitor;
+use PhpParser\Parser\Php7;
+use PhpParser\PrettyPrinter\Standard;
 
-$lexer = new Lexer\Emulative([
+$lexer = new Emulative([
     'usedAttributes' => [
         'comments',
         'startLine', 'endLine',
@@ -196,11 +197,9 @@ $lexer = new Lexer\Emulative([
     ],
 ]);
 
-$parser = new Parser\Php7($lexer);
-$traverser = new NodeTraverser();
-$traverser->addVisitor(new NodeVisitor\CloningVisitor);
-
-$printer = new PrettyPrinter\Standard;
+$parser = new Php7($lexer);
+$traverser = new NodeTraverser;
+$traverser->addVisitor(new CloningVisitor);
 
 $oldStmts = $parser->parse($code);
 $oldTokens = $lexer->getTokens();
@@ -209,12 +208,14 @@ $newStmts = $traverser->traverse($oldStmts);
 
 // our code start
 
-$traversedNodes->addVisitor(new ChangeMethodNameNodeVisitor);
+$nodeTraverser = new NodeTraverser;
+$nodeTraverser->addVisitor($nodeVisitor);
+
 $newStmts = $traversedNodes = $nodeTraverser->traverse($newStmts);
 
 // our code end
 
-$newCode = $printer->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
+$newCode = (new Standard)->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
 ```
 
 
