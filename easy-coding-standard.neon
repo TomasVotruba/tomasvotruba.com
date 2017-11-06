@@ -28,4 +28,4 @@ parameters:
 
     skip:
         Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
-            - */src/Posts/Year2017/Ast/NodeVisitor/*
+            - */src/Posts/Year2017/Ast/*
