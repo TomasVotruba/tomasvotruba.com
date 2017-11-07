@@ -62,7 +62,7 @@ It can to many things for you, depends on how much work you put it it. Today we 
 ### 1. Parse code to Nodes
 
 ```bash
-composer require nikic/php-rector
+composer require nikic/php-parser
 ```
 
 Create parser and parse the file:
