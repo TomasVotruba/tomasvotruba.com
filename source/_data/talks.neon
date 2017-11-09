@@ -15,6 +15,7 @@ parameters:
             event_link: "https://2017.phpce.eu/"
             slides_link: "https://docs.google.com/presentation/d/1MLVUNdukSMXTCIDf1mndajiDKvuI5vgf1Y_Uer1IWQE/edit?usp=sharing"
             lang: en
+            related_post: "/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/"
 
         -
             title: "AST a líná budoucnost upgradování aneb z Nette 0.9 na Nette 3.0 s composer update"
@@ -41,6 +42,7 @@ parameters:
             event_link: "https://www.nettecamp.cz/"
             slides_link: "https://docs.google.com/presentation/d/1Cx0W9Fj8AYrBzDyJjnFU_EXW9py_j-yFqxo8ztdaldk/edit?usp=sharing"
             lang: en
+            related_post: "/blog/2017/08/21/5-useful-rules-from-symplify-coding-standard/"
 
         -
             title: "Symfony Forms on a Healthy Diet"
@@ -58,6 +60,7 @@ parameters:
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1769747516670517/1341201322596341/?type=1"
             slides_link: "https://docs.google.com/presentation/d/1EL3Vo9A7zphWYwG1tDuGpcMt-3F_DwVwWDpdata5nUw/edit?usp=sharing"
             lang: en
+            related_post: "/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/"
 
         -
             title: "Static sites in PHP? Simple with Statie"
@@ -67,6 +70,7 @@ parameters:
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/?type=1"
             slides_link: "https://docs.google.com/presentation/d/1Org07oQWbokCe6Q1FU8o0fe5iEfMGuDfZjKGcnI72BA/edit?usp=sharing"
             lang: en
+            related_post: "/blog/2017/02/20/statie-how-to-run-it-locally/"
 
         -
             title: "How to combine PHP_CodeSniffer and PHP CS Fixer with Love"
@@ -76,6 +80,7 @@ parameters:
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1877987242460289/1321227224593751/?type=1"
             slides_link: "https://docs.google.com/presentation/d/1jHSWF-lMlbb30XO-uf4el_k1HB7mK6Br93MI4CS_n6Y/edit?usp=sharing"
             lang: en
+            related_post: "/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/"
 
         -
             title: "KISS Presenter bez Nette"
@@ -93,6 +98,7 @@ parameters:
             event_link: "http://erudio.cz/"
             slides_link: "https://docs.google.com/presentation/d/1f3WokfmgBTRtUssWj7fupxjMBZzI6BuocrWSMg8skAU/edit?usp=sharing"
             lang: cs
+            related_post: "/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/"
 
         -
             title: "Jak zdarma hostovat na Githubu jemně dynamické stránky?"
@@ -102,6 +108,7 @@ parameters:
             video_link: "https://www.youtube.com/watch?v=y0mTpH5vtJc"
             slides_link: "https://drive.google.com/open?id=1nDFqW6QiW56d9q4zSFr0JoVD4_axOMlhjU-6NZrKLhE"
             lang: cs
+            related_post: "/blog/2017/02/20/statie-how-to-run-it-locally/"
 
         -
             title: "PHP TIPY a TRIKY - Jak využít plný potenciál toho, co už máte a ušetřit si čas"
@@ -135,6 +142,7 @@ parameters:
             video_link: "https://www.youtube.com/watch?v=D827D5ILfh8"
             slides_link: "https://www.slideshare.net/phplive/tom-votruba-jako-vinnetou-a-old-shatterhand-refaktoruj-nenvist-v-ptelstv"
             lang: cs
+
         -
             title: "Sex na jednu noc vs. láska na celý život"
             year: 2016
@@ -142,6 +150,7 @@ parameters:
             event_link: "https://devel.cz/konference/2016"
             slides_link: "https://www.slideshare.net/TomVotruba/tom-votruba-sex-na-jednu-noc-vs-lska-na-cel-ivot-devel-2016"
             lang: cs
+
         -
             title: "Jak přežít Symfony 3"
             year: 2015
