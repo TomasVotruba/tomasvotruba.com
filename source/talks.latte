@@ -67,9 +67,16 @@ id: talks
                     {/ifset}
 
                     {ifset $talk['slides_link']}
-                        <a href="{$talk['slides_link']}" class="btn btn-warning btn-sm mt-3 mb-2">
+                        <a href="{$talk['slides_link']}" class="btn btn-warning btn-sm mt-3 mr-2 mb-2">
                             <em class="fa fa-fw fa-slideshare"></em>
                             See Slides
+                        </a>
+                    {/ifset}
+
+                    {ifset $talk['related_post']}
+                        <a href="{$talk['related_post']}" class="btn btn-info btn-sm mt-3 mb-2">
+                            <em class="fa fa-fw fa-book"></em>
+                            Read Related Post
                         </a>
                     {/ifset}
                 </td>
