@@ -239,7 +239,7 @@ final class ExceptionNameSniff implements Sniff
 ```
 
 
-You can find [final Sniff on Github](https://github.com/Symplify/Symplify/blob/master/packages/CodingStandard/src/Sniffs/Naming/ExceptionNameSniff.php) and use it right away of course.
+You can find [final Sniff on Github](https://github.com/Symplify/Symplify/blob/eeeaab688f6b349e55ab0b3179749dc9e5e49035/packages/CodingStandard/src/Sniffs/Naming/ExceptionNameSniff.php) and use it right away of course.
 
 
 ## How to run it?
