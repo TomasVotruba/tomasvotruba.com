@@ -1,8 +1,10 @@
 ---
 id: 4
 layout: post
-title: "The best of SymfonyCon 2015"
-perex: "Annual SymfonyCon held this year in Paris. Despite all the attacks, Paris lives on. Maybe more. An example of this can be 1000 visitors who arrived at the event. I represented Bohemia with Dennis, and also with Petr and Cuba from Lmc.eu"
+title: "The Best of SymfonyCon 2015"
+perex: '''
+    Annual SymfonyCon held this year in Paris. Despite all the attacks, Paris lives on. Maybe more. An example of this can be 1000 visitors who arrived at the event. I represented Bohemia with Dennis, and also with Petr and Cuba from Lmc.eu.
+'''
 ---
 
 <div class="text-center">

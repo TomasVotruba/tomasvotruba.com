@@ -8,7 +8,6 @@ perex: '''
     Let's create first its synapse! 
 '''
 tweet: "Let AST change code for you #php #phpparser #ast #ai" 
-tweet_image: "..."
 
 tested: true
 test_slug: Ast
