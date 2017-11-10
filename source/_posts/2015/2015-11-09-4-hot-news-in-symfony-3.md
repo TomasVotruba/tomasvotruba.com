@@ -58,15 +58,15 @@ Earlier long registration
 # services.yml 
 
 services:
-	myService:
-		class: MyBundle\MyService
-    	arguments: [ @dependency1, @dependency2 ]
-	
-	dependency1:
-		class: MyBundle\Dependency1
-	
-	dependency2:
-		class: MyBundle\Dependency2
+    myService:
+        class: MyBundle\MyService
+        arguments: [ @dependency1, @dependency2 ]
+
+    dependency1:
+        class: MyBundle\Dependency1
+
+    dependency2:
+        class: MyBundle\Dependency2
 ```
 
 Now you can cut to
@@ -75,9 +75,9 @@ Now you can cut to
 # services.yml
 
 services:
-	myService:
-		class: MyBundle\MyService
-	    autowiring: true
+    myService:
+        class: MyBundle\MyService
+        autowiring: true
 ```
 
 **How does it work?**
@@ -96,8 +96,8 @@ Instead of a specific type of service you require an interface that implements t
 
 services:   
     dependency1:
-	    class: MyBundle\Dependency1
-	    autowiring_types: MyBundle\MyInterface
+        class: MyBundle\Dependency1
+        autowiring_types: MyBundle\MyInterface
 ```
 
 <hr>
