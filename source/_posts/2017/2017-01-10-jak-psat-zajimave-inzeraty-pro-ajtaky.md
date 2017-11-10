@@ -1,5 +1,4 @@
 ---
-id: 21
 layout: post
 title: "Jak psát zajímavé inzeráty pro ajťáky"
 perex: '''
