@@ -1,5 +1,4 @@
 ---
-id: 4
 layout: post
 title: To nejlepší ze SymfonyConu 2015
 perex: "Každoročně pořádaný SymfonyCon se letos konal v Paříži. Přes všechny útoky Paříž žije dál. Možná o to víc. Důkazem toho může být i 1000 návštěvníků, kteří na akci dorazili. Čechy jsem reprezentoval spolu s Dennisem, a taky Petrem a Kubou z Lmc.eu"
@@ -78,7 +77,7 @@ Jejich microservices nevyužívají interní API, ktére jim přišlo zbytečně
 
 ## 3. New Symfony Tips and Tricks
 
-A teď pro něco pro každého:
+A teď něco pro každého:
 
 <div class="text-center">
     <img src="/assets/images/posts/2015/symfonycon/symfonycon-tips-and-tricks.jpg" alt="Tipy a triky">
