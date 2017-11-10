@@ -5,7 +5,7 @@ title: "How to Deal With Haters in Comments"
 perex: '''
     That's what I was asked yesterday for about fifth person already. How do I deal with that when I write an article tweet, just doing good things godly enlightenment, and someone does not like it and throwing dirt on me?
 '''
-tweet_todo: "Do you want to start writing articles and are you scared? Read how to deal with the hates in comments in 3 steps #feedback #github #opensource"
+tweet: "Do you want to start writing articles and are you scared? Read how to deal with the hates in comments in 3 steps #feedback #github #opensource"
 tweet_image: "/assets/images/posts/2017/feedback/feedback.jpg"
 ---
 
