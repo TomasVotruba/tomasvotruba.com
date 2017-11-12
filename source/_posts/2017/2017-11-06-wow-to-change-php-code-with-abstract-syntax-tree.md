@@ -19,12 +19,12 @@ We need to make clear what are we talking about right at the beginning. When we 
 
 ### 1. php-ast 
 
-This is native extension which exports the AST internally used by PHP 7.0+. It allows **read-only** and is very fast, since it's native C extension. Internal AST was added to PHP 7.0 by skill-full Nikita Popov in [this RFC](https://wiki.php.net/rfc/abstract_syntax_tree). You can find it on Github under [`nikic/php-ast`](https://github.com/nikic/php-ast).
+This is native extension which exports the AST internally used by PHP 7.0+. It allows **read-only** and is very fast, since it's native C extension. Internal AST was added to PHP 7.0 by skill-full Nikita Popov in [this RFC](https://wiki.php.net/rfc/abstract_syntax_tree). You can find it on GitHub under [`nikic/php-ast`](https://github.com/nikic/php-ast).
 
 
 ### 2. PHP AST
 
-This is AST of PHP in Object PHP. It will take your PHP code, turn into PHP object with autocomplete in IDE and **allows you to modify code**. You can find it on Github under [`nikic/PHP-Parser`](https://github.com/nikic/PHP-Parser/). 
+This is AST of PHP in Object PHP. It will take your PHP code, turn into PHP object with autocomplete in IDE and **allows you to modify code**. You can find it on GitHub under [`nikic/PHP-Parser`](https://github.com/nikic/PHP-Parser/). 
 
 Nikita explains [differences between those 2 in more detailed technical way](https://github.com/nikic/php-ast#differences-to-php-parser). Personally I love [this human reason](https://github.com/nikic/PHP-Parser/blob/master/doc/0_Introduction.markdown#what-is-this-for) the most:
 
@@ -224,7 +224,7 @@ Congrats, now you've successfully renamed method to `newName`!
 
 ## Advanced Changes? With Rector!
 
-Do you want to see more advanced operaheretions, like those we [brainstormed in the beginning](#when-we-say-em-modify-em-and-em-ast-em-together-what-can-you-brainstorm)? Look at package I'm working on which should **automate application upgrades** - **[RectorPHP](https://github.com/RectorPHP/Rector)**.
+Do you want to see more advanced operations, like those we [brainstormed in the beginning](#when-we-say-em-modify-em-and-em-ast-em-together-what-can-you-brainstorm)? Look at package I'm working on which should **automate application upgrades** - **[RectorPHP](https://github.com/RectorPHP/Rector)**.
 
 
 <br>
