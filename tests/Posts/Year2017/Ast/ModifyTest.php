@@ -59,11 +59,13 @@ final class ModifyTest extends TestCase
         $this->nodeTraverser->addVisitor(new ChangeMethodNameNodeVisitor);
 
         $nodes = $this->parser->parse(file_get_contents($this->srcDirectory . '/SomeClass.php'));
+
         /** @var ClassMethod $classMethodNode */
         $classMethodNode = $this->nodeFinder->findFirstInstanceOf($nodes, ClassMethod::class);
         $this->assertSame('someMethod', $classMethodNode->name->toString());
 
         $newNodes = $this->nodeTraverser->traverse($nodes);
+
         /** @var ClassMethod $classMethodNode */
         $classMethodNode = $this->nodeFinder->findFirstInstanceOf($newNodes, ClassMethod::class);
         $this->assertSame('changedName', $classMethodNode->name->toString());

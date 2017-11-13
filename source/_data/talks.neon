@@ -159,3 +159,4 @@ parameters:
             video_link: "https://www.youtube.com/watch?v=N-4HIjWfRQ0"
             slides_link: "https://www.slideshare.net/pehapkari/tom-votruba-jak-pet-symfony-3-1-sraz-ptel-symfony-v-praze"
             lang: cs
+            related_post: "/blog/2015/11/09/4-hot-news-in-symfony-3"

@@ -1,5 +1,4 @@
 ---
-id: 2
 layout: post
 title: 4 žhavé novinky v Symfony 3
 perex: '''
