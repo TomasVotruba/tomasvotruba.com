@@ -9,6 +9,10 @@ tweet: "Do you want to start writing articles and are you scared? Read how to de
 tweet_image: "/assets/images/posts/2017/feedback/feedback.jpg"
 ---
 
+
+@TODO!
+
+
 I learned this process while being a maintainer of [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death/) for 1 year, where I led dozens of online-hate-wars and found that it leads nowhere. Then I tried another way. Successful.
 
 Today I will try to summarize them in 3 points.

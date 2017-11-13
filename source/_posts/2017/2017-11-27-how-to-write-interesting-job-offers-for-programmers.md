@@ -13,6 +13,9 @@ tweet_image: "/assets/images/posts/2017/job-offers/attitude.jpg"
 ---
 
 
+@TODO!
+
+
 ## 1.AD is an advertising article, it should look like from a Copywriter
 
 The entire ad is one of seduction. At the end of the candidate must get to bed so that he liked. So that it gives the next morning.
