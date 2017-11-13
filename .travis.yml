@@ -1,46 +1,36 @@
 language: php
 
-php:
-   - 7.1
-
-before_install:
-    # hide xdebug to speed up
-    - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{,.disabled} || echo "xdebug not available"
+php: 7.1
 
 install:
     - composer update
 
-jobs:
-    include:
-      -
-        script:
-            - vendor/bin/phpunit -v
-            # test that website is generated
-            - vendor/bin/statie generate source
+script:
+    # run tests for tested posts (with "tested: true" in header configuration)
+    - vendor/bin/phpunit --coverage-clover coverage.xml
+    # turn off XDebug
+    - phpenv config-rm xdebug.ini || return 0
+    # check Coding Standard
+    - vendor/bin/ecs check bin src tests
+    # check PHPStan
+    - vendor/bin/phpstan analyse bin src tests --level max
+    # test that website is generated
+    - vendor/bin/statie generate source
+    # re-build website when on master only
+    - |
+      if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
+          vendor/bin/statie push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
+          # tweet new posts, if any
+          bin/tweet-new-posts
+      fi
 
-      - stage: static analysis and code coverage
-        php: 7.1
-        script:
-            - vendor/bin/ecs check bin src tests
-      -
-        php: 7.1
-        script:
-            # get xdebug back for coverage
-            - mv ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini{.disabled,}
-            - vendor/bin/phpunit --coverage-clover coverage.xml
-        after_script:
-            - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
-            - php coveralls.phar --verbose --config .coveralls.yml
-
-      - stage: publish github pages and tweet
-        if:
-            - branch = master
-            - type IN (push)
-        php: 7.1
-        script:
-            - vendor/bin/statie generate source
-            - vendor/bin/statie push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN}
-            - bin/tweet-new-posts
+after_script:
+  # upload coverage.xml file to Coveralls to analyze it
+  - |
+    if [[ $PHPUNIT_FLAGS != "" ]]; then
+      wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
+      php coveralls.phar --verbose
+    fi
 
 notifications:
     email: never
