@@ -8,11 +8,11 @@ perex: '''
     **I recently talked with one high-school guy and I realized that college is still seen as something sacred, important and mostly from no other than teachers and parents**. I told myself that I'll write down my insights and advice that I would give my 8 years younger self. **If you are 18-19 years're considering what to do next, go ahead**.
 '''
 
-tweet: "@todo"
+tweet: "7 Tips You Should Know Before Going To University #studying #unschooling #education #eduhacking"
 tweet_image: "assets/images/posts/2017/university/procrastination.png"
 ---
 
-**Disclaimer: these are my personal experience with Universities in Brno, Czech Republic between 2008 and 2013. It can differ for your country, your city, your year spend on collage, your field etc. Please consider that while reading. Well, if you are already on university. The main goal of this post to start discussion and challenge you and your personal experiences.** 
+**Disclaimer: these is my personal experience with universities in Brno, Czech Republic between 2008 and 2013. It can differ for your country, your city, your year spend on collage, your field etc. Please consider that while reading. Well, if you are already on university. The main goal of this post to start discussion and challenge you and your personal experiences.** 
 
 
 ## 1. Ask Someone Who Didn't Go to College
@@ -39,7 +39,7 @@ There are cheap ways to find such people (in Czech Republic):
 
 ## 3. The University can be Incubator
 
-Without too much trouble, you can get **3 years time** to explore the World and yourself. Rent and food is super cheap (like 4x times less then my currect), parent might help you with financing or you can find part-time - as student are very favorite labour force. 
+Without too much trouble, you can get **3 years time** to explore the World and yourself. Rent and food is super cheap (like 4x times less than my current one), parent might help you with financing or you can find part-time - as student are very favorite labour force. 
 
 Don't wait it out, **take advantage of it**:
 
@@ -50,7 +50,7 @@ Don't wait it out, **take advantage of it**:
 
 Fortunately, I got this idea already in high-school. Where I risked the most? **I started to say more money for my work than peers**. I risked unemployment and I was terribly scared that I would be rejected. If I had a monthly cost that I'd have pay (like now), I wouldn't dare.
 
-As a result, I learned that **the price is only contract**. It's not about skills, not about work, not about experience, not about, not about contacts, not about age, not about degree. Well it is, but much less then what you really agree upon.
+As a result, I learned that **the price is only contract**. It's not about skills, not about work, not about experience, not about, not about contacts, not about age, not about degree. Well it is, but much less than what you really agree upon.
  
 When we agree on 4 € per hour, it will be 4 €. When we arrange 40 € per hour, it will be 40 €.
 
@@ -116,12 +116,12 @@ This *know-how-lag* is even greater than on primary and secondary school. To fin
 
 **Where are you?**
 
-Are you in high school? Do you think about going to University? Or do you already work?
+Are you in high school? Do you think about going to university? Or do you already work?
 
-Which point do find most useful? What would your advise be?
+Which point do find most useful? What would your advice be?
  
  
-Let me know in the commments.
+Let me know in the comments.
 
 
 <br>
