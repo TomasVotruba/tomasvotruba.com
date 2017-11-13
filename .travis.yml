@@ -10,12 +10,14 @@ script:
     - vendor/bin/phpunit --coverage-clover coverage.xml
     # turn off XDebug
     - phpenv config-rm xdebug.ini || return 0
-    # check Coding Standard
-    - vendor/bin/ecs check bin src tests
-    # check PHPStan
-    - vendor/bin/phpstan analyse bin src tests --level max
+
+    # static analysis
+    - composer check-cs
+    - composer phpstan
+
     # test that website is generated
     - vendor/bin/statie generate source
+
     # re-build website when on master only
     - |
       if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then

@@ -1,0 +1,8 @@
+parameters:
+    ignoreErrors:
+        # known values
+        - '#Parameter \#1 \$nodes of method PhpParser\\NodeTraverser::traverse\(\) expects PhpParser\\Node\[\], PhpParser\\Node\\Stmt\[\]\|null given#'
+        - '#Parameter \#2 \$origStmts of method PhpParser\\PrettyPrinterAbstract::printFormatPreserving\(\) expects PhpParser\\Node\[\], PhpParser\\Node\\Stmt\[\]\|null given#'
+
+        # sub-types
+        - '#Parameter \#1 \$nodes of method PhpParser\\NodeFinder::findFirstInstanceOf\(\) expects PhpParser\\Node\[\]\|PhpParser\\Node, PhpParser\\Node\\Stmt\[\]\|null given#'

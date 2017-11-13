@@ -3,6 +3,7 @@
 namespace TomasVotruba\Website\Posts\Year2017\Ast\NodeVisitor;
 
 use PhpParser\Node;
+use PhpParser\Node\Identifier;
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt\ClassMethod;
 use PhpParser\NodeVisitorAbstract;
@@ -15,7 +16,7 @@ final class ChangeMethodNameNodeVisitor extends NodeVisitorAbstract
             return $node;
         }
 
-        $node->name = new Name('changedName');
+        $node->name = new Identifier('changedName');
 
         return $node;
     }
