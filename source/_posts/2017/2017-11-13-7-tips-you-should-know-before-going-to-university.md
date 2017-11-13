@@ -114,7 +114,9 @@ This *know-how-lag* is even greater than on primary and secondary school. To fin
 
 
 
-**Where are you?**
+<br>
+
+### Where are you?
 
 Are you in high school? Do you think about going to university? Or do you already work?
 
