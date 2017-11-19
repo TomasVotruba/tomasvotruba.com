@@ -11,7 +11,7 @@ final class PostTweetsProvider
     /**
      * @var int
      */
-    private const TWEET_MAX_LENGTH = 140;
+    private const TWEET_MAX_LENGTH = 280;
 
     /**
      * @var int
