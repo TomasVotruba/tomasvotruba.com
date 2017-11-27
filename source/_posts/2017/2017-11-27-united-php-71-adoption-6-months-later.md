@@ -80,27 +80,30 @@ Ever since I **see Doctrine community are doing great** - from [removing YAML re
 
 Still not convinced about reasons? Check [this issue](https://github.com/php-ai/php-ml/issues/148) on `php-ai/php-ml` library.
 
-[@dmonllao poses quiet frequent view and mentions Moodle](https://github.com/php-ai/php-ml/issues/148#issuecomment-346790142) there: *I want to take is slowly and go to PHP 7.0*.
+[@dmonllao poses question or rather idea](https://github.com/php-ai/php-ml/issues/148#issuecomment-346790142) there: *I want to take is slowly <or another reason> and go only to PHP 7.0*.
 
-Let me explain how that could hurt PHP ecosystem:
+Let me explain how that could influence PHP ecosystem and slow down productivity of many projects:
  
-- Imagine that in 6 months, all of those 11 projects on gophp71.org will require PHP 7.1 on master.
-- *Moodle* (could be any other package, it's just example) decided to go with PHP 7.0
-- I work with PHP so there is big chance I'll be using at least one of those 11 packages.
-- I want to use newest features possible, so I bump my PHP on local nad server to PHP 7.1
-- I work on project and use Moodle, that contains only PHP 7.0 features
-- In my code I extends or implements 3rd party classes. I can use PHP 7.1 on most of them - e.g. `void` and nullable typehints of interfaces.
-- But when I want to extends Moodle code, I have to be careful and use only PHP 7.0 features. `void` or `nullable` will break it.
+- Imagine that in 6 months all of those 11 projects on gophp71.org will **require PHP 7.1 in their LTS versions**.
+- *Moodle* (could be any other package, it's just example) decides to go with **PHP 7.0**.
+- If you work with PHP, there is quite big chance you'll be using at least one of those 11 packages.
+- Let's say you want to use newest features + LTS, so you **bump your local nad server to PHP 7.1**.
+
+All good for now, but then:
+
+- You need to use *Moodle* in your project. **Its code contains only PHP 7.0 features**.
+- Your code naturally **extends or implements 3rd party classes**. You can use PHP 7.1 on most of them - e.g. `void` and nullable typehints of interfaces.
+- But then your need to extends *Moodle*'s code and **you have to be careful and use only PHP 7.0 features**. Features like `void` or `nullable` would break it.
 
 
-### What it leads to?
+### Result? Double Measures & Dichotomic Coding
 
-- I have to have 2 different coding standards - one for PHP 7.0 and one for PHP 7.1 with various paths to scan 
-- When I used static analysis like PHPStan, I probably have to do the same.
-- I have to have 2 testing approaches etc.
+- You have to have **2 different coding standards** - one for PHP 7.0 and one for PHP 7.1 with various paths to scan.
+- If you use static analysis like [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/), you have to have 2 configs again to validate code properly.
+- 2 testing approaches etc.
 
 
-And that's **only 1 package with different PHP version**. Imagine there would another package that requires PHP 7.2...
+And that's **only 1 package with different PHP version**. Imagine there would another package that requires PHP 7.2... or if you combine PHP 7.0 and PHP 7.1 interface in single class.
 
 
 
