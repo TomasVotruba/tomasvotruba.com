@@ -8,8 +8,8 @@ perex: '''
     <br><br>
     How is adoption going in open-source and why it should continue from bleeding-edge projects?
 '''
-tweet: "..."
-tweet_image: "..."
+tweet: "/assets/images/posts/2017/go-php-71-later/unity.jpg"
+tweet_image: "Is #PHP 7.1 the fastest version to be adopted by PHP community? And what projects are already requiring it as minimum version #symfony #doctrineORM #laravel #nettefw"
 related_posts: [41]
 ---
 
@@ -59,7 +59,7 @@ To support "PHP 7.1 is the fastest adopted minor version of PHP" statement, [Jor
 
 
 
-### Great Job, PHP Community!
+## Great Job, PHP Community!
 
 
 It makes me very happy, that **people from PHP community are able to [synchronize](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/)** despite their different opinions on things.
@@ -119,10 +119,13 @@ You **can keep support for older PHP version** even if you bump minimal requirem
 
 ### Spread the Word
 
-At the moment only 4 projects on are tagged and it will take some time before this becomes mainstream. Yet, we can see obvious trend moving to PHP 7.1 as minimal requirement. Thanks to community and people that are bold enough to ask the question or [even sending a PR](https://github.com/laravel/framework/pull/21995).
+At the moment only 4 projects on are tagged and it will take some timer before this becomes mainstream. Yet, we can see obvious trend moving to PHP 7.1 as minimal requirement. **Thanks to community and people that are bold enough to ask the question** or [even sending a PR](https://github.com/laravel/framework/pull/21995).
 
 
-If you believe in this, share this page so we let hosts know, what we really need. **It's our need to express and responsibility to take.**
+<br>
+
+
+**If you see some next project bumping to PHP 7.0, think about possible consequences of that decision.**
 
 <br><br>
 
