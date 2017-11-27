@@ -28,19 +28,19 @@ But **people actually read because they want something for themselves** - inform
 
 Write about technology that you really have. Not those which you plan or want, but that you *really have*. Imagine when somebody who is looking forward to PHP 7 will come to your interview and will find out that it's plan for 2018 - **you've just lost a candidate**.
 
-**The text must be honest with and the reader must get what he expects. Only then he or she will trush you and come back to you.**
+**The text must be honest with and the reader must get what he expects. Only then he or she will trust you and come back to you.**
 
 
 ## Friends with Benefits
 
-**When you work with someone skilled and popular in the community**, mention him or her. People will follow know friend more likely than *bare company*.
+**When you work with someone skilled and popular in the community**, mention him or her. People will follow known friend more likely than *bare company*.
 
 
 ## Ask for Feedback - Inside and Outside
 
-**1. Ask people you're already hired**
+**1. Ask people you've already hired**
 
-- "What ultimately led you to use instead of the competition?"
+- "What ultimately led you to us instead of the competitor?"
 
 **2. Ask somebody outside your company**
 
