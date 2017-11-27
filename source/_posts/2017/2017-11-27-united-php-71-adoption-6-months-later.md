@@ -84,7 +84,6 @@ Still not convinced about reasons? Check [this issue](https://github.com/php-ai/
 
 Let me explain how that could hurt PHP ecosystem:
  
- 
 - Imagine that in 6 months, all of those 11 projects on gophp71.org will require PHP 7.1 on master.
 - *Moodle* (could be any other package, it's just example) decided to go with PHP 7.0
 - I work with PHP so there is big chance I'll be using at least one of those 11 packages.
@@ -93,20 +92,16 @@ Let me explain how that could hurt PHP ecosystem:
 - In my code I extends or implements 3rd party classes. I can use PHP 7.1 on most of them - e.g. `void` and nullable typehints of interfaces.
 - But when I want to extends Moodle code, I have to be careful and use only PHP 7.0 features. `void` or `nullable` will break it.
 
-What it leads to?
+
+### What it leads to?
 
 - I have to have 2 different coding standards - one for PHP 7.0 and one for PHP 7.1 with various paths to scan 
 - When I used static analysis like PHPStan, I probably have to do the same.
 - I have to have 2 testing approaches etc.
 
 
-And what are the advantages of such approach?
+And that's **only 1 package with different PHP version**. Imagine there would another package that requires PHP 7.2...
 
-
-- Didn't find any. 
-
-
-@todo - highlith
 
 
 ## But I don't want to Drop Support for PHP 7.0 
@@ -115,19 +110,17 @@ And what are the advantages of such approach?
 
 I've borrowed this amazing picture from [Jordi](https://seld.be/notes/php-versions-stats-2016-2-edition).
 
-
-**tl;dr;** You keep support for older PHP version even if you bump minimal requirement to PHP 7.1, just won't update them. 
-
-
-
-
-## Keep Up To Make Long Tail
-
-At the moment only 4 projects on are tagged   
+You **can keep support for older PHP version** even if you bump minimal requirement to PHP 7.1, just won't add new features to them.
 
 
 
 ### Spread the Word
 
+At the moment only 4 projects on are tagged and it will take some time before this becomes mainstream. Yet, we can see obvious trend moving to PHP 7.1 as minimal requirement. Thanks to community and people that are bold enough to ask the question or [even sending a PR](https://github.com/laravel/framework/pull/21995).
+
+
 If you believe in this, share this page so we let hosts know, what we really need. **It's our need to express and responsibility to take.**
-We can do it! Thank you.
+
+<br><br>
+
+Happy bumping!
