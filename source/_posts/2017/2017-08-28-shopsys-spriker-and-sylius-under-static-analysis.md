@@ -11,11 +11,20 @@ tweet: "#Shopsys, #Spryker & #Sylius under Static Analysis #symfony #php #ecomme
 tweet_image: "assets/images/posts/2017/shopsys-static-anal/shopsys.png"
 related_posts: [57]
 ---
- 
+
+
+<br>
+
+<blockquote class="blockquote text-center">
+ "Never trust any statistics that you didn't forge yourself."
+ <footer class="blockquote-footer">Nazi propaganda about Winston Churchill</footer>
+</blockquote>
+
+<br>
+
 
 ## Understanding Statistics
 
-*"Never trust any statistics that you didn't forge yourself."*
 
 I never trust posts with statistics without any data to re-run the results on or with such a complicated methodology that discourages me to try anything and rather trust the source. 
 
