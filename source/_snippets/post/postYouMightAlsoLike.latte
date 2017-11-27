@@ -1,18 +1,17 @@
 {var $relatedPosts = ($post|relatedPosts)}
 
-<div n:if="count($relatedPosts)" class="card border-warning" id="relatedPosts">
-    <div class="card-header text-white bg-warning border-warning">
-        <strong>Continue Reading</strong>
-    </div>
-    <div class="card-body">
-        <ul>
-            {foreach $relatedPosts as $relatedPost}
-                <li>
-                    <a href="/{$relatedPost['relativeUrl']}">
-                        {$relatedPost['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}
-                    </a>
-                </li>
-            {/foreach}
-        </ul>
-    </div>
-</div>
+{if count($relatedPosts)}
+    <hr class="mt-4 mb-lg-5">
+
+    Do you want more on this topic? You can read these <strong>related posts</strong>:
+
+    {foreach $relatedPosts as $relatedPost}
+        <a href="/{$relatedPost['relativeUrl']}">
+            {$relatedPost['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}
+        </a>
+        {sep},{/sep}
+    {/foreach}
+
+    <br>
+    <br>
+{/if}
