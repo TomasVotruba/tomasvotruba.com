@@ -41,7 +41,7 @@ id: talks
 
             {var $postYear = $talk['year']}
             {if $postYear != date('Y') && !isset($dateLines[$postYear])}
-                <thead>
+                <thead id="{$talk['title']|webalize}">
                     <tr>
                         <th colspan="4" id="year-{$postYear}" class="text-center">
                             <em class="fa fa-calendar-o"></em>
