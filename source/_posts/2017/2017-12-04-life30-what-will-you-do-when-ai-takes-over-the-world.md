@@ -3,26 +3,24 @@ id: 65
 layout: post
 title: "Life 3.0: What Will You Do When AI Takes Over the World"
 perex: '''
-    Do you remember cell phones? Those that could only send SMS and call. I bought a Nokia phone that could **also play mp3s** when I was 14 years old.
-    <br>
-    Who would have thought **we could play movies and use internet on those phones** almost anywhere on the world just 10 years later.
+    Do you remember cell phones? Those that could only call and send SMS. I bought a Nokia phone that could **also play mp3s** when I was 14 years old.
+    Who would have thought **we could play movies and use internet on those phones** just 10 years later.
     <br><br>
-    Artificial Intelligence is in same level sa mobile playing mp3s. Or **maybe it already took over the world without knowing us**, as *Life 3.0* story unveils...   
+    Artificial Intelligence is now in same level as mobile phones playing mp3s. Or **maybe it already took over the world without knowing us**, as *Life 3.0* story unveils...
 '''
-tweet: "..."
+tweet: "What will you do when #ai comes to your field? Do you think it might happen slower than Smart phone adoption? Life 3.0 by @tegmark might give you some answers #mustread"
 tweet_image: "assets/images/posts/2017/life30/life30.jpg"
-related_posts: [41]
+related_posts: [56]
 ---
 
 <br>
 
 <blockquote class="blockquote text-center">
-    "The poorest 50 % of Earth's population had earned only about 4 % of the global income, enabling the Omega-controller companies to win their hearths (and votes) by sharing only a modest fraction of their profits with them."
+    "The poorest 50 % of Earth's population had earned only about 4 % of the global income, enabling the Omega-controller companies to win their hearts (and votes) by sharing only a modest fraction of their profits with them."
     <footer class="blockquote-footer">Life 3.0, The Omega Team</footer>
 </blockquote>
 
 <br>
-
 
 ## Being Human in the Age of Artificial Intelligence
 
@@ -48,7 +46,10 @@ to Alpha GO beating the greatest human master in 2016:
 <img src="/assets/images/posts/2017/life30/alpha-go.png" class="img-thumbnail">
 
 
-### Elon Musk? Future of Life Institute?
+## Ask Elon Musk
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Worth reading Life 3.0 by <a href="https://twitter.com/tegmark?ref_src=twsrc%5Etfw">@Tegmark</a>. AI will be the best or worst thing ever for humanity, so let’s get it right.<a href="https://t.co/lT0uMH3ujZ">https://t.co/lT0uMH3ujZ</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/902452162625544193?ref_src=twsrc%5Etfw">August 29, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I knew Elon Musk is making cars and rockets, but I didn't knew he supported non-profit [Future of Life Institute](https://futureoflife.org/) with [$10M](https://futureoflife.org/2015/10/12/elon-musk-donates-10m-to-keep-ai-beneficial/).  
 
@@ -63,11 +64,10 @@ I knew Elon Musk is making cars and rockets, but I didn't knew he supported non-
 
 ## What Will You Do when AI comes?
 
-The book made me think really hard: **how I want to focus my career in world, where human tasks get more and more automated?**
+The book made me think really hard. I tried to answer questions that never occur relevant to me: 
 
-<br>
-
-How I want to **raise my child to be adaptable** in the future? 
+- **How I want to focus my career in world, where human tasks get more and more automated?**
+- How I want to **raise my child to be adaptable** in the future?
 
 I love this part of book:
 
@@ -83,7 +83,7 @@ I love this part of book:
 
 The books states that every field have **parts that can be easily automated and parts that will take some time**. 
 
-<img src="/assets/images/posts/2017/life30/job-chart.jpg">
+<img src="/assets/images/posts/2017/life30/job-chart.png" class="img-thumbnail">
 
 And not only in non-IT positions. As a programmer you can:
  
@@ -93,10 +93,7 @@ And not only in non-IT positions. As a programmer you can:
 <br>
 
 
-I found lot of inspiration and possible blind paths for [RectorPHP](https://github.com/rectorphp/rector) project. It's *narrow intelligence* (or *semi-AI*), that **upgrades code for you based on your dependencies**. 
-
-Do you have Symfony 3 application? Run Rector and... Symfony 4 app it is. 
-
+I found lot of inspiration and possible blind paths for [RectorPHP](https://github.com/rectorphp/rector) project. It's *narrow intelligence*, that upgrades code for you based on your dependencies (I will write about it soon).
  
 If I should apply the same logic as above, **you can be teacher**:
 
