@@ -11,7 +11,7 @@ perex: '''
 '''
 tweet: "3 books by @austinkleon, Cal Newport and @dr_r_glover to better code #php #cleancode"
 tweet_image: "assets/images/posts/2017/non-it-books/deep.jpg"
-related_posts: [60]
+related_posts: [65]
 ---
 
 

@@ -8,8 +8,7 @@
     {foreach $relatedPosts as $relatedPost}
         <a href="/{$relatedPost['relativeUrl']}">
             {$relatedPost['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}
-        </a>
-        {sep},{/sep}
+        </a>{sep}, {/sep}
     {/foreach}
 
     <br>
