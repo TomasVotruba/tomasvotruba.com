@@ -21,7 +21,7 @@ final class PrintTest extends TestCase
     protected function setUp(): void
     {
         $this->srcDirectory = __DIR__ . '/../../../../src/Posts/Year2017/Ast';
-        $this->formatPreservingPrinter = new FormatPreservingPrinter;
+        $this->formatPreservingPrinter = new FormatPreservingPrinter();
     }
 
     public function testPrinter(): void
@@ -29,7 +29,7 @@ final class PrintTest extends TestCase
         $fileContent = file_get_contents($this->srcDirectory . '/SomeClass.php');
 
         $newFileContent = $this->formatPreservingPrinter->traverseWithVisitorAndPrint(
-            new ChangeMethodNameNodeVisitor,
+            new ChangeMethodNameNodeVisitor(),
             $fileContent
         );
 

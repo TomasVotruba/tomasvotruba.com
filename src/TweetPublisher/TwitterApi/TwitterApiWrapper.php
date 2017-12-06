@@ -68,7 +68,7 @@ final class TwitterApiWrapper
         $tweets = [];
         foreach ($rawTweets as $fullTweet) {
             $tweets[] = [
-                'text' => $fullTweet['text']
+                'text' => $fullTweet['text'],
             ];
         }
 
@@ -78,7 +78,7 @@ final class TwitterApiWrapper
     public function publishTweet(string $status): void
     {
         $this->callPost(self::UPDATE_URL, [
-            'status' => $status
+            'status' => $status,
         ]);
     }
 
@@ -94,7 +94,7 @@ final class TwitterApiWrapper
 
         $this->callPost(self::UPDATE_URL, [
             'status' => $status,
-            'media_ids' => $media['media_id']
+            'media_ids' => $media['media_id'],
         ]);
     }
 
@@ -119,7 +119,7 @@ final class TwitterApiWrapper
             'trim_user' => true, // we don't need any user info
             'exclude_replies' => true, // we don't need replies
             'include_rts' => false, // we don't need retweets
-            'since_id' => 824225319879987203 // this started at 2017-08-20, nothing before
+            'since_id' => 824225319879987203, // this started at 2017-08-20, nothing before
         ]);
 
         $this->ensureNoError($result);

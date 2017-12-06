@@ -55,7 +55,7 @@ final class PostTweetsProvider
 
             $postTweets[] = [
                 'text' => $postTweet,
-                'image' => $tweetImage
+                'image' => $tweetImage,
             ];
         }
 
