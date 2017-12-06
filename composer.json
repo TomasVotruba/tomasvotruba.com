@@ -27,5 +27,7 @@
         "phpstan": "vendor/bin/phpstan.phar analyse bin src tests --level max --configuration phpstan.neon",
         "check-cs": "vendor/bin/ecs check bin src tests",
         "fix-cs": "vendor/bin/ecs check bin src tests --fix"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
