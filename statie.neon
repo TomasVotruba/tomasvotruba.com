@@ -14,6 +14,5 @@ parameters:
 
     # Statie settings
     markdown_headline_anchors: true
-    post_route: "blog/:year/:month/:day/:title"
     github_repository_slug: "TomasVotruba/tomasvotruba.cz"
     github_show_url_start: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/"
