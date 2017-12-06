@@ -1,10 +1,9 @@
 includes:
-    - vendor/symplify/easy-coding-standard/config/psr2-checkers.neon
-    - vendor/symplify/easy-coding-standard/config/php70-checkers.neon
-    - vendor/symplify/easy-coding-standard/config/php71-checkers.neon
+    - vendor/symplify/easy-coding-standard/config/psr2.neon
+    - vendor/symplify/easy-coding-standard/config/php70.neon
+    - vendor/symplify/easy-coding-standard/config/php71.neon
     - vendor/symplify/easy-coding-standard/config/common.neon
-    - vendor/symplify/easy-coding-standard/config/spaces.neon
-    - vendor/symplify/easy-coding-standard/config/symplify-checkers.neon
+    - vendor/symplify/easy-coding-standard/config/symplify.neon
 
 checkers:
     SlevomatCodingStandard\Sniffs\Namespaces\ReferenceUsedNamesOnlySniff:
