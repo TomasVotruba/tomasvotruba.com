@@ -1,6 +1,5 @@
 ---
 id: 45
-layout: post
 title: "How to Deprecate PHP Package Without Leaving Anyone Behind"
 perex: '''
     You create PHP open-source packages because you personally use them in your projects. <strong>And you take care of them.</strong>

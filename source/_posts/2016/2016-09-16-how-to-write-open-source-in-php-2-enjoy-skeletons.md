@@ -1,6 +1,5 @@
 ---
 id: 13
-layout: post
 title: "How to write open-source in PHP 2: Rise value of your package with help of skeleton"
 perex: '''
     After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some <strong>metadata files</strong>.

@@ -1,6 +1,5 @@
 ---
 id: 9
-layout: post
 title: Filters Pattern in Nette Database
 perex: '''
     You want to delete comments, so your readers won't see any spam or violent content.

@@ -1,6 +1,5 @@
 ---
 id: 59
-layout: post
 title: "How to use Repository with Doctrine as Service in Symfony"
 perex: '''
     Dependency injection with autowiring is super easy [since Symfony 3.3](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/). Yet on my mentoring I still meet service locators.

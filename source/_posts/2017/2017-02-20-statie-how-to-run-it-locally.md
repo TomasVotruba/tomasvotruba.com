@@ -1,6 +1,5 @@
 ---
 id: 29
-layout: post
 title: "Statie: How to run it Locally"
 perex: '''
     <a href="https://github.com/Symplify/Statie">Statie</a> is a tool to create semi-static webpages. It allows you to host your website on Github for free. Event with own domain and https. It was created in late 2016 based on Scuplin and its major feature is simplicity.

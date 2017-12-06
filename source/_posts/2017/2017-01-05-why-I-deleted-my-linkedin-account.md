@@ -1,6 +1,5 @@
 ---
 id: 20
-layout: post
 title: "Why I deleted my LinkedIn account"
 perex: '''
     I used LinkedIn since 2008 when it was sending spam to all my friends. After 8 years of tuning my profile to 95 % score, reading mostly copy-pasted messages,

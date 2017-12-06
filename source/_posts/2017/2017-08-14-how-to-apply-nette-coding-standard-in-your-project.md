@@ -1,6 +1,5 @@
 ---
 id: 50
-layout: post
 title: "How to Apply Nette Coding Standard in Your Project"
 perex: '''
     <strong>Pull-requests are more fun</strong> thanks to automated coding standard. You don't have explain where to put space or bracket. You <strong>can talk about architecture or meaning of the code</strong> instead. Moreover in open-source. <strong>I wanted to make this possible in Nette</strong>, but Coding Standards could be found only in <a href="https://nette.org/en/coding-standard">documentation</a>.

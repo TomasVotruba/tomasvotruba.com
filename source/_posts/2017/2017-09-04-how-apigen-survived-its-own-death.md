@@ -1,6 +1,5 @@
 ---
 id: 53
-layout: post
 title: "How ApiGen Survived its Own Death"
 perex: '''
     <a href="https://github.com/apigen/apigen">ApiGen</a> was broken for a long time. It depended on Reflection package, that was not developed since 2013 and was unable to parse <em>newer</em> code. When I say newer, I mean <em>hot</em> PHP features like <code>::class</code> in 5.5. I don't even talk about 5.6 or 7.

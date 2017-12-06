@@ -1,6 +1,5 @@
 ---
 id: 14
-layout: post
 title: How to get more than Request in Controller Action
 perex: '''
     You already know you can get <code>Request</code> object in your controller action. Cool, but there is more. 

@@ -1,6 +1,5 @@
 ---
 id: 32
-layout: post
 title: "Statie 2: How add Contact Page With Data"
 perex: '''
     <a href="/blog/2017/02/20/statie-how-to-run-it-locally">In first post about Statie</a> you generated simple index with layout. Today we look on first semi-dynamic feature: <strong>data structures</strong>.

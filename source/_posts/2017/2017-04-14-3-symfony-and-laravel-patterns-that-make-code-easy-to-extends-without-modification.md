@@ -1,6 +1,5 @@
 ---
 id: 36
-layout: post
 title: "3 Symfony and Laravel Patterns that Make Code Easy to Extend Without Modification"
 perex: '''
     Do you write open-source? If so, you probably get many PR and issues about adding new feature, that people miss.

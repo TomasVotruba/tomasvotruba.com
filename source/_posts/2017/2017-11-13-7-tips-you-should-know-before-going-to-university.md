@@ -1,6 +1,5 @@
 ---
 id: 22
-layout: post
 title: "7 Tips You Should Know Before Going To University"
 perex: '''
     It's been 4 years since I finished university without having any degree out of it. During those 4 years, I was asked about university by people I could count on the fingers of one hand. And the about the degree? **Not one.** 

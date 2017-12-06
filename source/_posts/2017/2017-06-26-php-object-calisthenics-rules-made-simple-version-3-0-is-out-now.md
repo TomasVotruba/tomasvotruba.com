@@ -1,6 +1,5 @@
 ---
 id: 44
-layout: post
 title: "PHP Object Calisthenics Made Simple - Version 3.0 is Out Now"
 perex: '''
     Object Calisthenics are 9 language-agnostic rules to help you write better and cleaner code.

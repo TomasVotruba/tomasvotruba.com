@@ -1,6 +1,5 @@
 ---
 id: 18
-layout: post
 title: "Decouple Controller from Symfony using Traits"
 perex: "If you start using controllers as services, you still <strong>often need helpers methods of Controller from FrameworkBundle</strong>. So your code still depends on service locator and decoupling is not really happening.<br><br>Today I will show you <strong>how to remove the dependency on Controller and keep those fancy methods at the same time</strong>."
 

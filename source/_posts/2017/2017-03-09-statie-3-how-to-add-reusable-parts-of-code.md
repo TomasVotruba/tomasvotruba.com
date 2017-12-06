@@ -1,6 +1,5 @@
 ---
 id: 33
-layout: post
 title: "Statie 3: How to Add Reusable Parts of Code"
 perex: '''
     You already know <a href="/blog/2017/02/20/statie-how-to-run-it-locally">how to run Statie with layout</a> and <a href="/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data">how to add data structures</a>.

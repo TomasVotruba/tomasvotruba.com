@@ -1,6 +1,5 @@
 ---
 id: 54
-layout: post
 title: "How to write Open-Source in PHP 3: Deprecating Code"
 perex: '''
     Humans, world and PHP Frameworks constantly evolve - their code functionality changes. Class or method is renamed, method has 1 new argument or new class is decoupled.

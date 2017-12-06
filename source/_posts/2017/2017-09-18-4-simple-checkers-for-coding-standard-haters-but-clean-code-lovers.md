@@ -1,6 +1,5 @@
 ---
 id: 55
-layout: post
 title: "4 Simple Checkers for Coding Standard Haters but Clean Code Lovers"
 perex: '''
     Do you find coding standards too <strong>annoying in telling you where to put that bracket</strong>?
