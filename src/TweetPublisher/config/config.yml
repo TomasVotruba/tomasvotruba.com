@@ -16,29 +16,30 @@ services:
     TomasVotruba\Website\TweetPublisher\:
         resource: "%kernel.project_dir%/../../../src/TweetPublisher"
 
-    TomasVotruba\Website\TweetPublisher\PostsProvider:
-        arguments:
-            - %posts_source%
+#    TomasVotruba\Website\TweetPublisher\PostsProvider:
+#        arguments:
+#            - '%posts_source%'
 
     TomasVotruba\Website\TweetPublisher\PostTweetsProvider:
         arguments:
-            - %site_url%
+            - '%site_url%'
 
     TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper:
         arguments:
-            - %twitter_name%
+            - '%twitter_name%'
 
     TomasVotruba\Website\TweetPublisher\TweetPublisher:
+        public: true # for bin/tweet-new-posts container fetch
         arguments:
-            - %minimal_gap_in_days%
+            - '%minimal_gap_in_days%'
 
     # Twitter API
     TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiFactory:
         arguments:
-            - %twitter_consumer_key%
-            - %twitter_consumer_secret%
-            - %twitter_oauth_access_token%
-            - %twitter_oauth_access_token_secret%
+            - '%twitter_consumer_key%'
+            - '%twitter_consumer_secret%'
+            - '%twitter_oauth_access_token%'
+            - '%twitter_oauth_access_token_secret%'
 
     TwitterAPIExchange:
         class: TwitterAPIExchange

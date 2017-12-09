@@ -1,8 +1,8 @@
-includes:
-    - source/_data/talks.neon
-    - src/TweetPublisher/config/config.neon
+imports:
+    - { resource: 'source/_data/talks.yml' }
+    - { resource: 'src/TweetPublisher/config/config.yml' }
     # enable on localhost only
-    # - src/TweetPublisher/config/config.local.neon
+    - { resource: 'src/TweetPublisher/config/config.local.yml' }
 
 parameters:
     # global templates variables
