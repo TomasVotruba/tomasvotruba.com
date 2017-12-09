@@ -1,8 +1,12 @@
 parameters:
     ignoreErrors:
         # known values
-        - '#Parameter \#1 \$nodes of method PhpParser\\NodeTraverser::traverse\(\) expects PhpParser\\Node\[\], PhpParser\\Node\\Stmt\[\]\|null given#'
-        - '#Parameter \#2 \$origStmts of method PhpParser\\PrettyPrinterAbstract::printFormatPreserving\(\) expects PhpParser\\Node\[\], PhpParser\\Node\\Stmt\[\]\|null given#'
+        - '#Parameter \#1 \$nodes of method PhpParser\\NodeTraverser::traverse\(\) expects array<PhpParser\\Node>, array<PhpParser\\Node>\|null given#'
+        - '#Parameter \#1 \$nodes of method PhpParser\\NodeFinder::findFirstInstanceOf\(\) expects array<PhpParser\\Node>\|PhpParser\\Node, array<PhpParser\\Node>\|null given#'
 
         # sub-types
-        - '#Parameter \#1 \$nodes of method PhpParser\\NodeFinder::findFirstInstanceOf\(\) expects PhpParser\\Node\[\]\|PhpParser\\Node, PhpParser\\Node\\Stmt\[\]\|null given#'
+
+        # false positive, invalid vendor load
+        - '#Property PhpParser\\Node\\Stmt\\ClassMethod::\$name \(string\) does not accept PhpParser\\Node\\Identifier#'
+        - '#Call to an undefined method PhpParser\\PrettyPrinter\\Standard::printFormatPreserving\(\)#'
+        - '#Cannot call method toString\(\) on string#'

@@ -6,7 +6,7 @@ final class TweetEntityCompleter
 {
     /**
      * @param string[] $tweets
-     * @return string[]
+     * @return mixed[]
      */
     public function completeOriginalUrlsToText(array $tweets): array
     {
