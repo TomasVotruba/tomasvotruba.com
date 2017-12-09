@@ -3,22 +3,9 @@
 namespace TomasVotruba\Website\TweetPublisher;
 
 use Symplify\Statie\Renderable\File\PostFile;
-use TomasVotruba\Website\TweetPublisher\Exception\TweetImageNotFoundException;
-use TomasVotruba\Website\TweetPublisher\Exception\TweetTooLongException;
 
 final class PostTweetsProvider
 {
-    /**
-     * @var int
-     */
-    private const TWEET_MAX_LENGTH = 280;
-
-    /**
-     * @var int
-     * @see https://dev.twitter.com/basics/tco#how-do-i-calculate-if-a-tweet-with-a-link-is-going-to-be-over-140-characters-or-not
-     */
-    private const SHORTENED_URL_LENGTH = 23;
-
     /**
      * @var string
      */
@@ -34,11 +21,21 @@ final class PostTweetsProvider
      */
     private $sourceDirectory;
 
-    public function __construct(string $siteUrl, string $sourceDirectory, PostsProvider $postsProvider)
-    {
+    /**
+     * @var TweetGuard
+     */
+    private $tweetGuard;
+
+    public function __construct(
+        string $siteUrl,
+        string $sourceDirectory,
+        PostsProvider $postsProvider,
+        TweetGuard $tweetGuard
+    ) {
         $this->siteUrl = $siteUrl;
         $this->postsProvider = $postsProvider;
         $this->sourceDirectory = $sourceDirectory;
+        $this->tweetGuard = $tweetGuard;
     }
 
     /**
@@ -55,7 +52,7 @@ final class PostTweetsProvider
             }
 
             $postTweet = $this->appendAbsoluteUrlToTweet($post, $postConfiguration);
-            $this->ensureTweetFitsAllowedLength($postConfiguration['tweet'], $post);
+            $this->tweetGuard->ensureTweetFitsAllowedLength($postConfiguration['tweet'], $post);
 
             $tweetImage = $this->resolveTweetImage($post, $postConfiguration);
 
@@ -66,25 +63,6 @@ final class PostTweetsProvider
         }
 
         return $postTweets;
-    }
-
-    private function ensureTweetFitsAllowedLength(string $tweet, PostFile $postFile): void
-    {
-        $tweetLength = mb_strlen($tweet);
-        if ($tweetLength <= self::TWEET_MAX_LENGTH) {
-            return;
-        }
-
-        throw new TweetTooLongException(sprintf(
-            'Tweet message "%s" is too long, after adding its url. It has %d chars, shorten it under %d.' .
-                PHP_EOL .
-                PHP_EOL .
-                'Look to "%s" file.',
-            $tweet,
-            $tweetLength,
-            self::TWEET_MAX_LENGTH - self::SHORTENED_URL_LENGTH,
-            realpath($postFile->getFilePath())
-        ));
     }
 
     /**
@@ -113,19 +91,8 @@ final class PostTweetsProvider
 
         $localFilePath = $this->sourceDirectory . $postConfiguration['tweet_image'];
 
-        $this->ensureTweetImageExists($postFile, $localFilePath);
+        $this->tweetGuard->ensureTweetImageExists($postFile, $localFilePath);
 
         return $this->siteUrl . '/' . $postConfiguration['tweet_image'];
-    }
-
-    private function ensureTweetImageExists(PostFile $postFile, string $localFilePath): void
-    {
-        if (! file_exists($localFilePath)) {
-            throw new TweetImageNotFoundException(sprintf(
-                'Tweet image "%s" for "%s" file not found. Check "tweet_image" option.',
-                $localFilePath,
-                realpath($postFile->getFilePath())
-            ));
-        }
     }
 }
