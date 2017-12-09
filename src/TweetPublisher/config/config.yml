@@ -11,28 +11,16 @@ parameters:
 services:
     _defaults:
         autowire: true
+        bind:
+            '$siteUrl': '%site_url%'
+            '$sourceDirectory': '%source_directory%'
+            '$twitterName': '%twitter_name%'
+            '$minimalGapInDays': '%minimal_gap_in_days%'
 
     # PSR-4 autodiscovery
     TomasVotruba\Website\TweetPublisher\:
         resource: ../
-
-    TomasVotruba\Website\TweetPublisher\PostTweetsProvider:
-        arguments:
-            - '%site_url%'
-            - '%source_directory%'
-
-    TomasVotruba\Website\TweetPublisher\PostsProvider:
-        arguments:
-            - '%source_directory%'
-
-    TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper:
-        arguments:
-            - '%twitter_name%'
-
-    TomasVotruba\Website\TweetPublisher\TweetPublisher:
-        public: true # for bin/tweet-new-posts container fetch
-        arguments:
-            - '%minimal_gap_in_days%'
+        public: true # for container fetch
 
     # Twitter API
     TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiFactory:
