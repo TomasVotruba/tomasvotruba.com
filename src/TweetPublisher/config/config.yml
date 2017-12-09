@@ -1,6 +1,6 @@
 parameters:
-    twitter_name: "VotrubaT"
-    posts_source: "%kernel.project_dir%/../../../source/_posts"
+    twitter_name: 'VotrubaT'
+    source_directory: '%kernel.project_dir%/../../../source'
     minimal_gap_in_days: 4 # how many days to wait before publishing another Tweet
 
     twitter_consumer_key: "..."
@@ -16,13 +16,10 @@ services:
     TomasVotruba\Website\TweetPublisher\:
         resource: "%kernel.project_dir%/../../../src/TweetPublisher"
 
-#    TomasVotruba\Website\TweetPublisher\PostsProvider:
-#        arguments:
-#            - '%posts_source%'
-
     TomasVotruba\Website\TweetPublisher\PostTweetsProvider:
         arguments:
             - '%site_url%'
+            - '%source_directory%'
 
     TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper:
         arguments:

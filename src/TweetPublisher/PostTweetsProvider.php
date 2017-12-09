@@ -29,10 +29,16 @@ final class PostTweetsProvider
      */
     private $postsProvider;
 
-    public function __construct(string $siteUrl, PostsProvider $postsProvider)
+    /**
+     * @var string
+     */
+    private $sourceDirectory;
+
+    public function __construct(string $siteUrl, string $sourceDirectory, PostsProvider $postsProvider)
     {
         $this->siteUrl = $siteUrl;
         $this->postsProvider = $postsProvider;
+        $this->sourceDirectory = $sourceDirectory;
     }
 
     /**
@@ -105,8 +111,7 @@ final class PostTweetsProvider
             return null;
         }
 
-        $sourceDirectory = __DIR__ . '/../../source/';
-        $localFilePath = $sourceDirectory . $postConfiguration['tweet_image'];
+        $localFilePath = $this->sourceDirectory . $postConfiguration['tweet_image'];
 
         $this->ensureTweetImageExists($postFile, $localFilePath);
 
