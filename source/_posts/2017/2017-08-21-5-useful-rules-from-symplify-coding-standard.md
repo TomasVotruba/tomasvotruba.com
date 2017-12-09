@@ -1,6 +1,5 @@
 ---
 id: 51
-layout: post
 title: "5 Useful Rules From Symplify Coding Standard"
 perex: '''
      <a href="http://github.com/Symplify/CodingStandard">Symplify Coding Standard</a> was born from Zenify, back from the days I was only Nette programmer. It focuses on <strong>maintainability and clean architecture</strong>. I try to make them simple: <strong>each of them does one job</strong>.  

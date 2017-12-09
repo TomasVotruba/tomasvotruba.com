@@ -2,16 +2,16 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.1",
-        "symplify/statie": "^2.5",
+        "symplify/statie": "^3.0",
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0"
     },
     "require-dev": {
-        "symplify/easy-coding-standard": "^2.5",
-        "phpunit/phpunit": "^6.4",
-        "phpstan/phpstan-shim": "^0.8",
-        "nikic/php-parser": "v4.0.0alpha2 as 3.1.1"
+        "symplify/easy-coding-standard": "^3.0",
+        "phpunit/phpunit": "^6.5",
+        "phpstan/phpstan-shim": "^0.9",
+        "nikic/php-parser": "^4.0"
     },
     "autoload": {
         "psr-4": {
@@ -27,5 +27,7 @@
         "phpstan": "vendor/bin/phpstan.phar analyse bin src tests --level max --configuration phpstan.neon",
         "check-cs": "vendor/bin/ecs check bin src tests",
         "fix-cs": "vendor/bin/ecs check bin src tests --fix"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

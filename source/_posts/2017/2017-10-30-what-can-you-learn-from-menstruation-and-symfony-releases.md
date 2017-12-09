@@ -1,6 +1,5 @@
 ---
 id: 61
-layout: post
 title: "What can You Learn from Menstruation and Symfony Releases"
 perex: '''
     I [wrote about monorepo and how it turned me into lazy programmer](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/) before.

@@ -36,10 +36,10 @@ final class ModifyTest extends TestCase
     protected function setUp(): void
     {
         $this->srcDirectory = __DIR__ . '/../../../../src/Posts/Year2017/Ast';
-        $this->parser = (new ParserFactory)->create(ParserFactory::PREFER_PHP7);
+        $this->parser = (new ParserFactory())->create(ParserFactory::PREFER_PHP7);
 
-        $this->nodeFinder = new NodeFinder;
-        $this->nodeTraverser = new NodeTraverser;
+        $this->nodeFinder = new NodeFinder();
+        $this->nodeTraverser = new NodeTraverser();
     }
 
     public function testParse(): void
@@ -56,7 +56,7 @@ final class ModifyTest extends TestCase
 
     public function testNodeVisitor(): void
     {
-        $this->nodeTraverser->addVisitor(new ChangeMethodNameNodeVisitor);
+        $this->nodeTraverser->addVisitor(new ChangeMethodNameNodeVisitor());
 
         $nodes = $this->parser->parse(file_get_contents($this->srcDirectory . '/SomeClass.php'));
 

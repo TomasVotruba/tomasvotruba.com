@@ -1,6 +1,5 @@
 ---
 id: 64
-layout: post
 title: "United PHP 7.1 Adoption 6 Months Later"
 perex: '''
     A year since it's release and 6 months since GoPHP71 initiative.

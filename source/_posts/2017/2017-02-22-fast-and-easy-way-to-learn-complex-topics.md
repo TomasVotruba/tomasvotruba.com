@@ -1,6 +1,5 @@
 ---
 id: 30
-layout: post
 title: "Fast and Easy Way to Learn Complex Topics"
 perex: '''
     This little trick helps me to learn complex topic both fast and easy. It works very well during my lectures and posts. In Informatics, people tend to make issues more complex than it is necessary. It slows down the learning steep with no added value.

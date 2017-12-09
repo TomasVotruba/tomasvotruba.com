@@ -1,6 +1,5 @@
 ---
 id: 12
-layout: post
 title: "How to write open-source in PHP 1: Create a repository on Github"
 perex: '''
     Do you have some code you want to share but you don't know exactly how? Well, writing open-source is complex process.

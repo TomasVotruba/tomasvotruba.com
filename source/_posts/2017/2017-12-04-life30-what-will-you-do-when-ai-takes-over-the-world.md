@@ -1,6 +1,5 @@
 ---
 id: 65
-layout: post
 title: "Life 3.0: What Will You Do When AI Takes Over the World"
 perex: '''
     Do you remember cell phones? Those that could only call and send SMS. I bought a Nokia phone that could **also play mp3s** when I was 14 years old.

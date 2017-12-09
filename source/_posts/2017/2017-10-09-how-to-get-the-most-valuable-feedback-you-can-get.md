@@ -1,6 +1,5 @@
 ---
 id: 58
-layout: post
 title: "How to Get the Most Valuable Feedback You Can Get"
 perex: '''
     Feedback is one of the best way to improve yourself. To make it really work it have to be able to get to you. "That's wrong" usually doesn't work as the person giving the feedback intended.

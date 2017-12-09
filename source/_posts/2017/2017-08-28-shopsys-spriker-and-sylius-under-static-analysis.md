@@ -1,6 +1,5 @@
 ---
 id: 52
-layout: post
 title: "Shopsys, Spryker & Sylius under Static Analysis"
 perex: '''
      When you're building a new web project based on open-source, you'll pick a package you know, have good experience with or try a new one that might be even better.

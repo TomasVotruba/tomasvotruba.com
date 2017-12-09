@@ -1,6 +1,5 @@
 ---
 id: 35
-layout: post
 title: "Why Is Doctrine Dying"
 perex: '''
 Do you use Doctrine ORM? If so, do you follow its evolution on Github? Symfony is evolving, Laravel is evolving, Nette is evolving, world is evolving... Doctrine not. Today I will show you 3 reasons why.

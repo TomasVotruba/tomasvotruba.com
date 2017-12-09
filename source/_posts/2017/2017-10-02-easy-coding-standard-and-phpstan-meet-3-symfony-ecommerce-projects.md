@@ -1,6 +1,5 @@
 ---
 id: 57
-layout: post
 title: "EasyCodingStandard and PHPStan meet 3&nbsp;Symfony E-Commerce Projects"
 perex: '''
     [In the last post](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis/), we looked at the static analysis of 3 Symfony E-Commerce projects.

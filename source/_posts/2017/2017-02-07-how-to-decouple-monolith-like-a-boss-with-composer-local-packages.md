@@ -1,6 +1,5 @@
 ---
 id: 26
-layout: post
 title: "How to Decouple Monolith like a Boss with Composer Local Packages"
 perex: '''
     While building PHP applications that grows and grows, you often get to the situation when there is too much code. You get easily lost, duplicate and code smells and rottens. The cognitive upkeep to add a new class is bigger every day.

@@ -11,7 +11,7 @@ $symfonyStyle = SymfonyStyleFactory::create();
 
 try {
     $containerFactory = new ContainerFactory;
-    $container = $containerFactory->createWithConfig(__DIR__ . '/../statie.neon');
+    $container = $containerFactory->createWithConfig(__DIR__ . '/../statie.yml');
 
     /** @var TweetPublisher $tweetPublisher */
     $tweetPublisher = $container->get(TweetPublisher::class);

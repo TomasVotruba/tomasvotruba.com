@@ -1,6 +1,5 @@
 ---
 id: 46
-layout: post
 title: "How to Write Custom Sniff for Code Sniffer 3"
 perex: '''
     When I give talks about coding standards, I ask people 2 questions: do you use coding standards? Do you write your own sniffs? On average, above 50 % uses it, but only 1-2 people wrote their own sniff.

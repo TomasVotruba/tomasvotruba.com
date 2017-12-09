@@ -1,6 +1,5 @@
 ---
 id: 27
-layout: post
 title: "Drop all Service Tags in Your Nette and Symfony Applications"
 perex: '''
     What is tagging for? Why we should get rid of it?

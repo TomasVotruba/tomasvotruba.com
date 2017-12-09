@@ -1,6 +1,5 @@
 ---
 id: 17
-layout: post
 title: "How to Deal With Haters in Comments"
 perex: '''
     That's what I was asked yesterday for about fifth person already. How do I deal with that when I write an article tweet, just doing good things godly enlightenment, and someone does not like it and throwing dirt on me?

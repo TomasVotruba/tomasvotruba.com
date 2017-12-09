@@ -1,6 +1,5 @@
 ---
 id: 21
-layout: post
 title: "How to Write Interesting Jobs Offers for Programmers"
 perex: '''
     A few years watching the labor market from a position of PHP programmers from the perspective of companies. With both sides have a good relationship. I think what they need and what is bothering you. **I see that they want each other, just communication is little stuck**. 

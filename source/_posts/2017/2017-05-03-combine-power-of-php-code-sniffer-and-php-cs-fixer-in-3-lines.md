@@ -1,6 +1,5 @@
 ---
 id: 37
-layout: post
 title: "Combine power of PHP_CodeSniffer and PHP CS Fixer in 3 lines"
 perex: '''
     PHP_CodeSniffer has over <strong>3 400 stars</strong> on Github and <strong>210 default sniffs</strong>,

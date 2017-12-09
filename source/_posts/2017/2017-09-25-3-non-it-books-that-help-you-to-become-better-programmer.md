@@ -1,6 +1,5 @@
 ---
 id: 56
-layout: post
 title: "3 non-IT Books That Help you to Become Better Programmer"
 perex: '''
     I love reading books. It helps me to create much deeper and persistent neural connections than any other form of self-education.

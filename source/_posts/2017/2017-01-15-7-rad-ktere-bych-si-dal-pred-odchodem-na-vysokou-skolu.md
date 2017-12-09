@@ -1,6 +1,5 @@
 ---
 id: 22
-layout: post
 title: "7 rad, které bych si dal před odchodem na vysokou školu"
 perex: '''
     Už jsou to 4 roky, co jsem ukončil vysokou školu, aniž by mi za to dali titul. Během těch 4 let se mě na vysokou školu ptalo lidí, které bych spočítal na prstech jedné ruky. A na titul? Nikdo.<br><br> 

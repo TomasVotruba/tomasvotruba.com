@@ -1,6 +1,5 @@
 ---
 id: 40
-layout: post
 title: "Thank you David"
 perex: '''
     While using open-source, we rarely realize that there is one or few people behind it. <strong>People who work in their free time and put an effort in it</strong>.

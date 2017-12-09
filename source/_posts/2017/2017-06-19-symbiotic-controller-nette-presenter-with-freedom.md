@@ -1,6 +1,5 @@
 ---
 id: 43
-layout: post
 title: "Symbiotic Controller: Nette&nbsp;Presenter&nbsp;with&nbsp;Freedom"
 perex: '''
     Symfony and Laravel allow decoupled controllers by default thanks to simple principle: <em>controller/presenter = callback</em>. No base class or interface is needed. 

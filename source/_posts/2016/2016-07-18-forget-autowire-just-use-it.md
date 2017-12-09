@@ -1,6 +1,5 @@
 ---
 id: 10
-layout: post
 title: Forget "autowire" and just use it
 perex: '''
     Autowiring is a great feature that was added in Symfony 2.8. It moves Dependency Injection pattern to the next level.

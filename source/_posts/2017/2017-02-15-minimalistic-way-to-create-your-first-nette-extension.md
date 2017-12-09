@@ -1,6 +1,5 @@
 ---
 id: 28
-layout: post
 title: "Minimalistic Way to Create Your First Nette Extension"
 perex: '''
     Nette extension allows you not only to create open-source packages, but also to <strong>split your application to small and logical chunks of code</strong>.

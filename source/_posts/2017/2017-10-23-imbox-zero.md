@@ -1,6 +1,5 @@
 ---
 id: 60
-layout: post
 title: "IMbox Zero"
 perex: '''
     You have probably heard about Inbox Zero. [ZTD](https://zenhabits.net/zen-to-done-ztd-the-ultimate-simple-productivity-system/) technique, **to keep your email inbox clean and your brain well rested**.

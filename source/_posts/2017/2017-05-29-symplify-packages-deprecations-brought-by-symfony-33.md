@@ -1,6 +1,5 @@
 ---
 id: 39
-layout: post
 title: "Symplify packages deprecations brought by Symfony 3.3"
 perex: '''
     <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">Symfony 3.3 brings new Dependency Injection features</a>,

@@ -16,8 +16,8 @@ final class FormatPreservingPrinter
         $lexer = $this->createLexer();
 
         $parser = new Php7($lexer);
-        $traverser = new NodeTraverser;
-        $traverser->addVisitor(new CloningVisitor);
+        $traverser = new NodeTraverser();
+        $traverser->addVisitor(new CloningVisitor());
 
         $oldStmts = $parser->parse($code);
         $oldTokens = $lexer->getTokens();
@@ -26,14 +26,14 @@ final class FormatPreservingPrinter
 
         // our code start
 
-        $nodeTraverser = new NodeTraverser;
+        $nodeTraverser = new NodeTraverser();
         $nodeTraverser->addVisitor($nodeVisitor);
 
         $newStmts = $traversedNodes = $nodeTraverser->traverse($newStmts);
 
         // our code end
 
-        return (new Standard)->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
+        return (new Standard())->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
     }
 
     private function createLexer(): Emulative

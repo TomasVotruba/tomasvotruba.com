@@ -1,6 +1,5 @@
 ---
 id: 62
-layout: post
 title: "Delegator Pattern in PHP"
 perex: '''
     ...

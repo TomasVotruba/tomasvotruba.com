@@ -1,6 +1,5 @@
 ---
 id: 34
-layout: post
 title: "Statie 4: How to Create The Simplest Blog"
 perex: '''
 Statie is very powerful tool for creating small sites. But you will use just small part of it's features, having just micro-sites. How to get to full 100%? <strong>Build a blog</strong>.
