@@ -18,10 +18,19 @@ final class PostsProvider
      */
     private $configuration;
 
-    public function __construct(StatieApplication $statieApplication, Configuration $configuration)
-    {
+    /**
+     * @var string
+     */
+    private $sourceDirectory;
+
+    public function __construct(
+        string $sourceDirectory,
+        StatieApplication $statieApplication,
+        Configuration $configuration
+    ) {
         $this->statieApplication = $statieApplication;
         $this->configuration = $configuration;
+        $this->sourceDirectory = $sourceDirectory;
     }
 
     /**
@@ -29,7 +38,11 @@ final class PostsProvider
      */
     public function provide(): array
     {
-        $this->statieApplication->run(__DIR__ . '/../../source', __DIR__ . '/../../output', true);
+        $this->statieApplication->run(
+            $this->sourceDirectory,
+            __DIR__ . '/../../output',
+            true
+        );
 
         return $this->configuration->getOption('posts');
     }

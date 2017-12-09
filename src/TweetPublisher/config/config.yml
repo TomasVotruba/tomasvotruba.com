@@ -21,6 +21,10 @@ services:
             - '%site_url%'
             - '%source_directory%'
 
+    TomasVotruba\Website\TweetPublisher\PostsProvider:
+        arguments:
+            - '%source_directory%'
+
     TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper:
         arguments:
             - '%twitter_name%'
