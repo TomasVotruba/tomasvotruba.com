@@ -14,7 +14,7 @@ services:
 
     # PSR-4 autodiscovery
     TomasVotruba\Website\TweetPublisher\:
-        resource: "%kernel.project_dir%/../../../src/TweetPublisher"
+        resource: ../
 
     TomasVotruba\Website\TweetPublisher\PostTweetsProvider:
         arguments:
