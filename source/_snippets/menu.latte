@@ -6,7 +6,7 @@
                 <li id="logo">
                     Tomas Votruba
                 </li>
-                <li n:class="(isset($id) && $id === blog) || $layout === post ? active">
+                <li n:class="(isset($id) && $id === blog) || (isset($layout) && $layout === post ? active)">
                     <a href="/">Blog</a>
                 </li>
                 <li n:class="isset($id) && $id === skill ? active">
@@ -30,7 +30,7 @@
 <div class="hidden-md-up">
     <nav class="navbar" id="mobile-menu">
         <div class="container">
-            <a href="/" n:class="col-3, col-sm-3, (isset($id) && $id === blog) || $layout === post ? active">
+            <a href="/" n:class="col-3, col-sm-3, (isset($id) && $id === blog) || (isset($layout) && $layout === post ? active)">
                 <em class="fa fa-book"></em>
                 <br>
                 PHP Blog
