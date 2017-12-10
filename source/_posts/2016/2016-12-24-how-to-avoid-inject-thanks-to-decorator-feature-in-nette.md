@@ -16,10 +16,10 @@ As [Derek Simons says](https://www.ted.com/talks/simon_sinek_how_great_leaders_i
 
 Why am I writing this article? I try to improve knowledge interoperability between frameworks so it **is easier to understand and use each other**. The goal is to discourage Nette- (or any framework-) specific things **in favor of those that may be common**.
 
-Today, I will try to agree on setter injection with you. 
+Today, I will try to agree on setter injection with you.
 
 
-## @Inject Overuse is Spreading 
+## @Inject Overuse is Spreading
 
 This code is common to 80 % Nette applications I came across in last year:
 
@@ -57,7 +57,7 @@ class ProductRepository
 }
 ```
 
-and 
+and
 
 ```yaml
 # app/config/config.neon
@@ -68,7 +68,7 @@ services:
         inject: on
 ```
 
-## Your Code is Seen as Manual How to Write 
+## Your Code is Seen as Manual How to Write
 
 Why? Because "what you see is what you write". New programmer joins the teams, sees this handy `@inject` feature and uses when possible and handy.
 
@@ -78,7 +78,7 @@ Some of you, who already talked about `@inject` method usage already there are s
 
 **To prevent constructor hell**. If you meet this term first time, go read [this short explanation](https://phpfashion.com/di-a-predavani-zavislosti#toc-constructor-hell) by David Grudl.
 
-The best use case is `AbstractBasePresenter`.  
+The best use case is `AbstractBasePresenter`.
 Let's say I need `Translator` service in all of my presenters.
 
 ```php
@@ -97,7 +97,7 @@ abstract class AbstractBasePresenter extends Nette\Application\UI\Presenter
 ```
 
 And I can use it in `ProductPresenter` along with constructor injection
- 
+
 ```php
 // app/Presenter/ProductPresenter.php
 
@@ -109,21 +109,21 @@ final class ProductPresenter extends AbstractBasePresenter
      * @var ProductRepository
      */
     private $productRepository;
-    
-    public function __construct(ProductRepository $productRepository) 
+
+    public function __construct(ProductRepository $productRepository)
     {
-        $this->productRepository = $productRepository; 
+        $this->productRepository = $productRepository;
     }
 }
 ```
 
 This is quite clean and easy to use, because presenters have injects [enabled by default](https://github.com/nette/application/blob/3165d3a8dab876f4364cdcba450a33ab0182049a/src/Bridges/ApplicationDI/ApplicationExtension.php#L111-L116).
- 
+
 
 ## Level up
 
 But what if we have other objects that:
- 
+
  - **inherit from abstract parent**
  - needs **1 service available everywhere**
 
@@ -147,7 +147,7 @@ abstract class AbstractBaseRepository
      * @var EntityManagerInterface
      */
     protected $entityManager;
-    
+
     public function setEntityManager(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
@@ -170,7 +170,7 @@ final ProductRepository extends AbstractBaseRepository
      * @var ProductSorter
      */
     private $productSorter;
-    
+
     public function __construct(ProductSorter $productSorter)
     {
         $this->productSorter = $productSorter;
@@ -184,22 +184,22 @@ So our config would look like:
 # app/config/config.neon
 
 services:
-    - 
+    -
         class: App\Repository\ProductRepository
         setup:
             - setEntityManager
     # and for other repositories
-    - 
+    -
         class: App\Repository\UserRepository
         setup:
             - setEntityManager
-    - 
+    -
         class: App\Repository\CategoryRepository
         setup:
             - setEntityManager
-```           
+```
 
-### SO much writing! 
+### SO much writing!
 
 It is cleaner, but with so much writing? Thanks, but no, thanks. Let's go back to `@inject`...
 
@@ -218,11 +218,11 @@ services:
 
 That would be great, right? Is that possible in Nette while keeping the code clean?
 
-## Decorator Extension to the Rescue 
+## Decorator Extension to the Rescue
 
-This feature is in Nette [since 2014](https://github.com/nette/di/commit/28fdac304b967ae43a90936069d94316ee2daca4) (<= the best documentation for it so far). 
+This feature is in Nette [since 2014](https://github.com/nette/di/commit/28fdac304b967ae43a90936069d94316ee2daca4) (<= the best documentation for it so far).
 
-How does it work? 
+How does it work?
 
 ```yaml
 # app/config/config.neon
@@ -231,7 +231,7 @@ decorator: # keyword used by Nette
     App\Repository\AbstractBaseRepository: # 1. find every service this type
         setup: # same setup as we use in service configuration
             - setEntityManager # 2. call this setter injection on it
-            
+
     # or do you need to call "setTranslator" on every component?
     App\Component\AbstractBaseControl:
         setup:
@@ -256,5 +256,5 @@ In next article, we will look at other practical use cases for Decorator Extensi
 
 Would like to see this feature in Symfony? Let me know. Maybe we can port it there.
 
- 
+
 How do you use `@inject`, constructor injection or Decorator Extension? Let me know in the comments, I'm curious.

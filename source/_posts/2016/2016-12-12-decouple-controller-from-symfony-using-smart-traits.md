@@ -18,7 +18,7 @@ deprecated_message: '''
 1. Constructor Injection
 2. Service locator (container) from parent Controller class
 
-Today it's not about which one is better and when to use it, but about consistency. I recommend either using first or second. Mixing them together is confusing and adds complexity without bringing value or improving readability. 
+Today it's not about which one is better and when to use it, but about consistency. I recommend either using first or second. Mixing them together is confusing and adds complexity without bringing value or improving readability.
 
 Let's see an example:
 
@@ -66,17 +66,17 @@ public function actionList()
 
 There are some trials to make this bit more decoupled:
 
-- [[DependencyInjection] Autowiring: add setter injection support](https://github.com/symfony/symfony/pull/17608), but is was [reverted](https://github.com/symfony/symfony/pull/20384) 
-- [[FrameworkBundle] Split abstract Controller class into traits](https://github.com/symfony/symfony/pull/16863) - opened in December 2015 and without attention 
-- [[FrameworkBundle] Introduce autowirable ControllerTrait](https://github.com/symfony/symfony/pull/18193) - similar to previous one, but depending on reverted setter injection 
+- [[DependencyInjection] Autowiring: add setter injection support](https://github.com/symfony/symfony/pull/17608), but is was [reverted](https://github.com/symfony/symfony/pull/20384)
+- [[FrameworkBundle] Split abstract Controller class into traits](https://github.com/symfony/symfony/pull/16863) - opened in December 2015 and without attention
+- [[FrameworkBundle] Introduce autowirable ControllerTrait](https://github.com/symfony/symfony/pull/18193) - similar to previous one, but depending on reverted setter injection
 
 There are some trials, but I guess **this feature is not coming anytime soon**.
 
 
-### How to make a Change 
+### How to make a Change
 
 When it's **difficult to estimate if this would be useful feature to merge**, somebody creates a bundle and test it in practise.
- 
+
 Similar thing happened for [knpuniversity/KnpUGuardBundle](https://github.com/knpuniversity/KnpUGuardBundle) that later became core part of Symfony.
 
 So...
@@ -84,16 +84,16 @@ So...
 ### Is There a Bundle for This?
 
 Few months ago [Petr Olišar](https://twitter.com/PetrOlisar) reported [similar issue](https://github.com/Symplify/Symplify/issues/14) to [ControllerAutowire](https://github.com/Symplify/ControllerAutowire) package.
- 
+
 I realized it perfectly fits there and **I added it**.
 
-Thank you Petr! 
+Thank you Petr!
 
 ## How Does it Work?
 
 Now you can do use bare Controller with only what you need:
 
-```php 
+```php
 use Symplify\ControllerAutowire\Controller\Templating\ControllerRenderTrait;
 
 final class ProductController
@@ -121,12 +121,12 @@ final class ProductController
 
 **You can use few small traits** or **just 1** - `ControllerTrait`. Pick what fits your needs the best.
 
-You will [find them in repository](https://github.com/Symplify/ControllerAutowire/tree/master/src/Controller) or just type `ControllerTrait` in your IDE: 
+You will [find them in repository](https://github.com/Symplify/ControllerAutowire/tree/master/src/Controller) or just type `ControllerTrait` in your IDE:
 
 ## Try This Out and Let Us Know
 
 There were many suggestions around those PR, but no package to really try it out in  practice.
 
-So feel free to install this package and try this out. Feedback is much appreciated. 
+So feel free to install this package and try this out. Feedback is much appreciated.
 
 **It will be helpful in PRs to Symfony core and helps to make conscious decision about this topic**.

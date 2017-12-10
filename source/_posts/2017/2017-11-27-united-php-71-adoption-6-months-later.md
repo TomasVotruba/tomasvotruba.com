@@ -49,7 +49,7 @@ Is your project missing? [Go and it!](https://github.com/TomasVotruba/gophp71.or
 
 
 
-### Prove beats Promise - Packagist Stats 
+### Prove beats Promise - Packagist Stats
 
 
 To support "PHP 7.1 is the fastest adopted minor version of PHP" statement, [Jordi](https://seld.be/) recently released [PHP Versions Stats - 2017.2 Edition](https://seld.be/notes/php-versions-stats-2017-2-edition) with very nice result from packagist stats:
@@ -67,11 +67,11 @@ It makes me very happy, that **people from PHP community are able to [synchroniz
 
 ### Special Thanks to Doctrine Project
 
-I really loved this [Doctrine bump PHP 7.1 announcement](http://www.doctrine-project.org/2017/07/25/php-7.1-requirement-and-composer.html). I completely agree with "Why dropping PHP support in a minor version is not a BC break" part. If you think PHP version bump is BC break, you should read it. 
+I really loved this [Doctrine bump PHP 7.1 announcement](http://www.doctrine-project.org/2017/07/25/php-7.1-requirement-and-composer.html). I completely agree with "Why dropping PHP support in a minor version is not a BC break" part. If you think PHP version bump is BC break, you should read it.
 
 I admit [I wasn't nice](/blog/2017/03/27/why-is-doctrine-dying/) to Doctrine Project this Spring and **I'm sincerely sorry about that**. I'm trying to [influence this better way](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/).
- 
-Ever since I **see Doctrine community are doing great** - from [removing YAML references](https://github.com/doctrine/doctrine2/pull/5932), to [cleaner Symfony support](https://github.com/doctrine/DoctrineBundle/pull/727). 
+
+Ever since I **see Doctrine community are doing great** - from [removing YAML references](https://github.com/doctrine/doctrine2/pull/5932), to [cleaner Symfony support](https://github.com/doctrine/DoctrineBundle/pull/727).
 
 
 
@@ -82,7 +82,7 @@ Still not convinced about reasons? Check [this issue](https://github.com/php-ai/
 [@dmonllao poses question or rather idea](https://github.com/php-ai/php-ml/issues/148#issuecomment-346790142) there: *I want to take is slowly <or another reason> and go only to PHP 7.0*.
 
 Let me explain how that could influence PHP ecosystem and slow down productivity of many projects:
- 
+
 - Imagine that in 6 months all of those 11 projects on gophp71.org will **require PHP 7.1 in their LTS versions**.
 - *Moodle* (could be any other package, it's just example) decides to go with **PHP 7.0**.
 - If you work with PHP, there is quite big chance you'll be using at least one of those 11 packages.
@@ -106,7 +106,7 @@ And that's **only 1 package with different PHP version**. Imagine there would an
 
 
 
-## But I don't want to Drop Support for PHP 7.0 
+## But I don't want to Drop Support for PHP 7.0
 
 <img src="/assets/images/posts/2017/go-php-71-later/old-releases.png" class="img-thumbnail">
 

@@ -2,16 +2,16 @@
 id: 14
 title: How to get more than Request in Controller Action
 perex: '''
-    You already know you can get <code>Request</code> object in your controller action. Cool, but there is more. 
+    You already know you can get <code>Request</code> object in your controller action. Cool, but there is more.
     In <em>Symfony 3.1</em> is new <a href="http://symfony.com/doc/current/controller/argument_value_resolver.html">Action Argument Resolving feature</a>,
-    so you can <strong>get any service you need</strong>. With a bit of work. Today I will show you how. 
+    so you can <strong>get any service you need</strong>. With a bit of work. Today I will show you how.
 '''
 
 deprecated: true
 deprecated_since: "May 2017"
 deprecated_message: '''
     You can <a href="https://github.com/symfony/symfony/pull/21771">inject services into actions</a> using <code>controller.service_arguments</code> tag
-    since <strong>Symfony 3.3</strong>. 
+    since <strong>Symfony 3.3</strong>.
     <br><br>
     Combined with <a href="https://github.com/symfony/symfony/pull/21289">PSR4-based service discovery and registration</a>
     and <a href="http://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration">autoconfiguration</a> this is amazing feature.
@@ -32,19 +32,19 @@ I will wait here...
 <br>
 
 ...ok. Now you are probably in one of these 2 groups:
- 
+
 ### 1. You want to use constructor injection in controllers, because you like advantages of service design
- 
+
 Stop reading, because this article describes only method injection, which is not so clean. It would add unnecessary complexity to your
 already solid system with no added value.
 So go [install Symplify/ControllerAutowire bundle](https://github.com/Symplify/ControllerAutowire) and enjoy your day!
 
-### 2. You consider constructor injection in controller too much writing with not much added value   
+### 2. You consider constructor injection in controller too much writing with not much added value
 
 **This is article for you. Keep reading!**
-  
+
 To be honest, first I was completely ignoring this second group, but [Jáchym](https://twitter.com/enumag) explained me why it's important.
-   
+
 
 ## How named services bring less writing
 
@@ -61,7 +61,7 @@ class MeetupController extends Controller
     public function listAction()
     {
         $meetupRepository = $this->get('meetup_repository');
-        
+
         return $this->render('meetup/list.twig', [
             'meetups' => $meetupRepository->findAll()
         ]);
@@ -80,12 +80,12 @@ $meetupRepository = $this->get('meetup_repository');
 
 **How do we know, that `meetup_repository` service has `findAll()` method?**
 
-You need **3 things** to work at once: 
+You need **3 things** to work at once:
 
 - PHPStorm
 - Symfony plugin
-- correct setup for particular project structure 
-    - Symfony 2 and Symfony 3 have [different directory structure](https://knpuniversity.com/screencast/symfony3-upgrade/new-dir-structure), so plugin has to be setup manually to suit it 
+- correct setup for particular project structure
+    - Symfony 2 and Symfony 3 have [different directory structure](https://knpuniversity.com/screencast/symfony3-upgrade/new-dir-structure), so plugin has to be setup manually to suit it
 
 
 ## Is this really necessary?
@@ -129,7 +129,7 @@ I've counted that for you:
 I must admit, this is killer argument **why not to use constructor injection in controllers**.
 
 
-### Meet me half way? 
+### Meet me half way?
 
 What if you could inject the service via method?
 
@@ -148,16 +148,16 @@ public function listAction(MeetupRepository $meetupRepository)
 - We are **independent on project structure**
 
 This all brings greater secondary advantages:
- 
+
 - Less stuff to remember, **less complexity**.
 - **Faster on-boarding** of new programmers.
-- **More joy** to your daily work. 
+- **More joy** to your daily work.
 
 To make this happened, I made [Symplify\ActionAutowire bundle](https://github.com/Symplify/ActionAutowire).
 
 ## How to enable controllers action autowiring in 3 steps
 
-### 1. Install package 
+### 1. Install package
 
 ```yaml
 composer require symplify/action-autowire
@@ -179,7 +179,7 @@ class AppKernel extends Kernel
 }
 ```
 
-### 3. Add some dependency for your controller via constructor 
+### 3. Add some dependency for your controller via constructor
 
 ```php
 // src/AppBundle/Controller/MeetupController.php

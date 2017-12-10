@@ -22,7 +22,7 @@ Symfony už toho umí opravdu hodně. Nová verze klade velký důraz předevš�
 
 Zažil jsi migraci ze Symfony 1 na 2 a chceš se vyhnout podobnému masakru? Neměj obavy - novinek je sice spousta, ale Symfony se poučilo a nedá dopustit na [zpětnou kompatibilitu](http://symfony.com/doc/current/contributing/code/bc.html).
 
-Migrace Symfony 2 na 3 bude značně zjednodušena tím, že **spolu s verzí 3 vyjde i verze 2.8**. **Ta bude mít všechny nové featury verze 3 a bude obsahovat BC vrstvu k sérii 2.x**. Verze 2.8 bude long term support (LTS) - můžeš tak počítat **s podporou až do konce roku 2018**. 
+Migrace Symfony 2 na 3 bude značně zjednodušena tím, že **spolu s verzí 3 vyjde i verze 2.8**. **Ta bude mít všechny nové featury verze 3 a bude obsahovat BC vrstvu k sérii 2.x**. Verze 2.8 bude long term support (LTS) - můžeš tak počítat **s podporou až do konce roku 2018**.
 
 <br>
 
@@ -44,23 +44,23 @@ Jaké jsou tedy 2 hlavní rozdíly mezi 3.0 a 2.8?
 ### 1. Autowiring služeb
 
 Symfony nyní podporuje constructor autowiring. Při vytváření definice služby tak můžete zapnout `autowiring` a přeskočit manuální předávání argumentů.
-V českém prostředí je autowiring poměrně populární díky bundlům jako [Kutny](https://github.com/kutny/autowiring-bundle), [Skrz](https://github.com/skrz/autowiring-bundle) a [Symnedi](https://github.com/Symnedi/AutowiringBundle). 
+V českém prostředí je autowiring poměrně populární díky bundlům jako [Kutny](https://github.com/kutny/autowiring-bundle), [Skrz](https://github.com/skrz/autowiring-bundle) a [Symnedi](https://github.com/Symnedi/AutowiringBundle).
 
 #### Jak to v praxi vypadá?
 
 Dřívější dlouhý zápis
 
 ```yaml
-# services.yml 
+# services.yml
 
 services:
 	myService:
 		class: MyBundle\MyService
     	arguments: [ @dependency1, @dependency2 ]
-	
+
 	dependency1:
 		class: MyBundle\Dependency1
-	
+
 	dependency2:
 		class: MyBundle\Dependency2
 ```
@@ -90,7 +90,7 @@ Místo konkretního typu služby můžeš vyžádat interface, který služba im
 ```yaml
 # services.yml
 
-services:   
+services:
     dependency1:
 	    class: MyBundle\Dependency1
 	    autowiring_types: MyBundle\MyInterface
@@ -113,7 +113,7 @@ Symfony 3 full-stack s sebou přináší řád. Zbaví nás chaosu ve složce `/
 #### Jak?
 
 Dočasné soubory, logy, nastavení pro PHPUnit, konzolové soubory...
-<br>To vše má nyní jasné umístění oddělené od kódu naší aplikace. 
+<br>To vše má nyní jasné umístění oddělené od kódu naší aplikace.
 
 <br>
 
@@ -134,11 +134,11 @@ Testy pak v příkazové řádce spustíš jednoduše přes <code>phpunit</code>
 
 ### 3. Symfony profiler v novém kabátku
 
-Pro programátora je důležitý nejen přehledný kód, ale i přehledné meta-informace o aplikaci. Ty si v Symfony snadno zobrazí 
+Pro programátora je důležitý nejen přehledný kód, ale i přehledné meta-informace o aplikaci. Ty si v Symfony snadno zobrazí
 pomocí Symfony Profileru.
- 
+
 Ten už zobrazoval tolik informací, že se v něm programátor začal ztrácet. Po 4 letech se konečně dočkal flat designu.
- 
+
 Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnější.
 
 <br>
@@ -189,8 +189,8 @@ Ten je vhodný právě na aplikace, které vyžadují jednoduchou konfiguraci, b
 Micro Kernel konkrétně:
 
 - nevyžaduje žádné další konfigurační soubory
-- umožňuje přidání extension bez bundlů 
-- podporuje routování 
+- umožňuje přidání extension bez bundlů
+- podporuje routování
 
 #### Jak takový Micro Kernel vypadá?
 

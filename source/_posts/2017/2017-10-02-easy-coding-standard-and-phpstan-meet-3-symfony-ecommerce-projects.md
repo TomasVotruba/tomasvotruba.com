@@ -44,7 +44,7 @@ I've updated [the repository on Github](https://github.com/TomasVotruba/shopsys-
 
 ## Why These Tools?
 
-When a project uses coding standards - moreover CI-checkers - it is very easy to contribute to it. **I don't have to be afraid a PR gets rejected or at least postponed due to a wrong bracket position** (yea, that happens). 
+When a project uses coding standards - moreover CI-checkers - it is very easy to contribute to it. **I don't have to be afraid a PR gets rejected or at least postponed due to a wrong bracket position** (yea, that happens).
 
 Second, [PHPStan](https://github.com/phpstan/phpstan) is the best tool when it comes to **passing type validations** (arrays of objects, like `Type[]`), **incorrect namespaces**, **calling non-existing methods** [and more](https://medium.com/@ondrejmirtes/phpstan-2939cd0ad0e3#b18f).
 
@@ -99,14 +99,14 @@ The full set looks like this:
 ```yaml
 checkers:
     # use short array []
-    PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer: 
+    PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
         syntax: short
     # drop dead code
-    - SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff 
+    - SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff
     # drop dead use namespaces
-    - PhpCsFixer\Fixer\Import\NoUnusedImportsFixer 
+    - PhpCsFixer\Fixer\Import\NoUnusedImportsFixer
     # and sort them A→Z
-    - PhpCsFixer\Fixer\Import\OrderedImportsFixer 
+    - PhpCsFixer\Fixer\Import\OrderedImportsFixer
 ```
 
 <br>

@@ -4,9 +4,9 @@ title: "How to change PHP code with Abstract Syntax Tree"
 perex: '''
     Today we can do amazing things with PHP. Thanks to AST and [nikic/php-parser](https://github.com/nikic/PHP-Parser) we can create very **narrow artificial intelligence, which can work for us**.
     <br><br>
-    Let's create first its synapse! 
+    Let's create first its synapse!
 '''
-tweet: "Let AST change code for you #php #phpparser #ast #ai" 
+tweet: "Let AST change code for you #php #phpparser #ast #ai"
 
 tested: true
 test_slug: Ast
@@ -15,14 +15,14 @@ test_slug: Ast
 We need to make clear what are we talking about right at the beginning. When we say "PHP AST", you can talk about 2 things:
 
 
-### 1. php-ast 
+### 1. php-ast
 
 This is native extension which exports the AST internally used by PHP 7.0+. It allows **read-only** and is very fast, since it's native C extension. Internal AST was added to PHP 7.0 by skill-full Nikita Popov in [this RFC](https://wiki.php.net/rfc/abstract_syntax_tree). You can find it on GitHub under [`nikic/php-ast`](https://github.com/nikic/php-ast).
 
 
 ### 2. PHP AST
 
-This is AST of PHP in Object PHP. It will take your PHP code, turn into PHP object with autocomplete in IDE and **allows you to modify code**. You can find it on GitHub under [`nikic/PHP-Parser`](https://github.com/nikic/PHP-Parser/). 
+This is AST of PHP in Object PHP. It will take your PHP code, turn into PHP object with autocomplete in IDE and **allows you to modify code**. You can find it on GitHub under [`nikic/PHP-Parser`](https://github.com/nikic/PHP-Parser/).
 
 Nikita explains [differences between those 2 in more detailed technical way](https://github.com/nikic/php-ast#differences-to-php-parser). Personally I love [this human reason](https://github.com/nikic/PHP-Parser/blob/master/doc/0_Introduction.markdown#what-is-this-for) the most:
 
@@ -33,10 +33,10 @@ Nikita explains [differences between those 2 in more detailed technical way](htt
 
 
  Which one would you pick? If you're **lazy like me and hate reading code and writing code** over and over again, the 2nd one.
-  
-  
+
+
 ## What work can `nikic/PHP-Parser` do for us?
- 
+
 Saying that, **we skip the read-feature** of this package - it's used by [PHPStan](https://github.com/phpstan/phpstan) or [BetterReflection](https://github.com/Roave/BetterReflection) - and **move right to the writing-feature**. Btw, back in 2012, even [Fabien wanted to use it in PHP CS Fixer](https://github.com/nikic/PHP-Parser/issues/41), but it wasn't ready yet.
 
 ### When we say *modify* and *AST* together, what can you brainstorm?
@@ -52,7 +52,7 @@ Saying that, **we skip the read-feature** of this package - it's used by [PHPSta
 - refactor Laravel App to Symfony App
 - ...
 
-It can do many things for you, depends on how much work you put in it. Today we will try to **change method name**. 
+It can do many things for you, depends on how much work you put in it. Today we will try to **change method name**.
 
 
 ## 4 Steps to Changing a name
@@ -109,7 +109,7 @@ final class ChangeMethodNameNodeVisitor extend NodeVisitorAbstract
         if (! $node instanceof ClassMethod) {
             return false;
         }
-        
+
         // so we got it, what now?
     }
 }
@@ -133,10 +133,10 @@ final class ChangeMethodNameNodeVisitor extend NodeVisitorAbstract
         if (! $node instanceof ClassMethod) {
             return false;
         }
-        
+
         $node->name = new Name('newName');
-    
-        // return node to tell parser to modify it    
+
+        // return node to tell parser to modify it
         return $node;
     }
 }
@@ -146,7 +146,7 @@ final class ChangeMethodNameNodeVisitor extend NodeVisitorAbstract
 To work with **class names, interface names, method names** etc., we need to **use `PhpParser\Node\Name`**.
 
 Oh, I almost forgot, we need to actually **invite visitor to the `NodeTraverser`** like this:
- 
+
 ```php
 $nodeTraverser = new PhpParser\NodeTraverser;
 $traversedNodes->addVisitor(new ChangeMethodNameNodeVisitor);
@@ -217,7 +217,7 @@ $newCode = (new Standard)->printFormatPreserving($newStmts, $oldStmts, $oldToken
 ```
 
 
-Congrats, now you've successfully renamed method to `newName`! 
+Congrats, now you've successfully renamed method to `newName`!
 
 
 ## Advanced Changes? With Rector!
@@ -230,9 +230,9 @@ Do you want to see more advanced operations, like those we [brainstormed in the 
 ### This post is Tested
 
 This is the first [tested post](https://pehapkari.cz/blog/2017/01/12/why-articles-with-code-examples-should-be-CI-tested/) I've added to my blog.
- It means **it will be updated as new versions of code used here will appear** → *LTS post* that will work with newer `nikic/php-parser` versions. 
- 
- Do you want to see those tests? Just click *Tested* badge in the top. 
+ It means **it will be updated as new versions of code used here will appear** → *LTS post* that will work with newer `nikic/php-parser` versions.
+
+ Do you want to see those tests? Just click *Tested* badge in the top.
 
 <br>
 

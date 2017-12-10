@@ -2,19 +2,19 @@
 id: 51
 title: "5 Useful Rules From Symplify Coding Standard"
 perex: '''
-     <a href="http://github.com/Symplify/CodingStandard">Symplify Coding Standard</a> was born from Zenify, back from the days I was only Nette programmer. It focuses on <strong>maintainability and clean architecture</strong>. I try to make them simple: <strong>each of them does one job</strong>.  
+     <a href="http://github.com/Symplify/CodingStandard">Symplify Coding Standard</a> was born from Zenify, back from the days I was only Nette programmer. It focuses on <strong>maintainability and clean architecture</strong>. I try to make them simple: <strong>each of them does one job</strong>.
      <br><br>
-     With over 13 000 downloads I think I should write about 5 of them you can use in your projects today. 
+     With over 13 000 downloads I think I should write about 5 of them you can use in your projects today.
 '''
 tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standard #php #architecture #php_codesniffer"
 related_posts: [49]
 ---
 
 I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
-   
+
 **Symplify Coding standard is complete opposite.** You can start with 1st checker today and your code will be probably able to handle it. It's combination of 23 sniffs and fixers.
 
-The simplest would be... 
+The simplest would be...
 
 
 ### 1. Array property should have default value `[]` to prevent undefined array issues
@@ -29,7 +29,7 @@ class SomeClass
      * @var string[]
      */
     public $apples;
-    
+
     public function run()
     {
         foreach ($this->apples as $mac) {
@@ -61,13 +61,13 @@ checkers:
 ```
 
 
-### 2. Final Interface 
+### 2. Final Interface
 
 Once I read [When to declare classes final](https://ocramius.github.io/blog/when-to-declare-classes-final) by [Marco Pivetta](http://ocramius.github.io/) with **tl;dr;**:
 
 *Make your classes always final, if they implement an interface, and no other public methods are defined.*
 
-I was working at [Lekarna.cz](https://www.lekarna.cz/) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and had lots of code reviews. **So I made a sniff to save us some work.** 
+I was working at [Lekarna.cz](https://www.lekarna.cz/) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and had lots of code reviews. **So I made a sniff to save us some work.**
 
 <em class="fa fa-lg fa-times text-danger"></em>
 
@@ -124,7 +124,7 @@ checkers:
 
 ### 4. Test should be final
 
-This is lighter version of **Final Interface rule**. No brainer. 
+This is lighter version of **Final Interface rule**. No brainer.
 
 <em class="fa fa-lg fa-times text-danger"></em>
 
@@ -178,7 +178,7 @@ final class SomeClass implements SomeInterface
     public function run(): void
     {
     }
-    
+
     public function extra(): void
     {
     }
@@ -239,7 +239,7 @@ class SomeClass
      * @var RequiredDependencyClass
      */
     private $requiredDependencyClass;
-    
+
     public function __construct(RequiredDependencyClass $requiredDependencyClass)
     {
         $this->requiredDependencyClass = $requiredDependencyClass;
@@ -256,22 +256,22 @@ checkers:
 ```
 
 
-### Sold? Try them 
+### Sold? Try them
 
 
-They are used the best with [EasyCodingStandard](/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/): 
- 
+They are used the best with [EasyCodingStandard](/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/):
+
 ```bash
 composer require --dev symplify/easy-coding-standard symplify/coding-standard
 ```
 
-Check your code: 
+Check your code:
 
 ```bash
 vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify-checkers.neon
 ```
 
-Fix your code: 
+Fix your code:
 
 ```bash
 vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify-checkers.neon --fix

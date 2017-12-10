@@ -20,7 +20,7 @@ When a coding standard tool finds over 1000 violations in our code is nice to kn
 ### Find & Fix It
 
 That main difference of PHP CS Fixer to PHP_CodeSniffer is that **every Fixer has to fix issues it finds**. That's why there is no `LineLenghtFixer`, because fixing line length is difficult to automate.
- 
+
 Personally I like PHP CS Fixer a bit more, **because of more friendlier API, active community and openness to 3rd party packages**:
 
 <img src="/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png" class="img-thumbnail">
@@ -47,7 +47,7 @@ Yet still, working with tokens is counter intuitive to way we work with the code
 Now we jump to writing the Fixer class.
 
 
-## 7 Steps to Make an `ExceptionNameFixer` 
+## 7 Steps to Make an `ExceptionNameFixer`
 
 "An exception class should have "Exception" suffix."
 
@@ -66,7 +66,7 @@ Today we'll add one more step:
 
 ### 1. Implement an Interface
 
-Create a fixer class and implement a `PhpCsFixer\FixerDefinition\FixerDefinitionInterface` interface. 
+Create a fixer class and implement a `PhpCsFixer\FixerDefinition\FixerDefinitionInterface` interface.
 
 It covers 7 required methods, but most of them are easy one-liners:
 
@@ -85,20 +85,20 @@ final class ExceptionNameFixer implements DefinedFixerInterface
 
     public function getDefinition(): FixerDefinitionInterface
     {
-    }        
+    }
 
     public function isRisky(): bool
     {
-    }        
+    }
 
     public function supports(SplFileInfo $file): bool
     {
-    }        
+    }
 
     public function getPriority(): int
     {
-    }        
-    
+    }
+
     # in last 2 methods, the magic happens :)
 
     public function isCandidate(Tokens $tokens): bool
@@ -114,7 +114,7 @@ final class ExceptionNameFixer implements DefinedFixerInterface
 ### 2. Easypicks First
 
 I start with implementing first 5 methods, to make
- 
+
 ```php
 use PhpCsFixer\FixerDefinition\CodeSample;
 use PhpCsFixer\FixerDefinition\FixerDefinition;
@@ -144,28 +144,28 @@ final class ExceptionNameFixer implements DefinedFixerInterface
                 ),
             ]
         );
-    }        
+    }
 
     // if the fixer changes code behavior in any way, return "true"
     // changing a class name is such case
     public function isRisky(): bool
     {
         return true;
-    }        
+    }
 
     // in 99.9% this is true, since only *.php are passed
     // you can detect specific names, e.g. "*Repository.php"
     public function supports(SplFileInfo $file): bool
     {
         return true;
-    }        
+    }
 
     // it's used to order all fixers before running them
     // `0` by default, higher value is first
     public function getPriority(): int
     {
         return 0;
-    }        
+    }
 }
 ```
 
@@ -180,7 +180,7 @@ public function isCandidate(Tokens $tokens): bool
 }
 ```
 
-`extends` token without class and its name is useless and not a code we want to match.  
+`extends` token without class and its name is useless and not a code we want to match.
 
 ### 4. Add "Fix it" part
 
@@ -192,10 +192,10 @@ public function fix(SplFileInfo $file, Tokens $tokens): void
 
 This methods get same tokens as `isCandidate()` and the file info.
 
-**How to build a fixer?** 
- 
+**How to build a fixer?**
+
 - First we need to detect, if this is the use case we try to match - **an exception class**. Because `T_EXTENDS` doesn't tell a lot.
-- Then we need to check if it meets our rules 
+- Then we need to check if it meets our rules
 - and fix if so.
 
 Let's take it one a by one:
@@ -219,7 +219,7 @@ public function fix(SplFileInfo $file, Tokens $tokens): void
         if (! $this->isException($tokens, $index)) {
             continue;
         }
-        
+
     }
 }
 ```
@@ -227,10 +227,10 @@ public function fix(SplFileInfo $file, Tokens $tokens): void
 **How to detect an exception class?**
 
 `Tokens` (like `File` in PHP_CodeSniffer) has helper methods to make our life easier.
- 
+
 **First of them is `getNextMeaningfulToken()`, which skips spaces and comments and seeks for first useful one**. In our case, after `extends` we look for a parent class name.
 
-```php 
+```php
 private function isException(Tokens $tokens, int $index): bool
 {
     $parentClassNamePosition = $tokens->getNextMeaningfulToken($index);
@@ -241,7 +241,7 @@ private function isException(Tokens $tokens, int $index): bool
     return $this->stringEndsWith($parentClassName, 'Exception');
 }
 
-private function stringEndsWith(string $name, string $needle): bool 
+private function stringEndsWith(string $name, string $needle): bool
 {
     return substr($name, -strlen($needle)) === $needle;
 }
@@ -264,8 +264,8 @@ public function fix(SplFileInfo $file, Tokens $tokens): void
         if (! $this->isException($tokens, $index)) {
             continue;
         }
-        
-        // does this class ends with "Exception"? 
+
+        // does this class ends with "Exception"?
         $classNamePosition = (int) $tokens->getPrevMeaningfulToken($index);
         // get the token
         $classNameToken = $tokens[$classNamePosition];
@@ -273,7 +273,7 @@ public function fix(SplFileInfo $file, Tokens $tokens): void
         if ($this->stringEndsWith($classNameToken->getContent(), 'Exception')) {
             continue;
         }
-        
+
     }
 }
 ```
@@ -287,7 +287,7 @@ Fixing is right to the point. To change a name, replace old name (`T_STRING` `To
 $tokens[$classNamePosition] = new Token([T_STRING, $classNameToken->getContent() . 'Exception']);
 ```
 
-Is that it? Yea, that's it :) 
+Is that it? Yea, that's it :)
 
 ### 7. Put Together The Final Fixer
 
@@ -374,7 +374,7 @@ final class ExceptionNameFixer implements DefinedFixerInterface
         return $this->stringEndsWith($parentClassName, 'Exception');
     }
 
-    private function stringEndsWith(string $name, string $needle): bool 
+    private function stringEndsWith(string $name, string $needle): bool
     {
         return (substr($name, -strlen($needle)) === $needle);
     }

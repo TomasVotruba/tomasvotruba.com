@@ -15,7 +15,7 @@ deprecated_message: "This post is available only in Czech and whole website was 
 </div>
 <br>
 
-A teď k dění. V krásném divadle a přidruženém kinosále se odehrálo přes 20 přednášek. 
+A teď k dění. V krásném divadle a přidruženém kinosále se odehrálo přes 20 přednášek.
 
 Dnes se spolu podíváme na 4 nejlepší.
 
@@ -43,7 +43,7 @@ Jednoduše řečeno:
 - stejně jako 2.8 a 3.0
 
 Přechod na nové major verze bude pod mnohem větší kontrolou než kdy dřív.
-     
+
 
 ## 2. Symfony2 at BlaBlaCar
 
@@ -59,7 +59,7 @@ Tato zdánlivě random-generated firma se zabývá bla bla bla… ridesharingem,
 Právě o tyto “do’s and dont’s” se s námi přednášející podělili:
 
 - upgrade as soon as you can
-- failure is beginning 
+- failure is beginning
 - Doctrine - fast, but issues with MVC, cache, integrity problems, scale, decoupling...
 - Event Dispatching v RabbitMQ
 
@@ -69,7 +69,7 @@ Právě o tyto “do’s and dont’s” se s námi přednášející podělili:
 
 Jejich microservices nevyužívají interní API, ktére jim přišlo zbytečně náročné na udržování, ale vlastní řešení.
 
-Říkají mu **The Gateway** ([slajd](https://speakerdeck.com/odolbeau/symfony-at-blablacar?slide=64)) a jeho předností jsou DDD, oddělení business logiky a přístwupu k datům a přehledné organizaci. Zajímavá myšlenka. 
+Říkají mu **The Gateway** ([slajd](https://speakerdeck.com/odolbeau/symfony-at-blablacar?slide=64)) a jeho předností jsou DDD, oddělení business logiky a přístwupu k datům a přehledné organizaci. Zajímavá myšlenka.
 
 > Máš taky startup a řešíš něco podobného? Mrkni [na slajdy](https://speakerdeck.com/odolbeau/symfony-at-blablacar).
 
@@ -92,9 +92,9 @@ A teď něco pro každého:
 
 se s námi podělil o tipy a triky, které posbíral za poslední rok - nejen při psaní [Week of Symfony](http://symfony.com/blog/category/a-week-of-symfony) (doporučuju odebírat, pokud chceš být v obraze).
 
-Za mě to byla ta nejzajímavější přednáška, ze které jsem si odnesl velké množství tipů do vlastní praxe. 
+Za mě to byla ta nejzajímavější přednáška, ze které jsem si odnesl velké množství tipů do vlastní praxe.
 
-**Tipy jsou pro začátečníky i pokročilé**, jako třeba 
+**Tipy jsou pro začátečníky i pokročilé**, jako třeba
 
 - nested Doctrine transactions
 - custom logger formatter - už žádné ošklivé nepřehledné logy
@@ -130,14 +130,14 @@ public function testContainerServices()
 Ryan Weavera žeru. Určitě ho znáš i ty - minimálně ze Symfony blogu, na který dává velmi záživné čtení. A stejně záživný a vtipný (možná ještě vtipnější) je i osobně. Jeho přednáška o tom, že Symfony lze nově použít i jako microframework (díky [MicroKernelTrait](https://github.com/symfony/symfony/blob/3.0/src/Symfony/Bundle/FrameworkBundle/Kernel/MicroKernelTrait.php)), byla naprosto skvělá.
 
 Ukázal nám nové možnosti a způsoby...
- 
+
 - jak mít “více aplikací” v jednom projektu,
 - jak udělat minimalistický web se všemi magickými vychytávkami Symfony,
 - a hlavně, jak zabít Silex, protože touto přednáškou ho totálně oddělal.
 
 Na toto téma už brzy na Zdrojáku vyjde článek, kde si vše podrobně ukážeme.
 
-> Zatím můžeš mrknout [na slajdy z přednášky](http://www.slideshare.net/weaverryan/symfony-your-next-microframework-symfonycon-2015). 
+> Zatím můžeš mrknout [na slajdy z přednášky](http://www.slideshare.net/weaverryan/symfony-your-next-microframework-symfonycon-2015).
 
 ### 1 věc, kterou stojí za to si zapamatovat
 
@@ -149,7 +149,7 @@ Dříve byla volba jasná:
 Kdy teda použít MicroKernel?
 
 - MicroKernel se hodí, když začínáš malou aplikaci, ale chceš ji časem škálovat. Navíc oproti Silexu podporuje Bundly.
- 
+
 
 ### Další přednášky, které stojí minimálně za proklikání:
 

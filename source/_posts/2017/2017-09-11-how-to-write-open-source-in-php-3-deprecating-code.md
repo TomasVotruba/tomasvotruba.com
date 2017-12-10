@@ -22,19 +22,19 @@ This technique is quite rare to see (apart PHP frameworks). It's very simple to 
 
 - people will have to find deprecations themselves in the commits - **from programmer to detective**
 - you'll **find issues** like "autowire() method missing - what should I do?" at your package on Github
-- you'll have to remember, when you upgrade some project using your package few months later    
+- you'll have to remember, when you upgrade some project using your package few months later
 
 ### If you DO
 
-- people will like you 
-- you'll be able to do more BC breaks in your code, because people will know they're taken care off 
+- people will like you
+- you'll be able to do more BC breaks in your code, because people will know they're taken care off
 - **upgrade of your package will be much easier**
 - **machine-readable messages will allow automate upgrades**
 
 
 To explain last point a bit more: if you write your message in a way, that some parser would be able to understand it, **it would be able to refactor other code accordingly**.
 
-1. Read 
+1. Read
 
     ```bash
     SomeClass::oldMethod => SomeClass::newMethod
@@ -46,13 +46,13 @@ To explain last point a bit more: if you write your message in a way, that some 
     bin/refactor app src
     ```
 
-3. Enjoy new code! 
+3. Enjoy new code!
 
 
 That was [the future](https://github.com/tomasvotruba/Rector), now back to the present.
 
 
-## Today's topic: Changed Method Name 
+## Today's topic: Changed Method Name
 
 Let's take real example from real code - a class from [`Nette\Utils` 2.4](https://doc.nette.org/en/2.4/html-elements#toc-elements-content).
 
@@ -60,16 +60,16 @@ What we need to know?
 
 - **a method name has changed**
 - from "add" to "addHtml"
-- on `Nette\Utils\Html` object  
- 
- 
+- on `Nette\Utils\Html` object
+
+
 **Before** this change you used:
 
 ```php
 $html = Html::el('div');
 $html->add('<strong>I am brand new!</strong>');
 ```
- 
+
 And **after** this change you will use:
 
 ```php
@@ -78,7 +78,7 @@ $html->addHtml('<strong>I am brand new!</strong>');
 ```
 
 
-This is the snippet from the `Nette\Util\Html` class we are interested in: 
+This is the snippet from the `Nette\Util\Html` class we are interested in:
 
 
 ```php
@@ -96,9 +96,9 @@ class Html
 So how to inform all ends users about this?
 
 You can choose from **2 ways to write deprecations messages**, based on your preference.
- 
 
-### 1. A `@deprecate` annotation 
+
+### 1. A `@deprecate` annotation
 
 
 ```php
@@ -113,7 +113,7 @@ class Html
     {
         $this->addHtml(...);
     }
-    
+
     public function addHtml(...)
     {
         // ...
@@ -156,9 +156,9 @@ Luckily, there is option that **will actually inform about the deprecation**.
 
 
 
-### 2. A `trigger_error()`   
+### 2. A `trigger_error()`
 
-A [`trigger_error()`](http://php.net/manual/en/function.trigger-error.php) is native PHP function, that can inform user about changes in the code. 
+A [`trigger_error()`](http://php.net/manual/en/function.trigger-error.php) is native PHP function, that can inform user about changes in the code.
 
 With the 2nd argument is level of these messages - there is special constant `E_USER_DEPRECATED` destined for this case.
 
@@ -171,10 +171,10 @@ class Html
     {
         # we already know how to write useful mesagges
         trigger_error('Method add() is deprecated, use addHtml() instead.', E_USER_DEPRECATED);
-        
+
         $this->addHtml(...);
     })
-    
+
     public function addHtml(...)
     {
         // ...
@@ -183,7 +183,7 @@ class Html
 ```
 
 
-You can [see it used in similar way](https://github.com/nette/utils/blob/f1584033b5af945b470533b466b81a789d532034/src/Utils/Html.php#L362) in the original code. 
+You can [see it used in similar way](https://github.com/nette/utils/blob/f1584033b5af945b470533b466b81a789d532034/src/Utils/Html.php#L362) in the original code.
 
 
 

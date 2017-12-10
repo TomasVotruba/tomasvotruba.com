@@ -16,10 +16,10 @@ tweet: "How to refactor to new #symfony 3.3 DI features? #examples #php"
 If you follow [Symfony blog](http://symfony.com/blog/), you will already know about:
 
 - **[autowconfigure](http://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration)**
-- **[`_defaults`, `instanceof` and simpler service registration](http://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration)** 
+- **[`_defaults`, `instanceof` and simpler service registration](http://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration)**
 - **[from named services to class services](http://symfony.com/blog/new-in-symfony-3-3-optional-class-for-named-services)**
 - [`autowire()` and name tag shortcuts](http://symfony.com/blog/new-in-symfony-3-3-added-new-shortcut-methods)
- 
+
 And there are some more, that **were not mentioned on the blog**:
 
 - **[PSR-4-based services discovery and registration](https://github.com/symfony/symfony/pull/21289)**
@@ -38,11 +38,11 @@ more detailed way. But I think there is **quicker way to learn them**...
 
 <br>
 
- 
+
 ## Refactor Service Config in 5 Steps
- 
+
 This is service config in Application in Symfony 3.2 or lower.
- 
+
 We apply all features we can and I always add a small `# comment` to the code with explanation.
 
 ```yaml
@@ -55,7 +55,7 @@ services:
     some_controller:
         class: App\Controller\SomeController
         autowire: true
-    
+
     first_repository:
         class: App\Repository\FirstRepository
         autowire: true
@@ -66,7 +66,7 @@ services:
         autowire: true
         calls:
             - ["setEntityManager", ["@entity_manager"]]
-         
+
     # console commands
     first_command:
         class: App\Command\FirstCommand
@@ -78,7 +78,7 @@ services:
         autowire: true
         tags:
             - { name: console.command }
-         
+
     # event subscribers
     first_subscriber:
         class: App\EventSubscriber\FirstSubscriber
@@ -99,13 +99,13 @@ services:
 services:
     _defaults:
         autowire: true # all services in this config are now autowired
-        
+
     some_service:
         class: App\SomeService
 
     some_controller:
         class: App\Controller\SomeController
-    
+
     first_repository:
         class: App\Repository\FirstRepository
         calls:
@@ -114,7 +114,7 @@ services:
         class: App\Repository\SecondRepository
         calls:
             - ["setEntityManager", ["@entity_manager"]]
-         
+
     # console commands
     first_command:
         class: App\Command\FirstCommand
@@ -124,7 +124,7 @@ services:
         class: App\Command\SecondCommand
         tags:
             - { name: console.command }
-         
+
     # event subscribers
     first_subscriber:
         class: App\EventSubscriber\FirstSubscriber
@@ -143,14 +143,14 @@ services:
 services:
     _defaults:
         autowire: true
-        autoconfigure: true # all Symfony native tags are now added automatically  
-        
+        autoconfigure: true # all Symfony native tags are now added automatically
+
     some_service:
         class: App\SomeService
 
     some_controller:
         class: App\Controller\SomeController
-    
+
     first_repository:
         class: App\Repository\FirstRepository
         calls:
@@ -159,13 +159,13 @@ services:
         class: App\Repository\SecondRepository
         calls:
             - ["setEntityManager", ["@entity_manager"]]
-         
+
     # console commands
     first_command:
         class: App\Command\FirstCommand
     second_command:
         class: App\Command\SecondCommand
-         
+
     # event subscribers
     first_subscriber:
         class: App\EventSubscriber\FirstSubscriber
@@ -181,22 +181,22 @@ services:
     _defaults:
         autowire: true
         autoconfigure: true
-        
+
     App\SomeService: ~ # no more thinking about creative and unique service name
 
     App\Controller\SomeController: ~
-    
-    App\Repository\FirstRepository: 
+
+    App\Repository\FirstRepository:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
-    App\Repository\SecondRepository: 
+    App\Repository\SecondRepository:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
-         
+
     # console commands
     App\Command\FirstCommand: ~
     App\Command\SecondCommand: ~
-         
+
     # event subscribers
     App\EventSubscriber\FirstSubscriber: ~
     App\EventSubscriber\SecondSubscriber: ~
@@ -210,16 +210,16 @@ services:
     _defaults:
         autowire: true
         autoconfigure: true
-        
-    App\: # no more manual registration of similar groups of services 
+
+    App\: # no more manual registration of similar groups of services
         resource: ../{Controller,Command,Subscriber}
 
     App\SomeService: ~
-    
-    App\Repository\FirstRepository: 
+
+    App\Repository\FirstRepository:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
-    App\Repository\SecondRepository: 
+    App\Repository\SecondRepository:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
 ```
@@ -238,7 +238,7 @@ services:
         App\Repository\AbstractRepository:
             calls:
                 - ["setEntityManager", ["@entity_manager"]]
-        
+
     App\:
         resource: ../{Controller,Command,Subscriber,Repository}
 
@@ -285,7 +285,7 @@ services:
     _defaults:
         autowire: true
         autoconfigure: true
-        
+
     App\:
         resource: ../{Controller,Command,Subscriber,Repository}
 
@@ -298,6 +298,6 @@ Now you are using all the shiny new Symfony 3.3 Dependency Injection features.
 
 ### More in Symfony Flex
 
-If you need more examples, check out the default [app.yaml file defined by Symfony Flex](https://github.com/symfony/recipes/blob/master/symfony/framework-bundle/3.3/etc/packages/app.yaml). 
+If you need more examples, check out the default [app.yaml file defined by Symfony Flex](https://github.com/symfony/recipes/blob/master/symfony/framework-bundle/3.3/etc/packages/app.yaml).
 
-**Do you like it? Do you plan to skip some of those and stick to the current syntax?** 
+**Do you like it? Do you plan to skip some of those and stick to the current syntax?**

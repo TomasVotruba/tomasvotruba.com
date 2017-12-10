@@ -8,21 +8,21 @@ related_posts: [20]
 tweet: "Why I quit #twitter? #deepWork"
 ---
 
-Before I started this article, I read 
+Before I started this article, I read
 [I Quit Twitter And My Life Got Better. Here's Why I'm Going Back](http://www.forbes.com/sites/laurenorsini/2015/11/11/i-quit-twitter-and-my-life-got-better-heres-why-im-going-back). In the article Lauren describes **what was it like to have 1 week without Twitter and why she got back**. If you use Twitter, I recommend you reading it. There are some great insights on autopilot behavior.
- 
+
 Now here is my story...
 
-I felt bad using Twitter last few months. **I wasn't sure** if I really want to quit Twitter. 
+I felt bad using Twitter last few months. **I wasn't sure** if I really want to quit Twitter.
 
 ### I Tried Small Experiments Hoping To Get Better
 
 - I un-followed people down to zero.
-- I limited my time there to 10 minutes in the evening. 
+- I limited my time there to 10 minutes in the evening.
 - I tried different approach for Tweets and retweets:
     - pools to engage with followers
     - retweet the most popular Tweets from the past
-    - mention multiple people 
+    - mention multiple people
     - use 5+ hashtags
     - add 1 to 5 images
 - I talked with friends how do they enjoy Twitter.
@@ -45,48 +45,48 @@ I talked about my addiction with [Petr Vácha](http://petrvacha.com/) and my int
 I tried it for few days and it was great. I got higher dopamine shots in the end of the day.
 
 The only issue for me was **I had to focus to not to think on Twitter throughout the whole day**. It was like starving the whole day to eat once in the evening.
-It worked technically, **but it didn't feel right**. I could spend 5 minutes on 10 social networks and spend less than hour, but I want to enjoy this by heart, not by my inner computer. 
+It worked technically, **but it didn't feel right**. I could spend 5 minutes on 10 social networks and spend less than hour, but I want to enjoy this by heart, not by my inner computer.
 
-I know I can't do something for only 50 %. I either do it close to 100 % or go another way. 
+I know I can't do something for only 50 %. I either do it close to 100 % or go another way.
 
 
 ## 2. I Tried so Hard to Look Good
 
 - I planed Tweets for one per day, so I won't spam.
 - I retweeted Tweets I found interesting.
-- I've added images, hashtags. 
+- I've added images, hashtags.
 - I have read many how-to-tweet articles.
-- I tweeted only valuable and positive stuffs. Not in relation to reality, really. 
+- I tweeted only valuable and positive stuffs. Not in relation to reality, really.
 
 Few month later I realized **I'm turning into news machine**. So I asked my followers, [how do you use Twitter](https://twitter.com/VotrubaT/status/816753682482085896)?
 
 I found there are many news channel that already cover this field.
 
-Second, **I found I have reactive-response syndrome: for every message I have to have an answer**. It's close to [fear of missing out](https://zenhabits.net/miss/). 
+Second, **I found I have reactive-response syndrome: for every message I have to have an answer**. It's close to [fear of missing out](https://zenhabits.net/miss/).
 
-That included conversations under tweets, checking Twitter often for new answers, and trials to explain complex problems and miss-understandings under 140 characters. 
+That included conversations under tweets, checking Twitter often for new answers, and trials to explain complex problems and miss-understandings under 140 characters.
 
 
 ## 3. It's Boring
 
-Twitter innovated its service maybe twice since I used it, not much news. Also social adaptions is slow - not many new people are joining Twitter. 
+Twitter innovated its service maybe twice since I used it, not much news. Also social adaptions is slow - not many new people are joining Twitter.
 
 I was trying to find fun in service that didn't gave it to me. **It's like seeking a passion in relationship with woman I'm not attracted to.**
 
 What I like about Facebook, Github or PHPStorm is that **they evolve and innovate**. Sometimes I like it, sometimes I don't, but **I know they are trying to be better**.
-  
-If Twitter was a person, it would be fearful virgin in his 30ties sticking to first job with no girlfriend.  
- 
+
+If Twitter was a person, it would be fearful virgin in his 30ties sticking to first job with no girlfriend.
+
 
 ## 4. I already Love Somebody Else
 
 140 limit for Tweet is fine, but I want to get deeper. I also don't like random Tweet stream: one day 50 tweets, other day 5. What the hell, man? That's so schizophrenic.
 
 **I love system, regularity and predictability**. This is the best way to educate constantly in certain speed.
- 
+
 That's why I switched from Tweetdeck-hashtag-group-following based to regular newsletter one in last year.
 
-I started to follow: 
+I started to follow:
 
 - [PHP Annotated Monthly](https://info.jetbrains.com/PHP-Annotated-Subscription.html) from JetBrains (PHPStorm guys)
 - [PHP Weekly](http://www.phpweekly.com/)
@@ -118,7 +118,7 @@ Followed by [a year later reflection](http://www.stevepavlina.com/blog/2015/07/o
 ### Where Do You Find Me?
 
 - As you can see I love newsletters. **I'll be starting my soon - [be sure to subscribe here](http://eepurl.com/cpKuMT).**
- 
+
 - **And I'm [still on Facebook](https://www.facebook.com/nauc.se.nette.symfony.a.doctrine) where I post weekly about programming and self-education tips.**
 
 Both you can find on my website [tomasvotruba.cz](https://www.tomasvotruba.cz/#socials).

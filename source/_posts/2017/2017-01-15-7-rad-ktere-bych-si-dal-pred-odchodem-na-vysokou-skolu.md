@@ -2,7 +2,7 @@
 id: 22
 title: "7 rad, které bych si dal před odchodem na vysokou školu"
 perex: '''
-    Už jsou to 4 roky, co jsem ukončil vysokou školu, aniž by mi za to dali titul. Během těch 4 let se mě na vysokou školu ptalo lidí, které bych spočítal na prstech jedné ruky. A na titul? Nikdo.<br><br> 
+    Už jsou to 4 roky, co jsem ukončil vysokou školu, aniž by mi za to dali titul. Během těch 4 let se mě na vysokou školu ptalo lidí, které bych spočítal na prstech jedné ruky. A na titul? Nikdo.<br><br>
     <strong>Nedávno jsem si volal s jedním středoškolákem a zjistil jsem, že vysoká škola je stále brána jako něco posvátného, důležitého a hlavně bez vhledu nikoho jiného než učitelů a rodičů.</strong> Řekl jsem si, že sepíšu svoje postřehy a rady, které bych si moc rád dal 8 let zpátky. <strong>Jestli je ti 18-19 let a zvažuješ co dál, pokračuj.</strong>
 '''
 
@@ -11,35 +11,35 @@ deprecated_since: "August 2017"
 deprecated_message: "This post is available only in Czech and whole website was moved to English."
 ---
 
-**Disclaimer: Moje závěry plynou ze zkušeností ze studia v Brně na FIT VUT a FSS MUNI a kolem 300 rozhovorů se spolužáky a (po)vysokoškoláky z Brna, Prahy a Liberce. Pokud je to na tvé škole jinak, budu rád za tvůj pohled a tipy.**   
+**Disclaimer: Moje závěry plynou ze zkušeností ze studia v Brně na FIT VUT a FSS MUNI a kolem 300 rozhovorů se spolužáky a (po)vysokoškoláky z Brna, Prahy a Liberce. Pokud je to na tvé škole jinak, budu rád za tvůj pohled a tipy.**
 
 
 ## 1. Zeptej se někoho, kdo na vysokou nešel
 
 Často jsem dostával informace od rodičů (mamka výšku má) nebo od učitelů na střední (tam ji mají všichni). **To je jako se ptát na náboženství křesťanského kněze**. Nejspíš bude vědět hodně o křesťanství, ale o budhismu ti sám od sebe neřekne.
 
-Tomu se říká [Confirmation Bias](https://cs.wikipedia.org/wiki/Konfirma%C4%8Dn%C3%AD_zkreslen%C3%AD) - lidé mají tendenci přijímat ty informace, které podporují jejich vlastní názor. Bacha na něj :) 
+Tomu se říká [Confirmation Bias](https://cs.wikipedia.org/wiki/Konfirma%C4%8Dn%C3%AD_zkreslen%C3%AD) - lidé mají tendenci přijímat ty informace, které podporují jejich vlastní názor. Bacha na něj :)
 
-## 2. Najdi si zkušené lidi z oboru, který tě baví 
+## 2. Najdi si zkušené lidi z oboru, který tě baví
 
 Já tohle neudělal, protože jsem nikoho takového neznal. Nebo jsem netušil, že je to důležité. Dneska bych šel na Facebook a vyhledal si "podnikatel php programování" a pozval první 3 výsledky na kafe.
-   
+
 ### Kde takové lidi najít?
- 
-Pro začátek asi nebudeš chtít [platit za profíka](https://poradci.cz/) řádově 1000 Kč. Naštěstí jsou levnější cesty:  
+
+Pro začátek asi nebudeš chtít [platit za profíka](https://poradci.cz/) řádově 1000 Kč. Naštěstí jsou levnější cesty:
 
 - [Naučmese](https://www.naucmese.cz/) - na kurzech za pár stovek najdeš různé lidi, kteří ti rádi poví o svých zkušenostech - sám jsem tam potkal pár zajímavých osobností
-- **FB skupiny** - dneska už je snad na všechno skupina: programátoři, markeťáci, copywriteři, podnikatelé... 
-- [Eventigo](https://eventigo.cz/) - služba, která zadarmo informuje o srazech z určité oblasti (ty jsou většinou taky zdarma), týdenní newsletter můžu jen doporučit 
+- **FB skupiny** - dneska už je snad na všechno skupina: programátoři, markeťáci, copywriteři, podnikatelé...
+- [Eventigo](https://eventigo.cz/) - služba, která zadarmo informuje o srazech z určité oblasti (ty jsou většinou taky zdarma), týdenní newsletter můžu jen doporučit
 
 
-## 3. Výška je inkubátor: dá ti čas, abys mohl najít co tě baví 
+## 3. Výška je inkubátor: dá ti čas, abys mohl najít co tě baví
 
 Bez větších potíží na vysoké **snadno získáš 3 roky času**. Nájem a jídlo ti budou platit rodiče, nebudeš muset 3 roky nic dělat. Takový předčasný důchod &ndash; tak ho využij pro sebe:
 
 - zkoušej různé aktivity, ve škole i mimo školu
 - dej si každý semestr **1 předmět z jiného oboru** (někde ho nemusíš dodělat, někde si ho ani nemusíš registrovat, stačí chodit)
-- **ochutnej rozmanitost zvyků, kterou ti přinesou vrstevníci z jiných měst či zemi** 
+- **ochutnej rozmanitost zvyků, kterou ti přinesou vrstevníci z jiných měst či zemi**
 - **riskuj, nikdy nebude neúspěch levnější** - s přítelkyní, ženou, firmou, smlouvou, full-time prací, dítětem nebo hypotékou už to nebude zadarmo
 
 Já tohle využil tak, že jsem při výšce začal podnikat. Kde jsem riskoval nejvíc? **Začal jsem si říkat o větší peníze**, než vrstevníci. Riskoval jsem nezaměstnanost, ale to mi mohlo být jedno (nebylo, byl jsem strašně vystrašenej, že mě odmítnou). Kdybych měl velké měsíční náklady, které musím zaplatit, určitě bych si to netroufnul. Paradoxní, že?
@@ -50,7 +50,7 @@ Díky tomu jsem se naučil, **že cena je smluvní**. Jak se domluvíme, taková
 ### Neusni na vavřínech
 
 V prváku budeš zažívat hodně změn, kterým budeš muset věnovat čas a úsilí. Stále si ale pamatuj, že je to na 3 roky - **čas běží a i když je to pohoda, začni dělat něco navíc**.
- 
+
 
 ## 4. Měj školu jako jednu z možností
 
@@ -58,14 +58,14 @@ Spousta mých vrstevníků věnovalo 90 % času škole, protože neměli výrazn
 Zbytečně.
 
 Je to podobně jako s prací:
-  
+
 <img src="/assets/images/posts/2017/university/procrastination.png" class="img-thumbnail">
 
 Na to navazuje...
- 
- 
+
+
 ## 5. Na známky aplikuj pravidlo 80/20
- 
+
 Nebo taky [Paretovo pravidlo](https://cs.wikipedia.org/wiki/Paret%C5%AFv_princip).
 
 - **Abys prošel, stačí 20 % práce**
@@ -91,7 +91,7 @@ To všechno znamená...
 
 
 ## 7. Připrav se na know-how-lag
- 
+
 Čekal jsem, že se naučím něco aktuálního z oboru, kterému se chci věnovat. **Dostalo se vzdělání spíše v historii mého oboru.**
 
 Webové technologie byly zakázané téma. To nevadí, že na [PHP jede 82 % webů](https://w3techs.com/technologies/details/pl-php/all/all), budeš se učit elektrické obvody a programování procesorů.
@@ -100,8 +100,8 @@ Tento *know-how-lag* je ještě větší než na základní a střední škole. 
 
 
 ### Kde jsi teď?
- 
+
 Napiš mi klidně do komentářů, jestli jsi na střední škole, o výšce uvažuješ, na výšce už jsi nebo podnikáš.
 
 Který bod ti přišel neujužitečnější? Co naopak vidíš úplně jinak?
- 
+

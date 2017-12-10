@@ -3,8 +3,8 @@ id: 52
 title: "Shopsys, Spryker & Sylius under Static Analysis"
 perex: '''
      When you're building a new web project based on open-source, you'll pick a package you know, have good experience with or try a new one that might be even better.
-     
-     Lines of code, cyclomatic complexity, method count per class, length of method, number of interfaces relative to classes - these all can be just a superficial number or a <strong>quick measure how well is the project built</strong>. 
+
+     Lines of code, cyclomatic complexity, method count per class, length of method, number of interfaces relative to classes - these all can be just a superficial number or a <strong>quick measure how well is the project built</strong>.
 '''
 tweet: "#Shopsys, #Spryker & #Sylius under Static Analysis #symfony #php #ecommerce"
 tweet_image: "assets/images/posts/2017/shopsys-static-anal/shopsys.png"
@@ -25,7 +25,7 @@ related_posts: [57]
 ## Understanding Statistics
 
 
-I never trust posts with statistics without any data to re-run the results on or with such a complicated methodology that discourages me to try anything and rather trust the source. 
+I never trust posts with statistics without any data to re-run the results on or with such a complicated methodology that discourages me to try anything and rather trust the source.
 
 Therefore, I wanted to make this post different. To have you in control, not the hype.
 
@@ -92,7 +92,7 @@ Duplicated code can be a sign of coupled code and flaws in reusability.
 
 Cyclomatic Complexity is something like a train path with switches.
 
-**The number of paths you can take in the method.** 
+**The number of paths you can take in the method.**
 
 **A.** This is what we desire for in our code:
 
@@ -108,7 +108,7 @@ Cyclomatic Complexity is something like a train path with switches.
 </div>
 
 
-Which one would you pick if you'd be a programmer, in a method you never saw? 
+Which one would you pick if you'd be a programmer, in a method you never saw?
 
 
 
@@ -123,7 +123,7 @@ final class ProductController extends Controller
 		if ($id === null) { # 2
 			throw new ProductIdMissingException('Id is required for product detail'.);
 		}
-		
+
 		$product = $this->productRepository->get($id);
 		if ($product === null) { # 3
 			throw new ProductNotFoundException(sprintf('Product with id %d was not found.', $id);
@@ -133,14 +133,14 @@ final class ProductController extends Controller
 			$this->redirect('sold-out');
 		}
 
-		if ($this->isOnMobile()) { # 5 
+		if ($this->isOnMobile()) { # 5
 			foreach ($product->getImages() as $image) { # 6
 				$image->resizeToMobile();
 			}
 		}
-		
+
 		$this->render('detail', [
-			'product' => $product; 
+			'product' => $product;
 		]);
 	}
 }
@@ -157,7 +157,7 @@ final class ProductController extends Controller
 	{
 		$this->ensureIsAvailable($product); # 1
 		$this->prepareForMobile($product);
-		
+
 		$this->render('detail', [
 			'product' => $product;
 		]);
@@ -169,7 +169,7 @@ final class ProductController extends Controller
 ...with **just 1**.
 
 This metric can give you a decent overview of hot spots that might need refactoring.
-**When looking at this score, the lower the number the better**. This applies to areas as readability, maintainability and testability. 
+**When looking at this score, the lower the number the better**. This applies to areas as readability, maintainability and testability.
 
 **Consider writing a unit test and having a function with a cyclomatic complexity of 12**. This means that, **if you want 100% code coverage**, you need to test every of these 12 paths and end up in pretty messy tests.
 

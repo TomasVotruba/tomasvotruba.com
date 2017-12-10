@@ -9,12 +9,12 @@ deprecated_message: "This post is available only in Czech and whole website was 
 
 Tenhle proces jsem se učil 1 rok jako maintainer [ApiGenu](github.com/apigen/apigen), kdy jsem s desítkami lidí vedl online-hate-wars a zjistil, že to nikam nevede. Pak jsem zkoušel jiné cesty. Úspěšnější.
 
-Dnes ti je zkusím shrnout do 3 bodů. 
+Dnes ti je zkusím shrnout do 3 bodů.
 
 
 ## 1. Zpracuju emoci
 
-Ano, bolí to. Když napíšu návod, jak se vyrovnat s hatery, a někdo mi napíše, že JE TO BLBOST, bolí to. Dal jsem si s tím tolik práce a 
+Ano, bolí to. Když napíšu návod, jak se vyrovnat s hatery, a někdo mi napíše, že JE TO BLBOST, bolí to. Dal jsem si s tím tolik práce a
 místo lajku dostanu facku. **Ve skutečnosti mi dává feedback. Při troše snahy i konstruktivní.**
 
 Co mi teda chce sdělit za informaci? V 90 % případech:

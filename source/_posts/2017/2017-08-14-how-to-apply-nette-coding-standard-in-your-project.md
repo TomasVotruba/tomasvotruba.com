@@ -12,7 +12,7 @@ tweet_image: "assets/images/posts/2017/nette-coding-standard/travis-check.png"
 ---
 
 [Nette\CodingStandard](https://github.com/nette/coding-standard/) version [0.5](https://github.com/nette/coding-standard/releases/tag/v0.5.0) with important bug-fixes was released a week ago. This version **is ready to use, includes all important checkers and is used on all `Nette\*` packages in Travis**.
-  
+
 **NCS checks every pull-request you make to Nette**:
 
 <div>
@@ -37,19 +37,19 @@ But first...
 
 This packages requires PHP 7.1 to run as the rest of the Nette (mostly current `master` or `3.0`).
 
-If you still don't know why should you **join [Symfony, Nette, Doctrine, Zend or Sylius](https://gophp71.org/)**, you can read [this post](/blog/2017/06/05/go-php-71/#why-go-right-to-php-7-1) or wait a bit longer. It's up to you.  
+If you still don't know why should you **join [Symfony, Nette, Doctrine, Zend or Sylius](https://gophp71.org/)**, you can read [this post](/blog/2017/06/05/go-php-71/#why-go-right-to-php-7-1) or wait a bit longer. It's up to you.
 
 
 ## Setup Your Project
 
-You have 2 options how to use NCS in your project. 
+You have 2 options how to use NCS in your project.
 
 
 ### 1. As a Composer Project
 
 Nette packages require this approach, because NCS depends on many Nette packages. **NCS should be installed to standalone directory**, so changing the Nette code by NCS doesn't break NCS.
 
-The easiest way is to setup `.travis.yml`: 
+The easiest way is to setup `.travis.yml`:
 
 ```bash
 install:
@@ -73,13 +73,13 @@ composer require nette/coding-standard --dev
 Check the code:
 
 ```bash
-vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php71.neon 
+vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php71.neon
 ```
 
 Fix the code:
 
 ```bash
-vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php71.neon --fix 
+vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php71.neon --fix
 ```
 
 
@@ -91,17 +91,17 @@ Do you need to **check code that is not PHP 7.0 ready**? You can.
 
 At the moment there are 3 configs with set of checkers (click to see their content):
 
-- [`coding-standard-php56.neon`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/coding-standard-php56.neon) 
+- [`coding-standard-php56.neon`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/coding-standard-php56.neon)
 - [`coding-standard-php70.neon`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/coding-standard-php70.neon)
 - [`coding-standard-php71.neon`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/coding-standard-php71.neon)
 
-**Config with higher PHP version includes all lower versions**, so with `coding-standard-php71.neon` you cover the other 2 configs as well. 
+**Config with higher PHP version includes all lower versions**, so with `coding-standard-php71.neon` you cover the other 2 configs as well.
 
 
 For PHP 5.6 it would like this:
 
 ```bash
-vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php56.neon 
+vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php56.neon
 ```
 
 

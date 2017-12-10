@@ -8,7 +8,7 @@ deprecated_since: "June 2017"
 deprecated_message: '''
     I have deprecated this package, because of <a href="https://github.com/Symplify/Symplify/issues/181">feedback that it is not useful</a> and low download rates (under 2 000 in 2 years).
     <br><br>
-    You can use <strong>annotation routing</strong> in combination with <strong><a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration">PSR-4 controller autodiscovery</a></strong> since <strong>Symfony 3.3</strong> and with <a href="https://github.com/symfony/symfony/pull/23044">routing annotation loader enabled by default</a> since <strong>Symfony 3.4</strong>.    
+    You can use <strong>annotation routing</strong> in combination with <strong><a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration">PSR-4 controller autodiscovery</a></strong> since <strong>Symfony 3.3</strong> and with <a href="https://github.com/symfony/symfony/pull/23044">routing annotation loader enabled by default</a> since <strong>Symfony 3.4</strong>.
     <br><br>
     This package is still available <a href="https://github.com/DeprecatedPackages/SymfonyModularRouting">here for inspiration</a> though.
 '''
@@ -34,7 +34,7 @@ final class AppKernel extends Kernel
 
 ## So, what you can do?
 
-- add your routes manually to `routing.yml` - **requires routing.yml modification** 
+- add your routes manually to `routing.yml` - **requires routing.yml modification**
 - implement [custom Route Loader](http://symfony.com/doc/current/cookbook/routing/custom_route_loader.html) - **requires routing.yml modification**
 - use [Symfony CMF RoutingBundle](https://github.com/symfony-cmf/RoutingBundle) and hook to [ChainRouter](http://symfony.com/doc/current/cmf/components/routing/chain.html) - **requires lots of reading and programming**
 
@@ -49,7 +49,7 @@ final class AppKernel extends Kernel
 <br>
 
 As [Matthias Noback](https://twitter.com/matthiasnoback) [wrote 4 years ago](http://php-and-symfony.matthiasnoback.nl/2012/01/symfony2-dynamically-add-routes/), in Symfony 1 you could use `routing.load_configuration` event to do this, but it was removed in Symfony 2. As a replacement, Matthias suggests creating custom Route Loader. It's the best solution so far I used before.
- 
+
 But I'm older and more lazy now so I tried to find a simpler way.
 
 > Warning!<br>
@@ -146,7 +146,7 @@ services:
 ```
 
 And that's it! Now all routes are loaded along with your bundle registration.
- 
+
 
 For further use, **just check [Readme for Symplify/ModularRouting](https://github.com/Symplify/ModularRouting)**.
 
@@ -159,12 +159,12 @@ For further use, **just check [Readme for Symplify/ModularRouting](https://githu
 
 <br>
 
-## What have you learned today? 
+## What have you learned today?
 
-- that registering routes usually requires using `app/routing/routing.yml` - unfortunately :( 
+- that registering routes usually requires using `app/routing/routing.yml` - unfortunately :(
 - that routes is basically array of `url` → `controller` records
 - **that you can load them per module via service with [Symplify/ModularRouting](https://github.com/Symplify/ModularRouting)**
- 
+
 
 If you have some questions or tips for how to make loading of routes simpler, just let me know bellow.
 

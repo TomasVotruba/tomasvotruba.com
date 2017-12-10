@@ -2,7 +2,7 @@
 id: 21
 title: "How to Write Interesting Jobs Offers for Programmers"
 perex: '''
-    A few years watching the labor market from a position of PHP programmers from the perspective of companies. With both sides have a good relationship. I think what they need and what is bothering you. **I see that they want each other, just communication is little stuck**. 
+    A few years watching the labor market from a position of PHP programmers from the perspective of companies. With both sides have a good relationship. I think what they need and what is bothering you. **I see that they want each other, just communication is little stuck**.
     <br><br>
     I gave feedback on Jobs.cz, Skrz.cz and few more ads and this is **summary of tips, which I want to share with every company trying to hire programmer**.
 '''
@@ -15,10 +15,10 @@ tweet_image: "/assets/images/posts/2017/job-offers/attitude.jpg"
 ## AD is an Advertising Article - Get a Copywriter
 
 The entire ad is one long seduction. At the end of it you should get the candidate to bed and satisfy him. So he will come next morning to your company.
- 
+
 ## <strike>It's not About You</strike> - It's About Who You Look For
 
-Plenty of ads are written more like a self-presentation of the company - what they do, what they are best in and what they accomplished. 
+Plenty of ads are written more like a self-presentation of the company - what they do, what they are best in and what they accomplished.
 
 But **people actually read because they want something for themselves** - information, money or entertainment. **What the job will be, should be right at the beginning. Give it to them in the first sentence!**
 
@@ -49,26 +49,26 @@ Write about technology that you really have. Not those which you plan or want, b
 
 - Write few people from your target group and ask them this. This is a chance to learn how you perceived in the outside.
 
-       
+
 ## Open Source Strip
 
 Show how you do it - really. Evidence beats promise.
 
 **Are you doing open-source? Show it!** I know that Jobs, Slevomat, PeckaDesign and ShopSys have packages on GitHub. but just few of them share it in the advertisement.
 
-At least, your potential coworkers will get insight into the code of applications you make. 
+At least, your potential coworkers will get insight into the code of applications you make.
 
 One example for all: I love [delejcoumis.cz](http://www.delejcoumis.cz/). **Its [open-sourced on Github](https://github.com/peckadesign/DelejCoUmis.cz)** and it allows me:
- 
-- to easily determine the company's skill level 
+
+- to easily determine the company's skill level
 - find if I **understand the code**
 - find if I can **learn something**
 - and with [`composer.json`](https://github.com/peckadesign/DelejCoUmis.cz/blob/master/composer.json) - see what technology they know and use
-    
+
 **Open-source is a very underrated hiring tool.**
 
 
-## Sell your Differences 
+## Sell your Differences
 
 That's **why people go to you**. Not because you're making *PHP, Symfony and Doctrine e-commerce*.
 
@@ -84,7 +84,7 @@ That's **why people go to you**. Not because you're making *PHP, Symfony and Doc
 - "**10 % of work time is for you personal projects**"
 
 True stories, bro!
-      
+
 
 ## Size and Age Doesn't Matter
 

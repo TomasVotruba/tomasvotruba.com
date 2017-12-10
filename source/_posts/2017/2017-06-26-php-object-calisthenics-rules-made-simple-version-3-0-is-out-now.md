@@ -31,7 +31,7 @@ Quick quiz: what is this variable?
 $this->di->...;
 ```
 
-*Dependency Injection? Dependency Injection Container?* Who would guess it's *Donation Invoice*! 
+*Dependency Injection? Dependency Injection Container?* Who would guess it's *Donation Invoice*!
 
 **[Rule #6 - Do Not Abbreviate](https://github.com/object-calisthenics/phpcs-calisthenics-rules#6-do-not-abbreviate)** checks these cases. **It detects short names that are ambiguous and hard to decode.**
 
@@ -53,17 +53,17 @@ Nothing complicated.
 We put lots of work to README for the new release. It isn't a long text describing what exactly the rule does and how it originated - there is already [a blog post for that](http://williamdurand.fr/2013/06/03/object-calisthenics/).
 
 Instead, README goes right to the point:
- 
+
 - **YES and NO code snippets**,
-- **how to use them** - copy/paste CLI command 
+- **how to use them** - copy/paste CLI command
 - and **how to configure them** - link to particular lines in `ruleset.xml` and `easy-coding-standard.neon`.
-   
+
 <img src="/assets/images/posts/2017/object-calisthenics/rule6.png" class="img-thumbnail">
 
 ### Configure What You Need
 
 As you can see in the bottom part of screenshot, most of rules are configurable. It allows you **to adapt their strictness to your specific needs and needs of your project**.
- 
+
 *Do you prefer to require min 4 chars?*
 
 Configure **in CodeSniffer:**
@@ -105,7 +105,7 @@ Configure **in CodeSniffer:**
     <!-- Rule 6: Do not abbreviate -->
     <rule ref="ObjectCalisthenics.NamingConventions.ElementNameMinimalLength">
         <properties>
-            <property name="minLength" value="4"/> 
+            <property name="minLength" value="4"/>
             <property name="allowedShortNames" type="array" value="y,i,id,to,up"/>
             <!-- default: i,id,to,up -->
         </properties>
@@ -122,14 +122,14 @@ checkers:
     # Rule 6: Do not abbreviate
     ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff:
         minLength: 4
-        allowedShortNames: ["y", "i", "id", "to", "up"] 
+        allowedShortNames: ["y", "i", "id", "to", "up"]
         # default: ["i", "id", "to", "up"]
 ```
 
 ### Minitip: What Can You Configure in Particular Sniff?
 
 - Open `ElementNameMinimalLengthSniff` class in your IDE.
-- **Look for public properties**. CodeSniffer uses them to set any configuration. 
+- **Look for public properties**. CodeSniffer uses them to set any configuration.
 
 That was Rule 6.
 
@@ -282,7 +282,7 @@ class SomeClass
 ```
 
 ### 9. Do not Use Getters and Setters
-  
+
 Classes should not contain public properties.
 
 <em class="fa fa-fw fa-times"></em>

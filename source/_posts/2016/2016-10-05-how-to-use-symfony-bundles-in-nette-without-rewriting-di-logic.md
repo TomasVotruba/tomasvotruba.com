@@ -3,7 +3,7 @@ id: 16
 title: "How to Use Symfony Bundles in Nette Without Rewriting DI Logic"
 perex: '''
     Every framework has its own unique Dependency Injection Container (DIC), where you register your services. <strong>Imagine a set of special glues that are required to add the same paper on different surfaces.</strong> Today I will show you how to use universal glue for Nette surface.
-''' 
+'''
 
 deprecated: true
 deprecated_since: "January 2017"
@@ -14,7 +14,7 @@ deprecated_message: '''
 '''
 ---
 
-To be specific: 
+To be specific:
 
 - In Nette you use [Nette\DI package](https://github.com/nette/di) and make an **extension**.
 - In Symfony, you have to use [Symfony\DependencyInjection package](http://symfony.com/doc/current/components/dependency_injection.html) and create a **bundle**.
@@ -22,7 +22,7 @@ To be specific:
 So when you hear somebody saying:
 
 > "I saw that in Symfony bundle and want to use in Nette"
-    
+
 you know it won't be easy.
 
 
@@ -35,17 +35,17 @@ That's why you see "double" integrations for 3rd party packages like:
 - for Symfony: [Doctrine/DoctrineMigrationsBundle](https://github.com/doctrine/DoctrineMigrationsBundle/)
 - for Nette: [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations)
 
-**[MessageBus - CQRS](http://simplebus.github.io/)** 
+**[MessageBus - CQRS](http://simplebus.github.io/)**
 
 - for Symfony: [SimpleBus/SymfonyBridge](https://github.com/SimpleBus/SymfonyBridge)
 - for Nette: [newPOPE/Nette-CQRS-Commands](https://github.com/newPOPE/Nette-CQRS-Commands)
- 
+
 **[Elastica](https://github.com/ruflin/Elastica)**
 
 - for Symfony: [FriendsOfSymfony/FOSElasticaBundle](https://github.com/FriendsOfSymfony/FOSElasticaBundle)
 - for Nette: [Kdyby/ElasticSearch](https://github.com/Kdyby/ElasticSearch)
- 
-And so on. Let's ignore the syntax sugar that every programmer adds to his own integrations.   
+
+And so on. Let's ignore the syntax sugar that every programmer adds to his own integrations.
 
 ### This leads to
 
@@ -58,7 +58,7 @@ And so on. Let's ignore the syntax sugar that every programmer adds to his own i
 Well, if you look closer to Nette and Symfony DICs, you see **they are quite similar**. So answer is **NO**.
 
 Both Nette and Symfony have 3 basic operations dealing with DIC:
- 
+
 ### 1. Register a service
 
 Common for all packages.
@@ -71,7 +71,7 @@ Common for all packages.
 
 Add setter, pass arguments, add reference to other service, collect services of certain type.
 Used less often, yet still very useful.
-  
+
 - Nette: `beforeCompile()` method
 - Symfony: `CompilerPassInterface` classes
 
@@ -79,7 +79,7 @@ Used less often, yet still very useful.
 ### 3. Add some magic or static code in the end
 
 Usually workarounds, hacks, tweaks or performance tuning. Quite rare.
- 
+
 - Nette: `afterCompile()` method
 - Symfony: specific `CompilerPassInterface` classes
 
@@ -87,17 +87,17 @@ Usually workarounds, hacks, tweaks or performance tuning. Quite rare.
 ## Enough Theory, Give me the Solution!
 
 Okay, okay... These are last few lines before the code, I promise.
- 
+
 Thanks to step 1. and 2. I could create an extension, that will **take any Symfony bundle and register its services into the Nette application**: [TomasVotruba/NetteAdapterForSymfonyBundles](https://github.com/TomasVotruba/NetteAdapterForSymfonyBundles)
 
-## How to register a Symfony Bundle into your Nette Application in 3 steps 
+## How to register a Symfony Bundle into your Nette Application in 3 steps
 
 ### 1. Install package
 
 ```yaml
 composer require symplify/nette-adapter-for-symfony-bundles
 ```
-  
+
 ### 2. Register extension
 
 ```yaml
@@ -121,7 +121,7 @@ For further use, **just check Readme for [Symplify/NetteAdapterForSymfonyBundles
 
 ---
 
-So next time you see a Symfony bundle you would like to use in Nette, stop thinking about writing brand new duplicated extension and try this bundle first. You might save yourself great amount of time :) 
+So next time you see a Symfony bundle you would like to use in Nette, stop thinking about writing brand new duplicated extension and try this bundle first. You might save yourself great amount of time :)
 
 
 ## Made for you

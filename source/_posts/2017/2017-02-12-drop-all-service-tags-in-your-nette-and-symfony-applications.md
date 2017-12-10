@@ -12,8 +12,8 @@ updated_message: '''
     Updated with <strong>new Symfony 3.3 features <a href="http://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration">class based service naming, <code>_instanceof</code> configuration</a>
     and <a href="http://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration">autoconfiguration</a></strong> (plus PHP 7).
     <br><br>
-    It does pretty much the same, so package ServiceDefinitionDecorator for Symfony was deprecated. 
-    <br><br>    
+    It does pretty much the same, so package ServiceDefinitionDecorator for Symfony was deprecated.
+    <br><br>
     It is still available <a href="https://github.com/DeprecatedPackages/ServiceDefinitionDecorator">here for inspiration</a> though.
 '''
 related_posts: [19]
@@ -167,7 +167,7 @@ If we use the same setup as we used in Nette above, in Symfony it would look lik
 # app/config/config.yml
 
 services:
-    App\Console\FirstCommand: 
+    App\Console\FirstCommand:
         tags:
             - { name: console.command }
     App\Console\SecondCommand:

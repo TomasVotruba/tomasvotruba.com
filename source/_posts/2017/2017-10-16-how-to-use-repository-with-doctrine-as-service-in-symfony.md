@@ -6,7 +6,7 @@ perex: '''
     <br><br>
     Mostly due to traditional registration of Doctrine repositories.
     <br><br>
-    The way out from *service locators* to *repository as service* was [described](https://matthiasnoback.nl/2014/05/inject-a-repository-instead-of-an-entity-manager/) by many [before](https://medium.com/@adamquaile/composition-over-inheritance-in-doctrine-repositories-f6a53a026f60) and **now we put it into Symfony 3.3 context**.  
+    The way out from *service locators* to *repository as service* was [described](https://matthiasnoback.nl/2014/05/inject-a-repository-instead-of-an-entity-manager/) by many [before](https://medium.com/@adamquaile/composition-over-inheritance-in-doctrine-repositories-f6a53a026f60) and **now we put it into Symfony 3.3 context**.
 '''
 tweet: "How to use repository with #dotrine in #symfony as #autowired service? #di"
 tweet_image: "assets/images/posts/2017/repository-as-service/autowire-fail.png"
@@ -83,7 +83,7 @@ If we try to register repository as a service, we get this error:
 Why? Because parent constructor of `Doctrine\ORM\EntityRepository` is [missing `EntityManager` typehint](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L64)
 
 Also **we can't get another dependency**, like `PostSorter` that would manage sorting post in any way.
- 
+
 
 ```php
 <?php declare(strict_types=1);
@@ -198,8 +198,8 @@ use Doctrine\ORM\EntityManager;
 
 final class PostController
 {
-    /** 
-     * @var PostRepository 
+    /**
+     * @var PostRepository
      */
     private $postRepository;
 
@@ -213,25 +213,25 @@ final class PostController
 
 ### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
 
-Again, status quo. 
+Again, status quo.
 
 
 ### <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 
 IDE doesn't know it's `App\Repository\PostRepository`, so **we have add extra typehint** (so [boring](https://www.boringcompany.com/) work). Example above would work because there is typehinted property , but this would fail:
-    
+
 ```php
 $postRepository = $entityManager->getRepository(Post::class);
 $postRepository->help()?;
 ```
 
 Or this:
- 
+
 ```php
 $post = $this->postRepository->get(1);
 $post->help()?;
 ```
-    
+
 To enable autocomplete, we have to add them manually:
 
 ```php
@@ -286,7 +286,7 @@ We cannot use multiple repository for single entity. **It naturally leads to hug
 We cannot use constructor injection in repositories, which **can easily lead you to creating static helper classes**.
 
 Also, you directly depend on Doctrine's API, so if `get()` changes to `find()` in one `composer update`, your app is down.
- 
+
 
 
 ## How to Make This Better with Symfony 3.3?
@@ -323,10 +323,10 @@ use Doctrine\ORM\EntityRepository;
 final class PostRepository
 {
     /**
-     * @var Repository  
+     * @var Repository
      */
     private $repository;
-    
+
     public function __construct(EntityManager $entityManager)
     {
         $this->repository = $entityManager->getRepository(Post::class);
@@ -338,7 +338,7 @@ That's all! Now you can program the way *which is used in the rest of your appli
 
 - *class*,
 - *service*
-- and *constructor injection* 
+- and *constructor injection*
 
 
 **And how it influenced our 4 steps?**
@@ -360,21 +360,21 @@ use Doctrine\ORM\EntityRepository;
 final class PostRepository
 {
     /**
-     * @var Repository  
+     * @var Repository
      */
     private $repository;
-        
+
     /**
-     * @var PostSorter  
+     * @var PostSorter
      */
     private $postSorter;
-        
+
     public function __construct(EntityManager $entityManager, PostSorter $postSorter)
     {
         $this->repository = $entityManager->getRepository(Post::class);
         $this->postSorter = $postSorter;
     }
-    
+
     public function get(int $id): Post
     {
         return $this->repository->get($id);
@@ -441,8 +441,8 @@ use App\Repository\PostRepository;
 
 final class PostController
 {
-    /** 
-     * @var PostRepository 
+    /**
+     * @var PostRepository
      */
     private $postRepository;
 
@@ -495,11 +495,11 @@ If you don't use Doctrine or you already do this approach, **try to think where 
 
 ## How to add new repository?
 
-The main goal of all this was to make work with repositories typehinted, safe and reliable for you tu use and easy to extends. 
+The main goal of all this was to make work with repositories typehinted, safe and reliable for you tu use and easy to extends.
 
-**It also minimized space for error**, because **strict types and constructor injection now validates** much of your code for you. 
+**It also minimized space for error**, because **strict types and constructor injection now validates** much of your code for you.
 
-The answer is now simple: **just create repository it in `App\Repository`**. 
+The answer is now simple: **just create repository it in `App\Repository`**.
 
 
 Try the same example with your current approach and let me know in the comments.

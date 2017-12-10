@@ -4,7 +4,7 @@ title: "How PHP Coding Standard Tools Actually Work"
 perex: '''
     Do you use <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">PHP CS Fixer</a> or <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>? Do you know the way they work is ~80 % the same? Do you wonder how they work under the hood?
     <br><br>
-    Today I will share <strong>3 main pillars of their architecture</strong>. 
+    Today I will share <strong>3 main pillars of their architecture</strong>.
 '''
 related_posts: [46, 47, 37]
 tweet: "How #php #codingstandard Tools Actually Works #tokens"
@@ -19,8 +19,8 @@ Coding Standards are my greatest passion for last couple of years. I love their 
 With a Checker you can change `array()` to `[]`. And more then that. Coding Standard are not exclusively about spaces, tabs and brackets nowadays.
 
 You can use them to [refactor to newer version of your framework](https://daniel-siepmann.de/Posts/2017/2017-03-20-phpcs-code-migration.html),
- [upgrade your codebase to newer PHP](https://github.com/wimg/PHPCompatibility) or [add PHP 7.1 typehints to your methods](https://github.com/kukulich/php-type-hints-convertor).       
-    
+ [upgrade your codebase to newer PHP](https://github.com/wimg/PHPCompatibility) or [add PHP 7.1 typehints to your methods](https://github.com/kukulich/php-type-hints-convertor).
+
 That's laziness on a completely different level :)
 
 
@@ -92,7 +92,7 @@ array(5) {
         int(1)
   }
   [4]=>
-      string(1) ";" 
+      string(1) ";"
 }
 ```
 
@@ -112,7 +112,7 @@ Now you know what "token" is.
 
 ## 2. Dispatcher
 
-Do you know [Event Dispatcher](https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/)? 
+Do you know [Event Dispatcher](https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/)?
 
 If not, it's a pattern (like *repository* or *factory*) that says: **when this action happens, call all methods that listen to it**, e.g. when order is finished (event), send confirmation SMS to user and send him thank-you box full of candies (subscribed methods).
 
@@ -120,22 +120,22 @@ If not, it's a pattern (like *repository* or *factory*) that says: **when this a
 $dispatcher->dispatch('order_finished');
 ```
 
-For Coding Standard tools **it works the same** but with different naming: 
+For Coding Standard tools **it works the same** but with different naming:
 
 - Event <=> *Token*
 - Subscriber <=> *Checker*
 
- 
+
 Almost there.
- 
+
 
 ## 3. Subscriber
 
 
-You already know that *subscriber* is a *Checker*. Checker is a class that waits for a specific token. 
+You already know that *subscriber* is a *Checker*. Checker is a class that waits for a specific token.
 
 In pseudo code:
-  
+
 ```php
 class Checker
 {
@@ -143,7 +143,7 @@ class Checker
     {
         return T_ECHO; // number for "echo" by PHP
     }
-    
+
     public function someMethodThatWillBeCalled(array $token)
     {
         if ($token['content'] !== 'echo') {

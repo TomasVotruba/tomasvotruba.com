@@ -17,10 +17,10 @@ related_posts: [25, 26]
 *Disclaimer: this post has no intention to put menstruation into any bad light. Exactly the opposite - I admire women and love to learn from them.*
 
 ## <strike>Technical</strike> Natural Releases
- 
+
 We will look on release management. Non from traditional technical point of view that is already described in [semantic versioning](http://semver.org/), [Symfony BC Promise](https://symfony.com/doc/current/contributing/code/bc.html) etc., but rather from view of *nature*.
 
-**Why?** When I'm stuck with complicated architectural problem and can't figure it out, I take a break and **go for a walk**. **Just observing world around me**, absorbing inspiration without expectations - *serendipity*. 
+**Why?** When I'm stuck with complicated architectural problem and can't figure it out, I take a break and **go for a walk**. **Just observing world around me**, absorbing inspiration without expectations - *serendipity*.
 
 To be honest, **many technologies we use originated from the nature**. Processor and hard drives from brain, camera lenses from eyes and design pattern from pattern of nature. What else are falling leaves of tree in autumn? An **event subscriber**.
 
@@ -29,9 +29,9 @@ To be honest, **many technologies we use originated from the nature**. Processor
 
 <img src="/assets/images/posts/2017/menstruation/periods.jpg" class="img-thumbnail">
 
-When we look at our main ability to survive - to reproduce ourselves, we see it's very easy to follow. Menstruation comes in cycles of ~28 days. All 4 parts of period have special meaning for the body of woman and her ability to get pregnant. We **know when it happens, how long it takes and when it ends** (roughly).  
+When we look at our main ability to survive - to reproduce ourselves, we see it's very easy to follow. Menstruation comes in cycles of ~28 days. All 4 parts of period have special meaning for the body of woman and her ability to get pregnant. We **know when it happens, how long it takes and when it ends** (roughly).
 
-Now the interesting part: *can you imagine software having release cycles in 28 days?* 
+Now the interesting part: *can you imagine software having release cycles in 28 days?*
 
 Just keep reading.
 
@@ -49,7 +49,7 @@ A bit longer periodical system in nature that works for some time now. Again, ea
 
 Every part takes 3 months and restarts every 12 month. **You just know when winter comes**.
 
-  
+
 Now back to the interesting part: *could you imagine having release plan synced with the year period?*
 
 <br>
@@ -84,28 +84,28 @@ I recall wondering when PHP 5.5, 5.6 or 7.0 will be out. No more thanks to **[ye
 
 ### Menstruation Synchronization
 
-As I wrote earlier, women that spend lot of time together tend to sync their menstruation cycle with each other. Have you noticed that **Symfony matches PHP cycle every 2 years**? Coincidence? I&nbsp;don't think so. 
+As I wrote earlier, women that spend lot of time together tend to sync their menstruation cycle with each other. Have you noticed that **Symfony matches PHP cycle every 2 years**? Coincidence? I&nbsp;don't think so.
 
 <img src="/assets/images/posts/2017/menstruation/together.png" class="img-thumbnail">
 
-I think they're doing **the right thing** right. 
+I think they're doing **the right thing** right.
 
 
 ## Why We Should Menstruate Together?
 
-We're getting back to software releases and monorepo. (If you see term *monorepo* first time, read [this legendary post by *danluu*](http://danluu.com/monorepo/)). 
+We're getting back to software releases and monorepo. (If you see term *monorepo* first time, read [this legendary post by *danluu*](http://danluu.com/monorepo/)).
 
-Some people say that big disadvantage of monorepo is that **they have to tag their packages all together** (like Symfony) even if nothing changed in any of them. 
+Some people say that big disadvantage of monorepo is that **they have to tag their packages all together** (like Symfony) even if nothing changed in any of them.
 
-I see it as **advantage**, because that systematically leads to release cycle and open possibility to synchronization with other projects, like PHP + Symfony.  
+I see it as **advantage**, because that systematically leads to release cycle and open possibility to synchronization with other projects, like PHP + Symfony.
 
-### See for Yourself 
+### See for Yourself
 
 Which of these 3 applications would you pick to maintain and upgrade based on their `composer.json`?
 
 <br>
 
-**A** with *per-package* versioning: 
+**A** with *per-package* versioning:
 
 
 ```javascript
@@ -146,7 +146,7 @@ or **B** with [*per-vendor-sync*](https://getcomposer.org/doc/04-schema.md#name)
 
 <br>
 
-or **C** that looks like sci-fi: 
+or **C** that looks like sci-fi:
 
 ```javascript
 {
@@ -167,7 +167,7 @@ or **C** that looks like sci-fi:
 <br>
 
 
-###  Advantages of Synced Vendor - project *B* 
+###  Advantages of Synced Vendor - project *B*
 
 Single version for every `symfony/*` package gives me so much freedom:
 
@@ -178,9 +178,9 @@ Single version for every `symfony/*` package gives me so much freedom:
 
 ### Disadvantage of Per Package Versioning - project *A*
 
-And what if every package has it's own destiny? 
+And what if every package has it's own destiny?
 
-- **I'm stressed when** any of my 20 `symfony/*` dependencies changes 
+- **I'm stressed when** any of my 20 `symfony/*` dependencies changes
 - I'm afraid that I will have to Google on Github, what version depend on which
 - **I can't plan any upgrades**, because nobody knows the future
 
@@ -189,7 +189,7 @@ And what if every package has it's own destiny?
 
 All this is not related just to Symfony, Doctrine, Nette or any [other big PHP players](https://gophp71.org/) like Zend, Laravel, CakePHP or Yii.
 
-**Every package, every dependency that has own versioning system means increased work PHP developers**. That's stands if you agree with cycles or not. **Version C** being the easiest to upgrade and version **A** being the most difficult and also the most expensive. 
+**Every package, every dependency that has own versioning system means increased work PHP developers**. That's stands if you agree with cycles or not. **Version C** being the easiest to upgrade and version **A** being the most difficult and also the most expensive.
 
 **Do you want to add extra work** to developer's back to study your vendor release system?
 

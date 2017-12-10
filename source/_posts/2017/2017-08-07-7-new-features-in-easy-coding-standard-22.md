@@ -2,21 +2,21 @@
 id: 49
 title: "7 New Features in Easy Coding Standard 2.2"
 perex: '''
-    After extensive cooperation with <a href="https://twitter.com/geekovo/status/885152407948333056">David Grudl on Nette\CodingStandard</a> EasyCodingStandard got new features, that <strong>moved the project to completely new level of comfort</strong>.  
+    After extensive cooperation with <a href="https://twitter.com/geekovo/status/885152407948333056">David Grudl on Nette\CodingStandard</a> EasyCodingStandard got new features, that <strong>moved the project to completely new level of comfort</strong>.
     <br><br>
-    Prepared configs, reduction of config to few lines, <code>--config</code> option and more.       
+    Prepared configs, reduction of config to few lines, <code>--config</code> option and more.
 '''
 tweet: "7 New Features in Easy Coding Standard #codingStandard #php #solid"
 related_posts: [37, 51]
 ---
 
-Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, ideas and Windows bug fixes while working on [Nette\CodingStandard](https://github.com/nette/coding-standard) package. I'll write "how to" for Nette\CodingStandard later, but today we'll look on **new features it uses from EasyCodingStandard 2.2**. 
+Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, ideas and Windows bug fixes while working on [Nette\CodingStandard](https://github.com/nette/coding-standard) package. I'll write "how to" for Nette\CodingStandard later, but today we'll look on **new features it uses from EasyCodingStandard 2.2**.
 
 ## 1. Shorter Bin
 
 Are you tired of tyops in `vendor/bin/easy-coding-standard`?
 
-**Now you can use `ecs` bin instead**: 
+**Now you can use `ecs` bin instead**:
 
 ```bash
 vendor/bin/ecs
@@ -54,10 +54,10 @@ This shortened Symplify config from [256 lines](https://github.com/Symplify/Symp
 ## 3. Use Whole Set But 1 Checker
 
 I like Symfony set from PHP CS Fixer, but **I'd like to remove 4 checkers**. Do I have to put all checkers I want to use explicitly to the config?
- 
+
 Not anymore!
 
-**Use the set and exclude unwanted checkers in `exclude_checkers` option**: 
+**Use the set and exclude unwanted checkers in `exclude_checkers` option**:
 
 ```yaml
 includes:
@@ -101,7 +101,7 @@ vendor/bin/ecs show --config vendor/nette/coding-standard/coding-standard-php71.
 
 This is rather debug or info tool, but it might come handy.
 
-**You can find [more options of this command in README](https://github.com/Symplify/EasyCodingStandard#show-command-to-display-all-checkers)**. 
+**You can find [more options of this command in README](https://github.com/Symplify/EasyCodingStandard#show-command-to-display-all-checkers)**.
 
 
 ## 6. Scan `*.php` and `*.phpt` Files
@@ -141,7 +141,7 @@ services:
 ```
 
 [Explore README](https://github.com/Symplify/EasyCodingStandard#do-you-need-to-include-tests-php-inc-or-phpt-files) or [`SourceProvider`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/src/Finder/SourceProvider.php) in Nette\CodingStandard for more.
- 
+
 
 ## 7. Are you Tabs Person?
 
@@ -156,12 +156,12 @@ parameters:
 <br>
 
 You can find [these features in README](https://github.com/Symplify/EasyCodingStandard) with more detailed use examples.
-  
+
 
 ### Like it? Try It
 
 If you find these 7 news useful, you can try [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) right now:
- 
+
 
 ```bash
 composer require symplify/easy-coding-standard

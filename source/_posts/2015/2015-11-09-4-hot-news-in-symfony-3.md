@@ -3,7 +3,7 @@ id: 2
 title: 4 How News in Symfony 3
 perex: '''
     In November 2015 except for a [PHP 7](https://wiki.php.net/rfc/php7timeline) and [Drupal 8](https://www.drupal.org/node/2605142),
-    Symfony 3 is about to come. 
+    Symfony 3 is about to come.
     <br><br>
     **What changes and news it brings?**
 '''
@@ -37,24 +37,24 @@ What are the 2 main differences between 3.0 and 2.8 then?
 
 ## And now The Most Expected 4 News
 
-### 1. Service Autowiring 
+### 1. Service Autowiring
 
 <a href="https://github.com/symfony/symfony/pull/15613" class="btn btn-dark btn-sm">
     <em class="fa fa-github fa-fw"></em>
     See pull-request
 </a>
 
-Symfony now supports constructor autowiring. When you are creating a service definition so you can turn on `autowiring` and skip the manual passing arguments. 
+Symfony now supports constructor autowiring. When you are creating a service definition so you can turn on `autowiring` and skip the manual passing arguments.
 
 Autowiring is quite popular in the Czech Republic due to bundles like [Skrz](https://github.com/skrz/autowiring-bundle) or [Kutny](https://github.com/kutny/autowiring-bundle)
- 
+
 
 **How it looks like in practice?**
 
 Earlier long registration
 
 ```yaml
-# services.yml 
+# services.yml
 
 services:
     myService:
@@ -93,7 +93,7 @@ Instead of a specific type of service you require an interface that implements t
 ```yaml
 # services.yml
 
-services:   
+services:
     dependency1:
         class: MyBundle\Dependency1
         autowiring_types: MyBundle\MyInterface
@@ -107,7 +107,7 @@ Symfony 3 full-stack brings order. Get rid of chaos in the `/app` folder.
 
 **How?**
 
-Temporary files, logs, settings for PHPUnit, console files... 
+Temporary files, logs, settings for PHPUnit, console files...
 
 All this is now obvious location separate from the code of our application.
 

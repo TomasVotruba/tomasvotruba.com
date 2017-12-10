@@ -19,7 +19,7 @@ tweet: "#ecs - tool to use both #phpCodeSniffer and #phpCsFixer in 3 lines #php 
 
 ### Right to The Answer
 
-Let's say we want to check arrays.  
+Let's say we want to check arrays.
 
 We add first *checker* that requires long `array()` syntax:
 
@@ -41,10 +41,10 @@ checkers:
 
 Great job! **You have just combined PHP_CodeSniffer and PHP CS Fixer in 3 lines.**
 
-With a help of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard). Now, when title promise is fulfilled, 
-I will show how to install it, run it and how nice and clear reports it generates.   
+With a help of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard). Now, when title promise is fulfilled,
+I will show how to install it, run it and how nice and clear reports it generates.
 
-## How to add EasyCodingStandard in 3 steps   
+## How to add EasyCodingStandard in 3 steps
 
 ### 1. Install Package
 
@@ -55,7 +55,7 @@ composer require --dev symplify/easy-coding-standard
 ### 2. Add `easy-coding-standard.neon` and Configure
 
 Create a `easy-coding-standard.neon` file in your project and desired checkers.
- 
+
 ```yaml
 checkers:
     # arrays
@@ -80,8 +80,8 @@ Do you use PHPStorm? If so, you can use [NEON Plugin](https://plugins.jetbrains.
 No more looking to documentation, what string matches what sniff or fixer, if there are any checkers for arrays or debugging typos.
 
 [NEON file format](https://ne-on.org/) is very similar to YAML.
- 
-*To install NEON PHPStorm plugin just: find everywhere → type "Plugins" → pick "Browse repositories..." in the bottom → type "NEON" and install it.*  
+
+*To install NEON PHPStorm plugin just: find everywhere → type "Plugins" → pick "Browse repositories..." in the bottom → type "NEON" and install it.*
 
 ### 3. Run it & Fix it
 
@@ -107,6 +107,6 @@ Well, unless you like videos...
 
 I spoke about ECS last week in Dresden. **If you have 11 minutes and you want to know more about it, [go watch it here it here](https://www.facebook.com/pehapkari/videos/vl.1877987242460289/1321227224593751/?type=1).**
 
-That's all for short intro of this tool. I'll post more articles about how to use it, about fast caching or how to write own checkers - both sniffs and fixers. 
+That's all for short intro of this tool. I'll post more articles about how to use it, about fast caching or how to write own checkers - both sniffs and fixers.
 
 **Thank you for any feedback.** Here or in the issues.

@@ -3,7 +3,7 @@ id: 45
 title: "How to Deprecate PHP Package Without Leaving Anyone Behind"
 perex: '''
     You create PHP open-source packages because you personally use them in your projects. <strong>And you take care of them.</strong>
-    In time you change a job or switch a programming language and you don't have time to take care of them properly. Number of issues and PRs grows and <strong>package is getting obsolete</strong>. 
+    In time you change a job or switch a programming language and you don't have time to take care of them properly. Number of issues and PRs grows and <strong>package is getting obsolete</strong>.
     <br><br>
     You can do 2 things in this situation: nothing like most people do or <strong>take responsibility, deprecate package and inform your users about better alternative</strong>.
 '''
@@ -17,27 +17,27 @@ I created over 10 packages for [Nette](https://nette.org) in the past under *Zen
 
 If I tell you this in person, you'd know that future of *Zenify* is not based on daily usage of it's author and you'd consider switching to concurrent packages.
 
-**The thing is: 95 % of users of your package don't know about your personal development and life path. They use `composer require vendor/package-name` and that's it.** Of course, few people follow issues and PRs around your package and they might notice 6-months gap in activity. 
+**The thing is: 95 % of users of your package don't know about your personal development and life path. They use `composer require vendor/package-name` and that's it.** Of course, few people follow issues and PRs around your package and they might notice 6-months gap in activity.
 
-### Open-Source Holidays  
+### Open-Source Holidays
 
 But in open-source these *pauses* are normal: you need to finish your work project, focus on boost of another package, you have some personal or family events (wedding, newborn child, break-up, moving to another country etc.), so you take a break.
 
-**6-months pause gap and 6-months end-of-development pause look the same. But they are way different.** 
+**6-months pause gap and 6-months end-of-development pause look the same. But they are way different.**
 
 This is the second case.
 
 As [No more Mr. Nice Guy](https://www.amazon.com/No-More-Mr-Nice-Guy/dp/0762415339) would say:
- 
+
 ## Don't do Anything in Secret
 
 ### A. If you DON'T inform people, they might:
 
 - build new open-source or application that depends **on non-supported package**
-- integrate your package deeply in their architecture 
+- integrate your package deeply in their architecture
 - **promote bad practice** that you don't support anymore but don't have time to put them in the package
 - **wait in darkness** thinking "Author is on a vacation"
- 
+
 ### B. If you DO inform people, they will:
 
 - **be informed** - either notified by composer or on your blog (I will your show how later)
@@ -51,20 +51,20 @@ As [No more Mr. Nice Guy](https://www.amazon.com/No-More-Mr-Nice-Guy/dp/07624153
 ## Packages like Relationships Stand on Trust
 
 You have a meeting with a friend on Saturday on his birthday party. During the week you got close with a girl you like and you'd like to spend a weekend with her, because it's great opportunity to get to know her better. But what about your friend?
-   
+
 You can either:
- 
-- A. Wait it out and don't tell him anything. He probably wouldn't even notice. 
+
+- A. Wait it out and don't tell him anything. He probably wouldn't even notice.
 - B. Call him, explain the situation and let him know, you'll come next week as alternative.
 
 *What would you choose if you were your friend?*
- 
+
 Actually, **B builds foundations of great and strong relationship**, because people know they can trust you if anything difficult ever happens between you.
 
 
-## Deprecate Package !== Delete Package 
+## Deprecate Package !== Delete Package
 
-I thought when I deprecate package, application who use it as a dependency stops working. This could be **caused by deleting a package**, but not by deprecating it. Imagine **dropping from level 50 to 20**. 
+I thought when I deprecate package, application who use it as a dependency stops working. This could be **caused by deleting a package**, but not by deprecating it. Imagine **dropping from level 50 to 20**.
 
 **Deprecating a package** is like **having level 50 and staying there** forever. It will never be worse, but it won't be better either. Deprecation won't break anything and won't improve anything.
 
@@ -75,7 +75,7 @@ I thought when I deprecate package, application who use it as a dependency stops
 It works the same for releases. When you release version 2.0 that [requires PHP 7.1](/blog/2017/06/05/go-php-71/), it doesn't mean your package won't work on PHP 5.6. Version 1.0 still does.
 
 
-## 3 Steps To Perform Safe Deprecation 
+## 3 Steps To Perform Safe Deprecation
 
 ### 1. Explain Why
 
@@ -85,13 +85,13 @@ It's common psychological effect that people accept change with [**an explanatio
 
 ### 2. Suggest Replacement
 
-Software develops all the time. New and better packages are born everyday. 
+Software develops all the time. New and better packages are born everyday.
 It so much helpful if you suggest a way to go. It doesn't have to share 100 % features of your package. **A package that you'd use if your package won't exist is fine**.
 
-You can combine both [like this](/blog/2016/03/10/autowired-controllers-as-services-for-lazy-people/): 
+You can combine both [like this](/blog/2016/03/10/autowired-controllers-as-services-for-lazy-people/):
 
-> Since Symfony 3.3 you can use PSR4-based service discovery and registration. It does pretty much the 
-same thing - registers autowired controllers (and more) - and it has native support in Symfony. 
+> Since Symfony 3.3 you can use PSR4-based service discovery and registration. It does pretty much the
+same thing - registers autowired controllers (and more) - and it has native support in Symfony.
 >
 > I recommend using it instead!
 
@@ -146,9 +146,9 @@ Much more effective **by changing an organization**.
 
 - And you're done!
 
-This is the most obvious way to let people know on Github. 
+This is the most obvious way to let people know on Github.
 
-If this process is too difficult for you, you can [add a "deprecated" note to README title](https://github.com/DeprecatedPackages/ControllerAutowire#controller-autowire---deprecated-in-core-of-symfony-33) as well.   
+If this process is too difficult for you, you can [add a "deprecated" note to README title](https://github.com/DeprecatedPackages/ControllerAutowire#controller-autowire---deprecated-in-core-of-symfony-33) as well.
 
 
 **The League of Deprecated Packages**
@@ -166,14 +166,14 @@ I've come with this organization a year ago, when me and my friends needed to de
 **Blog Post(s) about Package**
 
 One the most underestimated places is a blog post. I consider it the most important place for people who don't know the package yet, but might start using it. I'd feel bad if people would start using package **after I deprecated them**, instead of reaching out for the replacement right away.
- 
+
 I've [created a simple warning system](https://github.com/TomasVotruba/tomasvotruba.cz/pull/88) on my blog:
 
 - Open post about the package.
-- Add warning above the perex with reasoning and suggested replacement: 
+- Add warning above the perex with reasoning and suggested replacement:
 
     <img src="/assets/images/posts/2017/deprecate/blog-deprecate-note.png" class="img-thumbnail">
-    
+
 - Profit! Thousands of programmer pain-hours saved.
 
 

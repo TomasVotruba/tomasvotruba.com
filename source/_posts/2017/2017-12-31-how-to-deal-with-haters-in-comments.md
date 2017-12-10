@@ -42,7 +42,7 @@ I want to know what's on the other's mind. I try to find something useful for me
 - "That never works" => How do you think it could work?
 - "You're doing it wrong" => Why do you think so?
 
-The reaction always depends on the context of the situation. 
+The reaction always depends on the context of the situation.
 
 In most cases **the reaction to such question is more constructive than the first comment**. And that's enough for me. **I'll take more from it than if I'd remain silent and returned back emotion**.
 
@@ -51,7 +51,7 @@ In most cases **the reaction to such question is more constructive than the firs
 
 ## 3. I'll Consider if it's Worth it and if so, Iterate
 
-Baby steps. I do not expect that I get positive / pro-growth / sandwich feedback to my first answer - after all, it took me year to get from *that's wrong* to useful and well-accepted feedback. 
+Baby steps. I do not expect that I get positive / pro-growth / sandwich feedback to my first answer - after all, it took me year to get from *that's wrong* to useful and well-accepted feedback.
 
 Sometimes it takes time, sometimes I regress, but I try to remember the first point. When it doesn't work, I just stop and focus somewhere else.
 

@@ -27,7 +27,7 @@ Tohle využiješ, pokud...
 ### Na co se spolu podíváme
 
 - jak si koupit doménu
-- jak ji propojit s webem online 
+- jak ji propojit s webem online
 - jak si stránky upravit jen pomocí prohlížeče
 
 
@@ -57,7 +57,7 @@ Stránky můžeš mít umístěné na Github zdarma. Github je sociální síť 
     <br>
 3. mé stránky už teď najdeš na adrese [tomasvotruba.github.io/php7.cz](http://tomasvotruba.github.io/php7.cz)
 4. ty své pak na `http://<tve-jmeno>.github.io/<tva-domena>.cz`
- 
+
 
 ### 3. Propojení domény a webu
 
@@ -82,7 +82,7 @@ Teď už máme doménu a stránky online, ale zatím jsou od sebe vzájemně odd
         <em>Napiš svou doménu</em>
     </div>
     <br>
-3. ve složce uprav `CNAME` soubor 
+3. ve složce uprav `CNAME` soubor
 
     <div class="text-center">
         <img src="/assets/images/posts/2015/github-pages/github-4.png" alt="Otevři soubor CNAME">
@@ -96,14 +96,14 @@ Teď už máme doménu a stránky online, ale zatím jsou od sebe vzájemně odd
         <em>Dej editovat</em>
     </div>
     <br>
-4. do prvního řádku napiš název své domény bez `http://www.`, tedy např. `php7.cz` 
+4. do prvního řádku napiš název své domény bez `http://www.`, tedy např. `php7.cz`
 5. dole klikni na "Commit changes", tedy "Uložit"
 
-Teď už ti zbývá poslední krok. 
+Teď už ti zbývá poslední krok.
 
-### Na Wedosu 
+### Na Wedosu
 
-1. přihlaš se na Wedos a otevři si [seznam tvých domén](https://client.wedos.com/domain) 
+1. přihlaš se na Wedos a otevři si [seznam tvých domén](https://client.wedos.com/domain)
 2. klikni na svou doménu
 3. dej "editovat DNS záznamy"
 
@@ -130,7 +130,7 @@ Teď už ti zbývá poslední krok.
     </div>
     <br>
 6. klikni na tlačítko "Aplikovat změny"
-    
+
     <div class="text-center">
         <img src="/assets/images/posts/2015/github-pages/domain-dns-4.png" alt="Aplikuj změny">
         <br>
@@ -140,7 +140,7 @@ Teď už ti zbývá poslední krok.
 
 Tato operace může trvat pár desítek minut, tak si zatím dej kafe.
 
-Pak bude tvá doména směřovat na tvé stránky na Githubu. 
+Pak bude tvá doména směřovat na tvé stránky na Githubu.
 
 Když otevřeš svou doménu (v mém případě [php7.cz](http://php7.cz)), uvidíš své stránky v plné kráse.
 

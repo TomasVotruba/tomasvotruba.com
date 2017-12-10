@@ -19,13 +19,13 @@ nette docs
 
 alrlaeve docs
 
-Event though it's antipatetenr, int tameks real sense. The purpose of docs is to bootstrpap fast, to get users attention. Would you use Laravel if you'd have to create 5 clases jsut to output hello wordl? 
+Event though it's antipatetenr, int tameks real sense. The purpose of docs is to bootstrpap fast, to get users attention. Would you use Laravel if you'd have to create 5 clases jsut to output hello wordl?
 
 
 So where to go next?
 
 
-Refactorign to 
+Refactorign to
 ----
 
 

@@ -16,7 +16,7 @@ deprecated_message: '''
 
 Stejně jako Kdyby/Doctrine využívá doctrine/doctrine2, my použijeme [doctrine/migrations](https://github.com/doctrine/migrations). Ty si [denně stáhne přes 9 000 programátorů](https://packagist.org/packages/doctrine/migrations/stats), takže se nemusíte bát o jeho kvalitu.
 
-Do Nette jsem připravil integraci pomocí balíčku [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations). 
+Do Nette jsem připravil integraci pomocí balíčku [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations).
 
 ## Instalace ve 3 krocích
 
@@ -36,7 +36,7 @@ extensions:
     # nesmí chybět Kdyby\Doctrine nebo jiná integrace Doctrine
 ```
 
-### 3. Ověříme 
+### 3. Ověříme
 
 Ověření provedeme spuštěním z přikazového řádku. V Nette to znamená využít Kdyby\Console.
 
@@ -66,7 +66,7 @@ Available commands for the "migrations" namespace:
 
 ## Profi workflow ve 4 krocích
 
-Rád bych s vámi podělil o to, jak přistupujeme k migracím my v [Lékárna.cz](http://lekarna.cz/). 
+Rád bych s vámi podělil o to, jak přistupujeme k migracím my v [Lékárna.cz](http://lekarna.cz/).
 
 Od šéfa jsme dostali zadání: *vytvořit tabulku na články*.
 
@@ -88,7 +88,7 @@ Důležité je číslo v posledním řádku ("New Migrations"). Vypadá to, že 
     >> New Migrations:                                     0
 ```
 
-Pokud máme "New Migrations" větší než 0, tak je nejdříve aplikujeme ([viz krok 4.](#apply-new-migrations)). 
+Pokud máme "New Migrations" větší než 0, tak je nejdříve aplikujeme ([viz krok 4.](#apply-new-migrations)).
 
 
 ### 2. Vytvoříme si prázdnou migraci
@@ -109,7 +109,7 @@ Generated new migration class to "/var/www/doctrine-migrations-sandbox/app/../mi
 Otevřeme si novou migraci `/migrations/Version20151031185405.php` a doplníme metody.
 
 - `up()` je použita defaultně, při migraci na novější verzi - obvykle **přidáváme data**
-- `down()` pak migruje zpět na starší verzi - obvykle **mažeme data** 
+- `down()` pak migruje zpět na starší verzi - obvykle **mažeme data**
 
 Více bude jasnější ze samotného SQL zápisu:
 
@@ -158,7 +158,7 @@ $ php www/index.php migrations:status
 
 ```bash
 # ...
-    
+
     >> Executed Migrations:                                0
     >> Executed Unavailable Migrations:                    0
     >> Available Migrations:                               1

@@ -13,10 +13,10 @@ related_posts: [51, 48]
 ---
 
 
-There are some checkers in coding standard world, that don't check spaces, tabs, commas nor brackets. They **actually do code-review for you**.   
+There are some checkers in coding standard world, that don't check spaces, tabs, commas nor brackets. They **actually do code-review for you**.
 
 
-I use a set of 4 checkers to **check open-source packages to help them keeping their code clean**. 
+I use a set of 4 checkers to **check open-source packages to help them keeping their code clean**.
 
 In Sylius they [removed 500 lines of unused code](https://github.com/Sylius/Sylius/pull/8557) just few days ago.
 
@@ -28,7 +28,7 @@ It will not only make your code cleaner, but also can **speed up you container b
 
 
 
-## 4 Simple Checkers 
+## 4 Simple Checkers
 
 
 ```yaml
@@ -36,17 +36,17 @@ It will not only make your code cleaner, but also can **speed up you container b
 
 checkers:
     # use short array []
-    PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer: 
+    PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
         syntax: short
 
     # drop dead code
-    - SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff  
+    - SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff
 
     # drop dead use namespaces
-    - PhpCsFixer\Fixer\Import\NoUnusedImportsFixer 
+    - PhpCsFixer\Fixer\Import\NoUnusedImportsFixer
 
     # and sort them A → Z
-    - PhpCsFixer\Fixer\Import\OrderedImportsFixer 
+    - PhpCsFixer\Fixer\Import\OrderedImportsFixer
 ```
 
 
@@ -60,11 +60,11 @@ checkers:
     ```
 
 2. Add checkers to `easy-coding-standard.neon` file
-    
-    
+
+
 3. Check your code
 
-    ```bash 
+    ```bash
     vendor/bin/ecs check src
     ```
 

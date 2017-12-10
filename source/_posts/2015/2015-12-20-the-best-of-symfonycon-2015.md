@@ -40,7 +40,7 @@ Simply put:
 - as well as 2.8 and 3.0
 
 The transition to the new major version will be under much greater control than ever before.
-     
+
 
 ## 2. Symfony2 at BlaBlaCar
 
@@ -151,7 +151,7 @@ He showed us new ways and means...
 
 On this issue will soon come out at the source article, where you show everything in detail.
 
- 
+
 
 ### 1 Thing Worth Remembering
 
@@ -165,7 +165,7 @@ Thus, when used MicroKernel?
 
 - MicroKernel comes in handy when you start a small application, but want it in time scale. In addition to Silex supports Bundle.
 
- 
+
 
 ### Other Talks Worth of Click
 

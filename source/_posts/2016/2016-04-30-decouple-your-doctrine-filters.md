@@ -1,7 +1,7 @@
 ---
 id: 8
 title: Decouple Your Doctrine Filters
-perex: "Doctrine filters are powerful tool. Yet their registration and management are bit overcomplicated. Today I will show you how to decouple them to standalone services that can take care of everything you need." 
+perex: "Doctrine filters are powerful tool. Yet their registration and management are bit overcomplicated. Today I will show you how to decouple them to standalone services that can take care of everything you need."
 
 deprecated: true
 deprecated_since: "March 2017"
@@ -25,12 +25,12 @@ So now you know, that to enable filter in Symfony you have to:
 3. get filter by it's name previously defined in `app/config/config.yml`
 4. enable it
 
-You have to do all these steps just to turn something on. Imagine you'd have to do this for every Voter, Command or EventSubscriber. 
+You have to do all these steps just to turn something on. Imagine you'd have to do this for every Voter, Command or EventSubscriber.
 
 
 ## Could We Make It Easier?
 
-In the tutorial from KnpUniversity, there is way to skip enabling filters in controller - by creating own [BeforeRequestListener](https://knpuniversity.com/screencast/doctrine-queries/filters#enabling-a-filter-globally). 
+In the tutorial from KnpUniversity, there is way to skip enabling filters in controller - by creating own [BeforeRequestListener](https://knpuniversity.com/screencast/doctrine-queries/filters#enabling-a-filter-globally).
 
 It's quite nice, but it just moves all these steps from controller's responsibility somewhere else. So you have to enable them again, just in different place.
 
@@ -39,15 +39,15 @@ Let's say this is fine enough. **But what about modular applications with own pe
 
 ## Minimal Viable Product
 
-For better understanding what is really important, let's break down the purpose of the filter. 
+For better understanding what is really important, let's break down the purpose of the filter.
 
 - it's a **piece of code in class that must inherit from `Doctrine\ORM\Query\Filter\SQLFilter`**
 - it **decorates SQL queries** with custom code
 - **sometimes it's conditional** - you want it to be enabled or disabled
 
 That's all it does. Everything else is just syntax sugar, glue code or entry point to work with them.
- 
-Saying that, we can **get rid of Controllers, Subscribers, DoctrineBundle, `app/config/config.yml`** and yet still make use of them. 
+
+Saying that, we can **get rid of Controllers, Subscribers, DoctrineBundle, `app/config/config.yml`** and yet still make use of them.
 
 
 ## Decouple Your Doctrine Filter... to Service
@@ -124,7 +124,7 @@ final class SoftdeletableFilter implements FilterInterface
      */
     public function addFilterConstraint(ClassMetadata $entity, $alias)
     {
-        if ($entity->getReflectionClass()->hasProperty('isDeleted')) { 
+        if ($entity->getReflectionClass()->hasProperty('isDeleted')) {
             // or another condition to integrate enable/disable process
             return "$alias.isDeleted = 0";
         }
@@ -153,7 +153,7 @@ For further use **just check Readme for [Symplify/ModularDoctrineFilters](https:
 
 - that Doctrine Filters can decorate every query in your application from single place
 - that Doctrine Filter is basically just an object that might add some code to query
-- **that you can add filter via simple service with [Symplify/ModularDoctrineFilters](https://github.com/Symplify/ModularDoctrineFilters)**   
+- **that you can add filter via simple service with [Symplify/ModularDoctrineFilters](https://github.com/Symplify/ModularDoctrineFilters)**
 
 If you have some tips how to this simpler or want to share your experience with filters, just let me know bellow.
 

@@ -3,18 +3,18 @@ id: 13
 title: "How to write open-source in PHP 2: Rise value of your package with help of skeleton"
 perex: '''
     After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some <strong>metadata files</strong>.
-    What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer all these questions today.</strong> 
+    What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer all these questions today.</strong>
 '''
 related_posts: [12, 25, 26, 45, 54]
 tweet: "How to write #openSource in #php 2: Use package skeleton @travisCI"
 ---
 
-Other programmers who want to use your package are usually looking for **long term value**. 
+Other programmers who want to use your package are usually looking for **long term value**.
 To estimate the value they need **to answer 4 important questions**.
 
-1. **What is quality of package?** 
+1. **What is quality of package?**
 2. **Does it solve my issue?**
-3. **Is it trustworthy?** 
+3. **Is it trustworthy?**
 4. **How well maintained is it?**
 
 Even if you know your code is the best and the cleanest, if they don't trust you, they will never use it.
@@ -32,21 +32,21 @@ Pick one you understand the best.
 1. Go to repository on Github and click on *Clone or download*
 2. Then *Download a ZIP*
 3. Unzip the zip file to your local repository
-4. And push new files to Github 
-    
+4. And push new files to Github
+
     ```bash
     git add .
     git commit -m "add metadata files"
     git push origin master
     ```
 
-### Great for start, yet obsolete later 
+### Great for start, yet obsolete later
 
-This skeleton is great for start and to learn about metadata files. 
+This skeleton is great for start and to learn about metadata files.
 
 But when I create my package now, **I just copy the most recent package I made**, delete `/src` and `/tests`
 directories and I'm ready to roll. This is because:
- 
+
 - I upgrade my packages more often then some `skeleton` package
 - and because my preferences and required code are evolving
     - e.g. A new PHP version is out, I tune my continuous integration (CI) setup etc.
@@ -57,9 +57,9 @@ directories and I'm ready to roll. This is because:
 Now we look on every directory and file and how it's related to the 4 key questions.
 Just to remind you, the end user is interested in:
 
-1. Quality - **What is quality of package?** 
+1. Quality - **What is quality of package?**
 2. Usability - **Does it solve my issue? Is it easy to use?**
-3. Trust - **Is it trustworthy?** 
+3. Trust - **Is it trustworthy?**
 4. Maintenance - **How well maintained is it?**
 
 
@@ -71,7 +71,7 @@ Just to remind you, the end user is interested in:
 
 *Profit*
 
-- musthave :) 
+- musthave :)
 
 
 ### `/tests` directory
@@ -86,7 +86,7 @@ Just to remind you, the end user is interested in:
 *Profit*
 
 - **Quality**: tested code is perceived better quality
-- **Trust**: I don't have to hope that code works, **I can trust the code** 
+- **Trust**: I don't have to hope that code works, **I can trust the code**
 
 
 ### `.gitattribues`
@@ -94,7 +94,7 @@ Just to remind you, the end user is interested in:
 *Meaning*
 
 - here are all files that are ignored by composer (using the `export-ignore` attribute)
-- when somebody will install your package via `composer require you/your-package`, they won't get these files downloaded to `/vendor` directory 
+- when somebody will install your package via `composer require you/your-package`, they won't get these files downloaded to `/vendor` directory
 - usually its metadata files and tests, because application of end user does not need them
 
 *Profit*
@@ -112,7 +112,7 @@ Just to remind you, the end user is interested in:
 
 *Profit*
 
-- **Trust**: Without this I would not trust you know anything about open-source. 
+- **Trust**: Without this I would not trust you know anything about open-source.
 
 
 ### `.scrutinzer.yml`
@@ -121,7 +121,7 @@ Just to remind you, the end user is interested in:
 
 - configuration for [Scrutinizer](https://scrutinizer-ci.com/) - code quality and code coverage tool
 - to enable it, [login](https://scrutinizer-ci.com/login) and new repository
-    - I recommend you to login in via Github, since it adds hooks to your repository 
+    - I recommend you to login in via Github, since it adds hooks to your repository
 - it would be triggered every time your commit to master or create a PR
 
 *Profit*
@@ -143,11 +143,11 @@ Just to remind you, the end user is interested in:
 *Meaning*
 
 - configuration for [Travis](https://travis-ci.org/) - continuous integration tool for tests
-- to enable it, go register there and add the repository 
+- to enable it, go register there and add the repository
 
 *Profit*
 
-- **Trust**: Do you have test but you don't run them for every change? How can I know the code works? 
+- **Trust**: Do you have test but you don't run them for every change? How can I know the code works?
 
 ### `composer.json`
 
@@ -176,7 +176,7 @@ Just to remind you, the end user is interested in:
 *Meaning*
 
 - configuration for [PHPUnit](https://phpunit.de/) - testing tool
-- this can be used either by end user or Travis 
+- this can be used either by end user or Travis
 
 *Profit*
 
@@ -188,11 +188,11 @@ Just to remind you, the end user is interested in:
 
 - last but the most important - your welcome article for user
 - THE MOST IMPORTANT FILE IN THE PACKAGE!
-- Don't worry. We'll talk about writing a good readme later. 
+- Don't worry. We'll talk about writing a good readme later.
 
 *Profit*
 
-- **Usability**: If I understand the usage, I can rely to the issue I want to solve. 
+- **Usability**: If I understand the usage, I can rely to the issue I want to solve.
 - **Trust**: Having code quality, Travis and coverage badges helps to identify the quality of the package.
 
 So that are all files and their purpose.
@@ -215,7 +215,7 @@ Look on these 2 - what information can we get?
 
 <img src="/assets/images/posts/2016/open-source/badge-1.png" alt="Well informative badge">
 
-- Test are passing - **GOOD** 
+- Test are passing - **GOOD**
 - Code quality is 10 - **GOOD**
 - Code coverage 93% test coverage - **GOOD**
 - It has 166 downloads. Here it depends on the age of package. → Go check release date! - **GOOD**
@@ -228,12 +228,12 @@ Look on these 2 - what information can we get?
 
 - Where to go when **starting a new repository**.
 - What is **the purpose meta files**.
-- How to **enable online services** that help us to build better code. 
+- How to **enable online services** that help us to build better code.
 
 ## What's next?
 
 - We'll peek on **coding standards**.
-- How do **releases** work a what is **semantic versioning**. 
+- How do **releases** work a what is **semantic versioning**.
 - How to **pick min PHP version and package versions in composer**.
 
 ---

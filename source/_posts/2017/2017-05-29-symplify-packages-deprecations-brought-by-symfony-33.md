@@ -15,8 +15,8 @@ tweet: "What was changed and dropped from #symplify thanks to #symfony 3.3?"
 
 I will provide you some insights behind deprecations first. It was not an instant decision based on few Symfony blog posts,
 but a long process of maturing inspired by community, feedback and intuition.
- 
-If you only want to see before/after changes in you application, you can [skip right to the code](#a-href-https-github-com-deprecatedpackages-defaultautowire-defaultautowire-a). 
+
+If you only want to see before/after changes in you application, you can [skip right to the code](#a-href-https-github-com-deprecatedpackages-defaultautowire-defaultautowire-a).
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/symplify-deprecations/pr-notes.png" style="max-width:100%" class="img-thumbnail">
@@ -32,7 +32,7 @@ That's why it's the best to have **2 elements of similar level so they push each
 Google & Facebook, USA & Russia, Symfony & Laravel or PHP & Javascript (in a way).
 
 ## Swallowing My Open-Source Ego
- 
+
 When [Symfony 3.3 introduced new Dependency Injection features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/),
 I realized they have 90% similar to feature I created my packages for.
 
@@ -47,28 +47,28 @@ Internal dialog of my Ego and inner Zen master started:
 
 **So I [asked people on Slack and Github](https://github.com/Symplify/Symplify/pull/162)** what they think about it. Almost everybody (my inner Zen master included)
 agreed **to drop them and let Symfony handle that**.
- 
+
 I must say, it was much easier to decide after getting such feedback. **Thank you [Filip Prochazka](https://filip-prochazka.com/),
-[Tomas Fejfar](https://www.tomasfejfar.cz/),  [Stof](https://github.com/Symplify/Symplify/issues/161), 
+[Tomas Fejfar](https://www.tomasfejfar.cz/),  [Stof](https://github.com/Symplify/Symplify/issues/161),
 [theofidry](https://github.com/symfony/symfony/pull/22234#issuecomment-297999703),
 [Jachym Tousek](https://github.com/enumag), [Jan Mikes](https://github.com/lexinek)
 and [Javier Eguilez](https://github.com/Symplify/Symplify/pull/162#issuecomment-299441503)**
 for your help with this.
 
-  
+
 ## Letting Package Go
 
 I realized I could let packages go and I made these PRs:
- 
+
 - [drop DefaultAutowire](https://github.com/Symplify/Symplify/pull/162#issuecomment-299441503)
-- [drop ServiceDefinitionDecorator, AutoServiceRegistration, ControllerAutowire and SymfonyEventDispatcher](https://github.com/Symplify/Symplify/pull/155) 
+- [drop ServiceDefinitionDecorator, AutoServiceRegistration, ControllerAutowire and SymfonyEventDispatcher](https://github.com/Symplify/Symplify/pull/155)
 
 That eventually lead to:
- 
+
 - [dropping EventDispatcher integration to Nette](https://github.com/Symplify/Symplify/pull/170)
 
 Don't worry:
- 
+
 - **all have better replacement** (I will show you bellow)
 - **you can still use them** (they just won't get any updates)
 
@@ -125,7 +125,7 @@ features.
 ```yaml
 # app/config/services.yml
 services:
-    autoconfigure: true 
+    autoconfigure: true
 
     Symfony\Component\Console\Command\Command: ~
 
@@ -144,7 +144,7 @@ You can also use `@required` annotation instead of `_instanceof` in this case, a
 ## [AutoServiceRegistration](https://github.com/DeprecatedPackages/AutoServiceRegistration)
 
 This package helped you to register multiple services at once with Finder.
- 
+
 ### Before
 
 ```yaml
@@ -156,7 +156,7 @@ symplify_auto_service_registration:
         - Controller
 ```
 
-### After 
+### After
 
 Use [PSR-4 based service autodiscovery and registration](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration).
 
@@ -164,7 +164,7 @@ Use [PSR-4 based service autodiscovery and registration](/blog/2017/05/07/how-to
 # app/config/services.yml
 
 services:
-    App\: # no more manual registration of similar groups of services 
+    App\: # no more manual registration of similar groups of services
         resource: ../{Controller,Command,Subscriber}
 ```
 

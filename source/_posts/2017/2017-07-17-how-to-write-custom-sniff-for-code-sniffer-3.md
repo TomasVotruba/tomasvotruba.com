@@ -5,7 +5,7 @@ perex: '''
     When I give talks about coding standards, I ask people 2 questions: do you use coding standards? Do you write your own sniffs? On average, above 50 % uses it, but only 1-2 people wrote their own sniff.
     <br><br>
     PSR-2 is great for start, but main power is in those own sniffs. Every project has their own need, every person has different preferences.
-    <br><br>   
+    <br><br>
     I Google then and found outdated or complicated sources, so I've decided to write down a reference post for those, who want to start with sniffs.
     Let's look what will show all you need (and nothing more) to <strong>know to write your first sniff</strong>.
 '''
@@ -19,10 +19,10 @@ tweet: "How to Write Custom Sniff for #phpCodeSniffer 3"
 Today we'll pick an example a from my friend [Martin Hujer](https://www.martinhujer.cz/). Once told me about sniff that checks **that all exception classes have "Exception" suffix**.
 
 I said: How is it useful in practise? We all know that is common knowledge to write them this way. He replied: Well, we found some even in our code base.
- 
- The point is not in the count of fixed cases, but in *CI based responsibility*. From now on, **people'll NEVER have to think about it** and they can **focus on more valuable processes** that CI cannot do, like writing AliPay integration.  
 
- 
+ The point is not in the count of fixed cases, but in *CI based responsibility*. From now on, **people'll NEVER have to think about it** and they can **focus on more valuable processes** that CI cannot do, like writing AliPay integration.
+
+
 ## 6 Steps To `ExceptionNameSniff`
 
 ### 1. Start With Sentence That Declares What Sniff Does
@@ -30,8 +30,8 @@ I said: How is it useful in practise? We all know that is common knowledge to wr
 "An exception class should have "Exception" suffix."
 
 ### 2. Create a Sniff Class and Implement a `PHP_CodeSniffer\Sniffs\Sniff` interface
- 
-It covers 2 required methods: 
+
+It covers 2 required methods:
 
 ```php
 use PHP_CodeSniffer\Sniffs\Sniff;
@@ -44,7 +44,7 @@ final class ExceptionNameSniff implements Sniff
     public function register(): array
     {
     }
-    
+
     public function process(File $file, $position): void
     {
     }
@@ -84,7 +84,7 @@ It might be a little tricky to find out the easiest way to check the rule. Here 
 What is exception in natural language description (not PHP)? *A class that extends another class that has suffix "Exception".*
 
 
-So this would save us bit of coding and thinking: 
+So this would save us bit of coding and thinking:
 
 ```php
 public function register(): array
@@ -92,25 +92,25 @@ public function register(): array
     return [T_EXTENDS];
 }
 ```
- 
+
 
 ### 3. Create `process()` Method
 
-This method has 2 arguments. 
+This method has 2 arguments.
 
- 
+
 ```php
 public function process(File $file, $position)
 {
-} 
+}
 ```
 
 - 1. The `File $file` object holds all tokens of the file and helper methods.
-- 2. The `$position` is int for current located `T_EXTENDS` token. 
+- 2. The `$position` is int for current located `T_EXTENDS` token.
 
 
 There are 2 parts while writing a sniff:
- 
+
 - First we need to detect, if this is the use case we try to match - an exception class. Because `T_EXTENDS` doesn't tell a lot.
 - Then we need to check if it meets our rules and add error if not.
 
@@ -143,10 +143,10 @@ if (substr($parentClassNameToken['content'], -strlen('Exception')) !== 'Exceptio
 ```
 
 When the code gets pass this check, we know we have exception there.
- 
-  
+
+
 ### 5. Make Sure it Ends with "Exception"
- 
+
 Would you what to do know? The process will be the same - to check if class name ends with "Exception" -, but instead of `findNext()` method we'll use `findPrevious()`:
 
 ```php
@@ -156,7 +156,7 @@ $classNamePosition = $file->findPrevious([T_STRING], $position);
 $classNameToken = $file->getTokens()[$classNamePosition];
 // Detect the content of token ends with "Exception"
 if (substr($classNamePosition['content'], -strlen('Exception')) === 'Exception')) {
-    // the current class ends with "Exception" 
+    // the current class ends with "Exception"
     return;
 }
 ```
@@ -169,7 +169,7 @@ When this section passes, we know we have exception without "Exception" suffix t
 
 The last method we will use is `addFixableError()`.
 
-In pseudo code: 
+In pseudo code:
 
 ```php
 $file->addFixableError(
@@ -208,29 +208,29 @@ final class ExceptionNameSniff implements Sniff
     {
         return [T_EXTENDS];
     }
-    
+
     public function process(File $file, $position): void
     {
         $parentClassNamePosition = $file->findNext([T_STRING], $position);
         $parentClassNameToken = $file->getTokens()[$parentClassNamePosition];
-        
+
         // Does it ends with "Exception"?
         if (! $this->stringEndsWith($parentClassNameToken['content'], 'Exception')) {
             // The parent class it not and exception, neiter it this
             return;
         }
-        
+
         $classNamePosition = $file->findPrevious([T_STRING], $position);
         $classNameToken = $file->getTokens()[$classNamePosition];
         if ($this->stringEndsWith($classNamePosition['content'], 'Exception')) {
-            // The current class ends with "Exception", it's ok 
+            // The current class ends with "Exception", it's ok
             return;
         }
-     
+
         $file->addFixableError('An exception class should have "Exception" suffix.', $position - 2, self::class)
     }
-    
-    private function stringEndsWith(string $name, string $needle): bool 
+
+    private function stringEndsWith(string $name, string $needle): bool
     {
         return (substr($name, -strlen($needle)) === $needle);
     }
@@ -243,7 +243,7 @@ You can find [final Sniff on Github](https://github.com/Symplify/Symplify/blob/e
 
 ## How to run it?
 
-With [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) put the class to `easy-coding-standard.neon`: 
+With [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) put the class to `easy-coding-standard.neon`:
 
 ```yaml
 checkers:

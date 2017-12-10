@@ -24,11 +24,11 @@ Feedback is great! You can improve your weak points and make them stronger.
 To take the best out of the feedback, we have to compare it - *before* and *after*.
 
 Thing is, we can barely process present moment and reflecting the past isn't much better. Do you know who you were a month back? A year back?
- 
+
 And do you *know it* or do you *imagine it*?
 
 How do you *know* you made a progress?
- 
+
 But more important, how can you **really appreciate yourself** for making it through.
 
 
@@ -39,8 +39,8 @@ Putting these question together, I get the best feedback when:
 - I get it from the person, **who knows me the longest**
 - I actually **feel his or her feelings** while giving the feedback
 
-Sounds like *futuristic empath* skills? 
- 
+Sounds like *futuristic empath* skills?
+
 <img src="/assets/images/posts/2017/futureme/empath.jpg" class="img-thumbnail">
 
 
@@ -65,10 +65,10 @@ This is what I do for past 10 years and I'm very happy to share this little hack
 **I write every 6 months (at least) with letter arrival a 1 year in the future**. If I write today, the letter would arrive October 8th, 2018.
 
 <img src="/assets/images/posts/2017/futureme/past.png" class="img-thumbnail">
- 
- 
+
+
 ## What I write about?
- 
+
 Usually I describe the present moment:
 
 - How is work doing?
@@ -86,15 +86,15 @@ It can look like this:
 
 
 ## What I Learned from this?
- 
+
 
 - **That nothing is permanent.** Nor success, nor joy, nor pain, nor ideas about the world I'm living in.
 
 - That when I feel something is impossible or difficult or the best way to do it, it *is* in the present I'm just in. Nothing more.
 
-- **That I change a lot from year to year** (for good ;)), even though I don't move at all before writing these. 
+- **That I change a lot from year to year** (for good ;)), even though I don't move at all before writing these.
 
- 
+
 
 ## Try It Yourself
 
@@ -110,9 +110,9 @@ You can start with one and if you'll like it, you can get more. That's what I di
 
 ## Inspire at Public Letters
 
-The other interesting thing you can do is read public letter by other people. There are some very moving honest confessions, like alcoholism or domestic violence, from both sides.  
+The other interesting thing you can do is read public letter by other people. There are some very moving honest confessions, like alcoholism or domestic violence, from both sides.
 
 <img src="/assets/images/posts/2017/futureme/public.png" class="img-thumbnail">
 
- 
+
 Happy writing!
