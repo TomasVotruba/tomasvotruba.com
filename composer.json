@@ -5,13 +5,13 @@
         "symplify/statie": "^3.0",
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
-        "J7mbo/twitter-api-php": "^1.0"
+        "J7mbo/twitter-api-php": "^1.0",
+        "nikic/php-parser": "^4.0"
     },
     "require-dev": {
         "symplify/easy-coding-standard": "^3.0",
         "phpunit/phpunit": "^6.5",
-        "phpstan/phpstan-shim": "^0.9",
-        "nikic/php-parser": "^4.0"
+        "phpstan/phpstan-shim": "^0.9"
     },
     "autoload": {
         "psr-4": {
