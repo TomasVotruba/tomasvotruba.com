@@ -14,17 +14,17 @@ related_posts: [29, 32, 33, 34]
 
 ## Coupled Approach in Statie 2 
 
-Posts in Statie 2 were enabled by defaults with following hardcoded logic:
+Posts in Statie 2 were enabled by defaults with following hard coded logic:
  
 - find all `*.md` files in `_posts` directory
 - create `PostFile` objects from them
 - save all of them to global variable `$posts`
-- use route defined in `paramters > post_route` to render it
+- use route defined in `parameters > post_route` to render it
 - render it with `_layouts/post.latte` layout
 
 You could change a `post_route` or `layout` in specific post file, but that was it. No flexibility, no extendability and modification of `PostFile` class was not possible.
  
-In [Pehapkari.cz](https://pehapkari.cz/) we're staring community [lectures](https://pehapkari.cz/vzdelavej-se/) and we need not on posts, but **also lectures to be on standalone page**, e.g.
+In [Pehapkari.cz](https://pehapkari.cz/) we're staring community [lectures](https://pehapkari.cz/vzdelavej-se/) and we need not on posts, but **also lectures to be on stand-alone page**, e.g.
  
  - https://pehapkari.cz/course/doctrine-from-basics, 
  - https://pehapkari.cz/course/phpstorm-hacks-and-tips etc.
@@ -112,7 +112,7 @@ That's all!
 
 These lectures will be available **in every template under `{$lectures}` variable**, as configured in `variable_global` option.
 
-So you can creates page `source/all-lectures.latte` with all lectures (ordered by file name):
+So you can creates page `source/all-lectures.latte` with all lectures (ordered by filename):
 
 ```html
 {foreach $lectures as $lecture}
@@ -148,7 +148,7 @@ remember, **the date has to be in start of the filename**:
 _lectures/2018-01-30-use-open-source-statie-for-open-blogging.md
 ```
 
-When set up propperly, you get this file in generated code:
+When setup properly, you get this file in generated code:
 
 ```bash
 2018/01/30/use-open-source-statie-for-open-blogging
