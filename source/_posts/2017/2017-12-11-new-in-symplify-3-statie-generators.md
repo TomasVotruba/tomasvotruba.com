@@ -2,7 +2,7 @@
 id: 67
 title: "New in Symplify 3: Statie Generators"
 perex: '''
-    Statie missed one important featuneed not on postsre. **Posts were the only elements** that you could render as standlone page.
+    Statie missed one important feature. **Posts were the only elements** that you could render as standlone page.
     But what if you want a web porfolio, not with posts but with features projects? Or lectures pages?
     <br><br>
     **Statie 3 to the rescue!**
