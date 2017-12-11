@@ -1,14 +1,14 @@
 ---
 id: 67
-title: "New in Statie 3: Generator"
+title: "New in Symplify 3: Statie Generators"
 perex: '''
     Statie missed one important feature. **Posts were the only elements** that you could render as standlone page.
     But what if you want a web porfolio, not with posts but with features projects? Or lectures pages?
     <br><br>
-    Statie 3 to the rescue!
+    **Statie 3 to the rescue!**
 '''
-tweet: "..."
-tweet_image: "..."
+tweet: "Statie 3 on #symfony 4 is out with many little improvements + 1 big feature - Generators! Having own page is not a luxury for posts anymore!"
+tweet_image: "assets/images/posts/2017/statie-generators/generators.png"
 related_posts: [29, 32, 33, 34]
 ---
 
@@ -18,18 +18,23 @@ Posts in Statie 2 were enabled by defaults with following hardcoded logic:
  
 - find all `*.md` files in `_posts` directory
 - create `PostFile` objects from them
-- save it to global variable `$posts`
+- save all of them to global variable `$posts`
 - use route defined in `paramters > post_route` to render it
 - render it with `_layouts/post.latte` layout
 
-You could change a `post_route` or `layout` in specific post file, but that was it. **No flexibility, no extendability and modification of `PostFile` class was not possible**.
+You could change a `post_route` or `layout` in specific post file, but that was it. No flexibility, no extendability and modification of `PostFile` class was not possible.
  
-In [Pehapkari.cz](https://pehapkari.cz/) we're staring community [lectures](https://pehapkari.cz/vzdelavej-se/) and we need not on posts, but **also lectures to be on standalone page**, e.g. https://pehapkari.cz/course/doctrine-from-basics, https://pehapkari.cz/course/phpstorm-hacks-and-tips etc.
+In [Pehapkari.cz](https://pehapkari.cz/) we're staring community [lectures](https://pehapkari.cz/vzdelavej-se/) and we need not on posts, but **also lectures to be on standalone page**, e.g.
  
+ - https://pehapkari.cz/course/doctrine-from-basics, 
+ - https://pehapkari.cz/course/phpstorm-hacks-and-tips etc.
+ 
+
+If this could be only configurable, it would benefit many websites that are more than just a list of posts.
+
 
 ## Configurable Approach in Statie 3 with Generators
 
-If this could be only configurable, it would benefit many websites that are more than just a list of posts.
  
 **So here comes Statie 3 Generators**. Same posts approach is now set by default, but also configurable in `parameters > generators` section:
 
@@ -131,7 +136,7 @@ and add lectures, talks with details, products, docs, gifts... anything you need
 
 One more surprise to prevent. In case you use `route_prefix` with date in it:
 
-```yml
+```yaml
 parameters:
     generators:
         route_prefix: 'blog/:year/:month/:day'
@@ -139,14 +144,14 @@ parameters:
 
 remember, **the date has to be in start of the filename**:
 
-```
+```bash
 _lectures/2018-01-30-use-open-source-statie-for-open-blogging.md
 ```
 
 When set up propperly, you get this file in generated code:
 
-```
-2018/01/30/use-open-source-statie-for-open-bloging
+```bash
+2018/01/30/use-open-source-statie-for-open-blogging
 ```
 
 
@@ -154,7 +159,7 @@ When set up propperly, you get this file in generated code:
 
 <blockquote class="blockquote text-center">
     "Real code is worth of thousand words describing it."
-    <footer class="blockquote-footer">Anonymous Programmer</footer>
+    <footer class="blockquote-footer">Anonymous Lazy Programmer</footer>
 </blockquote>
 
 See these PRs:
