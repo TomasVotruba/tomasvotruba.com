@@ -24,7 +24,7 @@ Posts in Statie 2 were enabled by defaults with following hard coded logic:
 
 You could change a `post_route` or `layout` in specific post file, but that was it. No flexibility, no extendability and modification of `PostFile` class was not possible.
  
-In [Pehapkari.cz](https://pehapkari.cz/) we're staring community [lectures](https://pehapkari.cz/vzdelavej-se/) and we need not on posts, but **also lectures to be on stand-alone page**, e.g.
+In [Pehapkari.cz](https://pehapkari.cz/) we're staring community [lectures](https://pehapkari.cz/vzdelavej-se/) and we need not only posts, but **also lectures to be on stand-alone page**, e.g.
  
  - https://pehapkari.cz/course/doctrine-from-basics, 
  - https://pehapkari.cz/course/phpstorm-hacks-and-tips etc.
@@ -112,7 +112,7 @@ That's all!
 
 These lectures will be available **in every template under `{$lectures}` variable**, as configured in `variable_global` option.
 
-So you can creates page `source/all-lectures.latte` with all lectures (ordered by filename):
+So you can create page `source/all-lectures.latte` with all lectures (ordered by filename):
 
 ```html
 {foreach $lectures as $lecture}
