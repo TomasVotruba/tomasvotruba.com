@@ -11,8 +11,8 @@ parameters:
     site_title: "Tomas Votruba"
     site_url: "https://www.tomasvotruba.cz"
     disqus_shortname: "itsworthsharing"
+    github_repository_tests_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests"
 
     # Statie settings
     markdown_headline_anchors: true
-    github_repository_slug: "TomasVotruba/tomasvotruba.cz"
-    github_show_url_start: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/"
+    github_repository_source_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/source"

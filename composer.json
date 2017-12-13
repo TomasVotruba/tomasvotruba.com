@@ -2,11 +2,11 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.1",
-        "symplify/statie": "^3.0",
+        "symplify/statie": "v3.0.2",
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0",
-        "nikic/php-parser": "^4.0"
+        "nikic/php-parser": "v4.0.0alpha2"
     },
     "require-dev": {
         "symplify/easy-coding-standard": "^3.0",
@@ -30,7 +30,5 @@
             "vendor/bin/ecs check bin src tests --fix",
             "bin/clear_posts_trailing_whitespaces.sh"
         ]
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
