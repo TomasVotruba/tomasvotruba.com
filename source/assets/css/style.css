@@ -134,6 +134,10 @@ article {
     margin-bottom: .2em;
 }
 
+#blog .firstPost {
+    font-size: 2.1em;
+}
+
 .card {
     font-size: 1.1em;
     line-height: 1.5em;
