@@ -35,7 +35,7 @@ public function addVisitor(string $name)
 }
 ```
 
-or
+<br>
 
 ```php
 /**
@@ -47,7 +47,7 @@ public function getArguments(InputInterface $input)
 }
 ```
 
-or
+<br>
 
 
 ```php
@@ -60,7 +60,7 @@ public function prependItems(array $items)
 }
 ```
 
-or
+<br>
 
 
 ```php
@@ -73,22 +73,16 @@ public function getStorage(): bool
 }
 ```
 
-or
-
-
-```php
-/**
- * @return boolean
- */
-public function getStorage(): bool
-{
-    // ...
-}
-```
+<br>
 
 
 Do you know what do they have in common?
 **They only duplicate the typehint information and bring no extra value to the reader**.
+
+
+<div class="text-center">
+    <img src="/assets/images/posts/2017/doc-block-cleaner/use-only-what-you-need.jpg" class="img-thumbnail">
+</div>
 
 *No big deal* you might say as code author. But your code is much more read that written, so making it as readable as possible should be your priority.
 
@@ -138,12 +132,23 @@ checkers:
     - Symplify\CodingStandard\Fixer\Commenting\RemoveEmptyDocBlockFixer
 ```
 
-**3. Run it and see the diff**
+**3. Run it**
 
 ```bash
-vendor/bin/ecs
+vendor/bin/ecs check src
 ```
 
+**4. See the diff**
+
+<div class="text-center">
+    <img src="/assets/images/posts/2017/doc-block-cleaner/diff.png" class="img-thumbnail">
+</div>
+
+**5. And fix it**
+
+```bash
+vendor/bin/ecs check src --fix
+```
 
 
 <br>
@@ -159,4 +164,4 @@ checkers:
 
 <br>
 
-Happy code valuation!
+Happy eye resting!
