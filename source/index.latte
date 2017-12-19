@@ -27,8 +27,9 @@ id: blog
 
                     <article class="text-left">
                         <a href="/{$post['relativeUrl']}/">
-                            <h2>{$post['title']|noescape}</h2>
+                            <h2 n:class="!isset($wasFirstPostMarked) ? firstPost">{$post['title']|noescape}</h2>
                         </a>
+                        {var $wasFirstPostMarked = true}
 
                         {include "postMetadataLine", post => $post}
                     </article>
