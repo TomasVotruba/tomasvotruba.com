@@ -49,18 +49,6 @@ public function getArguments(InputInterface $input)
 
 or
 
-```php
-/**
- * @param mixed $value
- */
-public function addValue($value)
-{
-    // ...
-}
-```
-
-or
-
 
 ```php
 /**
@@ -77,9 +65,22 @@ or
 
 ```php
 /**
- * @return Storage
+ * @return boolean
  */
-public function getStorage(): Storage
+public function getStorage(): bool
+{
+    // ...
+}
+```
+
+or
+
+
+```php
+/**
+ * @return boolean
+ */
+public function getStorage(): bool
 {
     // ...
 }
@@ -89,25 +90,22 @@ public function getStorage(): Storage
 Do you know what do they have in common?
 **They only duplicate the typehint information and bring no extra value to the reader**.
 
-*No big deal* you might say as code author. But your code is much more more read that written and...
-
-<br>
-
-
+*No big deal* you might say as code author. But your code is much more read that written, so making it as readable as possible should be your priority.
 
 <br>
 
 ## How to Remove <strike>Manually</strike> Automatically?
 
 Cleaning every single case would be crazy. Luckily, we **live in CLI-refactoring generation**,
-so all we need is Fixer - `Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer`.
+so all we need is new Fixer from `Symplify\CodingStandard` 3.0 - `Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer`.
 
 <a href="https://github.com/Symplify/Symplify/pull/427" class="btn btn-dark btn-sm">
     <em class="fa fa-github fa-fw"></em> 
     See pull-request #427
 </a>
 
-
+This fixer scans docs blocks, compares it with code types, evaluates value of each one (like you would do) and **drops** those, which do not add any extra value and only slow down the code reading time.
+ 
 
 ### Tested on many Open-Source Projects
 
@@ -146,11 +144,18 @@ checkers:
 vendor/bin/ecs
 ```
 
-@todo image
 
 
+<br>
 
-[More in the docs of Symplify\CodingStandard](https://github.com/Symplify/CodingStandard#block-comment-should-only-contain-useful-information-about-types)
+Don't you like `mixed` or `object`? The fixer is [configurable](https://github.com/Symplify/CodingStandard#block-comment-should-only-contain-useful-information-about-types-wrench), so you can set types that you'd like to remove.
+
+```yml
+# easy-coding-standard.neon
+checkers:
+    Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer:
+        useless_types: ['mixed', 'object'] # [] by default 
+```
 
 <br>
 
