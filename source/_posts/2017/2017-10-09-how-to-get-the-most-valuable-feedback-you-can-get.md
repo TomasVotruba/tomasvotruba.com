@@ -9,7 +9,7 @@ perex: '''
     How to get such feedback?
 '''
 tweet: "How to Get the Most Valuable Feedback You Can Ever Have? Only from your @futureme #selfdevelopment #feedback"
-tweet_image: "assets/images/posts/2017/futureme/example.png"
+tweet_image: "/assets/images/posts/2017/futureme/example.png"
 ---
 
 **We meet with feedback everyday**. In work on how to improve your project, with your spouse on how to be emphatic or with your mentoring skills with your students.
