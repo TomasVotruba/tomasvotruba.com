@@ -4,7 +4,7 @@ title: "New in Symplify 3: DocBlock Cleaner Fixer"
 perex: '''
     Focus on docblock has increased thanks to [PHP 7 scalar types](http://php.net/manual/en/migration70.new-features.php#migration70.new-features.scalar-type-declarations) and PHPStan with [intersection and union types](https://medium.com/@ondrejmirtes/phpstan-0-9-a-huge-leap-forward-1e9b0872d1cc). Thanks to that, more and more **docblocks become just visual noise** causing [cognitive overload](https://en.wikipedia.org/wiki/Cognitive_load).
     <br><br>
-    Symplify 3 introduces a new help hand - **fixer that cleans doc block noise for you and makes your code more valuable to the reader**. 
+    Symplify 3 introduces a new help hand - **fixer that cleans doc block noise for you and makes your code more valuable to the reader**.
 '''
 tweet: "Do you use PHP 7 and scalar types? Do you still see value in your docblocks? Which is useful and which is legacy? Symplify 3 introduces a new fixer, that helps you to clean the later! #codingstandard #phpcsfixer"
 tweet_image: "/"
@@ -21,7 +21,7 @@ tweet_image: "/"
 <br>
 
 Do you find similar patterns in your code?
- 
+
 <br>
 
 
@@ -94,12 +94,12 @@ Cleaning every single case would be crazy. Luckily, we **live in CLI-refactoring
 so all we need is new Fixer from `Symplify\CodingStandard` 3.0 - `Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer`.
 
 <a href="https://github.com/Symplify/Symplify/pull/427" class="btn btn-dark btn-sm">
-    <em class="fa fa-github fa-fw"></em> 
+    <em class="fa fa-github fa-fw"></em>
     See pull-request #427
 </a>
 
 This fixer scans docs blocks, compares it with code types, evaluates value of each one (like you would do) and **drops** those, which do not add any extra value and only slow down the code reading time.
- 
+
 
 ### Tested on many Open-Source Projects
 
@@ -126,7 +126,7 @@ composer require symplify/easy-coding-standard --dev
 ```yaml
 # easy-coding-standard
 checkers:
-    - Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer 
+    - Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer
 
     # works best with these checkers, to remove empty docblock
     - Symplify\CodingStandard\Fixer\Commenting\RemoveSuperfluousDocBlockWhitespaceFixer
@@ -160,7 +160,7 @@ Don't you like `mixed` or `object`? The fixer is [configurable](https://github.c
 # easy-coding-standard.neon
 checkers:
     Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer:
-        useless_types: ['mixed', 'object'] # [] by default 
+        useless_types: ['mixed', 'object'] # [] by default
 ```
 
 <br>
