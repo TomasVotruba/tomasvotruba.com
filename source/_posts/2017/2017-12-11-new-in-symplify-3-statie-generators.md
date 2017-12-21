@@ -8,7 +8,7 @@ perex: '''
     **Statie 3 to the rescue!**
 '''
 tweet: "Statie 3 on #symfony 4 is out with many little improvements + 1 big feature - Generators! Having own page is not a luxury for posts anymore!"
-tweet_image: "assets/images/posts/2017/statie-generators/generators.png"
+tweet_image: "/assets/images/posts/2017/statie-generators/generators.png"
 related_posts: [29, 32, 33, 34]
 ---
 

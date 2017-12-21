@@ -8,7 +8,7 @@ perex: '''
 '''
 
 tweet: "7 Tips You Should Know Before Going To University #studying #unschooling #education #eduhacking"
-tweet_image: "assets/images/posts/2017/university/procrastination.png"
+tweet_image: "/assets/images/posts/2017/university/procrastination.png"
 ---
 
 **Disclaimer: these is my personal experience with universities in Brno, Czech Republic between 2008 and 2013. It can differ for your country, your city, your year spend on collage, your field etc. Please consider that while reading. Well, if you are already on university. The main goal of this post to start discussion and challenge you and your personal experiences.**

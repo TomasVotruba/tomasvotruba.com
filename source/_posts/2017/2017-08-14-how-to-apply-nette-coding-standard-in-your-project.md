@@ -8,7 +8,7 @@ perex: '''
 '''
 related_posts: [49]
 tweet: "How to setup #nettefw Coding Standard in your project? Local #ci or #travisci"
-tweet_image: "assets/images/posts/2017/nette-coding-standard/travis-check.png"
+tweet_image: "/assets/images/posts/2017/nette-coding-standard/travis-check.png"
 ---
 
 [Nette\CodingStandard](https://github.com/nette/coding-standard/) version [0.5](https://github.com/nette/coding-standard/releases/tag/v0.5.0) with important bug-fixes was released a week ago. This version **is ready to use, includes all important checkers and is used on all `Nette\*` packages in Travis**.

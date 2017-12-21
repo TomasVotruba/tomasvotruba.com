@@ -7,7 +7,7 @@ perex: '''
     Let's take it a step further into 2017 - **to instant messaging**.
 '''
 tweet: "Cleanup your #Messenger, #WhatApp and SMS to Improve your Productivity #facebook #imboxzero"
-tweet_image: "assets/images/posts/2017/imbox-zero/messenger.png"
+tweet_image: "/assets/images/posts/2017/imbox-zero/messenger.png"
 related_posts: [56]
 ---
 
