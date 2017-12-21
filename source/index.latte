@@ -14,33 +14,33 @@ id: blog
 
         {include subscribe}
 
-        <div class="row text-left">
-            <div class="col-md-12">
-                {foreach $posts as $post}
-                    {continueIf $post->getDate() > (new DateTime) || isset($post['redirect']) || isset($post['deprecated'])}
+        {var $wasFirstPostMarked = false}
 
-                    {var $postYear = $post->getDateInFormat('Y')}
-                    {if $postYear != date('Y') && !isset($dateLines[$postYear])}
-                        <div class="yearLine" id="year-{$postYear}">
-                            <br>
-                            <br>
-                            {$postYear}
-                            {var $dateLines[$postYear] = $postYear}
-                        </div>
-                    {/if}
+        <div class="row">
+            {foreach $posts as $post}
+                {continueIf $post->getDate() > (new DateTime) || isset($post['redirect']) || isset($post['deprecated'])}
 
-                    <article class="text-left">
-                        <h2 n:class="!isset($wasFirstPostMarked) ? firstPost">
-                            <a href="/{$post['relativeUrl']}/">
-                                {$post['title']|noescape}
-                            </a>
-                        </h2>
-                        {var $wasFirstPostMarked = true}
+                {var $postYear = $post->getDateInFormat('Y')}
+                {if $postYear != date('Y') && !isset($dateLines[$postYear])}
+                    <div class="col-md-12 yearLine clearfix" id="year-{$postYear}">
+                        <br>
+                        <br>
+                        {$postYear}
+                        {var $dateLines[$postYear] = $postYear}
+                    </div>
+                {/if}
 
-                        {include "postMetadataLine", post => $post}
-                    </article>
-                {/foreach}
-            </div>
+                <article n:class="text-left, $wasFirstPostMarked ? col-md-6 : col-md-12">
+                    <h2 n:class="!$wasFirstPostMarked ? firstPost">
+                        <a href="/{$post['relativeUrl']}/">
+                            {$post['title']|noescape}
+                        </a>
+                    </h2>
+                    {var $wasFirstPostMarked = true}
+
+                    {include "postMetadataLine", post => $post}
+                </article>
+            {/foreach}
         </div>
 
         <br>
