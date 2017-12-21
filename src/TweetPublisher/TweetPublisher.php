@@ -67,8 +67,6 @@ final class TweetPublisher
             return;
         }
 
-        die;
-
         $tweet = $this->pickTweetCandidate($tweetsToPublish);
 
         $this->tweet($tweet);
