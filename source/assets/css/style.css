@@ -17,56 +17,6 @@ body {
     line-height: 1.5em;
 }
 
-a, a:active {
-    color: #9D2053;
-    text-decoration: none;
-}
-
-a:hover, a:focus {
-    color: #7A1E48;
-    text-decoration: underline;
-}
-
-a:focus {
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-}
-
-hr {
-    margin: 1.2em 0;
-    border: 0;
-    border-top: 1px solid #eeeeee;
-}
-
-p {
-    margin-bottom: .5em;
-}
-
-ul {
-    margin-top: 0;
-    margin-bottom: .5em;
-}
-
-@media (min-width: 768px) {
-    .conta+iner {
-        max-width: 100%;
-    }
-
-    .container-fluid {
-        max-width: 100%;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 800px;
-    }
-
-    .container-fluid {
-        max-width: 800px;
-    }
-}
-
 /*!* Typography *!*/
 h1, h2, h3 {
     font-weight: 700;
@@ -97,17 +47,72 @@ h1 {
     border-bottom: 1px solid #EEE;
 }
 
-h1, h3 {
+h1, h2, h3 {
     color: rgba(39,58,75,.97);
 }
 
 h2 {
-    color: #9D2053;
     line-height: 1.3em;
 }
 
-h2 a:hover {
+a, a:active {
+    color: #9D2053;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #7A1E48;
     text-decoration: underline;
+}
+
+a:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+h2 a, h2 a:active {
+    color: #7A1E48;
+    text-decoration: none;
+}
+
+h2 a:hover, h2 a:focus {
+    color: #7A1E48;
+    text-decoration: underline;
+}
+
+hr {
+    margin: 1.2em 0;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+}
+
+p {
+    margin-bottom: .5em;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .container-fluid {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .container-fluid {
+        max-width: 800px;
+    }
 }
 
 pre {
@@ -116,7 +121,7 @@ pre {
 }
 
 .navbar {
-    border-radius: 0;
+    /*border-radius: 0;*/
     background-color: #7A1E48;
     padding: 0;
 }
@@ -165,7 +170,6 @@ img {
 .yearLine {
     font-size: 3em;
     text-align: center;
-    color: #9D2053;
     padding: .5em 0;
     font-weight: 200;
 }

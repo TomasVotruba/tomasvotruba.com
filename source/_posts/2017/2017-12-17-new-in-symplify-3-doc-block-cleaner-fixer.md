@@ -103,13 +103,14 @@ This fixer scans docs blocks, compares it with code types, evaluates value of ea
 
 ### Tested on many Open-Source Projects
 
-Docblocks don't have any standard format, so I **first tested this Fixer on handful of PHP open-source projects**: 
+Docblocks don't have any standard format, so I **first tested this Fixer** on handful of PHP open-source projects. **Open them** to see, what this fixer can do in real code:
 
 - [php-ml](https://github.com/php-ai/php-ml/pull/145) and [other PR](https://github.com/php-ai/php-ml/pull/146)
 - [ReflectionDocBlock](https://github.com/phpDocumentor/ReflectionDocBlock/pull/137)
 - and [Symfony](https://github.com/symfony/symfony/pull/24931)
 
-Thanks to that Fixer now **covers dozens of edge cases** and is now read to use. 
+
+Thanks to that Fixer now **covers dozens of edge cases**.
 
 
 ## Challenge Your Code
@@ -155,7 +156,7 @@ vendor/bin/ecs check src --fix
 
 Don't you like `mixed` or `object`? The fixer is [configurable](https://github.com/Symplify/CodingStandard#block-comment-should-only-contain-useful-information-about-types-wrench), so you can set types that you'd like to remove.
 
-```yml
+```yaml
 # easy-coding-standard.neon
 checkers:
     Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer:
