@@ -169,7 +169,7 @@ I think now you are ready for the real code.
 
 ### Do You Want Real Code?
 
-I already wrote [how to write a Sniff for PHP_CodeSniffer](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/) or [how to write a Fixer for PHP CS Fixer](/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24/) on this topic where I write code to solve  real life use cases.
+I already wrote [how to write a Sniff for PHP_CodeSniffer](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/) or [how to write a Fixer for PHP CS Fixer](/blog/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24/) on this topic where I write code to solve  real life use cases.
 
 Enjoy saved time by writing a code that works for you.
 

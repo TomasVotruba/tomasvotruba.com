@@ -180,7 +180,7 @@ I've [created a simple warning system](https://github.com/TomasVotruba/tomasvotr
 ## What's in it For You as Maintainer?
 
 This all you do is for package users - what a great and altruistic person you are!
-**But it has one great upside for you as well.** When I've [deprecated 5 of Symplify packages](/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33/) I was sad to loose a legacy, my baby, my work... **But it's worth it!**
+**But it has one great upside for you as well.** When I've [deprecated 5 of Symplify packages](/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33/) I was sad to loose a legacy, my baby, my work... **But it's worth it!**
 
 In following weeks I found:
 

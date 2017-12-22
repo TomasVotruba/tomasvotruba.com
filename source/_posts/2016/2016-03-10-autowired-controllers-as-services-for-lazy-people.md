@@ -191,7 +191,7 @@ For further use, **just check Readme for [Symplify/ControllerAutowire](https://g
 
 Check them out:
 
-- [Nette](nette.org) with [presenter autowire](https://github.com/nette/application/pull/56), based on [Filip Prochazka's extension](https://filip-prochazka.com/blog/presentery-v-di-containeru)
+- [Nette](https://nette.org) with [presenter autowire](https://github.com/nette/application/pull/56), based on [Filip Prochazka's extension](https://filip-prochazka.com/blog/presentery-v-di-containeru)
 - [PHP-DI](http://php-di.org/doc/frameworks/silex.html#controllers-as-services)
 - [Laravel with constructor injection support for controllers](https://laravel.com/docs/5.0/controllers#dependency-injection-and-controllers)
 - and [Auryn](https://github.com/J7mbo/Aurex) that adds this feature to Silex

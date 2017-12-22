@@ -117,11 +117,7 @@ Followed by [a year later reflection](http://www.stevepavlina.com/blog/2015/07/o
 
 ### Where Do You Find Me?
 
-- As you can see I love newsletters. **I'll be starting my soon - [be sure to subscribe here](http://eepurl.com/cpKuMT).**
-
-- **And I'm [still on Facebook](https://www.facebook.com/nauc.se.nette.symfony.a.doctrine) where I post weekly about programming and self-education tips.**
-
-Both you can find on my website [tomasvotruba.cz](https://www.tomasvotruba.cz/#socials).
+See [contact page](https://www.tomasvotruba.cz/contact).
 
 
 ### What about Your Socials Experiments?

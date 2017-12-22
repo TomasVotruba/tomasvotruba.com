@@ -41,7 +41,7 @@ Recently, I applied this approach to article about How to Create Your First Nett
 
 ### I Learned Extensions the Hard Way
 
-1. **By Reading Nette documentation** [that describes over 20 features and uses cases it has](https://doc.nette.org/en/last/di-extensions). That is information, which is useful, because I can use the tool to it's potential, but not the best adopt the skill.
+1. **By Reading Nette documentation** [that describes over 20 features and uses cases it has](https://doc.nette.org/en/di-extensions). That is information, which is useful, because I can use the tool to it's potential, but not the best adopt the skill.
 
 2. **By Reading extension of open-source packages**. They are similar to documentation: many features on various use cases I didn't understand yet.
 

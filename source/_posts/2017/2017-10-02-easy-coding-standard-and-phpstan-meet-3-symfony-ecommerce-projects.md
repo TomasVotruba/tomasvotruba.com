@@ -56,7 +56,7 @@ To get the idea how it improves your code in practice, just [check this commit](
 
 ### PSR2
 
-**PSR-2 is the most spread coding standard in PHP**, described in [PHP-FIG guide](http://www.php-fig.org/psr/psr-2/). Both PHP_CodeSniffer and PHP CS Fixer have a set of ~30 rules, so why not to [combine them](https://github.com/Symplify/EasyCodingStandard/blob/master/config/psr2-checkers.neon) and use them on our projects?
+**PSR-2 is the most spread coding standard in PHP**, described in [PHP-FIG guide](http://www.php-fig.org/psr/psr-2/). Both PHP_CodeSniffer and PHP CS Fixer have a set of ~30 rules, so why not to [combine them](https://github.com/Symplify/EasyCodingStandard/blob/master/config/psr2.neon) and use them on our projects?
 
 
 <br>
