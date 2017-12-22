@@ -11,7 +11,9 @@
     "require-dev": {
         "symplify/easy-coding-standard": "^3.0",
         "phpunit/phpunit": "^6.5",
-        "phpstan/phpstan-shim": "^0.9"
+        "phpstan/phpstan-shim": "^0.9",
+        "symfony/console": "4.0.1 as 3.4",
+        "spatie/http-status-check": "^2.4"
     },
     "autoload": {
         "psr-4": {
@@ -29,6 +31,9 @@
         "fix-cs": [
             "vendor/bin/ecs check bin src tests --fix",
             "bin/clear_posts_trailing_whitespaces.sh"
+        ],
+        "check-status": [
+            "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt"
         ]
     }
 }

@@ -40,3 +40,10 @@ node_modules/write-good/bin/write-good.js source/_posts/2017/2017-06-17-php-obje
 ```
 
 Thanks [@mihaeu](https://github.com/mihaeu) for the tip!
+
+
+## Check Status Code of All Links
+
+```bash
+vendor/bin/http-status-check scan https://tomasvotruba.cz
+```
