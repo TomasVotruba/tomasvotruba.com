@@ -50,7 +50,7 @@ class ComputerEntrance extends BoothCallEntrance
 }
 ```
 
-**always [mark your classes final](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. There is event [sniff for that](https://github.com/Symplify/CodingStandard/blob/master/src/Sniffs/Solid/FinalInterfaceSniff.php). Use it.
+**always [mark your classes final](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. There is event [sniff for that](https://github.com/Symplify/CodingStandard/blob/master/src/Fixer/Solid/FinalInterfaceFixer.php). Use it.
 
 ```php
 final class BoothCallEntrance implements MatrixEntranceInterface

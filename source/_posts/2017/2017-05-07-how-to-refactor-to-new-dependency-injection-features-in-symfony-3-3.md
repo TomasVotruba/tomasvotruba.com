@@ -298,6 +298,6 @@ Now you are using all the shiny new Symfony 3.3 Dependency Injection features.
 
 ### More in Symfony Flex
 
-If you need more examples, check out [`manifest.json` file for FrameworkBundle by Symfony Flex](https://github.com/symfony/recipes/blob/master/symfony/framework-bundle/3.3/etc/packages/manifest.json).
+If you need more examples, check out [`manifest.json` file for FrameworkBundle by Symfony Flex](https://github.com/symfony/recipes/blob/master/symfony/framework-bundle/3.3/config/services.yaml).
 
 **Do you like it? Do you plan to skip some of those and stick to the current syntax?**

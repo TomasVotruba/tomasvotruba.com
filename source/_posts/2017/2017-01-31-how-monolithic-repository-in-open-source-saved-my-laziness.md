@@ -27,8 +27,7 @@ Not only Symfony, but also:
 
 - [Laravel](https://github.com/laravel/framework)
 - [Sylius](https://github.com/Sylius/Sylius)
-- [Elcodi](https://github.com/elcodi/elcodi/) - which is dead now, but Marc even created own tool for that [GitSplit](http://gitsplit.com)
-
+- [Elcodi](https://github.com/elcodi/elcodi/) - which is dead now
 
 Opposed to this is **manyrepo** approach (for many repositories), meaning every package is in his own repository.
 

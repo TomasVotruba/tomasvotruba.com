@@ -14,8 +14,7 @@ tweet_image: "/assets/images/posts/2017/repository-as-service/autowire-fail.png"
 
 This post is follow up to [StackOverflow answer](https://stackoverflow.com/questions/38346281/symfony-3-outsourcing-controller-code-into-service-layer/38349271#38349271) to clarify key points and show the sweetest version yet.
 
-The person who kicked me to do this post was [Václav Keberdle](https://www.linkedin.com/in/v%C3%A1clav-keberdle-149b7639) - *thank you for that*.
-
+The person who kicked me to do this post was [Václav Keberdle](http://www.ucinnejsiweb.cz) - *thank you for that*.
 
 ## Clean, Reusable, Independent and SOLID Goal
 
