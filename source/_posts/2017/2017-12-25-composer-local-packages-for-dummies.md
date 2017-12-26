@@ -4,10 +4,11 @@ title: "Composer Local Packages for Dummies"
 perex: '''
     This is the simplest way to start using `/packages` directory in your application, that **leads to cleaner code, maintainable architecture** and is **the best to start testing**. 
 '''
-tweet: "..."
-tweet_image: "..."
+tweet: "Do you have old application with lots of coupled code? Do you want to start testing, but always failed before? #composerphp has nice feature - local packages, explained step by step! #php"
+tweet_image: "/assets/images/posts/2017/composer-local-packages/composer.png"
 related_items: [26, 25]
 ---
+
 
 I wrote about [pros and cons of local packages before](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/). 
 After year of using this in [practice](https://github.com/Symplify/Symplify) and [mentorings](/mentoring-and-lectures/) I polished this approach to even **simpler version that is easy to start with**.
@@ -15,7 +16,7 @@ After year of using this in [practice](https://github.com/Symplify/Symplify) and
 
 ### Do You Have?
 
-- **monolitic code in `/app`**
+- **monolithic code in `/app`**
 - **no unit tests**
 - code that is using 3rd party services, like payments, invoice API and coding standards
 - namespaces
@@ -33,7 +34,9 @@ After year of using this in [practice](https://github.com/Symplify/Symplify) and
 There is no need to use Github, [love open-source](/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/), understand [package design](https://leanpub.com/principles-of-package-design) or understand [composer beyond PSR-4](https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading/). 
 No [symlink issues](https://johannespichler.com/developing-composer-packages-locally), no forgotten `composer update`. **Anyone can start using this!**
 
-
+<div class="text-center">
+    <img src="/assets/images/posts/2017/composer-local-packages/composer.png">
+</div>
 
 ## 4 Steps to first Dummy Local Package 
 
@@ -58,7 +61,7 @@ composer.json
 composer.json
 ```
 
-### 2. Create First Package in it
+### 2. Create First Package
 
 Start with something simple like filesystem or string utils.   
 
@@ -72,7 +75,7 @@ Start with something simple like filesystem or string utils.
 composer.json
 ```
 
-### 3. Put first Class in it
+### 3. Move first Class to new package directory
 
 ```diff
 /app
@@ -158,11 +161,9 @@ composer dump
 That's it. You are ready to go!
 
 
-## 5. Bonus: Add Your First Tests
+## 5. Bonus: Add Your First Test
 
-Add test for a class was never easier.
-
-Creat Test file for `FileSystem` class:
+Add test for a class was never easier. Create Test file for `FileSystem` class:
 
 ```diff
 /app
@@ -197,7 +198,7 @@ final class FileSystemTest extends TestCase
 
 <br>
 
-Update `phpunit.xml`:
+Update `phpunit.xml` to cover all tests of local packages:
 
 ```xml
 <phpunit bootstrap="vendor/autoload.php" colors="true">
