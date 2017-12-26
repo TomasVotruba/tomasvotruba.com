@@ -8,7 +8,7 @@ perex: '''
     <br><br>
     I never did. Today I will show you <strong>why I see monorepo approach in open-source so awesome</strong>.
 '''
-related_posts: [45, 26, 13, 12]
+related_posts: [45, 26, 13, 12, 69]
 tweet: "How #symfony and #laravel can manage so many packages with ease? #composerPHP #monolith #php"
 ---
 
