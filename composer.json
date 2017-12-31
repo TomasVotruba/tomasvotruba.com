@@ -32,8 +32,6 @@
             "vendor/bin/ecs check bin src tests --fix",
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
-        "check-status": [
-            "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt"
-        ]
+        "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt"
     }
 }
