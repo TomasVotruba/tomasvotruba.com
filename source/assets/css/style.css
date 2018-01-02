@@ -333,3 +333,8 @@ h1:hover .anchor-icon, h2:hover .anchor-icon, h3:hover .anchor-icon {
 .card-normal ul {
     padding-left: 1em;
 }
+
+/* prism remove color in diff */
+.token.deleted {
+    color: #9c0707;
+}
