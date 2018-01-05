@@ -18,13 +18,8 @@ script:
     # test that website is generated
     - vendor/bin/statie generate source
 
-    # re-build website when on master only
-    - |
-      if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then
-          vendor/bin/statie push-to-github tomasvotruba/tomasvotruba.cz --token=${GH_TOKEN};
-          # tweet new posts, if any
-          bin/tweet-new-posts;
-      fi
+    # tweets posts
+    - bin/tweet-new-posts
 
 after_script:
   # upload coverage.xml file to Coveralls to analyze it
@@ -34,16 +29,18 @@ after_script:
       php coveralls.phar --verbose;
     fi
 
+deploy:
+  provider: output
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+
 notifications:
     email: never
 
 env:
     global:
-        # see https://github.com/Symplify/Statie/blob/master/docs/PushContentToGithubPagesWithTravis.md
-
-        # GH_TOKEN
-        - secure: "f34vQfFKWjJC6RAT1652qF79185ghDpvQbpSBvdJ7aZC5dx2tE7LA+pm7BhDhJdaPslUYIAVW90TGV2WoGL5+tT2HBNzCkdVJEEQ4QeulSMoEQnVs0RHz3YApo99x8zSNU8QT9q8C1Wo5fH+vYtCufsUK4ahoUCgsM8Ey6pkKMfedNpbJ6gLuovgCWO5VlHBRdK96xRmTVfPD4cGlYilmsjeNWrV89aK4Wa958q+2n/tfH07U2onLFeuBrGlqbZ/8co8fWNE0zLAUVnUvrwSZE3MP0JUx4om9Cq3WzCln5jLs+u7CVCJUD49J9V9zw4llgTZGnefgaBBqbDpZO0RpppyFgiV4I6QtlDU7fcvAqb5GJgJUqsOpfYZ538WVPmbMoNl0Nw8I/maJmX2HgWuI524dtviJC8O52DY7b+Q/uX76cG4JCavvA8RImK/JLIzpqHu1cdLu5tni0Og1fLFarMNdpcFzGLXpHfi0I23u1iiFMLgxKp5+e8QmfOX9AvGhThkcK1nxKW1lXONcG058YZksQiDVB89LssamCXTQUjtIF3qqDPFmeGKbpjWgnBm4jdU9JmQVwBlJ2YQuSa1G/YXD2ntphQ6jguqc4hdMhYClICO+vqKS+3IUX6r//mOt1yaf0fS6nKL5LIvy6mzKlJc2GpMKcmazovUmOU6Pa0="
-
         # Travis API for TweetPublisher
         # TWITTER_CONSUMER_KEY
         - secure: "LjI4JDzCdMs8bkhkr87IrJA+cNdbgIjOPAlis5mwfur+i9qd41xRLXhvOsN8xMZEp0axgOJAZ6RipULT9XXVPRUdpKCewiVp+PBneEKyxlX8ne7iukannX83/5TlCW9AABB+NtSFnQvlsQ8YPjsrrScUZ2xx/FZyvjqI/4NwfBc4opWQPP5qa2VnQQ05h+r9RXyrGXJiqzs+ptURku2WX15kxcELkOqepZU9SO/CPaAEjB4vNsgmqBDXuShlpd1/BcN3WIKq2yuIyPk6xPA/oYXn0bcXT+pbYbNBLfSO4fKyA4+C1UEszXxWjh8bahxpeGjU24anfUiuX7xap58j98JeLycOuJm/2P47hXrQZiKtrUgh3TaTHIfCpZO1aUyftnx3qvCt85oj+UlsHPmJoN8LvxG4yuae31uf6Pqi+h5Ro+d5xFzjlhZy6KbZt0YFN4pncU/qzwc1bWeynklKw4+Bfmw3+8PJzRyyreJQNgxGGSBX5q2TduqYiNp4nBSpXNsLsdyEctzUdFgdn4acSAEJPhovhOxqFzEzOJcUhxr7weu0GxFWRDfJBqAFP6EZa+lTDyM11BA8GYnTrMY7B5yy0dhNQJKbxQfQDa+dTkQlEuxcozJUjdXWtK3Hg2J38OcB7+JLz8GlbIEayLqEnhiqcFO0RFlFDhA6x3giw90="
