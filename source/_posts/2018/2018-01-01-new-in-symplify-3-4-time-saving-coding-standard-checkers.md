@@ -7,7 +7,7 @@ perex: '''
     I already wrote about [doc block cleaner fixer](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/) and here 4 more checkers, **that saves you from monkey-typing and let you focus on algorithms**.
 '''
 tweet: "Absolutize require/include, empty line after strict_types() definition, import all the names and the best - unused public methods. Welcome and use new checkers in Symplify 3 Coding Standard #codingstandar #phpcsfixer #phpcodesniffer #php"
-tweet_image: "assets/images/posts/2018/symplify-3-checkers/import-fixer.png"
+tweet_image: "/assets/images/posts/2018/symplify-3-checkers/import-fixer.png"
 related_items: [49, 68]
 ---
 
