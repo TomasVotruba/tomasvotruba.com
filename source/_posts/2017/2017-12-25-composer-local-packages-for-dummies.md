@@ -31,7 +31,7 @@ After year of using this in [practice](https://github.com/Symplify/Symplify) and
 
 <br>
 
-There is no need to use Github, [love open-source](/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/), understand [package design](https://leanpub.com/principles-of-package-design) or understand [composer beyond PSR-4](https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading/). 
+There is no need to use Github, [love open-source](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/), understand [package design](https://leanpub.com/principles-of-package-design) or understand [composer beyond PSR-4](https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading/).
 No [symlink issues](https://johannespichler.com/developing-composer-packages-locally), no forgotten `composer update`. **Anyone can start using this!**
 
 <div class="text-center">
