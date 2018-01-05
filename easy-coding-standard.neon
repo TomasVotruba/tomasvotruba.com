@@ -1,6 +1,5 @@
 includes:
     - vendor/symplify/easy-coding-standard/config/psr2.neon
-    - vendor/symplify/easy-coding-standard/config/php70.neon
     - vendor/symplify/easy-coding-standard/config/php71.neon
     - vendor/symplify/easy-coding-standard/config/common.neon
     - vendor/symplify/easy-coding-standard/config/symplify.neon
@@ -18,10 +17,6 @@ checkers:
         absoluteNestingLevel: 3
 
 parameters:
-#    exclude_checkers:
-        # buggy, fix first
-        #- Symplify\CodingStandard\Fixer\ArrayNotation\StandaloneLineInMultilineArrayFixer
-
     skip:
         Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
             - */src/Posts/Year2017/Ast/*

@@ -2,7 +2,7 @@
 id: 69
 title: "Composer Local Packages for Dummies"
 perex: '''
-    This is the simplest way to start using `/packages` directory in your application, that **leads to cleaner code, maintainable architecture** and is **the best to start testing**. 
+    This is the simplest way to start using `/packages` directory in your application, that **leads to cleaner code, maintainable architecture** and is **the best to start testing**.
 '''
 tweet: "Do you have old application with lots of coupled code? Do you want to start testing, but always failed before? #composerphp has nice feature - local packages, explained step by step! #php"
 tweet_image: "/assets/images/posts/2017/composer-local-packages/composer.png"
@@ -10,9 +10,9 @@ related_items: [26, 25]
 ---
 
 
-I wrote about [pros and cons of local packages before](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/). 
+I wrote about [pros and cons of local packages before](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/).
 After year of using this in [practice](https://github.com/Symplify/Symplify) and [mentorings](/mentoring-and-lectures/) I polished this approach to even **simpler version that is easy to start with**.
- 
+
 
 ### Do You Have?
 
@@ -20,25 +20,25 @@ After year of using this in [practice](https://github.com/Symplify/Symplify) and
 - **no unit tests**
 - code that is using 3rd party services, like payments, invoice API and coding standards
 - namespaces
-- old application you maintain for many years 
+- old application you maintain for many years
 
 ### Do You Want to?
 
 - **start testing**
 - **have decoupled code**
 - board new programmer with **no explaining**
-- understand how to scale architecture by decreasing code complexity 
+- understand how to scale architecture by decreasing code complexity
 
 <br>
 
-There is no need to use Github, [love open-source](/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/), understand [package design](https://leanpub.com/principles-of-package-design) or understand [composer beyond PSR-4](https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading/). 
+There is no need to use Github, [love open-source](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/), understand [package design](https://leanpub.com/principles-of-package-design) or understand [composer beyond PSR-4](https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading/).
 No [symlink issues](https://johannespichler.com/developing-composer-packages-locally), no forgotten `composer update`. **Anyone can start using this!**
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/composer-local-packages/composer.png">
 </div>
 
-## 4 Steps to first Dummy Local Package 
+## 4 Steps to first Dummy Local Package
 
 Your application now looks similar to this:
 
@@ -63,7 +63,7 @@ composer.json
 
 ### 2. Create First Package
 
-Start with something simple like filesystem or string utils.   
+Start with something simple like filesystem or string utils.
 
 ```diff
 /app
@@ -90,11 +90,11 @@ composer.json
 
 <br>
 
-The best practise is to use your **company or application name** as namespace, e.g. [`EntryDo`](https://www.entrydo.com/). 
+The best practise is to use your **company or application name** as namespace, e.g. [`EntryDo`](https://www.entrydo.com/).
 Second part of namespace will be **package name** (`file-system`) in **CamelCaps format**.
 
 ```php
-namespace EntryDo\FileSystem; 
+namespace EntryDo\FileSystem;
 
 final class FileSystem
 {
@@ -108,14 +108,14 @@ final class FileSystem
 ```
 
 
-**You're awesome! Congratulations**, you've just made your first local packages and you're definitely not a dummy anymore. 
+**You're awesome! Congratulations**, you've just made your first local packages and you're definitely not a dummy anymore.
 
 
 ### 4. Autoload with Composer
 
-The class is now decoupled. Now we have to **tell composer where to find it**! 
+The class is now decoupled. Now we have to **tell composer where to find it**!
 
-This is your `composer.json`: 
+This is your `composer.json`:
 
 ```json
 {
@@ -151,12 +151,12 @@ Add our new package:
 <br>
 
 And now the answer to most questions on StackOverflow around this topic- **rebuild the composer autoload file** (`/vendor/autoload.php`) from CLI:
- 
+
 ```bash
 composer dump
-# which is shortcut for: 
+# which is shortcut for:
 # composer dump-autoload
-``` 
+```
 
 That's it. You are ready to go!
 
@@ -183,7 +183,7 @@ composer.json
 Add `\Tests` to `EntryDo\FileSystem` namespace:
 
 ```php
-namespace EntryDo\FileSystem\Tests; 
+namespace EntryDo\FileSystem\Tests;
 
 use PHPUnit\Framework\TestCase;
 

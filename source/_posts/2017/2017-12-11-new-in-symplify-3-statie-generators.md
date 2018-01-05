@@ -98,7 +98,7 @@ parameters:
 
 Do you want **real code**? See [this commit](https://github.com/pehapkari/pehapkari.cz/pull/358/commits/e68d8f98172b2a04e4cf80e635c036c3f2a7bef2) that has it all.
 
-The configuration is as simple as possible, so `object` is optional. You can read **how to set own file** in [documentation](https://github.com/Symplify/Statie/blob/master/docs/Generators.md).
+The configuration is as simple as possible, so `object` is optional. You can read **how to set own file** in [documentation](https://www.statie.org/docs/generators/).
 
 
 ### How to add new Lecture?
