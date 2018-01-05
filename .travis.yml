@@ -22,34 +22,21 @@ script:
     - bin/tweet-new-posts
 
 after_script:
-  # upload coverage.xml file to Coveralls to analyze it
-  - |
-    if [[ $PHPUNIT_FLAGS != "" ]]; then
-      wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar;
-      php coveralls.phar --verbose;
-    fi
+    # upload coverage.xml file to Coveralls to analyze it
+    - |
+        if [[ $PHPUNIT_FLAGS != "" ]]; then
+            wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar;
+             php coveralls.phar --verbose;
+        fi
 
 deploy:
-  provider: output
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  on:
-    branch: master
+    provider: output
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+        branch: master
 
 notifications:
-    email: never
-
-env:
-    global:
-        # Travis API for TweetPublisher
-        # TWITTER_CONSUMER_KEY
-        - secure: "LjI4JDzCdMs8bkhkr87IrJA+cNdbgIjOPAlis5mwfur+i9qd41xRLXhvOsN8xMZEp0axgOJAZ6RipULT9XXVPRUdpKCewiVp+PBneEKyxlX8ne7iukannX83/5TlCW9AABB+NtSFnQvlsQ8YPjsrrScUZ2xx/FZyvjqI/4NwfBc4opWQPP5qa2VnQQ05h+r9RXyrGXJiqzs+ptURku2WX15kxcELkOqepZU9SO/CPaAEjB4vNsgmqBDXuShlpd1/BcN3WIKq2yuIyPk6xPA/oYXn0bcXT+pbYbNBLfSO4fKyA4+C1UEszXxWjh8bahxpeGjU24anfUiuX7xap58j98JeLycOuJm/2P47hXrQZiKtrUgh3TaTHIfCpZO1aUyftnx3qvCt85oj+UlsHPmJoN8LvxG4yuae31uf6Pqi+h5Ro+d5xFzjlhZy6KbZt0YFN4pncU/qzwc1bWeynklKw4+Bfmw3+8PJzRyyreJQNgxGGSBX5q2TduqYiNp4nBSpXNsLsdyEctzUdFgdn4acSAEJPhovhOxqFzEzOJcUhxr7weu0GxFWRDfJBqAFP6EZa+lTDyM11BA8GYnTrMY7B5yy0dhNQJKbxQfQDa+dTkQlEuxcozJUjdXWtK3Hg2J38OcB7+JLz8GlbIEayLqEnhiqcFO0RFlFDhA6x3giw90="
-
-        # TWITTER_CONSUMER_SECRET
-        - secure: "Zx4Rkv7xXo5sVczvxvRATJjEo+x4YwQ8+gg6ZHS+DRz2Clp+ZEzBidnshYqw3pCFfpGMxly5gms7X132qLL/wcqsXv2Iiqi8VIL1M61bA5tK6tU3cB7wxZ/J+7uexXLyN0PxR23Gqd18zyqYLsvAnPUnJYHlENQpCqKqws7d7PN58RW2HIN2SpIZOalyK/XsR4I+h4NlQXaICDK23ZKzwmLwkFvsXb98bl7q4l/WoBek6rovF/+XV44egHfpCwL10NfNNysn0wShqcqkuuGo+8H1PY+IQMiiW3fTj4M74eJx6JH+jtAGJyLYvaE6/TPf9436z++5TBexWp6+Z5Ci9QtzKHhDmV1j9EqROP5q85MheyoYdpq1AmtOa9Bl5S3eLPDuUuLjBexUVxyLUoUjiuMT0V9Ru8bwZeEIQjQ1Nm+rK8uN4DNJyV8QKgmvlU20aZ8VHeA9RHyIuBr977WFsS/cTvm3aGkPmKuCsDefXcGFMmu9/PfS/OTjGqetSlvZbqbTZI94bj19k1jhSlCoA73Os+Bj0Hr09sDhl5fSGNKlilAXkMZEhcJ6t9rFOguPQHy6YwN4s2GFmrkijLqN3DAb5v3v60AQErWc7eUAe3hfpGBuLVAxE6SKKPITxrRpOnEH4+p4DUsqmNpYNU/lfbrNn0iaKYa+cU5ToElo5HQ="
-
-        # TWITTER_OAUTH_ACCESS_TOKEN
-        - secure: "YGh7Br8Wn4zROWHD7LLlj1K03KNyOuM26IluWqoVgEFDW96vEt5b44yjBQMXs5hsroEiXzlrJtqrRdS3Br6E8pACcx3oi92UhdrGifUHNM2J5QosJnmou2XvsuYziJQFS7RN4Zdfl4/EgBtRKWq1U89S76GvqhIk5B4LSgZpQlEGLn9+8IdfihrDst0SF+ok8Ja5W4uHpXX34r53lBYAyJxCMSFP+gseHBgMHCu/b0w3IVInSgEt0HeobPibG9+jci5xzsWVBC5sZZwId6q/zFqP8fSYmSN0ZFkKotJGKeHpvmnW5qu616C40x8ugv6lqyWkrFFqc1bqjS7/9Bq7/Gzn+ukwvGBXuewUEmca980zT2AZrgaJt1Dn3bG7lsmTbph/tU00SSq0JECKzYoYBwYKA1ZUNSGIPLNE5G4I9FSIMYp/L5DRBLn7MGkUXcju6ArdYHm7+n3Iilp0DQ2OWns5o0PvfG+AU9UZzc1bua8lOlGPjfs+IfD260x4Yb1VZJIw75wpKhm1lspOzxNkTF3EgWo406rN7WtWv33lgfTSwG/LJ/X5OHSa06Kdaa1KJrhMbw+umNbgYQyDu607yy7zaF0MtB7y87KfhEx18i8/uxlJBGiHyPdVAN8r5vO7tOpgBzWZtaGKMNbPKEvoBpKCtO9B5o27ngkwNjo+pKM="
-
-        # TWITTER_OAUTH_ACCESS_TOKEN_SECRET
-        - secure: "mu94wwufIDyiHiYyVmeDpM+VStR1k1DXguURmCtO+vVD626D3pksfJO+v1Sh4RSIVF2OsKo0SFE0qE6ET8K4xk/lDz9K91Qi5uA76oFKGcOR0D6ZbmrA1UKF3OlI6tLKs1/shj/zylVBKr8ATf9z4txr/tHH/S+VYyJKnISo/Ardl6ko6VLwplDdLSk2QIfxFBo43Mc0NP4TqZj6oM2EqL/CW4OOw7bOj9cjgBfFZ463WWFnHBZSrgapDSQdhanNza15hOeVIUDUHBtNGe346e6HRCTCI/ynnWi8xwxcO9f3dGpfr36dRcPIfXXmAyNg+OzGHY/Z5Br5LPyk7MdtSf496xVWhrX0wcrzQwYL6weZeNVe3DMfgiXB4db9ixDElqZ1UN1V9WmKkYLLRqubYWRvqch1pVWmlh7C/b5paGEvPo3OPR6Mizsa8OZhhVC24VBz19XAFmFi/HJtd4beLosWg7fR72OMgJQl88b6BYDhV8hHLkp7Ut4/RCY/i78qaXks1i4FwHDEY97wciXmGwFeZdUJtIk39oej1SfZUsJ8W+mtX1zhi5nZVGAlo/tF56QYDtCdZItGXjcuupFn+sxtg3PPna1eeBYgXuiv0mZEqjfELLIZ12VAbp8ZpYlIuaUJlboPfjmfh1xHgnD6HxllAVx5UFs1szFoi4ogyyM="
+    email:
+        on_success: newer
+        on_failure: always
