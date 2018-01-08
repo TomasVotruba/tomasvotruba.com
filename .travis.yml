@@ -29,6 +29,7 @@ after_script:
             php coveralls.phar --verbose;
         fi
 
+# see docs: https://www.statie.org/docs/github-pages/
 deploy:
     provider: pages
     skip_cleanup: true
