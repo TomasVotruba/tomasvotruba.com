@@ -10,7 +10,7 @@ perex: '''
 '''
 tweet: "New post on my blog: Clean and Decoupled Controllers, Commands and Event Subscribers Once and for All with Delegator Pattern #php #cleancode #symfony #icology"
 tweet_image: "/assets/images/posts/2018/delegator/trash-everywhere.jpg"
-related_items: []
+related_items: [69, 59]
 ---
 
 <br>
@@ -70,47 +70,219 @@ You put effort to it:
 
 Now you know **why it's good to separate waste** (= code), let's get to real code.  
 
-## What happens when application grows?
+## 4 years in life of New Web Application
 
-Let's imagine a middle ages project - 4yeras:
-2014-2018
+Let's have a project that was born in 2015 and see how it slowly grew. It will eventually use all patterns we described in the beginning - except *delegator*, which is unfortunate for the investors of this project.  
 
-(also add code)
+### 2015 - Start with Controllers
 
-- yera 0 - oh put this in controller, it's fast, in documnetaion and easy to extends to anotehr - it's just list of products
-- in 1 year from proet start, you start using commands, and want to recount prices there
-- in 2 yeras, mobile and REST API comes, so you need to creat special Rest controlelrs providign list of products
-- in 3 years, you're slowly thinking about AI and product recommentation and you're using EventSubscribers - saving information about user in Redis and using machine learning with eveolution algorithm suggesting best products right away - it's just 
+Project start with few controllers that contain most of logic. It's fast and easy to add new controller with new logic.
+ 
+By the end of the year there are 50 controllers like this:
 
-## where you en up?
+```php
+class ProductController extends Controller
+{
+    public function allAction()
+    {
+        $allProducts = $this->getEntityManager()->getRepository(Product::class)
+            ->fetchAll();
+    
+        return new TemplateResponse('all.twig', [
+            'allProducts' => $allProducts 
+        ]);
+    }
+}
+```
 
-## where do you want to end-up
+Also, it's in the documentation of the framework, so it must be [the best practise](https://matthiasnoback.nl/2014/10/unnecessary-contrapositions-in-the-new-symfony-best-practices/).
 
-...this decopuled
-
-## Does business give you millions of money for refacgoring playign? Nope!
+Little we know, here starts our [Broken Window Theory](https://blog.codinghorror.com/the-broken-window-theory/), the most underestimated effect from social science in software world.  
 
 
-...do it right from the first step
+### 2016 - Add few Commands
 
-Do you separate your trash after you see plastic and paper products are being more and more expensive and there are dumps all over you country?
+Application grows and the size needs pre-caching handled by running commands in CRON. So you start using [Symfony\Console](https://pehapkari.cz/blog/2017/01/05/symfony-console-from-scratch/). You get inspired by `Controller`, because `Command` looks like it and by the end of year, there are many command like this one:
+
+```php
+class CacheProductsCommand extends Command
+{
+    /**
+     * @var EntityManager
+     */
+    private $entityManager;
+    
+    public function __construct(EntityManager $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
+
+    public function execute()
+    {
+        $allProducts = $this->entityManager->getRepository(Product::class)
+            ->fetcAll();
+        
+        // cache them all
+    }
+}
+```
+
+### 2017 - Add just few more EventSubscribers
+
+It's 2017, AI is on hype and you start thinking about product recommendation feature. You use [EventSubscribers](https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/) that saves many information about user behavior and return best producs just for him.
+ 
+```php
+class RecommendedProductsEventSubscriber implements EventSubscriber
+{
+    /**
+     * @var EntityManager
+     */
+    private $entityManager;
+    
+    public function __construct(EntityManager $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
+
+    public static function subscribe()
+    {
+        return ['onPageVisit' => 'setRecommendedProducts'];
+    }
+    
+    public function setRecommendedProducts(BehaviorPatternEvent $behaviorPatternEvent)
+    {
+        $productRepository = $this->entityManager->getRepository(Product::class);
+        
+        $product = $productRepository->findBestByBehavior($behaviorPatternEvent->getBehavior());
+        $behaviorPatternEvent->setRecommendedProducts($product;
+    }
+}
+```
+
+So far so good?
+
+### 2018 Year of Changes
 
 
-No. You think for the future **prevention**
+@todo change is only constant quote
 
-<live as for today, platn for the fuure> quote...
+(in software exponentially :))
 
 
+New owner with technical skills comes the the play.
+
+And he want to finally use `VueJs`, the company is now big enough to use Docker as standards and - what's relevant to our code - there are more programmers that know [Eloquent](https://laravel.com/docs/eloquent than [Doctrine](/blog/2017/03/27/why-is-doctrine-dying/) in his country.
+  
+*"Alibaba is catching up and we might loose the position #1 leader on market". Just switch it to Eloquent, so we can hire and on board faster*
+
+Ups! Your code is coupled to the Doctrine and Symfony pretty hard. You're standing in front of important question: **Do you get few dozen of thousands of $ for refactoring?**
+
+@todo image windows
+
+Posing this question, now we finally understand [Broken Window Theory](https://blog.codinghorror.com/the-broken-window-theory/) because we have experience with going it the wrong way. Little to late.
+
+## Prevention over Experience
+
+- What could be done better?
+- Could you prevent this?
+- Do you separate your trash or do you wait till your country becomes plastic land?
+
+@todo image plastic land
+
+No. You think for **the future** with prevention!
+
+@todo: <live as for today, platn for the fuure> quote...
 
 Same can be applied to your code!
 
+### Delegator Pattern to the <strike>Rescue</strike> Prevention
+
+This is what we did in [Lekarna.cz](https://www.lekarna.cz/) - The Biggest drug seller in Czech Republic. It started on Nette 2.4 and Doctrine 2.5, with [monorepo approach](/blog/2017/12/25/composer-local-packages-for-dummies/).
+
+When a pattern of class is market as *delegator*, it **cannot contain any direct connection to database layer** (Doctrine in this case).
+
+Among most popular delegators belongs:
+
+- Controller
+- Command
+- EventSubscriber
+- Presenter or Component in Nette worlds
+- CommandHandler from CQRS
+
+In Lekarna, these classes can only use own service to access products - `ProductRepository`.
+
+```php
+class ProductRepository
+{
+    public function __construct(EntityManager $entityManager)
+    {   
+        $this->repository = $entityManager->getRepository(Product::class);
+    }
+    
+    public function fetchAll()
+    {
+        return $this->repository->fetchAll();
+    }
+}
+```
+
+You don't want to check this in code reviews (imagine 5 years doing it), just [write a sniff for that](@todo link) and forget. 
+
+This will remove any database layer reference from all our `delegators`:
+
+```php
+class CacheProductsCommand extends Command
+{
+    /**
+     * @var ProductRepository
+     */
+    private $productRepository;
+    
+    public function __construct(ProductRepository $productRepository)
+    {
+        $this->productRepository = $productRepository;
+    }
+
+    public function execute()
+    {
+        $allProducts = $productRepository->fetcAll();
+        
+        // cache them all
+    }
+}
+```
+
+Do you need to switch database layer? Easy!
+ 
+```diff
+ class ProductRepository
+ {
+-     public function __construct(EntityManager $entityManager)
+-     {   
+-         $this->repository = $entityManager->getRepository(Product::class);
+-     }
++     public function __construct(Eloquent $eloquent)
++     {   
++         $this->repository = $eloquent->getRepository(Product::class);
++     }
+     
+     public function fetchAll()
+     {
+         return $this->repository->fetchAll();
+     }
+ }
+```
 
 
-This is what we did in Lekanara.cz, czech biggest drug seller running on Nette 2.4, Doctrine 2.5, with monorepo approach (link that post with local split packages) and bunch of other tools.
-
-10 years it lasted, this should get anoter 10 with not major changs
-
-When you start with the best known approach possible, you'll probably endup in well grown project that you'll love to contribute the older it gets. Just like children :)
+**1 day of work instead of hundreds of hours.** That's what delegator pattern is all about. 
 
 
-Happy Growing!
+## Start with Best on the Market
+
+When you start with the best known approach possible, you'll probably end-up in well grown project that you'll love to contribute the older it gets. 
+
+**Just like with children - invest in them right from the start and it will get back to you**.
+
+<br>
+
+Happy Children and Project Raising!
