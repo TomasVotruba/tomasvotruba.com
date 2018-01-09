@@ -3,7 +3,7 @@ id: 71
 title: "Clean and Decoupled Controllers, Commands and Event Subscribers Once and for All with Delegator Pattern"
 perex: '''
     Do you write your application for **better future sustainability** or just to get paid for it today?
-    If the first one, you care about design patterns. I'm happy to see you!
+    If you're the first one, you care about design patterns. I'm happy to see you!
     <br>
     <br>
     Today I will show you **why and how to use *delegator pattern*** in your application so it makes it to the pension.
@@ -16,7 +16,7 @@ related_items: [69, 59]
 <br>
 
 <blockquote class="blockquote text-center">
-    Every code is trash!
+    "Every code is trash!"
 </blockquote>
 
 <br>
@@ -161,55 +161,58 @@ class RecommendedProductsEventSubscriber implements EventSubscriber
 
 So far so good?
 
-### 2018 Year of Changes
 
+### 2018 - Year of Changes
 
-@todo change is only constant quote
+<blockquote class="blockquote text-center mt-5 mb-5">
+    "Change is the only constant."
+    <footer class="blockquote-footer">John Candee Dean</footer>
+</blockquote>
 
-(in software exponentially :))
-
-
-New owner with technical skills comes the the play.
-
-And he want to finally use `VueJs`, the company is now big enough to use Docker as standards and - what's relevant to our code - there are more programmers that know [Eloquent](https://laravel.com/docs/eloquent than [Doctrine](/blog/2017/03/27/why-is-doctrine-dying/) in his country.
+New owner with technical skills comes the the play. And he wants to finally use `VueJs`, the company is now big enough to use Docker as standards and **there are more programmers that know [Eloquent](https://laravel.com/docs/eloquent) than [Doctrine](/blog/2017/03/27/why-is-doctrine-dying/) in his country**:
   
-*"Alibaba is catching up and we might loose the position #1 leader on market". Just switch it to Eloquent, so we can hire and on board faster*
+*"Alibaba is catching up and we might loose the position #1 leader on market. Just switch it to Eloquent, so we can hire and on board faster.*"
 
-Ups! Your code is coupled to the Doctrine and Symfony pretty hard. You're standing in front of important question: **Do you get few dozen of thousands of $ for refactoring?**
+Ups! Your code is coupled to the Doctrine and Symfony pretty hard. You're standing in front of important question: **Do you get extra $ 10 000 to refactor the code?**
 
-@todo image windows
+Posing this question, now we finally understand [Broken Window Theory](https://blog.codinghorror.com/the-broken-window-theory/)...
 
-Posing this question, now we finally understand [Broken Window Theory](https://blog.codinghorror.com/the-broken-window-theory/) because we have experience with going it the wrong way. Little to late.
+<img src="/assets/images/posts/2018/delegator/broken-window.jpg" class="img-thumbnail">
+
+...because we have personal experience with going it the wrong way. Little to late.
 
 ## Prevention over Experience
 
 - What could be done better?
 - Could you prevent this?
-- Do you separate your trash or do you wait till your country becomes plastic land?
+- **Do you separate your trash or do you wait till your country becomes plastic land?**
 
-@todo image plastic land
+<img src="/assets/images/posts/2018/delegator/plastic-land.jpg" class="img-thumbnail">
 
 No. You think for **the future** with prevention!
 
-@todo: <live as for today, platn for the fuure> quote...
+<blockquote class="blockquote text-center mt-5 mb-5">
+    "Plan like you will live forever, and then live like there is no tomorrow."
+    <footer class="blockquote-footer"> Mahatma Gandhi</footer>
+</blockquote>
 
-Same can be applied to your code!
+Same can be applied to your code.
 
 ### Delegator Pattern to the <strike>Rescue</strike> Prevention
 
-This is what we did in [Lekarna.cz](https://www.lekarna.cz/) - The Biggest drug seller in Czech Republic. It started on Nette 2.4 and Doctrine 2.5, with [monorepo approach](/blog/2017/12/25/composer-local-packages-for-dummies/).
+This is what we did in [Lekarna.cz](https://www.lekarna.cz/) - The biggest online drugstore in the Czech Republic. It started on Nette 2.4 and Doctrine 2.5, with [monorepo approach](/blog/2017/12/25/composer-local-packages-for-dummies/).
 
-When a pattern of class is market as *delegator*, it **cannot contain any direct connection to database layer** (Doctrine in this case).
+When a class pattern is marked as *delegator*, it **can't contain any direct connection to database layer** (Doctrine in this case).
 
 Among most popular delegators belongs:
 
 - Controller
 - Command
 - EventSubscriber
-- Presenter or Component in Nette worlds
-- CommandHandler from CQRS
+- Presenter or Component in [Nette](https://nette.org/)
+- CommandHandler from [CQRS](https://ocramius.github.io/ShittyCQRSPresentation/) etc.
 
-In Lekarna, these classes can only use own service to access products - `ProductRepository`.
+In Lekarna, these classes can only use own service to access products - `ProductRepository`:
 
 ```php
 class ProductRepository
@@ -226,7 +229,7 @@ class ProductRepository
 }
 ```
 
-You don't want to check this in code reviews (imagine 5 years doing it), just [write a sniff for that](@todo link) and forget. 
+You don't want to check this in code reviews (imagine 5 years doing it), just [write a sniff for that](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/) and forget it. 
 
 This will remove any database layer reference from all our `delegators`:
 
@@ -266,10 +269,10 @@ Do you need to switch database layer? Easy!
 +         $this->repository = $eloquent->getRepository(Product::class);
 +     }
      
-     public function fetchAll()
-     {
-         return $this->repository->fetchAll();
-     }
+      public function fetchAll()
+      {
+          return $this->repository->fetchAll();
+      }
  }
 ```
 
@@ -277,11 +280,11 @@ Do you need to switch database layer? Easy!
 **1 day of work instead of hundreds of hours.** That's what delegator pattern is all about. 
 
 
-## Start with Best on the Market
+## Start with Best on the Knowledge Market
 
-When you start with the best known approach possible, you'll probably end-up in well grown project that you'll love to contribute the older it gets. 
+When you start with the best known approach possible, you'll end-up in well grown project that you'll love to contribute more the older it gets. 
 
-**Just like with children - invest in them right from the start and it will get back to you**.
+**Just like with children - invest in them right from the start and it will get back to you**!
 
 <br>
 
