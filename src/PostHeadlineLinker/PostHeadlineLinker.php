@@ -24,7 +24,7 @@ final class PostHeadlineLinker
             $headlineId = Strings::webalize($result['title']);
 
             return sprintf(
-                '<h%s id="%s"><a class="anchor" href="#%s">%s</a></h%s>',
+                '<h%s id="%s"><a href="#%s">%s</a></h%s>',
                 $result['level'],
                 $headlineId,
                 $headlineId,
