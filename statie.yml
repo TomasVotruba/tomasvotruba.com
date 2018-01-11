@@ -1,6 +1,6 @@
 imports:
     - { resource: 'source/_data/talks.yml' }
-    - { resource: 'src/TweetPublisher/config/config.yml' }
+    - { resource: 'src/*/config/config.yml' }
     # enable on localhost only
     # - { resource: 'src/TweetPublisher/config/config.local.yml' }
 
@@ -14,5 +14,4 @@ parameters:
     github_repository_tests_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests"
 
     # Statie settings
-    markdown_headline_anchors: true
     github_repository_source_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/source"
