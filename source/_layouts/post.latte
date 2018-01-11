@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     {include "head"}
+    <link href="/assets/prism/prism.css?v=0.1" rel="stylesheet" type="text/css" />
     <body>
         <!-- post_id: {$post->getId()} -->
 
@@ -70,6 +71,9 @@
 
         {include "disqusComments", 'post' => $post}
     </div>
+
+    <script src="/assets/prism/prism.js"></script>
+    <script id="dsq-count-scr" src="https://{$disqus_shortname}.disqus.com/count.js" async defer></script>
 {/define}
 
 
@@ -85,15 +89,4 @@
     <meta name="twitter:site" content="@votrubaT">
     <meta name="twitter:title" content="{$post['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}" />
     <meta name="twitter:description" content="{$post['perex']|striptags}" />
-{/block}
-
-
-{block additionalJavascript}
-    <script src="/assets/prism/prism.js"></script>
-    <script id="dsq-count-scr" src="https://{$disqus_shortname}.disqus.com/count.js" async defer></script>
-{/block}
-
-
-{block additionalCss}
-    <link href="/assets/prism/prism.css?v=0.1" rel="stylesheet" type="text/css" />
 {/block}
