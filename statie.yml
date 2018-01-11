@@ -14,5 +14,4 @@ parameters:
     github_repository_tests_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests"
 
     # Statie settings
-    markdown_headline_anchors: false
     github_repository_source_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/source"
