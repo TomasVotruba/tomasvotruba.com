@@ -2,13 +2,23 @@
 
 namespace TomasVotruba\Website\PostHeadlineLinker\EventSubscriber;
 
-use Nette\Utils\Strings;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symplify\Statie\Event\BeforeRenderEvent;
 use Symplify\Statie\Renderable\File\PostFile;
+use TomasVotruba\Website\PostHeadlineLinker\PostHeadlineLinker;
 
 final class DecoratePostHeadlinesEventSubscriber implements EventSubscriberInterface
 {
+    /**
+     * @var PostHeadlineLinker
+     */
+    private $postHeadlineLinker;
+
+    public function __construct(PostHeadlineLinker $postHeadlineLinker)
+    {
+        $this->postHeadlineLinker = $postHeadlineLinker;
+    }
+
     /**
      * @return string[]
      */
@@ -25,29 +35,8 @@ final class DecoratePostHeadlinesEventSubscriber implements EventSubscriberInter
                 continue;
             }
 
-            $newContent = $this->decorateHeadlinesWithAnchors($objectToRender->getContent());
+            $newContent = $this->postHeadlineLinker->processContent($objectToRender->getContent());
             $objectToRender->changeContent($newContent);
         }
-    }
-
-    private function decorateHeadlinesWithAnchors(string $htmlContent): string
-    {
-        return Strings::replace($htmlContent, '#<h(?<level>[1-6])>(?<title>.*?)<\/h[1-6]>#', function (array $result): string {
-//            [$original, $headlineLevel, $headline] = $result;
-//
-//            dump($result);
-//            die;
-
-            $headlineId = Strings::webalize($result['title']);
-
-            return sprintf(
-                '<h%s id="%s"><a class="anchor" href="#%s">%s</a></h%s>',
-                $result['level'],
-                $headlineId,
-                $headlineId,
-                $result['title'],
-                $result['level']
-            );
-        });
     }
 }
