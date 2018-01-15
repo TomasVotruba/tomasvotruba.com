@@ -7,7 +7,7 @@ perex: '''
     And if you do, is it boring plain text or **useful rich markdown**?
 '''
 tweet: "New post on my blog: Keep Your CHANGELOG Useful with Links #github #changelog #dx"
-tweet_image: "/assets/images/posts/2018/changelog/pkeep-a-changelog.jpg"
+tweet_image: "/assets/images/posts/2018/changelog/keep-a-changelog.jpg"
 related_posts: 
 ---
 
