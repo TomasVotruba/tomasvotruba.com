@@ -40,8 +40,8 @@ Btw, Hypertext Markup Language (HTML) is here since [1993](https://en.wikipedia.
 
 Imagine you'll read my post first *plain text* version. While reading it, you might think:
  
-- What is this monorepo? Isn't that antipattern?
-- I didn't know Google is using monorepo - or monolith?
+- What is this monorepo? Isn't that *monolith* - an antipattern?
+- I didn't know Google is using monorepo?
 - Is that true name or made-up one?
  
 You could read answer to all those questions if I'd only provide links - but **you can't, because there are no links**. You'd have to go to comments, ask them, wait for answers... So you'll probably end up closing my blog and never come again.
@@ -128,6 +128,13 @@ vendor/bin/changelog-linker CHANGELOG.md --repository https://github.com/symplif
 ```
 
 *Option `--repository` is used for links to PRs, issues and commits.* 
+
+It will complete links to:
+
+- **PRs and issues**, e.g. `[#1](https://github.com/symplify/symplify/pull/1) - fix everything`
+- **Commits links**, e.g. `see [#9b154d9]: https://github.com/Symplify/Symplify/commit/9b154d9b6e88075e14b6812613bce7c1a2a79daa]`
+- **Version Diffs**, e.g. `# [v2.0.0](https://github.com/Symplify/Symplify/compare/v1.5.0...v2.0.0)`
+- **Users**, e.g. `Thanks to [@SpacePossum](https://github.com/SpacePossum)`
 
 ### 3. Commit and Push
 
