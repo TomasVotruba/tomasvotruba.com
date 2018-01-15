@@ -111,7 +111,7 @@ I've closed myself to coffee house for 3 hours and I've came up with solution!
 
 **A [Changelog Linker](https://github.com/Symplify/ChangelogLinker) was born**.
 
-<br>
+<img src="/assets/images/posts/2018/changelog/links.png" class="img-thumbnail">
 
 ## 3 Steps To Add Links To Your `CHANGELOG.md`  
 
@@ -144,11 +144,11 @@ git commit -m "CHANGELOG: add links to PRs, issues, version diffs and user names
 git push origin master
 ```
 
-That's it
+That's it!
 
 <br>
 
-I'm sorry I didn't follow this rule from [PHP Package Checklist](http://phppackagechecklist.com/#1,2,3,4,5,6,7,8,9,10,11,12,13,14) and used Github Releases instead. But now I have no more excuses.
+I'm sorry I didn't follow this rule from [PHP Package Checklist](http://phppackagechecklist.com/#1,2,3,4,5,6,7,8,9,10,11,12,13,14) and used Github Releases instead. But **now I have no more excuses**.
 
 I hope you to...
 
