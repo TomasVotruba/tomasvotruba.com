@@ -2,7 +2,6 @@
 
 namespace TomasVotruba\Website\TweetPublisher\TweetProvider;
 
-use Nette\Utils\Strings;
 use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 
 final class UnpublishedTweetsResolver
@@ -18,11 +17,7 @@ final class UnpublishedTweetsResolver
 
         foreach ($allTweets as $tweet) {
             foreach ($publishedTweets as $publishedTweet) {
-                if (Strings::startsWith(
-                    $tweet->getText(),
-                    // published tweet is usually modified by Twitter API, so we just use starting part of it
-                    substr($publishedTweet->getText(), 0, 50)
-                )) {
+                if ($tweet->isSimilarTo($publishedTweet)) {
                     continue 2;
                 }
             }

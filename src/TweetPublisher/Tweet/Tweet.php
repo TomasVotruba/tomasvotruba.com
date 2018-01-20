@@ -2,6 +2,8 @@
 
 namespace TomasVotruba\Website\TweetPublisher\Tweet;
 
+use Nette\Utils\Strings;
+
 final class Tweet
 {
     /**
@@ -38,5 +40,14 @@ final class Tweet
     public function getImage(): ?string
     {
         return $this->image;
+    }
+
+    public function isSimilarTo(self $anotherTweet): bool
+    {
+        return Strings::startsWith(
+            $this->text,
+            // published tweet is usually modified by Twitter API, so we just use starting part of it
+            substr($anotherTweet->getText(), 0, 50)
+        );
     }
 }
