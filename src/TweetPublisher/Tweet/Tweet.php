@@ -25,7 +25,7 @@ final class Tweet
         return new self($text);
     }
 
-    public static function createFromTextAndImage(string $text, string $image): self
+    public static function createFromTextAndImage(string $text, ?string $image): self
     {
         return new self($text, $image);
     }

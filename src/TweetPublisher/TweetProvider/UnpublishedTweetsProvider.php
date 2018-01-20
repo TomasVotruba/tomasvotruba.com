@@ -36,9 +36,9 @@ final class UnpublishedTweetsProvider
     }
 
     /**
-     * @param string[][] $allTweets
-     * @param string[][] $publishedTweets
-     * @return string[][]
+     * @param Tweet[] $allTweets
+     * @param Tweet[] $publishedTweets
+     * @return Tweet[]
      */
     private function excludePublishedTweets(array $allTweets, array $publishedTweets): array
     {
@@ -46,7 +46,7 @@ final class UnpublishedTweetsProvider
 
         foreach ($allTweets as $tweet) {
             foreach ($publishedTweets as $publishedTweet) {
-                if ($tweet['text'] === $publishedTweet['text']) {
+                if ($tweet->getText() === $publishedTweet->getText()) {
                     continue 2;
                 }
             }

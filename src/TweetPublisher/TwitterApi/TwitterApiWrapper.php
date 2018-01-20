@@ -58,12 +58,11 @@ final class TwitterApiWrapper
     }
 
     /**
-     * @return string[][]
+     * @return Tweet[]
      */
     public function getPublishedTweets(): array
     {
         $rawTweets = $this->getPublishedTweetsRaw();
-
         $rawTweets = $this->tweetEntityCompleter->completeOriginalUrlsToText($rawTweets);
 
         $tweets = [];

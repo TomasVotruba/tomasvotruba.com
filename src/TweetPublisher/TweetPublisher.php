@@ -4,6 +4,7 @@ namespace TomasVotruba\Website\TweetPublisher;
 
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 use TomasVotruba\Website\TweetPublisher\TweetProvider\UnpublishedTweetsProvider;
 use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
 
@@ -73,23 +74,19 @@ final class TweetPublisher
     /**
      * Pick latests
      *
-     * @param string[][] $tweetsToPublish
-     * @return string[]
+     * @param Tweet[] $tweetsToPublish
      */
-    private function pickTweetCandidate(array $tweetsToPublish): array
+    private function pickTweetCandidate(array $tweetsToPublish): Tweet
     {
         return array_pop($tweetsToPublish);
     }
 
-    /**
-     * @param mixed[] $tweet
-     */
-    private function tweet(array $tweet): void
+    private function tweet(Tweet $tweet): void
     {
-        if ($tweet['image']) {
-            $this->twitterApiWrapper->publishTweetWithImage($tweet['text'], $tweet['image']);
+        if ($tweet->getImage()) {
+            $this->twitterApiWrapper->publishTweetWithImage($tweet->getText(), $tweet->getImage());
         } else {
-            $this->twitterApiWrapper->publishTweet($tweet['text']);
+            $this->twitterApiWrapper->publishTweet($tweet->getText());
         }
     }
 }
