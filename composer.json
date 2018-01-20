@@ -2,14 +2,14 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.1",
-        "symplify/statie": "v3.1",
+        "symplify/statie": "^3.2",
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0",
         "nikic/php-parser": "v4.0.0alpha3"
     },
     "require-dev": {
-        "symplify/easy-coding-standard": "^3.1",
+        "symplify/easy-coding-standard": "^3.2",
         "phpunit/phpunit": "^6.5",
         "phpstan/phpstan-shim": "^0.9",
         "symfony/console": "^4.0",
@@ -22,7 +22,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\Website\\Tests\\": "tests"
+            "TomasVotruba\\Website\\Tests\\": "tests",
+            "TomasVotruba\\Website\\TweetPublisher\\Tests\\": "tests/TweetPublisher"
         }
     },
     "scripts": {

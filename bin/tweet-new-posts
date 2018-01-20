@@ -3,7 +3,7 @@
 
 use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
 use Symplify\Statie\DependencyInjection\ContainerFactory;
-use TomasVotruba\Website\TweetPublisher\TweetPublisher;
+use TomasVotruba\Website\TweetPublisher\Application\TweetPublisherApplication;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -13,9 +13,9 @@ try {
     $containerFactory = new ContainerFactory;
     $container = $containerFactory->createWithConfig(__DIR__ . '/../statie.yml');
 
-    /** @var TweetPublisher $tweetPublisher */
-    $tweetPublisher = $container->get(TweetPublisher::class);
-    $tweetPublisher->run();
+    /** @var TweetPublisherApplication $tweetPublisherApplication */
+    $tweetPublisherApplication = $container->get(TweetPublisherApplication::class);
+    $tweetPublisherApplication->run();
 
 } catch (Throwable $throwable) {
     $symfonyStyle->error($throwable->getMessage());

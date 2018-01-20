@@ -5,11 +5,13 @@
     <testsuites>
         <testsuite>
             <directory>tests/Posts</directory>
+            <directory>tests/TweetPublisher</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
             <directory>src/Posts</directory>
+            <directory>src/TweetPublisher</directory>
         </whitelist>
     </filter>
 </phpunit>

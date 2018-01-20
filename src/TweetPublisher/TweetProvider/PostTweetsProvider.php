@@ -1,8 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher;
+namespace TomasVotruba\Website\TweetPublisher\TweetProvider;
 
 use Symplify\Statie\Renderable\File\PostFile;
+use TomasVotruba\Website\TweetPublisher\PostsProvider;
+use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
+use TomasVotruba\Website\TweetPublisher\TweetGuard;
 
 final class PostTweetsProvider
 {
@@ -39,8 +42,7 @@ final class PostTweetsProvider
     }
 
     /**
-     * @todo Make sure the order is from the newest to the oldest, like Twitter API.
-     * @return string[][]
+     * @return Tweet[]
      */
     public function provide(): array
     {
@@ -51,28 +53,23 @@ final class PostTweetsProvider
                 continue;
             }
 
-            $postTweet = $this->appendAbsoluteUrlToTweet($post, $postConfiguration);
-            $this->tweetGuard->ensureTweetFitsAllowedLength($postConfiguration['tweet'], $post);
+            $rawTweetText = $postConfiguration['tweet'];
+            $this->tweetGuard->ensureTweetFitsAllowedLength($rawTweetText, $post);
+
+            $postTweet = $this->appendAbsoluteUrlToTweet($post, $rawTweetText);
 
             $tweetImage = $this->resolveTweetImage($post, $postConfiguration);
-
-            $postTweets[] = [
-                'text' => $postTweet,
-                'image' => $tweetImage,
-            ];
+            $postTweets[] = Tweet::createFromTextAndImage($postTweet, $tweetImage);
         }
 
         return $postTweets;
     }
 
-    /**
-     * @param mixed[] $postConfiguration
-     */
-    private function appendAbsoluteUrlToTweet(PostFile $postFile, array $postConfiguration): string
+    private function appendAbsoluteUrlToTweet(PostFile $postFile, string $rawTweetText): string
     {
         $url = $this->getAbsoluteUrlForPost($postFile);
 
-        return $postConfiguration['tweet'] . ' ' . $url . '/';
+        return $rawTweetText . ' ' . $url . '/';
     }
 
     private function getAbsoluteUrlForPost(PostFile $postFile): string

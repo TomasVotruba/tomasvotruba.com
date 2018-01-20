@@ -5,6 +5,7 @@ namespace TomasVotruba\Website\TweetPublisher\TwitterApi;
 use Nette\Utils\DateTime;
 use Nette\Utils\Json;
 use TomasVotruba\Website\TweetPublisher\Exception\TwitterApi\TwitterApiException;
+use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 use TomasVotruba\Website\TweetPublisher\TweetEntityCompleter;
 use TwitterAPIExchange;
 
@@ -46,6 +47,11 @@ final class TwitterApiWrapper
      */
     private $tweetEntityCompleter;
 
+    /**
+     * @var Tweet[]
+     */
+    private $rawTweets = [];
+
     public function __construct(
         string $twitterName,
         TwitterAPIExchange $twitterAPIExchange,
@@ -57,22 +63,23 @@ final class TwitterApiWrapper
     }
 
     /**
-     * @return string[][]
+     * @return Tweet[]
      */
     public function getPublishedTweets(): array
     {
-        $rawTweets = $this->getPublishedTweetsRaw();
+        if ($this->rawTweets) {
+            return $this->rawTweets;
+        }
 
+        $rawTweets = $this->getPublishedTweetsRaw();
         $rawTweets = $this->tweetEntityCompleter->completeOriginalUrlsToText($rawTweets);
 
         $tweets = [];
         foreach ($rawTweets as $fullTweet) {
-            $tweets[] = [
-                'text' => $fullTweet['text'],
-            ];
+            $tweets[] = Tweet::createFromText($fullTweet['text']);
         }
 
-        return $tweets;
+        return $this->rawTweets = $tweets;
     }
 
     public function publishTweet(string $status): void
@@ -115,7 +122,7 @@ final class TwitterApiWrapper
     private function getPublishedTweetsRaw(): array
     {
         $result = $this->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, [
-            'count' => 70, // these will be filtered down by following conditions; at least number of posts
+            'count' => 200, // these will be filtered down by following conditions; at least number of posts
             'trim_user' => true, // we don't need any user info
             'exclude_replies' => true, // we don't need replies
             'include_rts' => false, // we don't need retweets
@@ -184,6 +191,6 @@ final class TwitterApiWrapper
 
         $errors = $result['errors'];
 
-        throw new TwitterApiException('Twitter API failed due to: ' . $errors[0]['message']);
+        throw new TwitterApiException(sprintf('Twitter API failed due to: "%s"', $errors[0]['message']));
     }
 }
