@@ -34,6 +34,24 @@ final class UnpublishedTweetsResolverTest extends AbstractContainerAwareTestCase
         $this->unpublishedTweetsResolver = $this->container->get(UnpublishedTweetsResolver::class);
     }
 
+    public function testUnpublishedTweetsResolver(): void
+    {
+        $unpublishedTweets = $this->unpublishedTweetsResolver->excludePublishedTweets(
+            $this->postTweetsProvider->provide(),
+            $this->twitterApiWrapper->getPublishedTweets()
+        );
+
+        foreach ($unpublishedTweets as $unpublishedTweet) {
+            // this tweet is already published, so it should not be here
+            $this->assertNotContains(
+                'New post on my blog: Clean and Decoupled Controllers, Commands and Event Subscribers ',
+                $unpublishedTweet->getText()
+            );
+        }
+
+        $this->assertGreaterThanOrEqual(18, count($unpublishedTweets));
+    }
+
     public function testPostTweetsProvider(): void
     {
         $postTweets = $this->postTweetsProvider->provide();
@@ -48,15 +66,5 @@ final class UnpublishedTweetsResolverTest extends AbstractContainerAwareTestCase
         $this->assertGreaterThanOrEqual(41, count($publishedTweets));
 
         $this->assertInstanceOf(Tweet::class, $publishedTweets[0]);
-    }
-
-    public function testUnpublishedTweetsResolver(): void
-    {
-        $unpublishedPostTweets = $this->unpublishedTweetsResolver->excludePublishedTweets(
-            $this->postTweetsProvider->provide(),
-            $this->twitterApiWrapper->getPublishedTweets()
-        );
-
-        $this->assertGreaterThanOrEqual(18, count($unpublishedPostTweets));
     }
 }
