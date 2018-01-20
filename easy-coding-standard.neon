@@ -5,6 +5,8 @@ includes:
     - vendor/symplify/easy-coding-standard/config/symplify.neon
 
 checkers:
+    SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff:
+
     SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
         enableEachParameterAndReturnInspection: true
 
