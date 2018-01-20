@@ -32,7 +32,6 @@ final class UnpublishedTweetsResolverTest extends AbstractContainerAwareTestCase
         $this->postTweetsProvider = $this->container->get(PostTweetsProvider::class);
         $this->twitterApiWrapper = $this->container->get(TwitterApiWrapper::class);
         $this->unpublishedTweetsResolver = $this->container->get(UnpublishedTweetsResolver::class);
-
     }
 
     public function testPostTweetsProvider(): void
