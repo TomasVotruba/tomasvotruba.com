@@ -55,7 +55,7 @@ final class PostTweetsProvider
             $this->tweetGuard->ensureTweetFitsAllowedLength($postConfiguration['tweet'], $post);
 
             $tweetImage = $this->resolveTweetImage($post, $postConfiguration);
-            $postTweets[] = new Tweet($postTweet, $tweetImage);
+            $postTweets[] = Tweet::createFromTextAndImage($postTweet, $tweetImage);
         }
 
         return $postTweets;

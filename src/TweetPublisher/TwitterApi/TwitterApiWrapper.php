@@ -5,6 +5,7 @@ namespace TomasVotruba\Website\TweetPublisher\TwitterApi;
 use Nette\Utils\DateTime;
 use Nette\Utils\Json;
 use TomasVotruba\Website\TweetPublisher\Exception\TwitterApi\TwitterApiException;
+use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 use TomasVotruba\Website\TweetPublisher\TweetEntityCompleter;
 use TwitterAPIExchange;
 
@@ -67,9 +68,7 @@ final class TwitterApiWrapper
 
         $tweets = [];
         foreach ($rawTweets as $fullTweet) {
-            $tweets[] = [
-                'text' => $fullTweet['text'],
-            ];
+            $tweets[] = Tweet::createFromText($fullTweet['text']);
         }
 
         return $tweets;
@@ -184,6 +183,6 @@ final class TwitterApiWrapper
 
         $errors = $result['errors'];
 
-        throw new TwitterApiException('Twitter API failed due to: ' . $errors[0]['message']);
+        throw new TwitterApiException(sprintf('Twitter API failed due to: "%s"', $errors[0]['message']));
     }
 }

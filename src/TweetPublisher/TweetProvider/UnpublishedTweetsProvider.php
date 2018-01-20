@@ -3,6 +3,7 @@
 namespace TomasVotruba\Website\TweetPublisher\TweetProvider;
 
 use TomasVotruba\Website\TweetPublisher\PostTweetsProvider;
+use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
 
 final class UnpublishedTweetsProvider
@@ -24,7 +25,7 @@ final class UnpublishedTweetsProvider
     }
 
     /**
-     * @return mixed[]
+     * @return Tweet[]
      */
     public function provide(): array
     {
