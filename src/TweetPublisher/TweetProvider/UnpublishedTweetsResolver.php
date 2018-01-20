@@ -18,8 +18,11 @@ final class UnpublishedTweetsResolver
 
         foreach ($allTweets as $tweet) {
             foreach ($publishedTweets as $publishedTweet) {
-                // this comparison is needed, because urls are already appended to $publishedTweet
-                if (Strings::startsWith($publishedTweet->getText(), $tweet->getText())) {
+                if (Strings::startsWith(
+                    $tweet->getText(),
+                    // published tweet is usually modified by Twitter API, so we just use starting part of it
+                    substr($publishedTweet->getText(), 0, 50)
+                )) {
                     continue 2;
                 }
             }
