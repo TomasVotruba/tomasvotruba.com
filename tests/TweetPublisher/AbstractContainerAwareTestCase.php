@@ -13,9 +13,18 @@ abstract class AbstractContainerAwareTestCase extends TestCase
      */
     protected $container;
 
+    /**
+     * @var Container
+     */
+    private static $cachedContainer;
+
     protected function setUp(): void
     {
-        $containerFactory = new ContainerFactory();
-        $this->container = $containerFactory->createWithConfig(__DIR__ . '/../../statie.yml');
+        if (! self::$cachedContainer) {
+            $containerFactory = new ContainerFactory();
+            self::$cachedContainer = $containerFactory->createWithConfig(__DIR__ . '/../../statie.yml');
+        }
+
+        $this->container = self::$cachedContainer;
     }
 }

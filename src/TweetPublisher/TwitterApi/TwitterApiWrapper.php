@@ -47,6 +47,11 @@ final class TwitterApiWrapper
      */
     private $tweetEntityCompleter;
 
+    /**
+     * @var Tweet[]
+     */
+    private $rawTweets = [];
+
     public function __construct(
         string $twitterName,
         TwitterAPIExchange $twitterAPIExchange,
@@ -62,6 +67,10 @@ final class TwitterApiWrapper
      */
     public function getPublishedTweets(): array
     {
+        if ($this->rawTweets) {
+            return $this->rawTweets;
+        }
+
         $rawTweets = $this->getPublishedTweetsRaw();
         $rawTweets = $this->tweetEntityCompleter->completeOriginalUrlsToText($rawTweets);
 
@@ -70,7 +79,7 @@ final class TwitterApiWrapper
             $tweets[] = Tweet::createFromText($fullTweet['text']);
         }
 
-        return $tweets;
+        return $this->rawTweets = $tweets;
     }
 
     public function publishTweet(string $status): void
