@@ -20,6 +20,7 @@ services:
     # PSR-4 autodiscovery
     TomasVotruba\Website\TweetPublisher\:
         resource: ../
+        exclude: ../Tweet
         public: true # for container fetch
 
     # Twitter API

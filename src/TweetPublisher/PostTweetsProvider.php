@@ -3,6 +3,7 @@
 namespace TomasVotruba\Website\TweetPublisher;
 
 use Symplify\Statie\Renderable\File\PostFile;
+use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 
 final class PostTweetsProvider
 {
@@ -39,8 +40,7 @@ final class PostTweetsProvider
     }
 
     /**
-     * @todo Make sure the order is from the newest to the oldest, like Twitter API.
-     * @return string[][]
+     * @return Tweet[]
      */
     public function provide(): array
     {
@@ -55,11 +55,7 @@ final class PostTweetsProvider
             $this->tweetGuard->ensureTweetFitsAllowedLength($postConfiguration['tweet'], $post);
 
             $tweetImage = $this->resolveTweetImage($post, $postConfiguration);
-
-            $postTweets[] = [
-                'text' => $postTweet,
-                'image' => $tweetImage,
-            ];
+            $postTweets[] = new Tweet($postTweet, $tweetImage);
         }
 
         return $postTweets;
