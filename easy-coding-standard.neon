@@ -22,3 +22,7 @@ parameters:
     skip:
         Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
             - */src/Posts/Year2017/Ast/*
+
+        Symplify\CodingStandard\Fixer\Naming\PropertyNameMatchingTypeFixer:
+            # false positive
+            - src/TweetPublisher/Tweet/Tweet.php
