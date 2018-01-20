@@ -2,7 +2,7 @@ imports:
     - { resource: 'source/_data/talks.yml' }
     - { resource: 'src/*/config/config.yml' }
     # enable on localhost only
-    - { resource: 'src/TweetPublisher/config/config.local.yml' }
+    #- { resource: 'src/TweetPublisher/config/config.local.yml' }
 
 parameters:
     # global templates variables
