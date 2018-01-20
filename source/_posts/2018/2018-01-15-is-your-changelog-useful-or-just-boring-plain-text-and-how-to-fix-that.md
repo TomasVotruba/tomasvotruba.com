@@ -8,7 +8,7 @@ perex: '''
 '''
 tweet: "New post on my blog: Keep Your CHANGELOG Useful with Links #github #changelog #dx"
 tweet_image: "/assets/images/posts/2018/changelog/keep-a-changelog.jpg"
-related_posts: 
+related_posts:
 ---
 
 This post is written in Markdown. Would you read it, if it would look like this?
@@ -16,7 +16,7 @@ This post is written in Markdown. Would you read it, if it would look like this?
 <br>
 
 *I wrote about monorepo before and - as ShopSyS and Google agrees - it's the best choice for longterm projects, like children or planet projects.*
- 
+
 *Moreover know, when Vitek showed me awesome tool called Tomono, that can merge git history from multiple repositories...*
 
 <br>
@@ -26,7 +26,7 @@ Or this one:
 <br>
 
 *I [wrote about monorepo before](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/) and - as [ShopSyS](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0) and [Google agrees](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext) - **it's the best choice for longterm projects**, like children or planet projects.*
- 
+
 *Moreover know, when [Vitek](https://github.com/vitek-rostislav) showed me awesome tool called [Tomono](https://github.com/unravelin/tomono), that can **merge git history from multiple repositories**...*
 
 <br>
@@ -35,20 +35,20 @@ Or this one:
 Btw, Hypertext Markup Language (HTML) is here since [1993](https://en.wikipedia.org/wiki/HTML), so we might integrate it in its natural environment. Same for Markdown and not just because it's a markup language.
 
 <br>
-  
+
 ## What is Sad about Missing References?
 
 Imagine you'll read my post first *plain text* version. While reading it, you might think:
- 
+
 - What is this monorepo? Isn't that *monolith* - an antipattern?
 - I didn't know Google is using monorepo?
 - Is that true name or made-up one?
- 
+
 You could read answer to all those questions if I'd only provide links - but **you can't, because there are no links**. You'd have to go to comments, ask them, wait for answers... So you'll probably end up closing my blog and never come again.
 
 ## What is Sad about Plain Text `CHANGELOG.md`?
 
-It takes maintainer **a lot of effort** to [keep a changelog](http://keepachangelog.com), keep it updated, with every version and every new pull-request, refer issues, pull-request, @author references... 
+It takes maintainer **a lot of effort** to [keep a changelog](http://keepachangelog.com), keep it updated, with every version and every new pull-request, refer issues, pull-request, @author references...
 
 <br>
 
@@ -70,7 +70,7 @@ No surprise that most `CHANGELOG.md` files look like this:
 - #578 Use `@doesNotPerformAssertions` in tests, thanks to @carusogabriel
 ```
 
-Does your `CHANGELOG.md` look like this too? Is it just dump of [pull-requests](https://github.com/Symplify/Symplify/issues?q=is%3Apr+is%3Aclosed) combined with [releases](https://github.com/Symplify/Symplify/releases)? 
+Does your `CHANGELOG.md` look like this too? Is it just dump of [pull-requests](https://github.com/Symplify/Symplify/issues?q=is%3Apr+is%3Aclosed) combined with [releases](https://github.com/Symplify/Symplify/releases)?
 
 ### Why do we Look to Changelog?
 
@@ -101,7 +101,7 @@ I wanted both. Why? Because I was used to Github Released that work like I neede
 
 ### Changed
 
-- [#560](https://github.com/symplify/symplify/pull/560) Added `PhpdocVarWithoutNameFixer` to `docblock.neon` level, 
+- [#560](https://github.com/symplify/symplify/pull/560) Added `PhpdocVarWithoutNameFixer` to `docblock.neon` level,
    thanks to [@carusogabriel](https://github.com/carusogabriel)
 - [#578](https://github.com/symplify/symplify/pull/578) Use `@doesNotPerformAssertions` in tests,
    thanks to [@carusogabriel](https://github.com/carusogabriel)
@@ -113,7 +113,7 @@ I've closed myself to coffee house for 3 hours and I've came up with solution!
 
 <img src="/assets/images/posts/2018/changelog/links.png" class="img-thumbnail">
 
-## 3 Steps To Add Links To Your `CHANGELOG.md`  
+## 3 Steps To Add Links To Your `CHANGELOG.md`
 
 ### 1. Install
 
@@ -127,7 +127,7 @@ composer require symplify/changelog-linker --dev
 vendor/bin/changelog-linker CHANGELOG.md --repository https://github.com/symplify/symplify
 ```
 
-*Option `--repository` is used for links to PRs, issues and commits.* 
+*Option `--repository` is used for links to PRs, issues and commits.*
 
 It will complete links to:
 
@@ -139,7 +139,7 @@ It will complete links to:
 ### 3. Commit and Push
 
 ```bash
-git add . 
+git add .
 git commit -m "CHANGELOG: add links to PRs, issues, version diffs and user names"
 git push origin master
 ```
@@ -156,12 +156,12 @@ I hope you to...
     <img src="/assets/images/posts/2018/changelog/keep-a-changelog.jpg" class="img-thumbnail">
 </a>
 
-Huge thanks to @olivierlacan for keepachangelog.com! It helped me a lot. 
+Huge thanks to @olivierlacan for keepachangelog.com! It helped me a lot.
 
 *Oh, sorry...*
- 
+
 **Huge thanks to [@olivierlacan](https://github.com/olivierlacan)** for [keepachangelog.com](http://keepachangelog.com)!
 
 <br>
 
-Happy lazy linking! 
+Happy lazy linking!

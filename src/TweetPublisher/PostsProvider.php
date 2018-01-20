@@ -38,11 +38,7 @@ final class PostsProvider
      */
     public function provide(): array
     {
-        $this->statieApplication->run(
-            $this->sourceDirectory,
-            __DIR__ . '/../../output',
-            true
-        );
+        $this->statieApplication->run($this->sourceDirectory, __DIR__ . '/../../output', true);
 
         return $this->configuration->getOption('posts');
     }

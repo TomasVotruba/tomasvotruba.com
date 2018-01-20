@@ -71,10 +71,7 @@ final class TweetPublisher
 
         $this->tweet($tweet);
 
-        $this->symfonyStyle->success(sprintf(
-            'Tweet "%s" was succesfully published.',
-            $tweet['text']
-        ));
+        $this->symfonyStyle->success(sprintf('Tweet "%s" was succesfully published.', $tweet['text']));
     }
 
     /**
