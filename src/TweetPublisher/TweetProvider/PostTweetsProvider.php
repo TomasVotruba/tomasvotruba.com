@@ -53,8 +53,10 @@ final class PostTweetsProvider
                 continue;
             }
 
-            $postTweet = $this->appendAbsoluteUrlToTweet($post, $postConfiguration);
-            $this->tweetGuard->ensureTweetFitsAllowedLength($postConfiguration['tweet'], $post);
+            $rawTweetText = $postConfiguration['tweet'];
+            $this->tweetGuard->ensureTweetFitsAllowedLength($rawTweetText, $post);
+
+            $postTweet = $this->appendAbsoluteUrlToTweet($post, $rawTweetText);
 
             $tweetImage = $this->resolveTweetImage($post, $postConfiguration);
             $postTweets[] = Tweet::createFromTextAndImage($postTweet, $tweetImage);
@@ -63,14 +65,11 @@ final class PostTweetsProvider
         return $postTweets;
     }
 
-    /**
-     * @param mixed[] $postConfiguration
-     */
-    private function appendAbsoluteUrlToTweet(PostFile $postFile, array $postConfiguration): string
+    private function appendAbsoluteUrlToTweet(PostFile $postFile, string $rawTweetText): string
     {
         $url = $this->getAbsoluteUrlForPost($postFile);
 
-        return $postConfiguration['tweet'] . ' ' . $url . '/';
+        return $rawTweetText . ' ' . $url . '/';
     }
 
     private function getAbsoluteUrlForPost(PostFile $postFile): string
