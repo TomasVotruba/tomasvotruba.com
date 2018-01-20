@@ -3,7 +3,6 @@
 namespace TomasVotruba\Website\TweetPublisher\Tests\TweetProvider;
 
 use TomasVotruba\Website\TweetPublisher\Tests\AbstractContainerAwareTestCase;
-use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 use TomasVotruba\Website\TweetPublisher\TweetProvider\UnpublishedTweetsProvider;
 
 final class UnpublishedTweetsProviderTest extends AbstractContainerAwareTestCase

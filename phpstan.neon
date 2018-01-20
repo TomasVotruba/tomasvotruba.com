@@ -8,3 +8,6 @@ parameters:
         - '#Property PhpParser\\Node\\Stmt\\ClassMethod::\$name \(string\) does not accept PhpParser\\Node\\Identifier#'
         - '#Call to an undefined method PhpParser\\PrettyPrinter\\Standard::printFormatPreserving\(\)#'
         - '#Cannot call method toString\(\) on string#'
+
+        # buggy
+        - '#Property (.*) does not accept object#'
