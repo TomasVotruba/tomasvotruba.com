@@ -65,20 +65,10 @@ final class TweetPublisher
             return;
         }
 
-        $tweet = $this->pickTweetCandidate($tweetsToPublish);
+        $tweet = array_pop($tweetsToPublish);
         $this->tweet($tweet);
 
         $this->symfonyStyle->success(sprintf('Tweet "%s" was successfully published.', $tweet['text']));
-    }
-
-    /**
-     * Pick latests
-     *
-     * @param Tweet[] $tweetsToPublish
-     */
-    private function pickTweetCandidate(array $tweetsToPublish): Tweet
-    {
-        return array_pop($tweetsToPublish);
     }
 
     private function tweet(Tweet $tweet): void
