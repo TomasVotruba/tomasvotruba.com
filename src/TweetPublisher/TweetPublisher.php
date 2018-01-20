@@ -3,7 +3,6 @@
 namespace TomasVotruba\Website\TweetPublisher;
 
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
 use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 use TomasVotruba\Website\TweetPublisher\TweetProvider\UnpublishedTweetsProvider;
 use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
@@ -37,12 +36,13 @@ final class TweetPublisher
     public function __construct(
         int $minimalGapInDays,
         TwitterApiWrapper $twitterApiWrapper,
-        UnpublishedTweetsProvider $unpublishedTweetsProvider
+        UnpublishedTweetsProvider $unpublishedTweetsProvider,
+        SymfonyStyle $symfonyStyle
     ) {
         $this->minimalGapInDays = $minimalGapInDays;
         $this->twitterApiWrapper = $twitterApiWrapper;
         $this->unpublishedTweetsProvider = $unpublishedTweetsProvider;
-        $this->symfonyStyle = SymfonyStyleFactory::create();
+        $this->symfonyStyle = $symfonyStyle;
     }
 
     public function run(): void
@@ -73,7 +73,7 @@ final class TweetPublisher
         }
 
         $this->symfonyStyle->warning(sprintf(
-            'It is only %d days since last tweet. Minimal gap is %d days, so no tweet until then.',
+            'Only %d days passed since last tweet. Minimal gap is %d days, so no tweet until then.',
             $daysSinceLastTweet,
             $this->minimalGapInDays
         ));
