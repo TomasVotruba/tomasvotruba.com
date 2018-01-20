@@ -2,6 +2,7 @@
 
 namespace TomasVotruba\Website\TweetPublisher\TweetProvider;
 
+use Nette\Utils\Strings;
 use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 
 final class UnpublishedTweetsResolver
@@ -17,7 +18,8 @@ final class UnpublishedTweetsResolver
 
         foreach ($allTweets as $tweet) {
             foreach ($publishedTweets as $publishedTweet) {
-                if ($tweet->getText() === $publishedTweet->getText()) {
+                // this comparison is needed, because urls are already appended to $publishedTweet
+                if (Strings::startsWith($publishedTweet->getText(), $tweet->getText())) {
                     continue 2;
                 }
             }

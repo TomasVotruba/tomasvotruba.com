@@ -58,6 +58,6 @@ final class UnpublishedTweetsResolverTest extends AbstractContainerAwareTestCase
             $this->twitterApiWrapper->getPublishedTweets()
         );
 
-        $this->assertGreaterThanOrEqual(21, count($unpublishedPostTweets));
+        $this->assertGreaterThanOrEqual(18, count($unpublishedPostTweets));
     }
 }
