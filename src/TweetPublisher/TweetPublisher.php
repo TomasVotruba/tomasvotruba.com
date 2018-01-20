@@ -4,6 +4,7 @@ namespace TomasVotruba\Website\TweetPublisher;
 
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use TomasVotruba\Website\TweetPublisher\TweetProvider\UnpublishedTweetsProvider;
 use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
 
 /**
@@ -18,11 +19,6 @@ final class TweetPublisher
     private $minimalGapInDays;
 
     /**
-     * @var PostTweetsProvider
-     */
-    private $postTweetsProvider;
-
-    /**
      * @var TwitterApiWrapper
      */
     private $twitterApiWrapper;
@@ -32,14 +28,19 @@ final class TweetPublisher
      */
     private $symfonyStyle;
 
+    /**
+     * @var UnpublishedTweetsProvider
+     */
+    private $unpublishedTweetsProvider;
+
     public function __construct(
         int $minimalGapInDays,
-        PostTweetsProvider $postTweetsProvider,
-        TwitterApiWrapper $twitterApiWrapper
+        TwitterApiWrapper $twitterApiWrapper,
+        UnpublishedTweetsProvider $unpublishedTweetsProvider
     ) {
         $this->minimalGapInDays = $minimalGapInDays;
-        $this->postTweetsProvider = $postTweetsProvider;
         $this->twitterApiWrapper = $twitterApiWrapper;
+        $this->unpublishedTweetsProvider = $unpublishedTweetsProvider;
         $this->symfonyStyle = SymfonyStyleFactory::create();
     }
 
@@ -55,11 +56,7 @@ final class TweetPublisher
             return;
         }
 
-        $tweetsToPublish = $this->excludePublishedTweets(
-            $this->postTweetsProvider->provide(),
-            $this->twitterApiWrapper->getPublishedTweets()
-        );
-
+        $tweetsToPublish = $this->unpublishedTweetsProvider->provide();
         if (! count($tweetsToPublish)) {
             $this->symfonyStyle->warning(
                 'There is no new tweet to publish. Add a new one to one of your post under "tweet:" option.'
@@ -68,42 +65,20 @@ final class TweetPublisher
         }
 
         $tweet = $this->pickTweetCandidate($tweetsToPublish);
-
         $this->tweet($tweet);
 
-        $this->symfonyStyle->success(sprintf('Tweet "%s" was succesfully published.', $tweet['text']));
+        $this->symfonyStyle->success(sprintf('Tweet "%s" was successfully published.', $tweet['text']));
     }
 
     /**
-     * @param string[][] $allTweets
-     * @param string[][] $publishedTweets
-     * @return string[][]
-     */
-    private function excludePublishedTweets(array $allTweets, array $publishedTweets): array
-    {
-        $unpublishedTweets = [];
-
-        foreach ($allTweets as $tweet) {
-            foreach ($publishedTweets as $publishedTweet) {
-                if ($tweet['text'] === $publishedTweet['text']) {
-                    continue 2;
-                }
-            }
-
-            $unpublishedTweets[] = $tweet;
-        }
-
-        return $unpublishedTweets;
-    }
-
-    /**
+     * Pick latests
+     *
      * @param string[][] $tweetsToPublish
      * @return string[]
      */
     private function pickTweetCandidate(array $tweetsToPublish): array
     {
-        $randomKey = array_rand($tweetsToPublish);
-        return $tweetsToPublish[$randomKey];
+        return array_pop($tweetsToPublish);
     }
 
     /**
