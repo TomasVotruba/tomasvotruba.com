@@ -38,9 +38,17 @@ final class UnpublishedTweetsResolverTest extends AbstractContainerAwareTestCase
     public function testPostTweetsProvider(): void
     {
         $postTweets = $this->postTweetsProvider->provide();
-        $this->assertGreaterThanOrEqual(51, $postTweets);
+        $this->assertGreaterThanOrEqual(52, count($postTweets));
 
         $this->assertInstanceOf(Tweet::class, $postTweets[0]);
+    }
+
+    public function testTwitterApiWrapper(): void
+    {
+        $publishedTweets = $this->twitterApiWrapper->getPublishedTweets();
+        $this->assertGreaterThanOrEqual(41, count($publishedTweets));
+
+        $this->assertInstanceOf(Tweet::class, $publishedTweets[0]);
     }
 
     public function testUnpublishedTweetsResolver(): void
@@ -50,6 +58,6 @@ final class UnpublishedTweetsResolverTest extends AbstractContainerAwareTestCase
             $this->twitterApiWrapper->getPublishedTweets()
         );
 
-        $this->assertGreaterThanOrEqual(51, $unpublishedPostTweets);
+        $this->assertGreaterThanOrEqual(21, count($unpublishedPostTweets));
     }
 }
