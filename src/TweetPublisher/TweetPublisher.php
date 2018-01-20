@@ -4,7 +4,8 @@ namespace TomasVotruba\Website\TweetPublisher;
 
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
-use TomasVotruba\Website\TweetPublisher\TweetProvider\UnpublishedTweetsProvider;
+use TomasVotruba\Website\TweetPublisher\TweetProvider\PostTweetsProvider;
+use TomasVotruba\Website\TweetPublisher\TweetProvider\UnpublishedTweetsResolver;
 use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
 
 /**
@@ -29,19 +30,26 @@ final class TweetPublisher
     private $symfonyStyle;
 
     /**
-     * @var UnpublishedTweetsProvider
+     * @var UnpublishedTweetsResolver
      */
-    private $unpublishedTweetsProvider;
+    private $unpublishedTweetsResolver;
+
+    /**
+     * @var PostTweetsProvider
+     */
+    private $postTweetsProvider;
 
     public function __construct(
         int $minimalGapInDays,
         TwitterApiWrapper $twitterApiWrapper,
-        UnpublishedTweetsProvider $unpublishedTweetsProvider,
+        PostTweetsProvider $postTweetsProvider,
+        UnpublishedTweetsResolver $unpublishedTweetsResolver,
         SymfonyStyle $symfonyStyle
     ) {
         $this->minimalGapInDays = $minimalGapInDays;
         $this->twitterApiWrapper = $twitterApiWrapper;
-        $this->unpublishedTweetsProvider = $unpublishedTweetsProvider;
+        $this->postTweetsProvider = $postTweetsProvider;
+        $this->unpublishedTweetsResolver = $unpublishedTweetsResolver;
         $this->symfonyStyle = $symfonyStyle;
     }
 
@@ -51,7 +59,11 @@ final class TweetPublisher
             return;
         }
 
-        $tweetsToPublish = $this->unpublishedTweetsProvider->provide();
+        $tweetsToPublish = $this->unpublishedTweetsResolver->excludePublishedTweets(
+            $this->twitterApiWrapper->getPublishedTweets(),
+            $this->postTweetsProvider->provide()
+        );
+
         if (! count($tweetsToPublish)) {
             $this->symfonyStyle->warning(
                 'There is no new tweet to publish. Add a new one to one of your post under "tweet:" option.'
@@ -60,7 +72,9 @@ final class TweetPublisher
         }
 
         $tweet = array_pop($tweetsToPublish);
-        $this->tweet($tweet);
+
+        dump($tweet);
+//        $this->tweet($tweet);
 
         $this->symfonyStyle->success(sprintf('Tweet "%s" was successfully published.', $tweet['text']));
     }
@@ -68,7 +82,7 @@ final class TweetPublisher
     private function isRunAllowed(): bool
     {
         $daysSinceLastTweet = $this->twitterApiWrapper->getDaysSinceLastTweet();
-        if ($daysSinceLastTweet > $this->minimalGapInDays) {
+        if ($daysSinceLastTweet >= $this->minimalGapInDays) {
             return true;
         }
 
