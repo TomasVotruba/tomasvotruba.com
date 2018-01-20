@@ -2,7 +2,6 @@
 
 namespace TomasVotruba\Website\TweetPublisher\TweetProvider;
 
-use TomasVotruba\Website\TweetPublisher\PostTweetsProvider;
 use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
 use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
 

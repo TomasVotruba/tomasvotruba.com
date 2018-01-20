@@ -47,13 +47,7 @@ final class TweetPublisher
 
     public function run(): void
     {
-        $daysSinceLastTweet = $this->twitterApiWrapper->getDaysSinceLastTweet();
-        if ($daysSinceLastTweet < $this->minimalGapInDays) {
-            $this->symfonyStyle->warning(sprintf(
-                'It is only %d days since last tweet. Minimal gap is %d days, so no tweet until then.',
-                $daysSinceLastTweet,
-                $this->minimalGapInDays
-            ));
+        if (! $this->isRunAllowed()) {
             return;
         }
 
@@ -69,6 +63,22 @@ final class TweetPublisher
         $this->tweet($tweet);
 
         $this->symfonyStyle->success(sprintf('Tweet "%s" was successfully published.', $tweet['text']));
+    }
+
+    private function isRunAllowed(): bool
+    {
+        $daysSinceLastTweet = $this->twitterApiWrapper->getDaysSinceLastTweet();
+        if ($daysSinceLastTweet > $this->minimalGapInDays) {
+            return true;
+        }
+
+        $this->symfonyStyle->warning(sprintf(
+            'It is only %d days since last tweet. Minimal gap is %d days, so no tweet until then.',
+            $daysSinceLastTweet,
+            $this->minimalGapInDays
+        ));
+
+        return false;
     }
 
     private function tweet(Tweet $tweet): void

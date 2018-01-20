@@ -1,9 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher;
+namespace TomasVotruba\Website\TweetPublisher\TweetProvider;
 
 use Symplify\Statie\Renderable\File\PostFile;
+use TomasVotruba\Website\TweetPublisher\PostsProvider;
 use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
+use TomasVotruba\Website\TweetPublisher\TweetGuard;
 
 final class PostTweetsProvider
 {
