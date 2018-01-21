@@ -8,6 +8,12 @@ use Symfony\Component\HttpKernel\Kernel;
 
 final class ParameterToSymfonyControllerAppKernel extends Kernel
 {
+    public function __construct()
+    {
+        // these values allows container rebuild when config changes
+        parent::__construct('dev', true);
+    }
+
     /**
      * @return BundleInterface[]
      */

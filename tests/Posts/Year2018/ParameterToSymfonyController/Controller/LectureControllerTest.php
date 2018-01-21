@@ -16,7 +16,7 @@ final class LectureControllerTest extends TestCase
 
     protected function setUp(): void
     {
-        $kernel = new ParameterToSymfonyControllerAppKernel('dev', true);
+        $kernel = new ParameterToSymfonyControllerAppKernel();
         $kernel->boot();
 
         $this->container = $kernel->getContainer();
