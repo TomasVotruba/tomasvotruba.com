@@ -1,163 +1,159 @@
 ---
 id: 73
-title: "..."
+title: "How to Get Parameter in Symfony Controller the Clean Way"
 perex: '''
-...
+    Services are already moving to Constructor Injection in Symfony. 
+    <br>
+    Now it's time for parameters to follow. 
 '''
-tweet: "New post on my blog: ..."
-tweet_image: "..."
+tweet: "New post on my blog: How to Get Parameter in Symfony Controller the Clean Way"
+tested: true
+test_slug: ParameterToSymfonyController
 ---
 
 
-
-resources:
-
-- https://symfony.com/blog/new-in-symfony-3-4-local-service-binding
-- https://www.tomasvotruba.cz/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/
-
-paramters to controller
-
-
-
-# 1
-
-before
-
-$this->container->getParameter('...')
-
-since 2.8 auotowirign services were used more and more in dependency injectino way (@see post David Grudl)
-
-
-
-
-# it work,s but it breaks encapslution
-
-imagine oyu need a servcie in conrolelr. you'll use contruco inejction
-
+### The Easy Way 
 
 ```php
-
-<?php
-
-class LectureController extends Controller
+final class LectureController extends SymfonyController
 {
-	public function __contruct(....)
+    public function registerAction()
+    {
+        $bankAccount = $this->container->getParameter('bankAccount');
+    }
+}
+```
 
+It works, but it breaks [SOLID encapsulation of dependencies](https://github.com/jupeter/clean-code-php#solid). Controller should not be aware of whole DI container and every service in it. **It should take only what it needs** as any other [delegator](/blog/2018/01/08/clean-and-decoupled-controllers-commands-and-event-subscribers-once-and-for-all-with-delegator-pattern/#delegator-pattern-to-the-strike-rescue-strike-prevention).
 
-	public function signInAction()
+**What if we need a service** to pay a registration fee to our bank account?
+ 
+Since [Symfony 2.8 with autowiring](https://symfony.com/blog/new-in-symfony-2-8-service-auto-wiring) we can go for contructor injection with no obstacles:
+
+```php
+<?php declare(strict_types=1);
+
+final class LectureController extends SymfonyController
+{
+    /**
+     * @var PaymentService
+     */
+    private $paymentService;
+    
+	public function __construct(PaymentService $paymentService)
+    {
+        $this->paymentService = $paymentService;
+    }
+
+	public function registerAction(): void
 	{
-		//...
-
+        $bankAccount = $this->container->getParameter('bankAccount');
+        
+        $this->paymentService->payAmountToAccount(1000, $bankAccount);
 	}
 }
 ``` 
 
+This can go completely wrong, not because dependency injection is better than service locator, but **because code is now inconsistent**. It's not clear:
 
-then you need a paramter
+- When should we use constructor injection? For services?
+- When should we use service locator? For parameters?
 
+At that's what we think about when *we* refactored code and know about it's previous state.
 
+When your colleague will extends this code 3 months later, he might [broke your window](https://blog.codinghorror.com/the-broken-window-theory/):
+
+```diff
+<?php declare(strict_types=1);
+
+final class LectureController extends SymfonyController
+{
+    /**
+     * @var PaymentService
+     */
+    private $paymentService;
+    
+	public function __construct(PaymentService $paymentService)
+    {
+        $this->paymentService = $paymentService;
+    }
+
+	public function registerAction(): void
+	{
+        $bankAccount = $this->container->getParameter('bankAccount');
+        
+        $this->paymentService->payAmountToAccount(1000, $bankAccount);
+	}
++	
++	public function refundAction(): void
++	{
++	    $refundService = $this->container->get(RefundService::class);
++	    $refundService->refundToLoggedUser(1000);
++	}
+}
+``` 
+
+## Consistency over Per Change Pattern
+
+You understand your code = you know reasons why it's written this way and the boundaries. You know when to use dependency injection and when service (or pamater) locator.
+
+**But that's you. Only you.** Other people don't have your experience and your memory. **They read the code and learn while reading**.
+
+That's why it's important to use as less rules as possible to prevent [cognitive overload](https://chrismm.com/blog/writing-good-code-reduce-the-cognitive-load/). Which leads to poor understanding of the code and coding further in the same file but in own personal way, not related to original code much.
+
+### DI is the Flow &ndash; Go With It
+
+Symfony 3.3 and 3.4/4.0 brought [many new DI features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) and **with it an evolution to developer experience paradigm**. Thanks to [Nicolas Grekas](https://github.com/nicolasgrekas), and subsequently [Kévin Dunglas](https://github.com/dunglas) and [Martin Hasoň](https://github.com/hason).
+
+## The Clean Way
+
+Service is created in the container and passed via constructor where needed. 
+**Why not parameter, which is also loaded by the container?**
 
 ```php
+<?php declare(strict_types=1);
 
-<?php
-
-class LectureController extends Controller
+final class LectureController extends SymfonyController
 {
-	public function __contruct(....)
+    /**
+     * @var string 
+     */
+    private $bankAccount;
+    
+    /**
+     * @var PaymentService
+     */
+    private $paymentService;
+    
+	public function __construct(string $bankAccount, PaymentService $paymentService)
+    {
+        $this->paymentService = $paymentService;
+        $this->bankAccount = $bankAccount;
+    }
 
-
-	public function signInAction()
+	public function registerAction(): void
 	{
-		$paymentBankAccount = $this->container->getParamter('...');
-
-		//...
-
+        $this->paymentService->payAmountToAccount(1000, $this->bankAccount);
 	}
 }
 ``` 
 
-This completely wrong, not because dependency injection is better than service locator, but because code becomes inconsistent. It's not clear:
-
-- when should I used construoct injection?
-- when should I use servie locator?
-
-
-When your collegaue will extnds your code 3 motnhs later, it might [broke your window](@todo link theory):
-
-```php
-
-<?php
-
-class LectureController extends Controller
-{
-	public function __contruct(....)
-
-
-	public function signInAction()
-	{
-		$paymentBankAccount = $this->container->getParamter('...');
-
-		//...
-
-	}
-
-	public function refundAction()
-	{
-		$this->container->get(RefundService);
-	}
-}
-``` 
-
-## Consistency over per-file pattern
-
-You understand your code, you know reasons why it's written this way and the boundaries when to use dpeendy injeiton and service (or pamater) locator.
-
-But that's you. Other people have no pre-cognitive understangin of your code. They read the code and learn while reading. Nothign more. That's why it's important to use as less as rules possible to prevent cognitive overload (@todo link). which lead to poor understand and coding furhter in own way, not related to original code much.
-
-## DI is the Flow, Go with it
-
-Also ,since symfony 3.4 and 4.0 (and their di feature (@links)) there is evolution to the useful and developer friendly dependency injeciton paragigm.
-
-## So what it would look like?
-
-When service is passed via contucotr, as it's dependency create in container, why not the parameter, which is alo set in config outside the controller.
-
-```php
-
-<?php
-
-class LectureController extends Controller
-{
-	public function __contruct(...., paramter)
-
-
-	public function signInAction()
-	{
-		$paymentBankAccount = $this->paramter;
-
-		//...
-
-	}
-	}
-}
-``` 
-
-### how would that look like in config?
+### Change the Config 
 
 We need to:
 
-- register controller manually
-- pass the paramter to contructor
-- autowiret the rest
+- register controller **manually** in every instance
+- pass the parameter to constructor **manually** in every instance
+- autowire the rest
 
-It's lot of work, but it's worth it.
+It's lot of work, but it's worth it!
 
-```yml
-# services.yml
+```yaml
+# config.yml
 parameters:
 	bankAccount: '1093849023/2013'
 
-servicies:
+services:
 	_defaults:
 		autowire: true
 
@@ -166,12 +162,12 @@ servicies:
 			- '%bankAccount%'
 ```
 
+Would you use this approach? 5 lines for 1 parameter in 1 service? Maybe.
 
-Would you use this approach? 5 lines for 1 parameter in 1 service?
-What about 2, 3 or 40 controllers using it?
+What about 2, 3 or 40 controllers/services using it?
 
-```yml
-servicies:
+```yaml
+services:
 	autowire: true
 
 	App\Controller\LectureController:
@@ -189,50 +185,50 @@ servicies:
 			2: '%bankAccount%'
 ```
 
-Doh, so much work :(
+**Doh, so much work :(**
 
-I'd be closing the answer right now settling back to much simpler:
+I find [the easy way](#the-easy-way) now much more likeable:
 
 ```php
 $this->container->getParameter('bankAccount');
 ```
 
-No wait, there is simpler way!
+**Wait! No need to go easy and dirty. There *is* simpler way.**
 
+Since Symfony 3.3 we can use [PSR-4 service loading](//blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration/) and since [Symfony 3.4/4.0 parameter binding](https://symfony.com/blog/new-in-symfony-3-4-local-service-binding).
 
-Since Symfony 3.3 we can usePSR4 (@todo link) autoladog and 3.4 parametr binding (@todo link).
-
-So previous steps got much simpler:
+How changed previous steps?
 
 - <strike>register controller manually</strike> → use PSR4 **once for all services**
 - <strike>pass the paramter to contructor</strike> → use binding **once for all services**
 - autowire the rest
 
-```yml
-servicies:
-	autowire: true
+```yaml
+services:
+    _defaults:
+        autowire: true
+        bind:
+    		$bankAccount: '%bankAccount%'
+
 	App\Controller\:
 		resource: ..
-
-	bind:
-		$bankAccount: %bankAccount%
 ```
 
+**Now you can add 50 more services using `$bankAccount` as constructor dependency with no extra edit on config**. Win-win!
 
-Now you can add 50 more services using $bankAccount as ctor dependency with no extra edit on config. Win-win!
+<br><br>
 
-
-
-## This post is tested, is will last forever (almost)
-
-
-The final code is tested (see it githbu diretoryx @too link) and is the best solution in time being - Symfony 3.4 and 4.0.
-Without test, it would get obsolete by Symfony 5, but people would be still using it - like happens with long-tailed answer in stackfover - https://stackoverflow.com/questions/13901256/how-do-i-read-from-parameters-yml-in-a-controller-in-symfony2
-
-But thanks to tests that are always run under the newest, it will get updates with just a little work.
-
-To make this post as useful as possible for a long as possible
+Happy Config Fit and Slimming!
 
 
+---
 
-Read here more about tested posts and their essential need in programming blogging (@todo link pehapkari)
+### This Post is Tested, Make it Last Forever (Almost)
+
+The final code is tested ([see it on Github](https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests/Posts/Year2018/ParameterToSymfonyController)) and is the best solution in time being - Symfony 3.4 and 4.0.
+
+Without test, it would get obsolete by Symfony 5, but people would be still using it - like happens with [long-tailed answer in stackflow](https://stackoverflow.com/questions/13901256/how-do-i-read-from-parameters-yml-in-a-controller-in-symfony2). 
+
+But thanks to tests that are always run under the newest, it will get updates with just a little work. To make this post as useful as possible for a long as possible
+
+Read more [about tested posts as they're essential for post's lifetime](https://pehapkari.cz/blog/2017/01/12/why-articles-with-code-examples-should-be-CI-tested/). Without tests the post won't make it through next [major](https://semver.org/#spec-item-8) release.
