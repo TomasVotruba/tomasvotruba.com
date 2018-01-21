@@ -3,14 +3,14 @@
 namespace TomasVotruba\Website\Tests\Posts\Year2018\ParameterToSymfonyController\Controller;
 
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\DependencyInjection\Container;
+use Psr\Container\ContainerInterface;
 use TomasVotruba\Website\Posts\Year2018\ParameterToSymfonyController\App\ParameterToSymfonyControllerAppKernel;
 use TomasVotruba\Website\Posts\Year2018\ParameterToSymfonyController\Controller\LectureController;
 
 final class LectureControllerTest extends TestCase
 {
     /**
-     * @var Container
+     * @var ContainerInterface
      */
     private $container;
 
