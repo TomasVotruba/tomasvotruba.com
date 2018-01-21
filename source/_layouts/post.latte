@@ -65,7 +65,33 @@
 
         {include "hireMe"}
 
-        <br>
+        <div n:ifset="$post['tested']" class="mt-5 mb-5 card">
+            <div class="card-body">
+                {capture $testDirectoryOnGithub}{$github_repository_tests_directory}/Posts/Year{$post->getDateInFormat('Y')}/{$post['test_slug']}{/capture}
+                <p>
+                    <strong>This Post is Tested, Make it Last Forever</strong>
+                </p>
+
+                <p>
+                    The final code is tested (<a href="{$testDirectoryOnGithub}"><em class="fa fa-fw fa-github"></em>see it on Github</a>) and is the best solution in time being.
+                </p>
+
+                <p>
+                    Thanks to tests this code:
+                    <ul>
+                        <li><strong>always run against the most recent dependencies</strong></li>
+                        <li>will get updates with just a little work</li>
+                        <li>will be useful for as long as possible</li>
+                    </ul>
+                </p>
+
+                <p>
+                    Read more <a href="https://pehapkari.cz/blog/2017/01/12/why-articles-with-code-examples-should-be-CI-tested">about tested posts as they're essential for post's lifetime</a>.</p>
+                <p>
+                    <strong>Without tests the post won't make it through next <a href="https://semver.org/#spec-item-8">major</a> release</strong> and it's long tail effect would spread obsolete practise.
+                </p>
+            </div>
+        </div>
 
         <h3>What do you think?</h3>
 
