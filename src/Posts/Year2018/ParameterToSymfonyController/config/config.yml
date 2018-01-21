@@ -1,3 +1,13 @@
-imports:
-    - { resource: 'parameters.yml' }
-    - { resource: 'services.yml' }
+parameters:
+    bankAccount: '12345'
+
+services:
+    _defaults:
+        autowire: true
+        bind:
+            $bankAccount: '%bankAccount%'
+        # for tests
+        public: true
+
+    TomasVotruba\Website\Posts\Year2018\ParameterToSymfonyController\Controller\:
+        resource: ../Controller
