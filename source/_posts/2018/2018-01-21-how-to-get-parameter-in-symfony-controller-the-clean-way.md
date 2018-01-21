@@ -218,17 +218,4 @@ services:
 
 <br><br>
 
-Happy Config Fit and Slimming!
-
-
----
-
-### This Post is Tested, Make it Last Forever (Almost)
-
-The final code is tested ([see it on Github](https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests/Posts/Year2018/ParameterToSymfonyController)) and is the best solution in time being - Symfony 3.4 and 4.0.
-
-Without test, it would get obsolete by Symfony 5, but people would be still using it - like happens with [long-tailed answer in stackflow](https://stackoverflow.com/questions/13901256/how-do-i-read-from-parameters-yml-in-a-controller-in-symfony2). 
-
-But thanks to tests that are always run under the newest, it will get updates with just a little work. To make this post as useful as possible for a long as possible
-
-Read more [about tested posts as they're essential for post's lifetime](https://pehapkari.cz/blog/2017/01/12/why-articles-with-code-examples-should-be-CI-tested/). Without tests the post won't make it through next [major](https://semver.org/#spec-item-8) release.
+Happy Config Fit & Slimming!
