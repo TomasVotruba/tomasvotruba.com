@@ -40,17 +40,17 @@ final class LectureController extends SymfonyController
      */
     private $paymentService;
     
-	public function __construct(PaymentService $paymentService)
+    public function __construct(PaymentService $paymentService)
     {
         $this->paymentService = $paymentService;
     }
-
-	public function registerAction(): void
-	{
+    
+    public function registerAction(): void
+    {
         $bankAccount = $this->container->getParameter('bankAccount');
         
         $this->paymentService->payAmountToAccount(1000, $bankAccount);
-	}
+    }
 }
 ``` 
 
@@ -73,23 +73,23 @@ final class LectureController extends SymfonyController
      */
     private $paymentService;
     
-	public function __construct(PaymentService $paymentService)
+    public function __construct(PaymentService $paymentService)
     {
         $this->paymentService = $paymentService;
     }
 
-	public function registerAction(): void
-	{
+    public function registerAction(): void
+    {
         $bankAccount = $this->container->getParameter('bankAccount');
         
         $this->paymentService->payAmountToAccount(1000, $bankAccount);
-	}
-+	
-+	public function refundAction(): void
-+	{
-+	    $refundService = $this->container->get(RefundService::class);
-+	    $refundService->refundToLoggedUser(1000);
-+	}
+    }
++
++    public function refundAction(): void
++    {
++        $refundService = $this->container->get(RefundService::class);
++        $refundService->refundToLoggedUser(1000);
++    }
 }
 ``` 
 
@@ -125,16 +125,16 @@ final class LectureController extends SymfonyController
      */
     private $paymentService;
     
-	public function __construct(string $bankAccount, PaymentService $paymentService)
+    public function __construct(string $bankAccount, PaymentService $paymentService)
     {
         $this->paymentService = $paymentService;
         $this->bankAccount = $bankAccount;
     }
 
-	public function registerAction(): void
-	{
+    public function registerAction(): void
+    {
         $this->paymentService->payAmountToAccount(1000, $this->bankAccount);
-	}
+    }
 }
 ``` 
 
@@ -151,15 +151,15 @@ It's lot of work, but it's worth it!
 ```yaml
 # config.yml
 parameters:
-	bankAccount: '1093849023/2013'
+    bankAccount: '1093849023/2013'
 
 services:
-	_defaults:
-		autowire: true
+    _defaults:
+        autowire: true
 
-	App\Controller\LectureController:
-		arguments:
-			- '%bankAccount%'
+    App\Controller\LectureController:
+        arguments:
+            - '%bankAccount%'
 ```
 
 Would you use this approach? 5 lines for 1 parameter in 1 service? Maybe.
@@ -168,21 +168,21 @@ What about 2, 3 or 40 controllers/services using it?
 
 ```yaml
 services:
-	autowire: true
+    autowire: true
 
-	App\Controller\LectureController:
-		arguments:
-			- '%bankAccount%'
+    App\Controller\LectureController:
+        arguments:
+            - '%bankAccount%'
 
-	App\Controller\ContactController:
-		arguments:
-			- '%bankAccount%'
+    App\Controller\ContactController:
+        arguments:
+            - '%bankAccount%'
 
-	# and 40 more services with manual setup
-	App\Model\PaymentService:
-		arguments:
-			# with care when used with another position then 1st one
-			2: '%bankAccount%'
+    # and 40 more services with manual setup
+    App\Model\PaymentService:
+        arguments:
+            # with care when used with another position then 1st one
+            2: '%bankAccount%'
 ```
 
 **Doh, so much work :(**
@@ -208,10 +208,10 @@ services:
     _defaults:
         autowire: true
         bind:
-    		$bankAccount: '%bankAccount%'
+            $bankAccount: '%bankAccount%'
 
-	App\Controller\:
-		resource: ..
+    App\Controller\:
+        resource: ..
 ```
 
 **Now you can add 50 more services using `$bankAccount` as constructor dependency with no extra edit on config**. Win-win!
