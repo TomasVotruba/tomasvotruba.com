@@ -71,11 +71,12 @@ final class TweetPublisherApplication
             return;
         }
 
+        /** @var Tweet $tweet */
         $tweet = array_pop($tweetsToPublish);
 
         $this->tweet($tweet);
 
-        $this->symfonyStyle->success(sprintf('Tweet "%s" was successfully published.', $tweet['text']));
+        $this->symfonyStyle->success(sprintf('Tweet "%s" was successfully published.', $tweet->getText()));
     }
 
     private function isRunAllowed(): bool
