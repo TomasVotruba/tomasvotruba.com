@@ -1,6 +1,13 @@
 parameters:
     talks:
         -
+            title: "How to get Your Code Clean"
+            year: 2018
+            event_name: "Private Lecture @ Ness, Košice, Slovakia"
+            slides_link: "https://docs.google.com/presentation/d/1zDJ53kYMhQQ0QHL1MmMOyNA-IkhK4fyk0hqzmWd3MW0/edit?usp=sharing"
+            lang: en
+
+        -
             title: "Continual Upgrading with AST and Rector"
             year: 2017
             event_name: "PHP Central Europe Conference 2017 @ Poland"
