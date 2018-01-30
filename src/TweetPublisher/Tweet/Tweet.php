@@ -18,7 +18,7 @@ final class Tweet
 
     private function __construct(string $text, ?string $image = null)
     {
-        $this->text = $text;
+        $this->text = htmlspecialchars_decode($text);
         $this->image = $image;
     }
 
