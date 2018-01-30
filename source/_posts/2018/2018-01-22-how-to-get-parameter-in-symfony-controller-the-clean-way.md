@@ -2,9 +2,9 @@
 id: 73
 title: "How to Get Parameter in Symfony Controller the Clean Way"
 perex: '''
-    Services are already moving to Constructor Injection in Symfony. 
+    Services are already moving to Constructor Injection in Symfony.
     <br>
-    Now it's time for parameters to follow. 
+    Now it's time for parameters to follow.
 '''
 tweet: "New post on my blog: How to Get Parameter in Symfony Controller the Clean Way"
 tested: true
@@ -12,7 +12,7 @@ test_slug: ParameterToSymfonyController
 ---
 
 
-### The Easy Way 
+### The Easy Way
 
 ```php
 final class LectureController extends SymfonyController
@@ -27,7 +27,7 @@ final class LectureController extends SymfonyController
 It works, but it breaks [SOLID encapsulation of dependencies](https://github.com/jupeter/clean-code-php#solid). Controller should not be aware of whole DI container and every service in it. **It should take only what it needs** as any other [delegator](/blog/2018/01/08/clean-and-decoupled-controllers-commands-and-event-subscribers-once-and-for-all-with-delegator-pattern/#delegator-pattern-to-the-strike-rescue-strike-prevention).
 
 **What if we need a service** to pay a registration fee to our bank account?
- 
+
 Since [Symfony 2.8 with autowiring](https://symfony.com/blog/new-in-symfony-2-8-service-auto-wiring) we can go for contructor injection with no obstacles:
 
 ```php
@@ -39,20 +39,20 @@ final class LectureController extends SymfonyController
      * @var PaymentService
      */
     private $paymentService;
-    
+
     public function __construct(PaymentService $paymentService)
     {
         $this->paymentService = $paymentService;
     }
-    
+
     public function registerAction(): void
     {
         $bankAccount = $this->container->getParameter('bankAccount');
-        
+
         $this->paymentService->payAmountToAccount(1000, $bankAccount);
     }
 }
-``` 
+```
 
 This can go completely wrong, not because dependency injection is better than service locator, but **because code is now inconsistent**. It's not clear:
 
@@ -72,7 +72,7 @@ final class LectureController extends SymfonyController
      * @var PaymentService
      */
     private $paymentService;
-    
+
     public function __construct(PaymentService $paymentService)
     {
         $this->paymentService = $paymentService;
@@ -81,7 +81,7 @@ final class LectureController extends SymfonyController
     public function registerAction(): void
     {
         $bankAccount = $this->container->getParameter('bankAccount');
-        
+
         $this->paymentService->payAmountToAccount(1000, $bankAccount);
     }
 +
@@ -91,7 +91,7 @@ final class LectureController extends SymfonyController
 +        $refundService->refundToLoggedUser(1000);
 +    }
 }
-``` 
+```
 
 ## Consistency over Per Change Pattern
 
@@ -107,7 +107,7 @@ Symfony 3.3 and 3.4/4.0 brought [many new DI features](/blog/2017/05/07/how-to-r
 
 ## The Clean Way
 
-Service is created in the container and passed via constructor where needed. 
+Service is created in the container and passed via constructor where needed.
 **Why not parameter, which is also loaded by the container?**
 
 ```php
@@ -116,15 +116,15 @@ Service is created in the container and passed via constructor where needed.
 final class LectureController extends SymfonyController
 {
     /**
-     * @var string 
+     * @var string
      */
     private $bankAccount;
-    
+
     /**
      * @var PaymentService
      */
     private $paymentService;
-    
+
     public function __construct(string $bankAccount, PaymentService $paymentService)
     {
         $this->paymentService = $paymentService;
@@ -136,9 +136,9 @@ final class LectureController extends SymfonyController
         $this->paymentService->payAmountToAccount(1000, $this->bankAccount);
     }
 }
-``` 
+```
 
-### Change the Config 
+### Change the Config
 
 We need to:
 
