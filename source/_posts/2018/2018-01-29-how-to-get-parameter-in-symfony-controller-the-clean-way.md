@@ -2,69 +2,81 @@
 id: 74
 title: "How to Deal With Haters in Comments and Github"
 perex: '''
-        That's what I was asked yesterday for about fifth person already. How do I deal with that when I write an article tweet, just doing good things godly enlightenment, and someone does not like it and throwing dirt on me? 
+    That's what I was asked yesterday for about 5th person already. How do I deal with that when I write an article, when I tweet or comment on Github and someone is throwing dirt on me? 
 '''
 tweet: "New post on my blog: How to Deal With #Haters in Comments and #Github #compassion #communication"
 tweet_image: "/assets/images/posts/2017/feedback/feedback.jpg"
 ---
 
-I learned this process while being a maintainer of [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death/) for 1 year and then 6 months  again, where I got to dozens of online-hate-wars and found that it leads nowhere. Then I tried another way. **Compassion.**
+I learned this process while being a maintainer of [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death/) for 1 year and then 6 months  again, where I got to dozens of online-hate-wars and found that it leads nowhere. 
 
-Today I will summarize it in 3 points:
+<img src="/assets/images/posts/2018/haters-in-comments/hearth-mind.jpg" class="img-thumbnail">
 
+Then I tried another way - a **[compassion](https://zenhabits.net/compassion/).**
 
-## 1. Process Emotion
+We could sum it up in 4 steps:
+
+## 1. Process Emotion - Take a Breath
 
 Yes, it hurts. When I write a tutorial on how to deal with hater, and someone writes me: *IT'S STUPID* - it hurts. I put so much work in it and instead of a like I get slapped. **In fact, that could be a feedback. With a little effort even constructive.**
 
-What information he or she wants to communicate to me? In 90% of cases:
+**What information** he or she wants to communicate to me? In 90% of cases:
 
 - "I do not understand that."
 - "I understood it differently than you meant."
 - "I see it differently."
 
-**I do not respond right away**. When I feel uncomfortable, I'd only return the same emotion and the same would get back.
+**You don't respond right away**. When you feel uncomfortable right after reading the comment, you'd only return the same emotion and the same would probably get back to you. Take an hour break if you need. It's ok.
 
-I take an hour break if you need.
+## 2. Be Interested - Get more Intel
 
+We want to know what's on the other's mind. We want to find **something useful for us, to make our work better next time**.
 
-## 2. I'm Interested
+### How to Respond?
 
-I want to know what's on the other's mind. I try to find something useful for me, to make my work better next time.
+- "It's a total crap" => What you disagree?
+- "That never works" => How so? What could work then?
+- "You're doing it wrong" => Why do you think so? How would that look right?
 
-### How do I respond?
+*This is how damaged 10-years marriage on therapy looks like.*
 
-- "It's a total crap '=> What you disagree?
-- "That never works" => How do you think it could work?
-- "You're doing it wrong" => Why do you think so?
+### Follow Context
 
-The reaction always depends on the context of the situation.
+It's the same in programming. There is no ultimate answer to a sentence out of context - reaction always depends on it. There is difference in a group of friends people or my first comment on repository in South America.   
 
-In most cases **the reaction to such question is more constructive than the first comment**. And that's enough for me. **I'll take more from it than if I'd remain silent and returned back emotion**.
+But in the most cases **the reaction to such question is more constructive than the first comment**. And that's enough for me - **I'll take more from it than if I'd remain silent and returned back emotion**.
 
 <img src="/assets/images/posts/2017/feedback/feedback.jpg" class="img-thumbnail">
 
+## 3. Is it Worth it? Iterate
 
-## 3. I'll Consider if it's Worth it and if so, Iterate
+Baby steps. I do not expect that I get [sandwich feedback](http://www.rightattitudes.com/2008/02/20/sandwich-feedback-technique/) to my first answer - after all, it took me year to get from *that's wrong* to useful and well-accepted feedback.
 
-Baby steps. I do not expect that I get positive / pro-growth / [sandwich](@todo) feedback to my first answer - after all, it took me year to get from *that's wrong* to useful and well-accepted feedback.
+Sometimes it takes time, sometimes I regress and mirror anger back, but I try to remember the first point - **process emotion**. When it doesn't work, I just stop and focus somewhere else.
 
-Sometimes it takes time, sometimes I regress and mirror anger back, but I try to remember the first point - process emotion. When it doesn't work, I just stop and focus somewhere else.
+**Often we get from potential argument to his or her sending a new pull-request**. 
 
-Often we get from potential argument to his or her new pull-request. And sometimes we stay at *the wrong* :)
+## 4. Is it too much? Let it go
 
-**Are you interested on how to reduce the hate-risk already when writing the article, issue or pull-request description?**
+It is possible, that there is no useful information at all. In that case, just [let it](https://www.youtube.com/watch?v=L0MK7qz13bU) [go](https://zenhabits.net/past/). You can leave in silence...
 
-### Pro tip
+...**but how useful is silence to you, when you don't understand something**?
 
-24-hour chill on Github
+What I try to do, **is to simply express that**. It's the last and least I can do:
 
-@todo did you know github offeres you 24 perios chill time for your organization?
-It's super feature, that can give everyone time to process and relaize what happens. Outsize the emotional tornado. With calm and peaceful mind.
+- "Let's agree we disagree."
+- "I think we both tried to understand each other but I was not enough"
+- "I'm sorry, I still don't understand your points and I don't want to put more energy into thi"
  
- @todo scree
+Next time, this person might realize it's not personal attack similar to his childhood experience in school or with his parents, but it's **only about miss interpretation** of words. And he or she might **call you** to express it better, like I do when I feel keyboard doesn't *work*. After all, [only 7 % of communication is verbal](http://ubiquity.acm.org/article.cfm?id=2043156).
 
-I wish I knew this before.
+## Tip for Github Maintainers - "24-hour take a breath"
+
+Github has this [super feature](https://github.com/blog/2370-introducing-temporary-interaction-limits) right in *Settings* of every repository, that can give everyone time to process and realize what happened. Outsize the emotional tornado. With calm and peaceful mind.
+
+<img src="/assets/images/posts/2018/haters-in-comments/temporary-interaction-limits.png" class="img-thumbnail">
+
+I wish I knew this before. It would save many words I could not take back.
 
 <br><br>
 
