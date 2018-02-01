@@ -1,0 +1,19 @@
+---
+layout: default
+title: "Deprecated Posts"
+id: blog
+---
+
+{block content}
+    <div class="container-fluid" id="blog">
+        <h1>Deprecated Posts</h1>
+
+        <div class="row">
+            {foreach $posts as $post}
+                {continueIf ! isset($post['deprecated']) || isset($post['lang'])}
+
+                {include "singlePostPreview", post => $post}
+            {/foreach}
+        </div>
+    </div>
+{/block}
