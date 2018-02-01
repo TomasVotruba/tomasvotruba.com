@@ -6,7 +6,7 @@ perex: '''
      <br><br>
      Today we'll explore a bit younger tool - <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">PHP CS Fixer</a> and we get <strong>from only finding the smelly spot to fixing it</strong>.
 '''
-related_posts: [48, 46, 37]
+related_items: [48, 46, 37]
 tweet: "How to Write Custom Fixer for #phpcsfixer"
 tweet_image: "/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png"
 ---

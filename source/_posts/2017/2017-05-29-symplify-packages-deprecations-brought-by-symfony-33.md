@@ -9,7 +9,7 @@ perex: '''
     I will show <strong>why and what packages were deprecated and how to upgrade your app
     to use Symfony 3.3 instead</strong>.
 '''
-related_posts: [40]
+related_items: [40]
 tweet: "What was changed and dropped from #symplify thanks to #symfony 3.3?"
 ---
 

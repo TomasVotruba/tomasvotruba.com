@@ -8,7 +8,7 @@ perex: '''
 '''
 tweet: "New post on my blog: Keep Your CHANGELOG Useful with Links #github #changelog #dx"
 tweet_image: "/assets/images/posts/2018/changelog/keep-a-changelog.jpg"
-related_posts:
+related_items:
 ---
 
 This post is written in Markdown. Would you read it, if it would look like this?

@@ -8,7 +8,7 @@ There are 3 solutions: put code <code>/libs</code> subdirectories, decouple to p
     <br><br>
 <strong>All of them are overkill to the solution I will show you to day - composer local packages.</strong>
 '''
-related_posts: [45, 25, 13, 12, 69]
+related_items: [45, 25, 13, 12, 69]
 tweet: "Have you heard about local packages? Try them #composerPHP #monolith #php"
 ---
 

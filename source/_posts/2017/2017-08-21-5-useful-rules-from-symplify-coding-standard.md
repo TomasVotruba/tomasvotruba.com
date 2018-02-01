@@ -7,7 +7,7 @@ perex: '''
      With over 13 000 downloads I think I should write about 5 of them you can use in your projects today.
 '''
 tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standard #php #architecture #php_codesniffer"
-related_posts: [49]
+related_items: [49]
 ---
 
 I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.

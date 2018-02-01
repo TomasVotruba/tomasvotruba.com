@@ -6,7 +6,7 @@ perex: '''
     <br><br>
     Today I will share <strong>3 main pillars of their architecture</strong>.
 '''
-related_posts: [46, 47, 37]
+related_items: [46, 47, 37]
 tweet: "How #php #codingstandard Tools Actually Works #tokens"
 ---
 

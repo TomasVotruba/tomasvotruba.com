@@ -9,7 +9,7 @@ perex: '''
     I Google then and found outdated or complicated sources, so I've decided to write down a reference post for those, who want to start with sniffs.
     Let's look what will show all you need (and nothing more) to <strong>know to write your first sniff</strong>.
 '''
-related_posts: [48, 47, 37]
+related_items: [48, 47, 37]
 tweet: "How to Write Custom Sniff for #phpCodeSniffer 3"
 ---
 

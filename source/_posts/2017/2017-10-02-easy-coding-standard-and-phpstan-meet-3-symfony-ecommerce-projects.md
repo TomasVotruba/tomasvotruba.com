@@ -10,7 +10,7 @@ perex: '''
 '''
 tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects #numbers #php"
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png"
-related_posts: [52]
+related_items: [52]
 ---
 
 ## Try It Yourself

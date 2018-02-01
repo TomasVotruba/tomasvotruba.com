@@ -11,7 +11,7 @@ perex: '''
 '''
 tweet: "What can we learn from nature cycles that #symfony and #php already naturally did? #monorepo #nature"
 tweet_image: "/assets/images/posts/2017/menstruation/together.png"
-related_posts: [25, 26]
+related_items: [25, 26]
 ---
 
 *Disclaimer: this post has no intention to put menstruation into any bad light. Exactly the opposite - I admire women and love to learn from them.*

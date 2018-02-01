@@ -6,7 +6,7 @@ perex: '''
     <br><br>
 Today I will show you: how to use <strong>decouple big templates to smaller and reusable snippets</strong>. Like Google Analytics code.
 '''
-related_posts: [29, 32, 34]
+related_items: [29, 32, 34]
 tweet: "#Statie 3: Reusable code snippets #php #static #github"
 ---
 

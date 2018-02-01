@@ -5,7 +5,7 @@ perex: '''
     After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some <strong>metadata files</strong>.
     What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer all these questions today.</strong>
 '''
-related_posts: [12, 25, 26, 45, 54]
+related_items: [12, 25, 26, 45, 54]
 tweet: "How to write #openSource in #php 2: Use package skeleton @travisCI"
 ---
 

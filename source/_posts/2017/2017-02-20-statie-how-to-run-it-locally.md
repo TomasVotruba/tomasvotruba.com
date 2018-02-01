@@ -6,7 +6,7 @@ perex: '''
     <br><br>
     That was the "pitch", now I will show you how to use it.
 '''
-related_posts: [32, 33, 34]
+related_items: [32, 33, 34]
 tweet: "#Statie 1: Up and Running locally #php #static #github"
 ---
 

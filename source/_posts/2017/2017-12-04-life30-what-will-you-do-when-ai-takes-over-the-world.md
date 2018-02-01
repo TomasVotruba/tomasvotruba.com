@@ -9,7 +9,7 @@ perex: '''
 '''
 tweet: "What will you do when #ai comes to your field? Do you think it might happen slower than Smart phone adoption? Life 3.0 by @tegmark might give you some answers #mustread"
 tweet_image: "/assets/images/posts/2017/life30/life30.jpg"
-related_posts: [56]
+related_items: [56]
 ---
 
 <br>

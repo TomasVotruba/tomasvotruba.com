@@ -9,7 +9,7 @@ perex: '''
 '''
 tweet: "Do you hate Coding Standards, but love #cleancode? Check these 4 helpful rules #php"
 tweet_image: "/assets/images/posts/2017/clean-checkers/dependency-drop.png"
-related_posts: [51, 48]
+related_items: [51, 48]
 ---
 
 

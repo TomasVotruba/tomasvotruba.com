@@ -6,7 +6,7 @@ perex: '''
     <br><br>
 Open-source extensions are more complex using many Nette\DI features, but today I will show you, how to <strong>start with one Nette\DI method and one service only</strong>.
 '''
-related_posts: [28]
+related_items: [28]
 tweet: "How to create your first #nettefw extension? #minimalism #php"
 ---
 

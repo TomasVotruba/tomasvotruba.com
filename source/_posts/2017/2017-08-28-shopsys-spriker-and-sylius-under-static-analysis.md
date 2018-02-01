@@ -8,7 +8,7 @@ perex: '''
 '''
 tweet: "#Shopsys, #Spryker & #Sylius under Static Analysis #symfony #php #ecommerce"
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal/shopsys.png"
-related_posts: [57]
+related_items: [57]
 ---
 
 

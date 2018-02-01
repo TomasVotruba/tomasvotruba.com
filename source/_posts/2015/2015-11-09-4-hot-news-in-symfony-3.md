@@ -7,7 +7,7 @@ perex: '''
     <br><br>
     **What changes and news it brings?**
 '''
-related_posts: [4]
+related_items: [4]
 ---
 
 Symfony already knows that a lot. The new version places great emphasis on the [DX (developer experience)](http://symfony.com/blog/making-the-symfony-experience-exceptional). It brings us a **simpler and more straightforward API**, **better decoupled components**, **standards [PSR-3](http://www.php-fig.org/psr/psr-3/) and [PSR-7](http://symfony.com/doc/current/cookbook/psr7.html) integration**. A lot of other innovations that will make writing applications just got more fun.
