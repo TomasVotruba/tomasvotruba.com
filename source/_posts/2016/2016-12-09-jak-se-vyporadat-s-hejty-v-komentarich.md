@@ -5,6 +5,8 @@ perex: "Na to se mě včera zeptal už asi pátý člověk. Jak se vypořádat s
 deprecated: true
 deprecated_since: "August 2017"
 deprecated_message: "This post is available only in Czech and whole website was moved to English."
+
+lang: cs
 ---
 
 Tenhle proces jsem se učil 1 rok jako maintainer [ApiGenu](github.com/apigen/apigen), kdy jsem s desítkami lidí vedl online-hate-wars a zjistil, že to nikam nevede. Pak jsem zkoušel jiné cesty. Úspěšnější.

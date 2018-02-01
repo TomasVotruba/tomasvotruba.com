@@ -7,6 +7,8 @@ perex: "Znáš pojmy jako hosting, doména, HTML, CSS, FTP, šablona, Wordpress 
 deprecated: true
 deprecated_since: "August 2017"
 deprecated_message: "This post is available only in Czech and whole website was moved to English."
+
+lang: cs
 ---
 
 Na [MyEagers konferenci](http://myeagers.beeager.com/) jsem se stal svědkem workshopu [Lekce svádění aneb jak to udělat online tak, aby Tě chtěli](https://www.facebook.com/events/885079758208224/permalink/896505960398937/). **Kopa šikovných hacků, které ti dají světelný náskok na tvé pracovní cestě**.
