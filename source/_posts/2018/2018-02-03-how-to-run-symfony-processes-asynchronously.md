@@ -6,7 +6,9 @@ perex: '''
     <br><br>
     Could we go 200 % faster by putting processes from serial to parallel?
 '''
-tweet: "New post on my blog: How to Run #Symfony Processes Asynchronously"
+tweet: "New post on my blog: How to Run #Symfony Processes Asynchronously #async"
+tested: true
+test_slug: ParameterToSymfonyController
 ---
 
 ## Process Run One by One
@@ -24,7 +26,7 @@ foreach ($splitConfiguration as $directory => $repository) {
 	}
 
 	// report exactly what happened, so it's easier to know result and debug 
-	$this->symfonyStyle->success(sprintf(
+	$symfonyStyle->success(sprintf(
 		'Split from "%s" to "%s" is done',
 		$directory,
 		$repository
@@ -96,13 +98,13 @@ while (count($activeProcesses)) {
 ##  3. Report their Success/Error Status
 
 ```php
-$this->symfonyStyle->success('Split was successful');
+$symfonyStyle->success('Split was successful');
 ```
 
 But how useful is this message compared to previous one?
 
 ```php
-$this->symfonyStyle->success(sprintf(
+$symfonyStyle->success(sprintf(
     'Split from "%s" to "%s" is done',
     $directory,
     $repository
@@ -141,7 +143,7 @@ foreach ($allProcessInfos as $processInfo) {
         throw new PackageToRepositorySplitException($process->getErrorOutput());
     }
 
-    $this->symfonyStyle->success(sprintf(
+    $>symfonyStyle->success(sprintf(
         'Push of "%s" directory to "%s" repository was successful',
         $processInfo['directory'],
         $processInfo['repository']
