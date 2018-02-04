@@ -25,7 +25,7 @@ foreach ($splitConfiguration as $directory => $repository) {
 		throw new PackageToRepositorySplitException($process->getErrorOutput());
 	}
 
-	// report exactly what happened, so it's easier to know result and debug 
+	// report exactly what happened, so it's easier to know result and debug
 	$symfonyStyle->success(sprintf(
 		'Split from "%s" to "%s" is done',
 		$directory,
@@ -49,7 +49,7 @@ Luckily, Symfony Process already **allows [standalone process](http://symfony.co
 
 ## What We Actually Need?
 
-Picking the right tool is important, since it vendor locks our code to package, but lets step back a little. 
+Picking the right tool is important, since it vendor locks our code to package, but lets step back a little.
 
 **What is the exact goal we need?**
 
@@ -64,7 +64,7 @@ $runningProccesses = [];
 
 foreach ($splitConfiguration as $directory => $repository) {
 	$process = new Process(sprintf('git subsplit %s:%s', $directory, $repository));
-	// start() doesn't wait until the process is finished, oppose to run() 
+	// start() doesn't wait until the process is finished, oppose to run()
 	$process->start();
 
     // store process for later, so we evaluate it's finished
@@ -72,9 +72,9 @@ foreach ($splitConfiguration as $directory => $repository) {
 }
 ```
 
-This foreach starts all processes in parallel. Without knowing they're finished or not. 
+This foreach starts all processes in parallel. Without knowing they're finished or not.
 
-**Don't forget to check that your CPU is not burned by running many processes at once** by limiting concurrency. 
+**Don't forget to check that your CPU is not burned by running many processes at once** by limiting concurrency.
 In our case it's only 8, so we survive this.
 
 ## 2. Wait Until They're Finished
@@ -113,7 +113,7 @@ $symfonyStyle->success(sprintf(
 
 And what if any processes failed?
 
-### Let's improve this 
+### Let's improve this
 
 ```diff
  $runningProccesses = [];
