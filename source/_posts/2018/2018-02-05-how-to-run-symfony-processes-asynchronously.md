@@ -8,7 +8,7 @@ perex: '''
 '''
 tweet: "New post on my blog: How to Run #Symfony Processes Asynchronously #async"
 tested: true
-test_slug: ParameterToSymfonyController
+test_slug: ProcessAsync
 ---
 
 ## Process Run One by One
