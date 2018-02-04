@@ -2,24 +2,16 @@
 id: 75
 title: "How to Run Symfony Processes Asynchronously"
 perex: '''
-    ...
+    It takes quite a long time to split monorepo packages: exactly **420 s for 8 packages** of Symplify.
+    <br><br>
+    Could we go 200 % faster by putting processes from serial to parallel?
 '''
 tweet: "New post on my blog: How to Run #Symfony Processes Asynchronously"
 ---
 
-@todo test?
+## Process Run One by One
 
-post - How to run multiple symfony process asynchronously
-
-
-It takes quite a long time to split monorepo packages: exactly **420 s for 8 packages** of Symplify.
-
-*Although there are faster way like [splish/lite](https://github.com/splitsh/lite), we aim on PHP + Git combination to allow PHP developers to extend the code and not.*
-
-
-- We needed to publish 
-
-### Process Run One by One
+This is our code now. Each process waits on each other - one is finished, then next starts.
 
 ```php
 foreach ($splitConfiguration as $directory => $repository) {
@@ -40,38 +32,50 @@ foreach ($splitConfiguration as $directory => $repository) {
 }
 ```
 
+## How to Go Async in PHP?
 
-We tried [spatie/async](@todo) but it turned out to be not solid, but rather magic [by passing service as serialized string to CLI that desirializes it and runs on own thread](@todo) causing other process commands fail on success message. It is probably good enought for Laravel, but not for me.
-
-
-### What are the other options?
-
-We could go [amp](...) or [reactphp](...), but wouldn't that be an overkill?
-
-Symfony Process is already stadalone process in own thread and allows [asynchronous runs](http://symfony.com/doc/current/components/process.html#running-processes-asynchronously).
+We tried [spatie/async](https://github.com/spatie/async) which has very nice README at first sight and works probably very well for simple functions. But it turned out to be rather magic [by passing service as serialized string](https://github.com/spatie/async/blob/master/src/Runtime/ParentRuntime.php) to [CLI that desirializes it and runs on own thread](https://github.com/spatie/async/blob/master/src/Runtime/ChildRuntime.php). It also caused other process commands fail on success message. It is probably good enought for Laravel, but not for my [SOLID standards](https://github.com/jupeter/clean-code-php#solid).
 
 
-### What we actually needed?
+### What are the Other options?
 
-1. To run all procceses at once
+We could go [amp](https://github.com/amphp/amp) or [reactphp](https://reactphp.org/), but wouldn't that be an overkill?
+
+There is also faster way like [splish/lite](https://github.com/splitsh/lite), but **we aim on PHP + Git combination so PHP developers could extend the code**.
+
+Luckily, Symfony Process already **allows [standalone process](http://symfony.com/doc/current/components/process.html#running-processes-asynchronously)** without waiting on each other.
+
+## What We Actually Need?
+
+Picking the right tool is important, since it vendor locks our code to package, but lets step back a little. 
+
+**What is the exact goal we need?**
+
+1. Run all processes at once
 2. Wait untill they're finished
 3. Report their success/error status
 
-
-### 1. To run all proccesses at once
+## 1. To run all Processes at Once
 
 ```php
 $runningProccesses = [];
 
 foreach ($splitConfiguration as $directory => $repository) {
 	$process = new Process(sprintf('git subsplit %s:%s', $directory, $repository));
+	// start() doesn't wait until the process is finished, oppose to run() 
 	$process->start();
 
+    // store process for later, so we evaluate it's finished
 	$runningProccesses[] = $process;
 }
 ```
 
-### 2. Wait untill they're finished
+This foreach starts all processes in parallel. Without knowing they're finished or not. 
+
+**Don't forget to check that your CPU is not burned by running many processes at once** by limiting concurrency. 
+In our case it's only 8, so we survive this.
+
+## 2. Wait Until They're Finished
 
 ```php
 while (count($activeProcesses)) {
@@ -89,36 +93,42 @@ while (count($activeProcesses)) {
 // here we know that all are finished
 ```
 
-###  3. Report their success/error status
+##  3. Report their Success/Error Status
 
 ```php
 $this->symfonyStyle->success('Split was successful');
 ```
 
-But how useful is this message compared to previous one? And what if any processes failed?
+But how useful is this message compared to previous one?
 
 ```php
-$this->symfonyStyle->success(sprintf('Split from "%s" to "%s" is done', $directory, $repository));
+$this->symfonyStyle->success(sprintf(
+    'Split from "%s" to "%s" is done',
+    $directory,
+    $repository
+));
 ```
 
-Let's improve this: 
+And what if any processes failed?
+
+### Let's improve this 
 
 ```diff
-$runningProccesses = [];
+ $runningProccesses = [];
 +$allProcessInfos = [];
 
-foreach ($splitConfiguration as $directory => $repository) {
-	$process = new Process(sprintf('git subsplit %s:%s', $directory, $repository));
-	$process->start();
+ foreach ($splitConfiguration as $directory => $repository) {
+     $process = new Process(sprintf('git subsplit %s:%s', $directory, $repository));
+     $process->start();
 
-	$runningProccesses[] = $process;
-+	// value object with types would be better/faster here, but for sake of example, array is used
-+	$allProcessInfos[] = [
-+		'process' => $process,
+	 $runningProccesses[] = $process;
++    // value object with types would be better and faster here, this is just example
++    $allProcessInfos[] = [
++        'process' => $process,
 +        'directory' => $subdirectory,
 +        'repository' => $repository
-+	];
-}
++    ];
+ }
 ```
 
 So final reporting would look like this:
@@ -140,24 +150,20 @@ foreach ($allProcessInfos as $processInfo) {
 ```
 
 
-### 203 % Faster Performance
+### Speed up From 420 to 139 s
+
+Symplify has 8 packages to build at the moment. Putting split commands to async had amazing improvement!
 
 <a href="https://github.com/Symplify/Symplify/pull/620" class="btn btn-dark btn-sm">
     <em class="fa fa-github fa-fw"></em>
     See pull-request #620
 </a>
 
-@todo screens from PR
-
-
-420 s
-=>
-139 s
 
 
 That's it!
 
 <br><br>
 
-pyHpa async nurs!
+pyHpa ansyc rusn!
 
