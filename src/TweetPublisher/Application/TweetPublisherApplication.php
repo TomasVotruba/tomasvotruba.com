@@ -60,8 +60,8 @@ final class TweetPublisherApplication
         }
 
         $tweetsToPublish = $this->unpublishedTweetsResolver->excludePublishedTweets(
-            $this->twitterApiWrapper->getPublishedTweets(),
-            $this->postTweetsProvider->provide()
+            $this->postTweetsProvider->provide(),
+            $this->twitterApiWrapper->getPublishedTweets()
         );
 
         if (! count($tweetsToPublish)) {
@@ -71,8 +71,7 @@ final class TweetPublisherApplication
             return;
         }
 
-        /** @var Tweet $tweet */
-        $tweet = array_pop($tweetsToPublish);
+        $tweet = $this->getMostRecentTweet($tweetsToPublish);
 
         $this->tweet($tweet);
 
@@ -102,5 +101,13 @@ final class TweetPublisherApplication
         } else {
             $this->twitterApiWrapper->publishTweet($tweet->getText());
         }
+    }
+
+    /**
+     * @param Tweet[] $tweetsToPublish
+     */
+    private function getMostRecentTweet(array $tweetsToPublish): Tweet
+    {
+        return array_shift($tweetsToPublish);
     }
 }
