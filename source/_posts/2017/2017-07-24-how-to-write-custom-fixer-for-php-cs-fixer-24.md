@@ -19,7 +19,7 @@ When a coding standard tool finds over 1000 violations in our code is nice to kn
 
 ### Find & Fix It
 
-That main difference of PHP CS Fixer to PHP_CodeSniffer is that **every Fixer has to fix issues it finds**. That's why there is no `LineLenghtFixer`, because fixing line length is difficult to automate.
+That main difference of PHP CS Fixer to PHP_CodeSniffer is that **every Fixer has to fix issues it finds**. That's why there is no `LineLengthFixer`, because fixing line length is difficult to automate.
 
 Personally I like PHP CS Fixer a bit more, **because of more friendlier API, active community and openness to 3rd party packages**:
 

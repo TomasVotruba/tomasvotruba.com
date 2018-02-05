@@ -28,7 +28,7 @@ It works, but it breaks [SOLID encapsulation of dependencies](https://github.com
 
 **What if we need a service** to pay a registration fee to our bank account?
 
-Since [Symfony 2.8 with autowiring](https://symfony.com/blog/new-in-symfony-2-8-service-auto-wiring) we can go for contructor injection with no obstacles:
+Since [Symfony 2.8 with autowiring](https://symfony.com/blog/new-in-symfony-2-8-service-auto-wiring) we can go for constructor injection with no obstacles:
 
 ```php
 <?php declare(strict_types=1);
@@ -200,7 +200,7 @@ Since Symfony 3.3 we can use [PSR-4 service loading](//blog/2017/05/07/how-to-re
 How changed previous steps?
 
 - <strike>register controller manually</strike> → use PSR4 **once for all services**
-- <strike>pass the paramter to contructor</strike> → use binding **once for all services**
+- <strike>pass the parameter to constructor</strike> → use binding **once for all services**
 - autowire the rest
 
 ```yaml

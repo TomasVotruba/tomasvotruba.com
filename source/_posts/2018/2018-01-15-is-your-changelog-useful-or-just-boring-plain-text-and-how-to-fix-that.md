@@ -85,7 +85,7 @@ To find an answer:
 
 I've asked all these questions when I was investigating bug in packages I used.
 
-Often, release descriptions are not so detailed. In that case it is **really helpful to have comparision to previous version**, e.g. [3.1 to 3.2](https://github.com/Symplify/Symplify/compare/v3.1.0...v3.2.0).
+Often, release descriptions are not so detailed. In that case it is **really helpful to have comparison to previous version**, e.g. [3.1 to 3.2](https://github.com/Symplify/Symplify/compare/v3.1.0...v3.2.0).
 
 But all of this requires time. A time that maintainer usually puts to new features or resolving bugs.
 
