@@ -143,7 +143,7 @@ foreach ($allProcessInfos as $processInfo) {
         throw new PackageToRepositorySplitException($process->getErrorOutput());
     }
 
-    $>symfonyStyle->success(sprintf(
+    $symfonyStyle->success(sprintf(
         'Push of "%s" directory to "%s" repository was successful',
         $processInfo['directory'],
         $processInfo['repository']
