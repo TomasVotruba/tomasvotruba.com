@@ -120,7 +120,7 @@ class CacheProductsCommand extends Command
     public function execute()
     {
         $allProducts = $this->entityManager->getRepository(Product::class)
-            ->fetcAll();
+            ->fetchAll();
 
         // cache them all
     }
@@ -248,7 +248,7 @@ class CacheProductsCommand extends Command
 
     public function execute()
     {
-        $allProducts = $productRepository->fetcAll();
+        $allProducts = $productRepository->fetchAll();
 
         // cache them all
     }
