@@ -132,13 +132,30 @@ The very similar **improvement 23 %** was in [Group Bourdon Test](https://www.jo
 Just select all 4-dots images:
 
 <img src="/assets/images/posts/2018/polyphasic/working.png" class="img-thumbnail">
-
+ 
 <br>
+
+## Win-Win
+
+Not all hypothesis were confirmed. But even though I was ill in phase 4 (see section 5.2), the results were more then clear**. Polyphasic sleep improved my attention, working memory and short term memory from 23 % to 63 %**.
+
+And not only that. And **I also got extra 1,5 hours a day**!
+
+
+## Polyphasic Sleep - Universal Tool to Boost Production?
+
+It depends on what you need in your life. I needed time to produce because I got many time-demanding goals in that time. In time I learned to prioritize, to focus on what is important and to flow in a deep works session.
+ 
+I still take a nap roughly once a week and feel fresh, when day is hard. And if I ever be father of another baby, I'd be happy to polyphase with him or her, since it's babies natural sleep schedule.
+
+## Do you Need More Time? Try it
+ 
+Would you use extra hour a day? Have you tried it? Nap a day won't hurt and you don't even have to fall asleep. Modern medicine confirms that mindfulness meditation (which polyphasic sleep often is) has great benefits for your mind.   
 
 
 ### Where is What in Thesis?
 
-I picked the most interesting parts for you, so you can avoid reading whole 63 pages and go right to the part that you're interested in:
+I picked the most interesting parts for you, so you can avoid [reading whole 63 pages](https://is.muni.cz/th/363896/fss_b/Tomas-Votruba-Psychological-Impacts-of-Polyphasic-Sleep.pdf) and go right to the part that you're interested in:
 
 - 4.4 *Hypothesis* - what needs to be validated
 - 4.5 *Materials* - test battery, how it looked like, what exactly is measured
@@ -153,5 +170,4 @@ Just go to [Google Docs](https://docs.google.com/document/d/12gTjk_q403nt9nhqZTo
 <br><br>
 
 Happy napping!
-
 
