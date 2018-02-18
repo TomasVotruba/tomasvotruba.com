@@ -49,7 +49,7 @@ final class UnpublishedTweetsResolverTest extends AbstractContainerAwareTestCase
             );
         }
 
-        $this->assertGreaterThanOrEqual(16, count($unpublishedTweets));
+        $this->assertGreaterThanOrEqual(10, count($unpublishedTweets));
     }
 
     public function testPostTweetsProvider(): void
