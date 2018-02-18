@@ -1,24 +1,27 @@
 ---
 id: 77
-title: "Retor: Part 1 - What and How"
+title: "Rector: Part 1 - What and How"
 perex: '''
     Rector is a PHP tool that handles 2 things: **instant upgrades** and **architecture refactorings**.
-    <br>
+    <br><br>
     What exactly Rector does and how it works?  
 '''
-todo_tweet: "..."
-todo_tweet_image: "..."
+tweet: "New post on my blog: Rector: Part 1 - What and How #php #ast #refactoring #instantupgrades"
 related_items: [63] 
 ---
 
-# What is Rector?
+## What is Rector?
 
 Rector is CLI PHP tool build on [Symfony Components](https://symfony.com/components) that changes your PHP code for better. 
 He does only what you tell him to do. You can use him to *instantly upgrade* your application or to do *architecture refactorings* once for the whole codebase.
 
 Rector won't do your job. It's here to **do the boring stuff for you**. It's similar help like coding standard tools help with code reviews - move focus from spaces and commas to architecture of the code.
 
-# What are Instant Upgrades?
+### Where it is?
+
+You can [find it on Github](https://github.com/rectorphp/rector). It has now [6 contributors](https://github.com/rectorphp/rector/graphs/contributors) in total. I want to thank young talented PHP developer [Gabriel Caruso](https://github.com/carusogabriel) from Brazil for his great contributions since December 2017 that pushed Rector to brand new level.
+
+## What are Instant Upgrades?
 
 *I'll show examples on [Symfony](http://symfony.com/), because that's the framework I know and love the best.*
 
@@ -26,8 +29,14 @@ Let's say you have project on Symfony 2.7. And you have huge `service.yml`. You 
 
 Would you like to do this upgrade work manually? No. You can use Rector instead.
  Just run it with target `level` of `symfony33` and it will all change he knows about.
+ 
+Such command looks like this:
+ 
+```bash
+vendor/bin/rector process src --level symfony33
+```
 
-# What are Architecture Refactorings?
+## What are Architecture Refactorings?
 
 The great task Rector can handle is to architecture refactorings. Your code might use a framework, but that just 50 % of the code. The other 50 % is up to you, how you decide to use it - I mean static calls, services locators, facades over dependency injections etc. 
 
@@ -88,12 +97,7 @@ class LectureController extends BaseController
 
 This can Rector handle too.
 
-
-
 Do you use Laravel and want to move from facades to constructor injection? Rector can help you. 
-
-
-
 
 ## How it Works?
 
@@ -103,9 +107,39 @@ Then it finds specific place in the code, e.g. all variables that containt `Symf
  
 Then it changes it into 'isMethodCacheable()' (see [UPGRADE-4.0.md](https://github.com/symfony/symfony/blob/master/UPGRADE-4.0.md#httpfoundation)).
 
-### Growing AST PHP Family
+Such configuration looks like this (as shown in [`README`](https://github.com/rectorphp/rector#change-a-method-name)):
 
-Similar approach with `nikic\php-parser` uses [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/), but unfortunately it's read-only even for deterministic (1 error = exactly 1 solution) cases. A bit further is [`vimeo/psalm`](https://github.com/vimeo/psalm) by [Matthew Brown](https://github.com/muglug), that fixes such code.
+```yaml
+# rector.yml
+rectors:
+    # prepared service that handles method name changes
+    Rector\Rector\Dynamic\MethodNameReplacerRector:
+        # type to look for
+        'Symfony\Component\HttpFoundation\Request':
+            # old method name: new method name
+            'isMethodSafe': 'isMethodCacheable'
+```
 
-# Google has Own "Rector"
+### Member of Big AST PHP Family
 
+Rector is not the only one who uses `nikic\php-parser` for context-aware operation on your code.
+
+You probably heard of [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). But unfortunately it's read-only for deterministic cases = when 1 error has exactly 1 possible solution. 
+
+A bit further is another static analysis tool - [`vimeo/psalm`](https://github.com/vimeo/psalm) by [Matthew Brown](https://github.com/muglug), which fixes such code. Great job Matthew!
+
+## Easter Egg: Has Google Own "Rector"?
+
+This *setup and forget* approach is so addictive, that Google must have it too, right?
+
+And it does! I found 4-page case study *[Large-Scale Automated Refactoring Using ClangMR](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41342.pdf)*, ) that was [presented by *Hyrum Wright* on CppCon2014](https://www.youtube.com/watch?v=ZpvvmvITOrk) in 57 minutes. Hyrum doesn't work at Google anymore (as he wrote me), yet I still love his detailed and practical talk. 
+
+I'm still amazed how they choose approach, that is 90 % similar to Rector, just for C++.  
+
+<br>
+
+In next post, I'll wrote about "Why" is Rector here.
+ 
+<br>
+ 
+Happy coding!
