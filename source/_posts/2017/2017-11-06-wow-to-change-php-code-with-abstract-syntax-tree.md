@@ -102,7 +102,7 @@ use PhpParser\Node;
 use PhpParser\NodeVisitorAbstract;
 use PhpParser\Node\Stmt\ClassMethod;
 
-final class ChangeMethodNameNodeVisitor extend NodeVisitorAbstract
+final class ChangeMethodNameNodeVisitor extends NodeVisitorAbstract
 {
     public function enterNode(Node $node)
     {
@@ -126,7 +126,7 @@ use PhpParser\Node\Name;
 use PhpParser\Node\Stmt\ClassMethod;
 use PhpParser\NodeVisitorAbstract;
 
-final class ChangeMethodNameNodeVisitor extend NodeVisitorAbstract
+final class ChangeMethodNameNodeVisitor extends NodeVisitorAbstract
 {
     public function enterNode(Node $node)
     {
