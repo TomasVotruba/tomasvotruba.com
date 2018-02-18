@@ -1,6 +1,6 @@
 ---
 id: 2
-title: 4 How News in Symfony 3
+title: 4 Hot News in Symfony 3
 perex: '''
     In November 2015 except for a [PHP 7](https://wiki.php.net/rfc/php7timeline) and [Drupal 8](https://www.drupal.org/node/2605142),
     Symfony 3 is about to come.
