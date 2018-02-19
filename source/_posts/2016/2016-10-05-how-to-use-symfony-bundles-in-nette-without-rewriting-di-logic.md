@@ -35,7 +35,7 @@ That's why you see "double" integrations for 3rd party packages like:
 - for Symfony: [Doctrine/DoctrineMigrationsBundle](https://github.com/doctrine/DoctrineMigrationsBundle/)
 - for Nette: [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations)
 
-**[MessageBus - CQRS](http://simplebus.github.io/)**
+**[MessageBus - CQRS](http://docs.simplebus.io/)**
 
 - for Symfony: [SimpleBus/SymfonyBridge](https://github.com/SimpleBus/SymfonyBridge)
 - for Nette: [newPOPE/Nette-CQRS-Commands](https://github.com/newPOPE/Nette-CQRS-Commands)

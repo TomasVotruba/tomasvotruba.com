@@ -8,7 +8,7 @@ deprecated_since: "March 2017"
 deprecated_message: '''
     I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - <strong><a href="/blog/2017/03/27/why-is-doctrine-dying/">read a post here</a></strong>.
     <br><br>
-    It is still available <a href="https://github.com/deprecatedPackages/DoctrineFilters">here for inspiration</a> though.
+    It's been revived by Tomáš Pilař on <a href="https://github.com/Lekarna/DoctrineFilters">Lekarna/DoctrineFilters</a> though.
 '''
 ---
 
@@ -83,7 +83,7 @@ That's all we really need to do.
 
 ## Decoupling of Doctrine Filter in 4 steps
 
-This is already possible thanks to [Symplify/ModularDoctrineFilters](https://github.com/Symplify/ModularDoctrineFilters) package.
+This is already possible thanks to [Lekarna/ModularDoctrineFilters](https://github.com/Lekarna/DoctrineFilters) package.
 
 Let's try it together!
 
