@@ -81,16 +81,16 @@ class LectureController extends BaseController
     /**
      * @var LoggerInterface
      */
-    private $loggerInterface;
+    private $logger;
 
-    public function __construct(LoggerInterface $loggerInterface)
+    public function __construct(LoggerInterface $logger)
     {
-        $this->loggerInterface = $loggerInterface;
+        $this->logger = $logger;
     }
 
     public function listAction()
     {
-        $this->loggerInterface->log('it happened!');
+        $this->logger->log('it happened!');
     }
 }
 ```
