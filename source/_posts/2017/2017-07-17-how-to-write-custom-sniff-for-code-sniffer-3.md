@@ -53,7 +53,7 @@ final class ExceptionNameSniff implements Sniff
 
 A `register()` method returns list of tokens to subscribe to. Which token should we put there?
 
-*Note: You can find all tokens in [PHP manual](http://php.net/manual/en/tokens.php).*
+*Note: You can find all tokens in [PHP manual](https://php.net/manual/en/tokens.php).*
 
 From "An exception class should have "Exception" suffix." I thought the `T_CLASS` would be ideal:
 

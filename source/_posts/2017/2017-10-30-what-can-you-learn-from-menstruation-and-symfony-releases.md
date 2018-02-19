@@ -79,7 +79,7 @@ So simple yet so amazing. I don't think about "when will the new Symfony come?" 
 
 <img src="/assets/images/posts/2017/menstruation/php.png" class="img-thumbnail">
 
-I recall wondering when PHP 5.5, 5.6 or 7.0 will be out. No more thanks to **[yearly period beginning of December](http://php.net/supported-versions.php)** since PHP 7.0.
+I recall wondering when PHP 5.5, 5.6 or 7.0 will be out. No more thanks to **[yearly period beginning of December](https://php.net/supported-versions.php)** since PHP 7.0.
 
 
 ### Menstruation Synchronization

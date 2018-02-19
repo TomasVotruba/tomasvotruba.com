@@ -12,7 +12,7 @@ deprecated_message: "This post is available only in Czech and whole website was 
 lang: cs
 ---
 
-Symfony už toho umí opravdu hodně. Nová verze klade velký důraz především na [DX (developer experience)](http://symfony.com/blog/making-the-symfony-experience-exceptional). Přináší nám **jednodušší a jednoznačné API**, **lepší decoupling komponent**, **integraci standardů [PSR-3](http://www.php-fig.org/psr/psr-3/) a [PSR-7](http://symfony.com/doc/current/cookbook/psr7.html)**. A spoustu dalších novinek, díky kterým bude psaní aplikací zase o něco zábavnější.
+Symfony už toho umí opravdu hodně. Nová verze klade velký důraz především na [DX (developer experience)](https://symfony.com/blog/making-the-symfony-experience-exceptional). Přináší nám **jednodušší a jednoznačné API**, **lepší decoupling komponent**, **integraci standardů [PSR-3](https://www.php-fig.org/psr/psr-3/) a [PSR-7](https://symfony.com/doc/current/cookbook/psr7.html)**. A spoustu dalších novinek, díky kterým bude psaní aplikací zase o něco zábavnější.
 
 
 ### V tomto článku se dozvíš
@@ -22,7 +22,7 @@ Symfony už toho umí opravdu hodně. Nová verze klade velký důraz předevš�
 
 ## Kdy vyjde která verze?
 
-Zažil jsi migraci ze Symfony 1 na 2 a chceš se vyhnout podobnému masakru? Neměj obavy - novinek je sice spousta, ale Symfony se poučilo a nedá dopustit na [zpětnou kompatibilitu](http://symfony.com/doc/current/contributing/code/bc.html).
+Zažil jsi migraci ze Symfony 1 na 2 a chceš se vyhnout podobnému masakru? Neměj obavy - novinek je sice spousta, ale Symfony se poučilo a nedá dopustit na [zpětnou kompatibilitu](https://symfony.com/doc/current/contributing/code/bc.html).
 
 Migrace Symfony 2 na 3 bude značně zjednodušena tím, že **spolu s verzí 3 vyjde i verze 2.8**. **Ta bude mít všechny nové featury verze 3 a bude obsahovat BC vrstvu k sérii 2.x**. Verze 2.8 bude long term support (LTS) - můžeš tak počítat **s podporou až do konce roku 2018**.
 

@@ -16,7 +16,7 @@ deprecated_message: '''
 
 If you don't know Doctrine Filters, [KnpUniversity](https://knpuniversity.com/) has very nice, short and funny tutorial about them. [Go check it](https://knpuniversity.com/screencast/doctrine-queries/filters), I'll wait here...
 
-> Are you busy and smart? Just check [slides 13 to 31](http://www.slideshare.net/rosstuck/extending-doctrine-2-for-your-domain-model-13257781/13) from [@RossTuck](https://twitter.com/rosstuck)'s presentation about cool features of Doctrine.
+> Are you busy and smart? Just check [slides 13 to 31](https://www.slideshare.net/rosstuck/extending-doctrine-2-for-your-domain-model-13257781/13) from [@RossTuck](https://twitter.com/rosstuck)'s presentation about cool features of Doctrine.
 
 So now you know, that to enable filter in Symfony you have to:
 

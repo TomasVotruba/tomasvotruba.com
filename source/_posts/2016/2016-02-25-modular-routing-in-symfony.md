@@ -35,8 +35,8 @@ final class AppKernel extends Kernel
 ## So, what you can do?
 
 - add your routes manually to `routing.yml` - **requires routing.yml modification**
-- implement [custom Route Loader](http://symfony.com/doc/current/cookbook/routing/custom_route_loader.html) - **requires routing.yml modification**
-- use [Symfony CMF RoutingBundle](https://github.com/symfony-cmf/RoutingBundle) and hook to [ChainRouter](http://symfony.com/doc/current/cmf/components/routing/chain.html) - **requires lots of reading and programming**
+- implement [custom Route Loader](https://symfony.com/doc/current/cookbook/routing/custom_route_loader.html) - **requires routing.yml modification**
+- use [Symfony CMF RoutingBundle](https://github.com/symfony-cmf/RoutingBundle) and hook to [ChainRouter](https://symfony.com/doc/current/cmf/components/routing/chain.html) - **requires lots of reading and programming**
 
 <br>
 

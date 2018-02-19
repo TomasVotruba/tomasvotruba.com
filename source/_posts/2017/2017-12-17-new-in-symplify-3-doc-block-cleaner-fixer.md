@@ -2,7 +2,7 @@
 id: 68
 title: "New in Symplify 3: DocBlock Cleaner Fixer"
 perex: '''
-    Focus on docblock has increased thanks to [PHP 7 scalar types](http://php.net/manual/en/migration70.new-features.php#migration70.new-features.scalar-type-declarations) and PHPStan with [intersection and union types](https://medium.com/@ondrejmirtes/phpstan-0-9-a-huge-leap-forward-1e9b0872d1cc). Thanks to that, more and more **docblocks become just visual noise** causing [cognitive overload](https://en.wikipedia.org/wiki/Cognitive_load).
+    Focus on docblock has increased thanks to [PHP 7 scalar types](https://php.net/manual/en/migration70.new-features.php#migration70.new-features.scalar-type-declarations) and PHPStan with [intersection and union types](https://medium.com/@ondrejmirtes/phpstan-0-9-a-huge-leap-forward-1e9b0872d1cc). Thanks to that, more and more **docblocks become just visual noise** causing [cognitive overload](https://en.wikipedia.org/wiki/Cognitive_load).
     <br><br>
     Symplify 3 introduces a new help hand - **fixer that cleans doc block noise for you and makes your code more valuable to the reader**.
 '''

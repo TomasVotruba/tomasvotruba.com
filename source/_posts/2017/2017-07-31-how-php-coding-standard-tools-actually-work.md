@@ -46,7 +46,7 @@ We see PHP as:
 <?php echo "hi";
 ```
 
-Coding Standard tools see it in [tokens](http://php.net/manual/en/tokens.php):
+Coding Standard tools see it in [tokens](https://php.net/manual/en/tokens.php):
 
 ```php
 $phpCodeInTokens = token_get_all('<?php echo "hi";');

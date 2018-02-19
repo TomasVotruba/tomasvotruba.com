@@ -10,12 +10,12 @@ perex: '''
 related_items: [4]
 ---
 
-Symfony already knows that a lot. The new version places great emphasis on the [DX (developer experience)](http://symfony.com/blog/making-the-symfony-experience-exceptional). It brings us a **simpler and more straightforward API**, **better decoupled components**, **standards [PSR-3](http://www.php-fig.org/psr/psr-3/) and [PSR-7](http://symfony.com/doc/current/cookbook/psr7.html) integration**. A lot of other innovations that will make writing applications just got more fun.
+Symfony already knows that a lot. The new version places great emphasis on the [DX (developer experience)](https://symfony.com/blog/making-the-symfony-experience-exceptional). It brings us a **simpler and more straightforward API**, **better decoupled components**, **standards [PSR-3](https://www.php-fig.org/psr/psr-3/) and [PSR-7](https://symfony.com/doc/current/cookbook/psr7.html) integration**. A lot of other innovations that will make writing applications just got more fun.
 
 
 ## When is What Version Out?
 
-Have you migrated from Symfony 1 to 2 and do you want to avoid a similar massacre? Don't worry - although there are lot of news, Symfony now respects [backward compatibility promise](http://symfony.com/doc/current/contributing/code/bc.html).
+Have you migrated from Symfony 1 to 2 and do you want to avoid a similar massacre? Don't worry - although there are lot of news, Symfony now respects [backward compatibility promise](https://symfony.com/doc/current/contributing/code/bc.html).
 
 Migration Symfony 2 to 3 will be greatly simplified by the fact that **along with the version 3 will be released and version 2.8**. **It will have all the new feature in version 3 and will include BC layer to the 2.x series**. Version 2.8 will be long term supported (LTS) - so you can **count on the support until the end of 2018**.
 

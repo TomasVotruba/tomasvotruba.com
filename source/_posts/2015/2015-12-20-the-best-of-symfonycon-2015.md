@@ -25,7 +25,7 @@ Fabien mentioned over 20 people he had met on his journey and showed who contrib
 
 ### 1 Thing Worth Remembering
 
-Among others, he introduced a [new release process](http://symfony.com/blog/improving-the-symfony-release-process), that will facilitate <em>continuous upgrades</em>.
+Among others, he introduced a [new release process](https://symfony.com/blog/improving-the-symfony-release-process), that will facilitate <em>continuous upgrades</em>.
 
 <div class="text-center">
     <img class="img-thumbnail" src="/assets/images/posts/2015/symfonycon/symfonycon-release-process.jpg">
@@ -76,7 +76,7 @@ They call him **The Gateway** ([slajd](https://speakerdeck.com/odolbeau/symfony-
 
 ## 3. New Symfony Tips and Tricks
 
-<a href="http://www.slideshare.net/javier.eguiluz/new-symfony-tips-tricks-symfonycon-paris-2015" class="btn btn-warning btn-sm">
+<a href="https://www.slideshare.net/javier.eguiluz/new-symfony-tips-tricks-symfonycon-paris-2015" class="btn btn-warning btn-sm">
     <em class="fa fa-slideshare fa-fw"></em>
     See Slides
 </a>
@@ -98,7 +98,7 @@ And now something for everyone:
 
 
 
-He shared with us about tips and tricks that gathered over the last year - not only for writing [Week of Symfony](http://symfony.com/blog/category/a-week-of-symfony).
+He shared with us about tips and tricks that gathered over the last year - not only for writing [Week of Symfony](https://symfony.com/blog/category/a-week-of-symfony).
 
 For me it was the most interesting lecture from which I took a large number of tips in their own practice.
 
@@ -111,7 +111,7 @@ The lecture was full of useful tips that simply could not absorb all at once.
 
 I was pleased that it was even a few tips from [Martin Hasoň](https://twitter.com/hasonm).
 
-This inspired me a great overview and blink on [the version from last year](http://www.slideshare.net/javier.eguiluz/symfony-tips-and-tricks).
+This inspired me a great overview and blink on [the version from last year](https://www.slideshare.net/javier.eguiluz/symfony-tips-and-tricks).
 
 
 ### 1 Thing Worth Remembering
@@ -134,7 +134,7 @@ public function testContainerServices()
 
 ## 4. Symfony: Your next Microframework
 
-<a href="http://www.slideshare.net/weaverryan/symfony-your-next-microframework-symfonycon-2015" class="btn btn-warning btn-sm">
+<a href="https://www.slideshare.net/weaverryan/symfony-your-next-microframework-symfonycon-2015" class="btn btn-warning btn-sm">
     <em class="fa fa-slideshare fa-fw"></em>
     See Slides
 </a>
@@ -169,7 +169,7 @@ Thus, when used MicroKernel?
 
 ### Other Talks Worth of Click
 
-- *Marc Morena* - When e-commerce meets Symfony ([see slides](http://www.slideshare.net/MarcMorera/when-ecommercemeetssymfonyparissymfonycon2015))
+- *Marc Morena* - When e-commerce meets Symfony ([see slides](https://www.slideshare.net/MarcMorera/when-ecommercemeetssymfonyparissymfonycon2015))
 - *Benjamin Eberlei* - Doctrine 2 - to use or not to use ([see slides](https://qafoo.com/resources/presentations/symfonycon_paris_2015/doctrine2_to_use_or_not_to_use.html))
 
 **All available slides from the conference to find [Joind.in](https://joind.in/event/symfonycon-paris-2015/schedule/list)**.

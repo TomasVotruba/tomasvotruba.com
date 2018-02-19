@@ -13,7 +13,7 @@ tweet: "How to write #openSource in #php 1: Create a repository on @Github"
 
 ## Meet Github, OS's best friend
 
-If not already, [register on Github](http://github.com). It's a place where all open-source lives and breathes. For free!
+If not already, [register on Github](https://github.com). It's a place where all open-source lives and breathes. For free!
 
 Then create a repository with <a href="https://github.com/new">New Repository</a> button.
 
