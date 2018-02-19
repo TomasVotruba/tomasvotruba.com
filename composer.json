@@ -6,11 +6,11 @@
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0",
-        "nikic/php-parser": "v4.0.0alpha3"
+        "nikic/php-parser": "v4.0.0beta1"
     },
     "require-dev": {
         "symplify/easy-coding-standard": "^3.2",
-        "phpunit/phpunit": "^6.5",
+        "phpunit/phpunit": "^7.0",
         "phpstan/phpstan-shim": "^0.9",
         "symfony/console": "^4.0",
         "spatie/http-status-check": "^2.5",
