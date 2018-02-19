@@ -28,7 +28,7 @@ You can [find it on Github](https://github.com/rectorphp/rector). It has now [6 
 Let's say you have a project on Symfony 2.7. And you have a huge `service.yml`. You know that Symfony 2.8/3.0 brought an awesome [autowiring](https://symfony.com/blog/new-in-symfony-2-8-service-auto-wiring) feature that evolved to pure awesomenes in Symfony 3.3 and [PSR-4 services feature](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration).
 
 Would you like to do this upgrade work manually? No. You can use Rector instead.
- Just run it with target `level` of `symfony33` and it will change everything it knows about.
+Just run it with target `level` of `symfony33` and it will change everything it knows about.
 
 Such a command looks like this:
 
