@@ -83,7 +83,7 @@ Managing dependencies for controllers in same way is complicated. To apply the s
             # _controller: AppBundle:Post:list
     ```
 
-    > This difference is so difficult to spot, that it [created question on StackOverflow](http://stackoverflow.com/a/27221394/1348344).
+    > This difference is so difficult to spot, that it [created question on StackOverflow](https://stackoverflow.com/a/27221394/1348344).
 
 3. Finally, you have to use service name and single colon for referring:
 
@@ -92,7 +92,7 @@ Managing dependencies for controllers in same way is complicated. To apply the s
     $this->forward('post_controller:listAction'));
     ```
 
-> There is [nice answer on StackOverflow explaining with more details](http://stackoverflow.com/questions/31366074/how-exactly-can-i-define-a-controller-as-service-using-annotations/31366589#31366589).
+> There is [nice answer on StackOverflow explaining with more details](https://stackoverflow.com/questions/31366074/how-exactly-can-i-define-a-controller-as-service-using-annotations/31366589#31366589).
 
 This process is exhausting already and difficult to remember.
 
@@ -100,7 +100,7 @@ This process is exhausting already and difficult to remember.
 
 Even if you do manage to finish these steps, **these issues will appear**:
 
-- [drawback](http://stackoverflow.com/questions/33857659/symfony-autowiring-services-with-the-controller) of FrameworkBundle, when it tries to autowire controller
+- [drawback](https://stackoverflow.com/questions/33857659/symfony-autowiring-services-with-the-controller) of FrameworkBundle, when it tries to autowire controller
     <img src="http://i.stack.imgur.com/r4cBD.png">
 
 - it's complicated to apply constructor dependency injection for extended 3rd party controllers (Sonata, FOS...), due to missing step 2 and 3 (that were mentioned above) and the "bundle naming" inside the bundle's code

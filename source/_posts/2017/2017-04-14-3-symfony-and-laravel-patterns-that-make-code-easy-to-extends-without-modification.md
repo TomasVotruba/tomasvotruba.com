@@ -82,7 +82,7 @@ Back to Matrix world: imagine you can listen to every phone booth. Let's say you
     <img src="/assets/images/posts/2017/extendable-open-source/booth.png" class="img-thumbnail">
 </div>
 
-This approach is implemented in PHP under name of EventDispatcher. While working with Symfony, **events gave me very similar feeling of freedom** - [in docs](http://symfony.com/doc/current/reference/events.html#kernel-events) as well in small book [A Year with Symfony](https://leanpub.com/a-year-with-symfony).
+This approach is implemented in PHP under name of EventDispatcher. While working with Symfony, **events gave me very similar feeling of freedom** - [in docs](https://symfony.com/doc/current/reference/events.html#kernel-events) as well in small book [A Year with Symfony](https://leanpub.com/a-year-with-symfony).
 
 Do you want simple example of such listening script? [Check this tested post](https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/) with all code snippets you need.
 
@@ -139,7 +139,7 @@ This is most powerful and less known architecture pattern.
 
 ### Where it came from?
 
-Do you know [service tagging in Symfony](http://symfony.com/doc/current/reference/dic_tags.html)?
+Do you know [service tagging in Symfony](https://symfony.com/doc/current/reference/dic_tags.html)?
 
 
 ```yaml
@@ -156,7 +156,7 @@ All services of `EventSubscriber` type are collected by EventDispatcher.
 ### You Probably Already Use It
 
 - Console Commands → Console Application
-- [Security Voters](http://symfony.com/doc/current/security/voters.html) → Access Decision Manager
+- [Security Voters](https://symfony.com/doc/current/security/voters.html) → Access Decision Manager
 
 
 As for tags - [they often promote bad practise of duplicated information](https://www.tomasvotruba.cz/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/#bare-tagging-is-duplicated-information). Don't use it if you don't have to.

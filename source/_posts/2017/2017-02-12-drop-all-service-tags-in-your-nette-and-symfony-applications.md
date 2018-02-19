@@ -9,8 +9,8 @@ perex: '''
 updated: true
 updated_since: "May 2017"
 updated_message: '''
-    Updated with <strong>new Symfony 3.3 features <a href="http://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration">class based service naming, <code>_instanceof</code> configuration</a>
-    and <a href="http://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration">autoconfiguration</a></strong> (plus PHP 7).
+    Updated with <strong>new Symfony 3.3 features <a href="https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration">class based service naming, <code>_instanceof</code> configuration</a>
+    and <a href="https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration">autoconfiguration</a></strong> (plus PHP 7).
     <br><br>
     It does pretty much the same, so package ServiceDefinitionDecorator for Symfony was deprecated.
     <br><br>
@@ -157,7 +157,7 @@ This is what I did, before I used Decorator and before I dropped tags from my co
 
 ## Get Rid of Tagging in Symfony
 
-Symfony [has over 40 tags](http://symfony.com/doc/current/reference/dic_tags.html) that are coupled to many internal parts. This is barely half of it:
+Symfony [has over 40 tags](https://symfony.com/doc/current/reference/dic_tags.html) that are coupled to many internal parts. This is barely half of it:
 
 <img src="/assets/images/posts/2017/decorator/symfony-tags-half.png" class="img-thumbnail" alt="Tag list">
 
@@ -189,7 +189,7 @@ services:
 
 I want to quit this project already... but wait!
 
-### You can use new [autoconfigure](http://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration) since Symfony 3.3
+### You can use new [autoconfigure](https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration) since Symfony 3.3
 
 ```yaml
 # app/config/config.yml

@@ -62,9 +62,9 @@ Even when some people agreed with invokable/single action approach, they still m
 
 **Give `invoke()` a try, it's Fine**
 
-But I've learned what [`__invoke()` is](http://php.net/manual/en/language.oop5.magic.php#object.invoke) and that [Symfony](http://symfony.com/doc/current/controller/service.html#invokable-controllers) and [Laravel use](https://laravel.com/docs/5.4/controllers#single-action-controllers) it for years.
+But I've learned what [`__invoke()` is](https://php.net/manual/en/language.oop5.magic.php#object.invoke) and that [Symfony](https://symfony.com/doc/current/controller/service.html#invokable-controllers) and [Laravel use](https://laravel.com/docs/5.4/controllers#single-action-controllers) it for years.
 
-Also, **using an interface would only create a new dependency** for something that is already used in specific way. Moreover for controller which [every](https://book.cakephp.org/2.0/en/controllers.html#controller-actions) [framework](http://www.yiiframework.com/doc-2.0/guide-structure-controllers.html#actions) [bend](https://book.cakephp.org/3.0/en/controllers.html) [to](https://laravel.com/docs/5.4/controllers#defining-controllers) [its](https://doc.nette.org/en/2.4/presenters#toc-processing-presenter-action) [own](http://symfony.com/doc/current/best_practices/controllers.html#what-does-the-controller-look-like) needs.
+Also, **using an interface would only create a new dependency** for something that is already used in specific way. Moreover for controller which [every](https://book.cakephp.org/2.0/en/controllers.html#controller-actions) [framework](http://www.yiiframework.com/doc-2.0/guide-structure-controllers.html#actions) [bend](https://book.cakephp.org/3.0/en/controllers.html) [to](https://laravel.com/docs/5.4/controllers#defining-controllers) [its](https://doc.nette.org/en/2.4/presenters#toc-processing-presenter-action) [own](https://symfony.com/doc/current/best_practices/controllers.html#what-does-the-controller-look-like) needs.
 
 `__invoke()` is normal method, just like `__constructor()` is normal for passing dependencies nowadays.
 

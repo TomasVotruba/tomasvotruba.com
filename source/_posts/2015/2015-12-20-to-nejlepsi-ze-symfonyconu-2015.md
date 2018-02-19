@@ -30,7 +30,7 @@ Fabien zmínil přes 20 lidí, které na své cestě postupně potkal, a ukázal
 
 ### 1 věc, kterou stojí za to si zapamatovat
 
-Mezi lidmi představil i [nový release process](http://symfony.com/blog/improving-the-symfony-release-process), který usnadní <em>continuous upgrade</em>.
+Mezi lidmi představil i [nový release process](https://symfony.com/blog/improving-the-symfony-release-process), který usnadní <em>continuous upgrade</em>.
 
 <div class="text-center">
     <img src="/assets/images/posts/2015/symfonycon/symfonycon-release-process.jpg" alt="Nový relase proces">
@@ -92,7 +92,7 @@ A teď něco pro každého:
 </div>
 <br>
 
-se s námi podělil o tipy a triky, které posbíral za poslední rok - nejen při psaní [Week of Symfony](http://symfony.com/blog/category/a-week-of-symfony) (doporučuju odebírat, pokud chceš být v obraze).
+se s námi podělil o tipy a triky, které posbíral za poslední rok - nejen při psaní [Week of Symfony](https://symfony.com/blog/category/a-week-of-symfony) (doporučuju odebírat, pokud chceš být v obraze).
 
 Za mě to byla ta nejzajímavější přednáška, ze které jsem si odnesl velké množství tipů do vlastní praxe.
 
@@ -103,11 +103,11 @@ Za mě to byla ta nejzajímavější přednáška, ze které jsem si odnesl velk
 
 Přednáška byla nabitá užitečnými tipy, které se jednoduše nedaly pobrat všechny naráz.
 
-> Naštěstí [jsou ve slajdech](http://www.slideshare.net/javier.eguiluz/new-symfony-tips-tricks-symfonycon-paris-2015), kam si pro ně můžeš sáhnout.
+> Naštěstí [jsou ve slajdech](https://www.slideshare.net/javier.eguiluz/new-symfony-tips-tricks-symfonycon-paris-2015), kam si pro ně můžeš sáhnout.
 
 Potěšilo mě, že pár tipů bylo i od [Martina Hasoně](https://twitter.com/hasonm).
 
-Tento skvělý přehled mě inspiroval mrknout i [na verzi z minulého roku](http://www.slideshare.net/javier.eguiluz/symfony-tips-and-tricks).
+Tento skvělý přehled mě inspiroval mrknout i [na verzi z minulého roku](https://www.slideshare.net/javier.eguiluz/symfony-tips-and-tricks).
 
 
 ### 1 věc, kterou stojí za to si zapamatovat
@@ -139,7 +139,7 @@ Ukázal nám nové možnosti a způsoby...
 
 Na toto téma už brzy na Zdrojáku vyjde článek, kde si vše podrobně ukážeme.
 
-> Zatím můžeš mrknout [na slajdy z přednášky](http://www.slideshare.net/weaverryan/symfony-your-next-microframework-symfonycon-2015).
+> Zatím můžeš mrknout [na slajdy z přednášky](https://www.slideshare.net/weaverryan/symfony-your-next-microframework-symfonycon-2015).
 
 ### 1 věc, kterou stojí za to si zapamatovat
 
@@ -155,7 +155,7 @@ Kdy teda použít MicroKernel?
 
 ### Další přednášky, které stojí minimálně za proklikání:
 
-- Marc Morena - When e-commerce meets Symfony ([mrkni na slajdy](http://www.slideshare.net/MarcMorera/when-ecommercemeetssymfonyparissymfonycon2015))
+- Marc Morena - When e-commerce meets Symfony ([mrkni na slajdy](https://www.slideshare.net/MarcMorera/when-ecommercemeetssymfonyparissymfonycon2015))
 - Benjamin Eberlei - Doctrine 2 - to use or not to use ([mrkni na slajdy](https://qafoo.com/resources/presentations/symfonycon_paris_2015/doctrine2_to_use_or_not_to_use.html))
 
 **Všechny dostupné slajdy z konference najdeš na [Joind.in](https://joind.in/event/symfonycon-paris-2015/schedule/list).**

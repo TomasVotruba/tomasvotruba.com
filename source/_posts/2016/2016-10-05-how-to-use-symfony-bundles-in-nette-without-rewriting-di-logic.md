@@ -17,7 +17,7 @@ deprecated_message: '''
 To be specific:
 
 - In Nette you use [Nette\DI package](https://github.com/nette/di) and make an **extension**.
-- In Symfony, you have to use [Symfony\DependencyInjection package](http://symfony.com/doc/current/components/dependency_injection.html) and create a **bundle**.
+- In Symfony, you have to use [Symfony\DependencyInjection package](https://symfony.com/doc/current/components/dependency_injection.html) and create a **bundle**.
 
 So when you hear somebody saying:
 

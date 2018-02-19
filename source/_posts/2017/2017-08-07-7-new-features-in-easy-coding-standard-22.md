@@ -75,7 +75,7 @@ parameters:
 
 ## 4. Skip More Than 1 File For Specific Checker
 
-If you need to skip more files, just **use [`fnmatch`](http://php.net/manual/en/function.fnmatch.php) pattern** in `skip` section.
+If you need to skip more files, just **use [`fnmatch`](https://php.net/manual/en/function.fnmatch.php) pattern** in `skip` section.
 
 ```yaml
 parameters:

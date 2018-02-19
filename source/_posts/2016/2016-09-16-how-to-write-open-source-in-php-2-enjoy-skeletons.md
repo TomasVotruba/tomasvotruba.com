@@ -106,7 +106,7 @@ Just to remind you, the end user is interested in:
 *Meaning*
 
 - here are files, that you will have locally but won't be uploaded to the remote git repository
-- for packages ignore `composer.lock`, for applications rather not - on Stackoverflow you can find [more detailed answer](http://stackoverflow.com/questions/12896780/should-composer-lock-be-committed-to-version-control)
+- for packages ignore `composer.lock`, for applications rather not - on Stackoverflow you can find [more detailed answer](https://stackoverflow.com/questions/12896780/should-composer-lock-be-committed-to-version-control)
 - also `/vendor` is there, as dependencies are installed by composer
 
 *Profit*

@@ -2,7 +2,7 @@
 id: 72
 title: "Is Your CHANGELOG Useful or Just Boring Plain Text? And How to Fix That"
 perex: '''
-    Do you [keep a CHANGELOG](http://keepachangelog.com/)? You shoud! I [do](https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md), because it's the main story about the open-source package.
+    Do you [keep a CHANGELOG](https://keepachangelog.com/)? You shoud! I [do](https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md), because it's the main story about the open-source package.
     <br><br>
     And if you do, is it boring plain text or **useful rich markdown**?
 '''
@@ -48,7 +48,7 @@ You could read answer to all those questions if I'd only provide links - but **y
 
 ## What is Sad about Plain Text `CHANGELOG.md`?
 
-It takes maintainer **a lot of effort** to [keep a changelog](http://keepachangelog.com), keep it updated, with every version and every new pull-request, refer issues, pull-request, @author references...
+It takes maintainer **a lot of effort** to [keep a changelog](https://keepachangelog.com), keep it updated, with every version and every new pull-request, refer issues, pull-request, @author references...
 
 <br>
 
@@ -160,7 +160,7 @@ Huge thanks to @olivierlacan for keepachangelog.com! It helped me a lot.
 
 *Oh, sorry...*
 
-**Huge thanks to [@olivierlacan](https://github.com/olivierlacan)** for [keepachangelog.com](http://keepachangelog.com)!
+**Huge thanks to [@olivierlacan](https://github.com/olivierlacan)** for [keepachangelog.com](https://keepachangelog.com)!
 
 <br>
 

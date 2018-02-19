@@ -158,7 +158,7 @@ Luckily, there is option that **will actually inform about the deprecation**.
 
 ### 2. A `trigger_error()`
 
-A [`trigger_error()`](http://php.net/manual/en/function.trigger-error.php) is native PHP function, that can inform user about changes in the code.
+A [`trigger_error()`](https://php.net/manual/en/function.trigger-error.php) is native PHP function, that can inform user about changes in the code.
 
 With the 2nd argument is level of these messages - there is special constant `E_USER_DEPRECATED` destined for this case.
 

@@ -93,7 +93,7 @@ This is not issue of the code itself, but of the testing architecture.
 
 When maintaining 15 own packages, [ApiGen](https://github.com/Apigen) and co-maintaining few more repositories, I spent a lot of time by package management and not coding. It wasn't fun and I contributed less and less.
 
-Many packages like [Doctrine](http://github.com/doctrine) or [Kdyby](https://github.com/Kdyby) are slowing down in evolution because of this.
+Many packages like [Doctrine](https://github.com/doctrine) or [Kdyby](https://github.com/Kdyby) are slowing down in evolution because of this.
 
 Again, it's a matter of project architecture rather than the code or maintainers.
 
