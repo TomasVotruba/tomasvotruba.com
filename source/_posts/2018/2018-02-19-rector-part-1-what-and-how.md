@@ -90,7 +90,7 @@ class LectureController extends BaseController
 
     public function listAction()
     {
-        $this->logger->log('it happened!');
+        $this->loggerInterface->log('it happened!');
     }
 }
 ```
