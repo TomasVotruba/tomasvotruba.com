@@ -15,7 +15,7 @@ related_items: [63]
 Rector is a PHP CLI tool build on [Symfony Components](https://symfony.com/components) that changes your PHP code for better.
 He only does what you tell him to do. You can use him to *instantly upgrade* your application or to do *architecture refactorings* once for the whole codebase.
 
-Rector won't do your job. It's here to **do the boring stuff for you**. Its help is similar to coding standard tools help with code reviews - move focus from spaces and commas to architecture of the code.
+Rector won't do your job. It's here to **do the boring stuff for you**. Its help is similar to coding standard tools' help with code reviews - move focus from spaces and commas to architecture of the code.
 
 ### Where is it?
 
