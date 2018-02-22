@@ -103,9 +103,9 @@ Do you use Laravel and want to move from facades to constructor injection? Recto
 
 Rector parses the code to [AST](/blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree/) thanks to PHP superman [nikic](https://nikic.github.io/)'s [php-parser](https://github.com/nikic/PHP-Parser).
 
-Then it finds specific places in the code, e.g. all variables that contain `Symfony\Component\HttpFoundation\Request` type and call 'isMethodSafe()' method.
+Then it finds specific places in the code, e.g. all variables that contain `Symfony\Component\HttpFoundation\Request` type and call `isMethodSafe()` method.
 
-Then it changes it into 'isMethodCacheable()' (see [UPGRADE-4.0.md](https://github.com/symfony/symfony/blob/master/UPGRADE-4.0.md#httpfoundation)).
+Then it changes it into `isMethodCacheable()` (see [UPGRADE-4.0.md](https://github.com/symfony/symfony/blob/master/UPGRADE-4.0.md#httpfoundation)).
 
 Such a configuration looks like this (as shown in [`README`](https://github.com/rectorphp/rector#change-a-method-name)):
 
