@@ -138,7 +138,7 @@ I'm still amazed by how their approach is 90 % similar to Rector, just for C++.
 
 <br>
 
-In the next post, I [wrote about what needed to happen before Rector could have been born](/blog/2018/02/29/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers/).
+In the next post, I [wrote about what needed to happen before Rector could have been born](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers/).
 
 <br>
 
