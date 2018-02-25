@@ -7,7 +7,7 @@ perex: '''
     What exactly Rector does and how does it work?
 '''
 tweet: "New post on my blog: Rector: Part 1 - What and How #php #ast #refactoring #instantupgrades"
-related_items: [63]
+related_items: [63, 78] 
 ---
 
 ## What is Rector?
@@ -138,7 +138,7 @@ I'm still amazed by how their approach is 90 % similar to Rector, just for C++.
 
 <br>
 
-In a next post, I'll wrote about "Why" is Rector here.
+In the next post, I [wrote about what needed to happen before Rector could have been born](/blog/2018/02/29/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers/).
 
 <br>
 
