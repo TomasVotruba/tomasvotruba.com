@@ -18,9 +18,9 @@ It's not that PHP didn't need to be updated until 2017. I surely could delegate 
 
 *Codemod* is a tool that modifies your code. And you're ok with it.
  
-Many years ago [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) was born by [Greg Sherwood](http://gregsherwood.blogspot.cz/search/label/PHP_CodeSniffer) from Australia. Guess how long ago? In 2006! Tool that checks your coding standard, tabs and spaces, brackets and quotes. First of it's kind to be mainstream in PHP community.
+Many years ago [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) was born by [Greg Sherwood](https://gregsherwood.blogspot.cz/search/label/PHP_CodeSniffer) from Australia. Guess how long ago? [In 2006](https://gregsherwood.blogspot.cz/2006/12/if-not-test-first-then-test-really-soon.html)! Tool that checks your coding standard, tabs and spaces, brackets and quotes. First of it's kind to be mainstream in PHP community.
 
-It was followed by [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer) with [it's first release in 2014](http://fabien.potencier.org/php-cs-fixer-finally-reaches-version-1-0.html) by [Fabien Potencier](https://fabien.potencier.org). Did you know the first script [had only 106 lines](https://gist.github.com/fabpot/3f25555dce956accd4dd)?
+It was followed by [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer) with [it's first release in 2014](http://fabien.potencier.org/php-cs-fixer-finally-reaches-version-1-0.html) by [Fabien Potencier](http://fabien.potencier.org). Did you know the first script [had only 106 lines](https://gist.github.com/fabpot/3f25555dce956accd4dd)?
   
 I use daily both of these tools, [they're both awesome and work best together](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). Both of them fix the code for you, so you can sleep or have a coffee instead.
 
@@ -28,7 +28,7 @@ It took time and 2 tools with over 4000 stars on Github to get here.
 
 ## Is PHP Ready for AST? 
 
-Few year ago [Nikita Popov](https://nikic.github.io/) started ambitious project [nikic/PHP-Parser](https://github.com/nikic/PHP-Parser). PHP-Parser parses PHP code to AST. If you're new to Abstract Syntax Tree (AST), check [this post that describes 2 big changes in PHP ecosystem](/blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree) thanks to AST.
+A few years ago [Nikita Popov](https://nikic.github.io/) started an ambitious project [nikic/PHP-Parser](https://github.com/nikic/PHP-Parser). PHP-Parser parses PHP code to AST. If you're new to Abstract Syntax Tree (AST), check [this post that describes 2 big changes in PHP ecosystem](/blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree) thanks to AST.
 
 ### Both Read & Write?
 
@@ -90,7 +90,7 @@ It's not only about writing code. It's about discussing the idea, finding the ri
 
 I don't work for at any company so development of Rector doesn't solve my personal issues. That's how most project is born, like PHPStan to check Slevomat's code. That means I needed other motivation - when my frustration of wasted thousands human-hours was not enough. 
  
-Here I'd like to thank [Petr Vacha](https://) for cowork weekend in Brno with in summer 2017, where it all started - in those times named as *Refactor*. You've been great friend for years and courage in times, when I needed it the most.
+Here I'd like to thank [Petr Vácha](http://petrvacha.com/) for cowork weekend in Brno with in summer 2017, where it all started - in those times named as *Refactor*. You've been great friend for years and courage in times, when I needed it the most.
  
 And [David Grudl](https://davidgrudl.com/), who gave me the motivation to dig deep and "just try it" when I felt desperate and useless always with lightness of Zen master. 
 
