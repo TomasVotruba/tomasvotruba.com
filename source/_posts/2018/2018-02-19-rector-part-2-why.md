@@ -14,13 +14,13 @@ related_items: [63, 77]
 
 ### 1. The Knowledge
 
-Most of you follows changes in Symfony or Nette. You know that [`ProcessBuilder` was removed](https://github.com/symfony/symfony/blob/master/UPGRADE-4.0.md#process) and that you'll have to migrate to `Process` class only. You know that [`Nette\Object` was removed](https://forum.nette.org/cs/26250-pojdte-otestovat-nette-2-4-rc) and that you'll have to rewrite all `@method` annotation to real methods.
+Most of you follow changes in Symfony or Nette. You know that [`ProcessBuilder` was removed](https://github.com/symfony/symfony/blob/master/UPGRADE-4.0.md#process) and that you'll have to migrate to `Process` class only. You know that [`Nette\Object` was removed](https://forum.nette.org/cs/26250-pojdte-otestovat-nette-2-4-rc) and that you'll have to rewrite all `@method` annotation to real methods.
 
 You read blogs, follow news on forum, read all `CHANGELOG.md` and `UPGRADE.md` files and sometimes commits, to find out what all has changed. **You have the knowledge**.
 
 ### 2. The Resources
 
-You work in a company where up-to-date it very important value. Your employer finances upgrades and also your education in it (pays you to get the knowledge). Once a 6 month you have dedicated paid time to update all packages to most recent versions. **You have the resources**
+You work in a company where up-to-date it very important value. Your employer finances upgrades and also your education in it (pays you to get the knowledge). Once a 6 months you have dedicated paid time to update all packages to most recent versions. **You have the resources**
 
 Do you find yourself in such situation? If so, you're on of 5 % blessed people around me.
 
@@ -38,7 +38,7 @@ That naturally leads to huge legacy code, team performance drop from 100 % to 20
   
 ### Are Deprecations Easy to Find?
  
-Let's say you have time to explore the Internet, follow [Symfony News on Twitter](https://twitter.com/symfony_en), read [every news post on Symfony Blog](http://symfony.com/blog/category/living-on-the-edge) or know where on the Nette forum are located [Release Notes](https://forum.nette.org/en/f78-release-announcements-news).
+Let's say you have time to explore the Internet, follow [Symfony News on Twitter](https://twitter.com/symfony_en), read [every news post on Symfony Blog](https://symfony.com/blog/category/living-on-the-edge) or know where on the Nette forum are located [Release Notes](https://forum.nette.org/en/f78-release-announcements-news).
 
 Sometimes if you're lucky there is `UPGRADE-x.md` in project's Github repository, like [`UPGRADE-4.0.md`](https://github.com/symfony/symfony/blob/master/UPGRADE-4.0.md) in Symfony 4 repository. But what if you need upgrade to version 3.x? Could you find it? Well no, but yes in [3.x branch](https://github.com/symfony/symfony/tree/3.4).
 
@@ -114,7 +114,7 @@ Which is rather note in the code than helpful to user. The `->add()` method is c
 
 Similar tool to PHPUnit Bridge is [`deprecation-detector`](https://github.com/sensiolabs-de/deprecation-detector), that tries to catch code with `@deprecated` annotation.
 
-And that's Symfony, my friends, which does the best job for (Backward Compatibility Promise)[http://symfony.com/doc/current/contributing/code/bc.html] in PHP. What about those other 50 packages your application uses?
+And that's Symfony, my friends, which does the best job for [Backward Compatibility Promise](https://symfony.com/doc/current/contributing/code/bc.html) in PHP. What about those other 50 packages your application uses?
 
 Would you like to do this job instead of developing your application? Most people wouldn't, so they hire me as a consultant to help them with it.
 
@@ -151,6 +151,8 @@ All this was needed before, but PHP missed crucial parts:
 - save changed AST back to PHP without any changes - [this feature was added in 2017](https://github.com/nikic/PHP-Parser/blob/master/doc/component/Pretty_printing.markdown#formatting-preserving-pretty-printing) to `nikic/php-parser` and becomes stable with version 4 
 - simple coding standard tool, that would cleanup the code after Rector - done in 2017 by [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard)
 - and prototype which would allow it
+
+@todo mention: https://github.com/nikic/PHP-Parser/issues/41
 
 ### FDD: Friendship-Driven-Development
 
