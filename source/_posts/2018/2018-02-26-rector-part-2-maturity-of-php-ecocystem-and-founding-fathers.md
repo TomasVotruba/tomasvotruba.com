@@ -35,7 +35,7 @@ A few years ago [Nikita Popov](https://nikic.github.io/) started an ambitious pr
 PHP_CodeSniffer was read only, which is great for letting you know what is wrong, but not much for getting a coffee instead. So fixing part was added.
  
 Same was for PHP-Parser. It can read a code and allow it analysis.
-That's what [Ondřej Mirtes](https://ondrej.mirtes.cz/) uses in [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/) - context aware PHP anylisis ("this variable is of this type"). 
+That's what [Ondřej Mirtes](https://ondrej.mirtes.cz/) uses in [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/) - context aware PHP analysis ("this variable is of this type"). 
 
 Again useful, but what about that coffee? It won't make itself.
 
