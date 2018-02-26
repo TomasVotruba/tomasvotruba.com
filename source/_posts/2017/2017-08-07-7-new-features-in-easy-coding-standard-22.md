@@ -42,7 +42,7 @@ vendor/symplify/easy-coding-standard/config/symfony-risky-checkers.neon
 
 *Custom*
 
-```
+```yaml
 vendor/symplify/easy-coding-standard/config/symplify.neon
 vendor/symplify/easy-coding-standard/config/spaces.neon
 vendor/symplify/easy-coding-standard/config/common.neon
