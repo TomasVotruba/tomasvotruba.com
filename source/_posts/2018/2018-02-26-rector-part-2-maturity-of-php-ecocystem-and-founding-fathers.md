@@ -54,8 +54,8 @@ PHP AST can be saved, but it still needed a bit polishing:
 
  class Controller
  {
-+    public function actionIndex(): DeprecatedRequest
--    public function actionIndex(): \Symfony\Component\HttpFoundation\NewRequest
+-    public function actionIndex(): DeprecatedRequest
++    public function actionIndex(): \Symfony\Component\HttpFoundation\NewRequest
      {
      }
  }
