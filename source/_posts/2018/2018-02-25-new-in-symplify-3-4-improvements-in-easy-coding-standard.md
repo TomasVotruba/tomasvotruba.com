@@ -10,13 +10,13 @@ tweet: "New post on my blog: New in Symplify 3: 4 Improvements in EasyCodingStan
 
 ### 1. Exclude Files or Dirs via `exclude_files`
 
-<a href="https://github.com/Symplify/Symplify/pull/583" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/Symplify/Symplify/pull/583" class="btn btn-dark btn-sm mt-2">
     <em class="fa fa-github"></em>
     &nbsp;
     Check the pull-request #583
 </a>
 
-<a href="https://github.com/Symplify/Symplify/pull/584" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/Symplify/Symplify/pull/584" class="btn btn-dark btn-sm mb-3">
     <em class="fa fa-github"></em>
     &nbsp;
     Check the pull-request #584
@@ -73,7 +73,7 @@ But why bother with such detailed text information, if the ECS will fix it to be
 
 From now on, **it is reported the PHP CS Fixer-way like all the fixers**: 
 
-```bash
+```diff
 @@ -1,14 +1,13 @@
  final class SomeClass
  {
