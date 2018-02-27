@@ -7,7 +7,7 @@ install:
 
 script:
     # run tests for tested posts (with "tested: true" in header configuration)
-    - vendor/bin/phpunit --coverage-clover coverage.xml
+    - vendor/bin/phpunit --coverage-clover coverage.xml --testsuit=main
     # turn off XDebug
     - phpenv config-rm xdebug.ini || return 0
 
@@ -19,7 +19,7 @@ script:
     - vendor/bin/statie generate source
 
     # tweets posts
-    - bin/tweet-new-posts
+    - if [ $TRAVIS_BRANCH == "master" ]; then bin/tweet-new-posts; fi
 
 after_script:
     # upload coverage.xml file to Coveralls to analyze it
