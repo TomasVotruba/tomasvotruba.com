@@ -1,17 +1,19 @@
 <phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
     bootstrap="vendor/autoload.php"
     colors="true"
+    verbose="true"
 >
     <testsuites>
-        <testsuite>
-            <directory>tests/Posts</directory>
-            <directory>tests/TweetPublisher</directory>
+        <testsuite name="main">
+            <directory>tests</directory>
+            <exclude>tests/TweetPublisher</exclude>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
-            <directory>src/Posts</directory>
-            <directory>src/TweetPublisher</directory>
+            <directory>src</directory>
         </whitelist>
     </filter>
 </phpunit>
