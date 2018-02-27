@@ -7,7 +7,7 @@ install:
 
 script:
     # run tests for tested posts (with "tested: true" in header configuration)
-    - vendor/bin/phpunit --coverage-clover coverage.xml --testsuit=main
+    - vendor/bin/phpunit --coverage-clover coverage.xml --testsuite=main
     # turn off XDebug
     - phpenv config-rm xdebug.ini || return 0
 
