@@ -95,7 +95,7 @@ Applied checkers:
 
 Which one do you prefer?
 
-## 4. Skip Sniff Codes 
+## 4. Skip Sniff Codes instea of Whole Sniffs
 
 <a href="https://github.com/Symplify/Symplify/pull/388" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fa fa-github"></em>
