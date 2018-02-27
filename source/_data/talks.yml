@@ -1,6 +1,13 @@
 parameters:
     talks:
         -
+            title: "How to Delegate Upgrades from Human to a (machine) Rector"
+            year: 2018
+            event_name: "PHPLive 2018"
+            event_link: "https://www.phplive.cz/"
+            slides_link: "https://docs.google.com/presentation/d/1YFnNZeC7uEn5bpFIoGuEjdYLLkE0o3nFq7HGMlWENY4/edit?usp=sharing"
+            lang: en
+        -
             title: "How to get Your Code Clean"
             year: 2018
             event_name: "Private Lecture @ Ness, Košice, Slovakia"
@@ -145,8 +152,8 @@ parameters:
         -
             title: "Jako Vinnetou a Old Shatterhand – refaktoruj nenávist v přátelství"
             year: 2016
-            event_name: "PHP Live 2016"
-            event_link: "http://www.phplive.cz/"
+            event_name: "PHPLive 2016"
+            event_link: "https://www.phplive.cz/"
             video_link: "https://www.youtube.com/watch?v=D827D5ILfh8"
             slides_link: "https://www.slideshare.net/phplive/tom-votruba-jako-vinnetou-a-old-shatterhand-refaktoruj-nenvist-v-ptelstv"
             lang: cs
