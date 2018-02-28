@@ -1,5 +1,5 @@
 ---
-id: 79
+id: 80
 title: "Why is Collector Pattern so Awesome"
 perex: '''
     How to achieve *open for extension* and *closed for modification* [one of sOlid principals](https://github.com/jupeter/clean-code-php#openclosed-principle-ocp)?
