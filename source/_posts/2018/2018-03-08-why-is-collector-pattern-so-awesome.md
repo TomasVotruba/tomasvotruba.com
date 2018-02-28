@@ -6,8 +6,9 @@ perex: '''
    <br><br>
     Why Collector pattern beats config tagging? How to use the in Symfony application? How it turns locked architecture into scaling one?
 '''
-todo_tweet: "..."
+tweet: "New post on my blog: Why is Collector Pattern so Awesome #symfony #colletor #compilerpass #rector #solid #decoupling"
 related_items: [36, 27]
+tweet_image: "/assets/images/posts/2018/collector/quote.jpg"
 ---
 
 I already [wrote about Collector pattern as one we can learn from Symfony or Laravel](/blog/2017/04/14/3-symfony-and-laravel-patterns-that-make-code-easy-to-extends-without-modification/#3-like-collecting-stamps-just-on-steroids). But they're so useful and underused I have need to write a more about them.
