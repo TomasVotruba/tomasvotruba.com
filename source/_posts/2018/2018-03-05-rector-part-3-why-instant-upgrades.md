@@ -33,7 +33,7 @@ From my experience with consulting over 50 PHP projects in last 4 years, it can 
 
 ### 1. Teams are not Supported in Upgrades
 
-Teams don't have space to find out what changed between Symfony 2.7 and Symfony 2.8. They don't care, because their employer cares mostly about creating new website as fast and as cheap as possible. And that's logical. 
+Teams don't have space to find out what changed between Symfony 2.7 and Symfony 2.8. They don't care, because their employer cares mostly about creating new website as fast and as cheap as possible. And that's logical.
 
 That's why most of [lectures](/mentoring-and-lectures/) I make is about giving teams *the knowledge* that they can use with their very limited resources to make the best out of it.
 
@@ -121,7 +121,7 @@ And that's Symfony, my friends, which **does the best job for [Backward Compatib
 
 ### Outsource all this?
 
-Would you like to do this job instead of developing your application? Most people wouldn't, so they hire me as a consultant to help them with it. **But would you hire somebody, who would download all dependencies your application need in correct version for you or would you rather start using composer?** 
+Would you like to do this job instead of developing your application? Most people wouldn't, so they hire me as a consultant to help them with it. **But would you hire somebody, who would download all dependencies your application need in correct version for you or would you rather start using composer?**
 
 ## Embodied Cognition instead of Investigative Programming
 
