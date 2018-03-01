@@ -231,7 +231,7 @@ final class RectorCollector
 }
 ```
 
-### What we want?
+### What do we want?
 
 - drop that expression language magic
 - support one-to-many case
