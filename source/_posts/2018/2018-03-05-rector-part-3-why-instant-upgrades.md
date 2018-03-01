@@ -9,6 +9,13 @@ todo_tweet: "New post on my blog: "
 related_items: [63, 77, 78]
 ---
 
+*Read also:*
+ 
+- [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how/)
+- [Part 2 - Maturity of PHP Ecosystem and Founding Fathers](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers/)
+
+<br>
+
 ## Why was Rector needed
 
 You need 2 things to upgrade PHP application to newer version of the framework you use:

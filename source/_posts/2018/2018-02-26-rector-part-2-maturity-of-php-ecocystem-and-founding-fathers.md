@@ -10,9 +10,14 @@ tweet: "New post on my blog: Rector: Part 2 - Maturity of PHP Ecosystem and Foun
 related_items: [63, 77]
 ---
 
-You already know [What Rector does and How it works](/blog/2018/02/19/rector-part-1-what-and-how/) from part 1.
+*Read also:*
+ 
+- [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how/)
+- [Part 3 - Why Instant Upgrades](/blog/2018/03/05/rector-part-3-why-instant-upgrades/)
 
-It's not that PHP didn't need to be updated until 2017. I surely could delegate hundreds of *upgrade-hours* for my whole career. So **why Now?**
+<br>
+
+It's not that PHP projects didn't need to be updated until 2017. I surely could delegate hundreds of *upgrade-hours* for my whole career. So **why Now?**
 
 ## *Codemods* as Standard
 
