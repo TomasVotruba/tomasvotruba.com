@@ -11,7 +11,7 @@ related_items: [63, 77]
 ---
 
 *Read also:*
- 
+
 - [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how/)
 - [Part 3 - Why Instant Upgrades](/blog/2018/03/05/rector-part-3-why-instant-upgrades/)
 

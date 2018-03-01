@@ -11,7 +11,7 @@ related_items: [63, 78]
 ---
 
 *Read also:*
- 
+
 - [Part 2 - Maturity of PHP Ecosystem and Founding Fathers](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers/)
 - [Part 3 - Why Instant Upgrades](/blog/2018/03/05/rector-part-3-why-instant-upgrades/)
 
