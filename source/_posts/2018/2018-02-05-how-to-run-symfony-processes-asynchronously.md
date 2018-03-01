@@ -43,7 +43,7 @@ We tried [spatie/async](https://github.com/spatie/async) which has very nice REA
 
 We could go [amp](https://github.com/amphp/amp) or [reactphp](https://reactphp.org/), but wouldn't that be an overkill?
 
-There is also faster way like [splish/lite](https://github.com/splitsh/lite), but **we aim on PHP + Git combination so PHP developers could extend the code**.
+There is also faster way like [splitsh/lite](https://github.com/splitsh/lite), but **we aim on PHP + Git combination so PHP developers could extend the code**.
 
 Luckily, Symfony Process already **allows [standalone process](https://symfony.com/doc/current/components/process.html#running-processes-asynchronously)** without waiting on each other.
 
