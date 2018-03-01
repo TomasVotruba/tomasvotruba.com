@@ -95,7 +95,7 @@ Applied checkers:
 
 Which one do you prefer?
 
-## 4. Skip Sniff Codes instea of Whole Sniffs
+## 4. Skip Sniff Codes instead of Whole Sniffs
 
 <a href="https://github.com/Symplify/Symplify/pull/388" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fa fa-github"></em>
@@ -135,7 +135,7 @@ And all the other codes will be checked properly in your code.
     Check the PR #406
 </a>
 
-[@ostrolucky](https://github.com/ostrolucky) took this feature even further and added  **skipping by list of files or [`fnmatch`](php.net/manual/en/function.fnmatch.php)**.
+[@ostrolucky](https://github.com/ostrolucky) took this feature even further and added  **skipping by list of files or [`fnmatch`](http://php.net/manual/en/function.fnmatch.php)**.
 
 ```yaml
 # easy-coding-standard.neon
