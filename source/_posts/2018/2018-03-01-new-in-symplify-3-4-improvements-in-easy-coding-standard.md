@@ -23,7 +23,7 @@ tweet_image: "/assets/images/posts/2018/symplify-3-ecs/exclude-files.png"
     &nbsp;
     Check the PR #584
 </a>
- 
+
 Do you have `src/Migrations` that you need to skip from your `vendor/bin/ecs check src` command?
 
 ```yaml
@@ -31,11 +31,11 @@ Do you have `src/Migrations` that you need to skip from your `vendor/bin/ecs che
 parameters:
     exclude_files:
         - 'src/Migrations/LastMigration.php'
-        # or better all files from the dir 
+        # or better all files from the dir
         - '*src/Migrations/*.php'
 ```
 
-With favorite [`fnmatch()` function](http://php.net/manual/en/function.fnmatch.php) on board. 
+With favorite [`fnmatch()` function](http://php.net/manual/en/function.fnmatch.php) on board.
 
 ## 2. Warnings are Reported for Specific Sniffs
 
@@ -49,7 +49,7 @@ Sniff warnings are skipped by default, because it doesn't make sense to differen
 
 That changed. New property [`$reportWarningsSniffs` in `Symplify\EasyCodingStandard\SniffRunner\File\File`](https://github.com/Symplify/Symplify/blob/3d058becb57efefe2307c88ee94acbfbd15ebd1c/packages/EasyCodingStandard/packages/SniffRunner/src/File/File.php#L52) now lists all sniffs, that report warnings in ECS as well.
 
-**Do you miss useful Sniff that reports only warnings?** Send PR to add it.  
+**Do you miss useful Sniff that reports only warnings?** Send PR to add it.
 
 ## 3. Nice and Clear Diff over Boring Table Report
 
@@ -61,19 +61,19 @@ That changed. New property [`$reportWarningsSniffs` in `Symplify\EasyCodingStand
 
 Inspired by [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer) we've decided to **use files diffs everywhere wherever it saves user daunting reading**.
 
-When a **fixable sniff found an error**, ECS reported it like this: 
+When a **fixable sniff found an error**, ECS reported it like this:
 
 ```bash
- ------ -------------------------------------------------------------------------------------------- 
-  Line   src/Posts/Year2017/Ast/SomeClass.php                                                        
- ------ -------------------------------------------------------------------------------------------- 
-  10     Property $someProperty should use doc block instead of one liner                                               
-         (SomeSniff)   
+ ------ --------------------------------------------------------------------------------------------
+  Line   src/Posts/Year2017/Ast/SomeClass.php
+ ------ --------------------------------------------------------------------------------------------
+  10     Property $someProperty should use doc block instead of one liner
+         (SomeSniff)
 ```
 
 But why bother with such detailed text information, if the ECS will fix it to better form anyway?
 
-From now on, **it is reported the PHP CS Fixer-way like all the fixers**: 
+From now on, **it is reported the PHP CS Fixer-way like all the fixers**:
 
 ```diff
 @@ -1,14 +1,13 @@
@@ -82,7 +82,7 @@ From now on, **it is reported the PHP CS Fixer-way like all the fixers**:
 +    /**
 +     * @var SomeType
 +     */
--    /** @var SomeType */ 
+-    /** @var SomeType */
      private $someProperty;
  }
 
@@ -113,7 +113,7 @@ parameters:
         - SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff
 ```
 
-But what if you liked all the other codes? 
+But what if you liked all the other codes?
 
 It's now possible to **skip specific sniff codes** in `skip_codes` option:
 

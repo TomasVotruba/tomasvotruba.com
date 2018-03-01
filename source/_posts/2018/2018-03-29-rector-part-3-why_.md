@@ -2,13 +2,13 @@
 id: 81
 title: "Rector: Part 2 - Why is Needed"
 perex: '''
-    ...  
+    ...
 '''
 todo_tweet: "..."
-related_items: [63, 77, 78] 
+related_items: [63, 77, 78]
 ---
 
-## Why was Rector needed - Instant Upgrades? 
+## Why was Rector needed - Instant Upgrades?
 
 2 things you need to upgrade PHP application to new version of the framework you use:
 
@@ -26,18 +26,18 @@ Do you find yourself in such situation? If so, you're on of 5 % blessed people a
 
 ## How Expensive are Upgrades Now?
 
-From my experience with consulting over 50 projects is that it can take 80-400 hours per one minor version upgrade, including all deprecations - e.g.from Symfony 2.7 to Symfony 2.8. 
+From my experience with consulting over 50 projects is that it can take 80-400 hours per one minor version upgrade, including all deprecations - e.g.from Symfony 2.7 to Symfony 2.8.
 
 ### Teams are not Supported in Upgrades
 
-Teams don't have space to find out what changed between Symfony 2.7 and Symfony 2.8. They don't care, because their employer cares mostly about creating that new e-commerce as fast and as cheap as possible. 
-  
+Teams don't have space to find out what changed between Symfony 2.7 and Symfony 2.8. They don't care, because their employer cares mostly about creating that new e-commerce as fast and as cheap as possible.
+
 That's why most of lectures (@todo link) I make is about giving teams *the knowledge* that they can use with their very limited resources to make the best out of it.
- 
+
 That naturally leads to huge legacy code, team performance drop from 100 % to 20 %, which leads to hiring 5x more people etc. to keep productivity the same, more money, and pressure to faster development, which lead to huge legacy code...
-  
+
 ### Are Deprecations Easy to Find?
- 
+
 Let's say you have time to explore the Internet, follow [Symfony News on Twitter](https://twitter.com/symfony_en), read [every news post on Symfony Blog](https://symfony.com/blog/category/living-on-the-edge) or know where on the Nette forum are located [Release Notes](https://forum.nette.org/en/f78-release-announcements-news).
 
 Sometimes if you're lucky there is `UPGRADE-x.md` in project's Github repository, like [`UPGRADE-4.0.md`](https://github.com/symfony/symfony/blob/master/UPGRADE-4.0.md) in Symfony 4 repository. But what if you need upgrade to version 3.x? Could you find it? Well no, but yes in [3.x branch](https://github.com/symfony/symfony/tree/3.4).
@@ -66,8 +66,8 @@ So it easy as:
 
 Unfortunately no and our investigative programming begins. Git blame..., Google? Symfony Docs?
 
-Sometimes they are embodied in the code - the best place to add them. When running this method, you'll be informed: 
- 
+Sometimes they are embodied in the code - the best place to add them. When running this method, you'll be informed:
+
 ```php
 public function add()
 {
@@ -96,7 +96,7 @@ But that's not the only "standard".
     <img src="https://imgs.xkcd.com/comics/standards.png">
 </a>
 
-There is one more way I wrote about in [How to write Open-Source in PHP 3: Deprecating Code](/blog/2017/09/11/how-to-write-open-source-in-php-3-deprecating-code/#today-s-topic-changed-method-name). 
+There is one more way I wrote about in [How to write Open-Source in PHP 3: Deprecating Code](/blog/2017/09/11/how-to-write-open-source-in-php-3-deprecating-code/#today-s-topic-changed-method-name).
 
 The `@deprecated` annotation:
 
@@ -120,7 +120,7 @@ Would you like to do this job instead of developing your application? Most peopl
 
 ## Embodied Cognition instead of Investigative Programming
 
-I consulted over 50 projects in great depth of legacy. We always tried to figure out, where to start. 
+I consulted over 50 projects in great depth of legacy. We always tried to figure out, where to start.
 
 - "This is how it's done in your project, and this is the way in <the-desired-framework>."
 
@@ -129,9 +129,9 @@ or
 - "This is how it's done in Symfony 2.8 and this is the way in Symfony 3.0."
 
 Over and over again, just version numbers and the <the-desired-framework> changed. After few years I started to feel like dump copy-paster. I follow every new feature on Symfony, test it, verify it's usefulness, then destile 100 hours of my work to 3 hour lecture.
- 
+
 I'm lazy and this started to itch my mind. Is this the really education I want to encourage in the world? Well, majority of lecturers do exactly same work, well paid work. But is that reason to do it too?
 
 I borrow a term from psychology - embodies cognition. It's something you don't have to remember, cause it's in you. It's like riding a bike. I don't know what words to use and where to find out how to ride a bike - I just know it, cause it's in  my internal reflexes.
- 
+
 Could something similar happend to upgrading applications? A single place that knows what to do and doesn't have to explain every programmer over and over again?
