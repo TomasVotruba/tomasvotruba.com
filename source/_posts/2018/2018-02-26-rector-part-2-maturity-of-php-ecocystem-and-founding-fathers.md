@@ -22,7 +22,6 @@ It's not that PHP didn't need to be updated until 2017. I surely could delegate 
 
 **It was followed by [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer)** with [it's first release in 2014](http://fabien.potencier.org/php-cs-fixer-finally-reaches-version-1-0.html) by [Fabien Potencier](http://fabien.potencier.org). Did you know the first script [had only 106 lines](https://gist.github.com/fabpot/3f25555dce956accd4dd)?
   
->>>>>>> post-2: update with php-parser 4
 I use daily both of these tools, [they're both awesome and work best together](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). Both of them fix the code for you, so you can sleep or have a coffee instead.
 
 It took 12 years and 2 tools with over 4000 stars on Github to get here.
@@ -40,7 +39,7 @@ That's what [Ondřej Mirtes](https://ondrej.mirtes.cz/) uses in [PHPStan](/blog/
 
 Again useful, but what about that coffee? It won't make itself.
 
-**I must say, this is breaking point for Rector**. Without this, Rector would be just annoying tool telling you what is wrong and what you should do (and we had enough control already, right?). Super fortunately, [write feature was added and released in 2018](https://github.com/nikic/PHP-Parser/blob/master/doc/component/Pretty_printing.markdown#formatting-preserving-pretty-printing) with version 4.
+**I must say, this is breaking point for Rector**. Without this, Rector would be just annoying tool telling you what is wrong and what you should do (and we had enough control already, right?). Super fortunately, [write feature was added and released in 2018](https://github.com/nikic/PHP-Parser/blob/master/doc/component/Pretty_printing.markdown#formatting-preserving-pretty-printing) with php-parser 4.
 
 *Did you know?* That Fabien wanted to use PHP-Parser for PHP CS Fixer in [2012](https://github.com/nikic/PHP-Parser/issues/41), but could not, because the writing part was missing? *Patience makes perfect* - 6 years later it's there. 
 
