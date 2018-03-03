@@ -10,21 +10,26 @@ tweet: "New post on my blog: Rector: Part 2 - Maturity of PHP Ecosystem and Foun
 related_items: [63, 77]
 ---
 
-You already know [What Rector does and How it works](/blog/2018/02/19/rector-part-1-what-and-how/) from part 1.
+*Read also:*
 
-It's not that PHP didn't need to be updated until 2017. I surely could delegate hundreds of *upgrade-hours* for my whole career. So **why Now?**
+- [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how/)
+- [Part 3 - Why Instant Upgrades](/blog/2018/03/05/rector-part-3-why-instant-upgrades/)
+
+<br>
+
+It's not that PHP projects didn't need to be updated until 2017. I surely could delegate hundreds of *upgrade-hours* for my whole career. So **why Now?**
 
 ## *Codemods* as Standard
 
 *Codemod* is a tool that modifies your code. And you're ok with it.
 
-Many years ago [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) was born by [Greg Sherwood](https://gregsherwood.blogspot.cz/search/label/PHP_CodeSniffer) from Australia. Guess how long ago? [In 2006](https://gregsherwood.blogspot.cz/2006/12/if-not-test-first-then-test-really-soon.html)! Tool that checks your coding standard, tabs and spaces, brackets and quotes. First of it's kind to be mainstream in PHP community.
+**Many years ago [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) was born** by [Greg Sherwood](https://gregsherwood.blogspot.cz/search/label/PHP_CodeSniffer) from Australia. Guess how long ago? [In 2006](https://gregsherwood.blogspot.cz/2006/12/if-not-test-first-then-test-really-soon.html)! Tool that checks your coding standard, tabs and spaces, brackets and quotes. First of it's kind to be mainstream in PHP community.
 
-It was followed by [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer) with [it's first release in 2014](http://fabien.potencier.org/php-cs-fixer-finally-reaches-version-1-0.html) by [Fabien Potencier](http://fabien.potencier.org). Did you know the first script [had only 106 lines](https://gist.github.com/fabpot/3f25555dce956accd4dd)?
+**It was followed by [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer)** with [it's first release in 2014](http://fabien.potencier.org/php-cs-fixer-finally-reaches-version-1-0.html) by [Fabien Potencier](http://fabien.potencier.org). Did you know the first script [had only 106 lines](https://gist.github.com/fabpot/3f25555dce956accd4dd)?
 
 I use daily both of these tools, [they're both awesome and work best together](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). Both of them fix the code for you, so you can sleep or have a coffee instead.
 
-It took time and 2 tools with over 4000 stars on Github to get here.
+It took 12 years and 2 tools with over 4000 stars on Github to get here.
 
 ## Is PHP Ready for AST?
 
@@ -39,9 +44,9 @@ That's what [Ondřej Mirtes](https://ondrej.mirtes.cz/) uses in [PHPStan](/blog/
 
 Again useful, but what about that coffee? It won't make itself.
 
-I must say, this is breaking point for Rector. Without this, Rector would be just annoying tool telling you what is wrong and what you should do (and we had enougt control already, right?). Super fortunately, [write feature was added in 2017](https://github.com/nikic/PHP-Parser/blob/master/doc/component/Pretty_printing.markdown#formatting-preserving-pretty-printing). It'll become stable with version 4 [that's right behind the corner in time of writing this](https://github.com/nikic/PHP-Parser/releases?after=v4.0.0).
+**I must say, this is breaking point for Rector**. Without this, Rector would be just annoying tool telling you what is wrong and what you should do (and we had enough control already, right?). Super fortunately, [write feature was added and released in 2018](https://github.com/nikic/PHP-Parser/blob/master/doc/component/Pretty_printing.markdown#formatting-preserving-pretty-printing) with php-parser 4.
 
-*Did you know?* That Fabien wanted to use PHP-Parser for PHP CS Fixer in [2012](https://github.com/nikic/PHP-Parser/issues/41), but could not, because the writing part was missing? *Patience makes perfect* - 5 years later it's there.
+*Did you know?* That Fabien wanted to use PHP-Parser for PHP CS Fixer in [2012](https://github.com/nikic/PHP-Parser/issues/41), but could not, because the writing part was missing? *Patience makes perfect* - 6 years later it's there.
 
 ### Coding Standard + Tool that makes Code Nice and Shiny
 
@@ -90,11 +95,11 @@ It's not only about writing code. It's about discussing the idea, finding the ri
 
 I don't work for at any company so development of Rector doesn't solve my personal issues. That's how most project is born, like PHPStan to check Slevomat's code. That means I needed other motivation - when my frustration of wasted thousands human-hours was not enough.
 
-Here I'd like to thank [Petr Vácha](http://petrvacha.com/) for cowork weekend in Brno with in summer 2017, where it all started - in those times named as *Refactor*. You've been great friend for years and courage in times, when I needed it the most.
+- **Here I'd like to thank [Petr Vácha](http://petrvacha.com/)** for cowork weekend in Brno with in summer 2017, where it all started - in those times named as *Refactor*. You've been great friend for years and courage in times, when I needed it the most.
 
-And [David Grudl](https://davidgrudl.com/), who gave me the motivation to dig deep and "just try it" when I felt desperate and useless always with lightness of Zen master.
+- **And [David Grudl](https://davidgrudl.com/)**, who gave me the motivation to dig deep and "just try it" when I felt desperate and useless always with lightness of Zen master.
 
-And also [Nikita Popov](http://nikic.github.com/), who patiently answered, taught me and fixed all my issues on `nikic/php-parser`.
+- **And also [Nikita Popov](http://nikic.github.com/)**, who patiently answered, taught me and fixed all my issues on `nikic/php-parser`.
 
 Without you, I would not make it here today.
 
