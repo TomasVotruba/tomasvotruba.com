@@ -17,7 +17,7 @@ Yesterday I worked on [Rector](https://github.com/rectorphp/rector) and **needed
 
 <br>
 
-To give you a context, now you can register particular Rectors to config `services:` section as you know from Symfony: 
+To give you a context, now you can register particular Rectors to config `services:` section as you know from Symfony:
 
 ```yaml
 # rector.yml
@@ -193,10 +193,10 @@ services:
 ```
 
 Quick solution, yet smelly:
- 
- - But how to share common code between similar RectorProvider? 
- - Duplicate and decouple services? 
- - And what is the point of provider, if it can only add 1 new Rector? 
+
+ - But how to share common code between similar RectorProvider?
+ - Duplicate and decouple services?
+ - And what is the point of provider, if it can only add 1 new Rector?
  - Why not register them in `services:` directly like the others?
 
 And flow of *WTFs* is coming at you.
