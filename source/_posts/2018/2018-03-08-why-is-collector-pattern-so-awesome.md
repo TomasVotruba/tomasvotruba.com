@@ -17,21 +17,12 @@ Yesterday I worked on [Rector](https://github.com/rectorphp/rector) and **needed
 
 <br>
 
-To give you little bit of context, now user can register it to config under `rectors:` section. Then [extension adds it as autowired service](https://github.com/rectorphp/rector/blob/77925afdc9d8032a36b92110e4fb3b905897f445/src/DependencyInjection/Extension/RectorsExtension.php#L53):
+To give you a context, now you can register particular Rectors to config `services:` section as you know from Symfony: 
 
 ```yaml
 # rector.yml
-rectors:
+services:
     Rector\Rector\Contrib\Symfony\HttpKernel\GetterToPropertyRector: ~
-```
-
-Why not directly under `services`? To allow configuring:
-
-```yaml
-# rector.yml
-rectors:
-    Rector\Rector\Dynamic\ClassReplacerRector:
-        'DeprecatedClass': 'NewClass'
 ```
 
 <br>
@@ -202,11 +193,11 @@ services:
 ```
 
 Quick solution, yet smelly:
-
- - But how to share common code between similar RectorProvider?
- - Duplicate and decouple services?
- - And what is the point of provider, if it can only add 1 new Rector?
- - Why not register them in `rectors:` directly like the others?
+ 
+ - But how to share common code between similar RectorProvider? 
+ - Duplicate and decouple services? 
+ - And what is the point of provider, if it can only add 1 new Rector? 
+ - Why not register them in `services:` directly like the others?
 
 And flow of *WTFs* is coming at you.
 
