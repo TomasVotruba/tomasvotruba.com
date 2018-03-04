@@ -10,7 +10,7 @@ tweet: "Let AST change code for you #php #phpparser #ast #ai"
 
 tested: true
 test_slug: Ast
-related_items: [77, 78, 81]
+related_items: [77, 78, ]
 ---
 
 We need to make clear what are we talking about right at the beginning. When we say "PHP AST", you can talk about 2 things:
@@ -27,11 +27,14 @@ This is AST of PHP in Object PHP. It will take your PHP code, turn into PHP obje
 
 Nikita explains [differences between those 2 in more detailed technical way](https://github.com/nikic/php-ast#differences-to-php-parser). Personally I love [this human reason](https://github.com/nikic/PHP-Parser/blob/master/doc/0_Introduction.markdown#what-is-this-for) the most:
 
+<br>
+
 <blockquote class="blockquote">
     "Why would I want to have a PHP parser written in PHP? Well, PHP might not be a language especially suited for fast parsing, but processing the AST is much easier in PHP than it would be in other, faster languages like C. Furthermore the people most probably wanting to do programmatic PHP code analysis are incidentally PHP developers, not C developers."
     <footer class="blockquote-footer text-right">Nikita Popov</footer>
 </blockquote>
 
+<br>
 
  Which one would you pick? If you're **lazy like me and hate reading code and writing code** over and over again, the 2nd one.
 
