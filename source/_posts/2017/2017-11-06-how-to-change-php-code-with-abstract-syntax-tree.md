@@ -18,7 +18,7 @@ We need to make clear what are we talking about right at the beginning. When we 
 
 ### 1. php-ast
 
-This is native extension which exports the AST internally used by PHP 7.0+. It allows **read-only** and is very fast, since it's native C extension. Internal AST was added to PHP 7.0 by skill-full Nikita Popov in [this RFC](https://wiki.php.net/rfc/abstract_syntax_tree). You can find it on GitHub under [`nikic/php-ast`](https://github.com/nikic/php-ast).
+This is native extension which exports the AST internally used by PHP 7.0+. It allows **read-only** and is very fast, since it's native C extension. Internal AST was added to PHP 7.0 by skill-full Nikita Popov in [this RFC](https://wiki.php.net/rfc/abstract_syntax_tree). You can find it on GitHub under [nikic/php-ast](https://github.com/nikic/php-ast).
 
 
 ### 2. PHP AST
