@@ -7,7 +7,7 @@ perex: '''
     What exactly Rector does and how does it work?
 '''
 tweet: "New post on my blog: Rector: Part 1 - What and How #php #ast #refactoring #instantupgrades"
-related_items: [63, 78]
+related_items: [63, 78, 81]
 ---
 
 *Read also:*
@@ -132,9 +132,9 @@ services:
 
 Rector is not the only one who uses `nikic\php-parser` for context-aware operation on your code.
 
-You probably heard of [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). But unfortunately it's read-only for deterministic cases = when 1 error has exactly 1 possible solution.
+You've probably heard of [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). But unfortunately it's read-only for deterministic cases = when 1 error has exactly 1 possible solution.
 
-A bit further is another static analysis tool - [`vimeo/psalm`](https://github.com/vimeo/psalm) by [Matthew Brown](https://github.com/muglug), which fixes such code. Great job Matthew!
+A bit further is another static analysis tool - [vimeo/psalm](https://github.com/vimeo/psalm) by [Matthew Brown](https://github.com/muglug), which fixes such code. Great job Matthew!
 
 ## Easter Egg: Has Google Own "Rector"?
 
@@ -143,10 +143,6 @@ This *setup and forget* approach is so addictive, that Google must have it too, 
 And it does! I found 4-page case study *[Large-Scale Automated Refactoring Using ClangMR](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41342.pdf)*, that was [presented by *Hyrum Wright* on CppCon2014](https://www.youtube.com/watch?v=ZpvvmvITOrk) in 57 minutes. Hyrum doesn't work at Google anymore (as he wrote me), yet I still love his detailed and practical talk.
 
 I'm still amazed by how their approach is 90 % similar to Rector, just for C++.
-
-<br>
-
-In the next post, I [wrote about what needed to happen before Rector could have been born](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers/).
 
 <br>
 
