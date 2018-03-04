@@ -322,7 +322,7 @@ use Doctrine\ORM\EntityRepository;
 final class PostRepository
 {
     /**
-     * @var Repository
+     * @var EntityRepository
      */
     private $repository;
 
@@ -359,7 +359,7 @@ use Doctrine\ORM\EntityRepository;
 final class PostRepository
 {
     /**
-     * @var Repository
+     * @var EntityRepository
      */
     private $repository;
 
@@ -403,7 +403,7 @@ namespace App\Entity;
 use Doctrine\ORM\Entity;
 use Doctrine\ORM\EntityRepository;
 
-final class Post
+class Post
 {
     ...
 }
