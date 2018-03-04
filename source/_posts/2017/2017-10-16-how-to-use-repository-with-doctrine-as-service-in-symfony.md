@@ -227,7 +227,7 @@ $postRepository->help()?;
 Or this:
 
 ```php
-$post = $this->postRepository->get(1);
+$post = $this->postRepository->find(1);
 $post->help()?;
 ```
 
@@ -235,7 +235,7 @@ To enable autocomplete, we have to add them manually:
 
 ```php
 /** @var App\Entity\Post $post */
-$post = $this->postRepository->get(1);
+$post = $this->postRepository->find(1);
 $post->getName();
 ```
 
@@ -284,7 +284,7 @@ We cannot use multiple repository for single entity. **It naturally leads to hug
 
 We cannot use constructor injection in repositories, which **can easily lead you to creating static helper classes**.
 
-Also, you directly depend on Doctrine's API, so if `get()` changes to `find()` in one `composer update`, your app is down.
+Also, you directly depend on Doctrine's API, so if `find()` changes to `get()` in one `composer update`, your app is down.
 
 
 
@@ -374,9 +374,9 @@ final class PostRepository
         $this->postSorter = $postSorter;
     }
 
-    public function get(int $id): Post
+    public function find(int $id): Post
     {
-        return $this->repository->get($id);
+        return $this->repository->find($id);
     }
 }
 ```
