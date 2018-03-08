@@ -2,11 +2,11 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.1",
-        "symplify/statie": "^3.2",
+        "symplify/statie": "^3.2.29",
         "nette/utils": "^2.4",
         "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0",
-        "nikic/php-parser": "v4.0.0beta1"
+        "nikic/php-parser": "v4.0.0"
     },
     "require-dev": {
         "symplify/easy-coding-standard": "^3.2",
