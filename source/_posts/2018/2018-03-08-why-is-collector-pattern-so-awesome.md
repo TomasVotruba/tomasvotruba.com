@@ -159,7 +159,7 @@ namespace App\Rector;
 
 use Rector\Contract\Rector\RectorInterface;
 
-final class NetteRectorProvider implements RectorInterface
+final class NetteRectorProvider implements RectorProviderInterface
 {
     // `$builderRectorFactory` passed via contructor + property
 
@@ -211,13 +211,12 @@ Let's try a different approach that Colletor pattern screams at us. We now have 
 namespace Rector\Rector;
 
 use Rector\Contract\Rector\RectorInterface;
-use Rector\RectorBuilder\Contract\RectorProviderInterface;
 
 final class RectorCollector
 {
     public function addRector(RectorInterface $rector): void
     {
-        $this->retcors[] = $rector;
+        $this->rectors[] = $rector;
     }
 }
 ```
@@ -245,7 +244,7 @@ This is why Collector pattern is so awesome. **You have 1 place to solve all you
  {
      public function addRector(RectorInterface $rector): void
      {
-         $this->retcors[] = $rector;
+         $this->rectors[] = $rector;
      }
 +
 +    public function addRectorProvider(RectorProviderInterface $rectorProvider): void
@@ -311,7 +310,7 @@ I know you already know how to solve this now. So let's put it together here:
  {
      public function addRector(RectorInterface $rector): void
      {
-         $this->retcors[] = $rector;
+         $this->rectors[] = $rector;
      }
 
      public function addRectorProvider(RectorProviderInterface $rectorProvider): void
