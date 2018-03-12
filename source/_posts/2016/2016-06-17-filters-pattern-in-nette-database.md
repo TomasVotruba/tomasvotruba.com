@@ -1,19 +1,17 @@
 ---
 id: 9
 title: Filters Pattern in Nette Database
-perex: '''
+perex: |
     You want to delete comments, so your readers won't see any spam or violent content.
     But you want to see them in administration. So you would have to create 2 different methods.
     Today I will show you, how to make only single one.
-'''
 
 deprecated: true
 deprecated_since: "January 2017"
-deprecated_message: '''
+deprecated_message: |
     I have deprecated this package, because it was not very active - it has been downloaded only 5 times during past 4 months.
     <br><br>
     It is still available <a href="https://github.com/DeprecatedPackages/NetteDatabaseFilters">here for inspiration</a> though.
-'''
 ---
 
 ## Current way to do this

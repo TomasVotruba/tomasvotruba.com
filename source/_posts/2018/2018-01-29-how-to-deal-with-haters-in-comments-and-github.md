@@ -1,9 +1,8 @@
 ---
 id: 74
 title: "How to Deal With Haters in Comments and Github"
-perex: '''
+perex: |
     That's what I was asked yesterday for about 5th person already. How do I deal with that when I write an article, when I tweet or comment on Github and someone is throwing dirt on me?
-'''
 tweet: "New post on my blog: How to Deal With #Haters in Comments and #Github #compassion #communication"
 tweet_image: "/assets/images/posts/2017/feedback/feedback.jpg"
 ---

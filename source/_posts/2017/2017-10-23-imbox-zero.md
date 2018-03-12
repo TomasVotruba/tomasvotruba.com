@@ -1,11 +1,10 @@
 ---
 id: 60
 title: "IMbox Zero"
-perex: '''
+perex: |
     You have probably heard about Inbox Zero. [ZTD](https://zenhabits.net/zen-to-done-ztd-the-ultimate-simple-productivity-system/) technique, **to keep your email inbox clean and your brain well rested**.
     <br><br>
     Let's take it a step further into 2017 - **to instant messaging**.
-'''
 tweet: "Cleanup your #Messenger, #WhatApp and SMS to Improve your Productivity #facebook #imboxzero"
 tweet_image: "/assets/images/posts/2017/imbox-zero/messenger.png"
 related_items: [56]

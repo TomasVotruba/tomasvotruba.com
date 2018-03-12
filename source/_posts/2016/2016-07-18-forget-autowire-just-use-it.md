@@ -1,22 +1,20 @@
 ---
 id: 10
 title: Forget "autowire" and just use it
-perex: '''
+perex: |
     Autowiring is a great feature that was added in Symfony 2.8. It moves Dependency Injection pattern to the next level.
     If you want to use it to its full potential, you still have to add 1 extra line to every service configuration.
     Today I will show you, how to get rid of that line.
-'''
 
 deprecated: true
 deprecated_since: "May 2017"
-deprecated_message: '''
+deprecated_message: |
     You can set autowiring via <a href="https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration#default-service-configuration">new <code>_defaults</code> per config file feature</a>
     since <strong>Symfony 3.3</strong>.
     <br><br>
     It does pretty much the same thing, with <strong>advantage of having it under control and explicitly defined</strong>.
     <br><br>
     I recommend using it instead!
-'''
 ---
 
 

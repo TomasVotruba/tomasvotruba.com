@@ -1,11 +1,10 @@
 ---
 id: 77
 title: "Rector: Part 1 - What and How"
-perex: '''
+perex: |
     Rector is a PHP tool that handles 2 things: **instant upgrades** and **architecture refactorings**.
     <br><br>
     What exactly Rector does and how does it work?
-'''
 tweet: "New post on my blog: Rector: Part 1 - What and How #php #ast #refactoring #instantupgrades"
 related_items: [63, 78, 81]
 ---

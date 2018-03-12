@@ -1,11 +1,10 @@
 ---
 id: 49
 title: "7 New Features in Easy Coding Standard 2.2"
-perex: '''
+perex: |
     After extensive cooperation with <a href="https://twitter.com/geekovo/status/885152407948333056">David Grudl on Nette\CodingStandard</a> EasyCodingStandard got new features, that <strong>moved the project to completely new level of comfort</strong>.
     <br><br>
     Prepared configs, reduction of config to few lines, <code>--config</code> option and more.
-'''
 tweet: "7 New Features in Easy Coding Standard #codingStandard #php #solid"
 related_items: [37, 51]
 ---

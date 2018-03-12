@@ -5,12 +5,11 @@ perex: "With new autowiring feature in Symfony 2.8+, it is now easier to manage 
 
 deprecated: true
 deprecated_since: "May 2017"
-deprecated_message: '''
+deprecated_message: |
     Since <strong>Symfony 3.3</strong> you can use <a href="https://github.com/symfony/symfony/pull/21289">PSR4-based service discovery and registration</a>.
     It does pretty much the same thing - <strong>registers autowired controllers</strong> (and more) - and it has native support in Symfony.
     <br><br>
     I recommend using it instead!
-'''
 ---
 
 ### Disclaimer: Why even use controllers as services?

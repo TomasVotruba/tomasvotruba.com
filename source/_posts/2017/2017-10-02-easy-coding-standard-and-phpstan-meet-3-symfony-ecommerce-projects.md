@@ -1,13 +1,12 @@
 ---
 id: 57
 title: "EasyCodingStandard and PHPStan meet 3&nbsp;Symfony E-Commerce Projects"
-perex: '''
+perex: |
     [In the last post](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis/), we looked at the static analysis of 3 Symfony E-Commerce projects.
 
     **Lines of code, Duplicated code, Cyclomatic complexity or Method length**. These metrics are very rarely used in practise (even though there is a [sniff for that](https://github.com/Symplify/Symplify/blob/bf802422b9528946a8bd7e7f0331d858a9bf5740/easy-coding-standard.neon#L27-L28)).
 
     Today, I am going to show you how you can check them with tools that can help you keep your code better on daily basis - [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) and [PHPStan](https://github.com/phpstan/phpstan).
-'''
 tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects #numbers #php"
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png"
 related_items: [52]

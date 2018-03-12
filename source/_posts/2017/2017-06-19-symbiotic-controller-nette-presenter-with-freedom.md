@@ -1,25 +1,23 @@
 ---
 id: 43
 title: "Symbiotic Controller: Nette&nbsp;Presenter&nbsp;with&nbsp;Freedom"
-perex: '''
+perex: |
     Symfony and Laravel allow decoupled controllers by default thanks to simple principle: <em>controller/presenter = callback</em>. No base class or interface is needed.
     <br><br>
     People around me are already using single action presenters, but still depend on Nette. Why? Coupling of <code>IPresenter</code> in Application and Router.
     <br><br>
     I think framework should help you and not limit you in a way how you write your code.
     <strong>Today we look how to make that happen even for Nette presenters and how to set them free</strong>.
-'''
 related_items: [28]
 tweet: "How to get #nettefw presenter naked (without parents)? #api #php"
 
 deprecated: true
 deprecated_since: "October 2017"
-deprecated_message: '''
+deprecated_message: |
     This was deprecated due to low usage of package and too complicated API. <strong>Use class that implements <code>Nette\Application\IPresenter</code> with <code>run(Request $request)</code> instead</strong>.
     <br>
     <br>
     For more, see <a href="https://github.com/Symplify/Symplify/issues/402">issue on Github</a>.
-'''
 ---
 
 ## 3 Misconceptions First

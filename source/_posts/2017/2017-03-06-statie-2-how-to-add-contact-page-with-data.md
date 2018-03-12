@@ -1,15 +1,13 @@
 ---
 id: 32
 title: "Statie 2: How add Contact Page With Data"
-perex: '''
+perex: |
     <a href="/blog/2017/02/20/statie-how-to-run-it-locally">In first post about Statie</a> you generated simple index with layout. Today we look on first semi-dynamic feature: <strong>data structures</strong>.
-'''
 
 updated: true
 updated_since: "Agust 2017"
-updated_message: '''
+updated_message: |
     Updated with <a href="https://github.com/Symplify/Symplify/pull/197">Statie 2.2</a> and <code>parameters</code> section in <code>statie.neon</code> config for loading global data.
-'''
 related_items: [29, 33, 34]
 
 tweet: "#Statie 2: Data sets #php #static #github"

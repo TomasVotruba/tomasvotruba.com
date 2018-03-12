@@ -1,11 +1,10 @@
 ---
 id: 42
 title: "How to Require Minimal Code Coverage for Github Pull-Requests with Coveralls"
-perex: '''
+perex: |
     Do you maintain tested open-source project? Are you sad of your code-coverage decreasing over time in wave of pull-requests? <strong>Are you tired of telling "could you add tests"</strong>?
     <br><br>
     I will show you how to let Travis and Coveralls do this job for you.
-'''
 tweet: "Code Coverage under control with #coveralls #github #php #opensource"
 ---
 

@@ -1,11 +1,10 @@
 ---
 id: 47
 title: "How to Write Custom Fixer for PHP CS Fixer 2.4"
-perex: '''
+perex: |
     You already know <a href="/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/">how coding standard tools work with tokens and how to write a Sniff</a>.
      <br><br>
      Today we'll explore a bit younger tool - <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">PHP CS Fixer</a> and we get <strong>from only finding the smelly spot to fixing it</strong>.
-'''
 related_items: [48, 46, 37]
 tweet: "How to Write Custom Fixer for #phpcsfixer"
 tweet_image: "/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png"
