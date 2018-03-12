@@ -5,11 +5,10 @@ perex: "Doctrine filters are powerful tool. Yet their registration and managemen
 
 deprecated: true
 deprecated_since: "March 2017"
-deprecated_message: '''
+deprecated_message: |
     I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - <strong><a href="/blog/2017/03/27/why-is-doctrine-dying/">read a post here</a></strong>.
     <br><br>
     It's been revived by Tomáš Pilař on <a href="https://github.com/Lekarna/DoctrineFilters">Lekarna/DoctrineFilters</a> though.
-'''
 ---
 
 ## Standard Process to Enable Filter

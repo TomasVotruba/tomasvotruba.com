@@ -1,11 +1,10 @@
 ---
 id: 30
 title: "Fast and Easy Way to Learn Complex Topics"
-perex: '''
+perex: |
     This little trick helps me to learn complex topic both fast and easy. It works very well during my lectures and posts. In Informatics, people tend to make issues more complex than it is necessary. It slows down the learning steep with no added value.
     <br><br>
     I think it's about time to take it back to <strong>the simplest step</strong> and make learning faster (or machines will). Today I will show you how.
-'''
 tweet: "How to learn complex topics fast and easy? Start... #education #ai #learning"
 ---
 

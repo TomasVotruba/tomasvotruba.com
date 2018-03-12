@@ -1,12 +1,11 @@
 ---
 id: 44
 title: "PHP Object Calisthenics Made Simple - Version 3.0 is Out Now"
-perex: '''
+perex: |
     Object Calisthenics are 9 language-agnostic rules to help you write better and cleaner code.
     They help you to get rid of "else" statements, method chaining, long classes or functions, unreadable short names and much more.
     <br><br>
     <strong>Object Calisthenics 3.0 runs on CodeSniffer 3.0 and PHP 7.1. It brings 6 of them with fancy configuration and code examples</strong>.
-'''
 related_items: [46, 48, 37]
 tweet: "What are #php Object Calisthenics and how to use them? #codingStandard #solid"
 ---

@@ -1,14 +1,13 @@
 ---
 id: 40
 title: "Thank you David"
-perex: '''
+perex: |
     While using open-source, we rarely realize that there is one or few people behind it. <strong>People who work in their free time and put an effort in it</strong>.
     We feel like using a product - it should work and when it doesn't, it's broken. And when our application is constantly broken, we will be angry for them.
     <br><br>
     But if our application is smooth and ready, do we love and say thank you?
     <br><br>
     I'd like to express <strong>my gratitude and tribute for you, <a href="https://davidgrudl.com/">David</a> - you made my programming life very joyful and curious experience</strong>.
-'''
 tweet: "Open thank-you letter to @geekovo for all his positive influence #php #community #nettefw #notgay"
 ---
 

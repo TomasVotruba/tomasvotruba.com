@@ -1,12 +1,11 @@
 ---
 id: 55
 title: "4 Simple Checkers for Coding Standard Haters but Clean Code Lovers"
-perex: '''
+perex: |
     Do you find coding standards too <strong>annoying in telling you where to put that bracket</strong>?
     Is that the reason you haven't tried them yet?
     <br><br>
     Great! This post is for you. There are <a href="/blog/2017/07/31/how-php-coding-standard-tools-actually-work/#write-1-checke-save-hundreds-hours-of-work">other ways to use coding standard</a> and <strong>clean code</strong> is one of them.
-'''
 tweet: "Do you hate Coding Standards, but love #cleancode? Check these 4 helpful rules #php"
 tweet_image: "/assets/images/posts/2017/clean-checkers/dependency-drop.png"
 related_items: [51, 48]

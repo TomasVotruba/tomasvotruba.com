@@ -1,11 +1,10 @@
 ---
 id: 19
 title: "How to avoid @inject thanks to Decorator feature in Nette"
-perex: '''
+perex: |
     I often find `@inject` being overused in projects I review while mentoring. They often bring less writing, but in exchange they break [SOLID principles](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)).
     <br><br>
     Today I will show you solution that will **keep your code both small and clean** - **Decorator feature in Nette**.
-'''
 related_items: [27]
 tweet: "How to avoid @inject by using Decorator in #nettefw?"
 ---

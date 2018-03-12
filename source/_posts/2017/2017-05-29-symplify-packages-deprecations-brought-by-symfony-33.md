@@ -1,14 +1,13 @@
 ---
 id: 39
 title: "Symplify packages deprecations brought by Symfony 3.3"
-perex: '''
+perex: |
     <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">Symfony 3.3 brings new Dependency Injection features</a>,
     that were supplemented by few of Symplify packages in Symfony 3.2 and bellow.
     There is no need - as <a href="https://github.com/Lexinek">Honza Mikes</a> said - to <em>bring the wood to the forest</em>. So they were deprecated.
     <br><br>
     I will show <strong>why and what packages were deprecated and how to upgrade your app
     to use Symfony 3.3 instead</strong>.
-'''
 related_items: [40]
 tweet: "What was changed and dropped from #symplify thanks to #symfony 3.3?"
 ---

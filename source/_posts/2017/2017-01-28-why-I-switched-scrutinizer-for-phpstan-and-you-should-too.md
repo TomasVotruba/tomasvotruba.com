@@ -1,11 +1,10 @@
 ---
 id: 24
 title: "Why I Switched Scrutinizer for PHPStan and You Should Too"
-perex: '''
+perex: |
     I used Scrutinizer for a few years now for code coverage and code quality. Configuration was far complex, some issues appeared and build kept failing. But I really wanted a code quality checker for my open-source projects and this was the best tool available.
     <br><br>
     But last week I had an issue with simple <code>composer install</code> command and I have had enough. Then <strong>my attention turned to PHPStan</strong>, soon-to-be its replacement.
-'''
 tweet: "Why I switched from #scrutinizer to #phpstan? #staticAnalysis #php"
 ---
 

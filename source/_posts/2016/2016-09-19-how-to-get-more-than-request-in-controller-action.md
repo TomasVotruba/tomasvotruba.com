@@ -1,15 +1,14 @@
 ---
 id: 14
 title: How to get more than Request in Controller Action
-perex: '''
+perex: |
     You already know you can get <code>Request</code> object in your controller action. Cool, but there is more.
     In <em>Symfony 3.1</em> is new <a href="https://symfony.com/doc/current/controller/argument_value_resolver.html">Action Argument Resolving feature</a>,
     so you can <strong>get any service you need</strong>. With a bit of work. Today I will show you how.
-'''
 
 deprecated: true
 deprecated_since: "May 2017"
-deprecated_message: '''
+deprecated_message: |
     You can <a href="https://github.com/symfony/symfony/pull/21771">inject services into actions</a> using <code>controller.service_arguments</code> tag
     since <strong>Symfony 3.3</strong>.
     <br><br>
@@ -17,7 +16,6 @@ deprecated_message: '''
     and <a href="https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration">autoconfiguration</a> this is amazing feature.
     <br><br>
     I recommend using it instead!
-'''
 ---
 
 ## Disclaimer: What happened to controller constructor injection?

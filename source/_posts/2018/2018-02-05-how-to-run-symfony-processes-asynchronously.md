@@ -1,11 +1,10 @@
 ---
 id: 75
 title: "How to Run Symfony Processes Asynchronously"
-perex: '''
+perex: |
     It takes quite a long time to split Symplify [monorepo](https://github.com/Symplify/Monorepo) packages: exactly **420 s for 8 packages** of Symplify.
     <br><br>
     Could we go 200 % faster by putting processes from serial to parallel?
-'''
 tweet: "New post on my blog: How to Run #Symfony Processes Asynchronously #async"
 tested: true
 test_slug: ProcessAsync

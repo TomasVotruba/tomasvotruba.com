@@ -1,11 +1,10 @@
 ---
 id: 21
 title: "How to Write Interesting Jobs Offers for Programmers"
-perex: '''
+perex: |
     A few years watching the labor market from a position of PHP programmers from the perspective of companies. With both sides have a good relationship. I think what they need and what is bothering you. **I see that they want each other, just communication is little stuck**.
     <br><br>
     I gave feedback on Jobs.cz, Skrz.cz and few more ads and this is **summary of tips, which I want to share with every company trying to hire programmer**.
-'''
 
 tweet: "How to write job advertisement every programmer will read? #php #job #copywriting"
 tweet_image: "/assets/images/posts/2017/job-offers/attitude.jpg"

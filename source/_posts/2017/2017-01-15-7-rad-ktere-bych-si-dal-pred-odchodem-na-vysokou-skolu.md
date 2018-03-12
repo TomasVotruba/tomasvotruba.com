@@ -1,10 +1,9 @@
 ---
 id: 22
 title: "7 rad, které bych si dal před odchodem na vysokou školu"
-perex: '''
+perex: |
     Už jsou to 4 roky, co jsem ukončil vysokou školu, aniž by mi za to dali titul. Během těch 4 let se mě na vysokou školu ptalo lidí, které bych spočítal na prstech jedné ruky. A na titul? Nikdo.<br><br>
     <strong>Nedávno jsem si volal s jedním středoškolákem a zjistil jsem, že vysoká škola je stále brána jako něco posvátného, důležitého a hlavně bez vhledu nikoho jiného než učitelů a rodičů.</strong> Řekl jsem si, že sepíšu svoje postřehy a rady, které bych si moc rád dal 8 let zpátky. <strong>Jestli je ti 18-19 let a zvažuješ co dál, pokračuj.</strong>
-'''
 
 deprecated: true
 deprecated_since: "August 2017"

@@ -1,11 +1,10 @@
 ---
 id: 78
 title: "Rector: Part 2 - Maturity of PHP Ecosystem and Founding Fathers"
-perex: '''
+perex: |
     What it took for Rector to be born?
     <br><br>
     Paradigm shift, ecosystem maturity, need for speed to solve common problems community has. **And a great team you share [your work with](https://austinkleon.com/show-your-work/) that feedbacks and reflects.**
-'''
 tweet: "New post on my blog: Rector: Part 2 - Maturity of PHP Ecosystem and Founding Fathers"
 related_items: [63, 77]
 ---

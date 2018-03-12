@@ -1,11 +1,10 @@
 ---
 id: 50
 title: "How to Apply Nette Coding Standard in Your Project"
-perex: '''
+perex: |
     <strong>Pull-requests are more fun</strong> thanks to automated coding standard. You don't have explain where to put space or bracket. You <strong>can talk about architecture or meaning of the code</strong> instead. Moreover in open-source. <strong>I wanted to make this possible in Nette</strong>, but Coding Standards could be found only in <a href="https://nette.org/en/coding-standard">documentation</a>.
     <br><br>
     This year I started to work on a Nette Coding Standard (<em>NCS</em>) that you can put to CLI. And you'll <strong>be able set it up in in your project</strong> yourself today.
-'''
 related_items: [49]
 tweet: "How to setup #nettefw Coding Standard in your project? Local #ci or #travisci"
 tweet_image: "/assets/images/posts/2017/nette-coding-standard/travis-check.png"

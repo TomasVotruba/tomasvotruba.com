@@ -1,8 +1,7 @@
 ---
 title: "4 Simple Checkers for Coding Standard Haters but Clean Code Lovers"
-perex: '''
+perex: |
     ...
-'''
 redirect: true
 ---
 

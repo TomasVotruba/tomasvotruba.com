@@ -1,11 +1,10 @@
 ---
 id: 72
 title: "Is Your CHANGELOG Useful or Just Boring Plain Text? And How to Fix That"
-perex: '''
+perex: |
     Do you [keep a CHANGELOG](https://keepachangelog.com/)? You shoud! I [do](https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md), because it's the main story about the open-source package.
     <br><br>
     And if you do, is it boring plain text or **useful rich markdown**?
-'''
 tweet: "New post on my blog: Keep Your CHANGELOG Useful with Links #github #changelog #dx"
 tweet_image: "/assets/images/posts/2018/changelog/keep-a-changelog.jpg"
 related_items:
