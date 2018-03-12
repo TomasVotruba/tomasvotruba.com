@@ -1,10 +1,10 @@
-includes:
-    - vendor/symplify/easy-coding-standard/config/psr2.neon
-    - vendor/symplify/easy-coding-standard/config/php71.neon
-    - vendor/symplify/easy-coding-standard/config/common.neon
-    - vendor/symplify/easy-coding-standard/config/symplify.neon
+imports:
+    - { resource: 'vendor/symplify/easy-coding-standard/config/psr2.yml' }
+    - { resource: 'vendor/symplify/easy-coding-standard/config/php71.yml' }
+    - { resource: 'vendor/symplify/easy-coding-standard/config/common.yml' }
+    - { resource: 'vendor/symplify/easy-coding-standard/config/symplify.yml' }
 
-checkers:
+services:
     SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff:
 
     SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
@@ -21,8 +21,8 @@ checkers:
 parameters:
     skip:
         Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
-            - */src/Posts/Year2017/Ast/*
+            - '*/src/Posts/Year2017/Ast/*'
 
         Symplify\CodingStandard\Fixer\Naming\PropertyNameMatchingTypeFixer:
             # false positive
-            - src/TweetPublisher/Tweet/Tweet.php
+            - 'src/TweetPublisher/Tweet/Tweet.php'
