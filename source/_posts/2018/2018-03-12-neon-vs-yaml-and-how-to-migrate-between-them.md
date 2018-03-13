@@ -2,7 +2,7 @@
 id: 83
 title: "Neon vs. Yaml and How to Migrate Between Them"
 perex: |
-    Do you know `*.neon` format? It's config file format created in Czech Republic by [David Grudl](https://davidgrudl.com/) (author of [Nette](https://github.com/nette/nette)) and if you're foreigner, you might know it from or [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard/) and [PHPStan](https://github.com/phpstan/phpstan). Event suggested as [`composer.neon`](https://github.com/composer/composer/issues/3228).
+    Do you know `*.neon` format? It's config file format created in Czech Republic by [David Grudl](https://davidgrudl.com/) (author of [Nette](https://github.com/nette/nette)) and if you're foreigner, you might know it from or [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard/) and [PHPStan](https://github.com/phpstan/phpstan). Even suggested as [`composer.neon`](https://github.com/composer/composer/issues/3228).
     <br><br>
     And `*.yaml` is similar format used almost everywhere else.
     <br><br>
