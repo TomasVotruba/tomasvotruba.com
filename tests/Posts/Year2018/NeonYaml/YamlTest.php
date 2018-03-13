@@ -48,7 +48,7 @@ final class YamlTest extends TestCase
     {
         return [
             [__DIR__ . '/Yaml/tabs.yml'],
-            [__DIR__ . '/Yaml/mixed-list.yml']
+            [__DIR__ . '/Yaml/mixed-list.yml'],
             [__DIR__ . '/Yaml/multi-lines-incorrect.yml'],
         ];
     }
