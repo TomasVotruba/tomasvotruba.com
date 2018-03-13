@@ -7,30 +7,31 @@ use PHPUnit\Framework\TestCase;
 
 final class NeonTest extends TestCase
 {
-    public function testTabsVsSpaces(): void
+    /**
+     * @dataProvider provideFilesToContent()
+     * @param mixed[] $expectedContent
+     */
+    public function test(string $file, array $expectedContent): void
     {
-        $tabsContent = $this->decodeFile(__DIR__ . '/Neon/tabs.neon');
-        $spacesContent = $this->decodeFile(__DIR__ . '/Neon/spaces.neon');
-
-        $this->assertSame($tabsContent, $spacesContent);
-        $this->assertSame(['address' => ['street' => '742 Evergreen Terrace']], $spacesContent);
+        $this->assertSame($expectedContent, $this->decodeFile($file));
     }
 
-    public function testList(): void
+    /**
+     * @return mixed[][]
+     */
+    public function provideFilesToContent(): array
     {
-        $mixedListContent = $this->decodeFile(__DIR__ . '/Neon/mixed-list.neon');
-
-        $this->assertSame([
-            'services' => [
+        return [
+            [__DIR__ . '/Neon/tabs.neon', ['address' => ['street' => '742 Evergreen Terrace']]],
+            [__DIR__ . '/Neon/spaces.neon', ['address' => ['street' => '742 Evergreen Terrace']]],
+            # arrays and lists
+            [__DIR__ . '/Neon/mixed-list.neon', ['services' => [
                 0 => 'SomeService',
                 'SomeService' => '~',
-            ], ], $mixedListContent);
-    }
-
-    public function testMultiline(): void
-    {
-        $content = $this->decodeFile(__DIR__ . '/Neon/multi-lines.neon');
-        $this->assertSame(['perex' => 'Multi' . PHP_EOL . 'line'], $content);
+            ]]],
+            # multi-line
+            [__DIR__ . '/Neon/multi-lines.neon', ['perex' => 'Multi' . PHP_EOL . 'line']]
+        ];
     }
 
     /**
