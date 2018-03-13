@@ -9,6 +9,9 @@ perex: |
     **You spot the suffix is different, but what about syntax differences? And which one is better?**
 tweet: "New post on my blog: Neon vs. Yaml and How to Migrate Between Them"
 tweet_image: "/assets/images/posts/2018/neon-yaml/standards.png"
+
+tested: true
+test_slug: NeonYaml
 ---
 
 None of them is perfect, they both have strong parts and weak parts. But the more I travel to abroad conferences, meetups or repositories, the more I hear **nobody understand differences between them or their advantages to each other**. Since I meet mainly with Symfony and Nette code, I had to investigate them a bit deeper.
