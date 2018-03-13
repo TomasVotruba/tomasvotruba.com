@@ -8,36 +8,48 @@ use Symfony\Component\Yaml\Yaml;
 
 final class YamlTest extends TestCase
 {
-    public function testTabsVsSpaces(): void
+    /**
+     * @dataProvider provideFilesToContent()
+     * @param mixed[] $expectedContent
+     */
+    public function test(string $file, array $expectedContent): void
     {
-        $spacesContent = Yaml::parseFile(__DIR__ . '/Yaml/spaces.yml');
-        $this->assertSame(['address' => ['street' => '742 Evergreen Terrace']], $spacesContent);
-
-        $this->expectException(ParseException::class);
-        Yaml::parseFile(__DIR__ . '/Yaml/tabs.yml');
+        $this->assertSame($expectedContent, Yaml::parseFile($file));
     }
 
-    public function testMixedList(): void
+    /**
+     * @return mixed[][]
+     */
+    public function provideFilesToContent(): array
     {
-        $this->expectException(ParseException::class);
-        Yaml::parseFile(__DIR__ . '/Yaml/mixed-list.yml');
+        return [
+            [__DIR__ . '/Yaml/spaces.yml', ['address' => ['street' => '742 Evergreen Terrace']]],
+            # arrays
+            [__DIR__ . '/Yaml/list.yml', ['services' => ['SomeService', 'SomeService']]],
+            [__DIR__ . '/Yaml/array.yml', ['services' => ['SomeService' => null]]],
+            # multi lines
+            [__DIR__ . '/Yaml/multi-lines.yml', ['perex' => 'Multi' . PHP_EOL . 'line']]
+        ];
     }
 
-    public function testListAndArray(): void
+    /**
+     * @dataProvider provideFilesWithParseError()
+     */
+    public function testParseErrors(string $file): void
     {
-        $listContent = Yaml::parseFile(__DIR__ . '/Yaml/list.yml');
-        $this->assertSame(['services' => ['SomeService', 'SomeService']], $listContent);
-
-        $arrayContent = Yaml::parseFile(__DIR__ . '/Yaml/array.yml');
-        $this->assertSame(['services' => ['SomeService' => null]], $arrayContent);
+        $this->expectException(ParseException::class);
+        Yaml::parseFile($file);
     }
 
-    public function testMultiline(): void
+    /**
+     * @return string[][]
+     */
+    public function provideFilesWithParseError(): array
     {
-        $content = Yaml::parseFile(__DIR__ . '/Yaml/multi-lines.yml');
-        $this->assertSame(['perex' => 'Multi' . PHP_EOL . 'line'], $content);
-
-        $this->expectException(ParseException::class);
-        Yaml::parseFile(__DIR__ . '/Yaml/multi-lines-incorrect.yml');
+        return [
+            [__DIR__ . '/Yaml/tabs.yml'],
+            [__DIR__ . '/Yaml/mixed-list.yml']
+            [__DIR__ . '/Yaml/multi-lines-incorrect.yml'],
+        ];
     }
 }
