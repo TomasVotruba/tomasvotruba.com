@@ -30,7 +30,7 @@ final class NeonTest extends TestCase
                 'SomeService' => '~',
             ]]],
             # multi-line
-            [__DIR__ . '/Neon/multi-lines.neon', ['perex' => 'Multi' . PHP_EOL . 'line']]
+            [__DIR__ . '/Neon/multi-lines.neon', ['perex' => 'Multi' . PHP_EOL . 'line']],
         ];
     }
 

@@ -20,6 +20,8 @@ services:
 
 parameters:
     skip:
+        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment: ~
+
         Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
             - '*/src/Posts/Year2017/Ast/*'
 

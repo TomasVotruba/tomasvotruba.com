@@ -28,7 +28,7 @@ final class YamlTest extends TestCase
             [__DIR__ . '/Yaml/list.yml', ['services' => ['SomeService', 'SomeService']]],
             [__DIR__ . '/Yaml/array.yml', ['services' => ['SomeService' => null]]],
             # multi lines
-            [__DIR__ . '/Yaml/multi-lines.yml', ['perex' => 'Multi' . PHP_EOL . 'line']]
+            [__DIR__ . '/Yaml/multi-lines.yml', ['perex' => 'Multi' . PHP_EOL . 'line']],
         ];
     }
 
