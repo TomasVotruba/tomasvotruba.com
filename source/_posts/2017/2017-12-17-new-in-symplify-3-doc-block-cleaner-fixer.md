@@ -9,7 +9,6 @@ tweet: "Do you use PHP 7 and scalar types? Do you still see value in your docblo
 tweet_image: "/assets/images/posts/2017/doc-block-cleaner/diff.png"
 ---
 
-
 <blockquote class="blockquote text-center">
     ...when you program, you have to <strong>think about how someone will read your code</strong>, not just how a computer will interpret it.
     <footer class="blockquote-footer">
