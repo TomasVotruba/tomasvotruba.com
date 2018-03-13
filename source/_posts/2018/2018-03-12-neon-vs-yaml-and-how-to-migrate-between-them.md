@@ -271,6 +271,17 @@ But EasyCodingStandard was running on Neon that was loaded by my few classes to 
 +            - '*packages/CodingStandard/src/Sniffs/*/*Sniff.php'
 ```
 
+**Multi-lines**
+
+```diff 
+-perex: '''
++perex: |
+     Do you know `*.neon` format? It's config file 
+-format created in Czech Republic...      
++    format created in Czech Republic...      
+-'''
+```
+
 And from `*.yml` to `*.neon`? Just revert `-` and `+` :).
 
 
