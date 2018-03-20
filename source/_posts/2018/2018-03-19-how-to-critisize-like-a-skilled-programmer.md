@@ -10,87 +10,122 @@ tweet: "New post on my blog: State of Monorepo in PHP"
 todo_tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
 ---
 
-### 1. Find an Error
+## 1. Find an Error
 
 This is very easy step that many people can handle. Just pick something wrong in a project, or content and point it out. Rush to create that issue! Also, comment only thing, where is no request for critics or feedback. The worst think you can do is actually help the person who want some feedback.
 
-### 2. Strong Intro
+## 2. Strong Intro
 
 No "hello" or "hi", never use a surname and NEVER use a name. Just write right away what is wrong, that's the only thing that matters. Some example:
 
-- "this post is complicated..."
-- "well that was boring"
-- "this is not how to use that"
-- "you can't use foreach here"
+- *"this post is complicated..."*
+- *"well that was boring"*
+- *"this is not how to use that"*
+- *"you can't use foreach here"*
 
-#### Minitip: Evaluate - You Have Right to State what is Right and Wrong
+<div class="card">
+    <div class="card-body">
+        <p>
+            <strong>Minitip: Judge Others</strong>
+        </p>
+        
+        <br>
+        
+        <p>
+            As a senior programmer you have right to say what is right and wrong. You should be clear and right to the point. Only that way the other person knows what is this about and can do something about that.
+        </p>
+        
+        <p><em>"this is definitely wrong"</em></p>
+    </div>
+</div>
 
-We should be clear and right to the point. Only that way the other person knows what is this about and can do something about that.
+<div class="card mt-3">
+    <div class="card-body">
+        <p>
+            <strong>Minitip: Point out the Other person is Bellow You</strong>
+        </p>
+        
+        <br>
+        
+        <p>
+            If that would be another way, he or she would not need a correction, right?
+        </p>
+        <ul>
+            <li>missing education: <em>"read the docs first"</em></li>
+            <li>more stupid: <em>"lol, you really think this is the way to use it?"</em></li>
+        </ul>        
+    </div>
+</div>
 
-- "this is definitely wrong"
 
-#### Minitip: Point out the Other person is Bellow You
-
-If that would be another way, he or she would not need a correction, right?
-
-- missing education: "read the docs first"
-- more stupid: "lol, you really think this is the way to use it?"
-
-### 3. Never Back up - You're not a Pussy
+## 3. Never Back up - You're not Weak
 
 When you get a response like this, it is usually very rude like for no reason:
 
-- "What do you mean by that?"
+- *"What do you mean by that?"*
 
 You only are trying to help the second person to stop being to stupid. The author is only pretending he doesn't know. But luckily you are smarter than him to recognize it!
 
-### 4. Repeat the Same to Make Them Hear You
+## 4. Repeat the Same to Make Them Hear You
  
 If the other doesn't want to listen, he or she probably didn't read our comments clearly. Who can blame them, it's today's world full of social media distractions (and alcohol and drugs!). There is no better solution than point that out.
 
-- "I wrote that already."
+- *"I wrote that already."*
 
-...and repeat. In case you have mood for long essays:
+In case you have mood for long essays:
 
-- "I wrote that already, see comment up"
+- *"I wrote that already, see comment up"*
 
-...or in rare cases it can be:
+If you have bless mood, you can write it explicitly for those with attention disorder:
 
-- "I wrote that already: this is wrong way to use this"
+- *"I wrote that already: this is wrong way to use this"*
 
-### 5. Point out Places to Learn From
+## 5. Point out Places to Learn From
 
 As our mission is to educate others about their mistakes, thus we should always provide a source of knowledge.
 
-- "Read the docs first"
-- "it's in the manual, doh"
-- "read php manual"
+- *"Read the docs first"*
+- *"it's in the manual, doh"*
+- *"read php manual"*
 
 Today, we have Google, so there is no need to use actual link. Everybody can google now.
 And if they don't, they're stupid and they should learn that first.
 
-#### Minitip: Use Shortcuts To Save Time
 
-All people in the field know all the shortuts you do - they're programmers after all - so why not use them so save time in conversation and your elbows.
 
-- "why don't you use IDE"?
-- "use Docker AWS setup with DTOs lol"
+<div class="card mt-3">
+    <div class="card-body">
+        <p>
+            <strong>Minitip: Use Shortcuts To Save Time</strong>
+        </p>
+        
+        <br>
+        
+        <p>
+           All people in the field know all the shortuts you do - they're programmers after all - so why not use them so save time in conversation and your elbows.
+        </p>
+        <ul>
+            <li><em>"why don't you use IDE"?</em></li>
+            <li><em>"use Docker AWS setup with DTOs lol"</em></li>
+        </ul>
+        
+        <p>Again, do not add any links, Google can handle it for you.</p>        
+    </div>
+</div>
 
-Again, do not add any links, Google can handle it for you.
-
-### 6. Believe in Yourself
+## 6. Believe in Yourself
 
 You know the best (as your mama and papa told you) - never forget that. And if other try to change your mind, they probably don't know a thing.Stick to your believes and don't let anyone to question it. 
 
-- "no, you don't understand this"
+- *"no, you don't understand this"*
 
 You're the most objective person there could be, so use it. That's what intelligent means!
 
-### 7. Always Tell, Never Ask
+## 7. Always Tell, Never Ask
 
 Because many people are missing parenting, you're here for them to help them with raising to proper senior programmer. Always, tell the other person what to do or how the world works. It's objective true. How can you be subjective if you're human. Asking is sign of not-knowing and weakness.
 
-### 8. Keep it Short, Never Provide a Reason
+## 8. Keep it Short, Never Provide a Reason
 
 To make conversion faster, always talks about your final ideas. There is not time to provide motivation reason, how you conclude it and all that life story of yours. It's obvious already and he should know it. Or just google it.
 
@@ -99,12 +134,11 @@ And so on... you get the gist.
 
 <br><br>
 
-## Disclaimer: Start with Misconceptions First
+## ! Disclaimer: Start with Misconceptions First
 
 As you probably guessed, this is sarcasm.
 
-I got inspired
-Motivated by [Derek Muller](https://www.youtube.com/watch?v=RQaW2bFieo8), known as author of [Verritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA), with "start with misconceptions first", I wrote this as inversion to "How to Give Feedback that Helps you Both".
+I got inspired by [Derek Muller](https://www.youtube.com/watch?v=RQaW2bFieo8), known as author of [Verritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA), with "start with misconceptions first", I wrote this as inversion to "How to Give Feedback that Helps you Both".
 
 All misconceptions on feedback I could think and find on Github during my open-source carrer of are here. If I forgot any more, just tell me in comments clearly: "you forgot some".
 
