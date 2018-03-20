@@ -6,7 +6,7 @@ perex: |
     <br>
     I want to **correct this** once and for all, so I've prepared a guide for you.
 tweet: "New post on my blog: How to Critisize like a Senior Programmer"
-tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
+tweet_image: "/assets/images/posts/2018/critic/shout.jpg"
 related_items: [74]
 ---
 
@@ -57,8 +57,9 @@ No "hello" or "hi", never use a surname and NEVER use a name. Just write right a
     </div>
 </div>
 
-
 ## 3. Never Back up - You're not Weak
+
+<img src="/assets/images/posts/2018/critic/shout.jpg" class="img-thumbnail">
 
 When you get a response like this, it is usually very rude like for no reason:
 
