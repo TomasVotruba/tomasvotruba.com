@@ -1,4 +1,3 @@
-
 ---
 id: 83
 title: "How to Critisize like a Senior Programmer"
@@ -8,6 +7,7 @@ perex: |
     I want to **correct this** once and for all, so I've prepared a guide for you.
 tweet: "New post on my blog: State of Monorepo in PHP"
 todo_tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
+related_items: [74]
 ---
 
 ## 1. Find an Error
@@ -134,71 +134,99 @@ And so on... you get the gist.
 
 <br><br>
 
-## ! Disclaimer: Start with Misconceptions First
+### Disclaimer: Start with Misconceptions First
 
-As you probably guessed, this is sarcasm.
+**As you probably guessed, this post is written in sarcasm language.**
 
-I got inspired by [Derek Muller](https://www.youtube.com/watch?v=RQaW2bFieo8), known as author of [Verritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA), with "start with misconceptions first", I wrote this as inversion to "How to Give Feedback that Helps you Both".
+I got inspired by [Derek Muller](https://www.youtube.com/watch?v=RQaW2bFieo8), known as author of [Verritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA), with "start with misconceptions first". This list describes just few of misconceptions on feedback topic I found on Github during my open-source career. If you know any more, just tell me in the comments (*"you forgot some"*).
 
-All misconceptions on feedback I could think and find on Github during my open-source carrer of are here. If I forgot any more, just tell me in comments clearly: "you forgot some".
-
-If you know Czech, you can check my talk [Jako Vinnetou a Old Shatterhand – refaktoruj nenávist v přátelství](https://www.tomasvotruba.cz/talks/#jako-vinnetou-a-old-shatterhand-refaktoruj-nenavist-v-pratelstvi from PHPLive 2016), where I address similar topic between 2 PHP frameworks.
+If you know Czech, you can check my talk [Jako Vinnetou a Old Shatterhand – refaktoruj nenávist v přátelství](https://www.tomasvotruba.cz/talks/#jako-vinnetou-a-old-shatterhand-refaktoruj-nenavist-v-pratelstvi) from PHPLive 2016, where I address similar topic between 2 PHP frameworks.
 
 So...
 
-## How to Give Feedback that Helps You Both
+### How to Give Feedback that Helps You Both
 
-After misconceptions we can move to really what matters - **emphatic feedback**.
+After misconceptions we can move to really what matters - **emphatic feedback**. Once I read a post about people with of 30+ years long and happy marriages: 
 
-There is beautiful quote about marriage: "we have a strong feeling, that when we point out mistakes we see at other people, they will change that".
+<blockquote class="blockquote text-center mb-5 mt-5">
+    We have a strong feeling, that when we point out mistakes we see at other people, they will change that.
+</blockquote>
+
+It nails it! So what I'm trying to do apart inversion of all the 8 points above to make my online/offline feedback communication better?
+
+## 1. Is Feedback Desired?
+
+Do you enjoy parenting and patronizing? Neither do I. So when I give feedback, I try to find out first if the other person is even open to some. 
+
+There is small trick to do that:
+
+- *"Well, I have some feedback for you, but I'm not sure if you'd like to hear it."*
+- "Yes, of course."
+- *"Ok, I saw your presentation and I think the letters are so small, that no one will see it."*
+
+vs.
+
+- *"Hey John, I saw your presentation and I think the letters are so small, that no one will see it."*
+
+## 2. What is My Motivation?
+
+<blockquote class="blockquote text-center mb-5 mt-5">
+    Giving advices is just talking to your younger self.
+</blockquote>
+
+I know this is not easy to hear, but giving feedback is partially just projection of the one who gives the feedback. Even now, when I'm writing this post, I frustrated with something else. I'm frustrated by educational systems and misconceptions it teaches people.
+
+If you know your real motivation, you can work it much better and be able to give the other person not the information that you're frustrated with but information that he or she really wants.
+
+## 3. Make a Rapport instead of an Enemy
+
+No, this is not a dinosaur nor air fighter.  
+
+<blockquote class="blockquote text-center mb-5 mt-5">
+    If you want to persuade someone, start in a friendly way.
+</blockquote>
+
+You can find this quote in all books on persuasion. I didn't know about this for a long time, so I started with rationalization arguments:
+
+- *"Hey, you have to use IDE, because it will help you with productivity a lot."*
+- *"You should use Symfony, because it's more matured than any other frameworks!"*
+
+This only forces the other for defense, even if you don't want him to:
+ 
+- "Sublime Text is just fine. It can compare to PHPStorm and is even faster!"
+- "I use Nette for many years and Symfony seems too complicated and is very slow."
+ 
+Sorry brain! Instead, you can make a **rapport** - a short term friendship if you like. 
+
+- **Be curious**: *"What do you mean by "this is too complicated"? What part exactly is too complicated?"*
+
+- **Relate to the his or her point of view**: *"I agree you might have problems reading this, since it's your first time and I use this for over 3 years and know it by heart."*
+
+## 4. Replace "You" and the Future" with "I" and the Present
+
+<blockquote class="blockquote text-center mb-5 mt-5">
+    "I'm objective", a human said.
+</blockquote>
+
+When one person claims something, it's usually his own personal experience wrapped into cognitive heuristics.
+
+- *"You'll definitely find IDE useful."*
+
+vs.
+
+- *"I personally find IDE useful, because it it helps me with class autocomplete. That saves me lot of time, since I use other dependencies than my code."*
+
+As people tend to mirror each other's communication, being personal might unlock personal approach of the other person as well.
+
+## 6. Provide a Reason
+
+I'll just reuse the example above (because it shows it already and will keep you more attentive to the detail):
+
+- *"I personally find IDE useful"*
+
+vs.
+
+- *"I personally find IDE useful, because it it helps me with class autocomplete. That saves me lot of time, since I use other dependencies than my code."*
 
 
 
-@todo
-
-## 1. Is feedback desired
-
-do you want to hear it?
-the best is to answer 
-
-## 2. what is my motivation
-
-- This is not easy to hear, but usually it is just projection. Even now, when I'm writing this post, I frustrated with something else - about our educational system and misconceptions it teaches people.
-
-## 3. make a raport
-
-You can find this in all books on persuassion: if you want to persuade someone, start in a friendly way.
-
-I didn't know about this for a long time, so I started with rationalization and arguments:
-
-- Hey, you have to use IDE, becuase it will help you with productivity a lot.
-- You should use Symfony, because it's more matured than any other frameworks!
-
-This only forces the other for defense, even if you don't. Sorry brain.
-
-Instead, you can maek a raprt - a short term friendship if you like.
-
-### ask
-
-- What do you mean by "this is too complicated"? What part exactly don't you understand?
-
-### confirm
-
-- I agree you might have problems reading this, since it's your first time and I use this for over 3 years and know it by heart.
-
-## 4. replace "you + the future" with "I + the present"
-
-- You'll definitelly find IDE useful =>
-- I find IDE useful.
-
-## 5. repalte they or everybody with "me"
-
-It's natuaral to claim personal believes as a personal one's. 
-
-- Programmers have to work hard to get such money.
-
-## 6. provide a reason
-
-- I'd recommend you to do this because it helped me in this and this
-
-## We all fail to be ideal, practise
