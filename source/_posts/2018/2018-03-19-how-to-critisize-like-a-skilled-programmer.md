@@ -1,131 +1,126 @@
+
 ---
 id: 83
-title: "How to Critisize like a skilled Programmer"
-perex: '''
-    ...
-'''
-todo_tweet: "New post on my blog: State of Monorepo in PHP"
+title: "How to Critisize like a Senior Programmer"
+perex: |
+    As I spend most of my socials online time on Github and PHP-related discussion, I've noticed **many people do so many wrong things** while giving critics.
+    <br>
+    I want to **correct this** once and for all, so I've prepared a guide for you.
+tweet: "New post on my blog: State of Monorepo in PHP"
 todo_tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
 ---
 
-(I'm so happy A.I. is on the rise, so psychology and informatics are becoming more and more close fields.
-To teach people and robots, we should make a tutorials.)
+### 1. Find an Error
 
-As I spend most of my socials online time on Github and PHP# related discussion, I've noticed **many people do so many wrong things** while giving critits.
+This is very easy step that many people can handle. Just pick something wrong in a project, or content and point it out. Rush to create that issue! Also, comment only thing, where is no request for critics or feedback. The worst think you can do is actually help the person who want some feedback.
 
-I want to **correct this** once and for all, so I've prepared a guide .
+### 2. Strong Intro
 
-## 1. Find an error
+No "hello" or "hi", never use a surname and NEVER use a name. Just write right away what is wrong, that's the only thing that matters. Some example:
 
-This is very easy step that many people can handle. Just pick something wrong in a project, or content and point it out.
+- "this post is complicated..."
+- "well that was boring"
+- "this is not how to use that"
+- "you can't use foreach here"
 
-Also, comment only thing, where is no request for critics. The worst think you can do is actually help the prson who want's some feedback.
-
-## 2. Strong Intro
-
-No hello or hi, never use a surname and NEVER use a name. Just write right away, what is wrong. Some example:
-
-- this post is complicated, what is the point?
-- well that was boring
-- this is not how to use that
-- you can't use foreach here
-
-### Minitip: Evaluate
+#### Minitip: Evaluate - You Have Right to State what is Right and Wrong
 
 We should be clear and right to the point. Only that way the other person knows what is this about and can do something about that.
 
-- This is definitelly wrong
+- "this is definitely wrong"
 
-### Minitiop: point out the other person is bellow you
+#### Minitip: Point out the Other person is Bellow You
 
-- missing education: read the docs first, please
-- more stupid: lol, you really think this is the way to use it?
+If that would be another way, he or she would not need a correction, right?
 
-## 3. Never back up, you're not a pussy
+- missing education: "read the docs first"
+- more stupid: "lol, you really think this is the way to use it?"
 
-When you get a response, it is usually very rude like for no reason. You only are trying to help the second person.
+### 3. Never Back up - You're not a Pussy
 
-- what do you mean by that?
-- I'm not sure.
+When you get a response like this, it is usually very rude like for no reason:
 
-He is only prettending he doesn't know. But you are smarter than him to recognize.
+- "What do you mean by that?"
 
-## 4. Repeat the same
+You only are trying to help the second person to stop being to stupid. The author is only pretending he doesn't know. But luckily you are smarter than him to recognize it!
+
+### 4. Repeat the Same to Make Them Hear You
  
-If the other doens't want to listen, he probably didn't read our comments. Who can blame him, it today's world full of social media distrations.
-There is no better solution than point that out.
+If the other doesn't want to listen, he or she probably didn't read our comments clearly. Who can blame them, it's today's world full of social media distractions (and alcohol and drugs!). There is no better solution than point that out.
 
-- I wrote that already.
+- "I wrote that already."
 
-...and repeat, but only if you have mood for long comments:
+...and repeat. In case you have mood for long essays:
 
-- I wrote that already, see comment up.
+- "I wrote that already, see comment up"
 
 ...or in rare cases it can be:
 
-- I wrote that already, this is wrong way to use this.
+- "I wrote that already: this is wrong way to use this"
 
-## 5. Point out places to learn from
+### 5. Point out Places to Learn From
 
-As our mission is to educate other about their mistakes, we should always provide a source of knowledge.
+As our mission is to educate others about their mistakes, thus we should always provide a source of knowledge.
 
-- Read the docs first.
-- it's in the manual
-- read php manual
+- "Read the docs first"
+- "it's in the manual, doh"
+- "read php manual"
 
-Today, we have google, so there is no need to use actuall link. Everybody can google now.
-And if they don't, they're stupid and they should learn that.
+Today, we have Google, so there is no need to use actual link. Everybody can google now.
+And if they don't, they're stupid and they should learn that first.
 
-### Minitip: use shortcuts, they save tiem
+#### Minitip: Use Shortcuts To Save Time
 
-All people in the field know all the shortucs avilable, so why not use them so save time in conversation.
+All people in the field know all the shortuts you do - they're programmers after all - so why not use them so save time in conversation and your elbows.
 
-- Hey, why don't you use IDE?
-- use Docker AWS setup instead lol
+- "why don't you use IDE"?
+- "use Docker AWS setup with DTOs lol"
 
-## 6. Belive in yourself
+Again, do not add any links, Google can handle it for you.
 
-You knwo the best, never forget that. And if other try to change your mind, they probably don't know nothing.
+### 6. Believe in Yourself
 
-Stick to your believes and don't let anyone to question it. 
+You know the best (as your mama and papa told you) - never forget that. And if other try to change your mind, they probably don't know a thing.Stick to your believes and don't let anyone to question it. 
 
-- no, you don't undeerstand this
+- "no, you don't understand this"
 
-You're the most objective person there could be, so use it.
+You're the most objective person there could be, so use it. That's what intelligent means!
 
-## 7. Always tell, never ask
+### 7. Always Tell, Never Ask
 
-Because many peple are missing parenting, you're here for them to help them with raising to propper programmer.
+Because many people are missing parenting, you're here for them to help them with raising to proper senior programmer. Always, tell the other person what to do or how the world works. It's objective true. How can you be subjective if you're human. Asking is sign of not-knowing and weakness.
 
-Always, tell the other person what to do or how the world works. It's objective true.
+### 8. Keep it Short, Never Provide a Reason
 
-- "..."
+To make conversion faster, always talks about your final ideas. There is not time to provide motivation reason, how you conclude it and all that life story of yours. It's obvious already and he should know it. Or just google it.
 
-Asking is sign of not-knowing and weakness. And parent's can be weka, they're here for us - sth like a service.
 
-## 8. keep it shor, never  provide a reason
+And so on... you get the gist.
 
-To make conversion fast, always talks about your final ideas. There is not time to provide motivation reason, or even expalin to the other person.
-It's obvious already and he should know it. Or just google it.
+<br><br>
 
-- I want to deprecate this feature.
+## Disclaimer: Start with Misconceptions First
 
-## Disclaimer
+As you probably guessed, this is sarcasm.
 
-Motivated by 2Verritasium with "start with misconceptions first", I've put down this post as pre-sequal to "How to give feedback that helps you both".
+I got inspired
+Motivated by [Derek Muller](https://www.youtube.com/watch?v=RQaW2bFieo8), known as author of [Verritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA), with "start with misconceptions first", I wrote this as inversion to "How to Give Feedback that Helps you Both".
 
-All misconceptions I could think of are here. If I forgot any, please help me to comlete it.
+All misconceptions on feedback I could think and find on Github during my open-source carrer of are here. If I forgot any more, just tell me in comments clearly: "you forgot some".
 
-If you know Czech, you can check my video from PHPLive 2016, where I address similar topi.
+If you know Czech, you can check my talk [Jako Vinnetou a Old Shatterhand – refaktoruj nenávist v přátelství](https://www.tomasvotruba.cz/talks/#jako-vinnetou-a-old-shatterhand-refaktoruj-nenavist-v-pratelstvi from PHPLive 2016), where I address similar topic between 2 PHP frameworks.
 
----
+So...
 
-# How to give feedback that helps you both
+## How to Give Feedback that Helps You Both
 
-After [misconceptions](), we can move to really what matter **to me** - emphatic feedback.
+After misconceptions we can move to really what matters - **emphatic feedback**.
 
-Once I've read few misconseptions about marriage:
-we have a strong feeling, that when we point out mistakes we see at other people, they will change that.
+There is beautiful quote about marriage: "we have a strong feeling, that when we point out mistakes we see at other people, they will change that".
+
+
+
+@todo
 
 ## 1. Is feedback desired
 
