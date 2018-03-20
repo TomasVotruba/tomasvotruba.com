@@ -1,6 +1,6 @@
 ---
 id: 84
-title: "How to Critisize like a Senior Programmer"
+title: "How to Criticize like a Senior Programmer"
 perex: |
     As I spend most of my socials online time on Github and PHP-related discussion, I've noticed **many people do so many wrong things** while giving critics.
     <br>
