@@ -19,7 +19,7 @@ script:
     - vendor/bin/statie generate source
 
     # tweets posts
-    - if [ $TRAVIS_BRANCH == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]; then bin/tweet-new-posts; fi
+    - if [ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]; then bin/tweet-new-posts; fi
 
 after_script:
     # upload coverage.xml file to Coveralls to analyze it
