@@ -1,12 +1,12 @@
 ---
-id: 83
+id: 84
 title: "How to Critisize like a Senior Programmer"
 perex: |
     As I spend most of my socials online time on Github and PHP-related discussion, I've noticed **many people do so many wrong things** while giving critics.
     <br>
     I want to **correct this** once and for all, so I've prepared a guide for you.
-tweet: "New post on my blog: State of Monorepo in PHP"
-todo_tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
+tweet: "New post on my blog: How to Critisize like a Senior Programmer"
+tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
 related_items: [74]
 ---
 
@@ -228,5 +228,11 @@ vs.
 
 - *"I personally find IDE useful, because it it helps me with class autocomplete. That saves me lot of time, since I use other dependencies than my code."*
 
+<br><br>
 
+Your feedback and tips are most welcomed as I want to get better in this, so add your comment. Even with sarcastic examples from this post ;). 
+
+<br><br>
+
+Happy feedbacking!
 
