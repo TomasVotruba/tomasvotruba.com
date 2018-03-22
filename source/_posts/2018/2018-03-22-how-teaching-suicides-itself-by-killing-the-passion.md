@@ -18,6 +18,8 @@ Hey, thanks for this post. It’s great there is somebody who tries to make it a
 I teach or rather mentor PHP for last 5 years on various online forums, PHP meetups, Github and personal lectures. From my own experience, nothing I show is good enough to get inside one’s head, unless it’s his own passion or desire.
 For me, the PHP was not about tools, blogs under 5 minutes or the fastest framework. 
 
+## What Pisses YOU of?
+
 I had problem, I was pissed, frustrated and angry at something and wanted a change. And everyone has such ONE THING (or maybe more). I wanted to play, to have fun in online game. There were countries, tanks, farms, factories… just game of numbers, but real fun for 14-year old. And wanted to be better, so I count the deffense of my enemies in Excel. Just put their numbers, guessed algorithm from practise and that was it. Iterative IKIGAI.
 
 I think THIS is the spot that teachers, or rather mentors, parents, friends need to find to unlock one’s potential.
@@ -26,7 +28,9 @@ Since this SPOT I got to where I’m now, doing the same learning over and over 
 
 If in that spot someone would show me PHP and that it’s about websites, blogs or forms, I’d probably go different path, because that was no my problem. It was THEIRS.
 
-Luckily, friend of mine only showed me a hosting, where I could put my excel file. And then share it with him and we could send link with numbers of our enemies pre-filled. That was the best thing ever so far in my life and it lead me here to share it again with others...
+## I take 1 Person to Burst Lifetime Passion
+
+Luckily, friend of mine only showed me a hosting, where I could put my excel file and then share it with. That was so awesome. And with 15 lines of code, we could share link with numbers of our enemies pre-filled! That was the best thing ever so far in my life and it lead me here to share it again with others...
 
 ...**find the inner light in people and just give it a little attention. That's all they need**.
 
