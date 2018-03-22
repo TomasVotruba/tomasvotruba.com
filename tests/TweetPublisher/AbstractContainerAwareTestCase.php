@@ -3,18 +3,18 @@
 namespace TomasVotruba\Website\TweetPublisher\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\DependencyInjection\Container;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symplify\Statie\DependencyInjection\ContainerFactory;
 
 abstract class AbstractContainerAwareTestCase extends TestCase
 {
     /**
-     * @var Container
+     * @var ContainerInterface
      */
     protected $container;
 
     /**
-     * @var Container
+     * @var ContainerInterface
      */
     private static $cachedContainer;
 
