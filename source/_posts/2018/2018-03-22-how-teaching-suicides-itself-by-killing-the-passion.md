@@ -11,7 +11,10 @@ tweet: "New Post on my Blog: How Education Shots its Leg by Killing Passion"
 related_items: [22]
 ---
 
-*This started as reply to the post which got me literally on fire. Fire I want to share with you. It's not any [critique](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer/) to the post, it's the way I see the world.*
+This started as reply to the post and I got literally on fire while writing it. Fire I want to share with you. It's not any [critique](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer/) to the post, it's the way I see the world.
+
+<br>
+
 
 Hey, thanks for this post. It’s great there is somebody who tries to make it as simple as possible to get into PHP.
 
@@ -28,7 +31,7 @@ Since this SPOT I got to where I’m now, doing the same learning over and over 
 
 If in that spot someone would show me PHP and that it’s about websites, blogs or forms, I’d probably go different path, because that was no my problem. It was THEIRS.
 
-## I take 1 Person to Burst Lifetime Passion
+## I takes 1 Person to <strike>Burst</strike> Boost Lifetime Passion
 
 Luckily, friend of mine only showed me a hosting, where I could put my excel file and then share it with. That was so awesome. And with 15 lines of code, we could share link with numbers of our enemies pre-filled! That was the best thing ever so far in my life and it lead me here to share it again with others...
 
