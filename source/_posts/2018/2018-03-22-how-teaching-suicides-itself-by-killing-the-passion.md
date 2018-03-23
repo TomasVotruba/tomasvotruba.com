@@ -34,7 +34,7 @@ Luckily, friend of mine only showed me a hosting, where I could put my excel fil
 
 ...**find the inner light in people and just give it a little attention. That's all they need**.
 
-Thanks for your post, its great to remember my “the Big Bang” :)
+Thanks for your post, it's great to remember my “the Big Bang” :)
 
 And big love and thanks to my peers Lukáš Růžička and Martin Čermák, who gave me exactly what I needed.
 
