@@ -1,12 +1,11 @@
 ---
 id: 86
-title: "..."
+title: "New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Services"
 perex: |
     I wrote about [news in Easy Coding Standard 3](/blog/2018/03/01/new-in-symplify-3-4-improvements-in-easy-coding-standard/) a while ago. EasyCodingStandard 4 is released yet (still in alpha), but soon you'll be able to use all the news I'll show you today.
     <br><br>
-    And what are they? Neon to Yaml, Semi-Static to Services,   
-        
-tweet: "New Post on my Blog: ___"
+    And what are they? Neon to Yaml, semi-static to Services, customizable caching, even simpler skipper, short bin and more.   
+tweet: "New Post on my Blog: New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Services"
 related_items: [79]
 ---
 
