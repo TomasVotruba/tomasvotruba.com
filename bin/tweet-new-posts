@@ -1,13 +1,11 @@
 #!/usr/bin/env php
 <?php declare(strict_types=1);
 
-use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use Symplify\PackageBuilder\Console\ExceptionRenderer;
 use Symplify\Statie\DependencyInjection\ContainerFactory;
 use TomasVotruba\Website\TweetPublisher\Application\TweetPublisherApplication;
 
 require_once __DIR__ . '/../vendor/autoload.php';
-
-$symfonyStyle = SymfonyStyleFactory::create();
 
 try {
     $containerFactory = new ContainerFactory;
@@ -18,6 +16,6 @@ try {
     $tweetPublisherApplication->run();
 
 } catch (Throwable $throwable) {
-    $symfonyStyle->error($throwable->getMessage());
+    (new ExceptionRenderer())->render($throwable);
     exit(1);
 }

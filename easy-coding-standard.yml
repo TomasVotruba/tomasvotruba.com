@@ -28,3 +28,7 @@ parameters:
         Symplify\CodingStandard\Fixer\Naming\PropertyNameMatchingTypeFixer:
             # false positive
             - 'src/TweetPublisher/Tweet/Tweet.php'
+
+    exclude_checkers:
+        # resolve later
+        - 'Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenStaticFunctionSniff'
