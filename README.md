@@ -3,7 +3,6 @@
 [![Build Status](https://img.shields.io/travis/TomasVotruba/tomasvotruba.cz/master.svg?style=flat-square)](https://travis-ci.org/TomasVotruba/tomasvotruba.cz)
 [![Coverage Status](https://img.shields.io/coveralls/TomasVotruba/tomasvotruba.cz/master.svg?style=flat-square)](https://coveralls.io/github/TomasVotruba/tomasvotruba.cz?branch=master)
 
-
 ## Install
 
 ```sh
