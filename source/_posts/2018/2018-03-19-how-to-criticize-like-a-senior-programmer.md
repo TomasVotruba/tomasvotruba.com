@@ -42,7 +42,7 @@ No "hello" or "hi", never use a surname and NEVER use a name. Just write right a
 <div class="card mt-3">
     <div class="card-body">
         <p>
-            <strong>Minitip: Point out the Other person is Bellow You</strong>
+            <strong>Minitip: Point out the Other person is Below You</strong>
         </p>
         
         <br>

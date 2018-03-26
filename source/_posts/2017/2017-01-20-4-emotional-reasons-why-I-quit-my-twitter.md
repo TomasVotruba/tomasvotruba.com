@@ -51,7 +51,7 @@ I know I can't do something for only 50 %. I either do it close to 100 % or go a
 
 ## 2. I Tried so Hard to Look Good
 
-- I planed Tweets for one per day, so I won't spam.
+- I planned Tweets for one per day, so I won't spam.
 - I retweeted Tweets I found interesting.
 - I've added images, hashtags.
 - I have read many how-to-tweet articles.

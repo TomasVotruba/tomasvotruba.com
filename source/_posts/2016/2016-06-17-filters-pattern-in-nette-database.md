@@ -246,6 +246,6 @@ Pretty neat, huh?
 - that Nette Database can implement this pattern in a form of service
 - that you can add filter via simple service with [Zenify/NetteDatabaseFilters](https://github.com/Zenify/NetteDatabaseFilters)
 
-If you have some tips how to this simpler or want to share your experience with filters, just let me know bellow.
+If you have some tips how to this simpler or want to share your experience with filters, just let me know below.
 
 Happy coding!

@@ -27,20 +27,17 @@ That's all!
 
 ## Check The Grammar
 
-If your English has some blind spots like mine, you can cheat with [write-good](https://github.com/btford/write-good). 
+With help of [vlajos/misspell-fixer](https://github.com/vlajos/misspell-fixer) package, that has thousands of rules, fixes them all for you and still - is super fast! 
 
 ```bash
-node_modules/write-good/bin/write-good.js some-file
+# install
+cd www
+git clone https://github.com/vlajos/misspell-fixer
+cd tomasvotruba.cz
+
+# use
+../misspell-fixer/misspell-fixer -suRVDrn source/_posts
 ```
-
-E.g.
-
-```bash
-node_modules/write-good/bin/write-good.js source/_posts/2017/2017-06-17-php-object-calisthenics-rules-made-simple-version-3-0-is-out-now.md
-```
-
-Thanks [@mihaeu](https://github.com/mihaeu) for the tip!
-
 
 ## Check Status Code of All Links
 

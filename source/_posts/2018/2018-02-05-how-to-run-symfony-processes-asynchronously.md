@@ -53,7 +53,7 @@ Picking the right tool is important, since it vendor locks our code to package, 
 **What is the exact goal we need?**
 
 1. Run all processes at once
-2. Wait untill they're finished
+2. Wait until they're finished
 3. Report their success/error status
 
 ## 1. To run all Processes at Once

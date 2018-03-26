@@ -33,7 +33,7 @@ Fabien zmínil přes 20 lidí, které na své cestě postupně potkal, a ukázal
 Mezi lidmi představil i [nový release process](https://symfony.com/blog/improving-the-symfony-release-process), který usnadní <em>continuous upgrade</em>.
 
 <div class="text-center">
-    <img src="/assets/images/posts/2015/symfonycon/symfonycon-release-process.jpg" alt="Nový relase proces">
+    <img src="/assets/images/posts/2015/symfonycon/symfonycon-release-process.jpg" alt="Nový release process">
 </div>
 <br>
 
@@ -58,7 +58,7 @@ Tato zdánlivě random-generated firma se zabývá bla bla bla… ridesharingem,
 
 Šlo o case study firmy, která začínala jako malý startup, rychle rostla a musela se naučit škálovat za pochodu. Vyzkoušeli spoustu cest, které nefungovaly, aby našli ty správné (pro jejich kontext samozřejmě).
 
-Právě o tyto “do’s and dont’s” se s námi přednášející podělili:
+Právě o tyto “do’s and don't’s” se s námi přednášející podělili:
 
 - upgrade as soon as you can
 - failure is beginning

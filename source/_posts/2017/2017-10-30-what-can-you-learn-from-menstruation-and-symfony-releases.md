@@ -194,7 +194,7 @@ All this is not related just to Symfony, Doctrine, Nette or any [other big PHP p
 
 ### Waiting for Tagging
 
-On the other hand a *package user*, I bet you recall at least one package you **longed to be tagged, but were frustrated not knowing when**. It's quite common that first 3 versions are tagged in withing 1 year, but then followed by 1+ year long pause.
+On the other hand a *package user*, I bet you recall at least one package you **longed to be tagged, but were frustrated not knowing when**. It's quite common that first 3 versions are tagged in within 1 year, but then followed by 1+ year long pause.
 
 
 ## Syncing with Symfony "menstruation" cycle

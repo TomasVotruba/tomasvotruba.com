@@ -165,7 +165,7 @@ For further use, **just check [Readme for Symplify/ModularRouting](https://githu
 - **that you can load them per module via service with [Symplify/ModularRouting](https://github.com/Symplify/ModularRouting)**
 
 
-If you have some questions or tips for how to make loading of routes simpler, just let me know bellow.
+If you have some questions or tips for how to make loading of routes simpler, just let me know below.
 
 Happy coding!
 

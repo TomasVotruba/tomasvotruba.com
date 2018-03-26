@@ -57,7 +57,7 @@ use Rector\Contract\Rector\RectorInterface;
 
 final class NetteRectorProvider implements RectorInterface
 {
-    // `$builderRectorFactory` passed via contructor + property
+    // `$builderRectorFactory` passed via constructor + property
 
     public function provide(): RectorInterface
     {
@@ -115,7 +115,7 @@ final class RectorProvidersCompilerPass implements CompilerPassInterface
 }
 ```
 
-Are you curious what `DefinitionFinder`? It's just [a helper class](https://github.com/Symplify/Symplify/blob/3d058becb57efefe2307c88ee94acbfbd15ebd1c/packages/PackageBuilder/src/DependencyInjection/DefinitionFinder.php) aroud `ContainerBuilder`.
+Are you curious what `DefinitionFinder`? It's just [a helper class](https://github.com/Symplify/Symplify/blob/3d058becb57efefe2307c88ee94acbfbd15ebd1c/packages/PackageBuilder/src/DependencyInjection/DefinitionFinder.php) around `ContainerBuilder`.
 
 ## 2. Use Expression Language?
 
@@ -161,7 +161,7 @@ use Rector\Contract\Rector\RectorInterface;
 
 final class NetteRectorProvider implements RectorProviderInterface
 {
-    // `$builderRectorFactory` passed via contructor + property
+    // `$builderRectorFactory` passed via constructor + property
 
     public function provide(): array // RectorInterface
     {
