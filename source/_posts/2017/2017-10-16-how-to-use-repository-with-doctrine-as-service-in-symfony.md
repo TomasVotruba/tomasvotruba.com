@@ -165,7 +165,7 @@ It's in documentation.
 
 It is very complicated to have more repositories for one entity. What if I want to have `PostRedisRepository` for Redis-related operations and `PostFrontRepository` for reading-only?
 
-**We're loosing all features** of our framework's Dependency Injection container (events, collections, autowiring, automated registration, logging etc.).
+**We're losing all features** of our framework's Dependency Injection container (events, collections, autowiring, automated registration, logging etc.).
 
 <br>
 

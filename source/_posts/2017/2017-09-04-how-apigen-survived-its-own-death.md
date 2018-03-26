@@ -164,7 +164,7 @@ If I should mention 4 most important changes you should know about, it would be:
 - Version 4.0 worked fine with PHP 5.4 code - newer usually crashed it. ApiGen **can deal with PHP 5.5, 5.6, 7.0 and 7.1 code** now.
 - Min PHP version bumped **from PHP 5.4 to PHP 7.1**. ApiGen is still able to parse older code.
 - **TokenReflection refactored to BetterReflection** - thanks to James and Marco for fast responses on our issues and pull-requests.
-- Switched to [Symfony 3.3 Dependecy Injection](https://github.com/ApiGen/ApiGen/pull/880) with [time-saving features](https://www.tomasvotruba.cz/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) - thanks [Martin Hujer](https://martinhujer.cz) for the idea.
+- Switched to [Symfony 3.3 Dependency Injection](https://github.com/ApiGen/ApiGen/pull/880) with [time-saving features](https://www.tomasvotruba.cz/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) - thanks [Martin Hujer](https://martinhujer.cz) for the idea.
 
 
 Look at particular releases to get complete list of changes. Changelogs are nice and clean:

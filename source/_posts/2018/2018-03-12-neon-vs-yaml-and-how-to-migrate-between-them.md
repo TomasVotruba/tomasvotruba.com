@@ -228,7 +228,7 @@ I was on a train trip in Hungary and I was thirsty. I went to classic food shop 
 
 <img src="/assets/images/posts/2018/neon-yaml/bottle-mixed.jpg" class="img-thumbnail">
 
-At least I though I picked the right one untill I opened it. In every single country I've been to so far, the **blue is always still water**. But not in Hungary!
+At least I though I picked the right one until I opened it. In every single country I've been to so far, the **blue is always still water**. But not in Hungary!
 
  As [Chris says](http://chrisinbrnocr.blogspot.cz/2015/08/european-heat-wave.html): "In Hungary the color code is reversed where blue means sparkling and red means flat." And there is even question [on Tripadvisor](https://www.tripadvisor.com.au/ShowTopic-g274887-i263-k7231074-Water_bottle_cap_colour_codes-Budapest_Central_Hungary.html) on this topic.
 

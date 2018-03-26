@@ -57,7 +57,7 @@ This seemingly random-generated company deals with blah blah blah... ridesharing
 
 This was a case study firm that started out as a small startup, growing fast and learning to scroll along the march. They tried lots of ways that did not work to find the right ones (for their context, of course).
 
-It's about these "do's and dont's" that our lecturers shared:
+It's about these "do's and don't's" that our lecturers shared:
 
 - upgrade as soon as you can
 - failure is beginning

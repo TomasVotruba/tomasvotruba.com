@@ -154,6 +154,6 @@ For further use **just check Readme for [Symplify/ModularDoctrineFilters](https:
 - that Doctrine Filter is basically just an object that might add some code to query
 - **that you can add filter via simple service with [Symplify/ModularDoctrineFilters](https://github.com/Symplify/ModularDoctrineFilters)**
 
-If you have some tips how to this simpler or want to share your experience with filters, just let me know bellow.
+If you have some tips how to this simpler or want to share your experience with filters, just let me know below.
 
 Happy coding!

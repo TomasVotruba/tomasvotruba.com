@@ -73,12 +73,12 @@ after_script:
 
 ### 3. Setup Minimal Require Code Coverage in Coveralls.io
 
-Add your repository on [Coveralls.io](https://coveralls.io), go to "Settings" and find "Coverage Treshold fo Failure".
+Add your repository on [Coveralls.io](https://coveralls.io), go to "Settings" and find "Coverage Threshold fo Failure".
 
-<img src="/assets/images/posts/2017/coveralls/coveralls-treshold.png" class="img-thumbnail">
+<img src="/assets/images/posts/2017/coveralls/coveralls-threshold.png" class="img-thumbnail">
 
 **There you can put a value you're ok with**. No need to push yourself too hard.
-I personally start with coverage bit bellow current level.
+I personally start with coverage bit below current level.
 
 That's all setup you need. Just push your pull-request and see the result.
 
@@ -120,7 +120,7 @@ after_script:
 
 And yes, [there is issue for that](https://github.com/lemurheavy/coveralls-public/issues/982). Feel free to upvote it or suggest a better solution.
 
-These 2 were surprises for me and took me a while to figure out. Let me know in comments bellow if you came across any other.
+These 2 were surprises for me and took me a while to figure out. Let me know in comments below if you came across any other.
 
 ## To Sum Up
 

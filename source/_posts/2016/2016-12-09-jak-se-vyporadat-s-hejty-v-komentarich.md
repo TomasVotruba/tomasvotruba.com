@@ -9,7 +9,7 @@ deprecated_message: "This post is available only in Czech and whole website was 
 lang: cs
 ---
 
-Tenhle proces jsem se učil 1 rok jako maintainer [ApiGenu](https://github.com/apigen/apigen), kdy jsem s desítkami lidí vedl online-hate-wars a zjistil, že to nikam nevede. Pak jsem zkoušel jiné cesty. Úspěšnější.
+Tenhle process jsem se učil 1 rok jako maintainer [ApiGenu](https://github.com/apigen/apigen), kdy jsem s desítkami lidí vedl online-hate-wars a zjistil, že to nikam nevede. Pak jsem zkoušel jiné cesty. Úspěšnější.
 
 Dnes ti je zkusím shrnout do 3 bodů.
 

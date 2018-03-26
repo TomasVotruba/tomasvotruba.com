@@ -99,7 +99,7 @@ Zmínil jsem všechno, co jsem chtěl, tak se teď pojďme podívat na konkrétn
 
 ## Co zlepšit na Jobs.cz
 
-Konkrétně na [tomto inzerátu](http://lmc.jobs.cz/pridej-se-k-nam/detail/?id=G2-1151391350-aden_brand0&rps=186).
+Konkrétně na [tomto inzerátu](http://lmc.jobs.cz/pridej-se-k-name/detail/?id=G2-1151391350-aden_brand0&rps=186).
 
 ### Líbí se mi
 

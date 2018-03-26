@@ -83,7 +83,7 @@ I love this most and it was great for some packages. That's how many [Zenify](ht
 **It doesn't scale.**
 
 
-During this path of packages we started to feel desperate. Nothing was good enough. I was loosing my belief in open source packages and packages themselves.
+During this path of packages we started to feel desperate. Nothing was good enough. I was losing my belief in open source packages and packages themselves.
 
 
 ## Composer Saved my Life!
@@ -100,7 +100,7 @@ People started to create new classes and methods for what was already there, bec
 
 I had enough!
 
-So I started to decouple this filesytem logic. How?
+So I started to decouple this filesystem logic. How?
 
 ### 1. Create Directory For Local Package
 

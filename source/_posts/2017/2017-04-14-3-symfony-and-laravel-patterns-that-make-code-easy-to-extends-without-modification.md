@@ -68,7 +68,7 @@ final ComputerEntrance implements MatrixEntranceInterface
 Programmers won't have to think about raping your classes in the night - **they just use the interface you provide**.
 
 <div class="text-center">
-    <img src="/assets/images/posts/2017/extendable-open-source/overide.jpg" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/extendable-open-source/override.jpg" class="img-thumbnail">
 </div>
 
 **This is code-embodied composition over inheritance**. No documentation nor Wikipedia links required.
@@ -77,7 +77,7 @@ Programmers won't have to think about raping your classes in the night - **they 
 
 ## 2. Go to Party Events, when in the Mood
 
-Back to Matrix world: imagine you can listen to every phone booth. Let's say you **write a script, that sends you sms with geo location of the booth everytime it gets called** (favorite tool for agent Smith ;-)).
+Back to Matrix world: imagine you can listen to every phone booth. Let's say you **write a script, that sends you sms with geo location of the booth every time it gets called** (favorite tool for agent Smith ;-)).
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/extendable-open-source/booth.png" class="img-thumbnail">

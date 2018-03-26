@@ -97,7 +97,7 @@ Just to remind you, the end user is interested in:
 
 *Profit*
 
-- **Usability**: Since your package save some internet trafic and space on hard drives, it's a bit more usable.
+- **Usability**: Since your package save some internet traffic and space on hard drives, it's a bit more usable.
 
 
 ### `.gitignore`
