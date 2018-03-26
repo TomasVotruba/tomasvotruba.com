@@ -113,9 +113,11 @@ I had one problem - missed services autocomplete in Yaml files. But you know wha
     There are no solutions. There are only trade-offs
 </blockquote>
 
-I hear you community, so lets trade! **From ECS 4, you can use Yaml everywhere with syntax you know, behavior from Symfony ecosystem you know and with no need to learn new standard. 
+I hear you community, so lets trade! **From ECS 4, you can use Yaml everywhere with syntax you know, behavior from Symfony ecosystem you know and with no need to learn new standard.** 
 
-**What does that mean for your `*.neon` files?** Well just rename them to `*.yml` and 
+### How to Migrate?
+
+Well just rename `easy-coding-standard.neon` or `easy-coding-standard.yml` and 
  then read about it in [Neon vs. Yaml and How to Migrate Between Them](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/).
 
 <br>
@@ -130,7 +132,7 @@ I hear you community, so lets trade! **From ECS 4, you can use Yaml everywhere w
 
 Thanks to Yaml, we could use finally use full power of Symfony\DependencyInjection component, constructor injection, autowiring... again, all that you probably already know from Symfony.
 
-Why? **ECS is Symfony application with DI Container**. It loads all checkers from config you provide, turns them into services and then uses those services to check the code.
+Why? **ECS is basically a Symfony application with DI Container**. It loads all checkers from config you provide, turns them into services and then uses those services to check the code.
 
 Could you tell that from?
  
@@ -140,7 +142,7 @@ checkers:
     ArrayFixer: ~
 ```
 
-**I probably won't and I recall how frustrated I was, when I digged through PHP_CodeSniffer and PHP CS Fixer years ago and find out that Sniffs and Fixers are only staticaly registered services, nothing more.**
+I could not. **I recall how frustrated I was, when I digged through PHP_CodeSniffer and PHP CS Fixer years ago and find out that Sniffs and Fixers are only statically registered services**, nothing more.
 
 Why not make such intent explicit?
 
@@ -153,7 +155,7 @@ services:
 Yaml was the only missing part to do this. And ECS has it now, so does the explicit services! 
 And you can do and use any feature you Symfony know. Magic no more #metoo.
 
-**How to migrate?**
+### How to Migrate?
 
 ```diff
 # easy-coding-standard.yml
@@ -162,27 +164,32 @@ And you can do and use any feature you Symfony know. Magic no more #metoo.
          Symplify\CodingStandard\Fixer\Import\ImportNamespacedNameFixer:
              include_doc_blocks: true
 
-# this is needed to respect yaml format
 -        - SlamCsFixer\FinalInternalClassFixer:
 +        SlamCsFixer\FinalInternalClassFixer: ~
 ```
 
+## 6. <strike>Good Bye Neon Class Autocomplete</strike> Or not?
 
+Yeah, trade-offs bla bla bla... but what is ECS without class autocomplete? That is killer feature compared to other 2 tools that use strings for Fixer and Sniff names that you have to remember.
 
-### 6 bonus - What if you miss autocomplete missed?
+<div class="text-center">
+    <img src="/assets/images/posts/2018/symplify-4-ecs/neon-autocomplete.gif">
+</div>
+<br>
 
-Trade-offs blablabla... but I really miss the Neon autocomplet.e
+I [created issue at Symfony Plugin](https://github.com/Haehnchen/idea-php-symfony2-plugin/issues/1153) and hyped people all over the planet to up-vote it. I even seriously though about going to PHPStorm Plugin workshop and learn Java only to add this feature it. Should I try or should I [let it go](https://www.youtube.com/watch?v=L0MK7qz13bU)?
 
-@todo neon screen
+<br>
 
-Even created the issue at Symfony Plugin and hyped pepole all over the planet to upvode it. I once though about going to Java PHPStorm Plugin workshop to complete it.
+But one night, after glass of wine trying to achieve [Ballmer Peak](https://xkcd.com/323/), I accidentally made a typo in `.yml` file:
 
+<div class="text-center">
+    <img src="/assets/images/posts/2018/symplify-4-ecs/yaml-autocomplete.gif">
+</div>
+<br>
 
+And that glass of wine, my friends, was hell of a trade-off!
 
-But one night, after glass of wine while I was having that blamers peak, I accidnetely made a typo:
+<br><br>
 
-
-![](https://user-images.githubusercontent.com/924196/37080951-3e9cfcde-21e8-11e8-9680-2a29c25ce2b8.gif)
-
-https://github.com/Symplify/Symplify/issues/565#issuecomment-376307010
-
+Happy upgrading!
