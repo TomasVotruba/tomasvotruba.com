@@ -18,7 +18,7 @@ Coding Standards are my greatest passion for last couple of years. I love their 
 With a Checker you can change `array()` to `[]`. And more then that. Coding Standard are not exclusively about spaces, tabs and brackets nowadays.
 
 You can use them to [refactor to newer version of your framework](https://daniel-siepmann.de/Posts/2017/2017-03-20-phpcs-code-migration.html),
- [upgrade your codebase to newer PHP](https://github.com/wimg/PHPCompatibility) or [add PHP 7.1 typehints to your methods](https://github.com/kukulich/php-type-hints-converter).
+ [upgrade your codebase to newer PHP](https://github.com/wimg/PHPCompatibility) or [add PHP 7.1 typehints to your methods](https://github.com/kukulich/php-type-hints-convertor).
 
 That's laziness on a completely different level :)
 
