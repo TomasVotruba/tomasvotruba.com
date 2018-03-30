@@ -4,7 +4,7 @@ title: "New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Serv
 perex: |
     I wrote about [news in Easy Coding Standard 3](/blog/2018/03/01/new-in-symplify-3-4-improvements-in-easy-coding-standard/) a while ago. EasyCodingStandard 4 is released yet (still in alpha), but soon you'll be able to use all the news I'll show you today.
     <br><br>
-    And what are they? Neon to Yaml, semi-static to Services, customizable caching, even simpler skipper, short bin and more.   
+    And what are they? Neon to Yaml, semi-static to Services, customizable caching, even simpler skipper, short bin and more.
 tweet: "New Post on my Blog: New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Services"
 tweet_image: "/assets/images/posts/2018/symplify-4-ecs/yaml-autocomplete.gif"
 related_items: [79]
@@ -24,14 +24,14 @@ Docker users will be happy for this feature, since it makes ECS much more usable
 # easy-coding-standard.yml
 parameters:
     # defaults to sys_get_temp_dir() . '/_easy_coding_standard'
-    cache_directory: .ecs_cache 
+    cache_directory: .ecs_cache
 ```
 
 Thank you [Marcin Michalski](https://github.com/marmichalski) for adding this feature.
 
 <br>
 
-## 2. Skip Anything, Anywhere 
+## 2. Skip Anything, Anywhere
 
 <a href="https://github.com/Symplify/Symplify/pull/661" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fa fa-github"></em>
@@ -43,7 +43,7 @@ One of the features I really like is skipping particular spots. PHP CS Fixer and
 
 What you really need? Exclude 1 file but only for 1 checker. Or 1 checker for group of files and sometimes only 1 code from sniff on 1 file. That all is possible now.
 
-**Because details matters and it's pointless to think about code or class**, you can now remove `skip_codes` key from your config and use `skip` section only: 
+**Because details matters and it's pointless to think about code or class**, you can now remove `skip_codes` key from your config and use `skip` section only:
 
 ```diff
  # easy-coding-standard.yml
@@ -55,20 +55,20 @@ What you really need? Exclude 1 file but only for 1 checker. Or 1 checker for gr
 -    skip_codes:
          SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment:
              - '*packages*'
-```             
+```
 
 No need to think, where to put it anymore.
-             
+
 <br>
-             
+
 ## 3. Short `vendor/bin/ecs` is the King
-  
+
 <a href="https://github.com/Symplify/Symplify/pull/647" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fa fa-github"></em>
     &nbsp;
     Check the PR #647
 </a>
-  
+
 One last detail. Did you use this bin file to run ECS?
 
 ```bash
@@ -85,7 +85,7 @@ Now this is the only way to use ECS:
 vendor/bin/ecs
 ```
 
-Typo proof or at least less error prone. Just change it in you [`composer.json`'s `script` section](https://blog.martinhujer.cz/have-you-tried-composer-scripts/) or CI setups and you're ready to go!             
+Typo proof or at least less error prone. Just change it in you [`composer.json`'s `script` section](https://blog.martinhujer.cz/have-you-tried-composer-scripts/) or CI setups and you're ready to go!
 
 <br>
 
@@ -107,17 +107,17 @@ Based on feedback from [community around Symplify](https://github.com/Symplify/S
     <img src="https://imgs.xkcd.com/comics/standards.png">
 </a>
 
-I had one problem - missed services autocomplete in Yaml files. But you know what they say: 
+I had one problem - missed services autocomplete in Yaml files. But you know what they say:
 
 <blockquote class="blockquote text-center mt-lg-5 mb-lg-5">
     There are no solutions. There are only trade-offs
 </blockquote>
 
-I hear you community, so lets trade! **From ECS 4, you can use Yaml everywhere with syntax you know, behavior from Symfony ecosystem you know and with no need to learn new standard.** 
+I hear you community, so lets trade! **From ECS 4, you can use Yaml everywhere with syntax you know, behavior from Symfony ecosystem you know and with no need to learn new standard.**
 
 ### How to Migrate?
 
-Well just rename `easy-coding-standard.neon` or `easy-coding-standard.yml` and 
+Well just rename `easy-coding-standard.neon` or `easy-coding-standard.yml` and
  then read about it in [Neon vs. Yaml and How to Migrate Between Them](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/).
 
 <br>
@@ -135,7 +135,7 @@ Thanks to Yaml, we could use finally use full power of Symfony\DependencyInjecti
 Why? **ECS is basically a Symfony application with DI Container**. It loads all checkers from config you provide, turns them into services and then uses those services to check the code.
 
 Could you tell that from?
- 
+
 ```yaml
 # easy-coding-standard.yml
 checkers:
@@ -152,7 +152,7 @@ services:
     ArrayFixer: ~
 ```
 
-Yaml was the only missing part to do this. And ECS has it now, so does the explicit services! 
+Yaml was the only missing part to do this. And ECS has it now, so does the explicit services!
 And you can do and use any feature you Symfony know. Magic no more #metoo.
 
 ### How to Migrate?
