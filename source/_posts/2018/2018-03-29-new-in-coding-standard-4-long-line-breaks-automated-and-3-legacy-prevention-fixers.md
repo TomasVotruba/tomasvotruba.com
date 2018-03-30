@@ -39,7 +39,7 @@ related_items: [86, 70, 68, 51]
 
 *I'm so happy to announce this fixer, because it saved my so many times and also motivates me to use decoupling to smaller, SRP classes.*
 
-If you use `LineLenghtSniff`, you know it's painful to fix every error report it makes.
+If you use `LineLengthSniff`, you know it's painful to fix every error report it makes.
 
 ```yaml
 # easy-coding-standard.yml
@@ -56,7 +56,7 @@ public function __construct(OneLittleDependency $oneLittleDependency)
 }
 ```
 
-Then it grows... 
+Then it grows...
 
 ```php
 public function __construct(OneLittleDependency $oneLittleDependency, AnotherLittleDependency $anotherLittleDependency)
@@ -64,7 +64,7 @@ public function __construct(OneLittleDependency $oneLittleDependency, AnotherLit
 }
 ```
 
-...and grows... 
+...and grows...
 
 ```php
 public function __construct(OneLittleDependency $oneLittleDependency, AnotherLittleDependency $anotherLittleDependency, $someParameter)
@@ -92,7 +92,7 @@ public function __construct(
 ) {
 }
 ```
- 
+
 ...and that is inconsistent and has no reason to be inlined, so you inline it...
 
 ```php
@@ -114,7 +114,7 @@ There are other cases, where parameters, arguments or array items can change up 
 ```
 
 ```diff
--$someArray = ['superlooongArgumentsover120chars', 'superlooongArgumentsover120chars', 'superlooongArgumentsover120chars']; 
+-$someArray = ['superlooongArgumentsover120chars', 'superlooongArgumentsover120chars', 'superlooongArgumentsover120chars'];
 +$someArray = [
 +    'superlooongArgumentsover120chars',
 +    'superlooongArgumentsover120chars',
@@ -122,7 +122,7 @@ There are other cases, where parameters, arguments or array items can change up 
 +];
 ```
 
-What if I told you that you'll have to never deal with this manually. Ever! 
+What if I told you that you'll have to never deal with this manually. Ever!
 
 Welcome `LineLengthFixer`.
 
@@ -148,7 +148,7 @@ As you guessed, this fixer works with 120 chars as maximum line-size... by defau
 
 Do you prefer shorter or longer lines?
 
-Do you want use breaks only and not inline short code? 
+Do you want use breaks only and not inline short code?
 
 Just configure it:
 
@@ -160,7 +160,7 @@ parameters:
     inline_short_lines: false # default: true
 ```
 
-<br>    
+<br>
 
 ## 3. Keep Legacy Far Away with New `ForbiddenStaticFunctionSniff`
 
@@ -177,7 +177,7 @@ One day you wake up and from 1 static method is 60 static factories all over you
 
 **Well until you need to replace one of nested dependencies that requires few more classes. And then you realized your work is to basically manually maintain dump of dependency injection container** and that you're not coding anymore.
 
-It took weeks to get from this position back to clear dependency injection and I don't want to do it ever again. That's why this fixer was born. 
+It took weeks to get from this position back to clear dependency injection and I don't want to do it ever again. That's why this fixer was born.
 
 ### How to Register It?
 
@@ -196,7 +196,7 @@ services:
     Check the PR #692
 </a>
 
-We all already know that `&$references` are bad practise, since they increase cyclomatic complexity and hide dependency logic. 
+We all already know that `&$references` are bad practise, since they increase cyclomatic complexity and hide dependency logic.
 
 ```php
 function someFunction(&$var)
@@ -205,7 +205,7 @@ function someFunction(&$var)
 }
 ```
 
-And that we should prefer explicit syntax: 
+And that we should prefer explicit syntax:
 
 ```php
 function someFunction($var)
@@ -214,7 +214,7 @@ function someFunction($var)
 }
 ```
 
-I though I would never meet them again, but they somehow pop-up in PRs. So I made a Fixer for it! 
+I though I would never meet them again, but they somehow pop-up in PRs. So I made a Fixer for it!
 
 ### How to Register It?
 
@@ -238,11 +238,11 @@ Often in the code of private companies there are classes like:
 
 - `ProductSorter`
 - `ProductSorter`
-- `ProductSorter` 
+- `ProductSorter`
 
-If you use PhpStorm and *open file* shortcut, you know where I aim. 
+If you use PhpStorm and *open file* shortcut, you know where I aim.
 
-Now, imagine you wan't to update the Command that sorts Products by price to Redis database. Inside, it looks like this: 
+Now, imagine you want to update the Command that sorts Products by price to Redis database. Inside, it looks like this:
 
 ```php
 final class ProductSorter extends Command
@@ -251,7 +251,7 @@ final class ProductSorter extends Command
 }
 ```
 
-### Which one do you open? 
+### Which one do you open?
 
 I could also ask, which one is the interface and which is its implementation, but [there is already checker for that](https://github.com/Symplify/CodingStandard#class-should-have-suffix-by-parent-classinterface).
 
@@ -259,7 +259,7 @@ Probably each of them manually until you find the right one, which really sucks.
 
 ```diff
 -final class ProductSorter extends Command
-+final class ProductSorterCommand extends Command  
++final class ProductSorterCommand extends Command
  {
      // ...
  }
@@ -269,7 +269,7 @@ And then you have clear class names, that you're able to distinguish without the
 
 - `ProductSorterCommand`
 - `ProductSorterRepository`
-- `ProductSorterController` 
+- `ProductSorterController`
 
 And that's exactly what `ClassNameSuffixByParentFixer` helps you to do.
 
@@ -295,11 +295,11 @@ And it handles all these cases for you:
 - `*Exception`
 - `*Handler`
 
-Note: since PHP Coding Standard tools don't modify your filesytem, after the fixer run don't forget to change file names as well.
+Note: since PHP Coding Standard tools don't modify your filesystem, after the fixer run don't forget to change file names as well.
 
 ### Your type is missing?
 
-The fixer is configurable to comfort your needs, so just add it: 
+The fixer is configurable to comfort your needs, so just add it:
 
 ```yaml
 # easy-coding-standard.yml

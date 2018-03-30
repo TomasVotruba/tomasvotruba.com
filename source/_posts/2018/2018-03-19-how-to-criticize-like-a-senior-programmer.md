@@ -28,13 +28,13 @@ No "hello" or "hi", never use a surname and NEVER use a name. Just write right a
         <p>
             <strong>Minitip: Judge Others</strong>
         </p>
-        
+
         <br>
-        
+
         <p>
             As a senior programmer you have right to say what is right and wrong. You should be clear and right to the point. Only that way the other person knows what is this about and can do something about that.
         </p>
-        
+
         <p><em>"this is definitely wrong"</em></p>
     </div>
 </div>
@@ -44,16 +44,16 @@ No "hello" or "hi", never use a surname and NEVER use a name. Just write right a
         <p>
             <strong>Minitip: Point out the Other person is Below You</strong>
         </p>
-        
+
         <br>
-        
+
         <p>
             If that would be another way, he or she would not need a correction, right?
         </p>
         <ul>
             <li>missing education: <em>"read the docs first"</em></li>
             <li>more stupid: <em>"lol, you really think this is the way to use it?"</em></li>
-        </ul>        
+        </ul>
     </div>
 </div>
 
@@ -68,7 +68,7 @@ When you get a response like this, it is usually very rude like for no reason:
 You only are trying to help the second person to stop being to stupid. The author is only pretending he doesn't know. But luckily you are smarter than him to recognize it!
 
 ## 4. Repeat the Same to Make Them Hear You
- 
+
 If the other doesn't want to listen, he or she probably didn't read our comments clearly. Who can blame them, it's today's world full of social media distractions (and alcohol and drugs!). There is no better solution than point that out.
 
 - *"I wrote that already."*
@@ -99,9 +99,9 @@ And if they don't, they're stupid and they should learn that first.
         <p>
             <strong>Minitip: Use Shortcuts To Save Time</strong>
         </p>
-        
+
         <br>
-        
+
         <p>
            All people in the field know all the shortuts you do - they're programmers after all - so why not use them so save time in conversation and your elbows.
         </p>
@@ -109,14 +109,14 @@ And if they don't, they're stupid and they should learn that first.
             <li><em>"why don't you use IDE"?</em></li>
             <li><em>"use Docker AWS setup with DTOs lol"</em></li>
         </ul>
-        
-        <p>Again, do not add any links, Google can handle it for you.</p>        
+
+        <p>Again, do not add any links, Google can handle it for you.</p>
     </div>
 </div>
 
 ## 6. Believe in Yourself
 
-You know the best (as your mama and papa told you) - never forget that. And if other try to change your mind, they probably don't know a thing.Stick to your believes and don't let anyone to question it. 
+You know the best (as your mama and papa told you) - never forget that. And if other try to change your mind, they probably don't know a thing.Stick to your believes and don't let anyone to question it.
 
 - *"no, you don't understand this"*
 
@@ -147,7 +147,7 @@ So...
 
 ### How to Give Feedback that Helps You Both
 
-After misconceptions we can move to really what matters - **emphatic feedback**. Once I read a post about people with of 30+ years long and happy marriages: 
+After misconceptions we can move to really what matters - **emphatic feedback**. Once I read a post about people with of 30+ years long and happy marriages:
 
 <blockquote class="blockquote text-center mb-5 mt-5">
     We have a strong feeling, that when we point out mistakes we see at other people, they will change that.
@@ -157,7 +157,7 @@ It nails it! So what I'm trying to do apart inversion of all the 8 points above 
 
 ## 1. Is Feedback Desired?
 
-Do you enjoy parenting and patronizing? Neither do I. So when I give feedback, I try to find out first if the other person is even open to some. 
+Do you enjoy parenting and patronizing? Neither do I. So when I give feedback, I try to find out first if the other person is even open to some.
 
 There is small trick to do that:
 
@@ -181,7 +181,7 @@ If you know your real motivation, you can work it much better and be able to giv
 
 ## 3. Make a Rapport instead of an Enemy
 
-No, this is not a dinosaur nor air fighter.  
+No, this is not a dinosaur nor air fighter.
 
 <blockquote class="blockquote text-center mb-5 mt-5">
     If you want to persuade someone, start in a friendly way.
@@ -193,11 +193,11 @@ You can find this quote in all books on persuasion. I didn't know about this for
 - *"You should use Symfony, because it's more matured than any other frameworks!"*
 
 This only forces the other for defense, even if you don't want him to:
- 
+
 - "Sublime Text is just fine. It can compare to PHPStorm and is even faster!"
 - "I use Nette for many years and Symfony seems too complicated and is very slow."
- 
-Sorry brain! Instead, you can make a **rapport** - a short term friendship if you like. 
+
+Sorry brain! Instead, you can make a **rapport** - a short term friendship if you like.
 
 - **Be curious**: *"What do you mean by "this is too complicated"? What part exactly is too complicated?"*
 
@@ -231,7 +231,7 @@ vs.
 
 <br><br>
 
-Your feedback and tips are most welcomed as I want to get better in this, so add your comment. Even with sarcastic examples from this post ;). 
+Your feedback and tips are most welcomed as I want to get better in this, so add your comment. Even with sarcastic examples from this post ;).
 
 <br><br>
 
