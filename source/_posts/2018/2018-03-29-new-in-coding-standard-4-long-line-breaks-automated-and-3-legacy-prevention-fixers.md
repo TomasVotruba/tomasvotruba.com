@@ -1,12 +1,12 @@
 ---
 id: 87
-title: "New in Coding Standard 4: Long Lines Breaks Automated and 3 Legacy Preventions Fixers"
+title: "New in Coding Standard 4: Long Line Breaks Automated and 3 Legacy Prevention Fixers"
 perex: |
     Legacy code prevention, lines automated and clear naming of classes in huge projects.
     That all is coming to Coding Standard 4 (still in alpha).
     <br><br>
     Are you curious what work will now these 4 news fixers handle for you? Look inside.
-tweet: "New in Coding Standard 4: Long Lines Breaks Automated and 3 Legacy Preventions Fixers"
+tweet: "New in Coding Standard 4: Long Line Breaks Automated and 3 Legacy Prevention Fixers"
 tweet_image: "/assets/images/posts/2018/symplify-4-cs/tweet.png"
 related_items: [86, 70, 68, 51]
 ---
