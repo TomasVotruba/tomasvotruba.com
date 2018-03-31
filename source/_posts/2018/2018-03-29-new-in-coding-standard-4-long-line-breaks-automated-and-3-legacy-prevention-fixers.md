@@ -13,28 +13,10 @@ related_items: [86, 70, 68, 51]
 
 ## 1. Let Coding Standard handle Line Length for You
 
-<a href="https://github.com/Symplify/Symplify/pull/748" class="btn btn-dark btn-sm mt-2 mb-3 pull-left">
+<a href="https://github.com/Symplify/Symplify/pull/749" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fa fa-github"></em>
     &nbsp;
-    Check the PR #748
-</a>
-
-<a href="https://github.com/Symplify/Symplify/pull/743" class="btn btn-dark btn-sm mt-2 mb-3 ml-2 pull-left">
-    <em class="fa fa-github"></em>
-    &nbsp;
-    Check the PR #743
-</a>
-
-<a href="https://github.com/Symplify/Symplify/pull/591" class="btn btn-dark btn-sm mt-2 mb-3 ml-2 pull-left">
-    <em class="fa fa-github"></em>
-    &nbsp;
-    Check the PR #591
-</a>
-
-<a href="https://github.com/Symplify/Symplify/pull/585" class="btn btn-dark btn-sm mt-2 mb-3 ml-2">
-    <em class="fa fa-github"></em>
-    &nbsp;
-    Check the PR #585
+    Check the PR #749
 </a>
 
 *I'm so happy to announce this fixer, because it saved my so many times and also motivates me to use decoupling to smaller, SRP classes.*
@@ -138,12 +120,12 @@ As you guessed, this fixer works with 120 chars as maximum line-size... by defau
 
 <br>
 
-## 2. 3 options to Configurable with Breakers & Inliners
+## 2. Choose Line Length to Match Your Display
 
 <a href="https://github.com/Symplify/Symplify/pull/747" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fa fa-github"></em>
     &nbsp;
-    Check the PR #747
+    Check the PR #751
 </a>
 
 Do you prefer shorter or longer lines?
@@ -154,10 +136,11 @@ Just configure it:
 
 ```yaml
 # easy-coding-standard.yml
-parameters:
-    max_line_length: 100 # default: 120
-    break_long_lines: true # default: true
-    inline_short_lines: false # default: true
+services:
+    Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer:
+        max_line_length: 100 # default: 120
+        break_long_lines: true # default: true
+        inline_short_lines: false # default: true
 ```
 
 <br>
