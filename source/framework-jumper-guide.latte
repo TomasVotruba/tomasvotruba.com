@@ -5,40 +5,41 @@ id: framework-jumper-guider
 ---
 
 {block content}
-    <div class="container-fluid" id="blog">
+    <div class="container-fluid">
         <h1>How Code Looks in every PHP Framework?</h1>
 
-        <div class="row">
-            <div class="col-md-12">
-                {var $frameworkKeys = array_keys($framework)}
+        {var $frameworkKeys = array_keys($framework)}
 
-                <div class="table-responsive">
-                    <table class="table table-stripped">
-                        <tr>
-                            <thead class="thead-inverse">
-                                <th>Framework</th>
-                                {foreach $frameworkCodeTypes as $frameworkCodeType}
-                                    <th>
-                                        {$frameworkCodeType|firstUpper}
-                                    </th>
-                                {/foreach}
-                            </thead>
-                        </tr>
-                        {foreach $frameworkKeys as $frameworkKey}
-                            <tr>
-                                <td>{$frameworkKey|firstUpper}</td>
-
-                                {foreach $framework[$frameworkKey] as $item}
-                                    <td>
-                                        {capture $code}{$item['code']}{/capture}
-                                        <pre class="language-php">{$code}</pre>
-                                    </td>
-                                {/foreach}
-                            </tr>
+        <div class="table-responsive">
+            <table class="table table-stripped">
+                <tr>
+                    <thead class="thead-inverse">
+                        <th>Framework</th>
+                        {foreach $frameworkCodeTypes as $frameworkCodeTypeName}
+                            <th>
+                                <nobr>{$frameworkCodeTypeName}</nobr>
+                            </th>
                         {/foreach}
-                    </table>
-                </div>
-            </div>
+                    </thead>
+                </tr>
+                {foreach $frameworkKeys as $frameworkKey}
+                    <tr>
+                        <td>{$frameworkKey|firstUpper}</td>
+
+                        {foreach $frameworkCodeTypes as $type => $name}
+                            <td>
+                                {ifset $framework[$frameworkKey][$type]}
+                                    {var $item = $framework[$frameworkKey][$type]}
+                                    {capture $code}{$item['code']}{/capture}
+                                    <pre class="language-{ifset $item ['lang']}{$item['lang']}{else}php{/ifset}">{$code}</pre>
+                                {else}
+                                    <em>not yet</em>
+                                {/ifset}
+                            </td>
+                        {/foreach}
+                    </tr>
+                {/foreach}
+            </table>
         </div>
     </div>
 {/block}

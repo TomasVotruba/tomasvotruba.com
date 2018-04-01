@@ -1,11 +1,11 @@
 parameters:
     framework:
         laravel:
-            -
-                type: controller
+            controller:
                 code: |
                     <?php
 
                     class LaravelController
                     {
                     }
+                lang: php

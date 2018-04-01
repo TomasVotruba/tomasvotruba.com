@@ -1,3 +1,12 @@
 parameters:
     frameworkCodeTypes:
-        - 'controller'
+        # key: title
+        controller: 'Controller'
+        action: 'Action'
+        component: 'Component' # small standalone controller action
+        response_request: 'Request & Response'
+        service: 'Service Registration'
+        controller_render: 'Render in Controller'
+        controller_variable: 'Render Variable in controller'
+        controller_service: 'Get Service in Controller'
+        route: 'Route'

@@ -1,11 +1,11 @@
 parameters:
     framework:
         symfony:
-            -
-                type: controller
+            controller: # key from meta.yml
                 code: |
                     <?php
 
                     class SymfonyController
                     {
                     }
+                lang: php
