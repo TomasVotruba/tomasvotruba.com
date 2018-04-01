@@ -1,19 +1,44 @@
 ---
 layout: default
-title: "Deprecated Posts"
-id: blog
+title: "How Code Looks in every PHP Framework?"
+id: framework-jumper-guider
 ---
 
 {block content}
     <div class="container-fluid" id="blog">
-        <h1>Deprecated Posts</h1>
+        <h1>How Code Looks in every PHP Framework?</h1>
 
         <div class="row">
-            {foreach $posts as $post}
-                {continueIf ! isset($post['deprecated']) || isset($post['lang'])}
+            <div class="col-md-12">
+                {var $frameworkKeys = array_keys($framework)}
 
-                {include "singlePostPreview", post => $post}
-            {/foreach}
+                <div class="table-responsive">
+                    <table class="table table-stripped">
+                        <tr>
+                            <thead class="thead-inverse">
+                                <th>Framework</th>
+                                {foreach $frameworkCodeTypes as $frameworkCodeType}
+                                    <th>
+                                        {$frameworkCodeType|firstUpper}
+                                    </th>
+                                {/foreach}
+                            </thead>
+                        </tr>
+                        {foreach $frameworkKeys as $frameworkKey}
+                            <tr>
+                                <td>{$frameworkKey|firstUpper}</td>
+
+                                {foreach $framework[$frameworkKey] as $item}
+                                    <td>
+                                        {capture $code}{$item['code']}{/capture}
+                                        <pre class="language-php">{$code}</pre>
+                                    </td>
+                                {/foreach}
+                            </tr>
+                        {/foreach}
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 {/block}
