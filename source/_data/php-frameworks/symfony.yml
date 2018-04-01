@@ -8,9 +8,7 @@ parameters:
 
                     namespace App\Controller;
 
-                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-                    final class SomeController extends Controller
+                    final class SomeController
                     {
                     }
                 lang: php
@@ -21,9 +19,7 @@ parameters:
 
                     namespace App\Controller;
 
-                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-                    final class SomeController extends Controller
+                    final class SomeController
                     {
                         public function listAction()
                         {
@@ -37,11 +33,10 @@ parameters:
 
                     namespace App\Controller;
 
-                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
                     use Symfony\Component\HttpFoundation\Response;
                     use Symfony\Component\HttpFoundation\Request;
 
-                    final class SomeController extends Controller
+                    final class SomeController
                     {
                         public function listAction(Request $request): Response
                         {
@@ -56,14 +51,73 @@ parameters:
                     namespace App\Controller;
 
                     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-                    use Symfony\Component\HttpFoundation\Response;
-                    use Symfony\Component\HttpFoundation\Request;
 
                     final class SomeController extends Controller
                     {
-                        public function listAction(Request $request): Response
+                        public function listAction()
+                        {
+                            // renders templates/some/list.html.twig
+                            return $this->render('some/list.html.twig');
+                        }
+                    }
+
+            controller_variable:
+                code: |
+                    <?php
+
+                    namespace App\Controller;
+
+                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+                    final class SomeController extends Controller
+                    {
+                        public function listAction()
+                        {
+                            return $this->render('some/list.html.twig', [
+                                'someKey' => 'someValue'
+                            ]);
+                        }
+                    }
+
+            invokable_controller:
+                code: |
+                    <?php
+
+                    namespace App\Controller;
+
+                    use Symfony\Component\HttpFoundation\Response;
+
+                    final class SomeController
+                    {
+                        public function __invoke(): Response
                         {
                             return new Response('some content');
+                        }
+                    }
+
+            controller_service:
+                code: |
+                    <?php
+
+                    namespace App\Controller;
+
+                    use App\SomeService;
+
+                    final class SomeController
+                    {
+                        /**
+                         * @var SomeService
+                         */
+                        private $someService;
+
+                        public function __construct(SomeService $someService)
+                        {
+                            $this->someService = $someService;
+                        }
+
+                        public function listAction()
+                        {
+                            $someResult = $this->someService->someMethod();
                         }
                     }
 

@@ -15,14 +15,18 @@ id: framework-jumper-guider
                 <tr>
                     <thead class="thead-inverse">
                         {foreach $frameworkNameTypes as $frameworkCodeTypeName}
-                            <th>
+                            <th class="text-center">
                                 <nobr>{$frameworkCodeTypeName}</nobr>
                             </th>
                         {/foreach}
                     </thead>
                 </tr>
                     {foreach $frameworkCodeTypes as $type => $name}
-                        <tr><td colspan="3" class="text-center">{$name}</td></tr>
+                        <tr>
+                            <td colspan="3" class="text-center" id="{$type}">
+                                <a href="#{$type}">{$name}</a>
+                            </td>
+                        </tr>
                         <tr>
                             {foreach $frameworkNameTypes as $frameworkKey => $frameworkName}
 
