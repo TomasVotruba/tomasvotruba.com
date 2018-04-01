@@ -14,26 +14,25 @@ id: framework-jumper-guider
             <table class="table table-stripped">
                 <tr>
                     <thead class="thead-inverse">
-                        <th>Framework</th>
-                        {foreach $frameworkCodeTypes as $frameworkCodeTypeName}
+                        {foreach $frameworkNameTypes as $frameworkCodeTypeName}
                             <th>
                                 <nobr>{$frameworkCodeTypeName}</nobr>
                             </th>
                         {/foreach}
                     </thead>
                 </tr>
-                {foreach $frameworkKeys as $frameworkKey}
-                    <tr>
-                        <td>{$frameworkKey|firstUpper}</td>
+                    {foreach $frameworkCodeTypes as $type => $name}
+                        <tr><td colspan="3" class="text-center">{$name}</td></tr>
+                        <tr>
+                            {foreach $frameworkNameTypes as $frameworkKey => $frameworkName}
 
-                        {foreach $frameworkCodeTypes as $type => $name}
                             <td>
                                 {ifset $framework[$frameworkKey][$type]}
                                     {var $item = $framework[$frameworkKey][$type]}
                                     {capture $code}{$item['code']}{/capture}
                                     <pre class="language-{ifset $item ['lang']}{$item['lang']}{else}php{/ifset}">{$code}</pre>
                                 {else}
-                                    <em>not yet</em>
+                                    <em><a href="../source/_data/php-frameworks/{$frameworkKey}.yml">add it</a></em>
                                 {/ifset}
                             </td>
                         {/foreach}
