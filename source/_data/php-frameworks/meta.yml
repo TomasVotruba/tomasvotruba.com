@@ -1,12 +1,20 @@
 parameters:
+    # order here = order in table
+
+    frameworkNameTypes:
+        # key: title
+        symfony: Symfony
+        nette: Nette
+        laravel: Laravel
+
     frameworkCodeTypes:
         # key: title
         controller: 'Controller'
         action: 'Action'
-        component: 'Component' # small standalone controller action
         response_request: 'Request & Response'
-        service: 'Service Registration'
         controller_render: 'Render in Controller'
         controller_variable: 'Render Variable in controller'
         controller_service: 'Get Service in Controller'
+        # component: 'Component' # small standalone controller action
+        service: 'Service Registration'
         route: 'Route'

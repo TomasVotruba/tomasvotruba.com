@@ -1,0 +1,38 @@
+parameters:
+    framework:
+        nette:
+            # key from meta.yml
+            controller:
+                code: |
+                    <?php
+
+                    namespace App\Presenter;
+
+                    use Nette\Application\UI\Presenter;
+
+                    final class SomePresenter extends Presenter
+                    {
+                    }
+
+            action:
+                code: |
+                    <?php
+
+                    namespace App\Presenter;
+
+                    use Nette\Application\UI\Presenter;
+
+                    final class SomePresenter extends Presenter
+                    {
+                        public function actionList()
+                        {
+                        }
+                    }
+                lang: php
+
+            service:
+                code: |
+                    # app/config/config.neon
+                    services:
+                        - App\SomeService
+                lang: yaml

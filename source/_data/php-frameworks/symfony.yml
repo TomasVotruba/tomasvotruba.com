@@ -1,11 +1,75 @@
 parameters:
     framework:
         symfony:
-            controller: # key from meta.yml
+            # keys from meta.yml
+            controller:
                 code: |
                     <?php
 
-                    class SymfonyController
+                    namespace App\Controller;
+
+                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+                    final class SomeController extends Controller
                     {
                     }
                 lang: php
+
+            action:
+                code: |
+                    <?php
+
+                    namespace App\Controller;
+
+                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+                    final class SomeController extends Controller
+                    {
+                        public function listAction()
+                        {
+                        }
+                    }
+                lang: php
+
+            response_request:
+                code: |
+                    <?php
+
+                    namespace App\Controller;
+
+                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+                    use Symfony\Component\HttpFoundation\Response;
+                    use Symfony\Component\HttpFoundation\Request;
+
+                    final class SomeController extends Controller
+                    {
+                        public function listAction(Request $request): Response
+                        {
+                            return new Response('some content');
+                        }
+                    }
+
+            controller_render:
+                code: |
+                    <?php
+
+                    namespace App\Controller;
+
+                    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+                    use Symfony\Component\HttpFoundation\Response;
+                    use Symfony\Component\HttpFoundation\Request;
+
+                    final class SomeController extends Controller
+                    {
+                        public function listAction(Request $request): Response
+                        {
+                            return new Response('some content');
+                        }
+                    }
+
+            service:
+                code: |
+                    # app/config/services.yml
+                    services:
+                        App\SomeService: ~
+                lang: yaml
