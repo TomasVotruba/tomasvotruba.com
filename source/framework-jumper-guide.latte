@@ -5,44 +5,46 @@ id: framework-jumper-guider
 ---
 
 {block content}
-    <div class="container-fluid">
-        <h1>How Code Looks in every PHP Framework?</h1>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>How Code Looks in every PHP Framework?</h1>
 
-        {var $frameworkKeys = array_keys($framework)}
+            {var $frameworkKeys = array_keys($framework)}
 
-        <div class="table-responsive">
-            <table class="table table-stripped">
-                <tr>
-                    <thead class="thead-inverse">
-                        {foreach $frameworkNameTypes as $frameworkCodeTypeName}
-                            <th class="text-center">
-                                <nobr>{$frameworkCodeTypeName}</nobr>
-                            </th>
-                        {/foreach}
-                    </thead>
-                </tr>
-                    {foreach $frameworkCodeTypes as $type => $name}
-                        <tr>
-                            <td colspan="3" class="text-center" id="{$type}">
-                                <a href="#{$type}">{$name}</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            {foreach $frameworkNameTypes as $frameworkKey => $frameworkName}
-
-                            <td>
-                                {ifset $framework[$frameworkKey][$type]}
-                                    {var $item = $framework[$frameworkKey][$type]}
-                                    {capture $code}{$item['code']}{/capture}
-                                    <pre class="language-{ifset $item ['lang']}{$item['lang']}{else}php{/ifset}">{$code}</pre>
-                                {else}
-                                    <em><a href="../source/_data/php-frameworks/{$frameworkKey}.yml">add it</a></em>
-                                {/ifset}
-                            </td>
-                        {/foreach}
+            <div class="table-responsive">
+                <table class="table table-stripped">
+                    <tr>
+                        <thead class="thead-inverse">
+                            {foreach $frameworkNameTypes as $frameworkCodeTypeName}
+                                <th class="text-center">
+                                    <nobr>{$frameworkCodeTypeName}</nobr>
+                                </th>
+                            {/foreach}
+                        </thead>
                     </tr>
-                {/foreach}
-            </table>
+                        {foreach $frameworkCodeTypes as $type => $name}
+                            <tr>
+                                <td colspan="3" class="text-center" id="{$type}">
+                                    <a href="#{$type}">{$name}</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                {foreach $frameworkNameTypes as $frameworkKey => $frameworkName}
+
+                                <td>
+                                    {ifset $framework[$frameworkKey][$type]}
+                                        {var $item = $framework[$frameworkKey][$type]}
+                                        {capture $code}{$item['code']}{/capture}
+                                        <pre class="language-{ifset $item ['lang']}{$item['lang']}{else}php{/ifset}">{$code}</pre>
+                                    {else}
+                                        <em><a href="../source/_data/php-frameworks/{$frameworkKey}.yml">add it</a></em>
+                                    {/ifset}
+                                </td>
+                            {/foreach}
+                        </tr>
+                    {/foreach}
+                </table>
+            </div>
         </div>
     </div>
 {/block}
