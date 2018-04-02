@@ -11,8 +11,6 @@ perex: |
 tweet: "..@todo"
 tweet_image: "@todo"
 related_items: [59, 81, 78, 77]
-tested: true
-test_slug: RectifyRepositories
 ---
 
 I wrote about [How to use Repository with Doctrine as Service Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/) a while ago. There are many posts about this topic, but not as simple to apply as this one. At least for one repository.
