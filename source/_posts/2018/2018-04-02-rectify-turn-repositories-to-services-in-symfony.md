@@ -72,16 +72,15 @@ final class PostRepository
 
 ## 4 Steps to Instant Refactoring of All Repositories
 
-1. First, install rector
+### 1. Install Rector
 
 ```bash
 composer install rector/rector --dev
 ```
-
  
-2. Setup config
+### 2. Setup `rector.yml`
 
-
+There you name all the changes you'd like to perform on you code:
 
 ```yaml
 # rector.yml
@@ -95,10 +94,11 @@ services:
     Rector\Rector\Architecture\RepositoryAsService\MoveRepositoryFromParentToConstructorRector: ~
 ```
 
-3. Add entity => repository provider
+### 3. Add Repository => Entity Provider
 
-Last step of configuration is letting the Rector know what class is mapped to which repository.
-For that reasons there is `Rector\Contract\Bridge\EntityForDoctrineRepositoryProviderInterface`:
+But how does Rector know what entity should it add to which repository? For that reasons there is `Rector\Contract\Bridge\EntityForDoctrineRepositoryProviderInterface` you need to implement.
+
+It could be as simple as:
 
 ```php
 <?php declare(strict_types=1);
@@ -114,6 +114,7 @@ final class EntityForDoctrineRepositoryProvider implements EntityForDoctrineRepo
      */
     private $map = [
         'App\Repository\PostRepository' => 'App\Entity\Post',
+        'App\Repository\ProductRepository' => 'App\Entity\Product',
     ];
 
     public function provideEntityForRepository(string $name): ?string
@@ -123,29 +124,66 @@ final class EntityForDoctrineRepositoryProvider implements EntityForDoctrineRepo
 }
 ```
 
-And register it 
+And register it:
 
 ```diff
  # rector.yml
  services:
-     # order matters, this needs to be first to correctly detect parent repository
-    
-     # this will replace parent calls by "$this->repository" property
      Rector\Rector\Architecture\RepositoryAsService\ReplaceParentRepositoryCallsByRepositoryPropertyRector: ~
-    
-     # this will move repository from parent to constructor
      Rector\Rector\Architecture\RepositoryAsService\MoveRepositoryFromParentToConstructorRector: ~
 
 +    App\Rector\EntityForDoctrineRepositoryProvider: ~
 ```
 
-4. Run on your code
+### 4. Run on Your Code
+
+Now the fun part:
 
 ```bash
-vendor/bin/rector process /app --config rector.yml
+vendor/bin/rector process /app --dry-run # "--config rector.yml" as default
 ```
 
-When the Rector finishes, be sure to check your code. While it can save manage 80 % of cases for you, it's not perfect. I love to use `git diff` and *PgDown* - the best use case for this key I know.
+You should see diffs like:
+
+```diff
+ use App\Entity\Post;
+ use Doctrine\ORM\EntityRepository;
+
+-final class PostRepository extends EntityRepository
++final class PostRepository
+ {
+     /**
++     * @var \Doctrine\ORM\EntityRepository
++     */
++    private $repository;
++    public function __construct(\Doctrine\ORM\EntityManager $entityManager)
++    {
++        $this->repository = $entityManager->getRepository(\App\Entity\Post::class);
++    }
++    /**
+      * Our custom method
+      *
+      * @return Post[]
+@@ -14,7 +22,7 @@
+      */
+     public function findPostsByAuthor(int $authorId): array
+     {
+-        return $this->findBy([
++        return $this->repository->findBy([
+             'author' => $authorId
+         ]);
+     }
+```
+
+All looking good? Run it:
+
+```bash
+vendor/bin/rector process /app
+```
+
+### Safety First
+
+When the Rector finishes, be sure to check your code. While it can manage 80 % of cases for you, it's not perfect. I love to use `git diff` and *PgDown* - the best use case for this key I know.
 
 Ready? Add, commit, send invoice for big refactoring and enjoy your coffee :)
 
