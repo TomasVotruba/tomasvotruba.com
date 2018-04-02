@@ -187,16 +187,16 @@ When the Rector finishes, be sure to check your code. While it can manage 80 % o
 Ready? Add, commit, send an invoice for big refactoring and enjoy your coffee :)
 
 
-### Clean Code... Done, but What About Beautiful?
+## Clean Code... Done, but What About Beautiful?
 
-You've probably noticed that code itself is not looking to good. Rector jobs is not to clean, but to change the code. It's not a hipster designer, but rather a thermonuclear engineer. **That's why there are coding standards. You can apply your own or if not good enough use Rector's prepared set**:
+You've probably noticed that code itself is not looking too good. Rector's jobs is not to clean, but to change the code. It's not a hipster designer, but rather a thermonuclear engineer. **That's why there are coding standards. You can apply your own or if not good enough use Rector's prepared set**:
 
 ```bash
 composer require symplify/easy-coding-standard --dev
 vendor/bin/ecs --config vendor/rector/rector/ecs-after-rector.yml --fix
 ```
 
-And you code is now both **refactored and clean**. That's it!
+And your code is now both **refactored and clean**. That's it!
 
 
 <br><br>
