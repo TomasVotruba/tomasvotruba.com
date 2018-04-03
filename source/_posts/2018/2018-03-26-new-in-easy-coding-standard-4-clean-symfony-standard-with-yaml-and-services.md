@@ -138,7 +138,7 @@ Could you tell that from?
 
 ```yaml
 # easy-coding-standard.yml
-services:
+checkers:
     ArrayFixer: ~
 ```
 
