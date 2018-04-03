@@ -139,7 +139,7 @@ $contactMethods = [
 ];
 ```
 
-Now we put this data to <a href="https://ne-on.org">NEON format</a> and place them to our `contact.latte`.
+Now we put this data to Yaml format and place them to our `contact.latte`.
 
 
 ```yaml
