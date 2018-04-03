@@ -7,6 +7,11 @@ perex: |
     Prepared configs, reduction of config to few lines, <code>--config</code> option and more.
 tweet: "7 New Features in Easy Coding Standard #codingStandard #php #solid"
 related_items: [37, 51]
+
+updated: true
+updated_since: "April 2018"
+updated_message: |
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration, correct configs and <code>checkers</code> to <code>services</code> migration.
 ---
 
 Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, ideas and Windows bug fixes while working on [Nette\CodingStandard](https://github.com/nette/coding-standard) package. I'll write "how to" for Nette\CodingStandard later, but today we'll look on **new features it uses from EasyCodingStandard 2.2**.
@@ -31,20 +36,19 @@ Before you had to name all the checkers manually in your config. There was no *P
 *PHP_CodeSniffer + PHP CS Fixer*
 
 ```yaml
-vendor/symplify/easy-coding-standard/config/php54-checkers.neon
-vendor/symplify/easy-coding-standard/config/php70-checkers.neon
-vendor/symplify/easy-coding-standard/config/php71-checkers.neon
-vendor/symplify/easy-coding-standard/config/psr2-checkers.neon
-vendor/symplify/easy-coding-standard/config/symfony-checkers.neon
-vendor/symplify/easy-coding-standard/config/symfony-risky-checkers.neon
+vendor/symplify/easy-coding-standard/config/php70.yml
+vendor/symplify/easy-coding-standard/config/php71.yml
+vendor/symplify/easy-coding-standard/config/psr2.yml
+vendor/symplify/easy-coding-standard/config/symfony.yml
+vendor/symplify/easy-coding-standard/config/symfony-risky.yml
 ```
 
 *Custom*
 
 ```yaml
-vendor/symplify/easy-coding-standard/config/symplify.neon
-vendor/symplify/easy-coding-standard/config/spaces.neon
-vendor/symplify/easy-coding-standard/config/common.neon
+vendor/symplify/easy-coding-standard/config/symplify.yml
+vendor/symplify/easy-coding-standard/config/common/spaces.yml
+vendor/symplify/easy-coding-standard/config/common.yml
 ```
 
 This shortened Symplify config from [256 lines](https://github.com/Symplify/Symplify/blob/v2.0.0/easy-coding-standard.neon#L1-L256) **to [just 22 lines](https://github.com/Symplify/Symplify/blob/458082a5d534182e4ad723958c417399442abc82/easy-coding-standard.neon#L1-L22)**.
@@ -59,18 +63,17 @@ Not anymore!
 **Use the set and exclude unwanted checkers in `exclude_checkers` option**:
 
 ```yaml
-includes:
-    - vendor/symplify/easy-coding-standard/config/symfony-checkers.neon
+imports:
+    - { resource: 'vendor/symplify/easy-coding-standard/config/symfony.yml' }
 
 parameters:
     exclude_checkers:
         # from PHP CS Fixer Symfony set
-        - PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer
-        - PhpCsFixer\Fixer\Operator\NewWithBracesFixer
-        - PhpCsFixer\Fixer\Phpdoc\PhpdocAlignFixer
-        - PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer
+        - 'PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer'
+        - 'PhpCsFixer\Fixer\Operator\NewWithBracesFixer'
+        - 'PhpCsFixer\Fixer\Phpdoc\PhpdocAlignFixer'
+        - 'PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer'
 ```
-
 
 ## 4. Skip More Than 1 File For Specific Checker
 
@@ -80,9 +83,8 @@ If you need to skip more files, just **use [`fnmatch`](https://php.net/manual/en
 parameters:
     skip:
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
-            - "*packages/CodingStandard/src/Sniffs/*/*Sniff.php"
+            - '*packages/CodingStandard/src/Sniffs/*/*Sniff.php'
 ```
-
 
 ## 5. New Command `Show` Display Used Checkers
 
