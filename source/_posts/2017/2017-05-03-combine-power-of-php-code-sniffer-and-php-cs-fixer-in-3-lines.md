@@ -9,6 +9,11 @@ perex: |
     Can you imagine using them both and actually enjoy it? Today I will show you how.
 related_items: [46, 47, 48]
 tweet: "#ecs - tool to use both #phpCodeSniffer and #phpCsFixer in 3 lines #php #codingstandard"
+
+updated: true
+updated_since: "April 2018"
+updated_message: |
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 <div class="text-center">
@@ -23,8 +28,8 @@ Let's say we want to check arrays.
 We add first *checker* that requires long `array()` syntax:
 
 ```yaml
-checkers:
-    - PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff
+services:
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff: ~
 ```
 
 
@@ -33,9 +38,9 @@ Great start. Then we want to check for trailing commas, so every line has them.
 So add one more checker:
 
 ```yaml
-checkers:
-    - PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff
-    - PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer
+services:
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff: ~
+    PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer: ~
 ```
 
 Great job! **You have just combined PHP_CodeSniffer and PHP CS Fixer in 3 lines.**
@@ -51,51 +56,44 @@ I will show how to install it, run it and how nice and clear reports it generate
 composer require --dev symplify/easy-coding-standard
 ```
 
-### 2. Add `easy-coding-standard.neon` and Configure
+### 2. Add `easy-coding-standard.yml` and Configure
 
-Create a `easy-coding-standard.neon` file in your project and desired checkers.
+Create a `easy-coding-standard.yml` file in your project and desired checkers.
 
 ```yaml
-checkers:
+services:
     # arrays
-    - PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff
-    - PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff: ~
+    PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer: ~
 ```
 
 You can add a comment to groups, so everyone can easily orientate when there are more checkers.
 
+### Be Lazy with YAML
 
-### Be Lazy with NEON
-
-Do you use PHPStorm? If so, you can use [NEON Plugin](https://plugins.jetbrains.com/plugin/7060-neon-support). It allows you one amazing thing:
+Do you use PHPStorm? If so, you can use [Symfony Plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin). It allows you one amazing thing:
 
 <div class="text-center">
-    <img src="/assets/images/posts/2017/easy-coding-standard-intro/neon-autocomplete.gif" class="img-thumbnail">
+    <img src="https://github.com/Symplify/EasyCodingStandard/raw/master/docs/yaml-autocomplete.gif" class="img-thumbnail">
 </div>
-
 
 **It autocompletes class names!**
 
 No more looking to documentation, what string matches what sniff or fixer, if there are any checkers for arrays or debugging typos.
 
-[NEON file format](https://ne-on.org/) is very similar to YAML.
-
-*To install NEON PHPStorm plugin just: find everywhere → type "Plugins" → pick "Browse repositories..." in the bottom → type "NEON" and install it.*
-
 ### 3. Run it & Fix it
 
 ```bash
-vendor/bin/easy-coding-standard check src
+vendor/bin/ecs check src
 
 # ...
 
-vendor/bin/easy-coding-standard check src --fix
+vendor/bin/ecs check src --fix
 ```
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/easy-coding-standard-intro/run-and-fix.gif" class="img-thumbnail">
 </div>
-
 
 That's all!
 

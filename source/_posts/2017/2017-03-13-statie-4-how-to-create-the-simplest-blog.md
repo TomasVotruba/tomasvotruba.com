@@ -7,6 +7,11 @@ perex: |
     Today I will show you, <strong>how to put your first post</strong>.
 related_items: [29, 32, 33]
 tweet: "#Statie 4: How to create blog #php #static #github"
+
+updated: true
+updated_since: "April 2018"
+updated_message: |
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">Statie 4.0</a>and Neon to Yaml migration.
 ---
 
 ## Create a Blog Page
@@ -121,13 +126,13 @@ or
 blog/Year/Month/Day/FileSlug
 ```
 
-This **can be changed by configuration**. In `statie.neon` you can override default values:
+This **can be changed by configuration**. In `statie.yml` you can override default values:
 
 ```yaml
-<!-- statie.neon -->
+# statie.yml
 
 parameters:
-    post_route: blog/:year/:month/:day/:title
+    post_route: 'blog/:year/:month/:day/:title'
 ```
 
 Where `:year`, `:month`, `:day` and `:title` are all variables.
@@ -136,7 +141,7 @@ For example:
 
 ```yaml
 parameters:
-    post_route: my-blog/:year/:title
+    post_route: 'my-blog/:year/:title'
 ```
 
 Would produce url:
@@ -147,16 +152,12 @@ my-blog/2017/my-last-post/
 
 Got it? I know you do! **You are smart.**
 
-
-
 In one of the next posts, I will show you some cool `PostFile` object features.
-
 
 ## Now You Know
 
 - **That all posts are placed in `/source/_posts` directory and in `$posts` variable**.
 - That post has to be in **named as `YYYY-MM-DD-title.md` format**
-- That you can change the post generated url in `statie.neon` in `post_route`.
-
+- That you can change the post generated url in `statie.yml` in `post_route`.
 
 Happy coding!

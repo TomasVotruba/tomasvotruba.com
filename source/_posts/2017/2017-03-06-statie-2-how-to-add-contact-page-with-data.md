@@ -5,9 +5,9 @@ perex: |
     <a href="/blog/2017/02/20/statie-how-to-run-it-locally">In first post about Statie</a> you generated simple index with layout. Today we look on first semi-dynamic feature: <strong>data structures</strong>.
 
 updated: true
-updated_since: "Agust 2017"
+updated_since: "April 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/pull/197">Statie 2.2</a> and <code>parameters</code> section in <code>statie.neon</code> config for loading global data.
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">Statie 4.0</a>,  <code>parameters</code> section in <code>statie.yml</code> config for loading global data and Neon to Yaml migration.
 related_items: [29, 33, 34]
 
 tweet: "#Statie 2: Data sets #php #static #github"
@@ -139,7 +139,7 @@ $contactMethods = [
 ];
 ```
 
-Now we put this data to <a href="https://ne-on.org">NEON format</a> and place them to our `contact.latte`.
+Now we put this data to Yaml format and place them to our `contact.latte`.
 
 
 ```yaml
@@ -205,7 +205,7 @@ I would use this option in this case.
 
 ### How does it Work?
 
-Statie uses `statie.neon` in the root directory and its `parameters` section.
+Statie uses `statie.yml` in the root directory and its `parameters` section.
 
 As convention, I put global data to `/source/_data` directory. But it's up to you, where you put it.
 
@@ -214,18 +214,18 @@ As convention, I put global data to `/source/_data` directory. But it's up to yo
 We simple move whole `contactMethods` to this file:
 
 ```yaml
-# /source/_data/contacts.neon
+# /source/_data/contacts.yml
 parameters:
     contactMethods:
         ...
 ```
 
-And include it in `statie.neon`:
+And import it in `statie.yml`:
 
 ```yaml
-# /statie.neon
-includes:
-    - source/_data/contacts.neon
+# statie.yml
+imports:
+    - { resource: 'source/_data/contacts.yml' }
 ```
 
 And that's it!
@@ -242,7 +242,7 @@ Save file, [look on the contact page](http://localhost:8000/contact) and it stil
 
 - How to add data to your Statie page.
 - **Where to put them for local and global access**.
-- **That its convention** to use `/source/_data/<some-data>.neon` naming.
+- **That its convention** to use `/source/_data/<some-data>.yml` naming.
 
 
 Happy coding!

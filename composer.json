@@ -39,6 +39,7 @@
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt"
     },
-    "minimum-stability": "alpha",
-    "prefer-stable": true
+    "config": {
+        "sort-packages": true
+    }
 }

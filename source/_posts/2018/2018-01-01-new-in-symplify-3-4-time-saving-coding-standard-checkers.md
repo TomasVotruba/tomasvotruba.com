@@ -8,6 +8,11 @@ perex: |
 tweet: "Absolutize require/include, empty line after strict_types() definition, import all the names and the best - unused public methods. Welcome and use new checkers in Symplify 3 Coding Standard #codingstandar #phpcsfixer #phpcodesniffer #php"
 tweet_image: "/assets/images/posts/2018/symplify-3-checkers/import-fixer.png"
 related_items: [49, 68]
+
+updated: true
+updated_since: "April 2018"
+updated_message: |
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 Starting with the simple checkers and moving to those, which save you even hours of manual work.
@@ -49,9 +54,9 @@ Of course there are cases when using absolute paths is not suitable, like templa
 And that's what this checker does for you:
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
-  - Symplify\CodingStandard\Fixer\ControlStructure\RequireFollowedByAbsolutePathFixer
+# easy-coding-standard.yml
+services:
+    Symplify\CodingStandard\Fixer\ControlStructure\RequireFollowedByAbsolutePathFixer: ~
 ```
 
 <br>
@@ -87,13 +92,12 @@ Which is not what we want.
 When the official fixer is finished, I'd be happy to use it and recommend it. But **right now you can use**:
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
-  - Symplify\CodingStandard\Fixer\Strict\BlankLineAfterStrictTypesFixer
+# easy-coding-standard.yml
+services:
+    Symplify\CodingStandard\Fixer\Strict\BlankLineAfterStrictTypesFixer: ~
 ```
 
 Which helps official fixer to keep the space:
-
 
 ```diff
 -<?php
@@ -169,8 +173,8 @@ final class SomeClass extends \SubNamespace\PartialNamespace\AnotherClass
 Eager to try? Here it is:
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
+# easy-coding-standard.yml
+services:
     - Symplify\CodingStandard\Fixer\Import\ImportNamespacedNameFixer
 ```
 
@@ -203,8 +207,8 @@ It helps you to spot spots like [this](https://github.com/Symplify/Symplify/pull
 I recommend it running from time to time in standalone thread, since it takes lot of performance and reports all unused public method, even those destined for public use:
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
+# easy-coding-standard.yml
+services:
     - Symplify\CodingStandard\Sniffs\DeadCode\UnusedPublicMethodSniff
 ```
 

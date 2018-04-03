@@ -7,6 +7,11 @@ perex: |
 Today I will show you: how to use <strong>decouple big templates to smaller and reusable snippets</strong>. Like Google Analytics code.
 related_items: [29, 32, 34]
 tweet: "#Statie 3: Reusable code snippets #php #static #github"
+
+updated: true
+updated_since: "April 2018"
+updated_message: |
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">Statie 4.0</a>and Neon to Yaml migration.
 ---
 
 Sometimes you need to add part of template, that you want to use on multiple pages (in the same form or with smaller changes) or that makes your template less readable.
@@ -125,7 +130,7 @@ When you start using static site generator, you'll **appreciate its power in sca
 - Second is mostly copy-pasting previous settings and changing only layout and content.
 - And third? Way too easy and well paid job.
 
-To allow this flow, I recommend **keeping all IDs** that change from site to site - Google Analytics, Facebook Pixel, Disqus ID... - in `_config/config.neon` file. When you create a new website, **all you have to do is change one file** to make it customized.
+To allow this flow, I recommend **keeping all IDs** that change from site to site - Google Analytics, Facebook Pixel, Disqus ID... - in `_config/config.yml` file. When you create a new website, **all you have to do is change one file** to make it customized.
 
 ### How To Do It
 
