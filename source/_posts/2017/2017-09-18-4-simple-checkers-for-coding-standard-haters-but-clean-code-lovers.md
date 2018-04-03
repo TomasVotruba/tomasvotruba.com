@@ -13,7 +13,7 @@ related_items: [51, 48]
 updated: true
 updated_since: "April 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and `checkers` to `services` migration.
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 There are some checkers in coding standard world, that don't check spaces, tabs, commas nor brackets. They **actually do code-review for you**.

@@ -156,7 +156,7 @@ When setup properly, you get this file in generated code:
 
 ## How to Upgrade from Statie 2 to Statie 3?
 
-<blockquote class="blockquote text-center">
+<blockquote class="blockquote text-center mt-lg-5 mb-5">
     "Real code is worth of thousand words describing it."
     <footer class="blockquote-footer">Anonymous Lazy Programmer</footer>
 </blockquote>

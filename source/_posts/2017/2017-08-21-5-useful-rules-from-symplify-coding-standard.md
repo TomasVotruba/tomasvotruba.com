@@ -11,7 +11,7 @@ related_items: [49]
 updated: true
 updated_since: "April 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and `checkers` to `services` migration.
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
