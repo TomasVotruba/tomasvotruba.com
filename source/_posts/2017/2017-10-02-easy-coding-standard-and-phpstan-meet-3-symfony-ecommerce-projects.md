@@ -10,6 +10,11 @@ perex: |
 tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects #numbers #php"
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png"
 related_items: [52]
+
+updated: true
+updated_since: "April 2018"
+updated_message: |
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and `checkers` to `services` migration.
 ---
 
 ## Try It Yourself
@@ -96,16 +101,19 @@ The full set looks like this:
 
 
 ```yaml
-checkers:
+services:
     # use short array []
     PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
         syntax: short
+
     # drop dead code
-    - SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff
+    SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff: ~
+
     # drop dead use namespaces
-    - PhpCsFixer\Fixer\Import\NoUnusedImportsFixer
+    PhpCsFixer\Fixer\Import\NoUnusedImportsFixer: ~
+
     # and sort them A→Z
-    - PhpCsFixer\Fixer\Import\OrderedImportsFixer
+    PhpCsFixer\Fixer\Import\OrderedImportsFixer: ~
 ```
 
 <br>

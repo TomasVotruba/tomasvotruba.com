@@ -9,8 +9,12 @@ perex: |
 tweet: "Do you hate Coding Standards, but love #cleancode? Check these 4 helpful rules #php"
 tweet_image: "/assets/images/posts/2017/clean-checkers/dependency-drop.png"
 related_items: [51, 48]
----
 
+updated: true
+updated_since: "April 2018"
+updated_message: |
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and `checkers` to `services` migration.
+---
 
 There are some checkers in coding standard world, that don't check spaces, tabs, commas nor brackets. They **actually do code-review for you**.
 
@@ -31,26 +35,23 @@ It will not only make your code cleaner, but also can **speed up you container b
 
 
 ```yaml
-# easy-coding-standard.neon
-
-checkers:
+# easy-coding-standard.yml
+services:
     # use short array []
     PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
         syntax: short
 
     # drop dead code
-    - SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff
+    SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff: ~
 
     # drop dead use namespaces
-    - PhpCsFixer\Fixer\Import\NoUnusedImportsFixer
+    PhpCsFixer\Fixer\Import\NoUnusedImportsFixer: ~
 
     # and sort them A → Z
-    - PhpCsFixer\Fixer\Import\OrderedImportsFixer
+    PhpCsFixer\Fixer\Import\OrderedImportsFixer: ~
 ```
 
-
 ## 4 Steps to Make Your Code Cleaner
-
 
 1. Install it
 
@@ -59,7 +60,6 @@ checkers:
     ```
 
 2. Add checkers to `easy-coding-standard.neon` file
-
 
 3. Check your code
 
@@ -72,6 +72,5 @@ checkers:
     ```bash
     vendor/bin/ecs check src --fix
     ```
-
 
 Happy coding!

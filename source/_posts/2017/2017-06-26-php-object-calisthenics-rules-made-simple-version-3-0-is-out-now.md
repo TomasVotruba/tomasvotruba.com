@@ -89,9 +89,8 @@ Configure **in CodeSniffer:**
 Configure **in [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard):**
 
 ```yaml
-# easy-coding-standard.neon
-
-checkers:
+# easy-coding-standard.yml
+services:
     # Rule 6: Do not abbreviate
     ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff:
         minLength: 4 # default: 3
@@ -120,9 +119,8 @@ Configure **in CodeSniffer:**
 Configure **in [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard):**
 
 ```yaml
-# easy-coding-standard.neon
-
-checkers:
+# easy-coding-standard.yml
+services:
     # Rule 6: Do not abbreviate
     ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff:
         minLength: 4

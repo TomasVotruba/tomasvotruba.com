@@ -250,8 +250,8 @@ You can find [final Sniff on Github](https://github.com/Symplify/Symplify/blob/e
 With [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) put the class to `easy-coding-standard.yml`:
 
 ```yaml
-checkers:
-    - Symplify\CodingStandard\Sniffs\Naming\ExceptionNameSniff
+services:
+    Symplify\CodingStandard\Sniffs\Naming\ExceptionNameSniff: ~
 ```
 
 And run:

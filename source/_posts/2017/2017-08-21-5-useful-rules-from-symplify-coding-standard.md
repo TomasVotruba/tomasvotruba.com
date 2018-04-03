@@ -7,6 +7,11 @@ perex: |
      With over 13 000 downloads I think I should write about 5 of them you can use in your projects today.
 tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standard #php #architecture #php_codesniffer"
 related_items: [49]
+
+updated: true
+updated_since: "April 2018"
+updated_message: |
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and `checkers` to `services` migration.
 ---
 
 I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
@@ -50,15 +55,13 @@ class SomeClass
 }
 ```
 
-
 **Use it**
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
-  - Symplify\CodingStandard\Fixer\Property/ArrayPropertyDefaultValueFixer
+# easy-coding-standard.yml
+services:
+    Symplify\CodingStandard\Fixer\Property/ArrayPropertyDefaultValueFixer: ~
 ```
-
 
 ### 2. Final Interface
 
@@ -87,9 +90,9 @@ final class SomeClass implements SomeInterface
 **Use it**
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
-    - Symplify\CodingStandard\Sniffs\Classes\FinalInterfaceSniff
+# easy-coding-standard.yml
+services:
+    Symplify\CodingStandard\Sniffs\Classes\FinalInterfaceSniff: ~
 ```
 
 
@@ -115,11 +118,10 @@ $className = DateTime::class;
 **Use it**
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
-    -  Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer
+# easy-coding-standard.yml
+services:
+    Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer: ~
 ```
-
 
 ### 4. Test should be final
 
@@ -148,9 +150,9 @@ final class SomeTest extends TestCase
 **Use it**
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
-    - Symplify\CodingStandard\Sniffs\PHPUnit\FinalTestCaseSniff
+# easy-coding-standard.yml
+services:
+    Symplify\CodingStandard\Sniffs\PHPUnit\FinalTestCaseSniff: ~
 ```
 
 
@@ -204,9 +206,9 @@ final class SomeClass implements SomeInterface
 **Use it**
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
-    - Symplify\CodingStandard\Sniffs\Classes\EqualInterfaceImplementationSniff
+# easy-coding-standard.yml
+services:
+    Symplify\CodingStandard\Sniffs\Classes\EqualInterfaceImplementationSniff: ~
 ```
 
 
@@ -249,14 +251,12 @@ class SomeClass
 **Use it**
 
 ```yaml
-# easy-coding-standard.neon
-checkers:
-    -  Symplify\CodingStandard\Fixer\DependencyInjection\InjectToConstructorInjectionFixer
+# easy-coding-standard.yml
+services:
+    Symplify\CodingStandard\Fixer\DependencyInjection\InjectToConstructorInjectionFixer: ~
 ```
 
-
 ### Sold? Try them
-
 
 They are used the best with [EasyCodingStandard](/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/):
 
@@ -276,9 +276,7 @@ Fix your code:
 vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify-checkers.neon --fix
 ```
 
-
 Let me know how much errors will you find in the comments. I dare you to get to 0! :)
-
 
 ## Rest of the Rules
 
