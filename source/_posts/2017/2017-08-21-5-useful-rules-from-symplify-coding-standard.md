@@ -267,13 +267,13 @@ composer require --dev symplify/easy-coding-standard symplify/coding-standard
 Check your code:
 
 ```bash
-vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify-checkers.neon
+vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify.yml
 ```
 
 Fix your code:
 
 ```bash
-vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify-checkers.neon --fix
+vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify.yml --fix
 ```
 
 Let me know how much errors will you find in the comments. I dare you to get to 0! :)
