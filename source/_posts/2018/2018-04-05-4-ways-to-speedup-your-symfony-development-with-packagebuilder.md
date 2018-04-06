@@ -4,7 +4,7 @@ title: "4 Ways to Speedup Your Symfony Development with PackageBuilder"
 perex: |
     Symplify 4 was released and with it also one package, that contains all the Symfony tweaks that Symplify packages use.
     <br><br>
-    Throwable render? Test services without public violation? Load parameters with glob? We got you covered! 
+    Throwable render? Test services without public violation? Load parameters with glob? We got you covered!
 tweet: "New Post on My Blog: 4 Ways to Speedup Your Symfony Development with PackageBuilder"
 tweet_image: "/assets/images/posts/2018/symplify-4-pb/error.png"
 ---
@@ -19,7 +19,7 @@ composer require symplify/package-builder
 
 ...and enjoy [more than one](https://github.com/Symplify/PackageBuilder) of these 4 new features:
 
-## 1. Console like, `-vvv` Aware Renders for Exceptions and Errors
+## 1. Console-Like `-vvv`-Aware Renders for Exceptions and Errors
 
 <a href="https://github.com/Symplify/Symplify/pull/732" class="btn btn-dark btn-sm mt-2 mb-3 pull-left">
     <em class="fa fa-github"></em>
@@ -63,7 +63,7 @@ use Symfony\Component\Console\Output\ConsoleOutput;
 try {
     $containerFactory = new ContainerFactory();
     $containerFactory->createFromConfig('config-not-found.yml');
-    
+
     $application = $container->get(Application::class);
     $application->run();
 } catch (Throwable $throwable) {
@@ -75,7 +75,7 @@ But that will get you rather chaotic and only 1-level report even with `-vvv`:
 
 <img src="/assets/images/posts/2018/symplify-4-pb/error.png" class="img-thumbnail">
 
-Do you need this to work in your CLI app? Thanks to [Ondra Machulda](https://github.com/ondram)'s motivation [issues](https://github.com/Symplify/Symplify/pull/716) I came with decoupled Symfony\Console Application logic.
+Do you need this to work on your CLI app? Thanks to [Ondra Machulda](https://github.com/ondram)'s motivation [issues](https://github.com/Symplify/Symplify/pull/716) I came with decoupled Symfony\Console Application logic.
 
 Use like:
 
@@ -85,7 +85,7 @@ use Symplify\PackageBuilder\Console\ThrowableRenderer;
 try {
     $containerFactory = new ContainerFactory();
     $containerFactory->createFromConfig('config-not-found.yml');
-    
+
     $application = $container->get(Application::class);
     $application->run();
 } catch (Throwable $throwable) {
@@ -97,7 +97,7 @@ try {
 
 <br>
 
-## 2. Drop manual `public: true` for every servie you test 
+## 2. Drop Manual `public: true` for Every Service You Test
 
 <a href="https://github.com/Symplify/Symplify/pull/680" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fa fa-github"></em>
@@ -114,8 +114,8 @@ final class ChangelogLinkerTest extends AbstractContainerAwareTestCase
     {
         $this->changelogLinker = $this->container->get(ChangelogLinker::class);
     }
-    
-    // ... 
+
+    // ...
 }
 ```
 
@@ -143,7 +143,7 @@ services:
         public: true
 ```
 
-Both these configs relies on your manual updates. That!s not a way to go - programming should be easy, fun and without any triggers in our heads. 
+Both these configs rely on your manual updates. That!s not a way to go - programming should be easy, fun and without any triggers in our heads.
 
 ### How to Overcome This?
 
@@ -153,7 +153,7 @@ Just add `Symplify\PackageBuilder\DependencyInjection\CompilerPass\PublicForTest
 final class AppKernel extends Kernel
 {
     // ...
-    
+
     protected function build(ContainerBuilder $containerBuilder): void
     {
         $containerBuilder->addCompilerPass(new PublicForTestsCompilerPass());
@@ -187,9 +187,9 @@ services:
     Symfony\Component\Console\Output\ConsoleOutput: ~
 ```
 
-If you use `Symfony\Component\Console\Input\InputInterace`, you'll get error of missing implementation. 
+If you use `Symfony\Component\Console\Input\InputInterace`, you'll get error of missing implementation.
 
-To solve it you need to use alias for every class that implements interface:
+To solve it you need to use an alias for every class that implements an interface:
 
 ```yaml
 # app/config/services.yml
@@ -206,12 +206,12 @@ services:
         alias: Symfony\Component\Console\Output\ConsoleOutput
 ```
 
-This way, you're actually being punished for using clean code and separation of interfaces in your code, because using `Symfony\Component\Console\Input\ArgvInput` would be easier. 
+This way, you're actually being punished for using clean code and separation of interfaces in your code, because using `Symfony\Component\Console\Input\ArgvInput` would be easier.
 But is it really necessary to break SOLID principles just to comply with Symfony behaviors? I don't think that framework should enforce bad design to your application.
 
-### How to fix this? 
+### How to fix this?
 
-I got inspired by [Register singly-implemented interfaces when doing PSR-4 discovery](https://github.com/symfony/symfony/pull/25282) pull-request in Symfony and by Nette default behavior.  
+I got inspired by [Register singly-implemented interfaces when doing PSR-4 discovery](https://github.com/symfony/symfony/pull/25282) pull-request in Symfony and by Nette default behavior.
 
 ```php
 namespace App;
@@ -271,7 +271,7 @@ In `/framework` directory there 2 files:
 parameters:
     framework:
         symfony:
-            controller: '<?php "some Symfony code"' 
+            controller: '<?php "some Symfony code"'
 ```
 
 and
@@ -281,7 +281,7 @@ and
 parameters:
     framework:
         laravel:
-            controller: '<?php "some Laravel code"' 
+            controller: '<?php "some Laravel code"'
 ```
 
 How many items will `framework` parameter have? 2? 1? 0?
@@ -290,9 +290,9 @@ How many items will `framework` parameter have? 2? 1? 0?
 
 ### How to Prefer Merging of Parameters?
 
-Official statement is to [create `Extension`, `Configuration`, `Bundle` and merge class](https://github.com/symfony/symfony/issues/26713), which and then add custom implementation of [parameter binding](https://symfony.com/blog/new-in-symfony-3-4-local-service-binding) and other Symfony parameters related features like composing of parameters, env variables and etc. I asked for this option to be allowed with no BC break in [the issue](https://github.com/symfony/symfony/issues/26713), but it seems it's not needed enough.
- 
-Symplify actually followed suggested approach and **it was lot of duplicated code from Symfony\DependencyInjection that barely worked**. 
+The official statement is to [create `Extension`, `Configuration`, `Bundle` and merge class](https://github.com/symfony/symfony/issues/26713), which and then add a custom implementation of [parameter binding](https://symfony.com/blog/new-in-symfony-3-4-local-service-binding) and other Symfony parameters related features like composing of parameters, env variables and etc. I asked for this option to be allowed with no BC break in [the issue](https://github.com/symfony/symfony/issues/26713), but it seems it's not needed enough.
+
+Symplify actually followed the suggested approach and **it was a lot of duplicated code from Symfony\DependencyInjection that barely worked**.
 
 To save many duplicated classes and take advantage of all Symfony parameter features you could overload `YamlFileLoader`, where parameters are merged together:
 
@@ -301,9 +301,9 @@ To save many duplicated classes and take advantage of all Symfony parameter feat
 parameters:
     framework:
         symfony:
-            controller: '<?php "some Symfony code"' 
+            controller: '<?php "some Symfony code"'
         laravel:
-            controller: '<?php "some Laravel code"' 
+            controller: '<?php "some Laravel code"'
 ```
 
 Do you need this? Just use `Symplify\PackageBuilder\Yaml\AbstractParameterMergingYamlFileLoader` in your `Kernel` class:
