@@ -1,6 +1,6 @@
 ---
 id: 88
-title: "Rectify: Turn All Doctrine Repositories From Composition To Inheritance in Seconds"
+title: "Rectify: Turn All Doctrine Repositories From Inheritance To Composition in Seconds"
 perex: |
     Today I start new series called *Rectify*. It will be about **instant refactoring** to better code not manually, but with Rector.
     <br><br>
