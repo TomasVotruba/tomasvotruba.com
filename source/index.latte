@@ -36,9 +36,14 @@ id: blog
                             {$post['title']|noescape}
                         </a>
                     </h2>
-                    {var $wasFirstPostMarked = true}
 
                     {include "postMetadataLine", post => $post}
+
+                    {if !$wasFirstPostMarked}
+                        <p>{$post['perex']|noescape}</p>
+                    {/if}
+
+                    {var $wasFirstPostMarked = true}
                 </article>
             {/foreach}
         </div>
