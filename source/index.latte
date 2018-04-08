@@ -12,7 +12,7 @@ id: blog
             <small>New post every Monday and Thursday</small>
         </h1>
 
-        {include subscribe}
+        {include subscribeTop}
 
         {var $wasFirstPostMarked = false}
 
@@ -61,38 +61,36 @@ id: blog
             </p>
         </div>
 
-        <div class="text-center mt-5 mb-4">
+        <div class="text-center mt-5 mb-5">
             <p>
                 <strong>Do you want to be first to know about new posts?</strong>
             </p>
-            {include subscribe}
+            <br>
+            {include socials}
         </div>
     </div>
 {/block}
 
 
-{define subscribe}
-    <div class="text-center">
-        <a href="/rss.xml" class="btn btn-warning">
-            <em class="fa fa-fw fa-rss"></em>
+{define subscribeTop}
+    <div class="row text-center">
+        <!-- inspired and taken from: https://github.com/yegor256/blog/blob/master/_layouts/default.html -->
+        <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction" n:syntax="off" class="col-md-5 pull-left">
+            <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
+            <input name="sitesearch" value="tomasvotruba.cz" type="hidden"/>
+            <input itemprop="query-input" type="text" id="search-query" class="form-control" required="required" name="q" placeholder="Search with Google..." autocomplete="off"/>
+        </form>
 
-            <span class="hidden-sm-down">
-                Get the RSS feed
-            </span>
-            <span class="hidden-md-up">
-                Add RSS
-            </span>
-        </a>
-
-        <a href="https://twitter.com/votrubaT" class="btn btn-primary ml-3">
-            <em class="fa fa-fw fa-twitter"></em>
-
-            <span class="hidden-sm-down">
-                Get posts on Twitter
-            </span>
-            <span class="hidden-md-up">
-                Folow Me
-            </span>
-        </a>
+        {include socials}
     </div>
+{/define}
+
+{define socials}
+    <a href="/rss.xml" class="btn btn-warning btn-sm pt-2">
+        <em class="fa fa-fw fa-rss"></em>
+    </a>
+
+    <a href="https://twitter.com/votrubaT" class="btn btn-primary btn-sm ml-3 pt-2">
+        <em class="fa fa-fw fa-twitter"></em>
+    </a>
 {/define}
