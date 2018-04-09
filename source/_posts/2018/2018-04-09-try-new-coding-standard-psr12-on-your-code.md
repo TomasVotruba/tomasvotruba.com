@@ -1,10 +1,12 @@
 ---
 id: 90
-title: "Try PSR-12 on Your Code"
+title: "Try PSR-12 on Your Code Today"
 perex: |
-    ...
-tweet: "New Post on My Blog: Try PSR-12 on Your Code"
-tweet_image: "..."
+    The standard is still behind the door, but feedback, before it gets accepted, is very important. After accepting it will be written down and it will be difficult to change anything.
+    <br><br>
+    Try PSR-12 today and see, how it works for your code.
+tweet: "New Post on My Blog: Try PSR-12 on Your Code Today"
+tweet_image: "/assets/images/posts/2018/psr-12/preview.png"
 ---
 
 ## tl;dr;
@@ -20,13 +22,11 @@ And to fix the code:
 vendor/bin/ecs check /src --level psr12 --fix
 ```
 
-Now in more detailted way.
+Now in more detailed way.
 
 ## PSR-12 meets ECS
 
-The standard is still behind the door, but feedback, before it gets accepted, is very important. After accepting it will be written down and it will be difficult to change anything.
-
-That's why someone on [Reddit referred a PSR Google Group](https://www.reddit.com/r/PHP/comments/84vafc/phpfig_psr_status_update/), where they **asked for real-life PSR-12 ruleset implementation in a coding standard tool**. Korvin Szanto already prepared 1st implementation for PHP CS Fixer, at the moment [only as a commit in](https://github.com/KorvinSzanto/PHP-CS-Fixer/commit/c0b642c186d8f666a64937c2d37442dc77f6f393) the fork. I put the ruleset to `psr12.yml` level in ECS and it looks like this in time of being:
+Someone on [Reddit referred a PSR Google Group](https://www.reddit.com/r/PHP/comments/84vafc/phpfig_psr_status_update/), where they **asked for real-life PSR-12 ruleset implementation in a coding standard tool**. Korvin Szanto already prepared 1st implementation for PHP CS Fixer, at the moment [only as a commit in](https://github.com/KorvinSzanto/PHP-CS-Fixer/commit/c0b642c186d8f666a64937c2d37442dc77f6f393) the fork. I put the ruleset to `psr12.yml` level in ECS and it looks like this in time of being:
 
 ```yaml
 imports:
@@ -112,7 +112,7 @@ Symplify code is already checked by PSR-12 ([see pull-request](https://github.co
 
 It was easy to setup and works with 0 changes in the code. But as you can see, there 2 rules I don't fully agree with.
 
-#### 1.`PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer`
+#### 1. `PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer`
 
 This rule creates this code:
 
