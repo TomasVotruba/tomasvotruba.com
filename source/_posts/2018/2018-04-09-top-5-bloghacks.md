@@ -1,18 +1,28 @@
 ---
 id: 90
-title: "Top 5 Bloghacks"
+title: "Top 5 Bloghacks + My Extra 3 Cents"
 perex: |
     ...
 tweet: "New Post on My Blog: Try New Coding Standard PSR-12 on Your Code"
 tweet_image: "..."
----
+--- 
 
-https://www.vojtechruzicka.com/book-review-256-bloghacks
+This is super short summary of 256 blog-hack book
+
+@image
+
+
+You can find  more dep review in : https://www.vojtechruzicka.com/book-review-256-bloghacks
+Vojta was so kind to lend me the book over the lunch. This post is about my first question I asked Vojta: what "what are the top 5 tips he has taken from this book?"
+
+I mean, 256 is a lot. But most of them are common, some are better and only a few are gold. I look for the gold in books. Here is what I found   
 
 You know yegor from
 
 - code [awards](http://www.yegor256.com/award.html): https://github.com/php-ai/php-ml#awards - friend of mine 
 - go sub [here](http://www.yegor256.com/award.html) - it's worth if nothing just the feedback
+
+
 
 
 ## TOP 5
@@ -41,7 +51,37 @@ You know yegor from
 
 ### Origin
 
-- http://www.yegor256.com/256-bloghacks.html 
+- http://www.yegor256.com/256-bloghacks.html  
 
 Do you wnat to know more? Well, if you're form Prague, reach out vojta, if not, bug it here.
 
+
+
+## And mine extra top 3 tips?
+
+### 1. Write in Englihs even if non-native
+
+why? it's easier non-natives to non-natives. Both share more common vocabulary (@todo kxkd), https://xkcd.com/simplewriter/, same applies to coding with my favorite oocams razor, btw)
+
+### 2. Write  pain points you meet often 
+
+For me it'"s clearly static, services locators vs. constructor injection.
+
+### 3. Write about your "vzory" people around you that helped you to get hwre you are
+
+Everyone is writing about "how to do htis in the coe", "new in X.y".
+
+But thanks to all the coding and programming we almost forgot about the most important thing in the wordls: relations ships.
+
+@todo my quote help people ziglar
+
+
+@link posts
+- thank you david
+- how teaching kills passion ()
+- kolik lidí je potřea k vytovření komunity
+- depredcated symplify stuff thanks to Symfony
+
+Your love expressed to others will eventually get back to you, don't worry :)
+
+ 
