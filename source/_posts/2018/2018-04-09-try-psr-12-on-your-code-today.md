@@ -157,6 +157,8 @@ Communicate, spread the ideas and find your way. This is only PSR - PS **Recomme
 
 So just [try it](#tl-dr). Maybe your code is already PSR-12 ready.
 
+And let me know in the comments, if you love it or rather hate it :)
+
 <br>
 
 Happy coding!
