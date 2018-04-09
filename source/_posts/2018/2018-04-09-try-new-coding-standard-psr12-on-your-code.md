@@ -12,7 +12,7 @@ tweet_image: "..."
 ```bash
 composer require symplify/easy-coding-standard --dev
 vendor/bin/ecs check /src --level psr12
-``` 
+```
 
 And to fix the code:
 
@@ -83,13 +83,13 @@ parameters:
 
 ## Do You Agree or Disagree with PSR12?
 
-There are still many [missed cases to be integrated in the standard](https://github.com/KorvinSzanto/PHP-CS-Fixer/milestones), but there is never to soon to get feedback from community. 
+There are still many [missed cases to be integrated in the standard](https://github.com/KorvinSzanto/PHP-CS-Fixer/milestones), but there is never to soon to get feedback from community.
 
 <div class="text-center">
     <img src="/assets/images/posts/2018/psr-12/php-cs-fixer-thing.png" alt="PR in PHP CS Fixer?" class="img-thumbnail">
 </div>
 
-It will be *a thing*: PSR-12 set is definitely coming to PHP CS Fixer and [PHP_CodeSniffer has also active issue](https://github.com/squizlabs/PHP_CodeSniffer/issues/750) as well. Both of these tools are more stable, more popular and thus more rigid than ECS. So it will take time, before there will be a pull-request and then stable release with PSR-12 set. 
+It will be *a thing*: PSR-12 set is definitely coming to PHP CS Fixer and [PHP_CodeSniffer has also active issue](https://github.com/squizlabs/PHP_CodeSniffer/issues/750) as well. Both of these tools are more stable, more popular and thus more rigid than ECS. So it will take time, before there will be a pull-request and then stable release with PSR-12 set.
 
 **That's advantage of smaller packages like ECS, they can evolve faster and live in the presence.** Only that way ECS 4 already has PSR-12 set on board and ready to use.
 
@@ -99,7 +99,7 @@ I like that PSR-12 puts to standard rules that I consider standard for years and
 
 - it applies PHP 7.1 features, like constant visibility
 - concat ` . ` spacing
-- mostly spacing 
+- mostly spacing
 - and letter casing
 
 ### What I don't Like?
@@ -110,14 +110,14 @@ Symplify code is already checked by PSR-12 ([see pull-request](https://github.co
     <img src="/assets/images/posts/2018/psr-12/symplify-implementation.png" alt="Integration to project with ECS" class="img-thumbnail">
 </div>
 
-It was easy to setup and works with 0 changes in the code. But as you can see, there 2 rules I don't fully agree with. 
+It was easy to setup and works with 0 changes in the code. But as you can see, there 2 rules I don't fully agree with.
 
-#### 1.`PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer` 
+#### 1.`PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer`
 
 This rule creates this code:
 
 ```php
-<?php 
+<?php
 
 declare(strict_types=1);
 ```
@@ -134,8 +134,8 @@ I think our attention deserves to ignore anything that is the same in every file
 
 #### 2. `PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixex`
 
-It takes care of spacing around `!` 
- 
+It takes care of spacing around `!`
+
 ```php
 if (!$isNotTrue) {
 }
@@ -150,7 +150,7 @@ Here we can apply the same approach we did in 1. Important code should be visual
 if (! $isNotTrue) {
 }
 ```
- 
+
 ## Try It Yourself Today
 
 Communicate, spread the ideas and find your way. This is only PSR - PS **Recommentnation**. It's better to keep things standard for others, [so they can drink water if they're thirsty and not start a research on bottle colors instead](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/#why-are-standards-so-important). But not a rigid rule that cannot be improved.
@@ -159,6 +159,6 @@ So just [try it](#tl-dr). Maybe your code is already PSR-12 ready.
 
 <br><br>
 
-Happy coding! 
+Happy coding!
 
 
