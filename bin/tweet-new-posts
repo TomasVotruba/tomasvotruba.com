@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php declare(strict_types=1);
 
-use Symplify\PackageBuilder\Console\ExceptionRenderer;
+use Symplify\PackageBuilder\Console\ThrowableRenderer;
 use Symplify\Statie\DependencyInjection\ContainerFactory;
 use TomasVotruba\Website\TweetPublisher\Application\TweetPublisherApplication;
 
@@ -16,6 +16,6 @@ try {
     $tweetPublisherApplication->run();
 
 } catch (Throwable $throwable) {
-    (new ExceptionRenderer())->render($throwable);
+    (new ThrowableRenderer())->render($throwable);
     exit(1);
 }
