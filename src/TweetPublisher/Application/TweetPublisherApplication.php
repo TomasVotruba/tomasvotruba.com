@@ -71,7 +71,7 @@ final class TweetPublisherApplication
             return;
         }
 
-        $tweet = $this->getMostRecentTweet($tweetsToPublish);
+        $tweet = $this->getSecondMostRecentTweet($tweetsToPublish);
 
         $this->tweet($tweet);
 
@@ -104,10 +104,14 @@ final class TweetPublisherApplication
     }
 
     /**
+     * 2nd tweet and not 1st is required, because travis tweets before images is deployed,
+     * so it fails. Thus the 2nd most recent tweet is used, where image is already uploaded.
+     *
      * @param Tweet[] $tweetsToPublish
      */
-    private function getMostRecentTweet(array $tweetsToPublish): Tweet
+    private function getSecondMostRecentTweet(array $tweetsToPublish): Tweet
     {
+        array_shift($tweetsToPublish);
         return array_shift($tweetsToPublish);
     }
 }
