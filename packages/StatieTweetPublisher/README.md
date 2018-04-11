@@ -77,7 +77,7 @@ That its!
 
 - And let `.travis.yml` know, that he should publish it
 
-    ```bash
+    ```yaml
     # .travis.yml
     language: php
 
