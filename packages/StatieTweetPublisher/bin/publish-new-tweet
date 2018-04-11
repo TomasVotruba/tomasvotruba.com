@@ -3,9 +3,21 @@
 
 use Symplify\PackageBuilder\Console\ThrowableRenderer;
 use Symplify\Statie\DependencyInjection\ContainerFactory;
-use TomasVotruba\Website\TweetPublisher\Application\TweetPublisherApplication;
+use TomasVotruba\StatieTweetPublisher\Application\TweetPublisherApplication;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+$possibleAutoloadPaths = [
+    // dependency in a package
+    __DIR__ . '/../vendor/autoload.php',
+    // in monorepo
+    __DIR__ . '/../../../vendor/autoload.php',
+];
+
+foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
+    if (file_exists($possibleAutoloadPath)) {
+        require_once $possibleAutoloadPath;
+        break;
+    }
+}
 
 try {
     $containerFactory = new ContainerFactory;

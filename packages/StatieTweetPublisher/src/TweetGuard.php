@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher;
+namespace TomasVotruba\StatieTweetPublisher;
 
 use Symplify\Statie\Renderable\File\PostFile;
-use TomasVotruba\Website\TweetPublisher\Exception\TweetImageNotFoundException;
-use TomasVotruba\Website\TweetPublisher\Exception\TweetTooLongException;
+use TomasVotruba\StatieTweetPublisher\Exception\TweetImageNotFoundException;
+use TomasVotruba\StatieTweetPublisher\Exception\TweetTooLongException;
 
 final class TweetGuard
 {

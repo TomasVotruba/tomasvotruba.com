@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher\Tests;
+namespace TomasVotruba\StatieTweetPublisher\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;

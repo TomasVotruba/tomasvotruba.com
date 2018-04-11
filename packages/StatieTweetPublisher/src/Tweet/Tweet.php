@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher\Tweet;
+namespace TomasVotruba\StatieTweetPublisher\Tweet;
 
 use Nette\Utils\Strings;
 

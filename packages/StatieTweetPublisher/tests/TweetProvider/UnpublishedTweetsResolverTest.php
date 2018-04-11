@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher\Tests\TweetProvider;
+namespace TomasVotruba\StatieTweetPublisher\Tests\TweetProvider;
 
-use TomasVotruba\Website\TweetPublisher\Tests\AbstractContainerAwareTestCase;
-use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
-use TomasVotruba\Website\TweetPublisher\TweetProvider\PostTweetsProvider;
-use TomasVotruba\Website\TweetPublisher\TweetProvider\UnpublishedTweetsResolver;
-use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
+use TomasVotruba\StatieTweetPublisher\Tests\AbstractContainerAwareTestCase;
+use TomasVotruba\StatieTweetPublisher\Tweet\Tweet;
+use TomasVotruba\StatieTweetPublisher\TweetProvider\PostTweetsProvider;
+use TomasVotruba\StatieTweetPublisher\TweetProvider\UnpublishedTweetsResolver;
+use TomasVotruba\StatieTweetPublisher\TwitterApi\TwitterApiWrapper;
 
 final class UnpublishedTweetsResolverTest extends AbstractContainerAwareTestCase
 {

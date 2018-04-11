@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher\TwitterApi;
+namespace TomasVotruba\StatieTweetPublisher\TwitterApi;
 
 use Nette\Utils\DateTime;
 use Nette\Utils\Json;
-use TomasVotruba\Website\TweetPublisher\Exception\TwitterApi\TwitterApiException;
-use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
-use TomasVotruba\Website\TweetPublisher\TweetEntityCompleter;
+use TomasVotruba\StatieTweetPublisher\Exception\TwitterApi\TwitterApiException;
+use TomasVotruba\StatieTweetPublisher\Tweet\Tweet;
+use TomasVotruba\StatieTweetPublisher\TweetEntityCompleter;
 use TwitterAPIExchange;
 
 final class TwitterApiWrapper

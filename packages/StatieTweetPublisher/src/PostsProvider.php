@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher;
+namespace TomasVotruba\StatieTweetPublisher;
 
 use Symplify\Statie\Application\StatieApplication;
 use Symplify\Statie\Configuration\Configuration;
