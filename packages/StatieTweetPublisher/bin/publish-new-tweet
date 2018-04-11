@@ -7,7 +7,7 @@ use TomasVotruba\StatieTweetPublisher\Application\TweetPublisherApplication;
 
 $possibleAutoloadPaths = [
     // dependency in a package
-    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../../autoload.php',
     // in monorepo
     __DIR__ . '/../../../vendor/autoload.php',
 ];
