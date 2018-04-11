@@ -1,7 +1,5 @@
 # Statie Tweet Publisher
 
-[![Build Status](https://img.shields.io/travis/TomasVotruba/StatieTweetPublisher/master.svg?style=flat-square)](https://travis-ci.org/TomasVotruba/StatieTweetPublisher)
-
 Let Statie & Travis publish Tweets for your new posts fo you.
 
 ## Install
