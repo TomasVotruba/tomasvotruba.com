@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#git subsplit init git@github.com:tomasvotruba/tomasvotruba.cz.git
 git subsplit init .git
 
 LAST_TAG="$(git tag -l  --sort=committerdate | tail -n1)"
