@@ -21,7 +21,7 @@ foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
 
 try {
     $containerFactory = new ContainerFactory;
-    $container = $containerFactory->createWithConfig(__DIR__ . '/../statie.yml');
+    $container = $containerFactory->createWithConfig(getcwd() . '/statie.yml');
 
     /** @var TweetPublisherApplication $tweetPublisherApplication */
     $tweetPublisherApplication = $container->get(TweetPublisherApplication::class);
