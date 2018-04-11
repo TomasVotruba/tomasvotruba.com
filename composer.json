@@ -21,20 +21,21 @@
     },
     "autoload": {
         "psr-4": {
-            "TomasVotruba\\Website\\": "src"
+            "TomasVotruba\\Website\\": "src",
+            "TomasVotruba\\StatieTweetPublisher\\": "packages/StatieTweetPublisher/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "TomasVotruba\\Website\\Tests\\": "tests",
-            "TomasVotruba\\Website\\TweetPublisher\\Tests\\": "tests/TweetPublisher"
+            "TomasVotruba\\StatieTweetPublisher\\Tests\\": "packages/StatieTweetPublisher/tests"
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan.phar analyse bin src tests --level max --configuration phpstan.neon",
-        "check-cs": "vendor/bin/ecs check bin src tests",
+        "phpstan": "vendor/bin/phpstan.phar analyse bin src tests packages --level max --configuration phpstan.neon",
+        "check-cs": "vendor/bin/ecs check bin src tests packages",
         "fix-cs": [
-            "vendor/bin/ecs check bin src tests --fix",
+            "vendor/bin/ecs check bin src tests packages --fix",
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt"

@@ -2,4 +2,4 @@
 /vendor
 composer.lock
 /node_modules
-/src/TweetPublisher/config/config.local.yml
+/config/config.local.yml

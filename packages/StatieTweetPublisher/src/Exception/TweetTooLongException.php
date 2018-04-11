@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher\Exception;
+namespace TomasVotruba\StatieTweetPublisher\Exception;
 
 use Exception;
 

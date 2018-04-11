@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher\Application;
+namespace TomasVotruba\StatieTweetPublisher\Application;
 
 use Symfony\Component\Console\Style\SymfonyStyle;
-use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
-use TomasVotruba\Website\TweetPublisher\TweetProvider\PostTweetsProvider;
-use TomasVotruba\Website\TweetPublisher\TweetProvider\UnpublishedTweetsResolver;
-use TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiWrapper;
+use TomasVotruba\StatieTweetPublisher\Tweet\Tweet;
+use TomasVotruba\StatieTweetPublisher\TweetProvider\PostTweetsProvider;
+use TomasVotruba\StatieTweetPublisher\TweetProvider\UnpublishedTweetsResolver;
+use TomasVotruba\StatieTweetPublisher\TwitterApi\TwitterApiWrapper;
 
 /**
  * @inspire https://gist.github.com/petrvacha/28ec8f5eac39283f1e7dce350f5a65ad

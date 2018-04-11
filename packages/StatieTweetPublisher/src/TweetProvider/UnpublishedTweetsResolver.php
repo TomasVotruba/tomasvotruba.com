@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace TomasVotruba\Website\TweetPublisher\TweetProvider;
+namespace TomasVotruba\StatieTweetPublisher\TweetProvider;
 
-use TomasVotruba\Website\TweetPublisher\Tweet\Tweet;
+use TomasVotruba\StatieTweetPublisher\Tweet\Tweet;
 
 final class UnpublishedTweetsResolver
 {

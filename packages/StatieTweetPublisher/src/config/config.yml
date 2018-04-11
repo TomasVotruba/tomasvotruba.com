@@ -18,13 +18,13 @@ services:
             '$minimalGapInDays': '%minimal_gap_in_days%'
 
     # PSR-4 autodiscovery
-    TomasVotruba\Website\TweetPublisher\:
+    TomasVotruba\StatieTweetPublisher\:
         resource: ../
         exclude: ../Tweet
         public: true # for container fetch
 
     # Twitter API
-    TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiFactory:
+    TomasVotruba\StatieTweetPublisher\TwitterApi\TwitterApiFactory:
         arguments:
             - '%twitter_consumer_key%'
             - '%twitter_consumer_secret%'
@@ -33,6 +33,6 @@ services:
 
     TwitterAPIExchange:
         class: TwitterAPIExchange
-        factory: ['@TomasVotruba\Website\TweetPublisher\TwitterApi\TwitterApiFactory', 'create']
+        factory: ['@TomasVotruba\StatieTweetPublisher\TwitterApi\TwitterApiFactory', 'create']
 
     Symfony\Component\Console\Style\SymfonyStyle: ~
