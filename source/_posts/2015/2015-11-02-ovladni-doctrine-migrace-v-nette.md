@@ -44,7 +44,7 @@ Ověření provedeme spuštěním z přikazového řádku. V Nette to znamená v
 Zkusíme vypsat všechny příkazy týkající se migrací.
 
 ```bash
-$ php www/index.php list migrations
+php www/index.php list migrations
 ```
 
 Pokud vidíme přehled příkazů, máme vyhráno a můžeme používat.
@@ -74,7 +74,7 @@ Od šéfa jsme dostali zadání: *vytvořit tabulku na články*.
 ### 1. Zkontrolujeme status
 
 ```bash
-$ php www/index.php migrations:status
+php www/index.php migrations:status
 ```
 
 Důležité je číslo v posledním řádku ("New Migrations"). Vypadá to, že vše je aktuální, tak můžeme pokračovat.
@@ -151,8 +151,8 @@ Tím naše práce s SQL končí.
 
 Když znovu dáme status...
 
-```
-$ php www/index.php migrations:status
+```bash
+php www/index.php migrations:status
 ```
 
 ...vidíme, že máme jednu novou migraci (dosud neaplikovanou na databázi).
