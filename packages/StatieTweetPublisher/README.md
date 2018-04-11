@@ -24,6 +24,18 @@ parameters:
 
 - @todo
 
-### Setup Travis
+### Setup Travis Online
 
 - @todo
+
+```bash
+# .travis.yml
+language: php
+
+php:
+    - 7.1
+
+script:
+    # tweets posts
+    - if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then packages/StatieTweetPublisher/bin/publish-new-tweet; fi
+``` 
