@@ -2,8 +2,8 @@ imports:
     - { resource: 'source/_data/talks.yml' }
     - { resource: 'source/_data/php-frameworks/*.yml' }
     - { resource: 'src/*/config/config.yml' }
-    # enable on localhost only
-    - { resource: 'src/TweetPublisher/config/config.local.yml',  ignore_errors: true }
+    # enabled on localhost only
+    - { resource: 'config/config.local.yml',  ignore_errors: true }
 
 parameters:
     # global templates variables
