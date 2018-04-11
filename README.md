@@ -26,7 +26,7 @@ That's all!
 
 ## Check The Grammar
 
-With help of [vlajos/misspell-fixer](https://github.com/vlajos/misspell-fixer) package, that has thousands of rules, fixes them all for you and still - is super fast! 
+With help of [vlajos/misspell-fixer](https://github.com/vlajos/misspell-fixer) package, that has thousands of rules, fixes them all for you and still - is super fast!
 
 ```bash
 # install
