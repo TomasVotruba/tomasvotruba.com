@@ -24,7 +24,7 @@ When I posted [my first post in late 2015](/blog/2015/11/02/ovladni-doctrine-mig
 
 I see now that it was a mistake, so the first tip is **to blog once week**. Life is trying to tell me over and over again, that [Consistency Beats Talent, Luck, Good Intentions, and Even Quality](https://medium.com/@anthony_moore/consistency-beats-talent-luck-good-intentions-and-even-quality-66ba255aa4f7). 
 
-But not more often. I tried to blog 2x a week, right from the start and got burnout lesson (what a surprise). After year of weekly blogging I felt I want to blog more often and add a Thursday post. Very carefuly, just once a month. Now after couple of months I feel confident enough to write about it.
+But not more often. I tried to blog 2x a week, right from the start and got burnout lesson (what a surprise). After year of weekly blogging I felt I want to blog more often and add a Thursday post. Very carefully, just once a month. Now after couple of months I feel confident enough to write about it.
 
 <div class="card mb-5">
     <div class="card-body">
