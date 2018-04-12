@@ -90,6 +90,10 @@ Did you provide a great answer on StackOverflow? Is that answer to duplicated an
 ](https://stackoverflow.com/questions/38346281/symfony-3-outsourcing-controller-code-into-service-layer/38349271#38349271)
 - Post: [How to use Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/)
 
+- Question: [How do I read from parameters.yml in a controller in symfony2?
+](https://stackoverflow.com/questions/13901256/how-do-i-read-from-parameters-yml-in-a-controller-in-symfony2/48371606#48371606)
+- Post: [How to Get Parameter in Symfony Controller the Clean Way](/blog/2018/01/22/how-to-get-parameter-in-symfony-controller-the-clean-way/)
+
 And it works great! Now all I do is to **provide a specific answer on the StackOverflow and link the post where I explain all possible pitfalls**. So the question is answered and there is a follow-up, when they need to know more.
 
 <div class="card mb-5">
