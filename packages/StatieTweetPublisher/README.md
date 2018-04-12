@@ -70,7 +70,7 @@ Now we only put that logic on Travis and we're done.
     - `TWITTER_CONSUMER_SECRET`
     - `TWITTER_OAUTH_ACCESS_TOKEN`
     - `TWITTER_OAUTH_ACCESS_TOKEN_SECRET`
-- Then setup cron, so posts are being published even if you don't write and have a break. 
+- Then setup cron, so posts are being published even if you don't write and have a break.
 - Go to *Cron Jobs* → `master` branch → *Daily* → *Always run* → Add
 
 That its!
