@@ -1,12 +1,12 @@
 ---
 id: 90
-title: "Top 5 of 256 Bloghacks"
+title: "The Best 5 of 256 Bloghacks Book"
 perex: |
-    Have you heard of [*256 Bloghacks* book](http://www.yegor256.com/256-bloghacks.html) by Yegor? Do you think about reading it, but just don't have time and money?
+    Have you heard of [*256 Bloghacks* book](http://www.yegor256.com/256-bloghacks.html) by Yegor? Do you think about reading it, but just don't have the time and money?
     <br><br>
-    This post is *the best off* selection just for you! And if you feel you like it, you can buy it and read as whole.
-tweet: "New Post on My Blog: Try New Coding Standard PSR-12 on Your Code"
-tweet_image: "..."
+    This post is *the best off* selection just for you and if you feel you like it, you can buy it and read as whole.
+tweet: "New Post on My Blog: The Best 5 of 256 Bloghacks Book"
+tweet_image: "/assets/images/posts/2018/bloghacks/book.png"
 --- 
 
 I came across this book in review [by Vojta Růžička](https://www.vojtechruzicka.com/book-review-256-bloghacks) on [devblogy.cz](http://devblogy.tk/) (the best place to follow Czech it bloggers by [kaja47](https://twitter.com/kaja47) whom I'm very thank ful for it). You might know [Yegor](http://www.yegor256.com/) from Java world (welcome to my PHP blog!), or from 
