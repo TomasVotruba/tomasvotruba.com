@@ -16,7 +16,7 @@ I came across this book [in the review by Vojta Růžička](https://www.vojtechr
 
 Vojta was so kind to lend me the book over the lunch. This post is an answer to my first question I asked: **what are the top 5 tips I should take from this book if no other?**
 
-256 items is a lot. No matter if it' a tip, a story, a class or a food item in your home. The most of them are common, some are better and only **a few are golden**. I look for the gold in books, so here is what I found.
+256 items is a lot. No matter if it's a tip, a story, a class or a food item in your home. The most of them are common, some are better and only **a few are golden**. I look for the gold in books, so here is what I found.
 
 ## 1. Blog Once a Week for 2 Years
 
