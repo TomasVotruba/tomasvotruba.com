@@ -76,15 +76,15 @@ id: about
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            {ifset $project['github']}<em class="fa fa-github pull-right fa-2x"></em>{/ifset}
-
-                            <h4 class="card-title">{$project['name']}</h4>
+                            <h4 class="card-title">
+                                <em n:ifset="$project['github']" class="fa fa-github pull-left mr-2"></em>{$project['name']}
+                            </h4>
 
                             <p n:ifset="$project['url']">
                                 <a href="{$project['url']}">{$project['url']}</a>
                             </p>
 
-                            <p class="card-text" n:if="$project['description']">{$project['description']}</p>
+                            <p class="card-text" n:if="$project['description']">{$project['description']|noescape}</p>
                         </div>
                     </div>
                 </div>

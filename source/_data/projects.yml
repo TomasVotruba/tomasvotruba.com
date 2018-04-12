@@ -27,12 +27,12 @@ parameters:
         -
             name: Go Monorepo
             url: 'https://gomonorepo.org'
-            description: 'Micro site with 1 purpose - All You Always Wanted to Know About Monorepo But Were Afraid to Ask'
+            description: 'All You Always Wanted to Know About Monorepo But Were Afraid to Ask'
 
         -
             name: Go PHP 7.1
             url: 'https://gophp71.org'
-            description: 'Micro site about bumping minimal requirement to PHP 7.1 as one. What project already did and what not?'
+            description: 'What open-source projects already require PHP 7.1 as minimum version?'
 
         -
             name: Objet Calisthenics
@@ -52,5 +52,8 @@ parameters:
             name: ApiGen
             url: 'https://github.com/apigen/apigen'
             maintainer: true
-            description: 'Maintainer it for 1,5 year between 2015 and 2017. I overtook 2-years dead project, got from 680 stars to 1700, from 0 to 85 % code coverage, from almost no 3rd party code to Symfony components. I learned a lot about refactoring, safe & pain points in transition between dependencies, code quality and importance of smart testing (mocks no more).'
+            description: |
+                Maintainer for 1,5 year, from dead project and 680 Github stars to 1700, from 0 to 85 % code coverage, from almost no 3rd party code to Symfony components.
+                <br><br>
+                I learned a lot about refactoring, safe & pain points in transition between dependencies, code quality and importance of smart testing (mocks no more).
             github: true
