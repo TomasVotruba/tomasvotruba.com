@@ -16,7 +16,7 @@ I came across this book [in the review by Vojta Růžička](https://www.vojtechr
 
 Vojta was so kind to lend me the book over the lunch. This post is an answer to my first question I asked: **what are the top 5 tips I should take from this book if no other?**
 
-256 items is a lot. No matter if it' a tip, a story, a class or a food item in your home. The most of them are common, some are better and only **a few are golden**. I look for the gold in books, so here is what I found.
+256 items is a lot. No matter if it's a tip, a story, a class or a food item in your home. The most of them are common, some are better and only **a few are golden**. I look for the gold in books, so here is what I found.
 
 ## 1. Blog Once a Week for 2 Years
 
@@ -36,7 +36,7 @@ But not more often. I tried to blog 2x a week, right from the start and got burn
 
 [Reddit](https://www.reddit.com/r/PHP/) is like StackOverflow for personal opinions or like Devel.cz, but international and for everyone. It's a place, where people share ideas, comment it, up-vote it or down-vote it.
 
-Vojta shared with me his first experience with Reddit: he posted 2-3 his posts and he got autoban. That **kind of ban, when you don't know you're banned** - everything works, they're up-votes on your posts, but they're all in grey. Also, Yegor wrote about the similar experience. My experience was a little better: I could post only once 10 minutes. Then I learned I could post more often when I got more profile points (up-votes of my ideas and posts).
+Vojta shared with me his first experience with Reddit: he posted 2-3 his posts and he got autoban. That **kind of ban, when you don't know you're banned** - everything works, there're up-votes on your posts, but they're all in grey. Also, Yegor wrote about the similar experience. My experience was a little better: I could post only once 10 minutes. Then I learned I could post more often when I got more profile points (up-votes of my ideas and posts).
 
 ### Get what you Give
 
