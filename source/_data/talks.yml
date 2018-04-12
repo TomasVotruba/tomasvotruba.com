@@ -8,6 +8,7 @@ parameters:
             slides_link: "https://docs.google.com/presentation/d/1YFnNZeC7uEn5bpFIoGuEjdYLLkE0o3nFq7HGMlWENY4/edit?usp=sharing"
             video_link: "https://www.youtube.com/watch?v=QbM1WYOTozI"
             lang: en
+
         -
             title: "How to get Your Code Clean"
             year: 2018

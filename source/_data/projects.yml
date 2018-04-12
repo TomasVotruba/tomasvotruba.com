@@ -1,0 +1,56 @@
+parameters:
+    projects:
+        -
+            name: Rector
+            url: 'https://github.com/rectorphp/rector'
+            description: 'Tool for Instant Upgrades and Instant Refactrogin of PHP projects that handles 80 % upgrades for you.'
+            github: true
+
+        -
+            name: EasyCodingStandard
+            url: 'https://github.com/Symplify/EasyCodingStandard'
+            description: 'Easiest way to start using PHP CS Fixer and PHP_CodeSniffer with 0-knowledge.'
+            github: true
+
+        -
+            name: Statie
+            url: 'https://github.com/Symplify/Statie'
+            description: 'Modern and Simple Static Site Generator in PHP created for Pehapkari community.'
+            github: true
+
+        -
+            name: Symplify
+            url: 'https://github.com/Symplify/Symplify'
+            description: 'Project based mostly on Symfony Components with focus on simple usage, no complexity and long and cheap sustainability.'
+            github: true
+
+        -
+            name: Go Monorepo
+            url: 'https://gomonorepo.org'
+            description: 'Micro site with 1 purpose - All You Always Wanted to Know About Monorepo But Were Afraid to Ask'
+
+        -
+            name: Go PHP 7.1
+            url: 'https://gophp71.org'
+            description: 'Micro site about bumping minimal requirement to PHP 7.1 as one. What project already did and what not?'
+
+        -
+            name: Objet Calisthenics
+            url: 'https://github.com/object-calisthenics/phpcs-calisthenics-rules'
+            maintainer: true
+            description: 'Set of PHP_CodeSniffer Sniffs in object-oriented code, that focuses of maintainability, readability, testability and comprehensibility.'
+            github: true
+
+        -
+            name: Git Wrapper
+            url: 'https://github.com/cpliakas/git-wrapper'
+            maintainer: true
+            description: 'Use git in PHP with simple API'
+            github: true
+
+        -
+            name: ApiGen
+            url: 'https://github.com/apigen/apigen'
+            maintainer: true
+            description: 'Maintainer it for 1,5 year between 2015 and 2017. I overtook 2-years dead project, got from 680 stars to 1700, from 0 to 85 % code coverage, from almost no 3rd party code to Symfony components. I learned a lot about refactoring, safe & pain points in transition between dependencies, code quality and importance of smart testing (mocks no more).'
+            github: true

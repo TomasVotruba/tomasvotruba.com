@@ -49,7 +49,7 @@ id: about
                         It's <strong>amazing what people can do when they connect and share they ideas</strong>.
                     </p>
                     <p>
-                        That's what I grow in <a href="https://pehapkari.cz">Pehapkari</a> - Czech & Slovak PHP Community. Come to <a href="https://facebook.com/pehapkari/events">meetups we organize</a> and you'll see.
+                        That's what we grow in <a href="https://pehapkari.cz">Pehapkari</a> - Czech & Slovak PHP Community. Come to <a href="https://facebook.com/pehapkari/events">meetups we organize</a> and you'll see.
                     </p>
                 </div>
             </div>
@@ -65,6 +65,30 @@ id: about
 
                 <img class=card-img-bottom" src="/assets/images/talking-square.jpg">
             </div>
+        </div>
+
+        <hr>
+
+        <h2 class="text-center">Projects & Maintaining</h2>
+
+        <div class=" row">
+            {foreach $projects as $project}
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            {ifset $project['github']}<em class="fa fa-github pull-right fa-2x"></em>{/ifset}
+
+                            <h4 class="card-title">{$project['name']}</h4>
+
+                            <p n:ifset="$project['url']">
+                                <a href="{$project['url']}">{$project['url']}</a>
+                            </p>
+
+                            <p class="card-text" n:if="$project['description']">{$project['description']}</p>
+                        </div>
+                    </div>
+                </div>
+            {/foreach}
         </div>
     </div>
 {/block}
