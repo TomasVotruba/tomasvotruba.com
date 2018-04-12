@@ -36,7 +36,7 @@ But not more often. I tried to blog 2x a week, right from the start and got burn
 
 [Reddit](https://www.reddit.com/r/PHP/) is like StackOverflow for personal opinions or like Devel.cz, but international and for everyone. It's a place, where people share ideas, comment it, up-vote it or down-vote it.
 
-Vojta shared with me his first experience with Reddit: he posted 2-3 his posts and he got autoban. That **kind of ban, when you don't know you're banned** - everything works, they're up-votes on your posts, but they're all in grey. Also, Yegor wrote about the similar experience. My experience was a little better: I could post only once 10 minutes. Then I learned I could post more often when I got more profile points (up-votes of my ideas and posts).
+Vojta shared with me his first experience with Reddit: he posted 2-3 his posts and he got autoban. That **kind of ban, when you don't know you're banned** - everything works, there are up-votes on your posts, but they're all in grey. Also, Yegor wrote about the similar experience. My experience was a little better: I could post only once 10 minutes. Then I learned I could post more often when I got more profile points (up-votes of my ideas and posts).
 
 ### Get what you Give
 
