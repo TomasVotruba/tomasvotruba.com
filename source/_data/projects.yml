@@ -3,7 +3,7 @@ parameters:
         -
             name: Rector
             url: 'https://github.com/rectorphp/rector'
-            description: 'Tool for Instant Upgrades and Instant Refactrogin of PHP projects that handles 80 % upgrades for you.'
+            description: 'Tool for Instant Upgrades and Instant Refactoring of PHP projects that handles 80 % upgrades for you.'
             github: true
 
         -
