@@ -100,6 +100,7 @@ final class LowerBoolConstantsFixerTest extends AbstractCheckerTestCase
     public function test(): void
     {
         $this->doTestCorrectFile(__DIR__ . '/correct/correct.php.inc');
+        
         $this->doTestWrongToFixedFile(
             __DIR__ . '/wrong/wrong.php.inc',
             __DIR__ . '/fixed/fixed.php.inc'
