@@ -1,5 +1,5 @@
 ---
-id: 90
+id: 91
 title: "The Best 5 of 256 Bloghacks Book"
 perex: |
     Have you heard of [*256 Bloghacks* book](http://www.yegor256.com/256-bloghacks.html) by Yegor? Do you think about reading it, but just don't have the time and money?
