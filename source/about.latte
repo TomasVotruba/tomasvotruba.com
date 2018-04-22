@@ -71,28 +71,31 @@ id: about
 
         <h2 class="text-center">Projects & Maintaining</h2>
 
-        <a href="https://github.com/tomasvotruba/">
-            <img src="/assets/images/github-passion.png">
-        </a>
-
-        <div class=" row">
-            {foreach $projects as $project}
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <em n:ifset="$project['github']" class="fa fa-github pull-left mr-2"></em>{$project['name']}
-                            </h4>
-
-                            <p n:ifset="$project['url']">
-                                <a href="{$project['url']}">{$project['url']}</a>
-                            </p>
-
-                            <p class="card-text" n:if="$project['description']">{$project['description']|noescape}</p>
-                        </div>
-                    </div>
-                </div>
-            {/foreach}
+        <div class="mt-5 mb-5">
+            <a href="https://github.com/tomasvotruba/">
+                <img src="/assets/images/github-passion.png" alt="My Github contributions in a graph">
+            </a>
         </div>
+
+        {foreach $projects as $project}
+            <div class="card card-normal">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <em class="fa fa-github"></em>
+                        &nbsp;
+                        {$project['name']}
+                    </h3>
+
+                    <ul>
+                        <li>
+                            <a href="{$project['url']}">{$project['url']}</a>
+                        </li>
+                        {foreach $project['description'] as $item}
+                            <li>{$item|noescape}</li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+        {/foreach}
     </div>
 {/block}

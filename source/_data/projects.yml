@@ -3,57 +3,71 @@ parameters:
         -
             name: Rector
             url: 'https://github.com/rectorphp/rector'
-            description: 'Tool for Instant Upgrades and Instant Refactoring of PHP projects that handles 80 % upgrades for you.'
-            github: true
+            description:
+                - 'Tool for Instant Upgrades and Instant Refactoring'
+                - 'Handle of PHP projects that handles 80 % upgrades for you.'
+                - 'Sets for Symfony, Twig, Nette, PHPUnit, Sylius, CakePHP, Doctrine, php-parser and PHP CS Fixer'
 
         -
             name: EasyCodingStandard
             url: 'https://github.com/Symplify/EasyCodingStandard'
-            description: 'Easiest way to start using PHP CS Fixer and PHP_CodeSniffer with 0-knowledge.'
-            github: true
+            description:
+                - 'Easiest way to start using PHP CS Fixer and PHP_CodeSniffer with 0-knowledge.'
+                - 'Used by Sylius, Nette, Shopsys and LMC.'
 
         -
             name: Statie
-            url: 'https://github.com/Symplify/Statie'
-            description: 'Modern and Simple Static Site Generator in PHP created for Pehapkari community.'
-            github: true
+            url: 'https://www.statie.org/'
+            description:
+                - 'Simple & Clean Static Site Generator in PHP'
+                - 'Runs on Symfony, Yaml and Latte'
+                - 'Created for <a href="https://pehapkari.cz/">Pehapkari.cz</a> - Czech & Slovak PHP Community'
 
         -
             name: Symplify
             url: 'https://github.com/Symplify/Symplify'
-            description: 'Project based mostly on Symfony Components with focus on simple usage, no complexity and long and cheap sustainability.'
-            github: true
+            description:
+                - 'Simple usage, no complexity and long and cheap sustainability'
+                - 'Project based on Symfony Components'
 
         -
             name: Go Monorepo
             url: 'https://gomonorepo.org'
-            description: 'All You Always Wanted to Know About Monorepo But Were Afraid to Ask'
+            description:
+                - 'All You Always Wanted to Know About Monorepo But Were Afraid to Ask'
+                - '<a href="/blog/2018/03/15/monorepo-on-the-rise-in-php/">Read intro post</a>'
 
         -
             name: Go PHP 7.1
             url: 'https://gophp71.org'
-            description: 'What open-source projects already require PHP 7.1 as minimum version?'
+            description:
+                - 'What open-source projects already require PHP 7.1 as minimum version?'
+                - '<a href="/blog/2017/06/05/go-php-71/">Read intro post</a>'
 
         -
             name: Objet Calisthenics
             url: 'https://github.com/object-calisthenics/phpcs-calisthenics-rules'
             maintainer: true
-            description: 'Set of PHP_CodeSniffer Sniffs in object-oriented code, that focuses of maintainability, readability, testability and comprehensibility.'
-            github: true
+            description:
+                - 'Set of PHP_CodeSniffer Sniffs'
+                - 'Focus on object-oriented code, that focuses of maintainability, readability, testability and comprehensibility'
+                - '<a href="/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/">Read intro post</a>'
 
         -
             name: Git Wrapper
             url: 'https://github.com/cpliakas/git-wrapper'
             maintainer: true
-            description: 'Use git in PHP with simple API'
-            github: true
+            description:
+                - 'Use git in PHP with simple API'
 
         -
             name: ApiGen
             url: 'https://github.com/apigen/apigen'
             maintainer: true
-            description: |
-                Maintainer for 1,5 year, from dead project and 680 Github stars to 1700, from 0 to 85 % code coverage, from almost no 3rd party code to Symfony components.
-                <br><br>
-                I learned a lot about refactoring, safe & pain points in transition between dependencies, code quality and importance of smart testing (mocks no more).
-            github: true
+            description:
+                - 'Maintainer for 1,5 year'
+                - 'From dead project and <strong>650 Github stars to 1700</strong>'
+                - '<strong>From 0 to 85 % code coverage</strong>'
+                - 'From basically no 3rd party code to Symfony components'
+                - 'I learned a lot about refactoring, about <strong>transition of 1 dead package to another</strong>, code quality and importance of effective testing'
+                - '<a href="/blog/2017/09/04/how-apigen-survived-its-own-death/">Read story post</a>'
