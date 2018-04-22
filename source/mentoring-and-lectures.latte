@@ -4,7 +4,6 @@ title: "Boost your PHP Skill"
 id: skill
 
 references:
-    # 2018
     -
         text: "Tomas was able to prepare us lecture fulfilling our specific needs even beyond the area of his portfolio. Thoughts and techniques were clearly provided and easy to comprehend for the whole team."
         author: "Roman Veselý, Internal Systems Developer"
@@ -16,6 +15,14 @@ references:
         author: "Radek Strnad, PHP Teamleader"
         company: "Erudio.cz"
         company_url: "http://erudio.cz"
+
+partner_logos_to_urls:
+    'mall.png': https://www.mall.cz/
+    'shopsys.png': https://www.shopsys.com/
+    'igloonet.png': https://igloonet.cz
+    'lekarna.png': https://www.mall.cz/
+    'lidskasila.png': https://lidskasila.cz/
+    'naucmese.png': https://www.naucmese.cz/
 ---
 
 {block content}
@@ -35,50 +42,37 @@ references:
         <p>
             I have been in PHP for {= date('Y')-2004} years, {= date('Y')-2010} years with Nette and last {= date('Y')-2014} years with Symfony.
             <br>
-            I focus on <strong>PHP frameworks and AST-based automated upgrades, refactoring and coding standards</strong>.
+            I focus on <strong>PHP frameworks, legacy code transitions and AST-based instant upgrades, instant refactoring and coding standards</strong>.
         </p>
         <p>
-            <br>Lately I'm consulting with <a href="http://shopsys-framework.com/">Shopsys Framework</a>, an e-commerce platform on top of Symfony.
+            <br>Recently, I'm helping <a href="https://shopsys.com/">Shopsys</a> to become the best open-source, Symfony-based e-commerce platform, and also other clients:</p>
 
+        <div class="text-center row">
+            {foreach $partner_logos_to_urls as $partner_logo => $partner_url}
+                <div class="align-self-center col-4 border-0">
+                    <a href="{$partner_url}">
+                        <img src="/assets/images/references/{$partner_logo}">
+                    </a>
+                </div>
+            {/foreach}
+        </div>
 
+        <p class="text-center bigger mt-4">
+            <em>Do you want to be next?</em>
         </p>
 
         <p class="text-center">
-            <a href="https://github.com/shopsys">
-                <img src="https://www.shopsys-framework.com/assets/images/logo.png" class="text-center mb-4 mt-4 col-6">
+            <a href="/contact/" class="btn btn-success bigger mt-2 mb-2">
+                Let me know <em class="fa fa-arrow-circle-o-right fa-fw"></em>
             </a>
         </p>
 
         <hr>
 
-        <h2 class="text-center">Main Trainings</h2>
+        <h2 class="text-center">Do you Need Framework Training?</h2>
 
         {* ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout *}
         <div class="card-deck card-normal">
-            <div class="card">
-                <div class="card-header text-center">
-                    <img src="/assets/images/skills/nette.png" class="card-img-top col-8 mb-4 mt-4">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">Become Nette Master</h3>
-                    <p>
-                        You'll understand strong features of framework and in the end of lecture you'll be able to build application on last version.
-                    </p>
-
-                    <ul>
-                        <li>Directory Structure - where to put what</li>
-                        <li><strong>routing</strong>: SEO and user friendly URL</li>
-                        <li>life cycle of <strong>Presenter</strong></li>
-                        <li>fancy configuration with NEON</li>
-                        <li><strong>Dependency Injection</strong> and autowiring</li>
-                        <li><strong>Latte</strong> - templates done simple</li>
-                        <li>You'll be able to <strong><a href="/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension/">Write own Extension</a></strong></li>
-                    </ul>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-muted">Nette 2.4 and 3.0</small>
-                </div>
-            </div>
             <div class="card">
                 <div class="card-header text-center">
                     <img src="/assets/images/skills/symfony.png" class="col-10 mb-3 mt-3">
@@ -104,53 +98,35 @@ references:
                     <small class="text-muted">Symfony 3.3 and 4.0</small>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header text-center">
+                    <img src="/assets/images/skills/nette.png" class="card-img-top col-8 mb-4 mt-4">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Become Nette Master</h3>
+                    <p>
+                        You'll understand strong features of framework and in the end of lecture you'll be able to build application on last version.
+                    </p>
+
+                    <ul>
+                        <li>Directory Structure - where to put what</li>
+                        <li><strong>routing</strong>: SEO and user friendly URL</li>
+                        <li>life cycle of <strong>Presenter</strong></li>
+                        <li>fancy configuration with NEON</li>
+                        <li><strong>Dependency Injection</strong> and autowiring</li>
+                        <li><strong>Latte</strong> - templates done simple</li>
+                        <li>You'll be able to <strong><a href="/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension/">Write own Extension</a></strong></li>
+                    </ul>
+                </div>
+                <div class="card-footer text-center">
+                    <small class="text-muted">Nette 2.4 and 3.0</small>
+                </div>
+            </div>
         </div>
 
         <hr>
 
-        <h2 class="text-center">From my Clients</h2>
-
-        <table class="mt-4 mb-4">
-            <tbody>
-                <tr class="row">
-                    <td class="col-4 align-middle">
-                        <img src="/assets/images/references/lekarna-old.jpg">
-                    </td>
-                    <td class="col-4 align-middle">
-                        <img src="/assets/images/references/mall.png">
-                    </td>
-                    <td class="col-4 align-bottom">
-                        <br>
-                        <img src="/assets/images/references/lidskasila.svg">
-                    </td>
-                </tr>
-                <tr class="row">
-                    <td class="col-4 align-middle ">
-                        <img src="/assets/images/references/shopsys.png">
-                    </td>
-                    <td class="col-4 align-middle">
-                        <img src="/assets/images/references/igloonet.png">
-                    </td>
-                    <td class="col-4 align-middle">
-                        <img src="/assets/images/references/naucmese.png">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p class="text-center bigger">
-            <em>Do you want to be next?</em>
-        </p>
-
-        <p class="text-center">
-            <a href="/contact/" class="btn btn-success bigger mt-2 mb-2">
-                Let me know <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-            </a>
-        </p>
-
-        <hr>
-
-        <h2 class="text-center">Fields I can Help You With</h2>
+        <h2 class="text-center">What else Can I Help You With?</h2>
 
         <div class="card card-normal">
             <div class="card-body">
