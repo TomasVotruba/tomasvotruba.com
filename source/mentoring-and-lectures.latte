@@ -49,7 +49,7 @@ partner_logos_to_urls:
 
         <div class="text-center row">
             {foreach $partner_logos_to_urls as $partner_logo => $partner_url}
-                <div class="align-self-center col-4 border-0">
+                <div class="align-self-center col-md-4 col-sm-6 col-6 border-0 pt-md-0 pb-md-0 pt-2 pb-2">
                     <a href="{$partner_url}">
                         <img src="/assets/images/references/{$partner_logo}">
                     </a>
@@ -73,53 +73,59 @@ partner_logos_to_urls:
 
         {* ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout *}
         <div class="card-deck card-normal">
-            <div class="card">
-                <div class="card-header text-center">
-                    <img src="/assets/images/skills/symfony.png" class="col-10 mb-3 mt-3">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">Dive into Symfony</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <img src="/assets/images/skills/symfony.png" class="col-10 mb-3 mt-3">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Dive into Symfony</h3>
 
-                    <p>
-                        We'll focus exactly on your project's level and how to integrate Symfony there.
-                    </p>
+                            <p>
+                                We'll focus exactly on your project's level and how to integrate Symfony there.
+                            </p>
 
-                    <ul>
-                        <li><strong>Request & Response</strong> life cycle</li>
+                            <ul>
+                                <li><strong>Request & Response</strong> life cycle</li>
 
-                        <li>All arounds <strong>Controllers</strong> - services, <code>_invoke</code></li>
-                        <li><strong>Twig</strong> templating system</li>
-                        <li><strong>Dependency Injection</strong>, <code>_defaults</code>, <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">PSR-4 service auto-discovery</a> and more</li>
-                        <li>Hooking Events via <a href="https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/"><strong>EventDispatcher</strong></a></li>
-                        <li><strong>Commands</strong> in CLI made easy</li>
-                    </ul>
+                                <li>All arounds <strong>Controllers</strong> - services, <code>_invoke</code></li>
+                                <li><strong>Twig</strong> templating system</li>
+                                <li><strong>Dependency Injection</strong>, <code>_defaults</code>, <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">PSR-4 service auto-discovery</a> and more</li>
+                                <li>Hooking Events via <a href="https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/"><strong>EventDispatcher</strong></a></li>
+                                <li><strong>Commands</strong> in CLI made easy</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">Symfony 3.3 and 4.0</small>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-footer text-center">
-                    <small class="text-muted">Symfony 3.3 and 4.0</small>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header text-center">
-                    <img src="/assets/images/skills/nette.png" class="card-img-top col-8 mb-4 mt-4">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">Become Nette Master</h3>
-                    <p>
-                        You'll understand strong features of framework and in the end of lecture you'll be able to build application on last version.
-                    </p>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <img src="/assets/images/skills/nette.png" class="card-img-top col-8 mb-4 mt-4">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Become Nette Master</h3>
+                            <p>
+                                You'll understand strong features of framework and in the end of lecture you'll be able to build application on last version.
+                            </p>
 
-                    <ul>
-                        <li>Directory Structure - where to put what</li>
-                        <li><strong>routing</strong>: SEO and user friendly URL</li>
-                        <li>life cycle of <strong>Presenter</strong></li>
-                        <li>fancy configuration with NEON</li>
-                        <li><strong>Dependency Injection</strong> and autowiring</li>
-                        <li><strong>Latte</strong> - templates done simple</li>
-                        <li>You'll be able to <strong><a href="/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension/">Write own Extension</a></strong></li>
-                    </ul>
-                </div>
-                <div class="card-footer text-center">
-                    <small class="text-muted">Nette 2.4 and 3.0</small>
+                            <ul>
+                                <li>Directory Structure - where to put what</li>
+                                <li><strong>routing</strong>: SEO and user friendly URL</li>
+                                <li>life cycle of <strong>Presenter</strong></li>
+                                <li>fancy configuration with NEON</li>
+                                <li><strong>Dependency Injection</strong> and autowiring</li>
+                                <li><strong>Latte</strong> - templates done simple</li>
+                                <li>You'll be able to <strong><a href="/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension/">Write own Extension</a></strong></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">Nette 2.4 and 3.0</small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
