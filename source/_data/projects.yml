@@ -6,7 +6,8 @@ parameters:
             description:
                 - 'Tool for Instant Upgrades and Instant Refactoring'
                 - 'Handle of PHP projects that handles 80 % upgrades for you.'
-                - 'Sets for Symfony, Twig, Nette, PHPUnit, Sylius, CakePHP, Doctrine, php-parser and PHP CS Fixer'
+                - '<strong>Has sets for Symfony, Twig, Nette, PHPUnit, Sylius, CakePHP, Doctrine, php-parser and PHP CS Fixer</strong>'
+                - 'Also sets constructor injection refactoring, repository as service and Nette to Symfony migration'
                 - '<a href="/blog/2018/02/19/rector-part-1-what-and-how/">Read intro post</a>'
 
         -
@@ -14,7 +15,7 @@ parameters:
             url: 'https://github.com/Symplify/EasyCodingStandard'
             description:
                 - 'Easiest way to start using PHP CS Fixer and PHP_CodeSniffer with 0-knowledge.'
-                - 'Used by Sylius, Nette, Shopsys and LMC.'
+                - '<strong>Used by Sylius, Nette, Shopsys and LMC</strong>.'
                 - '<a href="/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/">Read intro post</a>'
 
         -
