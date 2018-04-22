@@ -150,9 +150,12 @@ article {
 }
 
 .card {
-    font-size: 1.1em;
     line-height: 1.5em;
     margin: 1.5em 0;
+}
+
+.card-bigger {
+    font-size: 1.1em;
 }
 
 .card#relatedPosts .card-body {
