@@ -1,13 +1,14 @@
 ---
 id: 94
-title: "How Quickly Turn Symfony Project to Legacy With Action Injection"
+title: "How Quickly Turn Your Symfony Project to Legacy With Action Injection"
 perex: |
     The other day I saw the question on Reddit about [Symfony's controller action dependency injection](https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection/). More people around me are hyped about [this new feature in Symfony 3.3](https://symfony.com/doc/current/service_container/3.3-di-changes.html#controllers-are-registered-as-services) that allows to autowire services via action argument typehints. It's new, it's cool and no one has a bad experience with it. The ideal candidate for any code you write today.
     <br><br>
     Since [Nette](https://forum.nette.org/en/19365-nette-framework-2-1-0-finally-released) and [Laravel introduced](https://mattstauffer.com/blog/laravel-5.0-method-injection/) a similar feature in 2014, there are empirical data that we learn from.
     <br><br>
     **Today I'll share the experience I have from consulting few Nette applications with dangerous overuse of this pattern and how this one thing turned the code to complete mess.**
-tweet: "New Post on My Blog: How Quickly Turn Symfony Project to Legacy With Action Injection"
+tweet: "New Post on My Blog: How Quickly Turn #Symfony Project to Legacy With Action Injection"
+tweet_image: "/assets/images/posts/2018/action-injection/everywhere.jpg"
 ---
  
 *Disclaimer: this post is not about Symfony, nor critics of its feature. It's rather about teaching, thinking about knowledge embodied in the code, an aware approach of critical thinking to information from authorities.*
@@ -234,7 +235,7 @@ Programmers use the feature you provided. They don't know what you wrote in that
 
 Back to our story - it didn't take long to [new idea appeared on Nette forum](https://forum.nette.org/cs/17817-jak-dostat-do-basecontrol-sluzbu-aniz-by-se-ji-museli-potomci-zabyvat#p125658) (Czech only): "I have 6 methods in `SomeService`, why should I inject all dependencies every time one public method is called? I want to use inject there as well, it's shorter and faster" This is the same argument to use *action injection* in controllers, remember?
 
-<blockquote class="blockquote">
+<blockquote class="blockquote text-center">
     "Where is no exception, there is a way."
 </blockquote>
 
