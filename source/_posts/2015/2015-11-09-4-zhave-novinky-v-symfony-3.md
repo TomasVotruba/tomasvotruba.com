@@ -1,4 +1,5 @@
 ---
+id: 98
 title: 4 žhavé novinky v Symfony 3
 perex: |
     V listopadu 2015 má kromě <a href="https://wiki.php.net/rfc/php7timeline">PHP 7</a> a <a href="https://www.drupal.org/node/2605142">Drupalu 8</a>, vyjít i Symfony 3. <strong>Jaké přináší změny a novinky?</strong>

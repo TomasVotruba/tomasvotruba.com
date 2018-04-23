@@ -1,0 +1,25 @@
+parameters:
+    # see https://www.statie.org/docs/generators/
+    generators:
+        posts:
+        # required parameters
+
+            # name of variable inside single such item
+            variable: 'post'
+
+            # name of variable that contains all items
+            variable_global: 'posts'
+
+            # directory, where to look for them
+            path: '_posts'
+
+            # which layout to use, this will be expanded to "_layouts/post.latte"
+            layout: 'post'
+
+            # and url prefix, e.g. file to path "_posts/2017-31-12-some-post.md" => "blog/2017/31/12/some-post"
+            route_prefix: 'blog/:year/:month/:day'
+
+            # optional parameters
+            object: 'Symplify\Statie\Renderable\File\PostFile'
+
+            object_sorter: 'TomasVotruba\Website\Statie\Generator\PostFileSorter'

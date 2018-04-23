@@ -8,7 +8,7 @@ parameters:
                 - 'Handle of PHP projects that handles 80 % upgrades for you.'
                 - '<strong>Has sets for Symfony, Twig, Nette, PHPUnit, Sylius, CakePHP, Doctrine, php-parser and PHP CS Fixer</strong>'
                 - 'Also sets constructor injection refactoring, repository as service and Nette to Symfony migration'
-                - '<a href="/blog/2018/02/19/rector-part-1-what-and-how/">Read intro post</a>'
+            intro_post_id: 77
 
         -
             name: EasyCodingStandard
@@ -16,7 +16,7 @@ parameters:
             description:
                 - 'Easiest way to start using PHP CS Fixer and PHP_CodeSniffer with 0-knowledge.'
                 - '<strong>Used by Sylius, Nette, Shopsys and LMC</strong>.'
-                - '<a href="/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/">Read intro post</a>'
+            intro_post_id: 37
 
         -
             name: Statie
@@ -25,6 +25,7 @@ parameters:
                 - 'Simple & Clean Static Site Generator in PHP'
                 - 'Runs on Symfony, Yaml and Latte'
                 - 'Created for <a href="https://pehapkari.cz/">Pehapkari.cz</a> - Czech & Slovak PHP Community'
+            intro_post_id: 29
 
         -
             name: Symplify
@@ -38,14 +39,14 @@ parameters:
             url: 'https://gomonorepo.org'
             description:
                 - 'All You Always Wanted to Know About Monorepo But Were Afraid to Ask'
-                - '<a href="/blog/2018/03/15/monorepo-on-the-rise-in-php/">Read intro post</a>'
+            intro_post_id: 82
 
         -
             name: Go PHP 7.1
             url: 'https://gophp71.org'
             description:
                 - 'What open-source projects already require PHP 7.1 as minimum version?'
-                - '<a href="/blog/2017/06/05/go-php-71/">Read intro post</a>'
+            intro_post_id: 41
 
         -
             name: Objet Calisthenics
@@ -54,7 +55,7 @@ parameters:
             description:
                 - 'Set of PHP_CodeSniffer Sniffs'
                 - 'Focus on object-oriented code, that focuses of maintainability, readability, testability and comprehensibility'
-                - '<a href="/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/">Read intro post</a>'
+            intro_post_id: 44
 
         -
             name: Git Wrapper
@@ -73,4 +74,4 @@ parameters:
                 - '<strong>From 0 to 85 % code coverage</strong>'
                 - 'From basically no 3rd party code to Symfony components'
                 - 'I learned a lot about refactoring, about <strong>transition of 1 dead package to another</strong>, code quality and importance of effective testing'
-                - '<a href="/blog/2017/09/04/how-apigen-survived-its-own-death/">Read story post</a>'
+            intro_post_id: 53

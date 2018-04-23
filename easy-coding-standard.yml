@@ -22,6 +22,7 @@ parameters:
 
         Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
             - '*/src/Posts/Year2017/Ast/*'
+            - '*/src/Statie/Generator/PostFileSorter.php'
 
     exclude_checkers:
         # resolve later
