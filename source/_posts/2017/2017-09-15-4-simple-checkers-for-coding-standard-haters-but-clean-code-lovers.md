@@ -1,4 +1,5 @@
 ---
+id: -30
 title: "4 Simple Checkers for Coding Standard Haters but Clean Code Lovers"
 perex: |
     ...
