@@ -10,7 +10,7 @@ perex: |
 tweet: "New Post on My Blog: How Quickly Turn #Symfony Project to Legacy With Action Injection #adr #invokable #methodinjection #laravel"
 tweet_image: "/assets/images/posts/2018/action-injection/everywhere.jpg"
 ---
- 
+
 *Disclaimer: this post is not about Symfony, nor critics of its feature. It's rather about teaching, thinking about knowledge embodied in the code, an aware approach of critical thinking to information from authorities.*
 
 What is wrong with this code?

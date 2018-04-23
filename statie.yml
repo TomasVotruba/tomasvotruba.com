@@ -17,3 +17,4 @@ parameters:
 
     # Statie settings
     github_repository_source_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/source"
+

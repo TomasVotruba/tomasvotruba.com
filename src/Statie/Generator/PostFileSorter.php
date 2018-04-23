@@ -44,9 +44,6 @@ final class PostFileSorter implements ObjectSorterInterface
             $arrayWithIdAsKey[$abstractFile->getId()] = $abstractFile;
         }
 
-        dump($arrayWithIdAsKey);
-        die;
-
         return $arrayWithIdAsKey;
     }
 
