@@ -99,6 +99,15 @@ id: about
                             <li>{$item|noescape}</li>
                         {/foreach}
                     </ul>
+
+                    {ifset $project['intro_post_id']}
+                        {var $activePost = $posts[$project['intro_post_id']] ?? null}
+                        {if $activePost}
+                            <a href="/{$activePost->getRelativeUrl()}" class="card-link btn btn-success">
+                                Read Intro Post: "{$activePost['title']}"
+                            </a>
+                        {/if}
+                    {/ifset}
                 </div>
             </div>
         {/foreach}
