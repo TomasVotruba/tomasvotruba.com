@@ -1,6 +1,6 @@
 ---
 id: 94
-title: "How Quickly Turn Your Symfony Project to Legacy With Action Injection"
+title: "How to Slowly Turn your Symfony Project to Legacy with Action Injection"
 perex: |
     The other day I saw the question on Reddit about [Symfony's controller action dependency injection](https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection/). More people around me are hyped about [this new feature in Symfony 3.3](https://symfony.com/doc/current/service_container/3.3-di-changes.html#controllers-are-registered-as-services) that allows to autowire services via action argument typehints. It's new, it's cool and no one has a bad experience with it. The ideal candidate for any code you write today.
     <br><br>
