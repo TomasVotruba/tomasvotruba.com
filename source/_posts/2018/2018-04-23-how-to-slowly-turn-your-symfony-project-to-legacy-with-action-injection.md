@@ -208,7 +208,7 @@ Note to Nette programmers: [`@inject` is often a code smell and you should do it
 
 ## Inspire by (Good/Bad) Example
 
-If you prepare some "dirty-hack-that-none-should-use" or even better "don't-ever-use-this-unless-you-know-why" and make it public, you can be sure people will ignore it and use it a very creative way. Unless there is `new ForbiddenUseException` thrown.
+If you prepare some "dirty-hack-that-none-should-use" or even better "don't-ever-use-this-unless-you-know-why" and make it public, you can be sure people will ignore it and use it in a very creative way. Unless there is `new ForbiddenUseException` thrown.
 
 This effect appeared in Nette many months before 2.1 even became stable and [method injection was born](https://forum.nette.org/cs/13084-presentery-property-lazy-autowire-na-steroidech#p93574) (many months before Nette 2.1 even became stable):
 
