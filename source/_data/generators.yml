@@ -17,7 +17,7 @@ parameters:
             layout: 'post'
 
             # and url prefix, e.g. file to path "_posts/2017-31-12-some-post.md" => "blog/2017/31/12/some-post"
-            route_prefix: 'blog/:year/:month/:date'
+            route_prefix: 'blog/:year/:month/:day'
 
             # optional parameters
             object: 'Symplify\Statie\Renderable\File\PostFile'
