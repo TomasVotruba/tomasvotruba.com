@@ -318,3 +318,9 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 .token.deleted {
     color: #9c0707;
 }
+
+.blockquote {
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    line-height: 1.6em;
+}
