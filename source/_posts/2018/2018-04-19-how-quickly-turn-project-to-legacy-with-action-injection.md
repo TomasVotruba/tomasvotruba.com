@@ -10,35 +10,38 @@ perex: |
 tweet: "New Post on My Blog: ..."
 ---
 
-Do you think this is ok? Why or why not?
+*Disclaimer: this post is not about Symfony, nor critics of it's feature. It's rather about teaching, thinking about knowledge embodied in the code, an aware approach of critical thinking to information from authorities.*  
+
+What is wrong about this code?
 
 ```php
-class SomeService 
+class SomeService extends SomeAbstractParentService
 {
-    public function someMethod(SomeArgument $someArgument, SomeServie $someService)
+    public function someMethod(SomeArgument $someArgument, SomeService $someService)
     {
         return $someService->process($someArgument);
     }
 }
 ```
 
+It's not unreal that this code will appear in your project in next 2 years, if you start using action injection. But we'll get to that later, let's start from the beginning.
 
-We'll get to that in the end of the show, but now, let's start from the beggining.
+## Welcome Action Injection
 
-The Symfony feature is [officially described](https://symfony.com/doc/current/service_container/3.3-di-changes.html#controllers-are-registered-as-services) as "This is only possible in a controller, and your controller service must be tagged with `controller.service_arguments` to make it happen."
+Since Symfony 3.3 there is [new feature](https://github.com/symfony/symfony/pull/21771) that allows to inject services to controller actions. It's important to this post, that Symfony [documentation includes important warning](https://symfony.com/doc/current/service_container/3.3-di-changes.html#controllers-are-registered-as-services): "This is only possible in a controller, and your controller service must be tagged with `controller.service_arguments` to make it happen."   
 
-See [Symfony PR](https://github.com/symfony/symfony/pull/21771) for more technical details.  
+### Wait, Wait... What is this Feature Again?
 
-## Wait wait, what is this feature again?
+Oh, sorry. In case you don't know what I'm talking about, here is a little example. If you do, skip right to [the pitfall of such approach](#injection-everywhere) bellow. 
 
-Oh, in case you don't know what I'm talking about, here is a little example. In the other case, skip right to [the polemic of such approach](#@todo link bellow).
-
-This is the most simple and clearway to register controller as services:
+If not, let's look at this example. This is the most simple and clearway to register controller as services:
 
 ```php
+<?php
+
 # app/Controller/SomeController.php
 
-namespace App\Controller
+namespace App\Controller;
 
 use App\Model\SomeService;
 
@@ -57,8 +60,7 @@ final class SomeController
     public function someAction()
     {
         $someData = $this->someService->getSomeData();
-        
-        return new Response('someTemplate.twig', ['someData' => $someData]);
+        // ...
     } 
 }
 ```
@@ -74,10 +76,9 @@ services:
     # include all controllers and model services 
 ```
 
-The feature I talk about is called *argument autowiring* or method injection. What will change?   
+The *argument autowire* (also called *method injection* or *action injection*) will save us some writing.
 
-Well as the name suggest, dependencies won't be passed by constructor, as it's common in every service, but via method - the action method!
-
+As the name suggest, dependencies won't be passed by constructor, as it's common in every service, but via method - the action method!
 
 ```diff
  # app/Controller/SomeController.php
@@ -103,13 +104,12 @@ Well as the name suggest, dependencies won't be passed by constructor, as it's c
      {
 -        $someData = $this->someService->getSomeData();
 +        $someData = $someService->getSomeData();
-        
-         return new Response('someTemplate.twig', ['someData' => $someData]);
+         // ...         
      } 
  }
 ```
 
-with new split and tag in our PSR-4 autodiscover registration: 
+On the other hand, service registration is now 3x more complex:
 
 ```diff
  # app/config/services.yml
@@ -118,34 +118,41 @@ with new split and tag in our PSR-4 autodiscover registration:
 +    App\Controller\:
 -        resource: '../'
 +        resource: '../Controller'
++        tags: ['controller.service_arguments']
 +
 +    App\Model\:
 +        resource: '../Model'
 ```
 
-
-Propagated advantages are
+### What are Propagated Advantages?
 
 - less writing
-- manual wiring of only used serivvces - with no benchmark this is has simliar value as statements like "Symfony is 3x faster than Laravel, it's true"
+- manual wiring of only used services - with no benchmark this is has similar value as statements like "Symfony is 3x faster than Laravel, it's true"
 - smaller controllers
 
-On the other hand, I agree with Paul M. Jontes that [“Action Injection” As A Code Smell](http://paul-m-jones.com/archives/6589). Why?
+### What are Already Known Disadvantages?
 
--  "The fact that your controller has so many dependencies, used only in some cases and not in others, **should be an indicator that the class is doing too much**. Indeed, it’s doing so much that you cannot call its action methods directly; you have to use the dependency injection container not only to build the controller object but also to invoke its action methods."
+Paul M. Jones wrote that [“Action Injection” As A Code Smell](http://paul-m-jones.com/archives/6589). Why? 
 
-It's the same code smell as adding 10th action method to the `ProductController`, maybe you should split it to 2 classes and add [sniff](https://github.com/object-calisthenics/phpcs-calisthenics-rules#7-keep-your-classes-small) to check that, because no-one else will do it better 
+<blockquote class="blockquote">
+"The fact that your controller has so many dependencies, used only in some cases and not in others, <strong>should be an indicator that the class is doing too much</strong>. Indeed, it’s doing so much that you cannot call its action methods directly; you have to use the dependency injection container not only to build the controller object but also to invoke its action methods."
+</blockquote>
 
-But that's just words and ideas, nothing real.
+And I agree. It's the same code smell as adding 10th action method to the `ProductController` that now has 300 lines. Maybe you should split it to 2 classes and add [sniff](https://github.com/object-calisthenics/phpcs-calisthenics-rules#7-keep-your-classes-small) to make sure this won't happen in production code ever again (because no-one else will do it better than continuous integration). 
 
-What might really happen with such approach?
+But that's just words and ideas, nothing real, no legacy (yet).
 
+What might really happen with *autowired arguments* approach?
 
-## 1. Injectoin Everywhere
+## 1. Injection Everywhere
 
-Nette "inject" feature started very similar. It had 2 modes that it worked on:
+<img src="/assets/images/posts/2018/action-injection/everywhere.jpg" class="img-thumbnail">
 
-In pseudo-code:
+## The Nette-Framework-Tried-It-For-You story
+
+Nette "inject" feature released in 2014 in Nette 2.1 started very similar. It has 2 ways to inject dependencies:
+
+### A. `@inject` Annotatoin
 
 ```php
 namespace App\Controller;
@@ -162,7 +169,7 @@ final class SomeController
 }
 ```
 
-or a bit more SOLID
+### B. `inject*()` Method
 
 ```php
 namespace App\Controller;
@@ -183,32 +190,31 @@ final class SomeController
 }
 ```
 
-and to be actived in config with `inject: true`
+It also have to be activated in config manually with specific `tags: ['inject']` tag, as in Symfony:
 
 ```yaml
 # app/config/services.neon
 services:
     App\Controller\SomeController:
-        inject: true
+        tags: ['inject']
         
-    App\Model\SomeService:
+    - App\Model\SomeService
 ```
 
-Can you see the differnce? Well, almost none.
+Can you see the difference to Symfony? Well, almost none. But so far so good.
 
-So far so good.
+Note to Nette programmers: [`@inject` is often a code smell and you should do it cleaner](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/)
 
+## Inspire by (Good/Bad) Example
 
-## Inspire by Example
+If you prepare some "dirty-hack-that-none-should-use" or even better "don't-ever-use-this-unless-you-know-why" and make it public, you can be sure people will ignore it and use it a very creative way. Unless, there is `new ForbiddenUseException` thrown.  
 
-If you prepare some "dirty-hack-that-none-should-use" and make it public, make sure people will use it very creative way (unless you throw an exception otherwise).  
-
-Well, it didn't [take long to get such approach to method injeciton](https://forum.nette.org/cs/13084-presentery-property-lazy-autowire-na-steroidech#p93574) (many months before Nette 2.1 stable).
+This effect appeared in Nette many months before 2.1 even beame stable and [method injection was born](https://forum.nette.org/cs/13084-presentery-property-lazy-autowire-na-steroidech#p93574) (many months before Nette 2.1 even became stable):
 
 ```php
 final class SomeController
 {
-	public function someActoin(SomeService $someService)
+	public function someAction(SomeService $someService)
 	{
 		$someData = $someService->getSomeData();
 		// ...
@@ -216,43 +222,47 @@ final class SomeController
 }
 ``` 
 
-
 So far so good, right?
 
+## Use in Controllers, Nowhere Else!
 
-## Do not use everywhere!
+Do you have children? If so, you know that "be careful with that fire" repeated 10 times in a 60 seconds will mostly lead to the exact opposite. Human brains works on ["Neurons that Fire Together Wire Together"](https://www.youtube.com/watch?v=o9K6GDBnByk) principle - so the final version can sounds like "fire".  
 
-If you have a children, you know that "be careful with that fire" will only lead to the opposite. In human brain, the shorter versoin sounds like "use everywhere".  
+Programmers use the feature you provided. They don't now what you wrote in that single post 2 years ago, nor explore documentation for any reference they found. Sorry jako. 
 
-People ask and question the feature, because people don't now what you write in that single post or in documentation, they probably don't even know there is the post with "use only in controllers" request (or pray rather). 
+### Property/Method Injection in all Services
 
-Again, it didn't take long to hear such command and came with this: "why not use that everywhere, since there is 1 container anyway and it's shorter and faster? I have 6 methods in SomeService, why should I inject all dependencies everytime one method is called?" (the same argument behind controlers, remember?)
+Back to our story - it didn't take long to [new idea appeared on forum](https://forum.nette.org/cs/17817-jak-dostat-do-basecontrol-sluzbu-aniz-by-se-ji-museli-potomci-zabyvat#p125658) (Czech only): "I have 6 methods in `SomeService`, why should I inject all dependencies every time one public method is called? I want to use inject there as well, it's shorter and faster" This is the same argument to use *action injection* in controllers, remember?
 
-After all, it was super easy to turn it on:
+<blockquote class="blockquote">
+    "Where is no exception, there is a way."
+</blockquote>
+
+It was super easy to turn it on:
 
 ```diff
  # app/config/services.neon
     services:
     App\Controller\SomeController:
-          inject: true
+         tags: ['inject']
         
      App\Model\SomeService:
-+        inject: true
++        tags: ['inject']
 ```
 
+I confess, [I liked this idea too](https://forum.nette.org/cs/17817-jak-dostat-do-basecontrol-sluzbu-aniz-by-se-ji-museli-potomci-zabyvat#p139678). But it's too much writing... how could we add to every service? 
 
-Since "where is not exception, there is a way"
+A `Extension` (~= `CompilerPass`) solved it:
 
-I write about this missue everywhere: https://www.tomasvotruba.cz/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/
-But again, this beahvior should be embodies in the code by validation and exception, not in external post.
+```php
+foreach ($this->getContainerBuilder() as $definition) {
+    $definition->addTag('inject');
+}
+```
 
+Now we can remove this annoying long constructors and use property/method injection everywhere. Be careful, there is different between [this visual debt](https://ocramius.github.io/blog/eliminating-visual-debt/) and cognitive overload.
 
-Hm, how to make it dfeault?
-
-https://forum.nette.org/cs/17817-jak-dostat-do-basecontrol-sluzbu-aniz-by-se-ji-museli-potomci-zabyvat#p125658
-
-
-So now we can remove this annojying "to many words" constuctor injection and use property (reps. method) injectoin everywhere - (eliminate [this visual debt](https://ocramius.github.io/blog/eliminating-visual-debt/)) - freedom!
+Now our code looks like this: 
 
 ```php
 class SomeService 
@@ -278,18 +288,19 @@ final class SomeService
 }
 ```
 
-## But, this is possible only in controllers
+3 lines and documentation is ignored. Great job!
 
-Ha, that is true, but still easily overrided by extension.
-@todo check the controller action tag internalls and try to simulare it on non-controller service
+To achieve similar thing in Symfony - you'd probably have to override [this `CompilerPass`](https://github.com/symfony/symfony/pull/21771/files#diff-58d1479352b43b312746ea6ceb4ada96). I won't show you nor try on purpose, so I don't spread too much black magic here.  
 
-But let's say people are not lazy enough to write own compilerpasses, that would enabled this feature on every service. And that framework check the service against interface or class, that it is really is a controller.
+### Most People are to Lazy and Unskilled Write own CompilePasses
+
+Let's say you're right and I live in micro-opne-source cosmos, where people are too lazy not to do it. Also, it's possible, that framework checks the service against interface (`IPresenter`) or a class (`Controller`), that it really is a controller.
  
-But it's still possible. How? Take 10 secs to think about it, you'll find a way.
+But it's still possible. How? Take 3 breaths to think about it, you'll find a way.
 
 <br><br>
 
-Yes, our favorite [composition](https://ocramius.github.io/blog/when-to-declare-classes-final/) pattern.
+Yes, our favorite [composition pattern](https://ocramius.github.io/blog/when-to-declare-classes-final/).
 
 ```php
 namespace App\Model;
@@ -306,32 +317,47 @@ final class SomeService extends SomeAbstractService
 Do you know where this goes?
 
 ```php
-use Symfony\Controller;
+use Symfony\..\Controller;
 
 abstract SomeAbstractService extends Controller
 {
 } 
 ```
 
-And voliá - method injection works in `SomeServivce` :).
+Kaboom! Method injection works in `SomeService` and we bypassed the frameworks internals :).
 
-I've seen very famous Czech project with this pattern (can't tell you which one, but you know who you are ;)).
+### True Story
 
-Again, what is not forbidden, it is possible (@todo Churchil quote) 
+I must add, I'm not writing this post because I'm bored and need a topic to babble about. **This is true story, such code exists and it was so much WTF to me, that I don't want my deepest enemy to have to work on project like that**. And I see that Symfony framework is slowly heading a way that opened these doors.
 
-## Is there a Way You Can't Fuck Up? 
+It was (maybe still is) famous Czech project (can't tell you which one, but you know who you are ;)).
 
-@invokable - single actoin controller
-    some positive sources
-    - https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection/dxsauf2/ 
+<blockquote class="blockquote">
+    "Everything which is not forbidden is allowed."
+</blockquote>
 
-@Action-Domain-Responder http://paul-m-jones.com/archives/5970
+Know you know it all, how to take advantage of architecture backdoor and save you lot of writing. At least in present moment. Or not fall into this trap? It's up to you, what you like and what code you love to write.
 
+## Is there a Way To Save Your Code From this Instant Retirement? 
 
-- Wisdom is characterized as ability to build on other's expericne
+There are 2 ways ho to avoid this completely and still use your framework:
 
-You've been informe. It's your call.
+- 
+Paul M. Jones has written [many posts Action-Domain-Responder](http://paul-m-jones.com/archives/category/programming/adr) and even created a [micro-site devoted to ADR topic](http://pmjones.io/adr/).
+- very similar approach is [RequestHandler](https://jenssegers.com/85/goodbye-controllers-hello-request-handlers)
+- my favorite approach that [Symfony](https://symfony.com/doc/current/controller/service.html#invokable-controllers) and [Laravel](https://dyrynda.com.au/blog/single-action-controllers-in-laravel) supports by default for a long time are **invokable controllers**, also called *single action controllers*
+
+## What is Your Experience with Action Injects?
+
+I really recommend checking the [Reddit thread](https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection/), there are few experiences worth reading: 
+
+<blockquote class="blockquote">
+I've abandoned this [action inject] approach, because it makes it harder to differentiate request parameters from services. It also makes this method definition in most cases spread to multiple lines. And it makes it harder to inject non-autowirable services
+    <a href="https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection/dxsauf2/">gadelat</a>
+</blockquote>
+
+What inject approach do you prefer? What stories you find along *your* inject way? Let me know in the comments.
 
 <br><br>
 
-Happy Injecting! 
+Happy Injecting!
