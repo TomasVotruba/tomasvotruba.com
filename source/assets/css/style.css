@@ -302,10 +302,6 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     margin-bottom: 0.9em;
 }
 
-.card-normal .card-body p, .card-normal .card-body li {
-    font-size: 0.9em;
-}
-
 .card-normal .card-body p {
     line-height: 1.5em;
 }
