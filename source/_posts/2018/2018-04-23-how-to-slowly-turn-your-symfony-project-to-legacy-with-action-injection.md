@@ -18,9 +18,9 @@ What is wrong with this code?
 ```php
 class SomeService extends SomeAbstractParentService
 {
-    public function someMethod(SomeArgument $someArgument, SomeService $someService)
+    public function someMethod(SomeArgument $someArgument, SomeOtherService $someOtherService)
     {
-        return $someService->process($someArgument);
+        return $someOtherService->process($someArgument);
     }
 }
 ```
