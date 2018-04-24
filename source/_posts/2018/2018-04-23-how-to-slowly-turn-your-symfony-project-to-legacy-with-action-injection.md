@@ -282,9 +282,9 @@ namespace App\Model;
 
 final class SomeService
 {
-    public function someMethod(SomeArgument $someArgument, SomeServie $someService)
+    public function someMethod(SomeArgument $someArgument, SomeOtherService $someOtherService)
     {
-        return $someService->process($someArgument);
+        return $someOtherService->process($someArgument);
     }
 }
 ```
@@ -308,9 +308,9 @@ namespace App\Model;
 
 final class SomeService extends SomeAbstractService
 {
-    public function someMethod(SomeArgument $someArgument, SomeServie $someService)
+    public function someMethod(SomeArgument $someArgument, SomeOtherService $someOtherService)
     {
-        return $someService->process($someArgument);
+        return $someOtherService->process($someArgument);
     }
 }
 ```
