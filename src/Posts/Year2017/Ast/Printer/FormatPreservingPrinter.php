@@ -39,11 +39,7 @@ final class FormatPreservingPrinter
     private function createLexer(): Emulative
     {
         return new Emulative([
-            'usedAttributes' => [
-                'comments',
-                'startLine', 'endLine',
-                'startTokenPos', 'endTokenPos',
-            ],
+            'usedAttributes' => ['comments', 'startLine', 'endLine', 'startTokenPos', 'endTokenPos', ],
         ]);
     }
 }
