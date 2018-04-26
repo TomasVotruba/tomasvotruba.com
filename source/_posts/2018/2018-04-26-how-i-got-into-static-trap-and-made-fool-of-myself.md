@@ -310,7 +310,7 @@ I learned something new and [migrated to full-service approach in ECS 4](/blog/2
 ## 3 Takeaways You Should not Take Statically
 
 - Static is not only `::method()`, but also `new <class>` and `::create()`.
-- Use dependency injection or static method methods, not mixture. **Be consistent** everywhere in your code, or it will eventually backfire.
+- Use dependency injection or static methods, not mixture. **Be consistent** everywhere in your code, or it will eventually backfire.
 - There is no best way to do things, **you just have to experience limits of various approaches and use the one that performs the best**. And re-evaluate. 
 
 <br><br> 
