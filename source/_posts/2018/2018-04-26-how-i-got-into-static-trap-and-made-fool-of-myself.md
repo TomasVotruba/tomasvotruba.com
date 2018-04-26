@@ -2,8 +2,8 @@
 id: 99
 title: "How I Got into Static Trap and Made Fool of Myself"
 perex: |
-    ...
-tweet: "..."
+    PHP story with code examples, copy-cat killers, just a little bit of static, consistency, sniffs and way to prevent all that ever happening ever again.  
+tweet: "New Post on #lazyprogrammer Blog: How I Got into Static Trap and Made Fool of Myself"
 ---
 
 Today the format will be reversed - first I'll show you practical code and it's journey to legacy, then theory takeaways that would save it.
