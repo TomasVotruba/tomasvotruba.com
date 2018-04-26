@@ -48,7 +48,7 @@ Just a reminder, this all started from a simple idea:
  }
 ```
 
-Today I'll write about **how code always grows and that we should anticipate it and code the best way we know right from the beginning**. And what happened to me when I thought I could handle it by *using static methods only where it makes sense* (well, everything makes sense, untill it's legacy drowning you down).
+Today I'll write about **how code always grows and that we should anticipate it and code the best way we know right from the beginning**. And what happened to me when I thought I could handle it by *using static methods only where it makes sense* (well, everything makes sense, until it's legacy drowning you down).
 
 ## Story Of Static Growth
 
@@ -79,7 +79,7 @@ class RemoveUselessDocBlockFixer
 }
 ```
 
-That basic work flow. In Easy Coding Standard 3 and bellow, checkers have no constructor injection, only `new` and `::static` methods were allowed. I took this inspiration from [PHP CS Fixer where `new` is first class citizen](https://github.com/FriendsOfPHP/PHP-CS-Fixer/search?utf8=%E2%9C%93&q=new+TokensAnalyzer&type=). Where is no DI container, just static instantiations. Maybe that should warn me, but I said to myself "its popular package, it have new fixers from time to time and it's tagged once a while, it's must be good and they know what they're doing".
+That basic work flow. In Easy Coding Standard 3 and below, checkers have no constructor injection, only `new` and `::static` methods were allowed. I took this inspiration from [PHP CS Fixer where `new` is first class citizen](https://github.com/FriendsOfPHP/PHP-CS-Fixer/search?utf8=%E2%9C%93&q=new+TokensAnalyzer&type=). Where is no DI container, just static instantiations. Maybe that should warn me, but I said to myself "its popular package, it have new fixers from time to time and it's tagged once a while, it's must be good and they know what they're doing".
 
 So back to the code:
 
@@ -96,7 +96,7 @@ public static function getDocBlockByMethod($token)
 ```
 
 ```php
-public static funciton removeUselessContentFromDocBlock($docBlock)
+public static function removeUselessContentFromDocBlock($docBlock)
 {
     DocBlockCleaner::processParamAnnotations($docBlock);
     DocBlockCleaner::processReturnAnnotations($docBlock);
@@ -181,7 +181,7 @@ Do you need to add whitespace config? Just add it in every layer... or make it a
 +        return $docBlock;
     }
 +    
-+    public funciton setWhitespaceConfig(WhitespaceConfig $WhitespaceConfig)
++    public function setWhitespaceConfig(WhitespaceConfig $whitespaceConfig)
 +    {
 +        $this->whitespaceConfig = $whitespaceConfig;
 +    }
@@ -191,7 +191,7 @@ Do you need to add whitespace config? Just add it in every layer... or make it a
 But what if you forget to add it
 
 ```diff
-+    public funciton ensureWhitespaceConfigIsSet()
++    public function ensureWhitespaceConfigIsSet()
 +    {
 +        if ($this->whitespaceConfig) {
 +            return; 
