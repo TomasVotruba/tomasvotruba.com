@@ -237,7 +237,7 @@ If you ever have a feeling, that's there is better way to do things but you'll s
 
 To prevent this 10 hours of trauma happening ever again, I made [a `ForbiddenStaticFunctionSniff` sniff](https://github.com/symplify/codingstandard#use-services-and-constructor-injection-over-static-method) that will look after your code.
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 class SomeClass
@@ -248,7 +248,7 @@ class SomeClass
 }
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 class SomeClass
@@ -299,7 +299,7 @@ And use it in code:
 +$this->useImportsTransformer->addNamesToTokens($this->newUseStatementNames, $tokens);
 ```
 
-### 5. Keep Your Shit Clean
+### 5. Keep Your Environment Clean
 
 I also admit, that another code smell lead to this. In Symplify and Rector there is used [Symfony 3.3 services architecture](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) with autowiring and autodiscovery. State of art in PHP DI at the moment.
 
