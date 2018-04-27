@@ -129,7 +129,7 @@ class DocBlockFactory
 }
 ```
 
-So every time a single doc block is created, more than 10 classes (counting these on background) are created too. It might be a small deal for performance, but even bigger for legacy code smell that would just me back. But whatever, YOLO!
+So every time a single doc block is created, more than 10 classes (counting these on background) are created too. It might be a small deal for performance, but even bigger for legacy code smell that might hit me back later. But whatever, YOLO!
 
 And here all the static fun ends. Well, not yet, because it worked. I talked a lot with the maintainer of `phpDocumentor/ReflectionDocBlock` about moving it forward, but as I was the only one trying, it didn't lead much further than issue chats and PRs that were opened for too long. It was only logical that without [monorepo](https://gomonorepo.org/) all the time was swallowed only by maintenance of 4 interdependent packages.
 
