@@ -302,7 +302,7 @@ And use it in code:
 
 I also admit that another code smell lead to this. In Symplify and Rector there is used [Symfony 3.3 services architecture](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) with autowiring and autodiscovery. State of art in PHP DI at the moment.
 
-But Fixers and Checkers were exceptions. They were registered as services, **but not autowired**. So I was used to not-to add depedendency to them manually, but via setters, `new` or `::static`. It eventually and logically leads to this situation.    
+But Fixers and Checkers were exceptions. They were registered as services, **but not autowired**. So I was used to not-to add dependency to them manually, but via setters, `new` or `::static`. It eventually and logically leads to this situation.    
 
 I learned something new and [migrated to full-service approach in ECS 4](/blog/2018/03/26/new-in-easy-coding-standard-4-clean-symfony-standard-with-yaml-and-services/).
 
