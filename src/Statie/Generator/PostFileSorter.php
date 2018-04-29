@@ -65,7 +65,7 @@ final class PostFileSorter implements ObjectSorterInterface
     /**
      * @param AbstractFile[] $arrayWithIdAsKey
      */
-    private function ensureIdIsUnique(array $arrayWithIdAsKey, int $id)
+    private function ensureIdIsUnique(array $arrayWithIdAsKey, int $id): void
     {
         if (! isset($arrayWithIdAsKey[$id])) {
             return;
