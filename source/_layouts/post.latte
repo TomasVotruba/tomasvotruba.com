@@ -62,7 +62,11 @@
                     <strong>Are you too lazy to refactor your code this way manually?</strong>
                 </div>
                 <div class="card-body">
-                    No worries, me too. So let's have a coffee and let <a href="/{$posts[$post['rectify_post_id']]->getRelativeUrl()}">Rector handle this</a> for you!
+                    {var $activePost = $posts[$post['rectify_post_id']]}
+
+                    {$post['rectify_post_id']} : {$activePost->getId()}
+
+                    No worries, me too. So let's have a coffee and let <a href="/{$activePost->getRelativeUrl()}">Rector handle this</a> for you!
                 </div>
             </div>
 
