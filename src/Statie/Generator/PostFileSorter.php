@@ -40,14 +40,21 @@ final class PostFileSorter implements ObjectSorterInterface
         $arrayWithIdAsKey = [];
 
         foreach ($abstractFiles as $abstractFile) {
-            $this->ensureIdIsSet($abstractFile);
-
-            $this->ensureIdIsUnique($arrayWithIdAsKey, $abstractFile->getId());
+            $this->ensureIdIsValid($abstractFile, $arrayWithIdAsKey);
 
             $arrayWithIdAsKey[$abstractFile->getId()] = $abstractFile;
         }
 
         return $arrayWithIdAsKey;
+    }
+
+    /**
+     * @param AbstractFile[] $arrayWithIdAsKey
+     */
+    private function ensureIdIsValid(AbstractFile $abstractFile, array $arrayWithIdAsKey): void
+    {
+        $this->ensureIdIsSet($abstractFile);
+        $this->ensureIdIsUnique($arrayWithIdAsKey, $abstractFile->getId());
     }
 
     private function ensureIdIsSet(AbstractFile $postFile): void
