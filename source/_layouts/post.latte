@@ -26,7 +26,7 @@
 
         {if isset($post['deprecated'])}
             <div class="card border-danger card-bigger">
-                <div class="card-header text-white bg-danger border-danger">
+                <div class="card-header text-white bg-danger">
                     <strong>This post is deprecated since {$post['deprecated_since']}</strong>
                 </div>
                 <div class="card-body">
@@ -39,7 +39,7 @@
 
         {if isset($post['updated'])}
             <div class="card border-success card-bigger">
-                <div class="card-header text-white bg-success border-success">
+                <div class="card-header text-white bg-success">
                     <strong>This post was updated on {$post['updated_since']}</strong>
                 </div>
                 <div class="card-body">
@@ -55,6 +55,19 @@
                 {$post['perex']|noescape}
             </div>
         </div>
+
+        {if isset($post['rectify_post_id'])}
+            <div class="card border-info card-bigger">
+                <div class="card-header text-white bg-info">
+                    <strong>Are you too lazy to refactor your code this way manually?</strong>
+                </div>
+                <div class="card-body">
+                    No worries, me too. So let's have a coffee and let <a href="/{$posts[$post['rectify_post_id']]->getRelativeUrl()}">Rector handle this</a> for you!
+                </div>
+            </div>
+
+            <br>
+        {/if}
 
         {$post['content']|noescape}
 
