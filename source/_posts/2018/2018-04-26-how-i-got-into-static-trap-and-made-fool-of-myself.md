@@ -2,7 +2,7 @@
 id: 99
 title: "How I Got into Static Trap and Made Fool of Myself"
 perex: |
-    PHP story with code examples, copy-cat killers, just a little bit of static, consistency, sniffs and way to prevent all that ever happening ever again.  
+    PHP story with code examples, copy-cat killers, just a little bit of static, consistency, sniffs and way to prevent all that ever happening ever again.
 tweet: "New Post on #lazyprogrammer Blog: How I Got into Static Trap and Made Fool of Myself"
 ---
 
@@ -15,25 +15,25 @@ Today the format will be reversed - first I'll show you practical code and its j
 - * @param int $value value instance
 - * @param $anotherValue
 - * @param SomeType $someService A SomeType instance
-- * @return array 
+- * @return array
   */
  public function setCount(int $value, $anotherValue, SomeType $someService): array
  {
  }
 ```
 
-The goal is clear, but **how does it work beneath the surface**? There are multiple steps that Fixer needs to perform one by one: 
+The goal is clear, but **how does it work beneath the surface**? There are multiple steps that Fixer needs to perform one by one:
 
 - find a method
 - find its docblock
-- find parameters in method code, detect their names and types 
+- find parameters in method code, detect their names and types
 - compare them to docblock
 - judge value of description (e.g. "a Type instance" has no value)
 - remove those that were found useless
 
 Is that all? Nope. **There also code that handles php docs**:
 
-- doc block parser that can parse any doc comment 
+- doc block parser that can parse any doc comment
 - that can handle invalid and non-standard formats
 - and a doc block printer, that can keep the original spacing
 
@@ -71,7 +71,7 @@ class RemoveUselessDocBlockFixer
             if ($docBlock === null) {
                 continue;
             }
-            
+
             // it has a doc block!
             $this->removeUselessContentFromDocBlock($docBlock);
         }
@@ -90,7 +90,7 @@ public static function getDocBlockByMethod($token)
     if ($docBlockPosition === null) {
         return null;
     }
-    
+
     return DocBlockFactory::createFromPosition($docBlockPosition);
 }
 ```
@@ -117,14 +117,14 @@ class DocBlockFactory
             'return' => TolerantReturn::class, // own overloaded class
             'var' => Var_::class, // own overloaded class
         ]);
-        
+
         $descriptionFactory = new DescriptionFactory($tagFactory);
         $tagFactory->addService($descriptionFactory);
         $tagFactory->addService(new TypeResolver($fqsenResolver));
-        
+
         $phpDocumentorDocBlockFactory = new DocBlockFactory($descriptionFactory, $tagFactory);
-        
-        return $phpDocumentorDocBlockFactory->create($docBlockPositoin);   
+
+        return $phpDocumentorDocBlockFactory->create($docBlockPositoin);
     }
 }
 ```
@@ -137,7 +137,7 @@ And here all the static fun ends. Well, not yet, because it worked. I talked a l
 
 Then [Jan Tvrdík](https://github.com/JanTvrdik) came with a support package for PHPStan for handling php docs - [phpstan/phpdoc-parser](https://github.com/phpstan/phpdoc-parser). It is built on similar principles as `nikic/php-parser`, much younger and robust. 
 
-I thought: "I'd like to try that one package in my code", but how? 
+I thought: "I'd like to try that one package in my code", but how?
 
 It's easy, just replace all the old static classes with new ones:
 
@@ -160,7 +160,7 @@ class DocBlockFactory
 
 ### Adding Depedency to Static Hell Tree
 
-Do you need to add whitespace config? Just add it in every layer... or make it also static. 
+Do you need to add whitespace config? Just add it in every layer... or make it also static.
 
 ```diff
  class DocBlockFactory
@@ -171,16 +171,16 @@ Do you need to add whitespace config? Just add it in every layer... or make it a
 
          $lexer = new Lexer;
          $tokenIterator = new TokenIterator($lexer->tokenize($content));
-        
+
          $phpStanPhpDocParser = new PhpStanPhpDocParser(new SomeDependency(new NewAnotherDependency));
-        
+
 -        return $phpStanPhpDocParser->parse($tokenIterator);
 +        $docBlock = $phpStanPhpDocParser->parse($tokenIterator);
 +        $docBlock->addWhitespaceConfig($this->whitespaceConfig);
-+        
++
 +        return $docBlock;
     }
-+    
++
 +    public function setWhitespaceConfig(WhitespaceConfig $whitespaceConfig)
 +    {
 +        $this->whitespaceConfig = $whitespaceConfig;
@@ -194,9 +194,9 @@ But what if you forget to add it
 +    public function ensureWhitespaceConfigIsSet()
 +    {
 +        if ($this->whitespaceConfig) {
-+            return; 
-+        }        
-         
++            return;
++        }
+
 +        throw new WhitespaceConfigNotSetException(sprintf('Informative message in "%s" method', __METHOD__));
 +    }
 ```
@@ -205,6 +205,7 @@ Congratulations, you've just made a static container all over your code, similar
 Uff, I just get headache by writing this code.
 
 But why stopping there? Let's add a configuration that will tell the `DocBlockFactory` if the starting tag should be `/*` or `/**`. 
+
 Well, shoot me now!
 
 ## How to Get From Static Hell?
@@ -287,7 +288,7 @@ Pass it via constructor:
 +    public function __construct(UseImportsTransformer $userImportsTransformer)
 +    {
 +        $this->userImportsTransformer = $userImportsTransformer;
-+    }     
++    }
  }
 ```
 
@@ -313,7 +314,7 @@ I learned something new and [migrated to full-service approach in ECS 4](/blog/2
 - Use dependency injection or static methods, not a mixture. **Be consistent** everywhere in your code, or it will eventually backfire.
 - There is no best way to do things, **you just have to experience limits of various approaches and use the one that performs the best**. And re-evaluate. 
 
-<br><br> 
+<br><br>
 
 They also say that:
 

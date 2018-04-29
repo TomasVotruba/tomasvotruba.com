@@ -3,6 +3,7 @@ parameters:
         # known values
         - '#Parameter \#1 \$nodes of method PhpParser\\NodeTraverser::traverse\(\) expects array<PhpParser\\Node>, array<PhpParser\\Node>\|null given#'
         - '#Parameter \#1 \$nodes of method PhpParser\\NodeFinder::findFirstInstanceOf\(\) expects array<PhpParser\\Node>\|PhpParser\\Node, array<PhpParser\\Node>\|null given#'
+        - '#Parameter \#2 \$id of method TomasVotruba\\Website\\Statie\\Generator\\PostFileSorter::ensureIdIsUnique\(\) expects int, int\|null given#'
 
         # false positive, invalid vendor load
         - '#Property PhpParser\\Node\\Stmt\\ClassMethod::\$name \(string\) does not accept PhpParser\\Node\\Identifier#'
