@@ -1,6 +1,6 @@
 ---
 id: 101
-title: "Programing = Climbing a Huge Mountain"
+title: "Programming = Climbing a Huge Mountain"
 perex: |
     Let's take a break after 2 long code-posts from last week and enjoy bit of philosophy. I apply *the mountain climber* in programming for last 2 years and it really helps me to overcome difficult spots.
     <br><br>
