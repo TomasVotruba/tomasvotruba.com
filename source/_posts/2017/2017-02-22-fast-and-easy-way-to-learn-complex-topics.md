@@ -6,6 +6,7 @@ perex: |
     <br><br>
     I think it's about time to take it back to <strong>the simplest step</strong> and make learning faster (or machines will). Today I will show you how.
 tweet: "How to learn complex topics fast and easy? Start... #education #ai #learning"
+related_items: [101]
 ---
 
 ## Philosophy Everywhere
