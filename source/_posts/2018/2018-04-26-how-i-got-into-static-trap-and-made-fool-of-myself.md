@@ -52,7 +52,7 @@ Today I'll write about **how code always grows and that we should anticipate it 
 
 ## Story Of Static Growth
 
-Let's look how the fixer grew to the point it turned into legacy, how that shot myself and what I could (and will) do better to prevent it.  
+Let's look how the fixer grew to the point it turned into legacy, how that shot myself and what I could (and will) do better to prevent it.
 
 (To skip irrelevant details, I'll use pseudocode instead of [original full code](https://github.com/Symplify/Symplify/blob/5603ed130bfd29bfdad050b7726b9c8e65a558fd/packages/CodingStandard/src/Fixer/Commenting/RemoveUselessDocBlockFixer.php).)
 
@@ -65,7 +65,7 @@ class RemoveUselessDocBlockFixer
             if (! $token->isMethod()) {
                 continue;
             }
-            
+
             // it's a method!
             $docBlock = $this->getDocBlockByMethod($token);
             if ($docBlock === null) {
@@ -135,7 +135,7 @@ And here all the static fun ends. Well, not yet, because it worked. I talked a l
 
 ### A New Shiny Package?
 
-Then [Jan Tvrdík](https://github.com/JanTvrdik) came with a support package for PHPStan for handling php docs - [phpstan/phpdoc-parser](https://github.com/phpstan/phpdoc-parser). It is built on similar principles as `nikic/php-parser`, much younger and robust. 
+Then [Jan Tvrdík](https://github.com/JanTvrdik) came with a support package for PHPStan for handling php docs - [phpstan/phpdoc-parser](https://github.com/phpstan/phpdoc-parser). It is built on similar principles as `nikic/php-parser`, much younger and robust.
 
 I thought: "I'd like to try that one package in my code", but how?
 
@@ -150,7 +150,7 @@ class DocBlockFactory
 
         $lexer = new Lexer;
         $tokenIterator = new TokenIterator($lexer->tokenize($content));
-        
+
         $phpStanPhpDocParser = new PhpStanPhpDocParser(new SomeDependency(new AnotherDependency));
 
         return $phpStanPhpDocParser->parse($tokenIterator);
@@ -204,7 +204,7 @@ But what if you forget to add it
 Congratulations, you've just made a static container all over your code, similar to Laravel Facades.
 Uff, I just get headache by writing this code.
 
-But why stopping there? Let's add a configuration that will tell the `DocBlockFactory` if the starting tag should be `/*` or `/**`. 
+But why stopping there? Let's add a configuration that will tell the `DocBlockFactory` if the starting tag should be `/*` or `/**`.
 
 Well, shoot me now!
 
@@ -218,15 +218,15 @@ I told myself - "here the static method makes sense, it's just one little method
 
 **So be consistent in architecture pattern you pick.**
 
-It took me [3](https://github.com/Symplify/Symplify/pull/680) [pull](https://github.com/Symplify/Symplify/pull/693) [requests](https://github.com/Symplify/Symplify/pull/723) to get out of this mess. Not to try the new package, just to prepare the code to be able to do so. Instead, I could have a clear DI design, use one PR at a time to trying this package and other 2 PRs could have been new features.    
+It took me [3](https://github.com/Symplify/Symplify/pull/680) [pull](https://github.com/Symplify/Symplify/pull/693) [requests](https://github.com/Symplify/Symplify/pull/723) to get out of this mess. Not to try the new package, just to prepare the code to be able to do so. Instead, I could have a clear DI design, use one PR at a time to trying this package and other 2 PRs could have been new features.
 
 ### 2. Beware Your Inner Copy-Cat Coder
 
 > A copycat crime is a criminal act that is modeled or inspired by a previous crime that has been reported in the media or described in fiction.
 
-This all started with social learning - "children see, children do". I saw static approach in Fixers in PHP CS Fixer and I was making a Fixer. So why not use it? I felt in my guts it's not the best way to go, but I was not sure why and I didn't see anybody else using DI in CLI applications. Now I know why. 
-  
-If you ever have a feeling that there is a better way to do things but you'll see that some Tomas Votruba is doing it differently, take your time - **trust yourself, your intuition guides you for a reason**. Question him and propose your idea, even though it might be crazy at the start. Maybe you'll save yourself and him a few PRs and many frustrated days from climbing up the legacy hole. 
+This all started with social learning - "children see, children do". I saw static approach in Fixers in PHP CS Fixer and I was making a Fixer. So why not use it? I felt in my guts it's not the best way to go, but I was not sure why and I didn't see anybody else using DI in CLI applications. Now I know why.
+
+If you ever have a feeling that there is a better way to do things but you'll see that some Tomas Votruba is doing it differently, take your time - **trust yourself, your intuition guides you for a reason**. Question him and propose your idea, even though it might be crazy at the start. Maybe you'll save yourself and him a few PRs and many frustrated days from climbing up the legacy hole.
 
 ### 3. Sniff It - Setup and Forget
 
@@ -259,7 +259,7 @@ class SomeClass
 }
 ```
 
-I've added this sniff to set before refactoring, scanned the code and [added all found files to ignored](https://github.com/Symplify/Symplify/pull/722/files#diff-a8b950982764fcffe4b7b3acd261cf91R84). That way I knew what all classes need refactoring. 
+I've added this sniff to set before refactoring, scanned the code and [added all found files to ignored](https://github.com/Symplify/Symplify/pull/722/files#diff-a8b950982764fcffe4b7b3acd261cf91R84). That way I knew what all classes need refactoring.
 
 ### 4. Remove `Static` from Methods - One Step at a Time
 
@@ -303,7 +303,7 @@ And use it in code:
 
 I also admit that another code smell lead to this. In Symplify and Rector there is used [Symfony 3.3 services architecture](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) with autowiring and autodiscovery. State of art in PHP DI at the moment.
 
-But Fixers and Checkers were exceptions. They were registered as services, **but not autowired**. So I was used to not-to add dependency to them manually, but via setters, `new` or `::static`. It eventually and logically leads to this situation.    
+But Fixers and Checkers were exceptions. They were registered as services, **but not autowired**. So I was used to not-to add dependency to them manually, but via setters, `new` or `::static`. It eventually and logically leads to this situation.
 
 I learned something new and [migrated to full-service approach in ECS 4](/blog/2018/03/26/new-in-easy-coding-standard-4-clean-symfony-standard-with-yaml-and-services/).
 
@@ -312,7 +312,7 @@ I learned something new and [migrated to full-service approach in ECS 4](/blog/2
 
 - Static is not only `::method()`, but also `new <class>` and `::create()`.
 - Use dependency injection or static methods, not a mixture. **Be consistent** everywhere in your code, or it will eventually backfire.
-- There is no best way to do things, **you just have to experience limits of various approaches and use the one that performs the best**. And re-evaluate. 
+- There is no best way to do things, **you just have to experience limits of various approaches and use the one that performs the best**. And re-evaluate.
 
 <br><br>
 
