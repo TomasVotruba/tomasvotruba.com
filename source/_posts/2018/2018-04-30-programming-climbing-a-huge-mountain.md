@@ -20,16 +20,15 @@ And this rush got me to a situation I had to revert the whole PR and start over 
 
 Then I stopped for a while and thought: Okay, I'm here under the mountain, there is the peak and want to get there. I don't see the peak or the way, I just know I want to climb this mountain.
 
-I had one package and I wanted to switch to the other.
+<img src="/assets/images/posts/2018/climb/climb-2.jpg" class="img-thumbnail">
 
-## Difficult Spot Comes
-
+I had one package and I wanted to switch to the other. What are the minimal steps? 
 
 ## Make Safe Spots
 
 When you climb a mountain for the first time, you have rope, a buddy and clinch along the whole way.
 
-<img src="http://horolezeckametodika.cz/wp-content/uploads/IMG_0568.jpg" class="img-thumbnail">
+<img src="/assets/images/posts/2018/climb/climb-1.jpg" class="img-thumbnail">
 
 **These are all the safe spot and it's ok to use them.** Well, unless you'd like to die climbing.
 
@@ -37,13 +36,11 @@ In programming I apply the same principles: I have tests, static analysis, codin
 
 And there are no safe spots? **I take a time before climbing and prepare these spots.** I'll increase the code coverage for code part I'd like to work with - and that already gives me some hints, what the path looks like.
 
-<img src="http://nicobrasfort.starnux.net/wp-content/uploads/2010/12/Directe-du-Baou-Rouge.jpg" class="img-thumbnail">
-
 The same way you prepare for the climbing - you ask other climbers how did it go, what are the hacks, where are the places to rest and where you should be careful.
 
 ## Be Safe like a Pro
 
-<img src="https://avatars.mds.yandex.net/get-pdb/881477/70783a22-0239-45bc-b5cc-262053da7919/s1200"  class="img-thumbnail">
+<img src="/assets/images/posts/2018/climb/climb-3.jpg" class="img-thumbnail">
 
 As you can see, it's no shame to use the spots, <strike>even</strike> mainly professional climbers do that.
 
@@ -53,7 +50,7 @@ As you can see, it's no shame to use the spots, <strike>even</strike> mainly pro
 
 If you already have such safe spots, be sure to use them. I've seen many applications, that had over 30 tests but didn't actually use them - no continuous integration, no [simple scripts in composer](https://blog.martinhujer.cz/have-you-tried-composer-scripts/) that could run them locally with `composer run-tests`.
 
-<img src="http://www.hopsuk.cz/upload/foto/rohova/druhy_bh_paraglajding.jpg" class="img-thumbnail">
+<img src="/assets/images/posts/2018/climb/climb-4.jpg" class="img-thumbnail">
 
 It doesn't matter that other programmer made it, that they don't cover 100 % of the code or that they use the other test framework I don't prefer. **I'm grateful there is something that will help me to climb faster and that other climber made it for me, even though he didn't have to.**
 
@@ -63,7 +60,7 @@ Zen, Kaizen, Ikigai, Present moment, <a href="/blog/2017/09/25/3-non-it-books-th
 
 When I program, I don't know what will happen in next 15 minutes. Maybe it will be over, or maybe I'll find a bug that I'll investigate for 2 hours in a row and then [use this workaround](https://github.com/TomasVotruba/tomasvotruba.cz/commit/a890d5100e2226d4958504a50efa282fd1b2c4a1).
 
-<img src="http://www.active-road.com/493-header/big-path-creeks-verdon-gorges.jpg" class="img-thumbnail">
+<img src="/assets/images/posts/2018/climb/climb-5.jpg" class="img-thumbnail">
 
 I don't see the end, only the next step. Same is for climbing, I don't see the of the mountain. I barely see 5 meters ahead of me. But even if I see the top of the mountain it doesn't matter. I can only move my hands or legs just a few feet ahead of me.
 
@@ -82,7 +79,7 @@ When you're tired, frustrated, angry or sad, will you rush climb more and more s
 
 It might be a coffee, it might be a transfer to another train, it might be toilet visit.
 
-<img src="https://ss.beddinginn.com/images/product/11/11596/11596896_1.jpg" class="img-thumbnail">
+<img src="/assets/images/posts/2018/climb/climb-6.jpg" class="img-thumbnail">
 
 You probably won't believe it, but most breakthroughs come to me in the toilet room (intellectual, not physical damaging any part of the toilet).
 
@@ -93,7 +90,7 @@ Well, now it's like standing on the top of the hill and seeing the elevator that
 
 So this is my climbing approach to code (I'm not a climber, to be clear).
 
-<img src="https://www.nationalgeographic.com/content/dam/adventure/photos/2017/stories/alex-honnold/alex-honnold-summit/alex-honnold-freerider-climb.adapt.1190.1.jpg" class="img-thumbnail">
+<img src="/assets/images/posts/2018/climb/climb-7.jpg" class="img-thumbnail">
 
 The more you climb, the better you know the terrain and the more you can improvise. [Like this guy, who climbed a 3000-feet tall mountain in 4 hours](https://www.nationalgeographic.com/adventure/features/athletes/alex-honnold/most-dangerous-free-solo-climb-yosemite-national-park-el-capitan/). **Without a rope.**
 
