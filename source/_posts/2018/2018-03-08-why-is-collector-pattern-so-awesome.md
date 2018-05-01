@@ -27,24 +27,32 @@ services:
 
 <br>
 
-But **how would you add [dynamically built](https://github.com/rectorphp/rector/pull/324)** Rectors?
+But **how would you add custom Rector class with a PHP provider**?
 
 ```php
-$rector = $this->builderRectorFactory->create()
-    ->matchMethodCallByType('Nette\Application\UI\Control')
-    ->matchMethodName('invalidateControl')
-    ->changeMethodNameTo('redrawControl');
+final class YourOwnRectorProvider
+{
+    public function provider()
+    {
+        $rector = new CustomSymfonyRector;
+        // some custom modifications
+
+        return $rector;
+    }
+}
 ```
 
-### Towards Scalable Architecture
+## Towards Scalable Architecture
 
-Well, we could accept PR and hard-code it into application, that would work too. But the point is to allow end-user to **add as many customs Rectors as he or she wants without need to modify our application**.
+Well, we could accept PR and hard-code it into application, that would work too. But the point is to allow end-user to **add as many customs services of specific type as he or she wants without need to modify our application**.
 
-This is how *open/closed principle* looks like. If you still don't have the idea, see very nice and descriptive examples in [jupeter/clean-code-php](https://github.com/jupeter/clean-code-php#openclosed-principle-ocp) on Github I help to maintain.
+### Open to Extension, Closed to Modification
+
+This is how *open/closed principle* looks like. If you still don't have the idea, see very nice and descriptive examples in [jupeter/clean-code-php](https://github.com/jupeter/clean-code-php#openclosed-principle-ocp).
 
 Let's start with ideas:
 
-## 1. Add a Provider?
+## 1. Add a Provider and Collect it in CompilerPass?
 
 My first idea was a provider that would return such Rector:
 
@@ -55,19 +63,19 @@ namespace App\Rector;
 
 use Rector\Contract\Rector\RectorInterface;
 
-final class NetteRectorProvider implements RectorInterface
+final class SymfonyRectorProvider implements RectorInterface
 {
-    // `$builderRectorFactory` passed via constructor + property
-
-    public function provide(): RectorInterface
+    public function provide()
     {
-        return $this->builderRectorFactory->create()
-            ->matchMethodCallByType('Nette\Application\UI\Control')
-            ->matchMethodName('invalidateControl')
-            ->changeMethodNameTo('redrawControl');
+        $rector = new CustomSymfonyRector;
+        // some custom modifications
+
+        return $rector;
     }
 }
 ```
+
+<br>
 
 Such service is registered by user to the config:
 
@@ -77,8 +85,10 @@ services:
     _defaults:
         autowire: true
 
-    App\Rector\NetteRectorProvider: ~
+    App\Rector\SymfonyRectorProvider: ~
 ```
+
+<br>
 
 And collected by our application via `CompilerPass`:
 
@@ -121,7 +131,7 @@ Are you curious what `DefinitionFinder`? It's just [a helper class](https://gith
 
 Wait, what is this?
 
- ```php
+```php
 $providedRector = new Expression(
     sprintf('service("%s").provide()', $rectorProviderDefinition->getClass())
 );
@@ -137,10 +147,12 @@ Something like this:
 
 ```php
 $rectorCollector = new Rector\Rector\RectorCollector;
-$rectorCollector->addRector((new App\Rector\NetteRectorProvider)->provide());
+$rectorCollector->addRector((new App\Rector\SymfonyRectorProvider)->provide());
 ```
 
-**To be honest, it's crazy and unclear code to me.** It also needs `symfony\expression` package to be installed manually. I don't want to refer people to this paragraph just to understand 3 lines in `CompilerPass`. That smells bad.
+<br>
+
+**To be honest, it's magic and unclear code to me.** It also needs `symfony\expression` package to be installed manually. I don't want to refer people to this paragraph just to understand 3 lines in `CompilerPass`. That code smells bad.
 
 But what now?
 
@@ -148,39 +160,11 @@ But what now?
 
 To simulate real life we should have at least 2 problems at once :)
 
-The most common case is product in e-commerce. Product *JBL Charge 3* has 1 category - *speaker*. Ok, you write a code with Doctrine Entity that each product has one category. But as it happens in life that *change is the only constant*, website grows and search expands. "A product needs to have multiple categories" says the product manager. What now?
+The most common case is product in e-commerce. Product *JBL Charge 3* has 1 category - *speaker*. Ok, you write a code with Doctrine Entity that each product has one category. But as it happens in life, *change is the only constant*, website grows and search expands with new request from your boss: "A product needs to have multiple categories". What now?
 
 The same happened for Rector - **I need to add multiple Rectors in `RectorProvider`**. What now?
 
-```php
-<?php declare(strict_types=1);
-
-namespace App\Rector;
-
-use Rector\Contract\Rector\RectorInterface;
-
-final class NetteRectorProvider implements RectorProviderInterface
-{
-    // `$builderRectorFactory` passed via constructor + property
-
-    public function provide(): array // RectorInterface
-    {
-        $firstRector = $this->builderRectorFactory->create()
-            ->matchMethodCallByType('Nette\Application\UI\Control')
-            ->matchMethodName('validateControl')
-            ->changeMethodNameTo('redrawControl');
-
-        $secondRector = $this->builderRectorFactory->create()
-            ->matchMethodCallByType('Nette\Application\UI\Control')
-            ->matchMethodName('invalidateControl') // prefix "in*"
-            ->changeMethodNameTo('redrawControl');
-
-        // return ?;
-    }
-}
-```
-
-Damn! Mmm, tell people to use one provider per Rector:
+Damn! Mmm, tell people to use one provider per Rector?
 
 ```yaml
 # rector.yml
@@ -188,8 +172,8 @@ services:
     _defaults:
         autowire: true
 
-    App\Rector\NetteRectorProvider: ~
-    App\Rector\AnotherNetteRectorProvider: ~
+    App\Rector\SymfonyRectorProvider: ~
+    App\Rector\AnotherSymfonyRectorProvider: ~
 ```
 
 Quick solution, yet smelly:
@@ -230,7 +214,7 @@ final class RectorCollector
 
 ### Drop that Expression Language Magic
 
-This is why Collector pattern is so awesome. **You have 1 place to solve all your problems** (or at least those 2 we have):
+Thanks to Collector pattern we now **have 1 place to solve these problems** at:
 
 ```diff
  <?php declare(strict_types=1);
@@ -254,7 +238,7 @@ This is why Collector pattern is so awesome. **You have 1 place to solve all you
  }
 ```
 
-Move config and expression language smell to new method that works with `RectorProviderInterface` directly. Good old PHP.
+<br>
 
 And thanks to that, **we can cleanup** `CompilerPass`:
 
@@ -294,9 +278,32 @@ final class RectorProvidersCompilerPass implements CompilerPassInterface
 }
 ```
 
-### Support one-to-many case
+<br>
 
-I know you already know how to solve this now. So let's put it together here:
+### How do we Provide Multiple Items?
+
+I didn't forget, our dear manager. Do you have idea how would you add it?
+
+
+```php
+<?php declare(strict_types=1);
+
+namespace Rector\RectorBuilder\Contract;
+
+use Rector\Contract\Rector\RectorInterface;
+
+interface Rector\RectorBuilder\Contract\RectorProviderInterface
+{
+   /**
+    * @return RectorInterface[]
+    */
+   public function provide(): array
+}
+```
+
+<br>
+
+And update `RectorCollector` class:
 
 ```diff
  <?php declare(strict_types=1);
@@ -323,12 +330,15 @@ I know you already know how to solve this now. So let's put it together here:
  }
 ```
 
-Great! Now we have:
+Now we have:
 
-- single entry point for `Collector` + `Provider`
-- typehinted `RectorInterface` control in code
-- clean config for use and compiler for our code
-- removed `symfony/expression-language` dependency
+<em class="fa fa-fw fa-lg fa-check text-success"></em> single entry point for `Collector` + `Provider`
+
+<em class="fa fa-fw fa-lg fa-check text-success"></em> typehinted `RectorInterface` control in code
+
+<em class="fa fa-fw fa-lg fa-check text-success"></em> clean config for use and compiler for our code
+
+<em class="fa fa-fw fa-lg fa-check text-success"></em> removed `symfony/expression-language` dependency
 
 ## 4. Add Tagging?
 
@@ -359,13 +369,15 @@ Try to convince me though if you're sure about its advantages.
 
 ## "Git Story" over git history
 
-I want to share with you one last idea. I could show you the final commit - or even worse - just the final files of (former) [`RectorCollector`](https://github.com/rectorphp/rector/blob/7305cf40d22cd1f241fcf8dcdebdc22b935616d8/src/NodeTraverser/RectorNodeTraverser.php) and [`RectorProvidersCompilerPass`](https://github.com/rectorphp/rector/blob/7305cf40d22cd1f241fcf8dcdebdc22b935616d8/packages/RectorBuilder/src/DependencyInjection/CompilerPass/RectorProvidersCompilerPass.php).
-
-But that would teach nothing, because only when we fail, we learn something new.
+I want to share with you one last idea. I could show you the final commit - or even worse - just the final versions of `RectorProviderInterface`, `RectorCollector` and `RectorProvidersCompilerPass`. But what could you take from such a code? **Nothing, because only when we fail, we learn something new.**
 
 **Same can be applied to git history. When I see 2 final files with 2 commits, I learn nothing new.** And pose questions and comments on blind paths, that author already took (and explains me again in words to my comments).
 
-Next time you squash 20 commits to 1, remember: *Git should tell the story, as the human history does*.
+Next time you squash 20 commits to 1, remember:
+
+<blockquote class="blockquote text-center">
+    Git should tell the story, as the human history does.
+</blockquote>
 
 <br><br>
 

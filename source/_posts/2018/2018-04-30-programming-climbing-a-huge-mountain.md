@@ -24,7 +24,7 @@ Then I stopped for a while and thought: Okay, I'm here under the mountain, there
 
 <img src="/assets/images/posts/2018/climb/climb-2.jpg" class="img-thumbnail">
 
-I had one package and I wanted to switch to the other. What are the minimal steps? 
+I had one package and I wanted to switch to the other. What are the minimal steps?
 
 ## Make Safe Spots
 
