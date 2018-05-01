@@ -85,7 +85,7 @@ It might be a coffee, it might be a transfer to another train, it might be toile
 
 You probably won't believe it, but most breakthroughs come to me in the toilet room (intellectual, not physical damaging any part of the toilet).
 
-Why? Because when brain enters *the serendipity-mode*, it starts to think subconsciously and connect thought more effectively than with active thinking. For example, few paragraphs up I made a workaround because key in the array didn't match the `PostFile` `id` in one spot. It worked in 3 other place in the application, but 1 just missed it. Then in my *toilet time*, it came to me that this can be solved by using a collection. One iterable immutable object everywhere.
+Why? Because when brain enters *the serendipity-mode*, it starts to think subconsciously and connect thought more effectively than with active thinking. For example, few paragraphs up I made a workaround because key in the array didn't match the `PostFile` `id` in one spot. It worked in 3 other places in the application, but 1 just missed it. Then in my *toilet time*, it came to me that this can be solved by using a collection. One iterable immutable object everywhere.
 
 Well, now it's like standing on the top of the hill and seeing the elevator that was on the left side all along. But when I was under the mountain, I didn't see it. I need to take a break to see.
 ## The Mountain Climber Way
