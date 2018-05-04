@@ -3,9 +3,9 @@ id: 102
 title: "How Do You Treat Your Own First AI"
 perex: |
     Artificial intelligence is at boom the slast couple of years. I wrote about AI and its relation to [jobs development](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) in following years.
-    
+
     Now we'll try to look a bit closer. Not in time, but in space. Take a look around you, what do you see?
-    Do you see *your own first* AI already? And how do you treat it? 
+    Do you see *your own first* AI already? And how do you treat it?
 tweet: "A new post on my blog: How Do You Treat Your Own First AI #programming #unschooling #ai #human"
 tweet_image: "/assets/images/posts/2018/ai/kaizen.jpg"
 ---
@@ -13,9 +13,9 @@ tweet_image: "/assets/images/posts/2018/ai/kaizen.jpg"
 Artificial intelligence it in it very basic form just a network of neurons connected in a specific way.
 It might be a multi-layer network, it might be a deep-learning network, it might be network design to low error rate or high-speed learning. But still, it is just set of neurons bit specific weights, that try to balance to achieve the certain goal.
 
-**In short: if you want to recognize pizza from non-pizza, you can teach it and it can do it.**  
+**In short: if you want to recognize pizza from non-pizza, you can teach it and it can do it.**
 
-I'm watching this purely machine-software discussion, by [readings book](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) or [visiting conferences](https://www.mlprague.com/) and see a connection to psychology, mentoring, education and human evolution itself in general. 
+I'm watching this purely machine-software discussion, by [readings book](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) or [visiting conferences](https://www.mlprague.com/) and see a connection to psychology, mentoring, education and human evolution itself in general.
 
 (One my psychotherapist friend saw this inter-field connection it as an [eugenics](https://en.wikipedia.org/wiki/Eugenics), but that's probably of lack of understanding of what programming and artificial intelligence is).
 
@@ -25,13 +25,13 @@ Before too much term reduction that leads to vague and irrelevant comments like 
 
 **When used properly.**
 
-And that's what this post is about. **How we use this grey thing we've got in our skulls, how do we take care of it, what direction and why we build it**.   
+And that's what this post is about. **How we use this grey thing we've got in our skulls, how do we take care of it, what direction and why we build it**.
 
 ## Child, the First Program
 
 If you have a child (or anyone else you teach on daily basis for a long time) and you're a programmer, you probably already thought about this, in some way.
 
-The way we build a neural network in children is very powerful. And very easy, because children have no knowledge, apart from the one we gave them. It's the most effective CTRL + C (you) and CTRL + V (he or she) teaching we'll ever experience. Have you ever tried to teach something completely new without any basic pre-steps your partner? 
+The way we build a neural network in children is very powerful. And very easy, because children have no knowledge, apart from the one we gave them. It's the most effective CTRL + C (you) and CTRL + V (he or she) teaching we'll ever experience. Have you ever tried to teach something completely new without any basic pre-steps your partner?
 
 They say that first 5-6 years are crucial for children:
 
@@ -86,7 +86,7 @@ This is very typical for all the self-help posts and books you've read, but ther
 
 What works for me, works for me because of my history, my life events, and my complex settings. If somebody will start open-source berserk mode on Github, join people PHP communities and having a baby at the same time, it might not go so well.
 
-**So always think about yourself, if this or that information is useful for you personally.**  
+**So always think about yourself, if this or that information is useful for you personally.**
 
 In both cases beware of *nihilism*, that leads evolution nowhere. In circles. And beyond.
 
@@ -108,7 +108,7 @@ Do you want to run a marathon? Maybe it's not a good idea to run it right away w
 
 If we'd train our neural networks this way, there would be tons of closed doors soon.
 
-On the other hand, most of the changes that I took slowly, like programming, turned out to be pretty well. 
+On the other hand, most of the changes that I took slowly, like programming, turned out to be pretty well.
 
 <img src="/assets/images/posts/2018/ai/kaizen.jpg" class="img-thumbnail">
 
@@ -118,7 +118,7 @@ This is called [Kaizen](https://medium.com/the-mission/get-1-better-every-day-th
 
 One last thing that I've noticed that neural networks have natural tendency to replicate themselves. But not only the outer way, like telling your friend he should be programmer instead of working at McDonald's.
 
-But also the inner way, in ourselves. How? When we believe in freedom at work, freedom out of national borders, freedom with drugs, with Zen spirituality... we might want a freedom in relations ship. Or we believe in God, strict Christianity church, strict rules, we have a sex with a random stranger and we'll get pregnant. We have to keep the baby because we believe all this cohesion (true story of my friend).  
+But also the inner way, in ourselves. How? When we believe in freedom at work, freedom out of national borders, freedom with drugs, with Zen spirituality... we might want a freedom in relations ship. Or we believe in God, strict Christianity church, strict rules, we have a sex with a random stranger and we'll get pregnant. We have to keep the baby because we believe all this cohesion (true story of my friend).
 
 **One example for all?** This post is just set of my thoughts that want to be replicated or rather reflected in your neural network. In human words: I want to inspire you, to talk about this, to think about this, to give me your view of all this.
 
