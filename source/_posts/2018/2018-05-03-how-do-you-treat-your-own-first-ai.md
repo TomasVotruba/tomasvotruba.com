@@ -5,9 +5,9 @@ perex: |
     Artificial intelligence is at boom last couple of years. I wrote about AI and its relation to [jobs development](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) in following years.
     
     Now we'll try to look a bit closer. Not in time, but in space. Take a look around you, what do you see?
-    Do you see *your own first* AI? And how do you treat it? 
-    
-tweet: "..."
+    Do you see *your own first* AI alraedy? And how do you treat it? 
+tweet: "A new post on my blog: How Do You Treat Your Own First AI #programming #unschooling #ai #human"
+tweet_image: "/assets/images/posts/2018/ai/kaizen.jpg"
 ---
 
 Artifical intelligence it in it very basic form just a network of neurons connected in specific way.
