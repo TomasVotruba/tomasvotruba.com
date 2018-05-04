@@ -1,6 +1,6 @@
 ---
 id: 102
-title: "How Do You Treat Your Own First AI"
+title: "How Do You Treat Your Own First AI?"
 perex: |
     Artificial intelligence is at boom the slast couple of years. I wrote about AI and its relation to [jobs development](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) in following years.
 
@@ -19,7 +19,7 @@ I'm watching this purely machine-software discussion, by [readings book](/blog/2
 
 (One my psychotherapist friend saw this inter-field connection it as an [eugenics](https://en.wikipedia.org/wiki/Eugenics), but that's probably of lack of understanding of what programming and artificial intelligence is).
 
-## Human Brain ~= AI
+## Human Brain ~= AI?
 
 Before too much term reduction that leads to vague and irrelevant comments like "human are not machines", I don't think a human brain is just a form of artificial intelligence. It's much more than that, with subconsciousness, emotions, neurotransmitters, like serotonin, adrenalin, cortisol etc. When used properly, it's a killing machine that no general artificial intelligence can ever beat.
 
