@@ -62,15 +62,9 @@
                     <strong>Are you too lazy to refactor your code this way manually?</strong>
                 </div>
                 <div class="card-body">
-                    {* temporary bug workaround *}
-                    {foreach $posts as $singlePost}
-                        {if $singlePost->getId() === $post['rectify_post_id']}
-                            {var $activePost = $singlePost}
-                            {php break}
-                        {/if}
-                    {/foreach}
+                    {var $recifyPost = $posts[$post['rectify_post_id']]}
 
-                    No worries, me too. So let's have a coffee and let <a href="/{$activePost->getRelativeUrl()}">Rector handle this</a> for you!
+                    No worries, me too. So let's have a coffee and let <a href="/{$recifyPost->getRelativeUrl()}">Rector handle this</a> for you!
                 </div>
             </div>
 
