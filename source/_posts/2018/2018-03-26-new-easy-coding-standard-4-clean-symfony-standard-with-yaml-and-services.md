@@ -1,5 +1,5 @@
 ---
-id: -86
+id: 99993
 title: "New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Services"
 perex: ""
 tweet: "New Post on my Blog: New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Services"

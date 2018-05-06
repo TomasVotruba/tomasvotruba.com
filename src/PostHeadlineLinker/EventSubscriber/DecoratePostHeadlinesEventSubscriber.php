@@ -29,14 +29,14 @@ final class DecoratePostHeadlinesEventSubscriber implements EventSubscriberInter
 
     public function decoratePostHeadlines(BeforeRenderEvent $beforeRenderEvent): void
     {
-        $objectsToRender = $beforeRenderEvent->getObjectsToRender();
-        foreach ($objectsToRender as $objectToRender) {
-            if (! $objectToRender instanceof PostFile) {
-                continue;
-            }
+        $generatorFilesByType = $beforeRenderEvent->getGeneratorFilesByType();
+        /** @var PostFile[] $postFiles */
+        $postFiles = $generatorFilesByType[PostFile::class];
 
-            $newContent = $this->postHeadlineLinker->processContent($objectToRender->getContent());
-            $objectToRender->changeContent($newContent);
+        foreach ($postFiles as $postFile) {
+            $newContent = $this->postHeadlineLinker->processContent($postFile->getContent());
+
+            $postFile->changeContent($newContent);
         }
     }
 }
