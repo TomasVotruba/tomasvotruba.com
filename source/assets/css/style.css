@@ -312,8 +312,16 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 
 /* prism remove color in diff */
 .token.deleted {
-    color: #9c0707;
+    color: #980707;
+    background: #fdd;
 }
+
+/* prism remove color in diff */
+.token.inserted {
+    color: #488b3a;
+    background: #dfd;
+}
+
 
 .blockquote {
     margin-bottom: 1.5em;
