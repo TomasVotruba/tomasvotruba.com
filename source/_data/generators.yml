@@ -1,5 +1,0 @@
-parameters:
-    # see https://www.statie.org/docs/generators/
-    generators:
-        posts:
-            object_sorter: 'TomasVotruba\Website\Statie\Generator\PostFileSorter'
