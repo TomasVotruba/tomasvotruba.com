@@ -2,7 +2,7 @@
 id: 102
 title: "How Do You Treat Your Own First AI?"
 perex: |
-    Artificial intelligence is at boom the slast couple of years. I wrote about AI and its relation to [jobs development](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) in following years.
+    Artificial intelligence is at boom the last couple of years. I wrote about AI and its relation to [jobs development](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) in following years.
 
     Now we'll try to look a bit closer. Not in time, but in space. Take a look around you, what do you see?
     Do you see *your own first* AI already? And how do you treat it?
