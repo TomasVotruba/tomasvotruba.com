@@ -11,18 +11,18 @@ tweet_image: "/assets/images/posts/2018/ai/kaizen.jpg"
 related_items: [65]
 ---
 
-Artificial intelligence it in it very basic form just a network of neurons connected in a specific way.
-It might be a multi-layer network, it might be a deep-learning network, it might be network design to low error rate or high-speed learning. But still, it is just set of neurons bit specific weights, that try to balance to achieve the certain goal.
+Artificial intelligence is in its very basic form just a network of neurons connected in a specific way.
+It might be a multi-layer network, it might be a deep-learning network, it might be a network designed to error rate lowering or high-speed learning. But still, it is just a set of neurons with specific weights that try to balance to achieve the certain goal.
 
 **In short: if you want to recognize pizza from non-pizza, you can teach it and it can do it.**
 
-I'm watching this purely machine-software discussion, by [readings book](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) or [visiting conferences](https://www.mlprague.com/) and see a connection to psychology, mentoring, education and human evolution itself in general.
+I'm watching this purely machine-software discussion, by [reading books](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) or [visiting conferences](https://www.mlprague.com/) and see a connection to psychology, mentoring, education and human evolution itself in general.
 
-(One my psychotherapist friend saw this inter-field connection it as an [eugenics](https://en.wikipedia.org/wiki/Eugenics), but that's probably of lack of understanding of what programming and artificial intelligence is).
+(A psychotherapist friend of mine saw this inter-field connection as an [eugenics](https://en.wikipedia.org/wiki/Eugenics), but that's probably of lack of understanding of what programming and artificial intelligence is).
 
 ## Human Brain ~= AI?
 
-Before too much term reduction that leads to vague and irrelevant comments like "human are not machines", I don't think a human brain is just a form of artificial intelligence. It's much more than that, with subconsciousness, emotions, neurotransmitters, like serotonin, adrenalin, cortisol etc. When used properly, it's a killing machine that no general artificial intelligence can ever beat.
+Before too much term reduction that leads to vague and irrelevant comments like "humans are not machines", I don't think a human brain is just a form of artificial intelligence. It's much more than that, with subconsciousness, emotions, neurotransmitters, like serotonin, adrenalin, cortisol etc. When used properly, it's a killing machine that no general artificial intelligence can ever beat.
 
 **When used properly.**
 
@@ -32,7 +32,7 @@ And that's what this post is about. **How we use this grey thing we've got in ou
 
 If you have a child (or anyone else you teach on daily basis for a long time) and you're a programmer, you probably already thought about this, in some way.
 
-The way we build a neural network in children is very powerful. And very easy, because children have no knowledge, apart from the one we gave them. It's the most effective CTRL + C (you) and CTRL + V (he or she) teaching we'll ever experience. Have you ever tried to teach something completely new without any basic pre-steps your partner?
+The way we build a neural network in children is very powerful. And very easy, because children have no knowledge, apart from the one we give them. It's the most effective CTRL + C (you) and CTRL + V (he or she) teaching we'll ever experience. Have you ever tried to teach your partner something completely new without any basic pre-steps?
 
 They say that first 5-6 years are crucial for children:
 
@@ -43,9 +43,9 @@ They say that first 5-6 years are crucial for children:
 
 ## BIOS Axioms a.k.a. Core Beliefs
 
-Jesus power, psychosomatic self-healing or the hand of the Universe all-mighty. Whatever you believe is true in your own brain design. The same way we configure a computer program to work with maximum 2 GB memory although there is more 8 GB RAM in total, it beliefs there are only 2 GB of memory in the whole universe.
+Jesus power, psychosomatic self-healing or the hand of the Universe all-mighty. Whatever you believe is true in your own brain design. The same way we configure a computer program to work with maximum 2 GB memory although there is more than 8 GB RAM in total, it believes there are only 2 GB of memory in the whole universe.
 
-We function the same way. If you believe that you have to work until you're 65 years old and then you'll get a reward in form of retirement, you'll build your life around it. If you believe, that all you need for life is a place to sleep, good friends and helping other, you'll be "working" for the whole life on this image. There is no good, nor wrong, nor a better way to do things - it's the way axioms are applied to the whole neural system.
+We function the same way. If you believe that you have to work until you're 65 years old and then you'll get a reward in form of retirement, you'll build your life around it. If you believe that all you need for life is a place to sleep, good friends and helping others, you'll be "working" for the whole life on this image. There is no good, nor wrong, nor a better way to do things - it's the way axioms are applied to the whole neural system.
 
 ## What 3 Axioms Would You Put in Your *BIOS*?
 
@@ -53,15 +53,15 @@ My selection would be:
 
 ### 1. No Expectations
 
-Living in the present moment with minimal influence of linear regression of past experiences. Because only this way we can learn something new, or [rather unlearn](https://zenhabits.net/unschoolery/) patterns, that no more work. This will be a huge challange for disruptive changes in AI itself.
+Living in the present moment with minimal influence of linear regression of past experiences. Because only this way we can learn something new, or [rather unlearn](https://zenhabits.net/unschoolery/) patterns that work no more. This will be a huge challenge for disruptive changes in AI itself.
 
-This is super difficult because neural networks naturally tend to build on experience. How can you recognize an apple? Because your parents showed you 300 times and apple and said "apple". How can we remove such expectations and still be able to live in society?
+This is super difficult because neural networks naturally tend to build on experience. How can you recognize an apple? Because your parents showed you an apple 300 times and said "apple". How can we remove such expectations and still be able to live in society?
 
 ### 2. Re-validate Core-Beliefs from Time to Time
 
 In my first 6 years, I probably learned dichotomic perception of worlds. This is good and this is bad, nothing like "it depends", "well sometimes" or "you and somebody else might be different persons".
 
-With these base-stones I've decided that alcohol is bad, social networks are for stupid people and that I know best what everybody needs to do. I tried to re-evaluate this from time to time, but it wasn't until 25 years and my first child, till I really started. Why? Because I realized I'll just copy-paste to him all my believes, whether I want it or not. Did I want him to be like me? Yes, of course. But do I wanted to believe in dichotomic worlds of ego? Not at all.
+With these base-stones I've decided that alcohol is bad, social networks are for stupid people and that I know best what everybody needs to do. I tried to re-evaluate this from time to time, but it wasn't until 25 years and my first child, till I really started. Why? Because I realized I'll just copy-paste to him all my beliefs, whether I want it or not. Did I want him to be like me? Yes, of course. But did I want to believe in dichotomic worlds of ego? Not at all.
 
 Since that moment I started to think what kind of son I'd like to have and started to move from personal benefits, more and more to the community, the power of united group over individual hedonist and communication with people with different values than I have.
 
@@ -71,7 +71,7 @@ I tend to suppress anger, fear, shame or love (because of fear of rejection). An
 
 Without clear emotion expression, it's very difficult for others to understand us. Some people express kindness when afraid, I express happiness when I'm nervous.
 
-So be ok with all kinds of emotions would be a 3rd axiom I'd pick.
+So being ok with all kinds of emotions would be a 3rd axiom I'd pick.
 
 ## Re-Evaluate...
 
@@ -79,23 +79,23 @@ So be ok with all kinds of emotions would be a 3rd axiom I'd pick.
 
 You know the saying that it takes [21 days to build a habit](https://www.huffingtonpost.com/james-clear/forming-new-habits_b_5104807.html)? That's because neural network is like a muscle. If you train it enough one direction, it will become natural for it.
 
-What believes you reinforce every day? What are those you'd like to change a bit if that was possible?
+What beliefs you reinforce every day? What are those you'd like to change a bit if that was possible?
 
 ### ...Personally
 
 This is very typical for all the self-help posts and books you've read, but there is still nothing going on. This is also called [Anecdotal evidence](https://en.wikipedia.org/wiki/Anecdotal_evidence).
 
-What works for me, works for me because of my history, my life events, and my complex settings. If somebody will start open-source berserk mode on Github, join people PHP communities and having a baby at the same time, it might not go so well.
+What works for me, works for me because of my history, my life events, and my complex settings. If somebody will start open-source berserk mode on Github, joining PHP communities and having a baby at the same time, it might not go so well.
 
-**So always think about yourself, if this or that information is useful for you personally.**
+**So always think about yourself, whether this or that information is useful for you personally.**
 
 In both cases beware of *nihilism*, that leads evolution nowhere. In circles. And beyond.
 
 ## Everything is Optional
 
-Another idea I have is **that everything is optional**. If I believe, that I should be a programmer, I'll do everything to make that happen. But when I start to think about myself as a writer and person who loves to connect people no matter what, I can slowly drop programming from my daily activities.
+Another idea I have is **that everything is optional**. If I believe that I should be a programmer, I'll do everything to make that happen. But when I start to think about myself as a writer and a person who loves to connect people no matter what, I can slowly drop programming from my daily activities.
 
-So when you decide, you can quit your job, find a new partner, move from your parents, write a post about that stuff you love to do after work for free or go out and just be one day alone, I believe you can do it.
+So when you decide that you can quit your job, find a new partner, move from your parents, write a post about that stuff you love doing after work for free or go out and just be one day alone, I believe you can do it.
 
 ## Baby Steps
 
@@ -105,7 +105,7 @@ I wrote that neural network is a muscle. I found out when I tried to learn too m
     "The slower you go, the further you get."
 </blockquote>
 
-Do you want to run a marathon? Maybe it's not a good idea to run it right away without training. Personally, I've tried to train 1 month ago and went running for 4times before I run a half marathon. But I was dead and I never want to do that again.
+Do you want to run a marathon? Maybe it's not a good idea to run it right away without training. Personally, I've tried to train 1 month before it and went running for 4times before I run a half marathon. But I was dead and I never want to do that again.
 
 If we'd train our neural networks this way, there would be tons of closed doors soon.
 
@@ -117,9 +117,9 @@ This is called [Kaizen](https://medium.com/the-mission/get-1-better-every-day-th
 
 ## Neural Network Natural Replication
 
-One last thing that I've noticed that neural networks have natural tendency to replicate themselves. But not only the outer way, like telling your friend he should be programmer instead of working at McDonald's.
+One last thing that I've noticed is that neural networks have natural tendency to replicate themselves. But not only the outer way, like telling your friend he should be programmer instead of working at McDonald's.
 
-But also the inner way, in ourselves. How? When we believe in freedom at work, freedom out of national borders, freedom with drugs, with Zen spirituality... we might want a freedom in relations ship. Or we believe in God, strict Christianity church, strict rules, we have a sex with a random stranger and we'll get pregnant. We have to keep the baby because we believe all this cohesion (true story of my friend).
+But also the inner way, in ourselves. How? When we believe in freedom at work, freedom out of national borders, freedom with drugs, with Zen spirituality... we might want freedom in relationships. Or we believe in God, strict Christianity church, strict rules, we have sex with a random stranger and we'll get pregnant. We have to keep the baby because we believe all this cohesion (true story of my friend).
 
 **One example for all?** This post is just set of my thoughts that want to be replicated or rather reflected in your neural network. In human words: I want to inspire you, to talk about this, to think about this, to give me your view of all this.
 
@@ -127,7 +127,7 @@ This all leads me to my axiom point 2., to re-evaluate what value I spread in th
 
 <br>
 
-So these are few thoughts from mine neural network about other neural networks. Nothing more.
+So these are few thoughts from my neural network about other neural networks. Nothing more.
 
 I'm happy I finally opened this topic, after 14 months of just thinking of it. **I wonder, how do you see your brain?**
 
