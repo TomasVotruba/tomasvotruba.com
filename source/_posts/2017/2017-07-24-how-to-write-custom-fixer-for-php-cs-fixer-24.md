@@ -117,9 +117,11 @@ final class ExceptionNameFixer implements DefinedFixerInterface
 
 ### 2. Easypicks First
 
-I start with implementing first 5 methods, to make
+I start with implementing first 5 methods, to make the easy work first:
 
 ```php
+<?php
+
 use PhpCsFixer\FixerDefinition\CodeSample;
 use PhpCsFixer\FixerDefinition\FixerDefinition;
 use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
@@ -296,6 +298,8 @@ Is that it? Yea, that's it :)
 ### 7. Put Together The Final Fixer
 
 ```php
+<?php
+
 namespace App\CodingStandard\Fixer;
 
 use PhpCsFixer\Fixer\DefinedFixerInterface;
