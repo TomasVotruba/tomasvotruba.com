@@ -71,7 +71,7 @@ $application->addController(new ProducController);
 $application->run();
 ```
 
-How do you feel seeing such code? I feel a bit weird and [I don't get on well with statically](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/).
+How do you feel seeing such code? I feel a bit weird and [I don't get on well with static code](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/).
 
 
 On the other hand, if we take the web app approach to cli apps:
@@ -111,7 +111,7 @@ I wish I knew this answer :). In my opinion and experience with building cli app
 
 - If you start a project with `new` static, it's difficult to migrate.
 - The need of refactoring is clear much earlier before it really happens.
-- When the application grows, new classes are added and you need to think more and more what class to pass by the constructor, which are singletones, which value objects/DTOs etc.
+- When the application grows, new classes are added and you need to think more and more what class to pass by the constructor, which are singletons, which value objects/DTOs etc.
 
 ## 2. Container Inceptions
 
@@ -217,7 +217,7 @@ This application cycle has these steps:
 
 - call bin file
 - create `Application` with `new`
-- add commands with `nand ew`
+- add commands with `add new`
 - run `Application`
 - in called command, there are 2 approaches
     - 1. create a container
