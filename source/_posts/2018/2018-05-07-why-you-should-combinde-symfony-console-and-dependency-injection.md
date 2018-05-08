@@ -6,7 +6,8 @@ perex: |
     There are plenty of such posts out there, even in Pehapkari community blog: [Best Practice for Symfony Console in Nette](https://pehapkari.cz/blog/2017/06/02/best-practice-for-symfony-console-in-nette/) or [Symfony Console from the Scratch](https://pehapkari.cz/blog/2017/01/05/symfony-console-from-scratch/).     
     <br>
     But nobody seems to write about **the greatest bottleneck of Console applications - static cancer**. Why is that? 
-tweet: "A new post on my blog: ..."
+tweet: "A new post on my blog: Why You Should Combine Symfony Console and Dependency Injection"
+tweet_image: "/assets/images/posts/2018/cli-app-di/cli-app-di.png"
 ---
 
 ## 1. Current Status in PHP Console Applications
@@ -210,8 +211,7 @@ The complexity of this question usually leads to choice 2 or 1.
 
 I won't get into more details now, since I'll write about possible solutions in following posts.
 
-
-<img src="http://michaelclark.tech/wp-content/uploads/2015/11/89c029aae37c53cb071caa366b71b5c471d92daefe1a5588a50db357b9623e01.jpg">
+<img src="/assets/images/posts/2018/cli-app-di/inject-inception.jpg" class="img-thumbnail">
 
 This application cycle has these steps:
 
