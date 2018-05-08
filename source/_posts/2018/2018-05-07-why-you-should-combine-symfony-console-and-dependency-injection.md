@@ -217,7 +217,7 @@ This application cycle has these steps:
 
 - call bin file
 - create `Application` with `new`
-- add commands with `add new`
+- add commands with `$application->add(new SomeCommand)`
 - run `Application`
 - in called command, there are 2 approaches
     - 1. create a container
