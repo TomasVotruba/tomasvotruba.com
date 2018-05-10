@@ -2,7 +2,7 @@
 id: 104
 title: "Rectify: Turn All Action Injects to Constructor Injection in Your Symfony Application"
 perex: |
-    Action Injections are much fun, but it can turn our pretty legacy. How to **refactor out of the legacy back to constructor injection** and still keep that smile on your face? 
+    Action Injections are much fun, but it can turn our pretty legacy. How to **refactor out of the legacy back to constructor injection** and still keep that smile on your face?
 tweet: "New Post on My Blog: Turn All Action Injections in Your #Symfony Application to Constructor Injection #adr #methodinjection #rector"
 tweet_image: "/assets/images/posts/2018/action-injection/everywhere.jpg"
 related_items: [94, 88]
@@ -21,15 +21,15 @@ I wrote about [How to Slowly Turn your Symfony Project to Legacy with Action Inj
 </blockquote>
 
 <blockquote class="blockquote">
-    Im working on a Project that uses action injection pattern and I hate it. I like autowiring but whole idea about action injection is brooken . And this project is in sf28 do we dont use autowiring . Maintainance and development with tnhis pattern is total nightmare.
+    I'm working on a Project that uses action injection pattern and I hate it. I like autowiring but the whole idea about action injection is broken. And this project is in sf28 do we don't use autowiring. Maintainance and development with this pattern is a total nightmare.
     <footer class="blockquote-footer text-right">A</footer>
 </blockquote>
 
 <br>
 
-It's natural to **try new patterns with open heart** and validate them in practise (I do this too), but **what if** you find this way as not ideal and want to go to constructor injection instead?
+It's natural to **try new patterns with an open heart** and validate them in practice, but **what if** you find this way as not ideal and want to go to constructor injection instead?
 
-How would you change all your 50 controllers with action injections... 
+How would you change all your 50 controllers with action injections...
 
 ```php
 <?php declare(strict_types=1);
@@ -60,7 +60,7 @@ final class SomeController
      * @var ProductRepository
      */
     private $productRepository;
-    
+
     public function __construct(ProductRepository $productRepository)
     {
         $this->productRepository = $productRepository;
@@ -79,14 +79,14 @@ final class SomeController
 ### How to Waste Week in 1 Team
 
 - 50 controllers, 4 actions per each → 200 services
-- some of them are duplicated 
+- some of them are duplicated
 - identify services, [`Request` objects](https://symfony.com/doc/current/controller.html#controller-request-argument) and [Argument Resolver objects](https://symfony.com/doc/current/controller/argument_value_resolver.html)
-- code-reviews and discussions that might take up-to 5-10 days 
-- and rebase on new merged PRs... well, you have 4-10 hours of team-work wasted ahead of you.  
+- code-reviews and discussions that might take up-to 5-10 days
+- and rebase on new merged PRs... well, you have 4-10 hours of team-work wasted ahead of you.
 
 <br>
 
-**I find time of my team very precious**, so I Let Rector do the work.
+**I find the time of my team very precious**, don't you? So I Let Rector do the work.
 
 ## 3 Steps to Instant Refactoring of All Controllers
 
@@ -104,7 +104,7 @@ Import the `action-injection-to-constructor-injection` level and configure your 
 # rector.yml
 imports:
     - { resource: 'vendor/rector/rector/config/level/architecture/action-injection-to-constructor-injection.yml' }
-    
+
 parameters:
     kernel_class: 'App\Kernel' # the default value
 ```
@@ -113,14 +113,14 @@ parameters:
 
 Do you have `App\Kernel` in your application? Use `--level` in CLI this instead of `rector.yml`:
 
-```bash 
+```bash
 vendor/bin/rector ... --level action-injection-to-constructor-injection
 ```
 
-### 3. Run Rector on Your Code 
+### 3. Run Rector on Your Code
 
 ```bash
-vendor/bin/rector process /app --dry-run 
+vendor/bin/rector process /app --dry-run
 ```
 
 You should see diffs like:
@@ -136,7 +136,7 @@ You should see diffs like:
 +     * @var ProductRepository
 +     */
 +    private $productRepository;
-+    
++
 +    public function __construct(ProductRepository $productRepository)
 +    {
 +        $this->productRepository = $productRepository;
@@ -163,7 +163,7 @@ vendor/bin/rector process /app
 
 ## Clean Code... Done, but What About Beautiful?
 
-You've probably noticed that code itself is not looking too good. Rector's jobs is not to clean, but to change the code. It's not a hipster designer, but rather a thermonuclear engineer. **That's why there are coding standards. You can apply your own or if not good enough use Rector's prepared set**:
+You've probably noticed that code itself is not looking too good. Rector's job is not to clean, but to change the code. It's not a hipster designer, but rather a thermonuclear engineer. **That's why there are coding standards. You can apply your own or if not good enough use Rector's prepared set**:
 
 ```bash
 composer require symplify/easy-coding-standard --dev
