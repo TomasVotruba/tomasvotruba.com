@@ -8,7 +8,7 @@ tweet_image: "/assets/images/posts/2018/rectify-action-injection/show.png"
 related_items: [94, 88]
 ---
 
-I wrote about [How to Slowly Turn your Symfony Project to Legacy with Action Injection](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection) a few weeks ago. It surprised me that **the approach had mostly positive [feedback](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection/#disqus_thread)**:
+I wrote about [How to Slowly Turn your Symfony Project to Legacy with Action Injection](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection) a few weeks ago. It surprised me that **the approach had mostly positive [feedback](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection/#comments)**:
 
 <blockquote class="blockquote">
     Couldn't agree more with pretty much everything said! Action injection makes it really confusing on whether an object is treated stateful or stateless (very grey area with the Session for example).
