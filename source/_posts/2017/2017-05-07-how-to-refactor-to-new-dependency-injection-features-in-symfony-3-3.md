@@ -14,7 +14,7 @@ tweet: "How to refactor to new #symfony 3.3 DI features? #examples #php"
 
 If you follow [Symfony blog](https://symfony.com/blog/), you will already know about:
 
-- **[autowconfigure](https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration)**
+- **[autoconfigure](https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration)**
 - **[`_defaults`, `instanceof` and simpler service registration](https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration)**
 - **[from named services to class services](https://symfony.com/blog/new-in-symfony-3-3-optional-class-for-named-services)**
 - [`autowire()` and name tag shortcuts](https://symfony.com/blog/new-in-symfony-3-3-added-new-shortcut-methods)
