@@ -1,6 +1,6 @@
 ---
 id: 40
-title: "Thank you David"
+title: "Thank you David Grudl"
 perex: |
     While using open-source, we rarely realize that there is one or few people behind it. <strong>People who work in their free time and put an effort in it</strong>.
     We feel like using a product - it should work and when it doesn't, it's broken. And when our application is constantly broken, we will be angry for them.
