@@ -7,7 +7,7 @@ perex: |
     In the first post about PHP CLI Apps I wrote about [poor DI support in PHP CLI projects](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/).
     <br><br>
     Today we look on the first barrier that leads most people to prefer static over DI - **how to load config with services**.    
-tweet: "New Post on My Blog: ..."
+tweet: "New Post on My Blog: How to Load --config With Services in #Symfony Console #di #config #egg #chicken"
 tweet_image: "/assets/images/posts/2018/rectify-action-injection/show.png"
 related_items: [103]
 ---
