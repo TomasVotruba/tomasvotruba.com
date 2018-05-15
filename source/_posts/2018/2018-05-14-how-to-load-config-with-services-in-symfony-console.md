@@ -85,7 +85,7 @@ Use static approach, no services config, just list of items. Most spread solutio
 
 ## 2. DI for Poor People: Container in a Command
 
-I'm used to container [thanks to great work of David Grudl](http://localhost:8000/blog/2017/06/01/thank-you-david/) and many posts [he wrote about dependency injection](https://phpfashion.com/co-je-dependency-injection), so this one is very counter-intuitive to me, but I still see it quite often in the wild.
+I'm used to container [thanks to great work of David Grudl](/blog/2017/06/01/thank-you-david/) and many posts [he wrote about dependency injection](https://phpfashion.com/co-je-dependency-injection), so this one is very counter-intuitive to me, but I still see it quite often in the wild.
 
 **The easiest way to start** using Container in a static application is to **create it at the class we need it:**
 
