@@ -57,7 +57,7 @@ Very nice recursion, isn't it?
 
 To get the main config in PHP App is easy. Symfony has [a common path in `Kernel`](https://github.com/symfony/demo/blob/v1.0.0/app/AppKernel.php#L59), Nette [in Configurator](https://github.com/nette/sandbox/blob/b3bd786d71bdecec441121cafc63086e58355130/app/bootstrap.php#L18) and other frameworks likewise.
 
-It's usually **absolute path defined in PHP code**, usually `app/config/config.yml` or `app/config/config.neon`. It doesn't change and every developer knows what. If we put the file to `app/config.yml`, it won't be loaded. PHP Apps are nice and clear in this matter.
+It's usually **absolute path defined in PHP code**, usually `app/config/config.yml` or `app/config/config.neon`. It doesn't change and every developer knows that. If we put the file to `app/config.yml`, it won't be loaded. PHP Apps are nice and clear in this matter.
 
 ### PHP CLI Apps are Free
 
