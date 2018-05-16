@@ -5,4 +5,7 @@ parameters:
             year_released: 2018
             post_ids: [103, 105]
 
-        # @todo: open source series
+        -
+            title: "Mastering Open-Source"
+            year_released: 2017
+            post_ids: [12, 13, 25, 54]
