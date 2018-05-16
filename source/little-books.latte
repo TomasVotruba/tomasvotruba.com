@@ -1,0 +1,83 @@
+---
+layout: default
+title: "Is Book Too Long For You? Read <small>a Little Book</small>"
+id: "little-books"
+
+inspiration:
+    - https://youtu.be/1HBNrwapfv0?t=1269: "Specialized micro-sites over general-posts-group"
+---
+
+{block content}
+    <div class="container">
+        <h1>{$title|noescape}</h1>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                {=date('Y')} is the fastest year ever. More and more information and too little time to read books. <strong>We need clear, short, cohesive, updated and social content</strong>. A year old book has much less value then post from today, moreover in programming.
+                </p>
+                <p>
+                    <div class="col-4 pull-right">
+                       <img src="https://kayiprihtim.com/wp-content/uploads/2016/07/kucuk-yayinevleri-ust.jpg" class="img-thumbnail">
+                    </div>
+
+                    Once, I was writing a book. But I realized that by the end of the writing it would be outdated, so I could start rewriting right away. Still, some <strong>topics deserve more then 3 posts in a book style</strong>.
+                </p>
+                <p>I looked for something in <strong>between a post and a book</strong>...</p>
+                <br>
+                <p>
+                    <em>A Little Book</em>
+                </p>
+                <br>
+                <p>
+                    ↓
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        {foreach $little_books as $little_book}
+            <h2 id="{$little_book['title']|webalize}">{$little_book['title']}</h2>
+
+            {var $totalReadingTime = 0}
+            {foreach $little_book['post_ids'] as $postId}
+                {php $totalReadingTime += $posts[$postId]->getReadingTimeInMinutes()}
+            {/foreach}
+
+            <ul class="list-inline post-metadata">
+                <li class="list-inline-item mr-3">
+                    <em class="fa fa-calendar fa-fw"></em> {$little_book['year_released']}
+                </li>
+                <li class="list-inline-item mr-3">
+                    <em class="fa fa-clock-o fa-fw"></em> {$totalReadingTime} mins
+                </li>
+                <li class="list-inline-item mr-3">
+                    <a href="#{$little_book['title']|webalize}">#Anchor</a>
+                </li>
+            </ul>
+
+            <ul class="mt-4">
+                {foreach $little_book['post_ids'] as $postId}
+                    {var $activePost = $posts[$postId]}
+                    <li class="mb-3">
+                        <a href="/{$activePost['relativeUrl']}/">{$activePost['title']|noescape}</a>
+
+                        {include "postMetadataLine", post => $activePost}
+                    </li>
+                {/foreach}
+            </ul>
+
+            {sep}<hr>{/sep}
+        {/foreach}
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+{/block}

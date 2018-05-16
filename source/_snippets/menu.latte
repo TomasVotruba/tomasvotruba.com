@@ -6,19 +6,24 @@
                 <li id="logo">
                     Tomas Votruba
                 </li>
-                <li n:class="(isset($id) && $id === blog) || (isset($layout) && $layout === post) ? active">
+                <li n:class="(isset($id) && $id === 'blog') || (isset($layout) && $layout === 'post') ? 'active'">
                     <a href="/">Blog</a>
                 </li>
-                <li n:class="isset($id) && $id === skill ? active">
+                <li n:class="isset($id) && $id === 'little-books' ? 'active', 'new'">
+                    <a href="/little-books/" class="bg-success">
+                        <small>Books</small>
+                    </a>
+                </li>
+                <li n:class="isset($id) && $id === 'skill' ? 'active'">
                     <a href="/mentoring-and-lectures/">Mentoring & Lectures</a>
                 </li>
-                <li n:class="isset($id) && $id === talks ? active">
+                <li n:class="isset($id) && $id === 'talks' ? 'active'">
                     <a href="/talks/">Talks</a>
                 </li>
-                <li n:class="isset($id) && $id === about ? active">
+                <li n:class="isset($id) && $id === 'about' ? 'active'">
                     <a href="/about/">About</a>
                 </li>
-                <li n:class="isset($id) && $id === contact ? active">
+                <li n:class="isset($id) && $id === 'contact' ? 'active'">
                     <a href="/contact/">Contact</a>
                 </li>
             </ul>
