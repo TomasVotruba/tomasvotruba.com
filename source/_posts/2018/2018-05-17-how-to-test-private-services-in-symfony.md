@@ -1,6 +1,6 @@
 ---
 id: 106
-title: "How to Get Private Services in Symfony Test"
+title: "How to Test Private Services in Symfony"
 perex: |
     2 versions of Symfony are affected by this dissonance between services and tests.
     **Do you use Symfony 3.4 or 4.0? Do you want to test your services, but struggle to get them do it clean way?**
