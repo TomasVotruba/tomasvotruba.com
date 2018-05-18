@@ -184,9 +184,9 @@ If there would only be one place with a switch, that would make that all code sm
 
 ### "What about Compiler Pass?"
 
-Exactly, [a Compiler Pass](https://symfony.com/doc/current/service_container/compiler_passes.html)! **One of the best features in Symfony - by abilities and by architecture design**. It leads you to write nice, decoupled and reusable code by default.
+Exactly, [a Compiler Pass](https://symfony.com/doc/current/service_container/compiler_passes.html)! **One of the best features in Symfony - by abilities and by architecture design**. It leads you to write nice, decoupled and reusable code by default. After all, the solution for Symfony 4.1 is done by [Compiler Pass, that creates public 'test.service-name' aliases](https://github.com/symfony/symfony/pull/26499/files#diff-ce4ed09b11d8fa531159e96df52124f3).
 
-You can write your own (much recommended) or if you use PHPUnit, make use of the one in [Symplify\PackageBuilder](/blog/2018/04/05/4-ways-to-speedup-your-symfony-development-with-packagebuilder/#2-drop-manual-code-public-true-code-for-every-service-you-test): 
+You can write your own that covers needs of your own application (much recommended) or if you use PHPUnit, make use of the one in [Symplify\PackageBuilder](/blog/2018/04/05/4-ways-to-speedup-your-symfony-development-with-packagebuilder/#2-drop-manual-code-public-true-code-for-every-service-you-test): 
 
 ```diff
  use Symfony\Component\HttpKernel\Kernel;
