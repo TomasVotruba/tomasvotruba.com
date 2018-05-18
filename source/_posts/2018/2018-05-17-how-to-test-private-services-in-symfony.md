@@ -3,16 +3,21 @@ id: 106
 title: "How to Test Private Services in Symfony"
 perex: |
     2 versions of Symfony are affected by this dissonance between services and tests.
-    **Do you use Symfony 3.4 or 4.0? Do you want to test your services, but struggle to get them do it clean way?**
+    **Do you use Symfony 3.4 or 4.0? Do you want to test your services, but struggle to get them in a clean way?**
     <br><br>
-    Today we look on possible solutions.
+    Today we look at possible solutions.
 tweet: "New Post on My Blog: ..."
+---
+
+
+If you know the problem and look only for a solution, jump right down to [Symfony 4.1 Standalone or Symfony 3.4/4.0 solution](#2-in-symfony-4-1-standalone-or-symfony-3-4-4-0).
+
 ---
 
 Since [Symfony 3.4 all services are private by default](https://symfony.com/blog/new-in-symfony-3-4-services-are-private-by-default).
 That means you can't get service by `$this->get(App\SomeService::class)` or `$this->container->get(App\SomeService::class)` anymore, but **only only via constructor**. 
 
-That's ok, until you need to test such service:
+That's ok until you need to test such service:
 
 ```php
 use App\SomeService;
@@ -121,7 +126,7 @@ It's fast and easy solution, but...
     <em class="fa fa-fw fa-lg fa-times"></em> Not a way to go in long-term or bigger projects.
 </p>
 
-Don't worry, you're not alone. There is over [36 results for "symfony tests private services" on StackOverflow](https://stackoverflow.com/search?q=symfony+tests+private+services) at the time being:
+Don't worry, you're not alone. There are over [36 results for "symfony tests private services" on StackOverflow](https://stackoverflow.com/search?q=symfony+tests+private+services) at the time being:
 
 <img src="/assets/images/posts/2018/private-services/popular.png" class="img-thumbnail">
 
@@ -175,15 +180,15 @@ final class SomeServiceTest extends TestCase
 }
 ```
 
-If there would only be one place with a switch, that would make that all code smells go away and let us test. That would be awesome, right? 
+If there would only be one place with a switch, that would make that all code smells go away and let us test. That would be awesome, right? How can we achieve that? Any ideas?
 
-How can we achieve that? Any ideas?
+### "What about Compiler Pass?"
 
-<br><br>
+Exactly, [a Compiler Pass](https://symfony.com/doc/current/service_container/compiler_passes.html)! **One of the best features in Symfony - by abilities and by architecture design**. It leads you to write nice, decoupled and reusable code by default.
 
-There is new class in [Symplify\PackageBuilder 4](/blog/2018/04/05/4-ways-to-speedup-your-symfony-development-with-packagebuilder/#2-drop-manual-code-public-true-code-for-every-service-you-test). 
+You can write your own (much recommended) or if you use PHPUnit, make use of the one in [Symplify\PackageBuilder](/blog/2018/04/05/4-ways-to-speedup-your-symfony-development-with-packagebuilder/#2-drop-manual-code-public-true-code-for-every-service-you-test): 
 
-```php
+```diff
  use Symfony\Component\HttpKernel\Kernel;
 +use Symplify\PackageBuilder\DependencyInjection\CompilerPass\PublicForTestsCompilerPass;
 
@@ -197,7 +202,7 @@ There is new class in [Symplify\PackageBuilder 4](/blog/2018/04/05/4-ways-to-spe
  }
 ```
 
-This removed all `public: true` code smells from Symplify, just [see this commit](https://github.com/Symplify/Symplify/pull/680/commits/eddc6d0db92000d4b1eb01c820863838ff37ac92):
+This removed all `public: true` code smells from Symplify, just [see this beautiful commit](https://github.com/Symplify/Symplify/pull/680/commits/eddc6d0db92000d4b1eb01c820863838ff37ac92):
 
 <img src="/assets/images/posts/2018/private-services/gone.png" class="img-thumbnail">
 
@@ -205,14 +210,51 @@ This removed all `public: true` code smells from Symplify, just [see this commit
     <em class="fa fa-fw fa-lg fa-check"></em> Voilá!
 </p>
 
-There is also similar package by friend of mine [Tobias Nyholm](http://tnyholm.se/) called [SymfonyTest/symfony-bundle-test](https://github.com/SymfonyTest/symfony-bundle-test). Check at least [the super short CompilerPass](https://github.com/SymfonyTest/symfony-bundle-test/blob/master/src/CompilerPass/PublicServicePass.php).
+### Where is the Magic?
 
-### Other Existing Solutions
+This is all the "magic" in [`PublicForTestsCompilerPass`](https://github.com/Symplify/Symplify/blob/7ed7fc08a4c8fed266caed4cc90cf56c35ea72b0/packages/PackageBuilder/src/DependencyInjection/CompilerPass/PublicForTestsCompilerPass.php#L11):
 
-I don't find them scalable nor useful, but maybe you will.
+```php
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+
+final class PublicForTestsCompilerPass implements CompilerPassInterface
+{
+    public function process(ContainerBuilder $containerBuilder): void
+    {
+        if (! $this->isPHPUnit()) {
+            return;
+        }
+        
+        foreach ($containerBuilder->getDefinitions() as $definition) {
+            $definition->setPublic(true);
+        }
+        
+        foreach ($containerBuilder->getAliases() as $definition) {
+            $definition->setPublic(true);
+        }
+    }
+    
+    private function isPHPUnit(): bool
+    {
+        // defined by PHPUnit
+        return defined('PHPUNIT_COMPOSER_INSTALL') || defined('__PHPUNIT_PHAR__');
+    }
+}
+```
+
+**It makes every services public, when in PHPUnit run**. Pretty clear, huh?
+
+There is also similar package by a friend of mine [Tobias Nyholm](http://tnyholm.se/) called [SymfonyTest/symfony-bundle-test](https://github.com/SymfonyTest/symfony-bundle-test). Check at least [the super short CompilerPass](https://github.com/SymfonyTest/symfony-bundle-test/blob/master/src/CompilerPass/PublicServicePass.php).
+
+## Other Existing Solutions
+
+I don't find them useful myself, but maybe you will.
 
 - [add per service manual alias as in `doctrine/DoctrineBundle` tests](https://github.com/doctrine/DoctrineBundle/blob/1f504e5dc538b8ee151e0943dea5127ceffd1436/Tests/ServiceRepositoryTest.php#L71)
-- [set propreties via `@inject` annotations with `jakzal/phpunit-injector` package](https://github.com/jakzal/phpunit-injector)
+- [set properties via `@inject` annotations with `jakzal/phpunit-injector` package](https://github.com/jakzal/phpunit-injector)
+
+### Diversity Matters
 
 **Do you have another solution? Just drop a comment, all add it here.**
 
