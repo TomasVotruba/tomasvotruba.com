@@ -6,9 +6,9 @@ perex: |
     **Do you use Symfony 3.4 or 4.0? Do you want to test your services, but struggle to get them in a clean way?**
     <br><br>
     Today we look at possible solutions.
-tweet: "New Post on My Blog: ..."
+tweet: "New Post on My Blog: How to Test Private Services in #Symfony #phpunit"
+tweet_image: "/assets/images/posts/2018/private-services/gone.png"
 ---
-
 
 If you know the problem and look only for a solution, jump right down to [Symfony 4.1 Standalone or Symfony 3.4/4.0 solution](#2-in-symfony-4-1-standalone-or-symfony-3-4-4-0).
 
