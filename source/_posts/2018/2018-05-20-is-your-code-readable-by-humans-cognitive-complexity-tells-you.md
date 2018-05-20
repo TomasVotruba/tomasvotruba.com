@@ -143,10 +143,12 @@ vendor/bin/ecs check src --fix
 
 ## Refactor to Lower Cognitive Complexity in Examples
 
+<a href="https://github.com/Symplify/Symplify/pull/823/files" class="btn btn-dark btn-sm">
+    <em class="fa fa-github fa-fw"></em>
+    See pull-request
+</a>
+
 Saying "refactoring this" is very simple, but actual work and teaching this others is very challenging task. To make this a bit easier for you, I've extracted few refactorings I made in Symplify thanks to this Sniff.
-
-@todo PR
-
 
 ### 1. Refactoring with Shorter Condition
 
