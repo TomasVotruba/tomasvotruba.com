@@ -6,20 +6,20 @@ perex: |
     <br><br>
     In the first post about PHP CLI Apps I wrote about [poor DI support in PHP CLI projects](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/).
     <br><br>
-    Today we look on the first barrier that leads most people to prefer static over DI - **how to load config with services**.    
+    Today we look on the first barrier that leads most people to prefer static over DI - **how to load config with services**.
 tweet: "New Post on My Blog: How to Load --config With Services in #Symfony Console #di #config #egg #chicken"
 tweet_image: "/assets/images/posts/2018/config-di-console/chicken-egg.jpg"
 related_items: [103]
 ---
 
 ```php
-vendor/bin/phpstan --configuration phpstan.neon 
+vendor/bin/phpstan --configuration phpstan.neon
 vendor/bin/ecs --config ecs.yml
 ```
 
 Can you spot the difference? Same CLI input, but:
- 
-- first has only [in-command container build for few classes](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#2-container-inceptions), 
+
+- first has only [in-command container build for few classes](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#2-container-inceptions),
 
 - second is [Application with full DI support](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), like a Symfony App.
 
@@ -29,7 +29,7 @@ Today you'll learn **how** to get from first to second, knowing **why** and all 
 
 <img src="/assets/images/posts/2018/config-di-console/chicken-egg.jpg" class="img-thumbnail">
 
-This addresses a problem (or rather mind-exercise) of [injection inception](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#injection-inception-problem) aka *chicken vs. egg*. Because this might be a little bit confusing, I try to describe it in 3 different forms: 
+This addresses a problem (or rather mind-exercise) of [injection inception](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#injection-inception-problem) aka *chicken vs. egg*. Because this might be a little bit confusing, I try to describe it in 3 different forms:
 
 ### A. In Chicken vs. Egg Form
 
@@ -39,7 +39,7 @@ We need *an egg*, so we can create *a chicken*. We can get *an egg* thanks to *a
 
 We need a config to create a container. We can get a config thanks to `Symfony\Component\Console\Application`. With this value, we can create a container. Then we need to get a `Symfony\Component\Console\Application` service and call `run()` method on it.
 
-### C. In Implementation Form 
+### C. In Implementation Form
 
 Are you lost? That's all right. Let's see it in a list:
 
@@ -80,7 +80,7 @@ Use static approach, no services config, just list of items. Most spread solutio
 ### How if Fits?
 
 <em class="fa fa-fw fa-lg fa-check text-success"></em> Ready in 2 minutes
- 
+
 <em class="fa fa-fw fa-lg fa-times text-danger"></em> Well, static
 
 ## 2. DI for Poor People: Container in a Command
@@ -100,7 +100,7 @@ class SomeCommand extends Command
     {
         $containerBuilder = new ContainerBuilder;
         $containerBuilder->addConfig($input->getOption('config'));
-        $container = $containerBuilder->build(); 
+        $container = $containerBuilder->build();
 
         $someService = $container->get(SomeService::class);
         // ...
@@ -114,9 +114,9 @@ class SomeCommand extends Command
 
 <em class="fa fa-fw fa-lg fa-times text-danger"></em> Only local scope, we need to re-create container everywhere we need it
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> The Chicken vs. Egg problem still remains very clear 
+<em class="fa fa-fw fa-lg fa-times text-danger"></em> The Chicken vs. Egg problem still remains very clear
 
-## 3. Kill the Egg: The bin File Tuning 
+## 3. Kill the Egg: The bin File Tuning
 
 When I worked on the first version of [nette/coding-standard](https://github.com/nette/coding-standard)
 almost a year ago, David came with question: "how to use ECS with 2 different configs - one for PHP 5.6 and one for PHP 7.0"?
@@ -124,7 +124,7 @@ almost a year ago, David came with question: "how to use ECS with 2 different co
 ```php
 vendor/bin/ecs check src --config vendor/nette/cofing-standard/php56.yml
 vendor/bin/ecs check src --config vendor/nette/cofing-standard/php70.yml
-```  
+```
 
 I had no idea. So I created [this issue at Symplify](https://github.com/Symplify/Symplify/issues/192) and praised the open-source Gods, because current version of `bin/ecs` was as simple as:
 
@@ -139,7 +139,7 @@ $container = (new ContainerFactory)->create();
 
 $application = $container->get(Symfony\Component\Console\Application::class);
 $application->run();
-``` 
+```
 
 <br>
 
@@ -181,7 +181,7 @@ bin/ecs check src --config custom-config.yml
 ```
 
 And see how all nicely works on the 1st run:
- 
+
 <img src="/assets/images/posts/2018/config-di-console/ups.png" class="img-thumbnail">
 
 Or not. Oh, it looks like we need to add `config` option to the `CheckCommand` definition:
@@ -204,14 +204,14 @@ So far so good.
 
 <br>
 
-Later, a `ShowCommand` was added: 
+Later, a `ShowCommand` was added:
 
 ```bash
 bin/ecs show --config custom-config.yml
 ```
 
 And we see our old friend again:
- 
+
 <img src="/assets/images/posts/2018/config-di-console/ups.png" class="img-thumbnail">
 
 What now? Add the `config` option to the `ShowCommand` definition?
@@ -227,7 +227,7 @@ What now? Add the `config` option to the `ShowCommand` definition?
          // ...
 +        $this->addOption('config', null, InputOption::VALUE_REQUIRED, 'Config file.');
      }
- }        
+ }
 ```
 
 Wait a bit... Can you smell it?
@@ -240,12 +240,12 @@ Wait a bit... Can you smell it?
 
 <br>
 
-What else can we do to **solve this once and for all** and release our memory to work on more important things? 
+What else can we do to **solve this once and for all** and release our memory to work on more important things?
 
 ### Common Options to all Commands
 
 Let me think... I've seen something like this before:
- 
+
 ```bash
 vendor/bin/ecs check /src -v
 vendor/bin/ecs show -v
@@ -261,7 +261,7 @@ namespace Symfony\Component\Console;
 class Application
 {
     // ...
-    
+
     protected function getDefaultInputDefinition()
     {
         return new InputDefinition(array(
@@ -291,10 +291,10 @@ final class Application extends SymfonyApplication
     protected function getDefaultInputDefinition()
     {
         $inputDefinition = parent::getDefaultInputDefinition();
-        
+
         // adds "--config" option
         $inputDefinition->addOption(new InputOption('config', null, InputOption::VALUE_REQUIRED, 'Config file.'));
-            
+
         return $inputDefinition;
     }
 }
@@ -326,7 +326,7 @@ bin/ecs check src --config custom-config.yml
 
 <em class="fa fa-fw fa-lg fa-check text-success"></em> Setup & Forget
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> Much more legacy-proof 
+<em class="fa fa-fw fa-lg fa-check text-success"></em> Much more legacy-proof
 
 <em class="fa fa-fw fa-lg fa-check text-success"></em> We can now use Dependency Injection **everywhere we need**
 
@@ -340,7 +340,7 @@ Do you have a CLI App and do you find DI approach useful? Do you have `--config`
 
 ```php
 vendor/bin/ecs check src --level clean-code
-``` 
+```
 
 Yes? Then go check:
 
