@@ -1,18 +1,21 @@
 ---
-id: 107 
-title: "How Big is Cognitive Complexity of Your Code"
+id: 107
+title: "Is Your Code Readable By Humans? Cognitive Complexity Tells You"
 perex: |
     Cyclomatic complexity is a static analysis measure of how difficult is code to test.
-    **Cognitive complexity** tells us, how difficult code is to understand by you.
+    **Cognitive complexity** tells us, how difficult code is to understand by reader.
     <br>
-    Today, we'll see which is better and why and how to check it in your code with a Sniff.
+    <br>
+    Today, we'll see why is the later better and how to check it in your code with a Sniff.
 tweet: "New Post on My Blog: ..."
 tweet_image: "..."
 ---
 
-I read about [Cyclomatic Complexity](https://pehapkari.cz/blog/2018/04/04/cyklomaticka-komplexita/) on Péhápkaři blog, where Tomáš Horváth references me to [Cognitive Complexity, Because Testability != Understandability](https://blog.sonarsource.com/cognitive-complexity-because-testability-understandability) post on SonarSource (part of SonarQube).
+## What is Cognitive Complexity?
 
-The most important source I found on this was [a 21-page long PDF](https://www.sonarsource.com/docs/CognitiveComplexity.pdf), with clear examples in various languages:
+*Tomáš Horváth* referenced me to [Cognitive Complexity, Because Testability != Understandability](https://blog.sonarsource.com/cognitive-complexity-because-testability-understandability) under the [Cyclomatic Complexity](https://pehapkari.cz/blog/2018/04/04/cyklomaticka-komplexita/) post. Thank you Tomas.
+
+The most important source about *Cognitive Complexity* is [a 21-page long PDF](https://www.sonarsource.com/docs/CognitiveComplexity.pdf). Instead of explaining in words (you can read that in the PDF), **here are 2 examples that speak more than thousand words**:
 
 <table class="table table-bordered table-responsive">
     <thead class="thead-inverse">
@@ -47,12 +50,11 @@ function getWords($number) {
       default:
         return "lots";
     }
-}        
+}
             </code></pre>
         </td>
     </tr>
-</table> 
-
+</table>
 
 <table class="table table-bordered table-responsive">
     <thead class="thead-inverse">
@@ -72,10 +74,10 @@ function sumOfPrimes($max) {            // +1
                 continue 2;
             }
         }
-        
+
         $total += $i;
     }
-    
+
     return $total;
 }
             </code></pre>
@@ -90,22 +92,29 @@ function sumOfPrimes($max) {
                 continue 2;             // +1
             }
         }
-        
+
         $total += $i;
     }
-    
+
     return $total;
-}            
+}
             </code></pre>
         </td>
     </tr>
-</table> 
+</table>
 
-## Automation Over Information 
+If I should put it in own words, the *cognitive complexity* is **how difficult is to understand
+a function and all its possible paths**.
 
-This is *a nice to know* information. The one that will hold in our brain for few days, then we forget it and never meet it again.
+- The example A. with 1: **there is a `switch()` and based on `$number` returns specific value.** Even if there are 50 `case:`, the story is still the same.
 
-**What's even better?** Information we can mostly forget but is still with us - *an automation*. I looked on Github for code that could analyse it and found only few "sniffs" in Java. What about PHP?
+- The example B. with 1: **there is a `switch()` and based on `$number` returns specific value.** Even if there are 50 `case:`, the story is still the same.
+
+## Automation Over Information
+
+This all is nice to know information. The one that you might find interesting, remember it for few days and then forget it and never meet it again.
+
+But I'm too lazy to *learn to just forget*, so I *learn to automate*. This is exactly place for [a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
 
 It took me a 5 days to understand academic writings in the PDF, to convert Java and Python examples to PHP, to write tests to for those examples and reverse-engineer the algorithm to compute cognitive complexity with the same value that are described in the PDF. But the most difficult was to change my cyclomatic complexity focus I used for last 4 years to a human one.
 
@@ -137,7 +146,7 @@ services:
         maxCognitiveComplexity: 20
 ```
 
-Or even 50. 
+Or even 50.
 
 ### How To Set New Checker Not To Command You
 
@@ -152,16 +161,20 @@ There is also *lazy kaizen way*:
 **3. Run it**
 
 ```bash
+# dry run
 vendor/bin/ecs check src
-```
- 
-### Refactoring Towards Cognitive Complexity
 
-Saying "refactoring this" is very simple, but actual work and moreover actual teaching this others is very challenging task. To make this a bit easier for you, I've extracted few refactorings I made in Symplify thanks to this Sniff: 
-
-```php
-...
+# fix run
+vendor/bin/ecs check src --fix
 ```
+
+### Refactor to Low Cognitive Complexity in Examples
+
+Saying "refactoring this" is very simple, but actual work and moreover actual teaching this others is very challenging task. To make this a bit easier for you, I've extracted few refactorings I made in Symplify thanks to this Sniff.
+
+<br>
+
+Refactoring with shorter condition:
 
 ```diff
 index 83ca0da5..125f7c7f 100644
@@ -169,7 +182,7 @@ index 83ca0da5..125f7c7f 100644
 +++ b/packages/TokenRunner/src/Wrapper/FixerWrapper/DocBlockWrapper.php
 @@ -160,17 +160,9 @@ final class DocBlockWrapper
          }
- 
+
          if ($typeNode instanceof IdentifierTypeNode) {
 -            if ($typeNode->name === 'array') {
 -                return true;
@@ -182,22 +195,16 @@ index 83ca0da5..125f7c7f 100644
 -            return true;
 +            return $typeNode->name === 'array';
          }
- 
+
 -        return false;
 +        return $typeNode instanceof ArrayTypeNode;
      }
  }
+```
 
+Refactoring with method extraction:
 
-
-
-
-
-
-
-
-
-
+```diff
 --- a/packages/CodingStandard/src/Fixer/Commenting/RemoveEmptyDocBlockFixer.php
 +++ b/packages/CodingStandard/src/Fixer/Commenting/RemoveEmptyDocBlockFixer.php
 @@ -48,16 +48,7 @@ final class RemoveEmptyDocBlockFixer extends AbstractFixer
@@ -217,7 +224,7 @@ index 83ca0da5..125f7c7f 100644
 +            if ($this->shouldSkip($tokens, $index)) {
                  continue;
              }
- 
+
 @@ -77,4 +68,18 @@ final class RemoveEmptyDocBlockFixer extends AbstractFixer
              }
          }

@@ -15,7 +15,7 @@ If you know the problem and look only for a solution, jump right down to [Symfon
 ---
 
 Since [Symfony 3.4 all services are private by default](https://symfony.com/blog/new-in-symfony-3-4-services-are-private-by-default).
-That means you can't get service by `$this->get(App\SomeService::class)` or `$this->container->get(App\SomeService::class)` anymore, but **only only via constructor**. 
+That means you can't get service by `$this->get(App\SomeService::class)` or `$this->container->get(App\SomeService::class)` anymore, but **only only via constructor**.
 
 That's ok until you need to test such service:
 
@@ -30,7 +30,7 @@ final class SomeServiceTest extends TestCase
         $kernel = new AppKernel;
         $kernel->boot();
         $container = $kernel->getContainer();
-        
+
         // this line is important ↓
         $someService = $container->get(SomeService::class);
         // ...
@@ -48,7 +48,7 @@ This exception will stop us:
 
 ```yaml
 The "App\SomeService" service or alias has been removed or inlined when the container
-was compiled. You should either make it public, or stop using the container directly 
+was compiled. You should either make it public, or stop using the container directly
 and use dependency injection instead.
 ```
 
@@ -61,12 +61,12 @@ Ok!
  services:
      _defaults:
          autowire: true
-         
+
      App\:
          resource: ..
 +
 +    App\SomeService:
-+        public: true    
++        public: true
 ```
 
 And run tests again:
@@ -81,33 +81,33 @@ vendor/bin/phpunit tests
 
 ## Down the Smelly Rabbit Hole
 
-As you can see, we can load dozens of service from `App\` by 2 lines. But to test 1, we need to add 2 extra lines to config. 
+As you can see, we can load dozens of service from `App\` by 2 lines. But to test 1, we need to add 2 extra lines to config.
 
 ```diff
  # app/config/config.yml
  services:
      _defaults:
          autowire: true
-         
+
      App\:
          resource: ..
-+         
++
 +    # for tests only
 +    App\SomeService:
-+        public: true    
++        public: true
 +
 +    App\AnotherService:
-+        public: true    
++        public: true
 +
 +    App\YetAnotherService:
-+        public: true    
++        public: true
 ```
 
 This is *one to many* code smell.
 
 Also, we can **extract it to test config** `tests/config/config.yml`, so it's easier to hide the smell.
 
-Or just **make everything public**, like [I did in Symplify 6 months ago](https://github.com/Symplify/Symplify/commit/d0457773915fa32df08e7342d5cd0093f97850ff): 
+Or just **make everything public**, like [I did in Symplify 6 months ago](https://github.com/Symplify/Symplify/commit/d0457773915fa32df08e7342d5cd0093f97850ff):
 
 ```diff
  services:
@@ -120,7 +120,7 @@ Or just **make everything public**, like [I did in Symplify 6 months ago](https:
           resource: ..
 ```
 
-It's fast and easy solution, but... 
+It's fast and easy solution, but...
 
 <p class="text-danger pt-3 pb-3">
     <em class="fa fa-fw fa-lg fa-times"></em> Not a way to go in long-term or bigger projects.
@@ -130,19 +130,19 @@ Don't worry, you're not alone. There are over [36 results for "symfony tests pri
 
 <img src="/assets/images/posts/2018/private-services/popular.png" class="img-thumbnail">
 
-But what other saint options we have? 
- 
+But what other saint options we have?
+
 ## 1. In Symfony 4.1 with FrameworkBundle
 
-This is now fixed in 
+This is now fixed in
 <a href="https://symfony.com/blog/new-in-symfony-4-1-simpler-service-testing">Symfony 4.1 with Simpler service testing</a>.
- 
-Do you use
- 
-- `Symfony\Bundle\FrameworkBundle\Test\KernelTestCase` or
-- `Symfony\Bundle\FrameworkBundle\Test\WebTestCase` 
 
-for your tests? **Just upgrade to Symfony 4.1 and you're done.** 
+Do you use
+
+- `Symfony\Bundle\FrameworkBundle\Test\KernelTestCase` or
+- `Symfony\Bundle\FrameworkBundle\Test\WebTestCase`
+
+for your tests? **Just upgrade to Symfony 4.1 and you're done.**
 
 ## 2. In Symfony 4.1 Standalone or Symfony 3.4/4.0
 
@@ -173,7 +173,7 @@ final class SomeServiceTest extends TestCase
         $kernel = new AppKernel;
         $kernel->boot();
         $container = $kernel->getContainer();
-        
+
         $someService = $container->get(SomeService::class);
         // ...
     }
@@ -186,7 +186,7 @@ If there would only be one place with a switch, that would make that all code sm
 
 Exactly, [a Compiler Pass](https://symfony.com/doc/current/service_container/compiler_passes.html)! **One of the best features in Symfony - by abilities and by architecture design**. It leads you to write nice, decoupled and reusable code by default. After all, the solution for Symfony 4.1 is done by [Compiler Pass, that creates public 'test.service-name' aliases](https://github.com/symfony/symfony/pull/26499/files#diff-ce4ed09b11d8fa531159e96df52124f3).
 
-You can write your own that covers needs of your own application (much recommended) or if you use PHPUnit, make use of the one in [Symplify\PackageBuilder](/blog/2018/04/05/4-ways-to-speedup-your-symfony-development-with-packagebuilder/#2-drop-manual-code-public-true-code-for-every-service-you-test): 
+You can write your own that covers needs of your own application (much recommended) or if you use PHPUnit, make use of the one in [Symplify\PackageBuilder](/blog/2018/04/05/4-ways-to-speedup-your-symfony-development-with-packagebuilder/#2-drop-manual-code-public-true-code-for-every-service-you-test):
 
 ```diff
  use Symfony\Component\HttpKernel\Kernel;
@@ -225,16 +225,16 @@ final class PublicForTestsCompilerPass implements CompilerPassInterface
         if (! $this->isPHPUnit()) {
             return;
         }
-        
+
         foreach ($containerBuilder->getDefinitions() as $definition) {
             $definition->setPublic(true);
         }
-        
+
         foreach ($containerBuilder->getAliases() as $definition) {
             $definition->setPublic(true);
         }
     }
-    
+
     private function isPHPUnit(): bool
     {
         // defined by PHPUnit
