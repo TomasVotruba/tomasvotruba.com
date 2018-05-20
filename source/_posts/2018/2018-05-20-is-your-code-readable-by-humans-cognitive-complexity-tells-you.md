@@ -7,8 +7,8 @@ perex: |
     <br>
     <br>
     Today, we'll see why is the later better and how to check it in your code with a Sniff.
-tweet: "New Post on My Blog: ..."
-tweet_image: "..."
+tweet: "New Post on My Blog: Is Your Code Readable By Humans? Cognitive Complexity Tells You #codingstandard #sonarcube #sniff #complexity #solid"
+tweet_image: "/assets/images/posts/2018/cognitive-complexity/tweet.png"
 ---
 
 ## What is Cognitive Complexity?
