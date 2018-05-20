@@ -3,7 +3,7 @@ id: 107
 title: "Is Your Code Readable By Humans? Cognitive Complexity Tells You"
 perex: |
     Cyclomatic complexity is a static analysis measure of how difficult is code to test.
-    **Cognitive complexity** tells us, how difficult code is to understand by reader.
+    **Cognitive complexity** tells us, how difficult code is to understand by a reader.
     <br>
     <br>
     Today, we'll see why is the later better and how to check it in your code with a Sniff.
@@ -15,7 +15,7 @@ tweet_image: "..."
 
 *Tomáš Horváth* referenced me to [Cognitive Complexity, Because Testability != Understandability](https://blog.sonarsource.com/cognitive-complexity-because-testability-understandability) under the [Cyclomatic Complexity](https://pehapkari.cz/blog/2018/04/04/cyklomaticka-komplexita/) post. Thank you Tomas.
 
-The most important source about *Cognitive Complexity* is [a 21-page long PDF](https://www.sonarsource.com/docs/CognitiveComplexity.pdf). Instead of explaining in words (you can read that in the PDF), **here are 2 examples that speak more than thousand words**:
+The most important source about *Cognitive Complexity* is [a 21-page long PDF](https://www.sonarsource.com/docs/CognitiveComplexity.pdf). Instead of explaining in words (you can read that in the PDF), **here are 2 examples that speak more than a thousand words**:
 
 <br>
 
@@ -94,17 +94,17 @@ function sumOfPrimes($max) {
 If I should put it in own words, the *cognitive complexity* is **how difficult is to understand
 a function and all its possible paths**.
 
-- Example A: **there is a `switch()` and based on `$number` returns specific value.** Even if there are 50 `case:`, the story is still the same.
+- Example A: **there is a `switch()` and based on `$number` returns a specific value.** Even if there are 50 `case:`, the story is still the same.
 
 - Example B: **there are 3 `for`s, with nesting and one continue to non-self level**.
 
 ## Automation Over Information
 
-This all is nice to know information. The one that you might find interesting, remember it for few days and then forget it and never meet it again. But I'm too lazy to *learn to just forget*, so I *learn to automate*. This is exactly place for [to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
+This all is nice to know information. The one that you might find interesting, remember it for few days and then forget it and never meet it again. But I'm too lazy to *learn to just forget*, so I *learn to automate*. This is place [to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
 
-It took me a 5 days to understand academic writings in the PDF, to convert Java and Python examples to PHP and reverse-engineer the algorithm to compute cognitive complexity to match results in the PDF. **The most difficult was to change my cyclomatic complexity approach I used for last 4 years to a human one**.
+It took me 5 days to understand academic writings in the PDF, to convert Java and Python examples to PHP and reverse-engineer the algorithm to compute cognitive complexity to match results in the PDF. **The most difficult was to change the cyclomatic complexity approach I used for last 4 years to a human one**.
 
-Now, I'm happy to present you 1st version of this Sniff, that can you use today in your code.
+Today, I'm happy to show you the first version of `CognitiveComplexitySniff`.
 
 ## 3 Steps to Check Cognitive Complexity of Your Code
 
@@ -148,9 +148,9 @@ vendor/bin/ecs check src --fix
     See pull-request
 </a>
 
-Saying "refactoring this" is very simple, but actual work and teaching this others is very challenging task. To make this a bit easier for you, I've extracted few refactorings I made in Symplify thanks to this Sniff.
+Saying "refactoring this" is very simple, but actual work and teaching others is a very challenging task. To make this a bit easier for you, I've extracted few refactorings I made in Symplify thanks to this Sniff.
 
-### 1. Refactoring with Shorter Condition
+### 1. Refactoring to Shorter Condition
 
 ```diff
 index 83ca0da5..125f7c7f 100644
@@ -221,6 +221,36 @@ index 83ca0da5..125f7c7f 100644
 +    }
  }
 ```
+
+### 3. Refactoring to Responsible Method
+
+```diff
+diff --git a/packages/CodingStandard/src/Fixer/Import/ImportNamespacedNameFixer.php b/packages/CodingStandard/src/Fixer/Import/ImportNamespacedNameFixer.php
+index 1d532ca58..8aa7981cb 100644
+--- a/packages/CodingStandard/src/Fixer/Import/ImportNamespacedNameFixer.php
++++ b/packages/CodingStandard/src/Fixer/Import/ImportNamespacedNameFixer.php
+@@ -148,10 +148,6 @@ public function fix(SplFileInfo $file, Tokens $tokens): void
+             }
+
+             if ($token->isGivenKind(T_DOC_COMMENT)) {
+-                if (! $this->configuration[self::INCLUDE_DOC_BLOCKS_OPTION]) {
+-                    continue;
+-                }
+-
+                 $this->processDocCommentToken($index, $tokens);
+                 continue;
+             }
+@@ -274,6 +270,10 @@ private function processStringToken(Token $token, int $index, Tokens $tokens): v
+
+     private function processDocCommentToken(int $index, Tokens $tokens): void
+     {
++        if (! $this->configuration[self::INCLUDE_DOC_BLOCKS_OPTION]) {
++            return;
++        }
++
+         $phpDocInfo = $this->phpDocInfoFactory->createFrom($tokens[$index]->getContent());
+         $phpDocNode = $phpDocInfo->getPhpDocNode();
+ ```
 
 <br><br>
 
