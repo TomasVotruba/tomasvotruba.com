@@ -37,6 +37,16 @@ inspiration:
 
         <hr>
 
+        <ul class="checklist">
+            <li class="checklist__item">
+                <input class="checklist__input" type="checkbox" id="item_1" value="1" checked="checked">
+                <label class="checklist__label" for="item_1"></label>
+                <div class="checklist__details">
+                    ratata
+                </div>
+            </li>
+        </ul>
+
         {foreach $little_books as $little_book}
             <h2 id="{$little_book['title']|webalize}">{$little_book['title']}</h2>
 
