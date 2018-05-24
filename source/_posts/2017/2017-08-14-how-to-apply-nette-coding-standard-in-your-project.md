@@ -50,7 +50,7 @@ Nette packages require this approach, because NCS depends on many Nette packages
 
 The easiest way is to setup `.travis.yml`:
 
-```bash
+```yaml
 install:
     - composer create-project nette/coding-standard temp/nette-coding-standard
 
