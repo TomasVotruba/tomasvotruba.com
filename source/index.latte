@@ -30,21 +30,33 @@ id: blog
                     </div>
                 {/if}
 
-                <article n:class="text-left, $wasFirstPostMarked ? col-md-6 : col-md-12">
-                    <h2 n:class="!$wasFirstPostMarked ? firstPost">
-                        <a href="/{$post['relativeUrl']}/">
-                            {$post['title']|noescape}
-                        </a>
-                    </h2>
+                {if $iterator->getCounter() <= 3}
+                    <article n:class="text-left, $wasFirstPostMarked ? col-md-6 : col-md-12, pt-2, pb-4">
+                        <h2 n:class="!$wasFirstPostMarked ? firstPost">
+                            <a href="/{$post['relativeUrl']}/">
+                                {$post['title']|noescape}
+                            </a>
+                        </h2>
 
-                    {include "postMetadataLine", post => $post}
+                        {include "postMetadataLine", post => $post}
 
-                    {if !$wasFirstPostMarked}
-                        <p class="mt-3">{$post['perex']|noescape}</p>
-                    {/if}
+                        {if !$wasFirstPostMarked}
+                            <p class="mt-3">{$post['perex']|noescape}</p>
+                        {/if}
 
-                    {var $wasFirstPostMarked = true}
-                </article>
+                        {var $wasFirstPostMarked = true}
+                    </article>
+                {else}
+                    <article class="text-left col-md-12 pt-1 pb-3">
+                        <h3>
+                            <a href="/{$post['relativeUrl']}/">
+                                {$post['title']|noescape}
+                            </a>
+                        </h3>
+
+                        {include "postMetadataLine", post => $post}
+                    </article>
+                {/if}
             {/foreach}
         </div>
 
