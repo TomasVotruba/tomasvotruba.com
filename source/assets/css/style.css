@@ -135,6 +135,19 @@ article {
     border-bottom: 1px solid #eeeeee;
 }
 
+#blog #welcome h1 {
+    text-align: left;
+    font-size: 1.4em;
+    border-bottom: 0;
+    padding: 0;
+    margin: .4em 0 .6em 0;
+}
+
+#welcome p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
 #blog h2 {
     margin-bottom: .2em;
 }
