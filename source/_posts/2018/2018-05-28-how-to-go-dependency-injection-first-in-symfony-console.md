@@ -1,0 +1,159 @@
+---
+id: 109
+title: "..."
+perex: |
+    Series about PHP Cli Apps continues with 3rd part about writing Symfony Console Application with Depenendency Injection in the first place. Not last, not second, **but the first**. 
+    <br>
+    Luckily, is easy to start using it and very difficult to  
+tweet: "New Post on My Blog: ..."
+---
+
+## Symfony Evolution
+
+[7 years ago it was total nightmare to use Controllers as services](http://richardmiller.co.uk/2011/04/15/symfony2-controller-as-service/). Luckily, Symfony evolved a lot in this matter and using Symfony 4.0 packages in brand new application is much more simpler than it was in Symfony 2.8 or even 3.2. The very same evolutoin allowed to enter Dependency Injection to Symfony Console-based PHP Cli App.
+
+## Commadns as Services
+
+I already wrote about [why is this important](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), today we look on **how to actually do it**. To be clear, how to do it without need of bloated FrameworkBundle, that is official but [rather bad-practise solutoin](https://matthiasnoback.nl/2013/10/symfony2-console-commands-as-services-why/).    
+
+## 3 Steps to First Command as a Service
+
+We need 3 elements: classic Kernel, bin file - entry point to our application and `service.yml` file with PSR-4 autodiscovery.
+
+### 1. `services.yml`
+
+Simple things first. Create `config/services.yml` with classic [PSR-4 autodiscovery/autowire setup](https://github.com/symfony/symfony/pull/21289#issue-101559374): 
+
+```yml
+# config/services.yml
+services:
+    _defaults:
+        autowire: true
+
+    App\:
+        resource: '../app'
+```
+
+### 2. Kernel
+
+The basic stone of all Symfony Applications. Nothing extra here, we just load the `config/services.yml` from the previous step:
+
+```php
+<?php
+
+# app/Kernel.php
+
+use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+
+final class AppKernel extends Kernel
+{
+    /**
+     * In more complex app, add bundles here
+     */
+    public function registerBundles(): array
+    {
+        return [];
+    }
+
+    /**
+     * Load all services
+     */
+    public function registerContainerConfiguration(LoaderInterface $loader): void
+    {
+        $loader->load(__DIR__ . '/../config/services.yml');
+    }
+}
+``` 
+
+There is one more thing. We'll
+
+### 3. The bin file
+
+Last but not least the entry point to our application - `bin/some-app`. That's basically twin-brother of [`public/index.php`](https://github.com/symfony/demo/blob/beb3aa8e988527f16ac50f792eede240fafbfdfc/public/index.php#L35-L39), just for CLI Apps.
+
+```php
+# bin/some-app
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$kernel = new AppKernel;
+$kernel->boot();
+
+$container = $kernel->getContainer();
+$application = $container->get(Application::class)
+$application->run();
+```
+
+So let's say we have a `App\Command\SomeCommand` with `some` name and we want to run it:
+
+```bash
+bin/some-app some
+```
+
+But we get:
+
+```bash
+Command "some" is not defined. 
+```
+
+Why? The `App\Command\SomeCommand` class exists, in `app/Command/SomeCommand.php` file, the `config/services.yml` loads it, `composer.json` section `autoload` is corretly filled, composer was dumped with `composer dump`... what are we missing?
+
+Oh, the commands were not added to the `Application` class.
+
+### How to All Service of Type A to Services of Type B  
+
+This is the place to use famous [collector](/blog/2018/03/08/why-is-collector-pattern-so-awesome/#drop-that-expression-language-magic) pattern.
+ 
+```php
+# app/Kernel.php
+
+// ...
+
+use use Symfony\Component\Console\Application;
+use use Symfony\Component\Console\Command\Command;
+
+// ...
+
+{
+    protected function build(ContainerBuilder $containerBuilder): void
+    {
+        $applicationDefinition = $containerBuilder->getDefinition(Application::class);
+
+        foreach ($containerBuilder->getDefinitions() as $definition) {
+            if (is_a($definition->getClass(), Command::class, true)) {
+                $applicationDefinition->addMethodCall('add', ['@' . $definition->getClass()]);
+            }
+        }
+    }
+    
+    // ...
+}
+```
+
+This will compile to something like this:
+
+```php
+function createApplication()
+{
+    $application = new Application;
+    $application->add($someCommand);
+    
+    return $application;
+}
+```
+
+Now let's try it again:
+
+```bash
+bin/some-app some
+```
+
+It works! And that's it. I told you it'll be easy - how can we not love Symfony :)
+
+<br><br>
+
+Happy coding!
