@@ -71,12 +71,12 @@ a:focus {
     outline-offset: -2px;
 }
 
-h2 a, h2 a:active {
+h2 a, h2 a:active, h3 a, h3 a:active  {
     color: #7A1E48;
     text-decoration: none;
 }
 
-h2 a:hover, h2 a:focus {
+h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus {
     color: #7A1E48;
     text-decoration: underline;
 }
@@ -132,8 +132,20 @@ pre {
 }
 
 article {
-    padding: .5em 0 2em;
     border-bottom: 1px solid #eeeeee;
+}
+
+#blog #welcome h1 {
+    text-align: left;
+    font-size: 1.4em;
+    border-bottom: 0;
+    padding: 0;
+    margin: .4em 0 .6em 0;
+}
+
+#welcome p {
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
 
 #blog h2 {
