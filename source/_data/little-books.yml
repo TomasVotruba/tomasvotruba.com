@@ -3,7 +3,7 @@ parameters:
         -
             title: "Writing PHP CLI Apps with Symfony"
             year_released: 2018
-            post_ids: [103, 105]
+            post_ids: [103, 105, 109]
 
         -
             title: "Mastering Open-Source"
