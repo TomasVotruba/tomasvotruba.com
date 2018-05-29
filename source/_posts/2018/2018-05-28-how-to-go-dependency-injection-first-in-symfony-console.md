@@ -173,7 +173,8 @@ Now let's try it again:
 bin/some-app some
 ```
 
-It works! And that's it. I told you it'll be easy - how can we not love Symfony :)
+It works! And that's it. I told you it'll be easy - how can we not love Symfony :).
+Do you still struggle with some parts? Don't worry, this post is tested by PHPUnit, so you can find all the code mentioned here - just click on "Tested" in the top of the post to see it.
 
 <br><br>
 
