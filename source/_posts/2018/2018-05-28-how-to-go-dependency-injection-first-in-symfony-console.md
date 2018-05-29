@@ -2,7 +2,7 @@
 id: 109
 title: "Build Your First Symfony Console Application with Dependency Injection Under 4 Files"
 perex: |
-    Series about PHP Cli Apps continues with 3rd part about writing Symfony Console Application with Dependency Injection in the first place. Not last, not second, **but the first**.
+    Series about PHP CLI Apps continues with 3rd part about writing Symfony Console Application with Dependency Injection in the first place. Not last, not second, **but the first**.
     <br>
     Luckily, is easy to start using it and very difficult to
 tweet: "New Post on My Blog: Build Your First #Symfony Console Application with Dependency Injection Under 4 Files #cli #php"
@@ -12,11 +12,11 @@ test_slug: ConsoleDI
 
 ## Symfony Evolution
 
-[7 years ago it was total nightmare to use Controllers as services](http://richardmiller.co.uk/2011/04/15/symfony2-controller-as-service/). Luckily, Symfony evolved a lot in this matter and using Symfony 4.0 packages in brand new application is much more simpler than it was in Symfony 2.8 or even 3.2. The very same evolutoin allowed to enter Dependency Injection to Symfony Console-based PHP Cli App.
+[7 years ago it was a total nightmare to use Controllers as services](http://richardmiller.co.uk/2011/04/15/symfony2-controller-as-service/). Luckily, Symfony evolved a lot in this matter and using Symfony 4.0 packages in a brand new application is much simpler than it was in Symfony 2.8 or even 3.2. The very same evolution allowed to enter Dependency Injection to Symfony Console-based PHP CLI App.
 
 ### Commands as Services
 
-I already wrote about [why is this important](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), today we look on **how to actually do it**. To be clear, how to do it without need of bloated FrameworkBundle, that is official but [rather bad-practise solution](https://matthiasnoback.nl/2013/10/symfony2-console-commands-as-services-why/).
+I already wrote about [why is this important](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), today we look at **how to actually do it**. To be clear, how to do it without the need of bloated FrameworkBundle, that is an official but [rather bad-practice solution](https://matthiasnoback.nl/2013/10/symfony2-console-commands-as-services-why/).
 
 ## 3 Steps to First Command as a Service
 
@@ -118,9 +118,9 @@ Why? We're sure that:
 - it's located in `app/Command/SomeCommand.php` file
 - the `config/services.yml` loads it
 - `composer.json` section `autoload` is correctly configured
-- composer was dumped with `composer dump`...
+- `vendor/autoload.php` was dumped with `composer dump`...
 
-What are we missing? Oh, we forgot to **load commands to the `Application` service**. Everything works, but our application doesn't know about our commands. It's like if web application doesn't know where to find the controller.
+What are we missing? Oh, we forgot to **load commands to the `Application` service**. Everything works, but our application doesn't know about our commands. It's like if the web application doesn't know where to find the controller.
 
 ### How to Add All Services of Type A to Service of Type B
 
