@@ -312,6 +312,18 @@ And use our `Application` in `bin/rector`:
  $application->run();
 ```
 
+Don't foget to update `services.yml`:
+
+```diff
+ services:
+     _defaults:
+         autowire: true
+
+-    Symfony\Component\Console\Application:
++    Symplify\ChangelogLinker\Console\Application:
+         public: true # for bin file
+```
+
 And let's try this again:
 
 ```bash

@@ -33,7 +33,7 @@ The simplest things first.
 
 Create `config/services.yml` with classic [PSR-4 autodiscovery/autowire setup](https://github.com/symfony/symfony/pull/21289#issue-101559374) and register `Symfony\Component\Console\Application` as well. We will use this class later.
 
-```yml
+```yaml
 # config/services.yml
 services:
     _defaults:
@@ -43,7 +43,8 @@ services:
         resource: '../app'
 
     Symfony\Component\Console\Application:
-        # why public? so we can get it from container in bin file via "$container->get(Application::class)"
+        # why public? so we can get it from container in bin file 
+        # via "$container->get(Application::class)"
         public: true
 ```
 
