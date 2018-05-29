@@ -33,7 +33,7 @@ id: blog
 
                 {var $postYear = $post->getDateInFormat('Y')}
                 {if $postYear != date('Y') && !isset($dateLines[$postYear])}
-                    <div class="col-md-12 yearLine clearfix" id="year-{$postYear}">
+                    <div class="col-md-12 yearLine mb-5 clearfix" id="year-{$postYear}">
                         <br>
                         <br>
                         {$postYear}
@@ -58,15 +58,13 @@ id: blog
                         {var $wasFirstPostMarked = true}
                     </article>
                 {else}
-                    <article class="text-left col-md-12 pt-0 pb-2">
-                        <h3>
-                            <a href="/{$post['relativeUrl']}/">
-                                {$post['title']|noescape}
-                            </a>
-                        </h3>
-
+                    {if $iterator->getCounter() == 4}<ul class="mt-4 list-unstyled">{/if}
+                    <li class="mb-3 col-md-12">
+                        <a href="/{$post['relativeUrl']}/">{$post['title']|noescape}</a>
                         {include "postMetadataLine", post => $post}
-                    </article>
+                    </li>
+                    {sep}<hr>{/sep}
+                    {last}</ul>{/last}
                 {/if}
             {/foreach}
         </div>
