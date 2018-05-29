@@ -6,7 +6,7 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 use Symfony\Component\HttpKernel\Kernel;
-use TomasVotruba\Website\Posts\Year2018\ConsoleDI\DependencyInjection\CompilerPass\CollectCommandsCompilerPass;
+use TomasVotruba\Website\Posts\Year2018\ConsoleDI\DependencyInjection\CompilerPass\CollectCommandsToApplicationCompilerPass;
 
 final class AppKernel extends Kernel
 {
@@ -47,6 +47,6 @@ final class AppKernel extends Kernel
 
     protected function build(ContainerBuilder $containerBuilder): void
     {
-        $containerBuilder->addCompilerPass(new CollectCommandsCompilerPass());
+        $containerBuilder->addCompilerPass(new CollectCommandsToApplicationCompilerPass());
     }
 }

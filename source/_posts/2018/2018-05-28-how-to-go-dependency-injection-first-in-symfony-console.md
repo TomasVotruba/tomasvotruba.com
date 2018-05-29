@@ -2,10 +2,12 @@
 id: 109
 title: "..."
 perex: |
-    Series about PHP Cli Apps continues with 3rd part about writing Symfony Console Application with Depenendency Injection in the first place. Not last, not second, **but the first**. 
+    Series about PHP Cli Apps continues with 3rd part about writing Symfony Console Application with Depenendency Injection in the first place. Not last, not second, **but the first**.
     <br>
-    Luckily, is easy to start using it and very difficult to  
+    Luckily, is easy to start using it and very difficult to
 tweet: "New Post on My Blog: ..."
+tested: true
+test_slug: ConsoleDI
 ---
 
 ## Symfony Evolution
@@ -14,7 +16,7 @@ tweet: "New Post on My Blog: ..."
 
 ## Commadns as Services
 
-I already wrote about [why is this important](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), today we look on **how to actually do it**. To be clear, how to do it without need of bloated FrameworkBundle, that is official but [rather bad-practise solutoin](https://matthiasnoback.nl/2013/10/symfony2-console-commands-as-services-why/).    
+I already wrote about [why is this important](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), today we look on **how to actually do it**. To be clear, how to do it without need of bloated FrameworkBundle, that is official but [rather bad-practise solutoin](https://matthiasnoback.nl/2013/10/symfony2-console-commands-as-services-why/).
 
 ## 3 Steps to First Command as a Service
 
@@ -22,7 +24,7 @@ We need 3 elements: classic Kernel, bin file - entry point to our application an
 
 ### 1. `services.yml`
 
-Simple things first. Create `config/services.yml` with classic [PSR-4 autodiscovery/autowire setup](https://github.com/symfony/symfony/pull/21289#issue-101559374): 
+Simple things first. Create `config/services.yml` with classic [PSR-4 autodiscovery/autowire setup](https://github.com/symfony/symfony/pull/21289#issue-101559374):
 
 ```yml
 # config/services.yml
@@ -65,7 +67,7 @@ final class AppKernel extends Kernel
         $loader->load(__DIR__ . '/../config/services.yml');
     }
 }
-``` 
+```
 
 There is one more thing. We'll
 
@@ -97,17 +99,17 @@ bin/some-app some
 But we get:
 
 ```bash
-Command "some" is not defined. 
+Command "some" is not defined.
 ```
 
 Why? The `App\Command\SomeCommand` class exists, in `app/Command/SomeCommand.php` file, the `config/services.yml` loads it, `composer.json` section `autoload` is corretly filled, composer was dumped with `composer dump`... what are we missing?
 
 Oh, the commands were not added to the `Application` class.
 
-### How to All Service of Type A to Services of Type B  
+### How to All Service of Type A to Services of Type B
 
 This is the place to use famous [collector](/blog/2018/03/08/why-is-collector-pattern-so-awesome/#drop-that-expression-language-magic) pattern.
- 
+
 ```php
 # app/Kernel.php
 
@@ -121,27 +123,46 @@ use use Symfony\Component\Console\Command\Command;
 {
     protected function build(ContainerBuilder $containerBuilder): void
     {
-        $applicationDefinition = $containerBuilder->getDefinition(Application::class);
-
-        foreach ($containerBuilder->getDefinitions() as $definition) {
-            if (is_a($definition->getClass(), Command::class, true)) {
-                $applicationDefinition->addMethodCall('add', ['@' . $definition->getClass()]);
-            }
-        }
+        $containerBuilder->addCompilerPass(new CommandsToApplicationCompilerPass);
     }
-    
+
     // ...
 }
 ```
 
-This will compile to something like this:
+
+```php
+namespace App\DependencyInjection\CompilerPass;
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Reference;
+
+final class CollectCommandsToApplicationCompilerPass implements CompilerPassInterface
+{
+    public function process(ContainerBuilder $containerBuilder): void
+    {
+        $applicationDefinition = $containerBuilder->getDefinition(Application::class);
+
+        foreach ($containerBuilder->getDefinitions() as $name => $definition) {
+            if (is_a($definition->getClass(), Command::class, true)) {
+                $applicationDefinition->addMethodCall('add', [new Reference($name)]);
+            }
+        }
+    }
+}
+```
+
+This will compile to container with something like this:
 
 ```php
 function createApplication()
 {
     $application = new Application;
     $application->add($someCommand);
-    
+
     return $application;
 }
 ```
