@@ -2,10 +2,10 @@
 id: 109
 title: "Build Your First Symfony Console Application with Dependency Injection Under 4 Files"
 perex: |
-    Series about PHP Cli Apps continues with 3rd part about writing Symfony Console Application with Depenendency Injection in the first place. Not last, not second, **but the first**.
+    Series about PHP Cli Apps continues with 3rd part about writing Symfony Console Application with Dependency Injection in the first place. Not last, not second, **but the first**.
     <br>
     Luckily, is easy to start using it and very difficult to
-tweet: "New Post on My Blog: ..."
+tweet: "New Post on My Blog: Build Your First #Symfony Console Application with Dependency Injection Under 4 Files #cli #php"
 tested: true
 test_slug: ConsoleDI
 ---
@@ -20,9 +20,9 @@ I already wrote about [why is this important](/blog/2018/05/07/why-you-should-co
 
 ## 3 Steps to First Command as a Service
 
-We need 3 elements:
- 
-- `service.yml` file with PSR-4 autodiscovery, 
+All we need are these 3 elements:
+
+- `service.yml` file with PSR-4 autodiscovery,
 - classic Kernel
 - and the bin file - entry point to our application.
 
@@ -40,7 +40,7 @@ services:
 
     App\:
         resource: '../app'
-        
+
     Symfony\Component\Console\Application:
         # why public? so we can get it from container in bin file via "$container->get(Application::class)"
         public: true
@@ -113,19 +113,19 @@ Command "some" is not defined.
 ```
 
 Why? We're sure that:
- 
+
 - the `App\Command\SomeCommand` class exists
 - it's located in `app/Command/SomeCommand.php` file
 - the `config/services.yml` loads it
 - `composer.json` section `autoload` is correctly configured
-- composer was dumped with `composer dump`... 
+- composer was dumped with `composer dump`...
 
-What are we missing? Oh, we forgot to **load commands** to the `Application` sdervice.
+What are we missing? Oh, we forgot to **load commands to the `Application` service**. Everything works, but our application doesn't know about our commands. It's like if web application doesn't know where to find the controller.
 
-### How to All Service of Type A to Services of Type B
+### How to Add All Services of Type A to Service of Type B
 
-With FrameworkBundle, we could `autoconfigure` option in config that works with tags, but here we need to use clean PHP.
-[Tags magic that is often overused in wrong places](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/), so this extra works is actually a good thing. 
+With FrameworkBundle we'd add `autoconfigure` option to `services.yml` config - it works with tags, but here we need to use clean PHP.
+[Tags magic that is often overused in wrong places](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/), so this extra works is actually a good thing. We know what happens... but **mainly readers of our code know it too**.
 
 This is the place to use [famous collector pattern](/blog/2018/03/08/why-is-collector-pattern-so-awesome/#drop-that-expression-language-magic) via `CompilerPass`:
 
@@ -182,7 +182,7 @@ This will compile to container to something like this:
 
 ```php
 function createSomeCommand()
-{   
+{
     return new SomeCommand();
 }
 
