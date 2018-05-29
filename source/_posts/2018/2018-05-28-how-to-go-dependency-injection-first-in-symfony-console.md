@@ -1,6 +1,6 @@
 ---
 id: 109
-title: "..."
+title: "Build Your First Symfony Console Application with Dependency Injection Under 4 Files"
 perex: |
     Series about PHP Cli Apps continues with 3rd part about writing Symfony Console Application with Depenendency Injection in the first place. Not last, not second, **but the first**.
     <br>
@@ -14,17 +14,23 @@ test_slug: ConsoleDI
 
 [7 years ago it was total nightmare to use Controllers as services](http://richardmiller.co.uk/2011/04/15/symfony2-controller-as-service/). Luckily, Symfony evolved a lot in this matter and using Symfony 4.0 packages in brand new application is much more simpler than it was in Symfony 2.8 or even 3.2. The very same evolutoin allowed to enter Dependency Injection to Symfony Console-based PHP Cli App.
 
-## Commadns as Services
+### Commands as Services
 
-I already wrote about [why is this important](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), today we look on **how to actually do it**. To be clear, how to do it without need of bloated FrameworkBundle, that is official but [rather bad-practise solutoin](https://matthiasnoback.nl/2013/10/symfony2-console-commands-as-services-why/).
+I already wrote about [why is this important](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), today we look on **how to actually do it**. To be clear, how to do it without need of bloated FrameworkBundle, that is official but [rather bad-practise solution](https://matthiasnoback.nl/2013/10/symfony2-console-commands-as-services-why/).
 
 ## 3 Steps to First Command as a Service
 
-We need 3 elements: classic Kernel, bin file - entry point to our application and `service.yml` file with PSR-4 autodiscovery.
+We need 3 elements:
+ 
+- `service.yml` file with PSR-4 autodiscovery, 
+- classic Kernel
+- and the bin file - entry point to our application.
+
+The simplest things first.
 
 ### 1. `services.yml`
 
-Simple things first. Create `config/services.yml` with classic [PSR-4 autodiscovery/autowire setup](https://github.com/symfony/symfony/pull/21289#issue-101559374):
+Create `config/services.yml` with classic [PSR-4 autodiscovery/autowire setup](https://github.com/symfony/symfony/pull/21289#issue-101559374) and register `Symfony\Component\Console\Application` as well. We will use this class later.
 
 ```yml
 # config/services.yml
@@ -34,6 +40,10 @@ services:
 
     App\:
         resource: '../app'
+        
+    Symfony\Component\Console\Application:
+        # why public? so we can get it from container in bin file via "$container->get(Application::class)"
+        public: true
 ```
 
 ### 2. Kernel
@@ -102,36 +112,26 @@ But we get:
 Command "some" is not defined.
 ```
 
-Why? The `App\Command\SomeCommand` class exists, in `app/Command/SomeCommand.php` file, the `config/services.yml` loads it, `composer.json` section `autoload` is corretly filled, composer was dumped with `composer dump`... what are we missing?
+Why? We're sure that:
+ 
+- the `App\Command\SomeCommand` class exists
+- it's located in `app/Command/SomeCommand.php` file
+- the `config/services.yml` loads it
+- `composer.json` section `autoload` is correctly configured
+- composer was dumped with `composer dump`... 
 
-Oh, the commands were not added to the `Application` class.
+What are we missing? Oh, we forgot to **load commands** to the `Application` sdervice.
 
 ### How to All Service of Type A to Services of Type B
 
-This is the place to use famous [collector](/blog/2018/03/08/why-is-collector-pattern-so-awesome/#drop-that-expression-language-magic) pattern.
+With FrameworkBundle, we could `autoconfigure` option in config that works with tags, but here we need to use clean PHP.
+[Tags magic that is often overused in wrong places](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/), so this extra works is actually a good thing. 
+
+This is the place to use [famous collector pattern](/blog/2018/03/08/why-is-collector-pattern-so-awesome/#drop-that-expression-language-magic) via `CompilerPass`:
 
 ```php
-# app/Kernel.php
+# app/DependencyInjection/CompilerPass/CollectCommandsToApplicationCompilerPass.php
 
-// ...
-
-use use Symfony\Component\Console\Application;
-use use Symfony\Component\Console\Command\Command;
-
-// ...
-
-{
-    protected function build(ContainerBuilder $containerBuilder): void
-    {
-        $containerBuilder->addCompilerPass(new CommandsToApplicationCompilerPass);
-    }
-
-    // ...
-}
-```
-
-
-```php
 namespace App\DependencyInjection\CompilerPass;
 
 use Symfony\Component\Console\Application;
@@ -155,13 +155,41 @@ final class CollectCommandsToApplicationCompilerPass implements CompilerPassInte
 }
 ```
 
-This will compile to container with something like this:
+And make our `Kernel` aware of it:
 
 ```php
+# app/Kernel.php
+
+// ...
+
+use App\DependencyInjection\CompilerPass\CollectCommandsToApplicationCompilerPass;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Command\Command;
+
+// ...
+
+{
+    protected function build(ContainerBuilder $containerBuilder): void
+    {
+        $containerBuilder->addCompilerPass(new CommandsToApplicationCompilerPass);
+    }
+
+    // ...
+}
+```
+
+This will compile to container to something like this:
+
+```php
+function createSomeCommand()
+{   
+    return new SomeCommand();
+}
+
 function createApplication()
 {
     $application = new Application;
-    $application->add($someCommand);
+    $application->add(createSomeCommand());
 
     return $application;
 }
@@ -174,7 +202,8 @@ bin/some-app some
 ```
 
 It works! And that's it. I told you it'll be easy - how can we not love Symfony :).
-Do you still struggle with some parts? Don't worry, this post is tested by PHPUnit, so you can find all the code mentioned here - just click on "Tested" in the top of the post to see it.
+
+**Do you still struggle with some parts?** Don't worry, this post is tested by PHPUnit, so you can find all the code mentioned here - just click on "Tested" in the top of the post to see it.
 
 <br><br>
 
