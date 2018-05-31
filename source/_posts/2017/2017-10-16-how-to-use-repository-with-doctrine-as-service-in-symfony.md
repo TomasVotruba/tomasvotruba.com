@@ -374,7 +374,7 @@ final class PostRepository
         $this->postSorter = $postSorter;
     }
 
-    public function find(int $id): Post
+    public function find(int $id): ?Post
     {
         return $this->repository->find($id);
     }
