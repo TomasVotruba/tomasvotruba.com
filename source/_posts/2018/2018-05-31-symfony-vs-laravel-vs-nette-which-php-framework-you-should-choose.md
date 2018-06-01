@@ -88,7 +88,7 @@ What I love the most about Symfony? It has people, education, sharing, the newes
 
 ## It's all About You - Community
 
-@todo photo
+<img src="/assets/images/posts/2018/frameworks/community.jpg">
 
 It might be weird to see that software is all about people. It's about people, emotions, relationships, what people create from their love - a post, a package, a book, a video series, a local meetup, a beer meetup, a shirt with a logo, a hat with a log, stickers, open-source package, conference, a talk...
 
