@@ -5,6 +5,8 @@ imports:
     - { resource: 'vendor/symplify/easy-coding-standard/config/symplify.yml' }
 
 services:
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff:
+
     SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff:
 
     SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
