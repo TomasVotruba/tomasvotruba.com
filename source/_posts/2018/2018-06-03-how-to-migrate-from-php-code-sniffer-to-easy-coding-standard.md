@@ -1,20 +1,17 @@
 ---
 id: 111
-title: "..."
+title: "How to Migrate From PHP_CodeSniffer to EasyCodingStandard in 7 Steps"
 perex: |
-    ...
+    Last year, I helped [Shopsys Coding Standards](https://github.com/shopsys/coding-standards) and [LMC PHP Coding Standard](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to EasyCodingStandard.
+    <br><br>
+    There are **few simple A → B changes**, but one has to know about them or will get stuck.
+    <br><br> 
+    **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look on how to migrate step by step.
 tweet: "New Post on my Blog: ..."
 tweet_image: "..."
 ---
 
-
-Recently I helped Shopsys to migrate from combinations of 3 to ECS:
-https://github.com/shopsys/shopsys/pull/143/files
-
-Pull requests :)
-
-
-ECS is a tool that combines PHP_CodeSniffer and PHP CS Fixer. It's super easy to start to use from scratch:
+ECS is a tool build on Symfony 3.4 components that combines PHP_CodeSniffer and PHP CS Fixer. It's super easy to start to use from scratch:
 
 ```bash
 composer require symplify/easy-coding-standard --dev 
@@ -23,9 +20,7 @@ vendor/bin/ecs check src --level psr12 # yes 12!
 
 But what if you already have PHP_CodeSniffer on your project and want to switch?
 
-## 3 steps
-
-### 1. From String Codes to Autocompleted Classes
+## 1. From String Codes to Autocompleted Classes
 
 In root `ruleset.xml` for PHP_CodeSniffer you can use string references to sniffs. You need to remember them, copy paste them and copy-paste them right.
 
@@ -48,7 +43,7 @@ services:
     DocCommentSniff<cursor-here>:
 ```
 
-And hit "cltr + space" for autocomplete in PHPStorm. That way Symfony plugin will autocomplete the class for you:
+Then hit the "ctlr" + "space" for autocomplete in PHPStorm. That way [Symfony plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin) will autocomplete the class for you:
 
 ```yaml
 # ecs.yml
@@ -60,7 +55,7 @@ services:
 
 No more typos with strong over string typing.
 
-### 2. From `@codingStandardsIgnoreStart` to `skip` Parameter
+## 2. From `@codingStandardsIgnoreStart` to `skip` Parameter
 
 If you'd like to skip nasty code from being analyzed, you'd use `@codingStandardsIgnoreStart` in PHP_CodeSniffer. 
 
@@ -106,13 +101,21 @@ paramters:
             - '*packages/framework/src/Component/Constraints/*Validator.php'
 ```
 
-### 3. From `<severity>0</severity>` to `skip` Parameter
+## 3. From `<severity>0</severity>` and `<exclude name="...">` to `skip` Parameter
 
 Do you need to skip only 1 part of the sniff? In PHP_CodeSniffer:
 
 ```xml
 <rule ref="Generic.Commenting.DocComment.ContentAfterOpen">
     <severity>0</severity>
+</rule>
+```
+
+or
+
+```xml
+<rule ref="Generic.Commenting.DocComment">
+    <exclude name="Generic.Commenting.DocComment.ContentAfterOpen"/>
 </rule>
 ```
 
@@ -127,15 +130,28 @@ paramters:
 
 For all other `skip` options, [see README](https://github.com/symplify/easyCodingStandard/#ignore-what-you-cant-fix).
 
-
 <br>
 
-In case you skip the whole sniff: 
+In case you need to **skip the whole sniff**: 
 
 ```xml
-<rule ref="Generic.Commenting.DocComment">
-    <severity>0</severity>
-</rule>
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="ruleset">
+    <rule ref="Generic.Commenting.DocComment">
+        <severity>0</severity>
+    </rule>
+</ruleset>
+```
+
+or
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="ruleset">
+    <rule ref="ruleset.xml">
+        <exclude name="Generic.Commenting.DocComment"/>
+	</rule>
+</ruleset>
 ```
 
 Put it under `exclude_checkers`:
@@ -148,16 +164,128 @@ parameters:
 ```
 
 
+## 4. From XML to YML Config Paths
 
+These names are looked for in the root diretory by PHP_CodeSniffer:
 
-### 4. Values
+```bash
+- .phpcs.xml
+- phpcs.xml
+- .phpcs.xml.dist
+- phpcs.xml.dist
+```
 
-@todo
+And these by EasyCodingStandard:
 
- <rule ref="Generic.Metrics.CyclomaticComplexity">
+```bash
+- ecs.yml
+- ecs.yaml
+- easy-coding-standard.yml
+- easy-coding-standard.yaml
+```
+
+What about non-default locations or names?
+
+From:
+
+```bash
+vendor/bin/phpcs /path/to/project --standard=custom/location.xml
+```
+
+to:
+
+```bash
+vendor/bin/phpcs check /path/to/project --config custom/location.yml
+```
+
+## 5. Configuring Sniff Values
+
+From XML configuration in PHP_CodeSniffer:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="ruleset">
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
         <properties>
             <property name="complexity" value="13"/>
             <property name="absoluteComplexity" value="13"/>
         </properties>
-        
-        https://github.com/shopsys/coding-standards/pull/9/files#diff-28e7c9181fd509e70dc0f5ad1dc7b517
+    </rule>
+</ruleset>
+```
+
+to YML parameters in EasyCodingStandard:
+
+```yaml
+# ecs.yml
+services:
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff:
+        complexity: 13
+        absoluteComplexity: 13
+```
+
+## 6. From Severity and Warning to Just Errors
+
+There are different levels in PHP_CodeSniffer. You can set severity, make sniff report as warning or as an error. 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="ruleset">
+    <rule ref="Generic.Commenting.DocComment">
+        <severity>5</severity>
+    </rule>
+</ruleset>
+```
+
+This complex matrix leveling lead to confused questions for many people:
+
+- Is it a warning or is an accepted error? 
+- What is this warning even active when it doesn't fail CI? 
+- Why do we have an accepted error - is it like test that are allowed to fail?
+
+And so on.
+
+Thus these confusing options are not supported and EasyCodingStandard simplifies that to **errors only**
+CI server either passes or not. The rule is required and respected or removed. Simple, clear and without any confusion.
+
+Saying that, you don't need to fill values for 
+
+```diff
+ # ecs.yml
+ services:
+     PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff:
+-        complexity: 13
+         absoluteComplexity: 13
+```
+
+
+## 7. From Beautifier to `--fix` option
+
+Do you need to fix the code? From 2 commands in PHP_CodeSniffer:
+
+```bash
+vendor/bin/phpcs /path/to/project --standard=custom/location.xml
+vendor/bin/phpcbf /path/to/project --standard=custom/location.xml
+```
+
+to 1 in EasyCodingStandard:
+
+```bash
+vendor/bin/phpcs check /path/to/project --config custom/location.yml
+vendor/bin/phpcs check /path/to/project --config custom/location.yml --fix
+```
+
+<br>
+
+### Give it a Try...
+
+...and you won't regret it. Sylius, LMC, Shopsys, Nette and SunFox did and never came back.
+
+<br>
+
+Did I forget a step that you had to fight with? **Please, let me know in the comments or just send PR to this post to add it**, so we help other readers. 
+
+<br> 
+<br> 
+
+In the next post we look on how to migrate from PHP CS Fixer!
