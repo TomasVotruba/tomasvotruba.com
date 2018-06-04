@@ -22,6 +22,11 @@ parameters:
     skip:
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment: ~
 
+        # breaks single line /** @var Type $name */ doc blocks, which makes Array[] types without IDE effect
+        PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff.MissingShort: ~
+        PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff.ContentAfterOpen: ~
+        PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff.ContentBeforeClose: ~
+
         Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
             - '*/src/Posts/Year2017/Ast/*'
 
