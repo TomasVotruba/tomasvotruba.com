@@ -5,7 +5,7 @@ perex: |
     Last year, I helped [Shopsys Coding Standards](https://github.com/shopsys/coding-standards) and [LMC PHP Coding Standard](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to EasyCodingStandard.
     <br><br>
     There are **a few simple A → B changes**, but one has to know about them or will get stuck.
-    <br><br> 
+    <br><br>
     **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
 tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingStandard in 7 Step #ecs #codingstandard #ci"
 ---
@@ -13,8 +13,8 @@ tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingS
 ECS is a tool build on Symfony 3.4 components that combines PHP_CodeSniffer and PHP CS Fixer. It's super easy to start to use from scratch:
 
 ```bash
-composer require symplify/easy-coding-standard --dev 
-vendor/bin/ecs check src --level psr12 # yes 12! 
+composer require symplify/easy-coding-standard --dev
+vendor/bin/ecs check src --level psr12 # yes 12!
 ```
 
 But what if you already have PHP_CodeSniffer on your project and want to switch?
@@ -35,7 +35,7 @@ That can actually cause typos like:
 +<rule ref="Generic.Commenting.DocComment"/>
 ```
 
-How to do that in EasyCodingStandard? Copy past the last name `DocComment`, add a "Sniff" and `:`:
+How to do that in EasyCodingStandard? Copy paste the last name `DocComment`, add "Sniff" and `:`:
 
 ```yaml
 # ecs.yml
@@ -43,12 +43,14 @@ services:
     DocCommentSniff<cursor-here>:
 ```
 
-Then hit the "ctlr" + "space" for autocomplete in PHPStorm. That way [Symfony plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin) will autocomplete the class for you:
+Then hit the "ctlr" + "space" for class autocomplete in PHPStorm.
 
 ```yaml
 services:
     PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff: ~
 ```
+
+That way [Symfony plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin) will autocomplete the class for you:
 
 <img src="https://github.com/Symplify/EasyCodingStandard/raw/master/docs/yaml-autocomplete.gif">
 
@@ -56,7 +58,7 @@ No more typos with strong over string typing.
 
 ## 2. From `@codingStandardsIgnoreStart` to `skip` Parameter
 
-If you'd like to skip nasty code from being analyzed, you'd use `@codingStandardsIgnoreStart` in PHP_CodeSniffer. 
+If you'd like to skip nasty code from being analyzed, you'd use `@codingStandardsIgnoreStart` in PHP_CodeSniffer.
 
 ```php
 #  packages/framework/src/Component/Constraints/EmailValidator.php
@@ -130,7 +132,7 @@ For all other `skip` options, [see README](https://github.com/symplify/easyCodin
 
 <br>
 
-In case you need to **skip the whole sniff**: 
+In case you need to **skip the whole sniff**:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -222,7 +224,7 @@ services:
 
 ## 6. From Severity and Warning to Just Errors
 
-There are different levels in PHP_CodeSniffer. You can set severity, make sniff report as warning or as an error. 
+There are different levels in PHP_CodeSniffer. You can set severity, make sniff report as warning or as an error.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -235,8 +237,8 @@ There are different levels in PHP_CodeSniffer. You can set severity, make sniff 
 
 This complex matrix leveling lead to confused questions for many people:
 
-- Is it a warning or is an accepted error? 
-- What is this warning even active when it doesn't fail CI? 
+- Is it a warning or is an accepted error?
+- What is this warning even active when it doesn't fail CI?
 - Why do we have an accepted error - is it like the tests that are allowed to fail?
 
 And so on.
@@ -278,9 +280,9 @@ vendor/bin/phpcs check /path/to/project --config custom/location.yml --fix
 
 <br>
 
-Did I forget a step that you had to fight with? **Please, let me know in the comments or just send PR to this post to add it**, so we help other readers. 
+Did I forget a step that you had to fight with? **Please, let me know in the comments or just send PR to this post to add it**, so we help other readers.
 
-<br> 
-<br> 
+<br>
+<br>
 
 In the next post we look on how to migrate from PHP CS Fixer!

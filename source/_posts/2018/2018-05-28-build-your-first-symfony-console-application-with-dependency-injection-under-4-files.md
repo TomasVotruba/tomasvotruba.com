@@ -43,7 +43,7 @@ services:
         resource: '../app'
 
     Symfony\Component\Console\Application:
-        # why public? so we can get it from container in bin file 
+        # why public? so we can get it from container in bin file
         # via "$container->get(Application::class)"
         public: true
 ```
