@@ -7,8 +7,7 @@ perex: |
     There are **few simple A → B changes**, but one has to know about them or will get stuck.
     <br><br> 
     **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look on how to migrate step by step.
-tweet: "New Post on my Blog: ..."
-tweet_image: "..."
+tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingStandard in 7 Step #ecs #codingstandard #ci"
 ---
 
 ECS is a tool build on Symfony 3.4 components that combines PHP_CodeSniffer and PHP CS Fixer. It's super easy to start to use from scratch:
