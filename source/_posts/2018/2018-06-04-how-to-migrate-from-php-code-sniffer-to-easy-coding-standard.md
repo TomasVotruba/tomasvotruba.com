@@ -24,6 +24,7 @@ But what if you already have PHP_CodeSniffer on your project and want to switch?
 You probably use string references to sniffs in your `*.xml` configuration for PHP_CodeSniffer. You need to remember them, copy paste them and **copy-paste them right**.
 
 ```xml
+<!-- phpcs.xml -->
 <rule ref="Generic.Comenting.DocComment"/>
 ```
 
@@ -45,9 +46,8 @@ services:
 Then hit the "ctlr" + "space" for autocomplete in PHPStorm. That way [Symfony plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin) will autocomplete the class for you:
 
 ```yaml
-# ecs.yml
 services:
-    PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff:
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff: ~
 ```
 
 <img src="https://github.com/Symplify/EasyCodingStandard/raw/master/docs/yaml-autocomplete.gif">
@@ -71,10 +71,10 @@ private function isEmail($value)
 
 One big cons of this is **that all sniffs will skip this code**, not just one. So even if here we need to only allow double quotes `"`, all other checks will miss it.
 
-To skip this in EasyCodingStandard just ass skip parameter:
+To skip this in EasyCodingStandard just use `skip` parameter:
 
 ```yaml
-paramters:
+parameters:
     skip:
         PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff:
             - 'packages/framework/src/Component/Constraints/EmailValidator.php'
@@ -83,7 +83,7 @@ paramters:
 Do you have more such cases?
 
 ```yaml
-paramters:
+parameters:
     skip:
         PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff:
             - 'packages/framework/src/Component/Constraints/EmailValidator.php'
@@ -94,7 +94,7 @@ paramters:
 You don't have to list them all like a typing monkey. Just use `fnmatch()` format instead:
 
 ```yaml
-paramters:
+parameters:
     skip:
         PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff:
             - '*packages/framework/src/Component/Constraints/*Validator.php'
@@ -118,11 +118,10 @@ or
 </rule>
 ```
 
-In EasyCodingStandard, we put that again under `skip` parameter:
+In EasyCodingStandard, we put that again under `skip` parameter in format `<Sniff>.<CodeName>`:
 
 ```yaml
-# ecs.yml
-paramters:
+parameters:
     skip:
         PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff.ContentAfterOpen: ~
 ```
@@ -156,7 +155,6 @@ or
 Put it under `exclude_checkers`:
 
 ```yaml
-# ecs.yml
 parameters:
     exclude_checkers:
         PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff: ~
@@ -216,7 +214,6 @@ From XML configuration in PHP_CodeSniffer:
 to YML parameters in EasyCodingStandard:
 
 ```yaml
-# ecs.yml
 services:
     PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff:
         complexity: 13
@@ -250,7 +247,6 @@ CI server either passes or not. The rule is required and respected or removed. S
 Saying that you don't need to fill values for warning properties:
 
 ```diff
- # ecs.yml
  services:
      PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff:
 -        complexity: 13
