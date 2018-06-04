@@ -152,7 +152,7 @@ or
 </ruleset>
 ```
 
-Put it under `exclude_checkers`:
+**Put it under `exclude_checkers`:**
 
 ```yaml
 parameters:
@@ -172,7 +172,7 @@ These names are looked for in the root diretory by PHP_CodeSniffer:
 - phpcs.xml.dist
 ```
 
-And these by EasyCodingStandard:
+**And these by EasyCodingStandard:**
 
 ```bash
 - ecs.yml
@@ -189,7 +189,7 @@ From:
 vendor/bin/phpcs /path/to/project --standard=custom/location.xml
 ```
 
-to:
+**to:**
 
 ```bash
 vendor/bin/phpcs check /path/to/project --config custom/location.yml
@@ -211,7 +211,7 @@ From XML configuration in PHP_CodeSniffer:
 </ruleset>
 ```
 
-to YML parameters in EasyCodingStandard:
+**to YML parameters in EasyCodingStandard:**
 
 ```yaml
 services:
@@ -242,7 +242,7 @@ This complex matrix leveling lead to confused questions for many people:
 And so on.
 
 Thus these confusing options are not supported and EasyCodingStandard simplifies that to **errors only**
-CI server either passes or not. The rule is required and respected or removed. Simple, clear and without any confusion.
+CI server either passes or not. **The rule is required and respected or removed. Simple, clear and without any confusion.**
 
 Saying that you don't need to fill values for warning properties:
 
