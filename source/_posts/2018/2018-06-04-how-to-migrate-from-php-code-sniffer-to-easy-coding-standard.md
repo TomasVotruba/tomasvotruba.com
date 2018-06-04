@@ -73,7 +73,7 @@ One big cons of this is **that all sniffs will skip this code**, not just one. S
 
 To skip this in EasyCodingStandard just ass skip parameter:
 
-```yamlSnif
+```yaml
 paramters:
     skip:
         PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff:
