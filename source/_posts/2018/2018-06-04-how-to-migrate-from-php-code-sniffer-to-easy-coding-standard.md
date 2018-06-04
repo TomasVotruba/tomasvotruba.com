@@ -4,9 +4,9 @@ title: "How to Migrate From PHP_CodeSniffer to EasyCodingStandard in 7 Steps"
 perex: |
     Last year, I helped [Shopsys Coding Standards](https://github.com/shopsys/coding-standards) and [LMC PHP Coding Standard](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to EasyCodingStandard.
     <br><br>
-    There are **few simple A → B changes**, but one has to know about them or will get stuck.
+    There are **a few simple A → B changes**, but one has to know about them or will get stuck.
     <br><br> 
-    **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look on how to migrate step by step.
+    **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
 tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingStandard in 7 Step #ecs #codingstandard #ci"
 ---
 
@@ -21,7 +21,7 @@ But what if you already have PHP_CodeSniffer on your project and want to switch?
 
 ## 1. From String Codes to Autocompleted Classes
 
-In root `ruleset.xml` for PHP_CodeSniffer you can use string references to sniffs. You need to remember them, copy paste them and copy-paste them right.
+You probably use string references to sniffs in your `*.xml` configuration for PHP_CodeSniffer. You need to remember them, copy paste them and **copy-paste them right**.
 
 ```xml
 <rule ref="Generic.Comenting.DocComment"/>
@@ -240,14 +240,14 @@ This complex matrix leveling lead to confused questions for many people:
 
 - Is it a warning or is an accepted error? 
 - What is this warning even active when it doesn't fail CI? 
-- Why do we have an accepted error - is it like test that are allowed to fail?
+- Why do we have an accepted error - is it like the tests that are allowed to fail?
 
 And so on.
 
 Thus these confusing options are not supported and EasyCodingStandard simplifies that to **errors only**
 CI server either passes or not. The rule is required and respected or removed. Simple, clear and without any confusion.
 
-Saying that, you don't need to fill values for 
+Saying that you don't need to fill values for warning properties:
 
 ```diff
  # ecs.yml
