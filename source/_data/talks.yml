@@ -1,6 +1,14 @@
 parameters:
     talks:
         -
+            title: "Instant Upgrades with Rector"
+            year: 2018
+            event_name: "Berin PHP UG June 2018"
+            event_link: "http://www.bephpug.de/2018/06/05/june.html"
+            slides_link: "https://docs.google.com/presentation/d/1lHVhwwL5LuEf9nzoWsynfgUZ2URYxXqgW_UKHxLcW8A/edit?usp=sharing"
+            lang: en
+
+        -
             title: "How to Delegate Upgrades from Human to a (machine) Rector"
             year: 2018
             event_name: "PHPLive 2018"
@@ -82,7 +90,7 @@ parameters:
         -
             title: "Static sites in PHP? Simple with Statie"
             year: 2017
-            event_name: "Berin PHP UG April"
+            event_name: "Berin PHP UG April 2017"
             event_link: "http://www.bephpug.de/2017/04/04/april.html"
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/?type=1"
             slides_link: "https://docs.google.com/presentation/d/1Org07oQWbokCe6Q1FU8o0fe5iEfMGuDfZjKGcnI72BA/edit?usp=sharing"
