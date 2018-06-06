@@ -7,6 +7,7 @@ perex: |
     Throwable render? Test services without public violation? Load parameters with glob? We got you covered!
 tweet: "New Post on My Blog: 4 Ways to Speedup Your Symfony Development with PackageBuilder"
 tweet_image: "/assets/images/posts/2018/symplify-4-pb/error.png"
+related_items: [106]
 ---
 
 Here are 4 news that were added in Symplify 4 and that you can use in your application right away.
