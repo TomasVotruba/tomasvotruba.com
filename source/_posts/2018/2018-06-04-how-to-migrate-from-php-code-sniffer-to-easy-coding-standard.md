@@ -8,7 +8,7 @@ perex: |
     <br><br>
     **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
 tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingStandard in 7 Step #ecs #codingstandard #ci"
-related_items: [37, 49, 86]
+related_items: [112, 86, 49, 37]
 ---
 
 ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's super easy to start to use from scratch:
@@ -195,7 +195,7 @@ vendor/bin/phpcs /path/to/project --standard=custom/location.xml
 **to:**
 
 ```bash
-vendor/bin/phpcs check /path/to/project --config custom/location.yml
+vendor/bin/ecs check /path/to/project --config custom/location.yml
 ```
 
 ## 5. Configuring Sniff Values
@@ -269,8 +269,8 @@ vendor/bin/phpcbf /path/to/project --standard=custom/location.xml
 to 1 in EasyCodingStandard:
 
 ```bash
-vendor/bin/phpcs check /path/to/project --config custom/location.yml
-vendor/bin/phpcs check /path/to/project --config custom/location.yml --fix
+vendor/bin/ecs check /path/to/project --config custom/location.yml
+vendor/bin/ecs check /path/to/project --config custom/location.yml --fix
 ```
 
 <br>
