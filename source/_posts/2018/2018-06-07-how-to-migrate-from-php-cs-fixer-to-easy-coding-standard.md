@@ -1,12 +1,11 @@
 ---
 id: 112
-title: "How to Migrate From PHP CS Fixer to EasyCodingStandard in 5 Steps"
+title: "How to Migrate From PHP CS Fixer to EasyCodingStandard in 6 Steps"
 perex: |
-    We looked on how to migrate from PHP_CodeSniffer to Easy Coding Standard on Monday. But what if your weapon of choice is PHP CS Fixer and you'd to run also some sniffs?  
-    <br>
+    We looked at how to migrate from PHP_CodeSniffer to Easy Coding Standard on Monday. But what if your weapon of choice is PHP CS Fixer and you'd to run also some sniffs?
     <br>
     There are **a few simple A → B changes**, but one has to know about them or will get stuck. Let's learn about them.
-tweet: "New Post on my Blog: How to Migrate From PHP CS Fixer to EasyCodingStandard in 5 Steps #ecs #codingstandard #ci"
+tweet: "New Post on my Blog: How to Migrate From PHP CS Fixer to EasyCodingStandard in 6 Steps #ecs #codingstandard #ci"
 related_items: [37, 49, 86, 111]
 ---
 
@@ -21,7 +20,7 @@ But what if you already have PHP CS Fixer on your project and want to switch?
 
 ## 1. From String Codes to Autocompleted Classes
 
-You use string references like `strict_types` in your `.php_cs` file. You need to remember them, copy paste them and **copy-paste them right**.
+You use string references like `strict_types` in your `.php_cs` file. You need to remember them, [copy paste them from README](https://github.com/friendsofphp/php-cs-fixer) and **copy-paste them right**.
 
 ```php
 return PhpCsFixer\Config::create()
@@ -42,7 +41,7 @@ That can actually cause typos like:
      ->setFinder($finder);
 ```
 
-How to do that in EasyCodingStandard? Copy paste the name, capitalize first letter and remove `_`:
+How to do that in EasyCodingStandard? Copy paste the name from README, capitalize first letter and remove `_`:
 
 ```yaml
 # ecs.yml
@@ -50,7 +49,7 @@ services:
     DeclareStrictTypes<cursor-here>:
 ```
 
-Then hit the "ctlr" + "space" for class autocomplete in PHPStorm (it works even now when I write this post in markdown, nice!).
+Then hit the "ctrl" + "space" for class autocomplete in PHPStorm (it works even now when I write this post in markdown, nice!).
 
 ```yaml
 services:
@@ -61,11 +60,11 @@ That way [Symfony plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plug
 
 <img src="https://github.com/Symplify/EasyCodingStandard/raw/master/docs/yaml-autocomplete.gif">
 
-No more typos with strong over string typing.
+No more typos with *strong* over *string typing*.
 
 ## 2. From `notPath()` to `skip` Parameter
 
-If you'd like to skip nasty code from being analyzed, you'd probably use this.
+If you'd like to skip nasty code from being analyzed, you'd probably use this in PHP CS Fixer.
 
 ```php
 $finder = PhpCsFixer\Finder::create()
@@ -74,9 +73,9 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__);
 ```
 
-One big cons of this is **that all fixers will skip this code**, not just one. So even if here we need to skip only `DeclareStrictTypesFixer`, all fixer will skip it.
+One big cons of this is **that all fixers will skip this code**, not just one. Do you need `DeclareStrictTypesFixer` to skip thisf ile? Sorry, all fixers will skip it.
 
-To skip this in EasyCodingStandard just use `skip` parameter:
+EasyCodingStandard solves this common case - to skip a file, just use `skip` parameter:
 
 ```yaml
 parameters:
@@ -106,8 +105,6 @@ parameters:
             - '*dirty-file.php'
 ```
 
-For all other `skip` options, [see README](https://github.com/symplify/easyCodingStandard/#ignore-what-you-cant-fix).
-
 In case you need to **skip 1 fixer**, put it under `exclude_checkers`:
 
 ```yaml
@@ -116,12 +113,13 @@ parameters:
         - PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer
 ```
 
+For all other `skip` options, [see README](https://github.com/symplify/easyCodingStandard/#ignore-what-you-cant-fix).
 
-## 3. From . to YML Config Paths
+## 3. From `.php_cs` to YML Config
 
 PHP CS Fixer looks for `.php_cs` file in the root directory by default.
 
-**And EasyCodingStandard look for:**
+**And EasyCodingStandard looks for:**
 
 ```bash
 - ecs.yml
@@ -164,9 +162,11 @@ services:
         syntax: short
 ```
 
+Nice and clear!
+
 ## 5. From no `--dry-run` to `--fix` option
 
-From PHP CS Fixer: 
+From PHP CS Fixer:
 
 ```bash
 vendor/bin/php-cs-fixer fix /path/to/project --dry-run
@@ -180,11 +180,33 @@ vendor/bin/ecs check /path/to/project
 vendor/bin/ecs check /path/to/project --fix
 ```
 
+### 6. From `@Rules` to `imports`
+
+Do you like to use standards like PSR-2 or even [PSR-12](/blog/2018/04/09/try-psr-12-on-your-code-today/)?
+
+From `@strings` in PHP CS Fixer:
+
+```php
+$config = PhpCsFixer\Config::create()
+    ->setRules([
+        '@PSR2' => true,
+    ]);
+```
+
+**to autocompleted config in YAML file in Easy Coding Standard**:
+
+```yaml
+imports:
+    - { resource: 'vendor/symplify/easy-coding-standard/config/psr2.yml' }
+```
+
+Do you want to see all the PSR-2 rules? Easy, just click on the file.
+
 <br>
 
 ### Give it a Try...
 
-...and you won't regret it. Sylius, LMC, Shopsys, Nette and SunFox did and never came back.
+...and you won't regret it. Sylius, LMC, Shopsys, Nette, and SunFox did and never came back.
 
 <br>
 

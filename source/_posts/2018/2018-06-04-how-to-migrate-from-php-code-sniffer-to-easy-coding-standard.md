@@ -44,7 +44,7 @@ services:
     DocCommentSniff<cursor-here>:
 ```
 
-Then hit the "ctlr" + "space" for class autocomplete in PHPStorm.
+Then hit the "ctrl" + "space" for class autocomplete in PHPStorm.
 
 ```yaml
 services:
