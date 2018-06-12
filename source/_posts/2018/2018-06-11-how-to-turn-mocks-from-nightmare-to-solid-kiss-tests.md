@@ -4,7 +4,7 @@ title: "How to Turn Mocks from Nightmare to Solid Kiss Tests"
 perex: |
     [Martin Hlaváč](http://mhlavac.net/) had a very nice talk about testing in [Berlin PHP Meetup](http://www.bephpug.de/2018/06/05/june.html) last week (while I hosted with [Rector](https://github.com/rectorphp/rector)), and one of the topic was mocking.
     <br><br>
-    I often see developers fighting with this, in places they don't have you, just because this topic is so widespread all over the internet and unit tools.
+    I often see developers fighting with this, in places they don't have to, just because this topic is so widespread all over the internet and unit tools.
     <br><br>
     Did you know there is easier and more clear way to do "mocking"?
 tweet: "How to Turn Mocks to Readable Tests"
