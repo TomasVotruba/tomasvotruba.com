@@ -65,6 +65,8 @@ The code is intentionally more complex, so we have real-life example, instead of
 
 Now try to implement your idea. If you made it under another 60 seconds and your tests pass, you master mocking well and there is nothing for you to learn from this post.
 
+### Documentation, Google and Stackoverflow Juggling
+
 What happened to use in reality? **We got stuck for at least 30 minutes on modification of methods like that**. [Studying PHPUnit manual](https://phpunit.readthedocs.io/en/7.1/test-doubles.html?highlight=mocking) and looking to StackOverflow with my favorite [PHPUnit mock method multiple calls with different arguments](https://stackoverflow.com/questions/5988616/phpunit-mock-method-multiple-calls-with-different-arguments).
 
 That's not what tool should do for you. **Tools should work for you, not you for them.**
