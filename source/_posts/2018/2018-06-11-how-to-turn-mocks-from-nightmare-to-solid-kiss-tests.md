@@ -7,7 +7,7 @@ perex: |
     I often see developers fighting with this, in places they don't have to, just because this topic is so widespread all over the internet and unit tools.
     <br><br>
     Did you know there is easier and more clear way to do "mocking"?
-tweet: "How to Turn Mocks to Readable Tests"
+tweet: "New Post on my Blog: How to Turn Mocks to Readable Tests #phpunit #mocking"
 ---
 
 At the time being, there is only 1 post about [anonymous classes in tests](http://mnapoli.fr/anonymous-classes-in-tests/) (thanks to Matthieu!). Compared to that, there are many PHP tool made just for mocking: Prophecy, Mockery, PHPUnit native mocks, Mockista and so on. If you're a developer who uses one of them, knows that he needs to add proper annotations to make autocomplete work, has the PHPStom plugin that fixes bugs in this autocomplete and it works well for you, just stop reading.
