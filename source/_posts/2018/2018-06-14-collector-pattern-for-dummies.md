@@ -6,7 +6,7 @@ perex: |
     <br><br>
     The pattern itself is simple, but put in framework context, it might be too confusing to understand.
     <br><br>
-    That's why we look on collector pattern in minimalistic plain PHP way today. 
+    That's why we look on collector pattern in minimalistic plain PHP way today.
 tweet: "New Post on my Blog: Collector Pattern for Dummies"
 ---
 
@@ -19,10 +19,10 @@ class PriceCalculcator
     {
         // compute vat
         $price $product->getPrice() * (1 + $vat);
-        
+
         return $price;
     }
-} 
+}
 ```
 
 Then we decide to have 50 % discount for admins:
@@ -34,15 +34,15 @@ Then we decide to have 50 % discount for admins:
      {
          // compute vat
          $price = $product->getPrice() * (1 + $vat);
-       
+
 +        // discount for admin
 +        if ($this->currentUser->getRole() === 'admin') {
 +            $price *= 0.5;
 +        }
-+        
++
          return $price;
      }
- } 
+ }
 ```
 
 And another 20 % discount for students:
@@ -54,7 +54,7 @@ And another 20 % discount for students:
      {
          // compute vat
          $price = $product->getPrice() * 1.21;
-       
+
          // discount for admin
          if ($this->currentUser->getRole() === 'admin') {
              $price *= 0.5;
@@ -64,10 +64,10 @@ And another 20 % discount for students:
          if ($this->currentUser->getOccupation() === 'student') {
              $price *= 0.8;
          }
-        
+
          return $price;
      }
- } 
+ }
 ```
 
 Our `PriceCalculcator` grows and grows, our e-commerce plaform expands all over the Europe and we found out they have different strategy to calculate price with VAT. How do we solve it?
@@ -84,14 +84,14 @@ Our `PriceCalculcator` grows and grows, our e-commerce plaform expands all over 
 
          return $price;
      }
- } 
+ }
 ```
 
 That's easy solution for the end-user. But it also means 0 reusable code - imagine there will be 20 websites in UK and **each of them will have their own code to calculate price with VAT**. 100 % similar code (if written correctly), because it applies to whole country.
 
-## Sharing is Caring 
+## Sharing is Caring
 
-Instead, such UK solution can be one of many, that is openly shared. 
+Instead, such UK solution can be one of many, that is openly shared.
 
 - Do you need a UK price calculator? Plug it in.
 - Do you need a configurable discount based on role? Plug it in.
@@ -110,30 +110,30 @@ class PriceCalculcatorCollector
      * @var PriceCalculatorInterface[]
      */
     private $priceCalculators = [];
-    
+
     public funciton addPriceCalculator(PriceCalculatorInterface $priceCalculator)
     {
         $this->priceCalculators[] = $priceCalculator;
     }
-     
+
     public function calculate(Product $product): float
     {
-        $price = $product->getPrice();    
-    
+        $price = $product->getPrice();
+
         foreach ($this->priceCalculators as $priceCalculator) {
             $price = $priceCalculator->calculate($price);
         }
-        
+
         return $price;
     }
-} 
+}
 ```
 
 with interface decoupling:
 
 ```php
 interface PriceCalculatorInterface
-{   
+{
     public function calculate(float $price): float;
 }
 ```
@@ -156,7 +156,7 @@ final class AdminDiscountPriceCalculator implements PriceCalculatorInterface
         if (! $this->currentUser->getRole() === 'admin') {
             return $price;
         }
-            
+
         return $price *= 0.5;
     }
 }
@@ -167,7 +167,7 @@ final class UnitedKindomPriceCalculcator implements PriceCalculatorInterface
    {
        return $price * 1.15;
    }
-} 
+}
 ```
 
 ### 3. Let Collector Collect What You Need
@@ -184,7 +184,7 @@ $price = $priceCalculcatorCollector->calculatePrice($product);
 
 <em class="fa fa-fw fa-lg fa-check text-success"></em> single entry point for `Collector`
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> each solution that implements `PriceCalculatorInterface` is reusable 
+<em class="fa fa-fw fa-lg fa-check text-success"></em> each solution that implements `PriceCalculatorInterface` is reusable
 
 <em class="fa fa-fw fa-lg fa-check text-success"></em> to extend `PriceCalculcatorCollector` with another feature, e.g. have a discount for Lenovo  laptops from now till the end of June 2018, we don't have to modify it - just register a new `PriceCalculator`
 
