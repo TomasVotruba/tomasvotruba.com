@@ -23,20 +23,9 @@ And open [http://localhost:8000](localhost:8000) in your browser.
 
 That's all!
 
-
 ## Check The Grammar
 
-With help of [vlajos/misspell-fixer](https://github.com/vlajos/misspell-fixer) package, that has thousands of rules, fixes them all for you and still - is super fast!
-
-```bash
-# install
-cd www
-git clone https://github.com/vlajos/misspell-fixer
-cd tomasvotruba.cz
-
-# use
-../misspell-fixer/misspell-fixer -suRVDrn source/_posts
-```
+Copy-paste the content to [Grammarly](https://app.grammarly.com/). It's super intuitive and gives option to choose from. I learned a lot about English language from there.
 
 ## Check Status Code of All Links
 
