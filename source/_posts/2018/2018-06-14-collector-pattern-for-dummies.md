@@ -111,7 +111,7 @@ class PriceCalculcatorCollector
      */
     private $priceCalculators = [];
 
-    public funciton addPriceCalculator(PriceCalculatorInterface $priceCalculator)
+    public function addPriceCalculator(PriceCalculatorInterface $priceCalculator)
     {
         $this->priceCalculators[] = $priceCalculator;
     }
