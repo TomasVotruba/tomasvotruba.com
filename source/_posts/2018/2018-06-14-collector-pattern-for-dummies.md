@@ -13,7 +13,7 @@ tweet: "New Post on my Blog: Collector Pattern for Dummies"
 Let's say you have a simple `PriceCalculator` class that calculates a price for a product with a VAT:
 
 ```php
-class PriceCalculcator
+class PriceCalculator
 {
     public function calculate(Product $product): float
     {
@@ -28,7 +28,7 @@ class PriceCalculcator
 Then we decide to have 50 % discount for admins:
 
 ```diff
- class PriceCalculcator
+ class PriceCalculator
  {
      public function calculate(Product $product): float
      {
@@ -48,7 +48,7 @@ Then we decide to have 50 % discount for admins:
 And another 20 % discount for students:
 
 ```diff
- class PriceCalculcator
+ class PriceCalculator
  {
      public function calculate(Product $product): float
      {
@@ -70,12 +70,12 @@ And another 20 % discount for students:
  }
 ```
 
-Our `PriceCalculcator` grows and grows, our e-commerce platform expands all over Europe and we found out they have a different strategy to calculate price with VAT. How do we solve it?
+Our `PriceCalculator` grows and grows, our e-commerce platform expands all over Europe and we found out they have a different strategy to calculate price with VAT. How do we solve it?
 
 "Override the whole class and implements `calculate()` method for yourself."
 
 ```php
- class UnitedKindomPriceCalculcator extends PriceCalculator
+ class UnitedKindomPriceCalculator extends PriceCalculator
  {
      public function calculate(Product $product): float
      {
@@ -104,7 +104,7 @@ No need to write it more than once for all of the e-commerce sites.
 ### 1. Turn Your Main Class to A Collector
 
 ```php
-class PriceCalculcatorCollector
+class PriceCalculatorCollector
 {
     /**
      * @var PriceCalculatorInterface[]
@@ -165,7 +165,7 @@ final class AdminDiscountPriceCalculator implements PriceCalculatorInterface
 ```
 
 ```php
-final class UnitedKindomPriceCalculcator implements PriceCalculatorInterface
+final class UnitedKindomPriceCalculator implements PriceCalculatorInterface
 {
    public function calculate(float $price): float
    {
@@ -179,18 +179,18 @@ final class UnitedKindomPriceCalculcator implements PriceCalculatorInterface
 Based on your needs, collect this or that service.
 
 ```php
-$priceCalculcatorCollector = class PriceCalculcatorCollector;
-$priceCalculcatorCollector->addPriceCalculator(new AdminDiscountPriceCalculator());
-$priceCalculcatorCollector->addPriceCalculator(new UnitedKindomPriceCalculcator());
+$priceCalculatorCollector = class PriceCalculatorCollector;
+$priceCalculatorCollector->addPriceCalculator(new AdminDiscountPriceCalculator());
+$priceCalculatorCollector->addPriceCalculator(new UnitedKindomPriceCalculator());
 
-$price = $priceCalculcatorCollector->calculatePrice($product);
+$price = $priceCalculatorCollector->calculatePrice($product);
 ```
 
 <em class="fa fa-fw fa-lg fa-check text-success"></em> single entry point for `Collector`
 
 <em class="fa fa-fw fa-lg fa-check text-success"></em> each solution that implements `PriceCalculatorInterface` **is reusable**
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> **to extend** `PriceCalculcatorCollector` with another feature, e.g. have a discount for Lenovo laptops from now till the end of June 2018, **we don't have to modify** it - just register a new `PriceCalculator`
+<em class="fa fa-fw fa-lg fa-check text-success"></em> **to extend** `PriceCalculatorCollector` with another feature, e.g. have a discount for Lenovo laptops from now till the end of June 2018, **we don't have to modify** it - just register a new `PriceCalculator`
 
 <em class="fa fa-fw fa-lg fa-check text-success"></em> **to reflect 1 change in reality**, e.g. from 15 % to 20 % VAT, all we need to do it **change 1 class for everyone**
 
