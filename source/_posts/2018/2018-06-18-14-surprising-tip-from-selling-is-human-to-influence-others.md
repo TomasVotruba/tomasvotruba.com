@@ -2,7 +2,7 @@
 id: 115
 title: "14 Surprising Tips from Selling is Human to Influence Others"
 perex: |
-    Recently, I've read [Selling is Human](https://www.youtube.com/watch?v=nKrBitIQrgo&feature=youtu.be&t=290) by Daniel Pink. He's famous for [Pinkcast](https://www.danpink.com/pinkcast/) - an espresso of knowledge. I like him, because he's often right to the point, with examples, stories and science.
+    Recently, I've read [Selling is Human](https://www.youtube.com/watch?v=nKrBitIQrgo&feature=youtu.be&t=290) by Daniel Pink. He's famous for [Pinkcast](https://www.danpink.com/pinkcast/) - an espresso of knowledge. I like him, because he's often right to the point, with examples, stories, and science.
     <br><br>
     What can we learn about selling?
     Lucky for you, you don't have to read the whole book - here are the top 10 points I found very useful.
@@ -13,24 +13,24 @@ related_items: [91, 56]
 
 ## How is Selling Useful to Programmers?
 
-*Selling* is not just you buying a cup of coffee or selling a computer on online store you made. Selling is rather abstract term, to sell your ideas, to persuade people people around you. But not just to make them abide you but to cooperate with you. **To be a leader people love.**
+*Selling* is not just you buying a cup of coffee or selling a computer on the online store you made. Selling is rather an abstract term, to sell your ideas, to persuade people around you. But not just to make them abide you but to cooperate with you. **To be a leader people love.**
 
 You probably think "I'm a programmer, I don't handle selling, I just do my job by making the best code I can."
 
-Let me give you few examples, when I had to *sell* to be able to write the best I can:
+Let me give you few examples when I had to *sell* to be able to write the best I can:
 
-- When I wanted to write tests in application with 0 % coverage a get paid for it.
+- When I wanted to write tests in an application with 0 % coverage a get paid for it.
 - When I wanted to write open-source code and be paid for it.
 - When I wanted to convince other that Doctrine is wiser to use than writing their own ORM.
 - When I have a talk about ECS and I want to people starting using coding standard even thou got burned in the past by complexity of other tools.
 
 And so on. I believe you can think of 2 ideas right know where **do you want to sell your ideas better**.
 
-How does *Selling is human* can help us with it? 
+How does *Selling is human* can help us with it?
 
 Take following quotes as list of notes you'd make by reading the whole book. Save time to win knowledge.
 
-## 1. Selling = Win Win in Long Term
+## 1. Selling = Win-Win in Long Term
 
 <img src="/assets/images/posts/2018/selling/quote.png" class="img-thumbnail">
 
@@ -40,10 +40,10 @@ Take following quotes as list of notes you'd make by reading the whole book. Sav
 
 <blockquote class="blockquote">
     "I'm the best. This is going to be a breeze," and that might give you a short-term emotional boost. <strong>But if you instead ask, "Can I make a great pitch?" the research has found that you provide yourself something that reaches deeper and lasts longer.</strong>
-    <br> 
-    <br> 
+    <br>
+    <br>
     You might respond to yourself "Well, yes, I can make a great pitch. In fact, I've probably pitched ideas at meetings two dozen times in my life." You might remind yourself of your preparation. "Sure, I can do this. I know this material inside out and I've got some great examples to persuade the people who might be skeptical." You might also give yourself specific tactical advice. "At the last meeting like this, I spoke too quickly - so this time I'll slow down."
-</blockquote> 
+</blockquote>
 
 ---
 
@@ -83,11 +83,11 @@ I wrote [How to Deal With Haters in Comments and Github](/blog/2018/01/29/how-to
 
 ## 5. Compare, Give a Context to Bare Phrases
 
-A blind man was collecting money on the street with a sign: *I am blind*. A researcher goes around and adds 4 words: *It is spring time and*. It results into:
+A blind man was collecting money on the street with a sign: *I am blind*. A researcher goes around and adds 4 words: *It is spring time and*. It results in:
 
 **It is spring time and**
 <br>
-**I am blind** 
+**I am blind**
 
 <blockquote class="blockquote">
     That's why the most essential question you can ask is this: Compared to what?
@@ -98,10 +98,10 @@ A blind man was collecting money on the street with a sign: *I am blind*. A rese
 ## 6. Potential With Imagination beats Real Achievements
 
 <blockquote class="blockquote">
-    People often find potential more interesting than accomplishment because it's more uncertain, the researchers argue. That uncertainty can lead people to think more deeply about the person they're evaluating - and the more intensive processing that requires can lead to generating more and better reasons why the person is a good choice. 
+    People often find potential more interesting than accomplishment because it's more uncertain, the researchers argue. That uncertainty can lead people to think more deeply about the person they're evaluating - and the more intensive processing that requires can lead to generating more and better reasons why the person is a good choice.
     <br>
     <br>
-    So next time you're selling yourself, don't fixate only on what you achieved yesterday. Also emphasize the promise.
+    So next time you're selling yourself, don't fixate only on what you achieved yesterday. Also, emphasize the promise.
 </blockquote>
 
 <br>
@@ -110,14 +110,14 @@ A blind man was collecting money on the street with a sign: *I am blind*. A rese
 
 <blockquote class="blockquote">
 I've learned that <strong>rational questions are ineffective for motivating resistant people</strong>. <br>
-Instead I've found that <strong>irrational questions actually motivate people better</strong>.
+Instead, I've found that <strong>irrational questions actually motivate people better</strong>.
 </blockquote>
 
 <br>
 
 ## 8. Focus on Roots of Motivation instead of Blaming
 
-Your daughter is about to have a test tomorrow, but she's procrastinating so she might fail. 
+Your daughter is about to have a test tomorrow, but she's procrastinating so she might fail.
 You ask her: "On scale 1 to 10, how confident do you feel you'll make the test?"
 
 "I guess 4", she replies.
@@ -126,7 +126,7 @@ You ask her: "On scale 1 to 10, how confident do you feel you'll make the test?"
     "Why didn't you pick a lower number?" This is the question that catches everybody off guard," Pantalon writes in his book Instant Influence.
     <br>
     <br>
-    <strong>She moves from defending her current behavior to articulating why, at some level, she wants to behave differently</strong>. And that, says Pantalon, allows her to clarify her personal, positive, and intrinsic motives for studying, which increases the chances she actually will. So, on a scale of 1 to 10, how ready are you to try Pantalon's two-question technique? And why isn't your number lower?"
+    <strong>She moves from defending her current behavior to articulating why, at some level, she wants to behave differently</strong>. And that says Pantalon, allows her to clarify her personal, positive, and intrinsic motives for studying, which increases the chances she actually will. So, on a scale of 1 to 10, how ready are you to try Pantalon's two-question technique? And why isn't your number lower?"
 </blockquote>
 
 <br>
@@ -146,14 +146,14 @@ You ask her: "On scale 1 to 10, how confident do you feel you'll make the test?"
 
 ## 10. Langauge Hacking
 
-Daniel shares a link to [Get ready for your pitch](http://www.danpink.com/pitch) and also talks about **1 word pitch**. What's that? 
+Daniel shares a link to [Get ready for your pitch](http://www.danpink.com/pitch) and also talks about **1-word pitch**. What's that?
 
 - Google - "search"
 - Facebook - "social networks"
 - Rector - "instant upgrades"
 - Your-project - ?
 
-People needs to associate your with **the 1 word**. Pick it and take it! 
+People need to associate yours with **the 1 word**. Pick it and take it!
 
 <br>
 
@@ -161,9 +161,9 @@ People needs to associate your with **the 1 word**. Pick it and take it!
 
 <blockquote class="blockquote">
     "Go first if you're the incumbent, last if you're the challenger. In competitive sales presentations, where a series of sellers make their pitches one after another, the market leader is most likely to get selected if it presents first, according to Virginia Tech University researchers. But for a challenger, the best spot, by far, is to present last."
-</blockquote>   
+</blockquote>
 
-How widely this applies to other settings isn't clear from the research, but in general, **the middle is the place you're most overseen**. 
+How widely this applies to other settings isn't clear from the research, but in general, **the middle is the place you're most overseen**.
 
 <br>
 
@@ -190,7 +190,7 @@ How widely this applies to other settings isn't clear from the research, but in 
 </blockquote>
 
 <blockquote class="blockquote">
-    "That's so interesting!" The maneuver gives her time to conjure a question, but it also spins the weather vane in a friendlier direction. And when she poses a question, I have to stop a moment, think, and offer an intelligent answer. 
+    "That's so interesting!" The maneuver gives her time to conjure a question, but it also spins the weather vane in a friendlier direction. And when she poses a question, I have to stop a moment, think, and offer an intelligent answer.
 </blockquote>
 
 <img src="/assets/images/posts/2018/selling/book.png" class="img-thumbnail">
