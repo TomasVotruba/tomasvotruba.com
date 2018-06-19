@@ -62,7 +62,7 @@ I wrote [How to Deal With Haters in Comments and Github](/blog/2018/01/29/how-to
 
 <blockquote class="blockquote">
     When something bad occurs, ask yourself three questions—and come up with an intelligent way to answer each one "no": 1. Is this permanent? Bad response: "Yes. I've completely lost my skill for moving others." Better response: "No. I was flat today because I haven't been getting enough sleep." 2. Is this pervasive?"
-</blocquote>
+</blockquote>
 
 <blockquote class="blockquote">
     The more you explain bad events as temporary, specific, and external, the more likely you are to persist even in the face of adversity.
