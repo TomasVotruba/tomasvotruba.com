@@ -10,12 +10,12 @@ id: talks
 
         {foreach $talks as $talk}
             {var $postYear = $talk['year']}
-            {if && !isset($dateLines[$postYear])}
+            {if !isset($dateLines[$postYear])}
                 <h2 id="year-{$postYear}" class="text-center mt-5 mb-5">
                     <em class="fa fa-calendar-o"></em>
                     &nbsp;
-                    {$talkYear}
-                    {var $dateLines[$talkYear] = $talkYear}
+                    {$postYear}
+                    {var $dateLines[$postYear] = $postYear}
                 </h2>
             {/if}
 
