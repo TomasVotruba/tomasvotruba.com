@@ -1,0 +1,40 @@
+.checklist li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* used from http://phppackagechecklist.com/css/all.css */
+
+/*.checklist { margin: 50px auto 0 auto; max-width: 900px; }*/
+.checklist__item { margin: 0 0 10px 0; position: relative; }
+.checklist__input { display: none; user-select: none; }
+.checklist__label { display: block; position: absolute; left: 0; top: 0; width: 4em; height: 100%; background: #bd4646; background-size: 50%; cursor: pointer; cursor: hand; user-select: none; box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15) inset; }
+.checklist__label:hover { background-color: #ac3d3d; }
+.checklist__input:checked ~ .checklist__label { background: #529963 url(../img/checkmark.png) no-repeat center center; background-size: 60%; }
+
+.checklist__input:checked ~ .checklist__label:hover { background-color: #498858; }
+.checklist__input:checked ~ .checklist__details { color: #20592e; background: #64b878; }
+.checklist__input:checked ~ .checklist__details a { color: #20592e; }
+.checklist__input:checked ~ .checklist__details a:hover { color: white; }
+
+.checklist__details { display: block; margin: 0 0 10px 0; padding: 1em 1em 1em 5em; color: #570404; background: #da5b5b; }
+.checklist__details:last-child { margin: 0; }
+.checklist__details a { color: #570404; }
+.checklist__details a:hover { color: white; }
+.checklist__title { color: white; font-weight: 600; font-size: 35px; }
+.checklist__details_list { list-style: circle; margin: 20px 0 20px 20px; }
+.checklist__details_item { margin: 0 0 8px 0; font-size: 18px; }
+
+@media only screen and (max-width: 399px) {
+    .checklist__label { position: static; width: 100%; height: 100px; background-size: auto 130%; }
+    .checklist__input:checked ~ .checklist__label { background-size: auto 130%; }
+    .checklist__details { padding: 25px; }
+    .checklist__title { font-size: 30px; }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+    .checklist__label { width: 100px; }
+    .checklist__details { padding-left: 130px; }
+    .checklist__title { font-size: 30px; }
+}

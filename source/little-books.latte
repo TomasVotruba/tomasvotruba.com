@@ -57,13 +57,17 @@ inspiration:
                 </li>
             </ul>
 
-            <ul class="mt-4">
+            <ul class="mt-4 checklist">
                 {foreach $little_book['post_ids'] as $postId}
                     {var $activePost = $posts[$postId]}
-                    <li class="mb-3">
-                        <a href="/{$activePost['relativeUrl']}/">{$activePost['title']|noescape}</a>
+                    <li class="mb-3 checklist__item">
+                        <input class="checklist__input" type="checkbox" id="item_{$activePost['id']}" value="{$activePost['id']}" checked="checked">
+                        <label class="checklist__label" for="item_{$activePost['id']}"></label>
+                        <div class="checklist__details">
+                            <a href="/{$activePost['relativeUrl']}/">{$activePost['title']|noescape}</a>
 
-                        {include "postMetadataLine", post => $activePost}
+                            {include "postMetadataLine", post => $activePost}
+                        </div>
                     </li>
                 {/foreach}
             </ul>
