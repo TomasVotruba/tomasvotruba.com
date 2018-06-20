@@ -8,56 +8,22 @@ id: talks
     <div class="container">
         <h1>{$title}</h1>
 
-        <h2 class="text-center mb-4" id="in-english">English</h2>
-
-        {include talksTable, lang => "en"}
-
-        <br>
-
-        <h2 class="text-center mb-4" id="in-czech">Czech</h2>
-
-        {include talksTable, lang => "cs"}
-    </div>
-{/block}
-
-
-{define talksTable}
-    <table class="table table-bordered table-striped table-responsive">
-        <thead class="thead-inverse">
-            <th class="text-center">
-                <em class="fa fa-volume-up"></em>
-                &nbsp;
-                Talk
-            </th>
-            <th class="text-nowrap text-center">
-                <em class="fa fa-map-marker"></em>
-                &nbsp;
-                Event
-            </th>
-        </thead>
-
         {foreach $talks as $talk}
-            {continueIf $talk['lang'] !== $lang}
-
             {var $postYear = $talk['year']}
             {if $postYear != date('Y') && !isset($dateLines[$postYear])}
-                <thead>
-                    <tr>
-                        <th colspan="4" id="year-{$postYear}" class="text-center">
-                            <em class="fa fa-calendar-o"></em>
-                            &nbsp;
-                            {$postYear}
-                            {var $dateLines[$postYear] = $postYear}
-                        </th>
-                    </tr>
-                </thead>
+                <h2 id="year-{$postYear}" class="text-center mt-5 mb-5">
+                    <em class="fa fa-calendar-o"></em>
+                    &nbsp;
+                    {$postYear}
+                    {var $dateLines[$postYear] = $postYear}
+                </h2>
             {/if}
 
-            <tr id="{$talk['title']|webalize}">
-                <td>
-                    <a href="#{$talk['title']|webalize}">{$talk['title']}</a>
-
-                    <br>
+            <div class="card" id="{$talk['title']|webalize}">
+                <div class="card-body">
+                    <h3 class="mt-3">
+                        <a href="#{$talk['title']|webalize}">{$talk['title']}</a>
+                    </h3>
 
                     {ifset $talk['video_link']}
                         <a href="{$talk['video_link']}" class="btn btn-danger btn-sm mt-3 mr-2 mb-2">
@@ -74,18 +40,18 @@ id: talks
                     {/ifset}
 
                     {ifset $talk['related_post']}
-                        <a href="{$talk['related_post']}" class="btn btn-info btn-sm mt-3 mb-2">
+                        <a href="{$talk['related_post']}" class="btn btn-info btn-sm mt-3 mr-2 mb-2">
                             <em class="fa fa-fw fa-book"></em>
                             Read Related Post
                         </a>
                     {/ifset}
-                </td>
-                <td>
-                    <a n:tag-ifset="$talk['event_link']" href="{$talk['event_link']}">
+
+                    <a n:tag-ifset="$talk['event_link']" href="{$talk['event_link']}" class="btn btn-success btn-sm mt-3 mb-2">
+                        <em class="fa fa-fw fa-map-marker"></em>
                         {$talk['event_name']}
                     </a>
-                </td>
-            </tr>
+                </div>
+            </div>
         {/foreach}
-    </table>
-{/define}
+    </div>
+{/block}
