@@ -3,3 +3,4 @@
 composer.lock
 /node_modules
 /config/config.local.yml
+package-lock.json

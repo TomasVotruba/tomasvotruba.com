@@ -1,33 +1,32 @@
 // inspired by http://phppackagechecklist.com/js/scripts.js
 
 $(function() {
-    // Update checklist on load
-    var rows = window.location.hash.substring(1).split(',');
+    // If is not set, create it
+    if (window.localStorage.getItem('books') == null) {
+        window.localStorage.setItem('books', JSON.stringify([]));
+    }
 
-    if (rows[0].length) {
-        $('.checklist__input').each(function(index) {
-            if ($.inArray($(this).val(), rows) < 0) {
-                $(this).attr('checked', false);
+    var rows = JSON.parse(window.localStorage.getItem('books'));
+    var $inputs = $('.checklist__input');
+
+    // Set initial checked state to checkboxes found in localStorage
+    if (rows.length) {
+        $inputs.each(function() {
+            console.log($(this).val());
+            if ($.inArray($(this).val(), rows) !== -1) {
+                $(this).attr('checked', true);
             }
         });
     }
 
-    // Update hash on change
-    $('.checklist__input').change(function () {
+    // Update localStorage on change
+    $inputs.change(function () {
         var rows = [];
 
-        $('.checklist__input:checked').each(function(index) {
+        $('.checklist__input:checked').each(function() {
             rows.push($(this).val());
         });
 
-        window.location.hash = rows.join(',');
-
-        $('.share__input').val(window.location);
-
-    }).trigger('change');
-
-    // Select share link on input click
-    $('.share__input').click(function () {
-        $(this).select();
+        window.localStorage.setItem('books', JSON.stringify(rows));
     });
 });
