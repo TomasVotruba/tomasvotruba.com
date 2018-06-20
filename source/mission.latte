@@ -2,21 +2,20 @@
 layout: default
 title: "I'm Here to Help You"
 id: mission
+
+quotes:
+    - "A day without commit to an open-source project is a day wasted."
+
 ---
 
 {block content}
     <div class="container">
         <h1>{$title}</h1>
 
+        {var $quote = $quotes[array_rand($quotes)]}
+
         <blockquote class="blockquote text-center mt-lg-5 pb-lg-4" id="about-quote">
-            <p>
-                "What if we train them and they leave?"
-                <br>
-                "What if we don't and they stay."
-            </p>
-            <footer class="blockquote-footer">
-                Tim Williams
-            </footer>
+            <p>"{$quote}"</p>
         </blockquote>
 
         <hr>
@@ -113,5 +112,166 @@ id: mission
                 </div>
             </div>
         {/foreach}
+
+
+        {var $reference = $references[array_rand($references)]}
+        <blockquote class="blockquote text-center mt-lg-5 mb-lg-5">
+            <p>"{$reference['text']}"</p>
+            <footer class="blockquote-footer">
+                {$reference['author']} at <a href="{$reference['company_url']}">{$reference['company']}</a>
+            </footer>
+        </blockquote>
+
+        <hr>
+
+        <p>
+            I have been in PHP for {= date('Y')-2004} years, {= date('Y')-2010} years with Nette and last {= date('Y')-2014} years with Symfony.
+            <br>
+            I focus on <strong>PHP frameworks, legacy code transitions and AST-based instant upgrades, instant refactoring and coding standards</strong>.
+        </p>
+        <p>
+            <br>Recently, I'm helping <a href="https://shopsys.com/">Shopsys</a> to become the best open-source, Symfony-based e-commerce platform, and also other clients:</p>
+
+        <div class="text-center row">
+            {foreach $helped_companies as $logo => $url}
+                <div class="align-self-center col-md-4 col-sm-6 col-6 border-0 pt-md-0 pb-md-0 pt-2 pb-2">
+                    <a href="{$url}">
+                        <img src="/assets/images/references/{$logo}">
+                    </a>
+                </div>
+            {/foreach}
+        </div>
+
+        <p class="text-center bigger mt-4">
+            <em>Do you want to be next?</em>
+        </p>
+
+        <p class="text-center">
+            <a href="/contact/" class="btn btn-success bigger mt-2 mb-2">
+                Let me know <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+            </a>
+        </p>
+
+        <hr>
+
+        <h2 class="text-center">Do you Need Framework Training?</h2>
+
+        {* ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout *}
+        <div class="card-deck card-normal">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <img src="/assets/images/skills/symfony.png" class="col-10 mb-3 mt-3">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Dive into Symfony</h3>
+
+                            <p>
+                                We'll focus exactly on your project's level and how to integrate Symfony there.
+                            </p>
+
+                            <ul>
+                                <li><strong>Request & Response</strong> life cycle</li>
+
+                                <li>All arounds <strong>Controllers</strong> - services, <code>_invoke</code></li>
+                                <li><strong>Twig</strong> templating system</li>
+                                <li><strong>Dependency Injection</strong>, <code>_defaults</code>, <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">PSR-4 service auto-discovery</a> and more</li>
+                                <li>Hooking Events via <a href="https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/"><strong>EventDispatcher</strong></a></li>
+                                <li><strong>Commands</strong> in CLI made easy</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">Symfony 3.3 and 4.0</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <img src="/assets/images/skills/nette.png" class="card-img-top col-8 mb-4 mt-4">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Become Nette Master</h3>
+                            <p>
+                                You'll understand strong features of framework and in the end of lecture you'll be able to build application on last version.
+                            </p>
+
+                            <ul>
+                                <li>Directory Structure - where to put what</li>
+                                <li><strong>routing</strong>: SEO and user friendly URL</li>
+                                <li>life cycle of <strong>Presenter</strong></li>
+                                <li>fancy configuration with NEON</li>
+                                <li><strong>Dependency Injection</strong> and autowiring</li>
+                                <li><strong>Latte</strong> - templates done simple</li>
+                                <li>You'll be able to <strong><a href="/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension/">Write own Extension</a></strong></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <small class="text-muted">Nette 2.4 and 3.0</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="text-center">What else Can I Help You With?</h2>
+
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <em class="fa fa-line-chart"></em>
+                    &nbsp;
+                    How to write Clean Code and Scaleable Architecture
+                </h3>
+                <ul>
+                    <li>How to <strong>refactor legacy code</strong></li>
+                    <li><strong>SOLID principals</strong> and <strong>design patterns</strong> in real life <strong>examples</strong></li>
+                    <li>How to <strong>save time with static analysis</strong>: <a href="/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/">EasyCodingStandard</a> and <a href="/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/">PHPStan</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <em class="fa fa-dollar"></em>
+                    &nbsp;
+                    Level up your Career
+                </h3>
+                <ul>
+                    <li>What are the <strong>most effective strategies</strong> to find a job you desire</li>
+                    <li>How to <strong>sell your top skill</strong></li>
+                    <li>How <strong>master negotiation</strong> with your employer</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <em class="fa fa-envelope-open-o"></em>
+                    &nbsp;
+                    Get the best out of Open-Source for your Project
+                </h3>
+                <ul>
+                    <li><a href="https://leanpub.com/principles-of-package-design">Package design principles</a> and <a href="http://phppackagechecklist.com/#1,2,3,4,5,6,7,8,9,10,11,12,13,14">useful PHP standards</a></li>
+                    <li>How to approach versioning, <strong><a href="/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/">local packages</a> and use <a href="/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/">power of monorepo</a></strong></li>
+                    <li><a href="https://travis-ci.org/">Travis</a>, <a href="https://phpunit.de/">PHPUnit</a>, <strong>testing</strong> and code coverage</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="text-center bigger">
+            <em>Do you know what skill-mix do you need?</em>
+        </p>
+        <p class="text-center">
+            <a href="/contact/" class="btn btn-success bigger mt-2 mb-2">
+                &nbsp;Write me
+                <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+            </a>
+        </p>
     </div>
 {/block}
