@@ -9,15 +9,9 @@ id: talks
         <h1>{$title}</h1>
 
         {foreach $talks as $talk}
-<<<<<<< HEAD
             {var $postYear = $talk['year']}
-            {if $postYear != date('Y') && !isset($dateLines[$postYear])}
+            {if && !isset($dateLines[$postYear])}
                 <h2 id="year-{$postYear}" class="text-center mt-5 mb-5">
-=======
-            {var $talkYear = $talk['year']}
-            {if !isset($dateLines[$talkYear])}
-                <h2 id="year-{$talkYear}" class="text-center mt-5 mb-5">
->>>>>>> f256a33... misc
                     <em class="fa fa-calendar-o"></em>
                     &nbsp;
                     {$talkYear}
