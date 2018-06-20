@@ -124,33 +124,6 @@ parameters:
             slides_link: "https://docs.google.com/presentation/d/1f3WokfmgBTRtUssWj7fupxjMBZzI6BuocrWSMg8skAU/edit?usp=sharing"
             lang: cs
             related_post: "/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/"
-
-        -
-            title: "Jak zdarma hostovat na Githubu jemně dynamické stránky?"
-            year: 2016
-            event_name: "83. PoSobota @ Liberec"
-            event_link: "https://www.facebook.com/events/387267941396841"
-            video_link: "https://www.youtube.com/watch?v=y0mTpH5vtJc"
-            slides_link: "https://drive.google.com/open?id=1nDFqW6QiW56d9q4zSFr0JoVD4_axOMlhjU-6NZrKLhE"
-            lang: cs
-            related_post: "/blog/2017/02/20/statie-how-to-run-it-locally/"
-
-        -
-            title: "PHP TIPY a TRIKY - Jak využít plný potenciál toho, co už máte a ušetřit si čas"
-            year: 2016
-            event_name: "Meditorial private lecture"
-            event_link: "http://www.meditorial.cz/"
-            slides_link: "https://docs.google.com/presentation/d/1i4lhWFVNZNyzwlcqe-yv4hFjZsnBzGrRDM0GyHV2DA4/edit?usp=sharing"
-            lang: cs
-
-        -
-            title: "Jak nezakrnout v IT"
-            year: 2016
-            event_name: "Meditorial private lecture"
-            event_link: "http://www.meditorial.cz/"
-            slides_link: "https://docs.google.com/presentation/d/1xmZBhDcPie5J3rRDE8sykKo-G-22tibUS4mq0PqZPlU/edit?usp=sharing"
-            lang: cs
-
         -
             title: "Jak vydělat na open-source"
             year: 2016
@@ -158,30 +131,3 @@ parameters:
             event_link: "http://erudio.cz/"
             slides_link: "https://docs.google.com/presentation/d/1yX0am3xLLmmg_z1g3vBZ2g5V40UIjQDVX3wyNw6Eppg/edit?usp=sharing"
             lang: cs
-
-        -
-            title: "Jako Vinnetou a Old Shatterhand – refaktoruj nenávist v přátelství"
-            year: 2016
-            event_name: "PHPLive 2016"
-            event_link: "https://www.phplive.cz/"
-            video_link: "https://www.youtube.com/watch?v=D827D5ILfh8"
-            slides_link: "https://www.slideshare.net/phplive/tom-votruba-jako-vinnetou-a-old-shatterhand-refaktoruj-nenvist-v-ptelstv"
-            lang: cs
-
-        -
-            title: "Sex na jednu noc vs. láska na celý život"
-            year: 2016
-            event_name: "Devel Conferene 2016"
-            event_link: "https://devel.cz/konference/2016"
-            slides_link: "https://www.slideshare.net/TomVotruba/tom-votruba-sex-na-jednu-noc-vs-lska-na-cel-ivot-devel-2016"
-            lang: cs
-
-        -
-            title: "Jak přežít Symfony 3"
-            year: 2015
-            event_name: "1. Péhápkaři @ LMC"
-            event_link: "https://www.facebook.com/events/1077169292307738"
-            video_link: "https://www.youtube.com/watch?v=N-4HIjWfRQ0"
-            slides_link: "https://www.slideshare.net/pehapkari/tom-votruba-jak-pet-symfony-3-1-sraz-ptel-symfony-v-praze"
-            lang: cs
-            related_post: "/blog/2015/11/09/4-hot-news-in-symfony-3"
