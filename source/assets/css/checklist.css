@@ -9,14 +9,16 @@
 /*.checklist { margin: 50px auto 0 auto; max-width: 900px; }*/
 .checklist__item { margin: 0 0 10px 0; position: relative; }
 .checklist__input { display: none; user-select: none; }
-.checklist__label { display: block; position: absolute; left: 0; top: 0; width: 200px; height: 100%; background: #bd4646; background-size: 50%; cursor: pointer; cursor: hand; user-select: none; box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15) inset; }
+.checklist__label { display: block; position: absolute; left: 0; top: 0; width: 4em; height: 100%; background: #bd4646; background-size: 50%; cursor: pointer; cursor: hand; user-select: none; box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15) inset; }
 .checklist__label:hover { background-color: #ac3d3d; }
 .checklist__input:checked ~ .checklist__label { background: #529963 url(../img/checkmark.png) no-repeat center center; background-size: 60%; }
+
 .checklist__input:checked ~ .checklist__label:hover { background-color: #498858; }
 .checklist__input:checked ~ .checklist__details { color: #20592e; background: #64b878; }
 .checklist__input:checked ~ .checklist__details a { color: #20592e; }
 .checklist__input:checked ~ .checklist__details a:hover { color: white; }
-.checklist__details { display: block; margin: 0 0 10px 0; padding: 30px 25px 15px 250px; min-height: 200px; color: #570404; background: #da5b5b; }
+
+.checklist__details { display: block; margin: 0 0 10px 0; padding: 1em 1em 1em 5em; color: #570404; background: #da5b5b; }
 .checklist__details:last-child { margin: 0; }
 .checklist__details a { color: #570404; }
 .checklist__details a:hover { color: white; }
