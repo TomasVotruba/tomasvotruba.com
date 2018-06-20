@@ -30,7 +30,7 @@ parameters:
             slides_link: "https://docs.google.com/presentation/d/1jAmvsXAavK4P4KlUASxxsmYbYHk153Dv5LmfqyZFmVI/edit?usp=sharing"
 
         -
-            title: "Easy Coding Stadard - Setup Coding Standards under 5 minutes"
+            title: "Easy Coding Standard - Setup Coding Standards under 5 minutes"
             year: 2017
             event_name: "PHP Central Europe Conference 2017 @ Poland"
             event_link: "https://2017.phpce.eu/"
@@ -40,7 +40,7 @@ parameters:
         -
             title: "From Single Stupid Sniff to Solid Architecture Control"
             year: 2017
-            event_name: "Nette Camp"
+            event_name: "Nette Camp 2017"
             event_link: "https://www.nettecamp.cz/"
             slides_link: "https://docs.google.com/presentation/d/1Cx0W9Fj8AYrBzDyJjnFU_EXW9py_j-yFqxo8ztdaldk/edit?usp=sharing"
             related_post: "/blog/2017/08/21/5-useful-rules-from-symplify-coding-standard/"
@@ -48,7 +48,7 @@ parameters:
         -
             title: "Symfony Forms on a Healthy Diet"
             year: 2017
-            event_name: "Erudio private lecture"
+            event_name: "Private Lecture @ Erudio"
             event_link: "http://erudio.cz/"
             slides_link: "https://docs.google.com/presentation/d/17xgk_xSDdEcfvtm5cNqbx-AckDC1iCD61zXWrMav2GM/edit?usp=sharing"
 
@@ -81,7 +81,7 @@ parameters:
         -
             title: "Hot news in PHP 7, 7.1, Symfony 3.1, 3.2 (3.3)"
             year: 2017
-            event_name: "Erudio private lecture"
+            event_name: "Private Lecture @ Erudio"
             event_link: "http://erudio.cz/"
             slides_link: "https://docs.google.com/presentation/d/1f3WokfmgBTRtUssWj7fupxjMBZzI6BuocrWSMg8skAU/edit?usp=sharing"
             related_post: "/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/"
