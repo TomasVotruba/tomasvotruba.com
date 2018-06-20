@@ -36,7 +36,8 @@ The way we build a neural network in children is very powerful. And very easy, b
 
 They say that first 5-6 years are crucial for children:
 
-<blockquote class="blockquote text-center">
+
+
     In the first five years of life, your child’s brain develops more and faster than at any other time in his life. Your child’s early experiences – the things he sees, hears, touches, smells and tastes – stimulate his brain, creating millions of connections. This is when the foundations for learning, health, and behavior throughout life are laid down.
     <footer class="blockquote-footer"><a href="http://raisingchildren.net.au/articles/child_development.html">Child development: the first five years</a></footer>
 </blockquote>
