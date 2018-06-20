@@ -9,19 +9,25 @@ id: talks
         <h1>{$title}</h1>
 
         {foreach $talks as $talk}
+<<<<<<< HEAD
             {var $postYear = $talk['year']}
             {if $postYear != date('Y') && !isset($dateLines[$postYear])}
                 <h2 id="year-{$postYear}" class="text-center mt-5 mb-5">
+=======
+            {var $talkYear = $talk['year']}
+            {if !isset($dateLines[$talkYear])}
+                <h2 id="year-{$talkYear}" class="text-center mt-5 mb-5">
+>>>>>>> f256a33... misc
                     <em class="fa fa-calendar-o"></em>
                     &nbsp;
-                    {$postYear}
-                    {var $dateLines[$postYear] = $postYear}
+                    {$talkYear}
+                    {var $dateLines[$talkYear] = $talkYear}
                 </h2>
             {/if}
 
             <div class="card" id="{$talk['title']|webalize}">
                 <div class="card-body">
-                    <h3 class="mt-3">
+                    <h3 class="mt-2">
                         <a href="#{$talk['title']|webalize}">{$talk['title']}</a>
                     </h3>
 
