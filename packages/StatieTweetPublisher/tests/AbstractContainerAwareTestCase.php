@@ -22,7 +22,7 @@ abstract class AbstractContainerAwareTestCase extends TestCase
     {
         if (! self::$cachedContainer) {
             $containerFactory = new ContainerFactory();
-            self::$cachedContainer = $containerFactory->createWithConfig(__DIR__ . '/../../statie.yml');
+            self::$cachedContainer = $containerFactory->createWithConfig(__DIR__ . '/../../../statie.yml');
         }
 
         $this->container = self::$cachedContainer;
