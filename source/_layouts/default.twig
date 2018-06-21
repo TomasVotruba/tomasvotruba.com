@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    {include "_snippets/head.latte"}
+    {% include "_snippets/head.latte" %}
     <body>
-        {include "_snippets/menu.latte"}
+        {% include "_snippets/menu.latte" %}
 
         <div>
             {block content}{/block}
         </div>
 
-        {include "_snippets/footer.latte"}
+        {% include "_snippets/footer.latte" %}
     </body>
 </html>
