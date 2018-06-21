@@ -19,30 +19,28 @@
     user-select: none;
 }
 .checklist__label {
-    margin-left: -2.5em;
+    margin-left: -1.5em;
+    margin-top: .7em;
     display: block;
     position: absolute;
     left: 0;
     top: 0;
-    width: 4em;
     height: 100%;
-    background: #bd4646;
-    background-size: 50%;
     cursor: pointer;
     user-select: none;
-    /*box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15) inset;*/
+    color: #DDD;
 }
-.checklist__label:hover {
-    background-color: #ac3d3d;
+
+.checklist__input ~ .checklist__label:hover {
+    color: #529963;
 }
 
 .checklist__input:checked ~ .checklist__label {
-    background: #529963 url('/assets/images/checklist/checkmark.png') no-repeat center center;
-    background-size: 60%;
+    color: #529963;
 }
 
 .checklist__input:checked ~ .checklist__label:hover {
-    background-color: #498858;
+    color: #498858;
 }
 
 .checklist__details {

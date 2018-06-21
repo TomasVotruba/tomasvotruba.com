@@ -64,7 +64,10 @@ inspiration:
                     {var $activePost = $posts[$postId]}
                     <li class="mb-3 checklist__item">
                         <input class="checklist__input" type="checkbox" id="item_{$activePost['id']}" value="{$activePost['id']}">
-                        <label class="checklist__label" for="item_{$activePost['id']}"></label>
+                        <label class="checklist__label" for="item_{$activePost['id']}">
+                            <em class="checklist_icon fa fa-3x fa-check" id="item_{$activePost['id']}"></em>
+                        </label>
+
                         <div class="checklist__details">
                             <a href="/{$activePost['relativeUrl']}/">{$activePost['title']|noescape}</a>
 
