@@ -16,15 +16,27 @@ final class UnpublishedTweetsResolver
         $unpublishedTweets = [];
 
         foreach ($allTweets as $tweet) {
-            foreach ($publishedTweets as $publishedTweet) {
-                if ($tweet->isSimilarTo($publishedTweet)) {
-                    continue 2;
-                }
+            if ($this->isTweetAmongPublished($tweet, $publishedTweets)) {
+                continue;
             }
 
             $unpublishedTweets[] = $tweet;
         }
 
         return $unpublishedTweets;
+    }
+
+    /**
+     * @param Tweet[] $publishedTweets
+     */
+    private function isTweetAmongPublished(Tweet $tweet, array $publishedTweets): bool
+    {
+        foreach ($publishedTweets as $publishedTweet) {
+            if ($tweet->isSimilarTo($publishedTweet)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
