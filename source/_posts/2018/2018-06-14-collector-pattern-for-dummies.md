@@ -75,7 +75,7 @@ Our `PriceCalculator` grows and grows, our e-commerce platform expands all over 
 "Override the whole class and implements `calculate()` method for yourself."
 
 ```php
- class UnitedKindomPriceCalculator extends PriceCalculator
+ class UnitedKingdomPriceCalculator extends PriceCalculator
  {
      public function calculate(Product $product): float
      {
@@ -165,7 +165,7 @@ final class AdminDiscountPriceCalculator implements PriceCalculatorInterface
 ```
 
 ```php
-final class UnitedKindomPriceCalculator implements PriceCalculatorInterface
+final class UnitedKingdomPriceCalculator implements PriceCalculatorInterface
 {
    public function calculate(float $price): float
    {
@@ -181,7 +181,7 @@ Based on your needs, collect this or that service.
 ```php
 $priceCalculatorCollector = class PriceCalculatorCollector;
 $priceCalculatorCollector->addPriceCalculator(new AdminDiscountPriceCalculator());
-$priceCalculatorCollector->addPriceCalculator(new UnitedKindomPriceCalculator());
+$priceCalculatorCollector->addPriceCalculator(new UnitedKingdomPriceCalculator());
 
 $price = $priceCalculatorCollector->calculatePrice($product);
 ```
