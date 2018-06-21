@@ -26,10 +26,15 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // $content = Strings::replace($content, '#{\$([a-z_]+)}#', '{{ $1 }}');
 
     // 2. include: {include "_snippets/menu.latte"} => {% include "_snippets/menu.latte" %}
-    $content = Strings::replace($content, '#{include (["a-z_/.]+)}#', '{% include $1 %}');
+    // $content = Strings::replace($content, '#{include (["a-z_/.]+)}#', '{% include $1 %}');
 
     // 3. suffix: {include "_snippets/menu.latte"} => {% include "_snippets/menu.twig" %}
-    $content = Strings::replace($content, '#([A-Za-z_/"]+).latte#', '$1.twig');
+    // $content = Strings::replace($content, '#([A-Za-z_/"]+).latte#', '$1.twig');
+
+    // 4. block: {block content}{/block} => {{ block content }}{/block}
+    $content = Strings::replace($content, '#{block ([A-Za-z_/"]+)}#', '{{ block $1 }}');
+    // 5. /block: {/block} => {{ end block }}
+    $content = Strings::replace($content, '#{/block}#', '{{ endblock }}');
 
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
