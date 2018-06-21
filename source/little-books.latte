@@ -38,7 +38,9 @@ inspiration:
         <hr>
 
         {foreach $little_books as $little_book}
-            <h2 id="{$little_book['title']|webalize}">{$little_book['title']}</h2>
+            <h2 id="{$little_book['title']|webalize}">
+                {$little_book['title']}
+            </h2>
 
             {var $totalReadingTime = 0}
             {foreach $little_book['post_ids'] as $postId}
@@ -62,7 +64,10 @@ inspiration:
                     {var $activePost = $posts[$postId]}
                     <li class="mb-3 checklist__item">
                         <input class="checklist__input" type="checkbox" id="item_{$activePost['id']}" value="{$activePost['id']}">
-                        <label class="checklist__label" for="item_{$activePost['id']}"></label>
+                        <label class="checklist__label" for="item_{$activePost['id']}">
+                            <em class="checklist_icon fa fa-3x fa-check" id="item_{$activePost['id']}"></em>
+                        </label>
+
                         <div class="checklist__details">
                             <a href="/{$activePost['relativeUrl']}/">{$activePost['title']|noescape}</a>
 
