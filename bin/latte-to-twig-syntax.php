@@ -23,7 +23,7 @@ foreach ($twigFileInfos as $twigFileInfo) {
     $content = $twigFileInfo->getContents();
 
     // 1. variables: {$google_analytics_tracking_id} => {{ $google_analytics_tracking_id }}
-    // $content = Strings::replace($content, '#{\$([a-z_]+)}#', '{{ $1 }}');
+    $content = Strings::replace($content, '#{\$([A-Za-z_]+)}#', '{{ $1 }}');
 
     // 2. include: {include "_snippets/menu.latte"} => {% include "_snippets/menu.latte" %}
     // $content = Strings::replace($content, '#{include (["a-z_/.]+)}#', '{% include $1 %}');

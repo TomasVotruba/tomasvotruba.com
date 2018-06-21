@@ -26,7 +26,7 @@
     {ifset $post['tested']}
         <li class="list-inline-item pull-right">
             {capture $testDirectoryOnGithub}{{ github_repository_tests_directory }}/Posts/Year{$post->getDateInFormat('Y')}/{$post['test_slug']}{/capture}
-            <a href="{$testDirectoryOnGithub}" class="badge badge-success">
+            <a href="{{ testDirectoryOnGithub }}" class="badge badge-success">
                 <em class="fa fa-fw fa-thumbs-up"></em> Tested
             </a>
         </li>
