@@ -1,5 +1,5 @@
 <head>
-    <title>{$title|replace:"&nbsp;", " "|replace:"&amp;", "&"} | {$site_title}</title>
+    <title>{$title|replace:"&nbsp;", " "|replace:"&amp;", "&"} | {{ site_title }}</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
 
@@ -12,7 +12,7 @@
     {block socialTags}
     {/block}
 
-    <link rel="alternate" type="application/rss+xml" title="{$site_title} Blog RSS" href="/rss.xml">
+    <link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog RSS" href="/rss.xml">
 
     {* Font Awesome - locally for css classes autocomplete *}
     <link href="/assets/font-awesome/css/font-awesome.min.css?v=1.5" rel="stylesheet" type="text/css" />

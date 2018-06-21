@@ -20,7 +20,7 @@ foreach ($twigFileInfos as $twigFileInfo) {
     dump($twigFileInfo->getRelativePathname());
     // rules
     // 1. variables: {$google_analytics_tracking_id} => { $google_analytics_tracking_id }
-    $twigContent = Strings::replace($twigFileInfo->getContents(), '#{\$([a-z_])+}#', '{ $1 }');
+    $twigContent = Strings::replace($twigFileInfo->getContents(), '#{\$([a-z_]+)}#', '{{ $1 }}');
 
     file_put_contents($twigFileInfo->getRealPath(), $twigContent);
 }
