@@ -27,7 +27,7 @@
         {if isset($post['deprecated'])}
             <div class="card border-danger card-bigger">
                 <div class="card-header text-white bg-danger">
-                    <strong>This post is deprecated since {$post['deprecated_since']}</strong>
+                    <strong>This post is deprecated since {{ post.deprecated_since }}</strong>
                 </div>
                 <div class="card-body">
                     {$post['deprecated_message']|noescape}
@@ -40,7 +40,7 @@
         {if isset($post['updated'])}
             <div class="card border-success card-bigger">
                 <div class="card-header text-white bg-success">
-                    <strong>This post was updated on {$post['updated_since']}</strong>
+                    <strong>This post was updated on {{ post.updated_since }}</strong>
                 </div>
                 <div class="card-body">
                     {$post['updated_message']|noescape}
@@ -79,7 +79,7 @@
 
         <div n:ifset="$post['tested']" class="mt-5 mb-5 card card-bigger">
             <div class="card-body">
-                {capture $testDirectoryOnGithub}{{ github_repository_tests_directory }}/Posts/Year{$post->getDateInFormat('Y')}/{$post['test_slug']}{/capture}
+                {capture $testDirectoryOnGithub}{{ github_repository_tests_directory }}/Posts/Year{$post->getDateInFormat('Y')}/{{ post.test_slug }}{/capture}
                 <p>
                     <strong>This Post is Tested, Make it Last Forever</strong>
                 </p>
@@ -120,7 +120,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{$post['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}" />
     <meta property="og:description" content="{$post['perex']|striptags}" />
-    <meta property="og:url" content="{{ site_url }}/{$post['relativeUrl']}" />
+    <meta property="og:url" content="{{ site_url }}/{{ post.relativeUrl }}" />
 
     {* Twitter sharing *}
     <meta name="twitter:card" content="summary" />
