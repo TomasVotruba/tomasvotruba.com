@@ -38,7 +38,9 @@ inspiration:
         <hr>
 
         {foreach $little_books as $little_book}
-            <h2 id="{$little_book['title']|webalize}">{$little_book['title']}</h2>
+            <h2 id="{$little_book['title']|webalize}">
+                {$little_book['title']}
+            </h2>
 
             {var $totalReadingTime = 0}
             {foreach $little_book['post_ids'] as $postId}
