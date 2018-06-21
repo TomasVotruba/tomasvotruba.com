@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: "_layouts/default.latte"
 title: "Czech Posts"
 id: blog
 ---
@@ -12,7 +12,7 @@ id: blog
             {foreach $posts as $post}
                 {continueIf ! isset($post['deprecated']) || ! isset($post['lang'])}
 
-                {include "singlePostPreview", post => $post}
+                {include "_snippets/post/singlePostPreview.latte", post => $post}
             {/foreach}
         </div>
     </div>

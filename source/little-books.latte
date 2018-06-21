@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: "_layouts/default.latte"
 title: "Is Book Too Long For You? Read <small>a Little Book</small>"
 id: "little-books"
 
@@ -71,7 +71,7 @@ inspiration:
                         <div class="checklist__details">
                             <a href="/{$activePost['relativeUrl']}/">{$activePost['title']|noescape}</a>
 
-                            {include "postMetadataLine", post => $activePost}
+                            {include "_snippets/post/postMetadataLine.latte", post => $activePost}
                         </div>
                     </li>
                 {/foreach}

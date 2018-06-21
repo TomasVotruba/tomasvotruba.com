@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    {include "head"}
+    {include "_snippets/head.latte"}
     <body>
         <!-- post_id: {$post->getId()} -->
 
-        {include "menu"}
+        {include "_snippets/menu.latte"}
 
         <div class="mainContent">
             {include content}
         </div>
 
-        {include "footer"}
+        {include "_snippets/footer.latte"}
     </body>
 </html>
 
@@ -18,7 +18,7 @@
     <div class="container-fluid" id="post">
         <h1>{$post['title']|noescape}</h1>
 
-        {include "postMetadataLine",
+        {include "_snippets/post/postMetadataLine.latte",
             "post" => $post,
             "showPullRequestLink" => TRUE,
             "showCommentCount" => TRUE
@@ -75,7 +75,7 @@
 
         <br>
 
-        {include "postYouMightAlsoLike", "post" => $post}
+        {include "_snippets/post/postYouMightAlsoLike.latte", "post" => $post}
 
         <div n:ifset="$post['tested']" class="mt-5 mb-5 card card-bigger">
             <div class="card-body">
@@ -108,7 +108,7 @@
         <a name="comments"></a>
         <h3>What do you think?</h3>
 
-        {include "disqusComments", 'post' => $post}
+        {include "_snippets/disqusComments.latte", 'post' => $post}
     </div>
 
     <script id="dsq-count-scr" src="https://{$disqus_shortname}.disqus.com/count.js" async defer></script>
