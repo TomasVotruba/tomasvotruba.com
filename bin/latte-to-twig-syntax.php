@@ -26,9 +26,10 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // $content = Strings::replace($content, '#{\$([A-Za-z_]+)}#', '{{ $1 }}');
 
     // 2. include: {include "_snippets/menu.latte"} => {% include "_snippets/menu.latte" %}
-    // $content = Strings::replace($content, '#{include (["a-z_/.]+)}#', '{% include $1 %}');
+    $content = Strings::replace($content, '#{include ([^}]+)}#', '{% include $1 %}');
 
     // 3. suffix: {include "_snippets/menu.latte"} => {% include "_snippets/menu.twig" %}
+    // 3. suffix: {include "_snippets/menu.latte", "data" => $data} => {% include "_snippets/menu.twig", "data" => $data %}
     // $content = Strings::replace($content, '#([A-Za-z_/"]+).latte#', '$1.twig');
 
     // 4. block: {block content}{/block} => {{ block content }}{/block}
@@ -37,7 +38,7 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // $content = Strings::replace($content, '#{/block}#', '{{ endblock }}');
 
     // 6. {$post['relativeUrl']} => {{ post.relativeUrl }}
-    $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]}#', '{{ $1.$2 }}');
+    // $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]}#', '{{ $1.$2 }}');
 
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }

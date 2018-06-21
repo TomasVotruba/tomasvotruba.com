@@ -18,11 +18,11 @@
     <div class="container-fluid" id="post">
         <h1>{$post['title']|noescape}</h1>
 
-        {include "_snippets/post/postMetadataLine.twig",
+        {% include "_snippets/post/postMetadataLine.twig",
             "post" => $post,
             "showPullRequestLink" => TRUE,
             "showCommentCount" => TRUE
-        }
+         %}
 
         {if isset($post['deprecated'])}
             <div class="card border-danger card-bigger">
@@ -75,7 +75,7 @@
 
         <br>
 
-        {include "_snippets/post/postYouMightAlsoLike.twig", "post" => $post}
+        {% include "_snippets/post/postYouMightAlsoLike.twig", "post" => $post %}
 
         <div n:ifset="$post['tested']" class="mt-5 mb-5 card card-bigger">
             <div class="card-body">
@@ -108,7 +108,7 @@
         <a name="comments"></a>
         <h3>What do you think?</h3>
 
-        {include "_snippets/disqusComments.twig", 'post' => $post}
+        {% include "_snippets/disqusComments.twig", 'post' => $post %}
     </div>
 
     <script id="dsq-count-scr" src="https://{{ disqus_shortname }}.disqus.com/count.js" async defer></script>
