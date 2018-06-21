@@ -28,5 +28,8 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // 2. include: {include "_snippets/menu.latte"} => {% include "_snippets/menu.latte" %}
     $content = Strings::replace($content, '#{include (["a-z_/.]+)}#', '{% include $1 %}');
 
+    // 3. suffix: {include "_snippets/menu.latte"} => {% include "_snippets/menu.twig" %}
+    $content = Strings::replace($content, '#([A-Za-z_/"]+).latte#', '$1.twig');
+
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
