@@ -29,7 +29,7 @@ You see the victim?
 
 I'm exaggerating a bit, but this can easily happen to anyone, due to *power trip effect*. It has happened to me before and I still have to be careful not to lose to strong emotions. **This is the best way to drive people away, trust me.**
 
-## Open-Source as Selfish Act
+## Open-Source as a Selfish Act
 
 [Jakub Kratina](http://jakubkratina.cz/) is a friend of mine, who organizes livestreams in Péhápkaři. He helped me a lot to become a better businessman and - little may he know - about *self-love* in open-source.
 
