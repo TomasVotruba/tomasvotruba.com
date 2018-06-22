@@ -15,40 +15,44 @@ There are 2 mayor views I see in open-source *a victim* and *a selfish egoist*.
 
 We had a panel discussion at [PHPLive 2018](http://www.phplive.cz/)  about pros and cons of making your code open-source and **it surprised me how negative view open-source has**. This might be related mainly to Czech & Slovak programmers, since we were raised victims by default in communism till 1993.
 
-What I'm talking about? That open-source code, is something you do for a public, in your free time. You expect them to contribute to your project in a way you expect the code to be written. You feel like a boss and you own all the keys.
+What I'm talking about? That open-source code is something you do for a public, in your free time. You expect them to contribute to your project in a way you expect the code to be written. You feel like a boss and you own all the keys.
 
-People are not listening to you, you have to raise them, you do it for them, you help them, you take care of them. You were chosen one and you know the best, because you program much more longer them them, you're older and you're having at least triple of their income.
+People are not listening to you, you have to raise them, you do it for them, you help them, you take care of them. You were chosen one and you know the best, because you program much longer then them, you're older and you're having at least triple of their income.
 
 They should be thankful!
 
 <br>
 
-You see the the victim?
+You see the victim?
 
 ### How Does it Work?
 
-I'm exaggerating a bit, but this can easily happen to anyone, due to *power trip effect*. It has happened to me before and I still have to be careful not to loose to strong emotions. **This is the best way to drive people away, trust me.**
+I'm exaggerating a bit, but this can easily happen to anyone, due to *power trip effect*. It has happened to me before and I still have to be careful not to lose to strong emotions. **This is the best way to drive people away, trust me.**
 
 ## Open-Source as Selfish Act
 
-[Jakub Kratina](http://jakubkratina.cz/) is a friend of mine, who organizes livestreams in Péhápkaři. He helped me a lot to become to better business man and - little may he know - about *self-love* in open-source. One day I way frustrated with [EasyCodingStandard](https://github.com/symplify/easyCodingStandard/) - I wanted to have the best (the all) features and resolve all the issues as fast as possible *to make people happy*. **Inside I felt I want to do something else.** Instead, I wanted to migrate from magic in extension to explicit services. I felt like those people are stopping me from being happy, I was a victim of all those issues.
+[Jakub Kratina](http://jakubkratina.cz/) is a friend of mine, who organizes livestreams in Péhápkaři. He helped me a lot to become a better businessman and - little may he know - about *self-love* in open-source.
+
+One day I was frustrated with [EasyCodingStandard](https://github.com/symplify/easyCodingStandard/) - I wanted to have the best (the all) features and resolve all the issues as fast as possible *to make people happy*. **Inside I felt I want to do something else.** Instead, I wanted to migrate from magic in extension to explicit services. I felt like those people are stopping me from being happy, I was a victim of all those issues.
 
 Luckily I talked with Jakub and he told me very wise words (I even printed on my [love board](https://www.danpink.com/pinkcast/) later):
 
-"It's your open-source, your code, your passing and your works. If you wan't to do it, do it. What is the point of doing work if it's not making you happy?"
+"It's your open-source, your code, your passion, and your works. If you want to do it, do it. What is the point of doing work if it's not making you happy?"
 
 I realized very simple point:
 
 ### The Open-Source Work Has To Make You Happy
 
-And if not, I'm doing something wrong and I have to change that, or I burn out. This helped me to [push my idea](https://github.com/Symplify/Symplify/pull/660) to a PR few days later on Epicon.
+And if not, I'm doing something wrong and I have to change that, or I burn out. This helped me to [push my idea](https://github.com/Symplify/Symplify/pull/660) to a PR a few days later at Epicon.
 
 <br>
 
 ## There is More than Meets the Eye
 
-How open-sourcing makes your code grow, your company to hire great developers or you getting super boost in programming skills?
+How open-sourcing makes your code grow, your company to hire great developers or you getting a super boost in programming skills?
 More posts to come on this topic.
+
+<img src="https://pehapkari.cz/assets/images/conferences/prague-2018/logo.png" class="img-thumbnail">
 
 You can't wait that long and want to challenge my points in person? I'll have a talk *Why Your Company Loses Money By Not-Open-Sourcing* on [PHPPrague](https://phpprague.cz) this Saturday. Be sure to come!
 
