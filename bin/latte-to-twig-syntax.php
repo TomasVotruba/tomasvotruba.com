@@ -40,5 +40,10 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // 6. {$post['relativeUrl']} => {{ post.relativeUrl }}
     // $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]}#', '{{ $1.$2 }}');
 
+    // 7. include var: {% include "_snippets/menu.latte", "data" => $data} => {% include "_snippets/menu.twig", {"data": $data} %}
+    // @todo
+    $content = Strings::replace($content, '#{include ([A-Za-z_-"]+), ___}#', '{{ "$1" ,$2 }}');
+
+
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
