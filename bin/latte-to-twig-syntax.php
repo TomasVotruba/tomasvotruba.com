@@ -26,7 +26,7 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // $content = Strings::replace($content, '#{\$([A-Za-z_]+)}#', '{{ $1 }}');
 
     // 2. include: {include "_snippets/menu.latte"} => {% include "_snippets/menu.latte" %}
-    $content = Strings::replace($content, '#{include ([^}]+)}#', '{% include $1 %}');
+    //$content = Strings::replace($content, '#{include ([^}]+)}#', '{% include $1 %}');
 
     // 3. suffix: {include "_snippets/menu.latte"} => {% include "_snippets/menu.twig" %}
     // 3. suffix: {include "_snippets/menu.latte", "data" => $data} => {% include "_snippets/menu.twig", "data" => $data %}
@@ -40,10 +40,33 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // 6. {$post['relativeUrl']} => {{ post.relativeUrl }}
     // $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]}#', '{{ $1.$2 }}');
 
-    // 7. include var: {% include "_snippets/menu.latte", "data" => $data} => {% include "_snippets/menu.twig", {"data": $data} %}
-    // @todo
-    $content = Strings::replace($content, '#{include ([A-Za-z_-"]+), ___}#', '{{ "$1" ,$2 }}');
+    // 7. include var: {% include "_snippets/menu.latte", "data" => $data %} => {% include "_snippets/menu.twig", { "data": data } %}
+    // see https://twig.symfony.com/doc/2.x/functions/include.html
+    // single lines
+    // ref https://regex101.com/r/uDJaia/1
+    $content = Strings::replace($content, '#({% include [^,]+,)([^}^:]+)(\s+%})#', function (array $match) {
+        $variables = explode(',', $match[2]);
 
+        $twigDataInString = ' { ';
+        $variableCount = count($variables);
+        foreach ($variables as $i => $variable) {
+            [$key, $value]  = explode('=>', $variable);
+            $key = trim($key);
+            $value = trim($value);
+            $value = ltrim($value, '$'); // variables do not start with
+
+            $twigDataInString .= $key . ': ' . $value;
+
+            // separator
+            if ($i < $variableCount - 1) {
+                $twigDataInString .= ', ';
+            }
+        }
+
+        $twigDataInString .= ' }';
+
+        return $match[1] . $twigDataInString . $match[3];
+    });
 
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
