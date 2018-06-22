@@ -5,7 +5,7 @@ perex: |
     Most people I meet see *open-source* as "putting all your work free to the public". Do you think that I'd love it so much if that was the case?
     <br><br>
     That's why I want to talk about selfish benefits of open-source, that comes first, almost always, but just a few people can see them. And that *selfish open-source* is a good thing.
-tweet: "New Post on my Blog: ..."
+tweet: "New Post on my Blog: Open Source is Selfish #oss #php #victim #ego"
 related_items: [53]
 ---
 
