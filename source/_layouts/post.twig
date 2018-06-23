@@ -16,7 +16,7 @@
 
 {define content}
     <div class="container-fluid" id="post">
-        <h1>{$post['title']|noescape}</h1>
+        <h1>{{ post.title | noescape }}</h1>
 
         {% include "_snippets/post/postMetadataLine.twig", { "post": post, "showPullRequestLink": TRUE, "showCommentCount": TRUE } %}
 
@@ -26,7 +26,7 @@
                     <strong>This post is deprecated since {{ post.deprecated_since }}</strong>
                 </div>
                 <div class="card-body">
-                    {$post['deprecated_message']|noescape}
+                    {{ post.deprecated_message | noescape }}
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
                     <strong>This post was updated on {{ post.updated_since }}</strong>
                 </div>
                 <div class="card-body">
-                    {$post['updated_message']|noescape}
+                    {{ post.updated_message | noescape }}
                 </div>
             </div>
 
@@ -48,7 +48,7 @@
 
         <div class="card card-bigger">
             <div class="card-body">
-                {$post['perex']|noescape}
+                {{ post.perex | noescape }}
             </div>
         </div>
 
@@ -67,7 +67,7 @@
             <br>
         {/if}
 
-        {$post['content']|noescape}
+        {{ post.content | noescape }}
 
         <br>
 
@@ -114,13 +114,13 @@
 {{ block socialTags }}
     {* Facebook sharing *}
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{$post['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}" />
-    <meta property="og:description" content="{$post['perex']|striptags}" />
+    <meta property="og:title" content="{{ post.title | replace:"&nbsp;", " "|replace:"&amp;", "&" }}" />
+    <meta property="og:description" content="{{ post.perex | striptags }}" />
     <meta property="og:url" content="{{ site_url }}/{{ post.relativeUrl }}" />
 
     {* Twitter sharing *}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@votrubaT">
-    <meta name="twitter:title" content="{$post['title']|replace:"&nbsp;", " "|replace:"&amp;", "&"}" />
-    <meta name="twitter:description" content="{$post['perex']|striptags}" />
+    <meta name="twitter:title" content="{{ post.title | replace:"&nbsp;", " "|replace:"&amp;", "&" }}" />
+    <meta name="twitter:description" content="{{ post.perex | striptags }}" />
 {{ endblock }}

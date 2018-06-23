@@ -44,29 +44,32 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // see https://twig.symfony.com/doc/2.x/functions/include.html
     // single lines
     // ref https://regex101.com/r/uDJaia/1
-    $content = Strings::replace($content, '#({% include [^,]+,)([^}^:]+)(\s+%})#', function (array $match) {
-        $variables = explode(',', $match[2]);
+//    $content = Strings::replace($content, '#({% include [^,]+,)([^}^:]+)(\s+%})#', function (array $match) {
+//        $variables = explode(',', $match[2]);
+//
+//        $twigDataInString = ' { ';
+//        $variableCount = count($variables);
+//        foreach ($variables as $i => $variable) {
+//            [$key, $value]  = explode('=>', $variable);
+//            $key = trim($key);
+//            $value = trim($value);
+//            $value = ltrim($value, '$'); // variables do not start with
+//
+//            $twigDataInString .= $key . ': ' . $value;
+//
+//            // separator
+//            if ($i < $variableCount - 1) {
+//                $twigDataInString .= ', ';
+//            }
+//        }
+//
+//        $twigDataInString .= ' }';
+//
+//        return $match[1] . $twigDataInString . $match[3];
+//    });
 
-        $twigDataInString = ' { ';
-        $variableCount = count($variables);
-        foreach ($variables as $i => $variable) {
-            [$key, $value]  = explode('=>', $variable);
-            $key = trim($key);
-            $value = trim($value);
-            $value = ltrim($value, '$'); // variables do not start with
-
-            $twigDataInString .= $key . ': ' . $value;
-
-            // separator
-            if ($i < $variableCount - 1) {
-                $twigDataInString .= ', ';
-            }
-        }
-
-        $twigDataInString .= ' }';
-
-        return $match[1] . $twigDataInString . $match[3];
-    });
+    //  {$post['updated_message']|noescape} =>  {{ post.updated_message | noescape }}
+    $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]\|([^}]+)}#', '{{ $1.$2 | $3 }}');
 
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
