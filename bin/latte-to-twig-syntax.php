@@ -78,5 +78,7 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // {if isset($post['variable'])}...{/if} => {% if $post['variable'] is defined %}...{% endif %}
     $content = Strings::replace($content, '#{if isset\(([^{]+)\)}(.*?){\/if}#s', '{% if $1 is defined %}$2{% endif %}');
 
+    // {$post->getId()} => {{ post.getId() }}
+    $content = Strings::replace($content, '#{\$([\w]+)->([\w()]+)}#', '{{ $1.$2 }}');
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
