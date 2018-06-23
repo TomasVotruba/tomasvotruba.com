@@ -14,7 +14,7 @@
     </body>
 </html>
 
-{define content}
+{% block content %}
     <div class="container-fluid" id="post">
         <h1>{{ post.title | noescape }}</h1>
 
@@ -108,7 +108,7 @@
     </div>
 
     <script id="dsq-count-scr" src="https://{{ disqus_shortname }}.disqus.com/count.js" async defer></script>
-{/define}
+{% endblock %}
 
 
 {{ block socialTags }}
