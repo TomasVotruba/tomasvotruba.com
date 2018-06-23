@@ -1,6 +1,13 @@
 parameters:
     talks:
         -
+            title: "Why Your Company Loses Money By Not-Open-Sourcing"
+            year: 2018
+            event_name: "PHPPrague 2018"
+            event_link: "https://www.facebook.com/events/204178450306613/"
+            slides_link: "https://docs.google.com/presentation/d/1kYpsn_ZAR_Q2A7WYqBIjeVIjdKe67W_d0PTHVgsvMo4/edit?usp=sharing"
+
+        -
             title: "Instant Upgrades with Rector"
             year: 2018
             event_name: "Berlin PHP UG June 2018"
