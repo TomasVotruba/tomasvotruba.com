@@ -72,7 +72,11 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]\|([^}]+)}#', '{{ $1.$2 | $3 }}');
 
     // {sep}, {/sep} => {% if loop.last == false %}, {% endif %}
-    $content = Strings::replace($content, '#{sep}([^{]+){\/sep}#', '{% if loop.last == false %}$1{% endif %}');
+    // $content = Strings::replace($content, '#{sep}([^{]+){\/sep}#', '{% if loop.last == false %}$1{% endif %}');
+
+    // https://regex101.com/r/XKKoUh/1/
+    // {if isset($post['variable'])}...{/if} => {% if $post['variable'] is defined %}...{% endif %}
+    $content = Strings::replace($content, '#{if isset\(([^{]+)\)}(.*?){\/if}#s', '{% if $1 is defined %}$2{% endif %}');
 
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }

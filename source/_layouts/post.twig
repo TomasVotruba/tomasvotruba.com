@@ -20,7 +20,7 @@
 
         {% include "_snippets/post/postMetadataLine.twig", { "post": post, "showPullRequestLink": TRUE, "showCommentCount": TRUE } %}
 
-        {if isset($post['deprecated'])}
+        {% if $post['deprecated'] is defined %}
             <div class="card border-danger card-bigger">
                 <div class="card-header text-white bg-danger">
                     <strong>This post is deprecated since {{ post.deprecated_since }}</strong>
@@ -31,9 +31,9 @@
             </div>
 
             <br>
-        {/if}
+        {% endif %}
 
-        {if isset($post['updated'])}
+        {% if $post['updated'] is defined %}
             <div class="card border-success card-bigger">
                 <div class="card-header text-white bg-success">
                     <strong>This post was updated on {{ post.updated_since }}</strong>
@@ -44,7 +44,7 @@
             </div>
 
             <br>
-        {/if}
+        {% endif %}
 
         <div class="card card-bigger">
             <div class="card-body">
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        {if isset($post['rectify_post_id'])}
+        {% if $post['rectify_post_id'] is defined %}
             <div class="card border-info card-bigger">
                 <div class="card-header text-white bg-info">
                     <strong>Are you too lazy to refactor your code this way manually?</strong>
@@ -65,7 +65,7 @@
             </div>
 
             <br>
-        {/if}
+        {% endif %}
 
         {{ post.content | noescape }}
 
