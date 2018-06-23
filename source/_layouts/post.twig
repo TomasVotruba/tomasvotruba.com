@@ -20,7 +20,7 @@
 
         {% include "_snippets/post/postMetadataLine.twig", { "post": post, "showPullRequestLink": TRUE, "showCommentCount": TRUE } %}
 
-        {% if $post['deprecated'] is defined %}
+        {% if post.deprecated is defined %}
             <div class="card border-danger card-bigger">
                 <div class="card-header text-white bg-danger">
                     <strong>This post is deprecated since {{ post.deprecated_since }}</strong>
@@ -33,7 +33,7 @@
             <br>
         {% endif %}
 
-        {% if $post['updated'] is defined %}
+        {% if post.updated is defined %}
             <div class="card border-success card-bigger">
                 <div class="card-header text-white bg-success">
                     <strong>This post was updated on {{ post.updated_since }}</strong>

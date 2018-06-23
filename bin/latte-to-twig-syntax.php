@@ -84,5 +84,8 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // {define sth}...{/define} => {% block sth %}...{% endblock %}
     $content = Strings::replace($content, '#{define (.*?)}(.*?){\/define}#s', '{% block $1 %}$2{% endblock %}');
 
+    // {% if $post['deprecated'] => {% if $post.deprecated
+    $content = Strings::replace($content, '#{% (\w+) \$([A-Za-z]+)\[\'([\A-Za-z]+)\'\]#', '{% $1 $2.$3');
+
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
