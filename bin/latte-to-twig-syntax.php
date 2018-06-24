@@ -106,5 +106,8 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // {foreach ...)...{/foreach} =>
     $content = Strings::replace($content, '#{foreach \$([()\w ]+) as \$([()\w ]+)}(.*?){\/foreach}#s', '{% for $2 in $1 %}$3{% endfor %}');
 
+    // {foreach ...)...{/foreach} =>
+    $content = Strings::replace($content, '#{% (.*?) count\(\$?(\w+)\)#', '{% $1 $2|length');
+
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
