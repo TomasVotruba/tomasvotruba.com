@@ -102,5 +102,9 @@ foreach ($twigFileInfos as $twigFileInfo) {
 
     // {if "sth"}..{/if} =>  {% if "sth" %}..{% endif %} =>
     $content = Strings::replace($content, '#{if ([($)\w]+)}(.*?){\/if}#s', '{% if $1 %}$2{% endif %}');
+
+    // {foreach ...)...{/foreach} =>
+    $content = Strings::replace($content, '#{foreach \$([()\w ]+) as \$([()\w ]+)}(.*?){\/foreach}#s', '{% for $2 in $1 %}$3{% endfor %}');
+
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }

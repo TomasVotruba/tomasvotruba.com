@@ -5,9 +5,9 @@
 
     Do you want more on this topic? You might like these <strong>related posts</strong>:
 
-    {foreach $relatedPosts as $relatedPost}
+    {% for relatedPost in relatedPosts %}
         <a href="/{{ relatedPost.relativeUrl }}">{{ relatedPost.title|escape }}</a>{% if loop.last == false %}, {% endif %}
-    {/foreach}
+    {% endfor %}
 
     <br>
     <br>
