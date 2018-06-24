@@ -8,6 +8,8 @@ id: talks
     <div class="container">
         <h1>{{ title }}</h1>
 
+        {% set dateLines = [] %}
+
         {% for talk in talks %}
             {% set postYear = talk[year] %}
 

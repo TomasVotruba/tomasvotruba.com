@@ -28,6 +28,8 @@ id: blog
         {% set wasFirstPostMarked = false %}
 
         <div class="row">
+            {% set dateLines = [] %}
+
             {% for post in posts %}
                 {% set includePost = true %}
 
@@ -76,7 +78,7 @@ id: blog
 
                             {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
 
-                            {% if !wasFirstPostMarked %}
+                            {% if wasFirstPostMarked == false %}
                                 <p class="mt-3">{{ post.perex | raw }}</p>
                             {% endif %}
 
