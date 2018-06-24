@@ -82,14 +82,17 @@ foreach ($twigFileInfos as $twigFileInfo) {
 //    $content = Strings::replace($content, '#{\$([\w]+)->([\w()]+)}#', '{{ $1.$2 }}');
 
     // {define sth}...{/define} => {% block sth %}...{% endblock %}
-    $content = Strings::replace($content, '#{define (.*?)}(.*?){\/define}#s', '{% block $1 %}$2{% endblock %}');
+    //$content = Strings::replace($content, '#{define (.*?)}(.*?){\/define}#s', '{% block $1 %}$2{% endblock %}');
 
     // {% if $post['deprecated'] => {% if $post.deprecated
     // https://regex101.com/r/XKKoUh/2
 //    $content = Strings::replace($content, '#{% (\w+) \$([A-Za-z]+)\[\'([\A-Za-z]+)\'\]#', '{% $1 $2.$3');
 
     // {ifset $post}...{/ifset} => {% if $post is defined %}..{% endif %}
-    $content = Strings::replace($content, '#{ifset \$([A-Za-z]+)}(.*?){\/ifset}#s', '{% if $1 is defined %}$2{% endif %}');
+    //$content = Strings::replace($content, '#{ifset \$([A-Za-z]+)}(.*?){\/ifset}#s', '{% if $1 is defined %}$2{% endif %}');
+
+    // {var $var = $anotherVar} => {% set var = anotherVar %}
+    $content = Strings::replace($content, '#{var \$?(.*?) = (.*?)}#s', '{% set $1 = $2 %}');
 
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
