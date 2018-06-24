@@ -43,8 +43,8 @@ inspiration:
             </h2>
 
             {% set totalReadingTime = 0 %}
-            {foreach little_book['post_ids'] as $postId)
-                {php totalReadingTime += $posts[$postId]->getReadingTimeInMinutes())
+            {% for postId in little_book.post_ids %}
+                {% set totalReadingTime += posts[postId].getReadingTimeInMinutes %}
             {% endfor %}
 
             <ul class="list-inline post-metadata">
