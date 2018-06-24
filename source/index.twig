@@ -23,7 +23,7 @@ id: blog
 
         <br>
 
-        {% include subscribeTop %}
+        {{ block('subscribeTop') }}
 
         {% set wasFirstPostMarked = false %}
 
@@ -120,7 +120,7 @@ id: blog
             <input itemprop="query-input" type="text" id="search-query" class="form-control" required="required" name="q" placeholder="Search with Google..." autocomplete="off"/>
         </form>
 
-        {% include socials %}
+        {{ block('socials') }}
     </div>
 {% endblock %}
 

@@ -124,6 +124,9 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // @debug - is this needed?
     // $content = Strings::replace($content, '#{if \$(\w+)->(\w+)\(\)}(.*?){\/if}#s', '{% if $1.$2 %}$3{% endif %}');
 
+    $content = Strings::replace($content, '#{% include \'?(\w+)\'? %}#', '{{ block(\'$1\') }}');
+
+
 
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
