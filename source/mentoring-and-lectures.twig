@@ -40,7 +40,7 @@ partner_logos_to_urls:
         <hr>
 
         <p>
-            I have been in PHP for {= date('Y')-2004} years, {= date('Y')-2010} years with Nette and last {= date('Y')-2014} years with Symfony.
+            I have been in PHP for {{ "now"|date('Y')-2004 }} years, {{ "now"|date('Y')-2010 }} years with Nette and last {{ "now"|date('Y')-2014 }} years with Symfony.
             <br>
             I focus on <strong>PHP frameworks, legacy code transitions and AST-based instant upgrades, instant refactoring and coding standards</strong>.
         </p>
@@ -71,7 +71,7 @@ partner_logos_to_urls:
 
         <h2 class="text-center">Do you Need Framework Training?</h2>
 
-        {* ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout *}
+        {# ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout #}
         <div class="card-deck card-normal">
             <div class="row">
                 <div class="col-md-6">

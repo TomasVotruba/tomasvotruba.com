@@ -126,7 +126,7 @@ foreach ($twigFileInfos as $twigFileInfo) {
 
     $content = Strings::replace($content, '#{% include \'?(\w+)\'? %}#', '{{ block(\'$1\') }}');
 
-
+    $content = Strings::replace($content, '#{\* (.*?) \*}#s', '{# $1 #}');
 
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
