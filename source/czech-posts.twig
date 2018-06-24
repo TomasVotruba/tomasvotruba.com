@@ -10,9 +10,9 @@ id: blog
 
         <div class="row">
             {% for post in posts %}
-                {continueIf ! isset(post['deprecated']) || ! isset($post['lang']))
-
-                {% include "_snippets/post/singlePostPreview.twig" with { post: post } %}
+                {% if post.deprecated is defined and post.lang is defined %}
+                    {% include "_snippets/post/singlePostPreview.twig" with { post: post } %}
+                {% endif %}
             {% endfor %}
         </div>
     </div>
