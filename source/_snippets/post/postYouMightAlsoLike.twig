@@ -1,4 +1,4 @@
-{% set relatedPosts = ($post|relatedItems) %}
+{% set relatedPosts = post|relatedItems %}
 
 {if count($relatedPosts)}
     <hr class="mt-4 mb-lg-5">
