@@ -92,10 +92,13 @@ foreach ($twigFileInfos as $twigFileInfo) {
     //$content = Strings::replace($content, '#{ifset \$([A-Za-z]+)}(.*?){\/ifset}#s', '{% if $1 is defined %}$2{% endif %}');
 
     // {var $var = $anotherVar} => {% set var = anotherVar %}
-    $content = Strings::replace($content, '#{var \$?(.*?) = (.*?)}#s', '{% set $1 = $2 %}');
+//    $content = Strings::replace($content, '#{var \$?(.*?) = (.*?)}#s', '{% set $1 = $2 %}');
 
-    // {% if $post['rectify_post_id'] is defined %} => {% if post.rectify_post_id is defined %}
-    $content = Strings::replace($content, '#({% \w+) \$(\w+)\[\'(\w+)\'\]#', '$1 $2.$3');
+//     {% if $post['rectify_post_id'] is defined %} => {% if post.rectify_post_id is defined %}
+//    $content = Strings::replace($content, '#({% \w+) \$(\w+)\[\'(\w+)\'\]#', '$1 $2.$3');
+
+    // | noescape }=> | raw
+    $content = Strings::replace($content, '#\| noescape#', '| raw');
 
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }

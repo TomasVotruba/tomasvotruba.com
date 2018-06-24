@@ -26,7 +26,7 @@
                     <strong>This post is deprecated since {{ post.deprecated_since }}</strong>
                 </div>
                 <div class="card-body">
-                    {{ post.deprecated_message | noescape }}
+                    {{ post.deprecated_message | raw }}
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
                     <strong>This post was updated on {{ post.updated_since }}</strong>
                 </div>
                 <div class="card-body">
-                    {{ post.updated_message | noescape }}
+                    {{ post.updated_message | raw }}
                 </div>
             </div>
 
@@ -48,7 +48,7 @@
 
         <div class="card card-bigger">
             <div class="card-body">
-                {{ post.perex | noescape }}
+                {{ post.perex | raw }}
             </div>
         </div>
 
@@ -67,7 +67,7 @@
             <br>
         {% endif %}
 
-        {{ post.content | noescape }}
+        {{ post.content | raw }}
 
         <br>
 
