@@ -8,20 +8,19 @@ id: talks
     <div class="container">
         <h1>{{ title }}</h1>
 
-        {% set dateLines = [] %}
-
         {% for talk in talks %}
-            {% set postYear = talk[year] %}
+            {% set postYear = talk.year %}
 
-            {% if dateLines[postYear] is not defined %}
+            {% if postYear != previousYear %}
                 <h2 id="year-{{ postYear }}" class="text-center mt-5 mb-5">
                     <em class="fa fa-calendar-o"></em>
                     &nbsp;
                     {{ postYear }}
-                    {# https://stackoverflow.com/a/9432583/1348344 #}
-                    {% set dateLines = dateLines|merge({postYear: postYear}) %}
+
                 </h2>
             {% endif %}
+
+            {% set previousYear = postYear %}
 
             <div class="card" id="{{ talk.title|webalize }}">
                 <div class="card-body">

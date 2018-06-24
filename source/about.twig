@@ -96,7 +96,7 @@ id: about
                             <a href="{{ project.url }}">{{ project.url }}</a>
                         </li>
                         {% for item in project['description'] %}
-                            <li>{{ item }}</li>
+                            <li>{{ item|raw }}</li>
                         {% endfor %}
                     </ul>
 
