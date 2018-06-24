@@ -94,5 +94,8 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // {var $var = $anotherVar} => {% set var = anotherVar %}
     $content = Strings::replace($content, '#{var \$?(.*?) = (.*?)}#s', '{% set $1 = $2 %}');
 
+    // {% if $post['rectify_post_id'] is defined %} => {% if post.rectify_post_id is defined %}
+    $content = Strings::replace($content, '#({% \w+) \$(\w+)\[\'(\w+)\'\]#', '$1 $2.$3');
+
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
