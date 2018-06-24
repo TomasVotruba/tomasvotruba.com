@@ -100,6 +100,5 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // {% include "sth", = {% include "sth" with
     $content = Strings::replace($content, '#({% include [^,{]+)(,)#', '$1 with');
 
-
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
