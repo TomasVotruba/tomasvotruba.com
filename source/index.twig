@@ -29,43 +29,69 @@ id: blog
 
         <div class="row">
             {% for post in posts %}
-                {continueIf post->getDate() > (new DateTime) || isset($post['redirect']) || isset($post['deprecated']))
+                {% set includePost = true %}
 
-                {% set postYear = post->getDateInFormat('Y') %}
-                {if postYear != date('Y') && !isset($dateLines[$postYear]))
-                    <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
-                        <br>
-                        <br>
-                        {{ postYear }}
-                        {% set dateLines[postYear] = postYear %}
-                    </div>
-                {/if}
+                {# is old url, do not display #}
+                {% if post.redirect is defined %}
+                    {% set includePost = false %}
+                {% endif %}
 
-                {if iterator->getCounter() <= 3)
-                    <article n:class="text-left, $wasFirstPostMarked ? col-md-6 : col-md-12, pt-2, pb-4">
-                        <h2 n:class="!$wasFirstPostMarked ? firstPost">
-                            <a href="/{{ post.relativeUrl }}/">
-                                {{ post.title | raw }}
-                            </a>
-                        </h2>
+                {# is deprecated post, do not display #}
+                {% if post.deprecated is defined %}
+                    {% set includePost = false %}
+                {% endif %}
 
-                        {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+                {# is future post, do not display #}
+                {% if post.getDate <= "now" %}
+                    {% set includePost = false %}
+                {% endif %}
 
-                        {if !wasFirstPostMarked)
-                            <p class="mt-3">{{ post.perex | raw }}</p>
-                        {/if}
+                {% if includePost %}
+                    {% set postYear = post.getDateInFormat('Y') %}
+                    {% set currentYear = "now"|date('Y') %}
 
-                        {% set wasFirstPostMarked = true %}
-                    </article>
-                {% else %}
-                    {if iterator->getCounter() == 4)<ul class="mt-4 list-unstyled">{/if}
-                    <li class="mb-3 col-md-12">
-                        <a href="/{{ post.relativeUrl }}/">{{ post.title | raw }}</a>
-                        {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
-                    </li>
-                    {% if loop.last == false %}<hr>{% endif %}
-                    {last}</ul>{/last}
-                {/if}
+                    {% if postYear != currentYear and dateLines.postYear is not defined %}
+                        <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
+                            <br>
+                            <br>
+                            {{ postYear }}
+                            {# https://stackoverflow.com/a/9432583/1348344 #}
+                            {% set dateLines = dateLines|merge({postYear: postYear}) %}
+                        </div>
+                    {% endif %}
+
+                    {% if loop.counter <= 3 %}
+                        {% if wasFirstPostMarked %}
+                            {% set colClass = 'col-md-6' %}
+                        {% else %}
+                            {% set colClass = 'col-md-12' %}
+                        {% endif %}
+
+                        <article class="text-left pt-2 pb-4 {{ colClass }}">
+                            <h2 {% if wasFirstPostMarked == false %}class="firstPost"{% endif %}>
+                                <a href="/{{ post.relativeUrl }}/">
+                                    {{ post.title | raw }}
+                                </a>
+                            </h2>
+
+                            {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+
+                            {if !wasFirstPostMarked)
+                                <p class="mt-3">{{ post.perex | raw }}</p>
+                            {/if}
+
+                            {% set wasFirstPostMarked = true %}
+                        </article>
+                    {% else %}
+                        {% if loop.counter == 4 %}<ul class="mt-4 list-unstyled">{% endif %}
+                        <li class="mb-3 col-md-12">
+                            <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
+                            {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+                        </li>
+                        {% if loop.last == false %}<hr>{% endif %}
+                        {% if loop.last %}</ul>{% endif %}
+                    {% endif %}
+                {% endif %}
             {% endfor %}
         </div>
 
