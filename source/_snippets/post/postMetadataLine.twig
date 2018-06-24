@@ -32,11 +32,11 @@
         </li>
     {% endif %}
 
-    {if post->hasCode())
+    {% if post.hasCode() %}
         <li class="list-inline-item pull-right mr-2">
             <span class="badge badge-light">
                 <em class="fa fa-fw fa-code"></em> Code
             </span>
         </li>
-    {/if}
+    {% endif %}
 </ul>

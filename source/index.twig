@@ -76,9 +76,9 @@ id: blog
 
                             {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
 
-                            {if !wasFirstPostMarked)
+                            {% if !wasFirstPostMarked %}
                                 <p class="mt-3">{{ post.perex | raw }}</p>
-                            {/if}
+                            {% endif %}
 
                             {% set wasFirstPostMarked = true %}
                         </article>

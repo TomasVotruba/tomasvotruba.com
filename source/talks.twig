@@ -8,52 +8,54 @@ id: talks
     <div class="container">
         <h1>{{ title }}</h1>
 
-        {#{% for talk in talks %}#}
-            {#{% set postYear = talk[year] %}#}
-            {#{% if dateLines[postYear] is not defined %}#}
-                {#<h2 id="year-{{ postYear }}" class="text-center mt-5 mb-5">#}
-                    {#<em class="fa fa-calendar-o"></em>#}
-                    {#&nbsp;#}
-                    {#{{ postYear }}#}
-                    {#{% set dateLines[postYear] = postYear %}#}
-                {#</h2>#}
-            {#{/if}#}
+        {% for talk in talks %}
+            {% set postYear = talk[year] %}
 
-            {#<div class="card" id="{{ talk.title | webalize }}">#}
-                {#<div class="card-body">#}
-                    {#<h3 class="mt-2">#}
-                        {#<a href="#{{ talk.title | webalize }}">{{ talk.title }}</a>#}
-                    {#</h3>#}
+            {% if dateLines[postYear] is not defined %}
+                <h2 id="year-{{ postYear }}" class="text-center mt-5 mb-5">
+                    <em class="fa fa-calendar-o"></em>
+                    &nbsp;
+                    {{ postYear }}
+                    {# https://stackoverflow.com/a/9432583/1348344 #}
+                    {% set dateLines = dateLines|merge({postYear: postYear}) %}
+                </h2>
+            {% endif %}
 
-                    {#{% if talk.video_link is defined %}#}
-                        {#<a href="{{ talk.video_link }}" class="btn btn-danger btn-sm mt-3 mr-2 mb-2">#}
-                            {#<em class="fa fa-fw fa-youtube-play"></em>#}
-                            {#Watch Talk#}
-                        {#</a>#}
-                    {#{% endif %}#}
+            <div class="card" id="{{ talk.title|webalize }}">
+                <div class="card-body">
+                    <h3 class="mt-2">
+                        <a href="#{{ talk.title|webalize }}">{{ talk.title }}</a>
+                    </h3>
 
-                    {#{% if talk.slides_link is defined %}#}
-                        {#<a href="{{ talk.slides_link }}" class="btn btn-warning btn-sm mt-3 mr-2 mb-2">#}
-                            {#<em class="fa fa-fw fa-slideshare"></em>#}
-                            {#See Slides#}
-                        {#</a>#}
-                    {#{% endif %}#}
+                    {% if talk.video_link is defined %}
+                        <a href="{{ talk.video_link }}" class="btn btn-danger btn-sm mt-3 mr-2 mb-2">
+                            <em class="fa fa-fw fa-youtube-play"></em>
+                            Watch Talk
+                        </a>
+                    {% endif %}
 
-                    {#{% if talk.related_post is defined %}#}
-                        {#<a href="{{ talk.related_post }}" class="btn btn-info btn-sm mt-3 mr-2 mb-2">#}
-                            {#<em class="fa fa-fw fa-book"></em>#}
-                            {#Read Related Post#}
-                        {#</a>#}
-                    {#{% endif %}#}
+                    {% if talk.slides_link is defined %}
+                        <a href="{{ talk.slides_link }}" class="btn btn-warning btn-sm mt-3 mr-2 mb-2">
+                            <em class="fa fa-fw fa-slideshare"></em>
+                            See Slides
+                        </a>
+                    {% endif %}
 
-                    {#{% if talk.event_link is defined %}#}
-                        {#<a href="{{ talk.event_link }}" class="btn btn-success btn-sm mt-3 mb-2">#}
-                            {#<em class="fa fa-fw fa-map-marker"></em>#}
-                            {#{{ talk.event_name }}#}
-                        {#</a>#}
-                    {#{% endif %}#}
-                {#</div>#}
-            {#</div>#}
-        {#{% endfor %}#}
+                    {% if talk.related_post is defined %}
+                        <a href="{{ talk.related_post }}" class="btn btn-info btn-sm mt-3 mr-2 mb-2">
+                            <em class="fa fa-fw fa-book"></em>
+                            Read Related Post
+                        </a>
+                    {% endif %}
+
+                    {% if talk.event_link is defined %}
+                        <a href="{{ talk.event_link }}" class="btn btn-success btn-sm mt-3 mb-2">
+                            <em class="fa fa-fw fa-map-marker"></em>
+                            {{ talk.event_name }}
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
