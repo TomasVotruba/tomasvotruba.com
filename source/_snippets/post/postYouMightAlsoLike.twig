@@ -1,6 +1,6 @@
 {% set relatedPosts = post|relatedItems %}
 
-{if count($relatedPosts)}
+{% if count($relatedPosts) %}
     <hr class="mt-4 mb-lg-5">
 
     Do you want more on this topic? You might like these <strong>related posts</strong>:
@@ -11,4 +11,4 @@
 
     <br>
     <br>
-{/if}
+{% endif %}
