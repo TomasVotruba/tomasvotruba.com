@@ -6,7 +6,7 @@
 
     <li class="list-inline-item mr-3">
         <em class="fa fa-calendar fa-fw"></em>
-        <time datetime="{post->getDateInFormat('Y-m-D'))">{post->getDateInFormat('l, F j, Y'))</time>
+        <time datetime="{{ post.getDateInFormat('Y-m-D') }}">{{ post.getDateInFormat('l, F j, Y') }}</time>
     </li>
 
     {% if showCommentCount is defined %}
@@ -19,7 +19,7 @@
     {% if showPullRequestLink is defined %}
         <li class="list-inline-item">
             <em class="fa fa-fw fa-pencil"></em>
-            <a href="{post|githubEditPostUrl)">Typo? Fix me, please</a>
+            <a href="{{ post|githubEditPostUrl }}">Typo? Fix me, please</a>
         </li>
     {% endif %}
 

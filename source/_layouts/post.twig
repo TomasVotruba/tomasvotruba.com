@@ -96,6 +96,7 @@
                 {% endif %}
 
                 <a name="comments"></a>
+
                 <h3>What do you think?</h3>
 
                 {% include "_snippets/disqusComments.twig" with { 'post': post } %}
@@ -109,13 +110,13 @@
 </html>
 
 {% block socialTags %}
-    {* Facebook sharing *}
+    {# Facebook sharing #}
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ post.title | escape }}" />
     <meta property="og:description" content="{{ post.perex | striptags }}" />
     <meta property="og:url" content="{{ site_url }}/{{ post.relativeUrl }}" />
 
-    {* Twitter sharing *}
+    {# Twitter sharing #}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@votrubaT">
     <meta name="twitter:title" content="{{ post.title | escape }}" />
