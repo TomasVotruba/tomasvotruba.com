@@ -10,9 +10,9 @@ parameters:
     generators:
         posts:
             # relative to /source
-            layout: '_layouts/post.latte'
+            layout: '_layouts/post.twig'
 
-#    templating: 'twig'
+    templating: 'twig'
 
     # global templates variables
     google_analytics_tracking_id: "UA-46082345-1"
