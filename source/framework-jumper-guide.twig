@@ -4,47 +4,47 @@ title: "How Code Looks in every PHP Framework?"
 id: framework-jumper-guider
 ---
 
-{block content}
+{% block content %}
     <div class="row">
         <div class="col-md-12 text-center">
             <h1>How Does Code Look in every PHP Framework?</h1>
 
-            {var $frameworkKeys = array_keys($framework)}
+            {% set frameworkKeys = array_keys(framework) %)
 
             <div class="table-responsive">
                 <table class="table table-stripped">
                     <tr>
                         <thead class="thead-inverse">
-                            {foreach $frameworkNameTypes as $frameworkCodeTypeName}
+                            {% for frameworkCodeTypeName in frameworkNameTypes %}
                                 <th class="text-center">
-                                    <nobr>{$frameworkCodeTypeName}</nobr>
+                                    <nobr>{{ frameworkCodeTypeName }}</nobr>
                                 </th>
-                            {/foreach}
+                            {% endfor %}
                         </thead>
                     </tr>
-                        {foreach $frameworkCodeTypes as $type => $name}
+                        {% for type, name in frameworkCodeTypes %}
                             <tr>
-                                <td colspan="3" class="text-center" id="{$type}">
-                                    <a href="#{$type}">{$name}</a>
+                                <td colspan="3" class="text-center" id="{{ type }}">
+                                    <a href="#{{ type }}">{{ name }}</a>
                                 </td>
                             </tr>
                             <tr>
-                                {foreach $frameworkNameTypes as $frameworkKey => $frameworkName}
+                                {% for frameworkKey, frameworkName in frameworkNameTypes %}
 
                                 <td>
-                                    {ifset $framework[$frameworkKey][$type]}
-                                        {var $item = $framework[$frameworkKey][$type]}
-                                        {capture $code}{$item['code']}{/capture}
-                                        <pre class="language-{ifset $item ['lang']}{$item['lang']}{else}php{/ifset}">{$code}</pre>
-                                    {else}
-                                        <em><a href="../source/_data/php-frameworks/{$frameworkKey}.yml">add it</a></em>
+                                    {% if framework[$frameworkKey][$type] is defined %)
+                                        {% set item = framework[$frameworkKey][$type] %)
+                                        {% set code %}{{ item.code }}{% endset %}
+                                        <pre class="language-{ifset item ['lang']){{ item.lang }}{% else %}php{% endif %}">{{ code }}</pre>
+                                    {% else %}
+                                        <em><a href="../source/_data/php-frameworks/{{ frameworkKey }}.yml">add it</a></em>
                                     {/ifset}
                                 </td>
-                            {/foreach}
+                            {% endfor %}
                         </tr>
-                    {/foreach}
+                    {% endfor %}
                 </table>
             </div>
         </div>
     </div>
-{/block}
+{% endblock %}

@@ -4,16 +4,16 @@ title: "Deprecated Posts"
 id: blog
 ---
 
-{block content}
+{% block content %}
     <div class="container-fluid" id="blog">
         <h1>Deprecated Posts</h1>
 
         <div class="row">
-            {foreach $posts as $post}
-                {continueIf ! isset($post['deprecated']) || isset($post['lang'])}
+            {% for post in posts %}
+                {continueIf ! isset(post['deprecated']) || isset($post['lang']))
 
-                {include "_snippets/post/singlePostPreview.latte", post => $post}
-            {/foreach}
+                {% include "_snippets/post/singlePostPreview.twig" with { post: post } %}
+            {% endfor %}
         </div>
     </div>
-{/block}
+{% endblock %}

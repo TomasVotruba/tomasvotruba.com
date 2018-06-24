@@ -4,7 +4,7 @@ title: "PHP Lectures, Mentoring, Communities and Posts"
 id: blog
 ---
 
-{block content}
+{% block content %}
     <div class="container-fluid" id="blog">
         <div class="row pt-3 pb-3" id="welcome">
             <div class="col-md-3">
@@ -23,50 +23,50 @@ id: blog
 
         <br>
 
-        {include subscribeTop}
+        {% include subscribeTop %}
 
-        {var $wasFirstPostMarked = false}
+        {% set wasFirstPostMarked = false %}
 
         <div class="row">
-            {foreach $posts as $post}
-                {continueIf $post->getDate() > (new DateTime) || isset($post['redirect']) || isset($post['deprecated'])}
+            {% for post in posts %}
+                {continueIf post->getDate() > (new DateTime) || isset($post['redirect']) || isset($post['deprecated']))
 
-                {var $postYear = $post->getDateInFormat('Y')}
-                {if $postYear != date('Y') && !isset($dateLines[$postYear])}
-                    <div class="col-md-12 yearLine mb-5 clearfix" id="year-{$postYear}">
+                {% set postYear = post->getDateInFormat('Y') %)
+                {if postYear != date('Y') && !isset($dateLines[$postYear]))
+                    <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
                         <br>
                         <br>
-                        {$postYear}
-                        {var $dateLines[$postYear] = $postYear}
+                        {{ postYear }}
+                        {% set dateLines[postYear] = $postYear %)
                     </div>
                 {/if}
 
-                {if $iterator->getCounter() <= 3}
+                {if iterator->getCounter() <= 3)
                     <article n:class="text-left, $wasFirstPostMarked ? col-md-6 : col-md-12, pt-2, pb-4">
                         <h2 n:class="!$wasFirstPostMarked ? firstPost">
-                            <a href="/{$post['relativeUrl']}/">
-                                {$post['title']|noescape}
+                            <a href="/{{ post.relativeUrl }}/">
+                                {{ post.title | raw }}
                             </a>
                         </h2>
 
-                        {include "_snippets/post/postMetadataLine.latte", post => $post}
+                        {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
 
-                        {if !$wasFirstPostMarked}
-                            <p class="mt-3">{$post['perex']|noescape}</p>
+                        {if !wasFirstPostMarked)
+                            <p class="mt-3">{{ post.perex | raw }}</p>
                         {/if}
 
-                        {var $wasFirstPostMarked = true}
+                        {% set wasFirstPostMarked = true %}
                     </article>
-                {else}
-                    {if $iterator->getCounter() == 4}<ul class="mt-4 list-unstyled">{/if}
+                {% else %}
+                    {if iterator->getCounter() == 4)<ul class="mt-4 list-unstyled">{/if}
                     <li class="mb-3 col-md-12">
-                        <a href="/{$post['relativeUrl']}/">{$post['title']|noescape}</a>
-                        {include "_snippets/post/postMetadataLine.latte", post => $post}
+                        <a href="/{{ post.relativeUrl }}/">{{ post.title | raw }}</a>
+                        {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
                     </li>
-                    {sep}<hr>{/sep}
+                    {% if loop.last == false %}<hr>{% endif %}
                     {last}</ul>{/last}
                 {/if}
-            {/foreach}
+            {% endfor %}
         </div>
 
         <br>
@@ -82,10 +82,10 @@ id: blog
             </p>
         </div>
     </div>
-{/block}
+{% endblock %}
 
 
-{define subscribeTop}
+{% block subscribeTop %}
     <div class="row text-center">
         <!-- inspired and taken from: https://github.com/yegor256/blog/blob/master/_layouts/default.html -->
         <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction" n:syntax="off" class="col-md-5 col-sm-7 col-9 pull-left">
@@ -94,11 +94,11 @@ id: blog
             <input itemprop="query-input" type="text" id="search-query" class="form-control" required="required" name="q" placeholder="Search with Google..." autocomplete="off"/>
         </form>
 
-        {include socials}
+        {% include socials %}
     </div>
-{/define}
+{% endblock %}
 
-{define socials}
+{% block socials %}
     <a href="/rss.xml" class="btn btn-warning btn-sm pt-2">
         <em class="fa fa-fw fa-rss"></em>
     </a>
@@ -106,4 +106,4 @@ id: blog
     <a href="https://twitter.com/votrubaT" class="btn btn-primary btn-sm ml-3 pt-2">
         <em class="fa fa-fw fa-twitter"></em>
     </a>
-{/define}
+{% endblock %}

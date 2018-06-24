@@ -4,54 +4,54 @@ title: "Dive in Talks"
 id: talks
 ---
 
-{block content}
+{% block content %}
     <div class="container">
-        <h1>{$title}</h1>
+        <h1>{{ title }}</h1>
 
-        {foreach $talks as $talk}
-            {var $postYear = $talk['year']}
-            {if !isset($dateLines[$postYear])}
-                <h2 id="year-{$postYear}" class="text-center mt-5 mb-5">
+        {% for talk in talks %}
+            {% set postYear = talk['year'] %)
+            {if !isset(dateLines[$postYear]))
+                <h2 id="year-{{ postYear }}" class="text-center mt-5 mb-5">
                     <em class="fa fa-calendar-o"></em>
                     &nbsp;
-                    {$postYear}
-                    {var $dateLines[$postYear] = $postYear}
+                    {{ postYear }}
+                    {% set dateLines[postYear] = $postYear %)
                 </h2>
             {/if}
 
-            <div class="card" id="{$talk['title']|webalize}">
+            <div class="card" id="{{ talk.title | webalize }}">
                 <div class="card-body">
                     <h3 class="mt-2">
-                        <a href="#{$talk['title']|webalize}">{$talk['title']}</a>
+                        <a href="#{{ talk.title | webalize }}">{{ talk.title }}</a>
                     </h3>
 
-                    {ifset $talk['video_link']}
-                        <a href="{$talk['video_link']}" class="btn btn-danger btn-sm mt-3 mr-2 mb-2">
+                    {% if talk.video_link is defined %}
+                        <a href="{{ talk.video_link }}" class="btn btn-danger btn-sm mt-3 mr-2 mb-2">
                             <em class="fa fa-fw fa-youtube-play"></em>
                             Watch Talk
                         </a>
-                    {/ifset}
+                    {% endif %}
 
-                    {ifset $talk['slides_link']}
-                        <a href="{$talk['slides_link']}" class="btn btn-warning btn-sm mt-3 mr-2 mb-2">
+                    {% if talk.slides_link is defined %}
+                        <a href="{{ talk.slides_link }}" class="btn btn-warning btn-sm mt-3 mr-2 mb-2">
                             <em class="fa fa-fw fa-slideshare"></em>
                             See Slides
                         </a>
-                    {/ifset}
+                    {% endif %}
 
-                    {ifset $talk['related_post']}
-                        <a href="{$talk['related_post']}" class="btn btn-info btn-sm mt-3 mr-2 mb-2">
+                    {% if talk.related_post is defined %}
+                        <a href="{{ talk.related_post }}" class="btn btn-info btn-sm mt-3 mr-2 mb-2">
                             <em class="fa fa-fw fa-book"></em>
                             Read Related Post
                         </a>
-                    {/ifset}
+                    {% endif %}
 
-                    <a n:tag-ifset="$talk['event_link']" href="{$talk['event_link']}" class="btn btn-success btn-sm mt-3 mb-2">
+                    <a n:tag-ifset="$talk['event_link']" href="{{ talk.event_link }}" class="btn btn-success btn-sm mt-3 mb-2">
                         <em class="fa fa-fw fa-map-marker"></em>
-                        {$talk['event_name']}
+                        {{ talk.event_name }}
                     </a>
                 </div>
             </div>
-        {/foreach}
+        {% endfor %}
     </div>
-{/block}
+{% endblock %}
