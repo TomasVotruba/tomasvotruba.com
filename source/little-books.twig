@@ -14,7 +14,7 @@ inspiration:
         <div class="row">
             <div class="col-md-12">
                 <p>
-                {=date('Y')} is the fastest year ever. More and more information and too little time to read books. <strong>We need clear, short, cohesive, updated and social content</strong>. A year old book has much less value then post from today, moreover in programming.
+                {{ "now"|date("Y") }} is the fastest year ever. More and more information and too little time to read books. <strong>We need clear, short, cohesive, updated and social content</strong>. A year old book has much less value then post from today, moreover in programming.
                 </p>
                 <p>
                     <div class="col-4 pull-right">
@@ -44,7 +44,7 @@ inspiration:
 
             {% set totalReadingTime = 0 %}
             {% for postId in little_book.post_ids %}
-                {% set totalReadingTime += posts[postId].getReadingTimeInMinutes %}
+                {% set totalReadingTime = totalReadingTime + posts[postId].getReadingTimeInMinutes %}
             {% endfor %}
 
             <ul class="list-inline post-metadata">
@@ -60,7 +60,7 @@ inspiration:
             </ul>
 
             <ul class="mt-4 checklist">
-                {%  for postId in little_book.post_ids %}
+                {% for postId in little_book.post_ids %}
                     {% set activePost = posts[postId] %}
                     <li class="mb-3 checklist__item">
                         <input class="checklist__input" type="checkbox" id="item_{{ activePost.id }}" value="{{ activePost.id }}">

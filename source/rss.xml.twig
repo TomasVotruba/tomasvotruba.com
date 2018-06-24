@@ -8,25 +8,43 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>{{ site_url }}/blog/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
-        <pubDate>{=date('r')}</pubDate>
+        <pubDate>{ "now"|date('r')}</pubDate>
         <atom:link href="{{ site_url }}/rss.xml" rel="self" type="application/rss+xml" />
 
+        {# https://stackoverflow.com/a/29161205/1348344 #}
         {% for post in posts %}
-            {first}
-                <lastBuildDate>{post->getDateInFormat('r'))</lastBuildDate>
-            {/first}
+            {% if loop.first %}
+                <lastBuildDate>{{ post.getDateInFormat('r') }}</lastBuildDate>
+            {% endif %}
 
-            {continueIf post->getDate() > (new DateTime) || isset($post['redirect']) || isset($post['deprecated']))
+            {% set includePost = true %}
 
-            <item>
-                <title><![CDATA[ {{ post.title | replace:"&nbsp;", " "|replace:"&amp;", "&" }} ]]></title>
-                <link>{{ site_url }}/{{ post.relativeUrl }}/</link>
-                <description><![CDATA[ {{ post.perex | striptags }} ]]></description>
-                <guid isPermaLink="false">{{ site_url }}/{{ post.relativeUrl }}/</guid>
-                <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
-                <pubDate>{post->getDateInFormat('r'))</pubDate>
-                <comments>{{ site_url }}/{{ post.relativeUrl }}#disqus_thread</comments>
-            </item>
+            {# is old url, do not display #}
+            {% if post.redirect is defined %}
+                {% set includePost = false %}
+            {% endif %}
+
+            {# is deprecated post, do not display #}
+            {% if post.deprecated is defined %}
+                {% set includePost = false %}
+            {% endif %}
+
+            {# is future post, do not display #}
+            {% if post.getDate <= "now" %}
+                {% set includePost = false %}
+            {% endif %}
+
+            {% if includePost %}
+                <item>
+                    <title><![CDATA[ {{ post.title|escape }} ]]></title>
+                    <link>{{ site_url }}/{{ post.relativeUrl }}/</link>
+                    <description><![CDATA[ {{ post.perex | striptags }} ]]></description>
+                    <guid isPermaLink="false">{{ site_url }}/{{ post.relativeUrl }}/</guid>
+                    <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
+                    <pubDate>{post->getDateInFormat('r'))</pubDate>
+                    <comments>{{ site_url }}/{{ post.relativeUrl }}#disqus_thread</comments>
+                </item>
+            {% endif %}
         {% endfor %}
     </channel>
 </rss>
