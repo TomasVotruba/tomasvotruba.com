@@ -19,6 +19,9 @@ $twigFileInfos = iterator_to_array($twigFilesFinder->getIterator());
 foreach ($twigFileInfos as $twigFileInfo) {
     $content = $twigFileInfo->getContents();
 
+    // 4. block: {block content}...{/block} => {% block content %}...{% endblock %}
+    $content = Strings::replace($content, '#{block (\w+)}(.*?){\/block}#s', '{% block $1 %}$2{% endblock %}');
+
     // 1. variables: {$google_analytics_tracking_id} => {{ $google_analytics_tracking_id }}
     $content = Strings::replace($content, '#{\$([A-Za-z_]+)}#', '{{ $1 }}');
 
@@ -28,11 +31,6 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // 3. suffix: {include "_snippets/menu.latte"} => {% include "_snippets/menu.twig" %}
     // 3. suffix: {include "_snippets/menu.latte", "data" => $data} => {% include "_snippets/menu.twig", "data" => $data %}
     $content = Strings::replace($content, '#([A-Za-z_/"]+).latte#', '$1.twig');
-
-    // 4. block: {block content}{/block} => {{ block content }}{/block}
-     $content = Strings::replace($content, '#{block ([A-Za-z_/"]+)}#', '{{ block $1 }}');
-    // 5. /block: {/block} => {{ end block }}
-     $content = Strings::replace($content, '#{/block}#', '{{ endblock }}');
 
     // 6. {$post['relativeUrl']} => {{ post.relativeUrl }}
      $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]}#', '{{ $1.$2 }}');
@@ -86,10 +84,15 @@ foreach ($twigFileInfos as $twigFileInfo) {
     $content = Strings::replace($content, '#{% (\w+) \$([A-Za-z]+)\[\'([\A-Za-z]+)\'\]#', '{% $1 $2.$3');
 
     // {ifset $post}...{/ifset} => {% if $post is defined %}..{% endif %}
-    $content = Strings::replace($content, '#{ifset \$([A-Za-z]+)}(.*?){\/ifset}#s', '{% if $1 is defined %}$2{% endif %}');
+    $content = Strings::replace($content, '#{ifset (.*?)}(.*?){\/ifset}#s', '{% if $1 is defined %}$2{% endif %}');
+
+    $content = Strings::replace($content, '#{else}#', '{% else %}');
 
     // {var $var = $anotherVar} => {% set var = anotherVar %}
     $content = Strings::replace($content, '#{var \$?(.*?) = (.*?)}#s', '{% set $1 = $2 %}');
+
+    // {capture $var}...{/capture} => {% set var %}...{% endset %}
+    $content = Strings::replace($content, '#{capture \$(\w+)}(.*?){\/capture}#s', '{% set $1 %}$2{% endset %}');
 
 //     {% if $post['rectify_post_id'] is defined %} => {% if post.rectify_post_id is defined %}
     $content = Strings::replace($content, '#({% \w+) \$(\w+)\[\'(\w+)\'\]#', '$1 $2.$3');
@@ -103,8 +106,11 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // {if "sth"}..{/if} =>  {% if "sth" %}..{% endif %} =>
     $content = Strings::replace($content, '#{if ([($)\w]+)}(.*?){\/if}#s', '{% if $1 %}$2{% endif %}');
 
-    // {foreach ...)...{/foreach} =>
-    $content = Strings::replace($content, '#{foreach \$([()\w ]+) as \$([()\w ]+)}(.*?){\/foreach}#s', '{% for $2 in $1 %}$3{% endfor %}');
+    // {foreach $values as $key => $value}...{/foreach} => {% for key, value in values %}...{% endfor %}
+    $content = Strings::replace($content, '#{foreach \$([()\w ]+) as \$([()\w ]+) => \$(\w+)}#', '{% for $2, $3 in $1 %}');
+    // {foreach $values as $value}...{/foreach} => {% for value in values %}...{% endfor %}
+    $content = Strings::replace($content, '#{foreach \$([()\w ]+) as \$([()\w ]+)}#', '{% for $2 in $1 %}');
+    $content = Strings::replace($content, '#{/foreach}#', '{% endfor %}');
 
     // {foreach ...)...{/foreach} =>
     $content = Strings::replace($content, '#{% (.*?) count\(\$?(\w+)\)#', '{% $1 $2|length');
