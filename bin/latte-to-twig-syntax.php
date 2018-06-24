@@ -97,5 +97,9 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // | noescape }=> | raw
     $content = Strings::replace($content, '#\| noescape#', '| raw');
 
+    // {% include "sth", = {% include "sth" with
+    $content = Strings::replace($content, '#({% include [^,{]+)(,)#', '$1 with');
+
+
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }
