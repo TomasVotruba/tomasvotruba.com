@@ -38,7 +38,7 @@ It looks like this:
 We put into layout:
 
 ```html
-<!-- source/_layouts/default.latte -->
+<!-- source/_layouts/default.twig -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -100,7 +100,7 @@ First, we create the snippet file and move the Google Analytics code there:
 Then clean the layout:
 
 ```twig
-<!-- source/_layouts/default.latte -->
+<!-- source/_layouts/default.twig -->
 
 <!DOCTYPE html>
 <html>

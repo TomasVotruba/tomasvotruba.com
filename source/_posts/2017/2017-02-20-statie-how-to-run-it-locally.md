@@ -48,7 +48,7 @@ Hi!
 ### Use Layout if you Like
 
 ```html
-<!-- source/_layouts/default.latte -->
+<!-- source/_layouts/default.twig -->
 
 <!DOCTYPE html>
 <html>
