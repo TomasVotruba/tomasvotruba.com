@@ -9,7 +9,7 @@ id: framework-jumper-guider
         <div class="col-md-12 text-center">
             <h1>How Does Code Look in every PHP Framework?</h1>
 
-            {% set frameworkKeys = array_keys(framework) %)
+            {% set frameworkKeys = array_keys(framework) %}
 
             <div class="table-responsive">
                 <table class="table table-stripped">
@@ -22,23 +22,24 @@ id: framework-jumper-guider
                             {% endfor %}
                         </thead>
                     </tr>
-                        {% for type, name in frameworkCodeTypes %}
-                            <tr>
-                                <td colspan="3" class="text-center" id="{{ type }}">
-                                    <a href="#{{ type }}">{{ name }}</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                {% for frameworkKey, frameworkName in frameworkNameTypes %}
 
+                    {% for type, name in frameworkCodeTypes %}
+                        <tr>
+                            <td colspan="3" class="text-center" id="{{ type }}">
+                                <a href="#{{ type }}">{{ name }}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            {% for frameworkKey, frameworkName in frameworkNameTypes %}
                                 <td>
-                                    {% if framework[$frameworkKey][$type] is defined %)
-                                        {% set item = framework[$frameworkKey][$type] %)
-                                        {% set code %}{{ item.code }}{% endset %}
-                                        <pre class="language-{ifset item ['lang']){{ item.lang }}{% else %}php{% endif %}">{{ code }}</pre>
+                                    {% if framework.frameworkKey.type is defined %}
+                                        {% set item = framework.frameworkKey.type %}
+                                        {% set code = item.code %}
+
+                                        <pre class="language-{% if item.lang is defined %}{{ item.lang }}{% else %}php{% endif %}">{{ code }}</pre>
                                     {% else %}
                                         <em><a href="../source/_data/php-frameworks/{{ frameworkKey }}.yml">add it</a></em>
-                                    {/ifset}
+                                    {% endif %}
                                 </td>
                             {% endfor %}
                         </tr>

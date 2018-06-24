@@ -9,13 +9,13 @@ id: talks
         <h1>{{ title }}</h1>
 
         {% for talk in talks %}
-            {% set postYear = talk['year'] %)
+            {% set postYear = talk['year'] %}
             {if !isset(dateLines[$postYear]))
                 <h2 id="year-{{ postYear }}" class="text-center mt-5 mb-5">
                     <em class="fa fa-calendar-o"></em>
                     &nbsp;
                     {{ postYear }}
-                    {% set dateLines[postYear] = $postYear %)
+                    {% set dateLines[postYear] = postYear %}
                 </h2>
             {/if}
 

@@ -31,13 +31,13 @@ id: blog
             {% for post in posts %}
                 {continueIf post->getDate() > (new DateTime) || isset($post['redirect']) || isset($post['deprecated']))
 
-                {% set postYear = post->getDateInFormat('Y') %)
+                {% set postYear = post->getDateInFormat('Y') %}
                 {if postYear != date('Y') && !isset($dateLines[$postYear]))
                     <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
                         <br>
                         <br>
                         {{ postYear }}
-                        {% set dateLines[postYear] = $postYear %)
+                        {% set dateLines[postYear] = postYear %}
                     </div>
                 {/if}
 

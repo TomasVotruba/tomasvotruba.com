@@ -95,14 +95,14 @@ id: about
                         <li>
                             <a href="{{ project.url }}">{{ project.url }}</a>
                         </li>
-                        {foreach project['description'] as $item)
-                            <li>{item|noescape)</li>
+                        {% for item in project['description'] %}
+                            <li>{{ item }}</li>
                         {% endfor %}
                     </ul>
 
                     {% if project.intro_post_id is defined %}
-                        {% set activePost = posts[$project['intro_post_id']] ?? null %)
-                        {% if activePost %)
+                        {% set activePost = posts[project.intro_post_id] ?? null %}
+                        {% if activePost %}
                             <a href="/{{ activePost.getRelativeUrl() }}" class="card-link btn btn-info btn-sm mt-2">
                                 <em class="fa fa-fw fa-book"></em>
                                 &nbsp;

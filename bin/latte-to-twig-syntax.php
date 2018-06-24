@@ -118,5 +118,8 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // remove "$" from all vars
     $content = Strings::replace($content, '#{(.*?)\$(.*?)}#', '{$1$2)');
 
+    // fixes "%)" => "%}"
+    $content = Strings::replace($content, '#%\)#', '%}');
+
     file_put_contents($twigFileInfo->getRealPath(), $content);
 }

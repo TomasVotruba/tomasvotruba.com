@@ -60,8 +60,8 @@ inspiration:
             </ul>
 
             <ul class="mt-4 checklist">
-                {foreach little_book['post_ids'] as $postId)
-                    {% set activePost = posts[$postId] %)
+                {%  for postId in little_book.post_ids %}
+                    {% set activePost = posts[postId] %}
                     <li class="mb-3 checklist__item">
                         <input class="checklist__input" type="checkbox" id="item_{{ activePost.id }}" value="{{ activePost.id }}">
                         <label class="checklist__label" for="item_{{ activePost.id }}">
