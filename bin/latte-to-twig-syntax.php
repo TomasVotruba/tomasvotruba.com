@@ -114,9 +114,6 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // {foreach ...)...{/foreach} =>
     $content = Strings::replace($content, '#{% (.*?) count\(\$?(\w+)\)#', '{% $1 $2|length');
 
-    // remove "$" from all vars
-    $content = Strings::replace($content, '#{(.*?)\$(.*?)}#', '{$1$2)');
-
     // fixes "%)" => "%}"
     $content = Strings::replace($content, '#%\)#', '%}');
 
