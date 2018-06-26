@@ -69,7 +69,7 @@ vendor/bin/changelog-linker dump-mergers
 
 That would be much better than looking on Github, going through commits and putting it all together manually, right? Or bare git dump that no-one except you orients in.
 
-Well, 2 months of work later and thanks to detailed feedback from [Matouš Czerner](https://github.com/MattCzerner) and [Rosťa Vítek](https://github.com/vitek-rostislav) from [Shopsys](https://github.com/shopsys) team a [Symplify\ChangelogLinker](https://github.com/symplify/changeloglinker) package was born.
+Well, 2 months of work later and after detailed feedback from [Matouš Czerner](https://github.com/MattCzerner) and [Rosťa Vítek](https://github.com/vitek-rostislav) whom I'm very thankful, a [Symplify\ChangelogLinker](https://github.com/symplify/changeloglinker) package was born.
 
 ## 5 Steps to Your Generated CHANGELOG
 
