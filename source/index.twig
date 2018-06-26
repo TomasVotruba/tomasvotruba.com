@@ -62,12 +62,8 @@ id: blog
                         </div>
                     {% endif %}
 
-                    {% if loop.counter <= 3 %}
-                        {% if wasFirstPostMarked %}
-                            {% set colClass = 'col-md-6' %}
-                        {% else %}
-                            {% set colClass = 'col-md-12' %}
-                        {% endif %}
+                    {% if loop.index <= 3 %}
+                        {% set colClass = wasFirstPostMarked ? 'col-md-6' : 'col-md-12' %}
 
                         <article class="text-left pt-2 pb-4 {{ colClass }}">
                             <h2 {% if wasFirstPostMarked == false %}class="firstPost"{% endif %}>
@@ -85,7 +81,7 @@ id: blog
                             {% set wasFirstPostMarked = true %}
                         </article>
                     {% else %}
-                        {% if loop.counter == 4 %}<ul class="mt-4 list-unstyled">{% endif %}
+                        {% if loop.index == 4 %}<ul class="mt-4 list-unstyled">{% endif %}
                         <li class="mb-3 col-md-12">
                             <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
                             {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
