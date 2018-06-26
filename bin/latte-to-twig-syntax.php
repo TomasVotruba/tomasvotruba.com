@@ -33,7 +33,7 @@ foreach ($twigFileInfos as $twigFileInfo) {
     $content = Strings::replace($content, '#([A-Za-z_/"]+).latte#', '$1.twig');
 
     // 6. {$post['relativeUrl']} => {{ post.relativeUrl }}
-     $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]}#', '{{ $1.$2 }}');
+    $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]}#', '{{ $1.$2 }}');
 
     // 7. include var: {% include "_snippets/menu.latte", "data" => $data %} => {% include "_snippets/menu.twig", { "data": data } %}
     // see https://twig.symfony.com/doc/2.x/functions/include.html
@@ -45,7 +45,7 @@ foreach ($twigFileInfos as $twigFileInfo) {
         $twigDataInString = ' { ';
         $variableCount = count($variables);
         foreach ($variables as $i => $variable) {
-            [$key, $value]  = explode('=>', $variable);
+            [$key, $value] = explode('=>', $variable);
             $key = trim($key);
             $value = trim($value);
             $value = ltrim($value, '$'); // variables do not start with
@@ -64,10 +64,10 @@ foreach ($twigFileInfos as $twigFileInfo) {
     });
 
     //  {$post['updated_message']|noescape} =>  {{ post.updated_message | noescape }}
-     $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]\|([^}]+)}#', '{{ $1.$2 | $3 }}');
+    $content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]\|([^}]+)}#', '{{ $1.$2 | $3 }}');
 
     // {sep}, {/sep} => {% if loop.last == false %}, {% endif %}
-     $content = Strings::replace($content, '#{sep}([^{]+){\/sep}#', '{% if loop.last == false %}$1{% endif %}');
+    $content = Strings::replace($content, '#{sep}([^{]+){\/sep}#', '{% if loop.last == false %}$1{% endif %}');
 
     // https://regex101.com/r/XKKoUh/1/
     // {if isset($post['variable'])}...{/if} => {% if $post['variable'] is defined %}...{% endif %}
@@ -106,7 +106,11 @@ foreach ($twigFileInfos as $twigFileInfo) {
     // {if "sth"}..{/if} =>  {% if "sth" %}..{% endif %} =>
     $content = Strings::replace($content, '#{if ([($)\w]+)}(.*?){\/if}#s', '{% if $1 %}$2{% endif %}');
     // {foreach $values as $key => $value}...{/foreach} => {% for key, value in values %}...{% endfor %}
-    $content = Strings::replace($content, '#{foreach \$([()\w ]+) as \$([()\w ]+) => \$(\w+)}#', '{% for $2, $3 in $1 %}');
+    $content = Strings::replace(
+        $content,
+        '#{foreach \$([()\w ]+) as \$([()\w ]+) => \$(\w+)}#',
+        '{% for $2, $3 in $1 %}'
+    );
     // {foreach $values as $value}...{/foreach} => {% for value in values %}...{% endfor %}
     $content = Strings::replace($content, '#{foreach \$([()\w ]+) as \$([()\w ]+)}#', '{% for $2 in $1 %}');
     $content = Strings::replace($content, '#{/foreach}#', '{% endfor %}');
@@ -116,10 +120,6 @@ foreach ($twigFileInfos as $twigFileInfo) {
 
     // fixes "%)" => "%}"
     $content = Strings::replace($content, '#%\)#', '%}');
-
-    // {if $key->method()}..{/if} => {% if key.method %}..{% endif %}
-    // @debug - is this needed?
-    // $content = Strings::replace($content, '#{if \$(\w+)->(\w+)\(\)}(.*?){\/if}#s', '{% if $1.$2 %}$3{% endif %}');
 
     $content = Strings::replace($content, '#{% include \'?(\w+)\'? %}#', '{{ block(\'$1\') }}');
 
