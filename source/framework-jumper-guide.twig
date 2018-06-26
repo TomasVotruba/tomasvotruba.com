@@ -1,0 +1,51 @@
+---
+layout: "_layouts/default.twig"
+title: "How Code Looks in every PHP Framework?"
+id: framework-jumper-guider
+---
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>How Does Code Look in every PHP Framework?</h1>
+
+            {% set frameworkKeys = framework|keys %}
+
+            <div class="table-responsive">
+                <table class="table table-stripped">
+                    <tr>
+                        <thead class="thead-inverse">
+                            {% for frameworkCodeTypeName in frameworkNameTypes %}
+                                <th class="text-center">
+                                    <nobr>{{ frameworkCodeTypeName }}</nobr>
+                                </th>
+                            {% endfor %}
+                        </thead>
+                    </tr>
+
+                    {% for type, name in frameworkCodeTypes %}
+                        <tr>
+                            <td colspan="3" class="text-center" id="{{ type }}">
+                                <a href="#{{ type }}">{{ name }}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            {% for frameworkKey, frameworkName in frameworkNameTypes %}
+                                <td>
+                                    {% if framework.frameworkKey.type is defined %}
+                                        {% set item = framework.frameworkKey.type %}
+                                        {% set code = item.code %}
+
+                                        <pre class="language-{% if item.lang is defined %}{{ item.lang }}{% else %}php{% endif %}">{{ code }}</pre>
+                                    {% else %}
+                                        <em><a href="../source/_data/php-frameworks/{{ frameworkKey }}.yml">add it</a></em>
+                                    {% endif %}
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

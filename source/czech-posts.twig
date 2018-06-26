@@ -1,0 +1,19 @@
+---
+layout: "_layouts/default.twig"
+title: "Czech Posts"
+id: blog
+---
+
+{% block content %}
+    <div class="container-fluid" id="blog">
+        <h1>Czech Posts</h1>
+
+        <div class="row">
+            {% for post in posts %}
+                {% if post.deprecated is defined and post.lang is defined %}
+                    {% include "_snippets/post/singlePostPreview.twig" with { post: post } %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

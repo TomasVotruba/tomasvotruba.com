@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: "_layouts/default.twig"
 title: "Boost your PHP Skill"
 id: skill
 
@@ -25,22 +25,22 @@ partner_logos_to_urls:
     'naucmese.png': https://www.naucmese.cz/
 ---
 
-{block content}
+{% block content %}
     <div class="container">
-        <h1>{$title}</h1>
+        <h1>{{ title }}</h1>
 
-        {var $reference = $references[array_rand($references)]}
+        {% set reference = references[random(references|keys)] %}
         <blockquote class="blockquote text-center mt-lg-5 mb-lg-5">
-            <p>"{$reference['text']}"</p>
+            <p>"{{ reference.text }}"</p>
             <footer class="blockquote-footer">
-                {$reference['author']} at <a href="{$reference['company_url']}">{$reference['company']}</a>
+                {{ reference.author }} at <a href="{{ reference.company_url }}">{{ reference.company }}</a>
             </footer>
         </blockquote>
 
         <hr>
 
         <p>
-            I have been in PHP for {= date('Y')-2004} years, {= date('Y')-2010} years with Nette and last {= date('Y')-2014} years with Symfony.
+            I have been in PHP for {{ "now"|date('Y')-2004 }} years, {{ "now"|date('Y')-2010 }} years with Nette and last {{ "now"|date('Y')-2014 }} years with Symfony.
             <br>
             I focus on <strong>PHP frameworks, legacy code transitions and AST-based instant upgrades, instant refactoring and coding standards</strong>.
         </p>
@@ -48,13 +48,13 @@ partner_logos_to_urls:
             <br>Recently, I'm helping <a href="https://shopsys.com/">Shopsys</a> to become the best open-source, Symfony-based e-commerce platform, and also other clients:</p>
 
         <div class="text-center row">
-            {foreach $partner_logos_to_urls as $partner_logo => $partner_url}
+            {% for partner_logo, partner_url in partner_logos_to_urls %}
                 <div class="align-self-center col-md-4 col-sm-6 col-6 border-0 pt-md-0 pb-md-0 pt-2 pb-2">
-                    <a href="{$partner_url}">
-                        <img src="/assets/images/references/{$partner_logo}">
+                    <a href="{{ partner_url }}">
+                        <img src="/assets/images/references/{{ partner_logo }}">
                     </a>
                 </div>
-            {/foreach}
+            {% endfor %}
         </div>
 
         <p class="text-center bigger mt-4">
@@ -71,7 +71,7 @@ partner_logos_to_urls:
 
         <h2 class="text-center">Do you Need Framework Training?</h2>
 
-        {* ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout *}
+        {# ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout #}
         <div class="card-deck card-normal">
             <div class="row">
                 <div class="col-md-6">
@@ -189,5 +189,5 @@ partner_logos_to_urls:
             </a>
         </p>
     </div>
-{/block}
+{% endblock %}
 

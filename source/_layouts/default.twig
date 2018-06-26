@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include "_snippets/head.twig" %}
+    <body>
+        {% include "_snippets/menu.twig" %}
+
+        <div>
+            {{ block('content') }}
+        </div>
+
+        {% include "_snippets/footer.twig" %}
+    </body>
+</html>

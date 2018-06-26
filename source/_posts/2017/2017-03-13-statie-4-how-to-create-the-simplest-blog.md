@@ -86,7 +86,7 @@ As you can see, post has `layout: post`. It means it's displayed in `_layouts/po
 We have to also modify `default.latte`, to include our post layout and replacte `{block content}{/block}` with.
 
 ```twig
-<!-- /source/_layouts/default.latte -->
+<!-- /source/_layouts/default.twig -->
 ...
 
 {block content_wrapper}

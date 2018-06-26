@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: "_layouts/default.twig"
 title: "Is Book Too Long For You? Read <small>a Little Book</small>"
 id: "little-books"
 
@@ -7,14 +7,14 @@ inspiration:
     - https://youtu.be/1HBNrwapfv0?t=1269: "Specialized micro-sites over general-posts-group"
 ---
 
-{block content}
+{% block content %}
     <div class="container">
-        <h1>{$title|noescape}</h1>
+        <h1>{{ title|raw }}</h1>
 
         <div class="row">
             <div class="col-md-12">
                 <p>
-                {=date('Y')} is the fastest year ever. More and more information and too little time to read books. <strong>We need clear, short, cohesive, updated and social content</strong>. A year old book has much less value then post from today, moreover in programming.
+                {{ "now"|date("Y") }} is the fastest year ever. More and more information and too little time to read books. <strong>We need clear, short, cohesive, updated and social content</strong>. A year old book has much less value then post from today, moreover in programming.
                 </p>
                 <p>
                     <div class="col-4 pull-right">
@@ -37,48 +37,48 @@ inspiration:
 
         <hr>
 
-        {foreach $little_books as $little_book}
-            <h2 id="{$little_book['title']|webalize}">
-                {$little_book['title']}
+        {% for little_book in little_books %}
+            <h2 id="{{ little_book.title | webalize }}">
+                {{ little_book.title }}
             </h2>
 
-            {var $totalReadingTime = 0}
-            {foreach $little_book['post_ids'] as $postId}
-                {php $totalReadingTime += $posts[$postId]->getReadingTimeInMinutes()}
-            {/foreach}
+            {% set totalReadingTime = 0 %}
+            {% for postId in little_book.post_ids %}
+                {% set totalReadingTime = totalReadingTime + posts[postId].getReadingTimeInMinutes %}
+            {% endfor %}
 
             <ul class="list-inline post-metadata">
                 <li class="list-inline-item mr-3">
-                    <em class="fa fa-calendar fa-fw"></em> {$little_book['year_released']}
+                    <em class="fa fa-calendar fa-fw"></em> {{ little_book.year_released }}
                 </li>
                 <li class="list-inline-item mr-3">
-                    <em class="fa fa-clock-o fa-fw"></em> {$totalReadingTime} mins
+                    <em class="fa fa-clock-o fa-fw"></em> {{ totalReadingTime }} mins
                 </li>
                 <li class="list-inline-item mr-3">
-                    <a href="#{$little_book['title']|webalize}">#Anchor</a>
+                    <a href="#{{ little_book.title | webalize }}">#Anchor</a>
                 </li>
             </ul>
 
             <ul class="mt-4 checklist">
-                {foreach $little_book['post_ids'] as $postId}
-                    {var $activePost = $posts[$postId]}
+                {% for postId in little_book.post_ids %}
+                    {% set activePost = posts[postId] %}
                     <li class="mb-3 checklist__item">
-                        <input class="checklist__input" type="checkbox" id="item_{$activePost['id']}" value="{$activePost['id']}">
-                        <label class="checklist__label" for="item_{$activePost['id']}">
-                            <em class="checklist_icon fa fa-3x fa-check" id="item_{$activePost['id']}"></em>
+                        <input class="checklist__input" type="checkbox" id="item_{{ activePost.id }}" value="{{ activePost.id }}">
+                        <label class="checklist__label" for="item_{{ activePost.id }}">
+                            <em class="checklist_icon fa fa-3x fa-check" id="item_{{ activePost.id }}"></em>
                         </label>
 
                         <div class="checklist__details">
-                            <a href="/{$activePost['relativeUrl']}/">{$activePost['title']|noescape}</a>
+                            <a href="/{{ activePost.relativeUrl }}/">{{ activePost.title | raw }}</a>
 
-                            {include "postMetadataLine", post => $activePost}
+                            {% include "_snippets/post/postMetadataLine.twig" with { post: activePost } %}
                         </div>
                     </li>
-                {/foreach}
+                {% endfor %}
             </ul>
 
-            {sep}<hr>{/sep}
-        {/foreach}
+            {% if loop.last == false %}<hr>{% endif %}
+        {% endfor %}
     </div>
 
     <br>
@@ -89,4 +89,4 @@ inspiration:
     <br>
     <br>
     <br>
-{/block}
+{% endblock %}

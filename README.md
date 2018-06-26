@@ -29,6 +29,8 @@ Copy-paste the content to [Grammarly](https://app.grammarly.com/). It's super in
 
 ## Check Status Code of All Links
 
+Once couple of months, check if all external links are still alive, so people won't get lost.
+
 ```bash
 vendor/bin/http-status-check scan https://tomasvotruba.cz
 ```

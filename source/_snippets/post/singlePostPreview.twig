@@ -1,0 +1,9 @@
+<article class="text-left col-md-6">
+    <h2>
+        <a href="/{{ post.relativeUrl }}/">
+            {{ post.title | raw }}
+        </a>
+    </h2>
+
+    {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+</article>

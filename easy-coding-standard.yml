@@ -10,11 +10,8 @@ services:
     SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
         enableEachParameterAndReturnInspection: true
 
-    # Complexity limits
-    PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff:
-        absoluteComplexity: 4
-    PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\NestingLevelSniff:
-        absoluteNestingLevel: 3
+    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
+        maxCognitiveComplexity: 6
 
 parameters:
     skip:
@@ -27,6 +24,9 @@ parameters:
 
         Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
             - '*/src/Posts/Year2017/Ast/*'
+
+        Symplify\CodingStandard\Sniffs\Debug\CommentedOutCodeSniff.Found:
+            - 'bin/latte-to-twig-syntax.php'
 
     exclude_checkers:
         # resolve later

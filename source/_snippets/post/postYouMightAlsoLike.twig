@@ -1,0 +1,14 @@
+{% set relatedPosts = post|relatedItems %}
+
+{% if relatedPosts|length %}
+    <hr class="mt-4 mb-lg-5">
+
+    Do you want more on this topic? You might like these <strong>related posts</strong>:
+
+    {% for relatedPost in relatedPosts %}
+        <a href="/{{ relatedPost.relativeUrl }}">{{ relatedPost.title|escape }}</a>{% if loop.last == false %}, {% endif %}
+    {% endfor %}
+
+    <br>
+    <br>
+{% endif %}
