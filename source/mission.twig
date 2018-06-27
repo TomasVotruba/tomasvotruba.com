@@ -1,0 +1,178 @@
+---
+layout: "_layouts/default.twig"
+title: "The Mission"
+id: mission
+---
+
+{% block content %}
+    <div class="container">
+        {#<h1>{{ title }}</h1>#}
+
+        <h1 class="text-center mb-4">
+            <em class="fa fa-2x fa-heart"></em>
+            &nbsp;
+            <em class="fa fa-2x fa-code mb-4"></em>
+            <br>
+            I help Programmers to be Happier
+        </h1>
+
+        <p class="bigger mb-4">
+            To learn faster, earn better money and work on projects that are meaningful to them.
+            <br>
+            I help programmers to unlock their inner powers, start believing in themselves and becoming 200 % productive with less energy.
+        </p>
+
+        <ul>
+            <li>
+                Teaching all I know about <strong>open source, effective coding, Symfony & Nette</strong>
+            </li>
+            <li>
+                I consult PHP projects and do 1:1 mentorings.
+            </li>
+
+        </ul>
+
+        <p>I can help you with anything <a href="/">I write about</a>. Symfony, Nette, Doctrine, PHP CLI, team mentorings, coding standards, migration of legacy code to a framework, instant upgrades and open-sourcing private code.</p>
+
+        <p>The most popular topic I teach are:</p>
+
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    Mastering Symfony
+                    <img src="/assets/images/skills/symfony.png" class="col-2 pull-right">
+                </h3>
+
+                <ul>
+                    <li>We'll focus exactly on your project's level and how to integrate Symfony there.</li>
+                    <br>
+                    <li><strong>{{  "now"|date('Y')-2014 }} years</strong> of experience</li>
+                    <li><strong>Request & Response</strong> life cycle, <strong>Controllers</strong> - <code>_invoke</code>able</li>
+                    <li><strong>Twig</strong> templating system</li>
+                    <li><strong>Dependency Injection</strong>, services, <code>_defaults</code>, <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">PSR-4 service auto-discovery</a> and more</li>
+                    <li><a href="https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/"><strong>EventDispatcher</strong></a>, <strong>Commands</strong> and all the other Symfony features.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    Mastering Nette
+                    <img src="/assets/images/skills/nette.png" class="col-2 pull-right">
+                </h3>
+
+                <ul>
+                    <li>You'll understand strong features of the framework and in the end of lecture you'll be able to build application on last version.</li>
+                    <br>
+                    <li><strong>{{ "now"|date('Y')-2010 }} years</strong> of experience</li>
+                    <li>Routing, life cycle of Presenter and Components</li>
+                    <li>Configuration with NEON, powerful <strong>Dependency Injection</strong> and <strong><a href="/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension/">own  extension</a></strong></li>
+                    <li><strong>Latte</strong> templating and all other Nette pilars.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <em class="fa fa-line-chart"></em>
+                    &nbsp;
+                    How to write Clean Code and Scaleable Architecture
+                </h3>
+                <ul>
+                    <li>How to <strong>refactor legacy code</strong></li>
+                    <li><strong>SOLID principals</strong> and <strong>design patterns</strong> in real life <strong>examples</strong></li>
+                    <li>How to <strong>save time with static analysis</strong>: <a href="/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/">EasyCodingStandard</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <em class="fa fa-dollar"></em>
+                    &nbsp;
+                    Level up your Career
+                </h3>
+                <ul>
+                    <li>What are the <strong>most effective strategies</strong> to find a job you desire</li>
+                    <li>How to <strong>sell your top skill</strong></li>
+                    <li>How <strong>master negotiation</strong> with your employer</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    <em class="fa fa-envelope-open-o"></em>
+                    &nbsp;
+                    Get the best out of Open-Source for your Project
+                </h3>
+                <ul>
+                    <li><a href="https://leanpub.com/principles-of-package-design">Package design principles</a> and <a href="http://phppackagechecklist.com/#1,2,3,4,5,6,7,8,9,10,11,12,13,14">useful PHP standards</a></li>
+                    <li>How to approach versioning, <strong><a href="/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/">local packages</a> and use <a href="/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/">power of monorepo</a></strong></li>
+                    <li><a href="https://travis-ci.org/">Travis</a>, <a href="https://phpunit.de/">PHPUnit</a>, <strong>testing</strong> and code coverage</li>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+
+        <p class="text-center">Happy clients</p>
+
+        <div class="text-center row mt-3 mb-3">
+            {% for logo, url in helped_companies %}
+                <div class="align-self-center col-md-2 col-sm-4 col-4 border-0 pt-md-0 pb-md-0 pt-2 pb-2">
+                    <a href="{{ url }}">
+                        <img src="/assets/images/references/{{ logo }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h1 class="text-center mb-4">
+            <em class="fa fa-2x fa-handshake-o"></em>
+            &nbsp;
+            <em class="fa fa-2x fa-globe mb-4"></em>
+            <br>
+            I help the World to Enjoy Cooperation
+        </h1>
+
+        <p class="bigger mb-4">
+            To openly share know-how on meetups and code as open-source, so we can all build on each other work and help each other.
+            <br>
+            I believe the main value in knowledge is <strong>to share it in way most people can understand</strong>.
+        </p>
+
+        <ul>
+            <li>
+                It's <strong>amazing what group of friendly people can do when they connect and share they ideas</strong> on regular basis. That's the main purporse of <a href="https://pehapkari.cz">Péhápkaři.cz</a> - a Friends of PHP in Czech Republic and Slovakia
+            </li>
+            <li>
+                I guide <strong>private projects to open-source</strong>, currently at <a href="https://shopsys.com/">Shopsys</a>
+            </li>
+            <li>
+                I help Czech open-source companies to be seen at <a href="https://ceskyopensource.cz">CeskyOpenSource.cz</a>
+            </li>
+        </ul>
+
+        <br>
+
+        <p class="text-center bigger mt-5">
+            <em>Do you want to become part of my mission?</em>
+        </p>
+        <p class="text-center">
+            <a href="/contact/" class="btn btn-success bigger mt-2 mb-2">
+                &nbsp;Write me
+                <em class="fa fa-arrow-circle-o-right fa-fw"></em>
+            </a>
+        </p>
+    </div>
+{% endblock %}
