@@ -137,13 +137,13 @@ quotes:
             <br>Recently, I'm helping <a href="https://shopsys.com/">Shopsys</a> to become the best open-source, Symfony-based e-commerce platform, and also other clients:</p>
 
         <div class="text-center row">
-            {#{% for logo, url in helped_companies %}#}
-                {#<div class="align-self-center col-md-4 col-sm-6 col-6 border-0 pt-md-0 pb-md-0 pt-2 pb-2">#}
-                    {#<a href="{{ url }}">#}
-                        {#<img src="/assets/images/references/{{ logo }}">#}
-                    {#</a>#}
-                {#</div>#}
-            {#{% endfor %}#}
+            {% for logo, url in helped_companies %}
+                <div class="align-self-center col-md-4 col-sm-6 col-6 border-0 pt-md-0 pb-md-0 pt-2 pb-2">
+                    <a href="{{ url }}">
+                        <img src="/assets/images/references/{{ logo }}">
+                    </a>
+                </div>
+            {% endfor %}
         </div>
 
         <p class="text-center bigger mt-4">
