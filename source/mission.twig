@@ -1,22 +1,21 @@
 ---
-layout: default
+layout: "_layouts/default.twig"
 title: "I'm Here to Help You"
 id: mission
 
 quotes:
     - "A day without commit to an open-source project is a day wasted."
-
 ---
 
 {% block content %}
     <div class="container">
-        <h1>{$title}</h1>
+        <h1>{{ title }}</h1>
 
-        {var $quote = $quotes[array_rand($quotes)]}
+        {#{% set quote = quotes[random(array_keys(quotes))] %}#}
 
-        <blockquote class="blockquote text-center mt-lg-5 pb-lg-4" id="about-quote">
-            <p>"{$quote}"</p>
-        </blockquote>
+        {#<blockquote class="blockquote text-center mt-lg-5 pb-lg-4" id="about-quote">#}
+            {#<p>"{{ quote }}"</p>#}
+        {#</blockquote>#}
 
         <hr>
 
@@ -75,57 +74,62 @@ quotes:
 
         <p>When I want to have fun and chat online, I go to "waste" my time on Github. Thanks to this procrastination many projects were born.</p>
 
+        <blockquote class="blockquote text-center">
+            "A day without commit to an open-source is a day wasted."
+        </blockquote>
+
+
         <div class="mt-5 mb-5">
             <a href="https://github.com/tomasvotruba/">
                 <img src="/assets/images/github-passion.png" alt="My Github contributions in a graph">
             </a>
         </div>
 
-        {foreach $projects as $project}
+        {% for project in projects %}
             <div class="card card-normal">
                 <div class="card-body">
                     <h3 class="card-title">
                         <em class="fa fa-github"></em>
                         &nbsp;
-                        {$project['name']}
+                        {{ project.name }}
                     </h3>
 
                     <ul>
                         <li>
-                            <a href="{$project['url']}">{$project['url']}</a>
+                            <a href="{{ project.url }}">{{ project.url }}</a>
                         </li>
-                        {foreach $project['description'] as $item}
-                            <li>{$item|noescape}</li>
-                        {/foreach}
+                        {% for item in project.description %}
+                            <li>{{ item|raw }}</li>
+                        {% endfor %}
                     </ul>
 
-                    {ifset $project['intro_post_id']}
-                        {var $activePost = $posts[$project['intro_post_id']] ?? null}
-                        {if $activePost}
-                            <a href="/{$activePost->getRelativeUrl()}" class="card-link btn btn-info btn-sm mt-2">
+                    {% if project.intro_post_id is defined %}
+                        {% set activePost = posts[project['intro_post_id']] ?? null %}
+                        {% if activePost is defined %}
+                            <a href="/{{ activePost.getRelativeUrl() }}" class="card-link btn btn-info btn-sm mt-2">
                                 <em class="fa fa-fw fa-book"></em>
                                 &nbsp;
-                                Read Intro Post: "{$activePost['title']}"
+                                Read Intro Post: "{{ activePost.title }}"
                             </a>
-                        {/if}
-                    {/ifset}
+                        {% endif %}
+                    {% endif %}
                 </div>
             </div>
-        {/foreach}
+        {% endfor %}
 
 
-        {var $reference = $references[array_rand($references)]}
-        <blockquote class="blockquote text-center mt-lg-5 mb-lg-5">
-            <p>"{$reference['text']}"</p>
-            <footer class="blockquote-footer">
-                {$reference['author']} at <a href="{$reference['company_url']}">{$reference['company']}</a>
-            </footer>
-        </blockquote>
+        {#{% set reference = $references[array_rand($references)] %}#}
+        {#<blockquote class="blockquote text-center mt-lg-5 mb-lg-5">#}
+            {#<p>"{{ reference.text }}"</p>#}
+            {#<footer class="blockquote-footer">#}
+                {#{{ reference.author }} at <a href="{{ reference.company_url }}">{{ reference.company }}</a>#}
+            {#</footer>#}
+        {#</blockquote>#}
 
         <hr>
 
         <p>
-            I have been in PHP for {= date('Y')-2004} years, {= date('Y')-2010} years with Nette and last {= date('Y')-2014} years with Symfony.
+            I have been in PHP for {{ "now"|date('Y')-2004 }} years, {{ "now"|date('Y')-2010 }} years with Nette and last {{  "now"|date('Y')-2014 }} years with Symfony.
             <br>
             I focus on <strong>PHP frameworks, legacy code transitions and AST-based instant upgrades, instant refactoring and coding standards</strong>.
         </p>
@@ -133,13 +137,13 @@ quotes:
             <br>Recently, I'm helping <a href="https://shopsys.com/">Shopsys</a> to become the best open-source, Symfony-based e-commerce platform, and also other clients:</p>
 
         <div class="text-center row">
-            {foreach $helped_companies as $logo => $url}
-                <div class="align-self-center col-md-4 col-sm-6 col-6 border-0 pt-md-0 pb-md-0 pt-2 pb-2">
-                    <a href="{$url}">
-                        <img src="/assets/images/references/{$logo}">
-                    </a>
-                </div>
-            {/foreach}
+            {#{% for logo, url in helped_companies %}#}
+                {#<div class="align-self-center col-md-4 col-sm-6 col-6 border-0 pt-md-0 pb-md-0 pt-2 pb-2">#}
+                    {#<a href="{{ url }}">#}
+                        {#<img src="/assets/images/references/{{ logo }}">#}
+                    {#</a>#}
+                {#</div>#}
+            {#{% endfor %}#}
         </div>
 
         <p class="text-center bigger mt-4">
@@ -156,7 +160,7 @@ quotes:
 
         <h2 class="text-center">Do you Need Framework Training?</h2>
 
-        {* ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout *}
+        {# ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout #}
         <div class="card-deck card-normal">
             <div class="row">
                 <div class="col-md-6">

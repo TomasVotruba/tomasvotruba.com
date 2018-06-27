@@ -28,11 +28,10 @@ parameters:
             intro_post_id: 29
 
         -
-            name: Symplify
-            url: 'https://github.com/Symplify/Symplify'
+            name: Cesky Open Source
+            url: 'https://ceskyopensource.cz/'
             description:
-                - 'Simple usage, no complexity and long and cheap sustainability'
-                - 'Project based on Symfony Components'
+                - 'Showcase of Czech open-source projects opened by companies'
 
         -
             name: Go Monorepo
@@ -40,38 +39,3 @@ parameters:
             description:
                 - 'All You Always Wanted to Know About Monorepo But Were Afraid to Ask'
             intro_post_id: 82
-
-        -
-            name: Go PHP 7.1
-            url: 'https://gophp71.org'
-            description:
-                - 'What open-source projects already require PHP 7.1 as minimum version?'
-            intro_post_id: 41
-
-        -
-            name: Objet Calisthenics
-            url: 'https://github.com/object-calisthenics/phpcs-calisthenics-rules'
-            maintainer: true
-            description:
-                - 'Set of PHP_CodeSniffer Sniffs'
-                - 'Focus on object-oriented code, that focuses of maintainability, readability, testability and comprehensibility'
-            intro_post_id: 44
-
-        -
-            name: Git Wrapper
-            url: 'https://github.com/cpliakas/git-wrapper'
-            maintainer: true
-            description:
-                - 'Use git in PHP with simple API'
-
-        -
-            name: ApiGen
-            url: 'https://github.com/apigen/apigen'
-            maintainer: true
-            description:
-                - 'Maintainer for 1,5 year'
-                - 'From dead project and <strong>650 Github stars to 1700</strong>'
-                - '<strong>From 0 to 85 % code coverage</strong>'
-                - 'From basically no 3rd party code to Symfony components'
-                - 'I learned a lot about refactoring, about <strong>transition of 1 dead package to another</strong>, code quality and importance of effective testing'
-            intro_post_id: 53
