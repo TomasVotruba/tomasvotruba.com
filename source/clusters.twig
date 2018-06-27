@@ -1,0 +1,104 @@
+---
+layout: "_layouts/default.twig"
+title: "Clusters - Shorter than Book, Deeper than Post"
+id: "clusters"
+
+inspiration:
+    - https://youtu.be/1HBNrwapfv0?t=1269: "Dusan Janovsky - Specialized micro-sites over general-posts-group"
+---
+
+{% block content %}
+    <div class="container">
+        <h1>{{ title|raw }}</h1>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    {{ "now"|date("Y") }} is the fastest year ever. More and more information and too little time to read books. We need:
+                    <ul>
+                        <li><strong>short and clear information</strong> for start,</li>
+                        <li>but also <strong>deeper and connected sources</strong> to master complex topics</li>
+                    </ul>
+                </p>
+
+                <p>
+                    I was writing a book. All was good, but then I realized that by the end of the writing I can start rewriting it right away. Why? Just to keep it up-to-date with top knowledge of time being in it.
+                </p>
+                <p>
+                    So I looked for something in between a post and a book, yet more than a dump category or tag - <strong>a cherry-picked posts in order that gives them meaning, where active people can react in comments, update the content and share just small pieces of know-how</strong>.
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Pick a Cluster</h2>
+
+        <ul class="list-unstyled">
+            <li>
+                Got only <strong>5 minutes in a subway?</strong> - Pick single post to learn a specific skill.
+            </li>
+            <li>
+                Got more than <strong>30 minutes in the evening bed?</strong> - Read the whole cluster to master the topic.
+            </li>
+        </ul>
+
+        <p>
+            <em class="fa fa-check text-success"></em> Don't forget to tick it, so you know what posts you've finished.
+        </p>
+
+        <hr>
+
+        {% for little_book in little_books %}
+            <h3 id="{{ little_book.title | webalize }}" class="mb-4">
+                {{ little_book.title }}
+            </h3>
+
+            {% set totalReadingTime = 0 %}
+            {% for postId in little_book.post_ids %}
+                {% set totalReadingTime = totalReadingTime + posts[postId].getReadingTimeInMinutes %}
+            {% endfor %}
+
+            <ul class="list-inline post-metadata">
+                <li class="list-inline-item mr-3">
+                    <em class="fa fa-calendar fa-fw"></em> {{ little_book.year_released }}
+                </li>
+                <li class="list-inline-item mr-3">
+                    <em class="fa fa-clock-o fa-fw"></em> {{ totalReadingTime }} mins
+                </li>
+                <li class="list-inline-item mr-3">
+                    <a href="#{{ little_book.title | webalize }}">#Anchor</a>
+                </li>
+            </ul>
+
+            <ul class="mt-4 checklist">
+                {% for postId in little_book.post_ids %}
+                    {% set activePost = posts[postId] %}
+                    <li class="mb-3 checklist__item">
+                        <input class="checklist__input" type="checkbox" id="item_{{ activePost.id }}" value="{{ activePost.id }}">
+                        <label class="checklist__label" for="item_{{ activePost.id }}">
+                            <em class="checklist_icon fa fa-3x fa-check" id="item_{{ activePost.id }}"></em>
+                        </label>
+
+                        <div class="checklist__details">
+                            <a href="/{{ activePost.relativeUrl }}/">{{ activePost.title | raw }}</a>
+
+                            {% include "_snippets/post/postMetadataLine.twig" with { post: activePost } %}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            {% if loop.last == false %}<hr>{% endif %}
+        {% endfor %}
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+{% endblock %}
