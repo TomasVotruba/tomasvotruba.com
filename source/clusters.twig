@@ -1,10 +1,10 @@
 ---
 layout: "_layouts/default.twig"
-title: "Is Book Too Long For You? Read <small>a Little Book</small>"
+title: "Clusters - Shorter than Book, Deeper than Post"
 id: "clusters"
 
 inspiration:
-    - https://youtu.be/1HBNrwapfv0?t=1269: "Specialized micro-sites over general-posts-group"
+    - https://youtu.be/1HBNrwapfv0?t=1269: "Dusan Janovsky - Specialized micro-sites over general-posts-group"
 ---
 
 {% block content %}
@@ -14,33 +14,44 @@ inspiration:
         <div class="row">
             <div class="col-md-12">
                 <p>
-                {{ "now"|date("Y") }} is the fastest year ever. More and more information and too little time to read books. <strong>We need clear, short, cohesive, updated and social content</strong>. A year old book has much less value then post from today, moreover in programming.
+                    {{ "now"|date("Y") }} is the fastest year ever. More and more information and too little time to read books. We need:
+                    <ul>
+                        <li><strong>short and clear information</strong> for start,</li>
+                        <li>but also <strong>deeper and connected sources</strong> to master complex topics</li>
+                    </ul>
                 </p>
-                <p>
-                    <div class="col-4 pull-right">
-                       <img src="https://kayiprihtim.com/wp-content/uploads/2016/07/kucuk-yayinevleri-ust.jpg" class="img-thumbnail">
-                    </div>
 
-                    Once, I was writing a book. But I realized that by the end of the writing it would be outdated, so I could start rewriting right away. Still, some <strong>topics deserve more then 3 posts in a book style</strong>.
-                </p>
-                <p>I looked for something in <strong>between a post and a book</strong>...</p>
                 <br>
+
                 <p>
-                    <em>A Little Book</em>
-                </p>
-                <br>
-                <p>
-                    ↓
+                    I was writing a book. All was good, but then I realized that by the end of the writing I can start rewriting it right away. Why? Just to keep it up-to-date with top knowledge of time being in it. So I looked for something in between a post and a book, yet more than a dump category or tag - <strong>a cherry-picked posts in order that gives them meaning, where active people can react in comments, update the content and share just small pieces of know-how</strong>.
                 </p>
             </div>
         </div>
 
         <hr>
 
+        <h2>Pick a Cluster</h2>
+
+        <ul class="list-unstyled">
+            <li>
+                Got only <strong>5 minutes in a subway?</strong> - Pick single post to learn a specific skill.
+            </li>
+            <li>
+                Got more than <strong>30 minutes in the evening bed?</strong> - Read the whole cluster to master the topic.
+            </li>
+        </ul>
+
+        <p>
+            <em class="fa fa-check text-success"></em> Don't forget to tick it, so you know what posts you've finished.
+        </p>
+
+        <hr>
+
         {% for little_book in little_books %}
-            <h2 id="{{ little_book.title | webalize }}">
+            <h3 id="{{ little_book.title | webalize }}" class="mb-4">
                 {{ little_book.title }}
-            </h2>
+            </h3>
 
             {% set totalReadingTime = 0 %}
             {% for postId in little_book.post_ids %}
