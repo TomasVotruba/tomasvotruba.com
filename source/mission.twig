@@ -1,227 +1,77 @@
 ---
 layout: "_layouts/default.twig"
-title: "I'm Here to Help You"
+title: "The Mission"
 id: mission
-
-quotes:
-    - "A day without commit to an open-source project is a day wasted."
 ---
 
 {% block content %}
     <div class="container">
-        <h1>{{ title }}</h1>
+        {#<h1>{{ title }}</h1>#}
 
-        {#{% set quote = quotes[random(array_keys(quotes))] %}#}
-
-        {#<blockquote class="blockquote text-center mt-lg-5 pb-lg-4" id="about-quote">#}
-            {#<p>"{{ quote }}"</p>#}
-        {#</blockquote>#}
-
-        <hr>
-
-        <div id="about-items" class="mb-5 mt-5">
-            <p>I love to do these 3 things:</p>
-
-            <ul>
-                <li>
-                    teaching all I know about <a href="/mentoring-and-lectures/"><strong>open source, effective coding, Symfony & Nette</strong></a>
-                </li>
-                <li>
-                    <strong>consultancy of PHP projects</strong> along with personal mentoring
-                </li>
-                <li>
-                    guiding <strong>private projects to open-source</strong>, recently <a href="https://shopsys.com/">Shopsys</a>
-                </li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <h2 class="text-center">Sharing is Knowing</h2>
-
-        <div class="card-deck">
-            <div class="card">
-                <img class=card-img-top" src="/assets/images/talking-square.jpg">
-                <div class="card-body">
-                    <p>
-                        I think the main value in knowledge is <strong>to share it in way most people can understand</strong>.
-                    </p>
-                    <p>
-                        I do so <a href="/blog"><strong>on my blog</a></strong>, <a href="https://stackoverflow.com/users/1348344/tom%C3%A1%C5%A1-votruba">StackOverflow</a> and by <a href="/talks">giving talks</a> on PHP Meetups and Conferences.
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://pehapkari.cz/">
-                    <img class="card-img-top" src="/assets/images/pehapkari.jpg" alt="Czech & Slovak PHP Community logo">
-                </a>
-                <div class="card-body border border-bottom-0 border-left-0 border-right-0">
-                    <p>
-                        And I'm not stopping at my ideas. It's much more <strong>amazing what group of friendly people can do when they connect and share they ideas</strong> on regular basis.
-                    </p>
-                    <p>
-                        That's what we grow in <a href="https://pehapkari.cz">Pehapkari</a> - Czech & Slovak PHP Community. Come to <a href="https://facebook.com/pehapkari/events">meetups we organize</a> and you'll see.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 class="text-center">Github is my Facebook</h2>
-
-        <br>
-
-        <p>When I want to have fun and chat online, I go to "waste" my time on Github. Thanks to this procrastination many projects were born.</p>
-
-        <blockquote class="blockquote text-center">
-            "A day without commit to an open-source is a day wasted."
-        </blockquote>
-
-
-        <div class="mt-5 mb-5">
-            <a href="https://github.com/tomasvotruba/">
-                <img src="/assets/images/github-passion.png" alt="My Github contributions in a graph">
-            </a>
-        </div>
-
-        {% for project in projects %}
-            <div class="card card-normal">
-                <div class="card-body">
-                    <h3 class="card-title">
-                        <em class="fa fa-github"></em>
-                        &nbsp;
-                        {{ project.name }}
-                    </h3>
-
-                    <ul>
-                        <li>
-                            <a href="{{ project.url }}">{{ project.url }}</a>
-                        </li>
-                        {% for item in project.description %}
-                            <li>{{ item|raw }}</li>
-                        {% endfor %}
-                    </ul>
-
-                    {% if project.intro_post_id is defined %}
-                        {% set activePost = posts[project['intro_post_id']] ?? null %}
-                        {% if activePost is defined %}
-                            <a href="/{{ activePost.getRelativeUrl() }}" class="card-link btn btn-info btn-sm mt-2">
-                                <em class="fa fa-fw fa-book"></em>
-                                &nbsp;
-                                Read Intro Post: "{{ activePost.title }}"
-                            </a>
-                        {% endif %}
-                    {% endif %}
-                </div>
-            </div>
-        {% endfor %}
-
-
-        {#{% set reference = $references[array_rand($references)] %}#}
-        {#<blockquote class="blockquote text-center mt-lg-5 mb-lg-5">#}
-            {#<p>"{{ reference.text }}"</p>#}
-            {#<footer class="blockquote-footer">#}
-                {#{{ reference.author }} at <a href="{{ reference.company_url }}">{{ reference.company }}</a>#}
-            {#</footer>#}
-        {#</blockquote>#}
-
-        <hr>
-
-        <p>
-            I have been in PHP for {{ "now"|date('Y')-2004 }} years, {{ "now"|date('Y')-2010 }} years with Nette and last {{  "now"|date('Y')-2014 }} years with Symfony.
+        <h1 class="text-center mb-4">
+            <em class="fa fa-2x fa-heart"></em>
+            &nbsp;
+            <em class="fa fa-2x fa-code mb-4"></em>
             <br>
-            I focus on <strong>PHP frameworks, legacy code transitions and AST-based instant upgrades, instant refactoring and coding standards</strong>.
-        </p>
-        <p>
-            <br>Recently, I'm helping <a href="https://shopsys.com/">Shopsys</a> to become the best open-source, Symfony-based e-commerce platform, and also other clients:</p>
+            I help Programmers to be Happier
+        </h1>
 
-        <div class="text-center row">
-            {% for logo, url in helped_companies %}
-                <div class="align-self-center col-md-4 col-sm-6 col-6 border-0 pt-md-0 pb-md-0 pt-2 pb-2">
-                    <a href="{{ url }}">
-                        <img src="/assets/images/references/{{ logo }}">
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-
-        <p class="text-center bigger mt-4">
-            <em>Do you want to be next?</em>
+        <p class="bigger mb-4">
+            To learn faster, earn better money and work on projects that are meaningful to them.
+            <br>
+            I help programmers to unlock their inner powers, start believing in themselves and becoming 200 % productive with less energy.
         </p>
 
-        <p class="text-center">
-            <a href="/contact/" class="btn btn-success bigger mt-2 mb-2">
-                Let me know <em class="fa fa-arrow-circle-o-right fa-fw"></em>
-            </a>
-        </p>
+        <ul>
+            <li>
+                Teaching all I know about <strong>open source, effective coding, Symfony & Nette</strong>
+            </li>
+            <li>
+                I consult PHP projects and do 1:1 mentorings.
+            </li>
 
-        <hr>
+        </ul>
 
-        <h2 class="text-center">Do you Need Framework Training?</h2>
+        <p>I can help you with anything <a href="/">I write about</a>. Symfony, Nette, Doctrine, PHP CLI, team mentorings, coding standards, migration of legacy code to a framework, instant upgrades and open-sourcing private code.</p>
 
-        {# ref.: https://getbootstrap.com/docs/4.0/components/card/#card-layout #}
-        <div class="card-deck card-normal">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <img src="/assets/images/skills/symfony.png" class="col-10 mb-3 mt-3">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Dive into Symfony</h3>
+        <p>The most popular topic I teach are:</p>
 
-                            <p>
-                                We'll focus exactly on your project's level and how to integrate Symfony there.
-                            </p>
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    Mastering Symfony
+                    <img src="/assets/images/skills/symfony.png" class="col-2 pull-right">
+                </h3>
 
-                            <ul>
-                                <li><strong>Request & Response</strong> life cycle</li>
-
-                                <li>All arounds <strong>Controllers</strong> - services, <code>_invoke</code></li>
-                                <li><strong>Twig</strong> templating system</li>
-                                <li><strong>Dependency Injection</strong>, <code>_defaults</code>, <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">PSR-4 service auto-discovery</a> and more</li>
-                                <li>Hooking Events via <a href="https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/"><strong>EventDispatcher</strong></a></li>
-                                <li><strong>Commands</strong> in CLI made easy</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer text-center">
-                            <small class="text-muted">Symfony 3.3 and 4.0</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <img src="/assets/images/skills/nette.png" class="card-img-top col-8 mb-4 mt-4">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Become Nette Master</h3>
-                            <p>
-                                You'll understand strong features of framework and in the end of lecture you'll be able to build application on last version.
-                            </p>
-
-                            <ul>
-                                <li>Directory Structure - where to put what</li>
-                                <li><strong>routing</strong>: SEO and user friendly URL</li>
-                                <li>life cycle of <strong>Presenter</strong></li>
-                                <li>fancy configuration with NEON</li>
-                                <li><strong>Dependency Injection</strong> and autowiring</li>
-                                <li><strong>Latte</strong> - templates done simple</li>
-                                <li>You'll be able to <strong><a href="/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension/">Write own Extension</a></strong></li>
-                            </ul>
-                        </div>
-                        <div class="card-footer text-center">
-                            <small class="text-muted">Nette 2.4 and 3.0</small>
-                        </div>
-                    </div>
-                </div>
+                <ul>
+                    <li>We'll focus exactly on your project's level and how to integrate Symfony there.</li>
+                    <br>
+                    <li><strong>{{  "now"|date('Y')-2014 }} years</strong> of experience</li>
+                    <li><strong>Request & Response</strong> life cycle, <strong>Controllers</strong> - <code>_invoke</code>able</li>
+                    <li><strong>Twig</strong> templating system</li>
+                    <li><strong>Dependency Injection</strong>, services, <code>_defaults</code>, <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">PSR-4 service auto-discovery</a> and more</li>
+                    <li><a href="https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/"><strong>EventDispatcher</strong></a>, <strong>Commands</strong> and all the other Symfony features.</li>
+                </ul>
             </div>
         </div>
 
-        <hr>
+        <div class="card card-normal">
+            <div class="card-body">
+                <h3 class="card-title">
+                    Mastering Nette
+                    <img src="/assets/images/skills/nette.png" class="col-2 pull-right">
+                </h3>
 
-        <h2 class="text-center">What else Can I Help You With?</h2>
+                <ul>
+                    <li>You'll understand strong features of the framework and in the end of lecture you'll be able to build application on last version.</li>
+                    <br>
+                    <li><strong>{{ "now"|date('Y')-2010 }} years</strong> of experience</li>
+                    <li>Routing, life cycle of Presenter and Components</li>
+                    <li>Configuration with NEON, powerful <strong>Dependency Injection</strong> and <strong><a href="/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension/">own  extension</a></strong></li>
+                    <li><strong>Latte</strong> templating and all other Nette pilars.</li>
+                </ul>
+            </div>
+        </div>
 
         <div class="card card-normal">
             <div class="card-body">
@@ -233,7 +83,7 @@ quotes:
                 <ul>
                     <li>How to <strong>refactor legacy code</strong></li>
                     <li><strong>SOLID principals</strong> and <strong>design patterns</strong> in real life <strong>examples</strong></li>
-                    <li>How to <strong>save time with static analysis</strong>: <a href="/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/">EasyCodingStandard</a> and <a href="/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/">PHPStan</a></li>
+                    <li>How to <strong>save time with static analysis</strong>: <a href="/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/">EasyCodingStandard</a></li>
                 </ul>
             </div>
         </div>
@@ -268,8 +118,55 @@ quotes:
             </div>
         </div>
 
-        <p class="text-center bigger">
-            <em>Do you know what skill-mix do you need?</em>
+        <br>
+
+        <p class="text-center">Happy clients</p>
+
+        <div class="text-center row mt-3 mb-3">
+            {% for logo, url in helped_companies %}
+                <div class="align-self-center col-md-2 col-sm-4 col-4 border-0 pt-md-0 pb-md-0 pt-2 pb-2">
+                    <a href="{{ url }}">
+                        <img src="/assets/images/references/{{ logo }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <hr>
+
+        <br>
+        <br>
+
+        <h1 class="text-center mb-4">
+            <em class="fa fa-2x fa-handshake-o"></em>
+            &nbsp;
+            <em class="fa fa-2x fa-globe mb-4"></em>
+            <br>
+            I help the World to Enjoy Cooperation
+        </h1>
+
+        <p class="bigger mb-4">
+            To openly share know-how on meetups and code as open-source, so we can all build on each other work and help each other.
+            <br>
+            I believe the main value in knowledge is <strong>to share it in way most people can understand</strong>.
+        </p>
+
+        <ul>
+            <li>
+                It's <strong>amazing what group of friendly people can do when they connect and share they ideas</strong> on regular basis. That's the main purporse of <a href="https://pehapkari.cz">Péhápkaři.cz</a> - a Friends of PHP in Czech Republic and Slovakia
+            </li>
+            <li>
+                I guide <strong>private projects to open-source</strong>, currently at <a href="https://shopsys.com/">Shopsys</a>
+            </li>
+            <li>
+                I help Czech open-source companies to be seen at <a href="https://ceskyopensource.cz">CeskyOpenSource.cz</a>
+            </li>
+        </ul>
+
+        <br>
+
+        <p class="text-center bigger mt-5">
+            <em>Do you want to become part of my mission?</em>
         </p>
         <p class="text-center">
             <a href="/contact/" class="btn btn-success bigger mt-2 mb-2">

@@ -1,5 +1,5 @@
 parameters:
-    little_books:
+    clusters:
         -
             title: "Master PHP CLI Apps with Symfony"
             year_released: 2018

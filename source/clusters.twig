@@ -49,30 +49,30 @@ inspiration:
 
         <hr>
 
-        {% for little_book in little_books %}
-            <h3 id="{{ little_book.title | webalize }}" class="mb-4">
-                {{ little_book.title }}
+        {% for cluster in clusters %}
+            <h3 id="{{ cluster.title | webalize }}" class="mb-4">
+                {{ cluster.title }}
             </h3>
 
             {% set totalReadingTime = 0 %}
-            {% for postId in little_book.post_ids %}
+            {% for postId in cluster.post_ids %}
                 {% set totalReadingTime = totalReadingTime + posts[postId].getReadingTimeInMinutes %}
             {% endfor %}
 
             <ul class="list-inline post-metadata">
                 <li class="list-inline-item mr-3">
-                    <em class="fa fa-calendar fa-fw"></em> {{ little_book.year_released }}
+                    <em class="fa fa-calendar fa-fw"></em> {{ cluster.year_released }}
                 </li>
                 <li class="list-inline-item mr-3">
                     <em class="fa fa-clock-o fa-fw"></em> {{ totalReadingTime }} mins
                 </li>
                 <li class="list-inline-item mr-3">
-                    <a href="#{{ little_book.title | webalize }}">#Anchor</a>
+                    <a href="#{{ cluster.title | webalize }}">#Anchor</a>
                 </li>
             </ul>
 
             <ul class="mt-4 checklist">
-                {% for postId in little_book.post_ids %}
+                {% for postId in cluster.post_ids %}
                     {% set activePost = posts[postId] %}
                     <li class="mb-3 checklist__item">
                         <input class="checklist__input" type="checkbox" id="item_{{ activePost.id }}" value="{{ activePost.id }}">
