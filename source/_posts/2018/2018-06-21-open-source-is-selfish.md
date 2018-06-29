@@ -13,7 +13,7 @@ There are 2 major views I see in open-source: *a victim* and *a selfish egoist*.
 
 ## Open-Source as a Victim
 
-We had a panel discussion at [PHPLive 2018](http://www.phplive.cz/)  about the pros and cons of making your code open-source and **it surprised me how negatively open-source is viewd**. This might be related mainly to Czech & Slovak programmers, since we were raised victims by default in communism till 1993.
+We had a panel discussion at [PHPLive 2018](http://www.phplive.cz/)  about the pros and cons of making your code open-source and **it surprised me how negatively open-source is viewd**. This might be related mainly to Czech & Slovak programmers, since we were raised victims by default in communism till 1989.
 
 What am I talking about? That open-source code is something you do for the public, in your free time. You expect them to contribute to your project; in a way you expect the code to be written. You feel like a boss and you own all the keys.
 
