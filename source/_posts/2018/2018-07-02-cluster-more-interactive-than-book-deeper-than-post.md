@@ -2,10 +2,12 @@
 id: 119
 title: "Cluster: More Interactive than a Book, Deeper than a Post"
 perex: |
-    There is no silver bullet, but I have few proposals that anyone sharing knowledge in text  form can do to rise quality of the content better and make readers get more out of it in the long-term.
+    I started this 2-part series by [Don't Read Books](/blog/2018/06/28/dont-read-books). What should we do instead?
+    <br><br>
+    There is no silver bullet, but I have few proposals that anyone sharing knowledge in text form can do to rise quality of the content better and make readers get more out of it in the long-term.
     <br>
-    It will not earn as much money as "bestselling" books, but if you value education more than money, keep on reading.
-tweet: "New Post on my Blog: ... #education #books #reading #ai"
+    It will not earn as much money as "bestselling" books, but if you value education more than money like me, keep on reading.
+tweet: "New Post on my Blog: Cluster: More Interactive than a Book, Deeper than a Post #education #books #reading #ai"
 related_items: [118]
 ---
 
@@ -17,8 +19,7 @@ Now imagine this post would be tested, with unit tests and Travis CI that would 
 
 Btw, I know you can find up-to-date know-how for Symfony Forms in the documentation, but this is just an example. It could be any more complex non-documented code, like writing a [Console application with Dependency Injection](/blog/2018/05/28/build-your-first-symfony-console-application-with-dependency-injection-under-4-files/).
 
-
-## Let People In To Your Hearth
+## Let People Into Your Hearth
 
 ...or at least your thoughts. **A book content is one-man-show, with one-man ideas** and I think that is dangerous, unless we talk about God that helps us all and everyone can agree on that. I don't think my ideas are the best and that I know everything (or anything). I just want to open discussion in the best direction I believe at the moment.
 
@@ -52,7 +53,7 @@ That way the content is cooperative work of more people, more authors would be h
     This is number of contributors to this blog. It's not like we're writing together all the time, but I'm very happy it's more than 0, much more. Thank <a href="https://github.com/TomasVotruba/tomasvotruba.cz/graphs/contributors">you all</a>!
 </div>
 
-### Levelling Up Tailored to Your Personal Needs
+## Levelling Up Tailored to Your Personal Needs
 
 Each of us has different experience, past, motivation and know-how. It makes no sense that all of us read whole book about Symfony.
 
@@ -78,28 +79,35 @@ This is connected to *prerequisite skill* system. Each skill is followed by the 
 
 Which can build on previous experience and utilize neuron patterns faster?
 
-### Inform Clearly about Deprecations and Changes
+## Inform Clearly about Deprecations and Changes
 
 The last but most least, people often return to content they believe in and look for iterative improvement in it. That's why we use StackOverflow and see answers that worked in 2015 to have 100 vote, but also there is a new one in 2018, that has already 20 votes and in 2020 there will come even better one...
 
 That's why I try to make clear what and how changed right in the beginning on such posts.
 
-<a href="/blog/2017/06/19/symbiotic-controller-nette-presenter-with-freedom/">
-    <img src="/assets/images/posts/2018/no-books/deprecated-post.png" class="img-thumbnail">
-</a>
-
 <a href="/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/">    
     <img src="/assets/images/posts/2018/no-books/updated-post.png" class="img-thumbnail">
 </a>
 
+And also not to promote outdated deprecated know-how:
+
+<a href="/blog/2017/06/19/symbiotic-controller-nette-presenter-with-freedom/">
+    <img src="/assets/images/posts/2018/no-books/deprecated-post.png" class="img-thumbnail">
+</a>
+
 These posts are also moved from the main page into [own *deprecated posts* page](/deprecated-posts). That way you can still find them, but they don't confuse new readers by outdated know-how.
 
-You might see this as redundant work and that I'm a nerd (guilty!), but **I'm super-focused on you, my readers and I want you to understand every change that happens so you can learn fast in safe environment**.
+You might see this as redundant work and that I'm a nerd (guilty!), but **I'm super-focused on you, my readers and I want you to 
+ast in safe environment**.understand every change that happens so you can learn f
 
+<br>
 
+## The Clusters in Progress
 
-clusters?
+First, I started this series as to show you the idea of [clusters](/clusters/) on my site, but then it went much further beyond that.
 
-@todo
-short finish up
+Check the idea and feedback me, what do you think about that. 
 
+<br><br>
+
+Happy clustering!
