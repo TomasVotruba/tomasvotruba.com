@@ -10,12 +10,19 @@ perex: |
     <br>
     Do you still think this is sarcasm? Keep on reading.
 tweet: "New Post on my Blog: Don't Read Books #education #books #reading #ai #neuralnetworks"
+tweet_image: "/assets/images/posts/2018/no-books/fahrenheit-book.jpg"
 related_items_: [119]
 ---
 
-I've read [256 Bloghacks](/blog/2018/04/12/the-best-5-of-256-bloghacks-book/), [Steal Like an Artist, Deep Work, No More Mr. Nice Guy](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/), [Selling is Human](/blog/2018/06/18/14-surprising-tip-from-selling-is-human-to-influence-others/) and [Life 3.0](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) during last 2 years and a couple more I haven't written about yet.
+<div class="text-center">
+    <img src="/assets/images/posts/2018/no-books/fahrenheit-book.jpg" class="img-thumbnail">
+    <br>
+    <em>Don't worry, it's not illegal to read books yet...</em>
+</div>
 
-<img src="/assets/images/posts/2018/no-books/fahrenheit-book.jpg" class="img-thumbnail">
+<br>
+
+I've read [256 Bloghacks](/blog/2018/04/12/the-best-5-of-256-bloghacks-book/), [Steal Like an Artist, Deep Work, No More Mr. Nice Guy](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/), [Selling is Human](/blog/2018/06/18/14-surprising-tip-from-selling-is-human-to-influence-others/) and [Life 3.0](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) during last 2 years and a couple more I haven't written about yet.
 
 I mostly love books.
 
