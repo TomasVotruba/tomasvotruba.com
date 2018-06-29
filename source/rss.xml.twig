@@ -30,7 +30,7 @@
             {% endif %}
 
             {# is future post, do not display #}
-            {% if post.getDate <= "now" %}
+            {% if post.getDate|date("Y-m-d") > "now"|date("Y-m-d") %}
                 {% set includePost = false %}
             {% endif %}
 
