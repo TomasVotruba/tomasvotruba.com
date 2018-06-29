@@ -97,8 +97,7 @@ And also not to promote outdated deprecated know-how:
 
 These posts are also moved from the main page into [own *deprecated posts* page](/deprecated-posts). That way you can still find them, but they don't confuse new readers by outdated know-how.
 
-You might see this as redundant work and that I'm a nerd (guilty!), but **I'm super-focused on you, my readers and I want you to 
-ast in safe environment**.understand every change that happens so you can learn f
+You might see this as redundant work and that I'm a nerd (guilty!), but **I'm super-focused on you, my readers and I want you to understand every change that happens so you can learn fast in safe environment**.
 
 <br>
 
