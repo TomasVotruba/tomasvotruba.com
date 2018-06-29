@@ -30,6 +30,8 @@ id: blog
         <div class="row">
             {% set dateLines = [] %}
 
+            {% set displayedPostCount = 0 %}
+
             {% for post in posts %}
                 {% set includePost = true %}
 
@@ -43,12 +45,13 @@ id: blog
                     {% set includePost = false %}
                 {% endif %}
 
-                {# is future post, do not display #}
-                {% if post.getDate <= "now" %}
+                {% if post.getDate|date("Y-m-d") > "now"|date("Y-m-d") %}
                     {% set includePost = false %}
                 {% endif %}
 
                 {% if includePost %}
+                    {% set displayedPostCount = displayedPostCount + 1 %}
+
                     {% set postYear = post.getDateInFormat('Y') %}
                     {% set currentYear = "now"|date('Y') %}
 
@@ -62,7 +65,7 @@ id: blog
                         </div>
                     {% endif %}
 
-                    {% if loop.index <= 3 %}
+                    {% if displayedPostCount <= 3 %}
                         {% set colClass = wasFirstPostMarked ? 'col-md-6' : 'col-md-12' %}
 
                         <article class="text-left pt-2 pb-4 {{ colClass }}">
@@ -81,7 +84,7 @@ id: blog
                             {% set wasFirstPostMarked = true %}
                         </article>
                     {% else %}
-                        {% if loop.index == 4 %}<ul class="mt-4 list-unstyled">{% endif %}
+                        {% if displayedPostCount == 4 %}<ul class="mt-4 list-unstyled">{% endif %}
                         <li class="mb-3 col-md-12">
                             <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
                             {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
