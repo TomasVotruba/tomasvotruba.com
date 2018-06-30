@@ -8,34 +8,40 @@ perex: |
 tweet: "New post on my blog: Keep Your CHANGELOG Useful with Links #github #changelog #dx"
 tweet_image: "/assets/images/posts/2018/changelog/keep-a-changelog.jpg"
 related_items: [117]
+
+updated: true
+updated_since: "June 2018"
+updated_message: "Updated with new <code>run</code> command."
 ---
 
-This post is written in Markdown. Would you read it, if it would look like this?
-
 <br>
 
-*I wrote about monorepo before and - as ShopSyS and Google agrees - it's the best choice for longterm projects, like children or planet projects.*
+This post is written in Markdown. Would you read it if it looked like this?
 
-*Moreover know, when Vitek showed me awesome tool called Tomono, that can merge git history from multiple repositories...*
-
-<br>
+<div class="card">
+    <div class="card-body">
+        I wrote about monorepo before and - as ShopSyS and Google agrees - it's the best choice for longterm projects, like children or planet projects.
+        <br>
+        <br>
+        Moreover now, when Vitek showed me awesome tool called Tomono, that can merge git history from multiple repositories...
+    </div>
+</div>
 
 Or this one:
 
-<br>
-
-*I [wrote about monorepo before](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/) and - as [ShopSyS](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0) and [Google agrees](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext) - **it's the best choice for longterm projects**, like children or planet projects.*
-
-*Moreover know, when [Vitek](https://github.com/vitek-rostislav) showed me awesome tool called [Tomono](https://github.com/unravelin/tomono), that can **merge git history from multiple repositories**...*
-
-<br>
-<br>
-
-Btw, Hypertext Markup Language (HTML) is here since [1993](https://en.wikipedia.org/wiki/HTML), so we might integrate it in its natural environment. Same for Markdown and not just because it's a markup language.
+<div class="card">
+    <div class="card-body">
+I <a href="/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/">wrote about monorepo before</a> and - as <a href="https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0">ShopSys</a> and <a href="https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext">Google agrees</a>) - <strong>it's the best choice for longterm projects</strong>, like children or planet projects.
+    <br><br>
+    Moreover now, when <a href="https://github.com/vitek-rostislav">Vitek</a> showed me awesome tool called <a href="https://github.com/unravelin/tomono">Tomono<a>, that can <strong>merge git history from multiple repositories</strong>...
+    </div>
+</div>
 
 <br>
 
-## What is Sad about Missing References?
+## What is Sad about..
+
+### ...Missing References?
 
 Imagine you'll read my post first *plain text* version. While reading it, you might think:
 
@@ -45,17 +51,13 @@ Imagine you'll read my post first *plain text* version. While reading it, you mi
 
 You could read answer to all those questions if I'd only provide links - but **you can't, because there are no links**. You'd have to go to comments, ask them, wait for answers... So you'll probably end up closing my blog and never come again.
 
-## What is Sad about Plain Text `CHANGELOG.md`?
+### ...Plain Text `CHANGELOG.md`?
 
 It takes maintainer **a lot of effort** to [keep a changelog](https://keepachangelog.com), keep it updated, with every version and every new pull-request, refer issues, pull-request, @author references...
 
-<br>
-
-<blockquote class="blockquote text-center">
-    "Too many cooks spoil the broth"
+<blockquote class="blockquote text-center mt-5 mb-5">
+    "Too many cooks spoil the broth."
 </blockquote>
-
-<br>
 
 No surprise that most `CHANGELOG.md` files look like this:
 
@@ -71,7 +73,7 @@ No surprise that most `CHANGELOG.md` files look like this:
 
 Does your `CHANGELOG.md` look like this too? Is it just dump of [pull-requests](https://github.com/Symplify/Symplify/issues?q=is%3Apr+is%3Aclosed) combined with [releases](https://github.com/Symplify/Symplify/releases)?
 
-### Why do we Look to Changelog?
+## Why do we Look to Changelog?
 
 To find an answer:
 
@@ -123,17 +125,25 @@ composer require symplify/changelog-linker --dev
 ### 2. Run it
 
 ```bash
-vendor/bin/changelog-linker CHANGELOG.md --repository https://github.com/symplify/symplify
+vendor/bin/changelog-linker run
 ```
-
-*Option `--repository` is used for links to PRs, issues and commits.*
 
 It will complete links to:
 
-- **PRs and issues**, e.g. `[#1](https://github.com/symplify/symplify/pull/1) - fix everything`
-- **Commits links**, e.g. `see [#9b154d9]: https://github.com/Symplify/Symplify/commit/9b154d9b6e88075e14b6812613bce7c1a2a79daa]`
-- **Version Diffs**, e.g. `# [v2.0.0](https://github.com/Symplify/Symplify/compare/v1.5.0...v2.0.0)`
-- **Users**, e.g. `Thanks to [@SpacePossum](https://github.com/SpacePossum)`
+- **PRs and issues**
+    ```markdown
+    [#1](https://github.com/symplify/symplify/pull/1) - fix everything
+    ```
+
+- **Version Diffs**
+    ```markdown
+    # [v2.0.0](https://github.com/Symplify/Symplify/compare/v1.5.0...v2.0.0)
+    ```
+
+- **Users**
+    ```markdown
+    Thanks to [@SpacePossum](https://github.com/SpacePossum)
+    ```
 
 ### 3. Commit and Push
 
