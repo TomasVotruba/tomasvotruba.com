@@ -6,7 +6,7 @@
                 <li id="logo">
                     Tomas Votruba
                 </li>
-                <li class="{% if (id is defined and id == 'blog') or (layout is defined and layout == 'post') %}active{% endif %}">
+                <li class="{% if (id is defined and id == 'blog') or post is defined %}active{% endif %}">
                     <a href="/">Blog</a>
                 </li>
                 <li class="new {% if id is defined and id == 'clusters' %}active{% endif %}">
@@ -32,7 +32,7 @@
 <div class="hidden-md-up">
     <nav class="navbar" id="mobile-menu">
         <div class="container">
-            <a href="/" class="col-3 col-sm-3 {% if (id is defined and id == 'blog') or (layout is defined and layout == 'post') %}active{% endif %}">
+            <a href="/" class="col-3 col-sm-3 {% if (id is defined and id == 'blog') or post is defined %}active{% endif %}">
                 <em class="fa fa-book"></em>
                 <br>
                 PHP Blog
