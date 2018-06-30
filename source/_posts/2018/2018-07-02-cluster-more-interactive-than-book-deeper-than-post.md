@@ -24,7 +24,7 @@ Btw, I know you can find up-to-date know-how for Symfony Forms in the documentat
 ...or at least your thoughts. **A book content is one-man-show, with one-man ideas** and I think that is dangerous, unless we talk about God that helps us all and everyone can agree on that. I don't think my ideas are the best and that I know everything (or anything). I just want to open discussion in the best direction I believe at the moment.
 
 <blockquote class="blockquote text-center">
-    "The community of people knows much more<br> 
+    "The community of people knows much more<br>
     than the most skilled person in it."
 </blockquote>
 
@@ -85,7 +85,7 @@ The last but most least, people often return to content they believe in and look
 
 That's why I try to make clear what and how changed right in the beginning on such posts.
 
-<a href="/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/">    
+<a href="/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/">
     <img src="/assets/images/posts/2018/no-books/updated-post.png" class="img-thumbnail">
 </a>
 
@@ -105,7 +105,7 @@ You might see this as redundant work and that I'm a nerd (guilty!), but **I'm su
 
 First, I started this series as to show you the idea of [clusters](/clusters/) on my site, but then it went much further beyond that.
 
-Check the idea and feedback me, what do you think about that. 
+Check the idea and feedback me, what do you think about that.
 
 <br><br>
 
