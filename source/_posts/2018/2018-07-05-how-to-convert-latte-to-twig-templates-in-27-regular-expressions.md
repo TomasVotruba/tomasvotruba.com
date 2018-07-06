@@ -10,6 +10,7 @@ perex: |
     <br><br>
     **Are you a Twig fan? As a side effect, I made 27 regular expression to handle 80 % of the Latte to Twig migration for you.**
 tweet: "New Post on my Blog: How to Convert #Latte to #Twig in 27 Regular Expressions #nettefw #symfony"
+tweet_image: "/assets/images/posts/2018/latte-twig/diff.png"
 ---
 
 <img src="/assets/images/posts/2018/latte-twig/latte.png" class="mt-5 ml-5">
@@ -71,11 +72,11 @@ It will find all the `*.twig` files, look for Latte code in it and if that match
 
 I'd link you to [README](http://github.com/symplify/lattetotwigconverter) now for more, but actually, there is no more, this is all the usage.
 
-How does this set work in real project? Just see [the PR to this website](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380). 
+<br>
 
+How does this set work in real project? Just see [the PR to this website](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380).
 
-...
-
+<img src="/assets/images/posts/2018/latte-twig/diff.png" class="img-thumbnail">
 
 ## Twig To Latte Converter?
 
@@ -97,7 +98,7 @@ $content = Strings::replace($content, '{% else %}', '#{else}#');
 $content = Strings::replace($content, '#{else}#', '{% else %}');
 ```
 
-or in more complex cases:
+What about more complex case?
 
 ```php
 # Twig to Latte
@@ -130,9 +131,9 @@ The rule set is no way complete since this site includes rather simple cases. Sa
 
 In the end I'd like to encourage you to do more of such experiments. I meet many programmers over meetups all across the Europe and they often don't have space - either the time in work or they won't allow themselves - to do such experiments.
 
-In my open-source experience, these experiments give you the most knowledge. Instead of choosing the first solution because *I don't have time and I have to deliver the value*, I tried 3-4, tested them and then picked the one that worked the best. It was not the first one of course, and even if it was, I'd be much more convinces the solution is right instead of blindly believing it.
+In my open-source experience, these experiments give you the most knowledge. Instead of choosing the first solution because *I don't have time and I have to deliver the value*, I tried 3-4, tested them and then picked the one that worked the best. It was not the first one of course, and even if it was, I'd be much more convinced the solution is right instead of just blindly believing it.
 
-I learned a lot about regular expressions, about delimiters and universal capturing groups (easter egg: seek "http" in the source code and you'll find all the tips I found and found useful) thanks to [Stackoverflow]() and [regex101.com](https://regex101.com/). I also must thank to Jáchym Toušek and Ondra Mirtes with PHPStan who get me more engaged to regular expressions in useful and not-so-frustrating way.
+I learned a lot about regular expressions, about delimiters and universal capturing groups (easter egg: seek "http" in the source code and you'll find all the tips I found and found useful) thanks to Stackoverflow and [regex101.com](https://regex101.com/). I also must thank to Jáchym Toušek and Ondra Mirtes with PHPStan who got me more engaged to regular expressions in useful and not-so-frustrating way.
 
 <br>
 <br>
