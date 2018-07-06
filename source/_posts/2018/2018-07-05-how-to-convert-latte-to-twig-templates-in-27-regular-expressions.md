@@ -9,7 +9,7 @@ perex: |
     Well, **it was**. Statie will support both [Twig](https://github.com/Symplify/Symplify/pull/892) and Latte since next version.
     <br><br>
     **Are you a Twig fan? As a side effect, I made 27 regular expression to handle 80 % of the Latte to Twig migration for you.**
-tweet: "New Post on my Blog: ... #symfony #twig #latte #nettefw"
+tweet: "New Post on my Blog: How to Convert #Latte to #Twig in 27 Regular Expressions #nettefw #symfony"
 ---
 
 <img src="/assets/images/posts/2018/latte-twig/latte.png" class="mt-5 ml-5">
@@ -70,6 +70,12 @@ vendor/bin/latte-to-twig-converter convert app/templates
 It will find all the `*.twig` files, look for Latte code in it and if that matches, it will convert it to Twig. That way your `*.latte` files will keep Latte as long as you don't rename them.
 
 I'd link you to [README](http://github.com/symplify/lattetotwigconverter) now for more, but actually, there is no more, this is all the usage.
+
+How does this set work in real project? Just see [the PR to this website](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380). 
+
+
+...
+
 
 ## Twig To Latte Converter?
 
