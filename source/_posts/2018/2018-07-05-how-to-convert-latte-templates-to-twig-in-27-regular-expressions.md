@@ -1,6 +1,6 @@
 ---
 id: 120
-title: "How to Convert Latte to Twig in 27 Regular Expressions"
+title: "How to Convert Latte Templates to Twig in 27 Regular Expressions"
 perex: |
     [Statie](https://statie.org) - a tool for generating static open-sourced website like [this blog](https://github.com/tomasvotruba/tomasvotruba.cz) or [Pehapkari.cz](https://github.com/pehapkari/pehapkari.cz) - runs on YAML and Symfony DI Container. That way it's easy to understand by the PHP community worldwide.
     <br><br>
