@@ -17,6 +17,8 @@ updated: true
 updated_since: "April 2018"
 updated_message: |
     Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
+
+related_items: [120]
 ---
 
 None of them is perfect, they both have strong parts and weak parts. But the more I travel to abroad conferences, meetups or repositories, the more I hear **nobody understand differences between them or their advantages to each other**. Since I meet mainly with Symfony and Nette code, I had to investigate them a bit deeper.
