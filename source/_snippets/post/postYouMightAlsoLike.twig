@@ -8,8 +8,8 @@
     <ul class="mt-4 list-unstyled">
         {% for relatedPost in relatedPosts %}
             <li class="mb-3 col-md-12">
-                <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
-                {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+                <a href="/{{ relatedPost.relativeUrl }}/">{{ relatedPost.title|raw }}</a>
+                {% include "_snippets/post/postMetadataLine.twig" with { relatedPost: post } %}
             </li>
         {% endfor %}
     </ul>
