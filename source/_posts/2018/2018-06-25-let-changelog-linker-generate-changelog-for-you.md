@@ -185,6 +185,32 @@ The Changelog Linker doesn't work only for new changes, **it can also link your 
 vendor/bin/changelog-linker linkify
 ```
 
+## ProTip: Use Composer Script and Forget
+
+Composer scripts are handy, if you use CLI command with many options and **you don't want to remember and type them over and over again**.
+
+This is how I simplify my setup for Symplify `CHANGELOG.md`:
+
+```json
+{
+    "scripts": {
+        "changelog": "vendor/bin/changelog-linker dump-merges --in-categories --in-packages"
+    }
+}
+```
+
+So all I need to do is run...
+
+```bash
+composer changelog
+```
+
+...and the `CHANGELOG.md` file is updated. Pretty cool, huh?
+
+Find more about Composer scripts in *[Have you tried Composer Scripts? You may not need Phing](https://blog.martinhujer.cz/have-you-tried-composer-scripts/)* post by amazing Martin Hujer.
+
+<br>
+
 That's it.
 
 <br>
