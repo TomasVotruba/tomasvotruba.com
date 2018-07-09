@@ -98,23 +98,98 @@ Well, 2 months of work later and after detailed feedback from [Matouš Czerner](
     vendor/bin/changelog-linker dump-merges --dry-run
     ```
 
-4. Good. How about adding those links so people can just click it and see the pull-request?
+    to see this preview:
 
-    ```bash
-    vendor/bin/changelog-linker dump-merges --dry-run --linkify
+    ```markdown
+    ## Unreleased
+
+    - [#868] [ChangelogLinker] Add ChangeTree to manage merge messages
+    - [#867] [ChangelogLinker] Change Worker registration from implicit to explicit
+    - [#864] [MonorepoBuilder] improve coverage
+
+    [#868]: https://github.com/symplify/symplify/pull/868
+    [#867]: https://github.com/symplify/symplify/pull/867
+    [#864]: https://github.com/symplify/symplify/pull/864
     ```
 
-    There are many other cool options like `--in-packages`, `--in-categories`, `--in-tags` (see [README](https://github.com/symplify/changeloglinker) for more), but just to give you the idea I prepared a small demo:
+4.  There are 2 more cool options: `--in-packages` and `--in-categories`. How to they work?
 
-    <img src="/assets/images/posts/2018/generate-changelog/showcase.gif" class="img-thumbnail">
+    This...
+
+    ```bash
+    vendor/bin/changelog-linker dump-merges --dry-run --in-categories
+    ```
+
+    ...will create:
+
+    ```markdown
+    ## Unreleased
+
+    ### Added
+
+    - [#868] [ChangelogLinker] Add ChangeTree to manage merge messages
+
+    ### Changed
+
+    - [#867] [ChangelogLinker] Change Worker registration from implicit to explicit
+    - [#864] [MonorepoBuilder] improve coverage
+
+    [#868]: https://github.com/symplify/symplify/pull/868
+    [#867]: https://github.com/symplify/symplify/pull/867
+    [#864]: https://github.com/symplify/symplify/pull/864
+    ```
+
+    And this...
+
+    ```bash
+    vendor/bin/changelog-linker dump-merges --dry-run --in-packages
+    ```
+
+    ...will create:
+
+    ```markdown
+    ## Unreleased
+
+    ### ChangelgoLinker
+
+    - [#868] Add ChangeTree to manage merge messages
+    - [#867] Change Worker registration from implicit to explicit
+
+    ### MonorepoBuilder
+
+    - [#864] improve coverage
+
+    [#868]: https://github.com/symplify/symplify/pull/868
+    [#867]: https://github.com/symplify/symplify/pull/867
+    [#864]: https://github.com/symplify/symplify/pull/864
+    ```
+
+    Pro tip: you can combine them and set the priority by order:
+
+    ```bash
+    vendor/bin/changelog-linker dump-merges --dry-run --in-categories --in-packages
+    vendor/bin/changelog-linker dump-merges --dry-run --in-packages --in-categories
+    ```
 
 5. When you're ready, run dump to `CHANGELOG.md`:
 
     ```bash
-    vendor/bin/changelog-linker dump-merges --linkify --in-packages --in-categories
+    vendor/bin/changelog-linker dump-merges --in-packages --in-categories
     ```
 
+## Do You Have Existing `CHANGELOG.md`?
+
+The Changelog Linker doesn't work only for new changes, **it can also link your existing file**:
+
+```bash
+vendor/bin/changelog-linker linkify
+```
+
 That's it.
+
+<br>
+
+**For more features like linked *thanks*, package aliases or linked words see [README](https://github.com/symplify/changeloglinker).**
 
 <br>
 
