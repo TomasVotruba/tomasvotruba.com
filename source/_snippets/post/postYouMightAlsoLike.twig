@@ -1,13 +1,18 @@
 {% set relatedPosts = post|relatedItems %}
 
 {% if relatedPosts|length %}
-    <hr class="mt-4 mb-lg-5">
+    <hr class="mt-4 mb-5">
 
-    Do you want more on this topic? You might like these <strong>related posts</strong>:
+    <h3 class="text-center">Related Posts You Might Find Useful</h3>
 
-    {% for relatedPost in relatedPosts %}
-        <a href="/{{ relatedPost.relativeUrl }}">{{ relatedPost.title|escape }}</a>{% if loop.last == false %}, {% endif %}
-    {% endfor %}
+    <ul class="mt-4 list-unstyled">
+        {% for relatedPost in relatedPosts %}
+            <li class="mb-3 col-md-12">
+                <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
+                {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+            </li>
+        {% endfor %}
+    </ul>
 
     <br>
     <br>
