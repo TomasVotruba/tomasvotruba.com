@@ -62,6 +62,270 @@ And see Twig code:
 
 And that's how 27 regular expressions solution was born step by step.
 
+<br>
+
+I'm not using `preg_replace`, but rather util method [`Nette\Utils\String::replace()`](https://github.com/nette/utils/blob/8eda0c33f798f7ce491715e9dae8797f191e9b00/src/Utils/Strings.php#L475) that handles compile-time errors, run-time errors and few more tricks in a fancy way. Do you want to use it too? Just run `composer update nette/utils`.
+
+**Do you want to skip details and use it?** Jump to *[Install and Use It](#install-and-use-it)* section.
+
+### 1. Block, Define, Include
+
+- [in Latte](https://latte.nette.org/en/macros#toc-blocks)
+- [in Twig](https://twig.symfony.com/doc/2.x/tags/block.html)
+
+```php
+use Nette\Utils\Strings;
+
+// ...
+
+// {block someBlock}...{/block} =>
+// {% block anotherBlock %}...{% endblock %}
+$content = Strings::replace($content, '#{block (\w+)}(.*?){\/block}#s', '{% block $1 %}$2{% endblock %}');
+
+// {include "_snippets/menu.latte"} =>
+// {% include "_snippets/menu.latte" %}
+$content = Strings::replace($content, '#{include ([^}]+)}#', '{% include $1 %}');
+
+// {define sth}...{/define} =>
+// {% block sth %}...{% endblock %}
+$content = Strings::replace($content, '#{define (.*?)}(.*?){\/define}#s', '{% block $1 %}$2{% endblock %}');
+
+// {% include ... %} =>
+// {{ block('...') }}
+$content = Strings::replace($content, '#{% include \'?(\w+)\'? %}#', '{{ block(\'$1\') }}')
+```
+
+The most useful expression here is `(.*?)`. **It will capture everything until the next pattern**. In this case it keeps everything between 2 tags.
+
+Also, **mind the `#s` modifier**. `(.*?)` matches newlines as well thanks to that. You can read more about modifiers in [PHP Documentation](http://php.net/manual/en/reference.pcre.pattern.modifiers.php)
+
+The last notable tip I learned is `\w`, that matches `[a-zA-Z0-9_]` characters - usually all you need for variable names.
+
+### 2. Capture, Set
+
+- [in](https://latte.nette.org/en/macros#toc-variable-declaration) [Latte](https://latte.nette.org/en/macros#toc-capturing-to-variables)
+- [in Twig](https://twig.symfony.com/doc/2.x/tags/set.html)
+
+```php
+use Nette\Utils\Strings;
+
+// ...
+
+// {var $var = $anotherVar} =>
+// {% set var = anotherVar %}
+$content = Strings::replace($content, '#{var \$?(.*?) = \$?(.*?)}#s', '{% set $1 = $2 %}');
+
+// {capture $var}...{/capture} =>
+// {% set var %}...{% endset %}
+$content = Strings::replace($content, '#{capture \$(\w+)}(.*?){\/capture}#s', '{% set $1 %}$2{% endset %}');
+```
+
+As Twig doesn't use `$var` but just `var` as variable name, we need to get rid of the dollar `$` sign.
+
+That's what this expression does:
+
+```bash
+\$?(.*?)
+```
+
+It will capture anything, but if there is `$`, it will remove it.
+
+### 3. Comments
+
+- [in Latte](https://latte.nette.org/en/macros)
+- [in Twig](https://twig.symfony.com/doc/2.x/templates.html#comments)
+
+```php
+use Nette\Utils\Strings;
+
+// ...
+
+$content = Strings::replace($content, '#{\*(.*?)\*}#s', '{#$1#}');
+```
+
+### 4. Conditions, If, Ifset
+
+- [in Latte](https://latte.nette.org/en/macros#toc-conditions)
+- [in Twig](https://twig.symfony.com/doc/2.x/tags/if.html)
+
+```php
+use Nette\Utils\Strings;
+
+// ...
+
+// https://regex101.com/r/XKKoUh/1/
+// {if isset($post['variable'])}...{/if} =>
+// {% if $post['variable'] is defined %}...{% endif %}
+$content = Strings::replace(
+    $content,
+    '#{if isset\((.*?)\)}(.*?){\/if}#s',
+    '{% if $1 is defined %}$2{% endif %}'
+);
+
+// {ifset $post}...{/ifset} =>
+// {% if $post is defined %}..{% endif %}
+$content = Strings::replace($content, '#{ifset (.*?)}(.*?){\/ifset}#s', '{% if $1 is defined %}$2{% endif %}');
+
+// {% if $post['deprecated'] =>
+// {% if $post.deprecated
+// https://regex101.com/r/XKKoUh/2
+$content = Strings::replace($content, '#{% (\w+) \$([A-Za-z]+)\[\'([\A-Za-z]+)\'\]#', '{% $1 $2.$3');
+
+// {if "sth"}..{/if} =>
+// {% if "sth" %}..{% endif %}
+// https://regex101.com/r/DrDSJf/1
+$content = Strings::replace($content, '#{if (.*?)}(.*?){\/if}#s', '{% if $1 %}$2{% endif %}');
+
+$content = Strings::replace($content, '#{else}#', '{% else %}');
+
+$content = Strings::replace($content, '#{elseif (.*?)}#', '{% elseif $1 %}');
+```
+
+Nothing fancy here, just another great use case for `(.*?)` group.
+
+### 5. Filters
+
+- [in Latte](https://latte.nette.org/en/filters)
+- [in Twig](https://twig.symfony.com/doc/2.x/filters/index.html)
+
+```php
+use Nette\Utils\Strings;
+
+// ...
+
+// {$post['updated_message']|noescape} =>
+// {{ post.updated_message|noescape }}
+$content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]\|([^}]+)}#', '{{ $1.$2|$3 }}');
+
+// | noescape =>
+// | raw
+$content = Strings::replace($content, '#\|(\s+)?noescape#', '|$1raw');
+
+// {% if count($var) %} =>
+// {% if $var|length) %}
+$content = Strings::replace($content, '#{% (.*?) count\(\$?(\w+)\)#', '{% $1 $2|length');
+```
+
+No surprises here.
+
+### 6. Loops, While, For, Foreach
+
+- [in Latte](https://latte.nette.org/en/macros#toc-loops)
+- [in Twig](https://twig.symfony.com/doc/2.x/tags/for.html)
+
+```php
+use Nette\Utils\Strings;
+
+// ...
+
+// {foreach $values as $key => $value}...{/foreach} =>
+// {% for key, value in values %}...{% endfor %}
+$content = Strings::replace(
+    $content,
+    '#{foreach \$([()\w ]+) as \$([()\w ]+) => \$(\w+)}#',
+    '{% for $2, $3 in $1 %}'
+);
+
+// {foreach $values as $value}...{/foreach} =>
+// {% for value in values %}...{% endfor %}
+$content = Strings::replace($content, '#{foreach \$([()\w ]+) as \$([()\w ]+)}#', '{% for $2 in $1 %}');
+$content = Strings::replace($content, '#{/foreach}#', '{% endfor %}');
+
+// {sep}, {/sep} => {% if loop.last == false %}, {% endif %}
+$content = Strings::replace($content, '#{sep}([^{]+){\/sep}#', '{% if loop.last == false %}$1{% endif %}');
+```
+
+### 7. Variables
+
+- [in Latte](https://latte.nette.org/en/macros#toc-variable-printing)
+- [in Twig](https://twig.symfony.com/doc/2.x/templates.html#variables)
+
+```php
+use Nette\Utils\Strings;
+
+// ...
+
+// {$google_analytics_tracking_id} =>
+// {{ google_analytics_tracking_id }}
+// {$google_analytics_tracking_id|someFilter} =>
+// {{ google_analytics_tracking_id|someFilter }}
+$content = Strings::replace($content, '#{\$(\w+)(\|.*?)?}#', '{{ $1$2 }}');
+
+// {$post->getId()} =>
+// {{ post.getId() }}
+$content = Strings::replace($content, '#{\$([\w]+)->([\w()]+)}#', '{{ $1.$2 }}');
+
+// {$post['relativeUrl']} =>
+// {{ post.relativeUrl }}
+$content = Strings::replace($content, '#{\$([A-Za-z_-]+)\[\'([A-Za-z_-]+)\'\]}#', '{{ $1.$2 }}');
+
+// {% if $post['rectify_post_id'] is defined %} =>
+// {% if post.rectify_post_id is defined %}
+$content = Strings::replace($content, '#({% \w+) \$(\w+)\[\'(\w+)\'\]#', '$1 $2.$3');
+```
+
+This was the simplest set so far. Always start with the easiest first.
+
+### 8. Suffix
+
+```php
+use Nette\Utils\Strings;
+
+// ...
+
+// "_snippets/menu.latte" =>
+// "_snippets/menu.twig"
+$content = Strings::replace($content, '#([A-Za-z_/"]+).latte#', '$1.twig');
+```
+
+### 9. Include With Vars
+
+This is the most complex solution in the set. What it does?
+
+```diff
+-{% include "_snippets/menu.latte", "data" => $data %}
++{% include "_snippets/menu.twig" with { "data": data } %}
+```
+
+It looks pretty simple, but I could not find an easier way to work with the nested array items.
+
+```php
+use Nette\Utils\Strings;
+
+// include var:
+// {% include "_snippets/menu.latte", "data" => $data %} =>
+// {% include "_snippets/menu.twig", { "data": data } %}
+// see https://twig.symfony.com/doc/2.x/functions/include.html
+// single lines
+// ref https://regex101.com/r/uDJaia/1
+$content = Strings::replace($content, '#({% include [^,]+,)([^}^:]+)(\s+%})#', function (array $match) {
+    $variables = explode(',', $match[2]);
+    $twigDataInString = ' { ';
+    $variableCount = count($variables);
+    foreach ($variables as $i => $variable) {
+        [$key, $value] = explode('=>', $variable);
+        $key = trim($key);
+        $value = trim($value);
+        $value = ltrim($value, '$'); // variables do not start with
+        $twigDataInString .= $key . ': ' . $value;
+        // separator
+        if ($i < $variableCount - 1) {
+            $twigDataInString .= ', ';
+        }
+    }
+    $twigDataInString .= ' }';
+
+    return $match[1] . $twigDataInString . $match[3];
+});
+
+// {% include "sth", =>
+// {% include "sth" with
+$content = Strings::replace($content, '#({% include [^,{]+)(,)#', '$1 with');
+```
+
+What is here to take away? The `[^,{]+` set. It tells *find everything until the first `,` or `{` character*.
+That way we catch everything we don't really work with.
+
 ## Install and Use It
 
 ```bash
@@ -75,7 +339,9 @@ I'd link you to [README](http://github.com/symplify/lattetotwigconverter) now fo
 
 <br>
 
-How does this set work in real project? Just see [the PR to this website](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380).
+### How Does This Set Work in Real Project?
+
+Just see [the PR on this website](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380).
 
 <img src="/assets/images/posts/2018/latte-twig/diff.png" class="img-thumbnail">
 
@@ -83,12 +349,14 @@ How does this set work in real project? Just see [the PR to this website](https:
 
 Are you Latte fan and do you want to migrate to Latte? Let's do this! There [is a test set of both engines](https://github.com/Symplify/Symplify/tree/a6b7c71a90fd984d2f31c5ed28957e2927608001/packages/LatteToTwigConverter/tests/LatteToTwigConverterSource), that can help you to start.
 
-All you need to do is create **exact reverse of the match to replace rules**:
+All you need to do is create the **exact reverse of the match to replace rules**:
 
 For example from [`Symplify\LatteToTwigConverter\CaseConverter\ConditionCaseConverter`](https://github.com/Symplify/Symplify/blob/master/packages/LatteToTwigConverter/src/CaseConverter/ConditionCaseConverter.php):
 
 ```php
 # Twig to Latte
+use Nette\Utils\String;
+
 $content = Strings::replace($content, '{% else %}', '#{else}#');
 ```
 
@@ -96,6 +364,8 @@ $content = Strings::replace($content, '{% else %}', '#{else}#');
 
 ```php
 # Latte to Twig
+use Nette\Utils\String;
+
 $content = Strings::replace($content, '#{else}#', '{% else %}');
 ```
 
@@ -103,6 +373,8 @@ What about more complex case?
 
 ```php
 # Twig to Latte
+use Nette\Utils\String;
+
 $content = Strings::replace(
     $content,
     '#{if isset\((.*?)\)}(.*?){\/if}#s',
@@ -114,6 +386,8 @@ $content = Strings::replace(
 
 ```php
 # Latte to Twig
+use Nette\Utils\String;
+
 $content = Strings::replace(
     $content,
     '#{% if (.*?) is defined %}(.*?){% endif %}#s',
@@ -130,11 +404,11 @@ The rule set is no way complete since this site includes rather simple cases. Sa
 
 ## Go Out and Play
 
-In the end I'd like to encourage you to do more of such experiments. I meet many programmers over meetups all across the Europe and they often don't have space - either the time in work or they won't allow themselves - to do such experiments.
+In the end, I'd like to encourage you to do more of such experiments. I meet many programmers over meetups all across Europe and they often don't have space - either the time in work or they won't allow themselves - to do such experiments.
 
 In my open-source experience, these experiments give you the most knowledge. Instead of choosing the first solution because *I don't have time and I have to deliver the value*, I tried 3-4, tested them and then picked the one that worked the best. It was not the first one of course, and even if it was, I'd be much more convinced the solution is right instead of just blindly believing it.
 
-I learned a lot about regular expressions, about delimiters and universal capturing groups (easter egg: seek "http" in the source code and you'll find all the tips I found and found useful) thanks to Stackoverflow and [regex101.com](https://regex101.com/). I also must thank to Jáchym Toušek and Ondra Mirtes with PHPStan who got me more engaged to regular expressions in useful and not-so-frustrating way.
+I learned a lot about regular expressions, about delimiters and universal capturing groups (easter egg: seek "http" in the source code and you'll find all the tips I found and found useful) thanks to StackOverflow and [regex101.com](https://regex101.com/). I also must thank Jáchym Toušek and Ondra Mirtes with PHPStan who got me more engaged in regular expressions in a useful and not-so-frustrating way.
 
 <br>
 <br>
