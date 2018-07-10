@@ -25,7 +25,7 @@
 
     {% if post.tested is defined %}
         <li class="list-inline-item pull-right">
-            {% set testDirectoryOnGithub %}{{ github_repository_tests_directory }}/Posts/Year{post->getDateInFormat('Y'))/{{ post.test_slug }}{% endset %}
+            {% set testDirectoryOnGithub %}{{ github_repository_tests_directory }}/Posts/Year{{ post.getDateInFormat('Y') }}/{{ post.test_slug }}{% endset %}
             <a href="{{ testDirectoryOnGithub }}" class="badge badge-success">
                 <em class="fa fa-fw fa-thumbs-up"></em> Tested
             </a>
