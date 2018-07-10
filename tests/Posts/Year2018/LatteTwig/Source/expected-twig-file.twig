@@ -1,0 +1,9 @@
+{% for key, value in values %}
+    {{ value.getName() }}
+
+    {% if value.position is defined %}
+        {{ value.position|raw }}
+    {% else %}
+        {% set noPosition = true %}
+    {% endif %}
+{% endfor %}

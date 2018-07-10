@@ -1,0 +1,9 @@
+{foreach $values as $key => $value}
+    {$value->getName()}
+
+    {if isset($value['position'])}
+        {$value['position']|noescape}
+    {else}
+        {var $noPosition = true}
+    {/if}
+{/foreach}
