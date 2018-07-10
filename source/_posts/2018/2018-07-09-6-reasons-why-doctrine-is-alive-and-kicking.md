@@ -1,6 +1,6 @@
 ---
 id: 121
-title: "6 Reasons Why is Doctrine Alive and Kicking"
+title: "6 Reasons Why Doctrine is Alive and Kicking"
 perex: |
     Almost 1,5 year ago I wrote [Why is Doctrine Dying](/blog/2017/03/27/why-is-doctrine-dying/). I didn't use *dead*, because it's is just state of time being. Open-source projects - like people - tend to find themselves on the top, being stuck or struggling with the right path from time to time. It's a completely normal process of evolution.
     <br><br>
