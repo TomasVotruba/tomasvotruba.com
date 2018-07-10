@@ -8,7 +8,7 @@ perex: |
     <br><br>
     **May this be an inspiration for open-source projects that find themselves stuck and the maintainers that find themselves unhappy**.
 tweet: "New Post on my Blog: 6 Reasons Why is #Doctrine Alive and Kicking #orm #open-source #github #packagemanagement"
-tweet_image: "/assets/images/posts/2018/latte-twig/diff.png"
+tweet_image: "/assets/images/posts/2018/doctrine-alive/contrib.png"
 related_items: [35]
 ---
 
