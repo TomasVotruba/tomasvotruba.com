@@ -1,6 +1,5 @@
 imports:
     - { resource: 'source/_data/*.yml' }
-    - { resource: 'source/_data/php-frameworks/*.yml' }
     - { resource: 'src/*/config/config.yml' }
     - { resource: 'packages/StatieTweetPublisher/src/config/config.yml' }
     # enabled on localhost only
