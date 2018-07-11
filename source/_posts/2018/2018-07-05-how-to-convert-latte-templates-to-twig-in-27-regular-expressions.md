@@ -344,7 +344,8 @@ I'd link you to [README](http://github.com/symplify/lattetotwigconverter) now fo
 
 ### How Does This Set Work in Real Project?
 
-Just see [the PR on this website](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380).
+Just see [the PR on this website](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380)
+or [the PR to Pehapkari.cz website](https://github.com/pehapkari/pehapkari.cz/pull/486).
 
 <img src="/assets/images/posts/2018/latte-twig/diff.png" class="img-thumbnail">
 
