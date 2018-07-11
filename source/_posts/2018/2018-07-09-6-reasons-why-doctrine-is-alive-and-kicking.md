@@ -90,11 +90,11 @@ Don't take me wrong, both development and popularization are important, but if t
 
 Last but not least, take a time and [declutter your desk](http://how-to-stay-organized.blogspot.com/2011/08/declutter-desk.html) once a few months.
 
-<img src="http://4.bp.blogspot.com/-uISp2pDSrTs/Tjr1Rr_07NI/AAAAAAAAAls/F3cq72YywMw/s320/computer-desk-before.JPG" width="400px" class="img-thumbnail">
+<img src="https://4.bp.blogspot.com/-uISp2pDSrTs/Tjr1Rr_07NI/AAAAAAAAAls/F3cq72YywMw/s320/computer-desk-before.JPG" width="400px" class="img-thumbnail">
 
 ↓
 
-<img src="http://4.bp.blogspot.com/-W7YoCGWIlP4/Tjr1y2qZaxI/AAAAAAAAAlw/RWqZI7ECmfQ/s320/computer-desk-after.JPG" width="400px" class="img-thumbnail">
+<img src="https://4.bp.blogspot.com/-W7YoCGWIlP4/Tjr1y2qZaxI/AAAAAAAAAlw/RWqZI7ECmfQ/s320/computer-desk-after.JPG" width="400px" class="img-thumbnail">
 
 I think you know what a great feeling is to work with a clean desk. How does that relate to an open-source project?
 
