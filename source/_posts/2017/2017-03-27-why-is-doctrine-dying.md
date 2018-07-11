@@ -9,7 +9,7 @@ deprecated_since: "July 2018"
 deprecated_message: |
     Doctrine came through <strong>many great and healthy changes during last ~18 months</strong>, so this statement is no longer true.
     <br><br>
-    See <a href="/blog/2018/07/09/doctrine-is-alive-and-kicking/">Doctrine is Alive and Kicking post for more</a>.
+    See <a href="/blog/2018/07/09/6-reasons-why-doctrine-is-alive-and-kicking/">Doctrine is Alive and Kicking post for more</a>.
 
 related_items: [121]
 ---
