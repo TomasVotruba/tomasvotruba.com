@@ -18,9 +18,6 @@ script:
     # test that website is generated
     - vendor/bin/statie generate source
 
-    # tweets posts
-    - if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then packages/StatieTweetPublisher/bin/publish-new-tweet; fi
-
 after_script:
     # upload coverage.xml file to Coveralls to analyze it
     - |
@@ -37,6 +34,13 @@ deploy:
     on:
         branch: master
     local_dir: output
+
+after_deploy:
+    # tweets posts
+    - |
+      if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then 
+        packages/StatieTweetPublisher/bin/publish-new-tweet
+      fi
 
 notifications:
     email:
