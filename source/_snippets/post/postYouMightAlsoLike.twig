@@ -9,7 +9,7 @@
         {% for relatedPost in relatedPosts %}
             <li class="mb-3 col-md-12">
                 <a href="/{{ relatedPost.relativeUrl }}/">{{ relatedPost.title|raw }}</a>
-                {% include "_snippets/post/postMetadataLine.twig" with { relatedPost: post } %}
+                {% include "_snippets/post/postMetadataLine.twig" with { post: relatedPost } %}
             </li>
         {% endfor %}
     </ul>
