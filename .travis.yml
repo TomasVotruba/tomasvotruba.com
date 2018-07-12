@@ -7,7 +7,7 @@ install:
 
 script:
     # run tests for tested posts (with "tested: true" in header configuration)
-    - vendor/bin/phpunit --coverage-clover coverage.xml --testsuite=main
+    - vendor/bin/phpunit --coverage-clover coverage.xml
     # turn off XDebug
     - phpenv config-rm xdebug.ini || return 0
 
@@ -38,7 +38,7 @@ deploy:
 after_deploy:
     # tweets posts
     - |
-      if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then 
+      if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
         packages/StatieTweetPublisher/bin/publish-new-tweet
       fi
 

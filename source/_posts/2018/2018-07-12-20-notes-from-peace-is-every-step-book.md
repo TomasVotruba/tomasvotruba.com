@@ -17,11 +17,11 @@ related_items: [84, 74]
 
 <br>
 
-I really enjoyed reading *Peace is Every Steps* and it gave me broader view of conflicts around me as well as deeper understanding of my inner conflicts and ways to enjoy the way I am. Without judging myself against past or future and other, yet acting with more loving kindness and courage to overcome past fears and failures.   
+I really enjoyed reading *Peace is Every Steps* and it gave me broader view of conflicts around me as well as deeper understanding of my inner conflicts and ways to enjoy the way I am. Without judging myself against past or future and other, yet acting with more loving kindness and courage to overcome past fears and failures.
 
 <img src="/assets/images/posts/2018/peace/book.jpg" class="col-6">
 
-Instead of random summary, I'll leave you to absorb handful of quotes that really resonated with me.  
+Instead of random summary, I'll leave you to absorb handful of quotes that really resonated with me.
 
 ## Part One: Breathe! You Are Alive
 
@@ -88,7 +88,7 @@ Shall we continue our journey together and try some of these practices?
     <br>
     ...
     <br>
-    We do not need surgery to remove our anger. If we become angry at our anger, we will have two angers at the same time. We only have to observe it with love and attention. 
+    We do not need surgery to remove our anger. If we become angry at our anger, we will have two angers at the same time. We only have to observe it with love and attention.
 </blockquote>
 
 ### Teach by Creating Teachers
@@ -135,7 +135,7 @@ Shall we continue our journey together and try some of these practices?
     Blaming has no positive effect at all, nor does trying to persuade using reason and arguments. That is my experience. No blame, no reasoning, no argument, just understanding. <strong>If you understand, and you show that you understand, you can love, and the situation will change</strong>.
 </blockquote>
 
-### All Relationship are Mutual 
+### All Relationship are Mutual
 
 <blockquote class="blockquote">
     "Mommy, remember to water me. I am your lettuce." I was so pleased that she had understood my point completely. Then I heard her mother reply, "Yes, my daughter, and I am your lettuce also. So please don't forget to water me too."
@@ -146,7 +146,7 @@ Shall we continue our journey together and try some of these practices?
 </blockquote>
 
 
-### Bring Peace to 2 Enemies 
+### Bring Peace to 2 Enemies
 
 We get angry, we shout, but rarely do we rise above all this to look at a conflict <strong>the way a mother would who is watching her two children fighting. She seeks only their reconciliation</strong>.
 
@@ -160,7 +160,7 @@ We get angry, we shout, but rarely do we rise above all this to look at a confli
 
 ## Part Three: Peace Is Every Step
 
-### Do You Suffer for a Day Delay of Your Order? 
+### Do You Suffer for a Day Delay of Your Order?
 
 <blockquote class="blockquote">
     There were "boat people" who were just one or two years old, who were about to be sent back to their country because they were classified as illegal immigrants. <strong>They had lost both father and mother during the trip. When you see that kind of suffering, you know that the suffering your friends in Europe and America are undergoing is not very great</strong>.
