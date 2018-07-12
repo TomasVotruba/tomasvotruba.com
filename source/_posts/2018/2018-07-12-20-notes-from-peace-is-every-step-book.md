@@ -7,8 +7,10 @@ perex: |
     Leo [writes](https://zenhabits.net) minimalist tips from daily life that is easy to related to. Thanks to quotes in his posts I got chance to meet *Thich Nhat Hanh*, a buddhist monk who helped to restore peace between USA and Vietnam...
     <br><br>
     ...and recently I've finished reading his book *Peace Is Every Step: The Path of Mindfulness in Everyday Life*. What was it about?
-tweet: "New Post on my Blog: Notes from 'Piece is Every Step' Book #conflicts #community #anger #transform #joy"
-tweet_image: "/assets/images/posts/2018/piece/book.jpg"
+tweet: "New Post on my Blog: Notes from 'Peace is Every Step' Book #conflicts #community #anger #transform #joy"
+tweet_image: "/assets/images/posts/2018/peace/book.jpg"
+
+related_items: [84, 74]
 ---
 
 *Btw, Leo also writes little books. If there is one I enjoyed the most, it's the [The Little Book of Contentment](https://zenhabits.net/little-book/). Not because it's free and short, but because it helped me to focus on my inner passion and my own meaning and fears that were stopping me.*
