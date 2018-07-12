@@ -1,23 +1,23 @@
 ---
 id: 122
-title: "Notes from 'Piece is Every Step' Book"
+title: "Notes from 'Peace is Every Step' Book"
 perex: |
     Zen To Done, Deep Work, ZenHabits... You've probably noticed I'm fan of Leo Baubauta. The first person I met on the Internet who explained me that I'm not weird, but a minimalist.
     <br><br>
     Leo [writes](https://zenhabits.net) minimalist tips from daily life that is easy to related to. Thanks to quotes in his posts I got chance to meet *Thich Nhat Hanh*, a buddhist monk who helped to restore peace between USA and Vietnam...
     <br><br>
     ...and recently I've finished reading his book *Peace Is Every Step: The Path of Mindfulness in Everyday Life*. What was it about?
-tweet: "New Post on my Blog: ..."
-tweet_image: "/assets/images/posts/2018/piece/contrib.png"
+tweet: "New Post on my Blog: Notes from 'Piece is Every Step' Book #conflicts #community #anger #transform #joy"
+tweet_image: "/assets/images/posts/2018/piece/book.jpg"
 ---
 
 *Btw, Leo also writes little books. If there is one I enjoyed the most, it's the [The Little Book of Contentment](https://zenhabits.net/little-book/). Not because it's free and short, but because it helped me to focus on my inner passion and my own meaning and fears that were stopping me.*
 
 <br>
 
-I really enjoyed reading *Piece is Every Steps* and it gave me broader view of conflicts around me as well as deeper understanding of my inner conflicts and ways to enjoy the way I am. Without judging myself against past or future and other, yet acting with more loving kindness and courage to overcome past fears and failures.   
+I really enjoyed reading *Peace is Every Steps* and it gave me broader view of conflicts around me as well as deeper understanding of my inner conflicts and ways to enjoy the way I am. Without judging myself against past or future and other, yet acting with more loving kindness and courage to overcome past fears and failures.   
 
-<img src="/assets/images/posts/2018/piece/book.jpg" class="col-6">
+<img src="/assets/images/posts/2018/peace/book.jpg" class="col-6">
 
 Instead of random summary, I'll leave you to absorb handful of quotes that really resonated with me.  
 
@@ -38,11 +38,9 @@ Instead of random summary, I'll leave you to absorb handful of quotes that reall
 </blockquote>
 
 
-
-
-
-When I hold a bowl of rice or a piece of bread, I know that I am fortunate, and I feel compassion for all those who have no food to eat and are without friends or family. This is a very deep practice.
-
+<blockquote class="blockquote">
+    When I hold a bowl of rice or a piece of bread, I know that I am fortunate, and I feel compassion for all those who have no food to eat and are without friends or family. This is a very deep practice.
+</blockquote>
 
 
 ### Synchronize Yourself With Your Breath
@@ -146,11 +144,11 @@ Shall we continue our journey together and try some of these practices?
 </blockquote>
 
 
-### Bring Piece to 2 Enemies 
+### Bring Peace to 2 Enemies 
 
 We get angry, we shout, but rarely do we rise above all this to look at a conflict <strong>the way a mother would who is watching her two children fighting. She seeks only their reconciliation</strong>.
 
-<img src="/assets/images/posts/2018/piece/mononoke.jpg">
+<img src="/assets/images/posts/2018/peace/mononoke.jpg">
 
 ### How to Say Sorry People You've Hurt
 
