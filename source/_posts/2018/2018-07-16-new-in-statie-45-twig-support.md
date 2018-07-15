@@ -60,6 +60,8 @@ And you're ready to go!
 
 ## How to Upgrade to Statie 4.5?
 
+<img src="/assets/images/posts/2018/statie-45/statie-45.png">
+
 Update it in composer:
 
 ```php
@@ -125,12 +127,14 @@ Check diffs of these merged pull-requests so you have the idea **how small the c
 
 ## How to Migrate Latte to Twig as Well?
 
+<img src="/assets/images/posts/2018/statie-45/latte-twig.png">
+
 If you use Statie, you're probably running on Latte. In the case you prefer Twig, **I guess you're already frustrated from annoying Latte to Twig migration you have ahead of you**. 
 
 Again, check these diffs, so you have the idea **how big that change really is**:
 
-- [TomasVotruba.cz](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380)
-- [Pehapkari.cz](https://github.com/pehapkari/pehapkari.cz/pull/486)
+- [TomasVotruba.cz](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380/files)
+- [Pehapkari.cz](https://github.com/pehapkari/pehapkari.cz/pull/486/files)
 
 I feel you. You can stay with Latte until... just kidding. That's a lot of work, right? Well, I'm not that hardworking, don't worry. I'm a lazy bastard, so I made [a package for Latte to Twig migration](/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions/).
 
