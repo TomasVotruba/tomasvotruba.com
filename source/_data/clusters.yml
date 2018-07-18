@@ -12,6 +12,7 @@ parameters:
             post_ids: [12, 13, 25, 54, 116]
             # description @todo
 
-#        -
-#            title: 'Hacking Symfony Dependency Injection'
-#            year_released: 2018
+        -
+            title: "Collector Pattern, The God of SOLID"
+            year_released: 2018
+            post_ids: [114, 80, 36]

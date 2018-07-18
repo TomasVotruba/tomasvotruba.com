@@ -51,7 +51,9 @@ inspiration:
 
         {% for cluster in clusters %}
             <h3 id="{{ cluster.title | webalize }}" class="mb-4">
-                {{ cluster.title }}
+                <a href="#{{ cluster.title | webalize }}">
+                    {{ cluster.title }}
+                </a>
             </h3>
 
             {% set totalReadingTime = 0 %}
@@ -63,11 +65,8 @@ inspiration:
                 <li class="list-inline-item mr-3">
                     <em class="fa fa-calendar fa-fw"></em> {{ cluster.year_released }}
                 </li>
-                <li class="list-inline-item mr-3">
+                <li class="list-inline-item">
                     <em class="fa fa-clock-o fa-fw"></em> {{ totalReadingTime }} mins
-                </li>
-                <li class="list-inline-item mr-3">
-                    <a href="#{{ cluster.title | webalize }}">#Anchor</a>
                 </li>
             </ul>
 
