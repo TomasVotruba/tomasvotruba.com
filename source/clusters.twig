@@ -1,6 +1,6 @@
 ---
 layout: "_layouts/default.twig"
-title: "Clusters - Shorter than Book, Deeper than Post"
+title: "Shorter than a Book, Deeper than a Post"
 id: "clusters"
 
 inspiration:
@@ -22,10 +22,7 @@ inspiration:
                 </p>
 
                 <p>
-                    I was writing a book. All was good, but then I realized that by the end of the writing I can start rewriting it right away. Why? Just to keep it up-to-date with top knowledge of time being in it.
-                </p>
-                <p>
-                    So I looked for something in between a post and a book, yet more than a dump category or tag - <strong>a cherry-picked posts in order that gives them meaning, where active people can react in comments, update the content and share just small pieces of know-how</strong>.
+                    <em>Why books are dead and posts are outliers? Read in <a href=" /blog/2018/06/28/dont-read-books/">Don't read books</a> and <a href="/blog/2018/07/02/cluster-more-interactive-than-book-deeper-than-post/">Cluster: More Interactive than a Book, Deeper than a Post</a>.</em>
                 </p>
             </div>
         </div>
@@ -47,56 +44,52 @@ inspiration:
             <em class="fa fa-check text-success"></em> Don't forget to tick it, so you know what posts you've finished.
         </p>
 
-        <hr>
-
         {% for cluster in clusters %}
-            <h3 id="{{ cluster.title | webalize }}" class="mb-4">
-                <a href="#{{ cluster.title | webalize }}">
-                    {{ cluster.title }}
-                </a>
-            </h3>
+            <div class="card mb-5 mt-5">
+                <div class="text-center card-header">
+                    <h2 id="{{ cluster.title | webalize }}" class="card-title">
+                        <a href="#{{ cluster.title | webalize }}">
+                            {{ cluster.title }}
+                        </a>
+                    </h2>
 
-            {% set totalReadingTime = 0 %}
-            {% for postId in cluster.post_ids %}
-                {% set totalReadingTime = totalReadingTime + posts[postId].getReadingTimeInMinutes %}
-            {% endfor %}
+                    {% set totalReadingTime = 0 %}
+                    {% for postId in cluster.post_ids %}
+                        {% set totalReadingTime = totalReadingTime + posts[postId].getReadingTimeInMinutes %}
+                    {% endfor %}
 
-            <ul class="list-inline post-metadata">
-                <li class="list-inline-item mr-3">
-                    <em class="fa fa-calendar fa-fw"></em> {{ cluster.year_released }}
-                </li>
-                <li class="list-inline-item">
-                    <em class="fa fa-clock-o fa-fw"></em> {{ totalReadingTime }} mins
-                </li>
-            </ul>
+                    <ul class="list-inline post-metadata">
+                        <li class="list-inline-item mr-3">
+                            <em class="fa fa-calendar fa-fw"></em> {{ cluster.year_released }}
+                        </li>
+                        <li class="list-inline-item">
+                            <em class="fa fa-clock-o fa-fw"></em> {{ totalReadingTime }} mins
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <ul class="mt-3 checklist">
+                        {% for postId in cluster.post_ids %}
+                            {% set activePost = posts[postId] %}
+                            <li class="mb-3 checklist__item">
+                                <input class="checklist__input" type="checkbox" id="item_{{ activePost.id }}" value="{{ activePost.id }}">
+                                <label class="checklist__label" for="item_{{ activePost.id }}">
+                                    <em class="checklist_icon fa fa-3x fa-check" id="item_{{ activePost.id }}"></em>
+                                </label>
 
-            <ul class="mt-4 checklist">
-                {% for postId in cluster.post_ids %}
-                    {% set activePost = posts[postId] %}
-                    <li class="mb-3 checklist__item">
-                        <input class="checklist__input" type="checkbox" id="item_{{ activePost.id }}" value="{{ activePost.id }}">
-                        <label class="checklist__label" for="item_{{ activePost.id }}">
-                            <em class="checklist_icon fa fa-3x fa-check" id="item_{{ activePost.id }}"></em>
-                        </label>
+                                <div class="checklist__details">
+                                    <a href="/{{ activePost.relativeUrl }}/">{{ activePost.title | raw }}</a>
 
-                        <div class="checklist__details">
-                            <a href="/{{ activePost.relativeUrl }}/">{{ activePost.title | raw }}</a>
-
-                            {% include "_snippets/post/postMetadataLine.twig" with { post: activePost } %}
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
-
-            {% if loop.last == false %}<hr>{% endif %}
+                                    {% include "_snippets/post/postMetadataLine.twig" with { post: activePost } %}
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         {% endfor %}
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <br>
