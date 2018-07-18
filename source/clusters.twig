@@ -45,9 +45,10 @@ inspiration:
         </p>
 
         {% for cluster in clusters %}
+            <a name="{{ cluster.title | webalize }}"></a>
             <div class="card mb-5 mt-5">
                 <div class="text-center card-header">
-                    <h2 id="{{ cluster.title | webalize }}" class="card-title">
+                    <h2 class="card-title">
                         <a href="#{{ cluster.title | webalize }}">
                             {{ cluster.title }}
                         </a>
@@ -66,6 +67,8 @@ inspiration:
                             <em class="fa fa-clock-o fa-fw"></em> {{ totalReadingTime }} mins
                         </li>
                     </ul>
+
+                    <p class="text-left pt-4 pb-2">{{ cluster.description }}</p>
                 </div>
                 <div class="card-body">
                     <ul class="mt-3 checklist">

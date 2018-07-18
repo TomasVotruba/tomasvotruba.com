@@ -4,15 +4,16 @@ parameters:
             title: "Master PHP CLI Apps with Symfony"
             year_released: 2018
             post_ids: [103, 105, 109]
-            # description @todo
+            description: "Do you want to write CLI Apps in PHP like a boss but you never did that before? Or do you look for tips to improve your CLI project? This will help you write better and cleaner code no matter level you're on."
 
         -
-            title: "Open-Source for Dummies"
+            title: "Open-Source from Dummy to a Master"
             year_released: 2017
             post_ids: [12, 13, 25, 54, 116]
-            # description @todo
+            description: "Mastering open-source is tough, because the topic is so wide and various. It's often long journey of blind paths and self-experience. Take this shortcut and gain years of experience in days."
 
         -
-            title: "Collector Pattern, The God of SOLID"
+            title: "Collector Pattern, The Shortcut Hack to SOLID Code"
             year_released: 2018
             post_ids: [114, 80, 36]
+            description: "Collector is the one pattern that will help your code exponentially. It's super easy to start using in every level of application. Stop learning 5 SOLID principles theory and start using it in your code today."
