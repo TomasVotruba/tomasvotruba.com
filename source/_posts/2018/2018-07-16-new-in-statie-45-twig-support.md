@@ -2,7 +2,7 @@
 id: 123
 title: "New in Statie 4.5: Twig Support"
 perex: |
-    Statie supports YAML and Symfony Dependency Injection for some time. But you wanted more! **You wanted Twig**. Sculpin and all [the other PHP generators](https://www.staticgen.com/) have it.
+    Statie supports YAML and Symfony Dependency Injection for some time. But you wanted more! **You wanted Twig**. Sculpin and all [the other PHP Static Website generators](https://www.staticgen.com/) have it.
     <br><br>
     So there you go! Enjoy
 tweet: "New Post on my Blog: New in #Statie 4.5: #Twig Support #symfony #latte"
@@ -15,7 +15,7 @@ related_items: [67, 120]
     See pull-request
 </a>
 
-## 3 Steps to Your First Twig Page on Statie 
+## 3 Steps to Your First Twig Page on Statie
 
 ### 1. Prepare Layout `_layouts/default.twig`
 
@@ -93,7 +93,7 @@ Before the paths of included files were just a file name and the full path was g
 
 Which file will is used? Or is it a block import? Magic :)
 
-How to do it better with *a principle of the least surprise*? 
+How to do it better with *a principle of the least surprise*?
 
 ### Clear, Obvious File Naming
 
@@ -130,7 +130,7 @@ Check diffs of these merged pull-requests so you have the idea **how small the c
 
 <img src="/assets/images/posts/2018/statie-45/latte-twig.png">
 
-If you use Statie, you're probably running on Latte. In the case you prefer Twig, **I guess you're already frustrated from annoying Latte to Twig migration you have ahead of you**. 
+If you use Statie, you're probably running on Latte. In the case you prefer Twig, **I guess you're already frustrated from annoying Latte to Twig migration you have ahead of you**.
 
 Again, check these diffs, so you have the idea **how big that change really is**:
 
