@@ -4,20 +4,20 @@ title: "How to Delegate Monorepo Split to Multiple Repositories to Github and Tr
 perex: |
     Do you use a [monorepo](https://gomonorepo.org/)? Then you know [How to maintain multiple Git repositories with ease](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0). If you're not there yet, you may wonder [How to Merge 15 Repositories to 1 Monorepo and Keep their Git History](https://blog.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3).
     <br><br>
-    Are you and your monorepo ready? Today we'll focus on **fast, secured and ousourced monorepo autosplit** - all that under 10 minutes.
+    Are you and your monorepo ready? Today we'll focus on **fast, secured and outsourced monorepo auto split** - all that under 10 minutes.
 tweet: "..."
 related_items: [82, 25]
 ---
 
 It's great to be alive in this era. We have solved maintaining multiple repositories, even merge migration of their git history to one repository. Creating huge code bases was more never cost effective and never had steeper learning curve.
 
-The same way it was never easier to drive an autonomous car. You just sit in the car, pres the button of your destination, and Tesla will drive you there when you check all the news on [/r/PHP](https://reddit.com/r/PHP/).
+The same way it was never easier to drive an autonomous car. You just sit in the car, press the button of your destination, and Tesla will drive you there when you check all the news on [/r/PHP](https://reddit.com/r/PHP/).
 
 Well, monorepo paradigm is not there yet but it's getting there.
 
 ## The Split Problem
 
-One of the last problem I'm aware of is splitting the monorepo to particular packages. Imagine you have [Symfony monorepo](https://github.com/symfony/symfony) and you're trying to split it to all standlone packages like [symfony/console](https://github.com/symfony/console), [symfony/dependency-injection](https://github.com/symfony/dependency-injection) and so on.
+One of the last problem I'm aware of is splitting the monorepo to particular packages. Imagine you have [Symfony monorepo](https://github.com/symfony/symfony) and you're trying to split it to all standalone packages like [symfony/console](https://github.com/symfony/console), [symfony/dependency-injection](https://github.com/symfony/dependency-injection) and so on.
 
 ### Current Status
 
@@ -31,7 +31,7 @@ Instead, we want it to be:
 
 - **simple so you will understand it in the end of reading this post**
 - **fast like Travis build of your project**
-- **easy to setup in 1 composer package and 5 lines of YAML**
+- **easy to set up in 1 composer package and 5 lines of YAML**
 
 Why? So you could amaze your friends at the party that you just set-up a monorepo split and they can enjoy merged PRs in matter of minutes (even if you know almost nothing about git or PHP).
 
@@ -102,19 +102,19 @@ But what would [security expert Michal Špaček](https://www.michalspacek.com/) 
 This is valid question that was probably scratching your mind when you saw *Github + Travis + git + open-source* combination.
 Travis is basically a terminal, that runs few command lines. What would prevent someone from using this to "play with" your repository?
 
-Let's look at repository adress in our example:
+Let's look at repository address in our example:
 
 ```bash
 git@github.com:Symplify/MonorepoBuilder.git
 ```
 
-This basically means **we need to make ssh key or user name and a password public**. Does that sound like a good idea to you?
+This basically means **we need to make ssh key or username and a password public**. Does that sound like a good idea to you?
 
-Don't worry, Github and Travis though about these cases - with a hashed `GITHUB_TOKEN` environment variable.
+Don't worry, Github and Travis thought about these cases - with a hashed `GITHUB_TOKEN` environment variable.
 
 ### 1. Create a Personal Access Token on Github
 
-First, you need to create a custom token, that will authorize access to your Github repositories from any command line where it will be used. 
+First, you need to create a custom token, that will authorize access to your Github repositories from any command line where it will be used.
 
 Read [the Github docs](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or use **tl;dr;**:
 
@@ -141,9 +141,11 @@ In the end it should look like this:
     <img src="/assets/images/posts/2018/monorepo-split/token-after.png" class="img-thumbnail">
 </div>
 
-### Github and Travis Protects You
+*If you got lost in this tl;dr;s, try [this nice post with so many screenshots](https://developer.ibm.com/recipes/tutorials/separating-continuous-integration-from-continuous-deployment-using-github-and-travis-ci/).*
 
-Now the best part. If you accidentally commit your access token in `.travis.yml` (like I did while testing), **it will immediatel disable it** and sends you an email (I found out the next day after 4 hours of debugging why the token is not working).
+### GitHub and Travis Protects You
+
+Now the best part. If you accidentally commit your access token in `.travis.yml` (like I did while testing), **GitHub will immediately disable it** and sends you an email (to bad I found that out the next day after 4 hours of debugging with that token).
 
 And if you add token to your repository on Travis as above, **it will hide it in all logs for you**. No need to hash it.
 
@@ -184,7 +186,7 @@ In times like these, get back to our ideal product:
 - "zero setup"
 - "1 command to run"
 - **"1 minute to finish the whole process"**
-- "split only what I and peopl e really need"
+- "split only what maintainer and users really need"
 
 It often happens **we merge fix or feature to monorepo and we want to try it** before rushing to tagging a stable release. We want to do it **as soon as possible**, **without manually triggering Travis** to do it. Also, we **don't want Travis to waste energy on pull-requests** that are not merged to master. That would only slow the whole CI process down and frustrate contributors and maintainer.
 
@@ -235,7 +237,7 @@ I knew you are, so here are few details.
 
 All it' wrapped in a bash file at the moment. It could be done in `symfony\process`, but the original source [subsplit.sh](https://github.com/dflydev/git-subsplit) was in bash so I used it.
 
-There are ~160 lines but most of them are setup of arguments, options, their resolving, preparing the repository and other boring stuffs. The interesting part is really [in this 1](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L107) and [these 3 lines](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L123-L126):
+There are ~160 lines but most of them are setup of arguments, options, their resolving, preparing the repository and other boring stuff. The interesting part is really [in this 1](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L107) and [these 3 lines](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L123-L126):
 
 ```bash
 git remote add origin "git@github.com:Symplify/MonorepoBuilder.git"
@@ -265,7 +267,7 @@ git push -q --force origin "master"
 
 That is really it!
 
-**If you're git split geek (like me), feel free to explore whole [`subsplit.sh` script](https://github.com/Symplify/MonorepoBuilder/blob/master/packages/Split/bash/subsplit.sh)**. There are many nice little details to learn from.
+**If you're git split geek (like me), feel free to explore the whole [`subsplit.sh` script](https://github.com/Symplify/MonorepoBuilder/blob/master/packages/Split/bash/subsplit.sh)**. There are many nice little details to learn from.
 
 <br>
 
