@@ -1,19 +1,22 @@
 {% set relatedPosts = post|relatedItems %}
 
 {% if relatedPosts|length %}
-    <hr class="mt-4 mb-5">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="text-center mt-2">Related Posts You Might Find Useful</h3>
+        </div>
+        <div class="card-body">
+            <ul class="mt-3 list-unstyled">
+                {% for relatedPost in relatedPosts %}
+                    <li class="col-md-12 {% if loop.last == false %}mb-4{% endif %}">
+                        <a href="/{{ relatedPost.relativeUrl }}/">{{ relatedPost.title|raw }}</a>
+                        {% include "_snippets/post/postMetadataLine.twig" with { post: relatedPost } %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 
-    <h3 class="text-center">Related Posts You Might Find Useful</h3>
-
-    <ul class="mt-4 list-unstyled">
-        {% for relatedPost in relatedPosts %}
-            <li class="mb-3 col-md-12">
-                <a href="/{{ relatedPost.relativeUrl }}/">{{ relatedPost.title|raw }}</a>
-                {% include "_snippets/post/postMetadataLine.twig" with { post: relatedPost } %}
-            </li>
-        {% endfor %}
-    </ul>
-
-    <br>
+    {#<br>#}
     <br>
 {% endif %}
