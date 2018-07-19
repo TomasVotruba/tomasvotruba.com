@@ -113,18 +113,18 @@ This basically means we need to make ssh key or user name and a password public.
 
 Don't worry, Github and Travis though about these cases - with a `GITHUB_TOKEN`.
 
-- 1. [Create a Personal Access Token on Github](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+### 1. [Create a Personal Access Token on Github](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
 
 **tl;dr;**
 
-- Go to your [Github Tokens](<img src="https://github.com/settings/tokens">)
+- Go to your [Github Tokens](https://github.com/settings/tokens)
 - Click *Generate new token*
 - Check only *repo* scope
 - Click *Generate token*
 
-    <img src="/assets/images/posts/2018/monorepo-split/github-token.png">
+    <img src="/assets/images/posts/2018/monorepo-split/github-token.png" class="img-thumbnail">
 
-- 2. [Defining Variables in Repository Settings on Travis](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings)
+### 2. [Defining Variables in Repository Settings on Travis](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings)
 
 **tl;dr;**
 
@@ -133,11 +133,11 @@ Don't worry, Github and Travis though about these cases - with a `GITHUB_TOKEN`.
 - Create `GITHUB_TOKEN` with value from Github
 - Click *Add*
 
-    <img src="https://docs.travis-ci.com/images/settings-env-vars.png">
+    <img src="https://docs.travis-ci.com/images/settings-env-vars.png" class="img-thumbnail">
 
 In the end it should look like this:
 
-    <img src="/assets/images/posts/2018/monorepo-split/github-token.png">
+<img src="/assets/images/posts/2018/monorepo-split/token-after.png" class="img-thumbnail">
 
 ### Github and Travis Protects You
 
