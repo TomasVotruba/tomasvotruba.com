@@ -27,7 +27,7 @@ This whole "take a code from this directory and put it into this repository in `
 
 - complex
 - slow
-- requires lot of setup 
+- requires lot of setup
 
 Instead, we want it to be:
 
@@ -36,17 +36,17 @@ Instead, we want it to be:
 - **easy to setup in 1 composer package and 5 lines of YAML**
 
 Why? So you could amaze your friends at the party that you just set-up a monorepo split and they can enjoy merged PRs in matter of minutes (even if you know almost nothing about git or PHP).
-  
-Do you think we can get there? You'll see. 
+
+Do you think we can get there? You'll see.
 
 ## Gain & Pain Points of Current Solutions
 
-Feel free to explore these solutions. I did it for you and here are reasons they're not good enough to be massively adopted. 
+Feel free to explore these solutions. I did it for you and here are reasons they're not good enough to be massively adopted.
 
-On the other hand, **I'm grateful for each one of them, because they're pushing the evolution further and further. Thanks to them we don't have to reinvent the wheel and we can build on their shoulders**.  
+On the other hand, **I'm grateful for each one of them, because they're pushing the evolution further and further. Thanks to them we don't have to reinvent the wheel and we can build on their shoulders**.
 
 **splitsh/lite**
- 
+
 - https://github.com/splitsh/lite
 - You need to know Go and bash and be able to resolve conflicts of their dependencies.
 
@@ -63,13 +63,13 @@ On the other hand, **I'm grateful for each one of them, because they're pushing 
 Before diving into solution and how to do it, I try to stop and go into a wonderland. What would the ideal solution look like? How would I use it? How would I explain it to others? How fast would it be? Try to break away from your know-how limits (because they're limiting your thinking) and be free to come up with absolutely non-sense answers:
 
 - "1 command to install"
-- "zero setup" 
+- "zero setup"
 - "1 command to run"
 - "1 minute to finish the whole process"
 - "split only what I and people really need"
 
 
-If we put it in the code, it might look like: 
+If we put it in the code, it might look like:
 
 ```bash
 composer require symplify/monorepo-builder --dev
@@ -79,7 +79,7 @@ composer require symplify/monorepo-builder --dev
 # monorepo-builder.yml
 parameters:
     directories_to_repositories:
-        packages/MonorepoBuilder: 'git@github.com:Symplify/MonorepoBuilder.git'    
+        packages/MonorepoBuilder: 'git@github.com:Symplify/MonorepoBuilder.git'
 ```
 
 ```bash
@@ -98,13 +98,13 @@ But what would [security expert Michal Špaček](https://www.michalspacek.com/) 
 
 <blockquote class="blockquote text-center">
     "So anyone can now push to your repository whatever he wants?"
-</blockquote> 
+</blockquote>
 
 This is valid question that was probably scratching your mind when you saw "Github + Travis + git" combination with open-source.
 Travis is basically a terminal, that runs few command lines. What would prevent someone from using this to "play with" your repository?
 
 Let's look at repository adress in our example:
-  
+
 ```bash
 git@github.com:Symplify/MonorepoBuilder.git
 ```
@@ -119,7 +119,7 @@ Don't worry, Github and Travis though about these cases - with a `GITHUB_TOKEN`.
 
 - Go to your [Github Tokens](<img src="https://github.com/settings/tokens">)
 - Click *Generate new token*
-- Check only *repo* scope 
+- Check only *repo* scope
 - Click *Generate token*
 
     <img src="/assets/images/posts/2018/monorepo-split/github-token.png">
@@ -143,9 +143,9 @@ In the end it should look like this:
 
 Now the best part. If you accidentally commit your access token in `.travis.yml` (like I did while testing), **it will immediatel disable it** and sends you an email (I found out the next day after 4 hours of debugging why the token is not working).
 
-And if you add token to your repository on Travis as above, **it will hide it in all logs for you**. No need to hash it. 
+And if you add token to your repository on Travis as above, **it will hide it in all logs for you**. No need to hash it.
 
-So instead of insecure 
+So instead of insecure
 
 ```bash
 git@github.com:Symplify/MonorepoBuilder.git
@@ -164,11 +164,11 @@ Sound and safe!
 <br>
 
 Now we have:
- 
+
 - the `symplify/monorepo-builder` package as local dependency
 - configured package to repository paths in `monorepo-builder.yml`
 - secured `GITHUB_TOKEN` in Travis settings for your monorepo repository
-- a command to run the split: `vendor/bin/monorepo-builder split` 
+- a command to run the split: `vendor/bin/monorepo-builder split`
 
 What is missing?
 
@@ -179,7 +179,7 @@ Oh right, when will the monorepo be split? Do we have to do it manually? How oft
 Let's get back to our ideal product:
 
 - "1 command to install"
-- "zero setup" 
+- "zero setup"
 - "1 command to run"
 - **"1 minute to finish the whole process"**
 - "split only what I and peopl e really need"
@@ -215,18 +215,18 @@ after_script:
     fi
 ```
 
-That way the split command is run only merge to master and **after each merge**. That way you can test your feature in matter of minutes... 
+That way the split command is run only merge to master and **after each merge**. That way you can test your feature in matter of minutes...
 
 How fast is it? To give you an idea about the speed, this is Symplify build with split of 10 packages:
 
 <img src="/assets/images/posts/2018/monorepo-split/speed.png">
 
-**It takes under 7,5 minutes** including all the tests, static analysis and code style validation. 
+**It takes under 7,5 minutes** including all the tests, static analysis and code style validation.
 
 
 ### Are You Into Git Internals?
 
-I knew you are! 
+I knew you are!
 
 All it' wrapped in a bash file at the moment. It could be done in `symfony\process`, but the original source [subsplit.sh](https://github.com/dflydev/git-subsplit) was in bash so I used it.
 
@@ -267,5 +267,4 @@ If you're git split geek like me, feel free to explore whole [`subsplit.sh` scri
 
 So, do you think you're ready to fascinate your friends tonight with all your brand new monorepo split setup?
 
- 
- 
+
