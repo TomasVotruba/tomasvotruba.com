@@ -1,11 +1,12 @@
 ---
 id: 124
-title: "How to Delegate Monorepo Split to Multiple Repositories to Github and Travis in Secure Way"
+title: "How to Delegate Monorepo Split to Multiple Git Repositories to Github and Travis"
 perex: |
     Do you use a [monorepo](https://gomonorepo.org/)? Then you know [How to maintain multiple Git repositories with ease](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0). If you're not there yet, you may wonder [How to Merge 15 Repositories to 1 Monorepo and Keep their Git History](https://blog.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3).
     <br><br>
     Are you and your monorepo ready? Today we'll focus on **fast, secured and outsourced monorepo auto split** - all that under 10 minutes.
-tweet: "..."
+tweet: "New Post on My Blog: How to Delegate #Monorepo Split to Multiple #Git Repositories to #Github and #Travis #security"
+tweet_image: "/assets/images/posts/2018/monorepo-split/found-keys.jpg"
 related_items: [82, 25]
 ---
 
@@ -91,7 +92,7 @@ That could do, right? At least from a [developer's experience](https://symfony.c
 
 But what would [security expert Michal Špaček](https://www.michalspacek.com/) say to lousy code like that?
 
-<img src="http://joshowens.me/content/images/2015/Feb/security-keys-meme.jpg">
+<img src="/assets/images/posts/2018/monorepo-split/found-keys.jpg" class="img-thumbnail">
 
 ## How To Avoid Rape on Github and Travis?
 
