@@ -1,6 +1,6 @@
 ---
 id: 124
-title: "How to Delegate Monorepo Split to Multiple Repositories to Github and Travis"
+title: "How to Delegate Monorepo Split to Multiple Repositories to Github and Travis in Secure Way"
 perex: |
     ...
 tweet: "..."
@@ -27,13 +27,13 @@ This whole "take a code from this directory and put it into this repository in `
 
 - complex
 - slow
-- requires lot of setup (like [splitsh/lite](https://github.com/splitsh/lite) package written in Go) 
+- requires lot of setup 
 
 Instead, we want it to be:
 
-- **simple** so you will understand it in the end of reading this post
-- **fast** like Travis build of your project
-- **easy** to setup in 1 composer package and 5 lines of YAML
+- **simple so you will understand it in the end of reading this post**
+- **fast like Travis build of your project**
+- **easy to setup in 1 composer package and 5 lines of YAML**
 
 Why? So you could amaze your friends at the party that you just set-up a monorepo split and they can enjoy merged PRs in matter of minutes (even if you know almost nothing about git or PHP).
   
@@ -48,20 +48,19 @@ On the other hand, **I'm grateful for each one of them, because they're pushing 
 **splitsh/lite**
  
 - https://github.com/splitsh/lite
-- You need to know Go.
+- You need to know Go and bash and be able to resolve conflicts of their dependencies.
 
 **dflydev/git-subsplit**
 
 - https://github.com/dflydev/git-subsplit
-- Extra splits that are not needed, complex configuration.
-- Requires manual bash install.
-- It was used by Laravel and then by Symplify.
+- Extra splits that are not needed
+- Complex configuration
+- Requires manual bash install
+- It was used by Laravel and then by Symplify
 
 ## What Would the Ideal State Look Like?
 
-Before diving into solution and how to do it, I try to stop and go to a wonderland. What would the ideal solution look like? How would I use it? How would I explain it to others? How fast would it be?
-
-I try to break away from your know-how limits (because they're limiting my thinking obviously) and come up with absolutely non-sense answers:
+Before diving into solution and how to do it, I try to stop and go into a wonderland. What would the ideal solution look like? How would I use it? How would I explain it to others? How fast would it be? Try to break away from your know-how limits (because they're limiting your thinking) and be free to come up with absolutely non-sense answers:
 
 - "1 command to install"
 - "zero setup" 
@@ -87,16 +86,142 @@ parameters:
 vendor/bin/monorepo-builder split
 ```
 
-That could do right?
+That could do right? At least from [developer's experience](https://symfony.com/blog/making-the-symfony-experience-exceptional) view.
 
+<br>
 
+But what would [security expert Michal Špaček](https://www.michalspacek.com/) say?
 
-@todo
-@travis and github help
-@security fisrt
+<img src="http://joshowens.me/content/images/2015/Feb/security-keys-meme.jpg">
 
-michale would kill use her
+## How To Avoid Rape on Github and Travis?
 
+<blockquote class="blockquote text-center">
+    "So anyone can now push to your repository whatever he wants?"
+</blockquote> 
+
+This is valid question that was probably scratching your mind when you saw "Github + Travis + git" combination with open-source.
+Travis is basically a terminal, that runs few command lines. What would prevent someone from using this to "play with" your repository?
+
+Let's look at repository adress in our example:
+  
+```bash
+git@github.com:Symplify/MonorepoBuilder.git
+```
+
+This basically means we need to make ssh key or user name and a password public. That sound like a very good idea, right?
+
+Don't worry, Github and Travis though about these cases - with a `GITHUB_TOKEN`.
+
+- 1. [Create a Personal Access Token on Github](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+
+**tl;dr;**
+
+- Go to your [Github Tokens](<img src="https://github.com/settings/tokens">)
+- Click *Generate new token*
+- Check only *repo* scope 
+- Click *Generate token*
+
+    <img src="/assets/images/posts/2018/monorepo-split/github-token.png">
+
+- 2. [Defining Variables in Repository Settings on Travis](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings)
+
+**tl;dr;**
+
+- Go to Travis settings of your repository, e.g. `https://travis-ci.org/Symplify/Symplify/settings`
+- Jump to *Environment Variables* section
+- Create `GITHUB_TOKEN` with value from Github
+- Click *Add*
+
+    <img src="https://docs.travis-ci.com/images/settings-env-vars.png">
+
+In the end it should look like this:
+
+    <img src="/assets/images/posts/2018/monorepo-split/github-token.png">
+
+### Github and Travis Protects You
+
+Now the best part. If you accidentally commit your access token in `.travis.yml` (like I did while testing), **it will immediatel disable it** and sends you an email (I found out the next day after 4 hours of debugging why the token is not working).
+
+And if you add token to your repository on Travis as above, **it will hide it in all logs for you**. No need to hash it. 
+
+So instead of insecure 
+
+```bash
+git@github.com:Symplify/MonorepoBuilder.git
+# or
+https://aFjk02FJlkj1675jlk@github.com/Symplify/MonorepoBulder.git
+```
+
+everyone will see:
+
+```bash
+https://[secure]@github.com/Symplify/MonorepoBulder.git
+```
+
+Sound and safe!
+
+<br>
+
+Now we have:
+ 
+- the `symplify/monorepo-builder` package as local dependency
+- configured package to repository paths in `monorepo-builder.yml`
+- secured `GITHUB_TOKEN` in Travis settings for your monorepo repository
+- a command to run the split: `vendor/bin/monorepo-builder split` 
+
+What is missing?
+
+Oh right, when will the monorepo be split? Do we have to do it manually? How often? Should Travis CRON do it on daily basis?
+
+## When is the Best Time to Split our Monorepo?
+
+Let's get back to our ideal product:
+
+- "1 command to install"
+- "zero setup" 
+- "1 command to run"
+- **"1 minute to finish the whole process"**
+- "split only what I and peopl e really need"
+
+It often happens we merge fix or feature to monorepo and we want to try it before rushing to tagging a stable release. We want to do it as soon as possible, without manually triggering Travis to do it. Also, we don't want Travis to waste energy on pull-requests that are not merged to master. That would only slow the whole CI process down and frustrate contributors and maintainer.
+
+So how would `.travis.yml` would look like?
+
+```yaml
+language: php
+
+# required for "git tag" presence for MonorepoBuilder split and ChangelogLinker git tags resolver
+# see https://github.com/travis-ci/travis-ci/issues/7422
+git:
+  depth: false
+
+matrix:
+  include:
+    - php: 7.2
+      env: MONOREPO_SPLIT=true
+    # ... other builds
+
+install:
+  - composer install
+
+# tests and other scripts
+
+after_script:
+  # split monorepo to packages - only on merge to master
+  - |
+    if [[ $TRAVIS_EVENT_TYPE == "push" && $MONOREPO_SPLIT == true && $TRAVIS_BRANCH == "master" ]]; then
+      vendor/bin/monorepo-builder split -v
+    fi
+```
+
+That way the split command is run only merge to master and **after each merge**. That way you can test your feature in matter of minutes... 
+
+How fast is it? To give you an idea about the speed, this is Symplify build with split of 10 packages:
+
+<img src="/assets/images/posts/2018/monorepo-split/speed.png">
+
+**It takes under 7,5 minutes** including all the tests, static analysis and code style validation. 
 
 
 ### Are You Into Git Internals?
