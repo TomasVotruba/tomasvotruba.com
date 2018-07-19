@@ -9,15 +9,15 @@ tweet: "..."
 related_items: [82, 25]
 ---
 
-It's great to be alive in this era. We have solved maintaining multiple repositories, even merge migration of their git history to one repository. Creating huge code bases was more never cost effective and never had steeper learning curve.
+It's great to be alive in this era. We have solved maintaining multiple repositories, even merge migration of their git history to one repository. Creating huge code bases was more never cost effective and never had a steeper learning curve.
 
 The same way it was never easier to drive an autonomous car. You just sit in the car, press the button of your destination, and Tesla will drive you there when you check all the news on [/r/PHP](https://reddit.com/r/PHP/).
 
-Well, monorepo paradigm is not there yet but it's getting there.
+Well, the monorepo paradigm is not there yet but it's getting there.
 
 ## The Split Problem
 
-One of the last problem I'm aware of is splitting the monorepo to particular packages. Imagine you have [Symfony monorepo](https://github.com/symfony/symfony) and you're trying to split it to all standalone packages like [symfony/console](https://github.com/symfony/console), [symfony/dependency-injection](https://github.com/symfony/dependency-injection) and so on.
+One of the last problems I'm aware of is splitting the monorepo to particular packages. Imagine you have [Symfony monorepo](https://github.com/symfony/symfony) and you're trying to split it to all standalone packages like [symfony/console](https://github.com/symfony/console), [symfony/dependency-injection](https://github.com/symfony/dependency-injection) and so on.
 
 ### Current Status
 
@@ -25,21 +25,21 @@ This whole "take a code from this directory and put it into this repository in `
 
 - complex
 - slow
-- requires lot of setup
+- requires a lot of setups
 
 Instead, we want it to be:
 
-- **simple so you will understand it in the end of reading this post**
+- **simple so you will understand it at the end of reading this post**
 - **fast like Travis build of your project**
 - **easy to set up in 1 composer package and 5 lines of YAML**
 
-Why? So you could amaze your friends at the party that you just set-up a monorepo split and they can enjoy merged PRs in matter of minutes (even if you know almost nothing about git or PHP).
+Why? So you could amaze your friends at the party that you just set-up a monorepo split and they can enjoy merged PRs in a matter of minutes (even if you know almost nothing about git or PHP).
 
 Do you think we can get there? You'll see.
 
 ## The Best Solutions to Split (So Far)
 
-Feel free to explore these following solutions. I did it for you and here are few blockers that hold them from being massively adopted.
+Feel free to explore these following solutions. I did it for you and here are a few blockers that hold them from being massively adopted.
 
 On the other hand, **I'm grateful for each one of them, because they're pushing the evolution further and further. Thanks to them we don't have to reinvent the wheel and we can build on their shoulders**.
 
@@ -85,7 +85,7 @@ parameters:
 vendor/bin/monorepo-builder split
 ```
 
-That could do right? At least from [developer's experience](https://symfony.com/blog/making-the-symfony-experience-exceptional) view.
+That could do, right? At least from a [developer's experience](https://symfony.com/blog/making-the-symfony-experience-exceptional) view.
 
 <br>
 
@@ -99,10 +99,10 @@ But what would [security expert Michal Špaček](https://www.michalspacek.com/) 
     "So, anyone can now push to your repository whatever he wants?"
 </blockquote>
 
-This is valid question that was probably scratching your mind when you saw *Github + Travis + git + open-source* combination.
+This is a valid question that was probably scratching your mind when you saw *Github + Travis + git + open-source* combination.
 Travis is basically a terminal, that runs few command lines. What would prevent someone from using this to "play with" your repository?
 
-Let's look at repository address in our example:
+Let's look at the repository address in our example:
 
 ```bash
 git@github.com:Symplify/MonorepoBuilder.git
@@ -132,10 +132,10 @@ Read [the Travis docs](https://docs.travis-ci.com/user/environment-variables/#De
 
 - Go to Travis settings of your repository - `https://travis-ci.org/<your>/<repository>/settings`
 - Jump to *Environment Variables* section
-- Create `GITHUB_TOKEN` with value from Github
+- Create `GITHUB_TOKEN` with the value from Github
 - Click *Add*
 
-In the end it should look like this:
+In the end, it should look like this:
 
 <div class="text-center">
     <img src="/assets/images/posts/2018/monorepo-split/token-after.png" class="img-thumbnail">
@@ -147,7 +147,7 @@ In the end it should look like this:
 
 Now the best part. If you accidentally commit your access token in `.travis.yml` (like I did while testing), **GitHub will immediately disable it** and sends you an email (to bad I found that out the next day after 4 hours of debugging with that token).
 
-And if you add token to your repository on Travis as above, **it will hide it in all logs for you**. No need to hash it.
+And if you add the token to your repository on Travis as above, **it will hide it in all logs for you**. No need to hash it.
 
 So instead of insecure
 
@@ -169,7 +169,7 @@ Sound and safe!
 
 **Now we have:**
 
-- the `symplify/monorepo-builder` package as local dependency
+- the `symplify/monorepo-builder` package as a local dependency
 - configured package to repository paths in `monorepo-builder.yml`
 - secured `GITHUB_TOKEN` in Travis settings for your monorepo repository
 - a command to run the split: `vendor/bin/monorepo-builder split`
@@ -190,7 +190,7 @@ In times like these, get back to our ideal product:
 
 It often happens **we merge fix or feature to monorepo and we want to try it** before rushing to tagging a stable release. We want to do it **as soon as possible**, **without manually triggering Travis** to do it. Also, we **don't want Travis to waste energy on pull-requests** that are not merged to master. That would only slow the whole CI process down and frustrate contributors and maintainer.
 
-Saying that, how would `.travis.yml` would look like?
+Saying that how `.travis.yml` should look like?
 
 ```yaml
 language: php
@@ -219,9 +219,9 @@ after_script:
     fi
 ```
 
-That way the split command is run only merge to `master` and **exactly once after each merge**. So you can test your feature in matter of minutes...
+That way the split command is run only merge to `master` and **exactly once after each merge**. So you can test your feature in a matter of minutes...
 
-Wait wait, no vague statements like *matter of minutes*. How **fast it really is**? To give you an idea, this is Symplify Travis build with split of 10 packages:
+Wait wait, no vague statements like *a matter of minutes*. How **fast it really is**? To give you an idea, this is Symplify Travis build with a split of 10 packages:
 
 <img src="/assets/images/posts/2018/monorepo-split/speed.png" class="img-thumbnail mb-4">
 
@@ -237,7 +237,7 @@ I knew you are, so here are few details.
 
 All it' wrapped in a bash file at the moment. It could be done in `symfony\process`, but the original source [subsplit.sh](https://github.com/dflydev/git-subsplit) was in bash so I used it.
 
-There are ~160 lines but most of them are setup of arguments, options, their resolving, preparing the repository and other boring stuff. The interesting part is really [in this 1](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L107) and [these 3 lines](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L123-L126):
+There are ~160 lines but most of them are arguments and options configuration, their resolving, preparing the repository and other boring stuff. The interesting part is really [in this 1](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L107) and [these 3 lines](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L123-L126):
 
 ```bash
 git remote add origin "git@github.com:Symplify/MonorepoBuilder.git"
@@ -261,7 +261,7 @@ git checkout -b "master"
 # the split magic!
 git subtree split -q --prefix="/packages/MonorepoBuilder" --branch="master"
 
-# push this branch to remove branch
+# push this branch to remote branch
 git push -q --force origin "master"
 ```
 
