@@ -2,20 +2,18 @@
 id: 124
 title: "How to Delegate Monorepo Split to Multiple Repositories to Github and Travis in Secure Way"
 perex: |
-    ...
+    Do you use a [monorepo](https://gomonorepo.org/)? Then you know [How to maintain multiple Git repositories with ease](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0). If you're not there yet, you may wonder [How to Merge 15 Repositories to 1 Monorepo and Keep their Git History](https://blog.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3).
+    <br><br>
+    Are you and your monorepo ready? Today we'll focus on **fast, secured and ousourced monorepo autosplit** - all that under 10 minutes.
 tweet: "..."
 related_items: [82, 25]
 ---
 
-Do you use a [monorepo](https://gomonorepo.org/)? Then you know [How to maintain multiple Git repositories with ease](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0). If you're not there yet, you may wonder [How to Merge 15 Repositories to 1 Monorepo and Keep their Git History](https://blog.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3).
-
 It's great to be alive in this era. We have solved maintaining multiple repositories, even merge migration of their git history to one repository. Creating huge code bases was more never cost effective and never had steeper learning curve.
 
-<img src="https://qph.ec.quoracdn.net/main-qimg-20062c05515851f0ef99477a40c0e1b3.webp">
+The same way it was never easier to drive an autonomous car. You just sit in the car, pres the button of your destination, and Tesla will drive you there when you check all the news on [/r/PHP](https://reddit.com/r/PHP/).
 
-The same way it was never easier to drive an autonomous car. You just sit in the car, pres the button of your destination, and Tesla will drive you there when you check all the comments on your Smart Phone.
-
-Well, monorepo paradigm is no there yet. But it's getting there.
+Well, monorepo paradigm is not there yet but it's getting there.
 
 ## The Split Problem
 
@@ -39,18 +37,18 @@ Why? So you could amaze your friends at the party that you just set-up a monorep
 
 Do you think we can get there? You'll see.
 
-## Gain & Pain Points of Current Solutions
+## The Best Solutions to Split (So Far)
 
-Feel free to explore these solutions. I did it for you and here are reasons they're not good enough to be massively adopted.
+Feel free to explore these following solutions. I did it for you and here are few blockers that hold them from being massively adopted.
 
 On the other hand, **I'm grateful for each one of them, because they're pushing the evolution further and further. Thanks to them we don't have to reinvent the wheel and we can build on their shoulders**.
 
-**splitsh/lite**
+### 1. splitsh/lite
 
 - https://github.com/splitsh/lite
 - You need to know Go and bash and be able to resolve conflicts of their dependencies.
 
-**dflydev/git-subsplit**
+### 2. dflydev/git-subsplit
 
 - https://github.com/dflydev/git-subsplit
 - Extra splits that are not needed
@@ -68,6 +66,7 @@ Before diving into solution and how to do it, I try to stop and go into a wonder
 - "1 minute to finish the whole process"
 - "split only what I and people really need"
 
+<br>
 
 If we put it in the code, it might look like:
 
@@ -90,17 +89,17 @@ That could do right? At least from [developer's experience](https://symfony.com/
 
 <br>
 
-But what would [security expert Michal Špaček](https://www.michalspacek.com/) say?
+But what would [security expert Michal Špaček](https://www.michalspacek.com/) say to lousy code like that?
 
 <img src="http://joshowens.me/content/images/2015/Feb/security-keys-meme.jpg">
 
 ## How To Avoid Rape on Github and Travis?
 
 <blockquote class="blockquote text-center">
-    "So anyone can now push to your repository whatever he wants?"
+    "So, anyone can now push to your repository whatever he wants?"
 </blockquote>
 
-This is valid question that was probably scratching your mind when you saw "Github + Travis + git" combination with open-source.
+This is valid question that was probably scratching your mind when you saw *Github + Travis + git + open-source* combination.
 Travis is basically a terminal, that runs few command lines. What would prevent someone from using this to "play with" your repository?
 
 Let's look at repository adress in our example:
@@ -109,35 +108,38 @@ Let's look at repository adress in our example:
 git@github.com:Symplify/MonorepoBuilder.git
 ```
 
-This basically means we need to make ssh key or user name and a password public. That sound like a very good idea, right?
+This basically means **we need to make ssh key or user name and a password public**. Does that sound like a good idea to you?
 
-Don't worry, Github and Travis though about these cases - with a `GITHUB_TOKEN`.
+Don't worry, Github and Travis though about these cases - with a hashed `GITHUB_TOKEN` environment variable.
 
-### 1. [Create a Personal Access Token on Github](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
+### 1. Create a Personal Access Token on Github
 
-**tl;dr;**
+First, you need to create a custom token, that will authorize access to your Github repositories from any command line where it will be used. 
+
+Read [the Github docs](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or use **tl;dr;**:
 
 - Go to your [Github Tokens](https://github.com/settings/tokens)
 - Click *Generate new token*
 - Check only *repo* scope
+    <img src="/assets/images/posts/2018/monorepo-split/github-token.png" class="img-thumbnail">
 - Click *Generate token*
 
-    <img src="/assets/images/posts/2018/monorepo-split/github-token.png" class="img-thumbnail">
+### 2. Add `GITHUB_TOKEN` in Repository Settings on Travis
 
-### 2. [Defining Variables in Repository Settings on Travis](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings)
+Then we need to store this token to Travis build, so Travis can be authorized to manipulate with your repositories without any password or ssh key.
 
-**tl;dr;**
+Read [the Travis docs](https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings-) or use **tl;dr;**:
 
-- Go to Travis settings of your repository, e.g. `https://travis-ci.org/Symplify/Symplify/settings`
+- Go to Travis settings of your repository - `https://travis-ci.org/<your>/<repository>/settings`
 - Jump to *Environment Variables* section
 - Create `GITHUB_TOKEN` with value from Github
 - Click *Add*
 
-    <img src="https://docs.travis-ci.com/images/settings-env-vars.png" class="img-thumbnail">
-
 In the end it should look like this:
 
-<img src="/assets/images/posts/2018/monorepo-split/token-after.png" class="img-thumbnail">
+<div class="text-center">
+    <img src="/assets/images/posts/2018/monorepo-split/token-after.png" class="img-thumbnail">
+</div>
 
 ### Github and Travis Protects You
 
@@ -163,20 +165,20 @@ Sound and safe!
 
 <br>
 
-Now we have:
+**Now we have:**
 
 - the `symplify/monorepo-builder` package as local dependency
 - configured package to repository paths in `monorepo-builder.yml`
 - secured `GITHUB_TOKEN` in Travis settings for your monorepo repository
 - a command to run the split: `vendor/bin/monorepo-builder split`
 
-What is missing?
+Something is missing...
 
-Oh right, when will the monorepo be split? Do we have to do it manually? How often? Should Travis CRON do it on daily basis?
+Oh right, **when** will the monorepo be split? Do we have to do it manually? How often? Should Travis CRON do it on daily basis?
 
 ## When is the Best Time to Split our Monorepo?
 
-Let's get back to our ideal product:
+In times like these, get back to our ideal product:
 
 - "1 command to install"
 - "zero setup"
@@ -184,9 +186,9 @@ Let's get back to our ideal product:
 - **"1 minute to finish the whole process"**
 - "split only what I and peopl e really need"
 
-It often happens we merge fix or feature to monorepo and we want to try it before rushing to tagging a stable release. We want to do it as soon as possible, without manually triggering Travis to do it. Also, we don't want Travis to waste energy on pull-requests that are not merged to master. That would only slow the whole CI process down and frustrate contributors and maintainer.
+It often happens **we merge fix or feature to monorepo and we want to try it** before rushing to tagging a stable release. We want to do it **as soon as possible**, **without manually triggering Travis** to do it. Also, we **don't want Travis to waste energy on pull-requests** that are not merged to master. That would only slow the whole CI process down and frustrate contributors and maintainer.
 
-So how would `.travis.yml` would look like?
+Saying that, how would `.travis.yml` would look like?
 
 ```yaml
 language: php
@@ -205,7 +207,7 @@ matrix:
 install:
   - composer install
 
-# tests and other scripts
+# ... other scripts
 
 after_script:
   # split monorepo to packages - only on merge to master
@@ -215,35 +217,37 @@ after_script:
     fi
 ```
 
-That way the split command is run only merge to master and **after each merge**. That way you can test your feature in matter of minutes...
+That way the split command is run only merge to `master` and **exactly once after each merge**. So you can test your feature in matter of minutes...
 
-How fast is it? To give you an idea about the speed, this is Symplify build with split of 10 packages:
+Wait wait, no vague statements like *matter of minutes*. How **fast it really is**? To give you an idea, this is Symplify Travis build with split of 10 packages:
 
-<img src="/assets/images/posts/2018/monorepo-split/speed.png">
+<img src="/assets/images/posts/2018/monorepo-split/speed.png" class="img-thumbnail mb-4">
 
 **It takes under 7,5 minutes** including all the tests, static analysis and code style validation.
 
+That's all folks. You're ready to go and try it on your monorepo.
 
-### Are You Into Git Internals?
+<br>
 
-I knew you are!
+## Are You Into Git Internals?
+
+I knew you are, so here are few details.
 
 All it' wrapped in a bash file at the moment. It could be done in `symfony\process`, but the original source [subsplit.sh](https://github.com/dflydev/git-subsplit) was in bash so I used it.
 
-
-There are ~160 lines but most of them are setup of arguments, options, their resolving, preparing the repository and other boring stuffs. The interesting part is really [in these](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L107) [4 lines](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L123-L126):
+There are ~160 lines but most of them are setup of arguments, options, their resolving, preparing the repository and other boring stuffs. The interesting part is really [in this 1](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L107) and [these 3 lines](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L123-L126):
 
 ```bash
 git remote add origin "git@github.com:Symplify/MonorepoBuilder.git"
 
 git checkout -b "master"
 git subtree split -q --prefix="/packages/MonorepoBuilder" --branch="master"
-
 git push -q --force origin "master"
 ```
 
-I used "real values" instead of $VARIABLES, so it's more clear to you.
-In human word, it works like this:
+I used "real values" instead of `$VARIABLES`, so it's more clear to you.
+
+In human words it works like this:
 
 ```bash
 # in what repository should we push the code?
@@ -261,10 +265,8 @@ git push -q --force origin "master"
 
 That is really it!
 
-If you're git split geek like me, feel free to explore whole [`subsplit.sh` script](https://github.com/Symplify/MonorepoBuilder/blob/master/packages/Split/bash/subsplit.sh). There are many nice little details to learn from.
+**If you're git split geek (like me), feel free to explore whole [`subsplit.sh` script](https://github.com/Symplify/MonorepoBuilder/blob/master/packages/Split/bash/subsplit.sh)**. There are many nice little details to learn from.
 
 <br>
 
 So, do you think you're ready to fascinate your friends tonight with all your brand new monorepo split setup?
-
-
