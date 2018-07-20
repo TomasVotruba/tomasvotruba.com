@@ -1,3 +1,7 @@
+ul.checklist {
+    margin-left: -2.5em;
+}
+
 .checklist li {
     list-style-type: none;
     margin: 0;
@@ -7,16 +11,16 @@
 /* used from http://phppackagechecklist.com/css/all.css */
 
 .checklist__item {
-    margin: 0 0 10px 0;
     position: relative;
 }
 .checklist__input {
     display: none;
     user-select: none;
 }
+
 .checklist__label {
-    margin-left: -1.5em;
-    margin-top: .8em;
+    margin-left: 1.5em;
+    margin-top: -0.2em;
     display: block;
     position: absolute;
     left: 0;
@@ -41,6 +45,6 @@
 
 .checklist__details {
     display: block;
-    margin: 0 0 1em 0;
-    padding: 1em 1em 1em 3em;
+    margin: 0;
+    padding: 0 .5em 0 6em;
 }

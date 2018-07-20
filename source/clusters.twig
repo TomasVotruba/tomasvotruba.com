@@ -71,7 +71,7 @@ inspiration:
                     <p class="text-left pt-4 pb-2">{{ cluster.description }}</p>
                 </div>
                 <div class="card-body">
-                    <ul class="mt-3 checklist">
+                    <ul class="mt-3 checklist line-separated">
                         {% for postId in cluster.post_ids %}
                             {% set activePost = posts[postId] %}
                             <li class="mb-sm-4 mb-2 checklist__item">
