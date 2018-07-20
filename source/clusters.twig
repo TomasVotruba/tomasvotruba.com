@@ -74,7 +74,7 @@ inspiration:
                     <ul class="mt-3 checklist line-separated">
                         {% for postId in cluster.post_ids %}
                             {% set activePost = posts[postId] %}
-                            <li class="mb-sm-4 mb-2 checklist__item">
+                            <li class="checklist__item">
                                 <input class="checklist__input" type="checkbox" id="item_{{ activePost.id }}" value="{{ activePost.id }}">
                                 <label class="checklist__label" for="item_{{ activePost.id }}">
                                     <em class="checklist_icon fa fa-3x fa-check" id="item_{{ activePost.id }}"></em>
