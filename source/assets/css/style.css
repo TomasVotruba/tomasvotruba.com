@@ -346,3 +346,9 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     margin-top: 1.5em;
     line-height: 1.6em;
 }
+
+ul.line-separated > li:not(:last-child) {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 1.3em;
+    margin-bottom: 1.3em;
+}

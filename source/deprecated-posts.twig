@@ -8,16 +8,16 @@ id: blog
     <div class="container-fluid" id="blog">
         <h1>Deprecated Posts</h1>
 
-        <ul class="mt-4 list-unstyled">
-            {% for post in posts %}
-                {% if post.deprecated is defined and post.lang is not defined %}
-                    <li class="mb-3 col-md-12">
-                        <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
-                        {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
-                    </li>
-                    <hr>
-                {% endif %}
-            {% endfor %}
-        </ul>
+        {# get only deprecated posts #}
+        {% set activePosts = [] %}
+        {% for post in posts %}
+            {% if post.deprecated is defined and post.lang is not defined %}
+                {% set activePosts = activePosts|merge([post]) %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="card-body">
+            {% include "_snippets/post/postList.twig" with { posts: activePosts } %}
+        </div>
     </div>
 {% endblock %}

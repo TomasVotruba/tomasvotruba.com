@@ -1,0 +1,8 @@
+<ul class="list-unstyled line-separated">
+    {% for post in posts %}
+        <li class="col-md-12">
+            <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
+            {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+        </li>
+    {% endfor %}
+</ul>
