@@ -1,7 +1,0 @@
-<ul class="mt-4 list-unstyled">
-    <li class="mb-3 col-md-12">
-        <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
-        {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
-    </li>
-    {% if loop.last == false %}<hr>{% endif %}
-</ul>
