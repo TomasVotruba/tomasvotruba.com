@@ -8,12 +8,16 @@ id: blog
     <div class="container-fluid" id="blog">
         <h1>Deprecated Posts</h1>
 
-        <div class="row">
+        <ul class="mt-4 list-unstyled">
             {% for post in posts %}
                 {% if post.deprecated is defined and post.lang is not defined %}
-                    {% include "_snippets/post/singlePostPreview.twig" with { post: post } %}
+                    <li class="mb-3 col-md-12">
+                        <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
+                        {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+                    </li>
+                    <hr>
                 {% endif %}
             {% endfor %}
-        </div>
+        </ul>
     </div>
 {% endblock %}

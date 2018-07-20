@@ -9,10 +9,8 @@
                 <li class="{% if (id is defined and id == 'blog') or post is defined %}active{% endif %}">
                     <a href="/">Blog</a>
                 </li>
-                <li class="new {% if id is defined and id == 'clusters' %}active{% endif %}">
-                    <a href="/clusters/" class="bg-success">
-                        Clusters
-                    </a>
+                <li class="{% if id is defined and id == 'clusters' %}active{% endif %}">
+                    <a href="/clusters/">Clusters</a>
                 </li>
                 <li class="{% if id is defined and id == 'mission' %}active{% endif %}">
                     <a href="/mission/">Mission</a>
