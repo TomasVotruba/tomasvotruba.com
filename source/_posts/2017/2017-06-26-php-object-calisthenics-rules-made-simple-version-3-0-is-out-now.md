@@ -139,7 +139,7 @@ That was Rule 6.
 
 ### 1. Only X Level of Indentation per Method
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 foreach ($sniffGroups as $sniffGroup) {
@@ -151,7 +151,7 @@ foreach ($sniffGroups as $sniffGroup) {
 }
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 foreach ($sniffGroups as $sniffGroup) {
@@ -167,7 +167,7 @@ private function ensureIsAllInstanceOf(array $objects, string $type)
 
 ### 2. Do Not Use "else" Keyword
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 if ($status === self::DONE) {
@@ -177,7 +177,7 @@ if ($status === self::DONE) {
 }
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 if ($status === self::DONE) {
@@ -190,13 +190,13 @@ $this->advance();
 
 ### 5. Use Only One Object Operator (`->`) per Line
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 $this->container->getBuilder()->addDefinition(SniffRunner::class);
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 $containerBuilder = $this->getContainerBuilder();
@@ -205,7 +205,7 @@ $containerBuilder->addDefinition(SniffRunner::class);
 
 ### 7. Keep Your Classes Small
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 class SimpleStartupController
@@ -214,7 +214,7 @@ class SimpleStartupController
 }
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 class SimpleStartupController
@@ -223,7 +223,7 @@ class SimpleStartupController
 }
 ```
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 class SomeClass
@@ -235,7 +235,7 @@ class SomeClass
 }
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 class SomeClass
@@ -247,7 +247,7 @@ class SomeClass
 }
 ```
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 class SomeClass
@@ -256,7 +256,7 @@ class SomeClass
 }
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 class SomeClass
@@ -265,7 +265,7 @@ class SomeClass
 }
 ```
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 class SomeClass
@@ -274,7 +274,7 @@ class SomeClass
 }
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 class SomeClass
@@ -287,7 +287,7 @@ class SomeClass
 
 Classes should not contain public properties.
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 class ImmutableBankAccount
@@ -295,7 +295,7 @@ class ImmutableBankAccount
     public $currency = 'USD';
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 class ImmutableBankAccount
@@ -305,7 +305,7 @@ class ImmutableBankAccount
 
 Method should represent behavior, not set values.
 
-<em class="fa fa-fw fa-times"></em>
+<em class="fa fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
     private $amount;
@@ -317,7 +317,7 @@ Method should represent behavior, not set values.
 }
 ```
 
-<em class="fa fa-fw fa-check"></em>
+<em class="fa fa-fw fa-check text-success fa-lg"></em>
 
 ```php
     private $amount;
