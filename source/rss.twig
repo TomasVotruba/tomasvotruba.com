@@ -44,7 +44,17 @@ outputPath: rss.xml
                     <description><![CDATA[ {{ post.perex | striptags }} ]]></description>
                     <guid isPermaLink="false">{{ site_url }}/{{ post.relativeUrl }}/</guid>
                     <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
-                    <pubDate>{{ post.getDateInFormat('r') }}</pubDate>
+
+                    {# @see https://wordpress.stackexchange.com/a/229773 #}
+                    <pubDate>{{ post.getDateInFormat('D, d M Y H:i:s +0000') }}</pubDate>
+                    {% if post.updated_since %}
+                        <updated>{{ post.updated_since|date('Y-m-d\TH:i:s\Z') }}</updated>
+                        <atom:updated>{{ post.updated_since|date('D, d M Y H:i:s +0000') }}</atom:updated>
+                        <lastBuildDate>{{ post.updated_since|date('D, d M Y H:i:s +0000') }}</lastBuildDate>
+                    {% else %}
+                        <lastBuildDate>{{ post.getDateInFormat('D, d M Y H:i:s +0000') }}</lastBuildDate>
+                    {% endif %}
+
                     <comments>{{ site_url }}/{{ post.relativeUrl }}#disqus_thread</comments>
                 </item>
             {% endif %}
