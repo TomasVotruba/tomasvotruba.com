@@ -1,6 +1,6 @@
 ---
 id: 125
-title: "5 Signs You Should Not Have a Talk Abroad"
+title: "5 Signs You Should Never Have a Talk Abroad"
 perex: |
     I find PHP meetups abroad more and more valuable to my programming life. They're best place to diverse my skills and knowledge without eating dump and self-proclaiming Twitter feeds.
     <br>
@@ -9,8 +9,8 @@ perex: |
     <br>
     <br>
     I'm about to tell you why you should not do it.
-tweet: "..."
-tweet_image: "..."
+tweet: "New Post on my Blog: 5 Signs You Should Never Have a Talk Abroad #commnity #cfp #friendsofphp"
+tweet_image: "/assets/images/posts/2018/friends/homepage.png"
 ---
 
 ## 1. You're not Famous Enough to be Accepted
@@ -143,7 +143,7 @@ It's a fresh MVP (*not model-view-presenter* but *minimum viable product*) from 
 
 <br>
 
-The mission of this page is simple:
+The mission of [friendsofphp.org](https://friendsofphp.org/) page is simple:
 
 <blockquote class="blockquote text-center">
     Help programmers to share their ideas and travel as easy as possible
