@@ -2,7 +2,7 @@
 id: 125
 title: "5 Signs You Should Never Have a Talk Abroad"
 perex: |
-    I find PHP meetups abroad more and more valuable to my programming life. They're best place to diverse my skills and knowledge without eating dump and self-proclaiming Twitter feeds.
+    I find PHP meetups abroad more and more valuable to my programming life. They're the best place to diverse my skills and knowledge without eating dump and self-proclaiming Twitter feeds.
     <br>
     <br>
     Wait, don't rush to your train ticket so fast to enjoy the presence of great developers, interesting topic, surprisingly open-minded people and tasty beer afterward.
@@ -19,7 +19,7 @@ tweet_image: "/assets/images/posts/2018/friends/homepage.png"
 
 I'm sorry, but you were not born lucky enough to be Linus Torvalds, Rasmus Leford, Fabien Potencier or Marco Pivetta. You'd have to work hard on yourself, have at least 1000 followers, 3 popular open-source packages and own website with real PHP blog posts.
 
-From my experience, if you response to Call for Papers to one of [the PHP conferences](http://php.net/conferences/index.php) there are free 10 times less talk slots than talk suggestions.
+From my experience, if you response to Call for Papers to one of [the PHP conferences](http://php.net/conferences/index.php) there are free 10 times fewer talk slots than talk suggestions.
 
 <div class="text-center mb-4">
     <img src="/assets/images/posts/2018/friends/ou.png" class="img-thumbnail">
