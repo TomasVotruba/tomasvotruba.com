@@ -136,9 +136,18 @@ to put down a simple page with meetups in Europe:
     <img src="/assets/images/posts/2018/friends/homepage.png" class="img-thumbnail">
 </a>
 
-It's fresh 
+It's fresh version from last week and there might be few bugs, so be nice to it. You can find it on [Github](https://github.com/tomasvotruba/friendsofphp.org) (obviously), try it, run it locally without any database thanks to YAML and Statie. 
 
-but 
+<br>
 
-You can 
+The mission of this page is simple:
 
+<blockquote class="blockquote text-center">
+    Help programmers to share their ideas and travel as easy as possible
+</blockquote>
+
+<br>
+
+**So get up, forget all the reasons in your head stopping you from going to your first meetup aboard and enjoy it!**
+ 
+That's all the life about :)   
