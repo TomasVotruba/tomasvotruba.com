@@ -52,7 +52,7 @@ Some groups make this experience even more exceptional, like:
 </div>
 
 
-## 2. You're too Shy too Talk
+## 2. You're too Shy to Talk
 
 <em class="fa fa-fw fa-times text-danger fa-2x"></em>
 
