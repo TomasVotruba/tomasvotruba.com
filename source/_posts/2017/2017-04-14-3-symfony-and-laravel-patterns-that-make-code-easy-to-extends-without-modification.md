@@ -59,7 +59,7 @@ final class BoothCallEntrance implements MatrixEntranceInterface
 
 }
 
-final ComputerEntrance implements MatrixEntranceInterface
+final class ComputerEntrance implements MatrixEntranceInterface
 {
 
 }
