@@ -366,3 +366,7 @@ ul.line-separated > li:not(:last-child) {
 #mission .card ul > li {
     line-height: 2em;
 }
+
+.pull-right {
+    float: right;
+}
