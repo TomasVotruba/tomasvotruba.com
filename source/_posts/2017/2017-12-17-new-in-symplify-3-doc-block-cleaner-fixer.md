@@ -97,7 +97,7 @@ Cleaning every single case would be crazy. Luckily, we **live in CLI-refactoring
 so all we need is new Fixer from `Symplify\CodingStandard` 3.0 - `Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer`.
 
 <a href="https://github.com/Symplify/Symplify/pull/427" class="btn btn-dark btn-sm">
-    <em class="fa fa-github fa-fw"></em>
+    <em class="fas fa-github fa-fw"></em>
     See pull-request #427
 </a>
 

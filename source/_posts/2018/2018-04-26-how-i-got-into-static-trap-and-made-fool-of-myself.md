@@ -231,13 +231,13 @@ If you ever have a feeling that there is a better way to do things but you'll se
 ### 3. Sniff It - Setup and Forget
 
 <a href="https://github.com/Symplify/Symplify/pull/722" class="btn btn-dark btn-sm">
-    <em class="fa fa-github fa-fw"></em>
+    <em class="fas fa-github fa-fw"></em>
     See pull-request #722
 </a>
 
 To prevent this 10 hours of trauma happening ever again, I made [a `ForbiddenStaticFunctionSniff` sniff](https://github.com/symplify/codingstandard#use-services-and-constructor-injection-over-static-method) that will look after your code.
 
-<em class="fa fa-fw fa-times text-danger fa-lg"></em>
+<em class="fas fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 class SomeClass
@@ -248,7 +248,7 @@ class SomeClass
 }
 ```
 
-<em class="fa fa-fw fa-check text-success fa-lg"></em>
+<em class="fas fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 class SomeClass

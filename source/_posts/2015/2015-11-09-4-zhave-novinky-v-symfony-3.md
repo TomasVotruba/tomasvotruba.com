@@ -101,7 +101,7 @@ services:
 <blockquote>
     Chceš vědět víc? Mrkni na
     <a href="https://github.com/symfony/symfony/pull/15613">
-        <em class="fa fa-github"></em>
+        <em class="fas fa-github"></em>
         pull-request
     </a>
 </blockquote>
@@ -175,7 +175,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <blockquote>
     Zajímá tě víc? Mrkni na
     <a href="https://github.com/symfony/symfony/pull/15523">
-        <em class="fa fa-github"></em>
+        <em class="fas fa-github"></em>
         pull-request
     </a>
 </blockquote>
@@ -240,7 +240,7 @@ class ConcreteMicroKernel extends Kernel
 <blockquote>
     Zajímá tě víc? Mrkni na
     <a href="https://github.com/symfony/symfony/pull/15990">
-        <em class="fa fa-github"></em>
+        <em class="fas fa-github"></em>
         pull-request
     </a>
 </blockquote>

@@ -23,7 +23,7 @@ The simplest would be...
 
 ### 1. Array property should have default value `[]` to prevent undefined array issues
 
-<em class="fa fa-lg fa-times text-danger"></em>
+<em class="fas fa-lg fa-times text-danger"></em>
 
 
 ```php
@@ -43,7 +43,7 @@ class SomeClass
 }
 ```
 
-<em class="fa fa-lg fa-check text-success"></em>
+<em class="fas fa-lg fa-check text-success"></em>
 
 ```php
 class SomeClass
@@ -71,7 +71,7 @@ Once I read [When to declare classes final](https://ocramius.github.io/blog/when
 
 I was working at [Lekarna.cz](https://www.lekarna.cz/) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and had lots of code reviews. **So I made a sniff to save us some work.**
 
-<em class="fa fa-lg fa-times text-danger"></em>
+<em class="fas fa-lg fa-times text-danger"></em>
 
 ```php
 class SomeClass implements SomeInterface
@@ -79,7 +79,7 @@ class SomeClass implements SomeInterface
 }
 ```
 
-<em class="fa fa-lg fa-check text-success"></em>
+<em class="fas fa-lg fa-check text-success"></em>
 
 ```php
 final class SomeClass implements SomeInterface
@@ -102,13 +102,13 @@ services:
 
 Well, since PHP 5.5, you can use `::class` constant instead of string.
 
-<em class="fa fa-lg fa-times text-danger"></em>
+<em class="fas fa-lg fa-times text-danger"></em>
 
 ```php
 $className = 'DateTime';
 ```
 
-<em class="fa fa-lg fa-check text-success"></em>
+<em class="fas fa-lg fa-check text-success"></em>
 
 ```php
 $className = DateTime::class;
@@ -127,7 +127,7 @@ services:
 
 This is lighter version of **Final Interface rule**. No brainer.
 
-<em class="fa fa-lg fa-times text-danger"></em>
+<em class="fas fa-lg fa-times text-danger"></em>
 
 ```php
 use PHPUnit\Framework\TestCase;
@@ -137,7 +137,7 @@ class SomeTest extends TestCase
 }
 ```
 
-<em class="fa fa-lg fa-check text-success"></em>
+<em class="fas fa-lg fa-check text-success"></em>
 
 ```php
 use PHPUnit\Framework\TestCase;
@@ -166,7 +166,7 @@ David Grudl recently wrote about [`$template` methods suggestion in Nette](https
 
 This sniff helps you to avoid such cases:
 
-<em class="fa fa-lg fa-times text-danger"></em>
+<em class="fas fa-lg fa-times text-danger"></em>
 
 ```php
 interface SomeInterface
@@ -186,7 +186,7 @@ final class SomeClass implements SomeInterface
 }
 ```
 
-<em class="fa fa-lg fa-check text-success"></em>
+<em class="fas fa-lg fa-check text-success"></em>
 
 ```php
 interface SomeInterface
@@ -218,7 +218,7 @@ services:
 
 Putting annotations back to constructor is quite a work, but this Fixer will help you with that.
 
-<em class="fa fa-lg fa-times text-danger"></em>
+<em class="fas fa-lg fa-times text-danger"></em>
 
 ```php
 class SomeClass
@@ -231,7 +231,7 @@ class SomeClass
 }
 ```
 
-<em class="fa fa-lg fa-check text-success"></em>
+<em class="fas fa-lg fa-check text-success"></em>
 
 ```php
 class SomeClass

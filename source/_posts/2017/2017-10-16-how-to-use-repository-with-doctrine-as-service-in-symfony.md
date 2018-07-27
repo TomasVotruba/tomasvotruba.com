@@ -67,14 +67,14 @@ final class PostRepository extends EntityRepository
 ```
 
 
-### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 It's easy and everybody does that.
 
 You can use prepared methods like [`findBy()`](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L177), [`findOneBy()`](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L192) right away.
 
 
-### <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 
 If we try to register repository as a service, we get this error:
     <img src="/assets/images/posts/2017/repository-as-service/autowire-fail.png" class="img-thumbnail mb-4">
@@ -155,13 +155,13 @@ Instead of **registration to Symfony container like any other service, here is u
 
 
 
-### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 
 It's in documentation.
 
 
-### <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 
 
 It is very complicated to have more repositories for one entity. What if I want to have `PostRedisRepository` for Redis-related operations and `PostFrontRepository` for reading-only?
@@ -210,12 +210,12 @@ final class PostController
 ```
 
 
-### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 Again, status quo.
 
 
-### <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 
 IDE doesn't know it's `App\Repository\PostRepository`, so **we have add extra typehint** (so [boring](https://www.boringcompany.com/) work). Example above would work because there is typehinted property , but this would fail:
 
@@ -257,7 +257,7 @@ None. Repositories are created by Doctrine.
 <br>
 
 
-## <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages Summary
+## <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages Summary
 
 It's easy to copy-paste if already present in our code.
 
@@ -266,7 +266,7 @@ It's spread in most of documentation, both in Doctrine and Symfony and in many p
 No brain, no gain.
 
 
-## <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages Summary
+## <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages Summary
 
 We **cannot use autowiring**.
 
@@ -382,7 +382,7 @@ final class PostRepository
 ```
 
 
-### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 
 Everything is **strictly typehinted**, **no more frustration from missing autocompletion**.
@@ -412,7 +412,7 @@ class Post
 <br>
 
 
-### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 
 Clean and standalone object.
@@ -453,7 +453,7 @@ final class PostController
 ```
 
 
-### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 
 **IDE knows the type and autocomplete 100% works.**

@@ -88,7 +88,7 @@ $application->run(new ArgInput);
 
 I wish I knew this answer :). In my opinion and experience with building cli apps, there might be few...
 
-### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 - CLI apps almost always start with simple plain PHP code:
 
@@ -108,7 +108,7 @@ I wish I knew this answer :). In my opinion and experience with building cli app
 - It's easy, quick and simple.
 - Who would use container right from the start of 1 command, right?
 
-### <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 
 - If you start a project with `new` static, it's difficult to migrate.
 - The need of refactoring is clear much earlier before it really happens.
@@ -155,13 +155,13 @@ class FixerFactory
 }
 ```
 
-### <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 
 - Well, ambiguous approach to creating service-like-classes.
 - There is an inconsistent approach to services. How do you know where to put it? Is it a service or is it a class to be created manually?
 - Should you inject dependency manually or let container (or any higher service) handle that?
 
-### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 - It's better than no container at all.
 - It gives at least some basis for future refactoring.
@@ -252,11 +252,11 @@ $application = $container->get(Application::class);
 $application->run();
 ```
 
-### <em class="fa fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 
 - You need to rethink the [static `new` service approach](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/), if you're used to it.
 
-### <em class="fa fa-fw fa-lg fa-check text-success"></em> Advantages
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 - Web apps = CLI apps, nothing extra to learn for new contributors, even though they contribute a CLI app for their first time.
 - You can use all [Symfony 3.3+ super cool features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/).

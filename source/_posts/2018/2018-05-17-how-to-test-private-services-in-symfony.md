@@ -76,7 +76,7 @@ vendor/bin/phpunit tests
 ```
 
 <p class="text-success pt-3 pb-3">
-    <em class="fa fa-fw fa-lg fa-check"></em> Voilá!
+    <em class="fas fa-fw fa-lg fa-check"></em> Voilá!
 </p>
 
 ## Down the Smelly Rabbit Hole
@@ -123,7 +123,7 @@ Or just **make everything public**, like [I did in Symplify 6 months ago](https:
 It's fast and easy solution, but...
 
 <p class="text-danger pt-3 pb-3">
-    <em class="fa fa-fw fa-lg fa-times"></em> Not a way to go in long-term or bigger projects.
+    <em class="fas fa-fw fa-lg fa-times"></em> Not a way to go in long-term or bigger projects.
 </p>
 
 Don't worry, you're not alone. There are over [36 results for "symfony tests private services" on StackOverflow](https://stackoverflow.com/search?q=symfony+tests+private+services) at the time being:
@@ -207,7 +207,7 @@ This removed all `public: true` code smells from Symplify, just [see this beauti
 <img src="/assets/images/posts/2018/private-services/gone.png" class="img-thumbnail">
 
 <p class="text-success pt-3 pb-3">
-    <em class="fa fa-fw fa-lg fa-check"></em> Voilá!
+    <em class="fas fa-fw fa-lg fa-check"></em> Voilá!
 </p>
 
 ### Where is the Magic?

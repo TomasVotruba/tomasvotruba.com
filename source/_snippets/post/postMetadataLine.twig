@@ -1,24 +1,24 @@
 <ul class="list-inline post-metadata">
     <li class="list-inline-item mr-3">
-        <em class="fa fa-clock-o fa-fw"></em>
+        <em class="fas fa-clock fa-fw"></em>
         <strong>{{ post.getReadingTimeInMinutes() }} min</strong>
     </li>
 
     <li class="list-inline-item mr-3">
-        <em class="fa fa-calendar fa-fw"></em>
+        <em class="fas fa-calendar fa-fw"></em>
         <time datetime="{{ post.getDateInFormat('Y-m-D') }}">{{ post.getDateInFormat('l, F j, Y') }}</time>
     </li>
 
     {% if showCommentCount is defined %}
         <li class="list-inline-item mr-3">
-            <em class="fa fa-fw fa-comments"></em>
+            <em class="fas fa-fw fa-comments"></em>
             <a href="{{ site_url }}/{{ post.relativeUrl }}/#disqus_thread">X</a> comments
         </li>
     {% endif %}
 
     {% if showPullRequestLink is defined %}
         <li class="list-inline-item">
-            <em class="fa fa-fw fa-pencil"></em>
+            <em class="fas fa-fw fa-pencil"></em>
             <a href="{{ post|githubEditPostUrl }}">Typo? Fix me, please</a>
         </li>
     {% endif %}
@@ -27,7 +27,7 @@
         <li class="list-inline-item pull-right">
             {% set testDirectoryOnGithub %}{{ github_repository_tests_directory }}/Posts/Year{{ post.getDateInFormat('Y') }}/{{ post.test_slug }}{% endset %}
             <a href="{{ testDirectoryOnGithub }}" class="badge badge-success">
-                <em class="fa fa-fw fa-thumbs-up"></em> Tested
+                <em class="fas fa-fw fa-thumbs-up"></em> Tested
             </a>
         </li>
     {% endif %}
@@ -35,7 +35,7 @@
     {% if post.hasCode() %}
         <li class="list-inline-item pull-right mr-2">
             <span class="badge badge-light">
-                <em class="fa fa-fw fa-code"></em> Code
+                <em class="fas fa-fw fa-code"></em> Code
             </span>
         </li>
     {% endif %}
