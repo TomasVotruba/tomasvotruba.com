@@ -354,15 +354,15 @@ ul.line-separated > li:not(:last-child) {
 }
 
 /* style in cards */
-.card h2 {
+#mission .card h2 {
     margin: .3em 0 .3em 0;
 }
 
-.card ul {
+#mission .card ul {
     margin: .3em 0 0 0;
     padding-left: 1em;
 }
 
-.card ul li {
+#mission .card ul > li {
     line-height: 2em;
 }
