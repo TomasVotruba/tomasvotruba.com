@@ -12,13 +12,13 @@ tweet_image: "/assets/images/posts/2018/symplify-3-ecs/exclude-files.png"
 ## 1. Exclude Files or Dirs
 
 <a href="https://github.com/Symplify/Symplify/pull/583" class="btn btn-dark btn-sm mt-2 mb-3 pull-left">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #583
 </a>
 
 <a href="https://github.com/Symplify/Symplify/pull/584" class="btn btn-dark btn-sm mt-2 mb-3 ml-2">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #584
 </a>
@@ -39,7 +39,7 @@ With favorite [`fnmatch()` function](http://php.net/manual/en/function.fnmatch.p
 ## 2. Warnings are Reported for Specific Sniffs
 
 <a href="https://github.com/Symplify/Symplify/pull/481" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #481
 </a>
@@ -53,7 +53,7 @@ That changed. New property [`$reportWarningsSniffs` in `Symplify\EasyCodingStand
 ## 3. Nice and Clear Diff over Boring Table Report
 
 <a href="https://github.com/Symplify/Symplify/pull/474" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #474
 </a>
@@ -97,7 +97,7 @@ Which one do you prefer?
 ## 4. Skip Sniff Codes instead of Whole Sniffs
 
 <a href="https://github.com/Symplify/Symplify/pull/388" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #388
 </a>
@@ -129,7 +129,7 @@ And all the other codes will be checked properly in your code.
 <br>
 
 <a href="https://github.com/Symplify/Symplify/pull/406" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #406
 </a>

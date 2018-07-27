@@ -332,13 +332,13 @@ And update `RectorCollector` class:
 
 Now we have:
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> single entry point for `Collector` + `Provider`
+<em class="fas fa-fw fa-lg fa-check text-success"></em> single entry point for `Collector` + `Provider`
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> typehinted `RectorInterface` control in code
+<em class="fas fa-fw fa-lg fa-check text-success"></em> typehinted `RectorInterface` control in code
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> clean config for use and compiler for our code
+<em class="fas fa-fw fa-lg fa-check text-success"></em> clean config for use and compiler for our code
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> removed `symfony/expression-language` dependency
+<em class="fas fa-fw fa-lg fa-check text-success"></em> removed `symfony/expression-language` dependency
 
 ## 4. Add Tagging?
 
@@ -359,13 +359,13 @@ Try to convince me though if you're sure about its advantages.
 
 ### How was our Path from the End?
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> Add provider
+<em class="fas fa-fw fa-lg fa-check text-success"></em> Add provider
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> Use expression language?
+<em class="fas fa-fw fa-lg fa-times text-danger"></em> Use expression language?
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> Does collector scale?
+<em class="fas fa-fw fa-lg fa-check text-success"></em> Does collector scale?
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> Add tagging
+<em class="fas fa-fw fa-lg fa-times text-danger"></em> Add tagging
 
 ## "Git Story" over git history
 

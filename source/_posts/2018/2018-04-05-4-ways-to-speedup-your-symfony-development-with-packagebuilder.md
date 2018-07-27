@@ -23,13 +23,13 @@ composer require symplify/package-builder
 ## 1. Console-Like `-vvv`-Aware Renders for Exceptions and Errors
 
 <a href="https://github.com/Symplify/Symplify/pull/732" class="btn btn-dark btn-sm mt-2 mb-3 pull-left">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #732
 </a>
 
 <a href="https://github.com/Symplify/Symplify/pull/720" class="btn btn-dark btn-sm mt-2 mb-3 ml-2">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #720
 </a>
@@ -122,7 +122,7 @@ try {
 ## 2. Drop Manual `public: true` for Every Service You Test
 
 <a href="https://github.com/Symplify/Symplify/pull/680" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #680
 </a>
@@ -192,7 +192,7 @@ Setup & forget.
 ## 3. Autowire Singly-Implemented Interfaces
 
 <a href="https://github.com/Symplify/Symplify/pull/645" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #645
 </a>
@@ -273,7 +273,7 @@ And then clean your configs the same way PSR-4 autodiscovery works:
 ## 4. How to Decouple Parameters to multiple files in Safe Way?
 
 <a href="https://github.com/Symplify/Symplify/pull/745" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fa fa-github"></em>
+    <em class="fas fa-github"></em>
     &nbsp;
     Check the PR #745
 </a>

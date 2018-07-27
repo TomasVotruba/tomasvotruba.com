@@ -186,13 +186,13 @@ $priceCalculatorCollector->addPriceCalculator(new UnitedKingdomPriceCalculator()
 $price = $priceCalculatorCollector->calculatePrice($product);
 ```
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> single entry point for `Collector`
+<em class="fas fa-fw fa-lg fa-check text-success"></em> single entry point for `Collector`
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> each solution that implements `PriceCalculatorInterface` **is reusable**
+<em class="fas fa-fw fa-lg fa-check text-success"></em> each solution that implements `PriceCalculatorInterface` **is reusable**
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> **to extend** `PriceCalculatorCollector` with another feature, e.g. have a discount for Lenovo laptops from now till the end of June 2018, **we don't have to modify** it - just register a new `PriceCalculator`
+<em class="fas fa-fw fa-lg fa-check text-success"></em> **to extend** `PriceCalculatorCollector` with another feature, e.g. have a discount for Lenovo laptops from now till the end of June 2018, **we don't have to modify** it - just register a new `PriceCalculator`
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> **to reflect 1 change in reality**, e.g. from 15 % to 20 % VAT, all we need to do it **change 1 class for everyone**
+<em class="fas fa-fw fa-lg fa-check text-success"></em> **to reflect 1 change in reality**, e.g. from 15 % to 20 % VAT, all we need to do it **change 1 class for everyone**
 
 <br>
 

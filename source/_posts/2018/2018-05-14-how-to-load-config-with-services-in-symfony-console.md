@@ -79,9 +79,9 @@ Use static approach, no services config, just list of items. Most spread solutio
 
 ### How if Fits?
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> Ready in 2 minutes
+<em class="fas fa-fw fa-lg fa-check text-success"></em> Ready in 2 minutes
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> Well, static
+<em class="fas fa-fw fa-lg fa-times text-danger"></em> Well, static
 
 ## 2. DI for Poor People: Container in a Command
 
@@ -110,11 +110,11 @@ class SomeCommand extends Command
 
 ### How if Fits?
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> Ready in 10 minutes
+<em class="fas fa-fw fa-lg fa-check text-success"></em> Ready in 10 minutes
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> Only local scope, we need to re-create container everywhere we need it
+<em class="fas fa-fw fa-lg fa-times text-danger"></em> Only local scope, we need to re-create container everywhere we need it
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> The Chicken vs. Egg problem still remains very clear
+<em class="fas fa-fw fa-lg fa-times text-danger"></em> The Chicken vs. Egg problem still remains very clear
 
 ## 3. Kill the Egg: The bin File Tuning
 
@@ -148,7 +148,7 @@ So what now?
 ### `ArgvInput` to the Rescue
 
 <a href="https://github.com/Symplify/Symplify/pull/198" class="btn btn-dark btn-sm">
-    <em class="fa fa-github fa-fw"></em>
+    <em class="fas fa-github fa-fw"></em>
     See pull-request #198
 </a>
 
@@ -232,11 +232,11 @@ What now? Add the `config` option to the `ShowCommand` definition?
 
 Wait a bit... Can you smell it?
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> Duplicated code
+<em class="fas fa-fw fa-lg fa-times text-danger"></em> Duplicated code
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> Not-lazy
+<em class="fas fa-fw fa-lg fa-times text-danger"></em> Not-lazy
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> Creates **memory lock** to 1 command → 1 extra operation. If we forget this, it will break.
+<em class="fas fa-fw fa-lg fa-times text-danger"></em> Creates **memory lock** to 1 command → 1 extra operation. If we forget this, it will break.
 
 <br>
 
@@ -334,15 +334,15 @@ bin/ecs check src --config custom-config.yml
 
 ### How if Fits?
 
-<em class="fa fa-fw fa-lg fa-times text-danger"></em> Ready in 15 minutes
+<em class="fas fa-fw fa-lg fa-times text-danger"></em> Ready in 15 minutes
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> Setup & Forget
+<em class="fas fa-fw fa-lg fa-check text-success"></em> Setup & Forget
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> Much more legacy-proof
+<em class="fas fa-fw fa-lg fa-check text-success"></em> Much more legacy-proof
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> We can now use Dependency Injection **everywhere we need**
+<em class="fas fa-fw fa-lg fa-check text-success"></em> We can now use Dependency Injection **everywhere we need**
 
-<em class="fa fa-fw fa-lg fa-check text-success"></em> And make use off Symfony, Nette or any other container features we're used to from Web Apps.
+<em class="fas fa-fw fa-lg fa-check text-success"></em> And make use off Symfony, Nette or any other container features we're used to from Web Apps.
 
 <br>
 
