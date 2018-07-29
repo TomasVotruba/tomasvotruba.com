@@ -189,7 +189,8 @@ pre[class*="language-"] {
 
 /* article helpers */
 .bigger {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    line-height: 1.6em;
 }
 
 img {
@@ -354,13 +355,18 @@ ul.line-separated > li:not(:last-child) {
     margin: .3em 0 .3em 0;
 }
 
-#mission .card ul {
-    margin: .3em 0 0 0;
-    padding-left: 1em;
+#mission ul li
+{
+    line-height: 1.6em;
 }
 
-#mission .card ul > li {
-    line-height: 2em;
+#mission .card ul {
+    margin: .3em 0 0 0;
+    padding-left: 1.2em;
+}
+
+#mission .card ul li {
+    line-height: 1.7em;
 }
 
 .pull-right {
