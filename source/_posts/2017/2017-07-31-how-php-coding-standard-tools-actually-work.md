@@ -26,7 +26,7 @@ That's laziness on a completely different level :)
 ## So Much for The Hype
 
 <div class="text-center">
-    <img src="https://content.artofmanliness.com/uploads/2015/08/Small-Things-Over-Time-2.jpg" style="max-width:100%">
+    <img src="https://content.artofmanliness.com/uploads/2015/08/Small-Things-Over-Time-2.jpg">
 </div>
 
 A lot is possible to do with these tools and I'll write about that in the future, but today we'll start with a much [smaller step](/blog/2017/02/22/fast-and-easy-way-to-learn-complex-topics/): a Checker that will inform us about coding standard violation. No changes, no refactoring.

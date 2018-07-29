@@ -146,7 +146,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/symfony3/profiler-before-after.png" alt="Nový design" style="max-width:60%">
+    <img src="/assets/images/posts/symfony3/profiler-before-after.png" alt="Nový design>
     <br>
     <em>Srovnání staré a nové verze</em>
 </div>
@@ -165,7 +165,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/symfony3/profiler-go-back.gif" alt="Odkaz na stránku" style="max-width:60%">
+    <img src="/assets/images/posts/symfony3/profiler-go-back.gif" alt="Odkaz na stránku">
     <br>
     <em>Snadno se dostaneš z profileru zpět na stránku</em>
 </div>

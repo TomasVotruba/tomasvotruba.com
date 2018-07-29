@@ -34,12 +34,12 @@ What are the 2 main differences between 3.0 and 2.8 then?
 - removing all deprecated code that provides compatibility to the BC 2.x (~ 10% of the code)
 
 
-## And now The Most Expected 4 News
+And now 4 the most expected news.
 
-### 1. Service Autowiring
+## 1. Service Autowiring
 
 <a href="https://github.com/symfony/symfony/pull/15613" class="btn btn-dark btn-sm">
-    <em class="fas fa-github fa-fw"></em>
+    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 
@@ -98,9 +98,7 @@ services:
         autowiring_types: MyBundle\MyInterface
 ```
 
-<hr>
-
-### 2. More Logical Folders
+## 2. More Logical Folders
 
 Symfony 3 full-stack brings order. Get rid of chaos in the `/app` folder.
 
@@ -120,13 +118,10 @@ All this is now obvious location separate from the code of our application.
 
 Tests you can run simply in command line via `vendor/bin/phpunit`.
 
-<hr>
-
-
-### 3. Symfony Profiler in a New Jacket
+## 3. Symfony Profiler in a New Jacket
 
 <a href="https://github.com/symfony/symfony/pull/15523" class="btn btn-dark btn-sm">
-    <em class="fas fa-github fa-fw"></em>
+    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 
@@ -140,7 +135,7 @@ Important information and above all error messages are now much easier to read.
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/2015/symfony3/profiler-before-after.png" style="max-width:60%" class="img-thumbnail">
+    <img src="/assets/images/posts/2015/symfony3/profiler-before-after.png" class="img-thumbnail">
 </div>
 
 <br>
@@ -152,18 +147,15 @@ Important information and above all error messages are now much easier to read.
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/2015/symfony3/profiler-go-back.gif" style="max-width:60%" class="img-thumbnail">
+    <img src="/assets/images/posts/2015/symfony3/profiler-go-back.gif" class="img-thumbnail">
     <br>
     <em>Easy to get from profiler back to page</em>
 </div>
 
-
-<hr>
-
-### 4. Micro Kernel
+## 4. Micro Kernel
 
 <a href="https://github.com/symfony/symfony/pull/15990" class="btn btn-dark btn-sm">
-    <em class="fas fa-github fa-fw"></em>
+    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 

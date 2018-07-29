@@ -118,7 +118,7 @@ Teď už ti zbývá poslední krok.
 4. změň A záznam a smaž AAAA záznamy
 
     <div class="text-center">
-        <img src="/assets/images/posts/2015/github-pages/domain-dns-2.png" alt="Edituj DNS záznamy" style="max-width:270px">
+        <img src="/assets/images/posts/2015/github-pages/domain-dns-2.png" alt="Edituj DNS záznamy">
         <br>
         <em>Uprav oba záznamy - jeden s hvězdičkou a druhý bez</em>
     </div>
