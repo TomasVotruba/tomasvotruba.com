@@ -14,17 +14,17 @@ tweet: "New Post on my Blog: Why is Your Company Losing Money by not #OpenSourci
 tweet_image: "/assets/images/posts/2018/open-source-money/contributors.gif"
 ---
 
-As a PHP meetup organizer in the Czech Republic, I'm in contact with many companies and HR agencies that try to hire PHP developers. I used *try* because the most of them use old-school methods, [boring job offers](/blog/2017/11/20/how-to-write-interesting-job-offers-for-programmers/), employees benefits like meal vouchers, possibility to work from home for only 1 day a week. They often end-up in giving up or using body shopping of random programmers for huge amounts of money. 
+As a PHP meetup organizer in the Czech Republic, I'm in contact with many companies and HR agencies that try to hire PHP developers. I used *try* because the most of them use old-school methods, [boring job offers](/blog/2017/11/20/how-to-write-interesting-job-offers-for-programmers/), employees benefits like meal vouchers, possibility to work from home for only 1 day a week. They often end-up in giving up or using body shopping of random programmers for huge amounts of money.
 
 <blockquote class="twitter-tweet text-center" data-lang="cs"><p lang="cs" dir="ltr">On <a href="https://twitter.com/PhpPrague?ref_src=twsrc%5Etfw">@PhpPrague</a> <a href="https://twitter.com/VotrubaT?ref_src=twsrc%5Etfw">@VotrubaT</a> about How to use Open Source to Hire. <a href="https://twitter.com/hashtag/OpenSource?src=hash&amp;ref_src=twsrc%5Etfw">#OpenSource</a> <a href="https://twitter.com/hashtag/Hiring?src=hash&amp;ref_src=twsrc%5Etfw">#Hiring</a> <a href="https://t.co/X7rUBv5zso">pic.twitter.com/X7rUBv5zso</a></p>&mdash; Veronika Hlavacova (@Sput_Nika) <a href="https://twitter.com/Sput_Nika/status/1010547562783354880?ref_src=twsrc%5Etfw">23. června 2018</a></blockquote>
-    
+
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    
+
 Honor exceptions like <a href="https://twitter.com/sput_nika">Veronika Hlaváčová</a>, who goes to meetups with disruptive ideas and is doing great job in teaching this the HR world.
 
 ### Open-Source Everything
 
-And you don't have to take my word for it. Do you know Github? It was founded in 2008 by 3 guys. One of them Tom Preston-Werner who wrote a post about investors vs. values in *[Optimize for Happiness](http://tom.preston-werner.com/2010/10/18/optimize-for-happiness.html)* and **also *[Open Source (Almost) Everything](http://tom.preston-werner.com/2011/11/22/open-source-everything.html)***. If you 
+And you don't have to take my word for it. Do you know Github? It was founded in 2008 by 3 guys. One of them Tom Preston-Werner who wrote a post about investors vs. values in *[Optimize for Happiness](http://tom.preston-werner.com/2010/10/18/optimize-for-happiness.html)* and **also *[Open Source (Almost) Everything](http://tom.preston-werner.com/2011/11/22/open-source-everything.html)***. If you
 have only 5 minutes to read a post today, go read one of them instead. It's well of pure wisdom.
 
 I found this post 2 weeks after my talk and I must say, I was surprised how many ideas I share with him. 7 years prior to my talk! Tom shares great insight on how to run a huge company while keeping human values in the center.
@@ -43,7 +43,7 @@ And by HR mean I mean a **person who can handle relationships a slightly better 
 
 You're skilled HR, so you prepare a job offer with a story about your company, list of benefits, that you're using PHP 7.1 and Symfony 4. **You'd pay 2 most popular job advertisement websites to spread the job offer**. If you're lucky and your programmers are proud of working at your company, they will share it on their Twitter accounts.
 
-You'll collect over 50 replies from developers in 2 weeks period and you invite them to a job interview. You might ask them to make an entrance task (which will tell you nothing) that will be evaluated by one of your senior programmers and **cost his time**.   
+You'll collect over 50 replies from developers in 2 weeks period and you invite them to a job interview. You might ask them to make an entrance task (which will tell you nothing) that will be evaluated by one of your senior programmers and **cost his time**.
 
 You'll pick top 20 people on the job interview and ask the senior programmer to join you. 30 minutes per each, you and the senior programmer → **another cost for 10 hours of 2 people**.
 
@@ -61,14 +61,14 @@ In the end, you decide to pick 1 programmer because you have only 1 senior who c
 ### Evaluate!
 
 - Estimated HR hours: **20**
-- Estimated senior programmer hours: **60** 
+- Estimated senior programmer hours: **60**
 - Estimated total costs: **10000 $**
 - The person hired: **1**
 - How much of this work can be automated next time: **~10 %** (the job offer is already written)
 
 ## B. The Story of Open Hiring
 
-You're a senior developer in your company and you have few open-sourced packages on Github. It's [Selenium wrapper](https://github.com/lmc-eu/steward) or set of the [coding standard](https://github.com/lmc-eu/steward). You're looking for a very specific developer. The one that understands the code you write finds it interesting and clean but also looks for a code where he or she can learn new skills. **So you won't post a general job offer anywhere**, because you know that would only attract people looking for any PHP job. 
+You're a senior developer in your company and you have few open-sourced packages on Github. It's [Selenium wrapper](https://github.com/lmc-eu/steward) or set of the [coding standard](https://github.com/lmc-eu/steward). You're looking for a very specific developer. The one that understands the code you write finds it interesting and clean but also looks for a code where he or she can learn new skills. **So you won't post a general job offer anywhere**, because you know that would only attract people looking for any PHP job.
 
 <div class="text-center">
     <img src="/assets/images/posts/2018/open-source-money/match.jpg">
@@ -77,7 +77,7 @@ You're a senior developer in your company and you have few open-sourced packages
 What you're looking for **a double match** right from the beginning. A programmer wants you and you want a programmer.
 So instead of posting a job offer and paying agencies which knows nothing about your company culture nor your code level, you'll get straight to the source of people who already know you.
 
-You go to your package on Github and open page with all the contributors. You know you need people that are active now, not years ago, so you limit only to last year or so. 
+You go to your package on Github and open page with all the contributors. You know you need people that are active now, not years ago, so you limit only to last year or so.
 
 <div class="text-center">
     <img src="/assets/images/posts/2018/open-source-money/contributors.gif" class="img-thumbnail">
@@ -91,18 +91,18 @@ Then, your HR and you will prepare a short email to **express your gratitude for
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/job-offers/attitude.jpg" class="img-thumbnail">
-</div>  
+</div>
 
 **You don't need to see any code, because you already know their level from merged pull-requests**. Neither do they, because they can imagine your company code level from open-sourced packages. But you know your public and private code differs, so you'll show them part of private code anyway, just to be sure they're ok with it.
 
-After these 4 hours, you'll mutually 2 developers that you'll hire for a full-time. **You know their level well at that moment**, no surprises here. 
+After these 4 hours, you'll mutually 2 developers that you'll hire for a full-time. **You know their level well at that moment**, no surprises here.
 
 In the end, you decide to pick 1 programmer because neither this process is ideal.
 
 ### Evaluate!
 
 - Estimated HR hours: **4**
-- Estimated senior programmer hours: **6** 
+- Estimated senior programmer hours: **6**
 - Estimated total costs: **2000 $**
 - The person hired: **1**
 - How much of this work can be automated next time: **~80 %**
@@ -113,7 +113,7 @@ So, how much money is your company losing by not open-sourcing?
 
 ## Slowly, but Surely
 
-The B. process is not ideal if you're doing the first time, because there are a lot of new things to learn. But I think your HR can handle it and get there on the 3rd round.  
+The B. process is not ideal if you're doing the first time, because there are a lot of new things to learn. But I think your HR can handle it and get there on the 3rd round.
 
 <br>
 
