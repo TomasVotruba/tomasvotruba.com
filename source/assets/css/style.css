@@ -360,16 +360,14 @@ ul.line-separated > li:not(:last-child) {
     line-height: 1.6em;
 }
 
-#mission .card > ul {
+#mission .card ul {
     margin: .3em 0 0 0;
-    padding-left: 1em;
+    padding-left: 1.2em;
 }
 
-#mission .card ul > li {
-    line-height: 2em;
+#mission .card ul li {
+    line-height: 1.7em;
 }
-
-
 
 .pull-right {
     float: right;
@@ -380,4 +378,3 @@ ul.line-separated > li:not(:last-child) {
     text-align: center;
     margin: .5em auto 1.5em auto;
 }
-
