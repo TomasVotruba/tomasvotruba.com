@@ -151,7 +151,7 @@ Do you want to add PHPStan to your project? [Read this short intro](/blog/2017/0
 
 
 <div class="text-center">
-    <img src="/assets/images/posts/2017/shopsys-static-anal-2/phpstan.png" style="max-width:100%" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/shopsys-static-anal-2/phpstan.png" class="img-thumbnail">
 </div>
 
 <br>
@@ -195,14 +195,12 @@ As we have seen in [the previous article](/blog/2017/08/28/shopsys-spriker-and-s
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png" style="max-width:100%" class="img-thumbnail">
+    <img src="/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png" class="img-thumbnail">
 </div>
 
 <br>
 
-
 **Results for lvl 0 and lvl 7**:
-
 
 <br>
 

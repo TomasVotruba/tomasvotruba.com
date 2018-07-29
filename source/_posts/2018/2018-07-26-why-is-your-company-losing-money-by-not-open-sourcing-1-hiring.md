@@ -70,8 +70,8 @@ In the end, you decide to pick 1 programmer because you have only 1 senior who c
 
 You're a senior developer in your company and you have few open-sourced packages on Github. It's [Selenium wrapper](https://github.com/lmc-eu/steward) or set of the [coding standard](https://github.com/lmc-eu/steward). You're looking for a very specific developer. The one that understands the code you write finds it interesting and clean but also looks for a code where he or she can learn new skills. **So you won't post a general job offer anywhere**, because you know that would only attract people looking for any PHP job. 
 
-<div class="text-center mt-4 mb-4">
-    <img src="/assets/images/posts/2018/open-source-money/match.jpg" style="max-width:500px" class="img-thumbnail">
+<div class="text-center">
+    <img src="/assets/images/posts/2018/open-source-money/match.jpg">
 </div>
 
 What you're looking for **a double match** right from the beginning. A programmer wants you and you want a programmer.
@@ -89,8 +89,8 @@ Then, your HR and you will prepare a short email to **express your gratitude for
 
 4 of them will reply with interest and you'll invite them to the interview, with you and your HR. Thanks to the low number of contestants, you can spend 1 hour with them and invite them for a lunch to get to know them as a person. Because that who you'll be working with - a whole person - and you want to be sure you'll match each other.
 
-<div class="text-center mt-4 mb-4">
-    <img src="/assets/images/posts/2017/job-offers/attitude.jpg" style="max-width:500px" class="img-thumbnail">
+<div class="text-center">
+    <img src="/assets/images/posts/2017/job-offers/attitude.jpg" class="img-thumbnail">
 </div>  
 
 **You don't need to see any code, because you already know their level from merged pull-requests**. Neither do they, because they can imagine your company code level from open-sourced packages. But you know your public and private code differs, so you'll show them part of private code anyway, just to be sure they're ok with it.

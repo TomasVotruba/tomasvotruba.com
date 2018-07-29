@@ -273,10 +273,6 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     color: #BBB;
 }
 
-#post img {
-    margin: 1em 0;
-}
-
 .hireMe {
 	font-size: 1.6rem;
 	margin: 2rem auto;
@@ -369,4 +365,10 @@ ul.line-separated > li:not(:last-child) {
 
 .pull-right {
     float: right;
+}
+
+/* default post setting */
+#post img {
+    text-align: center;
+    margin: .5em auto 1.5em auto;
 }
