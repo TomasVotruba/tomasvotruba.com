@@ -87,7 +87,7 @@ It accepts content, pattern to look for and replacement. This is basic building 
 $content = Nette\Utils\Strings::replace($content, '#{var \$?(.*?) = \$?(.*?)}#s', '{% set $1 = $2 %}');
 ```
 
-It's nice that you don't have to deal with PHP native edge-cases of regular expressions. I think regulars are difficult enough to work with, so this peace comes very handy.
+It's nice that you don't have to deal with PHP native edge-cases of regular expressions. I think regulars are difficult enough to work with, so this piece comes very handy.
 
 ### A `contains()` Method
 
@@ -131,7 +131,7 @@ if (Strings::endsWith($class, 'Interface')) {
 
 ### A `read()` Method
 
-If we know the file will be there (e.g. it's convention or we just put it there), we can use `file_ge_contents()`.
+If we know the file will be there (e.g. it's convention or we just put it there), we can use `file_get_contents()`.
 
 ```php
 $content = file_get_contents($accidentallyMissingFile);
