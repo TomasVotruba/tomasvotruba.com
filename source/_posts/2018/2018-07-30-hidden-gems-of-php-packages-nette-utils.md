@@ -2,7 +2,7 @@
 id: 127
 title: "Hidden Gems of PHP Packages: Nette\\Utils"
 perex: |
-    In this series, I will show you not-so-known PHP packages, that I use in my daily workflow. They're hard to describe but awesome to use.
+    In this series, I will show you **not-so-known PHP packages, that I happily use in my daily workflow**. They're hard to describe in few words for their various features, but awesome and simple to use.
     <br><br>
     Today we start with [Nette\Utils](https://github.com/nette/utils) package.
 tweet: "New Post on my Blog: Hidden Gems of PHP Packages: Nette\Utils #nettefw #utils #php #regulars #fails #wtf"
@@ -222,7 +222,11 @@ Nette\Utils\FileSystem::delete($source);
 
 <em class="fas fa-fw fa-check text-success fa-lg"></em>
 
-<blockquote class="blockquote text-center mt-3 mb-3">
+<br>
+
+Do you like it? **Go and give [Nette\Utils](https://github.com/nette/utils) a try**. It's the only package I allow to use static methods and that's a lot, since [I'm very strict to them](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/).
+
+<blockquote class="blockquote text-center mt-5 mb-5">
     Do you want to play with details someone else already solved for you<br>
     or<br>
     <strong>build your awesome application instead</strong>?
