@@ -1,6 +1,6 @@
 language: php
 
-php: 7.1
+php: 7.2
 
 install:
     - composer update
@@ -8,8 +8,6 @@ install:
 script:
     # run tests for tested posts (with "tested: true" in header configuration)
     - vendor/bin/phpunit --coverage-clover coverage.xml
-    # turn off XDebug
-    - phpenv config-rm xdebug.ini || return 0
 
     # static analysis
     - composer check-cs
@@ -20,11 +18,8 @@ script:
 
 after_script:
     # upload coverage.xml file to Coveralls to analyze it
-    - |
-        if [[ $PHPUNIT_FLAGS != "" ]]; then
-            wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar;
-            php coveralls.phar --verbose;
-        fi
+    - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar;
+    - php coveralls.phar --verbose;
 
 # see docs: https://www.statie.org/docs/github-pages/
 deploy:
