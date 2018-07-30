@@ -2,7 +2,7 @@
 id: 127
 title: "Hidden Gems of PHP Packages: Nette\\Utils"
 perex: |
-    In this series I will show you not-so-known PHP packages, that I use in my daily workflow. They're hard to describe, but awesome to use.
+    In this series, I will show you not-so-known PHP packages, that I use in my daily workflow. They're hard to describe but awesome to use.
     <br><br>
     Today we start with [Nette\Utils](https://github.com/nette/utils) package.
 tweet: "New Post on my Blog: Hidden Gems of PHP Packages: Nette\Utils #nettefw #utils #php #regulars #fails #wtf"
@@ -11,7 +11,7 @@ tweet_image: "/assets/images/posts/2018/nette-utils/warning.png"
 
 ## Why I Use it
 
-1. Do you know how the PHP function that check presence of string in another string?
+1. Do you know how the PHP function that checks the presence of a string in another string?
 
 2. Do you know what is the difference between those 3 calls?
 
@@ -161,7 +161,7 @@ Nette\Utils\FileSystem::read($accidentallyMissingFile);
 
 ### A `createDir()` method
 
-Do you want to create directory for your cache?
+Do you want to create a directory for your cache?
 
 ```php
 mkdir($cacheDiretory);
@@ -182,7 +182,7 @@ But what if the directory is `some/cache`?
 <em class="fas fa-fw fa-times text-danger fa-lg"></em> **Nested directory error!**
 
 
-Ok, but what if we don't care about these, because **all we need is to create a directory**?
+Ok, but what if we don't care about these because **all we need is to create a directory**?
 
 ```php
 Nette\Utils\FileSystem::createDir($cacheDirectory);
@@ -192,9 +192,9 @@ Nette\Utils\FileSystem::createDir($cacheDirectory);
 
 ### A `delete()` Method
 
-We want to delete temporary data in tests or a gallery of pictures. All we have is `$source`.
+We want to delete temporary data in tests or a gallery of pictures. All we have is a `$source` variable.
 
-I admit I often have to Google the name of this function, because it's super counter-intuitive to first that pops to my mind - `delete(file|directory)`.
+I admit I often have to Google the name of this function because it's super counter-intuitive to first that pops to my mind - `delete(file|directory)`.
 
 So let's try:
 
@@ -223,7 +223,7 @@ Nette\Utils\FileSystem::delete($source);
 <em class="fas fa-fw fa-check text-success fa-lg"></em>
 
 <blockquote class="blockquote text-center mt-3 mb-3">
-    Do you want to play with details somebody else already solved fo your<br>
+    Do you want to play with details someone else already solved for you<br>
     or<br>
     <strong>build your awesome application instead</strong>?
 </blockquote>
