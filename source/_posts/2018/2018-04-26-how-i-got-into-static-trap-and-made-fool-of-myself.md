@@ -242,7 +242,7 @@ To prevent this 10 hours of trauma happening ever again, I made [a `ForbiddenSta
 ```php
 class SomeClass
 {
-    public function someFunction()
+    public static function someFunction()
     {
     }
 }
@@ -253,7 +253,7 @@ class SomeClass
 ```php
 class SomeClass
 {
-    public static function someFunction()
+    public function someFunction()
     {
     }
 }
