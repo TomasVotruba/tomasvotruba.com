@@ -157,7 +157,7 @@ Nette\Utils\FileSystem::read($accidentallyMissingFile);
 
 <em class="fas fa-fw fa-check text-success fa-lg"></em> Kaboom! An Exception!
 
-### A `createDir()` method
+### `createDir()`
 
 Do you want to create a directory for your cache?
 
