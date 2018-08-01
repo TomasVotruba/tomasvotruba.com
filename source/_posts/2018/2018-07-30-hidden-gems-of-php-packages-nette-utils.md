@@ -11,7 +11,7 @@ tweet_image: "/assets/images/posts/2018/nette-utils/warning.png"
 
 ## Why I Use it
 
-1. Do you know how the PHP function that checks the presence of a string in another string?
+1. Do you know how is called the PHP function that checks the presence of a string in another string?
 
 2. Do you know what is the difference between those 3 calls?
 
@@ -35,7 +35,7 @@ I can't. I have to think hard to remember what was that danger WTF of [`strpos()
 
 <img src="/assets/images/posts/2018/nette-utils/warning.png" class="img-thumbnail">
 
-...that makes this code...
+...that makes this code run into condition, even though you don't want to:
 
 ```php
 $contains = strpos('content', $lookFor);
@@ -44,13 +44,11 @@ if ($contains) {
 }
 ```
 
-...run into condition, even though you don't want to.
-
 3. Do you prefer exceptions over `false`? Do you prefer exceptions over learning various errors codes in PHP native functions like `file_get_contents()` or `preg_replace`?
 
 <img src="/assets/images/posts/2018/nette-utils/preg_replace.png" class="img-thumbnail">
 
-4. Do you prefer thinking less about PHP language details and prefer doing more effective work while being safe?
+4. Do you prefer thinking less about PHP language details and doing more effective work while being safe?
 
 5. Do you prefer PHPStan not reporting forgotten validation of `bool|string` return type?
 
@@ -77,7 +75,7 @@ Instead, **we can look at real-life examples in Symplify code**. That's much mor
 
 ## `Strings` class
 
-### A `replace()` Method
+### `replace()`
 
 It accepts content, pattern to look for and replacement. This is basic building stone for packages like [LatteToTwigConverter](/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions/):
 
@@ -89,7 +87,7 @@ $content = Nette\Utils\Strings::replace($content, '#{var \$?(.*?) = \$?(.*?)}#s'
 
 It's nice that you don't have to deal with PHP native edge-cases of regular expressions. I think regulars are difficult enough to work with, so this piece comes very handy.
 
-### A `contains()` Method
+### `contains()`
 
 It accepts the content and the string we look for:
 
@@ -103,7 +101,7 @@ if (Nette\Utils\Strings::contains($key, '.')) {
 }
 ```
 
-### A `startsWith()` Method
+### `startsWith()`
 
 How to detect a nullable type?
 
@@ -119,7 +117,7 @@ return strpos('Content', $lookingFor) === ?;
 return strpos('Content', $lookingFor) === strlen($lookingFor);
 ```
 
-### An `endsWith()` Method
+### `endsWith()`
 
 ```php
 if (Strings::endsWith($class, 'Interface')) {
@@ -127,9 +125,9 @@ if (Strings::endsWith($class, 'Interface')) {
 }
 ```
 
-## 2. A `FileSystem` class
+## `FileSystem` class
 
-### A `read()` Method
+### `read()`
 
 If we know the file will be there (e.g. it's convention or we just put it there), we can use `file_get_contents()`.
 
@@ -190,7 +188,7 @@ Nette\Utils\FileSystem::createDir($cacheDirectory);
 
 <em class="fas fa-fw fa-check text-success fa-lg"></em>
 
-### A `delete()` Method
+### `delete()`
 
 We want to delete temporary data in tests or a gallery of pictures. All we have is a `$source` variable.
 
