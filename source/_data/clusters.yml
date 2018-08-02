@@ -3,7 +3,7 @@ parameters:
         -
             title: "Master PHP CLI Apps with Symfony"
             year_released: 2018
-            post_ids: [109, 103, 105]
+            post_ids: [128, 103, 109, 105]
             description: "Do you want to write CLI Apps in PHP like a boss but you never did that before? Or do you look for tips to improve your CLI project? This will help you write better and cleaner code no matter level you're on."
 
         -
