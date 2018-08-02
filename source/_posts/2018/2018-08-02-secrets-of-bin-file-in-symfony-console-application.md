@@ -4,11 +4,11 @@ title: "5 Gotchas of Bin File in Symfony Console Application"
 perex: |
     This post from [Master PHP CLI Apps with Symfony](/clusters/#master-php-cli-apps-with-symfony) cluster will focus on bin files. It's the smallest part of PHP CLI Application, so I usually start with it.
     <br><br>
-    Yet, there are still few blind paths you can struggle with. I'll drop few extra tricks to make your bin file clean and easy to maintain.
+    Yet, there are still a few blind paths you can struggle with. I'll drop a few extra tricks to make your bin file clean and easy to maintain.
 tweet: "New Post on my Blog: ..."
 ---
 
-## What is Bin File?
+## What is the Bin File?
 
 The bin file is not a trash bin. It's a binary file, the entry point to your application the same way `www/index.php` is. You probably already use them:
 
@@ -19,7 +19,7 @@ The bin file is not a trash bin. It's a binary file, the entry point to your app
 
 ## 1. Create it
 
-## The Name
+### The Name
 
 The bin file should be:
 
@@ -27,7 +27,7 @@ The bin file should be:
 - **short**,
 - **easy to type**,
 
-    So when I first released EasyCodingStandard, I used `easy-coding-standard` name. It way easy to remember, but when I had a talk I often miss-typed such a long name. After while I moved to `ecs`.
+    So when I first released EasyCodingStandard, I used `easy-coding-standard` name. It was easy to remember, but when I had a talk I often miss-typed such a long name. After a while, I moved to `ecs`.
 
 - **easy to remember**
 - and **unique**
@@ -64,9 +64,9 @@ And that's it!
 
 <br>
 
-No that fast. It might work for your `www/index.php` file in your application, but is **that application ever installed as a dependency**?
+Not that fast. It might work for your `www/index.php` file in your application, but is **that application ever installed as a dependency**?
 
-How do we cover autoload for a dependency? Imagine somebody would install `your-vendor/your-package` to his application. The file structure would look like this:
+How do we cover autoload for a dependency? Imagine somebody would install `your-vendor/your-package` on his application. The file structure would look like this:
 
 ```bash
 /src/
@@ -83,7 +83,7 @@ Now we need to get to `/vendor/autoload.php` of that application:
 +require_once  __DIR__ . '/../../../../vendor/autoload.php',
 ```
 
-Great, people can use our package now. But it stoped working for our local repository. We'll probably have seek for both of them:
+Great, people can use our package now. But it stopped working for our local repository. We'll probably have to seek for both of them:
 
 ```php
 <?php declare(strict_types=1);
@@ -103,7 +103,7 @@ foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
 }
 ```
 
-**Comments are very important**, because this is very easy to get lost in. Trust me, I managed to fail dozen times. Also other people will appreciate it, because it's WTF to see loading more than one `vendor/autoload.php`.
+**Comments are very important** because this is very easy to get lost in. Trust me, I managed to fail a dozen times. Also, other people will appreciate it because it's WTF to see loading more than one `vendor/autoload.php`.
 
 Imagine you'd move your package to a [monorepo structure](https://gomonorepo.org/):
 
@@ -135,7 +135,7 @@ Imagine you'd move your package to a [monorepo structure](https://gomonorepo.org
  foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
      if (file_exists($possibleAutoloadPath)) {
          require_once $possibleAutoloadPath;
-+        $isAutoloadFound = false;
++        $isAutoloadFound = true;
          break;
      }
  }
@@ -217,7 +217,7 @@ But not in:
 
 Too bad. We're super lazy, so we want it there. How can we make it happen?
 
-Composer has [special *bin* section](https://getcomposer.org/doc/articles/vendor-binaries.md#how-is-it-defined-), where we can **define the symlink path for your bin file**. Just add this to `composer.json` of your package:
+The Composer has [special *bin* section](https://getcomposer.org/doc/articles/vendor-binaries.md#how-is-it-defined-), where we can **define the symlink path for your bin file**. Just add this to `composer.json` of your package:
 
 ```json
 {
