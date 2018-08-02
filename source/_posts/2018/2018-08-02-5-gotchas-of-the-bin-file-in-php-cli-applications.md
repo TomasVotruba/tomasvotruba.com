@@ -1,11 +1,11 @@
 ---
 id: 128
-title: "5 Gotchas of Bin File in Symfony Console Application"
+title: "5 Gotchas of the Bin File in PHP CLI Applications"
 perex: |
     This post from [Master PHP CLI Apps with Symfony](/clusters/#master-php-cli-apps-with-symfony) cluster will focus on bin files. It's the smallest part of PHP CLI Application, so I usually start with it.
     <br><br>
     Yet, there are still a few blind paths you can struggle with. I'll drop a few extra tricks to make your bin file clean and easy to maintain.
-tweet: "New Post on my Blog: ..."
+tweet: "New Post on my Blog: 5 Gotchas of the #Bin #File in PHP CLI Applications  #symfony #composerphp"
 ---
 
 ## What is the Bin File?
