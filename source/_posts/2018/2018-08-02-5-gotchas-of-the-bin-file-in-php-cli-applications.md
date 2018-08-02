@@ -21,18 +21,11 @@ The bin file is not a trash bin. It's a binary file, the entry point to your app
 
 ### The Name
 
-The bin file should be:
+The bin file should be **named after the application**, **short** and **easy to type**.
+So when I first released EasyCodingStandard, I used `easy-coding-standard` name. It was easy to remember, but when I had a talk I often miss-typed such a long name. After a while, I moved to `ecs`.
 
-- **named after the application**,
-- **short**,
-- **easy to type**,
-
-    So when I first released EasyCodingStandard, I used `easy-coding-standard` name. It was easy to remember, but when I had a talk I often miss-typed such a long name. After a while, I moved to `ecs`.
-
-- **easy to remember**
-- and **unique**
-
-    Imagine that `php-cs-fixer` would be `phpcf` or `phpcf`. Since there is already `phpcs` taken, it might be trouble to remember. I think that's why the name is a little bit longer.
+It should be also **easy to remember** and **unique**.
+Imagine that `php-cs-fixer` would be `phpcf` or `phpcf`. Since there is already `phpcs` taken, it might be trouble to remember. I think that's why the name is a little bit longer.
 
 ### The Location
 
@@ -262,7 +255,7 @@ exit($application->run());
 
 And that's it!
 
-Do you want to know more, Just continue in [the cluster](/clusters/#master-php-cli-apps-with-symfony).
+Do you want to know more? See the [PHP CLI APP cluster](/clusters/#master-php-cli-apps-with-symfony).
 
 <br>
 
