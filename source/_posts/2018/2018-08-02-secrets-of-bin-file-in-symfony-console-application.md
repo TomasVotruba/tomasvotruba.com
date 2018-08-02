@@ -1,16 +1,16 @@
 ---
 id: 128
-title: "Secrets of Bin File in Symfony Console Application"
+title: "5 Gotchas of Bin File in Symfony Console Application"
 perex: |
-    This post from [Master PHP CLI Apps with Symfony](/clusters/#master-php-cli-apps-with-symfony) cluster will aim on bin files. It's the smallest part of PHP CLI Application, so I usually start with it.
+    This post from [Master PHP CLI Apps with Symfony](/clusters/#master-php-cli-apps-with-symfony) cluster will focus on bin files. It's the smallest part of PHP CLI Application, so I usually start with it.
     <br><br>
-    Yet, there are still few blind paths you can struggle with. I'll drop few extra tricks to make your bin file clean and easy to maintain. 
+    Yet, there are still few blind paths you can struggle with. I'll drop few extra tricks to make your bin file clean and easy to maintain.
 tweet: "New Post on my Blog: ..."
 ---
 
 ## What is Bin File?
 
-The bin file is not a trash bin. It's a binary file, the entry point to your application the same way `www/index.php` is. You probably already use them: 
+The bin file is not a trash bin. It's a binary file, the entry point to your application the same way `www/index.php` is. You probably already use them:
 
 - [vendor/bin/ecs](https://github.com/Symplify/Symplify/blob/master/packages/EasyCodingStandard/bin/ecs)
 - [vendor/bin/php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/php-cs-fixer)
@@ -22,14 +22,14 @@ The bin file is not a trash bin. It's a binary file, the entry point to your app
 ## The Name
 
 The bin file should be:
- 
-- **named after the application**, 
+
+- **named after the application**,
 - **short**,
-- **easy to type**, 
+- **easy to type**,
 
     So when I first released EasyCodingStandard, I used `easy-coding-standard` name. It way easy to remember, but when I had a talk I often miss-typed such a long name. After while I moved to `ecs`.
 
-- **easy to remember** 
+- **easy to remember**
 - and **unique**
 
     Imagine that `php-cs-fixer` would be `phpcf` or `phpcf`. Since there is already `phpcs` taken, it might be trouble to remember. I think that's why the name is a little bit longer.
@@ -52,7 +52,7 @@ With structure like this:
 /vendor/autoload.php
 ```
 
-The obvious code to add to `/bin/your-bind-file` is: 
+The obvious code to add to `/bin/your-bind-file` is:
 
 ```php
 <?php declare(strict_types=1);
@@ -66,7 +66,7 @@ And that's it!
 
 No that fast. It might work for your `www/index.php` file in your application, but is **that application ever installed as a dependency**?
 
-How do we cover autoload for a dependency? Imagine somebody would install `your-vendor/your-package` to his application:
+How do we cover autoload for a dependency? Imagine somebody would install `your-vendor/your-package` to his application. The file structure would look like this:
 
 ```bash
 /src/
@@ -74,13 +74,13 @@ How do we cover autoload for a dependency? Imagine somebody would install `your-
 /vendor/your-vendor/your-package/bin/your-bin-file
 ```
 
-No we need to get to `/vendor/autoload.php` of that application:
+Now we need to get to `/vendor/autoload.php` of that application:
 
 ```diff
  <?php declare(strict_types=1);
 
 -require_once  __DIR__ . '/../vendor/autoload.php';
-+require_once  __DIR__ . '/../../../autoload.php',
++require_once  __DIR__ . '/../../../../vendor/autoload.php',
 ```
 
 Great, people can use our package now. But it stoped working for our local repository. We'll probably have seek for both of them:
@@ -92,7 +92,7 @@ $possibleAutoloadPaths = [
     // local dev repository
     __DIR__ . '/../vendor/autoload.php',
     // dependency
-    __DIR__ . '/../../../autoload.php',
+    __DIR__ . '/../../../../vendor/autoload.php',
 ];
 
 foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
@@ -113,10 +113,39 @@ Imagine you'd move your package to a [monorepo structure](https://gomonorepo.org
 +    // after split repository
      __DIR__ . '/../vendor/autoload.php',
      // dependency
-     __DIR__ . '/../../../autoload.php',
+     __DIR__ . '/../../../../vendor/autoload.php',
 +    // monorepo
 +    __DIR__ . '/../../../vendor/autoload.php',
  ];
+```
+
+### Exceptionally Well Done
+
+```diff
+ <?php declare(strict_types=1);
+
+ $possibleAutoloadPaths = [
+     // local dev repository
+     __DIR__ . '/../vendor/autoload.php',
+     // dependency
+     __DIR__ . '/../../../../vendor/autoload.php',
+ ];
+
++$isAutoloadFound = false;
+ foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
+     if (file_exists($possibleAutoloadPath)) {
+         require_once $possibleAutoloadPath;
++        $isAutoloadFound = false;
+         break;
+     }
+ }
++
++if ($isAutoloadFound === false) {
++    throw new RuntimeException(sprintf(
++        'Unable to find "vendor/autoload.php" in "%s" paths.',
++        implode('", "', $possibleAutoloadPaths)
++    ));
++}
 ```
 
 ## 3. She Bangs
@@ -147,7 +176,7 @@ php composer
 
 No, because **we're lazy and we want to type as less as possible**. How do we achieve the same effect for our file?
 
-We add a [*shebang*](https://www.youtube.com/watch?v=5ihtX86JzmA) - a special line that will tell the system what interpret should be used: 
+We add a [*shebang*](https://www.youtube.com/watch?v=5ihtX86JzmA) - a special line that will tell the system what interpret should be used:
 
 ```php
 #!/usr/bin/env php
@@ -162,17 +191,17 @@ It can be translated to:
 /usr/bin/env php bin/your-bin-file
 ```
 
-Try it, it works!
+Try it. Does it work?
 
 ## 4. Free Access Rights
 
-This is required to allow running the file on other peoples computer: 
+This allows to run the bin file on other people's computer:
 
 ```php
 chmod +x bin/your-bin-file
 ```
 
-## 5. The `composer.json` Trick
+## 5. The Composer Symlink
 
 If we install your package, we'll find the bin file here:
 
@@ -186,10 +215,9 @@ But not in:
 /vendor/bin/your-bin-file
 ```
 
-Too bad. We're super lazy, so we want it there. How?
-Composer has [special *bin* section](https://getcomposer.org/doc/articles/vendor-binaries.md#how-is-it-defined-), where you can define the symlink path for your bin files:
+Too bad. We're super lazy, so we want it there. How can we make it happen?
 
-Just open `composer.json` of your package and add:
+Composer has [special *bin* section](https://getcomposer.org/doc/articles/vendor-binaries.md#how-is-it-defined-), where we can **define the symlink path for your bin file**. Just add this to `composer.json` of your package:
 
 ```json
 {
