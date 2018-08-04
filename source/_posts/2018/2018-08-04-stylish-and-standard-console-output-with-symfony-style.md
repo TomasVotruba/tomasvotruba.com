@@ -1,14 +1,14 @@
 ---
 id: 129
-title: "..."
+title: "Stylish and Standard Console Output with Symfony Style"
 perex: |
-    Even if you don't use any component from Symfony or even installed one, you can use this trick in you PHP CLI App.
+    Even if you don't use any component from Symfony or even installed one, you can use this trick in your PHP CLI App.
     <br><br>
-    It's simple, provides standard and makes your output look like design from Apple - useful and nice at the same time.  
-tweet: "New Post on my Blog: ..."
+    It's simple, provides standard and makes your output look like a design from Apple - useful and nice at the same time.
+tweet: "New Post on my Blog: Stylish and Standard Console Output with #Symfony Style"
 ---
 
-We want to **report various states** in PHP CLI Apps. Success message on finish, errors message in case of failure or just simple note so users knows that command is not stuck but working.
+We want to **report various states** in PHP CLI Apps. Success message on the finish, errors message in case of failure or just simple note so users know that command is not stuck but working.
 
 ## Too Many Ways to Do 1 Thing
 
@@ -21,8 +21,8 @@ try {
     // code
 } catch (Exception $exception) {
     echo $exception->getMessage();
-    return $exception->getCode();    
-} 
+    return $exception->getCode();
+}
 ```
 
 There is also a bit advanced use of native `OutputInterface` in command like [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/1c10240da97479274fd40a136c3857ff94f7f93f/src/Console/Command/FixCommand.php#L236-L239):
@@ -47,17 +47,17 @@ final class SomeCommand extends Command
 }
 ```
 
-Advantage of these approach is **they're cannot be simpler and they're ready to be used**. I bet everyone can use `echo 'DONE';`: 
+The advantage of these approaches is **they're cannot be simpler and they're ready to be used**. I bet everyone can use `echo 'DONE';`:
 
 <img src="/assets/images/posts/2018/console-output/plain.png">
 
 The second approach is not as easy, but if you're in a Symfony Command class using PHPStorm all you have to do is hit `Ctrl + Space` on an `$output` variable. And in their time they were good enough.
 
-But we want more than a plain text. **If websites can have CSS, colors and pictures, why not the CLI output?**
+But we want more than a plain text. **If websites can have CSS, colors, and pictures, why not the CLI output?**
 
 <img src="/assets/images/posts/2018/console-output/console.png">
 
-But it's not about colors, **it's about UX**. <em class="text-white bg-success p-2">Green</em> and <em class="text-white bg-danger p-2">red</em> lines instead of white on black spaghetti like on the first image.  
+But it's not about colors, **it's about UX**. <em class="text-white bg-success p-2">Green</em> and <em class="text-white bg-danger p-2">red</em> lines instead of white on black spaghetti like on the first image.
 
 <img src="/assets/images/posts/2018/console-output/tracy.png">
 
@@ -91,14 +91,14 @@ Which one do you like so far? So many colors, so many options... maybe too many.
 
 ### United We Stand, Divided We Autumn
 
-Do you remember when there were [dozen ways to create Dependency Injection Container](https://github.com/container-interop/container-interop)? Fortunately, the [PSR-11 was born](https://www.php-fig.org/psr/psr-11/) to solve this and moved our focus on things that matter more. 
+Do you remember when there were [a dozen ways to create Dependency Injection Container](https://github.com/container-interop/container-interop)? Fortunately, the [PSR-11 was born](https://www.php-fig.org/psr/psr-11/) to solve this and moved our focus to things that matter more.
 
 We don't want to play with colors, with `fg`, `underscore`, `green`, `cyan` (wtf is cyan?) words. Also, you know what they say:
 
 <blockquote class="blockquote text-center">
     Strings?<br>
     Break things.
-</blockquote> 
+</blockquote>
 
 **We want to print the error and get back to coding**.
 
@@ -108,11 +108,11 @@ I was super happy when the [SymfonyStyle](https://symfony.com/blog/new-in-symfon
 
 <img src="https://farm1.staticflickr.com/666/23555673406_6cbd4f5460_o.png">
 
-I think it's not and understatement to say that `SymfonyStyle` is state of art in this matter.
+I think it's not an understatement to say that `SymfonyStyle` is state of art in this matter.
 
 
-### 1. It's Easy to Integrate in Symfony Command
- 
+### 1. It's Easy to Integrate into Symfony Command
+
 PHPStan is [using it](https://github.com/phpstan/phpstan/blob/1e232b3da00671a578b0ba451c5d15c904a82fd5/src/Command/ErrorsConsoleStyle.php#L9):
 
  ```diff
@@ -126,7 +126,7 @@ PHPStan is [using it](https://github.com/phpstan/phpstan/blob/1e232b3da00671a578
  final class SomeCommand extends Command
  {
      protected function execute(InputInterface $input, OutputInterface $output)
-     {  
+     {
          $output->write('Working on it!');
 +         $symfonyStyle = new SymfonyStyle($input, $output);
 +         $symfonyStyle->note('Working on it!');
@@ -137,19 +137,19 @@ PHPStan is [using it](https://github.com/phpstan/phpstan/blob/1e232b3da00671a578
 
 ### 2. Don't make User Think
 
-When I was 13 years old I've accidentally read [*Don’t Make Me Think*](https://www.sensible.com/dmmt.html), amazing bug about UX, programming and psychology for dummies (I'm about to read 2014-revised version). The main point of the book was the Apple, the UX and the DX mantra - **create design that users already expect, don't teach them doing common things differently**.
+When I was 13 years old I've accidentally read [*Don’t Make Me Think*](https://www.sensible.com/dmmt.html), amazing bug about UX, programming and psychology for dummies (I'm about to read 2014-revised version). The main point of the book was the Apple, the UX, and the DX mantra - **create a design that users already expect, don't teach them doing common things differently**.
 
-I recall many CLI Apps that each has different output - no colors, different font-size, cool underlines, error message is not red but success is green etc. **User have to focus on the design and understand it instead of enjoy your app**. WTF of non-red exception is just great!
+I recall many CLI Apps that each has different output - no colors, different font-size, cool underlines, error message is not red but success is green etc. **User have to focus on the design and understand it instead of enjoying your app**. WTF of non-red exception is just great!
 
-This class offers a common way to not to make use think. ECS users it, Statie uses it, PHPStan uses it, Rector uses and [Steward](https://github.com/lmc-eu/steward/blob/66b90dc1b7325f680481e104ae19f7e6d77e7133/src/Console/Command/Command.php#L52) use it.
+This class offers a common way not to make use think. ECS users it, Statie uses it, PHPStan uses it, Rector uses and [Steward](https://github.com/lmc-eu/steward/blob/66b90dc1b7325f680481e104ae19f7e6d77e7133/src/Console/Command/Command.php#L52) use it.
 
 ### 3. SymfonyStyle as a Service
 
-You can create `SymfonyStyle` in simple static construction as in point 1, but what if you need it somewhere else than in a command? Imagine you have 1200 long Command (~= Controller) and you want to extract logic to another class? 
+You can create `SymfonyStyle` in simple static construction as in point 1, but what if you need it somewhere else than in a command? Imagine you have 1200 long Command (~= Controller) and you want to extract logic to another class?
 
-Do you have to pass whole command there or move the `SymfonyStyle` manually?
+Do you have to pass the whole command there or move the `SymfonyStyle` manually?
 
-Save [the vendor-locking statics](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/) for value objects and enjoy the constructor injection. There are more lines thatn one, because we need to register `Input` and `Output` as a services and autowire their interfaces.
+Save [the vendor-locking statics](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/) for value objects and enjoy the constructor injection. There are more lines than one because we need to register `Input` and `Output` as a service and autowire their interfaces.
 
 ```yaml
 services:
@@ -184,7 +184,7 @@ services:
 +    }
 +
      protected function execute(InputInterface $input, OutputInterface $output)
-     {  
+     {
 -         $symfonyStyle = new SymfonyStyle($input, $output);
 -         $symfonyStyle->note('Working on it!');
 +         $this->symfonyStyle->note('Working on it!');
@@ -194,11 +194,13 @@ services:
 }
 ```
 
-### 4. CustomStyle with SymfonyStyle
+### 4. Show Your Style
 
-Last little details that makes the whole experience smooth. In Rector we used Symfony style, but we needed to add just one extra method. We could have 2 services but that extra burden for the contributors... but **we don't make the user think**.
+Last little detail that makes the whole experience nice and smooth. EasyCodingStandard uses SymfonyStyle, but it needed to add 1 extra method.
 
-You can try composition, but you'd have to replicate to many public methods. I've tried it, used it and it shoot me back with too much maintenance. So instead we go for extension: 
+- There could be 2 services but that extra burden for the contributors... but **we don't make the user think**.
+- Then I tried composition, so I had to replicate many public methods. It shoots me back with too much maintenance and duplicated code.
+- After seeing these options, I've happily settled with extension:
 
 ```php
 final class OurStyle extends SymfonyStyle
@@ -210,7 +212,7 @@ final class OurStyle extends SymfonyStyle
 }
 ```
 
-One real example for all, check [`StewardStyle` class on Github](https://github.com/lmc-eu/steward/blob/724f72da6ae732065142f10b4100ea65b7282406/src/Console/Style/StewardStyle.php).
+*One real example for all, check [`StewardStyle` class on Github](https://github.com/lmc-eu/steward/blob/724f72da6ae732065142f10b4100ea65b7282406/src/Console/Style/StewardStyle.php).*
 
 
 <br><br>
@@ -230,7 +232,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 final class SomeCommand extends Command
 {
      protected function execute(InputInterface $input, OutputInterface $output)
-     {  
+     {
          $symfonyStyle = new SymfonyStyle($input, $output);
          $symfonyStyle->note('Working on it!');
          $symfonyStyle->success('DONE!');
