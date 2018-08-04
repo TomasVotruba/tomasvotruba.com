@@ -14,16 +14,18 @@ id: blog
             <div class="col-md-9">
                 <h1>Tomas Votruba</h1>
                 <p>
-                    I write for programmers who want to become <br>
-                    <strong>more effective, creative and <a href="/mission/">happier</a></strong><br>
-                    while using full power of open-source.
+                    I write for programmers who want to become <strong>more effective, creative and <a href="/mission/">happier</a></strong> while using full power of open-source.
+                </p>
+
+                <p class="pt-4">
+                    <strong>Decide what I write about</strong> - go to <a href="https://github.com/TomasVotruba/tomasvotruba.cz/issues/">upvote ideas or add a new one</a>
                 </p>
             </div>
         </div>
 
         <br>
 
-        {{ block('subscribeTop') }}
+        {{ block('searchRssAndTwitterPanel') }}
 
         {% set wasFirstPostMarked = false %}
 
@@ -112,7 +114,7 @@ id: blog
 {% endblock %}
 
 
-{% block subscribeTop %}
+{% block searchRssAndTwitterPanel %}
     <div class="row text-center">
         <!-- inspired and taken from: https://github.com/yegor256/blog/blob/master/_layouts/default.html -->
         <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction" n:syntax="off" class="col-md-5 col-sm-7 col-9 pull-left">
@@ -121,16 +123,12 @@ id: blog
             <input itemprop="query-input" type="text" id="search-query" class="form-control" required="required" name="q" placeholder="Search with Google..." autocomplete="off"/>
         </form>
 
-        {{ block('socials') }}
+        <a href="/rss.xml" class="btn btn-warning btn-sm pt-2">
+            <em class="fas fa-fw fa-rss"></em>
+        </a>
+
+        <a href="https://twitter.com/votrubaT" class="btn btn-primary btn-sm ml-3 pt-2">
+            <em class="fab fa-fw fa-twitter"></em>
+        </a>
     </div>
-{% endblock %}
-
-{% block socials %}
-    <a href="/rss.xml" class="btn btn-warning btn-sm pt-2">
-        <em class="fas fa-fw fa-rss"></em>
-    </a>
-
-    <a href="https://twitter.com/votrubaT" class="btn btn-primary btn-sm ml-3 pt-2">
-        <em class="fab fa-fw fa-twitter"></em>
-    </a>
 {% endblock %}
