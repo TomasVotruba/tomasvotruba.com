@@ -47,7 +47,7 @@ final class SomeCommand extends Command
 }
 ```
 
-The advantage of these approaches is **they're cannot be simpler and they're ready to be used**. I bet everyone can use `echo 'DONE';`:
+The advantage of these approaches is **they cannot be simpler and they're ready to be used**. I bet everyone can use `echo 'DONE';`:
 
 <img src="/assets/images/posts/2018/console-output/plain.png">
 
