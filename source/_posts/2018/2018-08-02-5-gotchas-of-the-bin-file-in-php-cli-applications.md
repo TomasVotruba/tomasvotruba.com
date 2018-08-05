@@ -152,7 +152,7 @@ bin/your-bin-file
 ↓
 
 ```bash
-vendor/bin/your-bin-file: 1: vendor/bin/ecs: Syntax error: "(" unexpected
+vendor/bin/your-bin-file: 1: vendor/bin/your-bin-file: Syntax error: "(" unexpected
 ```
 
 Well, we know it's in PHP so run it with PHP:
