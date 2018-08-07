@@ -10,7 +10,7 @@ tweet: "How to Write Custom Fixer for #phpcsfixer"
 tweet_image: "/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png"
 
 updated: true
-updated_since: "April 2018"
+updated_since: "August 2018"
 updated_message: |
     Updated with PHP CS Fixer 2.12.
     <br>
