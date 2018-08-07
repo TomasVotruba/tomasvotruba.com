@@ -1,6 +1,6 @@
 ---
 id: 47
-title: "How to Write Custom Fixer for PHP CS Fixer 2.4"
+title: "How to Write Custom Fixer for PHP CS Fixer 2.12"
 perex: |
     You already know <a href="/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/">how coding standard tools work with tokens and how to write a Sniff</a>.
      <br><br>
@@ -12,6 +12,9 @@ tweet_image: "/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.
 updated: true
 updated_since: "April 2018"
 updated_message: |
+    Updated with PHP CS Fixer 2.12.
+    <br>
+    <br>
     Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
@@ -27,17 +30,21 @@ That main difference of PHP CS Fixer to PHP_CodeSniffer is that **every Fixer ha
 
 Personally I like PHP CS Fixer a bit more, **because of more friendlier API, active community and openness to 3rd party packages**:
 
-<img src="/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png" class="img-thumbnail">
-<p>
-    <em><code>composer.json</code> from PHP CS Fixer</em>
-</p>
+<div class="text-center">
+    <img src="/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png" class="img-thumbnail">
+    <br>
+    <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/1c10240da97479274fd40a136c3857ff94f7f93f/composer.json#L16-L33">
+        <code>composer.json</code> from PHP CS Fixer
+    </a>
+</div>
 
 <br>
 
-<img src="/assets/images/posts/2017/php-cs-fixer-intro/code-sniffer-require.png" class="img-thumbnail">
-<p>
-    <em><code>composer.json</code> from PHP_CodeSniffer</em>
-</p>
+<div class="text-center">
+    <img src="/assets/images/posts/2017/php-cs-fixer-intro/code-sniffer-require.png" class="img-thumbnail">
+    <br>
+    <a href="https://github.com/squizlabs/PHP_CodeSniffer/blob/1e440f47e304e640217645e843cdacaacc5339b6/composer.json#L27-L32"><code>composer.json</code> from PHP_CodeSniffer</a>
+</div>
 
 <br>
 
