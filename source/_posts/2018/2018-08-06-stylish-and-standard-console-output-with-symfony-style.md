@@ -12,7 +12,7 @@ We want to **report various states** in PHP CLI Apps. Success message on the fin
 
 ## Too Many Ways to Do 1 Thing
 
-You cna use plain PHP like [in PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/blob/f893189392f9a0566aa837c4bcad3929c60d5348/src/Runner.php#L199):
+You can use plain PHP like [in PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer/blob/f893189392f9a0566aa837c4bcad3929c60d5348/src/Runner.php#L199):
 
 ```php
 <?php
