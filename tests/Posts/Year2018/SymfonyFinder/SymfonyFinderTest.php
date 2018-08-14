@@ -13,6 +13,7 @@ final class SymfonyFinderTest extends TestCase
             ->files()
             ->in(__DIR__)
             ->name('#\.(yaml|yml)$#')
+            ->sortByName()
             ->getIterator();
 
         $this->assertCount(2, $finder);
@@ -22,6 +23,6 @@ final class SymfonyFinderTest extends TestCase
             $fileNames[] = $splFileInfo->getFilename();
         }
 
-        $this->assertSame(['some_config.yml', 'another_config.yaml'], $fileNames);
+        $this->assertSame(['another_config.yaml', 'some_config.yml'], $fileNames);
     }
 }
