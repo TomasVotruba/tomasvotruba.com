@@ -86,7 +86,7 @@ foreach ($finder as $splFileInfo) {
 }
 ```
 
-## `Symfony\Componet\Finder\Finder`
+## `Symfony\Component\Finder\Finder`
 
 ### `name()`
 
