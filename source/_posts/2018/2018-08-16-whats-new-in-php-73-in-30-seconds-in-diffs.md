@@ -70,7 +70,7 @@ We'll be able to do this:
 
 -end($items);
 -$lastKey = key($items);
-+$lastKey = array_key_first($items);
++$lastKey = array_key_last($items);
  var_dump($lastKey); // 2
 ```
 
