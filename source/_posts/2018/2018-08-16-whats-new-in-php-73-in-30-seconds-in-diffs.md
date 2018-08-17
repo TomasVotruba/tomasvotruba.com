@@ -1,4 +1,4 @@
-1---
+---
 id: 132
 title: "What's New in PHP 7.3 in 30 Seconds in Diffs"
 perex: |
