@@ -1,20 +1,21 @@
 ---
 id: 133
-title: "Code Over Words: Extend Configuration in Easy Admin Bundle"
+title: "Painful Experience over Solutions: Extend Configuration in Easy Admin Bundle"
 perex: |
     *Use SOLID to write Clean Code...* Are you tired of theoretical post about how to do achieve some therm? So am I.
     <br> 
     Instead, let's **dive into real problems I came across while coding and let code speak the theory between lines**.
     <br><br>
     Today we try to add own config option to YAML of Easy Admin Bundle (without pull-request to the package).
-tweet: "New Post on my Blog: ..."
+tweet: "New Post on my Blog: ...     #phpstorm #collector #php #solid"
+tweet_image: "/assets/images/posts/2018/collector-easy-admin-bundle/random.png"
 ---
 
 <blockquote class="blockquote text-center">
     Hindsight is 20/20.
 </blockquote>
 
-Instead of writing about solution how to do and how awesome I am to know the solution, I start right from the beginning.
+Instead of writing about solution how to do and how awesome I am to know the solution right from the start of this page, I start right from the beginning, where I know nothing about it just like you.
 
 <br> 
 
@@ -249,7 +250,7 @@ Hm, I see a tag with `easyadmin.config_pass`, let's look for that.
 
 <img src="/assets/images/posts/2018/collector-easy-admin-bundle/bingo.png" class="img-thumbnail">
 
-Bingo! I've just found a collector!
+Bingo! **I've just [found a collector](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code).**
 
 **That means I can add my own service that has this tag and I'm inside the configuration**: 
 
@@ -262,12 +263,13 @@ services:
                  priority: 120 # it took me more time to figure out if -100 or 0 or 100 or 1000 means "the first"
 ``` 
 
-And how `ExcludeFieldsConfigPass` looks like? Simple:
+And how `ExcludeFieldsConfigPass` looks like? That's just implementation detail:
 
 `fields` = properties - `exclude_fields` 
 
-You can check it [in full code](https://github.com/TomasVotruba/open-training/pull/7/files#diff-318660bf4cd1ad8a5d0e608e94df8fae). 
+You can check it [in full code](https://github.com/TomasVotruba/open-training/pull/7/files#diff-318660bf4cd1ad8a5d0e608e94df8fae).
 
+Very smart move Javier! 
 
 ## Learn 1 Algorithm instead of 10 Solutions
 
