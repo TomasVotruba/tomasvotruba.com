@@ -15,5 +15,5 @@ parameters:
         -
             title: "Collector Pattern, The Shortcut Hack to SOLID Code"
             year_released: 2018
-            post_ids: [114, 80, 36]
+            post_ids: [114, 80, 36, 133]
             description: "Collector is the one pattern that will help your code exponentially. It's super easy to start using in every level of application. Stop learning 5 SOLID principles theory and start using it in your code today."
