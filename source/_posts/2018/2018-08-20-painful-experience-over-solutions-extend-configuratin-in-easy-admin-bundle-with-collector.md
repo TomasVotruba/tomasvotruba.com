@@ -274,7 +274,7 @@ Very smart move Javier!
 ## Learn 1 Algorithm instead of 10 Solutions
 
 I hope I've shown you how to approach problems and how to find a way in situations you're the first time in.
-The same way I don't memorize Wikipedia and just Google it instead, **I don't remember remembering 100 solutions to PHP problems, but have a couple of algorithms to approach problem solution**.
+The same way I don't memorize Wikipedia and just Google it instead, **I don't remember solutions to 100 PHP problems, but have a couple of algorithms to approach problem solution**.
 
 - Try A. - Failed?
 - Try B. - Failed?
