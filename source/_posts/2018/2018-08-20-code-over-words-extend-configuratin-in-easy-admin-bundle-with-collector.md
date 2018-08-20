@@ -1,0 +1,295 @@
+---
+id: 133
+title: "Code Over Words: Extend Configuration in Easy Admin Bundle"
+perex: |
+    *Use SOLID to write Clean Code...* Are you tired of theoretical post about how to do achieve some therm? So am I.
+    <br> 
+    Instead, let's **dive into real problems I came across while coding and let code speak the theory between lines**.
+    <br><br>
+    Today we try to add own config option to YAML of Easy Admin Bundle (without pull-request to the package).
+tweet: "New Post on my Blog: ..."
+---
+
+<blockquote class="blockquote text-center">
+    Hindsight is 20/20.
+</blockquote>
+
+Instead of writing about solution how to do and how awesome I am to know the solution, I start right from the beginning.
+
+<br> 
+
+### The Application
+
+I'm coding an open-sourced training platform build Symfony 4.2 and Doctrine 2.7 for [Pehapkari community trainings](https://github.com/pehapkari/). It's fully open-sourced on Github under typical open-source name - [Open Training](https://github.com/tomasvotruba/open-training).
+
+Admin is just a CRUD to maintain few entities, so I use [EasyAdminBundle](https://github.com/easyCorp/EasyAdminBundle) to handle forms, grids, update, create, delete actions in controllers for me. Huge thanks to [Javier Eguiluz](https://github.com/javiereguiluz/) for this amazing simple and powerful idea.
+
+<img src="https://symfony.com/doc/current/bundles/EasyAdminBundle/_images/easyadmin-default-backend.png">
+
+### The Need
+
+There is `Training` entity with `name` and relation to `TrainingTerm` entity:
+ 
+```php
+<?php declare(strict_types=1);
+
+namespace App\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ */
+class Training
+{
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     * @var int
+     */
+    private $id;
+    
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $name;
+
+    // ...
+    
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\TrainingTerm", mappedBy="training")
+     * @var TrainingTerm[]|ArrayCollection
+     */
+    private $trainingTerms = [];
+}
+```
+
+I want to edit this entity in administration, so I add it to `config/packages/easy_admin.yaml`:
+
+```yaml
+easy_admin:
+    entities:
+        Training:
+            class: 'App\Entity\Training'
+``` 
+
+This creates grid and form with all the entity properties - `name` and `trainingTerms`. So, when I click *Add* in the admin I can change them both. **But I want to change the `name` only and handle `TrainingTerm` entity in standalone form.**
+
+### Google First
+
+Now what? I Google *easy admin custom field form* and after while I find [*Customize the Properties Displayed*](https://symfony.com/doc/current/bundles/EasyAdminBundle/book/edit-new-configuration.html#customize-the-properties-displayed) tutorial. It looks like exactly what I need.
+
+```diff
+ easy_admin:
+     entities:
+         Training:
+             class: 'App\Entity\Training'
++            fields: ['name']
+``` 
+
+It works! The `trainingTerms` property is hidden in the form. 
+
+<br>
+
+### But...
+
+After 2 hours I need to add `price`.
+
+```diff
+ <?php declare(strict_types=1);
+
+ namespace App\Entity;
+
+ use Doctrine\Common\Collections\ArrayCollection;
+ use Doctrine\ORM\Mapping as ORM;
+
+ /**
+  * @ORM\Entity
+  */
+ class Training
+ {
+     // ...
+     
++    /**
++     * @ORM\Column(type="integer")
++     * @var int
++     */
++    private $price; 
+```
+
+Price is there, geat! Now we can earn some money. I *edit* training in admin... but, where is the price?
+
+Because I'm coding many other features I don't realize, there is *memory-vendor-lock* - **a code smell, when after doing the A, you always have to remember the B**. Do you see it? When I add a property, I always have a to add it to `fields` in config. 
+
+```diff
+ easy_admin:
+     entities:
+         Training:
+             class: 'App\Entity\Training'
+-            fields: ['name']
++            fields: ['name', 'price']
+```
+
+If this is the only case, that would be ok-ish. But now there are 10 entities with 50 properties. How the hell will I remember to do this on every new properties I add? 
+
+```diff
+# ...
+-            fields: ['name', 'price']
++            fields: ['name', 'price', 'capacity']
+```
+
+And how can will anyone else find this out without me doing the code-review and remembering? 
+
+```diff
+# ...
+-            fields: ['name', 'price', 'capacity']
++            fields: ['name', 'price', 'capacity', 'duration']
+```
+
+So much *memory-leaks* it hurts my neurons.
+
+### Creative Time
+
+Life is not perfect and every code is legacy by the time you end the line with `;`.
+
+<blockquote class="blockquote text-center">
+    There are no solutions. Just trade-offs.
+</blockquote> 
+
+I stop and think a bit. How can I write less code to prevent possible bugs and make changes as effective as possible?
+**I see there are less properties to exclude than properties to include**, by 1:10. It would not be perfect code, but still 10 times safer and more effective code. Worth it!
+
+```diff
+ easy_admin:
+     entities:
+         Training:
+             class: 'App\Entity\Training'
+-            fields: ['name', 'price', 'capacity', 'duration', 'perex', 'description', 'place', 'trainer']
++            exclude_fields: ['trainingTerms']
+```  
+
+### Make that Happen and Face False Expectations
+
+But is that `exclude_fields` or `excluded_fields` or maybe `skip_fields`? I want to see the documentation, so I Google *[easy admin bundle exclude fields](https://www.google.cz/search?q=easy+admin+bundle+exclude+fields&oq=easy+admin+bundle+exclude+fields&aqs=chrome..69i57.4891j0j7&sourceid=chrome&ie=UTF-8). I find [*Exclude fields in list fields* issue in EasyAdminBundle](https://github.com/EasyCorp/EasyAdminBundle/issues/589). I read it and see the content is not what I need.
+
+Hm, what now? It looks like this option is not supported. I'm sad.
+
+Open-source packages are closed to extension more than you'd expect. So to add one custom feature, you have to basically copy and extend the whole class or even use reflection. It's not that would be hard to create such a code, but nobody *believes* it can be done in nice way. 
+
+Saying this I start my *inner over-engineer*:
+
+- "Create own extension that will hack into the `EasyAdminExtension` and get the config and add `exclude_fields` option"
+- "Create own `BetterEasyAdminBundle` that will be run before the `EasyAdminBundle` and will pass parameters there"
+
+This might end-up wasting many hours on cool custom and usless solution, only because I wouldn't take more time to investigate. Lucky for me, I continued my brainstorming:
+
+- "Send pull-request with this feature to the core code"
+
+This is great idea, but what if Javier doesn't like it or is on holiday for 3 weeks? I know, it's summer and very rare to happen, but I have finish the app in 2 weeks and I don't want to think about bugs like these in the meantime.
+
+The least I can do is create [an issue](https://github.com/EasyCorp/EasyAdminBundle/issues/2325), describe my problem, reasons and suggest a solution.
+
+### Wander in the Code
+
+I need a solution and I need it today. What can I do? Here comes the interesting part that helped to achieve much better and fast solution. No hacking, no pull-request, just random-searching in the EasyAdminBundle code.
+
+<img src="/assets/images/posts/2018/collector-easy-admin-bundle/random.png" class="img-thumbnail">
+
+Do you think this is just a random screen-shot not worth your attention?
+
+- there is checkbox in 'Match case', because `'fields'` is lowercased and we want to focus on that only (no properties or methods with `Fields`)
+- there is limit to '*.php', because that would be probably place to extend
+- there is limit to `Directory`: `/../vendor/easycorp`, because we want to hack in to this package
+- there is `fields`, because later I improve it to `'fields'` to narrow results, because we know it's a string
+
+**I still have no idea about solution I'll pick. I'm only randomly looking for light, blind-folded in dark foggy forest.** 
+This is called *creative chaos* in coaching circles and it's the most important part of the client's work.     
+
+<br>
+
+I scroll down a bit looking at both code and and the file name. Suddenly, fog starts slowly disappearing...
+
+<img src="/assets/images/posts/2018/collector-easy-admin-bundle/pass.png" class="img-thumbnail">
+
+ConfigPass? Is that like `CompilerPassInterface`, a collector-pattern used in Symfony to modify services in container?
+
+I open it from curiosity:
+
+```php
+<?php
+
+// ...
+
+namespace EasyCorp\Bundle\EasyAdminBundle\Configuration;
+
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+class NormalizerConfigPass implements ConfigPassInterface
+{
+    // ...
+}
+```
+
+An interface! That's a good sign.
+
+### Keep Wandering
+
+So I look for `ConfigPassInterface` in somewhere else than just `implements ConfigPassInterface`.
+ 
+That doesn't work, so I try to look for `ConfigPass`.
+
+That doesn't work, so I try to look for any file, not just `*.php`. That show as valuable, since services are defined in YAML or XML.
+
+<img src="/assets/images/posts/2018/collector-easy-admin-bundle/services.png" class="img-thumbnail">
+
+Hm, I see a tag with `easyadmin.config_pass`, let's look for that.
+
+<img src="/assets/images/posts/2018/collector-easy-admin-bundle/bingo.png" class="img-thumbnail">
+
+Bingo! I've just found a collector!
+
+**That means I can add my own service that has this tag and I'm inside the configuration**: 
+
+```yaml
+services:
+    ExcludeFieldsConfigPass:
+        tags:
+             -
+                 name: "easyadmin.config_pass"
+                 priority: 120 # it took me more time to figure out if -100 or 0 or 100 or 1000 means "the first"
+``` 
+
+And how `ExcludeFieldsConfigPass` looks like? Simple:
+
+`fields` = properties - `exclude_fields` 
+
+You can check it [in full code](https://github.com/TomasVotruba/open-training/pull/7/files#diff-318660bf4cd1ad8a5d0e608e94df8fae). 
+
+
+## Learn 1 Algorithm instead of 10 Solutions
+
+I hope I've showed you how to approach problems and how to find a way in situations you're first time in.
+The same way I don't memorize Wikipedia and just Google it instead, **I don't remember remembering 100 solutions to PHP problems, but have couple of algorithms to approach problem solution**. 
+
+- Try A. - Failed? 
+- Try B. - Failed? 
+- Try C. - Failed? 
+- Take a break to prevent trauma :)
+- Try D. - Failed? 
+- Try E. - Failed? 
+- Try F. - Kaboom! It works! 
+
+ 
+<br>
+<br>
+
+If this all can figure out artificial intelligence for us, we're screwed :).
+
+Btw, are you coming to [Human Level AI Conference](https://www.hlai-conf.org/) in Prague this weekend? I'll be there and I'd be happy if you stop me and say Hi!
+
+<br>
+
+Happy solving!
