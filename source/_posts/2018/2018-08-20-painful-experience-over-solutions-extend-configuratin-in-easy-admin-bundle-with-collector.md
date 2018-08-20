@@ -174,37 +174,39 @@ I stop and think a bit. How can I write less code to prevent possible bugs and m
 
 ### Make that Happen and Face False Expectations
 
-But is that `exclude_fields` or `excluded_fields` or maybe `skip_fields`? I want to see the documentation, so I Google *[easy admin bundle excludes fields](https://www.google.cz/search?q=easy+admin+bundle+exclude+fields&oq=easy+admin+bundle+exclude+fields&aqs=chrome..69i57.4891j0j7&sourceid=chrome&ie=UTF-8). I find [*Exclude fields in list fields* issue in EasyAdminBundle](https://github.com/EasyCorp/EasyAdminBundle/issues/589). I read it and see the content is not what I need.
+But is that `exclude_fields` or `excluded_fields` or maybe `skip_fields`? I want to see the documentation, so I Google [*easy admin bundle excludes fields*](https://www.google.cz/search?q=easy+admin+bundle+exclude+fields&oq=easy+admin+bundle+exclude+fields&aqs=chrome..69i57.4891j0j7&sourceid=chrome&ie=UTF-8). I find [*Exclude fields in list fields* issue in EasyAdminBundle](https://github.com/EasyCorp/EasyAdminBundle/issues/589). I read it and see the content **is not what I need**. It looks like this option is not supported. I'm sad. What now?
 
-Hm, what now? It looks like this option is not supported. I'm sad.
+<br>
 
-Open-source packages are closed to extension more than you'd expect. So to add one custom feature, you have to basically copy and extend the whole class or even use reflection. It's not that would be hard to create such a code, but nobody *believes* it can be done in a nice way.
+Open-source packages are closed to extension more than you'd expect. To add one custom feature, you have to basically copy and extend the whole class or use reflection. It's not **because it's difficult to create an extendable code, it's because nobody *believes* it can be done in a nice way**. It *can*, just keep reading.
 
-Saying this I start my *inner over-engineer*:
+<br>
+
+Being that suspicious I start my *inner over-engineer* voice:
 
 - "Create own extension that will hack into the `EasyAdminExtension` and get the config and add `exclude_fields` option"
 - "Create own `BetterEasyAdminBundle` that will be run before the `EasyAdminBundle` and will pass parameters there"
 
-This might end-up wasting many hours on cool custom and useless solution, only because I wouldn't take more time to investigate. Lucky for me, I continued my brainstorming:
+**This might end-up wasting many hours** on custom and useless solution (like "create own Doctrine" idea, true story). Instead I try to invest a bit more time and I continue the brainstorming:
 
 - "Send pull-request with this feature to the core code"
 
-This is a great idea, but what if Javier doesn't like it or is on holiday for 3 weeks? I know, it's summer and very rare to happen, but I have finished the app in 2 weeks and I don't want to think about bugs like these in the meantime.
+Slightly better, but what if Javier doesn't like it? Or what if he's on holiday for 3 weeks? I know, it's summer and very rare to happen, but I have to finish the app in 2 weeks and I don't want to think about bugs like these in the meantime. The **least I can do is to create [an issue](https://github.com/EasyCorp/EasyAdminBundle/issues/2325)** with this idea and my reasons for it.
 
-The least I can do is create [an issue](https://github.com/EasyCorp/EasyAdminBundle/issues/2325), describe my problem, reasons and suggest a solution.
+## Wander in the Code
 
-### Wander in the Code
-
-I need a solution and I need it today. What can I do? Here comes the interesting part that helped to achieve much better and fast solution. No hacking, no pull-request, just random-searching in the EasyAdminBundle code.
+I need a solution and I need it today. What can I do? No hacking, no pull-request, just looking for something in files:
 
 <img src="/assets/images/posts/2018/collector-easy-admin-bundle/random.png" class="img-thumbnail">
 
 Do you think this is just a random screen-shot not worth your attention?
 
-- there is a checkbox in 'Match case' because `'fields'` is lowercased and we want to focus on that only (no properties or methods with `Fields`)
-- there is a limit to '*.php' because that would be probably placed to extend
-- there is a limit to `Directory`: `/../vendor/easycorp`, because we want to hack into this package
-- there is `fields` word in search, because later I improve it to `'fields'` to narrow results, because we know it's a string
+- there is a checkbox in *Match case* because `'fields'` is lowercased and we want to focus on that only (no properties or methods with `Fields`)
+- there is a limit to `*.php` because that *would be probably* place to extend
+- there is a limit to *Directory*: `/../vendor/easycorp`, because we want to hack into this package
+- there is `fields` word in search; later I improve it to `'fields'` to narrow results, because we know it's a string
+
+<br>
 
 **I still have no idea about the solution I'll pick. I'm only randomly looking for the light, blindfolded in a dark foggy forest.**
 This is called *creative chaos* in coaching circles and it's the most important part of the client's work.
@@ -215,9 +217,9 @@ I scroll down a bit looking at both code and the file name. Suddenly, the fog st
 
 <img src="/assets/images/posts/2018/collector-easy-admin-bundle/pass.png" class="img-thumbnail">
 
-ConfigPass? Is that like `CompilerPassInterface`, a collector-pattern used in Symfony to modify services in the container?
+I notice `*ConfigPass` suffix. Is that like `CompilerPassInterface`, a collector-pattern used in Symfony to modify services in the container?
 
-I open it from curiosity:
+Being curious I open `NormalizerConfigPass.php` file:
 
 ```php
 <?php
@@ -246,13 +248,27 @@ That doesn't work, so I try to look for any file, not just `*.php`. That show as
 
 <img src="/assets/images/posts/2018/collector-easy-admin-bundle/services.png" class="img-thumbnail">
 
-Hm, I see a tag with `easyadmin.config_pass`, let's look for that.
+I see a tag: `easyadmin.config_pass`. Let's look for that string:
 
 <img src="/assets/images/posts/2018/collector-easy-admin-bundle/bingo.png" class="img-thumbnail">
 
-Bingo! **I've just [found a collector](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code).**
+Warmer! **I've just [found a collector](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code).** To config, I look for service under `easyadmin.config.manager` name - [`ConfigManager`](https://github.com/EasyCorp/EasyAdminBundle/blob/07194017918aebe382e1ab0e53c68f6242547a0e/src/Configuration/ConfigManager.php#L112-L119) and look for `foreach` on collected services:
 
-**That means I can add my own service that has this tag and I'm inside the configuration**:
+```php
+private function doProcessConfig($backendConfig): array
+    {
+    foreach ($this->configPasses as $configPass) {
+        $backendConfig = $configPass->process($backendConfig);
+    }
+
+    return $backendConfig;
+}
+```
+
+Bingo! **That means, when I register a service with `easyadmin.config_pass` tag, I'll be able to read and modify the YAML configuration**.
+
+So I register a service:
+
 
 ```yaml
 services:
@@ -263,31 +279,41 @@ services:
                  priority: 120 # it took me more time to figure out if -100 or 0 or 100 or 1000 means "the first"
 ```
 
-And how `ExcludeFieldsConfigPass` looks like? That's just implementation detail:
+That does 1 thing:
 
-`fields` = properties - `exclude_fields`
+`fields` (value to be set) = entity properties − `exclude_fields` (value I set in the config)
 
-You can check it [in full code](https://github.com/TomasVotruba/open-training/pull/7/files#diff-318660bf4cd1ad8a5d0e608e94df8fae).
+<br>
 
-Very smart move Javier!
+It allows me to do simplify `config/packages/easy_admin.yaml` config:
+
+```diff
+ easy_admin:
+     entities:
+         Training:
+             class: 'App\Entity\Training'
+-            fields: ['name', 'price', 'capacity', 'duration', 'perex', 'description', 'place', 'trainer']
++            exclude_fields: ['trainingTerms']
+```
+
+You can see full code of [`ExcludeFieldsConfigPass` on Github](https://github.com/TomasVotruba/open-training/pull/7/files#diff-318660bf4cd1ad8a5d0e608e94df8fae).
+
+Very smart move Javier - thank you!
 
 ## Learn 1 Algorithm instead of 10 Solutions
 
-I hope I've shown you how to approach problems and how to find a way in situations you're the first time in.
-The same way I don't memorize Wikipedia and just Google it instead, **I don't remember solutions to 100 PHP problems, but have a couple of algorithms to approach problem solution**.
+And that's all folks. I hope I've shown you how to approach problems and how to find a way in situations you're the first time in.
+The same way I don't memorize Wikipedia and just Google it instead, **I don't remember solutions to 100 PHP problems, but have a couple of algorithms to approach problem solving**.
 
-- Try A. - Failed?
-- Try B. - Failed?
-- Try C. - Failed?
-- Take a break to prevent trauma :)
-- Try D. - Failed?
-- Try E. - Failed?
-- Try F. - Kaboom! It works!
-
+- Try A - Failed?
+- Try B - Failed?
+- Try C - Failed?
+- Take a break to prevent [learned helplessness](https://en.wikipedia.org/wiki/Learned_helplessness) :)
+- Try D - Failed?
+- Try E - Failed?
+- Try F - Kaboom! It works!
 
 <br>
-<br>
-
 If this all can figure out artificial intelligence for us, we're screwed :).
 
 Btw, are you coming to [Human Level AI Conference](https://www.hlai-conf.org/) in Prague this weekend? I'll be there and I'd be happy if you stop me and say Hi!
