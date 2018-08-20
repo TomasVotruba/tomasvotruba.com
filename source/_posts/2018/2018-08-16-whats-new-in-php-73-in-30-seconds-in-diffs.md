@@ -140,7 +140,7 @@ But in case of that smelly (3rd party) code, there is a help:
 +json_decode($json, null, null, JSON_THROW_ON_ERROR);
 ```
 
-So you'll be able to:
+So you'll be able to do:
 
 ```php
 try {
@@ -150,7 +150,7 @@ try {
 }
 ```
 
-I use similar technique for years thanks to [Nette\Utils](https://doc.nette.org/en/2.4/json) and I've never complaint:
+I've used similar technique for years thanks to [Nette\Utils](https://doc.nette.org/en/2.4/json) and I've never complained:
 
 ```php
 <?php
@@ -166,4 +166,4 @@ try {
 
 <br>
 
-Did I miss a feature you plan to use from day 1 of your PHP 7.3? I might too, drop it in comments!
+Did I miss a feature you plan to use from day 1 of your PHP 7.3? I might too, drop it in the comments!
