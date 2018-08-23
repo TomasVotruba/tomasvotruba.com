@@ -3,7 +3,7 @@ id: 134
 title: "9 Features of Symfony Plugin You Should Not Miss in Gifs"
 perex: |
     After very successful [PHP 7.3 diffs post](/blog/2018/08/16/whats-new-in-php-73-in-30-seconds-in-diffs/), let's dive to gifs of [Symfony Plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin). You might know them, but they **might surprise you like they did surprise me**. Let's go! 
-tweet: "New Post on my Blog: 5 Awesome Features from Symfony Plugin in Gifs #phpstorm #symfony #gifs #learnIn30secs"
+tweet: "New Post on my Blog: 9 Features of Symfony Plugin You Should Not Miss in Gifs #phpstorm #symfony #gifs #learnIn30secs"
 tweet_image: "/assets/images/posts/2018/symfony-plugin/@todo.png"
 ---
 
