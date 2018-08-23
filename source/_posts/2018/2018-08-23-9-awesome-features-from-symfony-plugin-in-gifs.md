@@ -1,0 +1,78 @@
+---
+id: 134
+title: "9 Awesome Features from Symfony Plugin in Gifs"
+perex: |
+    After very successful [PHP 7.3 diffs post](/blog/2018/08/16/whats-new-in-php-73-in-30-seconds-in-diffs/), let's dive to gifs of [Symfony Plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin). You might know them, but they **might surprise you like they did surprise me**. Let's go! 
+tweet: "New Post on my Blog: 5 Awesome Features from Symfony Plugin in Gifs #phpstorm #symfony #gifs #learnIn30secs"
+tweet_image: "/assets/images/posts/2018/symfony-plugin/@todo.png"
+---
+
+## 1. Enable the Plugin
+
+<img src="/assets/images/posts/2018/symfony-plugin/enable.gif" class="img-thumbnail">
+
+Easy, but must have step!
+
+<br>
+
+## 2. Faster Translation Autocreate (TWIG)
+
+<img src="/assets/images/posts/2018/symfony-plugin/translate-add-key.gif" class="img-thumbnail">
+
+<br>
+
+## 3. Autocomplete The Key (TWIG)
+
+Not the key! Write your `|trans` first.
+
+<img src="/assets/images/posts/2018/symfony-plugin/translate-autocomplete.gif" class="img-thumbnail">
+ 
+<br>
+
+## 4. Instant Service Autocomplete in YAML  (YAML)
+
+The trick is go after `:`.
+
+<img src="/assets/images/posts/2018/symfony-plugin/yaml-class.gif" class="img-thumbnail">
+
+<br>
+
+## 5. Forget The Tag (YAML) 
+
+The trick is go after `:`.
+
+<img src="/assets/images/posts/2018/symfony-plugin/yaml-tag.gif" class="img-thumbnail">
+
+<br>
+
+## 6. Jump from Href to Route (TWIG)
+
+<img src="/assets/images/posts/2018/symfony-plugin/route-in-twig.gif" class="img-thumbnail">
+
+<br>
+
+## 7. Instant Route in Controller (PHP)
+
+<img src="/assets/images/posts/2018/symfony-plugin/route-in-php.gif" class="img-thumbnail">
+
+<br>
+
+## 8. Faster Queries in Doctrine Repository (PHP)
+
+<img src="/assets/images/posts/2018/symfony-plugin/doctrine-query-autocomplete.gif" class="img-thumbnail">
+
+<br>
+
+## 9. Template Autocomplete (PHP)
+
+You probably know the basic template autocomplete from `/templates`.
+
+But how to do the same for decoupled templates in `/packages/Provision/templates`?
+
+<img src="/assets/images/posts/2018/symfony-plugin/template-elsewhere.gif" class="img-thumbnail">
+
+<br>
+
+That's it!
+
+What number was **new to you**? And which feature I missed?
