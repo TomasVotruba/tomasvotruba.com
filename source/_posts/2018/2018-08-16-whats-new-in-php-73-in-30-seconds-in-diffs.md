@@ -124,7 +124,7 @@ But in case of that smelly (3rd party) code, there is a help:
 
 ## 4. Safer JSON Parsing
 
-<a href="https://wiki.php.net/rfc/is-countable" class="btn btn-info btn-sm">
+<a href="https://wiki.php.net/rfc/json_throw_on_error" class="btn btn-info btn-sm">
     <em class="fab fa-php fa-fw"></em>
     &nbsp;
     See RFC
