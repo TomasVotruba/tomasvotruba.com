@@ -9,9 +9,9 @@ tweet_image: "/assets/images/posts/2018/symfony-plugin/@todo.png"
 
 ## 1. Enable the Plugin
 
-<img src="/assets/images/posts/2018/symfony-plugin/enable.gif" class="img-thumbnail">
-
 Easy, but must have step!
+
+<img src="/assets/images/posts/2018/symfony-plugin/enable.gif" class="img-thumbnail">
 
 <br>
 
@@ -21,9 +21,9 @@ Easy, but must have step!
 
 <br>
 
-## 3. Autocomplete The Key (TWIG)
+## 3. Autocomplete Translation Key (TWIG)
 
-Not the key! Write your `|trans` first.
+Write your `|trans` first.
 
 <img src="/assets/images/posts/2018/symfony-plugin/translate-autocomplete.gif" class="img-thumbnail">
  
@@ -65,9 +65,7 @@ The trick is go after `:`.
 
 ## 9. Template Autocomplete (PHP)
 
-You probably know the basic template autocomplete from `/templates`.
-
-But how to do the same for decoupled templates in `/packages/Provision/templates`?
+You know the basic template autocomplete from `/templates`. But how to do that for decoupled templates in `/packages/Provision/templates`?
 
 <img src="/assets/images/posts/2018/symfony-plugin/template-elsewhere.gif" class="img-thumbnail">
 
