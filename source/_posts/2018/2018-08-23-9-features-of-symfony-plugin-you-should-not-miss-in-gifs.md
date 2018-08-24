@@ -39,7 +39,7 @@ The trick is go after `:`.
 
 ## 5. Forget The Tag (YAML) 
 
-The trick is go after `:`.
+The trick is go ahead `:`.
 
 <img src="/assets/images/posts/2018/symfony-plugin/yaml-tag.gif" class="img-thumbnail">
 
