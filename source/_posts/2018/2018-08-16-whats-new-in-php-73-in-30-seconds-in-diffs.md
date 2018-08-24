@@ -28,11 +28,24 @@ Do you know this?
 We'll be able to do this:
 
 ```diff
+ $this->someFunction(
+     $arg,
++    $arg2,
+ );
+```
+
+But **still not this**:
+
+```diff
  function someFunction(
      $arg,
 +    $arg2,
  ) {}
 ```
+
+Thanks [Jacob](/blog/2018/08/16/whats-new-in-php-73-in-30-seconds-in-diffs/#comment-4056622976) for pointing [this difference](https://wiki.php.net/rfc/trailing-comma-function-calls#wait_didn_t_we_just_vote_on_this) out.
+
+<br>
 
 *25 seconds to go...*
 
@@ -95,11 +108,10 @@ I don't think having a variable of 2 forms is a good idea:
 ```php
 <?php
 
-$items = null; // save as "private $items;"
+$items = null; // same as "private $items;" in a class
 
-foreach ($items as $item) { // PHP Warning:  Invalid argument supplied for foreach()
-   // ...
-}
+echo sprintf('There is %d items', count($items));
+// error Warning: count(): Parameter must be an array or an object that implements Countable
 ```
 
 But in case of that smelly (3rd party) code, there is a help:
@@ -109,13 +121,10 @@ But in case of that smelly (3rd party) code, there is a help:
 ```diff
  $items = null;
 
-+if (! is_countable($items)) {
-+    return;
++if (is_countable($items)) {
+-echo sprintf('There is %d items', count($items));
++     echo sprintf('There is %d items', count($items));
 +}
-
- foreach ($items as $item) {
-     // ...
- }
 ```
 
 *Only 5 seconds, hurry!*
