@@ -204,7 +204,11 @@ I'm taking the title from my favorite [intro UX book](http://sensible.com/dmmt.h
 
 ## 1. Change Array Return
 
-The memory lock: *after I change array value, I have to put it back into an original set of an array or return it*.
+<div class="card">
+    <div class="card-body">
+        The memory lock: <em>after I change array value, I have to put it back into an original set of an array or return it</em>.
+    </div>
+</div>
 
 Snippets 1 and 2.
 
@@ -252,17 +256,17 @@ Objects [consume less memory](https://gist.github.com/nikic/5015323) anyway and 
 
 ## 2. Double-Method Call
 
-The memory lock: *after I call this method I have to call that method to make it really work.*.
+<div class="card">
+    <div class="card-body">
+       The memory lock: <em>After I call this method I have to call that method to make it really work</em>.
+    </div>
+</div>
 
 Snippets 3 and 5.
 
 You also have to think about the C - the order:
 
 ```php
-<?php
-
-// ...
-
 $this->bookGenerator->setBookDirectory($bookDirectory);
 $this->bookGenerator->generate();
 ```
@@ -270,12 +274,14 @@ $this->bookGenerator->generate();
 vs.
 
 ```php
-<?php
-
-// ...
-
 $this->bookGenerator->generate();
 $this->bookGenerator->setBookDirectory($bookDirectory);
+```
+
+vs.
+
+```php
+$this->bookGenerator->generate();
 ```
 
 ### How to Solve it?
@@ -310,7 +316,11 @@ I dare you to generate the book or save the product the wrong way now!
 
 Snippets 4, 6 and 7.
 
-The memory lock: *after I call anything in parent method, I have check if I need to call the constructor to prepare some logic*.
+<div class="card">
+    <div class="card-body">
+       The memory lock: <em>After I call anything in parent method, I have check if I need to call the constructor to prepare some logic</em>.
+    </div>
+</div>
 
 This would actually fail:
 
@@ -347,6 +357,8 @@ In this case just add default value to property itself:
 There is even coding [standard fixer for that](https://github.com/symplify/codingstandard#array-property-should-have-default-value-to-prevent-undefined-array-issues).
 
 Also, **do not add any logic to constructor** apart dependency injection. Constructor injection is the main reason to use the constructor in 99 %, so most people probably don't expect any extra logic there. Create extra method instead or decouple a class, put it into the constructor and call the method on it.
+
+**Try to avoid these patterns in code, in door design or in architecture of the application as a whole.** One day some programmer will silently thank you when he or she will find what *memory lock* is (the painful way).
 
 <br>
 
