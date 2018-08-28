@@ -95,9 +95,16 @@
                     </div>
                 {% endif %}
 
-                <a name="comments"></a>
+                <div class="card mb-5 small">
+                    <div class="card-body text-center">
+                        <a href="{{ post|githubEditPostUrl }}" class="btn btn-info btn-sm">
+                            <em class="fas fa-fw fa-edit"></em>
+                            Typo? Fix me, please
+                        </a>
+                    </div>
+                </div>
 
-                <h3>What do you think?</h3>
+                <a name="comments"></a>
 
                 {% include "_snippets/disqusComments.twig" with { 'post': post } %}
             </div>
