@@ -66,30 +66,28 @@
                 {% include "_snippets/post/postYouMightAlsoLike.twig" with { "post": post } %}
 
                 {% if post.tested is defined %}
-                    <div class="mt-5 mb-5 card card-bigger">
+                    <div class="mt-1 mb-5 card">
+                        <div class="card-header text-center">
+                            <h3 class="text-center mt-2">
+                                <em class="fas fa-check"></em>
+                                &nbsp;
+                                Travis Knowns the Code Works
+                            </h3>
+                        </div>
+
                         <div class="card-body">
                             {% set testDirectoryOnGithub %}{{ github_repository_tests_directory }}/Posts/Year{{ post.getDateInFormat('Y') }}/{{ post.test_slug }}{% endset %}
+
                             <p>
-                                <strong>This Post is Tested, Make it Last Forever</strong>
+                                The code used in this post is tested daily with Travis CI. You can <a href="{{ testDirectoryOnGithub }}">see tests on Github</a>.
                             </p>
 
                             <p>
-                                The final code is tested (<a href="{{ testDirectoryOnGithub }}"><em class="fab fa-fw fa-github"></em> see it on Github</a>) and is the best solution in time being.
-                            </p>
-
-                            <p>
-                                Thanks to tests this code:
+                                Thanks to tests this post:
                                 <ul>
-                                    <li><strong>always run against the most recent dependencies</strong></li>
-                                    <li>will get updates with just a little work</li>
-                                    <li>will be useful for as long as possible</li>
+                                    <li>always run against the most recent dependencies</li>
+                                <li><strong>gets updates and stays relevant for many years</strong> even when new <a href="https://semver.org/#spec-item-8">major version</a> of PHP or Symfony is released</li>
                                 </ul>
-                            </p>
-
-                            <p>
-                                Read more <a href="https://pehapkari.cz/blog/2017/01/12/why-articles-with-code-examples-should-be-CI-tested">about tested posts as they're essential for post's lifetime</a>.</p>
-                            <p>
-                                <strong>Without tests the post won't make it through next <a href="https://semver.org/#spec-item-8">major</a> release</strong> and it's long tail effect would spread obsolete practise.
                             </p>
                         </div>
                     </div>
