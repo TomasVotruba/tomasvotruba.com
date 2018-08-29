@@ -1,12 +1,12 @@
 parameters:
     talks:
-    -
+        -
             title: "You Won’t Upgrade that Manually, Right?"
             year: 2018
             event_name: "Symfony User Group Berlin, August 2018"
             event_link: "https://www.meetup.com/sfugberlin/events/253573567/"
             slides_link: "https://docs.google.com/presentation/d/1jGlKzuQXNFLyF1jERlS3FiRhRMeSaR9fQr8XoqAtWV0/edit?usp=sharing"
-            demo_link: "https://github.com/rectorphp/rector/pull/602"
+            demo_link: "https://github.com/rectorphp/rector/pull/602/files"
         -
             title: "Why Your Company Loses Money By Not-Open-Sourcing"
             year: 2018
