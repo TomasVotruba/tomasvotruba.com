@@ -378,3 +378,13 @@ ul.line-separated > li:not(:last-child) {
     text-align: center;
     margin: .5em auto 1.5em auto;
 }
+
+/* own util classe */
+.mmt-3 {
+    margin-top: -.3em;
+}
+
+.mmt-2 {
+    margin-top: -.2
+    em;
+}
