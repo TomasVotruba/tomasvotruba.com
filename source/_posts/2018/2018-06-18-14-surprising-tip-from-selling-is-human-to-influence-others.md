@@ -59,7 +59,7 @@ Take following quotes as list of notes you'd make by reading the whole book. Sav
 
 <br>
 
-## 3. To much Positive Harms
+## 3. Too much Positive Harms
 
 <blockquote class="blockquote">
     Once positive emotions outnumbered negative emotions by 3:1 - that is, for every three instances of feeling gratitude, interest, or contentment, they experienced only one instance of anger, guilt, or embarrassment - people generally flourished. Those below that ratio usually did not. But Fredrickson and Losada also found that positivity had an upper limit. <storng>Too much can be as unproductive as too little. Once the ratio hit about 11 to 1, positive emotions began doing more harm than good.</storng>
