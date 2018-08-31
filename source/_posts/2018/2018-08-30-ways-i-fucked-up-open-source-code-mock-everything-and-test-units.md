@@ -25,7 +25,7 @@ I took mocking, aimed for a high coverage and make unit tests strictly unit. Eac
 
 ## How I Found Out I Failed?
 
-The story could end here with success final note. I turned 0  % coverage to 84 % on a project I never coded before. I used mocks and unit test - that's cool and great, right? I was not until 2 years later I worked on the code again to experience the real "added" value. Without exposing to feedback there is no place to improve.
+The story could end here with success final note. I turned 0  % coverage to 84 % on a project I never coded before. I used mocks and unit test - that's cool and great, right? It wasn't until 2 years later I worked on the code again to experience the real "added" value. Without exposing to feedback there is no place to improve.
 
 <img src="/assets/images/posts/2018/fuckups/before-after.png" class="img-thumbnail">
 
