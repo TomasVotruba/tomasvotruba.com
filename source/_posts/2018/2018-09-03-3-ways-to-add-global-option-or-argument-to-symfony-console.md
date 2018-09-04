@@ -1,6 +1,6 @@
 ---
 id: 137
-title: "3 Ways to Add Global Option or Argument to Symfony Console"
+title: "4 Ways to Add Global Option or Argument to Symfony Console"
 perex: |
     I'm working on [ChangelogLinker](https://github.com/symplify/changeloglinker), a package that makes managing `CHANGELOG.md` very easy - it generates it. It a CLI Application with a [3 Console Commands](https://github.com/Symplify/ChangelogLinker/tree/master/src/Console/Command). All was good, until **I needed to add argument to all commands at once**... and in lazy, extensible, maintainable way.
 tweet: "..."
@@ -10,7 +10,7 @@ Why? Symplify `CHANGELOG.md` was growing and growing, keeping upgrade data about
 
 <img src="/assets/images/posts/2018/global-option/multiple-changelog.png" class="img-thumbnail">
 
-At that time, the path to file was hardcoded as `getcwd() . '/CHANGELOG.md'`. So each command worked only with that file:
+At that time, the path to file was hardcoded as `getcwd() . '/CHANGELOG.md'`, so each command worked only with that file:
 
 ```bash
 vendor/bin/changelog dump-merges  
@@ -26,7 +26,7 @@ vendor/bin/changelog link CHANGELOG-2.md
 vendor/bin/changelog cleanup CHANGELOG-3.md
 ```
 
-What are the options?
+We need to add global file argument. So, what option do we have?
 
 ## 1. Add Argument to Each Command
 
@@ -39,7 +39,7 @@ What are the options?
      protected function configure(): void
      {
          // ...
-         $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
++        $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
      }
  }
  
@@ -49,7 +49,7 @@ What are the options?
      protected function configure(): void
      {
          // ...
-         $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
++        $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
      }
  }
   
@@ -58,29 +58,29 @@ What are the options?
      protected function configure(): void
      {
          // ...
-         $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
++        $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
      }
  }
 ```
 
-:+:
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
-- It's fast: under 2 minutes including reading this post.
-- It's the most common way to add argument and options to Commands.
+- It's the fastest way - under 2 minutes including reading this post.
+- It's the most common way to add argument and options to Commands - most people would understand it.
 
-:-:
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 
-- Well, have you noticed the `wiht` typo? Now I have to change it to `with` in every single command.
-- For any change, you have to find and modify every single place this duplicated code is in.    
-- When a new command is added, you have to remember to add exactly this line there - you already know [how memory-locks backfire](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/), right?
+- Well, have you noticed the "wiht" typo? Now I have to **fix it in every single class**.
+- For every change, we have to find and modify every single place this **duplicated code** is in.    
+- When a new command is added, you have to remember to **add exactly this line there** - you already know [how memory-locks backfire](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/), right?
 
 Good for create & sell applications, bad for projects you want to work on for couple of years.
 
-### 2. Modify Application Definition
+## 2. Modify Application Definition
 
-I'll tell you a secret. There is one place you can modify definition not just for active command, but for the whole application.
+I'll tell you a secret. There is one place you can **modify definition not just for active command, but for the whole application** - it's Application Definition!
 
-It's Application Definition! The first simple & short solution I Googled (you'd probably too) is to modify it in bin file:
+The first simple & short solution you'd [Googled up](https://gist.github.com/dhrrgn/8847309) is to modify it in bin file:
 
 ```diff
  <?php
@@ -96,26 +96,25 @@ It's Application Definition! The first simple & short solution I Googled (you'd 
  $application->run();
 ```   
 
-:+:
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
-- 1 place to maintain this messge
+- 1 place to maintain the code
 
-:-: 
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages 
 
-- breaks encapsulatoin - we program outside the Application = when you get the application somehwere else, ti might broke
+- we program outside the Application - when we get the application somewhere else (e.g. tests), it might broke
+
+   ```php   
    $application = $container->get(Application::class);
-   $application->run(); // passing `CHANGELOG-2.md` as argument
+   $application->run(); 
+   // passing `CHANGELOG-2.md` as argument → invalid argument error
+   ```
+   
+- that's why the should be encapsulated - always prefer tree dependencies over these circle ones    
 
-([source](https://gist.github.com/dhrrgn/8847309))
+## 3. The <strike>Symfony</strike> Event Subscriber Way
 
-### 3. The Event Subscriber way
-
-Another way you'll found on [Matthias Noback's blog](https://matthiasnoback.nl/2013/11/symfony2-add-a-global-option-to-console-commands-and-generate-pid-file/) is using Event Subscriber.
-The post is 5 years old and I don't think Matthias still sees this as the best way to go, yet Google shows it in top 5 reseults. When you combine that Matthias has very popular blog with many succesful and valuable posts, some might think this is the best practise to do it in Symfony\Console. *Think before you blink!* 
-
-Unfortutunaly, this answer also spraed to stackoverlofw: https://stackoverflow.com/questions/40674814/how-to-add-a-new-command-line-option-to-symfony-console wihtou concurrency :()
-
-To do similar process than above, just in encapsulated service-based event-subscriber way, you'll have to:
+I found this approach on [Matthias Noback's blog](https://matthiasnoback.nl/2013/11/symfony2-add-a-global-option-to-console-commands-and-generate-pid-file/). The process is similar as above, just wrapped in event subscriber that hooks into Console Application cycle: 
 
 ```php
 <?php
@@ -123,7 +122,8 @@ To do similar process than above, just in encapsulated service-based event-subsc
 use Symfony\Component\Console\Event\ConsoleCommandEvent;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
- 
+use Symfony\Component\Console\ConsoleEvents; 
+
 final class FileArgumentEventSubscriber implements EventSubscriberInterface
 {
     /**
@@ -131,38 +131,39 @@ final class FileArgumentEventSubscriber implements EventSubscriberInterface
      */
     public static function getSubscribedEvents(): array
     {
-        return ['console.command' => 'onConsoleCommand'];
+        return [ConsoleEvents::COMMAND => 'onConsoleCommand'];
     }
 
     public function onConsoleCommand(ConsoleCommandEvent $event): void
     {
-        $applicationDefinitoin = $event->getCommand()->getApplication()->getDefinition();
-        $applicationDefinitoin->addArguments([
-           new InputArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
+        $applicationDefinition = $event->getCommand()->getApplication()->getDefinition();
+        $applicationDefinition->addArguments([
+           new InputArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work with')
         ]);
     }
 }
 ```
 
-Tadá!
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
-:+:
+- there is 1 place to maintain the code
+- our application is consistent everywhere
 
-- your applicatoin is consistenet everywhere
-- you're using symfony evnets and they are cool and hyped among community (though often use in everything than *can* be used, no what *should*)
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages 
 
-:-:
+There are now new memory-locks, that not really needed:
 
-- you have to add evnet dispatcre - `composer require symfony/event-dispatcher`
-- you have to load it with subscribers/listeners
-- you have to pass evnet distapcher to symfony console - another place you might forget
+- we have to have/add event dispatcher - `composer require symfony/event-dispatcher`
+- we have to load it with subscribers/listeners
+- we have to pass event dispatcher to symfony console
+- we break one of [object calisthenics](https://williamdurand.fr/2013/06/03/object-calisthenics/#5-one-dot-per-line)
 
-- imagine you'd ge adding routes like
+Also, would you add routes this way?
 
 ```php
 class SomeController
 {
-    public function someAction(Requiest $request)
+    public function someAction(Request $request)
     {
         $router = $request->getAttribute('controller')->getContainer()->get('router');
         $router->addRoute('...');
@@ -170,55 +171,85 @@ class SomeController
 }
 ```
 
-It just feels wrong, right? And doesn't just feel. This breaks enscapulation - you ask for a router, insice a controller, that reaches out for services locator.
+Above, we ask event to get a service, to invoke a callback on another service. **When you ask event (unique object) for a service (global class), there is something wrong**. Events should work with unique information - they're value objects after all. 
 
-In console code above: you ask for definitino of applicatoin, that you get with command event, that is invoked by event subsribed, that is invoked by event disptacher. That's just mess and people using [claithesnics](https://williamdurand.fr/2013/06/03/object-calisthenics/#5-one-dot-per-line) already know this as it's one of the rules what not to do. 
+<br>
 
-What is really important? **for definitino of applicatoin**
+The post is 5 years old and I don't think Matthias still sees this as the best way to go, yet Google shows it in top 5 results. Matthias has popular and valuable blog (I learned a lot myself back in my early years in Symfony) and some people might think this is the best practise. To add more salt to the wound, this answer also [spread to StackOverflow](https://stackoverflow.com/questions/40674814/how-to-add-a-new-command-line-option-to-symfony-console) without concurrency.
 
-### 4. The Application itself
+<br>
 
-WHat is the best way to get to defintion of appliactoin?
+What is really important? **The definition of application**, nothing more.
 
-I'm happy to see that composer made this right:
-https://github.com/composer/composer/pull/1110/files
-Morover when I know, how long it took me to find this quite hidden, yet the cleaners option:
+### 4. Extend the Application
+
+I'm very happy to see that [composer code has this right](https://github.com/composer/composer/pull/1110/files). There is global option `--working-dir`, that allows you simply run composer in another directory:
+
+```bash
+composer update --working-dir projects/open-training
+
+# equals to 
+cd projects/open-training
+composer update  
+cd ../..
+```
+ 
+How did I find this out? I needed to remove one of basic options Symfony Console Application has out of the box:
+
+<img src="/assets/images/posts/2018/global-option/basic.png" class="img-thumbnail">
+
+It took me a while but the track lead to [`Application::getDefaultInputDefinition()`](https://github.com/symfony/symfony/blob/59fad59886fc2e47c4e49bcb668a6e1e0795a6d7/src/Symfony/Component/Console/Application.php#L951) method. 
 
 ```diff
  <?php
  
  use Symfony\Component\Console\Application;
+ use Symfony\Component\Console\Input\InputArgument;
 
  final class SomeApplication extends Application  
  {
-+         protected function getDefaultInputDefinition()
-+         {
-+             $definition = parent::getDefaultInputDefinition();
-+             $definition->addArgument(new InputArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work with'));
-+             return $definition;
-+         }
++    protected function getDefaultInputDefinition()
++    {
++        $definition = parent::getDefaultInputDefinition();
++        $definition->addArgument(new InputArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work with'));
++
++        return $definition;
++    }
  }
 ```
 
-And `Symfony\Component\Console\Application` is just one of very few classes I'd allow to extends. It's just 1:1, not like entity repository, that can have many children.
+`Symfony\Component\Console\Application` is **one of very few classes I'd allow to [extend](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. It's just 1:1 = easy to maintain and change. Not like entity repository, that can have dozens children.
 
-:-:
+### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages 
 
-- very little known, thus very hard to discover - so I reckon adding a note about this somehwere, so people know you're doing it - REDMe, abstract command, or the best  `config.yml`
+- very little known → very hard to discover and debug - we should add a note about this to `config.yml`
 
+    ```yaml
+    services:
+        # we extend default definition here with `file` argument
+        SomePackage\Console\SomeApplication: ~
+    ```
 
-:+:
+### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
-- one place, that creats consistent application
-- we use api that is designed for htese changes  
-- you don't need any extra packages, adding aynthign to application
-- very simple to add: it takes 10 lines tops - if you have already extnded appliactoin, even 6 ;) 
+- **one place**, that creates consistent code
+- **we use api that is designed for these changes**  
+- you don't need any extra packages, adding anything to application
+- very simple to add: it takes 10 lines 
+- it just works :)
 
-it just works :)
+<br>
 
+For all these reasons, this is the one I prefer. Do you want to see it in the real world? Here [is a commit](https://github.com/Symplify/Symplify/pull/1047/commits/c07c49ae4eff067db7cfe5e5ed1b283ae37c8c29#diff-3b69acbe6b33a88158b373e6e96de097) from Monorepo Builder for our `file` argument. 
 
-So which one do you prefer yourself and why?
+<br>
 
-Do you see anomally with code in your work you're now happy with? Think of way how to make it betters 
+## Think in (Anti) Patterns 
 
+This post is not just about adding a option/argument to console. It's about applying the best choice in every feature you add. **And if you don't know, look for it**. Don't just blindly take first result provided Google. It might be popular, wide spread, but that doesn't mean it's high quality and valid solution.    
+ 
+Do you see similar anti-patterns as 1, 2 or 3 in your code you're now happy with? How could you make it better? 
 
+<br>
+
+Happy coding!
