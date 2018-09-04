@@ -181,7 +181,7 @@ The post is 5 years old and I don't think Matthias still sees this as the best w
 
 What is really important? **The definition of application**, nothing more.
 
-### 4. Extend the Application
+## 4. Extend the Application
 
 I'm very happy to see that [composer code has this right](https://github.com/composer/composer/pull/1110/files). There is global option `--working-dir`, that allows you simply run composer in another directory:
 
