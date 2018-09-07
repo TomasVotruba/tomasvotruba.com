@@ -140,7 +140,7 @@ vendor/bin/monorepo-builder validate
 vendor/bin/monorepo-builder merge
 
 # to make sure we have installed projects' dependencies
-composer update 
+composer update
 ```
 
 In the root `composer.json` you might want to add some coding standards and static analysis, that is not in projects.
