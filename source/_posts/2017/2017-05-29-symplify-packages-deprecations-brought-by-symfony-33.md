@@ -4,7 +4,7 @@ title: "Symplify packages deprecations brought by Symfony 3.3"
 perex: |
     <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">Symfony 3.3 brings new Dependency Injection features</a>,
     that were supplemented by few of Symplify packages in Symfony 3.2 and below.
-    There is no need - as <a href="https://github.com/Lexinek">Honza Mikes</a> said - to <em>bring the wood to the forest</em>. So they were deprecated.
+    There is no need - as <a href="https://github.com/JanMikes">Honza Mikes</a> said - to <em>bring the wood to the forest</em>. So they were deprecated.
     <br><br>
     I will show <strong>why and what packages were deprecated and how to upgrade your app
     to use Symfony 3.3 instead</strong>.
@@ -50,7 +50,7 @@ agreed **to drop them and let Symfony handle that**.
 I must say, it was much easier to decide after getting such feedback. **Thank you [Filip Prochazka](https://filip-prochazka.com/),
 [Tomas Fejfar](https://www.tomasfejfar.cz/),  [Stof](https://github.com/Symplify/Symplify/issues/161),
 [theofidry](https://github.com/symfony/symfony/pull/22234#issuecomment-297999703),
-[Jachym Tousek](https://github.com/enumag), [Jan Mikes](https://github.com/lexinek)
+[Jachym Tousek](https://github.com/enumag), [Jan Mikes](https://github.com/JanMikes)
 and [Javier Eguilez](https://github.com/Symplify/Symplify/pull/162#issuecomment-299441503)**
 for your help with this.
 

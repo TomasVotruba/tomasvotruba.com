@@ -356,7 +356,7 @@ vendor/bin/ecs check src --level clean-code
 
 Yes? Then go check:
 
-- [`bin/ecs-container.php`](https://github.com/Symplify/EasyCodingStandard/blob/master/bin/ecs-container.php) - a file that handles container creation
+- [`bin/container.php`](https://github.com/Symplify/EasyCodingStandard/blob/master/bin/container.php) - a file that handles container creation
 
 - [`Symplify\PackageBuilder\Configuration\ConfigFileFinder`](https://github.com/symplify/packagebuilder#4-load-a-config-for-cli-application)
 

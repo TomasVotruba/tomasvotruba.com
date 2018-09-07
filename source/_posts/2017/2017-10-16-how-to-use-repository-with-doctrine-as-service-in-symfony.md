@@ -137,7 +137,7 @@ final class Post
 }
 ```
 
-This reminds me of circular dependency and [active record pattern from Doctrine 4](http://www.doctrine-project.org/2017/04/01/announcing-doctrine-4.html). Why should entity know about its repository?
+This reminds me of circular dependency. Why should entity know about its repository?
 
 Do you know why we need `repositoryClass="PostRepository"`?
 
