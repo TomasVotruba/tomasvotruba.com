@@ -2,8 +2,11 @@
 
 namespace TomasVotruba\Website\Tests\Posts\Year2017\Ast;
 
+use Nette\Utils\FileSystem;
+use PhpParser\Node;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassMethod;
+use PhpParser\Node\Stmt\Namespace_;
 use PhpParser\NodeFinder;
 use PhpParser\NodeTraverser;
 use PhpParser\Parser;
@@ -44,12 +47,14 @@ final class ModifyTest extends TestCase
 
     public function testParse(): void
     {
-        $nodes = $this->parser->parse(file_get_contents($this->srcDirectory . '/SomeClass.php'));
+        $nodes = $this->parser->parse(FileSystem::read($this->srcDirectory . '/SomeClass.php'));
         $this->assertNotSame([], $nodes);
 
+        /** @var Namespace_[] $nodes */
         $classNode = $nodes[1]->stmts[0];
         $this->assertInstanceOf(Class_::class, $classNode);
 
+        /** @var Class_ $classMethodNode */
         $classMethodNode = $classNode->stmts[0];
         $this->assertInstanceOf(ClassMethod::class, $classMethodNode);
     }
@@ -58,7 +63,8 @@ final class ModifyTest extends TestCase
     {
         $this->nodeTraverser->addVisitor(new ChangeMethodNameNodeVisitor());
 
-        $nodes = $this->parser->parse(file_get_contents($this->srcDirectory . '/SomeClass.php'));
+        /** @var Node[] $nodes */
+        $nodes = $this->parser->parse(FileSystem::read($this->srcDirectory . '/SomeClass.php'));
 
         /** @var ClassMethod $classMethodNode */
         $classMethodNode = $this->nodeFinder->findFirstInstanceOf($nodes, ClassMethod::class);

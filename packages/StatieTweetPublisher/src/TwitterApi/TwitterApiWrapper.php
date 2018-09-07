@@ -3,6 +3,7 @@
 namespace TomasVotruba\StatieTweetPublisher\TwitterApi;
 
 use Nette\Utils\DateTime;
+use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
 use TomasVotruba\StatieTweetPublisher\Exception\TwitterApi\TwitterApiException;
 use TomasVotruba\StatieTweetPublisher\Tweet\Tweet;
@@ -96,7 +97,7 @@ final class TwitterApiWrapper
     public function publishTweetWithImage(string $status, string $imageFile): void
     {
         $media = $this->callPost(self::IMAGE_UPLOAD_URL, [
-            'media' => base64_encode(file_get_contents($imageFile)),
+            'media' => base64_encode(FileSystem::read($imageFile)),
         ]);
 
         $this->callPost(self::UPDATE_URL, [

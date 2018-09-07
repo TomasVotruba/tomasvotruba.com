@@ -14,15 +14,14 @@ abstract class AbstractContainerAwareTestCase extends TestCase
     protected $container;
 
     /**
-     * @var ContainerInterface
+     * @var ContainerInterface|null
      */
     private static $cachedContainer;
 
     protected function setUp(): void
     {
-        if (! self::$cachedContainer) {
-            $containerFactory = new ContainerFactory();
-            self::$cachedContainer = $containerFactory->createWithConfig(__DIR__ . '/../../../statie.yml');
+        if (self::$cachedContainer === null) {
+            self::$cachedContainer = (new ContainerFactory())->createWithConfig(__DIR__ . '/../../../statie.yml');
         }
 
         $this->container = self::$cachedContainer;

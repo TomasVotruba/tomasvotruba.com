@@ -2,6 +2,7 @@
 
 namespace TomasVotruba\Website\Tests\Posts\Year2017\Ast;
 
+use Nette\Utils\FileSystem;
 use PHPUnit\Framework\TestCase;
 use TomasVotruba\Website\Posts\Year2017\Ast\NodeVisitor\ChangeMethodNameNodeVisitor;
 use TomasVotruba\Website\Posts\Year2017\Ast\Printer\FormatPreservingPrinter;
@@ -26,7 +27,7 @@ final class PrintTest extends TestCase
 
     public function testPrinter(): void
     {
-        $fileContent = file_get_contents($this->srcDirectory . '/SomeClass.php');
+        $fileContent = FileSystem::read($this->srcDirectory . '/SomeClass.php');
 
         $newFileContent = $this->formatPreservingPrinter->traverseWithVisitorAndPrint(
             new ChangeMethodNameNodeVisitor(),
