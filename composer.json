@@ -2,11 +2,12 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.2",
-        "symplify/statie": "^4.7",
-        "nette/utils": "^2.5",
-        "nette/finder": "^2.4",
         "J7mbo/twitter-api-php": "^1.0",
-        "nikic/php-parser": "^4.0.3"
+        "nette/finder": "^2.4",
+        "nette/utils": "^2.5",
+        "nikic/php-parser": "^4.0.3",
+        "symplify/package-builder": "^4.7",
+        "symplify/statie": "^4.7"
     },
     "require-dev": {
         "nette/neon": "^2.4",
@@ -23,14 +24,15 @@
     },
     "autoload": {
         "psr-4": {
-            "TomasVotruba\\Website\\": "src",
-            "TomasVotruba\\StatieTweetPublisher\\": "packages/StatieTweetPublisher/src"
+            "TomasVotruba\\ContribThanker\\": "packages/ContribThanker/src",
+            "TomasVotruba\\StatieTweetPublisher\\": "packages/StatieTweetPublisher/src",
+            "TomasVotruba\\Website\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\Website\\Tests\\": "tests",
-            "TomasVotruba\\StatieTweetPublisher\\Tests\\": "packages/StatieTweetPublisher/tests"
+            "TomasVotruba\\StatieTweetPublisher\\Tests\\": "packages/StatieTweetPublisher/tests",
+            "TomasVotruba\\Website\\Tests\\": "tests"
         }
     },
     "scripts": {
