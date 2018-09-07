@@ -10,7 +10,7 @@ use Symfony\Component\Yaml\Yaml;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use TomasVotruba\ContribThanker\Api\GithubApi;
 
-final class GetContributorsCommand extends Command
+final class DumpContributorsCommand extends Command
 {
     /**
      * @var GithubApi
