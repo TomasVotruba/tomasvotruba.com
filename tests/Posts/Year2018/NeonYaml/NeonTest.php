@@ -39,6 +39,6 @@ final class NeonTest extends TestCase
      */
     private function decodeFile(string $file): array
     {
-        return Neon::decode(file_get_contents(($file)));
+        return Neon::decode(file_get_contents($file));
     }
 }
