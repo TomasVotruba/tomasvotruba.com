@@ -6,6 +6,9 @@ parameters:
             nette/finder: "^2.4"
             J7mbo/twitter-api-php: "^1.0"
             nikic/php-parser: "^4.0.3"
+            symfony/http-kernel: "^4.1"
+            symfony/console: "^4.1"
+            symplify/http-kernel: "^4.1"
         require-dev:
             nette/neon: "^2.4"
             phpstan/phpstan-shim: "^0.10.3"

@@ -1,0 +1,14 @@
+parameters:
+    repository_name: "tomasvotruba/tomasvotruba.cz"
+    author_name: "TomasVotruba"
+
+services:
+    _defaults:
+        autowire: true
+        public: true
+
+    TomasVotruba\ContribThanker\:
+        resource: '../'
+
+    GuzzleHttp\Client: ~
+    Symfony\Component\Filesystem\Filesystem: ~
