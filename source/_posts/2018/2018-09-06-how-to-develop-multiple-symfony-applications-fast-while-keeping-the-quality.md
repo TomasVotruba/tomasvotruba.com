@@ -20,13 +20,13 @@ This idea came originally from tech companies with large code bases and constant
 
 <br>
 
-Yet I never saw such approach in PHP world. I mean, I saw [monoliths](https://gomonorepo.org/#terms) but never a monorepo. Last year I started to work more closely with Shopsys and they did one crazy thing - [put the sandbox project into monorepo repository](ttps://github.com/shopsys/shopsys/tree/master/project-base). Instead of having 2 repositories - **monorepo and showcase project separated** - like [Symfony](https://github.com/symfony/symfony) and its [Demo](https://github.com/symfony/demo), Laravel, CakePHP, Nette or basically any PHP framework I've seen, ** it is just one**.
+Yet I never saw such approach in PHP world. I mean, I saw [monoliths](https://gomonorepo.org/#terms) but never a monorepo. Last year I started to work more closely with Shopsys and they did one crazy thing - [put the sandbox project into monorepo repository](https://github.com/shopsys/shopsys/tree/master/project-base). Instead of having 2 repositories - **monorepo and showcase project separated** - like [Symfony](https://github.com/symfony/symfony) and its [Demo](https://github.com/symfony/demo), Laravel, CakePHP, Nette or basically any PHP framework I've seen, ** it is just one**.
 
 I had my concerns about how packages and project development will go together, but now I see it was just fear from unknown.
 
 ## I hate Repetitive Work, I Hate Repetitive Work
 
-The fuel for the next step of this approach came last month. I'm currently working on 2 open-sourced Symfony Application (non CLI!) - [open-training](https://github.com/tomasvotruba/open-training) and [open-real-estate](https://github.com/TomasVotruba/open-project).
+The fuel for the next step of this approach came last month. I'm currently working on 2 open-sourced Symfony Application (non CLI!) - [open-training](https://github.com/TomasVotruba/open-training) and [open-real-estate](https://github.com/TomasVotruba/open-project).
 
 **How are 2 Symfony applications different**? Well, the entities, repository queries, templates, design and controller actions are unique.
 But the PHP, used framework, bundle integration, database type, deploy strategy, own packages that [auto-discover entities](https://github.com/TomasVotruba/open-project/tree/master/packages/auto-discovery) for example, Kernel boilerplate are the same.
