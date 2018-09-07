@@ -39,5 +39,5 @@ after_deploy:
 
 notifications:
     email:
-        on_success: newer
+        on_success: never
         on_failure: always
