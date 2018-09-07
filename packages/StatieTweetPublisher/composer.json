@@ -5,7 +5,7 @@
         "bin/publish-new-tweet"
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "symplify/statie": "^4.7",
         "symplify/package-builder": "^4.7",
         "nette/utils": "^2.5",
