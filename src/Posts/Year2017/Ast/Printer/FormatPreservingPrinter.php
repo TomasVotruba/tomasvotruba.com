@@ -29,7 +29,8 @@ final class FormatPreservingPrinter
         $nodeTraverser = new NodeTraverser();
         $nodeTraverser->addVisitor($nodeVisitor);
 
-        $newStmts = $traversedNodes = $nodeTraverser->traverse($newStmts);
+        $traversedNodes = $nodeTraverser->traverse($newStmts);
+        $newStmts = $traversedNodes;
 
         // our code end
 

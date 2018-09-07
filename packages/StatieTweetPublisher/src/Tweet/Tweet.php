@@ -12,7 +12,7 @@ final class Tweet
     private $text;
 
     /**
-     * @var null|string
+     * @var string|null
      */
     private $image;
 
