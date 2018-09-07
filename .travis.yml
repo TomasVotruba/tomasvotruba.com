@@ -14,6 +14,7 @@ script:
     - composer phpstan
 
     # test that website is generated
+    - bin/console dump-contributors
     - vendor/bin/statie generate source
 
 # see docs: https://www.statie.org/docs/github-pages/
