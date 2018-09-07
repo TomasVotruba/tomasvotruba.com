@@ -129,18 +129,20 @@ You might be already wondering *How do manage composer dependencies in all this 
 
 *Just kidding*, you know I'm too lazy for this
 
-All you need to do is to update projects' `composer.json`. For the rest, there is a tool I use to manage Symplify monorepo dependencies:
+All you need to do is to update projects' `composer.json`. For the rest, there is a tool I use to manage Symplify monorepo dependencies that does the dirty work for you:
 
 ```
 composer require symplify/monorepo-builder
+
+# make sure there is the same version for every package in every composer.json
 vendor/bin/monorepo-builder validate
+
+# merge "require", "require-dev", "autoload" and "autoload-dev" from projects to the root composer.json
 vendor/bin/monorepo-builder merge
+
+# to make sure we have installed projects' dependencies
+composer update 
 ```
-
-It will do the dirty work for you:
-
-- make sure there is the same version for any package in every `composer.json`
-- generate `"require"`, `"require-dev"`, `"autoload"` and `"autoload-dev"` sections in root `composer.json` based on collected data in projects
 
 In the root `composer.json` you might want to add some coding standards and static analysis, that is not in projects.
 See the [`monorepo-builder.yml` config ](https://github.com/TomasVotruba/open-project/blob/master/monorepo-builder.yml) in my [open-project](https://github.com/TomasVotruba/open-project/) monorepo repository to get the idea how to configure it.
@@ -150,7 +152,9 @@ See the [`monorepo-builder.yml` config ](https://github.com/TomasVotruba/open-pr
 And that's it! We have now one repository to maintain, no matter how many projects we have, and we met our goals:
 
 - We have the entities, repository queries, templates, design and controller actions **are unique**.
-- And PHP, used framework, bundle integration, database type, deploy strategy, own packages, Kernel boilerplate **are the same**.
+- PHP, used framework, bundle integration, database type, deploy strategy, own packages, Kernel boilerplate **are the same**.
+
+Now we can run application with `projects/open-training/bin/console server:run` and it works!
 
 <br>
 
