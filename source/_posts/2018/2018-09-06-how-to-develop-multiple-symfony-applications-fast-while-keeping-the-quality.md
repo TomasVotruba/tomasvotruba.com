@@ -6,7 +6,6 @@ perex: |
     Or maybe you're successful, you grow and have 10 such projects.
     <br><br>
     **Today I'll show you how to maintain speed while keeping the maintenance cost low**.
-
 tweet: "New Post on my Blog: How to Develop Multiple #Symfony Applications Fast while Keeping the Quality  #git"
 tweet_image: "/assets/images/posts/2018/multi-symfony/replace.png"
 ---
@@ -112,7 +111,7 @@ This is more complicated because the working directory is no in the monorepo roo
 
 Instead of the old root as you're used to...
 
-```
+```bash
 bin/console server:run
 ```
 
@@ -131,7 +130,7 @@ You might be already wondering *How do manage composer dependencies in all this 
 
 All you need to do is to update projects' `composer.json`. For the rest, there is a tool I use to manage Symplify monorepo dependencies that does the dirty work for you:
 
-```
+```bash
 composer require symplify/monorepo-builder
 
 # make sure there is the same version for every package in every composer.json
