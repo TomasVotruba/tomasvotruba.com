@@ -9,7 +9,8 @@ id: thank_you
         <h1>{{ title }}</h1>
 
         <p class="text-center bigger">
-            Thanks to all {{ contributors|length }} contributors who help makes this website correct and up to date!
+            Thanks to all <strong>{{ contributors|length }} contributors</strong> who patiently fix my English mistakes
+            <br>and keep this website correct and up to date!
         </p>
 
         <br>
@@ -23,6 +24,8 @@ id: thank_you
                 {% endif %}
             {% endfor %}
         </ul>
+
+        <br>
 
         <p>
             Thanks for single commit to
