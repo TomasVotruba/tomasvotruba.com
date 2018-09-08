@@ -58,13 +58,26 @@ I'm right in the very start of using this architecture, so you'll have the knowl
 
 ### 1. <strike>App</strike> Unique Namespace
 
-If there are 2 `App\Kernel`, the application would break, because every class has to be unique. Pick a name that is specific for the project - here it's "OpenTrainig" - and rename it in `namespace App\`, `namespace App;`, `use App\` in PHP code. Don't forget the `composer.json` as well.
+If there are 2 `App\Kernel` classes the application would break. Pick a name that is specific for the project - here it's "OpenTrainig" - and rename it in `namespace App\`, `namespace App;`, `use App\` in PHP code. Don't forget the `composer.json` as well.
 
 <div class="text-center">
     <img src="/assets/images/posts/2018/multi-symfony/replace.png" class="img-thumbnail">
     <br>
     <em>PHPStorm → Replace in path</em>
 </div>
+
+```diff
+-namespace App;
++namespace OpenTraining;
+
+ use Symfony\Component\HttpKernel\Kernel;
+
+-final class AppKernel extends Kernel
++final class OpenTraining extends Kernel
+ {
+     // ...
+ }
+```
 
 <br>
 
@@ -88,7 +101,7 @@ composer dump-autoload
 
 - `public/index.php`
 
-This is more complicated because the working directory is no in the monorepo root but in the project root:
+This is more complicated because the working directory is not in the monorepo root but in the project root (`/projects/open-training`):
 
 ```diff
 -require __DIR__ . '/../vendor/autoload.php';
