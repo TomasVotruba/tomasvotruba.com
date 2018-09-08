@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Symfony\Component\Console\Application;
+use TomasVotruba\Website\DependencyInjection\ContainerFactory;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$container = (new ContainerFactory())->create();
+/** @var Application $application */
+$application = $container->get(Application::class);
+$application->run();

@@ -204,13 +204,9 @@ From magic `Homepage:default` to clickable class:
     <img src="/assets/images/posts/2017/symbiotic-controller/router.gif" class="img-thumbnail">
 </div>
 
-## Do you want to try this?
-
-You have 2 options: check [nette/sandbox based demo on Github](https://github.com/TomasVotruba/nette-single-action-presenter) or install to your application yourself:
-
 ## 3 Steps To Your First Framework Agnostic Presenter in Nette
 
-### 1. Install [Symplify\SymbioticController](https://github.com/Symplify/SymbioticController) package
+### 1. Install [Symplify\SymbioticController](https://github.com/DeprecatedPackages/SymbioticController) package
 
 ```yaml
 composer require symplify/symbiotic-controller

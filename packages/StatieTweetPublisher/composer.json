@@ -5,14 +5,14 @@
         "bin/publish-new-tweet"
     ],
     "require": {
-        "php": "^7.1",
-        "symplify/statie": "^4.0",
-        "symplify/package-builder": "^4.0",
-        "nette/utils": "^2.4",
+        "php": "^7.2",
+        "symplify/statie": "^4.7",
+        "symplify/package-builder": "^4.7",
+        "nette/utils": "^2.5",
         "J7mbo/twitter-api-php": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "^7.3"
     },
     "autoload": {
         "psr-4": {

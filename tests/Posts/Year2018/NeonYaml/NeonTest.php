@@ -3,6 +3,7 @@
 namespace TomasVotruba\Website\Tests\Posts\Year2018\NeonYaml;
 
 use Nette\Neon\Neon;
+use Nette\Utils\FileSystem;
 use PHPUnit\Framework\TestCase;
 
 final class NeonTest extends TestCase
@@ -39,6 +40,6 @@ final class NeonTest extends TestCase
      */
     private function decodeFile(string $file): array
     {
-        return Neon::decode(file_get_contents(($file)));
+        return Neon::decode(FileSystem::read($file));
     }
 }

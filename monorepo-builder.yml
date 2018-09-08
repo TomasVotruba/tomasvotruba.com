@@ -1,0 +1,28 @@
+parameters:
+    # extra data for "merge" command
+    data_to_append:
+        require:
+            nette/utils: "^2.5"
+            nette/finder: "^2.4"
+            J7mbo/twitter-api-php: "^1.0"
+            nikic/php-parser: "^4.0.3"
+            symfony/http-kernel: "^4.1"
+            symfony/console: "^4.1"
+            symplify/http-kernel: "^4.1"
+        require-dev:
+            nette/neon: "^2.4"
+            phpstan/phpstan-shim: "^0.10.3"
+            spatie/http-status-check: "^2.5"
+            symfony/console: "^4.1"
+            symfony/process: "^4.1"
+            symfony/stopwatch: "^4.1"
+            symfony/yaml: "^4.1"
+            symplify/easy-coding-standard: "^4.7"
+            symplify/latte-to-twig-converter: "^4.7"
+            symplify/monorepo-builder: "^4.7"
+        autoload:
+            psr-4:
+                TomasVotruba\Website\: 'src'
+        autoload-dev:
+            psr-4:
+                TomasVotruba\Website\Tests\: 'tests'

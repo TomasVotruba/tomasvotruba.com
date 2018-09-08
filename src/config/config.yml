@@ -1,0 +1,9 @@
+imports:
+    - { resource: '../../packages/ContribThanker/src/config/config.yml' }
+
+services:
+    _defaults:
+        public: true
+        autowire: true
+
+    Symfony\Component\Console\Application: ~

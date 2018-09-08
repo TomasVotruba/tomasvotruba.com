@@ -1,13 +1,10 @@
 parameters:
     ignoreErrors:
-        # known values
-        - '#Parameter \#1 \$nodes of method PhpParser\\NodeTraverser::traverse\(\) expects array<PhpParser\\Node>, array<PhpParser\\Node>\|null given#'
-        - '#Parameter \#1 \$nodes of method PhpParser\\NodeFinder::findFirstInstanceOf\(\) expects array<PhpParser\\Node>\|PhpParser\\Node, array<PhpParser\\Node>\|null given#'
-
-        # false positive, invalid vendor load
-        - '#Property PhpParser\\Node\\Stmt\\ClassMethod::\$name \(string\) does not accept PhpParser\\Node\\Identifier#'
-        - '#Call to an undefined method PhpParser\\PrettyPrinter\\Standard::printFormatPreserving\(\)#'
-        - '#Cannot call method toString\(\) on string#'
-
         # buggy
         - '#Property (.*) does not accept object#'
+
+        # php-parser Node/Stmt mixups
+        - '#(.*?)array<PhpParser\\Node>, array<PhpParser\\Node\\Stmt(.*?)#'
+
+        # false positive
+        - '#Cannot access property \$stmts on PhpParser\\Node\\Stmt\|null#'

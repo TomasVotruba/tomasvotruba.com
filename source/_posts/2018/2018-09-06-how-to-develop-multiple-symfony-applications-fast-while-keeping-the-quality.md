@@ -31,7 +31,7 @@ The fuel for the next step of this approach came last month. I'm currently worki
 **How are 2 Symfony applications different**? Well, the entities, repository queries, templates, design and controller actions are unique.
 But the PHP, used framework, bundle integration, database type, deploy strategy, own packages that [auto-discover entities](https://github.com/TomasVotruba/open-project/tree/master/packages/auto-discovery) for example, Kernel boilerplate are the same.
 
-One example from last month for all: I made first package that extends EasyAdminBundle (you can [read it here](/blog/2018/08/20/painful-experience-over-solutions-extend-configuration-in-easy-admin-bundle-with-collector/)) for *open-lecture* project. Of course, I need that for *open-real-estate*. Now I had to create a package, make own Github repository, register it on packagist, add it to other project and somehow switch between them for every update... ugh, I guess you would not want to pay me for this bureaucracy.
+One example from last month for all: I made first package that extends EasyAdminBundle (you can [read it here](/blog/2018/08/20/painful-experience-over-solutions-extend-configuratin-in-easy-admin-bundle-with-collector/)) for *open-lecture* project. Of course, I need that for *open-real-estate*. Now I had to create a package, make own Github repository, register it on packagist, add it to other project and somehow switch between them for every update... ugh, I guess you would not want to pay me for this bureaucracy.
 
 Since I'm the main investor of myself and I hate wasting time on repetitive work, I decided to give myself a question:
 
@@ -140,7 +140,7 @@ vendor/bin/monorepo-builder validate
 vendor/bin/monorepo-builder merge
 
 # to make sure we have installed projects' dependencies
-composer update 
+composer update
 ```
 
 In the root `composer.json` you might want to add some coding standards and static analysis, that is not in projects.
