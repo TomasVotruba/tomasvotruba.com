@@ -4,6 +4,6 @@ namespace TomasVotruba\ContribThanker\Exception\Api;
 
 use Exception;
 
-final class GithubApiException extends Exception
+final class ApiException extends Exception
 {
 }

@@ -4,7 +4,7 @@ namespace TomasVotruba\ContribThanker\Guzzle;
 
 use Nette\Utils\Json;
 use Psr\Http\Message\ResponseInterface;
-use TomasVotruba\ContribThanker\Exception\Api\GithubApiException;
+use TomasVotruba\ContribThanker\Exception\Api\ApiException;
 
 final class ResponseFormatter
 {
@@ -14,7 +14,7 @@ final class ResponseFormatter
     public function formatResponseToJson(ResponseInterface $response, string $originalUrl): array
     {
         if ($response->getStatusCode() !== 200) {
-            throw new GithubApiException(sprintf(
+            throw new ApiException(sprintf(
                 'Response to "%s" failed: "%s"',
                 $originalUrl,
                 $response->getReasonPhrase()
