@@ -27,16 +27,26 @@ final class GithubApi
      */
     private $authorName;
 
+    /**
+     * @var mixed[]
+     */
+    private $options = [];
+
     public function __construct(
         Client $client,
         ResponseFormatter $responseFormatter,
         string $repositoryName,
-        string $authorName
+        string $authorName,
+        ?string $githubToken
     ) {
         $this->client = $client;
         $this->responseFormatter = $responseFormatter;
         $this->repositoryName = $repositoryName;
         $this->authorName = $authorName;
+
+        if ($githubToken) {
+            $this->options['headers']['Authorization'] = 'token ' . $githubToken;
+        }
     }
 
     /**
@@ -45,7 +55,7 @@ final class GithubApi
     public function getContributors(): array
     {
         $url = sprintf('https://api.github.com/repos/%s/contributors', $this->repositoryName);
-        $response = $this->client->request('GET', $url);
+        $response = $this->client->request('GET', $url, $this->options);
         $json = $this->responseFormatter->formatResponseToJson($response, $url);
 
         $contributors = [];

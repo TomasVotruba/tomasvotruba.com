@@ -2,6 +2,11 @@ parameters:
     repository_name: "tomasvotruba/tomasvotruba.cz"
     author_name: "TomasVotruba"
 
+    # create token here: https://github.com/settings/tokens/new
+    # use in cli like: "GITHUB_TOKEN=%s vendor/bin/monorepo-builder split ..."
+    env(GITHUB_TOKEN): null
+    github_token: '%env(GITHUB_TOKEN)%'
+
 services:
     _defaults:
         autowire: true
