@@ -149,7 +149,7 @@ The file is `packages/lekarna/filesystem/composer.json`:
         "lekarna/filesystem": "@dev"
     },
     "repositories": [
-        { "type": "path", "url": "packages/Lekarna/Filesystem" }
+        { "type": "path", "url": "packages/lekarna/filesystem" }
     ],
 }
 ```
