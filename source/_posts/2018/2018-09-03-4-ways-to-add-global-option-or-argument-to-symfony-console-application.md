@@ -89,8 +89,8 @@ The first simple & short solution you'd [Googled up](https://gist.github.com/dhr
  use Symfony\Component\Console\Input\InputArgument;
 
  $application = $container->get(Application::class);
-+$applicationDefinitoin = $application->getDefinition();
-+$applicationDefinitoin->addArguments([
++$applicationDefinition = $application->getDefinition();
++$applicationDefinition->addArguments([
 +    new InputArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
 +]);
  $application->run();
