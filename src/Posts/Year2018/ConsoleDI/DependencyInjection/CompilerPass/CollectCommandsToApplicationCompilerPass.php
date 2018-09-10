@@ -15,6 +15,10 @@ final class CollectCommandsToApplicationCompilerPass implements CompilerPassInte
         $applicationDefinition = $containerBuilder->getDefinition(Application::class);
 
         foreach ($containerBuilder->getDefinitions() as $name => $definition) {
+            if ($definition->getClass() === null) {
+                continue;
+            }
+
             if (is_a($definition->getClass(), Command::class, true)) {
                 $applicationDefinition->addMethodCall('add', [new Reference($name)]);
             }

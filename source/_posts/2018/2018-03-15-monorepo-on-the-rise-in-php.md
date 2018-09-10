@@ -30,7 +30,7 @@ He also had a [very interesting talk about it](https://www.youtube.com/watch?v=4
 
 ## Shopsys Monorepo to Spread a bit more Word
 
-I work on [Shopsys Framework](https://shopsys-framework.com), an open-source e-commerce platform on Symfony and the monorepo topic finally came to the sprint to be realized. If you've read until now, **you know there is not much shared know-how or support for new-commers to adopt a monorepo pattern in PHP**.
+I work on [Shopsys Framework](https://www.shopsys.com/), an open-source e-commerce platform on Symfony and the monorepo topic finally came to the sprint to be realized. If you've read until now, **you know there is not much shared know-how or support for new-commers to adopt a monorepo pattern in PHP**.
 
 That's how [`shopsys/monorepo-tools`](https://github.com/shopsys/monorepo-tools), that covers both build and split was given birth by [Petr Heinz](https://github.com/PetrHeinz).
 
@@ -38,7 +38,7 @@ It's slowly getting better with monorepo in PHP. But still many people don't kno
 
 ## New to monorepo? Start on GoMonorepo.org
 
-Inspired by [GoPHP71.org](https://gophp71.org/), **to boost this progress even further and answer some basic questions about monorepo, I build a simple site [Gomonorepo.org](https://gomonorepo.org/)**.
+Inspired by [GoPHP71.org](https://gophp71.org), **to boost this progress even further and answer some basic questions about monorepo, I build a simple site [Gomonorepo.org](https://gomonorepo.org)**.
 
 <img src="/assets/images/posts/2018/monorepo/monorepo-website.png" class="img-thumbnail">
 

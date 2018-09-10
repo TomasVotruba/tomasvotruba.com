@@ -46,7 +46,7 @@ Jaké jsou tedy 2 hlavní rozdíly mezi 3.0 a 2.8?
 ### 1. Autowiring služeb
 
 Symfony nyní podporuje constructor autowiring. Při vytváření definice služby tak můžete zapnout `autowiring` a přeskočit manuální předávání argumentů.
-V českém prostředí je autowiring poměrně populární díky bundlům jako [Kutny](https://github.com/kutny/autowiring-bundle), [Skrz](https://github.com/skrz/autowiring-bundle) a [Symnedi](https://github.com/Symnedi/AutowiringBundle).
+V českém prostředí je autowiring poměrně populární díky bundlům jako [Kutny](https://github.com/kutny/autowiring-bundle) nebo [Skrz](https://github.com/skrz/autowiring-bundle).
 
 #### Jak to v praxi vypadá?
 

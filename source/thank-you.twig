@@ -1,0 +1,40 @@
+---
+layout: "_layouts/default.twig"
+title: "Thank You"
+id: thank_you
+---
+
+{% block content %}
+    <div class="container" id="contact">
+        <h1>{{ title }}</h1>
+
+        <p class="text-center bigger">
+            Thanks to all <strong>{{ contributors|length }} contributors</strong> who patiently fix my English mistakes
+            <br>and keep this website correct and up to date!
+        </p>
+
+        <br>
+
+        <ul>
+            {% for contibutor in contributors %}
+                {% if contibutor.contribution_count > 1 %}
+                    <li class="pb-2">
+                        Thank you <a href="{{ contibutor.url }}">{{ contibutor.name }}</a> for {{ contibutor.contribution_count }} commits
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <br>
+
+        <p>
+            Thanks for single commit to
+            {% for contibutor in contributors %}
+                {% if contibutor.contribution_count == 1 %}
+                    {% if loop.last == true %} and {% endif %}
+                    <a href="{{ contibutor.url }}">{{ contibutor.name }}</a>{% if loop.last == false %}, {% else %}.{% endif %}
+                {% endif %}
+            {% endfor %}
+        </p>
+    </div>
+{% endblock %}

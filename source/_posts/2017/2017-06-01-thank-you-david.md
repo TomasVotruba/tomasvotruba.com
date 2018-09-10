@@ -23,7 +23,7 @@ One of lessons that lead me to this was...
 > Make something and dedicate it to your hero.
 > Answer a question they've asked, solve a problem for them or improve their work and share it online.
 
-After reading this, I had my hero in mind, whom I'd like to write. I also shared this though with [Honza Mikeš](https://github.com/Lexinek), who answered me by showing a beautiful thank you email he wrote.
+After reading this, I had my hero in mind, whom I'd like to write. I also shared this though with [Honza Mikeš](https://github.com/JanMikes), who answered me by showing a beautiful thank you email he wrote.
 
 So here is my turn:
 

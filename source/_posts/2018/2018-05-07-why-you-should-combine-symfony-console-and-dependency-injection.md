@@ -137,7 +137,7 @@ class AnalyseCommand extends Command
 }
 ```
 
-Or in [`FixerFactory`](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/2.11/src/FixerFactory.php#L107) in PHP CS Fixer:
+Or in [`FixerFactory`](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/0257ccae7ddcbdd5f7d51de3ae92ffac02d0e1c1/src/FixerFactory.php#L107) in PHP CS Fixer:
 
 ```php
 # much simplified

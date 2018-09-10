@@ -99,13 +99,11 @@ In many projects I see, while consulting big companies, this pattern **would sav
 
 1,5 year ago, I sent a pull-request for a simple thing - [having modular filters](https://github.com/doctrine/doctrine2/pull/1453). It is actually just a single-service constructor injection implementation. Huge problem to integrate. And there is a lot more static code like `new SomeService` that could be easily resolved with this.
 
-
-
 ## That's Why I'm Dropping My Doctrine Packages
 
 I miss an evolution with Doctrine. When some packages are stuck for 2-3 years in one place, there is probably already a better replacement. Either on Packagist or in your mind.
 
-As [I mentor and coach teams](/skoleni) to write better code with less work, **I'd go against my own beliefs by putting a vendor lock in their applications.**
+As [I mentor and coach teams](/mission) to write better code with less work, **I'd go against my own beliefs by putting a vendor lock in their applications.**
 
 That why I'm dropping my packages built on Doctrine.
 

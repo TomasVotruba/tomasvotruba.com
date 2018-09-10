@@ -58,10 +58,6 @@ Available commands for the "migrations" namespace:
   ...
 ```
 
-
-> Čtete raději commity? Mrkněte na [sandbox na Githubu](https://github.com/TomasVotruba/doctrine-migrations-sandbox/commits/master).
-
-
 ---
 
 

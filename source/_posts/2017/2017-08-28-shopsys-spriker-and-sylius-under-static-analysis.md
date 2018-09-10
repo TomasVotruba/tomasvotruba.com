@@ -30,7 +30,7 @@ Therefore, I wanted to make this post different. To have you in control, not the
 
 ### Try It Yourself
 
-I've put all the used data and methodology in an open-source way in a [Github repository](https://github.com/TomasVotruba/shopsys-spryker-and-sylius-analysis), where **you can install it and re-run on your own**. You'll need to [ask for a access to open-beta of Shopsys Framework](https://www.shopsys-framework.com/#contact) - that's the one extra step. I will update both this post and repository after Shopsys Framework is open-source in late 2017.
+I've put all the used data and methodology in an open-source way in a [Github repository](https://github.com/TomasVotruba/shopsys-spryker-and-sylius-analysis), where **you can install it and re-run on your own**. You'll need to [ask for a access to open-beta of Shopsys Framework](https://www.shopsys.com/#contact) - that's the one extra step. I will update both this post and repository after Shopsys Framework is open-source in late 2017.
 
 
 ### No Black and White
@@ -49,7 +49,7 @@ We are going to analyze 3 e-commerce projects build on Symfony components:
 <br>
 
 <div class="col-6 mb-3">
-    <a href="https://www.shopsys-framework.com/">
+    <a href="https://www.shopsys.com/">
         <img src="/assets/images/posts/2017/shopsys-static-anal/shopsys.png">
     </a>
 </div>

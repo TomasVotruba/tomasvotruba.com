@@ -3,10 +3,9 @@ imports:
     - { resource: 'vendor/symplify/easy-coding-standard/config/php71.yml' }
     - { resource: 'vendor/symplify/easy-coding-standard/config/common.yml' }
     - { resource: 'vendor/symplify/easy-coding-standard/config/symplify.yml' }
+    - { resource: 'vendor/symplify/easy-coding-standard/config/clean-code.yml' }
 
 services:
-    SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff:
-
     SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
         enableEachParameterAndReturnInspection: true
 

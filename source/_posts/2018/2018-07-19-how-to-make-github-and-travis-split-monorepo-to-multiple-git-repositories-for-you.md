@@ -12,7 +12,7 @@ related_items: [82, 25]
 
 It's great to be alive in this era. We have solved maintaining multiple repositories, even merge migration of their git history to one repository. Creating huge code bases was more never cost effective and never had a steeper learning curve.
 
-The same way it was never easier to drive an autonomous car. You just sit in the car, press the button of your destination, and Tesla will drive you there when you check all the news on [/r/PHP](https://reddit.com/r/PHP/).
+The same way it was never easier to drive an autonomous car. You just sit in the car, press the button of your destination, and Tesla will drive you there when you check all the news on [/r/PHP](https://www.reddit.com/r/PHP/).
 
 Well, the monorepo paradigm is not there yet but it's getting there.
 

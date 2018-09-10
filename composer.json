@@ -1,35 +1,40 @@
 {
     "name": "tomasvotruba/website",
     "require": {
-        "php": "^7.1",
-        "symplify/statie": "^4.6",
-        "nette/utils": "^2.4",
-        "nette/finder": "^2.4",
+        "php": "^7.2",
         "J7mbo/twitter-api-php": "^1.0",
-        "nikic/php-parser": "^4.0"
+        "nette/finder": "^2.4",
+        "nette/utils": "^2.5",
+        "nikic/php-parser": "^4.0.3",
+        "symfony/http-kernel": "^4.1",
+        "symfony/console": "^4.1",
+        "symplify/package-builder": "^4.7",
+        "symplify/statie": "^4.7"
     },
     "require-dev": {
-        "symplify/latte-to-twig-converter": "^4.5",
-        "symplify/easy-coding-standard": "^4.5",
-        "phpunit/phpunit": "^7.0",
-        "phpstan/phpstan-shim": "^0.9",
-        "symfony/console": "^4.0",
-        "spatie/http-status-check": "^2.5",
-        "symfony/process": "^4.0",
-        "symfony/stopwatch": "^4.0",
         "nette/neon": "^2.4",
-        "symfony/yaml": "^4.0"
+        "phpstan/phpstan-shim": "^0.10.3",
+        "phpunit/phpunit": "^7.3",
+        "spatie/http-status-check": "^2.5",
+        "symfony/console": "^4.1",
+        "symfony/process": "^4.1",
+        "symfony/stopwatch": "^4.1",
+        "symfony/yaml": "^4.1",
+        "symplify/easy-coding-standard": "^4.7",
+        "symplify/latte-to-twig-converter": "^4.7",
+        "symplify/monorepo-builder": "^4.7"
     },
     "autoload": {
         "psr-4": {
-            "TomasVotruba\\Website\\": "src",
-            "TomasVotruba\\StatieTweetPublisher\\": "packages/StatieTweetPublisher/src"
+            "TomasVotruba\\ContribThanker\\": "packages/ContribThanker/src",
+            "TomasVotruba\\StatieTweetPublisher\\": "packages/StatieTweetPublisher/src",
+            "TomasVotruba\\Website\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\Website\\Tests\\": "tests",
-            "TomasVotruba\\StatieTweetPublisher\\Tests\\": "packages/StatieTweetPublisher/tests"
+            "TomasVotruba\\StatieTweetPublisher\\Tests\\": "packages/StatieTweetPublisher/tests",
+            "TomasVotruba\\Website\\Tests\\": "tests"
         }
     },
     "scripts": {

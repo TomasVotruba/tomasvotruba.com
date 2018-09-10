@@ -71,7 +71,8 @@ final class TweetPublisherApplication
             return;
         }
 
-        $tweet = $this->getTweetToPublish($tweetsToPublish);
+        /** @var Tweet $tweet */
+        $tweet = array_shift($tweetsToPublish);
 
         $this->tweet($tweet);
 
@@ -96,25 +97,10 @@ final class TweetPublisherApplication
 
     private function tweet(Tweet $tweet): void
     {
-        if ($tweet->getImage()) {
+        if ($tweet->getImage() !== null) {
             $this->twitterApiWrapper->publishTweetWithImage($tweet->getText(), $tweet->getImage());
         } else {
             $this->twitterApiWrapper->publishTweet($tweet->getText());
         }
-    }
-
-    /**
-     * 2nd tweet and not 1st is required (if possible), because travis tweets before images is deployed,
-     * so it fails. Thus the 2nd most recent tweet is used, where image is already uploaded.
-     *
-     * @param Tweet[] $tweetsToPublish
-     */
-    private function getTweetToPublish(array $tweetsToPublish): Tweet
-    {
-        if (count($tweetsToPublish) >= 2) {
-            array_shift($tweetsToPublish);
-        }
-
-        return array_shift($tweetsToPublish);
     }
 }
