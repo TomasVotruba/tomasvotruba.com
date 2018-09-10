@@ -131,7 +131,7 @@ The file is `packages/lekarna/filesystem/composer.json`:
     "name": "lekarna/filesystem",
     "require": {
         "php": "^7.1",
-        "nette/utils": "^2.4",
+        "nette/utils": "^2.4"
     },
     "autoload": {
         "psr-4": {
@@ -150,7 +150,7 @@ The file is `packages/lekarna/filesystem/composer.json`:
     },
     "repositories": [
         { "type": "path", "url": "packages/Lekarna/Filesystem" }
-    ],
+    ]
 }
 ```
 
