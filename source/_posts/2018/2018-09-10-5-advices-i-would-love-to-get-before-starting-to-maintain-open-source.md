@@ -1,6 +1,6 @@
 ---
 id: 139
-title: "5 Tips I Would Love to Get Before Starting to Maintain an Open Source"
+title: "5 Advices I Would Love to Get Before Starting to Maintain an Open Source"
 perex: |
     I wasn't always confident while making public every single line of PHP code I write. I had to take many blind paths, spend a night full of stress coding in unknown waters and make a lot of over-complicated code that backfired to me months later.
     <br><br>
