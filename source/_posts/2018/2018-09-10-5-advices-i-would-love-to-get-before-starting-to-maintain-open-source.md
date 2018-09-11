@@ -1,12 +1,11 @@
 ---
 id: 139
-title: "5 Advices I Would Love to Get Before Starting to Maintain an Open Source"
+title: "5 Tips I Would Love to Get Before Starting to Maintain an Open Source"
 perex: |
     I wasn't always confident while making public every single line of PHP code I write. I had to take many blind paths, spend a night full of stress coding in unknown waters and make a lot of over-complicated code that backfired to me months later.
     <br><br>
     They say "experience cannot be passed and it must be experienced" and I agree with that, but still **there are some shortcuts that would speed-up my path to joyful open-source coding** I have today. Here are 5 of them.
-tweet: "New Post on my Blog: 5 Advices I Would Love to Get Before Starting to Maintain #OpenSource    #php #fuckups"
-tweet_image: "/assets/images/posts/2018/advices-open-source/father-son.jpg"
+tweet: "New Post on my Blog: 5 Advises I Would Love to Get Before Starting to Maintain #OpenSource    #php #fuckups"
 ---
 
 <img src="/assets/images/posts/2018/advices-open-source/father-son.jpg" class="img-thumbnail">
@@ -36,9 +35,9 @@ The experiment worked and whole Symplify and Rector are now running on Symfony D
 
 ## 2. Don't Keep Every feature You Have
 
-When I started my first open-source PHP packages, called Zenify, I focused to have as many features as possible. I though it's the way to success - all frameworks did it.
+When I started my first open-source PHP packages, called Zenify, I focused to have as many features as possible. I thought it's the way to success - all frameworks did it.
 
-Then I became [ApiGen](https://github.com/apigen/apigen) maintainer in 2014. It had over 30 options to configure: file encoding , colors in the command line, coding style check (oh yeah), enable/disable progress bar, check for newer version and many more. First I added more features that were requested and felt great, that the package is growing in its value. **But does eating more and more food make your more healthy? The more feature there was, the more difficult it was to refactoring, to test and to add new features.**
+Then I became [ApiGen](https://github.com/apigen/apigen) maintainer in 2014. It had over 30 options to configure: file encoding, colors in the command line, coding style check (oh yeah), enable/disable progress bar, check for newer version and many more. First I added more features that were requested and felt great, that the package is growing in its value. **But does eating more and more food make your more healthy? The more feature there was, the more difficult it was to refactoring, to test and to add new features.**
 
 ### Find Out What You Don't Need
 
@@ -61,7 +60,7 @@ I thought supporting the oldest version is the best because that's how you get t
 How naive I was :) it only caused me troubles with maintaining and I taught people it's ok to use PHP versions without security fixes.
 Now I support PHP 7.1 and 7.2 and it's just a fine amount of PHP versions to maintain.
 
-You don't have to make the same mistakes like me. There are many great examples that work today:
+You don't have to make the same mistakes as me. There are many great examples that work today:
 
 - [Cyclic PHPUnit Release Process](https://github.com/sebastianbergmann/phpunit/wiki/Release-Process) - stick to [*menstruation* dependency](https://www.tomasvotruba.cz/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/)
 - [PHP.net - Supported Versions](http://php.net/supported-versions.php) - stay green on PHP
@@ -99,7 +98,7 @@ In that time, [Nette went from monorepo to multirepo](https://phpfashion.com/pra
 
 ## 5. Don't Take Advise as Granted, Experiment for Yourself
 
-**No one knows the answer for your**. The most of these fuckups above were based on result of experience of someone else. "If he's doing this and this and he's popular, he's right." Or maybe he isn't, try it for yourself. Fail fast to learn fast what works best for your own situation.
+**No one knows the answer for your**. The most of these fuckups above were based on the result of the experience of someone else. "If he's doing this and this and he's popular, he's right." Or maybe he isn't, try it for yourself. Fail fast to learn fast what works best for your own situation.
 
 I wouldn't know how to do it right if I didn't go wrong first.
 
