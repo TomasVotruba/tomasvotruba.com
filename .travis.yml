@@ -2,7 +2,7 @@ language: php
 
 php:
     - 7.2
-    - nigtly # 7.3?
+    - 7.3snapshot
 
 install:
     - composer update
