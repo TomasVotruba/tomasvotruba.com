@@ -62,7 +62,7 @@ Your garden is the most important one and as one my very smart friend told me:
 
 <blockquote class="blockquote text-center">
     "Each of has our own universe and none one-is never ever get to understand it."
-</blockqouote>
+</blockquote>
 
 Take a break for a day or two, think about what you let in your garden world and what trees will hold your back if you'll ever need them. **Your life is about you, your dreams, your universe and your garden**. Take care of it well and your fruits will take care of you.
 
