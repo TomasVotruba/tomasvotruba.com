@@ -1,6 +1,12 @@
 parameters:
     talks:
         -
+            title: "How Monorepo Will Save Your Company"
+            year: 2018
+            event_name: "Friend of PHP Prague, September 2018"
+            event_link: "https://www.meetup.com/friends-of-php-prague/events/254388973/"
+            slides_link: "https://docs.google.com/presentation/d/1UzlKWoEdFlDLj2fzFW9e7VMyncurY-Jwwh3O78rLB-g/edit?usp=sharing"
+        -
             title: "You Won’t Upgrade that Manually, Right?"
             year: 2018
             event_name: "Symfony User Group Berlin, August 2018"
