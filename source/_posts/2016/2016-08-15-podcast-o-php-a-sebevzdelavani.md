@@ -1,7 +1,7 @@
 ---
 id: 11
 title: Poslechni si podcast o PHP a sebevzdělávání
-perex: ""
+perex: "compat"
 redirect: true
 ---
 
