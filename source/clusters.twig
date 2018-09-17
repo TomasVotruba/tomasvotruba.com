@@ -22,7 +22,7 @@ inspiration:
                 </p>
 
                 <p>
-                    <em>Why books are dead and posts are outliers? Read in <a href=" /blog/2018/06/28/dont-read-books/">Don't read books</a> and <a href="/blog/2018/07/02/cluster-more-interactive-than-book-deeper-than-post/">Cluster: More Interactive than a Book, Deeper than a Post</a>.</em>
+                    <em>Why books and lonely posts are dead? Read <a href="/blog/2018/06/28/dont-read-books/">Don't read books</a> and <a href="/blog/2018/07/02/cluster-more-interactive-than-book-deeper-than-post/">Cluster: More Interactive than a Book, Deeper than a Post</a>.</em>
                 </p>
             </div>
         </div>
@@ -31,18 +31,14 @@ inspiration:
 
         <h2>Pick a Cluster</h2>
 
-        <ul class="list-unstyled">
-            <li>
-                Got only <strong>5 minutes in a subway?</strong> - Pick single post to learn a specific skill.
-            </li>
-            <li>
-                Got more than <strong>30 minutes in the evening bed?</strong> - Read the whole cluster to master the topic.
-            </li>
+        <ul>
+            {% for cluster in clusters %}
+                <a href="#{{ cluster.title|webalize }}">
+                    <li>{{ cluster.title }}</li>
+                </a>
+            {% endfor %}
         </ul>
 
-        <p>
-            <em class="fas fa-check text-success"></em> Don't forget to tick it, so you know what posts you've finished.
-        </p>
 
         {% for cluster in clusters %}
             <a name="{{ cluster.title | webalize }}"></a>
@@ -63,8 +59,11 @@ inspiration:
                         <li class="list-inline-item mr-3">
                             <em class="fas fa-calendar fa-fw"></em> {{ cluster.year_released }}
                         </li>
-                        <li class="list-inline-item">
+                        <li class="list-inline-item mr-3">
                             <em class="fas fa-clock fa-fw"></em> {{ totalReadingTime }} mins
+                        </li>
+                        <li class="list-inline-item">
+                            <em class="fas fa-puzzle-piece fa-fw"></em> {{ cluster.post_ids|length }} parts
                         </li>
                     </ul>
 
