@@ -17,3 +17,9 @@ parameters:
             year_released: 2018
             post_ids: [114, 80, 36, 133]
             description: "Collector is the one pattern that will help your code exponentially. It's super easy to start using in every level of application. Stop learning 5 SOLID principles theory and start using it in your code today."
+
+        -
+            title: "Monorepo: From Zero to Hero"
+            year_released: 2018
+            post_ids: [25, 124, 82, 138]
+            description: "What is monorepo? How can you use it to speed up your packages' and projects' development? How to run your own monorepo in 10 minutes?"
