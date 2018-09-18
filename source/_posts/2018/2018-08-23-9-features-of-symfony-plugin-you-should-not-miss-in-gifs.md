@@ -7,6 +7,14 @@ tweet: "New Post on my Blog: 9 Features of Symfony Plugin You Should Not Miss in
 tweet_image: "/assets/images/posts/2018/symfony-plugin/doctrine-query-autocomplete.gif"
 ---
 
+## 0. Be Grateful ❤️️
+
+<img src="/assets/images/posts/2018/symfony-plugin/thank-you.png" class="img-thumbnail">
+
+[Click PayPal in README](https://github.com/Haehnchen/idea-php-symfony2-plugin#building-debugging-and-other)
+
+<br>
+
 ## 1. Enable the Plugin
 
 Easy, but must have step!
