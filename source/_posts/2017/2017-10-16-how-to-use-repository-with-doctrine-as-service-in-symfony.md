@@ -83,7 +83,6 @@ Why? Because parent constructor of `Doctrine\ORM\EntityRepository` is [missing `
 
 Also **we can't get another dependency**, like `PostSorter` that would manage sorting post in any way.
 
-
 ```php
 <?php declare(strict_types=1);
 
@@ -153,16 +152,11 @@ $this->entityManager->getRepository(Post::class);
 
 Instead of **registration to Symfony container like any other service, here is uses logic coupled to annotation of specific class**. Just a reminder: [Occam's razor](https://www.google.cz/search?q=occams+razor&oq=occams+razor&aqs=chrome..69i57j0l5.2630j0j7&sourceid=chrome&ie=UTF-8).
 
-
-
 ### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
-
 
 It's in documentation.
 
-
 ### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
-
 
 It is very complicated to have more repositories for one entity. What if I want to have `PostRedisRepository` for Redis-related operations and `PostFrontRepository` for reading-only?
 
@@ -209,7 +203,6 @@ final class PostController
 }
 ```
 
-
 ### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
 
 Again, status quo.
@@ -250,12 +243,9 @@ $someService = $container->get(SomeService::class);
 
 ### 4. Registration `services.yml`
 
-
 None. Repositories are created by Doctrine.
 
-
 <br>
-
 
 ## <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages Summary
 
@@ -264,7 +254,6 @@ It's easy to copy-paste if already present in our code.
 It's spread in most of documentation, both in Doctrine and Symfony and in many posts about Doctrine.
 
 No brain, no gain.
-
 
 ## <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages Summary
 
@@ -286,8 +275,6 @@ We cannot use constructor injection in repositories, which **can easily lead you
 
 Also, you directly depend on Doctrine's API, so if `find()` changes to `get()` in one `composer update`, your app is down.
 
-
-
 ## How to Make This Better with Symfony 3.3?
 
 It require few steps, but **all builds on single one change**. Have you heard about *composition over inheritance*?
@@ -308,7 +295,6 @@ final class PostRepository extends EntityRepository
 ```
 
 **...we use *composition*:**
-
 
 ```php
 <?php declare(strict_types=1);
@@ -332,6 +318,27 @@ final class PostRepository
     }
 }
 ```
+
+**Update entity that is now independent** on any repository:
+
+```diff
+ <?php declare(strict_types=1);
+
+ namespace App\Entity;
+
+ use Doctrine\ORM\Entity;
+
+ /**
+- * @Entity(repositoryClass="App\Repository\PostRepository")
++ * @Entity
+  */
+ final class Post
+ {
+     ...
+ }
+```
+
+Without this, you'd get a segfault error due to circular reference.
 
 That's all! Now you can program the way *which is used in the rest of your application*:
 
@@ -401,8 +408,10 @@ You can get another dependency if you like.
 namespace App\Entity;
 
 use Doctrine\ORM\Entity;
-use Doctrine\ORM\EntityRepository;
 
+/**
+ * @Entity
+ */
 class Post
 {
     ...
@@ -422,9 +431,13 @@ No service locators smells.
 **Allows multiple repositories per entity**:
 
 ```yaml
-- App\Repository\ProductRepository
-- App\Repository\ProductRedisRepository
-- App\Repository\ProductBenchmarkRepository
+services:
+    _defaults:
+        autowire: true
+
+    App\Repository\ProductRepository: ~
+    App\Repository\ProductRedisRepository: ~
+    App\Repository\ProductBenchmarkRepository: ~
 ```
 
 <br>
@@ -490,8 +503,6 @@ All we needed is to apply *composition over inheritance* pattern in this specifi
 
 If you don't use Doctrine or you already do this approach, **try to think where else you `extends` 3rd party package instead of `__construct`**.
 
-
-
 ## How to add new repository?
 
 The main goal of all this was to make work with repositories typehinted, safe and reliable for you tu use and easy to extends.
@@ -500,9 +511,6 @@ The main goal of all this was to make work with repositories typehinted, safe an
 
 The answer is now simple: **just create repository it in `App\Repository`**.
 
-
 Try the same example with your current approach and let me know in the comments.
-
-
 
 Happy coding!
