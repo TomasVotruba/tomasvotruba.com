@@ -1,13 +1,13 @@
 ---
 id: 32
-title: "Statie 2: How add Contact Page With Data"
+title: "Statie - part 2: How to add Contact Page With Data"
 perex: |
-    <a href="/blog/2017/02/20/statie-how-to-run-it-locally">In first post about Statie</a> you generated simple index with layout. Today we look on first semi-dynamic feature: <strong>data structures</strong>.
+    [In previous post about Statie](/blog/2017/02/20/statie-how-to-run-it-locally) you generated simple index with layout. Today we look on first semi-dynamic feature: **data structures**.
 
 updated: true
-updated_since: "April 2018"
+updated_since: "September 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">Statie 4.0</a>,  <code>parameters</code> section in <code>statie.yml</code> config for loading global data and Neon to Yaml migration.
+    Updated with Statie 5.0, NEON → YAML, Twig and <code>parameters</code> section in <code>statie.yml</code> config.
 related_items: [29, 33, 34]
 
 tweet: "#Statie 2: Data sets #php #static #github"
@@ -15,18 +15,17 @@ tweet: "#Statie 2: Data sets #php #static #github"
 
 ## Contact Page with Socials Accounts Data Separated
 
-First, **create a file** in the `/source` directory called `contact.latte`.
+First, **create a file** in the `/source` directory called `contact.twig`.
 
 The file name is relevant to the url - this file will be accessible at `/contact`.
 
-
-```html
-<!-- source/contact.latte -->
+```twig
+<!-- source/contact.twig -->
 ---
 layout: default
 ---
 
-{block content}
+{% block content %}
     <h1>First Hour is on me - Call me now!</h1>
 
     <ul>
@@ -37,7 +36,7 @@ layout: default
         <li>LinkedIn: <a href="https://linkedin.com/wise-programmer">Wise Programmer</a></li>
         <li>Github: <a href="https://github.com/wise-programmer">@WiseProgrammer</a></li>
     </ul>
-{/block}
+{% endblock %}
 ```
 
 <br>
@@ -51,7 +50,7 @@ If you use [smart Gulp script](/blog/2017/02/20/statie-how-to-run-it-locally#min
 
 ## How to decouple Information to Data Structures
 
-We are programmers and we don't like data coupled to the code. You wouldn't put your repository class to your `Homepage.latte` template, would you?
+We are programmers and we don't like data coupled to the code. You wouldn't put your repository class to your `Homepage.twig` template, would you?
 
 What if...
 
@@ -65,28 +64,25 @@ In both cases, we modify the template the same way:
 
 
 
-```html
-<!-- source/contact.latte -->
+```twig
+<!-- source/contact.twig -->
 ---
 layout: default
 ---
 
 
-{block content}
+{% block content %}
     <h1>First Hour is on me - Call me now!</h1>
 
     <ul>
-        {foreach $contactMethods as $contactMethod}
+        {% for contactMethod in contactMethods %}
             <li>
-                {$contactMethod['type']}:
-                <a href="{$contactMethod['link']}">{$contactMethod['name']}</a>
+                {{ contactMethod.type }}:
+                <a href="{{ contactMethod.link }}">{{ contactMethod.name }}</a>
             </li>
-        {/foreach}
-
-        <!-- or shorter -->
-        <!-- <li n:foreach="$contactMethods as $contactMethod"> -->
+        {% endfor %}
     </ul>
-{/block}
+{% endblock %}
 ```
 
 ## 1. Local Values in between `---`
@@ -102,7 +98,7 @@ In *code words*:
 key: "value"
 ---
 
-{$key} <!-- shows "value" -->
+{{ key }} <!-- shows "value" -->
 ```
 
 ### How to Use it?
@@ -139,11 +135,11 @@ $contactMethods = [
 ];
 ```
 
-Now we put this data to Yaml format and place them to our `contact.latte`.
+Now we put this data to Yaml format and place them to our `contact.twig`.
 
 
-```yaml
-<!-- source/contact.latte -->
+```twig
+<!-- source/contact.twig -->
 ---
 layout: default
 contactMethods:
@@ -173,18 +169,18 @@ contactMethods:
         name: @WiseProgrammer
 ---
 
-{block content}
+{% block content %}
     <h1>First Hour is on me - Call me now!</h1>
 
     <ul>
-        {foreach $contactMethods as $contactMethod}
+        {% for contactMethod in contactMethods %}
             <li>
-                {$contactMethod['type']}:
-                <a href="{$contactMethod['link']}">{$contactMethod['name']}</a>
+                {{ contactMethod.type }}:
+                <a href="{{ contactMethod.link }}">{{ contactMethod.name }}</a>
             </li>
-        {/foreach}
+        {% endfor %}
     </ul>
-{/block}
+{% endblock %}
 ```
 
 Save file and [look on the contact page](http://localhost:8000/contact).
@@ -230,19 +226,16 @@ imports:
 
 And that's it!
 
-
 Save file, [look on the contact page](http://localhost:8000/contact) and it still works!
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/statie-2/statie-contact.png" class="img-thumbnail">
 </div>
 
-
 ## Now You Know
 
 - How to add data to your Statie page.
 - **Where to put them for local and global access**.
 - **That its convention** to use `/source/_data/<some-data>.yml` naming.
-
 
 Happy coding!

@@ -1,12 +1,17 @@
 ---
 id: 29
-title: "Statie: How to run it Locally"
+title: "Statie - part 1: How to run it Locally"
 perex: |
-    <a href="https://github.com/Symplify/Statie">Statie</a> is a tool to create semi-static webpages. It allows you to host your website on Github for free. Event with own domain and https. It was created in late 2016 based on Scuplin and its major feature is simplicity.
+    [Statie](https://statie.org) is a tool to create semi-static webpages. It allows you to host your website on Github for free. Event with own domain and https. It was created in late 2016 based on [Scuplin](https://github.com/sculpin/sculpin) and its major feature is simplicity.
     <br><br>
     That was the "pitch", now I will show you how to use it.
 related_items: [32, 33, 34]
 tweet: "#Statie 1: Up and Running locally #php #static #github"
+
+updated: true
+updated_since: "September 2018"
+updated_message: |
+    Updated with Statie 5.0 and Twig support.
 ---
 
 ### Create Empty Project...
@@ -24,7 +29,7 @@ composer require symplify/statie
 
 Statie has very simple life-cycle:
 
-1. Create code in `/source` directory, using HTML, Latte and Markdown
+1. Create code in `/source` directory, using HTML, TWIG, Latte and Markdown
 2. Generate HTML code via console
 3. See the generated HTML output code in `/output` via local PHP server
 
@@ -33,14 +38,12 @@ Later, you can push output code to Github Pages or your server via FTP or SSH. B
 
 ## 1. Create your Code
 
-Statie supports **HTML**, **[Latte](https://github.com/nette/latte)** (like Smarty or Twig, just bit different syntax) and **Markdown** (in `.md` files only).
-
-For most of pages, HTML and Latte is enough. Markdown is useful for repeated items like posts.
+Statie supports **HTML**, **TWIG**, **[Latte](https://github.com/nette/latte)** and **Markdown** (in `.md` files only). For most of pages, HTML and TWIG/Latte is enough. Markdown is useful for repeated items like posts.
 
 Let's create our index page.
 
 ```html
-<!-- source/index.latte -->
+<!-- source/index.twig -->
 
 Hi!
 ```
@@ -56,32 +59,31 @@ Hi!
         <meta charset="utf-8">
     </head>
     <body>
-        {block content}{/block}
+        {% block content %}{% endblock %}
     </body>
 </html>
 ```
 
-And add layout and block content to the `index.latte`:
+And add layout and block content to the `index.twig`:
 
 ```html
 ---
 layout: default
 ---
 
-{block content}
+{% block content %}
     Hi, my job is to help you grow any direction you choose!
-{/block}
+{% endblock %}
 ```
 
 **Section between `---` is used to configure system or own variables**. I will tell you more about that later.
-
 
 ## 2. Generate Final HTML Code
 
 Run in project root in CLI:
 
 ```bash
-vendor/bin/statie generate source/
+vendor/bin/statie generate source
 ```
 
 ## 3. See Generate Code
@@ -98,9 +100,11 @@ Voilá!
 
 
 <div class="text-center">
-    <img src="/assets/images/posts/2017/statie-1/statie-cycle.gif" style="width:100%">
+    <img src="/assets/images/posts/2017/statie-1/statie-cycle.gif">
+    <em>The same demo as above, just with Latte syntax</em>
 </div>
 
+<br>
 
 ## Minitip: Use Gulp Work For You
 
@@ -148,6 +152,6 @@ And run the script via:
 gulp
 ```
 
-Now open [localhost:8000](http://localhost:8000) and change `source/index.latte`.
+Now open [localhost:8000](http://localhost:8000) and change `source/index.twig`.
 
 It works!
