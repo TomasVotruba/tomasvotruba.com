@@ -8,6 +8,9 @@ perex: |
     <br><br>
     Exceptions are not just error state. **Exceptions are the new documentation**.
 tweet: "New Post on my Blog: 7 Tips to Write #Exceptions Everyone Will Love    #tracy #donotmakemethink #php #exceptions"
+
+tested: true
+test_slug: Exceptions
 ---
 
 I wrote a [50-page thesis about polyphasic sleep](/blog/2018/02/12/sleep-shorter-to-get-62-percent-smarter/). My opponent told me, that there is a missing part about uncontrolled intervening values. The part in pages 34-36 he probably skipped. Today we have too much going on **we have to scan**. Anything longer than 140 chars is exhausting. Moreover for us programmers, who dance among tsunami of information coming every hour as they code and investigate code of others.
@@ -225,9 +228,12 @@ How can we make it a bit more familiar to the user? Show the **relative path**:
 // "$filePath" can be absolute or relative; we don't care, it only must exists
 $fileInfo = new SplFileInfo($filePath);
 
+// remove absolte path start to cwd (current working directory)
+$relativePath = substr($fileInfo->getRealPath(), strlen(getcwd()) + 1);
+
 throw new FileProcessingException(sprintf(
     'File "%s" not found',
-    $fileInfo->getPathname()
+    $relativePath
 ));
 ```
 

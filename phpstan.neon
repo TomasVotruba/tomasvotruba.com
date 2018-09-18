@@ -8,3 +8,6 @@ parameters:
 
         # false positive
         - '#Cannot access property \$stmts on PhpParser\\Node\\Stmt\|null#'
+
+        # SplFileInfo->getRealPath()
+        - '#Parameter \#1 \$string of function strlen expects string, string\|false given#'
