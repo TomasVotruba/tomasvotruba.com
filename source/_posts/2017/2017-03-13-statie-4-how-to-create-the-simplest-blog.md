@@ -2,43 +2,43 @@
 id: 34
 title: "Statie 4: How to Create The Simplest Blog"
 perex: |
-    Statie is very powerful tool for creating small sites. But you will use just small part of it's features, having just micro-sites. How to get to full 100%? <strong>Build a blog</strong>.
+    Statie is very powerful tool for creating small sites. But you will use just small part of it's features, having just micro-sites. How to get to full 100%? **build a blog**.
     <br><br>
-    Today I will show you, <strong>how to put your first post</strong>.
+    Today I will show you, **how to publish your first post**.
 related_items: [29, 32, 33]
 tweet: "#Statie 4: How to create blog #php #static #github"
 
 updated: true
-updated_since: "April 2018"
+updated_since: "September 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">Statie 4.0</a>and Neon to Yaml migration.
+    Updated with Statie 5.0, NEON → YAML, Twig and <code>parameters</code> section in <code>statie.yml</code> config.
 ---
 
 ## Create a Blog Page
 
 This might be the simplest page to show all your posts:
 
-```html
-<!-- /source/blog.latte -->
+```twig
+<!-- /source/blog.twig -->
 
 ---
 layout: default
 ---
 
-{block content}
+{% block content %}
     <h2>Shouts Too Loud from My Hearth</h2>
 
-    {foreach $posts as $post}
-        <a href="/{$post['relativeUrl']}/">
-            <h3>{$post['title']}</h3>
+    {% for post in posts %}
+        <a href="/{{ post.relativeUrl }}/">
+            <h3>{{ post.title }}</h3>
         </a>
-    {/foreach}
-{/block}
+    {% endfor %}
+{% endblock %}
 ```
 
 ### You already see
 
-- that all posts are in stored in `$posts` variable
+- that all posts are in stored in `posts` variable
 - that every post has `relativeUrl`
 - that every post should have a `title` (optional, but recommended)
 
@@ -48,10 +48,10 @@ layout: default
 Statie will do 3 steps:
 
 1. **Scans `/source/_posts` for any files**
-    - those files have to be in `YYYY-MM-DD-url-title.*` format
+    - those files have to be in `YYYY-MM-DD-url-title.md` format
     - that's how Statie can determine the date
-2. **Converts Markdown and Latte syntax in them to HTML**
-3. Stores them to `$posts` variable.
+2. **Converts Markdown and TWIG/Latte syntax to HTML**
+3. Stores them to `posts` variable.
 
 
 ## How does a Post Content Look Like?
@@ -60,7 +60,6 @@ Statie will do 3 steps:
 <!-- source/_posts/2017-03-05-my-last-post.md -->
 
 ---
-layout: "post"
 title: "This my Last Post, Ever!"
 ---
 
@@ -69,31 +68,20 @@ This is my last post to all
 
 ### How to Show Post in Own Layout
 
-As you can see, post has `layout: post`. It means it's displayed in `_layouts/post.latte`:
+Posts use `_layouts/post.twig` by default. It should include the common parts for all layouts - like header, menu or footer.
 
 ```twig
-<!-- /source/_layouts/post.latte -->
+<!-- /source/_layouts/post.twig -->
 
-{extends "default"}
+{% include "_snippets/header.twig" %}
 
-{block content_wrapper}
-    <h2>{$post['title']}</h2>
+{% block content %}
+    <h2>{{ post.title }}</h2>
 
-    {$post['content']|noescape}
-{/block}
-```
+    {{ post.content|raw }}
+{% endblock %}
 
-We have to also modify `default.latte`, to include our post layout and replacte `{block content}{/block}` with.
-
-```twig
-<!-- /source/_layouts/default.twig -->
-...
-
-{block content_wrapper}
-    {block content}{/block}
-{/block}
-
-...
+{% include "_snippets/footer.twig" %}
 ```
 
 That should be it.
@@ -110,54 +98,27 @@ When you click a post title:
     <img src="/assets/images/posts/2017/statie-4/statie-post.png" class="img-thumbnail">
 </div>
 
-
-
 ### ProTip: Change Post Url
 
-You see the url for the post is:
+You see the url for the post is `blog/2017/03/05/my-last-post/`.
 
-```
-blog/2017/03/05/my-last-post/
-```
-
-or
-
-```
-blog/Year/Month/Day/FileSlug
-```
-
-This **can be changed by configuration**. In `statie.yml` you can override default values:
-
-```yaml
-# statie.yml
-
-parameters:
-    post_route: 'blog/:year/:month/:day/:title'
-```
-
-Where `:year`, `:month`, `:day` and `:title` are all variables.
-
-For example:
+This **can be changed by configuration** in `statie.yml`:
 
 ```yaml
 parameters:
-    post_route: 'my-blog/:year/:title'
+    generators:
+        posts:
+            route_prefix: 'my-blog/:year' # "blog/:year/:month/:day" by default
 ```
 
-Would produce url:
-
-```
-my-blog/2017/my-last-post/
-```
+That produces `my-blog/2017/my-last-post/` url.
 
 Got it? I know you do! **You are smart.**
-
-In one of the next posts, I will show you some cool `PostFile` object features.
 
 ## Now You Know
 
 - **That all posts are placed in `/source/_posts` directory and in `$posts` variable**.
 - That post has to be in **named as `YYYY-MM-DD-title.md` format**
-- That you can change the post generated url in `statie.yml` in `post_route`.
+- That you can change the post generated url in `statie.yml` in `parameters > generators > posts > route_prefix`.
 
 Happy coding!

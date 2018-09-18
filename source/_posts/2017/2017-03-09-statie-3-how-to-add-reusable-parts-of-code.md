@@ -2,20 +2,19 @@
 id: 33
 title: "Statie 3: How to Add Reusable Parts of Code"
 perex: |
-    You already know <a href="/blog/2017/02/20/statie-how-to-run-it-locally">how to run Statie with layout</a> and <a href="/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data">how to add data structures</a>.
+    You already know [how to run Statie with layout](/blog/2017/02/20/statie-how-to-run-it-locally) and [how to add data structures](/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data).
     <br><br>
-Today I will show you: how to use <strong>decouple big templates to smaller and reusable snippets</strong>. Like Google Analytics code.
+    Today you'll learn how to **decouple big templates to smaller and reusable snippets**. Like Google Analytics code.
 related_items: [29, 32, 34]
 tweet: "#Statie 3: Reusable code snippets #php #static #github"
 
 updated: true
-updated_since: "April 2018"
+updated_since: "September 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">Statie 4.0</a>and Neon to Yaml migration.
+    Updated with Statie 5.0, NEON → YAML and Twig.
 ---
 
 Sometimes you need to add part of template, that you want to use on multiple pages (in the same form or with smaller changes) or that makes your template less readable.
-
 
 ## Google Analytics
 
@@ -37,7 +36,7 @@ It looks like this:
 
 We put into layout:
 
-```html
+```twig
 <!-- source/_layouts/default.twig -->
 <!DOCTYPE html>
 <html>
@@ -45,7 +44,7 @@ We put into layout:
         <meta charset="utf-8">
     </head>
     <body>
-        {block content}{/block}
+        {% block content %}{% endblock %}
 
         <script>
             ga=function(){ ga.q.push(arguments) };
@@ -70,22 +69,21 @@ What if you could use some "include googleAnalytics snippet" command?
 With Statie you can!
 
 ```twig
-{include "googleAnalytics"}
+{% include "_snippets/googleAnalytics.twig" %}
 ```
 
 ### How does it Work?
 
-Statie scans `/_snippets` directory and turns all files to snippets. Name of the file represents key for including the snippets.
+Statie scans `/_snippets` directory and turns all files to snippets. Relative path of the file in `/source` directory = key for including the snippets.
 
-- "googleAnalytics" => `googleAnalytics.latte`
-
+- "_snippets/googleAnalytics.twig" => `snippets/googleAnalytics.twig`
 
 ### Decoupling the Snippet
 
 First, we create the snippet file and move the Google Analytics code there:
 
 ```html
-<!-- source/_snippets/googleAnalytics.latte -->
+<!-- source/_snippets/googleAnalytics.twig -->
 
 <script>
     ga=function(){ ga.q.push(arguments) };
@@ -108,8 +106,8 @@ Then clean the layout:
         <meta charset="utf-8">
     </head>
     <body>
-        {block content}{/block}
-        {include "googleAnalytics"}
+        {% block content %}{% endblock %}
+        {% include "_snippets/googleAnalytics.twig" %}
     </body>
 </html>
 ```
@@ -139,7 +137,7 @@ I wrote about config in previous post - [go read it, if you missed it](/blog/201
 So you should end up with this:
 
 ```javascript
-ga('create', {$googleAnalytics}, 'auto');
+ga('create', '{{ $googleAnalytics }}', 'auto');
 ```
 
 Nice work!
@@ -151,35 +149,33 @@ Often, I've ended up with many unrelated snippets in one directory.
 ```bash
 /source
     /_snippets
-        comments.latte
-        header.latte
-        footer.latte
-        postMetadata.latte
-        postHeadline.latte
-        postRecommendations.latte
+        comments.twig
+        header.twig
+        footer.twig
+        postMetadata.twig
+        postHeadline.twig
+        postRecommendations.twig
 ```
 
-There is no need for that. You can group them to subdirs as you like. Nothing changes.
+There is no need for that. You can group them to subdirs as you like:
 
 ```bash
 /source
     /_snippets
         /layout
-            header.latte
-            footer.latte
+            header.twig
+            footer.twig
         /post
-            comments.latte
-            postMetadata.latte
-            postHeadline.latte
-            postRecommendations.latte
+            comments.twig
+            postMetadata.twig
+            postHeadline.twig
+            postRecommendations.twig
 ```
-
 
 ## Now You Know
 
 - That using snippets will save lot of time.
-- **That snippets are named by their filename**: `{include "fileName"}`.
+- **That snippets are named by their filename**: `{% include "_snippest/fileName.twig" %}`.
 - **That snippets work the best with [global configuration](/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data#2-global-or-bigger-amount-of-data)**.
-
 
 Happy coding!
