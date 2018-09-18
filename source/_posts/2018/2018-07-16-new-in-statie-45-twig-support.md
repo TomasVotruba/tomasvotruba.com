@@ -8,6 +8,11 @@ perex: |
 tweet: "New Post on my Blog: New in #Statie 4.5: #Twig Support #symfony #latte"
 tweet_image: "/assets/images/posts/2018/statie-45/statie-45.png"
 related_items: [67, 120]
+
+updated: true
+updated_since: "September 2018"
+updated_message: |
+    Updated with Statie 5.0, NEON → YAML and Twig.
 ---
 
 <a href="https://github.com/Symplify/Symplify/pull/892" class="btn btn-dark btn-sm">
@@ -101,11 +106,11 @@ All files in `_layouts` and `_snippets` are now referenced by **they full relati
 
 ```diff
 -layout: "default"
-+layout: "_layouts/default.latte"
++layout: "_layouts/default.twig"
  ---
 
--{include "postMetadata"}
-+{include "_snippets/postMetadata.latte"}
+-{% include "postMetadata" %}
++{% include "_snippets/postMetadata.twig" %}
 ```
 
 Do you use [Generators](https://www.statie.org/docs/generators/)? Don't forget to upgrade them too:
@@ -115,7 +120,7 @@ Do you use [Generators](https://www.statie.org/docs/generators/)? Don't forget t
      generators:
          posts:
 -            layout: 'post'
-+            layout: '_layouts/post.latte'
++            layout: '_layouts/post.twig'
 ```
 
 ### Already Running on Statie 4.5
