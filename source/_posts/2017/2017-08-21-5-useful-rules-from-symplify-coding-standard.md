@@ -4,7 +4,7 @@ title: "5 Useful Rules From Symplify Coding Standard"
 perex: |
      <a href="https://github.com/Symplify/CodingStandard">Symplify Coding Standard</a> was born from Zenify, back from the days I was only Nette programmer. It focuses on <strong>maintainability and clean architecture</strong>. I try to make them simple: <strong>each of them does one job</strong>.
      <br><br>
-     With over 13 000 downloads I think I should write about 5 of them you can use in your projects today.
+     With over 108 000 downloads I think I should write about 5 of them you can use in your projects today.
 tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standard #php #architecture #php_codesniffer"
 related_items: [49]
 
@@ -12,6 +12,17 @@ updated: true
 updated_since: "April 2018"
 updated_message: |
     Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
+
+deprecated: true
+deprecated_since: "September 2018"
+deprecated_message: |
+    <a href="https://github.com/Symplify/Symplify/tree/v5.0.0">Symplify 5.0</a> was released and with that, many checkers were replaced by better ones.
+    <br>
+    <br>
+    Checkers 2, 4 and 5 were replaced by <code>SlamCsFixer\FinalInternalClassFixer</code> - <strong>class is either final or abstract</strong>.
+    <br>
+    <br>
+    <code>@inject</code> refactoring was replaced by <a href="https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#annotatedpropertyinjecttoconstructorinjectionrector"><code>AnnotatedPropertyInjectToConstructorInjectionRector</code></a> from <a href="https://github.com/rectorphp/rector">Rector</a>.
 ---
 
 I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
@@ -19,7 +30,6 @@ I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rul
 **Symplify Coding standard is complete opposite.** You can start with 1st checker today and your code will be probably able to handle it. It's combination of 23 sniffs and fixers.
 
 The simplest would be...
-
 
 ### 1. Array property should have default value `[]` to prevent undefined array issues
 
