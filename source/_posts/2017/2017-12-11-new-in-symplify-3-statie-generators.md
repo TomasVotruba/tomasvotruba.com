@@ -9,6 +9,11 @@ perex: |
 tweet: "Statie 3 on #symfony 4 is out with many little improvements + 1 big feature - Generators! Having own page is not a luxury for posts anymore!"
 tweet_image: "/assets/images/posts/2017/statie-generators/generators.png"
 related_items: [29, 32, 33, 34]
+
+updated: true
+updated_since: "September 2018"
+updated_message: |
+    Updated with Statie 5.0, NEON → YAML, Twig and <code>statie.yml</code> config.
 ---
 
 ## Coupled Approach in Statie 2
@@ -17,9 +22,9 @@ Posts in Statie 2 were enabled by defaults with following hard coded logic:
 
 - find all `*.md` files in `_posts` directory
 - create `PostFile` objects from them
-- save all of them to global variable `$posts`
+- save all of them to global variable `posts`
 - use route defined in `parameters > post_route` to render it
-- render it with `_layouts/post.latte` layout
+- render it with `_layouts/post.twig` layout
 
 You could change a `post_route` or `layout` in specific post file, but that was it. No flexibility, no extendability and modification of `PostFile` class was not possible.
 
@@ -47,7 +52,7 @@ parameters:
             varbiale_global: posts
             # directory, where to look for them
             path: '_posts'
-            # which layout to use, will be converted to "_layout/post.latte"
+            # which layout to use, will be converted to "_layout/post.twig"
             layout: 'post'
             # and url prefix, e.g. /blog/some-post.md
             route_prefix: 'blog'
@@ -103,7 +108,7 @@ The configuration is as simple as possible, so `object` is optional. You can rea
 ### How to add new Lecture?
 
 1. Create [new `*.md` file](https://github.com/pehapkari/pehapkari.cz/pull/358/commits/e68d8f98172b2a04e4cf80e635c036c3f2a7bef2#diff-f5b8e6c24f5a089810b255d7d0757105) in `source/_lectures/` directory
-2. Have [`_layout/lecture.latte`](https://github.com/pehapkari/pehapkari.cz/pull/358/commits/e68d8f98172b2a04e4cf80e635c036c3f2a7bef2#diff-63d6418d873273aad1011eb0c40b5f3b) ready
+2. Have [`_layout/lecture.twig`](https://github.com/pehapkari/pehapkari.cz/pull/358/commits/e68d8f98172b2a04e4cf80e635c036c3f2a7bef2#diff-63d6418d873273aad1011eb0c40b5f3b) ready
 3. Create [`LectureFile`](https://github.com/pehapkari/pehapkari.cz/pull/358/commits/e68d8f98172b2a04e4cf80e635c036c3f2a7bef2#diff-34b7c0f32f7935ef12a8b2f732c8a9d6) with extra `getTitle()` method
 
 
@@ -111,34 +116,34 @@ That's all!
 
 These lectures will be available **in every template under `{$lectures}` variable**, as configured in `variable_global` option.
 
-So you can create page `source/all-lectures.latte` with all lectures (ordered by filename):
+So you can create page `source/all-lectures.twig` with all lectures (ordered by filename):
 
-```html
-{foreach $lectures as $lecture}
-    <h2>{$lecture->getTitle()}</h2>
-{/foreach}
+```twig
+{% for lecture in lectures %}
+    <h2>{{ lecture.getTitle() }}</h2>
+{% endfor %}
 ```
-
 
 ## Try Generators Out
 
-Just upgrade to [Statie 3](https://github.com/Symplify/Symplify/releases/tag/v3.0.0):
+Just upgrade Statie:
 
 ```bash
 composer update symplify/statie
 ```
 
-and add lectures, talks with details, products, docs, gifts... anything you need.
-
+and add lectures, talks with details, docs... anything you need.
 
 ### Date Me!
 
 One more surprise to prevent. In case you use `route_prefix` with date in it:
 
 ```yaml
+# statie.yaml
 parameters:
     generators:
-        route_prefix: 'blog/:year/:month/:day'
+        posts:
+            route_prefix: 'blog/:year/:month/:day'
 ```
 
 remember, **the date has to be in start of the filename**:
@@ -165,7 +170,6 @@ See these PRs:
 
 - [upgrading TomasVotruba.cz](https://github.com/TomasVotruba/tomasvotruba.cz/pull/204)
 - and [Pehapkari.cz](https://github.com/pehapkari/pehapkari.cz/pull/358)
-
 
 <br>
 
