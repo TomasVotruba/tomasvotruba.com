@@ -21,5 +21,5 @@ parameters:
         -
             title: "Monorepo: From Zero to Hero"
             year_released: 2018
-            post_ids: [25, 124, 82, 138]
+            post_ids: [69, 25, 82, 124, 138]
             description: "What is monorepo? How can you use it to speed up your packages' and projects' development? How to run your own monorepo in 10 minutes?"
