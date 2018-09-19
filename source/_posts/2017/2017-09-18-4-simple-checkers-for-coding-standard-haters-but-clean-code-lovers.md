@@ -2,10 +2,10 @@
 id: 55
 title: "4 Simple Checkers for Coding Standard Haters but Clean Code Lovers"
 perex: |
-    Do you find coding standards too <strong>annoying in telling you where to put that bracket</strong>?
+    Do you find coding standards too **annoying in telling you where to put that bracket**?
     Is that the reason you haven't tried them yet?
     <br><br>
-    Great! This post is for you. There are <a href="/blog/2017/07/31/how-php-coding-standard-tools-actually-work/#write-1-checke-save-hundreds-hours-of-work">other ways to use coding standard</a> and <strong>clean code</strong> is one of them.
+    Great! This post is for you. There are [other ways to use coding standard](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/#write-1-checke-save-hundreds-hours-of-work) and **clean code** is one of them.
 tweet: "Do you hate Coding Standards, but love #cleancode? Check these 4 helpful rules #php"
 tweet_image: "/assets/images/posts/2017/clean-checkers/dependency-drop.png"
 related_items: [51, 48]
@@ -13,7 +13,7 @@ related_items: [51, 48]
 updated: true
 updated_since: "April 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 There are some checkers in coding standard world, that don't check spaces, tabs, commas nor brackets. They **actually do code-review for you**.
@@ -59,7 +59,7 @@ services:
     composer require --dev symplify/easy-coding-standard
     ```
 
-2. Add checkers to `easy-coding-standard.neon` file
+2. Add checkers to `ecs.yml` file
 
 3. Check your code
 
