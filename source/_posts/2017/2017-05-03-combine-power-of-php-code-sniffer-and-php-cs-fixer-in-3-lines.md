@@ -2,18 +2,18 @@
 id: 37
 title: "Combine power of PHP_CodeSniffer and PHP CS Fixer in 3 lines"
 perex: |
-    PHP_CodeSniffer has over <strong>3 400 stars</strong> on Github and <strong>210 default sniffs</strong>,
-    PHP CS Fixer with <strong>4 423 stars</strong> brings you <strong>142 fixers</strong>.
+    PHP_CodeSniffer has over **5 381 stars** on Github and **210 default sniffs**,
+    PHP CS Fixer with **6 467 stars** brings you **160 fixers**.
     <br><br>
-    Both powerful tools dealing with coding standards with <strong>huge communities behind them</strong>.
+    Both powerful tools dealing with coding standards with **huge communities behind them**.
     Can you imagine using them both and actually enjoy it? Today I will show you how.
 related_items: [46, 47, 48]
 tweet: "#ecs - tool to use both #phpCodeSniffer and #phpCsFixer in 3 lines #php #codingstandard"
 
 updated: true
-updated_since: "April 2018"
+updated_since: "September 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 <div class="text-center">
@@ -28,6 +28,7 @@ Let's say we want to check arrays.
 We add first *checker* that requires long `array()` syntax:
 
 ```yaml
+# ecs.yml
 services:
     PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff: ~
 ```
@@ -38,6 +39,7 @@ Great start. Then we want to check for trailing commas, so every line has them.
 So add one more checker:
 
 ```yaml
+# ecs.yml
 services:
     PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff: ~
     PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer: ~
@@ -53,12 +55,12 @@ I will show how to install it, run it and how nice and clear reports it generate
 ### 1. Install Package
 
 ```bash
-composer require --dev symplify/easy-coding-standard
+composer require symplify/easy-coding-standard --dev
 ```
 
-### 2. Add `easy-coding-standard.yml` and Configure
+### 2. Configure
 
-Create a `easy-coding-standard.yml` file in your project and desired checkers.
+Create a `ecs.yml` file in your project and desired checkers.
 
 ```yaml
 services:

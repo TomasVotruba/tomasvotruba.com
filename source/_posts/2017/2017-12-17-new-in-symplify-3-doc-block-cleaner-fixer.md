@@ -11,7 +11,7 @@ tweet_image: "/assets/images/posts/2017/doc-block-cleaner/diff.png"
 updated: true
 updated_since: "April 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 <blockquote class="blockquote text-center">

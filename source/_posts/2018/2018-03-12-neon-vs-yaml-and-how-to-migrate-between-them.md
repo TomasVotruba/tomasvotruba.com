@@ -16,7 +16,7 @@ test_slug: NeonYaml
 updated: true
 updated_since: "April 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to Yaml migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 
 related_items: [120]
 ---
@@ -243,7 +243,7 @@ At least I though I picked the right one until I opened it. In every single coun
 
 For all the reasons above (thirsty-human-friendly-bottle-colors included), after looking at problem from various points of view and discussing with my Github and PHP friends, I came to conclusion that Yaml is better for me.
 
-## How to Migrate from Neon to Yaml?
+## How to Migrate from Neon to YAML?
 
 But EasyCodingStandard was running on Neon that was loaded by my few classes to Symfony Kernel, so how to migrate to Yaml?
 

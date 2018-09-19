@@ -4,7 +4,7 @@ title: "New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Serv
 perex: |
     I wrote about [news in Easy Coding Standard 3](/blog/2018/03/01/new-in-symplify-3-4-improvements-in-easy-coding-standard/) a while ago. EasyCodingStandard 4 is released yet (still in alpha), but soon you'll be able to use all the news I'll show you today.
     <br><br>
-    And what are they? Neon to Yaml, semi-static to Services, customizable caching, even simpler skipper, short bin and more.
+    And what are they? Neon to YAML, semi-static to Services, customizable caching, even simpler skipper, short bin and more.
 tweet: "New Post on my Blog: New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Services"
 tweet_image: "/assets/images/posts/2018/symplify-4-ecs/yaml-autocomplete.gif"
 related_items: [79]
@@ -89,7 +89,7 @@ Typo proof or at least less error prone. Just change it in you [`composer.json`'
 
 <br>
 
-## 4. DI Migration Finished: From Neon to Yaml
+## 4. DI Migration Finished: From Neon to YAML
 
 <a href="https://github.com/Symplify/Symplify/pull/651" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fas fa-github"></em>
@@ -99,7 +99,7 @@ Typo proof or at least less error prone. Just change it in you [`composer.json`'
 
 Symplify used `Nette\DI` a long time ago and with it its markup language - Neon. Then it moved to `Symfony\DependencyInjection` in [Symplify 2.0](https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v200---2017-06-16), because it was just impossible to reject [all these awesome Symfony 3.3 features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) by Nicolas Grekas. But this was just partial migration - Neon files still worked.
 
-That lead to situation, where 5 *custom-cool-classes* simulated loading transforming Neon to Yaml format, merging it and then passing to Symfony Container, hoping all went well. And it worked. Well, most of the times.
+That lead to situation, where 5 *custom-cool-classes* simulated loading transforming Neon to YAML format, merging it and then passing to Symfony Container, hoping all went well. And it worked. Well, most of the times.
 
 Based on feedback from [community around Symplify](https://github.com/Symplify/Symplify/issues/565), rejection of ECS in [Doctrine\CodingStandard](https://github.com/doctrine/coding-standard) where Neon was one of reasons and weird feeling from promoting "local-only standard", I decided to move to Symfony completely.
 
