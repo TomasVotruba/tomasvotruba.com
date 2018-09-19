@@ -14,7 +14,7 @@ related_items: [86, 70, 68, 51]
 ## 1. Let Coding Standard handle Line Length for You
 
 <a href="https://github.com/Symplify/Symplify/pull/749" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #749
 </a>
@@ -123,7 +123,7 @@ As you guessed, this fixer works with 120 chars as maximum line-size... by defau
 ## 2. Choose Line Length to Match Your Display
 
 <a href="https://github.com/Symplify/Symplify/pull/747" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #751
 </a>
@@ -148,7 +148,7 @@ services:
 ## 3. Keep Legacy Far Away with New `ForbiddenStaticFunctionSniff`
 
 <a href="https://github.com/Symplify/Symplify/pull/722" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #722
 </a>
@@ -174,7 +174,7 @@ services:
 ## 4. Prevent & references with `ForbiddenStaticFunctionSniff`
 
 <a href="https://github.com/Symplify/Symplify/pull/692" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #692
 </a>
@@ -212,7 +212,7 @@ services:
 ## 5. Clear Child Class Naming Once and For All with `ClassNameSuffixByParentFixer`
 
 <a href="https://github.com/Symplify/Symplify/pull/633" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #633
 </a>

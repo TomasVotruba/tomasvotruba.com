@@ -13,7 +13,7 @@ related_items: [79]
 ## 1. Configure Caching Directory
 
 <a href="https://github.com/Symplify/Symplify/pull/656" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #661
 </a>
@@ -34,7 +34,7 @@ Thank you [Marcin Michalski](https://github.com/marmichalski) for adding this fe
 ## 2. Skip Anything, Anywhere
 
 <a href="https://github.com/Symplify/Symplify/pull/661" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #661
 </a>
@@ -64,7 +64,7 @@ No need to think, where to put it anymore.
 ## 3. Short `vendor/bin/ecs` is the King
 
 <a href="https://github.com/Symplify/Symplify/pull/647" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #647
 </a>
@@ -92,7 +92,7 @@ Typo proof or at least less error prone. Just change it in you [`composer.json`'
 ## 4. DI Migration Finished: From Neon to YAML
 
 <a href="https://github.com/Symplify/Symplify/pull/651" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #651
 </a>
@@ -125,7 +125,7 @@ Well just rename `easy-coding-standard.neon` or `easy-coding-standard.yml` and
 ## 5. From Semi-Static Checkers to Services as First-Class Citizen
 
 <a href="https://github.com/Symplify/Symplify/pull/660" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #660
 </a>

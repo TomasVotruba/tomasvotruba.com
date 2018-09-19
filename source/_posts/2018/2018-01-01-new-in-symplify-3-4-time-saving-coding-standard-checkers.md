@@ -20,7 +20,7 @@ Starting with the simple checkers and moving to those, which save you even hours
 ## 1. Absolutely Require and Include
 
 <a href="https://github.com/Symplify/Symplify/pull/385" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request
 </a>
@@ -64,7 +64,7 @@ services:
 ## 2. Empty Line after `declare(strict_types=1)`
 
 <a href="https://github.com/Symplify/Symplify/pull/443" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request
 </a>
@@ -109,7 +109,7 @@ Which helps official fixer to keep the space:
 ## 3. One Way To Use Namespace Imports
 
 <a href="https://github.com/Symplify/Symplify/pull/421" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request
 </a>
@@ -181,7 +181,7 @@ services:
 ## 4. Possible Unused Public Method
 
 <a href="https://github.com/Symplify/Symplify/pull/466" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fas fa-github"></em>
+    <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request
 </a>
