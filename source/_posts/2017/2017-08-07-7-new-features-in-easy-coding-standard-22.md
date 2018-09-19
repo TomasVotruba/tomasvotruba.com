@@ -165,8 +165,8 @@ If you find these 7 news useful, you can try [EasyCodingStandard](https://github
 
 
 ```bash
-composer require symplify/easy-coding-standard
-vendor/bin/ecs
+composer require symplify/easy-coding-standard --dev
+vendor/bin/ecs check src --level psr2
 ```
 
 Happy code-style checking!
