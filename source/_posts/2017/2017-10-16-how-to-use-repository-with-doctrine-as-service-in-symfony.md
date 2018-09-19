@@ -279,44 +279,28 @@ Also, you directly depend on Doctrine's API, so if `find()` changes to `get()` i
 
 It require few steps, but **all builds on single one change**. Have you heard about *composition over inheritance*?
 
-**Instead of *inheritance*...**
+```diff
+ <?php declare(strict_types=1);
 
-```php
-<?php declare(strict_types=1);
+ namespace App\Repository;
 
-namespace App\Repository;
+ use App\Entity\Post;
++use Doctrine\ORM\EntityManager;
+ use Doctrine\ORM\EntityRepository;
 
-use App\Entity\Post;
-use Doctrine\ORM\EntityRepository;
-
-final class PostRepository extends EntityRepository
-{
-}
-```
-
-**...we use *composition*:**
-
-```php
-<?php declare(strict_types=1);
-
-namespace App\Repository;
-
-use App\Entity\Post;
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\EntityRepository;
-
-final class PostRepository
-{
-    /**
-     * @var EntityRepository
-     */
-    private $repository;
-
-    public function __construct(EntityManager $entityManager)
-    {
-        $this->repository = $entityManager->getRepository(Post::class);
-    }
-}
+-final class PostRepository extends EntityRepository
++final class PostRepository
+ {
++    /**
++     * @var EntityRepository
++     */
++    private $repository;
++
++    public function __construct(EntityManager $entityManager)
++    {
++        $this->repository = $entityManager->getRepository(Post::class);
++    }
+ }
 ```
 
 **Update entity that is now independent** on any repository:
