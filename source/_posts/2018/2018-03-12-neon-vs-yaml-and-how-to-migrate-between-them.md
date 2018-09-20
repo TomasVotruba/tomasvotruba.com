@@ -119,7 +119,7 @@ This difference is one of the biggest WTFs, because I had to think about format 
 
 ### 3. Content on Multi-lines
 
-I write posts in Statie, where you can use Yaml to configure per-post variables (@todo linn to post), like perex:
+I write posts in Statie, where you can use Yaml to configure per-post variables like perex:
 
 **Neon**
 

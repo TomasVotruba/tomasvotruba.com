@@ -20,17 +20,14 @@ updated_message: |
     <img src="/assets/images/posts/2017/easy-coding-standard-intro/together.png" class="img-thumbnail">
 </div>
 
-
 ### Right to The Answer
 
-Let's say we want to check arrays.
-
-We add first *checker* that requires long `array()` syntax:
+Let's say we want to check arrays. We add first *checker* that requires short PHP 5.4 `[]` syntax:
 
 ```yaml
 # ecs.yml
 services:
-    PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff: ~
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff: ~
 ```
 
 
@@ -41,14 +38,13 @@ So add one more checker:
 ```yaml
 # ecs.yml
 services:
-    PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff: ~
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff: ~
     PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer: ~
 ```
 
 Great job! **You have just combined PHP_CodeSniffer and PHP CS Fixer in 3 lines.**
 
-With a help of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard). Now, when title promise is fulfilled,
-I will show how to install it, run it and how nice and clear reports it generates.
+With a help of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard). Now, when title promise is fulfilled, I will show how to install it, run it and how nice and clear reports it generates.
 
 ## How to add EasyCodingStandard in 3 steps
 
@@ -65,7 +61,7 @@ Create a `ecs.yml` file in your project and desired checkers.
 ```yaml
 services:
     # arrays
-    PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowShortArraySyntaxSniff: ~
+    PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff: ~
     PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer: ~
 ```
 
