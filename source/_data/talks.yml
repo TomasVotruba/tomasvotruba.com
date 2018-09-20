@@ -1,6 +1,12 @@
 parameters:
     talks:
         -
+            title: "Live upgrade of 2 Open-Source package on Github aka Using Rector for Good"
+            year: 2018
+            event_name: "ViennaPHP monthly gathering, September 2018"
+            event_link: "https://www.meetup.com/viennaphp/events/ncmvwpyxmbbc/"
+            slides_link: "https://docs.google.com/presentation/d/1G9qaZ--uSrbWH9243JDJOX6yQ8Dv95aVqnSGTns9u8U/edit?usp=sharing"
+        -
             title: "How Monorepo Will Save Your Company"
             year: 2018
             event_name: "Friend of PHP Prague, September 2018"
