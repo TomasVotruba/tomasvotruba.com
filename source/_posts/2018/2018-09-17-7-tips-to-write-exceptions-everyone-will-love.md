@@ -228,7 +228,7 @@ How can we make it a bit more familiar to the user? Show the **relative path**:
 // "$filePath" can be absolute or relative; we don't care, it only must exists
 $fileInfo = new SplFileInfo($filePath);
 
-// remove absolte path start to cwd (current working directory)
+// remove absolute path start to cwd (current working directory)
 $relativePath = substr($fileInfo->getRealPath(), strlen(getcwd()) + 1);
 
 throw new FileProcessingException(sprintf(
