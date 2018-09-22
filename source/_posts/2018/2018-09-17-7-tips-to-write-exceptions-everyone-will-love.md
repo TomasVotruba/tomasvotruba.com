@@ -117,7 +117,7 @@ throw new FilterClassNotFoundException(sprintf(
 </blockquote>
 
 ```php
-throw new InvalidParameterException(sprinft(
+throw new InvalidParameterException(sprintf(
     '%s parameter is invalid.',
     $parameterName
 ));
@@ -130,7 +130,7 @@ What parameter?
 </blockquote>
 
 ```diff
- throw new InvalidParameterException(sprinft(
+ throw new InvalidParameterException(sprintf(
 -    '%s parameter is invalid.',
 +    '"%s" parameter is invalid.',
      $parameterName
@@ -144,7 +144,7 @@ Aha! Where do I find it? In the "parameters" section?
 </blockquote>
 
 ```php
-throw new InvalidParameterException(sprinft(
+throw new InvalidParameterException(sprintf(
     'Parameter in "parameters > page_name > %s" is invalid.',
     $parameterName
 ));
@@ -185,7 +185,7 @@ if (is_array($value)) {
     $value = ($value === true) ? 'true' : 'false';
 }
 
-throw new InvalidParameterException(sprinft(
+throw new InvalidParameterException(sprintf(
     'Parameter value "%s" in "parameters > page_name > %s" is invalid. It must be a string.',
     $value,
     $parameterName
