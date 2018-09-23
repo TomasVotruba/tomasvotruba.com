@@ -26,3 +26,6 @@ parameters:
         autoload-dev:
             psr-4:
                 TomasVotruba\Website\Tests\: 'tests'
+
+    directories_to_repositories:
+        packages/StatieTweetPublisher: 'git@github.com:tomasvotruba/statie-tweet-publisher.git'
