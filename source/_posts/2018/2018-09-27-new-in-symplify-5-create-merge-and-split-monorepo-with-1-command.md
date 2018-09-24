@@ -64,7 +64,7 @@ You don't have to run this command manually since it's included in the next one.
 vendor/bin/monorepo-builder merge
 ```
 
-Here you'll understand the magic from `init` command. With `merge` command, the Monorepo Builder will join all packages' `coposer.json` - after validation of course.
+Here you'll understand the magic from `init` command. With `merge` command, the Monorepo Builder will join all packages' `composer.json` - after validation of course.
 
 And what about extra dependencies like PHPUnit, coding standards and static analysis?
 
