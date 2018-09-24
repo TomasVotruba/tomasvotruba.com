@@ -48,7 +48,7 @@ Is that unclear to you? Don't worry, you'll see how it works in `merge` command 
 
 ## 2. Validate it
 
-This command will tell you if your dependency versions are the same in every packages' `coposer.json` and in root `composer.json`.
+This command will tell you if your dependency versions are the same in every packages' `composer.json` and in root `composer.json`.
 
 ```bash
 vendor/bin/monorepo-builder validate
