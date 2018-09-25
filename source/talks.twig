@@ -5,29 +5,19 @@ id: talks
 ---
 
 {% block content %}
-    <div class="container">
+    <div class="container" id="talks">
         <h1>{{ title }}</h1>
 
         {% for talk in talks %}
-            {% set postYear = talk.year %}
-
-            {% if postYear != previousYear %}
-                <h2 id="year-{{ postYear }}" class="text-center mt-5 mb-5">
-                    <em class="fas fa-calendar-o"></em>
-                    &nbsp;
-                    {{ postYear }}
-
-                </h2>
-            {% endif %}
-
-            {% set previousYear = postYear %}
-
-            <div class="card" id="{{ talk.title|webalize }}">
+            <div class="card" id="{{ talk.anchor }}">
+                <div class="text-center card-header">
+                    <h2 class="card-title">
+                        <a href="#{{ talk.anchor }}">
+                            {{ talk.title }}
+                        </a>
+                    </h2>
+                </div>
                 <div class="card-body">
-                    <h3 class="mt-2">
-                        <a href="#{{ talk.title|webalize }}">{{ talk.title }}</a>
-                    </h3>
-
                     {% if talk.video_link is defined %}
                         <a href="{{ talk.video_link }}" class="btn btn-danger btn-sm mt-3 mr-2 mb-2">
                             <em class="fab fa-fw fa-youtube"></em>
@@ -38,7 +28,7 @@ id: talks
                     {% if talk.demo_link is defined %}
                         <a href="{{ talk.demo_link }}" class="btn btn-dark btn-sm mt-3 mr-2 mb-2">
                             <em class="fab fa-fw fa-github"></em>
-                            Watch Demo Code
+                            See Demo on Github
                         </a>
                     {% endif %}
 
@@ -56,11 +46,28 @@ id: talks
                         </a>
                     {% endif %}
 
-                    {% if talk.event_link is defined %}
-                        <a href="{{ talk.event_link }}" class="btn btn-success btn-sm mt-3 mb-2">
-                            <em class="fas fa-fw fa-map-marker"></em>
-                            {{ talk.event_name }}
-                        </a>
+                    {% if talk.events|length > 1 %}
+                        <p class="mt-3">
+                            <strong>Presented at</strong>
+                        </p>
+
+                        <ul>
+                            {% for event in talk.events %}
+                                <li>
+                                    <a href="{{ event.link }}" class="mt-3 mb-2">
+                                        {{ event.name }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="mt-3">
+                            <strong>Presented at</strong>
+
+                            <a href="{{ talk.events[0].link }}" class="mt-3 mb-2">
+                                {{ talk.events[0].name }}
+                            </a>
+                        </p>
                     {% endif %}
                 </div>
             </div>
