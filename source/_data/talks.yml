@@ -1,114 +1,58 @@
 parameters:
     talks:
         -
-            title: "Live upgrade of 2 Open-Source package on Github aka Using Rector for Good"
-            year: 2018
-            event_name: "ViennaPHP monthly gathering, September 2018"
-            event_link: "https://www.meetup.com/viennaphp/events/ncmvwpyxmbbc/"
-            slides_link: "https://docs.google.com/presentation/d/1G9qaZ--uSrbWH9243JDJOX6yQ8Dv95aVqnSGTns9u8U/edit?usp=sharing"
-        -
-            title: "How Monorepo Will Save Your Company"
-            year: 2018
-            event_name: "Friend of PHP Prague, September 2018"
-            event_link: "https://www.meetup.com/friends-of-php-prague/events/254388973/"
-            slides_link: "https://docs.google.com/presentation/d/1UzlKWoEdFlDLj2fzFW9e7VMyncurY-Jwwh3O78rLB-g/edit?usp=sharing"
-        -
-            title: "You Won’t Upgrade that Manually, Right?"
-            year: 2018
-            event_name: "Symfony User Group Berlin, August 2018"
-            event_link: "https://www.meetup.com/sfugberlin/events/253573567/"
+            title: "Instant Upgrades with Rector"
+            anchor: 'rector'
             slides_link: "https://docs.google.com/presentation/d/1jGlKzuQXNFLyF1jERlS3FiRhRMeSaR9fQr8XoqAtWV0/edit?usp=sharing"
             demo_link: "https://github.com/rectorphp/rector/pull/602/files"
-        -
-            title: "Why Your Company Loses Money By Not-Open-Sourcing"
-            year: 2018
-            event_name: "PHPPrague 2018"
-            event_link: "https://www.facebook.com/events/204178450306613/"
-            slides_link: "https://docs.google.com/presentation/d/1kYpsn_ZAR_Q2A7WYqBIjeVIjdKe67W_d0PTHVgsvMo4/edit?usp=sharing"
-
-        -
-            title: "Instant Upgrades with Rector"
-            year: 2018
-            event_name: "Berlin PHP UG June 2018"
-            event_link: "http://www.bephpug.de/2018/06/05/june.html"
-            slides_link: "https://docs.google.com/presentation/d/1lHVhwwL5LuEf9nzoWsynfgUZ2URYxXqgW_UKHxLcW8A/edit?usp=sharing"
             video_link: "https://www.facebook.com/pehapkari/videos/1703907042992432/"
+            events:
+                # @todo
+#                -  { name: "PHP Asia @ Singapore, September 2018", link: "https://2018.phpconf.asia/" }
+                - { name: "Symfony UG Berlin @ Germany, August 2018", link: "https://www.meetup.com/sfugberlin/events/253573567" }
+                - { name: "ViennaPHP Montly Gathering @ Austraia, June 2018", link: "https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/" }
+                - { name: "Friends of PHP in Pardubice @ Czech Republic, June 2018", link: "https://www.facebook.com/events/1783858791700944/" }
+                - { name: "Berlin PHP UG @ Germany, June 2018", link: "http://www.bephpug.de/2018/06/05/june.html" }
+                - { name: "PHPLive @ Czech Republic & Slovakia, 2018", link: "https://www.phplive.cz" }
+                - { name: "PHP Central Europe Conference @ Poland, 2017", link: "https://2017.phpce.eu" }
 
         -
-            title: "How to Delegate Upgrades from Human to a (machine) Rector"
-            year: 2018
-            event_name: "PHPLive 2018"
-            event_link: "https://www.phplive.cz/"
-            slides_link: "https://docs.google.com/presentation/d/1YFnNZeC7uEn5bpFIoGuEjdYLLkE0o3nFq7HGMlWENY4/edit?usp=sharing"
-            video_link: "https://www.youtube.com/watch?v=QbM1WYOTozI"
-
-        -
-            title: "How to get Your Code Clean"
-            year: 2018
-            event_name: "Private Lecture @ Ness, Košice, Slovakia"
-            event_link: "https://www.nesskdc.sk/en/"
-            slides_link: "https://docs.google.com/presentation/d/1zDJ53kYMhQQ0QHL1MmMOyNA-IkhK4fyk0hqzmWd3MW0/edit?usp=sharing"
-
-        -
-            title: "Continual Upgrading with AST and Rector"
-            year: 2017
-            event_name: "PHP Central Europe Conference 2017 @ Poland"
-            event_link: "https://2017.phpce.eu/"
-            slides_link: "https://docs.google.com/presentation/d/1jAmvsXAavK4P4KlUASxxsmYbYHk153Dv5LmfqyZFmVI/edit?usp=sharing"
-
-        -
-            title: "Easy Coding Standard - Setup Coding Standards under 5 minutes"
-            year: 2017
-            event_name: "PHP Central Europe Conference 2017 @ Poland"
-            event_link: "https://2017.phpce.eu/"
+            title: "How to Setup Coding Standards under 5 minutes"
+            anchor: 'ecs'
             slides_link: "https://docs.google.com/presentation/d/1MLVUNdukSMXTCIDf1mndajiDKvuI5vgf1Y_Uer1IWQE/edit?usp=sharing"
             related_post: "/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/"
-
-        -
-            title: "From Single Stupid Sniff to Solid Architecture Control"
-            year: 2017
-            event_name: "Nette Camp 2017"
-            event_link: "https://www.nettecamp.cz/"
-            slides_link: "https://docs.google.com/presentation/d/1Cx0W9Fj8AYrBzDyJjnFU_EXW9py_j-yFqxo8ztdaldk/edit?usp=sharing"
-            related_post: "/blog/2017/08/21/5-useful-rules-from-symplify-coding-standard/"
-
-        -
-            title: "Symfony Forms on a Healthy Diet"
-            year: 2017
-            event_name: "Private Lecture @ Erudio"
-            event_link: "http://erudio.cz/"
-            slides_link: "https://docs.google.com/presentation/d/17xgk_xSDdEcfvtm5cNqbx-AckDC1iCD61zXWrMav2GM/edit?usp=sharing"
-
-        -
-            title: "Combine the best of PHP_CodeSniffer and PHP CS Fixer in 3 lines"
-            year: 2017
-            event_name: "Vienna PHP UG May"
-            event_link: "https://www.meetup.com/viennaphp/events/237296390/"
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1769747516670517/1341201322596341/?type=1"
-            slides_link: "https://docs.google.com/presentation/d/1EL3Vo9A7zphWYwG1tDuGpcMt-3F_DwVwWDpdata5nUw/edit?usp=sharing"
-            related_post: "/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/"
+            events:
+                - { name: "PHP Central Europe Conference @ Poland, 2017", link: "https://2017.phpce.eu" }
+                - { name: "ViennaPHP @ Austria, May 2017", link: "https://www.meetup.com/viennaphp/events/237296390" }
+                - { name: "Dresden PHP UG @ Germany, April 2017", link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/238473452" }
+                - { name: "Nette Camp @ Czech Republic, 2017", link: "https://nettecamp.cz" }
+
+        -
+            title: "Live upgrade of 2 Open-Source packages with Rector"
+            anchor: 'rector_live'
+            slides_link: "https://docs.google.com/presentation/d/1G9qaZ--uSrbWH9243JDJOX6yQ8Dv95aVqnSGTns9u8U/edit?usp=sharing"
+            events:
+                - { name: "ViennaPHP @ Austria, September 2018", link: "https://www.meetup .com/viennaphp/events/ncmvwpyxmbbc/" }
+        -
+            title: "How Monorepo Will Save Your Company"
+            anchor: 'monorepo'
+            slides_link: "https://docs.google.com/presentation/d/1UzlKWoEdFlDLj2fzFW9e7VMyncurY-Jwwh3O78rLB-g/edit?usp=sharing"
+            events:
+                - { name: "Friends of PHP Prague @ Czech Republic, September 2018", link: "https://www.meetup.com/friends-of-php-prague/events/254388973/" }
+
+        -
+            title: "Why Your Company Loses Money By Not-Open-Sourcing"
+            anchor: 'open-source'
+            slides_link: "https://docs.google.com/presentation/d/1kYpsn_ZAR_Q2A7WYqBIjeVIjdKe67W_d0PTHVgsvMo4/edit?usp=sharing"
+            events:
+                - { name: "PHPPrague 2 @ Czech Republic, 2018", link: "https://www.facebook.com/events/204178450306613/" }
 
         -
             title: "Static sites in PHP? Simple with Statie"
-            year: 2017
-            event_name: "Berin PHP UG April 2017"
-            event_link: "http://www.bephpug.de/2017/04/04/april.html"
-            video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/?type=1"
+            anchor: 'statie'
             slides_link: "https://docs.google.com/presentation/d/1Org07oQWbokCe6Q1FU8o0fe5iEfMGuDfZjKGcnI72BA/edit?usp=sharing"
             related_post: "/blog/2017/02/20/statie-how-to-run-it-locally/"
-
-        -
-            title: "How to combine PHP_CodeSniffer and PHP CS Fixer with Love"
-            year: 2017
-            event_name: "Dresden PHP UG April"
-            event_link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/238473452"
-            video_link: "https://www.facebook.com/pehapkari/videos/vl.1877987242460289/1321227224593751/?type=1"
-            slides_link: "https://docs.google.com/presentation/d/1jHSWF-lMlbb30XO-uf4el_k1HB7mK6Br93MI4CS_n6Y/edit?usp=sharing"
-            related_post: "/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/"
-        -
-            title: "Hot news in PHP 7, 7.1, Symfony 3.1, 3.2 (3.3)"
-            year: 2017
-            event_name: "Private Lecture @ Erudio"
-            event_link: "http://erudio.cz/"
-            slides_link: "https://docs.google.com/presentation/d/1f3WokfmgBTRtUssWj7fupxjMBZzI6BuocrWSMg8skAU/edit?usp=sharing"
-            related_post: "/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/"
+            video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/?type=1"
+            events:
+                - { name: "Berlin PHP UG @ Germany, April 2017", link: "http://www.bephpug.de/2017/04/04/april.html" }

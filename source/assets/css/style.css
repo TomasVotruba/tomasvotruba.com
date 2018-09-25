@@ -385,6 +385,17 @@ ul.line-separated > li:not(:last-child) {
 }
 
 .mmt-2 {
-    margin-top: -.2
-    em;
+    margin-top: -.2em;
+}
+
+#talks ul {
+    padding-left: 1em;
+}
+
+#talks ul li {
+    line-height: 2em;
+}
+
+#talks h2 {
+    margin-top: .5em;
 }
