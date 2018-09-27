@@ -4,11 +4,10 @@ parameters:
             title: "Instant Upgrades with Rector"
             anchor: 'rector'
             slides_link: "https://docs.google.com/presentation/d/1jGlKzuQXNFLyF1jERlS3FiRhRMeSaR9fQr8XoqAtWV0/edit?usp=sharing"
-            demo_link: "https://github.com/rectorphp/rector/pull/602/files"
+            demo_link: "https://github.com/rectorphp/demo"
             video_link: "https://www.facebook.com/pehapkari/videos/1703907042992432/"
             events:
-                # @todo
-#                -  { name: "PHP Asia @ Singapore, September 2018", link: "https://2018.phpconf.asia/" }
+                - { name: "PHP Asia @ Singapore, September 2018", link: "https://2018.phpconf.asia/" }
                 - { name: "Symfony UG Berlin @ Germany, August 2018", link: "https://www.meetup.com/sfugberlin/events/253573567" }
                 - { name: "ViennaPHP Montly Gathering @ Austraia, June 2018", link: "https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/" }
                 - { name: "Friends of PHP in Pardubice @ Czech Republic, June 2018", link: "https://www.facebook.com/events/1783858791700944/" }
