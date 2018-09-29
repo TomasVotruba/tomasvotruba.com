@@ -17,7 +17,7 @@ tweet_image: "/assets/images/posts/2018/friends/homepage.png"
 
 <em class="fas fa-fw fa-times text-danger fa-2x"></em>
 
-I'm sorry, but you were not born lucky enough to be Linus Torvalds, Rasmus Leford, Fabien Potencier or Marco Pivetta. You'd have to work hard on yourself, have at least 1000 followers, 3 popular open-source packages and own website with real PHP blog posts.
+I'm sorry, but you were not born lucky enough to be Linus Torvalds, Rasmus Lerdorf, Fabien Potencier or Marco Pivetta. You'd have to work hard on yourself, have at least 1000 followers, 3 popular open-source packages and own website with real PHP blog posts.
 
 From my experience, if you response to Call for Papers to one of [the PHP conferences](http://php.net/conferences/index.php) there are free 10 times fewer talk slots than talk suggestions.
 
