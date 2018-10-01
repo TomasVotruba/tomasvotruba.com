@@ -28,15 +28,10 @@ parameters:
                 - { name: "Nette Camp @ Czech Republic, 2017", link: "https://nettecamp.cz" }
 
         -
-            title: "Live upgrade of 2 Open-Source packages with Rector"
-            anchor: 'rector_live'
-            slides_link: "https://docs.google.com/presentation/d/1G9qaZ--uSrbWH9243JDJOX6yQ8Dv95aVqnSGTns9u8U/edit?usp=sharing"
-            events:
-                - { name: "ViennaPHP @ Austria, September 2018", link: "https://www.meetup .com/viennaphp/events/ncmvwpyxmbbc/" }
-        -
             title: "How Monorepo Will Save Your Company"
             anchor: 'monorepo'
             slides_link: "https://docs.google.com/presentation/d/1UzlKWoEdFlDLj2fzFW9e7VMyncurY-Jwwh3O78rLB-g/edit?usp=sharing"
+            # @todo add link to MonorepoBuilder, when the Symplify 5.0 post is out
             events:
                 - { name: "Friends of PHP Prague @ Czech Republic, September 2018", link: "https://www.meetup.com/friends-of-php-prague/events/254388973/" }
 
@@ -44,6 +39,8 @@ parameters:
             title: "Why Your Company Loses Money By Not-Open-Sourcing"
             anchor: 'open-source'
             slides_link: "https://docs.google.com/presentation/d/1kYpsn_ZAR_Q2A7WYqBIjeVIjdKe67W_d0PTHVgsvMo4/edit?usp=sharing"
+            video_link: "https://www.youtube.com/watch?v=suscn1HeRAc"
+            related_post: "/blog/2018/07/26/why-is-your-company-losing-money-by-not-open-sourcing-1-hiring/"
             events:
                 - { name: "PHPPrague 2 @ Czech Republic, 2018", link: "https://www.facebook.com/events/204178450306613/" }
 
@@ -52,6 +49,13 @@ parameters:
             anchor: 'statie'
             slides_link: "https://docs.google.com/presentation/d/1Org07oQWbokCe6Q1FU8o0fe5iEfMGuDfZjKGcnI72BA/edit?usp=sharing"
             related_post: "/blog/2017/02/20/statie-how-to-run-it-locally/"
-            video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/?type=1"
+            video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/"
             events:
                 - { name: "Berlin PHP UG @ Germany, April 2017", link: "http://www.bephpug.de/2017/04/04/april.html" }
+
+        -
+                title: "Live upgrade of 2 Open-Source packages with Rector"
+                anchor: 'rector_live'
+                slides_link: "https://docs.google.com/presentation/d/1G9qaZ--uSrbWH9243JDJOX6yQ8Dv95aVqnSGTns9u8U/edit?usp=sharing"
+                events:
+                - { name: "ViennaPHP @ Austria, September 2018", link: "https://www.meetup .com/viennaphp/events/ncmvwpyxmbbc/" }
