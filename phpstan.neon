@@ -11,3 +11,6 @@ parameters:
 
         # SplFileInfo->getRealPath()
         - '#Parameter \#1 \$string of function strlen expects string, string\|false given#'
+
+        # known values - nullable ContainerFactory container
+        - '#(.*?)Symfony\\Component\\DependencyInjection\\ContainerInterface\|null(.*?)#'
