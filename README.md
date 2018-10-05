@@ -6,6 +6,7 @@
 
 ```sh
 git clone git@github.com:TomasVotruba/tomasvotruba.cz.git # use your fork if you want to contribute
+cd tomasvotruba.cz
 composer install
 npm install
 gulp # see gulpfile.js for more 
