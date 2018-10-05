@@ -71,7 +71,7 @@ final class SomeClass implements SomeInterface
 }
 ```
 
-When the class is small like this and you have 2 class in the whole application, nobody cares. But if you implement e.g. `PhpCsFixer\Fixer\FixerInterface` that has 6 methods and you **have 20 Fixer classes with 20 various orders of those methods**, it can be really annoying to maintain them.
+When the class is small like this and you have 2 classes in the whole application, nobody cares. But if you implement e.g. `PhpCsFixer\Fixer\FixerInterface` that has 6 methods and you **have 20 Fixer classes with 20 various orders of those methods**, it can be really annoying to maintain them.
 
 That's where `Symplify\CodingStandard\Fixer\Order\MethodOrderByTypeFixer` brings the order:
 
@@ -145,10 +145,9 @@ services:
             - 'Doctrine\ORM\EntityRepository'
 ```
 
-
 That will prevent over-inheritance and embrace the composition - like in [Repositories as Services](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/) approach:
 
-:x:
+<em class="fas fa-fw fa-times text-danger fa-lg"></em>
 
 ```php
 <?php
@@ -160,7 +159,7 @@ final class ProductRepository extends EntityRepository
 }
 ```
 
-:+1:
+<em class="fas fa-fw fa-check text-success fa-lg"></em>
 
 ```php
 <?php
