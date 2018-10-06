@@ -29,12 +29,12 @@ h1 a, h1 a:hover, h1 a:focus, h2 a, h2 a:hover, h2 a:focus, h3 a, h3 a:hover, h3
 
 h2 {
     font-size: 1.5em;
-    margin: 1.1em 0 .5em;
+    margin: 1.7em 0 .4em;
 }
 
 h3 {
     font-size: 1.3em;
-    margin: 1.1em 0 .4em;
+    margin: 1.2em 0 .4em;
     font-weight: 300;
 }
 
@@ -344,12 +344,6 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     line-height: 1.6em;
 }
 
-ul.line-separated > li:not(:last-child) {
-    border-bottom: 1px solid #EEE;
-    padding-bottom: 1.3em;
-    margin-bottom: 1.3em;
-}
-
 /* style in cards */
 #mission .card h2 {
     margin: .3em 0 .3em 0;
@@ -363,10 +357,6 @@ ul.line-separated > li:not(:last-child) {
 #mission .card ul {
     margin: .3em 0 0 0;
     padding-left: 1.2em;
-}
-
-#mission .card ul li {
-    line-height: 1.7em;
 }
 
 .pull-right {
@@ -388,14 +378,38 @@ ul.line-separated > li:not(:last-child) {
     margin-top: -.2em;
 }
 
-#talks ul {
-    padding-left: 1em;
-}
-
-#talks ul li {
-    line-height: 2em;
-}
-
 #talks h2 {
     margin-top: .5em;
+}
+
+/* @see https://stackoverflow.com/a/50174132/1348344 */
+.container li {
+    margin-bottom: .6em;
+}
+
+.container li:last-child {
+    margin-bottom: 0;
+}
+
+.container ul {
+    padding-left: 1.2em;
+}
+
+.container ul li {
+    line-height: 1.6em;
+}
+
+/* clusters - list override */
+.cluster ul.line-separated > li:not(:last-child) {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 1.3em;
+    margin-bottom: 1.3em;
+}
+
+.container .cluster ul {
+    padding-left: 0;
+}
+
+.container .cluster ul.checklist {
+    padding-left: 2em;
 }

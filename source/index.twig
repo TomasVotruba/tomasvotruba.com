@@ -8,18 +8,19 @@ id: blog
     <div class="container-fluid" id="blog">
         <div class="pt-5 pb-5 bigger">
             <p>
-                Do you want to <strong>learn cool ways to hack PHP and self-education twice a week</strong>? This is the right place!
-
-                Do you want to pick topic of the next post?
-                <a href="https://github.com/TomasVotruba/tomasvotruba.cz/issues?q=is%3Aopen+is%3Aissue+label%3A%22post+idea%22" class="btn btn-dark ml-3 mmt-2">
-                    <em class="fas fa-thumbs-up fa-fw"></em> Vote here
-                </a>
+                Do you want to <strong>learn cool ways to hack PHP and self-education 2x a week</strong>?<br>
+                This is the right place!
             </p>
         </div>
 
-        <br>
-
-        {{ block('searchRssAndTwitterPanel') }}
+        <div class="row text-center">
+            <!-- inspired and taken from: https://github.com/yegor256/blog/blob/master/_layouts/default.html -->
+            <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction" class="col-md-5 col-sm-7 col-9 pull-left">
+                <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
+                <input name="sitesearch" value="tomasvotruba.cz" type="hidden"/>
+                <input itemprop="query-input" type="text" id="search-query" class="form-control" required="required" name="q" placeholder="Search in Posts with Google..." autocomplete="off"/>
+            </form>
+        </div>
 
         {% set wasFirstPostMarked = false %}
 
@@ -104,25 +105,5 @@ id: blog
                 or <a href="/czech-posts">Czech posts</a>
             </p>
         </div>
-    </div>
-{% endblock %}
-
-
-{% block searchRssAndTwitterPanel %}
-    <div class="row text-center">
-        <!-- inspired and taken from: https://github.com/yegor256/blog/blob/master/_layouts/default.html -->
-        <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction" n:syntax="off" class="col-md-5 col-sm-7 col-9 pull-left">
-            <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
-            <input name="sitesearch" value="tomasvotruba.cz" type="hidden"/>
-            <input itemprop="query-input" type="text" id="search-query" class="form-control" required="required" name="q" placeholder="Search in Posts with Google..." autocomplete="off"/>
-        </form>
-
-        <a href="/rss.xml" class="btn btn-warning btn-sm pt-2">
-            <em class="fas fa-fw fa-rss"></em>
-        </a>
-
-        <a href="https://twitter.com/votrubaT" class="btn btn-primary btn-sm ml-3 pt-2">
-            <em class="fab fa-fw fa-twitter"></em>
-        </a>
     </div>
 {% endblock %}

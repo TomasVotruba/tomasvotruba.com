@@ -14,35 +14,36 @@ inspiration:
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    {{ "now"|date("Y") }} is the fastest year ever. More and more information and too little time to read books. We need:
+                    {{ "now"|date("Y") }} is the fastest year ever. More and more information and too little time to read books.<br>
+                    Today we need:
                     <ul>
                         <li><strong>short and clear information</strong> for start,</li>
                         <li>but also <strong>deeper and connected sources</strong> to master complex topics</li>
                     </ul>
                 </p>
 
-                <p>
-                    <em>Why books and lonely posts are dead? Read <a href="/blog/2018/06/28/dont-read-books/">Don't read books</a> and <a href="/blog/2018/07/02/cluster-more-interactive-than-book-deeper-than-post/">Cluster: More Interactive than a Book, Deeper than a Post</a>.</em>
+                <p class="mt-4">
+                    <em>Why <a href="/blog/2018/06/28/dont-read-books/">books and posts don't work</a> anymore?</em>
                 </p>
             </div>
         </div>
 
         <hr>
 
-        <h2>Pick a Cluster</h2>
+        <h2>Jump to Cluster</h2>
 
         <ul>
             {% for cluster in clusters %}
-                <a href="#{{ cluster.title|webalize }}">
-                    <li>{{ cluster.title }}</li>
-                </a>
+                <li>
+                    <a href="#{{ cluster.title|webalize }}">{{ cluster.title }}</a>
+                </li>
             {% endfor %}
         </ul>
 
 
         {% for cluster in clusters %}
             <a name="{{ cluster.title | webalize }}"></a>
-            <div class="card mb-5 mt-5">
+            <div class="card mb-5 cluster">
                 <div class="text-center card-header">
                     <h2 class="card-title">
                         <a href="#{{ cluster.title | webalize }}">
