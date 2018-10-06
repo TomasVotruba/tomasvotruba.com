@@ -4,7 +4,7 @@ title: "New in Symplify 5: Public Method Order and External Final in CodingStand
 perex: |
     Coding Standard 5 replaced fixers that renamed classes with more tolerant sniffs. What else is there?
     <br>
-    **New `checkers` options to make your configs smaller and 2 new checkers to keep your code in order**.
+    New config options **that shorten your config** and **2 new checkers to keep your code in order**.
 tweet: "New in Symplify 5: Public Method Order and External Final in CodingStandard     #php #git #split #easy"
 ---
 
@@ -24,7 +24,7 @@ Now enjoy the news ↓
     Check the pull-request #1042
 </a>
 
-There is already a fixer, that takes care of `public`, `protected` and `private` order of class elements - `PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer`.
+There is already a fixer, that takes care of `public`, `protected` and `private` order of class elements - `OrderedClassElementsFixer`.
 
 Let's take this one step further - to **order interface methods**. Imagine you have an interface with 2 methods.
 
@@ -73,7 +73,7 @@ final class SomeClass implements SomeInterface
 
 When the class is small like this and you have 2 classes in the whole application, nobody cares. But if you implement e.g. `PhpCsFixer\Fixer\FixerInterface` that has 6 methods and you **have 20 Fixer classes with 20 various orders of those methods**, it can be really annoying to maintain them.
 
-That's where `Symplify\CodingStandard\Fixer\Order\MethodOrderByTypeFixer` brings the order:
+That's where `MethodOrderByTypeFixer` brings the order:
 
 ```yaml
 # ecs.yml
@@ -93,7 +93,7 @@ services:
     Check the pull-request #1038
 </a>
 
-`Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer` takes care of old strings classes to `::class` format:
+`ClassStringToClassConstantFixer` takes care of old strings classes to `::class` format:
 
 ```diff
 -$this->assertInstanceOf('DateTime', $object);
@@ -135,7 +135,7 @@ If you're strict enough to `final` or `abstract` everywhere, you'll love this. S
 
 Those `abstract` classes are full of **magic everyone has to [remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/)**. What if you could **prevent that spreading to your code without constant code-reviews**?
 
-Let `Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenParentClassSniff` do the job:
+Let `ForbiddenParentClassSniff` do the job:
 
 ```yaml
 # ecs.yml
