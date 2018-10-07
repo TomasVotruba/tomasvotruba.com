@@ -86,7 +86,7 @@ id: blog
                             <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
                             {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
                         </li>
-                        {% if loop.last == false %}<hr>{% endif %}
+                        <hr>
                         {% if loop.last %}</ul>{% endif %}
                     {% endif %}
                 {% endif %}
