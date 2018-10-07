@@ -56,18 +56,14 @@ inspiration:
                         {% set totalReadingTime = totalReadingTime + posts[postId].getReadingTimeInMinutes %}
                     {% endfor %}
 
-                    <ul class="list-inline post-metadata">
-                        <li class="list-inline-item mr-3">
-                            <em class="fas fa-calendar fa-fw"></em> {{ cluster.year_released }}
-                        </li>
-                        <li class="list-inline-item mr-3">
-                            <em class="fas fa-clock fa-fw"></em> {{ totalReadingTime }} mins
-                        </li>
+                    <ul class="list-inline post-metadata mt-4">
                         <li class="list-inline-item">
                             <em class="fas fa-puzzle-piece fa-fw"></em> {{ cluster.post_ids|length }} parts
                         </li>
+                        <li class="list-inline-item ml-4">
+                            <em class="fas fa-clock fa-fw"></em> {{ totalReadingTime }} mins
+                        </li>
                     </ul>
-
                     <p class="text-left pt-4 pb-2">{{ cluster.description }}</p>
                 </div>
                 <div class="card-body">
