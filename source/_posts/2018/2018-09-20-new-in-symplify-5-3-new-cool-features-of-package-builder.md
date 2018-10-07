@@ -6,7 +6,7 @@ perex: |
     <br>
     <br>
     In Symplify 5 now it allows you to **drop manual binds** from Symfony configs, separate files from directories **in one method** and merge nested YAML parameters **with 1&nbsp;service**.
-tweet: "New Post on my Blog: ..."
+tweet: "New post on my Blog: New in Symplify 5: 3 New Cool Features of PackageBuilder #symfony #autowiring #yaml"
 ---
 
 You don't have this package installed yet?
