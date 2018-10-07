@@ -5,7 +5,7 @@ perex: |
     Do you want to create, validate and manage your monorepo like a pro? There is no science behind it, just a few routine steps that you need to repeat.
     <br><br>
     And now there is a **tool that will handle these steps for you**.
-tweet: "New Post on my Blog: Monorepo Builder"
+tweet: "New Post on my Blog: New in Symplify 5: Create, Merge and Split #Monorepo with 1 Command"
 ---
 
 This package was initially released in Symplify 4.5, but it took some time to test in practice, remove WTFs and be sure it contains all people need.
