@@ -115,4 +115,4 @@ and read [`README`](https://github.com/symplify/monorepobuilder) for detail usag
 
 <br>
 
-Happy monorepping!
+Happy monorapping!
