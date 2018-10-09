@@ -10,7 +10,7 @@ tweet: "New Post on my Blog: New in Symplify 5: Create, Merge and Split #Monorep
 
 This package was initially released in Symplify 4.5, but it took some time to test in practice, remove WTFs and be sure it contains all people need.
 
-Now there is 7 commands total, but today we'll focus **on the 4 most important ones**.
+Now there are 7 commands in total, but today we'll focus **on the 4 most important ones**.
 
 First, install this package to an empty repository:
 
@@ -20,7 +20,7 @@ composer require symplify/monorepo-builder --dev
 
 ## 1. Create Your Monorepo
 
-You'll run this command **just once** to create monorepo in the empty repository.
+You'll run this command **just once** to create a monorepo in the empty repository.
 
 ```bash
 vendor/bin/monorepo-builder init
@@ -83,7 +83,7 @@ That's what `data_to_append` section is for. These packages and versions will be
 
 ## 4. Split It to Multiple Repositories
 
-Let's do the split! Wait, do you even want to split packages to repositories? If so:
+Let's do the split! Wait, do you even want to split packages into separate repositories? If so:
 
 ```bash
 vendor/bin/monorepo-builder split
