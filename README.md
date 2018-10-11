@@ -9,7 +9,7 @@ git clone git@github.com:TomasVotruba/tomasvotruba.cz.git # use your fork if you
 cd tomasvotruba.cz
 composer install
 npm install
-gulp # see gulpfile.js for more 
+gulp # see gulpfile.js for more
 ```
 
 And open [http://localhost:8000](localhost:8000) in your browser.

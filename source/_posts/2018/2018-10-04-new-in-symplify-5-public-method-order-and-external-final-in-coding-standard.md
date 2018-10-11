@@ -158,7 +158,6 @@ final class ProductRepository extends EntityRepository
 {
 }
 ```
-
 <em class="fas fa-fw fa-check text-success fa-lg"></em>
 
 ```php
