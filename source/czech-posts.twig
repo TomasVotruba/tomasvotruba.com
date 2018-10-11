@@ -16,8 +16,6 @@ id: blog
             {% endif %}
         {% endfor %}
 
-        <div class="card-body">
-            {% include "_snippets/post/postList.twig" with { posts: activePosts } %}
-        </div>
+        {% include "_snippets/post/postList.twig" with { posts: activePosts } %}
     </div>
 {% endblock %}
