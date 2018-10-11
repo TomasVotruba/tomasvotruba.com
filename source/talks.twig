@@ -1,12 +1,16 @@
 ---
 layout: "_layouts/default.twig"
-title: "Dive in Talks"
+title: "Talks"
 id: talks
 ---
 
 {% block content %}
     <div class="container" id="talks">
-        <h1>{{ title }}</h1>
+        <h1>
+            {{ title }}
+            <br>
+            <small>Slides, demos and posts</small>
+        </h1>
 
         {% for talk in talks %}
             <div class="card mb-5" id="{{ talk.anchor }}">
