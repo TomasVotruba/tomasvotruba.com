@@ -122,13 +122,16 @@ pre {
 }
 
 .navbar {
-    /*border-radius: 0;*/
-    background-color: #7A1E48;
+    border: 0;
     padding: 0;
+    background-color: #7A1E48;
 }
 
-.navbar li a, .navbar li a:active, .navbar li a:focus {
+nav a, nav a:active, nav a:focus {
+    margin-top: 1px;
     color: #f6f6f6;
+    border: 0;
+    text-decoration: none;
 }
 
 article {
@@ -236,17 +239,18 @@ nav ul li a, nav #logo, nav a {
 
 nav ul li a {
     display: block;
+    background: #9D2053;
 }
 
-nav #logo {
-    background-color: #64163f;
-}
+/*nav #logo {*/
+    /*background-color: #9D2053;*/
+/*}*/
 
 nav a:hover, nav ul li.active a, nav a.active, nav a:active
 {
-    color: #FFF;
+    background: #FFF;
     text-decoration: none;
-    background: #9D2053;
+    color: #64163f;
 }
 
 #mobile-menu {
@@ -447,7 +451,7 @@ nav ul li#top-menu-search {
     text-align: center;
 }
 
-.subline {
+.subline, .subtitle {
     font-size: 1.4em;
     line-height: 1.8em;
 }
