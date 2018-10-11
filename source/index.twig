@@ -5,24 +5,13 @@ id: blog
 ---
 
 {% block content %}
-    <div class="container-fluid" id="blog">
-        <div class="pt-5 pb-5 bigger">
+    <div class="container-fluid text-center" id="blog">
+        <div class="pt-5 pb-2 subline">
             <p>
                 Do you want to <strong>learn cool ways to hack PHP and self-education 2x a week</strong>?<br>
                 This is the right place!
             </p>
         </div>
-
-        <div class="row text-center">
-            <!-- inspired and taken from: https://github.com/yegor256/blog/blob/master/_layouts/default.html -->
-            <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction" class="col-md-5 col-sm-7 col-9 pull-left">
-                <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
-                <input name="sitesearch" value="tomasvotruba.cz" type="hidden"/>
-                <input itemprop="query-input" type="text" id="search-query" class="form-control" required="required" name="q" placeholder="Search in Posts with Google..." autocomplete="off"/>
-            </form>
-        </div>
-
-        {% set wasFirstPostMarked = false %}
 
         <div class="row">
             {% set dateLines = [] %}

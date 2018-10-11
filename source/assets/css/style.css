@@ -108,11 +108,11 @@ ul {
 
 @media (min-width: 992px) {
     .container {
-        max-width: 800px;
+        max-width: 900px;
     }
 
     .container-fluid {
-        max-width: 800px;
+        max-width: 900px;
     }
 }
 
@@ -215,7 +215,6 @@ pre {
     border-radius: 6px;
 }
 
-
 /* menu */
 nav {
     background-color: #7A1E48;
@@ -224,22 +223,19 @@ nav {
 
 nav ul {
     list-style: none;
-    display: block;
-    float: left;
     padding: 0;
     margin-bottom: 0;
+    width: 100%;
 }
 
-nav ul li {
-    float: left;
-    display: block;
-    position: relative;
-}
-
+/* https://stackoverflow.com/a/19027954/1348344 */
 nav ul li a, nav #logo, nav a {
     padding: .81em 1em;
-    display: block;
     color: #FFF;
+}
+
+nav ul li a {
+    display: block;
 }
 
 nav #logo {
@@ -260,7 +256,7 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 }
 
 #mobile-menu .container {
-    padding: 0px;
+    padding: 0;
     max-width: 100%;
 }
 
@@ -291,6 +287,7 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
         display: none !important;
     }
 }
+
 @media (min-width: 769px) {
     .hidden-md-up {
         display: none !important;
@@ -412,4 +409,45 @@ ul.line-separated > li:not(:last-child) {
 
 .container .cluster ul.checklist {
     padding-left: 2em;
+}
+
+.avatar {
+    border-radius: 2px;
+    border-style: none;
+    height: 28px;
+    width: 28px;
+    margin-right: .5em;
+    margin-top: -.2em;
+}
+
+#top-menu-search form {
+    width: 100%;
+}
+
+nav ul li form {
+    padding: .4em 0 0 1em;
+}
+
+/* @see https://stackoverflow.com/a/19027954/1348344 */
+nav ul li {
+    display: block;
+    float: left;
+}
+
+nav ul li#top-menu-search {
+    float: none;
+    overflow: hidden;
+}
+
+#top-menu-search-mobile {
+    background: #7A1E48;
+}
+#top-menu-search-mobile {
+    padding: .6em 1em;
+    text-align: center;
+}
+
+.subline {
+    font-size: 1.4em;
+    line-height: 1.8em;
 }

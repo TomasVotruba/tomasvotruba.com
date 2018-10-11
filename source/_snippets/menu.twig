@@ -4,6 +4,7 @@
         <div class="container-fluid">
             <ul>
                 <li id="logo">
+                    <img src="https://avatars1.githubusercontent.com/u/924196?s=60&v=4" class="avatar">
                     Tomas Votruba
                 </li>
                 <li class="{% if (id is defined and id == 'blog') or post is defined %}active{% endif %}">
@@ -20,6 +21,13 @@
                 </li>
                 <li class="{% if id is defined and id == 'contact' %}active{% endif %}">
                     <a href="/contact/">Contact</a>
+                </li>
+                <li id="top-menu-search">
+                    <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+                        <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
+                        <input name="sitesearch" value="tomasvotruba.cz" type="hidden"/>
+                        <input itemprop="query-input" type="text" id="search-query" class="form-control" required="required" name="q" placeholder="Search..." autocomplete="off"/>
+                    </form>
                 </li>
             </ul>
         </div>
@@ -52,4 +60,13 @@
             </a>
         </div>
     </nav>
+
+    <div class="hidden-md-up text-center row" id="top-menu-search-mobile">
+        <!-- inspired and taken from: https://github.com/yegor256/blog/blob/master/_layouts/default.html -->
+        <form method="get" action="https://www.google.com/search" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction" class="col-md-12">
+            <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
+            <input name="sitesearch" value="tomasvotruba.cz" type="hidden"/>
+            <input itemprop="query-input" type="text" id="search-query" class="form-control" required="required" name="q" placeholder="Search with Google..." autocomplete="off"/>
+        </form>
+    </div>
 </div>
