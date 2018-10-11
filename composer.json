@@ -9,7 +9,7 @@
         "symfony/http-kernel": "^4.1",
         "symfony/console": "^4.1",
         "symplify/package-builder": "^5.1",
-        "symplify/statie": "^5.1"
+        "symplify/statie": "^5.1.2"
     },
     "require-dev": {
         "nette/neon": "^2.4",
