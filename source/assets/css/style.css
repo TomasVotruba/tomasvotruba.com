@@ -413,3 +413,12 @@ ul.line-separated > li:not(:last-child) {
 .container .cluster ul.checklist {
     padding-left: 2em;
 }
+
+.avatar {
+    border-radius: 2px;
+    border-style: none;
+    height: 28px;
+    width: 28px;
+    margin-right: .5em;
+    margin-top: -.2em;
+}
