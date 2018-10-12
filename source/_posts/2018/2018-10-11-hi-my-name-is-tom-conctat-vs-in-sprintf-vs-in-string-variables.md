@@ -86,10 +86,31 @@ Let's say, I'd like to tell more about myself.
 +$message = 'Hi, my name is $name and I love $php';
 ```
 
+Or quote the name to express it's a variable string:
+
+```diff
+ <?php
+
+ $name = 'Tom';
+ $love = 'PHP';
+
+ # 1. concat
+-$message = 'Hi, my name is ' . $name . ' and I love ' . $love;
++$message = 'Hi, my name is "' . $name . '" and I love ' . $love;
+
+ # 2. sprintf
+-$message = sprintf('Hi, my name is %s and I love %s', $name, $love);
++$message = sprintf('Hi, my name is "%s" and I love %s', $name, $love);
+
+ # 3. in-string variable
+-$message = 'Hi, my name is $name and I love $php';
++$message = 'Hi, my name is "$name" and I love $php';
+```
+
 ### <em class="fas fa-fw fa-times text-danger fa-lg"></em> Concat
 
 1 new element = 2 new dots `.`. I have to think where to put it. Imagine there will be 4 elements one day.
-I also type like a dyslexic, so this is hell.
+I also type like a dyslexic, so seeing `'"'` hurts.
 
 ### <em class="fas fa-fw fa-check text-success fa-lg"></em> Sprintf
 
@@ -145,7 +166,7 @@ $message = sprintf('Hi my name is %s and I love s', $name, $love);
 
 ### <em class="fas fa-fw fa-times text-danger fa-lg"></em><em class="fas fa-fw fa-times text-danger fa-lg"></em> In-String Variable
 
-I must confess, I've tricked you:
+I must confess, I've tricked you (and myself too until I tried [running the code](https://3v4l.org/JEGJu)):
 
 <img src="/assets/images/posts/2018/connect-strings/quote-fuckup.png" class="img-thumbnail">
 
@@ -182,15 +203,15 @@ $message = 'Hi, my name is {$nameProvider->provide()}';
 # ?
 ```
 
-This is so complicated, that there is even a **coding standard fixer for such cases**:
+This is so complex, that there is even a **coding standard fixer for such cases**:
 
 <img src="/assets/images/posts/2018/connect-strings/fixer.png" class="img-thumbnail">
 
-This is not exclusively related to strings, but it shines the same *instant coolness* that will you or your children hunt down later:
+Next image is not exclusively related to strings, but it shines the same *instant coolness* that will hunt you down later:
 
 <img src="/assets/images/posts/2018/connect-strings/fuckup.png">
 
-And it's hell to upgrade such a code (even with Rector). Read more about it in [PHP Doc](https://secure.php.net/manual/en/language.types.string.php#language.types.string.parsing)
+And it's a hell to upgrade such a code (even with Rector). Read more about it in [PHP Doc](https://secure.php.net/manual/en/language.types.string.php#language.types.string.parsing)
 
 <br>
 
