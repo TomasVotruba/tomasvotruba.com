@@ -166,7 +166,7 @@ $message = sprintf('Hi my name is %s and I love s', $name, $love);
 
 ### <em class="fas fa-fw fa-times text-danger fa-lg"></em><em class="fas fa-fw fa-times text-danger fa-lg"></em> In-String Variable
 
-I must confess, I've tricked you (and myself too until I tried [running the code](https://3v4l.org/JEGJu)):
+I must confess, I've tricked you (and myself too until I tried [running the code](https://3v4l.org/RXpu1)):
 
 <img src="/assets/images/posts/2018/connect-strings/quote-fuckup.png" class="img-thumbnail">
 
