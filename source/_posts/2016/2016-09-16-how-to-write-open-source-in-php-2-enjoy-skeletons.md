@@ -87,7 +87,7 @@ Just to remind you, the end user is interested in:
 - **Trust**: I don't have to hope that code works, **I can trust the code**
 
 
-### `.gitattribues`
+### `.gitattributes`
 
 *Meaning*
 
