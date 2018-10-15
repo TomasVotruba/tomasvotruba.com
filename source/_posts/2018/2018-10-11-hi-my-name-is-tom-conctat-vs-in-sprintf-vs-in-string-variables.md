@@ -83,7 +83,7 @@ Let's say, I'd like to tell more about myself.
 
  # 3. in-string variable
 -$message = 'Hi, my name is $name';
-+$message = 'Hi, my name is $name and I love $php';
++$message = 'Hi, my name is $name and I love $love';
 ```
 
 Or quote the name to express it's a variable string:
