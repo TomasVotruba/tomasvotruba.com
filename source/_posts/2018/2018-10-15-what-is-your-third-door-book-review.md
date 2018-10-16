@@ -12,7 +12,7 @@ tweet_image: "/assets/images/posts/2018/connect-strings/dual.png"
 
 <img src="/assets/images/posts/2018/third-door/book.jpg" class="img-thumbnail">
 
-The *Third Door* book is actually a story of 18-year Alex, **who chases a dream to talks with people like**:
+The *Third Door* book is actually a story of 18-year Alex, **who chases a dream to interview people like**:
  
 - Bill Gates 
 - Warren Buffet 
