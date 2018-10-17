@@ -97,7 +97,7 @@ You probably noticed it, because there are 3 lines of code and they get all your
 <blockquote class="blockquote">
      <em>Filter class  VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd was not found</em>
 </blockquote>
-*Filer class " VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd" was not found*
+*Filter class " VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd" was not found*
 
 **Use quotes around every argument:**
 
