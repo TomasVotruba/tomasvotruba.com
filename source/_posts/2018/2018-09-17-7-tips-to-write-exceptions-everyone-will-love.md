@@ -246,7 +246,7 @@ vendor/bin/ecs check src --level laravel
 ```
 
 <blockquote class="blockquote">
-     <em>"Laravel" level was not found"</em>
+     <em>"Laravel" level was not found</em>
 </blockquote>
 
 - Is incorrectly loaded?
