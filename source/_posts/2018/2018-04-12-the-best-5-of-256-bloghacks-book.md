@@ -82,7 +82,7 @@ In case you'd like to try Algolia and [simple DocSearch](https://community.algol
 
 ## 5. Turn your Best StackOverflow Answers to Posts
 
-Did you provide a great answer on StackOverflow? Is that answer to duplicated and repeated questions? Do you think it might be useful to more people than StackOverlow users reading your post?
+Did you provide a great answer on StackOverflow? Is that answer to duplicated and repeated questions? Do you think it might be useful to more people than StackOverflow users reading your post?
 
 **Turn it into a blog post**. I was not sure about this myself, so I tried it:
 
