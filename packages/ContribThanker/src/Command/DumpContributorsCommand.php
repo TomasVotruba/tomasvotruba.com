@@ -14,6 +14,11 @@ use TomasVotruba\ContribThanker\Api\GithubApi;
 final class DumpContributorsCommand extends Command
 {
     /**
+     * @var string
+     */
+    private const CONTRIBUTORS_FILE = __DIR__ . '/../../../../source/_data/contributors.yml';
+
+    /**
      * @var GithubApi
      */
     private $githubApi;
@@ -22,11 +27,6 @@ final class DumpContributorsCommand extends Command
      * @var Filesystem
      */
     private $filesystem;
-
-    /**
-     * @var string
-     */
-    private const CONTRIBUTORS_FILE = __DIR__ . '/../../../../source/_data/contributors.yml';
 
     public function __construct(GithubApi $githubApi, Filesystem $filesystem)
     {
