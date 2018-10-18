@@ -15,24 +15,31 @@ id: thank_you
 
         <br>
 
-        <ul>
+        <div class="row text-center">
             {% for contributor in contributors %}
                 {% if contributor.contribution_count > 2 %}
-                    <li class="pb-2">
-                        Thank you <a href="{{ contributor.url }}">{{ contributor.name }}</a> for <a href="https://github.com/TomasVotruba/tomasvotruba.cz/commits?author={{ contributor.name }}">{{ contributor.contribution_count }} commits</a>
-                    </li>
+                    <div class="pb-4 pt-2 col-6">
+                        <img src="{{ contributor.photo }}" class="avatar">
+                        <strong>{{ contributor.name }}</strong>
+
+                        <small class="text-secondary">
+                            for <a href="https://github.com/TomasVotruba/tomasvotruba.cz/commits?author={{ contributor.name }}">{{ contributor.contribution_count }} commits</a>
+                        </small>
+                    </div>
                 {% endif %}
             {% endfor %}
-        </ul>
+        </div>
 
         <br>
 
         <p>
-            Thanks for couple commits to
+            Thanks for couple of commits to
+
+            {% set contributors = sortContributorsByName(contributors) %}
             {% for contributor in contributors %}
                 {% if contributor.contribution_count <= 2 %}
                     {% if loop.last %}and{% endif %}
-                    <a href="{{ contributor.url }}">{{ contributor.name }}</a>{% if loop.index < (length(contributors) - 1) %}, {% endif %}{% if loop.last %}.{% endif %}
+                    <a href="https://github.com/TomasVotruba/tomasvotruba.cz/commits?author={{ contributor.name }}">{{ contributor.name }}</a>{% if loop.index < (length(contributors) - 1) %}, {% endif %}{% if loop.last %}.{% endif %}
 
                 {% endif %}
             {% endfor %}
