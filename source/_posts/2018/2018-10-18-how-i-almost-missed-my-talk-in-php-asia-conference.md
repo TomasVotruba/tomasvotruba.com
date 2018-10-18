@@ -6,10 +6,10 @@ perex:
     <br><br>
     It was my first trip to Asia ever, so obviously, it went wrong...
 tweet: "New Post on my Blog: ✈ How I Almost Missed My Talk in @phpconfasia 🤦🤦🤦🤦   #php #phpasia #friendsofphp    Thank you @coderkungfu ❤️️"
-tweet_image: "/assets/images/posts/2018/connect-strings/dual.png"
+tweet_image: "/assets/images/posts/2018/phpasia/mefie.jpg"
 ---
 
-How deep work, Github and flow almost cost me the best trip this year?
+## Complex over Simple
 
 I was flying to [PHP Conf Asia](https://2018.phpconf.asia) that was held in Singapore from the beautiful city of Berlin... in 1 flight? No, that would too easy for me. Sometimes I want to go to my past me, **slap him and make him choose the easy way for once**.
 
@@ -19,11 +19,11 @@ So I picked rather **dynamic trip**:
 - from Riga to Istanbul - 3 hours
 - and from Istanbul to Singapore - 10 hours!
 
-I had 4 hours break at each airport because the airport is so fun, right? I risked in Riga a bit and went from airport to the city center, just to get fresh rain and**good coffee**. I made it - thanks EU internet treat!
+I had 4 hours break at each airport because airports are so fun, right? I took a risk in Riga and went from airport to the city center, just to get fresh rain and a good coffee. I made it - thanks EU internet treat!
 
 I decided to spend my 4 hours in Istanbul Airport since it was my first time flying more than 3 hours and I was scared that I fill fuck something up if I'd got to the city.
 
-I was a responsible traveler:
+I felt like a responsible traveler:
 
 - I found a gate 709,
 - sit in front of it, **3 meters** from the table where airport worker checks your passport and ticket
@@ -32,6 +32,8 @@ I was a responsible traveler:
 - picked up my laptop and start working.
 
 I was there **3 hours ahead**, what could go wrong? There were a couple of Chinese and Japanese guys around, so it was obviously clear this is the flight to the right location.
+
+## Going Too Deep
 
 So, I'm coding, preparing a [new Rector demo repository](https://github.com/rectorphp/demo) for the conference and fixing few bugs I found along. It's around 1:00 and a guy comes to the table - "it will start soon and I'm right here, great", I thought to myself. **This man made me feel secure**, I would have to be really stupid to miss *his* last call right in front of me.
 
@@ -68,7 +70,7 @@ Lesson learned? **Ask, ask, ask!** When I came to the group of people in 22:00, 
     <img src="https://2018.phpconf.asia/images/phpconfasia-logo.png">
 </div>
 
-People on the conference **were possessed with kindness and generosity** I never saw before on such a big IT event:
+I'm very glad I made it. People on the conference **were possessed with kindness and generosity** I never saw before on such a big IT event:
 
 - from the best wing-woman "Tom, have you met..." that introduced me to many fellow-speakers and visitors,
 - over curious guys from all around Asia, who tried Rector and assumed every bug was their mistake,
@@ -80,11 +82,7 @@ People on the conference **were possessed with kindness and generosity** I never
 
 **I'm very grateful I could be their guys, I enjoyed talking with you, sharing experience and views on life and code.**
 
-<div class="text-center">
-    <img src="/assets/images/posts/2018/phpasia/cube.jpg" class="img-thumbnail">
-</div>
-
-I also loved panel discussion *PHP - The journey so far (and what's ahead)* with Rasmus Lerdorf, Sebastian Bergmann, and Derick Rethans. The questions from the community were great and insightful and touching really important moment.
+I also loved panel discussion *PHP - The journey so far (and what's ahead)* with Rasmus Lerdorf, Sebastian Bergmann and Derick Rethans. The questions from the community were insightful and touching really important moments.
 
 I would not believe how much can change in software in 15 years.
 
