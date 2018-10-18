@@ -77,6 +77,7 @@ final class GithubApi
             $contributors[] = [
                 'name' => $item['author']['login'],
                 'url' => $item['author']['html_url'],
+                'photo' => $item['author']['avatar_url'],
                 'contribution_count' => $item['total'],
             ];
         }

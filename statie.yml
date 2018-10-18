@@ -23,3 +23,6 @@ parameters:
     # Statie settings
     github_repository_source_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/source"
 
+
+services:
+    TomasVotruba\ContribThanker\Twig\ContribThankerFilterProvider: ~
