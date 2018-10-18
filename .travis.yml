@@ -13,8 +13,13 @@ script:
     - composer check-cs
     - composer phpstan
 
+    # dump contributors before deploy
+    - |
+        if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
+          bin/console dump-contributors
+        fi
+
     # test that website is generated
-    - bin/console dump-contributors
     - vendor/bin/statie generate source
 
 # see docs: https://www.statie.org/docs/github-pages/

@@ -31,8 +31,9 @@ id: thank_you
             Thanks for single commit to
             {% for contibutor in contributors %}
                 {% if contibutor.contribution_count == 1 %}
-                    {% if loop.last == true %} and {% endif %}
-                    <a href="{{ contibutor.url }}">{{ contibutor.name }}</a>{% if loop.last == false %}, {% else %}.{% endif %}
+                    {% if loop.last %}and{% endif %}
+                    <a href="{{ contibutor.url }}">{{ contibutor.name }}</a>{% if loop.index < (length(contributors) - 1) %}, {% endif %}{% if loop.last %}.{% endif %}
+
                 {% endif %}
             {% endfor %}
         </p>
