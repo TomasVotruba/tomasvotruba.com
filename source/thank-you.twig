@@ -9,17 +9,17 @@ id: thank_you
         <h1>{{ title }}</h1>
 
         <p class="text-center bigger">
-            Thanks to all <strong>{{ contributors|length }} contributors</strong> who patiently fix my English mistakes
-            <br>and keep this website correct and up to date!
+            Thanks to all <strong>{{ contributors|length }} contributors</strong> who patiently fix my English + typoes
+            <br>and keep this website up to date!
         </p>
 
         <br>
 
         <ul>
-            {% for contibutor in contributors %}
-                {% if contibutor.contribution_count > 1 %}
+            {% for contributor in contributors %}
+                {% if contributor.contribution_count > 2 %}
                     <li class="pb-2">
-                        Thank you <a href="{{ contibutor.url }}">{{ contibutor.name }}</a> for {{ contibutor.contribution_count }} commits
+                        Thank you <a href="{{ contributor.url }}">{{ contributor.name }}</a> for <a href="https://github.com/TomasVotruba/tomasvotruba.cz/commits?author={{ contributor.name }}">{{ contributor.contribution_count }} commits</a>
                     </li>
                 {% endif %}
             {% endfor %}
@@ -28,11 +28,11 @@ id: thank_you
         <br>
 
         <p>
-            Thanks for single commit to
-            {% for contibutor in contributors %}
-                {% if contibutor.contribution_count == 1 %}
+            Thanks for couple commits to
+            {% for contributor in contributors %}
+                {% if contributor.contribution_count <= 2 %}
                     {% if loop.last %}and{% endif %}
-                    <a href="{{ contibutor.url }}">{{ contibutor.name }}</a>{% if loop.index < (length(contributors) - 1) %}, {% endif %}{% if loop.last %}.{% endif %}
+                    <a href="{{ contributor.url }}">{{ contributor.name }}</a>{% if loop.index < (length(contributors) - 1) %}, {% endif %}{% if loop.last %}.{% endif %}
 
                 {% endif %}
             {% endfor %}

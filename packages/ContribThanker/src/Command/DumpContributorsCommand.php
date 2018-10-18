@@ -6,6 +6,7 @@ use Nette\Utils\DateTime;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Yaml\Yaml;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
@@ -28,11 +29,17 @@ final class DumpContributorsCommand extends Command
      */
     private $filesystem;
 
-    public function __construct(GithubApi $githubApi, Filesystem $filesystem)
+    /**
+     * @var SymfonyStyle
+     */
+    private $symfonyStyle;
+
+    public function __construct(GithubApi $githubApi, Filesystem $filesystem, SymfonyStyle $symfonyStyle)
     {
         parent::__construct();
         $this->githubApi = $githubApi;
         $this->filesystem = $filesystem;
+        $this->symfonyStyle = $symfonyStyle;
     }
 
     protected function configure(): void
@@ -43,7 +50,8 @@ final class DumpContributorsCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): void
     {
-        $data['parameters']['contributors'] = $this->githubApi->getContributors();
+        $contributors = $this->githubApi->getContributors();
+        $data['parameters']['contributors'] = $contributors;
 
         $yamlDump = Yaml::dump($data, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
         $timestampComment = sprintf(
@@ -52,5 +60,7 @@ final class DumpContributorsCommand extends Command
         );
 
         $this->filesystem->dumpFile(self::CONTRIBUTORS_FILE, $timestampComment . $yamlDump);
+
+        $this->symfonyStyle->success(sprintf('Dump contributions from %d people', count($contributors)));
     }
 }

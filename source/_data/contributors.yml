@@ -1,9 +1,10 @@
+# this file was generated on 2018-10-18 07:27:21, do not edit it manually
 parameters:
     contributors:
         -
             name: mssimi
             url: 'https://github.com/mssimi'
-            contribution_count: 8
+            contribution_count: 9
         -
             name: enumag
             url: 'https://github.com/enumag'
@@ -13,52 +14,56 @@ parameters:
             url: 'https://github.com/ondrejmirtes'
             contribution_count: 7
         -
+            name: Gappa
+            url: 'https://github.com/Gappa'
+            contribution_count: 6
+        -
             name: JanMikes
             url: 'https://github.com/JanMikes'
-            contribution_count: 6
+            contribution_count: 5
         -
             name: ikvasnica
             url: 'https://github.com/ikvasnica'
-            contribution_count: 4
-        -
-            name: tavy315
-            url: 'https://github.com/tavy315'
-            contribution_count: 4
-        -
-            name: freiondrej
-            url: 'https://github.com/freiondrej'
             contribution_count: 4
         -
             name: crazko
             url: 'https://github.com/crazko'
             contribution_count: 4
         -
-            name: carusogabriel
-            url: 'https://github.com/carusogabriel'
-            contribution_count: 3
+            name: freiondrej
+            url: 'https://github.com/freiondrej'
+            contribution_count: 4
         -
-            name: Gappa
-            url: 'https://github.com/Gappa'
-            contribution_count: 3
+            name: tavy315
+            url: 'https://github.com/tavy315'
+            contribution_count: 4
+        -
+            name: juananruiz
+            url: 'https://github.com/juananruiz'
+            contribution_count: 4
         -
             name: JanGalek
             url: 'https://github.com/JanGalek'
+            contribution_count: 3
+        -
+            name: javiereguiluz
+            url: 'https://github.com/javiereguiluz'
             contribution_count: 3
         -
             name: martinahynkova
             url: 'https://github.com/martinahynkova'
             contribution_count: 3
         -
-            name: javiereguiluz
-            url: 'https://github.com/javiereguiluz'
-            contribution_count: 2
-        -
-            name: kbond
-            url: 'https://github.com/kbond'
-            contribution_count: 2
+            name: carusogabriel
+            url: 'https://github.com/carusogabriel'
+            contribution_count: 3
         -
             name: tomasfejfar
             url: 'https://github.com/tomasfejfar'
+            contribution_count: 2
+        -
+            name: Maxell92
+            url: 'https://github.com/Maxell92'
             contribution_count: 2
         -
             name: uestla
@@ -69,50 +74,118 @@ parameters:
             url: 'https://github.com/f3l1x'
             contribution_count: 2
         -
-            name: Maxell92
-            url: 'https://github.com/Maxell92'
+            name: kbond
+            url: 'https://github.com/kbond'
             contribution_count: 2
         -
-            name: Vesninandrey
-            url: 'https://github.com/Vesninandrey'
+            name: tiso
+            url: 'https://github.com/tiso'
+            contribution_count: 2
+        -
+            name: harikt
+            url: 'https://github.com/harikt'
+            contribution_count: 2
+        -
+            name: petrofcikmatus
+            url: 'https://github.com/petrofcikmatus'
+            contribution_count: 2
+        -
+            name: Zemistr
+            url: 'https://github.com/Zemistr'
             contribution_count: 1
         -
-            name: danielsdeboer
-            url: 'https://github.com/danielsdeboer'
-            contribution_count: 1
-        -
-            name: keradus
-            url: 'https://github.com/keradus'
-            contribution_count: 1
-        -
-            name: enid-h-williams
-            url: 'https://github.com/enid-h-williams'
-            contribution_count: 1
-        -
-            name: fabwu
-            url: 'https://github.com/fabwu'
-            contribution_count: 1
-        -
-            name: Wirone
-            url: 'https://github.com/Wirone'
+            name: grogy
+            url: 'https://github.com/grogy'
             contribution_count: 1
         -
             name: hranicka
             url: 'https://github.com/hranicka'
             contribution_count: 1
         -
-            name: nufue
-            url: 'https://github.com/nufue'
+            name: honzagula
+            url: 'https://github.com/honzagula'
             contribution_count: 1
         -
-            name: kapilsharma
-            url: 'https://github.com/kapilsharma'
+            name: tacman
+            url: 'https://github.com/tacman'
+            contribution_count: 1
+        -
+            name: PetrHeinz
+            url: 'https://github.com/PetrHeinz'
+            contribution_count: 1
+        -
+            name: keradus
+            url: 'https://github.com/keradus'
+            contribution_count: 1
+        -
+            name: integer
+            url: 'https://github.com/integer'
+            contribution_count: 1
+        -
+            name: robertfausk
+            url: 'https://github.com/robertfausk'
+            contribution_count: 1
+        -
+            name: sustmi
+            url: 'https://github.com/sustmi'
+            contribution_count: 1
+        -
+            name: tommy-muehle
+            url: 'https://github.com/tommy-muehle'
+            contribution_count: 1
+        -
+            name: Wirone
+            url: 'https://github.com/Wirone'
+            contribution_count: 1
+        -
+            name: muglug
+            url: 'https://github.com/muglug'
             contribution_count: 1
         -
             name: meridius
             url: 'https://github.com/meridius'
             contribution_count: 1
         -
-            name: Zemistr
-            url: 'https://github.com/Zemistr'
+            name: gavec
+            url: 'https://github.com/gavec'
+            contribution_count: 1
+        -
+            name: nufue
+            url: 'https://github.com/nufue'
+            contribution_count: 1
+        -
+            name: fabwu
+            url: 'https://github.com/fabwu'
+            contribution_count: 1
+        -
+            name: danielsdeboer
+            url: 'https://github.com/danielsdeboer'
+            contribution_count: 1
+        -
+            name: jlttt
+            url: 'https://github.com/jlttt'
+            contribution_count: 1
+        -
+            name: enid-h-williams
+            url: 'https://github.com/enid-h-williams'
+            contribution_count: 1
+        -
+            name: artemevsin
+            url: 'https://github.com/artemevsin'
+            contribution_count: 1
+        -
+            name: kapilsharma
+            url: 'https://github.com/kapilsharma'
+            contribution_count: 1
+        -
+            name: Vesninandrey
+            url: 'https://github.com/Vesninandrey'
+            contribution_count: 1
+        -
+            name: tnorthcutt
+            url: 'https://github.com/tnorthcutt'
+            contribution_count: 1
+        -
+            name: chapeupreto
+            url: 'https://github.com/chapeupreto'
             contribution_count: 1

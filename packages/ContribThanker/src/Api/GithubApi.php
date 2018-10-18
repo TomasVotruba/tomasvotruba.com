@@ -8,6 +8,13 @@ use TomasVotruba\ContribThanker\Guzzle\ResponseFormatter;
 final class GithubApi
 {
     /**
+     * Better detailed URL - the more than top 30
+     * @see https://developer.github.com/v3/repos/statistics/#get-contributors-list-with-additions-deletions-and-commit-counts
+     * @var string
+     */
+    private const API_CONTRIBUTORS = 'https://api.github.com/repos/%s/stats/contributors';
+
+    /**
      * @var Client
      */
     private $client;
@@ -54,24 +61,36 @@ final class GithubApi
      */
     public function getContributors(): array
     {
-        $url = sprintf('https://api.github.com/repos/%s/contributors', $this->repositoryName);
-        $response = $this->client->request('GET', $url, $this->options);
-        $json = $this->responseFormatter->formatResponseToJson($response, $url);
+        $url = sprintf(self::API_CONTRIBUTORS, $this->repositoryName);
+        $json = $this->callRequestToJson($url);
+
+        // reverse to max → min
+        rsort($json);
 
         $contributors = [];
         foreach ($json as $item) {
             // skip ego
-            if ($item['login'] === $this->authorName) {
+            if ($item['author']['login'] === $this->authorName) {
                 continue;
             }
 
             $contributors[] = [
-                'name' => $item['login'],
-                'url' => $item['html_url'],
-                'contribution_count' => $item['contributions'],
+                'name' => $item['author']['login'],
+                'url' => $item['author']['html_url'],
+                'contribution_count' => $item['total'],
             ];
         }
 
         return $contributors;
+    }
+
+    /**
+     * @return mixed[]
+     */
+    private function callRequestToJson(string $url): array
+    {
+        $response = $this->client->request('GET', $url, $this->options);
+
+        return $this->responseFormatter->formatResponseToJson($response, $url);
     }
 }
