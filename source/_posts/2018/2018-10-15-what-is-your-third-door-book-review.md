@@ -6,7 +6,7 @@ perex: |
      <br>
      <br>
      But what if the police come to bring you in for your financial frauds and child porn, **what door do you take to run**?
-tweet: "New Post on my Blog: What is Your Third Door? - Book Review, brilliant story-book by @alexbanayan"
+tweet: "New Post on my Blog: What is Your #TheThirdDoor? - Book Review, brilliant story-book by @alexbanayan"
 tweet_image: "/assets/images/posts/2018/third-door/book.jpg"
 ---
 
