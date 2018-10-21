@@ -17,7 +17,7 @@ I switched from monophasic sleep schedule (6 hours in a row) to **Everyman 3** (
 To give you the idea **how polyphasic sleep can look like**:
 
 <div class="text-center">
-    <img src="/assets/images/posts/2018/polyphasic/sleep-charts.jpg" class="img-thumbnail">
+    <img src="/assets/images/posts/2018/polyphasic/polyphasic-charts.jpg" class="img-thumbnail">
 
     <em>blue = sleep, yellow = awake</em>
 </div>
