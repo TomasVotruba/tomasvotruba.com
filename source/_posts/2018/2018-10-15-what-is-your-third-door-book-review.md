@@ -43,7 +43,7 @@ And it's not an easy journey, it takes more than 4 years of struggle, pain, chil
 What **I love about this book** is that it's different from all the other self-help porn. It doesn't include:
 
 - "10 ways to be more effective you can do right now"
-- or better "scientist found out, that average person spends 30 minutes a day in the deep-work state, aim for 8 hours to beta your competition"
+- or better "scientist found out, that average person spends 30 minutes a day in the deep-work state, aim for 8 hours to beat your competition"
 
 These are all **imperatives**, we love to use them, but they barely work.
 
