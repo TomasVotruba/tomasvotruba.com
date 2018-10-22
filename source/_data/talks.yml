@@ -28,11 +28,12 @@ parameters:
                 - { name: "Nette Camp @ Czech Republic, 2017", link: "https://nettecamp.cz" }
 
         -
-            title: "How Monorepo Will Save Your Company"
-            anchor: 'monorepo'
+            title: "How to Run Monorepo under 10 minutes"
+            anchor: "monorepo"
             slides_link: "https://docs.google.com/presentation/d/1UzlKWoEdFlDLj2fzFW9e7VMyncurY-Jwwh3O78rLB-g/edit?usp=sharing"
-            # @todo add link to MonorepoBuilder, when the Symplify 5.0 post is out
+            related_post: "/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command/"
             events:
+                - { name: "Developer Day 2018 @ Czech Republic, Octover 2018", link: "https://www.hubbr.cz/udalosti/events/developer-day-2018" }
                 - { name: "Friends of PHP Prague @ Czech Republic, September 2018", link: "https://www.meetup.com/friends-of-php-prague/events/254388973/" }
 
         -
