@@ -2,7 +2,7 @@ parameters:
     talks:
         -
             title: "Instant Upgrades with Rector"
-            anchor: 'rector'
+            anchor: "rector"
             slides_link: "https://docs.google.com/presentation/d/1jGlKzuQXNFLyF1jERlS3FiRhRMeSaR9fQr8XoqAtWV0/edit?usp=sharing"
             demo_link: "https://github.com/rectorphp/demo"
             video_link: "https://www.facebook.com/pehapkari/videos/1703907042992432/"
@@ -17,7 +17,7 @@ parameters:
 
         -
             title: "How to Setup Coding Standards under 5 minutes"
-            anchor: 'ecs'
+            anchor: "ecs"
             slides_link: "https://docs.google.com/presentation/d/1MLVUNdukSMXTCIDf1mndajiDKvuI5vgf1Y_Uer1IWQE/edit?usp=sharing"
             related_post: "/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/"
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1769747516670517/1341201322596341/?type=1"
@@ -38,7 +38,7 @@ parameters:
 
         -
             title: "Why Your Company Loses Money By Not-Open-Sourcing"
-            anchor: 'open-source'
+            anchor: "open-source"
             slides_link: "https://docs.google.com/presentation/d/1kYpsn_ZAR_Q2A7WYqBIjeVIjdKe67W_d0PTHVgsvMo4/edit?usp=sharing"
             video_link: "https://www.youtube.com/watch?v=suscn1HeRAc"
             related_post: "/blog/2018/07/26/why-is-your-company-losing-money-by-not-open-sourcing-1-hiring/"
@@ -47,7 +47,7 @@ parameters:
 
         -
             title: "Static sites in PHP? Simple with Statie"
-            anchor: 'statie'
+            anchor: "statie"
             slides_link: "https://docs.google.com/presentation/d/1Org07oQWbokCe6Q1FU8o0fe5iEfMGuDfZjKGcnI72BA/edit?usp=sharing"
             related_post: "/blog/2017/02/20/statie-how-to-run-it-locally/"
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/"
@@ -56,7 +56,7 @@ parameters:
 
         -
                 title: "Live upgrade of 2 Open-Source packages with Rector"
-                anchor: 'rector_live'
+                anchor: "rector_live"
                 slides_link: "https://docs.google.com/presentation/d/1G9qaZ--uSrbWH9243JDJOX6yQ8Dv95aVqnSGTns9u8U/edit?usp=sharing"
                 events:
                 - { name: "ViennaPHP @ Austria, September 2018", link: "https://www.meetup .com/viennaphp/events/ncmvwpyxmbbc/" }
