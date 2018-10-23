@@ -83,7 +83,7 @@ All these tools use an **AST analyzer** - that's how they know you're calling `$
 **The downloads speaks for themselves**:
 
 - [66 000 000](https://packagist.org/packages/nikic/php-parser/stats) vs
-- [159 000 downloads](https://packagist.org/packages/microsoft/tolerant-php-parser/stats) in favor of php-parser.
+- [159 000](https://packagist.org/packages/microsoft/tolerant-php-parser/stats) in favor of php-parser.
 
 If you don't use any of these, give at least PHPStan a try. I've made [minimalist intro just for you](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). The overhead is worth it to overcome since **these tools will become more natural to use**, like `composer` is now today.
 
