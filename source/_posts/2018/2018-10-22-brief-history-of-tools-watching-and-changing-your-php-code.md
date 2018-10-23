@@ -73,7 +73,7 @@ I would not write this post and neither have my fuel for passion without this to
 <span class="badge badge-warning">Checks Code</span>
 
 - [PHPStan](https://github.com/phpstan/phpstan) by Ondrej Mirtes
-- [Phan](https://github.com/phan/phan) by Rasmus Leford
+- [Phan](https://github.com/phan/phan) by Rasmus Lerdorf
 - [Psalm](https://github.com/vimeo/psalm) by Matthew Brown
 
 In my knowledge and according to [Github](https://github.com/phan/phan/releases/tag/0.1), [0.1](https://github.com/phpstan/phpstan/tree/0.1) [tags](https://github.com/vimeo/psalm/releases/tag/0.1), all have been published around **2015/2016**.
