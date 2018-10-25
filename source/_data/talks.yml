@@ -6,6 +6,7 @@ parameters:
             slides_link: "https://docs.google.com/presentation/d/1jGlKzuQXNFLyF1jERlS3FiRhRMeSaR9fQr8XoqAtWV0/edit?usp=sharing"
             demo_link: "https://github.com/rectorphp/demo"
             video_link: "https://www.facebook.com/pehapkari/videos/1703907042992432/"
+            post_link: "/blog/2018/02/19/rector-part-1-what-and-how/"
             events:
                 - { name: "PHP Asia @ Singapore, September 2018", link: "https://2018.phpconf.asia/" }
                 - { name: "Symfony UG Berlin @ Germany, August 2018", link: "https://www.meetup.com/sfugberlin/events/253573567" }
