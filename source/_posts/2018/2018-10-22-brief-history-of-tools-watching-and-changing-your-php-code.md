@@ -78,7 +78,7 @@ I would not write this post and neither have my fuel for passion without this to
 
 In my knowledge and according to [Github](https://github.com/phan/phan/releases/tag/0.1), [0.1](https://github.com/phpstan/phpstan/tree/0.1) [tags](https://github.com/vimeo/psalm/releases/tag/0.1), all have been published around **2015/2016**.
 
-All these tools use an **AST analyzer** - that's how they know you're calling `$object->undefined()`. Apart `php-parser`, there is [Microsoft/tolerant-php-parser](https://github.com/Microsoft/tolerant-php-parser). His big advantage is that it can work with incomplete code. Thanks to such feature it's great for IDE autocompletion, e.g. [phactor](https://github.com/phpactor/phpactor) for VIM.
+All these tools use an **AST analyzer** - that's how they know you're calling `$object->undefined()`. Apart `php-parser`, there is [Microsoft/tolerant-php-parser](https://github.com/Microsoft/tolerant-php-parser). His big advantage is that it can work with incomplete code. Thanks to such feature it's great for IDE autocompletion, e.g. [phpactor](https://github.com/phpactor/phpactor) for VIM.
 
 **The downloads speaks for themselves**:
 
