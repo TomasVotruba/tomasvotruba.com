@@ -16,8 +16,9 @@ final class ResponseFormatter
     {
         if (! Strings::startsWith((string) $response->getStatusCode(), '2')) {
             throw new ApiException(sprintf(
-                'Response to "%s" failed: "%s"',
+                'Response to "%s" failed with code %d and message: "%s"',
                 $originalUrl,
+                $response->getStatusCode(),
                 $response->getReasonPhrase()
             ));
         }
