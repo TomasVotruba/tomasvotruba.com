@@ -3,6 +3,7 @@
 namespace TomasVotruba\ContribThanker\Guzzle;
 
 use Nette\Utils\Json;
+use Nette\Utils\Strings;
 use Psr\Http\Message\ResponseInterface;
 use TomasVotruba\ContribThanker\Exception\Api\ApiException;
 
@@ -13,7 +14,7 @@ final class ResponseFormatter
      */
     public function formatResponseToJson(ResponseInterface $response, string $originalUrl): array
     {
-        if ($response->getStatusCode() !== 200) {
+        if (! Strings::startsWith((string) $response->getStatusCode(), '2')) {
             throw new ApiException(sprintf(
                 'Response to "%s" failed: "%s"',
                 $originalUrl,
