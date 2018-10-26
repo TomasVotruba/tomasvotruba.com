@@ -6,7 +6,7 @@ perex:
     <br><br>
     Should coding standard upgrade your code? Should AST make your code cleaner? Should AST take of coding standard changes?
     **Which is born for it?**
-tweet: "New Post on my Blog: Why #AST Can Upgrade your Coding Standard Better than Tokens #php"
+tweet: "New Post on my Blog: Why #AST Fixes your Coding Standard Better than Tokens #php"
 tweet_image: "/assets/images/posts/2018/ast-tokens/scope.png"
 ---
 
