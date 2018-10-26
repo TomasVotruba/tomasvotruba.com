@@ -6,9 +6,6 @@ perex:
     <br>
     <br>
     Which tool was first? How they **build on shoulders of each other**?
-    <br>
-    <br>
-    Are you a lazy programmer who wants to **delegate as much work as possible** to 3rd party code? Today, you'll become even lazier.
 tweet: "New Post on my Blog: Brief History of Tools Watching and Changing PHP Code #phpcsfixer #phpcodesniffer @phpstan #psalm #phan @sensiolabsde #symfony #rector @cakephp"
 ---
 
