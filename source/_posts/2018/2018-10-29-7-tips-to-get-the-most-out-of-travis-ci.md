@@ -1,6 +1,6 @@
 ---
 id: 154
-title: "7 Tips to Get Most Out of Travis CI"
+title: "7 Tips to Get the Most out of Travis CI"
 perex:
     Travis CI is the most spread CI in checking open-source projects. 
     <br><br>
