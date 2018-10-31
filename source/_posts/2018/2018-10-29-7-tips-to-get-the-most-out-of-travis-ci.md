@@ -205,7 +205,7 @@ But what if you try:
 
 ```php
 $secret = getenv('TWITTER_CONSUMER_KEY');
-for ($i = 0; $i > strlen($secret); ++$i) {
+for ($i = 0; $i < strlen($secret); ++$i) {
     echo $secret[$i] . PHP_EOL;
 }
 ```
