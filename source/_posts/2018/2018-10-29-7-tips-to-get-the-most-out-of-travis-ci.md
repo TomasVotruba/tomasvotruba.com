@@ -55,12 +55,12 @@ For these reasons, there is `$TRAVIS_BRANCH` ENV var:
 
 ```yaml
 after_script:
-  - |
-    if [[ $COVERAGE == true && $TRAVIS_BRANCH == "master" ]]; then
-      vendor/bin/phpunit --coverage-clover coverage.xml
-      wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.1.0/php-coveralls.phar
-      php php-coveralls.phar --verbose
-    fi
+    - |
+      if [[ $COVERAGE == true && $TRAVIS_BRANCH == "master" ]]; then
+        vendor/bin/phpunit --coverage-clover coverage.xml
+        wget https://github.com/php-coveralls/php-coveralls/releases/download/v2.1.0/php-coveralls.phar
+        php php-coveralls.phar --verbose
+      fi
 ```
 
 This way coverage is run just once the PR merged. Imagine the safe process time and human nerves in PR where were additional 10 commits after code-review.
@@ -80,19 +80,19 @@ How to use them?
 language: php
 
 matrix:
-  include:
-    - php: 7.2
-      env: STATIC_ANALYSIS=true
-    - php: 7.2
+    include:
+      - php: 7.2
+        env: STATIC_ANALYSIS=true
+      - php: 7.2
 
 script:
-  - vendor/bin/phpunit
+    - vendor/bin/phpunit
 
-  - |
-    if [[ $STATIC_ANALYSIS == true ]]; then
-      vendor/bin/ecs check src
-      vendor/bin/phpstan analyze src --level max
-    fi
+    - |
+      if [[ $STATIC_ANALYSIS == true ]]; then
+        vendor/bin/ecs check src
+        vendor/bin/phpstan analyze src --level max
+      fi
 ```
 
 Travis also allows [Stages](https://docs.travis-ci.com/user/build-stages/) oppose ENV variables. I've tried that and it has much more complicated YAML syntax, than just `VAR=value`. Also due to ENV trends lead by Docker, containers in general and Symfony, I'd stick with ENV vars for open-source projects.
