@@ -2,7 +2,7 @@
 id: 154
 title: "7 Tips to Get the Most out of Travis CI"
 perex:
-    Travis CI is the most spread CI in checking open-source projects. 
+    Travis CI is the most spread CI in checking open-source projects.
     <br><br>
     Do you want to know how to use it **3x faster**?
     <br>
@@ -26,14 +26,14 @@ before_script:
 Do you use coverage? Just use condition:
 
 ```yaml
-before_script:    
+before_script:
     # disable xdebug if not coverage
     - if [[ $COVERAGE == "" ]]; then phpenv config-rm xdebug.ini; fi
 ```
 
 ## 2. Deliver PR Checks Fast
 
-The speed of feedback loop in PRs has the same effect as page load time. If the page is loading **more than 4 seconds**, [most people leaves thinking it's broken](https://www.hobo-web.co.uk/your-website-design-should-load-in-4-seconds/).  
+The speed of feedback loop in PRs has the same effect as page load time. If the page is loading **more than 4 seconds**, [most people leaves thinking it's broken](https://www.hobo-web.co.uk/your-website-design-should-load-in-4-seconds/).
 
 What is **must-have** in PR check?
 
@@ -49,7 +49,7 @@ What can be **checked later**?
 
 When tests, static analysis, and coding style can finish in 3 minutes including `composer install`, the code coverage and deploy could prolong waiting to **9 minutes**. For no added value, because it should be performed *on merge*.
 
-Would you contribute to PR where you **wait 9 minutes or 3 to know it passed**?   
+Would you contribute to PR where you **wait 9 minutes or 3 to know it passed**?
 
 For these reasons, there is `$TRAVIS_BRANCH` ENV var:
 
@@ -65,7 +65,7 @@ after_script:
 
 This way coverage is run just once the PR merged. Imagine the safe process time and human nerves in PR where were additional 10 commits after code-review.
 
-## 3. Use ENV vars 
+## 3. Use ENV vars
 
 ENV vars is a standard approach to set secure values, pass options to containers and PHP application. It's a trend Symfony pushes every version, recently with this [Symfony 4.2 deprecation](https://symfony.com/blog/new-in-symfony-4-2-important-deprecations):
 
@@ -102,8 +102,8 @@ Travis also allows [Stages](https://docs.travis-ci.com/user/build-stages/) oppos
 ## 4. Use Travis to do More Just Watching
 
 Most projects use Travis to check tests and analyze code. But did you know you can also use it for **open-source deploy**? And even more:
- 
-- **running validations**, e.g. if all links are still responding with 200  
+
+- **running validations**, e.g. if all links are still responding with 200
 - **crawl websites** and storing data to YAML
 - **Tweet**!
 
@@ -125,7 +125,7 @@ One more thing: **Travis is super fast.** What on my laptop takes 10 minutes, it
 
 ## 5. Rebuild your GitHub Pages Daily
 
-One of the sexy features of Travis are [Cron Jobs](https://docs.travis-ci.com/user/cron-jobs/) in combination with Github Pages and `deploy`: 
+One of the sexy features of Travis are [Cron Jobs](https://docs.travis-ci.com/user/cron-jobs/) in combination with Github Pages and `deploy`:
 
 It is this easy to [deploy Statie website](https://www.statie.org/docs/github-pages/#configure-travis) to Github Pages:
 
@@ -153,7 +153,7 @@ Check real life `.travis.yml` to getter better idea:
 
 - [pehapkari.cz](https://github.com/pehapkari/pehapkari.cz/blob/7cb58f17cedffc8222d063d632b7d353c7728342/.travis.yml#L35-L41)
 - [friendsofphp.org](https://github.com/TomasVotruba/friendsofphp.org/blob/76f64d0fa48633abcd4e256eb575f8d99ba1d78b/.travis.yml#L24-L40)
- 
+
 ## 6. Stay Secure
 
 When I said you can **Tweet** with your Travis, I mean it. That's what me lazy bastard [does](https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/packages/StatieTweetPublisher) on this blog:
@@ -224,8 +224,8 @@ So instead of writing it manually in Travis and locally and just waiting for a t
 script:
     # static analysis
     - vendor/bin/ecs check bin src test packages
-    - vendor/bin/phpstan analyze packages bin src tests packages --level max 
-``` 
+    - vendor/bin/phpstan analyze packages bin src tests packages --level max
+```
 
 you can actually use these in Travis as well:
 
