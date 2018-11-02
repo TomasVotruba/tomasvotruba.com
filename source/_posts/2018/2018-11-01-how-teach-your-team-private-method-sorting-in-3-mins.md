@@ -1,6 +1,6 @@
 ---
 id: 155
-title: "How to Teach Your Team Private Method Sorting in 3 mins"
+title: "How to Teach Your Team Private Method Sorting in&nbsp;3&nbsp;mins"
 perex:
     When I started PHP in 2004, all you had to do is to learn a few functions to become the most senior dev in your town. Nowadays, devs have to learn a framework, IDE and coding patterns to get at least to an average level.
     <br><br>
