@@ -40,4 +40,6 @@ services:
         class: TwitterAPIExchange
         factory: ['@TomasVotruba\StatieTweetPublisher\TwitterApi\TwitterApiFactory', 'create']
 
-    Symfony\Component\Console\Style\SymfonyStyle: ~
+    Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory: ~
+    Symfony\Component\Console\Style\SymfonyStyle:
+        factory: ['@Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory', 'create']
