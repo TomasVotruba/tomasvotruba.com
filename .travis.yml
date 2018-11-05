@@ -35,7 +35,7 @@ after_deploy:
     # tweets posts
     - |
       if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
-        packages/StatieTweetPublisher/bin/publish-new-tweet
+          packages/StatieTweetPublisher/bin/publish-new-tweet
       fi
 
 notifications:
