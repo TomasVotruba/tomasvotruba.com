@@ -9,6 +9,11 @@ use Symplify\Statie\Renderable\File\PostFile;
 final class PostsProvider
 {
     /**
+     * @var string
+     */
+    private $sourceDirectory;
+
+    /**
      * @var StatieApplication
      */
     private $statieApplication;
@@ -17,11 +22,6 @@ final class PostsProvider
      * @var Configuration
      */
     private $configuration;
-
-    /**
-     * @var string
-     */
-    private $sourceDirectory;
 
     public function __construct(
         string $sourceDirectory,

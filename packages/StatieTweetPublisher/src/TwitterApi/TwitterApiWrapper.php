@@ -39,6 +39,11 @@ final class TwitterApiWrapper
     private $twitterName;
 
     /**
+     * @var Tweet[]
+     */
+    private $rawTweets = [];
+
+    /**
      * @var TwitterAPIExchange
      */
     private $twitterAPIExchange;
@@ -47,11 +52,6 @@ final class TwitterApiWrapper
      * @var TweetEntityCompleter
      */
     private $tweetEntityCompleter;
-
-    /**
-     * @var Tweet[]
-     */
-    private $rawTweets = [];
 
     public function __construct(
         string $twitterName,
@@ -139,6 +139,20 @@ final class TwitterApiWrapper
      * @param mixed[] $data
      * @return mixed[]
      */
+    private function callPost(string $endPoint, array $data): array
+    {
+        $jsonResponse = $this->getTwitterApiExchange()
+            ->setPostfields($data)
+            ->buildOauth($endPoint, 'POST')
+            ->performRequest();
+
+        return $this->decodeJson($jsonResponse);
+    }
+
+    /**
+     * @param mixed[] $data
+     * @return mixed[]
+     */
     private function callGet(string $endPoint, string $query, array $data): array
     {
         $data['q'] = $query;
@@ -152,17 +166,17 @@ final class TwitterApiWrapper
     }
 
     /**
-     * @param mixed[] $data
-     * @return mixed[]
+     * @param mixed[] $result
      */
-    private function callPost(string $endPoint, array $data): array
+    private function ensureNoError(array $result): void
     {
-        $jsonResponse = $this->getTwitterApiExchange()
-            ->setPostfields($data)
-            ->buildOauth($endPoint, 'POST')
-            ->performRequest();
+        if (! isset($result['errors'])) {
+            return;
+        }
 
-        return $this->decodeJson($jsonResponse);
+        $errors = $result['errors'];
+
+        throw new TwitterApiException(sprintf('Twitter API failed due to: "%s"', $errors[0]['message']));
     }
 
     /**
@@ -179,19 +193,5 @@ final class TwitterApiWrapper
     private function decodeJson(string $jsonResponse): array
     {
         return Json::decode($jsonResponse, Json::FORCE_ARRAY);
-    }
-
-    /**
-     * @param mixed[] $result
-     */
-    private function ensureNoError(array $result): void
-    {
-        if (! isset($result['errors'])) {
-            return;
-        }
-
-        $errors = $result['errors'];
-
-        throw new TwitterApiException(sprintf('Twitter API failed due to: "%s"', $errors[0]['message']));
     }
 }

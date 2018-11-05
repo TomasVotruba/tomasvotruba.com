@@ -15,14 +15,14 @@ final class PostTweetsProvider
     private $siteUrl;
 
     /**
-     * @var PostsProvider
-     */
-    private $postsProvider;
-
-    /**
      * @var string
      */
     private $sourceDirectory;
+
+    /**
+     * @var PostsProvider
+     */
+    private $postsProvider;
 
     /**
      * @var TweetGuard
@@ -72,11 +72,6 @@ final class PostTweetsProvider
         return $rawTweetText . ' ' . $url . '/';
     }
 
-    private function getAbsoluteUrlForPost(PostFile $postFile): string
-    {
-        return $this->siteUrl . '/' . $postFile->getRelativeUrl();
-    }
-
     /**
      * @param mixed[] $postConfiguration
      */
@@ -91,5 +86,10 @@ final class PostTweetsProvider
         $this->tweetGuard->ensureTweetImageExists($postFile, $localFilePath);
 
         return $this->siteUrl . '/' . $postConfiguration['tweet_image'];
+    }
+
+    private function getAbsoluteUrlForPost(PostFile $postFile): string
+    {
+        return $this->siteUrl . '/' . $postFile->getRelativeUrl();
     }
 }

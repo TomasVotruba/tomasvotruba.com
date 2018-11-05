@@ -15,16 +15,6 @@ final class GithubApi
     private const API_CONTRIBUTORS = 'https://api.github.com/repos/%s/stats/contributors';
 
     /**
-     * @var Client
-     */
-    private $client;
-
-    /**
-     * @var ResponseFormatter
-     */
-    private $responseFormatter;
-
-    /**
      * @var string
      */
     private $repositoryName;
@@ -38,6 +28,16 @@ final class GithubApi
      * @var mixed[]
      */
     private $options = [];
+
+    /**
+     * @var Client
+     */
+    private $client;
+
+    /**
+     * @var ResponseFormatter
+     */
+    private $responseFormatter;
 
     public function __construct(
         Client $client,

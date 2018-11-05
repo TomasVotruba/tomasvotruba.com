@@ -128,10 +128,10 @@ services:
 vendor/bin/ecs check src
 ```
 
-You might need to re-run the command few times, because of the new order of private methods will automatically change calling order. But that's it: 
+You might need to re-run the command few times, because of the new order of private methods will automatically change calling order. But that's it:
 
-- no books, 
-- no lectures, 
+- no books,
+- no lectures,
 - 0 hours wasted on code-reviews.
 
 <br>
