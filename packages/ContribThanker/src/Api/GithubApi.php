@@ -62,6 +62,9 @@ final class GithubApi
     public function getContributors(): array
     {
         $url = sprintf(self::API_CONTRIBUTORS, $this->repositoryName);
+
+        dump($url);
+
         $json = $this->callRequestToJson($url);
 
         // reverse to max → min
