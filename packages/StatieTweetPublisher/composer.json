@@ -1,5 +1,6 @@
 {
     "name": "tomasvotruba/statie-tweet-publisher",
+    "license": "MIT",
     "description": "Statie Plugin that automates tweet posting from Posts",
     "bin": [
         "bin/publish-new-tweet"
