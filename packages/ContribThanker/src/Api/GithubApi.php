@@ -92,8 +92,8 @@ final class GithubApi
      */
     private function callRequestToJson(string $url): array
     {
-        $request = new Request('GET', $url, $this->options);
-        $response = $this->client->send($request);
+        $request = new Request('GET', $url);
+        $response = $this->client->send($request, $this->options);
 
         if ($response->getStatusCode() >= 300) {
             throw BadResponseException::create($request, $response);
