@@ -1,5 +1,11 @@
 parameters:
     clusters:
+#        -
+#            title: "Hacking Symfony"
+#            # container mostly
+#            post_ids: [128, 103, 109, 105, 129, 137]
+#            description: "..."
+
         -
             title: "Master PHP CLI Apps with Symfony"
             post_ids: [128, 103, 109, 105, 129, 137]
