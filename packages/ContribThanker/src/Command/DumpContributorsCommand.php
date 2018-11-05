@@ -59,8 +59,13 @@ final class DumpContributorsCommand extends Command
             (new DateTime())->format('Y-m-d H:i:s')
         );
 
-        $this->filesystem->dumpFile(self::CONTRIBUTORS_FILE, $timestampComment . $yamlDump);
+        if (count($contributors) > 0) {
+            $this->filesystem->dumpFile(self::CONTRIBUTORS_FILE, $timestampComment . $yamlDump);
 
-        $this->symfonyStyle->success(sprintf('Dump contributions from %d people', count($contributors)));
+            $this->symfonyStyle->success(sprintf('Dump contributions from %d people', count($contributors)));
+            return;
+        }
+
+        $this->symfonyStyle->note('Found 0 contributions - stick with the current dump');
     }
 }
