@@ -16,6 +16,8 @@ parameters:
     skip:
         Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
             - '*/src/Posts/Year2017/Ast/*'
+            # Request value object
+            - 'packages/ContribThanker/src/Api/GithubApi.php'
             # for Nette\Utils\DateTime, is fixed in Symplify master
             - 'packages/ContribThanker/src/Command/DumpContributorsCommand.php'
 

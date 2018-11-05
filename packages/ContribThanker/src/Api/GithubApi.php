@@ -4,6 +4,7 @@ namespace TomasVotruba\ContribThanker\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\BadResponseException;
+use GuzzleHttp\Psr7\Request;
 use TomasVotruba\ContribThanker\Guzzle\ResponseFormatter;
 
 final class GithubApi
@@ -91,13 +92,11 @@ final class GithubApi
      */
     private function callRequestToJson(string $url): array
     {
-        $response = $this->client->request('GET', $url, $this->options);
+        $request = new Request('GET', $url, $this->options);
+        $response = $this->client->send($request);
+
         if ($response->getStatusCode() !== 200) {
-            throw new BadResponseException(
-                'Response to GET request "%s" failed: "%s"',
-                null,
-                $response
-            );
+            throw BadResponseException::create($request, $response);
         }
 
         return $this->responseFormatter->formatResponseToJson($response, $url);
