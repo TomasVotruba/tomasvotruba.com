@@ -66,8 +66,12 @@ final class GithubApi
         $url = sprintf(self::API_CONTRIBUTORS, $this->repositoryName);
         $json = $this->callRequestToJson($url);
 
+        dump($json);
+
         // reverse to max → min
         rsort($json);
+
+        dump($json);
 
         $contributors = [];
         foreach ($json as $item) {
