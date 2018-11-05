@@ -3,6 +3,7 @@
 namespace TomasVotruba\ContribThanker\Api;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\BadResponseException;
 use TomasVotruba\ContribThanker\Guzzle\ResponseFormatter;
 
 final class GithubApi
@@ -62,9 +63,6 @@ final class GithubApi
     public function getContributors(): array
     {
         $url = sprintf(self::API_CONTRIBUTORS, $this->repositoryName);
-
-        dump($url);
-
         $json = $this->callRequestToJson($url);
 
         // reverse to max → min
@@ -94,6 +92,13 @@ final class GithubApi
     private function callRequestToJson(string $url): array
     {
         $response = $this->client->request('GET', $url, $this->options);
+        if ($response->getStatusCode() !== 200) {
+            throw new BadResponseException(
+                'Response to GET request "%s" failed: "%s"',
+                null,
+                $response
+            );
+        }
 
         return $this->responseFormatter->formatResponseToJson($response, $url);
     }
