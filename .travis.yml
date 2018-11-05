@@ -15,9 +15,9 @@ script:
 
     # dump contributors before deploy
     - |
-        if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
+      if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
           bin/console dump-contributors
-        fi
+      fi
 
     # test that website is generated
     - vendor/bin/statie generate source
