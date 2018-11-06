@@ -274,7 +274,7 @@ Maybe convention factory using `create()` method and it's `@return Type` or `cre
 -        factory: ['@SomeFactory', 'create']
 ```
 
-<em class="fas fa-lg fa-times text-danger"></em> &nbsp; Not yet.
+EDITED: <em class="fas fa-lg fa-check text-success"></em> &nbsp;Done for [Symfony 3.4+](https://github.com/Symplify/Symplify/pull/1185)
 
 <br>
 
