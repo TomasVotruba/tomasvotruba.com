@@ -35,6 +35,7 @@ parameters:
             slides_link: "https://docs.google.com/presentation/d/1UzlKWoEdFlDLj2fzFW9e7VMyncurY-Jwwh3O78rLB-g/edit?usp=sharing"
             related_post: "/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command/"
             demo_link: "https://github.com/TomasVotruba/monorepo-demo"
+            video_link: "https://slideslive.com/38911637/jak-rozjet-monorepo-za-10-minut"
             events:
                 - { name: "Developer Day 2018 @ Czech Republic, Octover 2018", link: "https://www.hubbr.cz/udalosti/events/developer-day-2018" }
                 - { name: "Friends of PHP Prague @ Czech Republic, September 2018", link: "https://www.meetup.com/friends-of-php-prague/events/254388973/" }
