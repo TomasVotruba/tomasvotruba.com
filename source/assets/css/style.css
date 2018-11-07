@@ -455,3 +455,8 @@ nav ul li#top-menu-search {
     font-size: 1.4em;
     line-height: 1.8em;
 }
+
+table ul {
+    margin-left: 1em;
+    padding-left: 0;
+}

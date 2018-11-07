@@ -92,26 +92,11 @@ class FirstClass
 }
 ```
 
-```php
-<?php
-
-namespace OpenProject;
-
-class SecondClass
-{
-    public function __construct(string $googleAnalyticsId)
-    {
-        // ...
-    }
-}
-```
-
 And add parameter values to config:
 
 ```yaml
 parameters:
     api_key: "asdf"
-    google_analytics_id: "ga-123456"
 ```
 
 How do we get those parameters in there?
@@ -127,9 +112,6 @@ How do we get those parameters in there?
 +    OpenProject\FirstClass:
 +        arguments:
 +             - "%api_key%"
-+    OpenProject\SecondClass:
-+        arguments:
-+             - "%google_analytics_id%"
 ```
 
 It's that simple! *Just kidding.*
@@ -142,8 +124,7 @@ Symfony guys realized this needs to follow innovations as service registration d
          autowire: true
 +    bind:
 +        $apiKey: "%api_key%"
-+        $googleAnalyticsId: "%google_analytics_id%"
-+
+
      OpenProject\:
          resource: "../src"
 ```
@@ -168,9 +149,9 @@ Not bad, at least compared to the previous solution.
             <ul>
                 <li>create a parameter</li>
                 <li>require it in the constructor</li>
-                <li>bind it in config</li>
-                <li>bind <strong>it in every config where it is required by service</strong></li>
-                <li>also, remove it from every config where it's not used anymore - otherwise you'll get nice Symfony exception</li>
+                <li class="text-danger">bind it in config</li>
+                <li class="text-danger">bind it in every config where it is required by service</li>
+                <li class="text-danger">also, remove it from every config where it's not used anymore - otherwise you'll get nice Symfony exception</li>
             </ul>
         </td>
     </tr>
@@ -182,7 +163,7 @@ It's that simple! *Just kidding, again.*
 
 <blockquote class="blockquote text-center mt-5 mb-5">
     If services are autowired by unique type,<br>
-    parameters can be autowired by unique... name.
+    parameters can be autowired by <strong>unique name</strong>.
 </blockquote>
 
 You don't need this:
@@ -193,8 +174,7 @@ You don't need this:
          autowire: true
 -    bind:
 -        $apiKey: "%api_key%"
--        $googleAnalyticsId: "%google_analytics_id%"
--
+
      OpenProject\:
          resource: "../src"
 ```
@@ -224,13 +204,16 @@ class FirstClass
 }
 ```
 
+That's all folks!
+
+<br>
+
 ### Convention over Configuration
 
-If you can shave 2 almost identical approaches - *element autowiring* - **to just one, [do it](https://simple.wikipedia.org/wiki/Occam%27s_razor)**.
+If you can [shave off 2 almost identical approaches](https://simple.wikipedia.org/wiki/Occam%27s_razor) - *element autowiring* - **to single 1, do it**.
 
 By respecting the naming `%param%` = `$param` your code is consistent with services,<br>
 where `Type` = `$type` and clean and easy to read.
-
 
 <br>
 
