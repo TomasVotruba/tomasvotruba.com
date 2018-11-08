@@ -248,7 +248,7 @@ It's smart enough to touch only what it should and leave the rest be:
 ## Harder, Better, Faster, Stronger... PHP Community
 
 Take the Rector out, run it on your code, let it fix what it can and **report the rest you had to do manually in the issues**. Maybe it can be automated.
-You'll be helping each other developer, who upgrades the same PHP version you did.
+You'll be helping each other developer, who upgrades the same PHP version you did. Imagine PHP version 5.3 would be shipped with set like this, covering 100 % of all changes. It's up to us to make a brighter future now.
 
 <br>
 
