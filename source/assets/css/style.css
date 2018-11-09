@@ -12,7 +12,6 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    padding-bottom: 2em;
     font-size: 17px;
     line-height: 1.5em;
 }
@@ -459,4 +458,21 @@ nav ul li#top-menu-search {
 table ul {
     margin-left: 1em;
     padding-left: 0;
+}
+
+#footer {
+    background: #24292e;
+    color: hsla(0,0%,100%,.75);
+    padding-bottom: 1em;
+    line-height: 2.5em;
+}
+
+#footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+#footer a:hover {
+    color: #DDD;
+    text-decoration: none;
 }
