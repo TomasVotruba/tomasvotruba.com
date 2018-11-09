@@ -29,7 +29,7 @@ Migrace Symfony 2 na 3 bude značně zjednodušena tím, že **spolu s verzí 3 
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/symfony3/release-plan.png" alt="Release plan">
+    <img src="/assets/images/posts/2015/symfony3/release-plan.png" alt="Release plan">
     <br>
     <em>Verze 2.8 bude LTS. První LTS nové série bude až 3.3 (vyjde v květnu 2017).</em>
 </div>
@@ -41,14 +41,14 @@ Jaké jsou tedy 2 hlavní rozdíly mezi 3.0 a 2.8?
 - min. verze PHP 5.5
 - odstraněný veškerý deprecated kód, který poskytuje BC kompatibilitu k 2.x (~ 10 % kódu)
 
-## A nyní ke 4 očekávaným novinkám
+**A nyní ke 4 očekávaným novinkám**
 
-### 1. Autowiring služeb
+## 1. Autowiring služeb
 
 Symfony nyní podporuje constructor autowiring. Při vytváření definice služby tak můžete zapnout `autowiring` a přeskočit manuální předávání argumentů.
 V českém prostředí je autowiring poměrně populární díky bundlům jako [Kutny](https://github.com/kutny/autowiring-bundle) nebo [Skrz](https://github.com/skrz/autowiring-bundle).
 
-#### Jak to v praxi vypadá?
+### Jak to v praxi vypadá?
 
 Dřívější dlouhý zápis
 
@@ -78,14 +78,14 @@ services:
 	    autowiring: true
 ```
 
-#### Jak to funguje?
+### Jak to funguje?
 
 Dependency Injection container zanalyzuje konstruktor služby a:
 
 - pokud jsou služby dostupné → předá je
 - pokud ne → registruje je jako privátní služby
 
-#### Jak je to s interface?
+### Jak je to s interface?
 
 Místo konkretního typu služby můžeš vyžádat interface, který služba implementuje. Ale co když máme více služeb jednoho interface (typické pro chain pattern)? Stačí u dané služby explicitně uvést:
 
@@ -108,11 +108,11 @@ services:
 
 <hr>
 
-### 2. Logičtější složky
+## 2. Logičtější složky
 
 Symfony 3 full-stack s sebou přináší řád. Zbaví nás chaosu ve složce `/app`.
 
-#### Jak?
+### Jak?
 
 Dočasné soubory, logy, nastavení pro PHPUnit, konzolové soubory...
 <br>To vše má nyní jasné umístění oddělené od kódu naší aplikace.
@@ -120,7 +120,7 @@ Dočasné soubory, logy, nastavení pro PHPUnit, konzolové soubory...
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/symfony3/directory-structure.png" alt="Release plan">
+    <img src="/assets/images/posts/2015/symfony3/directory-structure.png" alt="Release plan">
     <br>
     <em>
         Console skripty najdeš nyní ve složce <code>/bin</code>.
@@ -134,7 +134,7 @@ Testy pak v příkazové řádce spustíš jednoduše přes <code>phpunit</code>
 
 <hr>
 
-### 3. Symfony profiler v novém kabátku
+## 3. Symfony profiler v novém kabátku
 
 Pro programátora je důležitý nejen přehledný kód, ale i přehledné meta-informace o aplikaci. Ty si v Symfony snadno zobrazí
 pomocí Symfony Profileru.
@@ -146,7 +146,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/symfony3/profiler-before-after.png" alt="Nový design>
+    <img src="/assets/images/posts/2015/symfony3/profiler-before-after.png" alt="Nový design>
     <br>
     <em>Srovnání staré a nové verze</em>
 </div>
@@ -154,7 +154,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/symfony3/profiler-old-new.png" alt="Starý a nový design">
+    <img src="/assets/images/posts/2015/symfony3/profiler-old-new.png" alt="Starý a nový design">
     <br>
     <em>
         Dříve bylo těžké se rychle zorientovat ve velkém množství informací.
@@ -165,7 +165,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/symfony3/profiler-go-back.gif" alt="Odkaz na stránku">
+    <img src="/assets/images/posts/2015/symfony3/profiler-go-back.gif" alt="Odkaz na stránku">
     <br>
     <em>Snadno se dostaneš z profileru zpět na stránku</em>
 </div>
@@ -182,7 +182,7 @@ Důležité informace a hlavně chybové hlášky jsou teď mnohem čitelnějš�
 
 <hr>
 
-### 4. Micro Kernel
+## 4. Micro Kernel
 
 Velkou radost budou mít vývojáři menších aplikací, kteří si rádi užívají komfort ekosystému full-stack Symfony. Před pár dny, 5. listopadu, byl do FrameworkBundle přidán **Micro Kernel**.
 
@@ -194,7 +194,7 @@ Micro Kernel konkrétně:
 - umožňuje přidání extension bez bundlů
 - podporuje routování
 
-#### Jak takový Micro Kernel vypadá?
+### Jak takový Micro Kernel vypadá?
 
 ```php
 <?php
@@ -266,7 +266,7 @@ Už máš chuť si to vyzkoušet? Hned v příštím článku si ukážeme, *jak
 <br>
 
 <div class="text-center">
-    <img src="/assets/images/posts/symfony3/you-got-this-meme.png" alt="A máš to">
+    <img src="/assets/images/posts/2015/symfony3/you-got-this-meme.png" alt="A máš to">
 </div>
 
 <br>
