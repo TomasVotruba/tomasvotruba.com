@@ -1,6 +1,6 @@
 ---
 id: 158
-title: "Can Autowired Arrays Finally Deprecate Tags in Symfony and Nette?"
+title: "Will Autowired Arrays Finally Deprecate Tags in Symfony and Nette?"
 perex: |
     To be clear: we talk about those tags that only have a name. No priority, no level, no event name, nothing, **just the name**. If you're not sure why these tags are bad, read *[Drop all Service Tags in Your Nette and Symfony Applications](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/)* first.
     <br>
