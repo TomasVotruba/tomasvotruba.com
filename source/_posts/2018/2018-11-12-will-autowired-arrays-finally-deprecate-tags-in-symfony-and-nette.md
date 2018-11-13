@@ -20,7 +20,7 @@ You introduce and a `ReleaseWorkerInterface`:
 ```php
 <?php declare(strict_types=1);
 
-namespace Moses;
+namespace Moses\ReleaseWorker;
 
 interface ReleaseWorkerInterface
 {
@@ -37,7 +37,7 @@ namespace Moses\ReleaseWorker;
 
 use Nette\Utils\Strings;
 
-final class CheckBlogHasReleasePostReleaseWorker
+final class CheckBlogHasReleasePostReleaseWorker implements ReleaseWorkerInterface
 {
     public function work(string $version): void 
     {
@@ -62,7 +62,7 @@ and register it
 ```yaml
 # moses.yml
 services:
-    Moses\ReleaseWorkter\CheckBlogHasReleasePostReleaseWorker: ~
+    Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker: ~
 ```
 
 ## Find all the `ReleaseWorkerInterface`?
@@ -75,7 +75,7 @@ How can we get all the services that implement `ReleaseWorkerInterface`?
 
 ```yaml
 services:
-    Moses\ReleaseWorkter\CheckBlogHasReleasePostReleaseWorker:
+    Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker:
         tags:
             - "release_worker"
 ```
@@ -157,7 +157,7 @@ We should make a design that is reliable.
 <?php declare(strict_types=1);
 
 $releaseWorkers = [
-    new Moses\ReleaseWorkter\CheckBlogHasReleasePostReleaseWorker,
+    new Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker,
 ];
 
 $moses = new Moses\Moses($releaseWorkers);
