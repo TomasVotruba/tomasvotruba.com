@@ -5,16 +5,16 @@ perex: |
     To be clear: we talk about those tags that only have a name. No priority, no level, no event name, nothing, **just the name**. If you're not sure why these tags are bad, read *[Drop all Service Tags in Your Nette and Symfony Applications](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/)* first.
     <br>
     <br>
-    I'm very happy to see that [collectors](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code) are finally getting to the core of DI components of PHP frameworks. Tags, extensions, compiler passes and `autoconfigure` now became workarounds. Collectors are now in the best place they can... **the PHP code**. 
-       
+    I'm very happy to see that [collectors](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code) are finally getting to the core of DI components of PHP frameworks. Tags, extensions, compiler passes and `autoconfigure` now became workarounds. Collectors are now in the best place they can... **the PHP code**.
+
 tweet: "New Post on My Blog: Can Autowired Arrays Finally Deprecate Tags in #Symfony and #NetteFw?    #collector #nettefw30 #php #simplestupid"
 ---
 
-Let's say we need to build a tool for releasing a new version of the open-source package. Something like what I use for 
+Let's say we need to build a tool for releasing a new version of the open-source package. Something like what I use for
 [Symplify and Rector releases](https://github.com/symplify/monorepobuilder), **but better**.
 
-You want it to be *open for extension and closed for modification*. How do we do that?  
- 
+You want it to be *open for extension and closed for modification*. How do we do that?
+
 You introduce and a `ReleaseWorkerInterface`:
 
 ```php
@@ -39,17 +39,17 @@ use Nette\Utils\Strings;
 
 final class CheckBlogHasReleasePostReleaseWorker
 {
-    public function work(string $version): void 
+    public function work(string $version): void
     {
         $blogContent = file_get_contents('https://tomasvotruba.cz');
-        
+
         // is there a post with this title?
         if (Strings::match($blogContent, '#Release of ' . $version . '#')) {
             // good
             echo 'Good job! The blog post was released.';
             // early return
             return;
-        } 
+        }
 
         // bad
         throw new DoThisFirstException(sprintf('Write release post about "%s" version first', $version));
@@ -69,7 +69,7 @@ services:
 
 Note: I'll be mixing Nette | Symfony syntax now, but they're almost identical in DI component, so just imagine it's your favorite framework.
 
-How can we get all the services that implement `ReleaseWorkerInterface`? 
+How can we get all the services that implement `ReleaseWorkerInterface`?
 
 ### 1. Tags!
 
@@ -86,7 +86,7 @@ In extension/compiler pass:
 <?php declare(strict_types=1);
 
 foreach ($containerBuilder->findByTags('release_worker') as $workerDefinition) {
-   $mosesDefinition->addCall('addWorker', [$workerDefinition->getName()]);   
+   $mosesDefinition->addCall('addWorker', [$workerDefinition->getName()]);
 }
 ```
 
@@ -94,7 +94,7 @@ This is what we would do in 2010. **This brings [memory-lock](/blog/2018/08/27/w
 
 What's the next option we have?
 
-### 2. `byType()` methods 
+### 2. `byType()` methods
 
 In extension/compiler pass:
 
@@ -102,7 +102,7 @@ In extension/compiler pass:
 <?php declare(strict_types=1);
 
 foreach ($containerBuilder->findByType(ReleaseWorkerInterface::class) as $workerDefinition) {
-   $mosesDefinition->addCall('addWorker', [$workerDefinition->getName()]);   
+   $mosesDefinition->addCall('addWorker', [$workerDefinition->getName()]);
 }
 ```
 
@@ -120,12 +120,12 @@ All options above hides a contract. Which one? The `Moses` class looks like this
 final class Moses
 {
     // property + setter
-    
+
     public function release(string $version)
     {
         foreach ($this->releaseWorkers as $releaseWorker) {
             $releaseWorker->work($version);
-        } 
+        }
     }
 }
 ```
@@ -147,10 +147,10 @@ We already know that **public properties, setters, and drugs are bad**. **Missin
 
 ### Success is Given to Reliable People
 
-We should make a design that is reliable. 
+We should make a design that is reliable.
 
 - Do you need these services? Tell us in the constructor.
-- Do you need this parameter to work? [Tell us constructor](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/). 
+- Do you need this parameter to work? [Tell us constructor](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/).
 - Do you need all `ReleaseWorkerInterface`s? **Tell us in the constructor.**
 
 ```php
@@ -193,12 +193,12 @@ use Moses\ReleaseWorker\ReleaseWorkerInterface;
 final class Moses
 {
     /**
-     * @param ReleaseWorkerInterface[] $releaseWorkers 
+     * @param ReleaseWorkerInterface[] $releaseWorkers
      */
     public function __construct(array $releaseWorkers)
     {
     }
-} 
+}
 ```
 
 No need for magic. **Just use typehint in annotation**.
@@ -208,11 +208,11 @@ No need for magic. **Just use typehint in annotation**.
 Typehint in the annotation. It's that simple.
 
 ## When Can I use That <my-favorite-framework>?
-   
+
 I have no idea.
 
 But you can **install it today**:
- 
+
  - with `"nette/di": "v3.0.0-beta1"` with [this feature enabled in the core](https://github.com/nette/di/pull/178)
  - and `"symplify/package-builder": "^5.2"` and [`AutowireArrayParameterCompilerPass`](https://github.com/Symplify/PackageBuilder#autowire-array-parameters)
 
