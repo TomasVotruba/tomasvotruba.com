@@ -2,9 +2,9 @@
 id: 157
 title: "Fatal error: Uncaught Error: [] operator not supported for strings in"
 perex: |
-    That's right! PHP 5.6 and 7.0 are entering EOL - end of <strike>line</strike> life this December. Social networks, Slacks, Twitter, Reddit are [full](https://www.reddit.com/r/PHP/comments/9syr3m/php_56_eol_end_of_life_end_of_2018_and_php_7/) of it. Are you running PHP 7.1? Good, come next year when PHP 7.1 is *eoling*. 
+    That's right! PHP 5.6 and 7.0 are entering EOL - end of <strike>line</strike> life this December. Social networks, Slacks, Twitter, Reddit are [full](https://www.reddit.com/r/PHP/comments/9syr3m/php_56_eol_end_of_life_end_of_2018_and_php_7/) of it. Are you running PHP 7.1? Good, come next year when PHP 7.1 is *eoling*.
     <br><br>
-    For the rest of you, what will you do when PHP will tell you the message in the title? 
+    For the rest of you, what will you do when PHP will tell you the message in the title?
 tweet: "New Post on My Blog: Fatal error: Uncaught Error: [] operator not supported for strings in #php56 #php70 #eol #rector"
 tweet_image: "/assets/images/posts/2018/upgrade-php/swap.png"
 ---
@@ -50,7 +50,7 @@ Don't do it, **always jump by minor versions** - for both PHP and packages.
 
 <br>
 
-Actually, when you see a message - that's a good sign. How else would you notice this? 
+Actually, when you see a message - that's a good sign. How else would you notice this?
 
 ```php
 // PHP 5.6-
@@ -66,11 +66,11 @@ True story - see [3v4l.org](https://3v4l.org/H1hfA). The nice silent error just 
 
 ## "I Got This"
 
-But let's say you know that "Deprecated: The each() function is deprecated. This message will be suppressed on further calls in" means **refactor *each* `each()` usage to `foreach()`.** 
+But let's say you know that "Deprecated: The each() function is deprecated. This message will be suppressed on further calls in" means **refactor *each* `each()` usage to `foreach()`.**
 
 (Often it's more complicated, but keep this simple for now.)
 
-Some cases are easy, if your **variables are well-named**:   
+Some cases are easy, if your **variables are well-named**:
 
 ```php
 while (list($key, $callback) = each($callbacks)) {
@@ -125,17 +125,17 @@ foreach (array_keys($callbacks) as $callback) {
 "Fatal error: Uncaught Error: Call to undefined function ereg() in"
 ```
 
-## How Rector got into pure PHP Upgrades 
+## How Rector got into pure PHP Upgrades
 
-At the [PHP Asia Conference](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference/) Rasmus Lerdorf spoke about **upgrading PHP as a big problem**. Much bigger than upgrading particular frameworks. Many WTF namings in PHP are just for BC sake. I struck me, that there is much more legacy PHP code in every company than there is framework-bound code.  
+At the [PHP Asia Conference](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference/) Rasmus Lerdorf spoke about **upgrading PHP as a big problem**. Much bigger than upgrading particular frameworks. Many WTF namings in PHP are just for BC sake. I struck me, that there is much more legacy PHP code in every company than there is framework-bound code.
 
 I instantly created an issue at Rector, that deals with [PHP 5.3 to 7.4 upgrades](https://github.com/rectorphp/rector/issues/638).
 I went full-time on writing PHP upgrade rules - in the train, in the buss, in the plane (the best place to code actually, wonder why).
 
 <br>
-<p class="bigger"> 
+<p class="bigger">
    <strong>Today I'm proud to announce 7 new Rector levels</strong> that were not here a month ago:
-</p>  
+</p>
 
 ```bash
 vendor/bin/rector process src --level php54
@@ -147,7 +147,7 @@ vendor/bin/rector process src --level php73
 vendor/bin/rector process src --level php74
 ```
 
-<br>  
+<br>
 
 I finally looked over my small framework bubble and **learned a lot about problems of the [world PHP community](https://friendsofphp.org/)**.
 
@@ -166,7 +166,7 @@ One example for all:
 
 That's easy, just add `#` around and change the function name, right?
 
-```diff 
+```diff
 -ereg('hi', $string);
 +preg_match('#hi#', $string);
 ```
@@ -179,71 +179,6 @@ ereg('^[a-z]+[.,][a-z]{3,}$', $string);
 ```
 
 Don't reinvent the wheel! Did you know that 8 years ago some guy [wrote ereg → preg patterns converter](https://gist.github.com/lifthrasiir/704754/7e486f43e62fd1c9d3669330c251f8ca4a59a3f8)? That *some guy* is Kang Seonghoon and helped hundreds if not thousands of people *to not to give a fuck*. Including me. **Amazing work** and I learned about it just by accidental googling. I wonder how many hidden gems are out there.
-
-## PHP 7.4 and Beyond
-
-<a href="https://github.com/rectorphp/rector/pull/643/" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
-    See pull-request #643
-</a>
-
-Yes, you've seen right. Rector already supports future versions of PHP, in particular, PHP 7.4 and [typed properties](https://wiki.php.net/rfc/typed_properties_v2).
-
-So in 1 year and 1 month, you'll be able to just run Rector...
-
-```bash
-vendor/bin/rector process src --level php74
-```
-
-...and get these beauties in no time: 
-
-```diff
- final class SomeClass 
- {
--    /** 
--     * @var int 
--     */
--    private count; 
-+    private int count;
- }
-```
-
-It's smart enough to touch only what it should and leave the rest be:
-
-
-```diff
- final class SomeClass
- {
--    /**
--     * @var boolean
--     */
--    public $a;
-+    public bool $a;
-
-     /**
--     * @var bool
-      * another comment
-      */
--    private $b = false;
-+    private bool $b = false;
-
-     /**
-      * @var callable
-      */
-     private $c;
-
--    /**
--     * @var AnotherClass|null
--     */
--    private $d = null;
-+    private ?AnotherClass $d = null;
-
-     /**
-      * @var int
-      */
-     public $e = 'string';
-}
-```
 
 ## Harder, Better, Faster, Stronger... PHP Community
 

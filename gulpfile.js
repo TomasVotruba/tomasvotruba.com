@@ -17,11 +17,10 @@ gulp.task('default', function () {
     console.log('Local PHP server started at "http://localhost:8000", open browser to see it.');
 
     // For the second arg see: https://github.com/floatdrop/gulp-watch/issues/242#issuecomment-230209702
-    return watch(['source/**/*', '!**/*___jb_tmp___'], { ignoreInitial: false })
-        .on('change', function() {
-            exec('vendor/bin/statie generate source', function (err, stdout, stderr) {
-                console.log(stdout);
-                console.error(stderr);
-            });
+    return watch(['source/**/*', '!**/*___jb_tmp___'], function () {
+        exec('vendor/bin/statie generate source', function (err, stdout, stderr) {
+            console.log(stdout);
+            console.error(stderr);
         });
+    });
 });
