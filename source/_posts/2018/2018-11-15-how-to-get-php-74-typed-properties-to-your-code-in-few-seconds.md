@@ -32,7 +32,7 @@ Here we can see that `$count` is an `int` number.
 **In PHP 7.4** we could change this code to get a [strict typing](https://wiki.php.net/rfc/typed_properties_v2):
 
 ```diff
- <?php
+ <?php declare(strict_types=1);
 
  final class SomeClass
  {
@@ -87,7 +87,7 @@ final class SomeClass
 In PHP 8 or 9 this might come:
 
 ```diff
- <?php
+ <?php declare(strict_types=1);
 
  final class SomeClass
  {
@@ -114,6 +114,8 @@ Yeah, right, I made a promise - I'll get back to nearer future with *typed prope
 Let's say we're thinking about the future and adding all `@var` annotations we can. Is that enough? You'd still have to do these diffs manually:
 
 ```diff
+ <?php declare(strict_types=1);
+ 
  final class SomeClass
  {
 -    /**
