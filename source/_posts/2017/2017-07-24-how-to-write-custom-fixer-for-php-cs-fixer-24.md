@@ -77,11 +77,12 @@ Today we'll add one more step:
 
 ### 1. Implement an Interface
 
-Create a fixer class and implement a `PhpCsFixer\FixerDefinition\FixerDefinitionInterface` interface.
+Create a fixer class and implement a `PhpCsFixer\Fixer\DefinedFixerInterface` interface.
 
 It covers 7 required methods, but most of them are easy one-liners:
 
 ```php
+use PhpCsFixer\Fixer\DefinedFixerInterface;
 use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
 use PhpCsFixer\Tokenizer\Tokens;
 use SplFileInfo;
