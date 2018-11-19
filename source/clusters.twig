@@ -18,13 +18,14 @@ inspiration:
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    {{ "now"|date("Y") }} is the fastest year ever. More and more information and too little time to read books.<br>
-                    Today we need:
-                    <ul>
-                        <li><strong>short and clear information</strong> for start,</li>
-                        <li>but also <strong>deeper and connected sources</strong> to master complex topics</li>
-                    </ul>
+                    {{ "now"|date("Y") }} is the fastest year ever. More and more information and too little time to read books.
                 </p>
+
+                <p>Today we need:</p>
+                <ul>
+                    <li><strong>short and clear information</strong> for start,</li>
+                    <li>but also <strong>deeper and connected sources</strong> to master complex topics</li>
+                </ul>
 
                 <p class="mt-4">
                     <em>Why <a href="/blog/2018/06/28/dont-read-books/">books and posts don't work</a> anymore?</em>
@@ -34,16 +35,14 @@ inspiration:
 
         <hr>
 
-        <h2>Jump to Cluster</h2>
+        <h2 class="text-center mb-5">Jump to Cluster</h2>
 
-        <ul>
-            {% for cluster in clusters %}
-                <li>
-                    <a href="#{{ cluster.title|webalize }}">{{ cluster.title }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+        {% for cluster in clusters %}
+            <a href="#{{ cluster.title|webalize }}" class="btn btn-outline-success btn-lg mb-3 mr-2">{{ cluster.title }}</a>
+        {% endfor %}
 
+        <br>
+        <br>
 
         {% for cluster in clusters %}
             <a name="{{ cluster.title | webalize }}"></a>
