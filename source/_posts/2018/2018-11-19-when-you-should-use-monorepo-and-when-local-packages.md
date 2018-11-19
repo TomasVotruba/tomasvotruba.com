@@ -1,6 +1,6 @@
 ---
 id: 160
-title: "When You Should Use Monorepo and&nbsp;When&nbsp;Local&nbsp;Packages"
+title: "When You Should Use Monorepo and When&nbsp;Local&nbsp;Packages"
 perex: |
     Recently I gave [a few talks about monorepo in PHP](/talks/#monorepo) and how to integrate it to companies in a useful way. I'm very happy to see many people already use it and know what problems it solves.
     <br><br>
