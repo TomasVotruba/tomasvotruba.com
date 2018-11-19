@@ -61,7 +61,7 @@ The problem is *framework-way* approach to learning PHP. Many developers I've me
 
 Saying that, **many developers adopt Symfony practices thinking *it the best form of PHP there is***. There's no place to blame developers, it's just how society works - with *observational learning*. We should not blame Symfony either since there is no *code quality engineer*, who would push *non-feature* code changes. Unfortunately, Symfony team itself is strictly against these changes as you can see in PR comments.
 
-Recently I'm very happy to see these engineers around me - [LMC](https://www.lmc.eu) to name one for all. 
+Recently I'm very happy to see these engineers around me - [LMC](https://www.lmc.eu) to name one for all.
 
 ## Visualize Future Compatibility
 
@@ -115,7 +115,7 @@ Let's say we're thinking about the future and adding all `@var` annotations we c
 
 ```diff
  <?php declare(strict_types=1);
- 
+
  final class SomeClass
  {
 -    /**
