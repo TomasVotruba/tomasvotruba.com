@@ -4,7 +4,7 @@ title: "How to Teach Your Team Private Method Sorting in&nbsp;3&nbsp;mins"
 perex:
     When I started PHP in 2004, all you had to do is to learn a few functions to become the most senior dev in your town. Nowadays, devs have to learn a framework, IDE and coding patterns to get at least to an average level.
     <br><br>
-    Instead of reading 346 pages of [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship), you need to produce code and learn as you read it at the same time. **There will be never less information than it is today.**
+    Instead of reading 346 pages of [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/), you need to produce code and learn as you read it at the same time. **There will be never less information than it is today.**
     <br><br>
     That's why effective learning is a killer skill. **Today we learn how to sort private methods in 2 mins**.
 tweet: "New Post on My Blog: How to Teach Your Team Private Method Sorting in 3 mins #codingstandard #cleancode #martinfowler #automate #php"

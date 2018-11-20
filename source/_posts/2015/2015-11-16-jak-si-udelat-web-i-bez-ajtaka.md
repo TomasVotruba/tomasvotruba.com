@@ -13,7 +13,7 @@ lang: cs
 
 Na [MyEagers konferenci](http://myeagers.beeager.com/) jsem se stal svědkem workshopu [Lekce svádění aneb jak to udělat online tak, aby Tě chtěli](https://www.facebook.com/events/885079758208224/permalink/896505960398937/). **Kopa šikovných hacků, které ti dají světelný náskok na tvé pracovní cestě**.
 
-Cílem bylo ukázat, že si i web jako [jakserodicopywriter.cz](http://jakserodicopywriter.cz) můžeš udělat za víkend a 150 Kč.
+Cílem bylo ukázat, že si i web jako `jakserodicopywriter.cz` můžeš udělat za víkend a 150 Kč.
 
 Chceš si taky udělat podobný web, ale tvorba webových stránek je ti zatím cizí? Ukážeme si, jak to zvládnout levou zadní.
 

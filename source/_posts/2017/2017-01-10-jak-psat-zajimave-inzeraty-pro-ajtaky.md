@@ -162,7 +162,7 @@ A **tohle je 100% výhoda proti všem ostatním inzerátům**:
 
 ### Lidská Síla hledá posilu
 
-Zrovna včera mi padl do oka [tento inzerát](https://www.startupjobs.cz/en/offer/3319/php-developer-lidskasila-cz):
+Zrovna včera mi padl do inzerát z LidskáSíla.cz:
 
 Barevné a s logy - nemusím luštit text, **jen proskenuju loga**. Je to stručné a čtivé - mám z toho pocit, že se s nimi **půjde domluvit na čemkoliv a že mě ocení**.
 

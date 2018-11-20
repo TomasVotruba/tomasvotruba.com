@@ -53,7 +53,7 @@ Inspired by [GoPHP71.org](https://gophp71.org), **to boost this progress even fu
 
 ...and **also list of open-source that run on monorepo**. Got monorepo on your open-source project? **[Add it there](https://github.com/TomasVotruba/gomonorepo.org/edit/master/_data/projects.yaml)** to inspire others. Symfony, Laravel, Sylius and Symplify are already there.
 
-[Go check it](https://gomonorepo) and if you'd like to improve it, just send PR to [repository on Github](https://github.com/tomasvotruba/gomonorepo.org).
+[Go check it](https://gomonorepo.org) and if you'd like to improve it, just send PR to [repository on Github](https://github.com/tomasvotruba/gomonorepo.org).
 
 <br><br>
 

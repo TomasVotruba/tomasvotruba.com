@@ -161,7 +161,7 @@ Kdy teda použít MicroKernel?
 
 **Všechny dostupné slajdy z konference najdeš na [Joind.in](https://joind.in/event/symfonycon-paris-2015/schedule/list).**
 
-Až budou k dispozici záznamy z jednotlivých přednášek, dáme vědět na Twitteru. Tak sleduj [@Symfonisti](https://twitter.com/symfonisti).
+Až budou k dispozici záznamy z jednotlivých přednášek, dáme vědět na Twitteru. Tak sleduj [@Pehapkari](https://twitter.com/pehapkari).
 
 
 ## Co jsem si teda z konference odnesl?
