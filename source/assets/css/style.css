@@ -427,6 +427,11 @@ ul.line-separated > li:not(:last-child) {
     margin-top: -.2em;
 }
 
+.avatar-bigger {
+    border-radius: 6px;
+    border-style: none;
+}
+
 #top-menu-search form {
     width: 100%;
 }
@@ -479,4 +484,11 @@ table ul {
 #footer a:hover {
     color: #DDD;
     text-decoration: none;
+}
+
+/* contact.twig */
+#contact-points
+{
+    font-size: 1.8em;
+    line-height: 2.5em;
 }
