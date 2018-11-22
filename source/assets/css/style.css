@@ -427,11 +427,6 @@ ul.line-separated > li:not(:last-child) {
     margin-top: -.2em;
 }
 
-.avatar-bigger {
-    border-radius: 6px;
-    border-style: none;
-}
-
 #top-menu-search form {
     width: 100%;
 }
@@ -491,4 +486,16 @@ table ul {
 {
     font-size: 1.8em;
     line-height: 2.5em;
+}
+
+.avatar-bigger {
+    border-radius: 6px;
+    border-style: none;
+}
+
+@media (max-width: 768px) {
+    #contact-points {
+        font-size: 1.4em;
+        line-height: 2em;
+    }
 }
