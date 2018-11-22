@@ -25,7 +25,7 @@ use PHPUnit\Framework\TestCase;
 
 final class SomeServiceTest extends TestCase
 {
-    public functoin testSomeMethod()
+    public function testSomeMethod()
     {
         $kernel = new AppKernel;
         $kernel->boot();
