@@ -92,7 +92,7 @@ What happens, when:
  
 <em class="fas fa-3x fa-times text-danger"></em> 
 
-**It will silently pass**. Monorepo has many classes you work with and it's some test classes can be accidentally reused in another package, telling you it passes, even though it's broken.
+**It will silently pass**. Monorepo has many classes you work with and some test classes can be accidentally reused in another package. Your test run says it passes, even though it's broken.
 
 You'll find out eventually when `second-package` is downloaded and break the code to somebody but isn't automated testing suppose to prevent that?
 
