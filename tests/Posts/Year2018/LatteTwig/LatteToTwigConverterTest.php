@@ -10,10 +10,6 @@ final class LatteToTwigConverterTest extends TestCase
 {
     public function test(): void
     {
-        $this->markTestSkipped(
-            'Until the source bug is solved: https://travis-ci.org/TomasVotruba/tomasvotruba.cz/jobs/460541905#L577'
-        );
-
         $container = (new ContainerFactory())->create();
 
         /** @var LatteToTwigConverter $latteToTwigConverter */
