@@ -1,9 +1,13 @@
 language: php
 
-php: 7.2
+matrix:
+    include:
+        - php: 7.2
+        - php: 7.3
+          env: COMPOSER_FLAGS="--ignore-platform-reqs"
 
 install:
-    - composer update
+    - composer update $COMPOSER_FLAGS
 
 script:
     # run tests for tested posts (with "tested: true" in header configuration)
