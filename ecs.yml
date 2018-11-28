@@ -21,6 +21,10 @@ parameters:
             # for Nette\Utils\DateTime, is fixed in Symplify master
             - 'packages/ContribThanker/src/Command/DumpContributorsCommand.php'
 
+        # exists since PHP 7.3, not before
+        Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer:
+            - 'tests/Posts/Year2018/Php73/Php73Test.php'
+
     exclude_checkers:
         # resolve later
         - 'Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenStaticFunctionSniff'
