@@ -352,29 +352,6 @@ trait GetMethodTrait
 
 Goodbye automated typehints and static analysis!
 
-## 9. Use Traits with Annotations to Define Magic Methods
-
-You can take this to one more level!
-
-```php
-<?php declare(strict_types=1);
-
-class ApiCaller
-{
-   use GetMethodTrait;
-}
-
-/**
- * @method getPackagesByOrganization($organization)
- * @method getPackagesByCategory($category)
- */
-trait GetMethodTrait
-{
-}
-```
-
-Goodbye automated typehints and static analysis!
-
 ## 10. Don't use a Different Naming to separate `Interface`, `Trait` from `Class`
 
 Oh, I actually made a mistake. Above I wrote `GetMethodTrait`, that might actually help the user and tool to guess it's a trait:
@@ -476,7 +453,7 @@ The best thing is, there are more ways to create the same object:
 <?php declare(strict_types=1);
 
 $definition = new Definition;
-$definition ->setClass('ProductController');
+$definition->setClass('ProductController');
 $definition->setArguments(['@Request']);
 ```
 
