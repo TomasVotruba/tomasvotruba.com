@@ -2,14 +2,19 @@
 id: 39
 title: "Symplify packages deprecations brought by Symfony 3.3"
 perex: |
-    <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">Symfony 3.3 brings new Dependency Injection features</a>,
+    [Symfony 3.3 brings new Dependency Injection features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/),
     that were supplemented by few of Symplify packages in Symfony 3.2 and below.
-    There is no need - as <a href="https://github.com/JanMikes">Honza Mikes</a> said - to <em>bring the wood to the forest</em>. So they were deprecated.
+    There is no need - as [Honza Mikes](https://github.com/JanMikes) said - to *bring the wood to the forest*. So they were deprecated.
     <br><br>
-    I will show <strong>why and what packages were deprecated and how to upgrade your app
-    to use Symfony 3.3 instead</strong>.
+    I will show **why and what packages were deprecated and how to upgrade your app to use Symfony 3.3 instead**.
+
 related_items: [40]
 tweet: "What was changed and dropped from #symplify thanks to #symfony 3.3?"
+
+deprecated: true
+deprecated_since: "November 2018"
+deprecated_message: "These packages are deprecated for ages. Time to deprecated the post."
+
 ---
 
 I will provide you some insights behind deprecations first. It was not an instant decision based on few Symfony blog posts,
