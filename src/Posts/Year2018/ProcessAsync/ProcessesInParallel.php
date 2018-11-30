@@ -36,7 +36,7 @@ final class ProcessesInParallel
     private function startProcesses(): void
     {
         foreach ($this->sleepIntervalsInMs as $sleepInMs) {
-            $process = new Process('sleep ' . ($sleepInMs / 1000));
+            $process = new Process(['sleep', $sleepInMs / 1000]);
             $process->start();
 
             $this->activeProcesses[] = $process;
