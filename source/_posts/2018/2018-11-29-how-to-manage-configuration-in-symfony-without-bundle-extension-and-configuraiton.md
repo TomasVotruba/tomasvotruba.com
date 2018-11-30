@@ -61,14 +61,14 @@ final class AppKernel extends Kernel
 
 namespace Project\Accountant;
 
-use Project\Accountant\DependencyInjection\AcountantExtension;
+use Project\Accountant\DependencyInjection\AccountantExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 final class AccountantBundle extends Bundle
 {
  public function getContainerExtension()
     {
-        return new AcountantExtension();
+        return new AccountantExtension();
     }
 }
 ```
@@ -83,7 +83,7 @@ use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\Config\FileLocator;
 
-final class AcountantExtension extends Extension
+final class AccountantExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
@@ -96,7 +96,7 @@ final class AcountantExtension extends Extension
 ```yaml
 # packages/accountant/config/services.yaml
 services:
-    Project\Acountant\:
+    Project\Accountant\:
         resource: "../src"
 ```
 
@@ -175,7 +175,7 @@ The configuration of `$accountNumber` value in [*bundle-school* paradigm](https:
 +     account_number: "123_secret_hash"
 +
  services:
-     Project\Acountant\:
+     Project\Accountant\:
          resource: "../src"
 ```
 
@@ -184,14 +184,14 @@ The configuration of `$accountNumber` value in [*bundle-school* paradigm](https:
 
 namespace Project\Accountant;
 
-use Project\Accountant\DependencyInjection\AcountantExtension;
+use Project\Accountant\DependencyInjection\AccountantExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 final class AccountantBundle extends Bundle
 {
     public function getContainerExtension()
     {
-        return new AcountantExtension();
+        return new AccountantExtension();
     }
 }
 ```
@@ -204,7 +204,7 @@ namespace Project\Accountant\DependencyInjection;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 
-final class AcountantExtension extends Extension
+final class AccountantExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
@@ -212,7 +212,7 @@ final class AcountantExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         // for bitcoin sender
-        $container->getDefinition('Project\Acountant\BitcoinSender')
+        $container->getDefinition('Project\Accountant\BitcoinSender')
             ->setArgument('accountNumber', $config['account_number']);
 
         // for further use (optional)
@@ -275,7 +275,7 @@ Damn! What now?
 ```php
 <?php
 
-$container->getDefinition('Project\Acountant\BitcoinSender')
+$container->getDefinition('Project\Accountant\BitcoinSender')
     ->setArgument('accountNumber', $config['account_number']);
 ```
 
@@ -292,10 +292,10 @@ We want to get rid of this code, not to maintain it.
      account_number: "123_secret_hash"
 
  services:
-     Project\Acountant\:
+     Project\Accountant\:
          resource: "../src"
 
-+    Project\Acountant\BitcoinSender:
++    Project\Accountant\BitcoinSender:
 +        arguments:
 +            $accountNumber: "%account_number%"
 ```
@@ -319,7 +319,7 @@ Good idea! Since [Symfony 3.4](https://symfony.com/blog/new-in-symfony-3-4-local
 +        bind:
 +            $accountNumber: "%account_number%"
 +
-     Project\Acountant\:
+     Project\Accountant\:
          resource: "../src"
 ```
 
@@ -354,7 +354,7 @@ You set up this only once, but then you can enjoy short and clear configs:
      account_number: "123_secret_hash"
 
  services:
-     Project\Acountant\:
+     Project\Accountant\:
          resource: "../src"
 ```
 
@@ -362,7 +362,7 @@ You set up this only once, but then you can enjoy short and clear configs:
 
 This compiler autowires parameters by convention:
 
-- `%parameter_name%` => `$paramenterName`
+- `%parameter_name%` => `$parameterName`
 
 You can [read more about it here](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/).
 
