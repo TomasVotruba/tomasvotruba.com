@@ -114,10 +114,10 @@ Today, I'm happy to show you the first version of `CognitiveComplexitySniff`.
 composer require symplify/coding-standard symplify/easy-coding-standard --dev
 ```
 
-**2. Create `easy-coding-standard.yml`**
+**2. Create `ecs.yml`**
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff: ~
 ```
@@ -125,7 +125,7 @@ services:
 With default max value of 8 there were over 20+ in Symplify code base. Too strict for your code base?
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
         maxCognitiveComplexity: 20

@@ -244,8 +244,8 @@ It was super easy to turn it on:
 
 ```diff
  # app/config/services.neon
-    services:
-    App\Controller\SomeController:
+     services:
+     App\Controller\SomeController:
          tags: ['inject']
 
      App\Model\SomeService:

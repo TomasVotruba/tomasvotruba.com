@@ -5,7 +5,6 @@ perex: |
     What is tagging for? Why we should get rid of it?
     Today I will show you, how to do it gradually without breaking the application.
 
-updated: true
 updated_since: "May 2017"
 updated_message: |
     Updated with <strong>new Symfony 3.3 features <a href="https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration">class based service naming, <code>_instanceof</code> configuration</a>

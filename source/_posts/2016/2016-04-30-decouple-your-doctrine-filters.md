@@ -3,7 +3,6 @@ id: 8
 title: Decouple Your Doctrine Filters
 perex: "Doctrine filters are powerful tool. Yet their registration and management are bit overcomplicated. Today I will show you how to decouple them to standalone services that can take care of everything you need."
 
-deprecated: true
 deprecated_since: "March 2017"
 deprecated_message: |
     I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - <strong><a href="/blog/2017/03/27/why-is-doctrine-dying/">read a post here</a></strong>.

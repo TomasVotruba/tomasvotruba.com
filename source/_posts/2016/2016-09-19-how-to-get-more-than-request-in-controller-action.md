@@ -6,7 +6,6 @@ perex: |
     In <em>Symfony 3.1</em> is new <a href="https://symfony.com/doc/current/controller/argument_value_resolver.html">Action Argument Resolving feature</a>,
     so you can <strong>get any service you need</strong>. With a bit of work. Today I will show you how.
 
-deprecated: true
 deprecated_since: "May 2017"
 deprecated_message: |
     You can <a href="https://github.com/symfony/symfony/pull/21771">inject services into actions</a> using <code>controller.service_arguments</code> tag

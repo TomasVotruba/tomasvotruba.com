@@ -4,7 +4,6 @@ title: "Jak si levně udělat živý web, i když nejsi ajťák"
 perex: "Znáš pojmy jako hosting, doména, HTML, CSS, FTP, šablona, Wordpress nebo Github? Máš vyhráno, dál nečti a běž se podívat na svou krásnou online vizitku."
 
 
-deprecated: true
 deprecated_since: "August 2017"
 deprecated_message: "This post is available only in Czech and whole website was moved to English."
 

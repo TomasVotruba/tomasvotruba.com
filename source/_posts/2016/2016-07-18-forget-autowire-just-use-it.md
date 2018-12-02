@@ -6,7 +6,6 @@ perex: |
     If you want to use it to its full potential, you still have to add 1 extra line to every service configuration.
     Today I will show you, how to get rid of that line.
 
-deprecated: true
 deprecated_since: "May 2017"
 deprecated_message: |
     You can set autowiring via <a href="https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration#default-service-configuration">new <code>_defaults</code> per config file feature</a>

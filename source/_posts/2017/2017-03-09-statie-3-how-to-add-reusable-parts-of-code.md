@@ -8,7 +8,6 @@ perex: |
 related_items: [29, 32, 34]
 tweet: "#Statie 3: Reusable code snippets #php #static #github"
 
-updated: true
 updated_since: "September 2018"
 updated_message: |
     Updated with Statie 5.0, NEON → YAML and Twig.

@@ -119,12 +119,11 @@ Such a configuration looks like this (as shown in [`README`](https://github.com/
 # rector.yml
 services:
     # prepared service that handles method name changes
-    Rector\Rector\Dynamic\MethodNameReplacerRector:
-        $perClassOldToNewMethods:
-            # type to look for
-            'Symfony\Component\HttpFoundation\Request':
-                # old method name: new method name
-                'isMethodSafe': 'isMethodCacheable'
+    Rector\Rector\MethodCall\MethodNameReplacerRector:
+        # type to look for
+        Symfony\Component\HttpFoundation\Request:
+            # old method name: new method name
+            isMethodSafe: 'isMethodCacheable'
 ```
 
 ### Member of Big AST PHP Family

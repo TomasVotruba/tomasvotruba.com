@@ -8,6 +8,10 @@ perex: |
 tweet: "New post on my blog: How to Run #Symfony Processes Asynchronously #async"
 tested: true
 test_slug: ProcessAsync
+
+updated_since: "December 2018"
+updated_message: |
+    Updated with <strong>Symfony 4.2</strong>.
 ---
 
 ## Process Run One by One
@@ -16,7 +20,7 @@ This is our code now. Each process waits on each other - one is finished, then n
 
 ```php
 foreach ($splitConfiguration as $directory => $repository) {
-	$process = new Process(sprintf('git subsplit %s:%s', $directory, $repository));
+	$process = new Process(['git', 'subsplit', $directory . ':' . $repository]);
 	$process->run();
 
 	// here the process is finished
@@ -62,7 +66,7 @@ Picking the right tool is important, since it vendor locks our code to package, 
 $runningProccesses = [];
 
 foreach ($splitConfiguration as $directory => $repository) {
-	$process = new Process(sprintf('git subsplit %s:%s', $directory, $repository));
+    $process = new Process(['git', 'subsplit', $directory . ':' . $repository]);
 	// start() doesn't wait until the process is finished, oppose to run()
 	$process->start();
 
@@ -119,7 +123,7 @@ And what if any processes failed?
 +$allProcessInfos = [];
 
  foreach ($splitConfiguration as $directory => $repository) {
-     $process = new Process(sprintf('git subsplit %s:%s', $directory, $repository));
+     $process = new Process(['git', 'subsplit', $directory . ':' . $repository]);
      $process->start();
 
 	 $runningProccesses[] = $process;

@@ -11,8 +11,7 @@ perex: |
 related_items: [40]
 tweet: "What was changed and dropped from #symplify thanks to #symfony 3.3?"
 
-deprecated: true
-deprecated_since: "November 2018"
+deprecated_since: "December 2018"
 deprecated_message: "These packages are deprecated for ages. Time to deprecated the post."
 
 ---

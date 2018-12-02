@@ -8,10 +8,9 @@ perex: |
 tweet: "Do you use PHP 7 and scalar types? Do you still see value in your docblocks? Which is useful and which is legacy? Symplify 3 introduces a new fixer, that helps you to clean the later! #codingstandard #phpcsfixer"
 tweet_image: "/assets/images/posts/2017/doc-block-cleaner/diff.png"
 
-updated: true
-updated_since: "April 2018"
+updated_since: "December 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 <blockquote class="blockquote text-center">
@@ -94,7 +93,7 @@ Do you know what do they have in common?
 ## How to Remove <strike>Manually</strike> Automatically?
 
 Cleaning every single case would be crazy. Luckily, we **live in CLI-refactoring generation**,
-so all we need is new Fixer from `Symplify\CodingStandard` 3.0 - `Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer`.
+so all we need is `Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer`.
 
 <a href="https://github.com/Symplify/Symplify/pull/427" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
@@ -118,16 +117,16 @@ Thanks to that Fixer now **covers dozens of edge cases**.
 
 ## Challenge Your Code
 
-**1. Install**
+### 1. Install
 
 ```bash
 composer require symplify/easy-coding-standard --dev
 ```
 
-**2. Create `easy-coding-standard.yml`**
+### 2. Create Config
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer: ~
 
@@ -136,19 +135,19 @@ services:
     Symplify\CodingStandard\Fixer\Commenting\RemoveEmptyDocBlockFixer: ~
 ```
 
-**3. Run it**
+### 3. Run It
 
 ```bash
 vendor/bin/ecs check src
 ```
 
-**4. See the diff**
+### 4. See the Diff
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/doc-block-cleaner/diff.png" class="img-thumbnail">
 </div>
 
-**5. And fix it**
+### 5. And Fix It
 
 ```bash
 vendor/bin/ecs check src --fix
@@ -159,7 +158,7 @@ vendor/bin/ecs check src --fix
 Don't you like `mixed` or `object`? The fixer is [configurable](https://github.com/Symplify/CodingStandard#block-comment-should-only-contain-useful-information-about-types-wrench), so you can set types that you'd like to remove.
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer:
         useless_types: ['mixed', 'object'] # [] by default

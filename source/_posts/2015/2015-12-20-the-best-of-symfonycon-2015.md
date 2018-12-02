@@ -3,6 +3,9 @@ id: 4
 title: "The Best of SymfonyCon 2015"
 perex: |
     Annual SymfonyCon held this year in Paris. Despite all the attacks, Paris lives on. Maybe more. An example of this can be 1000 visitors who arrived at the event. I represented Bohemia with Dennis, and also with Petr and Cuba from Lmc.eu.
+
+deprecated_since: "December 2018"
+deprecated_message: "3 years later, Symfony 4.2 is just released."
 ---
 
 <div class="text-center">
@@ -44,7 +47,7 @@ The transition to the new major version will be under much greater control than 
 ## 2. Symfony2 at BlaBlaCar
 
 <a href="https://speakerdeck.com/odolbeau/symfony-at-blablacar" class="btn btn-warning btn-sm">
-    <em class="fas fa-slideshare fa-fw"></em>
+    <em class="fab fa-slideshare fa-fw"></em>
     See Slides
 </a>
 
@@ -76,7 +79,7 @@ They call him **The Gateway** ([slajd](https://speakerdeck.com/odolbeau/symfony-
 ## 3. New Symfony Tips and Tricks
 
 <a href="https://www.slideshare.net/javier.eguiluz/new-symfony-tips-tricks-symfonycon-paris-2015" class="btn btn-warning btn-sm">
-    <em class="fas fa-slideshare fa-fw"></em>
+    <em class="fab fa-slideshare fa-fw"></em>
     See Slides
 </a>
 
@@ -134,7 +137,7 @@ public function testContainerServices()
 ## 4. Symfony: Your next Microframework
 
 <a href="https://www.slideshare.net/weaverryan/symfony-your-next-microframework-symfonycon-2015" class="btn btn-warning btn-sm">
-    <em class="fas fa-slideshare fa-fw"></em>
+    <em class="fab fa-slideshare fa-fw"></em>
     See Slides
 </a>
 

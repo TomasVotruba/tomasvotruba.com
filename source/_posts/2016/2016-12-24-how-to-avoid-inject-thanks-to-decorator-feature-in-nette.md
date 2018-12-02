@@ -18,7 +18,7 @@ Why am I writing this article? I try to improve knowledge interoperability betwe
 Today, I will try to agree on setter injection with you.
 
 
-## @Inject Overuse is Spreading
+## `@Inject` Overuse is Spreading
 
 This code is common to 80 % Nette applications I came across in last year:
 
@@ -73,7 +73,7 @@ Why? Because "what you see is what you write". New programmer joins the teams, s
 
 Some of you, who already talked about `@inject` method usage already there are some and only few specific places to use it.
 
-## Where to only @inject?
+## Where to only `@inject`?
 
 **To prevent constructor hell**. If you meet this term first time, go read [this short explanation](https://phpfashion.com/di-a-predavani-zavislosti#toc-constructor-hell) by David Grudl.
 

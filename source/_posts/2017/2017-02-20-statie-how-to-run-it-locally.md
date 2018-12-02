@@ -8,7 +8,6 @@ perex: |
 related_items: [32, 33, 34]
 tweet: "#Statie 1: Up and Running locally #php #static #github"
 
-updated: true
 updated_since: "September 2018"
 updated_message: |
     Updated with Statie 5.0 and Twig support.

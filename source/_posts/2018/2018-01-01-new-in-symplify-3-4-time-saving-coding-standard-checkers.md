@@ -9,10 +9,11 @@ tweet: "Absolutize require/include, empty line after strict_types() definition, 
 tweet_image: "/assets/images/posts/2018/symplify-3-checkers/import-fixer.png"
 related_items: [49, 68]
 
-updated: true
-updated_since: "April 2018"
+updated_since: "December 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    <br>
+    <code>ImportNamespacedNameFixer</code> [was removed](https://github.com/Symplify/Symplify/pull/1110) in favor of <code>ReferenceUsedNamesOnlySniff</code> from <a href="https://github.com/slevomat/coding-standard">slevomat/coding-standard</a>
 ---
 
 Starting with the simple checkers and moving to those, which save you even hours of manual work.
@@ -54,7 +55,7 @@ Of course there are cases when using absolute paths is not suitable, like templa
 And that's what this checker does for you:
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\ControlStructure\RequireFollowedByAbsolutePathFixer: ~
 ```
@@ -92,7 +93,7 @@ Which is not what we want.
 When the official fixer is finished, I'd be happy to use it and recommend it. But **right now you can use**:
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\Strict\BlankLineAfterStrictTypesFixer: ~
 ```
@@ -108,32 +109,24 @@ Which helps official fixer to keep the space:
 
 ## 3. One Way To Use Namespace Imports
 
-<a href="https://github.com/Symplify/Symplify/pull/421" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fab fa-github"></em>
-    &nbsp;
-    Check the pull-request
-</a>
-
 What do you think about this?
 
 <img src="/assets/images/posts/2018/symplify-3-checkers/import-fixer.png" class="img-thumbnail">
 
 *Import class* is great PHPStorm feature. It sometimes does only partial imports, sometimes is unable to resolve conflict of 2 `SameClass` names and it still requires your time and attention to work.
 
-If you don't care about this, your code can look like this - with 3 way to do 1 thing:
+If you don't care about this, your code can look like this:
 
 ```php
 <?php
 
 namespace SomeNamespace;
 
-use SubNamespace\PartialNamespace;
-
 final class SomeClass extends \SubNamespace\PartialNamespace\AnotherClass
 {
     public function getResult(): \ExternalNamespace\Result
     {
-        $someOtherClass = new PartialNamespace\SomeOtherClass;
+        $someOtherClass = new \SomeNamespace\PartialNamespace\SomeOtherClass;
         // ...
     }
 }
@@ -146,9 +139,8 @@ final class SomeClass extends \SubNamespace\PartialNamespace\AnotherClass
 
  namespace SomeNamespace;
 
--use SubNamespace\PartialNamespace;
-+use SubNamespace\PartialNamespace\AnotherClass
 +use ExternalNamespace\Result;
++use SubNamespace\PartialNamespace\AnotherClass
 +use SubNamespace\PartialNamespace\SomeOtherClass;
 
 -final class SomeClass extends \SubNamespace\PartialNamespace\AnotherClass
@@ -157,25 +149,21 @@ final class SomeClass extends \SubNamespace\PartialNamespace\AnotherClass
 -    public function getResult(): \ExternalNamespace\Result
 +    public function getResult(): Result
      {
--        $someOtherClass = new PartialNamespace\SomeOtherClass;
+-        $someOtherClass = new \SomeNamespace\PartialNamespace\SomeOtherClass;
 +        $someOtherClass = new SomeOtherClass;
          // ...
      }
  }
 ```
 
-= **1 way to do 1 thing**
+Original `ImportNamespacedNameFixer` doing this job [was removed in EasyCodingStandard 5](https://github.com/Symplify/Symplify/pull/1110) in favor of `ReferenceUsedNamesOnlySniff` from [slevomat/coding-standard](https://github.com/slevomat/coding-standard).
 
-(Don't worry about spacing after/before use statements and their order - your default PSR-2 set probably already handles that.)
+It's not able to import partial namespace or resolve conflicts, but it has extra features, like functions imports etc.
 
-<br>
-
-Eager to try? Here it is:
-
-```yaml
-# easy-coding-standard.yml
+How does it Work?```yaml
+# ecs.yml
 services:
-    - Symplify\CodingStandard\Fixer\Import\ImportNamespacedNameFixer
+    SlevomatCodingStandard\Sniffs\Namespaces\ReferenceUsedNamesOnlySniff: ~
 ```
 
 ## 4. Possible Unused Public Method
@@ -207,9 +195,9 @@ It helps you to spot spots like [this](https://github.com/Symplify/Symplify/pull
 I recommend it running from time to time in standalone thread, since it takes lot of performance and reports all unused public method, even those destined for public use:
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
-    - Symplify\CodingStandard\Sniffs\DeadCode\UnusedPublicMethodSniff
+    Symplify\CodingStandard\Sniffs\DeadCode\UnusedPublicMethodSniff: ~
 ```
 
 To make the first run collection effective, a `--clear-cache` option must be added:

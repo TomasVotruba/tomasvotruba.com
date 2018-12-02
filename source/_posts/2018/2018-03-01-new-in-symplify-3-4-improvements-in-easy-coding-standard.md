@@ -7,26 +7,18 @@ perex: |
 tweet: "New post on my blog: New in Symplify 3: 4 Improvements in EasyCodingStandard #codingstandard php"
 related_items: [49, 68, 70]
 tweet_image: "/assets/images/posts/2018/symplify-3-ecs/exclude-files.png"
+
+updated_since: "December 2018"
+updated_message: |
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and new simplified `skip` parameter syntax.
 ---
 
 ## 1. Exclude Files or Dirs
 
-<a href="https://github.com/Symplify/Symplify/pull/583" class="btn btn-dark btn-sm mt-2 mb-3 pull-left">
-    <em class="fab fa-github"></em>
-    &nbsp;
-    Check the PR #583
-</a>
-
-<a href="https://github.com/Symplify/Symplify/pull/584" class="btn btn-dark btn-sm mt-2 mb-3 ml-2">
-    <em class="fab fa-github"></em>
-    &nbsp;
-    Check the PR #584
-</a>
-
 Do you have `src/Migrations` that you need to skip from your `vendor/bin/ecs check src` command?
 
 ```yaml
-# easy-coding-standard.neon
+# ecs.yml
 parameters:
     exclude_files:
         - 'src/Migrations/LastMigration.php'
@@ -105,23 +97,20 @@ Which one do you prefer?
 If you wanted to skip specific part of sniff, you had to **exclude whole sniff** via `exclude_checkers` option:
 
 ```yaml
-# easy-coding-standard.neon
+# ecs.yml
 parameters:
     exclude_checkers:
         # to skip ".UselessDocComment"
-        - SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff
+        - 'SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff'
 ```
 
-But what if you liked all the other codes?
-
-It's now possible to **skip specific sniff codes** in `skip_codes` option:
+But what if you liked all the other codes? **Now you can:**
 
 ```yaml
-# easy-coding-standard.neon
+# ecs.yml
 parameters:
-    skip_codes:
-        # code to skip for all files
-        - SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment
+    skip:
+        SomeScalarSniff.SpecificCode: ~
 ```
 
 And all the other codes will be checked properly in your code.
@@ -136,13 +125,13 @@ And all the other codes will be checked properly in your code.
 
 [@ostrolucky](https://github.com/ostrolucky) took this feature even further and added  **skipping by list of files or [`fnmatch`](http://php.net/manual/en/function.fnmatch.php)**.
 
-```yaml
-# easy-coding-standard.neon
-parameters:
-    skip_codes:
-        # code to skip for specific files/patterns
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableParameterTypeHintSpecification:
-            - '*src/Form/Type/*Type.php'
+```diff
+ # ecs.yml
+ parameters:
+     skip:
+-        SomeScalarSniff.SpecificCode: ~
++        SomeScalarSniff.SpecificCode:
++            - '*src/Form/Type/*Type.php'
 ```
 
 Hope you like the changes and thanks the people who push these tools further by every single PR or issue report!

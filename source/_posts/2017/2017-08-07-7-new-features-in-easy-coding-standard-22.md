@@ -8,10 +8,12 @@ perex: |
 tweet: "7 New Features in Easy Coding Standard #codingStandard #php #solid"
 related_items: [37, 51]
 
-updated: true
-updated_since: "April 2018"
+deprecated_since: "December 2018"
+deprecated_message: "Now there is <strong>EasyCodingStandard 5</strong>, so this is rather <em>7 oldies</em>."
+
+updated_since: "December 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration, correct configs and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration, correct configs and <code>checkers</code> to <code>services</code> migration.
 ---
 
 Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, ideas and Windows bug fixes while working on [Nette\CodingStandard](https://github.com/nette/coding-standard) package. I'll write "how to" for Nette\CodingStandard later, but today we'll look on **new features it uses from EasyCodingStandard 2.2**.
@@ -97,7 +99,7 @@ vendor/bin/ecs show
 Or what checkers are in particular config?
 
 ```bash
-vendor/bin/ecs show --config vendor/nette/coding-standard/coding-standard-php71.neon
+vendor/bin/ecs show --config vendor/nette/coding-standard/coding-standard-php71.yml
 ```
 
 This is rather debug or info tool, but it might come handy.

@@ -9,17 +9,23 @@ perex: |
 related_items: [46, 48, 37]
 tweet: "What are #php Object Calisthenics and how to use them? #codingStandard #solid"
 
-updated: true
-updated_since: "April 2018"
+deprecated_since: "December 2018"
+deprecated_message: |
+    In time and after years of use, these rules seems rather "academic". They're not helpful and shifts developer's focus too close to each code character. <strong>They need to have broader overview of code as whole instead.</strong>
+    <br>
+    <br>
+    <strong>Nowadays I shifted to 1 much better metric - <a href="/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/">Cognitive Complexity</a>.</strong>
+
+updated_since: "December 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 If you are a coding standard nerd like me, you'll probably have more than just PSR-2 standard in your ruleset. But even if you don't, [Object Calisthenics](https://github.com/object-calisthenics/phpcs-calisthenics-rules) is a developer-friendly game changer for your code.
 
 ## Much Simpler than 2.0
 
-**1. You don't have to know a single thing about CodeSniffer to start**
+**1. You don't have to know a single thing about coding standards to start**
 
 **2. Simple to install**
 
@@ -39,18 +45,13 @@ $this->di->...;
 
 **[Rule #6 - Do Not Abbreviate](https://github.com/object-calisthenics/phpcs-calisthenics-rules#6-do-not-abbreviate)** checks these cases. **It detects short names that are ambiguous and hard to decode.**
 
-To run it from the command line just include Object Calisthenics' `ruleset.xml` and specify the sniff's name:
+For a quick check, just run the full config:
 
-``` bash
-vendor/bin/phpcs src -sp \
---standard=vendor/object-calisthenics/phpcs-calisthenics-rules/src/ObjectCalisthenics/ruleset.xml \
---sniffs=ObjectCalisthenics.NamingConventions.ElementNameMinimalLength
+```bash
+vendor/bin/ecs check src --config vendor/object-calisthenics/phpcs-calisthenics-rules/config/object-calisthenics.yml
 ```
 
 You can run this locally or put to your CI and you are ready to go.
-
-Nothing complicated.
-
 
 ## Fancy Readme With Examples
 
@@ -60,7 +61,7 @@ Instead, README goes right to the point:
 
 - **YES and NO code snippets**,
 - **how to use them** - copy/paste CLI command
-- and **how to configure them** - link to particular lines in `ruleset.xml` and `easy-coding-standard.yml`.
+- and **how to configure them** - link to particular config lines
 
 <img src="/assets/images/posts/2017/object-calisthenics/rule6.png" class="img-thumbnail">
 
@@ -70,26 +71,8 @@ As you can see in the bottom part of screenshot, most of rules are configurable.
 
 *Do you prefer to require min 4 chars?*
 
-Configure **in CodeSniffer:**
-
-```xml
-<!-- ruleset.xml -->
-
-<?xml version="1.0"?>
-<ruleset name="ObjectCalisthenics">
-    <!-- Rule 6: Do not abbreviate -->
-    <rule ref="ObjectCalisthenics.NamingConventions.ElementNameMinimalLength">
-        <properties>
-            <property name="minLength" value="4"/> <!-- default: 3 -->
-        </properties>
-    </rule>
-</ruleset>
-```
-
-Configure **in [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard):**
-
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     # Rule 6: Do not abbreviate
     ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff:
@@ -98,28 +81,8 @@ services:
 
 *Do you want to add "y" to allowed short names?*
 
-Configure **in CodeSniffer:**
-
-```xml
-<!-- ruleset.xml -->
-
-<?xml version="1.0"?>
-<ruleset name="ObjectCalisthenics">
-    <!-- Rule 6: Do not abbreviate -->
-    <rule ref="ObjectCalisthenics.NamingConventions.ElementNameMinimalLength">
-        <properties>
-            <property name="minLength" value="4"/>
-            <property name="allowedShortNames" type="array" value="y,i,id,to,up"/>
-            <!-- default: i,id,to,up -->
-        </properties>
-    </rule>
-</ruleset>
-```
-
-Configure **in [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard):**
-
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     # Rule 6: Do not abbreviate
     ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff:

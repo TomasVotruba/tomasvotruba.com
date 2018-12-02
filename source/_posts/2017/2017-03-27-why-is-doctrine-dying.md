@@ -4,7 +4,6 @@ title: "Why Is Doctrine Dying"
 perex: |
     Do you use Doctrine ORM? If so, do you follow its evolution on Github? Symfony is evolving, Laravel is evolving, Nette is evolving, world is evolving... Doctrine not. Today I will show you 3 reasons why.
 
-deprecated: true
 deprecated_since: "July 2018"
 deprecated_message: |
     Doctrine came through <strong>many great and healthy changes during last ~18 months</strong>, so this statement is no longer true.

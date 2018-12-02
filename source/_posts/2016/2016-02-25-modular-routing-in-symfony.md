@@ -3,7 +3,6 @@ id: 5
 title: Modular Routing in Symfony
 perex: "Modular routing in Symfony is bounded to <code>routing.yml</code>. Adding few lines for each new module can create large mess. Can we make it bit simpler? Sure we do and I will show you how."
 
-deprecated: true
 deprecated_since: "June 2017"
 deprecated_message: |
     I have deprecated this package, because of <a href="https://github.com/Symplify/Symplify/issues/181">feedback that it is not useful</a> and low download rates (under 2 000 in 2 years).

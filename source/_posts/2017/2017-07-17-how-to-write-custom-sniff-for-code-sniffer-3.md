@@ -1,6 +1,6 @@
 ---
 id: 46
-title: "How to Write Custom Sniff for Code Sniffer 3"
+title: "How to Write Custom Sniff for Code Sniffer 3.3"
 perex: |
     When I give talks about coding standards, I ask people 2 questions: do you use coding standards? Do you write your own sniffs? On average, above 50 % uses it, but only 1-2 people wrote their own sniff.
     <br><br>
@@ -11,10 +11,9 @@ perex: |
 related_items: [48, 47, 37, 92]
 tweet: "How to Write Custom Sniff for #phpCodeSniffer 3"
 
-updated: true
-updated_since: "April 2018"
+updated_since: "December 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
@@ -247,7 +246,7 @@ You can find [final Sniff on Github](https://github.com/Symplify/Symplify/blob/e
 
 ## How to run it?
 
-With [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) put the class to `easy-coding-standard.yml`:
+With [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) put the class to `ecs.yml`:
 
 ```yaml
 services:

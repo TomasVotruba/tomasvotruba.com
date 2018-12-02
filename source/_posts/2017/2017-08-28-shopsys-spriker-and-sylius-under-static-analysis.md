@@ -8,6 +8,9 @@ perex: |
 tweet: "#Shopsys, #Spryker & #Sylius under Static Analysis #symfony #php #ecommerce"
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal/shopsys.png"
 related_items: [57]
+
+deprecated_since: "December 2018"
+deprecated_message: "All 3 projects changed completely during last year, so <strong>these numbers are way outdated</strong>."
 ---
 
 

@@ -56,13 +56,18 @@ h2 {
 }
 
 a, a:active {
-    color: #9D2053;
+    color: #A30444;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #7A1E48;
+    color: #C60E58;
     text-decoration: underline;
+    transition: 0.3s;
+}
+
+a:visited {
+    color: #550035;
 }
 
 a:focus {
@@ -71,12 +76,12 @@ a:focus {
 }
 
 h2 a, h2 a:active, h3 a, h3 a:active  {
-    color: #7A1E48;
+    color: #A30444;
     text-decoration: none;
 }
 
 h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus {
-    color: #7A1E48;
+    color: #C60E58;
     text-decoration: underline;
 }
 
@@ -126,7 +131,7 @@ pre {
     background-color: #7A1E48;
 }
 
-nav a, nav a:active, nav a:focus {
+nav a, nav a:active, nav a:focus, nav a:visited {
     margin-top: 1px;
     color: #f6f6f6;
     border: 0;
@@ -135,6 +140,10 @@ nav a, nav a:active, nav a:focus {
 
 article {
     border-bottom: 1px solid #eeeeee;
+}
+
+a.btn-dark:visited {
+    color: #FFF;
 }
 
 #blog #welcome h1 {

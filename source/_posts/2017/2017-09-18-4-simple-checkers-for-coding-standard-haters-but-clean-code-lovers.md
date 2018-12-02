@@ -10,10 +10,9 @@ tweet: "Do you hate Coding Standards, but love #cleancode? Check these 4 helpful
 tweet_image: "/assets/images/posts/2017/clean-checkers/dependency-drop.png"
 related_items: [51, 48]
 
-updated: true
-updated_since: "April 2018"
+updated_since: "December 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 There are some checkers in coding standard world, that don't check spaces, tabs, commas nor brackets. They **actually do code-review for you**.
@@ -35,7 +34,7 @@ It will not only make your code cleaner, but also can **speed up you container b
 
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     # use short array []
     PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
@@ -56,7 +55,7 @@ services:
 1. Install it
 
     ```bash
-    composer require --dev symplify/easy-coding-standard
+    composer require symplify/easy-coding-standard --dev
     ```
 
 2. Add checkers to `ecs.yml` file

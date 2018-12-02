@@ -35,13 +35,19 @@ inspiration:
 
         <hr>
 
-        <h2 class="text-center mb-5">Jump to Cluster</h2>
+        {#<h2 class="text-center mb-5">Jump to Cluster</h2>#}
 
-        {% for cluster in clusters %}
-            <a href="#{{ cluster.title|webalize }}" class="btn btn-outline-success btn-lg mb-3 mr-2">{{ cluster.title }}</a>
-        {% endfor %}
+        {# todo: design better, as side-by-side book cover, with small image #}
 
-        <br>
+        {#<div class="row">#}
+            {#{% for cluster in clusters %}#}
+                {#<div class="col-md-3">#}
+                    {#<a href="#{{ cluster.title|webalize }}" class="btn">{{ cluster.title }}</a>#}
+                {#</div>#}
+            {#{% endfor %}#}
+        {#</div>#}
+
+        {#<br>#}
         <br>
 
         {% for cluster in clusters %}

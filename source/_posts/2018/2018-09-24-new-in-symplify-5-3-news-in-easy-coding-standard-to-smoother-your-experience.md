@@ -59,7 +59,7 @@ parameters:
 **Before** you had to type the whole config name:
 
 ```bash
-easy-coding-standard.yml
+ecs.yml
 easy-coding-standard.yaml
 ```
 

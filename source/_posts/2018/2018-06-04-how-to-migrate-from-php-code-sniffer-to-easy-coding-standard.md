@@ -180,7 +180,7 @@ These names are looked for in the root diretory by PHP_CodeSniffer:
 ```bash
 - ecs.yml
 - ecs.yaml
-- easy-coding-standard.yml
+- ecs.yml
 - easy-coding-standard.yaml
 ```
 

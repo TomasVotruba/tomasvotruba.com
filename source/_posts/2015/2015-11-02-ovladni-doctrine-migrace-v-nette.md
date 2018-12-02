@@ -3,7 +3,6 @@ id: 1
 title: Ovládni Doctrine migrace v Nette
 perex: "Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budou se vám hodit migrace."
 
-deprecated: true
 deprecated_since: "January 2017"
 deprecated_message: |
     I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - <strong><a href="/blog/2017/03/27/why-is-doctrine-dying/">read a post here</a></strong>.

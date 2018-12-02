@@ -8,9 +8,13 @@ perex: |
 related_items: [49]
 tweet: "How to setup #nettefw Coding Standard in your project? Local #ci or #travisci"
 tweet_image: "/assets/images/posts/2017/nette-coding-standard/travis-check.png"
+
+updated_since: "December 2018"
+updated_message: |
+    Updated to Nette CodingStandard 2.0 and <strong>EasyCodingStandard 5</strong>.
 ---
 
-[Nette\CodingStandard](https://github.com/nette/coding-standard/) version [0.5](https://github.com/nette/coding-standard/releases/tag/v0.5.0) with important bug-fixes was released a week ago. This version **is ready to use, includes all important checkers and is used on all `Nette\*` packages in Travis**.
+[Nette\CodingStandard](https://github.com/nette/coding-standard/) 2.0 was released 2 months. This version **is ready to use, includes all important checkers and is used on all `Nette\*` packages in Travis**.
 
 **NCS checks every pull-request you make to Nette**:
 
@@ -38,70 +42,34 @@ This packages requires PHP 7.1 to run as the rest of the Nette (mostly current `
 
 If you still don't know why should you **join [Symfony, Nette, Doctrine, Zend or Sylius](https://gophp71.org/)**, you can read [this post](/blog/2017/06/05/go-php-71/#why-go-right-to-php-7-1) or wait a bit longer. It's up to you.
 
-
 ## Setup Your Project
 
-You have 2 options how to use NCS in your project.
-
-
-### 1. As a Composer Project
-
-Nette packages require this approach, because NCS depends on many Nette packages. **NCS should be installed to standalone directory**, so changing the Nette code by NCS doesn't break NCS.
-
-The easiest way is to setup `.travis.yml`:
-
-```yaml
-install:
-    - composer create-project nette/coding-standard temp/nette-coding-standard
-
-script:
-    - temp/nette-coding-standard/ecs check src tests --config temp/nette-coding-standard/coding-standard-php71.neon
-```
-
-And you are ready to go!
-
-
-### 2. As a Composer Dev Dependency
-
-I prefer this in projects, where I **want to check coding standards locally and have dependencies up-to date**. It's easier than composer project, where you need to remember to update dependencies manually in the directory.
+Install the package to your dev dependencies:
 
 ```bash
 composer require nette/coding-standard --dev
 ```
 
-Check the code:
+Good! Now just pick the prepared set.
+
+At the moment there are **3 configs with set of checkers**:
+
+- [`coding-standard-php71.yml`](https://github.com/nette/coding-standard/blob/master/coding-standard-php71.yml)
+- [`coding-standard-php70.yml`](https://github.com/nette/coding-standard/blob/master/coding-standard-php70.yml)
+- [`coding-standard-php56.yml`](https://github.com/nette/coding-standard/blob/master/coding-standard-php56.yml)
+
+Just pick the one that suits you:
 
 ```bash
-vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php71.neon
+vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php71.yml
 ```
 
-Fix the code:
+Then, fix the code:
 
 ```bash
-vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php71.neon --fix
+vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php71.yml --fix
 ```
 
-
-
-## 3 Configs based on PHP version
-
-Do you need to **check code that is not PHP 7.0 ready**? You can.
-
-
-At the moment there are 3 configs with set of checkers (click to see their content):
-
-- [`coding-standard-php56.neon`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/coding-standard-php56.neon)
-- [`coding-standard-php70.neon`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/coding-standard-php70.neon)
-- [`coding-standard-php71.neon`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/coding-standard-php71.neon)
-
-**Config with higher PHP version includes all lower versions**, so with `coding-standard-php71.neon` you cover the other 2 configs as well.
-
-
-For PHP 5.6 it would like this:
-
-```bash
-vendor/bin/ecs check src tests --config vendor/nette/coding-standard/coding-standard-php56.neon
-```
-
+Config with higher PHP version includes all lower versions, so with `coding-standard-php71.yml` you cover the other 2 configs as well.
 
 Happy coding!

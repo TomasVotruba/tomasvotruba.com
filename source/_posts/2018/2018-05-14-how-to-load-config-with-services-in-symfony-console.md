@@ -2,7 +2,7 @@
 id: 105
 title: "How to Load --config With Services in Symfony Console"
 perex: |
-    PHP CLI apps usually accept config, to setup their behavior. For PHPUnit it's `phpunit.xml`, for PHP CS Fixer it's `.php_cs`, for EasyCodingStandard it's `easy-coding-standard.yml`, for PHPStan it's `phpstan.neon` and so on.
+    PHP CLI apps usually accept config, to setup their behavior. For PHPUnit it's `phpunit.xml`, for PHP CS Fixer it's `.php_cs`, for EasyCodingStandard it's `ecs.yml`, for PHPStan it's `phpstan.neon` and so on.
     <br><br>
     In the first post about PHP CLI Apps I wrote about [poor DI support in PHP CLI projects](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/).
     <br><br>

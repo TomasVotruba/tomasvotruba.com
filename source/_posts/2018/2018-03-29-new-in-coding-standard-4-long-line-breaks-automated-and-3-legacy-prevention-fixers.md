@@ -24,7 +24,7 @@ related_items: [86, 70, 68, 51]
 If you use `LineLengthSniff`, you know it's painful to fix every error report it makes.
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff:
         absoluteLineLimit: 120
@@ -111,7 +111,7 @@ Welcome `LineLengthFixer`.
 ### How to Register It?
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer: ~
 ```
@@ -135,7 +135,7 @@ Do you want use breaks only and not inline short code?
 Just configure it:
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer:
         max_line_length: 100 # default: 120
@@ -201,10 +201,10 @@ I though I would never meet them again, but they somehow pop-up in PRs. So I mad
 
 ### How to Register It?
 
-```php
-# easy-coding-standard.yml
+```yaml
+# ecs.yml
 services:
-    Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenReferenceSniff
+    Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenReferenceSniff: ~
 ```
 
 <br>
@@ -259,7 +259,7 @@ And that's exactly what `ClassNameSuffixByParentFixer` helps you to do.
 ### How to Register It?
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\Naming\ClassNameSuffixByParentFixer: ~
 ```
@@ -285,7 +285,7 @@ Note: since PHP Coding Standard tools don't modify your filesystem, after the fi
 The fixer is configurable to comfort your needs, so just add it:
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\Naming\ClassNameSuffixByParentFixer:
         parent_types_to_suffixes:

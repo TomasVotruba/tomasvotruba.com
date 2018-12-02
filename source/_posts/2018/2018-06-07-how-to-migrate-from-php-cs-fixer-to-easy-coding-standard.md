@@ -124,7 +124,7 @@ PHP CS Fixer looks for `.php_cs` file in the root directory by default.
 ```bash
 - ecs.yml
 - ecs.yaml
-- easy-coding-standard.yml
+- ecs.yml
 - easy-coding-standard.yaml
 ```
 

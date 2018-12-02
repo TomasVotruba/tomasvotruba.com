@@ -4,7 +4,6 @@ title: "Statie - part 2: How to add Contact Page With Data"
 perex: |
     [In previous post about Statie](/blog/2017/02/20/statie-how-to-run-it-locally) you generated simple index with layout. Today we look on first semi-dynamic feature: **data structures**.
 
-updated: true
 updated_since: "September 2018"
 updated_message: |
     Updated with Statie 5.0, NEON → YAML, Twig and <code>parameters</code> section in <code>statie.yml</code> config.
