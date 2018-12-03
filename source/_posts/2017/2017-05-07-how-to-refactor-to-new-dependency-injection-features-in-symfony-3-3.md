@@ -6,7 +6,6 @@ perex: |
     Each of them is quite nice, <strong>but combined together - they are huge jump</strong> compare to what we have now.
     <br><br>
     Today I will show you what code can you drop and how to migrate it.
-related_items: [39]
 tweet: "How to refactor to new #symfony 3.3 DI features? #examples #php"
 ---
 

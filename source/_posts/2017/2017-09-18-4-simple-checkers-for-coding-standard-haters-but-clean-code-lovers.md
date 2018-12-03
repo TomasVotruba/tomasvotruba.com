@@ -8,7 +8,6 @@ perex: |
     Great! This post is for you. There are [other ways to use coding standard](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/#write-1-checke-save-hundreds-hours-of-work) and **clean code** is one of them.
 tweet: "Do you hate Coding Standards, but love #cleancode? Check these 4 helpful rules #php"
 tweet_image: "/assets/images/posts/2017/clean-checkers/dependency-drop.png"
-related_items: [51, 48]
 
 updated_since: "December 2018"
 updated_message: |

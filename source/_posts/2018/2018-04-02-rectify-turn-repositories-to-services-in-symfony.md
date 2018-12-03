@@ -9,7 +9,6 @@ perex: |
     We'll start with very popular post - [Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/).
 
 tweet: "New Post on my Blog: Rectify: Turn All Doctrine Repositories From Composition To Inheritance in Seconds"
-related_items: [59, 81, 78, 77]
 ---
 
 I wrote about [How to use Repository with Doctrine as Service Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/) a while ago. There are many posts about this topic, but not as simple to apply as this one. At least for one repository.

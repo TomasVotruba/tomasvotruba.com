@@ -10,7 +10,6 @@ perex: |
 tweet: "New Post on my Blog: Notes from 'Peace is Every Step' Book #conflicts #community #anger #transform #joy"
 tweet_image: "/assets/images/posts/2018/peace/book.jpg"
 
-related_items: [84, 74]
 ---
 
 *Btw, Leo also writes little books. If there is one I enjoyed the most, it's [The Little Book of Contentment](https://zenhabits.net/little-book/). Not because it's free and short, but because it helped me to focus on my inner passion and my own meaning and fears that were stopping me.*

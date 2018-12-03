@@ -6,7 +6,6 @@ perex: |
     <br><br>
     That's why I want to talk about the selfish benefits of open-source, that come first, almost always, but just a few people can see them. And that *selfish open-source* is a good thing.
 tweet: "New Post on my Blog: Open Source is Selfish #oss #php #victim #ego"
-related_items: [53]
 ---
 
 There are 2 major views I see in open-source: *a victim* and *a selfish egoist*.

@@ -5,7 +5,7 @@ perex: |
     [Statie](https://statie.org) is a tool to create semi-static webpages. It allows you to host your website on Github for free. Event with own domain and https. It was created in late 2016 based on [Scuplin](https://github.com/sculpin/sculpin) and its major feature is simplicity.
     <br><br>
     That was the "pitch", now I will show you how to use it.
-related_items: [32, 33, 34]
+
 tweet: "#Statie 1: Up and Running locally #php #static #github"
 
 updated_since: "September 2018"

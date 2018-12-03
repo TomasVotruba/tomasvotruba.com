@@ -7,7 +7,6 @@ perex: |
 updated_since: "September 2018"
 updated_message: |
     Updated with Statie 5.0, NEON → YAML, Twig and <code>parameters</code> section in <code>statie.yml</code> config.
-related_items: [29, 33, 34]
 
 tweet: "#Statie 2: Data sets #php #static #github"
 ---

@@ -6,7 +6,6 @@ perex: |
     <br>
     There are **a few simple A → B changes**, but one has to know about them or will get stuck. Let's learn about them.
 tweet: "New Post on my Blog: How to Migrate From PHP CS Fixer to EasyCodingStandard in 6 Steps #ecs #codingstandard #ci"
-related_items: [37, 49, 86, 111]
 ---
 
 ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's super easy to start to use from scratch:

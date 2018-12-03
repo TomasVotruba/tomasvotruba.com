@@ -6,7 +6,6 @@ perex: |
     <br>
     Today I'll share with you **5 tips that proven useful during my programming/self-education career**.
 tweet: "New Post on My Blog: 4 Tips To Get Emotions to Your Blogging About Programming #empathy #symfony #passion"
-related_items: [91]
 ---
 
 ## 1. Make Your Post Ideas Public

@@ -7,7 +7,6 @@ perex: |
     Today we'll climb together.
 tweet: "New Post on #lazyprogrammer Blog: Program Like Your Climb a Huge Mountain #craftsmanship"
 tweet_image: "/assets/images/posts/2018/climb/climb-7.jpg"
-related_items: [30]
 ---
 
 Just a year ago I was deep-train traveling southern Europe and I worked on ApiGen (here [is a short story about that work](/blog/2017/09/04/how-apigen-survived-its-own-death/)). I worked on a migration of the most coupled dependency, which was unmaintained for 3 years, to new one. You can imagine it like migration your application from Nette to Symfony or from Doctrine to Eloquent (or vice versa).

@@ -7,7 +7,6 @@ perex: |
     And if you do, is it boring plain text or **useful rich markdown**?
 tweet: "New post on my blog: Keep Your CHANGELOG Useful with Links #github #changelog #dx"
 tweet_image: "/assets/images/posts/2018/changelog/keep-a-changelog.jpg"
-related_items: [117]
 
 updated_since: "June 2018"
 updated_message: "Updated with new <code>run</code> command."

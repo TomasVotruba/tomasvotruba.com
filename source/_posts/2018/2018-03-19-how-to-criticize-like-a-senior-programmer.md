@@ -7,7 +7,6 @@ perex: |
     I want to **correct this** once and for all, so I've prepared a guide for you.
 tweet: "New post on my blog: How to Critisize like a Senior Programmer"
 tweet_image: "/assets/images/posts/2018/critic/shout.jpg"
-related_items: [74]
 ---
 
 ## 1. Find an Error

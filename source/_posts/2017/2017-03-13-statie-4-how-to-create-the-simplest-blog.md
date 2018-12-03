@@ -5,7 +5,6 @@ perex: |
     Statie is very powerful tool for creating small sites. But you will use just small part of it's features, having just micro-sites. How to get to full 100%? **build a blog**.
     <br><br>
     Today I will show you, **how to publish your first post**.
-related_items: [29, 32, 33]
 tweet: "#Statie 4: How to create blog #php #static #github"
 
 updated_since: "September 2018"

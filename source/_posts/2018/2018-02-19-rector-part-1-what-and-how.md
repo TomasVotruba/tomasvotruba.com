@@ -6,7 +6,6 @@ perex: |
     <br><br>
     What exactly Rector does and how does it work?
 tweet: "New post on my blog: Rector: Part 1 - What and How #php #ast #refactoring #instantupgrades"
-related_items: [63, 78, 81]
 ---
 
 *Read also:*

@@ -8,7 +8,6 @@ perex: |
     Do you see *your own first* AI already? And how do you treat it?
 tweet: "A new post on my blog: How Do You Treat Your Own First AI #programming #unschooling #ai #human"
 tweet_image: "/assets/images/posts/2018/ai/kaizen.jpg"
-related_items: [65]
 ---
 
 Artificial intelligence is in its very basic form just a network of neurons connected in a specific way.

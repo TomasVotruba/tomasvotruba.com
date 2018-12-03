@@ -13,7 +13,6 @@ updated_message: |
     It does pretty much the same, so package ServiceDefinitionDecorator for Symfony was deprecated.
     <br><br>
     It is still available <a href="https://github.com/DeprecatedPackages/ServiceDefinitionDecorator">here for inspiration</a> though.
-related_items: [19, 80]
 tweet: "Why are service tags useless in most of #symfony and #nettefw apps? #di"
 ---
 

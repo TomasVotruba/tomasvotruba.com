@@ -6,7 +6,6 @@ perex: |
     <br><br>
     Prepared configs, reduction of config to few lines, <code>--config</code> option and more.
 tweet: "7 New Features in Easy Coding Standard #codingStandard #php #solid"
-related_items: [37, 51]
 
 deprecated_since: "December 2018"
 deprecated_message: "Now there is <strong>EasyCodingStandard 5</strong>, so this is rather <em>7 oldies</em>."

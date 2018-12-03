@@ -6,7 +6,6 @@ perex: |
      <br><br>
      With over 108 000 downloads I think I should write about 5 of them you can use in your projects today.
 tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standard #php #architecture #php_codesniffer"
-related_items: [49]
 
 updated_since: "December 2018"
 updated_message: |

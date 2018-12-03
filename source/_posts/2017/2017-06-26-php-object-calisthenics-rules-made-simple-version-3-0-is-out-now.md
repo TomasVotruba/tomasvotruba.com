@@ -6,7 +6,6 @@ perex: |
     They help you to get rid of "else" statements, method chaining, long classes or functions, unreadable short names and much more.
     <br><br>
     <strong>Object Calisthenics 3.0 runs on CodeSniffer 3.0 and PHP 7.1. It brings 6 of them with fancy configuration and code examples</strong>.
-related_items: [46, 48, 37]
 tweet: "What are #php Object Calisthenics and how to use them? #codingStandard #solid"
 
 deprecated_since: "December 2018"

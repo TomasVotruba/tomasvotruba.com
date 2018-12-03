@@ -8,7 +8,6 @@ perex: |
     <br><br>
     What if instead of outside-in - education first, we could do it inside-out - **passion first**?
 tweet: "New Post on my Blog: How Education Shots its Leg by Killing Passion"
-related_items: [22]
 ---
 
 This started as reply to the post and I got literally on fire while writing it. Fire I want to share with you. It's not any [critique](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer/) to the post, it's the way I see the world.

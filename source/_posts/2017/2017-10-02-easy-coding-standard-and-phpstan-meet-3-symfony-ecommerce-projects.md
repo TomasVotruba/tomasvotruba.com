@@ -9,7 +9,6 @@ perex: |
     Today, I am going to show you how you can check them with tools that can help you keep your code better on daily basis - [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) and [PHPStan](https://github.com/phpstan/phpstan).
 tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects #numbers #php"
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png"
-related_items: [52]
 
 deprecated_since: "December 2018"
 deprecated_message: "All 3 projects changed completely during last year, so <strong>these numbers are way outdated</strong>."

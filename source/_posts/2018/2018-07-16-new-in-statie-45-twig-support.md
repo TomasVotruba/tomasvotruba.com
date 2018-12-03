@@ -7,7 +7,6 @@ perex: |
     So there you go! Enjoy
 tweet: "New Post on my Blog: New in #Statie 4.5: #Twig Support #symfony #latte"
 tweet_image: "/assets/images/posts/2018/statie-45/statie-45.png"
-related_items: [67, 120]
 
 updated_since: "September 2018"
 updated_message: |

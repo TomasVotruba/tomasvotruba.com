@@ -7,7 +7,6 @@ perex: |
     <br>
     Today I'll show you one of my many fuckups - let's mock units!
 tweet: "Ways I Fucked Up #opensource Code: Mock Everything and Test Units #php #phpunit #mocking #failfastfailsafe #learning"
-related_items: [53]
 ---
 
 I was using [ApiGen](https://github.com/apigen/apigen) back in 2014. I had no commit for past 2 years so no surprise it didn't work for PHP 5.5+. I was young inexperienced... *a complainer* in that time, so I created issues and I blamed every contributor for creating such a bad project.

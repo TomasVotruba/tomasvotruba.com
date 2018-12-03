@@ -5,7 +5,6 @@ perex: |
     What is new in Easy Coding Standard 3?
     Nice diffs for fixable sniffs, smart excluding, support for sniff warnings and one more...
 tweet: "New post on my blog: New in Symplify 3: 4 Improvements in EasyCodingStandard #codingstandard php"
-related_items: [49, 68, 70]
 tweet_image: "/assets/images/posts/2018/symplify-3-ecs/exclude-files.png"
 
 updated_since: "December 2018"

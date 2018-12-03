@@ -6,7 +6,6 @@ perex: |
     Symfony 3 is about to come.
     <br><br>
     **What changes and news it brings?**
-related_items: [4]
 
 deprecated_since: "December 2018"
 deprecated_message: "3 years later, Symfony 4.2 is just released."

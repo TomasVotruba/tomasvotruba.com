@@ -10,7 +10,6 @@ deprecated_message: |
     <br><br>
     See <a href="/blog/2018/07/09/6-reasons-why-doctrine-is-alive-and-kicking/">Doctrine is Alive and Kicking post for more</a>.
 
-related_items: [121]
 ---
 
 I've been thinking over 2 years about this post. I wasn't sure if it's only a negative hype feeling or real thing. It's still the same so it's time to write about it.

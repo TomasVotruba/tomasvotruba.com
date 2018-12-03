@@ -7,7 +7,6 @@ perex: |
     Are you and your monorepo ready? Today we'll focus on **fast, secured and outsourced monorepo auto split** - all that under 10 minutes.
 tweet: "New Post on My Blog: How to Make #Github and #Travis Split #Monorepo to Multiple #Git Repositories for You   #security"
 tweet_image: "/assets/images/posts/2018/monorepo-split/found-keys.jpg"
-related_items: [82, 25]
 ---
 
 It's great to be alive in this era. We have solved maintaining multiple repositories, even merge migration of their git history to one repository. Creating huge code bases was more never cost effective and never had a steeper learning curve.

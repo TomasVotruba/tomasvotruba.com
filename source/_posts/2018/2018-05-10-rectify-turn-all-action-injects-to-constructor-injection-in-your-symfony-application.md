@@ -5,7 +5,6 @@ perex: |
     Action Injections are much fun, but it can turn your project to legacy very fast. How to **refactor out of the legacy back to constructor injection** and still keep that smile on your face?
 tweet: "New Post on My Blog: Turn All Action Injections in Your #Symfony Application to Constructor Injection #adr #methodinjection #rector"
 tweet_image: "/assets/images/posts/2018/rectify-action-injection/show.png"
-related_items: [94, 88]
 ---
 
 I wrote about [How to Slowly Turn your Symfony Project to Legacy with Action Injection](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection) a few weeks ago. It surprised me that **the approach had mostly positive [feedback](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection/#comments)**:

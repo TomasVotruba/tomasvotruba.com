@@ -8,7 +8,6 @@ perex: |
     <br><br>
     I think framework should help you and not limit you in a way how you write your code.
     <strong>Today we look how to make that happen even for Nette presenters and how to set them free</strong>.
-related_items: [28]
 tweet: "How to get #nettefw presenter naked (without parents)? #api #php"
 
 deprecated_since: "October 2017"
