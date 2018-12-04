@@ -159,7 +159,9 @@ Original `ImportNamespacedNameFixer` doing this job [was removed in EasyCodingSt
 
 It's not able to import partial namespace or resolve conflicts, but it has extra features, like functions imports etc.
 
-How does it Work?```yaml
+How does it Work?
+
+```yaml
 # ecs.yml
 services:
     SlevomatCodingStandard\Sniffs\Namespaces\ReferenceUsedNamesOnlySniff: ~

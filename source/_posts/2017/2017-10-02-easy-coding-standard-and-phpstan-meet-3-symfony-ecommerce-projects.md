@@ -11,7 +11,7 @@ tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png"
 
 deprecated_since: "December 2018"
-deprecated_message: "All 3 projects changed completely during last year, so <strong>these numbers are way outdated</strong>."
+deprecated_message: "All 3 projects changed massively during last year, so <strong>these numbers are way outdated</strong>."
 
 updated_since: "December 2018"
 updated_message: |
