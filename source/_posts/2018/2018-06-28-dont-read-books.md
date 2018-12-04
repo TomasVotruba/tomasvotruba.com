@@ -11,7 +11,6 @@ perex: |
     Do you still think this is sarcasm? Keep on reading.
 tweet: "New Post on my Blog: Don't Read Books #education #books #reading #ai #neuralnetworks"
 tweet_image: "/assets/images/posts/2018/no-books/fahrenheit-book.jpg"
-related_items_: [119]
 ---
 
 <div class="text-center">
