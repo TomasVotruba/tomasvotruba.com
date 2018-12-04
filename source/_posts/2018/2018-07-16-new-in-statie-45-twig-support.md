@@ -10,7 +10,7 @@ tweet_image: "/assets/images/posts/2018/statie-45/statie-45.png"
 
 updated_since: "September 2018"
 updated_message: |
-    Updated with Statie 5.0, NEON → YAML and Twig.
+    Updated with <strong>Statie 5</strong>, NEON → YAML and Twig.
 ---
 
 <a href="https://github.com/Symplify/Symplify/pull/892" class="btn btn-dark btn-sm">

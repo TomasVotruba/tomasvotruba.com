@@ -10,19 +10,16 @@ tweet: "#Statie 1: Up and Running locally #php #static #github"
 
 updated_since: "September 2018"
 updated_message: |
-    Updated with Statie 5.0 and Twig support.
+    Updated with <strong>Statie 5</strong> and Twig support.
 ---
 
 ### Create Empty Project...
 
 ...and require [Statie](https://github.com/Symplify/Statie) package.
 
-
 ```bash
 composer require symplify/statie
 ```
-
-
 
 ### 3 Steps Life-Cycle
 

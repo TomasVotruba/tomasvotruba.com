@@ -9,7 +9,7 @@ tweet: "#Statie 3: Reusable code snippets #php #static #github"
 
 updated_since: "September 2018"
 updated_message: |
-    Updated with Statie 5.0, NEON → YAML and Twig.
+    Updated with <strong>Statie 5</strong>, NEON → YAML and Twig.
 ---
 
 Sometimes you need to add part of template, that you want to use on multiple pages (in the same form or with smaller changes) or that makes your template less readable.

@@ -9,7 +9,7 @@ tweet: "#Statie 4: How to create blog #php #static #github"
 
 updated_since: "September 2018"
 updated_message: |
-    Updated with Statie 5.0, NEON → YAML, Twig and <code>parameters</code> section in <code>statie.yml</code> config.
+    Updated with <strong>Statie 5</strong>, NEON → YAML, Twig and <code>parameters</code> section in <code>statie.yml</code> config.
 ---
 
 ## Create a Blog Page
