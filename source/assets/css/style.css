@@ -66,7 +66,8 @@ a:hover, a:focus {
     transition: 0.3s;
 }
 
-a:visited {
+a:visited :not(.btn):not(.badge) {
+    opacity: .6;
     color: #550035;
 }
 

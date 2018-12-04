@@ -1,23 +1,22 @@
 # @todo it would be nice to be able to download those clusters as PDF/mobi at least
 parameters:
     clusters:
-        -
-            title: "Book in a Post"
-            post_ids: []
+#        -
+#            title: "Book in a Post"
+#            post_ids: [149, 115, 65, 56]
 
-        -
-            title: "Coding Standards - What, Why, Where?"
-            post_ids: [46, 47, 60]
+#        -
+#            title: "Coding Standards - What, Why, Where?"
+#            post_ids: [46, 47, 37]
 
-        -
-            title: "Deep Work"
-            post_ids: [20, 23]
+#        -
+#            title: "Deep Work"
+#            post_ids: [20, 23, 60]
 
 #        -
 #            title: "Hacking Symfony"
 #            # container mostly
-#            post_ids: [128, 103, 109, 105, 129, 137]
-#            description: "..."
+#            post_ids: [128, 103, 109, 105, 129, 137, 158]
 
         -
             title: "Master PHP CLI Apps with Symfony"
