@@ -3,6 +3,9 @@ parameters:
     reportUnmatchedIgnoredErrors: false
 
     ignoreErrors:
+        # PHP 7.3 tests
+        - '#Call to function is_countable\(\) with null will always evaluate to false#'
+
         # buggy
         - '#Property (.*) does not accept object#'
 
