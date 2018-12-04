@@ -262,9 +262,9 @@ All this fuss just to **load single parameter**? Not anymore:
              services.yaml
 ```
 
-All cleaned up. We run the app and... 
+All cleaned up. We run the app and...
 
-*ERROR: "$accountNumber" argument was not set* 
+*ERROR: "$accountNumber" argument was not set*
 
 Damn! What now?
 
@@ -279,7 +279,7 @@ $container->getDefinition('Project\Accountant\BitcoinSender')
     ->setArgument('accountNumber', $config['account_number']);
 ```
 
-<em class="fas fa-lg fa-times text-danger"></em> 
+<em class="fas fa-lg fa-times text-danger"></em>
 
 We want to get rid of this code, not to maintain it.
 
@@ -300,7 +300,7 @@ We want to get rid of this code, not to maintain it.
 +            $accountNumber: "%account_number%"
 ```
 
-<em class="fas fa-lg fa-times text-danger"></em> 
+<em class="fas fa-lg fa-times text-danger"></em>
 
 We want config to use PSR-4 autodiscovery to it's fullest potential, not go back to manual service definitions.
 
