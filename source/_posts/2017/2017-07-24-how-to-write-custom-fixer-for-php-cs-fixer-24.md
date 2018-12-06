@@ -5,17 +5,12 @@ perex: |
     You already know <a href="/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/">how coding standard tools work with tokens and how to write a Sniff</a>.
      <br><br>
      Today we'll explore a bit younger tool - <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">PHP CS Fixer</a> and we get <strong>from only finding the smelly spot to fixing it</strong>.
-related_items: [48, 46, 37, 92]
 tweet: "How to Write Custom Fixer for #phpcsfixer"
 tweet_image: "/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png"
 
-updated: true
-updated_since: "August 2018"
+updated_since: "December 2018"
 updated_message: |
-    Updated with PHP CS Fixer 2.12.
-    <br>
-    <br>
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
@@ -418,7 +413,7 @@ vendor/bin/php-cs-fixer fix src --config=.php_cs --dry-run
 
 ### The [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) way
 
-Put the class to `easy-coding-standard.yml`:
+Put the class to `ecs.yml`:
 
 ```yaml
 services:

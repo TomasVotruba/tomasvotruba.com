@@ -13,12 +13,10 @@ tweet_image: "/assets/images/posts/2018/neon-yaml/standards.png"
 tested: true
 test_slug: NeonYaml
 
-updated: true
-updated_since: "April 2018"
+updated_since: "December 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 
-related_items: [120]
 ---
 
 None of them is perfect, they both have strong parts and weak parts. But the more I travel to abroad conferences, meetups or repositories, the more I hear **nobody understand differences between them or their advantages to each other**. Since I meet mainly with Symfony and Nette code, I had to investigate them a bit deeper.
@@ -37,7 +35,7 @@ Here is a summary of what I found and how to migrate to each other. I'll write a
 70 % of syntax is similar:
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\Import\ImportNamespacedNameFixer: ~
 ```
@@ -180,7 +178,7 @@ someValue:
 You can do similar shenaniganz with Yaml as well thanks to `Symfony\ExpressionLanguage`
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     App\Mailer:
         arguments: ["@=service('App\\\\Mail\\\\MailerConfiguration').getMailerMethod()"]

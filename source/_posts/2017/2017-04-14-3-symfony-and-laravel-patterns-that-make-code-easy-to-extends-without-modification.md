@@ -7,7 +7,6 @@ You can add them and increase project complexity or deny them and increase peopl
     <br><br>
     Magic? No, <strong>just patterns</strong>! Today we look on 3 of them I found and fond in Symfony and Laravel world.
 tweet: "3 #symfony and #laravel patterns to make your code #SOLID #php"
-related_items: [27, 80]
 ---
 
 

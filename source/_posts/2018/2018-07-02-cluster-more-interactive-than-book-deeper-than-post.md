@@ -8,7 +8,6 @@ perex: |
     <br>
     It will not earn as much money as "bestselling" books, but if you value education more than money like me, keep on reading.
 tweet: "New Post on my Blog: Cluster: More Interactive than a Book, Deeper than a Post #education #books #reading #ai"
-related_items: [118]
 ---
 
 ## Tested Content is Easier To Keep Up-To-Date

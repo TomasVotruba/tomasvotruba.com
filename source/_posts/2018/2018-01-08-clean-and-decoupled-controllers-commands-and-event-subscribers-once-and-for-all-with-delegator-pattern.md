@@ -9,7 +9,6 @@ perex: |
     Today I will show you **why and how to use *delegator pattern*** in your application so it makes it to the pension.
 tweet: "New post on my blog: Clean and Decoupled Controllers, Commands and Event Subscribers Once and for All with Delegator Pattern #php #cleancode #symfony #icology"
 tweet_image: "/assets/images/posts/2018/delegator/trash-everywhere.jpg"
-related_items: [69, 59]
 ---
 
 <br>

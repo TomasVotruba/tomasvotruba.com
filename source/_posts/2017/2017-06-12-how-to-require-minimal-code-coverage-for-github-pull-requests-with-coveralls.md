@@ -6,6 +6,10 @@ perex: |
     <br><br>
     I will show you how to let Travis and Coveralls do this job for you.
 tweet: "Code Coverage under control with #coveralls #github #php #opensource"
+
+deprecated_since: "December 2018"
+deprecated_message: "This approach shown as <strong>very non-practical</strong> in last 2 years. Code-coverage of X is not worth the stress.<br>The added value of code coverage now shifted to good coding standards or static analysis."
+
 ---
 
 ## Why Code Coverage Shouldn't be Ignored

@@ -7,7 +7,6 @@ perex: |
     Why Collector pattern beats config tagging? How to use the in Symfony application? How it turns locked architecture into scaling one?
 
 tweet: "New post on my blog: Why is Collector Pattern so Awesome #symfony #colletor #compilerpass #rector #solid #decoupling"
-related_items: [36, 27]
 tweet_image: "/assets/images/posts/2018/collector/quote.jpg"
 ---
 

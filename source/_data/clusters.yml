@@ -1,10 +1,22 @@
+# @todo it would be nice to be able to download those clusters as PDF/mobi at least
 parameters:
     clusters:
 #        -
+#            title: "Book in a Post"
+#            post_ids: [149, 115, 65, 56]
+
+#        -
+#            title: "Coding Standards - What, Why, Where?"
+#            post_ids: [46, 47, 37]
+
+#        -
+#            title: "Deep Work"
+#            post_ids: [20, 23, 60]
+
+#        -
 #            title: "Hacking Symfony"
 #            # container mostly
-#            post_ids: [128, 103, 109, 105, 129, 137]
-#            description: "..."
+#            post_ids: [128, 103, 109, 105, 129, 137, 158]
 
         -
             title: "Master PHP CLI Apps with Symfony"
@@ -13,7 +25,7 @@ parameters:
 
         -
             title: "Open-Source from Dummy to a Master"
-            post_ids: [12, 13, 25, 54, 116]
+            post_ids: [12, 13, 54, 116]
             description: "Mastering open-source is tough, because the topic is so wide and various. It's often long journey of blind paths and self-experience. Take this shortcut and gain years of experience in days."
 
         -
@@ -23,5 +35,5 @@ parameters:
 
         -
             title: "Monorepo: From Zero to Hero"
-            post_ids: [69, 25, 82, 124, 138, 143, 160, 161]
+            post_ids: [69, 25, 26, 82, 124, 138, 143, 160, 161]
             description: "What is monorepo? How can you use it to speed up your packages' and projects' development? How to run your own monorepo in 10 minutes?"

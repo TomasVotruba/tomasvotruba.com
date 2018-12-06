@@ -8,7 +8,6 @@ perex: |
     But nobody seems to write about **the greatest bottleneck of Console applications - static cancer**. Why is that?
 tweet: "A new post on my blog: Why You Should Combine Symfony Console and Dependency Injection"
 tweet_image: "/assets/images/posts/2018/cli-app-di/cli-app-di.png"
-related_items: [105]
 ---
 
 ## 1. Current Status in PHP Console Applications

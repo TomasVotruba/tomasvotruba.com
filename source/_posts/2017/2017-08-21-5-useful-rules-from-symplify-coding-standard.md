@@ -6,14 +6,11 @@ perex: |
      <br><br>
      With over 108 000 downloads I think I should write about 5 of them you can use in your projects today.
 tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standard #php #architecture #php_codesniffer"
-related_items: [49]
 
-updated: true
-updated_since: "April 2018"
+updated_since: "December 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 
-deprecated: true
 deprecated_since: "September 2018"
 deprecated_message: |
     <a href="https://github.com/Symplify/Symplify/tree/v5.0.0">Symplify 5.0</a> was released and with that, many checkers were replaced by better ones.
@@ -22,7 +19,7 @@ deprecated_message: |
     Checkers 2, 4 and 5 were replaced by <code>SlamCsFixer\FinalInternalClassFixer</code> - <strong>class is either final or abstract</strong>.
     <br>
     <br>
-    <code>@inject</code> refactoring was replaced by <a href="https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#annotatedpropertyinjecttoconstructorinjectionrector"><code>AnnotatedPropertyInjectToConstructorInjectionRector</code></a> from <a href="https://github.com/rectorphp/rector">Rector</a>.
+    <code>@inject</code> refactoring was replaced by <code>AnnotatedPropertyInjectToConstructorInjectionRector</code> from <a href="https://github.com/rectorphp/rector">Rector</a>.
 ---
 
 I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
@@ -68,7 +65,7 @@ class SomeClass
 **Use it**
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\Property/ArrayPropertyDefaultValueFixer: ~
 ```
@@ -100,7 +97,7 @@ final class SomeClass implements SomeInterface
 **Use it**
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Sniffs\Classes\FinalInterfaceSniff: ~
 ```
@@ -128,7 +125,7 @@ $className = DateTime::class;
 **Use it**
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer: ~
 ```
@@ -160,7 +157,7 @@ final class SomeTest extends TestCase
 **Use it**
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Sniffs\PHPUnit\FinalTestCaseSniff: ~
 ```
@@ -216,7 +213,7 @@ final class SomeClass implements SomeInterface
 **Use it**
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Sniffs\Classes\EqualInterfaceImplementationSniff: ~
 ```
@@ -261,7 +258,7 @@ class SomeClass
 **Use it**
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\DependencyInjection\InjectToConstructorInjectionFixer: ~
 ```

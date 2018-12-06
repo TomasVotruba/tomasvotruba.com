@@ -6,7 +6,6 @@ perex: |
     <br><br>
     [Gomonorepo.org](https://gomonorepo.org/) will brief you with all important answers.
 tweet: "New post on my blog: State of Monorepo in PHP"
-related_items: [41, 26, 25]
 tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
 ---
 

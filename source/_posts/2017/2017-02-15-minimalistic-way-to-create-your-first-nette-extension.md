@@ -5,7 +5,7 @@ perex: |
     Nette extension allows you not only to create open-source packages, but also to <strong>split your application to small and logical chunks of code</strong>.
     <br><br>
     Open-source extensions are more complex using many Nette\DI features, but today I will show you, how to <strong>start with one Nette\DI method and one service only</strong>.
-related_items: [28]
+
 tweet: "How to create your first #nettefw extension? #minimalism #php"
 ---
 

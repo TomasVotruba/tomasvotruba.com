@@ -6,7 +6,6 @@ perex: |
     <br><br>
     What exactly Rector does and how does it work?
 tweet: "New post on my blog: Rector: Part 1 - What and How #php #ast #refactoring #instantupgrades"
-related_items: [63, 78, 81]
 ---
 
 *Read also:*
@@ -119,12 +118,11 @@ Such a configuration looks like this (as shown in [`README`](https://github.com/
 # rector.yml
 services:
     # prepared service that handles method name changes
-    Rector\Rector\Dynamic\MethodNameReplacerRector:
-        $perClassOldToNewMethods:
-            # type to look for
-            'Symfony\Component\HttpFoundation\Request':
-                # old method name: new method name
-                'isMethodSafe': 'isMethodCacheable'
+    Rector\Rector\MethodCall\MethodNameReplacerRector:
+        # type to look for
+        Symfony\Component\HttpFoundation\Request:
+            # old method name: new method name
+            isMethodSafe: 'isMethodCacheable'
 ```
 
 ### Member of Big AST PHP Family

@@ -7,7 +7,6 @@ perex: |
     And what are they? Neon to YAML, semi-static to Services, customizable caching, even simpler skipper, short bin and more.
 tweet: "New Post on my Blog: New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Services"
 tweet_image: "/assets/images/posts/2018/symplify-4-ecs/yaml-autocomplete.gif"
-related_items: [79]
 ---
 
 ## 1. Configure Caching Directory
@@ -21,7 +20,7 @@ related_items: [79]
 Docker users will be happy for this feature, since it makes ECS much more usable. To enjoy speed of caching of changed files on second run, just tune your config.
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 parameters:
     # defaults to sys_get_temp_dir() . '/_easy_coding_standard'
     cache_directory: .ecs_cache
@@ -46,7 +45,7 @@ What you really need? Exclude 1 file but only for 1 checker. Or 1 checker for gr
 **Because details matters and it's pointless to think about code or class**, you can now remove `skip_codes` key from your config and use `skip` section only:
 
 ```diff
- # easy-coding-standard.yml
+ # ecs.yml
  parameters:
      skip:
          PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff:
@@ -117,7 +116,7 @@ I hear you community, so lets trade! **From ECS 4, you can use Yaml everywhere w
 
 ### How to Migrate?
 
-Well just rename `easy-coding-standard.neon` or `easy-coding-standard.yml` and
+Well just rename `easy-coding-standard.neon` or `ecs.yml` and
  then read about it in [Neon vs. Yaml and How to Migrate Between Them](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/).
 
 <br>
@@ -137,7 +136,7 @@ Why? **ECS is basically a Symfony application with DI Container**. It loads all 
 Could you tell that from?
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 checkers:
     ArrayFixer: ~
 ```
@@ -147,7 +146,7 @@ I could not. **I recall how frustrated I was, when I digged through PHP_CodeSnif
 Why not make such intent explicit?
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     ArrayFixer: ~
 ```
@@ -158,7 +157,7 @@ And you can do and use any feature you Symfony know. Magic no more #metoo.
 ### How to Migrate?
 
 ```diff
-# easy-coding-standard.yml
+# ecs.yml
 -    checkers:
 +    services:
          Symplify\CodingStandard\Fixer\Import\ImportNamespacedNameFixer:

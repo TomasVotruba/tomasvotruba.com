@@ -11,7 +11,6 @@ perex: |
     **Are you a Twig fan? As a side effect, I made 27 regular expression to handle 80 % of the Latte to Twig migration for you.**
 tweet: "New Post on my Blog: How to Convert #Latte to #Twig in 27 Regular Expressions #nettefw #symfony"
 tweet_image: "/assets/images/posts/2018/latte-twig/diff.png"
-related_items: [83]
 
 tested: true
 test_slug: LatteTwig

@@ -7,9 +7,7 @@ perex: |
     And if you do, is it boring plain text or **useful rich markdown**?
 tweet: "New post on my blog: Keep Your CHANGELOG Useful with Links #github #changelog #dx"
 tweet_image: "/assets/images/posts/2018/changelog/keep-a-changelog.jpg"
-related_items: [117]
 
-updated: true
 updated_since: "June 2018"
 updated_message: "Updated with new <code>run</code> command."
 ---
@@ -102,7 +100,7 @@ I wanted both. Why? Because I was used to Github Released that work like I neede
 
 ### Changed
 
-- [#560](https://github.com/symplify/symplify/pull/560) Added `PhpdocVarWithoutNameFixer` to `docblock.neon` level,
+- [#560](https://github.com/symplify/symplify/pull/560) Added `PhpdocVarWithoutNameFixer` to `docblock.yml` level,
    thanks to [@carusogabriel](https://github.com/carusogabriel)
 - [#578](https://github.com/symplify/symplify/pull/578) Use `@doesNotPerformAssertions` in tests,
    thanks to [@carusogabriel](https://github.com/carusogabriel)

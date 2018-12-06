@@ -28,7 +28,7 @@ outputPath: rss.xml
             {% endif %}
 
             {# is deprecated post, do not display #}
-            {% if post.deprecated is defined %}
+            {% if post.deprecated_since is defined %}
                 {% set includePost = false %}
             {% endif %}
 

@@ -9,12 +9,13 @@ perex: |
     Today, I am going to show you how you can check them with tools that can help you keep your code better on daily basis - [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) and [PHPStan](https://github.com/phpstan/phpstan).
 tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects #numbers #php"
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png"
-related_items: [52]
 
-updated: true
-updated_since: "April 2018"
+deprecated_since: "December 2018"
+deprecated_message: "All 3 projects changed massively during last year, so <strong>these numbers are way outdated</strong>."
+
+updated_since: "December 2018"
 updated_message: |
-    Updated with <a href="https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v400---2018-04-02">ECS 4.0</a>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
 ---
 
 ## Try It Yourself
@@ -99,8 +100,8 @@ This is another [small and easy-to-understand set](/blog/2017/09/18/4-simple-che
 
 The full set looks like this:
 
-
 ```yaml
+# ecs.yml
 services:
     # use short array []
     PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:

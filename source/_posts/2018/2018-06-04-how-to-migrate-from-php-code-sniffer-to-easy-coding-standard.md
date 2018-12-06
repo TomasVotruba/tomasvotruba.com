@@ -8,7 +8,6 @@ perex: |
     <br><br>
     **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
 tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingStandard in 7 Step #ecs #codingstandard #ci"
-related_items: [112, 86, 49, 37]
 ---
 
 ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's super easy to start to use from scratch:
@@ -180,7 +179,7 @@ These names are looked for in the root diretory by PHP_CodeSniffer:
 ```bash
 - ecs.yml
 - ecs.yaml
-- easy-coding-standard.yml
+- ecs.yml
 - easy-coding-standard.yaml
 ```
 

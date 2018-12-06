@@ -42,7 +42,7 @@ How to make this first experience better? Start slowly, one touch at a time, lik
 For me, it's obviously [ECS](https://github.com/symplify/easyCodingStandard/):
 
 ```bash
-composer require --dev symplify/easy-coding-standard
+composer require symplify/easy-coding-standard --dev
 ```
 
 Or [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) or [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer), but they're both already covered by ECS.
@@ -63,7 +63,7 @@ Last week a [Cognitive Complexity Sniff](/blog/2018/05/21/is-your-code-readable-
 **If your coding standard should have only 1 rule forever and ever, this is the one.** Let's try that one.
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff: ~
 ```
@@ -73,7 +73,7 @@ But when you run your CS tool (`vendor/bin/ecs check /src`), it will probably dr
 Saying that, **we make the rule so free, that your code passes it**:
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
         maxCognitiveComplexity: 50
@@ -82,7 +82,7 @@ services:
 Still 10 errors?
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
         maxCognitiveComplexity: 100
@@ -97,7 +97,7 @@ You can now add this to your `.travis.yml` or any other CI tools and make the PR
 Then decrease the criteria for 10 %:
 
 ```yaml
-# easy-coding-standard.yml
+# ecs.yml
 services:
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
         maxCognitiveComplexity: 90

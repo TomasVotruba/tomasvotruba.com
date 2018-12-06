@@ -5,21 +5,21 @@
         "J7mbo/twitter-api-php": "^1.0",
         "nette/finder": "^2.4",
         "nette/utils": "^2.5",
-        "nikic/php-parser": "^4.0.3",
-        "symfony/http-kernel": "^4.1",
-        "symfony/console": "^4.1",
+        "nikic/php-parser": "^4.0.4",
+        "symfony/http-kernel": "^4.2",
+        "symfony/console": "^4.2",
         "symplify/package-builder": "^5.2",
         "symplify/statie": "^5.2"
     },
     "require-dev": {
         "nette/neon": "^2.4",
-        "phpstan/phpstan-shim": "^0.10.5",
-        "phpunit/phpunit": "^7.3",
+        "phpstan/phpstan": "^0.10.6",
+        "phpunit/phpunit": "^7.4",
         "spatie/http-status-check": "^2.5",
-        "symfony/console": "^4.1",
-        "symfony/process": "^4.1",
-        "symfony/stopwatch": "^4.1",
-        "symfony/yaml": "^4.1",
+        "symfony/console": "^4.2",
+        "symfony/process": "^4.2",
+        "symfony/stopwatch": "^4.2",
+        "symfony/yaml": "^4.2",
         "symplify/easy-coding-standard": "^5.2",
         "symplify/latte-to-twig-converter": "^5.2",
         "symplify/monorepo-builder": "^5.2"
@@ -38,7 +38,7 @@
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan.phar analyse bin src tests packages --level max --configuration phpstan.neon",
+        "phpstan": "vendor/bin/phpstan analyse bin src tests packages --level max --configuration phpstan.neon",
         "check-cs": "vendor/bin/ecs check bin src tests packages",
         "fix-cs": [
             "vendor/bin/ecs check bin src tests packages --fix",

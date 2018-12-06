@@ -7,7 +7,6 @@ perex: |
     Fortunately, I noticed <a href="https://www.youtube.com/watch?v=4w3-f6Xhvu8">talk from Fabien</a> about <a href="http://danluu.com/monorepo/">monorepo</a> and Symfony. I said to myself: "I don't know a thing about it. Let's try it out. I can always return if it sucks."
     <br><br>
     I never did. Today I will show you <strong>why I see monorepo approach in open-source so awesome</strong>.
-related_items: [45, 26, 13, 12, 69]
 tweet: "How #symfony and #laravel can manage so many packages with ease? #composerPHP #monolith #php"
 ---
 

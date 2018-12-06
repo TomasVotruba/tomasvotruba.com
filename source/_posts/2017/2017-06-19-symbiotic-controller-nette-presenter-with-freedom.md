@@ -8,10 +8,8 @@ perex: |
     <br><br>
     I think framework should help you and not limit you in a way how you write your code.
     <strong>Today we look how to make that happen even for Nette presenters and how to set them free</strong>.
-related_items: [28]
 tweet: "How to get #nettefw presenter naked (without parents)? #api #php"
 
-deprecated: true
 deprecated_since: "October 2017"
 deprecated_message: |
     This was deprecated due to low usage of package and too complicated API. <strong>Use class that implements <code>Nette\Application\IPresenter</code> with <code>run(Request $request)</code> instead</strong>.

@@ -8,15 +8,17 @@ perex: |
     **Statie 3 to the rescue!**
 tweet: "Statie 3 on #symfony 4 is out with many little improvements + 1 big feature - Generators! Having own page is not a luxury for posts anymore!"
 tweet_image: "/assets/images/posts/2017/statie-generators/generators.png"
-related_items: [29, 32, 33, 34]
 
-updated: true
 updated_since: "September 2018"
 updated_message: |
-    Updated with Statie 5.0, NEON → YAML, Twig and <code>statie.yml</code> config.
+    Updated with <strong>Statie 5</strong>, NEON → YAML, Twig and <code>statie.yml</code> config.
+
+deprecated_since: "December 2018"
+deprecated_message: |
+    This post was moved to <a href="https://www.statie.org/docs/generators/">official documentation</a> on Statie.org.
 ---
 
-## Coupled Approach in Statie 2
+## Coupled Approach in old Statie
 
 Posts in Statie 2 were enabled by defaults with following hard coded logic:
 

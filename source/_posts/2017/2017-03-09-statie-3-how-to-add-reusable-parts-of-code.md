@@ -5,13 +5,11 @@ perex: |
     You already know [how to run Statie with layout](/blog/2017/02/20/statie-how-to-run-it-locally) and [how to add data structures](/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data).
     <br><br>
     Today you'll learn how to **decouple big templates to smaller and reusable snippets**. Like Google Analytics code.
-related_items: [29, 32, 34]
 tweet: "#Statie 3: Reusable code snippets #php #static #github"
 
-updated: true
 updated_since: "September 2018"
 updated_message: |
-    Updated with Statie 5.0, NEON → YAML and Twig.
+    Updated with <strong>Statie 5</strong>, NEON → YAML and Twig.
 ---
 
 Sometimes you need to add part of template, that you want to use on multiple pages (in the same form or with smaller changes) or that makes your template less readable.

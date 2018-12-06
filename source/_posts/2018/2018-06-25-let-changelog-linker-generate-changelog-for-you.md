@@ -9,7 +9,6 @@ perex: |
     Yes? Then you'll love *Changelog Linker*. A PHP CLI tool that does all this boring work for you.
 tweet: "New Post on my Blog: Let Changelog Linker Generate CHANGELOG.md for You #github #keepachangelog #staylazy #markdown"
 tweet_image: "/assets/images/posts/2018/generate-changelog/tweet.png"
-related_items: [72]
 ---
 
 Changelogs have many forms.

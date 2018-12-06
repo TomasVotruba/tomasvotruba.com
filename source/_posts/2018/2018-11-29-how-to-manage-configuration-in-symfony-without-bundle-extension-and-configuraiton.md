@@ -9,7 +9,6 @@ perex: |
 tweet: "New post on my #php blog: How to Manage Configuration in #Symfony without Bundle, Extension, and Configuration?  #autowire #bind #cleanup"
 tweet_image: "/assets/images/posts/2018/bundle-less/bundle-less.png"
 
-related_items: [156, 158]
 ---
 
 If you hear about the **trend of "no-bundle" application** for the first time, is very nicely summarized in 10 points in [SymfonyCasts](https://symfonycasts.com/blog/AppBundle). Go check it, I'll wait here.

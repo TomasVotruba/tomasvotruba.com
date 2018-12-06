@@ -5,7 +5,6 @@ perex: |
     What is tagging for? Why we should get rid of it?
     Today I will show you, how to do it gradually without breaking the application.
 
-updated: true
 updated_since: "May 2017"
 updated_message: |
     Updated with <strong>new Symfony 3.3 features <a href="https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration">class based service naming, <code>_instanceof</code> configuration</a>
@@ -14,7 +13,6 @@ updated_message: |
     It does pretty much the same, so package ServiceDefinitionDecorator for Symfony was deprecated.
     <br><br>
     It is still available <a href="https://github.com/DeprecatedPackages/ServiceDefinitionDecorator">here for inspiration</a> though.
-related_items: [19, 80]
 tweet: "Why are service tags useless in most of #symfony and #nettefw apps? #di"
 ---
 
