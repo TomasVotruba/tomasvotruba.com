@@ -65,7 +65,7 @@ Also, **using an interface would only create a new dependency** for something th
 `__invoke()` is normal method, just like `__constructor()` is normal for passing dependencies nowadays.
 
 
-## Inspiration from Symfony Community - Matthias Noback & Keving Dunglas
+## Inspiration from Symfony Community - Matthias Noback & Kevin Dunglas
 
 **Why Decouple Controller From Framework?**
 
