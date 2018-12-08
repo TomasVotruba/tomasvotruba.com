@@ -45,7 +45,7 @@ Legacy is spreading, Dark Legacy Lord is happy. *That's why [Don't Read books](/
 
 If time was the only issue, you could just limit Google results to last year. But it's not that easy.
 
-**The old post doesn't mean outdated**. One example for all - Matthias Noback, my favorite PHP writer, wrote about [decopuled controllers as services](https://matthiasnoback.nl/2014/06/how-to-create-framework-independent-controllers/) in 2014. It's still valid and we're just almost getting there now.
+**The old post doesn't mean outdated**. One example for all - Matthias Noback, my favorite PHP writer, wrote about [decoupled controllers as services](https://matthiasnoback.nl/2014/06/how-to-create-framework-independent-controllers/) in 2014. It's still valid and we're just almost getting there now.
 
 ## How to Make it Right?
 
