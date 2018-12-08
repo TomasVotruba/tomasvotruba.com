@@ -7,8 +7,8 @@
     ],
     "require": {
         "php": "^7.2",
-        "symplify/statie": "^5.2",
-        "symplify/package-builder": "^5.2",
+        "symplify/statie": "^5.2.15",
+        "symplify/package-builder": "^5.2.15",
         "nette/utils": "^2.5",
         "J7mbo/twitter-api-php": "^1.0"
     },

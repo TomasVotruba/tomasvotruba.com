@@ -8,8 +8,8 @@
         "nikic/php-parser": "^4.0.4",
         "symfony/http-kernel": "^4.2",
         "symfony/console": "^4.2",
-        "symplify/package-builder": "^5.2",
-        "symplify/statie": "^5.2"
+        "symplify/package-builder": "^5.2.15",
+        "symplify/statie": "^5.2.15"
     },
     "require-dev": {
         "nette/neon": "^2.4",
@@ -20,9 +20,9 @@
         "symfony/process": "^4.2",
         "symfony/stopwatch": "^4.2",
         "symfony/yaml": "^4.2",
-        "symplify/easy-coding-standard": "^5.2",
-        "symplify/latte-to-twig-converter": "^5.2",
-        "symplify/monorepo-builder": "^5.2"
+        "symplify/easy-coding-standard": "^5.2.15",
+        "symplify/latte-to-twig-converter": "^5.2.15",
+        "symplify/monorepo-builder": "^5.2.15"
     },
     "autoload": {
         "psr-4": {

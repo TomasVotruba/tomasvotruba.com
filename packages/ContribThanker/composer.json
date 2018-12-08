@@ -4,8 +4,8 @@
     "require": {
         "php": "^7.2",
         "guzzlehttp/guzzle": "^6.3",
-        "symplify/package-builder": "^5.2",
-        "symplify/statie": "^5.2",
+        "symplify/package-builder": "^5.2.15",
+        "symplify/statie": "^5.2.15",
         "nette/utils": "^2.5"
     },
     "require-dev": {

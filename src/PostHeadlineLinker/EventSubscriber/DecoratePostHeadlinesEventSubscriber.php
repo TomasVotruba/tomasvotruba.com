@@ -31,7 +31,7 @@ final class DecoratePostHeadlinesEventSubscriber implements EventSubscriberInter
     {
         $generatorFilesByType = $beforeRenderEvent->getGeneratorFilesByType();
         /** @var PostFile[] $postFiles */
-        $postFiles = $generatorFilesByType[PostFile::class];
+        $postFiles = $generatorFilesByType['posts'];
 
         foreach ($postFiles as $postFile) {
             $newContent = $this->postHeadlineLinker->processContent($postFile->getContent());
