@@ -95,10 +95,10 @@ I'm working on such PR right now for this blog - [see it on Github]( https://git
 ### What Changes are Included?
 
 - Symfony <strike>4.1</strike> → 4.2
-- Statie posts → official documentation [Statie.org](https://www.statie.org/)
-- [Object Calisthenics post](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) → [Cognitive Complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/)
+- deprecate Statie posts → official documentation [Statie.org](https://www.statie.org/)
+- deprecate [Object Calisthenics post](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) → [Cognitive Complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) instead
 - [Nette\CodingStandard post](/blog/2017/08/14/how-to-apply-nette-coding-standard-in-your-project/) - <strike>0.5</strike> → 2.0
-- deprecated [How to Require Minimal Code Coverage for Github Pull-Requests with Coveralls](/blog/2017/06/12/how-to-require-minimal-code-coverage-for-github-pull-requests-with-coveralls/) - there is no added value
+- deprecate [How to Require Minimal Code Coverage for Github Pull-Requests with Coveralls](/blog/2017/06/12/how-to-require-minimal-code-coverage-for-github-pull-requests-with-coveralls/) - there is no added value
 - news in Symplify 2, 3 and 4 + reflect deprecations and removed classes
 - and few more...
 
