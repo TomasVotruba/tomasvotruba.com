@@ -66,9 +66,8 @@ a:hover, a:focus {
     transition: 0.3s;
 }
 
-a:visited :not(.btn):not(.badge) {
-    opacity: .6;
-    color: #550035;
+#content a:visited:not(.btn):not(.badge) {
+    color: rgba(122, 0, 73, 0.78);
 }
 
 a:focus {
@@ -141,10 +140,6 @@ nav a, nav a:active, nav a:focus, nav a:visited {
 
 article {
     border-bottom: 1px solid #eeeeee;
-}
-
-a.btn-dark:visited {
-    color: #FFF;
 }
 
 #blog #welcome h1 {
