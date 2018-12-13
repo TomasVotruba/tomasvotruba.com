@@ -100,7 +100,7 @@ class LectureController extends BaseController
 }
 ```
 
-This can Rector handle too.
+Rector can handle it for you.
 
 Do you use Laravel and want to move from facades to constructor injection? Rector can help you.
 
@@ -127,11 +127,11 @@ services:
 
 ### Member of Big AST PHP Family
 
-Rector is not the only one who uses `nikic\php-parser` for context-aware operation on your code.
+Rector is not the only tool that uses `nikic\php-parser` for context-aware operation on your code.
 
 You've probably heard of [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). But unfortunately it's read-only for deterministic cases = when 1 error has exactly 1 possible solution.
 
-A bit further is another static analysis tool - [vimeo/psalm](https://github.com/vimeo/psalm) by [Matthew Brown](https://github.com/muglug), which fixes such code. Great job Matthew!
+Another static analysis tool - [vimeo/psalm](https://github.com/vimeo/psalm) by [Matthew Brown](https://github.com/muglug), which fixes such code. Great job Matthew!
 
 ## Easter Egg: Has Google Own "Rector"?
 
@@ -139,7 +139,7 @@ This *setup and forget* approach is so addictive, that Google must have it too, 
 
 And it does! I found 4-page case study *[Large-Scale Automated Refactoring Using ClangMR](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/41342.pdf)*, that was [presented by *Hyrum Wright* on CppCon2014](https://www.youtube.com/watch?v=ZpvvmvITOrk) in 57 minutes. Hyrum doesn't work at Google anymore (as he wrote me), yet I still love his detailed and practical talk.
 
-I'm still amazed by how their approach is 90 % similar to Rector, just for C++.
+I'm still amazed by how their approach is 90% similar to Rector, just for C++.
 
 <br>
 
