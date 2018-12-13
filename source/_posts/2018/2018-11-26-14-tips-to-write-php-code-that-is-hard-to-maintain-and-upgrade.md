@@ -9,7 +9,7 @@ tweet: "New Post on My Blog: 14 Tips to Write #PHP Code that is Hard to Maintain
 tweet_image: "/assets/images/posts/2018/vendor/omg-naming.gif"
 ---
 
-### 3 Sings of Living Vendor Lock-In
+### 3 Signs of Living Vendor Lock-In
 
 `/vendor` is a directory in your project with all the packages dependencies. [Vendor lock-in](https://en.wikipedia.org/wiki/Vendor_lock-in) is life-death dependency company on you.
 It's like having a baby - **you have to take care of it for the next 18 years** (at least):
