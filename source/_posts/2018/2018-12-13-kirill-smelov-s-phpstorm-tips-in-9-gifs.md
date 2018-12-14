@@ -69,7 +69,7 @@ Do you type the same code around a variable zillion times?
 
 ## How to Work With Shortcuts?
 
-Get inspired by watching others, but in the end - **always respect your brain**. Every one of you has**different preferences**.
+Get inspired by watching others, but in the end - **always respect your brain**. Every one of you has **different preferences**.
 
 Let say you create a shortcut "new file":
 
@@ -95,7 +95,7 @@ To give you an idea of my daily work, here is my current list of live templates:
 
 ## Start with Single Step
 
-I took notes about 15 items during Kirill's talk. They all were very interesting and I wanted to integrate at least 5 of them the very next day. I was excited about my skills going speed of light. I put too much on myself, then I was afraid I will fail to integrate them all. So I ended-up using just one.  
+I took notes about 15 items during Kirill's talk. They all were very interesting and I wanted to integrate at least 5 of them the very next day. I was excited about my skills going the speed of light. I put too much on myself, then I was afraid I will fail to integrate them all. So I ended-up using just one.  
 
 What could I do different? **Pick just one tip**. Master it and then move to another. 
 
