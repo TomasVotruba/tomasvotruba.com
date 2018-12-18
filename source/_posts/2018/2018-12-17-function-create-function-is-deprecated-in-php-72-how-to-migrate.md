@@ -82,7 +82,7 @@ The `"min(b^2+a, a^2,b) = "` is still a string, because it was escaped string in
 
 <img src="http://www.memefaces.com/static/images/memes/2868.jpg">
 
-To easy for you? Damn, you're smart.
+Too easy for you? Damn, you're smart.
 
 <br>
 
