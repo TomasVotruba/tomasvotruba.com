@@ -4,7 +4,7 @@ title: "Function create_function() is Deprecated in PHP 7.2 - How to Migrate?"
 perex: |
     If there would be "Miss Deprecation of PHP 7.2", `create_function()` would definitely win. They can be **very complex, tricky and very hard convert to PHP code**. Moreover without tests.
     <br><br>
-    Do you have over 5 `create_function()` pieces in your code? Let's see how to migrate them.   
+    Do you have over 5 `create_function()` pieces in your code? Let's see how to migrate them.
 tweet: "Learn new hack on my  🐘 #php blog: Function create_function() is Deprecated in #PHP 7.2 - How to Migrate?"
 tweet_image: "/assets/images/posts/2018/create-function/sonic.png"
 ---
@@ -49,7 +49,7 @@ $callback = function ($matches) {
 };
 ```
 
-As you can see: 
+As you can see:
 
 - 1st argument = function arguments
 - 2nd argument = function body
@@ -116,7 +116,7 @@ Ok, but you won't make this code snippet I found in Drupal/Wordpress:
 ```php
 <?php
 
-$this->map_xmlns_func = create_function('$p,$n', '$xd = "xmlns"; if(strlen($n[0])>0) $xd
+$this->map_xmlns_func = create_function('$p,$n', 'if(strlen($n[0])>0) $xd
     .= ":{$n[0]}"; return "{$xd}=\"{$n[1]}\"";');
 ```
 
@@ -128,7 +128,6 @@ $this->map_xmlns_func = create_function('$p,$n', '$xd = "xmlns"; if(strlen($n[0]
 <?php
 
 $this->map_xmlns_func = function ($p, $n) use ($xd) {
-    $xd = "xmlns";
     if (strlen($n[0]) > 0) {
         $xd .= ":{$n[0]}";
     }
@@ -140,14 +139,14 @@ Who did forget `use ($xd)`? An anonymous function can't access variables that ar
 
 <br>
 
-And we could continue and continue with more *edgy* cases... but I bet **you're looking for a solution for your specific function**.  
+And we could continue and continue with more *edgy* cases... but I bet **you're looking for a solution for your specific function**.
 Well, you could ask on StackOverflow ([181 results and counting](https://www.google.com/search?q="deprecated"+"create_function"+"php"+"7.2"+site%3Astackoverflow.com+-preg_replace&oq="deprecated"+"create_function"+"php"+"7.2"+site%3Astackoverflow.com+-preg_replace)), but posting each of your 10 cases might get you banned. I have good news for you.
 
 <img src="/assets/images/posts/2018/create-function/sonic.png" class="img-thumbnail">
 
 <br>
 
-Today in 2019 (almost there), you can instantly upgrade your code and it **will take you less time to install & run, then read this whole post so far**. 
+Today in 2019 (almost there), you can instantly upgrade your code and it **will take you less time to install & run, then read this whole post so far**.
 
 Just setup [Rector](https://github.com/rectorphp/rector) and run it:
 
@@ -162,7 +161,7 @@ services:
 ```
 
 ```bash
-vendor/bin/rector process src 
+vendor/bin/rector process src
 ```
 
 <br>
