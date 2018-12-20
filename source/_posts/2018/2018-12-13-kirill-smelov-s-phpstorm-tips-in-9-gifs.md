@@ -95,9 +95,9 @@ To give you an idea of my daily work, here is my current list of live templates:
 
 ## Start with Single Step
 
-I took notes about 15 items during Kirill's talk. They all were very interesting and I wanted to integrate at least 5 of them the very next day. I was excited about my skills going the speed of light. I put too much on myself, then I was afraid I will fail to integrate them all. So I ended-up using just one.  
+I took notes about 15 items during Kirill's talk. They all were very interesting and I wanted to integrate at least 5 of them the very next day. I was excited about my skills going the speed of light. I put too much on myself, then I was afraid I will fail to integrate them all. So I ended-up using just one.
 
-What could I do different? **Pick just one tip**. Master it and then move to another. 
+What could I do different? **Pick just one tip**. Master it and then move to another.
 
 <br>
 
@@ -109,4 +109,4 @@ Integrate it and if you want more, you can always come back to this post.
 
 <br>
 
-Thanks to [Presentation Assistant](https://plugins.jetbrains.com/plugin/7345-presentation-assistant) for the green banner that helped to make this post. 
+Thanks to [Presentation Assistant](https://plugins.jetbrains.com/plugin/7345-presentation-assistant) for the green banner that helped to make this post.
