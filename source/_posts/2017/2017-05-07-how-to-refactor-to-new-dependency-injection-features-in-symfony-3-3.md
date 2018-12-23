@@ -210,9 +210,7 @@ services:
         autoconfigure: true
 
     App\: # no more manual registration of similar groups of services
-        resource: ../{Controller,Command,Subscriber}
-
-    App\SomeService: ~
+        resource: '../'
 
     App\Repository\FirstRepository:
         calls:
@@ -232,15 +230,13 @@ services:
         autowire: true
         autoconfigure: true
 
+    App\:
+        resource: '../'
+
     _instanceof: # clean and explicit dependency injection to abstract services
         App\Repository\AbstractRepository:
             calls:
                 - ["setEntityManager", ["@entity_manager"]]
-
-    App\:
-        resource: ../{Controller,Command,Subscriber,Repository}
-
-    App\SomeService: ~
 ```
 
 ### 6. Use Setter Injection
@@ -285,9 +281,7 @@ services:
         autoconfigure: true
 
     App\:
-        resource: ../{Controller,Command,Subscriber,Repository}
-
-    App\SomeService: ~
+        resource: '../'
 ```
 
 That is awesome, isn't it?
