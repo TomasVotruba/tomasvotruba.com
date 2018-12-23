@@ -83,7 +83,7 @@ services:
         autowire: true
         tags:
             - { name: kernel.event_subscriber }
-    second_command:
+    second_subscriber:
         class: App\EventSubscriber\SecondSubscriber
         autowire: true
         tags:
@@ -128,7 +128,7 @@ services:
         class: App\EventSubscriber\FirstSubscriber
         tags:
             - { name: kernel.event_subscriber }
-    second_command:
+    second_subscriber:
         class: App\EventSubscriber\SecondSubscriber
         tags:
             - { name: kernel.event_subscriber }
@@ -167,7 +167,7 @@ services:
     # event subscribers
     first_subscriber:
         class: App\EventSubscriber\FirstSubscriber
-    second_command:
+    second_subscriber:
         class: App\EventSubscriber\SecondSubscriber
 ```
 
