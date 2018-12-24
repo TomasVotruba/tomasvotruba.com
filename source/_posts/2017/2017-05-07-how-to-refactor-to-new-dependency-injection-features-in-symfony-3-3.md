@@ -6,7 +6,13 @@ perex: |
     Each of them is quite nice, <strong>but combined together - they are huge jump</strong> compare to what we have now.
     <br><br>
     Today I will show you what code can you drop and how to migrate it.
-tweet: "How to refactor to new #symfony 3.3 DI features? #examples #php"
+tweet: "Learn new  🐘 hack: How to refactor to new #symfony 3.3 DI features? #examples #php #yaml #tool"
+
+updated_since: "December 2018"
+updated_message: |
+    I've released <a href="https://github.com/Symplify/Autodiscovery">Symplify/Autodiscovery</a> package, that <strong><a href="https://github.com/Symplify/Symplify/blob/master/packages/Autodiscovery/README.md#yaml-convertor">migrates</a> old <code>service.yml</code> configs to autodiscovery format</strong> for you.
+    <br><br>
+    Why do it manually? :)
 ---
 
 ## What is New?
@@ -214,8 +220,6 @@ abstract class AbstractRepository
      */
     private $entityManager;
 
-    // ...
-
     /**
      * @required
      */
@@ -241,12 +245,8 @@ services:
         resource: '../'
 ```
 
-That is awesome, isn't it?
+You're awesome! Now you're using all the shiny new Symfony 3.3 Dependency Injection features.
 
-Now you are using all the shiny new Symfony 3.3 Dependency Injection features.
+<br>
 
-### More in Symfony Flex
-
-If you need more examples, check out [`manifest.json` file for FrameworkBundle by Symfony Flex](https://github.com/symfony/recipes/blob/master/symfony/framework-bundle/3.3/config/services.yaml).
-
-**Do you like it? Do you plan to skip some of those and stick to the current syntax?**
+**What is your favorite change?**
