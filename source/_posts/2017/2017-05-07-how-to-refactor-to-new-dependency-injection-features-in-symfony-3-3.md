@@ -6,33 +6,32 @@ perex: |
     Each of them is quite nice, <strong>but combined together - they are huge jump</strong> compare to what we have now.
     <br><br>
     Today I will show you what code can you drop and how to migrate it.
-tweet: "How to refactor to new #symfony 3.3 DI features? #examples #php"
+tweet: "Learn new  🐘 hack: How to refactor to new #symfony 3.3 DI features? #examples #php #yaml #tool"
+
+updated_since: "December 2018"
+updated_message: |
+    I've released <a href="https://github.com/Symplify/Autodiscovery">Symplify/Autodiscovery</a> package, that <strong><a href="https://github.com/Symplify/Symplify/blob/master/packages/Autodiscovery/README.md#yaml-convertor">migrates</a> old <code>service.yml</code> configs to autodiscovery format</strong> for you.
+    <br><br>
+    Why do it manually? :)
 ---
 
-## What is new?
+## What is New?
 
-If you follow [Symfony blog](https://symfony.com/blog/), you will already know about:
+Symfony 3.3+ brings new that will completely **change they we register services**:
 
-- **[autoconfigure](https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration)**
-- **[`_defaults`, `instanceof` and simpler service registration](https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration)**
-- **[from named services to class services](https://symfony.com/blog/new-in-symfony-3-3-optional-class-for-named-services)**
-- [`autowire()` and name tag shortcuts](https://symfony.com/blog/new-in-symfony-3-3-added-new-shortcut-methods)
+- [`autoconfigure`](https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration)
+- [`_defaults` and `instanceof`](https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration)
+- [named services → class services](https://symfony.com/blog/new-in-symfony-3-3-optional-class-for-named-services)
+- [PSR-4-based service autodiscovery](https://github.com/symfony/symfony/pull/21289)
 
-And there are some more, that **were not mentioned on the blog**:
-
-- **[PSR-4-based services discovery and registration](https://github.com/symfony/symfony/pull/21289)**
-    - Using Nette? Check tools [by F3l1x](https://github.com/contributte/di) and [Pavel Janda](https://github.com/ublaboo/directory-register)
-- [action method injection](https://github.com/symfony/symfony/pull/21771) - known [from Laravel](https://mattstauffer.co/blog/laravel-5.0-method-injection#solution)
-- [abstract controller](https://github.com/symfony/symfony/pull/22157)
-
-**Those bold** will be important part of every Symfony 3.3+ application. You can click on them to get to post or PR, where they're explained in
-more detailed way. But I think there is **quicker way to learn them**...
+You can click read post/PR in detail, but you take **this shortcut to learn them**...
 
 <br>
 
-### "A full code example is worth ten thousand words of explanation."
-
-*Stephen P. Thomas*
+<blockquote class="blockquote text-center">
+    "A full code example is worth ten thousand words of explanation."
+    <footer class="blockquote-footer">Stephen P. Thomas</footer>
+</blockquote>
 
 <br>
 
@@ -65,7 +64,6 @@ services:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
 
-    # console commands
     first_command:
         class: App\Command\FirstCommand
         autowire: true
@@ -76,18 +74,6 @@ services:
         autowire: true
         tags:
             - { name: console.command }
-
-    # event subscribers
-    first_subscriber:
-        class: App\EventSubscriber\FirstSubscriber
-        autowire: true
-        tags:
-            - { name: kernel.event_subscriber }
-    second_subscriber:
-        class: App\EventSubscriber\SecondSubscriber
-        autowire: true
-        tags:
-            - { name: kernel.event_subscriber }
 ```
 
 ### 1. Let's add `_defaults`
@@ -113,7 +99,6 @@ services:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
 
-    # console commands
     first_command:
         class: App\Command\FirstCommand
         tags:
@@ -122,16 +107,6 @@ services:
         class: App\Command\SecondCommand
         tags:
             - { name: console.command }
-
-    # event subscribers
-    first_subscriber:
-        class: App\EventSubscriber\FirstSubscriber
-        tags:
-            - { name: kernel.event_subscriber }
-    second_subscriber:
-        class: App\EventSubscriber\SecondSubscriber
-        tags:
-            - { name: kernel.event_subscriber }
 ```
 
 ### 2. Use autoconfigure
@@ -158,17 +133,10 @@ services:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
 
-    # console commands
     first_command:
         class: App\Command\FirstCommand
     second_command:
         class: App\Command\SecondCommand
-
-    # event subscribers
-    first_subscriber:
-        class: App\EventSubscriber\FirstSubscriber
-    second_subscriber:
-        class: App\EventSubscriber\SecondSubscriber
 ```
 
 ### 3. Use Class-Named Services
@@ -191,13 +159,8 @@ services:
         calls:
             - ["setEntityManager", ["@entity_manager"]]
 
-    # console commands
     App\Command\FirstCommand: ~
     App\Command\SecondCommand: ~
-
-    # event subscribers
-    App\EventSubscriber\FirstSubscriber: ~
-    App\EventSubscriber\SecondSubscriber: ~
 ```
 
 ### 4. Use PSR-4 based service autodiscovery and registration
@@ -221,7 +184,7 @@ services:
 ```
 
 
-### 5. Use `_instanceof`
+### 5. Use `_instanceof`...
 
 ```yaml
 # app/config/services.yml
@@ -239,13 +202,13 @@ services:
                 - ["setEntityManager", ["@entity_manager"]]
 ```
 
-### 6. Use Setter Injection
+### 5. ...or Setter Injection
 
-You can even remove the `_instanceof` with setter injection.
-
-First, modify the abstract repository to add the `@required` annotation to `setEntityManager`:
+You can even remove the `_instanceof` with setter injection. First, modify the abstract repository to add the `@required` annotation to `setEntityManager`:
 
 ```php
+<?php
+
 namespace App\Repository;
 
 use Doctrine\ORM\EntityManagerInterface;
@@ -256,8 +219,6 @@ abstract class AbstractRepository
      * @var EntityManagerInterface
      */
     private $entityManager;
-
-    // ...
 
     /**
      * @required
@@ -284,12 +245,8 @@ services:
         resource: '../'
 ```
 
-That is awesome, isn't it?
+You're awesome! Now you're using all the shiny new Symfony 3.3 Dependency Injection features.
 
-Now you are using all the shiny new Symfony 3.3 Dependency Injection features.
+<br>
 
-### More in Symfony Flex
-
-If you need more examples, check out [`manifest.json` file for FrameworkBundle by Symfony Flex](https://github.com/symfony/recipes/blob/master/symfony/framework-bundle/3.3/config/services.yaml).
-
-**Do you like it? Do you plan to skip some of those and stick to the current syntax?**
+**What is your favorite change?**
