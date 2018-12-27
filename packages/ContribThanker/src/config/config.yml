@@ -14,7 +14,7 @@ services:
 
     TomasVotruba\ContribThanker\:
         resource: '../'
-        exclude: '../Exception'
+        exclude: '../{Exception}'
 
     GuzzleHttp\Client: ~
     Symfony\Component\Filesystem\Filesystem: ~
