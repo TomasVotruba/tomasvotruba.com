@@ -11,7 +11,7 @@ parameters:
                 - { name: "PHP Asia @ Singapore, September 2018", link: "https://2018.phpconf.asia/" }
                 - { name: "Symfony UG Berlin @ Germany, August 2018", link: "https://www.meetup.com/sfugberlin/events/253573567" }
                 - { name: "ViennaPHP Montly Gathering @ Austria, September 2018", link: "https://www.meetup.com/viennaphp/events/ncmvwpyxmbbc/" }
-                - { name: "ViennaPHP Montly Gathering @ Austraia, June 2018", link: "https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/" }
+                - { name: "ViennaPHP Montly Gathering @ Austria, June 2018", link: "https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/" }
                 - { name: "Friends of PHP in Pardubice @ Czech Republic, June 2018", link: "https://www.facebook.com/events/1783858791700944/" }
                 - { name: "Berlin PHP UG @ Germany, June 2018", link: "http://www.bephpug.de/2018/06/05/june.html" }
                 - { name: "PHPLive @ Czech Republic & Slovakia, 2018", link: "https://www.phplive.cz" }
@@ -37,7 +37,7 @@ parameters:
             demo_link: "https://github.com/TomasVotruba/monorepo-demo"
             video_link: "https://slideslive.com/38911637/jak-rozjet-monorepo-za-10-minut"
             events:
-                - { name: "Developer Day 2018 @ Czech Republic, Octover 2018", link: "https://www.hubbr.cz/udalosti/events/developer-day-2018" }
+                - { name: "Developer Day 2018 @ Czech Republic, October 2018", link: "https://www.hubbr.cz/udalosti/events/developer-day-2018" }
                 - { name: "Friends of PHP Prague @ Czech Republic, September 2018", link: "https://www.meetup.com/friends-of-php-prague/events/254388973/" }
 
         -
