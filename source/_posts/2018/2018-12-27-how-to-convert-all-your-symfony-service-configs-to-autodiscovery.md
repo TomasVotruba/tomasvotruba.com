@@ -36,7 +36,7 @@ I already wrote [How to refactor to new Dependency Injection features in Symfony
 ```yaml
 services:
     _defaults:
-        autowire: ture
+        autowire: true
     App\:
         resource: /src
 ```
