@@ -44,7 +44,7 @@ Let's create our index page.
 Hi!
 ```
 
-### Use Layout if you Like
+### Setup Layout
 
 ```html
 <!-- source/_layouts/default.twig -->
@@ -64,7 +64,7 @@ And add layout and block content to the `index.twig`:
 
 ```html
 ---
-layout: default
+layout: "layouts/default.twig"
 ---
 
 {% block content %}
@@ -94,9 +94,9 @@ and open [localhost:8000](https://localhost:8000) in your browser.
 
 Voilá!
 
-
 <div class="text-center">
     <img src="/assets/images/posts/2017/statie-1/statie-cycle.gif">
+    <br>
     <em>The same demo as above, just with Latte syntax</em>
 </div>
 
