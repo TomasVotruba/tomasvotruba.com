@@ -71,30 +71,30 @@ services:
 
 ## What Can Go Wrong?
 
-There are many reasons to **automate this work**, because **there are many gotchas** you have to be careful about. In each single services registration.
+There are many reasons to **automate this work**, because **there are many gotchas** you have to be careful about. In each single service registration.
 
 ### 1. Tags
 
-Name-only system tags can be removed thanks to `autoconfigure`:
+Name-only system tags **can be removed** thanks to `autoconfigure`:
 
-```yaml
-services:
-    first_command:
-        class: App\Command\FirstCommand
-        tags:
-            - { name: 'console.command' }
+```diff
+ services:
+-    first_command:
+-        class: App\Command\FirstCommand
+-        tags:
+-            - { name: 'console.command' }
+-
+-    second_command:
+-        class: App\Command\SecondCommand
+-        tags: ['console.command']
++    _defaults:
++        autoconfigure: true
++
++     App\Command\:
++         resource: '../src/Command'
 ```
 
-So can this:
-
-```yaml
-services:
-    first_command:
-        class: App\Command\FirstCommand
-        tags: ['console.command']
-```
-
-But not this [lazy-loaded command](https://symfony.com/doc/current/console/commands_as_services.html#lazy-loading):
+But you have to **keep** [lazy-loaded commands](https://symfony.com/doc/current/console/commands_as_services.html#lazy-loading)
 
 ```yaml
 services:
@@ -104,13 +104,13 @@ services:
           - { name: 'console.command', command: 'first' }
 ```
 
-And neither this:
+And tags with metadata:
 
 ```yaml
 services:
     App\EventListener\ExceptionListener:
         tags:
-            - { name: kernel.event_listener, event: kernel.exception }
+            - { name: 'kernel.event_listener', event: 'kernel.exception' }
 ```
 
 ### 2. Single-class Names
@@ -137,6 +137,7 @@ services:
 Configs are usually mixed of your code (`/app` or `/src`) and 3rd party code (`/vendor`):
 
 ```yaml
+# old config
 services:
     App\SomeService: ~
     App\AnotherService: ~
@@ -145,7 +146,7 @@ services:
     Symplify\PackageBuilder\FileSystem\FileGuard: ~
 ```
 
-Converter sees a namespace and tries to use autodiscovery:
+Seeing this you have to think about that. If not, you might accidentally apply autodiscovery everywhere:
 
 ```diff
  services:
@@ -160,7 +161,7 @@ Converter sees a namespace and tries to use autodiscovery:
 +        resource: ../vendor/symplify/package-builder/src
 ```
 
-Ops, **the last case should not be converted** - all 3rd party classes are better left explicit since we almost never register them all and they're handled by their own config/bundle:
+Ops, the last case should not be converted - **all 3rd party classes have to be explicit** since they're handled by their own config/bundle in `/vendor`:
 
 ```yaml
 services:
