@@ -6,6 +6,7 @@ perex: |
     <br><br>
     **Was it Symfony? Doctrine? PHP or...**
 tweet: "New Post on #php 🐘 blog: Your Most Favorite Posts in 2018 ... and Happy New Year 2019! 🚀 🎆🎆🎆"
+tweet_image: "/assets/images/posts/2018/top-posts/pie.png"
 ---
 
 ...without further ado, these are stats **for unique readers** from Google Analytics for 2018:
