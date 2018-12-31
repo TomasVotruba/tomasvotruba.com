@@ -12,7 +12,7 @@ updated_since: "December 2018"
 updated_message: |
     Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
     <br>
-    <code>ImportNamespacedNameFixer</code> [was removed](https://github.com/Symplify/Symplify/pull/1110) in favor of <code>ReferenceUsedNamesOnlySniff</code> from <a href="https://github.com/slevomat/coding-standard">slevomat/coding-standard</a>
+    <code>ImportNamespacedNameFixer</code> <a href="https://github.com/Symplify/Symplify/pull/1110">was removed</a> in favor of <code>ReferenceUsedNamesOnlySniff</code> from <a href="https://github.com/slevomat/coding-standard">slevomat/coding-standard</a>
 ---
 
 Starting with the simple checkers and moving to those, which save you even hours of manual work.
