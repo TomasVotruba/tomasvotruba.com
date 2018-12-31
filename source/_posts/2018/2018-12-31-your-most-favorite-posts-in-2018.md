@@ -9,7 +9,7 @@ tweet: "New Post on #php 🐘 blog: Your Most Favorite Posts in 2018 ... and Hap
 tweet_image: "/assets/images/posts/2018/top-posts/pie.png"
 ---
 
-...without further ado, these are stats **for unique readers** from Google Analytics for 2018:
+Without further ado, these are stats **for unique readers** from Google Analytics for 2018:
 
 <div class="text-center pt-3">
     <img src="/assets/images/posts/2018/top-posts/pie.png" class="mr-5">
