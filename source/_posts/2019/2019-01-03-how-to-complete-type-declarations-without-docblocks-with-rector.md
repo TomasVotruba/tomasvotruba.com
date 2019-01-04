@@ -154,7 +154,7 @@ Is one object or null?
 
 <blockquote class="blockquote text-center mb-5 mt-5">
     If PHPStorm or PHPStan knows what type it is,<br> 
-    there is a big chance you Rector can change it in everywhere in your code.
+    there is a big chance Rector can change it everywhere in your code.
 </blockquote>
 
 <br>
