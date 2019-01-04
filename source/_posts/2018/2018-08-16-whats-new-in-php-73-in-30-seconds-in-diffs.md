@@ -149,14 +149,14 @@ But in case of that smelly (3rd party) code, there is a help:
 
 ```diff
 -json_decode($json);
-+json_decode($json, null, null, JSON_THROW_ON_ERROR);
++json_decode($json, false, 512, JSON_THROW_ON_ERROR);
 ```
 
 So you'll be able to do:
 
 ```php
 try {
-    return json_decode($json, null, null, JSON_THROW_ON_ERROR);
+    return json_decode($json, false, 512, JSON_THROW_ON_ERROR);
 } catch (JsonException $exception) {
     // ...
 }
