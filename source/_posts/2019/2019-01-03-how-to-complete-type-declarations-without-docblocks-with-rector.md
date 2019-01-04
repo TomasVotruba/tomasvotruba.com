@@ -166,7 +166,7 @@ Just setup [Rector](https://github.com/rectorphp/rector) and upgrade your code:
 ```yaml
 # rector.yml
 services:
-    Rector\Php\Rector\FunctionLike\ReturnScalarTypehintRector: ~
+    Rector\Php\Rector\FunctionLike\ReturnTypeDeclarationRector: ~
 ```
 ```bash
 vendor/bin/rector process src 
