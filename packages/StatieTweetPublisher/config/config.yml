@@ -1,6 +1,6 @@
 parameters:
     twitter_name: 'VotrubaT'
-    source_directory: '%kernel.project_dir%/../../../source'
+    source_directory: '%kernel.project_dir%/../../source'
     minimal_gap_in_days: 1 # how many days to wait before publishing another Tweet
 
     env(TWITTER_CONSUMER_KEY): '...'
@@ -16,6 +16,8 @@ parameters:
 services:
     _defaults:
         autowire: true
+        autoconfigure: true
+        public: true
         bind:
             '$siteUrl': '%site_url%'
             '$sourceDirectory': '%source_directory%'
@@ -24,9 +26,8 @@ services:
 
     # PSR-4 autodiscovery
     TomasVotruba\StatieTweetPublisher\:
-        resource: ../
-        exclude: ../Tweet
-        public: true # for container fetch
+        resource: '../src'
+        exclude: '../src/{Tweet}'
 
     # Twitter API
     TomasVotruba\StatieTweetPublisher\TwitterApi\TwitterApiFactory:

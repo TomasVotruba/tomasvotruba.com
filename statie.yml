@@ -1,7 +1,7 @@
 imports:
     - { resource: 'source/_data/*.yml' }
-    - { resource: 'src/*/config/config.yml' }
-    - { resource: 'packages/StatieTweetPublisher/src/config/config.yml' }
+    - { resource: 'config/config.yml' }
+    - { resource: 'packages/StatieTweetPublisher/config/config.yml' }
     # enabled on localhost only
     - { resource: 'config/config.local.yml',  ignore_errors: true }
 

@@ -7,13 +7,13 @@
     ],
     "require": {
         "php": "^7.2",
-        "symplify/statie": "^5.2.15",
-        "symplify/package-builder": "^5.2.15",
+        "symplify/statie": "^5.3",
+        "symplify/package-builder": "^5.3",
         "nette/utils": "^2.5",
         "J7mbo/twitter-api-php": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.4"
+        "phpunit/phpunit": "^7.5"
     },
     "autoload": {
         "psr-4": {
