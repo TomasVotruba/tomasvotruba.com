@@ -500,7 +500,14 @@ table ul {
 
 @media (max-width: 768px) {
     #contact-points {
-        font-size: 1.4em;
+        font-size: 1.2em;
+        line-height: 2em;
+    }
+}
+
+@media (max-width: 450px) {
+    #contact-points {
+        font-size: 1.1em;
         line-height: 2em;
     }
 }
