@@ -1,5 +1,5 @@
 imports:
-    - { resource: '../packages/ContribThanker/src/config/config.yml' }
+    - { resource: '../packages/ContribThanker/config/config.yml' }
 
 services:
     _defaults:

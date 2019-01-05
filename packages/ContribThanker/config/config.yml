@@ -13,8 +13,8 @@ services:
         public: true
 
     TomasVotruba\ContribThanker\:
-        resource: '../'
-        exclude: '../{Exception}'
+        resource: '../src'
+        exclude: '../src/{Exception}'
 
     GuzzleHttp\Client: ~
     Symfony\Component\Filesystem\Filesystem: ~
