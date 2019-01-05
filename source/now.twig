@@ -1,4 +1,45 @@
-@todo
-aha!
+---
+layout: "_layouts/default.twig"
+title: "What I'm doing Now"
+id: now
+---
 
-https://sivers.org/now
+{% block content %}
+    <div class="container" id="contact">
+        <h1>{{ title }}</h1>
+
+        <p class="text-muted">(This is a now page, and if you have your own site, you should <a href="https://nownownow.com/about">make one</a>, too.)</p>
+
+        <br>
+
+        <ul>
+            <li>I'm working every day on <a href="https://github.com/rectorphp/rector">Rector, a PHP tool</a> that helps developers to upgrade and refactor giant code bases with fractions of time</li>
+            <li>I'm coding <a href="https://pehapkari.cz/vzdelavej-se/">Symfony 4.2 application</a> for PHP trainings in Czech Republic - <a href="https://github.com/tomasvotruba/open-project">see the code</a></li>
+        </ul>
+
+        <br>
+
+        <p><strong>I'm learning from books</strong></p>
+        <ul class="mt-3">
+            <li>
+                <a href="https://www.amazon.com/Rebel-Talent-Pays-Break-Rules/dp/0062694634">Rebel Talent: Why It Pays to Break the Rules at Work and in Life</a>
+            </li>
+            <li>
+                <a href="https://www.amazon.com/Them-Hate-Each-Other-Heal-ebook/dp/B079YL56S3">Them: Why We Hate Each Other - and How to Heal</a>
+            </li>
+            <li>
+                <a href="https://www.amazon.com/Speak-Peace-World-Conflict-Change/dp/1892005174">Speak Peace in a World of Conflict: What You Say Next Will Change Your World</a>
+            </li>
+        </ul>
+
+        <br>
+
+        <p>
+            I'm staying <a href="/blog/2017/01/20/4-emotional-reasons-why-I-quit-my-twitter/">away from online</a>, but I reply right away when you <a href="/contact/">call me</a>.
+        </p>
+
+        <br>
+
+        <p class="text-muted">Updated January 5th, 2018, from Liberec, Czech Republic.</p>
+    </div>
+{% endblock %}
