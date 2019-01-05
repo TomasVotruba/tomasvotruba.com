@@ -1,6 +1,4 @@
 {
-    "name": "tomasvotruba.cz",
-    "version": "1.0.0",
     "dependencies": {
         "child_process": "^1.0",
         "gifplayer": "^0.3.3",
@@ -8,5 +6,6 @@
         "gulp-cli": "^2.0",
         "gulp-util": "^3.0",
         "gulp-watch": "^5.0"
-    }
+    },
+    "private": true
 }
