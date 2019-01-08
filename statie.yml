@@ -1,17 +1,15 @@
 imports:
     - { resource: 'source/_data/*.yml' }
-    - { resource: 'config/config.yml' }
-    - { resource: 'packages/StatieTweetPublisher/config/config.yml' }
     # enabled on localhost only
-    - { resource: 'config/config.local.yml',  ignore_errors: true }
+    - { resource: 'statie.local.yml',  ignore_errors: true }
 
 parameters:
+
+    # shall be removable in next dev version
     generators:
         posts:
             # relative to /source
             layout: '_layouts/post.twig'
-
-    templating: 'twig'
 
     # global templates variables
     google_analytics_tracking_id: "UA-46082345-1"
@@ -20,9 +18,7 @@ parameters:
     disqus_shortname: "itsworthsharing"
     github_repository_tests_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests"
 
+    post_headline_linker_enabled: true
+
     # Statie settings
     github_repository_source_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/source"
-
-
-services:
-    TomasVotruba\ContribThanker\Twig\ContribThankerFilterProvider: ~

@@ -1,6 +1,6 @@
 /output
 /vendor
-composer.lock
 /node_modules
-/config/config.local.yml
+composer.lock
 package-lock.json
+*.local.yml
