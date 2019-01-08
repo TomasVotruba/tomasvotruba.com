@@ -13,12 +13,12 @@ Without further ado, these are stats **for unique readers** from Google Analytic
 
 <div class="text-center pt-3">
     <img src="/assets/images/posts/2018/top-posts/pie.png" class="mr-5">
-    
+
     <strong><span class="bigger">3 posts = 31,4 % of readers</span></strong>
 
     <br>
     <br>
-    
+
     <img src="/assets/images/posts/2018/top-posts/top-stats.png" class="img-thumbnail">
 </div>
 

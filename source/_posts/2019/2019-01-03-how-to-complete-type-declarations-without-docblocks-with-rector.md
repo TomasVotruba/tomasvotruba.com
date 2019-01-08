@@ -4,7 +4,7 @@ title: "How to Complete Type Declarations without Docblocks with Rector"
 perex: |
     In [previous post](/blog/2018/12/10/rocket-science-behind-migration-of-docblock-types-to-php-typehints/) we looked at how to migrate from docblocks to type declarations. From `@param Type $param` to `Type $param`. Even if it doesn't break code like coding standards do, works with inheritance, localized `self` and `static` and propagates types to all child classes, it's still not such a big deal.
     <br><br>
-    But **how do you complete type declarations if don't have any docblocks?**  
+    But **how do you complete type declarations if don't have any docblocks?**
 tweet: "New Post on #php 🐘 blog: How to Complete Type Declarations without Docblocks with #Rectorphp"
 tweet_image: "/assets/images/posts/2019/type-declarations/peek.gif"
 ---
@@ -19,7 +19,7 @@ class SomeClass
     public function getItems()
     {
         return ['Statie', 'EasyCodingStandard', 'Rector'];
-    }    
+    }
 }
 ```
 
@@ -34,7 +34,7 @@ If you only typed `@return` annotation 4 years ago, where no-one thought there w
 +    public function getItems(): array
      {
          return ['Statie', 'EasyCodingStandard', 'Rector'];
-     }    
+     }
  }
 ```
 
@@ -42,8 +42,8 @@ Now, I hope you've learned, that **future compatibility is a thing** and you'll 
 
 ## "It's Not My Fault"
 
-Well, but what if you've inherited such legacy code, are you to blame? No, **no-one is to blame even if you wrote the code**. That's how change works. **We feel like we know all today, but in 5 years array-type declarations will be considered code smell** and we keep it only *for historical reasons*. 
- 
+Well, but what if you've inherited such legacy code, are you to blame? No, **no-one is to blame even if you wrote the code**. That's how change works. **We feel like we know all today, but in 5 years array-type declarations will be considered code smell** and we keep it only *for historical reasons*.
+
 So how can we fight the change together?
 
 ```php
@@ -54,15 +54,15 @@ class SomeClass
     public function getItems()
     {
         $items = ['Statie', 'EasyCodingStandard', 'Rector'];
-        
+
          return $this->sortItems($items);
     }
-    
+
     private function sortItems(array $items)
     {
         sort($items);
         return $items;
-    }  
+    }
 }
 ```
 
@@ -80,13 +80,13 @@ How would upgrade this code to type declarations?
 
          return $this->sortItems($items);
      }
-    
+
 -    private function sortItems(array $items)
 +    private function sortItems(array $items): array
      {
          sort($items);
          return $items;
-     }  
+     }
  }
 ```
 
@@ -94,14 +94,14 @@ Good job, that's correct! Now you can do it for the rest of your 25 000 lines of
 
 Or... You can be *lazy smart * and **use static analysis from PHPStan to do it for you**. It already knows that:
 
-- `$items` is `array` with strings 
+- `$items` is `array` with strings
 - `sort` sorts `array` and keeps it an `array`
 
 That was too easy... let's check case we'll find in our code:
 
 ```diff
  <?php
- 
+
  // ...
 
 -public function getResult()
@@ -110,9 +110,9 @@ That was too easy... let's check case we'll find in our code:
      if (true) {
          return 5.2;
      }
-    
+
      $value = 5.3;
-    
+
      return $value;
  }
 ```
@@ -134,14 +134,14 @@ Is one object or null?
 
 ```diff
  <?php
- 
+
  // ...
 
 -public function resolve(Product $product)
 +public function resolve(Product $product): ?Product
  {
      // ...
-     
+
      if (...) {
          return null;
      }
@@ -153,7 +153,7 @@ Is one object or null?
 <br>
 
 <blockquote class="blockquote text-center mb-5 mt-5">
-    If PHPStorm or PHPStan knows what type it is,<br> 
+    If PHPStorm or PHPStan knows what type it is,<br>
     there is a big chance Rector can change it everywhere in your code.
 </blockquote>
 
@@ -169,7 +169,7 @@ services:
     Rector\Php\Rector\FunctionLike\ReturnTypeDeclarationRector: ~
 ```
 ```bash
-vendor/bin/rector process src 
+vendor/bin/rector process src
 ```
 
 Done!
@@ -208,9 +208,9 @@ class Command
     private $synopsis = [];
     private $usages = [];
     private $helperSet;
-    
+
     // ...
-    
+
     public function setApplication(Application $application = null)
     {
         $this->application = $application;
@@ -220,16 +220,16 @@ class Command
 
 Quiz question: how would **you utilize AST to autocomplete all `@var` annotations to properties above**?
 
-<br> 
+<br>
 
 `$this->application = $application;` we know that `$application` can be upgraded to:
 
 ```diff
 +/**
 + * @var \Symfony\Component\Console\Application
-+ */ 
++ */
  private $application;
-``` 
+```
 
 That's it! Let's put this algorithm into Rector:
 
@@ -240,7 +240,7 @@ services:
 ```
 
 ```bash
-vendor/bin/rector process src 
+vendor/bin/rector process src
 ```
 
 ↓
@@ -329,7 +329,7 @@ If you want to how Rector works behind this scene, ([check the PR](https://githu
 
 <br>
 
-What more could be done to turn legacy code to elegant code? Share in comments, I'm eager to know.  
+What more could be done to turn legacy code to elegant code? Share in comments, I'm eager to know.
 
 <br>
 
