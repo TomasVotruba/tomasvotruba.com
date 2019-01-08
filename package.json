@@ -4,7 +4,6 @@
         "gifplayer": "^0.3.3",
         "gulp": "^4.0.0",
         "gulp-cli": "^2.0",
-        "gulp-util": "^3.0",
         "gulp-watch": "^5.0"
     },
     "private": true
