@@ -12,8 +12,8 @@
     },
     "require-dev": {
         "nette/neon": "^2.4",
-        "phpstan/phpstan": "^0.10.6",
-        "phpunit/phpunit": "^7.4",
+        "phpstan/phpstan": "^0.10.9",
+        "phpunit/phpunit": "^7.5",
         "spatie/http-status-check": "^2.5",
         "symfony/console": "^4.2",
         "symfony/process": "^4.2",
