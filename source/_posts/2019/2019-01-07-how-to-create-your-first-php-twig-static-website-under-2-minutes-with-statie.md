@@ -51,7 +51,7 @@ vendor/bin/statie init
 
 See how it works:
 
-<script id="asciicast-MJPyyG7RV70Ipcwg3ALRe2gY5" src="https://asciinema.org/a/MJPyyG7RV70Ipcwg3ALRe2gY5.js" async></script>
+<script id="asciicast-220449" src="https://asciinema.org/a/220449.js" async></script>
 
 Do you prefer Latte over Twig?
 
