@@ -35,7 +35,7 @@ id: thank_you
         <p>
             Thanks for couple of commits to
 
-            {% set contributors = sortContributorsByName(contributors) %}
+            {% set contributors = sortItemsByKey(contributors, 'name') %}
             {% for contributor in contributors %}
                 {% if contributor.contribution_count <= 2 %}
                     {% if loop.last %}and{% endif %}

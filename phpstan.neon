@@ -6,9 +6,6 @@ parameters:
         # PHP 7.3 tests
         - '#Call to function is_countable\(\) with null will always evaluate to false#'
 
-        # buggy
-        - '#Property (.*) does not accept object#'
-
         # php-parser Node/Stmt mixups
         - '#(.*?)array<PhpParser\\Node>, array<PhpParser\\Node\\Stmt(.*?)#'
 

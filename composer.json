@@ -2,19 +2,18 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.2",
-        "J7mbo/twitter-api-php": "^1.0",
         "nette/finder": "^2.4",
         "nette/utils": "^2.5",
-        "nikic/php-parser": "^4.0.4",
+        "nikic/php-parser": "^4.1",
         "symfony/http-kernel": "^4.2",
         "symfony/console": "^4.2",
         "symplify/package-builder": "^5.3",
-        "symplify/statie": "^5.3"
+        "symplify/statie": "dev-master"
     },
     "require-dev": {
         "nette/neon": "^2.4",
-        "phpstan/phpstan": "^0.10.6",
-        "phpunit/phpunit": "^7.4",
+        "phpstan/phpstan": "^0.10.9",
+        "phpunit/phpunit": "^7.5",
         "spatie/http-status-check": "^2.5",
         "symfony/console": "^4.2",
         "symfony/process": "^4.2",
@@ -22,27 +21,23 @@
         "symfony/yaml": "^4.2",
         "symplify/easy-coding-standard": "^5.3",
         "symplify/latte-to-twig-converter": "^5.3",
-        "symplify/monorepo-builder": "^5.3",
         "symplify/autodiscovery": "^5.3"
     },
     "autoload": {
         "psr-4": {
-            "TomasVotruba\\ContribThanker\\": "packages/ContribThanker/src",
-            "TomasVotruba\\StatieTweetPublisher\\": "packages/StatieTweetPublisher/src",
             "TomasVotruba\\Website\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\StatieTweetPublisher\\Tests\\": "packages/StatieTweetPublisher/tests",
             "TomasVotruba\\Website\\Tests\\": "tests"
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan analyse bin src tests packages --level max --configuration phpstan.neon",
-        "check-cs": "vendor/bin/ecs check bin src tests packages",
+        "phpstan": "vendor/bin/phpstan analyse bin src tests --level max",
+        "check-cs": "vendor/bin/ecs check bin src tests",
         "fix-cs": [
-            "vendor/bin/ecs check bin src tests packages --fix",
+            "vendor/bin/ecs check bin src tests --fix",
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt"
