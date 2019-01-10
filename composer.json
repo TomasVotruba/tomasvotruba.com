@@ -8,7 +8,7 @@
         "symfony/http-kernel": "^4.2",
         "symfony/console": "^4.2",
         "symplify/package-builder": "^5.3",
-        "symplify/statie": "dev-master"
+        "symplify/statie": "^5.3"
     },
     "require-dev": {
         "nette/neon": "^2.4",
@@ -44,7 +44,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
