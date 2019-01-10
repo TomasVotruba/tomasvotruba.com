@@ -128,6 +128,11 @@ gulp
 
 This is at least 100 times faster than deploying to Jekyll and checking the output in the production.
 
+### Show me the Real Migration Code
+
+- [pull request on gophp71.org](https://github.com/TomasVotruba/gophp71.org/pull/32)
+- [pull request on gomonorepo.org](https://github.com/TomasVotruba/gomonorepo.org/pull/7)
+
 <br>
 
 That's it! You can enjoy Markdown, Twig, Latte, and PHP directly from your local machine and still on Github Pages.
