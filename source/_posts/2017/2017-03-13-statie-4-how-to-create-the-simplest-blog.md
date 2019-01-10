@@ -7,6 +7,10 @@ perex: |
     Today I will show you, **how to publish your first post**.
 tweet: "#Statie 4: How to create blog #php #static #github"
 
+deprecated_since: "January 2019"
+deprecated_message: |
+    This post was moved to <a href="https://www.statie.org/">statie.org</a>. Also, <strong>it's better to <a href="/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/">use <code>vendor/bin/statie init</code> command</a> now</strong>.
+
 updated_since: "September 2018"
 updated_message: |
     Updated with <strong>Statie 5</strong>, NEON → YAML, Twig and <code>parameters</code> section in <code>statie.yml</code> config.
@@ -20,7 +24,7 @@ This might be the simplest page to show all your posts:
 <!-- /source/blog.twig -->
 
 ---
-layout: default
+layout: "_layouts/default.twig"
 ---
 
 {% block content %}

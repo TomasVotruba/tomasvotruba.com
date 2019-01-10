@@ -54,8 +54,8 @@ parameters:
             varbiale_global: posts
             # directory, where to look for them
             path: '_posts'
-            # which layout to use, will be converted to "_layout/post.twig"
-            layout: 'post'
+            # which layout to use
+            layout: '_layouts/post.twig'
             # and url prefix, e.g. /blog/some-post.md
             route_prefix: 'blog'
             # an object that will wrap it's logic, you can add helper methods into it and use it in templates
@@ -97,7 +97,7 @@ parameters:
             variable: 'lecture'
             variable_global: 'lectures'
             path: '_lectures'
-            layout: 'lecture'
+            layout: '_layouts/lecture.twig'
             route_prefix: 'kurz'
             object: 'Pehapkari\Website\Statie\Generator\LectureFile'
 ```

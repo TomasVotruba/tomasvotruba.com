@@ -8,6 +8,10 @@ perex: |
 
 tweet: "#Statie 1: Up and Running locally #php #static #github"
 
+deprecated_since: "January 2019"
+deprecated_message: |
+    This post was moved to <a href="https://www.statie.org/">statie.org</a>. Also, <strong>it's better to <a href="/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/">use <code>vendor/bin/statie init</code> command</a> now</strong> + <code>gulp</code>.
+
 updated_since: "September 2018"
 updated_message: |
     Updated with <strong>Statie 5</strong> and Twig support.
