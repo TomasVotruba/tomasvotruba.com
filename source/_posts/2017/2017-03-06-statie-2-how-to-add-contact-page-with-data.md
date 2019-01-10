@@ -4,6 +4,10 @@ title: "Statie - part 2: How to add Contact Page With Data"
 perex: |
     [In previous post about Statie](/blog/2017/02/20/statie-how-to-run-it-locally) you generated simple index with layout. Today we look on first semi-dynamic feature: **data structures**.
 
+deprecated_since: "January 2019"
+deprecated_message: |
+    This post was moved to <a href="https://www.statie.org/">statie.org</a>. Also, <strong>it's better to <a href="/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/">use <code>vendor/bin/statie init</code> command</a> now</strong>.
+
 updated_since: "September 2018"
 updated_message: |
     Updated with <strong>Statie 5</strong>, NEON → YAML, Twig and <code>parameters</code> section in <code>statie.yml</code> config.
@@ -20,7 +24,7 @@ The file name is relevant to the url - this file will be accessible at `/contact
 ```twig
 <!-- source/contact.twig -->
 ---
-layout: default
+layout: "_layouts/default.twig"
 ---
 
 {% block content %}
@@ -65,7 +69,7 @@ In both cases, we modify the template the same way:
 ```twig
 <!-- source/contact.twig -->
 ---
-layout: default
+layout: "_layouts/default.twig"
 ---
 
 
@@ -139,7 +143,7 @@ Now we put this data to Yaml format and place them to our `contact.twig`.
 ```twig
 <!-- source/contact.twig -->
 ---
-layout: default
+layout: "_layouts/default.twig"
 contactMethods:
     -
         type: Phone
