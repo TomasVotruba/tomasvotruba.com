@@ -22,11 +22,6 @@ outputPath: rss.xml
 
             {% set includePost = true %}
 
-            {# is old url, do not display #}
-            {% if post.redirect is defined %}
-                {% set includePost = false %}
-            {% endif %}
-
             {# is deprecated post, do not display #}
             {% if post.deprecated_since is defined %}
                 {% set includePost = false %}

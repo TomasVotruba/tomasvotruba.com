@@ -27,3 +27,12 @@ parameters:
 
     # Statie settings
     github_repository_source_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/source"
+
+    redirects:
+        # old url → new url
+        /blog/2016/03/03/kolik-lidi-je-potreba-k-vytvoreni-jedne-komunity: 'https://pehapkari.cz/blog/2016/03/03/kolik-lidi-je-potreba-k-vytvoreni-jedne-komunity/'
+        /blog/2016/09/26/symfony-komunita-roste-na-pehapkare-a-otevira-se-vsem-php-programatorum: 'https://pehapkari.cz/blog/2016/09/26/symfony-komunita-roste-na-pehapkare-a-otevira-se-vsem-php-programatorum/'
+        /blog/2016/08/15/podcast-o-php-a-sebevzdelavani: 'https://pehapkari.cz/blog/2016/08/15/podcast-nejenophp-1-o-sebevzdelavani-skoleni-a-mentoringu/'
+        /blog/2017/03/02/php-u-nas-ceka-rok-expanze: 'https://pehapkari.cz/blog/2017/03/02/php-u-nas-ceka-rok-expanze/'
+        /blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree: '/blog/2017/11/06/how-to-change-php-code-with-abstract-syntax-tree/'
+        /blog/2017/09/15/4-simple-checkers-for-coding-standard-haters-but-clean-code-lovers: '/blog/2017/09/18/4-simple-checkers-for-coding-standard-haters-but-clean-code-lovers'
