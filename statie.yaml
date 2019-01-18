@@ -1,7 +1,8 @@
 imports:
-    - { resource: 'source/_data/*.yml' }
+    - { resource: 'source/_data/*.yaml' }
+    - { resource: 'source/_data/generated/*.yaml' }
     # enabled on localhost only
-    - { resource: 'statie.local.yml',  ignore_errors: true }
+    - { resource: 'statie.local.yaml',  ignore_errors: true }
 
 parameters:
 

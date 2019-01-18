@@ -3,4 +3,4 @@
 /node_modules
 composer.lock
 package-lock.json
-*.local.yml
+*.local.yaml
