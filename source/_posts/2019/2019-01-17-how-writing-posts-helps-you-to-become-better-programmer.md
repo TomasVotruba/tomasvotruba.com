@@ -8,23 +8,23 @@ tweet_image: '/assets/images/posts/2019/write-to-code/autstin.gif'
 ---
 
 ## What does Your Child Eat?
- 
- The fun comes, when your neighbor needs to run to the hospital to visit his dying father and he drops you his daughter at your door. You're a good man, so you say you look after her. It getting late so you want to make some dinner. 
 
-But what does she like? Can she eat spicy food or sweets? **Is she allergic to something?** Many questions you wished you asked your neighbor now, but that didn't come to your mind before, because you know by heart these things about your child.  
+ The fun comes, when your neighbor needs to run to the hospital to visit his dying father and he drops you his daughter at your door. You're a good man, so you say you look after her. It getting late so you want to make some dinner.
 
-Luckily for us, a code is a bit different - when it eats something different than it supposed to do, the worst thing that can happen is an exception or invalid input type. We don't think about other peoples' code much - compared to ours. It's either not tested, crap, legacy or full of static (pick your own favorite label for the code you read and that is not yours). 
+But what does she like? Can she eat spicy food or sweets? **Is she allergic to something?** Many questions you wished you asked your neighbor now, but that didn't come to your mind before, because you know by heart these things about your child.
+
+Luckily for us, a code is a bit different - when it eats something different than it supposed to do, the worst thing that can happen is an exception or invalid input type. We don't think about other peoples' code much - compared to ours. It's either not tested, crap, legacy or full of static (pick your own favorite label for the code you read and that is not yours).
 
 ## Why you Should Yourself to One's Shoes?
 
-If you learn how to think like somebody you're not, you get into [begginers mind](http://www.agillo.net/zen-and-the-art-of-programming-beginners-mind/). 
+If you learn how to think like somebody you're not, you get into [begginers mind](http://www.agillo.net/zen-and-the-art-of-programming-beginners-mind/).
 It might save a life of a child and also - in your case - you'll be able to write code not only you but **also other people understand**.
 
-You'll get many benefits over your peers, just to name a few: 
+You'll get many benefits over your peers, just to name a few:
 
 - You'll be more favorable in your team than others
 - You'll be more successful in selling your ideas to implement to your code
-- The other will contribute to your code more than to the one the only author understands  
+- The other will contribute to your code more than to the one the only author understands
 
 **How do put there?**
 
@@ -34,25 +34,25 @@ You'll get many benefits over your peers, just to name a few:
 
 ## 2. Let Your Friend use You Package - LIVE!
 
-Ask a good friend who you're patient with to use your package **personally right in front of you**. Make task simple, e.g. 
+Ask a good friend who you're patient with to use your package **personally right in front of you**. Make task simple, e.g.
 
-- download Easy Coding Standard and 
-- check your code with it 
+- download Easy Coding Standard and
+- check your code with it
 
 They will probably follow steps in `README`... oh, I've learned almost nobody reads them in these tests. They just find `composer require your-package/name` and wait for the first exception before going to any README at all. Not really intentionally :)
 
 In your eyes it might look like this:
 
 <img src="/assets/images/posts/2019/write-to-code/autstin.gif" class="img-thumbnail mb-5">
- 
+
 I'm always tempted to give them clues - "click there, it's not *exclude*, it's *excluded*", but that **would ruin your feedback**. Stop any verbal and non-verbal output = **shut up [and listen](https://www.youtube.com/watch?v=yA1b2iJlBP0&feature=youtu.be&t=39)**.
 
 *Friend testing* is really the best way to get feedback. You can read more about this process in short book [Rocket Surgery Made Easy](https://www.amazon.com/Rocket-Surgery-Made-Easy-Yourself/dp/0321657292) by my favorite common sense author *Steve Krug*.
 
-On the other hand, it is consuming and you have to have many friends that are both willing to use your package and are feeling comfortable in failing to even run it. 
+On the other hand, it is consuming and you have to have many friends that are both willing to use your package and are feeling comfortable in failing to even run it.
 
 Isn't there something you can do just by yourself that would keep their shoes on you? Something where all you need is yourself and free time and the only judge in your head? No, I don't mean masturbation.
- 
+
 ## 3. Write Post About It
 
 I love writing about packages, about [those I create](/blog/2018/09/20/new-in-symplify-5-3-new-cool-features-of-package-builder/) and [those I use](/blog/2018/07/30/hidden-gems-of-php-packages-nette-utils/). It starts very simply, why it exists, what problems it solves and how you can use it in your home today. Why I love this writing?
@@ -63,7 +63,7 @@ I love writing about packages, about [those I create](/blog/2018/09/20/new-in-sy
     <img src="/assets/images/posts/2019/write-to-code/typeless.gif" class="img-thumbnail">
 
     <p>This code took 10 seconds and exactly 34 keystrokes to type. It's <strong>233 chars long</strong>.</p>
-</div> 
+</div>
 
 <br>
 
@@ -73,9 +73,9 @@ Btw, if missed Social Psychology 101 on the university, [Thinking, Fast and Slow
 
 <blockquote class="blockquote text-center">
     "Indeed, the ratio of time spent reading versus writing is well over 10 to 1. We are constantly reading old code as part of the effort to write new code. ...[Therefore,] making it easy to read makes it easier to write."
-    
+
     <footer class="blockquote-footer">Robert C. Martin, <cite>author of Clean Code</cite></footer>
-</blockquote> 
+</blockquote>
 
 ...and we don't talk about open source here, where the ratio might be way over 1000 views per year even in small packages.
 
@@ -87,18 +87,18 @@ Btw, if missed Social Psychology 101 on the university, [Thinking, Fast and Slow
 
 It will take around 2-5 minutes to write such text and it will be over 500 chars long.
 
-That's *slow thinking* - with patience to detail, understanding in context and most importantly - **critical thinking**: 
+That's *slow thinking* - with patience to detail, understanding in context and most importantly - **critical thinking**:
 
-- Is that method really needed? 
-- Could I remove this? 
-- Why is this named like this? 
-- Should this be reused as a service? 
+- Is that method really needed?
+- Could I remove this?
+- Why is this named like this?
+- Should this be reused as a service?
 
 Writing such text - in private, for your colleagues or on your public blog - **will give you many hints what you can do better with the code**.
 
 ## How Post about Statie improves Statie
 
-One example for all - after writing of my last 2 posts - [11 Steps to Migrate From Sculpin to Statie](/blog/2019/01/14/11-steps-to-migrate-from-sculpin-to-statie/) 
+One example for all - after writing of my last 2 posts - [11 Steps to Migrate From Sculpin to Statie](/blog/2019/01/14/11-steps-to-migrate-from-sculpin-to-statie/)
 and [9 Steps to Migrate From Jekyll to Statie](/blog/2019/01/10/9-steps-to-migrate-from-jekyll-to-statie/) I realized, it's really difficult to switch from one static website to another. You need to follow many steps, in the correct order:
 
 - move files
@@ -107,13 +107,13 @@ and [9 Steps to Migrate From Jekyll to Statie](/blog/2019/01/10/9-steps-to-migra
 - load files in another file
 - make this path longer
 
-This got me to *slow thinking*: 
+This got me to *slow thinking*:
 
 - "Do I really want to let people do this manually?"
-- "There are many PHP developers who use Sculpin or Jekyll, who might want to migrate to Statie." 
+- "There are many PHP developers who use Sculpin or Jekyll, who might want to migrate to Statie."
 - "Do they really have to go through this list? How many of them will pass all the steps?"
 
-**I didn't think about this until I started writing the text**. I assumed the post will give reader X points to follow. He or she will follow it, finish it and everybody is happy. 
+**I didn't think about this until I started writing the text**. I assumed the post will give reader X points to follow. He or she will follow it, finish it and everybody is happy.
 
 So I continued:
 
@@ -121,7 +121,7 @@ So I continued:
 - "A command in Statie, that you can run in your project?"
 - "Something like `vendor/bin/statie migrate-jekyll`"
 
-The hypothesis was made. Now only I only had to **make a prototype**. I did it [over the weekend](https://github.com/Symplify/Symplify/pull/1339) and used it to [migrate blog](https://github.com/tomasfejfar/blog/pull/2) of my friend and great mentor not only for PHPStorm - [Tomáš Fejfar](https://www.tomasfejfar.cz/). It works and it was fun to explore static migration rules and limits. I learned a lot. 
+The hypothesis was made. Now only I only had to **make a prototype**. I did it [over the weekend](https://github.com/Symplify/Symplify/pull/1339) and used it to [migrate blog](https://github.com/tomasfejfar/blog/pull/2) of my friend and great mentor not only for PHPStorm - [Tomáš Fejfar](https://www.tomasfejfar.cz/). It works and it was fun to explore static migration rules and limits. I learned a lot.
 
 ## Write about Your Code
 
