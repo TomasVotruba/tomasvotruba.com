@@ -138,7 +138,8 @@ Since the layout is [defined in the config for all posts](https://www.statie.org
 ```yaml
 parameters:
     generators:
-        layout: "_layouts/post.twig"
+        posts:
+            layout: "_layouts/post.twig"
 ```
 
 ...no need to repeat it in every file:
