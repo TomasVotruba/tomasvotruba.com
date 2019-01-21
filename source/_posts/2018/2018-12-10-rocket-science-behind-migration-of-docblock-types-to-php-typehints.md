@@ -317,7 +317,7 @@ Last but not least, different namespaces can cause another error:
  }
 ```
 
-**Do you want more *wild code cases*?** You'll find the full test battery of [60 snippets here in Github test](https://github.com/rectorphp/rector/tree/master/packages/Php/tests/Rector/FunctionLike/ParamAndReturnScalarTypehintsRector/Fixture).
+**Do you want more *wild code cases*?** You'll find the full test battery of [60 snippets here in Github test](https://github.com/rectorphp/rector/tree/master/packages/Php/tests/Rector/FunctionLike/).
 
 <br>
 
@@ -341,8 +341,8 @@ composer require rector/rector --dev
 ```yaml
 # rector.yml
 services:
-    Rector\Php\Rector\FunctionLike\ParamScalarTypehintRector: ~
-    Rector\Php\Rector\FunctionLike\ReturnScalarTypehintRector: ~
+    Rector\Php\Rector\FunctionLike\ParamTypeDeclarationRector: ~
+    Rector\Php\Rector\FunctionLike\ReturnTypeDeclarationRector: ~
 ```
 
 ### 3. Run
