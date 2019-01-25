@@ -1,3 +1,4 @@
+---
 id: 180
 title: "How to Kill Parents"
 perex: |
