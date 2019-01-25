@@ -10,7 +10,7 @@ tweet: "Code Coverage under control with #coveralls #github #php #opensource"
 deprecated_since: "December 2018"
 deprecated_message: |
     This approach shown as **very non-practical** in last 2 years. Code-coverage of X is not worth the stress.
-      
+
     The added value of code coverage now shifted to good coding standards or static analysis.
 ---
 

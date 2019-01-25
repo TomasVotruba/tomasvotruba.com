@@ -9,7 +9,7 @@ tweet: "New post on my blog: Keep Your CHANGELOG Useful with Links #github #chan
 tweet_image: "/assets/images/posts/2018/changelog/keep-a-changelog.jpg"
 
 updated_since: "June 2018"
-updated_message: "Updated with new <code>run</code> command."
+updated_message: "Updated with new `run` command."
 ---
 
 <br>

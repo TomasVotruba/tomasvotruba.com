@@ -9,14 +9,14 @@ tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standa
 
 updated_since: "December 2018"
 updated_message: |
-    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
 
 deprecated_since: "September 2018"
 deprecated_message: |
-    [Symplify 5.0](https://github.com/Symplify/Symplify/tree/v5.0.0) was released and with that, many checkers were replaced by better ones.  
-    
-    Checkers 2, 4 and 5 were replaced by `SlamCsFixer\FinalInternalClassFixer` - **class is either final or abstract**.  
-    
+    [Symplify 5.0](https://github.com/Symplify/Symplify/tree/v5.0.0) was released and with that, many checkers were replaced by better ones.
+
+    Checkers 2, 4 and 5 were replaced by `SlamCsFixer\FinalInternalClassFixer` - **class is either final or abstract**.
+
     `@inject` refactoring was replaced by `AnnotatedPropertyInjectToConstructorInjectionRector` from [Rector](https://github.com/rectorphp/rector).
 ---
 

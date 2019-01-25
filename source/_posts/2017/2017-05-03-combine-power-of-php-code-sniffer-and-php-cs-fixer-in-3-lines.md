@@ -11,7 +11,7 @@ tweet: "#ecs - tool to use both #phpCodeSniffer and #phpCsFixer in 3 lines #php 
 
 updated_since: "December 2018"
 updated_message: |
-    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
 ---
 
 <div class="text-center">

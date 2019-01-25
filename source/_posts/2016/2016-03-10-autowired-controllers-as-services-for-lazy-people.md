@@ -7,7 +7,7 @@ deprecated_since: "May 2017"
 deprecated_message: |
     Since **Symfony 3.3** you can use [PSR4-based service discovery and registration](https://github.com/symfony/symfony/pull/21289).
     It does pretty much the same thing - **registers autowired controllers** (and more) - and it has native support in Symfony.
-    
+
     I recommend using it instead!
 ---
 

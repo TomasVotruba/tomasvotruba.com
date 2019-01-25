@@ -1,12 +1,12 @@
 ---
 id: 5
 title: Modular Routing in Symfony
-perex: "Modular routing in Symfony is bounded to <code>routing.yml</code>. Adding few lines for each new module can create large mess. Can we make it bit simpler? Sure we do and I will show you how."
+perex: "Modular routing in Symfony is bounded to `routing.yml`. Adding few lines for each new module can create large mess. Can we make it bit simpler? Sure we do and I will show you how."
 
 deprecated_since: "June 2017"
 deprecated_message: |
     I have deprecated this package, because of [feedback that it is not useful](https://github.com/Symplify/Symplify/issues/181) and low download rates (under 2 000 in 2 years).
-    
+
     You can use **annotation routing** in combination with **[PSR-4 controller autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration)** since **Symfony 3.3** and with [routing annotation loader enabled by default](https://github.com/symfony/symfony/pull/23044) since **Symfony 3.4**.
 
     This package is still available [here for inspiration](https://github.com/DeprecatedPackages/SymfonyModularRouting) though.

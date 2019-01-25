@@ -6,8 +6,8 @@ perex: |
 
 deprecated_since: "January 2017"
 deprecated_message: |
-    This package was **too complex and difficult to use**. I have deprecated it, because it has been downloaded only 20 times during past 2 years.  
-    
+    This package was **too complex and difficult to use**. I have deprecated it, because it has been downloaded only 20 times during past 2 years.
+
     It is still available [here for inspiration](https://github.com/DeprecatedPackages/NetteAdapterForSymfonyBundles) though.
 ---
 

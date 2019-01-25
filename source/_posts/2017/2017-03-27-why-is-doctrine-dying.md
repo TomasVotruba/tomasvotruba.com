@@ -6,8 +6,8 @@ perex: |
 
 deprecated_since: "July 2018"
 deprecated_message: |
-    Doctrine came through **many great and healthy changes during last ~18 months**, so this statement is no longer true.  
-    
+    Doctrine came through **many great and healthy changes during last ~18 months**, so this statement is no longer true.
+
     See [Doctrine is Alive and Kicking post for more](/blog/2018/07/09/6-reasons-why-doctrine-is-alive-and-kicking/).
 ---
 

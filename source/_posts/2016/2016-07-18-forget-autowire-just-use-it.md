@@ -8,11 +8,10 @@ perex: |
 
 deprecated_since: "May 2017"
 deprecated_message: |
-    You can set autowiring via <a href="https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration#default-service-configuration">new <code>_defaults</code> per config file feature</a>
-    since <strong>Symfony 3.3</strong>.
-    <br><br>
-    It does pretty much the same thing, with <strong>advantage of having it under control and explicitly defined</strong>.
-    <br><br>
+    You can set autowiring via [new `_defaults` per config file feature](https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration#default-service-configuration) since **Symfony 3.3**.
+
+    It does pretty much the same thing, with **advantage of having it under control and explicitly defined**.
+
     I recommend using it instead!
 ---
 
