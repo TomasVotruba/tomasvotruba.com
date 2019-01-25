@@ -18,7 +18,7 @@
                             <strong>This post is deprecated since {{ post.deprecated_since }}</strong>
                         </div>
                         <div class="card-body">
-                            {{ post.deprecated_message | raw }}
+                            {{ post.deprecated_message|markdown|raw }}
                         </div>
                     </div>
 
@@ -31,7 +31,7 @@
                             <strong>This post was updated on {{ post.updated_since }}</strong>
                         </div>
                         <div class="card-body">
-                            {{ post.updated_message | raw }}
+                            {{ post.updated_message|markdown|raw }}
                         </div>
                     </div>
 

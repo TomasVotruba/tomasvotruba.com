@@ -11,11 +11,12 @@ tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png"
 
 deprecated_since: "December 2018"
-deprecated_message: "All 3 projects changed massively during last year, so <strong>these numbers are way outdated</strong>."
+deprecated_message: |
+    All 3 projects changed massively during last year, so **these numbers are way outdated**.
 
 updated_since: "December 2018"
 updated_message: |
-    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
 ---
 
 ## Try It Yourself

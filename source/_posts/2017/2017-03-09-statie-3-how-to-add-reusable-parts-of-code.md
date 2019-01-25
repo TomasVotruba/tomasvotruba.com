@@ -9,11 +9,11 @@ tweet: "#Statie 3: Reusable code snippets #php #static #github"
 
 deprecated_since: "January 2019"
 deprecated_message: |
-    This post was moved to <a href="https://www.statie.org/">statie.org</a>. Also, <strong>it's better to <a href="/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/">use <code>vendor/bin/statie init</code> command</a> now</strong>.
+    This post was moved to [statie.org](https://www.statie.org/). Also, **it's better to [use `vendor/bin/statie init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/) now**.
 
 updated_since: "September 2018"
 updated_message: |
-    Updated with <strong>Statie 5</strong>, NEON → YAML and Twig.
+    Updated with **Statie 5**, NEON → YAML and Twig.
 ---
 
 Sometimes you need to add part of template, that you want to use on multiple pages (in the same form or with smaller changes) or that makes your template less readable.

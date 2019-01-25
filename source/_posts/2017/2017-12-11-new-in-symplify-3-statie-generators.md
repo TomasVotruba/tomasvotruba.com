@@ -15,7 +15,7 @@ updated_message: |
 
 deprecated_since: "December 2018"
 deprecated_message: |
-    This post was moved to <a href="https://www.statie.org/docs/generators/">official documentation</a> on Statie.org.
+    This post was moved to [official documentation](https://www.statie.org/docs/generators/) on Statie.org.
 ---
 
 ## Coupled Approach in old Statie

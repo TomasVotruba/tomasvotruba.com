@@ -10,14 +10,13 @@ tweet: "What are #php Object Calisthenics and how to use them? #codingStandard #
 
 deprecated_since: "December 2018"
 deprecated_message: |
-    In time and after years of use, these rules seems rather "academic". They're not helpful and shifts developer's focus too close to each code character. <strong>They need to have broader overview of code as whole instead.</strong>
-    <br>
-    <br>
-    <strong>Nowadays I shifted to 1 much better metric - <a href="/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/">Cognitive Complexity</a>.</strong>
+    In time and after years of use, these rules seems rather "academic". They're not helpful and shifts developer's focus too close to each code character. **They need to have broader overview of code as whole instead.**  
+    
+    **Nowadays I shifted to 1 much better metric - [Cognitive Complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/).**
 
 updated_since: "December 2018"
 updated_message: |
-    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
 ---
 
 If you are a coding standard nerd like me, you'll probably have more than just PSR-2 standard in your ruleset. But even if you don't, [Object Calisthenics](https://github.com/object-calisthenics/phpcs-calisthenics-rules) is a developer-friendly game changer for your code.

@@ -12,10 +12,9 @@ tweet: "How to get #nettefw presenter naked (without parents)? #api #php"
 
 deprecated_since: "October 2017"
 deprecated_message: |
-    This was deprecated due to low usage of package and too complicated API. <strong>Use class that implements <code>Nette\Application\IPresenter</code> with <code>run(Request $request)</code> instead</strong>.
-    <br>
-    <br>
-    For more, see <a href="https://github.com/Symplify/Symplify/issues/402">issue on Github</a>.
+    This was deprecated due to low usage of package and too complicated API. **Use class that implements `Nette\Application\IPresenter` with `run(Request $request)` instead**.  
+    
+    For more, see [issue on Github](https://github.com/Symplify/Symplify/issues/402).
 ---
 
 ## 3 Misconceptions First

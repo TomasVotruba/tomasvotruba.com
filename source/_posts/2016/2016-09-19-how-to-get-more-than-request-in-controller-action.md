@@ -8,12 +8,10 @@ perex: |
 
 deprecated_since: "May 2017"
 deprecated_message: |
-    You can <a href="https://github.com/symfony/symfony/pull/21771">inject services into actions</a> using <code>controller.service_arguments</code> tag
-    since <strong>Symfony 3.3</strong>.
-    <br><br>
-    Combined with <a href="https://github.com/symfony/symfony/pull/21289">PSR4-based service discovery and registration</a>
-    and <a href="https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration">autoconfiguration</a> this is amazing feature.
-    <br><br>
+    You can [inject services into actions](https://github.com/symfony/symfony/pull/21771) using `controller.service_arguments` tag since **Symfony 3.3**.  
+    
+    Combined with [PSR4-based service discovery and registration](https://github.com/symfony/symfony/pull/21289) and [autoconfiguration](https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration) this is amazing feature.  
+    
     I recommend using it instead!
 ---
 
