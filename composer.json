@@ -1,7 +1,7 @@
 {
     "name": "tomasvotruba/website",
     "require": {
-        "php": "^7.2",
+        "php": "^7.3",
         "nette/finder": "^2.4",
         "nette/utils": "^2.5",
         "nikic/php-parser": "^4.1",
@@ -34,7 +34,7 @@
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan analyse bin src tests --level max",
+        "phpstan": "vendor/bin/phpstan analyse bin src tests",
         "check-cs": "vendor/bin/ecs check bin src tests",
         "fix-cs": [
             "vendor/bin/ecs check bin src tests --fix",
