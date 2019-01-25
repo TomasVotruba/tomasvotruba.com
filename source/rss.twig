@@ -36,7 +36,7 @@ outputPath: rss.xml
                 <item>
                     <title><![CDATA[ {{ post.title|replace('&nbsp;', ' ') }} ]]></title>
                     <link>{{ site_url }}/{{ post.relativeUrl }}/</link>
-                    <description><![CDATA[ {{ post.perex | striptags }} ]]></description>
+                    <description><![CDATA[ {{ post.perex|striptags }} ]]></description>
                     <guid isPermaLink="false">{{ site_url }}/{{ post.relativeUrl }}/</guid>
                     <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
 

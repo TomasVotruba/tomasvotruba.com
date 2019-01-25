@@ -52,14 +52,14 @@ id: blog
                         <article class="text-left pt-2 pb-4 {{ colClass }}">
                             <h2 {% if wasFirstPostMarked == false %}class="firstPost"{% endif %}>
                                 <a href="/{{ post.relativeUrl }}/">
-                                    {{ post.title | raw }}
+                                    {{ post.title|raw }}
                                 </a>
                             </h2>
 
                             {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
 
                             {% if wasFirstPostMarked == false %}
-                                <p class="mt-3">{{ post.perex | raw }}</p>
+                                <p class="mt-3">{{ post.perex|raw }}</p>
                             {% endif %}
 
                             {% set wasFirstPostMarked = true %}
