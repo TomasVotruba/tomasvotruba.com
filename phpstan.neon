@@ -1,6 +1,7 @@
 parameters:
     # to allow intalling with various phsptan versions without reporting old errors here
     reportUnmatchedIgnoredErrors: false
+    level: max
 
     ignoreErrors:
         # PHP 7.3 tests
