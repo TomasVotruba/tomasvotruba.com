@@ -63,7 +63,7 @@ Picking the right tool is important, since it vendor locks our code to package, 
 ## 1. To run all Processes at Once
 
 ```php
-$runningProccesses = [];
+$runningProcesses = [];
 
 foreach ($splitConfiguration as $directory => $repository) {
     $process = new Process(['git', 'subsplit', $directory . ':' . $repository]);
@@ -71,7 +71,7 @@ foreach ($splitConfiguration as $directory => $repository) {
 	$process->start();
 
     // store process for later, so we evaluate it's finished
-	$runningProccesses[] = $process;
+	$runningProcesses[] = $process;
 }
 ```
 
@@ -119,14 +119,14 @@ And what if any processes failed?
 ### Let's improve this
 
 ```diff
- $runningProccesses = [];
+ $runningProcesses = [];
 +$allProcessInfos = [];
 
  foreach ($splitConfiguration as $directory => $repository) {
      $process = new Process(['git', 'subsplit', $directory . ':' . $repository]);
      $process->start();
 
-	 $runningProccesses[] = $process;
+	 $runningProcesses[] = $process;
 +    // value object with types would be better and faster here, this is just example
 +    $allProcessInfos[] = [
 +        'process' => $process,
