@@ -5,9 +5,8 @@ perex: "If you start using controllers as services, you still <strong>often need
 
 deprecated_since: "May 2017"
 deprecated_message: |
-    Since <strong>Symfony 3.3</strong> you can use <a href="https://github.com/symfony/symfony/pull/22157">AbstractController</a>.
-    It does pretty much the same thing - <strong>in even cleaner way</strong> - and it has native support in Symfony.
-    <br><br>
+    Since **Symfony 3.3** you can use [AbstractController](https://github.com/symfony/symfony/pull/22157). It does pretty much the same thing - **in even cleaner way** - and it has native support in Symfony.
+
     I recommend using it instead!
 ---
 

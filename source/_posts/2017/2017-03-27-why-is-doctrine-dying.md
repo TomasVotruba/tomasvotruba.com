@@ -6,10 +6,9 @@ perex: |
 
 deprecated_since: "July 2018"
 deprecated_message: |
-    Doctrine came through <strong>many great and healthy changes during last ~18 months</strong>, so this statement is no longer true.
-    <br><br>
-    See <a href="/blog/2018/07/09/6-reasons-why-doctrine-is-alive-and-kicking/">Doctrine is Alive and Kicking post for more</a>.
+    Doctrine came through **many great and healthy changes during last ~18 months**, so this statement is no longer true.
 
+    See [Doctrine is Alive and Kicking post for more](/blog/2018/07/09/6-reasons-why-doctrine-is-alive-and-kicking/).
 ---
 
 I've been thinking over 2 years about this post. I wasn't sure if it's only a negative hype feeling or real thing. It's still the same so it's time to write about it.

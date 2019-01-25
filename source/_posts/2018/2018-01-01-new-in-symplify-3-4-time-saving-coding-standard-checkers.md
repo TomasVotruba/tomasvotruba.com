@@ -10,9 +10,9 @@ tweet_image: "/assets/images/posts/2018/symplify-3-checkers/import-fixer.png"
 
 updated_since: "December 2018"
 updated_message: |
-    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
-    <br>
-    <code>ImportNamespacedNameFixer</code> <a href="https://github.com/Symplify/Symplify/pull/1110">was removed</a> in favor of <code>ReferenceUsedNamesOnlySniff</code> from <a href="https://github.com/slevomat/coding-standard">slevomat/coding-standard</a>
+    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
+
+    `ImportNamespacedNameFixer` [was removed](https://github.com/Symplify/Symplify/pull/1110) in favor of `ReferenceUsedNamesOnlySniff` from [slevomat/coding-standard](https://github.com/slevomat/coding-standard)
 ---
 
 Starting with the simple checkers and moving to those, which save you even hours of manual work.

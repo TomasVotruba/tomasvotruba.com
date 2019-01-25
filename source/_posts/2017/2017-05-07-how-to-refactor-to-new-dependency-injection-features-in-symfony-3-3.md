@@ -10,8 +10,8 @@ tweet: "Learn new  🐘 hack: How to refactor to new #symfony 3.3 DI features? #
 
 updated_since: "December 2018"
 updated_message: |
-    I've released <a href="https://github.com/Symplify/Autodiscovery">Symplify/Autodiscovery</a> package, that <strong><a href="https://github.com/Symplify/Symplify/blob/master/packages/Autodiscovery/README.md#yaml-convertor">migrates</a> old <code>service.yml</code> configs to autodiscovery format</strong> for you. <a href="/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/">Here is how</a>.
-    <br><br>
+    I've released [Symplify/Autodiscovery](https://github.com/Symplify/Autodiscovery) package, that **[migrates](https://github.com/Symplify/Symplify/blob/master/packages/Autodiscovery/README.md#yaml-convertor) old `service.yml` configs to autodiscovery format** for you. [Here is how](/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/).
+
     Why do it manually? :)
 ---
 

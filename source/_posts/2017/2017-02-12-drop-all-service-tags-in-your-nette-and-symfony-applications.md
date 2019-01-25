@@ -7,12 +7,11 @@ perex: |
 
 updated_since: "May 2017"
 updated_message: |
-    Updated with <strong>new Symfony 3.3 features <a href="https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration">class based service naming, <code>_instanceof</code> configuration</a>
-    and <a href="https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration">autoconfiguration</a></strong> (plus PHP 7).
-    <br><br>
+    Updated with **new Symfony 3.3 features [class based service naming, `_instanceof` configuration](https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration) and [autoconfiguration](https://symfony.com/blog/new-in-symfony-3-3-service-autoconfiguration)** (plus PHP 7).
+
     It does pretty much the same, so package ServiceDefinitionDecorator for Symfony was deprecated.
-    <br><br>
-    It is still available <a href="https://github.com/DeprecatedPackages/ServiceDefinitionDecorator">here for inspiration</a> though.
+
+    It is still available [here for inspiration](https://github.com/DeprecatedPackages/ServiceDefinitionDecorator) though.
 tweet: "Why are service tags useless in most of #symfony and #nettefw apps? #di"
 ---
 

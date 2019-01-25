@@ -12,7 +12,6 @@ tweet: "What was changed and dropped from #symplify thanks to #symfony 3.3?"
 
 deprecated_since: "December 2018"
 deprecated_message: "These packages are deprecated for ages. Time to deprecated the post."
-
 ---
 
 I will provide you some insights behind deprecations first. It was not an instant decision based on few Symfony blog posts,

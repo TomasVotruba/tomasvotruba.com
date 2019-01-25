@@ -51,11 +51,11 @@ inspiration:
         <br>
 
         {% for cluster in clusters %}
-            <a name="{{ cluster.title | webalize }}"></a>
+            <a name="{{ cluster.title|webalize }}"></a>
             <div class="card mb-5 cluster">
                 <div class="text-center card-header">
                     <h2 class="card-title">
-                        <a href="#{{ cluster.title | webalize }}">
+                        <a href="#{{ cluster.title|webalize }}">
                             {{ cluster.title }}
                         </a>
                     </h2>
@@ -86,7 +86,7 @@ inspiration:
                                 </label>
 
                                 <div class="checklist__details">
-                                    <a href="/{{ activePost.relativeUrl }}/">{{ activePost.title | raw }}</a>
+                                    <a href="/{{ activePost.relativeUrl }}/">{{ activePost.title|raw }}</a>
 
                                     {% include "_snippets/post/postMetadataLine.twig" with { post: activePost } %}
                                 </div>

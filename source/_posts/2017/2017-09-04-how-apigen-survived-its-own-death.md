@@ -2,18 +2,20 @@
 id: 53
 title: "How ApiGen Survived its Own Death"
 perex: |
-    [ApiGen](https://github.com/apigen/apigen) was broken for a long time. It depended on Reflection package, that was not developed since 2013 and was unable to parse <em>newer</em> code. When I say newer, I mean <em>hot</em> PHP features like <code>::class</code> in 5.5. I don't even talk about 5.6 or 7.
-    <br><br>
-    I got frustrated. I spent a year on a project that is still not working out of the box. So I took spring off to change it. <strong>My goal was to replace reflection or let the project die in peace</strong>.
-    <br><br>
+    [ApiGen](https://github.com/apigen/apigen) was broken for a long time. It depended on Reflection package, that was not developed since 2013 and was unable to parse _newer_ code. When I say newer, I mean _hot_ PHP features like `::class` in 5.5\. I don't even talk about 5.6 or 7.
+
+    I got frustrated. I spent a year on a project that is still not working out of the box. So I took spring off to change it. **My goal was to replace reflection or let the project die in peace**.
+
     This is story about the whole journey of ups and downs.
+
 tweet: "How ApiGen Survived its Death #php #apigen #phpdoc #teamwork"
 tweet_image: "/assets/images/posts/2017/apigen-revival/apigen.png"
 
 updated_since: "December 2018"
 updated_message: |
-    Important! <strong>ApiGen is <a href="https://github.com/apigen/apigen/issues/1020">looking for a maintainer</a></strong>. It might work on smaller projects, but I've heard from David Grudl that <code>roave/better-reflection</code> is eating GBs of memory.<br><br>
-    It probably needs to be replaced by a custom reflection + finally release 5.0 stable.<br>
+    Important! **ApiGen is [looking for a maintainer](https://github.com/apigen/apigen/issues/1020)**. It might work on smaller projects, but I've heard from David Grudl that `roave/better-reflection` is eating GBs of memory.
+
+    It probably needs to be replaced by a custom reflection + finally release 5.0 stable.
     Are you out there?
 ---
 

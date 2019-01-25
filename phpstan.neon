@@ -1,9 +1,8 @@
 parameters:
-    # to allow intalling with various phsptan versions without reporting old errors here
-    reportUnmatchedIgnoredErrors: false
+    level: max
 
     ignoreErrors:
-        # PHP 7.3 tests
+        # intentional for tests
         - '#Call to function is_countable\(\) with null will always evaluate to false#'
 
         # php-parser Node/Stmt mixups
@@ -17,7 +16,3 @@ parameters:
 
         # known values - nullable ContainerFactory container
         - '#(.*?)Symfony\\Component\\DependencyInjection\\ContainerInterface\|null(.*?)#'
-
-        # part of PHP 7.3 test
-        - '#Function (array_key_first|array_key_last|is_countable) not found#'
-        - '#Constant JSON_THROW_ON_ERROR not found#'

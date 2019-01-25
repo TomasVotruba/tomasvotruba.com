@@ -7,6 +7,10 @@ perex: |
     <br><br>
     Sculpin is the older brother of Statie but is mostly retired last 3 years. Do you want to get on track with modern PHP on your static website? Here is how.
 tweet: "New Post on #php 🐘 blog: 11 Steps to Migrate from #Sculpin to #Statie"
+
+updated_since: "January 2019"
+updated_message: |
+    Since Statie 5.4 you can automate basically the whole process with `vendor/bin/statie migrate-sculpin` command.
 ---
 
 ### Statie beats Sculpin in Simplicity

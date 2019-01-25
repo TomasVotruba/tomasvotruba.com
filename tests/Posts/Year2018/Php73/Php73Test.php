@@ -16,9 +16,6 @@ final class Php73Test extends TestCase
         2 => 'b',
     ];
 
-    /**
-     * @requires PHP 7.3
-     */
     public function testCommadAfterTheLastArgument(): void
     {
         $newThree = function ($one, $two /* , now syntax error - uncomment when PHP 7.3 is ready */) {
@@ -27,9 +24,6 @@ final class Php73Test extends TestCase
         $this->assertSame(3, $newThree(1, 2));
     }
 
-    /**
-     * @requires PHP 7.3
-     */
     public function testFirstLastKey(): void
     {
         // PHP 7.2- way
@@ -41,9 +35,6 @@ final class Php73Test extends TestCase
         $this->assertSame(1, $firstKey);
     }
 
-    /**
-     * @requires PHP 7.3
-     */
     public function testLastKey(): void
     {
         $items = [
@@ -60,9 +51,6 @@ final class Php73Test extends TestCase
         $this->assertSame(2, $lastKey);
     }
 
-    /**
-     * @requires PHP 7.3
-     */
     public function testIsCountable(): void
     {
         $nullItems = null;
@@ -78,9 +66,6 @@ final class Php73Test extends TestCase
         Json::decode($notAJson);
     }
 
-    /**
-     * @requires PHP 7.3
-     */
     public function testJsonException(): void
     {
         $notAJson = 'not a Json';

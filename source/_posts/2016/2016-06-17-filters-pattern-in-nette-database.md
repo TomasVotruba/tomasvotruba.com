@@ -9,8 +9,8 @@ perex: |
 deprecated_since: "January 2017"
 deprecated_message: |
     I have deprecated this package, because it was not very active - it has been downloaded only 5 times during past 4 months.
-    <br><br>
-    It is still available <a href="https://github.com/DeprecatedPackages/NetteDatabaseFilters">here for inspiration</a> though.
+
+    It is still available [here for inspiration](https://github.com/DeprecatedPackages/NetteDatabaseFilters) though.
 ---
 
 ## Current way to do this

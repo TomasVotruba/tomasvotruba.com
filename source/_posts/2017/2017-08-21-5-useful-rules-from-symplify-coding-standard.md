@@ -9,17 +9,15 @@ tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standa
 
 updated_since: "December 2018"
 updated_message: |
-    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
 
 deprecated_since: "September 2018"
 deprecated_message: |
-    <a href="https://github.com/Symplify/Symplify/tree/v5.0.0">Symplify 5.0</a> was released and with that, many checkers were replaced by better ones.
-    <br>
-    <br>
-    Checkers 2, 4 and 5 were replaced by <code>SlamCsFixer\FinalInternalClassFixer</code> - <strong>class is either final or abstract</strong>.
-    <br>
-    <br>
-    <code>@inject</code> refactoring was replaced by <code>AnnotatedPropertyInjectToConstructorInjectionRector</code> from <a href="https://github.com/rectorphp/rector">Rector</a>.
+    [Symplify 5.0](https://github.com/Symplify/Symplify/tree/v5.0.0) was released and with that, many checkers were replaced by better ones.
+
+    Checkers 2, 4 and 5 were replaced by `SlamCsFixer\FinalInternalClassFixer` - **class is either final or abstract**.
+
+    `@inject` refactoring was replaced by `AnnotatedPropertyInjectToConstructorInjectionRector` from [Rector](https://github.com/rectorphp/rector).
 ---
 
 I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.

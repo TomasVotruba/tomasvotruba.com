@@ -7,6 +7,10 @@ perex: |
     <br><br>
     I wanted to migrate [gomonorepo.org](https://gomonorepo.org/) and [gophp71.org](https://gophp71.org/) from Jekyll to Statie. Can new `init` command make this piece of cake? And what needs to be done next?
 tweet: "New Post on #php 🐘 blog: 9 Steps to Migrate from #Jekyll to #Statie"
+
+updated_since: "January 2019"
+updated_message: |
+    Since Statie 5.4 you can automate basically the whole process with `vendor/bin/statie migrate-jekyll` command.
 ---
 
 ## 1. Create Basic Statie Structure

@@ -10,7 +10,7 @@ tweet_image: "/assets/images/posts/2017/doc-block-cleaner/diff.png"
 
 updated_since: "December 2018"
 updated_message: |
-    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
 ---
 
 <blockquote class="blockquote text-center">

@@ -8,7 +8,7 @@
 
         <div class="mainContent">
             <div class="container-fluid" id="post">
-                <h1>{{ post.title | raw }}</h1>
+                <h1>{{ post.title|raw }}</h1>
 
                 {% include "_snippets/post/postMetadataLine.twig" with { "post": post, "showPullRequestLink": TRUE, "showCommentCount": TRUE } %}
 
@@ -18,7 +18,7 @@
                             <strong>This post is deprecated since {{ post.deprecated_since }}</strong>
                         </div>
                         <div class="card-body">
-                            {{ post.deprecated_message | raw }}
+                            {{ post.deprecated_message|markdown|raw }}
                         </div>
                     </div>
 
@@ -31,7 +31,7 @@
                             <strong>This post was updated on {{ post.updated_since }}</strong>
                         </div>
                         <div class="card-body">
-                            {{ post.updated_message | raw }}
+                            {{ post.updated_message|markdown|raw }}
                         </div>
                     </div>
 
@@ -40,7 +40,7 @@
 
                 <div class="card card-bigger">
                     <div class="card-body">
-                        {{ post.perex | raw }}
+                        {{ post.perex|raw }}
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@
                     <br>
                 {% endif %}
 
-                {{ post.content | raw }}
+                {{ post.content|raw }}
 
                 <br>
 
@@ -116,13 +116,13 @@
 {% block socialTags %}
     {# Facebook sharing #}
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ post.title | escape }}" />
-    <meta property="og:description" content="{{ post.perex | striptags }}" />
+    <meta property="og:title" content="{{ post.title|escape }}" />
+    <meta property="og:description" content="{{ post.perex|striptags }}" />
     <meta property="og:url" content="{{ site_url }}/{{ post.relativeUrl }}" />
 
     {# Twitter sharing #}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@votrubaT">
-    <meta name="twitter:title" content="{{ post.title | escape }}" />
-    <meta name="twitter:description" content="{{ post.perex | striptags }}" />
+    <meta name="twitter:title" content="{{ post.title|escape }}" />
+    <meta name="twitter:description" content="{{ post.perex|striptags }}" />
 {% endblock %}

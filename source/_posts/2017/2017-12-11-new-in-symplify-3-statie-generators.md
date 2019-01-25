@@ -11,11 +11,11 @@ tweet_image: "/assets/images/posts/2017/statie-generators/generators.png"
 
 updated_since: "September 2018"
 updated_message: |
-    Updated with <strong>Statie 5</strong>, NEON → YAML, Twig and <code>statie.yml</code> config.
+    Updated with **Statie 5**, NEON → YAML, Twig and `statie.yml` config.
 
 deprecated_since: "December 2018"
 deprecated_message: |
-    This post was moved to <a href="https://www.statie.org/docs/generators/">official documentation</a> on Statie.org.
+    This post was moved to [official documentation](https://www.statie.org/docs/generators/) on Statie.org.
 ---
 
 ## Coupled Approach in old Statie

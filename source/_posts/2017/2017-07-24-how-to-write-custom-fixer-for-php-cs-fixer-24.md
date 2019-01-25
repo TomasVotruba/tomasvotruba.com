@@ -10,7 +10,7 @@ tweet_image: "/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.
 
 updated_since: "December 2018"
 updated_message: |
-    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and <code>checkers</code> to <code>services</code> migration.
+    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
