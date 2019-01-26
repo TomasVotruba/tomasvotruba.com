@@ -2,7 +2,7 @@
     {% for post in posts %}
         <li class="col-md-12">
             <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
-            {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+            {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
         </li>
     {% endfor %}
 </ul>

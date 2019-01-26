@@ -13,64 +13,64 @@ id: blog
     </div>
 
     <div class="row">
-        {% set dateLines = [] %}
+        {% set date_lines = [] %}
 
-        {% set wasFirstPostMarked = false %}
-        {% set displayedPostCount = 0 %}
+        {% set was_first_post_marked = false %}
+        {% set displayed_post_count = 0 %}
 
         {% for post in posts %}
-            {% set includePost = true %}
+            {% set include_post = true %}
 
             {# is deprecated post, do not display #}
             {% if post.deprecated_since is defined %}
-                {% set includePost = false %}
+                {% set include_post = false %}
             {% endif %}
 
             {% if post.getDate|date("Y-m-d") > "now"|date("Y-m-d") %}
-                {% set includePost = false %}
+                {% set include_post = false %}
             {% endif %}
 
-            {% if includePost %}
-                {% set displayedPostCount = displayedPostCount + 1 %}
+            {% if include_post %}
+                {% set displayed_post_count = displayed_post_count + 1 %}
 
                 {% set postYear = post.getDateInFormat('Y') %}
                 {% set currentYear = "now"|date('Y') %}
 
-                {% if postYear != currentYear and dateLines.postYear is not defined %}
+                {% if postYear != currentYear and date_lines.postYear is not defined %}
                     <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
                         <br>
                         <br>
                         {{ postYear }}
                         {# https://stackoverflow.com/a/9432583/1348344 #}
-                        {% set dateLines = dateLines|merge({postYear: postYear}) %}
+                        {% set date_lines = date_lines|merge({postYear: postYear}) %}
                     </div>
                 {% endif %}
 
-                {% if displayedPostCount <= 3 %}
-                    {% set colClass = wasFirstPostMarked ? 'col-md-6' : 'col-md-12' %}
+                {% if displayed_post_count <= 3 %}
+                    {% set colClass = was_first_post_marked ? 'col-md-6' : 'col-md-12' %}
 
                     <article class="text-left pt-2 pb-4 {{ colClass }}">
-                        <h2 {% if wasFirstPostMarked == false %}class="firstPost text-center"{% endif %}>
+                        <h2 {% if was_first_post_marked == false %}class="firstPost text-center"{% endif %}>
                             <a href="/{{ post.relativeUrl }}/">
                                 {{ post.title|raw }}
                             </a>
                         </h2>
 
-                        {% if wasFirstPostMarked == false %}<div class="text-center mt-3 mb-4">{% endif %}
-                            {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
-                        {% if wasFirstPostMarked == false %}</div>{% endif %}
+                        {% if was_first_post_marked == false %}<div class="text-center mt-3 mb-4">{% endif %}
+                            {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
+                        {% if was_first_post_marked == false %}</div>{% endif %}
 
-                        {% if wasFirstPostMarked == false %}
+                        {% if was_first_post_marked == false %}
                             <p class="mt-3">{{ post.perex|raw }}</p>
                         {% endif %}
 
-                        {% set wasFirstPostMarked = true %}
+                        {% set was_first_post_marked = true %}
                     </article>
                 {% else %}
-                    {% if displayedPostCount == 4 %}<ul class="mt-4 list-unstyled">{% endif %}
+                    {% if displayed_post_count == 4 %}<ul class="mt-4 list-unstyled">{% endif %}
                     <li class="mb-3 col-md-12">
                         <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
-                        {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+                        {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
                     </li>
                     <hr>
                     {% if loop.last %}</ul>{% endif %}

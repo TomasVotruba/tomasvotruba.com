@@ -10,7 +10,7 @@
             <div class="container-fluid" id="post">
                 <h1>{{ post.title|raw }}</h1>
 
-                {% include "_snippets/post/postMetadataLine.twig" with { "post": post, "showPullRequestLink": TRUE, "showCommentCount": TRUE } %}
+                {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "showPullRequestLink": TRUE, "showCommentCount": TRUE } %}
 
                 {% if post.deprecated_since is defined %}
                     <div class="card border-danger card-bigger">
@@ -103,7 +103,7 @@
 
                 <a name="comments"></a>
 
-                {% include "_snippets/disqusComments.twig" with { 'post': post } %}
+                {% include "_snippets/disqus_comments.twig" with { 'post': post } %}
             </div>
 
             <script id="dsq-count-scr" src="https://{{ disqus_shortname }}.disqus.com/count.js" async defer></script>
