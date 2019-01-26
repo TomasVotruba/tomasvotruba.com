@@ -15,6 +15,7 @@ id: blog
     <div class="row">
         {% set dateLines = [] %}
 
+        {% set wasFirstPostMarked = false %}
         {% set displayedPostCount = 0 %}
 
         {% for post in posts %}
