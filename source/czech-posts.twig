@@ -4,18 +4,16 @@ title: "Czech Posts"
 id: blog
 ---
 
-{% block content %}
-    <div class="container-fluid" id="blog">
-        <h1>Czech Posts</h1>
+<div class="container-fluid" id="blog">
+    <h1>Czech Posts</h1>
 
-        {# get only czech posts #}
-        {% set activePosts = [] %}
-        {% for post in posts %}
-            {% if post.deprecated_since is defined and post.lang is defined %}
-                {% set activePosts = activePosts|merge([post]) %}
-            {% endif %}
-        {% endfor %}
+    {# get only czech posts #}
+    {% set activePosts = [] %}
+    {% for post in posts %}
+        {% if post.deprecated_since is defined and post.lang is defined %}
+            {% set activePosts = activePosts|merge([post]) %}
+        {% endif %}
+    {% endfor %}
 
-        {% include "_snippets/post/postList.twig" with { posts: activePosts } %}
-    </div>
-{% endblock %}
+    {% include "_snippets/post/postList.twig" with { posts: activePosts } %}
+</div>

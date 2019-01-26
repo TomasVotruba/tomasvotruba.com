@@ -30,6 +30,10 @@ parameters:
 
     redirects:
         # old url → new url
+        /little-books: '/clusters'
+        /about: '/clusters'
+        /mentoring-and-lectures: '/mission'
+        # post redirects
         /blog/2016/03/03/kolik-lidi-je-potreba-k-vytvoreni-jedne-komunity: 'https://pehapkari.cz/blog/2016/03/03/kolik-lidi-je-potreba-k-vytvoreni-jedne-komunity/'
         /blog/2016/09/26/symfony-komunita-roste-na-pehapkare-a-otevira-se-vsem-php-programatorum: 'https://pehapkari.cz/blog/2016/09/26/symfony-komunita-roste-na-pehapkare-a-otevira-se-vsem-php-programatorum/'
         /blog/2016/08/15/podcast-o-php-a-sebevzdelavani: 'https://pehapkari.cz/blog/2016/08/15/podcast-nejenophp-1-o-sebevzdelavani-skoleni-a-mentoringu/'
