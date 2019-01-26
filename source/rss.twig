@@ -42,7 +42,7 @@ outputPath: rss.xml
 
                     {# @see https://wordpress.stackexchange.com/a/229773 #}
                     <pubDate>{{ post.getDateInFormat('D, d M Y H:i:s +0000') }}</pubDate>
-                    {% if post.updated_since %}
+                    {% if post.updated_since is defined %}
                         <updated>{{ post.updated_since|date('Y-m-d\TH:i:s\Z') }}</updated>
                         <atom:updated>{{ post.updated_since|date('D, d M Y H:i:s +0000') }}</atom:updated>
                         <lastBuildDate>{{ post.updated_since|date('D, d M Y H:i:s +0000') }}</lastBuildDate>
