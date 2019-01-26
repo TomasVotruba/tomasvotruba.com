@@ -9,10 +9,10 @@ tweet: "New Post on #php 🐘 blog: How to Kill Parents    #phpstan #solid #fina
 ---
 
 <blockquote class="blockquote text-center">
-    <strong>tl;dr;</strong> Always declare your classes <code>final</code> and learn ways how to code with them.<br>It's not easy path, but this path will teach you more about SOLID than anything else ever will.
+    <strong>tl;dr;</strong> Always declare your classes <code>final</code> and learn ways how to code with them.<br>It's not an easy path, but this path will teach you more about SOLID than anything else ever will.
 </blockquote>
 
-S**O**L**ID** - 3 letter form [famous coding principles](https://en.wikipedia.org/wiki/SOLID) are related to `final` classes, classes that cannot have children. The `final` topic is very popular:
+S**O**L**ID** - 3 letters from [famous coding principles](https://en.wikipedia.org/wiki/SOLID) are related to `final` classes, classes that cannot have children. The `final` topic is very popular:
 
 <img src="/assets/images/posts/2019/final/repost.png" class="img-thumbnail">
 
@@ -20,7 +20,7 @@ But have you seen them in your favorite package?
 
 ## No Parents = Happy Family
 
-There are few cases when parent class is **required** by 3rd party package or PHP code:
+There are few cases the when parent class is **required** by 3rd party package or PHP code:
 
 ```php
 <?php
@@ -53,7 +53,7 @@ final class OutputFormatterNotFoundException extends Exception
 }
 ```
 
-These case are valid - after all, if they shouldn't be extended, they would have been marked them `final`, right?
+These cases are valid - after all, if they shouldn't be extended, they would have been marked them `final`, right?
 
 But in other cases, it is **optional**. One of the most spread terribly wrong use of parent class is Doctrine repository.
 
@@ -69,14 +69,14 @@ final class PostRepository extends EntityRepository
 }
 ```
 
-Symfony upgrade this problem to [one more layer](https://github.com/doctrine/DoctrineBundle/blob/a6ab041f33a0af379314ad5dbe17006903fd9fb6/Repository/ServiceEntityRepository.php) of vendor lock:
+Symfony upgrades this problem to [one more layer](https://github.com/doctrine/DoctrineBundle/blob/a6ab041f33a0af379314ad5dbe17006903fd9fb6/Repository/ServiceEntityRepository.php) of vendor lock:
 
 ```php
 <?php declare(strict_types=1);
 
 namespace App\Repository;
 
-namespace Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 final class PostRepository extends ServiceEntityRepository
 {
@@ -103,14 +103,14 @@ namespace Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
  }
 ```
 
-Do you need homepage post? Just extend, it's the *Symfony* way:
+Do you need a homepage post? Just extend, it's the *Symfony* way:
 
 ```php
 <?php declare(strict_types=1);
 
 namespace App\Repository;
 
-namespace Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 class HomepagePostRepository extends PostRepository
 {
@@ -122,7 +122,7 @@ class HomepagePostRepository extends PostRepository
 
 namespace App\Repository;
 
-namespace Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 class CachedHomepagePostRepository extends HomepagePostRepository
 {
@@ -135,7 +135,7 @@ This code is not made up, but the common sense of applying *inheritance over com
 
 ## Vendor-Lock Payback
 
-Overusing `extends` is similar to overuse of static methods in Laravel. Everyone with [bad expensive experince](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/) knows why it's bad, but they're not able to pass this experience who are in "the zone" of using.
+Overusing `extends` is similar to overuse of static methods in Laravel. Everyone with [bad expensive experience](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/) knows why it's bad, but they're not able to pass this experience who are in "the zone" of using.
 
 Then comes the day when 3rd party code changes:
 
@@ -192,7 +192,7 @@ This way
 
 ## Make Children in Factory Instead
 
-This week we started a migration of Nette application to Symfony with Rector. One of changes is `Nette\...\Response` to `Symfony\...\Resonse` change. It's easy:
+This week we started a migration of Nette application to Symfony with Rector. One of the changes is `Nette\...\Response` to `Symfony\...\Resonse` change. It's easy:
 
 ```diff
  class SomePresenter
@@ -228,7 +228,7 @@ class SomePresenter
 }
 ```
 
-Again, there **is over 50 classes in this format**.
+Again, there **are over 50 classes in this format**.
 
 Oh, and the arguments are in different order and there is one extra:
 
