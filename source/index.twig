@@ -50,13 +50,15 @@ id: blog
                         {% set colClass = wasFirstPostMarked ? 'col-md-6' : 'col-md-12' %}
 
                         <article class="text-left pt-2 pb-4 {{ colClass }}">
-                            <h2 {% if wasFirstPostMarked == false %}class="firstPost"{% endif %}>
+                            <h2 {% if wasFirstPostMarked == false %}class="firstPost text-center"{% endif %}>
                                 <a href="/{{ post.relativeUrl }}/">
                                     {{ post.title|raw }}
                                 </a>
                             </h2>
 
-                            {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+                            {% if wasFirstPostMarked == false %}<div class="text-center mt-3 mb-4">{% endif %}
+                                {% include "_snippets/post/postMetadataLine.twig" with { post: post } %}
+                            {% if wasFirstPostMarked == false %}</div>{% endif %}
 
                             {% if wasFirstPostMarked == false %}
                                 <p class="mt-3">{{ post.perex|raw }}</p>
