@@ -51,7 +51,7 @@ id: blog
 
                     <article class="text-left pt-2 pb-4 {{ colClass }}">
                         <h2 {% if was_first_post_marked == false %}class="firstPost text-center"{% endif %}>
-                            <a href="/{{ post.relativeUrl }}/">
+                            <a href="/{{ post|link }}/">
                                 {{ post.title|raw }}
                             </a>
                         </h2>
@@ -69,7 +69,7 @@ id: blog
                 {% else %}
                     {% if displayed_post_count == 4 %}<ul class="mt-4 list-unstyled">{% endif %}
                     <li class="mb-3 col-md-12">
-                        <a href="/{{ post.relativeUrl }}/">{{ post.title|raw }}</a>
+                        <a href="/{{ post|link }}/">{{ post.title|raw }}</a>
                         {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
                     </li>
                     <hr>

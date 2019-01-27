@@ -52,7 +52,7 @@
                         <div class="card-body">
                             {% set rectifyPost = posts[post.rectify_post_id] %}
 
-                            No worries, me too. So let's have a coffee and let <a href="/{{ rectifyPost.getRelativeUrl() }}">Rector handle this</a> for you!
+                            No worries, me too. So let's have a coffee and let <a href="/{{ rectifyPost|link }}">Rector handle this</a> for you!
                         </div>
                     </div>
 
@@ -118,7 +118,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ post.title|escape }}" />
     <meta property="og:description" content="{{ post.perex|striptags }}" />
-    <meta property="og:url" content="{{ site_url }}/{{ post.relativeUrl }}" />
+    <meta property="og:url" content="{{ site_url }}/{{ post|link }}" />
 
     {# Twitter sharing #}
     <meta name="twitter:card" content="summary" />
