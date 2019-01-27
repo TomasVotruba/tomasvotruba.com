@@ -12,7 +12,7 @@
     {% if showCommentCount is defined %}
         <li class="list-inline-item mr-3">
             <em class="fas fa-fw fa-comments"></em>
-            <a href="{{ site_url }}/{{ post.relativeUrl }}/#disqus_thread">X</a> comments
+            <a href="{{ site_url }}/{{ post|link }}/#disqus_thread">X</a> comments
         </li>
     {% endif %}
 

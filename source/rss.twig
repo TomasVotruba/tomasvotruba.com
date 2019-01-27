@@ -35,9 +35,9 @@ outputPath: rss.xml
             {% if includePost %}
                 <item>
                     <title><![CDATA[ {{ post.title|replace('&nbsp;', ' ') }} ]]></title>
-                    <link>{{ site_url }}/{{ post.relativeUrl }}/</link>
+                    <link>{{ site_url }}/{{ post|link }}/</link>
                     <description><![CDATA[ {{ post.perex|striptags }} ]]></description>
-                    <guid isPermaLink="false">{{ site_url }}/{{ post.relativeUrl }}/</guid>
+                    <guid isPermaLink="false">{{ site_url }}/{{ post|link }}/</guid>
                     <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
 
                     {# @see https://wordpress.stackexchange.com/a/229773 #}
@@ -50,7 +50,7 @@ outputPath: rss.xml
                         <lastBuildDate>{{ post.getDateInFormat('D, d M Y H:i:s +0000') }}</lastBuildDate>
                     {% endif %}
 
-                    <comments>{{ site_url }}/{{ post.relativeUrl }}#disqus_thread</comments>
+                    <comments>{{ site_url }}/{{ post|link }}#disqus_thread</comments>
                 </item>
             {% endif %}
         {% endfor %}

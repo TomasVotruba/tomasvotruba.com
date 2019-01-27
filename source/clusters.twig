@@ -85,7 +85,7 @@ inspiration:
                             </label>
 
                             <div class="checklist__details">
-                                <a href="/{{ activePost.relativeUrl }}/">{{ activePost.title|raw }}</a>
+                                <a href="/{{ activePost|link }}/">{{ activePost.title|raw }}</a>
 
                                 {% include "_snippets/post/post_metadata_line.twig" with { post: activePost } %}
                             </div>
