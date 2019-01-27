@@ -1,3 +1,6 @@
+includes:
+    - 'vendor/symplify/phpstan-extensions/config/config.neon'
+
 parameters:
     level: max
 
@@ -13,6 +16,3 @@ parameters:
 
         # SplFileInfo->getRealPath()
         - '#Parameter \#1 \$string of function strlen expects string, string\|false given#'
-
-        # known values - nullable ContainerFactory container
-        - '#(.*?)Symfony\\Component\\DependencyInjection\\ContainerInterface\|null(.*?)#'

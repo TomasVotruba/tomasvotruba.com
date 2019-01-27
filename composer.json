@@ -7,8 +7,8 @@
         "nikic/php-parser": "^4.1",
         "symfony/http-kernel": "^4.2",
         "symfony/console": "^4.2",
-        "symplify/package-builder": "^5.3",
-        "symplify/statie": "dev-master"
+        "symplify/package-builder": "^5.4",
+        "symplify/statie": "^5.4"
     },
     "require-dev": {
         "nette/neon": "^2.4",
@@ -19,9 +19,10 @@
         "symfony/process": "^4.2",
         "symfony/stopwatch": "^4.2",
         "symfony/yaml": "^4.2",
-        "symplify/easy-coding-standard": "^5.3",
-        "symplify/latte-to-twig-converter": "^5.3",
-        "symplify/autodiscovery": "^5.3"
+        "symplify/autodiscovery": "^5.4",
+        "symplify/easy-coding-standard": "^5.4",
+        "symplify/latte-to-twig-converter": "^5.4",
+        "symplify/phpstan-extensions": "^5.4"
     },
     "autoload": {
         "psr-4": {
@@ -34,7 +35,7 @@
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan analyse bin src tests",
+        "phpstan": "vendor/bin/phpstan analyse bin src tests --error-format symplify",
         "check-cs": "vendor/bin/ecs check bin src tests",
         "fix-cs": [
             "vendor/bin/ecs check bin src tests --fix",
@@ -44,7 +45,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "prefer-stable": true,
-    "minimum-stability": "dev"
+    }
 }

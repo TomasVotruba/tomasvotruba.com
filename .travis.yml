@@ -1,11 +1,9 @@
 language: php
 
-matrix:
-    include:
-        - php: 7.3
+php: 7.3
 
 install:
-    - composer update $COMPOSER_FLAGS
+    - composer install
 
 script:
     # run tests for tested posts (with "tested: true" in header configuration)

@@ -19,9 +19,6 @@ parameters:
     disqus_shortname: "itsworthsharing"
     github_repository_tests_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests"
 
-    # turn post headlines to anchors to make sharing easier
-    post_headline_linker_enabled: true
-
     thanker_repository_name: 'TomasVotruba/tomasvotruba.cz'
     thanker_author_name: 'TomasVotruba'
 

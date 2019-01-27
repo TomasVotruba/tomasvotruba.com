@@ -7,10 +7,10 @@ imports:
 
 services:
     SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
-        enableEachParameterAndReturnInspection: true
+        enable_each_parameter_and_return_inspection: true
 
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
-        maxCognitiveComplexity: 6
+        max_cognitive_complexity: 6
 
 parameters:
     skip:
