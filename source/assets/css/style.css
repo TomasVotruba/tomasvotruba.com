@@ -517,3 +517,61 @@ table ul {
         line-height: 2em;
     }
 }
+
+.cluster.active-cluster {
+    transition: .3s;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-right: .7em;
+    margin-left: .7em;
+}
+
+.cluster:not(.active-cluster) {
+    transition: .3s;
+
+    /* copied from col-6 */
+    flex: 0 0 47%;
+    max-width: 47%;
+    position: relative;
+    width: 100%;
+    margin-right: .7em;
+    margin-left: .7em;
+}
+
+.cluster:not(.active-cluster) h2 {
+    font-size: 1.1em
+}
+
+.cluster:not(.active-cluster) p {
+    font-size: .9em
+}
+
+/* active cluster */
+.cluster:not(.active-cluster) .active-cluster-part {
+    display: none;
+}
+
+.cluster:not(.active-cluster) .inactive-cluster-part  {
+    display: initial;
+}
+
+/* inactive cluster */
+.cluster.active-cluster .active-cluster-part {
+    display: initial;
+}
+
+.cluster.active-cluster .inactive-cluster-part  {
+    display: none;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+#clusters .post-title {
+    font-size: 1.2em;
+}
+
+#clusters .btn {
+    transition: .3s;
+}
