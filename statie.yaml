@@ -5,12 +5,7 @@ imports:
     - { resource: 'statie.local.yaml',  ignore_errors: true }
 
 parameters:
-
-    # shall be removable in next dev version
-    generators:
-        posts:
-            # relative to /source
-            layout: '_layouts/post.twig'
+    post_template_path: 'templates/new_post.twig'
 
     # global templates variables
     google_analytics_tracking_id: "UA-46082345-1"
