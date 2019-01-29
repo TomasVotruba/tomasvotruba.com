@@ -5,7 +5,7 @@ perex: |
     Following files are supported by PHPStorm and Symfony plugin for years (since 2016) and they make working with a code so elegant. **Yet, I came across them just recently.**
     <br><br>
     They immediately became must-have of each repository with Symfony code.
-    
+
 tweet: "New Post on #php 🐘 blog: 2 Files that Your #Symfony Application Misses     #phpstorm #ide #twig"
 tweet_image: "/assets/images/posts/2019/meta/ide-twig-json.gif"
 ---
@@ -39,17 +39,30 @@ You'll appreciate this feature in a project **with [multiple packages](/blog/201
 
 *Note: You need to install [Symfony Plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin) first. Then enable it in each project (yes, they're 2 different steps).*
 
-You can use [more magic](https://www.slideshare.net/Haehnchen/symfonycon-berlin-2016-symfony-plugin-for-phpstorm-3-years-later-69804748#45) like namespaces, but they're nothing better than explicit paths.  
+You can use [more magic](https://www.slideshare.net/Haehnchen/symfonycon-berlin-2016-symfony-plugin-for-phpstorm-3-years-later-69804748#45) like namespaces, but they're nothing better than explicit paths.
 
-## Why PHPStorm doesn't "get" It? 
+## Why PHPStorm doesn't "get" It?
 
-So simple it hurts:
+PHPStorm knows types of object passed by constructor injection:
+
+```php
+<?php
+
+// ...
+
+public function __construct(Type $type)
+{
+    $type->someMethod(); // PHPStorm: object of "Type"
+}
+```
+
+But what if you need to [test service](/blog/2018/05/17/how-to-test-private-services-in-symfony/) and get it from container?
 
 ```php
 <?php
 
 $service = $this->container->get(Type::class);
-$service; // PHPStorm: type of "object"
+$service; // PHPStorm: "object" type
 $service; // you need: object of "Type"
 ```
 
@@ -90,7 +103,7 @@ Pretty cool, right?
 
 <br>
 
-You can use this [for much more](https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Advanced+Metadata), like **Doctrine repository autocomplete by entity class**. 
+You can use this [for much more](https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Advanced+Metadata), like **Doctrine repository autocomplete by entity class**.
 
 I'm using this for container and thanks to that there is [49 fewer annotations](https://github.com/Symplify/Symplify/commit/d53003ebc41dddcb228e517c98d59de70ebc17a0) in Symplify code.
 
