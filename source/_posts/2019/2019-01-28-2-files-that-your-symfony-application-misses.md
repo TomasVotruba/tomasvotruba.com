@@ -14,7 +14,7 @@ tweet_image: "/assets/images/posts/2019/meta/ide-twig-json.gif"
 
 Add directory with all your twig files to `ide-twig.json` in the project root:
 
-<img src="/assets/images/posts/2019/meta/ide-twig-json.gif" class="img-thumbnail">
+<img src="/assets/images/posts/2019/meta/ide_twig_json.gif" class="img-thumbnail">
 
 - Refresh!
 - Enjoy :)
