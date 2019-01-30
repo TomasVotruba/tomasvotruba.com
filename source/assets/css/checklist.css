@@ -1,5 +1,5 @@
 ul.checklist {
-    margin-left: -2.5em;
+    margin-left: -3em;
 }
 
 .checklist li {
@@ -19,7 +19,7 @@ ul.checklist {
 }
 
 .checklist__label {
-    margin-left: 1.5em;
+    margin-left: 1em;
     margin-top: -0.2em;
     display: block;
     position: absolute;
@@ -46,5 +46,5 @@ ul.checklist {
 .checklist__details {
     display: block;
     margin: 0;
-    padding: 0 .5em 0 6em;
+    padding: 0 .5em 0 3.5em;
 }
