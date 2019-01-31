@@ -3,7 +3,7 @@
 $(function() {
     // Set default value
     if (window.localStorage.getItem('clusters') == null) {
-        saveClusters('clusters', []);
+        saveClusters([]);
     }
 
     var $clusters = getClusters();
