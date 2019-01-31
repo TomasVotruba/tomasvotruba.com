@@ -12,7 +12,6 @@ $(function() {
     // Set initial checked state to checkboxes found in localStorage
     if (rows.length) {
         $inputs.each(function() {
-            console.log($(this).val());
             if ($.inArray($(this).val(), rows) !== -1) {
                 $(this).attr('checked', true);
             }

@@ -43,6 +43,7 @@ $(function() {
     }
 
     function saveClusters(data) {
+        data = arrayUnique(data);
         window.localStorage.setItem('clusters', JSON.stringify(data));
     }
 
@@ -50,5 +51,13 @@ $(function() {
     function sleepFor(sleepDuration) {
         var now = new Date().getTime();
         while(new Date().getTime() < now + sleepDuration){ /* do nothing */ }
+    }
+
+    function arrayUnique(values) {
+        return values.filter(onlyUnique);
+    }
+
+    function onlyUnique(value, index, self) {
+        return self.indexOf(value) === index;
     }
 });
