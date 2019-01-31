@@ -1,12 +1,14 @@
 // inspired by http://phppackagechecklist.com/js/scripts.js
 
 $(function() {
+
+
     // If is not set, create it
-    if (window.localStorage.getItem('books') == null) {
-        window.localStorage.setItem('books', JSON.stringify([]));
+    if (window.localStorage.getItem('read_cluster_items') == null) {
+        window.localStorage.setItem('read_cluster_items', JSON.stringify([]));
     }
 
-    var rows = JSON.parse(window.localStorage.getItem('books'));
+    var rows = JSON.parse(window.localStorage.getItem('read_cluster_items'));
     var $inputs = $('.checklist__input');
 
     // Set initial checked state to checkboxes found in localStorage
@@ -26,6 +28,6 @@ $(function() {
             rows.push($(this).val());
         });
 
-        window.localStorage.setItem('books', JSON.stringify(rows));
+        window.localStorage.setItem('read_cluster_items', JSON.stringify(rows));
     });
 });
