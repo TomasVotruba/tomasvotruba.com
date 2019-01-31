@@ -1,8 +1,6 @@
 // inspired by http://phppackagechecklist.com/js/scripts.js
 
 $(function() {
-
-
     // If is not set, create it
     if (window.localStorage.getItem('read_cluster_items') == null) {
         window.localStorage.setItem('read_cluster_items', JSON.stringify([]));

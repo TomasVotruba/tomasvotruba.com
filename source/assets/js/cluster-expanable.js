@@ -54,6 +54,10 @@ $(function() {
     }
 
     function arrayUnique(values) {
+        if (values === []) {
+            return [];
+        }
+
         return values.filter(onlyUnique);
     }
 
