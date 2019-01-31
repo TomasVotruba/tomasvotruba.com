@@ -398,7 +398,7 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 
 /* @see https://stackoverflow.com/a/50174132/1348344 */
 .container li {
-    margin-bottom: .6em;
+    margin-bottom: .4em;
 }
 
 .container li:last-child {
@@ -580,4 +580,10 @@ table ul {
     font-size: 0.9em;
     padding-top: .6em;
     padding-bottom: .2em;
+}
+
+#client-line {
+    padding-top: .5em;
+    padding-bottom: 1.5em;
+    background-color: #EEE;
 }
