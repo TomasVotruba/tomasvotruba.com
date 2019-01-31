@@ -1,4 +1,4 @@
-# this file was generated on 2019-01-18 21:34:42, do not edit it manually
+# this file was generated on 2019-01-31 18:17:17, do not edit it manually
 parameters:
     contributors:
         -
@@ -30,7 +30,7 @@ parameters:
             name: JanMikes
             url: 'https://github.com/JanMikes'
             photo: 'https://avatars3.githubusercontent.com/u/3995003?v=4'
-            contribution_count: 5
+            contribution_count: 6
         -
             name: juananruiz
             url: 'https://github.com/juananruiz'
