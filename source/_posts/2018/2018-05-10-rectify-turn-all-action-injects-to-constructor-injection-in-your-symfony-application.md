@@ -100,7 +100,7 @@ composer install rector/rector --dev
 Import the `action-injection-to-constructor-injection` level and configure your Kernel class name.
 
 ```yaml
-# rector.yml
+# rector.yaml
 imports:
     - { resource: 'vendor/rector/rector/config/level/architecture/action-injection-to-constructor-injection.yml' }
 
@@ -110,7 +110,7 @@ parameters:
 
 <br>
 
-Do you have `App\Kernel` in your application? Use `--level` in CLI this instead of `rector.yml`:
+Do you have `App\Kernel` in your application? Use `--level` in CLI this instead of `rector.yaml`:
 
 ```bash
 vendor/bin/rector ... --level action-injection-to-constructor-injection
@@ -166,7 +166,7 @@ You've probably noticed that code itself is not looking too good. Rector's job i
 
 ```bash
 composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs --config vendor/rector/rector/ecs-after-rector.yml --fix
+vendor/bin/ecs --config vendor/rector/rector/ecs-after-rector.yaml --fix
 ```
 
 And your code is now both **refactored and clean**. That's it!

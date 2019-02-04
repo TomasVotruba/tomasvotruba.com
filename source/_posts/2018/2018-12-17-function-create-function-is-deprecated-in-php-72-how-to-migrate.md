@@ -155,7 +155,7 @@ composer require rector/rector --dev
 ```
 
 ```yaml
-# rector.yml
+# rector.yaml
 services:
     Rector\Php\Rector\FuncCall\CreateFunctionToAnonymousFunctionRector: ~
 ```

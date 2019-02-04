@@ -339,7 +339,7 @@ composer require rector/rector --dev
 ### 2. Create Config
 
 ```yaml
-# rector.yml
+# rector.yaml
 services:
     Rector\Php\Rector\FunctionLike\ParamTypeDeclarationRector: ~
     Rector\Php\Rector\FunctionLike\ReturnTypeDeclarationRector: ~
