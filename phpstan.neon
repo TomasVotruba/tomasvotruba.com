@@ -3,6 +3,7 @@ includes:
 
 parameters:
     level: max
+    reportUnmatchedErrors: false
 
     ignoreErrors:
         # intentional for tests
