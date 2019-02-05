@@ -76,12 +76,12 @@ final class PostRepository
 composer install rector/rector --dev
 ```
 
-### 2. Setup `rector.yml`
+### 2. Setup `rector.yaml`
 
 There you name all the changes you'd like to perform on you code:
 
 ```yaml
-# rector.yml
+# rector.yaml
 services:
     # order matters, this needs to be first to correctly detect parent repository
 
@@ -125,7 +125,7 @@ final class EntityForDoctrineRepositoryProvider implements EntityForDoctrineRepo
 And register it:
 
 ```diff
- # rector.yml
+ # rector.yaml
  services:
      Rector\Rector\Architecture\RepositoryAsService\ReplaceParentRepositoryCallsByRepositoryPropertyRector: ~
      Rector\Rector\Architecture\RepositoryAsService\MoveRepositoryFromParentToConstructorRector: ~
@@ -138,7 +138,7 @@ And register it:
 Now the fun part:
 
 ```bash
-vendor/bin/rector process /app --dry-run # "--config rector.yml" as default
+vendor/bin/rector process /app --dry-run # "--config rector.yaml" as default
 ```
 
 You should see diffs like:
@@ -192,7 +192,7 @@ You've probably noticed that code itself is not looking too good. Rector's jobs 
 
 ```bash
 composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs --config vendor/rector/rector/ecs-after-rector.yml --fix
+vendor/bin/ecs --config vendor/rector/rector/ecs-after-rector.yaml --fix
 ```
 
 And your code is now both **refactored and clean**. That's it!

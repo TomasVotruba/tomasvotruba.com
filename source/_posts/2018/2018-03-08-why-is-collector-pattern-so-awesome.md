@@ -19,7 +19,7 @@ Yesterday I worked on [Rector](https://github.com/rectorphp/rector) and **needed
 To give you a context, now you can register particular Rectors to config `services:` section as you know from Symfony:
 
 ```yaml
-# rector.yml
+# rector.yaml
 services:
     Rector\Rector\Contrib\Symfony\HttpKernel\GetterToPropertyRector: ~
 ```
@@ -79,7 +79,7 @@ final class SymfonyRectorProvider implements RectorInterface
 Such service is registered by user to the config:
 
 ```yaml
-# rector.yml
+# rector.yaml
 services:
     _defaults:
         autowire: true
@@ -166,7 +166,7 @@ The same happened for Rector - **I need to add multiple Rectors in `RectorProvid
 Damn! Mmm, tell people to use one provider per Rector?
 
 ```yaml
-# rector.yml
+# rector.yaml
 services:
     _defaults:
         autowire: true

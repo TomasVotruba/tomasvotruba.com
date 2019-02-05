@@ -164,7 +164,7 @@ Is one object or null?
 Just setup [Rector](https://github.com/rectorphp/rector) and upgrade your code:
 
 ```yaml
-# rector.yml
+# rector.yaml
 services:
     Rector\Php\Rector\FunctionLike\ReturnTypeDeclarationRector: ~
 ```
@@ -234,7 +234,7 @@ Quiz question: how would **you utilize AST to autocomplete all `@var` annotation
 That's it! Let's put this algorithm into Rector:
 
 ```yaml
-# rector.yml
+# rector.yaml
 services:
     Rector\Php\Rector\Property\CompleteVarDocTypePropertyRector: ~
 ```
