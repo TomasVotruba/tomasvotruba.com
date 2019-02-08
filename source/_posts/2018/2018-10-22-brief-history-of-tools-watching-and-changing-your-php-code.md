@@ -119,7 +119,7 @@ CakePHP is jumping faster and faster recent years, they made their own tool. It'
 <span class="badge badge-danger">AST</span>
 <span class="badge badge-success">Modifies Code</span>
 
-SilverStripe is Australian CMS written in PHP. Its logic is very similar to Rector and I like it. It's also quite small, so the code is easy to understand. Be sure to check it!
+SilverStripe is New Zealandian CMS written in PHP. Its logic is very similar to Rector and I like it. It's also quite small, so the code is easy to understand. Be sure to check it!
 
 ### Rector
 
