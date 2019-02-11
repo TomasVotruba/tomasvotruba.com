@@ -85,6 +85,8 @@ In extension/compiler pass:
 ```php
 <?php declare(strict_types=1);
 
+$mosesDefinition = $containerBuilder->getDefinition(Moses::class);
+
 foreach ($containerBuilder->findByTags('release_worker') as $workerDefinition) {
    $mosesDefinition->addCall('addWorker', [$workerDefinition->getName()]);
 }
@@ -100,6 +102,8 @@ In extension/compiler pass:
 
 ```php
 <?php declare(strict_types=1);
+
+$mosesDefinition = $containerBuilder->getDefinition(Moses::class);
 
 foreach ($containerBuilder->findByType(ReleaseWorkerInterface::class) as $workerDefinition) {
    $mosesDefinition->addCall('addWorker', [$workerDefinition->getName()]);
