@@ -4,8 +4,8 @@ title: "Introducing Neon to YAML Converter"
 perex: |
     I wrote about [How to migrate between Neon to Yaml](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/) almost a year ago. Recently we needed to migrate many files with parameters, imports, and mainly services.
     <br><br>
-    **Neon and YAML are basically arrays**, right? So why not let a tool let do the dirty work?    
-    
+    **Neon and YAML are basically arrays**, right? So why not let a tool let do the dirty work?
+
 tweet: "New Post on #php 🐘 blog: Introducing #Neon to #Yaml Converter   #symfony #nettefw"
 ---
 
@@ -23,7 +23,7 @@ To use [Symplify/NeonToYamlConverter](https://github.com/Symplify/NeonToYamlConv
 composer require symplify/neon-to-yaml-converter --dev
 ```
 
-Run it on one file or directory - it takes all `*.neon`, `*.yml` and `*.yaml` files:   
+Run it on one file or directory - it takes all `*.neon`, `*.yml` and `*.yaml` files:
 
 ```bash
 vendor/bin/neon-to-yaml-converter convert file.neon
@@ -33,7 +33,7 @@ vendor/bin/neon-to-yaml-converter convert file.neon
 
 In Neon there are nested parameters = you can use `%payu.user%` to get parameter `user` in `payu` array. In YAML used in Symfony code, there are only one level parameters. That means you can use only the `payu` parameter, nothing nested.
 
-That's why all parameters have to be converted to the **single level of nesting**, here to `payu_user`: 
+That's why all parameters have to be converted to the **single level of nesting**, here to `payu_user`:
 
 ```diff
  parameters:
@@ -53,7 +53,7 @@ That's why all parameters have to be converted to the **single level of nesting*
 ```
 
 Another case are [Neon entities](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/#4-very-complex-syntax). Their goal is to make syntax short. Its cost is less readability.
- 
+
 Code is actually parsed to an object, that has different meaning in different places:
 
 ```diff
@@ -71,7 +71,7 @@ All this converter handles for you.
 
 <br>
 
-Next time you **migrate your config, package or whole application** from Neon to YAML, let [Symplify\NeonToYamlConverter 
+Next time you **migrate your config, package or whole application** from Neon to YAML, let [Symplify\NeonToYamlConverter
 ](https://github.com/Symplify/NeonToYamlConverter) do the work for you.
 
 Happy coding!

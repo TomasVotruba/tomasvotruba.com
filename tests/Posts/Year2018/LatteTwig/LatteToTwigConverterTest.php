@@ -2,20 +2,21 @@
 
 namespace TomasVotruba\Website\Tests\Posts\Year2018\LatteTwig;
 
-use PHPUnit\Framework\TestCase;
-use Symplify\LatteToTwigConverter\DependencyInjection\ContainerFactory;
+use Symplify\LatteToTwigConverter\HttpKernel\LatteToTwigConverterKernel;
 use Symplify\LatteToTwigConverter\LatteToTwigConverter;
+use Symplify\PackageBuilder\FileSystem\SmartFileInfo;
+use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
 
-final class LatteToTwigConverterTest extends TestCase
+final class LatteToTwigConverterTest extends AbstractKernelTestCase
 {
     public function test(): void
     {
-        $container = (new ContainerFactory())->create();
+        $this->bootKernel(LatteToTwigConverterKernel::class);
 
         /** @var LatteToTwigConverter $latteToTwigConverter */
-        $latteToTwigConverter = $container->get(LatteToTwigConverter::class);
+        $latteToTwigConverter = self::$container->get(LatteToTwigConverter::class);
 
-        $convertedContent = $latteToTwigConverter->convertFile(__DIR__ . '/Source/latte-file.latte');
+        $convertedContent = $latteToTwigConverter->convertFile(new SmartFileInfo(__DIR__ . '/Source/latte-file.latte'));
 
         $this->assertStringEqualsFile(__DIR__ . '/Source/expected-twig-file.twig', $convertedContent);
     }
