@@ -7,7 +7,7 @@ perex: |
     They immediately became must-have of each repository with Symfony code.
 
 tweet: "New Post on #php 🐘 blog: 2 Files that Your #Symfony Application Misses     #phpstorm #ide #twig"
-tweet_image: "/assets/images/posts/2019/meta/ide-twig-json.gif"
+tweet_image: "/assets/images/posts/2019/meta/ide_twig_json.gif"
 ---
 
 ## Do You Know the Frustration of Clicking to Existing `*.twig` File?
