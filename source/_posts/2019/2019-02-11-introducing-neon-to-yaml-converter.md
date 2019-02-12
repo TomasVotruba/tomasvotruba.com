@@ -7,7 +7,10 @@ perex: |
     **Neon and YAML are basically arrays**, right? So why not let a tool let do the dirty work?
 
 tweet: "New Post on #php 🐘 blog: Introducing #Neon to #Yaml Converter   #symfony #nettefw"
+tweet_image: "/assets/images/posts/2019/neon-to-yaml/convert-neon-to-yaml.gif"
 ---
+
+<img src="/assets/images/posts/2019/neon-to-yaml/convert-neon-to-yaml.gif" class="img-thumbnail">
 
 ## When Do You need it?
 
