@@ -173,7 +173,7 @@ Here are few examples I use in my code:
 ```
 
 ```diff
--// 50 % change the file doesn't exist
+-// 50 % chance the file doesn't exist
 -$fileInfo = new SplFileInfo($somePath);
 +// throw exception on non-existing file
 +$fileInfo = new Symplify\PackageBuilder\FileSystem\SmartFileInfo($somePath);
