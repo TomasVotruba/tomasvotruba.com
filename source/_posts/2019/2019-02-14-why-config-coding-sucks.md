@@ -11,7 +11,7 @@ tweet_image: '/assets/images/posts/2019/config-evil/rename.gif'
 
 Many frameworks propagate config coding over PHP code. It's cool, it's easy to type, short and we have a feeling we learned something new.
 
-One of good examples is Laravel with its [`config/app.php`](https://laravel.com/docs/5.7/configuration) - really good work!
+One of the good examples is Laravel with its [`config/app.php`](https://laravel.com/docs/5.7/configuration) - really good work!
 
 Since [Symfony 3.3+ service autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) feature, there is almost no reason to use code in config.
 
@@ -49,7 +49,7 @@ By coding in the config I mean anything more complex than:
 
 ## The Dark Side
 
-Less discussed side of config coding is that in exchange of sweet syntax sugar we loose:
+Less discussed side of config coding is that in exchange for sweet syntax sugar we lose:
 
 - static analysis,
 - PHPStorm refactoring
@@ -113,7 +113,7 @@ final class FirstServiceFactory
 +   - FirstServiceFactory
 ```
 
-## 2. Learn the Neon/YAML Syntax by Hearth
+## 2. Learn the Neon/YAML Syntax by Heart
 
 When you start to use more and more "cool" syntax of your favorite markup language, you'll have to remember the spacing, chars and key names:
 
@@ -132,7 +132,7 @@ services:
 
 You can also say goodbye to *rename method* refactoring.
 
-We don't remember to want to pollute our brains with this syntax details, **we want to code** with light and clear mind.
+We don't want to pollute our brains with these syntax details, **we want to code** with light and clear mind.
 
 *How can we do this better?*
 
