@@ -575,3 +575,9 @@ table ul {
 #clusters .btn {
     transition: .3s;
 }
+
+#post p.text-muted {
+    font-size: 0.9em;
+    padding-top: .6em;
+    padding-bottom: .2em;
+}
