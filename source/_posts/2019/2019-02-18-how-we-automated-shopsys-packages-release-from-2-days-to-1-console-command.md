@@ -131,20 +131,6 @@ Do you want to include stages? We did, so the worker implemented <code>Symplify\
 
 In these workers, you can trigger Travis CI with API, use Packagist API to check new version are released... sky it the limit.
 
-<br>
-
-**How do you release a new version?**
-
-```bash
-vendor/bin/monorepo-builder release <version>
-```
-
-**Do you want to call just single stage?**
-
-```bash
-vendor/bin/monorepo-builder release <version> --stage <stage>
-```
-
 ## Shopsys Release Process *Now*?
 
 ```bash
