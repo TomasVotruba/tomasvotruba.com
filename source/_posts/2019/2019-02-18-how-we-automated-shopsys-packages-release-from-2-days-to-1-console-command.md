@@ -129,6 +129,8 @@ Do you want to include stages? We did, so the worker implemented `Symplify\Monor
 
 In these workers, you can trigger Travis CI with API, use Packagist API to check new version are released... sky it the limit.
 
+<br>
+
 **How do you release a new version?**
 
 ```bash
