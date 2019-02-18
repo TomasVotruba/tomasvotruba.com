@@ -94,7 +94,7 @@ final class UpdateChangelogToDateReleaseWorker implements ReleaseWorkerInterface
      */
     public function getDescription(Version $version): string
     {
-        return 'Update CHANGELOG.md "Unreleased" to current date';
+        return 'Update CHANGELOG.md "Unreleased" to version and today date';
     }
 
     /**
