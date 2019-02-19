@@ -187,7 +187,7 @@ namespace App\Controller;
 
 use App\Entity\Post;
 use App\Repository\PostRepository;
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 final class PostController
 {
@@ -196,7 +196,7 @@ final class PostController
      */
     private $postRepository;
 
-    public function __construct(EntityManager $entityManager)
+    public function __construct(EntityManagerInterface $entityManager)
     {
         $this->postRepository = $entityManager->getRepository(Post::class);
     }
@@ -285,7 +285,7 @@ It require few steps, but **all builds on single one change**. Have you heard ab
  namespace App\Repository;
 
  use App\Entity\Post;
-+use Doctrine\ORM\EntityManager;
++use Doctrine\ORM\EntityManagerInterface;
  use Doctrine\ORM\EntityRepository;
 
 -final class PostRepository extends EntityRepository
@@ -296,7 +296,7 @@ It require few steps, but **all builds on single one change**. Have you heard ab
 +     */
 +    private $repository;
 +
-+    public function __construct(EntityManager $entityManager)
++    public function __construct(EntityManagerInterface $entityManager)
 +    {
 +        $this->repository = $entityManager->getRepository(Post::class);
 +    }
@@ -344,7 +344,7 @@ namespace App\Repository;
 
 use App\Entity\Post;
 use App\Sorter\PostSorter;
-use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
 
 final class PostRepository
@@ -359,7 +359,7 @@ final class PostRepository
      */
     private $postSorter;
 
-    public function __construct(EntityManager $entityManager, PostSorter $postSorter)
+    public function __construct(EntityManagerInterface $entityManager, PostSorter $postSorter)
     {
         $this->repository = $entityManager->getRepository(Post::class);
         $this->postSorter = $postSorter;
