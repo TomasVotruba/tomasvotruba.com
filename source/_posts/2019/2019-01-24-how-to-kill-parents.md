@@ -193,7 +193,7 @@ This way
 
 ## Make Children in Factory Instead
 
-This week we started a migration of Nette application to Symfony with Rector. One of the changes is `Nette\...\Response` to `Symfony\...\Resonse` change. It's easy:
+This week we started a migration of Nette application to Symfony with Rector. One of the changes is `Nette\...\Response` to `Symfony\...\Response` change. It's easy:
 
 ```diff
  class SomePresenter
@@ -241,7 +241,7 @@ Oh, and the arguments are in different order and there is one extra:
      public function someAction()
      {
 -        return new SomeResponse($values, $code);
-+        return new Symfony\...\Reponse($values, $headers, $code);
++        return new Symfony\...\Response($values, $headers, $code);
      }
  }
  ```
@@ -260,7 +260,7 @@ And it doesn't have to be such a big change as a framework, but argument swap or
      public function someAction()
      {
 -        return new SomeResponse($values, $code);
-+        return $this->responseFactory->createSuccces($values);
++        return $this->responseFactory->createSuccess($values);
      }
  }
 ```
