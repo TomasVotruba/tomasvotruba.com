@@ -5,9 +5,6 @@ imports:
     - { resource: 'statie.local.yaml',  ignore_errors: true }
 
 parameters:
-    # to complete missed tweets
-    twitter_minimal_gap_in_days: 0
-
     post_template_path: 'templates/new_post.twig'
 
     # global templates variables
