@@ -73,7 +73,6 @@ It's easy and everybody does that.
 
 You can use prepared methods like [`findBy()`](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L177), [`findOneBy()`](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L192) right away.
 
-
 ### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 
 If we try to register repository as a service, we get this error:
