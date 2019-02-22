@@ -8,12 +8,12 @@ id: blog
     <h1>Deprecated Posts</h1>
 
     {# get only deprecated posts #}
-    {% set activePosts = [] %}
+    {% set active_posts = [] %}
     {% for post in posts %}
         {% if post.deprecated_since is defined and post.lang is not defined %}
-            {% set activePosts = activePosts|merge([post]) %}
+            {% set active_posts = active_posts|merge([post]) %}
         {% endif %}
     {% endfor %}
 
-    {% include "_snippets/post/post_list.twig" with { posts: activePosts } %}
+    {% include "_snippets/post/post_list.twig" with { posts: active_posts } %}
 </div>
