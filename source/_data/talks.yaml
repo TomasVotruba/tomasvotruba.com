@@ -8,13 +8,19 @@ parameters:
             video_link: "https://www.facebook.com/pehapkari/videos/1703907042992432/"
             post_link: "/blog/2018/02/19/rector-part-1-what-and-how/"
             events:
-                - { name: "PHP Asia @ Singapore, September 2018", link: "https://2018.phpconf.asia/" }
-                - { name: "Symfony UG Berlin @ Germany, August 2018", link: "https://www.meetup.com/sfugberlin/events/253573567" }
-                - { name: "ViennaPHP Montly Gathering @ Austria, September 2018", link: "https://www.meetup.com/viennaphp/events/ncmvwpyxmbbc/" }
-                - { name: "ViennaPHP Montly Gathering @ Austria, June 2018", link: "https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/" }
-                - { name: "Friends of PHP in Pardubice @ Czech Republic, June 2018", link: "https://www.facebook.com/events/1783858791700944/" }
-                - { name: "Berlin PHP UG @ Germany, June 2018", link: "http://www.bephpug.de/2018/06/05/june.html" }
+                - { name: "PHP Usergroup Dresden @ Germany, 02/2019", link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/257775077/" }
+                - { name: "Friends of PHP Brno @ Czech Republic, 02/2019", link: "https://www.meetup.com/Pehapkari-Brno/events/258960849/" }
+                - { name: "Vienna PHP @ Austria, 02/2019", link: "https://www.meetup.com/viennaphp/events/ncmvwpyzdbcc/" }
+                - { name: "Friends of PHP Vysočina @ Czech Republic, 02/2019", link: "https://www.facebook.com/events/342162879917136/" }
+                # 2018
+                - { name: "PHP Asia @ Singapore, 09/2018", link: "https://2018.phpconf.asia/" }
+                - { name: "Symfony UG Berlin @ Germany, 08/2018", link: "https://www.meetup.com/sfugberlin/events/253573567" }
+                - { name: "Vienna PHP Montly Gathering @ Austria, 09/2018", link: "https://www.meetup.com/viennaphp/events/ncmvwpyxmbbc/" }
+                - { name: "Vienna PHP Montly Gathering @ Austria, 06/2018", link: "https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/" }
+                - { name: "Friends of PHP in Pardubice @ Czech Republic, 06/2018", link: "https://www.facebook.com/events/1783858791700944/" }
+                - { name: "Berlin PHP UG @ Germany, 06/2018", link: "http://www.bephpug.de/2018/06/05/june.html" }
                 - { name: "PHPLive @ Czech Republic & Slovakia, 2018", link: "https://www.phplive.cz" }
+                # 2017
                 - { name: "PHP Central Europe Conference @ Poland, 2017", link: "https://2017.phpce.eu" }
 
         -
@@ -25,8 +31,8 @@ parameters:
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1769747516670517/1341201322596341/?type=1"
             events:
                 - { name: "PHP Central Europe Conference @ Poland, 2017", link: "https://2017.phpce.eu" }
-                - { name: "ViennaPHP @ Austria, May 2017", link: "https://www.meetup.com/viennaphp/events/237296390" }
-                - { name: "Dresden PHP UG @ Germany, April 2017", link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/238473452" }
+                - { name: "Vienna PHP @ Austria, 05/2017", link: "https://www.meetup.com/viennaphp/events/237296390" }
+                - { name: "Dresden PHP UG @ Germany, 04/2017", link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/238473452" }
                 - { name: "Nette Camp @ Czech Republic, 2017", link: "https://nettecamp.cz" }
 
         -
@@ -37,8 +43,8 @@ parameters:
             demo_link: "https://github.com/TomasVotruba/monorepo-demo"
             video_link: "https://slideslive.com/38911637/jak-rozjet-monorepo-za-10-minut"
             events:
-                - { name: "Developer Day 2018 @ Czech Republic, October 2018", link: "https://www.hubbr.cz/udalosti/events/developer-day-2018" }
-                - { name: "Friends of PHP Prague @ Czech Republic, September 2018", link: "https://www.meetup.com/friends-of-php-prague/events/254388973/" }
+                - { name: "Developer Day 2018 @ Czech Republic, 11/2018", link: "https://www.hubbr.cz/udalosti/events/developer-day-2018" }
+                - { name: "Friends of PHP Prague @ Czech Republic, 09/2018", link: "https://www.meetup.com/friends-of-php-prague/events/254388973/" }
 
         -
             title: "Why Your Company Loses Money By Not-Open-Sourcing"
@@ -56,4 +62,4 @@ parameters:
             related_post: "/blog/2017/02/20/statie-how-to-run-it-locally/"
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/"
             events:
-                - { name: "Berlin PHP UG @ Germany, April 2017", link: "http://www.bephpug.de/2017/04/04/april.html" }
+                - { name: "Berlin PHP UG @ Germany, 04/2017", link: "http://www.bephpug.de/2017/04/04/april.html" }
