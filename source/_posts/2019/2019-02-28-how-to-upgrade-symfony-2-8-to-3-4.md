@@ -5,7 +5,7 @@ perex: |
     Are you Symfony programmer? Do you work on a successful project? Then upgrading the Symfony project is a work you can't avoid.
     Almost a year ago I wrote about [Five and Half Steps to Migrate from Symfony 2.8 LTS to Symfony 3.4 LTS in Real PRs](https://blog.shopsys.com/5-5-steps-to-migrate-from-symfony-2-8-lts-to-symfony-3-4-lts-in-real-prs-50c98eb0e9f6).
     <br><br>
-    Now it's much easier to jump from one LTS to another - with **instant upgrades**.     
+    Now it's much easier to jump from one LTS to another - with **instant upgrades**.
 tweet: "New Post on #php 🐘 blog: How to Upgrade #Symfony 2.8 to 3.4"
 ---
 
@@ -34,8 +34,8 @@ I wrote about [PHP upgrades before](/blog/2018/11/08/fatal-error-uncaught-error-
 If you split each of these lines into standalone pull-requests, you're the best!
 
 ## Forget `UPGRADE.md`
- 
-You probably know I work almost part-time on [the Rector project](https://getrector.org/). I gather feedback from conferences and meetups all over Europe and try to make Rector better every day. Recently he also migrated between [2 PHP frameworks](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/), because why not?   
+
+You probably know I work almost part-time on [the Rector project](https://getrector.org/). I gather feedback from conferences and meetups all over Europe and try to make Rector better every day. Recently he also migrated between [2 PHP frameworks](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/), because why not?
 
 The PHP community gives me really positive vibes about going the right direction. That helps me to make PHP and Symfony **sets more and more complete**:
 
@@ -45,7 +45,7 @@ The PHP community gives me really positive vibes about going the right direction
 
 All you need to do to upgrade your PHP code is to install Rector and run particular upgrades.
 
-**Do you want to upgrade from Symfony 2.8 to 3.4?** 
+**Do you want to upgrade from Symfony 2.8 to 3.4?**
 
 ```bash
 composer require rector/rector --dev
