@@ -1,5 +1,5 @@
 ---
-id: 191
+id: 192
 title: "Why we Migrated from Nette to Symfony in 3 Weeks - Part 2 - Escaping Semantic Hell"
 perex: |
     Do you want to **migrate your project from Nette to Symfony**? In [part 1](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/) we showed you how to get your project ready, why it's important to make team commitment and what you can automate.

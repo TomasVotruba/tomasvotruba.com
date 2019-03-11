@@ -1,5 +1,5 @@
 ---
-id: 192
+id: 193
 title: "Why we Migrated from Nette to Symfony in 3 Weeks - Part 3 - Community Dead-Lock"
 perex: |
     Do you want to **migrate your project from Nette to Symfony**? In [the part 2](/blog/2019/03/11/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-2/) we looked at **escaping semver hell**.
