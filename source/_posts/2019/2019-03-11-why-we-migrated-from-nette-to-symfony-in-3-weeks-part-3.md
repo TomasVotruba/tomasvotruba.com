@@ -5,8 +5,8 @@ perex: |
     Do you want to **migrate your project from Nette to Symfony**? In [the part 2](/blog/2019/03/11/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-2/) we looked at **escaping semver hell**.
     <br><br>
     Today we'll look on **package vendor-locks** caused by brain drain.
-tweet: "New Post on #php 🐘 blog: How we Migrated from #NetteFw to #Symfony in 3 Weeks - Part 3"
-tweet_image: '/assets/images/posts/2019/nette-to-symfony3/nette-object-your-code.png'
+tweet: "New Post on #php 🐘 blog: Why we Migrated from #NetteFw to #Symfony in 3 Weeks - Part 3"
+tweet_image: "/assets/images/posts/2019/nette-to-symfony3/nette-object-your-code.png"
 ---
 
 *This post will be a bit harder for me because I'm part of this problem. I'm a former Nette activist and open-source hyper. I created many open-source packages Nette developers use, but those are not actively maintained nor developed for the last couple of years. I'm sorry about that.*
