@@ -11,124 +11,160 @@ id: mission
         </h1>
 
         <p class="bigger mb-4">
-            I want every person in the world to be able learn anything, from people around them and share their wisdom with other. No matter what age, social status or skill you have, I believe you can learn anything you ste your mind to. I love to question old habits to find disruptive innovations.
+            I believe any person in the world <strong>can learn anything</strong>. No matter what age, social status or experience you have now. You can learn anything you set your mind to.
         </p>
 
         <p>
-            I connect psychology and informatics, I help code to look more human and programmers to look at code from future perspective. In the end I help my clients to be effective, lazy and future-proof. They know how to hack education, online sources and learn most out of their natural environment. I look forward to future, when AI will need first therapy to fix broken behavior.
+            I connect computers and modern psychology. I help <strong>my clients to do more with less</strong> and be change-proof:
         </p>
 
-        <p>
-            I don't believe people  need to know more and memorize knowledge. I believe everyone is best teacher to his own and he or she already has all they need. I just help them to re-discover it and use it on daily basis.
-        </p>
+        <div id="client-line">
+            <div class="text-center row mt-3 mb-3">
+                {% for logo, url in helped_companies %}
+                    <div class="align-self-center col-md-2 col-sm-4 col-4 border-0 pt-md-0 pb-md-0 pt-2 pb-2">
+                        <a href="{{ url }}">
+                            <img src="/assets/images/references/{{ logo }}" alt="">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="text-center mb-5">
+            <a href="/contact/" class="btn btn-warning">
+                Become my <strong>next Client</strong>
+                &nbsp;
+                <em class="fas fa-chart-line fa-fw"></em>
+            </a>
+        </div>
+
+        {# @todo add entrydo? #}
+        {# @todo add elasticr? #}
 
         <hr>
 
-        <h2>1:1 Mentorings</h2>
+        <h2>
+            Do you want 1:1 mentoring or in-house Training?
+        </h2>
 
-        <p>
-            100 % attention, [deep attention](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport) focused on single person and his or her problem (and questions). That's what we miss today. That's why I don't do crowd lecture, but **1:1 mentorings**.
+        <p>I turn my mission into reality in <strong>mentorings and trainings</strong>.</p>
 
-            <br>
-            Don't you have time to read? Let's meet on <strong>1:1 mentoring</strong> where you'll get  all my know-how you ask for.
-        </p>
-
-
-
-        <h2 class="text-center mb-4">Continues Education - 60 minutes / week </h2>
-
-        <ul>
-            <li>60-minute mentorings & code-reviews</li>
-            <li>once a week</li>
-            <li>1 hour</li>
-            <li>collect notes during a week</li>
-            <li>person-driven - you ask the questions, you want to know</li>
-            <li>learn the most useful skill you need at the moment</li>
-            <li>get 100 % attention for fraction of time and money of day-workshop</li>
-        </ul>
-
-        <div class="card bg-success">
-            1500 Kč/65 € per. hour
-        </div>
-
-
-        <p>Do you want me in your company? I do in-house lectures too, <a href="/contact">just call me</a>.</p>
-
-        {#<h2>Ger Your Personal PHP Mentor</h2>#}
-
-        {#<p>I can help you with anything <a href="/">I write about</a>.#}
-
-
-        {# todo here #}
         <div class="row">
             <div class="col-6">
-                <h2>Hard skills</h2>
+                <h3>1:1 60 minutes Mentorings</h3>
 
-                <hr>
+                <div class="text-center mt-5 mb-5">
+                    <em class="fas fa-clock fa-4x"></em>
+                </div>
 
-                <h2 class="text-center mb-4">What can I Mentor You?</h2>
+                <p>
+                    100 % <a href="/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport">deep</a> attention just for you,  your problems and questions.
+                </p>
 
-                <h3>Symfony</h3>
+                <br>
 
-                <ul class="mt-4 mb-4">
-                    <li>
-                        <strong>{{ "now"|date('Y')-2014 }} years</strong> of experience
-                    </li>
-                    <li>version Symfony 3.4 & 4.2, Flex</li>
-                    <li>migration of legacy projects to autodiscovery</li>
-                    <li>from bundles to bundle-less, but still organized code</li>
-                    <li>over <a href="/">30 posts</a> on my blog</li>
-                    <li>over <a href="https://stackoverflow.com/users/1348344/tom%C3%A1%C5%A1-votruba">115 answer</a> on Stackoverflow</li>
+                <p><strong>I usually do</strong>:</p>
+
+                <ul>
+                    <li>code-reviews</li>
+                    <li>whole code-base-review once a 2 months</li>
+                    <li>answer your questions</li>
+                    <li>organize a term on Hangouts that suits you</li>
+                    <li>share links to relevant posts to your topic</li>
                 </ul>
 
-                <h3>Keep Growing Systems Simple with Clear Code Organization</h3>
+                <br>
 
-                <ul class="mt-4">
-                    <li>How to <strong>refactor legacy code</strong></li>
-                    <li><strong>SOLID principals</strong> and <strong>design patterns</strong> in real life <strong>examples</strong></li>
-                    <li>coding standard setup not just for spaces, but for architecture control to save time at code-reviews</li>
-                    <li>How to <strong>save time with static analysis</strong>: <a href="/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/">EasyCodingStandard</a></li>
+                <p><strong>You usually do</strong>:</p>
+
+                <ul>
+                    <li>take a note when stumble a problem during the week</li>
+                    <li>call me when you really need help</li>
                 </ul>
 
+                <p>The most favorite frequency is <strong>1 hour/week</strong>.</p>
+
+                <br>
+
+                <div class="text-center mt-2">
+                    <a href="/contact/" class="btn btn-success pt-2">
+                        <strong>Hire me</strong> for 1500 Kč/65 € hour
+                        &nbsp;
+                        <em class="fas fa-arrow-circle-right fa-fw"></em>
+                    </a>
+                </div>
             </div>
-            <div class="col-6">
-                <h2>Soft skills</h2>
 
-                - write a post
-                - get a job you'll love
-                - get money for the job you deserver
+            <div class="col-6">
+                <h3>In-House Training</h3>
+
+                <div class="text-center mt-5 mb-5">
+                    <em class="fas fa-home fa-4x"></em>
+                </div>
+
+                <p>
+                    Do you want me in your company for your whole team?
+                </p>
+
+                <br>
+
+                <p><strong>Most favorite trainings</strong>:</p>
+
+                <ul>
+                    <li>Symfony - from introduction, upgrades between version to decoupling and using less-known tips</li>
+                    <li>Nette - the same</li>
+                    <li>custom framework to open-source</li>
+                    <li>monorepo architecture</li>
+                    <li>package management</li>
+                </ul>
+
+                <br>
+
+                <div class="text-center mt-2">
+                    <a class="btn btn-success" href="/contact/">
+                        Call me and we'll <strong>talk about your project</strong>
+                        &nbsp;
+                        <em class="fas fa-arrow-circle-right fa-fw"></em>
+                    </a>
+                </div>
             </div>
         </div>
 
+        <hr>
 
-        {#<h3>Instant Upgrade of Legacy Code</h3>#}
+        <h2>"I'm the Expert"</h2>
 
-        {#<ul>#}
-            {#<li>AST refactoring</li>#}
-            {#<li>embodied knowledge - use tools to prevent your code from becoming legacy over again</li>#}
-        {#</ul>#}
+        <p>
+            I'm definitely not <em>that</em> <a href="https://www.youtube.com/watch?v=BKorP55Aqvg">kind of expert</a>. But I'm trying to better every day and collect feedback to get there:
+        </p>
 
-        <h3>Don't take my word for it</h3>
+        <ul>
+            <li>from <a href="/blog/">17 000 monthly</a> readers of my blog with over 200 posts</li>
+            <li>from <a href="https://stackoverflow.com/users/1348344/tom%C3%A1%C5%A1-votruba">250 answers</a> on Stackoverflow,</li>
+            <li>from over <a href="/talks/">30 talks</a> I gave on various topics in 6 countries and 2 continents</li>
+        </ul>
 
-        On my blog I make this mission happen along with 17 000 readers.
+        <br>
 
-        {{ include('_snippets/mission/client_line.twig') }}
+        <p><strong>I feel most confident to help you with</strong>:</p>
 
-        {#<div class="card mb-5">#}
-            {#<div class="card-header text-center">#}
-                {#<h2 class="card-title">#}
-                    {#<em class="fas fa-dollar-sign"></em>#}
-                    {#&nbsp;#}
-                    {#How to Get a Job You'll Love#}
-                {#</h2>#}
-            {#</div>#}
-            {#<div class="card-body">#}
-                {#<ul>#}
-                    {#<li>What are the <strong>most effective strategies</strong> to find a job you desire</li>#}
-                    {#<li>How to <strong>sell yourself</strong></li>#}
-                    {#<li>How <strong>master negotiation</strong> with your employer</li>#}
-                {#</ul>#}
-            {#</div>#}
-        {#</div>#}
+        <ul>
+            <li><strong>anything around Symfony</strong> - thanks writing <a href="https://github.com/symplify/">Symfony open-source</a> and founding Symfony community in the Czech Republic (now <a href="https://pehapkari.cz/">Pehapkari.cz</a>) I had to really dig deep into Symfony code</li>
+            <li>refactoring of legacy applications with <a href="https://getrector.org/">Rector</a></li>
+            <li>saving code-review costs with coding standards</li>
+            <li>basically <strong>anything <a href="/blog/">I write about</a></strong></li>
+        </ul>
+
+        <p class="text-center mt-5">
+            <em>Do you want improve quickly with helping hand?</em>
+        </p>
+
+        <p class="text-center">
+            <a href="/contact/" class="btn btn-danger mt-2 mb-2">
+                I'm here to <strong>help You</strong>
+                &nbsp;
+                <em class="fas fa-handshake fa-fw"></em>
+            </a>
+        </p>
     </div>
 {% endblock %}
