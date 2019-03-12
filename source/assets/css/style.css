@@ -586,3 +586,10 @@ table ul {
     padding-top: .5em;
     padding-bottom: 1.5em;
 }
+
+.card-title {
+    padding-top: 0;
+    margin-top: .3em;
+    text-align: center;
+    font-weight: bold;
+}
