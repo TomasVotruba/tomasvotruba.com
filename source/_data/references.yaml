@@ -3,10 +3,11 @@ parameters:
         'lekarna.png': 'https://www.lekarna.cz/'
         'mall.png': 'https://www.mall.cz/'
         'shopsys.png': 'https://www.shopsys.com/'
-        'igloonet.png': 'https://igloonet.cz'
+        'igloonet.png': 'https://igloonet.cz/'
         'lidskasila.png': 'https://lidskasila.cz/'
         'naucmese.png': 'https://www.naucmese.cz/'
-
+        'elasticr.png': 'https://www.elasticr.cz/'
+        'entrydo.png': 'https://entry.do/'
 
     references:
         -
