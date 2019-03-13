@@ -11,10 +11,6 @@ tweet_image: "/assets/images/posts/2017/doc-block-cleaner/diff.png"
 deprecated_since: "March 2019"
 deprecated_message: |
     This fixer was [deprecated](https://github.com/Symplify/Symplify/pull/1473) and removed in **EasyCodingStandard 6**. Use official `NoSuperfluousPhpdocTagsFixer` instead.     
-
-updated_since: "December 2018"
-updated_message: |
-    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
 ---
 
 <blockquote class="blockquote text-center">
