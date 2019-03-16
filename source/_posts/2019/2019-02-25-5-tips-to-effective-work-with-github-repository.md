@@ -66,7 +66,7 @@ Just **hit ↑** (arrow up), and you're there!
 
 ## 4. Refine your Github
 
-[sindresorhus/refined-github](https://github.com/sindresorhus/refined-github) is like a smart sexy secretary that gives you tips you ever wanted to know.
+[sindresorhus/refined-github](https://github.com/sindresorhus/refined-github) is like a smart secretary that gives you tips you ever wanted to know.
 
 <br>
 
