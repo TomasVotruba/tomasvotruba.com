@@ -14,7 +14,7 @@ tweet_image: "/assets/images/posts/2019/dead-public/usages.png"
 
 <br> 
 
-As we code on one application for many years, some methods become will replace by new-ones:
+As we code on an application for many years, some methods may be replaced by a few new-ones:
 
 ```diff
  $person = new Person('Tomas');
@@ -22,7 +22,7 @@ As we code on one application for many years, some methods become will replace b
 +$person->getName();
 ```
 
-But the application so complex, that we cannot be sure the method is used no-where else: 
+If the application is complex, we may not know if the old method is still in use anywhere: 
 
 ```php
 <?php
@@ -51,7 +51,7 @@ class Person
 } 
 ```
 
-We don't have to read file by file manually. PHPStorm can help us examine each public method for all its users. 
+We don't have to manually read the codebase file by file. PHPStorm can help us examine each public method and where they are being used. 
 
 **Just right-click the method call** ("provide" in the picture) **and select "Find Usages"**. 
 
