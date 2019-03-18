@@ -19,6 +19,10 @@ parameters:
 #            post_ids: [128, 103, 109, 105, 129, 137, 158]
 
         -
+            title: "From Nette to Symfony"
+            post_ids: [188, 192, 193, 186, 185, 171, 120]
+            description: "How to migrate from Nette to Symfony?"
+        -
             title: "Master PHP CLI Apps with Symfony"
             post_ids: [128, 103, 109, 105, 129, 137]
             description: "Do you want to write CLI Apps in PHP like a boss but you never did that before? Or do you look for tips to improve your CLI project? This will help you write better and cleaner code no matter level you're on."

@@ -35,7 +35,7 @@ id: "clusters"
         {% for cluster in clusters %}
             <div class="card mb-2 cluster" id="{{ cluster.title|webalize }}">
                 <div class="text-center card-header h-100">
-                    <div class="pull-left text-left mt-3">
+                    <div class="pull-left text-left mt-3 mb-4">
                         <span class="btn btn-success make_active inactive-cluster-part" data-id="{{ cluster.title|webalize }}">Expand</span>
                         <span class="btn btn-secondary btn-sm make_passive active-cluster-part" data-id="{{ cluster.title|webalize }}">Hide</span>
                     </div>
