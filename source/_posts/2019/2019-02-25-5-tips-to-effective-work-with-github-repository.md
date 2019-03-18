@@ -11,7 +11,7 @@ tweet_image: "/assets/images/posts/2019/github-tips/list.gif"
 
 ## 1. Single-Char Console Commands for Your Tired Fingers
 
-Which is correct?
+Which one is correct?
 
 ```bash
 vendor/bin/rector process
@@ -20,7 +20,7 @@ vendor/bin/rector proccess
 vendor/bin/rector proces
 ```
 
-You don't want to think about this and you don't have to! Just **use first letter**:
+You don't want to think about this and you don't have to! Just **use the first letter**:
 
 ```bash
 vendor/bin/rector p
@@ -42,9 +42,9 @@ Works every-time there is no command named with that letter:
 
 ## 2. Be informed about New Packages - with no Spam!
 
-When you "watch" a Github repository, you'll get a notification about every new release, issue, pull-request, and comments. This makes sense when you maintainer repository, but for most people, it's annoying spam.
+When you "watch" a Github repository, you'll get a notification about every new release, issue, pull-request, or comments. This makes sense when you maintain a repository, but for most of the people, it's annoying spam.
 
-GitHub recently introduced very nice feature. It will add notification **only for releases**:
+GitHub recently introduced a very nice feature. It will add notification **only for releases**:
 
 <img src="/assets/images/posts/2019/github-tips/github-subscription.png" class="img-thumbnail">
 
@@ -52,9 +52,9 @@ GitHub recently introduced very nice feature. It will add notification **only fo
 
 ## 3. Fix Typos with UP
 
-Have you ever sent a comment with a typo? I barely do without, but I always notice after I hit the "send" (or CTRL + Enter).
+Have you ever sent a comment with a typo? I barely do without, and always notice that after I hit the "send" (or CTRL + Enter).
 
-I always have move mouse cursor to 3 dots in the right corner of the comment, click, select *Edit* and click again.
+Now move your cursor to the 3 dots in the right corner of the comment, click, select *Edit* and click again.
 
 **No more!**
 
@@ -82,7 +82,7 @@ It **interlinks issues and PRs without opening them**:
 
 <br>
 
-When I work on different pc, I feel like a retard without this one. **Issues sorted by activity** beats default *create time*:
+When I work on different pc, I feel stupid without this one. **Issues sorted by activity** beats default *create time*:
 
 <img src="/assets/images/posts/2019/github-tips/first-new.png" class="img-thumbnail">
 
@@ -123,9 +123,9 @@ Great, now we know the name! But what if you want to add **one extra option** ju
 <br>
 
 - **What number is your favorite?**
-- **Which tip I forgot?**
+- **Which tip did I forget?**
 
-Tell me in comments, please.
+Tell me in the comments, please.
 
 <br>
 
