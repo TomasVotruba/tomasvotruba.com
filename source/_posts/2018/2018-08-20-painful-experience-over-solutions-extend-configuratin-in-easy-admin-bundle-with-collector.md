@@ -314,7 +314,7 @@ The same way I don't memorize Wikipedia and just Google it instead, **I don't re
 - Try F - Kaboom! It works!
 
 <br>
-If this all can figure out artificial intelligence for us, we're screwed :).
+If artificial intelligence could figure this all out for us, we'd be screwed :).
 
 Btw, are you coming to [Human Level AI Conference](https://www.hlai-conf.org/) in Prague this weekend? I'll be there and I'd be happy if you stop me and say Hi!
 
