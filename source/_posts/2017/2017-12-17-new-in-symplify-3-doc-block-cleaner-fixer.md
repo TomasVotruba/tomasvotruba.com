@@ -10,7 +10,7 @@ tweet_image: "/assets/images/posts/2017/doc-block-cleaner/diff.png"
 
 deprecated_since: "March 2019"
 deprecated_message: |
-    This fixer was [deprecated](https://github.com/Symplify/Symplify/pull/1473) and removed in **EasyCodingStandard 6**. Use [official `NoSuperfluousPhpdocTagsFixer` instead](https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/3734).     
+    This fixer was [deprecated](https://github.com/Symplify/Symplify/pull/1473) and removed in **EasyCodingStandard 6**. Use [official `NoSuperfluousPhpdocTagsFixer` instead](https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/3734).
 ---
 
 <blockquote class="blockquote text-center">

@@ -21,35 +21,35 @@ When we talked with [Honza](https://janmikes.cz/) about framework A → framewor
 
 First, we looked into `composer.json` and tried to get rid of some packages. What packages we won't need on Symfony?
 
-- `kdyby/events`  
-- `kdyby/console`  
-- `kdyby/doctrine`  
-- `kdyby/rabbitmq`  
-- `kdyby/redis`  
-- `kdyby/translation`  
-- `zenify/doctrine-behaviors`  
-- `zenify/doctrine-migrations`  
-- `zenify/doctrine-filters`  
-- `zenify/modular-latte-filters`  
-- `zenify/doctrine-fixtures`  
+- `kdyby/events`
+- `kdyby/console`
+- `kdyby/doctrine`
+- `kdyby/rabbitmq`
+- `kdyby/redis`
+- `kdyby/translation`
+- `zenify/doctrine-behaviors`
+- `zenify/doctrine-migrations`
+- `zenify/doctrine-filters`
+- `zenify/modular-latte-filters`
+- `zenify/doctrine-fixtures`
 - `zenify/doctrine-extensions-tree`
 
 **We could drop all these**, because:
- 
-- `kdyby/*` is basically integration of Symfony packages with `nette/di`, 
+
+- `kdyby/*` is basically integration of Symfony packages with `nette/di`,
 - and `zenify/*` is basically `doctrine/*` integration with `nette/di`
 
 Of course, you can't delete them right away. Yet, [Rector covers most of this migration now](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/#3-automated-migration-gt-manual-changes), so this part is fine.
 
 ## Upgrade Lagging
 
-We decided to remove Symfony/Doctrine *glue packages* first, so we could work with fewer dependencies and be more flexible. And upgrade PHP first, so we can use right the newest Symfony packages. 
+We decided to remove Symfony/Doctrine *glue packages* first, so we could work with fewer dependencies and be more flexible. And upgrade PHP first, so we can use right the newest Symfony packages.
 
-We tried to remove one `zenify/*` package (because it's small → possibly easy to replace) and use the package we have in control. 
+We tried to remove one `zenify/*` package (because it's small → possibly easy to replace) and use the package we have in control.
 
 ### `object`
 
-Thing is, PHP 7.2 introduced `object ` keyword: 
+Thing is, PHP 7.2 introduced `object ` keyword:
 
 <img src="/assets/images/posts/2019/nette-to-symfony3/nette-object-easy.png" class="img-thumbnail">
 
@@ -69,7 +69,7 @@ Nette had class `Nette\Object` that was actively promoted as the parent of all c
 
 <br>
 
-In that time, we had to use PHPStorm old-school *find & replace* with regex pattern:  
+In that time, we had to use PHPStorm old-school *find & replace* with regex pattern:
 
 <img src="/assets/images/posts/2019/nette-to-symfony3/nette-object-your-code.png">
 
@@ -79,9 +79,9 @@ The upgrade path is like a road with holes. It's getting crappy, but there is st
 
 <img src="/assets/images/posts/2019/nette-to-symfony3/nette-object-in-3rd-party.png">
 
-**Until the maintainer fixes that, the upgrade path is closed**. We'd have to fork every Nette package that is not maintained, fix it manually in the code and add them into `composer.json`. 
+**Until the maintainer fixes that, the upgrade path is closed**. We'd have to fork every Nette package that is not maintained, fix it manually in the code and add them into `composer.json`.
 
-We don't talk about small package with few classes that is easy to rewrite: 
+We don't talk about small package with few classes that is easy to rewrite:
 
 <img src="/assets/images/posts/2019/nette-to-symfony3/downloads.png" class="img-thumbnail">
 
@@ -104,13 +104,13 @@ Many years later, when I become a Symfony consultant, I asked companies why did 
 In following years, without anyone noticing, **slow brain drain from Nette to Symfony, Java or Javascript** started:
 
 - [Filip Procházka](https://prochazka.su/), the author of Kdyby → is now Java programmer
-- [Patrik Votoček](https://patrik.votocek.cz/), one of first Nette evangelist and author of Nella →  switched to Symfony, then to chaos monkey, 
-- [Martin Zlámal](https://github.com/mrtnzlml), very active Nette evangelist who held many Nette/PHP talks on university → now works with Javascript at Kiwi.com 
+- [Patrik Votoček](https://patrik.votocek.cz/), one of first Nette evangelist and author of Nella →  switched to Symfony, then to chaos monkey,
+- [Martin Zlámal](https://github.com/mrtnzlml), very active Nette evangelist who held many Nette/PHP talks on university → now works with Javascript at Kiwi.com
 - [Jáchym Toušek](http://enumag.cz/), active Symfony to Nette integrator → switched to Symfony
 - I, author of Zenify and Symnedi → switched to Symfony
 - ...
 
-**Many of open-source packages for Nette slowly become unmaintained.** So this error is new status-quo for these packages: 
+**Many of open-source packages for Nette slowly become unmaintained.** So this error is new status-quo for these packages:
 
 <img src="/assets/images/posts/2019/nette-to-symfony3/nette-object-in-3rd-party.png">
 
@@ -122,12 +122,12 @@ When we realized with Honza that night, that to upgrade project means "fork ever
 
 ## Come to Meetup and Tell Us About Your Problem
 
-Are you stuck with Nette at home and thinking about in your wet dreams Symfony? This is your lucky week! :) 
+Are you stuck with Nette at home and thinking about in your wet dreams Symfony? This is your lucky week! :)
 
-Honza will talk about Nette to Symfony migration on **[PHP meetup in Prague this Thursday - 14. 3.](https://www.meetup.com/friends-of-php-prague/events/259627000/)** 
+Honza will talk about Nette to Symfony migration on **[PHP meetup in Prague this Thursday - 14. 3.](https://www.meetup.com/friends-of-php-prague/events/259627000/)**
 
 Entrance free, language is English and I'll be there too!
 
 <br>
 
-Happy coding! 
+Happy coding!

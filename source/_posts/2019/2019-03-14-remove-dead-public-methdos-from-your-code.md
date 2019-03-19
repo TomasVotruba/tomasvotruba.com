@@ -12,7 +12,7 @@ tweet_image: "/assets/images/posts/2019/dead-public/usages.png"
 
 *Too long to read? Look at [3:45 min practical video](https://www.youtube.com/watch?v=sKFB6XVmO_Q) by a friend of mine [Jan Kuchař](https://jankuchar.cz/).*
 
-<br> 
+<br>
 
 As we code on an application for many years, some methods may be replaced by a few new-ones:
 
@@ -22,7 +22,7 @@ As we code on an application for many years, some methods may be replaced by a f
 +$person->getName();
 ```
 
-If the application is complex, we may not know if the old method is still in use anywhere: 
+If the application is complex, we may not know if the old method is still in use anywhere:
 
 ```php
 <?php
@@ -30,30 +30,30 @@ If the application is complex, we may not know if the old method is still in use
 class Person
 {
     /**
-     * @var string   
+     * @var string
      */
     private $name;
-    
+
     public function __construct(string $name)
     {
         $this->name = $name;
     }
-    
+
     public function getName()
     {
         // ...
     }
-    
+
     public function getFullName()
     {
         // ...
     }
-} 
+}
 ```
 
-We don't have to manually read the codebase file by file. PHPStorm can help us examine each public method and where they are being used. 
+We don't have to manually read the codebase file by file. PHPStorm can help us examine each public method and where they are being used.
 
-**Just right-click the method call** ("provide" in the picture) **and select "Find Usages"**. 
+**Just right-click the method call** ("provide" in the picture) **and select "Find Usages"**.
 
 <img src="/assets/images/posts/2019/dead-public/usages.png" class="img-thumbnail">
 
@@ -61,7 +61,7 @@ It took us 5-10 seconds to **find out that `getFullName()` is a dead method**. G
 
 ## Can we Find Them Faster?
 
-Now **do the same for all the other public methods**. 
+Now **do the same for all the other public methods**.
 
 I consider Symplify project quite small, at least compared to private web applications. Yet, there [is over 684 public methods](https://github.com/Symplify/Symplify/search?q=%22public+function%22&unscoped_q=%22public+function%22). Even if we remove public methods from test fixtures, there will remain ~ 500 public methods:
 
@@ -91,12 +91,12 @@ vendor/bin/ecs check src
 
 Not really. The sniff goes through your code and:
 
-- finds all methods: `public function someMethod()` 
+- finds all methods: `public function someMethod()`
 - then find all method calls: `$this->someMethod()`
 - and simply **reports those public functions that were never called**
 
-Then just skip false positives, that are [called in yaml configs](https://github.com/rectorphp/rector/blob/a8db80baff48eb02319963b3380f185461678815/packages/NodeTypeResolver/config/config.yaml#L15) or in strings - and that is it! 
- 
+Then just skip false positives, that are [called in yaml configs](https://github.com/rectorphp/rector/blob/a8db80baff48eb02319963b3380f185461678815/packages/NodeTypeResolver/config/config.yaml#L15) or in strings - and that is it!
+
 **You'll be surprised, how many methods are dead in your code :)**
 
 <br>
