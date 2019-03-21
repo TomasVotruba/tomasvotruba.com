@@ -13,8 +13,7 @@ Imagine you're doing a code review of "various improvements" pull-request with *
 
 <img src="/assets/images/posts/2019/dead-code/fine.jpg" class="img-thumbnail">
 
-Ok, not that one. Let's go for 5 change files. There will be 7 code snippets, each possibly with extra code that looks useful,
-but it doesn't do anything really.
+Ok, not that one. Let's go **only for 7 changed files**. There will be 7 code snippets, each possibly with extra code that looks useful, but it doesn't do anything really.
 
 Then click on the button to see if you were right :)
 
