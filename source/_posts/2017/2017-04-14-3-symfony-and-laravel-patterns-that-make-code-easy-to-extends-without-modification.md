@@ -99,7 +99,7 @@ if ($booth->isCalled()) {
     // you with people could get here without sending you a PR for everything they might need? Easy! ↓
 
     // this is the entry point, just listen to 'boothCall'
-    $this->eventDispatcher->dispatch('boolCall', $booth->getLocation();
+    $this->eventDispatcher->dispatch('boothCall', $booth->getLocation();
     // ...
 }
 ```
