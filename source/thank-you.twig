@@ -2,6 +2,7 @@
 layout: "_layouts/default.twig"
 title: "Thank You"
 id: thank_you
+commit_limit: 3
 ---
 
 <div class="container" id="contact">
@@ -16,7 +17,7 @@ id: thank_you
 
     <div class="row text-center">
         {% for contributor in contributors %}
-            {% if contributor.contribution_count > 2 %}
+            {% if contributor.contribution_count > commit_limit %}
                 <div class="pb-4 pt-2 col-6">
                     <img src="{{ contributor.photo }}" class="avatar">
                     <strong>{{ contributor.name }}</strong>
@@ -36,7 +37,7 @@ id: thank_you
 
         {% set contributors = sort_by_field(contributors, 'name') %}
         {% for contributor in contributors %}
-            {% if contributor.contribution_count <= 2 %}
+            {% if contributor.contribution_count <= commit_limit %}
                 {% if loop.last %}and{% endif %}
                 <a href="https://github.com/TomasVotruba/tomasvotruba.cz/commits?author={{ contributor.name }}">{{ contributor.name }}</a>{% if loop.index < (length(contributors) - 1) %}, {% endif %}{% if loop.last %}.{% endif %}
 
