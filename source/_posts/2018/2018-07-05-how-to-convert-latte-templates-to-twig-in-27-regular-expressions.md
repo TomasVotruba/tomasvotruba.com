@@ -377,37 +377,6 @@ use Nette\Utils\String;
 $content = Strings::replace($content, '#{else}#', '{% else %}');
 ```
 
-What about more complex case?
-
-```php
-# Twig to Latte
-use Nette\Utils\String;
-
-$content = Strings::replace(
-    $content,
-    '#{if isset\((.*?)\)}(.*?){\/if}#s',
-    '{% if $1 is defined %}$2{% endif %}'
-);
-```
-
-↓
-
-```php
-# Latte to Twig
-use Nette\Utils\String;
-
-$content = Strings::replace(
-    $content,
-    '#{% if (.*?) is defined %}(.*?){% endif %}#s',
-    '{if isset($1)}$2{\/if}'
-);
-```
-
-## Help to Work in Progress...
-
-The rule set is no way complete since this site includes rather simple cases. Saying that, feel free to [create an issue or contribute to Symplify](https://github.com/symplify/symplify) with your use case. It might help others and others might help you.
-
-
 <br><br>
 
 ## Go Out and Play

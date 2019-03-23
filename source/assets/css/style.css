@@ -10,7 +10,7 @@
 */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #333;
     font-size: 17px;
     line-height: 1.5em;
@@ -165,7 +165,10 @@ article {
 }
 
 #blog .firstPost {
-    font-size: 2em;
+    font-size: 3.3em;
+    font-weight: 300;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 #blog .list-unstyled {
