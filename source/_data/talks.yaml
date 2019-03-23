@@ -8,15 +8,16 @@ parameters:
             video_link: "https://www.facebook.com/pehapkari/videos/1703907042992432/"
             post_link: "/blog/2018/02/19/rector-part-1-what-and-how/"
             events:
-                - { name: "PHP Usergroup Dresden @ Germany, 02/2019", link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/257775077/" }
+                - { name: "Friends of PHP Brno @ Czech Republic, 03/2019", link: "https://www.facebook.com/events/415328609225062/" }
+                - { name: "Dresden PHP UG @ Germany, 02/2019", link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/257775077/" }
                 - { name: "Friends of PHP Brno @ Czech Republic, 02/2019", link: "https://www.meetup.com/Pehapkari-Brno/events/258960849/" }
                 - { name: "Vienna PHP @ Austria, 02/2019", link: "https://www.meetup.com/viennaphp/events/ncmvwpyzdbcc/" }
                 - { name: "Friends of PHP Vysočina @ Czech Republic, 02/2019", link: "https://www.facebook.com/events/342162879917136/" }
                 # 2018
                 - { name: "PHP Asia @ Singapore, 09/2018", link: "https://2018.phpconf.asia/" }
-                - { name: "Symfony UG Berlin @ Germany, 08/2018", link: "https://www.meetup.com/sfugberlin/events/253573567" }
-                - { name: "Vienna PHP Montly Gathering @ Austria, 09/2018", link: "https://www.meetup.com/viennaphp/events/ncmvwpyxmbbc/" }
-                - { name: "Vienna PHP Montly Gathering @ Austria, 06/2018", link: "https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/" }
+                - { name: "Berlin Symfony UG @ Germany, 08/2018", link: "https://www.meetup.com/sfugberlin/events/253573567" }
+                - { name: "Vienna PHP @ Austria, 09/2018", link: "https://www.meetup.com/viennaphp/events/ncmvwpyxmbbc/" }
+                - { name: "Vienna PHP @ Austria, 06/2018", link: "https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/" }
                 - { name: "Friends of PHP in Pardubice @ Czech Republic, 06/2018", link: "https://www.facebook.com/events/1783858791700944/" }
                 - { name: "Berlin PHP UG @ Germany, 06/2018", link: "http://www.bephpug.de/2018/06/05/june.html" }
                 - { name: "PHPLive @ Czech Republic & Slovakia, 2018", link: "https://www.phplive.cz" }
