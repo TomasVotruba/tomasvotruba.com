@@ -173,7 +173,7 @@ Take 10 more minutes to polish the rest of code and submit for PR <em class="fas
 
 <br>
 
-And what was the first unit testing framework that Rector migrated? You'll see in the next post.
+And what was the other unit testing framework that Rector migrated? You'll see in the next post.
 
 <br>
 
