@@ -577,3 +577,8 @@ table ul {
 #clusters a.btn-outline-secondary:hover {
     color: white;
 }
+
+.alert-sm {
+    font-size: 0.9em;
+
+}

@@ -9,10 +9,8 @@ id: blog
 
     {# get only czech posts #}
     {% set active_posts = [] %}
-    {% for post in posts %}
-        {% if post.lang is defined %}
-            {% set active_posts = active_posts|merge([post]) %}
-        {% endif %}
+    {% for post in posts if post.lang is defined %}
+        {% set active_posts = active_posts|merge([post]) %}
     {% endfor %}
 
     {% include "_snippets/post/post_list.twig" with { posts: active_posts } %}

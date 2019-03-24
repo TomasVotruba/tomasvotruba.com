@@ -5,9 +5,22 @@ id: blog
 ---
 
 <div class="container-fluid" id="blog">
-    <div class="pt-5 pb-2 subline text-center">
+
+    {% if future_talks|length %}
+        <div class="alert alert-sm alert-success mt-3" role="alert">
+            Meet me at
+            {% for future_talk in future_talks if future_talk.date > "now"|date %}
+                <a href="{{ future_talk.url }}">{{ future_talk.event }}</a> ({{ future_talk.city }}, {{ future_talk.date|date("M d") }})
+                {% if loop.index < (length(future_talks) - 1) %}, {% endif %}
+                {% if loop.index == (length(future_talks) - 1) %}or{% endif %}
+            {% endfor %}.
+        </div>
+    {% endif %}
+    {# inspiration: https://www.yegor256.com/about-me.html #}
+
+    <div class="mt-3 mb-2 subline text-center">
         <p>
-            Do you want to <strong>learn cool ways to hack PHP and learning 2x a week</strong>?<br>
+            Do you want to <strong>learn new ways to hack PHP and neuroscience 2x a week</strong>?<br>
             This is the right place!
         </p>
     </div>
@@ -16,74 +29,54 @@ id: blog
         {% set date_lines = [] %}
 
         {% set was_first_post_marked = false %}
-        {% set displayed_post_count = 0 %}
 
-        {% for post in posts %}
-            {% set include_post = true %}
+        {% for post in posts if post.deprecated_since is not defined %}
+            {% set postYear = post.getDateInFormat('Y') %}
+            {% set currentYear = "now"|date('Y') %}
 
-            {# is deprecated post, do not display #}
-            {% if post.deprecated_since is defined %}
-                {% set include_post = false %}
+            {% if postYear != currentYear and date_lines.postYear is not defined %}
+                <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
+                    <br>
+                    <br>
+                    {{ postYear }}
+                    {# https://stackoverflow.com/a/9432583/1348344 #}
+                    {% set date_lines = date_lines|merge({postYear: postYear}) %}
+                </div>
             {% endif %}
 
-            {% if post.getDate|date("Y-m-d") > "now"|date("Y-m-d") %}
-                {% set include_post = false %}
-            {% endif %}
+            {% if loop.first %}
+                <article class="pt-2 pb-4 col-md-12">
+                    <h2 class="firstPost text-center">
+                        <a href="/{{ post|link }}/">
+                            {{ post.title|raw }}
+                        </a>
+                    </h2>
 
-            {% if include_post %}
-                {% set displayed_post_count = displayed_post_count + 1 %}
-
-                {% set postYear = post.getDateInFormat('Y') %}
-                {% set currentYear = "now"|date('Y') %}
-
-                {% if postYear != currentYear and date_lines.postYear is not defined %}
-                    <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
-                        <br>
-                        <br>
-                        {{ postYear }}
-                        {# https://stackoverflow.com/a/9432583/1348344 #}
-                        {% set date_lines = date_lines|merge({postYear: postYear}) %}
-                    </div>
-                {% endif %}
-
-                {% if displayed_post_count <= 3 %}
-                    {% set colClass = was_first_post_marked ? 'col-md-6' : 'col-md-12' %}
-
-                    <article class="text-left pt-2 pb-4 {{ colClass }}">
-                        <h2 {% if was_first_post_marked == false %}class="firstPost text-center"{% endif %}>
-                            <a href="/{{ post|link }}/">
-                                {{ post.title|raw }}
-                            </a>
-                        </h2>
-
-                        {% if was_first_post_marked == false %}<div class="text-center mt-3 mb-4">{% endif %}
-                            {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                        {% if was_first_post_marked == false %}</div>{% endif %}
-
-                        {% if was_first_post_marked == false %}
-                            <p class="mt-3">{{ post.perex|raw }}</p>
-                        {% endif %}
-
-                        {% set was_first_post_marked = true %}
-                    </article>
-                {% else %}
-                    {% if displayed_post_count == 4 %}<ul class="mt-4 list-unstyled">{% endif %}
-                    <li class="mb-3 col-md-12">
-                        <a href="/{{ post|link }}/">{{ post.title|raw }}</a>
+                    <div class="text-center">
                         {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                    </li>
-                    <hr>
-                    {% if loop.last %}</ul>{% endif %}
-                {% endif %}
+                    </div>
+
+                    <p class="mt-3 text-left">{{ post.perex|raw }}</p>
+                </article>
+
+                {#{% set was_first_post_marked = true %}#}
+            {% else %}
+                {% if loop.index == 2 %}<ul class="mt-5 list-unstyled">{% endif %}
+                <li class="mb-3 col-md-12">
+                    <a href="/{{ post|link }}/">{{ post.title|raw }}</a>
+                    {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
+                </li>
+                <hr>
             {% endif %}
         {% endfor %}
+        </ul>
     </div>
 
     <br>
 
     <div class="text-center mt-4 mb-5">
         <p>
-            <strong>Could not find post that was here before?</strong>
+            <strong>Can't you find the post that was here before?</strong>
         </p>
         <p>
             See <a href="/deprecated-posts">deprecated posts</a>

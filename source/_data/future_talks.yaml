@@ -1,0 +1,17 @@
+parameters:
+    future_talks:
+        -
+            event: "Neos Conference"
+            city: "Dresden"
+            url: "https://www.neoscon.io/"
+            date: "2019-05-11"
+        -
+            event: "International PHP Conference"
+            city: "Berlin"
+            url: "https://phpconference.com/"
+            date: "2019-06-04"
+        -
+            event: "Dutch PHP Conference"
+            city: "Amsterdam"
+            url: "https://www.phpconference.nl/"
+            date: "2019-06-08"

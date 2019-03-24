@@ -116,13 +116,13 @@
 {% block socialTags %}
     {# Facebook sharing #}
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ post.title|escape }}" />
+    <meta property="og:title" content="{{ post.title|replace('&nbsp;', ' ')|escape }}" />
     <meta property="og:description" content="{{ post.perex|striptags }}" />
     <meta property="og:url" content="{{ site_url }}/{{ post|link }}" />
 
     {# Twitter sharing #}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@votrubaT">
-    <meta name="twitter:title" content="{{ post.title|escape }}" />
+    <meta name="twitter:title" content="{{ post.title|replace('&nbsp;', ' ')|escape }}" />
     <meta name="twitter:description" content="{{ post.perex|striptags }}" />
 {% endblock %}
