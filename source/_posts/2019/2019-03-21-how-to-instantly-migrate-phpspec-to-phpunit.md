@@ -67,15 +67,15 @@ But 117 mil. downloads can be like "You should use Windows XP because it's the m
 **Let's see the trends!** In the same order:
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4">
         <img src="/assets/images/posts/2019/unit-mig/tester.png">
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4">
         <a href="https://packagist.org/packages/phpspec/phpspec/stats">
             <img src="/assets/images/posts/2019/unit-mig/spec.png">
         </a>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4">
         <a href="https://packagist.org/packages/phpunit/phpunit/stats">
             <img src="/assets/images/posts/2019/unit-mig/phpunit.png">
         </a>
