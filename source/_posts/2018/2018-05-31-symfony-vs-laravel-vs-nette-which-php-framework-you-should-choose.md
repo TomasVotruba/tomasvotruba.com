@@ -68,7 +68,7 @@ This could never happen on conferences, no matter how big.
 
 ## The one Thing I love about Laravel
 
-<img src="http://laravelblog.cz/wp-content/uploads/2017/01/co-je-laravel.png" width="300">
+<img src="https://www.loadsys.com/wp-content/uploads/laravel_loadsys.png" width="300">
 
 There is **a place where can you learn almost everything about Laravel**. It's called **[Laracasts](https://laracasts.com/)**, it's entertaining, it's short (mostly 3-5 mins long videos) and to the point. A very rare combination in software educational sources.
 

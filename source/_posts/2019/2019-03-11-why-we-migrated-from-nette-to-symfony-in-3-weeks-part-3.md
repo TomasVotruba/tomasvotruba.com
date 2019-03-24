@@ -13,7 +13,7 @@ tweet_image: "/assets/images/posts/2019/nette-to-symfony3/nette-object-your-code
 
 <br>
 
-**If you love Nette, [keep using it](/blog/2018/05/31/symfony-vs-laravel-vs-nette-which-php-framework-you-should-choose/). This post is for people, whos companies are hurt by being locked to Nette ecosystem and who want to solve that but don't know how or if that is even possible.**
+**If you love Nette, [keep using it](/blog/2018/05/31/symfony-vs-laravel-vs-nette-which-php-framework-you-should-choose/). This post is for people, whose companies are hurt by being locked to Nette ecosystem and who want to solve that but don't know how or if that is even possible.**
 
 ## February 2017...
 
