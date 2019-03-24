@@ -5,70 +5,62 @@ id: "clusters"
 ---
 
 <div class="container" id="clusters">
-    <div class="pt-5 pb-2 subline text-center">
-        Do you want to know more about monorepo, CLI apps or writing open-source?
+    <h1>{{ title }}</h1>
+
+    <div class="subline text-center">
+        Do you want to master one of topics I write about?
         <br>
-        Pick your topic, <strong>start slowly</strong> and <strong>go in-depth</strong> when you're ready!
+        Pick one, <strong>start slowly</strong> and <strong>go in-depth</strong> when you're ready!
     </div>
 
     <br>
-
-    <p>
-        Year {{ "now"|date("Y") }} is the fastest year in history. Petabytes of information and no time to <a href="/blog/2018/06/28/dont-read-books/">read books</a>.
-        <br>
-        We need <strong>short and clear information</strong> for start, but also <strong>inter-connected sources</strong> to learn complex topics.
-    </p>
-
     <br>
 
-    <blockquote class="blockquote text-center">
-        Pick a topic your want to master and <strong>level up</strong> in <strong>your own</strong> speed.
-    </blockquote>
-
-    <hr>
-
-    {# todo: design better, as side-by-side book cover, with small image #}
-    {# @todo make +/- button to make whole single clustter small, e.g. I don't care baout monorepo, but I care about CLI apps - I want to see them!!! #}
     {# add pictures, even random ones #}
 
-    <div class="row">
-        {% for cluster in clusters %}
-            <div class="card mb-2 cluster" id="{{ cluster.title|webalize }}">
-                <div class="text-center card-header h-100">
-                    <div class="pull-left text-left mt-3 mb-4">
-                        <span class="btn btn-success make_active inactive-cluster-part" data-id="{{ cluster.title|webalize }}">Expand</span>
-                        <span class="btn btn-secondary btn-sm make_passive active-cluster-part" data-id="{{ cluster.title|webalize }}">Hide</span>
-                    </div>
+    {% for cluster in clusters %}
+        <div class="cluster mb-5" id="{{ cluster.title|webalize }}">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td class="text-center">
+                            <h2>
+                                <a href="#{{ cluster.title|webalize }}">{{ cluster.title }}</a>
+                            </h2>
 
-                    <h2 class="card-title">
-                        <a href="#{{ cluster.title|webalize }}">
-                            {{ cluster.title }}
-                        </a>
-                    </h2>
+                            <p class="pt-4 pb-2">{{ cluster.description }}</p>
 
-                    <p class="text-left pt-4 pb-2">{{ cluster.description }}</p>
-                </div>
+                            <div class="mt-2 mb-2 text-center">
+                                <a class="btn btn-success make_active inactive-cluster-part" data-id="{{ cluster.title|webalize }}">More</a>
+                                <a class="btn btn-outline-secondary make_passive active-cluster-part" data-id="{{ cluster.title|webalize }}">Less</a>
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
 
-                <div class="card-body active-cluster-part">
-                    <ul class="mt-3 checklist line-separated">
-                        {% for post_id in cluster.post_ids %}
-                            {% set active_post = posts[post_id] %}
-                            <li class="checklist__item">
-                                <input class="checklist__input" type="checkbox" id="item_{{ active_post.id }}" value="{{ active_post.id }}">
-                                <label class="checklist__label" for="item_{{ active_post.id }}">
-                                    <em class="checklist_icon fa fa-2x fa-check" id="item_{{ active_post.id }}"></em>
-                                </label>
+                <tbody class="active-cluster-part">
+                    {% for post_id in cluster.post_ids %}
+                        {% set active_post = posts[post_id] %}
 
-                                <div class="checklist__details post-title">
-                                    <a href="/{{ active_post|link }}/">{{ active_post.title|raw }}</a>
+                        <tr>
+                            <td class="pt-4 pb-4">
+                                <div class="checklist__item">
+                                    <input class="checklist__input" type="checkbox" id="item_{{ active_post.id }}" value="{{ active_post.id }}">
+                                    <label class="checklist__label" for="item_{{ active_post.id }}">
+                                        <em class="checklist_icon fa fa-2x fa-check" id="item_{{ active_post.id }}"></em>
+                                    </label>
+
+                                    <div class="checklist__details post-title">
+                                        <a href="/{{ active_post|link }}/">{{ active_post.title|raw }}</a>
+                                    </div>
                                 </div>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endfor %}
 </div>
 
 <br>

@@ -173,13 +173,11 @@ article {
     font-size: .9em;
 }
 
-.card {
-    line-height: 1.5em;
-    margin: 1.5em 0;
-}
-
 .card-bigger {
     font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: .8em;
+    line-height: 1.6em;
 }
 
 .card#relatedPosts .card-body {
@@ -323,10 +321,10 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     line-height: 2.3em;
 }
 
-.card-normal .card-title {
-    margin-top: 0.3em;
-    margin-bottom: 0.9em;
-}
+/*.card-normal .card-title {*/
+    /*margin-top: 0.3em;*/
+    /*margin-bottom: 0.9em;*/
+/*}*/
 
 .card-normal .card-body p {
     line-height: 1.5em;
@@ -387,6 +385,13 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     margin: .5em auto 1.5em auto;
 }
 
+#post h1 {
+    font-size: 3.3em;
+    font-weight: 300;
+    /*margin-top: 1em;*/
+    /*margin-bottom: 1em;*/
+}
+
 /* own util classe */
 .mmt-3 {
     margin-top: -.3em;
@@ -422,14 +427,6 @@ ul.line-separated > li:not(:last-child) {
     border-bottom: 1px solid #EEE;
     padding-bottom: 1.3em;
     margin-bottom: 1.3em;
-}
-
-.container .cluster ul {
-    padding-left: 0;
-}
-
-.container .cluster ul.checklist {
-    padding-left: 2em;
 }
 
 .avatar {
@@ -529,46 +526,15 @@ table ul {
     }
 }
 
-.cluster.active-cluster {
-    transition: .3s;
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-right: .7em;
-    margin-left: .7em;
-}
-
-.cluster:not(.active-cluster) {
-    transition: .3s;
-
-    /* copied from col-6 */
-    flex: 0 0 47%;
-    max-width: 47%;
-    position: relative;
-    width: 100%;
-    margin-right: .7em;
-    margin-left: .7em;
-}
-
-.cluster:not(.active-cluster) h2 {
-    font-size: 1.1em
-}
-
-.cluster:not(.active-cluster) p {
-    font-size: .9em
+.cluster h2 {
+    margin-top: .4em;
+    margin-bottom: 0;
+    font-size: 1.8em;
 }
 
 /* active cluster */
 .cluster:not(.active-cluster) .active-cluster-part {
     display: none;
-}
-
-.cluster:not(.active-cluster) .inactive-cluster-part  {
-    display: initial;
-}
-
-/* inactive cluster */
-.cluster.active-cluster .active-cluster-part {
-    display: initial;
 }
 
 .cluster.active-cluster .inactive-cluster-part  {
@@ -583,10 +549,6 @@ table ul {
     font-size: 1.2em;
 }
 
-#clusters .btn {
-    transition: .3s;
-}
-
 #post p.text-muted {
     font-size: 0.9em;
     padding-top: .6em;
@@ -599,8 +561,19 @@ table ul {
 }
 
 .card-title {
-    padding-top: 0;
-    margin-top: .3em;
     text-align: center;
-    font-weight: bold;
+    font-weight: 300;
+    font-size: 3em;
+}
+
+.cluster thead {
+    background: rgba(0,0,0,.03);
+}
+
+#clusters a.btn-success {
+    color: white;
+}
+
+#clusters a.btn-outline-secondary:hover {
+    color: white;
 }
