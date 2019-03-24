@@ -382,6 +382,11 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 }
 
 /* default post setting */
+#post h1 {
+    font-size: 3.3em;
+    font-weight: 300;
+}
+
 #post img {
     text-align: center;
     margin: .5em auto 1.5em auto;
