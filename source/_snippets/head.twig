@@ -1,5 +1,5 @@
 <head>
-    <title>{{ title|escape }} | {{ site_title }}</title>
+    <title>{{ title|replace('&nbsp;', ' ')|escape }} | {{ site_title }}</title>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
 
