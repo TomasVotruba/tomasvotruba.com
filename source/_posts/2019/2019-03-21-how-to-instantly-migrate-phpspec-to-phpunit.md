@@ -41,7 +41,7 @@ But before I noticed PhpSpec and asked about it, we had another chat:
 - "So?"
 - "It doesn't use any container, there must be static in my code."
 - "So what is added value of PhpSpec over PHPUnit?"
-- "..." 
+- "..."
 
 Then I explored PhpSpec and found out, it's **basically PHPUnit with different naming**.
 
@@ -52,7 +52,7 @@ Then I explored PhpSpec and found out, it's **basically PHPUnit with different n
     <footer class="blockquote-footer">The Pragmatic Programmer book</a>
 </blockquote>
 
-## Trends over Long-Tail Effect 
+## Trends over Long-Tail Effect
 
 Why did we choose to migrate PhpSpec tests to PHPUnit? Well, it's better obviously... Do you agree with me just because I wrote that? **Don't do that, it's my personal opinionated opinion (= feeling, emotion). Ask me for some data instead**.
 
@@ -60,7 +60,7 @@ Let's look at downloads:
 
 - 1 mil. downloads
 - [14 mils. downloads](https://packagist.org/packages/phpspec/phpspec/stats)
-- [117 mils. downloads](https://packagist.org/packages/phpunit/phpunit/stats) 
+- [117 mils. downloads](https://packagist.org/packages/phpunit/phpunit/stats)
 
 But 117 mil. downloads can be like "You should use Windows XP because it's the most used Windows version ever!" That's classic manipulation of dying dinosaur.
 
@@ -82,7 +82,7 @@ But 117 mil. downloads can be like "You should use Windows XP because it's the m
     </div>
 </div>
 
-Which one would you pick from this 2 information? I'd go for the last one, so did my client. **So that's why we agreed to migrate PhpSpec** (the middle one) **to PHPUnit**. 
+Which one would you pick from this 2 information? I'd go for the last one, so did my client. **So that's why we agreed to migrate PhpSpec** (the middle one) **to PHPUnit**.
 
 <br>
 
@@ -90,7 +90,7 @@ This is how 1 spec migration might look like:
 
 ```diff
  <?php
-  
+
 -namespace spec\App\Product;
 +namespace Tests\App\Product;
 
@@ -155,11 +155,11 @@ This is how 1 spec migration might look like:
  }
 ```
 
-Pretty clear, right? 
+Pretty clear, right?
 
 ## How to Instantly Migrate from PhpSpec to PHPUnit?
 
-First, take a 2-week paid vacation... Just kidding. Start with Rector which migrates ~95 % of code cases. It also renames `*Spec.php` to `*Test.php` and moves them from `/spec` to `/tests` directory:  
+First, take a 2-week paid vacation... Just kidding. Start with Rector which migrates ~95 % of code cases. It also renames `*Spec.php` to `*Test.php` and moves them from `/spec` to `/tests` directory:
 
 ```bash
 composer require rector/rector --dev
@@ -168,8 +168,7 @@ vendor/bin/rector process spec --level phpspec-to-phpunit
 
 Rector is getting smarter every set, but I bet there are still some missed cases. **When the code doesn't work, just go and [report the issue](https://github.com/rectorphp/rector/issues)** with expected vs. current output.
 
-Take 10 more minutes to polish the rest of code and submit for PR <em class="fas fa-fw fa-check text-success fa-lg"></em>
-
+Take 10 more minutes to polish the rest of code and send PR to your project <em class="fas fa-fw fa-check text-success fa-lg"></em>
 
 <br>
 
