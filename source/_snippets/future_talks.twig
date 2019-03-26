@@ -1,0 +1,11 @@
+{% if future_talks|length %}
+    <div class="alert alert-sm alert-success mt-3" role="alert">
+        Meet me at
+        {% for future_talk in future_talks if future_talk.date > "now"|date %}
+        <a href="{{ future_talk.url }}">{{ future_talk.event }}</a> ({{ future_talk.city }}, {{ future_talk.date|date("M j") }})
+        {% if loop.index < (length(future_talks) - 1) %}, {% endif %}
+        {% if loop.index == (length(future_talks) - 1) %}or{% endif %}
+        {% endfor %}.
+    </div>
+{% endif %}
+{# inspiration: https://www.yegor256.com/about-me.html #}
