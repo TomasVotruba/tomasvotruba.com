@@ -582,3 +582,12 @@ table ul {
     font-size: 0.9em;
 
 }
+
+#mission h2 {
+    margin-bottom: .9em;
+}
+
+#mission .card h3 {
+    text-align: center;
+    font-size: 2em;
+}
