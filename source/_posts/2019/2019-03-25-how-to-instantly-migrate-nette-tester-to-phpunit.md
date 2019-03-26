@@ -63,7 +63,7 @@ Luckily, Tester and PHPUnit are like twins:
 
 - share the same approach in configuring tests - `setUp` & `tearDown`
 - do assert with a call - `Assert::true($value)` vs. `self::assertTrue($value)`
-- do share naming  - `public funciton testSomething()`
+- do share naming  - `public function testSomething()`
 - do share data providers - `@dataProvider`
 
 So all **we need to do is rename a few methods**? There are still a few gotchas:
