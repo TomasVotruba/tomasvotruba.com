@@ -44,12 +44,14 @@ Do you know git?
 
 Just follow commands, that appeared on your Github repository and <a href="#your-code-is-online">skip to next headline</a>.
 
-    echo "# OpenSourcePackageDemo" >> README.md
-    git init
-    git add README.md
-    git commit -m "first commit"
-    git remote add origin git@github.com:TomasVotruba/OpenSourcePackageDemo.git
-    git push -u origin master
+```bash
+echo "# OpenSourcePackageDemo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:TomasVotruba/OpenSourcePackageDemo.git
+git push -u origin master
+```
 
 ### You don't understand those geek lines? I'll explain
 
@@ -62,30 +64,41 @@ These commits can be divided into 2 groups:
 
 Create an empty repository git repository
 
-    git init
+```bash
+git init
+```
 
 Add ONLINE address where we want publish your code
 
-    git remote add origin git@github.com:TomasVotruba/OpenSourcePackageDemo.git
+```bash
+git remote add origin git@github.com:TomasVotruba/OpenSourcePackageDemo.git
+```
 
 #### 2. Add some code
 
 Create a file README.md and add "Unziping Package" in it (this is just command line for geeks, I do this manually in my PHPStorm of course)
 
-    echo "Unziping Package" >> README.md
+```bash
+echo "Unziping Package" >> README.md
+```
 
 Tell git to NOTICE this file to be added later
 
-    git add README.md
+```bash
+git add README.md
+```
 
 Group all NOTICED files to single COMMIT (group of changes)
 
-    git commit -m "first commit"
+```bash
+git commit -m "first commit"
+```
 
 Send ALL COMMITS online. Now your local system and Github repository are synced 1:1
 
-    git push -u origin master
-
+```bash
+git push -u origin master
+```
 
 <a name="your-code-is-online"></a>
 
