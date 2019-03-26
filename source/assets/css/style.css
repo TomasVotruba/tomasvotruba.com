@@ -560,12 +560,6 @@ table ul {
     padding-bottom: 1.5em;
 }
 
-.card-title {
-    text-align: center;
-    font-weight: 300;
-    font-size: 3em;
-}
-
 .cluster thead {
     background: rgba(0,0,0,.03);
 }

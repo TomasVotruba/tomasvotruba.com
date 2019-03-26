@@ -2,10 +2,6 @@
 parameters:
     clusters:
 #        -
-#            title: "Book in a Post"
-#            post_ids: [149, 115, 65, 56]
-
-#        -
 #            title: "Coding Standards - What, Why, Where?"
 #            post_ids: [46, 47, 37]
 
@@ -20,7 +16,7 @@ parameters:
 
         -
             title: "From Nette to Symfony"
-            post_ids: [188, 192, 193, 186, 185, 171, 120]
+            post_ids: [188, 192, 193, 186, 185, 171, 120, 197]
             description: "How to migrate from Nette to Symfony?"
         -
             title: "Master PHP CLI Apps with Symfony"
