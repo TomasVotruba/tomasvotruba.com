@@ -138,7 +138,7 @@ Luckily, last 2 operations are subtractions, so we can just remove them.
 -(new ExpensiveObjectTest())->run();
 ```
 
-## How to Instantly Migrate from PhpSpec to PHPUnit?
+## How to Instantly Migrate from Nette\Tester to PHPUnit?
 
 ```bash
 composer require rector/rector --dev
