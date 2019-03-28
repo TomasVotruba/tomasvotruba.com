@@ -107,11 +107,11 @@ That why I'm dropping my packages built on Doctrine.
 
 ### What Repositories are This Concerned?
 
-- [Zenify/DoctrineFixtures](https://github.com/Zenify/DoctrineFixtures) - use [Nelmio/Alice](https://github.com/nelmio/alice) instead
+- [Zenify/DoctrineFixtures](https://github.com/Zenify/DoctrineFixtures) - use [Nelmio/Alice](https://github.com/nelmio/alice) instead or [nettrine/fixtures](https://github.com/nettrine/fixtures) 
 - [Zenify/DoctrineBehaviors](https://github.com/Zenify/DoctrineBehaviors)
-- [Zenify/DoctrineExtensionsTree](https://github.com/Zenify/DoctrineExtensionsTree) - use [minetro/doctrine-extensions](https://github.com/minetro/doctrine-extensions) instead
+- [Zenify/DoctrineExtensionsTree](https://github.com/Zenify/DoctrineExtensionsTree) - use [nettrine/extensions](https://github.com/nettrine/extensions) instead
 - [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations) - use
-https://github.com/robmorgan/phinx instead, they are [awesome and alive](https://php.libhunt.com/project/phinx/vs/doctrine-migrations)
+https://github.com/robmorgan/phinx instead, they are [awesome and alive](https://php.libhunt.com/project/phinx/vs/doctrine-migrations) or [nettrine/migrations](https://github.com/nettrine/migrations)
 
 
 ## What about Your Project?
