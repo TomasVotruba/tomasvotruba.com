@@ -13,8 +13,8 @@ final class FinalClassHookTest extends TestCase
         /** @var MockObject|FinalClass $finalClassMock */
         $finalClassMock = $this->createMock(FinalClass::class);
         $finalClassMock->method('getNumber')
-            ->willReturn(10);
+            ->willReturn(20);
 
-        $this->assertSame(10, $finalClassMock->getNumber());
+        $this->assertSame(20, $finalClassMock->getNumber());
     }
 }

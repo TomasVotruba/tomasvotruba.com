@@ -183,14 +183,14 @@ There were 7 warnings:
 Class "AnotherClass" is declared "final" and cannot be mocked.
 ```
 
-Damn you, black magic! We're getting there, but there are still mocks in the `setUp()` method, and we've also added much work. For every new tests case, we [have to remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) that we have to add `BypassFinals::enable();` to every call manually.
+Damn you, black magic! We're getting there, but there are still mocks in the `setUp()` method, and we've also added work to our future self - for every new test case, we [have to remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) to add `BypassFinals::enable();` manually.
 
 <em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
 
 <br>
 <br>
 
-I was angry and frustrated. Honestly, I wanted to give up now and just pick "interface everything" or "final nothing" quick solution.  I think **that resolutions in emotions are not** a good idea... so I paused and went to a toilet to get some fresh air.
+Why it doesn't work. I was angry and frustrated. Honestly, I wanted to give up now and just pick "interface everything" or "final nothing" quick solution.  I think **that resolutions in emotions are not a good idea...** so I take a deep breath, pause and go to a toilet to get some fresh air.
 
 <br>
 
@@ -198,7 +198,7 @@ Suddenly... I remember that... PHPUnit has some Listeners, right? What if we cou
 
 ### 3. Own TestListener?
 
-Let's try all the methods of `TestListener`, enable bypass in them and see what happens:
+Let's try all the methods of `TestListener`, enable bypass in each of them by trial-error and see what happens:
 
 ```php
 <?php declare(strict_types=1);
@@ -255,7 +255,9 @@ final class BypassFinalListener implements TestListener
 }
 ```
 
-Register it in `phpunit.xml`:
+In the end, it was just one method.
+
+Then register listener it in `phpunit.xml`:
 
 ```xml
 <phpunit bootstrap="vendor/autoload.php">
@@ -283,15 +285,15 @@ Is it a good enough solution? Yes, **it works and it's a single place of origin*
 
 <br>
 
-Are you a curious hacker that is never satisfied with his or her solution? **Let's take it one step further.**
+Are you a **curious hacker that is never satisfied with his or her solution**? Let's take it one step further.
 
-What do you think about the Listener class? **There is 10+ methods and only one of them is used**. It's very hard to read. To add more fire to the fuel, `TestListener` class is [deprecated since PHPUnit 8](https://github.com/sebastianbergmann/phpunit/issues/3388) and will be [removed in PHPUnit 9](https://github.com/sebastianbergmann/phpunit/issues/3389). Don't worry, [Rector already covers the migration path](https://github.com/rectorphp/rector/pull/1270).
+What do you think about the Listener class? There is **10+ methods** and **only one is used**. It's very hard to read. To add more fire to the fuel, `TestListener` class is [deprecated since PHPUnit 8](https://github.com/sebastianbergmann/phpunit/issues/3388) and will be [removed in PHPUnit 9](https://github.com/sebastianbergmann/phpunit/issues/3389). Don't worry, [Rector already covers the migration path](https://github.com/rectorphp/rector/pull/1270).
 
-Let's meet hooks!
+After bit of Googling on PHPUnit Github and documentation I found something called *hooks*!
 
 ### 4. Single Hook
 
-You can read about them in the [PHPUnit documentation](https://phpunit.readthedocs.io/en/8.0/extending-phpunit.html#extending-the-testrunner), but in short: they're the same as the listener, they just listen to 1 event.
+You can read about them in the [PHPUnit documentation](https://phpunit.readthedocs.io/en/8.0/extending-phpunit.html#extending-the-testrunner), but in short: they're the same as the listener, just **with 1 event**.
 
 ```php
 <?php declare(strict_types=1);
@@ -352,7 +354,7 @@ Finally :)
 
 <br>
 
-Do you want to see solutions 2, 3 and 4 tested in real PHPUnit code? [They're here on Github](https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests/Posts/Year2019/FinalMock) 
+Do you want to see solutions 2, 3 and 4 tested in real PHPUnit code? [They're here on Github](https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests/Posts/Year2019/FinalMock)
 
 
 
