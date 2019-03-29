@@ -11,6 +11,7 @@
         "symplify/statie": "^5.4"
     },
     "require-dev": {
+        "dg/bypass-finals": "^1.1",
         "nette/neon": "^2.4",
         "phpstan/phpstan": "^0.11",
         "phpunit/phpunit": "^7.5",

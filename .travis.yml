@@ -9,6 +9,10 @@ script:
     # run tests for tested posts (with "tested: true" in header configuration)
     - vendor/bin/phpunit
 
+    # by pass finals hook test
+    - vendor/bin/phpunit --config tests/Posts/Year2019/FinalMock/Hook/phpunit-with-hook.xml tests/Posts/Year2019/FinalMock/Hook
+    - vendor/bin/phpunit --config tests/Posts/Year2019/FinalMock/Listener/phpunit-with-listener.xml tests/Posts/Year2019/FinalMock/Listener
+
     # static analysis
     - composer check-cs
     - composer phpstan
