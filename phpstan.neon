@@ -14,3 +14,6 @@ parameters:
 
         # false positive
         - '#Cannot access property \$stmts on PhpParser\\Node\\Stmt\|null#'
+
+        # mocks
+        - '#Call to an undefined method PHPUnit\\Framework\\MockObject\\MockObject\|TomasVotruba\\Website\\Posts\\Year2019\\(.*?)\\FinalClass\:\:(.*?)\(\)#'
