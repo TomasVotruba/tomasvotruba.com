@@ -7,7 +7,7 @@ perex: |
     "We don't use Nette, but we still have many tests in Tester. Can Rector migrate them to PHPUnit?"
     <br>
     "Hold my 🍺"
-tweet: 'New Post on #php 🐘 blog: How to Instantly Migrate #Nettefw\Tester to #PHPUnit'
+tweet: "A new Post on #php 🐘 blog: How to Instantly Migrate #Nettefw Tester to #PHPUnit"
 ---
 
 *If you don't know [Tester](https://tester.nette.org/en/), is a PHP unit test framework created in the Czech Republic.*
