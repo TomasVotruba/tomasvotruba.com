@@ -107,6 +107,12 @@ DG\BypassFinals::enable();
 
 <em class="fas fa-fw fa-lg fa-check text-success"></em>
 
+<div class="alert alert-sm alert-warning mt-5 mb-5" role="alert">
+    Do you want to know, <strong>how BypassFinals works?</strong> Read author's <a href="https://phpfashion.com/how-to-mock-final-classes">blog post</a> or check <a href="https://github.com/dg/bypass-finals/blob/8f0f7ab7a17a6b5c188dde1cf5edc6ceb06c70c1/src/BypassFinals.php#L217">this line on Github</a>.
+    <br>
+    I don't know much, but I think it loads file via stream and removes the <code>T_FINAL</code> token.         
+</div>
+
 Hm, where should be put it?
 
 ### 1. `bootstrap.php` File?
