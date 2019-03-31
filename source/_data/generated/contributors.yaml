@@ -1,11 +1,11 @@
-# this file was generated on 2019-01-31 18:17:17, do not edit it manually
+# this file was generated on 2019-03-31 21:06:04, do not edit it manually
 parameters:
     contributors:
         -
             name: Gappa
             url: 'https://github.com/Gappa'
             photo: 'https://avatars3.githubusercontent.com/u/749981?v=4'
-            contribution_count: 10
+            contribution_count: 11
         -
             name: enumag
             url: 'https://github.com/enumag'
@@ -27,10 +27,20 @@ parameters:
             photo: 'https://avatars0.githubusercontent.com/u/104888?v=4'
             contribution_count: 7
         -
+            name: f3l1x
+            url: 'https://github.com/f3l1x'
+            photo: 'https://avatars1.githubusercontent.com/u/538058?v=4'
+            contribution_count: 6
+        -
             name: JanMikes
             url: 'https://github.com/JanMikes'
             photo: 'https://avatars3.githubusercontent.com/u/3995003?v=4'
             contribution_count: 6
+        -
+            name: crazko
+            url: 'https://github.com/crazko'
+            photo: 'https://avatars2.githubusercontent.com/u/1255989?v=4'
+            contribution_count: 5
         -
             name: juananruiz
             url: 'https://github.com/juananruiz'
@@ -42,15 +52,25 @@ parameters:
             photo: 'https://avatars3.githubusercontent.com/u/4759802?v=4'
             contribution_count: 4
         -
-            name: crazko
-            url: 'https://github.com/crazko'
-            photo: 'https://avatars2.githubusercontent.com/u/1255989?v=4'
+            name: tiso
+            url: 'https://github.com/tiso'
+            photo: 'https://avatars3.githubusercontent.com/u/920949?v=4'
             contribution_count: 4
         -
             name: freiondrej
             url: 'https://github.com/freiondrej'
             photo: 'https://avatars2.githubusercontent.com/u/37588173?v=4'
             contribution_count: 4
+        -
+            name: Maxell92
+            url: 'https://github.com/Maxell92'
+            photo: 'https://avatars3.githubusercontent.com/u/1649279?v=4'
+            contribution_count: 3
+        -
+            name: uestla
+            url: 'https://github.com/uestla'
+            photo: 'https://avatars1.githubusercontent.com/u/373888?v=4'
+            contribution_count: 3
         -
             name: JanGalek
             url: 'https://github.com/JanGalek'
@@ -82,34 +102,19 @@ parameters:
             photo: 'https://avatars0.githubusercontent.com/u/642928?v=4'
             contribution_count: 2
         -
-            name: Maxell92
-            url: 'https://github.com/Maxell92'
-            photo: 'https://avatars3.githubusercontent.com/u/1649279?v=4'
-            contribution_count: 2
-        -
-            name: uestla
-            url: 'https://github.com/uestla'
-            photo: 'https://avatars1.githubusercontent.com/u/373888?v=4'
-            contribution_count: 2
-        -
-            name: f3l1x
-            url: 'https://github.com/f3l1x'
-            photo: 'https://avatars1.githubusercontent.com/u/538058?v=4'
-            contribution_count: 2
-        -
             name: kbond
             url: 'https://github.com/kbond'
             photo: 'https://avatars0.githubusercontent.com/u/127811?v=4'
             contribution_count: 2
         -
-            name: tiso
-            url: 'https://github.com/tiso'
-            photo: 'https://avatars3.githubusercontent.com/u/920949?v=4'
-            contribution_count: 2
-        -
             name: harikt
             url: 'https://github.com/harikt'
             photo: 'https://avatars3.githubusercontent.com/u/120454?v=4'
+            contribution_count: 2
+        -
+            name: clobee
+            url: 'https://github.com/clobee'
+            photo: 'https://avatars2.githubusercontent.com/u/3452074?v=4'
             contribution_count: 2
         -
             name: Zemistr
@@ -275,4 +280,24 @@ parameters:
             name: hrvoj3e
             url: 'https://github.com/hrvoj3e'
             photo: 'https://avatars0.githubusercontent.com/u/4988133?v=4'
+            contribution_count: 1
+        -
+            name: jDolba
+            url: 'https://github.com/jDolba'
+            photo: 'https://avatars3.githubusercontent.com/u/2221925?v=4'
+            contribution_count: 1
+        -
+            name: maccath
+            url: 'https://github.com/maccath'
+            photo: 'https://avatars3.githubusercontent.com/u/904427?v=4'
+            contribution_count: 1
+        -
+            name: praczynski
+            url: 'https://github.com/praczynski'
+            photo: 'https://avatars1.githubusercontent.com/u/455039?v=4'
+            contribution_count: 1
+        -
+            name: Wojciechem
+            url: 'https://github.com/Wojciechem'
+            photo: 'https://avatars3.githubusercontent.com/u/4303141?v=4'
             contribution_count: 1
