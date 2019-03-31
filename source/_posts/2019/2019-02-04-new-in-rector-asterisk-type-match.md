@@ -5,7 +5,7 @@ perex: |
     Rector had started just recently helping **instantly refactor private commercial projects**. Not just from legacy to modern PHP, but also **from one PHP framework to another**. I won't tell you which ones as the work is in progress, but when it's finished, you'll be the first to hear.
     <br>
     <br>
-    The positive side effect of Rector helping to migrate real commercial project **are new features in its core** that is free and open-sourcě Today with little, yet powerful *asterisk type match*.
+    The positive side effect of Rector helping to migrate real commercial project **are new features in its core** that is free and open-source Today with little, yet powerful *asterisk type match*.
 
 tweet: "New Post on #php 🐘 blog: New in Rector: Asterisk Type Match"
 ---
