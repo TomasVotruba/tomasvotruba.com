@@ -394,7 +394,7 @@ What if there would be a way to **automate all that checks above** + 10 more wit
 
 ## Have you tried Rector?
 
-Rector doesn't only refactor applicatoins from one framework to another, upgrade your codebase and get you out of legacy. It can be also **part of your CI**:
+Rector doesn't only refactor applications from one framework to another, upgrade your codebase and get you out of legacy. It can be also **part of your CI**:
 
 ```bash
 composer require rector/rector --dev
