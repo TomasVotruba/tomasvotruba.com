@@ -55,12 +55,3 @@ parameters:
             related_post: "/blog/2018/07/26/why-is-your-company-losing-money-by-not-open-sourcing-1-hiring/"
             events:
                 - { name: "PHPPrague 2 @ Czech Republic, 2018", link: "https://www.facebook.com/events/204178450306613/" }
-
-        -
-            title: "Static sites in PHP? Simple with Statie"
-            anchor: "statie"
-            slides_link: "https://docs.google.com/presentation/d/1Org07oQWbokCe6Q1FU8o0fe5iEfMGuDfZjKGcnI72BA/edit?usp=sharing"
-            related_post: "/blog/2017/02/20/statie-how-to-run-it-locally/"
-            video_link: "https://www.facebook.com/pehapkari/videos/vl.1472341126123412/1295517470498060/"
-            events:
-                - { name: "Berlin PHP UG @ Germany, 04/2017", link: "http://www.bephpug.de/2017/04/04/april.html" }
