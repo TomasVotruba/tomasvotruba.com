@@ -20,7 +20,6 @@ To be clear, I have been using Doctrine for many years and it is **the best ORM 
 
 I'm not an expert in databases, so active record might be actually a useful pattern, even architectonically, but I don't favor it now.
 
-
 ## Doctrine is stuck in its Legacy, Unable to Evolve
 
 But the main I see is that Doctrine is not evolving. Last useful feature was the **[2nd Level cache](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/second-level-cache.html)** in `doctrine/orm` [released in 2015](https://github.com/doctrine/doctrine2/releases/tag/v2.5.0). In meaning not a few-person feature, but a feature, that can influence most of the applications.
@@ -101,10 +100,10 @@ That's why I'm dropping support for my Zenify packages built for Doctrine.
 
 ### What Repositories are This Concerned?
 
-- [Zenify/DoctrineFixtures](https://github.com/Zenify/DoctrineFixtures) - use [Nelmio/Alice](https://github.com/nelmio/alice) or [nettrine/fixtures](https://github.com/nettrine/fixtures) for Nette instead
+- [Zenify/DoctrineFixtures](https://github.com/Zenify/DoctrineFixtures) - use [nettrine/fixtures](https://github.com/nettrine/fixtures) or [Nelmio/Alice](https://github.com/nelmio/alice) instead
 - [Zenify/DoctrineBehaviors](https://github.com/Zenify/DoctrineBehaviors)
-- [Zenify/DoctrineExtensionsTree](https://github.com/Zenify/DoctrineExtensionsTree) - use [nettrine/extensions](https://github.com/nettrine/extensions) for Nette instead
-- [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations) - use [phinx](https://github.com/robmorgan/phinx) or [nettrine/migrations](https://github.com/nettrine/migrations) for Nette instead
+- [Zenify/DoctrineExtensionsTree](https://github.com/Zenify/DoctrineExtensionsTree) - use [nettrine/extensions](https://github.com/nettrine/extensions) instead
+- [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations) - use [phinx](https://github.com/robmorgan/phinx) or [nettrine/migrations](https://github.com/nettrine/migrations) instead
 
 ## What about Your Project?
 
