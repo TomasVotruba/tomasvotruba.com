@@ -59,7 +59,7 @@ sculpin_content_types:
 **After** - Statie
 
 ```yaml
-parmameters:
+parameters:
     generators:
         posts:
             route_prefix: blog/ #filename is completed by default
