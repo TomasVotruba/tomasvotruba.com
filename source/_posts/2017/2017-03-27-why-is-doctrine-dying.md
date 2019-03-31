@@ -104,8 +104,7 @@ That's why I'm dropping support for my Zenify packages built for Doctrine.
 - [Zenify/DoctrineFixtures](https://github.com/Zenify/DoctrineFixtures) - use [Nelmio/Alice](https://github.com/nelmio/alice) or [nettrine/fixtures](https://github.com/nettrine/fixtures) for Nette instead
 - [Zenify/DoctrineBehaviors](https://github.com/Zenify/DoctrineBehaviors)
 - [Zenify/DoctrineExtensionsTree](https://github.com/Zenify/DoctrineExtensionsTree) - use [nettrine/extensions](https://github.com/nettrine/extensions) for Nette instead
-- [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations) - use
-https://github.com/robmorgan/phinx or [nettrine/migrations](https://github.com/nettrine/migrations) for Nette instead
+- [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations) - use [phinx](https://github.com/robmorgan/phinx) or [nettrine/migrations](https://github.com/nettrine/migrations) for Nette instead
 
 ## What about Your Project?
 
