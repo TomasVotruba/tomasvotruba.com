@@ -1,10 +1,10 @@
 parameters:
     future_talks:
         -
-            event: "Neos Conference"
-            city: "Dresden"
-            url: "https://www.neoscon.io/"
-            date: "2019-05-11"
+            event: "PHP Conference"
+            city: "Verona"
+            url: "https://2019.phpday.it/"
+            date: "2019-05-10"
         -
             event: "International PHP Conference"
             city: "Berlin"
