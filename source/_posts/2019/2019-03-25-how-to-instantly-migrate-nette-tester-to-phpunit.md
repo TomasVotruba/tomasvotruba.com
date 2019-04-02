@@ -145,7 +145,7 @@ composer require rector/rector --dev
 vendor/bin/rector process spec --level nette-tetser-to-phpunit
 ```
 
-Rector is **doesn't replace you**, **it helps you** - so take few minutes to polish the details that Rectors missed and send the PR to your project
+Rector **doesn't replace you**, **it helps you** - so take few minutes to polish the details that Rectors missed and send the PR to your project
  <em class="fas fa-fw fa-check text-success fa-lg"></em>
 
 But if it's something daunting, [create an issue](https://github.com/rectorphp/rector/issues) - there might be a way to automate it.
