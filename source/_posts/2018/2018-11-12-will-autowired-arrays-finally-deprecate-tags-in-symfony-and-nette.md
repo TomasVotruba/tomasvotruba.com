@@ -7,7 +7,7 @@ perex: |
     <br>
     I'm very happy to see that [collectors](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code) are finally getting to the core of DI components of PHP frameworks. Tags, extensions, compiler passes and `autoconfigure` now became workarounds. Collectors are now in the best place they can... **the PHP code**.
 
-tweet: "New Post on My Blog: Can Autowired Arrays Finally Deprecate Tags in #Symfony and #NetteFw?    #collector #nettefw30 #php #simplestupid"
+tweet: "New Post on My Blog: Can Autowired Arrays Finally Deprecate Tags in #symfony and #nettefw?    #collector #nettefw30 #php #simplestupid"
 ---
 
 Let's say we need to build a tool for releasing a new version of the open-source package. Something like what I use for

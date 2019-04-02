@@ -6,7 +6,7 @@ perex: |
     <br>
     <br>
     Last week I was approached by 2 different people with single need - **migrate their tests to PHPUnit**.
-tweet: 'New Post on #php 🐘 blog: How to Instantly Migrate #PhpSpec to #PHPUnit'
+tweet: 'New Post on #php 🐘 blog: How to Instantly Migrate #PhpSpec to #phpunit'
 tweet_image: '/assets/images/posts/2019/unit-mig/phpunit.png'
 ---
 
