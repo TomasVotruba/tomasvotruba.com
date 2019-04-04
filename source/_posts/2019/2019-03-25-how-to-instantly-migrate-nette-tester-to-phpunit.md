@@ -8,7 +8,6 @@ perex: |
     <br>
     "Hold my 🍺"
 tweet: "A new Post on #php 🐘 blog: How to Instantly Migrate #nettefw Tester to #phpunit"
-tweet: "A new Post on #php 🐘 blog: How to Instantly Migrate #nettefw Tester to #phpunit"
 ---
 
 *If you don't know [Tester](https://tester.nette.org/en/), is a PHP unit test framework created in the Czech Republic.*
