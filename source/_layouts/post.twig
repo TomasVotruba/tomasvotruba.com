@@ -98,9 +98,7 @@
                     <div class="card mb-5 mt-4">
                         <div class="card-body text-center">
                             <strong>Next</strong>:
-                            <a href="{{ previous_post|link }}/">
-                                {{ previous_post.title }}
-                            </a>
+                            <a href="/{{ previous_post|link }}/">{{ previous_post.title|replace('&nbsp;', ' ') }}</a>
                         </div>
                     </div>
                 {% endif %}
