@@ -5,7 +5,7 @@ parameters:
             anchor: "rector"
             slides_link: "https://docs.google.com/presentation/d/1jGlKzuQXNFLyF1jERlS3FiRhRMeSaR9fQr8XoqAtWV0/edit?usp=sharing"
             demo_link: "https://github.com/rectorphp/demo"
-            video_link: "https://www.facebook.com/pehapkari/videos/1703907042992432/"
+            video_link: "https://www.youtube.com/watch?v=HM5xcWqQkwo"
             post_link: "/blog/2018/02/19/rector-part-1-what-and-how/"
             events:
                 - { name: "Friends of PHP Brno @ Czech Republic, 03/2019", link: "https://www.facebook.com/events/415328609225062/" }
