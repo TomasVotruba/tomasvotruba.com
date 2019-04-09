@@ -13,20 +13,20 @@ tweet_image: "/assets/images/posts/2017/symplify-deprecations/pr-notes.png"
 
 I'm not writing this post because I use Symfony in my projects and love the community around it. I write this because in the last 2 weeks people around me asked me for help with Rector:
 
-- from Laravel to Symfony 
-- from Lumen to Symfony 
-- [from Nette to Symfony](https://www.tomasvotruba.cz/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/) 
-- from Zend to Symfony 
+- from Laravel to Symfony
+- from Lumen to Symfony
+- [from Nette to Symfony](https://www.tomasvotruba.cz/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/)
+- from Zend to Symfony
 
-It's possible and in a small fraction of costs of manual work, but "why not" is a very poor argument. That's like taking cocaine because it gives you more energy. Life is not about solutions, it's about trade-offs. I'd like to inform you about the cons of such migration, so you can decide with more solid arguments on both sides. 
+It's possible and in a small fraction of costs of manual work, but "why not" is a very poor argument. That's like taking cocaine because it gives you more energy. Life is not about solutions, it's about trade-offs. I'd like to inform you about the cons of such migration, so you can decide with more solid arguments on both sides.
 
 ## What you Loose by Switching to Symfony?
 
-### "Your team will be surprised from the new framework they never used"
+### 1. "Your team will be surprised from the new framework they never used"
 
-In one Symfony project, I consulted they hired 2 programmers who new only Nette. They didn't give them much attention, because delivering feature was more important than to educate your juniors. The problem is, they produced Nette-ish code in Symfony application, because of lack of attention. Switch framework under programmer's hands in a very short period could cause much more serious damage.  
+In one Symfony project, I consulted they hired 2 programmers who new only Nette. They didn't give them much attention, because delivering feature was more important than to educate your juniors. The problem is, they produced Nette-ish code in Symfony application, because of lack of attention. Switch framework under programmer's hands in a very short period could cause much more serious damage.
 
-### "Your team loses all the social connections with your old framework"
+### 2. "Your team loses all the social connections with your old framework"
 
 The best way to learn and validate ideas is to go out and talk with people. You probably have many offline connections with people who use a similar framework, you use Slack channel for this framework, you know maintainers of packages from the framework ecosystem.
 When you break up with your girlfriend, your friends from "her side" will soon perish.
@@ -35,27 +35,27 @@ When you break up with your girlfriend, your friends from "her side" will soon p
 
 The main goal in any transition is to have everyone on board. If your country creates reform for a pension that will take more money from young people, there will be frictions. If there is reform for cheaper education, that will decrease pensions to older people, there will be frictions. A reform, that improves educations for young people, that in conclusion will generate money for older people, will be much smoother. Not perfect, but smoother.
 
-There is a practice-proven way to for all problems above. Let's look at them: 
+There is a practice-proven way to for all problems above. Let's look at them:
 
-### "<strike>Your team will be surprised from the new framework they never used</strike>"
+### 1. "<strike>Your team will be surprised from the new framework they never used</strike>"
 
-It doesn't make sense to switch in one week without discussing the whole team. It is as foolish as giving PHPStorm to someone who only used Sublime Test and expects them to know how to use it. 
+It doesn't make sense to switch in one week without discussing the whole team. It is as foolish as giving PHPStorm to someone who only used Sublime Test and expects them to know how to use it.
 
-**Always give your team proper daily mentoring on how to use and master a new tool.** It will payback in higher quality code and faster feature delivery in the long term.    
+**Always give your team proper daily mentoring on how to use and master a new tool.** It will payback in higher quality code and faster feature delivery in the long term.
 
 ### How to do it better?
 
 - install [symfony/demo](https://github.com/symfony/demo), run it locally and try to break it
 - talk about WTFs with your team - are there differences to your old framework? just hate them, let the frustration out, it's normal to compare and feel this way
-- look at [SymfonyCasts](https://symfonycasts.com), the best way to get into Symfony, even better than documentation - the text is always for free (videos are paid, but they contain the same content as text) - huge thanks [Ryan Weaver](https://twitter.com/weaverryan) for funny videos 
-- hire an onsite/hot-line mentor for first 2 months, it might be more expensive than paying a programmer, but cheaper than the technical debt that programmer without experience would create during these 2 months. He or she will help you to quickly overcome all the WTFs and give you the confidence to master the framework yourself. 
- 
-### "<strike>Your team loses all the social connections with your old framework</strike>"
+- look at [SymfonyCasts](https://symfonycasts.com), the best way to get into Symfony, even better than documentation - the text is always for free (videos are paid, but they contain the same content as text) - huge thanks [Ryan Weaver](https://twitter.com/weaverryan) for funny videos
+- hire an onsite/hot-line mentor for first 2 months, it might be more expensive than paying a programmer, but cheaper than the technical debt that programmer without experience would create during these 2 months. He or she will help you to quickly overcome all the WTFs and give you the confidence to master the framework yourself.
 
-If you know people that use Nette, Laravel, Lumen or Zend, there is a high probability that your friends use Symfony as well. 
-Nowadays, *components over framework* model has become so popular, that most programmer actually uses more frameworks in one projects. So switching to Symfony only opens new topics to talk about.   
+### 2. "<strike>Your team loses all the social connections with your old framework</strike>"
 
-If you look for an offline meetup where you can talk about Symfony, look at [Friends of PHP](https://friendsofphp.org). Don't look just for "Symfony" keyword, but also PHP meetups in general. There you'll be able to talk about Symfony too since in Central and Western Europe Symfony is de facto "the PHP framework". 
+If you know people that use Nette, Laravel, Lumen or Zend, there is a high probability that your friends use Symfony as well.
+Nowadays, *components over framework* model has become so popular, that most programmer actually uses more frameworks in one projects. So switching to Symfony only opens new topics to talk about.
+
+If you look for an offline meetup where you can talk about Symfony, look at [Friends of PHP](https://friendsofphp.org). Don't look just for "Symfony" keyword, but also PHP meetups in general. There you'll be able to talk about Symfony too since in Central and Western Europe Symfony is de facto "the PHP framework".
 
 ## What you Gain by Switching to Symfony?
 
@@ -70,9 +70,9 @@ Symfony ecosystem will not give you magically 10 new Symfony developers you now 
 
 ### Community of Testers
 
-Nette Application is downloaded [2 250× a day](https://packagist.org/packages/nette/application/stats). Symfony alternative is downloaded [169 000× a day](https://packagist.org/packages/symfony/http-kernel/stats). Each Symfony package is tested by a huge amount of developers right after it is released. In this case, there is 75× bigger change the bug will be discovered and fixed.
+Nette Application is downloaded [2 296× a day](https://packagist.org/packages/nette/application/stats). Symfony alternative HttpKernel is downloaded [170 991× a day](https://packagist.org/packages/symfony/http-kernel/stats). Each Symfony package is tested by a huge amount of developers right after it is released. In this case, **there is 75× bigger chance the bug will be discovered and fixed**.
 
-That huge advantage of the big and stable community. 
+That's a huge advantage of the big and stable community.
 
 ### Rock-Solid Stability
 
@@ -91,7 +91,7 @@ I wrote about the importance of leader stability for the rest ecosystem in [What
 
 ### You're Informed about Important Stuff
 
-To get into Symfony you have to read every post, every tweet, read newsletters, be on Slack and go to meetups... well, that would be hell. 
+To get into Symfony you have to read every post, every tweet, read newsletters, be on Slack and go to meetups... well, that would be hell.
 
 - All you need to know is in ["Living on the Edge"](https://symfony.com/blog/category/living-on-the-edge) category or Symfony blog. 2-3 months prior to the release (now 4.3), you'll find nice, short and sexy posts about upcoming features.
 
@@ -103,28 +103,30 @@ Do you have an extra 5 minutes a week?
 
 **[Javier Eguillez](https://github.com/javiereguiluz) is making this really easy for us, thank you!**
 
-### You're Welcomed
+### You're Welcomed 🤗
 
-There are no numbers to describe this, yet I find it the most important pillar of any community. **You're welcomed**. You're welcomed to talk about your ideas, to argue (as in "discuss with arguments", not to shout at each other) in issues on Github, to put arguments to support your statements. 
+There are no numbers to describe this, yet I find it the most important pillar of any community. **You're welcomed**. You're welcomed to talk about your ideas, to argue (as in "discuss with arguments", not to shout at each other) in issues on Github, to put arguments to support your statements.
 
-I had many arguments with [Nicolas Grekas](https://github.com/nicolas-grekas) about parameters, console or dependency injection features. In the end, there is always someone who decides to go for it or stops it, there must be so it's not chaos. Was I always happy about the decision? No. But I always felt respected. These discussions also helped me to have a bigger picture and eventual implement the feature myself in a package. 
+I had many arguments with [Nicolas Grekas](https://github.com/nicolas-grekas) about parameters, console or dependency injection features. In the end, there is always someone who decides to go for it or stops it, there must be so it's not chaos. Was I always happy about the decision? No. **But I always fell respected. These discussions also help me to have a bigger picture and eventual implement the feature myself in a package.**
 
-Sometimes I created a package, people found it useful and in a year or two, it becomes implemented in Symfony core. Then I could deprecate them, [these Symplify packages in Symfony 3.3](https://www.tomasvotruba.cz/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33/):
+Sometimes I created a package, people found it useful and in a year or two, it becomes implemented in Symfony core. Then I could deprecate them, like [these Symplify packages in Symfony 3.3](https://www.tomasvotruba.cz/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33/):
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/symplify-deprecations/pr-notes.png" class="img-thumbnail">
 </div>
 
-I love how Symfony is ruled by decisions makers, but at the same time is opened to a change.
+I love how Symfony is ruled by decisions makers, but at the same time **is opened to a change**.
 
 ## It's not a Marketing, It's a Family
 
 The best thing is, it's not just marketing, it's not a well-bended lie, it's not a way to get money from you then say goodbye.
 It's a company setting, that you can feel in the atmosphere of Symfony conference.
 
-When I was at my first SymfonyCon in Paris 2017, there was a keynote by Fabien Potencier (Symfony founder and CEO) about "10 Years of Symfony". I thought it will be one of these boring self-promo talks about how is Symfony awesome and what it does and how big projects it runs. Instead, Fabien named persons one by one and invited them to the stage, including his family.  
+When I was at my first [SymfonyCon in Paris 2015](https://pariscon2015.symfony.com/), there was a keynote by Fabien Potencier (Symfony founder and CEO) about "10 Years of Symfony". I thought it will be one of these boring self-promo talks about how is Symfony awesome and what it does and how big projects it runs.
 
-<img src="http://blog.radumurzea.net/wp-content/uploads/keynote.png">
+Instead, Fabien **named people**, who contributed to Symfony in any way, **one by one and invited them to the stage, including his family**.
+
+<img src="http://blog.radumurzea.net/wp-content/uploads/keynote.png" style="max-width:40em">
 
 It made me cry a bit and I still have goosebumps when I remember it.
 

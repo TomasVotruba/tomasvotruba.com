@@ -4,8 +4,8 @@ title: "How to Upgrade Twig from Underscored to Namespaces"
 perex: |
     Symfony [recently announced a new version of Twig](https://symfony.com/blog/new-in-twig-namespaced-classes) with namespaces as we know it. Before PHP 5.2 there was `Underscored_Namespace` - I remember because that was the first version I used.
     <br><br>
-    Today I'll show you how to upgrade from `_` to `\\` in few <strike>minutes</strike> seconds. 
-      
+    Today I'll show you how to upgrade from `_` to `\\` in few <strike>minutes</strike> seconds.
+
 tweet: "New Post on #php 🐘 blog: How to Upgrade #twig from Underscored to Namespaces"
 tweet_image: "/assets/images/posts/2019/twig-under/twig-image.png"
 ---
@@ -17,7 +17,7 @@ tweet_image: "/assets/images/posts/2019/twig-under/twig-image.png"
 <div class="alert alert-sm alert-success mt-3">
     <p>This set would not be possible and as good as it is without you, open-source PHP community.
     I'd like to thank 👏:</p>
-    
+
     <ul>
         <li><strong><a href="https://github.com/greg0ire">greg0ire</a></strong> <a href="https://github.com/rectorphp/rector/commit/493e418f4691f3a4beadf901bd54ea7406380891">for contributing</a> to this set</li>
         <li>and <strong><a href="https://github.com/enumag">enumag</a></strong> for <a href="https://github.com/rectorphp/rector/search?q=twig+is%3Aissue+author%3Aenumag&amp;unscoped_q=twig+is%3Aissue+author%3Aenumag&amp;type=Issues">battle testing and reported issues</a></li>
@@ -37,7 +37,7 @@ This would fail since `Twig\Function` class doesn't exist. `Twig\TwigFunction` d
 
 ## 2 Places
 
-We need to replace both docblocks: 
+We need to replace both docblocks:
 
 ```diff
  /**
@@ -64,7 +64,7 @@ And the code:
 );
 ```
 
-In a reaction to the Symfony blog post, I see many developers [do upgrades manually](https://github.com/sculpin/sculpin/pull/423/files). In case of 50 changes, it's ok, but private code bases will go 1000+ use cases. 
+In a reaction to the Symfony blog post, I see many developers [do upgrades manually](https://github.com/sculpin/sculpin/pull/423/files). In case of 50 changes, it's ok, but private code bases will go 1000+ use cases.
 
 ## <strike>Code</strike> Pattern Refactoring
 
