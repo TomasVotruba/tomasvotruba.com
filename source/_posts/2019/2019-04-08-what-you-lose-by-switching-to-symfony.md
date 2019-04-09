@@ -1,13 +1,13 @@
 ---
 id: 201
-title: "What You Loose by Switching to Symfony"
+title: "What You Lose by Switching to Symfony"
 perex: |
     Switching one framework for another is nowadays getting easier and easier. What you could do for months only on your private projects, where income and delivering features are not important, is now an option for big websites with millions of lines of code. What seems like a divorce and switching a partner, is now as simple as changing your shoes from work to jogging ones.
     <br>
     <br>
     "Ok, we get it, it's simple. But why, what is the gain?"
 
-tweet: "New Post on #php 🐘 blog: What You Loose by Switching to #symfony"
+tweet: "New Post on #php 🐘 blog: What You Lose by Switching to #symfony"
 tweet_image: "/assets/images/posts/2017/symplify-deprecations/pr-notes.png"
 ---
 
