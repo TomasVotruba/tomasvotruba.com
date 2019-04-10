@@ -108,7 +108,7 @@ Do you have an extra 5 minutes a week?
 
 - I personally also sniff ["A Week of Symfony"](https://symfony.com/blog/category/a-week-of-symfony) every week, with newest issues, PRs and posts about Symfony (mostly to check if my posts are there ;)) to learn from others.
 
-**[Javier Eguillez](https://github.com/javiereguiluz) is making this really easy for us, thank you!**
+**[Javier Eguiluz](https://github.com/javiereguiluz) is making this really easy for us, thank you!**
 
 ### You're Welcomed 🤗
 
