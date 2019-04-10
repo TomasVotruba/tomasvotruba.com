@@ -24,7 +24,7 @@ It's possible and in a small fraction of costs of manual work, but "why not" is 
 
 ### 1. "Your team will be surprised from the new framework they never used"
 
-In one Symfony project, I consulted they hired 2 programmers who new only Nette. They didn't give them much attention, because delivering feature was more important than to educate your juniors. The problem is, they produced Nette-ish code in Symfony application, because of lack of attention. Switch framework under programmer's hands in a very short period could cause much more serious damage.
+In one Symfony project I consulted, they hired 2 programmers who knew only Nette. They didn't give them much attention, because delivering feature was more important than to educate your juniors. The problem is, they produced Nette-ish code in Symfony application, because of lack of attention. Switch framework under programmer's hands in a very short period could cause much more serious damage.
 
 ### 2. "Your team loses all the social connections with your old framework"
 
@@ -114,7 +114,7 @@ Do you have an extra 5 minutes a week?
 
 There are no numbers to describe this, yet I find it the most important pillar of any community. **You're welcomed**. You're welcomed to talk about your ideas, to argue (as in "discuss with arguments", not to shout at each other) in issues on Github, to put arguments to support your statements.
 
-I had many arguments with [Nicolas Grekas](https://github.com/nicolas-grekas) about parameters, console or dependency injection features. In the end, there is always someone who decides to go for it or stops it, there must be so it's not chaos. Was I always happy about the decision? No. **But I always fell respected. These discussions also help me to have a bigger picture and eventual implement the feature myself in a package.**
+I had many arguments with [Nicolas Grekas](https://github.com/nicolas-grekas) about parameters, console or dependency injection features. In the end, there is always someone who decides to go for it or stops it, there must be so it's not chaos. Was I always happy about the decision? No. **But I always feel respected. These discussions also help me to have a bigger picture and eventual implement the feature myself in a package.**
 
 Sometimes I created a package, people found it useful and in a year or two, it becomes implemented in Symfony core. Then I could deprecate them, like [these Symplify packages in Symfony 3.3](https://www.tomasvotruba.cz/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33/):
 
@@ -133,7 +133,7 @@ When I was at my first [SymfonyCon in Paris 2015](https://pariscon2015.symfony.c
 
 Instead, Fabien **named people**, who contributed to Symfony in any way, **one by one and invited them to the stage, including his family**.
 
-<img src="http://blog.radumurzea.net/wp-content/uploads/keynote.png" style="max-width:40em">
+<img src="https://blog.radumurzea.net/wp-content/uploads/keynote.png" style="max-width:40em">
 
 It made me cry a bit and I still have goosebumps when I remember it.
 
