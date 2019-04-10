@@ -36,13 +36,13 @@
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan analyse bin src tests --error-format symplify",
-        "check-cs": "vendor/bin/ecs check bin src tests",
+        "phpstan": "vendor/bin/phpstan analyse bin src tests --error-format symplify --ansi",
+        "check-cs": "vendor/bin/ecs check bin src tests --ansi",
         "fix-cs": [
-            "vendor/bin/ecs check bin src tests --fix",
+            "vendor/bin/ecs check bin src tests --fix --ansi",
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
-        "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt"
+        "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt --ansi"
     },
     "config": {
         "sort-packages": true
