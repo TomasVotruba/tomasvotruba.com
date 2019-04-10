@@ -585,3 +585,10 @@ table ul {
     text-align: center;
     font-size: 2em;
 }
+
+.thead-inverse th h3 {
+    color: #DDD;
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.7em;
+}
