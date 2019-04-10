@@ -11,6 +11,11 @@ parameters:
             url: "https://phprussia.ru/2019"
             date: "2019-05-17"
         -
+            event: "PHP fwdays"
+            city: "Kiev"
+            url: "https://fwdays.com/en/event/php-fwdays-2019"
+            date: "2019-06-01"
+        -
             event: "International PHP Conference"
             city: "Berlin"
             url: "https://phpconference.com/"
