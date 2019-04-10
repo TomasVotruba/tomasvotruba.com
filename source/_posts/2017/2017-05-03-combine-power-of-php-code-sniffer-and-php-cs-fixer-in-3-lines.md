@@ -98,7 +98,7 @@ Well, unless you like videos...
 
 ## Watch 🕑 11 min Intro Talks from Dresden PHP Meetup
 
-I spoke about ECS last week in Dresden. **If you have 11 minutes and you want to know more about it, [go watch it here it here](https://www.facebook.com/pehapkari/videos/vl.1877987242460289/1321227224593751/?type=1).**
+I spoke about ECS last week in Dresden. **If you have 11 minutes and you want to know more about it, [go watch it here](https://www.facebook.com/pehapkari/videos/vl.1877987242460289/1321227224593751/?type=1).**
 
 That's all for short intro of this tool. I'll post more articles about how to use it, about fast caching or how to write own checkers - both sniffs and fixers.
 
