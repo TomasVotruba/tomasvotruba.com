@@ -10,7 +10,7 @@ id: trends
             <span class="text-success">+ {{ value|number_format }} %</span>
         </strong>
     {% else %}
-       <span class="text-danger">- {{ value|number_format|abs }} %</span>
+        <span class="text-danger">- {{ value|number_format|abs }} %</span>
     {% endif %}
 {% endmacro %}
 
@@ -25,21 +25,17 @@ id: trends
     <h1>{{ title }}</h1>
 
     <p>
-        There are plenty "What is the Best PHP framework(s) for 20X" posts all over the Internet. Usually written by someone, who uses one of them and prefer them. It's pretty easy to put out many arguments, why is that "the best framework". These posts mislead the reader, because only someone using all PHP frameworks out there in equal time and skill.
+        <a href="/blog/2019/04/11/trends-of-php-frameworks-in-download-numbers/">Why was this table created?</a>
+    <p>
+
+    <p>
+        The goal of this table is to get from feelings and opinions of single influencers <strong>to numbers and results in active community</strong>.
     </p>
 
     <p>
-        Goal of this table is to get from feelings and opinion of single influencers <strong>to numbers and results in active community</strong>.
-    </p>
-    <p>
-        <strong>The absolute numbers show the success in history, the trends show success in recent times</strong>. There is no clear formula to say what combination or number is the best - it's up to you.
-    </p>
+        <strong>The absolute numbers show the success in history, the trends show success in recent times</strong>. There is no clear formula to say what combination or number is the best - it's up to you. Often the packages are sort by absolute numbers, which show always the same single one framework, so this table is sort by trends.</p>
 
-    <br>
-
-    <p>Often the packages are sort by absolute numbers, which show always the same single one framework, so this table is sort by trends.</p>
-
-    <p>This overview is build thanks to amazing intuitive <a href="https://packagist.org/apidoc">Packagist API</a>. Is some package missing? Good catch! Read about <a href="#methodology">methodology limits</a> to found out why. Also, <strong>this is work of PHP community</strong>, so if you have idea how to improve this and make it more objective, drop me a <a href="#comments">comment</a>.</p>
+    <p>Is some package missing? Good catch! Read about <a href="#methodology">methodology limits</a> to found out why. Also, <strong>this is work of PHP community</strong>, so if you have idea how to improve this and make it more objective, drop me a <a href="#comments">comment</a>.</p>
 
     <p class="text-muted mb-4 small">Updated at {{ php_framework_trends.updated_at|date('j. n. H:i') }}</p>
 
@@ -135,6 +131,7 @@ id: trends
 
     <p>
         Thanks to <a href="https://github.com/jkuchar">Jan Kuchar</a> for CI tools exclusion idea that made the numbers more relevant.
+        This overview is build thanks to amazing intuitive <a href="https://packagist.org/apidoc">Packagist API</a>.
     </p>
 
     <h2 id="comments">What Do You Think?</h2>
