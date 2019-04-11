@@ -1,4 +1,4 @@
-# this file was generated on 2019-04-11 23:56:20, do not edit it manually
+# this file was generated on 2019-04-11 23:59:18, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
@@ -1130,9 +1130,14 @@ parameters:
                         last_year_trend: -8.96
                         last_year_total: 463140
             -
-                name: Sylius
-                vendor_total_last_month: 0
-                vendor_total_last_year: 0
-                average_last_year_trend: !!float 0
-                packages_data: {  }
-        updated_at: '2019-04-11 23:56:20'
+                name: Silex
+                vendor_total_last_month: 4553
+                vendor_total_last_year: 2074590
+                average_last_year_trend: -31.36
+                packages_data:
+                    -
+                        package_name: silex/silex
+                        last_month_average_daily_downloads: 4553
+                        last_year_trend: -31.36
+                        last_year_total: 2074590
+        updated_at: '2019-04-11 23:59:18'
