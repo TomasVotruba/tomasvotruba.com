@@ -20,7 +20,7 @@ I'm not writing this post because I use Symfony in my projects and love the comm
 
 It's possible and in a small fraction of costs of manual work, but "why not" is a very poor argument. That's like taking cocaine because it gives you more energy. Life is not about solutions, it's about trade-offs. I'd like to inform you about the cons of such migration, so you can decide with more solid arguments on both sides.
 
-## What you Loose by Switching to Symfony?
+## What you Lose by Switching to Symfony?
 
 ### 1. "Your team will be surprised from the new framework they never used"
 
@@ -32,7 +32,7 @@ The best way to learn and validate ideas is to go out and talk with people. You 
 When you break up with your girlfriend, your friends from "her side" will soon perish.
 
 <br>
-<em>I'm obviously biased here, so if you have tips what will you loose, let me know in comments. I'll complete the article.</em>
+<em>I'm obviously biased here, so if you have tips what will you lose, let me know in comments. I'll complete the article.</em>
 
 ## How to Switch <strike>Quickly</strike> Smoothly
 
@@ -71,7 +71,7 @@ If you look for an offline meetup where you can talk about Symfony, look at [Fri
 Symfony ecosystem will not give you magically 10 new Symfony developers you now desperately need each year. But the symfony community trend is clear - it's active, it grows and attracts programmers that want to push their static programming to the next level.
 
 <div class="text-center">
-    <img src="/assets/images/posts/2019/loose-symfony/conferences.png">
+    <img src="/assets/images/posts/2019/lose-symfony/conferences.png">
     <em>There is 8 upcoming conferences in 2019 all over the Europe and America</em>
 </div>
 
@@ -91,7 +91,7 @@ Correct me if I'm wrong, but Symfony is **the only PHP framework that has [predi
 - every **2 years** there will be a new version with long-term support
 
 <div class="text-center">
-    <img src="/assets/images/posts/2019/loose-symfony/stable.png" class="img-thumbnail">
+    <img src="/assets/images/posts/2019/lose-symfony/stable.png" class="img-thumbnail">
 </div>
 
 I wrote about the importance of leader stability for the rest ecosystem in [What Can You Learn from Menstruation and Symfony Releases](https://www.tomasvotruba.cz/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/).
