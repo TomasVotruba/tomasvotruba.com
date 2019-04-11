@@ -1,4 +1,4 @@
-# this file was generated on 2019-04-11 16:20:54, do not edit it manually
+# this file was generated on 2019-04-11 23:56:20, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
@@ -1033,6 +1033,27 @@ parameters:
                         last_year_trend: -19.15
                         last_year_total: 410730
             -
+                name: Slim
+                vendor_total_last_month: 11049
+                vendor_total_last_year: 3825930
+                average_last_year_trend: 7.89
+                packages_data:
+                    -
+                        package_name: slim/twig-view
+                        last_month_average_daily_downloads: 1254
+                        last_year_trend: 15.85
+                        last_year_total: 412260
+                    -
+                        package_name: slim/slim
+                        last_month_average_daily_downloads: 8080
+                        last_year_trend: 5.95
+                        last_year_total: 2869560
+                    -
+                        package_name: slim/php-view
+                        last_month_average_daily_downloads: 1715
+                        last_year_trend: 1.88
+                        last_year_total: 544110
+            -
                 name: Yii
                 vendor_total_last_month: 52151
                 vendor_total_last_year: 16470660
@@ -1108,4 +1129,10 @@ parameters:
                         last_month_average_daily_downloads: 1386
                         last_year_trend: -8.96
                         last_year_total: 463140
-        updated_at: '2019-04-11 16:20:54'
+            -
+                name: Sylius
+                vendor_total_last_month: 0
+                vendor_total_last_year: 0
+                average_last_year_trend: !!float 0
+                packages_data: {  }
+        updated_at: '2019-04-11 23:56:20'

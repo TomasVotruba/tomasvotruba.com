@@ -30,8 +30,12 @@ final class GeneratePackageStatsCommand extends Command
         // single monorepos
         'zendframework' => 'Zend',
         'yiisoft' => 'Yii',
-        // didn't pass the 1000 daily downlaods minimal entrance
-        // 'codeigniter' => 'Code Igniter',
+        'slim' => 'Slim',
+
+        // didn't pass the 1000 daily downloads minimal entrance
+        // 'codeigniter' => 'Code Igniter', (900)
+        // 'fuel' => 'FuelPHP', (618)
+        // 'phalcon' => 'Phalcon', (15)
     ];
 
     /**
