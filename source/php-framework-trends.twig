@@ -14,6 +14,10 @@ id: trends
     {% endif %}
 {% endmacro %}
 
+{% macro number(value) %}
+    {{ value|number_format(0, ',', ' ') }}
+{% endmacro %}
+
 {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
 {% import _self as macros %}
 
@@ -22,7 +26,7 @@ id: trends
 
     <p class="text-muted mb-4">Updated at {{ php_framework_trends.updated_at|date('j. n. H:i') }}</p>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-responsive table-striped">
         <thead class="thead-inverse">
             <tr>
                 <th class="text-center">
@@ -44,13 +48,13 @@ id: trends
                         </small>
                     </span>
                 </th>
-                <td class="text-center">
-                    {{ framework.vendor_total_last_month|number_format }}
+                <td class="text-right">
+                    {{ macros.number(framework.vendor_total_last_month) }}
                 </td>
-                <td class="text-center">
-                    {{ framework.vendor_total_last_year|number_format }}
+                <td class="text-right">
+                    {{ macros.number(framework.vendor_total_last_year) }}
                 </td>
-                <td class="text-center">
+                <td class="text-right">
                     {{ macros.trend(framework.average_last_year_trend) }}
                 </td>
             </tr>
@@ -82,15 +86,11 @@ id: trends
             </thead>
             {% for package in framework.packages_data %}
                 <tr>
-                    <th>
-                        {{ package.package_name }}
-                        <small class="text-muted">
-                            <a href="https://packagist.org/packages/{{ package.package_name }}/stats">see downloads</a>
-                        </small>
-                    </th>
-
-                    <td class="text-right">{{ package.last_month_average_daily_downloads|number_format }}</td>
-                    <td class="text-right">{{ package.last_year_total|number_format }}</td>
+                    <td>
+                        <a href="https://packagist.org/packages/{{ package.package_name }}/stats">{{ package.package_name }}</a>
+                    </td>
+                    <td class="text-right">{{ macros.number(package.last_month_average_daily_downloads) }}</td>
+                    <td class="text-right">{{ macros.number(package.last_year_total) }}</td>
                     <td class="text-right">{{ macros.trend(package.last_year_trend) }}</td>
                 </tr>
             {% endfor %}
@@ -113,7 +113,7 @@ id: trends
             </ul>
         </li>
         <li>packages with <strong>history shorter than 12 months</strong> - they created extreme trends</li>
-        <li>packages with <strong>year trend bigger than 1000 %</strong> - they're caused by "hype" effect, that distorted average vendor trend</li>
+        <li>packages with <strong>year trend bigger than 500 %</strong> - they're caused by "hype" effect, that distorted average vendor trend</li>
         <li><code>phpstan/phpstan</code> and <code>friendsofphp/php-cs-fixer</code> downloads are cleaned from statistics to prevent miss-leading numbers</li>
     </ul>
 
