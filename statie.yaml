@@ -4,6 +4,13 @@ imports:
     # enabled on localhost only
     - { resource: 'statie.local.yaml',  ignore_errors: true }
 
+services:
+    _defaults:
+        autowire: true
+
+    TomasVotruba\Website\:
+        resource: 'src'
+
 parameters:
     post_template_path: 'templates/new_post.twig'
 

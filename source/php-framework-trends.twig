@@ -1,0 +1,125 @@
+---
+layout: "_layouts/default.twig"
+title: "PHP Framework Trends"
+id: trends
+---
+
+{% macro trend(value) %}
+    {% if value > 0 %}
+        <strong>
+            <span class="text-success">+ {{ value|number_format }} %</span>
+        </strong>
+    {% else %}
+       <span class="text-danger">- {{ value|number_format|abs }} %</span>
+    {% endif %}
+{% endmacro %}
+
+{# local macros must be imported, then use like "{{ macros.<X>() }}" #}
+{% import _self as macros %}
+
+<div class="container-fluid" id="blog">
+    <h1>{{ title }}</h1>
+
+    <p class="text-muted mb-4">Updated at {{ php_framework_trends.updated_at|date('j. n. H:i') }}</p>
+
+    <table class="table table-bordered">
+        <thead class="thead-inverse">
+            <tr>
+                <th class="text-center">
+                    Framework
+                </th>
+                <th class="text-center">Monthly Average</th>
+                <th class="text-center">Yearly Total</th>
+                <th class="text-center">Year Trend</th>
+            </tr>
+        </thead>
+
+        {% for framework in php_framework_trends.vendors %}
+            <tr>
+                <th>
+                    {{ framework.name }}
+                    <span class="text-muted">
+                        <small>
+                            <a href="#{{ framework.name|webalize }}">Jump to packages</a>
+                        </small>
+                    </span>
+                </th>
+                <td class="text-center">
+                    {{ framework.vendor_total_last_month|number_format }}
+                </td>
+                <td class="text-center">
+                    {{ framework.vendor_total_last_year|number_format }}
+                </td>
+                <td class="text-center">
+                    {{ macros.trend(framework.average_last_year_trend) }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+
+    {% for framework in php_framework_trends.vendors %}
+        <table class="table table-bordered" id="{{ framework.name|webalize }}">
+            <thead class="thead-inverse">
+                <tr>
+                    <th colspan="4" class="text-center">
+                        <h3>{{ framework.name }}</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Package</th>
+                    <th class="text-center">
+                        Last month Daily
+                    </th>
+                    <th class="text-center">
+                        Total Last Year
+                    </th>
+                    <th class="text-center">
+                        Trend Last Year
+                    </th>
+                </tr>
+            </thead>
+            {% for package in framework.packages_data %}
+                <tr>
+                    <th>
+                        {{ package.package_name }}
+                        <small class="text-muted">
+                            <a href="https://packagist.org/packages/{{ package.package_name }}/stats">see downloads</a>
+                        </small>
+                    </th>
+
+                    <td class="text-right">{{ package.last_month_average_daily_downloads|number_format }}</td>
+                    <td class="text-right">{{ package.last_year_total|number_format }}</td>
+                    <td class="text-right">{{ macros.trend(package.last_year_trend) }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <br>
+        <br>
+    {% endfor %}
+
+    <h2 class="mb-4">Methodology Notes</h2>
+
+    <p>Few outlier packages were removed to make numbers more relevant:</p>
+
+    <ul>
+        <li>
+            packages with <strong>less than 1000 downloads</strong> - not relevant compared in this scale
+
+            <ul>
+                <li>this limit was not passed by CodeIgniter, so it's excluded for now</li>
+            </ul>
+        </li>
+        <li>packages with <strong>history shorter than 12 months</strong> - they created extreme trends</li>
+        <li>packages with <strong>year trend bigger than 1000 %</strong> - they're caused by "hype" effect, that distorted average vendor trend</li>
+        <li><code>phpstan/phpstan</code> and <code>friendsofphp/php-cs-fixer</code> downloads are cleaned from statistics to prevent miss-leading numbers</li>
+    </ul>
+
+    <br>
+
+    <h2>What Do You Think?</h2>
+
+    {% include "_snippets/disqus_comments.twig" %}
+</div>
