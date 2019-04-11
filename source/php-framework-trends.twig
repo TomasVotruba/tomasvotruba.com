@@ -24,7 +24,24 @@ id: trends
 <div class="container-fluid" id="blog">
     <h1>{{ title }}</h1>
 
-    <p class="text-muted mb-4">Updated at {{ php_framework_trends.updated_at|date('j. n. H:i') }}</p>
+    <p>
+        There are plenty "What is the Best PHP framework(s) for 20X" posts all over the Internet. Usually written by someone, who uses one of them and prefer them. It's pretty easy to put out many arguments, why is that "the best framework". These posts mislead the reader, because only someone using all PHP frameworks out there in equal time and skill.
+    </p>
+
+    <p>
+        Goal of this table is to get from feelings and opinion of single influencers <strong>to numbers and results in active community</strong>.
+    </p>
+    <p>
+        <strong>The absolute numbers show the success in history, the trends show success in recent times</strong>. There is no clear formula to say what combination or number is the best - it's up to you.
+    </p>
+
+    <br>
+
+    <p>Often the packages are sort by absolute numbers, which show always the same single one framework, so this table is sort by trends.</p>
+
+    <p>This overview is build thanks to amazing intuitive <a href="https://packagist.org/apidoc">Packagist API</a>. Is some package missing? Good catch! Read about <a href="#methodology">methodology limits</a> to found out why. Also, <strong>this is work of PHP community</strong>, so if you have idea how to improve this and make it more objective, drop me a <a href="#comments">comment</a>.</p>
+
+    <p class="text-muted mb-4 small">Updated at {{ php_framework_trends.updated_at|date('j. n. H:i') }}</p>
 
     <table class="table table-bordered table-responsive table-striped">
         <thead class="thead-inverse">
@@ -64,7 +81,7 @@ id: trends
     <br>
 
     {% for framework in php_framework_trends.vendors %}
-        <table class="table table-bordered" id="{{ framework.name|webalize }}">
+        <table class="table table-bordered mt-4 mt-4" id="{{ framework.name|webalize }}">
             <thead class="thead-inverse">
                 <tr>
                     <th colspan="4" class="text-center">
@@ -95,18 +112,15 @@ id: trends
                 </tr>
             {% endfor %}
         </table>
-
-        <br>
-        <br>
     {% endfor %}
 
-    <h2 class="mb-4">Methodology Notes</h2>
+    <h2 class="mb-4" id="methodology">Methodology Notes</h2>
 
-    <p>Few outlier packages were removed to make numbers more relevant:</p>
+    <p>Few outlier packages were removed to make numbers more relevant. To be specific:</p>
 
     <ul>
         <li>
-            packages with <strong>less than 1000 downloads</strong> - not relevant compared in this scale
+            packages with <strong>less than 1000 downloads daily</strong> - not relevant compared in this scale
 
             <ul>
                 <li>this limit was not passed by CodeIgniter, so it's excluded for now</li>
@@ -119,7 +133,11 @@ id: trends
 
     <br>
 
-    <h2>What Do You Think?</h2>
+    <p>
+        Thanks to <a href="https://github.com/jkuchar">Jan Kuchar</a> for CI tools exclusion idea that made the numbers more relevant.
+    </p>
+
+    <h2 id="comments">What Do You Think?</h2>
 
     {% include "_snippets/disqus_comments.twig" %}
 </div>

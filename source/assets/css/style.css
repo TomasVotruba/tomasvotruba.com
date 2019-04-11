@@ -592,3 +592,8 @@ table ul {
     font-size: 2em;
     line-height: 1.7em;
 }
+
+.small {
+    font-size: .8em;
+}
+
