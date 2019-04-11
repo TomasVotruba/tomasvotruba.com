@@ -1,18 +1,13 @@
-# this file was generated on 2019-04-11 15:02:31, do not edit it manually
+# this file was generated on 2019-04-11 16:20:54, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
             -
                 name: CakePHP
-                vendor_total_last_month: 43730
-                vendor_total_last_year: 11792070
-                average_last_year_trend: 167.35
+                vendor_total_last_month: 41826
+                vendor_total_last_year: 11643390
+                average_last_year_trend: 126.81
                 packages_data:
-                    -
-                        package_name: cakephp/log
-                        last_month_average_daily_downloads: 1904
-                        last_year_trend: 694.37
-                        last_year_total: 148680
                     -
                         package_name: cakephp/database
                         last_month_average_daily_downloads: 2571
@@ -80,15 +75,10 @@ parameters:
                         last_year_total: 1409820
             -
                 name: Symfony
-                vendor_total_last_month: 3013562
-                vendor_total_last_year: 882271140
-                average_last_year_trend: 49.69
+                vendor_total_last_month: 3011473
+                vendor_total_last_year: 881984370
+                average_last_year_trend: 42.69
                 packages_data:
-                    -
-                        package_name: symfony/messenger
-                        last_month_average_daily_downloads: 2089
-                        last_year_trend: 595.11
-                        last_year_total: 286770
                     -
                         package_name: symfony/test-pack
                         last_month_average_daily_downloads: 5696
@@ -1118,4 +1108,4 @@ parameters:
                         last_month_average_daily_downloads: 1386
                         last_year_trend: -8.96
                         last_year_total: 463140
-        updated_at: '2019-04-11 15:02:31'
+        updated_at: '2019-04-11 16:20:54'

@@ -169,7 +169,7 @@ So far so good?
 
 New owner with technical skills comes the the play. And he wants to finally use `VueJs`, the company is now big enough to use Docker as standards and **there are more programmers that know [Eloquent](https://laravel.com/docs/eloquent) than [Doctrine](/blog/2017/03/27/why-is-doctrine-dying/) in his country**:
 
-*"Alibaba is catching up and we might loose the position #1 leader on market. Just switch it to Eloquent, so we can hire and on board faster.*"
+*"Alibaba is catching up and we might lose the position #1 leader on market. Just switch it to Eloquent, so we can hire and on board faster.*"
 
 Ups! Your code is coupled to the Doctrine and Symfony pretty hard. You're standing in front of important question: **Do you get extra $ 10 000 to refactor the code?**
 
