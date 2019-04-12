@@ -1,4 +1,4 @@
-# this file was generated on 2019-04-12 20:52:54, do not edit it manually
+# this file was generated on 2019-04-12 21:34:05, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
@@ -446,9 +446,9 @@ parameters:
                         last_year_total: 1409820
             -
                 name: Laravel
-                vendor_total_last_month: 187429
-                vendor_total_last_year: 56268780
-                average_last_year_trend: 14.44
+                vendor_total_last_month: 256266
+                vendor_total_last_year: 77550720
+                average_last_year_trend: 14.3
                 packages_data:
                     -
                         package_name: illuminate/log
@@ -535,6 +535,11 @@ parameters:
                         last_month_average_daily_downloads: 6183
                         last_year_trend: 10.91
                         last_year_total: 1922880
+                    -
+                        package_name: laravel/framework
+                        last_month_average_daily_downloads: 68837
+                        last_year_trend: 10.88
+                        last_year_total: 21281940
                     -
                         package_name: illuminate/http
                         last_month_average_daily_downloads: 6220
@@ -1115,4 +1120,4 @@ parameters:
                         last_month_average_daily_downloads: 4553
                         last_year_trend: -31.36
                         last_year_total: 2074590
-        updated_at: '2019-04-12 20:52:54'
+        updated_at: '2019-04-12 21:34:05'
