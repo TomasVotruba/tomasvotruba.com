@@ -79,6 +79,15 @@ final class PackageMonthlyDownloadsProvider
             'symfony/process',
             'symfony/routing',
             'symfony/var-dumper',
+            // consequently
+            'symfony/contracts',
+            'symfony/polyfill-mbstring',
+            'symfony/contracts',
+            'symfony/event-dispatcher',
+            'symfony/http-foundation',
+            'symfony/debug',
+            'symfony/polyfill-ctype',
+            'symfony/polyfill-php72',
         ],
     ];
 
