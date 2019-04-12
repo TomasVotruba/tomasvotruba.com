@@ -15,7 +15,7 @@ There are plenty *What is the Best PHP framework(s) in 20X* posts all over the I
 
 ## Numbers vs. Vague Statements
 
-I wanted to separate feelings and opinions of influencers - mostly framework leads or people paid for working in the framework (myself including) - from numbers and facts. The active community, **with long duration and rising trend** will provide a much better idea, how the framework is really successful. You can use marketing and made up stories, but if the community is't happy with the framework in the long term, the numbers will show better.
+I wanted to separate feelings and opinions of influencers - mostly framework leads or people paid for working in the framework (myself including) - from numbers and facts. The active community, **with long duration and rising trend** will provide a much better idea, how the framework is really successful. You can use marketing and made up stories, but if the community isn't happy with the framework in the long term, the numbers will show.
 
 ## Methodology
 
