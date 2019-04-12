@@ -172,7 +172,7 @@ final class GeneratePackageStatsCommand extends Command
             }
 
             // too fresh package → skip it
-            if ($lastYearTrend > 500) {
+            if ($lastYearTrend > 300) {
                 continue;
             }
 

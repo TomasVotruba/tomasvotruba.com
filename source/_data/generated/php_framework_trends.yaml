@@ -1,18 +1,13 @@
-# this file was generated on 2019-04-12 21:34:05, do not edit it manually
+# this file was generated on 2019-04-12 21:56:47, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
             -
                 name: Symfony
-                vendor_total_last_month: 2998087
-                vendor_total_last_year: 877113750
-                average_last_year_trend: 42.74
+                vendor_total_last_month: 2992391
+                vendor_total_last_year: 876065460
+                average_last_year_trend: 38.64
                 packages_data:
-                    -
-                        package_name: symfony/test-pack
-                        last_month_average_daily_downloads: 5696
-                        last_year_trend: 358.14
-                        last_year_total: 1048290
                     -
                         package_name: symfony/security-csrf
                         last_month_average_daily_downloads: 10775
@@ -1120,4 +1115,4 @@ parameters:
                         last_month_average_daily_downloads: 4553
                         last_year_trend: -31.36
                         last_year_total: 2074590
-        updated_at: '2019-04-12 21:34:05'
+        updated_at: '2019-04-12 21:56:47'
