@@ -1,4 +1,4 @@
-# this file was generated on 2019-04-04 16:57:25, do not edit it manually
+# this file was generated on 2019-04-12 23:13:19, do not edit it manually
 parameters:
     contributors:
         -
@@ -20,7 +20,7 @@ parameters:
             name: tavy315
             url: 'https://github.com/tavy315'
             photo: 'https://avatars2.githubusercontent.com/u/6184412?v=4'
-            contribution_count: 8
+            contribution_count: 9
         -
             name: ondrejmirtes
             url: 'https://github.com/ondrejmirtes'
@@ -115,6 +115,11 @@ parameters:
             name: clobee
             url: 'https://github.com/clobee'
             photo: 'https://avatars2.githubusercontent.com/u/3452074?v=4'
+            contribution_count: 2
+        -
+            name: garas
+            url: 'https://github.com/garas'
+            photo: 'https://avatars3.githubusercontent.com/u/2265694?v=4'
             contribution_count: 2
         -
             name: Zemistr
@@ -305,4 +310,14 @@ parameters:
             name: vrbata
             url: 'https://github.com/vrbata'
             photo: 'https://avatars1.githubusercontent.com/u/8536429?v=4'
+            contribution_count: 1
+        -
+            name: zendiik
+            url: 'https://github.com/zendiik'
+            photo: 'https://avatars2.githubusercontent.com/u/10212768?v=4'
+            contribution_count: 1
+        -
+            name: COil
+            url: 'https://github.com/COil'
+            photo: 'https://avatars0.githubusercontent.com/u/177844?v=4'
             contribution_count: 1
