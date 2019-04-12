@@ -29,6 +29,7 @@ parameters:
 
     redirects:
         # old url → new url
+        /blog: '/'
         /little-books: '/clusters'
         /about: '/clusters'
         /mentoring-and-lectures: '/mission'
