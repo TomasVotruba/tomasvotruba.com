@@ -1,83 +1,12 @@
-# this file was generated on 2019-04-11 23:59:18, do not edit it manually
+# this file was generated on 2019-04-12 21:34:05, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
             -
-                name: CakePHP
-                vendor_total_last_month: 41826
-                vendor_total_last_year: 11643390
-                average_last_year_trend: 126.81
-                packages_data:
-                    -
-                        package_name: cakephp/database
-                        last_month_average_daily_downloads: 2571
-                        last_year_trend: 388.02
-                        last_year_total: 450060
-                    -
-                        package_name: cakephp/datasource
-                        last_month_average_daily_downloads: 2579
-                        last_year_trend: 319.95
-                        last_year_total: 461970
-                    -
-                        package_name: cakephp/collection
-                        last_month_average_daily_downloads: 2593
-                        last_year_trend: 292.26
-                        last_year_total: 473190
-                    -
-                        package_name: cakephp/cache
-                        last_month_average_daily_downloads: 2575
-                        last_year_trend: 284.81
-                        last_year_total: 471690
-                    -
-                        package_name: cakephp/core
-                        last_month_average_daily_downloads: 2941
-                        last_year_trend: 227.62
-                        last_year_total: 562650
-                    -
-                        package_name: cakephp/utility
-                        last_month_average_daily_downloads: 2985
-                        last_year_trend: 156.77
-                        last_year_total: 599460
-                    -
-                        package_name: cakephp/chronos
-                        last_month_average_daily_downloads: 10241
-                        last_year_trend: 25.71
-                        last_year_total: 2900010
-                    -
-                        package_name: cakephp/migrations
-                        last_month_average_daily_downloads: 2427
-                        last_year_trend: -3.81
-                        last_year_total: 868800
-                    -
-                        package_name: cakephp/plugin-installer
-                        last_month_average_daily_downloads: 2429
-                        last_year_trend: -3.85
-                        last_year_total: 884460
-                    -
-                        package_name: cakephp/bake
-                        last_month_average_daily_downloads: 2162
-                        last_year_trend: -4.67
-                        last_year_total: 807090
-                    -
-                        package_name: cakephp/debug_kit
-                        last_month_average_daily_downloads: 2847
-                        last_year_trend: -5.88
-                        last_year_total: 1028400
-                    -
-                        package_name: cakephp/cakephp-codesniffer
-                        last_month_average_daily_downloads: 1878
-                        last_year_trend: -13.26
-                        last_year_total: 725790
-                    -
-                        package_name: cakephp/cakephp
-                        last_month_average_daily_downloads: 3598
-                        last_year_trend: -15.19
-                        last_year_total: 1409820
-            -
                 name: Symfony
-                vendor_total_last_month: 3011473
-                vendor_total_last_year: 881984370
-                average_last_year_trend: 42.69
+                vendor_total_last_month: 2998087
+                vendor_total_last_year: 877113750
+                average_last_year_trend: 42.74
                 packages_data:
                     -
                         package_name: symfony/test-pack
@@ -305,15 +234,15 @@ parameters:
                         last_year_trend: 20.35
                         last_year_total: 11785020
                     -
+                        package_name: symfony/config
+                        last_month_average_daily_downloads: 56983
+                        last_year_trend: 19.72
+                        last_year_total: 16297650
+                    -
                         package_name: symfony/phpunit-bridge
                         last_month_average_daily_downloads: 30133
                         last_year_trend: 19.32
                         last_year_total: 8966460
-                    -
-                        package_name: symfony/config
-                        last_month_average_daily_downloads: 61445
-                        last_year_trend: 17.46
-                        last_year_total: 17921190
                     -
                         package_name: symfony/var-dumper
                         last_month_average_daily_downloads: 106021
@@ -375,6 +304,11 @@ parameters:
                         last_year_trend: 9.98
                         last_year_total: 9969150
                     -
+                        package_name: symfony/console
+                        last_month_average_daily_downloads: 120918
+                        last_year_trend: 9.97
+                        last_year_total: 38253120
+                    -
                         package_name: symfony/polyfill-mbstring
                         last_month_average_daily_downloads: 182646
                         last_year_trend: 9.96
@@ -385,25 +319,20 @@ parameters:
                         last_year_trend: 9.56
                         last_year_total: 44587620
                     -
-                        package_name: symfony/console
-                        last_month_average_daily_downloads: 125380
-                        last_year_trend: 9.43
-                        last_year_total: 39876660
-                    -
                         package_name: symfony/dom-crawler
                         last_month_average_daily_downloads: 57382
                         last_year_trend: 9.1
                         last_year_total: 17532420
                     -
+                        package_name: symfony/yaml
+                        last_month_average_daily_downloads: 104029
+                        last_year_trend: 8.28
+                        last_year_total: 32494260
+                    -
                         package_name: symfony/event-dispatcher
                         last_month_average_daily_downloads: 122900
                         last_year_trend: !!float 8
                         last_year_total: 38788800
-                    -
-                        package_name: symfony/yaml
-                        last_month_average_daily_downloads: 108491
-                        last_year_trend: 7.74
-                        last_year_total: 34117800
                     -
                         package_name: symfony/security-acl
                         last_month_average_daily_downloads: 11857
@@ -470,10 +399,56 @@ parameters:
                         last_year_trend: -20.23
                         last_year_total: 718530
             -
+                name: CakePHP
+                vendor_total_last_month: 28567
+                vendor_total_last_year: 9223830
+                average_last_year_trend: 16.98
+                packages_data:
+                    -
+                        package_name: cakephp/utility
+                        last_month_average_daily_downloads: 2985
+                        last_year_trend: 156.77
+                        last_year_total: 599460
+                    -
+                        package_name: cakephp/chronos
+                        last_month_average_daily_downloads: 10241
+                        last_year_trend: 25.71
+                        last_year_total: 2900010
+                    -
+                        package_name: cakephp/migrations
+                        last_month_average_daily_downloads: 2427
+                        last_year_trend: -3.81
+                        last_year_total: 868800
+                    -
+                        package_name: cakephp/plugin-installer
+                        last_month_average_daily_downloads: 2429
+                        last_year_trend: -3.85
+                        last_year_total: 884460
+                    -
+                        package_name: cakephp/bake
+                        last_month_average_daily_downloads: 2162
+                        last_year_trend: -4.67
+                        last_year_total: 807090
+                    -
+                        package_name: cakephp/debug_kit
+                        last_month_average_daily_downloads: 2847
+                        last_year_trend: -5.88
+                        last_year_total: 1028400
+                    -
+                        package_name: cakephp/cakephp-codesniffer
+                        last_month_average_daily_downloads: 1878
+                        last_year_trend: -13.26
+                        last_year_total: 725790
+                    -
+                        package_name: cakephp/cakephp
+                        last_month_average_daily_downloads: 3598
+                        last_year_trend: -15.19
+                        last_year_total: 1409820
+            -
                 name: Laravel
-                vendor_total_last_month: 187429
-                vendor_total_last_year: 56268780
-                average_last_year_trend: 14.44
+                vendor_total_last_month: 256266
+                vendor_total_last_year: 77550720
+                average_last_year_trend: 14.3
                 packages_data:
                     -
                         package_name: illuminate/log
@@ -560,6 +535,11 @@ parameters:
                         last_month_average_daily_downloads: 6183
                         last_year_trend: 10.91
                         last_year_total: 1922880
+                    -
+                        package_name: laravel/framework
+                        last_month_average_daily_downloads: 68837
+                        last_year_trend: 10.88
+                        last_year_total: 21281940
                     -
                         package_name: illuminate/http
                         last_month_average_daily_downloads: 6220
@@ -1140,4 +1120,4 @@ parameters:
                         last_month_average_daily_downloads: 4553
                         last_year_trend: -31.36
                         last_year_total: 2074590
-        updated_at: '2019-04-11 23:59:18'
+        updated_at: '2019-04-12 21:34:05'

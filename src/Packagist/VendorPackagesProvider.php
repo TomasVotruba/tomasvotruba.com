@@ -35,6 +35,13 @@ final class VendorPackagesProvider
             throw new ShouldNotHappenException();
         }
 
-        return $json['packageNames'];
+        $packageNames = $json['packageNames'];
+
+        // include laravel/framework monorepo
+        if ($vendorName === 'illuminate') {
+            $packageNames[] = 'laravel/framework';
+        }
+
+        return $packageNames;
     }
 }

@@ -24,7 +24,7 @@ final class GeneratePackageStatsCommand extends Command
     private $frameworkVendorToName = [
         'nette' => 'Nette',
         'symfony' => 'Symfony',
-        // laravel
+        // includes also laravel/framework
         'illuminate' => 'Laravel',
         'cakephp' => 'CakePHP',
         // single monorepos

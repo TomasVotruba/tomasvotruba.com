@@ -44,6 +44,17 @@ final class PackageMonthlyDownloadsProvider
             'symfony/process',
             'symfony/stopwatch',
         ],
+        'phing/phing' => [
+            'cakephp/collection',
+            'cakephp/database',
+            'cakephp/cache',
+            'cakephp/core',
+            'cakephp/datasource',
+            'cakephp/log',
+            'symfony/console',
+            'symfony/config',
+            'symfony/yaml',
+        ],
     ];
 
     /**
