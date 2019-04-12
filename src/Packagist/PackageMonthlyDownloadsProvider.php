@@ -51,6 +51,9 @@ final class PackageMonthlyDownloadsProvider
             'cakephp/core',
             'cakephp/datasource',
             'cakephp/log',
+            'symfony/console',
+            'symfony/config',
+            'symfony/yaml',
         ],
     ];
 
