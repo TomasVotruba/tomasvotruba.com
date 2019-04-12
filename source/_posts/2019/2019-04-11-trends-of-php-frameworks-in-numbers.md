@@ -33,6 +33,10 @@ Cut the small-talk, these are the numbers (to the day of publishing this post).
 
 <br>
 
+<div class="alert alert-sm alert-danger mt-3" role="alert" markdown=1>
+This table is out of date as the days go by. **See [updated results](/php-framework-trends/)**.
+</div>
+
 <table class="table table-bordered table-responsive table-striped">
     <thead class="thead-inverse">
         <tr>
