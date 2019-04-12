@@ -69,6 +69,17 @@ final class PackageMonthlyDownloadsProvider
             'symfony/filesystem',
             'symfony/polyfill-ctype',
         ],
+        // https://packagist.org/packages/laravel/framework
+        'laravel/framework' => [
+            'symfony/console',
+            'symfony/debug',
+            'symfony/finder',
+            'symfony/http-foundation',
+            'symfony/http-kernel',
+            'symfony/process',
+            'symfony/routing',
+            'symfony/var-dumper',
+        ],
     ];
 
     /**
