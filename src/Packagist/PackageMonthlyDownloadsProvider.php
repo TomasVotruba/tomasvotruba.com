@@ -21,6 +21,7 @@ final class PackageMonthlyDownloadsProvider
      * @var string[][]
      */
     private $interveningDependencies = [
+        // https://packagist.org/packages/phpstan/phpstan
         'phpstan/phpstan' => [
             'nette/bootstrap',
             'nette/di',
@@ -32,7 +33,10 @@ final class PackageMonthlyDownloadsProvider
             'nette/php-generator',
             'nette/neon',
             'nette/finder',
+            'symfony/contracts',
+            'symfony/polyfill-mbstring',
         ],
+        // https://packagist.org/packages/friendsofphp/php-cs-fixer
         'friendsofphp/php-cs-fixer' => [
             'symfony/console',
             'symfony/event-dispatcher',
@@ -43,17 +47,27 @@ final class PackageMonthlyDownloadsProvider
             'symfony/polyfill-php72',
             'symfony/process',
             'symfony/stopwatch',
+            // consequently
+            'symfony/contracts',
+            'symfony/polyfill-mbstring',
+            'symfony/polyfill-ctype',
         ],
-        'phing/phing' => [
+        // https://packagist.org/packages/robmorgan/phinx
+        'robmorgan/phinx' => [
             'cakephp/collection',
             'cakephp/database',
+            'symfony/console',
+            'symfony/config',
+            'symfony/yaml',
+            // consequently
             'cakephp/cache',
             'cakephp/core',
             'cakephp/datasource',
             'cakephp/log',
-            'symfony/console',
-            'symfony/config',
-            'symfony/yaml',
+            'symfony/contracts',
+            'symfony/polyfill-mbstring',
+            'symfony/filesystem',
+            'symfony/polyfill-ctype',
         ],
     ];
 
