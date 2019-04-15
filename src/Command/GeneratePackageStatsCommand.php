@@ -183,6 +183,7 @@ final class GeneratePackageStatsCommand extends Command
 
             $packageData = [
                 'package_name' => $packageName,
+                'package_short_name' => Strings::after($packageName, '/'),
                 'last_month_average_daily_downloads' => $lastMonthDailyDownloads,
                 'last_year_trend' => $lastYearTrend,
                 'last_year_total' => $this->statistics->resolveTotal($monthlyDownloads, 12),
