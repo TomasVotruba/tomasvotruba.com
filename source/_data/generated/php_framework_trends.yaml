@@ -1,23 +1,13 @@
-# this file was generated on 2019-04-15 18:21:38, do not edit it manually
+# this file was generated on 2019-04-15 18:34:26, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
             -
                 name: Symfony
-                vendor_total_last_month: 2164302
-                vendor_total_last_year: 629749290
-                average_last_year_trend: 36.82
+                vendor_total_last_month: 2122303
+                vendor_total_last_year: 619709400
+                average_last_year_trend: 32.56
                 packages_data:
-                    -
-                        package_name: symfony/apache-pack
-                        last_month_average_daily_downloads: 2689
-                        last_year_trend: 126.92
-                        last_year_total: 596640
-                    -
-                        package_name: symfony/serializer-pack
-                        last_month_average_daily_downloads: 7649
-                        last_year_trend: 115.09
-                        last_year_total: 1644090
                     -
                         package_name: symfony/web-link
                         last_month_average_daily_downloads: 6989
@@ -38,21 +28,6 @@ parameters:
                         last_month_average_daily_downloads: 11415
                         last_year_trend: 91.49
                         last_year_total: 2510400
-                    -
-                        package_name: symfony/debug-pack
-                        last_month_average_daily_downloads: 6818
-                        last_year_trend: 88.3
-                        last_year_total: 1603890
-                    -
-                        package_name: symfony/profiler-pack
-                        last_month_average_daily_downloads: 10888
-                        last_year_trend: 86.42
-                        last_year_total: 2505360
-                    -
-                        package_name: symfony/orm-pack
-                        last_month_average_daily_downloads: 11400
-                        last_year_trend: 82.54
-                        last_year_total: 2665140
                     -
                         package_name: symfony/workflow
                         last_month_average_daily_downloads: 2747
@@ -253,11 +228,6 @@ parameters:
                         last_month_average_daily_downloads: 50069
                         last_year_trend: 16.82
                         last_year_total: 15104550
-                    -
-                        package_name: symfony/webpack-encore-pack
-                        last_month_average_daily_downloads: 2555
-                        last_year_trend: 15.34
-                        last_year_total: 1024770
                     -
                         package_name: symfony/translation
                         last_month_average_daily_downloads: 123605
@@ -1095,4 +1065,4 @@ parameters:
                         last_month_average_daily_downloads: 4553
                         last_year_trend: -31.36
                         last_year_total: 2074590
-        updated_at: '2019-04-15 18:21:38'
+        updated_at: '2019-04-15 18:34:26'
