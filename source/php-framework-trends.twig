@@ -42,12 +42,12 @@ id: trends
     <table class="table table-bordered table-responsive table-striped">
         <thead class="thead-inverse">
             <tr>
-                <th class="text-center">
+                <th class="text-center w-25">
                     Framework
                 </th>
-                <th class="text-center">Year Trend</th>
-                <th class="text-center">Monthly Average</th>
-                <th class="text-center">Yearly Total</th>
+                <th class="text-center w-25">Year Trend</th>
+                <th class="text-center w-25">Monthly Average</th>
+                <th class="text-center w-25">Yearly Total</th>
             </tr>
         </thead>
 
@@ -86,14 +86,14 @@ id: trends
                     </th>
                 </tr>
                 <tr>
-                    <th>Package</th>
-                    <th class="text-center">
+                    <th class="w-25">Package</th>
+                    <th class="text-center w-25">
                         Trend Last Year
                     </th>
-                    <th class="text-center">
+                    <th class="text-center w-25">
                         Last month Daily
                     </th>
-                    <th class="text-center">
+                    <th class="text-center w-25">
                         Total Last Year
                     </th>
                 </tr>
@@ -101,7 +101,9 @@ id: trends
             {% for package in framework.packages_data %}
                 <tr>
                     <td>
-                        <a href="https://packagist.org/packages/{{ package.package_name }}/stats">{{ package.package_name }}</a>
+                        <a href="https://packagist.org/packages/{{ package.package_name }}/stats">
+                            {{ package.package_short_name }}
+                        </a>
                     </td>
                     <td class="text-right">{{ macros.trend(package.last_year_trend) }}</td>
                     <td class="text-right">{{ macros.number(package.last_month_average_daily_downloads) }}</td>
