@@ -4,8 +4,17 @@ namespace TomasVotruba\Website;
 
 final class Statistics
 {
-    public function resolveTrend(array $values, int $trendSize): ?float
+    /**
+     * @var float[]
+     */
+    private $trendsByPackageName = [];
+
+    public function resolveTrend(string $packageName, array $values, int $trendSize): ?float
     {
+        if (isset($this->trendsByPackageName[$packageName])) {
+            return $this->trendsByPackageName[$packageName];
+        }
+
         $halfDuration = $trendSize / 2;
 
         $firstHalf = $this->countFirstHalf($values, $halfDuration);
@@ -16,8 +25,11 @@ final class Statistics
         }
 
         $trend = $firstHalf / $secondHalf;
+        $trend = round(($trend - 1) * 100, 2);
 
-        return round(($trend - 1) * 100, 2);
+        $this->trendsByPackageName[$packageName] = $trend;
+
+        return $this->trendsByPackageName[$packageName];
     }
 
     /**

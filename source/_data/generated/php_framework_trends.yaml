@@ -1,18 +1,13 @@
-# this file was generated on 2019-04-12 21:56:47, do not edit it manually
+# this file was generated on 2019-04-15 18:21:38, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
             -
                 name: Symfony
-                vendor_total_last_month: 2992391
-                vendor_total_last_year: 876065460
-                average_last_year_trend: 38.64
+                vendor_total_last_month: 2164302
+                vendor_total_last_year: 629749290
+                average_last_year_trend: 36.82
                 packages_data:
-                    -
-                        package_name: symfony/security-csrf
-                        last_month_average_daily_downloads: 10775
-                        last_year_trend: 163.89
-                        last_year_total: 1449450
                     -
                         package_name: symfony/apache-pack
                         last_month_average_daily_downloads: 2689
@@ -68,11 +63,6 @@ parameters:
                         last_month_average_daily_downloads: 9589
                         last_year_trend: 79.73
                         last_year_total: 2240700
-                    -
-                        package_name: symfony/polyfill-php72
-                        last_month_average_daily_downloads: 65191
-                        last_year_trend: 77.31
-                        last_year_total: 13669170
                     -
                         package_name: symfony/security-bundle
                         last_month_average_daily_downloads: 15845
@@ -199,15 +189,20 @@ parameters:
                         last_year_trend: 33.02
                         last_year_total: 906000
                     -
+                        package_name: symfony/filesystem
+                        last_month_average_daily_downloads: 58759
+                        last_year_trend: 31.06
+                        last_year_total: 16278510
+                    -
                         package_name: symfony/psr-http-message-bridge
                         last_month_average_daily_downloads: 26835
                         last_year_trend: 29.04
                         last_year_total: 6874800
                     -
-                        package_name: symfony/filesystem
-                        last_month_average_daily_downloads: 67353
-                        last_year_trend: 25.29
-                        last_year_total: 19205730
+                        package_name: symfony/var-dumper
+                        last_month_average_daily_downloads: 37184
+                        last_year_trend: 26.86
+                        last_year_total: 10108650
                     -
                         package_name: symfony/security
                         last_month_average_daily_downloads: 9018
@@ -224,60 +219,55 @@ parameters:
                         last_year_trend: 21.89
                         last_year_total: 4248750
                     -
+                        package_name: symfony/config
+                        last_month_average_daily_downloads: 52851
+                        last_year_trend: 21.67
+                        last_year_total: 14993970
+                    -
+                        package_name: symfony/http-foundation
+                        last_month_average_daily_downloads: 52462
+                        last_year_trend: 21.13
+                        last_year_total: 14584440
+                    -
                         package_name: symfony/browser-kit
                         last_month_average_daily_downloads: 41093
                         last_year_trend: 20.35
                         last_year_total: 11785020
                     -
-                        package_name: symfony/config
-                        last_month_average_daily_downloads: 56983
-                        last_year_trend: 19.72
-                        last_year_total: 16297650
+                        package_name: symfony/routing
+                        last_month_average_daily_downloads: 38900
+                        last_year_trend: 19.74
+                        last_year_total: 10706520
                     -
                         package_name: symfony/phpunit-bridge
                         last_month_average_daily_downloads: 30133
                         last_year_trend: 19.32
                         last_year_total: 8966460
                     -
-                        package_name: symfony/var-dumper
-                        last_month_average_daily_downloads: 106021
-                        last_year_trend: 15.67
-                        last_year_total: 31390590
+                        package_name: symfony/http-kernel
+                        last_month_average_daily_downloads: 41846
+                        last_year_trend: 17.67
+                        last_year_total: 11878140
+                    -
+                        package_name: symfony/process
+                        last_month_average_daily_downloads: 50069
+                        last_year_trend: 16.82
+                        last_year_total: 15104550
                     -
                         package_name: symfony/webpack-encore-pack
                         last_month_average_daily_downloads: 2555
                         last_year_trend: 15.34
                         last_year_total: 1024770
                     -
-                        package_name: symfony/http-foundation
-                        last_month_average_daily_downloads: 121299
-                        last_year_trend: 14.88
-                        last_year_total: 35866380
-                    -
                         package_name: symfony/translation
                         last_month_average_daily_downloads: 123605
                         last_year_trend: 14.69
                         last_year_total: 37025430
                     -
-                        package_name: symfony/routing
-                        last_month_average_daily_downloads: 107737
-                        last_year_trend: 13.72
-                        last_year_total: 31988460
-                    -
                         package_name: symfony/css-selector
                         last_month_average_daily_downloads: 109477
                         last_year_trend: 13.49
                         last_year_total: 32576580
-                    -
-                        package_name: symfony/process
-                        last_month_average_daily_downloads: 118906
-                        last_year_trend: 13.29
-                        last_year_total: 36386490
-                    -
-                        package_name: symfony/http-kernel
-                        last_month_average_daily_downloads: 110683
-                        last_year_trend: 13.23
-                        last_year_total: 33160080
                     -
                         package_name: symfony/polyfill-intl-icu
                         last_month_average_daily_downloads: 39711
@@ -290,9 +280,9 @@ parameters:
                         last_year_total: 11863320
                     -
                         package_name: symfony/finder
-                        last_month_average_daily_downloads: 110994
-                        last_year_trend: !!float 11
-                        last_year_total: 34898730
+                        last_month_average_daily_downloads: 42157
+                        last_year_trend: 11.19
+                        last_year_total: 13616790
                     -
                         package_name: symfony/swiftmailer-bundle
                         last_month_average_daily_downloads: 30545
@@ -300,19 +290,9 @@ parameters:
                         last_year_total: 9969150
                     -
                         package_name: symfony/console
-                        last_month_average_daily_downloads: 120918
-                        last_year_trend: 9.97
-                        last_year_total: 38253120
-                    -
-                        package_name: symfony/polyfill-mbstring
-                        last_month_average_daily_downloads: 182646
-                        last_year_trend: 9.96
-                        last_year_total: 56572020
-                    -
-                        package_name: symfony/debug
-                        last_month_average_daily_downloads: 143359
-                        last_year_trend: 9.56
-                        last_year_total: 44587620
+                        last_month_average_daily_downloads: 47949
+                        last_year_trend: 9.64
+                        last_year_total: 15667500
                     -
                         package_name: symfony/dom-crawler
                         last_month_average_daily_downloads: 57382
@@ -320,14 +300,24 @@ parameters:
                         last_year_total: 17532420
                     -
                         package_name: symfony/yaml
-                        last_month_average_daily_downloads: 104029
-                        last_year_trend: 8.28
-                        last_year_total: 32494260
+                        last_month_average_daily_downloads: 99897
+                        last_year_trend: 8.65
+                        last_year_total: 31190580
+                    -
+                        package_name: symfony/debug
+                        last_month_average_daily_downloads: 74522
+                        last_year_trend: 8.36
+                        last_year_total: 23305680
                     -
                         package_name: symfony/event-dispatcher
-                        last_month_average_daily_downloads: 122900
-                        last_year_trend: !!float 8
-                        last_year_total: 38788800
+                        last_month_average_daily_downloads: 54063
+                        last_year_trend: 4.63
+                        last_year_total: 17506860
+                    -
+                        package_name: symfony/polyfill-mbstring
+                        last_month_average_daily_downloads: 71046
+                        last_year_trend: 2.44
+                        last_year_total: 23750190
                     -
                         package_name: symfony/security-acl
                         last_month_average_daily_downloads: 11857
@@ -393,52 +383,6 @@ parameters:
                         last_month_average_daily_downloads: 1438
                         last_year_trend: -20.23
                         last_year_total: 718530
-            -
-                name: CakePHP
-                vendor_total_last_month: 28567
-                vendor_total_last_year: 9223830
-                average_last_year_trend: 16.98
-                packages_data:
-                    -
-                        package_name: cakephp/utility
-                        last_month_average_daily_downloads: 2985
-                        last_year_trend: 156.77
-                        last_year_total: 599460
-                    -
-                        package_name: cakephp/chronos
-                        last_month_average_daily_downloads: 10241
-                        last_year_trend: 25.71
-                        last_year_total: 2900010
-                    -
-                        package_name: cakephp/migrations
-                        last_month_average_daily_downloads: 2427
-                        last_year_trend: -3.81
-                        last_year_total: 868800
-                    -
-                        package_name: cakephp/plugin-installer
-                        last_month_average_daily_downloads: 2429
-                        last_year_trend: -3.85
-                        last_year_total: 884460
-                    -
-                        package_name: cakephp/bake
-                        last_month_average_daily_downloads: 2162
-                        last_year_trend: -4.67
-                        last_year_total: 807090
-                    -
-                        package_name: cakephp/debug_kit
-                        last_month_average_daily_downloads: 2847
-                        last_year_trend: -5.88
-                        last_year_total: 1028400
-                    -
-                        package_name: cakephp/cakephp-codesniffer
-                        last_month_average_daily_downloads: 1878
-                        last_year_trend: -13.26
-                        last_year_total: 725790
-                    -
-                        package_name: cakephp/cakephp
-                        last_month_average_daily_downloads: 3598
-                        last_year_trend: -15.19
-                        last_year_total: 1409820
             -
                 name: Laravel
                 vendor_total_last_month: 256266
@@ -582,15 +526,10 @@ parameters:
                         last_year_total: 3092640
             -
                 name: Zend
-                vendor_total_last_month: 550187
-                vendor_total_last_year: 165652860
-                average_last_year_trend: 11.56
+                vendor_total_last_month: 548992
+                vendor_total_last_year: 165428010
+                average_last_year_trend: 9.02
                 packages_data:
-                    -
-                        package_name: zendframework/zend-httphandlerrunner
-                        last_month_average_daily_downloads: 1195
-                        last_year_trend: 181.53
-                        last_year_total: 224850
                     -
                         package_name: zendframework/zend-ldap
                         last_month_average_daily_downloads: 2519
@@ -1105,6 +1044,47 @@ parameters:
                         last_year_trend: -8.96
                         last_year_total: 463140
             -
+                name: CakePHP
+                vendor_total_last_month: 25582
+                vendor_total_last_year: 8624370
+                average_last_year_trend: -2.99
+                packages_data:
+                    -
+                        package_name: cakephp/chronos
+                        last_month_average_daily_downloads: 10241
+                        last_year_trend: 25.71
+                        last_year_total: 2900010
+                    -
+                        package_name: cakephp/migrations
+                        last_month_average_daily_downloads: 2427
+                        last_year_trend: -3.81
+                        last_year_total: 868800
+                    -
+                        package_name: cakephp/plugin-installer
+                        last_month_average_daily_downloads: 2429
+                        last_year_trend: -3.85
+                        last_year_total: 884460
+                    -
+                        package_name: cakephp/bake
+                        last_month_average_daily_downloads: 2162
+                        last_year_trend: -4.67
+                        last_year_total: 807090
+                    -
+                        package_name: cakephp/debug_kit
+                        last_month_average_daily_downloads: 2847
+                        last_year_trend: -5.88
+                        last_year_total: 1028400
+                    -
+                        package_name: cakephp/cakephp-codesniffer
+                        last_month_average_daily_downloads: 1878
+                        last_year_trend: -13.26
+                        last_year_total: 725790
+                    -
+                        package_name: cakephp/cakephp
+                        last_month_average_daily_downloads: 3598
+                        last_year_trend: -15.19
+                        last_year_total: 1409820
+            -
                 name: Silex
                 vendor_total_last_month: 4553
                 vendor_total_last_year: 2074590
@@ -1115,4 +1095,4 @@ parameters:
                         last_month_average_daily_downloads: 4553
                         last_year_trend: -31.36
                         last_year_total: 2074590
-        updated_at: '2019-04-12 21:56:47'
+        updated_at: '2019-04-15 18:21:38'
