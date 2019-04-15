@@ -48,6 +48,20 @@ final class GeneratePackageStatsCommand extends Command
         // 'codeigniter' => 'Code Igniter', (900)
         // 'fuel' => 'FuelPHP', (618)
         // 'phalcon' => 'Phalcon', (15)
+        // 'neos' => 'Neos CMS', (309)
+    ];
+
+    /**
+     * Packages that create no value, are empty or just util
+     * @var string[]
+     */
+    private $pseudoPackages = [
+        'symfony/apache-pack',
+        'symfony/serializer-pack',
+        'symfony/debug-pack',
+        'symfony/profiler-pack',
+        'symfony/orm-pack',
+        'symfony/webpack-encore-pack',
     ];
 
     /**
@@ -195,6 +209,15 @@ final class GeneratePackageStatsCommand extends Command
      */
     private function shouldSkipPackageForOutlier(string $packageName, array $monthlyDownloads): bool
     {
+        if (in_array($packageName, $this->pseudoPackages, true)) {
+            $this->symfonyStyle->note(sprintf(
+                'Package "%s" is skipped, because it is only pseudo-package, not real PHP code',
+                $packageName
+            ));
+
+            return true;
+        }
+
         // not enough data, package younger than 12 months → skip it
         if (! isset($monthlyDownloads[11])) {
             $this->symfonyStyle->note(sprintf(
