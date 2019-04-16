@@ -38,11 +38,11 @@ id: trends
 
         {% for package in testing_packages.packages %}
             <tr>
-                <th>
+                <td>
                     <a href="https://packagist.org/packages/{{ package.package_name }}/stats">
                         {{ package.package_name }}
                     </a>
-                </th>
+                </td>
                 <td class="text-right">
                     {{ macros.trend(package.last_year_trend) }}
                 </td>
