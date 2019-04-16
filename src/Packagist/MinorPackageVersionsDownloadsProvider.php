@@ -62,11 +62,9 @@ final class MinorPackageVersionsDownloadsProvider
             } else {
                 $downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion] = $monthlyDownloads;
             }
-        }
 
-        uksort($downloadsGroupedByVersionAndMajorMinor, function (string $firstVersion, string $secondVersion) {
-            return $secondVersion <=> $firstVersion;
-        });
+            $downloadsGroupedByVersionAndMajorMinor = $this->sortByVersion($downloadsGroupedByVersionAndMajorMinor);
+        }
 
         /** @var int[] $downloadsGroupedByVersionAndMajorMinor */
         return $downloadsGroupedByVersionAndMajorMinor;
@@ -116,5 +114,24 @@ final class MinorPackageVersionsDownloadsProvider
         }
 
         return $data;
+    }
+
+    private function sortByVersion(array $downloadsGroupedByVersionAndMajorMinor): array
+    {
+        uksort($downloadsGroupedByVersionAndMajorMinor['downloads_minor'], function ($firstVersion, $secondVersion) {
+            $firstVersion = new Version($firstVersion);
+            $secondVersion = new Version($secondVersion);
+
+            return $firstVersion->isGreaterThan($secondVersion);
+        });
+
+        uksort($downloadsGroupedByVersionAndMajorMinor['downloads_major'], function ($firstVersion, $secondVersion) {
+            $firstVersion = new Version($firstVersion . '.0');
+            $secondVersion = new Version($secondVersion . '.0');
+
+            return $firstVersion->isGreaterThan($secondVersion);
+        });
+
+        return $downloadsGroupedByVersionAndMajorMinor;
     }
 }
