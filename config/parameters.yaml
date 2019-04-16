@@ -1,4 +1,12 @@
 parameters:
+    testing_package_names:
+        - 'behat/behat'
+        - 'phpspec/phpspec'
+        - 'mockery/mockery'
+        - 'nette/tester'
+        - 'phpunit/phpunit'
+        - 'codeception/codeception'
+
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:
         nette: Nette

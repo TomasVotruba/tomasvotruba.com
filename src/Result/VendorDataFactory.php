@@ -10,11 +10,6 @@ use TomasVotruba\Website\Packagist\VendorPackagesProvider;
 final class VendorDataFactory
 {
     /**
-     * @var string[]
-     */
-    private $frameworksVendorToName = [];
-
-    /**
      * @var SymfonyStyle
      */
     private $symfonyStyle;
@@ -34,28 +29,26 @@ final class VendorDataFactory
      */
     private $packageDataFactory;
 
-    /**
-     * @param string[] $frameworksVendorToName
-     */
     public function __construct(
         SymfonyStyle $symfonyStyle,
         VendorPackagesProvider $vendorPackagesProvider,
         ArrayUtils $arrayUtils,
-        PackageDataFactory $packageDataFactory,
-        array $frameworksVendorToName
+        PackageDataFactory $packageDataFactory
     ) {
         $this->symfonyStyle = $symfonyStyle;
         $this->vendorPackagesProvider = $vendorPackagesProvider;
         $this->arrayUtils = $arrayUtils;
-        $this->frameworksVendorToName = $frameworksVendorToName;
         $this->packageDataFactory = $packageDataFactory;
     }
 
-    public function createVendorData(): array
+    /**
+     * @param string[] $frameworksVendorToName
+     */
+    public function createVendorData(array $frameworksVendorToName): array
     {
         $vendorData = [];
 
-        foreach ($this->frameworksVendorToName as $vendorName => $frameworkName) {
+        foreach ($frameworksVendorToName as $vendorName => $frameworkName) {
             $this->symfonyStyle->title(sprintf('Loading data for "%s" vendor', $vendorName));
 
             $vendorPackageNames = $this->vendorPackagesProvider->provideForVendor($vendorName);

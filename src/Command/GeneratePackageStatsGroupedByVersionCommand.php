@@ -40,6 +40,9 @@ final class GeneratePackageStatsGroupedByVersionCommand extends Command
      */
     private $vendorPackagesProvider;
 
+    /**
+     * @param string[] $frameworksVendorToName
+     */
     public function __construct(
         SymfonyStyle $symfonyStyle,
         GeneratedFilesDumper $generatedFilesDumper,
