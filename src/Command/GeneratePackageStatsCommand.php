@@ -41,6 +41,9 @@ final class GeneratePackageStatsCommand extends Command
         'symfony/webpack-encore-pack',
     ];
 
+    /**
+     * @var string[]
+     */
     private $frameworksToVendorName = [];
 
     /**
@@ -74,7 +77,7 @@ final class GeneratePackageStatsCommand extends Command
     private $statistics;
 
     /**
-     * @param string[] $frameworksToVendorName
+     * @param string[] $frameworksVendorToName
      */
     public function __construct(
         SymfonyStyle $symfonyStyle,
@@ -83,7 +86,7 @@ final class GeneratePackageStatsCommand extends Command
         VendorPackagesProvider $vendorPackagesProvider,
         ArrayUtils $arrayUtils,
         Statistics $statistics,
-        array $frameworksToVendorName
+        array $frameworksVendorToName
     ) {
         parent::__construct();
         $this->symfonyStyle = $symfonyStyle;
@@ -92,7 +95,7 @@ final class GeneratePackageStatsCommand extends Command
         $this->vendorPackagesProvider = $vendorPackagesProvider;
         $this->arrayUtils = $arrayUtils;
         $this->statistics = $statistics;
-        $this->frameworksToVendorName = $frameworksToVendorName;
+        $this->frameworksVendorToName = $frameworksVendorToName;
     }
 
     protected function configure(): void
@@ -117,7 +120,7 @@ final class GeneratePackageStatsCommand extends Command
     {
         $vendorData = [];
 
-        foreach ($this->frameworksToVendorName as $vendorName => $frameworkName) {
+        foreach ($this->frameworksVendorToName as $vendorName => $frameworkName) {
             $this->symfonyStyle->title(sprintf('Loading data for "%s" vendor', $vendorName));
 
             $vendorPackageNames = $this->vendorPackagesProvider->provideForVendor($vendorName);
