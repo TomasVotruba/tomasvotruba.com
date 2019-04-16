@@ -11,12 +11,12 @@ final class MinorPackageVersionsDownloadsProvider
     /**
      * @var string
      */
-    private const URL_PACKAGE_STATS = 'https://packagist.org/packages/%s/downloads.json';
+    public const DOWNLOADS_MINOR = 'downloads_minor';
 
     /**
      * @var string
      */
-    private const DOWNLOADS_MINOR = 'downloads_minor';
+    private const URL_PACKAGE_STATS = 'https://packagist.org/packages/%s/downloads.json';
 
     /**
      * @var FileToJsonLoader

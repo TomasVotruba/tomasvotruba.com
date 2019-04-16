@@ -60,9 +60,9 @@ final class PackageDataGroupedByVersionFactory
 
     private function resolveAdoptionRate(array $packageDownloads): float
     {
-        $downloadsTotal = array_sum($packageDownloads['downloads_minor']);
+        $downloadsTotal = array_sum($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR]);
 
-        $lastVersionDownloads = array_shift($packageDownloads['downloads_minor']);
+        $lastVersionDownloads = array_shift($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR]);
         $adoption_rate = $lastVersionDownloads / $downloadsTotal * 100;
 
         return (float) round($adoption_rate, 1);
