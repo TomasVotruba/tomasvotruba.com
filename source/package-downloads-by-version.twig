@@ -1,6 +1,6 @@
 ---
 layout: "_layouts/default.twig"
-title: "PHP Framework Trends - Downloads by Version"
+title: "Package Monthly Downloads by Version"
 ---
 
 {% macro number(value) %}
@@ -38,16 +38,19 @@ title: "PHP Framework Trends - Downloads by Version"
                     <th colspan="2" class="text-center bg-primary text-white">{{ package_data.package_name }}</th>
                 </tr>
 
-                <tr>
-                    <th colspan="2" class="bg-primary text-white">Grouped by major version</th>
-                </tr>
-
-                {% for version, number in package_data.downloads_major %}
+                {# is major different from minor? #}
+                {% if package_data.downloads_minor|length > package_data.downloads_major|length %}
                     <tr>
-                        <td class="w-50">{{ version }}</td>
-                        <td class="w-50 text-right">{{ macros.number(number) }}</td>
+                        <th colspan="2" class="bg-primary text-white">Grouped by major version</th>
                     </tr>
-                {% endfor %}
+
+                    {% for version, number in package_data.downloads_major %}
+                        <tr>
+                            <td class="w-50">{{ version }}</td>
+                            <td class="w-50 text-right">{{ macros.number(number) }}</td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
 
                 <tr>
                     <th colspan="2" class="bg-primary text-white">
@@ -63,5 +66,17 @@ title: "PHP Framework Trends - Downloads by Version"
                 {% endfor %}
             {% endfor %}
         </table>
+
+        <h2>Methodology</h2>
+
+        <p>
+            Data are provided by packagist API from monthly average downloads, e.g. <a href="https://packagist.org/packages/rector/rector/downloads.json">https://packagist.org/packages/rector/rector/downloads.json</a>
+        </p>
+
+        <ul>
+            <li>package with less 500 downloads a day are excluded</li>
+            <li>dev, RC, alpha, beta... packages are released, only valid semver tags are used</li>
+        </ul>
+
     {% endfor %}
 </div>

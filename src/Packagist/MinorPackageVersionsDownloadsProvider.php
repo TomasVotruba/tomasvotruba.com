@@ -47,7 +47,7 @@ final class MinorPackageVersionsDownloadsProvider
             $monthlyDownloads = $downloads['monthly'];
 
             // too small to notice
-            if ($monthlyDownloads < 1000) {
+            if ($monthlyDownloads < 500) {
                 continue;
             }
 
