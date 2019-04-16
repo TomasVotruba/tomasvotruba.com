@@ -21,7 +21,11 @@ id: trends
 {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
 {% import _self as macros %}
 
-<div class="container-fluid" id="blog">
+<div class="container-fluid">
+    <div class="alert alert-sm alert-info mt-3">
+        Looking for <a href="/package-downloads-by-version/">Package downloads by version?</a>
+    </div>
+
     <h1>{{ title }}</h1>
 
     <p>
@@ -126,7 +130,7 @@ id: trends
             </ul>
         </li>
         <li>packages with <strong>history shorter than 12 months</strong> - they created extreme trends</li>
-        <li>packages with <strong>year trend bigger than 300 %</strong> - they're caused by "hype" effect, that distorted average vendor trend</li>
+        <li>packages with <strong>year trend bigger than 300 %</strong> - they're caused either by "hype" effect, that distorted average vendor trend, or by new interdependency</li>
         <li><code>phpstan/phpstan</code> and <code>friendsofphp/php-cs-fixer</code> downloads are cleaned from statistics to prevent miss-leading numbers</li>
     </ul>
 

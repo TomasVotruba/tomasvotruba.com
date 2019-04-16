@@ -17,3 +17,9 @@ parameters:
 
         # mocks
         - '#Call to an undefined method PHPUnit\\Framework\\MockObject\\MockObject\|TomasVotruba\\Website\\Posts\\Year2019\\(.*?)\\FinalClass\:\:(.*?)\(\)#'
+
+        # false positive
+        - '#Method TomasVotruba\\Website\\Packagist\\MinorPackageVersionsDownloadsProvider\:\:provideForPackage\(\) should return array<int\> but returns array<string, array<string, mixed\>\>#'
+
+        # isset false positive
+        - "#Offset 'downloads_(major|minor)' (.*?)#"

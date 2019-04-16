@@ -1,0 +1,19 @@
+parameters:
+    # used by https://www.tomasvotruba.cz/php-framework-trends/
+    frameworks_vendor_to_name:
+        nette: Nette
+        symfony: Symfony
+        # includes also laravel/framework
+        illuminate: Laravel
+        cakephp: CakePHP
+        # single monorepos
+        zendframework: Zend
+        yiisoft: Yii
+        # microframeworks
+        slim: Slim
+        silex: Silex
+
+        # didn't pass the 1000 daily downloads minimal entrance
+        # codeigniter: Code Igniter (900)
+        # fuel: FuelPHP (618)
+        # phalcon: Phalcon (15)

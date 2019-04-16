@@ -4,9 +4,15 @@ namespace TomasVotruba\Website;
 
 final class ArrayUtils
 {
-    /**
-     * @param mixed[] $packagesData
-     */
+    public function sortDataByKey(array $data, string $key): array
+    {
+        usort($data, function (array $firstItem, array $secondItem) use ($key) {
+            return $secondItem[$key] <=> $firstItem[$key];
+        });
+
+        return $data;
+    }
+
     public function getArrayKeyAverage(array $packagesData, string $key): float
     {
         $total = [];
@@ -19,9 +25,6 @@ final class ArrayUtils
         return round($average, 2);
     }
 
-    /**
-     * @param mixed[] $array
-     */
     public function getArrayKeySum(array $array, string $key): int
     {
         $total = 0;
