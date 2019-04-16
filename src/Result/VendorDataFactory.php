@@ -3,12 +3,9 @@
 namespace TomasVotruba\Website\Result;
 
 use Nette\Utils\DateTime;
-use Nette\Utils\Strings;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\Website\ArrayUtils;
-use TomasVotruba\Website\Packagist\PackageMonthlyDownloadsProvider;
 use TomasVotruba\Website\Packagist\VendorPackagesProvider;
-use TomasVotruba\Website\Statistics;
 
 final class VendorDataFactory
 {
@@ -23,11 +20,6 @@ final class VendorDataFactory
     private $symfonyStyle;
 
     /**
-     * @var PackageMonthlyDownloadsProvider
-     */
-    private $packageMonthlyDownloadsProvider;
-
-    /**
      * @var VendorPackagesProvider
      */
     private $vendorPackagesProvider;
@@ -38,27 +30,25 @@ final class VendorDataFactory
     private $arrayUtils;
 
     /**
-     * @var Statistics
+     * @var PackageDataFactory
      */
-    private $statistics;
+    private $packageDataFactory;
 
     /**
      * @param string[] $frameworksVendorToName
      */
     public function __construct(
         SymfonyStyle $symfonyStyle,
-        PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
         VendorPackagesProvider $vendorPackagesProvider,
         ArrayUtils $arrayUtils,
-        Statistics $statistics,
+        PackageDataFactory $packageDataFactory,
         array $frameworksVendorToName
     ) {
         $this->symfonyStyle = $symfonyStyle;
-        $this->packageMonthlyDownloadsProvider = $packageMonthlyDownloadsProvider;
         $this->vendorPackagesProvider = $vendorPackagesProvider;
         $this->arrayUtils = $arrayUtils;
-        $this->statistics = $statistics;
         $this->frameworksVendorToName = $frameworksVendorToName;
+        $this->packageDataFactory = $packageDataFactory;
     }
 
     public function createVendorData(): array
@@ -69,7 +59,7 @@ final class VendorDataFactory
             $this->symfonyStyle->title(sprintf('Loading data for "%s" vendor', $vendorName));
 
             $vendorPackageNames = $this->vendorPackagesProvider->provideForVendor($vendorName);
-            $packagesData = $this->createPackagesData($vendorPackageNames);
+            $packagesData = $this->packageDataFactory->createPackagesData($vendorPackageNames);
 
             $vendorTotalLastMonth = $this->arrayUtils->getArrayKeySum(
                 $packagesData,
@@ -96,58 +86,5 @@ final class VendorDataFactory
         $data['updated_at'] = (new DateTime())->format('Y-m-d H:i:s');
 
         return $data;
-    }
-
-    private function createPackagesData(array $packageNames): array
-    {
-        $packagesData = [];
-
-        foreach ($packageNames as $packageName) {
-            $monthlyDownloads = $this->packageMonthlyDownloadsProvider->provideForPackage($packageName);
-
-            // no data
-            if (! isset($monthlyDownloads[0])) {
-                continue;
-            }
-
-            $lastMonthDailyDownloads = $monthlyDownloads[0];
-
-            // too small package → skip it
-            if ($lastMonthDailyDownloads <= 1000) {
-                continue;
-            }
-
-            // package younger than 12 months → skip it
-            if (! isset($monthlyDownloads[11])) {
-                continue;
-            }
-
-            $lastYearTrend = $this->statistics->resolveTrend($monthlyDownloads, 12);
-            if ($lastYearTrend === null) {
-                continue;
-            }
-
-            // too fresh package → skip it
-            if ($lastYearTrend > 300) {
-                continue;
-            }
-
-            $packageData = [
-                'package_name' => $packageName,
-                'last_month_average_daily_downloads' => $lastMonthDailyDownloads,
-                'last_year_trend' => $lastYearTrend,
-                'last_year_total' => $this->statistics->resolveTotal($monthlyDownloads, 12),
-            ];
-
-            $packageKey = $this->createPackageKey($packageName);
-            $packagesData[$packageKey] = $packageData;
-        }
-
-        return $this->arrayUtils->sortDataByKey($packagesData, 'last_year_trend');
-    }
-
-    private function createPackageKey(string $packageName): string
-    {
-        return Strings::replace($packageName, '#(/|-)#', '_');
     }
 }
