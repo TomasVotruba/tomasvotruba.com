@@ -1,4 +1,4 @@
-# this file was generated on 2019-04-16 23:48:04, do not edit it manually
+# this file was generated on 2019-04-17 00:02:34, do not edit it manually
 parameters:
     vendor_packages_by_version:
         vendors:
@@ -6,11 +6,11 @@ parameters:
                 packages_data:
                     cakephp_acl:
                         downloads_minor:
-                            v0.4: 1745
+                            v0.4: 1746
                             v0.3: 581
                             v0.2: 990
                         downloads_major:
-                            v0: 3316
+                            v0: 3317
                         adoption_rate: 52.6
                         package_name: cakephp/acl
                         version_publish_dates:
@@ -68,10 +68,10 @@ parameters:
                             v1.9: '2018-12-01'
                     cakephp_cache:
                         downloads_minor:
-                            v3.7: 66801
-                            v3.6: 13092
+                            v3.7: 66845
+                            v3.6: 13112
                         downloads_major:
-                            v3: 79893
+                            v3: 79957
                         adoption_rate: 83.6
                         package_name: cakephp/cache
                         version_publish_dates:
@@ -155,10 +155,10 @@ parameters:
                             v1.2: '2018-06-21'
                     cakephp_collection:
                         downloads_minor:
-                            v3.7: 67114
-                            v3.6: 13086
+                            v3.7: 67158
+                            v3.6: 13107
                         downloads_major:
-                            v3: 80200
+                            v3: 80265
                         adoption_rate: 83.7
                         package_name: cakephp/collection
                         version_publish_dates:
@@ -206,10 +206,10 @@ parameters:
                             v3.7: '2018-11-01'
                     cakephp_datasource:
                         downloads_minor:
-                            v3.7: 66864
-                            v3.6: 13086
+                            v3.7: 66910
+                            v3.6: 13106
                         downloads_major:
-                            v3: 79950
+                            v3: 80016
                         adoption_rate: 83.6
                         package_name: cakephp/datasource
                         version_publish_dates:
@@ -282,14 +282,14 @@ parameters:
                             v3.5: '2018-05-09'
                     cakephp_migrations:
                         downloads_minor:
-                            v2.1: 30940
-                            v2.0: 3580
-                            v1.8: 15682
-                            v1.7: 21034
-                            v1.6: 3840
+                            v2.1: 30977
+                            v2.0: 3582
+                            v1.8: 15699
+                            v1.7: 21071
+                            v1.6: 3842
                         downloads_major:
-                            v2: 34520
-                            v1: 40556
+                            v2: 34559
+                            v1: 40612
                         adoption_rate: 41.2
                         package_name: cakephp/migrations
                         version_publish_dates:
@@ -303,12 +303,12 @@ parameters:
                             v2.1: '2018-12-25'
                     cakephp_plugin_installer:
                         downloads_minor:
-                            v1.1: 65047
-                            v1.0: 6531
-                            v0.0: 3710
+                            v1.1: 65126
+                            v1.0: 6546
+                            v0.0: 3711
                         downloads_major:
-                            v1: 71578
-                            v0: 3710
+                            v1: 71672
+                            v0: 3711
                         adoption_rate: 86.4
                         package_name: cakephp/plugin-installer
                         version_publish_dates:
@@ -316,10 +316,10 @@ parameters:
                             v1.1: '2017-12-24'
                     cakephp_utility:
                         downloads_minor:
-                            v3.7: 75668
-                            v3.6: 14341
+                            v3.7: 75760
+                            v3.6: 14364
                         downloads_major:
-                            v3: 90009
+                            v3: 90124
                         adoption_rate: 84.1
                         package_name: cakephp/utility
                         version_publish_dates:
@@ -385,17 +385,17 @@ parameters:
                             v5.8: '2019-02-25'
                     illuminate_bus:
                         downloads_minor:
-                            v5.8: 34341
-                            v5.7: 50498
-                            v5.6: 29883
-                            v5.5: 29077
-                            v5.4: 14760
-                            v5.3: 7226
-                            v5.2: 7302
-                            v5.1: 3415
+                            v5.8: 34357
+                            v5.7: 50619
+                            v5.6: 29919
+                            v5.5: 29134
+                            v5.4: 14772
+                            v5.3: 7245
+                            v5.2: 7312
+                            v5.1: 3438
                         downloads_major:
-                            v5: 176502
-                        adoption_rate: 19.5
+                            v5: 176796
+                        adoption_rate: 19.4
                         package_name: illuminate/bus
                         version_publish_dates:
                             v5.0: '2015-01-29'
@@ -408,19 +408,19 @@ parameters:
                             v5.8: '2019-02-18'
                     illuminate_cache:
                         downloads_minor:
-                            v5.8: 37449
-                            v5.7: 49721
-                            v5.6: 34842
-                            v5.5: 31734
-                            v5.4: 17183
-                            v5.3: 7495
-                            v5.2: 8449
-                            v5.1: 3258
-                            v4.2: 1249
+                            v5.8: 37467
+                            v5.7: 49843
+                            v5.6: 34878
+                            v5.5: 31788
+                            v5.4: 17196
+                            v5.3: 7522
+                            v5.2: 8459
+                            v5.1: 3282
+                            v4.2: 1250
                         downloads_major:
-                            v5: 190131
-                            v4: 1249
-                        adoption_rate: 19.6
+                            v5: 190435
+                            v4: 1250
+                        adoption_rate: 19.5
                         package_name: illuminate/cache
                         version_publish_dates:
                             v1.0: '2012-05-11'
@@ -437,18 +437,18 @@ parameters:
                             v5.8: '2019-02-18'
                     illuminate_config:
                         downloads_minor:
-                            v5.8: 49227
-                            v5.7: 57377
-                            v5.6: 54150
-                            v5.5: 36107
-                            v5.4: 19458
-                            v5.3: 7135
-                            v5.2: 10221
-                            v5.1: 3402
-                            v4.2: 1844
+                            v5.8: 49240
+                            v5.7: 57448
+                            v5.6: 54179
+                            v5.5: 36139
+                            v5.4: 19472
+                            v5.3: 7144
+                            v5.2: 10228
+                            v5.1: 3414
+                            v4.2: 1845
                         downloads_major:
-                            v5: 237077
-                            v4: 1844
+                            v5: 237264
+                            v4: 1845
                         adoption_rate: 20.6
                         package_name: illuminate/config
                         version_publish_dates:
@@ -495,21 +495,21 @@ parameters:
                             v5.8: '2019-02-21'
                     illuminate_container:
                         downloads_minor:
-                            v5.8: 95759
-                            v5.7: 93945
-                            v5.6: 66446
-                            v5.5: 59139
-                            v5.4: 45227
-                            v5.3: 15384
-                            v5.2: 20071
-                            v5.1: 8721
+                            v5.8: 95806
+                            v5.7: 93976
+                            v5.6: 66467
+                            v5.5: 59155
+                            v5.4: 45252
+                            v5.3: 15394
+                            v5.2: 20080
+                            v5.1: 8729
                             v5.0: 3519
-                            v4.2: 8454
+                            v4.2: 8458
                             v4.1: 5897
                             v4.0: 780
                         downloads_major:
-                            v5: 408211
-                            v4: 15131
+                            v5: 408378
+                            v4: 15135
                         adoption_rate: 22.6
                         package_name: illuminate/container
                         version_publish_dates:
@@ -527,17 +527,17 @@ parameters:
                             v5.8: '2019-02-23'
                     illuminate_contracts:
                         downloads_minor:
-                            v5.8: 154861
-                            v5.7: 108764
-                            v5.6: 73120
-                            v5.5: 77530
-                            v5.4: 56183
-                            v5.3: 17181
-                            v5.2: 26578
-                            v5.1: 9474
-                            v5.0: 5289
+                            v5.8: 155159
+                            v5.7: 108950
+                            v5.6: 73212
+                            v5.5: 77632
+                            v5.4: 56285
+                            v5.3: 17239
+                            v5.2: 26639
+                            v5.1: 9511
+                            v5.0: 5295
                         downloads_major:
-                            v5: 528980
+                            v5: 529922
                         adoption_rate: 29.3
                         package_name: illuminate/contracts
                         version_publish_dates:
@@ -672,20 +672,20 @@ parameters:
                             v5.8: '2019-02-18'
                     illuminate_filesystem:
                         downloads_minor:
-                            v5.8: 58291
-                            v5.7: 63100
-                            v5.6: 60054
-                            v5.5: 43584
-                            v5.4: 31005
-                            v5.3: 7758
-                            v5.2: 14197
-                            v5.1: 4765
-                            v5.0: 646
-                            v4.2: 5882
+                            v5.8: 58362
+                            v5.7: 63180
+                            v5.6: 60112
+                            v5.5: 43634
+                            v5.4: 31030
+                            v5.3: 7778
+                            v5.2: 14224
+                            v5.1: 4786
+                            v5.0: 649
+                            v4.2: 5884
                         downloads_major:
-                            v5: 283400
-                            v4: 5882
-                        adoption_rate: 20.2
+                            v5: 283755
+                            v4: 5884
+                        adoption_rate: 20.1
                         package_name: illuminate/filesystem
                         version_publish_dates:
                             v1.0: '2012-05-15'
@@ -733,18 +733,18 @@ parameters:
                             v5.8: '2019-02-18'
                     illuminate_http:
                         downloads_minor:
-                            v5.8: 40589
-                            v5.7: 49188
-                            v5.6: 29839
-                            v5.5: 27570
-                            v5.4: 18580
-                            v5.3: 6980
-                            v5.2: 8622
-                            v5.1: 4758
-                            v4.2: 1019
+                            v5.8: 40595
+                            v5.7: 49255
+                            v5.6: 29852
+                            v5.5: 27593
+                            v5.4: 18591
+                            v5.3: 6989
+                            v5.2: 8628
+                            v5.1: 4761
+                            v4.2: 1020
                         downloads_major:
-                            v5: 186126
-                            v4: 1019
+                            v5: 186264
+                            v4: 1020
                         adoption_rate: 21.7
                         package_name: illuminate/http
                         version_publish_dates:
@@ -761,14 +761,14 @@ parameters:
                             v5.8: '2019-02-25'
                     illuminate_log:
                         downloads_minor:
-                            v5.8: 33858
-                            v5.7: 45932
-                            v5.6: 31295
+                            v5.8: 33859
+                            v5.7: 45947
+                            v5.6: 31304
                             v5.5: 1360
                             v5.4: 1353
                             v4.2: 1851
                         downloads_major:
-                            v5: 113798
+                            v5: 113823
                             v4: 1851
                         adoption_rate: 29.3
                         package_name: illuminate/log
@@ -815,12 +815,12 @@ parameters:
                     illuminate_notifications:
                         downloads_minor:
                             v5.8: 2174
-                            v5.7: 5479
+                            v5.7: 5482
                             v5.6: 3398
                             v5.5: 1546
                             v5.4: 734
                         downloads_major:
-                            v5: 13331
+                            v5: 13334
                         adoption_rate: 16.3
                         package_name: illuminate/notifications
                         version_publish_dates:
@@ -832,17 +832,17 @@ parameters:
                             v5.8: '2019-02-18'
                     illuminate_pagination:
                         downloads_minor:
-                            v5.8: 37955
-                            v5.7: 46558
-                            v5.6: 30861
-                            v5.5: 28014
-                            v5.4: 17758
-                            v5.3: 9773
-                            v5.2: 8963
+                            v5.8: 37950
+                            v5.7: 46545
+                            v5.6: 30856
+                            v5.5: 28008
+                            v5.4: 17756
+                            v5.3: 9762
+                            v5.2: 8962
                             v5.1: 3225
                             v5.0: 833
                         downloads_major:
-                            v5: 183940
+                            v5: 183897
                         adoption_rate: 20.6
                         package_name: illuminate/pagination
                         version_publish_dates:
@@ -1027,17 +1027,17 @@ parameters:
                             v5.8: '2019-02-23'
                     illuminate_translation:
                         downloads_minor:
-                            v5.8: 37360
-                            v5.7: 48700
-                            v5.6: 30791
-                            v5.5: 32288
-                            v5.4: 17406
-                            v5.3: 6992
-                            v5.2: 7871
-                            v5.1: 3033
+                            v5.8: 37366
+                            v5.7: 48731
+                            v5.6: 30797
+                            v5.5: 32303
+                            v5.4: 17411
+                            v5.3: 6999
+                            v5.2: 7874
+                            v5.1: 3035
                             v4.2: 595
                         downloads_major:
-                            v5: 184441
+                            v5: 184516
                             v4: 595
                         adoption_rate: 20.2
                         package_name: illuminate/translation
@@ -1056,18 +1056,18 @@ parameters:
                             v5.8: '2019-02-18'
                     illuminate_validation:
                         downloads_minor:
-                            v5.8: 36775
-                            v5.7: 47747
-                            v5.6: 30546
-                            v5.5: 32029
-                            v5.4: 17000
-                            v5.3: 7075
-                            v5.2: 8627
-                            v5.1: 3320
+                            v5.8: 36780
+                            v5.7: 47778
+                            v5.6: 30552
+                            v5.5: 32044
+                            v5.4: 17005
+                            v5.3: 7082
+                            v5.2: 8630
+                            v5.1: 3325
                             v4.2: 761
                             v4.1: 531
                         downloads_major:
-                            v5: 183119
+                            v5: 183196
                             v4: 1292
                         adoption_rate: 19.9
                         package_name: illuminate/validation
@@ -1086,18 +1086,18 @@ parameters:
                             v5.8: '2019-02-18'
                     illuminate_view:
                         downloads_minor:
-                            v5.8: 43309
-                            v5.7: 50270
-                            v5.6: 52575
-                            v5.5: 33596
-                            v5.4: 21487
-                            v5.3: 7143
-                            v5.2: 8686
-                            v5.1: 5098
-                            v4.2: 4373
+                            v5.8: 43314
+                            v5.7: 50300
+                            v5.6: 52589
+                            v5.5: 33611
+                            v5.4: 21493
+                            v5.3: 7149
+                            v5.2: 8693
+                            v5.1: 5103
+                            v4.2: 4382
                         downloads_major:
-                            v5: 222164
-                            v4: 4373
+                            v5: 222252
+                            v4: 4382
                         adoption_rate: 19.1
                         package_name: illuminate/view
                         version_publish_dates:
@@ -1115,20 +1115,20 @@ parameters:
                             v5.8: '2019-02-23'
                     laravel_framework:
                         downloads_minor:
-                            v5.8: 616459
-                            v5.7: 539150
-                            v5.6: 242675
-                            v5.5: 319409
-                            v5.4: 146445
-                            v5.3: 60250
-                            v5.2: 68733
-                            v5.1: 49488
-                            v5.0: 5764
-                            v4.2: 30641
+                            v5.8: 616849
+                            v5.7: 539391
+                            v5.6: 242767
+                            v5.5: 319539
+                            v5.4: 146512
+                            v5.3: 60287
+                            v5.2: 68769
+                            v5.1: 49516
+                            v5.0: 5770
+                            v4.2: 30657
                             v4.1: 1024
                         downloads_major:
-                            v5: 2048373
-                            v4: 31665
+                            v5: 2049400
+                            v4: 31681
                         adoption_rate: 29.6
                         package_name: laravel/framework
                         version_publish_dates:
@@ -1179,13 +1179,13 @@ parameters:
                             v3.0: '2019-03-26'
                     nette_caching:
                         downloads_minor:
-                            v3.0: 7401
-                            v2.5: 60622
-                            v2.4: 1036
-                            v2.3: 2408
+                            v3.0: 7411
+                            v2.5: 60650
+                            v2.4: 1037
+                            v2.3: 2417
                         downloads_major:
-                            v3: 7401
-                            v2: 64066
+                            v3: 7411
+                            v2: 64104
                         adoption_rate: 10.4
                         package_name: nette/caching
                         version_publish_dates:
@@ -1240,12 +1240,12 @@ parameters:
                             v3.0: '2019-02-10'
                     nette_di:
                         downloads_minor:
-                            v3.0: 58100
-                            v2.4: 360595
-                            v2.3: 2729
+                            v3.0: 58251
+                            v2.4: 360703
+                            v2.3: 2739
                         downloads_major:
-                            v3: 58100
-                            v2: 363324
+                            v3: 58251
+                            v2: 363442
                         adoption_rate: 13.8
                         package_name: nette/di
                         version_publish_dates:
@@ -1299,13 +1299,13 @@ parameters:
                             v3.0: '2019-02-28'
                     nette_mail:
                         downloads_minor:
-                            v3.0: 2269
-                            v2.4: 36175
-                            v2.3: 4819
+                            v3.0: 2276
+                            v2.4: 36193
+                            v2.3: 4829
                         downloads_major:
-                            v3: 2269
-                            v2: 40994
-                        adoption_rate: 5.2
+                            v3: 2276
+                            v2: 41022
+                        adoption_rate: 5.3
                         package_name: nette/mail
                         version_publish_dates:
                             v2.2: '2014-05-11'
@@ -1314,12 +1314,12 @@ parameters:
                             v3.0: '2019-02-20'
                     nette_neon:
                         downloads_minor:
-                            v3.0: 258771
-                            v2.4: 169397
-                            v2.3: 3584
+                            v3.0: 258976
+                            v2.4: 169451
+                            v2.3: 3594
                         downloads_major:
-                            v3: 258771
-                            v2: 172981
+                            v3: 258976
+                            v2: 173045
                         adoption_rate: 59.9
                         package_name: nette/neon
                         version_publish_dates:
@@ -1330,12 +1330,12 @@ parameters:
                     nette_nette:
                         downloads_minor:
                             v2.5: 2039
-                            v2.4: 10243
-                            v2.3: 2413
+                            v2.4: 10245
+                            v2.3: 2422
                             v2.1: 687
                         downloads_major:
-                            v2: 15382
-                        adoption_rate: 13.3
+                            v2: 15393
+                        adoption_rate: 13.2
                         package_name: nette/nette
                         version_publish_dates:
                             v2.1: '2013-12-31'
@@ -1346,15 +1346,15 @@ parameters:
                             v3.0: '2019-02-28'
                     nette_php_generator:
                         downloads_minor:
-                            v3.2: 345310
+                            v3.2: 345617
                             v3.1: 1377
-                            v3.0: 116678
-                            v2.6: 21945
+                            v3.0: 116716
+                            v2.6: 21949
                             v2.5: 643
-                            v2.3: 3174
+                            v2.3: 3184
                         downloads_major:
-                            v3: 463365
-                            v2: 25762
+                            v3: 463710
+                            v2: 25776
                         adoption_rate: 70.6
                         package_name: nette/php-generator
                         version_publish_dates:
@@ -1399,10 +1399,10 @@ parameters:
                             v3.2: '2019-03-08'
                     nette_safe_stream:
                         downloads_minor:
-                            v2.4: 10748
-                            v2.3: 18862
+                            v2.4: 10752
+                            v2.3: 18875
                         downloads_major:
-                            v2: 29610
+                            v2: 29627
                         adoption_rate: 36.3
                         package_name: nette/safe-stream
                         version_publish_dates:
@@ -1411,12 +1411,12 @@ parameters:
                             v2.4: '2019-02-06'
                     nette_security:
                         downloads_minor:
-                            v3.0: 1202
-                            v2.4: 29371
-                            v2.3: 4704
+                            v3.0: 1209
+                            v2.4: 29380
+                            v2.3: 4714
                         downloads_major:
-                            v3: 1202
-                            v2: 34075
+                            v3: 1209
+                            v2: 34094
                         adoption_rate: 3.4
                         package_name: nette/security
                         version_publish_dates:
@@ -1815,25 +1815,25 @@ parameters:
                             v3.4: '2017-11-05'
                     symfony_config:
                         downloads_minor:
-                            v4.2: 871089
-                            v4.1: 121272
-                            v4.0: 18092
-                            v3.4: 618380
-                            v3.3: 58090
-                            v3.2: 79429
-                            v3.1: 6733
-                            v3.0: 1092
-                            v2.8: 107106
-                            v2.7: 7882
-                            v2.6: 5503
-                            v2.5: 1611
+                            v4.2: 871728
+                            v4.1: 121347
+                            v4.0: 18117
+                            v3.4: 619009
+                            v3.3: 58156
+                            v3.2: 79507
+                            v3.1: 6735
+                            v3.0: 1093
+                            v2.8: 107175
+                            v2.7: 7904
+                            v2.6: 5513
+                            v2.5: 1612
                             v2.4: 907
                             v2.3: 1062
                             v2.0: 743
                         downloads_major:
-                            v4: 1010453
-                            v3: 763724
-                            v2: 124814
+                            v4: 1011192
+                            v3: 764500
+                            v2: 124916
                         adoption_rate: 45.9
                         package_name: symfony/config
                         version_publish_dates:
@@ -1934,24 +1934,24 @@ parameters:
                             v4.2: '2018-11-11'
                     symfony_debug:
                         downloads_minor:
-                            v4.2: 2069916
-                            v4.1: 265214
-                            v4.0: 44412
-                            v3.4: 1267895
-                            v3.3: 139117
-                            v3.2: 37323
-                            v3.1: 77161
-                            v3.0: 306100
-                            v2.8: 86320
-                            v2.7: 78904
-                            v2.6: 8992
-                            v2.5: 8037
-                            v2.4: 1264
+                            v4.2: 2068440
+                            v4.1: 265090
+                            v4.0: 44375
+                            v3.4: 1267053
+                            v3.3: 139029
+                            v3.2: 37290
+                            v3.1: 77087
+                            v3.0: 305864
+                            v2.8: 86283
+                            v2.7: 78850
+                            v2.6: 8986
+                            v2.5: 8027
+                            v2.4: 1260
                             v2.3: 931
                         downloads_major:
-                            v4: 2379542
-                            v3: 1827596
-                            v2: 184448
+                            v4: 2377905
+                            v3: 1826323
+                            v2: 184337
                         adoption_rate: 47.1
                         package_name: symfony/debug
                         version_publish_dates:
@@ -1971,14 +1971,14 @@ parameters:
                             v4.2: '2018-11-28'
                     symfony_debug_bundle:
                         downloads_minor:
-                            v4.2: 241555
-                            v4.1: 34041
+                            v4.2: 241424
+                            v4.1: 34024
                             v4.0: 559
-                            v3.4: 22284
+                            v3.4: 22279
                             v2.7: 753
                         downloads_major:
-                            v4: 276155
-                            v3: 22284
+                            v4: 276007
+                            v3: 22279
                             v2: 753
                         adoption_rate: 80.7
                         package_name: symfony/debug-bundle
@@ -2068,24 +2068,24 @@ parameters:
                             v4.2: '2018-11-26'
                     symfony_dom_crawler:
                         downloads_minor:
-                            v4.2: 716500
-                            v4.1: 108762
-                            v4.0: 22276
-                            v3.4: 504622
-                            v3.3: 36484
-                            v3.2: 10766
-                            v3.1: 127733
-                            v3.0: 65788
-                            v2.8: 44941
-                            v2.7: 89259
-                            v2.6: 1751
-                            v2.5: 8961
-                            v2.4: 1445
+                            v4.2: 716022
+                            v4.1: 108719
+                            v4.0: 22263
+                            v3.4: 504248
+                            v3.3: 36462
+                            v3.2: 10754
+                            v3.1: 127622
+                            v3.0: 65750
+                            v2.8: 44922
+                            v2.7: 89200
+                            v2.6: 1749
+                            v2.5: 8949
+                            v2.4: 1441
                             v2.1: 1526
                         downloads_major:
-                            v4: 847538
-                            v3: 745393
-                            v2: 147883
+                            v4: 847004
+                            v3: 744836
+                            v2: 147787
                         adoption_rate: 41.2
                         package_name: symfony/dom-crawler
                         version_publish_dates:
@@ -2107,14 +2107,14 @@ parameters:
                             v4.2: '2018-11-26'
                     symfony_dotenv:
                         downloads_minor:
-                            v4.2: 474032
-                            v4.1: 73128
-                            v4.0: 5644
-                            v3.4: 74506
-                            v3.3: 2422
+                            v4.2: 473775
+                            v4.1: 73091
+                            v4.0: 5642
+                            v3.4: 74477
+                            v3.3: 2421
                         downloads_major:
-                            v4: 552804
-                            v3: 76928
+                            v4: 552508
+                            v3: 76898
                         adoption_rate: 75.3
                         package_name: symfony/dotenv
                         version_publish_dates:
@@ -2288,12 +2288,12 @@ parameters:
                             v1.2: '2019-02-21'
                     symfony_force_lowest:
                         downloads_minor:
-                            v4.2: 1059
+                            v4.2: 1056
                             v3.4: 1428
                         downloads_major:
-                            v4: 1059
+                            v4: 1056
                             v3: 1428
-                        adoption_rate: 42.6
+                        adoption_rate: 42.5
                         package_name: symfony/force-lowest
                         version_publish_dates:
                             v2.8: '2018-03-26'
@@ -2303,22 +2303,22 @@ parameters:
                             v4.2: '2018-05-09'
                     symfony_form:
                         downloads_minor:
-                            v4.2: 334589
-                            v4.1: 52305
+                            v4.2: 334408
+                            v4.1: 52281
                             v4.0: 2643
-                            v3.4: 53588
-                            v3.3: 8056
+                            v3.4: 53570
+                            v3.3: 8053
                             v3.2: 2267
-                            v3.0: 671
-                            v2.8: 60658
-                            v2.7: 2274
-                            v2.6: 1891
-                            v2.5: 729
+                            v3.0: 670
+                            v2.8: 60564
+                            v2.7: 2273
+                            v2.6: 1889
+                            v2.5: 728
                             v2.0: 752
                         downloads_major:
-                            v4: 389537
-                            v3: 64582
-                            v2: 66304
+                            v4: 389332
+                            v3: 64560
+                            v2: 66206
                         adoption_rate: 64.3
                         package_name: symfony/form
                         version_publish_dates:
@@ -2340,21 +2340,21 @@ parameters:
                             v4.2: '2018-11-30'
                     symfony_framework_bundle:
                         downloads_minor:
-                            v4.2: 482612
-                            v4.1: 89899
-                            v4.0: 16024
-                            v3.4: 57596
-                            v3.3: 2306
+                            v4.2: 482368
+                            v4.1: 89859
+                            v4.0: 16021
+                            v3.4: 57562
+                            v3.3: 2305
                             v3.2: 2520
                             v3.1: 2511
-                            v3.0: 2704
+                            v3.0: 2703
                             v2.8: 8195
-                            v2.7: 3282
+                            v2.7: 3281
                             v2.6: 676
                         downloads_major:
-                            v4: 588535
-                            v3: 67637
-                            v2: 12153
+                            v4: 588248
+                            v3: 67601
+                            v2: 12152
                         adoption_rate: 72.2
                         package_name: symfony/framework-bundle
                         version_publish_dates:
@@ -2399,25 +2399,25 @@ parameters:
                             v3.4: '2017-11-30'
                     symfony_http_foundation:
                         downloads_minor:
-                            v4.2: 1950720
-                            v4.1: 236604
-                            v4.0: 39456
-                            v3.4: 1015299
-                            v3.3: 72259
-                            v3.2: 26199
-                            v3.1: 81932
-                            v3.0: 103882
-                            v2.8: 104833
-                            v2.7: 86460
-                            v2.6: 14315
-                            v2.5: 11606
-                            v2.4: 5263
-                            v2.3: 2058
+                            v4.2: 1949343
+                            v4.1: 236486
+                            v4.0: 39398
+                            v3.4: 1014577
+                            v3.3: 72206
+                            v3.2: 26181
+                            v3.1: 81857
+                            v3.0: 103820
+                            v2.8: 104711
+                            v2.7: 86401
+                            v2.6: 14310
+                            v2.5: 11593
+                            v2.4: 5235
+                            v2.3: 2055
                             v2.0: 708
                         downloads_major:
-                            v4: 2226780
-                            v3: 1299571
-                            v2: 225243
+                            v4: 2225227
+                            v3: 1298641
+                            v2: 225013
                         adoption_rate: !!float 52
                         package_name: symfony/http-foundation
                         version_publish_dates:
@@ -2439,24 +2439,24 @@ parameters:
                             v4.2: '2018-11-26'
                     symfony_http_kernel:
                         downloads_minor:
-                            v4.2: 1831799
-                            v4.1: 233152
-                            v4.0: 45646
-                            v3.4: 892702
-                            v3.3: 65804
-                            v3.2: 33154
-                            v3.1: 72066
-                            v3.0: 106991
-                            v2.8: 36398
-                            v2.7: 83745
-                            v2.6: 12133
-                            v2.5: 10403
-                            v2.4: 2027
-                            v2.3: 1848
+                            v4.2: 1830511
+                            v4.1: 233036
+                            v4.0: 45605
+                            v3.4: 892087
+                            v3.3: 65769
+                            v3.2: 33140
+                            v3.1: 71993
+                            v3.0: 106933
+                            v2.8: 36385
+                            v2.7: 83693
+                            v2.6: 12126
+                            v2.5: 10390
+                            v2.4: 2023
+                            v2.3: 1845
                         downloads_major:
-                            v4: 2110597
-                            v3: 1170717
-                            v2: 146554
+                            v4: 2109152
+                            v3: 1169922
+                            v2: 146462
                         adoption_rate: 53.4
                         package_name: symfony/http-kernel
                         version_publish_dates:
@@ -2478,11 +2478,11 @@ parameters:
                             v4.2: '2018-11-30'
                     symfony_icu:
                         downloads_minor:
-                            v1.2: 5121
-                            v1.1: 6441
-                            v1.0: 10888
+                            v1.2: 5117
+                            v1.1: 6437
+                            v1.0: 10878
                         downloads_major:
-                            v1: 22450
+                            v1: 22432
                         adoption_rate: 22.8
                         package_name: symfony/icu
                         version_publish_dates:
@@ -2513,22 +2513,22 @@ parameters:
                             v4.2: '2018-11-11'
                     symfony_intl:
                         downloads_minor:
-                            v4.2: 411473
-                            v4.1: 59197
+                            v4.2: 411248
+                            v4.1: 59166
                             v4.0: 3897
-                            v3.4: 60209
-                            v3.3: 4454
-                            v3.2: 54132
+                            v3.4: 60193
+                            v3.3: 4453
+                            v3.2: 54039
                             v3.1: 850
                             v3.0: 2227
-                            v2.8: 11580
+                            v2.8: 11575
                             v2.7: 1280
                             v2.6: 679
-                            v2.5: 1851
+                            v2.5: 1849
                         downloads_major:
-                            v4: 474567
-                            v3: 121872
-                            v2: 15390
+                            v4: 474311
+                            v3: 121762
+                            v2: 15383
                         adoption_rate: 67.3
                         package_name: symfony/intl
                         version_publish_dates:
@@ -2645,20 +2645,20 @@ parameters:
                             v4.2: '2018-11-20'
                     symfony_monolog_bridge:
                         downloads_minor:
-                            v4.2: 414079
-                            v4.1: 64029
+                            v4.2: 413890
+                            v4.1: 63999
                             v4.0: 3863
-                            v3.4: 36198
+                            v3.4: 36179
                             v3.3: 590
-                            v3.2: 4141
-                            v3.0: 1993
-                            v2.8: 7830
+                            v3.2: 4135
+                            v3.0: 1992
+                            v2.8: 7829
                             v2.7: 1972
                             v2.6: 1060
                         downloads_major:
-                            v4: 481971
-                            v3: 42922
-                            v2: 10862
+                            v4: 481752
+                            v3: 42896
+                            v2: 10861
                         adoption_rate: 77.3
                         package_name: symfony/monolog-bridge
                         version_publish_dates:
@@ -2769,19 +2769,19 @@ parameters:
                             v0.3: '2019-02-27'
                     symfony_phpunit_bridge:
                         downloads_minor:
-                            v4.2: 371467
-                            v4.1: 42056
-                            v4.0: 7540
-                            v3.4: 419097
-                            v3.3: 21641
-                            v3.2: 24029
-                            v3.1: 5331
-                            v2.8: 41710
+                            v4.2: 371306
+                            v4.1: 42050
+                            v4.0: 7535
+                            v3.4: 418763
+                            v3.3: 21635
+                            v3.2: 24016
+                            v3.1: 5328
+                            v2.8: 41700
                             v2.7: 525
                         downloads_major:
-                            v4: 421063
-                            v3: 470098
-                            v2: 42235
+                            v4: 420891
+                            v3: 469742
+                            v2: 42225
                         adoption_rate: 39.8
                         package_name: symfony/phpunit-bridge
                         version_publish_dates:
@@ -2853,12 +2853,12 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_ctype:
                         downloads_minor:
-                            v1.11: 2376735
-                            v1.10: 2304391
-                            v1.9: 337603
-                            v1.8: 216112
+                            v1.11: 2374707
+                            v1.10: 2303416
+                            v1.9: 337424
+                            v1.8: 216000
                         downloads_major:
-                            v1: 5234841
+                            v1: 5231547
                         adoption_rate: 45.4
                         package_name: symfony/polyfill-ctype
                         version_publish_dates:
@@ -2899,11 +2899,11 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_intl_grapheme:
                         downloads_minor:
-                            v1.11: 5919
-                            v1.10: 10268
+                            v1.11: 5916
+                            v1.10: 10261
                             v1.9: 757
                         downloads_major:
-                            v1: 16944
+                            v1: 16934
                         adoption_rate: 34.9
                         package_name: symfony/polyfill-intl-grapheme
                         version_publish_dates:
@@ -2921,20 +2921,20 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_intl_icu:
                         downloads_minor:
-                            v1.11: 373600
-                            v1.10: 603358
-                            v1.9: 80503
-                            v1.8: 63658
-                            v1.7: 39218
-                            v1.6: 40647
-                            v1.5: 16374
-                            v1.4: 14483
-                            v1.3: 31746
-                            v1.2: 13804
-                            v1.1: 6350
-                            v1.0: 2668
+                            v1.11: 373261
+                            v1.10: 603130
+                            v1.9: 80476
+                            v1.8: 63636
+                            v1.7: 39187
+                            v1.6: 40639
+                            v1.5: 16368
+                            v1.4: 14478
+                            v1.3: 31722
+                            v1.2: 13793
+                            v1.1: 6349
+                            v1.0: 2665
                         downloads_major:
-                            v1: 1286409
+                            v1: 1285704
                         adoption_rate: !!float 29
                         package_name: symfony/polyfill-intl-icu
                         version_publish_dates:
@@ -2964,10 +2964,10 @@ parameters:
                     symfony_polyfill_intl_normalizer:
                         downloads_minor:
                             v1.11: 5688
-                            v1.10: 11011
+                            v1.10: 11004
                             v1.9: 819
                         downloads_major:
-                            v1: 17518
+                            v1: 17511
                         adoption_rate: 32.5
                         package_name: symfony/polyfill-intl-normalizer
                         version_publish_dates:
@@ -2985,20 +2985,20 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_mbstring:
                         downloads_minor:
-                            v1.11: 2311384
-                            v1.10: 2311797
-                            v1.9: 330420
-                            v1.8: 237450
-                            v1.7: 166352
-                            v1.6: 128292
-                            v1.5: 61294
-                            v1.4: 49291
-                            v1.3: 114160
-                            v1.2: 59896
-                            v1.1: 19801
-                            v1.0: 3969
+                            v1.11: 2306724
+                            v1.10: 2309936
+                            v1.9: 330046
+                            v1.8: 237191
+                            v1.7: 166148
+                            v1.6: 128095
+                            v1.5: 61213
+                            v1.4: 49235
+                            v1.3: 113926
+                            v1.2: 59771
+                            v1.1: 19782
+                            v1.0: 3962
                         downloads_major:
-                            v1: 5794106
+                            v1: 5786029
                         adoption_rate: 39.9
                         package_name: symfony/polyfill-mbstring
                         version_publish_dates:
@@ -3047,20 +3047,20 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_php55:
                         downloads_minor:
-                            v1.11: 81622
-                            v1.10: 171901
-                            v1.9: 26774
-                            v1.8: 22777
-                            v1.7: 18728
-                            v1.6: 21262
-                            v1.5: 7839
-                            v1.4: 7615
-                            v1.3: 25164
-                            v1.2: 13280
-                            v1.1: 8753
-                            v1.0: 1859
+                            v1.11: 81576
+                            v1.10: 171765
+                            v1.9: 26769
+                            v1.8: 22761
+                            v1.7: 18720
+                            v1.6: 21259
+                            v1.5: 7834
+                            v1.4: 7610
+                            v1.3: 25148
+                            v1.2: 13276
+                            v1.1: 8746
+                            v1.0: 1856
                         downloads_major:
-                            v1: 407574
+                            v1: 407320
                         adoption_rate: !!float 20
                         package_name: symfony/polyfill-php55
                         version_publish_dates:
@@ -3078,20 +3078,20 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_php56:
                         downloads_minor:
-                            v1.11: 525706
-                            v1.10: 692503
-                            v1.9: 120254
-                            v1.8: 98830
-                            v1.7: 63483
-                            v1.6: 66216
-                            v1.5: 33446
-                            v1.4: 27390
-                            v1.3: 52078
-                            v1.2: 25833
-                            v1.1: 12851
-                            v1.0: 3932
+                            v1.11: 524564
+                            v1.10: 691965
+                            v1.9: 120117
+                            v1.8: 98761
+                            v1.7: 63399
+                            v1.6: 66117
+                            v1.5: 33406
+                            v1.4: 27361
+                            v1.3: 51999
+                            v1.2: 25803
+                            v1.1: 12844
+                            v1.0: 3922
                         downloads_major:
-                            v1: 1722522
+                            v1: 1720258
                         adoption_rate: 30.5
                         package_name: symfony/polyfill-php56
                         version_publish_dates:
@@ -3109,20 +3109,20 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_php70:
                         downloads_minor:
-                            v1.11: 741075
-                            v1.10: 877216
-                            v1.9: 162024
-                            v1.8: 117392
-                            v1.7: 92381
-                            v1.6: 72192
-                            v1.5: 21184
-                            v1.4: 16921
-                            v1.3: 36891
-                            v1.2: 13515
-                            v1.1: 7181
-                            v1.0: 2769
+                            v1.11: 739422
+                            v1.10: 876643
+                            v1.9: 161852
+                            v1.8: 117272
+                            v1.7: 92269
+                            v1.6: 72107
+                            v1.5: 21159
+                            v1.4: 16909
+                            v1.3: 36793
+                            v1.2: 13498
+                            v1.1: 7179
+                            v1.0: 2760
                         downloads_major:
-                            v1: 2160741
+                            v1: 2157863
                         adoption_rate: 34.3
                         package_name: symfony/polyfill-php70
                         version_publish_dates:
@@ -3140,11 +3140,11 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_php71:
                         downloads_minor:
-                            v1.11: 2160
+                            v1.11: 2157
                             v1.10: 3221
                             v1.8: 1220
                         downloads_major:
-                            v1: 6601
+                            v1: 6598
                         adoption_rate: 32.7
                         package_name: symfony/polyfill-php71
                         version_publish_dates:
@@ -3159,16 +3159,16 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_php72:
                         downloads_minor:
-                            v1.11: 1427273
-                            v1.10: 1240364
-                            v1.9: 134166
-                            v1.8: 73765
-                            v1.7: 37759
-                            v1.6: 11150
-                            v1.5: 6517
-                            v1.4: 3490
+                            v1.11: 1424242
+                            v1.10: 1239355
+                            v1.9: 134020
+                            v1.8: 73703
+                            v1.7: 37715
+                            v1.6: 11136
+                            v1.5: 6505
+                            v1.4: 3488
                         downloads_major:
-                            v1: 2934484
+                            v1: 2930164
                         adoption_rate: 48.6
                         package_name: symfony/polyfill-php72
                         version_publish_dates:
@@ -3182,11 +3182,11 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_php73:
                         downloads_minor:
-                            v1.11: 8646
-                            v1.10: 8555
+                            v1.11: 8633
+                            v1.10: 8553
                         downloads_major:
-                            v1: 17201
-                        adoption_rate: 50.3
+                            v1: 17186
+                        adoption_rate: 50.2
                         package_name: symfony/polyfill-php73
                         version_publish_dates:
                             v1.10: '2018-09-25'
@@ -3226,16 +3226,16 @@ parameters:
                             v1.9: '2018-08-06'
                     symfony_polyfill_xml:
                         downloads_minor:
-                            v1.11: 10777
-                            v1.10: 14679
-                            v1.9: 2970
-                            v1.8: 3193
-                            v1.7: 985
+                            v1.11: 10763
+                            v1.10: 14676
+                            v1.9: 2965
+                            v1.8: 3185
+                            v1.7: 982
                             v1.6: 2012
-                            v1.4: 3584
-                            v1.3: 8226
+                            v1.4: 3582
+                            v1.3: 8222
                         downloads_major:
-                            v1: 46426
+                            v1: 46387
                         adoption_rate: 23.2
                         package_name: symfony/polyfill-xml
                         version_publish_dates:
@@ -3348,17 +3348,17 @@ parameters:
                             v4.2: '2018-11-11'
                     symfony_proxy_manager_bridge:
                         downloads_minor:
-                            v4.2: 69466
-                            v4.1: 11331
-                            v3.4: 18006
+                            v4.2: 69439
+                            v4.1: 11330
+                            v3.4: 18002
                             v3.3: 2507
                             v3.2: 514
                             v3.0: 1899
                             v2.8: 4078
                             v2.6: 721
                         downloads_major:
-                            v4: 80797
-                            v3: 22926
+                            v4: 80769
+                            v3: 22922
                             v2: 4799
                         adoption_rate: !!float 64
                         package_name: symfony/proxy-manager-bridge
@@ -3436,20 +3436,20 @@ parameters:
                             v4.2: '2018-11-29'
                     symfony_security:
                         downloads_minor:
-                            v4.2: 126471
-                            v4.1: 60414
-                            v4.0: 3516
-                            v3.4: 50879
-                            v3.3: 2707
-                            v3.2: 7542
-                            v3.0: 1176
-                            v2.8: 12088
+                            v4.2: 126537
+                            v4.1: 60448
+                            v4.0: 3517
+                            v3.4: 50920
+                            v3.3: 2711
+                            v3.2: 7546
+                            v3.0: 1179
+                            v2.8: 12089
                             v2.7: 1323
                             v2.4: 683
                         downloads_major:
-                            v4: 190401
-                            v3: 62304
-                            v2: 14094
+                            v4: 190502
+                            v3: 62356
+                            v2: 14095
                         adoption_rate: 47.4
                         package_name: symfony/security
                         version_publish_dates:
@@ -3471,12 +3471,12 @@ parameters:
                             v4.2: '2018-11-11'
                     symfony_security_acl:
                         downloads_minor:
-                            v3.0: 336566
-                            v2.8: 32502
-                            v2.7: 842
+                            v3.0: 336801
+                            v2.8: 32512
+                            v2.7: 844
                         downloads_major:
-                            v3: 336566
-                            v2: 33344
+                            v3: 336801
+                            v2: 33356
                         adoption_rate: !!float 91
                         package_name: symfony/security-acl
                         version_publish_dates:
@@ -3550,15 +3550,15 @@ parameters:
                             v4.2: '2018-11-11'
                     symfony_security_csrf:
                         downloads_minor:
-                            v4.2: 314304
-                            v3.4: 13060
+                            v4.2: 314500
+                            v3.4: 13067
                             v3.0: 1740
-                            v2.8: 5817
+                            v2.8: 5826
                             v2.6: 1651
                         downloads_major:
-                            v4: 314304
-                            v3: 14800
-                            v2: 7468
+                            v4: 314500
+                            v3: 14807
+                            v2: 7477
                         adoption_rate: 93.4
                         package_name: symfony/security-csrf
                         version_publish_dates:
@@ -3612,21 +3612,21 @@ parameters:
                             v4.2: '2018-11-11'
                     symfony_stopwatch:
                         downloads_minor:
-                            v4.2: 703793
-                            v4.1: 85579
-                            v4.0: 11015
-                            v3.4: 183433
-                            v3.3: 26629
-                            v3.2: 5514
-                            v3.1: 3424
-                            v3.0: 9471
-                            v2.8: 33703
+                            v4.2: 704395
+                            v4.1: 85629
+                            v4.0: 11524
+                            v3.4: 183584
+                            v3.3: 26646
+                            v3.2: 5515
+                            v3.1: 3425
+                            v3.0: 9472
+                            v2.8: 34245
                             v2.7: 1251
                             v2.6: 1851
                         downloads_major:
-                            v4: 800387
-                            v3: 228471
-                            v2: 36805
+                            v4: 801548
+                            v3: 228642
+                            v2: 37347
                         adoption_rate: !!float 66
                         package_name: symfony/stopwatch
                         version_publish_dates:
@@ -3647,18 +3647,18 @@ parameters:
                             v4.2: '2018-11-11'
                     symfony_swiftmailer_bundle:
                         downloads_minor:
-                            v3.2: 431453
-                            v3.1: 6637
-                            v3.0: 9289
-                            v2.6: 393175
-                            v2.5: 11725
-                            v2.4: 31773
-                            v2.3: 72613
+                            v3.2: 431687
+                            v3.1: 6638
+                            v3.0: 9291
+                            v2.6: 393469
+                            v2.5: 11731
+                            v2.4: 31801
+                            v2.3: 72653
                             v2.2: 1317
-                            v2.1: 660
+                            v2.1: 664
                         downloads_major:
-                            v3: 447379
-                            v2: 511263
+                            v3: 447616
+                            v2: 511635
                         adoption_rate: !!float 45
                         package_name: symfony/swiftmailer-bundle
                         version_publish_dates:
@@ -3757,25 +3757,25 @@ parameters:
                             v1.1: '2018-08-24'
                     symfony_translation:
                         downloads_minor:
-                            v4.2: 2129925
-                            v4.1: 301079
-                            v4.0: 52015
-                            v3.4: 710578
-                            v3.3: 130779
-                            v3.2: 60566
-                            v3.1: 76142
-                            v3.0: 152508
-                            v2.8: 65671
-                            v2.7: 84923
-                            v2.6: 15321
-                            v2.5: 9777
-                            v2.4: 1865
+                            v4.2: 2131869
+                            v4.1: 301261
+                            v4.0: 52055
+                            v3.4: 711227
+                            v3.3: 130864
+                            v3.2: 60637
+                            v3.1: 76234
+                            v3.0: 152677
+                            v2.8: 65709
+                            v2.7: 85015
+                            v2.6: 15332
+                            v2.5: 9794
+                            v2.4: 1869
                             v2.3: 575
                             v2.0: 705
                         downloads_major:
-                            v4: 2483019
-                            v3: 1130573
-                            v2: 178837
+                            v4: 2485185
+                            v3: 1131639
+                            v2: 178999
                         adoption_rate: 56.2
                         package_name: symfony/translation
                         version_publish_dates:
@@ -3797,23 +3797,23 @@ parameters:
                             v4.2: '2018-11-27'
                     symfony_twig_bridge:
                         downloads_minor:
-                            v4.2: 434418
-                            v4.1: 72935
-                            v4.0: 13565
-                            v3.4: 81112
-                            v3.3: 13331
-                            v3.2: 6629
-                            v3.0: 6906
-                            v2.8: 13132
-                            v2.7: 3804
+                            v4.2: 434679
+                            v4.1: 72970
+                            v4.0: 13571
+                            v3.4: 81198
+                            v3.3: 13338
+                            v3.2: 6641
+                            v3.0: 6908
+                            v2.8: 13139
+                            v2.7: 3805
                             v2.6: 2403
                             v2.4: 643
                             v2.1: 502
                             v2.0: 758
                         downloads_major:
-                            v4: 520918
-                            v3: 107978
-                            v2: 21242
+                            v4: 521220
+                            v3: 108085
+                            v2: 21250
                         adoption_rate: 66.8
                         package_name: symfony/twig-bridge
                         version_publish_dates:
@@ -3835,17 +3835,17 @@ parameters:
                             v4.2: '2018-11-26'
                     symfony_twig_bundle:
                         downloads_minor:
-                            v4.2: 422741
-                            v4.1: 75823
-                            v4.0: 4407
-                            v3.4: 46634
+                            v4.2: 423000
+                            v4.1: 75859
+                            v4.0: 4408
+                            v3.4: 46674
                             v3.3: 2108
                             v3.2: 873
                             v2.8: 3287
                             v2.4: 586
                         downloads_major:
-                            v4: 502971
-                            v3: 49615
+                            v4: 503267
+                            v3: 49655
                             v2: 3873
                         adoption_rate: !!float 76
                         package_name: symfony/twig-bundle
@@ -3938,13 +3938,13 @@ parameters:
                             v4.2: '2018-11-25'
                     symfony_web_link:
                         downloads_minor:
-                            v4.2: 202574
-                            v4.1: 22544
+                            v4.2: 202720
+                            v4.1: 22563
                             v4.0: 510
-                            v3.4: 9748
+                            v3.4: 9752
                         downloads_major:
-                            v4: 225628
-                            v3: 9748
+                            v4: 225793
+                            v3: 9752
                         adoption_rate: 86.1
                         package_name: symfony/web-link
                         version_publish_dates:
@@ -3955,20 +3955,20 @@ parameters:
                             v4.2: '2018-11-11'
                     symfony_web_profiler_bundle:
                         downloads_minor:
-                            v4.2: 322729
-                            v4.1: 58457
-                            v4.0: 8954
-                            v3.4: 34299
-                            v3.3: 1248
+                            v4.2: 322940
+                            v4.1: 58476
+                            v4.0: 8955
+                            v3.4: 34322
+                            v3.3: 1249
                             v3.1: 1888
-                            v3.0: 3107
-                            v2.8: 8076
+                            v3.0: 3109
+                            v2.8: 8079
                             v2.7: 752
                             v2.6: 1148
                         downloads_major:
-                            v4: 390140
-                            v3: 40542
-                            v2: 9976
+                            v4: 390371
+                            v3: 40568
+                            v2: 9979
                         adoption_rate: 73.2
                         package_name: symfony/web-profiler-bundle
                         version_publish_dates:
@@ -4025,14 +4025,14 @@ parameters:
                             v1.5: '2019-04-10'
                     symfony_workflow:
                         downloads_minor:
-                            v4.2: 62178
-                            v4.1: 7019
-                            v3.4: 12641
+                            v4.2: 62207
+                            v4.1: 7021
+                            v3.4: 12644
                             v3.3: 775
                             v3.2: 1224
                         downloads_major:
-                            v4: 69197
-                            v3: 14640
+                            v4: 69228
+                            v3: 14643
                         adoption_rate: 74.2
                         package_name: symfony/workflow
                         version_publish_dates:
@@ -4111,10 +4111,10 @@ parameters:
                             v2.2: '2019-04-16'
                     yiisoft_yii2_debug:
                         downloads_minor:
-                            v2.1: 56799
-                            v2.0: 104773
+                            v2.1: 56856
+                            v2.0: 104817
                         downloads_major:
-                            v2: 161572
+                            v2: 161673
                         adoption_rate: 35.2
                         package_name: yiisoft/yii2-debug
                         version_publish_dates:
@@ -5018,17 +5018,17 @@ parameters:
                             v1.1: '2019-02-19'
                     zendframework_zend_hydrator:
                         downloads_minor:
-                            v3.0: 7678
-                            v2.4: 73350
-                            v2.3: 7808
-                            v2.2: 7105
+                            v3.0: 7683
+                            v2.4: 73399
+                            v2.3: 7817
+                            v2.2: 7106
                             v2.1: 1686
-                            v1.1: 214827
-                            v1.0: 2615
+                            v1.1: 215000
+                            v1.0: 2618
                         downloads_major:
-                            v3: 7678
-                            v2: 89949
-                            v1: 217442
+                            v3: 7683
+                            v2: 90008
+                            v1: 217618
                         adoption_rate: 2.4
                         package_name: zendframework/zend-hydrator
                         version_publish_dates:
@@ -5042,15 +5042,15 @@ parameters:
                             v3.0: '2018-12-10'
                     zendframework_zend_i18n:
                         downloads_minor:
-                            v2.9: 206875
-                            v2.8: 2443
-                            v2.7: 28675
-                            v2.5: 14443
-                            v2.4: 11384
-                            v2.2: 2602
+                            v2.9: 207034
+                            v2.8: 2445
+                            v2.7: 28721
+                            v2.5: 14449
+                            v2.4: 11389
+                            v2.2: 2603
                             v2.1: 1309
                         downloads_major:
-                            v2: 267731
+                            v2: 267950
                         adoption_rate: 77.3
                         package_name: zendframework/zend-i18n
                         version_publish_dates:
@@ -5065,10 +5065,10 @@ parameters:
                             v2.9: '2018-05-16'
                     zendframework_zend_i18n_resources:
                         downloads_minor:
-                            v2.6: 31065
-                            v2.5: 17164
+                            v2.6: 31082
+                            v2.5: 17170
                         downloads_major:
-                            v2: 48229
+                            v2: 48252
                         adoption_rate: 64.4
                         package_name: zendframework/zend-i18n-resources
                         version_publish_dates:
@@ -5081,17 +5081,17 @@ parameters:
                             v2.6: '2018-04-30'
                     zendframework_zend_inputfilter:
                         downloads_minor:
-                            v2.10: 179588
-                            v2.9: 17510
-                            v2.8: 55714
-                            v2.7: 14459
+                            v2.10: 179776
+                            v2.9: 17515
+                            v2.8: 55750
+                            v2.7: 14468
                             v2.6: 502
-                            v2.5: 11875
-                            v2.4: 10697
+                            v2.5: 11881
+                            v2.4: 10702
                             v2.3: 501
-                            v2.2: 1159
+                            v2.2: 1161
                         downloads_major:
-                            v2: 292005
+                            v2: 292256
                         adoption_rate: 61.5
                         package_name: zendframework/zend-inputfilter
                         version_publish_dates:
@@ -5143,14 +5143,14 @@ parameters:
                             v3.1: '2018-04-25'
                     zendframework_zend_ldap:
                         downloads_minor:
-                            v2.10: 69615
-                            v2.9: 2302
+                            v2.10: 69720
+                            v2.9: 2306
                             v2.8: 1843
                             v2.7: 811
-                            v2.5: 1882
+                            v2.5: 1883
                             v2.2: 1246
                         downloads_major:
-                            v2: 77699
+                            v2: 77809
                         adoption_rate: 89.6
                         package_name: zendframework/zend-ldap
                         version_publish_dates:
@@ -5166,14 +5166,14 @@ parameters:
                             v2.9: '2018-04-25'
                     zendframework_zend_loader:
                         downloads_minor:
-                            v2.6: 373826
-                            v2.5: 50455
-                            v2.4: 16422
-                            v2.3: 1506
-                            v2.2: 5237
+                            v2.6: 374146
+                            v2.5: 50502
+                            v2.4: 16432
+                            v2.3: 1508
+                            v2.2: 5245
                             v2.1: 627
                         downloads_major:
-                            v2: 448073
+                            v2: 448460
                         adoption_rate: 83.4
                         package_name: zendframework/zend-loader
                         version_publish_dates:
@@ -5185,15 +5185,15 @@ parameters:
                             v2.6: '2018-04-30'
                     zendframework_zend_log:
                         downloads_minor:
-                            v2.10: 197512
-                            v2.9: 16548
-                            v2.8: 2970
-                            v2.6: 1942
-                            v2.5: 7926
-                            v2.4: 11296
-                            v2.0: 768
+                            v2.10: 197671
+                            v2.9: 16566
+                            v2.8: 2986
+                            v2.6: 1943
+                            v2.5: 7929
+                            v2.4: 11301
+                            v2.0: 769
                         downloads_major:
-                            v2: 238962
+                            v2: 239165
                         adoption_rate: 82.7
                         package_name: zendframework/zend-log
                         version_publish_dates:
@@ -5264,12 +5264,12 @@ parameters:
                             v3.2: '2018-12-04'
                     zendframework_zend_memory:
                         downloads_minor:
-                            v2.6: 35580
-                            v2.5: 19523
+                            v2.6: 35600
+                            v2.5: 19544
                             v2.4: 3065
                             v2.2: 531
                         downloads_major:
-                            v2: 58699
+                            v2: 58740
                         adoption_rate: 60.6
                         package_name: zendframework/zend-memory
                         version_publish_dates:
@@ -5345,10 +5345,10 @@ parameters:
                             v3.1: '2017-05-01'
                     zendframework_zend_mvc_console:
                         downloads_minor:
-                            v1.2: 24210
-                            v1.1: 5846
+                            v1.2: 24220
+                            v1.1: 5850
                         downloads_major:
-                            v1: 30056
+                            v1: 30070
                         adoption_rate: 80.5
                         package_name: zendframework/zend-mvc-console
                         version_publish_dates:
@@ -5406,10 +5406,10 @@ parameters:
                             v1.1: '2018-04-30'
                     zendframework_zend_mvc_plugin_prg:
                         downloads_minor:
-                            v1.1: 17474
-                            v1.0: 2099
+                            v1.1: 17487
+                            v1.0: 2100
                         downloads_major:
-                            v1: 19573
+                            v1: 19587
                         adoption_rate: 89.3
                         package_name: zendframework/zend-mvc-plugin-prg
                         version_publish_dates:
@@ -5418,12 +5418,12 @@ parameters:
                             v1.1: '2018-04-30'
                     zendframework_zend_navigation:
                         downloads_minor:
-                            v2.9: 35796
-                            v2.8: 7870
-                            v2.5: 7366
+                            v2.9: 35814
+                            v2.8: 7877
+                            v2.5: 7367
                             v2.4: 3018
                         downloads_major:
-                            v2: 54050
+                            v2: 54076
                         adoption_rate: 66.2
                         package_name: zendframework/zend-navigation
                         version_publish_dates:
@@ -5438,11 +5438,11 @@ parameters:
                             v2.9: '2018-04-25'
                     zendframework_zend_paginator:
                         downloads_minor:
-                            v2.8: 72789
-                            v2.7: 10796
-                            v2.5: 6391
+                            v2.8: 72823
+                            v2.7: 10804
+                            v2.5: 6392
                         downloads_major:
-                            v2: 89976
+                            v2: 90019
                         adoption_rate: 80.9
                         package_name: zendframework/zend-paginator
                         version_publish_dates:
@@ -5456,11 +5456,11 @@ parameters:
                             v2.8: '2017-11-01'
                     zendframework_zend_permissions_acl:
                         downloads_minor:
-                            v2.7: 52533
-                            v2.6: 16542
+                            v2.7: 52560
+                            v2.6: 16555
                             v2.5: 5390
                         downloads_major:
-                            v2: 74465
+                            v2: 74505
                         adoption_rate: 70.5
                         package_name: zendframework/zend-permissions-acl
                         version_publish_dates:
@@ -5473,13 +5473,13 @@ parameters:
                             v2.7: '2018-05-01'
                     zendframework_zend_permissions_rbac:
                         downloads_minor:
-                            v3.0: 10296
-                            v2.6: 32768
-                            v2.5: 16276
+                            v3.0: 10297
+                            v2.6: 32786
+                            v2.5: 16286
                         downloads_major:
-                            v3: 10296
-                            v2: 49044
-                        adoption_rate: 17.4
+                            v3: 10297
+                            v2: 49072
+                        adoption_rate: 17.3
                         package_name: zendframework/zend-permissions-rbac
                         version_publish_dates:
                             v2.0: '2012-09-04'
@@ -5573,15 +5573,15 @@ parameters:
                             v2.9: '2018-05-14'
                     zendframework_zend_server:
                         downloads_minor:
-                            v2.8: 202473
-                            v2.7: 16165
-                            v2.6: 2613
-                            v2.5: 8529
-                            v2.4: 11450
+                            v2.8: 202622
+                            v2.7: 16188
+                            v2.6: 2614
+                            v2.5: 8532
+                            v2.4: 11454
                             v2.2: 1472
                             v2.1: 2128
                         downloads_major:
-                            v2: 244830
+                            v2: 245010
                         adoption_rate: 82.7
                         package_name: zendframework/zend-server
                         version_publish_dates:
@@ -5595,21 +5595,21 @@ parameters:
                             v2.8: '2018-04-30'
                     zendframework_zend_servicemanager:
                         downloads_minor:
-                            v3.4: 124859
-                            v3.3: 48883
+                            v3.4: 125007
+                            v3.3: 48907
                             v3.2: 2680
-                            v3.1: 6921
-                            v2.7: 197612
+                            v3.1: 6937
+                            v2.7: 197782
                             v2.6: 1064
-                            v2.5: 13974
-                            v2.4: 17619
-                            v2.3: 2744
-                            v2.2: 7262
-                            v2.1: 1720
-                            v2.0: 1069
+                            v2.5: 13979
+                            v2.4: 17629
+                            v2.3: 2746
+                            v2.2: 7268
+                            v2.1: 1724
+                            v2.0: 1070
                         downloads_major:
-                            v3: 183343
-                            v2: 243064
+                            v3: 183531
+                            v2: 243262
                         adoption_rate: 29.3
                         package_name: zendframework/zend-servicemanager
                         version_publish_dates:
@@ -5627,10 +5627,10 @@ parameters:
                             v3.4: '2018-12-22'
                     zendframework_zend_servicemanager_di:
                         downloads_minor:
-                            v1.2: 11123
-                            v1.1: 1364
+                            v1.2: 11134
+                            v1.1: 1365
                         downloads_major:
-                            v1: 12487
+                            v1: 12499
                         adoption_rate: 89.1
                         package_name: zendframework/zend-servicemanager-di
                         version_publish_dates:
@@ -5639,11 +5639,11 @@ parameters:
                             v1.2: '2018-04-30'
                     zendframework_zend_session:
                         downloads_minor:
-                            v2.8: 206201
-                            v2.7: 4008
-                            v2.5: 5485
+                            v2.8: 206360
+                            v2.7: 4014
+                            v2.5: 5488
                         downloads_major:
-                            v2: 215694
+                            v2: 215862
                         adoption_rate: 95.6
                         package_name: zendframework/zend-session
                         version_publish_dates:
@@ -5788,14 +5788,14 @@ parameters:
                             v2.7: '2018-04-30'
                     zendframework_zend_uri:
                         downloads_minor:
-                            v2.7: 213839
-                            v2.6: 131750
-                            v2.5: 51764
-                            v2.4: 13712
-                            v2.3: 1664
-                            v2.2: 4218
+                            v2.7: 214014
+                            v2.6: 131816
+                            v2.5: 51810
+                            v2.4: 13716
+                            v2.3: 1667
+                            v2.2: 4221
                         downloads_major:
-                            v2: 416947
+                            v2: 417244
                         adoption_rate: 51.3
                         package_name: zendframework/zend-uri
                         version_publish_dates:
@@ -5838,16 +5838,16 @@ parameters:
                             v2.9: '2017-03-17'
                     zendframework_zend_view:
                         downloads_minor:
-                            v2.11: 119596
-                            v2.10: 105720
-                            v2.9: 7834
-                            v2.8: 7571
-                            v2.7: 1251
-                            v2.5: 9702
-                            v2.4: 11181
+                            v2.11: 119676
+                            v2.10: 105808
+                            v2.9: 7838
+                            v2.8: 7575
+                            v2.7: 1253
+                            v2.5: 9707
+                            v2.4: 11185
                             v2.2: 1156
                         downloads_major:
-                            v2: 264011
+                            v2: 264198
                         adoption_rate: 45.3
                         package_name: zendframework/zend-view
                         version_publish_dates:
@@ -5892,14 +5892,14 @@ parameters:
                             v2.7: '2018-05-14'
                     zendframework_zenddiagnostics:
                         downloads_minor:
-                            v1.5: 32949
-                            v1.4: 105330
-                            v1.3: 15422
+                            v1.5: 33051
+                            v1.4: 105455
+                            v1.3: 15425
                             v1.2: 2608
-                            v1.1: 7343
-                            v1.0: 17403
+                            v1.1: 7347
+                            v1.0: 17408
                         downloads_major:
-                            v1: 181055
+                            v1: 181294
                         adoption_rate: 18.2
                         package_name: zendframework/zenddiagnostics
                         version_publish_dates:
@@ -5911,15 +5911,15 @@ parameters:
                             v1.5: '2019-03-26'
                     zendframework_zendframework:
                         downloads_minor:
-                            v3.0: 6538
-                            v2.5: 31806
-                            v2.4: 10271
-                            v2.3: 7989
-                            v2.2: 5293
+                            v3.0: 6544
+                            v2.5: 31828
+                            v2.4: 10279
+                            v2.3: 8104
+                            v2.2: 5301
                             v2.1: 985
                         downloads_major:
-                            v3: 6538
-                            v2: 56344
+                            v3: 6544
+                            v2: 56497
                         adoption_rate: 10.4
                         package_name: zendframework/zendframework
                         version_publish_dates:
@@ -5945,11 +5945,11 @@ parameters:
                             v2.3: '2017-06-22'
                     zendframework_zendservice_apple_apns:
                         downloads_minor:
-                            v1.4: 15125
-                            v1.3: 28293
-                            v1.2: 9252
+                            v1.4: 15149
+                            v1.3: 28302
+                            v1.2: 9255
                         downloads_major:
-                            v1: 52670
+                            v1: 52706
                         adoption_rate: 28.7
                         package_name: zendframework/zendservice-apple-apns
                         version_publish_dates:
@@ -5960,12 +5960,12 @@ parameters:
                             v1.4: '2019-03-13'
                     zendframework_zendservice_google_gcm:
                         downloads_minor:
-                            v2.1: 36730
-                            v2.0: 4086
-                            v1.0: 8333
+                            v2.1: 36759
+                            v2.0: 4088
+                            v1.0: 8340
                         downloads_major:
-                            v2: 40816
-                            v1: 8333
+                            v2: 40847
+                            v1: 8340
                         adoption_rate: 74.7
                         package_name: zendframework/zendservice-google-gcm
                         version_publish_dates:
@@ -6015,4 +6015,4 @@ parameters:
                             v1.1: '2018-04-30'
                             v1.2: '2019-01-22'
                 name: Zend
-        updated_at: '2019-04-16 23:48:04'
+        updated_at: '2019-04-17 00:02:34'

@@ -2,8 +2,6 @@
 
 namespace TomasVotruba\Website\Packagist;
 
-use PharIo\Version\InvalidVersionException;
-use PharIo\Version\Version;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\Json\FileToJsonLoader;
 use TomasVotruba\Website\VersionManipulator;
@@ -42,18 +40,13 @@ final class MinorPackageVersionsDownloadsProvider
     public function provideForPackage(string $packageName): array
     {
         $data = $this->getDownloadsByVersionForPackage($packageName);
-        $data = $this->filterOutInvalidVersions($data);
         $data = $this->sortByVersion($data);
 
         $downloadsGroupedByMajorAndMinorVersion = [];
 
         foreach ($data as $version => $downloads) {
             $version = $this->versionManipulator->create($version);
-
-            $this->versionManipulator->resolveToMinor($version);
-
             $minorVersion = $this->versionManipulator->resolveToMinor($version);
-            $majorVersion = $this->versionManipulator->resolveToMajor($version);
 
             $monthlyDownloads = $downloads['monthly'];
 
@@ -95,25 +88,6 @@ final class MinorPackageVersionsDownloadsProvider
         return array_filter($data, function (string $version): bool {
             return $this->versionManipulator->isValid($version);
         }, ARRAY_FILTER_USE_KEY);
-    }
-
-    private function filterOutInvalidVersions(array $data): array
-    {
-        /** @var string $version */
-        foreach ($data as $version => $downloads) {
-            $key = $version;
-
-            try {
-                /** @var Version $version */
-                $version = new Version($version);
-            } catch (InvalidVersionException $invalidVersionException) {
-                dump($version);
-                // invalid version
-                unset($data[$key]);
-            }
-        }
-
-        return $data;
     }
 
     private function sortByVersion(array $data): array

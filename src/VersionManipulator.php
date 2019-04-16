@@ -54,11 +54,6 @@ final class VersionManipulator
         return 'v' . $version->getMajor()->getValue() . '.' . $version->getMinor()->getValue();
     }
 
-    public function resolveToMajor(Version $version): string
-    {
-        return 'v' . $version->getMajor()->getValue();
-    }
-
     private function normalize(string $version): string
     {
         if (Strings::startsWith($version, 'v')) {
