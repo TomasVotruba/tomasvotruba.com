@@ -58,7 +58,7 @@ final class PackageDataFactory
                 continue;
             }
 
-            $lastYearTrend = $this->statistics->resolveTrend($monthlyDownloads, 12);
+            $lastYearTrend = $this->statistics->resolveTrend($packageName, $monthlyDownloads, 12);
             if ($lastYearTrend === null) {
                 continue;
             }
