@@ -33,9 +33,7 @@ final class PackageDataGroupedByVersionFactory
             }
 
             $packagesData[$packageKey] = $packageDownloads;
-
-            // @todo compute freshness
-
+            $packagesData[$packageKey]['adoption_rate'] = $this->resolveAdoptionRate($packageDownloads);
             $packagesData[$packageKey]['package_name'] = $packageName;
         }
 
@@ -45,5 +43,15 @@ final class PackageDataGroupedByVersionFactory
     private function createPackageKey(string $packageName): string
     {
         return Strings::replace($packageName, '#(/|-)#', '_');
+    }
+
+    private function resolveAdoptionRate(array $packageDownloads): float
+    {
+        $downloadsTotal = array_sum($packageDownloads['downloads_minor']);
+
+        $lastVersionDownloads = array_shift($packageDownloads['downloads_minor']);
+        $adoption_rate = $lastVersionDownloads / $downloadsTotal * 100;
+
+        return (float) round($adoption_rate, 1);
     }
 }

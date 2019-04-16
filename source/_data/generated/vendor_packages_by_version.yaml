@@ -1,4 +1,4 @@
-# this file was generated on 2019-04-16 21:20:46, do not edit it manually
+# this file was generated on 2019-04-16 21:46:54, do not edit it manually
 parameters:
     vendor_packages_by_version:
         vendors:
@@ -6,113 +6,126 @@ parameters:
                 packages_data:
                     cakephp_acl:
                         downloads_minor:
-                            v0.4: 1744
+                            v0.4: 1745
                             v0.3: 581
-                            v0.2: 988
+                            v0.2: 989
                         downloads_major:
-                            v0: 3313
+                            v0: 3315
+                        adoption_rate: 52.6
                         package_name: cakephp/acl
                     cakephp_app:
                         downloads_minor:
-                            v3.7: 12542
+                            v3.7: 12559
                         downloads_major:
-                            v3: 12542
+                            v3: 12559
+                        adoption_rate: !!float 100
                         package_name: cakephp/app
                     cakephp_authentication:
                         downloads_minor:
                             v1.1: 949
-                            v1.0: 1676
+                            v1.0: 1690
                         downloads_major:
-                            v1: 2625
+                            v1: 2639
+                        adoption_rate: !!float 36
                         package_name: cakephp/authentication
                     cakephp_authorization:
                         downloads_minor:
                             v1.1: 803
-                            v1.0: 1542
+                            v1.0: 1556
                         downloads_major:
-                            v1: 2345
+                            v1: 2359
+                        adoption_rate: !!float 34
                         package_name: cakephp/authorization
                     cakephp_bake:
                         downloads_minor:
-                            v1.9: 22098
-                            v1.8: 14211
-                            v1.7: 7154
-                            v1.6: 12021
-                            v1.4: 3002
-                            v1.3: 2219
+                            v1.9: 22153
+                            v1.8: 14232
+                            v1.7: 7176
+                            v1.6: 12028
+                            v1.4: 3010
+                            v1.3: 2222
                             v1.2: 2832
                         downloads_major:
-                            v1: 63537
+                            v1: 63653
+                        adoption_rate: 34.8
                         package_name: cakephp/bake
                     cakephp_cache:
                         downloads_minor:
-                            v3.7: 66620
-                            v3.6: 13057
+                            v3.7: 66706
+                            v3.6: 13085
                         downloads_major:
-                            v3: 79677
+                            v3: 79791
+                        adoption_rate: 83.6
                         package_name: cakephp/cache
                     cakephp_cakephp:
                         downloads_minor:
-                            v3.7: 29550
-                            v3.6: 22886
-                            v3.5: 16581
-                            v3.4: 2878
-                            v3.3: 1505
-                            v2.10: 20711
+                            v3.7: 29617
+                            v3.6: 22944
+                            v3.5: 16600
+                            v3.4: 2881
+                            v3.3: 1507
+                            v2.10: 20753
                             v2.9: 1613
                             v2.8: 1626
                         downloads_major:
-                            v3: 73400
-                            v2: 23950
+                            v3: 73549
+                            v2: 23992
+                        adoption_rate: 30.4
                         package_name: cakephp/cakephp
                     cakephp_cakephp_codesniffer:
                         downloads_minor:
-                            v3.1: 31916
-                            v3.0: 17728
-                            v2.4: 2201
-                            v1.0: 2528
+                            v3.1: 31978
+                            v3.0: 17771
+                            v2.4: 2202
+                            v1.0: 2529
                         downloads_major:
-                            v3: 49644
-                            v2: 2201
-                            v1: 2528
+                            v3: 49749
+                            v2: 2202
+                            v1: 2529
+                        adoption_rate: 58.7
                         package_name: cakephp/cakephp-codesniffer
                     cakephp_chronos:
                         downloads_minor:
-                            v1.2: 289006
-                            v1.1: 30330
+                            v1.2: 289570
+                            v1.1: 30420
                             v1.0: 817
                             v0.4: 998
                         downloads_major:
-                            v1: 320153
+                            v1: 320807
                             v0: 998
+                        adoption_rate: !!float 90
                         package_name: cakephp/chronos
                     cakephp_collection:
                         downloads_minor:
-                            v3.7: 66938
-                            v3.6: 13051
+                            v3.7: 67035
+                            v3.6: 13081
                         downloads_major:
-                            v3: 79989
+                            v3: 80116
+                        adoption_rate: 83.7
                         package_name: cakephp/collection
                     cakephp_core:
                         downloads_minor:
-                            v3.7: 75633
-                            v3.6: 14352
+                            v3.7: 75727
+                            v3.6: 14380
                         downloads_major:
-                            v3: 89985
+                            v3: 90107
+                        adoption_rate: !!float 84
                         package_name: cakephp/core
                     cakephp_database:
                         downloads_minor:
-                            v3.7: 66538
-                            v3.6: 13040
+                            v3.7: 66636
+                            v3.6: 13070
                         downloads_major:
-                            v3: 79578
+                            v3: 79706
+                        adoption_rate: 83.6
                         package_name: cakephp/database
                     cakephp_datasource:
                         downloads_minor:
-                            v3.7: 66684
-                            v3.6: 13052
+                            v3.7: 66770
+                            v3.6: 13080
                         downloads_major:
-                            v3: 79736
+                            v3: 79850
+                        adoption_rate: 83.6
                         package_name: cakephp/datasource
                     cakephp_debug_kit:
                         downloads_minor:
@@ -128,18 +141,21 @@ parameters:
                         downloads_major:
                             v3: 62587
                             v2: 17086
+                        adoption_rate: 8.3
                         package_name: cakephp/debug_kit
                     cakephp_elastic_search:
                         downloads_minor:
                             v2.0: 2637
                         downloads_major:
                             v2: 2637
+                        adoption_rate: !!float 100
                         package_name: cakephp/elastic-search
                     cakephp_filesystem:
                         downloads_minor:
                             v3.7: 618
                         downloads_major:
                             v3: 618
+                        adoption_rate: !!float 100
                         package_name: cakephp/filesystem
                     cakephp_localized:
                         downloads_minor:
@@ -148,12 +164,14 @@ parameters:
                         downloads_major:
                             v3: 1720
                             v2: 1005
+                        adoption_rate: 63.1
                         package_name: cakephp/localized
                     cakephp_log:
                         downloads_minor:
                             v3.7: 62460
                         downloads_major:
                             v3: 62460
+                        adoption_rate: !!float 100
                         package_name: cakephp/log
                     cakephp_migrations:
                         downloads_minor:
@@ -165,6 +183,7 @@ parameters:
                         downloads_major:
                             v2: 34461
                             v1: 40485
+                        adoption_rate: 41.2
                         package_name: cakephp/migrations
                     cakephp_plugin_installer:
                         downloads_minor:
@@ -174,6 +193,7 @@ parameters:
                         downloads_major:
                             v1: 71455
                             v0: 3705
+                        adoption_rate: 86.4
                         package_name: cakephp/plugin-installer
                     cakephp_utility:
                         downloads_minor:
@@ -181,12 +201,14 @@ parameters:
                             v3.6: 14309
                         downloads_major:
                             v3: 89827
+                        adoption_rate: 84.1
                         package_name: cakephp/utility
                     cakephp_validation:
                         downloads_minor:
                             v3.7: 598
                         downloads_major:
                             v3: 598
+                        adoption_rate: !!float 100
                         package_name: cakephp/validation
                 name: CakePHP
             illuminate:
@@ -203,6 +225,7 @@ parameters:
                             v5.1: 3008
                         downloads_major:
                             v5: 166832
+                        adoption_rate: 20.9
                         package_name: illuminate/auth
                     illuminate_broadcasting:
                         downloads_minor:
@@ -216,6 +239,7 @@ parameters:
                             v5.1: 2799
                         downloads_major:
                             v5: 164438
+                        adoption_rate: 20.5
                         package_name: illuminate/broadcasting
                     illuminate_bus:
                         downloads_minor:
@@ -229,6 +253,7 @@ parameters:
                             v5.1: 3403
                         downloads_major:
                             v5: 176303
+                        adoption_rate: 19.5
                         package_name: illuminate/bus
                     illuminate_cache:
                         downloads_minor:
@@ -244,6 +269,7 @@ parameters:
                         downloads_major:
                             v5: 189898
                             v4: 1249
+                        adoption_rate: 19.6
                         package_name: illuminate/cache
                     illuminate_config:
                         downloads_minor:
@@ -259,6 +285,7 @@ parameters:
                         downloads_major:
                             v5: 236416
                             v4: 1844
+                        adoption_rate: 20.6
                         package_name: illuminate/config
                     illuminate_console:
                         downloads_minor:
@@ -274,6 +301,7 @@ parameters:
                         downloads_major:
                             v5: 214303
                             v4: 1976
+                        adoption_rate: 18.7
                         package_name: illuminate/console
                     illuminate_container:
                         downloads_minor:
@@ -292,6 +320,7 @@ parameters:
                         downloads_major:
                             v5: 406924
                             v4: 15078
+                        adoption_rate: 22.6
                         package_name: illuminate/container
                     illuminate_contracts:
                         downloads_minor:
@@ -306,6 +335,7 @@ parameters:
                             v5.0: 5278
                         downloads_major:
                             v5: 528127
+                        adoption_rate: 29.3
                         package_name: illuminate/contracts
                     illuminate_cookie:
                         downloads_minor:
@@ -320,6 +350,7 @@ parameters:
                         downloads_major:
                             v5: 11101
                             v4: 1405
+                        adoption_rate: !!float 25
                         package_name: illuminate/cookie
                     illuminate_database:
                         downloads_minor:
@@ -338,6 +369,7 @@ parameters:
                         downloads_major:
                             v5: 294632
                             v4: 8834
+                        adoption_rate: 19.9
                         package_name: illuminate/database
                     illuminate_encryption:
                         downloads_minor:
@@ -353,6 +385,7 @@ parameters:
                         downloads_major:
                             v5: 180217
                             v4: 1164
+                        adoption_rate: 19.9
                         package_name: illuminate/encryption
                     illuminate_events:
                         downloads_minor:
@@ -371,12 +404,14 @@ parameters:
                         downloads_major:
                             v5: 269936
                             v4: 10503
+                        adoption_rate: 18.4
                         package_name: illuminate/events
                     illuminate_exception:
                         downloads_minor:
                             v4.2: 993
                         downloads_major:
                             v4: 993
+                        adoption_rate: !!float 100
                         package_name: illuminate/exception
                     illuminate_filesystem:
                         downloads_minor:
@@ -393,6 +428,7 @@ parameters:
                         downloads_major:
                             v5: 282041
                             v4: 5865
+                        adoption_rate: 20.1
                         package_name: illuminate/filesystem
                     illuminate_hashing:
                         downloads_minor:
@@ -410,12 +446,14 @@ parameters:
                             v5: 167829
                             v4: 760
                             v1: 503
+                        adoption_rate: 19.8
                         package_name: illuminate/hashing
                     illuminate_html:
                         downloads_minor:
                             v5.0: 22483
                         downloads_major:
                             v5: 22483
+                        adoption_rate: !!float 100
                         package_name: illuminate/html
                     illuminate_http:
                         downloads_minor:
@@ -431,6 +469,7 @@ parameters:
                         downloads_major:
                             v5: 185696
                             v4: 1019
+                        adoption_rate: 21.7
                         package_name: illuminate/http
                     illuminate_log:
                         downloads_minor:
@@ -443,6 +482,7 @@ parameters:
                         downloads_major:
                             v5: 113637
                             v4: 1851
+                        adoption_rate: 29.3
                         package_name: illuminate/log
                     illuminate_mail:
                         downloads_minor:
@@ -456,6 +496,7 @@ parameters:
                             v5.1: 1665
                         downloads_major:
                             v5: 43847
+                        adoption_rate: 11.3
                         package_name: illuminate/mail
                     illuminate_notifications:
                         downloads_minor:
@@ -466,6 +507,7 @@ parameters:
                             v5.4: 734
                         downloads_major:
                             v5: 13313
+                        adoption_rate: 16.3
                         package_name: illuminate/notifications
                     illuminate_pagination:
                         downloads_minor:
@@ -480,6 +522,7 @@ parameters:
                             v5.0: 828
                         downloads_major:
                             v5: 183568
+                        adoption_rate: 20.7
                         package_name: illuminate/pagination
                     illuminate_pipeline:
                         downloads_minor:
@@ -493,6 +536,7 @@ parameters:
                             v5.1: 4620
                         downloads_major:
                             v5: 186491
+                        adoption_rate: 20.4
                         package_name: illuminate/pipeline
                     illuminate_queue:
                         downloads_minor:
@@ -506,6 +550,7 @@ parameters:
                             v5.1: 3543
                         downloads_major:
                             v5: 184362
+                        adoption_rate: 19.8
                         package_name: illuminate/queue
                     illuminate_redis:
                         downloads_minor:
@@ -521,12 +566,14 @@ parameters:
                         downloads_major:
                             v5: 80261
                             v4: 767
+                        adoption_rate: 10.7
                         package_name: illuminate/redis
                     illuminate_remote:
                         downloads_minor:
                             v4.2: 1305
                         downloads_major:
                             v4: 1305
+                        adoption_rate: !!float 100
                         package_name: illuminate/remote
                     illuminate_routing:
                         downloads_minor:
@@ -542,6 +589,7 @@ parameters:
                         downloads_major:
                             v5: 35335
                             v4: 711
+                        adoption_rate: 18.6
                         package_name: illuminate/routing
                     illuminate_session:
                         downloads_minor:
@@ -557,6 +605,7 @@ parameters:
                         downloads_major:
                             v5: 190018
                             v4: 1023
+                        adoption_rate: 21.1
                         package_name: illuminate/session
                     illuminate_support:
                         downloads_minor:
@@ -575,6 +624,7 @@ parameters:
                         downloads_major:
                             v5: 522314
                             v4: 15982
+                        adoption_rate: 28.3
                         package_name: illuminate/support
                     illuminate_translation:
                         downloads_minor:
@@ -590,6 +640,7 @@ parameters:
                         downloads_major:
                             v5: 184119
                             v4: 595
+                        adoption_rate: 20.2
                         package_name: illuminate/translation
                     illuminate_validation:
                         downloads_minor:
@@ -606,6 +657,7 @@ parameters:
                         downloads_major:
                             v5: 182780
                             v4: 1291
+                        adoption_rate: !!float 20
                         package_name: illuminate/validation
                     illuminate_view:
                         downloads_minor:
@@ -621,6 +673,7 @@ parameters:
                         downloads_major:
                             v5: 221698
                             v4: 4354
+                        adoption_rate: 19.1
                         package_name: illuminate/view
                     laravel_framework:
                         downloads_minor:
@@ -638,6 +691,7 @@ parameters:
                         downloads_major:
                             v5: 2040831
                             v4: 31030
+                        adoption_rate: 29.6
                         package_name: laravel/framework
                 name: Laravel
             nette:
@@ -650,6 +704,7 @@ parameters:
                         downloads_major:
                             v3: 1540
                             v2: 37107
+                        adoption_rate: !!float 4
                         package_name: nette/application
                     nette_bootstrap:
                         downloads_minor:
@@ -659,6 +714,7 @@ parameters:
                         downloads_major:
                             v3: 69924
                             v2: 350083
+                        adoption_rate: 16.6
                         package_name: nette/bootstrap
                     nette_caching:
                         downloads_minor:
@@ -669,18 +725,21 @@ parameters:
                         downloads_major:
                             v3: 7372
                             v2: 63860
+                        adoption_rate: 10.3
                         package_name: nette/caching
                     nette_coding_standard:
                         downloads_minor:
                             v2.1: 885
                         downloads_major:
                             v2: 885
+                        adoption_rate: !!float 100
                         package_name: nette/coding-standard
                     nette_command_line:
                         downloads_minor:
                             v1.4: 1077
                         downloads_major:
                             v1: 1077
+                        adoption_rate: !!float 100
                         package_name: nette/command-line
                     nette_component_model:
                         downloads_minor:
@@ -691,6 +750,7 @@ parameters:
                         downloads_major:
                             v3: 2508
                             v2: 40001
+                        adoption_rate: 5.9
                         package_name: nette/component-model
                     nette_database:
                         downloads_minor:
@@ -700,6 +760,7 @@ parameters:
                         downloads_major:
                             v3: 759
                             v2: 26022
+                        adoption_rate: 2.8
                         package_name: nette/database
                     nette_deprecated:
                         downloads_minor:
@@ -707,6 +768,7 @@ parameters:
                             v2.3: 3458
                         downloads_major:
                             v2: 15676
+                        adoption_rate: 77.9
                         package_name: nette/deprecated
                     nette_di:
                         downloads_minor:
@@ -716,6 +778,7 @@ parameters:
                         downloads_major:
                             v3: 57642
                             v2: 362964
+                        adoption_rate: 13.7
                         package_name: nette/di
                     nette_finder:
                         downloads_minor:
@@ -724,6 +787,7 @@ parameters:
                             v2.3: 3795
                         downloads_major:
                             v2: 461824
+                        adoption_rate: 56.6
                         package_name: nette/finder
                     nette_forms:
                         downloads_minor:
@@ -733,6 +797,7 @@ parameters:
                         downloads_major:
                             v3: 1905
                             v2: 34424
+                        adoption_rate: 5.2
                         package_name: nette/forms
                     nette_http:
                         downloads_minor:
@@ -742,6 +807,7 @@ parameters:
                         downloads_major:
                             v3: 2537
                             v2: 43276
+                        adoption_rate: 5.5
                         package_name: nette/http
                     nette_mail:
                         downloads_minor:
@@ -751,6 +817,7 @@ parameters:
                         downloads_major:
                             v3: 2258
                             v2: 40915
+                        adoption_rate: 5.2
                         package_name: nette/mail
                     nette_neon:
                         downloads_minor:
@@ -760,6 +827,7 @@ parameters:
                         downloads_major:
                             v3: 258166
                             v2: 172793
+                        adoption_rate: 59.9
                         package_name: nette/neon
                     nette_nette:
                         downloads_minor:
@@ -769,6 +837,7 @@ parameters:
                             v2.1: 685
                         downloads_major:
                             v2: 15337
+                        adoption_rate: 13.3
                         package_name: nette/nette
                     nette_php_generator:
                         downloads_minor:
@@ -781,6 +850,7 @@ parameters:
                         downloads_major:
                             v3: 462403
                             v2: 25706
+                        adoption_rate: 70.6
                         package_name: nette/php-generator
                     nette_reflection:
                         downloads_minor:
@@ -788,6 +858,7 @@ parameters:
                             v2.3: 3740
                         downloads_major:
                             v2: 43178
+                        adoption_rate: 91.3
                         package_name: nette/reflection
                     nette_robot_loader:
                         downloads_minor:
@@ -799,12 +870,14 @@ parameters:
                         downloads_major:
                             v3: 426943
                             v2: 19878
+                        adoption_rate: 16.4
                         package_name: nette/robot-loader
                     nette_routing:
                         downloads_minor:
                             v3.0: 3060
                         downloads_major:
                             v3: 3060
+                        adoption_rate: !!float 100
                         package_name: nette/routing
                     nette_safe_stream:
                         downloads_minor:
@@ -812,12 +885,14 @@ parameters:
                             v2.3: 18816
                         downloads_major:
                             v2: 29547
+                        adoption_rate: 36.3
                         package_name: nette/safe-stream
                     nette_schema:
                         downloads_minor:
                             v1.0: 63842
                         downloads_major:
                             v1: 63842
+                        adoption_rate: !!float 100
                         package_name: nette/schema
                     nette_security:
                         downloads_minor:
@@ -827,6 +902,7 @@ parameters:
                         downloads_major:
                             v3: 1190
                             v2: 34003
+                        adoption_rate: 3.4
                         package_name: nette/security
                     nette_tester:
                         downloads_minor:
@@ -837,6 +913,7 @@ parameters:
                         downloads_major:
                             v2: 15855
                             v1: 5294
+                        adoption_rate: 32.7
                         package_name: nette/tester
                     nette_tokenizer:
                         downloads_minor:
@@ -846,6 +923,7 @@ parameters:
                         downloads_major:
                             v3: 1852
                             v2: 18220
+                        adoption_rate: 9.2
                         package_name: nette/tokenizer
                     nette_utils:
                         downloads_minor:
@@ -856,6 +934,7 @@ parameters:
                         downloads_major:
                             v3: 95484
                             v2: 430286
+                        adoption_rate: 18.2
                         package_name: nette/utils
                 name: Nette
             silex:
@@ -866,6 +945,7 @@ parameters:
                             v2.1: 634
                         downloads_major:
                             v2: 1666
+                        adoption_rate: 61.9
                         package_name: silex/api
                     silex_silex:
                         downloads_minor:
@@ -880,6 +960,7 @@ parameters:
                         downloads_major:
                             v2: 79459
                             v1: 53680
+                        adoption_rate: 16.2
                         package_name: silex/silex
                     silex_web_profiler:
                         downloads_minor:
@@ -888,6 +969,7 @@ parameters:
                         downloads_major:
                             v2: 9331
                             v1: 10961
+                        adoption_rate: !!float 46
                         package_name: silex/web-profiler
                 name: Silex
             slim:
@@ -899,12 +981,14 @@ parameters:
                             v0.5: 509
                         downloads_major:
                             v0: 10477
+                        adoption_rate: 88.6
                         package_name: slim/csrf
                     slim_extras:
                         downloads_minor:
                             v2.0: 3877
                         downloads_major:
                             v2: 3877
+                        adoption_rate: !!float 100
                         package_name: slim/extras
                     slim_flash:
                         downloads_minor:
@@ -913,6 +997,7 @@ parameters:
                             v0.1: 2494
                         downloads_major:
                             v0: 14145
+                        adoption_rate: 55.6
                         package_name: slim/flash
                     slim_http:
                         downloads_minor:
@@ -920,6 +1005,7 @@ parameters:
                             v0.3: 1109
                         downloads_major:
                             v0: 1707
+                        adoption_rate: !!float 35
                         package_name: slim/http
                     slim_http_cache:
                         downloads_minor:
@@ -927,24 +1013,28 @@ parameters:
                             v0.3: 2401
                         downloads_major:
                             v0: 10401
+                        adoption_rate: 76.9
                         package_name: slim/http-cache
                     slim_logger:
                         downloads_minor:
                             v0.1: 2089
                         downloads_major:
                             v0: 2089
+                        adoption_rate: !!float 100
                         package_name: slim/logger
                     slim_middleware:
                         downloads_minor:
                             v1.0: 1159
                         downloads_major:
                             v1: 1159
+                        adoption_rate: !!float 100
                         package_name: slim/middleware
                     slim_pdo:
                         downloads_minor:
                             v1.10: 3626
                         downloads_major:
                             v1: 3626
+                        adoption_rate: !!float 100
                         package_name: slim/pdo
                     slim_php_view:
                         downloads_minor:
@@ -952,6 +1042,7 @@ parameters:
                             v2.1: 842
                         downloads_major:
                             v2: 52736
+                        adoption_rate: 98.4
                         package_name: slim/php-view
                     slim_slim:
                         downloads_minor:
@@ -976,12 +1067,14 @@ parameters:
                             v3: 180573
                             v2: 57586
                             v1: 1569
+                        adoption_rate: 42.4
                         package_name: slim/slim
                     slim_slim_skeleton:
                         downloads_minor:
                             v3.1: 4952
                         downloads_major:
                             v3: 4952
+                        adoption_rate: !!float 100
                         package_name: slim/slim-skeleton
                     slim_twig_view:
                         downloads_minor:
@@ -994,12 +1087,14 @@ parameters:
                         downloads_major:
                             v2: 35144
                             v1: 4616
+                        adoption_rate: 12.3
                         package_name: slim/twig-view
                     slim_views:
                         downloads_minor:
                             v0.1: 15848
                         downloads_major:
                             v0: 15848
+                        adoption_rate: !!float 100
                         package_name: slim/views
                 name: Slim
             symfony:
@@ -1009,24 +1104,28 @@ parameters:
                             v1.0: 10016
                         downloads_major:
                             v1: 10016
+                        adoption_rate: !!float 100
                         package_name: symfony/acl-bundle
                     symfony_amqp_pack:
                         downloads_minor:
                             v1.0: 7619
                         downloads_major:
                             v1: 7619
+                        adoption_rate: !!float 100
                         package_name: symfony/amqp-pack
                     symfony_annotations_pack:
                         downloads_minor:
                             v1.0: 1554
                         downloads_major:
                             v1: 1554
+                        adoption_rate: !!float 100
                         package_name: symfony/annotations-pack
                     symfony_apache_pack:
                         downloads_minor:
                             v1.0: 87147
                         downloads_major:
                             v1: 87147
+                        adoption_rate: !!float 100
                         package_name: symfony/apache-pack
                     symfony_asset:
                         downloads_minor:
@@ -1042,6 +1141,7 @@ parameters:
                             v4: 443885
                             v3: 48471
                             v2: 10782
+                        adoption_rate: 75.9
                         package_name: symfony/asset
                     symfony_assetic_bundle:
                         downloads_minor:
@@ -1054,6 +1154,7 @@ parameters:
                             v2.1: 1178
                         downloads_major:
                             v2: 328760
+                        adoption_rate: 89.5
                         package_name: symfony/assetic-bundle
                     symfony_browser_kit:
                         downloads_minor:
@@ -1075,6 +1176,7 @@ parameters:
                             v4: 817787
                             v3: 324191
                             v2: 82550
+                        adoption_rate: 57.6
                         package_name: symfony/browser-kit
                     symfony_cache:
                         downloads_minor:
@@ -1087,6 +1189,7 @@ parameters:
                         downloads_major:
                             v4: 745809
                             v3: 160240
+                        adoption_rate: 69.5
                         package_name: symfony/cache
                     symfony_class_loader:
                         downloads_minor:
@@ -1104,6 +1207,7 @@ parameters:
                         downloads_major:
                             v3: 788043
                             v2: 42346
+                        adoption_rate: !!float 89
                         package_name: symfony/class-loader
                     symfony_config:
                         downloads_minor:
@@ -1126,6 +1230,7 @@ parameters:
                             v4: 1008351
                             v3: 762119
                             v2: 124612
+                        adoption_rate: 45.9
                         package_name: symfony/config
                     symfony_console:
                         downloads_minor:
@@ -1147,12 +1252,14 @@ parameters:
                             v4: 2658628
                             v3: 1771330
                             v2: 439745
+                        adoption_rate: 46.9
                         package_name: symfony/console
                     symfony_contracts:
                         downloads_minor:
                             v1.0: 2745118
                         downloads_major:
                             v1: 2745118
+                        adoption_rate: !!float 100
                         package_name: symfony/contracts
                     symfony_css_selector:
                         downloads_minor:
@@ -1175,6 +1282,7 @@ parameters:
                             v4: 2143254
                             v3: 990706
                             v2: 216213
+                        adoption_rate: 55.6
                         package_name: symfony/css-selector
                     symfony_debug:
                         downloads_minor:
@@ -1196,6 +1304,7 @@ parameters:
                             v4: 2370004
                             v3: 1820328
                             v2: 183810
+                        adoption_rate: 47.1
                         package_name: symfony/debug
                     symfony_debug_bundle:
                         downloads_minor:
@@ -1208,12 +1317,14 @@ parameters:
                             v4: 275504
                             v3: 22255
                             v2: 753
+                        adoption_rate: 80.7
                         package_name: symfony/debug-bundle
                     symfony_debug_pack:
                         downloads_minor:
                             v1.0: 213685
                         downloads_major:
                             v1: 213685
+                        adoption_rate: !!float 100
                         package_name: symfony/debug-pack
                     symfony_dependency_injection:
                         downloads_minor:
@@ -1234,6 +1345,7 @@ parameters:
                             v4: 894574
                             v3: 678091
                             v2: 80575
+                        adoption_rate: 45.8
                         package_name: symfony/dependency-injection
                     symfony_doctrine_bridge:
                         downloads_minor:
@@ -1250,6 +1362,7 @@ parameters:
                             v4: 505100
                             v3: 33647
                             v2: 6425
+                        adoption_rate: 79.2
                         package_name: symfony/doctrine-bridge
                     symfony_dom_crawler:
                         downloads_minor:
@@ -1271,6 +1384,7 @@ parameters:
                             v4: 845264
                             v3: 743136
                             v2: 147514
+                        adoption_rate: 41.2
                         package_name: symfony/dom-crawler
                     symfony_dotenv:
                         downloads_minor:
@@ -1282,6 +1396,7 @@ parameters:
                         downloads_major:
                             v4: 551486
                             v3: 76810
+                        adoption_rate: 75.3
                         package_name: symfony/dotenv
                     symfony_event_dispatcher:
                         downloads_minor:
@@ -1305,6 +1420,7 @@ parameters:
                             v4: 2706949
                             v3: 1123850
                             v2: 584446
+                        adoption_rate: 51.6
                         package_name: symfony/event-dispatcher
                     symfony_expression_language:
                         downloads_minor:
@@ -1323,6 +1439,7 @@ parameters:
                             v4: 465594
                             v3: 129102
                             v2: 27317
+                        adoption_rate: 64.9
                         package_name: symfony/expression-language
                     symfony_filesystem:
                         downloads_minor:
@@ -1342,6 +1459,7 @@ parameters:
                             v4: 1599231
                             v3: 994759
                             v2: 145776
+                        adoption_rate: 50.8
                         package_name: symfony/filesystem
                     symfony_finder:
                         downloads_minor:
@@ -1363,6 +1481,7 @@ parameters:
                             v4: 2619752
                             v3: 1607635
                             v2: 216497
+                        adoption_rate: !!float 52
                         package_name: symfony/finder
                     symfony_flex:
                         downloads_minor:
@@ -1371,6 +1490,7 @@ parameters:
                             v1.0: 14746
                         downloads_major:
                             v1: 580095
+                        adoption_rate: 67.4
                         package_name: symfony/flex
                     symfony_force_lowest:
                         downloads_minor:
@@ -1379,6 +1499,7 @@ parameters:
                         downloads_major:
                             v4: 1056
                             v3: 1428
+                        adoption_rate: 42.5
                         package_name: symfony/force-lowest
                     symfony_form:
                         downloads_minor:
@@ -1398,6 +1519,7 @@ parameters:
                             v4: 388569
                             v3: 64505
                             v2: 65999
+                        adoption_rate: 64.3
                         package_name: symfony/form
                     symfony_framework_bundle:
                         downloads_minor:
@@ -1416,6 +1538,7 @@ parameters:
                             v4: 587162
                             v3: 67474
                             v2: 12142
+                        adoption_rate: 72.2
                         package_name: symfony/framework-bundle
                     symfony_framework_standard_edition:
                         downloads_minor:
@@ -1424,6 +1547,7 @@ parameters:
                         downloads_major:
                             v3: 5400
                             v2: 651
+                        adoption_rate: 89.2
                         package_name: symfony/framework-standard-edition
                     symfony_http_foundation:
                         downloads_minor:
@@ -1446,6 +1570,7 @@ parameters:
                             v4: 2220110
                             v3: 1295701
                             v2: 224454
+                        adoption_rate: !!float 52
                         package_name: symfony/http-foundation
                     symfony_http_kernel:
                         downloads_minor:
@@ -1467,6 +1592,7 @@ parameters:
                             v4: 2104319
                             v3: 1166758
                             v2: 146176
+                        adoption_rate: 53.4
                         package_name: symfony/http-kernel
                     symfony_icu:
                         downloads_minor:
@@ -1475,6 +1601,7 @@ parameters:
                             v1.0: 10860
                         downloads_major:
                             v1: 22397
+                        adoption_rate: 22.8
                         package_name: symfony/icu
                     symfony_inflector:
                         downloads_minor:
@@ -1488,6 +1615,7 @@ parameters:
                         downloads_major:
                             v4: 744140
                             v3: 99862
+                        adoption_rate: 75.3
                         package_name: symfony/inflector
                     symfony_intl:
                         downloads_minor:
@@ -1507,6 +1635,7 @@ parameters:
                             v4: 473357
                             v3: 121522
                             v2: 15335
+                        adoption_rate: 67.2
                         package_name: symfony/intl
                     symfony_ldap:
                         downloads_minor:
@@ -1518,6 +1647,7 @@ parameters:
                             v4: 11378
                             v3: 5106
                             v2: 503
+                        adoption_rate: 59.1
                         package_name: symfony/ldap
                     symfony_locale:
                         downloads_minor:
@@ -1526,6 +1656,7 @@ parameters:
                             v2.0: 758
                         downloads_major:
                             v2: 3348
+                        adoption_rate: 57.5
                         package_name: symfony/locale
                     symfony_lock:
                         downloads_minor:
@@ -1536,6 +1667,7 @@ parameters:
                         downloads_major:
                             v4: 78230
                             v3: 22093
+                        adoption_rate: 67.4
                         package_name: symfony/lock
                     symfony_maker_bundle:
                         downloads_minor:
@@ -1552,18 +1684,21 @@ parameters:
                             v1.0: 816
                         downloads_major:
                             v1: 352769
+                        adoption_rate: 85.2
                         package_name: symfony/maker-bundle
                     symfony_mercure:
                         downloads_minor:
                             v0.1: 13216
                         downloads_major:
                             v0: 13216
+                        adoption_rate: !!float 100
                         package_name: symfony/mercure
                     symfony_mercure_bundle:
                         downloads_minor:
                             v0.1: 11891
                         downloads_major:
                             v0: 11891
+                        adoption_rate: !!float 100
                         package_name: symfony/mercure-bundle
                     symfony_messenger:
                         downloads_minor:
@@ -1571,6 +1706,7 @@ parameters:
                             v4.1: 9142
                         downloads_major:
                             v4: 70713
+                        adoption_rate: 87.1
                         package_name: symfony/messenger
                     symfony_monolog_bridge:
                         downloads_minor:
@@ -1588,6 +1724,7 @@ parameters:
                             v4: 480564
                             v3: 42795
                             v2: 10344
+                        adoption_rate: 77.3
                         package_name: symfony/monolog-bridge
                     symfony_monolog_bundle:
                         downloads_minor:
@@ -1610,6 +1747,7 @@ parameters:
                         downloads_major:
                             v3: 960799
                             v2: 199732
+                        adoption_rate: 68.3
                         package_name: symfony/monolog-bundle
                     symfony_options_resolver:
                         downloads_minor:
@@ -1628,12 +1766,14 @@ parameters:
                             v4: 1030417
                             v3: 284771
                             v2: 103789
+                        adoption_rate: 63.4
                         package_name: symfony/options-resolver
                     symfony_orm_pack:
                         downloads_minor:
                             v1.0: 361689
                         downloads_major:
                             v1: 361689
+                        adoption_rate: !!float 100
                         package_name: symfony/orm-pack
                     symfony_panther:
                         downloads_minor:
@@ -1642,6 +1782,7 @@ parameters:
                             v0.1: 1190
                         downloads_major:
                             v0: 175826
+                        adoption_rate: 72.5
                         package_name: symfony/panther
                     symfony_phpunit_bridge:
                         downloads_minor:
@@ -1658,6 +1799,7 @@ parameters:
                             v4: 420233
                             v3: 469020
                             v2: 42191
+                        adoption_rate: 39.8
                         package_name: symfony/phpunit-bridge
                     symfony_polyfill:
                         downloads_minor:
@@ -1671,6 +1813,7 @@ parameters:
                             v1.2: 1211
                         downloads_major:
                             v1: 18529
+                        adoption_rate: 14.2
                         package_name: symfony/polyfill
                     symfony_polyfill_apcu:
                         downloads_minor:
@@ -1687,6 +1830,7 @@ parameters:
                             v1.1: 9969
                         downloads_major:
                             v1: 921134
+                        adoption_rate: 24.2
                         package_name: symfony/polyfill-apcu
                     symfony_polyfill_ctype:
                         downloads_minor:
@@ -1696,6 +1840,7 @@ parameters:
                             v1.8: 215513
                         downloads_major:
                             v1: 5216204
+                        adoption_rate: 45.3
                         package_name: symfony/polyfill-ctype
                     symfony_polyfill_iconv:
                         downloads_minor:
@@ -1713,6 +1858,7 @@ parameters:
                             v1.0: 777
                         downloads_major:
                             v1: 1738947
+                        adoption_rate: 64.3
                         package_name: symfony/polyfill-iconv
                     symfony_polyfill_intl_grapheme:
                         downloads_minor:
@@ -1721,6 +1867,7 @@ parameters:
                             v1.9: 756
                         downloads_major:
                             v1: 16906
+                        adoption_rate: 34.9
                         package_name: symfony/polyfill-intl-grapheme
                     symfony_polyfill_intl_icu:
                         downloads_minor:
@@ -1738,6 +1885,7 @@ parameters:
                             v1.0: 2653
                         downloads_major:
                             v1: 1283906
+                        adoption_rate: !!float 29
                         package_name: symfony/polyfill-intl-icu
                     symfony_polyfill_intl_idn:
                         downloads_minor:
@@ -1745,12 +1893,14 @@ parameters:
                             v1.10: 481542
                         downloads_major:
                             v1: 1570347
+                        adoption_rate: 69.3
                         package_name: symfony/polyfill-intl-idn
                     symfony_polyfill_intl_messageformatter:
                         downloads_minor:
                             v1.11: 743
                         downloads_major:
                             v1: 743
+                        adoption_rate: !!float 100
                         package_name: symfony/polyfill-intl-messageformatter
                     symfony_polyfill_intl_normalizer:
                         downloads_minor:
@@ -1759,6 +1909,7 @@ parameters:
                             v1.9: 818
                         downloads_major:
                             v1: 17483
+                        adoption_rate: 32.5
                         package_name: symfony/polyfill-intl-normalizer
                     symfony_polyfill_mbstring:
                         downloads_minor:
@@ -1776,6 +1927,7 @@ parameters:
                             v1.0: 3957
                         downloads_major:
                             v1: 5779329
+                        adoption_rate: 39.8
                         package_name: symfony/polyfill-mbstring
                     symfony_polyfill_php54:
                         downloads_minor:
@@ -1793,6 +1945,7 @@ parameters:
                             v1.0: 2890
                         downloads_major:
                             v1: 398108
+                        adoption_rate: !!float 20
                         package_name: symfony/polyfill-php54
                     symfony_polyfill_php55:
                         downloads_minor:
@@ -1810,6 +1963,7 @@ parameters:
                             v1.0: 1844
                         downloads_major:
                             v1: 406644
+                        adoption_rate: !!float 20
                         package_name: symfony/polyfill-php55
                     symfony_polyfill_php56:
                         downloads_minor:
@@ -1827,6 +1981,7 @@ parameters:
                             v1.0: 3916
                         downloads_major:
                             v1: 1718510
+                        adoption_rate: 30.5
                         package_name: symfony/polyfill-php56
                     symfony_polyfill_php70:
                         downloads_minor:
@@ -1844,6 +1999,7 @@ parameters:
                             v1.0: 2754
                         downloads_major:
                             v1: 2155697
+                        adoption_rate: 34.2
                         package_name: symfony/polyfill-php70
                     symfony_polyfill_php71:
                         downloads_minor:
@@ -1852,6 +2008,7 @@ parameters:
                             v1.8: 1220
                         downloads_major:
                             v1: 6583
+                        adoption_rate: 32.6
                         package_name: symfony/polyfill-php71
                     symfony_polyfill_php72:
                         downloads_minor:
@@ -1865,6 +2022,7 @@ parameters:
                             v1.4: 3485
                         downloads_major:
                             v1: 2925767
+                        adoption_rate: 48.6
                         package_name: symfony/polyfill-php72
                     symfony_polyfill_php73:
                         downloads_minor:
@@ -1872,6 +2030,7 @@ parameters:
                             v1.10: 8549
                         downloads_major:
                             v1: 17160
+                        adoption_rate: 50.2
                         package_name: symfony/polyfill-php73
                     symfony_polyfill_util:
                         downloads_minor:
@@ -1889,6 +2048,7 @@ parameters:
                             v1.0: 3999
                         downloads_major:
                             v1: 1719260
+                        adoption_rate: 30.4
                         package_name: symfony/polyfill-util
                     symfony_polyfill_xml:
                         downloads_minor:
@@ -1902,6 +2062,7 @@ parameters:
                             v1.3: 8221
                         downloads_major:
                             v1: 46351
+                        adoption_rate: 23.2
                         package_name: symfony/polyfill-xml
                     symfony_process:
                         downloads_minor:
@@ -1923,18 +2084,21 @@ parameters:
                             v4: 2400679
                             v3: 1587667
                             v2: 320970
+                        adoption_rate: !!float 48
                         package_name: symfony/process
                     symfony_profiler_pack:
                         downloads_minor:
                             v1.0: 343186
                         downloads_major:
                             v1: 343186
+                        adoption_rate: !!float 100
                         package_name: symfony/profiler-pack
                     symfony_propel1_bridge:
                         downloads_minor:
                             v2.6: 706
                         downloads_major:
                             v2: 706
+                        adoption_rate: !!float 100
                         package_name: symfony/propel1-bridge
                     symfony_property_access:
                         downloads_minor:
@@ -1953,6 +2117,7 @@ parameters:
                             v4: 687619
                             v3: 202816
                             v2: 42696
+                        adoption_rate: 63.8
                         package_name: symfony/property-access
                     symfony_property_info:
                         downloads_minor:
@@ -1963,6 +2128,7 @@ parameters:
                         downloads_major:
                             v4: 379766
                             v3: 24512
+                        adoption_rate: 81.4
                         package_name: symfony/property-info
                     symfony_proxy_manager_bridge:
                         downloads_minor:
@@ -1978,6 +2144,7 @@ parameters:
                             v4: 80660
                             v3: 22868
                             v2: 4798
+                        adoption_rate: !!float 64
                         package_name: symfony/proxy-manager-bridge
                     symfony_psr_http_message_bridge:
                         downloads_minor:
@@ -1990,12 +2157,14 @@ parameters:
                         downloads_major:
                             v1: 850093
                             v0: 16972
+                        adoption_rate: 48.2
                         package_name: symfony/psr-http-message-bridge
                     symfony_requirements_checker:
                         downloads_minor:
                             v1.1: 22784
                         downloads_major:
                             v1: 22784
+                        adoption_rate: !!float 100
                         package_name: symfony/requirements-checker
                     symfony_routing:
                         downloads_minor:
@@ -2018,6 +2187,7 @@ parameters:
                             v4: 2042815
                             v3: 1141560
                             v2: 130327
+                        adoption_rate: 53.9
                         package_name: symfony/routing
                     symfony_security:
                         downloads_minor:
@@ -2035,6 +2205,7 @@ parameters:
                             v4: 190107
                             v3: 62214
                             v2: 14076
+                        adoption_rate: 47.4
                         package_name: symfony/security
                     symfony_security_acl:
                         downloads_minor:
@@ -2044,6 +2215,7 @@ parameters:
                         downloads_major:
                             v3: 336077
                             v2: 33282
+                        adoption_rate: !!float 91
                         package_name: symfony/security-acl
                     symfony_security_bundle:
                         downloads_minor:
@@ -2057,6 +2229,7 @@ parameters:
                             v4: 461154
                             v3: 36399
                             v2: 3283
+                        adoption_rate: 76.2
                         package_name: symfony/security-bundle
                     symfony_security_core:
                         downloads_minor:
@@ -2073,6 +2246,7 @@ parameters:
                             v4: 337928
                             v3: 16391
                             v2: 47292
+                        adoption_rate: 83.1
                         package_name: symfony/security-core
                     symfony_security_csrf:
                         downloads_minor:
@@ -2085,18 +2259,21 @@ parameters:
                             v4: 313668
                             v3: 14775
                             v2: 7445
+                        adoption_rate: 93.4
                         package_name: symfony/security-csrf
                     symfony_security_guard:
                         downloads_minor:
                             v4.2: 307818
                         downloads_major:
                             v4: 307818
+                        adoption_rate: !!float 100
                         package_name: symfony/security-guard
                     symfony_security_http:
                         downloads_minor:
                             v4.2: 307748
                         downloads_major:
                             v4: 307748
+                        adoption_rate: !!float 100
                         package_name: symfony/security-http
                     symfony_serializer:
                         downloads_minor:
@@ -2114,12 +2291,14 @@ parameters:
                             v4: 503665
                             v3: 446743
                             v2: 61913
+                        adoption_rate: 42.9
                         package_name: symfony/serializer
                     symfony_serializer_pack:
                         downloads_minor:
                             v1.0: 246660
                         downloads_major:
                             v1: 246660
+                        adoption_rate: !!float 100
                         package_name: symfony/serializer-pack
                     symfony_stopwatch:
                         downloads_minor:
@@ -2138,12 +2317,14 @@ parameters:
                             v4: 798665
                             v3: 228102
                             v2: 36699
+                        adoption_rate: !!float 66
                         package_name: symfony/stopwatch
                     symfony_swiftmailer_bridge:
                         downloads_minor:
                             v2.8: 1290
                         downloads_major:
                             v2: 1290
+                        adoption_rate: !!float 100
                         package_name: symfony/swiftmailer-bridge
                     symfony_swiftmailer_bundle:
                         downloads_minor:
@@ -2159,6 +2340,7 @@ parameters:
                         downloads_major:
                             v3: 446762
                             v2: 510671
+                        adoption_rate: !!float 45
                         package_name: symfony/swiftmailer-bundle
                     symfony_symfony:
                         downloads_minor:
@@ -2181,12 +2363,14 @@ parameters:
                             v4: 30826
                             v3: 542303
                             v2: 197884
+                        adoption_rate: 3.2
                         package_name: symfony/symfony
                     symfony_symfony_demo:
                         downloads_minor:
                             v1.3: 2143
                         downloads_major:
                             v1: 2143
+                        adoption_rate: !!float 100
                         package_name: symfony/symfony-demo
                     symfony_templating:
                         downloads_minor:
@@ -2202,12 +2386,14 @@ parameters:
                             v4: 293133
                             v3: 43898
                             v2: 8759
+                        adoption_rate: 71.9
                         package_name: symfony/templating
                     symfony_test_pack:
                         downloads_minor:
                             v1.0: 180909
                         downloads_major:
                             v1: 180909
+                        adoption_rate: !!float 100
                         package_name: symfony/test-pack
                     symfony_thanks:
                         downloads_minor:
@@ -2215,6 +2401,7 @@ parameters:
                             v1.0: 18755
                         downloads_major:
                             v1: 174380
+                        adoption_rate: 89.2
                         package_name: symfony/thanks
                     symfony_translation:
                         downloads_minor:
@@ -2237,6 +2424,7 @@ parameters:
                             v4: 2476423
                             v3: 1127477
                             v2: 177895
+                        adoption_rate: 56.2
                         package_name: symfony/translation
                     symfony_twig_bridge:
                         downloads_minor:
@@ -2256,6 +2444,7 @@ parameters:
                             v4: 520009
                             v3: 107740
                             v2: 20701
+                        adoption_rate: 66.9
                         package_name: symfony/twig-bridge
                     symfony_twig_bundle:
                         downloads_minor:
@@ -2271,6 +2460,7 @@ parameters:
                             v4: 501922
                             v3: 49547
                             v2: 3866
+                        adoption_rate: !!float 76
                         package_name: symfony/twig-bundle
                     symfony_validator:
                         downloads_minor:
@@ -2292,6 +2482,7 @@ parameters:
                             v4: 502486
                             v3: 434958
                             v2: 110128
+                        adoption_rate: 40.8
                         package_name: symfony/validator
                     symfony_var_dumper:
                         downloads_minor:
@@ -2310,12 +2501,14 @@ parameters:
                             v4: 2147318
                             v3: 1015313
                             v2: 98800
+                        adoption_rate: 57.7
                         package_name: symfony/var-dumper
                     symfony_var_exporter:
                         downloads_minor:
                             v4.2: 651036
                         downloads_major:
                             v4: 651036
+                        adoption_rate: !!float 100
                         package_name: symfony/var-exporter
                     symfony_web_link:
                         downloads_minor:
@@ -2326,6 +2519,7 @@ parameters:
                         downloads_major:
                             v4: 225120
                             v3: 9731
+                        adoption_rate: 86.1
                         package_name: symfony/web-link
                     symfony_web_profiler_bundle:
                         downloads_minor:
@@ -2343,6 +2537,7 @@ parameters:
                             v4: 389363
                             v3: 40503
                             v2: 9945
+                        adoption_rate: 73.2
                         package_name: symfony/web-profiler-bundle
                     symfony_web_server_bundle:
                         downloads_minor:
@@ -2352,6 +2547,7 @@ parameters:
                         downloads_major:
                             v4: 247551
                             v3: 14957
+                        adoption_rate: !!float 82
                         package_name: symfony/web-server-bundle
                     symfony_webpack_encore_bundle:
                         downloads_minor:
@@ -2363,12 +2559,14 @@ parameters:
                             v1.0: 12375
                         downloads_major:
                             v1: 130453
+                        adoption_rate: 6.7
                         package_name: symfony/webpack-encore-bundle
                     symfony_webpack_encore_pack:
                         downloads_minor:
                             v1.0: 80457
                         downloads_major:
                             v1: 80457
+                        adoption_rate: !!float 100
                         package_name: symfony/webpack-encore-pack
                     symfony_workflow:
                         downloads_minor:
@@ -2380,6 +2578,7 @@ parameters:
                         downloads_major:
                             v4: 69130
                             v3: 14632
+                        adoption_rate: 74.2
                         package_name: symfony/workflow
                     symfony_yaml:
                         downloads_minor:
@@ -2403,6 +2602,7 @@ parameters:
                             v4: 1403330
                             v3: 1622937
                             v2: 274494
+                        adoption_rate: 35.9
                         package_name: symfony/yaml
                 name: Symfony
             yiisoft:
@@ -2412,12 +2612,14 @@ parameters:
                             v1.1: 39822
                         downloads_major:
                             v1: 39822
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii
                     yiisoft_yii2:
                         downloads_minor:
                             v2.0: 94811
                         downloads_major:
                             v2: 94811
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2
                     yiisoft_yii2_apidoc:
                         downloads_minor:
@@ -2425,18 +2627,21 @@ parameters:
                             v2.0: 1466
                         downloads_major:
                             v2: 6401
+                        adoption_rate: 77.1
                         package_name: yiisoft/yii2-apidoc
                     yiisoft_yii2_app_advanced:
                         downloads_minor:
                             v2.0: 7662
                         downloads_major:
                             v2: 7662
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-app-advanced
                     yiisoft_yii2_app_basic:
                         downloads_minor:
                             v2.0: 14346
                         downloads_major:
                             v2: 14346
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-app-basic
                     yiisoft_yii2_authclient:
                         downloads_minor:
@@ -2444,36 +2649,42 @@ parameters:
                             v2.0: 2814
                         downloads_major:
                             v2: 41334
+                        adoption_rate: 93.2
                         package_name: yiisoft/yii2-authclient
                     yiisoft_yii2_bootstrap:
                         downloads_minor:
                             v2.0: 155134
                         downloads_major:
                             v2: 155134
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-bootstrap
                     yiisoft_yii2_bootstrap4:
                         downloads_minor:
                             v2.0: 4653
                         downloads_major:
                             v2: 4653
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-bootstrap4
                     yiisoft_yii2_codeception:
                         downloads_minor:
                             v2.0: 19840
                         downloads_major:
                             v2: 19840
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-codeception
                     yiisoft_yii2_coding_standards:
                         downloads_minor:
                             v2.0: 7448
                         downloads_major:
                             v2: 7448
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-coding-standards
                     yiisoft_yii2_composer:
                         downloads_minor:
                             v2.0: 177608
                         downloads_major:
                             v2: 177608
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-composer
                     yiisoft_yii2_debug:
                         downloads_minor:
@@ -2481,18 +2692,21 @@ parameters:
                             v2.0: 104663
                         downloads_major:
                             v2: 161332
+                        adoption_rate: 35.1
                         package_name: yiisoft/yii2-debug
                     yiisoft_yii2_elasticsearch:
                         downloads_minor:
                             v2.0: 5658
                         downloads_major:
                             v2: 5658
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-elasticsearch
                     yiisoft_yii2_faker:
                         downloads_minor:
                             v2.0: 105393
                         downloads_major:
                             v2: 105393
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-faker
                     yiisoft_yii2_gii:
                         downloads_minor:
@@ -2500,12 +2714,14 @@ parameters:
                             v2.0: 95270
                         downloads_major:
                             v2: 124952
+                        adoption_rate: 23.8
                         package_name: yiisoft/yii2-gii
                     yiisoft_yii2_httpclient:
                         downloads_minor:
                             v2.0: 63325
                         downloads_major:
                             v2: 63325
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-httpclient
                     yiisoft_yii2_imagine:
                         downloads_minor:
@@ -2513,12 +2729,14 @@ parameters:
                             v2.0: 5364
                         downloads_major:
                             v2: 31293
+                        adoption_rate: 82.9
                         package_name: yiisoft/yii2-imagine
                     yiisoft_yii2_jui:
                         downloads_minor:
                             v2.0: 55522
                         downloads_major:
                             v2: 55522
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-jui
                     yiisoft_yii2_mongodb:
                         downloads_minor:
@@ -2526,6 +2744,7 @@ parameters:
                             v2.0: 536
                         downloads_major:
                             v2: 13567
+                        adoption_rate: !!float 96
                         package_name: yiisoft/yii2-mongodb
                     yiisoft_yii2_queue:
                         downloads_minor:
@@ -2534,30 +2753,35 @@ parameters:
                             v2.0: 7365
                         downloads_major:
                             v2: 61273
+                        adoption_rate: 13.8
                         package_name: yiisoft/yii2-queue
                     yiisoft_yii2_redis:
                         downloads_minor:
                             v2.0: 66217
                         downloads_major:
                             v2: 66217
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-redis
                     yiisoft_yii2_shell:
                         downloads_minor:
                             v2.0: 2597
                         downloads_major:
                             v2: 2597
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-shell
                     yiisoft_yii2_smarty:
                         downloads_minor:
                             v2.0: 3188
                         downloads_major:
                             v2: 3188
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-smarty
                     yiisoft_yii2_sphinx:
                         downloads_minor:
                             v2.0: 7570
                         downloads_major:
                             v2: 7570
+                        adoption_rate: !!float 100
                         package_name: yiisoft/yii2-sphinx
                     yiisoft_yii2_swiftmailer:
                         downloads_minor:
@@ -2565,6 +2789,7 @@ parameters:
                             v2.0: 66000
                         downloads_major:
                             v2: 164075
+                        adoption_rate: 59.8
                         package_name: yiisoft/yii2-swiftmailer
                     yiisoft_yii2_twig:
                         downloads_minor:
@@ -2573,6 +2798,7 @@ parameters:
                             v2.0: 4485
                         downloads_major:
                             v2: 12351
+                        adoption_rate: 47.6
                         package_name: yiisoft/yii2-twig
                 name: Yii
             zendframework:
@@ -2582,12 +2808,14 @@ parameters:
                             v3.0: 1085
                         downloads_major:
                             v3: 1085
+                        adoption_rate: !!float 100
                         package_name: zendframework/skeleton-application
                     zendframework_zend_auradi_config:
                         downloads_minor:
                             v1.0: 1517
                         downloads_major:
                             v1: 1517
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-auradi-config
                     zendframework_zend_authentication:
                         downloads_minor:
@@ -2596,6 +2824,7 @@ parameters:
                             v2.2: 575
                         downloads_major:
                             v2: 92879
+                        adoption_rate: 70.6
                         package_name: zendframework/zend-authentication
                     zendframework_zend_barcode:
                         downloads_minor:
@@ -2605,6 +2834,7 @@ parameters:
                             v2.2: 804
                         downloads_major:
                             v2: 83148
+                        adoption_rate: 82.2
                         package_name: zendframework/zend-barcode
                     zendframework_zend_cache:
                         downloads_minor:
@@ -2619,6 +2849,7 @@ parameters:
                             v2.0: 745
                         downloads_major:
                             v2: 134680
+                        adoption_rate: 67.4
                         package_name: zendframework/zend-cache
                     zendframework_zend_captcha:
                         downloads_minor:
@@ -2627,6 +2858,7 @@ parameters:
                             v2.5: 6471
                         downloads_major:
                             v2: 183234
+                        adoption_rate: !!float 91
                         package_name: zendframework/zend-captcha
                     zendframework_zend_code:
                         downloads_minor:
@@ -2643,12 +2875,14 @@ parameters:
                         downloads_major:
                             v3: 1158788
                             v2: 198983
+                        adoption_rate: 71.1
                         package_name: zendframework/zend-code
                     zendframework_zend_coding_standard:
                         downloads_minor:
                             v1.0: 4410
                         downloads_major:
                             v1: 4410
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-coding-standard
                     zendframework_zend_component_installer:
                         downloads_minor:
@@ -2661,6 +2895,7 @@ parameters:
                             v2: 18306
                             v1: 22709
                             v0: 3917
+                        adoption_rate: 40.7
                         package_name: zendframework/zend-component-installer
                     zendframework_zend_config:
                         downloads_minor:
@@ -2673,6 +2908,7 @@ parameters:
                         downloads_major:
                             v3: 64748
                             v2: 234891
+                        adoption_rate: 20.2
                         package_name: zendframework/zend-config
                     zendframework_zend_config_aggregator:
                         downloads_minor:
@@ -2682,12 +2918,14 @@ parameters:
                         downloads_major:
                             v1: 29338
                             v0: 1408
+                        adoption_rate: 82.1
                         package_name: zendframework/zend-config-aggregator
                     zendframework_zend_config_aggregator_modulemanager:
                         downloads_minor:
                             v1.0: 748
                         downloads_major:
                             v1: 748
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-config-aggregator-modulemanager
                     zendframework_zend_console:
                         downloads_minor:
@@ -2698,6 +2936,7 @@ parameters:
                             v2.4: 11168
                         downloads_major:
                             v2: 233822
+                        adoption_rate: 11.6
                         package_name: zendframework/zend-console
                     zendframework_zend_crypt:
                         downloads_minor:
@@ -2712,6 +2951,7 @@ parameters:
                         downloads_major:
                             v3: 45769
                             v2: 198403
+                        adoption_rate: 15.5
                         package_name: zendframework/zend-crypt
                     zendframework_zend_db:
                         downloads_minor:
@@ -2723,6 +2963,7 @@ parameters:
                             v2.2: 969
                         downloads_major:
                             v2: 237200
+                        adoption_rate: 57.4
                         package_name: zendframework/zend-db
                     zendframework_zend_debug:
                         downloads_minor:
@@ -2730,6 +2971,7 @@ parameters:
                             v2.5: 17163
                         downloads_major:
                             v2: 60230
+                        adoption_rate: 71.5
                         package_name: zendframework/zend-debug
                     zendframework_zend_developer_tools:
                         downloads_minor:
@@ -2740,6 +2982,7 @@ parameters:
                         downloads_major:
                             v1: 29974
                             v0: 2670
+                        adoption_rate: 58.5
                         package_name: zendframework/zend-developer-tools
                     zendframework_zend_di:
                         downloads_minor:
@@ -2751,6 +2994,7 @@ parameters:
                         downloads_major:
                             v3: 1744
                             v2: 197298
+                        adoption_rate: 0.5
                         package_name: zendframework/zend-di
                     zendframework_zend_diactoros:
                         downloads_minor:
@@ -2766,6 +3010,7 @@ parameters:
                         downloads_major:
                             v2: 131699
                             v1: 1436284
+                        adoption_rate: 8.3
                         package_name: zendframework/zend-diactoros
                     zendframework_zend_dom:
                         downloads_minor:
@@ -2774,6 +3019,7 @@ parameters:
                             v2.5: 3300
                         downloads_major:
                             v2: 61793
+                        adoption_rate: 74.3
                         package_name: zendframework/zend-dom
                     zendframework_zend_escaper:
                         downloads_minor:
@@ -2785,6 +3031,7 @@ parameters:
                             v2.0: 525
                         downloads_major:
                             v2: 809982
+                        adoption_rate: 82.3
                         package_name: zendframework/zend-escaper
                     zendframework_zend_eventmanager:
                         downloads_minor:
@@ -2801,6 +3048,7 @@ parameters:
                         downloads_major:
                             v3: 1199856
                             v2: 203150
+                        adoption_rate: 80.5
                         package_name: zendframework/zend-eventmanager
                     zendframework_zend_expressive:
                         downloads_minor:
@@ -2815,12 +3063,14 @@ parameters:
                             v3: 20210
                             v2: 6451
                             v1: 3418
+                        adoption_rate: 54.4
                         package_name: zendframework/zend-expressive
                     zendframework_zend_expressive_aurarouter:
                         downloads_minor:
                             v3.0: 538
                         downloads_major:
                             v3: 538
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-expressive-aurarouter
                     zendframework_zend_expressive_authentication:
                         downloads_minor:
@@ -2830,6 +3080,7 @@ parameters:
                         downloads_major:
                             v1: 2268
                             v0: 785
+                        adoption_rate: 46.9
                         package_name: zendframework/zend-expressive-authentication
                     zendframework_zend_expressive_authorization:
                         downloads_minor:
@@ -2838,12 +3089,14 @@ parameters:
                         downloads_major:
                             v1: 543
                             v0: 501
+                        adoption_rate: !!float 52
                         package_name: zendframework/zend-expressive-authorization
                     zendframework_zend_expressive_csrf:
                         downloads_minor:
                             v1.0: 1392
                         downloads_major:
                             v1: 1392
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-expressive-csrf
                     zendframework_zend_expressive_fastroute:
                         downloads_minor:
@@ -2855,12 +3108,14 @@ parameters:
                             v3: 16088
                             v2: 3638
                             v1: 2295
+                        adoption_rate: 73.1
                         package_name: zendframework/zend-expressive-fastroute
                     zendframework_zend_expressive_flash:
                         downloads_minor:
-                            v1.0: 2026
+                            v1.0: 2025
                         downloads_major:
-                            v1: 2026
+                            v1: 2025
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-expressive-flash
                     zendframework_zend_expressive_hal:
                         downloads_minor:
@@ -2869,33 +3124,37 @@ parameters:
                             v1.0: 871
                         downloads_major:
                             v1: 2452
+                        adoption_rate: 35.6
                         package_name: zendframework/zend-expressive-hal
                     zendframework_zend_expressive_helpers:
                         downloads_minor:
-                            v5.3: 10446
-                            v5.1: 10568
+                            v5.3: 10441
+                            v5.1: 10566
                             v5.0: 1694
-                            v4.2: 4615
-                            v4.1: 1476
+                            v4.2: 4614
+                            v4.1: 1475
                             v3.0: 610
                             v2.2: 2419
                         downloads_major:
-                            v5: 22708
-                            v4: 6091
+                            v5: 22701
+                            v4: 6089
                             v3: 610
                             v2: 2419
+                        adoption_rate: 32.8
                         package_name: zendframework/zend-expressive-helpers
                     zendframework_zend_expressive_migration:
                         downloads_minor:
                             v0.1: 956
                         downloads_major:
                             v0: 956
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-expressive-migration
                     zendframework_zend_expressive_platesrenderer:
                         downloads_minor:
-                            v2.1: 1235
+                            v2.1: 1234
                         downloads_major:
-                            v2: 1235
+                            v2: 1234
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-expressive-platesrenderer
                     zendframework_zend_expressive_router:
                         downloads_minor:
@@ -2911,6 +3170,7 @@ parameters:
                             v3: 23147
                             v2: 7083
                             v1: 3709
+                        adoption_rate: 66.7
                         package_name: zendframework/zend-expressive-router
                     zendframework_zend_expressive_session:
                         downloads_minor:
@@ -2918,33 +3178,38 @@ parameters:
                             v1.0: 932
                         downloads_major:
                             v1: 4511
+                        adoption_rate: 79.3
                         package_name: zendframework/zend-expressive-session
                     zendframework_zend_expressive_session_ext:
                         downloads_minor:
                             v1.6: 1176
-                            v1.1: 915
+                            v1.1: 914
                         downloads_major:
-                            v1: 2091
+                            v1: 2090
+                        adoption_rate: 56.3
                         package_name: zendframework/zend-expressive-session-ext
                     zendframework_zend_expressive_skeleton:
                         downloads_minor:
-                            v3.2: 1054
+                            v3.2: 1053
                         downloads_major:
-                            v3: 1054
+                            v3: 1053
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-expressive-skeleton
                     zendframework_zend_expressive_swoole:
                         downloads_minor:
                             v2.4: 666
                         downloads_major:
                             v2: 666
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-expressive-swoole
                     zendframework_zend_expressive_template:
                         downloads_minor:
-                            v2.0: 22237
-                            v1.0: 10499
+                            v2.0: 22229
+                            v1.0: 10497
                         downloads_major:
-                            v2: 22237
-                            v1: 10499
+                            v2: 22229
+                            v1: 10497
+                        adoption_rate: 67.9
                         package_name: zendframework/zend-expressive-template
                     zendframework_zend_expressive_tooling:
                         downloads_minor:
@@ -2955,15 +3220,17 @@ parameters:
                         downloads_major:
                             v1: 11438
                             v0: 1512
+                        adoption_rate: 47.9
                         package_name: zendframework/zend-expressive-tooling
                     zendframework_zend_expressive_twigrenderer:
                         downloads_minor:
-                            v2.3: 1826
-                            v2.1: 2896
+                            v2.3: 1825
+                            v2.1: 2895
                             v1.5: 1774
                         downloads_major:
-                            v2: 4722
+                            v2: 4720
                             v1: 1774
+                        adoption_rate: 28.1
                         package_name: zendframework/zend-expressive-twigrenderer
                     zendframework_zend_expressive_zendrouter:
                         downloads_minor:
@@ -2975,6 +3242,7 @@ parameters:
                             v3: 4269
                             v2: 2361
                             v1: 682
+                        adoption_rate: 58.4
                         package_name: zendframework/zend-expressive-zendrouter
                     zendframework_zend_expressive_zendviewrenderer:
                         downloads_minor:
@@ -2983,19 +3251,21 @@ parameters:
                         downloads_major:
                             v2: 5578
                             v1: 1366
+                        adoption_rate: 80.3
                         package_name: zendframework/zend-expressive-zendviewrenderer
                     zendframework_zend_feed:
                         downloads_minor:
-                            v2.12: 229244
-                            v2.11: 44931
-                            v2.10: 123000
-                            v2.9: 6219
-                            v2.8: 4551
-                            v2.7: 40766
+                            v2.12: 229109
+                            v2.11: 44919
+                            v2.10: 122963
+                            v2.9: 6217
+                            v2.8: 4550
+                            v2.7: 40749
                             v2.6: 1067
                             v2.5: 3857
                         downloads_major:
-                            v2: 453635
+                            v2: 453431
+                        adoption_rate: 50.5
                         package_name: zendframework/zend-feed
                     zendframework_zend_file:
                         downloads_minor:
@@ -3004,6 +3274,7 @@ parameters:
                             v2.5: 7840
                         downloads_major:
                             v2: 45702
+                        adoption_rate: 65.3
                         package_name: zendframework/zend-file
                     zendframework_zend_filter:
                         downloads_minor:
@@ -3017,35 +3288,38 @@ parameters:
                             v2.2: 3608
                         downloads_major:
                             v2: 349876
+                        adoption_rate: 65.4
                         package_name: zendframework/zend-filter
                     zendframework_zend_form:
                         downloads_minor:
-                            v2.14: 33178
-                            v2.13: 136076
-                            v2.12: 37577
-                            v2.11: 8537
-                            v2.10: 10049
+                            v2.14: 33169
+                            v2.13: 136032
+                            v2.12: 37572
+                            v2.11: 8534
+                            v2.10: 10046
                             v2.9: 1558
-                            v2.6: 1001
-                            v2.5: 9424
-                            v2.4: 10593
+                            v2.6: 999
+                            v2.5: 9423
+                            v2.4: 10592
                             v2.2: 513
                         downloads_major:
-                            v2: 248506
+                            v2: 248438
+                        adoption_rate: 13.4
                         package_name: zendframework/zend-form
                     zendframework_zend_http:
                         downloads_minor:
-                            v2.10: 86434
-                            v2.9: 17499
-                            v2.8: 210737
-                            v2.7: 14447
-                            v2.6: 20486
-                            v2.5: 16645
-                            v2.4: 12174
-                            v2.3: 1442
-                            v2.2: 2405
+                            v2.10: 86412
+                            v2.9: 17494
+                            v2.8: 210679
+                            v2.7: 14441
+                            v2.6: 20479
+                            v2.5: 16642
+                            v2.4: 12170
+                            v2.3: 1441
+                            v2.2: 2404
                         downloads_major:
-                            v2: 382269
+                            v2: 382162
+                        adoption_rate: 22.6
                         package_name: zendframework/zend-http
                     zendframework_zend_httphandlerrunner:
                         downloads_minor:
@@ -3053,32 +3327,35 @@ parameters:
                             v1.0: 17867
                         downloads_major:
                             v1: 38836
+                        adoption_rate: !!float 54
                         package_name: zendframework/zend-httphandlerrunner
                     zendframework_zend_hydrator:
                         downloads_minor:
-                            v3.0: 7672
-                            v2.4: 73214
-                            v2.3: 7798
-                            v2.2: 7095
+                            v3.0: 7670
+                            v2.4: 73202
+                            v2.3: 7795
+                            v2.2: 7094
                             v2.1: 1686
-                            v1.1: 214474
+                            v1.1: 214416
                             v1.0: 2612
                         downloads_major:
-                            v3: 7672
-                            v2: 89793
-                            v1: 217086
+                            v3: 7670
+                            v2: 89777
+                            v1: 217028
+                        adoption_rate: 2.4
                         package_name: zendframework/zend-hydrator
                     zendframework_zend_i18n:
                         downloads_minor:
-                            v2.9: 206503
+                            v2.9: 206446
                             v2.8: 2436
-                            v2.7: 28625
-                            v2.5: 14411
-                            v2.4: 11365
+                            v2.7: 28617
+                            v2.5: 14410
+                            v2.4: 11364
                             v2.2: 2594
                             v2.1: 1309
                         downloads_major:
-                            v2: 267243
+                            v2: 267176
+                        adoption_rate: 77.3
                         package_name: zendframework/zend-i18n
                     zendframework_zend_i18n_resources:
                         downloads_minor:
@@ -3086,19 +3363,21 @@ parameters:
                             v2.5: 17132
                         downloads_major:
                             v2: 48145
+                        adoption_rate: 64.4
                         package_name: zendframework/zend-i18n-resources
                     zendframework_zend_inputfilter:
                         downloads_minor:
-                            v2.10: 179125
-                            v2.9: 17489
-                            v2.8: 55634
-                            v2.7: 14443
+                            v2.10: 179075
+                            v2.9: 17486
+                            v2.8: 55625
+                            v2.7: 14440
                             v2.6: 502
-                            v2.5: 11845
-                            v2.4: 10674
+                            v2.5: 11842
+                            v2.4: 10673
                             v2.2: 1156
                         downloads_major:
-                            v2: 290868
+                            v2: 290799
+                        adoption_rate: 61.6
                         package_name: zendframework/zend-inputfilter
                     zendframework_zend_json:
                         downloads_minor:
@@ -3114,6 +3393,7 @@ parameters:
                         downloads_major:
                             v3: 121594
                             v2: 235154
+                        adoption_rate: 30.3
                         package_name: zendframework/zend-json
                     zendframework_zend_json_server:
                         downloads_minor:
@@ -3121,6 +3401,7 @@ parameters:
                             v3.0: 2502
                         downloads_major:
                             v3: 11025
+                        adoption_rate: 77.3
                         package_name: zendframework/zend-json-server
                     zendframework_zend_ldap:
                         downloads_minor:
@@ -3132,6 +3413,7 @@ parameters:
                             v2.2: 1246
                         downloads_major:
                             v2: 77528
+                        adoption_rate: 89.6
                         package_name: zendframework/zend-ldap
                     zendframework_zend_loader:
                         downloads_minor:
@@ -3143,6 +3425,7 @@ parameters:
                             v2.1: 627
                         downloads_major:
                             v2: 447104
+                        adoption_rate: 83.4
                         package_name: zendframework/zend-loader
                     zendframework_zend_log:
                         downloads_minor:
@@ -3155,6 +3438,7 @@ parameters:
                             v2.0: 759
                         downloads_major:
                             v2: 238469
+                        adoption_rate: 82.6
                         package_name: zendframework/zend-log
                     zendframework_zend_mail:
                         downloads_minor:
@@ -3169,6 +3453,7 @@ parameters:
                             v2.1: 737
                         downloads_major:
                             v2: 238709
+                        adoption_rate: 85.8
                         package_name: zendframework/zend-mail
                     zendframework_zend_math:
                         downloads_minor:
@@ -3186,6 +3471,7 @@ parameters:
                         downloads_major:
                             v3: 63804
                             v2: 223985
+                        adoption_rate: 15.7
                         package_name: zendframework/zend-math
                     zendframework_zend_memory:
                         downloads_minor:
@@ -3195,6 +3481,7 @@ parameters:
                             v2.2: 516
                         downloads_major:
                             v2: 58593
+                        adoption_rate: 60.6
                         package_name: zendframework/zend-memory
                     zendframework_zend_mime:
                         downloads_minor:
@@ -3207,6 +3494,7 @@ parameters:
                             v2.1: 7849
                         downloads_major:
                             v2: 250460
+                        adoption_rate: 87.1
                         package_name: zendframework/zend-mime
                     zendframework_zend_modulemanager:
                         downloads_minor:
@@ -3217,6 +3505,7 @@ parameters:
                             v2.4: 10774
                         downloads_major:
                             v2: 240921
+                        adoption_rate: 86.2
                         package_name: zendframework/zend-modulemanager
                     zendframework_zend_mvc:
                         downloads_minor:
@@ -3229,6 +3518,7 @@ parameters:
                         downloads_major:
                             v3: 53428
                             v2: 189424
+                        adoption_rate: 19.8
                         package_name: zendframework/zend-mvc
                     zendframework_zend_mvc_console:
                         downloads_minor:
@@ -3236,12 +3526,14 @@ parameters:
                             v1.1: 5834
                         downloads_major:
                             v1: 30012
+                        adoption_rate: 80.6
                         package_name: zendframework/zend-mvc-console
                     zendframework_zend_mvc_form:
                         downloads_minor:
                             v1.0: 14667
                         downloads_major:
                             v1: 14667
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-mvc-form
                     zendframework_zend_mvc_i18n:
                         downloads_minor:
@@ -3249,6 +3541,7 @@ parameters:
                             v1.0: 4640
                         downloads_major:
                             v1: 25782
+                        adoption_rate: !!float 82
                         package_name: zendframework/zend-mvc-i18n
                     zendframework_zend_mvc_plugin_fileprg:
                         downloads_minor:
@@ -3256,6 +3549,7 @@ parameters:
                             v1.0: 2308
                         downloads_major:
                             v1: 17092
+                        adoption_rate: 86.5
                         package_name: zendframework/zend-mvc-plugin-fileprg
                     zendframework_zend_mvc_plugin_flashmessenger:
                         downloads_minor:
@@ -3263,6 +3557,7 @@ parameters:
                             v1.0: 3685
                         downloads_major:
                             v1: 25124
+                        adoption_rate: 85.3
                         package_name: zendframework/zend-mvc-plugin-flashmessenger
                     zendframework_zend_mvc_plugin_identity:
                         downloads_minor:
@@ -3270,6 +3565,7 @@ parameters:
                             v1.0: 1569
                         downloads_major:
                             v1: 18089
+                        adoption_rate: 91.3
                         package_name: zendframework/zend-mvc-plugin-identity
                     zendframework_zend_mvc_plugin_prg:
                         downloads_minor:
@@ -3277,12 +3573,14 @@ parameters:
                             v1.0: 2095
                         downloads_major:
                             v1: 19543
+                        adoption_rate: 89.3
                         package_name: zendframework/zend-mvc-plugin-prg
                     zendframework_zend_mvc_plugins:
                         downloads_minor:
                             v1.0: 15539
                         downloads_major:
                             v1: 15539
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-mvc-plugins
                     zendframework_zend_navigation:
                         downloads_minor:
@@ -3292,6 +3590,7 @@ parameters:
                             v2.4: 3018
                         downloads_major:
                             v2: 53965
+                        adoption_rate: 66.2
                         package_name: zendframework/zend-navigation
                     zendframework_zend_paginator:
                         downloads_minor:
@@ -3300,6 +3599,7 @@ parameters:
                             v2.5: 6382
                         downloads_major:
                             v2: 89822
+                        adoption_rate: 80.9
                         package_name: zendframework/zend-paginator
                     zendframework_zend_permissions_acl:
                         downloads_minor:
@@ -3308,6 +3608,7 @@ parameters:
                             v2.5: 5382
                         downloads_major:
                             v2: 74304
+                        adoption_rate: 70.5
                         package_name: zendframework/zend-permissions-acl
                     zendframework_zend_permissions_rbac:
                         downloads_minor:
@@ -3317,12 +3618,14 @@ parameters:
                         downloads_major:
                             v3: 10266
                             v2: 48962
+                        adoption_rate: 17.3
                         package_name: zendframework/zend-permissions-rbac
                     zendframework_zend_problem_details:
                         downloads_minor:
                             v1.0: 5036
                         downloads_major:
                             v1: 5036
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-problem-details
                     zendframework_zend_progressbar:
                         downloads_minor:
@@ -3330,6 +3633,7 @@ parameters:
                             v2.5: 14807
                         downloads_major:
                             v2: 42160
+                        adoption_rate: 64.9
                         package_name: zendframework/zend-progressbar
                     zendframework_zend_psr7bridge:
                         downloads_minor:
@@ -3340,6 +3644,7 @@ parameters:
                         downloads_major:
                             v1: 6396
                             v0: 178173
+                        adoption_rate: 2.4
                         package_name: zendframework/zend-psr7bridge
                     zendframework_zend_router:
                         downloads_minor:
@@ -3349,6 +3654,7 @@ parameters:
                             v3.0: 15095
                         downloads_major:
                             v3: 66671
+                        adoption_rate: 51.9
                         package_name: zendframework/zend-router
                     zendframework_zend_serializer:
                         downloads_minor:
@@ -3364,6 +3670,7 @@ parameters:
                             v2.0: 745
                         downloads_major:
                             v2: 243391
+                        adoption_rate: 77.5
                         package_name: zendframework/zend-serializer
                     zendframework_zend_server:
                         downloads_minor:
@@ -3376,6 +3683,7 @@ parameters:
                             v2.1: 2127
                         downloads_major:
                             v2: 244350
+                        adoption_rate: 82.7
                         package_name: zendframework/zend-server
                     zendframework_zend_servicemanager:
                         downloads_minor:
@@ -3394,6 +3702,7 @@ parameters:
                         downloads_major:
                             v3: 182871
                             v2: 242579
+                        adoption_rate: 29.3
                         package_name: zendframework/zend-servicemanager
                     zendframework_zend_servicemanager_di:
                         downloads_minor:
@@ -3401,6 +3710,7 @@ parameters:
                             v1.1: 1361
                         downloads_major:
                             v1: 12466
+                        adoption_rate: 89.1
                         package_name: zendframework/zend-servicemanager-di
                     zendframework_zend_session:
                         downloads_minor:
@@ -3409,12 +3719,14 @@ parameters:
                             v2.5: 5471
                         downloads_major:
                             v2: 215257
+                        adoption_rate: 95.6
                         package_name: zendframework/zend-session
                     zendframework_zend_skeleton_installer:
                         downloads_minor:
                             v0.1: 3051
                         downloads_major:
                             v0: 3051
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-skeleton-installer
                     zendframework_zend_soap:
                         downloads_minor:
@@ -3425,6 +3737,7 @@ parameters:
                             v2.2: 643
                         downloads_major:
                             v2: 224144
+                        adoption_rate: 79.3
                         package_name: zendframework/zend-soap
                     zendframework_zend_stdlib:
                         downloads_minor:
@@ -3442,6 +3755,7 @@ parameters:
                         downloads_major:
                             v3: 749307
                             v2: 295648
+                        adoption_rate: 62.4
                         package_name: zendframework/zend-stdlib
                     zendframework_zend_stratigility:
                         downloads_minor:
@@ -3456,6 +3770,7 @@ parameters:
                             v3: 27458
                             v2: 14966
                             v1: 11567
+                        adoption_rate: 31.9
                         package_name: zendframework/zend-stratigility
                     zendframework_zend_tag:
                         downloads_minor:
@@ -3464,6 +3779,7 @@ parameters:
                             v2.5: 6929
                         downloads_major:
                             v2: 43983
+                        adoption_rate: 66.9
                         package_name: zendframework/zend-tag
                     zendframework_zend_test:
                         downloads_minor:
@@ -3475,6 +3791,7 @@ parameters:
                         downloads_major:
                             v3: 24059
                             v2: 33317
+                        adoption_rate: 37.4
                         package_name: zendframework/zend-test
                     zendframework_zend_text:
                         downloads_minor:
@@ -3484,6 +3801,7 @@ parameters:
                             v2.4: 10532
                         downloads_major:
                             v2: 213399
+                        adoption_rate: 82.9
                         package_name: zendframework/zend-text
                     zendframework_zend_uri:
                         downloads_minor:
@@ -3495,6 +3813,7 @@ parameters:
                             v2.2: 4206
                         downloads_major:
                             v2: 416091
+                        adoption_rate: 51.3
                         package_name: zendframework/zend-uri
                     zendframework_zend_validator:
                         downloads_minor:
@@ -3511,12 +3830,14 @@ parameters:
                             v2.1: 653
                         downloads_major:
                             v2: 571638
+                        adoption_rate: 37.4
                         package_name: zendframework/zend-validator
                     zendframework_zend_version:
                         downloads_minor:
                             v2.5: 44217
                         downloads_major:
                             v2: 44217
+                        adoption_rate: !!float 100
                         package_name: zendframework/zend-version
                     zendframework_zend_view:
                         downloads_minor:
@@ -3530,6 +3851,7 @@ parameters:
                             v2.2: 1152
                         downloads_major:
                             v2: 263459
+                        adoption_rate: 45.3
                         package_name: zendframework/zend-view
                     zendframework_zend_xml2json:
                         downloads_minor:
@@ -3537,6 +3859,7 @@ parameters:
                             v3.0: 1017
                         downloads_major:
                             v3: 12617
+                        adoption_rate: 91.9
                         package_name: zendframework/zend-xml2json
                     zendframework_zend_xmlrpc:
                         downloads_minor:
@@ -3545,6 +3868,7 @@ parameters:
                             v2.5: 11015
                         downloads_major:
                             v2: 57132
+                        adoption_rate: 66.1
                         package_name: zendframework/zend-xmlrpc
                     zendframework_zenddiagnostics:
                         downloads_minor:
@@ -3556,6 +3880,7 @@ parameters:
                             v1.0: 17382
                         downloads_major:
                             v1: 180669
+                        adoption_rate: 18.2
                         package_name: zendframework/zenddiagnostics
                     zendframework_zendframework:
                         downloads_minor:
@@ -3568,42 +3893,49 @@ parameters:
                         downloads_major:
                             v3: 6526
                             v2: 56229
+                        adoption_rate: 10.4
                         package_name: zendframework/zendframework
                     zendframework_zendframework1:
                         downloads_minor:
                             v1.12: 74754
                         downloads_major:
                             v1: 74754
+                        adoption_rate: !!float 100
                         package_name: zendframework/zendframework1
                     zendframework_zendgdata:
                         downloads_minor:
                             v2.0: 5170
                         downloads_major:
                             v2: 5170
+                        adoption_rate: !!float 100
                         package_name: zendframework/zendgdata
                     zendframework_zendoauth:
                         downloads_minor:
                             v2.0: 6599
                         downloads_major:
                             v2: 6599
+                        adoption_rate: !!float 100
                         package_name: zendframework/zendoauth
                     zendframework_zendpdf:
                         downloads_minor:
                             v2.0: 22721
                         downloads_major:
                             v2: 22721
+                        adoption_rate: !!float 100
                         package_name: zendframework/zendpdf
                     zendframework_zendrest:
                         downloads_minor:
                             v2.0: 7161
                         downloads_major:
                             v2: 7161
+                        adoption_rate: !!float 100
                         package_name: zendframework/zendrest
                     zendframework_zendservice_akismet:
                         downloads_minor:
                             v2.0: 4763
                         downloads_major:
                             v2: 4763
+                        adoption_rate: !!float 100
                         package_name: zendframework/zendservice-akismet
                     zendframework_zendservice_amazon:
                         downloads_minor:
@@ -3611,6 +3943,7 @@ parameters:
                             v2.0: 738
                         downloads_major:
                             v2: 5243
+                        adoption_rate: 85.9
                         package_name: zendframework/zendservice-amazon
                     zendframework_zendservice_apple_apns:
                         downloads_minor:
@@ -3619,6 +3952,7 @@ parameters:
                             v1.2: 9237
                         downloads_major:
                             v1: 52564
+                        adoption_rate: 28.7
                         package_name: zendframework/zendservice-apple-apns
                     zendframework_zendservice_google_gcm:
                         downloads_minor:
@@ -3628,6 +3962,7 @@ parameters:
                         downloads_major:
                             v2: 40729
                             v1: 8326
+                        adoption_rate: 74.7
                         package_name: zendframework/zendservice-google-gcm
                     zendframework_zendservice_recaptcha:
                         downloads_minor:
@@ -3638,6 +3973,7 @@ parameters:
                         downloads_major:
                             v3: 10550
                             v2: 1418
+                        adoption_rate: 53.9
                         package_name: zendframework/zendservice-recaptcha
                     zendframework_zendservice_twitter:
                         downloads_minor:
@@ -3646,6 +3982,7 @@ parameters:
                         downloads_major:
                             v3: 564
                             v2: 5219
+                        adoption_rate: 9.8
                         package_name: zendframework/zendservice-twitter
                     zendframework_zendxml:
                         downloads_minor:
@@ -3654,18 +3991,21 @@ parameters:
                             v1.0: 33518
                         downloads_major:
                             v1: 98449
+                        adoption_rate: 47.3
                         package_name: zendframework/zendxml
                     zendframework_zf1_extras:
                         downloads_minor:
                             v1.12: 5518
                         downloads_major:
                             v1: 5518
+                        adoption_rate: !!float 100
                         package_name: zendframework/zf1-extras
                     zendframework_zftool:
                         downloads_minor:
                             v0.1: 4177
                         downloads_major:
                             v0: 4177
+                        adoption_rate: !!float 100
                         package_name: zendframework/zftool
                 name: Zend
-        updated_at: '2019-04-16 21:20:46'
+        updated_at: '2019-04-16 21:46:54'
