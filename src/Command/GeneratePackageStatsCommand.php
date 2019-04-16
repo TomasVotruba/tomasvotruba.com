@@ -29,29 +29,6 @@ final class GeneratePackageStatsCommand extends Command
     private const MIN_DOWNLOADS_LIMIT = 1000;
 
     /**
-     * @var string[]
-     */
-    private $frameworkVendorToName = [
-        'nette' => 'Nette',
-        'symfony' => 'Symfony',
-        // includes also laravel/framework
-        'illuminate' => 'Laravel',
-        'cakephp' => 'CakePHP',
-        // single monorepos
-        'zendframework' => 'Zend',
-        'yiisoft' => 'Yii',
-        // microframeworks
-        'slim' => 'Slim',
-        'silex' => 'Silex',
-
-        // didn't pass the 1000 daily downloads minimal entrance
-        // 'codeigniter' => 'Code Igniter', (900)
-        // 'fuel' => 'FuelPHP', (618)
-        // 'phalcon' => 'Phalcon', (15)
-        // 'neos' => 'Neos CMS', (309)
-    ];
-
-    /**
      * Packages that create no value, are empty or just util
      * @var string[]
      */
@@ -63,6 +40,8 @@ final class GeneratePackageStatsCommand extends Command
         'symfony/orm-pack',
         'symfony/webpack-encore-pack',
     ];
+
+    private $frameworksToVendorName = [];
 
     /**
      * @var SymfonyStyle
@@ -94,13 +73,17 @@ final class GeneratePackageStatsCommand extends Command
      */
     private $statistics;
 
+    /**
+     * @param string[] $frameworksToVendorName
+     */
     public function __construct(
         SymfonyStyle $symfonyStyle,
         GeneratedFilesDumper $generatedFilesDumper,
         PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
         VendorPackagesProvider $vendorPackagesProvider,
         ArrayUtils $arrayUtils,
-        Statistics $statistics
+        Statistics $statistics,
+        array $frameworksToVendorName
     ) {
         parent::__construct();
         $this->symfonyStyle = $symfonyStyle;
@@ -109,6 +92,7 @@ final class GeneratePackageStatsCommand extends Command
         $this->vendorPackagesProvider = $vendorPackagesProvider;
         $this->arrayUtils = $arrayUtils;
         $this->statistics = $statistics;
+        $this->frameworksToVendorName = $frameworksToVendorName;
     }
 
     protected function configure(): void
@@ -133,7 +117,7 @@ final class GeneratePackageStatsCommand extends Command
     {
         $vendorData = [];
 
-        foreach ($this->frameworkVendorToName as $vendorName => $frameworkName) {
+        foreach ($this->frameworksToVendorName as $vendorName => $frameworkName) {
             $this->symfonyStyle->title(sprintf('Loading data for "%s" vendor', $vendorName));
 
             $vendorPackageNames = $this->vendorPackagesProvider->provideForVendor($vendorName);
