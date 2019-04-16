@@ -39,7 +39,7 @@ title: "Package Monthly Downloads by Version"
                 </tr>
 
                 {# is major different from minor? #}
-                {% if package_data.downloads_minor|length > package_data.downloads_major|length %}
+                {% if package_data.downloads_minor|length > package_data.downloads_major|length and package_data.downloads_major|length > 1 %}
                     <tr>
                         <th colspan="2" class="bg-primary text-white">Grouped by major version</th>
                     </tr>
@@ -75,8 +75,7 @@ title: "Package Monthly Downloads by Version"
 
         <ul>
             <li>package with less 500 downloads a day are excluded</li>
-            <li>dev, RC, alpha, beta... packages are released, only valid semver tags are used</li>
+            <li><code>dev-</code>, <code>RC</code>, <code>alpha</code>, <code>beta</code> and similar packages are excluded, only valid stable Semver tags are used</li>
         </ul>
-
     {% endfor %}
 </div>
