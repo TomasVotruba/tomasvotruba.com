@@ -25,7 +25,7 @@ final class Statistics
         }
 
         $trend = $firstHalf / $secondHalf;
-        $trend = round(($trend - 1) * 100, 2);
+        $trend = round(($trend - 1) * 100, 1);
 
         $this->trendsByPackageName[$packageName] = $trend;
 
