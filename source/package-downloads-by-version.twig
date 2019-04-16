@@ -58,58 +58,56 @@ id: trends
         </div>
 
         {% for package_data in framework.packages_data %}
-            {% if package_data.downloads_minor|length > 1 %}
-                <table class="table table-bordered mt-4 mt-4">
+            <table class="table table-bordered mt-4 mt-4">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th colspan="2" class="text-center">
+                            {{ package_data.package_name }}
+                        </th>
+                    </tr>
+                </thead>
+
+                {# is major different from minor? #}
+                {% if package_data.downloads_minor|length > package_data.downloads_major|length and package_data.downloads_major|length > 1 %}
                     <thead class="thead-inverse">
                         <tr>
-                            <th colspan="2" class="text-center">
-                                {{ package_data.package_name }}
-                            </th>
+                            <th colspan="2" class="text-center">Major</th>
                         </tr>
                     </thead>
 
-                    {# is major different from minor? #}
-                    {% if package_data.downloads_minor|length > package_data.downloads_major|length and package_data.downloads_major|length > 1 %}
-                        <thead class="thead-inverse">
-                            <tr>
-                                <th colspan="2" class="text-center">Major</th>
-                            </tr>
-                        </thead>
-
-                        {% for version, number in package_data.downloads_major %}
-                            <tr>
-                                <td class="w-50">{{ version }}</td>
-                                <td class="w-50 text-right">
-                                    {{ macros.number(number) }}
-                                </td>
-                            </tr>
-                        {% endfor %}
-
-                        <thead class="thead-inverse">
-                            <tr>
-                                <th colspan="2" class="text-center">Minor</th>
-                            </tr>
-                        </thead>
-                    {% endif %}
-
-                    {% for version, number in package_data.downloads_minor %}
+                    {% for version, number in package_data.downloads_major %}
                         <tr>
-                            <td class="w-50">
-                                {{ version }}
-                            </td>
+                            <td class="w-50">{{ version }}</td>
                             <td class="w-50 text-right">
-                                {% if loop.first and package_data.adoption_rate < 100 %}
-                                    <div class="float-left">
-                                        {{ macros.adoption(package_data.adoption_rate) }}
-                                    </div>
-                                {% endif %}
-
                                 {{ macros.number(number) }}
                             </td>
                         </tr>
                     {% endfor %}
-                </table>
-            {% endif %}
+
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th colspan="2" class="text-center">Minor</th>
+                        </tr>
+                    </thead>
+                {% endif %}
+
+                {% for version, number in package_data.downloads_minor %}
+                    <tr>
+                        <td class="w-50">
+                            {{ version }}
+                        </td>
+                        <td class="w-50 text-right">
+                            {% if loop.first and package_data.adoption_rate < 100 %}
+                                <div class="float-left">
+                                    {{ macros.adoption(package_data.adoption_rate) }}
+                                </div>
+                            {% endif %}
+
+                            {{ macros.number(number) }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
         {% endfor %}
     {% endfor %}
 

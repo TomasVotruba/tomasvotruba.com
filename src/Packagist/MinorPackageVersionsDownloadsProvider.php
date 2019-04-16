@@ -16,6 +16,16 @@ final class MinorPackageVersionsDownloadsProvider
     private const URL_PACKAGE_STATS = 'https://packagist.org/packages/%s/downloads.json';
 
     /**
+     * @var string
+     */
+    private const DOWNLOADS_MINOR = 'downloads_minor';
+
+    /**
+     * @var string
+     */
+    private const DOWNLOADS_MAJOR = 'downloads_major';
+
+    /**
      * @var Version[]
      */
     private $cachedVersionObjects = [];
@@ -36,15 +46,13 @@ final class MinorPackageVersionsDownloadsProvider
     public function provideForPackage(string $packageName): array
     {
         $data = $this->getDownloadsByVersionForPackage($packageName);
-
-        $downloadsGroupedByVersionAndMajorMinor = [];
-
         $data = $this->filterOutInvalidVersions($data);
+        $data = $this->sortByVersion($data);
 
-        /** @var string $version */
+        $downloadsGroupedByMajorAndMinorVersion = [];
+
         foreach ($data as $version => $downloads) {
-            /** @var Version $version */
-            $version = new Version($version);
+            $version = $this->createVersionObject($version);
 
             $minorVersion = 'v' . $version->getMajor()->getValue() . '.' . $version->getMinor()->getValue();
             $majorVersion = 'v' . $version->getMajor()->getValue();
@@ -56,23 +64,26 @@ final class MinorPackageVersionsDownloadsProvider
                 continue;
             }
 
-            if (isset($downloadsGroupedByVersionAndMajorMinor['downloads_minor'][$minorVersion])) {
-                $downloadsGroupedByVersionAndMajorMinor['downloads_minor'][$minorVersion] += $monthlyDownloads;
+            if (isset($downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR][$minorVersion])) {
+                $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR][$minorVersion] += $monthlyDownloads;
             } else {
-                $downloadsGroupedByVersionAndMajorMinor['downloads_minor'][$minorVersion] = $monthlyDownloads;
+                $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR][$minorVersion] = $monthlyDownloads;
             }
 
-            if (isset($downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion])) {
-                $downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion] += $monthlyDownloads;
+            if (isset($downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MAJOR][$majorVersion])) {
+                $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MAJOR][$majorVersion] += $monthlyDownloads;
             } else {
-                $downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion] = $monthlyDownloads;
+                $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MAJOR][$majorVersion] = $monthlyDownloads;
             }
-
-            $downloadsGroupedByVersionAndMajorMinor = $this->sortByVersion($downloadsGroupedByVersionAndMajorMinor);
         }
 
-        /** @var int[] $downloadsGroupedByVersionAndMajorMinor */
-        return $downloadsGroupedByVersionAndMajorMinor;
+        // skip single minor versions, no added value
+        if ($this->hasLessThanTwoMinorVersions($downloadsGroupedByMajorAndMinorVersion)) {
+            return [];
+        }
+
+        /** @var int[] $downloadsGroupedByMajorAndMinorVersion */
+        return $downloadsGroupedByMajorAndMinorVersion;
     }
 
     /**
@@ -121,23 +132,16 @@ final class MinorPackageVersionsDownloadsProvider
         return $data;
     }
 
-    private function sortByVersion(array $downloadsGroupedByVersionAndMajorMinor): array
+    private function sortByVersion(array $data): array
     {
-        uksort($downloadsGroupedByVersionAndMajorMinor['downloads_minor'], function ($firstVersion, $secondVersion) {
+        uksort($data, function ($firstVersion, $secondVersion) {
             $firstVersion = $this->createVersionObject($firstVersion);
             $secondVersion = $this->createVersionObject($secondVersion);
 
             return $secondVersion->isGreaterThan($firstVersion);
         });
 
-        uksort($downloadsGroupedByVersionAndMajorMinor['downloads_major'], function ($firstVersion, $secondVersion) {
-            $firstVersion = $this->createVersionObject($firstVersion . '.0');
-            $secondVersion = $this->createVersionObject($secondVersion . '.0');
-
-            return $secondVersion->isGreaterThan($firstVersion);
-        });
-
-        return $downloadsGroupedByVersionAndMajorMinor;
+        return $data;
     }
 
     private function createVersionObject(string $version): Version
@@ -148,5 +152,14 @@ final class MinorPackageVersionsDownloadsProvider
         $this->cachedVersionObjects[$version] = new Version($version);
 
         return $this->cachedVersionObjects[$version];
+    }
+
+    private function hasLessThanTwoMinorVersions(array $downloadsGroupedByMajorAndMinorVersion): bool
+    {
+        if (! isset($downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR])) {
+            return true;
+        }
+
+        return count($downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR]) < 2;
     }
 }
