@@ -89,6 +89,20 @@ final class PackageMonthlyDownloadsProvider
             'symfony/polyfill-ctype',
             'symfony/polyfill-php72',
         ],
+        // particular laravel to symfony deps
+        'illuminate/queue' => ['symfony/debug', 'symfony/process'],
+        'illuminate/http' => ['symfony/http-foundation', 'symfony/http-kernel'],
+        'illuminate/validation' => ['symfony/http-foundation'],
+        'illuminate/session' => ['symfony/finder', 'symfony/http-foundation'],
+        'illuminate/console' => ['symfony/console', 'symfony/process'],
+        'illuminate/view' => ['symfony/debug'],
+        'illuminate/filesystem' => ['symfony/finder'],
+        'illuminate/routing' => [
+            'symfony/debug',
+            'symfony/http-foundation',
+            'symfony/http-kernel',
+            'symfony/routing',
+        ],
     ];
 
     /**

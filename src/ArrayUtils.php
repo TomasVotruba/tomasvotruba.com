@@ -22,7 +22,7 @@ final class ArrayUtils
 
         $average = array_sum($total) / (count($total) ?: 1);
 
-        return round($average, 2);
+        return round($average, 1);
     }
 
     public function getArrayKeySum(array $array, string $key): int

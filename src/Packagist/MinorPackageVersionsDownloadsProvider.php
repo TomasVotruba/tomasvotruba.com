@@ -2,14 +2,17 @@
 
 namespace TomasVotruba\Website\Packagist;
 
-use Nette\Utils\Strings;
-use PharIo\Version\InvalidVersionException;
-use PharIo\Version\Version;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\Json\FileToJsonLoader;
+use TomasVotruba\Website\VersionManipulator;
 
 final class MinorPackageVersionsDownloadsProvider
 {
+    /**
+     * @var string
+     */
+    public const DOWNLOADS_MINOR = 'downloads_minor';
+
     /**
      * @var string
      */
@@ -20,9 +23,15 @@ final class MinorPackageVersionsDownloadsProvider
      */
     private $fileToJsonLoader;
 
-    public function __construct(FileToJsonLoader $fileToJsonLoader)
+    /**
+     * @var VersionManipulator
+     */
+    private $versionManipulator;
+
+    public function __construct(FileToJsonLoader $fileToJsonLoader, VersionManipulator $versionManipulator)
     {
         $this->fileToJsonLoader = $fileToJsonLoader;
+        $this->versionManipulator = $versionManipulator;
     }
 
     /**
@@ -31,18 +40,13 @@ final class MinorPackageVersionsDownloadsProvider
     public function provideForPackage(string $packageName): array
     {
         $data = $this->getDownloadsByVersionForPackage($packageName);
+        $data = $this->sortByVersion($data);
 
-        $downloadsGroupedByVersionAndMajorMinor = [];
+        $downloadsGroupedByMajorAndMinorVersion = [];
 
-        $data = $this->filterOutInvalidVersions($data);
-
-        /** @var string $version */
         foreach ($data as $version => $downloads) {
-            /** @var Version $version */
-            $version = new Version($version);
-
-            $minorVersion = 'v' . $version->getMajor()->getValue() . '.' . $version->getMinor()->getValue();
-            $majorVersion = 'v' . $version->getMajor()->getValue();
+            $version = $this->versionManipulator->create($version);
+            $minorVersion = $this->versionManipulator->resolveToMinor($version);
 
             $monthlyDownloads = $downloads['monthly'];
 
@@ -51,25 +55,20 @@ final class MinorPackageVersionsDownloadsProvider
                 continue;
             }
 
-            if (isset($downloadsGroupedByVersionAndMajorMinor['downloads_minor'][$minorVersion])) {
-                $downloadsGroupedByVersionAndMajorMinor['downloads_minor'][$minorVersion] += $monthlyDownloads;
+            if (isset($downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR][$minorVersion])) {
+                $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR][$minorVersion] += $monthlyDownloads;
             } else {
-                $downloadsGroupedByVersionAndMajorMinor['downloads_minor'][$minorVersion] = $monthlyDownloads;
-            }
-
-            if (isset($downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion])) {
-                $downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion] += $monthlyDownloads;
-            } else {
-                $downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion] = $monthlyDownloads;
+                $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR][$minorVersion] = $monthlyDownloads;
             }
         }
 
-        uksort($downloadsGroupedByVersionAndMajorMinor, function (string $firstVersion, string $secondVersion) {
-            return $secondVersion <=> $firstVersion;
-        });
+        // skip single minor versions, no added value
+        if ($this->hasLessThanTwoMinorVersions($downloadsGroupedByMajorAndMinorVersion)) {
+            return [];
+        }
 
-        /** @var int[] $downloadsGroupedByVersionAndMajorMinor */
-        return $downloadsGroupedByVersionAndMajorMinor;
+        /** @var int[] $downloadsGroupedByMajorAndMinorVersion */
+        return $downloadsGroupedByMajorAndMinorVersion;
     }
 
     /**
@@ -86,35 +85,29 @@ final class MinorPackageVersionsDownloadsProvider
 
         $data = $json['package']['downloads']['versions'];
 
-        // remove all dev versions
-        foreach ($data as $key => $downloads) {
-            if (Strings::match($key, '#^dev\-#')) {
-                unset($data[$key]);
-            }
+        return array_filter($data, function (string $version): bool {
+            return $this->versionManipulator->isValid($version);
+        }, ARRAY_FILTER_USE_KEY);
+    }
 
-            if (Strings::match($key, '#(alpha|beta|rc)#i')) {
-                unset($data[$key]);
-            }
-        }
+    private function sortByVersion(array $data): array
+    {
+        uksort($data, function ($firstVersion, $secondVersion) {
+            $firstVersion = $this->versionManipulator->create($firstVersion);
+            $secondVersion = $this->versionManipulator->create($secondVersion);
+
+            return $secondVersion->isGreaterThan($firstVersion);
+        });
 
         return $data;
     }
 
-    private function filterOutInvalidVersions(array $data): array
+    private function hasLessThanTwoMinorVersions(array $downloadsGroupedByMajorAndMinorVersion): bool
     {
-        /** @var string $version */
-        foreach ($data as $version => $downloads) {
-            $key = $version;
-
-            try {
-                /** @var Version $version */
-                $version = new Version($version);
-            } catch (InvalidVersionException $invalidVersionException) {
-                // invalid version
-                unset($data[$key]);
-            }
+        if (! isset($downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR])) {
+            return true;
         }
 
-        return $data;
+        return count($downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR]) < 2;
     }
 }

@@ -2,6 +2,7 @@
 
 namespace TomasVotruba\Website\Command;
 
+use Nette\Utils\DateTime;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -9,14 +10,14 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
 use Symplify\Statie\FileSystem\GeneratedFilesDumper;
-use TomasVotruba\Website\Result\VendorDataFactory;
+use TomasVotruba\Website\Result\PackageDataFactory;
 
-final class GeneratePackageStatsCommand extends Command
+final class GenerateTestingPackageStatsCommand extends Command
 {
     /**
      * @var string[]
      */
-    private $frameworksVendorToName = [];
+    private $testingPackageNames = [];
 
     /**
      * @var SymfonyStyle
@@ -29,36 +30,40 @@ final class GeneratePackageStatsCommand extends Command
     private $generatedFilesDumper;
 
     /**
-     * @var VendorDataFactory
+     * @var PackageDataFactory
      */
-    private $vendorDataFactory;
+    private $packageDataFactory;
 
     /**
-     * @param string[] $frameworksVendorToName
+     * @param string[] $testingPackageNames
      */
     public function __construct(
         SymfonyStyle $symfonyStyle,
         GeneratedFilesDumper $generatedFilesDumper,
-        VendorDataFactory $vendorDataFactory,
-        array $frameworksVendorToName
+        PackageDataFactory $packageDataFactory,
+        array $testingPackageNames
     ) {
         parent::__construct();
         $this->symfonyStyle = $symfonyStyle;
         $this->generatedFilesDumper = $generatedFilesDumper;
-        $this->vendorDataFactory = $vendorDataFactory;
-        $this->frameworksVendorToName = $frameworksVendorToName;
+        $this->testingPackageNames = $testingPackageNames;
+        $this->packageDataFactory = $packageDataFactory;
     }
 
     protected function configure(): void
     {
         $this->setName(CommandNaming::classToName(self::class));
-        $this->setDescription('Generates downloads stats data for MVC PHP vendors');
+        $this->setDescription('Generates downloads stats data for testing frameworks');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $vendorData = $this->vendorDataFactory->createVendorData($this->frameworksVendorToName);
-        $this->generatedFilesDumper->dump('php_framework_trends', $vendorData);
+        $data = [
+            'packages' => $this->packageDataFactory->createPackagesData($this->testingPackageNames),
+            'updated_at' => (new DateTime())->format('Y-m-d H:i:s'),
+        ];
+
+        $this->generatedFilesDumper->dump('testing_packages', $data);
         $this->symfonyStyle->success('Data imported!');
 
         return ShellCode::SUCCESS;

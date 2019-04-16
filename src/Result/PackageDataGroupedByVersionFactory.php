@@ -4,6 +4,7 @@ namespace TomasVotruba\Website\Result;
 
 use Nette\Utils\Strings;
 use TomasVotruba\Website\Packagist\MinorPackageVersionsDownloadsProvider;
+use TomasVotruba\Website\Packagist\PackageVersionPublishDatesProvider;
 
 final class PackageDataGroupedByVersionFactory
 {
@@ -12,9 +13,17 @@ final class PackageDataGroupedByVersionFactory
      */
     private $minorPackageVersionsDownloadsProvider;
 
-    public function __construct(MinorPackageVersionsDownloadsProvider $minorPackageVersionsDownloadsProvider)
-    {
+    /**
+     * @var PackageVersionPublishDatesProvider
+     */
+    private $packageVersionPublishDatesProvider;
+
+    public function __construct(
+        MinorPackageVersionsDownloadsProvider $minorPackageVersionsDownloadsProvider,
+        PackageVersionPublishDatesProvider $packageVersionPublishDatesProvider
+    ) {
         $this->minorPackageVersionsDownloadsProvider = $minorPackageVersionsDownloadsProvider;
+        $this->packageVersionPublishDatesProvider = $packageVersionPublishDatesProvider;
     }
 
     /**
@@ -33,10 +42,12 @@ final class PackageDataGroupedByVersionFactory
             }
 
             $packagesData[$packageKey] = $packageDownloads;
-
-            // @todo compute freshness
-
+            $packagesData[$packageKey]['adoption_rate'] = $this->resolveAdoptionRate($packageDownloads);
             $packagesData[$packageKey]['package_name'] = $packageName;
+
+            $packagesData[$packageKey]['version_publish_dates'] = $this->packageVersionPublishDatesProvider->provideForPackage(
+                $packageName
+            );
         }
 
         return $packagesData;
@@ -45,5 +56,15 @@ final class PackageDataGroupedByVersionFactory
     private function createPackageKey(string $packageName): string
     {
         return Strings::replace($packageName, '#(/|-)#', '_');
+    }
+
+    private function resolveAdoptionRate(array $packageDownloads): float
+    {
+        $downloadsTotal = array_sum($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR]);
+
+        $lastVersionDownloads = array_shift($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR]);
+        $adoption_rate = $lastVersionDownloads / $downloadsTotal * 100;
+
+        return (float) round($adoption_rate, 1);
     }
 }
