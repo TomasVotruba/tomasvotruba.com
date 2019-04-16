@@ -4,6 +4,7 @@ namespace TomasVotruba\Website\Result;
 
 use Nette\Utils\Strings;
 use TomasVotruba\Website\Packagist\MinorPackageVersionsDownloadsProvider;
+use TomasVotruba\Website\Packagist\PackageVersionPublishDatesProvider;
 
 final class PackageDataGroupedByVersionFactory
 {
@@ -12,9 +13,17 @@ final class PackageDataGroupedByVersionFactory
      */
     private $minorPackageVersionsDownloadsProvider;
 
-    public function __construct(MinorPackageVersionsDownloadsProvider $minorPackageVersionsDownloadsProvider)
-    {
+    /**
+     * @var PackageVersionPublishDatesProvider
+     */
+    private $packageVersionPublishDatesProvider;
+
+    public function __construct(
+        MinorPackageVersionsDownloadsProvider $minorPackageVersionsDownloadsProvider,
+        PackageVersionPublishDatesProvider $packageVersionPublishDatesProvider
+    ) {
         $this->minorPackageVersionsDownloadsProvider = $minorPackageVersionsDownloadsProvider;
+        $this->packageVersionPublishDatesProvider = $packageVersionPublishDatesProvider;
     }
 
     /**
@@ -35,6 +44,10 @@ final class PackageDataGroupedByVersionFactory
             $packagesData[$packageKey] = $packageDownloads;
             $packagesData[$packageKey]['adoption_rate'] = $this->resolveAdoptionRate($packageDownloads);
             $packagesData[$packageKey]['package_name'] = $packageName;
+
+            $packagesData[$packageKey]['version_publish_dates'] = $this->packageVersionPublishDatesProvider->provideForPackage(
+                $packageName
+            );
         }
 
         return $packagesData;

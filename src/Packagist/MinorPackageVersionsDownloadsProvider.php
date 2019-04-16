@@ -2,11 +2,11 @@
 
 namespace TomasVotruba\Website\Packagist;
 
-use Nette\Utils\Strings;
 use PharIo\Version\InvalidVersionException;
 use PharIo\Version\Version;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\Json\FileToJsonLoader;
+use TomasVotruba\Website\VersionManipulator;
 
 final class MinorPackageVersionsDownloadsProvider
 {
@@ -26,18 +26,19 @@ final class MinorPackageVersionsDownloadsProvider
     private const DOWNLOADS_MAJOR = 'downloads_major';
 
     /**
-     * @var Version[]
-     */
-    private $cachedVersionObjects = [];
-
-    /**
      * @var FileToJsonLoader
      */
     private $fileToJsonLoader;
 
-    public function __construct(FileToJsonLoader $fileToJsonLoader)
+    /**
+     * @var VersionManipulator
+     */
+    private $versionManipulator;
+
+    public function __construct(FileToJsonLoader $fileToJsonLoader, VersionManipulator $versionManipulator)
     {
         $this->fileToJsonLoader = $fileToJsonLoader;
+        $this->versionManipulator = $versionManipulator;
     }
 
     /**
@@ -52,10 +53,12 @@ final class MinorPackageVersionsDownloadsProvider
         $downloadsGroupedByMajorAndMinorVersion = [];
 
         foreach ($data as $version => $downloads) {
-            $version = $this->createVersionObject($version);
+            $version = $this->versionManipulator->create($version);
 
-            $minorVersion = 'v' . $version->getMajor()->getValue() . '.' . $version->getMinor()->getValue();
-            $majorVersion = 'v' . $version->getMajor()->getValue();
+            $this->versionManipulator->resolveToMinor($version);
+
+            $minorVersion = $this->versionManipulator->resolveToMinor($version);
+            $majorVersion = $this->versionManipulator->resolveToMajor($version);
 
             $monthlyDownloads = $downloads['monthly'];
 
@@ -100,18 +103,9 @@ final class MinorPackageVersionsDownloadsProvider
 
         $data = $json['package']['downloads']['versions'];
 
-        // remove all dev versions
-        foreach ($data as $key => $downloads) {
-            if (Strings::match($key, '#^dev\-#')) {
-                unset($data[$key]);
-            }
-
-            if (Strings::match($key, '#(alpha|beta|rc)#i')) {
-                unset($data[$key]);
-            }
-        }
-
-        return $data;
+        return array_filter($data, function (string $version): bool {
+            return $this->versionManipulator->isValid($version);
+        }, ARRAY_FILTER_USE_KEY);
     }
 
     private function filterOutInvalidVersions(array $data): array
@@ -135,23 +129,13 @@ final class MinorPackageVersionsDownloadsProvider
     private function sortByVersion(array $data): array
     {
         uksort($data, function ($firstVersion, $secondVersion) {
-            $firstVersion = $this->createVersionObject($firstVersion);
-            $secondVersion = $this->createVersionObject($secondVersion);
+            $firstVersion = $this->versionManipulator->create($firstVersion);
+            $secondVersion = $this->versionManipulator->create($secondVersion);
 
             return $secondVersion->isGreaterThan($firstVersion);
         });
 
         return $data;
-    }
-
-    private function createVersionObject(string $version): Version
-    {
-        if (isset($this->cachedVersionObjects[$version])) {
-            return $this->cachedVersionObjects[$version];
-        }
-        $this->cachedVersionObjects[$version] = new Version($version);
-
-        return $this->cachedVersionObjects[$version];
     }
 
     private function hasLessThanTwoMinorVersions(array $downloadsGroupedByMajorAndMinorVersion): bool

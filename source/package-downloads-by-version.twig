@@ -95,6 +95,12 @@ id: trends
                     <tr>
                         <td class="w-50">
                             {{ version }}
+
+                            {% if package_data.version_publish_dates(version) is defined %}
+                                <span class="text-muted">
+                                    {{ package_data.version_publish_dates(version) }}
+                                </span>
+                            {% endif %}
                         </td>
                         <td class="w-50 text-right">
                             {% if loop.first and package_data.adoption_rate < 100 %}
