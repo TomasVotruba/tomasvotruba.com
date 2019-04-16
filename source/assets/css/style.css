@@ -597,3 +597,14 @@ table ul {
     font-size: .8em;
 }
 
+
+.thead-inverse a, .thead-inverse a:visited, #content .thead-inverse a:visited:not(.btn):not(.badge) {
+    color: #DDD;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.thead-inverse a:hover {
+    color: white;
+    text-decoration: none;
+}
