@@ -21,11 +21,6 @@ final class MinorPackageVersionsDownloadsProvider
     private const DOWNLOADS_MINOR = 'downloads_minor';
 
     /**
-     * @var string
-     */
-    private const DOWNLOADS_MAJOR = 'downloads_major';
-
-    /**
      * @var FileToJsonLoader
      */
     private $fileToJsonLoader;
@@ -71,12 +66,6 @@ final class MinorPackageVersionsDownloadsProvider
                 $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR][$minorVersion] += $monthlyDownloads;
             } else {
                 $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MINOR][$minorVersion] = $monthlyDownloads;
-            }
-
-            if (isset($downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MAJOR][$majorVersion])) {
-                $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MAJOR][$majorVersion] += $monthlyDownloads;
-            } else {
-                $downloadsGroupedByMajorAndMinorVersion[self::DOWNLOADS_MAJOR][$majorVersion] = $monthlyDownloads;
             }
         }
 

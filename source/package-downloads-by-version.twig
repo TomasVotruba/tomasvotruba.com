@@ -67,30 +67,6 @@ id: trends
                     </tr>
                 </thead>
 
-                {# is major different from minor? #}
-                {% if package_data.downloads_minor|length > package_data.downloads_major|length and package_data.downloads_major|length > 1 %}
-                    <thead class="thead-inverse">
-                        <tr>
-                            <th colspan="2" class="text-center">Major</th>
-                        </tr>
-                    </thead>
-
-                    {% for version, number in package_data.downloads_major %}
-                        <tr>
-                            <td class="w-50">{{ version }}</td>
-                            <td class="w-50 text-right">
-                                {{ macros.number(number) }}
-                            </td>
-                        </tr>
-                    {% endfor %}
-
-                    <thead class="thead-inverse">
-                        <tr>
-                            <th colspan="2" class="text-center">Minor</th>
-                        </tr>
-                    </thead>
-                {% endif %}
-
                 {% for version, number in package_data.downloads_minor %}
                     <tr>
                         <td class="w-50">
