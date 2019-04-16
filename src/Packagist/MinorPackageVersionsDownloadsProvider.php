@@ -32,26 +32,17 @@ final class MinorPackageVersionsDownloadsProvider
     {
         $data = $this->getDownloadsByVersionForPackage($packageName);
 
-        $downloadsGroupedByVersion = [];
+        $downloadsGroupedByVersionAndMajorMinor = [];
 
-        // group by minor version
+        $data = $this->filterOutInvalidVersions($data);
+
         /** @var string $version */
         foreach ($data as $version => $downloads) {
-            // clear versoin to semver
-            if (Strings::endsWith($version, '.x-dev')) {
-                /** @var string $version */
-                $version = Strings::before($version, '.x-dev');
-            }
-
-            try {
-                /** @var Version $version */
-                $version = new Version($version);
-            } catch (InvalidVersionException $invalidVersionException) {
-                // invalid version
-                continue;
-            }
+            /** @var Version $version */
+            $version = new Version($version);
 
             $minorVersion = 'v' . $version->getMajor()->getValue() . '.' . $version->getMinor()->getValue();
+            $majorVersion = 'v' . $version->getMajor()->getValue();
 
             $monthlyDownloads = $downloads['monthly'];
 
@@ -60,21 +51,29 @@ final class MinorPackageVersionsDownloadsProvider
                 continue;
             }
 
-            if (isset($downloadsGroupedByVersion[$minorVersion])) {
-                $downloadsGroupedByVersion[$minorVersion] += $monthlyDownloads;
+            if (isset($downloadsGroupedByVersionAndMajorMinor['downloads_minor'][$minorVersion])) {
+                $downloadsGroupedByVersionAndMajorMinor['downloads_minor'][$minorVersion] += $monthlyDownloads;
             } else {
-                $downloadsGroupedByVersion[$minorVersion] = $monthlyDownloads;
+                $downloadsGroupedByVersionAndMajorMinor['downloads_minor'][$minorVersion] = $monthlyDownloads;
+            }
+
+            if (isset($downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion])) {
+                $downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion] += $monthlyDownloads;
+            } else {
+                $downloadsGroupedByVersionAndMajorMinor['downloads_major'][$majorVersion] = $monthlyDownloads;
             }
         }
 
-        krsort($downloadsGroupedByVersion);
+        uksort($downloadsGroupedByVersionAndMajorMinor, function (string $firstVersion, string $secondVersion) {
+            return $secondVersion <=> $firstVersion;
+        });
 
-        /** @var int[] $downloadsGroupedByVersion */
-        return $downloadsGroupedByVersion;
+        /** @var int[] $downloadsGroupedByVersionAndMajorMinor */
+        return $downloadsGroupedByVersionAndMajorMinor;
     }
 
     /**
-     * @return int[]
+     * @return int[][]
      */
     private function getDownloadsByVersionForPackage(string $packageName): array
     {
@@ -94,6 +93,24 @@ final class MinorPackageVersionsDownloadsProvider
             }
 
             if (Strings::match($key, '#(alpha|beta|rc)#i')) {
+                unset($data[$key]);
+            }
+        }
+
+        return $data;
+    }
+
+    private function filterOutInvalidVersions(array $data): array
+    {
+        /** @var string $version */
+        foreach ($data as $version => $downloads) {
+            $key = $version;
+
+            try {
+                /** @var Version $version */
+                $version = new Version($version);
+            } catch (InvalidVersionException $invalidVersionException) {
+                // invalid version
                 unset($data[$key]);
             }
         }

@@ -15,6 +15,7 @@ title: "PHP Framework Trends - Downloads by Version"
 
     <p class="text-muted mb-4 small">Updated at {{ vendor_packages_by_version.updated_at|date('j. n. H:i') }}</p>
 
+    <p>Jump to framework</p>
     <ul>
         {% for framework in vendor_packages_by_version.vendors %}
             <li><a href="#{{ framework.name|webalize }}">{{ framework.name }}</a></li>
@@ -27,16 +28,34 @@ title: "PHP Framework Trends - Downloads by Version"
                 <tr>
                     <th colspan="4" class="text-center">
                         <h3>{{ framework.name }}</h3>
+                        <a href="#">Jump up</a>
                     </th>
                 </tr>
             </thead>
 
             {% for package_data in framework.packages_data %}
                 <tr>
-                    <th colspan="2" class="text-center">{{ package_data.package_name }}</th>
+                    <th colspan="2" class="text-center bg-primary text-white">{{ package_data.package_name }}</th>
                 </tr>
 
-                {% for version, number in package_data.downloads %}
+                <tr>
+                    <th colspan="2" class="bg-primary text-white">Grouped by major version</th>
+                </tr>
+
+                {% for version, number in package_data.downloads_major %}
+                    <tr>
+                        <td class="w-50">{{ version }}</td>
+                        <td class="w-50 text-right">{{ macros.number(number) }}</td>
+                    </tr>
+                {% endfor %}
+
+                <tr>
+                    <th colspan="2" class="bg-primary text-white">
+                        Grouped by minor version
+                    </th>
+                </tr>
+
+                {% for version, number in package_data.downloads_minor %}
                     <tr>
                         <td class="w-50">{{ version }}</td>
                         <td class="w-50 text-right">{{ macros.number(number) }}</td>

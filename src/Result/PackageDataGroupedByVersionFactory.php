@@ -32,7 +32,10 @@ final class PackageDataGroupedByVersionFactory
                 continue;
             }
 
-            $packagesData[$packageKey]['downloads'] = $packageDownloads;
+            $packagesData[$packageKey] = $packageDownloads;
+
+            // @todo compute freshness
+
             $packagesData[$packageKey]['package_name'] = $packageName;
         }
 
