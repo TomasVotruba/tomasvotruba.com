@@ -36,7 +36,13 @@ final class VersionManipulator
             return false;
         }
 
+        // no dots
         if (! Strings::contains($version, '.')) {
+            return false;
+        }
+
+        // too much dots
+        if (substr_count($version, '.') > 2) {
             return false;
         }
 

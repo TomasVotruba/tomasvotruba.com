@@ -40,7 +40,7 @@ final class PackageVersionPublishDatesProvider
 
         $versionToDate = [];
         foreach ($data as $version => $versionData) {
-            if (! $this->versionManipulator->isValid($version)) {
+            if (! $this->versionManipulator->isValid((string) $version)) {
                 continue;
             }
 

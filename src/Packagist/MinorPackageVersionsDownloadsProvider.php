@@ -118,6 +118,7 @@ final class MinorPackageVersionsDownloadsProvider
                 /** @var Version $version */
                 $version = new Version($version);
             } catch (InvalidVersionException $invalidVersionException) {
+                dump($version);
                 // invalid version
                 unset($data[$key]);
             }
