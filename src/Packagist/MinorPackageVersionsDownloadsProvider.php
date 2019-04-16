@@ -16,6 +16,11 @@ final class MinorPackageVersionsDownloadsProvider
     private const URL_PACKAGE_STATS = 'https://packagist.org/packages/%s/downloads.json';
 
     /**
+     * @var Version[]
+     */
+    private $cachedVersionObjects = [];
+
+    /**
      * @var FileToJsonLoader
      */
     private $fileToJsonLoader;
@@ -119,19 +124,29 @@ final class MinorPackageVersionsDownloadsProvider
     private function sortByVersion(array $downloadsGroupedByVersionAndMajorMinor): array
     {
         uksort($downloadsGroupedByVersionAndMajorMinor['downloads_minor'], function ($firstVersion, $secondVersion) {
-            $firstVersion = new Version($firstVersion);
-            $secondVersion = new Version($secondVersion);
+            $firstVersion = $this->createVersionObject($firstVersion);
+            $secondVersion = $this->createVersionObject($secondVersion);
 
-            return $firstVersion->isGreaterThan($secondVersion);
+            return $secondVersion->isGreaterThan($firstVersion);
         });
 
         uksort($downloadsGroupedByVersionAndMajorMinor['downloads_major'], function ($firstVersion, $secondVersion) {
-            $firstVersion = new Version($firstVersion . '.0');
-            $secondVersion = new Version($secondVersion . '.0');
+            $firstVersion = $this->createVersionObject($firstVersion . '.0');
+            $secondVersion = $this->createVersionObject($secondVersion . '.0');
 
-            return $firstVersion->isGreaterThan($secondVersion);
+            return $secondVersion->isGreaterThan($firstVersion);
         });
 
         return $downloadsGroupedByVersionAndMajorMinor;
+    }
+
+    private function createVersionObject(string $version): Version
+    {
+        if (isset($this->cachedVersionObjects[$version])) {
+            return $this->cachedVersionObjects[$version];
+        }
+        $this->cachedVersionObjects[$version] = new Version($version);
+
+        return $this->cachedVersionObjects[$version];
     }
 }
