@@ -42,7 +42,7 @@ final class GeneratePackageStatsCommand extends Command
     protected function configure(): void
     {
         $this->setName(CommandNaming::classToName(self::class));
-        $this->setDescription('Generates downloads stats data for PHP frameworks');
+        $this->setDescription('Generates downloads stats data for MVC PHP vendors');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
