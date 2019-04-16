@@ -13,9 +13,6 @@ final class ArrayUtils
         return $data;
     }
 
-    /**
-     * @param mixed[] $packagesData
-     */
     public function getArrayKeyAverage(array $packagesData, string $key): float
     {
         $total = [];
@@ -28,9 +25,6 @@ final class ArrayUtils
         return round($average, 2);
     }
 
-    /**
-     * @param mixed[] $array
-     */
     public function getArrayKeySum(array $array, string $key): int
     {
         $total = 0;
