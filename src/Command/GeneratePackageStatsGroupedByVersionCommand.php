@@ -2,6 +2,7 @@
 
 namespace TomasVotruba\Website\Command;
 
+use Nette\Utils\DateTime;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -62,18 +63,25 @@ final class GeneratePackageStatsGroupedByVersionCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $this->symfonyStyle->note('This is ok?');
-
         $vendorData = [];
+
+        ksort($this->frameworksVendorToName);
+
         foreach ($this->frameworksVendorToName as $vendor => $name) {
+            $this->symfonyStyle->title(sprintf('Loading packages data grouped by version for "%s" vendor', $vendor));
+
             $vendorPackages = $this->vendorPackagesProvider->provideForVendor($vendor);
             $vendorData[$vendor]['packages_data'] = $this->packageDataGroupedByVersionFactory->createPackagesData(
                 $vendorPackages
             );
-            $vendorData['name'] = $name;
+
+            $vendorData[$vendor]['name'] = $name;
         }
 
-        $this->generatedFilesDumper->dump('vendor_packages_by_version', $vendorData);
+        $data['vendors'] = $vendorData;
+        $data['updated_at'] = (new DateTime())->format('Y-m-d H:i:s');
+
+        $this->generatedFilesDumper->dump('vendor_packages_by_version', $data);
         $this->symfonyStyle->success('Data imported!');
 
         return ShellCode::SUCCESS;

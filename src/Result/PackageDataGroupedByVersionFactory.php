@@ -26,7 +26,14 @@ final class PackageDataGroupedByVersionFactory
 
         foreach ($packageNames as $packageName) {
             $packageKey = $this->createPackageKey($packageName);
-            $packagesData[$packageKey] = $this->minorPackageVersionsDownloadsProvider->provideForPackage($packageName);
+
+            $packageDownloads = $this->minorPackageVersionsDownloadsProvider->provideForPackage($packageName);
+            if ($packageDownloads === []) {
+                continue;
+            }
+
+            $packagesData[$packageKey]['downloads'] = $packageDownloads;
+            $packagesData[$packageKey]['package_name'] = $packageName;
         }
 
         return $packagesData;

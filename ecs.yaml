@@ -27,3 +27,7 @@ parameters:
 
         Symplify\CodingStandard\Sniffs\Debug\CommentedOutCodeSniff.Found:
             - 'src/Command/GeneratePackageStatsCommand.php'
+
+        # false positive
+        SlevomatCodingStandard\Sniffs\Variables\UnusedVariableSniff.UnusedVariable:
+            - 'src/Packagist/MinorPackageVersionsDownloadsProvider.php'

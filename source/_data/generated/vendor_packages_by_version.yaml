@@ -1,0 +1,2547 @@
+# this file was generated on 2019-04-16 12:22:43, do not edit it manually
+parameters:
+    vendor_packages_by_version:
+        vendors:
+            cakephp:
+                packages_data:
+                    cakephp_acl:
+                        downloads:
+                            v0.4: 1723
+                        package_name: cakephp/acl
+                    cakephp_app:
+                        downloads:
+                            v3.7: 12364
+                        package_name: cakephp/app
+                    cakephp_authentication:
+                        downloads:
+                            v1.0: 1661
+                        package_name: cakephp/authentication
+                    cakephp_authorization:
+                        downloads:
+                            v1.0: 1533
+                        package_name: cakephp/authorization
+                    cakephp_bake:
+                        downloads:
+                            v1.9: 21085
+                            v1.8: 11607
+                            v1.7: 7067
+                            v1.6: 10687
+                            v1.4: 2944
+                            v1.3: 2174
+                            v1.2: 1906
+                        package_name: cakephp/bake
+                    cakephp_cache:
+                        downloads:
+                            v3.7: 64225
+                            v3.6: 11242
+                        package_name: cakephp/cache
+                    cakephp_cakephp:
+                        downloads:
+                            v3.7: 27740
+                            v3.6: 21878
+                            v3.5: 15744
+                            v3.4: 1484
+                            v3.3: 1493
+                            v2.9: 1588
+                            v2.8: 1611
+                            v2.10: 19801
+                        package_name: cakephp/cakephp
+                    cakephp_cakephp_codesniffer:
+                        downloads:
+                            v3.1: 31441
+                            v3.0: 17489
+                            v2.4: 2124
+                            v1.0: 2503
+                        package_name: cakephp/cakephp-codesniffer
+                    cakephp_chronos:
+                        downloads:
+                            v1.2: 283249
+                            v1.1: 29886
+                        package_name: cakephp/chronos
+                    cakephp_collection:
+                        downloads:
+                            v3.7: 64588
+                            v3.6: 10720
+                        package_name: cakephp/collection
+                    cakephp_core:
+                        downloads:
+                            v3.7: 73055
+                            v3.6: 12507
+                        package_name: cakephp/core
+                    cakephp_database:
+                        downloads:
+                            v3.7: 64209
+                            v3.6: 11228
+                        package_name: cakephp/database
+                    cakephp_datasource:
+                        downloads:
+                            v3.7: 64343
+                            v3.6: 11242
+                        package_name: cakephp/datasource
+                    cakephp_debug_kit:
+                        downloads:
+                            v3.9: 2771
+                            v3.18: 6318
+                            v3.17: 15741
+                            v3.16: 12926
+                            v3.15: 7059
+                            v3.14: 12298
+                            v3.11: 3337
+                            v2.2: 18498
+                        package_name: cakephp/debug_kit
+                    cakephp_elastic_search:
+                        downloads:
+                            v2.0: 2592
+                        package_name: cakephp/elastic-search
+                    cakephp_localized:
+                        downloads:
+                            v3.5: 1653
+                        package_name: cakephp/localized
+                    cakephp_log:
+                        downloads:
+                            v3.7: 61060
+                        package_name: cakephp/log
+                    cakephp_migrations:
+                        downloads:
+                            v2.1: 30344
+                            v2.0: 3509
+                            v1.8: 15355
+                            v1.7: 20645
+                            v1.6: 3752
+                        package_name: cakephp/migrations
+                    cakephp_plugin_installer:
+                        downloads:
+                            v1.1: 63809
+                            v1.0: 6395
+                            v0.0: 2961
+                        package_name: cakephp/plugin-installer
+                    cakephp_utility:
+                        downloads:
+                            v3.7: 73488
+                            v3.6: 12429
+                        package_name: cakephp/utility
+                name: CakePHP
+            illuminate:
+                packages_data:
+                    illuminate_auth:
+                        downloads:
+                            v5.8: 34402
+                            v5.7: 41176
+                            v5.6: 26800
+                            v5.5: 23214
+                            v5.4: 12696
+                            v5.3: 6835
+                            v5.2: 7122
+                            v5.1: 2948
+                        package_name: illuminate/auth
+                    illuminate_broadcasting:
+                        downloads:
+                            v5.8: 33215
+                            v5.7: 41087
+                            v5.6: 26726
+                            v5.5: 22935
+                            v5.4: 12030
+                            v5.3: 6956
+                            v5.2: 7005
+                            v5.1: 2757
+                        package_name: illuminate/broadcasting
+                    illuminate_bus:
+                        downloads:
+                            v5.8: 33847
+                            v5.7: 46627
+                            v5.6: 27574
+                            v5.5: 26056
+                            v5.4: 12593
+                            v5.3: 7117
+                            v5.2: 7192
+                            v5.1: 3333
+                        package_name: illuminate/bus
+                    illuminate_cache:
+                        downloads:
+                            v5.8: 36922
+                            v5.7: 45825
+                            v5.6: 31297
+                            v5.5: 28982
+                            v5.4: 15447
+                            v5.3: 7362
+                            v5.2: 7688
+                            v5.1: 3174
+                            v4.2: 1224
+                        package_name: illuminate/cache
+                    illuminate_config:
+                        downloads:
+                            v5.8: 47802
+                            v5.7: 55291
+                            v5.6: 50197
+                            v5.5: 33520
+                            v5.4: 17873
+                            v5.3: 7007
+                            v5.2: 10049
+                            v5.1: 3300
+                            v4.2: 1818
+                        package_name: illuminate/config
+                    illuminate_console:
+                        downloads:
+                            v5.8: 39925
+                            v5.7: 50607
+                            v5.6: 45007
+                            v5.5: 26736
+                            v5.4: 18858
+                            v5.3: 7732
+                            v5.2: 9609
+                            v5.1: 3852
+                            v4.2: 1963
+                        package_name: illuminate/console
+                    illuminate_container:
+                        downloads:
+                            v5.8: 93517
+                            v5.7: 92149
+                            v5.6: 60993
+                            v5.5: 56461
+                            v5.4: 44249
+                            v5.3: 15011
+                            v5.2: 22876
+                            v5.1: 6895
+                            v5.0: 3464
+                            v4.2: 8301
+                            v4.1: 5835
+                        package_name: illuminate/container
+                    illuminate_contracts:
+                        downloads:
+                            v5.8: 152628
+                            v5.7: 106771
+                            v5.6: 66809
+                            v5.5: 77004
+                            v5.4: 56536
+                            v5.3: 16767
+                            v5.2: 29297
+                            v5.1: 8351
+                            v5.0: 5204
+                        package_name: illuminate/contracts
+                    illuminate_cookie:
+                        downloads:
+                            v5.7: 1608
+                            v5.5: 1007
+                            v5.3: 1999
+                            v5.1: 2859
+                            v4.2: 1387
+                        package_name: illuminate/cookie
+                    illuminate_database:
+                        downloads:
+                            v5.8: 59619
+                            v5.7: 75180
+                            v5.6: 36963
+                            v5.5: 41754
+                            v5.4: 29702
+                            v5.3: 13849
+                            v5.2: 16057
+                            v5.1: 4681
+                            v5.0: 1899
+                            v4.2: 5589
+                            v4.1: 2352
+                        package_name: illuminate/database
+                    illuminate_encryption:
+                        downloads:
+                            v5.8: 35588
+                            v5.7: 42098
+                            v5.6: 28145
+                            v5.5: 24347
+                            v5.4: 15805
+                            v5.3: 9653
+                            v5.2: 7785
+                            v5.1: 3580
+                            v4.2: 1144
+                        package_name: illuminate/encryption
+                    illuminate_events:
+                        downloads:
+                            v5.8: 50136
+                            v5.7: 57042
+                            v5.6: 55081
+                            v5.5: 37067
+                            v5.4: 30260
+                            v5.3: 10291
+                            v5.2: 10278
+                            v5.1: 5893
+                            v4.2: 7094
+                            v4.1: 2499
+                        package_name: illuminate/events
+                    illuminate_filesystem:
+                        downloads:
+                            v5.8: 56382
+                            v5.7: 59346
+                            v5.6: 56481
+                            v5.5: 39606
+                            v5.4: 28546
+                            v5.3: 7606
+                            v5.2: 13952
+                            v5.1: 4637
+                            v4.2: 5793
+                        package_name: illuminate/filesystem
+                    illuminate_hashing:
+                        downloads:
+                            v5.8: 32979
+                            v5.7: 41518
+                            v5.6: 26827
+                            v5.5: 25753
+                            v5.4: 11991
+                            v5.3: 6763
+                            v5.2: 7312
+                            v5.1: 2885
+                        package_name: illuminate/hashing
+                    illuminate_html:
+                        downloads:
+                            v5.0: 21295
+                        package_name: illuminate/html
+                    illuminate_http:
+                        downloads:
+                            v5.8: 40001
+                            v5.7: 45320
+                            v5.6: 27391
+                            v5.5: 24510
+                            v5.4: 16287
+                            v5.3: 6864
+                            v5.2: 8486
+                            v5.1: 4616
+                            v4.2: 1001
+                        package_name: illuminate/http
+                    illuminate_log:
+                        downloads:
+                            v5.8: 33342
+                            v5.7: 42097
+                            v5.6: 28390
+                            v5.5: 1353
+                            v5.4: 1324
+                            v4.2: 1837
+                        package_name: illuminate/log
+                    illuminate_mail:
+                        downloads:
+                            v5.8: 4148
+                            v5.7: 9565
+                            v5.6: 7751
+                            v5.5: 7845
+                            v5.4: 4049
+                            v5.3: 1323
+                            v5.2: 1373
+                            v5.1: 1638
+                        package_name: illuminate/mail
+                    illuminate_notifications:
+                        downloads:
+                            v5.7: 4767
+                            v5.6: 2789
+                            v5.5: 1520
+                        package_name: illuminate/notifications
+                    illuminate_pagination:
+                        downloads:
+                            v5.8: 37354
+                            v5.7: 42618
+                            v5.6: 28302
+                            v5.5: 25889
+                            v5.4: 14933
+                            v5.3: 9553
+                            v5.2: 12128
+                            v5.1: 3144
+                        package_name: illuminate/pagination
+                    illuminate_pipeline:
+                        downloads:
+                            v5.8: 37546
+                            v5.7: 47568
+                            v5.6: 27687
+                            v5.5: 26993
+                            v5.4: 14653
+                            v5.3: 7101
+                            v5.2: 8389
+                            v5.1: 4504
+                        package_name: illuminate/pipeline
+                    illuminate_queue:
+                        downloads:
+                            v5.8: 35946
+                            v5.7: 47063
+                            v5.6: 28918
+                            v5.5: 23948
+                            v5.4: 16196
+                            v5.3: 7683
+                            v5.2: 7696
+                            v5.1: 2850
+                        package_name: illuminate/queue
+                    illuminate_redis:
+                        downloads:
+                            v5.8: 7683
+                            v5.7: 21941
+                            v5.6: 9504
+                            v5.5: 10995
+                            v5.4: 7393
+                            v5.3: 5546
+                            v5.2: 4686
+                            v5.1: 1883
+                        package_name: illuminate/redis
+                    illuminate_remote:
+                        downloads:
+                            v4.2: 1295
+                        package_name: illuminate/remote
+                    illuminate_routing:
+                        downloads:
+                            v5.8: 5654
+                            v5.7: 7106
+                            v5.6: 5109
+                            v5.5: 5222
+                            v5.4: 3601
+                            v5.2: 2492
+                            v5.1: 1970
+                        package_name: illuminate/routing
+                    illuminate_session:
+                        downloads:
+                            v5.8: 39769
+                            v5.7: 46148
+                            v5.6: 27846
+                            v5.5: 27050
+                            v5.4: 16922
+                            v5.3: 6909
+                            v5.2: 8545
+                            v5.1: 4656
+                            v4.2: 1005
+                        package_name: illuminate/session
+                    illuminate_support:
+                        downloads:
+                            v5.8: 150503
+                            v5.7: 104939
+                            v5.6: 66627
+                            v5.5: 73532
+                            v5.4: 55855
+                            v5.3: 16712
+                            v5.2: 29168
+                            v5.1: 9202
+                            v5.0: 4682
+                            v4.2: 12355
+                            v4.1: 3706
+                        package_name: illuminate/support
+                    illuminate_translation:
+                        downloads:
+                            v5.8: 36800
+                            v5.7: 44771
+                            v5.6: 28205
+                            v5.5: 30142
+                            v5.4: 15826
+                            v5.3: 6872
+                            v5.2: 7731
+                            v5.1: 2950
+                        package_name: illuminate/translation
+                    illuminate_validation:
+                        downloads:
+                            v5.8: 36223
+                            v5.7: 43895
+                            v5.6: 28067
+                            v5.5: 30663
+                            v5.4: 15445
+                            v5.3: 6955
+                            v5.2: 8478
+                            v5.1: 3210
+                        package_name: illuminate/validation
+                    illuminate_view:
+                        downloads:
+                            v5.8: 42636
+                            v5.7: 46057
+                            v5.6: 48293
+                            v5.5: 30290
+                            v5.4: 19720
+                            v5.3: 7003
+                            v5.2: 8535
+                            v5.1: 4334
+                            v4.2: 4307
+                        package_name: illuminate/view
+                    laravel_framework:
+                        downloads:
+                            v5.8: 603112
+                            v5.7: 528095
+                            v5.6: 235212
+                            v5.5: 311592
+                            v5.4: 141113
+                            v5.3: 57601
+                            v5.2: 66093
+                            v5.1: 46757
+                            v5.0: 5647
+                            v4.2: 33208
+                            v4.1: 1004
+                        package_name: laravel/framework
+                name: Laravel
+            nette:
+                packages_data:
+                    nette_application:
+                        downloads:
+                            v3.0: 1486
+                            v2.4: 31288
+                            v2.3: 3494
+                        package_name: nette/application
+                    nette_bootstrap:
+                        downloads:
+                            v3.0: 66885
+                            v2.4: 340946
+                            v2.3: 2725
+                        package_name: nette/bootstrap
+                    nette_caching:
+                        downloads:
+                            v3.0: 7241
+                            v2.5: 59058
+                            v2.4: 1017
+                            v2.3: 2340
+                        package_name: nette/caching
+                    nette_command_line:
+                        downloads:
+                            v1.4: 1063
+                        package_name: nette/command-line
+                    nette_component_model:
+                        downloads:
+                            v3.0: 2447
+                            v2.4: 29004
+                            v2.3: 6529
+                            v2.2: 3399
+                        package_name: nette/component-model
+                    nette_database:
+                        downloads:
+                            v2.4: 21925
+                            v2.3: 2502
+                        package_name: nette/database
+                    nette_deprecated:
+                        downloads:
+                            v2.4: 11848
+                            v2.3: 3363
+                        package_name: nette/deprecated
+                    nette_di:
+                        downloads:
+                            v3.0: 54567
+                            v2.4: 352402
+                            v2.3: 2672
+                        package_name: nette/di
+                    nette_finder:
+                        downloads:
+                            v2.5: 257107
+                            v2.4: 192082
+                            v2.3: 3041
+                        package_name: nette/finder
+                    nette_forms:
+                        downloads:
+                            v3.0: 1845
+                            v2.4: 28886
+                            v2.3: 2986
+                        package_name: nette/forms
+                    nette_http:
+                        downloads:
+                            v3.0: 1512
+                            v2.4: 37268
+                            v2.3: 3222
+                        package_name: nette/http
+                    nette_mail:
+                        downloads:
+                            v3.0: 2195
+                            v2.4: 33754
+                            v2.3: 4694
+                        package_name: nette/mail
+                    nette_neon:
+                        downloads:
+                            v3.0: 252515
+                            v2.4: 165579
+                            v2.3: 3527
+                        package_name: nette/neon
+                    nette_nette:
+                        downloads:
+                            v2.5: 1999
+                            v2.4: 9884
+                            v2.3: 2355
+                        package_name: nette/nette
+                    nette_php_generator:
+                        downloads:
+                            v3.2: 337142
+                            v3.1: 1326
+                            v3.0: 114106
+                            v2.6: 21327
+                            v2.3: 3093
+                        package_name: nette/php-generator
+                    nette_reflection:
+                        downloads:
+                            v2.4: 38438
+                            v2.3: 3657
+                        package_name: nette/reflection
+                    nette_robot_loader:
+                        downloads:
+                            v3.2: 70131
+                            v3.1: 316765
+                            v3.0: 30448
+                            v2.4: 15304
+                            v2.3: 2656
+                        package_name: nette/robot-loader
+                    nette_routing:
+                        downloads:
+                            v3.0: 2985
+                        package_name: nette/routing
+                    nette_safe_stream:
+                        downloads:
+                            v2.4: 10470
+                            v2.3: 18244
+                        package_name: nette/safe-stream
+                    nette_schema:
+                        downloads:
+                            v1.0: 60313
+                        package_name: nette/schema
+                    nette_security:
+                        downloads:
+                            v3.0: 1155
+                            v2.4: 28511
+                            v2.3: 4577
+                        package_name: nette/security
+                    nette_tester:
+                        downloads:
+                            v2.2: 6785
+                            v2.1: 4531
+                            v2.0: 2738
+                            v1.7: 5197
+                        package_name: nette/tester
+                    nette_tokenizer:
+                        downloads:
+                            v3.0: 1838
+                            v2.3: 14839
+                            v2.2: 2190
+                        package_name: nette/tokenizer
+                    nette_utils:
+                        downloads:
+                            v3.0: 91930
+                            v2.5: 402110
+                            v2.4: 18956
+                            v2.3: 3574
+                        package_name: nette/utils
+                name: Nette
+            silex:
+                packages_data:
+                    silex_api:
+                        downloads:
+                            v2.3: 1014
+                        package_name: silex/api
+                    silex_silex:
+                        downloads:
+                            v2.3: 21079
+                            v2.2: 37467
+                            v2.1: 5416
+                            v2.0: 13189
+                            v1.3: 47524
+                            v1.2: 2685
+                        package_name: silex/silex
+                    silex_web_profiler:
+                        downloads:
+                            v2.0: 9111
+                            v1.0: 14382
+                        package_name: silex/web-profiler
+                name: Silex
+            slim:
+                packages_data:
+                    slim_csrf:
+                        downloads:
+                            v0.8: 9148
+                        package_name: slim/csrf
+                    slim_extras:
+                        downloads:
+                            v2.0: 3792
+                        package_name: slim/extras
+                    slim_flash:
+                        downloads:
+                            v0.4: 7768
+                            v0.2: 3725
+                            v0.1: 2457
+                        package_name: slim/flash
+                    slim_http:
+                        downloads:
+                            v0.3: 1090
+                        package_name: slim/http
+                    slim_http_cache:
+                        downloads:
+                            v0.4: 7836
+                            v0.3: 2343
+                        package_name: slim/http-cache
+                    slim_logger:
+                        downloads:
+                            v0.1: 2002
+                        package_name: slim/logger
+                    slim_middleware:
+                        downloads:
+                            v1.0: 1146
+                        package_name: slim/middleware
+                    slim_pdo:
+                        downloads:
+                            v1.10: 3527
+                        package_name: slim/pdo
+                    slim_php_view:
+                        downloads:
+                            v2.2: 50958
+                        package_name: slim/php-view
+                    slim_slim:
+                        downloads:
+                            v3.9: 12951
+                            v3.8: 9034
+                            v3.7: 1454
+                            v3.5: 2352
+                            v3.4: 1268
+                            v3.12: 98910
+                            v3.11: 35631
+                            v3.10: 12436
+                            v3.0: 1368
+                            v2.6: 47400
+                            v2.5: 1012
+                            v2.4: 4783
+                            v2.2: 1701
+                            v1.6: 1558
+                        package_name: slim/slim
+                    slim_slim_skeleton:
+                        downloads:
+                            v3.1: 4890
+                        package_name: slim/slim-skeleton
+                    slim_twig_view:
+                        downloads:
+                            v2.5: 4604
+                            v2.4: 22548
+                            v2.3: 4603
+                            v2.2: 2048
+                            v1.2: 4548
+                        package_name: slim/twig-view
+                    slim_views:
+                        downloads:
+                            v0.1: 15450
+                        package_name: slim/views
+                name: Slim
+            symfony:
+                packages_data:
+                    symfony_acl_bundle:
+                        downloads:
+                            v1.0: 9764
+                        package_name: symfony/acl-bundle
+                    symfony_amqp_pack:
+                        downloads:
+                            v1.0: 7368
+                        package_name: symfony/amqp-pack
+                    symfony_annotations_pack:
+                        downloads:
+                            v1.0: 1530
+                        package_name: symfony/annotations-pack
+                    symfony_apache_pack:
+                        downloads:
+                            v1.0: 85147
+                        package_name: symfony/apache-pack
+                    symfony_asset:
+                        downloads:
+                            v4.2: 374018
+                            v4.1: 57023
+                            v3.4: 39248
+                            v3.0: 5681
+                            v2.8: 8424
+                            v2.7: 2108
+                        package_name: symfony/asset
+                    symfony_assetic_bundle:
+                        downloads:
+                            v2.8: 287692
+                            v2.7: 11474
+                            v2.6: 6218
+                            v2.5: 1080
+                            v2.3: 13401
+                            v2.1: 1156
+                        package_name: symfony/assetic-bundle
+                    symfony_browser_kit:
+                        downloads:
+                            v4.2: 691344
+                            v4.1: 93642
+                            v4.0: 14834
+                            v3.4: 285444
+                            v3.3: 25198
+                            v3.2: 4118
+                            v3.1: 1767
+                            v3.0: 2806
+                            v2.8: 31867
+                            v2.7: 25661
+                            v2.6: 1425
+                            v2.5: 10767
+                            v2.4: 1641
+                            v2.3: 2835
+                        package_name: symfony/browser-kit
+                    symfony_cache:
+                        downloads:
+                            v4.2: 615828
+                            v4.1: 104874
+                            v4.0: 7443
+                            v3.4: 126112
+                            v3.3: 15326
+                            v3.2: 12265
+                        package_name: symfony/cache
+                    symfony_class_loader:
+                        downloads:
+                            v3.4: 723397
+                            v3.3: 22758
+                            v3.2: 11934
+                            v3.1: 2057
+                            v3.0: 5222
+                            v2.8: 26615
+                            v2.5: 2258
+                            v2.3: 1219
+                        package_name: symfony/class-loader
+                    symfony_config:
+                        downloads:
+                            v4.2: 849709
+                            v4.1: 118767
+                            v4.0: 16401
+                            v3.4: 614688
+                            v3.3: 56111
+                            v3.2: 78970
+                            v3.1: 4989
+                            v3.0: 1071
+                            v2.8: 99362
+                            v2.7: 4112
+                            v2.6: 3947
+                            v2.3: 1030
+                        package_name: symfony/config
+                    symfony_console:
+                        downloads:
+                            v4.2: 2236351
+                            v4.1: 322587
+                            v4.0: 47221
+                            v3.4: 1398999
+                            v3.3: 148011
+                            v3.2: 60604
+                            v3.1: 79982
+                            v3.0: 78692
+                            v2.8: 310339
+                            v2.7: 80921
+                            v2.6: 22217
+                            v2.5: 17597
+                            v2.4: 1698
+                            v2.3: 3896
+                        package_name: symfony/console
+                    symfony_contracts:
+                        downloads:
+                            v1.0: 2691797
+                        package_name: symfony/contracts
+                    symfony_css_selector:
+                        downloads:
+                            v4.2: 1822521
+                            v4.1: 221380
+                            v4.0: 54606
+                            v3.4: 691962
+                            v3.3: 69568
+                            v3.2: 16816
+                            v3.1: 147398
+                            v3.0: 61527
+                            v2.8: 148467
+                            v2.7: 39040
+                            v2.6: 2492
+                            v2.5: 10515
+                            v2.4: 1553
+                            v2.3: 1294
+                        package_name: symfony/css-selector
+                    symfony_debug:
+                        downloads:
+                            v4.2: 2019202
+                            v4.1: 259679
+                            v4.0: 42115
+                            v3.4: 1269642
+                            v3.3: 135159
+                            v3.2: 36529
+                            v3.1: 73530
+                            v3.0: 304526
+                            v2.8: 81716
+                            v2.7: 73913
+                            v2.6: 8760
+                            v2.5: 10222
+                            v2.4: 1238
+                        package_name: symfony/debug
+                    symfony_debug_bundle:
+                        downloads:
+                            v4.2: 234097
+                            v4.1: 31456
+                            v3.4: 17875
+                        package_name: symfony/debug-bundle
+                    symfony_debug_pack:
+                        downloads:
+                            v1.0: 208145
+                        package_name: symfony/debug-pack
+                    symfony_dependency_injection:
+                        downloads:
+                            v4.2: 741674
+                            v4.1: 111753
+                            v4.0: 21242
+                            v3.4: 530352
+                            v3.3: 53044
+                            v3.2: 42638
+                            v3.1: 31797
+                            v3.0: 2467
+                            v2.8: 61559
+                            v2.7: 2046
+                            v2.6: 2514
+                            v2.4: 2953
+                        package_name: symfony/dependency-injection
+                    symfony_doctrine_bridge:
+                        downloads:
+                            v4.2: 422998
+                            v4.1: 66328
+                            v4.0: 1356
+                            v3.4: 26379
+                            v3.3: 1124
+                            v3.2: 1762
+                            v2.8: 3353
+                        package_name: symfony/doctrine-bridge
+                    symfony_dom_crawler:
+                        downloads:
+                            v4.2: 699292
+                            v4.1: 106389
+                            v4.0: 19755
+                            v3.4: 507564
+                            v3.3: 33989
+                            v3.2: 9177
+                            v3.1: 122616
+                            v3.0: 63005
+                            v2.8: 37774
+                            v2.7: 83376
+                            v2.6: 1700
+                            v2.5: 10731
+                            v2.4: 1416
+                        package_name: symfony/dom-crawler
+                    symfony_dotenv:
+                        downloads:
+                            v4.2: 462697
+                            v4.1: 71544
+                            v4.0: 4636
+                            v3.4: 70867
+                        package_name: symfony/dotenv
+                    symfony_event_dispatcher:
+                        downloads:
+                            v4.2: 2231367
+                            v4.1: 348112
+                            v4.0: 71910
+                            v3.4: 901479
+                            v3.3: 89548
+                            v3.2: 68297
+                            v3.1: 15675
+                            v3.0: 39825
+                            v2.8: 564677
+                            v2.7: 9239
+                            v2.6: 11308
+                            v2.5: 1189
+                            v2.4: 2809
+                            v2.3: 3861
+                        package_name: symfony/event-dispatcher
+                    symfony_expression_language:
+                        downloads:
+                            v4.2: 395432
+                            v4.1: 56679
+                            v4.0: 1004
+                            v3.4: 111608
+                            v3.3: 7126
+                            v3.2: 1184
+                            v2.8: 16291
+                            v2.7: 1568
+                            v2.6: 2910
+                        package_name: symfony/expression-language
+                    symfony_filesystem:
+                        downloads:
+                            v4.2: 1360749
+                            v4.1: 172263
+                            v4.0: 30966
+                            v3.4: 814837
+                            v3.3: 92290
+                            v3.2: 20374
+                            v3.1: 13422
+                            v3.0: 47188
+                            v2.8: 125394
+                            v2.7: 4632
+                            v2.6: 7160
+                            v2.5: 1840
+                        package_name: symfony/filesystem
+                    symfony_finder:
+                        downloads:
+                            v4.2: 2260586
+                            v4.1: 255140
+                            v4.0: 47152
+                            v3.4: 1281640
+                            v3.3: 128101
+                            v3.2: 23748
+                            v3.1: 77083
+                            v3.0: 86532
+                            v2.8: 98860
+                            v2.7: 79372
+                            v2.6: 8728
+                            v2.5: 17863
+                            v2.4: 1896
+                            v2.3: 1015
+                        package_name: symfony/finder
+                    symfony_flex:
+                        downloads:
+                            v1.2: 380768
+                            v1.1: 171084
+                            v1.0: 14442
+                        package_name: symfony/flex
+                    symfony_force_lowest:
+                        downloads:
+                            v4.2: 1044
+                            v3.4: 1426
+                        package_name: symfony/force-lowest
+                    symfony_form:
+                        downloads:
+                            v4.2: 326758
+                            v4.1: 49608
+                            v3.4: 49277
+                            v3.3: 6610
+                            v3.2: 2252
+                            v2.8: 57874
+                            v2.6: 1808
+                        package_name: symfony/form
+                    symfony_framework_bundle:
+                        downloads:
+                            v4.2: 471506
+                            v4.1: 87830
+                            v4.0: 12303
+                            v3.4: 56008
+                            v3.2: 2472
+                            v3.1: 1572
+                            v3.0: 2657
+                            v2.8: 4849
+                            v2.7: 2621
+                        package_name: symfony/framework-bundle
+                    symfony_framework_standard_edition:
+                        downloads:
+                            v3.4: 5761
+                        package_name: symfony/framework-standard-edition
+                    symfony_http_foundation:
+                        downloads:
+                            v4.2: 1903215
+                            v4.1: 231524
+                            v4.0: 36636
+                            v3.4: 1004079
+                            v3.3: 70584
+                            v3.2: 23800
+                            v3.1: 78193
+                            v3.0: 101666
+                            v2.8: 99477
+                            v2.7: 78147
+                            v2.6: 12595
+                            v2.5: 13687
+                            v2.4: 8431
+                            v2.3: 3254
+                        package_name: symfony/http-foundation
+                    symfony_http_kernel:
+                        downloads:
+                            v4.2: 1787547
+                            v4.1: 228148
+                            v4.0: 44593
+                            v3.4: 880697
+                            v3.3: 63760
+                            v3.2: 30922
+                            v3.1: 68354
+                            v3.0: 103863
+                            v2.8: 25542
+                            v2.7: 78019
+                            v2.6: 11922
+                            v2.5: 12344
+                            v2.4: 5288
+                            v2.3: 3207
+                        package_name: symfony/http-kernel
+                    symfony_icu:
+                        downloads:
+                            v1.2: 5005
+                            v1.1: 5517
+                            v1.0: 10716
+                        package_name: symfony/icu
+                    symfony_inflector:
+                        downloads:
+                            v4.2: 620989
+                            v4.1: 94068
+                            v4.0: 12487
+                            v3.4: 80558
+                            v3.3: 10014
+                            v3.2: 3425
+                        package_name: symfony/inflector
+                    symfony_intl:
+                        downloads:
+                            v4.2: 401094
+                            v4.1: 56972
+                            v4.0: 2417
+                            v3.4: 56045
+                            v3.3: 3411
+                            v3.2: 52830
+                            v3.0: 1519
+                            v2.8: 8792
+                            v2.5: 1165
+                        package_name: symfony/intl
+                    symfony_ldap:
+                        downloads:
+                            v4.2: 9869
+                            v3.4: 4330
+                        package_name: symfony/ldap
+                    symfony_locale:
+                        downloads:
+                            v2.8: 1881
+                        package_name: symfony/locale
+                    symfony_lock:
+                        downloads:
+                            v4.2: 65717
+                            v4.1: 6579
+                            v3.4: 20534
+                            v3.3: 1366
+                        package_name: symfony/lock
+                    symfony_maker_bundle:
+                        downloads:
+                            v1.9: 17714
+                            v1.8: 5157
+                            v1.7: 7429
+                            v1.6: 2752
+                            v1.5: 7551
+                            v1.2: 3603
+                            v1.11: 294210
+                            v1.10: 4150
+                        package_name: symfony/maker-bundle
+                    symfony_mercure:
+                        downloads:
+                            v0.1: 12919
+                        package_name: symfony/mercure
+                    symfony_mercure_bundle:
+                        downloads:
+                            v0.1: 11613
+                        package_name: symfony/mercure-bundle
+                    symfony_messenger:
+                        downloads:
+                            v4.2: 58881
+                            v4.1: 6769
+                        package_name: symfony/messenger
+                    symfony_monolog_bridge:
+                        downloads:
+                            v4.2: 404434
+                            v4.1: 62576
+                            v4.0: 1320
+                            v3.4: 30907
+                            v3.2: 4054
+                            v3.0: 1961
+                            v2.8: 6649
+                            v2.6: 1052
+                        package_name: symfony/monolog-bridge
+                    symfony_monolog_bundle:
+                        downloads:
+                            v3.3: 773744
+                            v3.2: 75659
+                            v3.1: 76280
+                            v3.0: 13400
+                            v2.8: 10563
+                            v2.7: 8972
+                            v2.6: 2262
+                            v2.5: 1682
+                            v2.4: 1930
+                            v2.3: 14082
+                            v2.12: 122038
+                            v2.11: 25103
+                            v2.10: 4827
+                        package_name: symfony/monolog-bundle
+                    symfony_options_resolver:
+                        downloads:
+                            v4.2: 879438
+                            v4.1: 108893
+                            v4.0: 17079
+                            v3.4: 243552
+                            v3.3: 29694
+                            v3.2: 4303
+                            v3.0: 6034
+                            v2.8: 91328
+                            v2.7: 1412
+                            v2.6: 5179
+                        package_name: symfony/options-resolver
+                    symfony_orm_pack:
+                        downloads:
+                            v1.0: 352658
+                        package_name: symfony/orm-pack
+                    symfony_panther:
+                        downloads:
+                            v0.3: 124328
+                            v0.2: 46238
+                            v0.1: 1179
+                        package_name: symfony/panther
+                    symfony_phpunit_bridge:
+                        downloads:
+                            v4.2: 361681
+                            v4.1: 38914
+                            v4.0: 6755
+                            v3.4: 410617
+                            v3.3: 23859
+                            v3.2: 21072
+                            v3.1: 1331
+                            v2.8: 27077
+                        package_name: symfony/phpunit-bridge
+                    symfony_polyfill:
+                        downloads:
+                            v1.7: 5402
+                            v1.6: 1182
+                            v1.2: 1162
+                            v1.11: 2509
+                            v1.10: 5562
+                        package_name: symfony/polyfill
+                    symfony_polyfill_apcu:
+                        downloads:
+                            v1.9: 70587
+                            v1.8: 61665
+                            v1.7: 49628
+                            v1.6: 45985
+                            v1.5: 16362
+                            v1.4: 16084
+                            v1.3: 34113
+                            v1.2: 17163
+                            v1.11: 214474
+                            v1.10: 364633
+                            v1.1: 9788
+                        package_name: symfony/polyfill-apcu
+                    symfony_polyfill_ctype:
+                        downloads:
+                            v1.9: 330645
+                            v1.8: 211532
+                            v1.11: 2305218
+                            v1.10: 2270317
+                        package_name: symfony/polyfill-ctype
+                    symfony_polyfill_iconv:
+                        downloads:
+                            v1.9: 28223
+                            v1.8: 9086
+                            v1.7: 4118
+                            v1.6: 2995
+                            v1.5: 1276
+                            v1.3: 2581
+                            v1.11: 1091503
+                            v1.10: 562774
+                            v1.1: 1938
+                        package_name: symfony/polyfill-iconv
+                    symfony_polyfill_intl_grapheme:
+                        downloads:
+                            v1.11: 5698
+                            v1.10: 10023
+                        package_name: symfony/polyfill-intl-grapheme
+                    symfony_polyfill_intl_icu:
+                        downloads:
+                            v1.9: 78784
+                            v1.8: 62205
+                            v1.7: 38447
+                            v1.6: 39780
+                            v1.5: 15984
+                            v1.4: 14216
+                            v1.3: 31078
+                            v1.2: 13449
+                            v1.11: 358737
+                            v1.10: 593968
+                            v1.1: 5451
+                            v1.0: 2611
+                        package_name: symfony/polyfill-intl-icu
+                    symfony_polyfill_intl_idn:
+                        downloads:
+                            v1.11: 1061287
+                            v1.10: 477680
+                        package_name: symfony/polyfill-intl-idn
+                    symfony_polyfill_intl_normalizer:
+                        downloads:
+                            v1.11: 5478
+                            v1.10: 10751
+                        package_name: symfony/polyfill-intl-normalizer
+                    symfony_polyfill_mbstring:
+                        downloads:
+                            v1.9: 323752
+                            v1.8: 232265
+                            v1.7: 162787
+                            v1.6: 125623
+                            v1.5: 59884
+                            v1.4: 48359
+                            v1.3: 111712
+                            v1.2: 58496
+                            v1.11: 2240600
+                            v1.10: 2278245
+                            v1.1: 19386
+                            v1.0: 3889
+                        package_name: symfony/polyfill-mbstring
+                    symfony_polyfill_php54:
+                        downloads:
+                            v1.9: 27325
+                            v1.8: 23207
+                            v1.7: 18648
+                            v1.6: 20555
+                            v1.5: 7786
+                            v1.4: 7057
+                            v1.3: 26559
+                            v1.2: 13906
+                            v1.11: 77087
+                            v1.10: 158156
+                            v1.1: 7454
+                            v1.0: 2858
+                        package_name: symfony/polyfill-php54
+                    symfony_polyfill_php55:
+                        downloads:
+                            v1.9: 26280
+                            v1.8: 22262
+                            v1.7: 18397
+                            v1.6: 20910
+                            v1.5: 7639
+                            v1.4: 7449
+                            v1.3: 24641
+                            v1.2: 13016
+                            v1.11: 78922
+                            v1.10: 169152
+                            v1.1: 8499
+                            v1.0: 1158
+                        package_name: symfony/polyfill-php55
+                    symfony_polyfill_php56:
+                        downloads:
+                            v1.9: 117613
+                            v1.8: 96505
+                            v1.7: 62205
+                            v1.6: 64779
+                            v1.5: 32537
+                            v1.4: 26833
+                            v1.3: 50924
+                            v1.2: 25228
+                            v1.11: 506767
+                            v1.10: 680995
+                            v1.1: 12576
+                            v1.0: 3856
+                        package_name: symfony/polyfill-php56
+                    symfony_polyfill_php70:
+                        downloads:
+                            v1.9: 158804
+                            v1.8: 114763
+                            v1.7: 90466
+                            v1.6: 70683
+                            v1.5: 20763
+                            v1.4: 16565
+                            v1.3: 36115
+                            v1.2: 13173
+                            v1.11: 716686
+                            v1.10: 864000
+                            v1.1: 6167
+                            v1.0: 1792
+                        package_name: symfony/polyfill-php70
+                    symfony_polyfill_php71:
+                        downloads:
+                            v1.8: 1177
+                            v1.11: 2052
+                            v1.10: 3124
+                        package_name: symfony/polyfill-php71
+                    symfony_polyfill_php72:
+                        downloads:
+                            v1.9: 131524
+                            v1.8: 72082
+                            v1.7: 36985
+                            v1.6: 10932
+                            v1.5: 6349
+                            v1.4: 3409
+                            v1.11: 1382920
+                            v1.10: 1223069
+                        package_name: symfony/polyfill-php72
+                    symfony_polyfill_php73:
+                        downloads:
+                            v1.11: 8327
+                            v1.10: 8439
+                        package_name: symfony/polyfill-php73
+                    symfony_polyfill_util:
+                        downloads:
+                            v1.9: 117955
+                            v1.8: 96520
+                            v1.7: 62395
+                            v1.6: 65032
+                            v1.5: 32604
+                            v1.4: 26863
+                            v1.3: 51037
+                            v1.2: 25191
+                            v1.11: 506861
+                            v1.10: 681167
+                            v1.1: 12516
+                            v1.0: 3935
+                        package_name: symfony/polyfill-util
+                    symfony_polyfill_xml:
+                        downloads:
+                            v1.9: 2929
+                            v1.8: 3103
+                            v1.6: 1984
+                            v1.4: 3479
+                            v1.3: 8101
+                            v1.11: 10050
+                            v1.10: 14492
+                        package_name: symfony/polyfill-xml
+                    symfony_process:
+                        downloads:
+                            v4.2: 2023364
+                            v4.1: 284423
+                            v4.0: 42617
+                            v3.4: 1280266
+                            v3.3: 122898
+                            v3.2: 25616
+                            v3.1: 72054
+                            v3.0: 75239
+                            v2.8: 196364
+                            v2.7: 83311
+                            v2.6: 13136
+                            v2.5: 12089
+                            v2.4: 3093
+                            v2.3: 3011
+                        package_name: symfony/process
+                    symfony_profiler_pack:
+                        downloads:
+                            v1.0: 335450
+                        package_name: symfony/profiler-pack
+                    symfony_property_access:
+                        downloads:
+                            v4.2: 582249
+                            v4.1: 81003
+                            v4.0: 8443
+                            v3.4: 123918
+                            v3.3: 10239
+                            v3.2: 3425
+                            v3.0: 58960
+                            v2.8: 33886
+                            v2.7: 1056
+                        package_name: symfony/property-access
+                    symfony_property_info:
+                        downloads:
+                            v4.2: 320043
+                            v4.1: 45783
+                            v3.4: 20390
+                        package_name: symfony/property-info
+                    symfony_proxy_manager_bridge:
+                        downloads:
+                            v4.2: 67464
+                            v4.1: 9931
+                            v3.4: 16149
+                            v3.3: 1833
+                            v3.0: 1864
+                            v2.8: 1764
+                        package_name: symfony/proxy-manager-bridge
+                    symfony_psr_http_message_bridge:
+                        downloads:
+                            v1.2: 407742
+                            v1.1: 342891
+                            v1.0: 81733
+                            v0.4: 1216
+                            v0.2: 14690
+                        package_name: symfony/psr-http-message-bridge
+                    symfony_requirements_checker:
+                        downloads:
+                            v1.1: 22298
+                        package_name: symfony/requirements-checker
+                    symfony_routing:
+                        downloads:
+                            v4.2: 1749840
+                            v4.1: 221350
+                            v4.0: 27723
+                            v3.4: 861835
+                            v3.3: 63652
+                            v3.2: 32770
+                            v3.1: 62997
+                            v3.0: 101834
+                            v2.8: 16840
+                            v2.7: 74649
+                            v2.6: 12220
+                            v2.5: 11808
+                            v2.4: 5288
+                            v2.3: 3445
+                        package_name: symfony/routing
+                    symfony_security:
+                        downloads:
+                            v4.2: 122048
+                            v4.1: 57250
+                            v4.0: 2088
+                            v3.4: 45691
+                            v3.3: 1229
+                            v3.2: 7423
+                            v3.0: 1149
+                            v2.8: 11306
+                        package_name: symfony/security
+                    symfony_security_acl:
+                        downloads:
+                            v3.0: 327156
+                            v2.8: 31807
+                        package_name: symfony/security-acl
+                    symfony_security_bundle:
+                        downloads:
+                            v4.2: 373318
+                            v4.1: 68617
+                            v4.0: 5364
+                            v3.4: 33441
+                            v2.8: 2712
+                        package_name: symfony/security-bundle
+                    symfony_security_core:
+                        downloads:
+                            v4.2: 325514
+                            v4.1: 1874
+                            v3.4: 13801
+                            v3.0: 2248
+                            v2.8: 2441
+                            v2.7: 24964
+                            v2.6: 7668
+                            v2.5: 12329
+                            v2.4: 1146
+                        package_name: symfony/security-core
+                    symfony_security_csrf:
+                        downloads:
+                            v4.2: 305780
+                            v3.4: 11930
+                            v3.0: 1709
+                            v2.8: 4038
+                        package_name: symfony/security-csrf
+                    symfony_security_guard:
+                        downloads:
+                            v4.2: 300008
+                        package_name: symfony/security-guard
+                    symfony_security_http:
+                        downloads:
+                            v4.2: 301044
+                        package_name: symfony/security-http
+                    symfony_serializer:
+                        downloads:
+                            v4.2: 424446
+                            v4.1: 64722
+                            v4.0: 2109
+                            v3.4: 393537
+                            v3.3: 14946
+                            v3.2: 8823
+                            v3.1: 15003
+                            v2.8: 53005
+                            v2.7: 2241
+                        package_name: symfony/serializer
+                    symfony_serializer_pack:
+                        downloads:
+                            v1.0: 240997
+                        package_name: symfony/serializer-pack
+                    symfony_stopwatch:
+                        downloads:
+                            v4.2: 686343
+                            v4.1: 83729
+                            v4.0: 8477
+                            v3.4: 180593
+                            v3.3: 23885
+                            v3.2: 2737
+                            v3.1: 2806
+                            v3.0: 7924
+                            v2.8: 29159
+                        package_name: symfony/stopwatch
+                    symfony_swiftmailer_bridge:
+                        downloads:
+                            v2.8: 1250
+                        package_name: symfony/swiftmailer-bridge
+                    symfony_swiftmailer_bundle:
+                        downloads:
+                            v3.2: 421179
+                            v3.1: 6480
+                            v3.0: 9052
+                            v2.6: 386690
+                            v2.5: 10743
+                            v2.4: 30883
+                            v2.3: 71178
+                        package_name: symfony/swiftmailer-bundle
+                    symfony_symfony:
+                        downloads:
+                            v4.2: 23700
+                            v4.1: 3621
+                            v4.0: 1070
+                            v3.4: 447541
+                            v3.3: 41516
+                            v3.2: 23517
+                            v3.1: 7346
+                            v3.0: 2792
+                            v2.8: 150777
+                            v2.7: 13854
+                            v2.6: 3879
+                            v2.5: 2293
+                            v2.4: 1184
+                            v2.3: 3981
+                        package_name: symfony/symfony
+                    symfony_symfony_demo:
+                        downloads:
+                            v1.3: 1522
+                        package_name: symfony/symfony-demo
+                    symfony_templating:
+                        downloads:
+                            v4.2: 241427
+                            v4.1: 40590
+                            v3.4: 34107
+                            v3.0: 5705
+                            v2.8: 6887
+                        package_name: symfony/templating
+                    symfony_test_pack:
+                        downloads:
+                            v1.0: 176783
+                        package_name: symfony/test-pack
+                    symfony_thanks:
+                        downloads:
+                            v1.1: 152774
+                            v1.0: 18479
+                        package_name: symfony/thanks
+                    symfony_translation:
+                        downloads:
+                            v4.2: 2079680
+                            v4.1: 294958
+                            v4.0: 50860
+                            v3.4: 700135
+                            v3.3: 129268
+                            v3.2: 57364
+                            v3.1: 72598
+                            v3.0: 151428
+                            v2.8: 56470
+                            v2.7: 81412
+                            v2.6: 13322
+                            v2.5: 12535
+                            v2.4: 1834
+                        package_name: symfony/translation
+                    symfony_twig_bridge:
+                        downloads:
+                            v4.2: 424633
+                            v4.1: 70296
+                            v4.0: 10802
+                            v3.4: 76949
+                            v3.3: 11066
+                            v3.2: 6450
+                            v3.0: 6778
+                            v2.8: 10105
+                            v2.7: 1652
+                            v2.6: 2331
+                        package_name: symfony/twig-bridge
+                    symfony_twig_bundle:
+                        downloads:
+                            v4.2: 413200
+                            v4.1: 73095
+                            v4.0: 1037
+                            v3.4: 43767
+                            v3.3: 1388
+                            v2.8: 2712
+                        package_name: symfony/twig-bundle
+                    symfony_validator:
+                        downloads:
+                            v4.2: 418159
+                            v4.1: 68336
+                            v4.0: 2465
+                            v3.4: 391215
+                            v3.3: 12368
+                            v3.2: 14552
+                            v3.1: 2781
+                            v3.0: 1396
+                            v2.8: 88534
+                            v2.7: 1562
+                            v2.6: 4474
+                            v2.5: 1234
+                        package_name: symfony/validator
+                    symfony_var_dumper:
+                        downloads:
+                            v4.2: 1842847
+                            v4.1: 215805
+                            v4.0: 42334
+                            v3.4: 788662
+                            v3.3: 61413
+                            v3.2: 17329
+                            v3.1: 62625
+                            v3.0: 69392
+                            v2.8: 33834
+                            v2.7: 48536
+                            v2.6: 8015
+                        package_name: symfony/var-dumper
+                    symfony_var_exporter:
+                        downloads:
+                            v4.2: 636713
+                        package_name: symfony/var-exporter
+                    symfony_web_link:
+                        downloads:
+                            v4.2: 196424
+                            v4.1: 19886
+                            v3.4: 8282
+                        package_name: symfony/web-link
+                    symfony_web_profiler_bundle:
+                        downloads:
+                            v4.2: 315022
+                            v4.1: 56291
+                            v4.0: 6550
+                            v3.4: 30717
+                            v3.1: 1135
+                            v3.0: 3070
+                            v2.8: 7124
+                            v2.6: 1100
+                        package_name: symfony/web-profiler-bundle
+                    symfony_web_server_bundle:
+                        downloads:
+                            v4.2: 209082
+                            v4.1: 30416
+                            v3.4: 12759
+                        package_name: symfony/web-server-bundle
+                    symfony_webpack_encore_bundle:
+                        downloads:
+                            v1.5: 7575
+                            v1.4: 28091
+                            v1.3: 10653
+                            v1.2: 42973
+                            v1.1: 25809
+                            v1.0: 12135
+                        package_name: symfony/webpack-encore-bundle
+                    symfony_webpack_encore_pack:
+                        downloads:
+                            v1.0: 78554
+                        package_name: symfony/webpack-encore-pack
+                    symfony_workflow:
+                        downloads:
+                            v4.2: 60802
+                            v4.1: 3183
+                            v3.4: 9986
+                        package_name: symfony/workflow
+                    symfony_yaml:
+                        downloads:
+                            v4.2: 1157895
+                            v4.1: 175650
+                            v4.0: 38137
+                            v3.4: 1114970
+                            v3.3: 414653
+                            v3.2: 50015
+                            v3.1: 29148
+                            v3.0: 15421
+                            v2.8: 235186
+                            v2.7: 11723
+                            v2.6: 12538
+                            v2.5: 3150
+                            v2.4: 2887
+                            v2.3: 1233
+                            v2.1: 1977
+                        package_name: symfony/yaml
+                name: Symfony
+            yiisoft:
+                packages_data:
+                    yiisoft_yii:
+                        downloads:
+                            v1.1: 37989
+                        package_name: yiisoft/yii
+                    yiisoft_yii2:
+                        downloads:
+                            v2.0: 90543
+                        package_name: yiisoft/yii2
+                    yiisoft_yii2_apidoc:
+                        downloads:
+                            v2.1: 4811
+                            v2.0: 1444
+                        package_name: yiisoft/yii2-apidoc
+                    yiisoft_yii2_app_advanced:
+                        downloads:
+                            v2.0: 7552
+                        package_name: yiisoft/yii2-app-advanced
+                    yiisoft_yii2_app_basic:
+                        downloads:
+                            v2.0: 14102
+                        package_name: yiisoft/yii2-app-basic
+                    yiisoft_yii2_authclient:
+                        downloads:
+                            v2.1: 37075
+                            v2.0: 2247
+                        package_name: yiisoft/yii2-authclient
+                    yiisoft_yii2_bootstrap:
+                        downloads:
+                            v2.0: 151724
+                        package_name: yiisoft/yii2-bootstrap
+                    yiisoft_yii2_bootstrap4:
+                        downloads:
+                            v2.0: 4551
+                        package_name: yiisoft/yii2-bootstrap4
+                    yiisoft_yii2_codeception:
+                        downloads:
+                            v2.0: 19500
+                        package_name: yiisoft/yii2-codeception
+                    yiisoft_yii2_coding_standards:
+                        downloads:
+                            v2.0: 6410
+                        package_name: yiisoft/yii2-coding-standards
+                    yiisoft_yii2_composer:
+                        downloads:
+                            v2.0: 174152
+                        package_name: yiisoft/yii2-composer
+                    yiisoft_yii2_debug:
+                        downloads:
+                            v2.1: 55390
+                            v2.0: 102202
+                        package_name: yiisoft/yii2-debug
+                    yiisoft_yii2_elasticsearch:
+                        downloads:
+                            v2.1: 6281
+                            v2.0: 5506
+                        package_name: yiisoft/yii2-elasticsearch
+                    yiisoft_yii2_faker:
+                        downloads:
+                            v2.0: 103490
+                        package_name: yiisoft/yii2-faker
+                    yiisoft_yii2_gii:
+                        downloads:
+                            v2.1: 29116
+                            v2.0: 93000
+                        package_name: yiisoft/yii2-gii
+                    yiisoft_yii2_httpclient:
+                        downloads:
+                            v2.0: 60636
+                        package_name: yiisoft/yii2-httpclient
+                    yiisoft_yii2_imagine:
+                        downloads:
+                            v2.1: 25412
+                            v2.0: 4588
+                        package_name: yiisoft/yii2-imagine
+                    yiisoft_yii2_jui:
+                        downloads:
+                            v2.0: 53261
+                        package_name: yiisoft/yii2-jui
+                    yiisoft_yii2_mongodb:
+                        downloads:
+                            v2.1: 11948
+                        package_name: yiisoft/yii2-mongodb
+                    yiisoft_yii2_queue:
+                        downloads:
+                            v2.2: 8239
+                            v2.1: 44502
+                            v2.0: 6297
+                        package_name: yiisoft/yii2-queue
+                    yiisoft_yii2_redis:
+                        downloads:
+                            v2.0: 64785
+                        package_name: yiisoft/yii2-redis
+                    yiisoft_yii2_shell:
+                        downloads:
+                            v2.0: 2024
+                        package_name: yiisoft/yii2-shell
+                    yiisoft_yii2_smarty:
+                        downloads:
+                            v2.0: 2666
+                        package_name: yiisoft/yii2-smarty
+                    yiisoft_yii2_sphinx:
+                        downloads:
+                            v2.0: 6677
+                        package_name: yiisoft/yii2-sphinx
+                    yiisoft_yii2_swiftmailer:
+                        downloads:
+                            v2.1: 95769
+                            v2.0: 64604
+                        package_name: yiisoft/yii2-swiftmailer
+                    yiisoft_yii2_twig:
+                        downloads:
+                            v2.2: 4873
+                            v2.1: 1267
+                            v2.0: 4381
+                        package_name: yiisoft/yii2-twig
+                name: Yii
+            zendframework:
+                packages_data:
+                    zendframework_skeleton_application:
+                        downloads:
+                            v3.0: 1061
+                        package_name: zendframework/skeleton-application
+                    zendframework_zend_auradi_config:
+                        downloads:
+                            v1.0: 1473
+                        package_name: zendframework/zend-auradi-config
+                    zendframework_zend_authentication:
+                        downloads:
+                            v2.6: 64052
+                            v2.5: 25436
+                        package_name: zendframework/zend-authentication
+                    zendframework_zend_barcode:
+                        downloads:
+                            v2.7: 66401
+                            v2.6: 7491
+                            v2.5: 6241
+                        package_name: zendframework/zend-barcode
+                    zendframework_zend_cache:
+                        downloads:
+                            v2.8: 88408
+                            v2.7: 27870
+                            v2.5: 8360
+                            v2.4: 1101
+                            v2.2: 2773
+                        package_name: zendframework/zend-cache
+                    zendframework_zend_captcha:
+                        downloads:
+                            v2.8: 162509
+                            v2.7: 9935
+                            v2.5: 4741
+                        package_name: zendframework/zend-captcha
+                    zendframework_zend_code:
+                        downloads:
+                            v3.3: 938309
+                            v3.2: 5445
+                            v3.1: 180288
+                            v3.0: 2350
+                            v2.6: 160285
+                            v2.5: 12692
+                            v2.4: 10848
+                            v2.3: 1061
+                            v2.2: 2558
+                            v2.1: 2072
+                        package_name: zendframework/zend-code
+                    zendframework_zend_coding_standard:
+                        downloads:
+                            v1.0: 4380
+                        package_name: zendframework/zend-coding-standard
+                    zendframework_zend_component_installer:
+                        downloads:
+                            v2.1: 17831
+                            v1.1: 19964
+                            v1.0: 1237
+                            v0.7: 3204
+                        package_name: zendframework/zend-component-installer
+                    zendframework_zend_config:
+                        downloads:
+                            v3.2: 59051
+                            v3.1: 4211
+                            v2.6: 200398
+                            v2.5: 12532
+                            v2.4: 11735
+                            v2.2: 3082
+                        package_name: zendframework/zend-config
+                    zendframework_zend_config_aggregator:
+                        downloads:
+                            v1.1: 24677
+                            v1.0: 3974
+                            v0.2: 1368
+                        package_name: zendframework/zend-config-aggregator
+                    zendframework_zend_console:
+                        downloads:
+                            v2.8: 26362
+                            v2.7: 167669
+                            v2.6: 13643
+                            v2.5: 9726
+                            v2.4: 9698
+                        package_name: zendframework/zend-console
+                    zendframework_zend_crypt:
+                        downloads:
+                            v3.3: 36958
+                            v3.2: 7817
+                            v2.6: 163097
+                            v2.5: 11905
+                            v2.4: 13453
+                            v2.2: 3422
+                        package_name: zendframework/zend-crypt
+                    zendframework_zend_db:
+                        downloads:
+                            v2.9: 79480
+                            v2.8: 12265
+                            v2.5: 4844
+                            v2.10: 132277
+                        package_name: zendframework/zend-db
+                    zendframework_zend_debug:
+                        downloads:
+                            v2.6: 42045
+                            v2.5: 16827
+                        package_name: zendframework/zend-debug
+                    zendframework_zend_developer_tools:
+                        downloads:
+                            v1.2: 18714
+                            v1.1: 3659
+                            v1.0: 6938
+                            v0.0: 2648
+                        package_name: zendframework/zend-developer-tools
+                    zendframework_zend_di:
+                        downloads:
+                            v2.6: 173238
+                            v2.5: 8862
+                            v2.4: 9041
+                        package_name: zendframework/zend-di
+                    zendframework_zend_diactoros:
+                        downloads:
+                            v2.1: 125355
+                            v2.0: 2269
+                            v1.8: 1245482
+                            v1.7: 62919
+                            v1.6: 16714
+                            v1.5: 3970
+                            v1.4: 55972
+                            v1.3: 15245
+                        package_name: zendframework/zend-diactoros
+                    zendframework_zend_dom:
+                        downloads:
+                            v2.7: 44825
+                            v2.6: 12372
+                            v2.5: 3252
+                        package_name: zendframework/zend-dom
+                    zendframework_zend_escaper:
+                        downloads:
+                            v2.6: 649193
+                            v2.5: 102415
+                            v2.4: 30242
+                            v2.3: 1726
+                            v2.2: 3306
+                        package_name: zendframework/zend-escaper
+                    zendframework_zend_eventmanager:
+                        downloads:
+                            v3.2: 1100723
+                            v3.1: 25130
+                            v3.0: 42847
+                            v2.6: 155831
+                            v2.5: 16116
+                            v2.4: 11611
+                            v2.3: 2635
+                            v2.2: 4987
+                            v2.1: 2574
+                        package_name: zendframework/zend-eventmanager
+                    zendframework_zend_expressive:
+                        downloads:
+                            v3.2: 15456
+                            v3.0: 3809
+                            v2.2: 2527
+                            v2.1: 1250
+                            v2.0: 1608
+                            v1.1: 2549
+                        package_name: zendframework/zend-expressive
+                    zendframework_zend_expressive_authentication:
+                        downloads:
+                            v1.1: 1390
+                        package_name: zendframework/zend-expressive-authentication
+                    zendframework_zend_expressive_csrf:
+                        downloads:
+                            v1.0: 1365
+                        package_name: zendframework/zend-expressive-csrf
+                    zendframework_zend_expressive_fastroute:
+                        downloads:
+                            v3.0: 15746
+                            v2.2: 2935
+                            v1.3: 2243
+                        package_name: zendframework/zend-expressive-fastroute
+                    zendframework_zend_expressive_flash:
+                        downloads:
+                            v1.0: 1985
+                        package_name: zendframework/zend-expressive-flash
+                    zendframework_zend_expressive_helpers:
+                        downloads:
+                            v5.3: 10147
+                            v5.1: 10336
+                            v5.0: 1669
+                            v4.2: 4498
+                            v4.1: 1429
+                            v2.2: 2380
+                        package_name: zendframework/zend-expressive-helpers
+                    zendframework_zend_expressive_platesrenderer:
+                        downloads:
+                            v2.1: 1203
+                        package_name: zendframework/zend-expressive-platesrenderer
+                    zendframework_zend_expressive_router:
+                        downloads:
+                            v3.1: 22117
+                            v2.4: 4029
+                            v2.1: 1574
+                            v1.3: 2966
+                        package_name: zendframework/zend-expressive-router
+                    zendframework_zend_expressive_session:
+                        downloads:
+                            v1.2: 3494
+                        package_name: zendframework/zend-expressive-session
+                    zendframework_zend_expressive_session_ext:
+                        downloads:
+                            v1.6: 1152
+                        package_name: zendframework/zend-expressive-session-ext
+                    zendframework_zend_expressive_skeleton:
+                        downloads:
+                            v3.2: 1041
+                        package_name: zendframework/zend-expressive-skeleton
+                    zendframework_zend_expressive_template:
+                        downloads:
+                            v2.0: 21718
+                            v1.0: 9758
+                        package_name: zendframework/zend-expressive-template
+                    zendframework_zend_expressive_tooling:
+                        downloads:
+                            v1.2: 6014
+                            v1.1: 1585
+                            v1.0: 2966
+                            v0.4: 1470
+                        package_name: zendframework/zend-expressive-tooling
+                    zendframework_zend_expressive_twigrenderer:
+                        downloads:
+                            v2.3: 1790
+                            v2.1: 2847
+                            v1.5: 1740
+                        package_name: zendframework/zend-expressive-twigrenderer
+                    zendframework_zend_expressive_zendrouter:
+                        downloads:
+                            v3.0: 4140
+                            v2.0: 1466
+                        package_name: zendframework/zend-expressive-zendrouter
+                    zendframework_zend_expressive_zendviewrenderer:
+                        downloads:
+                            v2.0: 4578
+                            v1.4: 1342
+                        package_name: zendframework/zend-expressive-zendviewrenderer
+                    zendframework_zend_feed:
+                        downloads:
+                            v2.9: 5467
+                            v2.8: 4485
+                            v2.7: 40273
+                            v2.6: 1038
+                            v2.5: 3071
+                            v2.12: 223661
+                            v2.11: 44286
+                            v2.10: 119777
+                        package_name: zendframework/zend-feed
+                    zendframework_zend_file:
+                        downloads:
+                            v2.8: 29216
+                            v2.7: 6916
+                            v2.5: 7730
+                        package_name: zendframework/zend-file
+                    zendframework_zend_filter:
+                        downloads:
+                            v2.9: 223587
+                            v2.8: 49769
+                            v2.7: 35034
+                            v2.5: 14852
+                            v2.4: 11619
+                            v2.2: 3487
+                        package_name: zendframework/zend-filter
+                    zendframework_zend_form:
+                        downloads:
+                            v2.5: 8478
+                            v2.4: 9880
+                            v2.14: 32289
+                            v2.13: 132677
+                            v2.12: 36830
+                            v2.11: 8357
+                            v2.10: 9820
+                        package_name: zendframework/zend-form
+                    zendframework_zend_http:
+                        downloads:
+                            v2.9: 17148
+                            v2.8: 205650
+                            v2.7: 14140
+                            v2.6: 19996
+                            v2.5: 16364
+                            v2.4: 10612
+                            v2.3: 1408
+                            v2.2: 1824
+                            v2.10: 84018
+                        package_name: zendframework/zend-http
+                    zendframework_zend_httphandlerrunner:
+                        downloads:
+                            v1.1: 20498
+                            v1.0: 17534
+                        package_name: zendframework/zend-httphandlerrunner
+                    zendframework_zend_hydrator:
+                        downloads:
+                            v3.0: 7508
+                            v2.4: 71353
+                            v2.3: 7646
+                            v2.2: 6933
+                            v2.1: 1627
+                            v1.1: 209381
+                            v1.0: 2572
+                        package_name: zendframework/zend-hydrator
+                    zendframework_zend_i18n:
+                        downloads:
+                            v2.9: 201481
+                            v2.8: 2399
+                            v2.7: 28026
+                            v2.5: 14119
+                            v2.4: 9357
+                            v2.2: 2519
+                        package_name: zendframework/zend-i18n
+                    zendframework_zend_i18n_resources:
+                        downloads:
+                            v2.6: 30281
+                            v2.5: 16754
+                        package_name: zendframework/zend-i18n-resources
+                    zendframework_zend_inputfilter:
+                        downloads:
+                            v2.9: 17144
+                            v2.8: 54487
+                            v2.7: 14116
+                            v2.5: 10003
+                            v2.4: 9962
+                            v2.2: 1137
+                            v2.10: 174827
+                        package_name: zendframework/zend-inputfilter
+                    zendframework_zend_json:
+                        downloads:
+                            v3.1: 105102
+                            v3.0: 13125
+                            v2.6: 200163
+                            v2.5: 11269
+                            v2.4: 10305
+                            v2.2: 3266
+                            v2.1: 1046
+                        package_name: zendframework/zend-json
+                    zendframework_zend_json_server:
+                        downloads:
+                            v3.1: 8316
+                            v3.0: 2405
+                        package_name: zendframework/zend-json-server
+                    zendframework_zend_ldap:
+                        downloads:
+                            v2.9: 2253
+                            v2.8: 1799
+                            v2.5: 1252
+                            v2.2: 1226
+                            v2.10: 67182
+                        package_name: zendframework/zend-ldap
+                    zendframework_zend_loader:
+                        downloads:
+                            v2.6: 361769
+                            v2.5: 49120
+                            v2.4: 13800
+                            v2.3: 1459
+                            v2.2: 4470
+                        package_name: zendframework/zend-loader
+                    zendframework_zend_log:
+                        downloads:
+                            v2.9: 16163
+                            v2.8: 2898
+                            v2.6: 1909
+                            v2.5: 7029
+                            v2.4: 9286
+                            v2.10: 192026
+                        package_name: zendframework/zend-log
+                    zendframework_zend_mail:
+                        downloads:
+                            v2.9: 1890
+                            v2.8: 9132
+                            v2.7: 3912
+                            v2.5: 8096
+                            v2.4: 3913
+                            v2.2: 1357
+                            v2.10: 198597
+                        package_name: zendframework/zend-mail
+                    zendframework_zend_math:
+                        downloads:
+                            v3.2: 44193
+                            v3.1: 8664
+                            v3.0: 9466
+                            v2.7: 185824
+                            v2.5: 6353
+                            v2.4: 14133
+                            v2.3: 1770
+                            v2.2: 6107
+                        package_name: zendframework/zend-math
+                    zendframework_zend_memory:
+                        downloads:
+                            v2.6: 34814
+                            v2.5: 19160
+                            v2.4: 2978
+                        package_name: zendframework/zend-memory
+                    zendframework_zend_mime:
+                        downloads:
+                            v2.7: 211183
+                            v2.6: 8257
+                            v2.5: 8564
+                            v2.4: 4034
+                            v2.2: 1357
+                            v2.1: 6862
+                        package_name: zendframework/zend-mime
+                    zendframework_zend_modulemanager:
+                        downloads:
+                            v2.8: 202102
+                            v2.7: 10591
+                            v2.5: 10014
+                            v2.4: 9314
+                        package_name: zendframework/zend-modulemanager
+                    zendframework_zend_mvc:
+                        downloads:
+                            v3.1: 46868
+                            v3.0: 5260
+                            v2.7: 158898
+                            v2.6: 6113
+                            v2.5: 9078
+                            v2.4: 9860
+                        package_name: zendframework/zend-mvc
+                    zendframework_zend_mvc_console:
+                        downloads:
+                            v1.2: 23565
+                            v1.1: 5651
+                        package_name: zendframework/zend-mvc-console
+                    zendframework_zend_mvc_form:
+                        downloads:
+                            v1.0: 14327
+                        package_name: zendframework/zend-mvc-form
+                    zendframework_zend_mvc_i18n:
+                        downloads:
+                            v1.1: 20679
+                            v1.0: 4528
+                        package_name: zendframework/zend-mvc-i18n
+                    zendframework_zend_mvc_plugin_fileprg:
+                        downloads:
+                            v1.1: 14451
+                            v1.0: 2241
+                        package_name: zendframework/zend-mvc-plugin-fileprg
+                    zendframework_zend_mvc_plugin_flashmessenger:
+                        downloads:
+                            v1.1: 20845
+                            v1.0: 3598
+                        package_name: zendframework/zend-mvc-plugin-flashmessenger
+                    zendframework_zend_mvc_plugin_identity:
+                        downloads:
+                            v1.1: 16136
+                            v1.0: 1519
+                        package_name: zendframework/zend-mvc-plugin-identity
+                    zendframework_zend_mvc_plugin_prg:
+                        downloads:
+                            v1.1: 17018
+                            v1.0: 2045
+                        package_name: zendframework/zend-mvc-plugin-prg
+                    zendframework_zend_mvc_plugins:
+                        downloads:
+                            v1.0: 15174
+                        package_name: zendframework/zend-mvc-plugins
+                    zendframework_zend_navigation:
+                        downloads:
+                            v2.9: 34901
+                            v2.8: 6826
+                            v2.5: 7258
+                            v2.4: 2929
+                        package_name: zendframework/zend-navigation
+                    zendframework_zend_paginator:
+                        downloads:
+                            v2.8: 70973
+                            v2.7: 10507
+                            v2.5: 6294
+                        package_name: zendframework/zend-paginator
+                    zendframework_zend_permissions_acl:
+                        downloads:
+                            v2.7: 51078
+                            v2.6: 15443
+                            v2.5: 5320
+                        package_name: zendframework/zend-permissions-acl
+                    zendframework_zend_permissions_rbac:
+                        downloads:
+                            v3.0: 10020
+                            v2.6: 32027
+                            v2.5: 15950
+                        package_name: zendframework/zend-permissions-rbac
+                    zendframework_zend_problem_details:
+                        downloads:
+                            v1.0: 4903
+                        package_name: zendframework/zend-problem-details
+                    zendframework_zend_progressbar:
+                        downloads:
+                            v2.6: 26725
+                            v2.5: 14538
+                        package_name: zendframework/zend-progressbar
+                    zendframework_zend_psr7bridge:
+                        downloads:
+                            v1.2: 4345
+                            v1.0: 1264
+                            v0.2: 173979
+                        package_name: zendframework/zend-psr7bridge
+                    zendframework_zend_router:
+                        downloads:
+                            v3.3: 33600
+                            v3.2: 14675
+                            v3.1: 1942
+                            v3.0: 14761
+                        package_name: zendframework/zend-router
+                    zendframework_zend_serializer:
+                        downloads:
+                            v2.9: 184143
+                            v2.8: 19323
+                            v2.7: 4241
+                            v2.5: 12356
+                            v2.4: 10112
+                            v2.2: 2778
+                        package_name: zendframework/zend-serializer
+                    zendframework_zend_server:
+                        downloads:
+                            v2.8: 197194
+                            v2.7: 15865
+                            v2.6: 2551
+                            v2.5: 8374
+                            v2.4: 9941
+                            v2.1: 2093
+                        package_name: zendframework/zend-server
+                    zendframework_zend_servicemanager:
+                        downloads:
+                            v3.4: 121733
+                            v3.3: 47746
+                            v3.2: 2619
+                            v3.1: 6745
+                            v2.7: 191618
+                            v2.6: 1053
+                            v2.5: 13624
+                            v2.4: 15458
+                            v2.3: 2659
+                            v2.2: 7058
+                            v2.0: 1047
+                        package_name: zendframework/zend-servicemanager
+                    zendframework_zend_servicemanager_di:
+                        downloads:
+                            v1.2: 10817
+                        package_name: zendframework/zend-servicemanager-di
+                    zendframework_zend_session:
+                        downloads:
+                            v2.8: 200377
+                            v2.7: 3903
+                            v2.5: 5372
+                        package_name: zendframework/zend-session
+                    zendframework_zend_skeleton_installer:
+                        downloads:
+                            v0.1: 2996
+                        package_name: zendframework/zend-skeleton-installer
+                    zendframework_zend_soap:
+                        downloads:
+                            v2.7: 173627
+                            v2.6: 20953
+                            v2.5: 12002
+                            v2.4: 9944
+                        package_name: zendframework/zend-soap
+                    zendframework_zend_stdlib:
+                        downloads:
+                            v3.2: 635708
+                            v3.1: 49909
+                            v3.0: 45531
+                            v2.7: 196995
+                            v2.6: 1923
+                            v2.5: 18435
+                            v2.4: 37763
+                            v2.3: 5040
+                            v2.2: 13385
+                            v2.1: 9439
+                            v2.0: 1144
+                        package_name: zendframework/zend-stdlib
+                    zendframework_zend_stratigility:
+                        downloads:
+                            v3.1: 16840
+                            v3.0: 9453
+                            v2.2: 3946
+                            v2.1: 8064
+                            v2.0: 1948
+                            v1.3: 10115
+                            v1.2: 1229
+                        package_name: zendframework/zend-stratigility
+                    zendframework_zend_tag:
+                        downloads:
+                            v2.7: 28888
+                            v2.6: 7488
+                            v2.5: 6829
+                        package_name: zendframework/zend-tag
+                    zendframework_zend_test:
+                        downloads:
+                            v3.2: 20956
+                            v3.1: 1054
+                            v2.6: 20344
+                            v2.5: 11549
+                        package_name: zendframework/zend-test
+                    zendframework_zend_text:
+                        downloads:
+                            v2.7: 172358
+                            v2.6: 16045
+                            v2.5: 9336
+                            v2.4: 9055
+                        package_name: zendframework/zend-text
+                    zendframework_zend_uri:
+                        downloads:
+                            v2.7: 207168
+                            v2.6: 128583
+                            v2.5: 50533
+                            v2.4: 11143
+                            v2.3: 1598
+                            v2.2: 2857
+                        package_name: zendframework/zend-uri
+                    zendframework_zend_validator:
+                        downloads:
+                            v2.9: 5046
+                            v2.8: 15035
+                            v2.5: 13344
+                            v2.4: 34970
+                            v2.3: 2413
+                            v2.2: 6134
+                            v2.12: 207415
+                            v2.11: 156738
+                            v2.10: 109259
+                        package_name: zendframework/zend-validator
+                    zendframework_zend_version:
+                        downloads:
+                            v2.5: 43279
+                        package_name: zendframework/zend-version
+                    zendframework_zend_view:
+                        downloads:
+                            v2.9: 7656
+                            v2.8: 7399
+                            v2.7: 1244
+                            v2.5: 9527
+                            v2.4: 9663
+                            v2.2: 1089
+                            v2.11: 115455
+                            v2.10: 103103
+                        package_name: zendframework/zend-view
+                    zendframework_zend_xml2json:
+                        downloads:
+                            v3.1: 11279
+                        package_name: zendframework/zend-xml2json
+                    zendframework_zend_xmlrpc:
+                        downloads:
+                            v2.7: 36864
+                            v2.6: 8227
+                            v2.5: 10832
+                        package_name: zendframework/zend-xmlrpc
+                    zendframework_zenddiagnostics:
+                        downloads:
+                            v1.5: 30284
+                            v1.4: 104003
+                            v1.3: 15037
+                            v1.2: 2559
+                            v1.1: 7177
+                            v1.0: 16997
+                        package_name: zendframework/zenddiagnostics
+                    zendframework_zendframework:
+                        downloads:
+                            v3.0: 6392
+                            v2.5: 30080
+                            v2.4: 8598
+                            v2.3: 7821
+                            v2.2: 4488
+                        package_name: zendframework/zendframework
+                    zendframework_zendframework1:
+                        downloads:
+                            v1.12: 69975
+                        package_name: zendframework/zendframework1
+                    zendframework_zendgdata:
+                        downloads:
+                            v2.0: 5124
+                        package_name: zendframework/zendgdata
+                    zendframework_zendoauth:
+                        downloads:
+                            v2.0: 6551
+                        package_name: zendframework/zendoauth
+                    zendframework_zendpdf:
+                        downloads:
+                            v2.0: 22232
+                        package_name: zendframework/zendpdf
+                    zendframework_zendrest:
+                        downloads:
+                            v2.0: 7044
+                        package_name: zendframework/zendrest
+                    zendframework_zendservice_akismet:
+                        downloads:
+                            v2.0: 4738
+                        package_name: zendframework/zendservice-akismet
+                    zendframework_zendservice_amazon:
+                        downloads:
+                            v2.3: 4451
+                        package_name: zendframework/zendservice-amazon
+                    zendframework_zendservice_apple_apns:
+                        downloads:
+                            v1.4: 14713
+                            v1.3: 27273
+                            v1.2: 9006
+                        package_name: zendframework/zendservice-apple-apns
+                    zendframework_zendservice_google_gcm:
+                        downloads:
+                            v2.1: 35411
+                            v2.0: 3953
+                            v1.0: 8126
+                        package_name: zendframework/zendservice-google-gcm
+                    zendframework_zendservice_recaptcha:
+                        downloads:
+                            v3.2: 6355
+                            v3.1: 3109
+                            v2.0: 1392
+                        package_name: zendframework/zendservice-recaptcha
+                    zendframework_zendservice_twitter:
+                        downloads:
+                            v2.1: 5188
+                        package_name: zendframework/zendservice-twitter
+                    zendframework_zendxml:
+                        downloads:
+                            v1.2: 45569
+                            v1.1: 17904
+                            v1.0: 32891
+                        package_name: zendframework/zendxml
+                    zendframework_zf1_extras:
+                        downloads:
+                            v1.12: 4672
+                        package_name: zendframework/zf1-extras
+                    zendframework_zftool:
+                        downloads:
+                            v0.1: 4021
+                        package_name: zendframework/zftool
+                name: Zend
+        updated_at: '2019-04-16 12:22:43'

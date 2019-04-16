@@ -3,6 +3,7 @@
 namespace TomasVotruba\Website\Packagist;
 
 use Nette\Utils\Strings;
+use PharIo\Version\InvalidVersionException;
 use PharIo\Version\Version;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\Json\FileToJsonLoader;
@@ -42,14 +43,27 @@ final class MinorPackageVersionsDownloadsProvider
                 $version = Strings::before($version, '.x-dev');
             }
 
-            $version = new Version($version);
+            try {
+                /** @var Version $version */
+                $version = new Version($version);
+            } catch (InvalidVersionException $invalidVersionException) {
+                // invalid version
+                continue;
+            }
 
             $minorVersion = 'v' . $version->getMajor()->getValue() . '.' . $version->getMinor()->getValue();
 
+            $monthlyDownloads = $downloads['monthly'];
+
+            // too small to notice
+            if ($monthlyDownloads < 1000) {
+                continue;
+            }
+
             if (isset($downloadsGroupedByVersion[$minorVersion])) {
-                $downloadsGroupedByVersion[$minorVersion] += $downloads['monthly'];
+                $downloadsGroupedByVersion[$minorVersion] += $monthlyDownloads;
             } else {
-                $downloadsGroupedByVersion[$minorVersion] = $downloads['monthly'];
+                $downloadsGroupedByVersion[$minorVersion] = $monthlyDownloads;
             }
         }
 
@@ -73,7 +87,16 @@ final class MinorPackageVersionsDownloadsProvider
 
         $data = $json['package']['downloads']['versions'];
 
-        unset($data['dev-master']); // could be any version
+        // remove all dev versions
+        foreach ($data as $key => $downloads) {
+            if (Strings::match($key, '#^dev\-#')) {
+                unset($data[$key]);
+            }
+
+            if (Strings::match($key, '#(alpha|beta|rc)#i')) {
+                unset($data[$key]);
+            }
+        }
 
         return $data;
     }
