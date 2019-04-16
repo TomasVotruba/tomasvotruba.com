@@ -50,13 +50,13 @@ title: "Package Monthly Downloads by Version"
                             <td class="w-50 text-right">{{ macros.number(number) }}</td>
                         </tr>
                     {% endfor %}
-                {% endif %}
 
-                <tr>
-                    <th colspan="2" class="bg-primary text-white">
-                        Grouped by minor version
-                    </th>
-                </tr>
+                    <tr>
+                        <th colspan="2" class="bg-primary text-white">
+                            Grouped by minor version
+                        </th>
+                    </tr>
+                {% endif %}
 
                 {% for version, number in package_data.downloads_minor %}
                     <tr>
