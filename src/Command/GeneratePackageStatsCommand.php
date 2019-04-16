@@ -146,7 +146,7 @@ final class GeneratePackageStatsCommand extends Command
             $this->symfonyStyle->newLine(2);
         }
 
-        $vendorData = $this->sortDataByKey($vendorData, 'average_last_year_trend');
+        $vendorData = $this->arrayUtils->sortDataByKey($vendorData, 'average_last_year_trend');
 
         // metadata
         $data['vendors'] = $vendorData;
@@ -180,16 +180,7 @@ final class GeneratePackageStatsCommand extends Command
             $packagesData[$packageKey] = $packageData;
         }
 
-        return $this->sortDataByKey($packagesData, 'last_year_trend');
-    }
-
-    private function sortDataByKey(array $data, string $key): array
-    {
-        usort($data, function (array $firstItem, array $secondItem) use ($key) {
-            return $secondItem[$key] <=> $firstItem[$key];
-        });
-
-        return $data;
+        return $this->arrayUtils->sortDataByKey($packagesData, 'last_year_trend');
     }
 
     /**

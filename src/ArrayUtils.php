@@ -4,6 +4,15 @@ namespace TomasVotruba\Website;
 
 final class ArrayUtils
 {
+    public function sortDataByKey(array $data, string $key): array
+    {
+        usort($data, function (array $firstItem, array $secondItem) use ($key) {
+            return $secondItem[$key] <=> $firstItem[$key];
+        });
+
+        return $data;
+    }
+
     /**
      * @param mixed[] $packagesData
      */
