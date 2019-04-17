@@ -1,30 +1,35 @@
-# this file was generated on 2019-04-16 20:10:31, do not edit it manually
+# this file was generated on 2019-04-17 12:30:18, do not edit it manually
 parameters:
     testing_packages:
         packages:
             -
                 package_name: codeception/codeception
+                package_short_name: codeception
                 last_month_average_daily_downloads: 13260
-                last_year_trend: 17.56
+                last_year_trend: 17.6
                 last_year_total: 4039590
             -
                 package_name: mockery/mockery
+                package_short_name: mockery
                 last_month_average_daily_downloads: 65738
-                last_year_trend: 14.11
+                last_year_trend: 14.1
                 last_year_total: 19775790
             -
                 package_name: phpunit/phpunit
+                package_short_name: phpunit
                 last_month_average_daily_downloads: 131175
-                last_year_trend: 9.74
+                last_year_trend: 9.7
                 last_year_total: 40600110
             -
                 package_name: behat/behat
+                package_short_name: behat
                 last_month_average_daily_downloads: 16351
-                last_year_trend: 8.31
+                last_year_trend: 8.3
                 last_year_total: 5226930
             -
                 package_name: phpspec/phpspec
+                package_short_name: phpspec
                 last_month_average_daily_downloads: 6577
-                last_year_trend: -8.81
+                last_year_trend: -8.8
                 last_year_total: 2469780
-        updated_at: '2019-04-16 20:10:31'
+        updated_at: '2019-04-17 12:30:18'
