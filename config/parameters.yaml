@@ -1,12 +1,16 @@
 parameters:
-    testing_package_names:
-        - 'behat/behat'
-        - 'phpspec/phpspec'
-        - 'mockery/mockery'
-        - 'nette/tester'
-        - 'phpunit/phpunit'
-        - 'codeception/codeception'
+    # format: packagist name (vendor or package) → normal human name
 
+    # used by https://www.tomasvotruba.cz/package-downloads-by-version/
+    testing_package_names:
+        behat/behat: Behat
+        phpspec/phpspec: PhpSpec
+        mockery/mockery: Mockery
+        nette/tester: 'Nette Tester'
+        phpunit/phpunit: PHPUnit
+        codeception/codeception: Codeception
+
+    # used by https://www.tomasvotruba.cz/php-framework-trends/
     versioned_framework_vendor:
         nette: Nette
         symfony: Symfony
