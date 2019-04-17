@@ -24,6 +24,10 @@ id: trends
 
     <br>
 
+    <p>
+        Frameworks are sorted alphabetically. Packages in them are <strong>sorted by adoption rate</strong>, from higher to lower. That way the most easily adopted packages are on the top and those hard to upgrade on the bottom.
+    </p>
+
     {% for framework in vendor_packages_by_version.vendors %}
         <hr>
 
@@ -84,5 +88,6 @@ id: trends
     <ul>
         <li>package with less 500 downloads a day are excluded</li>
         <li><code>dev-*</code>, <code>RC</code>, <code>alpha</code>, <code>beta</code> and similar packages are excluded, only valid stable Semver tags are used</li>
+        <li>packages with only 1 minor version left are excluded, there no adoption information to compare</li>
     </ul>
 </div>

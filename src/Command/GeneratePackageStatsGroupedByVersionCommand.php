@@ -16,6 +16,11 @@ use TomasVotruba\Website\Result\PackageDataGroupedByVersionFactory;
 final class GeneratePackageStatsGroupedByVersionCommand extends Command
 {
     /**
+     * @var string[]
+     */
+    private $versionedFrameworkVendor = [];
+
+    /**
      * @var SymfonyStyle
      */
     private $symfonyStyle;
@@ -34,11 +39,6 @@ final class GeneratePackageStatsGroupedByVersionCommand extends Command
      * @var VendorPackagesProvider
      */
     private $vendorPackagesProvider;
-
-    /**
-     * @var string[]
-     */
-    private $versionedFrameworkVendor = [];
 
     /**
      * @param string[] $versionedFrameworkVendor
