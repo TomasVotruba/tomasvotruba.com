@@ -38,7 +38,7 @@ final class PackageDataFactory
     {
         $packagesData = [];
 
-        foreach ($packageNames as $packageName) {
+        foreach ($packageNames as $packageName => $humanName) {
             $monthlyDownloads = $this->packageMonthlyDownloadsProvider->provideForPackage($packageName);
 
             // no data
@@ -70,6 +70,7 @@ final class PackageDataFactory
 
             $packageData = [
                 'package_name' => $packageName,
+                'short_name' => $humanName,
                 'last_month_average_daily_downloads' => $lastMonthDailyDownloads,
                 'last_year_trend' => $lastYearTrend,
                 'last_year_total' => $this->statistics->resolveTotal($monthlyDownloads, 12),

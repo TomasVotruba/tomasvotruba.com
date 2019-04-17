@@ -50,7 +50,7 @@ final class PackageDataGroupedByVersionFactory
             );
         }
 
-        return $packagesData;
+        return $this->sortPackagesByAdoptionRate($packagesData);
     }
 
     private function createPackageKey(string $packageName): string
@@ -66,5 +66,14 @@ final class PackageDataGroupedByVersionFactory
         $adoption_rate = $lastVersionDownloads / $downloadsTotal * 100;
 
         return (float) round($adoption_rate, 1);
+    }
+
+    private function sortPackagesByAdoptionRate(array $packagesData): array
+    {
+        usort($packagesData, function (array $firstPackage, array $secondPackage) {
+            return $secondPackage['adoption_rate'] <=> $firstPackage['adoption_rate'];
+        });
+
+        return $packagesData;
     }
 }
