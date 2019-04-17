@@ -5,13 +5,15 @@ id: trends
 ---
 
 {% macro trend(value) %}
-    {% if value > 0 %}
-        <strong>
-            <span class="text-success">+ {{ value|number_format }} %</span>
-        </strong>
-    {% else %}
-        <span class="text-danger">- {{ value|number_format|abs }} %</span>
-    {% endif %}
+    <nobr>
+        {% if value > 0 %}
+            <strong>
+                <span class="text-success">+ {{ value|number_format }} %</span>
+            </strong>
+        {% else %}
+            <span class="text-danger">- {{ value|number_format|abs }} %</span>
+        {% endif %}
+    </nobr>
 {% endmacro %}
 
 {% macro number(value) %}
@@ -62,7 +64,7 @@ id: trends
                     {{ framework.name }}
                     <span class="text-muted">
                         <small>
-                            <a href="#{{ framework.name|webalize }}">Jump to packages</a>
+                            <a href="#{{ framework.name|webalize }}">Jump to packages ↓</a>
                         </small>
                     </span>
                 </th>
