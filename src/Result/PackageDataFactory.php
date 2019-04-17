@@ -14,20 +14,11 @@ final class PackageDataFactory
      * @var int
      */
     private const MAX_TREND_LIMIT = 300;
+
     /**
      * @var int
      */
     private const MIN_DOWNLOADS_LIMIT = 1000;
-
-    /**
-     * @var PackageMonthlyDownloadsProvider
-     */
-    private $packageMonthlyDownloadsProvider;
-
-    /**
-     * @var Statistics
-     */
-    private $statistics;
 
     /**
      * Packages that create no value, are empty or just util
@@ -41,6 +32,16 @@ final class PackageDataFactory
         'symfony/orm-pack',
         'symfony/webpack-encore-pack',
     ];
+
+    /**
+     * @var PackageMonthlyDownloadsProvider
+     */
+    private $packageMonthlyDownloadsProvider;
+
+    /**
+     * @var Statistics
+     */
+    private $statistics;
 
     /**
      * @var ArrayUtils
@@ -91,11 +92,6 @@ final class PackageDataFactory
         }
 
         return $this->arrayUtils->sortDataByKey($packagesData, 'last_year_trend');
-    }
-
-    private function createPackageKey(string $packageName): string
-    {
-        return Strings::replace($packageName, '#(/|-)#', '_');
     }
 
     /**
@@ -163,5 +159,10 @@ final class PackageDataFactory
         }
 
         return false;
+    }
+
+    private function createPackageKey(string $packageName): string
+    {
+        return Strings::replace($packageName, '#(/|-)#', '_');
     }
 }

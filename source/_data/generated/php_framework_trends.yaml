@@ -1,31 +1,13 @@
-# this file was generated on 2019-04-17 12:36:14, do not edit it manually
+# this file was generated on 2019-04-17 12:56:50, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
             -
                 name: Symfony
-                vendor_total_last_month: 2095065
-                vendor_total_last_year: 606971880
-                average_last_year_trend: 38.6
+                vendor_total_last_month: 2042291
+                vendor_total_last_year: 595482540
+                average_last_year_trend: 32.7
                 packages_data:
-                    -
-                        package_name: symfony/security-csrf
-                        package_short_name: security-csrf
-                        last_month_average_daily_downloads: 10775
-                        last_year_trend: 163.9
-                        last_year_total: 1449450
-                    -
-                        package_name: symfony/apache-pack
-                        package_short_name: apache-pack
-                        last_month_average_daily_downloads: 2689
-                        last_year_trend: 126.9
-                        last_year_total: 596640
-                    -
-                        package_name: symfony/serializer-pack
-                        package_short_name: serializer-pack
-                        last_month_average_daily_downloads: 7649
-                        last_year_trend: 115.1
-                        last_year_total: 1644090
                     -
                         package_name: symfony/web-link
                         package_short_name: web-link
@@ -50,24 +32,6 @@ parameters:
                         last_month_average_daily_downloads: 11415
                         last_year_trend: 91.5
                         last_year_total: 2510400
-                    -
-                        package_name: symfony/debug-pack
-                        package_short_name: debug-pack
-                        last_month_average_daily_downloads: 6818
-                        last_year_trend: 88.3
-                        last_year_total: 1603890
-                    -
-                        package_name: symfony/profiler-pack
-                        package_short_name: profiler-pack
-                        last_month_average_daily_downloads: 10888
-                        last_year_trend: 86.4
-                        last_year_total: 2505360
-                    -
-                        package_name: symfony/orm-pack
-                        package_short_name: orm-pack
-                        last_month_average_daily_downloads: 11400
-                        last_year_trend: 82.5
-                        last_year_total: 2665140
                     -
                         package_name: symfony/workflow
                         package_short_name: workflow
@@ -309,12 +273,6 @@ parameters:
                         last_year_trend: 18.7
                         last_year_total: 11189070
                     -
-                        package_name: symfony/webpack-encore-pack
-                        package_short_name: webpack-encore-pack
-                        last_month_average_daily_downloads: 2555
-                        last_year_trend: 15.3
-                        last_year_total: 1024770
-                    -
                         package_name: symfony/translation
                         package_short_name: translation
                         last_month_average_daily_downloads: 123605
@@ -464,60 +422,6 @@ parameters:
                         last_month_average_daily_downloads: 1438
                         last_year_trend: -20.2
                         last_year_total: 718530
-            -
-                name: CakePHP
-                vendor_total_last_month: 28567
-                vendor_total_last_year: 9223830
-                average_last_year_trend: !!float 17
-                packages_data:
-                    -
-                        package_name: cakephp/utility
-                        package_short_name: utility
-                        last_month_average_daily_downloads: 2985
-                        last_year_trend: 156.8
-                        last_year_total: 599460
-                    -
-                        package_name: cakephp/chronos
-                        package_short_name: chronos
-                        last_month_average_daily_downloads: 10241
-                        last_year_trend: 25.7
-                        last_year_total: 2900010
-                    -
-                        package_name: cakephp/migrations
-                        package_short_name: migrations
-                        last_month_average_daily_downloads: 2427
-                        last_year_trend: -3.8
-                        last_year_total: 868800
-                    -
-                        package_name: cakephp/plugin-installer
-                        package_short_name: plugin-installer
-                        last_month_average_daily_downloads: 2429
-                        last_year_trend: -3.8
-                        last_year_total: 884460
-                    -
-                        package_name: cakephp/bake
-                        package_short_name: bake
-                        last_month_average_daily_downloads: 2162
-                        last_year_trend: -4.7
-                        last_year_total: 807090
-                    -
-                        package_name: cakephp/debug_kit
-                        package_short_name: debug_kit
-                        last_month_average_daily_downloads: 2847
-                        last_year_trend: -5.9
-                        last_year_total: 1028400
-                    -
-                        package_name: cakephp/cakephp-codesniffer
-                        package_short_name: cakephp-codesniffer
-                        last_month_average_daily_downloads: 1878
-                        last_year_trend: -13.3
-                        last_year_total: 725790
-                    -
-                        package_name: cakephp/cakephp
-                        package_short_name: cakephp
-                        last_month_average_daily_downloads: 3598
-                        last_year_trend: -15.2
-                        last_year_total: 1409820
             -
                 name: Laravel
                 vendor_total_last_month: 256266
@@ -688,16 +592,10 @@ parameters:
                         last_year_total: 3092640
             -
                 name: Zend
-                vendor_total_last_month: 550187
-                vendor_total_last_year: 165652860
-                average_last_year_trend: 11.6
+                vendor_total_last_month: 548992
+                vendor_total_last_year: 165428010
+                average_last_year_trend: !!float 9
                 packages_data:
-                    -
-                        package_name: zendframework/zend-httphandlerrunner
-                        package_short_name: zend-httphandlerrunner
-                        last_month_average_daily_downloads: 1195
-                        last_year_trend: 181.5
-                        last_year_total: 224850
                     -
                         package_name: zendframework/zend-ldap
                         package_short_name: zend-ldap
@@ -765,17 +663,17 @@ parameters:
                         last_year_trend: 15.6
                         last_year_total: 636420
                     -
-                        package_name: zendframework/zend-expressive-helpers
-                        package_short_name: zend-expressive-helpers
-                        last_month_average_daily_downloads: 1029
-                        last_year_trend: 14.6
-                        last_year_total: 288450
-                    -
                         package_name: zendframework/zend-expressive-template
                         package_short_name: zend-expressive-template
                         last_month_average_daily_downloads: 1028
                         last_year_trend: 14.6
                         last_year_total: 300450
+                    -
+                        package_name: zendframework/zend-expressive-helpers
+                        package_short_name: zend-expressive-helpers
+                        last_month_average_daily_downloads: 1029
+                        last_year_trend: 14.6
+                        last_year_total: 288450
                     -
                         package_name: zendframework/zend-component-installer
                         package_short_name: zend-component-installer
@@ -921,11 +819,11 @@ parameters:
                         last_year_trend: 6.9
                         last_year_total: 2378340
                     -
-                        package_name: zendframework/zend-server
-                        package_short_name: zend-server
-                        last_month_average_daily_downloads: 7766
+                        package_name: zendframework/zend-text
+                        package_short_name: zend-text
+                        last_month_average_daily_downloads: 6761
                         last_year_trend: 6.5
-                        last_year_total: 2471850
+                        last_year_total: 2150760
                     -
                         package_name: zendframework/zend-math
                         package_short_name: zend-math
@@ -933,11 +831,11 @@ parameters:
                         last_year_trend: 6.5
                         last_year_total: 3049380
                     -
-                        package_name: zendframework/zend-text
-                        package_short_name: zend-text
-                        last_month_average_daily_downloads: 6761
+                        package_name: zendframework/zend-server
+                        package_short_name: zend-server
+                        last_month_average_daily_downloads: 7766
                         last_year_trend: 6.5
-                        last_year_total: 2150760
+                        last_year_total: 2471850
                     -
                         package_name: zendframework/zend-mvc
                         package_short_name: zend-mvc
@@ -1311,6 +1209,54 @@ parameters:
                         last_year_trend: !!float -9
                         last_year_total: 463140
             -
+                name: CakePHP
+                vendor_total_last_month: 25582
+                vendor_total_last_year: 8624370
+                average_last_year_trend: !!float -3
+                packages_data:
+                    -
+                        package_name: cakephp/chronos
+                        package_short_name: chronos
+                        last_month_average_daily_downloads: 10241
+                        last_year_trend: 25.7
+                        last_year_total: 2900010
+                    -
+                        package_name: cakephp/migrations
+                        package_short_name: migrations
+                        last_month_average_daily_downloads: 2427
+                        last_year_trend: -3.8
+                        last_year_total: 868800
+                    -
+                        package_name: cakephp/plugin-installer
+                        package_short_name: plugin-installer
+                        last_month_average_daily_downloads: 2429
+                        last_year_trend: -3.8
+                        last_year_total: 884460
+                    -
+                        package_name: cakephp/bake
+                        package_short_name: bake
+                        last_month_average_daily_downloads: 2162
+                        last_year_trend: -4.7
+                        last_year_total: 807090
+                    -
+                        package_name: cakephp/debug_kit
+                        package_short_name: debug_kit
+                        last_month_average_daily_downloads: 2847
+                        last_year_trend: -5.9
+                        last_year_total: 1028400
+                    -
+                        package_name: cakephp/cakephp-codesniffer
+                        package_short_name: cakephp-codesniffer
+                        last_month_average_daily_downloads: 1878
+                        last_year_trend: -13.3
+                        last_year_total: 725790
+                    -
+                        package_name: cakephp/cakephp
+                        package_short_name: cakephp
+                        last_month_average_daily_downloads: 3598
+                        last_year_trend: -15.2
+                        last_year_total: 1409820
+            -
                 name: Silex
                 vendor_total_last_month: 4553
                 vendor_total_last_year: 2074590
@@ -1322,4 +1268,4 @@ parameters:
                         last_month_average_daily_downloads: 4553
                         last_year_trend: -31.4
                         last_year_total: 2074590
-        updated_at: '2019-04-17 12:36:14'
+        updated_at: '2019-04-17 12:56:50'
