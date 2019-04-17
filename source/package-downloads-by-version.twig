@@ -37,7 +37,7 @@ id: trends
 
         <div class="mb-4">
             {% for framework in vendor_packages_by_version.vendors %}
-                <a href="#{{ framework.name|webalize }}" class="btn btn-warning mr-2">{{ framework.name }} ↓</a>
+                <a href="#{{ framework.name|webalize }}" class="btn btn-warning mr-2 mb-3">{{ framework.name }} ↓</a>
             {% endfor %}
         </div>
     </div>
