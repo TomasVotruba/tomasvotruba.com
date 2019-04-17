@@ -69,17 +69,20 @@ id: trends
     <br>
 
     {% for framework in php_framework_trends.vendors %}
+        <hr>
+
+        <div class="text-center mb-5">
+            <h2 id="{{ framework.name|webalize }}">
+                {{ framework.name }}
+            </h2>
+
+            <p>
+                <a href="#">Jump up ↑</a>
+            </p>
+        </div>
+
         <table class="table table-bordered mt-4 mt-4" id="{{ framework.name|webalize }}">
             <thead class="thead-inverse">
-                <tr>
-                    <th colspan="4" class="text-center">
-                        <h3>{{ framework.name }}</h3>
-
-                        <p>
-                            <a href="#">Jump up ↑</a>
-                        </p>
-                    </th>
-                </tr>
                 <tr>
                     <th class="w-25">Package</th>
                     <th class="text-center w-25">
