@@ -1,4 +1,5 @@
 parameters:
+    # used by https://www.tomasvotruba.cz/testing-packages/
     testing_package_names:
         - 'behat/behat'
         - 'phpspec/phpspec'
@@ -7,6 +8,7 @@ parameters:
         - 'phpunit/phpunit'
         - 'codeception/codeception'
 
+    # used by https://www.tomasvotruba.cz/package-downloads-by-version/
     versioned_framework_vendor:
         nette: Nette
         symfony: Symfony
