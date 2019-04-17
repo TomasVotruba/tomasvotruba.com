@@ -16,11 +16,6 @@ use TomasVotruba\Website\Result\PackageDataGroupedByVersionFactory;
 final class GeneratePackageStatsGroupedByVersionCommand extends Command
 {
     /**
-     * @var string[]
-     */
-    private $frameworksVendorToName = [];
-
-    /**
      * @var SymfonyStyle
      */
     private $symfonyStyle;
@@ -41,21 +36,26 @@ final class GeneratePackageStatsGroupedByVersionCommand extends Command
     private $vendorPackagesProvider;
 
     /**
-     * @param string[] $frameworksVendorToName
+     * @var string[]
+     */
+    private $versionedFrameworkVendor = [];
+
+    /**
+     * @param string[] $versionedFrameworkVendor
      */
     public function __construct(
         SymfonyStyle $symfonyStyle,
         GeneratedFilesDumper $generatedFilesDumper,
         PackageDataGroupedByVersionFactory $packageDataGroupedByVersionFactory,
         VendorPackagesProvider $vendorPackagesProvider,
-        array $frameworksVendorToName
+        array $versionedFrameworkVendor
     ) {
         parent::__construct();
         $this->symfonyStyle = $symfonyStyle;
         $this->generatedFilesDumper = $generatedFilesDumper;
         $this->packageDataGroupedByVersionFactory = $packageDataGroupedByVersionFactory;
         $this->vendorPackagesProvider = $vendorPackagesProvider;
-        $this->frameworksVendorToName = $frameworksVendorToName;
+        $this->versionedFrameworkVendor = $versionedFrameworkVendor;
     }
 
     protected function configure(): void
@@ -68,9 +68,9 @@ final class GeneratePackageStatsGroupedByVersionCommand extends Command
     {
         $vendorData = [];
 
-        ksort($this->frameworksVendorToName);
+        ksort($this->versionedFrameworkVendor);
 
-        foreach ($this->frameworksVendorToName as $vendor => $name) {
+        foreach ($this->versionedFrameworkVendor as $vendor => $name) {
             $this->symfonyStyle->title(sprintf('Loading packages data grouped by version for "%s" vendor', $vendor));
 
             $vendorPackages = $this->vendorPackagesProvider->provideForVendor($vendor);

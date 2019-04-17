@@ -7,6 +7,14 @@ parameters:
         - 'phpunit/phpunit'
         - 'codeception/codeception'
 
+    versioned_framework_vendor:
+        nette: Nette
+        symfony: Symfony
+        illuminate: Laravel
+        cakephp: CakePHP
+        zendframework: Zend
+        yiisoft: Yii
+
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:
         nette: Nette
