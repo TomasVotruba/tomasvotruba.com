@@ -608,3 +608,14 @@ table ul {
     color: white;
     text-decoration: none;
 }
+
+.lesser {
+    font-size: .8em;
+    color: #868e96!important; /* same as text-muted */
+}
+
+/* @see https://stackoverflow.com/a/48309999/1348344 */
+nobr {
+    white-space: nowrap;
+    hyphens: none;
+}

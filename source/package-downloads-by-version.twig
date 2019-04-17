@@ -57,10 +57,8 @@ id: trends
                             {{ version }}
 
                             {% if package_data.version_publish_dates[version] is defined %}
-                                <span class="text-muted">
-                                    <small>
-                                        {{ package_data.version_publish_dates[version] }}
-                                    </small>
+                                <span class="lesser">
+                                    {{ package_data.version_publish_dates[version] }}
                                 </span>
                             {% endif %}
                         </td>
