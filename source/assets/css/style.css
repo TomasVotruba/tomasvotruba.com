@@ -619,3 +619,8 @@ nobr {
     white-space: nowrap;
     hyphens: none;
 }
+
+.normal-list {
+    margin-left: -1em;
+    line-height: 1.8em;
+}
