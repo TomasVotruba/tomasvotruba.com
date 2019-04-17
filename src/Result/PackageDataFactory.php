@@ -3,7 +3,6 @@
 namespace TomasVotruba\Website\Result;
 
 use Nette\Utils\Strings;
-use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\Website\ArrayUtils;
 use TomasVotruba\Website\Packagist\PackageMonthlyDownloadsProvider;
 use TomasVotruba\Website\Statistics;
@@ -48,21 +47,14 @@ final class PackageDataFactory
      */
     private $arrayUtils;
 
-    /**
-     * @var SymfonyStyle
-     */
-    private $symfonyStyle;
-
     public function __construct(
         PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
         Statistics $statistics,
-        ArrayUtils $arrayUtils,
-        SymfonyStyle  $symfonyStyle
+        ArrayUtils $arrayUtils
     ) {
         $this->packageMonthlyDownloadsProvider = $packageMonthlyDownloadsProvider;
         $this->statistics = $statistics;
         $this->arrayUtils = $arrayUtils;
-        $this->symfonyStyle = $symfonyStyle;
     }
 
     public function createPackagesData(array $packageNames): array
@@ -100,20 +92,11 @@ final class PackageDataFactory
     private function shouldSkipPackageForOutlier(string $packageName, array $monthlyDownloads): bool
     {
         if (in_array($packageName, $this->pseudoPackages, true)) {
-            $this->symfonyStyle->note(sprintf(
-                'Package "%s" is skipped, because it is only pseudo-package, not real PHP code',
-                $packageName
-            ));
             return true;
         }
 
         // not enough data, package younger than 12 months → skip it
         if (! isset($monthlyDownloads[11])) {
-            $this->symfonyStyle->note(sprintf(
-                'Package "%s" is skipped, because there are no downloads data 12 months back. Found data only for %d months',
-                $packageName,
-                count($monthlyDownloads)
-            ));
             return true;
         }
 
@@ -121,32 +104,16 @@ final class PackageDataFactory
 
         // too small package → skip it
         if ($lastMonthDailyDownloads <= self::MIN_DOWNLOADS_LIMIT) {
-            $this->symfonyStyle->note(sprintf(
-                'Package "%s" is skipped, because is has only %d downloads last month (%d is bottom limit)',
-                $packageName,
-                $lastMonthDailyDownloads,
-                self::MIN_DOWNLOADS_LIMIT
-            ));
             return true;
         }
 
         $lastYearTrend = $this->statistics->resolveTrend($packageName, $monthlyDownloads, 12);
         if ($lastYearTrend === null) {
-            $this->symfonyStyle->note(sprintf(
-                'Package "%s" is skipped, because there are no data to count the trend',
-                $packageName
-            ));
             return true;
         }
 
         // too fresh package → skip it
         if ($lastYearTrend > self::MAX_TREND_LIMIT) {
-            $this->symfonyStyle->note(sprintf(
-                'Package "%s" is skipped, because trend %d is too extreme (%d allowed)',
-                $packageName,
-                $lastYearTrend,
-                self::MAX_TREND_LIMIT
-            ));
             return true;
         }
 
