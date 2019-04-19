@@ -5,8 +5,8 @@ perex: |
     PHP itself is very quickly adopted. Last Packagist stats from 2018/11 [report 32,6 %](https://blog.packagist.com/php-versions-stats-2018-2-edition/) people are using PHP 7.2. That's a very nice number, great job y' all!
     <br><br>
     But most of our code is not just plain PHP. **It's framework-locked PHP**. How is framework adoption?
-         
-tweet: "New Post on #php 🐘 blog: Symfony 4.2 is used 2 times More than #symfony 3.4 ... Includes also #laravel #zend #yii #nettefw and #cakephp stats"
+
+tweet: "New Post on #php 🐘 blog: Symfony 4.2 is used 2 times More than #symfony 3.4 ... Includes also #laravel #zend #yii #nettefw and #cakephp download stats by version"
 ---
 
 <div class="alert alert-sm alert-success mt-3">
@@ -27,10 +27,10 @@ Let's look at a base stone for Symfony applications - [symfony/http-kernel](/pac
 
 - v4.2 - **1 838 593** downloads monthly - **54 %** of all downloads
 - v4.1 - 230 975
-- v4.0 - 45 539 
+- v4.0 - 45 539
 - v3.4 - **891 778**
 
-It's that Symfony community doesn't wait on another LTS. It grabs the new features as soon as they're out. Amazing job!  
+It's that Symfony community doesn't wait on another LTS. It grabs the new features as soon as they're out. Amazing job!
 
 ## Laravel wide Spread and Stable
 
@@ -39,7 +39,7 @@ So when I looked at stats of [laravel/framework](/package-downloads-by-version/#
 
 It's also interesting, that people stick with various versions:
 
-- v5.8 - 623 534 - **30 % adoption** 
+- v5.8 - 623 534 - **30 % adoption**
 - v5.7 - 532 232
 - v5.6 - 240 762
 - v5.5 - 317 489
@@ -52,7 +52,7 @@ It's also notable that **89,5 %** downloads are for Laravel 5.x.
 ## Zend Injection along with Adoption
 
 This week was [Matthew announced moving Zend to Laminas project](https://mwop.net/blog/2019-04-17-from-zend-to-laminas.html). For users, it technically means just change of `Zend` namespace to `Laminas`, but potentially growth of Zend features thanks Linux Foundation funding. Great news!
- 
+
 How is the [Zend adoption doing now](/package-downloads-by-version/#zend)?
 
 - 27 of 91 packages has an adoption rate of 80 %+
@@ -64,15 +64,18 @@ The Zend community is clearly interested in new features, far from "Zend is Dead
 
 - The most **downloaded packages is `cakephp/chronos`** - with 290 045 downloads/month. Next packages have only 60-70 000 downloads.
 
-## Nette slowly Adopting 
+## Nette slowly Adopting
 
-- The backbone for applications - [`nette/application`](/package-downloads-by-version/#nette-application) - **has only 4 % adoption**. No surprise there, since Nette 3.0 was released only on April 2nd 2019. Keep updating!  
+- The backbone for applications - [`nette/application`](/package-downloads-by-version/#nette-application) - **has only 4 % adoption**. No surprise there, since Nette 3.0 was released only on April 2nd, 2019. Keep updating!
+
+
+Here are [data to this day](https://github.com/TomasVotruba/tomasvotruba.cz/blob/6c9df3aa834a213ea1a94d619f4cbc1564ff727e/source/_data/generated/vendor_packages_by_version.yaml), I wonder how they change in 6 months.  
 
 <br>
 
 This is just the tip of the iceberg that caught my eyes.
 
-[Check all the results here](/package-downloads-by-version/) and discover more interesting details about your favorite framework.
+**[Check the full table](/package-downloads-by-version/)** and discover more interesting details about your favorite framework.
 
 <br>
 
