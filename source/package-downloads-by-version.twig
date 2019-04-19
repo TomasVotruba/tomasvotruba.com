@@ -45,8 +45,10 @@ id: trends
             <table class="table table-bordered mt-4 mt-4">
                 <thead class="thead-inverse">
                     <tr>
-                        <th colspan="2" class="text-center">
-                            {{ package_data.package_name }}
+                        <th colspan="2" class="text-center" id="{{ package_data.package_name|webalize }}">
+                            <a href="#{{ package_data.package_name|webalize }}">
+                                {{ package_data.package_name }}
+                            </a>
                         </th>
                     </tr>
                 </thead>
