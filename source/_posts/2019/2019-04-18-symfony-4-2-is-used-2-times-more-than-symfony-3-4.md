@@ -13,7 +13,7 @@ tweet: "New Post on #php 🐘 blog: Symfony 4.2 is used 2 times More than #symfo
 This post was inspired by very active reactions to <a href="/blog/2019/04/11/trends-of-php-frameworks-in-numbers/">Trends of PHP Frameworks in Numbers</a>
 </div>
 
-If you look at the [PHP Framework Trends table](/php-framework-trends/) and see Symfony with 595 mils. downloads last year, what will it tell us? What is 90 % of that is legacy Symfony 2.8?
+If you look at the [PHP Framework Trends table](/php-framework-trends/) and see Symfony with 595 mils. downloads last year, what will it tell us? What if 90 % of that is just legacy Symfony 2.8?
 
 When I talked with my friends Marek and Honza about PHP downloads trends last week, they came with an idea that stats should include **downloads numbers for each version** and **the release date** of that version. That would help us separate long-tail dinosaurs from actively adopted packages.
 
