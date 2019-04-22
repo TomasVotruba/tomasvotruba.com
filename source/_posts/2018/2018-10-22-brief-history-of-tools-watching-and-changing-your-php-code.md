@@ -11,16 +11,17 @@ tweet: "New Post on my Blog: Brief History of Tools Watching and Changing PHP Co
 
 ## 1. Coding Standard Tools
 
-### PHP_CodeSniffer
+### [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) from Australia
 
 <span class="badge badge-light">Tokens</span>
 <span class="badge badge-warning">Checks Code</span>
+<span class="badge badge-success">Modifies Code</span>
 
 The first tool that made it to the mainstream of coding standard tools was created around **2007** by Greg Sherwood from Australia. At least by date [of the oldest post I could found](http://gregsherwood.blogspot.com/2006/12/if-not-test-first-then-test-really-soon.html).
 
 Greg has been maintaining the repository for last **11 years** (at least). I don't know anyone else who would take care for his project for such a long time without stepping back - **much respect**!
 
-### PHP CS Fixer
+### [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) from Symfony
 
 <span class="badge badge-light">Tokens</span>
 <span class="badge badge-warning">Checks Code</span>
@@ -45,16 +46,17 @@ PHP_CodeSniffer 2.8 and 3.0 (depending on `3.0-dev`), which took 14 uncertain mo
 
 Both use `token_get_all()` that basically parses code to strings. Do you want to know [how they actually work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/)?
 
-### EasyCodingStandard
+### [EasyCodingStandard](https://github.com/symplify/easycodingstandard)
 
 <span class="badge badge-light">Tokens</span>
 <span class="badge badge-warning">Checks Code</span>
+<span class="badge badge-success">Modifies Code</span>
 
 I saw many projects that use both tools, yet very poorly - because split attention divides the focus in the same ratio. The mission of this tool is **to help new generations to adopt coding standard with almost no effort**. So in **2016** the EasyCodingStandard was born.
 
 ## 2. Static Analysis Tools
 
-### nikic/php-parser
+### [nikic/php-parser](https://github.com/nikic/PHP-Parser)
 
 <span class="badge badge-danger">AST</span>
 
@@ -98,30 +100,31 @@ It's useful to know what places are wrong, but it still only reports these chang
 
 ## 3. Instant Upgrade Tools
 
-### umpirsky/Symfony-Upgrade-Fixer
+### [umpirsky/Symfony-Upgrade-Fixer](https://github.com/umpirsky/Symfony-Upgrade-Fixer)
 
 <span class="badge badge-light">Tokens</span>
 <span class="badge badge-success">Modifies Code</span>
+<span class="badge badge-secondary">Outdated</span>
 
 This tool was created in **2015** and it's revolutionary. Why? It wisely connects token analysis of PHP CS Fixer with deprecations in Symfony 2 to 3. Imagine it like PHP CS Fixer + `sensiolabs-de/deprecation-detector` **working for you**.
 
 Isn't that amazing? **You just sit, run this tool and send invoices. Genius!** The features are limited due to Tokens, but still, I love this.
 
-### cakephp/upgrade
+### [cakephp/upgrade](https://github.com/cakephp/upgrade)
 
 <span class="badge badge-success">Modifies Code</span>
 
 It's completely natural, that frameworks that evolve fast need a tool that helps their users to migrate.
 CakePHP is jumping faster and faster recent years, they made their own tool. It's based on regular expressions.
 
-### silverstripe-upgrader
+### [silverstripe-upgrader](https://github.com/silverstripe/silverstripe-upgrader)
 
 <span class="badge badge-danger">AST</span>
 <span class="badge badge-success">Modifies Code</span>
 
 SilverStripe is New Zealandian CMS written in PHP. Its logic is very similar to Rector and I like it. It's also quite small, so the code is easy to understand. Be sure to check it!
 
-### Rector
+### [Rector](github.com/rectorphp/rector)
 
 <span class="badge badge-danger">AST</span>
 <span class="badge badge-success">Modifies Code</span>
