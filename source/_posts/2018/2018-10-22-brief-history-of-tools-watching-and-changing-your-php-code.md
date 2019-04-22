@@ -14,17 +14,15 @@ tweet: "New Post on my Blog: Brief History of Tools Watching and Changing PHP Co
 ### [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) from Australia
 
 <span class="badge badge-light">Tokens</span>
-<span class="badge badge-warning">Checks Code</span>
 <span class="badge badge-success">Modifies Code</span>
 
 The first tool that made it to the mainstream of coding standard tools was created around **2007** by Greg Sherwood from Australia. At least by date [of the oldest post I could found](http://gregsherwood.blogspot.com/2006/12/if-not-test-first-then-test-really-soon.html).
 
-Greg has been maintaining the repository for last **11 years** (at least). I don't know anyone else who would take care for his project for such a long time without stepping back - **much respect**!
+Greg has been maintaining the repository for last **11 years** (at least). I don't know anyone else who would take care of his project for such a long time without stepping back - **much respect**!
 
 ### [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) from Symfony
 
 <span class="badge badge-light">Tokens</span>
-<span class="badge badge-warning">Checks Code</span>
 <span class="badge badge-success">Modifies Code</span>
 
 Reporting errors are helpful, but fixing them for you is even more helpful. More people got a similar need and around [Symfony 2.0 times and 2011](https://gist.github.com/fabpot/3f25555dce956accd4dd) next tools were born - PHP CS Fixer.
@@ -46,10 +44,9 @@ PHP_CodeSniffer 2.8 and 3.0 (depending on `3.0-dev`), which took 14 uncertain mo
 
 Both use `token_get_all()` that basically parses code to strings. Do you want to know [how they actually work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/)?
 
-### [EasyCodingStandard](https://github.com/symplify/easycodingstandard)
+### [EasyCodingStandard](https://github.com/symplify/easycodingstandard) from the Czech Republic
 
 <span class="badge badge-light">Tokens</span>
-<span class="badge badge-warning">Checks Code</span>
 <span class="badge badge-success">Modifies Code</span>
 
 I saw many projects that use both tools, yet very poorly - because split attention divides the focus in the same ratio. The mission of this tool is **to help new generations to adopt coding standard with almost no effort**. So in **2016** the EasyCodingStandard was born.
@@ -60,53 +57,93 @@ I saw many projects that use both tools, yet very poorly - because split attenti
 
 <span class="badge badge-danger">AST</span>
 
-This is a package that is barely known for direct code analysis. But all following depend on it thanks to *abstract syntax tree* (known as *AST*; it's much simpler than it sounds).
+This package is barely known for code analysis. But it provides the technology that all the other tool builds on - *abstract syntax tree* (known as *AST*).
 
-It all started as a question on [StackOverflow](https://stackoverflow.com/questions/5586358/any-decent-php-parser-written-in-php) - *Any decent PHP parser written in PHP?* nikic answered himself with a [`php-parser`](https://github.com/nikic/PHP-Parser) less than a half year later.
+It all started as a question on [StackOverflow](https://stackoverflow.com/questions/5586358/any-decent-php-parser-written-in-php) - *Any decent PHP parser written in PHP?* nikic answered himself with a [`php-parser`](https://github.com/nikic/PHP-Parser) less than a 6 months later.
 
 I would not write this post and neither have my fuel for passion without this tool, so **huge thank you, Nikita, for creating it and maintaining it**.
 
-### PHPStan, Phan, Psalm
+<br>
+
+All following tools use an **AST analyzer** - that's how they know what object is `$object` variable, like in this example:
+
+```php
+<?php
+
+class SomeObject
+{
+    public function exist()
+    {
+    }
+}
+
+$object = new SomeObject; // AST remembers that "$object" is "SomeObject" type  
+$object->missing(); // here we know that "missing" does not exist in "SomeObject"
+```
+
+### [PHPStan](https://github.com/phpstan/phpstan) by Ondrej Mirtes
 
 <span class="badge badge-danger">AST</span>
-<span class="badge badge-warning">Checks Code</span>
+<span class="badge badge-info">
+    <a href="https://github.com/phpstan/phpstan/releases/tag/0.1">* 2016</a>
+</span>
 
-- [PHPStan](https://github.com/phpstan/phpstan) by Ondrej Mirtes
-- [Phan](https://github.com/phan/phan) by Rasmus Lerdorf
-- [Psalm](https://github.com/vimeo/psalm) by Matthew Brown
+If you don't use any static analysis tool, give PHPStan a try. I've made [minimalist intro that will help you with first steps ](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). It's worth investing even day or two to set it up because **these tools will join toolkit of everyday use**, like Composer or PHPUnit.
 
-In my knowledge and according to [Github](https://github.com/phan/phan/releases/tag/0.1), [0.1](https://github.com/phpstan/phpstan/tree/0.1) [tags](https://github.com/vimeo/psalm/releases/tag/0.1), all have been published around **2015/2016**.
-
-All these tools use an **AST analyzer** - that's how they know you're calling `$object->undefined()`. Apart `php-parser`, there is [Microsoft/tolerant-php-parser](https://github.com/Microsoft/tolerant-php-parser). His big advantage is that it can work with incomplete code. Thanks to such feature it's great for IDE autocompletion, e.g. [phpactor](https://github.com/phpactor/phpactor) for VIM.
-
-**The downloads speaks for themselves**:
-
-- [66 000 000](https://packagist.org/packages/nikic/php-parser/stats) vs
-- [159 000](https://packagist.org/packages/microsoft/tolerant-php-parser/stats) in favor of php-parser.
-
-If you don't use any of these, give at least PHPStan a try. I've made [minimalist intro just for you](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). The overhead is worth it to overcome since **these tools will become more natural to use**, like `composer` is now today.
-
-### Deprecation Detectors
-
+### [Phan](https://github.com/phan/phan) by Rasmus Lerdorf
+ 
 <span class="badge badge-danger">AST</span>
-<span class="badge badge-warning">Checks Code</span>
+<span class="badge badge-info">
+    <a href="https://github.com/phan/phan/releases/tag/0.1">* 2015</a>
+</span>
+ 
+### [vimeo/psalm](https://github.com/vimeo/psalm) by Matthew Brown
+ 
+<span class="badge badge-danger">AST</span>
+<span class="badge badge-info">
+    <a href="https://github.com/vimeo/psalm/releases/tag/0.1">* 2016</a>
+</span>
+<span class="badge badge-success">Modifies Code</span>
 
-Last group that is widely used mainly in general PHP community (not-framework-bounded):
+Psalm is a very interesting tool that was born to fight Vimeo code complexity. It was the first tool from this group of 3, **that started [fixing the code](https://psalm.dev/docs/fixing_code/)**.
 
-- Do you want to **upgrade your PHP code**? What are deprecations in it? [PHP 7 Compatibility Checker](https://github.com/sstalle/php7cc) tells you
-- Do you **migrate from Symfony 2 to 3**? [sensiolabs-de/deprecation-detector](https://github.com/sensiolabs-de/deprecation-detector)
+## 3. Deprecation Detectors
 
-It's useful to know what places are wrong, but it still only reports these changes.
+This group is widely used in the framework-agnostic PHP community.
 
-## 3. Instant Upgrade Tools
+### [PHP 7 Compatibility Checker](https://github.com/sstalle/php7cc)
+
+<span class="badge badge-secondary">Deprecated</span>
+<span class="badge badge-danger">AST</span>
+
+This tool checked for compatibility with PHP 7.
+
+### [sensiolabs-de/deprecation-detector](https://github.com/sensiolabs-de/deprecation-detector)
+
+<span class="badge badge-secondary">Deprecated</span>
+<span class="badge badge-danger">AST</span>
+
+This package helped to look for Symfony 3 deprecations in your code.
+
+### [PHPCompatibility/PHPCompatibility](https://github.com/PHPCompatibility/PHPCompatibility)
+
+<span class="badge badge-light">Tokens</span>
+
+This tool checks for PHP cross-version compatibility. It allows you to analyze your code for compatibility with higher and lower versions of PHP.
+
+<br>
+
+It's useful to know what places are wrong, but you still have to fix them all manually.
+
+## 4. Instant Upgrade Tools
 
 ### [umpirsky/Symfony-Upgrade-Fixer](https://github.com/umpirsky/Symfony-Upgrade-Fixer)
 
 <span class="badge badge-light">Tokens</span>
 <span class="badge badge-success">Modifies Code</span>
-<span class="badge badge-secondary">Outdated</span>
+<span class="badge badge-secondary">Deprecated</span>
 
-This tool was created in **2015** and it's revolutionary. Why? It wisely connects token analysis of PHP CS Fixer with deprecations in Symfony 2 to 3. Imagine it like PHP CS Fixer + `sensiolabs-de/deprecation-detector` **working for you**.
+This tool was created in **2015** and it's revolutionary. Why? It wisely connects the token analysis of PHP CS Fixer with deprecations in Symfony 2 to 3. Imagine it like PHP CS Fixer + `sensiolabs-de/deprecation-detector` **working for you**.
 
 Isn't that amazing? **You just sit, run this tool and send invoices. Genius!** The features are limited due to Tokens, but still, I love this.
 
@@ -115,21 +152,21 @@ Isn't that amazing? **You just sit, run this tool and send invoices. Genius!** T
 <span class="badge badge-success">Modifies Code</span>
 
 It's completely natural, that frameworks that evolve fast need a tool that helps their users to migrate.
-CakePHP is jumping faster and faster recent years, they made their own tool. It's based on regular expressions.
+CakePHP is jumping faster and faster in recent years, they made their own tool. It's based on regular expressions.
 
 ### [silverstripe-upgrader](https://github.com/silverstripe/silverstripe-upgrader)
 
 <span class="badge badge-danger">AST</span>
 <span class="badge badge-success">Modifies Code</span>
 
-SilverStripe is New Zealandian CMS written in PHP. Its logic is very similar to Rector and I like it. It's also quite small, so the code is easy to understand. Be sure to check it!
+SilverStripe is a PHP CMS coming from New Zealand. Its logic is very similar to Rector and I like it. It's also quite small, so the code is easy to understand. Be sure to check it!
 
 ### [Rector](github.com/rectorphp/rector)
 
 <span class="badge badge-danger">AST</span>
 <span class="badge badge-success">Modifies Code</span>
 
-It's **2017** and Rector had to wait to be born. For what?
+It's **2017** and Rector still had to wait many months to be born. For what?
 
 Well, it's built on php-parser and as it modifies the code and prints it back, it **needed to keep spacing**. That's one of AST drawbacks - it doesn't care about all that coding standards spacings.
 

@@ -598,13 +598,13 @@ table ul {
 }
 
 
-.thead-inverse a, .thead-inverse a:visited, #content .thead-inverse a:visited:not(.btn):not(.badge) {
+.thead-inverse a, .thead-inverse a:visited, #content .thead-inverse a:visited:not(.btn):not(.badge), .badge-info a, .badge-info a:visited {
     color: #DDD;
     text-decoration: underline;
     font-weight: normal;
 }
 
-.thead-inverse a:hover {
+.thead-inverse a:hover, .badge-info a:hover {
     color: white;
     text-decoration: none;
 }
