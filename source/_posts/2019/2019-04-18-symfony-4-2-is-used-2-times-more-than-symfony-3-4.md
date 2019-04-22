@@ -69,7 +69,7 @@ The Zend community is clearly interested in new features, far from "Zend is Dead
 - The backbone for applications - [`nette/application`](/package-downloads-by-version/#nette-application) - **has only 4 % adoption**. No surprise there, since Nette 3.0 was released only on April 2nd, 2019. Keep updating!
 
 
-Here are [data to this day](https://github.com/TomasVotruba/tomasvotruba.cz/blob/6c9df3aa834a213ea1a94d619f4cbc1564ff727e/source/_data/generated/vendor_packages_by_version.yaml), I wonder how they change in 6 months.  
+Here are [data to this day](https://github.com/TomasVotruba/tomasvotruba.cz/blob/6c9df3aa834a213ea1a94d619f4cbc1564ff727e/source/_data/generated/vendor_packages_by_version.yaml), I wonder how they change in 6 months.
 
 <br>
 

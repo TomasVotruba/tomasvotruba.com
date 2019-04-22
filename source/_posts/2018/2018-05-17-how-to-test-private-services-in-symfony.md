@@ -8,6 +8,15 @@ perex: |
     Today we look at possible solutions.
 tweet: "New Post on My Blog: How to Test Private Services in #Symfony #phpunit"
 tweet_image: "/assets/images/posts/2018/private-services/gone.png"
+
+updated_since: "April 2019"
+updated_message: |
+    After trying all the options in this post I settled down with simple solution:
+    <br>
+    **`public: true` in all my configs.**
+    <br>
+    <br>
+    The only approach that works out of the box and requires 0-setup.
 ---
 
 If you know the problem and look only for a solution, jump right down to [Symfony 4.1 Standalone or Symfony 3.4/4.0 solution](#2-in-symfony-4-1-standalone-or-symfony-3-4-4-0).
