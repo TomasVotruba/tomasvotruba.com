@@ -77,7 +77,7 @@ class SomeObject
     }
 }
 
-$object = new SomeObject; // AST remembers that "$object" is "SomeObject" type  
+$object = new SomeObject; // AST remembers that "$object" is "SomeObject" type
 $object->missing(); // here we know that "missing" does not exist in "SomeObject"
 ```
 
@@ -91,14 +91,14 @@ $object->missing(); // here we know that "missing" does not exist in "SomeObject
 If you don't use any static analysis tool, give PHPStan a try. I've made [minimalist intro that will help you with first steps ](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). It's worth investing even day or two to set it up because **these tools will join toolkit of everyday use**, like Composer or PHPUnit.
 
 ### [Phan](https://github.com/phan/phan) by Rasmus Lerdorf
- 
+
 <span class="badge badge-danger">AST</span>
 <span class="badge badge-info">
     <a href="https://github.com/phan/phan/releases/tag/0.1">* 2015</a>
 </span>
- 
+
 ### [vimeo/psalm](https://github.com/vimeo/psalm) by Matthew Brown
- 
+
 <span class="badge badge-danger">AST</span>
 <span class="badge badge-info">
     <a href="https://github.com/vimeo/psalm/releases/tag/0.1">* 2016</a>

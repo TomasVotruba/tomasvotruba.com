@@ -299,7 +299,8 @@ We want to get rid of this code, not to maintain it.
 +            $accountNumber: "%account_number%"
 ```
 
-<em class="fas fa-lg fa-times text-danger"></em>
+
+
 
 We want config to use PSR-4 autodiscovery to it's fullest potential, not go back to manual service definitions.
 
