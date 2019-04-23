@@ -42,7 +42,7 @@ There is a practice-proven way to for all the problems above. Let's look at them
 
 ### 1. "<strike>Your team will be surprised from the new framework they never used</strike>"
 
-It doesn't make sense to switch in one week without discussing the whole team. It is as foolish as giving PHPStorm to someone who only used Sublime Test and expects them to know how to use it.
+It doesn't make sense to switch in one week without discussing the whole team. It is as foolish as giving PHPStorm to someone who only used Sublime Text and expects them to know how to use it.
 
 **Always give your team proper daily mentoring on how to use and master a new tool.** It will payback in higher quality code and faster feature delivery in the long term.
 
