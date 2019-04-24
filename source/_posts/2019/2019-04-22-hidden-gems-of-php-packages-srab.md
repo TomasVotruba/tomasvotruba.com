@@ -11,7 +11,7 @@ perex: |
 tweet: "New Post on the #php 🐘 blog: Hidden Gems of PHP Packages: Static Analysis Results Baseliner by @daveliddament"
 ---
 
-I found this package by random clicking on meetups on [Friends of PHP](https://friendsofphp.org/) and reading program of the meetup. One of them was Dave with his SARB - *Static Analysis Results Baseliner* tool. What an interesting name. In the Czech, I red *SRAB*, which means *coward*... what does such tool can do?
+I found this package by random clicking on meetups on [Friends of PHP](https://friendsofphp.org/) and reading program of the meetup. One of them was Dave with his SARB - *Static Analysis Results Baseliner* tool. What an interesting name. In the Czech, I read *SRAB*, which means *coward*... what does such tool can do?
 
 ## What Does SARB Help You With?
 
