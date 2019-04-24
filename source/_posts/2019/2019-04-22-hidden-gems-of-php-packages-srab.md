@@ -7,7 +7,7 @@ perex: |
     **Do you wish to skip fixing these 10 000 errors and check new code only?**
     <br>
     <br>
-    Yes and yes? You'll love SARB. 
+    Yes and yes? You'll love SARB.
 tweet: "New Post on the #php 🐘 blog: Hidden Gems of PHP Packages: Static Analysis Results Baseliner by @daveliddament"
 ---
 
@@ -35,10 +35,10 @@ No stress with the legacy you didn't even write, but full focus on the present m
 composer require dave-liddament/sarb --dev
 ```
 
-2. Create a baseline file 
+2. Create a baseline file
 
 ```bash
-# for psalm 
+# for psalm
 vendor/bin/psalm --report reports/psalm-result.json
 vendor/bin/sarb create-baseline reports/psalm-result.json reports/sarb_baseline.json psalm-json
 
@@ -52,7 +52,7 @@ vendor/bin/sarb create-baseline reports/phpstan-result.json reports/sarb_baselin
 4. Rerun the static analysis on the latest code
 
 ```bash
-# for psalm 
+# for psalm
 vendor/bin/psalm --report reports/psalm-result.json
 
 # for phpstan
@@ -69,7 +69,7 @@ vendor/bin/sarb remove-baseline-results reports/phpstan-result.json reports/sarb
 vendor/bin/sarb remove-baseline-results reports/psalm-result.json reports/sarb_baseline.json reports/issues_since_baseline.json
 ```
 
-That's it! 
+That's it!
 
 You can use this also on EasyCodingStandard:
 
@@ -78,7 +78,7 @@ vendor/bin/easy-coding-standard check src --output-format reports/ecs-result.jso
 vendor/bin/sarb remove-baseline-results reports/ecs-result.json reports/sarb_baseline.json reports/issues_since_baseline.json
 ```
 
-The sky is the limit :) 
+The sky is the limit :)
 
 <br>
 
