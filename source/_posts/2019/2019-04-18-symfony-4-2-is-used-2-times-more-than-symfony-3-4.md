@@ -17,7 +17,7 @@ If you look at the [PHP Framework Trends table](/php-framework-trends/) and see 
 
 When I talked with my friends Marek and Honza about PHP downloads trends last week, they came with an idea that stats should include **downloads numbers for each version** and **the release date** of that version. That would help us separate long-tail dinosaurs from actively adopted packages.
 
-So I created a closed myself in a closet for 3 days and put together framework downloads grouped by version ([see PR](https://github.com/TomasVotruba/tomasvotruba.cz/pull/738/files)). I won't lie, few numbers really surprised me.
+So I closed myself in a closet for 3 days and put together framework downloads grouped by version ([see PR](https://github.com/TomasVotruba/tomasvotruba.cz/pull/738/files)). I won't lie, few numbers really surprised me.
 
 ## Symfony on Bleeding Edge
 
@@ -62,7 +62,7 @@ The Zend community is clearly interested in new features, far from "Zend is Dead
 
 ## CakePHP with Peak
 
-- The most **downloaded packages is `cakephp/chronos`** - with 290 045 downloads/month. Next packages have only 60-70 000 downloads.
+- The most **downloaded package is `cakephp/chronos`** - with 290 045 downloads/month. Next packages have only 60-70 000 downloads.
 
 ## Nette slowly Adopting
 
