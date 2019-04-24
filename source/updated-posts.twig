@@ -1,0 +1,23 @@
+---
+layout: "_layouts/default.twig"
+title: "Updated Posts"
+id: blog
+---
+
+<div class="container-fluid" id="blog">
+    <h1>Updated Posts</h1>
+
+    <p>The most fresh updates are on the top.</p>
+
+    <br>
+
+    {# get only deprecated posts #}
+    {% set updated_posts = [] %}
+    {% for post in posts if post.updated_since is defined %}
+        {% set updated_posts = updated_posts|merge([post]) %}
+    {% endfor %}
+
+    {% set updated_posts = sort_posts_by_updated_at(updated_posts) %}
+
+    {% include "_snippets/post/post_list.twig" with { posts: updated_posts } %}
+</div>
