@@ -24,7 +24,7 @@ final class SortUpdatedPostByFilterProvider implements FilterProviderInterface
                 });
 
                 return $posts;
-            }
+            },
         ];
     }
 }
