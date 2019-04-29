@@ -488,11 +488,11 @@ If you don't use Doctrine or you already do this approach, **try to think where 
 
 ## How to add new repository?
 
-The main goal of all this was to make work with repositories typehinted, safe and reliable for you tu use and easy to extends.
+The main goal of all this was to make work with repositories typehinted, safe and reliable for you to use and easy to extend.
 
 **It also minimized space for error**, because **strict types and constructor injection now validates** much of your code for you.
 
-The answer is now simple: **just create repository it in `App\Repository`**.
+The answer is now simple: **just create repository in `App\Repository`**.
 
 Try the same example with your current approach and let me know in the comments.
 
