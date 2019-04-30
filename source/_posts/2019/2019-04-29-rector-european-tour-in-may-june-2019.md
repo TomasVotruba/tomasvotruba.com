@@ -2,7 +2,7 @@
 id: 207
 title: "Rector European Tour in May&nbsp;&&nbsp;June&nbsp;2019"
 perex: |
-    I asked Łukasz Chruściel if we see each other on one of the conferences I'm coming with Rector and I got and he's like: "I haven't noticed any announcements that you will talk somewhere. Did you set up any long distance trip?"
+    I asked Łukasz Chruściel if we see each other on one of the conferences I'm coming with Rector and he's like: "I haven't noticed any announcements that you will talk somewhere. Did you set up any long distance trip?"
     <br><br>
     Ups, I forgot to tell you. Let's fix it because I'd love to meet you and hear about your pain points.
 tweet: "New Post on #php 🐘 blog: #rectorphp European Tour in May & June 2019 - I'll see you at @phpday @PHP_Russia @fwdays @phpconference and @dpcon - Thanks for having me ❤️️❤️️❤️️"
