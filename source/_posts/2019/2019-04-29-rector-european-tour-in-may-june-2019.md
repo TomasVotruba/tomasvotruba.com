@@ -35,7 +35,7 @@ There are exact days and places where I'll present my Rector talk:
 - Verona, Italy - [PHP Day](https://2019.phpday.it/) - **May 10**
 - Moscow, Russia - [PHP Russia](https://phprussia.ru/2019) - **May 17**
 - Berlin, Germany - [Github Satelite](https://githubsatellite.com/) - **May 23** (just hanging out without talk)
-- Kiev, Ukraine - [PHP Russia](https://fwdays.com/en/event/php-fwdays-2019) - **Jun 1**
+- Kiev, Ukraine - [PHP fwdays](https://fwdays.com/en/event/php-fwdays-2019) - **Jun 1**
 - Berlin, Germany - [PHP Conference](https://phpconference.com/) - **Jun 4**
 - Amsterdam, Netherlands - [Dutch PHP Conference](https://www.phpconference.nl/) - **Jun 8**
 
