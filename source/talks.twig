@@ -30,13 +30,6 @@ id: talks
                     </a>
                 {% endif %}
 
-                {% if talk.slides_link is defined %}
-                    <a href="{{ talk.slides_link }}" class="btn btn-warning btn-sm mt-2 mr-2 mb-2">
-                        <em class="fab fa-fw fa-slideshare"></em>
-                        See Slides
-                    </a>
-                {% endif %}
-
                 {% if talk.video_link is defined %}
                     <a href="{{ talk.video_link }}" class="btn btn-danger btn-sm mt-2 mr-2 mb-2">
                         <em class="fab fa-fw fa-youtube"></em>

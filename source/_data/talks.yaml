@@ -3,7 +3,6 @@ parameters:
         -
             title: "Instant Upgrades with Rector"
             anchor: "rector"
-            slides_link: "https://docs.google.com/presentation/d/1jGlKzuQXNFLyF1jERlS3FiRhRMeSaR9fQr8XoqAtWV0/edit?usp=sharing"
             demo_link: "https://github.com/rectorphp/demo"
             video_link: "https://www.youtube.com/watch?v=HM5xcWqQkwo"
             post_link: "/blog/2018/02/19/rector-part-1-what-and-how/"
@@ -27,7 +26,6 @@ parameters:
         -
             title: "How to Setup Coding Standards under 5 minutes"
             anchor: "ecs"
-            slides_link: "https://docs.google.com/presentation/d/1MLVUNdukSMXTCIDf1mndajiDKvuI5vgf1Y_Uer1IWQE/edit?usp=sharing"
             related_post: "/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/"
             video_link: "https://www.facebook.com/pehapkari/videos/vl.1769747516670517/1341201322596341/?type=1"
             events:
@@ -39,7 +37,6 @@ parameters:
         -
             title: "How to Run Monorepo under 10 minutes"
             anchor: "monorepo"
-            slides_link: "https://docs.google.com/presentation/d/1UzlKWoEdFlDLj2fzFW9e7VMyncurY-Jwwh3O78rLB-g/edit?usp=sharing"
             related_post: "/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command/"
             demo_link: "https://github.com/TomasVotruba/monorepo-demo"
             video_link: "https://slideslive.com/38911637/jak-rozjet-monorepo-za-10-minut"
@@ -50,7 +47,6 @@ parameters:
         -
             title: "Why Your Company Loses Money By Not-Open-Sourcing"
             anchor: "open-source"
-            slides_link: "https://docs.google.com/presentation/d/1kYpsn_ZAR_Q2A7WYqBIjeVIjdKe67W_d0PTHVgsvMo4/edit?usp=sharing"
             video_link: "https://www.youtube.com/watch?v=suscn1HeRAc"
             related_post: "/blog/2018/07/26/why-is-your-company-losing-money-by-not-open-sourcing-1-hiring/"
             events:
