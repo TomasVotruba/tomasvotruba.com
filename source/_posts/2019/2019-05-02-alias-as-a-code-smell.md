@@ -11,7 +11,7 @@ tweet: "New Post on #php 🐘 blog: Alias as a Code Smell"
 
 In recent projects, I consult I start to notice an interesting pattern. It's how important are uniquely named short classes. Short class name = the part after last `\`.
 
-How would like this code?
+How would you like to use this code?
 
 <img src="/assets/images/posts/2019/alias/too_many.gif" class="img-thumbnail">
 
