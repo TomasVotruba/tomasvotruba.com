@@ -1,35 +1,35 @@
-# this file was generated on 2019-04-24 02:05:17, do not edit it manually
+# this file was generated on 2019-05-03 10:38:10, do not edit it manually
 parameters:
     testing_packages:
         packages:
             -
                 package_name: codeception/codeception
                 package_short_name: codeception
-                last_month_average_daily_downloads: 13260
-                last_year_trend: 17.6
-                last_year_total: 4039590
+                last_month_average_daily_downloads: 13117
+                last_year_trend: 20.7
+                last_year_total: 4150950
             -
                 package_name: mockery/mockery
                 package_short_name: mockery
-                last_month_average_daily_downloads: 65738
-                last_year_trend: 14.1
-                last_year_total: 19775790
+                last_month_average_daily_downloads: 64026
+                last_year_trend: 18.5
+                last_year_total: 20275890
             -
                 package_name: phpunit/phpunit
                 package_short_name: phpunit
-                last_month_average_daily_downloads: 131175
-                last_year_trend: 9.7
-                last_year_total: 40600110
+                last_month_average_daily_downloads: 129001
+                last_year_trend: 13.3
+                last_year_total: 41411580
             -
                 package_name: behat/behat
                 package_short_name: behat
-                last_month_average_daily_downloads: 16351
-                last_year_trend: 8.3
-                last_year_total: 5226930
+                last_month_average_daily_downloads: 16466
+                last_year_trend: 12.7
+                last_year_total: 5323860
             -
                 package_name: phpspec/phpspec
                 package_short_name: phpspec
-                last_month_average_daily_downloads: 6577
-                last_year_trend: -8.8
-                last_year_total: 2469780
-        updated_at: '2019-04-24 02:05:17'
+                last_month_average_daily_downloads: 6411
+                last_year_trend: !!float -6
+                last_year_total: 2449440
+        updated_at: '2019-05-03 10:38:10'
