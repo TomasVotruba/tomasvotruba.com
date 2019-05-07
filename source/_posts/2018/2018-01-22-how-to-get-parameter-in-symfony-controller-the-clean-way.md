@@ -198,8 +198,8 @@ Since Symfony 3.3 we can use [PSR-4 service loading](/blog/2017/05/07/how-to-ref
 
 How changed previous steps?
 
-- <strike>register controller manually</strike> → use PSR4 **once for all services**
-- <strike>pass the parameter to constructor</strike> → use binding **once for all services**
+- ~~register controller manually~~ → use PSR4 **once for all services**
+- ~~pass the parameter to constructor~~ → use binding **once for all services**
 - autowire the rest
 
 ```yaml

@@ -196,7 +196,7 @@ No. You think for **the future** with prevention!
 
 Same can be applied to your code.
 
-### Delegator Pattern to the <strike>Rescue</strike> Prevention
+### Delegator Pattern to the ~~Rescue~~ Prevention
 
 This is what we did in [Lekarna.cz](https://www.lekarna.cz/) - The biggest online drugstore in the Czech Republic. It started on Nette 2.4 and Doctrine 2.5, with [monorepo approach](/blog/2017/12/25/composer-local-packages-for-dummies/).
 

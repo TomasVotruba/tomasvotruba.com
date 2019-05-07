@@ -56,7 +56,7 @@ I'm right in the very start of using this architecture, so you'll have the knowl
 
 ## 4 Steps to turn Single-Repository project to Parts of Monorepo
 
-### 1. <strike>App</strike> Unique Namespace
+### 1. ~~App~~ Unique Namespace
 
 If there are 2 `App\Kernel` classes the application would break. Pick a name that is specific for the project - here it's "OpenTraining" - and rename it in `namespace App\`, `namespace App;`, `use App\` in PHP code. Don't forget the `composer.json` as well.
 

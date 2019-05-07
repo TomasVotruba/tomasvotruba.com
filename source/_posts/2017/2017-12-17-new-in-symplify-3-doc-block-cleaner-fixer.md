@@ -90,7 +90,7 @@ Do you know what do they have in common?
 
 <br>
 
-## How to Remove <strike>Manually</strike> Automatically?
+## How to Remove ~~Manually~~ Automatically?
 
 Cleaning every single case would be crazy. Luckily, we **live in CLI-refactoring generation**,
 so all we need is `Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer`.

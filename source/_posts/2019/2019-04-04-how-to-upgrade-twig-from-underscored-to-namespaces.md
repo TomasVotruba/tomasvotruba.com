@@ -4,7 +4,7 @@ title: "How to Upgrade Twig from Underscored to Namespaces"
 perex: |
     Symfony [recently announced a new version of Twig](https://symfony.com/blog/new-in-twig-namespaced-classes) with namespaces as we know it. Before PHP 5.2 there was `Underscored_Namespace` - I remember because that was the first version I used.
     <br><br>
-    Today I'll show you how to upgrade from `_` to `\\` in few <strike>minutes</strike> seconds.
+    Today I'll show you how to upgrade from `_` to `\\` in few ~~minutes~~ seconds.
 
 tweet: "New Post on #php 🐘 blog: How to Upgrade #twig from Underscored to Namespaces"
 tweet_image: "/assets/images/posts/2019/twig-under/twig-image.png"
@@ -66,7 +66,7 @@ And the code:
 
 In a reaction to the Symfony blog post, I see many developers [do upgrades manually](https://github.com/sculpin/sculpin/pull/423/files). In case of 50 changes, it's ok, but private code bases will go 1000+ use cases.
 
-## <strike>Code</strike> Pattern Refactoring
+## ~~Code~~ Pattern Refactoring
 
 For [Rector](https://github.com/rectorphp/rector) it just 1 pattern to refactor. Just tell him to process your files `src`:
 

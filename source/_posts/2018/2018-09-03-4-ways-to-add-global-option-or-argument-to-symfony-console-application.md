@@ -112,7 +112,7 @@ The first simple & short solution you'd [Googled up](https://gist.github.com/dhr
 
 - that's why the should be encapsulated - always prefer tree dependencies over these circle ones
 
-## 3. The <strike>Symfony</strike> Event Subscriber Way
+## 3. The ~~Symfony~~ Event Subscriber Way
 
 I found this approach on [Matthias Noback's blog](https://matthiasnoback.nl/2013/11/symfony2-add-a-global-option-to-console-commands-and-generate-pid-file/). The process is similar to above, just wrapped in event subscriber that hooks into the Console Application cycle:
 

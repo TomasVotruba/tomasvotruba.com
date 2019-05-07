@@ -2,7 +2,7 @@
 id: 157
 title: "Fatal error: Uncaught Error: [] operator not supported for strings in"
 perex: |
-    That's right! PHP 5.6 and 7.0 are entering EOL - end of <strike>line</strike> life this December. Social networks, Slacks, Twitter, Reddit are [full](https://www.reddit.com/r/PHP/comments/9syr3m/php_56_eol_end_of_life_end_of_2018_and_php_7/) of it. Are you running PHP 7.1? Good, come next year when PHP 7.1 is *eoling*.
+    That's right! PHP 5.6 and 7.0 are entering EOL - end of ~~line~~ life this December. Social networks, Slacks, Twitter, Reddit are [full](https://www.reddit.com/r/PHP/comments/9syr3m/php_56_eol_end_of_life_end_of_2018_and_php_7/) of it. Are you running PHP 7.1? Good, come next year when PHP 7.1 is *eoling*.
     <br><br>
     For the rest of you, what will you do when PHP will tell you the message in the title?
 tweet: "New Post on My Blog: Fatal error: Uncaught Error: [] operator not supported for strings in #php56 #php70 #eol #rector"

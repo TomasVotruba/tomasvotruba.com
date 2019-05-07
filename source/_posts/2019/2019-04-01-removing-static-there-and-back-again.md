@@ -223,7 +223,7 @@ rules in these tools, we'll learn how to build them** to solve your problem.
 
 Back to the thinking process. This last step might seem a bit weird. We already have the clear code up and running and it's ready to ship. Why would we invest more energy into this? If I don't learn from this, I'm sentencing my future self to do it again in the future. It's funny to watch companies how they go for "a business value", try to delivery features fast, but never pause to realize, that they do mostly repetitive tasks for the same price as the first one. So by this strategy to deliver business value fast, they cut their business value in half.
 
-### <strike>Think Big</strike> Think Absolute
+### ~~Think Big~~ Think Absolute
 
 Instead, I ask myself: "how would I describe the process step by step to a machine, so it could refactor **all PHP code** on Github, Gitlab and the whole world with the same issue to the one in the end?" There could be billions of such cases in the whole-world PHP code base.
 

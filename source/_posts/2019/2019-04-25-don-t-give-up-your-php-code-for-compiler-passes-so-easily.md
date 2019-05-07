@@ -8,7 +8,7 @@ perex: |
 tweet: "New Post on #php 🐘 blog: Don't Give up Your PHP Code for Compiler Passes so Easily      #symfony #laravel #nettfw"
 ---
 
-This mini-series started in [Why Config Coding Sucks](/blog/2019/02/14/why-config-coding-sucks/). **There we learned to move <strike>weakly</strike> un-typed strings to strict-typed PHP code**. It's not only about YAML or NEON files, but about any config-like syntax in general (XML, in...).
+This mini-series started in [Why Config Coding Sucks](/blog/2019/02/14/why-config-coding-sucks/). **There we learned to move ~~weakly~~ un-typed strings to strict-typed PHP code**. It's not only about YAML or NEON files, but about any config-like syntax in general (XML, in...).
 
 Today we move to PHP-only land, that suffers a similar problem.
 
@@ -36,7 +36,7 @@ Based on [my experience with my clients](/mission/), this is the biggest problem
 - "The business must be able to update dependency on our code"
 - "We can't predict how the price will develop"
 
-<strike>This not possible!</strike> - How can we do it as close as possible now?
+~~This not possible!~~ - How can we do it as close as possible now?
 
 Let's say the solution is fairly easy. Same as [Voters are to Security](https://symfony.com/doc/current/security/voters.html), we introduce 1 service `PriceCalculator` that collects all the little one `PriceModifierInterface`.
 

@@ -11,7 +11,7 @@ tweet: "New Post on #php 🐘 blog: How we Automated @shopsysfw Packages Release
 tweet_image: '/assets/images/posts/2019/release/pr.png'
 ---
 
-Monorepo release management has <strike>few</strike> many gotchas. The one that requires most of your attention I described in [Monorepo Composer Magic](/blog/2019/01/31/monorepo-composer-magic/) post. **1 missed commit or forgotten version change** in `composer.json` of your package and **you've just released a broken package**!
+Monorepo release management has ~~few~~ many gotchas. The one that requires most of your attention I described in [Monorepo Composer Magic](/blog/2019/01/31/monorepo-composer-magic/) post. **1 missed commit or forgotten version change** in `composer.json` of your package and **you've just released a broken package**!
 
 I mean the ugly kind of errors you'll find out only after someone tries to install the package. Of course, you can improve this by [3-layer monorepo tests](/blog/2018/11/22/how-to-test-monorepo-in-3-layers/), but there is still a 50 % chance for human error.
 

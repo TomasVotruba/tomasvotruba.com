@@ -210,7 +210,7 @@ Well, shoot me now!
 
 ## How to Get From Static Hell?
 
-### 1. Dependency Injection <strike>First</strike> Only
+### 1. Dependency Injection ~~First~~ Only
 
 Dependency injection First. Not first, but **only** dependency injection.
 

@@ -15,7 +15,7 @@ tweet_image: "/assets/images/posts/2017/job-offers/attitude.jpg"
 
 The entire ad is one long seduction. At the end of it you should get the candidate to bed and satisfy him. So he will come next morning to your company.
 
-## <strike>It's not About You</strike> - It's About Who You Look For
+## ~~It's not About You~~ - It's About Who You Look For
 
 Plenty of ads are written more like a self-presentation of the company - what they do, what they are best in and what they accomplished.
 
