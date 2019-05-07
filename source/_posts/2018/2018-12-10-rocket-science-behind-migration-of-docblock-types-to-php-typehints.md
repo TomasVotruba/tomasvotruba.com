@@ -86,7 +86,7 @@ Your code updated by coding standards:
 I wonder what Albert Einstein would say seeing you do that work manually:
 
 <blockquote class="blockquote text-center">
-    If you can't <strike>explain</strike> <em>automate</em> it simply,
+    If you can't ~~explain~~ <em>automate</em> it simply,
     <br>
     you don't understand it well enough.
 </blockquote>

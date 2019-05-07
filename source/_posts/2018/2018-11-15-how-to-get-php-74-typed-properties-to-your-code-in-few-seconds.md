@@ -53,7 +53,7 @@ Well, not everyone...
     <p>This is my favorite class to extend in whole Symfony - a <a href="https://github.com/symfony/symfony/blob/dbf053bc854f6768ddcd8ed39f7cbb2c21e500e6/src/Symfony/Component/Console/Command/Command.php#L37-L51"><code>Command</code> class</a>.
 </div>
 
-This is Symfony 4.2 (dev) we're talking about with PHP 7.1+. Lot's of Symfony code is <strike>weakly</strike> *not* typed, but that's not the biggest problem.
+This is Symfony 4.2 (dev) we're talking about with PHP 7.1+. Lot's of Symfony code is ~~weakly~~ *not* typed, but that's not the biggest problem.
 
 ## "*My-favorite-framework* Uses It, It must be the Best Practise in PHP!"
 

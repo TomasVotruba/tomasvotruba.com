@@ -53,7 +53,7 @@ I'm bit suspicious to projects that were lastly tagged a half year ago, but I fe
 
 ## Step 3: Replace Reflection
 
-All right, package picked! The <strike>fun</strike> hell was about to begin.
+All right, package picked! The ~~fun~~ hell was about to begin.
 
 Imagine your whole application uses everywhere a package, that got stuck 4 PHP versions ago. You feel it more and more. Everyday you need to patch it because there are other packages that are up-to-date. You know, like PHP itself.
 
@@ -137,7 +137,7 @@ It was June 2017. The main issue was solved and there was plenty space to improv
 
 After I finished that, I was looking for co-maintainer and somebody who's using the project to took over me.
 
-Personally, I felt <strike>bit</strike> burned out. What now? Give up the project? Go to cinema? Go to a coach? ✓
+Personally, I felt ~~bit~~ burned out. What now? Give up the project? Go to cinema? Go to a coach? ✓
 
 What helped me was a [release-candidate](https://github.com/dbrock/semver-howto#release-candidates-100-foo). An illusion of milestone, that closes huge part of dev work.
 

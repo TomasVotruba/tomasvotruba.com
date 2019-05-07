@@ -167,7 +167,7 @@ And you can do and use any feature you Symfony know. Magic no more #metoo.
 +        SlamCsFixer\FinalInternalClassFixer: ~
 ```
 
-## 6. <strike>Good Bye Neon Class Autocomplete</strike> Or not?
+## 6. ~~Good Bye Neon Class Autocomplete~~ Or not?
 
 Yeah, trade-offs bla bla bla... but what is ECS without class autocomplete? That is killer feature compared to other 2 tools that use strings for Fixer and Sniff names that you have to remember.
 

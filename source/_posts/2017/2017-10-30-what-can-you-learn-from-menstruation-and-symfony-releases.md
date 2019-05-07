@@ -14,7 +14,7 @@ tweet_image: "/assets/images/posts/2017/menstruation/together.png"
 
 *Disclaimer: this post has no intention to put menstruation into any bad light. Exactly the opposite - I admire women and love to learn from them.*
 
-## <strike>Technical</strike> Natural Releases
+## ~~Technical~~ Natural Releases
 
 We will look on release management. Non from traditional technical point of view that is already described in [semantic versioning](http://semver.org/), [Symfony BC Promise](https://symfony.com/doc/current/contributing/code/bc.html) etc., but rather from view of *nature*.
 

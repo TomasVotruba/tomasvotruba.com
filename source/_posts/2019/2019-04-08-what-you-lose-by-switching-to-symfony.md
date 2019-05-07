@@ -34,13 +34,13 @@ When you break up with your girlfriend, your friends from "her side" will soon p
 <br>
 <em>I'm obviously biased here, so if you have tips what will you lose, let me know in comments. I'll complete the article.</em>
 
-## How to Switch <strike>Quickly</strike> Smoothly
+## How to Switch ~~Quickly~~ Smoothly
 
 The main goal in any transition is to **have everyone on board**. If your country creates reform for a pension that will take more money from young people, there will be frictions. If there is reform for cheaper education, that will decrease pensions to older people, there will be frictions. A reform, that improves educations for young people, that in conclusion will generate money for older people, will be much smoother. Not perfect, but smoother.
 
 There is a practice-proven way to for all the problems above. Let's look at them:
 
-### 1. "<strike>Your team will be surprised from the new framework they never used</strike>"
+### 1. "~~Your team will be surprised from the new framework they never used~~"
 
 It doesn't make sense to switch in one week without discussing the whole team. It is as foolish as giving PHPStorm to someone who only used Sublime Text and expects them to know how to use it.
 
@@ -57,7 +57,7 @@ Talk about WTFs with your team. Are there differences to your old framework? Jus
 
 **Hire an onsite/hot-line mentor for first 2 months**. It might be more expensive than paying a programmer, but cheaper than the technical debt that programmer without experience would create during these 2 months. The mentor or she will help you to quickly overcome all the WTFs and give you the confidence to master the framework yourself.
 
-### 2. "<strike>Your team loses all the social connections with your old framework</strike>"
+### 2. "~~Your team loses all the social connections with your old framework~~"
 
 If you know people that use Nette, Laravel, Lumen or Zend, there is a high probability that your friends use Symfony as well.
 Nowadays, *components over framework* model has become so popular, that most programmer actually uses more frameworks in one projects. So switching to Symfony only opens new topics to talk about.

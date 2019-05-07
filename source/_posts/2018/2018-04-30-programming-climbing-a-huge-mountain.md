@@ -43,7 +43,7 @@ The same way you prepare for the climbing - you ask other climbers how it went, 
 
 <img src="/assets/images/posts/2018/climb/climb-3.jpg" class="img-thumbnail">
 
-As you can see, it's no shame to use the spots, <strike>even</strike> mainly professional climbers do that.
+As you can see, it's no shame to use the spots, ~~even~~ mainly professional climbers do that.
 
 **Because the safer you feel, the better your brain operates and the faster you climb** - either a mountain or a code you write.
 

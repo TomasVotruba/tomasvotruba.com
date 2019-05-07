@@ -12,7 +12,8 @@ tweet_image: "/assets/images/posts/2018/bloghacks/book.png"
 I came across this book [in the review by Vojta Růžička](https://www.vojtechruzicka.com/book-review-256-bloghacks) on [devblogy.cz](http://devblogy.tk/) (the best place to follow Czech it bloggers by [kaja47](https://twitter.com/kaja47) whom I'm very thankful for it). You might know [Yegor](http://www.yegor256.com/) from Java world or from
 **[Software Quality Award](http://www.yegor256.com/award.html) he organizes for open-source projects** every year. [A friend of mine](https://arkadiuszkondas.com/) won the award with *the* machine learning package in PHP - [php-ai/php-ml](https://github.com/php-ai/php-ml#awards) - last year.
 
-<img src="/assets/images/posts/2018/bloghacks/book.png" alt="256 Bloghacks Book">
+
+
 
 Vojta was so kind to lend me the book over the lunch. This post is an answer to my first question I asked: **what are the top 5 tips I should take from this book if no other?**
 

@@ -30,7 +30,7 @@ Since this SPOT I got to where I’m now, doing the same learning over and over 
 
 If in that spot someone would show me PHP and that it’s about websites, blogs or forms, I’d probably go different path, because that was no my problem. It was THEIRS.
 
-## I takes 1 Person to <strike>Burst</strike> Boost Lifetime Passion
+## I takes 1 Person to ~~Burst~~ Boost Lifetime Passion
 
 Luckily, friend of mine only showed me a hosting, where I could put my excel file and then share it with. That was so awesome. And with 15 lines of code, we could share link with numbers of our enemies pre-filled! That was the best thing ever so far in my life and it lead me here to share it again with others...
 
