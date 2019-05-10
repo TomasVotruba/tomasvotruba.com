@@ -70,7 +70,7 @@ final class PackageDataGroupedByVersionFactory
 
     private function sortPackagesByAdoptionRate(array $packagesData): array
     {
-        usort($packagesData, function (array $firstPackage, array $secondPackage) {
+        usort($packagesData, function (array $firstPackage, array $secondPackage): int {
             return $secondPackage['adoption_rate'] <=> $firstPackage['adoption_rate'];
         });
 

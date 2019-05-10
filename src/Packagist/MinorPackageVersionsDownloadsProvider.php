@@ -92,7 +92,7 @@ final class MinorPackageVersionsDownloadsProvider
 
     private function sortByVersion(array $data): array
     {
-        uksort($data, function ($firstVersion, $secondVersion) {
+        uksort($data, function ($firstVersion, $secondVersion): bool {
             $firstVersion = $this->versionManipulator->create($firstVersion);
             $secondVersion = $this->versionManipulator->create($secondVersion);
 

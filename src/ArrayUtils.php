@@ -6,7 +6,7 @@ final class ArrayUtils
 {
     public function sortDataByKey(array $data, string $key): array
     {
-        usort($data, function (array $firstItem, array $secondItem) use ($key) {
+        usort($data, function (array $firstItem, array $secondItem) use ($key): int {
             return $secondItem[$key] <=> $firstItem[$key];
         });
 
