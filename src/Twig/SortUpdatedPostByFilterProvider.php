@@ -16,7 +16,7 @@ final class SortUpdatedPostByFilterProvider implements FilterProviderInterface
         return [
             /** @var PostFile[] $posts */
             'sort_posts_by_updated_at' => function (array $posts) {
-                usort($posts, function (PostFile $firstPost, PostFile $secondPost) {
+                usort($posts, function (PostFile $firstPost, PostFile $secondPost): int {
                     $secondUpdatedSince = DateTime::from($secondPost->getOption('updated_since'));
                     $firstUpdatedSince = DateTime::from($firstPost->getOption('updated_since'));
 
