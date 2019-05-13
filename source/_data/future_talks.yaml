@@ -1,15 +1,16 @@
 parameters:
     future_talks:
         -
-            event: "PHP Conference"
-            city: "Verona"
-            url: "https://2019.phpday.it/"
-            date: "2019-05-10"
-        -
             event: "PHP Russia"
             city: "Moscow"
             url: "https://phprussia.ru/2019"
             date: "2019-05-17"
+        # not really talk, but I'll be there
+        -
+            event: "Github Satelite"
+            city: "Berlin"
+            url: "https://githubsatellite.com"
+            date: "2019-05-23"
         -
             event: "PHP fwdays"
             city: "Kiev"
