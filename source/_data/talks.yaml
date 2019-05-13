@@ -7,6 +7,7 @@ parameters:
             video_link: "https://www.youtube.com/watch?v=HM5xcWqQkwo"
             post_link: "/blog/2018/02/19/rector-part-1-what-and-how/"
             events:
+                - { name: "phpDay 2019, Verona @ Italy, 05/2019", link: "https://2019.phpday.it/" }
                 - { name: "Friends of PHP Brno @ Czech Republic, 03/2019", link: "https://www.facebook.com/events/415328609225062/" }
                 - { name: "Dresden PHP UG @ Germany, 02/2019", link: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/257775077/" }
                 - { name: "Friends of PHP Brno @ Czech Republic, 02/2019", link: "https://www.meetup.com/Pehapkari-Brno/events/258960849/" }
