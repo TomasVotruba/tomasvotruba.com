@@ -9,8 +9,12 @@ perex: |
 tweet: "New Post on #php 🐘 blog: How to Kill Parents    #phpstan #solid #final"
 ---
 
-<blockquote class="blockquote text-center mt-5 mb-5">
-    <strong>tl;dr;</strong> Always declare your classes <code>final</code> and learn ways how to code with them.<br>It's not an easy path, but this path will teach you more about SOLID than anything else ever will.
+<blockquote class="blockquote text-center mt-5 mb-5" markdown=1>
+**tl;dr**
+
+Always declare your classes `final` and learn ways how to code with them.
+
+It's not an easy path, but it will teach you SOLID better than anything else.
 </blockquote>
 
 S**O**L**ID** - 3 letters from [famous coding principles](https://en.wikipedia.org/wiki/SOLID) are related to `final` classes, classes that cannot have children. The `final` topic is very popular:
