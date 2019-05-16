@@ -33,7 +33,7 @@ That's how you write a manipulative text if you wanted people to never use subsc
 
 ## What's Wrong With Listeners?
 
-- Juniors will use Listeners by default (everywhere then can) <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- Juniors will use Listeners by default (everywhere they can) <em class="fas fa-fw fa-lg fa-times text-danger"></em>
 - YAML configs will get fat with listener configuration for basically no advantage <em class="fas fa-fw fa-lg fa-times text-danger"></em>
     - Since [PSR-4 autodiscovery](/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/) this hurts config readability more then ever 
     - You have to remember the YAML syntax for right registration   
