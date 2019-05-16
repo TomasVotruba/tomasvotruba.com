@@ -167,7 +167,7 @@ At the time of writing this post, there is 13 issue alters now. I believe we can
 
 **Read about them and about extra options like `--php-version`, `--dry-run` or `--safe-types` in [very beautiful and short documentation](https://psalm.dev/docs/fixing_code/)**.
 
-## Try if, Even if you use PHPStan
+## Try it, Even if you use PHPStan
 
 Personally, I use PHPStan because I'm not good with XML. But even if I should **install Psalm just to complete type-declarations and remove dead code**, it's worth the 10 minutes time to set it up. Give a try, it's huge time saver the bigger code base you have.
 
