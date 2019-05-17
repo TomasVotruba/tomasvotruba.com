@@ -56,7 +56,7 @@ Listeners have only one valid use case - it's a 3rd party code located in your `
 ```yaml
 # config/services.yaml
 services:
-    Vendror\ThirdPartyProject\Listener\UseMeListener:
+    Vendor\ThirdPartyProject\Listener\UseMeListener:
         tags:
             - { name: kernel.event_listener, event: kernel.exception }
             - { name: kernel.event_listener, event: kernel.view }
@@ -69,7 +69,7 @@ If it would be a subscriber, it would be very similar to this:
 
 namespace App;
 
-use Vendror\ThirdPartyProject\Listener\UseMeListener;
+use Vendor\ThirdPartyProject\Listener\UseMeListener;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
