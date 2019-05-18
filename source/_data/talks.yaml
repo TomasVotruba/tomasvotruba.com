@@ -10,19 +10,19 @@ parameters:
                 # same format as in "future_talks.yamlů
                 - { name: "PHP Russia", location: "Moscow, Russia", url: "https://phprussia.ru/2019", date: "2019-05-17" }
                 - { name: "phpDay 2019", location: "Verona, Italy", url: "https://2019.phpday.it/", date: "2019-05" }
-                - { name: "Friends of PHP Brno", location: "Czech Republic", date: "2019-03", url: "https://www.facebook.com/events/415328609225062/" }
+                - { name: "Friends of PHP Brno", location: "The Czech Republic", date: "2019-03", url: "https://www.facebook.com/events/415328609225062/" }
                 - { name: "Dresden PHP UG", location: "Germany", date: "2019-02", url: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/257775077/" }
-                - { name: "Friends of PHP Brno", location: "Czech Republic", date: "2019-02", url: "https://www.meetup.com/Pehapkari-Brno/events/258960849/" }
+                - { name: "Friends of PHP Brno", location: "The Czech Republic", date: "2019-02", url: "https://www.meetup.com/Pehapkari-Brno/events/258960849/" }
                 - { name: "Vienna PHP", location: "Austria", date: "2019-02", url: "https://www.meetup.com/viennaphp/events/ncmvwpyzdbcc/" }
-                - { name: "Friends of PHP Vysočina", location: "Czech Republic", date: "2019-02", url: "https://www.facebook.com/events/342162879917136/" }
+                - { name: "Friends of PHP Vysočina", location: "The Czech Republic", date: "2019-02", url: "https://www.facebook.com/events/342162879917136/" }
                 # 2018
                 - { name: "PHP Asia", location: "Singapore", date: "2018-09", url: "https://2018.phpconf.asia/" }
-                - { name: "Berlin Symfony UG", location: "Germany", date: "2018-08", url: "https://www.meetup.com/sfugberlin/events/253573567" }
+                - { name: "Symfony UG", location: "Berlin, Germany", date: "2018-08", url: "https://www.meetup.com/sfugberlin/events/253573567" }
                 - { name: "Vienna PHP", location: "Austria", date: "2018-09", url: "https://www.meetup.com/viennaphp/events/ncmvwpyxmbbc/" }
                 - { name: "Vienna PHP", location: "Austria", date: "2018-06", url: "https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/" }
-                - { name: "Friends of PHP in Pardubice", location: "Czech Republic", date: "2018-06", url: "https://www.facebook.com/events/1783858791700944/" }
+                - { name: "Friends of PHP", location: "Pardubice, The Czech Republic", date: "2018-06", url: "https://www.facebook.com/events/1783858791700944/" }
                 - { name: "Berlin PHP UG", location: "Germany", date: "2018-06", url: "http://www.bephpug.de/2018/06/05/june.html" }
-                - { name: "PHPLive", location: "Czech Republic & Slovakia", date: "2018-04", url: "https://www.phplive.cz" }
+                - { name: "PHPLive", location: "The Czech Republic & Slovakia", date: "2018-04", url: "https://www.phplive.cz" }
                 # 2017
                 - { name: "PHP Central Europe Conference", location: "Poland", date: "2017-11", url: "https://2017.phpce.eu" }
 
@@ -35,7 +35,7 @@ parameters:
                 - { name: "PHP Central Europe Conference", location: "Poland", date: "2017-11", url: "https://2017.phpce.eu" }
                 - { name: "Vienna PHP", location: "Austria", date: "2017-05", url: "https://www.meetup.com/viennaphp/events/237296390" }
                 - { name: "Dresden PHP UG", location: "Germany", date: "2017-04", url: "https://www.meetup.com/PHP-USERGROUP-DRESDEN/events/238473452" }
-                - { name: "Nette Camp", location: "Czech Republic", date: "2017-08", url: "https://nettecamp.cz" }
+                - { name: "Nette Camp", location: "The Czech Republic", date: "2017-08", url: "https://nettecamp.cz" }
 
         -
             title: "How to Run Monorepo under 10 minutes"
@@ -44,8 +44,8 @@ parameters:
             demo_link: "https://github.com/TomasVotruba/monorepo-demo"
             video_link: "https://slideslive.com/38911637/jak-rozjet-monorepo-za-10-minut"
             events:
-                - { name: "Developer Day 2018", location: "Czech Republic", date: "2018-11", url: "https://www.hubbr.cz/udalosti/events/developer-day-2018" }
-                - { name: "Friends of PHP Prague", location: "Czech Republic", date: "2018-09", url: "https://www.meetup.com/friends-of-php-prague/events/254388973/" }
+                - { name: "Developer Day 2018", location: "The Czech Republic", date: "2018-11", url: "https://www.hubbr.cz/udalosti/events/developer-day-2018" }
+                - { name: "Friends of PHP Prague", location: "The Czech Republic", date: "2018-09", url: "https://www.meetup.com/friends-of-php-prague/events/254388973/" }
 
         -
             title: "Why Your Company Loses Money By Not-Open-Sourcing"
@@ -53,4 +53,4 @@ parameters:
             video_link: "https://www.youtube.com/watch?v=suscn1HeRAc"
             related_post: "/blog/2018/07/26/why-is-your-company-losing-money-by-not-open-sourcing-1-hiring/"
             events:
-                - { name: "PHPPrague 2", location: "Czech Republic", date: "2018-05", url: "https://www.facebook.com/events/204178450306613/" }
+                - { name: "PHPPrague 2", location: "The Czech Republic", date: "2018-05", url: "https://www.facebook.com/events/204178450306613/" }
