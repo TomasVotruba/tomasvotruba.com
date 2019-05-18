@@ -52,9 +52,11 @@ id: talks
                     <ul>
                         {% for event in talk.events %}
                             <li>
-                                <a href="{{ event.link }}" class="mt-2 mb-2">
+                                <a href="{{ event.url }}" class="mt-2 mb-2">
                                     {{ event.name }}
                                 </a>
+
+                                @ {{ event.location }}, {{ event.date|date("Y-m") }}
                             </li>
                         {% endfor %}
                     </ul>
@@ -62,7 +64,7 @@ id: talks
                     <p class="mt-3">
                         <strong>Presented at</strong>
 
-                        <a href="{{ talk.events[0].link }}" class="mt-2 mb-2">
+                        <a href="{{ talk.events[0].url }}" class="mt-2 mb-2">
                             {{ talk.events[0].name }}
                         </a>
                     </p>
