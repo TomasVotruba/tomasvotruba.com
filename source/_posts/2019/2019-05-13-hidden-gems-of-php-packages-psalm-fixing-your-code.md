@@ -63,7 +63,7 @@ vendor/bin/psalm src --alter --issues=InvalidNullableReturnType
 The docs doesn't say if they stack together, but I'd assume so by the plural in "issues":
 
 ```bash
-vendor/bin/psalm src --alter --issues=MissingReturnType,MissingClosureReturnType,InvalidReturnTypeInvalidNullableReturnType
+vendor/bin/psalm src --alter --issues=MissingReturnType,MissingClosureReturnType,InvalidReturnType,InvalidNullableReturnType
 ```
 
 ## 2. Falseable Strings?
