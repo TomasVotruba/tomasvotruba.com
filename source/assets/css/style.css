@@ -497,7 +497,7 @@ table ul {
 #contact-points
 {
     font-size: 1.8em;
-    line-height: 2.5em;
+    line-height: 1.3em;
 }
 
 .avatar-bigger {
@@ -623,4 +623,17 @@ nobr {
 .normal-list {
     margin-left: -1em;
     line-height: 1.8em;
+}
+
+#contact .when
+{
+    font-size: .5em;
+    line-height: 3em;
+}
+
+@media (max-width: 768px) {
+    #contact .when {
+        line-height: 1.7em;
+        font-size: .7em;
+    }
 }
