@@ -12,7 +12,7 @@ I did not and I was surprised. Psalm added this feature long time ago in March 2
 
 ## Static Analyzers Evolving to Code Fixers
 
-**But it's not an unexpected development.** As I wrote in *[Brief History of Tools Watching and Changing Your PHP Code](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/)*, coding standard tools were *read-only* too and you had to change all the spaces manually. That was so annoying with large code-bases and many programmers didn't adopt it because it added the extra work on a daily basis, instead of saving time. 
+**But it's not an unexpected development.** As I wrote in *[Brief History of Tools Watching and Changing Your PHP Code](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/)*, coding standard tools were *read-only* too and you had to change all the spaces manually. That was so annoying with large code-bases and many programmers didn't adopt it because it added the extra work on a daily basis, instead of saving time.
 
 In response to this pressure, they **had to become more useful by working for the programmer**. PHP CS Fixer fixed code from the very first commit and PHP_CodeSniffer added this feature in response.
 
@@ -89,7 +89,7 @@ function foo() {
 
 ## 3. Unused Property or Method?
 
-I wish this would be run before each code-review. Imagine you decouple a method during refactoring and stop using one of the existing methods in the same class. A dead method is born. **A dead method that you need to maintain, test and upgrade to new version of PHP or your framework.** 
+I wish this would be run before each code-review. Imagine you decouple a method during refactoring and stop using one of the existing methods in the same class. A dead method is born. **A dead method that you need to maintain, test and upgrade to new version of PHP or your framework.**
 
 Not anymore.
 
@@ -148,12 +148,12 @@ Psalm can:
  if (rand(0, 1)) {
    $a = 5;
  }
- echo $a;  
+ echo $a;
 ```
 
-If you're into static analysis, you know it's very hard to examine this flow of control and moreover add the variable not just the beginning of file or method, but to the right place where you or I would add it.  
+If you're into static analysis, you know it's very hard to examine this flow of control and moreover add the variable not just the beginning of file or method, but to the right place where you or I would add it.
 
-Cudos to [Mathew](https://github.com/muglug)! 👍 
+Cudos to [Mathew](https://github.com/muglug)! 👍
 
 ### How to Run it?
 
@@ -161,7 +161,7 @@ Cudos to [Mathew](https://github.com/muglug)! 👍
 vendor/bin/psalm src --alter --issues=UnusedMethod
 ```
 
-## Check all 13 of them 
+## Check all 13 of them
 
 At the time of writing this post, there is 13 issue alters now. I believe we can expect up to 100 more in next year or two.
 
