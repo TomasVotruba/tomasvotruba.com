@@ -638,12 +638,12 @@ nobr {
     }
 }
 
-.bg-success a, a:active {
+.bg-success a, .bg-success a:active {
     color: white;
     text-decoration: underline;
 }
 
-.bg-success a:focus, a:hover {
+.bg-success a:focus, .bg-success a:hover {
     color: white;
     text-decoration: none;
 }
