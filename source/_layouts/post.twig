@@ -91,23 +91,48 @@
                     </div>
                 {% endif %}
 
-                {# show previous post #}
-                {% if posts[post.getId() - 1] is defined %}
-                    {% set previous_post = posts[post.getId() - 1] %}
-
-                    <div class="card mb-5 mt-4">
-                        <div class="card-body text-center">
-                            <strong>Next</strong>:
-                            <a href="/{{ previous_post|link }}/">{{ previous_post.title|replace('&nbsp;', ' ') }}</a>
+                <div class="row mb-3">
+                    <div class="col-12 col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <em class="fab fa-fw fa-github"></em>
+                                    Found a typo?
+                                <a href="{{ post|githubEditPostUrl }}">Fix it</a> to <strong>join team of {{ contributors|length  }} people</strong> that improve content here
+                                </a>
+                            </div>
                         </div>
                     </div>
-                {% endif %}
+                    <div class="col-12 col-md-6">
+                        {# show previous post #}
+                        {% if posts[post.getId() - 1] is defined %}
+                            {% set previous_post = posts[post.getId() - 1] %}
 
-                <div class="mb-5 hidden-sm-down text-center">
-                    <a href="{{ post|githubEditPostUrl }}" class="btn btn-warning btn-sm">
-                        <em class="fas fa-fw fa-edit"></em>
-                        Fix a typo to <strong>join team</strong> of {{ contributors|length  }} people
-                    </a>
+                            <div class="card mb-4">
+                                <div class="card-body bg-success text-white text-center">
+                                    <strong>Next</strong>:
+                                    <a href="/{{ previous_post|link }}/">{{ previous_post.title|replace('&nbsp;', ' ') }}</a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+
+                <div class="card mb-5 border-0">
+                    <div class="card-body text-center">
+                        <p>
+                            {% if 'rector' in post.content %}
+                                <img src="/assets/images/logo/rector.svg" alt="Rector" style="max-width: 3em" class="mr-3">
+                                Is Rector <strong>saving you time and money</strong>?
+                                <br>
+                                Support <a href="https://patreon.com/rectorphp">it  at Patreon</a> so it grows and saves you even more!
+                            {% else %}
+                                ❤️️ Do you <strong>like</strong> what I write about? Or do you <strong>hate it</strong> but enjoy discussion? 😠
+                                <br>
+                                You can support my writing by throwing a <a href="https://patreon.com/rectorphp">couple bucks at my Patreon</a>
+                            {% endif %}
+                        </p>
+                    </div>
                 </div>
 
                 <a name="comments"></a>
