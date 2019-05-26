@@ -637,3 +637,13 @@ nobr {
         font-size: .7em;
     }
 }
+
+.bg-success a, a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+.bg-success a:focus, a:hover {
+    color: white;
+    text-decoration: none;
+}

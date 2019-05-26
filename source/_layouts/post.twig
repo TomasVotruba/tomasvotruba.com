@@ -91,9 +91,9 @@
                     </div>
                 {% endif %}
 
-                <div class="row mb-5">
+                <div class="row mb-3">
                     <div class="col-12 col-md-6">
-                        <div class="card">
+                        <div class="card mb-4">
                             <div class="card-body text-center">
                                 <em class="fab fa-fw fa-github"></em>
                                     Found a typo?
@@ -107,8 +107,8 @@
                         {% if posts[post.getId() - 1] is defined %}
                             {% set previous_post = posts[post.getId() - 1] %}
 
-                            <div class="card">
-                                <div class="card-body text-center">
+                            <div class="card mb-4">
+                                <div class="card-body bg-success text-white text-center">
                                     <strong>Next</strong>:
                                     <a href="/{{ previous_post|link }}/">{{ previous_post.title|replace('&nbsp;', ' ') }}</a>
                                 </div>
