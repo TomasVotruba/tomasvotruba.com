@@ -104,9 +104,10 @@
                 {% endif %}
 
                 <div class="mb-5 hidden-sm-down text-center">
-                    <a href="{{ post|githubEditPostUrl }}" class="btn btn-warning btn-sm">
-                        <em class="fas fa-fw fa-edit"></em>
-                        Fix a typo to <strong>join team</strong> of {{ contributors|length  }} people
+                    <a href="{{ post|githubEditPostUrl }}" class="btn btn-dark">
+                        <em class="fab fa-fw fa-github"></em>
+                        Found a typo?
+                        Fix it to <strong>join team of {{ contributors|length  }} people</strong> that improve content here
                     </a>
                 </div>
 
