@@ -16,6 +16,7 @@ parameters:
         cakephp: CakePHP
         zendframework: Zend
         yiisoft: Yii
+        doctrine: Doctrine
 
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:
