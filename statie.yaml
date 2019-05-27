@@ -13,6 +13,9 @@ services:
         resource: 'src'
 
 parameters:
+    env(PATREON_TOKEN): '...'
+    patreon_token: '%env(PATREON_TOKEN)%'
+
     post_template_path: 'templates/new_post.twig'
     post_homepage_limit: 50
 
