@@ -10,7 +10,7 @@
             <div class="container-fluid" id="post">
                 <h1>{{ post.title|raw }}</h1>
 
-                {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "showPullRequestLink": TRUE, "showCommentCount": TRUE } %}
+                {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "showCommentCount": TRUE } %}
 
                 {% if post.deprecated_since is defined %}
                     <div class="card border-danger card-bigger">
@@ -121,7 +121,7 @@
                 <div class="card mb-5 border-0">
                     <div class="card-body text-center">
                         <p>
-                            {% if 'rector' in post.content %}
+                            {% if ' Rector ' in post.content %}
                                 <img src="/assets/images/logo/rector.svg" alt="Rector" style="max-width: 3em" class="mr-3">
                                 Is Rector <strong>saving you time and money</strong>?
                                 <br>

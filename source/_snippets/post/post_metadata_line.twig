@@ -22,13 +22,6 @@
         </li>
     {% endif %}
 
-    {% if showPullRequestLink is defined %}
-        <li class="list-inline-item">
-            <em class="fas fa-fw fa-edit"></em>
-            <a href="{{ post|githubEditPostUrl }}">Typo? Fix me, please</a>
-        </li>
-    {% endif %}
-
     {% if post.tested is defined %}
         <li class="list-inline-item pull-right ml-2">
             {% set test_directory_on_github %}{{ github_repository_tests_directory }}/Posts/Year{{ post.getDateInFormat('Y') }}/{{ post.test_slug }}{% endset %}
