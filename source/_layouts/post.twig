@@ -106,7 +106,12 @@
                         {# show previous post #}
                         {% if posts[post.getId() - 1] is defined %}
                             {% set previous_post = posts[post.getId() - 1] %}
+                            {# there can be missing post, due to legacy redirects #}
+                        {% elseif posts[post.getId() - 2] is defined %}
+                            {% set previous_post = posts[post.getId() - 2] %}
+                        {% endif %}
 
+                        {% if previous_post is defined %}
                             <div class="card mb-4">
                                 <div class="card-body bg-success text-white text-center">
                                     <strong>Next</strong>:
