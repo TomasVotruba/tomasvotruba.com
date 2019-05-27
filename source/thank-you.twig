@@ -10,7 +10,7 @@ commit_limit: 3
 
     {% if patreon_backers_by_paid_amount is defined %}
         <p class="text-center bigger">
-            Thanks to my backers that support me on <a href="https://www.patreon.com/rectorphp">Patreon</a>
+            Thanks to my <strong>{{ patreon_backers_by_paid_amount|flatten_array_count }} backers</strong> that support me on <a href="https://www.patreon.com/rectorphp">Patreon</a>
         </p>
 
         <div class="row mt-0">
@@ -18,11 +18,9 @@ commit_limit: 3
                 <div class="col text-center">
                     <h2>$ {{ paid_amount }}</h2>
 
-                    <ul class="list-unstyled">
-                        {% for backer in backers %}
-                            <li>{{ backer }}</li>
-                        {% endfor %}
-                    </ul>
+                    {% for backer in backers %}
+                        <p>{{ backer }}</p>
+                    {% endfor %}
                 </div>
             {% endfor %}
         </div>
