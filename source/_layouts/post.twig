@@ -10,7 +10,7 @@
             <div class="container-fluid" id="post">
                 <h1>{{ post.title|raw }}</h1>
 
-                {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "showPullRequestLink": TRUE, "showCommentCount": TRUE } %}
+                {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "showCommentCount": TRUE } %}
 
                 {% if post.deprecated_since is defined %}
                     <div class="card border-danger card-bigger">
@@ -106,7 +106,12 @@
                         {# show previous post #}
                         {% if posts[post.getId() - 1] is defined %}
                             {% set previous_post = posts[post.getId() - 1] %}
+                            {# there can be missing post, due to legacy redirects #}
+                        {% elseif posts[post.getId() - 2] is defined %}
+                            {% set previous_post = posts[post.getId() - 2] %}
+                        {% endif %}
 
+                        {% if previous_post is defined %}
                             <div class="card mb-4">
                                 <div class="card-body bg-success text-white text-center">
                                     <strong>Next</strong>:
@@ -117,15 +122,14 @@
                     </div>
                 </div>
 
-
                 <div class="card mb-5 border-0">
                     <div class="card-body text-center">
                         <p>
-                            {% if 'rector' in post.content %}
+                            {% if ' Rector ' in post.content %}
                                 <img src="/assets/images/logo/rector.svg" alt="Rector" style="max-width: 3em" class="mr-3">
                                 Is Rector <strong>saving you time and money</strong>?
                                 <br>
-                                Support <a href="https://patreon.com/rectorphp">it  at Patreon</a> so it grows and saves you even more!
+                                Support <a href="https://patreon.com/rectorphp">it at Patreon</a> so it grows and saves you even more!
                             {% else %}
                                 ❤️️ Do you <strong>like</strong> what I write about? Or do you <strong>hate it</strong> but enjoy discussion? 😠
                                 <br>

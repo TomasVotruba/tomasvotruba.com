@@ -7,13 +7,23 @@
     <li class="list-inline-item mr-3">
         <em class="fas fa-calendar fa-fw"></em>
         <time datetime="{{ post.getDateInFormat('Y-m-D') }}">
+            {% if post.updated_since is defined %}<strike>{% endif %}
+
             {% if post.getDateInFormat('Y') == "now"|date("Y") %}
                 {{ post.getDateInFormat('D, M j') }}
             {% else %}
                 {{ post.getDateInFormat('D, M j, Y') }}
             {% endif %}
+
+            {% if post.updated_since is defined %}</strike>{% endif %}
         </time>
     </li>
+
+    {% if post.updated_since is defined %}
+        <li class="list-inline-item mr-3 text-success">
+            <em class="fas fa-fw fa-sync"></em> Updated {{ post.updated_since|date('M, Y') }}
+        </li>
+    {% endif %}
 
     {% if showCommentCount is defined %}
         <li class="list-inline-item mr-3">
@@ -22,27 +32,11 @@
         </li>
     {% endif %}
 
-    {% if showPullRequestLink is defined %}
-        <li class="list-inline-item">
-            <em class="fas fa-fw fa-edit"></em>
-            <a href="{{ post|githubEditPostUrl }}">Typo? Fix me, please</a>
-        </li>
-    {% endif %}
-
     {% if post.tested is defined %}
-        <li class="list-inline-item pull-right ml-2">
+        <li class="list-inline-item mr-3 text-primary">
             {% set test_directory_on_github %}{{ github_repository_tests_directory }}/Posts/Year{{ post.getDateInFormat('Y') }}/{{ post.test_slug }}{% endset %}
-            <a href="{{ test_directory_on_github }}" class="badge badge-primary">
-                <em class="fas fa-fw fa-thumbs-up"></em> Tested
-            </a>
-        </li>
-    {% endif %}
-
-    {% if post.updated_since is defined %}
-        <li class="list-inline-item pull-right">
-            <span class="badge badge-success">
-                <em class="fas fa-fw fa-angle-double-right"></em> Updated {{ post.updated_since }}
-            </span>
+            <em class="fas fa-fw fa-check-circle"></em>
+            <a href="{{ test_directory_on_github }}">Tested</a>
         </li>
     {% endif %}
 </ul>
