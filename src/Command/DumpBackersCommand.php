@@ -47,9 +47,9 @@ final class DumpBackersCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $backerNames = $this->patreonApi->getProjectBackersNames();
+        $data = $this->patreonApi->getBackesNamesGroupedByPaidAmount();
 
-        $this->generatedFilesDumper->dump('patreon_backer_names', $backerNames);
+        $this->generatedFilesDumper->dump('patreon_backers_by_paid_amount', $data);
         $this->symfonyStyle->success('Data imported!');
 
         return ShellCode::SUCCESS;
