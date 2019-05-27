@@ -36,7 +36,7 @@ id: blog
             {% set postYear = post.getDateInFormat('Y') %}
             {% set currentYear = "now"|date('Y') %}
 
-            {% if postYear != currentYear and date_lines.postYear is not defined %}
+            {% if postYear != currentYear and postYear not in date_lines %}
                 <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
                     <br>
                     <br>
