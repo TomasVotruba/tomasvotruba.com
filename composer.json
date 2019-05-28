@@ -7,8 +7,8 @@
         "nikic/php-parser": "^4.1",
         "symfony/http-kernel": "^4.2",
         "symfony/console": "^4.2",
-        "symplify/package-builder": "^5.4",
-        "symplify/statie": "^5.4"
+        "symplify/package-builder": "^6.0",
+        "symplify/statie": "^6.0"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.1",
@@ -20,10 +20,10 @@
         "symfony/process": "^4.2",
         "symfony/stopwatch": "^4.2",
         "symfony/yaml": "^4.2",
-        "symplify/autodiscovery": "^5.4",
-        "symplify/easy-coding-standard": "^5.4",
-        "symplify/latte-to-twig-converter": "^5.4",
-        "symplify/phpstan-extensions": "^5.4"
+        "symplify/autodiscovery": "^6.0",
+        "symplify/easy-coding-standard": "^6.0",
+        "symplify/latte-to-twig-converter": "^6.0",
+        "symplify/phpstan-extensions": "^6.0"
     },
     "autoload": {
         "psr-4": {
