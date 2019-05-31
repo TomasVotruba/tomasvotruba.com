@@ -158,7 +158,7 @@ Cudos to [Mathew](https://github.com/muglug)! 👍
 ### How to Run it?
 
 ```bash
-vendor/bin/psalm src --alter --issues=UnusedMethod
+vendor/bin/psalm src --alter --issues=PossiblyUndefinedVariable
 ```
 
 ## Check all 13 of them
