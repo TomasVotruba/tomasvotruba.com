@@ -6,6 +6,9 @@ perex: |
     <br><br>
     But did you know it can automatically fix these issues?
 tweet: "New Post on #php 🐘 blog: Hidden Gems of PHP Packages: @psalmphp Fixing Your Code"
+
+updated_since: "June 2019"
+updated_message: "A new option `--issues=all` is added in Psalm 3.3.1"
 ---
 
 I did not and I was surprised. Psalm added this feature long time ago in March 2018 (as [reported on Reddit](https://www.reddit.com/r/PHP/comments/84xrgy/fixing_code_that_aint_broken_vimeo_engineering/))! I was also surprised because static analyzer is read-only tools - "here is error → fix it yourself manually"
@@ -164,6 +167,12 @@ vendor/bin/psalm src --alter --issues=PossiblyUndefinedVariable
 ## Check all 13 of them
 
 At the time of writing this post, there is 13 issue alters now. I believe we can expect up to 100 more in next year or two.
+
+You can run them all like this:
+
+```bash
+vendor/bin/psalm src --alter --issues=all
+```
 
 **Read about them and about extra options like `--php-version`, `--dry-run` or `--safe-types` in [very beautiful and short documentation](https://psalm.dev/docs/fixing_code/)**.
 
