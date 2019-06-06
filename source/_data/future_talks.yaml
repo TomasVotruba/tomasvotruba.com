@@ -1,18 +1,7 @@
 parameters:
     future_talks:
-        # not really talk, but I'll be there
-        -
-            name: "PHP fwdays"
-            city: "Kiev"
-            url: "https://fwdays.com/en/event/php-fwdays-2019"
-            date: "2019-06-01"
-        -
-            name: "International PHP Conference"
-            city: "Berlin"
-            url: "https://phpconference.com/"
-            date: "2019-06-04"
         -
             name: "Dutch PHP Conference"
-            city: "Amsterdam"
+            location: "Amsterdam, Netherlands"
             url: "https://www.phpconference.nl/"
             date: "2019-06-08"

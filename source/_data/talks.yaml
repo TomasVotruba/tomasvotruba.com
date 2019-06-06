@@ -7,7 +7,17 @@ parameters:
             video_link: "https://www.youtube.com/watch?v=HM5xcWqQkwo"
             post_link: "/blog/2018/02/19/rector-part-1-what-and-how/"
             events:
-                # same format as in "future_talks.yamlů
+                # same format as in "future_talks.yaml
+                -   name: "Dutch PHP Conference"
+                    location: "Amsterdam, Netherlands"
+                    url: "https://www.phpconference.nl/"
+                    date: "2019-06-08"
+
+                -   name: "PHP fwdays"
+                    location: "Kiev, Ukraine"
+                    url: "https://fwdays.com/en/event/php-fwdays-2019"
+                    date: "2019-06-01"
+
                 - { name: "PHP Russia", location: "Moscow, Russia", url: "https://phprussia.ru/2019", date: "2019-05-17" }
                 - { name: "phpDay 2019", location: "Verona, Italy", url: "https://2019.phpday.it/", date: "2019-05" }
                 - { name: "Friends of PHP Brno", location: "The Czech Republic", date: "2019-03", url: "https://www.facebook.com/events/415328609225062/" }
