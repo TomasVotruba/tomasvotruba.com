@@ -1,0 +1,37 @@
+parameters:
+    talks_feedback:
+        -
+            name: "Alexander Makarov"
+            photo: "https://secure.gravatar.com/avatar/c13375ba1016846e39bc0e48260d0bb1?d=mm&s=200"
+            feedback: "Very useful tool presented well. I'm sold :)"
+            rating: 5
+
+        -
+            name: "Iurii Golikov"
+            photo: "https://secure.gravatar.com/avatar/019533bbd162b35aaf403145491843c1?d=mm&s=200"
+            feedback: "Great tool, great presentation and nice font size on the demo!"
+            rating: 5
+
+        -
+            name: "Patrik Foldes"
+            photo: "https://secure.gravatar.com/avatar/abb55f3697c79a66f0e7e49eb3bf78c1?d=mm&s=200"
+            feedback: "Great talk, love your flow!"
+            rating: 5
+
+        -
+            name: "Aleksey Stoletov"
+            photo: "https://secure.gravatar.com/avatar/4f85345789232258063102f0012749fc?d=mm&s=200"
+            feedback: "A very interesting talk indeed. Shame on me, but I've never thought before how to automate the refactoring process. Now I have a couple of instruments to learn and try."
+            rating: 5
+
+        -
+            name: "Denis Kravtsov"
+            photo: "https://secure.gravatar.com/avatar/0f986cc243760f478f562a43cb4a02f3?d=mm&s=200"
+            feedback: "It is very usefull. Thank you for serious speech."
+            rating: 5
+
+        -
+            name: "Sascha-Oliver Prolic"
+            photo: "https://secure.gravatar.com/avatar/4256101aea1d08865fdc36ad653f5e11?d=mm&s=200"
+            feedback: "I wish I knew about rector a few years ago, but it didn't exist yet back then. Great talk!"
+            rating: 4
