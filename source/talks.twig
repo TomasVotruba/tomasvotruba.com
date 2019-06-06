@@ -13,6 +13,17 @@ id: talks
         <small>Slides, demos and posts</small>
     </h1>
 
+    <p>
+        Do you want me <strong>to talk at your conference</strong>?<br>
+        Check <a href="https://symposiumapp.com/u/tomasvotruba">my papers on Symposium</a> and <a href="/contact/">write me</a>. I love to travel and meet new people!
+    </p>
+
+    <br>
+
+    <h2 class="slim">
+        I spoke at {{ talks|talks_count }} PHP conferences and PHP meetups ↓
+    </h2>
+
     {% for talk in talks %}
         <div class="card mb-5" id="{{ talk.anchor }}">
             <div class="text-center card-header">
@@ -75,7 +86,7 @@ id: talks
 
     <hr>
 
-    <h2 class="mb-4 mb-5 text-center">I Enjoy Audience and Wear Braces</h2>
+    <h2 class="slim">I Enjoy Audience and Wear Braces</h2>
 
     <div class="text-center">
         <img src="/assets/images/talk_php_russia_2019_rapper.jpg" alt="" class="img-thumbnail" style="max-height:22em">
@@ -94,4 +105,37 @@ id: talks
             Sharing know-how in Dresden PHP and PHP Day at Verona, 2019
         </p>
     </div>
+
+    <hr>
+
+    <h2 class="slim">
+        I'm Trying to get Better based Feedback
+    </h2>
+
+    {% for talk_feedback in talks_feedback %}
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <img src="{{ talk_feedback.photo }}" alt="" class="rounded-circle img-thumbnail pull-right" style="max-width: 5em">
+
+                <q class="blockquote">{{ talk_feedback.feedback }}</q>
+
+                <div class="mt-2">
+                    <strong class="name">
+                        {{ talk_feedback.name }}
+                    </strong>
+
+                    <div class="mt-4 mb-4">
+                        {% for i in 1..talk_feedback.rating %}
+                            <em class="fas fa-2x fa-thumbs-up text-success"></em>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    <p>
+        Find more honest feedback on <a href="https://joind.in/user/TomasVotruba">my Joind.in profile</a>.
+    </p>
+
 </div>

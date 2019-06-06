@@ -405,6 +405,14 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     margin-top: .5em;
 }
 
+#talks h2.slim {
+    font-weight: 300;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2.2em;
+    text-align: center;
+}
+
 /* @see https://stackoverflow.com/a/50174132/1348344 */
 .container li {
     margin-bottom: .4em;
