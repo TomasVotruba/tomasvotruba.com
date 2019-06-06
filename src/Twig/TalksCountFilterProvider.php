@@ -2,7 +2,6 @@
 
 namespace TomasVotruba\Website\Twig;
 
-use Nette\Utils\Arrays;
 use Symplify\Statie\Contract\Templating\FilterProviderInterface;
 
 final class TalksCountFilterProvider implements FilterProviderInterface
