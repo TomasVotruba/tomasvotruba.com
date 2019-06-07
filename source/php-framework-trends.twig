@@ -30,6 +30,10 @@ id: trends
 
     <p class="text-muted mb-4 small">Updated at {{ php_framework_trends.updated_at|date('j. n. H:i') }}</p>
 
+    <div class="alert alert-sm alert-warning mt-3 mb-4">
+        <code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads. 1 download of Laravel packages = 0 downloads of Symfony packages. <strong>See <a href="https://github.com/TomasVotruba/tomasvotruba.cz/blob/master/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of packages cleared this way</a></strong>.
+    </div>
+
     <table class="table table-bordered table-responsive table-striped" id="table">
         <thead class="thead-inverse">
             <tr>
@@ -111,6 +115,8 @@ id: trends
     <p>Few outlier packages were removed to make numbers more relevant. To be specific:</p>
 
     <ul>
+        <li><code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads = when you download Laravel package, it will not count into Symfony download; see <a href="https://github.com/TomasVotruba/tomasvotruba.cz/blob/master/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of cleared packages</a></li>
+
         <li>
             packages with <strong>less than 1000 downloads daily</strong> - not relevant compared in this scale
 
