@@ -12,6 +12,15 @@ id: trends
 
     <p class="text-muted mb-4 small">Updated at {{ testing_packages.updated_at|date('j. n. H:i') }}</p>
 
+    <p>
+        This table is part of <a href="/php-framework-trends/">PHP Framework trends</a>. Here you can see how popular are various testing frameworks in downloads.
+    </p>
+
+    <ul class="mt-4 mb-4">
+        <li><strong>Year Trend</strong> = what is the trend in downloads for last 12 moths, for whole <code>vendor/*</code> group</li>
+        <li><strong>Monthly Average</strong> = full vendor downloads per month/number of packages in that vendor</li>
+    </ul>
+
     <table class="table table-bordered table-responsive table-striped">
         <thead class="thead-inverse">
             <tr>

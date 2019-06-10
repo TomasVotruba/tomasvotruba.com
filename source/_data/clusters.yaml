@@ -1,18 +1,19 @@
 # @todo it would be nice to be able to download those clusters as PDF/mobi at least
 parameters:
     clusters:
-#        -
-#            title: "Coding Standards - What, Why, Where?"
-#            post_ids: [46, 47, 37]
+        -
+            title: "Books in a Post"
+            post_ids: [65, 149, 115, 91, 56, 112]
+            description: "Reading Books is what separates programmers from craftsmen. I love books, because they open for deep conversation that last hours and hours. Care for little intro first?"
+
+        -
+            title: "Coding Standards Kata"
+            post_ids: [37, 108, 111, 112, 48, 46, 47, 87, 107]
+            description: "How to start coding standards and use them to their fullest potential?"
 
 #        -
 #            title: "Deep Work"
 #            post_ids: [20, 23, 60]
-
-#        -
-#            title: "Hacking Symfony"
-#            # container mostly
-#            post_ids: [128, 103, 109, 105, 129, 137, 158]
 
         -
             title: "From Nette to Symfony"
