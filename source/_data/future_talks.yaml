@@ -1,7 +1,2 @@
 parameters:
     future_talks:
-        -
-            name: "Dutch PHP Conference"
-            location: "Amsterdam, Netherlands"
-            url: "https://www.phpconference.nl/"
-            date: "2019-06-08"
