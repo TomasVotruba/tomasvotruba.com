@@ -655,3 +655,8 @@ nobr {
     color: white;
     text-decoration: none;
 }
+
+a.btn-dark, a.btn-dark:active {
+    color: #FFF;
+}
+
