@@ -660,3 +660,7 @@ a.btn-dark, a.btn-dark:active {
     color: #FFF;
 }
 
+.text-underline {
+    text-decoration: underline;
+}
+
