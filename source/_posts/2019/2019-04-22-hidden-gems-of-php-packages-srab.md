@@ -63,10 +63,10 @@ vendor/bin/phpstan analyse --error-format json > reports/phpstan-result.json
 
 ```bash
 # psalm
-vendor/bin/sarb remove-baseline-results reports/phpstan-result.json reports/sarb_baseline.json reports/issues_since_baseline.json
+vendor/bin/sarb remove-baseline-results reports/psalm-result.json reports/sarb_baseline.json reports/issues_since_baseline.json
 
 # phpstan
-vendor/bin/sarb remove-baseline-results reports/psalm-result.json reports/sarb_baseline.json reports/issues_since_baseline.json
+vendor/bin/sarb remove-baseline-results reports/phpstan-result.json reports/sarb_baseline.json reports/issues_since_baseline.json
 ```
 
 That's it!
