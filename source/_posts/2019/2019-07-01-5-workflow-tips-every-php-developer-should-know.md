@@ -4,7 +4,7 @@ title: "5 Workflow Tips every PHP Developer Should Know"
 perex: |
     I was surprised, how much of your attention got [5 Tips to Effective Work with Github Repository](/blog/2019/02/25/5-tips-to-effective-work-with-github-repository/) post.
     <br><br>
-    So [I started to collect tips](https://github.com/TomasVotruba/tomasvotruba.cz/issues/226) I use on training and mentoring that I don't even notice, but others find fascinating. Here is 5 of them.   
+    So [I started to collect tips](https://github.com/TomasVotruba/tomasvotruba.cz/issues/226) I use on training and mentoring that I don't even notice, but others find fascinating. Here is 5 of them.
 tweet: "New Post on #php 🐘 blog: 5 Workflow Tips every PHP Developer Should Know"
 ---
 
@@ -24,11 +24,11 @@ Great documentation is useless without the even better search.
 
 <br>
 
-**Good news! Github is closer to PHPStorm than you think:** 
+**Good news! Github is closer to PHPStorm than you think:**
 
 <img src="/assets/images/posts/2019/php_workflow_tips/hit_t.gif" class="img-thumbnail" style="max-width:35em">
 
-**Just press <span class="btn btn-light btn-outline-dark">t</span> on your keyboard and "TypeYourClass".**  
+**Just press <span class="btn btn-light btn-outline-dark">t</span> on your keyboard and "TypeYourClass".**
 
 <div class="fa-2x mt-3">👍</div>
 
@@ -43,7 +43,7 @@ Martin already wrote about it in [Have you tried Composer Scripts? You may not n
 
 ## 3. Enable Colors in Composer Scripts
 
-Let's say you already use composer scripts: 
+Let's say you already use composer scripts:
 
 ```json
 {
@@ -53,7 +53,7 @@ Let's say you already use composer scripts:
 }
 ```
 
-Great job! Now all you need to do is run it: 
+Great job! Now all you need to do is run it:
 
 ```bash
 composer fix-cs
@@ -65,7 +65,7 @@ Your head turns around and you grab a part of the script output. Now...
 
 **"Was it <span class="text-danger">red</span> or <span class="text-success">green</span>?"**
 
-The output is hard to read quickly without [color patterns](https://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/1452654123). 
+The output is hard to read quickly without [color patterns](https://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/1452654123).
 
 How to fix this? Just add `--ansi`:
 
@@ -80,7 +80,7 @@ How to fix this? Just add `--ansi`:
 
 <div class="fa-2x mt-3 mb-4">👍</div>
 
-Thanks for this tip to [Jan Mikes](https://janmikes.cz/) ❤️️. 
+Thanks for this tip to [Jan Mikes](https://janmikes.cz/) ❤️️.
 
 <br>
 
@@ -92,7 +92,7 @@ You might know PHPMD as *PHP Mess Detector*. But not many people know, the packa
 
 <img src="/assets/images/posts/2019/php_workflow_tips/barely.png" class="img-thumbnail">
 
-Dead packages are ok if there is no alternative that is continuously evolving. If there is, by staying at the same place, [you're shooting your business and development speed to the leg](/blog/2019/03/11/why-we-migrated-from-nette-to-symfony-in-3-weeks-part-3/). 
+Dead packages are ok if there is no alternative that is continuously evolving. If there is, by staying at the same place, [you're shooting your business and development speed to the leg](/blog/2019/03/11/why-we-migrated-from-nette-to-symfony-in-3-weeks-part-3/).
 
 That's this case. PHPMD features are 99 % compatible with PHP Code Sniffer and PHP CS Fixer rules:
 
@@ -128,7 +128,7 @@ Tips 2 and 4 have actually similar principals, [a pattern](/blog/2019/04/15/patt
 
 ### Least Common Denominator
 
-I've learned this principle in 5th grade, it has fascinated me ever since. It fascinates me even more, how they are used to create effective code - easy to write, read, maintain and doing what it should do. 
+I've learned this principle in 5th grade, it has fascinated me ever since. It fascinates me even more, how they are used to create effective code - easy to write, read, maintain and doing what it should do.
 
 **What is the least common denominator?**
 
@@ -146,21 +146,21 @@ These 2 pictures explain it:
 Now, both pictures explain it. Which one do you prefer?
 
 *Disclosure*
- 
+
 - the left image is actually self-explanatory - it's used *least common denominator* to explain *Least Common Denominator*
 - the right imagine also explain it, but it uses much more extra data, that you don't need (e.g. root) and only slows down your neuron pipelines
 
 **Use the left approach to explain issues and problems. They're easier to understand, focused on the problem you really have and will get to the effective solution faster.**
 
-The right path is how the legacy code is manufactured in companies every day.  
+The right path is how the legacy code is manufactured in companies every day.
 
 ### What Else is There?
 
-- *Occam's razor* - People that [use Wikipedia](https://simple.wikipedia.org/wiki/Occam%27s_razor) or studied university renamed *least common denominator* to Occam's razor and added more academic words. The logic is the same, but you might prefer it. 
+- *Occam's razor* - People that [use Wikipedia](https://simple.wikipedia.org/wiki/Occam%27s_razor) or studied university renamed *least common denominator* to Occam's razor and added more academic words. The logic is the same, but you might prefer it.
 
 - *SOLID* - Again the same family, just different letters and vocabulary.
 
-That's the beauty example of pattern thinking. Instead of remembering 3 different terms, you pick one and use it.   
+That's the beauty example of pattern thinking. Instead of remembering 3 different terms, you pick one and use it.
 
 <div class="fa-2x mt-3">👍</div>
 

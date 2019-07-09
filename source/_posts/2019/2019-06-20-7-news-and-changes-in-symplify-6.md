@@ -5,7 +5,7 @@ perex: |
     Do you use Easy Coding Standard, Package Builder or Statie? Do you need to upgrade safely? **Do you want to benefit from new features?**
     <br>
     <br>
-    This post shows 7 news and changes, that might affect you (in a good way). 
+    This post shows 7 news and changes, that might affect you (in a good way).
 tweet: "New Post on #php 🐘 blog: 7 News and Changes in #symplify 6  #ecs"
 ---
 
@@ -21,7 +21,7 @@ What is **new**?
     See PR #1357
 </a>
 
-**I really love this feature, because it makes a lot of custom boiler code go away.** 
+**I really love this feature, because it makes a lot of custom boiler code go away.**
 
 In old *Symplify 5*, when you needed to run sniff only on `/tests`, you had to create own ruleset and run it separately:
 
@@ -64,7 +64,7 @@ parameters:
 vendor/bin/ecs check src tests
 ```
 
-It's basically an inversion of `skip` parameter. 
+It's basically an inversion of `skip` parameter.
 
 <br>
 <br>
@@ -72,15 +72,15 @@ It's basically an inversion of `skip` parameter.
 
 What has **changed**?
 
-### 2. `*.yml` → `*.yaml` 
+### 2. `*.yml` → `*.yaml`
 
-As Symfony is [moving to *.yaml](https://github.com/symfony/demo/tree/master/config) suffixes, Symplify does too.   
+As Symfony is [moving to *.yaml](https://github.com/symfony/demo/tree/master/config) suffixes, Symplify does too.
 
 ## EasyCodingStandard
 
 ### 3. Sets are Now In `/set` Directory
 
-Why? The `/config` directory contains `services.yaml` in Symfony application. It got cluttered with all the prepared sets.   
+Why? The `/config` directory contains `services.yaml` in Symfony application. It got cluttered with all the prepared sets.
 
 ```diff
  # ecs.yaml
@@ -110,7 +110,7 @@ People confused this options and created *WTF* issues. That's why the `exclude_c
 
 ### 5. Introducing `FinderSanitizer`
 
-Do you like `SplFileInfo` that is 100 % sure the file exists? In that case, you use `Symplify\PackageBuilder\FileSystem\SmartFileInfo` instead of `SplFileInfo`. The easiest way to use it is via `FinderSanitizer` that is now available via `symplify/package-builder` package:  
+Do you like `SplFileInfo` that is 100 % sure the file exists? In that case, you use `Symplify\PackageBuilder\FileSystem\SmartFileInfo` instead of `SplFileInfo`. The easiest way to use it is via `FinderSanitizer` that is now available via `symplify/package-builder` package:
 
 ```diff
  services:
