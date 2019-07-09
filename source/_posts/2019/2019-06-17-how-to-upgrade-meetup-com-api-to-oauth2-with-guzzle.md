@@ -2,13 +2,13 @@
 id: 213
 title: "How to upgrade Meetup.com API to OAuth2 with Guzzle"
 perex: |
-    I got an email from Meetup.com 5 days ago, that basically every API request will be paid since August 15, 2019. **$ 30/month**, that's like my phone bill. 
+    I got an email from Meetup.com 5 days ago, that basically every API request will be paid since August 15, 2019. **$ 30/month**, that's like my phone bill.
     <br>
     <br>
      **95 % of data on [Friends Of Php](https://friendsofphp.org/) depend on Meetup.com API** - updated daily. The website is free, so it might kill the content or I'd have to move to crawlers and hope for the lack of protection on Meetup.com against them.
     <br>
     <br>
-    **Unless we use Oauth2 before August 15**. I never used it, but how hard that can be, right? 
+    **Unless we use Oauth2 before August 15**. I never used it, but how hard that can be, right?
 tweet: "New Post on #php 🐘 blog: How to upgrade #Meetupcom API to #OAuth2 with #Guzzle"
 ---
 
@@ -26,7 +26,7 @@ This is a simple task, that in the end has simple 15 lines of new code. But docu
 
 It seems like OAuth2 must be something very new, because Guzzle [supports only Oauth (1)](https://github.com/guzzle/oauth-subscriber). If the last commit in 2014 can be called "supports".
 
-After a bit of Googling if found [kamermans/guzzle-oauth2-subscriber](https://github.com/kamermans/guzzle-oauth2-subscriber). I tried to copy-paste the code 
+After a bit of Googling if found [kamermans/guzzle-oauth2-subscriber](https://github.com/kamermans/guzzle-oauth2-subscriber). I tried to copy-paste the code
 
 ### Choose Your Path
 
@@ -40,8 +40,8 @@ Why would you put the newest content first, right? You know, like on Twitter, Fa
 <img src="/assets/images/posts/2019/oauth2/old_first.png" class="img-thumbnail">
 
 If you write a code that other people read, you should read [The Design of Everyday Things](
-https://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/1452654123) or [Don't Make Me Think](https://www.amazon.com/gp/product/0321965515/)  
- 
+https://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/1452654123) or [Don't Make Me Think](https://www.amazon.com/gp/product/0321965515/)
+
 So now you can imagine I'm using the latest Guzzle 6 and trying to implement a solution for Guzzle 4 & 5.
 
 <br>
@@ -68,7 +68,7 @@ But how do you upgrade from Symfony 3? In the latest branch, there is always **c
 
 I love this, **because it focuses on mainstream, providing minimal needed data, but also allows the same for minorities**.
 
-The Symfony docs does the same: 
+The Symfony docs does the same:
 
 <img src="/assets/images/posts/2019/oauth2/symfony_docs.png" class="img-thumbnail">
 
@@ -108,7 +108,7 @@ In the morning I've noticed little note:
 
 Tried it and it worked. WTF? Why there is a broken code first, then "working alternative" second?
 
-This is a common problem with double complexity = exponential bugs. If you translate your website to English and German, it will have more translation bugs than the English-only version. Of course, German might be important to your business, but **the alternative code has as little added value as having a website in American English and British English**.    
+This is a common problem with double complexity = exponential bugs. If you translate your website to English and German, it will have more translation bugs than the English-only version. Of course, German might be important to your business, but **the alternative code has as little added value as having a website in American English and British English**.
 
 <div class="card">
     <div class="card-body text-center bigger">
@@ -120,14 +120,14 @@ This is a common problem with double complexity = exponential bugs. If you trans
 
 It's important to know, that I don't try to make this about the specific documentation, but rather about *any* open-source documentation and how it's written.
 
-<img src="/assets/images/posts/2019/oauth2/legacy.png" class="img-thumbnail" style="max-width:35em">  
+<img src="/assets/images/posts/2019/oauth2/legacy.png" class="img-thumbnail" style="max-width:35em">
 
 If I'd be sending an invoice to my employer, it would look like this:
 
 - 2,5 hours - debugging documentation
 - 0,5 hours - implementing OAuth2
 
-### How to Lower Those 2,5 hours to 15 minutes?   
+### How to Lower Those 2,5 hours to 15 minutes?
 
 Let's pause a bit and think - **what do we really need, when we use the package for the first time**?
 
@@ -150,7 +150,7 @@ If we agree on these as our priorities, then all we need is working piece of cod
 
 Instead of having documentation with text (= "weak strings"), the best would be:
 
-- link to the code for Guzzle 6    
+- link to the code for Guzzle 6
 - link to test case for Guzzle 6
 - link to CI passing for a test case for Guzzle 6
 
@@ -163,7 +163,7 @@ Now finally to the solution ↓
 ## 5 Steps to Guzzle Oauth2
 
 - Login to [Meetup.com](http://meetup.com)
-- Create new consumer here - https://secure.meetup.com/meetup_api/oauth_consumers - it's *credentials* actually 
+- Create new consumer here - https://secure.meetup.com/meetup_api/oauth_consumers - it's *credentials* actually
 - There you get Oauth key and secret
 - Have the latest `guzzle` + `oauth2-subscriber`
 
@@ -201,7 +201,7 @@ $clientCredentials = new ClientCredentials($oAuth2Client, $oauthConfig);
 $oAuth2Middleware = new OAuth2Middleware($clientCredentials);
 
 
-// the main code 
+// the main code
 $client = new Client();
 $client->getConfig('handler')->push($oAuth2Middleware);
 
