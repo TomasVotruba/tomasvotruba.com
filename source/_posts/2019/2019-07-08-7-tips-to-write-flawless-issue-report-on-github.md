@@ -14,7 +14,7 @@ tweet: "New Post on #php 🐘 blog: 7 Tips to Write Flawless Issue Reports on Gi
 - boring job ad with a description of the company and how revolutionary their idea about selling mushroom is
 - or an ad, that tells you how you can full-fill your full potential, using PHP 7.4, Symfony 4.4, with ready-made Docker tested on 10 new developers with a focus on the mutual friendship between business and clean code
 
-## Why Dou You Need to Write Better Issues?
+## Why Do You Need to Write Better Issues?
 
 Do you think better issues is extra work on your side just to make maintainer happier? No!
 **You profit from it**.
@@ -22,11 +22,11 @@ Do you think better issues is extra work on your side just to make maintainer ha
 ### What Do You Gain by Flawless Issue Report?
 
 - no further questions from the maintainers, just "thanks" → **more free time (attention) for you**, no need to think about the answers and reading their text
-- higher chance of fixing of your issue → **you can enjoy the fixed in 1-2 days**, without waiting - unclear issues can take over 6 months to resolve, even if it's just missing '=' in the output
+- higher chance of fixing of your issue → **you can enjoy the fix in 1-2 days**, without waiting - unclear issues can take over 6 months to resolve, even if it's just missing '=' in the output
 - the maintainer will like you more because you're clear for them → **your issues will get higher priority** the longer and the better your write them
 - feature requests → after creating a streak of closed issues, **your feature requests will be more likely accepted**
 
-### Where Your Should Apply it?
+### Where Should You Apply it?
 
 Writing issue like this takes extra attention, thought and energy. It takes a few weeks to get used to it. **So should you write flawless issues in every Github repository you work with?** It would probably drain your energy and burn-out into falling back to just poor issue reports.
 
@@ -127,7 +127,7 @@ final class GuzzleFactory
 
 ## 4. Highlight What You Can
 
-Why do we use IDE? Why do traffic lights have colors? Why does <span class="text-danger">red</span> in PHPUnit means?
+Why do we use IDE? Why do traffic lights have colors? What does <span class="text-danger">red</span> in PHPUnit mean?
 
 **Colors gives us meta-information**, that is processed by other parts of the brain then reading is. That way we understand element with colors faster and easier:
 
@@ -143,7 +143,7 @@ I'm not a dog so I fancy the 1st one.
 
 <br>
 
-In the most of Github issue you'll use `php` and `diff` syntax highligh:
+In the most of Github issues you'll use `php` and `diff` syntax highligh:
 
 <span markdown=0>
 ```php
@@ -244,8 +244,8 @@ Now the maintainer knows:
 
 The 1st questions that will pop-up in the maintainer's head are "How did you do that?"
 
-- Did you run in from command line?
-- What exact command line have you used?
+- Did you run it from command line?
+- What exact command have you used?
 - Did you use Docker?
 - Do you use custom `rector.yaml` config? What's inside?
 - Is the error still there with no config?
