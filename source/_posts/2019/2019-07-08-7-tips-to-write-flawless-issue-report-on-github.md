@@ -97,7 +97,7 @@ What should you go for instead? Remove the ambiguous:
 
 In an issue:
 
-<q>I run Rector on <this-code> and I got <this-exception> with <this-exception></q>
+<q>I run Rector on [this-code] and I got [this-exception] with [this-exception-message]</q>
 
 ## 3. Code over Text
 
@@ -107,7 +107,7 @@ In an issue:
 
 These reports could be replaced by black-box style "...on something unknown". 0-value.
 
-- <q>On this code:</q>
+- <q>On this code</q>
 
 ```php
 <?php
@@ -258,7 +258,7 @@ Again, think of *4. The smaller the better* tip while copy-pasting the `config`.
 <q>I installed Rector as dev dependency to composer and run:</q>
 
 ```bash
-vendor/bin/rector process src/Packages/SomeFile.php --config rector.yaml --dry-run --set symfony 43
+vendor/bin/rector process src/SomeFile.php --config rector.yaml --dry-run --set symfony43
 ```
 
 Perfect!
