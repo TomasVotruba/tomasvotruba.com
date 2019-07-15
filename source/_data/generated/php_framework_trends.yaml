@@ -1,1397 +1,1403 @@
-# this file was generated on 2019-06-06 12:17:40, do not edit it manually
+# this file was generated on 2019-07-15 21:27:21, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
             -
                 name: Symfony
-                vendor_total_last_month: 2116376
-                vendor_total_last_year: 625471620
-                average_last_year_trend: 31.8
+                vendor_total_last_month: 2079202
+                vendor_total_last_year: 661722450
+                average_last_year_trend: 32.5
                 packages_data:
                     -
                         package_name: symfony/security-core
                         package_short_name: security-core
-                        last_month_average_daily_downloads: 15103
-                        last_year_trend: 144.9
-                        last_year_total: 2974920
+                        last_month_average_daily_downloads: 15526
+                        last_year_trend: 188.3
+                        last_year_total: 3311850
+                    -
+                        package_name: symfony/test-pack
+                        package_short_name: test-pack
+                        last_month_average_daily_downloads: 6239
+                        last_year_trend: 113.1
+                        last_year_total: 1552890
+                    -
+                        package_name: symfony/polyfill-ctype
+                        package_short_name: polyfill-ctype
+                        last_month_average_daily_downloads: 60297
+                        last_year_trend: 91.6
+                        last_year_total: 17424420
                     -
                         package_name: symfony/web-link
                         package_short_name: web-link
-                        last_month_average_daily_downloads: 8398
-                        last_year_trend: !!float 95
-                        last_year_total: 1846890
+                        last_month_average_daily_downloads: 8446
+                        last_year_trend: 87.2
+                        last_year_total: 2023740
                     -
                         package_name: symfony/lock
                         package_short_name: lock
-                        last_month_average_daily_downloads: 3916
-                        last_year_trend: 86.3
-                        last_year_total: 908670
+                        last_month_average_daily_downloads: 4087
+                        last_year_trend: 79.3
+                        last_year_total: 990960
                     -
                         package_name: symfony/property-info
                         package_short_name: property-info
-                        last_month_average_daily_downloads: 14809
-                        last_year_trend: 80.9
-                        last_year_total: 3435300
+                        last_month_average_daily_downloads: 15227
+                        last_year_trend: 73.3
+                        last_year_total: 3736770
                     -
                         package_name: symfony/maker-bundle
                         package_short_name: maker-bundle
-                        last_month_average_daily_downloads: 12428
-                        last_year_trend: 78.7
-                        last_year_total: 2998560
-                    -
-                        package_name: symfony/debug-bundle
-                        package_short_name: debug-bundle
-                        last_month_average_daily_downloads: 10176
-                        last_year_trend: 70.9
-                        last_year_total: 2638770
-                    -
-                        package_name: symfony/workflow
-                        package_short_name: workflow
-                        last_month_average_daily_downloads: 2889
-                        last_year_trend: 67.1
-                        last_year_total: 752490
-                    -
-                        package_name: symfony/security-bundle
-                        package_short_name: security-bundle
-                        last_month_average_daily_downloads: 17988
-                        last_year_trend: 66.9
-                        last_year_total: 4420500
-                    -
-                        package_name: symfony/dotenv
-                        package_short_name: dotenv
-                        last_month_average_daily_downloads: 21956
-                        last_year_trend: 65.5
-                        last_year_total: 5439570
-                    -
-                        package_name: symfony/flex
-                        package_short_name: flex
-                        last_month_average_daily_downloads: 20164
-                        last_year_trend: 64.1
-                        last_year_total: 4970310
-                    -
-                        package_name: symfony/twig-bundle
-                        package_short_name: twig-bundle
-                        last_month_average_daily_downloads: 19547
-                        last_year_trend: 63.2
-                        last_year_total: 4890630
-                    -
-                        package_name: symfony/doctrine-bridge
-                        package_short_name: doctrine-bridge
-                        last_month_average_daily_downloads: 19515
-                        last_year_trend: 61.1
-                        last_year_total: 4890570
+                        last_month_average_daily_downloads: 12459
+                        last_year_trend: 68.3
+                        last_year_total: 3240600
                     -
                         package_name: symfony/options-resolver
                         package_short_name: options-resolver
-                        last_month_average_daily_downloads: 27561
-                        last_year_trend: 59.9
-                        last_year_total: 6438090
+                        last_month_average_daily_downloads: 27806
+                        last_year_trend: 62.2
+                        last_year_total: 6951570
                     -
-                        package_name: symfony/web-profiler-bundle
-                        package_short_name: web-profiler-bundle
-                        last_month_average_daily_downloads: 15822
-                        last_year_trend: 59.8
-                        last_year_total: 3992010
+                        package_name: symfony/debug-bundle
+                        package_short_name: debug-bundle
+                        last_month_average_daily_downloads: 10226
+                        last_year_trend: 61.2
+                        last_year_total: 2817900
                     -
                         package_name: symfony/stopwatch
                         package_short_name: stopwatch
-                        last_month_average_daily_downloads: 14152
-                        last_year_trend: 58.5
-                        last_year_total: 3321660
+                        last_month_average_daily_downloads: 13917
+                        last_year_trend: 60.9
+                        last_year_total: 3576900
                     -
-                        package_name: symfony/monolog-bridge
-                        package_short_name: monolog-bridge
-                        last_month_average_daily_downloads: 19313
-                        last_year_trend: 58.4
-                        last_year_total: 4853040
+                        package_name: symfony/security-bundle
+                        package_short_name: security-bundle
+                        last_month_average_daily_downloads: 18479
+                        last_year_trend: 60.2
+                        last_year_total: 4760430
                     -
-                        package_name: symfony/form
-                        package_short_name: form
-                        last_month_average_daily_downloads: 17117
-                        last_year_trend: 57.2
-                        last_year_total: 4721730
+                        package_name: symfony/workflow
+                        package_short_name: workflow
+                        last_month_average_daily_downloads: 3156
+                        last_year_trend: 59.6
+                        last_year_total: 812910
                     -
-                        package_name: symfony/asset
-                        package_short_name: asset
-                        last_month_average_daily_downloads: 17989
-                        last_year_trend: 55.7
-                        last_year_total: 4609260
+                        package_name: symfony/dotenv
+                        package_short_name: dotenv
+                        last_month_average_daily_downloads: 22299
+                        last_year_trend: 59.5
+                        last_year_total: 5845500
+                    -
+                        package_name: symfony/twig-bundle
+                        package_short_name: twig-bundle
+                        last_month_average_daily_downloads: 19708
+                        last_year_trend: 56.6
+                        last_year_total: 5238150
+                    -
+                        package_name: symfony/flex
+                        package_short_name: flex
+                        last_month_average_daily_downloads: 20793
+                        last_year_trend: 56.6
+                        last_year_total: 5363490
+                    -
+                        package_name: symfony/doctrine-bridge
+                        package_short_name: doctrine-bridge
+                        last_month_average_daily_downloads: 19916
+                        last_year_trend: 55.2
+                        last_year_total: 5243430
+                    -
+                        package_name: symfony/web-profiler-bundle
+                        package_short_name: web-profiler-bundle
+                        last_month_average_daily_downloads: 16100
+                        last_year_trend: 53.5
+                        last_year_total: 4271610
                     -
                         package_name: symfony/inflector
                         package_short_name: inflector
-                        last_month_average_daily_downloads: 30054
-                        last_year_trend: 55.1
-                        last_year_total: 7467480
+                        last_month_average_daily_downloads: 30134
+                        last_year_trend: 52.9
+                        last_year_total: 7977240
+                    -
+                        package_name: symfony/monolog-bridge
+                        package_short_name: monolog-bridge
+                        last_month_average_daily_downloads: 19747
+                        last_year_trend: 52.8
+                        last_year_total: 5201490
+                    -
+                        package_name: symfony/form
+                        package_short_name: form
+                        last_month_average_daily_downloads: 17030
+                        last_year_trend: 50.6
+                        last_year_total: 4985310
+                    -
+                        package_name: symfony/asset
+                        package_short_name: asset
+                        last_month_average_daily_downloads: 18302
+                        last_year_trend: 50.3
+                        last_year_total: 4913910
                     -
                         package_name: symfony/intl
                         package_short_name: intl
-                        last_month_average_daily_downloads: 21605
-                        last_year_trend: 53.8
-                        last_year_total: 5594520
-                    -
-                        package_name: symfony/framework-bundle
-                        package_short_name: framework-bundle
-                        last_month_average_daily_downloads: 23697
-                        last_year_trend: 53.6
-                        last_year_total: 6074670
-                    -
-                        package_name: symfony/templating
-                        package_short_name: templating
-                        last_month_average_daily_downloads: 11993
-                        last_year_trend: 53.3
-                        last_year_total: 3150960
-                    -
-                        package_name: symfony/web-server-bundle
-                        package_short_name: web-server-bundle
-                        last_month_average_daily_downloads: 8979
-                        last_year_trend: 52.7
-                        last_year_total: 2427630
-                    -
-                        package_name: symfony/property-access
-                        package_short_name: property-access
-                        last_month_average_daily_downloads: 32979
-                        last_year_trend: 51.4
-                        last_year_total: 8490060
-                    -
-                        package_name: symfony/website-skeleton
-                        package_short_name: website-skeleton
-                        last_month_average_daily_downloads: 1208
-                        last_year_trend: !!float 51
-                        last_year_total: 387480
-                    -
-                        package_name: symfony/expression-language
-                        package_short_name: expression-language
-                        last_month_average_daily_downloads: 22105
-                        last_year_trend: 50.9
-                        last_year_total: 5686680
-                    -
-                        package_name: symfony/twig-bridge
-                        package_short_name: twig-bridge
-                        last_month_average_daily_downloads: 23166
-                        last_year_trend: 47.9
-                        last_year_total: 6078330
+                        last_month_average_daily_downloads: 21373
+                        last_year_trend: 50.3
+                        last_year_total: 5939730
                     -
                         package_name: symfony/http-foundation
                         package_short_name: http-foundation
-                        last_month_average_daily_downloads: 37025
-                        last_year_trend: 47.6
-                        last_year_total: 9439680
+                        last_month_average_daily_downloads: 35390
+                        last_year_trend: 49.6
+                        last_year_total: 9898530
+                    -
+                        package_name: symfony/framework-bundle
+                        package_short_name: framework-bundle
+                        last_month_average_daily_downloads: 23837
+                        last_year_trend: 49.6
+                        last_year_total: 6464640
+                    -
+                        package_name: symfony/property-access
+                        package_short_name: property-access
+                        last_month_average_daily_downloads: 32982
+                        last_year_trend: 49.1
+                        last_year_total: 9016920
+                    -
+                        package_name: symfony/templating
+                        package_short_name: templating
+                        last_month_average_daily_downloads: 11573
+                        last_year_trend: 48.6
+                        last_year_total: 3328800
+                    -
+                        package_name: symfony/expression-language
+                        package_short_name: expression-language
+                        last_month_average_daily_downloads: 22026
+                        last_year_trend: 47.7
+                        last_year_total: 6036210
+                    -
+                        package_name: symfony/web-server-bundle
+                        package_short_name: web-server-bundle
+                        last_month_average_daily_downloads: 8805
+                        last_year_trend: 44.8
+                        last_year_total: 2542320
                     -
                         package_name: symfony/cache
                         package_short_name: cache
-                        last_month_average_daily_downloads: 32185
-                        last_year_trend: 47.1
-                        last_year_total: 8344080
+                        last_month_average_daily_downloads: 32102
+                        last_year_trend: 44.2
+                        last_year_total: 8848350
                     -
-                        package_name: symfony/serializer
-                        package_short_name: serializer
-                        last_month_average_daily_downloads: 35222
-                        last_year_trend: 39.9
-                        last_year_total: 9537630
-                    -
-                        package_name: symfony/validator
-                        package_short_name: validator
-                        last_month_average_daily_downloads: 35880
-                        last_year_trend: 38.5
-                        last_year_total: 9897120
-                    -
-                        package_name: symfony/var-dumper
-                        package_short_name: var-dumper
-                        last_month_average_daily_downloads: 41761
-                        last_year_trend: !!float 35
-                        last_year_total: 11186370
+                        package_name: symfony/twig-bridge
+                        package_short_name: twig-bridge
+                        last_month_average_daily_downloads: 23449
+                        last_year_trend: 43.8
+                        last_year_total: 6444090
                     -
                         package_name: symfony/proxy-manager-bridge
                         package_short_name: proxy-manager-bridge
-                        last_month_average_daily_downloads: 5007
-                        last_year_trend: 32.9
-                        last_year_total: 1063230
+                        last_month_average_daily_downloads: 5167
+                        last_year_trend: 41.9
+                        last_year_total: 1155480
+                    -
+                        package_name: symfony/serializer
+                        package_short_name: serializer
+                        last_month_average_daily_downloads: 33486
+                        last_year_trend: 38.8
+                        last_year_total: 9997890
+                    -
+                        package_name: symfony/validator
+                        package_short_name: validator
+                        last_month_average_daily_downloads: 34261
+                        last_year_trend: !!float 37
+                        last_year_total: 10342650
+                    -
+                        package_name: symfony/website-skeleton
+                        package_short_name: website-skeleton
+                        last_month_average_daily_downloads: 1118
+                        last_year_trend: 36.3
+                        last_year_total: 398730
+                    -
+                        package_name: symfony/var-dumper
+                        package_short_name: var-dumper
+                        last_month_average_daily_downloads: 39754
+                        last_year_trend: 35.8
+                        last_year_total: 11672640
                     -
                         package_name: symfony/routing
                         package_short_name: routing
-                        last_month_average_daily_downloads: 42333
-                        last_year_trend: 32.8
-                        last_year_total: 11271720
-                    -
-                        package_name: symfony/filesystem
-                        package_short_name: filesystem
-                        last_month_average_daily_downloads: 61372
-                        last_year_trend: 32.4
-                        last_year_total: 17741790
+                        last_month_average_daily_downloads: 40183
+                        last_year_trend: !!float 35
+                        last_year_total: 11711160
                     -
                         package_name: symfony/http-kernel
                         package_short_name: http-kernel
-                        last_month_average_daily_downloads: 39083
-                        last_year_trend: 32.3
-                        last_year_total: 10442610
+                        last_month_average_daily_downloads: 36963
+                        last_year_trend: 34.6
+                        last_year_total: 10834530
                     -
                         package_name: symfony/psr-http-message-bridge
                         package_short_name: psr-http-message-bridge
-                        last_month_average_daily_downloads: 27826
-                        last_year_trend: 31.4
-                        last_year_total: 7617030
+                        last_month_average_daily_downloads: 25453
+                        last_year_trend: 32.2
+                        last_year_total: 7922130
+                    -
+                        package_name: symfony/filesystem
+                        package_short_name: filesystem
+                        last_month_average_daily_downloads: 58244
+                        last_year_trend: 29.5
+                        last_year_total: 18423390
                     -
                         package_name: symfony/dependency-injection
                         package_short_name: dependency-injection
-                        last_month_average_daily_downloads: 57304
-                        last_year_trend: 26.1
-                        last_year_total: 16227840
+                        last_month_average_daily_downloads: 53946
+                        last_year_trend: !!float 26
+                        last_year_total: 16801140
                     -
                         package_name: symfony/config
                         package_short_name: config
-                        last_month_average_daily_downloads: 56274
-                        last_year_trend: 25.3
-                        last_year_total: 16228860
+                        last_month_average_daily_downloads: 53691
+                        last_year_trend: 24.8
+                        last_year_total: 16785090
                     -
                         package_name: symfony/browser-kit
                         package_short_name: browser-kit
-                        last_month_average_daily_downloads: 43349
+                        last_month_average_daily_downloads: 41225
                         last_year_trend: !!float 24
-                        last_year_total: 12662010
+                        last_year_total: 13065840
                     -
                         package_name: symfony/process
                         package_short_name: process
-                        last_month_average_daily_downloads: 39254
-                        last_year_trend: 21.9
-                        last_year_total: 11918910
+                        last_month_average_daily_downloads: 35513
+                        last_year_trend: !!float 20
+                        last_year_total: 12185760
                     -
                         package_name: symfony/phpunit-bridge
                         package_short_name: phpunit-bridge
-                        last_month_average_daily_downloads: 31870
-                        last_year_trend: 20.7
-                        last_year_total: 9564900
+                        last_month_average_daily_downloads: 30006
+                        last_year_trend: 19.9
+                        last_year_total: 9820200
                     -
                         package_name: symfony/css-selector
                         package_short_name: css-selector
-                        last_month_average_daily_downloads: 116444
-                        last_year_trend: 17.6
-                        last_year_total: 34521630
+                        last_month_average_daily_downloads: 109192
+                        last_year_trend: 19.4
+                        last_year_total: 35388390
                     -
                         package_name: symfony/translation
                         package_short_name: translation
-                        last_month_average_daily_downloads: 131549
-                        last_year_trend: 17.1
-                        last_year_total: 39288720
+                        last_month_average_daily_downloads: 123487
+                        last_year_trend: 17.6
+                        last_year_total: 40315170
                     -
                         package_name: symfony/dom-crawler
                         package_short_name: dom-crawler
-                        last_month_average_daily_downloads: 61013
-                        last_year_trend: 14.1
-                        last_year_total: 18379470
-                    -
-                        package_name: symfony/polyfill-intl-icu
-                        package_short_name: polyfill-intl-icu
-                        last_month_average_daily_downloads: 39746
-                        last_year_trend: 13.3
-                        last_year_total: 12888480
+                        last_month_average_daily_downloads: 56617
+                        last_year_trend: 15.9
+                        last_year_total: 18735300
                     -
                         package_name: symfony/debug
                         package_short_name: debug
-                        last_month_average_daily_downloads: 62207
-                        last_year_trend: 12.9
-                        last_year_total: 19557930
+                        last_month_average_daily_downloads: 58004
+                        last_year_trend: 13.1
+                        last_year_total: 19824720
                     -
                         package_name: symfony/yaml
                         package_short_name: yaml
-                        last_month_average_daily_downloads: 103395
-                        last_year_trend: 12.2
-                        last_year_total: 32496810
+                        last_month_average_daily_downloads: 96761
+                        last_year_trend: !!float 12
+                        last_year_total: 33079770
                     -
-                        package_name: symfony/console
-                        package_short_name: console
-                        last_month_average_daily_downloads: 41362
-                        last_year_trend: 12.2
-                        last_year_total: 13960470
-                    -
-                        package_name: symfony/monolog-bundle
-                        package_short_name: monolog-bundle
-                        last_month_average_daily_downloads: 37887
-                        last_year_trend: 11.5
-                        last_year_total: 12357270
+                        package_name: symfony/polyfill-intl-icu
+                        package_short_name: polyfill-intl-icu
+                        last_month_average_daily_downloads: 38035
+                        last_year_trend: 11.8
+                        last_year_total: 13073640
                     -
                         package_name: symfony/event-dispatcher
                         package_short_name: event-dispatcher
-                        last_month_average_daily_downloads: 56877
-                        last_year_trend: 10.6
-                        last_year_total: 18117810
+                        last_month_average_daily_downloads: 52544
+                        last_year_trend: 10.4
+                        last_year_total: 18337770
                     -
-                        package_name: symfony/finder
-                        package_short_name: finder
-                        last_month_average_daily_downloads: 26618
-                        last_year_trend: 10.5
-                        last_year_total: 9139800
+                        package_name: symfony/console
+                        package_short_name: console
+                        last_month_average_daily_downloads: 36906
+                        last_year_trend: 9.7
+                        last_year_total: 14060520
+                    -
+                        package_name: symfony/monolog-bundle
+                        package_short_name: monolog-bundle
+                        last_month_average_daily_downloads: 37259
+                        last_year_trend: 9.2
+                        last_year_total: 12522810
                     -
                         package_name: symfony/swiftmailer-bundle
                         package_short_name: swiftmailer-bundle
-                        last_month_average_daily_downloads: 30899
-                        last_year_trend: 9.1
-                        last_year_total: 10305090
+                        last_month_average_daily_downloads: 29438
+                        last_year_trend: 7.7
+                        last_year_total: 10393830
                     -
-                        package_name: symfony/polyfill-mbstring
-                        package_short_name: polyfill-mbstring
-                        last_month_average_daily_downloads: 67285
-                        last_year_trend: 4.1
-                        last_year_total: 24138960
+                        package_name: symfony/finder
+                        package_short_name: finder
+                        last_month_average_daily_downloads: 24216
+                        last_year_trend: 6.9
+                        last_year_total: 9191220
                     -
                         package_name: symfony/polyfill-util
                         package_short_name: polyfill-util
-                        last_month_average_daily_downloads: 54567
-                        last_year_trend: 0.2
-                        last_year_total: 18376680
+                        last_month_average_daily_downloads: 49904
+                        last_year_trend: 1.2
+                        last_year_total: 18370170
                     -
                         package_name: symfony/polyfill-php56
                         package_short_name: polyfill-php56
-                        last_month_average_daily_downloads: 54513
-                        last_year_trend: 0.2
-                        last_year_total: 18360360
+                        last_month_average_daily_downloads: 49849
+                        last_year_trend: 1.2
+                        last_year_total: 18354870
+                    -
+                        package_name: symfony/polyfill-mbstring
+                        package_short_name: polyfill-mbstring
+                        last_month_average_daily_downloads: 60052
+                        last_year_trend: 0.7
+                        last_year_total: 24032670
                     -
                         package_name: symfony/security-acl
                         package_short_name: security-acl
-                        last_month_average_daily_downloads: 11536
-                        last_year_trend: -0.2
-                        last_year_total: 4279080
+                        last_month_average_daily_downloads: 10998
+                        last_year_trend: -1.4
+                        last_year_total: 4252710
                     -
                         package_name: symfony/polyfill-apcu
                         package_short_name: polyfill-apcu
-                        last_month_average_daily_downloads: 28299
-                        last_year_trend: -4.2
-                        last_year_total: 10431600
-                    -
-                        package_name: symfony/security
-                        package_short_name: security
-                        last_month_average_daily_downloads: 9574
-                        last_year_trend: -4.2
-                        last_year_total: 3684840
-                    -
-                        package_name: symfony/polyfill-php55
-                        package_short_name: polyfill-php55
-                        last_month_average_daily_downloads: 11602
-                        last_year_trend: !!float -6
-                        last_year_total: 4762110
-                    -
-                        package_name: symfony/polyfill-php54
-                        package_short_name: polyfill-php54
-                        last_month_average_daily_downloads: 11282
-                        last_year_trend: -6.1
-                        last_year_total: 4640880
-                    -
-                        package_name: symfony/symfony
-                        package_short_name: symfony
-                        last_month_average_daily_downloads: 24658
-                        last_year_trend: !!float -7
-                        last_year_total: 9367140
-                    -
-                        package_name: symfony/polyfill-php70
-                        package_short_name: polyfill-php70
-                        last_month_average_daily_downloads: 42901
-                        last_year_trend: -9.4
-                        last_year_total: 16581420
+                        last_month_average_daily_downloads: 25748
+                        last_year_trend: !!float -5
+                        last_year_total: 10302600
                     -
                         package_name: symfony/class-loader
                         package_short_name: class-loader
-                        last_month_average_daily_downloads: 27621
-                        last_year_trend: !!float -11
-                        last_year_total: 9653580
+                        last_month_average_daily_downloads: 24274
+                        last_year_trend: -7.6
+                        last_year_total: 9533040
+                    -
+                        package_name: symfony/symfony
+                        package_short_name: symfony
+                        last_month_average_daily_downloads: 22815
+                        last_year_trend: -7.9
+                        last_year_total: 9222330
+                    -
+                        package_name: symfony/polyfill-php55
+                        package_short_name: polyfill-php55
+                        last_month_average_daily_downloads: 10904
+                        last_year_trend: -8.5
+                        last_year_total: 4682160
+                    -
+                        package_name: symfony/polyfill-php54
+                        package_short_name: polyfill-php54
+                        last_month_average_daily_downloads: 10591
+                        last_year_trend: -8.5
+                        last_year_total: 4562580
+                    -
+                        package_name: symfony/polyfill-php70
+                        package_short_name: polyfill-php70
+                        last_month_average_daily_downloads: 36681
+                        last_year_trend: -9.6
+                        last_year_total: 16185540
                     -
                         package_name: symfony/thanks
                         package_short_name: thanks
-                        last_month_average_daily_downloads: 5431
-                        last_year_trend: -11.2
-                        last_year_total: 2056590
+                        last_month_average_daily_downloads: 5071
+                        last_year_trend: -10.8
+                        last_year_total: 2037720
                     -
                         package_name: symfony/assetic-bundle
                         package_short_name: assetic-bundle
-                        last_month_average_daily_downloads: 10105
-                        last_year_trend: -14.3
-                        last_year_total: 4286760
+                        last_month_average_daily_downloads: 9290
+                        last_year_trend: -17.4
+                        last_year_total: 4154250
                     -
-                        package_name: symfony/polyfill-xml
-                        package_short_name: polyfill-xml
-                        last_month_average_daily_downloads: 1164
-                        last_year_trend: -23.7
-                        last_year_total: 648930
+                        package_name: symfony/security
+                        package_short_name: security
+                        last_month_average_daily_downloads: 9090
+                        last_year_trend: -18.3
+                        last_year_total: 3688260
                     -
                         package_name: symfony/lts
                         package_short_name: lts
-                        last_month_average_daily_downloads: 3061
-                        last_year_trend: -44.5
-                        last_year_total: 2001930
+                        last_month_average_daily_downloads: 2718
+                        last_year_trend: -50.9
+                        last_year_total: 1882440
                     -
                         package_name: symfony/polyfill-php72
                         package_short_name: polyfill-php72
-                        last_month_average_daily_downloads: 4406
-                        last_year_trend: !!float -62
-                        last_year_total: -5417280
+                        last_month_average_daily_downloads: 8317
+                        last_year_trend: -72.7
+                        last_year_total: -4339320
             -
-                name: Slim
-                vendor_total_last_month: 12036
-                vendor_total_last_year: 3984690
-                average_last_year_trend: 15.7
+                name: Doctrine
+                vendor_total_last_month: 1173360
+                vendor_total_last_year: 383285970
+                average_last_year_trend: 21.9
                 packages_data:
                     -
-                        package_name: slim/php-view
-                        package_short_name: php-view
-                        last_month_average_daily_downloads: 1928
-                        last_year_trend: 23.5
-                        last_year_total: 606780
+                        package_name: doctrine/event-manager
+                        package_short_name: event-manager
+                        last_month_average_daily_downloads: 64475
+                        last_year_trend: !!float 102
+                        last_year_total: 16915020
                     -
-                        package_name: slim/slim
-                        package_short_name: slim
-                        last_month_average_daily_downloads: 8685
+                        package_name: doctrine/persistence
+                        package_short_name: persistence
+                        last_month_average_daily_downloads: 40022
+                        last_year_trend: 98.4
+                        last_year_total: 10793370
+                    -
+                        package_name: doctrine/reflection
+                        package_short_name: reflection
+                        last_month_average_daily_downloads: 38759
+                        last_year_trend: 97.4
+                        last_year_total: 10408680
+                    -
+                        package_name: doctrine/doctrine-migrations-bundle
+                        package_short_name: doctrine-migrations-bundle
+                        last_month_average_daily_downloads: 25059
+                        last_year_trend: 21.8
+                        last_year_total: 7958220
+                    -
+                        package_name: doctrine/migrations
+                        package_short_name: migrations
+                        last_month_average_daily_downloads: 29673
+                        last_year_trend: 17.6
+                        last_year_total: 9225000
+                    -
+                        package_name: doctrine/doctrine-fixtures-bundle
+                        package_short_name: doctrine-fixtures-bundle
+                        last_month_average_daily_downloads: 18310
+                        last_year_trend: 16.1
+                        last_year_total: 5882880
+                    -
+                        package_name: doctrine/lexer
+                        package_short_name: lexer
+                        last_month_average_daily_downloads: 136866
+                        last_year_trend: 15.6
+                        last_year_total: 42287340
+                    -
+                        package_name: doctrine/doctrine-bundle
+                        package_short_name: doctrine-bundle
+                        last_month_average_daily_downloads: 38091
+                        last_year_trend: 15.1
+                        last_year_total: 12448830
+                    -
+                        package_name: doctrine/mongodb-odm-bundle
+                        package_short_name: mongodb-odm-bundle
+                        last_month_average_daily_downloads: 2908
+                        last_year_trend: 14.8
+                        last_year_total: 920490
+                    -
+                        package_name: doctrine/dbal
+                        package_short_name: dbal
+                        last_month_average_daily_downloads: 80031
+                        last_year_trend: 14.6
+                        last_year_total: 26905680
+                    -
+                        package_name: doctrine/instantiator
+                        package_short_name: instantiator
+                        last_month_average_daily_downloads: 142569
                         last_year_trend: 13.5
-                        last_year_total: 2944770
+                        last_year_total: 47937210
                     -
-                        package_name: slim/twig-view
-                        package_short_name: twig-view
-                        last_month_average_daily_downloads: 1423
-                        last_year_trend: 10.2
-                        last_year_total: 433140
+                        package_name: doctrine/data-fixtures
+                        package_short_name: data-fixtures
+                        last_month_average_daily_downloads: 20700
+                        last_year_trend: 12.6
+                        last_year_total: 6879630
+                    -
+                        package_name: doctrine/cache
+                        package_short_name: cache
+                        last_month_average_daily_downloads: 93639
+                        last_year_trend: 12.2
+                        last_year_total: 31563750
+                    -
+                        package_name: doctrine/inflector
+                        package_short_name: inflector
+                        last_month_average_daily_downloads: 128826
+                        last_year_trend: 11.7
+                        last_year_total: 43778280
+                    -
+                        package_name: doctrine/doctrine-cache-bundle
+                        package_short_name: doctrine-cache-bundle
+                        last_month_average_daily_downloads: 36141
+                        last_year_trend: 11.5
+                        last_year_total: 12182400
+                    -
+                        package_name: doctrine/mongodb-odm
+                        package_short_name: mongodb-odm
+                        last_month_average_daily_downloads: 3449
+                        last_year_trend: 9.8
+                        last_year_total: 1111440
+                    -
+                        package_name: doctrine/orm
+                        package_short_name: orm
+                        last_month_average_daily_downloads: 42307
+                        last_year_trend: 8.7
+                        last_year_total: 14591340
+                    -
+                        package_name: doctrine/annotations
+                        package_short_name: annotations
+                        last_month_average_daily_downloads: 85586
+                        last_year_trend: 6.4
+                        last_year_total: 29479050
+                    -
+                        package_name: doctrine/collections
+                        package_short_name: collections
+                        last_month_average_daily_downloads: 74435
+                        last_year_trend: 4.1
+                        last_year_total: 25606140
+                    -
+                        package_name: doctrine/mongodb
+                        package_short_name: mongodb
+                        last_month_average_daily_downloads: 3400
+                        last_year_trend: 3.7
+                        last_year_total: 1115610
+                    -
+                        package_name: doctrine/doctrine-module
+                        package_short_name: doctrine-module
+                        last_month_average_daily_downloads: 1630
+                        last_year_trend: -0.6
+                        last_year_total: 624660
+                    -
+                        package_name: doctrine/common
+                        package_short_name: common
+                        last_month_average_daily_downloads: 65030
+                        last_year_trend: -1.3
+                        last_year_total: 24111180
+                    -
+                        package_name: doctrine/doctrine-orm-module
+                        package_short_name: doctrine-orm-module
+                        last_month_average_daily_downloads: 1454
+                        last_year_trend: -2.3
+                        last_year_total: 559770
             -
                 name: Laravel
-                vendor_total_last_month: 266734
-                vendor_total_last_year: 81827790
-                average_last_year_trend: 15.1
+                vendor_total_last_month: 247826
+                vendor_total_last_year: 83632320
+                average_last_year_trend: 15.9
                 packages_data:
                     -
                         package_name: illuminate/log
                         package_short_name: log
-                        last_month_average_daily_downloads: 3923
-                        last_year_trend: 49.9
-                        last_year_total: 1032870
-                    -
-                        package_name: illuminate/redis
-                        package_short_name: redis
-                        last_month_average_daily_downloads: 2929
-                        last_year_trend: 18.6
-                        last_year_total: 898080
+                        last_month_average_daily_downloads: 3751
+                        last_year_trend: 45.7
+                        last_year_total: 1094160
                     -
                         package_name: illuminate/mail
                         package_short_name: mail
-                        last_month_average_daily_downloads: 1791
-                        last_year_trend: 18.2
-                        last_year_total: 521010
-                    -
-                        package_name: illuminate/filesystem
-                        package_short_name: filesystem
-                        last_month_average_daily_downloads: 9842
-                        last_year_trend: 18.1
-                        last_year_total: 2978040
+                        last_month_average_daily_downloads: 1739
+                        last_year_trend: 19.6
+                        last_year_total: 538050
                     -
                         package_name: illuminate/config
                         package_short_name: config
-                        last_month_average_daily_downloads: 8218
-                        last_year_trend: 17.5
-                        last_year_total: 2461920
+                        last_month_average_daily_downloads: 7616
+                        last_year_trend: !!float 19
+                        last_year_total: 2526330
                     -
-                        package_name: illuminate/routing
-                        package_short_name: routing
-                        last_month_average_daily_downloads: 1431
-                        last_year_trend: 17.2
-                        last_year_total: 467010
+                        package_name: illuminate/filesystem
+                        package_short_name: filesystem
+                        last_month_average_daily_downloads: 9133
+                        last_year_trend: 18.9
+                        last_year_total: 3052830
+                    -
+                        package_name: illuminate/redis
+                        package_short_name: redis
+                        last_month_average_daily_downloads: 2691
+                        last_year_trend: 18.8
+                        last_year_total: 918510
                     -
                         package_name: illuminate/console
                         package_short_name: console
-                        last_month_average_daily_downloads: 7350
-                        last_year_trend: 15.7
-                        last_year_total: 2239320
+                        last_month_average_daily_downloads: 6797
+                        last_year_trend: 17.2
+                        last_year_total: 2290980
                     -
                         package_name: illuminate/events
                         package_short_name: events
-                        last_month_average_daily_downloads: 9749
-                        last_year_trend: 15.5
-                        last_year_total: 2932440
+                        last_month_average_daily_downloads: 9066
+                        last_year_trend: 17.2
+                        last_year_total: 3003510
                     -
                         package_name: illuminate/view
                         package_short_name: view
-                        last_month_average_daily_downloads: 7711
-                        last_year_trend: 15.2
-                        last_year_total: 2371440
+                        last_month_average_daily_downloads: 7121
+                        last_year_trend: 16.3
+                        last_year_total: 2423640
                     -
                         package_name: illuminate/support
                         package_short_name: support
-                        last_month_average_daily_downloads: 18718
-                        last_year_trend: 15.2
-                        last_year_total: 5568540
-                    -
-                        package_name: illuminate/translation
-                        package_short_name: translation
-                        last_month_average_daily_downloads: 6356
-                        last_year_trend: 13.8
-                        last_year_total: 1956450
-                    -
-                        package_name: illuminate/contracts
-                        package_short_name: contracts
-                        last_month_average_daily_downloads: 18459
-                        last_year_trend: 13.8
-                        last_year_total: 5482620
-                    -
-                        package_name: illuminate/session
-                        package_short_name: session
-                        last_month_average_daily_downloads: 6527
-                        last_year_trend: 13.3
-                        last_year_total: 2042070
-                    -
-                        package_name: illuminate/cache
-                        package_short_name: cache
-                        last_month_average_daily_downloads: 6465
-                        last_year_trend: 13.3
-                        last_year_total: 2013870
-                    -
-                        package_name: illuminate/container
-                        package_short_name: container
-                        last_month_average_daily_downloads: 14364
-                        last_year_trend: 13.1
-                        last_year_total: 4401570
+                        last_month_average_daily_downloads: 17595
+                        last_year_trend: 15.9
+                        last_year_total: 5722050
                     -
                         package_name: illuminate/queue
                         package_short_name: queue
-                        last_month_average_daily_downloads: 6299
-                        last_year_trend: 13.1
-                        last_year_total: 1906980
+                        last_month_average_daily_downloads: 5758
+                        last_year_trend: 15.4
+                        last_year_total: 1947600
                     -
-                        package_name: illuminate/pipeline
-                        package_short_name: pipeline
-                        last_month_average_daily_downloads: 6372
-                        last_year_trend: 12.5
-                        last_year_total: 1984680
+                        package_name: illuminate/contracts
+                        package_short_name: contracts
+                        last_month_average_daily_downloads: 17413
+                        last_year_trend: 15.1
+                        last_year_total: 5633700
+                    -
+                        package_name: illuminate/translation
+                        package_short_name: translation
+                        last_month_average_daily_downloads: 5789
+                        last_year_trend: 15.1
+                        last_year_total: 1995630
+                    -
+                        package_name: illuminate/cache
+                        package_short_name: cache
+                        last_month_average_daily_downloads: 5918
+                        last_year_trend: 14.5
+                        last_year_total: 2052000
+                    -
+                        package_name: illuminate/routing
+                        package_short_name: routing
+                        last_month_average_daily_downloads: 1389
+                        last_year_trend: 14.5
+                        last_year_total: 476760
+                    -
+                        package_name: illuminate/session
+                        package_short_name: session
+                        last_month_average_daily_downloads: 5959
+                        last_year_trend: 14.3
+                        last_year_total: 2079360
                     -
                         package_name: illuminate/bus
                         package_short_name: bus
-                        last_month_average_daily_downloads: 5972
-                        last_year_trend: 12.2
-                        last_year_total: 1857570
+                        last_month_average_daily_downloads: 5472
+                        last_year_trend: 13.6
+                        last_year_total: 1892670
                     -
-                        package_name: illuminate/validation
-                        package_short_name: validation
-                        last_month_average_daily_downloads: 6371
-                        last_year_trend: !!float 12
-                        last_year_total: 1981920
+                        package_name: illuminate/container
+                        package_short_name: container
+                        last_month_average_daily_downloads: 13475
+                        last_year_trend: 13.5
+                        last_year_total: 4508910
+                    -
+                        package_name: illuminate/pipeline
+                        package_short_name: pipeline
+                        last_month_average_daily_downloads: 5847
+                        last_year_trend: 13.4
+                        last_year_total: 2022300
                     -
                         package_name: illuminate/hashing
                         package_short_name: hashing
-                        last_month_average_daily_downloads: 5687
-                        last_year_trend: 11.9
-                        last_year_total: 1795440
-                    -
-                        package_name: illuminate/http
-                        package_short_name: http
-                        last_month_average_daily_downloads: 6397
-                        last_year_trend: 11.7
-                        last_year_total: 2005590
-                    -
-                        package_name: illuminate/pagination
-                        package_short_name: pagination
-                        last_month_average_daily_downloads: 6508
-                        last_year_trend: 11.5
-                        last_year_total: 2021520
-                    -
-                        package_name: laravel/framework
-                        package_short_name: framework
-                        last_month_average_daily_downloads: 71323
-                        last_year_trend: 11.4
-                        last_year_total: 22195140
+                        last_month_average_daily_downloads: 5178
+                        last_year_trend: !!float 13
+                        last_year_total: 1825410
                     -
                         package_name: illuminate/encryption
                         package_short_name: encryption
-                        last_month_average_daily_downloads: 6232
-                        last_year_trend: 11.4
-                        last_year_total: 1938480
+                        last_month_average_daily_downloads: 5675
+                        last_year_trend: 12.9
+                        last_year_total: 1972680
+                    -
+                        package_name: illuminate/validation
+                        package_short_name: validation
+                        last_month_average_daily_downloads: 5820
+                        last_year_trend: 12.9
+                        last_year_total: 2017800
+                    -
+                        package_name: illuminate/http
+                        package_short_name: http
+                        last_month_average_daily_downloads: 5844
+                        last_year_trend: 12.8
+                        last_year_total: 2040480
+                    -
+                        package_name: illuminate/pagination
+                        package_short_name: pagination
+                        last_month_average_daily_downloads: 5976
+                        last_year_trend: 12.5
+                        last_year_total: 2059770
+                    -
+                        package_name: laravel/framework
+                        package_short_name: framework
+                        last_month_average_daily_downloads: 66796
+                        last_year_trend: 12.4
+                        last_year_total: 22635300
                     -
                         package_name: illuminate/broadcasting
                         package_short_name: broadcasting
-                        last_month_average_daily_downloads: 5522
-                        last_year_trend: 11.1
-                        last_year_total: 1733370
+                        last_month_average_daily_downloads: 5023
+                        last_year_trend: 12.3
+                        last_year_total: 1762470
                     -
                         package_name: illuminate/auth
                         package_short_name: auth
-                        last_month_average_daily_downloads: 5685
-                        last_year_trend: 10.8
-                        last_year_total: 1771410
+                        last_month_average_daily_downloads: 5167
+                        last_year_trend: 12.2
+                        last_year_total: 1802310
                     -
                         package_name: illuminate/database
                         package_short_name: database
-                        last_month_average_daily_downloads: 10533
-                        last_year_trend: 8.7
-                        last_year_total: 3268440
+                        last_month_average_daily_downloads: 9818
+                        last_year_trend: 9.1
+                        last_year_total: 3337110
             -
-                name: Doctrine
-                vendor_total_last_month: 1071936
-                vendor_total_last_year: 339678330
-                average_last_year_trend: !!float 10
+                name: Slim
+                vendor_total_last_month: 10907
+                vendor_total_last_year: 4019490
+                average_last_year_trend: 15.8
                 packages_data:
                     -
-                        package_name: doctrine/doctrine-migrations-bundle
-                        package_short_name: doctrine-migrations-bundle
-                        last_month_average_daily_downloads: 25606
-                        last_year_trend: 23.8
-                        last_year_total: 7721100
+                        package_name: slim/php-view
+                        package_short_name: php-view
+                        last_month_average_daily_downloads: 1772
+                        last_year_trend: 24.3
+                        last_year_total: 616440
                     -
-                        package_name: doctrine/migrations
-                        package_short_name: migrations
-                        last_month_average_daily_downloads: 29995
-                        last_year_trend: 18.6
-                        last_year_total: 8959980
+                        package_name: slim/slim
+                        package_short_name: slim
+                        last_month_average_daily_downloads: 7871
+                        last_year_trend: !!float 14
+                        last_year_total: 2962770
                     -
-                        package_name: doctrine/doctrine-fixtures-bundle
-                        package_short_name: doctrine-fixtures-bundle
-                        last_month_average_daily_downloads: 18241
-                        last_year_trend: 18.2
-                        last_year_total: 5736840
-                    -
-                        package_name: doctrine/lexer
-                        package_short_name: lexer
-                        last_month_average_daily_downloads: 134854
-                        last_year_trend: 15.1
-                        last_year_total: 41104320
-                    -
-                        package_name: doctrine/doctrine-bundle
-                        package_short_name: doctrine-bundle
-                        last_month_average_daily_downloads: 38735
-                        last_year_trend: 14.7
-                        last_year_total: 12215070
-                    -
-                        package_name: doctrine/dbal
-                        package_short_name: dbal
-                        last_month_average_daily_downloads: 83930
-                        last_year_trend: 14.4
-                        last_year_total: 26388120
-                    -
-                        package_name: doctrine/doctrine-cache-bundle
-                        package_short_name: doctrine-cache-bundle
-                        last_month_average_daily_downloads: 37002
-                        last_year_trend: 13.9
-                        last_year_total: 11994120
-                    -
-                        package_name: doctrine/data-fixtures
-                        package_short_name: data-fixtures
-                        last_month_average_daily_downloads: 21272
-                        last_year_trend: 13.8
-                        last_year_total: 6746670
-                    -
-                        package_name: doctrine/instantiator
-                        package_short_name: instantiator
-                        last_month_average_daily_downloads: 152654
-                        last_year_trend: 12.8
-                        last_year_total: 47016030
-                    -
-                        package_name: doctrine/cache
-                        package_short_name: cache
-                        last_month_average_daily_downloads: 98950
-                        last_year_trend: 12.6
-                        last_year_total: 30969120
-                    -
-                        package_name: doctrine/mongodb-odm-bundle
-                        package_short_name: mongodb-odm-bundle
-                        last_month_average_daily_downloads: 2759
-                        last_year_trend: 11.7
-                        last_year_total: 903030
-                    -
-                        package_name: doctrine/inflector
-                        package_short_name: inflector
-                        last_month_average_daily_downloads: 137089
-                        last_year_trend: 11.3
-                        last_year_total: 43046580
-                    -
-                        package_name: doctrine/orm
-                        package_short_name: orm
-                        last_month_average_daily_downloads: 43850
-                        last_year_trend: 10.4
-                        last_year_total: 14404620
-                    -
-                        package_name: doctrine/mongodb-odm
-                        package_short_name: mongodb-odm
-                        last_month_average_daily_downloads: 3344
-                        last_year_trend: 5.3
-                        last_year_total: 1098540
-                    -
-                        package_name: doctrine/annotations
-                        package_short_name: annotations
-                        last_month_average_daily_downloads: 91166
-                        last_year_trend: 4.3
-                        last_year_total: 29287020
-                    -
-                        package_name: doctrine/collections
-                        package_short_name: collections
-                        last_month_average_daily_downloads: 76723
-                        last_year_trend: 1.7
-                        last_year_total: 25526370
-                    -
-                        package_name: doctrine/doctrine-module
-                        package_short_name: doctrine-module
-                        last_month_average_daily_downloads: 1735
-                        last_year_trend: 1.5
-                        last_year_total: 625650
-                    -
-                        package_name: doctrine/mongodb
-                        package_short_name: mongodb
-                        last_month_average_daily_downloads: 3269
-                        last_year_trend: -0.1
-                        last_year_total: 1107480
-                    -
-                        package_name: doctrine/doctrine-orm-module
-                        package_short_name: doctrine-orm-module
-                        last_month_average_daily_downloads: 1558
-                        last_year_trend: !!float -2
-                        last_year_total: 563370
-                    -
-                        package_name: doctrine/common
-                        package_short_name: common
-                        last_month_average_daily_downloads: 69204
-                        last_year_trend: -2.4
-                        last_year_total: 24264300
+                        package_name: slim/twig-view
+                        package_short_name: twig-view
+                        last_month_average_daily_downloads: 1264
+                        last_year_trend: 9.2
+                        last_year_total: 440280
             -
                 name: Zend
-                vendor_total_last_month: 559914
-                vendor_total_last_year: 175300920
-                average_last_year_trend: 9.5
+                vendor_total_last_month: 517047
+                vendor_total_last_year: 177547920
+                average_last_year_trend: 10.8
                 packages_data:
+                    -
+                        package_name: zendframework/zend-httphandlerrunner
+                        package_short_name: zend-httphandlerrunner
+                        last_month_average_daily_downloads: 1307
+                        last_year_trend: 123.3
+                        last_year_total: 323700
                     -
                         package_name: zendframework/zend-diactoros
                         package_short_name: zend-diactoros
-                        last_month_average_daily_downloads: 52097
-                        last_year_trend: 52.6
-                        last_year_total: 14790720
-                    -
-                        package_name: zendframework/zend-ldap
-                        package_short_name: zend-ldap
-                        last_month_average_daily_downloads: 2218
-                        last_year_trend: 40.8
-                        last_year_total: 761100
+                        last_month_average_daily_downloads: 47903
+                        last_year_trend: !!float 58
+                        last_year_total: 15400950
                     -
                         package_name: zendframework/zend-mail
                         package_short_name: zend-mail
-                        last_month_average_daily_downloads: 8067
-                        last_year_trend: 40.7
-                        last_year_total: 2093010
+                        last_month_average_daily_downloads: 7641
+                        last_year_trend: !!float 46
+                        last_year_total: 2190000
                     -
                         package_name: zendframework/zend-mime
                         package_short_name: zend-mime
-                        last_month_average_daily_downloads: 8466
-                        last_year_trend: !!float 38
-                        last_year_total: 2216970
+                        last_month_average_daily_downloads: 7994
+                        last_year_trend: 43.7
+                        last_year_total: 2315220
                     -
                         package_name: zendframework/zend-feed
                         package_short_name: zend-feed
-                        last_month_average_daily_downloads: 14123
-                        last_year_trend: 29.5
-                        last_year_total: 4033620
+                        last_month_average_daily_downloads: 12644
+                        last_year_trend: 34.1
+                        last_year_total: 4142550
                     -
-                        package_name: zendframework/zenddiagnostics
-                        package_short_name: zenddiagnostics
-                        last_month_average_daily_downloads: 4882
-                        last_year_trend: 27.9
-                        last_year_total: 1791360
-                    -
-                        package_name: zendframework/zend-config-aggregator
-                        package_short_name: zend-config-aggregator
-                        last_month_average_daily_downloads: 1007
-                        last_year_trend: 22.8
-                        last_year_total: 288360
-                    -
-                        package_name: zendframework/zend-code
-                        package_short_name: zend-code
-                        last_month_average_daily_downloads: 43944
-                        last_year_trend: 22.1
-                        last_year_total: 13427700
-                    -
-                        package_name: zendframework/zend-eventmanager
-                        package_short_name: zend-eventmanager
-                        last_month_average_daily_downloads: 45541
-                        last_year_trend: 19.4
-                        last_year_total: 14020260
-                    -
-                        package_name: zendframework/zend-psr7bridge
-                        package_short_name: zend-psr7bridge
-                        last_month_average_daily_downloads: 5944
-                        last_year_trend: 18.5
-                        last_year_total: 1803570
-                    -
-                        package_name: zendframework/zend-validator
-                        package_short_name: zend-validator
-                        last_month_average_daily_downloads: 18159
-                        last_year_trend: !!float 17
-                        last_year_total: 5737980
-                    -
-                        package_name: zendframework/zend-inputfilter
-                        package_short_name: zend-inputfilter
-                        last_month_average_daily_downloads: 9243
-                        last_year_trend: 16.5
-                        last_year_total: 2824890
-                    -
-                        package_name: zendframework/zend-view
-                        package_short_name: zend-view
-                        last_month_average_daily_downloads: 8333
-                        last_year_trend: 16.5
-                        last_year_total: 2668590
-                    -
-                        package_name: zendframework/zend-expressive-helpers
-                        package_short_name: zend-expressive-helpers
-                        last_month_average_daily_downloads: 1022
-                        last_year_trend: 16.1
-                        last_year_total: 308040
-                    -
-                        package_name: zendframework/zend-escaper
-                        package_short_name: zend-escaper
-                        last_month_average_daily_downloads: 26364
-                        last_year_trend: 15.6
-                        last_year_total: 8077710
-                    -
-                        package_name: zendframework/zend-expressive-template
-                        package_short_name: zend-expressive-template
-                        last_month_average_daily_downloads: 1081
-                        last_year_trend: 15.1
-                        last_year_total: 320190
-                    -
-                        package_name: zendframework/zend-db
-                        package_short_name: zend-db
-                        last_month_average_daily_downloads: 7558
-                        last_year_trend: 14.8
-                        last_year_total: 2290050
-                    -
-                        package_name: zendframework/zend-component-installer
-                        package_short_name: zend-component-installer
-                        last_month_average_daily_downloads: 1586
-                        last_year_trend: 14.6
-                        last_year_total: 483300
-                    -
-                        package_name: zendframework/zend-expressive-router
-                        package_short_name: zend-expressive-router
-                        last_month_average_daily_downloads: 1130
-                        last_year_trend: 14.4
-                        last_year_total: 333960
-                    -
-                        package_name: zendframework/zend-filter
-                        package_short_name: zend-filter
-                        last_month_average_daily_downloads: 11286
-                        last_year_trend: 14.1
-                        last_year_total: 3516870
-                    -
-                        package_name: zendframework/zend-router
-                        package_short_name: zend-router
-                        last_month_average_daily_downloads: 2184
-                        last_year_trend: !!float 14
-                        last_year_total: 679320
-                    -
-                        package_name: zendframework/zend-session
-                        package_short_name: zend-session
-                        last_month_average_daily_downloads: 7046
-                        last_year_trend: 13.7
-                        last_year_total: 2184630
-                    -
-                        package_name: zendframework/zend-stratigility
-                        package_short_name: zend-stratigility
-                        last_month_average_daily_downloads: 1770
-                        last_year_trend: 13.5
-                        last_year_total: 559860
-                    -
-                        package_name: zendframework/zend-hydrator
-                        package_short_name: zend-hydrator
-                        last_month_average_daily_downloads: 10281
-                        last_year_trend: 11.9
-                        last_year_total: 3236580
-                    -
-                        package_name: zendframework/zend-form
-                        package_short_name: zend-form
-                        last_month_average_daily_downloads: 7834
-                        last_year_trend: 11.6
-                        last_year_total: 2546160
-                    -
-                        package_name: zendframework/zend-captcha
-                        package_short_name: zend-captcha
-                        last_month_average_daily_downloads: 5875
-                        last_year_trend: 11.3
-                        last_year_total: 1847400
-                    -
-                        package_name: zendframework/zend-stdlib
-                        package_short_name: zend-stdlib
-                        last_month_average_daily_downloads: 33990
-                        last_year_trend: 11.2
-                        last_year_total: 10742340
-                    -
-                        package_name: zendframework/zend-expressive
-                        package_short_name: zend-expressive
-                        last_month_average_daily_downloads: 1038
-                        last_year_trend: 11.1
-                        last_year_total: 315300
-                    -
-                        package_name: zendframework/zend-mvc-console
-                        package_short_name: zend-mvc-console
-                        last_month_average_daily_downloads: 1033
-                        last_year_trend: 10.8
-                        last_year_total: 313680
+                        package_name: zendframework/zend-ldap
+                        package_short_name: zend-ldap
+                        last_month_average_daily_downloads: 1981
+                        last_year_trend: 32.9
+                        last_year_total: 776430
                     -
                         package_name: zendframework/zend-barcode
                         package_short_name: zend-barcode
-                        last_month_average_daily_downloads: 3580
-                        last_year_trend: !!float 10
-                        last_year_total: 752400
+                        last_month_average_daily_downloads: 3552
+                        last_year_trend: 24.8
+                        last_year_total: 804090
                     -
-                        package_name: zendframework/zend-loader
-                        package_short_name: zend-loader
-                        last_month_average_daily_downloads: 14303
-                        last_year_trend: 9.6
-                        last_year_total: 4676760
+                        package_name: zendframework/zenddiagnostics
+                        package_short_name: zenddiagnostics
+                        last_month_average_daily_downloads: 4895
+                        last_year_trend: 20.5
+                        last_year_total: 1806000
+                    -
+                        package_name: zendframework/zend-code
+                        package_short_name: zend-code
+                        last_month_average_daily_downloads: 42788
+                        last_year_trend: 20.1
+                        last_year_total: 13822950
+                    -
+                        package_name: zendframework/zend-inputfilter
+                        package_short_name: zend-inputfilter
+                        last_month_average_daily_downloads: 8498
+                        last_year_trend: 18.9
+                        last_year_total: 2877600
+                    -
+                        package_name: zendframework/zend-eventmanager
+                        package_short_name: zend-eventmanager
+                        last_month_average_daily_downloads: 44273
+                        last_year_trend: 18.3
+                        last_year_total: 14385750
+                    -
+                        package_name: zendframework/zend-expressive-router
+                        package_short_name: zend-expressive-router
+                        last_month_average_daily_downloads: 1077
+                        last_year_trend: 17.5
+                        last_year_total: 343440
+                    -
+                        package_name: zendframework/zend-expressive-template
+                        package_short_name: zend-expressive-template
+                        last_month_average_daily_downloads: 1051
+                        last_year_trend: 17.5
+                        last_year_total: 330150
+                    -
+                        package_name: zendframework/zend-validator
+                        package_short_name: zend-validator
+                        last_month_average_daily_downloads: 16719
+                        last_year_trend: 16.9
+                        last_year_total: 5838000
+                    -
+                        package_name: zendframework/zend-escaper
+                        package_short_name: zend-escaper
+                        last_month_average_daily_downloads: 23935
+                        last_year_trend: 16.7
+                        last_year_total: 8235630
+                    -
+                        package_name: zendframework/zend-view
+                        package_short_name: zend-view
+                        last_month_average_daily_downloads: 7590
+                        last_year_trend: 16.3
+                        last_year_total: 2709930
+                    -
+                        package_name: zendframework/zend-psr7bridge
+                        package_short_name: zend-psr7bridge
+                        last_month_average_daily_downloads: 5455
+                        last_year_trend: 16.1
+                        last_year_total: 1847790
+                    -
+                        package_name: zendframework/zend-db
+                        package_short_name: zend-db
+                        last_month_average_daily_downloads: 6878
+                        last_year_trend: 15.3
+                        last_year_total: 2335110
+                    -
+                        package_name: zendframework/zend-filter
+                        package_short_name: zend-filter
+                        last_month_average_daily_downloads: 10330
+                        last_year_trend: 14.7
+                        last_year_total: 3576720
+                    -
+                        package_name: zendframework/zend-stratigility
+                        package_short_name: zend-stratigility
+                        last_month_average_daily_downloads: 1725
+                        last_year_trend: 13.8
+                        last_year_total: 573570
+                    -
+                        package_name: zendframework/zend-router
+                        package_short_name: zend-router
+                        last_month_average_daily_downloads: 1999
+                        last_year_trend: 13.1
+                        last_year_total: 691560
+                    -
+                        package_name: zendframework/zend-component-installer
+                        package_short_name: zend-component-installer
+                        last_month_average_daily_downloads: 1441
+                        last_year_trend: 13.1
+                        last_year_total: 492720
+                    -
+                        package_name: zendframework/zend-session
+                        package_short_name: zend-session
+                        last_month_average_daily_downloads: 6478
+                        last_year_trend: 12.2
+                        last_year_total: 2226930
+                    -
+                        package_name: zendframework/zend-form
+                        package_short_name: zend-form
+                        last_month_average_daily_downloads: 7141
+                        last_year_trend: 11.9
+                        last_year_total: 2571750
+                    -
+                        package_name: zendframework/zend-stdlib
+                        package_short_name: zend-stdlib
+                        last_month_average_daily_downloads: 30867
+                        last_year_trend: 11.1
+                        last_year_total: 10907370
+                    -
+                        package_name: zendframework/zend-captcha
+                        package_short_name: zend-captcha
+                        last_month_average_daily_downloads: 5425
+                        last_year_trend: 10.5
+                        last_year_total: 1878180
                     -
                         package_name: zendframework/zend-uri
                         package_short_name: zend-uri
-                        last_month_average_daily_downloads: 13120
-                        last_year_trend: 9.3
-                        last_year_total: 4150020
+                        last_month_average_daily_downloads: 11973
+                        last_year_trend: 10.3
+                        last_year_total: 4205010
                     -
-                        package_name: zendframework/zend-console
-                        package_short_name: zend-console
-                        last_month_average_daily_downloads: 7512
-                        last_year_trend: 8.9
-                        last_year_total: 2407770
+                        package_name: zendframework/zend-hydrator
+                        package_short_name: zend-hydrator
+                        last_month_average_daily_downloads: 9321
+                        last_year_trend: 9.9
+                        last_year_total: 3285330
+                    -
+                        package_name: zendframework/zend-loader
+                        package_short_name: zend-loader
+                        last_month_average_daily_downloads: 13192
+                        last_year_trend: 9.2
+                        last_year_total: 4728750
                     -
                         package_name: zendframework/zend-http
                         package_short_name: zend-http
-                        last_month_average_daily_downloads: 12063
-                        last_year_trend: 8.8
-                        last_year_total: 3950100
-                    -
-                        package_name: zendframework/zend-modulemanager
-                        package_short_name: zend-modulemanager
-                        last_month_average_daily_downloads: 7715
-                        last_year_trend: 8.7
-                        last_year_total: 2472120
-                    -
-                        package_name: zendframework/zend-json
-                        package_short_name: zend-json
-                        last_month_average_daily_downloads: 11741
-                        last_year_trend: 8.5
-                        last_year_total: 3738900
-                    -
-                        package_name: zendframework/zend-di
-                        package_short_name: zend-di
-                        last_month_average_daily_downloads: 6359
-                        last_year_trend: 8.5
-                        last_year_total: 2058240
-                    -
-                        package_name: zendframework/zend-log
-                        package_short_name: zend-log
-                        last_month_average_daily_downloads: 7732
-                        last_year_trend: !!float 8
-                        last_year_total: 2468610
-                    -
-                        package_name: zendframework/zend-soap
-                        package_short_name: zend-soap
-                        last_month_average_daily_downloads: 7972
-                        last_year_trend: !!float 8
-                        last_year_total: 2356050
-                    -
-                        package_name: zendframework/zend-config
-                        package_short_name: zend-config
-                        last_month_average_daily_downloads: 9698
-                        last_year_trend: 7.9
-                        last_year_total: 3153990
+                        last_month_average_daily_downloads: 10962
+                        last_year_trend: !!float 9
+                        last_year_total: 3996870
                     -
                         package_name: zendframework/zendservice-apple-apns
                         package_short_name: zendservice-apple-apns
-                        last_month_average_daily_downloads: 1910
-                        last_year_trend: 7.6
-                        last_year_total: 570660
+                        last_month_average_daily_downloads: 1682
+                        last_year_trend: 8.8
+                        last_year_total: 579390
                     -
-                        package_name: zendframework/zend-server
-                        package_short_name: zend-server
-                        last_month_average_daily_downloads: 7821
-                        last_year_trend: 5.7
-                        last_year_total: 2558940
+                        package_name: zendframework/zend-soap
+                        package_short_name: zend-soap
+                        last_month_average_daily_downloads: 7209
+                        last_year_trend: 8.6
+                        last_year_total: 2401440
+                    -
+                        package_name: zendframework/zend-json
+                        package_short_name: zend-json
+                        last_month_average_daily_downloads: 10874
+                        last_year_trend: 8.2
+                        last_year_total: 3790260
+                    -
+                        package_name: zendframework/zend-console
+                        package_short_name: zend-console
+                        last_month_average_daily_downloads: 6864
+                        last_year_trend: 7.9
+                        last_year_total: 2439180
+                    -
+                        package_name: zendframework/zend-modulemanager
+                        package_short_name: zend-modulemanager
+                        last_month_average_daily_downloads: 7096
+                        last_year_trend: 7.8
+                        last_year_total: 2504850
+                    -
+                        package_name: zendframework/zend-log
+                        package_short_name: zend-log
+                        last_month_average_daily_downloads: 7084
+                        last_year_trend: 7.7
+                        last_year_total: 2498580
+                    -
+                        package_name: zendframework/zend-di
+                        package_short_name: zend-di
+                        last_month_average_daily_downloads: 5828
+                        last_year_trend: !!float 7
+                        last_year_total: 2083170
+                    -
+                        package_name: zendframework/zend-config
+                        package_short_name: zend-config
+                        last_month_average_daily_downloads: 9034
+                        last_year_trend: 6.5
+                        last_year_total: 3194460
                     -
                         package_name: zendframework/zend-mvc
                         package_short_name: zend-mvc
-                        last_month_average_daily_downloads: 7843
-                        last_year_trend: 5.6
-                        last_year_total: 2540220
+                        last_month_average_daily_downloads: 7221
+                        last_year_trend: 5.9
+                        last_year_total: 2565330
+                    -
+                        package_name: zendframework/zend-server
+                        package_short_name: zend-server
+                        last_month_average_daily_downloads: 7277
+                        last_year_trend: 5.3
+                        last_year_total: 2585370
                     -
                         package_name: zendframework/zend-text
                         package_short_name: zend-text
-                        last_month_average_daily_downloads: 6861
-                        last_year_trend: 5.2
-                        last_year_total: 2231160
-                    -
-                        package_name: zendframework/zend-version
-                        package_short_name: zend-version
-                        last_month_average_daily_downloads: 1335
-                        last_year_trend: 4.7
-                        last_year_total: 492420
-                    -
-                        package_name: zendframework/zend-paginator
-                        package_short_name: zend-paginator
-                        last_month_average_daily_downloads: 2909
-                        last_year_trend: 4.1
-                        last_year_total: 977790
+                        last_month_average_daily_downloads: 6264
+                        last_year_trend: 5.3
+                        last_year_total: 2251260
                     -
                         package_name: zendframework/zend-authentication
                         package_short_name: zend-authentication
-                        last_month_average_daily_downloads: 3183
-                        last_year_trend: 3.5
-                        last_year_total: 1023870
-                    -
-                        package_name: zendframework/zend-i18n
-                        package_short_name: zend-i18n
-                        last_month_average_daily_downloads: 8651
-                        last_year_trend: 2.6
-                        last_year_total: 2881170
-                    -
-                        package_name: zendframework/zend-serializer
-                        package_short_name: zend-serializer
-                        last_month_average_daily_downloads: 7869
-                        last_year_trend: 2.3
-                        last_year_total: 2625600
+                        last_month_average_daily_downloads: 2897
+                        last_year_trend: 4.2
+                        last_year_total: 1030740
                     -
                         package_name: zendframework/zendservice-google-gcm
                         package_short_name: zendservice-google-gcm
-                        last_month_average_daily_downloads: 1732
-                        last_year_trend: !!float 2
-                        last_year_total: 525660
+                        last_month_average_daily_downloads: 1528
+                        last_year_trend: !!float 4
+                        last_year_total: 532290
+                    -
+                        package_name: zendframework/zend-paginator
+                        package_short_name: zend-paginator
+                        last_month_average_daily_downloads: 2672
+                        last_year_trend: 3.1
+                        last_year_total: 982230
+                    -
+                        package_name: zendframework/zend-i18n
+                        package_short_name: zend-i18n
+                        last_month_average_daily_downloads: 7857
+                        last_year_trend: 2.7
+                        last_year_total: 2891160
+                    -
+                        package_name: zendframework/zend-version
+                        package_short_name: zend-version
+                        last_month_average_daily_downloads: 1264
+                        last_year_trend: 2.7
+                        last_year_total: 490620
+                    -
+                        package_name: zendframework/zend-serializer
+                        package_short_name: zend-serializer
+                        last_month_average_daily_downloads: 7195
+                        last_year_trend: 2.1
+                        last_year_total: 2634000
                     -
                         package_name: zendframework/zend-permissions-acl
                         package_short_name: zend-permissions-acl
-                        last_month_average_daily_downloads: 2452
-                        last_year_trend: 1.9
-                        last_year_total: 831600
-                    -
-                        package_name: zendframework/zend-math
-                        package_short_name: zend-math
-                        last_month_average_daily_downloads: 8983
-                        last_year_trend: 1.6
-                        last_year_total: 3120480
+                        last_month_average_daily_downloads: 2429
+                        last_year_trend: 1.8
+                        last_year_total: 838110
                     -
                         package_name: zendframework/zend-servicemanager
                         package_short_name: zend-servicemanager
-                        last_month_average_daily_downloads: 13881
-                        last_year_trend: 1.3
-                        last_year_total: 4523940
+                        last_month_average_daily_downloads: 12828
+                        last_year_trend: 0.3
+                        last_year_total: 4565730
+                    -
+                        package_name: zendframework/zend-math
+                        package_short_name: zend-math
+                        last_month_average_daily_downloads: 8152
+                        last_year_trend: !!float 0
+                        last_year_total: 3128190
                     -
                         package_name: zendframework/zend-test
                         package_short_name: zend-test
-                        last_month_average_daily_downloads: 1779
-                        last_year_trend: !!float -0
-                        last_year_total: 629550
+                        last_month_average_daily_downloads: 1729
+                        last_year_trend: -1.1
+                        last_year_total: 630090
                     -
                         package_name: zendframework/zend-tag
                         package_short_name: zend-tag
-                        last_month_average_daily_downloads: 1416
-                        last_year_trend: -0.9
-                        last_year_total: 485940
-                    -
-                        package_name: zendframework/zend-permissions-rbac
-                        package_short_name: zend-permissions-rbac
-                        last_month_average_daily_downloads: 1831
-                        last_year_trend: -1.1
-                        last_year_total: 649860
-                    -
-                        package_name: zendframework/zend-cache
-                        package_short_name: zend-cache
-                        last_month_average_daily_downloads: 4371
-                        last_year_trend: -1.1
-                        last_year_total: 1532040
-                    -
-                        package_name: zendframework/zend-dom
-                        package_short_name: zend-dom
-                        last_month_average_daily_downloads: 1988
-                        last_year_trend: -1.3
-                        last_year_total: 683760
+                        last_month_average_daily_downloads: 1269
+                        last_year_trend: -1.2
+                        last_year_total: 483150
                     -
                         package_name: zendframework/zend-debug
                         package_short_name: zend-debug
-                        last_month_average_daily_downloads: 1900
+                        last_month_average_daily_downloads: 1728
+                        last_year_trend: -1.2
+                        last_year_total: 663420
+                    -
+                        package_name: zendframework/zend-cache
+                        package_short_name: zend-cache
+                        last_month_average_daily_downloads: 4029
                         last_year_trend: -1.4
-                        last_year_total: 667800
+                        last_year_total: 1527030
                     -
                         package_name: zendframework/zendframework1
                         package_short_name: zendframework1
-                        last_month_average_daily_downloads: 2497
+                        last_month_average_daily_downloads: 2265
                         last_year_trend: -1.4
-                        last_year_total: 864570
+                        last_year_total: 861120
                     -
-                        package_name: zendframework/zend-navigation
-                        package_short_name: zend-navigation
-                        last_month_average_daily_downloads: 1710
+                        package_name: zendframework/zend-dom
+                        package_short_name: zend-dom
+                        last_month_average_daily_downloads: 1963
+                        last_year_trend: -1.8
+                        last_year_total: 686070
+                    -
+                        package_name: zendframework/zend-permissions-rbac
+                        package_short_name: zend-permissions-rbac
+                        last_month_average_daily_downloads: 1736
                         last_year_trend: !!float -2
-                        last_year_total: 612450
-                    -
-                        package_name: zendframework/zend-crypt
-                        package_short_name: zend-crypt
-                        last_month_average_daily_downloads: 7881
-                        last_year_trend: -3.5
-                        last_year_total: 2692440
+                        last_year_total: 648840
                     -
                         package_name: zendframework/zend-developer-tools
                         package_short_name: zend-developer-tools
-                        last_month_average_daily_downloads: 1170
+                        last_month_average_daily_downloads: 1056
                         last_year_trend: -3.5
-                        last_year_total: 406710
+                        last_year_total: 403980
+                    -
+                        package_name: zendframework/zend-navigation
+                        package_short_name: zend-navigation
+                        last_month_average_daily_downloads: 1604
+                        last_year_trend: -3.6
+                        last_year_total: 609270
                     -
                         package_name: zendframework/zend-memory
                         package_short_name: zend-memory
-                        last_month_average_daily_downloads: 1886
-                        last_year_trend: -3.6
-                        last_year_total: 669840
+                        last_month_average_daily_downloads: 1713
+                        last_year_trend: -4.3
+                        last_year_total: 663510
                     -
                         package_name: zendframework/zendxml
                         package_short_name: zendxml
-                        last_month_average_daily_downloads: 3119
-                        last_year_trend: -3.9
-                        last_year_total: 1114350
+                        last_month_average_daily_downloads: 2894
+                        last_year_trend: -4.7
+                        last_year_total: 1108410
+                    -
+                        package_name: zendframework/zend-crypt
+                        package_short_name: zend-crypt
+                        last_month_average_daily_downloads: 7186
+                        last_year_trend: -5.1
+                        last_year_total: 2698830
                     -
                         package_name: zendframework/zend-xmlrpc
                         package_short_name: zend-xmlrpc
-                        last_month_average_daily_downloads: 1735
-                        last_year_trend: !!float -4
-                        last_year_total: 641310
+                        last_month_average_daily_downloads: 1641
+                        last_year_trend: -5.6
+                        last_year_total: 635040
                     -
                         package_name: zendframework/zend-i18n-resources
                         package_short_name: zend-i18n-resources
-                        last_month_average_daily_downloads: 1509
-                        last_year_trend: -5.6
-                        last_year_total: 555150
+                        last_month_average_daily_downloads: 1454
+                        last_year_trend: -6.6
+                        last_year_total: 550230
                     -
                         package_name: zendframework/zend-progressbar
                         package_short_name: zend-progressbar
-                        last_month_average_daily_downloads: 1295
-                        last_year_trend: -6.1
-                        last_year_total: 481260
+                        last_month_average_daily_downloads: 1233
+                        last_year_trend: -7.3
+                        last_year_total: 476160
                     -
                         package_name: zendframework/zend-file
                         package_short_name: zend-file
-                        last_month_average_daily_downloads: 1419
-                        last_year_trend: -6.8
-                        last_year_total: 544800
+                        last_month_average_daily_downloads: 1334
+                        last_year_trend: -9.1
+                        last_year_total: 538080
                     -
                         package_name: zendframework/zendframework
                         package_short_name: zendframework
-                        last_month_average_daily_downloads: 2081
-                        last_year_trend: !!float -8
-                        last_year_total: 767100
+                        last_month_average_daily_downloads: 1923
+                        last_year_trend: -9.3
+                        last_year_total: 758280
             -
                 name: Yii
-                vendor_total_last_month: 49190
-                vendor_total_last_year: 16802190
-                average_last_year_trend: 7.7
+                vendor_total_last_month: 47139
+                vendor_total_last_year: 16911990
+                average_last_year_trend: 7.5
                 packages_data:
                     -
                         package_name: yiisoft/yii2-queue
                         package_short_name: yii2-queue
-                        last_month_average_daily_downloads: 2108
-                        last_year_trend: 40.9
-                        last_year_total: 567600
-                    -
-                        package_name: yiisoft/yii
-                        package_short_name: yii
-                        last_month_average_daily_downloads: 1245
-                        last_year_trend: 13.1
-                        last_year_total: 461970
+                        last_month_average_daily_downloads: 1990
+                        last_year_trend: 37.6
+                        last_year_total: 595440
                     -
                         package_name: yiisoft/yii2-httpclient
                         package_short_name: yii2-httpclient
-                        last_month_average_daily_downloads: 2622
-                        last_year_trend: 10.5
-                        last_year_total: 733920
+                        last_month_average_daily_downloads: 2479
+                        last_year_trend: 13.4
+                        last_year_total: 756750
                     -
-                        package_name: yiisoft/yii2-redis
-                        package_short_name: yii2-redis
-                        last_month_average_daily_downloads: 2169
-                        last_year_trend: 10.2
-                        last_year_total: 734760
+                        package_name: yiisoft/yii
+                        package_short_name: yii
+                        last_month_average_daily_downloads: 1225
+                        last_year_trend: 13.1
+                        last_year_total: 463860
                     -
                         package_name: yiisoft/yii2
                         package_short_name: yii2
-                        last_month_average_daily_downloads: 6647
-                        last_year_trend: 9.4
-                        last_year_total: 2190660
+                        last_month_average_daily_downloads: 6444
+                        last_year_trend: 10.4
+                        last_year_total: 2215920
                     -
                         package_name: yiisoft/yii2-jui
                         package_short_name: yii2-jui
-                        last_month_average_daily_downloads: 1946
-                        last_year_trend: 8.4
-                        last_year_total: 668670
+                        last_month_average_daily_downloads: 1871
+                        last_year_trend: !!float 8
+                        last_year_total: 672390
+                    -
+                        package_name: yiisoft/yii2-redis
+                        package_short_name: yii2-redis
+                        last_month_average_daily_downloads: 2107
+                        last_year_trend: 7.8
+                        last_year_total: 740610
                     -
                         package_name: yiisoft/yii2-debug
                         package_short_name: yii2-debug
-                        last_month_average_daily_downloads: 5446
-                        last_year_trend: !!float 8
-                        last_year_total: 1822680
+                        last_month_average_daily_downloads: 5129
+                        last_year_trend: 6.9
+                        last_year_total: 1841100
                     -
                         package_name: yiisoft/yii2-bootstrap
                         package_short_name: yii2-bootstrap
-                        last_month_average_daily_downloads: 5406
-                        last_year_trend: 6.1
-                        last_year_total: 1965270
+                        last_month_average_daily_downloads: 5065
+                        last_year_trend: 4.7
+                        last_year_total: 1962720
                     -
                         package_name: yiisoft/yii2-swiftmailer
                         package_short_name: yii2-swiftmailer
-                        last_month_average_daily_downloads: 5385
-                        last_year_trend: 5.4
-                        last_year_total: 1851030
-                    -
-                        package_name: yiisoft/yii2-composer
-                        package_short_name: yii2-composer
-                        last_month_average_daily_downloads: 6126
-                        last_year_trend: 1.6
-                        last_year_total: 2140650
+                        last_month_average_daily_downloads: 5157
+                        last_year_trend: 4.5
+                        last_year_total: 1862130
                     -
                         package_name: yiisoft/yii2-gii
                         package_short_name: yii2-gii
-                        last_month_average_daily_downloads: 4045
-                        last_year_trend: 1.6
-                        last_year_total: 1491570
+                        last_month_average_daily_downloads: 3900
+                        last_year_trend: 2.7
+                        last_year_total: 1484700
+                    -
+                        package_name: yiisoft/yii2-composer
+                        package_short_name: yii2-composer
+                        last_month_average_daily_downloads: 5851
+                        last_year_trend: 1.1
+                        last_year_total: 2149290
                     -
                         package_name: yiisoft/yii2-imagine
                         package_short_name: yii2-imagine
-                        last_month_average_daily_downloads: 1041
-                        last_year_trend: 1.6
-                        last_year_total: 381060
+                        last_month_average_daily_downloads: 1066
+                        last_year_trend: -0.5
+                        last_year_total: 382710
                     -
                         package_name: yiisoft/yii2-faker
                         package_short_name: yii2-faker
-                        last_month_average_daily_downloads: 3598
-                        last_year_trend: -1.9
-                        last_year_total: 1324410
+                        last_month_average_daily_downloads: 3505
+                        last_year_trend: -2.1
+                        last_year_total: 1318350
                     -
                         package_name: yiisoft/yii2-authclient
                         package_short_name: yii2-authclient
-                        last_month_average_daily_downloads: 1406
-                        last_year_trend: -7.4
-                        last_year_total: 467940
+                        last_month_average_daily_downloads: 1350
+                        last_year_trend: !!float -3
+                        last_year_total: 466020
             -
                 name: Nette
-                vendor_total_last_month: 22075
-                vendor_total_last_year: 7685310
-                average_last_year_trend: 6.3
+                vendor_total_last_month: 22690
+                vendor_total_last_year: 7816230
+                average_last_year_trend: 3.4
                 packages_data:
                     -
                         package_name: nette/php-generator
                         package_short_name: php-generator
-                        last_month_average_daily_downloads: 1741
-                        last_year_trend: 51.5
-                        last_year_total: 644580
+                        last_month_average_daily_downloads: 2060
+                        last_year_trend: 58.4
+                        last_year_total: 668310
                     -
                         package_name: nette/utils
                         package_short_name: utils
-                        last_month_average_daily_downloads: 3653
-                        last_year_trend: 37.8
-                        last_year_total: 1076790
-                    -
-                        package_name: nette/security
-                        package_short_name: security
-                        last_month_average_daily_downloads: 1257
-                        last_year_trend: 5.7
-                        last_year_total: 453150
-                    -
-                        package_name: nette/application
-                        package_short_name: application
-                        last_month_average_daily_downloads: 1416
-                        last_year_trend: 3.4
-                        last_year_total: 514890
+                        last_month_average_daily_downloads: 4033
+                        last_year_trend: 40.8
+                        last_year_total: 1133790
                     -
                         package_name: nette/forms
                         package_short_name: forms
-                        last_month_average_daily_downloads: 1329
-                        last_year_trend: 3.3
-                        last_year_total: 451860
+                        last_month_average_daily_downloads: 1324
+                        last_year_trend: -0.2
+                        last_year_total: 458700
+                    -
+                        package_name: nette/security
+                        package_short_name: security
+                        last_month_average_daily_downloads: 1240
+                        last_year_trend: -0.6
+                        last_year_total: 457470
                     -
                         package_name: nette/component-model
                         package_short_name: component-model
-                        last_month_average_daily_downloads: 1510
-                        last_year_trend: 2.2
-                        last_year_total: 524490
+                        last_month_average_daily_downloads: 1483
+                        last_year_trend: -2.2
+                        last_year_total: 529590
+                    -
+                        package_name: nette/application
+                        package_short_name: application
+                        last_month_average_daily_downloads: 1382
+                        last_year_trend: -2.3
+                        last_year_total: 517770
                     -
                         package_name: nette/finder
                         package_short_name: finder
-                        last_month_average_daily_downloads: 1886
-                        last_year_trend: 1.1
-                        last_year_total: 628110
+                        last_month_average_daily_downloads: 1975
+                        last_year_trend: -2.4
+                        last_year_total: 643500
                     -
                         package_name: nette/http
                         package_short_name: http
-                        last_month_average_daily_downloads: 1584
-                        last_year_trend: -0.4
-                        last_year_total: 561750
+                        last_month_average_daily_downloads: 1552
+                        last_year_trend: -3.9
+                        last_year_total: 564990
                     -
                         package_name: nette/mail
                         package_short_name: mail
-                        last_month_average_daily_downloads: 1495
-                        last_year_trend: !!float -1
-                        last_year_total: 546900
+                        last_month_average_daily_downloads: 1484
+                        last_year_trend: -4.8
+                        last_year_total: 549960
                     -
                         package_name: nette/reflection
                         package_short_name: reflection
-                        last_month_average_daily_downloads: 1483
-                        last_year_trend: -1.1
-                        last_year_total: 563070
+                        last_month_average_daily_downloads: 1425
+                        last_year_trend: -6.9
+                        last_year_total: 563250
                     -
                         package_name: nette/safe-stream
                         package_short_name: safe-stream
-                        last_month_average_daily_downloads: 1035
-                        last_year_trend: -2.8
-                        last_year_total: 388950
+                        last_month_average_daily_downloads: 1033
+                        last_year_trend: -6.9
+                        last_year_total: 389700
                     -
                         package_name: nette/caching
                         package_short_name: caching
-                        last_month_average_daily_downloads: 2432
-                        last_year_trend: !!float -6
-                        last_year_total: 899250
+                        last_month_average_daily_downloads: 2325
+                        last_year_trend: -9.3
+                        last_year_total: 897240
                     -
                         package_name: nette/robot-loader
                         package_short_name: robot-loader
-                        last_month_average_daily_downloads: 1254
-                        last_year_trend: -11.6
-                        last_year_total: 431520
+                        last_month_average_daily_downloads: 1374
+                        last_year_trend: -15.1
+                        last_year_total: 441960
             -
                 name: CakePHP
-                vendor_total_last_month: 29483
-                vendor_total_last_year: 9642630
-                average_last_year_trend: 3.6
+                vendor_total_last_month: 27384
+                vendor_total_last_year: 9741780
+                average_last_year_trend: !!float 1
                 packages_data:
                     -
                         package_name: cakephp/utility
                         package_short_name: utility
-                        last_month_average_daily_downloads: 3289
-                        last_year_trend: 105.1
-                        last_year_total: 760410
+                        last_month_average_daily_downloads: 3367
+                        last_year_trend: 85.5
+                        last_year_total: 836670
                     -
                         package_name: cakephp/chronos
                         package_short_name: chronos
-                        last_month_average_daily_downloads: 11321
-                        last_year_trend: 19.2
-                        last_year_total: 3198780
+                        last_month_average_daily_downloads: 10978
+                        last_year_trend: 18.6
+                        last_year_total: 3332160
                     -
                         package_name: cakephp/debug_kit
                         package_short_name: debug_kit
-                        last_month_average_daily_downloads: 2678
-                        last_year_trend: -13.6
-                        last_year_total: 1020780
+                        last_month_average_daily_downloads: 2414
+                        last_year_trend: -13.2
+                        last_year_total: 1000650
                     -
                         package_name: cakephp/migrations
                         package_short_name: migrations
-                        last_month_average_daily_downloads: 2333
-                        last_year_trend: -13.6
-                        last_year_total: 872220
+                        last_month_average_daily_downloads: 1980
+                        last_year_trend: -13.2
+                        last_year_total: 854880
                     -
                         package_name: cakephp/plugin-installer
                         package_short_name: plugin-installer
-                        last_month_average_daily_downloads: 2324
-                        last_year_trend: -14.1
-                        last_year_total: 883260
+                        last_month_average_daily_downloads: 1969
+                        last_year_trend: -14.2
+                        last_year_total: 864480
                     -
                         package_name: cakephp/bake
                         package_short_name: bake
-                        last_month_average_daily_downloads: 2093
-                        last_year_trend: -14.7
-                        last_year_total: 803610
+                        last_month_average_daily_downloads: 1796
+                        last_year_trend: -15.4
+                        last_year_total: 785790
                     -
                         package_name: cakephp/cakephp-codesniffer
                         package_short_name: cakephp-codesniffer
-                        last_month_average_daily_downloads: 1838
-                        last_year_trend: -17.9
-                        last_year_total: 708030
+                        last_month_average_daily_downloads: 1617
+                        last_year_trend: -18.7
+                        last_year_total: 692460
                     -
                         package_name: cakephp/cakephp
                         package_short_name: cakephp
-                        last_month_average_daily_downloads: 3607
-                        last_year_trend: !!float -22
-                        last_year_total: 1395540
-        updated_at: '2019-06-06 12:17:40'
+                        last_month_average_daily_downloads: 3263
+                        last_year_trend: -21.7
+                        last_year_total: 1374690
+        updated_at: '2019-07-15 21:27:21'
