@@ -15,7 +15,7 @@ I was wondering, **how can you use instant refactoring at your work today with w
 They write about a migration script, that you **write, use once and then delete it**. Like a mandala-script :). 
 In the end, you only commit changed files, but no the script you've made for it.
 
-## Where good to use *Mandala-Script*?
+## Where to use *Mandala-Script*?
   
 - move files from one directory to another
 - rename files from `*.yml` to `*.yaml`
