@@ -312,7 +312,7 @@ New issue - * traveling*:
 
 <br>
 
-Do you have 3 different (see tip #4 again) problems with your code? Create 3 different issues. Don't be afraid, you're not complaining too much.
+hy-use-one-time-migration-scripDo you have 3 different (see tip #4 again) problems with your code? Create 3 different issues. Don't be afraid, you're not complaining too much.
 
 **It's better to have 3 separated issue**, that one is easy-pick, 2nd is a question and 3rd need a test case, that all these at once.
 
