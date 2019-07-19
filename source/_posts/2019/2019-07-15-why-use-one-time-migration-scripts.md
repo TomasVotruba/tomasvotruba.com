@@ -161,7 +161,7 @@ Again, it took us 3-4 iterations to cover all edge cases, but then it was ready 
 
 **If you want to get deeper into this thinking and find more inspiration, read the *Pragmatic Programmer* book**. I personally found useful about 60 % of the content (compared to usual ~30 % in technical books), so <em class="fas fa-2x fa-thumbs-up text-success"></em>.
 
-<img src="/assets/images/posts/2019/one-time/symfony.png" class="img-thumbnail">
+<img src="/assets/images/posts/2019/one-time/pragmatic_programmer.jpg" class="img-thumbnail">
 
 I use this approach in Rector to create new rule + test in 1 file:  
 
