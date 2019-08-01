@@ -2,12 +2,12 @@
 id: 219
 title: "How to Convert Listeners to Subscribers and Reduce your Configs"
 perex: |
-    I wrote [Don't Ever use Symfony Listeners](/blog/2019/05/16/don-t-ever-use-listeners) 2 months ago (if you missed it, be sure to read it to better understand this 2nd part). It got many constructive comments, mostly focused on particular standalone sentences without context. 
+    I wrote [Don't Ever use Symfony Listeners](/blog/2019/05/16/don-t-ever-use-listeners) 2 months ago (if you missed it, be sure to read it to better understand this 2nd part). It got many constructive comments, mostly focused on particular standalone sentences without context.
     <br>
     <br>
     To my surprise, **none of the comments shown that listener beats subscriber**.<br>
-    But what can you do, if you'd like to try subscribers, but currently have over 100 listeners in your application? 
-         
+    But what can you do, if you'd like to try subscribers, but currently have over 100 listeners in your application?
+
 tweet: "New Post on the #php 🐘 blog: How to Convert Listeners to Subscribers and Reduce your Configs          #symfony @rectorphp"
 ---
 
@@ -21,13 +21,13 @@ Google shows that people are confused since 2012, wow!
 <img src="/assets/images/posts/2019/listen-to-sub/quote.png" class="img-thumbnail">
 <img src="/assets/images/posts/2019/listen-to-sub/so.png" class="img-thumbnail">
 
-And this is not related only to big patterns as subscriber or listener. We do such decisions every day - while we code a new feature when we add a new package to `composer.json` when we integrate 4th API to verify payments. 
+And this is not related only to big patterns as subscriber or listener. We do such decisions every day - while we code a new feature when we add a new package to `composer.json` when we integrate 4th API to verify payments.
 
 Next time you'll be standing before 2 options, remember [the least common denominator](/blog/2019/07/01/5-workflow-tips-every-php-developer-should-know/#5-use-elementary-maths-to-become-master) and **make your code more durable** in time.
 
 ## Why Should we Re-Think Listeners in our Code?
 
-If the readable and clear code is not good enough reason for you and you still think 
+If the readable and clear code is not good enough reason for you and you still think
 you should stick with listeners at all cost, maybe the following steps will convince you.
 
 Symfony 3.3 introduced [PSR-4 Autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) of services. In short, it means we don't have register services manually, if they respect PSR-4 (class name ~= file location):
@@ -45,13 +45,13 @@ Symfony 3.3 introduced [PSR-4 Autodiscovery](/blog/2017/05/07/how-to-refactor-to
 
 ## How to Migrate Listeners to Subscribers?
 
-It doesn't apply only to controllers, but to all services, like Event Subscribers: 
+It doesn't apply only to controllers, but to all services, like Event Subscribers:
 
 ```diff
  services:
      _defaults:
          # this helps load event subscribers to EventDistpatcher
-         autoconfigure: true 
+         autoconfigure: true
 
 -    App\EventSubscriber\CoffeeEventSubscriber: ~
 -    App\EventSubscriber\WifiEventSubscriber: ~
@@ -62,7 +62,7 @@ It doesn't apply only to controllers, but to all services, like Event Subscriber
 +        resource: '../src/EventSubscriber'
 ```
 
-Next time we create an event subscriber class, we don't have to [code in config](/blog/2019/02/14/why-config-coding-sucks/) anymore <em class="fas fa-fw fa-lg fa-check text-success"></em>   
+Next time we create an event subscriber class, we don't have to [code in config](/blog/2019/02/14/why-config-coding-sucks/) anymore <em class="fas fa-fw fa-lg fa-check text-success"></em>
 
 We've [reduced cognitive load](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) → code is easier to work with → hiring is faster → we can focus on business and feature value.
 
@@ -81,10 +81,10 @@ Well, what about...
 ```yaml
 services:
     App\EventListener\:
-        resource: '../src/EventListener' 
+        resource: '../src/EventListener'
 ```
 
-Hm, how can be the listener called when it has now an information event? 
+Hm, how can be the listener called when it has now an information event?
 
 That's one of legacy [code smells of tags](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/).
 
@@ -145,7 +145,7 @@ class SomeEventSubscriber implements EventSubscriberInterface
       */
      public static function getSubscribedEvents(): array
      {
-         return ['some_event' => 'methodToBeCalled'];  
+         return ['some_event' => 'methodToBeCalled'];
      }
 
      public function methodToBeCalled()
@@ -161,7 +161,7 @@ Without any config.
 
 The latest [Rector v0.5.8 is shipped](https://twitter.com/rectorphp/status/1152862370630459393) with rule exactly for this kind of migration.
 
-Just register the rule in your `rector.yaml` config to start migration: 
+Just register the rule in your `rector.yaml` config to start migration:
 
 ```yaml
 # rector.yaml
@@ -180,7 +180,7 @@ Run it:
 vendor/bin/rector process app src
 ```
 
-And now all the listeners were migrated to event subscribers <em class="fas fa-fw fa-lg fa-check text-success"></em> 
+And now all the listeners were migrated to event subscribers <em class="fas fa-fw fa-lg fa-check text-success"></em>
 
 ### 4. Update Configs
 
