@@ -12,11 +12,11 @@ You already probably know about instant refactoring and [pattern refactoring](/b
 
 I was wondering, **how can you use instant refactoring at your work today with what you already know?** So did *Andrew Hunt* and *David Thomas*, authors of [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X).
 
-They write about a migration script, that you **write, use once and then delete it**. Like a mandala-script :). 
+They write about a migration script, that you **write, use once and then delete it**. Like a mandala-script :).
 In the end, you only commit changed files, but no the script you've made for it.
 
 ## Where to use *Mandala-Script*?
-  
+
 - move files from one directory to another
 - rename files from `*.yml` to `*.yaml`
 - remove all trailing whitespaces
@@ -41,13 +41,13 @@ Just last month the `KEY=value` vs `KEY: value` lead to 4-5 hours wasted in my c
 <br>
 
 As you can see, the idea is very simple, so let's use it in a simple case.
-I have prepared 2 related examples for you: 
+I have prepared 2 related examples for you:
 
 ## 1. Migrate `app/config` to `config`
 
 In Symfony 4 [base directory were changed](http://fabien.potencier.org/symfony4-directory-structure.html). We need to use new locations. In one project it's simple and better done manually. But we use monorepo and have  20+ `/packages/X/config` directories.
 
-Let's code: 
+Let's code:
 
 ```bash
 composer require symfony/filesystem --dev
@@ -104,7 +104,7 @@ Have you missed a spot? Just reset with:
 git checkout .
 ```
 
-Improve `move_config_to_root.php` and re-run again:  
+Improve `move_config_to_root.php` and re-run again:
 
 ```bash
 php move_config_to_root.php
@@ -114,8 +114,8 @@ It took me around 5 iterations to make it right, but the script was ready in 10 
 
 ## 2. Update `resource:` Paths in `services.yaml`
 
-But since we moved config files one level up, we also need to **update paths inside the files**. How? 
-You can use `str_replace` or (like me) regular expressions. 
+But since we moved config files one level up, we also need to **update paths inside the files**. How?
+You can use `str_replace` or (like me) regular expressions.
 
 ```bash
 composer require nette/utils --dev
@@ -151,8 +151,8 @@ foreach ($configFiles as $configFile) {
 ```diff
  services:
      App\:
--        resource: ..   
-+        resource: ../src   
+-        resource: ..
++        resource: ../src
 ```
 
 Again, it took us 3-4 iterations to cover all edge cases, but then it was ready and bullet-proof.
@@ -163,7 +163,7 @@ Again, it took us 3-4 iterations to cover all edge cases, but then it was ready 
 
 <img src="/assets/images/posts/2019/one-time/pragmatic_programmer.jpg" class="img-thumbnail">
 
-I use this approach in Rector to create new rule + test in 1 file:  
+I use this approach in Rector to create new rule + test in 1 file:
 
 Just edit `create-rector.yaml` (see in [Github repo](https://github.com/rectorphp/rector/blob/master/create-rector.yaml.dist)) and then run:
 
@@ -174,7 +174,7 @@ bin/rector create
 It:
 
 - creates a rule with a basic description
-- creates a test case 
+- creates a test case
 - creates a test fixture
 - adds a rule to a set
 - adds a new namespace to `composer.json` PSR-4 if needed
@@ -184,4 +184,4 @@ The sky is the limit, so fly high :)
 
 <br>
 
-Happy coding! 
+Happy coding!
