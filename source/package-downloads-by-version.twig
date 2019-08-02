@@ -1,16 +1,18 @@
 ---
 layout: "_layouts/default.twig"
 title: "Package Monthly Downloads by Version"
-id: trends
+id: "trends_adoption"
 ---
 
 {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
 {% import "_snippets/macros/trends_macros.twig" as macros %}
 
 <div class="container-fluid" id="blog">
+    {% include "_snippets/stats/stats_menu.twig" %}
+
     <h1>{{ title }}</h1>
 
-    <p class="text-muted mb-4 small">Updated at {{ vendor_packages_by_version.updated_at|date('j. n. H:i') }}</p>
+    <p class="text-muted mb-4 small">Updated at {{ vendor_packages_by_version.updated_at|date('j. n.') }}</p>
 
     <div class="text-center">
         <h3 class="mb-4">Jump to framework</h3>

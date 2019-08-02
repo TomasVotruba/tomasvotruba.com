@@ -1,17 +1,14 @@
 ---
 layout: "_layouts/default.twig"
 title: "PHP Framework Trends"
-id: trends
+id: "trends"
 ---
 
 {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
 {% import "_snippets/macros/trends_macros.twig" as macros %}
 
 <div class="container-fluid">
-    <div class="alert alert-sm alert-info mt-3">
-        Check <a href="/package-downloads-by-version/">Package downloads by version + Adoption</a>
-        and <a href="/testing-packages/">Testing packages</a>
-    </div>
+    {% include "_snippets/stats/stats_menu.twig" %}
 
     <h1>{{ title }}</h1>
 
@@ -28,7 +25,7 @@ id: trends
 
     <p>Is some package missing? Good catch! Read about <a href="#methodology">methodology limits</a> to found out why. Also, <strong>this is work of PHP community</strong>, so if you have idea how to improve this and make it more objective, drop me a <a href="#comments">comment</a>.</p>
 
-    <p class="text-muted mb-4 small">Updated at {{ php_framework_trends.updated_at|date('j. n. H:i') }}</p>
+    <p class="text-muted mb-4 small">Updated at {{ php_framework_trends.updated_at|date('j. n.') }}</p>
 
     <div class="alert alert-sm alert-warning mt-3 mb-4">
         <code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads. 1 download of Laravel packages = 0 downloads of Symfony packages. <strong>See <a href="https://github.com/TomasVotruba/tomasvotruba.cz/blob/master/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of packages cleared this way</a></strong>.
@@ -37,9 +34,7 @@ id: trends
     <table class="table table-bordered table-responsive table-striped" id="table">
         <thead class="thead-inverse">
             <tr>
-                <th class="text-center w-25">
-                    Framework
-                </th>
+                <th class="text-center w-25 align-middle">Framework</th>
                 <th class="text-center w-25">Year Trend</th>
                 <th class="text-center w-25">Monthly Average</th>
                 <th class="text-center w-25">Yearly Total</th>
@@ -51,13 +46,13 @@ id: trends
                 <td>
                     <a href="#{{ framework.name|webalize }}">{{ framework.name }}</a>
                 </td>
-                <td class="text-right">
+                <td class="text-right text-nowrap">
                     {{ macros.trend(framework.average_last_year_trend) }}
                 </td>
-                <td class="text-right">
+                <td class="text-right text-nowrap">
                     {{ macros.number(framework.vendor_total_last_month) }}
                 </td>
-                <td class="text-right">
+                <td class="text-right text-nowrap">
                     {{ macros.number(framework.vendor_total_last_year) }}
                 </td>
 
@@ -102,9 +97,9 @@ id: trends
                             {{ package.package_short_name }}
                         </a>
                     </td>
-                    <td class="text-right">{{ macros.trend(package.last_year_trend) }}</td>
-                    <td class="text-right">{{ macros.number(package.last_month_average_daily_downloads) }}</td>
-                    <td class="text-right">{{ macros.number(package.last_year_total) }}</td>
+                    <td class="text-right text-nowrap">{{ macros.trend(package.last_year_trend) }}</td>
+                    <td class="text-right text-nowrap">{{ macros.number(package.last_month_average_daily_downloads) }}</td>
+                    <td class="text-right text-nowrap">{{ macros.number(package.last_year_total) }}</td>
                 </tr>
             {% endfor %}
         </table>
