@@ -24,7 +24,7 @@ id: trends
     <table class="table table-bordered table-responsive table-striped">
         <thead class="thead-inverse">
             <tr>
-                <th class="text-center w-25">Package</th>
+                <th class="text-center align-middle w-25">Package</th>
                 <th class="text-center w-25">Year Trend</th>
                 <th class="text-center w-25">Monthly Average</th>
                 <th class="text-center w-25">Yearly Total</th>
@@ -38,13 +38,13 @@ id: trends
                         {{ package.package_short_name }}
                     </a>
                 </td>
-                <td class="text-right">
+                <td class="text-right text-nowrap">
                     {{ macros.trend(package.last_year_trend) }}
                 </td>
-                <td class="text-right">
+                <td class="text-right text-nowrap">
                     {{ macros.number(package.last_month_average_daily_downloads) }}
                 </td>
-                <td class="text-right">
+                <td class="text-right text-nowrap">
                     {{ macros.number(package.last_year_total) }}
                 </td>
             </tr>

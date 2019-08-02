@@ -37,9 +37,7 @@ id: trends
     <table class="table table-bordered table-responsive table-striped" id="table">
         <thead class="thead-inverse">
             <tr>
-                <th class="text-center w-25">
-                    Framework
-                </th>
+                <th class="text-center w-25 align-middle">Framework</th>
                 <th class="text-center w-25">Year Trend</th>
                 <th class="text-center w-25">Monthly Average</th>
                 <th class="text-center w-25">Yearly Total</th>
@@ -51,13 +49,13 @@ id: trends
                 <td>
                     <a href="#{{ framework.name|webalize }}">{{ framework.name }}</a>
                 </td>
-                <td class="text-right">
+                <td class="text-right text-nowrap">
                     {{ macros.trend(framework.average_last_year_trend) }}
                 </td>
-                <td class="text-right">
+                <td class="text-right text-nowrap">
                     {{ macros.number(framework.vendor_total_last_month) }}
                 </td>
-                <td class="text-right">
+                <td class="text-right text-nowrap">
                     {{ macros.number(framework.vendor_total_last_year) }}
                 </td>
 
@@ -102,9 +100,9 @@ id: trends
                             {{ package.package_short_name }}
                         </a>
                     </td>
-                    <td class="text-right">{{ macros.trend(package.last_year_trend) }}</td>
-                    <td class="text-right">{{ macros.number(package.last_month_average_daily_downloads) }}</td>
-                    <td class="text-right">{{ macros.number(package.last_year_total) }}</td>
+                    <td class="text-right text-nowrap">{{ macros.trend(package.last_year_trend) }}</td>
+                    <td class="text-right text-nowrap">{{ macros.number(package.last_month_average_daily_downloads) }}</td>
+                    <td class="text-right text-nowrap">{{ macros.number(package.last_year_total) }}</td>
                 </tr>
             {% endfor %}
         </table>
