@@ -10,7 +10,43 @@ parameters:
         doctrine: Doctrine
 
     excluded_framework_packages:
+        # out there, but too fresh (remove in 2020)
+        - 'symfony/security-guard'
+        - 'symfony/security-http'
+        - 'symfony/security-csrf'
+        # framework irrelevant
         - 'symfony/lts'
+        - 'symfony/thanks'
+        # rather "utils" packages
+        - 'symfony/polyfill-php54'
+        - 'symfony/polyfill-php55'
+        - 'symfony/polyfill-php56'
+        - 'symfony/polyfill-php70'
+        - 'symfony/polyfill-php72'
+        - 'symfony/polyfill-apcu'
+        - 'symfony/polyfill-util'
+        - 'symfony/polyfill-iconv'
+        - 'symfony/polyfill-ctype'
+        - 'symfony/polyfill-mbstring'
+        - 'symfony/polyfill-intl-icu'
+        # pseudo-packages
+        - 'symfony/apache-pack'
+        - 'symfony/serializer-pack'
+        - 'symfony/debug-pack'
+        - 'symfony/profiler-pack'
+        - 'symfony/orm-pack'
+        - 'symfony/webpack-encore-pack'
+        # deprecated
+        - 'symfony/class-loader'
+        - 'symfony/assetic-bundle'
+        # specific integrations
+        - 'doctrine/doctrine-module'
+        - 'doctrine/doctrine-orm-module'
+        - 'doctrine/doctrine-fixtures-bundle'
+        - 'doctrine/doctrine-bundle'
+        - 'doctrine/doctrine-migrations-bundle'
+        - 'doctrine/doctrine-cache-bundle'
+        - 'doctrine/mongodb-odm-bundle'
 
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:
@@ -22,12 +58,5 @@ parameters:
         # single monorepos
         zendframework: Zend
         yiisoft: Yii
-        # microframeworks
-        slim: Slim
         # db "frameworks"
         doctrine: Doctrine
-
-        # didn't pass the 1000 daily downloads minimal entrance
-        # codeigniter: Code Igniter (900)
-        # fuel: FuelPHP (618)
-        # phalcon: Phalcon (15)

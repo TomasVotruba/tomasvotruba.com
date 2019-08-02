@@ -21,7 +21,14 @@
         "searching": false,
         "paging": false,
         "info": false,
-        "order": [[1, "desc"]]
+        "order": [[1, "desc"]],
+        // see https://datatables.net/examples/advanced_init/sort_direction_control.html
+        "aoColumns": [
+            null,
+            { "orderSequence": [ "desc", "asc" ] },
+            { "orderSequence": [ "desc", "asc" ] },
+            { "orderSequence": [ "desc", "asc" ] }
+        ]
     });
 </script>
 

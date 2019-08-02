@@ -13,14 +13,14 @@ final class VendorPackagesProvider
     private const URL_VENDOR_PACKAGES = 'https://packagist.org/packages/list.json?vendor=%s';
 
     /**
-     * @var FileToJsonLoader
-     */
-    private $fileToJsonLoader;
-
-    /**
      * @var string[]
      */
     private $excludedFrameworkPackages = [];
+
+    /**
+     * @var FileToJsonLoader
+     */
+    private $fileToJsonLoader;
 
     /**
      * @param string[] $excludedFrameworkPackages
@@ -52,8 +52,6 @@ final class VendorPackagesProvider
         }
 
         // exclude undesired packages
-        $packageNames = array_diff($packageNames, $this->excludedFrameworkPackages);
-
-        return $packageNames;
+        return array_diff($packageNames, $this->excludedFrameworkPackages);
     }
 }

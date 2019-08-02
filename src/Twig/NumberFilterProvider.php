@@ -13,13 +13,21 @@ final class NumberFilterProvider implements FilterProviderInterface
     {
         return [
             /** @var mixed $talksByTopic */
-            'millions' => function (int $number) {
+            'millions' => function (int $number): string {
                 if ($number > 10 ** 5) {
-                    return round($number / (10 ** 6), 1) . ' mil.';
+                    return $this->formatNumber($number / (10 ** 6)) . ' mil.';
                 }
 
-                return number_format($number, 0, '', ' ');
-            }
+                return $this->formatNumber($number);
+            },
         ];
+    }
+
+    /**
+     * @param float|int $number
+     */
+    private function formatNumber($number): string
+    {
+        return number_format($number, 1, '.', ' ');
     }
 }
