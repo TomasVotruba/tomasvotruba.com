@@ -473,6 +473,10 @@ nav ul li#top-menu-search {
     text-align: center;
 }
 
+#top-menu-search-mobile form {
+    width: 100%;
+}
+
 .subline, .subtitle {
     font-size: 1.4em;
     line-height: 1.8em;

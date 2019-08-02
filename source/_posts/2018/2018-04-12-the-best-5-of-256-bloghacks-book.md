@@ -67,7 +67,7 @@ Static websites are fast, simple, easy for your fan/critics-base to work with an
 
 ## 4. Put a Search on Website
 
-This was one of the biggest fails on my blog. Imagine you've read about "symfony controller service something", you liked it, but you don't remember the exact title of the post. My blog has every post (apart [Czech](/czech-posts) and [deprecated ones](/deprecated-posts)) listed on the main page, with no paging, so you can just use *Ctrl + F* to find... **well that just sucks, right?**
+This was one of the biggest fails on my blog. Imagine you've read about "symfony controller service something", you liked it, but you don't remember the exact title of the post. My blog has all posts on the main page, with no paging, so you can just use *Ctrl + F* to find... **well that just sucks, right?**
 
 Thanks to Yegor and Vojta I finally [added Google Search](https://github.com/TomasVotruba/tomasvotruba.cz/pull/286) on the homepage, so you can type "symfony controller service", hit *Enter* and [get results you need](https://www.google.cz/search?sitesearch=tomasvotruba.cz&q=%22symfony+controller+service).
 

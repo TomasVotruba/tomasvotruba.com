@@ -65,38 +65,33 @@ id: blog
     </div>
 
     <div class="row mb-3 mt-5">
-        <div class="col-12 col-md-6">
+        <div class="col-12">
             <div class="card mb-4">
                 <div class="card-body">
                     <p>
-                        This is the last {{ post_homepage_limit }} posts.
-                        <strong>Do you look for something specific?</strong>
+                        This is the last {{ post_homepage_limit }} posts I wrote.
+                        <strong>Haven't you find what you've been looking for?</strong>
                     </p>
 
-                    <p>Use <a href="#">search</a> in top right menu or archives:</p>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <p>Type it here and hit enter...</p>
 
-                    <ul>
-                        {% for year in (currentYear-1)..2016 %}
-                            <li><a href="/archive/{{ year }}">posts from {{ year }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
+                            <div>
+                                {% include "_snippets/search_form.twig" %}
+                            </div>
+                        </div>
 
-        <div class="col-12 col-md-6">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <p>
-                        <strong>Can't you find the post that was here before?</strong>
-                    </p>
+                        <div class="col-6">
+                            <p>...or explore the archives</p>
 
-                    <ul>
-                        <li><a href="/deprecated-posts">Deprecated posts</a></li>
-                        <li><a href="/czech-posts">Czech posts</a></li>
-                    </ul>
-
-                    <p>There is also list of <a href="/updated-posts">recently updated posts</a></p>
+                            <ul>
+                                {% for year in (currentYear-1)..2016 %}
+                                    <li><a href="/archive/{{ year }}">posts from {{ year }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

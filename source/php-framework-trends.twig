@@ -12,6 +12,8 @@ id: "trends"
 
     <h1>{{ title }}</h1>
 
+    <p class="text-muted mb-4 small">Updated at {{ php_framework_trends.updated_at|date('j. n.') }}</p>
+
     <p>
         <a href="/{{ posts[202]|link }}/">Why was this table created?</a>
     <p>
@@ -24,8 +26,6 @@ id: "trends"
         <strong>The absolute numbers show the success in history, the trends show success in recent times</strong>. There is no clear formula to say what combination or number is the best - it's up to you. Often the packages are sort by absolute numbers, which show always the same single one framework, so this table is sort by trends.</p>
 
     <p>Is some package missing? Good catch! Read about <a href="#methodology">methodology limits</a> to found out why. Also, <strong>this is work of PHP community</strong>, so if you have idea how to improve this and make it more objective, drop me a <a href="#comments">comment</a>.</p>
-
-    <p class="text-muted mb-4 small">Updated at {{ php_framework_trends.updated_at|date('j. n.') }}</p>
 
     <div class="alert alert-sm alert-warning mt-3 mb-4">
         <code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads. 1 download of Laravel packages = 0 downloads of Symfony packages. <strong>See <a href="https://github.com/TomasVotruba/tomasvotruba.cz/blob/master/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of packages cleared this way</a></strong>.
