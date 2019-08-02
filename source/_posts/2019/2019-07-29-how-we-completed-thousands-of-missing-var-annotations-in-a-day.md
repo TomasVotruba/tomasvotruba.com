@@ -10,7 +10,7 @@ tweet_image: "/assets/images/posts/2019/var/doctrine.png"
 ---
 
 This post has 2 parts:
- 
+
 - 1st is about how we use other parts of class to infer `@var` types of used properties - **good for analytical thinking and pattern-algorithms**
 - 2nd is about [how to do it yourself](#do-it-yourself) - **good for your project**
 
@@ -37,7 +37,7 @@ class ProductController
 
 ### 1. From Constructor Injection Assign
 
-This is the most common case in most projects: 
+This is the most common case in most projects:
 
 ```php
 <?php
@@ -45,11 +45,11 @@ This is the most common case in most projects:
 class ProductController
 {
     private $productRepository;
-   
-    public function __construct(ProductRepository $productRepository)  
+
+    public function __construct(ProductRepository $productRepository)
     {
         // ah, it's a "ProductRepository"
-        $this->productRepository = $productRepository; 
+        $this->productRepository = $productRepository;
     }
 }
 ```
@@ -83,18 +83,18 @@ Sometimes constructor is for setting default values:
 class HomeController
 {
     private $maxNumberOfGirlfriends;
-   
-    public function __construct()  
+
+    public function __construct()
     {
         // ah, it's an "int"
-        $this->maxNumberOfGirlfriends = 1; 
+        $this->maxNumberOfGirlfriends = 1;
     }
 }
 ```
 
 So far quite simple, right? 3 files are ok, but imagine doing this for 2500+ properties 🧠🤯
 
-### 4. From Setters and Getters  
+### 4. From Setters and Getters
 
 Some object don't have constructor injection, or are missing the information there, e.g.:
 
@@ -127,7 +127,7 @@ class Product
     {
          $this->name = $name;
     }
-    
+
     public function getName(): string
     {
         // now we know it's a "string"
@@ -144,9 +144,9 @@ Although it could be also non-string value:
 $product = new Product(5); // this passes without error
 ```
 
-But the working code `getName(): string` says **it must be `string`**, so we can rely on it. 
+But the working code `getName(): string` says **it must be `string`**, so we can rely on it.
 
-Also, this is just `@var` annotation not [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds/), so the change cannot break anything. 
+Also, this is just `@var` annotation not [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds/), so the change cannot break anything.
 
 ### 5. From Nullables
 
@@ -160,15 +160,15 @@ class Product
     private $name;
 
     /**
-     * @param string $name 
+     * @param string $name
      */
     public function __construct($name = null)
     {
          $this->name = $name;
     }
-    
+
     /**
-     * @param $name  
+     * @param $name
      */
     public function setName($name)
     {
@@ -176,7 +176,7 @@ class Product
     }
 
     /**
-     * @return string   
+     * @return string
      */
     public function getName()
     {
@@ -219,7 +219,7 @@ Before we get into Doctrine entities, let's get relaxed with a simple case:
 class Victim
 {
      private $name = 'Tomas';
-     
+
      public function getName()
      {
          return $this->name;
@@ -227,14 +227,14 @@ class Victim
 }
 ```
 
-I don't have to tell you the `$name` property is always `string`. 
+I don't have to tell you the `$name` property is always `string`.
 
 
 ### 7. From all the Other Assigns
 
 What if we have no constructor, no getters, no setters, no default values... are we lost?
 
-This actually happens more often than you think. Take this as just an example, in reality it could be much better, but is often much worse: 
+This actually happens more often than you think. Take this as just an example, in reality it could be much better, but is often much worse:
 
 ```php
 <?php
@@ -242,9 +242,9 @@ This actually happens more often than you think. Take this as just an example, i
 class ProductController
 {
     private $activeProduct;
-    
+
     /**
-     * @var ProductRepository   
+     * @var ProductRepository
      */
     private $productRepository;
 
@@ -255,16 +255,16 @@ class ProductController
         } else {
             $this->activeProduct = $this->productRepository->getMainProduct();
         }
-        
+
         // ...
     }
 }
 ```
 
-This is hell to do manually. Not in 5 lines-long method, but in 30, 60 or even 100 lines in one method (don't forget you have to deliver feature and don't have paid time to play with stupid useless `@var` annotation). 
+This is hell to do manually. Not in 5 lines-long method, but in 30, 60 or even 100 lines in one method (don't forget you have to deliver feature and don't have paid time to play with stupid useless `@var` annotation).
 
 The process has just 2 step:
-  
+
 - go through all `$this->activeProduct = X`
 - resolve type for the `X` expression
 
@@ -285,7 +285,7 @@ And that's it:
  }
 ```
 
-We could argue if the `$activeProduct` could be also `null`. It can, but in our case base it never was. But if you find such a case that is invalid for your code, [please report an issue](https://github.com/rectorphp/rector/issues/new?template=1_Bug_report.md) to improve this Rector rule. 
+We could argue if the `$activeProduct` could be also `null`. It can, but in our case base it never was. But if you find such a case that is invalid for your code, [please report an issue](https://github.com/rectorphp/rector/issues/new?template=1_Bug_report.md) to improve this Rector rule.
 
 ### 8. From Doctrine Column Annotations
 
@@ -305,7 +305,7 @@ class Product
      * @ORM\Column(type="text", nullable=true)
      */
     private $content;
-} 
+}
 ```
 
 Pretty easy, right?
@@ -397,7 +397,7 @@ composer require rector/rector --dev
 composer require symplify/easy-coding-standard --dev
 ```
 
-**Run ECS to check missing `@var` annotations at properties** 
+**Run ECS to check missing `@var` annotations at properties**
 
 ```yaml
 # ecs.yaml
@@ -437,7 +437,7 @@ services:
 **And finally run it in your code**
 
 ```bash
-vendor/bin/rector process src tests 
+vendor/bin/rector process src tests
 ```
 
 Then run coding standard again, to see how useful Rector was:
@@ -446,9 +446,9 @@ Then run coding standard again, to see how useful Rector was:
 vendor/bin/ecs check src tests
 ```
 
-- 0 errors? Congrats and enjoy your vacation :) 
+- 0 errors? Congrats and enjoy your vacation :)
 
-- 1+ errors? Create an [issue with missed PHP code snippet](https://github.com/rectorphp/rector/issues/new?template=1_Bug_report.md). We'll look at it and add support for it to Rector if possible. 
+- 1+ errors? Create an [issue with missed PHP code snippet](https://github.com/rectorphp/rector/issues/new?template=1_Bug_report.md). We'll look at it and add support for it to Rector if possible.
 
 <br>
 
