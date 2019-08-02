@@ -8,10 +8,7 @@ id: trends
 {% import "_snippets/macros/trends_macros.twig" as macros %}
 
 <div class="container-fluid">
-    <div class="alert alert-sm alert-info mt-3">
-        Check <a href="/package-downloads-by-version/">Package downloads by version + Adoption</a>
-        and <a href="/testing-packages/">Testing packages</a>
-    </div>
+    {% include "_snippets/stats/stats_menu.twig" %}
 
     <h1>{{ title }}</h1>
 

@@ -8,6 +8,8 @@ id: trends
 {% import "_snippets/macros/trends_macros.twig" as macros %}
 
 <div class="container-fluid">
+    {% include "_snippets/stats/stats_menu.twig" %}
+
     <h1>{{ title }}</h1>
 
     <p class="text-muted mb-4 small">Updated at {{ testing_packages.updated_at|date('j. n. H:i') }}</p>
