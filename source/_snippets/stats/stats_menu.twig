@@ -1,11 +1,13 @@
 <div class="btn-group mt-3 d-flex">
-    <a class="btn btn-info w-100" href="/php-framework-trends">
-        Framework Trends
+    <a class="btn w-100 {% if id == "trends" %}btn-outline-info{% else %}btn-info{% endif %}" href="/php-framework-trends">
+        <span class="hidden-sm-down">Framework </span>Trends
     </a>
-    <a class="btn btn-info w-100" href="/package-downloads-by-version/">
-        Framework Versions & Adoption
+
+    <a class="btn  {% if id == "trends_adoption" %}btn-outline-info{% else %}btn-info{% endif %} w-100" href="/package-downloads-by-version/">
+        <span class="hidden-sm-down">Framework </span>Versions Adoption
     </a>
-    <a class="btn btn-info w-100" href="/testing-packages/">
+
+    <a class="btn  {% if id == "trends_testing_packages" %}btn-outline-info{% else %}btn-info{% endif %} w-100" href="/testing-packages/">
         Testing Packages
     </a>
 </div>
