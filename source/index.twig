@@ -65,7 +65,7 @@ id: blog
     </div>
 
     <div class="row mb-3 mt-5">
-        <div class="col-12 col-md-6">
+        <div class="col-12">
             <div class="card mb-4">
                 <div class="card-body">
                     <p>
@@ -79,21 +79,6 @@ id: blog
                         {% for year in (currentYear-1)..2016 %}
                             <li><a href="/archive/{{ year }}">posts from {{ year }}</a></li>
                         {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <p>
-                        <strong>Can't you find the post that was here before?</strong>
-                    </p>
-
-                    <ul>
-                        <li><a href="/deprecated-posts">Deprecated posts</a></li>
-                        <li><a href="/czech-posts">Czech posts</a></li>
                     </ul>
                 </div>
             </div>
