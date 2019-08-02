@@ -35,7 +35,8 @@ id: "trends"
                 <th class="text-center w-25 align-middle">Framework</th>
                 <th class="text-center w-25">Year Trend</th>
 {#                <th class="text-center w-25">Monthly Average</th>#}
-                <th class="text-center w-25">Yearly Total</th>
+                <th class="text-center w-25">Last 12 Months</th>
+                <th class="text-center w-25">Previous 12 Months</th>
             </tr>
         </thead>
 
@@ -64,9 +65,7 @@ id: "trends"
         <hr>
 
         <div class="text-center mb-5">
-            <h2 id="{{ framework.name|webalize }}">
-                {{ framework.name }}
-            </h2>
+            <h2 id="{{ framework.name|webalize }}">{{ framework.name }}</h2>
 
             <p>
                 <a href="#main_table">Jump up ↑</a>
@@ -76,16 +75,10 @@ id: "trends"
         <table class="table table-bordered mt-4 mt-4 sortable_table" id="{{ framework.name|webalize }}">
             <thead class="thead-inverse">
                 <tr>
-                    <th class="w-25 align-middle">Package</th>
-                    <th class="text-center w-25 align-middle">
-                        Year Trend
-                    </th>
-{#                    <th class="text-center w-25 align-middle">#}
-{#                        Last month Daily#}
-{#                    </th>#}
-                    <th class="text-center w-25 align-middle">
-                        Total Last Year
-                    </th>
+                    <th class="text-center w-25 align-middle">Package</th>
+                    <th class="text-center w-25 align-middle">Year Trend</th>
+                    <th class="text-center w-25 align-middle">Last 12 Months</th>
+                    <th class="text-center w-25 align-middle">Previous 12 Months</th>
                 </tr>
             </thead>
             {% for package in framework.packages_data %}

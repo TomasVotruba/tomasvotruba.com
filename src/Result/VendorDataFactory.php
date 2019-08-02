@@ -29,6 +29,9 @@ final class VendorDataFactory
      */
     private $packageDataFactory;
 
+    /**
+     * @param string[] $excludedFrameworkPackages
+     */
     public function __construct(
         SymfonyStyle $symfonyStyle,
         VendorPackagesProvider $vendorPackagesProvider,
@@ -54,17 +57,12 @@ final class VendorDataFactory
             $vendorPackageNames = $this->vendorPackagesProvider->provideForVendor($vendorName);
             $packagesData = $this->packageDataFactory->createPackagesData($vendorPackageNames);
 
-            $vendorTotalLastMonth = $this->arrayUtils->getArrayKeySum(
-                $packagesData,
-                'last_month_average_daily_downloads'
-            );
             $vendorTotalLastYear = $this->arrayUtils->getArrayKeySum($packagesData, 'last_year_total');
             $averageLastYearTrend = $this->arrayUtils->getArrayKeyAverage($packagesData, 'last_year_trend');
 
             $vendorData[$vendorName] = [
                 'name' => $frameworkName,
                 // totals
-                'vendor_total_last_month' => $vendorTotalLastMonth,
                 'vendor_total_last_year' => $vendorTotalLastYear,
                 'average_last_year_trend' => $averageLastYearTrend,
                 // packages details

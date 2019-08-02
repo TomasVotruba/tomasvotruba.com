@@ -35,11 +35,12 @@ final class Statistics
     /**
      * @param int[] $values
      */
-    public function resolveTotal(array $values, int $months): int
+    public function resolveTotal(array $values, int $months, int $offset): int
     {
         $total = 0;
 
-        for ($i = 0; $i < $months; $i++) {
+        $end = $offset + $months;
+        for ($i = $offset; $i < $end; $i++) {
             if (! isset($values[$i])) {
                 break;
             }

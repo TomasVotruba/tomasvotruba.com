@@ -9,6 +9,9 @@ parameters:
         yiisoft: Yii
         doctrine: Doctrine
 
+    excluded_framework_packages:
+        - 'symfony/lts'
+
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:
         nette: Nette

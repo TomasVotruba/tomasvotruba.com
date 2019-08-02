@@ -11,7 +11,7 @@
 {% endmacro %}
 
 {% macro number(value) %}
-    {{ value|number_format(0, ',', ' ') }}
+    {{ value|millions}}
 {% endmacro %}
 
 {% macro adoption(value) %}

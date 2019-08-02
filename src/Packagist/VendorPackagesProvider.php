@@ -17,9 +17,18 @@ final class VendorPackagesProvider
      */
     private $fileToJsonLoader;
 
-    public function __construct(FileToJsonLoader $fileToJsonLoader)
+    /**
+     * @var string[]
+     */
+    private $excludedFrameworkPackages = [];
+
+    /**
+     * @param string[] $excludedFrameworkPackages
+     */
+    public function __construct(FileToJsonLoader $fileToJsonLoader, array $excludedFrameworkPackages)
     {
         $this->fileToJsonLoader = $fileToJsonLoader;
+        $this->excludedFrameworkPackages = $excludedFrameworkPackages;
     }
 
     /**
@@ -41,6 +50,9 @@ final class VendorPackagesProvider
         if ($vendorName === 'illuminate') {
             $packageNames[] = 'laravel/framework';
         }
+
+        // exclude undesired packages
+        $packageNames = array_diff($packageNames, $this->excludedFrameworkPackages);
 
         return $packageNames;
     }
