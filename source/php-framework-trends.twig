@@ -23,9 +23,7 @@ id: "trends"
     </p>
 
     <p>
-        <strong>The absolute numbers show the success in history, the trends show success in recent times</strong>. There is no clear formula to say what combination or number is the best - it's up to you. Often the packages are sort by absolute numbers, which show always the same single one framework, so this table is sort by trends.</p>
-
-    <p>Is some package missing? Good catch! Read about <a href="#methodology">methodology limits</a> to found out why. Also, <strong>this is work of PHP community</strong>, so if you have idea how to improve this and make it more objective, drop me a <a href="#comments">comment</a>.</p>
+        <strong>The absolute numbers show the success in history, the trends show success in recent times</strong>. There is no clear formula that says what is the best - it's up to you.</p>
 
     <div class="alert alert-sm alert-warning mt-3 mb-4">
         <code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads. 1 download of Laravel packages = 0 downloads of Symfony packages. <strong>See <a href="https://github.com/TomasVotruba/tomasvotruba.cz/blob/88cd6f3c8ae14ec9770f38bfea6300f88089def7/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of packages cleared this way</a></strong>.
@@ -78,14 +76,14 @@ id: "trends"
         <table class="table table-bordered mt-4 mt-4" id="{{ framework.name|webalize }}">
             <thead class="thead-inverse">
                 <tr>
-                    <th class="w-25">Package</th>
-                    <th class="text-center w-25">
-                        Trend Last Year
+                    <th class="w-25 align-middle">Package</th>
+                    <th class="text-center w-25 align-middle">
+                        Year Trend
                     </th>
-                    <th class="text-center w-25">
+                    <th class="text-center w-25 align-middle">
                         Last month Daily
                     </th>
-                    <th class="text-center w-25">
+                    <th class="text-center w-25 align-middle">
                         Total Last Year
                     </th>
                 </tr>
@@ -114,13 +112,9 @@ id: "trends"
 
         <li>
             packages with <strong>less than 1000 downloads daily</strong> - not relevant compared in this scale
-
-            <ul>
-                <li>this limit was not passed by CodeIgniter, so it's excluded for now</li>
-            </ul>
         </li>
-        <li>packages with <strong>history shorter than 12 months</strong> - they created extreme trends</li>
-        <li>packages with <strong>year trend bigger than 300 %</strong> - they're caused either by "hype" effect, that distorted average vendor trend, or by new interdependency</li>
+        <li>packages with <strong>history shorter than 12 months</strong></li>
+        <li>packages with <strong>year trend bigger than 300 %</strong> - they're caused by new interdependency from another framework's package that is already popular</li>
         <li><code>phpstan/phpstan</code> and <code>friendsofphp/php-cs-fixer</code> downloads are cleaned from statistics to prevent miss-leading numbers</li>
     </ul>
 
