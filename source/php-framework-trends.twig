@@ -29,12 +29,12 @@ id: "trends"
         <code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads. 1 download of Laravel packages = 0 downloads of Symfony packages. <strong>See <a href="https://github.com/TomasVotruba/tomasvotruba.cz/blob/88cd6f3c8ae14ec9770f38bfea6300f88089def7/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of packages cleared this way</a></strong>.
     </div>
 
-    <table class="table table-bordered table-responsive table-striped" id="table">
+    <table class="table table-bordered table-responsive table-striped sortable_table" id="main_table">
         <thead class="thead-inverse">
             <tr>
                 <th class="text-center w-25 align-middle">Framework</th>
                 <th class="text-center w-25">Year Trend</th>
-                <th class="text-center w-25">Monthly Average</th>
+{#                <th class="text-center w-25">Monthly Average</th>#}
                 <th class="text-center w-25">Yearly Total</th>
             </tr>
         </thead>
@@ -44,13 +44,13 @@ id: "trends"
                 <td>
                     <a href="#{{ framework.name|webalize }}">{{ framework.name }}</a>
                 </td>
-                <td class="text-right text-nowrap">
+                <td class="text-right text-nowrap" data-order="{{ framework.average_last_year_trend }}">
                     {{ macros.trend(framework.average_last_year_trend) }}
                 </td>
-                <td class="text-right text-nowrap">
-                    {{ macros.number(framework.vendor_total_last_month) }}
-                </td>
-                <td class="text-right text-nowrap">
+{#                <td class="text-right text-nowrap">#}
+{#                    {{ macros.number(framework.vendor_total_last_month) }}#}
+{#                </td>#}
+                <td class="text-right text-nowrap" data-order="{{ framework.vendor_total_last_year }}">
                     {{ macros.number(framework.vendor_total_last_year) }}
                 </td>
 
@@ -69,20 +69,20 @@ id: "trends"
             </h2>
 
             <p>
-                <a href="#table">Jump up ↑</a>
+                <a href="#main_table">Jump up ↑</a>
             </p>
         </div>
 
-        <table class="table table-bordered mt-4 mt-4" id="{{ framework.name|webalize }}">
+        <table class="table table-bordered mt-4 mt-4 sortable_table" id="{{ framework.name|webalize }}">
             <thead class="thead-inverse">
                 <tr>
                     <th class="w-25 align-middle">Package</th>
                     <th class="text-center w-25 align-middle">
                         Year Trend
                     </th>
-                    <th class="text-center w-25 align-middle">
-                        Last month Daily
-                    </th>
+{#                    <th class="text-center w-25 align-middle">#}
+{#                        Last month Daily#}
+{#                    </th>#}
                     <th class="text-center w-25 align-middle">
                         Total Last Year
                     </th>
@@ -95,9 +95,9 @@ id: "trends"
                             {{ package.package_short_name }}
                         </a>
                     </td>
-                    <td class="text-right text-nowrap">{{ macros.trend(package.last_year_trend) }}</td>
-                    <td class="text-right text-nowrap">{{ macros.number(package.last_month_average_daily_downloads) }}</td>
-                    <td class="text-right text-nowrap">{{ macros.number(package.last_year_total) }}</td>
+                    <td class="text-right text-nowrap" data-order="{{ package.last_year_trend }}">{{ macros.trend(package.last_year_trend) }}</td>
+{#                    <td class="text-right text-nowrap">{{ macros.number(package.last_month_average_daily_downloads) }}</td>#}
+                    <td class="text-right text-nowrap" data-order="{{ package.last_year_total }}">{{ macros.number(package.last_year_total) }}</td>
                 </tr>
             {% endfor %}
         </table>
@@ -136,3 +136,6 @@ id: "trends"
 
     {% include "_snippets/disqus_comments.twig" %}
 </div>
+
+{# sortable tables #}
+<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
