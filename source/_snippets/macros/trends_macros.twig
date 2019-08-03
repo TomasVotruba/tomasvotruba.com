@@ -1,5 +1,5 @@
 {% macro trend(value) %}
-    <nobr>
+    <span class="text-nowrap">
         {% if value > 0 %}
             <strong>
                 <span class="text-success">+ {{ value|number_format }} %</span>
@@ -7,13 +7,13 @@
         {% else %}
             <span class="text-danger">- {{ value|number_format|abs }} %</span>
         {% endif %}
-    </nobr>
+    </span>
 {% endmacro %}
 
-{% macro number(value) %}
-    {% if value > (10 ** 7) %}
+{% macro number(value, bold_breakpoint = 10000000, muted_breakpoint = 1000000) %}
+    {% if value > bold_breakpoint %}
         <strong>{{ value|millions }}</strong>
-    {% elseif value < (10 ** 6) %}
+    {% elseif value < muted_breakpoint %}
         <span class="text-muted">{{ value|millions }}</span>
     {% else %}
         {{ value|millions }}
@@ -21,21 +21,17 @@
 {% endmacro %}
 
 {% macro adoption(value) %}
-    {% set adoption_word %}
-        <span class="hidden-md-up">ad.</span><span class="hidden-sm-down">adoption</span>
-    {% endset %}
-
     {% if value > 75 %}
         <strong>
-            <span class="text-success">{{ value|number_format }} % {{ adoption_word }}</span>
+            <span class="text-success">{{ value|number_format }} % ad.</span>
         </strong>
     {% elseif value > 50 %}
-        <span class="text-success">{{ value|number_format }} % {{adoption_word }}</span>
+        <span class="text-success">{{ value|number_format }} % ad.</span>
     {% elseif value > 25 %}
-        <span class="text-danger">{{ value|number_format }} % {{adoption_word }}</span>
+        <span class="text-danger">{{ value|number_format }} % ad.</span>
     {% else %}
         <strong>
-            <span class="text-danger">{{ value|number_format }} % {{adoption_word }}</span>
+            <span class="text-danger">{{ value|number_format }} % ad.</span>
         </strong>
     {% endif %}
 {% endmacro %}

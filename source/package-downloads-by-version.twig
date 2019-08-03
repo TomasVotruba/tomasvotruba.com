@@ -43,42 +43,46 @@ id: "trends_adoption"
             </p>
         </div>
 
-        {% for package_data in framework.packages_data %}
-            <table class="table table-bordered mt-4 mt-4">
-                <thead class="thead-inverse">
-                    <tr>
-                        <th colspan="2" class="text-center">
-                            <a href="https://packagist.org/packages/{{ package_data.package_name }}/stats">
-                                {{ package_data.package_name }}
-                            </a>
-                        </th>
-                    </tr>
-                </thead>
+        <div class="row">
+            {% for package_data in framework.packages_data %}
+                <div class="col-12 col-md-6">
+                    <table class="table table-bordered mt-4 mt-4">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th colspan="3" class="text-center">
+                                    <a href="https://packagist.org/packages/{{ package_data.package_name }}/stats">
+                                        {{ package_data.package_name }}
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
 
-                {% for version, number in package_data.downloads_minor %}
-                    <tr>
-                        <td class="w-50">
-                            {{ version }}
+                        {% for version, number in package_data.downloads_minor %}
+                            <tr>
+                                <td class="w-25">
+                                    {{ version }}
 
-                            {% if package_data.version_publish_dates[version] is defined %}
-                                <span class="lesser">
-                                    {{ package_data.version_publish_dates[version] }}
-                                </span>
-                            {% endif %}
-                        </td>
-                        <td class="w-50 text-right text-nowrap">
-                            {% if loop.first and package_data.adoption_rate < 100 %}
-                                <div class="float-left">
-                                    {{ macros.adoption(package_data.adoption_rate) }}
-                                </div>
-                            {% endif %}
+                                    {% if package_data.version_publish_dates[version] is defined %}
+                                        <span class="lesser">
+                                            {{ package_data.version_publish_dates[version]|date("Y-m") }}
+                                        </span>
+                                    {% endif %}
+                                </td>
 
-                            {{ macros.number(number) }}
-                        </td>
-                    </tr>
-                {% endfor %}
-            </table>
-        {% endfor %}
+                                <td class="w-25 text-center">
+                                    {% if loop.first and package_data.adoption_rate < 100 %}
+                                        {{ macros.adoption(package_data.adoption_rate) }}
+                                    {% endif %}
+                                </td>
+                                <td class="w-25 text-right text-nowrap">
+                                    {{ macros.number(number, 10000, 5000) }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% endfor %}
+        </div>
     {% endfor %}
 
     <h2 class="mb-4">Methodology</h2>
