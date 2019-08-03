@@ -271,8 +271,7 @@ The process has just 2 step:
 And that's it:
 
 ```diff
-
-<?php
+ <?php
 
  class ProductController
  {
