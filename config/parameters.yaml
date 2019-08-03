@@ -57,9 +57,15 @@ parameters:
         - 'doctrine/doctrine-cache-bundle'
         - 'doctrine/mongodb-odm-bundle'
         # weak packages
+        - 'cakephp/elastic-search'
+        - 'yiisoft/yii2-apidoc'
+        - 'zendframework/zend-expressive-zendrouter'
         - 'zendframework/zend-expressive-twigrenderer'
         - 'zendframework/zend-expressive-zendviewrenderer'
         - 'zendframework/zend-expressive-tooling'
+        # meta packages
+        - 'symfony/contracts'
+        - 'illuminate/contracts'
 
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:

@@ -57,7 +57,10 @@ final class PackageDataGroupedByVersionFactory
                 ];
             }
 
-            $packagesData[$packageKey] = ['package_name' => $packageName] + $packageDownloads;
+            $packagesData[$packageKey] = [
+                'package_name' => $packageName,
+                'package_short_name' => Strings::after($packageName, '/'),
+            ] + $packageDownloads;
         }
 
         return $packagesData;
