@@ -44,9 +44,9 @@ final class PackageDataGroupedByVersionFactory
             $packagesData[$packageKey] = $packageDownloads;
 
             // complete relative number of downloads
-            $totalDownloads = array_sum($packageDownloads);
-            foreach ($packageDownloads as $version => $absoluteDownloads) {
-                $packageDownloads[$version] = [
+            $totalDownloads = array_sum($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR]);
+            foreach ($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR] as $version => $absoluteDownloads) {
+                $packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR][$version] = [
                     'absolute_downloads' => $absoluteDownloads,
                     'relative_downloads' => round($absoluteDownloads/$totalDownloads + 1, 1),
                 ];
