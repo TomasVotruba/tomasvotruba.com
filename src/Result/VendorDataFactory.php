@@ -54,18 +54,15 @@ final class VendorDataFactory
             $vendorPackageNames = $this->vendorPackagesProvider->provideForVendor($vendorName);
             $packagesData = $this->packageDataFactory->createPackagesData($vendorPackageNames);
 
-            $vendorTotalLastMonth = $this->arrayUtils->getArrayKeySum(
-                $packagesData,
-                'last_month_average_daily_downloads'
-            );
             $vendorTotalLastYear = $this->arrayUtils->getArrayKeySum($packagesData, 'last_year_total');
+            $vendorTotalPreviousYear = $this->arrayUtils->getArrayKeySum($packagesData, 'previous_year_total');
             $averageLastYearTrend = $this->arrayUtils->getArrayKeyAverage($packagesData, 'last_year_trend');
 
             $vendorData[$vendorName] = [
                 'name' => $frameworkName,
                 // totals
-                'vendor_total_last_month' => $vendorTotalLastMonth,
                 'vendor_total_last_year' => $vendorTotalLastYear,
+                'vendor_total_previous_year' => $vendorTotalPreviousYear,
                 'average_last_year_trend' => $averageLastYearTrend,
                 // packages details
                 'packages_data' => $packagesData,

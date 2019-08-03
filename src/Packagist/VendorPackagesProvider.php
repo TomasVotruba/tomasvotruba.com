@@ -13,13 +13,22 @@ final class VendorPackagesProvider
     private const URL_VENDOR_PACKAGES = 'https://packagist.org/packages/list.json?vendor=%s';
 
     /**
+     * @var string[]
+     */
+    private $excludedFrameworkPackages = [];
+
+    /**
      * @var FileToJsonLoader
      */
     private $fileToJsonLoader;
 
-    public function __construct(FileToJsonLoader $fileToJsonLoader)
+    /**
+     * @param string[] $excludedFrameworkPackages
+     */
+    public function __construct(FileToJsonLoader $fileToJsonLoader, array $excludedFrameworkPackages)
     {
         $this->fileToJsonLoader = $fileToJsonLoader;
+        $this->excludedFrameworkPackages = $excludedFrameworkPackages;
     }
 
     /**
@@ -42,6 +51,7 @@ final class VendorPackagesProvider
             $packageNames[] = 'laravel/framework';
         }
 
-        return $packageNames;
+        // exclude undesired packages
+        return array_diff($packageNames, $this->excludedFrameworkPackages);
     }
 }

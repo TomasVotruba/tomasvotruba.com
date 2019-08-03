@@ -3,6 +3,7 @@
 namespace TomasVotruba\Website\Result;
 
 use Nette\Utils\Strings;
+use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\Website\ArrayUtils;
 use TomasVotruba\Website\Packagist\PackageMonthlyDownloadsProvider;
 use TomasVotruba\Website\Statistics;
@@ -12,25 +13,12 @@ final class PackageDataFactory
     /**
      * @var int
      */
-    private const MAX_TREND_LIMIT = 300;
+    private const MINIMAL_MONTH_AGE = 24;
 
     /**
      * @var int
      */
     private const MIN_DOWNLOADS_LIMIT = 1000;
-
-    /**
-     * Packages that create no value, are empty or just util
-     * @var string[]
-     */
-    private $pseudoPackages = [
-        'symfony/apache-pack',
-        'symfony/serializer-pack',
-        'symfony/debug-pack',
-        'symfony/profiler-pack',
-        'symfony/orm-pack',
-        'symfony/webpack-encore-pack',
-    ];
 
     /**
      * @var PackageMonthlyDownloadsProvider
@@ -47,14 +35,21 @@ final class PackageDataFactory
      */
     private $arrayUtils;
 
+    /**
+     * @var SymfonyStyle
+     */
+    private $symfonyStyle;
+
     public function __construct(
         PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
         Statistics $statistics,
-        ArrayUtils $arrayUtils
+        ArrayUtils $arrayUtils,
+        SymfonyStyle $symfonyStyle
     ) {
         $this->packageMonthlyDownloadsProvider = $packageMonthlyDownloadsProvider;
         $this->statistics = $statistics;
         $this->arrayUtils = $arrayUtils;
+        $this->symfonyStyle = $symfonyStyle;
     }
 
     public function createPackagesData(array $packageNames): array
@@ -68,15 +63,29 @@ final class PackageDataFactory
                 continue;
             }
 
-            $lastMonthDailyDownloads = $monthlyDownloads[0];
-            $lastYearTrend = $this->statistics->resolveTrend($packageName, $monthlyDownloads, 12);
+            $last12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 0);
+            $previous12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 11);
+
+            if ($previous12Months === 0) {
+                // to prevent fatal errors
+                continue;
+            }
+
+            $lastYearTrend = 100 * ($last12Months / $previous12Months) - 100; // $this->statistics->resolveTrend($packageName, $monthlyDownloads, 24);
+            if ($lastYearTrend > 300) {
+                // too huge trend
+                continue;
+            }
+
+            $lastYearTrend = round($lastYearTrend, 1);
 
             $packageData = [
                 'package_name' => $packageName,
                 'package_short_name' => Strings::after($packageName, '/'),
-                'last_month_average_daily_downloads' => $lastMonthDailyDownloads,
+                // numbers
                 'last_year_trend' => $lastYearTrend,
-                'last_year_total' => $this->statistics->resolveTotal($monthlyDownloads, 12),
+                'last_year_total' => $last12Months,
+                'previous_year_total' => $previous12Months,
             ];
 
             $packageKey = $this->createPackageKey($packageName);
@@ -91,12 +100,15 @@ final class PackageDataFactory
      */
     private function shouldSkipPackageForOutlier(string $packageName, array $monthlyDownloads): bool
     {
-        if (in_array($packageName, $this->pseudoPackages, true)) {
-            return true;
-        }
+        // not enough data, package younger than 24 months → skip it
+        if (! isset($monthlyDownloads[self::MINIMAL_MONTH_AGE - 1])) {
+            $this->symfonyStyle->note(sprintf(
+                'Skipping "%s" package for not enough data. %d months provided, %d needed',
+                $packageName,
+                count($monthlyDownloads),
+                self::MINIMAL_MONTH_AGE
+            ));
 
-        // not enough data, package younger than 12 months → skip it
-        if (! isset($monthlyDownloads[11])) {
             return true;
         }
 
@@ -104,25 +116,14 @@ final class PackageDataFactory
 
         // too small package → skip it
         if ($lastMonthDailyDownloads <= self::MIN_DOWNLOADS_LIMIT) {
-            return true;
-        }
+            $this->symfonyStyle->note(sprintf(
+                'Skipping "%s" package for not enough downloads last month. %d provided, %d needed',
+                $packageName,
+                $lastMonthDailyDownloads,
+                self::MIN_DOWNLOADS_LIMIT
+            ));
 
-        $lastYearTrend = $this->statistics->resolveTrend($packageName, $monthlyDownloads, 12);
-        if ($lastYearTrend === null) {
             return true;
-        }
-
-        // too fresh package → skip it
-        if ($lastYearTrend > self::MAX_TREND_LIMIT) {
-            return true;
-        }
-
-        // fresh package jump, probably new interdependency? → skip it
-        if ($lastYearTrend > 100) {
-            $yearBackMonthDailyDownloads = $monthlyDownloads[11];
-            if (($lastMonthDailyDownloads / $yearBackMonthDailyDownloads) > 5) {
-                return true;
-            }
         }
 
         return false;

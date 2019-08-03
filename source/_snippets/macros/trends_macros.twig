@@ -11,7 +11,13 @@
 {% endmacro %}
 
 {% macro number(value) %}
-    {{ value|number_format(0, ',', ' ') }}
+    {% if value > (10 ** 7) %}
+        <strong>{{ value|millions }}</strong>
+    {% elseif value < (10 ** 6) %}
+        <span class="text-muted">{{ value|millions }}</span>
+    {% else %}
+        {{ value|millions }}
+    {% endif %}
 {% endmacro %}
 
 {% macro adoption(value) %}

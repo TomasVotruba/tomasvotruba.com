@@ -3,12 +3,33 @@
 <script src="/assets/js/cluster-checklist.js?={{ random() }}"></script>
 <script src="/assets/js/cluster-expanable.js?={{ random() }}"></script>
 
+{# @see https://datatables.net/examples/styling/bootstrap4.html #}
+{# sortable table in php framework trends #}
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
 {% include "_snippets/google_analytics.twig" %}
 
 <script src="/assets/prism/prism.js"></script>
 
 <script>
     $('.gifplayer').gifplayer();
+
+    // sortable table
+    $('.sortable_table').DataTable({
+        // see https://datatables.net/examples/basic_init/filter_only.html
+        "searching": false,
+        "paging": false,
+        "info": false,
+        "order": [[1, "desc"]],
+        // see https://datatables.net/examples/advanced_init/sort_direction_control.html
+        "aoColumns": [
+            null,
+            { "orderSequence": [ "desc", "asc" ] },
+            { "orderSequence": [ "desc", "asc" ] },
+            { "orderSequence": [ "desc", "asc" ] }
+        ]
+    });
 </script>
 
 <div class="text-center mt-5" id="footer">
