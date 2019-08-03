@@ -19,11 +19,19 @@ parameters:
         - 'symfony/lts'
         - 'symfony/thanks'
         # rather "utils" packages
+        - 'symfony/polyfill'
+        - 'symfony/polyfill-intl-grapheme'
+        - 'symfony/polyfill-intl-normalizer'
+        - 'symfony/polyfill-intl-idn'
+        - 'symfony/polyfill-xml'
         - 'symfony/polyfill-php54'
         - 'symfony/polyfill-php55'
         - 'symfony/polyfill-php56'
         - 'symfony/polyfill-php70'
+        - 'symfony/polyfill-php71'
         - 'symfony/polyfill-php72'
+        - 'symfony/polyfill-php73'
+        - 'symfony/polyfill-php74'
         - 'symfony/polyfill-apcu'
         - 'symfony/polyfill-util'
         - 'symfony/polyfill-iconv'
@@ -48,6 +56,10 @@ parameters:
         - 'doctrine/doctrine-migrations-bundle'
         - 'doctrine/doctrine-cache-bundle'
         - 'doctrine/mongodb-odm-bundle'
+        # weak packages
+        - 'zendframework/zend-expressive-twigrenderer'
+        - 'zendframework/zend-expressive-zendviewrenderer'
+        - 'zendframework/zend-expressive-tooling'
 
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:

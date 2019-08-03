@@ -4,6 +4,8 @@ title: "Package Monthly Downloads by Version"
 id: "trends_adoption"
 ---
 
+{% set minimal_relative_adoption = 15 %}
+
 {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
 {% import "_snippets/macros/trends_macros.twig" as macros %}
 
@@ -30,6 +32,10 @@ id: "trends_adoption"
         Frameworks are sorted alphabetically. Packages in them are <strong>sorted by adoption rate</strong>, from higher to lower. That way the most easily adopted packages are on the top and those hard to upgrade on the bottom.
     </p>
 
+    <ul>
+        <li>Showing only versions <strong>with at least {{ minimal_relative_adoption }} %+ adoption</strong>.</li>
+    </ul>
+
     {% for framework in vendor_packages_by_version.vendors %}
         <hr>
 
@@ -45,11 +51,11 @@ id: "trends_adoption"
 
         <div class="row">
             {% for package_data in framework.packages_data %}
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-sm-6">
                     <table class="table table-bordered mt-4 mt-4">
                         <thead class="thead-inverse">
                             <tr>
-                                <th colspan="3" class="text-center">
+                                <th colspan="3" class="text-center align-middle">
                                     <a href="https://packagist.org/packages/{{ package_data.package_name }}/stats">
                                         {{ package_data.package_name }}
                                     </a>
@@ -57,25 +63,21 @@ id: "trends_adoption"
                             </tr>
                         </thead>
 
-                        {% for version, number in package_data.downloads_minor %}
+                        {% for version, version_data in package_data.downloads_minor if version_data.relative_downloads >= minimal_relative_adoption %}
                             <tr>
-                                <td class="w-25">
+                                <td class="w-25 align-middle">
                                     {{ version }}
 
-                                    {% if package_data.version_publish_dates[version] is defined %}
-                                        <span class="lesser">
-                                            {{ package_data.version_publish_dates[version]|date("Y-m") }}
-                                        </span>
-                                    {% endif %}
+                                    <span class="text-nowrap lesser">
+                                        {{ version_data.version_publish_date|date("Y-m") }}
+                                    </span>
                                 </td>
 
-                                <td class="w-25 text-center">
-                                    {% if loop.first and package_data.adoption_rate < 100 %}
-                                        {{ macros.adoption(package_data.adoption_rate) }}
-                                    {% endif %}
+                                <td class="w-25  align-middle text-center">
+                                    {{ macros.adoption(version_data.relative_downloads) }}
                                 </td>
-                                <td class="w-25 text-right text-nowrap">
-                                    {{ macros.number(number, 10000, 5000) }}
+                                <td class="w-25  align-middle text-right text-nowrap">
+                                    {{ macros.number(version_data.absolute_downloads, 10000, 5000) }}
                                 </td>
                             </tr>
                         {% endfor %}
