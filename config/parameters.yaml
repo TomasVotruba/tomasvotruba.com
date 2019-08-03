@@ -48,6 +48,10 @@ parameters:
         # deprecated
         - 'symfony/class-loader'
         - 'symfony/assetic-bundle'
+        - 'symfony/locale'
+        - 'symfony/icu'
+        - 'symfony/swiftmailer-bridge'
+        - 'illuminate/html'
         # specific integrations
         - 'doctrine/doctrine-module'
         - 'doctrine/doctrine-orm-module'
@@ -66,6 +70,10 @@ parameters:
         # meta packages
         - 'symfony/contracts'
         - 'illuminate/contracts'
+        - 'symfony/translation-contracts'
+        - 'symfony/http-client-contracts'
+        - 'symfony/event-dispatcher-contracts'
+        - 'symfony/service-contracts'
 
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:
