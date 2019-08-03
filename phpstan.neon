@@ -18,6 +18,4 @@ parameters:
         # mocks
         - '#Call to an undefined method PHPUnit\\Framework\\MockObject\\MockObject\|TomasVotruba\\Website\\Posts\\Year2019\\(.*?)\\FinalClass\:\:(.*?)\(\)#'
 
-        - '#Method TomasVotruba\\Website\\Packagist\\MinorPackageVersionsDownloadsProvider\:\:provideForPackage\(\) should return array<int\> but returns array#'
-
         - '#Offset (.*?) does not exist on array#'

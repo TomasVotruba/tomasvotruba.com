@@ -15,7 +15,11 @@ final class NumberFilterProvider implements FilterProviderInterface
             /** @var mixed $talksByTopic */
             'millions' => function (int $number): string {
                 if ($number > 10 ** 5) {
-                    return $this->formatNumber($number / (10 ** 6)) . ' mil.';
+                    return $this->formatNumber($number / (10 ** 6)) . ' M';
+                }
+
+                if ($number > 10 ** 2) {
+                    return $this->formatNumber($number / (10 ** 3)) . ' K';
                 }
 
                 return $this->formatNumber($number);

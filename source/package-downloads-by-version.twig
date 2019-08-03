@@ -4,6 +4,9 @@ title: "Package Monthly Downloads by Version"
 id: "trends_adoption"
 ---
 
+{% set minimal_relative_adoption = 15 %}
+{% set minimal_daily_downloads = 1000 %}
+
 {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
 {% import "_snippets/macros/trends_macros.twig" as macros %}
 
@@ -30,8 +33,11 @@ id: "trends_adoption"
         Frameworks are sorted alphabetically. Packages in them are <strong>sorted by adoption rate</strong>, from higher to lower. That way the most easily adopted packages are on the top and those hard to upgrade on the bottom.
     </p>
 
+    <div class="alert alert-sm alert-warning mt-5 mb-4">
+        Showing versions <strong>with at least {{ minimal_relative_adoption }} %+ adoption</strong>.
+    </div>
+
     {% for framework in vendor_packages_by_version.vendors %}
-        <hr>
 
         <div class="text-center mb-5">
             <h2 id="{{ framework.name|webalize }}">
@@ -43,42 +49,42 @@ id: "trends_adoption"
             </p>
         </div>
 
-        {% for package_data in framework.packages_data %}
-            <table class="table table-bordered mt-4 mt-4">
-                <thead class="thead-inverse">
-                    <tr>
-                        <th colspan="2" class="text-center" id="{{ package_data.package_name|webalize }}">
-                            <a href="#{{ package_data.package_name|webalize }}">
-                                {{ package_data.package_name }}
-                            </a>
-                        </th>
-                    </tr>
-                </thead>
+        <div class="row">
+            {% for package_data in framework.packages_data %}
+                <div class="col-12 col-sm-6">
+                    <table class="table table-bordered table-striped table-responsive mt-4 mt-4">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th colspan="3" class="text-center align-middle">
+                                    <a href="https://packagist.org/packages/{{ package_data.package_name }}/stats">
+                                        {{ package_data.package_short_name }}
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
 
-                {% for version, number in package_data.downloads_minor %}
-                    <tr>
-                        <td class="w-50">
-                            {{ version }}
+                        {% for version, version_data in package_data.downloads_minor if version_data.relative_downloads >= minimal_relative_adoption %}
+                            <tr>
+                                <td class="w-25 align-middle">
+                                    {{ version }}
 
-                            {% if package_data.version_publish_dates[version] is defined %}
-                                <span class="lesser">
-                                    {{ package_data.version_publish_dates[version] }}
-                                </span>
-                            {% endif %}
-                        </td>
-                        <td class="w-50 text-right">
-                            {% if loop.first and package_data.adoption_rate < 100 %}
-                                <div class="float-left">
-                                    {{ macros.adoption(package_data.adoption_rate) }}
-                                </div>
-                            {% endif %}
+                                    <span class="text-nowrap lesser">
+                                        {{ version_data.version_publish_date|date("Y-m") }}
+                                    </span>
+                                </td>
 
-                            <nobr>{{ macros.number(number) }}</nobr>
-                        </td>
-                    </tr>
-                {% endfor %}
-            </table>
-        {% endfor %}
+                                <td class="w-25  align-middle text-center">
+                                    {{ macros.adoption(version_data.relative_downloads) }}
+                                </td>
+                                <td class="w-25  align-middle text-right text-nowrap">
+                                    {{ macros.number(version_data.absolute_downloads, 500000, 5000) }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% endfor %}
+        </div>
     {% endfor %}
 
     <h2 class="mb-4">Methodology</h2>
@@ -88,7 +94,7 @@ id: "trends_adoption"
     </p>
 
     <ul>
-        <li>package with less 500 downloads a day are excluded</li>
+        <li>package with less {{ minimal_daily_downloads }} downloads a day are excluded</li>
         <li><code>dev-*</code>, <code>RC</code>, <code>alpha</code>, <code>beta</code> and similar packages are excluded, only valid stable Semver tags are used</li>
         <li>packages with only 1 minor version left are excluded, there's no adoption information to compare</li>
     </ul>

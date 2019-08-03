@@ -35,7 +35,7 @@ final class MinorPackageVersionsDownloadsProvider
     }
 
     /**
-     * @return int[]
+     * @return int[][]
      */
     public function provideForPackage(string $packageName): array
     {
@@ -51,7 +51,7 @@ final class MinorPackageVersionsDownloadsProvider
             $monthlyDownloads = $downloads['monthly'];
 
             // too small to notice
-            if ($monthlyDownloads < 500) {
+            if ($monthlyDownloads < 1000) {
                 continue;
             }
 
@@ -67,7 +67,6 @@ final class MinorPackageVersionsDownloadsProvider
             return [];
         }
 
-        /** @var int[] $downloadsGroupedByMajorAndMinorVersion */
         return $downloadsGroupedByMajorAndMinorVersion;
     }
 

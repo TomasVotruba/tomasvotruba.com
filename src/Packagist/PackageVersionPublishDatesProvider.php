@@ -16,6 +16,11 @@ final class PackageVersionPublishDatesProvider
     private const URL_PACKAGE_DETAIL = 'https://repo.packagist.org/p/%s.json';
 
     /**
+     * @var mixed[]
+     */
+    private $dataByPackageName = [];
+
+    /**
      * @var FileToJsonLoader
      */
     private $fileToJsonLoader;
@@ -31,11 +36,20 @@ final class PackageVersionPublishDatesProvider
         $this->versionManipulator = $versionManipulator;
     }
 
+    public function provideForPackageAndVersion(string $packageName, string $version): ?string
+    {
+        return $this->provideForPackage($packageName)[$version] ?? null;
+    }
+
     /**
      * @return string[]
      */
     public function provideForPackage(string $packageName): array
     {
+        if (isset($this->dataByPackageName[$packageName])) {
+            return $this->dataByPackageName[$packageName];
+        }
+
         $data = $this->getDataByVersionForPackage($packageName);
 
         $versionToDate = [];
@@ -54,6 +68,8 @@ final class PackageVersionPublishDatesProvider
 
             $versionToDate[$minorVersion] = DateTime::from($versionData['time'])->format('Y-m-d');
         }
+
+        $this->dataByPackageName[$packageName] = $versionToDate;
 
         return $versionToDate;
     }
