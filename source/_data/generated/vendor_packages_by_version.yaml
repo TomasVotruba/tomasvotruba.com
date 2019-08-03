@@ -1,4 +1,4 @@
-# this file was generated on 2019-08-03 15:59:53, do not edit it manually
+# this file was generated on 2019-08-03 16:14:36, do not edit it manually
 parameters:
     vendor_packages_by_version:
         vendors:
@@ -129,15 +129,15 @@ parameters:
                         package_name: symfony/config
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 687505
+                                absolute_downloads: 687460
                                 relative_downloads: 37.9
                                 version_publish_date: '2019-05-20'
                             v4.2:
-                                absolute_downloads: 325113
+                                absolute_downloads: 325097
                                 relative_downloads: 17.9
                                 version_publish_date: '2018-11-26'
                             v4.1:
-                                absolute_downloads: 61942
+                                absolute_downloads: 61939
                                 relative_downloads: 3.4
                                 version_publish_date: '2018-05-16'
                             v4.0:
@@ -145,15 +145,15 @@ parameters:
                                 relative_downloads: 0.5
                                 version_publish_date: '2017-11-20'
                             v3.4:
-                                absolute_downloads: 527151
+                                absolute_downloads: 527133
                                 relative_downloads: 29.1
                                 version_publish_date: '2017-11-19'
                             v3.3:
-                                absolute_downloads: 43259
+                                absolute_downloads: 43256
                                 relative_downloads: 2.4
                                 version_publish_date: '2017-05-29'
                             v3.2:
-                                absolute_downloads: 62089
+                                absolute_downloads: 62084
                                 relative_downloads: 3.4
                                 version_publish_date: '2016-11-29'
                             v3.1:
@@ -161,7 +161,7 @@ parameters:
                                 relative_downloads: 0.1
                                 version_publish_date: '2016-05-20'
                             v2.8:
-                                absolute_downloads: 89301
+                                absolute_downloads: 89297
                                 relative_downloads: 4.9
                                 version_publish_date: '2015-11-23'
                             v2.7:
@@ -176,47 +176,47 @@ parameters:
                         package_name: symfony/console
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 1897890
+                                absolute_downloads: 1898245
                                 relative_downloads: 39.9
                                 version_publish_date: '2019-05-27'
                             v4.2:
-                                absolute_downloads: 771950
+                                absolute_downloads: 772028
                                 relative_downloads: 16.2
                                 version_publish_date: '2018-11-27'
                             v4.1:
-                                absolute_downloads: 225033
+                                absolute_downloads: 225054
                                 relative_downloads: 4.7
                                 version_publish_date: '2018-05-30'
                             v4.0:
-                                absolute_downloads: 34202
+                                absolute_downloads: 34206
                                 relative_downloads: 0.7
                                 version_publish_date: '2017-11-29'
                             v3.4:
-                                absolute_downloads: 1179044
+                                absolute_downloads: 1179200
                                 relative_downloads: 24.8
                                 version_publish_date: '2017-11-29'
                             v3.3:
-                                absolute_downloads: 112730
+                                absolute_downloads: 112744
                                 relative_downloads: 2.4
                                 version_publish_date: '2017-05-28'
                             v3.2:
-                                absolute_downloads: 54331
+                                absolute_downloads: 54334
                                 relative_downloads: 1.1
                                 version_publish_date: '2016-11-16'
                             v3.1:
-                                absolute_downloads: 65442
+                                absolute_downloads: 65455
                                 relative_downloads: 1.4
                                 version_publish_date: '2016-05-30'
                             v3.0:
-                                absolute_downloads: 72387
+                                absolute_downloads: 72393
                                 relative_downloads: 1.5
                                 version_publish_date: '2015-11-30'
                             v2.8:
-                                absolute_downloads: 246823
+                                absolute_downloads: 246842
                                 relative_downloads: 5.2
                                 version_publish_date: '2015-11-30'
                             v2.7:
-                                absolute_downloads: 67244
+                                absolute_downloads: 67249
                                 relative_downloads: 1.4
                                 version_publish_date: '2015-05-29'
                             v2.6:
@@ -224,7 +224,7 @@ parameters:
                                 relative_downloads: 0.3
                                 version_publish_date: '2014-11-20'
                             v2.5:
-                                absolute_downloads: 10993
+                                absolute_downloads: 10995
                                 relative_downloads: 0.2
                                 version_publish_date: '2014-05-22'
                             v2.4:
@@ -239,38 +239,38 @@ parameters:
                         package_name: symfony/contracts
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 470406
+                                absolute_downloads: 470428
                                 relative_downloads: 38.6
                                 version_publish_date: '2019-04-27'
                             v1.0:
-                                absolute_downloads: 747753
+                                absolute_downloads: 747780
                                 relative_downloads: 61.4
                                 version_publish_date: '2018-10-31'
                     symfony_css_selector:
                         package_name: symfony/css-selector
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 1561001
+                                absolute_downloads: 1561299
                                 relative_downloads: 46.9
                                 version_publish_date: '2019-01-16'
                             v4.2:
-                                absolute_downloads: 611400
+                                absolute_downloads: 611455
                                 relative_downloads: 18.4
                                 version_publish_date: '2018-11-11'
                             v4.1:
-                                absolute_downloads: 123190
+                                absolute_downloads: 123203
                                 relative_downloads: 3.7
                                 version_publish_date: '2018-05-30'
                             v4.0:
-                                absolute_downloads: 37408
+                                absolute_downloads: 37412
                                 relative_downloads: 1.1
                                 version_publish_date: '2017-11-07'
                             v3.4:
-                                absolute_downloads: 577461
+                                absolute_downloads: 577533
                                 relative_downloads: 17.4
                                 version_publish_date: '2017-11-05'
                             v3.3:
-                                absolute_downloads: 53191
+                                absolute_downloads: 53197
                                 relative_downloads: 1.6
                                 version_publish_date: '2017-05-01'
                             v3.2:
@@ -278,19 +278,19 @@ parameters:
                                 relative_downloads: 0.4
                                 version_publish_date: '2016-11-03'
                             v3.1:
-                                absolute_downloads: 131369
+                                absolute_downloads: 131405
                                 relative_downloads: 3.9
                                 version_publish_date: '2016-03-04'
                             v3.0:
-                                absolute_downloads: 58592
+                                absolute_downloads: 58596
                                 relative_downloads: 1.8
                                 version_publish_date: '2015-10-30'
                             v2.8:
-                                absolute_downloads: 121881
+                                absolute_downloads: 121891
                                 relative_downloads: 3.7
                                 version_publish_date: '2015-10-30'
                             v2.7:
-                                absolute_downloads: 28867
+                                absolute_downloads: 28870
                                 relative_downloads: 0.9
                                 version_publish_date: '2015-05-15'
                             v2.6:
@@ -473,23 +473,23 @@ parameters:
                         package_name: symfony/dom-crawler
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 585675
+                                absolute_downloads: 585800
                                 relative_downloads: 35.3
                                 version_publish_date: '2019-04-26'
                             v4.2:
-                                absolute_downloads: 271163
+                                absolute_downloads: 271195
                                 relative_downloads: 16.3
                                 version_publish_date: '2018-11-26'
                             v4.1:
-                                absolute_downloads: 56506
+                                absolute_downloads: 56511
                                 relative_downloads: 3.4
                                 version_publish_date: '2018-05-01'
                             v4.0:
-                                absolute_downloads: 10318
+                                absolute_downloads: 10321
                                 relative_downloads: 0.6
                                 version_publish_date: '2017-11-15'
                             v3.4:
-                                absolute_downloads: 436845
+                                absolute_downloads: 436916
                                 relative_downloads: 26.3
                                 version_publish_date: '2017-11-05'
                             v3.3:
@@ -501,19 +501,19 @@ parameters:
                                 relative_downloads: 0.4
                                 version_publish_date: '2016-11-25'
                             v3.1:
-                                absolute_downloads: 102660
+                                absolute_downloads: 102689
                                 relative_downloads: 6.2
                                 version_publish_date: '2016-05-13'
                             v3.0:
-                                absolute_downloads: 57857
+                                absolute_downloads: 57863
                                 relative_downloads: 3.5
                                 version_publish_date: '2015-11-02'
                             v2.8:
-                                absolute_downloads: 30209
+                                absolute_downloads: 30213
                                 relative_downloads: 1.8
                                 version_publish_date: '2015-11-02'
                             v2.7:
-                                absolute_downloads: 67323
+                                absolute_downloads: 67334
                                 relative_downloads: 4.1
                                 version_publish_date: '2015-05-22'
                             v2.6:
@@ -532,15 +532,15 @@ parameters:
                         package_name: symfony/dotenv
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 344045
+                                absolute_downloads: 344028
                                 relative_downloads: !!float 52
                                 version_publish_date: '2019-05-07'
                             v4.2:
-                                absolute_downloads: 229693
+                                absolute_downloads: 229683
                                 relative_downloads: 34.7
                                 version_publish_date: '2018-11-26'
                             v4.1:
-                                absolute_downloads: 35496
+                                absolute_downloads: 35494
                                 relative_downloads: 5.4
                                 version_publish_date: '2018-05-30'
                             v4.0:
@@ -548,7 +548,7 @@ parameters:
                                 relative_downloads: 0.2
                                 version_publish_date: '2017-11-30'
                             v3.4:
-                                absolute_downloads: 51606
+                                absolute_downloads: 51604
                                 relative_downloads: 7.8
                                 version_publish_date: '2017-11-30'
                     symfony_event_dispatcher:
@@ -610,19 +610,19 @@ parameters:
                         package_name: symfony/expression-language
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 296729
+                                absolute_downloads: 296738
                                 relative_downloads: 47.2
                                 version_publish_date: '2019-05-27'
                             v4.2:
-                                absolute_downloads: 184064
+                                absolute_downloads: 184071
                                 relative_downloads: 29.3
                                 version_publish_date: '2018-11-11'
                             v4.1:
-                                absolute_downloads: 24837
+                                absolute_downloads: 24840
                                 relative_downloads: !!float 4
                                 version_publish_date: '2018-01-03'
                             v3.4:
-                                absolute_downloads: 92763
+                                absolute_downloads: 92768
                                 relative_downloads: 14.8
                                 version_publish_date: '2017-11-12'
                             v3.3:
@@ -763,7 +763,7 @@ parameters:
                         package_name: symfony/flex
                         downloads_minor:
                             v1.4:
-                                absolute_downloads: 293526
+                                absolute_downloads: 293549
                                 relative_downloads: 48.5
                                 version_publish_date: '2019-06-27'
                             v1.3:
@@ -771,11 +771,11 @@ parameters:
                                 relative_downloads: 1.4
                                 version_publish_date: '2019-06-22'
                             v1.2:
-                                absolute_downloads: 226856
+                                absolute_downloads: 226861
                                 relative_downloads: 37.5
                                 version_publish_date: '2019-02-21'
                             v1.1:
-                                absolute_downloads: 70285
+                                absolute_downloads: 70288
                                 relative_downloads: 11.6
                                 version_publish_date: '2018-08-21'
                             v1.0:
@@ -797,19 +797,19 @@ parameters:
                         package_name: symfony/form
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 238296
+                                absolute_downloads: 238361
                                 relative_downloads: 44.1
                                 version_publish_date: '2019-05-29'
                             v4.2:
-                                absolute_downloads: 170290
+                                absolute_downloads: 170310
                                 relative_downloads: 31.5
                                 version_publish_date: '2018-11-30'
                             v4.1:
-                                absolute_downloads: 24274
+                                absolute_downloads: 24278
                                 relative_downloads: 4.5
                                 version_publish_date: '2018-05-30'
                             v3.4:
-                                absolute_downloads: 48440
+                                absolute_downloads: 48444
                                 relative_downloads: !!float 9
                                 version_publish_date: '2017-11-29'
                             v3.3:
@@ -817,7 +817,7 @@ parameters:
                                 relative_downloads: 0.6
                                 version_publish_date: '2017-05-29'
                             v3.2:
-                                absolute_downloads: 2381
+                                absolute_downloads: 2382
                                 relative_downloads: 0.4
                                 version_publish_date: '2016-11-25'
                             v2.8:
@@ -879,15 +879,15 @@ parameters:
                         package_name: symfony/http-foundation
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 1631266
+                                absolute_downloads: 1631372
                                 relative_downloads: 44.1
                                 version_publish_date: '2019-05-29'
                             v4.2:
-                                absolute_downloads: 671968
+                                absolute_downloads: 671992
                                 relative_downloads: 18.2
                                 version_publish_date: '2018-11-26'
                             v4.1:
-                                absolute_downloads: 120263
+                                absolute_downloads: 120270
                                 relative_downloads: 3.3
                                 version_publish_date: '2018-05-25'
                             v4.0:
@@ -895,11 +895,11 @@ parameters:
                                 relative_downloads: 0.7
                                 version_publish_date: '2017-11-30'
                             v3.4:
-                                absolute_downloads: 840046
+                                absolute_downloads: 840084
                                 relative_downloads: 22.7
                                 version_publish_date: '2017-11-30'
                             v3.3:
-                                absolute_downloads: 57554
+                                absolute_downloads: 57557
                                 relative_downloads: 1.6
                                 version_publish_date: '2017-05-25'
                             v3.2:
@@ -907,11 +907,11 @@ parameters:
                                 relative_downloads: 0.5
                                 version_publish_date: '2016-11-27'
                             v3.1:
-                                absolute_downloads: 62487
+                                absolute_downloads: 62488
                                 relative_downloads: 1.7
                                 version_publish_date: '2016-05-13'
                             v3.0:
-                                absolute_downloads: 91900
+                                absolute_downloads: 91904
                                 relative_downloads: 2.5
                                 version_publish_date: '2015-11-27'
                             v2.8:
@@ -919,7 +919,7 @@ parameters:
                                 relative_downloads: 2.3
                                 version_publish_date: '2015-11-27'
                             v2.7:
-                                absolute_downloads: 65156
+                                absolute_downloads: 65160
                                 relative_downloads: 1.8
                                 version_publish_date: '2015-05-22'
                             v2.6:
@@ -942,39 +942,39 @@ parameters:
                         package_name: symfony/http-kernel
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 1507237
+                                absolute_downloads: 1507073
                                 relative_downloads: 44.5
                                 version_publish_date: '2019-05-30'
                             v4.2:
-                                absolute_downloads: 649804
+                                absolute_downloads: 649774
                                 relative_downloads: 19.2
                                 version_publish_date: '2018-11-30'
                             v4.1:
-                                absolute_downloads: 123723
+                                absolute_downloads: 123716
                                 relative_downloads: 3.7
                                 version_publish_date: '2018-05-30'
                             v4.0:
-                                absolute_downloads: 36234
+                                absolute_downloads: 36232
                                 relative_downloads: 1.1
                                 version_publish_date: '2017-11-30'
                             v3.4:
-                                absolute_downloads: 736883
+                                absolute_downloads: 736833
                                 relative_downloads: 21.8
                                 version_publish_date: '2017-11-30'
                             v3.3:
-                                absolute_downloads: 48631
+                                absolute_downloads: 48627
                                 relative_downloads: 1.4
                                 version_publish_date: '2017-05-29'
                             v3.2:
-                                absolute_downloads: 25193
+                                absolute_downloads: 25191
                                 relative_downloads: 0.7
                                 version_publish_date: '2016-11-30'
                             v3.1:
-                                absolute_downloads: 54310
+                                absolute_downloads: 54308
                                 relative_downloads: 1.6
                                 version_publish_date: '2016-05-30'
                             v3.0:
-                                absolute_downloads: 94735
+                                absolute_downloads: 94730
                                 relative_downloads: 2.8
                                 version_publish_date: '2015-11-30'
                             v2.8:
@@ -982,7 +982,7 @@ parameters:
                                 relative_downloads: 0.7
                                 version_publish_date: '2015-11-30'
                             v2.7:
-                                absolute_downloads: 64612
+                                absolute_downloads: 64607
                                 relative_downloads: 1.9
                                 version_publish_date: '2015-05-30'
                             v2.6:
@@ -1020,15 +1020,15 @@ parameters:
                         package_name: symfony/inflector
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 497384
+                                absolute_downloads: 497368
                                 relative_downloads: 55.2
                                 version_publish_date: '2019-04-01'
                             v4.2:
-                                absolute_downloads: 271187
+                                absolute_downloads: 271177
                                 relative_downloads: 30.1
                                 version_publish_date: '2018-11-11'
                             v4.1:
-                                absolute_downloads: 50149
+                                absolute_downloads: 50145
                                 relative_downloads: 5.6
                                 version_publish_date: '2018-05-01'
                             v4.0:
@@ -1036,11 +1036,11 @@ parameters:
                                 relative_downloads: 0.5
                                 version_publish_date: '2017-08-31'
                             v3.4:
-                                absolute_downloads: 66056
+                                absolute_downloads: 66054
                                 relative_downloads: 7.3
                                 version_publish_date: '2017-08-03'
                             v3.3:
-                                absolute_downloads: 9129
+                                absolute_downloads: 9127
                                 relative_downloads: !!float 1
                                 version_publish_date: '2017-04-12'
                             v3.2:
@@ -1090,7 +1090,7 @@ parameters:
                         package_name: symfony/ldap
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 9523
+                                absolute_downloads: 9522
                                 relative_downloads: 62.2
                                 version_publish_date: '2019-05-26'
                             v4.2:
@@ -1105,7 +1105,7 @@ parameters:
                         package_name: symfony/lock
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 57147
+                                absolute_downloads: 57150
                                 relative_downloads: 51.7
                                 version_publish_date: '2019-04-07'
                             v4.2:
@@ -1174,7 +1174,7 @@ parameters:
                         package_name: symfony/messenger
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 49903
+                                absolute_downloads: 49901
                                 relative_downloads: !!float 54
                                 version_publish_date: '2019-05-28'
                             v4.2:
@@ -1224,27 +1224,27 @@ parameters:
                         package_name: symfony/monolog-bundle
                         downloads_minor:
                             v3.4:
-                                absolute_downloads: 392274
+                                absolute_downloads: 392336
                                 relative_downloads: 34.8
                                 version_publish_date: '2019-06-20'
                             v3.3:
-                                absolute_downloads: 445573
+                                absolute_downloads: 445603
                                 relative_downloads: 39.6
                                 version_publish_date: '2018-06-04'
                             v3.2:
-                                absolute_downloads: 59546
+                                absolute_downloads: 59550
                                 relative_downloads: 5.3
                                 version_publish_date: '2018-03-05'
                             v3.1:
-                                absolute_downloads: 57321
+                                absolute_downloads: 57329
                                 relative_downloads: 5.1
                                 version_publish_date: '2017-03-26'
                             v3.0:
-                                absolute_downloads: 10630
+                                absolute_downloads: 10631
                                 relative_downloads: 0.9
                                 version_publish_date: '2016-11-06'
                             v2.12:
-                                absolute_downloads: 97867
+                                absolute_downloads: 97874
                                 relative_downloads: 8.7
                                 version_publish_date: '2016-11-06'
                             v2.11:
@@ -1252,19 +1252,19 @@ parameters:
                                 relative_downloads: !!float 2
                                 version_publish_date: '2016-04-12'
                             v2.10:
-                                absolute_downloads: 3074
+                                absolute_downloads: 3075
                                 relative_downloads: 0.3
                                 version_publish_date: '2016-03-13'
                             v2.8:
-                                absolute_downloads: 12741
+                                absolute_downloads: 12746
                                 relative_downloads: 1.1
                                 version_publish_date: '2015-09-29'
                             v2.7:
-                                absolute_downloads: 7328
+                                absolute_downloads: 7329
                                 relative_downloads: 0.7
                                 version_publish_date: '2014-12-28'
                             v2.6:
-                                absolute_downloads: 1255
+                                absolute_downloads: 1259
                                 relative_downloads: 0.1
                                 version_publish_date: '2014-06-04'
                             v2.5:
@@ -1272,7 +1272,7 @@ parameters:
                                 relative_downloads: 0.1
                                 version_publish_date: '2014-01-19'
                             v2.4:
-                                absolute_downloads: 1773
+                                absolute_downloads: 1774
                                 relative_downloads: 0.2
                                 version_publish_date: '2013-07-30'
                             v2.3:
@@ -1287,15 +1287,15 @@ parameters:
                         package_name: symfony/options-resolver
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 778312
+                                absolute_downloads: 778262
                                 relative_downloads: 50.9
                                 version_publish_date: '2019-05-10'
                             v4.2:
-                                absolute_downloads: 357402
+                                absolute_downloads: 357386
                                 relative_downloads: 23.4
                                 version_publish_date: '2018-11-11'
                             v4.1:
-                                absolute_downloads: 51312
+                                absolute_downloads: 51309
                                 relative_downloads: 3.4
                                 version_publish_date: '2018-05-30'
                             v4.0:
@@ -1303,11 +1303,11 @@ parameters:
                                 relative_downloads: 0.6
                                 version_publish_date: '2017-11-07'
                             v3.4:
-                                absolute_downloads: 211399
+                                absolute_downloads: 211391
                                 relative_downloads: 13.8
                                 version_publish_date: '2017-11-05'
                             v3.3:
-                                absolute_downloads: 18856
+                                absolute_downloads: 18853
                                 relative_downloads: 1.2
                                 version_publish_date: '2017-04-12'
                             v3.2:
@@ -1315,7 +1315,7 @@ parameters:
                                 relative_downloads: 0.3
                                 version_publish_date: '2016-05-13'
                             v3.0:
-                                absolute_downloads: 6194
+                                absolute_downloads: 6191
                                 relative_downloads: 0.4
                                 version_publish_date: '2015-11-18'
                             v2.8:
@@ -1349,15 +1349,15 @@ parameters:
                         package_name: symfony/phpunit-bridge
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 308375
+                                absolute_downloads: 308352
                                 relative_downloads: 35.7
                                 version_publish_date: '2019-05-08'
                             v4.2:
-                                absolute_downloads: 149777
+                                absolute_downloads: 149776
                                 relative_downloads: 17.3
                                 version_publish_date: '2018-11-26'
                             v4.1:
-                                absolute_downloads: 18784
+                                absolute_downloads: 18783
                                 relative_downloads: 2.2
                                 version_publish_date: '2018-05-25'
                             v4.0:
@@ -1365,7 +1365,7 @@ parameters:
                                 relative_downloads: 0.2
                                 version_publish_date: '2017-11-22'
                             v3.4:
-                                absolute_downloads: 341351
+                                absolute_downloads: 341345
                                 relative_downloads: 39.5
                                 version_publish_date: '2017-11-22'
                             v3.3:
@@ -1381,103 +1381,9 @@ parameters:
                                 relative_downloads: 0.7
                                 version_publish_date: '2016-04-12'
                             v2.8:
-                                absolute_downloads: 18342
+                                absolute_downloads: 18340
                                 relative_downloads: 2.1
                                 version_publish_date: '2015-11-27'
-                    symfony_polyfill:
-                        package_name: symfony/polyfill
-                        downloads_minor:
-                            v1.11:
-                                absolute_downloads: 6662
-                                relative_downloads: 43.1
-                                version_publish_date: '2019-03-22'
-                            v1.10:
-                                absolute_downloads: 2283
-                                relative_downloads: 14.8
-                                version_publish_date: '2018-10-31'
-                            v1.7:
-                                absolute_downloads: 2685
-                                relative_downloads: 17.4
-                                version_publish_date: '2018-01-31'
-                            v1.2:
-                                absolute_downloads: 3815
-                                relative_downloads: 24.7
-                                version_publish_date: '2016-05-18'
-                    symfony_polyfill_intl_grapheme:
-                        package_name: symfony/polyfill-intl-grapheme
-                        downloads_minor:
-                            v1.11:
-                                absolute_downloads: 15891
-                                relative_downloads: 83.4
-                                version_publish_date: '2019-01-07'
-                            v1.10:
-                                absolute_downloads: 3153
-                                relative_downloads: 16.6
-                                version_publish_date: '2018-09-21'
-                    symfony_polyfill_intl_idn:
-                        package_name: symfony/polyfill-intl-idn
-                        downloads_minor:
-                            v1.11:
-                                absolute_downloads: 2413739
-                                relative_downloads: 97.9
-                                version_publish_date: '2019-03-04'
-                            v1.10:
-                                absolute_downloads: 51468
-                                relative_downloads: 2.1
-                                version_publish_date: '2018-09-30'
-                    symfony_polyfill_intl_normalizer:
-                        package_name: symfony/polyfill-intl-normalizer
-                        downloads_minor:
-                            v1.11:
-                                absolute_downloads: 16505
-                                relative_downloads: !!float 83
-                                version_publish_date: '2019-01-07'
-                            v1.10:
-                                absolute_downloads: 3383
-                                relative_downloads: !!float 17
-                                version_publish_date: '2018-09-21'
-                    symfony_polyfill_php73:
-                        package_name: symfony/polyfill-php73
-                        downloads_minor:
-                            v1.11:
-                                absolute_downloads: 2051915
-                                relative_downloads: 99.9
-                                version_publish_date: '2019-02-06'
-                            v1.10:
-                                absolute_downloads: 1668
-                                relative_downloads: 0.1
-                                version_publish_date: '2018-09-25'
-                    symfony_polyfill_xml:
-                        package_name: symfony/polyfill-xml
-                        downloads_minor:
-                            v1.11:
-                                absolute_downloads: 10651
-                                relative_downloads: 39.7
-                                version_publish_date: '2019-02-06'
-                            v1.10:
-                                absolute_downloads: 2629
-                                relative_downloads: 9.8
-                                version_publish_date: '2018-08-06'
-                            v1.9:
-                                absolute_downloads: 1279
-                                relative_downloads: 4.8
-                                version_publish_date: '2018-08-06'
-                            v1.8:
-                                absolute_downloads: 1689
-                                relative_downloads: 6.3
-                                version_publish_date: '2018-04-25'
-                            v1.6:
-                                absolute_downloads: 1620
-                                relative_downloads: !!float 6
-                                version_publish_date: '2017-10-11'
-                            v1.4:
-                                absolute_downloads: 3404
-                                relative_downloads: 12.7
-                                version_publish_date: '2017-06-09'
-                            v1.3:
-                                absolute_downloads: 5537
-                                relative_downloads: 20.7
-                                version_publish_date: '2016-11-14'
                     symfony_process:
                         package_name: symfony/process
                         downloads_minor:
@@ -1545,15 +1451,15 @@ parameters:
                         package_name: symfony/property-access
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 469931
+                                absolute_downloads: 470008
                                 relative_downloads: !!float 48
                                 version_publish_date: '2019-05-20'
                             v4.2:
-                                absolute_downloads: 254193
+                                absolute_downloads: 254222
                                 relative_downloads: !!float 26
                                 version_publish_date: '2018-11-29'
                             v4.1:
-                                absolute_downloads: 43156
+                                absolute_downloads: 43164
                                 relative_downloads: 4.4
                                 version_publish_date: '2018-05-30'
                             v4.0:
@@ -1561,11 +1467,11 @@ parameters:
                                 relative_downloads: 0.3
                                 version_publish_date: '2017-11-19'
                             v3.4:
-                                absolute_downloads: 108214
+                                absolute_downloads: 108219
                                 relative_downloads: 11.1
                                 version_publish_date: '2017-11-19'
                             v3.3:
-                                absolute_downloads: 10143
+                                absolute_downloads: 10147
                                 relative_downloads: !!float 1
                                 version_publish_date: '2017-05-21'
                             v3.2:
@@ -1577,7 +1483,7 @@ parameters:
                                 relative_downloads: 5.2
                                 version_publish_date: '2015-11-18'
                             v2.8:
-                                absolute_downloads: 35334
+                                absolute_downloads: 35336
                                 relative_downloads: 3.6
                                 version_publish_date: '2015-11-18'
                             v2.7:
@@ -1607,19 +1513,19 @@ parameters:
                         package_name: symfony/proxy-manager-bridge
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 69096
+                                absolute_downloads: 69098
                                 relative_downloads: 51.8
                                 version_publish_date: '2019-05-20'
                             v4.2:
-                                absolute_downloads: 39901
+                                absolute_downloads: 39912
                                 relative_downloads: 29.9
                                 version_publish_date: '2018-11-11'
                             v4.1:
-                                absolute_downloads: 3780
+                                absolute_downloads: 3781
                                 relative_downloads: 2.8
                                 version_publish_date: '2018-02-22'
                             v3.4:
-                                absolute_downloads: 16266
+                                absolute_downloads: 16267
                                 relative_downloads: 12.2
                                 version_publish_date: '2017-11-10'
                             v3.3:
@@ -1720,19 +1626,19 @@ parameters:
                         package_name: symfony/security
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 78524
+                                absolute_downloads: 78523
                                 relative_downloads: 32.6
                                 version_publish_date: '2019-05-27'
                             v4.2:
-                                absolute_downloads: 76793
+                                absolute_downloads: 76791
                                 relative_downloads: 31.9
                                 version_publish_date: '2018-11-11'
                             v4.1:
-                                absolute_downloads: 28382
+                                absolute_downloads: 28380
                                 relative_downloads: 11.8
                                 version_publish_date: '2018-05-30'
                             v3.4:
-                                absolute_downloads: 41385
+                                absolute_downloads: 41383
                                 relative_downloads: 17.2
                                 version_publish_date: '2017-11-16'
                             v3.3:
@@ -1759,26 +1665,26 @@ parameters:
                         package_name: symfony/security-acl
                         downloads_minor:
                             v3.0:
-                                absolute_downloads: 290041
+                                absolute_downloads: 290033
                                 relative_downloads: 93.1
                                 version_publish_date: '2015-12-28'
                             v2.8:
-                                absolute_downloads: 21490
+                                absolute_downloads: 21489
                                 relative_downloads: 6.9
                                 version_publish_date: '2015-12-28'
                     symfony_security_bundle:
                         package_name: symfony/security-bundle
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 267659
+                                absolute_downloads: 267636
                                 relative_downloads: 50.8
                                 version_publish_date: '2019-04-18'
                             v4.2:
-                                absolute_downloads: 197162
+                                absolute_downloads: 197152
                                 relative_downloads: 37.4
                                 version_publish_date: '2018-11-14'
                             v4.1:
-                                absolute_downloads: 36053
+                                absolute_downloads: 36051
                                 relative_downloads: 6.8
                                 version_publish_date: '2018-05-25'
                             v4.0:
@@ -1786,18 +1692,18 @@ parameters:
                                 relative_downloads: 0.7
                                 version_publish_date: '2017-11-30'
                             v3.4:
-                                absolute_downloads: 22579
+                                absolute_downloads: 22577
                                 relative_downloads: 4.3
                                 version_publish_date: '2017-11-30'
                     symfony_security_core:
                         package_name: symfony/security-core
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 222444
+                                absolute_downloads: 222421
                                 relative_downloads: 51.5
                                 version_publish_date: '2019-05-27'
                             v4.2:
-                                absolute_downloads: 162424
+                                absolute_downloads: 162415
                                 relative_downloads: 37.6
                                 version_publish_date: '2018-11-11'
                             v3.4:
@@ -1882,15 +1788,15 @@ parameters:
                         package_name: symfony/stopwatch
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 571022
+                                absolute_downloads: 570980
                                 relative_downloads: 51.8
                                 version_publish_date: '2019-05-27'
                             v4.2:
-                                absolute_downloads: 287246
+                                absolute_downloads: 287234
                                 relative_downloads: 26.1
                                 version_publish_date: '2018-11-11'
                             v4.1:
-                                absolute_downloads: 41670
+                                absolute_downloads: 41666
                                 relative_downloads: 3.8
                                 version_publish_date: '2018-02-19'
                             v4.0:
@@ -1898,11 +1804,11 @@ parameters:
                                 relative_downloads: 0.5
                                 version_publish_date: '2017-11-09'
                             v3.4:
-                                absolute_downloads: 141447
+                                absolute_downloads: 141437
                                 relative_downloads: 12.8
                                 version_publish_date: '2017-11-07'
                             v3.3:
-                                absolute_downloads: 18091
+                                absolute_downloads: 18088
                                 relative_downloads: 1.6
                                 version_publish_date: '2017-04-12'
                             v3.2:
@@ -1918,14 +1824,14 @@ parameters:
                                 relative_downloads: 0.7
                                 version_publish_date: '2015-10-30'
                             v2.8:
-                                absolute_downloads: 24921
+                                absolute_downloads: 24919
                                 relative_downloads: 2.3
                                 version_publish_date: '2015-10-30'
                     symfony_swiftmailer_bundle:
                         package_name: symfony/swiftmailer-bundle
                         downloads_minor:
                             v3.2:
-                                absolute_downloads: 440644
+                                absolute_downloads: 440616
                                 relative_downloads: 50.8
                                 version_publish_date: '2018-02-14'
                             v3.1:
@@ -1937,7 +1843,7 @@ parameters:
                                 relative_downloads: 0.9
                                 version_publish_date: '2017-05-20'
                             v2.6:
-                                absolute_downloads: 301910
+                                absolute_downloads: 301900
                                 relative_downloads: 34.8
                                 version_publish_date: '2017-05-19'
                             v2.5:
@@ -1949,14 +1855,14 @@ parameters:
                                 relative_downloads: 2.1
                                 version_publish_date: '2016-10-27'
                             v2.3:
-                                absolute_downloads: 66082
+                                absolute_downloads: 66078
                                 relative_downloads: 7.6
                                 version_publish_date: '2013-05-15'
                     symfony_symfony:
                         package_name: symfony/symfony
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 23725
+                                absolute_downloads: 23726
                                 relative_downloads: 3.9
                                 version_publish_date: '2019-05-30'
                             v4.2:
@@ -1964,11 +1870,11 @@ parameters:
                                 relative_downloads: 2.6
                                 version_publish_date: '2018-11-30'
                             v3.4:
-                                absolute_downloads: 388765
+                                absolute_downloads: 388795
                                 relative_downloads: 63.6
                                 version_publish_date: '2017-11-30'
                             v3.3:
-                                absolute_downloads: 26243
+                                absolute_downloads: 26246
                                 relative_downloads: 4.3
                                 version_publish_date: '2017-05-29'
                             v3.2:
@@ -1980,15 +1886,15 @@ parameters:
                                 relative_downloads: 1.6
                                 version_publish_date: '2016-05-30'
                             v3.0:
-                                absolute_downloads: 2436
+                                absolute_downloads: 2437
                                 relative_downloads: 0.4
                                 version_publish_date: '2015-11-30'
                             v2.8:
-                                absolute_downloads: 106861
+                                absolute_downloads: 106869
                                 relative_downloads: 17.5
                                 version_publish_date: '2015-11-30'
                             v2.7:
-                                absolute_downloads: 17017
+                                absolute_downloads: 17021
                                 relative_downloads: 2.8
                                 version_publish_date: '2015-05-30'
                             v2.6:
@@ -1996,7 +1902,7 @@ parameters:
                                 relative_downloads: 0.5
                                 version_publish_date: '2014-11-28'
                             v2.5:
-                                absolute_downloads: 1642
+                                absolute_downloads: 1645
                                 relative_downloads: 0.3
                                 version_publish_date: '2014-05-31'
                             v2.3:
@@ -2007,19 +1913,19 @@ parameters:
                         package_name: symfony/templating
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 151615
+                                absolute_downloads: 151645
                                 relative_downloads: 44.2
                                 version_publish_date: '2019-02-23'
                             v4.2:
-                                absolute_downloads: 137348
+                                absolute_downloads: 137368
                                 relative_downloads: !!float 40
                                 version_publish_date: '2018-11-20'
                             v4.1:
-                                absolute_downloads: 20765
+                                absolute_downloads: 20767
                                 relative_downloads: 6.1
                                 version_publish_date: '2018-05-01'
                             v3.4:
-                                absolute_downloads: 22772
+                                absolute_downloads: 22774
                                 relative_downloads: 6.6
                                 version_publish_date: '2017-11-07'
                             v3.0:
@@ -2027,34 +1933,34 @@ parameters:
                                 relative_downloads: 1.5
                                 version_publish_date: '2015-11-18'
                             v2.8:
-                                absolute_downloads: 5316
+                                absolute_downloads: 5317
                                 relative_downloads: 1.5
                                 version_publish_date: '2015-11-18'
                     symfony_translation:
                         package_name: symfony/translation
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 1726553
+                                absolute_downloads: 1726370
                                 relative_downloads: !!float 46
                                 version_publish_date: '2019-05-28'
                             v4.2:
-                                absolute_downloads: 740142
+                                absolute_downloads: 740106
                                 relative_downloads: 19.7
                                 version_publish_date: '2018-11-27'
                             v4.1:
-                                absolute_downloads: 163211
+                                absolute_downloads: 163201
                                 relative_downloads: 4.3
                                 version_publish_date: '2018-05-30'
                             v4.0:
-                                absolute_downloads: 40934
+                                absolute_downloads: 40932
                                 relative_downloads: 1.1
                                 version_publish_date: '2017-11-28'
                             v3.4:
-                                absolute_downloads: 596148
+                                absolute_downloads: 596113
                                 relative_downloads: 15.9
                                 version_publish_date: '2017-11-27'
                             v3.3:
-                                absolute_downloads: 101980
+                                absolute_downloads: 101975
                                 relative_downloads: 2.7
                                 version_publish_date: '2017-05-22'
                             v3.2:
@@ -2062,19 +1968,19 @@ parameters:
                                 relative_downloads: 1.4
                                 version_publish_date: '2016-11-18'
                             v3.1:
-                                absolute_downloads: 58476
+                                absolute_downloads: 58474
                                 relative_downloads: 1.6
                                 version_publish_date: '2016-05-12'
                             v3.0:
-                                absolute_downloads: 133487
+                                absolute_downloads: 133479
                                 relative_downloads: 3.6
                                 version_publish_date: '2015-11-18'
                             v2.8:
-                                absolute_downloads: 56311
+                                absolute_downloads: 56306
                                 relative_downloads: 1.5
                                 version_publish_date: '2015-11-18'
                             v2.7:
-                                absolute_downloads: 65626
+                                absolute_downloads: 65621
                                 relative_downloads: 1.7
                                 version_publish_date: '2015-05-29'
                             v2.6:
@@ -2140,19 +2046,19 @@ parameters:
                         package_name: symfony/twig-bundle
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 280703
+                                absolute_downloads: 280767
                                 relative_downloads: 48.8
                                 version_publish_date: '2019-05-10'
                             v4.2:
-                                absolute_downloads: 222017
+                                absolute_downloads: 222042
                                 relative_downloads: 38.6
                                 version_publish_date: '2018-11-11'
                             v4.1:
-                                absolute_downloads: 40701
+                                absolute_downloads: 40706
                                 relative_downloads: 7.1
                                 version_publish_date: '2018-05-16'
                             v3.4:
-                                absolute_downloads: 30247
+                                absolute_downloads: 30250
                                 relative_downloads: 5.3
                                 version_publish_date: '2017-11-24'
                             v2.8:
@@ -2163,19 +2069,19 @@ parameters:
                         package_name: symfony/validator
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 312570
+                                absolute_downloads: 312547
                                 relative_downloads: 31.5
                                 version_publish_date: '2019-05-29'
                             v4.2:
-                                absolute_downloads: 208453
+                                absolute_downloads: 208444
                                 relative_downloads: !!float 21
                                 version_publish_date: '2018-11-30'
                             v4.1:
-                                absolute_downloads: 35054
+                                absolute_downloads: 35052
                                 relative_downloads: 3.5
                                 version_publish_date: '2018-05-30'
                             v3.4:
-                                absolute_downloads: 338842
+                                absolute_downloads: 338830
                                 relative_downloads: 34.1
                                 version_publish_date: '2017-11-19'
                             v3.3:
@@ -2195,7 +2101,7 @@ parameters:
                                 relative_downloads: 0.1
                                 version_publish_date: '2015-11-20'
                             v2.8:
-                                absolute_downloads: 72825
+                                absolute_downloads: 72821
                                 relative_downloads: 7.3
                                 version_publish_date: '2015-11-20'
                             v2.7:
@@ -2326,15 +2232,15 @@ parameters:
                         package_name: symfony/web-server-bundle
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 132184
+                                absolute_downloads: 132172
                                 relative_downloads: 52.1
                                 version_publish_date: '2019-04-29'
                             v4.2:
-                                absolute_downloads: 98132
+                                absolute_downloads: 98121
                                 relative_downloads: 38.7
                                 version_publish_date: '2018-11-13'
                             v4.1:
-                                absolute_downloads: 13273
+                                absolute_downloads: 13270
                                 relative_downloads: 5.2
                                 version_publish_date: '2018-05-07'
                             v3.4:
@@ -2376,7 +2282,7 @@ parameters:
                         package_name: symfony/website-skeleton
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 25741
+                                absolute_downloads: 25738
                                 relative_downloads: 95.1
                                 version_publish_date: null
                             v3.4:
@@ -2514,11 +2420,11 @@ parameters:
                         package_name: cakephp/cache
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 49093
+                                absolute_downloads: 49101
                                 relative_downloads: 50.4
                                 version_publish_date: '2019-06-24'
                             v3.7:
-                                absolute_downloads: 39014
+                                absolute_downloads: 39025
                                 relative_downloads: !!float 40
                                 version_publish_date: '2018-12-09'
                             v3.6:
@@ -2529,7 +2435,7 @@ parameters:
                         package_name: cakephp/cakephp
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 20018
+                                absolute_downloads: 20016
                                 relative_downloads: 23.3
                                 version_publish_date: '2019-06-27'
                             v3.7:
@@ -2537,7 +2443,7 @@ parameters:
                                 relative_downloads: 12.3
                                 version_publish_date: '2018-12-09'
                             v3.6:
-                                absolute_downloads: 16354
+                                absolute_downloads: 16349
                                 relative_downloads: !!float 19
                                 version_publish_date: '2018-04-15'
                             v3.5:
@@ -2553,7 +2459,7 @@ parameters:
                                 relative_downloads: 1.6
                                 version_publish_date: '2016-08-13'
                             v2.10:
-                                absolute_downloads: 21862
+                                absolute_downloads: 21860
                                 relative_downloads: 25.5
                                 version_publish_date: '2017-07-22'
                             v2.9:
@@ -2568,7 +2474,7 @@ parameters:
                         package_name: cakephp/cakephp-codesniffer
                         downloads_minor:
                             v3.1:
-                                absolute_downloads: 38883
+                                absolute_downloads: 38898
                                 relative_downloads: 71.6
                                 version_publish_date: '2018-11-28'
                             v3.0:
@@ -2576,11 +2482,11 @@ parameters:
                                 relative_downloads: 14.5
                                 version_publish_date: '2017-05-07'
                             v2.4:
-                                absolute_downloads: 4548
+                                absolute_downloads: 4549
                                 relative_downloads: 8.4
                                 version_publish_date: '2017-03-01'
                             v1.0:
-                                absolute_downloads: 3006
+                                absolute_downloads: 3007
                                 relative_downloads: 5.5
                                 version_publish_date: '2014-12-22'
                     cakephp_chronos:
@@ -2658,7 +2564,7 @@ parameters:
                         package_name: cakephp/debug_kit
                         downloads_minor:
                             v3.19:
-                                absolute_downloads: 20496
+                                absolute_downloads: 20503
                                 relative_downloads: 30.3
                                 version_publish_date: '2019-05-31'
                             v3.18:
@@ -2670,7 +2576,7 @@ parameters:
                                 relative_downloads: 2.1
                                 version_publish_date: '2018-12-02'
                             v3.16:
-                                absolute_downloads: 13347
+                                absolute_downloads: 13354
                                 relative_downloads: 19.7
                                 version_publish_date: '2018-05-07'
                             v3.14:
@@ -2686,7 +2592,7 @@ parameters:
                                 relative_downloads: 6.9
                                 version_publish_date: '2017-02-11'
                             v2.2:
-                                absolute_downloads: 15060
+                                absolute_downloads: 15062
                                 relative_downloads: 22.2
                                 version_publish_date: null
                     cakephp_elastic_search:
@@ -2704,11 +2610,11 @@ parameters:
                         package_name: cakephp/log
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 49714
+                                absolute_downloads: 49723
                                 relative_downloads: 58.1
                                 version_publish_date: '2019-05-27'
                             v3.7:
-                                absolute_downloads: 35805
+                                absolute_downloads: 35813
                                 relative_downloads: 41.9
                                 version_publish_date: '2018-04-24'
                     cakephp_migrations:
@@ -2742,7 +2648,7 @@ parameters:
                         package_name: cakephp/plugin-installer
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 60024
+                                absolute_downloads: 60040
                                 relative_downloads: 85.9
                                 version_publish_date: '2017-12-24'
                             v1.0:
@@ -2845,15 +2751,15 @@ parameters:
                         package_name: illuminate/bus
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 62507
+                                absolute_downloads: 62504
                                 relative_downloads: !!float 39
                                 version_publish_date: '2019-02-18'
                             v5.7:
-                                absolute_downloads: 28085
+                                absolute_downloads: 28084
                                 relative_downloads: 17.5
                                 version_publish_date: '2018-01-04'
                             v5.6:
-                                absolute_downloads: 21180
+                                absolute_downloads: 21179
                                 relative_downloads: 13.2
                                 version_publish_date: '2017-12-14'
                             v5.5:
@@ -3106,19 +3012,19 @@ parameters:
                         package_name: illuminate/database
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 102106
+                                absolute_downloads: 102125
                                 relative_downloads: 35.7
                                 version_publish_date: '2019-02-26'
                             v5.7:
-                                absolute_downloads: 56159
+                                absolute_downloads: 56169
                                 relative_downloads: 19.6
                                 version_publish_date: '2018-09-04'
                             v5.6:
-                                absolute_downloads: 28610
+                                absolute_downloads: 28614
                                 relative_downloads: !!float 10
                                 version_publish_date: '2018-02-07'
                             v5.5:
-                                absolute_downloads: 34222
+                                absolute_downloads: 34227
                                 relative_downloads: !!float 12
                                 version_publish_date: '2017-08-29'
                             v5.4:
@@ -3130,7 +3036,7 @@ parameters:
                                 relative_downloads: 2.3
                                 version_publish_date: '2016-08-22'
                             v5.2:
-                                absolute_downloads: 14922
+                                absolute_downloads: 14923
                                 relative_downloads: 5.2
                                 version_publish_date: '2015-12-20'
                             v5.1:
@@ -3153,19 +3059,19 @@ parameters:
                         package_name: illuminate/encryption
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 63039
+                                absolute_downloads: 63052
                                 relative_downloads: 38.4
                                 version_publish_date: '2019-02-18'
                             v5.7:
-                                absolute_downloads: 25664
+                                absolute_downloads: 25665
                                 relative_downloads: 15.6
                                 version_publish_date: '2018-06-18'
                             v5.6:
-                                absolute_downloads: 21091
+                                absolute_downloads: 21096
                                 relative_downloads: 12.9
                                 version_publish_date: '2017-11-07'
                             v5.5:
-                                absolute_downloads: 20862
+                                absolute_downloads: 20866
                                 relative_downloads: 12.7
                                 version_publish_date: '2017-08-02'
                             v5.4:
@@ -3185,7 +3091,7 @@ parameters:
                                 relative_downloads: 1.8
                                 version_publish_date: null
                             v4.2:
-                                absolute_downloads: 1258
+                                absolute_downloads: 1259
                                 relative_downloads: 0.8
                                 version_publish_date: null
                     illuminate_events:
@@ -3235,19 +3141,19 @@ parameters:
                         package_name: illuminate/filesystem
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 92020
+                                absolute_downloads: 92038
                                 relative_downloads: 35.5
                                 version_publish_date: '2019-02-18'
                             v5.7:
-                                absolute_downloads: 35169
+                                absolute_downloads: 35170
                                 relative_downloads: 13.6
                                 version_publish_date: '2018-08-14'
                             v5.6:
-                                absolute_downloads: 46748
+                                absolute_downloads: 46754
                                 relative_downloads: 18.1
                                 version_publish_date: '2018-02-07'
                             v5.5:
-                                absolute_downloads: 34341
+                                absolute_downloads: 34348
                                 relative_downloads: 13.3
                                 version_publish_date: '2017-08-03'
                             v5.4:
@@ -3267,26 +3173,26 @@ parameters:
                                 relative_downloads: 1.3
                                 version_publish_date: null
                             v4.2:
-                                absolute_downloads: 5125
+                                absolute_downloads: 5127
                                 relative_downloads: !!float 2
                                 version_publish_date: null
                     illuminate_hashing:
                         package_name: illuminate/hashing
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 58902
+                                absolute_downloads: 58915
                                 relative_downloads: 38.3
                                 version_publish_date: '2019-02-18'
                             v5.7:
-                                absolute_downloads: 28071
+                                absolute_downloads: 28072
                                 relative_downloads: 18.3
                                 version_publish_date: '2018-08-05'
                             v5.6:
-                                absolute_downloads: 20371
+                                absolute_downloads: 20374
                                 relative_downloads: 13.3
                                 version_publish_date: '2018-02-01'
                             v5.5:
-                                absolute_downloads: 20143
+                                absolute_downloads: 20147
                                 relative_downloads: 13.1
                                 version_publish_date: '2017-07-05'
                             v5.4:
@@ -3313,19 +3219,19 @@ parameters:
                         package_name: illuminate/http
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 66794
+                                absolute_downloads: 66808
                                 relative_downloads: !!float 40
                                 version_publish_date: '2019-02-25'
                             v5.7:
-                                absolute_downloads: 25391
+                                absolute_downloads: 25392
                                 relative_downloads: 15.2
                                 version_publish_date: '2018-08-28'
                             v5.6:
-                                absolute_downloads: 21219
+                                absolute_downloads: 21224
                                 relative_downloads: 12.7
                                 version_publish_date: '2018-02-01'
                             v5.5:
-                                absolute_downloads: 21367
+                                absolute_downloads: 21372
                                 relative_downloads: 12.8
                                 version_publish_date: '2017-08-29'
                             v5.4:
@@ -3348,15 +3254,15 @@ parameters:
                         package_name: illuminate/log
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 61038
+                                absolute_downloads: 61051
                                 relative_downloads: 54.5
                                 version_publish_date: '2019-02-18'
                             v5.7:
-                                absolute_downloads: 25323
+                                absolute_downloads: 25324
                                 relative_downloads: 22.6
                                 version_publish_date: '2018-08-06'
                             v5.6:
-                                absolute_downloads: 22203
+                                absolute_downloads: 22206
                                 relative_downloads: 19.8
                                 version_publish_date: '2018-01-30'
                             v5.5:
@@ -3368,7 +3274,7 @@ parameters:
                                 relative_downloads: 1.1
                                 version_publish_date: '2017-01-19'
                             v4.2:
-                                absolute_downloads: 1224
+                                absolute_downloads: 1226
                                 relative_downloads: 1.1
                                 version_publish_date: null
                     illuminate_mail:
@@ -3915,11 +3821,11 @@ parameters:
                         package_name: yiisoft/yii2-swiftmailer
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 94378
+                                absolute_downloads: 94385
                                 relative_downloads: 63.5
                                 version_publish_date: '2017-08-04'
                             v2.0:
-                                absolute_downloads: 54307
+                                absolute_downloads: 54312
                                 relative_downloads: 36.5
                                 version_publish_date: '2014-10-12'
                     yiisoft_yii2_twig:
@@ -3944,15 +3850,15 @@ parameters:
                         package_name: zendframework/zend-authentication
                         downloads_minor:
                             v2.7:
-                                absolute_downloads: 28221
+                                absolute_downloads: 28227
                                 relative_downloads: 34.5
                                 version_publish_date: '2019-05-14'
                             v2.6:
-                                absolute_downloads: 33681
+                                absolute_downloads: 33685
                                 relative_downloads: 41.2
                                 version_publish_date: '2018-04-12'
                             v2.5:
-                                absolute_downloads: 19843
+                                absolute_downloads: 19844
                                 relative_downloads: 24.3
                                 version_publish_date: '2015-06-03'
                     zendframework_zend_barcode:
@@ -3974,7 +3880,7 @@ parameters:
                         package_name: zendframework/zend-cache
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 87001
+                                absolute_downloads: 87006
                                 relative_downloads: !!float 73
                                 version_publish_date: '2018-04-24'
                             v2.7:
@@ -3982,7 +3888,7 @@ parameters:
                                 relative_downloads: !!float 18
                                 version_publish_date: '2016-04-12'
                             v2.5:
-                                absolute_downloads: 8051
+                                absolute_downloads: 8055
                                 relative_downloads: 6.8
                                 version_publish_date: '2015-06-03'
                             v2.4:
@@ -3997,11 +3903,11 @@ parameters:
                         package_name: zendframework/zend-captcha
                         downloads_minor:
                             v2.9:
-                                absolute_downloads: 10638
+                                absolute_downloads: 10639
                                 relative_downloads: 6.4
                                 version_publish_date: '2019-06-18'
                             v2.8:
-                                absolute_downloads: 142887
+                                absolute_downloads: 142895
                                 relative_downloads: 86.4
                                 version_publish_date: '2018-04-24'
                             v2.7:
@@ -4016,7 +3922,7 @@ parameters:
                         package_name: zendframework/zend-code
                         downloads_minor:
                             v3.3:
-                                absolute_downloads: 1008482
+                                absolute_downloads: 1008549
                                 relative_downloads: 77.5
                                 version_publish_date: '2017-10-20'
                             v3.2:
@@ -4024,7 +3930,7 @@ parameters:
                                 relative_downloads: 0.4
                                 version_publish_date: '2017-07-23'
                             v3.1:
-                                absolute_downloads: 137363
+                                absolute_downloads: 137367
                                 relative_downloads: 10.6
                                 version_publish_date: '2016-10-24'
                             v3.0:
@@ -4032,7 +3938,7 @@ parameters:
                                 relative_downloads: 0.1
                                 version_publish_date: '2016-01-13'
                             v2.6:
-                                absolute_downloads: 127969
+                                absolute_downloads: 127972
                                 relative_downloads: 9.8
                                 version_publish_date: '2015-11-18'
                             v2.5:
@@ -4059,7 +3965,7 @@ parameters:
                                 relative_downloads: 44.9
                                 version_publish_date: '2018-02-08'
                             v1.1:
-                                absolute_downloads: 19210
+                                absolute_downloads: 19215
                                 relative_downloads: 48.4
                                 version_publish_date: '2017-11-06'
                             v0.7:
@@ -4070,11 +3976,11 @@ parameters:
                         package_name: zendframework/zend-config
                         downloads_minor:
                             v3.3:
-                                absolute_downloads: 37305
+                                absolute_downloads: 37308
                                 relative_downloads: 13.5
                                 version_publish_date: '2019-06-08'
                             v3.2:
-                                absolute_downloads: 30514
+                                absolute_downloads: 30517
                                 relative_downloads: !!float 11
                                 version_publish_date: '2018-04-24'
                             v3.1:
@@ -4082,7 +3988,7 @@ parameters:
                                 relative_downloads: 1.9
                                 version_publish_date: '2017-02-22'
                             v2.6:
-                                absolute_downloads: 182936
+                                absolute_downloads: 182946
                                 relative_downloads: 66.2
                                 version_publish_date: '2016-02-04'
                             v2.5:
@@ -4139,15 +4045,15 @@ parameters:
                         package_name: zendframework/zend-crypt
                         downloads_minor:
                             v3.3:
-                                absolute_downloads: 38968
+                                absolute_downloads: 38969
                                 relative_downloads: 17.9
                                 version_publish_date: '2018-04-24'
                             v3.2:
-                                absolute_downloads: 5608
+                                absolute_downloads: 5609
                                 relative_downloads: 2.6
                                 version_publish_date: '2016-12-06'
                             v2.6:
-                                absolute_downloads: 150023
+                                absolute_downloads: 150032
                                 relative_downloads: 68.9
                                 version_publish_date: '2016-02-03'
                             v2.5:
@@ -4219,7 +4125,7 @@ parameters:
                         package_name: zendframework/zend-di
                         downloads_minor:
                             v2.6:
-                                absolute_downloads: 161104
+                                absolute_downloads: 161114
                                 relative_downloads: 92.5
                                 version_publish_date: '2016-02-23'
                             v2.5:
@@ -4234,7 +4140,7 @@ parameters:
                         package_name: zendframework/zend-diactoros
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 542866
+                                absolute_downloads: 542935
                                 relative_downloads: 34.1
                                 version_publish_date: '2018-12-20'
                             v2.0:
@@ -4242,15 +4148,15 @@ parameters:
                                 relative_downloads: 0.1
                                 version_publish_date: '2018-09-27'
                             v1.8:
-                                absolute_downloads: 919385
+                                absolute_downloads: 919455
                                 relative_downloads: 57.7
                                 version_publish_date: '2018-06-27'
                             v1.7:
-                                absolute_downloads: 35643
+                                absolute_downloads: 35645
                                 relative_downloads: 2.2
                                 version_publish_date: '2018-01-04'
                             v1.6:
-                                absolute_downloads: 12027
+                                absolute_downloads: 12030
                                 relative_downloads: 0.8
                                 version_publish_date: '2017-09-13'
                             v1.5:
@@ -4258,7 +4164,7 @@ parameters:
                                 relative_downloads: 0.2
                                 version_publish_date: '2017-08-22'
                             v1.4:
-                                absolute_downloads: 61388
+                                absolute_downloads: 61400
                                 relative_downloads: 3.9
                                 version_publish_date: '2017-04-06'
                             v1.3:
@@ -4284,11 +4190,11 @@ parameters:
                         package_name: zendframework/zend-escaper
                         downloads_minor:
                             v2.6:
-                                absolute_downloads: 592336
+                                absolute_downloads: 592380
                                 relative_downloads: 83.4
                                 version_publish_date: '2018-04-25'
                             v2.5:
-                                absolute_downloads: 93289
+                                absolute_downloads: 93302
                                 relative_downloads: 13.1
                                 version_publish_date: '2015-06-03'
                             v2.4:
@@ -4347,10 +4253,10 @@ parameters:
                         downloads_minor:
                             v3.2:
                                 absolute_downloads: 16957
-                                relative_downloads: 60.5
+                                relative_downloads: 60.4
                                 version_publish_date: '2018-09-27'
                             v3.0:
-                                absolute_downloads: 3262
+                                absolute_downloads: 3263
                                 relative_downloads: 11.6
                                 version_publish_date: '2018-03-15'
                             v2.2:
@@ -4445,40 +4351,6 @@ parameters:
                                 absolute_downloads: 9561
                                 relative_downloads: 29.6
                                 version_publish_date: '2015-12-02'
-                    zendframework_zend_expressive_tooling:
-                        package_name: zendframework/zend-expressive-tooling
-                        downloads_minor:
-                            v1.2:
-                                absolute_downloads: 8287
-                                relative_downloads: 71.4
-                                version_publish_date: '2019-03-05'
-                            v1.0:
-                                absolute_downloads: 1861
-                                relative_downloads: !!float 16
-                                version_publish_date: '2018-03-15'
-                            v0.4:
-                                absolute_downloads: 1457
-                                relative_downloads: 12.6
-                                version_publish_date: '2017-04-11'
-                    zendframework_zend_expressive_twigrenderer:
-                        package_name: zendframework/zend-expressive-twigrenderer
-                        downloads_minor:
-                            v2.4:
-                                absolute_downloads: 1843
-                                relative_downloads: 27.6
-                                version_publish_date: '2019-06-12'
-                            v2.3:
-                                absolute_downloads: 1122
-                                relative_downloads: 16.8
-                                version_publish_date: '2019-01-23'
-                            v2.1:
-                                absolute_downloads: 1905
-                                relative_downloads: 28.5
-                                version_publish_date: '2018-04-09'
-                            v1.5:
-                                absolute_downloads: 1816
-                                relative_downloads: 27.2
-                                version_publish_date: '2017-08-12'
                     zendframework_zend_expressive_zendrouter:
                         package_name: zendframework/zend-expressive-zendrouter
                         downloads_minor:
@@ -4490,17 +4362,6 @@ parameters:
                                 absolute_downloads: 1286
                                 relative_downloads: !!float 24
                                 version_publish_date: '2017-01-11'
-                    zendframework_zend_expressive_zendviewrenderer:
-                        package_name: zendframework/zend-expressive-zendviewrenderer
-                        downloads_minor:
-                            v2.2:
-                                absolute_downloads: 2834
-                                relative_downloads: 68.4
-                                version_publish_date: '2019-06-04'
-                            v1.4:
-                                absolute_downloads: 1311
-                                relative_downloads: 31.6
-                                version_publish_date: '2017-03-14'
                     zendframework_zend_feed:
                         package_name: zendframework/zend-feed
                         downloads_minor:
@@ -4551,11 +4412,11 @@ parameters:
                         package_name: zendframework/zend-filter
                         downloads_minor:
                             v2.9:
-                                absolute_downloads: 236521
+                                absolute_downloads: 236531
                                 relative_downloads: 75.6
                                 version_publish_date: '2018-12-12'
                             v2.8:
-                                absolute_downloads: 24301
+                                absolute_downloads: 24306
                                 relative_downloads: 7.8
                                 version_publish_date: '2018-04-11'
                             v2.7:
@@ -4578,15 +4439,15 @@ parameters:
                         package_name: zendframework/zend-form
                         downloads_minor:
                             v2.14:
-                                absolute_downloads: 35580
+                                absolute_downloads: 35583
                                 relative_downloads: 16.7
                                 version_publish_date: '2019-01-07'
                             v2.13:
-                                absolute_downloads: 133084
+                                absolute_downloads: 133091
                                 relative_downloads: 62.3
                                 version_publish_date: '2018-12-11'
                             v2.12:
-                                absolute_downloads: 16423
+                                absolute_downloads: 16428
                                 relative_downloads: 7.7
                                 version_publish_date: '2018-05-16'
                             v2.11:
@@ -4594,7 +4455,7 @@ parameters:
                                 relative_downloads: 3.2
                                 version_publish_date: '2017-12-06'
                             v2.10:
-                                absolute_downloads: 6631
+                                absolute_downloads: 6632
                                 relative_downloads: 3.1
                                 version_publish_date: '2017-02-23'
                             v2.6:
@@ -4613,7 +4474,7 @@ parameters:
                         package_name: zendframework/zend-http
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 96296
+                                absolute_downloads: 96309
                                 relative_downloads: 29.9
                                 version_publish_date: '2019-02-19'
                             v2.9:
@@ -4621,7 +4482,7 @@ parameters:
                                 relative_downloads: 2.5
                                 version_publish_date: '2019-01-08'
                             v2.8:
-                                absolute_downloads: 169986
+                                absolute_downloads: 169998
                                 relative_downloads: 52.9
                                 version_publish_date: '2018-04-26'
                             v2.7:
@@ -4656,7 +4517,7 @@ parameters:
                                 relative_downloads: 83.2
                                 version_publish_date: '2019-02-19'
                             v1.0:
-                                absolute_downloads: 7084
+                                absolute_downloads: 7085
                                 relative_downloads: 16.8
                                 version_publish_date: '2018-02-05'
                     zendframework_zend_hydrator:
@@ -4667,7 +4528,7 @@ parameters:
                                 relative_downloads: 2.7
                                 version_publish_date: '2018-12-10'
                             v2.4:
-                                absolute_downloads: 73362
+                                absolute_downloads: 73371
                                 relative_downloads: 25.6
                                 version_publish_date: '2018-04-30'
                             v2.3:
@@ -4679,7 +4540,7 @@ parameters:
                                 relative_downloads: 1.5
                                 version_publish_date: '2016-04-06'
                             v1.1:
-                                absolute_downloads: 192871
+                                absolute_downloads: 192880
                                 relative_downloads: 67.2
                                 version_publish_date: '2016-02-18'
                             v1.0:
@@ -4755,7 +4616,7 @@ parameters:
                         package_name: zendframework/zend-json
                         downloads_minor:
                             v3.1:
-                                absolute_downloads: 114014
+                                absolute_downloads: 114029
                                 relative_downloads: 35.6
                                 version_publish_date: '2018-01-04'
                             v3.0:
@@ -4763,7 +4624,7 @@ parameters:
                                 relative_downloads: 3.4
                                 version_publish_date: '2016-04-01'
                             v2.6:
-                                absolute_downloads: 176806
+                                absolute_downloads: 176815
                                 relative_downloads: 55.2
                                 version_publish_date: '2015-11-18'
                             v2.5:
@@ -4866,7 +4727,7 @@ parameters:
                         package_name: zendframework/zend-mail
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 207518
+                                absolute_downloads: 207526
                                 relative_downloads: 88.8
                                 version_publish_date: '2018-06-07'
                             v2.9:
@@ -4897,7 +4758,7 @@ parameters:
                         package_name: zendframework/zend-math
                         downloads_minor:
                             v3.2:
-                                absolute_downloads: 47659
+                                absolute_downloads: 47666
                                 relative_downloads: 19.3
                                 version_publish_date: '2018-12-04'
                             v3.1:
@@ -4905,11 +4766,11 @@ parameters:
                                 relative_downloads: 1.9
                                 version_publish_date: '2018-04-26'
                             v3.0:
-                                absolute_downloads: 7305
+                                absolute_downloads: 7306
                                 relative_downloads: !!float 3
                                 version_publish_date: '2016-04-28'
                             v2.7:
-                                absolute_downloads: 165334
+                                absolute_downloads: 165343
                                 relative_downloads: 67.1
                                 version_publish_date: '2016-04-07'
                             v2.5:
@@ -4951,7 +4812,7 @@ parameters:
                         package_name: zendframework/zend-mime
                         downloads_minor:
                             v2.7:
-                                absolute_downloads: 219436
+                                absolute_downloads: 219446
                                 relative_downloads: 89.6
                                 version_publish_date: '2017-11-28'
                             v2.6:
@@ -4971,14 +4832,14 @@ parameters:
                                 relative_downloads: 0.4
                                 version_publish_date: '2013-05-10'
                             v2.1:
-                                absolute_downloads: 6500
+                                absolute_downloads: 6501
                                 relative_downloads: 2.7
                                 version_publish_date: '2013-01-29'
                     zendframework_zend_modulemanager:
                         package_name: zendframework/zend-modulemanager
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 193420
+                                absolute_downloads: 193435
                                 relative_downloads: 89.9
                                 version_publish_date: '2017-07-11'
                             v2.7:
@@ -5061,7 +4922,7 @@ parameters:
                         package_name: zendframework/zend-mvc-plugin-flashmessenger
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 21686
+                                absolute_downloads: 21687
                                 relative_downloads: !!float 88
                                 version_publish_date: '2018-04-30'
                             v1.0:
@@ -5072,7 +4933,7 @@ parameters:
                         package_name: zendframework/zend-mvc-plugin-identity
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 15978
+                                absolute_downloads: 15984
                                 relative_downloads: 91.4
                                 version_publish_date: '2018-04-30'
                             v1.0:
@@ -5113,11 +4974,11 @@ parameters:
                         package_name: zendframework/zend-paginator
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 66744
+                                absolute_downloads: 66748
                                 relative_downloads: 83.6
                                 version_publish_date: '2017-11-01'
                             v2.7:
-                                absolute_downloads: 6629
+                                absolute_downloads: 6631
                                 relative_downloads: 8.3
                                 version_publish_date: '2016-04-11'
                             v2.5:
@@ -5143,7 +5004,7 @@ parameters:
                         package_name: zendframework/zend-permissions-rbac
                         downloads_minor:
                             v3.0:
-                                absolute_downloads: 11447
+                                absolute_downloads: 11448
                                 relative_downloads: 22.4
                                 version_publish_date: '2018-03-22'
                             v2.6:
@@ -5151,14 +5012,14 @@ parameters:
                                 relative_downloads: 52.3
                                 version_publish_date: '2018-02-01'
                             v2.5:
-                                absolute_downloads: 12863
+                                absolute_downloads: 12864
                                 relative_downloads: 25.2
                                 version_publish_date: '2015-06-03'
                     zendframework_zend_progressbar:
                         package_name: zendframework/zend-progressbar
                         downloads_minor:
                             v2.6:
-                                absolute_downloads: 23221
+                                absolute_downloads: 23226
                                 relative_downloads: !!float 66
                                 version_publish_date: '2018-04-30'
                             v2.5:
@@ -5184,11 +5045,11 @@ parameters:
                         package_name: zendframework/zend-router
                         downloads_minor:
                             v3.3:
-                                absolute_downloads: 40809
+                                absolute_downloads: 40811
                                 relative_downloads: !!float 67
                                 version_publish_date: '2019-02-26'
                             v3.2:
-                                absolute_downloads: 6649
+                                absolute_downloads: 6652
                                 relative_downloads: 10.9
                                 version_publish_date: '2018-08-01'
                             v3.1:
@@ -5230,7 +5091,7 @@ parameters:
                         package_name: zendframework/zend-server
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 190730
+                                absolute_downloads: 190738
                                 relative_downloads: 86.7
                                 version_publish_date: '2018-04-30'
                             v2.7:
@@ -5296,7 +5157,7 @@ parameters:
                         package_name: zendframework/zend-session
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 188468
+                                absolute_downloads: 188481
                                 relative_downloads: 96.1
                                 version_publish_date: '2017-06-19'
                             v2.7:
@@ -5334,27 +5195,27 @@ parameters:
                         package_name: zendframework/zend-stdlib
                         downloads_minor:
                             v3.2:
-                                absolute_downloads: 585073
+                                absolute_downloads: 585117
                                 relative_downloads: 63.1
                                 version_publish_date: '2018-04-30'
                             v3.1:
-                                absolute_downloads: 40130
+                                absolute_downloads: 40131
                                 relative_downloads: 4.3
                                 version_publish_date: '2016-09-13'
                             v3.0:
-                                absolute_downloads: 49080
+                                absolute_downloads: 49093
                                 relative_downloads: 5.3
                                 version_publish_date: '2016-02-03'
                             v2.7:
-                                absolute_downloads: 179349
-                                relative_downloads: 19.4
+                                absolute_downloads: 179356
+                                relative_downloads: 19.3
                                 version_publish_date: '2015-09-22'
                             v2.6:
                                 absolute_downloads: 2125
                                 relative_downloads: 0.2
                                 version_publish_date: '2015-07-21'
                             v2.5:
-                                absolute_downloads: 16502
+                                absolute_downloads: 16503
                                 relative_downloads: 1.8
                                 version_publish_date: '2015-06-03'
                             v2.4:
@@ -5370,7 +5231,7 @@ parameters:
                                 relative_downloads: 1.3
                                 version_publish_date: '2013-05-10'
                             v2.1:
-                                absolute_downloads: 9393
+                                absolute_downloads: 9394
                                 relative_downloads: !!float 1
                                 version_publish_date: '2013-01-29'
                             v2.0:
@@ -5435,7 +5296,7 @@ parameters:
                                 relative_downloads: 25.7
                                 version_publish_date: '2019-06-11'
                             v3.2:
-                                absolute_downloads: 7987
+                                absolute_downloads: 7990
                                 relative_downloads: 16.4
                                 version_publish_date: '2018-04-07'
                             v3.1:
@@ -5473,15 +5334,15 @@ parameters:
                         package_name: zendframework/zend-uri
                         downloads_minor:
                             v2.7:
-                                absolute_downloads: 241933
+                                absolute_downloads: 241953
                                 relative_downloads: 68.8
                                 version_publish_date: '2019-02-27'
                             v2.6:
-                                absolute_downloads: 60001
+                                absolute_downloads: 60007
                                 relative_downloads: 17.1
                                 version_publish_date: '2018-04-10'
                             v2.5:
-                                absolute_downloads: 39380
+                                absolute_downloads: 39381
                                 relative_downloads: 11.2
                                 version_publish_date: '2015-06-03'
                             v2.4:
@@ -5539,15 +5400,15 @@ parameters:
                         package_name: zendframework/zend-view
                         downloads_minor:
                             v2.11:
-                                absolute_downloads: 99993
+                                absolute_downloads: 99998
                                 relative_downloads: 44.1
                                 version_publish_date: '2018-12-06'
                             v2.10:
-                                absolute_downloads: 98482
+                                absolute_downloads: 98491
                                 relative_downloads: 43.4
                                 version_publish_date: '2018-01-17'
                             v2.9:
-                                absolute_downloads: 6285
+                                absolute_downloads: 6286
                                 relative_downloads: 2.8
                                 version_publish_date: '2017-03-21'
                             v2.8:
@@ -5650,7 +5511,7 @@ parameters:
                         package_name: zendframework/zendservice-google-gcm
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 28351
+                                absolute_downloads: 28359
                                 relative_downloads: 74.5
                                 version_publish_date: '2018-05-08'
                             v2.0:
@@ -5680,7 +5541,7 @@ parameters:
                         package_name: zendframework/zendxml
                         downloads_minor:
                             v1.2:
-                                absolute_downloads: 44721
+                                absolute_downloads: 44725
                                 relative_downloads: 53.2
                                 version_publish_date: '2019-01-22'
                             v1.1:
@@ -5732,7 +5593,7 @@ parameters:
                                 relative_downloads: 17.1
                                 version_publish_date: '2019-02-05'
                             v2.5:
-                                absolute_downloads: 48754
+                                absolute_downloads: 48755
                                 relative_downloads: 78.7
                                 version_publish_date: '2016-06-14'
                             v2.3:
@@ -5833,7 +5694,7 @@ parameters:
                         package_name: nette/http
                         downloads_minor:
                             v3.0:
-                                absolute_downloads: 6371
+                                absolute_downloads: 6372
                                 relative_downloads: 16.1
                                 version_publish_date: '2019-02-28'
                             v2.4:
@@ -6014,11 +5875,11 @@ parameters:
                         package_name: nette/utils
                         downloads_minor:
                             v3.0:
-                                absolute_downloads: 395643
+                                absolute_downloads: 395667
                                 relative_downloads: !!float 68
                                 version_publish_date: '2019-02-05'
                             v2.5:
-                                absolute_downloads: 163516
+                                absolute_downloads: 163526
                                 relative_downloads: 28.1
                                 version_publish_date: '2018-02-17'
                             v2.4:
@@ -6036,7 +5897,7 @@ parameters:
                         package_name: doctrine/annotations
                         downloads_minor:
                             v1.6:
-                                absolute_downloads: 1870521
+                                absolute_downloads: 1870674
                                 relative_downloads: 72.6
                                 version_publish_date: '2017-12-06'
                             v1.5:
@@ -6044,7 +5905,7 @@ parameters:
                                 relative_downloads: 0.6
                                 version_publish_date: '2017-07-22'
                             v1.4:
-                                absolute_downloads: 483973
+                                absolute_downloads: 484005
                                 relative_downloads: 18.8
                                 version_publish_date: '2017-02-24'
                             v1.3:
@@ -6052,7 +5913,7 @@ parameters:
                                 relative_downloads: 0.8
                                 version_publish_date: '2016-10-24'
                             v1.2:
-                                absolute_downloads: 182558
+                                absolute_downloads: 182578
                                 relative_downloads: 7.1
                                 version_publish_date: '2014-07-06'
                             v1.1:
@@ -6094,12 +5955,12 @@ parameters:
                         package_name: doctrine/coding-standard
                         downloads_minor:
                             v6.0:
-                                absolute_downloads: 8180
-                                relative_downloads: 55.1
+                                absolute_downloads: 8185
+                                relative_downloads: 55.2
                                 version_publish_date: '2019-03-15'
                             v5.0:
                                 absolute_downloads: 5289
-                                relative_downloads: 35.7
+                                relative_downloads: 35.6
                                 version_publish_date: '2018-09-24'
                             v2.1:
                                 absolute_downloads: 1365
@@ -6136,31 +5997,31 @@ parameters:
                         package_name: doctrine/common
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 1049098
+                                absolute_downloads: 1049183
                                 relative_downloads: 54.4
                                 version_publish_date: '2018-11-21'
                             v2.9:
-                                absolute_downloads: 64872
+                                absolute_downloads: 64879
                                 relative_downloads: 3.4
                                 version_publish_date: '2018-07-12'
                             v2.8:
-                                absolute_downloads: 145076
+                                absolute_downloads: 145086
                                 relative_downloads: 7.5
                                 version_publish_date: '2017-07-22'
                             v2.7:
-                                absolute_downloads: 448746
+                                absolute_downloads: 448771
                                 relative_downloads: 23.3
                                 version_publish_date: '2016-11-30'
                             v2.6:
-                                absolute_downloads: 141762
+                                absolute_downloads: 141777
                                 relative_downloads: 7.4
                                 version_publish_date: '2015-12-04'
                             v2.5:
-                                absolute_downloads: 57612
+                                absolute_downloads: 57616
                                 relative_downloads: !!float 3
                                 version_publish_date: '2015-04-02'
                             v2.4:
-                                absolute_downloads: 19397
+                                absolute_downloads: 19400
                                 relative_downloads: !!float 1
                                 version_publish_date: '2013-08-20'
                             v2.3:
@@ -6171,15 +6032,15 @@ parameters:
                         package_name: doctrine/data-fixtures
                         downloads_minor:
                             v1.3:
-                                absolute_downloads: 525224
+                                absolute_downloads: 525259
                                 relative_downloads: 81.1
                                 version_publish_date: '2017-11-27'
                             v1.2:
-                                absolute_downloads: 79314
+                                absolute_downloads: 79315
                                 relative_downloads: 12.2
                                 version_publish_date: '2016-06-19'
                             v1.1:
-                                absolute_downloads: 35557
+                                absolute_downloads: 35563
                                 relative_downloads: 5.5
                                 version_publish_date: '2015-03-28'
                             v1.0:
@@ -6225,19 +6086,19 @@ parameters:
                         package_name: doctrine/inflector
                         downloads_minor:
                             v1.3:
-                                absolute_downloads: 3187830
+                                absolute_downloads: 3188217
                                 relative_downloads: 79.4
                                 version_publish_date: '2018-01-09'
                             v1.2:
-                                absolute_downloads: 327493
+                                absolute_downloads: 327515
                                 relative_downloads: 8.2
                                 version_publish_date: '2017-07-22'
                             v1.1:
-                                absolute_downloads: 467196
+                                absolute_downloads: 467241
                                 relative_downloads: 11.6
                                 version_publish_date: '2015-11-06'
                             v1.0:
-                                absolute_downloads: 33930
+                                absolute_downloads: 33932
                                 relative_downloads: 0.8
                                 version_publish_date: '2013-01-10'
                     doctrine_instantiator:
@@ -6340,11 +6201,11 @@ parameters:
                         package_name: doctrine/mongodb-odm
                         downloads_minor:
                             v1.2:
-                                absolute_downloads: 79538
+                                absolute_downloads: 79542
                                 relative_downloads: 91.5
                                 version_publish_date: '2017-10-24'
                             v1.1:
-                                absolute_downloads: 4264
+                                absolute_downloads: 4265
                                 relative_downloads: 4.9
                                 version_publish_date: '2016-06-09'
                             v1.0:
@@ -6393,4 +6254,4 @@ parameters:
                                 relative_downloads: 69.5
                                 version_publish_date: '2015-12-08'
                 name: Doctrine
-        updated_at: '2019-08-03 15:59:53'
+        updated_at: '2019-08-03 16:14:36'
