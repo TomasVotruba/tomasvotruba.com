@@ -42,6 +42,21 @@ final class PackageDataGroupedByVersionFactory
             }
 
             $packagesData[$packageKey] = $packageDownloads;
+
+            // complete relative number of downloads
+            $totalDownloads = array_sum($packageDownloads);
+            foreach ($packageDownloads as $version => $absoluteDownloads) {
+                $packageDownloads[$version] = [
+                    'absolute_downloads' => $absoluteDownloads,
+                    'relative_downloads' => round($absoluteDownloads/$totalDownloads + 1, 1),
+                ];
+            }
+
+            dump($packageDownloads);
+
+            dump($packageDownloads);
+            die;
+
             $packagesData[$packageKey]['adoption_rate'] = $this->resolveAdoptionRate($packageDownloads);
             $packagesData[$packageKey]['package_name'] = $packageName;
 
