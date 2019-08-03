@@ -47,8 +47,8 @@ id: "trends_adoption"
             <table class="table table-bordered mt-4 mt-4">
                 <thead class="thead-inverse">
                     <tr>
-                        <th colspan="2" class="text-center" id="{{ package_data.package_name|webalize }}">
-                            <a href="#{{ package_data.package_name|webalize }}">
+                        <th colspan="2" class="text-center">
+                            <a href="https://packagist.org/packages/{{ package_data.package_name }}/stats">
                                 {{ package_data.package_name }}
                             </a>
                         </th>
@@ -66,14 +66,14 @@ id: "trends_adoption"
                                 </span>
                             {% endif %}
                         </td>
-                        <td class="w-50 text-right">
+                        <td class="w-50 text-right text-nowrap">
                             {% if loop.first and package_data.adoption_rate < 100 %}
                                 <div class="float-left">
                                     {{ macros.adoption(package_data.adoption_rate) }}
                                 </div>
                             {% endif %}
 
-                            <nobr>{{ macros.number(number) }}</nobr>
+                            {{ macros.number(number) }}
                         </td>
                     </tr>
                 {% endfor %}

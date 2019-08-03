@@ -18,6 +18,10 @@ final class NumberFilterProvider implements FilterProviderInterface
                     return $this->formatNumber($number / (10 ** 6)) . ' mil.';
                 }
 
+                if ($number > 10 ** 2) {
+                    return $this->formatNumber($number / (10 ** 3)) . ' th.';
+                }
+
                 return $this->formatNumber($number);
             },
         ];
