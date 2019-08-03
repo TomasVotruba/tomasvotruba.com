@@ -68,8 +68,6 @@ final class GeneratePackageStatsGroupedByVersionCommand extends Command
     {
         $vendorData = [];
 
-        ksort($this->versionedFrameworkVendor);
-
         foreach ($this->versionedFrameworkVendor as $vendor => $name) {
             $this->symfonyStyle->title(sprintf('Loading packages data grouped by version for "%s" vendor', $vendor));
 

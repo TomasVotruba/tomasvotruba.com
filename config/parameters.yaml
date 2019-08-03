@@ -1,12 +1,13 @@
 parameters:
     # used by https://www.tomasvotruba.cz/package-downloads-by-version/
     versioned_framework_vendor:
-        nette: Nette
+        # the order reflects similar order in previous table, so it's easier to read
         symfony: Symfony
-        illuminate: Laravel
         cakephp: CakePHP
-        zendframework: Zend
+        illuminate: Laravel
         yiisoft: Yii
+        zendframework: Zend
+        nette: Nette
         doctrine: Doctrine
 
     excluded_framework_packages:
