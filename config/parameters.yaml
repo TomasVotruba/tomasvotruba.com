@@ -62,6 +62,7 @@ parameters:
         - 'doctrine/mongodb-odm-bundle'
         # weak packages
         - 'cakephp/elastic-search'
+        - 'cakephp/acl'
         - 'yiisoft/yii2-apidoc'
         - 'zendframework/zend-expressive-zendrouter'
         - 'zendframework/zend-expressive-twigrenderer'
