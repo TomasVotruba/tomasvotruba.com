@@ -404,10 +404,12 @@ services:
     # every property should have @var annotation
     SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff: ~
 
-# this part is needed, because `TypeHintDeclarationSniff` is actually mix of 7 rules we don't need (they also delete code, so be sure to have this section here)
+# this part is needed, because `TypeHintDeclarationSniff` is actually mix of 7 rules we don't need
+# (they also delete code, so be sure to have this section here)
 parameters:
     skip:
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment: ~ # removes useful code!
+        # ↓ the first removes useful code!
+        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment: ~ 
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversablePropertyTypeHintSpecification: ~
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableReturnTypeHintSpecification: ~
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableParameterTypeHintSpecification: ~
