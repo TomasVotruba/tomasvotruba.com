@@ -41,24 +41,23 @@ final class PackageDataGroupedByVersionFactory
                 continue;
             }
 
-            $packagesData[$packageKey] = $packageDownloads;
-
             // complete relative number of downloads
             $totalDownloads = array_sum($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR]);
+
             foreach ($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR] as $version => $absoluteDownloads) {
-                $relativeRate = 100 * ($absoluteDownloads/$totalDownloads);
+                $relativeRate = 100 * ($absoluteDownloads / $totalDownloads);
 
                 $packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR][$version] = [
                     'absolute_downloads' => $absoluteDownloads,
                     'relative_downloads' => round($relativeRate, 1),
+                    'version_publish_date' => $this->packageVersionPublishDatesProvider->provideForPackageAndVersion(
+                        $packageName,
+                        $version
+                    ),
                 ];
             }
 
-            $packagesData[$packageKey]['package_name'] = $packageName;
-
-            $packagesData[$packageKey]['version_publish_dates'] = $this->packageVersionPublishDatesProvider->provideForPackage(
-                $packageName
-            );
+            $packagesData[$packageKey] = ['package_name' => $packageName] + $packageDownloads;
         }
 
         return $packagesData;
