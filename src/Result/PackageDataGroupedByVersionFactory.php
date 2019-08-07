@@ -9,6 +9,11 @@ use TomasVotruba\Website\Packagist\PackageVersionPublishDatesProvider;
 final class PackageDataGroupedByVersionFactory
 {
     /**
+     * @var int
+     */
+    private const MINIMAL_RELATIVE_RATE = 15;
+
+    /**
      * @var MinorPackageVersionsDownloadsProvider
      */
     private $minorPackageVersionsDownloadsProvider;
@@ -46,6 +51,11 @@ final class PackageDataGroupedByVersionFactory
 
             foreach ($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR] as $version => $absoluteDownloads) {
                 $relativeRate = 100 * ($absoluteDownloads / $totalDownloads);
+
+                if ($relativeRate < self::MINIMAL_RELATIVE_RATE) {
+                    unset($packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR][$version]);
+                    continue;
+                }
 
                 $packageDownloads[MinorPackageVersionsDownloadsProvider::DOWNLOADS_MINOR][$version] = [
                     'absolute_downloads' => $absoluteDownloads,
