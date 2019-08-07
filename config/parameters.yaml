@@ -75,9 +75,17 @@ parameters:
         - 'symfony/http-client-contracts'
         - 'symfony/event-dispatcher-contracts'
         - 'symfony/service-contracts'
-        # meta-framework packages
+        # meta-framework + inner bridge packages
         - 'symfony/mercure'
+        - 'symfony/force-lowest'
         - 'symfony/panther'
+        - 'symfony/flex'
+        - 'symfony/proxy-manager-bridge'
+        - 'symfony/psr-http-message-bridge'
+        # skeletons
+        - 'symfony/website-skeleton'
+        - 'symfony/maker-bundle'
+        - 'symfony/swiftmailer-bundle'
 
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:
