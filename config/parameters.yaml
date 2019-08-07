@@ -75,6 +75,9 @@ parameters:
         - 'symfony/http-client-contracts'
         - 'symfony/event-dispatcher-contracts'
         - 'symfony/service-contracts'
+        # meta-framework packages
+        - 'symfony/mercure'
+        - 'symfony/panther'
 
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:

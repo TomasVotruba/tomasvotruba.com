@@ -673,20 +673,15 @@ q {
     font-size: 1.3em;
 }
 
-.rotate-90 {
-    transform: rotate(-90deg);
-    /* Legacy vendor prefixes that you probably don't need... */
-    /* Safari */
-    -webkit-transform: rotate(-90deg);
-    /* Firefox */
-    -moz-transform: rotate(-90deg);
-    /* IE */
-    -ms-transform: rotate(-90deg);
-    /* Opera */
-    -o-transform: rotate(-90deg);
+/* see https://stackoverflow.com/a/30423904/1348344 */
+.horizontal-scroll-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-/*.horizontal-scroll-table {*/
-/*    max-width: 30em;*/
-/*    margin: 0 auto;*/
-/*}*/
+.rotate-90 {
+    overflow-x: visible;
+    transform: rotate(-90deg);
+    white-space: normal;
+}

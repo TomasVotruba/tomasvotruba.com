@@ -11,7 +11,7 @@ final class PackageDataGroupedByVersionFactory
     /**
      * @var int
      */
-    private const MINIMAL_RELATIVE_RATE = 15;
+    private const MINIMAL_RELATIVE_RATE = 20;
 
     /**
      * @var MinorPackageVersionsDownloadsProvider

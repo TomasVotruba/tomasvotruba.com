@@ -6,11 +6,12 @@ id: "trends_adoption"
 
 {% set minimal_relative_adoption = 15 %}
 {% set minimal_daily_downloads = 1000 %}
+{% set monorepo_frameworks = ['Symfony', 'CakePHP', 'Laravel', 'Zend', 'Nette'] %}
 
 {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
 {% import "_snippets/macros/trends_macros.twig" as macros %}
 
-<div class="container-fluid" id="blog">
+<div class="container-fluid">
     {% include "_snippets/stats/stats_menu.twig" %}
 
     <h1>{{ title }}</h1>
@@ -38,29 +39,28 @@ id: "trends_adoption"
     </div>
 </div>
 
-<div id="matrix" class="ml-3 mr-3">
     {% for framework in vendor_packages_by_version.vendors %}
-        <div class="text-center mb-5">
-            <h2 id="{{ framework.name|webalize }}">
-                {{ framework.name }}
-            </h2>
+        <div id="matrix" class="ml-3 mr-3">
+            <div class="text-center mb-5">
+                <h2 id="{{ framework.name|webalize }}">
+                    {{ framework.name }}
+                </h2>
 
-            <p>
-                <a href="#">Jump up ↑</a>
-            </p>
-        </div>
+                <p>
+                    <a href="#">Jump up ↑</a>
+                </p>
+            </div>
 
-        {% if framework.name == 'Symfony' %}
-            {% set all_versions = fetch_versions(framework.packages_data) %}
+            {% if framework.name in monorepo_frameworks %}
+                {% set all_versions = fetch_versions(framework.packages_data) %}
 
-            <div class="horizontal-scroll-table">
-                <table class="table table-responsive table-bordered">
+                <table class="table table-responsive table-bordered horizontal-scroll-table">
                     <thead class="thead-inverse">
                         <tr>
                             <th></th>
                             {% for package_data in framework.packages_data %}
                                 <th class="text-center align-middle">
-                                    <div class="rotate-90 pt-3 pb-3">
+                                    <div class="rotate-90 pt-3 pb-3 pl-0 pr-0">
                                         {{ package_data.package_short_name }}
                                     </div>
                                 </th>
@@ -87,46 +87,47 @@ id: "trends_adoption"
                     {% endfor %}
                 </table>
             </div>
+        {% else %}
+            <div class="container-fluid">
+                <div class="row">
+                    {% for package_data in framework.packages_data %}
+                        <div class="col-12 col-sm-6">
+                            <table class="table table-bordered table-striped table-responsive mt-4 mt-4">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                        <th colspan="3" class="text-center align-middle">
+                                            <a href="https://packagist.org/packages/{{ package_data.package_name }}/stats">
+                                                {{ package_data.package_short_name }}
+                                            </a>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                {% for version, version_data in package_data.downloads_minor if version_data.relative_downloads >= minimal_relative_adoption %}
+                                    <tr>
+                                        <td class="w-25 align-middle">
+                                            {{ version }}
+
+                                            <span class="text-nowrap lesser">
+                                                {{ version_data.version_publish_date|date("Y-m") }}
+                                            </span>
+                                        </td>
+
+                                        <td class="w-25  align-middle text-center">
+                                            {{ macros.adoption(version_data.relative_downloads) }}
+                                        </td>
+                                        <td class="w-25  align-middle text-right text-nowrap">
+                                            {{ macros.number(version_data.absolute_downloads, 500000, 5000) }}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
         {% endif %}
-
-{#        <div class="row">#}
-{#            {% for package_data in framework.packages_data %}#}
-{#                <div class="col-12 col-sm-6">#}
-{#                    <table class="table table-bordered table-striped table-responsive mt-4 mt-4">#}
-{#                        <thead class="thead-inverse">#}
-{#                            <tr>#}
-{#                                <th colspan="3" class="text-center align-middle">#}
-{#                                    <a href="https://packagist.org/packages/{{ package_data.package_name }}/stats">#}
-{#                                        {{ package_data.package_short_name }}#}
-{#                                    </a>#}
-{#                                </th>#}
-{#                            </tr>#}
-{#                        </thead>#}
-
-{#                        {% for version, version_data in package_data.downloads_minor if version_data.relative_downloads >= minimal_relative_adoption %}#}
-{#                            <tr>#}
-{#                                <td class="w-25 align-middle">#}
-{#                                    {{ version }}#}
-
-{#                                    <span class="text-nowrap lesser">#}
-{#                                        {{ version_data.version_publish_date|date("Y-m") }}#}
-{#                                    </span>#}
-{#                                </td>#}
-
-{#                                <td class="w-25  align-middle text-center">#}
-{#                                    {{ macros.adoption(version_data.relative_downloads) }}#}
-{#                                </td>#}
-{#                                <td class="w-25  align-middle text-right text-nowrap">#}
-{#                                    {{ macros.number(version_data.absolute_downloads, 500000, 5000) }}#}
-{#                                </td>#}
-{#                            </tr>#}
-{#                        {% endfor %}#}
-{#                    </table>#}
-{#                </div>#}
-{#            {% endfor %}#}
-{#        </div>#}
     {% endfor %}
-</div>
 
 <div class="container-fluid" id="blog">
     <h2 class="mb-4">Methodology</h2>
