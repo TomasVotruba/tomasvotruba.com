@@ -4,9 +4,9 @@ title: "Package Monthly Downloads by Version"
 id: "trends_adoption"
 ---
 
-{% set minimal_relative_adoption = 15 %}
+{% set minimal_relative_adoption = 20 %}
 {% set minimal_daily_downloads = 1000 %}
-{% set monorepo_frameworks = ['Symfony', 'CakePHP', 'Laravel', 'Zend', 'Nette'] %}
+{% set monorepo_frameworks = ['Symfony', 'CakePHP', 'Laravel', 'Yii', 'Nette'] %}
 
 {# local macros must be imported, then use like "{{ macros.<X>() }}" #}
 {% import "_snippets/macros/trends_macros.twig" as macros %}
@@ -54,13 +54,13 @@ id: "trends_adoption"
             {% if framework.name in monorepo_frameworks %}
                 {% set all_versions = fetch_versions(framework.packages_data) %}
 
-                <table class="table table-responsive table-bordered horizontal-scroll-table">
+                <table class="table table-responsive table-bordered {% if all_versions|length > 15 %}horizontal-scroll-table{% endif %}">
                     <thead class="thead-inverse">
                         <tr>
                             <th></th>
                             {% for package_data in framework.packages_data %}
                                 <th class="text-center align-middle">
-                                    <div class="rotate-90 pt-3 pb-3 pl-0 pr-0">
+                                    <div class="{% if all_versions|length > 15 %}rotate-90{% endif %} pt-3 pb-3 pl-0 pr-0">
                                         {{ package_data.package_short_name }}
                                     </div>
                                 </th>
@@ -116,9 +116,9 @@ id: "trends_adoption"
                                         <td class="w-25  align-middle text-center">
                                             {{ macros.adoption(version_data.relative_downloads) }}
                                         </td>
-                                        <td class="w-25  align-middle text-right text-nowrap">
-                                            {{ macros.number(version_data.absolute_downloads, 500000, 5000) }}
-                                        </td>
+{#                                        <td class="w-25  align-middle text-right text-nowrap">#}
+{#                                            {{ macros.number(version_data.absolute_downloads, 500000, 5000) }}#}
+{#                                        </td>#}
                                     </tr>
                                 {% endfor %}
                             </table>
