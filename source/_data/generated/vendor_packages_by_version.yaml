@@ -1,4 +1,4 @@
-# this file was generated on 2019-08-07 16:56:08, do not edit it manually
+# this file was generated on 2019-08-07 17:48:55, do not edit it manually
 parameters:
     vendor_packages_by_version:
         vendors:
@@ -28,10 +28,6 @@ parameters:
                                 absolute_downloads: 279541
                                 relative_downloads: 23.2
                                 version_publish_date: '2018-11-26'
-                            v3.4:
-                                absolute_downloads: 229118
-                                relative_downloads: 19.1
-                                version_publish_date: '2017-11-07'
                     symfony_cache:
                         package_name: symfony/cache
                         package_short_name: cache
@@ -52,10 +48,6 @@ parameters:
                                 absolute_downloads: 714398
                                 relative_downloads: 38.7
                                 version_publish_date: '2019-05-20'
-                            v4.2:
-                                absolute_downloads: 320206
-                                relative_downloads: 17.3
-                                version_publish_date: '2018-11-26'
                             v3.4:
                                 absolute_downloads: 536746
                                 relative_downloads: 29.1
@@ -68,10 +60,6 @@ parameters:
                                 absolute_downloads: 1953637
                                 relative_downloads: 40.4
                                 version_publish_date: '2019-05-27'
-                            v4.2:
-                                absolute_downloads: 763269
-                                relative_downloads: 15.8
-                                version_publish_date: '2018-11-27'
                             v3.4:
                                 absolute_downloads: 1196933
                                 relative_downloads: 24.7
@@ -84,14 +72,6 @@ parameters:
                                 absolute_downloads: 1603534
                                 relative_downloads: 47.4
                                 version_publish_date: '2019-01-16'
-                            v4.2:
-                                absolute_downloads: 605608
-                                relative_downloads: 17.9
-                                version_publish_date: '2018-11-11'
-                            v3.4:
-                                absolute_downloads: 586633
-                                relative_downloads: 17.4
-                                version_publish_date: '2017-11-05'
                     symfony_debug:
                         package_name: symfony/debug
                         package_short_name: debug
@@ -100,10 +80,6 @@ parameters:
                                 absolute_downloads: 1750716
                                 relative_downloads: 40.9
                                 version_publish_date: '2019-05-20'
-                            v4.2:
-                                absolute_downloads: 684245
-                                relative_downloads: !!float 16
-                                version_publish_date: '2018-11-28'
                             v3.4:
                                 absolute_downloads: 1060172
                                 relative_downloads: 24.8
@@ -128,10 +104,6 @@ parameters:
                                 absolute_downloads: 618818
                                 relative_downloads: 38.5
                                 version_publish_date: '2019-05-28'
-                            v4.2:
-                                absolute_downloads: 291426
-                                relative_downloads: 18.1
-                                version_publish_date: '2018-11-28'
                             v3.4:
                                 absolute_downloads: 460394
                                 relative_downloads: 28.6
@@ -156,10 +128,6 @@ parameters:
                                 absolute_downloads: 605035
                                 relative_downloads: 35.7
                                 version_publish_date: '2019-04-26'
-                            v4.2:
-                                absolute_downloads: 268487
-                                relative_downloads: 15.9
-                                version_publish_date: '2018-11-26'
                             v3.4:
                                 absolute_downloads: 444854
                                 relative_downloads: 26.3
@@ -184,14 +152,6 @@ parameters:
                                 absolute_downloads: 1913139
                                 relative_downloads: 43.5
                                 version_publish_date: '2019-05-28'
-                            v4.2:
-                                absolute_downloads: 751806
-                                relative_downloads: 17.1
-                                version_publish_date: '2018-11-26'
-                            v3.4:
-                                absolute_downloads: 767167
-                                relative_downloads: 17.5
-                                version_publish_date: '2017-11-09'
                     symfony_expression_language:
                         package_name: symfony/expression-language
                         package_short_name: expression-language
@@ -212,10 +172,6 @@ parameters:
                                 absolute_downloads: 1171513
                                 relative_downloads: 43.4
                                 version_publish_date: '2019-05-24'
-                            v4.2:
-                                absolute_downloads: 454053
-                                relative_downloads: 16.8
-                                version_publish_date: '2018-11-11'
                             v3.4:
                                 absolute_downloads: 706058
                                 relative_downloads: 26.1
@@ -228,10 +184,6 @@ parameters:
                                 absolute_downloads: 2013400
                                 relative_downloads: 45.2
                                 version_publish_date: '2019-05-26'
-                            v4.2:
-                                absolute_downloads: 749524
-                                relative_downloads: 16.8
-                                version_publish_date: '2018-11-11'
                             v3.4:
                                 absolute_downloads: 1072258
                                 relative_downloads: 24.1
@@ -292,10 +244,6 @@ parameters:
                                 absolute_downloads: 1680599
                                 relative_downloads: 44.7
                                 version_publish_date: '2019-05-29'
-                            v4.2:
-                                absolute_downloads: 664190
-                                relative_downloads: 17.6
-                                version_publish_date: '2018-11-26'
                             v3.4:
                                 absolute_downloads: 854204
                                 relative_downloads: 22.7
@@ -308,10 +256,6 @@ parameters:
                                 absolute_downloads: 1554242
                                 relative_downloads: 45.1
                                 version_publish_date: '2019-05-30'
-                            v4.2:
-                                absolute_downloads: 641739
-                                relative_downloads: 18.6
-                                version_publish_date: '2018-11-30'
                             v3.4:
                                 absolute_downloads: 750704
                                 relative_downloads: 21.8
@@ -352,10 +296,6 @@ parameters:
                                 absolute_downloads: 3167
                                 relative_downloads: 20.5
                                 version_publish_date: '2018-11-20'
-                            v3.4:
-                                absolute_downloads: 2593
-                                relative_downloads: 16.8
-                                version_publish_date: '2017-09-15'
                     symfony_lock:
                         package_name: symfony/lock
                         package_short_name: lock
@@ -368,10 +308,6 @@ parameters:
                                 absolute_downloads: 34100
                                 relative_downloads: 29.1
                                 version_publish_date: '2018-11-24'
-                            v3.4:
-                                absolute_downloads: 20123
-                                relative_downloads: 17.1
-                                version_publish_date: '2017-11-22'
                     symfony_maker_bundle:
                         package_name: symfony/maker-bundle
                         package_short_name: maker-bundle
@@ -384,18 +320,6 @@ parameters:
                                 absolute_downloads: 212794
                                 relative_downloads: 52.6
                                 version_publish_date: '2018-12-20'
-                    symfony_mercure:
-                        package_name: symfony/mercure
-                        package_short_name: mercure
-                        downloads_minor:
-                            v0.2:
-                                absolute_downloads: 12148
-                                relative_downloads: !!float 68
-                                version_publish_date: '2019-06-20'
-                            v0.1:
-                                absolute_downloads: 5728
-                                relative_downloads: !!float 32
-                                version_publish_date: '2018-10-24'
                     symfony_messenger:
                         package_name: symfony/messenger
                         package_short_name: messenger
@@ -444,22 +368,6 @@ parameters:
                                 absolute_downloads: 352219
                                 relative_downloads: 22.6
                                 version_publish_date: '2018-11-11'
-                    symfony_panther:
-                        package_name: symfony/panther
-                        package_short_name: panther
-                        downloads_minor:
-                            v0.4:
-                                absolute_downloads: 24037
-                                relative_downloads: 28.9
-                                version_publish_date: '2019-06-04'
-                            v0.3:
-                                absolute_downloads: 44706
-                                relative_downloads: 53.7
-                                version_publish_date: '2019-02-27'
-                            v0.2:
-                                absolute_downloads: 14450
-                                relative_downloads: 17.4
-                                version_publish_date: '2018-09-26'
                     symfony_phpunit_bridge:
                         package_name: symfony/phpunit-bridge
                         package_short_name: phpunit-bridge
@@ -468,10 +376,6 @@ parameters:
                                 absolute_downloads: 321395
                                 relative_downloads: 36.6
                                 version_publish_date: '2019-05-08'
-                            v4.2:
-                                absolute_downloads: 147179
-                                relative_downloads: 16.8
-                                version_publish_date: '2018-11-26'
                             v3.4:
                                 absolute_downloads: 344300
                                 relative_downloads: 39.2
@@ -484,10 +388,6 @@ parameters:
                                 absolute_downloads: 1794907
                                 relative_downloads: 41.9
                                 version_publish_date: '2019-05-26'
-                            v4.2:
-                                absolute_downloads: 669545
-                                relative_downloads: 15.6
-                                version_publish_date: '2018-11-20'
                             v3.4:
                                 absolute_downloads: 1094168
                                 relative_downloads: 25.5
@@ -536,10 +436,6 @@ parameters:
                                 absolute_downloads: 576323
                                 relative_downloads: !!float 72
                                 version_publish_date: '2019-03-11'
-                            v1.1:
-                                absolute_downloads: 155284
-                                relative_downloads: 19.4
-                                version_publish_date: '2018-08-30'
                     symfony_routing:
                         package_name: symfony/routing
                         package_short_name: routing
@@ -548,10 +444,6 @@ parameters:
                                 absolute_downloads: 1534818
                                 relative_downloads: 45.9
                                 version_publish_date: '2019-05-20'
-                            v4.2:
-                                absolute_downloads: 611508
-                                relative_downloads: 18.3
-                                version_publish_date: '2018-11-29'
                             v3.4:
                                 absolute_downloads: 734122
                                 relative_downloads: 21.9
@@ -568,10 +460,6 @@ parameters:
                                 absolute_downloads: 76514
                                 relative_downloads: 31.6
                                 version_publish_date: '2018-11-11'
-                            v3.4:
-                                absolute_downloads: 41003
-                                relative_downloads: 16.9
-                                version_publish_date: '2017-11-16'
                     symfony_security_acl:
                         package_name: symfony/security-acl
                         package_short_name: security-acl
@@ -660,20 +548,16 @@ parameters:
                                 absolute_downloads: 392215
                                 relative_downloads: 63.2
                                 version_publish_date: '2017-11-30'
-                            v2.8:
-                                absolute_downloads: 108758
-                                relative_downloads: 17.5
-                                version_publish_date: '2015-11-30'
                     symfony_templating:
                         package_name: symfony/templating
                         package_short_name: templating
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 157411
+                                absolute_downloads: 158180
                                 relative_downloads: !!float 45
                                 version_publish_date: '2019-02-23'
                             v4.2:
-                                absolute_downloads: 135573
+                                absolute_downloads: 136069
                                 relative_downloads: 38.8
                                 version_publish_date: '2018-11-20'
                     symfony_translation:
@@ -681,27 +565,19 @@ parameters:
                         package_short_name: translation
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 1776848
+                                absolute_downloads: 1783775
                                 relative_downloads: 46.6
                                 version_publish_date: '2019-05-28'
-                            v4.2:
-                                absolute_downloads: 731434
-                                relative_downloads: 19.2
-                                version_publish_date: '2018-11-27'
-                            v3.4:
-                                absolute_downloads: 602801
-                                relative_downloads: 15.8
-                                version_publish_date: '2017-11-27'
                     symfony_twig_bridge:
                         package_name: symfony/twig-bridge
                         package_short_name: twig-bridge
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 301954
+                                absolute_downloads: 303513
                                 relative_downloads: 45.1
                                 version_publish_date: '2019-05-28'
                             v4.2:
-                                absolute_downloads: 218474
+                                absolute_downloads: 219314
                                 relative_downloads: 32.6
                                 version_publish_date: '2018-11-26'
                     symfony_twig_bundle:
@@ -709,11 +585,11 @@ parameters:
                         package_short_name: twig-bundle
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 290843
+                                absolute_downloads: 292341
                                 relative_downloads: !!float 50
                                 version_publish_date: '2019-05-10'
                             v4.2:
-                                absolute_downloads: 218276
+                                absolute_downloads: 219135
                                 relative_downloads: 37.5
                                 version_publish_date: '2018-11-11'
                     symfony_validator:
@@ -721,15 +597,15 @@ parameters:
                         package_short_name: validator
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 324867
+                                absolute_downloads: 326503
                                 relative_downloads: 32.1
                                 version_publish_date: '2019-05-29'
                             v4.2:
-                                absolute_downloads: 204747
+                                absolute_downloads: 205458
                                 relative_downloads: 20.2
                                 version_publish_date: '2018-11-30'
                             v3.4:
-                                absolute_downloads: 344631
+                                absolute_downloads: 345990
                                 relative_downloads: 34.1
                                 version_publish_date: '2017-11-19'
                     symfony_var_dumper:
@@ -737,27 +613,19 @@ parameters:
                         package_short_name: var-dumper
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 1665509
+                                absolute_downloads: 1672116
                                 relative_downloads: 50.1
                                 version_publish_date: '2019-05-01'
-                            v4.2:
-                                absolute_downloads: 629920
-                                relative_downloads: 18.9
-                                version_publish_date: '2018-11-25'
-                            v3.4:
-                                absolute_downloads: 618167
-                                relative_downloads: 18.6
-                                version_publish_date: '2017-11-30'
                     symfony_var_exporter:
                         package_name: symfony/var-exporter
                         package_short_name: var-exporter
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 541240
+                                absolute_downloads: 543699
                                 relative_downloads: 67.5
                                 version_publish_date: '2019-04-10'
                             v4.2:
-                                absolute_downloads: 260317
+                                absolute_downloads: 261256
                                 relative_downloads: 32.5
                                 version_publish_date: '2018-11-14'
                     symfony_web_link:
@@ -765,35 +633,35 @@ parameters:
                         package_short_name: web-link
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 137358
-                                relative_downloads: 54.6
+                                absolute_downloads: 138054
+                                relative_downloads: 54.7
                                 version_publish_date: '2019-03-14'
                             v4.2:
-                                absolute_downloads: 100177
-                                relative_downloads: 39.9
+                                absolute_downloads: 100499
+                                relative_downloads: 39.8
                                 version_publish_date: '2018-11-11'
                     symfony_web_profiler_bundle:
                         package_name: symfony/web-profiler-bundle
                         package_short_name: web-profiler-bundle
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 235556
-                                relative_downloads: 50.2
+                                absolute_downloads: 236791
+                                relative_downloads: 50.3
                                 version_publish_date: '2019-05-26'
                             v4.2:
-                                absolute_downloads: 163017
-                                relative_downloads: 34.8
+                                absolute_downloads: 163639
+                                relative_downloads: 34.7
                                 version_publish_date: '2018-11-26'
                     symfony_web_server_bundle:
                         package_name: symfony/web-server-bundle
                         package_short_name: web-server-bundle
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 135835
+                                absolute_downloads: 136458
                                 relative_downloads: !!float 53
                                 version_publish_date: '2019-04-29'
                             v4.2:
-                                absolute_downloads: 95917
+                                absolute_downloads: 96251
                                 relative_downloads: 37.4
                                 version_publish_date: '2018-11-13'
                     symfony_webpack_encore_bundle:
@@ -801,7 +669,7 @@ parameters:
                         package_short_name: webpack-encore-bundle
                         downloads_minor:
                             v1.6:
-                                absolute_downloads: 119937
+                                absolute_downloads: 120463
                                 relative_downloads: !!float 74
                                 version_publish_date: '2019-05-26'
                     symfony_website_skeleton:
@@ -809,7 +677,7 @@ parameters:
                         package_short_name: website-skeleton
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 24199
+                                absolute_downloads: 24256
                                 relative_downloads: 94.9
                                 version_publish_date: null
                     symfony_workflow:
@@ -817,11 +685,11 @@ parameters:
                         package_short_name: workflow
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 43443
+                                absolute_downloads: 43717
                                 relative_downloads: 50.6
                                 version_publish_date: '2019-05-28'
                             v4.2:
-                                absolute_downloads: 31113
+                                absolute_downloads: 31212
                                 relative_downloads: 36.2
                                 version_publish_date: '2018-11-26'
                     symfony_yaml:
@@ -829,11 +697,11 @@ parameters:
                         package_short_name: yaml
                         downloads_minor:
                             v4.3:
-                                absolute_downloads: 989935
+                                absolute_downloads: 994344
                                 relative_downloads: 31.1
                                 version_publish_date: '2019-04-06'
                             v3.4:
-                                absolute_downloads: 991281
+                                absolute_downloads: 994888
                                 relative_downloads: 31.1
                                 version_publish_date: '2017-11-29'
                 name: Symfony
@@ -844,11 +712,11 @@ parameters:
                         package_short_name: bake
                         downloads_minor:
                             v1.11:
-                                absolute_downloads: 14042
+                                absolute_downloads: 14097
                                 relative_downloads: 25.2
                                 version_publish_date: '2019-07-01'
                             v1.8:
-                                absolute_downloads: 16002
+                                absolute_downloads: 16099
                                 relative_downloads: 28.7
                                 version_publish_date: '2018-05-26'
                     cakephp_cache:
@@ -856,11 +724,11 @@ parameters:
                         package_short_name: cache
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 52386
+                                absolute_downloads: 52636
                                 relative_downloads: 52.4
                                 version_publish_date: '2019-06-24'
                             v3.7:
-                                absolute_downloads: 37673
+                                absolute_downloads: 37837
                                 relative_downloads: 37.7
                                 version_publish_date: '2018-12-09'
                     cakephp_cakephp:
@@ -868,15 +736,11 @@ parameters:
                         package_short_name: cakephp
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 20974
+                                absolute_downloads: 21074
                                 relative_downloads: 23.5
                                 version_publish_date: '2019-06-27'
-                            v3.6:
-                                absolute_downloads: 16899
-                                relative_downloads: !!float 19
-                                version_publish_date: '2018-04-15'
                             v2.10:
-                                absolute_downloads: 22716
+                                absolute_downloads: 22810
                                 relative_downloads: 25.5
                                 version_publish_date: '2017-07-22'
                     cakephp_cakephp_codesniffer:
@@ -884,7 +748,7 @@ parameters:
                         package_short_name: cakephp-codesniffer
                         downloads_minor:
                             v3.1:
-                                absolute_downloads: 39808
+                                absolute_downloads: 39971
                                 relative_downloads: 70.7
                                 version_publish_date: '2018-11-28'
                     cakephp_chronos:
@@ -892,7 +756,7 @@ parameters:
                         package_short_name: chronos
                         downloads_minor:
                             v1.2:
-                                absolute_downloads: 316404
+                                absolute_downloads: 317735
                                 relative_downloads: 94.2
                                 version_publish_date: '2018-06-21'
                     cakephp_collection:
@@ -900,11 +764,11 @@ parameters:
                         package_short_name: collection
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 52588
+                                absolute_downloads: 52840
                                 relative_downloads: 52.5
                                 version_publish_date: '2019-02-26'
                             v3.7:
-                                absolute_downloads: 38142
+                                absolute_downloads: 38307
                                 relative_downloads: 38.1
                                 version_publish_date: '2018-09-15'
                     cakephp_core:
@@ -912,11 +776,11 @@ parameters:
                         package_short_name: core
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 61965
+                                absolute_downloads: 62261
                                 relative_downloads: !!float 55
                                 version_publish_date: '2019-05-22'
                             v3.7:
-                                absolute_downloads: 40303
+                                absolute_downloads: 40484
                                 relative_downloads: 35.8
                                 version_publish_date: '2018-11-13'
                     cakephp_database:
@@ -924,11 +788,11 @@ parameters:
                         package_short_name: database
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 52398
-                                relative_downloads: 52.4
+                                absolute_downloads: 52647
+                                relative_downloads: 52.5
                                 version_publish_date: '2019-06-25'
                             v3.7:
-                                absolute_downloads: 37654
+                                absolute_downloads: 37819
                                 relative_downloads: 37.7
                                 version_publish_date: '2018-11-01'
                     cakephp_datasource:
@@ -936,11 +800,11 @@ parameters:
                         package_short_name: datasource
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 52546
+                                absolute_downloads: 52795
                                 relative_downloads: 52.5
                                 version_publish_date: '2019-06-13'
                             v3.7:
-                                absolute_downloads: 37624
+                                absolute_downloads: 37788
                                 relative_downloads: 37.6
                                 version_publish_date: '2018-12-02'
                     cakephp_debug_kit:
@@ -948,15 +812,11 @@ parameters:
                         package_short_name: debug_kit
                         downloads_minor:
                             v3.19:
-                                absolute_downloads: 21379
+                                absolute_downloads: 21456
                                 relative_downloads: 29.9
                                 version_publish_date: '2019-05-31'
-                            v3.16:
-                                absolute_downloads: 13868
-                                relative_downloads: 19.4
-                                version_publish_date: '2018-05-07'
                             v2.2:
-                                absolute_downloads: 15523
+                                absolute_downloads: 15583
                                 relative_downloads: 21.7
                                 version_publish_date: null
                     cakephp_log:
@@ -964,11 +824,11 @@ parameters:
                         package_short_name: log
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 53009
+                                absolute_downloads: 53259
                                 relative_downloads: 60.8
                                 version_publish_date: '2019-05-27'
                             v3.7:
-                                absolute_downloads: 34244
+                                absolute_downloads: 34362
                                 relative_downloads: 39.2
                                 version_publish_date: '2018-04-24'
                     cakephp_migrations:
@@ -976,19 +836,19 @@ parameters:
                         package_short_name: migrations
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 29560
+                                absolute_downloads: 29702
                                 relative_downloads: 42.4
                                 version_publish_date: '2018-12-25'
                             v1.7:
-                                absolute_downloads: 14888
-                                relative_downloads: 21.4
+                                absolute_downloads: 14945
+                                relative_downloads: 21.3
                                 version_publish_date: '2017-08-01'
                     cakephp_plugin_installer:
                         package_name: cakephp/plugin-installer
                         package_short_name: plugin-installer
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 62697
+                                absolute_downloads: 62975
                                 relative_downloads: 85.6
                                 version_publish_date: '2017-12-24'
                     cakephp_utility:
@@ -996,11 +856,11 @@ parameters:
                         package_short_name: utility
                         downloads_minor:
                             v3.8:
-                                absolute_downloads: 61970
+                                absolute_downloads: 62266
                                 relative_downloads: 54.8
                                 version_publish_date: '2019-03-14'
                             v3.7:
-                                absolute_downloads: 40711
+                                absolute_downloads: 40894
                                 relative_downloads: !!float 36
                                 version_publish_date: '2018-09-14'
                 name: CakePHP
@@ -1011,61 +871,41 @@ parameters:
                         package_short_name: auth
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 63254
+                                absolute_downloads: 63514
                                 relative_downloads: 40.6
                                 version_publish_date: '2019-02-26'
-                            v5.7:
-                                absolute_downloads: 25285
-                                relative_downloads: 16.2
-                                version_publish_date: '2018-09-03'
                     illuminate_broadcasting:
                         package_name: illuminate/broadcasting
                         package_short_name: broadcasting
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 61688
+                                absolute_downloads: 61909
                                 relative_downloads: 40.3
                                 version_publish_date: '2019-02-25'
-                            v5.7:
-                                absolute_downloads: 25327
-                                relative_downloads: 16.5
-                                version_publish_date: '2018-08-31'
                     illuminate_bus:
                         package_name: illuminate/bus
                         package_short_name: bus
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 64871
-                                relative_downloads: 39.5
+                                absolute_downloads: 65177
+                                relative_downloads: 39.6
                                 version_publish_date: '2019-02-18'
-                            v5.7:
-                                absolute_downloads: 28576
-                                relative_downloads: 17.4
-                                version_publish_date: '2018-01-04'
                     illuminate_cache:
                         package_name: illuminate/cache
                         package_short_name: cache
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 67235
+                                absolute_downloads: 67384
                                 relative_downloads: 38.4
                                 version_publish_date: '2019-02-18'
-                            v5.7:
-                                absolute_downloads: 30013
-                                relative_downloads: 17.1
-                                version_publish_date: '2018-08-26'
                     illuminate_config:
                         package_name: illuminate/config
                         package_short_name: config
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 87535
-                                relative_downloads: 39.1
+                                absolute_downloads: 87899
+                                relative_downloads: 39.2
                                 version_publish_date: '2019-02-14'
-                            v5.6:
-                                absolute_downloads: 43221
-                                relative_downloads: 19.3
-                                version_publish_date: '2017-11-07'
                     illuminate_console:
                         package_name: illuminate/console
                         package_short_name: console
@@ -1074,36 +914,24 @@ parameters:
                                 absolute_downloads: 74032
                                 relative_downloads: 36.4
                                 version_publish_date: '2019-02-21'
-                            v5.6:
-                                absolute_downloads: 38140
-                                relative_downloads: 18.7
-                                version_publish_date: '2018-01-04'
                     illuminate_container:
                         package_name: illuminate/container
                         package_short_name: container
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 151741
+                                absolute_downloads: 152450
                                 relative_downloads: 37.4
                                 version_publish_date: '2019-02-23'
-                            v5.7:
-                                absolute_downloads: 66348
-                                relative_downloads: 16.3
-                                version_publish_date: '2018-05-28'
                     illuminate_cookie:
                         package_name: illuminate/cookie
                         package_short_name: cookie
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 4279
+                                absolute_downloads: 4287
                                 relative_downloads: 38.7
                                 version_publish_date: '2019-02-18'
-                            v5.5:
-                                absolute_downloads: 1880
-                                relative_downloads: !!float 17
-                                version_publish_date: '2017-07-18'
                             v5.1:
-                                absolute_downloads: 2256
+                                absolute_downloads: 2263
                                 relative_downloads: 20.4
                                 version_publish_date: null
                     illuminate_database:
@@ -1111,13 +939,9 @@ parameters:
                         package_short_name: database
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 104235
+                                absolute_downloads: 104499
                                 relative_downloads: 35.9
                                 version_publish_date: '2019-02-26'
-                            v5.7:
-                                absolute_downloads: 56061
-                                relative_downloads: 19.3
-                                version_publish_date: '2018-09-04'
                     illuminate_encryption:
                         package_name: illuminate/encryption
                         package_short_name: encryption
@@ -1126,46 +950,30 @@ parameters:
                                 absolute_downloads: 65566
                                 relative_downloads: 38.9
                                 version_publish_date: '2019-02-18'
-                            v5.7:
-                                absolute_downloads: 26318
-                                relative_downloads: 15.6
-                                version_publish_date: '2018-06-18'
                     illuminate_events:
                         package_name: illuminate/events
                         package_short_name: events
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 91774
+                                absolute_downloads: 91999
                                 relative_downloads: 34.9
                                 version_publish_date: '2019-02-18'
-                            v5.6:
-                                absolute_downloads: 46049
-                                relative_downloads: 17.5
-                                version_publish_date: '2017-12-14'
                     illuminate_filesystem:
                         package_name: illuminate/filesystem
                         package_short_name: filesystem
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 94996
+                                absolute_downloads: 95418
                                 relative_downloads: 35.9
                                 version_publish_date: '2019-02-18'
-                            v5.6:
-                                absolute_downloads: 46857
-                                relative_downloads: 17.7
-                                version_publish_date: '2018-02-07'
                     illuminate_hashing:
                         package_name: illuminate/hashing
                         package_short_name: hashing
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 61154
+                                absolute_downloads: 61381
                                 relative_downloads: 38.6
                                 version_publish_date: '2019-02-18'
-                            v5.7:
-                                absolute_downloads: 28609
-                                relative_downloads: 18.1
-                                version_publish_date: '2018-08-05'
                     illuminate_http:
                         package_name: illuminate/http
                         package_short_name: http
@@ -1174,74 +982,54 @@ parameters:
                                 absolute_downloads: 69340
                                 relative_downloads: 40.6
                                 version_publish_date: '2019-02-25'
-                            v5.7:
-                                absolute_downloads: 25961
-                                relative_downloads: 15.2
-                                version_publish_date: '2018-08-28'
                     illuminate_log:
                         package_name: illuminate/log
                         package_short_name: log
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 63429
+                                absolute_downloads: 63665
                                 relative_downloads: 54.9
                                 version_publish_date: '2019-02-18'
                             v5.7:
-                                absolute_downloads: 25951
-                                relative_downloads: 22.5
+                                absolute_downloads: 26010
+                                relative_downloads: 22.4
                                 version_publish_date: '2018-08-06'
-                            v5.6:
-                                absolute_downloads: 22594
-                                relative_downloads: 19.6
-                                version_publish_date: '2018-01-30'
                     illuminate_mail:
                         package_name: illuminate/mail
                         package_short_name: mail
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 13563
+                                absolute_downloads: 13579
                                 relative_downloads: 29.9
                                 version_publish_date: '2019-02-26'
                             v5.7:
-                                absolute_downloads: 11049
+                                absolute_downloads: 11062
                                 relative_downloads: 24.4
                                 version_publish_date: '2018-08-31'
-                            v5.6:
-                                absolute_downloads: 7142
-                                relative_downloads: 15.7
-                                version_publish_date: '2018-02-02'
                     illuminate_notifications:
                         package_name: illuminate/notifications
                         package_short_name: notifications
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 3488
-                                relative_downloads: 36.8
+                                absolute_downloads: 3494
+                                relative_downloads: 36.7
                                 version_publish_date: '2019-02-18'
                             v5.7:
-                                absolute_downloads: 2407
+                                absolute_downloads: 2417
                                 relative_downloads: 25.4
                                 version_publish_date: '2018-08-26'
                             v5.6:
-                                absolute_downloads: 1937
-                                relative_downloads: 20.4
+                                absolute_downloads: 1946
+                                relative_downloads: 20.5
                                 version_publish_date: '2018-01-02'
-                            v5.5:
-                                absolute_downloads: 1647
-                                relative_downloads: 17.4
-                                version_publish_date: '2017-08-21'
                     illuminate_pagination:
                         package_name: illuminate/pagination
                         package_short_name: pagination
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 67904
-                                relative_downloads: !!float 39
+                                absolute_downloads: 68057
+                                relative_downloads: 39.1
                                 version_publish_date: '2019-02-18'
-                            v5.7:
-                                absolute_downloads: 27893
-                                relative_downloads: !!float 16
-                                version_publish_date: '2018-08-31'
                     illuminate_pipeline:
                         package_name: illuminate/pipeline
                         package_short_name: pipeline
@@ -1250,10 +1038,6 @@ parameters:
                                 absolute_downloads: 69245
                                 relative_downloads: !!float 40
                                 version_publish_date: '2019-02-25'
-                            v5.7:
-                                absolute_downloads: 28626
-                                relative_downloads: 16.5
-                                version_publish_date: '2018-05-22'
                     illuminate_queue:
                         package_name: illuminate/queue
                         package_short_name: queue
@@ -1262,10 +1046,6 @@ parameters:
                                 absolute_downloads: 68213
                                 relative_downloads: 39.6
                                 version_publish_date: '2019-02-23'
-                            v5.7:
-                                absolute_downloads: 25981
-                                relative_downloads: 15.1
-                                version_publish_date: '2018-08-30'
                     illuminate_redis:
                         package_name: illuminate/redis
                         package_short_name: redis
@@ -1274,24 +1054,16 @@ parameters:
                                 absolute_downloads: 21994
                                 relative_downloads: 29.9
                                 version_publish_date: '2019-02-18'
-                            v5.7:
-                                absolute_downloads: 12293
-                                relative_downloads: 16.7
-                                version_publish_date: '2018-07-15'
-                            v5.5:
-                                absolute_downloads: 12625
-                                relative_downloads: 17.1
-                                version_publish_date: '2017-08-26'
                     illuminate_routing:
                         package_name: illuminate/routing
                         package_short_name: routing
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 9146
+                                absolute_downloads: 9165
                                 relative_downloads: 27.6
                                 version_publish_date: '2019-02-18'
                             v5.6:
-                                absolute_downloads: 7211
+                                absolute_downloads: 7237
                                 relative_downloads: 21.8
                                 version_publish_date: '2018-02-07'
                     illuminate_session:
@@ -1299,19 +1071,15 @@ parameters:
                         package_short_name: session
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 69439
-                                relative_downloads: 39.5
+                                absolute_downloads: 69705
+                                relative_downloads: 39.6
                                 version_publish_date: '2019-02-18'
-                            v5.7:
-                                absolute_downloads: 28864
-                                relative_downloads: 16.4
-                                version_publish_date: '2018-07-30'
                     illuminate_support:
                         package_name: illuminate/support
                         package_short_name: support
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 230608
+                                absolute_downloads: 231495
                                 relative_downloads: 42.7
                                 version_publish_date: '2019-02-23'
                     illuminate_translation:
@@ -1319,53 +1087,33 @@ parameters:
                         package_short_name: translation
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 66376
-                                relative_downloads: 38.5
+                                absolute_downloads: 66627
+                                relative_downloads: 38.6
                                 version_publish_date: '2019-02-18'
-                            v5.7:
-                                absolute_downloads: 30247
-                                relative_downloads: 17.6
-                                version_publish_date: '2018-05-28'
                     illuminate_validation:
                         package_name: illuminate/validation
                         package_short_name: validation
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 65566
+                                absolute_downloads: 65808
                                 relative_downloads: 38.2
                                 version_publish_date: '2019-02-18'
-                            v5.7:
-                                absolute_downloads: 29893
-                                relative_downloads: 17.4
-                                version_publish_date: '2018-08-31'
                     illuminate_view:
                         package_name: illuminate/view
                         package_short_name: view
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 73479
-                                relative_downloads: 35.1
+                                absolute_downloads: 73747
+                                relative_downloads: 35.2
                                 version_publish_date: '2019-02-23'
-                            v5.7:
-                                absolute_downloads: 31829
-                                relative_downloads: 15.2
-                                version_publish_date: '2018-09-03'
-                            v5.6:
-                                absolute_downloads: 39556
-                                relative_downloads: 18.9
-                                version_publish_date: '2018-01-29'
                     laravel_framework:
                         package_name: laravel/framework
                         package_short_name: framework
                         downloads_minor:
                             v5.8:
-                                absolute_downloads: 1004961
+                                absolute_downloads: 1008219
                                 relative_downloads: !!float 47
                                 version_publish_date: '2019-02-26'
-                            v5.7:
-                                absolute_downloads: 395188
-                                relative_downloads: 18.5
-                                version_publish_date: '2018-09-04'
                 name: Laravel
             yiisoft:
                 packages_data:
@@ -1374,11 +1122,11 @@ parameters:
                         package_short_name: yii2-authclient
                         downloads_minor:
                             v2.2:
-                                absolute_downloads: 18910
+                                absolute_downloads: 18957
                                 relative_downloads: 53.1
                                 version_publish_date: '2019-04-16'
                             v2.1:
-                                absolute_downloads: 16722
+                                absolute_downloads: 16747
                                 relative_downloads: 46.9
                                 version_publish_date: '2016-08-04'
                     yiisoft_yii2_debug:
@@ -1386,11 +1134,11 @@ parameters:
                         package_short_name: yii2-debug
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 79848
+                                absolute_downloads: 80115
                                 relative_downloads: 52.8
                                 version_publish_date: '2019-03-17'
                             v2.0:
-                                absolute_downloads: 71441
+                                absolute_downloads: 71667
                                 relative_downloads: 47.2
                                 version_publish_date: '2014-10-12'
                     yiisoft_yii2_gii:
@@ -1398,39 +1146,35 @@ parameters:
                         package_short_name: yii2-gii
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 42932
-                                relative_downloads: 38.6
+                                absolute_downloads: 43034
+                                relative_downloads: 38.5
                                 version_publish_date: '2019-03-17'
                             v2.0:
-                                absolute_downloads: 68408
-                                relative_downloads: 61.4
+                                absolute_downloads: 68609
+                                relative_downloads: 61.5
                                 version_publish_date: '2014-10-12'
                     yiisoft_yii2_imagine:
                         package_name: yiisoft/yii2-imagine
                         package_short_name: yii2-imagine
                         downloads_minor:
                             v2.2:
-                                absolute_downloads: 12254
-                                relative_downloads: 38.8
+                                absolute_downloads: 12277
+                                relative_downloads: 38.9
                                 version_publish_date: '2019-06-04'
                             v2.1:
-                                absolute_downloads: 13974
+                                absolute_downloads: 14002
                                 relative_downloads: 44.3
                                 version_publish_date: '2016-11-03'
-                            v2.0:
-                                absolute_downloads: 5319
-                                relative_downloads: 16.9
-                                version_publish_date: '2014-10-12'
                     yiisoft_yii2_queue:
                         package_name: yiisoft/yii2-queue
                         package_short_name: yii2-queue
                         downloads_minor:
                             v2.3:
-                                absolute_downloads: 13970
+                                absolute_downloads: 13987
                                 relative_downloads: 23.1
                                 version_publish_date: '2019-06-04'
                             v2.1:
-                                absolute_downloads: 34929
+                                absolute_downloads: 35033
                                 relative_downloads: 57.9
                                 version_publish_date: '2018-05-23'
                     yiisoft_yii2_swiftmailer:
@@ -1438,11 +1182,11 @@ parameters:
                         package_short_name: yii2-swiftmailer
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 95927
+                                absolute_downloads: 96124
                                 relative_downloads: 63.6
                                 version_publish_date: '2017-08-04'
                             v2.0:
-                                absolute_downloads: 54861
+                                absolute_downloads: 54982
                                 relative_downloads: 36.4
                                 version_publish_date: '2014-10-12'
                     yiisoft_yii2_twig:
@@ -1465,15 +1209,15 @@ parameters:
                         package_short_name: zend-authentication
                         downloads_minor:
                             v2.7:
-                                absolute_downloads: 29064
-                                relative_downloads: 34.9
+                                absolute_downloads: 29198
+                                relative_downloads: !!float 35
                                 version_publish_date: '2019-05-14'
                             v2.6:
-                                absolute_downloads: 34056
+                                absolute_downloads: 34155
                                 relative_downloads: 40.9
                                 version_publish_date: '2018-04-12'
                             v2.5:
-                                absolute_downloads: 20073
+                                absolute_downloads: 20125
                                 relative_downloads: 24.1
                                 version_publish_date: '2015-06-03'
                     zendframework_zend_barcode:
@@ -1481,7 +1225,7 @@ parameters:
                         package_short_name: zend-barcode
                         downloads_minor:
                             v2.7:
-                                absolute_downloads: 99724
+                                absolute_downloads: 99937
                                 relative_downloads: 88.8
                                 version_publish_date: '2017-12-11'
                     zendframework_zend_cache:
@@ -1489,19 +1233,15 @@ parameters:
                         package_short_name: zend-cache
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 88479
+                                absolute_downloads: 88769
                                 relative_downloads: 73.2
                                 version_publish_date: '2018-04-24'
-                            v2.7:
-                                absolute_downloads: 21605
-                                relative_downloads: 17.9
-                                version_publish_date: '2016-04-12'
                     zendframework_zend_captcha:
                         package_name: zendframework/zend-captcha
                         package_short_name: zend-captcha
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 144591
+                                absolute_downloads: 144938
                                 relative_downloads: 86.3
                                 version_publish_date: '2018-04-24'
                     zendframework_zend_code:
@@ -1517,12 +1257,12 @@ parameters:
                         package_short_name: zend-component-installer
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 18448
-                                relative_downloads: 45.1
+                                absolute_downloads: 18536
+                                relative_downloads: 45.2
                                 version_publish_date: '2018-02-08'
                             v1.1:
-                                absolute_downloads: 19731
-                                relative_downloads: 48.3
+                                absolute_downloads: 19779
+                                relative_downloads: 48.2
                                 version_publish_date: '2017-11-06'
                     zendframework_zend_config:
                         package_name: zendframework/zend-config
@@ -1537,31 +1277,23 @@ parameters:
                         package_short_name: zend-config-aggregator
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 26743
+                                absolute_downloads: 26861
                                 relative_downloads: 85.2
                                 version_publish_date: '2018-02-26'
                     zendframework_zend_console:
                         package_name: zendframework/zend-console
                         package_short_name: zend-console
                         downloads_minor:
-                            v2.8:
-                                absolute_downloads: 33822
-                                relative_downloads: !!float 16
-                                version_publish_date: '2019-02-04'
                             v2.7:
-                                absolute_downloads: 152848
+                                absolute_downloads: 153426
                                 relative_downloads: 72.3
                                 version_publish_date: '2018-01-25'
                     zendframework_zend_crypt:
                         package_name: zendframework/zend-crypt
                         package_short_name: zend-crypt
                         downloads_minor:
-                            v3.3:
-                                absolute_downloads: 39714
-                                relative_downloads: !!float 18
-                                version_publish_date: '2018-04-24'
                             v2.6:
-                                absolute_downloads: 152358
+                                absolute_downloads: 152731
                                 relative_downloads: 68.9
                                 version_publish_date: '2016-02-03'
                     zendframework_zend_db:
@@ -1569,23 +1301,19 @@ parameters:
                         package_short_name: zend-db
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 157615
+                                absolute_downloads: 158201
                                 relative_downloads: 75.8
                                 version_publish_date: '2019-02-25'
-                            v2.9:
-                                absolute_downloads: 35713
-                                relative_downloads: 17.2
-                                version_publish_date: '2017-12-06'
                     zendframework_zend_debug:
                         package_name: zendframework/zend-debug
                         package_short_name: zend-debug
                         downloads_minor:
                             v2.6:
-                                absolute_downloads: 37094
+                                absolute_downloads: 37160
                                 relative_downloads: 72.9
                                 version_publish_date: '2018-04-30'
                             v2.5:
-                                absolute_downloads: 13792
+                                absolute_downloads: 13814
                                 relative_downloads: 27.1
                                 version_publish_date: '2015-06-03'
                     zendframework_zend_developer_tools:
@@ -1593,11 +1321,11 @@ parameters:
                         package_short_name: zend-developer-tools
                         downloads_minor:
                             v1.2:
-                                absolute_downloads: 16296
+                                absolute_downloads: 16333
                                 relative_downloads: 55.9
                                 version_publish_date: '2018-04-17'
                             v1.0:
-                                absolute_downloads: 6163
+                                absolute_downloads: 6189
                                 relative_downloads: 21.2
                                 version_publish_date: '2015-11-24'
                     zendframework_zend_di:
@@ -1613,11 +1341,11 @@ parameters:
                         package_short_name: zend-diactoros
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 561126
+                                absolute_downloads: 563002
                                 relative_downloads: 34.3
                                 version_publish_date: '2018-12-20'
                             v1.8:
-                                absolute_downloads: 939399
+                                absolute_downloads: 943008
                                 relative_downloads: 57.5
                                 version_publish_date: '2018-06-27'
                     zendframework_zend_dom:
@@ -1625,11 +1353,11 @@ parameters:
                         package_short_name: zend-dom
                         downloads_minor:
                             v2.7:
-                                absolute_downloads: 44231
+                                absolute_downloads: 44350
                                 relative_downloads: 76.1
                                 version_publish_date: '2018-03-27'
                             v2.6:
-                                absolute_downloads: 11681
+                                absolute_downloads: 11705
                                 relative_downloads: 20.1
                                 version_publish_date: '2015-10-14'
                     zendframework_zend_escaper:
@@ -1645,7 +1373,7 @@ parameters:
                         package_short_name: zend-eventmanager
                         downloads_minor:
                             v3.2:
-                                absolute_downloads: 1147738
+                                absolute_downloads: 1151962
                                 relative_downloads: 83.5
                                 version_publish_date: '2017-07-11'
                     zendframework_zend_expressive:
@@ -1653,7 +1381,7 @@ parameters:
                         package_short_name: zend-expressive
                         downloads_minor:
                             v3.2:
-                                absolute_downloads: 17844
+                                absolute_downloads: 17954
                                 relative_downloads: !!float 59
                                 version_publish_date: '2018-09-27'
                     zendframework_zend_expressive_fastroute:
@@ -1661,7 +1389,7 @@ parameters:
                         package_short_name: zend-expressive-fastroute
                         downloads_minor:
                             v3.0:
-                                absolute_downloads: 17635
+                                absolute_downloads: 17734
                                 relative_downloads: !!float 78
                                 version_publish_date: '2018-03-15'
                     zendframework_zend_expressive_helpers:
@@ -1669,19 +1397,15 @@ parameters:
                         package_short_name: zend-expressive-helpers
                         downloads_minor:
                             v5.3:
-                                absolute_downloads: 17295
-                                relative_downloads: 56.4
+                                absolute_downloads: 17427
+                                relative_downloads: 56.5
                                 version_publish_date: '2019-03-12'
-                            v4.2:
-                                absolute_downloads: 4714
-                                relative_downloads: 15.4
-                                version_publish_date: '2017-10-09'
                     zendframework_zend_expressive_router:
                         package_name: zendframework/zend-expressive-router
                         package_short_name: zend-expressive-router
                         downloads_minor:
                             v3.1:
-                                absolute_downloads: 25406
+                                absolute_downloads: 25571
                                 relative_downloads: 72.7
                                 version_publish_date: '2018-06-05'
                     zendframework_zend_expressive_template:
@@ -1701,11 +1425,11 @@ parameters:
                         package_short_name: zend-feed
                         downloads_minor:
                             v2.12:
-                                absolute_downloads: 228305
+                                absolute_downloads: 228891
                                 relative_downloads: 57.8
                                 version_publish_date: '2019-03-05'
                             v2.10:
-                                absolute_downloads: 105484
+                                absolute_downloads: 105733
                                 relative_downloads: 26.7
                                 version_publish_date: '2018-05-24'
                     zendframework_zend_file:
@@ -1713,11 +1437,11 @@ parameters:
                         package_short_name: zend-file
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 25231
+                                absolute_downloads: 25304
                                 relative_downloads: 66.9
                                 version_publish_date: '2018-04-25'
                             v2.5:
-                                absolute_downloads: 7994
+                                absolute_downloads: 8004
                                 relative_downloads: 21.2
                                 version_publish_date: '2015-06-03'
                     zendframework_zend_filter:
@@ -1725,17 +1449,13 @@ parameters:
                         package_short_name: zend-filter
                         downloads_minor:
                             v2.9:
-                                absolute_downloads: 240090
+                                absolute_downloads: 240911
                                 relative_downloads: 75.7
                                 version_publish_date: '2018-12-12'
                     zendframework_zend_form:
                         package_name: zendframework/zend-form
                         package_short_name: zend-form
                         downloads_minor:
-                            v2.14:
-                                absolute_downloads: 36746
-                                relative_downloads: 16.9
-                                version_publish_date: '2019-01-07'
                             v2.13:
                                 absolute_downloads: 135152
                                 relative_downloads: 62.3
@@ -1745,11 +1465,11 @@ parameters:
                         package_short_name: zend-http
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 98396
+                                absolute_downloads: 98733
                                 relative_downloads: 30.2
                                 version_publish_date: '2019-02-19'
                             v2.8:
-                                absolute_downloads: 172119
+                                absolute_downloads: 172752
                                 relative_downloads: 52.9
                                 version_publish_date: '2018-04-26'
                     zendframework_zend_httphandlerrunner:
@@ -1757,23 +1477,19 @@ parameters:
                         package_short_name: zend-httphandlerrunner
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 36495
+                                absolute_downloads: 36659
                                 relative_downloads: 83.3
                                 version_publish_date: '2019-02-19'
-                            v1.0:
-                                absolute_downloads: 7326
-                                relative_downloads: 16.7
-                                version_publish_date: '2018-02-05'
                     zendframework_zend_hydrator:
                         package_name: zendframework/zend-hydrator
                         package_short_name: zend-hydrator
                         downloads_minor:
                             v2.4:
-                                absolute_downloads: 74825
+                                absolute_downloads: 75094
                                 relative_downloads: 25.7
                                 version_publish_date: '2018-04-30'
                             v1.1:
-                                absolute_downloads: 195351
+                                absolute_downloads: 196093
                                 relative_downloads: !!float 67
                                 version_publish_date: '2016-02-18'
                     zendframework_zend_i18n:
@@ -1781,7 +1497,7 @@ parameters:
                         package_short_name: zend-i18n
                         downloads_minor:
                             v2.9:
-                                absolute_downloads: 196229
+                                absolute_downloads: 196951
                                 relative_downloads: 81.5
                                 version_publish_date: '2018-05-16'
                     zendframework_zend_i18n_resources:
@@ -1789,11 +1505,11 @@ parameters:
                         package_short_name: zend-i18n-resources
                         downloads_minor:
                             v2.6:
-                                absolute_downloads: 29324
+                                absolute_downloads: 29398
                                 relative_downloads: 66.5
                                 version_publish_date: '2018-04-30'
                             v2.5:
-                                absolute_downloads: 14754
+                                absolute_downloads: 14790
                                 relative_downloads: 33.5
                                 version_publish_date: '2015-05-07'
                     zendframework_zend_inputfilter:
@@ -1801,7 +1517,7 @@ parameters:
                         package_short_name: zend-inputfilter
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 192716
+                                absolute_downloads: 193154
                                 relative_downloads: 74.6
                                 version_publish_date: '2019-01-30'
                     zendframework_zend_json:
@@ -1821,19 +1537,15 @@ parameters:
                         package_short_name: zend-json-server
                         downloads_minor:
                             v3.1:
-                                absolute_downloads: 10520
+                                absolute_downloads: 10537
                                 relative_downloads: 84.2
                                 version_publish_date: '2018-04-25'
-                            v3.0:
-                                absolute_downloads: 1967
-                                relative_downloads: 15.8
-                                version_publish_date: '2016-03-31'
                     zendframework_zend_ldap:
                         package_name: zendframework/zend-ldap
                         package_short_name: zend-ldap
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 57383
+                                absolute_downloads: 57675
                                 relative_downloads: 91.3
                                 version_publish_date: '2018-07-05'
                     zendframework_zend_loader:
@@ -1841,7 +1553,7 @@ parameters:
                         package_short_name: zend-loader
                         downloads_minor:
                             v2.6:
-                                absolute_downloads: 339692
+                                absolute_downloads: 340491
                                 relative_downloads: 86.3
                                 version_publish_date: '2018-04-30'
                     zendframework_zend_log:
@@ -1849,7 +1561,7 @@ parameters:
                         package_short_name: zend-log
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 186487
+                                absolute_downloads: 187152
                                 relative_downloads: 87.1
                                 version_publish_date: '2018-04-09'
                     zendframework_zend_mail:
@@ -1857,19 +1569,15 @@ parameters:
                         package_short_name: zend-mail
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 210670
-                                relative_downloads: 88.9
+                                absolute_downloads: 211495
+                                relative_downloads: !!float 89
                                 version_publish_date: '2018-06-07'
                     zendframework_zend_math:
                         package_name: zendframework/zend-math
                         package_short_name: zend-math
                         downloads_minor:
-                            v3.2:
-                                absolute_downloads: 48801
-                                relative_downloads: 19.5
-                                version_publish_date: '2018-12-04'
                             v2.7:
-                                absolute_downloads: 167288
+                                absolute_downloads: 167922
                                 relative_downloads: 66.9
                                 version_publish_date: '2016-04-07'
                     zendframework_zend_memory:
@@ -1889,7 +1597,7 @@ parameters:
                         package_short_name: zend-mime
                         downloads_minor:
                             v2.7:
-                                absolute_downloads: 222573
+                                absolute_downloads: 223412
                                 relative_downloads: 89.6
                                 version_publish_date: '2017-11-28'
                     zendframework_zend_modulemanager:
@@ -1905,11 +1613,11 @@ parameters:
                         package_short_name: zend-mvc
                         downloads_minor:
                             v3.1:
-                                absolute_downloads: 48657
+                                absolute_downloads: 48824
                                 relative_downloads: !!float 22
                                 version_publish_date: '2017-05-01'
                             v2.7:
-                                absolute_downloads: 149479
+                                absolute_downloads: 150052
                                 relative_downloads: 67.5
                                 version_publish_date: '2016-03-01'
                     zendframework_zend_mvc_console:
@@ -1917,7 +1625,7 @@ parameters:
                         package_short_name: zend-mvc-console
                         downloads_minor:
                             v1.2:
-                                absolute_downloads: 26286
+                                absolute_downloads: 26344
                                 relative_downloads: 86.4
                                 version_publish_date: '2018-04-30'
                     zendframework_zend_mvc_i18n:
@@ -1925,7 +1633,7 @@ parameters:
                         package_short_name: zend-mvc-i18n
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 22463
+                                absolute_downloads: 22513
                                 relative_downloads: 87.8
                                 version_publish_date: '2018-05-01'
                     zendframework_zend_mvc_plugin_fileprg:
@@ -1933,7 +1641,7 @@ parameters:
                         package_short_name: zend-mvc-plugin-fileprg
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 14158
+                                absolute_downloads: 14190
                                 relative_downloads: 87.5
                                 version_publish_date: '2018-04-30'
                     zendframework_zend_mvc_plugin_flashmessenger:
@@ -1941,7 +1649,7 @@ parameters:
                         package_short_name: zend-mvc-plugin-flashmessenger
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 22301
+                                absolute_downloads: 22352
                                 relative_downloads: 88.3
                                 version_publish_date: '2018-04-30'
                     zendframework_zend_mvc_plugin_identity:
@@ -1949,7 +1657,7 @@ parameters:
                         package_short_name: zend-mvc-plugin-identity
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 16543
+                                absolute_downloads: 16566
                                 relative_downloads: 91.6
                                 version_publish_date: '2018-04-30'
                     zendframework_zend_mvc_plugin_prg:
@@ -1957,7 +1665,7 @@ parameters:
                         package_short_name: zend-mvc-plugin-prg
                         downloads_minor:
                             v1.1:
-                                absolute_downloads: 16991
+                                absolute_downloads: 17015
                                 relative_downloads: 90.7
                                 version_publish_date: '2018-04-30'
                     zendframework_zend_navigation:
@@ -1965,19 +1673,15 @@ parameters:
                         package_short_name: zend-navigation
                         downloads_minor:
                             v2.9:
-                                absolute_downloads: 31624
+                                absolute_downloads: 31672
                                 relative_downloads: 69.7
                                 version_publish_date: '2018-04-25'
-                            v2.5:
-                                absolute_downloads: 7141
-                                relative_downloads: 15.7
-                                version_publish_date: '2015-06-03'
                     zendframework_zend_paginator:
                         package_name: zendframework/zend-paginator
                         package_short_name: zend-paginator
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 67618
+                                absolute_downloads: 67858
                                 relative_downloads: 83.7
                                 version_publish_date: '2017-11-01'
                     zendframework_zend_permissions_acl:
@@ -2009,11 +1713,11 @@ parameters:
                         package_short_name: zend-progressbar
                         downloads_minor:
                             v2.6:
-                                absolute_downloads: 23557
+                                absolute_downloads: 23627
                                 relative_downloads: 66.1
                                 version_publish_date: '2018-04-30'
                             v2.5:
-                                absolute_downloads: 12084
+                                absolute_downloads: 12113
                                 relative_downloads: 33.9
                                 version_publish_date: '2015-06-03'
                     zendframework_zend_psr7bridge:
@@ -2021,7 +1725,7 @@ parameters:
                         package_short_name: zend-psr7bridge
                         downloads_minor:
                             v0.2:
-                                absolute_downloads: 165586
+                                absolute_downloads: 166201
                                 relative_downloads: 96.5
                                 version_publish_date: '2015-09-28'
                     zendframework_zend_router:
@@ -2029,11 +1733,11 @@ parameters:
                         package_short_name: zend-router
                         downloads_minor:
                             v3.3:
-                                absolute_downloads: 41633
-                                relative_downloads: 66.9
+                                absolute_downloads: 41738
+                                relative_downloads: !!float 67
                                 version_publish_date: '2019-02-26'
                             v3.0:
-                                absolute_downloads: 12503
+                                absolute_downloads: 12527
                                 relative_downloads: 20.1
                                 version_publish_date: '2016-03-21'
                     zendframework_zend_serializer:
@@ -2041,7 +1745,7 @@ parameters:
                         package_short_name: zend-serializer
                         downloads_minor:
                             v2.9:
-                                absolute_downloads: 180391
+                                absolute_downloads: 180810
                                 relative_downloads: 82.9
                                 version_publish_date: '2018-05-14'
                     zendframework_zend_server:
@@ -2049,7 +1753,7 @@ parameters:
                         package_short_name: zend-server
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 193294
+                                absolute_downloads: 193980
                                 relative_downloads: 86.8
                                 version_publish_date: '2018-04-30'
                     zendframework_zend_servicemanager:
@@ -2077,11 +1781,11 @@ parameters:
                         package_short_name: zend-soap
                         downloads_minor:
                             v2.8:
-                                absolute_downloads: 131343
+                                absolute_downloads: 131881
                                 relative_downloads: 60.8
                                 version_publish_date: '2019-04-30'
                             v2.7:
-                                absolute_downloads: 52485
+                                absolute_downloads: 52619
                                 relative_downloads: 24.3
                                 version_publish_date: '2018-01-29'
                     zendframework_zend_stdlib:
@@ -2092,10 +1796,6 @@ parameters:
                                 absolute_downloads: 596591
                                 relative_downloads: 63.2
                                 version_publish_date: '2018-04-30'
-                            v2.7:
-                                absolute_downloads: 182151
-                                relative_downloads: 19.3
-                                version_publish_date: '2015-09-22'
                     zendframework_zend_stratigility:
                         package_name: zendframework/zend-stratigility
                         package_short_name: zend-stratigility
@@ -2104,10 +1804,6 @@ parameters:
                                 absolute_downloads: 15225
                                 relative_downloads: 29.7
                                 version_publish_date: '2019-06-12'
-                            v1.3:
-                                absolute_downloads: 10126
-                                relative_downloads: 19.8
-                                version_publish_date: '2016-11-10'
                     zendframework_zend_tag:
                         package_name: zendframework/zend-tag
                         package_short_name: zend-tag
@@ -2116,28 +1812,20 @@ parameters:
                                 absolute_downloads: 25348
                                 relative_downloads: 67.8
                                 version_publish_date: '2018-04-30'
-                            v2.5:
-                                absolute_downloads: 7126
-                                relative_downloads: 19.1
-                                version_publish_date: '2015-06-03'
                     zendframework_zend_test:
                         package_name: zendframework/zend-test
                         package_short_name: zend-test
                         downloads_minor:
                             v3.3:
-                                absolute_downloads: 12757
+                                absolute_downloads: 12796
                                 relative_downloads: !!float 26
                                 version_publish_date: '2019-06-11'
-                            v3.2:
-                                absolute_downloads: 7955
-                                relative_downloads: 16.2
-                                version_publish_date: '2018-04-07'
                             v2.6:
-                                absolute_downloads: 15911
-                                relative_downloads: 32.4
+                                absolute_downloads: 15971
+                                relative_downloads: 32.5
                                 version_publish_date: '2016-03-01'
                             v2.5:
-                                absolute_downloads: 10807
+                                absolute_downloads: 10831
                                 relative_downloads: !!float 22
                                 version_publish_date: '2015-06-03'
                     zendframework_zend_text:
@@ -2153,13 +1841,9 @@ parameters:
                         package_short_name: zend-uri
                         downloads_minor:
                             v2.7:
-                                absolute_downloads: 246110
+                                absolute_downloads: 247009
                                 relative_downloads: !!float 69
                                 version_publish_date: '2019-02-27'
-                            v2.6:
-                                absolute_downloads: 60320
-                                relative_downloads: 16.9
-                                version_publish_date: '2018-04-10'
                     zendframework_zend_validator:
                         package_name: zendframework/zend-validator
                         package_short_name: zend-validator
@@ -2177,11 +1861,11 @@ parameters:
                         package_short_name: zend-view
                         downloads_minor:
                             v2.11:
-                                absolute_downloads: 101950
+                                absolute_downloads: 102352
                                 relative_downloads: 44.4
                                 version_publish_date: '2018-12-06'
                             v2.10:
-                                absolute_downloads: 99460
+                                absolute_downloads: 99817
                                 relative_downloads: 43.3
                                 version_publish_date: '2018-01-17'
                     zendframework_zend_xmlrpc:
@@ -2209,13 +1893,9 @@ parameters:
                         package_short_name: zendframework
                         downloads_minor:
                             v2.5:
-                                absolute_downloads: 25059
+                                absolute_downloads: 25132
                                 relative_downloads: 50.3
                                 version_publish_date: '2015-06-03'
-                            v2.4:
-                                absolute_downloads: 8376
-                                relative_downloads: 16.8
-                                version_publish_date: '2015-03-31'
                     zendframework_zendservice_apple_apns:
                         package_name: zendframework/zendservice-apple-apns
                         package_short_name: zendservice-apple-apns
@@ -2228,44 +1908,32 @@ parameters:
                                 absolute_downloads: 11310
                                 relative_downloads: 27.3
                                 version_publish_date: '2018-05-08'
-                            v1.2:
-                                absolute_downloads: 7335
-                                relative_downloads: 17.7
-                                version_publish_date: '2015-12-09'
                     zendframework_zendservice_google_gcm:
                         package_name: zendframework/zendservice-google-gcm
                         package_short_name: zendservice-google-gcm
                         downloads_minor:
                             v2.1:
-                                absolute_downloads: 28403
+                                absolute_downloads: 28471
                                 relative_downloads: 74.3
                                 version_publish_date: '2018-05-08'
-                            v1.0:
-                                absolute_downloads: 6652
-                                relative_downloads: 17.4
-                                version_publish_date: '2013-01-11'
                     zendframework_zendservice_recaptcha:
                         package_name: zendframework/zendservice-recaptcha
                         package_short_name: zendservice-recaptcha
                         downloads_minor:
                             v3.2:
-                                absolute_downloads: 5751
-                                relative_downloads: !!float 70
+                                absolute_downloads: 5778
+                                relative_downloads: 70.1
                                 version_publish_date: '2019-02-07'
-                            v2.0:
-                                absolute_downloads: 1434
-                                relative_downloads: 17.5
-                                version_publish_date: '2012-08-22'
                     zendframework_zendxml:
                         package_name: zendframework/zendxml
                         package_short_name: zendxml
                         downloads_minor:
                             v1.2:
-                                absolute_downloads: 45769
-                                relative_downloads: 53.5
+                                absolute_downloads: 45923
+                                relative_downloads: 53.6
                                 version_publish_date: '2019-01-22'
                             v1.0:
-                                absolute_downloads: 28619
+                                absolute_downloads: 28687
                                 relative_downloads: 33.5
                                 version_publish_date: '2014-03-05'
                 name: Zend
@@ -2275,12 +1943,8 @@ parameters:
                         package_name: nette/application
                         package_short_name: application
                         downloads_minor:
-                            v3.0:
-                                absolute_downloads: 6211
-                                relative_downloads: 16.9
-                                version_publish_date: '2019-04-03'
                             v2.4:
-                                absolute_downloads: 26631
+                                absolute_downloads: 26713
                                 relative_downloads: 72.5
                                 version_publish_date: '2016-06-25'
                     nette_bootstrap:
@@ -2288,23 +1952,19 @@ parameters:
                         package_short_name: bootstrap
                         downloads_minor:
                             v3.0:
-                                absolute_downloads: 332034
-                                relative_downloads: 68.7
+                                absolute_downloads: 333250
+                                relative_downloads: 68.8
                                 version_publish_date: '2019-03-26'
                             v2.4:
-                                absolute_downloads: 148107
-                                relative_downloads: 30.7
+                                absolute_downloads: 148527
+                                relative_downloads: 30.6
                                 version_publish_date: '2016-06-13'
                     nette_caching:
                         package_name: nette/caching
                         package_short_name: caching
                         downloads_minor:
-                            v3.0:
-                                absolute_downloads: 10689
-                                relative_downloads: 16.5
-                                version_publish_date: '2019-02-05'
                             v2.5:
-                                absolute_downloads: 51249
+                                absolute_downloads: 51358
                                 relative_downloads: 79.1
                                 version_publish_date: '2016-06-14'
                     nette_component_model:
@@ -2312,7 +1972,7 @@ parameters:
                         package_short_name: component-model
                         downloads_minor:
                             v2.4:
-                                absolute_downloads: 25860
+                                absolute_downloads: 25942
                                 relative_downloads: 61.6
                                 version_publish_date: '2018-03-20'
                     nette_database:
@@ -2320,7 +1980,7 @@ parameters:
                         package_short_name: database
                         downloads_minor:
                             v2.4:
-                                absolute_downloads: 18438
+                                absolute_downloads: 18508
                                 relative_downloads: 80.5
                                 version_publish_date: '2016-06-28'
                     nette_deprecated:
@@ -2352,29 +2012,21 @@ parameters:
                         package_short_name: finder
                         downloads_minor:
                             v2.5:
-                                absolute_downloads: 426625
+                                absolute_downloads: 428138
                                 relative_downloads: 80.5
                                 version_publish_date: '2019-02-28'
-                            v2.4:
-                                absolute_downloads: 100127
-                                relative_downloads: 18.9
-                                version_publish_date: '2016-05-17'
                     nette_forms:
                         package_name: nette/forms
                         package_short_name: forms
                         downloads_minor:
                             v2.4:
-                                absolute_downloads: 26888
+                                absolute_downloads: 26944
                                 relative_downloads: 78.4
                                 version_publish_date: '2016-06-30'
                     nette_http:
                         package_name: nette/http
                         package_short_name: http
                         downloads_minor:
-                            v3.0:
-                                absolute_downloads: 6596
-                                relative_downloads: !!float 16
-                                version_publish_date: '2019-02-28'
                             v2.4:
                                 absolute_downloads: 30983
                                 relative_downloads: 75.1
@@ -2384,21 +2036,17 @@ parameters:
                         package_short_name: mail
                         downloads_minor:
                             v2.4:
-                                absolute_downloads: 29781
-                                relative_downloads: 74.1
+                                absolute_downloads: 29914
+                                relative_downloads: 74.2
                                 version_publish_date: '2016-06-25'
                     nette_neon:
                         package_name: nette/neon
                         package_short_name: neon
                         downloads_minor:
                             v3.0:
-                                absolute_downloads: 394473
+                                absolute_downloads: 395859
                                 relative_downloads: 80.6
                                 version_publish_date: '2019-02-05'
-                            v2.4:
-                                absolute_downloads: 91072
-                                relative_downloads: 18.6
-                                version_publish_date: '2016-06-25'
                     nette_nette:
                         package_name: nette/nette
                         package_short_name: nette
@@ -2407,10 +2055,6 @@ parameters:
                                 absolute_downloads: 8863
                                 relative_downloads: 69.6
                                 version_publish_date: '2016-05-03'
-                            v2.3:
-                                absolute_downloads: 1964
-                                relative_downloads: 15.4
-                                version_publish_date: '2015-02-25'
                     nette_php_generator:
                         package_name: nette/php-generator
                         package_short_name: php-generator
@@ -2424,7 +2068,7 @@ parameters:
                         package_short_name: reflection
                         downloads_minor:
                             v2.4:
-                                absolute_downloads: 34238
+                                absolute_downloads: 34340
                                 relative_downloads: !!float 89
                                 version_publish_date: '2016-05-17'
                     nette_robot_loader:
@@ -2432,11 +2076,11 @@ parameters:
                         package_short_name: robot-loader
                         downloads_minor:
                             v3.2:
-                                absolute_downloads: 346394
+                                absolute_downloads: 347645
                                 relative_downloads: 68.1
                                 version_publish_date: '2019-03-08'
                             v3.1:
-                                absolute_downloads: 125838
+                                absolute_downloads: 126165
                                 relative_downloads: 24.7
                                 version_publish_date: '2018-08-13'
                     nette_safe_stream:
@@ -2444,11 +2088,11 @@ parameters:
                         package_short_name: safe-stream
                         downloads_minor:
                             v2.4:
-                                absolute_downloads: 11613
+                                absolute_downloads: 11652
                                 relative_downloads: 44.9
                                 version_publish_date: '2019-02-06'
                             v2.3:
-                                absolute_downloads: 14254
+                                absolute_downloads: 14302
                                 relative_downloads: 55.1
                                 version_publish_date: '2015-01-27'
                     nette_security:
@@ -2464,17 +2108,9 @@ parameters:
                         package_short_name: tester
                         downloads_minor:
                             v2.2:
-                                absolute_downloads: 10478
+                                absolute_downloads: 10500
                                 relative_downloads: 55.7
                                 version_publish_date: '2019-03-11'
-                            v2.0:
-                                absolute_downloads: 3429
-                                relative_downloads: 18.2
-                                version_publish_date: '2017-08-22'
-                            v1.7:
-                                absolute_downloads: 2845
-                                relative_downloads: 15.1
-                                version_publish_date: '2016-02-08'
                     nette_tokenizer:
                         package_name: nette/tokenizer
                         package_short_name: tokenizer
@@ -2503,35 +2139,27 @@ parameters:
                         package_short_name: annotations
                         downloads_minor:
                             v1.6:
-                                absolute_downloads: 1909193
+                                absolute_downloads: 1915987
                                 relative_downloads: 72.7
                                 version_publish_date: '2017-12-06'
-                            v1.4:
-                                absolute_downloads: 491941
-                                relative_downloads: 18.7
-                                version_publish_date: '2017-02-24'
                     doctrine_cache:
                         package_name: doctrine/cache
                         package_short_name: cache
                         downloads_minor:
                             v1.8:
-                                absolute_downloads: 2128967
+                                absolute_downloads: 2136576
                                 relative_downloads: 73.8
                                 version_publish_date: '2018-08-21'
-                            v1.6:
-                                absolute_downloads: 567351
-                                relative_downloads: 19.7
-                                version_publish_date: '2015-12-31'
                     doctrine_coding_standard:
                         package_name: doctrine/coding-standard
                         package_short_name: coding-standard
                         downloads_minor:
                             v6.0:
-                                absolute_downloads: 8594
-                                relative_downloads: 56.8
+                                absolute_downloads: 8642
+                                relative_downloads: 56.9
                                 version_publish_date: '2019-03-15'
                             v5.0:
-                                absolute_downloads: 5119
+                                absolute_downloads: 5131
                                 relative_downloads: 33.8
                                 version_publish_date: '2018-09-24'
                     doctrine_collections:
@@ -2555,11 +2183,11 @@ parameters:
                         package_short_name: common
                         downloads_minor:
                             v2.10:
-                                absolute_downloads: 1069701
-                                relative_downloads: 54.5
+                                absolute_downloads: 1073824
+                                relative_downloads: 54.6
                                 version_publish_date: '2018-11-21'
                             v2.7:
-                                absolute_downloads: 454846
+                                absolute_downloads: 456097
                                 relative_downloads: 23.2
                                 version_publish_date: '2016-11-30'
                     doctrine_data_fixtures:
@@ -2567,19 +2195,19 @@ parameters:
                         package_short_name: data-fixtures
                         downloads_minor:
                             v1.3:
-                                absolute_downloads: 539060
-                                relative_downloads: 81.3
+                                absolute_downloads: 540413
+                                relative_downloads: 81.4
                                 version_publish_date: '2017-11-27'
                     doctrine_dbal:
                         package_name: doctrine/dbal
                         package_short_name: dbal
                         downloads_minor:
                             v2.9:
-                                absolute_downloads: 1547533
+                                absolute_downloads: 1550978
                                 relative_downloads: 62.8
                                 version_publish_date: '2018-12-04'
                             v2.5:
-                                absolute_downloads: 522129
+                                absolute_downloads: 522954
                                 relative_downloads: 21.2
                                 version_publish_date: '2014-12-04'
                     doctrine_inflector:
@@ -2587,7 +2215,7 @@ parameters:
                         package_short_name: inflector
                         downloads_minor:
                             v1.3:
-                                absolute_downloads: 3242165
+                                absolute_downloads: 3252573
                                 relative_downloads: 79.4
                                 version_publish_date: '2018-01-09'
                     doctrine_instantiator:
@@ -2595,15 +2223,11 @@ parameters:
                         package_short_name: instantiator
                         downloads_minor:
                             v1.2:
-                                absolute_downloads: 2728062
+                                absolute_downloads: 2733955
                                 relative_downloads: 61.4
                                 version_publish_date: '2019-03-17'
-                            v1.1:
-                                absolute_downloads: 698300
-                                relative_downloads: 15.7
-                                version_publish_date: '2017-07-22'
                             v1.0:
-                                absolute_downloads: 1014749
+                                absolute_downloads: 1016380
                                 relative_downloads: 22.8
                                 version_publish_date: '2014-08-13'
                     doctrine_lexer:
@@ -2611,7 +2235,7 @@ parameters:
                         package_short_name: lexer
                         downloads_minor:
                             v1.0:
-                                absolute_downloads: 4061232
+                                absolute_downloads: 4071657
                                 relative_downloads: 93.9
                                 version_publish_date: '2013-01-12'
                     doctrine_migrations:
@@ -2626,16 +2250,12 @@ parameters:
                                 absolute_downloads: 280567
                                 relative_downloads: 31.6
                                 version_publish_date: '2018-06-06'
-                            v1.5:
-                                absolute_downloads: 138255
-                                relative_downloads: 15.6
-                                version_publish_date: '2016-12-25'
                     doctrine_mongodb:
                         package_name: doctrine/mongodb
                         package_short_name: mongodb
                         downloads_minor:
                             v1.6:
-                                absolute_downloads: 90769
+                                absolute_downloads: 90980
                                 relative_downloads: 90.5
                                 version_publish_date: '2017-08-09'
                     doctrine_mongodb_odm:
@@ -2643,7 +2263,7 @@ parameters:
                         package_short_name: mongodb-odm
                         downloads_minor:
                             v1.2:
-                                absolute_downloads: 81743
+                                absolute_downloads: 82040
                                 relative_downloads: 91.4
                                 version_publish_date: '2017-10-24'
                     doctrine_orm:
@@ -2679,4 +2299,4 @@ parameters:
                                 relative_downloads: 67.9
                                 version_publish_date: '2015-12-08'
                 name: Doctrine
-        updated_at: '2019-08-07 16:56:08'
+        updated_at: '2019-08-07 17:48:55'
