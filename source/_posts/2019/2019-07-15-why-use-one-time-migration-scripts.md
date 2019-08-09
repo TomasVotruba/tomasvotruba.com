@@ -2,7 +2,7 @@
 id: 218
 title: "Why use One-Time Migration Scripts"
 perex: |
-    School system taught me to despite old book and consider them outdated, rather about stories than knowledge. I wanted to prove I'm right, so I've read [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X) from 1999 and *you won't believe what happened*...
+    School system taught me to despise old books and consider them outdated, rather about stories than knowledge. I wanted to prove I'm right, so I've read [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X) from 1999 and *you won't believe what happened*...
 tweet: "New Post on #php 🐘 blog: Why use One-Time Migration Scripts"
 ---
 
@@ -45,7 +45,7 @@ I have prepared 2 related examples for you:
 
 ## 1. Migrate `app/config` to `config`
 
-In Symfony 4 [base directory were changed](http://fabien.potencier.org/symfony4-directory-structure.html). We need to use new locations. In one project it's simple and better done manually. But we use monorepo and have  20+ `/packages/X/config` directories.
+In Symfony 4 the [base directory was changed](http://fabien.potencier.org/symfony4-directory-structure.html). We need to use new locations. In one project it's simple and better done manually. But we use monorepo and have  20+ `/packages/X/config` directories.
 
 Let's code:
 
