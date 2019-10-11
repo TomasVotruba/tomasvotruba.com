@@ -1,5 +1,0 @@
-<phpunit bootstrap="../../../../../vendor/autoload.php">
-    <listeners>
-        <listener class="TomasVotruba\Website\Tests\Posts\Year2019\FinalMock\Listener\BypassFinalListener"/>
-    </listeners>
-</phpunit>
