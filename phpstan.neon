@@ -5,6 +5,10 @@ parameters:
     level: max
     reportUnmatchedErrors: false
 
+    excludes_analyse:
+        # test fixture file
+        - 'src/Posts/Year2017/Ast/SomeClass.php'
+
     ignoreErrors:
         # intentional for tests
         - '#Call to function is_countable\(\) with null will always evaluate to false#'

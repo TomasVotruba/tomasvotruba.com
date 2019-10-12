@@ -6,12 +6,7 @@ install:
     - composer install
 
 script:
-    # run tests for tested posts (with "tested: true" in header configuration)
     - vendor/bin/phpunit
-
-    # by pass finals hook test
-    - vendor/bin/phpunit --config tests/Posts/Year2019/FinalMock/Hook/phpunit-with-hook.xml tests/Posts/Year2019/FinalMock/Hook
-    - vendor/bin/phpunit --config tests/Posts/Year2019/FinalMock/Listener/phpunit-with-listener.xml tests/Posts/Year2019/FinalMock/Listener
 
     # static analysis
     - composer check-cs
@@ -19,6 +14,9 @@ script:
 
     # test that website is generated
     - vendor/bin/statie generate source
+
+    # check updates with Rector
+    - vendor/bin/rector process src tests --dry-run
 
     # dump contributors before deploy
 #    - |

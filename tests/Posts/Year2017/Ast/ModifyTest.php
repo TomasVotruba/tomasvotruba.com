@@ -53,7 +53,7 @@ final class ModifyTest extends TestCase
         $this->assertNotSame([], $nodes);
 
         /** @var Namespace_[] $nodes */
-        $classNode = $nodes[1]->stmts[0];
+        $classNode = $nodes[1]->stmts[1];
         $this->assertInstanceOf(Class_::class, $classNode);
 
         /** @var Class_ $classMethodNode */
