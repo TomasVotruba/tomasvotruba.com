@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace TomasVotruba\Website\Tests\Posts\Year2018\Exceptions;
 
@@ -21,7 +23,9 @@ final class RelativePathTest extends TestCase
         $this->assertSame(__DIR__ . '/Source/some_file.txt', $splFileInfo->getRealPath());
 
         // is relative
-        $relativePath = Strings::substring($splFileInfo->getRealPath(), strlen(getcwd()) + 1);
+        /** @var string $realPath */
+        $realPath = $splFileInfo->getRealPath();
+        $relativePath = Strings::substring($realPath, strlen(getcwd()) + 1);
         $this->assertSame('tests/Posts/Year2018/Exceptions/Source/some_file.txt', $relativePath);
     }
 

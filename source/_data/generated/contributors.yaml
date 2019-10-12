@@ -1,4 +1,4 @@
-# this file was generated on 2019-04-12 23:13:19, do not edit it manually
+# this file was generated on 2019-10-12 15:04:25, do not edit it manually
 parameters:
     contributors:
         -
@@ -10,12 +10,12 @@ parameters:
             name: enumag
             url: 'https://github.com/enumag'
             photo: 'https://avatars3.githubusercontent.com/u/539462?v=4'
-            contribution_count: 9
+            contribution_count: 10
         -
             name: mssimi
             url: 'https://github.com/mssimi'
             photo: 'https://avatars0.githubusercontent.com/u/16163762?v=4'
-            contribution_count: 9
+            contribution_count: 10
         -
             name: tavy315
             url: 'https://github.com/tavy315'
@@ -25,6 +25,11 @@ parameters:
             name: ondrejmirtes
             url: 'https://github.com/ondrejmirtes'
             photo: 'https://avatars0.githubusercontent.com/u/104888?v=4'
+            contribution_count: 7
+        -
+            name: vrbata
+            url: 'https://github.com/vrbata'
+            photo: 'https://avatars1.githubusercontent.com/u/8536429?v=4'
             contribution_count: 7
         -
             name: f3l1x
@@ -117,9 +122,19 @@ parameters:
             photo: 'https://avatars2.githubusercontent.com/u/3452074?v=4'
             contribution_count: 2
         -
+            name: praczynski
+            url: 'https://github.com/praczynski'
+            photo: 'https://avatars1.githubusercontent.com/u/455039?v=4'
+            contribution_count: 2
+        -
             name: garas
             url: 'https://github.com/garas'
             photo: 'https://avatars3.githubusercontent.com/u/2265694?v=4'
+            contribution_count: 2
+        -
+            name: lchrusciel
+            url: 'https://github.com/lchrusciel'
+            photo: 'https://avatars2.githubusercontent.com/u/6213903?v=4'
             contribution_count: 2
         -
             name: Zemistr
@@ -297,19 +312,9 @@ parameters:
             photo: 'https://avatars3.githubusercontent.com/u/904427?v=4'
             contribution_count: 1
         -
-            name: praczynski
-            url: 'https://github.com/praczynski'
-            photo: 'https://avatars1.githubusercontent.com/u/455039?v=4'
-            contribution_count: 1
-        -
             name: Wojciechem
             url: 'https://github.com/Wojciechem'
             photo: 'https://avatars3.githubusercontent.com/u/4303141?v=4'
-            contribution_count: 1
-        -
-            name: vrbata
-            url: 'https://github.com/vrbata'
-            photo: 'https://avatars1.githubusercontent.com/u/8536429?v=4'
             contribution_count: 1
         -
             name: zendiik
@@ -320,4 +325,39 @@ parameters:
             name: COil
             url: 'https://github.com/COil'
             photo: 'https://avatars0.githubusercontent.com/u/177844?v=4'
+            contribution_count: 1
+        -
+            name: pgl
+            url: 'https://github.com/pgl'
+            photo: 'https://avatars0.githubusercontent.com/u/1181139?v=4'
+            contribution_count: 1
+        -
+            name: leksinteractive
+            url: 'https://github.com/leksinteractive'
+            photo: 'https://avatars1.githubusercontent.com/u/3906239?v=4'
+            contribution_count: 1
+        -
+            name: samdark
+            url: 'https://github.com/samdark'
+            photo: 'https://avatars2.githubusercontent.com/u/47294?v=4'
+            contribution_count: 1
+        -
+            name: voku
+            url: 'https://github.com/voku'
+            photo: 'https://avatars0.githubusercontent.com/u/264695?v=4'
+            contribution_count: 1
+        -
+            name: ravage84
+            url: 'https://github.com/ravage84'
+            photo: 'https://avatars1.githubusercontent.com/u/625761?v=4'
+            contribution_count: 1
+        -
+            name: r-amos
+            url: 'https://github.com/r-amos'
+            photo: 'https://avatars3.githubusercontent.com/u/23461699?v=4'
+            contribution_count: 1
+        -
+            name: hpneo
+            url: 'https://github.com/hpneo'
+            photo: 'https://avatars2.githubusercontent.com/u/611699?v=4'
             contribution_count: 1

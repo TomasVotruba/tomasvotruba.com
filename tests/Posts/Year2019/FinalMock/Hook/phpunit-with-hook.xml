@@ -1,5 +1,0 @@
-<phpunit bootstrap="../../../../../vendor/autoload.php">
-    <extensions>
-        <extension class="TomasVotruba\Website\Tests\Posts\Year2019\FinalMock\Hook\BypassFinalHook"/>
-    </extensions>
-</phpunit>

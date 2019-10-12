@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace TomasVotruba\Website\Tests\Posts\Year2018\ConsoleDI;
 
@@ -16,7 +18,7 @@ final class RunBinTest extends TestCase
         $outputString = $this->execAndGetOutput($this->binFilePath);
 
         // success
-        $this->assertContains('Lists commands', $outputString);
+        $this->assertStringContainsString('Lists commands', $outputString);
     }
 
     public function testSomeCommand(): void
@@ -24,7 +26,7 @@ final class RunBinTest extends TestCase
         $output = $this->execAndGetOutput($this->binFilePath . ' some');
 
         // success
-        $this->assertContains('OK', $output);
+        $this->assertStringContainsString('OK', $output);
     }
 
     private function execAndGetOutput(string $binCommand): string

@@ -1,7 +1,10 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace TomasVotruba\Website\Tests\Posts\Year2018\Php73;
 
+use JsonException;
 use Nette\Utils\Json;
 use Nette\Utils\JsonException as NetteJsonException;
 use PHPUnit\Framework\TestCase;
@@ -18,7 +21,7 @@ final class Php73Test extends TestCase
 
     public function testCommadAfterTheLastArgument(): void
     {
-        $newThree = function ($one, $two /* , now syntax error - uncomment when PHP 7.3 is ready */) {
+        $newThree = function ($one, $two) {
             return $one + $two;
         };
         $this->assertSame(3, $newThree(1, 2));
@@ -30,6 +33,7 @@ final class Php73Test extends TestCase
         reset($this->items);
         $firstKey = key($this->items);
         $this->assertSame(1, $firstKey);
+
         // PHP 7.3+ way
         $firstKey = array_key_first($this->items);
         $this->assertSame(1, $firstKey);
@@ -46,6 +50,7 @@ final class Php73Test extends TestCase
         end($items);
         $lastKey = key($items);
         $this->assertSame(2, $lastKey);
+
         // PHP 7.3+ way
         $lastKey = array_key_last($items);
         $this->assertSame(2, $lastKey);
@@ -69,7 +74,7 @@ final class Php73Test extends TestCase
     public function testJsonException(): void
     {
         $notAJson = 'not a Json';
-        $this->expectException('JsonException');
+        $this->expectException(JsonException::class);
         json_decode($notAJson, false, 10, JSON_THROW_ON_ERROR);
     }
 }
