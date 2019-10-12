@@ -42,13 +42,8 @@ final class VersionManipulator
         if (! Strings::contains($version, '.')) {
             return false;
         }
-
         // too much dots
-        if (substr_count($version, '.') > 2) {
-            return false;
-        }
-
-        return true;
+        return substr_count($version, '.') <= 2;
     }
 
     public function resolveToMinor(Version $version): string
