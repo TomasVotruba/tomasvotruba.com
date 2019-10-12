@@ -1,3 +1,4 @@
 imports:
     - { resource: 'vendor/rector/rector/config/set/dead-code/dead-code.yaml' }
     - { resource: 'vendor/rector/rector/config/set/code-quality/code-quality.yaml' }
+    - { resource: 'vendor/rector/rector/config/set/type-declaration/type-declaration.yaml' }
