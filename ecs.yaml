@@ -14,9 +14,6 @@ services:
 
 parameters:
     skip:
-#        Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
-#            - '*/src/Posts/Year2017/Ast/*'
-
         # exists since PHP 7.3, not before
         Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer:
             - 'tests/Posts/Year2018/Php73/Php73Test.php'
