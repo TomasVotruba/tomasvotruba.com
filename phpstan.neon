@@ -19,3 +19,4 @@ parameters:
         - '#Call to an undefined method PHPUnit\\Framework\\MockObject\\MockObject\|TomasVotruba\\Website\\Posts\\Year2019\\(.*?)\\FinalClass\:\:(.*?)\(\)#'
 
         - '#Offset (.*?) does not exist on array#'
+        - '#Parameter \#2 \$cmp_function of function uksort expects callable\(mixed, mixed\)\: int, Closure\(mixed, mixed\)\: bool given#'

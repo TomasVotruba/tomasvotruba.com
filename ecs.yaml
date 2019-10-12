@@ -1,5 +1,5 @@
 imports:
-    - { resource: 'vendor/symplify/easy-coding-standard/config/set/psr2.yaml' }
+    - { resource: 'vendor/symplify/easy-coding-standard/config/set/psr12.yaml' }
     - { resource: 'vendor/symplify/easy-coding-standard/config/set/php71.yaml' }
     - { resource: 'vendor/symplify/easy-coding-standard/config/set/common.yaml' }
     - { resource: 'vendor/symplify/easy-coding-standard/config/set/symplify.yaml' }
@@ -14,8 +14,8 @@ services:
 
 parameters:
     skip:
-        Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
-            - '*/src/Posts/Year2017/Ast/*'
+#        Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff:
+#            - '*/src/Posts/Year2017/Ast/*'
 
         # exists since PHP 7.3, not before
         Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer:
@@ -31,3 +31,5 @@ parameters:
         # false positive
         SlevomatCodingStandard\Sniffs\Variables\UnusedVariableSniff.UnusedVariable:
             - 'src/Packagist/MinorPackageVersionsDownloadsProvider.php'
+
+        PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer: ~

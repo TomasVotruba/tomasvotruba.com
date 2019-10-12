@@ -2,28 +2,27 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.3",
-        "nette/finder": "^2.4",
-        "nette/utils": "^2.5",
-        "nikic/php-parser": "^4.1",
-        "symfony/http-kernel": "^4.2",
-        "symfony/console": "^4.2",
-        "symplify/package-builder": "^6.0",
-        "symplify/statie": "^6.0"
+        "nette/finder": "^2.4|^3.0",
+        "nette/utils": "^2.4|^3.0",
+        "symfony/http-kernel": "^4.3",
+        "symfony/console": "^4.3",
+        "symplify/package-builder": "^6.2",
+        "symplify/statie": "^6.2"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.1",
-        "nette/neon": "^2.4",
+        "nette/neon": "^2.4|^3.0",
         "phpstan/phpstan": "^0.11",
-        "phpunit/phpunit": "^7.5",
+        "phpunit/phpunit": "^8.4",
         "spatie/http-status-check": "^2.5",
-        "symfony/console": "^4.2",
-        "symfony/process": "^4.2",
-        "symfony/stopwatch": "^4.2",
-        "symfony/yaml": "^4.2",
-        "symplify/autodiscovery": "^6.0",
-        "symplify/easy-coding-standard": "^6.0",
-        "symplify/latte-to-twig-converter": "^6.0",
-        "symplify/phpstan-extensions": "^6.0"
+        "symfony/console": "^4.3",
+        "symfony/process": "^4.3",
+        "symfony/stopwatch": "^4.3",
+        "symfony/yaml": "^4.3",
+        "symplify/autodiscovery": "^6.2",
+        "symplify/easy-coding-standard": "^6.2",
+        "symplify/latte-to-twig-converter": "^6.2",
+        "symplify/phpstan-extensions": "^6.2"
     },
     "autoload": {
         "psr-4": {
@@ -51,5 +50,7 @@
     },
     "config": {
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
