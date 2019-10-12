@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Tests\Posts\Year2018\Php73;
 
+use JsonException;
 use Nette\Utils\Json;
 use Nette\Utils\JsonException as NetteJsonException;
 use PHPUnit\Framework\TestCase;
@@ -73,7 +74,7 @@ final class Php73Test extends TestCase
     public function testJsonException(): void
     {
         $notAJson = 'not a Json';
-        $this->expectException('JsonException');
+        $this->expectException(JsonException::class);
         json_decode($notAJson, false, 10, JSON_THROW_ON_ERROR);
     }
 }

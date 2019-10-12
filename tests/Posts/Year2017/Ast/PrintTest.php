@@ -24,11 +24,16 @@ final class PrintTest extends TestCase
 
     protected function setUp(): void
     {
-        /** stop @see BypassFinals just for this test to keep "final" in the code */
+        /** stops @see BypassFinals just for this test to keep "final" in the code */
         stream_wrapper_restore('file');
 
         $this->srcDirectory = __DIR__ . '/../../../../src/Posts/Year2017/Ast';
         $this->formatPreservingPrinter = new FormatPreservingPrinter();
+    }
+
+    protected function tearDown(): void
+    {
+        BypassFinals::enable();
     }
 
     public function testPrinter(): void

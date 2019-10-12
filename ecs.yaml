@@ -14,10 +14,6 @@ services:
 
 parameters:
     skip:
-        # exists since PHP 7.3, not before
-        Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer:
-            - 'tests/Posts/Year2018/Php73/Php73Test.php'
-
         # mixed[] array redundancy
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableReturnTypeHintSpecification: ~
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableParameterTypeHintSpecification: ~
