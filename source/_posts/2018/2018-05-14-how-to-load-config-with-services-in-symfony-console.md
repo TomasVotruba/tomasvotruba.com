@@ -349,7 +349,7 @@ bin/ecs check src --config custom-config.yml
 
 Do you have a CLI App and do you find DI approach useful? Do you have `--config` or `-c` or `--configuratoin` options and do you want to migrate them to this? Or maybe you have `--level` option, that shortens the config path in some way:
 
-```php
+```bash
 vendor/bin/ecs check src --level clean-code
 ```
 

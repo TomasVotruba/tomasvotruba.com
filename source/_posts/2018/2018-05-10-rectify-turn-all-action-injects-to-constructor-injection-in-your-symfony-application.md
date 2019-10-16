@@ -110,10 +110,10 @@ parameters:
 
 <br>
 
-Do you have `App\Kernel` in your application? Use `--level` in CLI this instead of `rector.yaml`:
+Do you have `App\Kernel` in your application? Use `--set` in CLI this instead of `rector.yaml`:
 
 ```bash
-vendor/bin/rector ... --level action-injection-to-constructor-injection
+vendor/bin/rector ... --set action-injection-to-constructor-injection
 ```
 
 ### 3. Run Rector on Your Code

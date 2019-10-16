@@ -116,7 +116,7 @@ These kinds of problems are *so 2018*. Recently Rector got on board [Laravel ins
 Next impulse was the post by Niklas, so I've **converted his idea to Rector rule**. The change from facades to constructor injection can be done with new `laravel-static-to-injection`:
 
 ```bash
-vendor/bin/rector process /src --level laravel-static-to-injection
+vendor/bin/rector process /src --set laravel-static-to-injection
 ```
 
 No need to switch framework and you can enjoy new constructor injection in your Laravel application matter of minutes.

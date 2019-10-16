@@ -38,7 +38,7 @@ Just run it with target `level` of `symfony33` and it will change everything it 
 Such a command looks like this:
 
 ```bash
-vendor/bin/rector process src --level symfony33
+vendor/bin/rector process src --set symfony33
 ```
 
 ## What are Architecture Refactorings?

@@ -163,7 +163,7 @@ First, take a 2-week paid vacation... Just kidding. Start with Rector which migr
 
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process spec --level phpspec-to-phpunit
+vendor/bin/rector process spec --set phpspec-to-phpunit
 ```
 
 Rector is getting smarter every set, but I bet there are still some missed cases. **When the code doesn't work, just go and [report the issue](https://github.com/rectorphp/rector/issues)** with expected vs. current output.

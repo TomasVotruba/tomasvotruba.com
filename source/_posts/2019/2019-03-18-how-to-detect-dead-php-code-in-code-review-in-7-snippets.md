@@ -398,7 +398,7 @@ Rector doesn't only refactor applications from one framework to another, upgrade
 
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process src --level dead-code --dry-run
+vendor/bin/rector process src --set dead-code --dry-run
 ```
 
 **If Rector detects any dead code, CI will fail**. You can, of course, run it without `--dry-run` after to actually remove the code.

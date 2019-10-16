@@ -72,7 +72,7 @@ For [Rector](https://github.com/rectorphp/rector) it just 1 pattern to refactor.
 
 ```bash
 composer require rector/rector --dev # make sure you have version 0.4.10+ at least
-vendor/bin/rector process src --level twig-underscore-to-namespace
+vendor/bin/rector process src --set twig-underscore-to-namespace
 ```
 
 Happy coding!

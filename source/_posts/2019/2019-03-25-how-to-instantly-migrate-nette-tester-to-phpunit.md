@@ -142,7 +142,7 @@ Luckily, last 2 operations are subtractions, so we can just remove them.
 
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process spec --level nette-tetser-to-phpunit
+vendor/bin/rector process spec --set nette-tetser-to-phpunit
 ```
 
 Rector **doesn't replace you**, **it helps you** - so take few minutes to polish the details that Rectors missed and send the PR to your project
