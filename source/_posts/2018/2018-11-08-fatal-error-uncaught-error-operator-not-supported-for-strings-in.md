@@ -138,13 +138,13 @@ I went full-time on writing PHP upgrade rules - in the train, in the buss, in th
 </p>
 
 ```bash
-vendor/bin/rector process src --level php54
-vendor/bin/rector process src --level php56
-vendor/bin/rector process src --level php70
-vendor/bin/rector process src --level php71
-vendor/bin/rector process src --level php72
-vendor/bin/rector process src --level php73
-vendor/bin/rector process src --level php74
+vendor/bin/rector process src --set php54
+vendor/bin/rector process src --set php56
+vendor/bin/rector process src --set php70
+vendor/bin/rector process src --set php71
+vendor/bin/rector process src --set php72
+vendor/bin/rector process src --set php73
+vendor/bin/rector process src --set php74
 ```
 
 <br>

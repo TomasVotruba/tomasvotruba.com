@@ -153,7 +153,7 @@ Or you could **be actually rewarded for your daunting `@var` work**. Good news! 
 
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process src --level php74
+vendor/bin/rector process src --set php74
 # few seconds...
 #
 # Done!

@@ -49,12 +49,12 @@ All you need to do to upgrade your PHP code is to install Rector and run particu
 
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process app src --level symfony28
-vendor/bin/rector process app src --level symfony30
-vendor/bin/rector process app src --level symfony31
-vendor/bin/rector process app src --level symfony32
-vendor/bin/rector process app src --level symfony33
-vendor/bin/rector process app src --level symfony34
+vendor/bin/rector process app src --set symfony28
+vendor/bin/rector process app src --set symfony30
+vendor/bin/rector process app src --set symfony31
+vendor/bin/rector process app src --set symfony32
+vendor/bin/rector process app src --set symfony33
+vendor/bin/rector process app src --set symfony34
 ```
 
 You still need to upgrade YAML files, but then you're ready to go.
@@ -62,9 +62,9 @@ You still need to upgrade YAML files, but then you're ready to go.
 **Are you stuck on old PHP 5.3?** Rector got you covered:
 
 ```bash
-vendor/bin/rector process app src --level php53
-vendor/bin/rector process app src --level php54
-vendor/bin/rector process app src --level php55
+vendor/bin/rector process app src --set php53
+vendor/bin/rector process app src --set php54
+vendor/bin/rector process app src --set php55
 ```
 
 ## Awesome Symfony 3.3+ Dependency Injection
