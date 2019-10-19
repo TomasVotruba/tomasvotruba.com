@@ -18,7 +18,7 @@ final class TalksCountFilterProvider implements FilterProviderInterface
             'talks_count' => function (array $talksByTopic): int {
                 $count = 0;
                 foreach ($talksByTopic as $talks) {
-                    $count += count($talks);
+                    $count += count($talks['events']);
                 }
 
                 return $count;

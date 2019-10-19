@@ -10,19 +10,27 @@ id: talks
     <h1>
         {{ title }}
         <br>
-        <small>Slides, demos and posts</small>
+        <small>I enjoy Sharing my Know-How with PHP Communities</small>
     </h1>
 
-    <p>
-        Do you want me <strong>to talk at your conference</strong>?<br>
-        Check <a href="https://symposiumapp.com/u/tomasvotruba">my papers on Symposium</a> and <a href="/contact/">write me</a>. I love to travel and meet new people!
-    </p>
+    <div class="text-center">
+        <a href="https://www.youtube.com/watch?v=gQWQA-GZxXc">
+            <img src="/assets/images/talk_on_stage.jpg" alt="" class="img-thumbnail" style="max-height:22em">
+        </a>
+        <p class="mt-2 small">
+            <em>How to Make Refactoring Legacy fun Again</em> at PHP FwDays, Ukraine, 2019 (<a href="https://www.youtube.com/watch?v=gQWQA-GZxXc">watch the talk</a>)
+        </p>
+    </div>
 
     <br>
 
     <h2 class="slim">
-        I spoke at {{ talks|talks_count }} PHP conferences and PHP meetups ↓
+        I spoke at {{ talks|talks_count + 10 }} PHP conferences and meetups ↓
     </h2>
+
+    <p>Here are those I enjoyed the most:</p>
+
+    <br>
 
     {% for talk in talks %}
         <div class="card mb-5" id="{{ talk.anchor }}">
@@ -63,9 +71,7 @@ id: talks
                     <ul>
                         {% for event in talk.events %}
                             <li>
-                                <a href="{{ event.url }}" class="mt-2 mb-2">
-                                    {{ event.name }}
-                                </a>
+                                <a href="{{ event.url }}" class="mt-2 mb-2">{{ event.name }}</a>
 
                                 @ {{ event.location }}, {{ event.date|date("Y-m") }}
                             </li>
@@ -86,30 +92,8 @@ id: talks
 
     <hr>
 
-    <h2 class="slim">I Enjoy Audience and Wear Braces</h2>
-
-    <div class="text-center">
-        <img src="/assets/images/talk_php_russia_2019_rapper.jpg" alt="" class="img-thumbnail" style="max-height:22em">
-        <p class="mt-2">
-            Rapping-Ception in PHP Russia, 2019 - <a href="https://www.daveliddament.co.uk/">Thank you Dave</a> for the idea + photo!
-        </p>
-    </div>
-
-    <br>
-    <br>
-
-    <div class="text-center">
-        <img src="/assets/images/talk_phpday_2019.jpg?v=1" alt="Me as speaker" class="img-thumbnail mr-4 mb-3" style="max-height:18em">
-        <img src="/assets/images/talk_dresden.jpg?v=1" alt="Me as speaker" class="img-thumbnail mb-3" style="max-height:18em">
-        <p class="mt-2">
-            Sharing know-how in Dresden PHP and PHP Day at Verona, 2019
-        </p>
-    </div>
-
-    <hr>
-
-    <h2 class="slim">
-        I'm Trying to get Better based Feedback
+    <h2 class="slim pb-3">
+        How PHP folks enjoy my talks?
     </h2>
 
     {% for talk_feedback in talks_feedback %}
@@ -134,8 +118,31 @@ id: talks
         </div>
     {% endfor %}
 
-    <p>
-        Find more honest feedback on <a href="https://joind.in/user/TomasVotruba">my Joind.in profile</a>.
+    <p class="text-center mb-5">
+        <a href="https://joind.in/user/TomasVotruba" class="btn btn-info">
+            Find more feedback on Joind.in
+        </a>
     </p>
 
+    <hr>
+
+    <h2 class="slim pb-3">
+        Do you want me to Talk at your Conference?
+    </h2>
+
+    <div class="text-center">
+        <p class="text-center">
+            <a href="https://symposiumapp.com/u/tomasvotruba" class="btn btn-danger">
+                Pick one of my talks on Symposium
+            </a>
+
+            and <a href="/contact/">write me</a>.
+            <br>
+        </p>
+        <p>
+            I'll be happy to visit you and meet new people!
+        </p>
+    </div>
+
+    <br>
 </div>
