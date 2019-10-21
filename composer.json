@@ -2,24 +2,24 @@
     "name": "tomasvotruba/website",
     "require": {
         "php": "^7.3",
-        "nette/finder": "^2.4|^3.0",
-        "nette/utils": "^2.4|^3.0",
-        "symfony/http-kernel": "^4.3",
-        "symfony/console": "^4.3",
+        "nette/finder": "^2.5",
+        "nette/utils": "^3.0",
+        "symfony/http-kernel": "^4.4",
+        "symfony/console": "^4.4",
         "symplify/package-builder": "^6.2",
         "symplify/statie": "^6.2"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.1",
-        "nette/neon": "^2.4|^3.0",
+        "nette/neon": "^3.0",
         "phpstan/phpstan": "^0.11",
         "phpunit/phpunit": "^8.4",
         "rector/rector": "dev-master",
         "spatie/http-status-check": "^2.5",
-        "symfony/console": "^4.3",
-        "symfony/process": "^4.3",
-        "symfony/stopwatch": "^4.3",
-        "symfony/yaml": "^4.3",
+        "symfony/console": "^4.4",
+        "symfony/process": "^4.4",
+        "symfony/stopwatch": "^4.4",
+        "symfony/yaml": "^4.4",
         "symplify/autodiscovery": "^6.2",
         "symplify/easy-coding-standard": "^6.2",
         "symplify/latte-to-twig-converter": "^6.2",
@@ -44,9 +44,7 @@
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt --ansi",
         "stats": [
-        	"vendor/bin/statie generate-package-stats --ansi",
-  			"vendor/bin/statie generate-package-stats-grouped-by-version --ansi",
-  			"vendor/bin/statie generate-testing-package-stats --ansi"
+        	"vendor/bin/statie generate-package-stats --ansi"
   		]
     },
     "config": {
