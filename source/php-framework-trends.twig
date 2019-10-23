@@ -39,8 +39,8 @@ id: "trends"
                 <td>
                     <a href="#{{ framework.name|webalize }}">{{ framework.name }}</a>
                 </td>
-                <td class="text-right text-nowrap" data-order="{{ framework.average_last_year_trend }}">
-                    {{ macros.trend(framework.average_last_year_trend) }}
+                <td class="text-right text-nowrap" data-order="{{ framework.last_year_trend }}">
+                    {{ macros.trend(framework.last_year_trend) }}
                 </td>
                 <td class="text-right text-nowrap" data-order="{{ framework.vendor_total_last_year }}">
                     {{ macros.number(framework.vendor_total_last_year) }}

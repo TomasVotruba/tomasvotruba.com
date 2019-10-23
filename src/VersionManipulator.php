@@ -46,11 +46,6 @@ final class VersionManipulator
         return substr_count($version, '.') <= 2;
     }
 
-    public function resolveToMinor(Version $version): string
-    {
-        return 'v' . $version->getMajor()->getValue() . '.' . $version->getMinor()->getValue();
-    }
-
     private function normalize(string $version): string
     {
         if (Strings::startsWith($version, 'v')) {
