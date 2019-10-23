@@ -58,20 +58,24 @@ final class VendorDataFactory
 
             $vendorTotalLastYear = $this->arrayUtils->getArrayKeySum($packagesData, 'last_year_total');
             $vendorTotalPreviousYear = $this->arrayUtils->getArrayKeySum($packagesData, 'previous_year_total');
-            $averageLastYearTrend = $this->arrayUtils->getArrayKeyAverage($packagesData, 'last_year_trend');
+
+            $lastYearTrend = (($vendorTotalLastYear / $vendorTotalPreviousYear) * 100) - 100;
+            $lastYearTrend = round($lastYearTrend, 0);
 
             $vendorData[$vendorName] = [
                 'name' => $frameworkName,
                 // totals
                 'vendor_total_last_year' => $vendorTotalLastYear,
                 'vendor_total_previous_year' => $vendorTotalPreviousYear,
-                'average_last_year_trend' => $averageLastYearTrend,
+                'last_year_trend' => $lastYearTrend,
                 // packages details
                 'packages_data' => $packagesData,
             ];
+
+            $this->symfonyStyle->newLine(2);
         }
 
-        $vendorData = $this->arrayUtils->sortDataByKey($vendorData, 'average_last_year_trend');
+        $vendorData = $this->arrayUtils->sortDataByKey($vendorData, 'last_year_trend');
 
         // metadata
         $data['vendors'] = $vendorData;

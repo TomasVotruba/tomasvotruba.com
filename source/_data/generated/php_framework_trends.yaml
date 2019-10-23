@@ -1,4 +1,4 @@
-# this file was generated on 2019-10-07 12:46:18, do not edit it manually
+# this file was generated on 2019-10-23 11:57:55, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
@@ -6,7 +6,7 @@ parameters:
                 name: Symfony
                 vendor_total_last_year: 566683860
                 vendor_total_previous_year: 385358370
-                average_last_year_trend: 92.3
+                last_year_trend: !!float 47
                 packages_data:
                     -
                         package_name: symfony/acl-bundle
@@ -333,64 +333,10 @@ parameters:
                         last_year_total: 8852160
                         previous_year_total: 10230960
             -
-                name: CakePHP
-                vendor_total_last_year: 10089270
-                vendor_total_previous_year: 7868730
-                average_last_year_trend: !!float 40
-                packages_data:
-                    -
-                        package_name: cakephp/utility
-                        package_short_name: utility
-                        last_year_trend: 250.2
-                        last_year_total: 1079340
-                        previous_year_total: 308220
-                    -
-                        package_name: cakephp/chronos
-                        package_short_name: chronos
-                        last_year_trend: 66.1
-                        last_year_total: 3629250
-                        previous_year_total: 2184600
-                    -
-                        package_name: cakephp/migrations
-                        package_short_name: migrations
-                        last_year_trend: 6.7
-                        last_year_total: 830700
-                        previous_year_total: 778440
-                    -
-                        package_name: cakephp/bake
-                        package_short_name: bake
-                        last_year_trend: 5.2
-                        last_year_total: 759210
-                        previous_year_total: 721920
-                    -
-                        package_name: cakephp/plugin-installer
-                        package_short_name: plugin-installer
-                        last_year_trend: 5.1
-                        last_year_total: 845070
-                        previous_year_total: 804240
-                    -
-                        package_name: cakephp/debug_kit
-                        package_short_name: debug_kit
-                        last_year_trend: 2.9
-                        last_year_total: 982620
-                        previous_year_total: 955110
-                    -
-                        package_name: cakephp/cakephp
-                        package_short_name: cakephp
-                        last_year_trend: -5.2
-                        last_year_total: 1285710
-                        previous_year_total: 1356120
-                    -
-                        package_name: cakephp/cakephp-codesniffer
-                        package_short_name: cakephp-codesniffer
-                        last_year_trend: -10.9
-                        last_year_total: 677370
-                        previous_year_total: 760080
-            -
                 name: Laravel
                 vendor_total_last_year: 83157720
                 vendor_total_previous_year: 63432120
-                average_last_year_trend: 37.6
+                last_year_trend: !!float 31
                 packages_data:
                     -
                         package_name: illuminate/log
@@ -549,10 +495,64 @@ parameters:
                         last_year_total: 24065340
                         previous_year_total: 19236360
             -
+                name: CakePHP
+                vendor_total_last_year: 10089270
+                vendor_total_previous_year: 7868730
+                last_year_trend: !!float 28
+                packages_data:
+                    -
+                        package_name: cakephp/utility
+                        package_short_name: utility
+                        last_year_trend: 250.2
+                        last_year_total: 1079340
+                        previous_year_total: 308220
+                    -
+                        package_name: cakephp/chronos
+                        package_short_name: chronos
+                        last_year_trend: 66.1
+                        last_year_total: 3629250
+                        previous_year_total: 2184600
+                    -
+                        package_name: cakephp/migrations
+                        package_short_name: migrations
+                        last_year_trend: 6.7
+                        last_year_total: 830700
+                        previous_year_total: 778440
+                    -
+                        package_name: cakephp/bake
+                        package_short_name: bake
+                        last_year_trend: 5.2
+                        last_year_total: 759210
+                        previous_year_total: 721920
+                    -
+                        package_name: cakephp/plugin-installer
+                        package_short_name: plugin-installer
+                        last_year_trend: 5.1
+                        last_year_total: 845070
+                        previous_year_total: 804240
+                    -
+                        package_name: cakephp/debug_kit
+                        package_short_name: debug_kit
+                        last_year_trend: 2.9
+                        last_year_total: 982620
+                        previous_year_total: 955110
+                    -
+                        package_name: cakephp/cakephp
+                        package_short_name: cakephp
+                        last_year_trend: -5.2
+                        last_year_total: 1285710
+                        previous_year_total: 1356120
+                    -
+                        package_name: cakephp/cakephp-codesniffer
+                        package_short_name: cakephp-codesniffer
+                        last_year_trend: -10.9
+                        last_year_total: 677370
+                        previous_year_total: 760080
+            -
                 name: Zend
                 vendor_total_last_year: 188545260
                 vendor_total_previous_year: 149676570
-                average_last_year_trend: 21.3
+                last_year_trend: !!float 26
                 packages_data:
                     -
                         package_name: zendframework/zend-diactoros
@@ -975,10 +975,172 @@ parameters:
                         last_year_total: 733770
                         previous_year_total: 797790
             -
+                name: Doctrine
+                vendor_total_last_year: 321033690
+                vendor_total_previous_year: 271116930
+                last_year_trend: !!float 18
+                packages_data:
+                    -
+                        package_name: doctrine/migrations
+                        package_short_name: migrations
+                        last_year_trend: 34.8
+                        last_year_total: 9974100
+                        previous_year_total: 7398690
+                    -
+                        package_name: doctrine/lexer
+                        package_short_name: lexer
+                        last_year_trend: 32.6
+                        last_year_total: 46167510
+                        previous_year_total: 34822470
+                    -
+                        package_name: doctrine/dbal
+                        package_short_name: dbal
+                        last_year_trend: 24.2
+                        last_year_total: 28521330
+                        previous_year_total: 22955910
+                    -
+                        package_name: doctrine/cache
+                        package_short_name: cache
+                        last_year_trend: 22.9
+                        last_year_total: 33381690
+                        previous_year_total: 27155460
+                    -
+                        package_name: doctrine/instantiator
+                        package_short_name: instantiator
+                        last_year_trend: 22.5
+                        last_year_total: 50746050
+                        previous_year_total: 41420760
+                    -
+                        package_name: doctrine/data-fixtures
+                        package_short_name: data-fixtures
+                        last_year_trend: !!float 22
+                        last_year_total: 7339470
+                        previous_year_total: 6017970
+                    -
+                        package_name: doctrine/inflector
+                        package_short_name: inflector
+                        last_year_trend: 21.3
+                        last_year_total: 46212690
+                        previous_year_total: 38104800
+                    -
+                        package_name: doctrine/orm
+                        package_short_name: orm
+                        last_year_trend: 14.5
+                        last_year_total: 15153180
+                        previous_year_total: 13236270
+                    -
+                        package_name: doctrine/annotations
+                        package_short_name: annotations
+                        last_year_trend: 9.8
+                        last_year_total: 30747690
+                        previous_year_total: 28008480
+                    -
+                        package_name: doctrine/collections
+                        package_short_name: collections
+                        last_year_trend: 4.8
+                        last_year_total: 26296740
+                        previous_year_total: 25090350
+                    -
+                        package_name: doctrine/mongodb-odm
+                        package_short_name: mongodb-odm
+                        last_year_trend: 2.9
+                        last_year_total: 1165470
+                        previous_year_total: 1132350
+                    -
+                        package_name: doctrine/common
+                        package_short_name: common
+                        last_year_trend: -1.7
+                        last_year_total: 24179490
+                        previous_year_total: 24605640
+                    -
+                        package_name: doctrine/mongodb
+                        package_short_name: mongodb
+                        last_year_trend: -1.7
+                        last_year_total: 1148280
+                        previous_year_total: 1167780
+            -
+                name: Nette
+                vendor_total_last_year: 7705440
+                vendor_total_previous_year: 6587370
+                last_year_trend: !!float 17
+                packages_data:
+                    -
+                        package_name: nette/utils
+                        package_short_name: utils
+                        last_year_trend: 59.1
+                        last_year_total: 1306260
+                        previous_year_total: 821220
+                    -
+                        package_name: nette/php-generator
+                        package_short_name: php-generator
+                        last_year_trend: 56.9
+                        last_year_total: 763950
+                        previous_year_total: 486780
+                    -
+                        package_name: nette/finder
+                        package_short_name: finder
+                        last_year_trend: 17.7
+                        last_year_total: 677640
+                        previous_year_total: 575700
+                    -
+                        package_name: nette/forms
+                        package_short_name: forms
+                        last_year_trend: 13.4
+                        last_year_total: 469710
+                        previous_year_total: 414060
+                    -
+                        package_name: nette/security
+                        package_short_name: security
+                        last_year_trend: 12.3
+                        last_year_total: 459150
+                        previous_year_total: 408690
+                    -
+                        package_name: nette/component-model
+                        package_short_name: component-model
+                        last_year_trend: 10.3
+                        last_year_total: 538290
+                        previous_year_total: 488130
+                    -
+                        package_name: nette/application
+                        package_short_name: application
+                        last_year_trend: !!float 9
+                        last_year_total: 520080
+                        previous_year_total: 477270
+                    -
+                        package_name: nette/http
+                        package_short_name: http
+                        last_year_trend: !!float 9
+                        last_year_total: 569280
+                        previous_year_total: 522510
+                    -
+                        package_name: nette/mail
+                        package_short_name: mail
+                        last_year_trend: 5.3
+                        last_year_total: 546990
+                        previous_year_total: 519360
+                    -
+                        package_name: nette/robot-loader
+                        package_short_name: robot-loader
+                        last_year_trend: 3.6
+                        last_year_total: 430230
+                        previous_year_total: 415110
+                    -
+                        package_name: nette/reflection
+                        package_short_name: reflection
+                        last_year_trend: -2.3
+                        last_year_total: 546660
+                        previous_year_total: 559620
+                    -
+                        package_name: nette/caching
+                        package_short_name: caching
+                        last_year_trend: -2.4
+                        last_year_total: 877200
+                        previous_year_total: 898920
+            -
                 name: Yii
                 vendor_total_last_year: 17347410
                 vendor_total_previous_year: 15424110
-                average_last_year_trend: !!float 17
+                last_year_trend: !!float 12
                 packages_data:
                     -
                         package_name: yiisoft/yii2-queue
@@ -1064,166 +1226,4 @@ parameters:
                         last_year_trend: -3.6
                         last_year_total: 465720
                         previous_year_total: 482880
-            -
-                name: Doctrine
-                vendor_total_last_year: 321033690
-                vendor_total_previous_year: 271116930
-                average_last_year_trend: 16.1
-                packages_data:
-                    -
-                        package_name: doctrine/migrations
-                        package_short_name: migrations
-                        last_year_trend: 34.8
-                        last_year_total: 9974100
-                        previous_year_total: 7398690
-                    -
-                        package_name: doctrine/lexer
-                        package_short_name: lexer
-                        last_year_trend: 32.6
-                        last_year_total: 46167510
-                        previous_year_total: 34822470
-                    -
-                        package_name: doctrine/dbal
-                        package_short_name: dbal
-                        last_year_trend: 24.2
-                        last_year_total: 28521330
-                        previous_year_total: 22955910
-                    -
-                        package_name: doctrine/cache
-                        package_short_name: cache
-                        last_year_trend: 22.9
-                        last_year_total: 33381690
-                        previous_year_total: 27155460
-                    -
-                        package_name: doctrine/instantiator
-                        package_short_name: instantiator
-                        last_year_trend: 22.5
-                        last_year_total: 50746050
-                        previous_year_total: 41420760
-                    -
-                        package_name: doctrine/data-fixtures
-                        package_short_name: data-fixtures
-                        last_year_trend: !!float 22
-                        last_year_total: 7339470
-                        previous_year_total: 6017970
-                    -
-                        package_name: doctrine/inflector
-                        package_short_name: inflector
-                        last_year_trend: 21.3
-                        last_year_total: 46212690
-                        previous_year_total: 38104800
-                    -
-                        package_name: doctrine/orm
-                        package_short_name: orm
-                        last_year_trend: 14.5
-                        last_year_total: 15153180
-                        previous_year_total: 13236270
-                    -
-                        package_name: doctrine/annotations
-                        package_short_name: annotations
-                        last_year_trend: 9.8
-                        last_year_total: 30747690
-                        previous_year_total: 28008480
-                    -
-                        package_name: doctrine/collections
-                        package_short_name: collections
-                        last_year_trend: 4.8
-                        last_year_total: 26296740
-                        previous_year_total: 25090350
-                    -
-                        package_name: doctrine/mongodb-odm
-                        package_short_name: mongodb-odm
-                        last_year_trend: 2.9
-                        last_year_total: 1165470
-                        previous_year_total: 1132350
-                    -
-                        package_name: doctrine/common
-                        package_short_name: common
-                        last_year_trend: -1.7
-                        last_year_total: 24179490
-                        previous_year_total: 24605640
-                    -
-                        package_name: doctrine/mongodb
-                        package_short_name: mongodb
-                        last_year_trend: -1.7
-                        last_year_total: 1148280
-                        previous_year_total: 1167780
-            -
-                name: Nette
-                vendor_total_last_year: 7705440
-                vendor_total_previous_year: 6587370
-                average_last_year_trend: !!float 16
-                packages_data:
-                    -
-                        package_name: nette/utils
-                        package_short_name: utils
-                        last_year_trend: 59.1
-                        last_year_total: 1306260
-                        previous_year_total: 821220
-                    -
-                        package_name: nette/php-generator
-                        package_short_name: php-generator
-                        last_year_trend: 56.9
-                        last_year_total: 763950
-                        previous_year_total: 486780
-                    -
-                        package_name: nette/finder
-                        package_short_name: finder
-                        last_year_trend: 17.7
-                        last_year_total: 677640
-                        previous_year_total: 575700
-                    -
-                        package_name: nette/forms
-                        package_short_name: forms
-                        last_year_trend: 13.4
-                        last_year_total: 469710
-                        previous_year_total: 414060
-                    -
-                        package_name: nette/security
-                        package_short_name: security
-                        last_year_trend: 12.3
-                        last_year_total: 459150
-                        previous_year_total: 408690
-                    -
-                        package_name: nette/component-model
-                        package_short_name: component-model
-                        last_year_trend: 10.3
-                        last_year_total: 538290
-                        previous_year_total: 488130
-                    -
-                        package_name: nette/application
-                        package_short_name: application
-                        last_year_trend: !!float 9
-                        last_year_total: 520080
-                        previous_year_total: 477270
-                    -
-                        package_name: nette/http
-                        package_short_name: http
-                        last_year_trend: !!float 9
-                        last_year_total: 569280
-                        previous_year_total: 522510
-                    -
-                        package_name: nette/mail
-                        package_short_name: mail
-                        last_year_trend: 5.3
-                        last_year_total: 546990
-                        previous_year_total: 519360
-                    -
-                        package_name: nette/robot-loader
-                        package_short_name: robot-loader
-                        last_year_trend: 3.6
-                        last_year_total: 430230
-                        previous_year_total: 415110
-                    -
-                        package_name: nette/reflection
-                        package_short_name: reflection
-                        last_year_trend: -2.3
-                        last_year_total: 546660
-                        previous_year_total: 559620
-                    -
-                        package_name: nette/caching
-                        package_short_name: caching
-                        last_year_trend: -2.4
-                        last_year_total: 877200
-                        previous_year_total: 898920
-        updated_at: '2019-10-07 12:46:18'
+        updated_at: '2019-10-23 11:57:55'
