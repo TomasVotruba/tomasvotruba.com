@@ -9,8 +9,6 @@ perex: |
 tweet: "New Post on My Blog: How to Test #Monorepo in 3 Layers"
 ---
 
-*Is this your first time with monorepo? Check [gomonorepo.org](https://gomonorepo.org/) to get into this topic fast.*
-
 There are 3 layers you test your monorepo in. Often projects go just a few of them:
 
 - **Testing Monorepo** (Symfony, Sylius)

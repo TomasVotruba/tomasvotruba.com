@@ -11,10 +11,6 @@ parameters:
             post_ids: [37, 108, 111, 112, 48, 46, 47, 87, 107]
             description: "How to start coding standards and use them to their fullest potential?"
 
-#        -
-#            title: "Deep Work"
-#            post_ids: [20, 23, 60]
-
         -
             title: "From Nette to Symfony"
             post_ids: [188, 192, 193, 186, 185, 171, 120, 197]
@@ -31,5 +27,5 @@ parameters:
 
         -
             title: "Monorepo: From Zero to Hero"
-            post_ids: [69, 25, 26, 82, 124, 138, 143, 160, 161, 182]
+            post_ids: [223, 69, 25, 26, 82, 124, 138, 143, 160, 161, 182]
             description: "What is monorepo? How can you use it to speed up your packages' and projects' development? How to run your own monorepo in 10 minutes?"
