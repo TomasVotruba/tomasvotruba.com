@@ -3,8 +3,6 @@ id: 82
 title: "Monorepo on the Rise in PHP"
 perex: |
     Do you know what a monorepo is? How to start with it? What you need and do even other programming languages use it? And what about Facebook and Google think about it?
-    <br><br>
-    [Gomonorepo.org](https://gomonorepo.org/) will brief you with all important answers.
 tweet: "New post on my blog: State of Monorepo in PHP"
 tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
 ---
@@ -35,25 +33,6 @@ That's how [`shopsys/monorepo-tools`](https://github.com/shopsys/monorepo-tools)
 
 It's slowly getting better with monorepo in PHP. But still many people don't know what is difference between *a monorepo* and *a monolith*.
 
-## New to monorepo? Start on GoMonorepo.org
+## Where you can Learn More?
 
-Inspired by [GoPHP71.org](https://gophp71.org), **to boost this progress even further and answer some basic questions about monorepo, I build a simple site [Gomonorepo.org](https://gomonorepo.org)**.
-
-<img src="/assets/images/posts/2018/monorepo/monorepo-website.png" class="img-thumbnail">
-
-### What Will You Find There?
-
-- What monorepo is and what monorepo isn't,
-- what is *single repo*, *monolith* - all terms explained,
-- what **tools** to use in PHP to simplify work with monorepo,
-- when to use it and **when rather not**,
-- historical must-read posts, **why to use it** included
-- what talk to watch...
-
-...and **also list of open-source that run on monorepo**. Got monorepo on your open-source project? **[Add it there](https://github.com/TomasVotruba/gomonorepo.org/edit/master/_data/projects.yaml)** to inspire others. Symfony, Laravel, Sylius and Symplify are already there.
-
-[Go check it](https://gomonorepo.org) and if you'd like to improve it, just send PR to [repository on Github](https://github.com/tomasvotruba/gomonorepo.org).
-
-<br><br>
-
-Happy rapping!
+Follow the post cluster → [Monorepo From Zero to Hero](/clusters/#monorepo-from-zero-to-hero)

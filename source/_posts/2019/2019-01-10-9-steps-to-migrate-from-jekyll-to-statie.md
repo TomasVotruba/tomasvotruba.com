@@ -2,10 +2,10 @@
 id: 176
 title: "9 Steps to Migrate From Jekyll to Statie"
 perex: |
-    Jekyll is great to start for micro websites like [Go Monorepo](https://gomonorepo.org/). But Jekyll has one big problem - the language.
+    Jekyll is great a way to start static website on Github Pages. But Jekyll has one big problem - the language.
     How would you add custom Twig or Latte filter to Jekyll?
     <br><br>
-    I wanted to migrate [gomonorepo.org](https://gomonorepo.org/) and [gophp71.org](https://gophp71.org/) from Jekyll to Statie. Can new `init` command make this piece of cake? And what needs to be done next?
+    I wanted to migrate my static websites from Jekyll to Statie. Can new `init` command make this piece of cake? And what needs to be done next?
 tweet: "New Post on #php 🐘 blog: 9 Steps to Migrate from #Jekyll to #Statie"
 
 updated_since: "February 2019"
@@ -134,8 +134,8 @@ This is at least 100 times faster than deploying to Jekyll and checking the outp
 
 ### Show me the Real Migration Code
 
-- [pull request on gophp71.org](https://github.com/TomasVotruba/gophp71.org/pull/32)
-- [pull request on gomonorepo.org](https://github.com/TomasVotruba/gomonorepo.org/pull/7)
+- [pull request on gophp71.org](https://github.com/DeprecatedPackages/gophp71.org/pull/32)
+- [pull request on gomonorepo.org](https://github.com/DeprecatedPackages/gomonorepo.org/pull/7)
 
 <br>
 

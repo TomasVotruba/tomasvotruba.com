@@ -20,7 +20,7 @@ This idea came originally from tech companies with large code bases and constant
 
 <br>
 
-Yet I never saw such approach in PHP world. I mean, I saw [monoliths](https://gomonorepo.org/#terms) but never a monorepo. Last year I started to work more closely with Shopsys and they did one crazy thing - [put the sandbox project into monorepo repository](https://github.com/shopsys/shopsys/tree/master/project-base). Instead of having 2 repositories - **monorepo and showcase project separated** - like [Symfony](https://github.com/symfony/symfony) and its [Demo](https://github.com/symfony/demo), Laravel, CakePHP, Nette or basically any PHP framework I've seen, ** it is just one**.
+Yet I never saw such approach in PHP world. I mean, I saw monoliths but never a monorepo. Last year I started to work more closely with Shopsys and they did one crazy thing - [put the sandbox project into monorepo repository](https://github.com/shopsys/shopsys/tree/master/project-base). Instead of having 2 repositories - **monorepo and showcase project separated** - like [Symfony](https://github.com/symfony/symfony) and its [Demo](https://github.com/symfony/demo), Laravel, CakePHP, Nette or basically any PHP framework I've seen, ** it is just one**.
 
 I had my concerns about how packages and project development will go together, but now I see it was just fear from unknown.
 
