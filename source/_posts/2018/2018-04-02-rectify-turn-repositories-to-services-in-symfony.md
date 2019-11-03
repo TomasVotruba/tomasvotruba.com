@@ -94,7 +94,7 @@ services:
 
 ### 3. Add Repository => Entity Provider
 
-But how does Rector know what entity should it add to which repository? For that reasons, there is `Rector\Contract\Bridge\EntityForDoctrineRepositoryProviderInterface` you need to implement.
+But how does Rector know what entity should it add to which repository? For that reasons, there is `Rector\Bridge\Contract\DoctrineEntityAndRepositoryMapperInterface` you need to implement.
 
 It could be as simple as:
 
@@ -103,9 +103,9 @@ It could be as simple as:
 
 namespace App\Rector;
 
-use Rector\Contract\Bridge\EntityForDoctrineRepositoryProviderInterface;
+use Rector\Bridge\Contract\DoctrineEntityAndRepositoryMapperInterface;
 
-final class EntityForDoctrineRepositoryProvider implements EntityForDoctrineRepositoryProviderInterface
+final class DoctrineEntityAndRepositoryMapper implements DoctrineEntityAndRepositoryMapperInterface
 {
     /**
      * @var string[]
@@ -114,10 +114,16 @@ final class EntityForDoctrineRepositoryProvider implements EntityForDoctrineRepo
         'App\Repository\PostRepository' => 'App\Entity\Post',
         'App\Repository\ProductRepository' => 'App\Entity\Product',
     ];
-
-    public function provideEntityForRepository(string $name): ?string
+    public function mapRepositoryToEntity(string $name): ?string
     {
         return $this->map[$name] ?? null;
+    }
+
+    public function mapEntityToRepository(string $name): ?string
+    {
+        $inversedMap = array_flip($this->map);
+
+        return $inversedMap[$name] ?? null;
     }
 }
 ```
@@ -130,7 +136,7 @@ And register it:
      Rector\Rector\Architecture\RepositoryAsService\ReplaceParentRepositoryCallsByRepositoryPropertyRector: ~
      Rector\Rector\Architecture\RepositoryAsService\MoveRepositoryFromParentToConstructorRector: ~
 
-+    App\Rector\EntityForDoctrineRepositoryProvider: ~
++    App\Rector\DoctrineEntityAndRepositoryMapper: ~
 ```
 
 ### 4. Run on Your Code
