@@ -67,6 +67,8 @@ This is **the full path** we'll go through:
 - upgrade PHP 7.1 → 7.2
 - upgrade PHPUnit 7 → 8
 
+*Note: To keep this post simple, we'll focus on PHPUnit upgrade only here. But it's possible you'll need to use Rector for PHP upgrades between PHPUnit upgrade steps too.*
+
 ## 2. Single Version Upgrade = 1 pull-request
 
 Do you enjoy *the rush* of changing a thousand files at once? It drives to do even more and more changes.
