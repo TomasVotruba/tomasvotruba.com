@@ -140,6 +140,8 @@ Without pre-slash, your code might fail.
     See 3v4l.org to understand why
 </a>
 
+<br>
+
 Second, replace the rest of the `PHPUnit_*` classes with a namespace. Listeners, test suites, exceptions... etc.
 This is hell for us human, luckily easy-pick for Rector.
 
@@ -460,6 +462,8 @@ Also less common ones:
 <a class="btn btn-primary" href="https://3v4l.org/1bD6H">
     See 3v4l.org to know why
 </a>
+
+<br>
 
 ```bash
 vendor/bin/rector process tests --set phpunit80
