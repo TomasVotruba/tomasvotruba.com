@@ -134,7 +134,7 @@ First, we need to replace all:
 +\PHPUnit\Framework\TestCase # mind the pre-slash "\"
 ```
 
-Without pre-slash, your code might fail. 
+Without pre-slash, your code might fail.
 
 <a class="btn btn-primary" href="https://3v4l.org/5Sjjh">
     See 3v4l.org to understand why
@@ -458,7 +458,7 @@ Also less common ones:
 <br>
 
 **You need to run Rector before upgrading** to PHPUnit 7. Otherwise, it will cause a fatal error.
- 
+
 <a class="btn btn-primary" href="https://3v4l.org/1bD6H">
     See 3v4l.org to know why
 </a>
