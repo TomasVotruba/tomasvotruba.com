@@ -2,7 +2,7 @@
 id: 224
 title: "Still on PHPUnit 4? Come to PHPUnit 8 Together in a Day"
 perex: |
-    Last month I was on [PHPSW meetup](https://twitter.com/akrabat/status/1181998973588037632) in Bristol UK with Rector talks. To my surprise, [Nette to Symfony migration under 80 hours](https://pehapkari.cz/blog/2019/04/20/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/) we did in January this year was not a big deal there.
+    Last month I was on [PHPSW meetup](https://twitter.com/akrabat/status/1181998973588037632) in Bristol UK with Rector talk. To be honest, [Nette to Symfony migration under 80 hours](https://pehapkari.cz/blog/2019/04/20/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/) was not a big deal there.
     <br><br>
     To my surprise, **upgrading PHPUnit tests was**. So I was thinking, let's take it from the floor in one go, from PHPUnit 4 to the latest PHPUnit 8.
 
