@@ -2,17 +2,17 @@
 id: 226
 title: "How to Delegate Code&nbsp;Reviews&nbsp;to&nbsp;CI"
 perex: |
-    Are you doing code reviews? No? Yes? 
+    Are you doing code reviews? No? Yes?
     <br>
     <br>
-    **In both cases, you won't have too**. Just add a couple of YAML lines to your CI.  
+    **In both cases, you won't have too**. Just add a couple of YAML lines to your CI.
 tweet: "New Post on #php 🐘 blog: How to Delegate Code Reviews to CI"
 tweet_image: "/assets/images/posts/2019/rector-ci-code-review/result.png"
 ---
 
-I'm very grateful that Rector is getting traction lately. More and more PHP developers save dozens of hours by running simple CLI commands on their codebases. 
+I'm very grateful that Rector is getting traction lately. More and more PHP developers save dozens of hours by running simple CLI commands on their codebases.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just upgraded <a href="https://twitter.com/phpunit?ref_src=twsrc%5Etfw">@phpunit</a> from 4.0 to 8.4 with <a href="https://twitter.com/rectorphp?ref_src=twsrc%5Etfw">@rectorphp</a> in 3 seconds with one command. It&#39;s worth knowing this tool. Thanks <a href="https://twitter.com/VotrubaT?ref_src=twsrc%5Etfw">@VotrubaT</a> 👏 <a href="https://t.co/o3ESvJRsJ7">pic.twitter.com/o3ESvJRsJ7</a></p>&mdash; Arkadiusz Kondas (@ArkadiuszKondas) <a href="https://twitter.com/ArkadiuszKondas/status/1196349896690950144?ref_src=twsrc%5Etfw">November 18, 2019</a></blockquote> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just upgraded <a href="https://twitter.com/phpunit?ref_src=twsrc%5Etfw">@phpunit</a> from 4.0 to 8.4 with <a href="https://twitter.com/rectorphp?ref_src=twsrc%5Etfw">@rectorphp</a> in 3 seconds with one command. It&#39;s worth knowing this tool. Thanks <a href="https://twitter.com/VotrubaT?ref_src=twsrc%5Etfw">@VotrubaT</a> 👏 <a href="https://t.co/o3ESvJRsJ7">pic.twitter.com/o3ESvJRsJ7</a></p>&mdash; Arkadiusz Kondas (@ArkadiuszKondas) <a href="https://twitter.com/ArkadiuszKondas/status/1196349896690950144?ref_src=twsrc%5Etfw">November 18, 2019</a></blockquote>
 
 <br>
 
@@ -20,7 +20,7 @@ It's a lot. But you want more laziness, right?
 
 <br>
 
-**Rector can do much more without you even running it**. 
+**Rector can do much more without you even running it**.
 
 ## What do you Review in Code?
 
@@ -42,7 +42,7 @@ In the last [project I've helped to improve with Rector](/blog/2019/07/29/how-we
 - debug if broken
 - review if changed anything related to it
 
-**So many human-hours wasted**. In the end, we **removed over 12 % of "dead fat code"**. Wouldn't it be better if that fat would never be got it? 
+**So many human-hours wasted**. In the end, we **removed over 12 % of "dead fat code"**. Wouldn't it be better if that fat would never be got it?
 
 ## Add Rector in CI in 3 Steps
 
@@ -71,14 +71,14 @@ vendor/bin/rector process src --config rector-ci.yaml --dry-run
 
 I've prepared a demo with PHP code and a testing pipeline for all widely used CI services.
 
-- [Github + Travis CI](#1-github-travis-ci) 
+- [Github + Travis CI](#1-github-travis-ci)
 - [Gitlab CI](#2-gitlab-ci)
 - [BitBucket](#3-bitbucket)
 
 <br>
 
-- ~~Github Actions~~ 
-*Do you know how to work with Github Actions? Please let me know how would script look like, so we can complete the list.* 
+- ~~Github Actions~~
+*Do you know how to work with Github Actions? Please let me know how would script look like, so we can complete the list.*
 
 <br>
 
@@ -89,7 +89,7 @@ There you'll find all the configuration you need to **let your CI do code-review
 <br>
 
 <a href="http://github.com/tomasvotruba/rector-ci-demo" class="btn btn-info">Repository</a>
-<a href="https://travis-ci.com/TomasVotruba/rector-ci-demo/jobs/258286278#L320"  class="btn btn-success">CI Feedback</a>
+<a href="https://travis-ci.com/TomasVotruba/rector-ci-demo/jobs/258286278#L320"  class="btn btn-success ml-3">CI Feedback</a>
 
 ```yaml
 # .travis.yml
@@ -123,7 +123,7 @@ jobs:
 <br>
 
 <a href="https://gitlab.com/TomasVotruba/rector-ci-demo" class="btn btn-info">Repository</a>
-<a href="https://gitlab.com/TomasVotruba/rector-ci-demo/-/jobs/355280534#L197 class="btn btn-success">CI Feedback</a>
+<a href="https://gitlab.com/TomasVotruba/rector-ci-demo/-/jobs/355280534#L197" class="btn btn-success ml-3">CI Feedback</a>
 
 ```yaml
 # .gitlab-ci.yml
@@ -155,7 +155,7 @@ code-review:
 <br>
 
 <a href="https://bitbucket.org/tomas-votruba/rector-ci-demo/src/master/" class="btn btn-info">Repository</a>
-<a href="https://bitbucket.org/tomas-votruba/rector-ci-demo/addon/pipelines/home#!/results/3" class="btn btn-success">CI Feedback</a>
+<a href="https://bitbucket.org/tomas-votruba/rector-ci-demo/addon/pipelines/home#!/results/3" class="btn btn-success ml-3">CI Feedback</a>
 
 ```yaml
 # bitbucket-pipelines.yml
