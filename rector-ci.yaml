@@ -1,0 +1,4 @@
+parameters:
+    sets:
+        - "code-quality"
+        - "dead-code"
