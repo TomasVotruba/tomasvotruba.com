@@ -17,20 +17,18 @@ jobs:
                 - composer check-cs
 
         -
-            stage: test
             name: PHPStan
             php: 7.3
             script:
                 - composer phpstan
 
         -
-            stage: test
             name: Rector
             php: 7.3
             script:
                 - vendor/bin/rector process src tests --dry-run --config rector-ci.yaml
+
         -
-            stage: test
             name: 'Unit Tests'
             php: 7.3
             script:
@@ -43,7 +41,7 @@ jobs:
             # see docs: https://www.statie.org/docs/github-pages/
             script:
                 - vendor/bin/statie generate source
-                - vendor/bin/statie dump-contributors # requires GITHUB_TOKEN
+                - GITHUB_TOKEN=$GITHUB_TOKEN vendor/bin/statie dump-contributors
             deploy:
                 -
                     provider: pages
@@ -60,6 +58,16 @@ jobs:
             if: branch = master AND type = push
             script:
                 - vendor/bin/statie tweet-post
+
+    allow_failures:
+        - php: '7.4snapshot'
+
+matrix:
+    fast_finish: true
+
+cache:
+    directories:
+        - $HOME/.composer/cache
 
 notifications:
     email:
