@@ -1,44 +1,65 @@
 language: php
 
-php: '7.3'
+php:
+    - '7.3'
+    - '7.4snapshot'
 
 install:
     - composer install
 
-script:
-    - vendor/bin/phpunit
+jobs:
+    include:
+        -
+            stage: test
+            name: ECS
+            php: 7.3
+            script:
+                - composer check-cs
 
-    # static analysis
-    - composer check-cs
-    - composer phpstan
+        -
+            stage: test
+            name: PHPStan
+            php: 7.3
+            script:
+                - composer phpstan
 
-    # test that website is generated
-    - vendor/bin/statie generate source
+        -
+            stage: test
+            name: Rector
+            php: 7.3
+            script:
+                - vendor/bin/rector process src tests --dry-run --config rector-ci.yaml
+        -
+            stage: test
+            name: 'Unit Tests'
+            php: 7.3
+            script:
+                - vendor/bin/phpunit
 
-    # check updates with Rector
-    - vendor/bin/rector process src tests --dry-run
+        -
+            stage: deploy
+            name: 'Deploy to Github Pages'
+            php: 7.3
+            # see docs: https://www.statie.org/docs/github-pages/
+            script:
+                - vendor/bin/statie generate source
+                - vendor/bin/statie dump-contributors # requires GITHUB_TOKEN
+            deploy:
+                -
+                    provider: pages
+                    skip_cleanup: true
+                    github_token: $GITHUB_TOKEN
+                    on:
+                        branch: master
+                    local_dir: output
 
-    # dump contributors before deploy
-#    - |
-#      if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
-#          vendor/bin/statie dump-contributors
-#      fi
-
-# see docs: https://www.statie.org/docs/github-pages/
-deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    on:
-        branch: master
-    local_dir: output
-
-after_deploy:
-    # tweets posts
-    - |
-      if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
-          vendor/bin/statie tweet-post
-      fi
+        -
+            stage: tweet
+            name: 'Tweet new Post'
+            php: 7.3
+            if: branch = master AND type = push
+            script:
+                - vendor/bin/statie tweet-post
 
 notifications:
     email:
