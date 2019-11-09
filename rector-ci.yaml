@@ -1,0 +1,10 @@
+parameters:
+    sets:
+        - 'code-quality'
+        - 'dead-code'
+        - 'coding-style'
+        - 'nette-utils-code-quality'
+
+    exclude_paths:
+        # intentional json_encode
+        - 'tests/Posts/Year2018/Php73/Php73Test.php'

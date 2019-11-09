@@ -1,4 +1,4 @@
-# this file was generated on 2019-10-12 15:04:25, do not edit it manually
+# this file was generated on 2019-11-09 01:22:47, do not edit it manually
 parameters:
     contributors:
         -
@@ -360,4 +360,9 @@ parameters:
             name: hpneo
             url: 'https://github.com/hpneo'
             photo: 'https://avatars2.githubusercontent.com/u/611699?v=4'
+            contribution_count: 1
+        -
+            name: imliam
+            url: 'https://github.com/imliam'
+            photo: 'https://avatars0.githubusercontent.com/u/4326337?v=4'
             contribution_count: 1
