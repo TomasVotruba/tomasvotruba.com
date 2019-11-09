@@ -29,6 +29,7 @@ jobs:
             php: 7.3
             script:
                 - vendor/bin/rector process src tests --dry-run --config rector-ci.yaml
+
         -
             stage: test
             name: 'Unit Tests'
@@ -60,6 +61,9 @@ jobs:
             if: branch = master AND type = push
             script:
                 - vendor/bin/statie tweet-post
+
+    allow_failures:
+        - php: '74snapshot'
 
 notifications:
     email:
