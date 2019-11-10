@@ -59,15 +59,15 @@ parameters:
 **Before** you had to type the whole config name:
 
 ```bash
-ecs.yml
 easy-coding-standard.yaml
+easy-coding-standard.yml
 ```
 
 **Now** you can also use short version:
 
 ```bash
-ecs.yml
 ecs.yaml
+ecs.yml
 ```
 
 ## 3. Are There Some "array" Checkers?
