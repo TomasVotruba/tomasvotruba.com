@@ -11,9 +11,9 @@ deprecated_since: "December 2018"
 deprecated_message: |
     Now there is **EasyCodingStandard 5**, so this is rather _7 oldies_.
 
-updated_since: "December 2018"
+updated_since: "November 2019"
 updated_message: |
-    Updated with **EasyCodingStandard 5**, Neon to YAML migration, correct configs and `checkers` to `services` migration.
+    Updated with **EasyCodingStandard 6**, Neon → YAML, config import → `sets` parameters, `checkers` → `services`.
 ---
 
 Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, ideas and Windows bug fixes while working on [Nette\CodingStandard](https://github.com/nette/coding-standard) package. I'll write "how to" for Nette\CodingStandard later, but today we'll look on **new features it uses from EasyCodingStandard 2.2**.
@@ -65,10 +65,10 @@ Not anymore!
 **Use the set and exclude unwanted checkers in `exclude_checkers` option**:
 
 ```yaml
-imports:
-    - { resource: 'vendor/symplify/easy-coding-standard/config/symfony.yml' }
-
 parameters:
+    sets:
+        - 'symfony'
+
     exclude_checkers:
         # from PHP CS Fixer Symfony set
         - 'PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer'

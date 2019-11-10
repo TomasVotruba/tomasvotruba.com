@@ -165,7 +165,7 @@ parameters:
 
 ## 4. From XML to YML Config Paths
 
-These names are looked for in the root diretory by PHP_CodeSniffer:
+These names are looked for in the root directory by PHP_CodeSniffer:
 
 ```bash
 - .phpcs.xml
@@ -177,10 +177,10 @@ These names are looked for in the root diretory by PHP_CodeSniffer:
 **And these by EasyCodingStandard:**
 
 ```bash
-- ecs.yml
 - ecs.yaml
 - ecs.yml
 - easy-coding-standard.yaml
+- easy-coding-standard.yml
 ```
 
 What about non-default locations or names?
