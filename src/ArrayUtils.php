@@ -15,18 +15,6 @@ final class ArrayUtils
         return $data;
     }
 
-    public function getArrayKeyAverage(array $packagesData, string $key): float
-    {
-        $total = [];
-        foreach ($packagesData as $packageData) {
-            $total[] = $packageData[$key];
-        }
-
-        $average = array_sum($total) / (count($total) ?: 1);
-
-        return round($average, 1);
-    }
-
     public function getArrayKeySum(array $array, string $key): int
     {
         $total = 0;
