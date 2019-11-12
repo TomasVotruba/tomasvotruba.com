@@ -41,8 +41,8 @@ jobs:
             # see docs: https://www.statie.org/docs/github-pages/
             script:
                 - vendor/bin/statie generate source
-            before_deploy:
-                - vendor/bin/statie dump-contributors
+#            before_deploy:
+#                - vendor/bin/statie dump-contributors
             deploy:
                 -
                     provider: pages
