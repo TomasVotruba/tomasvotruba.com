@@ -242,7 +242,7 @@ throw new FileProcessingException(sprintf(
 ## 6. What Options do I have?
 
 ```bash
-vendor/bin/ecs check src --level laravel
+vendor/bin/ecs check src --set laravel
 ```
 
 <blockquote class="blockquote">

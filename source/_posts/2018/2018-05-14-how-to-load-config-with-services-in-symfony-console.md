@@ -347,10 +347,10 @@ bin/ecs check src --config custom-config.yml
 
 ## Where to Go Next?
 
-Do you have a CLI App and do you find DI approach useful? Do you have `--config` or `-c` or `--configuratoin` options and do you want to migrate them to this? Or maybe you have `--level` option, that shortens the config path in some way:
+Do you have a CLI App and do you find DI approach useful? Do you have `--config` or `-c` or `--configuratoin` options and do you want to migrate them to this? Or maybe you have `--set` option, that shortens the config path in some way:
 
 ```bash
-vendor/bin/ecs check src --level clean-code
+vendor/bin/ecs check src --set clean-code
 ```
 
 Yes? Then go check:
@@ -359,7 +359,7 @@ Yes? Then go check:
 
 - [`Symplify\PackageBuilder\Configuration\ConfigFileFinder`](https://github.com/symplify/packagebuilder#4-load-a-config-for-cli-application)
 
-- [`Symplify\PackageBuilder\Configuration\LevelFileFinder`](https://github.com/symplify/packagebuilder#6-load-config-via---level-option-in-your-console-application)
+- [`Symplify\PackageBuilder\Configuration\SetFileFinder`](https://github.com/symplify/packagebuilder#6-load-config-via---level-option-in-your-console-application)
 
 ...and stay tuned for next post about CLI Apps in PHP.
 

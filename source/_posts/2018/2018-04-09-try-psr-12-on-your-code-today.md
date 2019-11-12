@@ -13,13 +13,13 @@ tweet_image: "/assets/images/posts/2018/psr-12/preview.png"
 
 ```bash
 composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs check /src --level psr12
+vendor/bin/ecs check /src --set psr12
 ```
 
 And to fix the code:
 
 ```bash
-vendor/bin/ecs check /src --level psr12 --fix
+vendor/bin/ecs check /src --set psr12 --fix
 ```
 
 Now in more detailed way.
