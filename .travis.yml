@@ -36,11 +36,13 @@ jobs:
         -
             stage: deploy
             name: 'Deploy to Github Pages'
+            if: branch = master AND type = push
             php: 7.3
             # see docs: https://www.statie.org/docs/github-pages/
             script:
                 - vendor/bin/statie generate source
-                - GITHUB_TOKEN=$GITHUB_TOKEN vendor/bin/statie dump-contributors
+            before_deploy:
+                - vendor/bin/statie dump-contributors
             deploy:
                 -
                     provider: pages
@@ -53,8 +55,8 @@ jobs:
         -
             stage: tweet
             name: 'Tweet new Post'
-            php: 7.3
             if: branch = master AND type = push
+            php: 7.3
             script:
                 - vendor/bin/statie tweet-post
 
