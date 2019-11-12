@@ -8,29 +8,17 @@ commit_limit: 3
 <div class="container" id="contact">
     <h1>{{ title }}</h1>
 
-    {% if patreon_backers_by_paid_amount is defined %}
-        <p class="text-center bigger">
-            Thanks to my <strong>{{ patreon_backers_by_paid_amount|flatten_array_count }} backers</strong> that support me on <a href="https://www.patreon.com/rectorphp">Patreon</a>
-        </p>
+    <p class="text-center bigger">
+        Thanks to <a href="https://www.patreon.com/rectorphp">all my Patreon backers</a>
+        <br>
+        that support me in writing free posts and open-source.
+    </p>
 
-        <div class="row mt-0">
-            {% for paid_amount, backers in patreon_backers_by_paid_amount %}
-                <div class="col text-center">
-                    <h2>$ {{ paid_amount }}</h2>
+    <div class="text-center mt-5 mb-5">
+        <a href="https://www.patreon.com/bePatron?u=4756109" alt="Become a Patron"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" /></a>
+    </div>
 
-                    {% for backer in backers %}
-                        <p>{{ backer }}</p>
-                    {% endfor %}
-                </div>
-            {% endfor %}
-        </div>
-
-        <div class="text-center mt-5 mb-5">
-            <a href="https://www.patreon.com/bePatron?u=4756109" alt="Become a Patron"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" /></a>
-        </div>
-
-        <hr>
-    {% endif %}
+    <hr>
 
     <p class="text-center bigger">
         Thanks to all <strong>{{ contributors|length }} contributors</strong> who patiently fix my English + typoes
