@@ -14,7 +14,7 @@ ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and
 
 ```bash
 composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs check src --level psr12 # yes 12!
+vendor/bin/ecs check src --set psr12
 ```
 
 But what if you already have PHP_CodeSniffer on your project and want to switch?
