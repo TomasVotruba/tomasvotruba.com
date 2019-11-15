@@ -419,19 +419,24 @@ The proposed solution is [rdohms/phpunit-arraysubset-asserts](https://github.com
 
  namespace Acme\Tests;
 
-+use DMS\PHPUnitExtensions\ArraySubset\Assert as AssertArraySubset;
++use DMS\PHPUnitExtensions\ArraySubset\Assert;
 
  final class AssertTest extends \PHPUnit\Framework\TestCase
  {
      public function testPreviouslyStaticCall(): void
      {
 -        $this->assertArraySubset(['bar' => 0], ['bar' => '0'], true);
-+        AssertArraySubset::assertArraySubset(['bar' => 0], ['bar' => '0'], true);
++        Assert::assertArraySubset(['bar' => 0], ['bar' => '0'], true);
      }
  }
 ```
 
-**You need to change this part manually**, as [the Rector rule is still in progress](https://github.com/rectorphp/rector/issues/2138).
+To use this package and upgrade to it, run:
+
+```bash
+composer require --dev dms/phpunit-arraysubset-asserts
+vendor/bin/rector process tests --set phpunit80-dms
+```
 
 ### Add `void` to `PHPUnit\Framework\TestCase` Methods
 
