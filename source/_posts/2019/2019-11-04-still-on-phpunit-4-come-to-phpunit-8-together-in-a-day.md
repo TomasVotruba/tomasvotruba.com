@@ -250,7 +250,7 @@ I have no idea how tests and data provider methods were detected before this:
  class WithTestAnnotation extends \PHPUnit\Framework\TestCase
  {
      /**
--     * @screnario
+-     * @scenario
 +     * @test
       */
      public function test()
