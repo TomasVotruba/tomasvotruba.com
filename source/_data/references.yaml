@@ -4,10 +4,6 @@ parameters:
         'mall.png': 'https://www.mall.cz/'
         'shopsys.png': 'https://www.shopsys.com/'
         'elasticr.png': 'https://www.elasticr.cz/'
-        'igloonet.png': 'https://igloonet.cz/'
-        'lidskasila.png': 'https://lidskasila.cz/'
-        'entrydo.png': 'https://entry.do/'
-        'naucmese.png': 'https://www.naucmese.cz/'
 
     references:
         -

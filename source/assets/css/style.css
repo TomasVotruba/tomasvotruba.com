@@ -321,11 +321,6 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     line-height: 2.3em;
 }
 
-/*.card-normal .card-title {*/
-    /*margin-top: 0.3em;*/
-    /*margin-bottom: 0.9em;*/
-/*}*/
-
 .card-normal .card-body p {
     line-height: 1.5em;
 }
@@ -675,4 +670,9 @@ q {
 
 #support-me-button {
     line-height: 2em;
+}
+
+.card h2, .card h3 {
+    padding-top: 0;
+    margin-top: 0;
 }
