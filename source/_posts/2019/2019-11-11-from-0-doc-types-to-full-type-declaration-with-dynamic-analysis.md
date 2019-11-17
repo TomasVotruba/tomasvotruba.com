@@ -158,7 +158,7 @@ To automate this process fully, we came with 4 automated steps:
      {
          public function run(string $value)
          {
--            TypeCollector::collect($value, __METHOD__, 0);
+    -        TypeCollector::collect($value, __METHOD__, 0);
              return $value;
          }
      }
