@@ -55,7 +55,7 @@ jobs:
         -
             stage: tweet
             name: 'Tweet new Post'
-            if: branch = master AND type = push
+            if: branch = master
             php: 7.3
             script:
                 - vendor/bin/statie tweet-post
