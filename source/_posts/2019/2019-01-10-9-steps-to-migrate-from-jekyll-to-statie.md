@@ -139,6 +139,6 @@ This is at least 100 times faster than deploying to Jekyll and checking the outp
 
 <br>
 
-That's it! You can enjoy Markdown, Twig, Latte, and PHP directly from your local machine and still on Github Pages.
+That's it! You can enjoy Markdown, Twig and PHP directly from your local machine and still on Github Pages.
 
 Happy coding!

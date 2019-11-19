@@ -38,7 +38,7 @@ Later, you can push output code to Github Pages or your server via FTP or SSH. B
 
 ## 1. Create your Code
 
-Statie supports **HTML**, **TWIG**, **[Latte](https://github.com/nette/latte)** and **Markdown** (in `.md` files only). For most of pages, HTML and TWIG/Latte is enough. Markdown is useful for repeated items like posts.
+Statie supports **HTML**, **TWIG** and **Markdown** (in `.md` files only). For most of pages, HTML and TWIG/Latte is enough. Markdown is useful for repeated items like posts.
 
 Let's create our index page.
 
