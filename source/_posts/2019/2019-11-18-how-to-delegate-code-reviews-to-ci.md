@@ -71,21 +71,21 @@ vendor/bin/rector process src --config rector-ci.yaml --dry-run
 
 I've prepared a demo with PHP code and a testing pipeline for all widely used CI services.
 
-- [GitHub Actions](#0-github-actions)
-- [GitHub + Travis CI](#1-github-travis-ci)
-- [Gitlab CI](#2-gitlab-ci)
-- [BitBucket](#3-bitbucket)
+- [GitHub Actions](#1-github-actions)
+- [GitHub + Travis CI](#2-github-travis-ci)
+- [Gitlab CI](#3-gitlab-ci)
+- [BitBucket](#4-bitbucket)
 
 <br>
 
 There you'll find all the configuration you need to **let your CI do code-reviews**.
 
-### 0. GitHub Actions
+### 1. GitHub Actions
 
 <br>
 
 <a href="http://github.com/tomasvotruba/rector-ci-demo" class="btn btn-info">Repository</a>
-<a href="https://github.com/TomasVotruba/rector-ci-demo/actions/" class="btn btn-success ml-3">CI Feedback</a>
+<a href="https://github.com/GenieTim/rector-ci-demo/commit/346486384586f327531efff12b8367bbdaf817ad/checks?check_suite_id=320630971#step:4:2" class="btn btn-success ml-3">CI Feedback</a>
 
 ```yaml
 # .github/workflows/php.yml
@@ -95,23 +95,23 @@ on: [push]
 
 jobs:
 
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v1
+        steps:
+        - uses: actions/checkout@v1
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate
+        - name: Validate composer.json and composer.lock
+          run: composer validate
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
+        - name: Install dependencies
+          run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Code Review
-      run: ./vendor/bin/rector process --config rector-ci.yaml --dry-run
+        - name: Code Review
+          run: ./vendor/bin/rector process --config rector-ci.yaml --dry-run
 ```
 
-### 1. GitHub + Travis CI
+### 2. GitHub + Travis CI
 
 <br>
 
@@ -145,7 +145,7 @@ jobs:
                 - vendor/bin/rector process --config rector-ci.yaml --dry-run
 ```
 
-### 2. Gitlab CI
+### 3. Gitlab CI
 
 <br>
 
@@ -177,7 +177,7 @@ code-review:
         - vendor/bin/rector process --config rector-ci.yaml --dry-run
 ```
 
-### 3. Bitbucket
+### 4. Bitbucket
 
 <br>
 
