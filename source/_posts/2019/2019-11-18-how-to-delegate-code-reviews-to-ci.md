@@ -71,20 +71,47 @@ vendor/bin/rector process src --config rector-ci.yaml --dry-run
 
 I've prepared a demo with PHP code and a testing pipeline for all widely used CI services.
 
-- [Github + Travis CI](#1-github-travis-ci)
+- [GitHub Actions](#0-github-actions)
+- [GitHub + Travis CI](#1-github-travis-ci)
 - [Gitlab CI](#2-gitlab-ci)
 - [BitBucket](#3-bitbucket)
 
 <br>
 
-- ~~Github Actions~~
-*Do you know how to work with Github Actions? Please let me know how would script look like, so we can complete the list.*
+There you'll find all the configuration you need to **let your CI do code-reviews**.
+
+### 0. GitHub Actions
 
 <br>
 
-There you'll find all the configuration you need to **let your CI do code-reviews**.
+<a href="http://github.com/tomasvotruba/rector-ci-demo" class="btn btn-info">Repository</a>
+<a href="https://github.com/TomasVotruba/rector-ci-demo/actions/" class="btn btn-success ml-3">CI Feedback</a>
 
-### 1. Github + Travis CI
+```yaml
+# .github/workflows/php.yml
+name: Rector Code Review
+
+on: [push]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Code Review
+      run: ./vendor/bin/rector process --config rector-ci.yaml --dry-run
+```
+
+### 1. GitHub + Travis CI
 
 <br>
 
