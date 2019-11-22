@@ -1,6 +1,6 @@
 ---
 id: 223
-title: "All You Always Wanted to Know About Monorepo But Were Affraid To Ask"
+title: "All You Always Wanted to Know About Monorepo But Were Afraid To Ask"
 perex: |
     Do you want to know what is monorepo and why/when you should use it?
     Do you look for brief source that will answer your questions in simple and understandable manner?
