@@ -17,6 +17,12 @@ jobs:
                 - composer check-cs
 
         -
+            name: PHPStan
+            php: 7.3
+            script:
+                - composer phpstan
+
+        -
             name: Rector
             php: 7.3
             script:

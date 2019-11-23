@@ -1,0 +1,24 @@
+includes:
+    - 'vendor/symplify/phpstan-extensions/config/php.level.neon'
+    - 'vendor/symplify/phpstan-extensions/config/symfony.level.neon'
+
+parameters:
+    level: max
+    reportUnmatchedErrors: false
+
+    excludes_analyse:
+        # test fixture file
+        - 'src/Posts/Year2017/Ast/SomeClass.php'
+
+    ignoreErrors:
+        # intentional for tests
+        - '#Call to function is_countable\(\) with null will always evaluate to false#'
+
+        # php-parser Node/Stmt mixups
+        - '#(.*?)array<PhpParser\\Node>, array<PhpParser\\Node\\Stmt(.*?)#'
+
+        # false positive
+        - '#Cannot access property \$stmts on PhpParser\\Node\\Stmt\|null#'
+
+        # mocks
+        - '#Call to an undefined method PHPUnit\\Framework\\MockObject\\MockObject\|TomasVotruba\\Website\\Posts\\Year2019\\(.*?)\\FinalClass\:\:(.*?)\(\)#'

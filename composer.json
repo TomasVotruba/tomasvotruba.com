@@ -12,17 +12,19 @@
     },
     "require-dev": {
         "dg/bypass-finals": "^1.1",
+        "friendsofphp/php-cs-fixer": "^2.17",
         "nette/neon": "^3.0",
+        "phpstan/phpstan-shim": "^0.11.19",
         "phpunit/phpunit": "^8.4",
         "rector/rector": "dev-master",
         "symfony/console": "^5.0",
         "symfony/process": "^5.0",
         "symfony/stopwatch": "^5.0",
         "symfony/yaml": "^5.0",
-        "friendsofphp/php-cs-fixer": "^2.17",
         "symplify/autodiscovery": "^7.0.2",
         "symplify/easy-coding-standard": "^7.0.2",
-        "symplify/latte-to-twig-converter": "^7.0.2"
+        "symplify/latte-to-twig-converter": "^7.0.2",
+        "symplify/phpstan-extensions": "^7.0"
     },
     "autoload": {
         "psr-4": {
@@ -35,6 +37,7 @@
         }
     },
     "scripts": {
+        "phpstan": "vendor/bin/phpstan analyse bin src tests --ansi",
         "check-cs": "vendor/bin/ecs check bin src tests --ansi",
         "fix-cs": [
             "vendor/bin/ecs check bin src tests --fix --ansi",
