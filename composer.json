@@ -4,6 +4,7 @@
         "php": "^7.3",
         "nette/finder": "^2.5",
         "nette/utils": "^3.0",
+        "twig/twig": "^3.0",
         "symfony/console": "^5.0",
         "symfony/http-kernel": "^5.0",
         "symplify/package-builder": "^7.0.2",

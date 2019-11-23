@@ -17,7 +17,7 @@ parameters:
         # mixed[] array redundancy
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableReturnTypeHintSpecification: ~
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableParameterTypeHintSpecification: ~
-        Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff: ~
+        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingReturnTypeHint: ~
 
         Symplify\CodingStandard\Sniffs\Debug\CommentedOutCodeSniff.Found:
             - 'src/Command/GeneratePackageStatsCommand.php'
