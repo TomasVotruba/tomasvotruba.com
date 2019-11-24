@@ -1,10 +1,3 @@
-imports:
-    - { resource: 'vendor/symplify/easy-coding-standard/config/set/psr12.yaml' }
-    - { resource: 'vendor/symplify/easy-coding-standard/config/set/php71.yaml' }
-    - { resource: 'vendor/symplify/easy-coding-standard/config/set/common.yaml' }
-    - { resource: 'vendor/symplify/easy-coding-standard/config/set/symplify.yaml' }
-    - { resource: 'vendor/symplify/easy-coding-standard/config/set/clean-code.yaml' }
-
 services:
     SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
         enable_each_parameter_and_return_inspection: true
@@ -13,16 +6,24 @@ services:
         max_cognitive_complexity: 8
 
 parameters:
+    sets:
+        - 'psr12'
+        - 'php71'
+        - 'common'
+        - 'symplify'
+        - 'clean-code'
+
     skip:
         # mixed[] array redundancy
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableReturnTypeHintSpecification: ~
         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableParameterTypeHintSpecification: ~
-        Symplify\CodingStandard\Sniffs\DependencyInjection\NoClassInstantiationSniff: ~
+        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingReturnTypeHint: ~
 
         Symplify\CodingStandard\Sniffs\Debug\CommentedOutCodeSniff.Found:
             - 'src/Command/GeneratePackageStatsCommand.php'
 
         # false positive
+        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment: ~
         SlevomatCodingStandard\Sniffs\Variables\UnusedVariableSniff.UnusedVariable:
             - 'src/Packagist/MinorPackageVersionsDownloadsProvider.php'
 
