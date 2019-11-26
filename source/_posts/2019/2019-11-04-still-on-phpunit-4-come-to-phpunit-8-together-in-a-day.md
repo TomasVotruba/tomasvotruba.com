@@ -95,7 +95,7 @@ Unless you're upgrading 10 test files, of course. But in the rest of the case, t
 
 ## 3. PHPUnit 4 to 5
 
-### From `getMock()` to `getMock()`
+### From `getMock()` to `getMockBuilder()`
 
 ```diff
  <?php
