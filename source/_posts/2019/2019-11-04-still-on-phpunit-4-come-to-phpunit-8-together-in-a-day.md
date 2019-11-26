@@ -95,7 +95,7 @@ Unless you're upgrading 10 test files, of course. But in the rest of the case, t
 
 ## 3. PHPUnit 4 to 5
 
-### From `getMock()` to `createMock()`
+### From `getMock()` to `getMock()`
 
 ```diff
  <?php
@@ -105,7 +105,7 @@ Unless you're upgrading 10 test files, of course. But in the rest of the case, t
      public function test()
      {
 -        $someClassMock = $this->getMock('SomeClass');
-+        $someClassMock = $this->buildMock('SomeClass');
++        $someClassMock = $this->getMockBuilder('SomeClass')->getMock();
      }
  }
 ```
