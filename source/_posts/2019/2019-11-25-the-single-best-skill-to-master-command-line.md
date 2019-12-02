@@ -2,7 +2,7 @@
 id: 227
 title: "The Single Best Skill to Master Command Line"
 perex: |
-    I have a confession to make. I'm very poor with memory stuff. My brain is using neurons to mostly process data, instead of keeping them. 
+    I have a confession to make. I'm very poor with memory stuff. My brain is using neurons to mostly process data, instead of keeping them.
     <br><br>
     I'm very poor with memory stuff. So I use shortcuts, both in brain and code, that make me look smart. I don't like remember stuff, **I won't enjoy them and use them**.
     <br><br>
@@ -41,7 +41,7 @@ How did they do it? It was similar to:
 # oh, I made accidentally some change
 - git add .
 - git commit -m "add master changes"
-- git pull  
+- git pull
 
 # oh, I've heard this is better with some lease or what
 - git pull --with-lease
@@ -61,7 +61,7 @@ How did they do it? It was similar to:
 <br>
 
 I keep getting the same feedback from most of my trainings:
- 
+
 <blockquote class="blockquote">
 "Wow you're fast at coding".
 </blockquote>
@@ -74,7 +74,7 @@ And I keep replying:
 
 <br>
 
-What does that mean? If you'd record my keyboard for the process above, it would look more like this: 
+What does that mean? If you'd record my keyboard for the process above, it would look more like this:
 
 ```bash
 nb new-branch
@@ -83,14 +83,14 @@ p
 cmp
 db new-branch
 rema
-gc 
+gc
 p
 pul
 gc
 ...
 ```
 
-You get the idea. For you, it looks like a cat is walking my keyboard, or I'm having a party at home with way too much wine. *For you.* 
+You get the idea. For you, it looks like a cat is walking my keyboard, or I'm having a party at home with way too much wine. *For you.*
 
 ***For me* it's a path of 2-3 neurons, that invoke some operation I want to achieve.**
 
@@ -146,9 +146,9 @@ gf
 
 What?
 
-Well, the file `~/.aliases` has to reloaded to make it work. 
+Well, the file `~/.aliases` has to reloaded to make it work.
 The best way to do it is to close and open the console window.
- 
+
 ## Honor One Woman Tip
 
 You honor one woman, you honor one console. I've noticed some programmer use multiple consoles at the same time:
@@ -170,16 +170,16 @@ One, one, one.
 <blockquote class="blockquote">
 If it's two, it's too long.
 </blockquote>
- 
+
 ## Memory Overflow Tip: Don't Be Greedy with ShortCuts
 
 **Shortcuts are like cocaine**. They can make you ultimately faster in small doses, but if you take too much of them, your brain will fall apart.
 
-Pick around 10-20 shortcuts. Then every ~~now and then~~ 3 months look at and validate **if they still suit you**. 
+Pick around 10-20 shortcuts. Then every ~~now and then~~ 3 months look at and validate **if they still suit you**.
 
 **Always alias your shortcuts you use everyday**. The one above are just examples, but maybe you don't commit that much, or you don't use git at all. Maybe you work with the server.
 
-So instead of 
+So instead of
 
 ```bash
 ssh my-username@theserveryouuse.com

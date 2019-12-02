@@ -5,7 +5,7 @@ perex: |
     Do you have a Symfony Application like Composer and you want to ship it as a PHAR?
     Composer is actually pretty simple - just see the [`Compiler`](https://github.com/composer/composer/blob/master/src/Composer/Compiler.php) class.
     <br><br>
-    **But what if** you use Symfony Dependency Injection with PSR-4 **autodiscovery** like [Rector](https://github.com/rectorphp/rector) does? Well, better be ready for **nasty traps**. 
+    **But what if** you use Symfony Dependency Injection with PSR-4 **autodiscovery** like [Rector](https://github.com/rectorphp/rector) does? Well, better be ready for **nasty traps**.
 tweet: "New Post on #php 🐘 blog: How to Box #Symfony App to PHAR without Killing Yourself"
 ---
 
@@ -33,7 +33,7 @@ You'll end up with an error:
 
 ```bash
 rector/rector cannot be installed, because it requires symfony/* ^3.4|^4.4... but you have 2.8
-``` 
+```
 
 This leads to many issues reported on Github, mostly [grouped around this one](https://github.com/rectorphp/rector/issues/177).
 
@@ -47,7 +47,7 @@ rector/rector needs at least PHP 7.2, you have PHP 5.6
 
 That's where Docker becomes useful. Yet, it still **doesn't solve the Symfony 2.8 in your project vs Symfony 4.4 in Rector project issue**.
 
-That's why **prefixed `rector.phar` is needed**. With such a file, you don't care about Rector's dependencies, you just use it. 
+That's why **prefixed `rector.phar` is needed**. With such a file, you don't care about Rector's dependencies, you just use it.
 
 ## How Does "Scoping" Work?
 
@@ -61,11 +61,11 @@ To make it happen, we **don't need to re-invent the wheel**. There are 2 amazing
 - [box](https://github.com/humbug/box) - a tool that creates PHAR (~= PHP zip) from an input directory
 - [php-scoper](https://github.com/humbug/php-scoper) - box *plugin* that adds namespace prefix to all the files
 
-It takes around 10 seconds to scope + wraps 5 000 files of Rector to `rector.phar`. **This speed is amazing.**  
+It takes around 10 seconds to scope + wraps 5 000 files of Rector to `rector.phar`. **This speed is amazing.**
 
 ### Nobody Ever used Symfony in PHAR Before
 
-These 2 tools work very well for PHP-based *manual* containers like PHPStan has. But fails for Symfony autodiscovery that uses globs. It's not the fault of these tools, but rather Symfony, because nobody ever tested it to compiled PHAR :). 
+These 2 tools work very well for PHP-based *manual* containers like PHPStan has. But fails for Symfony autodiscovery that uses globs. It's not the fault of these tools, but rather Symfony, because nobody ever tested it to compiled PHAR :).
 
 **Where and how and how to overcome it?** There are 4 steps you need to watch out for:
 
@@ -85,11 +85,11 @@ You'll end up with an error:
 
 ```bash
 Directory "../src/ValueObject/SpecificFile.php" was not found.
-``` 
+```
 
 Where does it come from? It's an error from [Symfony/Finder](https://github.com/symfony/symfony/blob/c62bb82e27974ef4e389da523f0de451b6632266/src/Symfony/Component/Finder/Finder.php#L589).
 
-But how did Symfony got there? Well, the Symfony takes missing files from ["excluded" as directory](https://github.com/symfony/symfony/blob/c62bb82e27974ef4e389da523f0de451b6632266/src/Symfony/Component/DependencyInjection/Loader/FileLoader.php#L162) and the rest is history. 
+But how did Symfony got there? Well, the Symfony takes missing files from ["excluded" as directory](https://github.com/symfony/symfony/blob/c62bb82e27974ef4e389da523f0de451b6632266/src/Symfony/Component/DependencyInjection/Loader/FileLoader.php#L162) and the rest is history.
 
 My super random guess is for missing local `phar://` prefix.
 
@@ -127,7 +127,7 @@ This one give me an headache, but is simple to fix:
 This one is not strictly related to Symfony, but it happened while we shipped `box.phar`:
 
 ```bash
-Error: Fatal error: Uncaught PharException: phar "compiler/build/box.phar" SHA1 
+Error: Fatal error: Uncaught PharException: phar "compiler/build/box.phar" SHA1
 the signature could not be verified: broken signature in ...
 ```
 
@@ -141,9 +141,9 @@ Is that corrupted version of `box.phar`? I tried version before/after, still the
 
 2 hours later...
 
-<br> 
+<br>
 
-Damn. Spaces? Line-ending? **Yes!** 
+Damn. Spaces? Line-ending? **Yes!**
 
 The solution is to remove this from `.gitattributes`:
 
