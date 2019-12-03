@@ -18,7 +18,7 @@ class PriceCalculator
     public function calculate(Product $product): float
     {
         // compute vat
-        $price = $product->getPrice() * (1 + $vat);
+        $price = $product->getPrice() * 1.15;
 
         return $price;
     }
@@ -33,7 +33,7 @@ Then we decide to have 50 % discount for admins:
      public function calculate(Product $product): float
      {
          // compute vat
-         $price = $product->getPrice() * (1 + $vat);
+         $price = $product->getPrice() * 1.15;
 
 +        // discount for admin
 +        if ($this->currentUser->getRole() === 'admin') {
@@ -53,7 +53,7 @@ And another 20 % discount for students:
      public function calculate(Product $product): float
      {
          // compute vat
-         $price = $product->getPrice() * 1.21;
+         $price = $product->getPrice() * 1.15;
 
          // discount for admin
          if ($this->currentUser->getRole() === 'admin') {
