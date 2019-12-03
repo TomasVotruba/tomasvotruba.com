@@ -148,7 +148,7 @@ Now, both pictures explain it. Which one do you prefer?
 *Disclosure*
 
 - the left image is actually self-explanatory - it's used *least common denominator* to explain *Least Common Denominator*
-- the right imagine also explain it, but it uses much more extra data, that you don't need (e.g. root) and only slows down your neuron pipelines
+- the right image also explain it, but it uses much more extra data, that you don't need (e.g. root) and only slows down your neuron pipelines
 
 **Use the left approach to explain issues and problems. They're easier to understand, focused on the problem you really have and will get to the effective solution faster.**
 
