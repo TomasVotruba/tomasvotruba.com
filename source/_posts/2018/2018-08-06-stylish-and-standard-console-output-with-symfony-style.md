@@ -137,7 +137,7 @@ PHPStan is [using it](https://github.com/phpstan/phpstan/blob/1e232b3da00671a578
 
 ### 2. Don't make User Think
 
-When I was 13 years old I've accidentally read [*Don’t Make Me Think*](https://www.sensible.com/dmmt.html), amazing bug about UX, programming and psychology for dummies (I'm about to read 2014-revised version). The main point of the book was the Apple, the UX, and the DX mantra - **create a design that users already expect, don't teach them doing common things differently**.
+When I was 13 years old I've accidentally read [*Don’t Make Me Think*](https://www.sensible.com/dmmt.html), amazing book about UX, programming and psychology for dummies (I'm about to read 2014-revised version). The main point of the book was the Apple, the UX, and the DX mantra - **create a design that users already expect, don't teach them doing common things differently**.
 
 I recall many CLI Apps that each has different output - no colors, different font-size, cool underlines, error message is not red but success is green etc. **User have to focus on the design and understand it instead of enjoying your app**. WTF of non-red exception is just great!
 
