@@ -67,7 +67,7 @@ It takes around 10 seconds to scope + wraps 5 000 files of Rector to `rector.pha
 
 These 2 tools work very well for PHP-based *manual* containers like PHPStan has. But fails for Symfony autodiscovery that uses globs. It's not the fault of these tools, but rather Symfony, because nobody ever tested it to compiled PHAR :).
 
-**Where and how and how to overcome it?** There are 4 steps you need to watch out for:
+**Where and how to overcome it?** There are 4 steps you need to watch out for:
 
 ## 1. From `excluded` files to Globs
 
