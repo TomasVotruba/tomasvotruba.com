@@ -12,7 +12,7 @@ final class NumberTwigExtension extends AbstractExtension
     /**
      * @return TwigFilter[]
      */
-    public function getFilters()
+    public function getFilters(): iterable
     {
         yield new TwigFilter('millions', function (int $number): string {
             if ($number > 10 ** 5) {

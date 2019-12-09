@@ -1,10 +1,10 @@
 includes:
-    - 'vendor/symplify/phpstan-extensions/config/php.level.neon'
-    - 'vendor/symplify/phpstan-extensions/config/symfony.level.neon'
+    - 'vendor/symplify/phpstan-extensions/config/config.neon'
 
 parameters:
     level: max
-    reportUnmatchedErrors: false
+    checkMissingIterableValueType: false
+#    reportUnmatchedErrors: false
 
     excludes_analyse:
         # test fixture file
@@ -17,8 +17,13 @@ parameters:
         # php-parser Node/Stmt mixups
         - '#(.*?)array<PhpParser\\Node>, array<PhpParser\\Node\\Stmt(.*?)#'
 
-        # false positive
-        - '#Cannot access property \$stmts on PhpParser\\Node\\Stmt\|null#'
-
         # mocks
         - '#Call to an undefined method PHPUnit\\Framework\\MockObject\\MockObject\|TomasVotruba\\Website\\Posts\\Year2019\\(.*?)\\FinalClass\:\:(.*?)\(\)#'
+
+        -
+            message: '#Offset 1 does not exist on array<PhpParser\\Node\\Stmt\>\|null#'
+            path: tests/Posts/Year2017/Ast/ModifyTest.php
+
+        -
+            message: '#Access to an undefined property PhpParser\\Node\\Stmt\:\:\$stmts#'
+            path: tests/Posts/Year2017/Ast/ModifyTest.php

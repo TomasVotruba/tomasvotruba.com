@@ -59,7 +59,7 @@ final class VendorDataFactory
             $vendorTotalLastYear = $this->arrayUtils->getArrayKeySum($packagesData, 'last_year_total');
             $vendorTotalPreviousYear = $this->arrayUtils->getArrayKeySum($packagesData, 'previous_year_total');
 
-            $lastYearTrend = (($vendorTotalLastYear / $vendorTotalPreviousYear) * 100) - 100;
+            $lastYearTrend = ($vendorTotalLastYear / $vendorTotalPreviousYear * 100) - 100;
             $lastYearTrend = round($lastYearTrend, 0);
 
             $vendorData[$vendorName] = [

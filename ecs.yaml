@@ -1,7 +1,4 @@
 services:
-    SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
-        enable_each_parameter_and_return_inspection: true
-
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
         max_cognitive_complexity: 8
 
@@ -14,16 +11,10 @@ parameters:
         - 'clean-code'
 
     skip:
-        # mixed[] array redundancy
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableReturnTypeHintSpecification: ~
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableParameterTypeHintSpecification: ~
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingReturnTypeHint: ~
-
         Symplify\CodingStandard\Sniffs\Debug\CommentedOutCodeSniff.Found:
             - 'src/Command/GeneratePackageStatsCommand.php'
 
         # false positive
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment: ~
         SlevomatCodingStandard\Sniffs\Variables\UnusedVariableSniff.UnusedVariable:
             - 'src/Packagist/MinorPackageVersionsDownloadsProvider.php'
 
