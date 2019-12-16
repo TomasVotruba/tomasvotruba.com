@@ -94,7 +94,7 @@ And the result?
 
 Have you heard about PSR-4? Well, so did many people before you, but it's very to forget it thanks to:
 
-- PHPUnit magic autoload - you can place your tests anywhere, PHPUnit fill find them
+- PHPUnit magic autoload - you can place your tests anywhere, PHPUnit will find them
 - [Nette\RobotLoader](https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading/) - load anything from anywhere, for free
 - composer "classmap" - just load the directory, who cares
 - DDD - Domain Driven Design - apparently, one of the most favorite principles is to put all files in one directory, templates, configs, services, objects... just put it there
