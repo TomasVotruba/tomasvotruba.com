@@ -253,7 +253,7 @@ That's it. It takes 15-30 minutes to run [pehapkari.cz](http://github.com/pehapk
 
 <br>
 
-The projects we meet are often hosted on Bitbucket, Github or Gitlab. Someone needs to add your SSH key there. 
+The projects we meet are often hosted on Bitbucket, Github or Gitlab. Someone needs to add your SSH key there.
 
 **If it takes more than a day, something is wrong**:
 
@@ -344,7 +344,7 @@ As a side bonus, **it's free for private projects with unlimited users** and 2 0
 
 Let's say your goal is to migrate the whole framework or switch a legacy framework for a modern one. If you had skills, time and money to do that, you'd probably be there. **It takes the experience with many legacy migrations to there effectively without years of time and full-rewrite.**
 
-But... these steps above don't depend on such experience. You can implement in your in-house team. **Such work will reduce work on our side and make your code solid on your side with not such a big overhead**. 
+But... these steps above don't depend on such experience. You can implement in your in-house team. **Such work will reduce work on our side and make your code solid on your side with not such a big overhead**.
 
 Just pick one and start slowly.
 
