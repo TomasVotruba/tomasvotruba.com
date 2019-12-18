@@ -4,7 +4,7 @@ title: "8 Steps You Can Make Before Huge Upgrade to Make it Faster, Cheaper and 
 perex: |
     "How much will cost upgrade from Symfony 3 to Symfony 4 with Rector?"
     <br><br>
-    Similar questions fill my personal and [Rector email](http://gector.org/contact) in the last 3 months. It's hard to give a reasonable answer without actually seeing the repository, so I reply with follow-up questions to get get more details.
+    Similar questions fill my personal and [Rector email](https://getrector.org/contact) in the last 3 months. It's hard to give a reasonable answer without actually seeing the repository, so I reply with follow-up questions to get get more details.
     <br><br>
     Yet, I've discovered there are few repeated patterns, that make the upgrade easier and that **most projects can do by themselves** before migration starts.
 
