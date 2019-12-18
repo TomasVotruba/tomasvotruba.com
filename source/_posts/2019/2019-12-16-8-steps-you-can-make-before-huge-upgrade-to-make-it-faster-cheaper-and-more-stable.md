@@ -9,7 +9,7 @@ perex: |
     Yet, I've discovered there are few repeated patterns, that make the upgrade easier and that **most projects can do by themselves** before migration starts.
 
 tweet: "New Post on #php 🐘 blog: 8 Steps You Can Make Before Huge Upgrade to Make it Faster, Cheaper and More Stable"
-tweet_image: "assets/images/posts/2019/before/time.png"
+tweet_image: "/assets/images/posts/2019/before/time.png"
 ---
 
 These points make any code migration faster and easier. It also **decreases the time required to understand the code** by a person who sees the code for the very first time.
