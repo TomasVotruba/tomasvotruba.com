@@ -145,12 +145,9 @@ jobs:
                 - vendor/bin/rector process --config rector-ci.yaml --dry-run
 ```
 
-### 3. Gitlab CI
-
 <br>
 
-<a href="https://gitlab.com/TomasVotruba/rector-ci-demo" class="btn btn-info">Repository</a>
-<a href="https://gitlab.com/TomasVotruba/rector-ci-demo/-/jobs/355280534#L197" class="btn btn-success ml-3">CI Feedback</a>
+### 3. Gitlab CI
 
 ```yaml
 # .gitlab-ci.yml
