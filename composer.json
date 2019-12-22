@@ -44,7 +44,8 @@
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt --ansi",
-        "stats": "vendor/bin/statie generate-package-stats --ansi"
+        "stats": "vendor/bin/statie generate-package-stats --ansi",
+        "rector": "vendor/bin/rector process src tests --dry-run --config rector-ci.yaml --ansi"
     },
     "config": {
         "sort-packages": true
