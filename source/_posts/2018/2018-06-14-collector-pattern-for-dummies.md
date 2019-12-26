@@ -111,9 +111,12 @@ class PriceCalculatorCollector
      */
     private $priceCalculators = [];
 
-    public function addPriceCalculator(PriceCalculatorInterface $priceCalculator)
+    /**
+     * @param PriceCalculatorInterface[] $priceCalculators 
+     */
+    public function __construct(array $priceCalculators)
     {
-        $this->priceCalculators[] = $priceCalculator;
+        $this->priceCalculators = $priceCalculators;
     }
 
     public function calculate(Product $product): float
@@ -179,9 +182,10 @@ final class UnitedKingdomPriceCalculator implements PriceCalculatorInterface
 Based on your needs, collect this or that service.
 
 ```php
-$priceCalculatorCollector = class PriceCalculatorCollector;
-$priceCalculatorCollector->addPriceCalculator(new AdminDiscountPriceCalculator());
-$priceCalculatorCollector->addPriceCalculator(new UnitedKingdomPriceCalculator());
+$priceCalculatorCollector = new PriceCalculatorCollector([
+    new AdminDiscountPriceCalculator(),
+    new UnitedKingdomPriceCalculator(),
+]);
 
 $price = $priceCalculatorCollector->calculatePrice($product);
 ```
