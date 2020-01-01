@@ -8,6 +8,8 @@
 
         <div class="mainContent">
             <div class="container-fluid" id="post">
+                {% include "_snippets/patreon_button.twig" %}
+
                 <h1>{{ post.title|raw }}</h1>
 
                 {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "showCommentCount": TRUE } %}
@@ -83,8 +85,12 @@
                             <p>
                                 Thanks to tests this post:
                                 <ul>
-                                    <li>always run against the most recent dependencies</li>
-                                <li><strong>gets updates and stays relevant for many years</strong> even when new <a href="https://semver.org/#spec-item-8">major version</a> of PHP or Symfony is released</li>
+                                    <li>
+                                        always run against the most recent dependencies
+                                    </li>
+                                    <li>
+                                        <strong>gets updates and stays relevant for many years</strong> even when new <a href="https://semver.org/#spec-item-8">major version</a> of PHP or Symfony is released
+                                    </li>
                                 </ul>
                             </p>
                         </div>
@@ -94,10 +100,12 @@
                 <div class="row mb-3">
                     <div class="col-12 col-md-6">
                         <div class="card mb-4">
-                            <div class="card-body text-center">
-                                <em class="fab fa-fw fa-github"></em>
-                                    Found a typo?
-                                <a href="{{ post|github_edit_post_url }}">Fix it</a> to <strong>join team of {{ contributors|length  }} people</strong> that improve content here
+                            <div class="card-body text-center p-0">
+                                <a href="{{ post|github_edit_post_url }}" class="d-block pt-4 pb-4 pl-4 pr-4">
+                                    <em class="fab fa-fw fa-github"></em>
+                                    <strong>Found a typo?</strong>
+                                    <br>
+                                    Fix it to join team of {{ contributors|length  }}&nbsp;people that improve content here
                                 </a>
                             </div>
                         </div>
@@ -113,29 +121,16 @@
 
                         {% if previous_post is defined %}
                             <div class="card mb-4">
-                                <div class="card-body bg-success text-white text-center">
-                                    <strong>Next</strong>:
-                                    <a href="/{{ previous_post|link }}/">{{ previous_post.title|replace('&nbsp;', ' ') }}</a>
+                                <div class="card-body bg-success text-white text-center p-0">
+                                    <a href="/{{ previous_post|link }}/" class="d-block pt-4 pb-4 pl-4 pr-4">
+                                        <em class="fas fa-fw fa-forward"></em>
+                                        <strong>Next</strong>
+                                        <br>
+                                        {{ previous_post.title|replace('&nbsp;', ' ') }}
+                                    </a>
                                 </div>
                             </div>
                         {% endif %}
-                    </div>
-                </div>
-
-                <div class="card mb-5 border-0">
-                    <div class="card-body text-center">
-                        <p>
-                            {% if ' Rector ' in post.content %}
-                                <img src="/assets/images/logo/rector.svg" alt="Rector" style="max-width: 3em" class="mr-3">
-                                Is Rector <strong>saving you time and money</strong>?
-                                <br>
-                                Support <a href="https://patreon.com/rectorphp">it at Patreon</a> so it grows and saves you even more!
-                            {% else %}
-                                ❤️️ Do you <strong>find value in topics</strong> what I write about?
-                                <br>
-                                Support my writing by throwing a <a href="https://patreon.com/rectorphp">couple bucks at my Patreon</a>
-                            {% endif %}
-                        </p>
                     </div>
                 </div>
 
