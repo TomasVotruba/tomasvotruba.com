@@ -9,7 +9,7 @@ perex: |
     How does it look 3 weeks later?    
      
 tweet: "New Post on #php 🐘 blog: Doctrine Behaviors 2.0 - Reloaded"
-tweet_image: "assets/images/posts/doc_beha_stats.png"
+tweet_image: "/assets/images/posts/doc_beha_stats.png"
 ---
 
 ## From First Excitement Rush to Heavy Burden of Responsibility  
