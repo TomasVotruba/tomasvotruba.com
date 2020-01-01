@@ -112,7 +112,7 @@ class PriceCalculatorCollector
     private $priceCalculators = [];
 
     /**
-     * @param PriceCalculatorInterface[] $priceCalculators 
+     * @param PriceCalculatorInterface[] $priceCalculators
      */
     public function __construct(array $priceCalculators)
     {
