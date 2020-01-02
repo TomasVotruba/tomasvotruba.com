@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Result;
 
-use Nette\Utils\Strings;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\Website\ArrayUtils;
 use TomasVotruba\Website\Packagist\PackageMonthlyDownloadsProvider;
 use TomasVotruba\Website\Statistics;
+use TomasVotruba\Website\ValueObject\PackageData;
 
 final class PackageDataFactory
 {
@@ -81,20 +81,18 @@ final class PackageDataFactory
 
             $lastYearTrend = round($lastYearTrend, 1);
 
-            $packageData = [
-                'package_name' => $packageName,
-                'package_short_name' => Strings::after($packageName, '/'),
+            $packageData = new PackageData(
+                $packageName,
                 // numbers
-                'last_year_trend' => $lastYearTrend,
-                'last_year_total' => $last12Months,
-                'previous_year_total' => $previous12Months,
-            ];
+                $lastYearTrend,
+                $last12Months,
+                $previous12Months
+            );
 
-            $packageKey = $this->createPackageKey($packageName);
-            $packagesData[$packageKey] = $packageData;
+            $packagesData[$packageData->getPackageKey()] = $packageData;
         }
 
-        return $this->arrayUtils->sortDataByKey($packagesData, 'last_year_trend');
+        return $this->arrayUtils->sortArrayByLastYearTrend($packagesData);
     }
 
     /**
@@ -130,10 +128,5 @@ final class PackageDataFactory
         }
 
         return false;
-    }
-
-    private function createPackageKey(string $packageName): string
-    {
-        return Strings::replace($packageName, '#(/|-)#', '_');
     }
 }

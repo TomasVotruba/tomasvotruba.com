@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\ValueObject;
 
 use Nette\Utils\Strings;
+use TomasVotruba\Website\Contract\FrameworkStats\LastYearTrendAwareInterface;
 
-final class PackageData
+final class PackageData implements LastYearTrendAwareInterface
 {
     /**
      * @var string
@@ -33,6 +34,11 @@ final class PackageData
      */
     private $packageShortName;
 
+    /**
+     * @var string
+     */
+    private $packageKey;
+
     public function __construct(
         string $packageName,
         float $lastYearTrend,
@@ -41,6 +47,8 @@ final class PackageData
     ) {
         $this->packageName = $packageName;
         $this->packageShortName = (string) Strings::after($packageName, '/');
+
+        $this->packageKey = Strings::replace($packageName, '#(/|-)#', '_');
 
         $this->lastYearTrend = $lastYearTrend;
         $this->last12Months = $last12Months;
@@ -70,5 +78,10 @@ final class PackageData
     public function getPackageShortName(): string
     {
         return $this->packageShortName;
+    }
+
+    public function getPackageKey(): string
+    {
+        return $this->packageKey;
     }
 }

@@ -60,6 +60,7 @@ final class GeneratePackageStatsCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $vendorData = $this->vendorDataFactory->createVendorData($this->frameworksVendorToName);
+
         $this->generatedFilesDumper->dump('php_framework_trends', $vendorData);
         $this->symfonyStyle->success('Data imported!');
 

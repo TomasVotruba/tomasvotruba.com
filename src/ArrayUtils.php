@@ -4,12 +4,18 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website;
 
+use TomasVotruba\Website\Contract\FrameworkStats\LastYearTrendAwareInterface;
+
 final class ArrayUtils
 {
-    public function sortDataByKey(array $data, string $key): array
+    /**
+     * @param LastYearTrendAwareInterface[] $data
+     * @return LastYearTrendAwareInterface[]
+     */
+    public function sortArrayByLastYearTrend(array $data): array
     {
-        usort($data, function (array $firstItem, array $secondItem) use ($key): int {
-            return $secondItem[$key] <=> $firstItem[$key];
+        usort($data, function (LastYearTrendAwareInterface $firstItem, LastYearTrendAwareInterface $secondItem): int {
+            return $secondItem->getLastYearTrend() <=> $firstItem->getLastYearTrend();
         });
 
         return $data;
