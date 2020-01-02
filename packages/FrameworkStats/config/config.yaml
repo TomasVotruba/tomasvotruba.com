@@ -1,0 +1,13 @@
+imports:
+    - { resource: "parameters.yaml" }
+
+services:
+    _defaults:
+        public: true
+        autowire: true
+
+    TomasVotruba\FrameworkStats\:
+        resource: "../src"
+        exclude:
+            - "../src/HttpKernel/*"
+

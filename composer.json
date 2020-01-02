@@ -29,7 +29,8 @@
     },
     "autoload": {
         "psr-4": {
-            "TomasVotruba\\Website\\": "src"
+            "TomasVotruba\\Website\\": "src",
+            "TomasVotruba\\FrameworkStats\\": "packages/FrameworkStats/src"
         }
     },
     "autoload-dev": {
