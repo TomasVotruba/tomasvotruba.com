@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Result;
+namespace TomasVotruba\FrameworkStats\Result;
 
 use Symfony\Component\Console\Style\SymfonyStyle;
-use TomasVotruba\Website\ArrayUtils;
-use TomasVotruba\Website\Packagist\PackageMonthlyDownloadsProvider;
-use TomasVotruba\Website\Statistics;
-use TomasVotruba\Website\ValueObject\PackageData;
+use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
+use TomasVotruba\FrameworkStats\Packagist\PackageMonthlyDownloadsProvider;
+use TomasVotruba\FrameworkStats\Sorter;
+use TomasVotruba\FrameworkStats\Statistics;
+use TomasVotruba\FrameworkStats\ValueObject\PackageData;
 
 final class PackageDataFactory
 {
@@ -33,25 +34,25 @@ final class PackageDataFactory
     private $statistics;
 
     /**
-     * @var ArrayUtils
-     */
-    private $arrayUtils;
-
-    /**
      * @var SymfonyStyle
      */
     private $symfonyStyle;
 
+    /**
+     * @var Sorter
+     */
+    private $sorter;
+
     public function __construct(
         PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
         Statistics $statistics,
-        ArrayUtils $arrayUtils,
+        Sorter $sorter,
         SymfonyStyle $symfonyStyle
     ) {
         $this->packageMonthlyDownloadsProvider = $packageMonthlyDownloadsProvider;
         $this->statistics = $statistics;
-        $this->arrayUtils = $arrayUtils;
         $this->symfonyStyle = $symfonyStyle;
+        $this->sorter = $sorter;
     }
 
     public function createPackagesData(array $packageNames): array
@@ -92,7 +93,7 @@ final class PackageDataFactory
             $packagesData[$packageData->getPackageKey()] = $packageData;
         }
 
-        return $this->arrayUtils->sortArrayByLastYearTrend($packagesData);
+        return $this->sorter->sortArrayByLastYearTrend($packagesData);
     }
 
     /**
@@ -114,6 +115,15 @@ final class PackageDataFactory
 
         $firstKey = array_key_first($monthlyDownloads);
         $lastMonthDailyDownloads = $monthlyDownloads[$firstKey];
+
+        if ($lastMonthDailyDownloads < 0) {
+            throw new ShouldNotHappenException(sprintf(
+                'Last month daily downloads for "%s" package and "%s" month is in minus: %d',
+                $packageName,
+                $firstKey,
+                $lastMonthDailyDownloads
+            ));
+        }
 
         // too small package → skip it
         if ($lastMonthDailyDownloads <= self::MIN_DOWNLOADS_LIMIT) {

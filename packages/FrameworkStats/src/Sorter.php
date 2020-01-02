@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website;
+namespace TomasVotruba\FrameworkStats;
 
-use TomasVotruba\Website\Contract\FrameworkStats\LastYearTrendAwareInterface;
+use TomasVotruba\FrameworkStats\Contract\LastYearTrendAwareInterface;
 
-final class ArrayUtils
+final class Sorter
 {
     /**
      * @param LastYearTrendAwareInterface[] $data
@@ -19,15 +19,5 @@ final class ArrayUtils
         });
 
         return $data;
-    }
-
-    public function getArrayKeySum(array $array, string $key): int
-    {
-        $total = 0;
-        foreach ($array as $item) {
-            $total += (int) $item[$key];
-        }
-
-        return $total;
     }
 }

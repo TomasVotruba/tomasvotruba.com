@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website;
+namespace TomasVotruba\FrameworkStats;
 
 use Nette\Utils\Strings;
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
+use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 
 final class Statistics
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\ValueObject;
+namespace TomasVotruba\FrameworkStats\ValueObject;
 
 use Nette\Utils\Strings;
-use TomasVotruba\Website\Contract\FrameworkStats\LastYearTrendAwareInterface;
+use TomasVotruba\FrameworkStats\Contract\LastYearTrendAwareInterface;
 
 final class PackageData implements LastYearTrendAwareInterface
 {

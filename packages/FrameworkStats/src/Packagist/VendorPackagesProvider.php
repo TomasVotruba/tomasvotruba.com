@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Packagist;
+namespace TomasVotruba\FrameworkStats\Packagist;
 
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
-use TomasVotruba\Website\Json\FileToJsonLoader;
+use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
+use TomasVotruba\FrameworkStats\Json\FileToJsonLoader;
 
 final class VendorPackagesProvider
 {

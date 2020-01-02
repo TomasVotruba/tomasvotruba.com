@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\ValueObject;
+namespace TomasVotruba\FrameworkStats\ValueObject;
 
-use TomasVotruba\Website\Contract\FrameworkStats\LastYearTrendAwareInterface;
+use TomasVotruba\FrameworkStats\Contract\LastYearTrendAwareInterface;
 
 final class VendorData implements LastYearTrendAwareInterface
 {

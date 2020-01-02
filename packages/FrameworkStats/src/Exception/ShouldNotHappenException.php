@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Exception;
+namespace TomasVotruba\FrameworkStats\Exception;
 
 use Exception;
 

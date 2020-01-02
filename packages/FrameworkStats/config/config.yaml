@@ -1,5 +1,5 @@
 imports:
-    - { resource: "parameters.yaml" }
+    - { resource: 'parameters.yaml' }
 
 services:
     _defaults:
@@ -7,7 +7,13 @@ services:
         autowire: true
 
     TomasVotruba\FrameworkStats\:
-        resource: "../src"
+        resource: '../src'
         exclude:
-            - "../src/HttpKernel/*"
+            - '../src/HttpKernel/*'
+            - '../src/ValueObject/*'
 
+    Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory: null
+    Symfony\Component\Console\Style\SymfonyStyle:
+        factory: ['@Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory', 'create']
+
+    Symfony\Component\Filesystem\Filesystem: null

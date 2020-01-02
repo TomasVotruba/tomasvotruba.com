@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Packagist\Purifier;
+namespace TomasVotruba\FrameworkStats\Packagist\Purifier;
 
-use TomasVotruba\Website\Packagist\PackageRawMonthlyDownloadsProvider;
+use TomasVotruba\FrameworkStats\Packagist\PackageRawMonthlyDownloadsProvider;
 
 final class InterveningPackagesPurifier
 {

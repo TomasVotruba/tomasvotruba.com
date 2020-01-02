@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Contract\FrameworkStats;
+namespace TomasVotruba\FrameworkStats\Contract;
 
 interface LastYearTrendAwareInterface
 {
