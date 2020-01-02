@@ -103,7 +103,7 @@ final class PackageDataFactory
     private function shouldSkipPackageForOutlier(string $packageName, array $monthlyDownloads): bool
     {
         // not enough data, package younger than 24 months → skip it
-        if (count($monthlyDownloads) < (self::MINIMAL_MONTH_AGE - 1)) {
+        if (count($monthlyDownloads) < self::MINIMAL_MONTH_AGE - 1) {
             $this->symfonyStyle->note(sprintf(
                 'Skipping "%s" package for not enough data. %d months provided, %d needed',
                 $packageName,

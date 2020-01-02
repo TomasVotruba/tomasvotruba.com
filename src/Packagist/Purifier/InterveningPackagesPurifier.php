@@ -118,12 +118,11 @@ final class InterveningPackagesPurifier
             }
 
             $interveningDownloads = $this->getInterveningPackageDownloads($interveningDependency);
-            foreach ($monthlyDownloads as $key => $value) {
+            foreach (array_keys($monthlyDownloads) as $key) {
                 // too old
                 if (! isset($interveningDownloads[$key])) {
                     break;
                 }
-
 
                 // correction here!
                 $monthlyDownloads[$key] -= $interveningDownloads[$key];

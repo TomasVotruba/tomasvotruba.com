@@ -38,6 +38,10 @@ final class PackageRawMonthlyDownloadsProvider
 
         $values = array_combine($json['labels'], $json['values']);
 
+        if ($values === false) {
+            throw new ShouldNotHappenException();
+        }
+
         // last value is uncompleted month, not needed
         // array_pop($values);
 

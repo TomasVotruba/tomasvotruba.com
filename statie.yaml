@@ -11,6 +11,8 @@ services:
 
     TomasVotruba\Website\:
         resource: 'src'
+        exclude:
+            - "src/ValueObject/*"
 
 parameters:
     post_template_path: 'templates/new_post.twig'

@@ -40,17 +40,17 @@ final class Statistics
     {
         $matches = Strings::match($yearMonth, '#(?<year>\d+)\-(?<month>\d+)#');
 
-        if (!isset($matches['month'])) {
+        if (! isset($matches['month'])) {
             throw new ShouldNotHappenException();
         }
 
         $month = (int) $matches['month'];
 
-        if (in_array($month, [1, 3, 5, 7, 8, 10, 12])) {
+        if (in_array($month, [1, 3, 5, 7, 8, 10, 12], true)) {
             return 31;
         }
 
-        if (in_array($month, [2, 4, 6, 9, 11])) {
+        if (in_array($month, [2, 4, 6, 9, 11], true)) {
             return 30;
         }
 
