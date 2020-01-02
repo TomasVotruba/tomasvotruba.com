@@ -73,7 +73,7 @@ final class PackageDataFactory
                 continue;
             }
 
-            $lastYearTrend = 100 * ($last12Months / $previous12Months) - 100; // $this->statistics->resolveTrend($packageName, $monthlyDownloads, 24);
+            $lastYearTrend = 100 * ($last12Months / $previous12Months) - 100;
             if ($lastYearTrend > 300) {
                 // too huge trend
                 continue;

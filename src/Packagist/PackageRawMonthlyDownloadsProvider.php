@@ -37,8 +37,9 @@ final class PackageRawMonthlyDownloadsProvider
         }
 
         $values = $json['values'];
+
         // last value is uncompleted month, not needed
-        array_pop($values);
+        // array_pop($values);
 
         // put the highest first to keep convention
         return array_reverse($values);
