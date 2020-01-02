@@ -28,7 +28,6 @@ final class InterveningPackagesPurifier
             // consequently
             'nette/php-generator',
             'nette/neon',
-            'nette/finder',
             'symfony/contracts',
             'symfony/polyfill-mbstring',
         ],
@@ -125,8 +124,9 @@ final class InterveningPackagesPurifier
                     break;
                 }
 
+
                 // correction here!
-                $monthlyDownloads[$key] = $value - $interveningDownloads[$key];
+                $monthlyDownloads[$key] -= $interveningDownloads[$key];
             }
         }
 

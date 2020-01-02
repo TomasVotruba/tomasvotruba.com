@@ -65,6 +65,9 @@ final class PackageDataFactory
                 continue;
             }
 
+            dump($monthlyDownloads);
+            die;
+
             $last12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 0);
             $previous12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 11);
 
@@ -103,7 +106,7 @@ final class PackageDataFactory
     private function shouldSkipPackageForOutlier(string $packageName, array $monthlyDownloads): bool
     {
         // not enough data, package younger than 24 months → skip it
-        if (! isset($monthlyDownloads[self::MINIMAL_MONTH_AGE - 1])) {
+        if (count($monthlyDownloads) < (self::MINIMAL_MONTH_AGE - 1)) {
             $this->symfonyStyle->note(sprintf(
                 'Skipping "%s" package for not enough data. %d months provided, %d needed',
                 $packageName,
@@ -114,7 +117,8 @@ final class PackageDataFactory
             return true;
         }
 
-        $lastMonthDailyDownloads = $monthlyDownloads[0];
+        $firstKey = array_key_first($monthlyDownloads);
+        $lastMonthDailyDownloads = $monthlyDownloads[$firstKey];
 
         // too small package → skip it
         if ($lastMonthDailyDownloads <= self::MIN_DOWNLOADS_LIMIT) {

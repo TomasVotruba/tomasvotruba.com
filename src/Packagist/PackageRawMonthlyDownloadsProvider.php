@@ -36,12 +36,12 @@ final class PackageRawMonthlyDownloadsProvider
             throw new ShouldNotHappenException();
         }
 
-        $values = $json['values'];
+        $values = array_combine($json['labels'], $json['values']);
 
         // last value is uncompleted month, not needed
         // array_pop($values);
 
         // put the highest first to keep convention
-        return array_reverse($values);
+        return array_reverse($values, true);
     }
 }
