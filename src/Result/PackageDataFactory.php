@@ -65,9 +65,6 @@ final class PackageDataFactory
                 continue;
             }
 
-            dump($monthlyDownloads);
-            die;
-
             $last12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 0);
             $previous12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 11);
 

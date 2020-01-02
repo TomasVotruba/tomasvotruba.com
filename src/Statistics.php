@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website;
 
+use Nette\Utils\Strings;
+use TomasVotruba\Website\Exception\ShouldNotHappenException;
+
 final class Statistics
 {
     /**
@@ -15,15 +18,43 @@ final class Statistics
 
         $end = $offset + $months;
 
-        for ($i = $offset; $i < $end; $i++) {
-            if (! isset($values[$i])) {
+        $counter = 0;
+        foreach ($values as $month => $averageDailyDownloads) {
+            ++$counter;
+
+            $daysInTheMonth = $this->getDaysInMonthByYearMonth($month);
+            $total += $averageDailyDownloads * $daysInTheMonth;
+
+            if ($counter > $end) {
                 break;
             }
-
-            // 30 for compensating average of month
-            $total += $values[$i] * 30;
         }
 
         return $total;
+    }
+
+    /**
+     * E.g. 2019-12 → 31
+     */
+    private function getDaysInMonthByYearMonth(string $yearMonth): int
+    {
+        $matches = Strings::match($yearMonth, '#(?<year>\d+)\-(?<month>\d+)#');
+
+        if (!isset($matches['month'])) {
+            throw new ShouldNotHappenException();
+        }
+
+        $month = (int) $matches['month'];
+
+        if (in_array($month, [1, 3, 5, 7, 8, 10, 12])) {
+            return 31;
+        }
+
+        if (in_array($month, [2, 4, 6, 9, 11])) {
+            return 30;
+        }
+
+        // @todo or 29
+        return 28;
     }
 }
