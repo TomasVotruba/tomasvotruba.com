@@ -2,7 +2,7 @@
 id: 197
 title: 'How to Instantly Migrate Nette\Tester to PHPUnit'
 perex: |
-    We had 🍺 after PHP and Tomas asked me:
+    We had 🍺 after PHP meetup in Prague and Tomas asked me:
     <br>
     "We don't use Nette, but we still have many tests in Tester. Can Rector migrate them to PHPUnit?"
     <br>

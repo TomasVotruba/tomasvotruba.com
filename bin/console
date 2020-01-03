@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+use TomasVotruba\FrameworkStats\Console\FrameworkStatsApplication;
+use TomasVotruba\FrameworkStats\HttpKernel\FrameworkStatsKernel;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$influencerKernel = new FrameworkStatsKernel('dev', true);
+$influencerKernel->boot();
+
+$container = $influencerKernel->getContainer();
+
+/** @var FrameworkStatsApplication $frameworkStatsApplication */
+$frameworkStatsApplication = $container->get(FrameworkStatsApplication::class);
+exit($frameworkStatsApplication->run());

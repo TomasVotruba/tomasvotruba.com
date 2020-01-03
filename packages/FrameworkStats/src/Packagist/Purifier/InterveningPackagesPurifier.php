@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Packagist\Purifier;
+namespace TomasVotruba\FrameworkStats\Packagist\Purifier;
 
-use TomasVotruba\Website\Packagist\PackageRawMonthlyDownloadsProvider;
+use TomasVotruba\FrameworkStats\Packagist\PackageRawMonthlyDownloadsProvider;
 
 final class InterveningPackagesPurifier
 {
@@ -17,21 +17,6 @@ final class InterveningPackagesPurifier
      * @var string[][]
      */
     private $interveningDependencies = [
-        // https://packagist.org/packages/phpstan/phpstan
-        'phpstan/phpstan' => [
-            'nette/bootstrap',
-            'nette/di',
-            'nette/robot-loader',
-            'nette/utils',
-            'symfony/console',
-            'symfony/finder',
-            // consequently
-            'nette/php-generator',
-            'nette/neon',
-            'nette/finder',
-            'symfony/contracts',
-            'symfony/polyfill-mbstring',
-        ],
         // https://packagist.org/packages/friendsofphp/php-cs-fixer
         'friendsofphp/php-cs-fixer' => [
             'symfony/console',
@@ -50,16 +35,10 @@ final class InterveningPackagesPurifier
         ],
         // https://packagist.org/packages/robmorgan/phinx
         'robmorgan/phinx' => [
-            'cakephp/collection',
-            'cakephp/database',
             'symfony/console',
             'symfony/config',
             'symfony/yaml',
             // consequently
-            'cakephp/cache',
-            'cakephp/core',
-            'cakephp/datasource',
-            'cakephp/log',
             'symfony/contracts',
             'symfony/polyfill-mbstring',
             'symfony/filesystem',
@@ -119,14 +98,14 @@ final class InterveningPackagesPurifier
             }
 
             $interveningDownloads = $this->getInterveningPackageDownloads($interveningDependency);
-            foreach ($monthlyDownloads as $key => $value) {
+            foreach (array_keys($monthlyDownloads) as $key) {
                 // too old
                 if (! isset($interveningDownloads[$key])) {
                     break;
                 }
 
                 // correction here!
-                $monthlyDownloads[$key] = $value - $interveningDownloads[$key];
+                $monthlyDownloads[$key] -= $interveningDownloads[$key];
             }
         }
 
@@ -139,9 +118,9 @@ final class InterveningPackagesPurifier
             return $this->interveningPackagesDownloads[$packageName];
         }
 
-        $this->interveningPackagesDownloads[$packageName] = $this->packageRawMonthlyDownloadsProvider->provideForPackage(
-            $packageName
-        );
+        $interveningRawMonthlyDownloads = $this->packageRawMonthlyDownloadsProvider->provideForPackage($packageName);
+
+        $this->interveningPackagesDownloads[$packageName] = $interveningRawMonthlyDownloads;
 
         return $this->interveningPackagesDownloads[$packageName];
     }

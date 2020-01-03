@@ -8,8 +8,9 @@
         "twig/twig": "^3.0",
         "symfony/console": "^5.0",
         "symfony/http-kernel": "^5.0",
-        "symplify/package-builder": "^7.1",
-        "symplify/statie": "^7.1"
+        "symplify/package-builder": "^7.2",
+        "symplify/statie": "^7.2",
+        "symplify/auto-bind-parameter": "^7.2"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.1",
@@ -22,33 +23,37 @@
         "symfony/process": "^5.0",
         "symfony/stopwatch": "^5.0",
         "symfony/yaml": "^5.0",
-        "symplify/autodiscovery": "^7.1",
-        "symplify/easy-coding-standard": "^7.1",
-        "symplify/latte-to-twig-converter": "^7.1",
-        "symplify/phpstan-extensions": "^7.1"
+        "symplify/autodiscovery": "^7.2",
+        "symplify/easy-coding-standard": "^7.2",
+        "symplify/latte-to-twig-converter": "^7.2",
+        "symplify/phpstan-extensions": "^7.2"
     },
     "autoload": {
         "psr-4": {
-            "TomasVotruba\\Website\\": "src"
+            "TomasVotruba\\Website\\": "src",
+            "TomasVotruba\\FrameworkStats\\": "packages/FrameworkStats/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\Website\\Tests\\": "tests"
+            "TomasVotruba\\Website\\Tests\\": "tests",
+            "TomasVotruba\\FrameworkStats\\Tests\\": "packages/FrameworkStats/tests"
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan analyse bin src tests --ansi --error-format symplify",
-        "check-cs": "vendor/bin/ecs check bin src tests --ansi",
+        "phpstan": "vendor/bin/phpstan analyse bin src tests packages --ansi --error-format symplify",
+        "check-cs": "vendor/bin/ecs check bin src tests packages --ansi",
         "fix-cs": [
-            "vendor/bin/ecs check bin src tests --fix --ansi",
+            "vendor/bin/ecs check bin src tests packages --fix --ansi",
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.cz --output invalid-links.txt --ansi",
         "stats": "vendor/bin/statie generate-package-stats --ansi",
-        "rector": "vendor/bin/rector process src tests --dry-run --config rector-ci.yaml --ansi"
+        "rector": "vendor/bin/rector process src tests packages --dry-run --config rector-ci.yaml --ansi"
     },
     "config": {
         "sort-packages": true
-    }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
 }

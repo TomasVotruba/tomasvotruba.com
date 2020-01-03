@@ -1,13 +1,15 @@
 parameters:
-    # used by https://www.tomasvotruba.cz/package-downloads-by-version/
-    versioned_framework_vendor:
-        # the order reflects similar order in previous table, so it's easier to read
-        symfony: Symfony
-        cakephp: CakePHP
-        illuminate: Laravel
-        yiisoft: Yii
-        zendframework: Zend
+    # used by https://www.tomasvotruba.cz/php-framework-trends/
+    frameworks_vendor_to_name:
         nette: Nette
+        symfony: Symfony
+        # includes also laravel/framework
+        illuminate: Laravel
+        cakephp: CakePHP
+        # single monorepos
+        zendframework: Zend
+        yiisoft: Yii
+        # db "frameworks"
         doctrine: Doctrine
 
     excluded_framework_packages:
@@ -75,16 +77,3 @@ parameters:
         - 'symfony/http-client-contracts'
         - 'symfony/event-dispatcher-contracts'
         - 'symfony/service-contracts'
-
-    # used by https://www.tomasvotruba.cz/php-framework-trends/
-    frameworks_vendor_to_name:
-        nette: Nette
-        symfony: Symfony
-        # includes also laravel/framework
-        illuminate: Laravel
-        cakephp: CakePHP
-        # single monorepos
-        zendframework: Zend
-        yiisoft: Yii
-        # db "frameworks"
-        doctrine: Doctrine

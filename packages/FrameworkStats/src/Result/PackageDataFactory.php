@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Result;
+namespace TomasVotruba\FrameworkStats\Result;
 
-use Nette\Utils\Strings;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use TomasVotruba\Website\ArrayUtils;
-use TomasVotruba\Website\Packagist\PackageMonthlyDownloadsProvider;
-use TomasVotruba\Website\Statistics;
+use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
+use TomasVotruba\FrameworkStats\Packagist\PackageMonthlyDownloadsProvider;
+use TomasVotruba\FrameworkStats\Sorter;
+use TomasVotruba\FrameworkStats\Statistics;
+use TomasVotruba\FrameworkStats\ValueObject\PackageData;
 
 final class PackageDataFactory
 {
@@ -33,25 +34,25 @@ final class PackageDataFactory
     private $statistics;
 
     /**
-     * @var ArrayUtils
-     */
-    private $arrayUtils;
-
-    /**
      * @var SymfonyStyle
      */
     private $symfonyStyle;
 
+    /**
+     * @var Sorter
+     */
+    private $sorter;
+
     public function __construct(
         PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
         Statistics $statistics,
-        ArrayUtils $arrayUtils,
+        Sorter $sorter,
         SymfonyStyle $symfonyStyle
     ) {
         $this->packageMonthlyDownloadsProvider = $packageMonthlyDownloadsProvider;
         $this->statistics = $statistics;
-        $this->arrayUtils = $arrayUtils;
         $this->symfonyStyle = $symfonyStyle;
+        $this->sorter = $sorter;
     }
 
     public function createPackagesData(array $packageNames): array
@@ -65,15 +66,23 @@ final class PackageDataFactory
                 continue;
             }
 
-            $last12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 0);
-            $previous12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 11);
+            // split into first 12 months, then next 12 months
+            $chunks = array_chunk($monthlyDownloads, 12, true);
+
+            $last12Months = $this->statistics->expandDailyAverageToMonthTotal($chunks[0]);
+            /** @var int $last12Months */
+            $last12Months = array_sum($last12Months);
+
+            $previous12Months = $this->statistics->expandDailyAverageToMonthTotal($chunks[1]);
+            /** @var int $previous12Months */
+            $previous12Months = array_sum($previous12Months);
 
             if ($previous12Months === 0) {
                 // to prevent fatal errors
                 continue;
             }
 
-            $lastYearTrend = 100 * ($last12Months / $previous12Months) - 100; // $this->statistics->resolveTrend($packageName, $monthlyDownloads, 24);
+            $lastYearTrend = 100 * ($last12Months / $previous12Months) - 100;
             if ($lastYearTrend > 300) {
                 // too huge trend
                 continue;
@@ -81,20 +90,18 @@ final class PackageDataFactory
 
             $lastYearTrend = round($lastYearTrend, 1);
 
-            $packageData = [
-                'package_name' => $packageName,
-                'package_short_name' => Strings::after($packageName, '/'),
+            $packageData = new PackageData(
+                $packageName,
                 // numbers
-                'last_year_trend' => $lastYearTrend,
-                'last_year_total' => $last12Months,
-                'previous_year_total' => $previous12Months,
-            ];
+                $lastYearTrend,
+                $last12Months,
+                $previous12Months
+            );
 
-            $packageKey = $this->createPackageKey($packageName);
-            $packagesData[$packageKey] = $packageData;
+            $packagesData[$packageData->getPackageKey()] = $packageData;
         }
 
-        return $this->arrayUtils->sortDataByKey($packagesData, 'last_year_trend');
+        return $this->sorter->sortArrayByLastYearTrend($packagesData);
     }
 
     /**
@@ -103,7 +110,7 @@ final class PackageDataFactory
     private function shouldSkipPackageForOutlier(string $packageName, array $monthlyDownloads): bool
     {
         // not enough data, package younger than 24 months → skip it
-        if (! isset($monthlyDownloads[self::MINIMAL_MONTH_AGE - 1])) {
+        if (count($monthlyDownloads) < self::MINIMAL_MONTH_AGE - 1) {
             $this->symfonyStyle->note(sprintf(
                 'Skipping "%s" package for not enough data. %d months provided, %d needed',
                 $packageName,
@@ -114,7 +121,17 @@ final class PackageDataFactory
             return true;
         }
 
-        $lastMonthDailyDownloads = $monthlyDownloads[0];
+        $firstKey = array_key_first($monthlyDownloads);
+        $lastMonthDailyDownloads = $monthlyDownloads[$firstKey];
+
+        if ($lastMonthDailyDownloads < 0) {
+            throw new ShouldNotHappenException(sprintf(
+                'Last month daily downloads for "%s" package and "%s" month is in minus: %d',
+                $packageName,
+                $firstKey,
+                $lastMonthDailyDownloads
+            ));
+        }
 
         // too small package → skip it
         if ($lastMonthDailyDownloads <= self::MIN_DOWNLOADS_LIMIT) {
@@ -129,10 +146,5 @@ final class PackageDataFactory
         }
 
         return false;
-    }
-
-    private function createPackageKey(string $packageName): string
-    {
-        return Strings::replace($packageName, '#(/|-)#', '_');
     }
 }

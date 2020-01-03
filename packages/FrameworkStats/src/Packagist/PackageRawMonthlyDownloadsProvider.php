@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Packagist;
+namespace TomasVotruba\FrameworkStats\Packagist;
 
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
-use TomasVotruba\Website\Json\FileToJsonLoader;
+use Nette\Utils\DateTime;
+use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
+use TomasVotruba\FrameworkStats\Json\FileToJsonLoader;
 
 final class PackageRawMonthlyDownloadsProvider
 {
@@ -36,11 +37,21 @@ final class PackageRawMonthlyDownloadsProvider
             throw new ShouldNotHappenException();
         }
 
-        $values = $json['values'];
-        // last value is uncompleted month, not needed
-        array_pop($values);
+        $values = array_combine($json['labels'], $json['values']);
+        if (! $values) {
+            throw new ShouldNotHappenException();
+        }
+
+        $valuesSortedByNewest = array_reverse($values, true);
+
+        // drop current is uncompleted month and can return different values for inter-dependent packages, not needed
+        $firstKey = array_key_first($valuesSortedByNewest);
+        $currentMonth = (new DateTime())->format('Y-m');
+        if ($currentMonth === $firstKey) {
+            array_shift($valuesSortedByNewest);
+        }
 
         // put the highest first to keep convention
-        return array_reverse($values);
+        return $valuesSortedByNewest;
     }
 }
