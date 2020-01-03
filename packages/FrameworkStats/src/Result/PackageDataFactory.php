@@ -66,8 +66,16 @@ final class PackageDataFactory
                 continue;
             }
 
-            $last12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 0);
-            $previous12Months = $this->statistics->resolveTotal($monthlyDownloads, 12, 11);
+            // split into first 12 months, then next 12 months
+            $chunks = array_chunk($monthlyDownloads, 12, true);
+
+            $last12Months = $this->statistics->expandDailyAverageValuesByDayCountInMonth($chunks[0]);
+            /** @var int $last12Months */
+            $last12Months = array_sum($last12Months);
+
+            $previous12Months = $this->statistics->expandDailyAverageValuesByDayCountInMonth($chunks[1]);
+            /** @var int $previous12Months */
+            $previous12Months = array_sum($previous12Months);
 
             if ($previous12Months === 0) {
                 // to prevent fatal errors

@@ -3,7 +3,6 @@ imports:
     - { resource: 'source/_data/generated/*.yaml' }
     # enabled on localhost only
     - { resource: 'statie.local.yaml',  ignore_errors: true }
-    - { resource: 'config/*.yaml' }
 
 services:
     _defaults:
@@ -11,8 +10,6 @@ services:
 
     TomasVotruba\Website\:
         resource: 'src'
-        exclude:
-            - "src/ValueObject/*"
 
 parameters:
     post_template_path: 'templates/new_post.twig'

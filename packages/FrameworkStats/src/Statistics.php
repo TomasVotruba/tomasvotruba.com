@@ -9,28 +9,14 @@ use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 
 final class Statistics
 {
-    /**
-     * @param int[] $values
-     */
-    public function resolveTotal(array $values, int $months, int $offset): int
+    public function expandDailyAverageValuesByDayCountInMonth(array $valuesByMonth): array
     {
-        $total = 0;
-
-        $end = $offset + $months;
-
-        $counter = 0;
-        foreach ($values as $month => $averageDailyDownloads) {
-            ++$counter;
-
+        foreach ($valuesByMonth as $month => $averageDailyDownloads) {
             $daysInTheMonth = $this->getDaysInMonthByYearMonth($month);
-            $total += $averageDailyDownloads * $daysInTheMonth;
-
-            if ($counter > $end) {
-                break;
-            }
+            $valuesByMonth[$month] = $averageDailyDownloads * $daysInTheMonth;
         }
 
-        return $total;
+        return $valuesByMonth;
     }
 
     /**

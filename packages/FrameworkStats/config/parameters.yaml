@@ -2,15 +2,15 @@ parameters:
     # used by https://www.tomasvotruba.cz/php-framework-trends/
     frameworks_vendor_to_name:
         nette: Nette
-#        symfony: Symfony
-#        # includes also laravel/framework
-#        illuminate: Laravel
-#        cakephp: CakePHP
-#        # single monorepos
-#        zendframework: Zend
-#        yiisoft: Yii
-#        # db "frameworks"
-#        doctrine: Doctrine
+        symfony: Symfony
+        # includes also laravel/framework
+        illuminate: Laravel
+        cakephp: CakePHP
+        # single monorepos
+        zendframework: Zend
+        yiisoft: Yii
+        # db "frameworks"
+        doctrine: Doctrine
 
     excluded_framework_packages:
         # out there, but too fresh (remove in 2020)
