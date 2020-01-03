@@ -1,4 +1,4 @@
-# this file was generated on 2019-11-09 01:22:47, do not edit it manually
+# this file was generated on 2020-01-03 14:16:59, do not edit it manually
 parameters:
     contributors:
         -
@@ -22,14 +22,14 @@ parameters:
             photo: 'https://avatars2.githubusercontent.com/u/6184412?v=4'
             contribution_count: 9
         -
-            name: ondrejmirtes
-            url: 'https://github.com/ondrejmirtes'
-            photo: 'https://avatars0.githubusercontent.com/u/104888?v=4'
-            contribution_count: 7
-        -
             name: vrbata
             url: 'https://github.com/vrbata'
             photo: 'https://avatars1.githubusercontent.com/u/8536429?v=4'
+            contribution_count: 8
+        -
+            name: ondrejmirtes
+            url: 'https://github.com/ondrejmirtes'
+            photo: 'https://avatars0.githubusercontent.com/u/104888?v=4'
             contribution_count: 7
         -
             name: f3l1x
@@ -47,10 +47,20 @@ parameters:
             photo: 'https://avatars2.githubusercontent.com/u/1255989?v=4'
             contribution_count: 5
         -
+            name: freiondrej
+            url: 'https://github.com/freiondrej'
+            photo: 'https://avatars2.githubusercontent.com/u/37588173?v=4'
+            contribution_count: 5
+        -
             name: juananruiz
             url: 'https://github.com/juananruiz'
             photo: 'https://avatars1.githubusercontent.com/u/211510?v=4'
             contribution_count: 5
+        -
+            name: Maxell92
+            url: 'https://github.com/Maxell92'
+            photo: 'https://avatars3.githubusercontent.com/u/1649279?v=4'
+            contribution_count: 4
         -
             name: ikvasnica
             url: 'https://github.com/ikvasnica'
@@ -62,15 +72,10 @@ parameters:
             photo: 'https://avatars3.githubusercontent.com/u/920949?v=4'
             contribution_count: 4
         -
-            name: freiondrej
-            url: 'https://github.com/freiondrej'
-            photo: 'https://avatars2.githubusercontent.com/u/37588173?v=4'
+            name: escopecz
+            url: 'https://github.com/escopecz'
+            photo: 'https://avatars2.githubusercontent.com/u/1235442?v=4'
             contribution_count: 4
-        -
-            name: Maxell92
-            url: 'https://github.com/Maxell92'
-            photo: 'https://avatars3.githubusercontent.com/u/1649279?v=4'
-            contribution_count: 3
         -
             name: uestla
             url: 'https://github.com/uestla'
@@ -112,6 +117,11 @@ parameters:
             photo: 'https://avatars0.githubusercontent.com/u/127811?v=4'
             contribution_count: 2
         -
+            name: robertfausk
+            url: 'https://github.com/robertfausk'
+            photo: 'https://avatars0.githubusercontent.com/u/1651297?v=4'
+            contribution_count: 2
+        -
             name: harikt
             url: 'https://github.com/harikt'
             photo: 'https://avatars3.githubusercontent.com/u/120454?v=4'
@@ -135,6 +145,16 @@ parameters:
             name: lchrusciel
             url: 'https://github.com/lchrusciel'
             photo: 'https://avatars2.githubusercontent.com/u/6213903?v=4'
+            contribution_count: 2
+        -
+            name: GenieTim
+            url: 'https://github.com/GenieTim'
+            photo: 'https://avatars0.githubusercontent.com/u/8596965?v=4'
+            contribution_count: 2
+        -
+            name: fruitl00p
+            url: 'https://github.com/fruitl00p'
+            photo: 'https://avatars1.githubusercontent.com/u/1492861?v=4'
             contribution_count: 2
         -
             name: Zemistr
@@ -175,11 +195,6 @@ parameters:
             name: integer
             url: 'https://github.com/integer'
             photo: 'https://avatars0.githubusercontent.com/u/160891?v=4'
-            contribution_count: 1
-        -
-            name: robertfausk
-            url: 'https://github.com/robertfausk'
-            photo: 'https://avatars0.githubusercontent.com/u/1651297?v=4'
             contribution_count: 1
         -
             name: sustmi
@@ -365,4 +380,19 @@ parameters:
             name: imliam
             url: 'https://github.com/imliam'
             photo: 'https://avatars0.githubusercontent.com/u/4326337?v=4'
+            contribution_count: 1
+        -
+            name: Lyssal
+            url: 'https://github.com/Lyssal'
+            photo: 'https://avatars1.githubusercontent.com/u/10855303?v=4'
+            contribution_count: 1
+        -
+            name: hagiosofori
+            url: 'https://github.com/hagiosofori'
+            photo: 'https://avatars3.githubusercontent.com/u/11246351?v=4'
+            contribution_count: 1
+        -
+            name: DominikTo
+            url: 'https://github.com/DominikTo'
+            photo: 'https://avatars2.githubusercontent.com/u/1384635?v=4'
             contribution_count: 1
