@@ -7,19 +7,25 @@ id: mission
 {% block content %}
     <div class="container" id="mission">
         <h1 class="text-center mb-4">
-            My Mission is to Help You
+            I connect Code Quality and Business Delivery
         </h1>
 
+
         <p class="bigger mb-4">
-            I believe any person in the world <strong>can learn anything</strong>. No matter what age, social status or experience you have now. You can learn anything you set your mind to.
+            The most companies of recent years suffer from ineffective communication between CEOs and programmers.
+            That's why I focus on <strong>connecting CEOs and programmers</strong>, profit and feature delivery and joy of daily work at the same time.
         </p>
 
-        <p>
-            I connect computers and modern psychology. I help <strong>my clients to do more with less</strong> and be change-proof:
+        <p class="bigger mb-4">
+            I also believe any person in the world can learn anything. No matter how old you are or how experienced you are. There are many <strong>rare hacks</strong> that improve your skills by factor of 10.
+        </p>
+
+        <p class="bigger">
+            I help <strong>my clients to do more with less</strong> and be change-proof.
         </p>
     </div>
 
-    <div class="container" id="logos">
+    <div class="container border pl-5 pr-5 mt-5" id="logos">
         <div id="client-line">
             <div class="text-center row mt-3 mb-3">
                 {% for logo, url in helped_companies %}
@@ -32,33 +38,54 @@ id: mission
             </div>
         </div>
 
-        <div class="text-center mb-5">
-            <a href="/contact/" class="btn btn-warning">
+        <div class="text-center mb-4">
+            <a href="/contact/" class="btn btn-success">
                 Become my <strong>next Client</strong>
                 &nbsp;
                 <em class="fas fa-chart-line fa-fw"></em>
             </a>
         </div>
+    </div>
 
-        <hr>
+    <br>
+    <br>
 
-        <h2 class="text-center">
-            Do you want 1:1 mentoring or in-house Training?
-        </h2>
+    <div class="container">
+        <h2 class="text-center">{{ "now"|date("Y") - 2002 }} Years in PHP Universe</h2>
 
-        <p>I turn my mission into reality in <strong>mentorings and trainings</strong>.</p>
+        <p class="mt-4">
+            I'm not an expert, but I'm trying to get better every day, ask for feedback and learn from each person I meet.
+        </p>
+
+        <ul>
+            <li>from <strong>38 PHP companies</strong> I consulted</li>
+            <li>from <strong><a href="/">17 000 monthly</a> readers</strong> of my blog with over 230 posts</li>
+            <li>from over <strong><a href="/talks/">30 talks</a></strong> I gave on various topics in 6 countries and 2 continents</li>
+            <li>and from <a href="https://stackoverflow.com/users/1348344/tom%C3%A1%C5%A1-votruba">hundreds Stackoveflow answers</a> that got me to <strong>top 3 %</strong> </li>
+        </ul>
+
+        <a href="https://stackoverflow.com/users/1348344/tom%C3%A1%C5%A1-votruba">
+            <img src="/assets/images/stackoverflow.png" alt="" class="img-thumbnail ml-3 mt-2">
+        </a>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <h2 class="text-center">Do you want to Grow? Get Mentoring or Training</h2>
 
         <div class="card-deck mt-5">
             <div class="card">
                 <div class="card-body">
-                    <h3>1:1 60 mins Mentorings</h3>
+                    <h3 class="text-center">1:1 60 mins Mentorings</h3>
 
                     <div class="text-center mt-5 mb-5">
                         <em class="fas fa-clock fa-4x"></em>
                     </div>
 
                     <p>
-                        100 % <a href="/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport">deep</a> attention just for you,  your problems and questions.
+                        100 % <a href="/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport">deep attention</a> just for you,  your problems and questions.
                     </p>
 
                     <br>
@@ -82,13 +109,13 @@ id: mission
                         <li>call me when you really need help</li>
                     </ul>
 
-                    <p>The most favorite frequency is <strong>1 hour/week</strong>.</p>
+                    <p class="mt-5">The most favorite frequency is <strong>1 hour/week</strong>.</p>
 
                     <br>
 
                     <div class="text-center mt-2">
                         <a href="/contact/" class="btn btn-success pt-2">
-                            <strong>Hire me</strong> for 1500 Kč/65 € hour
+                            <strong>Hire me</strong> for 2000 Kč/80 € hour
                             &nbsp;
                             <em class="fas fa-arrow-circle-right fa-fw"></em>
                         </a>
@@ -98,7 +125,7 @@ id: mission
 
             <div class="card">
                 <div class="card-body">
-                    <h3 class="card-title">In-House Training</h3>
+                    <h3 class="text-center">In-House Training</h3>
 
                     <div class="text-center mt-5 mb-5">
                         <em class="fas fa-home fa-4x"></em>
@@ -132,47 +159,8 @@ id: mission
                 </div>
             </div>
         </div>
-
-        <hr>
-
-        <h2 class="text-center">{{ "now"|date("Y") - 2002 }} Years in PHP Universe</h2>
-
-        <p>
-            I'm <a href="https://www.youtube.com/watch?v=BKorP55Aqvg">not the expert</a>, but I'm trying to better every day, ask for feedback and learn from each person I meet.
-        </p>
-
-        <ul>
-            <li>from 38 PHP companies I consulted</li>
-            <li>from <a href="/">17 000 monthly</a> readers of my blog with over 200 posts</li>
-            <li>from over <a href="/talks/">30 talks</a> I gave on various topics in 6 countries and 2 continents...</li>
-            <li>and from <a href="https://stackoverflow.com/users/1348344/tom%C3%A1%C5%A1-votruba">250 answers</a> that collected over 11 000 reputation in last {{ "now"|date("Y") - 2012 }} years on Stackoverflow</li>
-        </ul>
-
-        <a href="https://stackoverflow.com/users/1348344/tom%C3%A1%C5%A1-votruba">
-            <img src="/assets/images/stackoverflow.png" alt="" class="img-thumbnail ml-3 mt-2" style="max-width:30em">
-        </a>
-
-
-        <h2 class="text-center">I feel most confident to help you with</h2>
-
-        <ul>
-            <li><strong>anything around Symfony</strong> - thanks writing <a href="https://github.com/symplify/">Symfony open-source</a> and founding Symfony community in the Czech Republic (now <a href="https://pehapkari.cz/">Pehapkari.cz</a>) I had to really dig deep into Symfony code</li>
-            <li>refactoring of legacy applications with <a href="https://getrector.org/">Rector</a></li>
-            <li>migration application in <a href="/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/">one PHP framework to another</a></li>
-            <li>saving code-review costs with coding standards and static analysis</li>
-            <li>basically <strong>anything <a href="/">I write about</a></strong></li>
-        </ul>
-
-        <p class="text-center mt-5">
-            <em>Do you want improve quickly with helping hand?</em>
-        </p>
-
-        <p class="text-center">
-            <a href="/contact/" class="btn btn-danger mt-2 mb-2">
-                I'm here to <strong>help You</strong>
-                &nbsp;
-                <em class="fas fa-handshake fa-fw"></em>
-            </a>
-        </p>
     </div>
+
+    <br>
+    <br>
 {% endblock %}
