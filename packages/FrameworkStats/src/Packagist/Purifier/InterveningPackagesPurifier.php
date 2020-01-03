@@ -17,20 +17,6 @@ final class InterveningPackagesPurifier
      * @var string[][]
      */
     private $interveningDependencies = [
-        // https://packagist.org/packages/phpstan/phpstan
-        'phpstan/phpstan' => [
-            'nette/bootstrap',
-            'nette/di',
-            'nette/robot-loader',
-            'nette/utils',
-            'symfony/console',
-            'symfony/finder',
-            // consequently
-            'nette/php-generator',
-            'nette/neon',
-            'symfony/contracts',
-            'symfony/polyfill-mbstring',
-        ],
         // https://packagist.org/packages/friendsofphp/php-cs-fixer
         'friendsofphp/php-cs-fixer' => [
             'symfony/console',
@@ -49,16 +35,10 @@ final class InterveningPackagesPurifier
         ],
         // https://packagist.org/packages/robmorgan/phinx
         'robmorgan/phinx' => [
-            'cakephp/collection',
-            'cakephp/database',
             'symfony/console',
             'symfony/config',
             'symfony/yaml',
             // consequently
-            'cakephp/cache',
-            'cakephp/core',
-            'cakephp/datasource',
-            'cakephp/log',
             'symfony/contracts',
             'symfony/polyfill-mbstring',
             'symfony/filesystem',
@@ -138,9 +118,9 @@ final class InterveningPackagesPurifier
             return $this->interveningPackagesDownloads[$packageName];
         }
 
-        $this->interveningPackagesDownloads[$packageName] = $this->packageRawMonthlyDownloadsProvider->provideForPackage(
-            $packageName
-        );
+        $interveningRawMonthlyDownloads = $this->packageRawMonthlyDownloadsProvider->provideForPackage($packageName);
+
+        $this->interveningPackagesDownloads[$packageName] = $interveningRawMonthlyDownloads;
 
         return $this->interveningPackagesDownloads[$packageName];
     }

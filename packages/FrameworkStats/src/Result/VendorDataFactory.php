@@ -62,24 +62,7 @@ final class VendorDataFactory
         foreach ($frameworksVendorToName as $vendorName => $frameworkName) {
             $this->symfonyStyle->title(sprintf('Loading data for "%s" vendor', $vendorName));
 
-            $vendorPackageNames = $this->vendorPackagesProvider->provideForVendor($vendorName);
-            $packagesData = $this->packageDataFactory->createPackagesData($vendorPackageNames);
-
-            $vendorTotalLastYear = $this->summer->getLastYearTotalArraySum($packagesData);
-            $vendorTotalPreviousYear = $this->summer->getPreviousYearTotalArraySum($packagesData);
-
-            $lastYearTrend = ($vendorTotalLastYear / $vendorTotalPreviousYear * 100) - 100;
-            $lastYearTrend = round($lastYearTrend, 0);
-
-            $vendorData = new VendorData(
-                $frameworkName,
-                $vendorTotalLastYear,
-                $vendorTotalPreviousYear,
-                $lastYearTrend,
-                $packagesData
-            );
-
-            $vendorsData[$vendorName] = $vendorData;
+            $vendorsData[$vendorName] = $this->createVendorData($vendorName, $frameworkName);
 
             $this->symfonyStyle->newLine(2);
         }
@@ -91,5 +74,25 @@ final class VendorDataFactory
         $data['updated_at'] = (new DateTime())->format('Y-m-d H:i:s');
 
         return $data;
+    }
+
+    private function createVendorData(string $vendorName, string $frameworkName): VendorData
+    {
+        $vendorPackageNames = $this->vendorPackagesProvider->provideForVendor($vendorName);
+        $packagesData = $this->packageDataFactory->createPackagesData($vendorPackageNames);
+
+        $vendorTotalLastYear = $this->summer->getLastYearTotalArraySum($packagesData);
+        $vendorTotalPreviousYear = $this->summer->getPreviousYearTotalArraySum($packagesData);
+
+        $lastYearTrend = ($vendorTotalLastYear / $vendorTotalPreviousYear * 100) - 100;
+        $lastYearTrend = round($lastYearTrend, 0);
+
+        return new VendorData(
+            $frameworkName,
+            $vendorTotalLastYear,
+            $vendorTotalPreviousYear,
+            $lastYearTrend,
+            $packagesData
+        );
     }
 }
