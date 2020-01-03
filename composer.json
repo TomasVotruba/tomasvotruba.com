@@ -36,7 +36,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\Website\\Tests\\": "tests"
+            "TomasVotruba\\Website\\Tests\\": "tests",
+            "TomasVotruba\\FrameworkStats\\Tests\\": "packages/FrameworkStats/tests"
         }
     },
     "scripts": {

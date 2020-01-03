@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace TomasVotruba\FrameworkStats;
 
+use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 
 final class Statistics
 {
-    public function expandDailyAverageValuesByDayCountInMonth(array $valuesByMonth): array
+    public function expandDailyAverageToMonthTotal(array $valuesByMonth): array
     {
         foreach ($valuesByMonth as $month => $averageDailyDownloads) {
             $daysInTheMonth = $this->getDaysInMonthByYearMonth($month);
@@ -32,15 +33,8 @@ final class Statistics
 
         $month = (int) $matches['month'];
 
-        if (in_array($month, [1, 3, 5, 7, 8, 10, 12], true)) {
-            return 31;
-        }
+        $dateTime = DateTime::from($month);
 
-        if (in_array($month, [2, 4, 6, 9, 11], true)) {
-            return 30;
-        }
-
-        // @todo or 29
-        return 28;
+        return (int) $dateTime->format('t');
     }
 }
