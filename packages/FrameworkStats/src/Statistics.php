@@ -5,19 +5,21 @@ declare(strict_types=1);
 namespace TomasVotruba\FrameworkStats;
 
 use Nette\Utils\DateTime;
-use Nette\Utils\Strings;
-use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 
 final class Statistics
 {
-    public function expandDailyAverageToMonthTotal(array $valuesByMonth): array
+    /**
+     * @param int[] $dailyAverageByYearMonth
+     * @return int[]
+     */
+    public function expandDailyAverageToMonthTotal(array $dailyAverageByYearMonth): array
     {
-        foreach ($valuesByMonth as $month => $averageDailyDownloads) {
-            $daysInTheMonth = $this->getDaysInMonthByYearMonth($month);
-            $valuesByMonth[$month] = $averageDailyDownloads * $daysInTheMonth;
+        foreach ($dailyAverageByYearMonth as $yearMonth => $dailyAverage) {
+            $daysInTheMonth = $this->getDaysInMonthByYearMonth($yearMonth);
+            $dailyAverageByYearMonth[$yearMonth] = $dailyAverage * $daysInTheMonth;
         }
 
-        return $valuesByMonth;
+        return $dailyAverageByYearMonth;
     }
 
     /**
@@ -25,15 +27,7 @@ final class Statistics
      */
     private function getDaysInMonthByYearMonth(string $yearMonth): int
     {
-        $matches = Strings::match($yearMonth, '#(?<year>\d+)\-(?<month>\d+)#');
-
-        if (! isset($matches['month'])) {
-            throw new ShouldNotHappenException();
-        }
-
-        $month = (int) $matches['month'];
-
-        $dateTime = DateTime::from($month);
+        $dateTime = DateTime::from($yearMonth);
 
         return (int) $dateTime->format('t');
     }

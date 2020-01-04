@@ -7,6 +7,7 @@ namespace TomasVotruba\FrameworkStats\Result;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 use TomasVotruba\FrameworkStats\Packagist\PackageMonthlyDownloadsProvider;
+use TomasVotruba\FrameworkStats\Packagist\Purifier\PHPStanNettePackagesPurifier;
 use TomasVotruba\FrameworkStats\Sorter;
 use TomasVotruba\FrameworkStats\Statistics;
 use TomasVotruba\FrameworkStats\ValueObject\PackageData;
@@ -43,8 +44,14 @@ final class PackageDataFactory
      */
     private $sorter;
 
+    /**
+     * @var PHPStanNettePackagesPurifier
+     */
+    private $phpStanNettePackagesPurifier;
+
     public function __construct(
         PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
+        PHPStanNettePackagesPurifier $phpStanNettePackagesPurifier,
         Statistics $statistics,
         Sorter $sorter,
         SymfonyStyle $symfonyStyle
@@ -53,6 +60,7 @@ final class PackageDataFactory
         $this->statistics = $statistics;
         $this->symfonyStyle = $symfonyStyle;
         $this->sorter = $sorter;
+        $this->phpStanNettePackagesPurifier = $phpStanNettePackagesPurifier;
     }
 
     public function createPackagesData(array $packageNames): array
@@ -66,21 +74,25 @@ final class PackageDataFactory
                 continue;
             }
 
-            // split into first 12 months, then next 12 months
-            $chunks = array_chunk($monthlyDownloads, 12, true);
-
-            $last12Months = $this->statistics->expandDailyAverageToMonthTotal($chunks[0]);
-            /** @var int $last12Months */
-            $last12Months = array_sum($last12Months);
-
-            $previous12Months = $this->statistics->expandDailyAverageToMonthTotal($chunks[1]);
-            /** @var int $previous12Months */
-            $previous12Months = array_sum($previous12Months);
+            // total downloads for 1st year
+            $last12Months = $this->getChunkAndExpandDailyAverageToMonthAndSum($monthlyDownloads, 12, 0);
+            // total downloads for 2nd years
+            $previous12Months = $this->getChunkAndExpandDailyAverageToMonthAndSum($monthlyDownloads, 12, 1);
 
             if ($previous12Months === 0) {
                 // to prevent fatal errors
                 continue;
             }
+
+            $last12Months = $this->phpStanNettePackagesPurifier->correctLastYearDownloads(
+                $last12Months,
+                $packageName
+            );
+
+            $previous12Months = $this->phpStanNettePackagesPurifier->correctPreviousYearDownloads(
+                $previous12Months,
+                $packageName
+            );
 
             $lastYearTrend = 100 * ($last12Months / $previous12Months) - 100;
             if ($lastYearTrend > 300) {
@@ -146,5 +158,22 @@ final class PackageDataFactory
         }
 
         return false;
+    }
+
+    /**
+     * @param int[] $dataByYearMonth
+     */
+    private function getChunkAndExpandDailyAverageToMonthAndSum(
+        array $dataByYearMonth,
+        int $chunkSize,
+        int $chunkPosition
+    ): int {
+        $chunks = array_chunk($dataByYearMonth, $chunkSize, true);
+
+        $chunk = $chunks[$chunkPosition];
+
+        $expandedChunk = $this->statistics->expandDailyAverageToMonthTotal($chunk);
+
+        return (int) array_sum($expandedChunk);
     }
 }
