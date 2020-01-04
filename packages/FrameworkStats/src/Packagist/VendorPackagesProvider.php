@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\FrameworkStats\Packagist;
 
+use Nette\Utils\Strings;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 use TomasVotruba\FrameworkStats\Json\FileToJsonLoader;
 
@@ -53,7 +54,39 @@ final class VendorPackagesProvider
             $packageNames[] = 'laravel/framework';
         }
 
-        // exclude undesired packages
-        return array_diff($packageNames, $this->excludedFrameworkPackages);
+        return $this->excludeUndesiredPackages($packageNames);
+    }
+
+    /**
+     * @param string[] $packageNames
+     * @return string[]
+     */
+    private function excludeUndesiredPackages(array $packageNames): array
+    {
+        foreach ($packageNames as $key => $packageName) {
+            if (! $this->isPackageExcluded($packageName)) {
+                continue;
+            }
+
+            unset($packageNames[$key]);
+        }
+        return $packageNames;
+    }
+
+    private function isPackageExcluded(string $packageName): bool
+    {
+        foreach ($this->excludedFrameworkPackages as $excludedFrameworkPackage) {
+            if (Strings::contains($excludedFrameworkPackage, '*')) {
+                if (fnmatch($excludedFrameworkPackage, $packageName)) {
+                    return true;
+                }
+            }
+
+            if ($packageName === $excludedFrameworkPackage) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

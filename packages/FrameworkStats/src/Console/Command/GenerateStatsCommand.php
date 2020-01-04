@@ -17,6 +17,16 @@ use TomasVotruba\FrameworkStats\Yaml\YamlFileDumper;
 final class GenerateStatsCommand extends Command
 {
     /**
+     * @var string
+     */
+    private const PARAMETER_KEY = 'php_framework_trends';
+
+    /**
+     * @var string
+     */
+    private const GENERATED_FILE_OUTPUT_PATH = __DIR__ . '/../../../../../source/_data/generated/php_framework_trends.yaml';
+
+    /**
      * @var string[]
      */
     private $frameworksVendorToName = [];
@@ -73,9 +83,11 @@ final class GenerateStatsCommand extends Command
             $vendorsData['vendors'][$key] = $this->vendorDataMapper->mapObjectToArray($vendorData);
         }
 
-        $filePath = __DIR__ . '/../../../../../source/_data/generated/php_framework_trends.yaml';
-
-        $this->yamlFileDumper->dumpAsParametersToFile('php_framework_trends', $vendorsData, $filePath);
+        $this->yamlFileDumper->dumpAsParametersToFile(
+            self::PARAMETER_KEY,
+            $vendorsData,
+            self::GENERATED_FILE_OUTPUT_PATH
+        );
 
         $this->symfonyStyle->success('Data imported!');
 
