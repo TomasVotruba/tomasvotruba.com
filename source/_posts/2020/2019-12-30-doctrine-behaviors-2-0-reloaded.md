@@ -300,19 +300,7 @@ KnpLabs\DoctrineBehaviors don't support softdeletable and non-materialized tree 
 
 ### How do you Migrate from Gedmo/Stof to KnpLabs\DoctrineBehaviors?
 
-In the same way, you can upgrade from 1 to 2, you can migrate between projects. We've added Rector set, that handles [Gedmo/Stof to KnpLabs\DoctrineBehaviors](https://github.com/rectorphp/rector/issues/2473).  
-
-```yaml
-composer require rector/rector --dev
-vendor/bin/rector process src --set doctrine-gedmo-to-knplabs
-```
-
-At the time of writing this post, it supports:
-
-- Timestampable
-- Sluggable
-- Tree
-- Translatable
+Read [Migrate Gedmo to KnpLabs](/blog/2020/01/06/migrate-gedmo-to-knplabs) post to find the answer. 
 
 <br>
 
