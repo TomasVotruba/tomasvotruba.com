@@ -47,7 +47,7 @@ I took the risk.
 
 ## What is new in Doctrine Behaviors 2.0?
 
-All right, you get it. There were lof changes, but what exactly?
+All right, you get it. There were lots changes, but what exactly?
 
 Let's start with the *sad part*.
 
