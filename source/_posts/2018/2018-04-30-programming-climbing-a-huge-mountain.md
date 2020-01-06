@@ -59,7 +59,7 @@ It doesn't matter that other programmer made it, that they don't cover 100 % of 
 
 Zen, Kaizen, Ikigai, Present moment, <a href="/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport">Deep Work</a>, Flow. Whatever you call it, it matters.
 
-When I program, I don't know what will happen in next 15 minutes. Maybe it will be over, or maybe I'll find a bug that I'll investigate for 2 hours in a row and then [use this workaround](https://github.com/TomasVotruba/tomasvotruba.cz/commit/a890d5100e2226d4958504a50efa282fd1b2c4a1).
+When I program, I don't know what will happen in next 15 minutes. Maybe it will be over, or maybe I'll find a bug that I'll investigate for 2 hours in a row and then [use this workaround](https://github.com/TomasVotruba/tomasvotruba.com/commit/a890d5100e2226d4958504a50efa282fd1b2c4a1).
 
 <img src="/assets/images/posts/2018/climb/climb-5.jpg" class="img-thumbnail">
 

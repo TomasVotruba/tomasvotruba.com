@@ -159,7 +159,7 @@ All services of `EventSubscriber` type are collected by EventDispatcher.
 - [Security Voters](https://symfony.com/doc/current/security/voters.html) → Access Decision Manager
 
 
-As for tags - [they often promote bad practise of duplicated information](https://www.tomasvotruba.cz/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/#bare-tagging-is-duplicated-information). Don't use it if you don't have to.
+As for tags - [they often promote bad practise of duplicated information](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/#bare-tagging-is-duplicated-information). Don't use it if you don't have to.
 
 
 ### Why is this Useful?

@@ -17,7 +17,7 @@ If you look at the [PHP Framework Trends table](/php-framework-trends/) and see 
 
 When I talked with my friends Marek and Honza about PHP downloads trends last week, they came with an idea that stats should include **downloads numbers for each version** and **the release date** of that version. That would help us separate long-tail dinosaurs from actively adopted packages.
 
-So I closed myself in a closet for 3 days and put together framework downloads grouped by version ([see PR](https://github.com/TomasVotruba/tomasvotruba.cz/pull/738/files)). I won't lie, few numbers really surprised me.
+So I closed myself in a closet for 3 days and put together framework downloads grouped by version ([see PR](https://github.com/TomasVotruba/tomasvotruba.com/pull/738/files)). I won't lie, few numbers really surprised me.
 
 ## Symfony on Bleeding Edge
 
@@ -69,7 +69,7 @@ The Zend community is clearly interested in new features, far from "Zend is Dead
 - The backbone for applications - [`nette/application`](/package-downloads-by-version/#nette-application) - **has only 4 % adoption**. No surprise there, since Nette 3.0 was released only on April 2nd, 2019. Keep updating!
 
 
-Here are [data to this day](https://github.com/TomasVotruba/tomasvotruba.cz/blob/6c9df3aa834a213ea1a94d619f4cbc1564ff727e/source/_data/generated/vendor_packages_by_version.yaml), I wonder how they change in 6 months.
+Here are [data to this day](https://github.com/TomasVotruba/tomasvotruba.com/blob/6c9df3aa834a213ea1a94d619f4cbc1564ff727e/source/_data/generated/vendor_packages_by_version.yaml), I wonder how they change in 6 months.
 
 <br>
 

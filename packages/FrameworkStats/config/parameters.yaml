@@ -1,5 +1,5 @@
 parameters:
-    # used by https://www.tomasvotruba.cz/php-framework-trends/
+    # used by https://www.tomasvotruba.com/php-framework-trends/
     frameworks_vendor_to_name:
         nette: Nette
         symfony: Symfony

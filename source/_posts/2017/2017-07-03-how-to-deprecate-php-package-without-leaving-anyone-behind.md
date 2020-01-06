@@ -165,7 +165,7 @@ I've come with this organization a year ago, when me and my friends needed to de
 
 One the most underestimated places is a blog post. I consider it the most important place for people who don't know the package yet, but might start using it. I'd feel bad if people would start using package **after I deprecated them**, instead of reaching out for the replacement right away.
 
-I've [created a simple warning system](https://github.com/TomasVotruba/tomasvotruba.cz/pull/88) on my blog:
+I've [created a simple warning system](https://github.com/TomasVotruba/tomasvotruba.com/pull/88) on my blog:
 
 - Open post about the package.
 - Add warning above the perex with reasoning and suggested replacement:

@@ -34,7 +34,7 @@ Although the coding standard is standard nowadays, it's not very easy to setup t
 
 Coding Standard makes contributing much more fearless since **you don't have to worry I'll get smashed in code-review by "extra space here" comment**.
 
-Since it uses only PHP_CodeSniffer and not PHP CS Fixer, these still is a lot of manual work and space for huge cost-effective improvement. I tried to help with EasyCodingStandard implementation many months ago, but in that time ECS required PHP 7.1 and Doctrine not and used Neon of YAML to configure. Not anymore! [YAML is now default since ECS 4](https://www.tomasvotruba.cz/blog/2018/03/26/new-in-easy-coding-standard-4-clean-symfony-standard-with-yaml-and-services/), so the path is open from the technical point of view.
+Since it uses only PHP_CodeSniffer and not PHP CS Fixer, these still is a lot of manual work and space for huge cost-effective improvement. I tried to help with EasyCodingStandard implementation many months ago, but in that time ECS required PHP 7.1 and Doctrine not and used Neon of YAML to configure. Not anymore! [YAML is now default since ECS 4](/blog/2018/03/26/new-in-easy-coding-standard-4-clean-symfony-standard-with-yaml-and-services/), so the path is open from the technical point of view.
 
 ## 3. Cut the Weight to Save Yourself
 

@@ -205,13 +205,13 @@ Tip: You can use [Tracy](https://github.com/nette/tracy) to delegate the value d
 In EasyCodingStandard, PHP_CodeSniffer, PHP CS Fixer, Rector or PHPStan there is always work with files. Is there some error with the file? Show it!
 
 <blockquote class="blockquote">
-     <em>File /var/www/tomasvotruba.cz/packages/src/TweetPublisher.php not found</em>
+     <em>File /var/www/tomasvotruba.com/packages/src/TweetPublisher.php not found</em>
 </blockquote>
 
 Oh, sorry:
 
 <blockquote class="blockquote">
-     <em>File "/var/www/tomasvotruba.cz/packages/src/TweetPublisher.php" not found</em>
+     <em>File "/var/www/tomasvotruba.com/packages/src/TweetPublisher.php" not found</em>
 </blockquote>
 
 **Absolute paths can be really long** in Docker, CI or in the non-basic install. We don't need irrelevant information - every character counts!

@@ -71,26 +71,26 @@ And that will get you rather chaotic report:
 
 ```bash
  [ERROR] Symfony\Component\Yaml\Exception\ParseException: Unable to parse at line 9 (near "@# global templates
-         variables"). in /var/www/tomasvotruba.cz/vendor/symfony/yaml/Parser.php:415
+         variables"). in /var/www/tomasvotruba.com/vendor/symfony/yaml/Parser.php:415
          Stack trace:
-         #0 /var/www/tomasvotruba.cz/vendor/symfony/yaml/Parser.php(454): Symfony\Component\Yaml\Parser->doParse(' @#
+         #0 /var/www/tomasvotruba.com/vendor/symfony/yaml/Parser.php(454): Symfony\Component\Yaml\Parser->doParse(' @#
          global temp...', 768)
-         #1 /var/www/tomasvotruba.cz/vendor/symfony/yaml/Parser.php(315): Symfony\Component\Yaml\Parser->parseBlock(8,
+         #1 /var/www/tomasvotruba.com/vendor/symfony/yaml/Parser.php(315): Symfony\Component\Yaml\Parser->parseBlock(8,
          '@# global templ...', 768)
-         #2 /var/www/tomasvotruba.cz/vendor/symfony/yaml/Parser.php(95): Symfony\Component\Yaml\Parser->doParse(Array,
+         #2 /var/www/tomasvotruba.com/vendor/symfony/yaml/Parser.php(95): Symfony\Component\Yaml\Parser->doParse(Array,
          768)
-         #3 /var/www/tomasvotruba.cz/vendor/symfony/yaml/Parser.php(62):
+         #3 /var/www/tomasvotruba.com/vendor/symfony/yaml/Parser.php(62):
          Symfony\Component\Yaml\Parser->parse('imports:\n    - ...', 768)
-         #4 /var/www/tomasvotruba.cz/vendor/symfony/dependency-injection/Loader/YamlFileLoader.php(621):
+         #4 /var/www/tomasvotruba.com/vendor/symfony/dependency-injection/Loader/YamlFileLoader.php(621):
          Symfony\Component\Yaml\Parser->parseFile('/var/www/tomasv...', 768)
          #5
-         /var/www/tomasvotruba.cz/vendor/symplify/package-builder/src/Yaml/AbstractParameterMergingYamlFileLoader.php(52
+         /var/www/tomasvotruba.com/vendor/symplify/package-builder/src/Yaml/AbstractParameterMergingYamlFileLoader.php(52
          ): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/www/tomasv...')
-         #6 /var/www/tomasvotruba.cz/vendor/symfony/config/Loader/DelegatingLoader.php(40):
+         #6 /var/www/tomasvotruba.com/vendor/symfony/config/Loader/DelegatingLoader.php(40):
          Symplify\PackageBuilder\Yaml\AbstractParameterMergingYamlFileLoader->load('/var/www/tomasv...', NULL)
-         #7 /var/www/tomasvotruba.cz/vendor/symplify/statie/src/DependencyInjection/StatieKernel.php(43):
+         #7 /var/www/tomasvotruba.com/vendor/symplify/statie/src/DependencyInjection/StatieKernel.php(43):
          Symfony\Component\Config\Loader\DelegatingLoader->load('/var/www/tomasv...')
-         #8 /var/www/tomasvotruba.cz/vendor/symfony/http-kernel/Kernel.php(614):
+         #8 /var/www/tomasvotruba.com/vendor/symfony/http-kernel/Kernel.php(614):
         ...
 ```
 

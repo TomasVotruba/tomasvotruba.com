@@ -170,7 +170,7 @@ When setup properly, you get this file in generated code:
 
 See these PRs:
 
-- [upgrading TomasVotruba.cz](https://github.com/TomasVotruba/tomasvotruba.cz/pull/204)
+- [upgrading TomasVotruba.cz](https://github.com/TomasVotruba/tomasvotruba.com/pull/204)
 - and [Pehapkari.cz](https://github.com/pehapkari/pehapkari.cz/pull/358)
 
 <br>
