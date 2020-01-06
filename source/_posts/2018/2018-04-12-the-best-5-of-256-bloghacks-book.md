@@ -69,7 +69,7 @@ Static websites are fast, simple, easy for your fan/critics-base to work with an
 
 This was one of the biggest fails on my blog. Imagine you've read about "symfony controller service something", you liked it, but you don't remember the exact title of the post. My blog has all posts on the main page, with no paging, so you can just use *Ctrl + F* to find... **well that just sucks, right?**
 
-Thanks to Yegor and Vojta I finally [added Google Search](https://github.com/TomasVotruba/tomasvotruba.cz/pull/286) on the homepage, so you can type "symfony controller service", hit *Enter* and [get results you need](https://www.google.cz/search?sitesearch=tomasvotruba.cz&q=%22symfony+controller+service).
+Thanks to Yegor and Vojta I finally [added Google Search](https://github.com/TomasVotruba/tomasvotruba.com/pull/286) on the homepage, so you can type "symfony controller service", hit *Enter* and [get results you need](https://www.google.cz/search?sitesearch=tomasvotruba.cz&q=%22symfony+controller+service).
 
 I'm sorry to all that felt frustrated when looking for any valuable content post by post, manually.
 
@@ -77,7 +77,7 @@ In case you'd like to try Algolia and [simple DocSearch](https://community.algol
 
 <div class="card mb-5">
     <div class="card-body">
-        <strong>Tip summary</strong>: working solution is better than a perfect one. Add simple stupid Google Search right from the start. I do it, Yegor does it, Google does it. Don't you know how? Just copy <a href="https://github.com/TomasVotruba/tomasvotruba.cz/pull/286">these few lines</a>.
+        <strong>Tip summary</strong>: working solution is better than a perfect one. Add simple stupid Google Search right from the start. I do it, Yegor does it, Google does it. Don't you know how? Just copy <a href="https://github.com/TomasVotruba/tomasvotruba.com/pull/286">these few lines</a>.
     </div>
 </div>
 

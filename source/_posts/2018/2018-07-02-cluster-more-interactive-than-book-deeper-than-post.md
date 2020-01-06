@@ -42,14 +42,14 @@ That way people can express themselves and improve content to be:
 
 If you allow comments, it's the first step to improve the content. But most people read the content and not the comments - by naturally, you need to read the post, so you could understand comments under it.
 
-What if the readers could change the content? And what if you make it as easy for them as [clinking a link](https://github.com/TomasVotruba/tomasvotruba.cz/edit/master/source/_posts/2018/2018-06-28-dont-read-books.md).
+What if the readers could change the content? And what if you make it as easy for them as [clinking a link](https://github.com/TomasVotruba/tomasvotruba.com/edit/master/source/_posts/2018/2018-06-28-dont-read-books.md).
 
 That way the content is cooperative work of more people, more authors would be happy to share it and get credit for it. 3 posts about Symfony Console [proven practice](https://www.linkedin.com/pulse/proven-practices-process-stan-garfield) by 3 different authors can never be as good as 1 written by 3 authors together.
 
 <div class="text-center mb-3">
     <img src="/assets/images/posts/2018/no-books/contributors.png" class="img-thumbnail">
     <br>
-    This is number of contributors to this blog. It's not like we're writing together all the time, but I'm very happy it's more than 0, much more. Thank <a href="https://github.com/TomasVotruba/tomasvotruba.cz/graphs/contributors">you all</a>!
+    This is number of contributors to this blog. It's not like we're writing together all the time, but I'm very happy it's more than 0, much more. Thank <a href="https://github.com/TomasVotruba/tomasvotruba.com/graphs/contributors">you all</a>!
 </div>
 
 ## Levelling Up Tailored to Your Personal Needs

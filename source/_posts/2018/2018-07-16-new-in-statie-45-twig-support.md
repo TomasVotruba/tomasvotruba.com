@@ -129,7 +129,7 @@ If you use Statie, you're probably running on Latte. In the case you prefer Twig
 
 Again, check these diffs, so you have the idea **how big that change really is**:
 
-- [TomasVotruba.cz](https://github.com/TomasVotruba/tomasvotruba.cz/pull/380/files)
+- [TomasVotruba.cz](https://github.com/TomasVotruba/tomasvotruba.com/pull/380/files)
 - [Pehapkari.cz](https://github.com/pehapkari/pehapkari.cz/pull/486/files)
 
 I feel you. You can stay with Latte until... just kidding. That's a lot of work, right? Well, I'm not that hardworking, don't worry. I'm a lazy bastard, so I made [a package for Latte to Twig migration](/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions/).

@@ -360,7 +360,7 @@ Finally :)
 
 <br>
 
-Do you want to see solutions 2, 3 and 4 tested in real PHPUnit code? [They're here on Github](https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests/Posts/Year2019/FinalMock)
+Do you want to see solutions 2, 3 and 4 tested in real PHPUnit code? [They're here on Github](https://github.com/TomasVotruba/tomasvotruba.com/tree/master/tests/Posts/Year2019/FinalMock)
 
 
 

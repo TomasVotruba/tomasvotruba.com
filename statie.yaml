@@ -20,13 +20,13 @@ parameters:
     site_title: "Tomas Votruba"
     site_url: "https://www.tomasvotruba.cz"
     disqus_shortname: "itsworthsharing"
-    github_repository_tests_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/tests"
+    github_repository_tests_directory: "https://github.com/TomasVotruba/tomasvotruba.com/tree/master/tests"
 
     thanker_repository_name: 'TomasVotruba/tomasvotruba.cz'
     thanker_author_name: 'TomasVotruba'
 
     # Statie settings
-    github_repository_source_directory: "https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/source"
+    github_repository_source_directory: "https://github.com/TomasVotruba/tomasvotruba.com/tree/master/source"
 
     redirects:
         # old url → new url

@@ -156,7 +156,7 @@ Check real life `.travis.yml` to getter better idea:
 
 ## 6. Stay Secure
 
-When I said you can **Tweet** with your Travis, I mean it. That's what me lazy bastard [does](https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/packages/StatieTweetPublisher) on this blog:
+When I said you can **Tweet** with your Travis, I mean it. That's what me lazy bastard [does](https://github.com/TomasVotruba/tomasvotruba.com/tree/master/packages/StatieTweetPublisher) on this blog:
 
 ```yaml
 after_deploy:
@@ -183,7 +183,7 @@ This could work, but then everyone would see it.
 
 **How to do it in secret?**
 
-You can actually **enter them manually** in Travis administration of your repository - [here is the tutorial](https://github.com/TomasVotruba/tomasvotruba.cz/tree/master/packages/StatieTweetPublisher#setup-travis-online).
+You can actually **enter them manually** in Travis administration of your repository - [here is the tutorial](https://github.com/TomasVotruba/tomasvotruba.com/tree/master/packages/StatieTweetPublisher#setup-travis-online).
 
 But still, what if someone will send you following PR:
 

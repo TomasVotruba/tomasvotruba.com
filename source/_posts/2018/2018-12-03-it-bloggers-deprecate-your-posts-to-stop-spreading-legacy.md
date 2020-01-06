@@ -90,7 +90,7 @@ It can be as easy as upgrade `composer.json`:
 
 "Code, not words!" I hear you.
 
-I'm working on such PR right now for this blog - [see it on Github]( https://github.com/TomasVotruba/tomasvotruba.cz/pull/582).
+I'm working on such PR right now for this blog - [see it on Github]( https://github.com/TomasVotruba/tomasvotruba.com/pull/582).
 
 ### What Changes are Included?
 

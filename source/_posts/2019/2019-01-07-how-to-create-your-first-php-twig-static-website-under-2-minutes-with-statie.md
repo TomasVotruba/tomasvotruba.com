@@ -11,11 +11,11 @@ tweet: "New Post on #php 🐘 blog: How to Create Your First PHP #Twig Static We
 
 Until today, to create and understand static website basics, you had to learn:
 
-- [Statie - part 1: How to run it Locally](https://www.tomasvotruba.cz/blog/2017/02/20/statie-how-to-run-it-locally/)
+- [Statie - part 1: How to run it Locally](https://www.tomasvotruba.com/blog/2017/02/20/statie-how-to-run-it-locally/)
 - [Statie - part 2: How to add Contact Page With Data
-](https://www.tomasvotruba.cz/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data/)
-- [Statie - part 3: How to Add Reusable Parts of Code](https://www.tomasvotruba.cz/blog/2017/03/09/statie-3-how-to-add-reusable-parts-of-code/)
-- [Statie - part 4: How to Create The Simplest Blog](https://www.tomasvotruba.cz/blog/2017/03/13/statie-4-how-to-create-the-simplest-blog/)
+](https://www.tomasvotruba.com/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data/)
+- [Statie - part 3: How to Add Reusable Parts of Code](https://www.tomasvotruba.com/blog/2017/03/09/statie-3-how-to-add-reusable-parts-of-code/)
+- [Statie - part 4: How to Create The Simplest Blog](https://www.tomasvotruba.com/blog/2017/03/13/statie-4-how-to-create-the-simplest-blog/)
 
 **Don't read it! It's an utter waste of time.**
 

@@ -25,7 +25,7 @@ Then I took the **sum of package downloads in the last 12 months** and the **tre
 
 Some packages were out only 6 months, but rising in downloads with + 8 000 % trend, because they were a new split of monorepo. Imagine "X is Rising in + 8 000 % downloads in a Year!" - That's marketing nonsense. That's why **small packages with less than 1000 downloads a day or less than 12 months old are excluded as outliers**.
 
-Instead of copy-pasting conditions here, check the full process in [this PR](https://github.com/TomasVotruba/tomasvotruba.cz/pull/717).
+Instead of copy-pasting conditions here, check the full process in [this PR](https://github.com/TomasVotruba/tomasvotruba.com/pull/717).
 
 ## Results
 

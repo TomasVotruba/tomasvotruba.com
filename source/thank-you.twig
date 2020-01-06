@@ -35,7 +35,7 @@ commit_limit: 5
                     <strong>{{ contributor.name }}</strong>
 
                     <small class="text-secondary">
-                        for <a href="https://github.com/TomasVotruba/tomasvotruba.cz/commits?author={{ contributor.name }}">{{ contributor.contribution_count }} commits</a>
+                        for <a href="https://github.com/TomasVotruba/tomasvotruba.com/commits?author={{ contributor.name }}">{{ contributor.contribution_count }} commits</a>
                     </small>
                 </div>
             {% endif %}
@@ -51,7 +51,7 @@ commit_limit: 5
         {% for contributor in contributors %}
             {% if contributor.contribution_count <= commit_limit %}
                 {% if loop.last %}and{% endif %}
-                <a href="https://github.com/TomasVotruba/tomasvotruba.cz/commits?author={{ contributor.name }}">{{ contributor.name }}</a>{% if loop.index < (length(contributors) - 1) %}, {% endif %}{% if loop.last %}.{% endif %}
+                <a href="https://github.com/TomasVotruba/tomasvotruba.com/commits?author={{ contributor.name }}">{{ contributor.name }}</a>{% if loop.index < (length(contributors) - 1) %}, {% endif %}{% if loop.last %}.{% endif %}
 
             {% endif %}
         {% endfor %}
