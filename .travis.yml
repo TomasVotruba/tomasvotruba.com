@@ -61,7 +61,7 @@ jobs:
                 - vendor/bin/statie tweet-post
 
     allow_failures:
-        - php: '7.4snapshot'
+        - name: 'Rector'
 
 cache:
     directories:
