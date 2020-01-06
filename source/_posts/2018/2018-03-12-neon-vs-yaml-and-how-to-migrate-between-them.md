@@ -183,7 +183,7 @@ services:
         arguments: ["@=service('App\\\\Mail\\\\MailerConfiguration').getMailerMethod()"]
 ```
 
-If you want to see real-life example, I [tried it once](https://www.tomasvotruba.com/blog/2018/03/08/why-is-collector-pattern-so-awesome/#2-use-expression-language). But went quickly back because I could not remember what exactly that means and how it work.
+If you want to see real-life example, I [tried it once](/blog/2018/03/08/why-is-collector-pattern-so-awesome/#2-use-expression-language). But went quickly back because I could not remember what exactly that means and how it work.
 
 ## How is the Ecosystem Support?
 

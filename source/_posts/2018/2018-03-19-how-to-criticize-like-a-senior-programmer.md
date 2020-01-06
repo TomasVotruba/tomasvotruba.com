@@ -140,7 +140,7 @@ And so on... you get the gist.
 
 I got inspired by [Derek Muller](https://www.youtube.com/watch?v=RQaW2bFieo8), known as author of [Verritasium](https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA), with "start with misconceptions first". This list describes just few of misconceptions on feedback topic I found on Github during my open-source career. If you know any more, just tell me in the comments (*"you forgot some"*).
 
-If you know Czech, you can check my talk [Jako Vinnetou a Old Shatterhand – refaktoruj nenávist v přátelství](https://www.tomasvotruba.com/talks/#jako-vinnetou-a-old-shatterhand-refaktoruj-nenavist-v-pratelstvi) from PHPLive 2016, where I address similar topic between 2 PHP frameworks.
+If you know Czech, you can check my talk [Jako Vinnetou a Old Shatterhand – refaktoruj nenávist v přátelství](/talks/#jako-vinnetou-a-old-shatterhand-refaktoruj-nenavist-v-pratelstvi) from PHPLive 2016, where I address similar topic between 2 PHP frameworks.
 
 So...
 

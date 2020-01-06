@@ -114,7 +114,7 @@ Followed by [a year later reflection](http://www.stevepavlina.com/blog/2015/07/o
 
 ### Where Do You Find Me?
 
-See [contact page](https://www.tomasvotruba.com/contact).
+See [contact page](/contact).
 
 
 ### What about Your Socials Experiments?
