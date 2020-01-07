@@ -14,20 +14,15 @@ perex: |
 tweet: "New Post on #php 🐘 blog: Migrate Gedmo to KnpLabs"
 ---
 
-At the time of writing, these behaviors have migration path with instant upgrade support:
+Pick behavior your want to migrate from Gedmo to KnpLabs:
 
 - [1. Timestampable](#1-migrate-timestampable)
 - [2. Sluggable](#2-migrate-sluggable)
 - [3. Tree](#3-migrate-tree)
 - [4. Translatable](#4-migrate-translatable)
-
-*(Tip: Click to jump into their section in this post)*
-
-Both tools also support these behaviors, but wait on your feedback (most of them will move above in the future):
-
-- *Blameable*
-- *Loggable*
-- *SoftDeletable*
+- [5. Blameable](#5-migrate-blameable)
+- [6. Loggable](#6-migrate-loggable)
+- [7. SoftDeletable](#7-migrate-softdeletable)
 
 <br>
 
@@ -37,7 +32,7 @@ If you **use other Gedmo behavior that is not listed here**, you might request o
 
 ## 1. Migrate Timestampable
 
-**Gedmo** 
+### Gedmo 
 
 ```php
 <?php
@@ -60,7 +55,7 @@ class Meetup
 
 ↓
 
-**KnpLabs**
+### KnpLabs
 
 - Replace trait with `Knp\DoctrineBehaviors\Model\Timestampable\TimestampableTrait`
 - Add `Knp\DoctrineBehaviors\Contract\Entity\TimestampableInterface` interface
@@ -89,7 +84,7 @@ class Meetup implements TimestampableInterface
 
 ## 2. Migrate Sluggable
 
-**Gedmo**
+### Gedmo
 
 ```php
 <?php
@@ -125,11 +120,11 @@ class Meetup
 
 ↓
 
-**KnpLabs**
+### KnpLabs
 
 - Add `Knp\DoctrineBehaviors\Model\Sluggable\SluggableTrait` trait 
-- Remove `getSlug()`/`setSlug()` method that is already in trait
 - Add `Knp\DoctrineBehaviors\Contract\Entity\SluggableInterface` interface
+- Remove `getSlug()`/`setSlug()` method that is already in trait
 
 - Replace `* @Gedmo\Slug(fields={"name"})` with `getSluggableFields()` method that contains fields
 
@@ -191,8 +186,6 @@ class Category implements SluggableInterface
 }
 ```
 
-
-
 ## 3. Migrate Tree
 
 This one will be tricky, because:
@@ -206,7 +199,7 @@ So if you're using anything but materialized path in Gedmo, you'll have to migra
 
 The PHP migration looks like this:
 
-**Gedmo**
+### Gedmo
 
 ```php
 <?php
@@ -287,11 +280,12 @@ class Category
 
 ↓
 
-**KnpLabs**
+### KnpLabs
 
 - Add `Knp\DoctrineBehaviors\Model\Tree\TreeNodeTrait` trait
 - Add `Knp\DoctrineBehaviors\Contract\Entity\TreeNodeInterface` interface
 - Remove all tree related properties and methods, since they're in trait now
+- Remove Gedmo annotations
 
 ```php
 <?php
@@ -326,7 +320,7 @@ So even if you use Symfony 4 and **everything works well** for you, **consider c
 
 <br>
 
-**Gedmo**
+### Gedmo
 
 ```php
 <?php
@@ -374,11 +368,12 @@ class Category implements Translatable
 
 ↓
 
-**KnpLabs**
+### KnpLabs
 
 - Replace interface with `Knp\DoctrineBehaviors\Contract\Entity\TranslatableInterface`
 - Add `Knp\DoctrineBehaviors\Model\Translatable\TranslatableTrait`
 - Remove all translated fields and locale methods from main entity
+- Remove Gedmo annotations
 
 ```php
 <?php
@@ -432,6 +427,197 @@ $category->getTitle();
 ```
 
 That's all for the migration. Oh, you're still reading? Are you waiting for some easy solution to cover it all?
+
+## 5. Migrate Blameable
+
+### Gedmo
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Entity;
+
+use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ */
+class Category
+{
+    /**
+     * @Gedmo\Blameable(on="create")
+     */
+    private $createdBy;
+
+    /**
+     * @Gedmo\Blameable(on="update")
+     */
+    private $updatedBy;
+
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+     
+    public function getUpdatedBy()
+    {
+        return $this->updatedBy;
+    }
+}
+```
+
+↓
+
+### KnpLabs
+
+- Add `Knp\DoctrineBehaviors\Contract\Entity\BlameableInterface` interface
+- Add `Knp\DoctrineBehaviors\Model\Blameable\BlameableTrait` trait
+- Remove Gedmo annotations
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Knp\DoctrineBehaviors\Contract\Entity\BlameableInterface;
+use Knp\DoctrineBehaviors\Model\Blameable\BlameableTrait;
+
+/**
+ * @ORM\Entity
+ */
+class Category implements BlameableInterface
+{
+    use BlameableTrait;
+}
+```
+
+## 6. Migrate Loggable
+
+### Gedmo
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Entity;
+
+use Gedmo\Mapping\Annotation as Gedmo;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @Gedmo\Loggable
+ */
+class Category
+{
+    /**
+     * @Gedmo\Versioned
+     * @ORM\Column(name="title", type="string", length=8)
+     */
+    private $title;
+}
+```
+
+↓
+
+### KnpLabs
+
+- Add `Knp\DoctrineBehaviors\Model\Loggable\LoggableTrait` trait
+- Add `Knp\DoctrineBehaviors\Contract\Entity\LoggableInterface` interface
+- Remove Gedmo annotations
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Knp\DoctrineBehaviors\Model\Loggable\LoggableTrait;
+use Knp\DoctrineBehaviors\Contract\Entity\LoggableInterface;
+
+/**
+ * @ORM\Entity
+ */
+class Category implements LoggableInterface
+{
+    use LoggableTrait;
+
+    /**
+     * @ORM\Column(name="title", type="string", length=8)
+     */
+    private $title;
+}
+```
+
+## 7. Migrate SoftDeletable
+
+### Gedmo
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+
+/**
+ * @Gedmo\SoftDeleteable(fieldName="deletedAt", timeAware=false, hardDelete=true)
+ * @ORM\Entity
+ */
+class Cateory
+{
+    /**
+     * @ORM\Column(name="deletedAt", type="datetime", nullable=true)
+     */
+    private $deletedAt;
+    
+    public function getDeletedAt()
+    {
+        return $this->deletedAt;
+    }
+    
+    public function setDeletedAt($deletedAt)
+    {
+        $this->deletedAt = $deletedAt;
+    }
+}
+```
+
+↓
+
+### KnpLabs
+
+- Add `Knp\DoctrineBehaviors\Contract\Entity\SoftDeletableInterface` interface
+- Add `Knp\DoctrineBehaviors\Model\SoftDeletable\SoftDeletableTrait` trait
+- Remove Gedmo annotations
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Entity;
+
+use Knp\DoctrineBehaviors\Contract\Entity\SoftDeletableInterface;
+use Knp\DoctrineBehaviors\Model\SoftDeletable\SoftDeletableTrait;
+
+class Category implements SoftDeletableInterface
+{
+    use SoftDeletableTrait;
+}
+```
 
 ## Instant Upgrade what you Can
 
