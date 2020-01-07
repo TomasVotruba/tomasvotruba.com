@@ -9,7 +9,10 @@ perex: |
     <br>
     If you used older Doctrine Behaviors, you're covered with Rector migration path. 
     <br>
-    But what if you're using old broken Gedmo? **I'll show you how to migrate Gedmo to KnpLabs**.
+    But what if you're using old broken Gedmo?
+    <br> 
+    <br> 
+    **I'll show you how you can migrate Gedmo to KnpLabs**.
         
 tweet: "New Post on #php 🐘 blog: Migrate Gedmo to KnpLabs"
 ---
