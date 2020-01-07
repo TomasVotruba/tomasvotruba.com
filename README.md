@@ -1,6 +1,6 @@
 # [TomasVotruba.cz](https://www.tomasvotruba.cz) - [Statie](https://github.com/Symplify/Statie) based web
 
-[![Build Status](https://img.shields.io/travis/TomasVotruba/tomasvotruba.com/master.svg?style=flat-square)](https://travis-ci.com/TomasVotruba/tomasvotruba.cz)
+[![Build Status Github Actions](https://img.shields.io/github/workflow/status/tomasvotruba/tomasvotruba.com/Code_Checks?style=flat-square)](https://github.com/TomasVotruba/tomasvotruba.com/actions)
 
 ## Install & Run
 

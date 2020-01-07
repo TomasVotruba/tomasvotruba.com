@@ -16,12 +16,12 @@ jobs:
 
             -
                 name: Install
-                run: |
+                run:
                     composer install --no-progress
 
             -
                 name: Build
-                run: |
+                run:
                     vendor/bin/statie generate source
 
             -
@@ -31,3 +31,28 @@ jobs:
                     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                     BRANCH: gh-pages
                     FOLDER: output
+
+    tweet_post:
+        runs-on: ubuntu-latest
+
+        steps:
+            -
+                name: Checkout code
+                uses: actions/checkout@v2
+
+            -
+                name: Setup PHP
+                uses: shivammathur/setup-php@v1
+                with:
+                    php-version: 7.3
+                    coverage: none
+
+            -
+                name: Install
+                run:
+                    composer install --no-progress
+
+            -
+                name: Tweet New Post
+                run:
+                    vendor/bin/statie tweet-post
