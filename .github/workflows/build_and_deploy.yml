@@ -56,7 +56,7 @@ jobs:
                 name: Tweet New Post
                 run: |
                     vendor/bin/statie tweet-post
-                with:
+                env:
                     TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
                     TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
                     TWITTER_OAUTH_ACCESS_TOKEN: ${{ secrets.TWITTER_OAUTH_ACCESS_TOKEN }}
