@@ -1,6 +1,7 @@
 {
     "name": "tomasvotruba/website",
     "license": "MIT",
+    "description": "Blog about hacking PHP, education and being the laziest PHP programmer in the world",
     "require": {
         "php": "^7.3",
         "nette/finder": "^2.5",
