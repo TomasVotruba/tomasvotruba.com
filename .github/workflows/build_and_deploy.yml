@@ -1,0 +1,33 @@
+# see https://github.com/marketplace/actions/deploy-to-github-pageshttps://github.com/marketplace/actions/deploy-to-github-pages
+name: Build and Deploy
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            -
+                name: Checkout
+                uses: actions/checkout@v1
+
+            -
+                name: Install
+                run: |
+                    composer install
+
+            -
+                name: Build
+                run: |
+                    vendor/bin/statie generate source
+
+            -
+                name: Deploy
+                uses: JamesIves/github-pages-deploy-action@releases/v3
+                with:
+                    ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                    BRANCH: gh-pages
+                    FOLDER: output
