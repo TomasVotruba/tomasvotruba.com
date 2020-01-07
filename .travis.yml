@@ -34,25 +34,6 @@ jobs:
                 - vendor/bin/phpunit
 
         -
-            stage: deploy
-            name: 'Deploy to Github Pages'
-            if: branch = master AND type = push
-            php: 7.3
-            # see docs: https://www.statie.org/docs/github-pages/
-            script:
-                - vendor/bin/statie generate source
-#            before_deploy:
-#                - vendor/bin/statie dump-contributors
-            deploy:
-                -
-                    provider: pages
-                    skip_cleanup: true
-                    github_token: $GITHUB_TOKEN
-                    on:
-                        branch: master
-                    local_dir: output
-
-        -
             stage: tweet
             name: 'Tweet new Post'
             if: branch = master
