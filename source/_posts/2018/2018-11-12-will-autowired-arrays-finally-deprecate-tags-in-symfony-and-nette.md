@@ -41,7 +41,7 @@ final class CheckBlogHasReleasePostReleaseWorker implements ReleaseWorkerInterfa
 {
     public function work(string $version): void
     {
-        $blogContent = file_get_contents('https://tomasvotruba.cz');
+        $blogContent = file_get_contents('https://tomasvotruba.com');
 
         // is there a post with this title?
         if (Strings::match($blogContent, '#Release of ' . $version . '#')) {

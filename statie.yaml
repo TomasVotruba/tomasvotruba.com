@@ -18,11 +18,11 @@ parameters:
     # global templates variables
     google_analytics_tracking_id: "UA-46082345-1"
     site_title: "Tomas Votruba"
-    site_url: "https://www.tomasvotruba.cz"
+    site_url: "https://www.tomasvotruba.com"
     disqus_shortname: "itsworthsharing"
     github_repository_tests_directory: "https://github.com/TomasVotruba/tomasvotruba.com/tree/master/tests"
 
-    thanker_repository_name: 'TomasVotruba/tomasvotruba.cz'
+    thanker_repository_name: 'TomasVotruba/tomasvotruba.com'
     thanker_author_name: 'TomasVotruba'
 
     # Statie settings

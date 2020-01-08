@@ -119,7 +119,7 @@ Check diffs of these merged pull-requests so you have the idea **how small the c
 
 - [statie.org](https://github.com/crazko/statie-web/pull/18/files)
 - [romanvesely.com](https://github.com/crazko/romanvesely.com/pull/44/files)
-- [tomasvotruba.cz](https://github.com/pehapkari/pehapkari.cz/commit/a8256817acc61a14c4adcd0f6ed06b042450bfc3#diff-f9937b27a07038e5d12db3b137e228ce)
+- [tomasvotruba.com](https://github.com/pehapkari/pehapkari.cz/commit/a8256817acc61a14c4adcd0f6ed06b042450bfc3#diff-f9937b27a07038e5d12db3b137e228ce)
 
 ## How to Migrate Latte to Twig as Well?
 
@@ -129,7 +129,7 @@ If you use Statie, you're probably running on Latte. In the case you prefer Twig
 
 Again, check these diffs, so you have the idea **how big that change really is**:
 
-- [TomasVotruba.cz](https://github.com/TomasVotruba/tomasvotruba.com/pull/380/files)
+- [tomasvotruba.com](https://github.com/TomasVotruba/tomasvotruba.com/pull/380/files)
 - [Pehapkari.cz](https://github.com/pehapkari/pehapkari.cz/pull/486/files)
 
 I feel you. You can stay with Latte until... just kidding. That's a lot of work, right? Well, I'm not that hardworking, don't worry. I'm a lazy bastard, so I made [a package for Latte to Twig migration](/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions/).

@@ -1,12 +1,12 @@
-# [TomasVotruba.cz](https://www.tomasvotruba.cz) - [Statie](https://github.com/Symplify/Statie) based web
+# [tomasvotruba.com](https://www.tomasvotruba.com) - [Statie](https://github.com/Symplify/Statie) based web
 
 [![Build Status Github Actions](https://img.shields.io/github/workflow/status/tomasvotruba/tomasvotruba.com/Code_Checks?style=flat-square)](https://github.com/TomasVotruba/tomasvotruba.com/actions)
 
 ## Install & Run
 
 ```sh
-git clone git@github.com:TomasVotruba/tomasvotruba.cz.git # use your fork if you want to contribute
-cd tomasvotruba.cz
+git clone git@github.com:TomasVotruba/tomasvotruba.com.git # use your fork if you want to contribute
+cd tomasvotruba.com
 composer install
 npm install
 gulp # see gulpfile.js for more
@@ -25,5 +25,5 @@ How to keep fit and slim!
 Once couple of months, check if all external links are still alive, so people won't get lost.
 
 ```bash
-vendor/bin/http-status-check scan https://tomasvotruba.cz
+vendor/bin/http-status-check scan https://tomasvotruba.com
 ```

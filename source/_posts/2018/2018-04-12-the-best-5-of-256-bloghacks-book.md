@@ -53,7 +53,7 @@ And this could be at any other community, whether you like Twitter, Facebook, Sl
 
 ## 3. Use Static Website Generator
 
-This blog runs on [Statie](http://statie.org/) and [is fully open-sourced on Github](https://github.com/tomasvotruba/tomasvotruba.cz) (found a *tyop* here? just edit this file and send a PR - there is a link right at the top right of this post).
+This blog runs on [Statie](http://statie.org/) and [is fully open-sourced on Github](https://github.com/tomasvotruba/tomasvotruba.com) (found a *tyop* here? just edit this file and send a PR - there is a link right at the top right of this post).
 
 I love open-source and did this right from the start, but it feels so important to me that I mention this tip again. Also, I had a meeting with Vojta and he told me [how he migrated from Wordpress to GatsbyJS](https://www.vojtechruzicka.com/gatsby-migration/) (ReactJS-based static generator) and how he loves it.
 
@@ -69,7 +69,7 @@ Static websites are fast, simple, easy for your fan/critics-base to work with an
 
 This was one of the biggest fails on my blog. Imagine you've read about "symfony controller service something", you liked it, but you don't remember the exact title of the post. My blog has all posts on the main page, with no paging, so you can just use *Ctrl + F* to find... **well that just sucks, right?**
 
-Thanks to Yegor and Vojta I finally [added Google Search](https://github.com/TomasVotruba/tomasvotruba.com/pull/286) on the homepage, so you can type "symfony controller service", hit *Enter* and [get results you need](https://www.google.cz/search?sitesearch=tomasvotruba.cz&q=%22symfony+controller+service).
+Thanks to Yegor and Vojta I finally [added Google Search](https://github.com/TomasVotruba/tomasvotruba.com/pull/286) on the homepage, so you can type "symfony controller service", hit *Enter* and [get results you need](https://www.google.cz/search?sitesearch=tomasvotruba.com&q=%22symfony+controller+service).
 
 I'm sorry to all that felt frustrated when looking for any valuable content post by post, manually.
 
