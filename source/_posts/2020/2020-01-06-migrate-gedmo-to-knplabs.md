@@ -579,7 +579,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * @Gedmo\SoftDeleteable(fieldName="deletedAt", timeAware=false, hardDelete=true)
  * @ORM\Entity
  */
-class Cateory
+class Category
 {
     /**
      * @ORM\Column(name="deletedAt", type="datetime", nullable=true)
