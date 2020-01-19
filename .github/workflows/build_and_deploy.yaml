@@ -10,19 +10,14 @@ jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
         steps:
-            -
-                name: Checkout
-                uses: actions/checkout@v1
+            -   uses: actions/checkout@v1
+            -   uses: shivammathur/setup-php@v1
+                with:
+                    php-version: 7.3
+                    coverage: none
 
-            -
-                name: Install
-                run:
-                    composer install --no-progress
-
-            -
-                name: Build
-                run:
-                    vendor/bin/statie generate source
+            -   run: composer install --no-progress
+            -   run: vendor/bin/statie generate source
 
             -
                 name: Deploy
@@ -36,21 +31,13 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            -
-                name: Checkout code
-                uses: actions/checkout@v2
-
-            -
-                name: Setup PHP
-                uses: shivammathur/setup-php@v1
+            -   uses: actions/checkout@v2
+            -   uses: shivammathur/setup-php@v1
                 with:
                     php-version: 7.3
                     coverage: none
 
-            -
-                name: Install
-                run:
-                    composer install --no-progress
+            -   run: composer install --no-progress
 
             -
                 name: Tweet New Post
