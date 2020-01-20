@@ -14,6 +14,7 @@ perex: |
     Does it though in 2020?   
     
 tweet: "New Post on #php 🐘 blog: Introducing PHAR for Easy Coding Standard"
+tweet_image: "/assets/images/posts/ecs_prefixed.gif"
 ---
 
 <br>
