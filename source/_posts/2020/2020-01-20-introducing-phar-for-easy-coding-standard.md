@@ -32,7 +32,7 @@ The first release of the prefixed version is v7.2.2, so you can enjoy all the co
 
 ### Add `-prefixed` and It Works 
 
-Really. S instead of normal package installation:
+Really. So instead of normal package installation:
 
 ```bash
 composer require symplify/easy-coding-standard --dev
