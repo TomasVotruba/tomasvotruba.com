@@ -13,12 +13,13 @@ id: "trends"
     <p class="text-muted mb-4 small">Updated at {{ php_framework_trends.updated_at|date('j. n.') }}</p>
 
     <p>
-        <a href="/{{ posts[202]|link }}/">Why was this table created?</a>
-    <p>
+        What are <strong>yearly downloads of popular PHP frameworks</strong> from Packagist?
+        Is it marketing fake news or is it true?
+    </p>
 
     <p>
-        The goal of this table is to get from feelings and opinions of single influencers <strong>to numbers and results in active community</strong>.
-    </p>
+        <a href="/{{ posts[202]|link }}/">Why was this table created?</a>
+    <p>
 
     <div class="alert alert-sm alert-warning mt-3 mb-4">
         <code>symfony/*</code> downloads are cleared from <code>laravel/*</code> downloads. 1 download of Laravel packages = 0 downloads of Symfony packages. <strong>See <a href="https://github.com/TomasVotruba/tomasvotruba.com/blob/88cd6f3c8ae14ec9770f38bfea6300f88089def7/src/Packagist/Purifier/InterveningPackagesPurifier.php#L17">full list of packages cleared this way</a></strong>.
