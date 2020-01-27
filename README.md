@@ -1,7 +1,5 @@
 # [tomasvotruba.com](https://www.tomasvotruba.com) - [Statie](https://github.com/Symplify/Statie) based web
 
-[![Build Status Github Actions](https://img.shields.io/github/workflow/status/tomasvotruba/tomasvotruba.com/Code_Checks?style=flat-square)](https://github.com/TomasVotruba/tomasvotruba.com/actions)
-
 ## Install & Run
 
 ```sh
