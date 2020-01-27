@@ -269,3 +269,5 @@ I think that's due to service being pretty new to the market. I hope these issue
 <br>
 
 Happy coding!
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
