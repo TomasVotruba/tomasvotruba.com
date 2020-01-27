@@ -264,7 +264,7 @@ The monorepo split is the most massive performance operation on the whole CI. Al
 
 <br>
 
-I think that's due to service being pretty new to the market. I hope these issues will be seen as primitive soon. For the fest of the features, **I love GitHub Action** and think you'll too after having feedback under 3 minutes after the last commit :). 
+I think that's due to service being pretty new to the market. I hope these issues will be seen as primitive soon. For the rest of the features, **I love GitHub Action** and think you'll too after having feedback under 3 minutes after the last commit :). 
 
 <br>
 
