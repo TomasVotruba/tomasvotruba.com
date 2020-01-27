@@ -22,7 +22,8 @@ I mean, that's a crazy improvement of 80 %. You can read about in [the previous 
 
 ## The Developer's Joy
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Github Actions just make everything so easy... <br><br>We merged 177 PR in <a href="https://twitter.com/rectorphp?ref_src=twsrc%5Etfw">@rectorphp</a> in the last month.<br><br>Instant feedback is killer feature for you devs. Don&#39;t let them wait...<a href="https://t.co/hP9Epe2CZW">https://t.co/hP9Epe2CZW</a> <a href="https://t.co/0Md9iIisXm">pic.twitter.com/0Md9iIisXm</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1220126675436032005?ref_src=twsrc%5Etfw">January 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Github Actions just make everything so easy... <br><br>We merged 177 PR in <a href="https://twitter.com/rectorphp?ref_src=twsrc%5Etfw">@rectorphp</a> in the last month.<br><br>Instant feedback is killer feature for you devs. Don&#39;t let them wait...<a href="https://t.co/hP9Epe2CZW">https://t.co/hP9Epe2CZW</a> <a href="https://t.co/0Md9iIisXm">pic.twitter.com/0Md9iIisXm</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1220126675436032005?ref_src=twsrc%5Etfw">January 22, 2020</a></blockquote>
+
 
 Cocaine, Facebook, Twitter, and Instagram work the same way. A short feedback loop of dopamine.
 
