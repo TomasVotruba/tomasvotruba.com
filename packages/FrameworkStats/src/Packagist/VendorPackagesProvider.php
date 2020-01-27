@@ -76,10 +76,8 @@ final class VendorPackagesProvider
     private function isPackageExcluded(string $packageName): bool
     {
         foreach ($this->excludedFrameworkPackages as $excludedFrameworkPackage) {
-            if (Strings::contains($excludedFrameworkPackage, '*')) {
-                if (fnmatch($excludedFrameworkPackage, $packageName)) {
-                    return true;
-                }
+            if (Strings::contains($excludedFrameworkPackage, '*') && fnmatch($excludedFrameworkPackage, $packageName)) {
+                return true;
             }
 
             if ($packageName === $excludedFrameworkPackage) {

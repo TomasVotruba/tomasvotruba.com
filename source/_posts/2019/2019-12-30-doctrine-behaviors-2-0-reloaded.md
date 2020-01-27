@@ -6,25 +6,25 @@ perex: |
     <br><br>
     **None of stof, gedmo, nor KnpLabs is working with Symfony 5**. There are many issues in each of those projects asking for maintainers to merge PRs and tag it. One of those issues was heard, and the owner gave me maintainer access.
     <br><br>
-    How does it look 3 weeks later?    
-     
+    How does it look 3 weeks later?
+
 tweet: "New Post on #php 🐘 blog: Doctrine Behaviors 2.0 - Reloaded"
 tweet_image: "/assets/images/posts/doc_beha_stats.png"
 ---
 
-## From First Excitement Rush to Heavy Burden of Responsibility  
+## From First Excitement Rush to Heavy Burden of Responsibility
 
 [KnpLabs/DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors) development was stuck since 2015. There were 10+ opened PRs to use interfaces over traits (to give classes clear contract), bug-fix PRs, and design improvements.
 
-When I got a message from KnpLabs with an offer to maintain, I was super happy to say ["hell, yeah"](https://sivers.org/hellyeah). An excitement rush went through my veins. I could saw all the huge refactoring for better and how it helps the whole PHP community to move another step forward. 
+When I got a message from KnpLabs with an offer to maintain, I was super happy to say ["hell, yeah"](https://sivers.org/hellyeah). An excitement rush went through my veins. I could saw all the huge refactoring for better and how it helps the whole PHP community to move another step forward.
 
 A moment later, when I realized what happened and how quickly, I started to be scared. The repository looked like a massive chunk of code that will need many design changes,  back compatibility breaks, etc. **All the responsibility started to fall on my shoulders, and it was heavy**.
 
-I took it as challenge and started to [climb mountain](/blog/2018/04/30/programming-climbing-a-huge-mountain/), without knowing if or how this will end-up. 
+I took it as challenge and started to [climb mountain](/blog/2018/04/30/programming-climbing-a-huge-mountain/), without knowing if or how this will end-up.
 
 <blockquote class="blockquote text-center">
     There were only 2 options:<br>finished tagged version 2 or burn-out in the process.
-</blockquote> 
+</blockquote>
 
 I took the risk.
 
@@ -32,7 +32,7 @@ I took the risk.
 
 - **39 merged pull-requests**
 - **93 closed issues**
-- **5 alpha/beta tag releases** 
+- **5 alpha/beta tag releases**
 - full support of Symfony 4.4 and 5
 
 <br>
@@ -41,7 +41,7 @@ I took the risk.
 
 <br>
 
-**Added/removed lines per week:**  
+**Added/removed lines per week:**
 
 <img src="/assets/images/posts/doc_beha_stats.png" class="img-thumbnail">
 
@@ -63,10 +63,10 @@ Tests did not cover some behaviors, nor described in README. When you look at th
 [Sortable](https://github.com/KnpLabs/DoctrineBehaviors/pull/473)
 - it only updated all values to `1`, completely broken
 
-[Geocodable](https://github.com/KnpLabs/DoctrineBehaviors/pull/467) 
+[Geocodable](https://github.com/KnpLabs/DoctrineBehaviors/pull/467)
 - it only worked on PostgreSQL with a specific function
 - has a conflict with km/miles
-- method API was very limited to a few narrow cases 
+- method API was very limited to a few narrow cases
 
 [Filterable](https://github.com/KnpLabs/DoctrineBehaviors/pull/463)
 - overcomplicated API 4 required methods for single simple filter
@@ -76,12 +76,12 @@ Tests did not cover some behaviors, nor described in README. When you look at th
 
 <br>
 
-Now that the sad part is behind us let's look at new features.   
+Now that the sad part is behind us let's look at new features.
 
- 
+
 ### From Trait to Interface
 
-This work was initiated **by [bocharsky-bw](https://github.com/bocharsky-bw) and [@lemoinem](https://github.com/lemoinem)** back in 2016. Thank you both for clear PRs, it was quite easy for me to see changes and apply them to new and drastically different code [in this single PR](https://github.com/KnpLabs/DoctrineBehaviors/pull/442). 
+This work was initiated **by [bocharsky-bw](https://github.com/bocharsky-bw) and [@lemoinem](https://github.com/lemoinem)** back in 2016. Thank you both for clear PRs, it was quite easy for me to see changes and apply them to new and drastically different code [in this single PR](https://github.com/KnpLabs/DoctrineBehaviors/pull/442).
 
 **The idea is simple**: instead of traits that are problematic to detect by `instanceof` or `is_a()`, use interface for method and class contract.
 
@@ -126,7 +126,7 @@ class Product
     use TimestampableMethodsTrait;
 }
 ```
- 
+
 But what happens if you remove trait and want to override methods?
 
 ```php
@@ -144,7 +144,7 @@ class Product
 }
 ```
 
-Well, there is no contract by an interface, so we have no idea to fix this, we introduced interfaces: 
+Well, there is no contract by an interface, so we have no idea to fix this, we introduced interfaces:
 
 ```php
 <?php
@@ -174,7 +174,7 @@ $isTimestampableEntity = $entity instanceof TimestampableInterface;
 
 // string class name
 $isTimestampableEntity = is_a($entityClass, TimestampableInterface::class, true);
-``` 
+```
 
 ### Translation now needs Id
 
@@ -182,11 +182,11 @@ All the behaviors didn't add any id properties. Except for translation, where th
 
 <img src="/assets/images/posts/doc_beha_id_magic.png" class="img-thumbnail">
 
-The [inconsistency](https://github.com/KnpLabs/DoctrineBehaviors/issues/154) [was](https://github.com/KnpLabs/DoctrineBehaviors/issues/415) [problematic](https://github.com/KnpLabs/DoctrineBehaviors/pull/158). In short: it was buggy and hard to use your id property because DoctrineBehaviors tried to *guess* what id you probably want. 
+The [inconsistency](https://github.com/KnpLabs/DoctrineBehaviors/issues/154) [was](https://github.com/KnpLabs/DoctrineBehaviors/issues/415) [problematic](https://github.com/KnpLabs/DoctrineBehaviors/pull/158). In short: it was buggy and hard to use your id property because DoctrineBehaviors tried to *guess* what id you probably want.
 
 The fix was suggested [early 2019](https://github.com/KnpLabs/DoctrineBehaviors/pull/421), but the final fix was [merged in 2020](https://github.com/KnpLabs/DoctrineBehaviors/pull/480/files).
 
-What does it mean for your entities? **You need to add their own id**: 
+What does it mean for your entities? **You need to add their own id**:
 
 ```diff
  <?php
@@ -215,7 +215,7 @@ What does it mean for your entities? **You need to add their own id**:
 ### Scalar Types
 
 Scalar types make bugs more comfortable to discover, e.g., when a subscriber is broken, and it does not add value, return null will result in a fatal error.
- 
+
 That's why all the traits have scalar param and return types:
 
 ```diff
@@ -232,11 +232,11 @@ That's why all the traits have scalar param and return types:
  }
 ```
 
-Migration path for these types will be provided based on feedback, so **in case you override these methods manually, you won't have to complete the types**. 
+Migration path for these types will be provided based on feedback, so **in case you override these methods manually, you won't have to complete the types**.
 
 ### Code Quality Changes
 
-Feature improvements are essential. But to make them fast and stable, the [**code quality has the same importance**](/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/). 
+Feature improvements are essential. But to make them fast and stable, the [**code quality has the same importance**](/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/).
 
 <blockquote class="blockquote text-center">
     Energy saved on manual maintenance<br>
@@ -249,7 +249,7 @@ How has been code quality improved?
 - [`CHANGELOG.md` is fully generated](https://github.com/KnpLabs/DoctrineBehaviors/pull/470)
 - [tests now respect PSR-4](https://github.com/KnpLabs/DoctrineBehaviors/commit/3b17cdf656b5f904c4222c559d78bbd17217881a)
 - [Rector CI now checks dead code, code quality and Nette\Utils](https://github.com/KnpLabs/DoctrineBehaviors/pull/445)
-- [PHPStan now checks the static analysis](https://github.com/KnpLabs/DoctrineBehaviors/pull/436/)  
+- [PHPStan now checks the static analysis](https://github.com/KnpLabs/DoctrineBehaviors/pull/436/)
 
 
 ## Community Driven
@@ -290,7 +290,7 @@ composer require rector/rector --dev
 vendor/bin/rector process src --config vendor/knplabs/doctrine-behaviors/upgrade/rector/doctrine-behaviors-20.yaml
 ```
 
-Single command turns to upgrade from 1 to 2 from days to few dozens of minutes.   
+Single command turns to upgrade from 1 to 2 from days to few dozens of minutes.
 
 ## How does it Compare to Gedmo/Stof?
 
@@ -300,12 +300,12 @@ KnpLabs\DoctrineBehaviors don't support softdeletable and non-materialized tree 
 
 ### How do you Migrate from Gedmo/Stof to KnpLabs\DoctrineBehaviors?
 
-Read [Migrate Gedmo to KnpLabs](/blog/2020/01/06/migrate-gedmo-to-knplabs) post to find the answer. 
+Read [Migrate Gedmo to KnpLabs](/blog/2020/01/06/migrate-gedmo-to-knplabs) post to find the answer.
 
 <br>
 
 That's all for me. Use it, bend it, break it, and report issues or pull-request so that we can make migration path together even smoother.
 
-<br>  
+<br>
 
-**I wish you happy new year 2020 full of huge adventures not only in code!** 
+**I wish you happy new year 2020 full of huge adventures not only in code!**
