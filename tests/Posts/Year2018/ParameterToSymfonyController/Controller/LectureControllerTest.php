@@ -4,30 +4,26 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Tests\Posts\Year2018\ParameterToSymfonyController\Controller;
 
-use PHPUnit\Framework\TestCase;
-use Psr\Container\ContainerInterface;
+use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
 use TomasVotruba\Website\Posts\Year2018\ParameterToSymfonyController\App\ParameterToSymfonyControllerAppKernel;
 use TomasVotruba\Website\Posts\Year2018\ParameterToSymfonyController\Controller\LectureController;
 
-final class LectureControllerTest extends TestCase
+final class LectureControllerTest extends AbstractKernelTestCase
 {
     /**
-     * @var ContainerInterface
+     * @var LectureController
      */
-    private $container;
+    private $lectureController;
 
     protected function setUp(): void
     {
-        $kernel = new ParameterToSymfonyControllerAppKernel();
-        $kernel->boot();
+        $this->bootKernel(ParameterToSymfonyControllerAppKernel::class);
 
-        $this->container = $kernel->getContainer();
+        $this->lectureController = self::$container->get(LectureController::class);
     }
 
     public function testParameterIsInjectedViaConstructor(): void
     {
-        /** @var LectureController $lectureController */
-        $lectureController = $this->container->get(LectureController::class);
-        $this->assertSame('12345', $lectureController->getBankAccount());
+        $this->assertSame('12345', $this->lectureController->getBankAccount());
     }
 }
