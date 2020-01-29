@@ -236,7 +236,7 @@ Actually, on GitHub repository, there is only one badge for all:
 
 **Travis CI** allow only [3 concurrent jobs](https://travis-ci.com/plans). This forces us to group similar checks like coding standard, static analysis, and Rector to one big job. If it failed, we had to look inside to find out which of these 3 areas is it. 
 
-**GitHub Actions** allows you... wait for it [**20 jobs**](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions#usage-limits). 
+**GitHub Actions** allows you to run... wait for it [**20 jobs**](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions#usage-limits). 
 
 Thanks to that, we can have one job for each of:
 
@@ -264,7 +264,7 @@ The monorepo split is the most massive performance operation on the whole CI. Al
 
 <br>
 
-I think that's due to service being pretty new to the market. I hope these issues will be seen as primitive soon. For the rest of the features, **I love GitHub Action** and think you'll too after having feedback under 3 minutes after the last commit :). 
+I think that's due to the service being pretty new to the market. I hope these issues will be seen as primitive soon. For the rest of the features, **I love GitHub Action** and think you'll too after having feedback under 3 minutes after the last commit :). 
 
 <br>
 
