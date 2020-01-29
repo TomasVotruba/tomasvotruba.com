@@ -166,7 +166,7 @@ Just setup [Rector](https://github.com/rectorphp/rector) and upgrade your code:
 ```yaml
 # rector.yaml
 services:
-    Rector\Php\Rector\FunctionLike\ReturnTypeDeclarationRector: ~
+    Rector\TypeDeclaration\Rector\FunctionLike\ReturnTypeDeclarationRector: ~
 ```
 ```bash
 vendor/bin/rector process src
