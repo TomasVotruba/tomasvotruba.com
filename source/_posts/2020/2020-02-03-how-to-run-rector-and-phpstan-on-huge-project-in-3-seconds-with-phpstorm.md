@@ -11,7 +11,7 @@ tweet: "New Post on #php 🐘 blog: How to run Rector and PHPStan on Huge Projec
 tweet_image: "/assets/images/posts/2020/external_tools_rector.gif"
 ---
 
-Let's say we have a reasonably big codebase, like Rector, with over 70 000 lines of code. Projects I consults lately usually fit int 200-600 000 lines of code, though. But let's take Rector as the baseline, as that's the project we have data for.
+Let's say we have a reasonably big codebase, like Rector, with over 70 000 lines of code. Projects I consult lately usually fit into 200-600 000 lines of code, though. But let's take Rector as the baseline, as that's the project we have data for.
 
 We add a new feature, change test, fix a bug, 300 added lines, 200 removed.
 
@@ -30,9 +30,9 @@ And wait...
 <br>
 
 
-## How we Hack It?
+## How do we Hack It?
 
-It takes so long. We might adapt, and **push it into the remote repository and let the CI server handle it**. After all, it's often much faster than our local laptop. I used this approach at big codebases so far.
+It takes so long. We might adapt and **push it into the remote repository and let the CI server handle it**. After all, it's often much faster than our local laptop. I used this approach at big codebases so far.
 
 Another way is to copy the directory path and run tool only on it:
 
@@ -57,7 +57,7 @@ Instant flow killer :(
 When I talk with developers, this is one of the main reasons they don't use such tools. It takes too long to get feedback from them. It destroys their focus on the features.
 
 <blockquote class="blockquote text-center mt-5 mb-5">
-Frustration is always sign we should ask the question:
+Frustration is always the sign we should ask this question:
 <br> 
 How can we do better?
 </blockquote>
@@ -76,7 +76,7 @@ Last week [Honza](https://twitter.com/mikes_honza) showed me PHPStorm tip that f
 
 <br>
 
-## How it Works?
+## How does it Work?
 
 You run **the tool only on a selected directory in the left tree**. 
 
@@ -120,7 +120,7 @@ Save.
 
 ## How to Use It?
 
-Pick the directory you want a process in the file tree.
+Pick the directory you want to process in the file tree.
  
 Run action.
 
