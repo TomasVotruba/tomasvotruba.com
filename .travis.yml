@@ -9,6 +9,7 @@ jobs:
             name: 'Tweet new Post'
             if: branch = master
             script:
+                - composer install
                 - vendor/bin/statie tweet-post
 
 notifications:
