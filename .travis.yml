@@ -1,17 +1,11 @@
 # inspired by https://github.com/rectorphp/rector/blob/master/.travis.yml
 language: php
 
-dist: bionic
-
 php: 7.4
-
-before_install:
-    - phpenv config-rm xdebug.ini
 
 jobs:
     include:
         -
-            stage: tweet
             name: 'Tweet new Post'
             if: branch = master
             script:
@@ -19,4 +13,3 @@ jobs:
 
 notifications:
     email: false
-
