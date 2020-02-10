@@ -4,7 +4,6 @@ includes:
 parameters:
     level: max
     checkMissingIterableValueType: false
-#    reportUnmatchedErrors: false
 
     excludes_analyse:
         # test fixture file
@@ -20,10 +19,5 @@ parameters:
         # mocks
         - '#Call to an undefined method PHPUnit\\Framework\\MockObject\\MockObject\|TomasVotruba\\Website\\Posts\\Year2019\\(.*?)\\FinalClass\:\:(.*?)\(\)#'
 
-        -
-            message: '#Offset 1 does not exist on array<PhpParser\\Node\\Stmt\>\|null#'
-            path: tests/Posts/Year2017/Ast/ModifyTest.php
-
-        -
-            message: '#Access to an undefined property PhpParser\\Node\\Stmt\:\:\$stmts#'
-            path: tests/Posts/Year2017/Ast/ModifyTest.php
+        - '#Offset 1 does not exist on array<PhpParser\\Node\\Stmt\>\|null#'
+        - '#Access to an undefined property PhpParser\\Node\\Stmt\:\:\$stmts#'
