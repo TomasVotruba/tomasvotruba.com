@@ -10,6 +10,8 @@ jobs:
             if: branch = master
             script:
                 - composer install
+                # get tokens to Travis ENV: https://travis-ci.com/TomasVotruba/tomasvotruba.com/settings
+                # from here: https://developer.twitter.com/en/apps/14147884
                 - vendor/bin/statie tweet-post
 
 notifications:
