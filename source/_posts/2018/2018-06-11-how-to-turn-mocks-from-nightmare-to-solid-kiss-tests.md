@@ -195,7 +195,7 @@ Also, your application can now use abstraction (= interface) instead of specific
 
 ## 1000x Code
 
-They say **your code is 10x more read than written** on average. I believe it's at least 1000x in open-source. Knowing that we wan't our code not to be just clear and readable. But to be
+They say **your code is 10x more read than written** on average. I believe it's at least 1000x in open-source. Knowing that we want our code, not to be just clear and readable, but to be
 
 - super-readable,
 - deterministic = with only one clear way one can understand it,
