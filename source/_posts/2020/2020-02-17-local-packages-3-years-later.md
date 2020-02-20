@@ -176,7 +176,7 @@ This is only useful in case of [monorepo that splits packages](/blog/2018/10/08/
 - Keep `/app` separated.
 - Use `dash-format` for directory paths.
 - Use `CamelCase` for namespaces.  
-- Use `package/<package-name>/src` and `package/<package-name>/tests` directory convention.
+- Use `packages/<package-name>/src` and `packages/<package-name>/tests` directory convention.
 - Use single root `composer.json` to autoload them all.
 - Use single root `phpunit.xml` to run test on them all.
 
