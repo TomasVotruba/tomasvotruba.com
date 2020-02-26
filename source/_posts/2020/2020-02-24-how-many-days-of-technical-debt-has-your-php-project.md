@@ -19,7 +19,7 @@ tweet_image: "/assets/images/posts/2020/sonar_rector.png"
 When I first analyzed Rector, **top 5 worst classes had these in common**:
 
 - "instanceof programming", e.g., 10-15 cases of `instanceof`, then do return some logic
-- 30-50 lines long methods withing 1 class
+- 30-50 lines long methods within 1 class
 - classes of length 200-500 lines
 - pain points I knew were there, but I was afraid to do something about it
 
