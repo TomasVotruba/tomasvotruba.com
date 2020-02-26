@@ -1,5 +1,7 @@
 # [tomasvotruba.com](https://www.tomasvotruba.com) - [Statie](https://github.com/Symplify/Statie) based web
 
+[![SonarCube](https://img.shields.io/badge/SonarCube_Debt-%3C2-brightgreen.svg?style=flat-square)](https://sonarcloud.io/dashboard?id=TomasVotruba_tomasvotruba.com)
+
 ## Install & Run
 
 ```sh

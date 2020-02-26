@@ -70,25 +70,9 @@ SonarCube is free for open-source and has a 1-week trial for private projects. I
 
 Add the file and commit to `master`.
 
-### 3. Remove Spam Bot
+### 3. Add Github Action
 
-There is a price for all the excellent features... you need to tolerate SonarCube **spam bot on every commit**. 
-
-<img src="/assets/images/posts/2020/sonar_spam.png" class="img-thumbnail">
-
-**I hated it** and wanted to delete all this Sonar-spam from my repositories, but there is one solution out of it.
-
-Go to [Github installations](https://github.com/settings/installations): 
-
-<img src="/assets/images/posts/2020/sonar_step_3.png" class="img-thumbnail">
-
-And remove it:
-
-<img src="/assets/images/posts/2020/sonar_step_4.png" class="img-thumbnail">
-
-We only need it for the first contact. Instead of it, **you can authorize with Github Actions**.
-
-### 4. Add Github Action
+We need to have a way to tell the Sonar that new code was pushed. That's what Github Actions are for.
 
 Add new workflow:
 
@@ -124,7 +108,7 @@ As you can see, there are 2 tokens to authorize.
 
 Add both tokens to your *secrets* sections in your repository: https://github.com/TomasVotruba/tomasvotruba.com/settings/secrets
 
-### 6. Add Badge for Quick Link to SonarCloud Analysis
+### 4. Add Badge for Quick Link to SonarCloud Analysis
 
 What is analysis good for if you can't reach it from your `README`? Be sure to add it there, so you can enter it quickly and share your excellent results with others.
 
@@ -141,7 +125,7 @@ What is analysis good for if you can't reach it from your `README`? Be sure to a
 
 Almost done...
 
-### 7. Where is the Code?
+### 5. Where is the Code?
 
 We still have to tell SonarCube where to look for the `src` code. To do this, we need to add `sonar-project.properties`.
  
@@ -158,9 +142,37 @@ sonar.sources=src
 To get `organization` and and `projectKey`, just split the key (`TomasVotruba_tomasvotruba.com`) by `_`.
 
 
+
+### 7. Remove Spam Bot
+
+**Do this AFTER the first analysis of `master` branch is completed.** If you do it earlier, the Github Action will not work.
+
+<br> 
+
+There is a price for all the excellent features... you need to tolerate SonarCube **spam bot on every commit**. 
+
+<img src="/assets/images/posts/2020/sonar_spam.png" class="img-thumbnail">
+
+**I hated it** and wanted to delete all this Sonar-spam from my repositories, but there is one solution out of it.
+
+Go to [Github installations](https://github.com/settings/installations): 
+
+<img src="/assets/images/posts/2020/sonar_step_3.png" class="img-thumbnail">
+
+And remove it:
+
+<img src="/assets/images/posts/2020/sonar_step_4.png" class="img-thumbnail">
+
+We only need it for the first contact. Instead of it, **you can authorize with Github Actions**.
+
+
 <br>
 
 And that should be it! (If not, let me know in comments.) 
+
+<a href="https://sonarcloud.io/dashboard?id=TomasVotruba_tomasvotruba.com">
+    <img src="/assets/images/posts/2020/sonar_final.png" class="img-thumbnail">
+</a>
 
 <br>
 
