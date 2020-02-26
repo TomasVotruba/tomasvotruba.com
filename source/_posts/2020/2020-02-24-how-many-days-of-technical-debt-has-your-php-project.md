@@ -141,9 +141,7 @@ sonar.sources=src
 
 To get `organization` and and `projectKey`, just split the key (`TomasVotruba_tomasvotruba.com`) by `_`.
 
-
-
-### 7. Remove Spam Bot
+### 6. Remove Spam Bot
 
 **Do this AFTER the first analysis of `master` branch is completed.** If you do it earlier, the Github Action will not work.
 
