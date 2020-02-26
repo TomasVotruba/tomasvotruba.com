@@ -54,7 +54,7 @@ Since then, **I'm adding SonarCube on every project I work on**, so I know (not 
 
 Do you wonder **how many days you have on your back**? 10, 50 or over 100? Add your first SonarCube check into the CI and share with us in comments ↓
 
-## How to add SonarCube to your Github Project in 7 Steps?
+## How to add SonarCube to your Github Project in 6 Steps?
 
 SonarCube is free for open-source and has a 1-week trial for private projects. I tried the 1-week trial on one private project, and then I saw the debt... **365**, ~~hours~~ days... you have to love it :D.
 
@@ -162,7 +162,6 @@ And remove it:
 <img src="/assets/images/posts/2020/sonar_step_4.png" class="img-thumbnail">
 
 We only need it for the first contact. Instead of it, **you can authorize with Github Actions**.
-
 
 <br>
 
