@@ -37,7 +37,7 @@ final class PackageRawMonthlyDownloadsProvider
             throw new ShouldNotHappenException();
         }
 
-        $values = array_combine($json['labels'], $json['values']);
+        $values = array_combine($json['labels'], $json['values'][$packageName]);
         if (! $values) {
             throw new ShouldNotHappenException();
         }

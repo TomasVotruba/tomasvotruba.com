@@ -1,1169 +1,1193 @@
-# this file was generated on 2020-02-03 17:14:40, do not edit it manually
+# this file was generated on 2020-03-03 00:06:09, do not edit it manually
 parameters:
     php_framework_trends:
         vendors:
             -
                 vendor_name: CakePHP
-                vendor_total_last_year: 15598538
-                vendor_total_previous_year: 9889169
-                last_year_trend: !!float 58
+                vendor_total_last_year: 18900273
+                vendor_total_previous_year: 11131853
+                last_year_trend: !!float 70
                 packages_data:
                     -
-                        package_name: cakephp/cache
-                        package_short_name: cache
-                        last_12_months: 1280455
-                        previous_12_months: 335822
-                        last_year_trend: 281.3
+                        package_name: cakephp/database
+                        package_short_name: database
+                        last_12_months: 1347773
+                        previous_12_months: 379253
+                        last_year_trend: 255.4
+                    -
+                        package_name: cakephp/datasource
+                        package_short_name: datasource
+                        last_12_months: 1352701
+                        previous_12_months: 391491
+                        last_year_trend: 245.5
                     -
                         package_name: cakephp/collection
                         package_short_name: collection
-                        last_12_months: 1287576
-                        previous_12_months: 337738
-                        last_year_trend: 281.2
+                        last_12_months: 1357660
+                        previous_12_months: 406310
+                        last_year_trend: 234.1
+                    -
+                        package_name: cakephp/cache
+                        package_short_name: cache
+                        last_12_months: 1349746
+                        previous_12_months: 404674
+                        last_year_trend: 233.5
                     -
                         package_name: cakephp/core
                         package_short_name: core
-                        last_12_months: 1444570
-                        previous_12_months: 408384
-                        last_year_trend: 253.7
+                        last_12_months: 1522325
+                        previous_12_months: 486672
+                        last_year_trend: 212.8
                     -
                         package_name: cakephp/utility
                         package_short_name: utility
-                        last_12_months: 1462336
-                        previous_12_months: 456652
-                        last_year_trend: 220.2
+                        last_12_months: 1540517
+                        previous_12_months: 530096
+                        last_year_trend: 190.6
                     -
                         package_name: cakephp/chronos
                         package_short_name: chronos
-                        last_12_months: 4322851
-                        previous_12_months: 2650066
-                        last_year_trend: 63.1
+                        last_12_months: 4498607
+                        previous_12_months: 2790570
+                        last_year_trend: 61.2
                     -
                         package_name: cakephp/migrations
                         package_short_name: migrations
-                        last_12_months: 896650
-                        previous_12_months: 846347
-                        last_year_trend: 5.9
+                        last_12_months: 915506
+                        previous_12_months: 861971
+                        last_year_trend: 6.2
                     -
                         package_name: cakephp/plugin-installer
                         package_short_name: plugin-installer
-                        last_12_months: 912521
-                        previous_12_months: 869097
-                        last_year_trend: !!float 5
-                    -
-                        package_name: cakephp/debug_kit
-                        package_short_name: debug_kit
-                        last_12_months: 1052603
-                        previous_12_months: 1014366
-                        last_year_trend: 3.8
-                    -
-                        package_name: cakephp/bake
-                        package_short_name: bake
-                        last_12_months: 809308
-                        previous_12_months: 790144
-                        last_year_trend: 2.4
+                        last_12_months: 933027
+                        previous_12_months: 881949
+                        last_year_trend: 5.8
                     -
                         package_name: cakephp/cakephp-codesniffer
                         package_short_name: cakephp-codesniffer
-                        last_12_months: 751761
-                        previous_12_months: 759583
-                        last_year_trend: !!float -1
+                        last_12_months: 776000
+                        previous_12_months: 743119
+                        last_year_trend: 4.4
+                    -
+                        package_name: cakephp/debug_kit
+                        package_short_name: debug_kit
+                        last_12_months: 1072911
+                        previous_12_months: 1027974
+                        last_year_trend: 4.4
+                    -
+                        package_name: cakephp/bake
+                        package_short_name: bake
+                        last_12_months: 825466
+                        previous_12_months: 802996
+                        last_year_trend: 2.8
                     -
                         package_name: cakephp/cakephp
                         package_short_name: cakephp
-                        last_12_months: 1377907
-                        previous_12_months: 1420970
-                        last_year_trend: !!float -3
+                        last_12_months: 1408034
+                        previous_12_months: 1424778
+                        last_year_trend: -1.2
             -
                 vendor_name: Symfony
-                vendor_total_last_year: 564742657
-                vendor_total_previous_year: 371212622
+                vendor_total_last_year: 584586254
+                vendor_total_previous_year: 383618974
                 last_year_trend: !!float 52
                 packages_data:
                     -
-                        package_name: symfony/security-core
-                        package_short_name: security-core
-                        last_12_months: 6353406
-                        previous_12_months: 1889049
-                        last_year_trend: 236.3
-                    -
                         package_name: symfony/lock
                         package_short_name: lock
-                        last_12_months: 1955224
-                        previous_12_months: 597965
-                        last_year_trend: !!float 227
+                        last_12_months: 2192442
+                        previous_12_months: 674349
+                        last_year_trend: 225.1
+                    -
+                        package_name: symfony/security-core
+                        package_short_name: security-core
+                        last_12_months: 6767026
+                        previous_12_months: 2119069
+                        last_year_trend: 219.3
                     -
                         package_name: symfony/web-link
                         package_short_name: web-link
-                        last_12_months: 3626648
-                        previous_12_months: 1164914
-                        last_year_trend: 211.3
+                        last_12_months: 3910483
+                        previous_12_months: 1322162
+                        last_year_trend: 195.8
                     -
                         package_name: symfony/property-info
                         package_short_name: property-info
-                        last_12_months: 6237511
-                        previous_12_months: 2293005
-                        last_year_trend: !!float 172
+                        last_12_months: 6638730
+                        previous_12_months: 2577849
+                        last_year_trend: 157.5
                     -
                         package_name: symfony/options-resolver
                         package_short_name: options-resolver
-                        last_12_months: 11564341
-                        previous_12_months: 4746915
-                        last_year_trend: 143.6
-                    -
-                        package_name: symfony/workflow
-                        package_short_name: workflow
-                        last_12_months: 1263287
-                        previous_12_months: 529712
-                        last_year_trend: 138.5
+                        last_12_months: 12387970
+                        previous_12_months: 5126091
+                        last_year_trend: 141.7
                     -
                         package_name: symfony/stopwatch
                         package_short_name: stopwatch
-                        last_12_months: 5897101
-                        previous_12_months: 2511868
-                        last_year_trend: 134.8
+                        last_12_months: 6303428
+                        previous_12_months: 2665728
+                        last_year_trend: 136.5
+                    -
+                        package_name: symfony/workflow
+                        package_short_name: workflow
+                        last_12_months: 1342738
+                        previous_12_months: 587504
+                        last_year_trend: 128.5
                     -
                         package_name: symfony/dotenv
                         package_short_name: dotenv
-                        last_12_months: 9063862
-                        previous_12_months: 3862431
-                        last_year_trend: 134.7
+                        last_12_months: 9583151
+                        previous_12_months: 4257847
+                        last_year_trend: 125.1
                     -
                         package_name: symfony/flex
                         package_short_name: flex
-                        last_12_months: 8133858
-                        previous_12_months: 3541899
-                        last_year_trend: 129.6
+                        last_12_months: 8591453
+                        previous_12_months: 3893075
+                        last_year_trend: 120.7
                     -
                         package_name: symfony/inflector
                         package_short_name: inflector
-                        last_12_months: 12309640
-                        previous_12_months: 5646280
-                        last_year_trend: !!float 118
+                        last_12_months: 12994214
+                        previous_12_months: 6077676
+                        last_year_trend: 113.8
                     -
                         package_name: symfony/asset
                         package_short_name: asset
-                        last_12_months: 7384341
-                        previous_12_months: 3476440
-                        last_year_trend: 112.4
+                        last_12_months: 7776739
+                        previous_12_months: 3757196
+                        last_year_trend: !!float 107
                     -
                         package_name: symfony/intl
                         package_short_name: intl
-                        last_12_months: 8838956
-                        previous_12_months: 4294730
-                        last_year_trend: 105.8
+                        last_12_months: 9339088
+                        previous_12_months: 4603906
+                        last_year_trend: 102.9
                     -
                         package_name: symfony/property-access
                         package_short_name: property-access
-                        last_12_months: 13455157
-                        previous_12_months: 6563893
-                        last_year_trend: !!float 105
-                    -
-                        package_name: symfony/templating
-                        package_short_name: templating
-                        last_12_months: 4793125
-                        previous_12_months: 2355028
-                        last_year_trend: 103.5
-                    -
-                        package_name: symfony/form
-                        package_short_name: form
-                        last_12_months: 7306969
-                        previous_12_months: 3594102
-                        last_year_trend: 103.3
+                        last_12_months: 14144001
+                        previous_12_months: 7015365
+                        last_year_trend: 101.6
                     -
                         package_name: symfony/cache
                         package_short_name: cache
-                        last_12_months: 13151375
-                        previous_12_months: 6618861
-                        last_year_trend: 98.7
+                        last_12_months: 13857004
+                        previous_12_months: 6989861
+                        last_year_trend: 98.2
+                    -
+                        package_name: symfony/form
+                        package_short_name: form
+                        last_12_months: 7652060
+                        previous_12_months: 3882586
+                        last_year_trend: 97.1
                     -
                         package_name: symfony/expression-language
                         package_short_name: expression-language
-                        last_12_months: 8841117
-                        previous_12_months: 4462529
-                        last_year_trend: 98.1
+                        last_12_months: 9256611
+                        previous_12_months: 4714585
+                        last_year_trend: 96.3
+                    -
+                        package_name: symfony/templating
+                        package_short_name: templating
+                        last_12_months: 4971874
+                        previous_12_months: 2556012
+                        last_year_trend: 94.5
                     -
                         package_name: symfony/ldap
                         package_short_name: ldap
-                        last_12_months: 338385
-                        previous_12_months: 177041
-                        last_year_trend: 91.1
-                    -
-                        package_name: symfony/serializer
-                        package_short_name: serializer
-                        last_12_months: 13911974
-                        previous_12_months: 7670189
-                        last_year_trend: 81.4
+                        last_12_months: 362673
+                        previous_12_months: 188241
+                        last_year_trend: 92.7
                     -
                         package_name: symfony/http-foundation
                         package_short_name: http-foundation
-                        last_12_months: 13862537
-                        previous_12_months: 7722946
-                        last_year_trend: 79.5
+                        last_12_months: 14416913
+                        previous_12_months: 8086582
+                        last_year_trend: 78.3
+                    -
+                        package_name: symfony/serializer
+                        package_short_name: serializer
+                        last_12_months: 14470327
+                        previous_12_months: 8160385
+                        last_year_trend: 77.3
                     -
                         package_name: symfony/var-dumper
                         package_short_name: var-dumper
-                        last_12_months: 16135278
-                        previous_12_months: 9298712
-                        last_year_trend: 73.5
+                        last_12_months: 17046070
+                        previous_12_months: 9747244
+                        last_year_trend: 74.9
                     -
                         package_name: symfony/validator
                         package_short_name: validator
-                        last_12_months: 13919782
-                        previous_12_months: 8140104
-                        last_year_trend: !!float 71
+                        last_12_months: 14438291
+                        previous_12_months: 8577912
+                        last_year_trend: 68.3
                     -
                         package_name: symfony/routing
                         package_short_name: routing
-                        last_12_months: 15831732
-                        previous_12_months: 9637306
-                        last_year_trend: 64.3
+                        last_12_months: 16457903
+                        previous_12_months: 9989826
+                        last_year_trend: 64.7
                     -
                         package_name: symfony/http-kernel
                         package_short_name: http-kernel
-                        last_12_months: 14627547
-                        previous_12_months: 8947693
-                        last_year_trend: 63.5
+                        last_12_months: 15235863
+                        previous_12_months: 9281761
+                        last_year_trend: 64.1
                     -
                         package_name: symfony/dependency-injection
                         package_short_name: dependency-injection
-                        last_12_months: 21864009
-                        previous_12_months: 14143093
-                        last_year_trend: 54.6
+                        last_12_months: 22680481
+                        previous_12_months: 14591513
+                        last_year_trend: 55.4
                     -
                         package_name: symfony/filesystem
                         package_short_name: filesystem
-                        last_12_months: 23537614
-                        previous_12_months: 15308001
-                        last_year_trend: 53.8
+                        last_12_months: 24341455
+                        previous_12_months: 15850949
+                        last_year_trend: 53.6
                     -
                         package_name: symfony/config
                         package_short_name: config
-                        last_12_months: 21598098
-                        previous_12_months: 14277924
-                        last_year_trend: 51.3
+                        last_12_months: 22362268
+                        previous_12_months: 14694424
+                        last_year_trend: 52.2
                     -
                         package_name: symfony/browser-kit
                         package_short_name: browser-kit
-                        last_12_months: 16486696
-                        previous_12_months: 11217329
-                        last_year_trend: !!float 47
+                        last_12_months: 16968887
+                        previous_12_months: 11565285
+                        last_year_trend: 46.7
                     -
                         package_name: symfony/finder
                         package_short_name: finder
-                        last_12_months: 15314286
-                        previous_12_months: 10924429
-                        last_year_trend: 40.2
+                        last_12_months: 15711049
+                        previous_12_months: 11254465
+                        last_year_trend: 39.6
                     -
                         package_name: symfony/css-selector
                         package_short_name: css-selector
-                        last_12_months: 43322455
-                        previous_12_months: 31396653
-                        last_year_trend: !!float 38
-                    -
-                        package_name: symfony/website-skeleton
-                        package_short_name: website-skeleton
-                        last_12_months: 439258
-                        previous_12_months: 318908
-                        last_year_trend: 37.7
+                        last_12_months: 44507329
+                        previous_12_months: 32205993
+                        last_year_trend: 38.2
                     -
                         package_name: symfony/translation
                         package_short_name: translation
-                        last_12_months: 48837917
-                        previous_12_months: 35633882
-                        last_year_trend: 37.1
+                        last_12_months: 50178256
+                        previous_12_months: 36578462
+                        last_year_trend: 37.2
                     -
                         package_name: symfony/dom-crawler
                         package_short_name: dom-crawler
-                        last_12_months: 22713323
-                        previous_12_months: 17193327
-                        last_year_trend: 32.1
+                        last_12_months: 23321782
+                        previous_12_months: 17465179
+                        last_year_trend: 33.5
                     -
-                        package_name: symfony/process
-                        package_short_name: process
-                        last_12_months: 13942061
-                        previous_12_months: 10682780
-                        last_year_trend: 30.5
+                        package_name: symfony/website-skeleton
+                        package_short_name: website-skeleton
+                        last_12_months: 447322
+                        previous_12_months: 339880
+                        last_year_trend: 31.6
                     -
                         package_name: symfony/console
                         package_short_name: console
-                        last_12_months: 20404602
-                        previous_12_months: 15634069
-                        last_year_trend: 30.5
+                        last_12_months: 20825597
+                        previous_12_months: 15980933
+                        last_year_trend: 30.3
+                    -
+                        package_name: symfony/process
+                        package_short_name: process
+                        last_12_months: 14142888
+                        previous_12_months: 10977116
+                        last_year_trend: 28.8
                     -
                         package_name: symfony/yaml
                         package_short_name: yaml
-                        last_12_months: 38622695
-                        previous_12_months: 30919236
-                        last_year_trend: 24.9
+                        last_12_months: 39577449
+                        previous_12_months: 31193664
+                        last_year_trend: 26.9
                     -
                         package_name: symfony/event-dispatcher
                         package_short_name: event-dispatcher
-                        last_12_months: 20680077
-                        previous_12_months: 17392866
-                        last_year_trend: 18.9
+                        last_12_months: 21148562
+                        previous_12_months: 17544682
+                        last_year_trend: 20.5
                     -
                         package_name: symfony/debug
                         package_short_name: debug
-                        last_12_months: 22049994
-                        previous_12_months: 18631258
-                        last_year_trend: 18.3
+                        last_12_months: 22177695
+                        previous_12_months: 18805614
+                        last_year_trend: 17.9
                     -
                         package_name: symfony/security
                         package_short_name: security
-                        last_12_months: 3445029
-                        previous_12_months: 3535601
-                        last_year_trend: -2.6
+                        last_12_months: 3494002
+                        previous_12_months: 3607673
+                        last_year_trend: -3.2
                     -
                         package_name: symfony/security-acl
                         package_short_name: security-acl
-                        last_12_months: 4052133
-                        previous_12_months: 4398989
-                        last_year_trend: -7.9
+                        last_12_months: 3984726
+                        previous_12_months: 4368385
+                        last_year_trend: -8.8
                     -
                         package_name: symfony/symfony
                         package_short_name: symfony
-                        last_12_months: 8629257
-                        previous_12_months: 9860665
-                        last_year_trend: -12.5
+                        last_12_months: 8579454
+                        previous_12_months: 9741945
+                        last_year_trend: -11.9
             -
                 vendor_name: Nette
-                vendor_total_last_year: 14424027
-                vendor_total_previous_year: 10679947
-                last_year_trend: !!float 35
+                vendor_total_last_year: 17522073
+                vendor_total_previous_year: 13038665
+                last_year_trend: !!float 34
                 packages_data:
                     -
                         package_name: nette/utils
                         package_short_name: utils
-                        last_12_months: 2333592
-                        previous_12_months: 1214546
-                        last_year_trend: 92.1
-                    -
-                        package_name: nette/php-generator
-                        package_short_name: php-generator
-                        last_12_months: 1509636
-                        previous_12_months: 841245
-                        last_year_trend: 79.5
+                        last_12_months: 2762431
+                        previous_12_months: 1463102
+                        last_year_trend: 88.8
                     -
                         package_name: nette/finder
                         package_short_name: finder
-                        last_12_months: 1527086
-                        previous_12_months: 895169
-                        last_year_trend: 70.6
+                        last_12_months: 1892262
+                        previous_12_months: 1105953
+                        last_year_trend: 71.1
                     -
                         package_name: nette/robot-loader
                         package_short_name: robot-loader
-                        last_12_months: 1180433
-                        previous_12_months: 729463
-                        last_year_trend: 61.8
+                        last_12_months: 1519776
+                        previous_12_months: 924679
+                        last_year_trend: 64.4
                     -
-                        package_name: nette/di
-                        package_short_name: di
-                        last_12_months: 949608
-                        previous_12_months: 760649
-                        last_year_trend: 24.8
+                        package_name: nette/php-generator
+                        package_short_name: php-generator
+                        last_12_months: 1770960
+                        previous_12_months: 1092769
+                        last_year_trend: 62.1
                     -
                         package_name: nette/component-model
                         package_short_name: component-model
-                        last_12_months: 635790
-                        previous_12_months: 522783
-                        last_year_trend: 21.6
-                    -
-                        package_name: nette/bootstrap
-                        package_short_name: bootstrap
-                        last_12_months: 831014
-                        previous_12_months: 686509
-                        last_year_trend: !!float 21
+                        last_12_months: 722950
+                        previous_12_months: 530763
+                        last_year_trend: 36.2
                     -
                         package_name: nette/http
                         package_short_name: http
-                        last_12_months: 674336
-                        previous_12_months: 560866
-                        last_year_trend: 20.2
-                    -
-                        package_name: nette/neon
-                        package_short_name: neon
-                        last_12_months: 880783
-                        previous_12_months: 735733
-                        last_year_trend: 19.7
+                        last_12_months: 766380
+                        previous_12_months: 569266
+                        last_year_trend: 34.6
                     -
                         package_name: nette/application
                         package_short_name: application
-                        last_12_months: 607967
-                        previous_12_months: 516323
-                        last_year_trend: 17.7
+                        last_12_months: 695674
+                        previous_12_months: 523323
+                        last_year_trend: 32.9
                     -
-                        package_name: nette/forms
-                        package_short_name: forms
-                        last_12_months: 511574
-                        previous_12_months: 445055
-                        last_year_trend: 14.9
+                        package_name: nette/di
+                        package_short_name: di
+                        last_12_months: 1184545
+                        previous_12_months: 973925
+                        last_year_trend: 21.6
+                    -
+                        package_name: nette/neon
+                        package_short_name: neon
+                        last_12_months: 1137427
+                        previous_12_months: 937137
+                        last_year_trend: 21.4
+                    -
+                        package_name: nette/bootstrap
+                        package_short_name: bootstrap
+                        last_12_months: 1057789
+                        previous_12_months: 878393
+                        last_year_trend: 20.4
                     -
                         package_name: nette/tester
                         package_short_name: tester
-                        last_12_months: 310302
-                        previous_12_months: 275255
-                        last_year_trend: 12.7
+                        last_12_months: 320371
+                        previous_12_months: 276375
+                        last_year_trend: 15.9
+                    -
+                        package_name: nette/forms
+                        package_short_name: forms
+                        last_12_months: 518739
+                        previous_12_months: 454099
+                        last_year_trend: 14.2
                     -
                         package_name: nette/security
                         package_short_name: security
-                        last_12_months: 467063
-                        previous_12_months: 447181
-                        last_year_trend: 4.4
-                    -
-                        package_name: nette/mail
-                        package_short_name: mail
-                        last_12_months: 558974
-                        previous_12_months: 555045
-                        last_year_trend: 0.7
+                        last_12_months: 468471
+                        previous_12_months: 456617
+                        last_year_trend: 2.6
                     -
                         package_name: nette/caching
                         package_short_name: caching
-                        last_12_months: 912192
-                        previous_12_months: 920573
-                        last_year_trend: -0.9
+                        last_12_months: 929699
+                        previous_12_months: 927377
+                        last_year_trend: 0.3
+                    -
+                        package_name: nette/mail
+                        package_short_name: mail
+                        last_12_months: 560839
+                        previous_12_months: 561653
+                        last_year_trend: -0.1
                     -
                         package_name: nette/reflection
                         package_short_name: reflection
-                        last_12_months: 533677
-                        previous_12_months: 573552
-                        last_year_trend: !!float -7
+                        last_12_months: 528325
+                        previous_12_months: 578284
+                        last_year_trend: -8.6
+                    -
+                        package_name: nette/database
+                        package_short_name: database
+                        last_12_months: 343479
+                        previous_12_months: 382611
+                        last_year_trend: -10.2
+                    -
+                        package_name: nette/safe-stream
+                        package_short_name: safe-stream
+                        last_12_months: 341956
+                        previous_12_months: 402339
+                        last_year_trend: !!float -15
             -
                 vendor_name: Laravel
-                vendor_total_last_year: 92417910
-                vendor_total_previous_year: 69813243
-                last_year_trend: !!float 32
+                vendor_total_last_year: 95562870
+                vendor_total_previous_year: 71817396
+                last_year_trend: !!float 33
                 packages_data:
                     -
                         package_name: illuminate/log
                         package_short_name: log
-                        last_12_months: 1547107
-                        previous_12_months: 738540
-                        last_year_trend: 109.5
+                        last_12_months: 1632627
+                        previous_12_months: 818928
+                        last_year_trend: 99.4
+                    -
+                        package_name: illuminate/cookie
+                        package_short_name: cookie
+                        last_12_months: 261600
+                        previous_12_months: 156741
+                        last_year_trend: 66.9
                     -
                         package_name: illuminate/mail
                         package_short_name: mail
-                        last_12_months: 682696
-                        previous_12_months: 458435
-                        last_year_trend: 48.9
+                        last_12_months: 703687
+                        previous_12_months: 475431
+                        last_year_trend: !!float 48
                     -
                         package_name: illuminate/support
                         package_short_name: support
-                        last_12_months: 6991599
-                        previous_12_months: 5008497
-                        last_year_trend: 39.6
-                    -
-                        package_name: illuminate/config
-                        package_short_name: config
-                        last_12_months: 3016739
-                        previous_12_months: 2209338
-                        last_year_trend: 36.5
-                    -
-                        package_name: illuminate/console
-                        package_short_name: console
-                        last_12_months: 2762634
-                        previous_12_months: 2030916
-                        last_year_trend: !!float 36
+                        last_12_months: 7222515
+                        previous_12_months: 5138613
+                        last_year_trend: 40.6
                     -
                         package_name: illuminate/redis
                         package_short_name: redis
-                        last_12_months: 1083327
-                        previous_12_months: 797820
-                        last_year_trend: 35.8
+                        last_12_months: 1136761
+                        previous_12_months: 826520
+                        last_year_trend: 37.5
                     -
-                        package_name: illuminate/filesystem
-                        package_short_name: filesystem
-                        last_12_months: 3624748
-                        previous_12_months: 2676315
-                        last_year_trend: 35.4
+                        package_name: illuminate/console
+                        package_short_name: console
+                        last_12_months: 2865417
+                        previous_12_months: 2089268
+                        last_year_trend: 37.1
+                    -
+                        package_name: illuminate/config
+                        package_short_name: config
+                        last_12_months: 3115530
+                        previous_12_months: 2277770
+                        last_year_trend: 36.8
                     -
                         package_name: illuminate/queue
                         package_short_name: queue
-                        last_12_months: 2343230
-                        previous_12_months: 1736939
-                        last_year_trend: 34.9
+                        last_12_months: 2433396
+                        previous_12_months: 1782523
+                        last_year_trend: 36.5
                     -
-                        package_name: illuminate/container
-                        package_short_name: container
-                        last_12_months: 5319113
-                        previous_12_months: 3962990
-                        last_year_trend: 34.2
-                    -
-                        package_name: illuminate/routing
-                        package_short_name: routing
-                        last_12_months: 556934
-                        previous_12_months: 415241
-                        last_year_trend: 34.1
+                        package_name: illuminate/filesystem
+                        package_short_name: filesystem
+                        last_12_months: 3726440
+                        previous_12_months: 2758775
+                        last_year_trend: 35.1
                     -
                         package_name: illuminate/events
                         package_short_name: events
-                        last_12_months: 3558965
-                        previous_12_months: 2655648
-                        last_year_trend: !!float 34
+                        last_12_months: 3662292
+                        previous_12_months: 2731108
+                        last_year_trend: 34.1
                     -
-                        package_name: illuminate/view
-                        package_short_name: view
-                        last_12_months: 2843104
-                        previous_12_months: 2148481
-                        last_year_trend: 32.3
+                        package_name: illuminate/container
+                        package_short_name: container
+                        last_12_months: 5467504
+                        previous_12_months: 4077454
+                        last_year_trend: 34.1
                     -
                         package_name: illuminate/translation
                         package_short_name: translation
-                        last_12_months: 2347274
-                        previous_12_months: 1786786
-                        last_year_trend: 31.4
+                        last_12_months: 2431260
+                        previous_12_months: 1834218
+                        last_year_trend: 32.6
+                    -
+                        package_name: illuminate/view
+                        package_short_name: view
+                        last_12_months: 2925678
+                        previous_12_months: 2214001
+                        last_year_trend: 32.1
+                    -
+                        package_name: illuminate/routing
+                        package_short_name: routing
+                        last_12_months: 570376
+                        previous_12_months: 432741
+                        last_year_trend: 31.8
                     -
                         package_name: illuminate/bus
                         package_short_name: bus
-                        last_12_months: 2223504
-                        previous_12_months: 1705205
-                        last_year_trend: 30.4
-                    -
-                        package_name: illuminate/cache
-                        package_short_name: cache
-                        last_12_months: 2407056
-                        previous_12_months: 1847953
-                        last_year_trend: 30.3
+                        last_12_months: 2301402
+                        previous_12_months: 1750621
+                        last_year_trend: 31.5
                     -
                         package_name: illuminate/pipeline
                         package_short_name: pipeline
-                        last_12_months: 2372046
-                        previous_12_months: 1820152
-                        last_year_trend: 30.3
+                        last_12_months: 2455975
+                        previous_12_months: 1869572
+                        last_year_trend: 31.4
                     -
-                        package_name: illuminate/database
-                        package_short_name: database
-                        last_12_months: 3878595
-                        previous_12_months: 2984196
-                        last_year_trend: !!float 30
+                        package_name: illuminate/cache
+                        package_short_name: cache
+                        last_12_months: 2489142
+                        previous_12_months: 1895441
+                        last_year_trend: 31.3
                     -
                         package_name: illuminate/auth
                         package_short_name: auth
-                        last_12_months: 2116094
-                        previous_12_months: 1634099
-                        last_year_trend: 29.5
+                        last_12_months: 2194449
+                        previous_12_months: 1673355
+                        last_year_trend: 31.1
                     -
                         package_name: illuminate/broadcasting
                         package_short_name: broadcasting
-                        last_12_months: 2067318
-                        previous_12_months: 1600330
-                        last_year_trend: 29.2
+                        last_12_months: 2144759
+                        previous_12_months: 1639642
+                        last_year_trend: 30.8
+                    -
+                        package_name: illuminate/database
+                        package_short_name: database
+                        last_12_months: 3993976
+                        previous_12_months: 3057388
+                        last_year_trend: 30.6
                     -
                         package_name: illuminate/validation
                         package_short_name: validation
-                        last_12_months: 2357222
-                        previous_12_months: 1826699
-                        last_year_trend: !!float 29
+                        last_12_months: 2441086
+                        previous_12_months: 1870687
+                        last_year_trend: 30.5
                     -
                         package_name: laravel/framework
                         package_short_name: framework
-                        last_12_months: 26746571
-                        previous_12_months: 20749402
-                        last_year_trend: 28.9
-                    -
-                        package_name: illuminate/session
-                        package_short_name: session
-                        last_12_months: 2410182
-                        previous_12_months: 1873002
-                        last_year_trend: 28.7
-                    -
-                        package_name: illuminate/encryption
-                        package_short_name: encryption
-                        last_12_months: 2294591
-                        previous_12_months: 1783707
-                        last_year_trend: 28.6
+                        last_12_months: 27431016
+                        previous_12_months: 21189954
+                        last_year_trend: 29.5
                     -
                         package_name: illuminate/hashing
                         package_short_name: hashing
-                        last_12_months: 2126933
-                        previous_12_months: 1655682
-                        last_year_trend: 28.5
+                        last_12_months: 2201115
+                        previous_12_months: 1699726
+                        last_year_trend: 29.5
+                    -
+                        package_name: illuminate/session
+                        package_short_name: session
+                        last_12_months: 2489523
+                        previous_12_months: 1923934
+                        last_year_trend: 29.4
+                    -
+                        package_name: illuminate/encryption
+                        package_short_name: encryption
+                        last_12_months: 2369638
+                        previous_12_months: 1831475
+                        last_year_trend: 29.4
                     -
                         package_name: illuminate/pagination
                         package_short_name: pagination
-                        last_12_months: 2380068
-                        previous_12_months: 1860537
-                        last_year_trend: 27.9
+                        last_12_months: 2457415
+                        previous_12_months: 1907185
+                        last_year_trend: 28.9
                     -
                         package_name: illuminate/http
                         package_short_name: http
-                        last_12_months: 2360260
-                        previous_12_months: 1846333
-                        last_year_trend: 27.8
+                        last_12_months: 2438291
+                        previous_12_months: 1894325
+                        last_year_trend: 28.7
             -
                 vendor_name: Zend
-                vendor_total_last_year: 207195330
-                vendor_total_previous_year: 159941227
-                last_year_trend: !!float 30
+                vendor_total_last_year: 209455264
+                vendor_total_previous_year: 162975099
+                last_year_trend: !!float 29
                 packages_data:
                     -
                         package_name: zendframework/zend-httphandlerrunner
                         package_short_name: zend-httphandlerrunner
-                        last_12_months: 562516
-                        previous_12_months: 165839
-                        last_year_trend: 239.2
+                        last_12_months: 571178
+                        previous_12_months: 195351
+                        last_year_trend: 192.4
                     -
                         package_name: zendframework/zend-barcode
                         package_short_name: zend-barcode
-                        last_12_months: 1458677
-                        previous_12_months: 666866
-                        last_year_trend: 118.7
-                    -
-                        package_name: zendframework/zend-mail
-                        package_short_name: zend-mail
-                        last_12_months: 3038093
-                        previous_12_months: 1725450
-                        last_year_trend: 76.1
+                        last_12_months: 1584029
+                        previous_12_months: 666782
+                        last_year_trend: 137.6
                     -
                         package_name: zendframework/zend-mime
                         package_short_name: zend-mime
-                        last_12_months: 3251646
-                        previous_12_months: 1849883
-                        last_year_trend: 75.8
+                        last_12_months: 3331268
+                        previous_12_months: 1921675
+                        last_year_trend: 73.4
+                    -
+                        package_name: zendframework/zend-mail
+                        package_short_name: zend-mail
+                        last_12_months: 3107859
+                        previous_12_months: 1798838
+                        last_year_trend: 72.8
                     -
                         package_name: zendframework/zend-diactoros
                         package_short_name: zend-diactoros
-                        last_12_months: 20184928
-                        previous_12_months: 11818063
-                        last_year_trend: 70.8
+                        last_12_months: 20128037
+                        previous_12_months: 12750295
+                        last_year_trend: 57.9
                     -
                         package_name: zendframework/zend-feed
                         package_short_name: zend-feed
-                        last_12_months: 5310385
-                        previous_12_months: 3430409
-                        last_year_trend: 54.8
+                        last_12_months: 5419341
+                        previous_12_months: 3592081
+                        last_year_trend: 50.9
                     -
                         package_name: zendframework/zend-code
                         package_short_name: zend-code
-                        last_12_months: 17240005
-                        previous_12_months: 11984145
-                        last_year_trend: 43.9
+                        last_12_months: 17571585
+                        previous_12_months: 12311101
+                        last_year_trend: 42.7
                     -
                         package_name: zendframework/zend-psr7bridge
                         package_short_name: zend-psr7bridge
-                        last_12_months: 2215042
-                        previous_12_months: 1583189
-                        last_year_trend: 39.9
+                        last_12_months: 2278331
+                        previous_12_months: 1642409
+                        last_year_trend: 38.7
                     -
                         package_name: zendframework/zend-eventmanager
                         package_short_name: zend-eventmanager
-                        last_12_months: 17519179
-                        previous_12_months: 12679278
-                        last_year_trend: 38.2
-                    -
-                        package_name: zendframework/zend-expressive
-                        package_short_name: zend-expressive
-                        last_12_months: 390498
-                        previous_12_months: 289340
-                        last_year_trend: !!float 35
+                        last_12_months: 17813917
+                        previous_12_months: 12983554
+                        last_year_trend: 37.2
                     -
                         package_name: zendframework/zend-session
                         package_short_name: zend-session
-                        last_12_months: 2715297
-                        previous_12_months: 2017392
-                        last_year_trend: 34.6
+                        last_12_months: 2785006
+                        previous_12_months: 2049172
+                        last_year_trend: 35.9
                     -
                         package_name: zendframework/zend-db
                         package_short_name: zend-db
-                        last_12_months: 2771918
-                        previous_12_months: 2065758
-                        last_year_trend: 34.2
+                        last_12_months: 2851713
+                        previous_12_months: 2113050
+                        last_year_trend: !!float 35
                     -
-                        package_name: zendframework/zend-router
-                        package_short_name: zend-router
-                        last_12_months: 796354
-                        previous_12_months: 597380
-                        last_year_trend: 33.3
+                        package_name: zendframework/zend-expressive
+                        package_short_name: zend-expressive
+                        last_12_months: 394236
+                        previous_12_months: 297124
+                        last_year_trend: 32.7
                     -
                         package_name: zendframework/zend-escaper
                         package_short_name: zend-escaper
-                        last_12_months: 9800062
-                        previous_12_months: 7370389
-                        last_year_trend: !!float 33
-                    -
-                        package_name: zendframework/zend-inputfilter
-                        package_short_name: zend-inputfilter
-                        last_12_months: 3396937
-                        previous_12_months: 2593366
-                        last_year_trend: !!float 31
-                    -
-                        package_name: zendframework/zend-mvc-console
-                        package_short_name: zend-mvc-console
-                        last_12_months: 370850
-                        previous_12_months: 283120
-                        last_year_trend: !!float 31
+                        last_12_months: 9966928
+                        previous_12_months: 7550205
+                        last_year_trend: !!float 32
                     -
                         package_name: zendframework/zend-captcha
                         package_short_name: zend-captcha
-                        last_12_months: 2193385
-                        previous_12_months: 1686031
-                        last_year_trend: 30.1
+                        last_12_months: 2252503
+                        previous_12_months: 1725511
+                        last_year_trend: 30.5
                     -
-                        package_name: zendframework/zenddiagnostics
-                        package_short_name: zenddiagnostics
-                        last_12_months: 1938057
-                        previous_12_months: 1497254
-                        last_year_trend: 29.4
+                        package_name: zendframework/zend-inputfilter
+                        package_short_name: zend-inputfilter
+                        last_12_months: 3428310
+                        previous_12_months: 2629346
+                        last_year_trend: 30.4
                     -
-                        package_name: zendframework/zend-component-installer
-                        package_short_name: zend-component-installer
-                        last_12_months: 559912
-                        previous_12_months: 436607
-                        last_year_trend: 28.2
+                        package_name: zendframework/zend-router
+                        package_short_name: zend-router
+                        last_12_months: 792482
+                        previous_12_months: 621712
+                        last_year_trend: 27.5
                     -
                         package_name: zendframework/zend-filter
                         package_short_name: zend-filter
-                        last_12_months: 4149769
-                        previous_12_months: 3259824
-                        last_year_trend: 27.3
-                    -
-                        package_name: zendframework/zend-stratigility
-                        package_short_name: zend-stratigility
-                        last_12_months: 658632
-                        previous_12_months: 518683
-                        last_year_trend: !!float 27
-                    -
-                        package_name: zendframework/zend-hydrator
-                        package_short_name: zend-hydrator
-                        last_12_months: 3769079
-                        previous_12_months: 3004656
-                        last_year_trend: 25.4
+                        last_12_months: 4192947
+                        previous_12_months: 3305156
+                        last_year_trend: 26.9
                     -
                         package_name: zendframework/zend-log
                         package_short_name: zend-log
-                        last_12_months: 2922360
-                        previous_12_months: 2339327
-                        last_year_trend: 24.9
+                        last_12_months: 2997013
+                        previous_12_months: 2366459
+                        last_year_trend: 26.6
                     -
-                        package_name: zendframework/zend-view
-                        package_short_name: zend-view
-                        last_12_months: 3096241
-                        previous_12_months: 2481303
-                        last_year_trend: 24.8
-                    -
-                        package_name: zendframework/zend-validator
-                        package_short_name: zend-validator
-                        last_12_months: 6632128
-                        previous_12_months: 5335983
-                        last_year_trend: 24.3
+                        package_name: zendframework/zend-hydrator
+                        package_short_name: zend-hydrator
+                        last_12_months: 3849199
+                        previous_12_months: 3047720
+                        last_year_trend: 26.3
                     -
                         package_name: zendframework/zend-modulemanager
                         package_short_name: zend-modulemanager
-                        last_12_months: 2901485
-                        previous_12_months: 2344735
-                        last_year_trend: 23.7
-                    -
-                        package_name: zendframework/zend-ldap
-                        package_short_name: zend-ldap
-                        last_12_months: 790537
-                        previous_12_months: 640243
-                        last_year_trend: 23.5
+                        last_12_months: 2965733
+                        previous_12_months: 2364839
+                        last_year_trend: 25.4
                     -
                         package_name: zendframework/zend-soap
                         package_short_name: zend-soap
-                        last_12_months: 2752329
-                        previous_12_months: 2233616
+                        last_12_months: 2811430
+                        previous_12_months: 2241792
+                        last_year_trend: 25.4
+                    -
+                        package_name: zendframework/zend-view
+                        package_short_name: zend-view
+                        last_12_months: 3144876
+                        previous_12_months: 2517591
+                        last_year_trend: 24.9
+                    -
+                        package_name: zendframework/zend-text
+                        package_short_name: zend-text
+                        last_12_months: 2664456
+                        previous_12_months: 2146243
+                        last_year_trend: 24.1
+                    -
+                        package_name: zendframework/zend-component-installer
+                        package_short_name: zend-component-installer
+                        last_12_months: 557472
+                        previous_12_months: 449683
+                        last_year_trend: !!float 24
+                    -
+                        package_name: zendframework/zend-stratigility
+                        package_short_name: zend-stratigility
+                        last_12_months: 657368
+                        previous_12_months: 533523
                         last_year_trend: 23.2
                     -
                         package_name: zendframework/zend-uri
                         package_short_name: zend-uri
-                        last_12_months: 4783412
-                        previous_12_months: 3899114
-                        last_year_trend: 22.7
+                        last_12_months: 4859118
+                        previous_12_months: 3948338
+                        last_year_trend: 23.1
                     -
-                        package_name: zendframework/zend-stdlib
-                        package_short_name: zend-stdlib
-                        last_12_months: 12239435
-                        previous_12_months: 10023941
-                        last_year_trend: 22.1
-                    -
-                        package_name: zendframework/zend-text
-                        package_short_name: zend-text
-                        last_12_months: 2596623
-                        previous_12_months: 2127287
-                        last_year_trend: 22.1
+                        package_name: zendframework/zend-validator
+                        package_short_name: zend-validator
+                        last_12_months: 6650811
+                        previous_12_months: 5409315
+                        last_year_trend: !!float 23
                     -
                         package_name: zendframework/zend-server
                         package_short_name: zend-server
-                        last_12_months: 2967706
-                        previous_12_months: 2449023
-                        last_year_trend: 21.2
+                        last_12_months: 3039383
+                        previous_12_months: 2471143
+                        last_year_trend: !!float 23
                     -
                         package_name: zendframework/zend-console
                         package_short_name: zend-console
-                        last_12_months: 2764384
-                        previous_12_months: 2285407
-                        last_year_trend: !!float 21
+                        last_12_months: 2816946
+                        previous_12_months: 2302375
+                        last_year_trend: 22.3
                     -
                         package_name: zendframework/zend-form
                         package_short_name: zend-form
-                        last_12_months: 2886602
-                        previous_12_months: 2387010
-                        last_year_trend: 20.9
+                        last_12_months: 2932329
+                        previous_12_months: 2419742
+                        last_year_trend: 21.2
                     -
-                        package_name: zendframework/zend-loader
-                        package_short_name: zend-loader
-                        last_12_months: 5262074
-                        previous_12_months: 4404658
-                        last_year_trend: 19.5
-                    -
-                        package_name: zendframework/zend-json
-                        package_short_name: zend-json
-                        last_12_months: 4194809
-                        previous_12_months: 3546727
-                        last_year_trend: 18.3
-                    -
-                        package_name: zendframework/zend-http
-                        package_short_name: zend-http
-                        last_12_months: 4377341
-                        previous_12_months: 3711701
-                        last_year_trend: 17.9
-                    -
-                        package_name: zendframework/zend-config
-                        package_short_name: zend-config
-                        last_12_months: 3554139
-                        previous_12_months: 3017731
-                        last_year_trend: 17.8
-                    -
-                        package_name: zendframework/zend-mvc
-                        package_short_name: zend-mvc
-                        last_12_months: 2862995
-                        previous_12_months: 2431246
-                        last_year_trend: 17.8
+                        package_name: zendframework/zend-stdlib
+                        package_short_name: zend-stdlib
+                        last_12_months: 12340141
+                        previous_12_months: 10183653
+                        last_year_trend: 21.2
                     -
                         package_name: zendframework/zend-di
                         package_short_name: zend-di
-                        last_12_months: 2319012
-                        previous_12_months: 1975662
-                        last_year_trend: 17.4
+                        last_12_months: 2368109
+                        previous_12_months: 1983754
+                        last_year_trend: 19.4
                     -
                         package_name: zendframework/zend-i18n
                         package_short_name: zend-i18n
-                        last_12_months: 3280600
-                        previous_12_months: 2797481
-                        last_year_trend: 17.3
+                        last_12_months: 3348709
+                        previous_12_months: 2808009
+                        last_year_trend: 19.3
                     -
-                        package_name: zendframework/zendservice-apple-apns
-                        package_short_name: zendservice-apple-apns
-                        last_12_months: 591617
-                        previous_12_months: 512860
-                        last_year_trend: 15.4
+                        package_name: zendframework/zenddiagnostics
+                        package_short_name: zenddiagnostics
+                        last_12_months: 1892648
+                        previous_12_months: 1588450
+                        last_year_trend: 19.2
                     -
-                        package_name: zendframework/zend-servicemanager
-                        package_short_name: zend-servicemanager
-                        last_12_months: 5038128
-                        previous_12_months: 4377326
-                        last_year_trend: 15.1
+                        package_name: zendframework/zend-mvc
+                        package_short_name: zend-mvc
+                        last_12_months: 2911880
+                        previous_12_months: 2450062
+                        last_year_trend: 18.8
+                    -
+                        package_name: zendframework/zend-config
+                        package_short_name: zend-config
+                        last_12_months: 3606912
+                        previous_12_months: 3037779
+                        last_year_trend: 18.7
+                    -
+                        package_name: zendframework/zend-json
+                        package_short_name: zend-json
+                        last_12_months: 4243176
+                        previous_12_months: 3577527
+                        last_year_trend: 18.6
+                    -
+                        package_name: zendframework/zend-loader
+                        package_short_name: zend-loader
+                        last_12_months: 5292215
+                        previous_12_months: 4471214
+                        last_year_trend: 18.4
+                    -
+                        package_name: zendframework/zend-http
+                        package_short_name: zend-http
+                        last_12_months: 4424488
+                        previous_12_months: 3775261
+                        last_year_trend: 17.2
                     -
                         package_name: zendframework/zend-serializer
                         package_short_name: zend-serializer
-                        last_12_months: 2943224
-                        previous_12_months: 2562814
-                        last_year_trend: 14.8
+                        last_12_months: 3000747
+                        previous_12_months: 2563766
+                        last_year_trend: !!float 17
+                    -
+                        package_name: zendframework/zend-servicemanager
+                        package_short_name: zend-servicemanager
+                        last_12_months: 5099862
+                        previous_12_months: 4368954
+                        last_year_trend: 16.7
+                    -
+                        package_name: zendframework/zend-ldap
+                        package_short_name: zend-ldap
+                        last_12_months: 770759
+                        previous_12_months: 677483
+                        last_year_trend: 13.8
                     -
                         package_name: zendframework/zend-paginator
                         package_short_name: zend-paginator
-                        last_12_months: 1082389
-                        previous_12_months: 954365
-                        last_year_trend: 13.4
+                        last_12_months: 1091863
+                        previous_12_months: 961533
+                        last_year_trend: 13.6
+                    -
+                        package_name: zendframework/zendservice-apple-apns
+                        package_short_name: zendservice-apple-apns
+                        last_12_months: 592299
+                        previous_12_months: 527308
+                        last_year_trend: 12.3
                     -
                         package_name: zendframework/zend-permissions-acl
                         package_short_name: zend-permissions-acl
-                        last_12_months: 915939
-                        previous_12_months: 807889
-                        last_year_trend: 13.4
-                    -
-                        package_name: zendframework/zend-authentication
-                        package_short_name: zend-authentication
-                        last_12_months: 1087362
-                        previous_12_months: 986805
-                        last_year_trend: 10.2
+                        last_12_months: 913824
+                        previous_12_months: 817913
+                        last_year_trend: 11.7
                     -
                         package_name: zendframework/zend-crypt
                         package_short_name: zend-crypt
-                        last_12_months: 2849027
-                        previous_12_months: 2655980
-                        last_year_trend: 7.3
+                        last_12_months: 2893127
+                        previous_12_months: 2655588
+                        last_year_trend: 8.9
                     -
-                        package_name: zendframework/zend-dom
-                        package_short_name: zend-dom
-                        last_12_months: 734600
-                        previous_12_months: 685657
-                        last_year_trend: 7.1
+                        package_name: zendframework/zend-authentication
+                        package_short_name: zend-authentication
+                        last_12_months: 1080730
+                        previous_12_months: 1002653
+                        last_year_trend: 7.8
                     -
                         package_name: zendframework/zend-math
                         package_short_name: zend-math
-                        last_12_months: 3250794
-                        previous_12_months: 3058849
-                        last_year_trend: 6.3
+                        last_12_months: 3285912
+                        previous_12_months: 3068117
+                        last_year_trend: 7.1
                     -
-                        package_name: zendframework/zendservice-google-gcm
-                        package_short_name: zendservice-google-gcm
-                        last_12_months: 521996
-                        previous_12_months: 491829
-                        last_year_trend: 6.1
+                        package_name: zendframework/zend-dom
+                        package_short_name: zend-dom
+                        last_12_months: 733142
+                        previous_12_months: 689045
+                        last_year_trend: 6.4
                     -
                         package_name: zendframework/zend-cache
                         package_short_name: zend-cache
-                        last_12_months: 1624009
-                        previous_12_months: 1531909
-                        last_year_trend: !!float 6
+                        last_12_months: 1627339
+                        previous_12_months: 1533729
+                        last_year_trend: 6.1
                     -
                         package_name: zendframework/zend-memory
                         package_short_name: zend-memory
-                        last_12_months: 706816
-                        previous_12_months: 681013
-                        last_year_trend: 3.8
+                        last_12_months: 712531
+                        previous_12_months: 681265
+                        last_year_trend: 4.6
+                    -
+                        package_name: zendframework/zendservice-google-gcm
+                        package_short_name: zendservice-google-gcm
+                        last_12_months: 519778
+                        previous_12_months: 499669
+                        last_year_trend: !!float 4
                     -
                         package_name: zendframework/zend-permissions-rbac
                         package_short_name: zend-permissions-rbac
-                        last_12_months: 677142
-                        previous_12_months: 655272
-                        last_year_trend: 3.3
+                        last_12_months: 674234
+                        previous_12_months: 656280
+                        last_year_trend: 2.7
                     -
                         package_name: zendframework/zend-test
                         package_short_name: zend-test
-                        last_12_months: 641385
-                        previous_12_months: 633290
-                        last_year_trend: 1.3
+                        last_12_months: 634046
+                        previous_12_months: 635782
+                        last_year_trend: -0.3
                     -
                         package_name: zendframework/zend-navigation
                         package_short_name: zend-navigation
-                        last_12_months: 616409
-                        previous_12_months: 615837
-                        last_year_trend: 0.1
+                        last_12_months: 610352
+                        previous_12_months: 618301
+                        last_year_trend: -1.3
                     -
                         package_name: zendframework/zend-debug
                         package_short_name: zend-debug
-                        last_12_months: 668097
-                        previous_12_months: 667810
-                        last_year_trend: !!float 0
+                        last_12_months: 656026
+                        previous_12_months: 671926
+                        last_year_trend: -2.4
                     -
                         package_name: zendframework/zendxml
                         package_short_name: zendxml
-                        last_12_months: 1105108
-                        previous_12_months: 1131433
-                        last_year_trend: -2.3
-                    -
-                        package_name: zendframework/zend-version
-                        package_short_name: zend-version
-                        last_12_months: 478789
-                        previous_12_months: 493545
-                        last_year_trend: !!float -3
-                    -
-                        package_name: zendframework/zend-tag
-                        package_short_name: zend-tag
-                        last_12_months: 467952
-                        previous_12_months: 489548
-                        last_year_trend: -4.4
-                    -
-                        package_name: zendframework/zend-i18n-resources
-                        package_short_name: zend-i18n-resources
-                        last_12_months: 545848
-                        previous_12_months: 570834
-                        last_year_trend: -4.4
+                        last_12_months: 1104216
+                        previous_12_months: 1133169
+                        last_year_trend: -2.6
                     -
                         package_name: zendframework/zend-xmlrpc
                         package_short_name: zend-xmlrpc
-                        last_12_months: 638845
-                        previous_12_months: 670720
-                        last_year_trend: -4.8
+                        last_12_months: 640031
+                        previous_12_months: 665204
+                        last_year_trend: -3.8
+                    -
+                        package_name: zendframework/zend-i18n-resources
+                        package_short_name: zend-i18n-resources
+                        last_12_months: 540971
+                        previous_12_months: 570918
+                        last_year_trend: -5.2
+                    -
+                        package_name: zendframework/zend-version
+                        package_short_name: zend-version
+                        last_12_months: 466574
+                        previous_12_months: 497717
+                        last_year_trend: -6.3
+                    -
+                        package_name: zendframework/zend-tag
+                        package_short_name: zend-tag
+                        last_12_months: 459477
+                        previous_12_months: 491508
+                        last_year_trend: -6.5
                     -
                         package_name: zendframework/zendframework1
                         package_short_name: zendframework1
-                        last_12_months: 837502
-                        previous_12_months: 883882
-                        last_year_trend: -5.2
+                        last_12_months: 822877
+                        previous_12_months: 881278
+                        last_year_trend: -6.6
                     -
                         package_name: zendframework/zend-progressbar
                         package_short_name: zend-progressbar
-                        last_12_months: 464919
-                        previous_12_months: 499868
-                        last_year_trend: !!float -7
+                        last_12_months: 460753
+                        previous_12_months: 498188
+                        last_year_trend: -7.5
                     -
                         package_name: zendframework/zend-file
                         package_short_name: zend-file
-                        last_12_months: 519113
-                        previous_12_months: 567712
-                        last_year_trend: -8.6
+                        last_12_months: 512590
+                        previous_12_months: 566480
+                        last_year_trend: -9.5
                     -
                         package_name: zendframework/zendframework
                         package_short_name: zendframework
-                        last_12_months: 712887
-                        previous_12_months: 799063
-                        last_year_trend: -10.8
+                        last_12_months: 707122
+                        previous_12_months: 793491
+                        last_year_trend: -10.9
             -
                 vendor_name: Doctrine
-                vendor_total_last_year: 360719656
-                vendor_total_previous_year: 284440238
-                last_year_trend: !!float 27
+                vendor_total_last_year: 370325744
+                vendor_total_previous_year: 288022530
+                last_year_trend: !!float 29
                 packages_data:
                     -
                         package_name: doctrine/migrations
                         package_short_name: migrations
-                        last_12_months: 11476369
-                        previous_12_months: 8030937
-                        last_year_trend: 42.9
+                        last_12_months: 11873924
+                        previous_12_months: 8253509
+                        last_year_trend: 43.9
                     -
                         package_name: doctrine/lexer
                         package_short_name: lexer
-                        last_12_months: 53515023
-                        previous_12_months: 37709583
-                        last_year_trend: 41.9
+                        last_12_months: 55290544
+                        previous_12_months: 38537963
+                        last_year_trend: 43.5
                     -
                         package_name: doctrine/cache
                         package_short_name: cache
-                        last_12_months: 38118737
-                        previous_12_months: 28845345
-                        last_year_trend: 32.1
+                        last_12_months: 39239376
+                        previous_12_months: 29334393
+                        last_year_trend: 33.8
                     -
                         package_name: doctrine/dbal
                         package_short_name: dbal
-                        last_12_months: 32434368
-                        previous_12_months: 24562502
-                        last_year_trend: !!float 32
+                        last_12_months: 33433925
+                        previous_12_months: 25023606
+                        last_year_trend: 33.6
                     -
                         package_name: doctrine/instantiator
                         package_short_name: instantiator
-                        last_12_months: 57071507
-                        previous_12_months: 43707982
-                        last_year_trend: 30.6
+                        last_12_months: 58635355
+                        previous_12_months: 44331346
+                        last_year_trend: 32.3
                     -
                         package_name: doctrine/data-fixtures
                         package_short_name: data-fixtures
-                        last_12_months: 8125193
-                        previous_12_months: 6288752
-                        last_year_trend: 29.2
+                        last_12_months: 8316316
+                        previous_12_months: 6388488
+                        last_year_trend: 30.2
                     -
                         package_name: doctrine/inflector
                         package_short_name: inflector
-                        last_12_months: 51988382
-                        previous_12_months: 40471494
-                        last_year_trend: 28.5
+                        last_12_months: 53410880
+                        previous_12_months: 41116698
+                        last_year_trend: 29.9
                     -
                         package_name: doctrine/orm
                         package_short_name: orm
-                        last_12_months: 16792284
-                        previous_12_months: 13712380
-                        last_year_trend: 22.5
-                    -
-                        package_name: doctrine/mongodb-odm
-                        package_short_name: mongodb-odm
-                        last_12_months: 1324861
-                        previous_12_months: 1085161
-                        last_year_trend: 22.1
+                        last_12_months: 17203747
+                        previous_12_months: 13876992
+                        last_year_trend: !!float 24
                     -
                         package_name: doctrine/annotations
                         package_short_name: annotations
-                        last_12_months: 34475783
-                        previous_12_months: 28662237
-                        last_year_trend: 20.3
+                        last_12_months: 35407213
+                        previous_12_months: 28748785
+                        last_year_trend: 23.2
+                    -
+                        package_name: doctrine/mongodb-odm
+                        package_short_name: mongodb-odm
+                        last_12_months: 1343365
+                        previous_12_months: 1092105
+                        last_year_trend: !!float 23
                     -
                         package_name: doctrine/collections
                         package_short_name: collections
-                        last_12_months: 28491051
-                        previous_12_months: 25441303
-                        last_year_trend: !!float 12
+                        last_12_months: 28918917
+                        previous_12_months: 25459979
+                        last_year_trend: 13.6
                     -
                         package_name: doctrine/mongodb
                         package_short_name: mongodb
-                        last_12_months: 1239339
-                        previous_12_months: 1116459
-                        last_year_trend: !!float 11
+                        last_12_months: 1236496
+                        previous_12_months: 1119707
+                        last_year_trend: 10.4
                     -
                         package_name: doctrine/common
                         package_short_name: common
-                        last_12_months: 25666759
-                        previous_12_months: 24806103
-                        last_year_trend: 3.5
+                        last_12_months: 26015686
+                        previous_12_months: 24738959
+                        last_year_trend: 5.2
             -
                 vendor_name: Yii
-                vendor_total_last_year: 18369955
-                vendor_total_previous_year: 16246283
-                last_year_trend: !!float 13
+                vendor_total_last_year: 18522104
+                vendor_total_previous_year: 16489547
+                last_year_trend: !!float 12
                 packages_data:
                     -
                         package_name: yiisoft/yii2-queue
                         package_short_name: yii2-queue
-                        last_12_months: 810634
-                        previous_12_months: 436908
-                        last_year_trend: 85.5
+                        last_12_months: 838394
+                        previous_12_months: 471180
+                        last_year_trend: 77.9
                     -
                         package_name: yiisoft/yii2-httpclient
                         package_short_name: yii2-httpclient
-                        last_12_months: 889643
-                        previous_12_months: 662046
-                        last_year_trend: 34.4
+                        last_12_months: 906379
+                        previous_12_months: 675794
+                        last_year_trend: 34.1
                     -
                         package_name: yiisoft/yii2-redis
                         package_short_name: yii2-redis
-                        last_12_months: 854918
-                        previous_12_months: 694891
-                        last_year_trend: !!float 23
+                        last_12_months: 870536
+                        previous_12_months: 709339
+                        last_year_trend: 22.7
                     -
                         package_name: yiisoft/yii2
                         package_short_name: yii2
-                        last_12_months: 2517832
-                        previous_12_months: 2114590
-                        last_year_trend: 19.1
+                        last_12_months: 2541313
+                        previous_12_months: 2145082
+                        last_year_trend: 18.5
                     -
                         package_name: yiisoft/yii2-debug
                         package_short_name: yii2-debug
-                        last_12_months: 2018917
-                        previous_12_months: 1738581
-                        last_year_trend: 16.1
+                        last_12_months: 2043866
+                        previous_12_months: 1763025
+                        last_year_trend: 15.9
                     -
                         package_name: yiisoft/yii2-composer
                         package_short_name: yii2-composer
-                        last_12_months: 2365294
-                        previous_12_months: 2086997
-                        last_year_trend: 13.3
+                        last_12_months: 2399040
+                        previous_12_months: 2122277
+                        last_year_trend: !!float 13
                     -
                         package_name: yiisoft/yii2-swiftmailer
                         package_short_name: yii2-swiftmailer
-                        last_12_months: 2004394
-                        previous_12_months: 1778621
-                        last_year_trend: 12.7
+                        last_12_months: 2028196
+                        previous_12_months: 1809141
+                        last_year_trend: 12.1
                     -
                         package_name: yiisoft/yii2-jui
                         package_short_name: yii2-jui
-                        last_12_months: 720595
-                        previous_12_months: 645475
-                        last_year_trend: 11.6
+                        last_12_months: 723302
+                        previous_12_months: 654239
+                        last_year_trend: 10.6
                     -
                         package_name: yiisoft/yii2-imagine
                         package_short_name: yii2-imagine
-                        last_12_months: 413045
-                        previous_12_months: 382558
-                        last_year_trend: !!float 8
+                        last_12_months: 417721
+                        previous_12_months: 385834
+                        last_year_trend: 8.3
                     -
                         package_name: yiisoft/yii
                         package_short_name: yii
-                        last_12_months: 471037
-                        previous_12_months: 437912
-                        last_year_trend: 7.6
+                        last_12_months: 467149
+                        previous_12_months: 450064
+                        last_year_trend: 3.8
                     -
                         package_name: yiisoft/yii2-gii
                         package_short_name: yii2-gii
-                        last_12_months: 1543135
-                        previous_12_months: 1499275
-                        last_year_trend: 2.9
+                        last_12_months: 1553206
+                        previous_12_months: 1505631
+                        last_year_trend: 3.2
                     -
                         package_name: yiisoft/yii2-authclient
                         package_short_name: yii2-authclient
-                        last_12_months: 482870
-                        previous_12_months: 474660
-                        last_year_trend: 1.7
-                    -
-                        package_name: yiisoft/yii2-bootstrap
-                        package_short_name: yii2-bootstrap
-                        last_12_months: 1931668
-                        previous_12_months: 1936238
-                        last_year_trend: -0.2
+                        last_12_months: 483289
+                        previous_12_months: 470600
+                        last_year_trend: 2.7
                     -
                         package_name: yiisoft/yii2-faker
                         package_short_name: yii2-faker
-                        last_12_months: 1345973
-                        previous_12_months: 1357531
-                        last_year_trend: -0.9
-        updated_at: '2020-02-03 17:14:40'
+                        last_12_months: 1352177
+                        previous_12_months: 1357699
+                        last_year_trend: -0.4
+                    -
+                        package_name: yiisoft/yii2-bootstrap
+                        package_short_name: yii2-bootstrap
+                        last_12_months: 1897536
+                        previous_12_months: 1969642
+                        last_year_trend: -3.7
+        updated_at: '2020-03-03 00:06:09'
