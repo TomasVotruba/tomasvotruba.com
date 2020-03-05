@@ -74,7 +74,7 @@ Now let's pause. **What misconceptions have you spotted?** Here are 3:
 - 3 seniors developers have more experience than 1 senior developer
 - you can learn only from people
 
-All 3 of those are `false`.
+All 4 of those are `false`.
 
 <br>
 
