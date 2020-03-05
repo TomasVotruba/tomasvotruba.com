@@ -129,7 +129,7 @@ Often, senior developers are hired to orientate in a terrible codebase, they can
     Monkey see, monkey doo.
 </blockquote>
 
-That's how our brain works; we're just like monkeys. We go to a new project, and we instinctively copy patterns we see. If there is a [broken window all over the code](https://blog.codinghorror.com/the-broken-window-theory/), we make more broken windows.
+That's how our brain works; we're just like monkeys. We go to a new project, and we instinctively copy patterns we see. If there is a [broken windows all over the code](https://blog.codinghorror.com/the-broken-window-theory/), we make more broken windows.
 
 Some people join your team, some people stay for a long time enough to be called *seniors*, and some will leave. **The codebase remains** as long as your company exists. That's why it deserves the best treatment. 
 
