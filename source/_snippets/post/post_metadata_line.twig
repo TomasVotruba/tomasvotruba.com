@@ -39,4 +39,9 @@
             <a href="{{ test_directory_on_github }}">Tested</a>
         </li>
     {% endif %}
+
+    <li class="list-inline-item mr-3 text-primary">
+        <em class="fab fa-fw fa-github"></em>
+        <a href="{{ post|github_edit_post_url }}">Edit Post</a>
+    </li>
 </ul>
