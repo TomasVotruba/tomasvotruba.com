@@ -1,0 +1,58 @@
+---
+outputPath: rss.xml
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+>
+    <channel>
+        <title>Tomas Votruba writes about PHP and education</title>
+        <link>{{ site_url }}/</link>
+        <description>PHP, Communities and Communication posts by Tomas Votruba</description>
+        <pubDate>{{ "now"|date('r') }}</pubDate>
+        <atom:link href="{{ site_url }}/rss.xml" rel="self" type="application/rss+xml" />
+
+        {# https://stackoverflow.com/a/29161205/1348344 #}
+        {% for post in posts %}
+            {% if loop.first %}
+                <lastBuildDate>{{ post.getDateTime|date('r') }}</lastBuildDate>
+            {% endif %}
+
+            {% set includePost = true %}
+
+            {# is deprecated post, do not display #}
+            {% if post.deprecated_since is defined %}
+                {% set includePost = false %}
+            {% endif %}
+
+            {# is future post, do not display #}
+            {% if post.getDate|date("Y-m-d") > "now"|date("Y-m-d") %}
+                {% set includePost = false %}
+            {% endif %}
+
+            {% if includePost %}
+                <item>
+                    <title><![CDATA[ {{ post.title|replace({'&nbsp;':' '}) }} ]]></title>
+                    <link>{{ site_url }}/{{ post|link }}/</link>
+                    <description><![CDATA[ {{ post.perex|striptags }} ]]></description>
+                    <guid isPermaLink="false">{{ site_url }}/{{ post|link }}/</guid>
+                    <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
+
+                    {# @see https://wordpress.stackexchange.com/a/229773 #}
+                    <pubDate>{{ post.getDateTime|date('D, d M Y H:i:s +0000') }}</pubDate>
+                    {% if post.updatedAt is defined %}
+                        <updated>{{ post.updatedAt|date('Y-m-d\TH:i:s\Z') }}</updated>
+                        <atom:updated>{{ post.updatedAt|date('D, d M Y H:i:s +0000') }}</atom:updated>
+                        <lastBuildDate>{{ post.updatedAt|date('D, d M Y H:i:s +0000') }}</lastBuildDate>
+                    {% else %}
+                        <lastBuildDate>{{ post.getDateTime|date('D, d M Y H:i:s +0000') }}</lastBuildDate>
+                    {% endif %}
+
+                    <comments>{{ site_url }}/{{ post|link }}#disqus_thread</comments>
+                </item>
+            {% endif %}
+        {% endfor %}
+    </channel>
+</rss>

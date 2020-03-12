@@ -1,5 +1,7 @@
 {
     "namespaces": [
-        { "path": "source" }
+        { "path": "source" },
+        { "path": "packages/framework-stats/templates" },
+        { "path": "packages/blog/templates" }
     ]
 }

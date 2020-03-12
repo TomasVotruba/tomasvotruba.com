@@ -1,0 +1,70 @@
+{# normal menu #}
+<div class="hidden-sm-down">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <ul>
+                <li id="logo">
+                    <img src="https://avatars1.githubusercontent.com/u/924196?s=60&v=4" class="me_avatar">
+                    Tomas Votruba
+                </li>
+                <li class="{% if is_current_route('homepage') or is_current_route('blog_archive') or is_current_route('post_detail') %}active{% endif %}">
+                    <a href="{{ path('homepage') }}">Blog</a>
+                </li>
+                <li class="{% if is_current_route('php_framework_trends') %}active{% endif %}">
+                    <a href="{{ path('php_framework_trends') }}">Trends</a>
+                </li>
+                <li class="{% if is_current_route('clusters') %}active{% endif %}">
+                    <a href="{{ path('clusters') }}">Clusters</a>
+                </li>
+                <li class="{% if is_current_route('mission') %}active{% endif %}">
+                    <a href="{{ path('mission') }}">Mission</a>
+                </li>
+                <li class="{% if is_current_route('talks') %}active{% endif %}">
+                    <a href="{{ path('talks') }}">Talks</a>
+                </li>
+                <li class="{% if is_current_route('contact') %}active{% endif %}">
+                    <a href="{{ path('contact') }}">Contact</a>
+                </li>
+                <li id="top-menu-search">
+                    {% include "_snippets/search_form.twig" %}
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+{# mobile menu #}
+<div class="hidden-md-up">
+    <nav class="navbar" id="mobile-menu">
+        <div class="container">
+            <a href="{{ path('homepage') }}" class="col-3 col-sm-3 {% if is_current_route('homepage') or is_current_route('blog_archive') or is_current_route('post_detail') %}active{% endif %}">
+                <em class="fas fa-book"></em>
+                <br>
+                Blog
+            </a>
+
+
+            <a href="{{ path('clusters') }}" class="col-3 col-sm-3 {% if is_current_route('clusters') %}active{% endif %}">
+                <em class="fas fa-share-alt"></em>
+                <br>
+                Clusters
+            </a>
+
+            <a href="{{ path('php_framework_trends') }}" class="col-3 col-sm-3 {% if is_current_route('php_framework_trends') %}active{% endif %}">
+                <em class="fas fa-chart-bar"></em>
+                <br>
+                Trends
+            </a>
+
+            <a href="{{ path('contact') }}" class="col-3 col-sm-3 {% if is_current_route('contact') %}active{% endif %}">
+                <em class="fas fa-phone"></em>
+                <br>
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <div class="hidden-md-up text-center" id="top-menu-search-mobile">
+        {% include "_snippets/search_form.twig" %}
+    </div>
+</div>

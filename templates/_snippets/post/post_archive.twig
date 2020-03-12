@@ -1,0 +1,13 @@
+<div class="container-fluid" id="blog">
+    <h1>Posts from {{ year }}</h1>
+
+    {% set active_posts = [] %}
+
+    {% for post in posts %}
+        {% if post.deprecated_since is not defined and post.lang is not defined and post.getDateTime|date('Y') == year %}
+            {% set active_posts = active_posts|merge([post]) %}
+        {% endif %}
+    {% endfor %}
+
+    {% include "_snippets/post/post_list.twig" with { posts: active_posts } %}
+</div>

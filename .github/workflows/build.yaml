@@ -1,0 +1,17 @@
+name: Build
+
+on:
+    pull_request: null
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v1
+            -   uses: shivammathur/setup-php@v1
+                with:
+                    php-version: 7.3
+                    coverage: none
+
+            -   run: composer install --no-progress
+            -   run: bin/console dump-static-site

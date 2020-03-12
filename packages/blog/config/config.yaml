@@ -1,0 +1,16 @@
+services:
+    _defaults:
+        public: true
+        autowire: true
+        autoconfigure: true
+
+    TomasVotruba\Blog\:
+        resource: '../src'
+        exclude:
+            - '../src/ValueObject/*'
+
+    Symplify\SmartFileSystem\Finder\FinderSanitizer: null
+    Symplify\PackageBuilder\Strings\StringFormatConverter: null
+
+    ParsedownExtra:
+        class: ParsedownExtra

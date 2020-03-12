@@ -1,0 +1,68 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <div class="container" id="clusters">
+        <h1>{{ title }}</h1>
+
+        <div class="subline text-center">
+            Do you want to master one of topics I write about?
+            <br>
+            Pick one, <strong>start slowly</strong> and <strong>go in-depth</strong> when you're ready!
+        </div>
+
+        <br>
+        <br>
+
+        {# add pictures, even random ones #}
+
+        {% for cluster in clusters %}
+            <div class="cluster mb-5" id="{{ cluster.title|webalize }}">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td class="text-center">
+                                <h2>
+                                    <a href="#{{ cluster.title|webalize }}">{{ cluster.title }}</a>
+                                </h2>
+
+                                <p class="pt-4 pb-2 text-left">{{ cluster.description }}</p>
+
+                                <div class="mt-2 mb-2 text-center">
+                                    <a class="btn btn-success make_active inactive-cluster-part" data-id="{{ cluster.title|webalize }}">More</a>
+                                    <a class="btn btn-outline-secondary make_passive active-cluster-part" data-id="{{ cluster.title|webalize }}">Less</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </thead>
+
+                    <tbody class="active-cluster-part">
+                        {% for post_id in cluster.post_ids %}
+
+                            {# @var active_post \TomasVotruba\Blog\ValueObject\Post #}
+                            {% set active_post = posts[post_id] %}
+
+                            <tr>
+                                <td class="pt-4 pb-4">
+                                    <div class="checklist__item">
+                                        <input class="checklist__input" type="checkbox" id="item_{{ active_post.id }}" value="{{ active_post.id }}">
+                                        <label class="checklist__label" for="item_{{ active_post.id }}">
+                                            <em class="checklist_icon fa fa-2x fa-check" id="item_{{ active_post.id }}"></em>
+                                        </label>
+
+                                        <div class="checklist__details post-title">
+                                            <a href="{{ path('post_detail', {'slug': active_post.slug}) }}">
+                                                {{ active_post.title|raw }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endfor %}
+    </div>
+
+    <br>
+{% endblock %}

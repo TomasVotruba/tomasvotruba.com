@@ -1,0 +1,36 @@
+<head>
+    <title>{{ title|replace({'&nbsp;':' '})|escape }} | {{ site_title }}</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow">
+
+    {# mobile #}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    {% if block('socialTags') is defined %}
+        {{ block('socialTags') }}
+    {% endif %}
+
+    <link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog RSS" href="/rss.xml">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    {# Font Awesome 5.2 - 2018-07 #}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+
+    {# Twitter Bootstrap - locally for css classes autocomplete #}
+    <link href="{{ asset('assets/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css" />
+
+    {# this is the last, so prism can be overriden here #}
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="{{ asset('assets/gifplayer/gifplayer.css') }}" rel="stylesheet" type="text/css" />
+
+    {# bookies checklist #}
+    <link href="{{ asset('assets/css/checklist.css') }}" rel="stylesheet" type="text/css" />
+</head>

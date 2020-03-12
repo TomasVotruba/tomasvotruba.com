@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include "_snippets/head.twig" %}
+    <body>
+        {#  @var post \TomasVotruba\Blog\ValueObject\Post #}
+        <!-- post_id: {{ post.getId() }} -->
+
+        {% include "_snippets/menu.twig" %}
+
+        <div class="mainContent">
+            <div class="container-fluid" id="post">
+                {% include "_snippets/sponsor_button.twig" %}
+
+                <h1>{{ post.title|raw }}</h1>
+
+                {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "showCommentCount": TRUE } %}
+
+                {% if post.deprecated %}
+                    <div class="card border-danger card-bigger">
+                        <div class="card-header text-white bg-danger">
+                            <strong>This post is deprecated since {{ post.deprecatedAt }}</strong>
+                        </div>
+                        <div class="card-body">
+                            {{ post.deprecatedMessage|markdown|raw }}
+                        </div>
+                    </div>
+
+                    <br>
+                {% endif %}
+
+                {% if post.updated %}
+                    <div class="card border-success card-bigger">
+                        <div class="card-header text-white bg-success">
+                            <strong>This post was updated on {{ post.updatedAt }}</strong>
+                        </div>
+                        <div class="card-body">
+                            {{ post.updatedMessage|markdown|raw }}
+                        </div>
+                    </div>
+
+                    <br>
+                {% endif %}
+
+                <div class="card card-bigger">
+                    <div class="card-body">
+                        {{ post.perex|markdown|raw }}
+                    </div>
+                </div>
+
+                {{ post.htmlContent|raw }}
+
+                <br>
+
+                {% if post.tested is defined %}
+                    <div class="mt-1 mb-5 card">
+                        <div class="card-header text-center">
+                            <h3 class="text-center mt-2">
+                                <em class="fas fa-check text-success"></em>
+                                &nbsp;
+                                Travis Knows the Code Works
+                            </h3>
+                        </div>
+
+                        <div class="card-body">
+                            {% set testDirectoryOnGithub %}{{ github_repository_tests_directory }}/Posts/Year{{ post.getDateTime|date('Y') }}/{{ post.getTestSlug }}{% endset %}
+
+                            <p>
+                                The code used in this post is tested daily with Travis CI. You can <a href="{{ testDirectoryOnGithub }}">see tests on Github</a>.
+                            </p>
+
+                            <p>
+                                Thanks to tests this post:
+                                <ul>
+                                    <li>
+                                        always run against the most recent dependencies
+                                    </li>
+                                    <li>
+                                        <strong>gets updates and stays relevant for many years</strong> even when new <a href="https://semver.org/#spec-item-8">major version</a> of PHP or Symfony is released
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                {% endif %}
+
+                <div class="row mb-3">
+                    <div class="col-12 col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body text-center p-0">
+                                <a href="{{ post.gitHubEditUrl }}" class="d-block pt-4 pb-4 pl-4 pr-4">
+                                    <em class="fab fa-fw fa-github"></em>
+                                    <strong>Found a typo?</strong>
+                                    <br>
+                                    Fix it to join team of {{ contributors_count }}&nbsp;people that improve content here
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {# show previous post #}
+                        {% if posts[post.getId() - 1] is defined %}
+                            {% set previous_post = posts[post.getId() - 1] %}
+                            {# there can be missing post, due to legacy redirects #}
+                        {% elseif posts[post.getId() - 2] is defined %}
+                            {% set previous_post = posts[post.getId() - 2] %}
+                        {% endif %}
+
+                        {% if previous_post is defined %}
+                            {# @var previous_post \TomasVotruba\Blog\ValueObject\Post #}
+                            <div class="card mb-4">
+                                <div class="card-body bg-success text-white text-center p-0">
+                                    <a href="{{ path('post_detail', {'slug': previous_post.getSlug }) }}" class="d-block pt-4 pb-4 pl-4 pr-4">
+                                        <em class="fas fa-fw fa-forward"></em>
+                                        <strong>Next</strong>
+                                        <br>
+                                        {{ previous_post.title|replace('&nbsp;', ' ') }}
+                                    </a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <a name="comments"></a>
+
+                {% include "_snippets/disqus_comments.twig" %}
+            </div>
+
+            <script id="dsq-count-scr" src="https://{{ disqus_shortname }}.disqus.com/count.js" async defer></script>
+        </div>
+
+        {% include "_snippets/footer.twig" %}
+    </body>
+</html>
+
+{% block socialTags %}
+    {# Facebook sharing #}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
+    <meta property="og:description" content="{{ post.perex|striptags }}" />
+    <meta property="og:url" content="{{ path('post_detail', {slug: post.slug }) }}" />
+
+    {# Twitter sharing #}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@votrubaT">
+    <meta name="twitter:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
+    <meta name="twitter:description" content="{{ post.perex|striptags }}" />
+{% endblock %}

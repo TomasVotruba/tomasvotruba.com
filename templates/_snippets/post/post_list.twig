@@ -1,0 +1,8 @@
+<ul class="list-unstyled line-separated">
+    {% for post in posts %}
+        <li class="col-md-12">
+            <a href="{{ path('post_detail', {'slug': post.slug}) }}">{{ post.title|raw }}</a>
+            {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
+        </li>
+    {% endfor %}
+</ul>
