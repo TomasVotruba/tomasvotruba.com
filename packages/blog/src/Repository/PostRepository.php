@@ -42,6 +42,24 @@ final class PostRepository
     /**
      * @return Post[]
      */
+    public function fetchAll(): array
+    {
+        $posts = [];
+        foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
+            $post = $this->postFactory->createFromFileInfo($smartFileInfo);
+            $posts[$post->getId()] = $post;
+        }
+
+        uasort($posts, function (Post $firstPost, Post $secondPost) {
+            return $secondPost->getDateTime() <=> $firstPost->getDateTime();
+        });
+
+        return $posts;
+    }
+
+    /**
+     * @return Post[]
+     */
     public function fetchAllEnglishNonDeprecated(): array
     {
         if ($this->posts !== []) {
