@@ -1,0 +1,66 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="container" id="contact">
+        <h1>{{ title }}</h1>
+
+        <p class="text-center bigger">
+            Let me invite you to a great coffee to see <strong>how can I help you</strong> →
+        </p>
+
+        <div class="row mt-4 mb-5 ml-sm-0 ml-md-5 " id="contact-points">
+            <div class="col-3 col-sm-3">
+                <img src="https://avatars1.githubusercontent.com/u/924196?s=400&v=4" class="avatar-bigger">
+            </div>
+            <div class="col-8 pt-md-3 pt-lg-3 pl-md-4 pl-lg-5">
+                <em class="fas fa-phone fa-fw"></em>
+                    &nbsp;
+                <a href="tel:+420776778332">+420 <strong>776 778 332</strong></a>
+
+                <div class="when">Not in a rush? The best is <strong>after 17:30 on weekdays</strong></div>
+
+                <div class="mt-4">
+                    <em class="fas fa-envelope fa-fw"></em>
+                &nbsp;
+                    <a href="mailto:tomas.vot@gmail.com">tomas.vot@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <p class="text-center card-text">
+                    Are you in Europe? Perfect! I can reach you from <strong>Prague</strong>, my hometown
+                </p>
+
+                <div class="mt-3">
+                    <a href="https://www.google.com/maps/search/prague/">
+                        <img src="/assets/images/map-europe-prague_with_flights.png" alt="Central Europe Prague">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            I'm registered at Licensing Authority Liberec under <a href="http://rejstrik.penize.cz/ares/01241451-tomas-votruba">IČO 01241451</a><br>
+        </div>
+
+        <h2>Bank Account</h2>
+
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <p>
+                    2401087791/2010
+                </p>
+                <p>
+                    IBAN: CZ4620100000002401087791<br>
+                    SWIFT/BIC: FIOBCZPPXXX
+                </p>
+            </div>
+            <div class="col-12 col-sm-6">
+                {# made with: https://qr-platba.cz/generator/#content-full#}
+                <img src="/assets/images/fio_qr_payment.png" style="max-width: 20em">
+            </div>
+        </div>
+    </div>
+{% endblock %}

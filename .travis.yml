@@ -1,18 +1,23 @@
-# inspired by https://github.com/rectorphp/rector/blob/master/.travis.yml
 language: php
 
-php: 7.4
-
-jobs:
+matrix:
     include:
-        -
-            name: 'Tweet new Post'
-            if: branch = master
-            script:
-                - composer install
-                # get tokens to Travis ENV: https://travis-ci.com/TomasVotruba/tomasvotruba.com/settings
-                # from here: https://developer.twitter.com/en/apps/14147884
-                - vendor/bin/statie tweet-post
+        - php: 7.3
 
-notifications:
-    email: false
+install:
+    - composer update
+
+branches:
+    only:
+        - master
+script:
+    # build static version to /output directory
+    - bin/console dump-static-site --ansi
+
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    on:
+        branch: master
+    local_dir: output

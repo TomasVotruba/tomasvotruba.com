@@ -1,0 +1,17 @@
+imports:
+    - { resource: '../vendor/symplify/symfony-static-dumper/config/config.yaml' }
+    - { resource: '_data/*' }
+    - { resource: '_data/generated/*' }
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    TomasVotruba\Website\:
+        resource: '../src/*'
+        exclude:
+            - '../src/HttpKernel/*'
+            # testing of post code
+            - '../src/Posts/*'

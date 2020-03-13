@@ -1,0 +1,54 @@
+<script src="/assets/js/jquery-3.3.1.slim.min.js?={{ random() }}"></script>
+<script src="/assets/gifplayer/jquery.gifplayer.js?={{ random() }}"></script>
+<script src="/assets/js/cluster-checklist.js?={{ random() }}"></script>
+<script src="/assets/js/cluster-expanable.js?={{ random() }}"></script>
+
+{# @see https://datatables.net/examples/styling/bootstrap4.html #}
+{# sortable table in php framework trends #}
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+{% include "_snippets/google_analytics.twig" %}
+
+<script src="/assets/prism/prism.js"></script>
+
+<script>
+    $('.gifplayer').gifplayer();
+
+    // sortable table
+    $('.sortable_table').DataTable({
+        // see https://datatables.net/examples/basic_init/filter_only.html
+        "searching": false,
+        "paging": false,
+        "info": false,
+        "order": [[1, "desc"]],
+        // see https://datatables.net/examples/advanced_init/sort_direction_control.html
+        "aoColumns": [
+            null,
+            { "orderSequence": [ "desc", "asc" ] },
+            { "orderSequence": [ "desc", "asc" ] },
+            { "orderSequence": [ "desc", "asc" ] }
+        ]
+    });
+</script>
+
+<div class="text-center mt-5" id="footer">
+    <div class="row">
+        <div class="col-12">
+            Join 22 912 PHP developers every month: <a href="/rss.xml">RSS</a>&nbsp;or&nbsp;<a href="https://twitter.com/votrubaT">@votrubaT</a>
+        </div>
+    </div>
+
+    <p>
+        Build by <a href="{{ path('thank_you') }}">{{ contributors_count + 1 }} people</a>
+
+        <span class="pl-2 pr-2">•</span>
+
+        <a href="https://github.com/sponsors/TomasVotruba">Support me</a>
+
+        <span class="hidden-sm-down">
+            <span class="pl-2 pr-2">•</span>
+            Hosted with <a href="https://www.statie.org/">Statie</a> on <a href="https://github.com/tomasvotruba/tomasvotruba.com">GitHub</a>
+        </span>
+    </p>
+</div>

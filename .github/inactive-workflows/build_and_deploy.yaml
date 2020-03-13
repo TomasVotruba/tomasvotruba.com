@@ -1,0 +1,28 @@
+# see https://github.com/marketplace/actions/deploy-to-github-pageshttps://github.com/marketplace/actions/deploy-to-github-pages
+name: Build and Deploy
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            -   uses: actions/checkout@v1
+            -   uses: shivammathur/setup-php@v1
+                with:
+                    php-version: 7.3
+                    coverage: none
+
+            -   run: composer install --no-progress
+            -   run: bin/console dump-static-website
+
+            -
+                name: Deploy
+                uses: JamesIves/github-pages-deploy-action@releases/v3
+                with:
+                    ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                    BRANCH: gh-pages
+                    FOLDER: output

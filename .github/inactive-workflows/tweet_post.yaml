@@ -22,7 +22,7 @@ jobs:
             -
                 name: Tweet New Post
                 run: |
-                    vendor/bin/statie tweet-post
+                    bin/console tweet-post
                 env:
                     # get tokens to Github Secrets:
                     # from here: https://developer.twitter.com/en/apps/14147884

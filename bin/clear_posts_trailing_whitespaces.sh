@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-sed -i -E 's/\s+$//g' source/_posts/201*/* *.yaml *.md
+sed -i -E 's/\s+$//g' packages/blog/config/data/201*/* *.yaml *.md

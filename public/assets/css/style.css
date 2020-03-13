@@ -1,0 +1,692 @@
+/*
+- black + purple
+- http://www.colourlovers.com/palette/85900/Midnight_Sex
+
+- grey: color: rgba(39,58,75,.97);
+- darkest-purple: #341931;
+- darker-purple: #571B3C;
+- lighter-purple: #7A1E48;
+- lightest-purple: #9D2053;
+*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-size: 17px;
+    line-height: 1.5em;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/*!* Typography *!*/
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 a, h1 a:hover, h1 a:focus, h2 a, h2 a:hover, h2 a:focus, h3 a, h3 a:hover, h3 a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 1.7em;
+    margin: 1.7em 0 .4em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 1.2em 0 .4em;
+    font-weight: 300;
+}
+
+h1 {
+    font-weight: 600;
+    margin: .9em 0 .6em 0;
+    font-size: 2em;
+    line-height: 1.3em;
+    text-align: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #EEE;
+}
+
+h1, h2, h3 {
+    color: rgba(39,58,75,.97);
+}
+
+h2 {
+    line-height: 1.3em;
+}
+
+a, a:active {
+    color: #A30444;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #C60E58;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+#content a:visited:not(.btn):not(.badge) {
+    color: rgba(122, 0, 73, 0.78);
+}
+
+a:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+h2 a, h2 a:active, h3 a, h3 a:active  {
+    color: #A30444;
+    text-decoration: none;
+}
+
+h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus {
+    color: #C60E58;
+    text-decoration: underline;
+}
+
+hr {
+    margin: 1.2em 0;
+    border: 0;
+    border-top: 1px solid #eeeeee;
+}
+
+p {
+    margin-bottom: .5em;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .container-fluid {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .container-fluid {
+        max-width: 900px;
+    }
+}
+
+pre {
+    border: none;
+    border-radius: 2px;
+}
+
+.navbar {
+    border: 0;
+    padding: 0;
+    background-color: #7A1E48;
+}
+
+nav a, nav a:active, nav a:focus, nav a:visited {
+    margin-top: 1px;
+    color: #f6f6f6;
+    border: 0;
+    text-decoration: none;
+}
+
+article {
+    border-bottom: 1px solid #eeeeee;
+}
+
+#blog #welcome h1 {
+    text-align: left;
+    font-size: 1.4em;
+    border-bottom: 0;
+    padding: 0;
+    margin: .4em 0 .6em 0;
+}
+
+#welcome p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+#blog h2 {
+    margin-bottom: .2em;
+}
+
+#blog .list-unstyled {
+    width: 100%;
+}
+
+.post-metadata {
+    color: #919191;
+    font-size: .9em;
+}
+
+.card-bigger {
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: .8em;
+    line-height: 1.6em;
+}
+
+.card#relatedPosts .card-body {
+    padding: .7em 0 .3em 0;
+    line-height: 2em;
+}
+
+code {
+    font-size: .9em;
+    color: #07a;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    margin-top: .8em;
+    margin-bottom: 1.4em;
+    font-size: 1em;
+}
+
+/* article helpers */
+.bigger {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.yearLine {
+    font-size: 3em;
+    text-align: center;
+    padding: .5em 0;
+    font-weight: 200;
+}
+
+pre {
+    font-size: 1em;
+    background-color: #fdf6e3;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+    border-radius: 6px;
+}
+
+/* menu */
+nav {
+    background-color: #7A1E48;
+    font-weight: 400;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+/* https://stackoverflow.com/a/19027954/1348344 */
+nav ul li a, nav #logo, nav a {
+    padding: .81em 1em;
+    color: #FFF;
+}
+
+nav ul li a {
+    display: block;
+    background: #9D2053;
+}
+
+/*nav #logo {*/
+    /*background-color: #9D2053;*/
+/*}*/
+
+nav a:hover, nav ul li.active a, nav a.active, nav a:active
+{
+    background: #FFF;
+    text-decoration: none;
+    color: #64163f;
+}
+
+#mobile-menu {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#mobile-menu .container {
+    padding: 0;
+    max-width: 100%;
+}
+
+#mobile-menu a {
+    float: left;
+    width: 100%;
+}
+
+.ico-note {
+    font-size: .7em;
+    color: #BBB;
+}
+
+.hireMe {
+	font-size: 1.6rem;
+	margin: 2rem auto;
+}
+
+.hireMe a {
+    color: #f6f6f6;
+    display: block;
+}
+
+
+/* show/hidden menu; ref https://stackoverflow.com/a/35362821/1348344 */
+@media (max-width: 768px) {
+    .hidden-sm-down {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .hidden-md-up {
+        display: none !important;
+    }
+}
+
+
+#about-quote {
+    font-size: 1.4em;
+    line-height: 1.6em;
+}
+
+#about-items {
+    font-size: 1.2em;
+    line-height: 1.7em;
+}
+
+#contact .bigger {
+    font-size: 1.2em;
+    line-height: 2.3em;
+}
+
+.card-normal .card-body p {
+    line-height: 1.5em;
+}
+
+.card-normal ul {
+    padding-left: 1em;
+}
+
+/* prism remove color in diff */
+.token.deleted {
+    color: #980707;
+    background: #fdd;
+}
+
+/* prism remove color in diff */
+.token.inserted {
+    color: #488b3a;
+    background: #dfd;
+}
+
+.blockquote {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    line-height: 1.6em;
+    font-size: 1.4em;
+}
+
+/* style in cards */
+#mission .card h2 {
+    margin: .3em 0 .3em 0;
+}
+
+#mission ul li
+{
+    line-height: 1.6em;
+}
+
+#mission .card ul {
+    margin: .3em 0 0 0;
+    padding-left: 1.2em;
+}
+
+.pull-right {
+    float: right;
+}
+
+/* default post setting */
+#blog .firstPost, #post h1 {
+    font-size: 3.3em;
+    font-weight: 300;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#post img {
+    text-align: center;
+    margin: .5em auto 1.5em auto;
+}
+
+#post h1 {
+    font-size: 3.3em;
+    font-weight: 300;
+    /*margin-top: 1em;*/
+    /*margin-bottom: 1em;*/
+}
+
+/* own util classe */
+.mmt-3 {
+    margin-top: -.3em;
+}
+
+.mmt-2 {
+    margin-top: -.2em;
+}
+
+#talks h2 {
+    margin-top: .5em;
+}
+
+#talks h2.slim {
+    font-weight: 300;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+/* @see https://stackoverflow.com/a/50174132/1348344 */
+.container li {
+    margin-bottom: .4em;
+}
+
+.container li:last-child {
+    margin-bottom: 0;
+}
+
+.container ul {
+    padding-left: 1.2em;
+}
+
+.container ul li {
+    line-height: 1.6em;
+}
+
+/* clusters - list override */
+ul.line-separated > li:not(:last-child) {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 1.3em;
+    margin-bottom: 1.3em;
+}
+
+.me_avatar {
+    border-radius: 2px;
+    border-style: none;
+    height: 28px;
+    width: 28px;
+    margin-right: .5em;
+    margin-top: -.2em;
+}
+
+.thank_you_person .avatar {
+    height: 3em;
+    width: 3em;
+    margin-right: .8em;
+    margin-top: -.2em;
+}
+
+.thank_you_person .name {
+    margin-top: -.4em;
+    font-weight: bold;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+#top-menu-search form {
+    width: 100%;
+}
+
+nav ul li form {
+    padding: .4em 0 0 1em;
+}
+
+/* @see https://stackoverflow.com/a/19027954/1348344 */
+nav ul li {
+    display: block;
+    float: left;
+}
+
+nav ul li#top-menu-search {
+    float: none;
+    overflow: hidden;
+}
+
+#top-menu-search-mobile {
+    background: #7A1E48;
+}
+#top-menu-search-mobile {
+    padding: .6em 1em;
+    text-align: center;
+}
+
+#top-menu-search-mobile form {
+    width: 100%;
+}
+
+.subline, .subtitle {
+    font-size: 1.4em;
+    line-height: 1.8em;
+}
+
+table ul {
+    margin-left: 1em;
+    padding-left: 0;
+}
+
+#footer {
+    background: #24292e;
+    color: hsla(0,0%,100%,.75);
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    line-height: 3em;
+}
+
+#footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+#footer a:hover {
+    color: #DDD;
+    text-decoration: none;
+}
+
+/* contact.twig */
+#contact-points
+{
+    font-size: 1.8em;
+    line-height: 1.3em;
+}
+
+.avatar-bigger {
+    border-radius: 6px;
+    border-style: none;
+}
+
+@media (max-width: 768px) {
+    #contact-points {
+        font-size: 1.2em;
+        line-height: 2.4em;
+    }
+
+    #blog .firstPost, #post h1 {
+        font-size: 2.3em;
+        font-weight: 300;
+        margin-top: .8em;
+        margin-bottom: .5em;
+    }
+}
+
+@media (max-width: 450px) {
+    #contact-points {
+        font-size: 1.1em;
+        line-height: 2em;
+    }
+}
+
+.cluster h2 {
+    margin-top: .4em;
+    margin-bottom: 0;
+    font-size: 1.8em;
+}
+
+/* active cluster */
+.cluster:not(.active-cluster) .active-cluster-part {
+    display: none;
+}
+
+.cluster.active-cluster .inactive-cluster-part  {
+    display: none;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+#clusters .post-title {
+    font-size: 1.2em;
+}
+
+#post p.text-muted {
+    font-size: 0.9em;
+    padding-top: .6em;
+    padding-bottom: .2em;
+}
+
+#client-line {
+    padding-top: .5em;
+    padding-bottom: 1.5em;
+}
+
+.cluster thead {
+    background: rgba(0,0,0,.03);
+}
+
+#clusters a.btn-success {
+    color: white;
+}
+
+#clusters a.btn-outline-secondary:hover {
+    color: white;
+}
+
+.alert-sm {
+    font-size: 0.9em;
+
+}
+
+#mission h2 {
+    margin-bottom: 1.2em;
+}
+
+#mission .card h3 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.thead-inverse th h3 {
+    color: #DDD;
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.7em;
+}
+
+.small {
+    font-size: .8em;
+}
+
+
+.thead-inverse a, .thead-inverse a:visited, #content .thead-inverse a:visited:not(.btn):not(.badge), .badge-info a, .badge-info a:visited {
+    color: #DDD;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.thead-inverse a:hover, .badge-info a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.lesser {
+    font-size: .8em;
+    color: #868e96!important; /* same as text-muted */
+}
+
+/* @see https://stackoverflow.com/a/48309999/1348344 */
+nobr {
+    white-space: nowrap;
+    hyphens: none;
+}
+
+.normal-list {
+    margin-left: -1em;
+    line-height: 1.8em;
+}
+
+#contact .when
+{
+    font-size: .5em;
+    line-height: 3em;
+}
+
+@media (max-width: 768px) {
+    #contact .when {
+        line-height: 1.7em;
+        font-size: .7em;
+    }
+}
+
+.bg-success a, .bg-success a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+.bg-success a:focus, .bg-success a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a.btn-dark, a.btn-dark:active {
+    color: #FFF;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+q {
+    padding: .6em 0 .6em 0;
+    font-size: 1.3em;
+}
+
+#support-me-button {
+    line-height: 2em;
+}
+
+.card h2, .card h3 {
+    padding-top: 0;
+    margin-top: 0;
+}
