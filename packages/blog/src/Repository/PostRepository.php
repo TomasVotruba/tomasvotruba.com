@@ -18,15 +18,9 @@ final class PostRepository
      */
     private const POST_DIRECTORY = __DIR__ . '/../../config/data';
 
-    /**
-     * @var FinderSanitizer
-     */
-    private $finderSanitizer;
+    private FinderSanitizer $finderSanitizer;
 
-    /**
-     * @var PostFactory
-     */
-    private $postFactory;
+    private PostFactory $postFactory;
 
     public function __construct(FinderSanitizer $finderSanitizer, PostFactory $postFactory)
     {
@@ -89,9 +83,7 @@ final class PostRepository
      */
     public function fetchByYear(int $year): array
     {
-        return array_filter($this->fetchAllEnglishNonDeprecated(), function (Post $post) use ($year) {
-            return $post->getYear() === $year;
-        });
+        return array_filter($this->fetchAllEnglishNonDeprecated(), fn (Post $post) => $post->getYear() === $year);
     }
 
     public function get(int $id): Post
@@ -139,9 +131,10 @@ final class PostRepository
      */
     private function sortByDateTime(array $posts): array
     {
-        uasort($posts, function (Post $firstPost, Post $secondPost) {
-            return $secondPost->getDateTime() <=> $firstPost->getDateTime();
-        });
+        uasort(
+            $posts,
+            fn (Post $firstPost, Post $secondPost) => $secondPost->getDateTime() <=> $firstPost->getDateTime()
+        );
 
         return $posts;
     }
@@ -152,9 +145,7 @@ final class PostRepository
      */
     private function filterOutNonEnglish(array $posts): array
     {
-        return array_filter($posts, function (Post $post) {
-            return $post->getLanguage() === null;
-        });
+        return array_filter($posts, fn (Post $post) => $post->getLanguage() === null);
     }
 
     /**
@@ -163,9 +154,7 @@ final class PostRepository
      */
     private function filterOutDeprecated(array $posts): array
     {
-        return array_filter($posts, function (Post $post) {
-            return ! $post->isDeprecated();
-        });
+        return array_filter($posts, fn (Post $post) => ! $post->isDeprecated());
     }
 
     /**
@@ -174,8 +163,6 @@ final class PostRepository
      */
     private function filterOutFuture(array $posts): array
     {
-        return array_filter($posts, function (Post $post) {
-            return ! $post->isFuture();
-        });
+        return array_filter($posts, fn (Post $post) => ! $post->isFuture());
     }
 }

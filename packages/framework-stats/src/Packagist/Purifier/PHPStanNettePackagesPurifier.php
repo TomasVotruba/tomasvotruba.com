@@ -13,7 +13,7 @@ final class PHPStanNettePackagesPurifier
      * List packages used by PHPStan up to version 0.11.* included
      * @var string[]
      */
-    private $interveningDependencies = [
+    private array $interveningDependencies = [
         // https://packagist.org/packages/phpstan/phpstan#0.11.19
         'nette/bootstrap',
         'nette/di',
@@ -34,7 +34,7 @@ final class PHPStanNettePackagesPurifier
 
         // packagist doesn't provide way to count this number, so it is estimation compared to another nette packages,
         // and phpstan downloads from https://packagist.org/packages/phpstan/phpstan/stats
-        $phpstanLastYearInfluence = 5500000;
+        $phpstanLastYearInfluence = 5_500_000;
 
         if ($yearDownloads > $phpstanLastYearInfluence) {
             $yearDownloads -= $phpstanLastYearInfluence;
@@ -51,7 +51,7 @@ final class PHPStanNettePackagesPurifier
 
         // packagist doesn't provide way to count this number, so it is estimation compared to another nette packages,
         // and phpstan downloads from https://packagist.org/packages/phpstan/phpstan/stats
-        $phpstanLastYearInfluence = 1900000;
+        $phpstanLastYearInfluence = 1_900_000;
 
         if ($yearDownloads > $phpstanLastYearInfluence) {
             $yearDownloads -= $phpstanLastYearInfluence;

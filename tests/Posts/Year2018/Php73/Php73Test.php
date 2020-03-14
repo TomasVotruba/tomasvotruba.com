@@ -14,16 +14,14 @@ final class Php73Test extends TestCase
     /**
      * @var string[]
      */
-    private $items = [
+    private array $items = [
         1 => 'a',
         2 => 'b',
     ];
 
     public function testCommadAfterTheLastArgument(): void
     {
-        $newThree = function ($one, $two) {
-            return $one + $two;
-        };
+        $newThree = fn ($one, $two) => $one + $two;
         $this->assertSame(3, $newThree(1, 2));
     }
 

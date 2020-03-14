@@ -19,15 +19,9 @@ final class TomasVotrubaKernel extends Kernel
 {
     use MicroKernelTrait;
 
-    /**
-     * @var FlexLoader
-     */
-    private $flexLoader;
+    private FlexLoader $flexLoader;
 
-    /**
-     * @var Discovery
-     */
-    private $discovery;
+    private Discovery $discovery;
 
     public function __construct(string $environment, bool $debug)
     {

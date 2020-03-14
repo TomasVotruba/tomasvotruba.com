@@ -11,15 +11,12 @@ use TomasVotruba\Blog\Repository\PostRepository;
 
 final class PhpFrameworkTrendsController extends AbstractController
 {
+    private PostRepository $postRepository;
+
     /**
      * @var mixed[]
      */
-    private $phpFrameworkTrends = [];
-
-    /**
-     * @var PostRepository
-     */
-    private $postRepository;
+    private array $phpFrameworkTrends = [];
 
     public function __construct(PostRepository $postRepository, array $phpFrameworkTrends)
     {

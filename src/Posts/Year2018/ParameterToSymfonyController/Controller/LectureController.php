@@ -6,10 +6,7 @@ namespace TomasVotruba\Website\Posts\Year2018\ParameterToSymfonyController\Contr
 
 final class LectureController
 {
-    /**
-     * @var string
-     */
-    private $bankAccount;
+    private string $bankAccount;
 
     public function __construct(string $bankAccount)
     {

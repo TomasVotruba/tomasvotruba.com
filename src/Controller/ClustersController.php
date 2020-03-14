@@ -11,10 +11,7 @@ use TomasVotruba\Blog\Repository\PostRepository;
 
 final class ClustersController extends AbstractController
 {
-    /**
-     * @var PostRepository
-     */
-    private $postRepository;
+    private PostRepository $postRepository;
 
     public function __construct(PostRepository $postRepository)
     {

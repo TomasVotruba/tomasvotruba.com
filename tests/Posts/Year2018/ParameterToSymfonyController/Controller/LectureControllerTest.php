@@ -10,10 +10,7 @@ use TomasVotruba\Website\Posts\Year2018\ParameterToSymfonyController\Controller\
 
 final class LectureControllerTest extends AbstractKernelTestCase
 {
-    /**
-     * @var LectureController
-     */
-    private $lectureController;
+    private LectureController $lectureController;
 
     protected function setUp(): void
     {

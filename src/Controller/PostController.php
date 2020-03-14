@@ -12,10 +12,7 @@ use TomasVotruba\Blog\ValueObject\Post;
 
 final class PostController extends AbstractController
 {
-    /**
-     * @var PostRepository
-     */
-    private $postRepository;
+    private PostRepository $postRepository;
 
     public function __construct(PostRepository $postRepository)
     {

@@ -8,10 +8,7 @@ use TomasVotruba\FrameworkStats\ValueObject\VendorData;
 
 final class VendorDataMapper
 {
-    /**
-     * @var PackageDataMapper
-     */
-    private $packageDataMapper;
+    private PackageDataMapper $packageDataMapper;
 
     public function __construct(PackageDataMapper $packageDataMapper)
     {

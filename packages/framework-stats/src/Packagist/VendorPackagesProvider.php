@@ -15,15 +15,12 @@ final class VendorPackagesProvider
      */
     private const URL_VENDOR_PACKAGES = 'https://packagist.org/packages/list.json?vendor=%s';
 
+    private FileToJsonLoader $fileToJsonLoader;
+
     /**
      * @var string[]
      */
-    private $excludedFrameworkPackages = [];
-
-    /**
-     * @var FileToJsonLoader
-     */
-    private $fileToJsonLoader;
+    private array $excludedFrameworkPackages = [];
 
     /**
      * @param string[] $excludedFrameworkPackages

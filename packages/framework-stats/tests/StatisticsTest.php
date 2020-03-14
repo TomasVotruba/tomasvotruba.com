@@ -10,10 +10,7 @@ use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
 final class StatisticsTest extends AbstractKernelTestCase
 {
-    /**
-     * @var Statistics
-     */
-    private $statistics;
+    private Statistics $statistics;
 
     protected function setUp(): void
     {
@@ -28,6 +25,6 @@ final class StatisticsTest extends AbstractKernelTestCase
 
         $monthlyValuesByMonth = $this->statistics->expandDailyAverageToMonthTotal($averageDailyValuesByMonth);
 
-        $this->assertSame(['2019-12' => 9300], $monthlyValuesByMonth);
+        $this->assertSame(['2019-12' => 9_300], $monthlyValuesByMonth);
     }
 }

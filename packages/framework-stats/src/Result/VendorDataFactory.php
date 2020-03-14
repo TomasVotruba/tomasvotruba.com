@@ -13,30 +13,15 @@ use TomasVotruba\FrameworkStats\ValueObject\VendorData;
 
 final class VendorDataFactory
 {
-    /**
-     * @var SymfonyStyle
-     */
-    private $symfonyStyle;
+    private SymfonyStyle $symfonyStyle;
 
-    /**
-     * @var VendorPackagesProvider
-     */
-    private $vendorPackagesProvider;
+    private VendorPackagesProvider $vendorPackagesProvider;
 
-    /**
-     * @var PackageDataFactory
-     */
-    private $packageDataFactory;
+    private PackageDataFactory $packageDataFactory;
 
-    /**
-     * @var Summer
-     */
-    private $summer;
+    private Summer $summer;
 
-    /**
-     * @var Sorter
-     */
-    private $sorter;
+    private Sorter $sorter;
 
     public function __construct(
         SymfonyStyle $symfonyStyle,

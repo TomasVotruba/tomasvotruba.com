@@ -8,15 +8,9 @@ use TomasVotruba\FrameworkStats\Packagist\Purifier\InterveningPackagesPurifier;
 
 final class PackageMonthlyDownloadsProvider
 {
-    /**
-     * @var PackageRawMonthlyDownloadsProvider
-     */
-    private $packageRawMonthlyDownloadsProvider;
+    private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider;
 
-    /**
-     * @var InterveningPackagesPurifier
-     */
-    private $interveningPackagesPurifier;
+    private InterveningPackagesPurifier $interveningPackagesPurifier;
 
     public function __construct(
         PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider,

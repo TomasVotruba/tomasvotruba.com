@@ -9,35 +9,17 @@ use TomasVotruba\FrameworkStats\Contract\LastYearTrendAwareInterface;
 
 final class PackageData implements LastYearTrendAwareInterface
 {
-    /**
-     * @var string
-     */
-    private $packageName;
+    private string $packageName;
 
-    /**
-     * @var float
-     */
-    private $lastYearTrend;
+    private float $lastYearTrend;
 
-    /**
-     * @var int
-     */
-    private $last12Months;
+    private int $last12Months;
 
-    /**
-     * @var int
-     */
-    private $previous12Months;
+    private int $previous12Months;
 
-    /**
-     * @var string
-     */
-    private $packageShortName;
+    private string $packageShortName;
 
-    /**
-     * @var string
-     */
-    private $packageKey;
+    private string $packageKey;
 
     public function __construct(
         string $packageName,

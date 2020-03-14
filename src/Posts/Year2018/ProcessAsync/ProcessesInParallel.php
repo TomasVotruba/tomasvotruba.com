@@ -11,12 +11,12 @@ final class ProcessesInParallel
     /**
      * @var int[]
      */
-    private $sleepIntervalsInMs = [];
+    private array $sleepIntervalsInMs = [];
 
     /**
      * @var Process[]
      */
-    private $activeProcesses = [];
+    private array $activeProcesses = [];
 
     /**
      * @param mixed[] $sleepIntervalsInMs
@@ -38,7 +38,7 @@ final class ProcessesInParallel
     private function startProcesses(): void
     {
         foreach ($this->sleepIntervalsInMs as $sleepInMs) {
-            $process = new Process(['sleep', $sleepInMs / 1000]);
+            $process = new Process(['sleep', $sleepInMs / 1_000]);
             $process->start();
 
             $this->activeProcesses[] = $process;

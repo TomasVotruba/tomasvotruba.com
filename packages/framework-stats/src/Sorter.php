@@ -14,9 +14,10 @@ final class Sorter
      */
     public function sortArrayByLastYearTrend(array $data): array
     {
-        usort($data, function (LastYearTrendAwareInterface $firstItem, LastYearTrendAwareInterface $secondItem): int {
-            return $secondItem->getLastYearTrend() <=> $firstItem->getLastYearTrend();
-        });
+        usort(
+            $data,
+            fn (LastYearTrendAwareInterface $firstItem, LastYearTrendAwareInterface $secondItem): int => $secondItem->getLastYearTrend() <=> $firstItem->getLastYearTrend()
+        );
 
         return $data;
     }

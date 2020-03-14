@@ -12,15 +12,9 @@ use TomasVotruba\Website\Posts\Year2017\Ast\Printer\FormatPreservingPrinter;
 
 final class PrintTest extends TestCase
 {
-    /**
-     * @var string
-     */
-    private $srcDirectory;
+    private string $srcDirectory;
 
-    /**
-     * @var FormatPreservingPrinter
-     */
-    private $formatPreservingPrinter;
+    private FormatPreservingPrinter $formatPreservingPrinter;
 
     protected function setUp(): void
     {
