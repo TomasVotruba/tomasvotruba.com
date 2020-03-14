@@ -11,7 +11,7 @@ composer install
 - Run local server
 
 ```bash
-bin/console server:run
+php -S localhost:8000 -t public
 ```
 
 And open [http://localhost:8000](localhost:8000) in your browser.
