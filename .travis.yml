@@ -10,6 +10,7 @@ install:
 branches:
     only:
         - master
+
 script:
     # build static version to /output directory
     - bin/console dump-static-site --ansi

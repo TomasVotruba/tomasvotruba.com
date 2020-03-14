@@ -1,6 +1,6 @@
 services:
     Symplify\CodingStandard\Sniffs\CleanCode\ClassCognitiveComplexitySniff:
-        max_class_cognitive_complexity: 30
+        max_class_cognitive_complexity: 20
 
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
         max_cognitive_complexity: 8
