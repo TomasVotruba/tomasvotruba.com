@@ -1,4 +1,4 @@
-# [tomasvotruba.com](https://www.tomasvotruba.com) - [Statie](https://github.com/Symplify/Statie) based web
+# [tomasvotruba.com](https://www.tomasvotruba.com) - Personal Static Website Generated from Symfony App
 
 ## Install & Run
 
