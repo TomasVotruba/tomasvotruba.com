@@ -1,2 +1,9 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+
+    globals:
+        google_analytics_tracking_id: 'UA-46082345-1'
+        site_title: 'Tomas Votruba'
+        site_url: 'https://www.tomasvotruba.com'
+        disqus_shortname: 'https://www.tomasvotruba.com'
+        github_repository_tests_directory: 'https://github.com/TomasVotruba/tomasvotruba.com/tree/master/tests'
