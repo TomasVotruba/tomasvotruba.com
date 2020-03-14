@@ -8,9 +8,11 @@ perex: |
 
 tweet: "#Statie 1: Up and Running locally #php #static #github"
 
-deprecated_since: "January 2019"
+deprecated_since: "2020-03"
 deprecated_message: |
-    This post was moved to [statie.org](https://www.statie.org/). Also, **it's better to [use `vendor/bin/statie init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/) now** + `gulp`.
+    Statie was deprecated with last version 7, because 99 % of features are covered in Symfony application.<br>
+    <br>
+    To create static content, migrate to Symfony app and [SymfonyStaticDumper](https://github.com/symplify/symfony-static-dumper).
 
 updated_since: "September 2018"
 updated_message: |

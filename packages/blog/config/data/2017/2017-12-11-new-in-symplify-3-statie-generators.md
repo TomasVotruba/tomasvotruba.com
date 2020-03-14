@@ -13,9 +13,11 @@ updated_since: "September 2018"
 updated_message: |
     Updated with **Statie 5**, NEON → YAML, Twig and `statie.yml` config.
 
-deprecated_since: "December 2018"
+deprecated_since: "2020-03"
 deprecated_message: |
-    This post was moved to [official documentation](https://www.statie.org/docs/generators/) on Statie.org.
+    Statie was deprecated with last version 7, because 99 % of features are covered in Symfony application.<br>
+    <br>
+    To create static content, migrate to Symfony app and [SymfonyStaticDumper](https://github.com/symplify/symfony-static-dumper).
 ---
 
 ## Coupled Approach in old Statie

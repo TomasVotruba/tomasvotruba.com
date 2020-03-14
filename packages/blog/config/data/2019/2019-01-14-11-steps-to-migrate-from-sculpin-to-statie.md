@@ -7,6 +7,12 @@ perex: |
     <br><br>
     Sculpin is the older brother of Statie but is mostly retired last 3 years. Do you want to get on track with modern PHP on your static website? Here is how.
 tweet: "New Post on #php 🐘 blog: 11 Steps to Migrate from #Sculpin to #Statie"
+
+deprecated_since: "2020-03"
+deprecated_message: |
+    Statie was deprecated with last version 7, because 99 % of features are covered in Symfony application.<br>
+    <br>
+    To create static content, migrate to Symfony app and [SymfonyStaticDumper](https://github.com/symplify/symfony-static-dumper).
 ---
 
 ### Statie beats Sculpin in Simplicity

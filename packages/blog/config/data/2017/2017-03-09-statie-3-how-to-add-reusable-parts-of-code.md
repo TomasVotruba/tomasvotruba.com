@@ -7,13 +7,15 @@ perex: |
     Today you'll learn how to **decouple big templates to smaller and reusable snippets**. Like Google Analytics code.
 tweet: "#Statie 3: Reusable code snippets #php #static #github"
 
-deprecated_since: "January 2019"
-deprecated_message: |
-    This post was moved to [statie.org](https://www.statie.org/). Also, **it's better to [use `vendor/bin/statie init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/) now**.
-
 updated_since: "September 2018"
 updated_message: |
     Updated with **Statie 5**, NEON → YAML and Twig.
+
+deprecated_since: "2020-03"
+deprecated_message: |
+    Statie was deprecated with last version 7, because 99 % of features are covered in Symfony application.<br>
+    <br>
+    To create static content, migrate to Symfony app and [SymfonyStaticDumper](https://github.com/symplify/symfony-static-dumper).
 ---
 
 Sometimes you need to add part of template, that you want to use on multiple pages (in the same form or with smaller changes) or that makes your template less readable.

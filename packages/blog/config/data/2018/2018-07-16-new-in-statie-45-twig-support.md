@@ -11,6 +11,12 @@ tweet_image: "/assets/images/posts/2018/statie-45/statie-45.png"
 updated_since: "September 2018"
 updated_message: |
     Updated with <strong>Statie 5</strong>, NEON → YAML and Twig.
+
+deprecated_since: "2020-03"
+deprecated_message: |
+    Statie was deprecated with last version 7, because 99 % of features are covered in Symfony application.<br>
+    <br>
+    To create static content, migrate to Symfony app and [SymfonyStaticDumper](https://github.com/symplify/symfony-static-dumper).
 ---
 
 <a href="https://github.com/Symplify/Symplify/pull/892" class="btn btn-dark btn-sm">

@@ -7,6 +7,12 @@ perex: |
     <br><br>
     As you can see, **Static websites are on the rise in PHP** and they were never used more than now. It's time to make creating a new static website simple for everyone.
 tweet: "New Post on #php 🐘 blog: How to Create Your First PHP #Twig Static Website under 2 Minutes with #Statie"
+
+deprecated_since: "2020-03"
+deprecated_message: |
+    Statie was deprecated with last version 7, because 99 % of features are covered in Symfony application.<br>
+    <br>
+    To create static content, migrate to Symfony app and [SymfonyStaticDumper](https://github.com/symplify/symfony-static-dumper).
 ---
 
 Until today, to create and understand static website basics, you had to learn:
