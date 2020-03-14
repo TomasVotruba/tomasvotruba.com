@@ -201,7 +201,7 @@ jobs:
             -   uses: actions/checkout@v2
             -   uses: shivammathur/setup-php@v1
                 with:
-                    php-version: 7.3
+                    php-version: 7.4
                     coverage: none
 
             -   run: |

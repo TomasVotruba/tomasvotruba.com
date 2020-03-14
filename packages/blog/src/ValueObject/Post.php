@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TomasVotruba\Blog\ValueObject;
 
 use DateTimeInterface;
+use Nette\Utils\DateTime;
 
 final class Post
 {
@@ -250,5 +251,10 @@ final class Post
     public function getYear(): int
     {
         return (int) $this->dateTime->format('Y');
+    }
+
+    public function isFuture(): bool
+    {
+        return $this->dateTime > DateTime::from('now');
     }
 }

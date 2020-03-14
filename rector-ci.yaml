@@ -1,5 +1,6 @@
 parameters:
     sets:
+        - 'php74'
         - 'code-quality'
         - 'dead-code'
         - 'coding-style'

@@ -24,7 +24,7 @@ final class GenerateStatsCommand extends Command
     /**
      * @var string
      */
-    private const GENERATED_FILE_OUTPUT_PATH = __DIR__ . '/../../../../../source/_data/generated/php_framework_trends.yaml';
+    private const GENERATED_FILE_OUTPUT_PATH = __DIR__ . '/../../../../../config/_data/generated/php_framework_trends.yaml';
 
     /**
      * @var string[]

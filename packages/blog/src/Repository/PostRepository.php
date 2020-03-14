@@ -19,11 +19,6 @@ final class PostRepository
     private const POST_DIRECTORY = __DIR__ . '/../../config/data';
 
     /**
-     * @var Post[]
-     */
-    private $posts = [];
-
-    /**
      * @var FinderSanitizer
      */
     private $finderSanitizer;
@@ -50,11 +45,25 @@ final class PostRepository
             $posts[$post->getId()] = $post;
         }
 
-        uasort($posts, function (Post $firstPost, Post $secondPost) {
-            return $secondPost->getDateTime() <=> $firstPost->getDateTime();
-        });
+        return $this->sortByDateTime($posts);
+    }
 
-        return $posts;
+    /**
+     * @return Post[]
+     */
+    public function fetchForRss(): array
+    {
+        $posts = [];
+        foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
+            $post = $this->postFactory->createFromFileInfo($smartFileInfo);
+            $posts[$post->getId()] = $post;
+        }
+
+        $posts = $this->filterOutNonEnglish($posts);
+        $posts = $this->filterOutDeprecated($posts);
+        $posts = $this->filterOutFuture($posts);
+
+        return $this->sortByDateTime($posts);
     }
 
     /**
@@ -62,30 +71,17 @@ final class PostRepository
      */
     public function fetchAllEnglishNonDeprecated(): array
     {
-        if ($this->posts !== []) {
-            return $this->posts;
-        }
+        $posts = [];
 
         foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
             $post = $this->postFactory->createFromFileInfo($smartFileInfo);
-            $this->posts[$post->getId()] = $post;
+            $posts[$post->getId()] = $post;
         }
 
-        // keep only English posts
-        $this->posts = array_filter($this->posts, function (Post $post) {
-            return $post->getLanguage() === null;
-        });
+        $posts = $this->filterOutNonEnglish($posts);
+        $posts = $this->filterOutDeprecated($posts);
 
-        // keep only active posts
-        $this->posts = array_filter($this->posts, function (Post $post) {
-            return ! $post->isDeprecated();
-        });
-
-        uasort($this->posts, function (Post $firstPost, Post $secondPost) {
-            return $secondPost->getDateTime() <=> $firstPost->getDateTime();
-        });
-
-        return $this->posts;
+        return $this->sortByDateTime($posts);
     }
 
     /**
@@ -135,5 +131,51 @@ final class PostRepository
             ->name('*.md');
 
         return $this->finderSanitizer->sanitize($finder);
+    }
+
+    /**
+     * @param Post[] $posts
+     * @return Post[]
+     */
+    private function sortByDateTime(array $posts): array
+    {
+        uasort($posts, function (Post $firstPost, Post $secondPost) {
+            return $secondPost->getDateTime() <=> $firstPost->getDateTime();
+        });
+
+        return $posts;
+    }
+
+    /**
+     * @param Post[] $posts
+     * @return Post[]
+     */
+    private function filterOutNonEnglish(array $posts): array
+    {
+        return array_filter($posts, function (Post $post) {
+            return $post->getLanguage() === null;
+        });
+    }
+
+    /**
+     * @param Post[] $posts
+     * @return Post[]
+     */
+    private function filterOutDeprecated(array $posts): array
+    {
+        return array_filter($posts, function (Post $post) {
+            return ! $post->isDeprecated();
+        });
+    }
+
+    /**
+     * @param Post[] $posts
+     * @return Post[]
+     */
+    private function filterOutFuture(array $posts): array
+    {
+        return array_filter($posts, function (Post $post) {
+            return ! $post->isFuture();
+        });
     }
 }
