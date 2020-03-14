@@ -100,7 +100,7 @@ final class PostRepository
 
     public function get(int $id): Post
     {
-        foreach ($this->fetchAllEnglishNonDeprecated() as $post) {
+        foreach ($this->fetchAll() as $post) {
             if ($post->getId() !== $id) {
                 continue;
             }
@@ -113,7 +113,7 @@ final class PostRepository
 
     public function getBySlug(string $slug): Post
     {
-        foreach ($this->fetchAllEnglishNonDeprecated() as $post) {
+        foreach ($this->fetchAll() as $post) {
             if ($post->getSlug() !== $slug) {
                 continue;
             }

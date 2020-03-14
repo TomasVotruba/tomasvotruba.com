@@ -23,7 +23,7 @@
         "symplify/autowire-array-parameter": "^7.3",
         "symplify/flex-loader": "^7.3",
         "symplify/package-builder": "^7.3",
-        "symplify/symfony-static-dumper": "dev-master",
+        "symplify/symfony-static-dumper": "^7.3",
         "twig/twig": "^3.0"
     },
     "require-dev": {
