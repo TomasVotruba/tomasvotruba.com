@@ -131,7 +131,7 @@ final class PostRepository
     {
         $finder = new Finder();
         $finder->files()
-            ->in(self::POST_DIRECTORY)
+            ->in(self:: POST_DIRECTORY)
             ->name('*.md');
 
         return $this->finderSanitizer->sanitize($finder);
