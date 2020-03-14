@@ -8,30 +8,18 @@ use TomasVotruba\FrameworkStats\Contract\LastYearTrendAwareInterface;
 
 final class VendorData implements LastYearTrendAwareInterface
 {
-    /**
-     * @var string
-     */
-    private $vendorName;
+    private string $vendorName;
 
-    /**
-     * @var int
-     */
-    private $vendorTotalLastYear;
+    private int $vendorTotalLastYear;
 
-    /**
-     * @var int
-     */
-    private $vendorTotalPreviousYear;
+    private int $vendorTotalPreviousYear;
 
-    /**
-     * @var float
-     */
-    private $lastYearTrend;
+    private float $lastYearTrend;
 
     /**
      * @var PackageData[]
      */
-    private $packagesData = [];
+    private array $packagesData = [];
 
     /**
      * @param PackageData[] $packagesData

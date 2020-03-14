@@ -10,10 +10,7 @@ use TomasVotruba\Website\Controller\BlogArchiveController;
 
 final class BlogArchiveControllerWithDataProvider implements ControllerWithDataProviderInterface
 {
-    /**
-     * @var PostRepository
-     */
-    private $postRepository;
+    private PostRepository $postRepository;
 
     public function __construct(PostRepository $postRepository)
     {

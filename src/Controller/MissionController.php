@@ -13,7 +13,7 @@ final class MissionController extends AbstractController
     /**
      * @var mixed[]
      */
-    private $helpedCompanies = [];
+    private array $helpedCompanies = [];
 
     public function __construct(array $helpedCompanies)
     {

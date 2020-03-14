@@ -25,15 +25,9 @@ final class PostFactory
      */
     private const CONFIG_CONTENT_PATTERN = '#^\s*' . self::SLASHES_WITH_SPACES_PATTERN . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_PATTERN . '(?<content>.*?)$#s';
 
-    /**
-     * @var ParsedownExtra
-     */
-    private $parsedownExtra;
+    private ParsedownExtra $parsedownExtra;
 
-    /**
-     * @var PathAnalyzer
-     */
-    private $pathAnalyzer;
+    private PathAnalyzer $pathAnalyzer;
 
     public function __construct(ParsedownExtra $parsedownExtra, PathAnalyzer $pathAnalyzer)
     {

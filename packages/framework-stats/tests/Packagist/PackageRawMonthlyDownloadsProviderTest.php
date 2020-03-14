@@ -11,10 +11,7 @@ use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
 final class PackageRawMonthlyDownloadsProviderTest extends AbstractKernelTestCase
 {
-    /**
-     * @var PackageRawMonthlyDownloadsProvider
-     */
-    private $packageRawMonthlyDownloadsProvider;
+    private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider;
 
     protected function setUp(): void
     {

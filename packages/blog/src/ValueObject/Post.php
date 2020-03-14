@@ -14,95 +14,41 @@ final class Post
      */
     private const READ_WORDS_PER_MINUTE = 260;
 
-    /**
-     * @var string
-     */
-    private $content;
+    private string $content;
 
-    /**
-     * @var string|null
-     */
-    private $tweetText;
+    private ?string $tweetText;
 
-    /**
-     * @var string|null
-     */
-    private $updatedMessage;
+    private ?string $updatedMessage;
 
-    /**
-     * @var string
-     */
-    private $title;
+    private string $title;
 
-    /**
-     * @var string
-     */
-    private $perex;
+    private string $perex;
 
-    /**
-     * @var string
-     */
-    private $htmlContent;
+    private string $htmlContent;
 
-    /**
-     * @var int
-     */
-    private $id;
+    private int $id;
 
-    /**
-     * @var string
-     */
-    private $plaintextContent;
+    private string $plaintextContent;
 
-    /**
-     * @var string|null
-     */
-    private $tweetImage;
+    private ?string $tweetImage;
 
-    /**
-     * @var string
-     */
-    private $slug;
+    private string $slug;
 
-    /**
-     * @var bool
-     */
-    private $isTested = false;
+    private bool $isTested = false;
 
-    /**
-     * @var string|null
-     */
-    private $testSlug;
+    private ?string $testSlug;
 
-    /**
-     * @var string
-     */
-    private $sourceRelativePath;
+    private string $sourceRelativePath;
 
-    /**
-     * @var string|null
-     */
-    private $deprecatedMessage;
+    private ?string $deprecatedMessage;
 
-    /**
-     * @var string|null
-     */
-    private $language;
+    private ?string $language;
 
-    /**
-     * @var DateTimeInterface
-     */
-    private $dateTime;
+    private DateTimeInterface $dateTime;
 
-    /**
-     * @var DateTimeInterface|null
-     */
-    private $updatedAt;
+    private ?DateTimeInterface $updatedAt;
 
-    /**
-     * @var DateTimeInterface|null
-     */
-    private $deprecatedAt;
+    private ?DateTimeInterface $deprecatedAt;
 
     public function __construct(
         int $id,
@@ -164,11 +110,6 @@ final class Post
     public function getHtmlContent(): string
     {
         return $this->htmlContent;
-    }
-
-    public function getPlaintextContent(): string
-    {
-        return $this->plaintextContent;
     }
 
     public function getTweetText(): ?string

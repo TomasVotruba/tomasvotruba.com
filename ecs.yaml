@@ -16,3 +16,6 @@ parameters:
 
     skip:
         PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer: ~
+
+        # buggy with PHP 7.4 array property type
+        PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer: null

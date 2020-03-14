@@ -18,25 +18,13 @@ use TomasVotruba\Website\Posts\Year2017\Ast\NodeVisitor\ChangeMethodNameNodeVisi
 
 final class ModifyTest extends TestCase
 {
-    /**
-     * @var string
-     */
-    private $srcDirectory;
+    private string $srcDirectory;
 
-    /**
-     * @var NodeTraverser
-     */
-    private $nodeTraverser;
+    private NodeTraverser $nodeTraverser;
 
-    /**
-     * @var Parser
-     */
-    private $parser;
+    private Parser $parser;
 
-    /**
-     * @var NodeFinder
-     */
-    private $nodeFinder;
+    private NodeFinder $nodeFinder;
 
     protected function setUp(): void
     {

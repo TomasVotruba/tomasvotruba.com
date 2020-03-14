@@ -10,10 +10,7 @@ use Symfony\Component\Yaml\Yaml;
 
 final class YamlFileDumper
 {
-    /**
-     * @var Filesystem
-     */
-    private $filesystem;
+    private Filesystem $filesystem;
 
     public function __construct(Filesystem $filesystem)
     {

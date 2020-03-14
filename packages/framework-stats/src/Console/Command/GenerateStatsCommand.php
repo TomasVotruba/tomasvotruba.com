@@ -26,30 +26,18 @@ final class GenerateStatsCommand extends Command
      */
     private const GENERATED_FILE_OUTPUT_PATH = __DIR__ . '/../../../../../config/_data/generated/php_framework_trends.yaml';
 
+    private YamlFileDumper $yamlFileDumper;
+
+    private SymfonyStyle $symfonyStyle;
+
+    private VendorDataFactory $vendorDataFactory;
+
+    private VendorDataMapper $vendorDataMapper;
+
     /**
      * @var string[]
      */
-    private $frameworksVendorToName = [];
-
-    /**
-     * @var SymfonyStyle
-     */
-    private $symfonyStyle;
-
-    /**
-     * @var YamlFileDumper
-     */
-    private $yamlFileDumper;
-
-    /**
-     * @var VendorDataFactory
-     */
-    private $vendorDataFactory;
-
-    /**
-     * @var VendorDataMapper
-     */
-    private $vendorDataMapper;
+    private array $frameworksVendorToName = [];
 
     /**
      * @param string[] $frameworksVendorToName

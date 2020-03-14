@@ -8,10 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 final class RunBinTest extends TestCase
 {
-    /**
-     * @var string
-     */
-    private $binFilePath = __DIR__ . '/../../../../src/Posts/Year2018/ConsoleDI/bin/some-app';
+    private string $binFilePath = __DIR__ . '/../../../../src/Posts/Year2018/ConsoleDI/bin/some-app';
 
     public function testBareBinFile(): void
     {

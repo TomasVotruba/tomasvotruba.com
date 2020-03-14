@@ -10,20 +10,14 @@ use TomasVotruba\Website\Posts\Year2018\ProcessAsync\ProcessesInParallel;
 
 final class ProcessesInParallelTest extends TestCase
 {
+    private ProcessesInParallel $processesInParallel;
+
+    private Stopwatch $stopwatch;
+
     /**
      * @var int[]
      */
-    private $sleepIntervalsInMs = [100, 200, 300];
-
-    /**
-     * @var Stopwatch
-     */
-    private $stopwatch;
-
-    /**
-     * @var ProcessesInParallel
-     */
-    private $processesInParallel;
+    private array $sleepIntervalsInMs = [100, 200, 300];
 
     protected function setUp(): void
     {

@@ -13,12 +13,12 @@ final class TalksController extends AbstractController
     /**
      * @var mixed[]
      */
-    private $talks = [];
+    private array $talks = [];
 
     /**
      * @var mixed[]
      */
-    private $talksFeedback = [];
+    private array $talksFeedback = [];
 
     public function __construct(array $talks, array $talksFeedback)
     {

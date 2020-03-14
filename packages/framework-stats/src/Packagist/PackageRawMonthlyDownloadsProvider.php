@@ -15,10 +15,7 @@ final class PackageRawMonthlyDownloadsProvider
      */
     private const URL_DOWNLOAD_STATS = 'https://packagist.org/packages/%s/stats/all.json?average=monthly';
 
-    /**
-     * @var FileToJsonLoader
-     */
-    private $fileToJsonLoader;
+    private FileToJsonLoader $fileToJsonLoader;
 
     public function __construct(FileToJsonLoader $fileToJsonLoader)
     {

@@ -22,32 +22,17 @@ final class PackageDataFactory
     /**
      * @var int
      */
-    private const MIN_DOWNLOADS_LIMIT = 1000;
+    private const MIN_DOWNLOADS_LIMIT = 1_000;
 
-    /**
-     * @var PackageMonthlyDownloadsProvider
-     */
-    private $packageMonthlyDownloadsProvider;
+    private PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider;
 
-    /**
-     * @var Statistics
-     */
-    private $statistics;
+    private Statistics $statistics;
 
-    /**
-     * @var SymfonyStyle
-     */
-    private $symfonyStyle;
+    private SymfonyStyle $symfonyStyle;
 
-    /**
-     * @var Sorter
-     */
-    private $sorter;
+    private Sorter $sorter;
 
-    /**
-     * @var PHPStanNettePackagesPurifier
-     */
-    private $phpStanNettePackagesPurifier;
+    private PHPStanNettePackagesPurifier $phpStanNettePackagesPurifier;
 
     public function __construct(
         PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,

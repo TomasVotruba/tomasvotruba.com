@@ -13,7 +13,7 @@ final class ThankYouController extends AbstractController
     /**
      * @var mixed[]
      */
-    private $contributors = [];
+    private array $contributors = [];
 
     public function __construct(array $contributors)
     {
