@@ -3,7 +3,7 @@
     "license": "MIT",
     "description": "Blog about hacking PHP, education and being the laziest PHP programmer in the world",
     "require": {
-        "php": "^7.3",
+        "php": "^7.4",
         "doctrine/cache": "^1.10",
         "erusev/parsedown-extra": "^0.8.1",
         "nette/finder": "^2.5",
@@ -64,7 +64,6 @@
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.com --output invalid-links.txt --ansi",
-        "stats": "bin/console generate-package-stats --ansi",
         "rector": "vendor/bin/rector process src tests packages --dry-run --config rector-ci.yaml --ansi",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",

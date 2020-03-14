@@ -1,21 +1,18 @@
 services:
+    Symplify\CodingStandard\Sniffs\CleanCode\ClassCognitiveComplexitySniff:
+        max_class_cognitive_complexity: 30
+
     Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
         max_cognitive_complexity: 8
 
 parameters:
     sets:
         - 'psr12'
+        - 'php70'
         - 'php71'
         - 'common'
         - 'symplify'
         - 'clean-code'
 
     skip:
-        Symplify\CodingStandard\Sniffs\Debug\CommentedOutCodeSniff.Found:
-            - 'src/Command/GeneratePackageStatsCommand.php'
-
-        # false positive
-        SlevomatCodingStandard\Sniffs\Variables\UnusedVariableSniff.UnusedVariable:
-            - 'src/Packagist/MinorPackageVersionsDownloadsProvider.php'
-
         PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer: ~

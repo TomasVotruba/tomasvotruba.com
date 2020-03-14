@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace TomasVotruba\FrameworkStats\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
