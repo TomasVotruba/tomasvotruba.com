@@ -7,13 +7,15 @@ perex: |
     Today I will show you, **how to publish your first post**.
 tweet: "#Statie 4: How to create blog #php #static #github"
 
-deprecated_since: "January 2019"
-deprecated_message: |
-    This post was moved to [statie.org](https://www.statie.org/). Also, **it's better to [use `vendor/bin/statie init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/) now**.
-
 updated_since: "September 2018"
 updated_message: |
     Updated with **Statie 5**, NEON → YAML, Twig and `parameters` section in `statie.yml` config.
+
+deprecated_since: "2020-03"
+deprecated_message: |
+    Statie was deprecated with last version 7, because 99 % of features are covered in Symfony application.<br>
+    <br>
+    To create static content, migrate to Symfony app and [SymfonyStaticDumper](https://github.com/symplify/symfony-static-dumper).
 ---
 
 ## Create a Blog Page

@@ -18,7 +18,7 @@
                 {% if post.deprecated %}
                     <div class="card border-danger card-bigger">
                         <div class="card-header text-white bg-danger">
-                            <strong>This post is deprecated since {{ post.deprecatedAt }}</strong>
+                            <strong>This post is deprecated since {{ post.deprecatedAt|date("F Y") }}</strong>
                         </div>
                         <div class="card-body">
                             {{ post.deprecatedMessage|markdown|raw }}
