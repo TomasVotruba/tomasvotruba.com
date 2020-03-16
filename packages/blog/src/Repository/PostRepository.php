@@ -109,7 +109,7 @@ final class PostRepository
             return $post;
         }
 
-        throw new ShouldNotHappenException();
+        throw new ShouldNotHappenException(sprintf('Post for slug "%s" was not found.', $slug));
     }
 
     /**
