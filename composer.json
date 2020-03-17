@@ -62,7 +62,7 @@
         }
     },
     "scripts": {
-        "phpstan": "vendor/bin/phpstan analyse bin src tests packages --ansi --error-format symplify",
+        "phpstan": "vendor/bin/phpstan analyse --ansi --error-format symplify",
         "check-cs": "vendor/bin/ecs check bin src tests packages --ansi",
         "fix-cs": [
             "vendor/bin/ecs check bin src tests packages --fix --ansi",

@@ -8,7 +8,6 @@ perex: |
 tweet: "Let AST change code for you #php #phpparser #ast #ai"
 
 tested: true
-test_slug: Ast
 ---
 
 We need to make clear what are we talking about right at the beginning. When we say "PHP AST", you can talk about 2 things:

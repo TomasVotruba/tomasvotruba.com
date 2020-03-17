@@ -7,7 +7,6 @@ perex: |
     Now it's time for parameters to follow.
 tweet: "New post on my blog: How to Get Parameter in Symfony Controller the Clean Way #symfony #php #di"
 tested: true
-test_slug: ParameterToSymfonyController
 ---
 
 

@@ -2,6 +2,12 @@ includes:
     - 'vendor/symplify/phpstan-extensions/config/config.neon'
 
 parameters:
+    paths:
+        - bin
+        - src
+        - tests
+        - packages
+
     level: max
     checkMissingIterableValueType: false
 
