@@ -1,8 +1,6 @@
 language: php
 
-matrix:
-    include:
-        - php: 7.4
+php: 7.4
 
 install:
     - composer update
@@ -13,7 +11,18 @@ branches:
 
 script:
     # build static version to /output directory
+    # used for deploy
     - bin/console dump-static-site --ansi
+
+jobs:
+    include:
+        -
+            name: 'Tweet new Post'
+            script:
+                - composer install
+                # get tokens to Travis ENV: https://travis-ci.com/TomasVotruba/tomasvotruba.com/settings
+                # from here: https://developer.twitter.com/en/apps/14147884
+                - bin/console tweet
 
 deploy:
     provider: pages

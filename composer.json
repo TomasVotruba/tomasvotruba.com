@@ -6,6 +6,7 @@
         "php": "^7.4",
         "doctrine/cache": "^1.10",
         "erusev/parsedown-extra": "^0.8.1",
+        "j7mbo/twitter-api-php": "^1.0",
         "nette/finder": "^2.5",
         "nette/utils": "^3.0",
         "symfony/asset": "^5.0",
@@ -47,13 +48,15 @@
             "TomasVotruba\\Website\\": "src",
             "TomasVotruba\\FrameworkStats\\": "packages/framework-stats/src",
             "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
+            "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
             "TomasVotruba\\Blog\\": "packages/blog/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "TomasVotruba\\Website\\Tests\\": "tests",
-            "TomasVotruba\\FrameworkStats\\Tests\\": "packages/framework-stats/tests"
+            "TomasVotruba\\FrameworkStats\\Tests\\": "packages/framework-stats/tests",
+            "TomasVotruba\\Tweeter\\Tests\\": "packages/tweeter/tests"
         }
     },
     "scripts": {
@@ -64,7 +67,7 @@
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.com --output invalid-links.txt --ansi",
-        "rector": "vendor/bin/rector process src tests packages --dry-run --config rector-ci.yaml --ansi",
+        "rector": "vendor/bin/rector process src tests packages --config rector-ci.yaml --ansi --dry-run",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"

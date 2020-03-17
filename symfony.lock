@@ -50,6 +50,9 @@
             ".php_cs.dist"
         ]
     },
+    "j7mbo/twitter-api-php": {
+        "version": "1.0.6"
+    },
     "jean85/pretty-package-versions": {
         "version": "1.2"
     },
