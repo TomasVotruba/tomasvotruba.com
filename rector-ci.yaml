@@ -5,9 +5,10 @@ parameters:
         - 'dead-code'
         - 'coding-style'
         - 'nette-utils-code-quality'
+        - 'solid'
 
     exclude_paths:
         # intentional json_encode
-        - 'tests/Posts/Year2018/Php73/Php73Test.php'
+        - 'packages/blog/tests/Posts/Year2018/Php73/Php73Test.php'
         # bug in Rector
-        - "tests/Posts/Year2018/Exceptions/RelativePathTest.php"
+        - 'packages/blog/tests/Posts/Year2018/Exceptions/RelativePathTest.php'

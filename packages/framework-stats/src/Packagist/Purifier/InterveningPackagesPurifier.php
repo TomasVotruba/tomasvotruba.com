@@ -8,17 +8,10 @@ use TomasVotruba\FrameworkStats\Packagist\PackageRawMonthlyDownloadsProvider;
 
 final class InterveningPackagesPurifier
 {
-    private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider;
-
-    /**
-     * @var mixed[][]
-     */
-    private array $interveningPackagesDownloads = [];
-
     /**
      * @var string[][]
      */
-    private array $interveningDependencies = [
+    private const INTERVENING_DEPENDENCIES = [
         // https://packagist.org/packages/friendsofphp/php-cs-fixer
         'friendsofphp/php-cs-fixer' => [
             'symfony/console',
@@ -81,6 +74,12 @@ final class InterveningPackagesPurifier
             'symfony/routing',
         ],
     ];
+    private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider;
+
+    /**
+     * @var mixed[][]
+     */
+    private array $interveningPackagesDownloads = [];
 
     public function __construct(PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider)
     {
@@ -89,7 +88,7 @@ final class InterveningPackagesPurifier
 
     public function correctInterveningPackages(array $monthlyDownloads, string $packageName): array
     {
-        foreach ($this->interveningDependencies as $interveningDependency => $dependingPackages) {
+        foreach (self::INTERVENING_DEPENDENCIES as $interveningDependency => $dependingPackages) {
             if (! in_array($packageName, $dependingPackages, true)) {
                 continue;
             }

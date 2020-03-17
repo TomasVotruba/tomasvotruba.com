@@ -22,12 +22,12 @@ final class TweetsProviderTest extends AbstractKernelTestCase
     public function test(): void
     {
         $postTweets = $this->postTweetsProvider->provide();
+        $this->assertGreaterThan(200, $postTweets);
 
-        $this->assertCount(1, $postTweets);
+        $lastKey = array_key_last($postTweets);
+        $oldestPost = $postTweets[$lastKey];
 
-        $postTweet = $postTweets[0];
-
-        $postDate = $postTweet->getPostDateTime()->format('Y-m-d');
-        $this->assertSame('2018-10-30', $postDate);
+        $postDate = $oldestPost->getPostDateTime()->format('Y-m-d');
+        $this->assertSame('2016-09-09', $postDate);
     }
 }

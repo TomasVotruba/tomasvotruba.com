@@ -56,7 +56,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\Website\\Tests\\": "tests",
+            "TomasVotruba\\Blog\\Tests\\": "packages/blog/tests",
             "TomasVotruba\\FrameworkStats\\Tests\\": "packages/framework-stats/tests",
             "TomasVotruba\\Tweeter\\Tests\\": "packages/tweeter/tests"
         }

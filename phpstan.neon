@@ -13,7 +13,7 @@ parameters:
 
     excludes_analyse:
         # test fixture file
-        - 'src/Posts/Year2017/Ast/SomeClass.php'
+        - 'packages/blog/src/Posts/Year2017/Ast/SomeClass.php'
 
     ignoreErrors:
         # intentional for tests
@@ -22,8 +22,7 @@ parameters:
         # php-parser Node/Stmt mixups
         - '#(.*?)array<PhpParser\\Node>, array<PhpParser\\Node\\Stmt(.*?)#'
 
-        # mocks
-        - '#Call to an undefined method PHPUnit\\Framework\\MockObject\\MockObject\|TomasVotruba\\Website\\Posts\\Year2019\\(.*?)\\FinalClass\:\:(.*?)\(\)#'
-
         - '#Offset 1 does not exist on array<PhpParser\\Node\\Stmt\>\|null#'
         - '#Access to an undefined property PhpParser\\Node\\Stmt\:\:\$stmts#'
+
+        - '#PHPDoc tag @var for variable \$finalClassMock contains unresolvable type#'
