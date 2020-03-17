@@ -6,4 +6,3 @@ twig:
         site_title: 'Tomas Votruba'
         site_url: "%env(SITE_URL)%"
         disqus_shortname: 'itsworthsharing'
-        github_repository_tests_directory: 'https://github.com/TomasVotruba/tomasvotruba.com/tree/master/tests'

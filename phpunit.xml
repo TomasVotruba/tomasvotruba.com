@@ -8,16 +8,12 @@
 >
     <php>
         <ini name="error_reporting" value="-1" />
-        <server name="APP_ENV" value="test" force="true" />
         <server name="SHELL_VERBOSITY" value="-1" />
     </php>
 
     <testsuites>
         <testsuite name="main">
-            <directory>tests</directory>
-            <exclude>packages/StatieTweetPublisher/tests</exclude>
-            <exclude>tests/Posts/Year2019/FinalMock/Listener/</exclude>
-            <exclude>tests/Posts/Year2019/FinalMock/Hook/</exclude>
+            <directory>packages/*/tests</directory>
         </testsuite>
     </testsuites>
 

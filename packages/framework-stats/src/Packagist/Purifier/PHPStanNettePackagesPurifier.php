@@ -13,7 +13,7 @@ final class PHPStanNettePackagesPurifier
      * List packages used by PHPStan up to version 0.11.* included
      * @var string[]
      */
-    private array $interveningDependencies = [
+    private const INTERVENING_DEPENDENCIES = [
         // https://packagist.org/packages/phpstan/phpstan#0.11.19
         'nette/bootstrap',
         'nette/di',
@@ -28,7 +28,7 @@ final class PHPStanNettePackagesPurifier
 
     public function correctLastYearDownloads(int $yearDownloads, string $packageName): int
     {
-        if (! in_array($packageName, $this->interveningDependencies, true)) {
+        if (! in_array($packageName, self::INTERVENING_DEPENDENCIES, true)) {
             return $yearDownloads;
         }
 
@@ -45,7 +45,7 @@ final class PHPStanNettePackagesPurifier
 
     public function correctPreviousYearDownloads(int $yearDownloads, string $packageName): int
     {
-        if (! in_array($packageName, $this->interveningDependencies, true)) {
+        if (! in_array($packageName, self::INTERVENING_DEPENDENCIES, true)) {
             return $yearDownloads;
         }
 

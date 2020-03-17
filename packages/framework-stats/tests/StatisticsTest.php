@@ -10,6 +10,10 @@ use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
 final class StatisticsTest extends AbstractKernelTestCase
 {
+    /**
+     * @var int[]
+     */
+    private const AVERAGE_DAILY_VALUES_BY_MONTH = ['2019-12' => 300];
     private Statistics $statistics;
 
     protected function setUp(): void
@@ -21,10 +25,7 @@ final class StatisticsTest extends AbstractKernelTestCase
 
     public function test(): void
     {
-        $averageDailyValuesByMonth = ['2019-12' => 300];
-
-        $monthlyValuesByMonth = $this->statistics->expandDailyAverageToMonthTotal($averageDailyValuesByMonth);
-
+        $monthlyValuesByMonth = $this->statistics->expandDailyAverageToMonthTotal(self::AVERAGE_DAILY_VALUES_BY_MONTH);
         $this->assertSame(['2019-12' => 9_300], $monthlyValuesByMonth);
     }
 }

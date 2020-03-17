@@ -18,7 +18,7 @@
                 {% if post.deprecated %}
                     <div class="card border-danger card-bigger">
                         <div class="card-header text-white bg-danger">
-                            <strong>This post is deprecated since {{ post.deprecatedAt|date("F Y") }}</strong>
+                            <strong>This post is deprecated at {{ post.deprecatedAt|date("F Y") }}</strong>
                         </div>
                         <div class="card-body">
                             {{ post.deprecatedMessage|markdown|raw }}
@@ -31,7 +31,7 @@
                 {% if post.updated %}
                     <div class="card border-success card-bigger">
                         <div class="card-header text-white bg-success">
-                            <strong>This post was updated on {{ post.updatedAt }}</strong>
+                            <strong>This post was updated at {{ post.updatedAt|date("F Y") }}</strong>
                         </div>
                         <div class="card-body">
                             {{ post.updatedMessage|markdown|raw }}
@@ -50,38 +50,6 @@
                 {{ post.htmlContent|raw }}
 
                 <br>
-
-                {% if post.tested %}
-                    <div class="mt-1 mb-5 card">
-                        <div class="card-header text-center">
-                            <h3 class="text-center mt-2">
-                                <em class="fas fa-check text-success"></em>
-                                &nbsp;
-                                Travis Knows the Code Works
-                            </h3>
-                        </div>
-
-                        <div class="card-body">
-                            {% set testDirectoryOnGithub %}{{ github_repository_tests_directory }}/Posts/Year{{ post.getDateTime|date('Y') }}/{{ post.getTestSlug }}{% endset %}
-
-                            <p>
-                                The code used in this post is tested daily with Travis CI. You can <a href="{{ testDirectoryOnGithub }}">see tests on Github</a>.
-                            </p>
-
-                            <p>
-                                Thanks to tests this post:
-                                <ul>
-                                    <li>
-                                        always run against the most recent dependencies
-                                    </li>
-                                    <li>
-                                        <strong>gets updates and stays relevant for many years</strong> even when new <a href="https://semver.org/#spec-item-8">major version</a> of PHP or Symfony is released
-                                    </li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                {% endif %}
 
                 <div class="row mb-3">
                     <div class="col-12 col-md-6">

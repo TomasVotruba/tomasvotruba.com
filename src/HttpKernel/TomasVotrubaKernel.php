@@ -8,6 +8,7 @@ use Iterator;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 use Symplify\AutoBindParameter\DependencyInjection\CompilerPass\AutoBindParameterCompilerPass;
@@ -25,6 +26,11 @@ final class TomasVotrubaKernel extends Kernel
 
     public function __construct(string $environment, bool $debug)
     {
+        // load local envs
+        if (defined('PHPUNIT_COMPOSER_INSTALL')) {
+            (new Dotenv())->load(getcwd() . '/.env');
+        }
+
         parent::__construct($environment, $debug);
 
         $this->flexLoader = new FlexLoader($environment, $this->getProjectDir());

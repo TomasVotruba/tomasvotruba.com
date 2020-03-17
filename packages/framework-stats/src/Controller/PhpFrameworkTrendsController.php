@@ -33,7 +33,6 @@ final class PhpFrameworkTrendsController extends AbstractController
 
         return $this->render('php-framework-trends.twig', [
             'title' => 'PHP Framework Trends',
-            'id' => 'trends',
             'promo_post' => $promoPost,
             'php_framework_trends' => $this->phpFrameworkTrends,
         ]);

@@ -9,6 +9,8 @@ services:
         exclude:
             - '../src/ValueObject/*'
             - '../src/Exception/*'
+            - '../src/Posts/*'
+
         bind:
             $projectDir: "%kernel.project_dir%"
 

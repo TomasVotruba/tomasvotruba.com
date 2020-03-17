@@ -11,7 +11,6 @@ tweet: "New post on my blog: Neon vs. Yaml and How to Migrate Between Them"
 tweet_image: "/assets/images/posts/2018/neon-yaml/standards.png"
 
 tested: true
-test_slug: NeonYaml
 
 updated_since: "December 2018"
 updated_message: |

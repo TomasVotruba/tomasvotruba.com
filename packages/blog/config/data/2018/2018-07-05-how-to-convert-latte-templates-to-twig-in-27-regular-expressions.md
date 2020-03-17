@@ -18,7 +18,6 @@ updated_message: |
     Go to **[Latte To Twig Converter package](https://github.com/symplify/lattetotwigconverter) on Github**.
 
 tested: true
-test_slug: LatteTwig
 ---
 
 <img src="/assets/images/posts/2018/latte-twig/latte.png" class="mt-5 ml-5">

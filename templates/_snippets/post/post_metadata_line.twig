@@ -34,9 +34,8 @@
 
     {% if post.tested %}
         <li class="list-inline-item mr-3 text-primary">
-            {% set test_directory_on_github %}{{ github_repository_tests_directory }}/Posts/Year{{ post.getDateTime|date('Y') }}/{{ post.getTestSlug }}{% endset %}
             <em class="fas fa-fw fa-check-circle"></em>
-            <a href="{{ test_directory_on_github }}">Tested</a>
+            Tested
         </li>
     {% endif %}
 

@@ -8,7 +8,6 @@ perex: |
 tweet: "New Post on My Blog: Build Your First #Symfony Console Application with Dependency Injection Under 4 Files #cli #php"
 tweet_image: "/assets/images/posts/2018/console-di/thumbnail.png"
 tested: true
-test_slug: ConsoleDI
 ---
 
 ## Symfony Evolution

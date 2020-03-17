@@ -6,7 +6,6 @@ perex: |
 tweet: "New Post on my Blog: What's New in #PHP 7.3 in 30 Seconds in Diffs #rfc #nettefw #learnIn30secs"
 
 tested: true
-test_slug: Php73
 ---
 
 From features that might be the most interesting to those lesser ones, that anybody will rarely use.

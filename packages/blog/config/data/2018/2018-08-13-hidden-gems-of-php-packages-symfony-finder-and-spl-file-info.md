@@ -7,7 +7,6 @@ perex: |
 tweet: "New Post on my Blog: Hidden Gems of PHP Packages: Symfony\\Finder and SplFileInfo #symfony #filesystem #php #spl"
 
 tested: true
-test_slug: "SymfonyFinder"
 ---
 
 ## Why I Use it?
