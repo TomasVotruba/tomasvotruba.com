@@ -50,6 +50,8 @@ final class Post
 
     private ?DateTimeInterface $deprecatedAt;
 
+    private string $absoluteUrl;
+
     public function __construct(
         int $id,
         string $title,
@@ -66,7 +68,8 @@ final class Post
         string $sourceRelativePath,
         ?DateTimeInterface $deprecatedAt,
         ?string $deprecatedMessage,
-        ?string $language
+        ?string $language,
+        string $absoluteUrl
     ) {
         $this->id = $id;
         $this->title = $title;
@@ -85,6 +88,7 @@ final class Post
         $this->deprecatedMessage = $deprecatedMessage;
         $this->updatedMessage = $updatedMessage;
         $this->language = $language;
+        $this->absoluteUrl = $absoluteUrl;
     }
 
     public function getContent(): string
@@ -115,6 +119,11 @@ final class Post
     public function getTweetText(): ?string
     {
         return $this->tweetText;
+    }
+
+    public function hasTweet(): bool
+    {
+        return $this->tweetText !== null;
     }
 
     public function getTweetImage(): ?string
@@ -197,5 +206,10 @@ final class Post
     public function isFuture(): bool
     {
         return $this->dateTime > DateTime::from('now');
+    }
+
+    public function getAbsoluteUrl(): string
+    {
+        return $this->absoluteUrl;
     }
 }

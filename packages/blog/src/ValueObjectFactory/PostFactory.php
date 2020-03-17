@@ -7,7 +7,9 @@ namespace TomasVotruba\Blog\ValueObjectFactory;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use ParsedownExtra;
+use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Yaml\Yaml;
+use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileInfo;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
 use TomasVotruba\Blog\ValueObject\Post;
@@ -29,10 +31,32 @@ final class PostFactory
 
     private PathAnalyzer $pathAnalyzer;
 
-    public function __construct(ParsedownExtra $parsedownExtra, PathAnalyzer $pathAnalyzer)
-    {
+    private RouterInterface $router;
+
+    private string $projectDir;
+    /**
+     * @var string
+     */
+    private string $siteUrl;
+    /**
+     * @var FileSystemGuard
+     */
+    private FileSystemGuard $fileSystemGuard;
+
+    public function __construct(
+        ParsedownExtra $parsedownExtra,
+        PathAnalyzer $pathAnalyzer,
+        RouterInterface $router,
+        string $siteUrl,
+        string $projectDir,
+        FileSystemGuard $fileSystemGuard
+    ) {
         $this->parsedownExtra = $parsedownExtra;
         $this->pathAnalyzer = $pathAnalyzer;
+        $this->router = $router;
+        $this->siteUrl = rtrim($siteUrl, '/');
+        $this->projectDir = $projectDir;
+        $this->fileSystemGuard = $fileSystemGuard;
     }
 
     public function createFromFileInfo(SmartFileInfo $smartFileInfo): Post
@@ -61,8 +85,8 @@ final class PostFactory
         }
         $htmlContent = $this->parsedownExtra->parse($matches['content']);
 
-        $tweetText = $configuration['tweet_text'] ?? null;
-        $tweetImage = $configuration['tweet_image'] ?? null;
+        $tweetText = $configuration['tweet'] ?? null;
+        $tweetImage = $this->resolveTweetImage($configuration);
 
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
         $updatedMessage = $configuration['updated_message'] ?? null;
@@ -78,6 +102,8 @@ final class PostFactory
 
         $testSlug = $configuration['test_slug'] ?? null;
         $sourceRelativePath = $this->getSourceRelativePath($smartFileInfo);
+
+        $absoluteUrl = $this->createAbsoluteUrl($slug);
 
         return new Post(
             $id,
@@ -95,13 +121,36 @@ final class PostFactory
             $sourceRelativePath,
             $deprecatedAt,
             $deprecatedMessage,
-            $language
+            $language,
+            $absoluteUrl
         );
+    }
+
+    private function resolveTweetImage(array $configuration): ?string
+    {
+        $tweetImage = $configuration['tweet_image'] ?? null;
+        if ($tweetImage === null) {
+            return null;
+        }
+
+        $tweetImage = ltrim($tweetImage, '/');
+        $localTweetImagePath = $this->projectDir . '/public/' . $tweetImage;
+
+        $this->fileSystemGuard->ensureFileExists($localTweetImagePath, __METHOD__);
+
+        return $this->siteUrl . '/' . $tweetImage;
     }
 
     private function getSourceRelativePath(SmartFileInfo $smartFileInfo): string
     {
         $relativeFilePath = $smartFileInfo->getRelativeFilePath();
         return ltrim($relativeFilePath, './');
+    }
+
+    private function createAbsoluteUrl(string $slug): string
+    {
+        $siteUrl = rtrim($this->siteUrl, '/');
+
+        return $siteUrl . $this->router->generate('post_detail', ['slug' => $slug]);
     }
 }

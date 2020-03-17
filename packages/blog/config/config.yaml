@@ -9,6 +9,8 @@ services:
         exclude:
             - '../src/ValueObject/*'
             - '../src/Exception/*'
+        bind:
+            $projectDir: "%kernel.project_dir%"
 
     Symplify\SmartFileSystem\Finder\FinderSanitizer: null
     Symplify\PackageBuilder\Strings\StringFormatConverter: null

@@ -3,6 +3,9 @@ imports:
     - { resource: '_data/*' }
     - { resource: '_data/generated/*' }
 
+parameters:
+    site_url: "%env(SITE_URL)%"
+
 services:
     _defaults:
         autowire: true
