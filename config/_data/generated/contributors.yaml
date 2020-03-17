@@ -1,11 +1,11 @@
-# this file was generated on 2020-01-03 14:16:59, do not edit it manually
+# this file was generated on 2020-03-17 23:12:20, do not edit it manually
 parameters:
     contributors:
         -
             name: Gappa
             url: 'https://github.com/Gappa'
             photo: 'https://avatars3.githubusercontent.com/u/749981?v=4'
-            contribution_count: 11
+            contribution_count: 12
         -
             name: enumag
             url: 'https://github.com/enumag'
@@ -42,6 +42,11 @@ parameters:
             photo: 'https://avatars3.githubusercontent.com/u/3995003?v=4'
             contribution_count: 6
         -
+            name: ikvasnica
+            url: 'https://github.com/ikvasnica'
+            photo: 'https://avatars3.githubusercontent.com/u/4759802?v=4'
+            contribution_count: 5
+        -
             name: crazko
             url: 'https://github.com/crazko'
             photo: 'https://avatars2.githubusercontent.com/u/1255989?v=4'
@@ -60,11 +65,6 @@ parameters:
             name: Maxell92
             url: 'https://github.com/Maxell92'
             photo: 'https://avatars3.githubusercontent.com/u/1649279?v=4'
-            contribution_count: 4
-        -
-            name: ikvasnica
-            url: 'https://github.com/ikvasnica'
-            photo: 'https://avatars3.githubusercontent.com/u/4759802?v=4'
             contribution_count: 4
         -
             name: tiso
@@ -105,6 +105,11 @@ parameters:
             name: petrofcikmatus
             url: 'https://github.com/petrofcikmatus'
             photo: 'https://avatars1.githubusercontent.com/u/11237717?v=4'
+            contribution_count: 3
+        -
+            name: andrewmy
+            url: 'https://github.com/andrewmy'
+            photo: 'https://avatars2.githubusercontent.com/u/715595?v=4'
             contribution_count: 3
         -
             name: tomasfejfar
@@ -155,6 +160,11 @@ parameters:
             name: fruitl00p
             url: 'https://github.com/fruitl00p'
             photo: 'https://avatars1.githubusercontent.com/u/1492861?v=4'
+            contribution_count: 2
+        -
+            name: natepage
+            url: 'https://github.com/natepage'
+            photo: 'https://avatars0.githubusercontent.com/u/11576446?v=4'
             contribution_count: 2
         -
             name: Zemistr
@@ -395,4 +405,44 @@ parameters:
             name: DominikTo
             url: 'https://github.com/DominikTo'
             photo: 'https://avatars2.githubusercontent.com/u/1384635?v=4'
+            contribution_count: 1
+        -
+            name: brooksvb
+            url: 'https://github.com/brooksvb'
+            photo: 'https://avatars3.githubusercontent.com/u/14019044?v=4'
+            contribution_count: 1
+        -
+            name: Nsbx
+            url: 'https://github.com/Nsbx'
+            photo: 'https://avatars0.githubusercontent.com/u/8930930?v=4'
+            contribution_count: 1
+        -
+            name: shaal
+            url: 'https://github.com/shaal'
+            photo: 'https://avatars2.githubusercontent.com/u/22901?v=4'
+            contribution_count: 1
+        -
+            name: Mandy91
+            url: 'https://github.com/Mandy91'
+            photo: 'https://avatars0.githubusercontent.com/u/2277717?v=4'
+            contribution_count: 1
+        -
+            name: DeyV
+            url: 'https://github.com/DeyV'
+            photo: 'https://avatars0.githubusercontent.com/u/311626?v=4'
+            contribution_count: 1
+        -
+            name: LC43
+            url: 'https://github.com/LC43'
+            photo: 'https://avatars2.githubusercontent.com/u/48201?v=4'
+            contribution_count: 1
+        -
+            name: OskarStark
+            url: 'https://github.com/OskarStark'
+            photo: 'https://avatars0.githubusercontent.com/u/995707?v=4'
+            contribution_count: 1
+        -
+            name: honzajavorek
+            url: 'https://github.com/honzajavorek'
+            photo: 'https://avatars0.githubusercontent.com/u/283441?v=4'
             contribution_count: 1

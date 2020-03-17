@@ -6,6 +6,7 @@
         "php": "^7.4",
         "doctrine/cache": "^1.10",
         "erusev/parsedown-extra": "^0.8.1",
+        "guzzlehttp/guzzle": "^6.5",
         "j7mbo/twitter-api-php": "^1.0",
         "nette/finder": "^2.5",
         "nette/utils": "^3.0",
@@ -49,7 +50,8 @@
             "TomasVotruba\\FrameworkStats\\": "packages/framework-stats/src",
             "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
             "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
-            "TomasVotruba\\Blog\\": "packages/blog/src"
+            "TomasVotruba\\Blog\\": "packages/blog/src",
+            "TomasVotruba\\GithubContributorsThanker\\": "packages/github-contributor-thanker/src"
         }
     },
     "autoload-dev": {
