@@ -26,6 +26,8 @@ final class ModifyTest extends TestCase
 
     private NodeFinder $nodeFinder;
 
+    private string $someClassFileContent;
+
     protected function setUp(): void
     {
         $this->srcDirectory = __DIR__ . '/../../../../src/Posts/Year2017/Ast';
@@ -33,11 +35,13 @@ final class ModifyTest extends TestCase
 
         $this->nodeFinder = new NodeFinder();
         $this->nodeTraverser = new NodeTraverser();
+
+        $this->someClassFileContent = FileSystem::read($this->srcDirectory . '/SomeClass.php');
     }
 
     public function testParse(): void
     {
-        $nodes = $this->parser->parse(FileSystem::read($this->srcDirectory . '/SomeClass.php'));
+        $nodes = $this->parser->parse($this->someClassFileContent);
         $this->assertNotSame([], $nodes);
 
         /** @var Namespace_[] $nodes */
@@ -54,7 +58,7 @@ final class ModifyTest extends TestCase
         $this->nodeTraverser->addVisitor(new ChangeMethodNameNodeVisitor());
 
         /** @var Node[] $nodes */
-        $nodes = $this->parser->parse(FileSystem::read($this->srcDirectory . '/SomeClass.php'));
+        $nodes = $this->parser->parse($this->someClassFileContent);
 
         /** @var ClassMethod $classMethodNode */
         $classMethodNode = $this->nodeFinder->findFirstInstanceOf($nodes, ClassMethod::class);
