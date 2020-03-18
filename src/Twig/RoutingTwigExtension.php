@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Twig;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 use Twig\Extension\AbstractExtension;
@@ -23,16 +24,40 @@ final class RoutingTwigExtension extends AbstractExtension
      */
     public function getFunctions(): iterable
     {
-        yield new TwigFunction('is_current_route', function (string $desiredRouteName): bool {
-            $currentRequest = $this->requestStack->getCurrentRequest();
-            if ($currentRequest === null) {
-                throw new ShouldNotHappenException();
+        $isCurrentRoute = new TwigFunction(
+            'is_current_route',
+            fn (string $desiredRouteName): bool => $this->isCurrentRoute($desiredRouteName)
+        );
+
+        $isCurrentRoutes = new TwigFunction('is_current_routes', function (array $desiredRouteNames): bool {
+            foreach ($desiredRouteNames as $desiredRouteName) {
+                if (! $this->isCurrentRoute($desiredRouteName)) {
+                    continue;
+                }
+
+                return true;
             }
 
-            $currentRouteName = $currentRequest->get('_route');
-            $currentRouteName = ltrim($currentRouteName, '/');
-
-            return $currentRouteName === $desiredRouteName;
+            return false;
         });
+
+        return [$isCurrentRoute, $isCurrentRoutes];
+    }
+
+    private function isCurrentRoute(string $desiredRouteName): bool
+    {
+        $currentRequest = $this->requestStack->getCurrentRequest();
+        if ($currentRequest === null) {
+            throw new ShouldNotHappenException();
+        }
+
+        return $this->resolveCurrentRoute($currentRequest) === $desiredRouteName;
+    }
+
+    private function resolveCurrentRoute(Request $request): string
+    {
+        $currentRouteName = $request->get('_route');
+
+        return ltrim($currentRouteName, '/');
     }
 }
