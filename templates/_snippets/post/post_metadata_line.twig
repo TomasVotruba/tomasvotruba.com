@@ -25,7 +25,7 @@
         </li>
     {% endif %}
 
-    {% if showCommentCount is defined %}
+    {% if show_comment_count is defined %}
         <li class="list-inline-item mr-3">
             <em class="fas fa-fw fa-comments"></em>
             <a href="{{ path('post_detail', {slug: post.slug }) }}/#disqus_thread">X</a> comments
@@ -39,8 +39,10 @@
         </li>
     {% endif %}
 
-    <li class="list-inline-item mr-3 text-primary">
-        <em class="fab fa-fw fa-github"></em>
-        <a href="{{ post.gitHubEditUrl }}">Edit Post</a>
-    </li>
+    {% if show_edit_link is defined %}
+        <li class="list-inline-item mr-3 text-primary">
+            <em class="fab fa-fw fa-github"></em>
+            <a href="{{ post.gitHubEditUrl }}">Edit Post</a>
+        </li>
+    {% endif %}
 </ul>

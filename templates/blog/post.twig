@@ -13,7 +13,7 @@
 
                 <h1>{{ post.title|raw }}</h1>
 
-                {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "showCommentCount": TRUE } %}
+                {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "show_comment_count": true, "show_edit_link": true } %}
 
                 {% if post.deprecated %}
                     <div class="card border-danger card-bigger">
@@ -52,24 +52,24 @@
                 <br>
 
                 <div class="row mb-5 mt-5">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 mb-5">
                         {% set previous_post = previous_post(post) %}
                         {% if previous_post is not null %}
                             <a href="{{ path('post_detail', {'slug': previous_post.getSlug }) }}" class="d-block pt-4 pb-4 pl-4 pr-4 btn btn-success">
                                 <em class="fas fa-fw fa-forward"></em>
                                 <strong>Read Next</strong>
                                 <br>
-                                {{ previous_post.title|replace({'&nbsp;': ' '}) }}
+                                <span class="text-bigger">
+                                    {{ previous_post.title|replace({'&nbsp;': ' '}) }}
+                                </span>
                             </a>
                         {% endif %}
                     </div>
 
-                    <div class="col-12 col-md-6">
-                        <a href="{{ post.gitHubEditUrl }}" class="d-block pt-4 pb-4 pl-4 pr-4 btn btn-dark">
+                    <div class="col-12">
+                        <a href="{{ post.gitHubEditUrl }}" class="d-block btn btn-dark">
                             <em class="fab fa-fw fa-github"></em>
-                            <strong>Found a typo?</strong>
-                            <br>
-                            Fix it and join team of {{ contributors_count + 1 }}&nbsp;contributors
+                            <strong>Found a typo?</strong> Fix it and join team of {{ contributors_count + 1 }}&nbsp;contributors
                         </a>
                     </div>
                 </div>

@@ -683,7 +683,13 @@ q {
 }
 
 #support-me-button {
-    line-height: 2em;
+    line-height: 1.6em;
+}
+
+@media (max-width: 768px) {
+    #support-me-button {
+        line-height: 1.1em;
+    }
 }
 
 .card h2, .card h3 {
@@ -698,4 +704,17 @@ a.btn:hover {
 a.btn {
     font-size: 1em;
     line-height: 1.6em;
+}
+
+.post-list-title {
+    font-size: 1.3em;
+    line-height: 1.6em;
+}
+
+.post-metadata-line {
+    margin-top: 1em;
+}
+
+.text-bigger {
+    font-size: 1.3em;
 }
