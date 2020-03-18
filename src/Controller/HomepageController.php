@@ -19,7 +19,7 @@ final class HomepageController extends AbstractController
     }
 
     /**
-     * @Route("/", name="homepage")
+     * @Route(path="/", name="homepage")
      */
     public function __invoke(): Response
     {
@@ -27,7 +27,6 @@ final class HomepageController extends AbstractController
             'posts' => $this->postRepository->fetchAllEnglishNonDeprecated(),
             'post_homepage_limit' => 50,
             'title' => 'PHP Lectures, Mentoring, Communities and Posts',
-            'id' => 'blog',
         ]);
     }
 }

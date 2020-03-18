@@ -1,4 +1,5 @@
 {# normal menu #}
+
 <div class="hidden-sm-down">
     <nav class="navbar">
         <div class="container-fluid">
@@ -7,7 +8,7 @@
                     <img src="https://avatars1.githubusercontent.com/u/924196?s=60&v=4" class="me_avatar">
                     Tomas Votruba
                 </li>
-                <li class="{% if is_current_route('homepage') or is_current_route('blog_archive') or is_current_route('post_detail') %}active{% endif %}">
+                <li class="{% if is_current_routes(['homepage', 'blog_archive', 'post_detail']) %}active{% endif %}">
                     <a href="{{ path('homepage') }}">Blog</a>
                 </li>
                 <li class="{% if is_current_route('php_framework_trends') %}active{% endif %}">
@@ -37,7 +38,7 @@
 <div class="hidden-md-up">
     <nav class="navbar" id="mobile-menu">
         <div class="container">
-            <a href="{{ path('homepage') }}" class="col-3 col-sm-3 {% if is_current_route('homepage') or is_current_route('blog_archive') or is_current_route('post_detail') %}active{% endif %}">
+            <a href="{{ path('homepage') }}" class="col-3 col-sm-3 {% if is_current_routes(['homepage', 'blog_archive', 'post_detail']) %}active{% endif %}">
                 <em class="fas fa-book"></em>
                 <br>
                 Blog

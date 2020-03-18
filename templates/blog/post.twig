@@ -51,46 +51,32 @@
 
                 <br>
 
-                <div class="row mb-3">
+                <div class="row mb-5 mt-5">
                     <div class="col-12 col-md-6">
-                        <div class="card mb-4">
-                            <div class="card-body text-center p-0">
-                                <a href="{{ post.gitHubEditUrl }}" class="d-block pt-4 pb-4 pl-4 pr-4">
-                                    <em class="fab fa-fw fa-github"></em>
-                                    <strong>Found a typo?</strong>
-                                    <br>
-                                    Fix it to join team of {{ contributors_count }}&nbsp;people that improve content here
-                                </a>
-                            </div>
-                        </div>
+                        {% set previous_post = previous_post(post) %}
+                        {% if previous_post is not null %}
+                            <a href="{{ path('post_detail', {'slug': previous_post.getSlug }) }}" class="d-block pt-4 pb-4 pl-4 pr-4 btn btn-success">
+                                <em class="fas fa-fw fa-forward"></em>
+                                <strong>Read Next</strong>
+                                <br>
+                                {{ previous_post.title|replace({'&nbsp;': ' '}) }}
+                            </a>
+                        {% endif %}
                     </div>
-                    <div class="col-12 col-md-6">
-                        {# show previous post #}
-                        {% if posts[post.getId() - 1] is defined %}
-                            {% set previous_post = posts[post.getId() - 1] %}
-                            {# there can be missing post, due to legacy redirects #}
-                        {% elseif posts[post.getId() - 2] is defined %}
-                            {% set previous_post = posts[post.getId() - 2] %}
-                        {% endif %}
 
-                        {% if previous_post is defined %}
-                            {# @var previous_post \TomasVotruba\Blog\ValueObject\Post #}
-                            <div class="card mb-4">
-                                <div class="card-body bg-success text-white text-center p-0">
-                                    <a href="{{ path('post_detail', {'slug': previous_post.getSlug }) }}" class="d-block pt-4 pb-4 pl-4 pr-4">
-                                        <em class="fas fa-fw fa-forward"></em>
-                                        <strong>Next</strong>
-                                        <br>
-                                        {{ previous_post.title|replace('&nbsp;', ' ') }}
-                                    </a>
-                                </div>
-                            </div>
-                        {% endif %}
+                    <div class="col-12 col-md-6">
+                        <a href="{{ post.gitHubEditUrl }}" class="d-block pt-4 pb-4 pl-4 pr-4 btn btn-dark">
+                            <em class="fab fa-fw fa-github"></em>
+                            <strong>Found a typo?</strong>
+                            <br>
+                            Fix it and join team of {{ contributors_count + 1 }}&nbsp;contributors
+                        </a>
                     </div>
                 </div>
 
-                <a name="comments"></a>
+                <br>
 
+                <a name="comments"></a>
                 {% include "_snippets/disqus_comments.twig" %}
             </div>
 
