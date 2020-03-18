@@ -16,8 +16,6 @@ updated_since: "March 2019"
 updated_message: |
     Do you want to convert your code from Latte to TWIG?<br>
     Go to **[Latte To Twig Converter package](https://github.com/symplify/lattetotwigconverter) on Github**.
-
-tested: true
 ---
 
 <img src="/assets/images/posts/2018/latte-twig/latte.png" class="mt-5 ml-5">

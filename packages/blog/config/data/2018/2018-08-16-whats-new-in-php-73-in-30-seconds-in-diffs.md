@@ -5,7 +5,7 @@ perex: |
     No time but eager to hear PHP news? PHP 7.3 is out in December 2018 and it brings [173 changes](https://github.com/php/php-src/blob/PHP-7.3/NEWS). Which are the most useful ones?
 tweet: "New Post on my Blog: What's New in #PHP 7.3 in 30 Seconds in Diffs #rfc #nettefw #learnIn30secs"
 
-tested: true
+
 ---
 
 From features that might be the most interesting to those lesser ones, that anybody will rarely use.

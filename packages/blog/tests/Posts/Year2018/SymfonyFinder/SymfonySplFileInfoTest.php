@@ -6,8 +6,9 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2018\SymfonyFinder;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Finder\Finder;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class SymfonySplFileInfoTest extends TestCase
+final class SymfonySplFileInfoTest extends TestCase implements PostTestInterface
 {
     public function testRelatives(): void
     {
@@ -21,5 +22,10 @@ final class SymfonySplFileInfoTest extends TestCase
             $this->assertSame('Source/composer.json', $splFileInfo->getRelativePathname());
             $this->assertSame('Source', $splFileInfo->getRelativePath());
         }
+    }
+
+    public function getPostId(): int
+    {
+        return 131;
     }
 }

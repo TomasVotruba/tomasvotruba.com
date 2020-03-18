@@ -7,8 +7,9 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2018\ParameterToSymfonyController\Co
 use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
 use TomasVotruba\Blog\Posts\Year2018\ParameterToSymfonyController\App\ParameterToSymfonyControllerAppKernel;
 use TomasVotruba\Blog\Posts\Year2018\ParameterToSymfonyController\Controller\LectureController;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class LectureControllerTest extends AbstractKernelTestCase
+final class LectureControllerTest extends AbstractKernelTestCase implements PostTestInterface
 {
     private LectureController $lectureController;
 
@@ -22,5 +23,10 @@ final class LectureControllerTest extends AbstractKernelTestCase
     public function testParameterIsInjectedViaConstructor(): void
     {
         $this->assertSame('12345', $this->lectureController->getBankAccount());
+    }
+
+    public function getPostId(): int
+    {
+        return 73;
     }
 }

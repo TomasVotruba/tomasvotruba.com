@@ -6,7 +6,7 @@ perex: |
     Today we look on **files as objects**.
 tweet: "New Post on my Blog: Hidden Gems of PHP Packages: Symfony\\Finder and SplFileInfo #symfony #filesystem #php #spl"
 
-tested: true
+
 ---
 
 ## Why I Use it?

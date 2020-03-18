@@ -7,13 +7,15 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2018\ProcessAsync;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Stopwatch\Stopwatch;
 use TomasVotruba\Blog\Posts\Year2018\ProcessAsync\ProcessesInParallel;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class ProcessesInParallelTest extends TestCase
+final class ProcessesInParallelTest extends TestCase implements PostTestInterface
 {
     /**
      * @var int[]
      */
     private const SLEEP_INTERVALS_IN_MS = [100, 200, 300];
+
     private ProcessesInParallel $processesInParallel;
 
     private Stopwatch $stopwatch;
@@ -36,5 +38,10 @@ final class ProcessesInParallelTest extends TestCase
         $realDurationInMs = $stopwatchEvent->getDuration();
 
         $this->assertLessThan($maxDurationInMs, $realDurationInMs);
+    }
+
+    public function getPostId(): int
+    {
+        return 75;
     }
 }

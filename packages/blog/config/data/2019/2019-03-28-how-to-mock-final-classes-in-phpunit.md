@@ -7,7 +7,7 @@ perex: |
 tweet: "New Post on #php 🐘 blog: How to Mock Final Classes in #phpunit"
 tweet_image: "/assets/images/posts/2019/mocking-final/final-case.png"
 
-tested: true
+
 ---
 
 Since I started using *`final` first* [I got rid of many problems](/blog/2019/01/24/how-to-kill-parents/). Most programmers I meet already know about the benefits of not having 6 classes extended in a row and that `final` remove this issue.

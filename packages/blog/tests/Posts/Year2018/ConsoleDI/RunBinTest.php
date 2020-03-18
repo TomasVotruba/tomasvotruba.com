@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace TomasVotruba\Blog\Tests\Posts\Year2018\ConsoleDI;
 
 use PHPUnit\Framework\TestCase;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class RunBinTest extends TestCase
+final class RunBinTest extends TestCase implements PostTestInterface
 {
     /**
      * @var string
@@ -27,6 +28,11 @@ final class RunBinTest extends TestCase
 
         // success
         $this->assertStringContainsString('OK', $output);
+    }
+
+    public function getPostId(): int
+    {
+        return 109;
     }
 
     private function execAndGetOutput(string $binCommand): string

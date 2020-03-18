@@ -7,8 +7,9 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2018\NeonYaml;
 use Nette\Neon\Neon;
 use Nette\Utils\FileSystem;
 use PHPUnit\Framework\TestCase;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class NeonTest extends TestCase
+final class NeonTest extends TestCase implements PostTestInterface
 {
     /**
      * @dataProvider provideFilesToContent()
@@ -45,6 +46,11 @@ final class NeonTest extends TestCase
             # multi-line
             [__DIR__ . '/Neon/multi-lines.neon', ['perex' => 'Multi' . PHP_EOL . 'line']],
         ];
+    }
+
+    public function getPostId(): int
+    {
+        return 83;
     }
 
     /**

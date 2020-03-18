@@ -19,3 +19,8 @@ services:
 
     ParsedownExtra:
         class: ParsedownExtra
+
+    # for tested posts analysis
+    TomasVotruba\Blog\Tests\:
+        autowire: false
+        resource: '../tests'

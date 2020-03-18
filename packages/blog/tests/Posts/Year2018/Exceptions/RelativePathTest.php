@@ -9,8 +9,9 @@ use PHPUnit\Framework\TestCase;
 use SplFileInfo as NativeSplFileInfo;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class RelativePathTest extends TestCase
+final class RelativePathTest extends TestCase implements PostTestInterface
 {
     public function testSplFileInfo(): void
     {
@@ -57,5 +58,10 @@ final class RelativePathTest extends TestCase
         $relativePath = Strings::substring($file->getRealPath(), strlen(getcwd()) + 1);
 
         $this->assertSame('packages/blog/tests/Posts/Year2018/Exceptions/Source/some_file.txt', $relativePath);
+    }
+
+    public function getPostId(): int
+    {
+        return 141;
     }
 }

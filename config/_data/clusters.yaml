@@ -1,25 +1,6 @@
 parameters:
     clusters:
         -
-            title: "Books in a Post"
-            post_ids: [65, 149, 115, 91, 56, 112]
-            description: "Reading Books is what separates programmers from craftsmen. I love books, because they open for deep conversation that last hours and hours. Care for little intro first?"
-
-        -
-            title: "Coding Standards Kata"
-            post_ids: [37, 108, 111, 112, 48, 46, 47, 87, 107]
-            description: "How to start coding standards and use them to their fullest potential?"
-
-        -
-            title: "From Nette to Symfony"
-            post_ids: [188, 192, 193, 186, 185, 171, 120, 197]
-            description: "How to migrate from Nette to Symfony?"
-        -
-            title: "Master PHP CLI Apps with Symfony"
-            post_ids: [128, 103, 109, 105, 129, 137]
-            description: "Do you want to write CLI Apps in PHP like a boss but you never did that before? Or do you look for tips to improve your CLI project? This will help you write better and cleaner code no matter level you're on."
-
-        -
             title: "Collector Pattern, The Shortcut Hack to SOLID Code"
             post_ids: [114, 158, 80, 36, 133]
             description: "Collector is the one pattern that will help your code exponentially. It's super easy to start using in every level of application. Stop learning 5 SOLID principles theory and start using it in your code today."
@@ -28,3 +9,23 @@ parameters:
             title: "Monorepo: From Zero to Hero"
             post_ids: [223, 69, 25, 82, 124, 138, 143, 160, 161, 182]
             description: "What is monorepo? How can you use it to speed up your packages' and projects' development? How to run your own monorepo in 10 minutes?"
+
+        -
+            title: "Coding Standards Kata"
+            post_ids: [37, 108, 111, 112, 48, 46, 47, 87, 107]
+            description: "How to start coding standards and use them to their fullest potential?"
+
+        -
+            title: "Books in a Post"
+            post_ids: [65, 149, 115, 91, 56, 112]
+            description: "Reading Books is what separates programmers from craftsmen. I love books, because they open for deep conversation that last hours and hours. Care for little intro first?"
+
+        -
+            title: "From Nette to Symfony"
+            post_ids: [188, 192, 193, 186, 185, 171, 120, 197]
+            description: "How to migrate from Nette to Symfony?"
+
+        -
+            title: "Master PHP CLI Apps with Symfony"
+            post_ids: [128, 103, 109, 105, 129, 137]
+            description: "Do you want to write CLI Apps in PHP like a boss but you never did that before? Or do you look for tips to improve your CLI project? This will help you write better and cleaner code no matter level you're on."
