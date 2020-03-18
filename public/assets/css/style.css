@@ -718,3 +718,8 @@ a.btn {
 .text-bigger {
     font-size: 1.3em;
 }
+
+.btn-wrappable {
+    text-wrap: normal;
+    white-space: normal;
+}

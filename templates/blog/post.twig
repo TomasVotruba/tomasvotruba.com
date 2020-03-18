@@ -55,7 +55,7 @@
                     <div class="col-12 mb-5">
                         {% set previous_post = previous_post(post) %}
                         {% if previous_post is not null %}
-                            <a href="{{ path('post_detail', {'slug': previous_post.getSlug }) }}" class="d-block pt-4 pb-4 pl-4 pr-4 btn btn-success">
+                            <a href="{{ path('post_detail', {'slug': previous_post.getSlug }) }}" class="d-block pt-4 pb-4 pl-4 pr-4 btn btn-success btn-wrappable">
                                 <em class="fas fa-fw fa-forward"></em>
                                 <strong>Read Next</strong>
                                 <br>
