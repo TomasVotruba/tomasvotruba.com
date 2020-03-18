@@ -7,8 +7,9 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2018\NeonYaml;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class YamlTest extends TestCase
+final class YamlTest extends TestCase implements PostTestInterface
 {
     /**
      * @dataProvider provideFilesToContent()
@@ -63,5 +64,10 @@ final class YamlTest extends TestCase
             [__DIR__ . '/Yaml/mixed-list.yml'],
             [__DIR__ . '/Yaml/multi-lines-incorrect.yml'],
         ];
+    }
+
+    public function getPostId(): int
+    {
+        return 83;
     }
 }

@@ -15,8 +15,9 @@ use PhpParser\Parser;
 use PhpParser\ParserFactory;
 use PHPUnit\Framework\TestCase;
 use TomasVotruba\Blog\Posts\Year2017\Ast\NodeVisitor\ChangeMethodNameNodeVisitor;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class ModifyTest extends TestCase
+final class ModifyTest extends TestCase implements PostTestInterface
 {
     private string $srcDirectory;
 
@@ -69,5 +70,10 @@ final class ModifyTest extends TestCase
         /** @var ClassMethod $classMethodNode */
         $classMethodNode = $this->nodeFinder->findFirstInstanceOf($newNodes, ClassMethod::class);
         $this->assertSame('changedName', $classMethodNode->name->toString());
+    }
+
+    public function getPostId(): int
+    {
+        return 63;
     }
 }

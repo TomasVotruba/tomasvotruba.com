@@ -8,8 +8,9 @@ use JsonException;
 use Nette\Utils\Json;
 use Nette\Utils\JsonException as NetteJsonException;
 use PHPUnit\Framework\TestCase;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class Php73Test extends TestCase
+final class Php73Test extends TestCase implements PostTestInterface
 {
     /**
      * @var string[]
@@ -74,5 +75,10 @@ final class Php73Test extends TestCase
         $notAJson = 'not a Json';
         $this->expectException(JsonException::class);
         json_decode($notAJson, false, 10, JSON_THROW_ON_ERROR);
+    }
+
+    public function getPostId(): int
+    {
+        return 73;
     }
 }

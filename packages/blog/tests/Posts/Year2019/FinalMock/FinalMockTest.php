@@ -7,8 +7,9 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2019\FinalMock;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use TomasVotruba\Blog\Posts\Year2019\FinalMock\FinalClass;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class FinalMockTest extends TestCase
+final class FinalMockTest extends TestCase implements PostTestInterface
 {
     public function test(): void
     {
@@ -18,5 +19,10 @@ final class FinalMockTest extends TestCase
             ->willReturn(20);
 
         $this->assertSame(20, $finalClassMock->getNumber());
+    }
+
+    public function getPostId(): int
+    {
+        return 198;
     }
 }

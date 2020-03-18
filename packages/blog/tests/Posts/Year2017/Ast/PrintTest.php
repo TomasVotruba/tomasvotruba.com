@@ -9,8 +9,9 @@ use Nette\Utils\FileSystem;
 use PHPUnit\Framework\TestCase;
 use TomasVotruba\Blog\Posts\Year2017\Ast\NodeVisitor\ChangeMethodNameNodeVisitor;
 use TomasVotruba\Blog\Posts\Year2017\Ast\Printer\FormatPreservingPrinter;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class PrintTest extends TestCase
+final class PrintTest extends TestCase implements PostTestInterface
 {
     private string $srcDirectory;
 
@@ -40,5 +41,10 @@ final class PrintTest extends TestCase
         );
 
         $this->assertStringEqualsFile(__DIR__ . '/PrintSource/SomeClassModified.php.inc', $newFileContent);
+    }
+
+    public function getPostId(): int
+    {
+        return 63;
     }
 }

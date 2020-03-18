@@ -6,8 +6,9 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2018\SymfonyFinder;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Finder\Finder;
+use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class SymfonyFinderTest extends TestCase
+final class SymfonyFinderTest extends TestCase implements PostTestInterface
 {
     public function testName(): void
     {
@@ -26,5 +27,10 @@ final class SymfonyFinderTest extends TestCase
         }
 
         $this->assertSame(['another_config.yaml', 'some_config.yml'], $fileNames);
+    }
+
+    public function getPostId(): int
+    {
+        return 131;
     }
 }
