@@ -12,6 +12,7 @@ use Symfony\Component\Yaml\Yaml;
 use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileInfo;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
+use TomasVotruba\Blog\Testing\TestedPostAnalyzer;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 
@@ -34,19 +35,18 @@ final class PostFactory
     private RouterInterface $router;
 
     private string $projectDir;
-    /**
-     * @var string
-     */
+
     private string $siteUrl;
-    /**
-     * @var FileSystemGuard
-     */
+
     private FileSystemGuard $fileSystemGuard;
+
+    private TestedPostAnalyzer $testedPostAnalyzer;
 
     public function __construct(
         ParsedownExtra $parsedownExtra,
         PathAnalyzer $pathAnalyzer,
         RouterInterface $router,
+        TestedPostAnalyzer $testedPostAnalyzer,
         string $siteUrl,
         string $projectDir,
         FileSystemGuard $fileSystemGuard
@@ -57,6 +57,7 @@ final class PostFactory
         $this->siteUrl = rtrim($siteUrl, '/');
         $this->projectDir = $projectDir;
         $this->fileSystemGuard = $fileSystemGuard;
+        $this->testedPostAnalyzer = $testedPostAnalyzer;
     }
 
     public function createFromFileInfo(SmartFileInfo $smartFileInfo): Post
@@ -96,7 +97,7 @@ final class PostFactory
         ) : null;
         $deprecatedMessage = $configuration['deprecated_message'] ?? null;
 
-        $isTested = (bool) isset($configuration['tested']);
+        $isTested = $this->testedPostAnalyzer->isPostIdTested($id);
 
         $language = $configuration['lang'] ?? null;
 
