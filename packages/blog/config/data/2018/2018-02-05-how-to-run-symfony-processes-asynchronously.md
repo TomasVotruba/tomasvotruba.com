@@ -6,7 +6,7 @@ perex: |
     <br><br>
     Could we go 200 % faster by putting processes from serial to parallel?
 tweet: "New post on my blog: How to Run #Symfony Processes Asynchronously #async"
-tested: true
+
 
 updated_since: "December 2018"
 updated_message: |
