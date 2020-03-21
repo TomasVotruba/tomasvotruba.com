@@ -445,7 +445,7 @@ ul.line-separated > li:not(:last-child) {
     height: 3em;
     width: 3em;
     margin-right: .8em;
-    margin-top: -.2em;
+    margin-top: .4em;
 }
 
 .thank_you_person .name {
