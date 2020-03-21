@@ -5,22 +5,21 @@
         <h1>{{ title }}</h1>
 
         <p class="text-center bigger">
-            Thanks to <a href="https://www.patreon.com/rectorphp">all</a> <a href="https://github.com/sponsors/TomasVotruba">my backers</a>
-            <br>
-            that support me in writing free posts and open-source.
+            Thanks to <a href="https://www.patreon.com/rectorphp">all</a> <a href="https://github.com/sponsors/TomasVotruba">my backers</a> that support me in writing free posts and open-source.
         </p>
 
-        <div class="text-center mt-5 mb-5">
+        <div class="text-center mt-3 mb-5">
             <a href="https://github.com/sponsors/TomasVotruba" class="btn btn-success btn-lg">
-                Support Me
+                Support Me on GitHub
             </a>
         </div>
 
         <hr>
 
         <p class="text-center bigger">
-            Thanks to all <strong>{{ contributors_count }} contributors</strong> who patiently fix my English + typoes
-            <br>and keep this website up to date!
+            Thanks to all <strong>{{ contributors_count }} contributors</strong> who patiently fix my English typoes
+            <br>
+            and keep posts correct and up to date!
         </p>
 
         <br>
@@ -32,7 +31,7 @@
         {% set contributor_position = 1 %}
         <div class="row">
             {% for contributor in most_active_contributors %}
-                <div class="col-4 d-flex mb-5 thank_you_person">
+                <div class="col-6 col-md-4 d-flex mb-5 thank_you_person">
                     <img src="{{ contributor.photo }}" class="avatar rounded-circle">
 
                     <div class="w-100">
@@ -59,7 +58,7 @@
 
         <div class="row">
             {% for contributor in other_contributors %}
-                <div class="col-4 mb-3 d-block">
+                <div class="col-6 col-md-4 mb-3 d-block">
                     {{ contributor_position }}. <a href="https://github.com/TomasVotruba/tomasvotruba.com/commits?author={{ contributor.name }}">
                         {{ contributor.name }}
                     </a>
