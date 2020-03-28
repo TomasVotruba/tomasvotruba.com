@@ -207,7 +207,7 @@ What about return type? Look on the property type:
   * @return Collection|Training[]
   */
 -public function getTrainings(): iterable
-+public function getTrainings(): Collectoin
++public function getTrainings(): Collection
  {
      return $this->trainings;
  }
@@ -222,7 +222,7 @@ Drop in a bit of polishing:
 - * @return Collection|Training[]
 + * @return Collection&Training[]
   */
- public function getTrainings(): Collectoin
+ public function getTrainings(): Collection
  {
      return $this->trainings;
  }
