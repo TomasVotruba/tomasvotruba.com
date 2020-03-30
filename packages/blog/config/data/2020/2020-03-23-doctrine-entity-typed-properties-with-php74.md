@@ -274,7 +274,7 @@ Huge thanks to [Javier Eguiluz](https://github.com/javiereguiluz), creator and m
 To make this all happen, the design choice is to allow every property to be nullable. Some people disagree and try to make EasyAdminBundle work with value objects. But they fail by killing the simplicity and re-inventing admin again.
 
 <blockquote class="blockquote text-center">
-There o best solutions, there are just trade offs.
+There are no best solutions, there are just trade offs.
 </blockquote>
 
 So what does *every property is nullable* mean for PHP 7.4 typed properties?
