@@ -6,6 +6,9 @@ namespace TomasVotruba\FrameworkStats\Packagist;
 
 use TomasVotruba\FrameworkStats\Packagist\Purifier\InterveningPackagesPurifier;
 
+/**
+ * @see \TomasVotruba\FrameworkStats\Tests\Packagist\PackageRawMonthlyDownloadsProviderTest
+ */
 final class PackageMonthlyDownloadsProvider
 {
     private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider;

@@ -22,17 +22,14 @@ final class PackageRawMonthlyDownloadsProviderTest extends AbstractKernelTestCas
 
     public function test(): void
     {
-        $this->markTestSkipped('Dating');
-
         $symplifyPackageBuilderStats = $this->packageRawMonthlyDownloadsProvider->provideForPackage(
             'symplify/package-builder'
         );
 
         $this->assertGreaterThan(10, count($symplifyPackageBuilderStats));
-        $monthValue = array_key_first($symplifyPackageBuilderStats);
 
-        $previousMonth = (new DateTime('-1 month'))->format('Y-m');
+        $previousMonth = DateTime::from('- 2 months')->format('Y-m');
 
-        $this->assertSame($previousMonth, $monthValue);
+        $this->assertArrayHasKey($previousMonth, $symplifyPackageBuilderStats);
     }
 }
