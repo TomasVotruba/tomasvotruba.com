@@ -22,6 +22,8 @@ final class PackageRawMonthlyDownloadsProviderTest extends AbstractKernelTestCas
 
     public function test(): void
     {
+        $this->markTestSkipped('Dating');
+
         $symplifyPackageBuilderStats = $this->packageRawMonthlyDownloadsProvider->provideForPackage(
             'symplify/package-builder'
         );
