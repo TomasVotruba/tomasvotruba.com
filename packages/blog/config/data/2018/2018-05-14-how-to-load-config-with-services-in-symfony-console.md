@@ -347,7 +347,7 @@ bin/ecs check src --config custom-config.yml
 
 ## Where to Go Next?
 
-Do you have a CLI App and do you find DI approach useful? Do you have `--config` or `-c` or `--configuratoin` options and do you want to migrate them to this? Or maybe you have `--set` option, that shortens the config path in some way:
+Do you have a CLI App and do you find DI approach useful? Do you have `--config` or `-c` or `--configuration` options and do you want to migrate them to this? Or maybe you have `--set` option, that shortens the config path in some way:
 
 ```bash
 vendor/bin/ecs check src --set clean-code
