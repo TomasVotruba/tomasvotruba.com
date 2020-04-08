@@ -7,6 +7,11 @@ parameters:
         - 'nette-utils-code-quality'
         - 'solid'
 
+    paths:
+        - 'src'
+        - 'tests'
+        - 'packages'
+
     exclude_paths:
         # intentional json_encode
         - 'packages/blog/tests/Posts/Year2018/Php73/Php73Test.php'
