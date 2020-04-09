@@ -171,13 +171,37 @@ And that should be it! (If not, let me know in comments.)
 
 <br>
 
-## Trouble Shooting: Dual Analysis
+## Trouble Shooting
+
+### "Please add the secret GITHUB_TOKEN to the GitHub action for SonarCloud"
+
+If you see this message, don'T try to add `GITHUB_TOKEN` to your Secrets in GitHub repository. It won't let you.
+Instead, re-use already existing secret in your `.github/workflows/sonarcube.yaml`:
+
+```diff
+# .github/workflows/sonarcube.yaml
+# ...
+             -   uses: sonarsource/sonarcloud-github-action@master
+                 env:
+                     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
++                    GITHUB_TOKEN: ${{ secrets.SONAR_TOKEN }}
+```
+
+<br>
+
+### Dual Analysis?
 
 When CI fails for having both automatic and Github Action analysis, go to your project on SonarCube and disable it:
 
 <img src="/assets/images/posts/2020/sonar_one_method.png" class="img-thumbnail">
 
 <br>
+
+### "Project was never analyzed. A regular analysis is required before a branch analysis."
+
+I tried many paths, but I'm not aware of any specific solution for this. **Delete** project on Sonarcloud, **hide** local GitHub Action workflow and **star over**.
+
 <br>
 
 **Now you see your weakest points and [Fight the Hydra](https://joshkaufman.net/how-to-fight-a-hydra/) with courage!**
