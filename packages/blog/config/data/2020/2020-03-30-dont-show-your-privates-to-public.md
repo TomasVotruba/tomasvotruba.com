@@ -14,35 +14,6 @@ tweet_image: "/assets/images/posts/2020/privates_meme.jpg"
 
 Last week you probably spotted **[RFC: Constructor Promotion](https://wiki.php.net/rfc/constructor_promotion)** proposed by my favorite mentor [Nikita Popov](https://github.com/nikic/). This RFC counters *public property by default* approach and **reduces the redundant code at the same time**.
 
-For example, instead of:
-
-```php
-<?php
-
-class SomeController
-{
-    private SomeDependency $someDependency;
-
-    public function __construct(SomeDependency $someDependency)
-    {
-        $this->someDependency = $someDependency;
-    }
-}
-```
-
-We could do:
-
-```php
-<?php
-
-class SomeController
-{
-    public function __construct(private SomeDependency $someDependency)
-    {
-    }
-}
-```
-
 <br>
 
 Another counter point for public properties or methods nailed [Stefan Priebsch](https://thephp.cc/company/consultants/stefan-priebsch):
