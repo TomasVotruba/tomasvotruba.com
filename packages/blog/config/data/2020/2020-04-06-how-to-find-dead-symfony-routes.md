@@ -55,7 +55,7 @@ Coffee shop with a property of specific size, location, number of chairs, and to
 
 Let's use **dynamic analysis** here - you **measure data in time** and decide based on it. E.g., income for last year from all of them compared to expenses to run them.
 
-## 3 Steps to add Route Usage to Your Symfony App
+## 2 Steps to add Route Usage to Your Symfony App
 
 Inspired by the Laravel package, I've made a [Symfony Route Usage](https://github.com/migrify/symfony-route-usage).
 
@@ -74,15 +74,9 @@ return [
 ];
 ```
 
-### 3. Add `route_visit` Table to a Database
-
-```bash
-bin/console doctrine:schema:update
-```
-
 <br>
 
-Collect data for a couple of weeks (depends on the size of your site) and see for yourself, **what routes are actually used**:
+Collect data for a couple of weeks (depends on the size of your site) and see for yourself, **what routes have been used**:
 
 ```bash
 bin/console show-route-usage
