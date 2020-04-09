@@ -153,76 +153,7 @@ Same way `static` method is a method to be used everywhere (and [then slowly kil
 
 <br>
 
-**Let me show you something...**
-
-Imagine we have such a class. It might be hard, but focus on `public` keywords:
-
-```php
-<?php
-
-class Television
-{
-    public function getAllStuff()
-    {
-        return $this->getDangerousStuff() + ['Commedy'];
-    }
-
-    public function getDangerousStuff(): array
-    {
-        return ['Corona'];
-    }
-}
-```
-
-So it would not be unexpected if we use it like this:
-
-```php
-<?php
-
-class MyClass
-{
-    private Television $television;
-
-    public function __construct(Television $television)
-    {
-        $this->television = $television;
-    }
-
-    public function run(): array
-    {
-        return $this->television->getDangerousStuff();
-    }
-}
-```
-
-Right?
-
-<br>
-
-We can apply the same logic here:
-
-```php
-<?php
-
-class MyClass
-{
-    private SomeController $someController;
-
-    public function __construct(SomeController $someController)
-    {
-        $this->someController = $someController;
-    }
-
-    public function run(): array
-    {
-        return $this->television->prepareData();
-    }
-}
-```
-
-That's nonsense, right? No, it's not, **we just used a public method because we could**.
-
-It's easy to spot now because we focus on ten lines of code, we knew that's a controller method only, and that's a clear miss-use. But in the real world, we don't have so much time to think about 10 lines of code.
+It's easy to spot now because we focus on ten lines of code, we knew that's a controller method only, and that's a clear miss-use. But in the real world, **we don't have so much time to think about 10 lines of code**.
 
 <br>
 
@@ -230,33 +161,25 @@ It's easy to spot now because we focus on ten lines of code, we knew that's a co
 
 <br>
 
-I will be lying if I say I haven't seen such code in one of the largest e-commerce projects in the Czech Republic.
-
-**It's not programmers fault, it's not bad education, it's code base's fault.** A [junior code base](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases/).
-
-<br>
-
-## Let Public methods Public, Private methods Private
-
-That was one of the main reasons. We had plenty of such potential *legacy back doors* in Rector:
+Limited attention span is one of the reasons. We had plenty of such potential *legacy back doors* in Rector:
 
 <img src="/assets/images/posts/2020/privates_sample.png" class="img-thumbnail">
 
-<br>
+## Unused Method
 
-Another reason is that the method is completely unused, but PHPStorm won't tell you because it was `public`. When we turned this method into `private`, we saw it's unused, and we got rid of it:
+Another reason is that **the method is completely unused**, but PHPStorm won't tell you because it is `public`. When we turned this method into `private`, we saw it's unused, and we got rid of it:
 
 <img src="/assets/images/posts/2020/privates_sample_2.png" class="img-thumbnail">
 
-<br>
+## Not-Used Method
 
-The effect of privatization is really surprising. Like this case:
+The effect of privatization is surprising. Take this case:
 
 <img src="/assets/images/posts/2020/privates_sample_3.png" class="img-thumbnail">
 
-How can the privatization of methods lead to more code? Easily. The method was public, but never used. After Rector run it was private, but never used and then removed. And that would work.
+How can the privatization of methods lead to more code? Easily. The method was `public`, but never used. After Rector run it was `private`, but never used and then removed... and that could work.
 
-But actually, that was not a feature, it was a bug. **This method should have been used many months ago.** So we used it in the right place, the feature was complete, and potential future bug.
+Actually, that was not a feature, it was a bug. **This method should have been used many months ago.** So we used it in the right place, the feature was complete, and potential future bug.
 
 <br>
 
@@ -265,10 +188,6 @@ Do you want to know all the possible code changes?
 <a href="https://github.com/rectorphp/rector/pull/3084/commits/626287ec76ed16d15136115e1510b2154c2712a9" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request
-</a>
-
-<a href="https://github.com/rectorphp/rector/pull/3084/commits/626287ec76ed16d15136115e1510b2154c2712a9">
-    <img src="/assets/images/posts/2020/privates_rector_case.png" class="img-thumbnail">
 </a>
 
 
@@ -284,10 +203,12 @@ vendor/bin/rector process src --set privatization
 
 It has now 4 rules:
 
-- privatize local-only constant
-- privatize local-only property
-- privatize local-only method
-- privatize local getter to local property
+- **privatize local-only constant**
+- **privatize local-only property**
+- **privatize local-only method**
+- **privatize local getter to local property**
+
+Do you have an idea for another privatization rule? [Let us know on GitHub](https://github.com/rectorphp/rector/issues/new?template=2_Feature_request.md).
 
 Stay lazy and alive!
 
