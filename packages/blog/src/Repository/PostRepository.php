@@ -31,12 +31,11 @@ final class PostRepository
     {
         $this->finderSanitizer = $finderSanitizer;
         $this->postFactory = $postFactory;
-
         $this->posts = $this->createPosts();
     }
 
     /**
-     * @return Post[]
+     * @return array<int, Post>
      */
     public function fetchAll(): array
     {
@@ -102,12 +101,8 @@ final class PostRepository
 
     public function getBySlug(string $slug): Post
     {
-        foreach ($this->fetchAll() as $post) {
-            if ($post->getSlug() !== $slug) {
-                continue;
-            }
-
-            return $post;
+        if (isset($this->posts[$slug])) {
+            return $this->posts[$slug];
         }
 
         throw new ShouldNotHappenException(sprintf('Post for slug "%s" was not found.', $slug));
@@ -121,7 +116,7 @@ final class PostRepository
         $posts = [];
         foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
             $post = $this->postFactory->createFromFileInfo($smartFileInfo);
-            $posts[$post->getId()] = $post;
+            $posts[$post->getSlug()] = $post;
         }
 
         return $this->sortByDateTime($posts);
