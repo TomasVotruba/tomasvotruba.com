@@ -22,24 +22,24 @@ final class PostRepository
 
     private PostFactory $postFactory;
 
+    /**
+     * @var array<string, Post>
+     */
+    private array $posts = [];
+
     public function __construct(FinderSanitizer $finderSanitizer, PostFactory $postFactory)
     {
         $this->finderSanitizer = $finderSanitizer;
         $this->postFactory = $postFactory;
+        $this->posts = $this->createPosts();
     }
 
     /**
-     * @return Post[]
+     * @return array<string, Post>
      */
     public function fetchAll(): array
     {
-        $posts = [];
-        foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
-            $post = $this->postFactory->createFromFileInfo($smartFileInfo);
-            $posts[$post->getId()] = $post;
-        }
-
-        return $this->sortByDateTime($posts);
+        return $this->posts;
     }
 
     /**
@@ -101,15 +101,25 @@ final class PostRepository
 
     public function getBySlug(string $slug): Post
     {
-        foreach ($this->fetchAll() as $post) {
-            if ($post->getSlug() !== $slug) {
-                continue;
-            }
-
-            return $post;
+        if (isset($this->posts[$slug])) {
+            return $this->posts[$slug];
         }
 
         throw new ShouldNotHappenException(sprintf('Post for slug "%s" was not found.', $slug));
+    }
+
+    /**
+     * @return array<string, Post>
+     */
+    private function createPosts(): array
+    {
+        $posts = [];
+        foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
+            $post = $this->postFactory->createFromFileInfo($smartFileInfo);
+            $posts[$post->getSlug()] = $post;
+        }
+
+        return $this->sortByDateTime($posts);
     }
 
     /**
@@ -123,20 +133,6 @@ final class PostRepository
             ->name('*.md');
 
         return $this->finderSanitizer->sanitize($finder);
-    }
-
-    /**
-     * @param Post[] $posts
-     * @return Post[]
-     */
-    private function sortByDateTime(array $posts): array
-    {
-        uasort(
-            $posts,
-            fn (Post $firstPost, Post $secondPost) => $secondPost->getDateTime() <=> $firstPost->getDateTime()
-        );
-
-        return $posts;
     }
 
     /**
@@ -164,5 +160,19 @@ final class PostRepository
     private function filterOutFuture(array $posts): array
     {
         return array_filter($posts, fn (Post $post) => ! $post->isFuture());
+    }
+
+    /**
+     * @param Post[] $posts
+     * @return Post[]
+     */
+    private function sortByDateTime(array $posts): array
+    {
+        uasort(
+            $posts,
+            fn (Post $firstPost, Post $secondPost) => $secondPost->getDateTime() <=> $firstPost->getDateTime()
+        );
+
+        return $posts;
     }
 }
