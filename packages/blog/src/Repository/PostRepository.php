@@ -23,7 +23,7 @@ final class PostRepository
     private PostFactory $postFactory;
 
     /**
-     * @var Post[]
+     * @var array<string, Post>
      */
     private array $posts = [];
 
@@ -35,7 +35,7 @@ final class PostRepository
     }
 
     /**
-     * @return array<int, Post>
+     * @return array<string, Post>
      */
     public function fetchAll(): array
     {
@@ -109,7 +109,7 @@ final class PostRepository
     }
 
     /**
-     * @return Post[]
+     * @return array<string, Post>
      */
     private function createPosts(): array
     {
