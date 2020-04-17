@@ -8,6 +8,10 @@ perex: |
     But when dealing with legacy code, knowing **dead routes will save you dozens of hours in refactoring**.
 tweet: "New Post on #php 🐘 blog: How to Find Dead #Symfony Routes"
 tweet_image: "/assets/images/posts/2019/spaceflow_10_points/13.png"
+
+updated_since: "April 2020"
+updated_message: |
+    Route visit table structure has changed and new command `show-dead-routes` was added.
 ---
 
 ## Why are Dead Routes Important for Your Code?
@@ -84,7 +88,21 @@ bin/console show-route-usage
 
 ↓
 
-<img src="/assets/images/posts/2020/dead_routes_example.png" class="img-thumbnail mt-4 mb-2">
+<img src="/assets/images/posts/2020/dead_routes_used_routes.png" class="img-thumbnail mt-4 mb-2">
+
+<br>
+
+## What Routes Have Never Been Used?
+
+Just run:
+
+```bash
+bin/console show-dead-routes
+```
+
+↓
+
+<img src="/assets/images/posts/2020/dead_routes_dead_routes.png" class="img-thumbnail mt-4 mb-2">
 
 <br>
 
