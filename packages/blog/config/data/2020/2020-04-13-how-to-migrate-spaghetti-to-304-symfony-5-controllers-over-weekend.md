@@ -2,7 +2,7 @@
 id: 247
 title: "How to Migrate Spaghetti to 304&nbsp;Symfony 5 Controllers Over Weekend"
 perex: |
-    During Easter weekend, usually, people take a break and have a rest. Instead, we used there 4 days of *holiday* to migrate the 304-controller application. At least that was the goal on Friday.
+    During Easter weekend, usually, people take a break and have a rest. Instead, we used these 4 days of *holiday* to migrate the 304-controller application. At least that was the goal on Friday.
     <br><br>
     Me in my colleague in the migrated project accepted the challenge. We got into many minds and code-traps. We'd like to share this experience with you and **inspire those who are still stuck on non-MVC code** and think it might take weeks or even months to switch to a framework.
 
