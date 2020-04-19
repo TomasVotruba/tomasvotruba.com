@@ -349,7 +349,7 @@ And that's it!
 
 ### Blind Paths to Avoid
 
-- don't go to Symfony 5.1, stay with **stable Symfony 5.0**
+- don't go to Symfony 5.1-dev, stay with **stable Symfony 5.0** - the install of dev packages is very slow both on CI and locally
 - don't go to Symfony 4 just to use PHP templates; it's just postponing the problem + adding more legacy code
 - don't rush to PHP 7.4 before migration is finished, for the migration start **PHP 7.2** is good enough (ECS and Rector need it as minimal version)
 
