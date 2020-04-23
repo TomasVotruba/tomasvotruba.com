@@ -9,6 +9,10 @@ perex: |
     But if **you have many configs with manual service registration**, tagging, and autowiring, keep reading. I'll show you how you can convert them easily be new Symplify package.
 tweet: "🐘 New Post on #php blog: How To Convert All Your #Symfony Service Configs to Autodiscovery"
 tweet_image: "/assets/images/posts/2018/autodiscovery/demo.gif"
+
+updated_since: "April 2020"
+updated_message: |
+    Updated to Symfony 5+ syntax with [per-line excludes](https://github.com/symfony/symfony/pull/27075).
 ---
 
 ## tl;dr;
@@ -73,7 +77,7 @@ services:
 
 There are many reasons to **automate this work**, because **there are many gotchas** you have to be careful about. In each single service registration.
 
-### 1. Tags
+## 1. Tags
 
 Name-only system tags **can be removed** thanks to `autoconfigure`:
 
@@ -113,7 +117,7 @@ services:
             - { name: 'kernel.event_listener', event: 'kernel.exception' }
 ```
 
-### 2. Single-class Names
+## 2. Single-class Names
 
 Service name can be often dropped:
 
@@ -132,7 +136,7 @@ services:
         class: Single_Class_Name
 ```
 
-### 3. Vendor Autodiscovery
+## 3. Vendor Autodiscovery
 
 Configs are usually mixed of your code (`/app` or `/src`) and 3rd party code (`/vendor`):
 
@@ -169,7 +173,7 @@ services:
     Symplify\PackageBuilder\FileSystem\FileGuard: ~
 ```
 
-### 4. Exclude Obviously
+## 4. Exclude Obviously
 
 When you try to autoload a class with a constructor, it's considered a service. But not all classes with constructors are services. Symfony doesn't know that unless you tell it, and it would fail with missing argument exception.
 
@@ -177,7 +181,10 @@ When you try to autoload a class with a constructor, it's considered a service. 
  services:
      App\:
         resource: ../src
-+       exclude: ../src/{Entity,Exception,Contract}
++       exclude:
++           - ../src/Entity/*
++           - ../src/Exception/*
++           - ../src/Contract/*
 ```
 
 The converter includes support for basic dirs to be excluded.
