@@ -10,6 +10,7 @@ tweet: "New Post on #php 🐘 blog: How to Migrate Spaghetti to 304 #symfony 5 C
 tweet_image: "/assets/images/posts/2020/symfonize_merged.png"
 ---
 
+
 ## What is the Goal?
 
 <em class="fas fa-fw mt-4 fa-times text-danger"></em> **We didn't want a  hybrid** with static dependency injection container, legacy controller, request separation for new website and for old website. It only creates more legacy code than in the beginning.
