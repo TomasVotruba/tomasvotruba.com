@@ -69,13 +69,7 @@
         </div>
 
         <div class="mt-4">
-            <p>2. Or explore the Archive</p>
-
-            {% for year in (currentYear)..2016 %}
-                <a href="{{ path('blog_archive', {'year': year}) }}" class="btn btn-warning mr-2 mb-3">
-                    Posts {{ year }}
-                </a>
-            {% endfor %}
+            <p>2. Or explore <a href="{{ path('blog_archive') }}">the Archive</a></p>
         </div>
     </div>
 {% endblock %}

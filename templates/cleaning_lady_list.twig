@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="container">
+        <h1>
+            {{ title }}
+            <br>
+            <small>
+                What to do to make Legacy project <strong>shine & clean again</strong>
+            </small>
+        </h1>
+
+        <p>
+            These task are repeated over and over in each new project I on-board.
+        </p>
+        <p>
+            This checklist helps to see <strong class="text-danger">what needs to be done</strong> and <strong class="text-success">what is finished</strong>.
+        </p>
+
+
+        <br>
+
+        <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="project-name" class="sr-only">Name</label>
+                <input type="text" class="form-control" id="project-name" placeholder="Fill your project name">
+            </div>
+            <button type="button" class="btn btn-primary mb-2">Save</button>
+        </form>
+
+        {% for step in checklist %}
+            <h3>{{ step.headline }}</h3>
+
+            {% for item in step.items %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endblock %}

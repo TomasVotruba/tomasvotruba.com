@@ -3,6 +3,8 @@
 <script src="/assets/js/cluster-checklist.js?={{ random() }}"></script>
 <script src="/assets/js/cluster-expanable.js?={{ random() }}"></script>
 
+{#<script src="/assets/js/cleaning-lady-checklist.js?={{ random() }}"></script>#}
+
 {# @see https://datatables.net/examples/styling/bootstrap4.html #}
 {# sortable table in php framework trends #}
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
@@ -35,7 +37,8 @@
 <div class="text-center mt-5" id="footer">
     <div class="row">
         <div class="col-12">
-            Join 22 912 PHP developers every month: <a href="{{ path('rss') }}">RSS</a>&nbsp;or&nbsp;<a href="https://twitter.com/votrubaT">@votrubaT</a>
+            {# updated from Google Analytics, 2020-04-25 #}
+            Join 25 087 growing PHP developers every month: <a href="https://twitter.com/votrubaT">@votrubaT</a> or <a href="{{ path('rss') }}">RSS</a>
         </div>
     </div>
 
@@ -46,9 +49,12 @@
 
         <a href="https://github.com/sponsors/TomasVotruba">Support me</a>
 
+{#        <span class="pl-2 pr-2">•</span>#}
+{#        <a href="{{ path('cleaning_lady') }}">Cleaning Lady List</a>#}
+
         <span class="hidden-sm-down">
             <span class="pl-2 pr-2">•</span>
-            Hosted with <a href="https://www.statie.org/">Statie</a> on <a href="https://github.com/tomasvotruba/tomasvotruba.com">GitHub</a>
+            Hosted with <a href="https://github.com/symplify/symfony-static-dumper">Symfony Static Dumper</a> on <a href="https://github.com/tomasvotruba/tomasvotruba.com">GitHub</a>
         </span>
     </p>
 </div>

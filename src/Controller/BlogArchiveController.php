@@ -19,16 +19,15 @@ final class BlogArchiveController extends AbstractController
     }
 
     /**
-     * @Route(path="/archive/{year}", name="blog_archive")
+     * @Route(path="/archive", name="blog_archive")
      */
-    public function __invoke(int $year): Response
+    public function __invoke(): Response
     {
-        $postByYear = $this->postRepository->fetchByYear($year);
+        $postsByYear = $this->postRepository->groupByYear();
 
         return $this->render('blog/archive.twig', [
-            'posts' => $postByYear,
-            'title' => 'Archive ' . $year,
-            'year' => $year,
+            'title' => 'Post Archive',
+            'posts_by_year' => $postsByYear,
         ]);
     }
 }
