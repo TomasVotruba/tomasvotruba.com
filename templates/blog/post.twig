@@ -9,8 +9,6 @@
 
         <div class="mainContent">
             <div class="container-fluid" id="post">
-                {% include "_snippets/sponsor_button.twig" %}
-
                 <h1>{{ post.title|raw }}</h1>
 
                 {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "show_comment_count": true, "show_edit_link": true } %}
