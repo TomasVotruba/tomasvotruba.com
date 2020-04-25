@@ -79,11 +79,17 @@ final class PostRepository
     }
 
     /**
-     * @return Post[]
+     * @return Post[][]
      */
-    public function fetchByYear(int $year): array
+    public function groupByYear(): array
     {
-        return array_filter($this->fetchAllEnglishNonDeprecated(), fn (Post $post) => $post->getYear() === $year);
+        $postsByYear = [];
+
+        foreach ($this->fetchAllEnglishNonDeprecated() as $post) {
+            $postsByYear[$post->getYear()][] = $post;
+        }
+
+        return $postsByYear;
     }
 
     public function get(int $id): Post

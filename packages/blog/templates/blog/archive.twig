@@ -2,8 +2,11 @@
 
 {% block content %}
     <div class="container-fluid" id="blog">
-        <h1>Posts from {{ year }}</h1>
+        <h1>{{ title }}</h1>
 
-        {% include "_snippets/post/post_list.twig" with { posts: posts } %}
+        {% for year, posts in posts_by_year %}
+            <h2 class="text-center mt-5 mb-5" id="{{ year }}">{{ year }}</h2>
+            {% include "_snippets/post/post_list.twig" with { posts: posts } %}
+        {% endfor %}
     </div>
 {% endblock %}
