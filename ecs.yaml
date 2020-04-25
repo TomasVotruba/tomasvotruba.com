@@ -6,6 +6,12 @@ services:
         max_cognitive_complexity: 8
 
 parameters:
+    paths:
+        - packages
+        - bin
+        - src
+        - tests
+
     sets:
         - 'psr12'
         - 'php70'

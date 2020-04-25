@@ -1,9 +1,9 @@
-<script src="/assets/js/jquery-3.3.1.slim.min.js?={{ random() }}"></script>
-<script src="/assets/gifplayer/jquery.gifplayer.js?={{ random() }}"></script>
-<script src="/assets/js/cluster-checklist.js?={{ random() }}"></script>
-<script src="/assets/js/cluster-expanable.js?={{ random() }}"></script>
+<script src="{{ asset('assets/js/jquery-3.3.1.slim.min.js') }}"></script>
+<script src="{{ asset('assets/gifplayer/jquery.gifplayer.js') }}"></script>
+<script src="{{ asset('assets/js/cluster-checklist.js') }}"></script>
+<script src="{{ asset('assets/js/cluster-expanable.js') }}"></script>
 
-{#<script src="/assets/js/cleaning-lady-checklist.js?={{ random() }}"></script>#}
+<script src="{{ asset('assets/js/cleaning-lady-checklist.js') }}"></script>
 
 {# @see https://datatables.net/examples/styling/bootstrap4.html #}
 {# sortable table in php framework trends #}
@@ -12,7 +12,7 @@
 
 {% include "_snippets/google_analytics.twig" %}
 
-<script src="/assets/prism/prism.js"></script>
+<script src="{{ asset('assets/prism/prism.js') }}"></script>
 
 <script>
     $('.gifplayer').gifplayer();
@@ -49,8 +49,12 @@
 
         <a href="https://github.com/sponsors/TomasVotruba">Support me</a>
 
-{#        <span class="pl-2 pr-2">•</span>#}
-{#        <a href="{{ path('cleaning_lady') }}">Cleaning Lady List</a>#}
+        <span class="pl-2 pr-2">•</span>
+
+        <a href="{{ path('cleaning_lady') }}">
+            <em class="fas fa-fw fa-broom"></em>
+            Cleaning Lady List
+        </a>
 
         <span class="hidden-sm-down">
             <span class="pl-2 pr-2">•</span>

@@ -164,7 +164,7 @@ article {
     margin-bottom: .2em;
 }
 
-#blog .list-unstyled {
+.list-unstyled {
     width: 100%;
 }
 
@@ -722,4 +722,21 @@ a.btn {
 .btn-wrappable {
     text-wrap: normal;
     white-space: normal;
+}
+
+/* cleaning lady checklist */
+.form-check-label
+{
+    padding-left: 0.4em;
+}
+
+#cleaning_checklist .form-check
+{
+    font-size: 1.2em;
+}
+
+#cleaning_checklist .btn
+{
+    font-size: .7em;
+    margin-top: -.2em;
 }
