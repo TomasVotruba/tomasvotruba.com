@@ -403,9 +403,4 @@ vendor/bin/rector process src --set dead-code --dry-run
 
 **If Rector detects any dead code, CI will fail**. You can, of course, run it without `--dry-run` after to actually remove the code.
 
-See [`dead-level` set](https://github.com/rectorphp/rector/blob/regex-simpler/config/level/dead-code/dead-code.yaml) for more features.
-
-<br>
-
-Since last post you know how to [find **unused public methods**](/blog/2019/03/14/remove-dead-public-methdos-from-your-code/).
-I'm planning to add the same feature [Rector](https://getrector.org/), just smarter (= context-aware) and for public constants and properties as well.
+See [Dead Code set](https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#deadcode) for more features.
