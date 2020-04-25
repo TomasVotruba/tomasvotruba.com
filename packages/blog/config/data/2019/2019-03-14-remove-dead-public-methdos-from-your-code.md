@@ -8,6 +8,10 @@ perex: |
     There is only one problem to resolve - **find public unused methods**.
 tweet: "New Post on #php 🐘 blog: Remove Dead Public Methods from Your Code"
 tweet_image: "/assets/images/posts/2019/dead-public/usages.png"
+
+deprecated_since: "2020-04"
+deprecated_message: |
+    `UnusedPublicMethodSniff` was added in 2017. It's been useful in those times, but now it's more and more crappy. As we have AST, dead code analysis in PHPStorm and [Rector dead code set](https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#deadcode), **these tools should be used instead**.
 ---
 
 *Too long to read? Look at [3:45 min practical video](https://www.youtube.com/watch?v=sKFB6XVmO_Q) by a friend of mine [Jan Kuchař](https://jankuchar.cz/).*
