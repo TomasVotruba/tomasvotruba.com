@@ -51,6 +51,7 @@
             "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
             "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
             "TomasVotruba\\Blog\\": "packages/blog/src",
+            "TomasVotruba\\CleaningLady\\": "packages/cleaning-lady/src",
             "TomasVotruba\\GithubContributorsThanker\\": "packages/github-contributor-thanker/src"
         }
     },
@@ -63,9 +64,9 @@
     },
     "scripts": {
         "phpstan": "vendor/bin/phpstan analyse --ansi --error-format symplify",
-        "check-cs": "vendor/bin/ecs check bin src tests packages --ansi",
+        "check-cs": "vendor/bin/ecs check --ansi",
         "fix-cs": [
-            "vendor/bin/ecs check bin src tests packages --fix --ansi",
+            "vendor/bin/ecs check --fix --ansi",
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.com --output invalid-links.txt --ansi",

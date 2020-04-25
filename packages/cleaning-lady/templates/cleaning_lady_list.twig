@@ -1,0 +1,63 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div class="container">
+        <h1>
+            {{ title }}
+            <br>
+            <small>
+                What to do to make Legacy project <strong>shine & clean again</strong>
+            </small>
+        </h1>
+
+        <p>
+            These task are repeated over and over in each new project I on-board.
+        </p>
+        <p>
+            This checklist helps to see <strong class="text-danger">what needs to be done</strong> and <strong class="text-success">what is finished</strong>.
+        </p>
+
+        <br>
+
+        <div class="text-center d-flex pt-3">
+            <form class="form-inline m-auto">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="project-name">Project</label>
+                    <input type="text" class="form-control ml-3" id="project_name" placeholder="Fill your project name">
+                </div>
+                <button type="button" class="btn btn-primary mb-2" onclick="return cleaning_checklist_submit()">Save</button>
+            </form>
+        </div>
+
+        <div class="row" id="cleaning_checklist">
+            <div class="col-12">
+                {% for section in checklist.cleaningSections %}
+                    <h2 class="mb-4" id="{{ section.headlineAnchor }}">
+                        <a href="#{{ section.headlineAnchor }}">
+                            {{ section.headline }}
+                        </a>
+                    </h2>
+
+                    {# @var section \TomasVotruba\CleaningLady\ValueObject\CleaningSection #}
+                    {% for item in section.cleaningItems %}
+                        <div class="form-check mb-4 clearfix">
+                            {# @var item \TomasVotruba\CleaningLady\ValueObject\CleaningItem #}
+                            <input class="cleaning_checklist_input" type="checkbox" id="item_{{ item.id }}" value="{{ item.id }}">
+                            <label class="form-check-label cleaning_checklist_label" for="item_{{ item.id }}">
+                                {{ item.description }}
+
+                                {% if item.helpLink %}
+                                    <a href="{{ item.helpLink }}" class="btn btn-success ml-2">Help</a>
+                                {% endif %}
+
+                                {% if item.whyLink %}
+                                    <a href="{{ item.whyLink }}" class="btn btn-warning ml-2">Why?</a>
+                                {% endif %}
+                            </label>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

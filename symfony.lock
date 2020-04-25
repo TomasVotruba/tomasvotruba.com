@@ -74,35 +74,14 @@
     "myclabs/deep-copy": {
         "version": "1.9.5"
     },
-    "nette/application": {
-        "version": "v3.0.4"
-    },
-    "nette/component-model": {
-        "version": "v3.0.0"
-    },
-    "nette/di": {
-        "version": "v3.0.3"
-    },
     "nette/finder": {
         "version": "v2.5.2"
-    },
-    "nette/http": {
-        "version": "v3.0.3"
     },
     "nette/neon": {
         "version": "v3.1.2"
     },
-    "nette/php-generator": {
-        "version": "v3.3.4"
-    },
     "nette/robot-loader": {
         "version": "v3.2.3"
-    },
-    "nette/routing": {
-        "version": "v3.0.0"
-    },
-    "nette/schema": {
-        "version": "v1.0.2"
     },
     "nette/utils": {
         "version": "v3.1.1"
@@ -112,6 +91,9 @@
     },
     "ondram/ci-detector": {
         "version": "3.3.0"
+    },
+    "paragonie/random_compat": {
+        "version": "v9.99.99"
     },
     "phar-io/manifest": {
         "version": "1.0.3"
@@ -201,6 +183,9 @@
     },
     "rector/rector": {
         "version": "0.8-dev"
+    },
+    "sebastian/code-unit": {
+        "version": "1.0.0"
     },
     "sebastian/code-unit-reverse-lookup": {
         "version": "2.0.0"
@@ -351,6 +336,9 @@
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.14.0"
+    },
+    "symfony/polyfill-php70": {
+        "version": "v1.15.0"
     },
     "symfony/polyfill-php72": {
         "version": "v1.14.0"

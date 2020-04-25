@@ -18,9 +18,7 @@ final class ThankContributorsCommand extends Command
     private GithubApi $githubApi;
 
     private SymfonyStyle $symfonyStyle;
-    /**
-     * @var GeneratedFilesDumper
-     */
+
     private GeneratedFilesDumper $generatedFilesDumper;
 
     public function __construct(
