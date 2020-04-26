@@ -73,10 +73,7 @@ final class CleaningLadyListController extends AbstractController
         ]);
 
         $cleaningSections[] = new CleaningSection('Coding Standard', [
-            new CleaningItem(
-                'add Easy Coding Standard',
-                'https://github.com/symplify/easy-coding-standard'
-            ),
+            new CleaningItem('add Easy Coding Standard', 'https://github.com/symplify/easy-coding-standard'),
             new CleaningItem(
                 'add coding standard as standalone CI job',
                 'https://github.com/rectorphp/rector/blob/a51551c246a2bbbbabd30ab8512df08e8fa26444/.github/workflows/ecs.yaml'
@@ -99,7 +96,10 @@ final class CleaningLadyListController extends AbstractController
             ),
             new CleaningItem('add "php70" set without StrictTypesFixer'),
             new CleaningItem('add "php71" set'),
-            new CleaningItem('add 120 chars line lenght fixer', 'https://www.tomasvotruba.com/blog/2018/03/29/new-in-coding-standard-4-long-line-breaks-automated-and-3-legacy-prevention-fixers/'),
+            new CleaningItem(
+                'add 120 chars line lenght fixer',
+                'https://www.tomasvotruba.com/blog/2018/03/29/new-in-coding-standard-4-long-line-breaks-automated-and-3-legacy-prevention-fixers/'
+            ),
         ]);
 
         $cleaningSections[] = new CleaningSection('PHPStan', [
