@@ -750,3 +750,7 @@ a.btn {
 #cleaning_checklist input[type=checkbox]:checked + label {
     opacity: .2;
 }
+
+#cleaning_checklist input[type=checkbox] + label {
+    transition: opacity .6s;
+}
