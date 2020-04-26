@@ -75,11 +75,19 @@ final class CleaningLadyListController extends AbstractController
         $cleaningSections[] = new CleaningSection('Coding Standard', [
             new CleaningItem(
                 'add Easy Coding Standard',
-                'https://www.tomasvotruba.com/blog/2020/01/20/introducing-phar-for-easy-coding-standard/'
+                'https://github.com/symplify/easy-coding-standard'
             ),
             new CleaningItem(
                 'add coding standard as standalone CI job',
                 'https://github.com/rectorphp/rector/blob/a51551c246a2bbbbabd30ab8512df08e8fa26444/.github/workflows/ecs.yaml'
+            ),
+            new CleaningItem(
+                'migrate current PHP_CodeSniffer to ECS',
+                'https://www.tomasvotruba.com/blog/2018/06/04/how-to-migrate-from-php-code-sniffer-to-easy-coding-standard/'
+            ),
+            new CleaningItem(
+                'migrate current PHP CS Fixer to ECS',
+                'https://www.tomasvotruba.com/blog/2018/06/07/how-to-migrate-from-php-cs-fixer-to-easy-coding-standard/'
             ),
             new CleaningItem(
                 'add "psr12" set',

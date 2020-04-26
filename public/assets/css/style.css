@@ -724,6 +724,11 @@ a.btn {
     white-space: normal;
 }
 
+
+
+
+
+
 /* cleaning lady checklist */
 .form-check-label
 {
@@ -739,4 +744,9 @@ a.btn {
 {
     font-size: .7em;
     margin-top: -.2em;
+}
+
+/* @see https://css-tricks.com/almanac/selectors/c/checked/ */
+#cleaning_checklist input[type=checkbox]:checked + label {
+    opacity: .2;
 }
