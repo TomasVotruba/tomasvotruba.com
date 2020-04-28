@@ -9,6 +9,10 @@ perex: |
     <br>
     Yes and yes? You'll love SARB.
 tweet: "New Post on the #php 🐘 blog: Hidden Gems of PHP Packages: Static Analysis Results Baseliner by @daveliddament"
+
+deprecated_since: "November 2019"
+deprecated_message: |
+    PHPStan itself [generates the baseline since 0.11.17](https://phpstan.org/blog/phpstans-baseline-feature-lets-you-hold-new-code-to-a-higher-standard). Use it instead.
 ---
 
 I found this package by random clicking on meetups on [Friends of PHP](https://friendsofphp.org/) and reading program of the meetup. One of them was Dave with his SARB - *Static Analysis Results Baseliner* tool. What an interesting name. In the Czech, I read *SRAB*, which means *coward*... what does such tool do?
