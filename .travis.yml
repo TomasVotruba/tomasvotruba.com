@@ -7,7 +7,7 @@ branches:
         - master
 
 install:
-    - composer update
+    - composer install
 
 scripts:
     # build static version to /output directory
