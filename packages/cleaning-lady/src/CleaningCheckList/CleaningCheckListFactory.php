@@ -48,6 +48,9 @@ final class CleaningCheckListFactory
                 'add composer scripts for coding standard, PHPStan and Rector',
                 'https://blog.martinhujer.cz/have-you-tried-composer-scripts/'
             ),
+            new CleaningItem(
+                'each composer script has --ansi option, to enable colors in CI'
+            ),
             new CleaningItem('move composer scripts options (e.g. --set or --autoload) to config'),
         ]);
 
