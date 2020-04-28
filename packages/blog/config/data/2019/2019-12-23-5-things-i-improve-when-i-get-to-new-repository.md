@@ -1,6 +1,6 @@
 ---
 id: 231
-title: "5 Things I Improve when I Get to new Repository"
+title: "5&nbsp;Things&nbsp;I&nbsp;Improve when&nbsp;I&nbsp;Get&nbsp;&nbsp;to&nbsp;new&nbsp;Repository"
 perex: |
     I started to write this post as follow up for [clean and sustainable code](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/) post. In the middle of writing, I've realized I have this approach to ever repository I meet.
     <br>

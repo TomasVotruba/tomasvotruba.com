@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use TomasVotruba\CleaningLady\CleaningCheckList\CleaningCheckListFactory;
 
-final class CleaningLadyListController extends AbstractController
+final class CleaningLadyCheckListController extends AbstractController
 {
     private CleaningCheckListFactory $cleaningCheckListFactory;
 
@@ -19,12 +19,12 @@ final class CleaningLadyListController extends AbstractController
     }
 
     /**
-     * @Route(path="cleaning-lady-list", name="cleaning_lady")
+     * @Route(path="cleaning-lady-checklist", name="cleaning_lady_checklist")
      */
     public function __invoke(): Response
     {
-        return $this->render('cleaning_lady_list.twig', [
-            'title' => 'Cleaning Lady list',
+        return $this->render('cleaning_lady_checklist.twig', [
+            'title' => 'Cleaning Lady Check list',
             'checklist' => $this->cleaningCheckListFactory->create(),
         ]);
     }
