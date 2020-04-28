@@ -2,29 +2,15 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\CleaningLady\Controller;
+namespace TomasVotruba\CleaningLady\CleaningCheckList;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use TomasVotruba\CleaningLady\ValueObject\CleaningChecklist;
 use TomasVotruba\CleaningLady\ValueObject\CleaningItem;
 use TomasVotruba\CleaningLady\ValueObject\CleaningSection;
 
-final class CleaningLadyListController extends AbstractController
+final class CleaningCheckListFactory
 {
-    /**
-     * @Route(path="cleaning-lady-list", name="cleaning_lady")
-     */
-    public function __invoke(): Response
-    {
-        return $this->render('cleaning_lady_list.twig', [
-            'title' => 'Cleaning Lady list',
-            'checklist' => $this->createCleaningChecklist(),
-        ]);
-    }
-
-    private function createCleaningChecklist(): CleaningChecklist
+    public function create(): CleaningChecklist
     {
         $cleaningSections = [];
 

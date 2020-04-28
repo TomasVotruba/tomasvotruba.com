@@ -20,12 +20,12 @@
         <br>
 
         <div class="text-center d-flex pt-3">
-            <form class="form-inline m-auto">
+            <form class="form-inline m-auto" onsubmit="return cleaning_checklist_submit();">
                 <div class="form-group mx-sm-3 mb-2">
                     <label for="project-name">Project</label>
                     <input type="text" class="form-control ml-3" id="project_name" placeholder="Fill your project name">
                 </div>
-                <button type="button" class="btn btn-primary mb-2" onclick="return cleaning_checklist_submit()">Save</button>
+                <button type="submit" class="btn btn-primary mb-2">Activate</button>
             </form>
         </div>
 
