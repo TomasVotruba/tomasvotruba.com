@@ -191,7 +191,7 @@ jobs:
                 - composer check-cs
 ```
 
-In **Gitub Actions**:
+In **Github Actions**:
 
 ```yaml
 # .github/workflows/code_checks.yaml 
