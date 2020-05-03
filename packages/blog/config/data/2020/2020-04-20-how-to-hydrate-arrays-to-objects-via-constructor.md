@@ -8,7 +8,7 @@ perex: |
     <br><br>
     Recently, I introduced [Symfony Static Dumper](/blog/2020/03/16/statie-is-dead-long-live-symfony-static-dumper) that uses YAML to store data in your Symfony application. You where this goes... how can **we turn this YAML into objects**?
 
-tweet: "New Post on #php 🐘 blog: ..."
+tweet: "New Post on #php 🐘 blog: How to Hydrate Arrays to Objects via Constructor"
 tweet_image: "/assets/images/posts/2020/easy_hydrator_twig.png"
 ---
 
