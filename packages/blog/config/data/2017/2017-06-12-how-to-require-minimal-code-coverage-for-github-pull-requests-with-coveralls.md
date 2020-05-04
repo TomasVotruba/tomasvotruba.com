@@ -35,7 +35,7 @@ Simple setup to let computer handle "please, add tests" response for you.
 
 - You **move responsibility to a tool**, so you don't have to check code coverage for every project of yours manually. **CI looks after  it for you.**
 - You don't have to explain at PRs, that "tests are missing". **In my experience, less people read `CONTRIBUTING.md` than red Travis CI error note**.
-- Let's be honest - do you check your coding standards manually? If so, [start with this](https://github.com/symplify/EasyCodingStandard).
+- Let's be honest - do you check your coding standards manually? If so, [start with this](https://github.com/symplify/easy-coding-standard).
 
 
 ## 3 Steps to Automate Minimal Coverage Check With Coveralls
