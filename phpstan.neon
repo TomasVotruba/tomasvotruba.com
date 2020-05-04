@@ -1,7 +1,13 @@
 includes:
-    - 'vendor/symplify/phpstan-extensions/config/config.neon'
+    - vendor/symplify/phpstan-extensions/config/config.neon
+    - vendor/symplify/coding-standard/packages/cognitive-complexity/config/cognitive-complexity-rules.neon
+
 
 parameters:
+    symplify:
+        max_class_cognitive_complexity: 20
+        max_cognitive_complexity: 8
+
     paths:
         - bin
         - src

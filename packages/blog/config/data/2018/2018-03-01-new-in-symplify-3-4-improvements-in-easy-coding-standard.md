@@ -1,6 +1,6 @@
 ---
 id: 79
-title: "New in Symplify 3: 4 Improvements in EasyCodingStandard"
+title: "New in Symplify&nbsp;3: 4&nbsp;Improvements in EasyCodingStandard"
 perex: |
     What is new in Easy Coding Standard 3?
     Nice diffs for fixable sniffs, smart excluding, support for sniff warnings and one more...
@@ -29,7 +29,7 @@ With favorite [`fnmatch()` function](http://php.net/manual/en/function.fnmatch.p
 
 ## 2. Warnings are Reported for Specific Sniffs
 
-<a href="https://github.com/Symplify/Symplify/pull/481" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/481" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #481
@@ -37,13 +37,13 @@ With favorite [`fnmatch()` function](http://php.net/manual/en/function.fnmatch.p
 
 Sniff warnings are skipped by default, because it doesn't make sense to differentiate errors vs warnings. Yet some official Sniffs only produce warnings and that made them useless. Like `PHP_CodeSniffer\Standards\Squiz\Sniffs\PHP\CommentedOutCodeSniff`.
 
-That changed. New property [`$reportWarningsSniffs` in `Symplify\EasyCodingStandard\SniffRunner\File\File`](https://github.com/Symplify/Symplify/blob/3d058becb57efefe2307c88ee94acbfbd15ebd1c/packages/EasyCodingStandard/packages/SniffRunner/src/File/File.php#L52) now lists all sniffs, that report warnings in ECS as well.
+That changed. New property [`$reportWarningsSniffs` in `Symplify\EasyCodingStandard\SniffRunner\File\File`](https://github.com/symplify/symplify/blob/3d058becb57efefe2307c88ee94acbfbd15ebd1c/packages/EasyCodingStandard/packages/SniffRunner/src/File/File.php#L52) now lists all sniffs, that report warnings in ECS as well.
 
 **Do you miss useful Sniff that reports only warnings?** Send PR to add it.
 
 ## 3. Nice and Clear Diff over Boring Table Report
 
-<a href="https://github.com/Symplify/Symplify/pull/474" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/474" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #474
@@ -87,7 +87,7 @@ Which one do you prefer?
 
 ## 4. Skip Sniff Codes instead of Whole Sniffs
 
-<a href="https://github.com/Symplify/Symplify/pull/388" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/388" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #388
@@ -116,7 +116,7 @@ And all the other codes will be checked properly in your code.
 
 <br>
 
-<a href="https://github.com/Symplify/Symplify/pull/406" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/406" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #406

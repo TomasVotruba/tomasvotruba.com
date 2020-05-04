@@ -11,7 +11,7 @@ tweet_image: "/assets/images/posts/2018/symplify-4-ecs/yaml-autocomplete.gif"
 
 ## 1. Configure Caching Directory
 
-<a href="https://github.com/Symplify/Symplify/pull/656" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/656" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #661
@@ -32,7 +32,7 @@ Thank you [Marcin Michalski](https://github.com/marmichalski) for adding this fe
 
 ## 2. Skip Anything, Anywhere
 
-<a href="https://github.com/Symplify/Symplify/pull/661" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/661" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #661
@@ -62,7 +62,7 @@ No need to think, where to put it anymore.
 
 ## 3. Short `vendor/bin/ecs` is the King
 
-<a href="https://github.com/Symplify/Symplify/pull/647" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/647" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #647
@@ -90,17 +90,17 @@ Typo proof or at least less error prone. Just change it in you [`composer.json`'
 
 ## 4. DI Migration Finished: From Neon to YAML
 
-<a href="https://github.com/Symplify/Symplify/pull/651" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/651" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #651
 </a>
 
-Symplify used `Nette\DI` a long time ago and with it its markup language - Neon. Then it moved to `Symfony\DependencyInjection` in [Symplify 2.0](https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md#v200---2017-06-16), because it was just impossible to reject [all these awesome Symfony 3.3 features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) by Nicolas Grekas. But this was just partial migration - Neon files still worked.
+Symplify used `Nette\DI` a long time ago and with it its markup language - Neon. Then it moved to `Symfony\DependencyInjection` in [Symplify 2.0](https://github.com/symplify/symplify/blob/master/CHANGELOG.md#v200---2017-06-16), because it was just impossible to reject [all these awesome Symfony 3.3 features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) by Nicolas Grekas. But this was just partial migration - Neon files still worked.
 
 That lead to situation, where 5 *custom-cool-classes* simulated loading transforming Neon to YAML format, merging it and then passing to Symfony Container, hoping all went well. And it worked. Well, most of the times.
 
-Based on feedback from [community around Symplify](https://github.com/Symplify/Symplify/issues/565), rejection of ECS in [Doctrine\CodingStandard](https://github.com/doctrine/coding-standard) where Neon was one of reasons and weird feeling from promoting "local-only standard", I decided to move to Symfony completely.
+Based on feedback from [community around Symplify](https://github.com/symplify/symplify/issues/565), rejection of ECS in [Doctrine\CodingStandard](https://github.com/doctrine/coding-standard) where Neon was one of reasons and weird feeling from promoting "local-only standard", I decided to move to Symfony completely.
 
 <a href="https://xkcd.com/927/">
     <img src="https://imgs.xkcd.com/comics/standards.png">
@@ -123,7 +123,7 @@ Well just rename `easy-coding-standard.neon` or `ecs.yml` and
 
 ## 5. From Semi-Static Checkers to Services as First-Class Citizen
 
-<a href="https://github.com/Symplify/Symplify/pull/660" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/660" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #660

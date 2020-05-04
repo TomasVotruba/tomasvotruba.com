@@ -293,7 +293,7 @@ And from `*.yml` to `*.neon`? Just revert `-` and `+` :).
 
 To see what code exactly had to change:
 
-- see [pull-request on Symplify\EasyCodingStandard](https://github.com/Symplify/Symplify/pull/651)
+- see [pull-request on Symplify\EasyCodingStandard](https://github.com/symplify/symplify/pull/651)
 - or [Rector with `Extension` => `services` migration](https://github.com/rectorphp/rector/pull/335)
 
 <br>

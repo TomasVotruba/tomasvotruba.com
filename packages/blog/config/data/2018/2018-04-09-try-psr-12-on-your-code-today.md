@@ -95,7 +95,7 @@ It will be *a thing*: PSR-12 set is definitely coming to PHP CS Fixer and [PHP_C
 
 ### What do I Like?
 
-I like that PSR-12 puts to standard rules that I consider standard for years and most of them are already integrated with ECS [`common` sets](https://github.com/Symplify/Symplify/tree/master/packages/EasyCodingStandard/config/common):
+I like that PSR-12 puts to standard rules that I consider standard for years and most of them are already integrated with ECS [`common` sets](https://github.com/symplify/symplify/tree/master/packages/EasyCodingStandard/config/common):
 
 - it applies PHP 7.1 features, like constant visibility
 - concat ` . ` spacing
@@ -104,7 +104,7 @@ I like that PSR-12 puts to standard rules that I consider standard for years and
 
 ### What don't I Like?
 
-Symplify code is already checked by PSR-12 ([see pull-request](https://github.com/Symplify/Symplify/pull/773)):
+Symplify code is already checked by PSR-12 ([see pull-request](https://github.com/symplify/symplify/pull/773)):
 
 <div class="text-center">
     <img src="/assets/images/posts/2018/psr-12/symplify-implementation.png" alt="Integration to project with ECS" class="img-thumbnail">

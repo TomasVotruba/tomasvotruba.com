@@ -272,7 +272,7 @@ throw new LevelNotFoundException(sprintf(
 ));
 ```
 
-This code is real! It's from [Symplify\PackageBuilder code](https://github.com/Symplify/Symplify/blob/aad50fba97046f70416cce4d7c5b094c16bf770d/packages/PackageBuilder/src/Configuration/LevelFileFinder.php#L61-L70).
+This code is real! It's from [Symplify\PackageBuilder code](https://github.com/symplify/symplify/blob/aad50fba97046f70416cce4d7c5b094c16bf770d/packages/PackageBuilder/src/Configuration/LevelFileFinder.php#L61-L70).
 
 **+40 % happier programmer**
 

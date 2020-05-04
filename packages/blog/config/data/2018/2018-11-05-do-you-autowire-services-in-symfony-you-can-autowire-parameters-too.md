@@ -244,7 +244,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-lg fa-check text-success"></em> &nbsp;Done for [Symfony 3.4+](https://github.com/Symplify/Symplify/pull/1145) and in [Nette 3.0](https://github.com/nette/di/pull/178).
+<em class="fas fa-lg fa-check text-success"></em> &nbsp;Done for [Symfony 3.4+](https://github.com/symplify/symplify/pull/1145) and in [Nette 3.0](https://github.com/nette/di/pull/178).
 
 <br>
 
@@ -257,7 +257,7 @@ Maybe convention factory using `create()` method and it's `@return Type` or `cre
 -        factory: ['@SomeFactory', 'create']
 ```
 
-EDITED: <em class="fas fa-lg fa-check text-success"></em> &nbsp;Done for [Symfony 3.4+](https://github.com/Symplify/Symplify/pull/1185)
+EDITED: <em class="fas fa-lg fa-check text-success"></em> &nbsp;Done for [Symfony 3.4+](https://github.com/symplify/symplify/pull/1185)
 
 <br>
 

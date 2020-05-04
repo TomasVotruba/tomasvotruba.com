@@ -222,7 +222,7 @@ But you can **install it today**:
 
 ## Does it Work?
 
-Yes, for the cases above it's 1:1 substitution with 0-configuration. It's part of [Symplify since 5.1](https://github.com/Symplify/Symplify/pull/1145/files) (released 1,5 month ago) and **it works flawlessly**.
+Yes, for the cases above it's 1:1 substitution with 0-configuration. It's part of [Symplify since 5.1](https://github.com/symplify/symplify/pull/1145/files) (released 1,5 month ago) and **it works flawlessly**.
 
 <br>
 

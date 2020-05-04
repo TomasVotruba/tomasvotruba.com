@@ -13,7 +13,7 @@ deprecated_since: "October 2017"
 deprecated_message: |
     This was deprecated due to low usage of package and too complicated API. **Use class that implements `Nette\Application\IPresenter` with `run(Request $request)` instead**.
 
-    For more, see [issue on Github](https://github.com/Symplify/Symplify/issues/402).
+    For more, see [issue on Github](https://github.com/symplify/symplify/issues/402).
 ---
 
 ## 3 Misconceptions First

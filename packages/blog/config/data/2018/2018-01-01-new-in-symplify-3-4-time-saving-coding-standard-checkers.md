@@ -12,14 +12,14 @@ updated_since: "December 2018"
 updated_message: |
     Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
 
-    `ImportNamespacedNameFixer` [was removed](https://github.com/Symplify/Symplify/pull/1110) in favor of `ReferenceUsedNamesOnlySniff` from [slevomat/coding-standard](https://github.com/slevomat/coding-standard)
+    `ImportNamespacedNameFixer` [was removed](https://github.com/symplify/symplify/pull/1110) in favor of `ReferenceUsedNamesOnlySniff` from [slevomat/coding-standard](https://github.com/slevomat/coding-standard)
 ---
 
 Starting with the simple checkers and moving to those, which save you even hours of manual work.
 
 ## 1. Absolutely Require and Include
 
-<a href="https://github.com/Symplify/Symplify/pull/385" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/385" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request
@@ -63,7 +63,7 @@ services:
 
 ## 2. Empty Line after `declare(strict_types=1)`
 
-<a href="https://github.com/Symplify/Symplify/pull/443" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/443" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request
@@ -155,7 +155,7 @@ final class SomeClass extends \SubNamespace\PartialNamespace\AnotherClass
  }
 ```
 
-Original `ImportNamespacedNameFixer` doing this job [was removed in EasyCodingStandard 5](https://github.com/Symplify/Symplify/pull/1110) in favor of `ReferenceUsedNamesOnlySniff` from [slevomat/coding-standard](https://github.com/slevomat/coding-standard).
+Original `ImportNamespacedNameFixer` doing this job [was removed in EasyCodingStandard 5](https://github.com/symplify/symplify/pull/1110) in favor of `ReferenceUsedNamesOnlySniff` from [slevomat/coding-standard](https://github.com/slevomat/coding-standard).
 
 It's not able to import partial namespace or resolve conflicts, but it has extra features, like functions imports etc.
 
@@ -169,7 +169,7 @@ services:
 
 ## 4. Possible Unused Public Method
 
-<a href="https://github.com/Symplify/Symplify/pull/466" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/466" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request
@@ -178,7 +178,7 @@ services:
 
 If you create method **to be used in your code only and available as service** - no matter if open-source or closed-source - you might end-up with many public methods. Your application or packages grows, there are some refactoring going on, even few deprecations.
 
-Same happened with [Symplify](https://github.com/Symplify/Symplify). Eventually, I came across **unused public methods** that contained lot of unused code. A code I hade to test and maintain. There is already [Sniff from Slevomat](https://github.com/slevomat/coding-standard#slevomatcodingstandardclassesunusedprivateelements-) for unused private elements (great job guys!) - which inspired me to question:
+Same happened with [Symplify](https://github.com/symplify/symplify). Eventually, I came across **unused public methods** that contained lot of unused code. A code I hade to test and maintain. There is already [Sniff from Slevomat](https://github.com/slevomat/coding-standard#slevomatcodingstandardclassesunusedprivateelements-) for unused private elements (great job guys!) - which inspired me to question:
 
 ### Could a Sniff Spot Unused Public Methods?
 
@@ -189,7 +189,7 @@ This checkers **requires EasyCodingStandard** to run - it uses its "double run" 
 - on first run checker finds all public method names and all method calls
 - on second run it reports those public method names, that were not called
 
-It helps you to spot spots like [this](https://github.com/Symplify/Symplify/pull/466/commits/3f08ed1fb2f22dd6c4a7b46d680adf4ab5a0907d), [this](https://github.com/Symplify/Symplify/pull/466/commits/fa21855694d933716117b2a2db13acac55b86d69) or [this](https://github.com/Symplify/Symplify/pull/552/commits/2df9cbab657a701acb2163f7321216fb782fcf35).
+It helps you to spot spots like [this](https://github.com/symplify/symplify/pull/466/commits/3f08ed1fb2f22dd6c4a7b46d680adf4ab5a0907d), [this](https://github.com/symplify/symplify/pull/466/commits/fa21855694d933716117b2a2db13acac55b86d69) or [this](https://github.com/symplify/symplify/pull/552/commits/2df9cbab657a701acb2163f7321216fb782fcf35).
 
 ### Run it Occasionally to Save Dozens of Hours of Dead Code Maintenance
 

@@ -6,13 +6,13 @@ perex: |
     <br>
     <br>
     With this downloads growth, there is also growing demand for using it on older and older PHP projects. **ECS brings huge value there, as it helps with migration of code and cleaning it up**.
-    <br> 
+    <br>
     <br>
     The problem is that ECS uses modern packages and it **makes installation on old projects impossible**.
     <br>
     <br>
-    Does it though in 2020?   
-    
+    Does it though in 2020?
+
 tweet: "New Post on #php 🐘 blog: Introducing PHAR for Easy Coding Standard"
 tweet_image: "/assets/images/posts/ecs_prefixed.gif"
 ---
@@ -26,11 +26,11 @@ This is how installation on old project makes us angry:
 
 **I don't like it when developers are frustrated by the limits of the system they use**. My mission is quite the opposite - make a complex system simple and easy to use by anyone.
 
-So I took a few-days effort and made a prefixed PHAR Easy Coding Standard version for legacy projects. You can see [Pull Request on Github](https://github.com/Symplify/Symplify/pull/1734).
+So I took a few-days effort and made a prefixed PHAR Easy Coding Standard version for legacy projects. You can see [Pull Request on Github](https://github.com/symplify/symplify/pull/1734).
 
-The first release of the prefixed version is v7.2.2, so you can enjoy all the cool features like [`only`](https://github.com/Symplify/Symplify/pull/1537) and [`paths` parameters](https://github.com/Symplify/Symplify/pull/1735).
+The first release of the prefixed version is v7.2.2, so you can enjoy all the cool features like [`only`](https://github.com/symplify/symplify/pull/1537) and [`paths` parameters](https://github.com/symplify/symplify/pull/1735).
 
-### Add `-prefixed` and It Works 
+### Add `-prefixed` and It Works
 
 Really. So instead of normal package installation:
 

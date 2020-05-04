@@ -2,7 +2,7 @@
 id: 72
 title: "Is Your CHANGELOG Useful or Just Boring Plain Text? And How to Fix That"
 perex: |
-    Do you [keep a CHANGELOG](https://keepachangelog.com/)? You should! I [do](https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md), because it's the main story about the open-source package.
+    Do you [keep a CHANGELOG](https://keepachangelog.com/)? You should! I [do](https://github.com/symplify/symplify/blob/master/CHANGELOG.md), because it's the main story about the open-source package.
     <br><br>
     And if you do, is it boring plain text or **useful rich markdown**?
 tweet: "New post on my blog: Keep Your CHANGELOG Useful with Links #github #changelog #dx"
@@ -69,7 +69,7 @@ No surprise that most `CHANGELOG.md` files look like this:
 - #578 Use `@doesNotPerformAssertions` in tests, thanks to @carusogabriel
 ```
 
-Does your `CHANGELOG.md` look like this too? Is it just dump of [pull-requests](https://github.com/Symplify/Symplify/issues?q=is%3Apr+is%3Aclosed) combined with [releases](https://github.com/Symplify/Symplify/releases)?
+Does your `CHANGELOG.md` look like this too? Is it just dump of [pull-requests](https://github.com/symplify/symplify/issues?q=is%3Apr+is%3Aclosed) combined with [releases](https://github.com/symplify/symplify/releases)?
 
 ## Why do we Look to Changelog?
 
@@ -84,11 +84,11 @@ To find an answer:
 
 I've asked all these questions when I was investigating bug in packages I used.
 
-Often, release descriptions are not so detailed. In that case it is **really helpful to have comparison to previous version**, e.g. [3.1 to 3.2](https://github.com/Symplify/Symplify/compare/v3.1.0...v3.2.0).
+Often, release descriptions are not so detailed. In that case it is **really helpful to have comparison to previous version**, e.g. [3.1 to 3.2](https://github.com/symplify/symplify/compare/v3.1.0...v3.2.0).
 
 But all of this requires time. A time that maintainer usually puts to new features or resolving bugs.
 
-When I added [`CHANGELOG.md` to Symplify](https://github.com/Symplify/Symplify/blob/master/CHANGELOG.md) and moved all notes from [Github Releases](https://github.com/Symplify/Symplify/releases) there, I was in the same situation. Do I create new features or rather play and cuddle with my `CHANGELOG.md`?
+When I added [`CHANGELOG.md` to Symplify](https://github.com/symplify/symplify/blob/master/CHANGELOG.md) and moved all notes from [Github Releases](https://github.com/symplify/symplify/releases) there, I was in the same situation. Do I create new features or rather play and cuddle with my `CHANGELOG.md`?
 
 
 ## Can't let go? Automate!
@@ -135,7 +135,7 @@ It will complete links to:
 
 - **Version Diffs**
     ```markdown
-    # [v2.0.0](https://github.com/Symplify/Symplify/compare/v1.5.0...v2.0.0)
+    # [v2.0.0](https://github.com/symplify/symplify/compare/v1.5.0...v2.0.0)
     ```
 
 - **Users**

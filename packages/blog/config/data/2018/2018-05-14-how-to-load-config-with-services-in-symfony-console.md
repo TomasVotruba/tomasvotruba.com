@@ -125,7 +125,7 @@ vendor/bin/ecs check src --config vendor/nette/cofing-standard/php56.yml
 vendor/bin/ecs check src --config vendor/nette/cofing-standard/php70.yml
 ```
 
-I had no idea. So I created [this issue at Symplify](https://github.com/Symplify/Symplify/issues/192) and praised the open-source Gods, because current version of `bin/ecs` was as simple as:
+I had no idea. So I created [this issue at Symplify](https://github.com/symplify/symplify/issues/192) and praised the open-source Gods, because current version of `bin/ecs` was as simple as:
 
 ```php
 # bin/ecs
@@ -146,7 +146,7 @@ So what now?
 
 ### `ArgvInput` to the Rescue
 
-<a href="https://github.com/Symplify/Symplify/pull/198" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/198" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #198
 </a>

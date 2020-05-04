@@ -112,7 +112,7 @@ This is *one to many* code smell.
 
 Also, we can **extract it to test config** `tests/config/config.yml`, so it's easier to hide the smell.
 
-Or just **make everything public**, like [I did in Symplify 6 months ago](https://github.com/Symplify/Symplify/commit/d0457773915fa32df08e7342d5cd0093f97850ff):
+Or just **make everything public**, like [I did in Symplify 6 months ago](https://github.com/symplify/symplify/commit/d0457773915fa32df08e7342d5cd0093f97850ff):
 
 ```diff
  services:

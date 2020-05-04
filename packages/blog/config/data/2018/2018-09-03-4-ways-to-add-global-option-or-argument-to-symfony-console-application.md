@@ -240,7 +240,7 @@ It took me a while but the track lead to [`Application::getDefaultInputDefinitio
 
 <br>
 
-For all these reasons, this is the one I prefer. Do you want to see it in the real world? Here [is a commit](https://github.com/Symplify/Symplify/pull/1047/commits/c07c49ae4eff067db7cfe5e5ed1b283ae37c8c29#diff-3b69acbe6b33a88158b373e6e96de097) from Monorepo Builder for our `file` argument.
+For all these reasons, this is the one I prefer. Do you want to see it in the real world? Here [is a commit](https://github.com/symplify/symplify/pull/1047/commits/c07c49ae4eff067db7cfe5e5ed1b283ae37c8c29#diff-3b69acbe6b33a88158b373e6e96de097) from Monorepo Builder for our `file` argument.
 
 <br>
 

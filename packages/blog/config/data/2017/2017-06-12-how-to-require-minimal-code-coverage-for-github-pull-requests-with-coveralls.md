@@ -75,7 +75,7 @@ after_script:
   - php coveralls.phar --verbose
 ```
 
-*Performance note: This is the simplest setup with single build. If you run more builds with multiple PHP versions or ENV values, [you should run coverage only once](https://github.com/Symplify/Symplify/blob/e6ef5aeef11fc292841f204bd7ddcd2a55aace12/.travis.yml#L3-L30), because code coverage uses `xdebug` extension and thus is very slow.*
+*Performance note: This is the simplest setup with single build. If you run more builds with multiple PHP versions or ENV values, [you should run coverage only once](https://github.com/symplify/symplify/blob/e6ef5aeef11fc292841f204bd7ddcd2a55aace12/.travis.yml#L3-L30), because code coverage uses `xdebug` extension and thus is very slow.*
 
 ### 3. Setup Minimal Require Code Coverage in Coveralls.io
 

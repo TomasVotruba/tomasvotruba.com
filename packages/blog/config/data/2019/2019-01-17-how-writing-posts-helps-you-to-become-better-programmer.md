@@ -127,7 +127,7 @@ So I continued:
 - "A command in Statie, that you can run in your project?"
 - "Something like `vendor/bin/statie migrate-jekyll`"
 
-The hypothesis was made. Now only I only had to **make a prototype**. I did it [over the weekend](https://github.com/Symplify/Symplify/pull/1339) and used it to [migrate blog](https://github.com/tomasfejfar/blog/pull/2) of my friend and great mentor not only for PHPStorm - [Tomáš Fejfar](https://www.tomasfejfar.cz/). It works and it was fun to explore static migration rules and limits. I learned a lot.
+The hypothesis was made. Now only I only had to **make a prototype**. I did it [over the weekend](https://github.com/symplify/symplify/pull/1339) and used it to [migrate blog](https://github.com/tomasfejfar/blog/pull/2) of my friend and great mentor not only for PHPStorm - [Tomáš Fejfar](https://www.tomasfejfar.cz/). It works and it was fun to explore static migration rules and limits. I learned a lot.
 
 ## Write about Your Code
 

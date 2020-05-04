@@ -80,7 +80,7 @@ So...
 
 ### Is There a Bundle for This?
 
-Few months ago [Petr Olišar](https://twitter.com/PetrOlisar) reported [similar issue](https://github.com/Symplify/Symplify/issues/14) to [ControllerAutowire](https://github.com/Symplify/ControllerAutowire) package.
+Few months ago [Petr Olišar](https://twitter.com/PetrOlisar) reported [similar issue](https://github.com/symplify/symplify/issues/14) to [ControllerAutowire](https://github.com/Symplify/ControllerAutowire) package.
 
 I realized it perfectly fits there and **I added it**.
 

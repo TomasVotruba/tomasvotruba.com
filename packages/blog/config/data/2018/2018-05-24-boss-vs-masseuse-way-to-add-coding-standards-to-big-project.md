@@ -45,8 +45,6 @@ For me, it's obviously [ECS](https://github.com/symplify/easyCodingStandard/):
 composer require symplify/easy-coding-standard --dev
 ```
 
-Or [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) or [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer), but they're both already covered by ECS.
-
 ### 2. Use One Sniff/Fixer that Helps You The Most
 
 This is the most important step. This checker should be
@@ -58,34 +56,40 @@ This is the most important step. This checker should be
 
 ### 3. Make it Pass Without Any Code Change
 
-Last week a [Cognitive Complexity Sniff](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) was published there was [very positive feedback](https://github.com/Symplify/Symplify/issues/834) on it.
+Last week a [Cognitive Complexity Rule](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) was published there was [very positive feedback](https://github.com/symplify/symplify/issues/834) on it.
 
-**If your coding standard should have only 1 rule forever and ever, this is the one.** Let's try that one.
+**If your coding standard should have only 1 rule - this is the one.**
 
 ```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff: ~
+# phpstan.neon
+includes:
+    - vendor/symplify/coding-standard/packages/cognitive-complexity/config/cognitive-complexity-rules.neon
+
+parameters:
+    symplify:
+        max_cognitive_complexity: 8 # default
 ```
 
-But when you run your CS tool (`vendor/bin/ecs check /src`), it will probably drop dozens of errors. And we don't want to go to the boss approach.
+But when you run your tool (`vendor/bin/phpstan analyse /src`), it will probably drop dozens of errors. And we don't want to go to the boss approach.
+
+<br>
 
 Saying that, **we make the rule so free, that your code passes it**:
 
 ```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
-        maxCognitiveComplexity: 50
+# phpstan.neon
+parameters:
+    symplify:
+        max_cognitive_complexity: 50
 ```
 
 Still 10 errors?
 
 ```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
-        maxCognitiveComplexity: 100
+# phpstan.neon
+parameters:
+    symplify:
+        max_cognitive_complexity: 100
 ```
 
 **0 errors!**
@@ -97,10 +101,10 @@ You can now add this to your `.travis.yml` or any other CI tools and make the PR
 Then decrease the criteria for 10 %:
 
 ```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
-        maxCognitiveComplexity: 90
+# phpstan.neon
+parameters:
+    symplify:
+        max_cognitive_complexity: 90
 ```
 
 and fix only 3-4 cases that will pop-up. One touch at a time. Then make a PR, merge & take a break again. "[Rinse & Repeat](https://www.youtube.com/watch?v=f4oWpvJ0f8Q)".
@@ -110,6 +114,8 @@ When **you feel ready**, you can add 1 more checker, make a rule more strict... 
 ## Proven Practice
 
 This way I was able to add coding standards to quite a big codebase in [Lekarna.cz](https://github.com/lekarna) a few years ago with not many troubles, and learn how they work along the way.
+
+<br>
 
 **I wish you the same experience in your huge project.**
 

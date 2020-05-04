@@ -10,7 +10,7 @@ tweet_image: "/assets/images/posts/2017/doc-block-cleaner/diff.png"
 
 deprecated_since: "March 2019"
 deprecated_message: |
-    This fixer was [deprecated](https://github.com/Symplify/Symplify/pull/1473) and removed in **EasyCodingStandard 6**. Use [official `NoSuperfluousPhpdocTagsFixer` instead](https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/3734).
+    This fixer was [deprecated](https://github.com/symplify/symplify/pull/1473) and removed in **EasyCodingStandard 6**. Use [official `NoSuperfluousPhpdocTagsFixer` instead](https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/3734).
 ---
 
 <blockquote class="blockquote text-center">
@@ -95,7 +95,7 @@ Do you know what do they have in common?
 Cleaning every single case would be crazy. Luckily, we **live in CLI-refactoring generation**,
 so all we need is `Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer`.
 
-<a href="https://github.com/Symplify/Symplify/pull/427" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/427" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #427
 </a>

@@ -21,13 +21,13 @@ composer require symplify/package-builder
 
 ## 1. Console-Like `-vvv`-Aware Renders for Exceptions and Errors
 
-<a href="https://github.com/Symplify/Symplify/pull/732" class="btn btn-dark btn-sm mt-2 mb-3 pull-left">
+<a href="https://github.com/symplify/symplify/pull/732" class="btn btn-dark btn-sm mt-2 mb-3 pull-left">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #732
 </a>
 
-<a href="https://github.com/Symplify/Symplify/pull/720" class="btn btn-dark btn-sm mt-2 mb-3 ml-2">
+<a href="https://github.com/symplify/symplify/pull/720" class="btn btn-dark btn-sm mt-2 mb-3 ml-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #720
@@ -96,7 +96,7 @@ And that will get you rather chaotic report:
 
 ### How to Get Nice Error Reports Even out of Console Application Scope?
 
-Do you need this to work on your CLI app? Thanks to [Ondra Machulda](https://github.com/ondram)'s motivation [issues](https://github.com/Symplify/Symplify/pull/716) I came with decoupled Symfony\Console Application logic.
+Do you need this to work on your CLI app? Thanks to [Ondra Machulda](https://github.com/ondram)'s motivation [issues](https://github.com/symplify/symplify/pull/716) I came with decoupled Symfony\Console Application logic.
 
 It's named `Symplify\PackageBuilder\Console\ThrowableRenderer` and use it like this:
 
@@ -120,7 +120,7 @@ try {
 
 ## 2. Drop Manual `public: true` for Every Service You Test
 
-<a href="https://github.com/Symplify/Symplify/pull/680" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/680" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #680
@@ -190,7 +190,7 @@ Setup & forget.
 
 ## 3. Autowire Singly-Implemented Interfaces
 
-<a href="https://github.com/Symplify/Symplify/pull/645" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/645" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #645
@@ -271,7 +271,7 @@ And then clean your configs the same way PSR-4 autodiscovery works:
 
 ## 4. How to Decouple Parameters to multiple files in Safe Way?
 
-<a href="https://github.com/Symplify/Symplify/pull/745" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/745" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #745

@@ -105,7 +105,7 @@ Pretty cool, right?
 
 You can use this [for much more](https://confluence.jetbrains.com/display/PhpStorm/PhpStorm+Advanced+Metadata), like **Doctrine repository autocomplete by entity class**.
 
-I'm using this for container and thanks to that there is [49 fewer annotations](https://github.com/Symplify/Symplify/commit/d53003ebc41dddcb228e517c98d59de70ebc17a0) in Symplify code.
+I'm using this for container and thanks to that there is [49 fewer annotations](https://github.com/symplify/symplify/commit/d53003ebc41dddcb228e517c98d59de70ebc17a0) in Symplify code.
 
 <br>
 

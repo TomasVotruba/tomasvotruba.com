@@ -50,7 +50,7 @@ Then, clean `/source` directory from generated files and...
 # _data/projects.yaml
 -
     name: Symplify
-    url: https://github.com/Symplify/Symplify
+    url: https://github.com/symplify/symplify
 ```
 
 **After** - Statie
@@ -61,7 +61,7 @@ parameters:
     projects:
         -
             name: Symplify
-            url: https://github.com/Symplify/Symplify
+            url: https://github.com/symplify/symplify
 ```
 
 ## 4. Upgrade Absolute Links to Moved Files

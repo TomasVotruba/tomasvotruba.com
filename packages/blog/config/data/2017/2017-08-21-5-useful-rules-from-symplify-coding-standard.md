@@ -13,7 +13,7 @@ updated_message: |
 
 deprecated_since: "September 2018"
 deprecated_message: |
-    [Symplify 5.0](https://github.com/Symplify/Symplify/tree/v5.0.0) was released and with that, many checkers were replaced by better ones.
+    [Symplify 5.0](https://github.com/symplify/symplify/tree/v5.0.0) was released and with that, many checkers were replaced by better ones.
 
     Checkers 2, 4 and 5 were replaced by `SlamCsFixer\FinalInternalClassFixer` - **class is either final or abstract**.
 

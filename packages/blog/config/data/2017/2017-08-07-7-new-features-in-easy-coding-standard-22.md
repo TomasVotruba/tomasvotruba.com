@@ -53,7 +53,7 @@ vendor/symplify/easy-coding-standard/config/common/spaces.yml
 vendor/symplify/easy-coding-standard/config/common.yml
 ```
 
-This shortened Symplify config from [256 lines](https://github.com/Symplify/Symplify/blob/v2.0.0/easy-coding-standard.neon#L1-L256) **to [just 22 lines](https://github.com/Symplify/Symplify/blob/458082a5d534182e4ad723958c417399442abc82/easy-coding-standard.neon#L1-L22)**.
+This shortened Symplify config from [256 lines](https://github.com/symplify/symplify/blob/v2.0.0/easy-coding-standard.neon#L1-L256) **to [just 22 lines](https://github.com/symplify/symplify/blob/458082a5d534182e4ad723958c417399442abc82/easy-coding-standard.neon#L1-L22)**.
 
 
 ## 3. Use Whole Set But 1 Checker
