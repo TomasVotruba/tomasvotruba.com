@@ -35,7 +35,7 @@ composer require symplify/changelog-linker --dev
 
 ## 1. Multiple `CHANGELOG.md` for Smaller Versions
 
-<a href="https://github.com/Symplify/Symplify/pull/1047/files#diff-3b69acbe6b33a88158b373e6e96de097" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/1047/files#diff-3b69acbe6b33a88158b373e6e96de097" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #1047
 </a>
@@ -59,7 +59,7 @@ vendor/bin/changelog-linker link CHANGELOG-3.md
 
 ## 2. Smarter Last Change Detection
 
-<a href="https://github.com/Symplify/Symplify/commit/05d91b9412ebec49a66a4717d856a5a2c6718232" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/commit/05d91b9412ebec49a66a4717d856a5a2c6718232" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See commit
 </a>
@@ -76,7 +76,7 @@ vendor/bin/changelog-linker dump-merges
 
 ## 3. Remove Dead Links
 
-<a href="https://github.com/Symplify/Symplify/pull/1045/files" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/1045/files" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #1045
 </a>
@@ -94,11 +94,11 @@ vendor/bin/changelog-linker cleanup
 vendor/bin/changelog-linker cleanup CHANGELOG-2.md
 ```
 
-In Symplify `CHANGELOG.md` itself it [removed 50 dead lines](https://github.com/Symplify/Symplify/pull/1045/files#diff-4ac32a78649ca5bdd8e0ba38b7006a1e).
+In Symplify `CHANGELOG.md` itself it [removed 50 dead lines](https://github.com/symplify/symplify/pull/1045/files#diff-4ac32a78649ca5bdd8e0ba38b7006a1e).
 
 ## 4. Improved Category Detection
 
-<a href="https://github.com/Symplify/Symplify/pull/1064/files#diff-2ee93fc74523d03ea046d5419ae75a9a" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/1064/files#diff-2ee93fc74523d03ea046d5419ae75a9a" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #1064
 </a>
@@ -123,7 +123,7 @@ It will assign PRs to one of 4 categories: *Added*, *Fixed*, *Changed* and *Remo
 `Remove dead links` → Removed
 `Fix ID detection` → Fixed
 
-You can see all the regexes in [`CategoryResolver`](https://github.com/Symplify/Symplify/blob/v5.0.0/packages/ChangelogLinker/src/ChangeTree/Resolver/CategoryResolver.php).
+You can see all the regexes in [`CategoryResolver`](https://github.com/symplify/symplify/blob/v5.0.0/packages/ChangelogLinker/src/ChangeTree/Resolver/CategoryResolver.php).
 
 Peter added many keywords, but also showed me a new trick : **the [`\b` wrapper](https://www.regular-expressions.info/wordboundaries.html)**:
 

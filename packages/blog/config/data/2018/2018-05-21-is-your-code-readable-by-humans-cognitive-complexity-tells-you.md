@@ -9,6 +9,10 @@ perex: |
     Today, we'll see why is the later better and how to check it in your code with a Sniff.
 tweet: "New Post on My Blog: Is Your Code Readable By Humans? Cognitive Complexity Tells You #codingstandard #sonarcube #sniff #complexity #solid"
 tweet_image: "/assets/images/posts/2018/cognitive-complexity/tweet.png"
+
+updated_since: "May 2020"
+updated_message: |
+    Updated with **EasyCodingStandard 8**, with shift from [Sniffs to PHPStan rules](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/).
 ---
 
 ## What is Cognitive Complexity?
@@ -114,36 +118,28 @@ Today, I'm happy to show you the first version of `CognitiveComplexitySniff`.
 composer require symplify/coding-standard symplify/easy-coding-standard --dev
 ```
 
-**2. Create `ecs.yml`**
+**2. Create `phpstan.neon`**
 
 ```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff: ~
-```
+# phpstan.neon
+includes:
+    - vendor/symplify/coding-standard/packages/cognitive-complexity/config/cognitive-complexity-rules.neon
 
-With default max value of 8 there were over 20+ in Symplify code base. Too strict for your code base?
-
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
-        maxCognitiveComplexity: 20
+parameters:
+    symplify:
+        max_cognitive_complexity: 8 # default
+        max_class_cognitive_complexity: 50 # default
 ```
 
 **3. Run it**
 
 ```bash
-# dry run
-vendor/bin/ecs check src
-
-# fix run
-vendor/bin/ecs check src --fix
+vendor/bin/phpstan analyse src
 ```
 
 ## Refactor to Lower Cognitive Complexity in Examples
 
-<a href="https://github.com/Symplify/Symplify/pull/823/files" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/823/files" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>

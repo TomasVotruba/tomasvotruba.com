@@ -52,7 +52,7 @@ services:
 
 That way [Symfony plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin) will autocomplete the class for you:
 
-<img src="https://github.com/Symplify/EasyCodingStandard/raw/master/docs/yaml-autocomplete.gif">
+<img src="https://github.com/symplify/easy-coding-standard/raw/master/docs/yaml-autocomplete.gif">
 
 No more typos with strong over string typing.
 

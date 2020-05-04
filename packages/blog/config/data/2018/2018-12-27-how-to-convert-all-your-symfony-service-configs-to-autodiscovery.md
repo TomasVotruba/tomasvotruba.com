@@ -45,7 +45,7 @@ services:
         resource: /src
 ```
 
-...with [Symplify\Autodiscovery](https://github.com/Symplify/Autodiscovery).
+...with [Symplify\Autodiscovery](https://github.com/symplify/autodiscovery).
 
 ## 3 Steps to Your Minimalistic Configs
 

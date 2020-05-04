@@ -10,15 +10,15 @@ perex: |
 tweet: "New Post on #php 🐘 blog: Switch Travis to GitHub Actions to Reduce Stress."
 ---
 
-In this post, we'll look at examples of migration. I'll share my good and bad times with GitHub Action for my last 3 weeks using it on 5 open-source repositories with over 25 packages. 
+In this post, we'll look at examples of migration. I'll share my good and bad times with GitHub Action for my last 3 weeks using it on 5 open-source repositories with over 25 packages.
 
-## The Speed  
+## The Speed
 
 <blockquote class="blockquote text-center">
-    From ~15 minutes to just 3 minutes. 
+    From ~15 minutes to just 3 minutes.
 </blockquote>
 
-I mean, that's a crazy improvement of 80 %. You can read about in [the previous post](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/), so let's move on.   
+I mean, that's a crazy improvement of 80 %. You can read about in [the previous post](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/), so let's move on.
 
 ## The Developer's Joy
 
@@ -27,17 +27,17 @@ I mean, that's a crazy improvement of 80 %. You can read about in [the previous 
 
 Cocaine, Facebook, Twitter, and Instagram work the same way. A short feedback loop of dopamine.
 
-The significant advantage of GitHub is that at the end of your addiction is not an endless loop in the brain, but **higher productivity of your project**. 
+The significant advantage of GitHub is that at the end of your addiction is not an endless loop in the brain, but **higher productivity of your project**.
 
 ## Simple Unit Test in Multiple PHP Versions
 
 We'll jump right into the most common case - unit tests.
 
 In **Travis CI**, we had to:
- 
-- install dependencies, 
-- set PHP versions 
-- and run unit tests.  
+
+- install dependencies,
+- set PHP versions
+- and run unit tests.
 
 ```yaml
 # .travis.yml
@@ -96,7 +96,7 @@ jobs:
                 with:
                     php-version: ${{ matrix.php }}
                     coverage: none # disable xdebug, pcov
-        
+
             # if we 2 steps like this, we can better see if composer failed or tests
             -   run: composer install --no-progress
 
@@ -106,15 +106,15 @@ jobs:
 That's pretty huge for single and confusing to read at the same time, right?
 
 All that clutter just for `vendor/bin/phpunit` to pass.
-## Re-Use Code in Github Actions? Hell No! 
+## Re-Use Code in Github Actions? Hell No!
 
-What is this? 
+What is this?
 
 ```yaml
 -   uses: actions/checkout@v2
 ```
 
-Github Actions allow references to external *recipes*. It's usually just a set of actions, packages into a couple of lines in our workflow. You can see it on Github, e.g. [actions/checkout](https://github.com/actions/checkout). It's the recommended way to re-use code because there is no other way. 
+Github Actions allow references to external *recipes*. It's usually just a set of actions, packages into a couple of lines in our workflow. You can see it on Github, e.g. [actions/checkout](https://github.com/actions/checkout). It's the recommended way to re-use code because there is no other way.
 
 In reality: "Do you want to re-use 5 lines of install and setup YAML code? Create a repository on Github, write 100 lines in JavaScript, and you're ready to go!"
 
@@ -146,7 +146,7 @@ Do you want YAML Anchors in Github Actions? [Let them know](https://github.commu
 <br>
 
 Now that we have the worst feature of Github Actions behind us, **let's look at the excellent stuff**.
- 
+
 ## Power of External Workflows
 
 On the other hand, external workflows can solve a lot for us. Mainly for us, who don't want to dev-ops experts forever CI there is.
@@ -168,7 +168,7 @@ jobs:
 
             - run: vendor/bin/phpunit --coverage-clover coverage.xml build/logs/clover.xml
 ```
- 
+
 
 ## Coding Standards
 
@@ -194,7 +194,7 @@ jobs:
 In **Github Actions**:
 
 ```yaml
-# .github/workflows/code_checks.yaml 
+# .github/workflows/code_checks.yaml
 jobs:
     ecs:
         runs-on: ubuntu-latest
@@ -211,16 +211,16 @@ jobs:
 
 ## Learn from Working Examples
 
-- [`code_checks.yaml` in Symplify/Symplify](https://github.com/Symplify/Symplify/blob/373bbc80d73fd8c2777fdb5fb48386b456857b57/.github/workflows/code_checks.yaml)
+- [`code_checks.yaml` in symplify/symplify](https://github.com/symplify/symplify/blob/373bbc80d73fd8c2777fdb5fb48386b456857b57/.github/workflows/code_checks.yaml)
 - [`code_checks.yaml` in rectorphp/rector](https://github.com/rectorphp/rector/blob/1f4b36dfedb1b07d8425093474fc5951358b0590/.github/workflows/code_checks.yml)
 
 
 ## Bad Luck Organization with Some Private Repositories
 
 Some organizations don't have access to Github Actions because of some open-sources/private accounts.
-This sucks a lot. I tried to have GitHub Actions on [KnpLabs/DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors/pull/494#issue-360222690), but it's not possible unless the whole *KnpLabs* switches to some paid accounts. I spoke with support over a dozen emails, and it's wont fix. 
+This sucks a lot. I tried to have GitHub Actions on [KnpLabs/DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors/pull/494#issue-360222690), but it's not possible unless the whole *KnpLabs* switches to some paid accounts. I spoke with support over a dozen emails, and it's wont fix.
 
-How to work around this? If we create a new organization that is **open-source only**, it will work. Or we can just move the repository to an existing **open-source only** one. 
+How to work around this? If we create a new organization that is **open-source only**, it will work. Or we can just move the repository to an existing **open-source only** one.
 
 ## Add Badge?
 
@@ -230,13 +230,13 @@ How to work around this? If we create a new organization that is **open-source o
 
 Actually, on GitHub repository, there is only one badge for all:
 
-<img src="/assets/images/posts/github_actions_badge.png" class="img-thumbnail"> 
+<img src="/assets/images/posts/github_actions_badge.png" class="img-thumbnail">
 
 ## Concurrent Jobs
 
-**Travis CI** allow only [3 concurrent jobs](https://travis-ci.com/plans). This forces us to group similar checks like coding standard, static analysis, and Rector to one big job. If it failed, we had to look inside to find out which of these 3 areas is it. 
+**Travis CI** allow only [3 concurrent jobs](https://travis-ci.com/plans). This forces us to group similar checks like coding standard, static analysis, and Rector to one big job. If it failed, we had to look inside to find out which of these 3 areas is it.
 
-**GitHub Actions** allows you to run... wait for it [**20 jobs**](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions#usage-limits). 
+**GitHub Actions** allows you to run... wait for it [**20 jobs**](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions#usage-limits).
 
 Thanks to that, we can have one job for each of:
 
@@ -248,15 +248,15 @@ When `bin/console lint:twig` fails, we know right in the pull-request it's somet
 
 ## Where Should We Stay with Travis CI
 
-### Local Git 
+### Local Git
 
-GitHub Actions are tough to work with local git. I migrated Symplify/MonorepoBuilder and Symplfiy/ChangelogLinker to Github Actions, and it's only troubling. 
+GitHub Actions are tough to work with local git. I migrated Symplify/MonorepoBuilder and Symplfiy/ChangelogLinker to Github Actions, and it's only troubling.
 
 ### Building of PHAR and Push to Another Repository
 
 Another weakness is the inability to get the current tag. That's right. Getting something as simple as an existing tag is rocket science.
 
-That's why we had to [revert `rector.phar` build and publish to Travis CI](https://github.com/rectorphp/rector/blob/1f4b36dfedb1b07d8425093474fc5951358b0590/.travis.yml).  
+That's why we had to [revert `rector.phar` build and publish to Travis CI](https://github.com/rectorphp/rector/blob/1f4b36dfedb1b07d8425093474fc5951358b0590/.travis.yml).
 
 ### Monorepo Split
 
@@ -264,7 +264,7 @@ The monorepo split is the most massive performance operation on the whole CI. Al
 
 <br>
 
-I think that's due to the service being pretty new to the market. I hope these issues will be seen as primitive soon. For the rest of the features, **I love GitHub Action** and think you'll too after having feedback under 3 minutes after the last commit :). 
+I think that's due to the service being pretty new to the market. I hope these issues will be seen as primitive soon. For the rest of the features, **I love GitHub Action** and think you'll too after having feedback under 3 minutes after the last commit :).
 
 <br>
 

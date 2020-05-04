@@ -67,7 +67,7 @@ It took us 5-10 seconds to **find out that `getFullName()` is a dead method**. G
 
 Now **do the same for all the other public methods**.
 
-I consider Symplify project quite small, at least compared to private web applications. Yet, there [is over 684 public methods](https://github.com/Symplify/Symplify/search?q=%22public+function%22&unscoped_q=%22public+function%22). Even if we remove public methods from test fixtures, there will remain ~ 500 public methods:
+I consider Symplify project quite small, at least compared to private web applications. Yet, there [is over 684 public methods](https://github.com/symplify/symplify/search?q=%22public+function%22&unscoped_q=%22public+function%22). Even if we remove public methods from test fixtures, there will remain ~ 500 public methods:
 
 <div class="blockquote text-center">
     500 * 5 secs = 2500 secs ~= 41 mins

@@ -244,7 +244,7 @@ We just returned the benefits of PHP code:
 
 <br>
 
-Instead of config coding, use factories and [autowired parameters](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/). You can also remove factory from configs with [`AutoReturnFactoryCompilerPass`](https://github.com/symplify/packagebuilder#do-not-repeat-simple-factories).
+Instead of config coding, use factories and [autowired parameters](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/). You can also remove factory from configs with [`AutoReturnFactoryCompilerPass`](https://github.com/symplify/package-builder#do-not-repeat-simple-factories).
 
 ```diff
  services:

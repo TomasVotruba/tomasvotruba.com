@@ -70,7 +70,7 @@ final class ApiGenTest extends TestCase
 
 This is clearly opposite extreme thinking, that has its flaws. Mock everything and unit test every single class? Run just bin file and before/after? In the end, I found the best deal is somewhere in the middle:
 
-- Instead of testing the lowest levels, **I started to use the main parts of the application with before/after approach**. You can see it nicely in this [Symplify\CodingStandard test](https://github.com/Symplify/Symplify/blob/e35b7e0564e08028f626241ca4860123c29a5b5e/packages/CodingStandard/tests/Fixer/Property/ArrayPropertyDefaultValueFixer/ArrayPropertyDefaultValueFixerTest.php#L34-L40). They've proven to be easily extendable and easier to understand. You see PHP code before and PHP code after. Good old common sense.
+- Instead of testing the lowest levels, **I started to use the main parts of the application with before/after approach**. You can see it nicely in this [Symplify\CodingStandard test](https://github.com/symplify/symplify/blob/e35b7e0564e08028f626241ca4860123c29a5b5e/packages/CodingStandard/tests/Fixer/Property/ArrayPropertyDefaultValueFixer/ArrayPropertyDefaultValueFixerTest.php#L34-L40). They've proven to be easily extendable and easier to understand. You see PHP code before and PHP code after. Good old common sense.
 
 - Instead of mocking, **I started to use [anonymous classes](/blog/2018/06/11/how-to-turn-mocks-from-nightmare-to-solid-kiss-tests/)**. They've proven to be readable, programmers understand them (it's PHP code, you know) and there are no strings or plugins attached.
 

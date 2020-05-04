@@ -103,7 +103,7 @@ These are the best for me, but there are many more described in [those slides](h
 
 ### Monorepo
 
-[Symplify/Symplify](https://github.com/Symplify/Symplify)
+[symplify/symplify](https://github.com/symplify/symplify)
 
 ```bash
 /packages

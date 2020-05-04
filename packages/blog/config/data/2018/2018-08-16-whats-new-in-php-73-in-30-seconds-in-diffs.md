@@ -89,7 +89,7 @@ Thanks [Jacob](/blog/2018/08/16/whats-new-in-php-73-in-30-seconds-in-diffs/#comm
  var_dump($lastKey); // 2
 ```
 
-These will be handy in [coding standard](https://github.com/Symplify/Symplify/blob/84987acb99b68748997fe205e9e5506035a36cfc/packages/TokenRunner/src/Wrapper/FixerWrapper/ClassWrapper.php#L118-L120) [tools](https://github.com/Symplify/Symplify/blob/84987acb99b68748997fe205e9e5506035a36cfc/packages/CodingStandard/src/Fixer/Strict/BlankLineAfterStrictTypesFixer.php#L59-L60).
+These will be handy in [coding standard](https://github.com/symplify/symplify/blob/84987acb99b68748997fe205e9e5506035a36cfc/packages/TokenRunner/src/Wrapper/FixerWrapper/ClassWrapper.php#L118-L120) [tools](https://github.com/symplify/symplify/blob/84987acb99b68748997fe205e9e5506035a36cfc/packages/CodingStandard/src/Fixer/Strict/BlankLineAfterStrictTypesFixer.php#L59-L60).
 
 <br>
 

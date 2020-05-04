@@ -12,7 +12,7 @@ tweet_image: "/assets/images/posts/2018/symplify-4-cs/tweet.png"
 
 ## 1. Let Coding Standard handle Line Length for You
 
-<a href="https://github.com/Symplify/Symplify/pull/749" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/749" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #749
@@ -121,7 +121,7 @@ As you guessed, this fixer works with 120 chars as maximum line-size... by defau
 
 ## 2. Choose Line Length to Match Your Display
 
-<a href="https://github.com/Symplify/Symplify/pull/747" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/747" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #751
@@ -146,7 +146,7 @@ services:
 
 ## 3. Keep Legacy Far Away with New `ForbiddenStaticFunctionSniff`
 
-<a href="https://github.com/Symplify/Symplify/pull/722" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/722" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #722
@@ -172,7 +172,7 @@ services:
 
 ## 4. Prevent & references with `ForbiddenStaticFunctionSniff`
 
-<a href="https://github.com/Symplify/Symplify/pull/692" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/692" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #692
@@ -210,7 +210,7 @@ services:
 
 ## 5. Clear Child Class Naming Once and For All with `ClassNameSuffixByParentFixer`
 
-<a href="https://github.com/Symplify/Symplify/pull/633" class="btn btn-dark btn-sm mt-2 mb-3">
+<a href="https://github.com/symplify/symplify/pull/633" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the PR #633

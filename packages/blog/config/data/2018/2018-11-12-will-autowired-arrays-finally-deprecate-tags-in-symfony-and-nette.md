@@ -218,11 +218,11 @@ I have no idea.
 But you can **install it today**:
 
  - with `"nette/di": "v3.0.0-beta1"` with [this feature enabled in the core](https://github.com/nette/di/pull/178)
- - and `"symplify/package-builder": "^5.2"` and [`AutowireArrayParameterCompilerPass`](https://github.com/Symplify/PackageBuilder#autowire-array-parameters)
+ - and `"symplify/package-builder": "^5.2"` and [`AutowireArrayParameterCompilerPass`](https://github.com/symplify/package-builder#autowire-array-parameters)
 
 ## Does it Work?
 
-Yes, for the cases above it's 1:1 substitution with 0-configuration. It's part of [Symplify since 5.1](https://github.com/Symplify/Symplify/pull/1145/files) (released 1,5 month ago) and **it works flawlessly**.
+Yes, for the cases above it's 1:1 substitution with 0-configuration. It's part of [Symplify since 5.1](https://github.com/symplify/symplify/pull/1145/files) (released 1,5 month ago) and **it works flawlessly**.
 
 <br>
 

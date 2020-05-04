@@ -54,7 +54,7 @@ Today I'll write about **how code always grows and that we should anticipate it 
 
 Let's look how the fixer grew to the point it turned into legacy, how that shot myself and what I could (and will) do better to prevent it.
 
-(To skip irrelevant details, I'll use pseudocode instead of [original full code](https://github.com/Symplify/Symplify/blob/5603ed130bfd29bfdad050b7726b9c8e65a558fd/packages/CodingStandard/src/Fixer/Commenting/RemoveUselessDocBlockFixer.php).)
+(To skip irrelevant details, I'll use pseudocode instead of [original full code](https://github.com/symplify/symplify/blob/5603ed130bfd29bfdad050b7726b9c8e65a558fd/packages/CodingStandard/src/Fixer/Commenting/RemoveUselessDocBlockFixer.php).)
 
 ```php
 class RemoveUselessDocBlockFixer
@@ -218,7 +218,7 @@ I told myself - "here the static method makes sense, it's just one little method
 
 **So be consistent in architecture pattern you pick.**
 
-It took me [3](https://github.com/Symplify/Symplify/pull/680) [pull](https://github.com/Symplify/Symplify/pull/693) [requests](https://github.com/Symplify/Symplify/pull/723) to get out of this mess. Not to try the new package, just to prepare the code to be able to do so. Instead, I could have a clear DI design, use one PR at a time to trying this package and other 2 PRs could have been new features.
+It took me [3](https://github.com/symplify/symplify/pull/680) [pull](https://github.com/symplify/symplify/pull/693) [requests](https://github.com/symplify/symplify/pull/723) to get out of this mess. Not to try the new package, just to prepare the code to be able to do so. Instead, I could have a clear DI design, use one PR at a time to trying this package and other 2 PRs could have been new features.
 
 ### 2. Beware Your Inner Copy-Cat Coder
 
@@ -230,12 +230,7 @@ If you ever have a feeling that there is a better way to do things but you'll se
 
 ### 3. Sniff It - Setup and Forget
 
-<a href="https://github.com/Symplify/Symplify/pull/722" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
-    See pull-request #722
-</a>
-
-To prevent this 10 hours of trauma happening ever again, I made [a `ForbiddenStaticFunctionSniff` sniff](https://github.com/symplify/codingstandard#use-services-and-constructor-injection-over-static-method) that will look after your code.
+To prevent this 10 hours of trauma happening ever again, I made `NoClassWithStaticMethodWithoutStaticNameRule` that will look after our code.
 
 <em class="fas fa-fw fa-times text-danger fa-lg"></em>
 
@@ -251,15 +246,15 @@ class SomeClass
 <em class="fas fa-fw fa-check text-success fa-lg"></em>
 
 ```php
-class SomeClass
+class StaticSomeClass
 {
-    public function someFunction()
+    public static function someFunction()
     {
     }
 }
 ```
 
-I've added this sniff to set before refactoring, scanned the code and [added all found files to ignored](https://github.com/Symplify/Symplify/pull/722/files#diff-a8b950982764fcffe4b7b3acd261cf91R84). That way I knew what all classes need refactoring.
+I've added this sniff to set before refactoring, scanned the code and [added all found files to ignored](https://github.com/symplify/symplify/pull/722/files#diff-a8b950982764fcffe4b7b3acd261cf91R84). That way I knew what all classes need refactoring.
 
 ### 4. Remove `Static` from Methods - One Step at a Time
 

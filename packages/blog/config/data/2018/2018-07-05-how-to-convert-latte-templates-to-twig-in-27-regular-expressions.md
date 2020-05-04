@@ -6,7 +6,7 @@ perex: |
     <br><br>
     But there are some pitfalls left. Like templates - being Latte the only one is a pity. Twig is often requested feature and one of the last big reasons not to use Statie.
     <br><br>
-    Well, **it was**. Statie now supports [Twig](https://github.com/Symplify/Symplify/pull/892).
+    Well, **it was**. Statie now supports [Twig](https://github.com/symplify/symplify/pull/892).
     <br><br>
     **Are you a Twig fan? As a side effect, I made 27 regular expression to handle 80 % of the Latte to Twig migration for you.**
 tweet: "New Post on my Blog: How to Convert #Latte to #Twig in 27 Regular Expressions #nettefw #symfony"
@@ -352,11 +352,11 @@ or [the PR to Pehapkari.cz website](https://github.com/pehapkari/pehapkari.cz/pu
 
 ## Twig To Latte Converter?
 
-Are you Latte fan and do you want to migrate to Latte? Let's do this! There [is a test set of both engines](https://github.com/Symplify/Symplify/tree/a6b7c71a90fd984d2f31c5ed28957e2927608001/packages/LatteToTwigConverter/tests/LatteToTwigConverterSource), that can help you to start.
+Are you Latte fan and do you want to migrate to Latte? Let's do this! There [is a test set of both engines](https://github.com/symplify/symplify/tree/a6b7c71a90fd984d2f31c5ed28957e2927608001/packages/LatteToTwigConverter/tests/LatteToTwigConverterSource), that can help you to start.
 
 All you need to do is create the **exact reverse of the match to replace rules**:
 
-For example from [`Symplify\LatteToTwigConverter\CaseConverter\ConditionCaseConverter`](https://github.com/Symplify/Symplify/blob/master/packages/LatteToTwigConverter/src/CaseConverter/ConditionCaseConverter.php):
+For example from [`Symplify\LatteToTwigConverter\CaseConverter\ConditionCaseConverter`](https://github.com/symplify/symplify/blob/master/packages/LatteToTwigConverter/src/CaseConverter/ConditionCaseConverter.php):
 
 ```php
 # Twig to Latte

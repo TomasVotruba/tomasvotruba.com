@@ -18,7 +18,7 @@ Imagine you have a `LowerBoolConstantsFixer` that fixes all uppercase bool const
 +$value = true;
 ```
 
-And nothing more. How do we take this test case to PHPUnit? That is what [ECS Tester](https://github.com/Symplify/EasyCodingStandardTester) package will help us with.
+And nothing more. How do we take this test case to PHPUnit? That is what [ECS Tester](https://github.com/symplify/easy-coding-standardTester) package will help us with.
 
 ## 1. Install the package
 
@@ -146,7 +146,7 @@ $value = false;
 That's it!
 
 
-Now you know all you need to be able to test any fixer or sniff. But if you want to know more, check [the ECS Tester README](https://github.com/Symplify/EasyCodingStandardTester).
+Now you know all you need to be able to test any fixer or sniff. But if you want to know more, check [the ECS Tester README](https://github.com/symplify/easy-coding-standardTester).
 
 <br><br>
 

@@ -200,7 +200,7 @@ On the other hand a *package user*, I bet you recall at least one package you **
 
 I like this synchronization, predictability, stability and maturation in our PHP ecosystem. That's why I'm trying to **synchronize with Symfony release cycles**. As from huge to small, as from seasons of year to menstruation, as from PHP to Symfony,
 
-I bet you didn't notice, but with [Symplify](https://github.com/Symplify) I try to **release major version to minor of Symfony**. Version 2.0 was released on [July 6th 2017](https://github.com/Symplify/Symplify/releases/tag/v2.0.0), right after [Symfony 3.3 release](https://symfony.com/roadmap?version=3.3#checker) in May.
+I bet you didn't notice, but with [Symplify](https://github.com/Symplify) I try to **release major version to minor of Symfony**. Version 2.0 was released on [July 6th 2017](https://github.com/symplify/symplify/releases/tag/v2.0.0), right after [Symfony 3.3 release](https://symfony.com/roadmap?version=3.3#checker) in May.
 
 Being predictable with BC breaks, support for older version and consistent with adding new version.
 

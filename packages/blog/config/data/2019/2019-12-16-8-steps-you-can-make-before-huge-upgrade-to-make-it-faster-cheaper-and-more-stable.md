@@ -164,7 +164,7 @@ Is it in the Docker? No way! Docker is not version control. It only runs what yo
 
 Why are coding standards needed for the migration? The AST libraries that Rector uses aren't well-suited to make code look nice and consistent, so it's better to let coding standard tools do that.
 
-The basic [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) set looks like:
+The basic [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) set looks like:
 
 ```yaml
 # ecs.yaml

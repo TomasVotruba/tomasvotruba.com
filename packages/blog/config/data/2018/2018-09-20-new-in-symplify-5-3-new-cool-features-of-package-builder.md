@@ -2,7 +2,7 @@
 id: 145
 title: "New in Symplify 5: 3 New Cool Features of PackageBuilder"
 perex: |
-    [PackageBuilder](https://github.com/symplify/packagebuilder) was always sort of meta package with all **the cool and shiny features anyone can use**. After all, it's the most downloaded Symplify package hitting almost [1000 downloads a day](https://packagist.org/packages/symplify/package-builder/stats).
+    [PackageBuilder](https://github.com/symplify/package-builder) was always sort of meta package with all **the cool and shiny features anyone can use**. After all, it's the most downloaded Symplify package hitting almost [1000 downloads a day](https://packagist.org/packages/symplify/package-builder/stats).
     <br>
     <br>
     In Symplify 5 now it allows you to **drop manual binds** from Symfony configs, separate files from directories **in one method** and merge nested YAML parameters **with 1&nbsp;service**.
@@ -19,7 +19,7 @@ Now enjoy the news ↓
 
 ## 1. Drop Manual Binds in Symfony configs
 
-<a href="https://github.com/Symplify/Symplify/pull/998" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/998" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #998
 </a>
@@ -125,7 +125,7 @@ services:
 
 ## 2. Separate Files from Directories
 
-<a href="https://github.com/Symplify/Symplify/pull/963" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/963" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #963
 </a>
@@ -154,7 +154,7 @@ $symplifyFileSystem = new Symplify\PackageBuilder\FileSystem\FileSystem;
 
 ## 3. Merge Parameters without Leaving Any Behind
 
-<a href="https://github.com/Symplify/Symplify/pull/989" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/989" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #989
 </a>

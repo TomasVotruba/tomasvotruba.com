@@ -18,7 +18,7 @@ Now enjoy the news ↓
 
 ## 1. Consistent Order of Public Methods
 
-<a href="https://github.com/Symplify/Symplify/pull/1042" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/1042" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request #1042
@@ -87,7 +87,7 @@ services:
 
 ## 2. Exclude Classes From `::class`
 
-<a href="https://github.com/Symplify/Symplify/pull/1038/files#diff-5bab0be1e11c555c36f4bf5bdd9dc645" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/1038/files#diff-5bab0be1e11c555c36f4bf5bdd9dc645" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request #1038
@@ -125,7 +125,7 @@ services:
 
 ## 3. Final for 3rd Party Classes
 
-<a href="https://github.com/Symplify/Symplify/pull/1002/files#diff-692c4ab6d70c963f110e005dbbc800c9" class="btn btn-dark btn-sm mb-3 mt-2">
+<a href="https://github.com/symplify/symplify/pull/1002/files#diff-692c4ab6d70c963f110e005dbbc800c9" class="btn btn-dark btn-sm mb-3 mt-2">
     <em class="fab fa-github"></em>
     &nbsp;
     Check the pull-request #1002

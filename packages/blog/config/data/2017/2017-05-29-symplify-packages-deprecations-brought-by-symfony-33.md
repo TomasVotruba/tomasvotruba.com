@@ -46,14 +46,14 @@ Internal dialog of my Ego and inner Zen master started:
 - "Ok, maybe I could ask community, what they think about it."
 
 
-**So I [asked people on Slack and Github](https://github.com/Symplify/Symplify/pull/162)** what they think about it. Almost everybody (my inner Zen master included)
+**So I [asked people on Slack and Github](https://github.com/symplify/symplify/pull/162)** what they think about it. Almost everybody (my inner Zen master included)
 agreed **to drop them and let Symfony handle that**.
 
 I must say, it was much easier to decide after getting such feedback. **Thank you [Filip Prochazka](https://filip-prochazka.com/),
-[Tomas Fejfar](https://www.tomasfejfar.cz/),  [Stof](https://github.com/Symplify/Symplify/issues/161),
+[Tomas Fejfar](https://www.tomasfejfar.cz/),  [Stof](https://github.com/symplify/symplify/issues/161),
 [theofidry](https://github.com/symfony/symfony/pull/22234#issuecomment-297999703),
 [Jachym Tousek](https://github.com/enumag), [Jan Mikes](https://github.com/JanMikes)
-and [Javier Eguilez](https://github.com/Symplify/Symplify/pull/162#issuecomment-299441503)**
+and [Javier Eguilez](https://github.com/symplify/symplify/pull/162#issuecomment-299441503)**
 for your help with this.
 
 
@@ -61,12 +61,12 @@ for your help with this.
 
 I realized I could let packages go and I made these PRs:
 
-- [drop DefaultAutowire](https://github.com/Symplify/Symplify/pull/162#issuecomment-299441503)
-- [drop ServiceDefinitionDecorator, AutoServiceRegistration, ControllerAutowire and SymfonyEventDispatcher](https://github.com/Symplify/Symplify/pull/155)
+- [drop DefaultAutowire](https://github.com/symplify/symplify/pull/162#issuecomment-299441503)
+- [drop ServiceDefinitionDecorator, AutoServiceRegistration, ControllerAutowire and SymfonyEventDispatcher](https://github.com/symplify/symplify/pull/155)
 
 That eventually lead to:
 
-- [dropping EventDispatcher integration to Nette](https://github.com/Symplify/Symplify/pull/170)
+- [dropping EventDispatcher integration to Nette](https://github.com/symplify/symplify/pull/170)
 
 Don't worry:
 

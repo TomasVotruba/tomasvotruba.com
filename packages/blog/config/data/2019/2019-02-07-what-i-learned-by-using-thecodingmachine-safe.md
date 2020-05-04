@@ -71,7 +71,7 @@ In the end, I feel it didn't solve any real problems for me, but add huge mainte
     A problem that doesn't exist, doesn't need a solution.
 </blockquote>
 
-Hence, I [removed the Safe package](https://github.com/Symplify/Symplify/pull/1409/files) from my workflow.
+Hence, I [removed the Safe package](https://github.com/symplify/symplify/pull/1409/files) from my workflow.
 
 ## What are Real Issues with Native Functions?
 

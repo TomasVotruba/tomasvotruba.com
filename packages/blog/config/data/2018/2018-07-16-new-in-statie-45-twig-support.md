@@ -19,7 +19,7 @@ deprecated_message: |
     To create static content, migrate to Symfony app and [SymfonyStaticDumper](https://github.com/symplify/symfony-static-dumper).
 ---
 
-<a href="https://github.com/Symplify/Symplify/pull/892" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/892" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>

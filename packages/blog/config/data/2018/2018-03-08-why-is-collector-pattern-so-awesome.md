@@ -124,7 +124,7 @@ final class RectorProvidersCompilerPass implements CompilerPassInterface
 }
 ```
 
-Are you curious what `DefinitionFinder`? It's just [a helper class](https://github.com/Symplify/Symplify/blob/3d058becb57efefe2307c88ee94acbfbd15ebd1c/packages/PackageBuilder/src/DependencyInjection/DefinitionFinder.php) around `ContainerBuilder`.
+Are you curious what `DefinitionFinder`? It's just [a helper class](https://github.com/symplify/symplify/blob/3d058becb57efefe2307c88ee94acbfbd15ebd1c/packages/PackageBuilder/src/DependencyInjection/DefinitionFinder.php) around `ContainerBuilder`.
 
 ## 2. Use Expression Language?
 

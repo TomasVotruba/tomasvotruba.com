@@ -44,7 +44,7 @@ And when you meet opposite in your life, you just feel it.
 
 For me, it's clearly *static, services locators vs. constructor and dependency injection first*.
 
-In every [Symplify](https://github.com/symplify/symplify) package and [Rector](https://github.com/rectorphp/rector) I'm trying to put constructor injection first. It's often super hard and takes a lot of [refactoring](https://github.com/Symplify/Symplify/pull/693) and thinking, but I go for it because I see that DI absence is the main pillar of legacy code.
+In every [Symplify](https://github.com/symplify/symplify) package and [Rector](https://github.com/rectorphp/rector) I'm trying to put constructor injection first. It's often super hard and takes a lot of [refactoring](https://github.com/symplify/symplify/pull/693) and thinking, but I go for it because I see that DI absence is the main pillar of legacy code.
 
 ### It's About You
 

@@ -16,7 +16,7 @@ Now enjoy the news ↓
 
 ## 1. Friendlier Skips
 
-<a href="https://github.com/Symplify/Symplify/pull/948/files" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/948/files" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #948
 </a>
@@ -51,7 +51,7 @@ parameters:
 
 ## 2. In Lazy We Trust
 
-<a href="https://github.com/Symplify/Symplify/pull/832/files" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/832/files" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #832
 </a>
@@ -72,7 +72,7 @@ ecs.yml
 
 ## 3. Are There Some "array" Checkers?
 
-<a href="https://github.com/Symplify/Symplify/pull/967/files" class="btn btn-dark btn-sm">
+<a href="https://github.com/symplify/symplify/pull/967/files" class="btn btn-dark btn-sm">
     <em class="fab fa-github fa-fw"></em>
     See pull-request #967
 </a>

@@ -12,7 +12,7 @@ tweet: "New Post on my Blog: 5 Gotchas of the #Bin #File in PHP CLI Applications
 
 The bin file is not a trash bin. It's a binary file, the entry point to your application the same way `www/index.php` is. You probably already use them:
 
-- [vendor/bin/ecs](https://github.com/Symplify/Symplify/blob/master/packages/EasyCodingStandard/bin/ecs)
+- [vendor/bin/ecs](https://github.com/symplify/symplify/blob/master/packages/EasyCodingStandard/bin/ecs)
 - [vendor/bin/php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/php-cs-fixer)
 - [vendor/bin/phpcs](https://github.com/squizlabs/PHP_CodeSniffer/blob/master/bin/phpcs)
 - [vendor/bin/phpstan](https://github.com/phpstan/phpstan/blob/master/bin/phpstan)

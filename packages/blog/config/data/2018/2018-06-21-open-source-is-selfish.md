@@ -42,7 +42,7 @@ I realized a very simple point:
 
 ### The Open-Source Work Has To Make You Happy
 
-And if not, I'm doing something wrong and I have to change that, or I will burn out. This helped me to [push my idea](https://github.com/Symplify/Symplify/pull/660) to a PR a few days later at Epicon.
+And if not, I'm doing something wrong and I have to change that, or I will burn out. This helped me to [push my idea](https://github.com/symplify/symplify/pull/660) to a PR a few days later at Epicon.
 
 <br>
 
