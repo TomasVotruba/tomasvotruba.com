@@ -104,7 +104,7 @@ vendor/bin/ecs show --config vendor/nette/coding-standard/coding-standard-php71.
 
 This is rather debug or info tool, but it might come handy.
 
-**You can find [more options of this command in README](https://github.com/Symplify/EasyCodingStandard#show-command-to-display-all-checkers)**.
+**You can find [more options of this command in README](https://github.com/symplify/easy-coding-standard#show-command-to-display-all-checkers)**.
 
 
 ## 6. Scan `*.php` and `*.phpt` Files
@@ -143,7 +143,7 @@ services:
     App\Finder\PhpAndPhptFilesProvider: ~
 ```
 
-[Explore README](https://github.com/Symplify/EasyCodingStandard#do-you-need-to-include-tests-php-inc-or-phpt-files) or [`SourceProvider`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/src/Finder/SourceProvider.php) in Nette\CodingStandard for more.
+[Explore README](https://github.com/symplify/easy-coding-standard#do-you-need-to-include-tests-php-inc-or-phpt-files) or [`SourceProvider`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/src/Finder/SourceProvider.php) in Nette\CodingStandard for more.
 
 
 ## 7. Are you Tabs Person?
@@ -158,12 +158,12 @@ parameters:
 
 <br>
 
-You can find [these features in README](https://github.com/Symplify/EasyCodingStandard) with more detailed use examples.
+You can find [these features in README](https://github.com/symplify/easy-coding-standard) with more detailed use examples.
 
 
 ### Like it? Try It
 
-If you find these 7 news useful, you can try [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) right now:
+If you find these 7 news useful, you can try [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) right now:
 
 
 ```bash

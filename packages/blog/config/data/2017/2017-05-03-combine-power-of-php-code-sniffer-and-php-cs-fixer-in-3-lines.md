@@ -42,7 +42,7 @@ services:
 
 Great job! **You have just combined PHP_CodeSniffer and PHP CS Fixer in 3 lines.**
 
-With a help of [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard). Now, when title promise is fulfilled, I will show how to install it, run it and how nice and clear reports it generates.
+With a help of [EasyCodingStandard](https://github.com/symplify/easy-coding-standard). Now, when title promise is fulfilled, I will show how to install it, run it and how nice and clear reports it generates.
 
 ## How to add EasyCodingStandard in 3 steps
 
@@ -70,7 +70,7 @@ You can add a comment to groups, so everyone can easily orientate when there are
 Do you use PHPStorm? If so, you can use [Symfony Plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin). It allows you one amazing thing:
 
 <div class="text-center">
-    <img src="https://github.com/Symplify/EasyCodingStandard/raw/master/docs/yaml-autocomplete.gif" class="img-thumbnail">
+    <img src="https://github.com/symplify/easy-coding-standard/raw/master/docs/yaml-autocomplete.gif" class="img-thumbnail">
 </div>
 
 **It autocompletes class names!**

@@ -13,11 +13,11 @@ Here are 4 news that were added in Symplify 4 and that you can use in your appli
 
 Just install it...
 
-```php
+```bash
 composer require symplify/package-builder
 ```
 
-...and enjoy [more than one](https://github.com/Symplify/PackageBuilder) of these 4 new features:
+...and enjoy [more than one](https://github.com/symplify/package-builder) of these 4 new features:
 
 ## 1. Console-Like `-vvv`-Aware Renders for Exceptions and Errors
 

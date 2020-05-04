@@ -245,7 +245,7 @@ You can find [final Sniff on Github](https://github.com/symplify/symplify/blob/e
 
 ## How to run it?
 
-With [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) put the class to `ecs.yml`:
+With [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) put the class to `ecs.yml`:
 
 ```yaml
 services:

@@ -29,7 +29,7 @@ It was until one afternoon I was happy to share with [Martin Hujer](https://www.
 
 I didn't know the answer and I promised to make **an experiment that night**. I tried it on Statie and [this PR was born](https://github.com/symplify/symplify/pull/184). I'm still happy when I see this pull-request with `+425 −723`. The best refactoring is the one where you **leave less code, more readable and with better features**.
 
-The experiment worked and whole Symplify and Rector are now running on Symfony DependencyInjection (+ [few cool additions](https://github.com/symplify/packagebuilder)).
+The experiment worked and whole Symplify and Rector are now running on Symfony DependencyInjection (+ [few cool additions](https://github.com/symplify/package-builder)).
 
 **So if there are good reasons to switch, don't let your past preferences hold you back - just switch**.
 

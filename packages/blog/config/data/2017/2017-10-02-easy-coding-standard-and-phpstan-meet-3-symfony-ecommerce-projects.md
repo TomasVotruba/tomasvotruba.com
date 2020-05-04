@@ -6,7 +6,7 @@ perex: |
 
     **Lines of code, Duplicated code, Cyclomatic complexity or Method length**. These metrics are very rarely used in practise (even though there is a [sniff for that](https://github.com/symplify/symplify/blob/bf802422b9528946a8bd7e7f0331d858a9bf5740/easy-coding-standard.neon#L27-L28)).
 
-    Today, I am going to show you how you can check them with tools that can help you keep your code better on daily basis - [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) and [PHPStan](https://github.com/phpstan/phpstan).
+    Today, I am going to show you how you can check them with tools that can help you keep your code better on daily basis - [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) and [PHPStan](https://github.com/phpstan/phpstan).
 tweet: "When EasyCodingStandard and @phpstan meet 3 #symfony e-commerce projects #numbers #php"
 tweet_image: "/assets/images/posts/2017/shopsys-static-anal-2/phpstan-relative.png"
 
@@ -62,7 +62,7 @@ To get the idea how it improves your code in practice, just [check this commit](
 
 ### PSR2
 
-**PSR-2 is the most spread coding standard in PHP**, described in [PHP-FIG guide](https://www.php-fig.org/psr/psr-2/). Both PHP_CodeSniffer and PHP CS Fixer have a set of ~30 rules, so why not to [combine them](https://github.com/Symplify/EasyCodingStandard/blob/master/config/psr2.yml) and use them on our projects?
+**PSR-2 is the most spread coding standard in PHP**, described in [PHP-FIG guide](https://www.php-fig.org/psr/psr-2/). Both PHP_CodeSniffer and PHP CS Fixer have a set of ~30 rules, so why not to [combine them](https://github.com/symplify/easy-coding-standard/blob/master/config/psr2.yml) and use them on our projects?
 
 
 <br>

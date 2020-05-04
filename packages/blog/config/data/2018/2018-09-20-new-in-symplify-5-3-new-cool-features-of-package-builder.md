@@ -2,7 +2,7 @@
 id: 145
 title: "New in Symplify 5: 3 New Cool Features of PackageBuilder"
 perex: |
-    [PackageBuilder](https://github.com/symplify/packagebuilder) was always sort of meta package with all **the cool and shiny features anyone can use**. After all, it's the most downloaded Symplify package hitting almost [1000 downloads a day](https://packagist.org/packages/symplify/package-builder/stats).
+    [PackageBuilder](https://github.com/symplify/package-builder) was always sort of meta package with all **the cool and shiny features anyone can use**. After all, it's the most downloaded Symplify package hitting almost [1000 downloads a day](https://packagist.org/packages/symplify/package-builder/stats).
     <br>
     <br>
     In Symplify 5 now it allows you to **drop manual binds** from Symfony configs, separate files from directories **in one method** and merge nested YAML parameters **with 1&nbsp;service**.

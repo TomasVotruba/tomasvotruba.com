@@ -411,7 +411,7 @@ And run:
 vendor/bin/php-cs-fixer fix src --config=.php_cs --dry-run
 ```
 
-### The [EasyCodingStandard](https://github.com/Symplify/EasyCodingStandard) way
+### The [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) way
 
 Put the class to `ecs.yml`:
 

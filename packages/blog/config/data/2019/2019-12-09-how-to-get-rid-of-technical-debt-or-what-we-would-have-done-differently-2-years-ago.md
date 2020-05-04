@@ -260,8 +260,8 @@ Another typical issues is **[manual parameter spam](/blog/2018/11/05/do-you-auto
 
 We don't like spam, do you? So we dropped all this crap and used 2 compiler passes to make it KISS:
 
-- [`AutowireArrayParameterCompilerPass`](https://github.com/Symplify/PackageBuilder#autowire-array-parameters)
-- [`AutoBindParametersCompilerPass`](https://github.com/Symplify/PackageBuilder#autobind-parameters)
+- [`AutowireArrayParameterCompilerPass`](https://github.com/symplify/package-builder#autowire-array-parameters)
+- [`AutoBindParametersCompilerPass`](https://github.com/symplify/package-builder#autobind-parameters)
 
 ↓
 

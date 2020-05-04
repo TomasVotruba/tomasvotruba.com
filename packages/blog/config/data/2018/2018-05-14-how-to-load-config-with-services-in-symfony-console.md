@@ -355,11 +355,11 @@ vendor/bin/ecs check src --set clean-code
 
 Yes? Then go check:
 
-- [`bin/container.php`](https://github.com/Symplify/EasyCodingStandard/blob/master/bin/container.php) - a file that handles container creation
+- [`bin/container.php`](https://github.com/symplify/easy-coding-standard/blob/master/bin/container.php) - a file that handles container creation
 
-- [`Symplify\PackageBuilder\Configuration\ConfigFileFinder`](https://github.com/symplify/packagebuilder#4-load-a-config-for-cli-application)
+- [`Symplify\PackageBuilder\Configuration\ConfigFileFinder`](https://github.com/symplify/package-builder#4-load-a-config-for-cli-application)
 
-- [`Symplify\PackageBuilder\Configuration\SetFileFinder`](https://github.com/symplify/packagebuilder#6-load-config-via---level-option-in-your-console-application)
+- [`Symplify\PackageBuilder\Configuration\SetFileFinder`](https://github.com/symplify/package-builder#6-load-config-via---level-option-in-your-console-application)
 
 ...and stay tuned for next post about CLI Apps in PHP.
 

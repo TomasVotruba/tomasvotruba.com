@@ -235,7 +235,7 @@ services:
 
 
 
-*Do you want to use collectors without pain? In case you use Symfony, Nette or Laravel, here is [PackageBuilder](https://github.com/Symplify/PackageBuilder/blob/54ca56f850867b5ba9c5d96d2a00f4e2f0bb63a4/src/Adapter/Symfony/DependencyInjection/DefinitionCollector.php) that makes it simple.*
+*Do you want to use collectors without pain? In case you use Symfony, Nette or Laravel, here is [PackageBuilder](https://github.com/symplify/package-builder/blob/54ca56f850867b5ba9c5d96d2a00f4e2f0bb63a4/src/Adapter/Symfony/DependencyInjection/DefinitionCollector.php) that makes it simple.*
 
 
 ### How do You Make your Packages Easy to Extend?

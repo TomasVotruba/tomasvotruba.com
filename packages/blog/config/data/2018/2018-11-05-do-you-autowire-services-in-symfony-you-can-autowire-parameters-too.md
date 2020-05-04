@@ -219,7 +219,7 @@ where `Type` = `$type` and clean and easy to read.
 
 I got bad news - this is not part of Symfony - yet. But neither was autowiring for 8 years until it was.
 
-**In the meantime, [register](https://github.com/symplify/packagebuilder#autobind-parameters) `Symplify\PackageBuilder\DependencyInjection\CompilerPass\AutoBindParametersCompilerPass`.**
+**In the meantime, [register](https://github.com/symplify/package-builder#autobind-parameters) `Symplify\PackageBuilder\DependencyInjection\CompilerPass\AutoBindParametersCompilerPass`.**
 
 You don't know how? [See Symfony docs](https://symfony.com/doc/current/service_container/compiler_passes.html).
 

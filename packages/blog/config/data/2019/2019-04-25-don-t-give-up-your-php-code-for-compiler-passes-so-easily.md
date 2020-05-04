@@ -163,7 +163,7 @@ services:
         factory: ['@App\Price\PriceCalculatorFactory', 'create']
 ```
 
-I use [compiler pass](https://github.com/symplify/packagebuilder#do-not-repeat-simple-factories) for now, but if you know how to remove it, let me know.
+I use [compiler pass](https://github.com/symplify/package-builder#do-not-repeat-simple-factories) for now, but if you know how to remove it, let me know.
 
 How we get `$priceModifiers` is not that important now, it's [an implementation detail](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette/).
 

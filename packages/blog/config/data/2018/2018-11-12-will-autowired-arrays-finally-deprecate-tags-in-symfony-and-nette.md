@@ -218,7 +218,7 @@ I have no idea.
 But you can **install it today**:
 
  - with `"nette/di": "v3.0.0-beta1"` with [this feature enabled in the core](https://github.com/nette/di/pull/178)
- - and `"symplify/package-builder": "^5.2"` and [`AutowireArrayParameterCompilerPass`](https://github.com/Symplify/PackageBuilder#autowire-array-parameters)
+ - and `"symplify/package-builder": "^5.2"` and [`AutowireArrayParameterCompilerPass`](https://github.com/symplify/package-builder#autowire-array-parameters)
 
 ## Does it Work?
 
