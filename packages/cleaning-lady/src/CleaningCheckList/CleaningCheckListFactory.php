@@ -43,6 +43,7 @@ final class CleaningCheckListFactory
                 null,
                 'https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading'
             ),
+            new CleaningItem('make sure tests are in PSR-4, not in PHPUnit autoload magic format'),
             new CleaningItem('make sure "files" is converted to PSR-4'),
             new CleaningItem(
                 'add composer scripts for coding standard, PHPStan and Rector',
@@ -84,8 +85,16 @@ final class CleaningCheckListFactory
             new CleaningItem('add "php70" set without StrictTypesFixer'),
             new CleaningItem('add "php71" set'),
             new CleaningItem(
-                'add 120 chars line lenght fixer',
+                'add 120 chars line length fixer',
                 'https://www.tomasvotruba.com/blog/2018/03/29/new-in-coding-standard-4-long-line-breaks-automated-and-3-legacy-prevention-fixers/'
+            ),
+            new CleaningItem(
+                'change class string to ::class',
+                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#stringclassnametoclassconstantrector'
+            ),
+            new CleaningItem(
+                'change class::method() string references to ::class',
+                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#splitstringclassconstanttoclassconstfetchrector'
             ),
         ]);
 
