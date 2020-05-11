@@ -53,6 +53,17 @@ final class CleaningCheckListFactory
             new CleaningItem('move composer scripts options (e.g. --set or --autoload) to config'),
         ]);
 
+        $cleaningSections[] = new CleaningSection('Class naming', [
+            new CleaningItem(
+                'prefix abstract classes "Abstract"',
+                'https://github.com/Slamdunk/phpstan-extensions'
+            ),
+            new CleaningItem(
+                'suffix interface "Interface"',
+                'https://github.com/Slamdunk/phpstan-extensions'
+            ),
+        ]);
+
         $cleaningSections[] = new CleaningSection('Spaghetti', [
             new CleaningItem(
                 'make sure functions are converted to static method',
