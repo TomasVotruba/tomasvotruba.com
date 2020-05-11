@@ -143,6 +143,10 @@ final class CleaningCheckListFactory
             ),
         ]);
 
+        $cleaningSections[] = new CleaningSection('Nette', [
+            new CleaningItem('decouple RouterFactory to own service'),
+        ]);
+
         return new CleaningChecklist($cleaningSections);
     }
 }
