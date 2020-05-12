@@ -410,6 +410,9 @@
     "symplify/coding-standard": {
         "version": "v7.2.4"
     },
+    "symplify/console-color-diff": {
+        "version": "v7.3.13"
+    },
     "symplify/easy-coding-standard": {
         "version": "v7.2.4"
     },
@@ -418,6 +421,9 @@
     },
     "symplify/package-builder": {
         "version": "v7.2.4"
+    },
+    "symplify/parameter-name-guard": {
+        "version": "v7.3.14"
     },
     "symplify/phpstan-extensions": {
         "version": "v7.2.4"
