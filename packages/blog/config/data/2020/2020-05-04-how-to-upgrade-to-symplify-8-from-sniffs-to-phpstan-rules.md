@@ -303,7 +303,7 @@ And that's it! You've just migrated all deprecated sniffs to PHPStan rules. Upgr
 
 <br>
 
-In the next post, we'll look on the 2nd half - **how to migrate fixers into Rector rules**.
+[In the next post, we'll look on the 2nd half](/blog/2020/05/11/how-to-upgrade-to-symplify-8-from-fixers-to-rector-rules) - **how to migrate fixers into Rector rules**.
 
 <br>
 

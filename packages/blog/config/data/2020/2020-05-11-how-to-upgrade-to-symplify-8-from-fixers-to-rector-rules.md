@@ -2,9 +2,9 @@
 id: 251
 title: "How to Upgrade to Symplify 8 - From Fixers to Rector Rules"
 perex: |
-    Symplify 8 is going to be release in 2nd half of May. But as in Symfony, you can get ready to future version today.
+    Symplify 8 is going to be released in the 2nd half of May. But as in Symfony, you can get ready for future version today.
     <br><br>
-    In last post we upgrade Coding Standard [from Sniffs to PHPStan](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules). Today we finish with 2nd half - **from Fixers to Rector rules**.
+    [In the previous post we upgraded Coding Standard from Sniffs to PHPStan](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules). Today we finish with 2nd half - **from Fixers to Rector rules**.
 tweet: "New Post on #php 🐘 blog: How to Upgrade to #symplify 8 - From Fixer to @rectorphp Rules"
 ---
 
@@ -27,7 +27,7 @@ You'll find answer to this question [in previous post](/blog/2020/05/04/how-to-u
 ### What is the Difference?
 
 - Fixer works with [tokens](https://www.php.net/manual/en/function.token-get-all.php) → which is **great for spaces and `{}()` positions** etc.,
-- Rector works with abstract syntax tree → **great for refactoring, method/property position changes**, rename across code base etc.
+- Rector works with abstract syntax tree → **great for refactoring, method/property position changes**, rename across the code base, etc.
 
 Now we know *why*. Let's look *how* to deal with that.
 
@@ -35,11 +35,11 @@ Now we know *why*. Let's look *how* to deal with that.
 
 So what does it mean? Remove all the rules from `ecs.yaml` and let go?
 
-No, **all you need to do is switch to Rector rules**. It's better working and more reliable since it works with context and not token positions. So at first, you might see a new changes in your code.
+No, **all you need to do is switch to Rector rules**. It's better working and more reliable since it works with context and not token positions. So at first, you might see new changes in your code.
 
 ## How to Handle Upgrade in 30 minutes?
 
-There is dozen deprecated fixers in total. Let's take it one by one.
+There are dozen deprecated fixers in total. Let's take it one by one.
 
 
 First - if you don't have Rector, install it:
@@ -93,7 +93,7 @@ services:
          $delimiter: '#' # default
 ```
 
-## 3. Required must be follow by Absolute Path
+## 3. Required Must be followed by Absolute Path
 
 ```diff
  class SomeClass
@@ -243,7 +243,7 @@ services:
 
 ## 7. Use `::class` over Strings Names
 
-This feature is here since PHP 5.5, and it's a huge help for static analysis and instant migrations.
+This feature is here since PHP 5.5, and it's a massive help for static analysis and instant migrations.
 
 ```diff
  class AnotherClass
@@ -280,7 +280,9 @@ services:
 
 ## 8. Order Property by Complexity, Private Methods by Use
 
-How do you order your methods? Random? Be sure to read [How to Teach Your Team Private Method Sorting in 3 mins](/blog/2018/11/01/how-teach-your-team-private-method-sorting-in-3-mins/).
+How do you order your methods? Random?
+
+**Be sure to read [How to Teach Your Team Private Method Sorting in 3 mins](/blog/2018/11/01/how-teach-your-team-private-method-sorting-in-3-mins/).**
 
 Instead of Fixers:
 
@@ -304,7 +306,7 @@ services:
 
 ## 9. Specific Order By Parent Contract
 
-Do you implement one interface over and over? Do you have dozens of such classes and want their public methods to have specific order?
+Do you implement one interface over and over? Do you have dozens of such classes and want their public methods to have a specific order?
 
 ```diff
  final class SomeFixer implements FixerInterface
@@ -347,7 +349,7 @@ services:
 
 ## 10. Make Classes `final`, if You Can
 
-This will be the biggest added value, as tokens have no idea, if you class is extended by another class.
+This will be the biggest added value, as tokens have no idea if your class is extended by another class.
 
 Rector knows that, so be ready for more solid code after you run it.
 
@@ -371,7 +373,7 @@ services:
 
 <br>
 
-And that's it, now you're ready!
+And that's it. Now you're ready!
 
 <br>
 

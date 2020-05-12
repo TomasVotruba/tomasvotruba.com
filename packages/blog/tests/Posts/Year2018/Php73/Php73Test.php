@@ -20,12 +20,6 @@ final class Php73Test extends TestCase implements PostTestInterface
         2 => 'b',
     ];
 
-    public function testCommadAfterTheLastArgument(): void
-    {
-        $newThree = fn ($one, $two) => $one + $two;
-        $this->assertSame(3, $newThree(1, 2));
-    }
-
     public function testFirstLastKey(): void
     {
         // PHP 7.2- way
