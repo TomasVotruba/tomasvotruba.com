@@ -58,10 +58,7 @@ final class CleaningCheckListFactory
                 'prefix abstract classes "Abstract"',
                 'https://github.com/Slamdunk/phpstan-extensions'
             ),
-            new CleaningItem(
-                'suffix interface "Interface"',
-                'https://github.com/Slamdunk/phpstan-extensions'
-            ),
+            new CleaningItem('suffix interface "Interface"', 'https://github.com/Slamdunk/phpstan-extensions'),
         ]);
 
         $cleaningSections[] = new CleaningSection('Spaghetti', [
