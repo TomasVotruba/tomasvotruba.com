@@ -20,12 +20,12 @@
         "symfony/http-kernel": "^5.0",
         "symfony/twig-bridge": "^5.0",
         "symfony/twig-bundle": "^5.0",
-        "symplify/auto-bind-parameter": "^7.3.14",
-        "symplify/autodiscovery": "^7.3.14",
-        "symplify/autowire-array-parameter": "^7.3.14",
-        "symplify/flex-loader": "^7.3.14",
-        "symplify/package-builder": "^7.3.14",
-        "symplify/symfony-static-dumper": "^7.3.14",
+        "symplify/auto-bind-parameter": "^7.3.13",
+        "symplify/autodiscovery": "^7.3.13",
+        "symplify/autowire-array-parameter": "^7.3.13",
+        "symplify/flex-loader": "^7.3.13",
+        "symplify/package-builder": "^7.3.13",
+        "symplify/symfony-static-dumper": "^7.3.13",
         "twig/twig": "^3.0"
     },
     "require-dev": {
@@ -40,8 +40,8 @@
         "symfony/process": "^5.0",
         "symfony/stopwatch": "^5.0",
         "symfony/yaml": "^5.0",
-        "symplify/easy-coding-standard": "^7.3.14",
-        "symplify/phpstan-extensions": "^7.3.14",
+        "symplify/easy-coding-standard": "^7.3.13",
+        "symplify/phpstan-extensions": "^7.3.13",
         "tracy/tracy": "^2.7"
     },
     "autoload": {
