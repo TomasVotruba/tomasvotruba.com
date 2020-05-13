@@ -80,7 +80,10 @@ final class CleaningCheckListFactory
         ]);
 
         $cleaningSections[] = new CleaningSection('Spaghetti', [
-            new CleaningItem('make sure "classmap" is converted to PSR-4'),
+            new CleaningItem(
+                'make sure functions are converted to Static::calls',
+                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#functiontostaticmethodrector'
+            )
         ]);
 
         $cleaningSections[] = new CleaningSection('Coding Standard', [
