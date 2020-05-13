@@ -43,7 +43,6 @@ final class CleaningCheckListFactory
                 null,
                 'https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading'
             ),
-            new CleaningItem('make sure tests are in PSR-4, not in PHPUnit autoload magic format'),
             new CleaningItem('make sure "files" is converted to PSR-4'),
             new CleaningItem(
                 'add composer scripts for coding standard, PHPStan and Rector',
@@ -61,11 +60,27 @@ final class CleaningCheckListFactory
             new CleaningItem('suffix interface "Interface"', 'https://github.com/Slamdunk/phpstan-extensions'),
         ]);
 
+        $cleaningSections[] = new CleaningSection('Tests', [
+            new CleaningItem('make sure tests are in PSR-4, not in PHPUnit autoload magic format'),
+            new CleaningItem('run tests in continuous integration'),
+            new CleaningItem('make use phpunit.xml is in the root directory'),
+            new CleaningItem('make sure the file structure is idential to /src'),
+        ]);
+
+        $cleaningSections[] = new CleaningSection('Docblocks', [
+            new CleaningItem('remove @author, @covers, @groups', 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/2.16/src/Fixer/Phpdoc/GeneralPhpdocAnnotationRemoveFixer.php'),
+            new CleaningItem('remove "class generated ..." spam'),
+            new CleaningItem('remove license spam from every file, put into LICENSE file in the root'),
+        ]);
+
+        $cleaningSections[] = new CleaningSection('Docker', [
+            new CleaningItem('have Dockerfile', 'https://github.com/rectorphp/getrector.org/blob/master/Dockerfile'),
+            new CleaningItem('have docker-composer.dist.yml', 'https://github.com/rectorphp/getrector.org/blob/master/docker-compose.dist.yml'),
+            new CleaningItem('have a docs/run_in_docker.md with manual', 'https://github.com/rectorphp/getrector.org#configure'),
+        ]);
+
         $cleaningSections[] = new CleaningSection('Spaghetti', [
-            new CleaningItem(
-                'make sure functions are converted to static method',
-                'https://github.com/rectorphp/rector/issues/3101'
-            ),
+            new CleaningItem('make sure "classmap" is converted to PSR-4'),
         ]);
 
         $cleaningSections[] = new CleaningSection('Coding Standard', [
@@ -141,6 +156,14 @@ final class CleaningCheckListFactory
                 'remove dead code',
                 null,
                 'https://www.tomasvotruba.com/blog/2019/12/09/how-to-get-rid-of-technical-debt-or-what-we-would-have-done-differently-2-years-ago/'
+            ),
+            new CleaningItem(
+                'split grouped property and constant definitions',
+                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#splitgroupedconstantsandpropertiesrector',
+            ),
+            new CleaningItem(
+                'split grouped use imports definitions',
+                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#splitgroupeduseimportsrector',
             ),
         ]);
 

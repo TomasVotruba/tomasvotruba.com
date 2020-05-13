@@ -31,7 +31,7 @@
     "require-dev": {
         "dg/bypass-finals": "^1.1",
         "friendsofphp/php-cs-fixer": "^2.16",
-        "migrify/latte-to-twig": "dev-master",
+        "migrify/latte-to-twig": "^0.1.13",
         "nette/neon": "^3.1",
         "phpstan/phpstan": "^0.12.14",
         "phpunit/phpunit": "^9.0",
