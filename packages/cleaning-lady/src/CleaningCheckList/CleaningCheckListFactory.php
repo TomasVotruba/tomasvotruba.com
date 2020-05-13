@@ -68,22 +68,31 @@ final class CleaningCheckListFactory
         ]);
 
         $cleaningSections[] = new CleaningSection('Docblocks', [
-            new CleaningItem('remove @author, @covers, @groups', 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/2.16/src/Fixer/Phpdoc/GeneralPhpdocAnnotationRemoveFixer.php'),
+            new CleaningItem(
+                'remove @author, @covers, @groups',
+                'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/2.16/src/Fixer/Phpdoc/GeneralPhpdocAnnotationRemoveFixer.php'
+            ),
             new CleaningItem('remove "class generated ..." spam'),
             new CleaningItem('remove license spam from every file, put into LICENSE file in the root'),
         ]);
 
         $cleaningSections[] = new CleaningSection('Docker', [
             new CleaningItem('have Dockerfile', 'https://github.com/rectorphp/getrector.org/blob/master/Dockerfile'),
-            new CleaningItem('have docker-composer.dist.yml', 'https://github.com/rectorphp/getrector.org/blob/master/docker-compose.dist.yml'),
-            new CleaningItem('have a docs/run_in_docker.md with manual', 'https://github.com/rectorphp/getrector.org#configure'),
+            new CleaningItem(
+                'have docker-composer.dist.yml',
+                'https://github.com/rectorphp/getrector.org/blob/master/docker-compose.dist.yml'
+            ),
+            new CleaningItem(
+                'have a docs/run_in_docker.md with manual',
+                'https://github.com/rectorphp/getrector.org#configure'
+            ),
         ]);
 
         $cleaningSections[] = new CleaningSection('Spaghetti', [
             new CleaningItem(
                 'make sure functions are converted to Static::calls',
                 'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#functiontostaticmethodrector'
-            )
+            ),
         ]);
 
         $cleaningSections[] = new CleaningSection('Coding Standard', [
