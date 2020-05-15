@@ -1,10 +1,9 @@
 ---
 id: 252
-title: "The Future of&nbsp;Pehapkari Meetups&nbsp;and&nbsp;Trainings - You"
+title: "The Future of&nbsp;Pehapkari Meetups&nbsp;and&nbsp;Training - You"
 perex: |
     Last 2 months gave lot of time to reflect my activities, work and hobbies. One of the topic I think about a lot is our Czech PHP Community - [Pehapkari](https://pehapkari.cz/). I felt like last year I'm not giving it as much energy as before. But why?
-
-tweet: "New Post on #php 🐘 blog: The Future of&nbsp;Pehapkari Meetups&nbsp;and&nbsp;Trainings - You"
+tweet: "New Post on #php 🐘 blog: The Future of&nbsp;Pehapkari Meetups&nbsp;and&nbsp;Training - You"
 ---
 
 ## Why were Pehapkari born?
@@ -17,8 +16,9 @@ Online works on itself, that's great. It took a [huge effort of 25 people  to ge
 
 <br>
 
-"*That looks good. The most IT communities could dream of such activity. What's wrong?*"
+Thank you all for your participation in our meetings over the past 5 years.
 
+"*That looks good. The most IT communities could dream of such activity. So what happened?*
 
 ## My Priorities Have changed in Last 3 years
 
@@ -29,11 +29,11 @@ Now, 5 years later, I got a bit more on my plate.
 - last 3 years I work on [Rector](https://github.com/rectorphp/rector) - PHP community likes and uses it more and more (recently [Drupal officially announced](https://www.drupal.org/blog/accelerating-drupal-9-module-and-theme-readiness-with-automated-patches) - it a upgrade tool for 8 → 9) - it takes almost part-time to maintain project on GitHub
 - contributing to open-source and writing posts takes more time to make it beneficial to world PHP community
 - I travel abroad to conferences and meetups, that bites off another piece of time and energy cake
-- also, my main domain language switched from English to Czech (as you can see :-))
+- also, my main language switched from Czech to English
 
 Saying that, I don't have as much time and energy to keep community running, as it needs. I won't be organizing more meetups or trainings, except those pre-contracted.
 
-## Do you want Meetups and Trainings to Continue?
+## Do you want Meetups and Training to Continue?
 
 **I do, that's why I'm writing this post.**
 
@@ -47,13 +47,13 @@ So I'm offering you to take over my place and continue to grow, where I can't.
 
 - Let me know. I'll try to pass you my know-how and give access to website, Twitter and Facebook.
 
-**Do you want to me take over trainings?**
+**Do you want to me take over training?**
 
 - Same thing, contact me and if we match, it's your direction.
 
 <br>
 
-**I hope Czech PHP community strives in online or offline, and we continue to meet each other, find friends and help each other grow, as we did till now.** I really with that.
+**I hope Czech PHP community strives in online or offline, and we continue to meet each other, find friends and help each other grow, as we did till now.** I really wish that.
 
 <br>
 
