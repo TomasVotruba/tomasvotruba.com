@@ -54,7 +54,3 @@ So I'm offering you to take over my place and continue to grow, where I can't.
 <br>
 
 **I hope Czech PHP community strives in online or offline, and we continue to meet each other, find friends and help each other grow, as we did till now.** I really wish that.
-
-<br>
-
-Happy meeting!
