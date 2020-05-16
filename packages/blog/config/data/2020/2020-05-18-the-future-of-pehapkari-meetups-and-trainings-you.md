@@ -8,7 +8,7 @@ tweet: "New Post on #php 🐘 blog: The Future of&nbsp;Pehapkari Meetups&nbsp;an
 
 ## Why were Pehapkari born?
 
-In 2014, the only place to talk about PHP in the Czech Republic, was Nette forum. A place to bring all people of PHP, regardless framework color was missing. That's why Pehapkari (first year *Symfonisti*) were born.
+In 2014, the only place to talk about PHP in the Czech Republic, was Nette forum. A place to bring all people of PHP, regardless their framework choice was missing. That's why Pehapkari (first year *Symfonisti*) were born.
 
 Today, **in 2020** we have [Pehapkari Slack with 1600+ members](http://pehapkari.slack.com/), where **you can ask about anything you want. Instantly. Now. In Czech.**
 
@@ -47,7 +47,7 @@ So I'm offering you to take over my place and continue to grow, where I can't.
 
 - Let me know. I'll try to pass you my know-how and give access to website, Twitter and Facebook.
 
-**Do you want to me take over training?**
+**Do you want to take over training from me?**
 
 - Same thing, contact me and if we match, it's your direction.
 
