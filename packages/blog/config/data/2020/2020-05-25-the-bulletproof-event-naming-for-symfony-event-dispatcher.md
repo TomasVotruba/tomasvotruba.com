@@ -57,8 +57,8 @@ final class PostEvents
 
     /**
      * This event is invoked when post is published.
-     * It is called here @see \App\Post\PostService::puslished().
-     * And @see \App\Events\PostPuslishedEvent class is passed.
+     * It is called here @see \App\Post\PostService::published().
+     * And @see \App\Events\PostPublishedEvent class is passed.
      *
      * @var string
      */
@@ -111,8 +111,8 @@ final class PostEvents
 {
     /**
      * This event is invoked when post is published.
-     * It is called here @see \App\Post\PostService::puslished().
-     * And @see \App\Events\PostPuslishedEvent class is passed.
+     * It is called here @see \App\Post\PostService::published().
+     * And @see \App\Events\PostPublishedEvent class is passed.
      *
      * @var string
      */
