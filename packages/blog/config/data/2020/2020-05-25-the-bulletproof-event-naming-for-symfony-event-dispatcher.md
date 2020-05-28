@@ -225,7 +225,7 @@ $this->eventDispatcher($postAddedEvent);
 
 // or in case we don't need to get changed content from the event
 
-$this->eventDispatcher(new PostAddedEvent($post));
+$this->eventDispatcher->dispatch(new PostAddedEvent($post));
 ```
 
 <br>
