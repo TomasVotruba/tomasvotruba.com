@@ -92,6 +92,13 @@ final class CleaningCheckListFactory
             ),
         ]);
 
+        $cleaningSections[] = new CleaningSection('Config', [
+            new CleaningItem(
+                'move configuration to .env file and load it with symfony/dotenv',
+                'https://symfony.com/doc/current/components/dotenv.html'
+            ),
+        ]);
+
         $cleaningSections[] = new CleaningSection('Spaghetti', [
             new CleaningItem(
                 'make sure functions are converted to Static::calls',
