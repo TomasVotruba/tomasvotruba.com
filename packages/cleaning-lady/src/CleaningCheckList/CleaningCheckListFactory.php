@@ -21,6 +21,10 @@ final class CleaningCheckListFactory
                 'https://www.tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
             ),
             new CleaningItem(
+                'apply .editorconfig indent with eclint for all files',
+                'https://stackoverflow.com/a/41655803/1348344',
+            ),
+            new CleaningItem(
                 'move vendor to /vendor if somewhere else',
                 null,
                 'https://www.tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
