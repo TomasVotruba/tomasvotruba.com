@@ -34,6 +34,11 @@ final class PackageRawMonthlyDownloadsProvider
             throw new ShouldNotHappenException();
         }
 
+        // some package don't have stats yet
+        if (! isset($json['values'][$packageName])) {
+            return [];
+        }
+
         $values = array_combine($json['labels'], $json['values'][$packageName]);
         if (! $values) {
             throw new ShouldNotHappenException();
