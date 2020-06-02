@@ -116,11 +116,11 @@ final class PostEvents
      *
      * @var string
      */
-    public constant ON_POST_PUBLISHED = 'post_published';
+    public const ON_POST_PUBLISHED = 'post_published';
 
     // 3 more nicely annotated events...
 
-    public constant ON_POST_CHANGED = 'changed';
+    public const ON_POST_CHANGED = 'changed';
 }
 ```
 
