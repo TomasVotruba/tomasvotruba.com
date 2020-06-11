@@ -267,7 +267,7 @@ final class ProductRepository extends AbstractRepository
 {
     protected ProductEntityFactory $productEntityFactory;
 
-    public function injectEventDispatcher(ProductEntityFactory $productEntityFactory)
+    public function __construct(ProductEntityFactory $productEntityFactory)
     {
         $this->productEntityFactory = $productEntityFactory;
         // no parent::__construct() in every repository - yay!
