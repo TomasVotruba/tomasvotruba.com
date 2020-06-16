@@ -191,7 +191,7 @@ In current project I migrate 15 packages, that have these requirements:
 - B: "symfony/http-kernel": "^3.4"
 - C: "symfony/http-kernel": "^2.8"
 
-If we pick `^3.4`, we have to make sure the code of A and C packages will be updated or downgraded to that version. You get the idea.s
+If we pick `^3.4`, we have to make sure the code of A and C packages will be updated or downgraded to that version. You get the idea.
 
 <br>
 
