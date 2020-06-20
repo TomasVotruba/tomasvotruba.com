@@ -2,9 +2,14 @@
 id: 260
 title: "How we Migrated 54 357-lines Application from Nette to Symfony in 2 People under 80 Hours"
 perex: |
-    It would take us 3 full-time months to rewrite this code in 2017. In February 2019, we did it in less than 3 weeks with the help of automated tools. Why and how?
+    It would take us **3 full-time months** to rewrite this code in 2017. In February 2019, we did it **in less than 3 weeks** with the help of automated tools. Why and how?
 
 tweet: "New Post on my Blog: How we Migrated 54 357 Lines of Code from #nettefw to #symfony in 2 People under 80 Hours   #casestudy"
+twee_image: "/assets/images/posts/2019/fw-migration/pull-request.png"
+
+updated_since: "June 2020"
+updated_message: |
+    Updated with [Migrify](http://github.com/migrify) packages and local links.
 ---
 
 *Similar post was originally published [in Czech on Zdrojak.cz](https://www.zdrojak.cz/clanky/50k-radku-z-nette-do-symfony/), where it got colossal attention of the PHP community and hit a record of 56 comments. But when I talk about this migration with my English speaking PHP friends, it seems crazy to them, and they want to hear details - who, how, when, what exactly?*
@@ -32,20 +37,20 @@ The application used framework Nette, which worked and met the technical require
 <div class="text-center mb-4">
     <img src="/assets/images/posts/2019/fw-migration/extensions.png">
     <br>
-    <em>80% of the extensions are just glue integrations of Symfony and Doctrine</em>
+    80% of the extensions are just glue integrations of Symfony and Doctrine
 </div>
 
 <div class="text-center mb-4">
     <img src="/assets/images/posts/2019/fw-migration/nette-symfony.png">
     <br>
-    <em>Nette was just Controllers, Routing and Dependency-Injection</em>
+    Nette was just Controllers, Routing and Dependency-Injection
 </div>
 
 Why use unmaintained integrations of [Kdyby](https://github.com/kdyby) and [Zenify](https://github.com/zenify), that only integrate Symfony to Nette\DI, if Symfony is already there? The last new minor version of Nette was published 3 years ago. Symfony releases a new minor version every 6 months with new features that will make your work easier.
 
 ## How?
 
-I offered [Honza Mikeš](http://github.com/JanMikes) deal he couldn't refuse:
+I offered [Honza Mikes](https://janmikes.cz/) deal he couldn't refuse:
 
 <blockquote class="blockquote text-center">
 "We will give it a week, and if we get stuck, we'll give up".
@@ -53,9 +58,10 @@ I offered [Honza Mikeš](http://github.com/JanMikes) deal he couldn't refuse:
 
 On January 27th, we met with his Nette application, and on February 13th, the Symfony application went to the staging server. **In less than 17 days, we finished migration**, and on February 14th, we celebrated a new production application in addition to Valentine's Day.
 
-<div class="text-center" markdown=1>
-<img src="/assets/images/posts/2019/fw-migration/pull-request.png">
-*The final size of migration pull-request*
+<div class="text-center mb-4" markdown=1>
+<img src="/assets/images/posts/2019/fw-migration/pull-request.png" class="img-thumbnail">
+The final size of migration pull-request
+
 </div>
 
 We talked about migration at the beginning of 2017 because the Nette ecosystem wasn't developing, and Symfony was technologically skipping it. At that time, however, the transition would last at least 80-90 days for full-time, which is insane, so we didn't go into it.
@@ -66,7 +72,7 @@ In 2019 we already had a **lot of tools to do the work for you**:
 
 - The first is [Rector](https://github.com/rectorphp/rector), a tool I made that can change any code that runs at least on PHP 5.3 from pattern A to pattern B. It can instantly update the code from PHP 5.3, 5.4, 5.5, 5.6... to 7.4, Symfony from 2.8 to 4.2, Laravel from static code to constructor injection, and more. You can add your own rules tailored to migrate your specific code, that can handle anything that PHP programmer can do (A → B) in a fraction of the time.
 
-- The second is [NeonToYamlConverter](https://github.com/migrify/neon-to-yaml) - as you can guess, it converts NEON syntax to YAML
+- The second is [NeonToYaml](https://github.com/migrify/neon-to-yaml) - as you can guess, it converts NEON syntax to YAML
 
 - The third assistant is [LatteToTwigConverter](https://github.com/migrify/latte-to-twig) - it migrates Latte files to TWIG syntax
 
@@ -146,13 +152,13 @@ In Nette and Symfony, several things were different:
 
 Automatic tools did another 80% of the pull-request you saw above. The first one was enough to write, the other one to set it up.
 
-### Neon to YAML
+## Neon to YAML
 
 Neon and YAML are de facto fields [with minor differences in syntax](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/), but when it comes to services, each framework writes a little differently. Config with services had 316 lines in the services section. You don't want to migrate it manually, the Neon entities. Besides, just one error in related migration, and you can do it all over again.
 
-I took few hours and wrote [Migrify/NeonToYamlConverter](https://github.com/migrify/neon-to-yaml). Just pass the path to the `*.neon` file, and it will convert into a beautiful `*.yaml` file.
+I took few hours and wrote [Migrify/NeonToYaml](https://github.com/migrify/neon-to-yaml). Just pass the path to the `*.neon` file, and it will convert into a beautiful `*.yaml` file.
 
-### PHP Migration
+## PHP Migration
 
 Again to the factory pattern - there were several custom Response classes in the code that inherited from Nette Response and added extra logic. We could edit them manually, but it was easier to extract them into the factory method:
 
@@ -180,9 +186,9 @@ Again to the factory pattern - there were several custom Response classes in the
  }
 ```
 
-Honza created new `NewObjectToFactoryCreateRector` rule that handled this.
+[Honza](https://janmikes.cz/) created new `NewObjectToFactoryCreateRector` rule that handled this.
 
-### What else was left?
+## What else was left?
 
 - Move the routing from `RouterFactory` to particular Controller actions
 - Rename `Request` and `Response` classes + including their codes (`POST`, `GET`, `200`...)
