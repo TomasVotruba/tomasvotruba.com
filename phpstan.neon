@@ -31,3 +31,4 @@ parameters:
         - '#Access to an undefined property PhpParser\\Node\\Stmt\:\:\$stmts#'
 
         - '#PHPDoc tag @var for variable \$finalClassMock contains unresolvable type#'
+        - '#Cannot cast array<string\>\|string\|null to string#'

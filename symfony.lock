@@ -95,6 +95,9 @@
     "nette/robot-loader": {
         "version": "v3.2.3"
     },
+    "nette/security": {
+        "version": "v3.0.4"
+    },
     "nette/utils": {
         "version": "v3.1.1"
     },
