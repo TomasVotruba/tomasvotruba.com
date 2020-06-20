@@ -87,6 +87,9 @@ final class TwitterApiWrapper
         $tweets = $this->publishedTweetFactory->createFromRawTweets($rawTweets);
         $tweets = $this->filterPostTweets($tweets);
 
+        // re-index
+        $tweets = array_values($tweets);
+
         return $this->publishedTweets = $tweets;
     }
 

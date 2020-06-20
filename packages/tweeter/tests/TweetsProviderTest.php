@@ -25,10 +25,9 @@ final class TweetsProviderTest extends AbstractTwitterTestCase
         $postTweets = $this->postTweetsProvider->provide();
         $this->assertGreaterThan(200, $postTweets);
 
-        $lastKey = array_key_last($postTweets);
-        $oldestPost = $postTweets[$lastKey];
+        $oldestPost = $postTweets[array_key_last($postTweets)];
 
         $postDate = $oldestPost->getPostDateTime()->format('Y-m-d');
-        $this->assertSame('2016-09-09', $postDate);
+        $this->assertSame('2019-01-03', $postDate);
     }
 }
