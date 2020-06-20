@@ -27,13 +27,15 @@
                 {% endif %}
 
                 {% if post.updated %}
-                    <div class="card border-success card-bigger">
+                    <div class="card border-success card-bigger mt-5">
                         <div class="card-header text-white bg-success">
                             <strong>This post was updated at {{ post.updatedAt|date("F Y") }}</strong>
                         </div>
-                        <div class="card-body">
-                            {{ post.updatedMessage|markdown|raw }}
-                        </div>
+                        {% if post.updatedMessage is not null %}
+                            <div class="card-body">
+                                {{ post.updatedMessage|markdown|raw }}
+                            </div>
+                        {% endif %}
                     </div>
 
                     <br>
