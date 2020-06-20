@@ -2,7 +2,7 @@ parameters:
     twitter_name: '%env(TWEETER_NAME)%'
 
     twitter_minimal_gap_in_days: 1 # how many days to wait before publishing another Tweet
-    twitter_maximal_days_in_past: 60 # how old Tweets should be tweeted, to prevent 2-years old posting
+    twitter_maximal_days_in_past: 300 # how old Tweets should be tweeted, to prevent 2-years old posting
 
     twitter_consumer_key: '%env(TWITTER_CONSUMER_KEY)%'
     twitter_consumer_secret: '%env(TWITTER_CONSUMER_SECRET)%'
