@@ -50,6 +50,7 @@ final class GenerateStatsCommand extends Command
         array $frameworksVendorToName
     ) {
         parent::__construct();
+
         $this->symfonyStyle = $symfonyStyle;
         $this->yamlFileDumper = $yamlFileDumper;
         $this->vendorDataFactory = $vendorDataFactory;

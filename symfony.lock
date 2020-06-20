@@ -5,6 +5,9 @@
     "composer/xdebug-handler": {
         "version": "1.4.1"
     },
+    "dealerdirect/phpcodesniffer-composer-installer": {
+        "version": "v0.6.2"
+    },
     "dg/bypass-finals": {
         "version": "v1.1.2"
     },

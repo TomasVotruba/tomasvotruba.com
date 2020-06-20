@@ -52,10 +52,7 @@ final class TweetCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $message = sprintf(
-            'There is %d days since last tweet',
-            $this->twitterApiWrapper->getDaysSinceLastTweet()
-        );
+        $message = sprintf('There is %d days since last tweet', $this->twitterApiWrapper->getDaysSinceLastTweet());
 
         $this->symfonyStyle->note($message);
 

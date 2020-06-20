@@ -14,6 +14,7 @@ final class StatisticsTest extends AbstractKernelTestCase
      * @var int[]
      */
     private const AVERAGE_DAILY_VALUES_BY_MONTH = ['2019-12' => 300];
+
     private Statistics $statistics;
 
     protected function setUp(): void

@@ -11,6 +11,7 @@ use TomasVotruba\Tweeter\ValueObject\Tweet;
 final class PublishedTweetsFilter
 {
     private TwitterApiWrapper $twitterApiWrapper;
+
     /**
      * @var PublishedTweet[]
      */

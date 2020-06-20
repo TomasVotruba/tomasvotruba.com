@@ -114,11 +114,16 @@ final class TwitterApiWrapper
     private function getPublishedTweetsRaw(): array
     {
         $result = $this->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, [
-            'count' => 200, // these will be filtered down by following conditions; at least number of posts
-            'trim_user' => true, // we don't need any user info
-            'exclude_replies' => true, // we don't need replies
-            'include_rts' => false, // we don't need retweets
-            'since_id' => 824_225_319_879_987_203, // this started at 2017-08-20, nothing before
+            // these will be filtered down by following conditions; at least number of posts
+            'count' => 200,
+            // we don't need any user info
+            'trim_user' => true,
+            // we don't need replies
+            'exclude_replies' => true,
+            // we don't need retweets
+            'include_rts' => false,
+            // this started at 2017-08-20, nothing before
+            'since_id' => 824_225_319_879_987_203,
         ]);
 
         $this->ensureNoError($result);

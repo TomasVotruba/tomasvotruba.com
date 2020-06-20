@@ -74,6 +74,7 @@ final class InterveningPackagesPurifier
             'symfony/routing',
         ],
     ];
+
     private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider;
 
     /**

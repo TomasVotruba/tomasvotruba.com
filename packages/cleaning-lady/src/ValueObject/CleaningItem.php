@@ -9,6 +9,7 @@ final class CleaningItem
     private string $description;
 
     private ?string $helpLink;
+
     private ?string $whyLink;
 
     public function __construct(string $description, ?string $helpLink = null, ?string $whyLink = null)
