@@ -33,9 +33,11 @@
         "friendsofphp/php-cs-fixer": "^2.16",
         "migrify/latte-to-twig": "^0.1.13",
         "nette/neon": "^3.1",
+        "nette/security": "^3.0",
         "phpstan/phpstan": "^0.12.14",
         "phpunit/phpunit": "^9.0",
-        "rector/rector": "^0.7.6",
+        "rector/rector": "^0.7.36",
+        "slevomat/coding-standard": "dev-master",
         "spatie/http-status-check": "^3.2",
         "symfony/console": "^5.1",
         "symfony/process": "^5.1",
@@ -43,7 +45,6 @@
         "symfony/yaml": "^5.1",
         "symplify/easy-coding-standard": "^8.0",
         "symplify/phpstan-extensions": "^8.0",
-        "slevomat/coding-standard": "dev-master",
         "tracy/tracy": "^2.7"
     },
     "autoload": {

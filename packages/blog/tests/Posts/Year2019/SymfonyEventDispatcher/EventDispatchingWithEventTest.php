@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Blog\Tests\Posts\Year2019\EventDispatcher;
+namespace TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use TomasVotruba\Blog\Tests\Posts\Year2019\EventDispatcher\Source\Event\YoutuberNameEvent;
-use TomasVotruba\Blog\Tests\Posts\Year2019\EventDispatcher\Source\EventSubscriber\EventAwareNotifyMeOnVideoPublishedEventSubscriber;
+use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\Event\YoutuberNameEvent;
+use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\EventSubscriber\EventAwareNotifyMeOnVideoPublishedEventSubscriber;
 
 final class EventDispatchingWithEventTest extends TestCase
 {
