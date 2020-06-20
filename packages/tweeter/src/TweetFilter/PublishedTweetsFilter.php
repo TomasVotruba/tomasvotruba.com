@@ -4,22 +4,22 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TweetFilter;
 
-use TomasVotruba\Tweeter\TwitterApi\TwitterApiWrapper;
+use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
 use TomasVotruba\Tweeter\ValueObject\Tweet;
 
 final class PublishedTweetsFilter
 {
-    private TwitterApiWrapper $twitterApiWrapper;
-
     /**
      * @var PublishedTweet[]
      */
     private array $publishedPostTweets = [];
 
-    public function __construct(TwitterApiWrapper $twitterApiWrapper)
+    private TwitterPostApiWrapper $twitterPostApiWrapper;
+
+    public function __construct(TwitterPostApiWrapper $twitterPostApiWrapper)
     {
-        $this->twitterApiWrapper = $twitterApiWrapper;
+        $this->twitterPostApiWrapper = $twitterPostApiWrapper;
     }
 
     /**
@@ -51,7 +51,7 @@ final class PublishedTweetsFilter
             return $this->publishedPostTweets;
         }
 
-        $this->publishedPostTweets = $this->twitterApiWrapper->getPublishedTweets();
+        $this->publishedPostTweets = $this->twitterPostApiWrapper->getPublishedTweets();
 
         return $this->publishedPostTweets;
     }

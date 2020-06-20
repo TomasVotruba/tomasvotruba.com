@@ -58,7 +58,7 @@ When I talk with developers, this is one of the main reasons they don't use such
 
 <blockquote class="blockquote text-center mt-5 mb-5">
 Frustration is always the sign we should ask this question:
-<br> 
+<br>
 How can we do better?
 </blockquote>
 
@@ -78,15 +78,15 @@ Last week [Honza](https://twitter.com/mikes_honza) showed me PHPStorm tip that f
 
 ## How does it Work?
 
-You run **the tool only on a selected directory in the left tree**. 
+You run **the tool only on a selected directory in the left tree**.
 
-- Without the command line. 
-- Without changing paths. 
+- Without the command line.
+- Without changing paths.
 - Without copy-pasting.
 
 ### Domain Directory Separation
 
-This approach requires us to keep a decoupled structure, e.g., with to [local packages](/blog/2017/12/25/composer-local-packages-for-dummies/) or domain-driven design. 
+This approach requires us to keep a decoupled structure, e.g., with to [local packages](/blog/2017/12/25/composer-local-packages-for-dummies/) or domain-driven design.
 
 What does it mean? That our code that handles security is not all over the place in `/src` directory but in standalone `packages/Security` directory. So if we work with security, we ~~only~~ mostly work in that directory.
 
@@ -94,7 +94,7 @@ What does it mean? That our code that handles security is not all over the place
 
 In PHPStorm open:
 
-- Settings →  
+- Settings →
 - Tools →
 - External Tools
 
@@ -121,7 +121,7 @@ Save.
 ## How to Use It?
 
 Pick the directory you want to process in the file tree.
- 
+
 Run action.
 
 Type "Rector" or "PHPStan" and hit enter:

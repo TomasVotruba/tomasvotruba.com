@@ -5,26 +5,26 @@ declare(strict_types=1);
 namespace TomasVotruba\Tweeter\Tests\TwitterApi;
 
 use TomasVotruba\Tweeter\Tests\AbstractTwitterTestCase;
-use TomasVotruba\Tweeter\TwitterApi\TwitterApiWrapper;
+use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
 use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
 final class TwitterApiWrapperTest extends AbstractTwitterTestCase
 {
-    private TwitterApiWrapper $twitterApiWrapper;
+    private TwitterPostApiWrapper $twitterPostApiWrapper;
 
     protected function setUp(): void
     {
         $this->bootKernel(TomasVotrubaKernel::class);
 
-        $this->twitterApiWrapper = self::$container->get(TwitterApiWrapper::class);
+        $this->twitterPostApiWrapper = self::$container->get(TwitterPostApiWrapper::class);
 
         $this->ensureEnvVariablesAreSet();
     }
 
     public function testGetPublishedTweets(): void
     {
-        $publishedTweets = $this->twitterApiWrapper->getPublishedTweets();
+        $publishedTweets = $this->twitterPostApiWrapper->getPublishedTweets();
         $this->assertGreaterThanOrEqual(20, count($publishedTweets));
 
         $this->assertInstanceOf(PublishedTweet::class, $publishedTweets[0]);

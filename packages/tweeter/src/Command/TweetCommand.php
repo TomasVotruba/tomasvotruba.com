@@ -13,14 +13,12 @@ use Symplify\PackageBuilder\Console\ShellCode;
 use TomasVotruba\Tweeter\Configuration\Keys;
 use TomasVotruba\Tweeter\TweetFilter\TweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
-use TomasVotruba\Tweeter\TwitterApi\TwitterApiWrapper;
+use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\Tweet;
 
 final class TweetCommand extends Command
 {
     private int $twitterMinimalGapInDays;
-
-    private TwitterApiWrapper $twitterApiWrapper;
 
     private SymfonyStyle $symfonyStyle;
 
@@ -28,20 +26,23 @@ final class TweetCommand extends Command
 
     private TweetsFilter $tweetsFilter;
 
+    private TwitterPostApiWrapper $twitterPostApiWrapper;
+
     public function __construct(
         int $twitterMinimalGapInDays,
-        TwitterApiWrapper $twitterApiWrapper,
         PostTweetsProvider $postTweetsProvider,
         TweetsFilter $tweetsFilter,
+        TwitterPostApiWrapper $twitterPostApiWrapper,
         SymfonyStyle $symfonyStyle
     ) {
         $this->twitterMinimalGapInDays = $twitterMinimalGapInDays;
-        $this->twitterApiWrapper = $twitterApiWrapper;
         $this->postTweetsProvider = $postTweetsProvider;
         $this->tweetsFilter = $tweetsFilter;
         $this->symfonyStyle = $symfonyStyle;
 
         parent::__construct();
+
+        $this->twitterPostApiWrapper = $twitterPostApiWrapper;
     }
 
     protected function configure(): void
@@ -52,7 +53,7 @@ final class TweetCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $message = sprintf('There is %d days since last tweet', $this->twitterApiWrapper->getDaysSinceLastTweet());
+        $message = sprintf('There is %d days since last tweet', $this->twitterPostApiWrapper->getDaysSinceLastTweet());
 
         $this->symfonyStyle->note($message);
 
@@ -88,14 +89,14 @@ final class TweetCommand extends Command
 
     private function isNewTweetAllowed(): bool
     {
-        $daysSinceLastTweet = $this->twitterApiWrapper->getDaysSinceLastTweet();
+        $daysSinceLastTweet = $this->twitterPostApiWrapper->getDaysSinceLastTweet();
 
         return $daysSinceLastTweet >= $this->twitterMinimalGapInDays;
     }
 
     private function reportTooSoonToTweet(): int
     {
-        $daysSinceLastTweet = $this->twitterApiWrapper->getDaysSinceLastTweet();
+        $daysSinceLastTweet = $this->twitterPostApiWrapper->getDaysSinceLastTweet();
 
         $this->symfonyStyle->warning(sprintf(
             'Only %d days passed since last tweet. Minimal gap is %d days, so no tweet until then.',
@@ -119,9 +120,9 @@ final class TweetCommand extends Command
     private function tweet(Tweet $postTweet): void
     {
         if ($postTweet->getImage() !== null) {
-            $this->twitterApiWrapper->publishTweetWithImage($postTweet->getText(), $postTweet->getImage());
+            $this->twitterPostApiWrapper->publishTweetWithImage($postTweet->getText(), $postTweet->getImage());
         } else {
-            $this->twitterApiWrapper->publishTweet($postTweet->getText());
+            $this->twitterPostApiWrapper->publishTweet($postTweet->getText());
         }
     }
 }
