@@ -22,40 +22,41 @@
                     {% set postYear = post.dateTime|date('Y') %}
 
                     {% if postYear != currentYear and postYear not in date_lines %}
-                            <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
-                                <br>
-                                <br>
-                                {{ postYear }}
-                                {# https://stackoverflow.com/a/9432583/1348344 #}
-                                {% set date_lines = date_lines|merge({postYear: postYear}) %}
-                            </div>
-                        {% endif %}
-
-                        {% set displayed_post_count = displayed_post_count + 1 %}
-
-                        {% if loop.first %}
-                            <article class="pt-2 pb-4 col-md-12">
-                                <h2 class="firstPost text-center">
-                                    <a href="{{ path('post_detail', {slug: post.slug }) }}">
-                                        {{ post.title|raw }}
-                                    </a>
-                                </h2>
-
-                                <div class="text-center">
-                                    {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                                </div>
-                            </article>
-                        {% else %}
-                            {% if loop.index == 2 %}<ul class="mt-5 list-unstyled">{% endif %}
-                            <li class="mb-3 col-md-12">
-                                <a href="{{ path('post_detail', {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
-
-                                {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                            </li>
-                            <hr>
-                        {% endif %}
+                        <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
+                            <br>
+                            <br>
+                            {{ postYear }}
+                            {# https://stackoverflow.com/a/9432583/1348344 #}
+                            {% set date_lines = date_lines|merge({postYear: postYear}) %}
+                        </div>
                     {% endif %}
-                {% endfor %}
+
+                    {% set displayed_post_count = displayed_post_count + 1 %}
+
+                    {% if loop.first %}
+                        <article class="pt-2 pb-4 col-md-12">
+                            <h2 class="firstPost text-center">
+                                <a href="{{ path('post_detail', {slug: post.slug }) }}">
+                                    {{ post.title|raw }}
+                                </a>
+                            </h2>
+
+                            <div class="text-center">
+                                {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
+                            </div>
+                        </article>
+                    {% else %}
+                        {% if loop.index == 2 %}<ul class="mt-5 list-unstyled">{% endif %}
+
+                        <li class="mb-3 col-md-12">
+                            <a href="{{ path('post_detail', {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
+
+                            {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
+                        </li>
+                        <hr>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
             </ul>
         </div>
 

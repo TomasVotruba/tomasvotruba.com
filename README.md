@@ -1,4 +1,4 @@
-# [tomasvotruba.com](https://www.tomasvotruba.com) - Personal Static Website Generated from Symfony App
+# [tomasvotruba.com](https://tomasvotruba.com) - Personal Static Website Generated from Symfony App
 
 ## Install & Run
 

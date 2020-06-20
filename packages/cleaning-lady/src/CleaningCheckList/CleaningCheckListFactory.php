@@ -18,7 +18,7 @@ final class CleaningCheckListFactory
             new CleaningItem(
                 'add .editorconfig for all files',
                 null,
-                'https://www.tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
+                'https://tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
             ),
             new CleaningItem(
                 'apply .editorconfig indent with eclint for all files',
@@ -27,12 +27,12 @@ final class CleaningCheckListFactory
             new CleaningItem(
                 'move vendor to /vendor if somewhere else',
                 null,
-                'https://www.tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
+                'https://tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
             ),
             new CleaningItem(
                 'apply 1-level directory approach, e.g. configs in /config',
                 null,
-                'https://www.tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
+                'https://tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
             ),
         ]);
 
@@ -40,7 +40,7 @@ final class CleaningCheckListFactory
             new CleaningItem(
                 'make sure php version is specified',
                 null,
-                'https://www.tomasvotruba.com/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/#2-explicit-php-version'
+                'https://tomasvotruba.com/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/#2-explicit-php-version'
             ),
             new CleaningItem(
                 'make sure "classmap" is converted to PSR-4',
@@ -114,11 +114,11 @@ final class CleaningCheckListFactory
             ),
             new CleaningItem(
                 'migrate current PHP_CodeSniffer to ECS',
-                'https://www.tomasvotruba.com/blog/2018/06/04/how-to-migrate-from-php-code-sniffer-to-easy-coding-standard/'
+                'https://tomasvotruba.com/blog/2018/06/04/how-to-migrate-from-php-code-sniffer-to-easy-coding-standard/'
             ),
             new CleaningItem(
                 'migrate current PHP CS Fixer to ECS',
-                'https://www.tomasvotruba.com/blog/2018/06/07/how-to-migrate-from-php-cs-fixer-to-easy-coding-standard/'
+                'https://tomasvotruba.com/blog/2018/06/07/how-to-migrate-from-php-cs-fixer-to-easy-coding-standard/'
             ),
             new CleaningItem(
                 'add "psr12" set',
@@ -132,7 +132,7 @@ final class CleaningCheckListFactory
             new CleaningItem('add "php71" set'),
             new CleaningItem(
                 'add 120 chars line length fixer',
-                'https://www.tomasvotruba.com/blog/2018/03/29/new-in-coding-standard-4-long-line-breaks-automated-and-3-legacy-prevention-fixers/'
+                'https://tomasvotruba.com/blog/2018/03/29/new-in-coding-standard-4-long-line-breaks-automated-and-3-legacy-prevention-fixers/'
             ),
             new CleaningItem(
                 'change class string to ::class',
@@ -169,16 +169,16 @@ final class CleaningCheckListFactory
             new CleaningItem(
                 'finalize classes without children',
                 'https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#finalizeclasseswithoutchildrenrector',
-                'https://www.tomasvotruba.com/blog/2019/01/24/how-to-kill-parents/'
+                'https://tomasvotruba.com/blog/2019/01/24/how-to-kill-parents/'
             ),
             new CleaningItem(
                 'complete @var types to all your properties',
-                'https://www.tomasvotruba.com/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day/'
+                'https://tomasvotruba.com/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day/'
             ),
             new CleaningItem(
                 'remove dead code',
                 null,
-                'https://www.tomasvotruba.com/blog/2019/12/09/how-to-get-rid-of-technical-debt-or-what-we-would-have-done-differently-2-years-ago/'
+                'https://tomasvotruba.com/blog/2019/12/09/how-to-get-rid-of-technical-debt-or-what-we-would-have-done-differently-2-years-ago/'
             ),
             new CleaningItem(
                 'split grouped property and constant definitions',
@@ -193,7 +193,7 @@ final class CleaningCheckListFactory
         $cleaningSections[] = new CleaningSection('Symfony', [
             new CleaningItem(
                 'migrate configs to PSR-4 autodiscovery',
-                'https://www.tomasvotruba.com/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/'
+                'https://tomasvotruba.com/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/'
             ),
         ]);
 
