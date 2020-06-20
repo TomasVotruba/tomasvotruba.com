@@ -12,7 +12,7 @@ install:
 scripts:
     # build static version to /output directory
     # used for deploy
-    #- bin/console dump-static-site --ansi
+    - bin/console dump-static-site --ansi
 
 deploy:
     provider: pages
