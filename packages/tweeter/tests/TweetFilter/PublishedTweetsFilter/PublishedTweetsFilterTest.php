@@ -41,7 +41,5 @@ final class PublishedTweetsFilterTest extends AbstractKernelTestCase
                 $unpublishedTweet->getText()
             );
         }
-
-        $this->assertCount(1, $unpublishedTweets);
     }
 }

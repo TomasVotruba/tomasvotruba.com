@@ -45,7 +45,7 @@ final class Tweet
         }
 
         // website in title without link is automatically converted to http://, so we might wanna remove it
-        $textWithoutHttp = Strings::replace($publishedTweet->getText(), '#http\:\/\/#');
+        $textWithoutHttp = Strings::replace($publishedTweet->getText(), '#http(s)?\:\/\/#');
 
         return $this->areTextSimilar($this->text, $textWithoutHttp);
     }
