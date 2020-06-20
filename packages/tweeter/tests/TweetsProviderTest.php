@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\Tests;
 
-use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
 use TomasVotruba\Tweeter\TweetProvider\TweetsProvider;
 use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
-final class TweetsProviderTest extends AbstractKernelTestCase
+final class TweetsProviderTest extends AbstractTwitterTestCase
 {
     private TweetsProvider $postTweetsProvider;
 
@@ -17,6 +16,8 @@ final class TweetsProviderTest extends AbstractKernelTestCase
         $this->bootKernel(TomasVotrubaKernel::class);
 
         $this->postTweetsProvider = self::$container->get(TweetsProvider::class);
+
+        $this->ensureEnvVariablesAreSet();
     }
 
     public function test(): void

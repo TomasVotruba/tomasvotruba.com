@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\Tests\TweetFilter\PublishedTweetsFilter;
 
-use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
+use TomasVotruba\Tweeter\Tests\AbstractTwitterTestCase;
 use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\TweetsProvider;
 use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
-final class PublishedTweetsFilterTest extends AbstractKernelTestCase
+final class PublishedTweetsFilterTest extends AbstractTwitterTestCase
 {
     private PublishedTweetsFilter $publishedTweetsFilter;
 
@@ -21,14 +21,12 @@ final class PublishedTweetsFilterTest extends AbstractKernelTestCase
 
         $this->tweetsProvider = self::$container->get(TweetsProvider::class);
         $this->publishedTweetsFilter = self::$container->get(PublishedTweetsFilter::class);
+
+        $this->ensureEnvVariablesAreSet();
     }
 
     public function test(): void
     {
-        if (! getenv('TWITTER_CONSUMER_KEY')) {
-            $this->markTestSkipped('Run Twitter test only with access tokens.');
-        }
-
         $postTweets = $this->tweetsProvider->provide();
         $this->assertGreaterThan(200, $postTweets);
 

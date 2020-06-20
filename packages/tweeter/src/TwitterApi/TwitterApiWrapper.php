@@ -166,13 +166,13 @@ final class TwitterApiWrapper
      */
     private function ensureNoError(array $result): void
     {
-        if (! isset($result['errors'])) {
+        if (! isset($result['errors']) && ! isset($result['error'])) {
             return;
         }
 
-        $errors = $result['errors'];
+        $errorMessage = $result['errors'][0]['message'] ?? $result['error'];
 
-        throw new TwitterApiException(sprintf('Twitter API failed due to: "%s"', $errors[0]['message']));
+        throw new TwitterApiException(sprintf('Twitter API failed due to: "%s"', $errorMessage));
     }
 
     /**
