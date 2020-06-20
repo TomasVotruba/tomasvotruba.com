@@ -52,6 +52,13 @@ final class TweetCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        $message = sprintf(
+            'There is  %d days since last tweet',
+            $this->twitterApiWrapper->getDaysSinceLastTweet()
+        );
+
+        $this->symfonyStyle->note($message);
+
         // to soon to tweet after recent tweet
         if (! $this->isNewTweetAllowed()) {
             return $this->reportTooSoonToTweet();
@@ -64,6 +71,12 @@ final class TweetCommand extends Command
         if (count($postTweets) === 0) {
             return $this->reportNoNewTweet();
         }
+
+        $this->symfonyStyle->title(sprintf('Picking from %d tweets', count($postTweets)));
+        foreach ($postTweets as $postTweet) {
+            $this->symfonyStyle->writeln(' * ' . $postTweet->getText());
+        }
+        $this->symfonyStyle->newLine();
 
         /** @var Tweet $tweet */
         $tweet = array_shift($postTweets);
