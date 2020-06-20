@@ -212,7 +212,7 @@ You can now:
 
 Still hungry for knowledge? Check [Symfony documentation](http://symfony.com/doc/current/components/event_dispatcher.html) then.
 
-But remember: ** practice is the best teacher**.
+But remember: **practice is the best teacher**.
 
 <br><br>
 
