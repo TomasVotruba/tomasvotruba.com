@@ -32,6 +32,10 @@ final class PublishedTweetsFilterTest extends AbstractTwitterTestCase
 
         $unpublishedTweets = $this->publishedTweetsFilter->filter($localPostTweets);
 
+        dump($unpublishedTweets);
+        dump(count($unpublishedTweets));
+        die;
+
         foreach ($unpublishedTweets as $unpublishedTweet) {
             // this tweet is already published, so it should not be here
             $this->assertStringNotContainsString(

@@ -11,6 +11,7 @@ use Nette\Utils\Strings;
 use TomasVotruba\Tweeter\Exception\TwitterApi\TwitterApiException;
 use TomasVotruba\Tweeter\TweetEntityCompleter;
 use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
+use TomasVotruba\Tweeter\ValueObjectFactory\PublishedTweetFactory;
 use TwitterAPIExchange;
 
 final class TwitterApiWrapper
@@ -57,14 +58,18 @@ final class TwitterApiWrapper
      */
     private array $publishedTweets = [];
 
+    private PublishedTweetFactory $publishedTweetFactory;
+
     public function __construct(
         string $twitterName,
         TwitterAPIExchange $twitterAPIExchange,
-        TweetEntityCompleter $tweetEntityCompleter
+        TweetEntityCompleter $tweetEntityCompleter,
+        PublishedTweetFactory $publishedTweetFactory
     ) {
         $this->twitterName = $twitterName;
         $this->twitterAPIExchange = $twitterAPIExchange;
         $this->tweetEntityCompleter = $tweetEntityCompleter;
+        $this->publishedTweetFactory = $publishedTweetFactory;
     }
 
     /**
@@ -79,7 +84,7 @@ final class TwitterApiWrapper
         $rawTweets = $this->getPublishedTweetsRaw();
         $rawTweets = $this->tweetEntityCompleter->completeOriginalUrlsToText($rawTweets);
 
-        $tweets = $this->createTweetObjectsFromRawTweets($rawTweets);
+        $tweets = $this->publishedTweetFactory->createFromRawTweets($rawTweets);
         $tweets = $this->filterPostTweets($tweets);
 
         return $this->publishedTweets = $tweets;
@@ -123,15 +128,10 @@ final class TwitterApiWrapper
     private function getPublishedTweetsRaw(): array
     {
         $result = $this->getResult();
-        if ($result === []) {
-            return [];
-        }
-
         $currentResult = $result;
 
         // simulate "paging"
         $page = 0;
-
         while (count($currentResult) > 0 && $page < self::MAX_TWEET_PAGES) {
             $lastResult = $result[array_key_last($result)];
 
@@ -215,29 +215,13 @@ final class TwitterApiWrapper
     }
 
     /**
-     * @return PublishedTweet[]
-     */
-    private function createTweetObjectsFromRawTweets(array $rawTweets): array
-    {
-        $tweets = [];
-        foreach ($rawTweets as $fullTweet) {
-            $createdAt = DateTime::from($fullTweet['created_at']);
-
-            $text = trim($fullTweet['text']);
-            $tweets[] = new PublishedTweet($text, $createdAt, $fullTweet['id']);
-        }
-
-        return $tweets;
-    }
-
-    /**
      * @param PublishedTweet[] $tweets
      * @return PublishedTweet[]
      */
     private function filterPostTweets(array $tweets): array
     {
         return array_filter($tweets, function (PublishedTweet $publishedTweet) {
-            return Strings::contains($publishedTweet->getText(), 'New Post on');
+            return Strings::match($publishedTweet->getText(), '#New post on#i');
         });
     }
 
