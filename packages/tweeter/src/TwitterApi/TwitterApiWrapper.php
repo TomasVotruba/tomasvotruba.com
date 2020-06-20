@@ -114,7 +114,11 @@ final class TwitterApiWrapper
         $fileSizeInBytes = $headers['Content-Length'];
         $mediaType = $headers['Content-Type'];
 
-        $chunkLength = 5 * 1024 * 1024;
+        $maxFileSize = 5 * 1024 * 1024;
+
+        if ($fileSizeInBytes > $maxFileSize) {
+            throw new ShouldNotHappenException(sprintf('File "%s" is too big. Make it smaller under 5 MB', $imageFile));
+        }
 
         $response = $this->callPost(self::IMAGE_UPLOAD_URL, [
             'command' => 'INIT',
@@ -123,7 +127,7 @@ final class TwitterApiWrapper
         ]);
 
         $mediaId = $response['media_id'];
-        $this->runImageAppend($imageFile, $chunkLength, $mediaId);
+        $this->runImageAppend($imageFile, $maxFileSize, $mediaId);
 
         $response = $this->callPost(self::IMAGE_UPLOAD_URL, [
             'command' => 'FINALIZE',
