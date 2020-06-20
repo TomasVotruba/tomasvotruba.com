@@ -15,7 +15,7 @@ final class PublishedTweetsFilter
     /**
      * @var PublishedTweet[]
      */
-    private array $publishedTweets = [];
+    private array $publishedPostTweets = [];
 
     public function __construct(TwitterApiWrapper $twitterApiWrapper)
     {
@@ -33,7 +33,7 @@ final class PublishedTweetsFilter
 
     private function wasTweetPublished(Tweet $postTweet): bool
     {
-        foreach ($this->getPublishedTweets() as $publishedTweet) {
+        foreach ($this->getPublishedPostTweets() as $publishedTweet) {
             if ($postTweet->isSimilarToPublishedTweet($publishedTweet)) {
                 return true;
             }
@@ -45,12 +45,14 @@ final class PublishedTweetsFilter
     /**
      * @return PublishedTweet[]
      */
-    private function getPublishedTweets(): array
+    private function getPublishedPostTweets(): array
     {
-        if ($this->publishedTweets !== []) {
-            return $this->publishedTweets;
+        if ($this->publishedPostTweets !== []) {
+            return $this->publishedPostTweets;
         }
 
-        return $this->publishedTweets = $this->twitterApiWrapper->getPublishedTweets();
+        $this->publishedPostTweets = $this->twitterApiWrapper->getPublishedTweets();
+
+        return $this->publishedPostTweets;
     }
 }

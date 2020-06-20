@@ -6,7 +6,7 @@ perex: |
     <br>
     <br>
      But it has an extra price, a lot of new boilerplate code in Kernel. Today you'll learn **how to keep your Kernel Flex-ready and clean at the same time**.
-tweet: "Learn new hack on my  🐘 #php blog: Introducing #Symfony Flex Loader"
+tweet: "New Post on my  🐘 #php blog: Introducing #Symfony Flex Loader"
 tweet_image: "/assets/images/posts/2018/flex-loader/flex-loader.gif"
 ---
 

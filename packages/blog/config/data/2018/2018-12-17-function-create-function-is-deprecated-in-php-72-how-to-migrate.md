@@ -5,7 +5,7 @@ perex: |
     If there would be "Miss Deprecation of PHP 7.2", `create_function()` would definitely win. They can be **very complex, tricky and very hard convert to PHP code**. Moreover without tests.
     <br><br>
     Do you have over 5 `create_function()` pieces in your code? Let's see how to migrate them.
-tweet: "Learn new hack on my  🐘 #php blog: Function create_function() is Deprecated in #PHP 7.2 - How to Migrate?"
+tweet: "New Post on my  🐘 #php blog: Function create_function() is Deprecated in #PHP 7.2 - How to Migrate?"
 tweet_image: "/assets/images/posts/2018/create-function/sonic.png"
 ---
 

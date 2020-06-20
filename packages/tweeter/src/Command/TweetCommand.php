@@ -11,8 +11,8 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
 use TomasVotruba\Tweeter\Configuration\Keys;
-use TomasVotruba\Tweeter\Contract\TweetsProviderInterface;
 use TomasVotruba\Tweeter\TweetFilter\TweetsFilter;
+use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Tweeter\TwitterApi\TwitterApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\Tweet;
 
@@ -24,20 +24,20 @@ final class TweetCommand extends Command
 
     private SymfonyStyle $symfonyStyle;
 
-    private TweetsProviderInterface $tweetsProvider;
+    private PostTweetsProvider $postTweetsProvider;
 
     private TweetsFilter $tweetsFilter;
 
     public function __construct(
         int $twitterMinimalGapInDays,
         TwitterApiWrapper $twitterApiWrapper,
-        TweetsProviderInterface $tweetsProvider,
+        PostTweetsProvider $postTweetsProvider,
         TweetsFilter $tweetsFilter,
         SymfonyStyle $symfonyStyle
     ) {
         $this->twitterMinimalGapInDays = $twitterMinimalGapInDays;
         $this->twitterApiWrapper = $twitterApiWrapper;
-        $this->tweetsProvider = $tweetsProvider;
+        $this->postTweetsProvider = $postTweetsProvider;
         $this->tweetsFilter = $tweetsFilter;
         $this->symfonyStyle = $symfonyStyle;
 
@@ -61,7 +61,7 @@ final class TweetCommand extends Command
             return $this->reportTooSoonToTweet();
         }
 
-        $postTweets = $this->tweetsProvider->provide();
+        $postTweets = $this->postTweetsProvider->provide();
         $postTweets = $this->tweetsFilter->filter($postTweets);
 
         // no tweetable tweet

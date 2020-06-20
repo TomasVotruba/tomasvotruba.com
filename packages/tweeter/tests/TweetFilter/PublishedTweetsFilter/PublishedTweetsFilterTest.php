@@ -6,20 +6,20 @@ namespace TomasVotruba\Tweeter\Tests\TweetFilter\PublishedTweetsFilter;
 
 use TomasVotruba\Tweeter\Tests\AbstractTwitterTestCase;
 use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
-use TomasVotruba\Tweeter\TweetProvider\TweetsProvider;
+use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
 final class PublishedTweetsFilterTest extends AbstractTwitterTestCase
 {
     private PublishedTweetsFilter $publishedTweetsFilter;
 
-    private TweetsProvider $tweetsProvider;
+    private PostTweetsProvider $postTweetsProvider;
 
     protected function setUp(): void
     {
         $this->bootKernel(TomasVotrubaKernel::class);
 
-        $this->tweetsProvider = self::$container->get(TweetsProvider::class);
+        $this->postTweetsProvider = self::$container->get(PostTweetsProvider::class);
         $this->publishedTweetsFilter = self::$container->get(PublishedTweetsFilter::class);
 
         $this->ensureEnvVariablesAreSet();
@@ -27,10 +27,10 @@ final class PublishedTweetsFilterTest extends AbstractTwitterTestCase
 
     public function test(): void
     {
-        $postTweets = $this->tweetsProvider->provide();
-        $this->assertGreaterThan(200, $postTweets);
+        $localPostTweets = $this->postTweetsProvider->provide();
+        $this->assertGreaterThan(200, $localPostTweets);
 
-        $unpublishedTweets = $this->publishedTweetsFilter->filter($postTweets);
+        $unpublishedTweets = $this->publishedTweetsFilter->filter($localPostTweets);
 
         foreach ($unpublishedTweets as $unpublishedTweet) {
             // this tweet is already published, so it should not be here

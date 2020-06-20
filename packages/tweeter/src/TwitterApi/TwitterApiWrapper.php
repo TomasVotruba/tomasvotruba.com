@@ -7,6 +7,7 @@ namespace TomasVotruba\Tweeter\TwitterApi;
 use Nette\Utils\DateTime;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
+use Nette\Utils\Strings;
 use TomasVotruba\Tweeter\Exception\TwitterApi\TwitterApiException;
 use TomasVotruba\Tweeter\TweetEntityCompleter;
 use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
@@ -31,9 +32,19 @@ final class TwitterApiWrapper
 
     /**
      * @var string
-     * @see https://dev.twitter.com/rest/reference/get/statuses/user_timeline
+     * @see https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline
      */
     private const TIMELINE_URL = 'https://api.twitter.com/' . self::API_VERSION . '/statuses/user_timeline.json';
+
+    /**
+     * Dont go beyond 2019-01-01, way too old content
+     */
+    private const FIRST_TWEET_ID = 1_080_944_076_000_817_154;
+
+    /**
+     * @var int
+     */
+    private const MAX_TWEET_PAGES = 4;
 
     private string $twitterName;
 
@@ -44,7 +55,7 @@ final class TwitterApiWrapper
     /**
      * @var PublishedTweet[]
      */
-    private array $rawTweets = [];
+    private array $publishedTweets = [];
 
     public function __construct(
         string $twitterName,
@@ -61,19 +72,17 @@ final class TwitterApiWrapper
      */
     public function getPublishedTweets(): array
     {
-        if ($this->rawTweets !== []) {
-            return $this->rawTweets;
+        if ($this->publishedTweets !== []) {
+            return $this->publishedTweets;
         }
 
         $rawTweets = $this->getPublishedTweetsRaw();
         $rawTweets = $this->tweetEntityCompleter->completeOriginalUrlsToText($rawTweets);
 
-        $tweets = [];
-        foreach ($rawTweets as $fullTweet) {
-            $tweets[] = new PublishedTweet($fullTweet['text']);
-        }
+        $tweets = $this->createTweetObjectsFromRawTweets($rawTweets);
+        $tweets = $this->filterPostTweets($tweets);
 
-        return $this->rawTweets = $tweets;
+        return $this->publishedTweets = $tweets;
     }
 
     public function publishTweet(string $status): void
@@ -113,20 +122,26 @@ final class TwitterApiWrapper
      */
     private function getPublishedTweetsRaw(): array
     {
-        $result = $this->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, [
-            // these will be filtered down by following conditions; at least number of posts
-            'count' => 200,
-            // we don't need any user info
-            'trim_user' => true,
-            // we don't need replies
-            'exclude_replies' => true,
-            // we don't need retweets
-            'include_rts' => false,
-            // this started at 2017-08-20, nothing before
-            'since_id' => 824_225_319_879_987_203,
-        ]);
+        $result = $this->getResult();
+        if ($result === []) {
+            return [];
+        }
 
-        $this->ensureNoError($result);
+        $currentResult = $result;
+
+        // simulate "paging"
+        $page = 0;
+
+        while (count($currentResult) > 0 && $page < self::MAX_TWEET_PAGES) {
+            $lastResult = $result[array_key_last($result)];
+
+            $maxId = $lastResult['id'];
+
+            $currentResult = $this->getResult($maxId);
+            $result = array_merge($result, $currentResult);
+
+            ++$page;
+        }
 
         return $result;
     }
@@ -142,7 +157,10 @@ final class TwitterApiWrapper
             ->buildOauth($endPoint, 'POST')
             ->performRequest();
 
-        return $this->decodeJson($jsonResponse);
+        $json = $this->decodeJson($jsonResponse);
+        $this->ensureNoError($json);
+
+        return $json;
     }
 
     /**
@@ -153,12 +171,17 @@ final class TwitterApiWrapper
     {
         $data['q'] = $query;
 
+        $getfield = '?' . http_build_query($data);
+
         $jsonResponse = $this->getTwitterApiExchange()
-            ->setGetfield('?' . http_build_query($data))
+            ->setGetfield($getfield)
             ->buildOauth($endPoint, 'GET')
             ->performRequest();
 
-        return $this->decodeJson($jsonResponse);
+        $json = $this->decodeJson($jsonResponse);
+        $this->ensureNoError($json);
+
+        return $json;
     }
 
     /**
@@ -189,5 +212,58 @@ final class TwitterApiWrapper
     private function decodeJson(string $jsonResponse): array
     {
         return Json::decode($jsonResponse, Json::FORCE_ARRAY);
+    }
+
+    /**
+     * @return PublishedTweet[]
+     */
+    private function createTweetObjectsFromRawTweets(array $rawTweets): array
+    {
+        $tweets = [];
+        foreach ($rawTweets as $fullTweet) {
+            $createdAt = DateTime::from($fullTweet['created_at']);
+
+            $text = trim($fullTweet['text']);
+            $tweets[] = new PublishedTweet($text, $createdAt, $fullTweet['id']);
+        }
+
+        return $tweets;
+    }
+
+    /**
+     * @param PublishedTweet[] $tweets
+     * @return PublishedTweet[]
+     */
+    private function filterPostTweets(array $tweets): array
+    {
+        return array_filter($tweets, function (PublishedTweet $publishedTweet) {
+            return Strings::contains($publishedTweet->getText(), 'New Post on');
+        });
+    }
+
+    private function getResult(?int $maxId = null): array
+    {
+        $data = [
+            // these will be filtered down by following conditions; at least number of posts
+            'count' => 200,
+            // we don't need any user info
+            'trim_user' => true,
+            // we don't need replies
+            'exclude_replies' => true,
+            // we don't need retweets
+            'include_rts' => false,
+            'since_id' => self::FIRST_TWEET_ID,
+        ];
+
+        if ($maxId !== null) {
+            // we're way back in the past
+            if ($maxId < self::FIRST_TWEET_ID) {
+                return [];
+            }
+
+            $data['max_id'] = $maxId;
+        }
+
+        return $this->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, $data);
     }
 }

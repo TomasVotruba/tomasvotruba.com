@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\Tests;
 
-use TomasVotruba\Tweeter\TweetProvider\TweetsProvider;
+use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
 final class TweetsProviderTest extends AbstractTwitterTestCase
 {
-    private TweetsProvider $postTweetsProvider;
+    private PostTweetsProvider $postTweetsProvider;
 
     protected function setUp(): void
     {
         $this->bootKernel(TomasVotrubaKernel::class);
 
-        $this->postTweetsProvider = self::$container->get(TweetsProvider::class);
+        $this->postTweetsProvider = self::$container->get(PostTweetsProvider::class);
 
         $this->ensureEnvVariablesAreSet();
     }
