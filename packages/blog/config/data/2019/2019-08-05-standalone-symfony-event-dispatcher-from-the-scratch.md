@@ -5,7 +5,7 @@ perex: |
     Have you ever used Symfony Event Dispatcher? No?
     <br>
     <br>
-    This post is introduction to Event Dispatcher, how to use it and in the end you'll be able to cover 90 % use cases you'll ever need.
+    This post is an introduction to Event Dispatcher, how to use it, and in the end, you'll be able to cover 90 % use cases you'll ever need.
 
 tweet: "New Post on #php 🐘 blog: #symfony Event Dispatcher from the Scratch"
 tweet_image: "/assets/images/posts/2019/event_dispatcher_tweet.png"
@@ -15,15 +15,15 @@ updated_message: |
     Updated with Symfony [4.3 simple dispatching](https://symfony.com/blog/new-in-symfony-4-3-simpler-event-dispatching), PHP 7.4 syntax and [`::class`-based event names](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher).
 ---
 
-## What is Main Purpose of Event Dispatcher?
+## What is the Main Purpose of Event Dispatcher?
 
-- **Extend an application** in some place **without putting any code right there**.
+- **Extend an application** in a certain place **without putting any code right there**.
 
 <br>
 
-This way you can extend 3rd party packages without rewriting them. And also allow other users to extend your code without even touching it.
+This way, you can extend 3rd party packages without rewriting them. And also allow other users to reach your code without even touching it.
 
-Not sure how that looks? You will - in the end of this article.
+Not sure how that looks? You will - at the end of this article.
 
 
 ### Event Dispatcher
@@ -33,13 +33,14 @@ Not sure how that looks? You will - in the end of this article.
 
 ### Event
 
-**This is name of a place**. When something has happened in application: *order is sent*,
-or *user is deleted*.
+**This is the name of a place**. When something has happened in the application: *order is sent*, or *user is deleted*.
 
 
 ### Event Subscriber
 
-This is **the action that happens when** we come to some place. When order is sent (= Event), *send me a confirmation sms* (= Event Subscriber). And *check that all the ordered products are on stock*. This means, that **1 event can invoke MORE Event Subscribers**.
+This is **the action that happens when** we come to a specific event. When an order is sent (= Event), *send me a confirmation SMS* (= Event Subscriber). And *check that all the ordered products are on stock*.
+
+**1 event can invoke MORE Event Subscribers**.
 
 
 ## Create First Subscriber in 3 Steps
@@ -73,7 +74,7 @@ php index.php
 
 Wow! Nothing happened...
 
-That's ok, because there is no Subscriber. So let's...
+That's ok because there is no Subscriber. So let's...
 
 
 ### 3. Create and Register Subscriber
@@ -138,7 +139,7 @@ What if we need to get the name of the Youtuber into the Subscriber?
 
 ## Event Objects to the Rescue!
 
-The Event objects are basically [Value Objects](http://richardmiller.co.uk/2014/11/06/value-objects/). Pass a value in constructor and get it with getter.
+The Event objects are basically [Value Objects](http://richardmiller.co.uk/2014/11/06/value-objects/). Pass a value in the constructor and get it with getter.
 
 
 ### 1. Create an Event Object
@@ -205,13 +206,13 @@ You can now:
 
 - understand basic Event workflow
 - know what EventDispatcher and EventSubscriber are for
-- and know how to pass parameters via Event object
+- and know-how to pass parameters via the Event object
 
 ### Where to go next?
 
-Still hungry for knowledge? Go check [Symfony documentation](http://symfony.com/doc/current/components/event_dispatcher.html) then.
+Still hungry for knowledge? Check [Symfony documentation](http://symfony.com/doc/current/components/event_dispatcher.html) then.
 
-But remember: **practise is the best teacher**.
+But remember: ** practice is the best teacher**.
 
 <br><br>
 
