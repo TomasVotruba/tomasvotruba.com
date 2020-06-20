@@ -24,7 +24,7 @@ Honor exceptions like <a href="https://twitter.com/sput_nika">Veronika Hlaváčo
 
 ### Open-Source Everything
 
-And you don't have to take my word for it. Do you know Github? It was founded in 2008 by 3 guys. One of them Tom Preston-Werner who wrote a post about investors vs. values in *[Optimize for Happiness](http://tom.preston-werner.com/2010/10/18/optimize-for-happiness.html)* and **also *[Open Source (Almost) Everything](http://tom.preston-werner.com/2011/11/22/open-source-everything.html)***. If you
+And you don't have to take my word for it. Do you know Github? It was founded in 2008 by 3 guys. One of them Tom Preston-Werner who wrote a post about investors vs. values in *[Optimize for Happiness](https://tom.preston-werner.com/2010/10/18/optimize-for-happiness.html)* and **also *[Open Source (Almost) Everything](https://tom.preston-werner.com/2011/11/22/open-source-everything.html)***. If you
 have only 5 minutes to read a post today, go read one of them instead. It's well of pure wisdom.
 
 I found this post 2 weeks after my talk and I must say, I was surprised how many ideas I share with him. 7 years prior to my talk! Tom shares great insight on how to run a huge company while keeping human values in the center.

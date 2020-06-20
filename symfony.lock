@@ -59,6 +59,9 @@
     "guzzlehttp/psr7": {
         "version": "1.6.1"
     },
+    "intervention/image": {
+        "version": "2.5.1"
+    },
     "j7mbo/twitter-api-php": {
         "version": "1.0.6"
     },
@@ -67,6 +70,12 @@
     },
     "jetbrains/phpstorm-stubs": {
         "version": "v2019.3"
+    },
+    "league/flysystem": {
+        "version": "1.0.69"
+    },
+    "league/glide": {
+        "version": "1.5.0"
     },
     "migrify/latte-to-twig": {
         "version": "dev-master"
@@ -85,6 +94,9 @@
     },
     "nette/utils": {
         "version": "v3.1.1"
+    },
+    "nicmart/tree": {
+        "version": "v0.2.7"
     },
     "nikic/php-parser": {
         "version": "v4.3.0"
@@ -226,6 +238,27 @@
     "slevomat/coding-standard": {
         "version": "6.1.5"
     },
+    "spatie/browsershot": {
+        "version": "3.37.0"
+    },
+    "spatie/crawler": {
+        "version": "4.7.2"
+    },
+    "spatie/http-status-check": {
+        "version": "3.2.0"
+    },
+    "spatie/image": {
+        "version": "1.7.6"
+    },
+    "spatie/image-optimizer": {
+        "version": "1.2.1"
+    },
+    "spatie/robots-txt": {
+        "version": "1.0.7"
+    },
+    "spatie/temporary-directory": {
+        "version": "1.2.3"
+    },
     "squizlabs/php_codesniffer": {
         "version": "3.0",
         "recipe": {
@@ -265,6 +298,9 @@
     },
     "symfony/dependency-injection": {
         "version": "v5.0.5"
+    },
+    "symfony/dom-crawler": {
+        "version": "v5.1.2"
     },
     "symfony/dotenv": {
         "version": "v5.0.5"
@@ -345,6 +381,9 @@
     },
     "symfony/polyfill-php73": {
         "version": "v1.14.0"
+    },
+    "symfony/polyfill-php80": {
+        "version": "v1.17.0"
     },
     "symfony/process": {
         "version": "v5.0.5"
@@ -439,6 +478,9 @@
     },
     "theseer/tokenizer": {
         "version": "1.1.3"
+    },
+    "tightenco/collect": {
+        "version": "v7.12.0"
     },
     "tracy/tracy": {
         "version": "v2.7.3"

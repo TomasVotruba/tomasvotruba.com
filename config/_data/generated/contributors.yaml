@@ -1,4 +1,4 @@
-# this file was generated on 2020-03-17 23:12:20, do not edit it manually
+# this file was generated on 2020-06-20 14:15:17, do not edit it manually
 parameters:
     contributors:
         -
@@ -20,12 +20,12 @@ parameters:
             name: tavy315
             url: 'https://github.com/tavy315'
             photo: 'https://avatars2.githubusercontent.com/u/6184412?v=4'
-            contribution_count: 9
+            contribution_count: 10
         -
             name: vrbata
             url: 'https://github.com/vrbata'
             photo: 'https://avatars1.githubusercontent.com/u/8536429?v=4'
-            contribution_count: 8
+            contribution_count: 9
         -
             name: ondrejmirtes
             url: 'https://github.com/ondrejmirtes'
@@ -165,6 +165,16 @@ parameters:
             name: natepage
             url: 'https://github.com/natepage'
             photo: 'https://avatars0.githubusercontent.com/u/11576446?v=4'
+            contribution_count: 2
+        -
+            name: bhaal-nig
+            url: 'https://github.com/bhaal-nig'
+            photo: 'https://avatars2.githubusercontent.com/u/46928405?v=4'
+            contribution_count: 2
+        -
+            name: cafferata
+            url: 'https://github.com/cafferata'
+            photo: 'https://avatars2.githubusercontent.com/u/1150425?v=4'
             contribution_count: 2
         -
             name: Zemistr
@@ -422,11 +432,6 @@ parameters:
             photo: 'https://avatars2.githubusercontent.com/u/22901?v=4'
             contribution_count: 1
         -
-            name: Mandy91
-            url: 'https://github.com/Mandy91'
-            photo: 'https://avatars0.githubusercontent.com/u/2277717?v=4'
-            contribution_count: 1
-        -
             name: DeyV
             url: 'https://github.com/DeyV'
             photo: 'https://avatars0.githubusercontent.com/u/311626?v=4'
@@ -445,4 +450,19 @@ parameters:
             name: honzajavorek
             url: 'https://github.com/honzajavorek'
             photo: 'https://avatars0.githubusercontent.com/u/283441?v=4'
+            contribution_count: 1
+        -
+            name: staabm
+            url: 'https://github.com/staabm'
+            photo: 'https://avatars2.githubusercontent.com/u/120441?v=4'
+            contribution_count: 1
+        -
+            name: adaamz
+            url: 'https://github.com/adaamz'
+            photo: 'https://avatars0.githubusercontent.com/u/4347332?v=4'
+            contribution_count: 1
+        -
+            name: andrew-demb
+            url: 'https://github.com/andrew-demb'
+            photo: 'https://avatars2.githubusercontent.com/u/12499813?v=4'
             contribution_count: 1

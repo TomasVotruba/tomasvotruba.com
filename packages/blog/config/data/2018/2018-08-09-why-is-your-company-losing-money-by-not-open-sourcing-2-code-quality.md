@@ -68,7 +68,7 @@ A reminder this is not solely about the money. You can save money for private Gi
 
 ## 3. How to Pay Top PHP Mentors 0 $
 
-Tom Preston-Werner, one of Github founders <a href="http://tom.preston-werner.com/2011/11/22/open-source-everything.html">wrote</a>:
+Tom Preston-Werner, one of Github founders [wrote](https://tom.preston-werner.com/2011/11/22/open-source-everything.html):
 
 <blockquote class="blockquote">
     "<strong>Smart people like to hang out with other smart people. Smart developers like to hang out with smart code</strong>. When you open source useful code, you attract talent. Every time a talented developer cracks open the code to one of your projects, you win. I've had many great conversations at tech conferences about my open source code. Some of these encounters have led to ideas that directly resulted in better solutions to problems I was having with my projects. In an industry with such a huge range of creativity and productivity between developers, the right eyeballs on your code can make a big difference."

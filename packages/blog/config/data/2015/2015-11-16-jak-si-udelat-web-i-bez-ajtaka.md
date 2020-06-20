@@ -56,8 +56,7 @@ Stránky můžeš mít umístěné na Github zdarma. Github je sociální síť 
         <em>Klikni na tlačítko "fork"</em>
     </div>
     <br>
-3. mé stránky už teď najdeš na adrese [tomasvotruba.github.io/php7.cz](http://tomasvotruba.github.io/php7.cz)
-4. ty své pak na `http://<tve-jmeno>.github.io/<tva-domena>.cz`
+3. stránku najdeš `http://<tve-jmeno>.github.io/<tva-domena>.cz`
 
 
 ### 3. Propojení domény a webu
