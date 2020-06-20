@@ -13,13 +13,13 @@ final class PublishedTweetsFilterTest extends AbstractKernelTestCase
 {
     private PublishedTweetsFilter $publishedTweetsFilter;
 
-    private TweetsProvider $postTweetsProvider;
+    private TweetsProvider $tweetsProvider;
 
     protected function setUp(): void
     {
         $this->bootKernel(TomasVotrubaKernel::class);
 
-        $this->postTweetsProvider = self::$container->get(TweetsProvider::class);
+        $this->tweetsProvider = self::$container->get(TweetsProvider::class);
         $this->publishedTweetsFilter = self::$container->get(PublishedTweetsFilter::class);
     }
 
@@ -29,8 +29,8 @@ final class PublishedTweetsFilterTest extends AbstractKernelTestCase
             $this->markTestSkipped('Run Twitter test only with access tokens.');
         }
 
-        $postTweets = $this->postTweetsProvider->provide();
-        $this->assertCount(1, $postTweets);
+        $postTweets = $this->tweetsProvider->provide();
+        $this->assertGreaterThan(200, $postTweets);
 
         $unpublishedTweets = $this->publishedTweetsFilter->filter($postTweets);
 
