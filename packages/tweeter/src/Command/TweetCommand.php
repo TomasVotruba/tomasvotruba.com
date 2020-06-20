@@ -80,7 +80,8 @@ final class TweetCommand extends Command
         $tweet = array_shift($postTweets);
         $this->tweet($tweet);
 
-        $this->symfonyStyle->success(sprintf('Tweet "%s" was successfully published.', $tweet->getText()));
+        $message = sprintf('Tweet "%s" was successfully published.', $tweet->getText());
+        $this->symfonyStyle->success($message);
 
         return ShellCode::SUCCESS;
     }

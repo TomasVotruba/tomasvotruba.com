@@ -8,6 +8,7 @@ use Nette\Utils\DateTime;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
 use Nette\Utils\Strings;
+use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
 use TomasVotruba\Tweeter\Exception\TwitterApi\TwitterApiException;
 use TomasVotruba\Tweeter\TweetEntityCompleter;
 use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
@@ -23,6 +24,7 @@ final class TwitterApiWrapper
 
     /**
      * @var string
+     * @see https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload
      */
     private const IMAGE_UPLOAD_URL = 'https://upload.twitter.com/' . self::API_VERSION . '/media/upload.json';
 
@@ -104,13 +106,33 @@ final class TwitterApiWrapper
      */
     public function publishTweetWithImage(string $status, string $imageFile): void
     {
-        $media = $this->callPost(self::IMAGE_UPLOAD_URL, [
-            'media' => base64_encode(FileSystem::read($imageFile)),
+        $headers = get_headers($imageFile, 1);
+        if (! is_array($headers)) {
+            throw new ShouldNotHappenException();
+        }
+
+        $fileSizeInBytes = $headers['Content-Length'];
+        $mediaType = $headers['Content-Type'];
+
+        $chunkLength = 5 * 1024 * 1024;
+
+        $response = $this->callPost(self::IMAGE_UPLOAD_URL, [
+            'command' => 'INIT',
+            'total_bytes' => $fileSizeInBytes,
+            'media_type' => $mediaType,
+        ]);
+
+        $mediaId = $response['media_id'];
+        $this->runImageAppend($imageFile, $chunkLength, $mediaId);
+
+        $response = $this->callPost(self::IMAGE_UPLOAD_URL, [
+            'command' => 'FINALIZE',
+            'media_id' => $mediaId,
         ]);
 
         $this->callPost(self::UPDATE_URL, [
             'status' => $status,
-            'media_ids' => $media['media_id'],
+            'media_ids' => $response['media_id'],
         ]);
     }
 
@@ -160,7 +182,12 @@ final class TwitterApiWrapper
             ->buildOauth($endPoint, 'POST')
             ->performRequest();
 
+        if ($jsonResponse === '') {
+            return [];
+        }
+
         $json = $this->decodeJson($jsonResponse);
+
         $this->ensureNoError($json);
 
         return $json;
@@ -252,5 +279,38 @@ final class TwitterApiWrapper
         }
 
         return $this->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, $data);
+    }
+
+    /**
+     * @see https://www.askingbox.com/question/php-result-of-chunk-split-as-array
+     */
+    private function chunkSplitArray(string $content, int $chunklen): array
+    {
+        $result = [];
+        $k = ceil(strlen($content) / $chunklen);
+
+        for ($i = 0; $i < $k; $i++) {
+            $result[] = substr($content, $i * $chunklen, $chunklen);
+        }
+
+        return $result;
+    }
+
+    private function runImageAppend(string $imageFile, int $chunkLength, int $mediaId): void
+    {
+        $based64EncodedBinaryFile = base64_encode(FileSystem::read($imageFile));
+
+        // max size is 5 MB per chunk
+        $chunks = $this->chunkSplitArray($based64EncodedBinaryFile, $chunkLength);
+
+        foreach ($chunks as $index => $chunk) {
+            // just 200 response
+            $this->callPost(self::IMAGE_UPLOAD_URL, [
+                'command' => 'APPEND',
+                'media_id' => $mediaId,
+                'media' => $chunk,
+                'segment_index' => $index,
+            ]);
+        }
     }
 }
