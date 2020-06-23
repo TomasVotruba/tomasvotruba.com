@@ -79,7 +79,7 @@ Symplify is introducing a small handy package - [FlexLoader](https://github.com/
 
 How does FlexLoader look in practice?
 
-<img class="gifplayer" src="/assets/images/posts/2018/flex-loader/flex-loader.png" data-gif="/assets/images/posts/2018/flex-loader/flex-loader.gif" data-playon="click">
+<img src="/assets/images/posts/2018/flex-loader/flex-loader.gif">
 
 <br>
 
