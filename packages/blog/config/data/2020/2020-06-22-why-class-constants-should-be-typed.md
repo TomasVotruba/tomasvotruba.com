@@ -1,6 +1,6 @@
 ---
 id: 264
-title: "Why Class&nbspConstants Should&nbsp;be&nbsp;Typed"
+title: "Why Class&nbsp;Constants Should&nbsp;be&nbsp;Typed"
 perex: |
     Do you used PHP 7.4 [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds/)? Do you know why?
     <br>
