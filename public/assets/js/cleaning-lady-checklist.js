@@ -12,7 +12,12 @@ $(function() {
     var project_name = window.localStorage.getItem('project_name');
     var keyname = project_name + '_cleaning_lady_items';
 
-    document.getElementById('project_name').value = project_name;
+    var project_name_input = document.getElementById('project_name');
+    if (project_name_input == null) {
+        return;
+    }
+
+    project_name_input.value = project_name;
 
     // If is not set, create it
     if (window.localStorage.getItem(keyname) == null) {
