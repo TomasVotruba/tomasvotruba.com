@@ -2,7 +2,7 @@
 id: 264
 title: "Why Class&nbsp;Constants Should&nbsp;be&nbsp;Typed"
 perex: |
-    Do you used PHP 7.4 [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds/)? Do you know why?
+    Do you use PHP 7.4 [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds/)? Do you know why?
     <br>
     <br>
     I use them, so **I don't have to think and validate the property type** every time. We just know its the type or PHP would crash otherwise.
@@ -37,7 +37,7 @@ final class Person
 $name = new Person(20_20);
 ```
 
-You would not the `Name` object like this, right?
+You would not use the `Name` object like this, right?
 
 <br>
 
