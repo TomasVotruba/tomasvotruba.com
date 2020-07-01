@@ -84,7 +84,7 @@ A new project that will connect companies and open-source contributors will be c
 
 **An open-source developer will become a new full-time position** funded by this project.
 
-What do you get these companies in reward? Promotion in the particular community, pre-release automated upgrade sets, and on-demand access to expert consultants who wrote the open-source projects they use.
+What do these companies get in reward? Promotion in the particular community, pre-release automated upgrade sets, and on-demand access to expert consultants who wrote the open-source projects they use.
 
 ## Framework Consolidation
 
@@ -118,7 +118,7 @@ The same BC break analysis will be possible for any RFC in PHP core code. Do you
 
 ### "BC Break" Redefined
 
-The AI will also help you to generate migration AST recipes, so the instant upgrade can entirely handle the BC break. That would lead to a redefinition of "BC break" as we know it today. The BC break would only occur when automated upgraded cannot happen, and a human is needed to change the code.
+The AI will also help you to generate migration AST recipes, so the instant upgrade can entirely handle the BC break. That would lead to a redefinition of "BC break" as we know it today. The BC break would only occur when automated upgrade cannot happen, and a human is needed to change the code.
 
 ### Try RFC Locally
 
