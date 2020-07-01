@@ -137,7 +137,7 @@ This allows us to experiment more, verify our assumptions, and have real-life fe
 <br>
 
 <blockquote class="blockquote text-center">
-"The best way to predict the future is to to create it."
+"The best way to predict the future<br>is to create it."
 </blockquote>
 
 <br>
