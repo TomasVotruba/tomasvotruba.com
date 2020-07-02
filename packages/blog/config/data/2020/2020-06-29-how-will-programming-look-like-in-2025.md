@@ -13,7 +13,7 @@ tweet: "New Post on #php 🐘 blog: How Will Programming look like in 2025?"
 tweet_image: "/assets/images/posts/2020/how_will_2025.png"
 ---
 
-Today we fight with technical dept, whatever that means, old legacy code that is hard to maintain, expensive to change, but also the biggest power that generates money. We should upgrade code, integrate DDD, write tests, upgrade PHP to secure it, update the server, and automate the deploy.
+Today we fight with technical debt, whatever that means, old legacy code that is hard to maintain, expensive to change, but also the biggest power that generates money. We should upgrade code, integrate DDD, write tests, upgrade PHP to secure it, update the server, and automate the deploy.
 
 So much daunting work and we didn't even look at those other dozens of projects our company maintains... or at least stores on our servers, somewhere. We need to hire an expert that helps us to improve each piece just a little. Not because they're not good, just because there are too many technologies we can use and even more code we have to maintain.
 
@@ -31,7 +31,7 @@ Thanks to the massive amount of anonymous data and data from public repositories
 
 When we say "best practice", we don't mean what I or somebody else wrote in a post or book based on a few personal experiences. These opinions are often based only on coupled of projects and the single opinionated human mind with feelings.
 
-Best Practise will shift to Verified Practise, based on real data related to 2 hard metrics - *technical debt* and *coding effectivity*. **Technical dept** will be financial that shows how much each line of code will cost in the future. Do you write fluent static code without classes with types? The line might show 10 $. Do you write final classes with types and one public method? The line might show 2 $.
+Best Practise will shift to Verified Practise, based on real data related to 2 hard metrics - *technical debt* and *coding effectivity*. **Technical debt** will be financial that shows how much each line of code will cost in the future. Do you write fluent static code without classes with types? The line might show 10 $. Do you write final classes with types and one public method? The line might show 2 $.
 
 These numbers will not be random, but based on the continual colossal amount of big data analysis - still anonymous - from all the private projects that want to use this feature. The code will be compared to money expenses that were needed to maintain and improve the code. Thanks to this feedback, the AI will also know what version is cheaper for your specific project.
 
@@ -51,8 +51,8 @@ Refactoring will also be more powerful than today. It will be based on abstract-
 
 Instead of "best practice" subjective claims, you will know that:
 
- - solution A will cost you 3 $ per line in technical dept, will be 95 in effectiveness and 45 in performance
- - solution B will cost you 1 $ per line of technical dept, and the effectiveness will be 70 and performance 50
+ - solution A will cost you 3 $ per line in technical debt, will be 95 in effectiveness and 45 in performance
+ - solution B will cost you 1 $ per line of technical debt, and the effectiveness will be 70 and performance 50
 
 Do you build a startup and want to verify your idea? You'll pick A. Is your company stable, and does it need to be robust in the future? Go for slower-growing yet more stable B.
 
