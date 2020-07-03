@@ -71,15 +71,15 @@ These options are slow or will keep the code changed only on your local machine 
 
 <br>
 
+Is there some automated way with all the benefits and almost zero maintenance?
 
-
-- use [composer patches](https://github.com/cweagans/composer-patches)
+- [composer patches](https://github.com/cweagans/composer-patches)
 
 <em class="fas fa-check text-success margin-auto fa-2x"></em>
 
 ## Patching For Dummies
 
-Original [composer patches](https://github.com/cweagans/composer-patches) work great, but the user experience not so much. It's classic pixel coding - you have to edit the patch file the one slash or dot char. If you do it wrong, or the whole process collides with "fatal error". That's why there is [over 10 comments under Czech post by Tomas Pilar](https://pehapkari.cz/blog/2017/01/20/jak-snadno-a-rychle-upravovat-soubory-ve-vendoru), asking about the pixel coding.
+Idea behind [composer patches](https://github.com/cweagans/composer-patches) is great, but the user experience with making the patch not so much. It's classic pixel coding - you have to edit the patch file the one slash or dot char. If you do it wrong, or the whole process collides with "fatal error". That's why there is [over 10 comments under Czech post by Tomas Pilar](https://pehapkari.cz/blog/2017/01/20/jak-snadno-a-rychle-upravovat-soubory-ve-vendoru), asking about the pixel coding.
 
 I don't want developers to be frustrated over pixel coding. I want developers to play and explore their abilities to their limits.
 
