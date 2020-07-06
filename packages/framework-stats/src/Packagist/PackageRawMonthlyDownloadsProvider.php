@@ -15,6 +15,11 @@ final class PackageRawMonthlyDownloadsProvider
      */
     private const URL_DOWNLOAD_STATS = 'https://packagist.org/packages/%s/stats/all.json?average=monthly';
 
+    /**
+     * @var string
+     */
+    private const VALUES = 'values';
+
     private FileToJsonLoader $fileToJsonLoader;
 
     public function __construct(FileToJsonLoader $fileToJsonLoader)
@@ -30,16 +35,16 @@ final class PackageRawMonthlyDownloadsProvider
         $url = sprintf(self::URL_DOWNLOAD_STATS, $packageName);
         $json = $this->fileToJsonLoader->load($url);
 
-        if (! isset($json['values'])) {
+        if (! isset($json[self::VALUES])) {
             throw new ShouldNotHappenException();
         }
 
         // some package don't have stats yet
-        if (! isset($json['values'][$packageName])) {
+        if (! isset($json[self::VALUES][$packageName])) {
             return [];
         }
 
-        $values = array_combine($json['labels'], $json['values'][$packageName]);
+        $values = array_combine($json['labels'], $json[self::VALUES][$packageName]);
         if (! $values) {
             throw new ShouldNotHappenException();
         }
