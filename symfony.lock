@@ -71,9 +71,6 @@
     "jean85/pretty-package-versions": {
         "version": "1.2"
     },
-    "jetbrains/phpstorm-stubs": {
-        "version": "v2019.3"
-    },
     "league/flysystem": {
         "version": "1.0.69"
     },

@@ -108,12 +108,13 @@ final class PackageDataFactory
     {
         // not enough data, package younger than 24 months → skip it
         if (count($monthlyDownloads) < self::MINIMAL_MONTH_AGE - 1) {
-            $this->symfonyStyle->note(sprintf(
+            $skippingReasonMessage = sprintf(
                 'Skipping "%s" package for not enough data. %d months provided, %d needed',
                 $packageName,
                 count($monthlyDownloads),
                 self::MINIMAL_MONTH_AGE
-            ));
+            );
+            $this->symfonyStyle->note($skippingReasonMessage);
 
             return true;
         }
@@ -132,12 +133,13 @@ final class PackageDataFactory
 
         // too small package → skip it
         if ($lastMonthDailyDownloads <= self::MIN_DOWNLOADS_LIMIT) {
-            $this->symfonyStyle->note(sprintf(
+            $skippingReasonMessage = sprintf(
                 'Skipping "%s" package for not enough downloads last month. %d provided, %d needed',
                 $packageName,
                 $lastMonthDailyDownloads,
                 self::MIN_DOWNLOADS_LIMIT
-            ));
+            );
+            $this->symfonyStyle->note($skippingReasonMessage);
 
             return true;
         }

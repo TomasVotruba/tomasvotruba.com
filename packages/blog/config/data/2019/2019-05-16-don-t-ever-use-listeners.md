@@ -42,7 +42,7 @@ That's how you write a manipulative text if you wanted people to never use subsc
     - What's the name of event - `kernel_exception` or `kernel.error`? Well, neither
 - What will you do if name of Kernel event will change? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
 - How do you analyse it with PHPStan? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- How do you upgrade it with Rector, when Symfony will create a [BC break](https://symfony.com/blog/new-in-symfony-4-3-simpler-event-dispatching) [change](https://pehapkari.cz/blog/2017/07/12/the-bulletproof-event-naming-for-symfony-event-dispatcher/)? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- How do you upgrade it with Rector, when Symfony will create a [BC break](https://symfony.com/blog/new-in-symfony-4-3-simpler-event-dispatching) [change](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher/)? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
 - What if you decide to migrate to Laravel or the *new best framework X* later? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
 
 All these problems will shoot you or your colleague in the back in the future. **You've just opened doors for 6 more possible bugs and problems** to come to your project #carpeyolodiem.

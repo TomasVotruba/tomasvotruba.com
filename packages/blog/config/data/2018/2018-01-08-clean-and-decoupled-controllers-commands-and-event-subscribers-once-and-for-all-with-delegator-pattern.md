@@ -100,7 +100,7 @@ Little we know, here starts our [Broken Window Theory](https://blog.codinghorror
 
 ### 2016 - Add few Commands
 
-Application grows and the size needs pre-caching handled by running commands in CRON. So you start using [Symfony\Console](https://pehapkari.cz/blog/2017/01/05/symfony-console-from-scratch/). You get inspired by `Controller`, because `Command` looks like it and by the end of year, there are many command like this one:
+Application grows and the size needs pre-caching handled by running commands in CRON. So you start using [Symfony\Console](/blog/2019/08/12/standalone-symfony-console-from-scratch/). You get inspired by `Controller`, because `Command` looks like it and by the end of year, there are many command like this one:
 
 ```php
 class CacheProductsCommand extends Command
@@ -127,7 +127,7 @@ class CacheProductsCommand extends Command
 
 ### 2017 - Add just few more EventSubscribers
 
-It's 2017, AI is on hype and you start thinking about product recommendation feature. You use [EventSubscribers](https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/) that saves many information about user behavior and return best producs just for him.
+It's 2017, AI is on hype and you start thinking about product recommendation feature. You use [EventSubscribers](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch/) that saves many information about user behavior and return best producs just for him.
 
 ```php
 class RecommendedProductsEventSubscriber implements EventSubscriber

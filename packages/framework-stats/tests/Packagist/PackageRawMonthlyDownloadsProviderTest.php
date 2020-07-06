@@ -26,7 +26,8 @@ final class PackageRawMonthlyDownloadsProviderTest extends AbstractKernelTestCas
             'symplify/package-builder'
         );
 
-        $this->assertGreaterThan(10, count($symplifyPackageBuilderStats));
+        $statsCount = count($symplifyPackageBuilderStats);
+        $this->assertGreaterThan(10, $statsCount);
 
         $previousMonth = DateTime::from('- 2 months')->format('Y-m');
 

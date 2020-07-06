@@ -48,7 +48,8 @@ final class TweetCommand extends Command
     protected function configure(): void
     {
         $this->setName(CommandNaming::classToName(self::class));
-        $this->setDescription(sprintf('Publish new tweet from post "%s:" config', Keys::TWEET));
+        $description = sprintf('Publish new tweet from post "%s:" config', Keys::TWEET);
+        $this->setDescription($description);
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -70,7 +71,9 @@ final class TweetCommand extends Command
             return $this->reportNoNewTweet();
         }
 
-        $this->symfonyStyle->title(sprintf('Picking from %d tweets', count($postTweets)));
+        $tweetCountMessage = sprintf('Picking from %d tweets', count($postTweets));
+        $this->symfonyStyle->title($tweetCountMessage);
+
         foreach ($postTweets as $postTweet) {
             $this->symfonyStyle->writeln(' * ' . $postTweet->getText());
             $this->symfonyStyle->newLine(2);
@@ -98,21 +101,23 @@ final class TweetCommand extends Command
     {
         $daysSinceLastTweet = $this->twitterPostApiWrapper->getDaysSinceLastTweet();
 
-        $this->symfonyStyle->warning(sprintf(
+        $toSoonMessage = sprintf(
             'Only %d days passed since last tweet. Minimal gap is %d days, so no tweet until then.',
             $daysSinceLastTweet,
             $this->twitterMinimalGapInDays
-        ));
+        );
+        $this->symfonyStyle->warning($toSoonMessage);
 
         return ShellCode::SUCCESS;
     }
 
     private function reportNoNewTweet(): int
     {
-        $this->symfonyStyle->warning(sprintf(
+        $noTweetMessage = sprintf(
             'There is no new tweet to publish. Add a new one to one of your post under "%s:" option.',
             Keys::TWEET
-        ));
+        );
+        $this->symfonyStyle->warning($noTweetMessage);
 
         return ShellCode::SUCCESS;
     }

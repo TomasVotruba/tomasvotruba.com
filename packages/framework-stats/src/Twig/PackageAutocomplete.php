@@ -6,13 +6,13 @@ namespace TomasVotruba\FrameworkStats\Twig;
 
 final class PackageAutocomplete
 {
-    public string $package_short_name;
+    public string $packageShortName;
 
-    public string $package_name;
+    public string $packageName;
 
-    public float $last_year_trend;
+    public float $lastYearTrend;
 
-    public int $last_12_months;
+    public int $last12Months;
 
-    public int $previous_12_months;
+    public int $previous12Months;
 }

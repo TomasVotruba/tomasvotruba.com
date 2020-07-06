@@ -22,6 +22,16 @@ final class TwitterImageApiWrapper
      */
     private const MAX_IMAGE_FILE_SIZE = 5 * 1024 * 1024;
 
+    /**
+     * @var string
+     */
+    private const COMMAND = 'command';
+
+    /**
+     * @var string
+     */
+    private const MEDIA_ID = 'media_id';
+
     private TwitterApiCaller $twitterApiCaller;
 
     public function __construct(TwitterApiCaller $twitterApiCaller)
@@ -52,17 +62,17 @@ final class TwitterImageApiWrapper
         }
 
         $response = $this->twitterApiCaller->callPost(self::IMAGE_UPLOAD_URL, [
-            'command' => 'INIT',
+            self::COMMAND => 'INIT',
             'total_bytes' => $fileSizeInBytes,
             'media_type' => $mediaType,
         ]);
 
-        $mediaId = $response['media_id'];
+        $mediaId = $response[self::MEDIA_ID];
         $this->runImageAppend($imageFile, $mediaId);
 
         return $this->twitterApiCaller-> callPost(self::IMAGE_UPLOAD_URL, [
-            'command' => 'FINALIZE',
-            'media_id' => $mediaId,
+            self::COMMAND => 'FINALIZE',
+            self::MEDIA_ID => $mediaId,
         ]);
     }
 
@@ -72,8 +82,8 @@ final class TwitterImageApiWrapper
 
         // just 200 response
         $this->twitterApiCaller->callPost(self::IMAGE_UPLOAD_URL, [
-            'command' => 'APPEND',
-            'media_id' => $mediaId,
+            self::COMMAND => 'APPEND',
+            self::MEDIA_ID => $mediaId,
             'media' => $based64EncodedBinaryFile,
             'segment_index' => 0,
         ]);

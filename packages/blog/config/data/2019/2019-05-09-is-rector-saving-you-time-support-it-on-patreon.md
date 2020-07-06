@@ -9,7 +9,7 @@ tweet: "New Post on a #php 🐘 blog: Is Rector Saving you Time? Support it on P
 tweet_image: "/assets/images/posts/2019/patreon/rector_and_patreon.png"
 ---
 
-Rector can squash time that requires migration of 100 000 lines of code from 2-3 months to 5 days. We already made that happen [with Nette to Symfony migration](https://pehapkari.cz/blog/2019/04/20/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/).
+Rector can squash time that requires migration of 100 000 lines of code from 2-3 months to 5 days. We already made that happen [with Nette to Symfony migration](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/).
 
 I want to make Rector even better - make **migration of legacy code more affordable to anyone**, let you instantly upgrade from an old framework that is not supported over 5 years to the newest version or even switch from framework that is no more useful to you to a one you want to use for age.
 

@@ -8,6 +8,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symplify\PackageBuilder\Console\ShellCode;
 
 final class HashPasswordCommand extends Command
 {
@@ -24,8 +25,9 @@ final class HashPasswordCommand extends Command
 
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
-        $output->writeln(sprintf('Your hashed password is: <info>%s</info>', $hashedPassword));
+        $message = sprintf('Your hashed password is: <info>%s</info>', $hashedPassword);
+        $output->writeln($message);
 
-        return 0;
+        return ShellCode::SUCCESS;
     }
 }

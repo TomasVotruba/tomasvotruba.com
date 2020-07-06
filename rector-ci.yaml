@@ -1,6 +1,7 @@
 parameters:
     sets:
-        - 'php74'
+        # @todo fix that shit first
+        # - 'php74'
         - 'code-quality'
         - 'dead-code'
         - 'coding-style'

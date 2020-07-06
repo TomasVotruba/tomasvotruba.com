@@ -25,7 +25,7 @@ Honestly, **maintainers are not human routers for Github notifications**, and yo
 
 ## More than 5 minutes? We've Lost a Contributor
 
-Do you know [TTFB](https://en.wikipedia.org/wiki/Time_to_first_byte) - *time to first byte* - from front-end world? 
+Do you know [TTFB](https://en.wikipedia.org/wiki/Time_to_first_byte) - *time to first byte* - from front-end world?
 
 There could be **TTFF** for pull-request: *time to first feedback*.
 
@@ -36,11 +36,11 @@ In my experience, when someone creates a PR to an open-source, **they have caref
 Let's say you have started your dedicated hour to open-source a week.
 
 **You send PR** with your feature, the maintainer is not online, so you wait:
- 
+
 - 5 minutes...
 - 10 minutes...
-- 13 minutes... 
-- ...and CI failed on test case 
+- 13 minutes...
+- ...and CI failed on test case
 
 **You fix the test**, send new commit to the PR branch and wait:
 
@@ -52,15 +52,15 @@ Let's say you have started your dedicated hour to open-source a week.
 
 Now you've spend **40 minutes** of your 60 minutes by:
 
-- 10 minutes making feature 
-- 4 fixing one test case 
+- 10 minutes making feature
+- 4 fixing one test case
 - **26 minutes by waiting**
 
 That's **65 % percent time wasted**.
 
 This makes me want to throw the computer out of the window, procrastinate, check my messages or another shallow work that ruins all my focus.
 
-**True story**, this was the situation for CI in Rector in 2019. It was soo frustrating. And I don't talk about [code coverage with Xdebug that took us 33 minutes](https://pehapkari.cz/blog/2020/01/06/how-to-speedup-code-coverage-on-travis-by-95-percent).
+**True story**, this was the situation for CI in Rector in 2019. It was soo frustrating. And I don't talk about [code coverage with Xdebug that took us 33 minutes](/blog/2019/09/02/how-to-speedup-test-coverage-on-travis-by-95-percent/).
 
 <br>
 
@@ -70,9 +70,9 @@ A miracle came to my life. Exactly week ago [Markus Staab](https://github.com/st
 
 ### What are Github Actions?
 
-I've heard about Github Actions, but I didn't get the idea. Is it for deploy or a bot? 
+I've heard about Github Actions, but I didn't get the idea. Is it for deploy or a bot?
 
-Now I know it's basically *Github CI* (honestly, they should rename it). 
+Now I know it's basically *Github CI* (honestly, they should rename it).
 
 How does it work? Like in any other CI (Travis CI, Gitlab CI, Bitbucket CI, Circle CI, Jenkins...), we basically:
 
@@ -109,7 +109,7 @@ And how does the switch affected the Rector repository?
 <img src="/assets/images/posts/instant_feedback_github_actions.jpg" class="img-thumbnail" style="max-width: 40em">
 
 <blockquote class="blockquote text-center">
-    From ~15 minutes to just 3 minutes. 
+    From ~15 minutes to just 3 minutes.
 </blockquote>
 
 **I was amazed! Thank you, Mark, for making this happen.**

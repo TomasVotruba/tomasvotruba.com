@@ -15,6 +15,11 @@ final class GithubApi
      */
     private const API_CONTRIBUTORS = 'https://api.github.com/repos/%s/stats/contributors';
 
+    /**
+     * @var string
+     */
+    private const AUTHOR = 'author';
+
     private string $thankerRepositoryName;
 
     private string $thankerAuthorName;
@@ -45,14 +50,14 @@ final class GithubApi
         $contributors = [];
         foreach ($json as $item) {
             // skip ego
-            if ($item['author']['login'] === $this->thankerAuthorName) {
+            if ($item[self::AUTHOR]['login'] === $this->thankerAuthorName) {
                 continue;
             }
 
             $contributors[] = [
-                'name' => $item['author']['login'],
-                'url' => $item['author']['html_url'],
-                'photo' => $item['author']['avatar_url'],
+                'name' => $item[self::AUTHOR]['login'],
+                'url' => $item[self::AUTHOR]['html_url'],
+                'photo' => $item[self::AUTHOR]['avatar_url'],
                 'contribution_count' => $item['total'],
             ];
         }

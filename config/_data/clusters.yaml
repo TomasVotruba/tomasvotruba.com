@@ -1,6 +1,11 @@
 parameters:
     clusters:
         -
+            title: "Cleaning Lady Notes"
+            post_ids: [267]
+            description: "In this series, you can learn about my experience with legacy project migration. Tricks, tips, what works and what fucked me up. So you **save some frustration, where is not needed, discover hidden shortcuts and cool tools you never saw before."
+
+        -
             title: "Collector Pattern, The Shortcut Hack to SOLID Code"
             post_ids: [114, 158, 80, 36, 133]
             description: "Collector is the one pattern that will help your code exponentially. It's super easy to start using in every level of application. Stop learning 5 SOLID principles theory and start using it in your code today."

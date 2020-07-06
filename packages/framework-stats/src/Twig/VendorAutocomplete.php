@@ -6,16 +6,16 @@ namespace TomasVotruba\FrameworkStats\Twig;
 
 final class VendorAutocomplete
 {
-    public string $vendor_name;
+    public string $vendorName;
 
-    public float $last_year_trend;
+    public float $lastYearTrend;
 
-    public int $vendor_total_last_year;
+    public int $vendorTotalLastYear;
 
-    public int $vendor_total_previous_year;
+    public int $vendorTotalPreviousYear;
 
     /**
      * @var PackageAutocomplete[]
      */
-    public array $packages_data = [];
+    public array $packagesData = [];
 }
