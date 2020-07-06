@@ -2,7 +2,7 @@
 id: 249
 title: "Forget Complex&nbsp;Migrations, Use&nbsp;Cleaning&nbsp;Lady Checklist"
 perex: |
-    Migration of legacy code base is a complex process. If we [migrate spaghetti](/blog/2020/04/13/how-to-migrate-spaghetti-to-304-symfony-5-controllers-over-weekend), [one framework to another](https://pehapkari.cz/blog/2019/04/20/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours) or [remove dead-code from 120 k-lines project](/blog/2019/12/09/how-to-get-rid-of-technical-debt-or-what-we-would-have-done-differently-2-years-ago).
+    Migration of legacy code base is a complex process. If we [migrate spaghetti](/blog/2020/04/13/how-to-migrate-spaghetti-to-304-symfony-5-controllers-over-weekend), [one framework to another](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/) or [remove dead-code from 120 k-lines project](/blog/2019/12/09/how-to-get-rid-of-technical-debt-or-what-we-would-have-done-differently-2-years-ago).
     <br>
     <br>
     *It's long, it's hard, it takes an expert to do it...* that's bullshit. **It should be simple, easy to understand and clear.** Like the code we strive to write.

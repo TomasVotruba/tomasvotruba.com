@@ -12,7 +12,7 @@ tweet: "New Post on my Blog: Cluster: More Interactive than a Book, Deeper than 
 
 ## Tested Content is Easier To Keep Up-To-Date
 
-Is there a code in your post or chapter, piece of text? It <a href="https://pehapkari.cz/blog/2017/01/12/why-articles-with-code-examples-should-be-CI-tested/">should be tested</a>. Back to our Symfony book. Imagine you buy it, you read it and there is section about forms. But thanks to *everlasting deprecation* effect, you happen to use Symfony 4.1, but book is about Symfony 3.0, so it doesn't work and you've just wasted 20 $ in money for a book and hundreds $ in time investment.
+Is there a code in your post or chapter, piece of text? It <a href="/blog/2019/09/16/why-software-articles-must-be-ci-tested/">should be tested</a>. Back to our Symfony book. Imagine you buy it, you read it and there is section about forms. But thanks to *everlasting deprecation* effect, you happen to use Symfony 4.1, but book is about Symfony 3.0, so it doesn't work and you've just wasted 20 $ in money for a book and hundreds $ in time investment.
 
 Now imagine this post would be tested, with unit tests and Travis CI that would run daily to make sure the content is still valuable in the present. The day new Symfony with BC break is released, the new version of post is published. And that works super easily for version 4, version 5, version 6...
 

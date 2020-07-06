@@ -2,18 +2,18 @@
 id: 233
 title: "Migrate Gedmo to KnpLabs"
 perex: |
-    With [Symfony 5 upgrade](https://pehapkari.cz/blog/2019/12/23/how-we-upgraded-pehapkari-cz-from-symfony-4-to-5-in-25-days), we need any *working* Doctrine behaviors.
+    With [Symfony 5 upgrade](/blog/2019/09/09/how-we-upgraded-pehapkari-cz-from-symfony-4-to-5-in-25-days/), we need any *working* Doctrine behaviors.
     <br>
     Month later, we have [KnpLabs\DoctrineBehaviors 2.0](/blog/2019/12/30/doctrine-behaviors-2-0-reloaded/#how-do-you-migrate-from-gedmo-stof-to-knplabs-doctrinebehaviors) with full Symfony 5 support.
     <br>
     <br>
-    If you used older Doctrine Behaviors, you're covered with Rector migration path. 
+    If you used older Doctrine Behaviors, you're covered with Rector migration path.
     <br>
     But what if you're using old broken Gedmo?
-    <br> 
-    <br> 
+    <br>
+    <br>
     **I'll show you how you can migrate Gedmo to KnpLabs**.
-        
+
 tweet: "New Post on #php 🐘 blog: Migrate Gedmo to KnpLabs"
 ---
 
@@ -35,7 +35,7 @@ If you **use other Gedmo behavior that is not listed here**, you might request o
 
 ## 1. Migrate Timestampable
 
-### Gedmo 
+### Gedmo
 
 ```php
 <?php
@@ -108,7 +108,7 @@ class Meetup
      * @Gedmo\Slug(fields={"name"})
      */
     private $slug;
-    
+
     public function getSlug(): ?string
     {
         return $this->slug;
@@ -125,7 +125,7 @@ class Meetup
 
 ### KnpLabs
 
-- Add `Knp\DoctrineBehaviors\Model\Sluggable\SluggableTrait` trait 
+- Add `Knp\DoctrineBehaviors\Model\Sluggable\SluggableTrait` trait
 - Add `Knp\DoctrineBehaviors\Contract\Entity\SluggableInterface` interface
 - Remove `getSlug()`/`setSlug()` method that is already in trait
 
@@ -135,19 +135,19 @@ class Meetup
 
     ```php
     use Gedmo\Mapping\Annotation as Gedmo;
-    
+
     // ...
-    
+
     /**
      * @Gedmo\Slug(fields={"name", "surname"})
      */
     private $slug;
     ```
-    
+
     to
-    
+
     ```php
-    
+
     /**
      * @return string[]
      */
@@ -319,7 +319,7 @@ I recall picking the behavior package for new Lekarna.cz 6 years ago. I was youn
 
 But it's performance surprised me. Why? The translated item had 1:many dependency on translation table, so for every single item, it **joined an X extra lines forever single translated column**.
 
-So even if you use Symfony 4 and **everything works well** for you, **consider comparing performance with KnpLabs translations**. Who knows, it might get your multi-lingual application **10x faster**. 
+So even if you use Symfony 4 and **everything works well** for you, **consider comparing performance with KnpLabs translations**. Who knows, it might get your multi-lingual application **10x faster**.
 
 <br>
 
@@ -346,22 +346,22 @@ class Category implements Translatable
      * @ORM\Column(length=128)
      */
     private $title;
-    
+
     /**
      * @Gedmo\Locale
      */
     private $locale;
-    
+
     public function setTitle($title)
     {
         $this->title = $title;
     }
-    
+
     public function getTitle()
     {
         return $this->title;
     }
-    
+
     public function setTranslatableLocale($locale)
     {
         $this->locale = $locale;
@@ -395,7 +395,7 @@ class Category implements TranslatableInterface
 ```
 
 So, where is the *title* property we need to translate? Every translated property is in the new `<entity>Translation` class.
-This **approach makes sure that the complexity of 1 item with dozens of translation stays 1:1** = it's super fast! 
+This **approach makes sure that the complexity of 1 item with dozens of translation stays 1:1** = it's super fast!
 
 ```php
 <?php
@@ -416,16 +416,16 @@ class CategoryTranslation implements TranslationInterface
      */
     private $title;
 }
-``` 
+```
 
 In short:
 
 - *Translatable* - the primary entity you use in your code
-- *Translation* - the helper entity with translated items 
+- *Translation* - the helper entity with translated items
 
 Usage stays the same:
- 
-```php 
+
+```php
 $category->getTitle();
 ```
 
@@ -464,7 +464,7 @@ class Category
     {
         return $this->createdBy;
     }
-     
+
     public function getUpdatedBy()
     {
         return $this->updatedBy;
@@ -585,12 +585,12 @@ class Category
      * @ORM\Column(name="deletedAt", type="datetime", nullable=true)
      */
     private $deletedAt;
-    
+
     public function getDeletedAt()
     {
         return $this->deletedAt;
     }
-    
+
     public function setDeletedAt($deletedAt)
     {
         $this->deletedAt = $deletedAt;
@@ -633,7 +633,7 @@ vendor/bin/rector process src --set doctrine-gedmo-to-knplabs
 
 Instant upgrades never cover the whole migration path - e.g., they lack database migrations - but they're are always **saving you 80 % of boring work**.
 
-If anything breaks, [create and issue on Github](https://github.com/rectorphp/rector/issues/new?template=1_Bug_report.md) so you can enjoy fixed version soon. 
+If anything breaks, [create and issue on Github](https://github.com/rectorphp/rector/issues/new?template=1_Bug_report.md) so you can enjoy fixed version soon.
 
 <br>
 

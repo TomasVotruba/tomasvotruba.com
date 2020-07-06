@@ -73,7 +73,7 @@ echo $content;
 
 The migration pull-request itself is just **half of the work**. First, we had to have [coding standards, PSR-4 autoloading, PHPStan on level 8](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/) etc. When I say PHPStan on level 8, we skipped those errors with 50+ cases.
 
-The next half is [to have a full team on board](https://pehapkari.cz/blog/2019/04/20/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours) and have **a clear plan**.
+The next half is [to have a full team on board](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/) and have **a clear plan**.
 
 ## PHP Template in Symfony 5?
 

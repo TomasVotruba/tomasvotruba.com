@@ -7,7 +7,7 @@ perex: |
     Who is *we*? Me and CTO of the [company I worked for](https://spaceflow.io/en), a great leader and technical expert who taught me a lot, [Milan Mimra](https://www.linkedin.com/in/milanmimra/).
     <br>
     <br>
-    The talk was not full of shallow tips, nor [about framework migration](https://pehapkari.cz/blog/2019/04/20/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/). Instead, **we talked about small decisions that were made 2 years. Decisions, which took 3 months to get rid of**.
+    The talk was not full of shallow tips, nor [about framework migration](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/). Instead, **we talked about small decisions that were made 2 years. Decisions, which took 3 months to get rid of**.
 tweet: "New Post on #php 🐘 blog: How to Get Rid of Technical Debt or What We Would Have Done Differently 2 Years ago        #symfony #rector #ecs @doctrineproject #uuid #legacycode"
 tweet_image: "/assets/images/posts/2019/spaceflow_10_points/07.png"
 ---
@@ -95,7 +95,7 @@ And the result?
 Have you heard about PSR-4? Well, so did many people before you, but it's very to forget it thanks to:
 
 - PHPUnit magic autoload - you can place your tests anywhere, PHPUnit will find them
-- [Nette\RobotLoader](https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading/) - load anything from anywhere, for free
+- [Nette\RobotLoader](/blog/2020/06/08/drop-robot-loader-and-let-composer-deal-with-autoloading/) - load anything from anywhere, for free
 - composer "classmap" - just load the directory, who cares
 - DDD - Domain Driven Design - apparently, one of the most favorite principles is to put all files in one directory, templates, configs, services, objects... just put it there
 

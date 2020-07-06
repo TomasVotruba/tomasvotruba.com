@@ -110,7 +110,7 @@ Now you know what "token" is.
 
 ## 2. Dispatcher
 
-Do you know [Event Dispatcher](https://pehapkari.cz/blog/2016/12/05/symfony-event-dispatcher/)?
+Do you know [Event Dispatcher](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch/)?
 
 If not, it's a pattern (like *repository* or *factory*) that says: **when this action happens, call all methods that listen to it**, e.g. when order is finished (event), send confirmation SMS to user and send him thank-you box full of candies (subscribed methods).
 

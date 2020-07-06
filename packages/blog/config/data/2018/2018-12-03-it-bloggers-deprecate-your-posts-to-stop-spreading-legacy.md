@@ -49,7 +49,7 @@ If time was the only issue, you could just limit Google results to last year. Bu
 
 ## How to Make it Right?
 
-How can I even write a post about PHP when I know they'll be useless in a few years? Well, you can [tests your posts](https://pehapkari.cz/blog/2017/01/12/why-articles-with-code-examples-should-be-CI-tested/) to automate this, but it takes time and setup.
+How can I even write a post about PHP when I know they'll be useless in a few years? Well, you can [tests your posts](/blog/2019/09/16/why-software-articles-must-be-ci-tested/) to automate this, but it takes time and setup.
 
 Right now, **I feel it's our responsibility as writers to inform our readers** what is good and tasty to eat and what id rotten old trash.
 
