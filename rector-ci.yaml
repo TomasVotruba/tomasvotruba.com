@@ -1,12 +1,12 @@
 parameters:
     sets:
-        # @todo fix that shit first
-        # - 'php74'
+        - 'php74'
         - 'code-quality'
         - 'dead-code'
         - 'coding-style'
         - 'nette-utils-code-quality'
         - 'solid'
+        - 'naming'
 
     paths:
         - 'src'

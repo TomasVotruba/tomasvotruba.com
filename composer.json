@@ -36,7 +36,7 @@
         "nette/security": "^3.0",
         "phpstan/phpstan": "^0.12.14",
         "phpunit/phpunit": "^9.0",
-        "rector/rector": "^0.7.36",
+        "rector/rector": "^0.7.44",
         "slevomat/coding-standard": "dev-master",
         "spatie/http-status-check": "^3.2",
         "symfony/console": "^5.1",

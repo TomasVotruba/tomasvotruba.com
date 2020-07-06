@@ -145,9 +145,10 @@ final class TwitterPostApiWrapper
      */
     private function filterPostTweets(array $tweets): array
     {
-        return array_filter($tweets, function (PublishedTweet $publishedTweet) {
-            return Strings::match($publishedTweet->getText(), '#New post on#i');
-        });
+        return array_filter(
+            $tweets,
+            fn (PublishedTweet $publishedTweet) => (bool) Strings::match($publishedTweet->getText(), '#New post on#i')
+        );
     }
 
     private function getResult(?int $maxId = null): array
