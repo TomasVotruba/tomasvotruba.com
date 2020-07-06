@@ -73,7 +73,7 @@ Done. You've just made a first small step. Cross [one step of your list](/cleani
 But all those 9 steps are now 10 % less complicated.
 
 <blockquote class="blockquote text-center mt-5 mb-5">
-    "Even if you die, the code your merge is done."
+    "Even if you die, the code you wrote is merged."
     <footer class="blockquote-footer text-center">Bus Boy Scout Factor</footer>
 </blockquote>
 
