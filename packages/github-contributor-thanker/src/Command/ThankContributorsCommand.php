@@ -50,7 +50,8 @@ final class ThankContributorsCommand extends Command
 
         $this->generatedFilesDumper->dump('contributors', $contributors);
 
-        $this->symfonyStyle->success(sprintf('Dump %d contributors', count($contributors)));
+        $successMessage = sprintf('Dumped %d contributors', count($contributors));
+        $this->symfonyStyle->success($successMessage);
 
         return ShellCode::SUCCESS;
     }

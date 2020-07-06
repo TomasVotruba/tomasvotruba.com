@@ -45,7 +45,8 @@ final class VendorDataFactory
         $vendorsData = [];
 
         foreach ($frameworksVendorToName as $vendorName => $frameworkName) {
-            $this->symfonyStyle->title(sprintf('Loading data for "%s" vendor', $vendorName));
+            $title = sprintf('Loading data for "%s" vendor', $vendorName);
+            $this->symfonyStyle->title($title);
 
             $vendorsData[$vendorName] = $this->createVendorData($vendorName, $frameworkName);
 

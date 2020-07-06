@@ -53,8 +53,12 @@ final class Php73Test extends TestCase implements PostTestInterface
     {
         $nullItems = null;
         $items = [];
-        $this->assertFalse(is_countable($nullItems));
-        $this->assertTrue(is_countable($items));
+
+        $isNullItemsCountable = is_countable($nullItems);
+        $this->assertFalse($isNullItemsCountable);
+
+        $isItemsCountable = is_countable($items);
+        $this->assertTrue($isItemsCountable);
     }
 
     public function testNetteJsonException(): void

@@ -11,7 +11,8 @@ final class GlobalVariablesTwigExtension extends AbstractExtension
 {
     public function __construct(Environment $environment, array $clusters, array $contributors = [])
     {
-        $environment->addGlobal('contributors_count', count($contributors));
+        $contributorCount = count($contributors);
+        $environment->addGlobal('contributors_count', $contributorCount);
         $environment->addGlobal('clusters', $clusters);
     }
 }
