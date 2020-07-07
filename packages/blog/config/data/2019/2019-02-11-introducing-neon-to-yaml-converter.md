@@ -8,6 +8,10 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: Introducing #Neon to #Yaml Converter   #symfony #nettefw"
 tweet_image: "/assets/images/posts/2019/neon-to-yaml/convert-neon-to-yaml.gif"
+
+updated_since: "July 2020"
+updated_message: |
+    Updated to Migrify package.
 ---
 
 <img src="/assets/images/posts/2019/neon-to-yaml/convert-neon-to-yaml.gif" class="img-thumbnail">
@@ -20,16 +24,16 @@ tweet_image: "/assets/images/posts/2019/neon-to-yaml/convert-neon-to-yaml.gif"
 
 ## How to Use it?
 
-To use [Symplify/NeonToYamlConverter](https://github.com/Symplify/NeonToYamlConverter), require it a composer dependency:
+To use [migrify/neon-to-yaml](https://github.com/migrify/neon-to-yaml), require it a composer dependency:
 
 ```bash
-composer require symplify/neon-to-yaml-converter --dev
+composer require migrify/neon-to-yaml --dev
 ```
 
 Run it on one file or directory - it takes all `*.neon`, `*.yml` and `*.yaml` files:
 
 ```bash
-vendor/bin/neon-to-yaml-converter convert file.neon
+vendor/bin/neon-to-yaml convert file.neon
 ```
 
 ## The 2 Most Problematic Places Converter Tool Handles
@@ -74,7 +78,7 @@ All this converter handles for you.
 
 <br>
 
-Next time you **migrate your config, package or whole application** from Neon to YAML, let [Symplify\NeonToYamlConverter
-](https://github.com/Symplify/NeonToYamlConverter) do the work for you.
+Next time you **migrate your config, package or whole application** from Neon to YAML, let [migrify/neon-to-yaml
+](https://github.com/migrify/neon-to-yaml) do the work for you.
 
 Happy coding!
