@@ -22,7 +22,7 @@ parameters:
 
         -
             title: "Books in a Post"
-            post_ids: [65, 149, 115, 91, 56, 112]
+            post_ids: [65, 149, 115, 91, 56]
             description: "Reading Books is what separates programmers from craftsmen. I love books, because they open for deep conversation that last hours and hours. Care for little intro first?"
 
         -
