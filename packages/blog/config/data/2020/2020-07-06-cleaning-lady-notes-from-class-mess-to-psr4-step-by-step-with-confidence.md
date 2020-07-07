@@ -24,7 +24,7 @@ There are many use cases that we have to handle to get to PSR-4. Honestly, I fin
 In PSR-4 migration, we have a clear goal:
 
 - PSR-4: in 1 file, there is 1 class/trait/interface
-- the class/trait/interface has a unique fully qualified name, that refects file location
+- the class/trait/interface has a unique fully qualified name, that reflects file location
 - nothing else exists
 
 ### Start has Many Ugly Forms
@@ -34,7 +34,7 @@ In PSR-4 migration, we have a clear goal:
 - there are classes without any namespace
 - there are classes with `Fake_Namespace`
 - file has a different name than the class, e.g. `random_file.php` with `class SomeClass {}` in it
-- in 1 file, there are classes and functions, so the file has to be manually included to "autoload" the function
+- in 1 file, there are classes and functions, so the file has to be manually included to "autoload" the functions
 - there are conditional classes, e.g.
 
 ```php
@@ -179,7 +179,7 @@ In PSR-4, any non-root directory must start with the first big letter. Root is e
 
 Go through directory in the left panel in PHPStorm and rename the directories there:
 
-<img src="/assets/images/posts/2020/psr4_rename_class.gif" class="img-thumbnail">
+<img src="/assets/images/posts/2020/psr4_rename_dirs.gif" class="img-thumbnail">
 
 Commit, PR, CI passes, merge.
 
