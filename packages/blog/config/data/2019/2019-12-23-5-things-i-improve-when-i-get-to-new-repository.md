@@ -38,7 +38,7 @@ public function someMethod()
 
 We don't need these problems, it's the computers' job.
 
-**This takes 1 minutes to set up and commit**:
+**This takes 1 minute to set up and commit**:
 
 ```yaml
 # .editorconfig
