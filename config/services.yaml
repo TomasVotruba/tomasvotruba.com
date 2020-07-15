@@ -1,5 +1,5 @@
 imports:
-    - { resource: '../vendor/symplify/symfony-static-dumper/config/config.yaml' }
+    - { resource: '../vendor/symplify/symfony-static-dumper/config/config.php' }
     - { resource: '_data/*' }
     - { resource: '_data/generated/*' }
 
