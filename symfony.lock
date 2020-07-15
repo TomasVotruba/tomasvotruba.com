@@ -77,6 +77,9 @@
     "league/glide": {
         "version": "1.5.0"
     },
+    "migrify/config-transformer": {
+        "version": "v0.3.8"
+    },
     "migrify/latte-to-twig": {
         "version": "dev-master"
     },
@@ -316,6 +319,9 @@
     },
     "symfony/event-dispatcher-contracts": {
         "version": "v2.0.1"
+    },
+    "symfony/expression-language": {
+        "version": "v5.1.2"
     },
     "symfony/filesystem": {
         "version": "v5.0.5"
