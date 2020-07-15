@@ -56,7 +56,7 @@ The 1st line is just a description, useful for a more complicated case.
 
 ## Testing at its Best
 
-- you **don't maintainer to explain it**
+- you **don't a package maintainer to teach you what the test does**
 - you **don't have to read a book about testing** to be able to contribute
 - you can edit it, and you can extend it
 - you can learn with growing complexity by yourself
