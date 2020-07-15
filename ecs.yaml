@@ -1,5 +1,6 @@
 parameters:
     paths:
+        - config
         - packages
         - bin
         - src
@@ -18,3 +19,7 @@ parameters:
 
         # buggy with PHP 7.4 array property type
 #        PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer: null
+
+services:
+    Symplify\CodingStandard\Fixer\ArrayNotation\StandaloneLineInMultilineArrayFixer: null
+    Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer: null

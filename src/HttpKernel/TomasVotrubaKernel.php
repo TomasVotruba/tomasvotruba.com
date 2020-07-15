@@ -40,10 +40,7 @@ final class TomasVotrubaKernel extends Kernel
     {
         $this->discovery->discoverTemplates($containerBuilder);
 
-        $this->flexLoader->loadConfigs($containerBuilder, $loader, [
-            // project packages
-            $this->getProjectDir() . '/packages/*/config/*',
-        ]);
+        $loader->load(__DIR__ . '/../../config/config.php');
     }
 
     protected function configureRoutes(RouteCollectionBuilder $routeCollectionBuilder): void
