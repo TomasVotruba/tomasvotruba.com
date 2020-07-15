@@ -20,11 +20,11 @@ How would the situation change if you'd build houses as a developer (the buildin
 
 The first case of building one house for a year - you only work on 1 PHP project at once. It's only **natural to try-out all the testing layers** you can Google. There are a couple of tests that test the product checkout process, a couple of integration tests to check the component is rendered correctly, [mocking](/blog/2018/06/11/how-to-turn-mocks-from-nightmare-to-solid-kiss-tests/) to "decouple" one part from another.
 
-Every month I work with ~5 private projects, and I maintain [35 open-sources packages](https://packagist.org/profile/?page=3). I used to have very complicated tests for all possible application parts, but that turned out to take more time to maintain to develop, and it **slowed down my productivity brutally the more test I had**.
+Every month I work with ~5 private projects, and I maintain [35 open-sources packages](https://packagist.org/profile/?page=3). I used to have very complicated tests for all possible application parts, but that turned out to take more time to maintain to develop, and it **slowed down my productivity brutally the more tests I had**.
 
 <br>
 
-## How do PHP-core test case Look Like?
+## How do PHP-core test cases Look Like?
 
 Let's look at the PHP test [with name 001](https://github.com/php/php-src/blob/master/tests/basic/001.phpt).
 Give it 60 seconds:
@@ -67,7 +67,7 @@ This kind of testing gives you confidence, and that's by far the most important 
 
 ## Domain Driven Testing
 
-You're probably thinking, "but how do apply this to my unique startup that does not compare strings"? Of course, there is a place for the complex test that checks your checkout process work. The goal **is not to narrow all your tests to 1 size** to fit em all.
+You're probably thinking, "but how do I apply this to my unique startup that does not compare strings"? Of course, there is a place for the complex test that checks your checkout process work. The goal **is not to narrow all your tests to 1 size** to fit em all.
 
 The goal is to find what startup is different from other projects. Is your specialty to build e-commerce websites, or is it a recommendation of the next best product? Is it an instant delivery of warm food or a reliable video conference for massive numbers of users?
 
@@ -130,7 +130,7 @@ And that's it :) See [3v4l.org code sample](https://3v4l.org/sEudR).
 
 ## Few Tips before Start
 
-- it's all at one place - no jumping file jumping and looking for the right file
+- it's all at one place - no file jumping and looking for the right file
 
 ```diff
 -/tests/fixture/before/input_string.php
@@ -148,7 +148,7 @@ And that's it :) See [3v4l.org code sample](https://3v4l.org/sEudR).
 
 "But what happens when we add a new property to the output? Do we have to change all the files manually? That's crazy."
 
-It would be crazy. I tried to update 60 files in php-parser when I only added typed properties... oh, that was too much work. At file 50, I figured out there is an automated way exactly my case. We look at how we can **turn these tests into snapshot tests that update themselves** in the next post.
+It would be crazy. I tried to update 60 files in php-parser when I only added typed properties... oh, that was too much work. At file 50, I figured out there is an automated way exactly my case. We will look at how we can **turn these tests into snapshot tests that update themselves** in the next post.
 
 <br>
 
