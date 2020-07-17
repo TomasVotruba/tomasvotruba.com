@@ -60,7 +60,7 @@ The YAML configs **will not show you**, if class was deprecated:
 
 <img src="/assets/images/posts/2020/yaml_php_deprecated_class_yaml.png" class="img-thumbnail">
 
-PHP will help you ~~cross the deprectaed class~~ and prepare you better for the future:
+PHP will help you ~~cross the deprecated class~~ and prepare you better for the future:
 
 <img src="/assets/images/posts/2020/yaml_php_deprecated.png" class="img-thumbnail">
 
