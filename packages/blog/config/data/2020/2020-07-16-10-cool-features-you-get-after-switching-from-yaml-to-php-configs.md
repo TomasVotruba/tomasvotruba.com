@@ -280,7 +280,7 @@ None of them :(. It's `exclude_files`! *It's painful to look for such bugs** bec
 Do you need more real-life examples to try it yourself? Learn from merged pull-requests:
 
 - [`bolt/core` migration of `ecs.yaml` to `ecs.php`](https://github.com/bolt/core/pull/1636)
-- [the smallest migraion of just 4 files](https://github.com/symplify/symplify/pull/1997)
+- [the smallest migration of 1 file](https://github.com/TomasVotruba/tomasvotruba.com/pull/1023/commits/317451fe4770bf5fadd2f5f0807b0dc20c5ad121)
 - [`symlify/easy-coding-standard` of 20 sets](https://github.com/symplify/symplify/pull/2012)
 - [issue that lists finished YAML to PHP migrations](https://github.com/migrify/migrify/issues/61)
 
