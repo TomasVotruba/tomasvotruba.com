@@ -23,16 +23,23 @@ final class GeneratedFilesDumper
     /**
      * @param mixed[] $items
      */
-    public function dump(string $key, array $items): void
+    public function dump(string $key, array $items, string $format): void
     {
         $data['parameters'][$key] = $items;
 
-        $yamlDump = Yaml::dump($data, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
+        if ($format === 'yaml') {
+            $fileContent = Yaml::dump($data, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
 
-        $dumpFilePath = $this->projectDir . '/config/_data/generated/' . $key . '.yaml';
-        $timestampComment = $this->createTimestampComment();
+            $dumpFilePath = $this->projectDir . '/config/_data/generated/' . $key . '.yaml';
+            $timestampComment = $this->createTimestampComment();
+            $this->smartFileSystem->dumpFile($dumpFilePath, $timestampComment . $fileContent);
+        }
 
-        $this->smartFileSystem->dumpFile($dumpFilePath, $timestampComment . $yamlDump);
+        if ($format === 'php') {
+            dump('@todo');
+            die;
+        }
+        die;
     }
 
     private function createTimestampComment(): string
