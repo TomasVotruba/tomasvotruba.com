@@ -5,19 +5,19 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Yaml;
 
 use Nette\Utils\DateTime;
-use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Yaml\Yaml;
+use Symplify\SmartFileSystem\SmartFileSystem;
 
 final class GeneratedFilesDumper
 {
     private string $projectDir;
 
-    private Filesystem $filesystem;
+    private SmartFileSystem $smartFileSystem;
 
-    public function __construct(string $projectDir, Filesystem $filesystem)
+    public function __construct(string $projectDir, SmartFileSystem $smartFileSystem)
     {
         $this->projectDir = $projectDir;
-        $this->filesystem = $filesystem;
+        $this->smartFileSystem = $smartFileSystem;
     }
 
     /**
@@ -32,7 +32,7 @@ final class GeneratedFilesDumper
         $dumpFilePath = $this->projectDir . '/config/_data/generated/' . $key . '.yaml';
         $timestampComment = $this->createTimestampComment();
 
-        $this->filesystem->dumpFile($dumpFilePath, $timestampComment . $yamlDump);
+        $this->smartFileSystem->dumpFile($dumpFilePath, $timestampComment . $yamlDump);
     }
 
     private function createTimestampComment(): string

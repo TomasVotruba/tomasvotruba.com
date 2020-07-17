@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use GuzzleHttp\Client;
-use Symfony\Component\Filesystem\Filesystem;
 use Symplify\PackageBuilder\Http\BetterGuzzleClient;
+use Symplify\SmartFileSystem\SmartFileSystem;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
@@ -27,7 +27,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->load('TomasVotruba\GithubContributorsThanker\\', __DIR__ . '/../src')
         ->exclude([__DIR__ . '/../src/Exception/*']);
 
-    $services->set(Filesystem::class);
+    $services->set(SmartFileSystem::class);
 
     $services->set(BetterGuzzleClient::class);
 

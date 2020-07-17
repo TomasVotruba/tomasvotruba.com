@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symfony\Component\Filesystem\Filesystem;
 use Symplify\PackageBuilder\Console\Style\SymfonyStyleFactory;
+use Symplify\SmartFileSystem\SmartFileSystem;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/parameters.php');
@@ -26,5 +26,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->set(SymfonyStyle::class)
         ->factory([ref(SymfonyStyleFactory::class), 'create']);
 
-    $services->set(Filesystem::class);
+    $services->set(SmartFileSystem::class);
 };
