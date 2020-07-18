@@ -7,6 +7,7 @@ namespace TomasVotruba\Website\Yaml;
 use Nette\Utils\DateTime;
 use Symfony\Component\Yaml\Yaml;
 use Symplify\SmartFileSystem\SmartFileSystem;
+use TomasVotruba\Website\Exception\NotImplementedYetException;
 
 final class GeneratedFilesDumper
 {
@@ -36,10 +37,8 @@ final class GeneratedFilesDumper
         }
 
         if ($format === 'php') {
-            dump('@todo');
-            die;
+            throw new NotImplementedYetException();
         }
-        die;
     }
 
     private function createTimestampComment(): string
