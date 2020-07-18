@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace Symfony\Component\DependencyInjection\Loader\Configurator;
-
 use GuzzleHttp\Client;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\PackageBuilder\Http\BetterGuzzleClient;
 use Symplify\SmartFileSystem\SmartFileSystem;
 

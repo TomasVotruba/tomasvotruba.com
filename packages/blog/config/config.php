@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Symfony\Component\DependencyInjection\Loader\Configurator;
-
-use ParsedownExtra;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\PackageBuilder\Strings\StringFormatConverter;
 use Symplify\SmartFileSystem\Finder\FinderSanitizer;
 

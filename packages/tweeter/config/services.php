@@ -2,11 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Symfony\Component\DependencyInjection\Loader\Configurator;
-
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\ref;
 use Symplify\SmartFileSystem\FileSystemGuard;
 use TomasVotruba\Tweeter\TwitterApi\TwitterApiFactory;
-use TwitterAPIExchange;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
