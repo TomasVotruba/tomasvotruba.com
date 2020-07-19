@@ -29,7 +29,7 @@ There are the cool features I've observed from migration of **50+ YAML configs t
 
 ## 1. Absolute Paths over Random Paths
 
-In configs, we often define paths to files or directories. Could you tell me what paths this is?
+In configs, we often define paths to files or directories. Could you tell me what exact path this is?
 
 ```yaml
 parameters:
