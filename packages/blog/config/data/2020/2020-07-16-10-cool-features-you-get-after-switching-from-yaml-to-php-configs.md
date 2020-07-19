@@ -19,7 +19,7 @@ Do you **care why** this begun? Be sure to read [Symfony issue](https://github.c
 <blockquote class="blockquote text-center mt-5 mb-5">
     The biggest advantage is IDE auto-completion out of the box,
     <br>
-    and one XML/YAML language to learn.
+    and one XML/YAML less language to learn.
 </blockquote>
 
 <br>
