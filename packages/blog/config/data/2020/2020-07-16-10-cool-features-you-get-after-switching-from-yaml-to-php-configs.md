@@ -5,10 +5,10 @@ perex: |
     You've probably noticed [Symfony is moving towards PHP configuration](https://github.com/symfony/symfony/issues/37186). If you're on XML or YAML, you'll most likely migrate to PHP with upcoming Symfony 6.
     <br>
     <br>
-    There are already tools that [can help you migrate today](https://twitter.com/VotrubaT/status/1283003111074922497) - **so it not a matter of work, but a matter of choice**.
+    There are already tools that [can help you migrate today](https://twitter.com/VotrubaT/status/1283003111074922497) - **so it's not a matter of work, but a matter of choice**.
     <br>
     <br>
-    Today we look 10 cool features you get by switching to PHP configs that make you an even lazier programmer.
+    Today we look at 10 cool features you get by switching to PHP configs that make you an even lazier programmer.
 
 tweet: "New Post on #php 🐘 blog: 10 Cool Features You Get after switching from YAML to PHP Configs    #symfony"
 tweet_image: "/assets/images/posts/2020/yaml_php_constants.gif"
@@ -220,7 +220,7 @@ services:
             - { name: 'kernel.event_subscriber' }
 ```
 
-In PHP, there is just 1 way to both:
+In PHP, there is just 1 way for both:
 
 <img src="/assets/images/posts/2020/yaml_php_event_tag.gif" class="img-thumbnail">
 
@@ -244,7 +244,7 @@ If you give me a choice of `"string"` or `CONSTANT`, 10 of 10 [I pick the `CONST
 
 <br>
 
-**We don't have such a solid choice in YAML**. If we want to use a parameter used elsewhere, we need to trust name it somehow validated (it isn't, because exception will tell you anyway).
+**We don't have such a solid choice in YAML**. If we want to use a parameter used elsewhere, we need to trust name is somehow validated (it isn't, because exception will tell you anyway).
 
 <br>
 
@@ -260,7 +260,7 @@ parameters:
     excluded_paths:
 ```
 
-None of them :(. It's `exclude_files`! *It's painful to look for such bugs** because you need to analyze the whole project every time the config is changed.
+None of them :(. It's `exclude_files`! **It's painful to look for such bugs** because you need to analyze the whole project every time the config is changed.
 
 <br>
 
@@ -269,7 +269,7 @@ None of them :(. It's `exclude_files`! *It's painful to look for such bugs** bec
 <img src="/assets/images/posts/2020/yaml_php_constants.gif" class="img-thumbnail">
 
 - Does the constant name change in the future? Rector handles it
-- Is the constant missing? PHPStan will reports it
+- Is the constant missing? PHPStan reports it
 
 ## 🚀🚀🚀
 
