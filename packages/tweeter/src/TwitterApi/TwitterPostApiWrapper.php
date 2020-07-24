@@ -110,9 +110,9 @@ final class TwitterPostApiWrapper
         $lastRawTweet = reset($publishedTweetsRaw);
 
         $dateTime = DateTime::from($lastRawTweet['created_at']);
-        $dateDiff = $dateTime->diff(DateTime::from('today'));
+        $dateInterval = $dateTime->diff(DateTime::from('today'));
 
-        return (int) $dateDiff->format('%a');
+        return (int) $dateInterval->format('%a');
     }
 
     /**
