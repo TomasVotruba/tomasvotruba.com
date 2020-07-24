@@ -133,7 +133,7 @@ We only update this code with a single method, that will handle the fixture upda
          // test your main domain service
          $output = $this->processInputInYourDomain($input);
 
-+        $this->updateFiture($input, $output, $filePath);
++        $this->updateFixture($input, $output, $filePath);
 
          $this->assertSame($expectedOutput, $output);
      }
