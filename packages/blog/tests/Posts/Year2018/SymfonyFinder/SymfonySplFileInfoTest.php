@@ -12,13 +12,13 @@ final class SymfonySplFileInfoTest extends TestCase implements PostTestInterface
 {
     public function testRelatives(): void
     {
-        $finder = Finder::create()
+        $iterator = Finder::create()
             ->files()
             ->in(__DIR__)
             ->name('composer.json')
             ->getIterator();
 
-        foreach ($finder as $splFileInfo) {
+        foreach ($iterator as $splFileInfo) {
             $this->assertSame('Source/composer.json', $splFileInfo->getRelativePathname());
             $this->assertSame('Source', $splFileInfo->getRelativePath());
         }

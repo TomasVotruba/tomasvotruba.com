@@ -20,13 +20,13 @@ final class HashPasswordCommandTest extends TestCase
         $application->add(new HashPasswordCommand());
 
         // same as when you run "bin/console hash-password Y2Kheslo123"
-        $input = new StringInput('hash-password Y2Kheslo123');
-        $output = new BufferedOutput();
+        $stringInput = new StringInput('hash-password Y2Kheslo123');
+        $bufferedOutput = new BufferedOutput();
 
-        $result = $application->run($input, $output);
+        $result = $application->run($stringInput, $bufferedOutput);
 
         // 0 = success, sth else = fail
         $this->assertSame(0, $result);
-        $this->assertStringStartsWith('Your hashed password is: $2y$10$', $output->fetch());
+        $this->assertStringStartsWith('Your hashed password is: $2y$10$', $bufferedOutput->fetch());
     }
 }

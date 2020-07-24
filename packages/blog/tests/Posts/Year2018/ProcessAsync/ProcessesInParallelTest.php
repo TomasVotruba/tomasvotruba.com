@@ -35,9 +35,9 @@ final class ProcessesInParallelTest extends TestCase implements PostTestInterfac
         $stopwatchEvent = $this->stopwatch->stop('test');
 
         $maxDurationInMs = array_sum(self::SLEEP_INTERVALS_IN_MS);
-        $realDurationInMs = $stopwatchEvent->getDuration();
+        $duration = $stopwatchEvent->getDuration();
 
-        $this->assertLessThan($maxDurationInMs, $realDurationInMs);
+        $this->assertLessThan($maxDurationInMs, $duration);
     }
 
     public function getPostId(): int

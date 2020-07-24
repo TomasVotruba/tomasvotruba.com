@@ -148,7 +148,7 @@ And that's it :) See [3v4l.org code sample](https://3v4l.org/sEudR).
 
 "But what happens when we add a new property to the output? Do we have to change all the files manually? That's crazy."
 
-It would be crazy. I tried to update 60 files in php-parser when I only added typed properties... oh, that was too much work. At file 50, I figured out there is an automated way exactly my case. We will look at how we can **turn these tests into snapshot tests that update themselves** in the next post.
+It would be crazy. I tried to update 60 files in php-parser when I only added typed properties... oh, that was too much work. At file 50, I figured out there is an automated way exactly my case. We will look at how we can **turn these tests into snapshot tests that update themselves** [in the next post](/blog/2020/07/20/how-to-update-hundreds-of-test-fixtures-with-single-phpunit-run).
 
 <br>
 
