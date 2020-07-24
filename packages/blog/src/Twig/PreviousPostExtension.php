@@ -23,7 +23,7 @@ final class PreviousPostExtension extends AbstractExtension
      */
     public function getFunctions(): array
     {
-        $previousPostFunction = new TwigFunction('previous_post', function (Post $currentPost): ?Post {
+        $twigFunction = new TwigFunction('previous_post', function (Post $currentPost): ?Post {
             $posts = $this->postRepository->fetchAllEnglishNonDeprecated();
 
             foreach ($posts as $post) {
@@ -37,6 +37,6 @@ final class PreviousPostExtension extends AbstractExtension
             return null;
         });
 
-        return [$previousPostFunction];
+        return [$twigFunction];
     }
 }

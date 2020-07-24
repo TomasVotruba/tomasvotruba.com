@@ -15,14 +15,14 @@ final class FormatPreservingPrinter
 {
     public function traverseWithVisitorAndPrint(NodeVisitor $nodeVisitor, string $code): string
     {
-        $lexer = $this->createLexer();
+        $emulative = $this->createLexer();
 
-        $parser = new Php7($lexer);
+        $php7 = new Php7($emulative);
         $traverser = new NodeTraverser();
         $traverser->addVisitor(new CloningVisitor());
 
-        $oldStmts = $parser->parse($code);
-        $oldTokens = $lexer->getTokens();
+        $oldStmts = $php7->parse($code);
+        $oldTokens = $emulative->getTokens();
 
         $newStmts = $traverser->traverse($oldStmts);
 

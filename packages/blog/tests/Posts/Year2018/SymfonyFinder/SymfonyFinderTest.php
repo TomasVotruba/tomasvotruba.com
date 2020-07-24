@@ -12,17 +12,17 @@ final class SymfonyFinderTest extends TestCase implements PostTestInterface
 {
     public function testName(): void
     {
-        $finder = Finder::create()
+        $iterator = Finder::create()
             ->files()
             ->in(__DIR__)
             ->name('#\.(yaml|yml)$#')
             ->sortByName()
             ->getIterator();
 
-        $this->assertCount(2, $finder);
+        $this->assertCount(2, $iterator);
 
         $fileNames = [];
-        foreach ($finder as $splFileInfo) {
+        foreach ($iterator as $splFileInfo) {
             $fileNames[] = $splFileInfo->getFilename();
         }
 
