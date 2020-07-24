@@ -56,11 +56,11 @@ Pretty clear, right?
 
 ## 2. We Can See ~~Deprecated Classes~~
 
-The YAML configs **will not show you**, if class was deprecated:
+The YAML config **will not show you**, if class was deprecated:
 
 <img src="/assets/images/posts/2020/yaml_php_deprecated_class_yaml.png" class="img-thumbnail">
 
-PHP will help you ~~cross the deprecated class~~ and prepare you better for the future:
+PHP will ~~cross the deprecated class~~ and prepare you better for the future:
 
 <img src="/assets/images/posts/2020/yaml_php_deprecated.png" class="img-thumbnail">
 
@@ -171,6 +171,7 @@ These 2 files will produce the same configuration:
 ```yaml
 services:
     SomeService:
+        # silent "arguments" key is omitted
         $key: value
 ```
 
@@ -234,7 +235,7 @@ Since `*.php` is PHP code, all the powerful CI tools have access to it.
 
 <br>
 
-** Fewer bugs, effortless changes, less upgrade work, new PHPStan rules, more fun coding.**
+**Fewer bugs, effortless changes, less upgrade work, new PHPStan rules, more fun coding.**
 
 ## 10. Constants over Strings 🎉
 
