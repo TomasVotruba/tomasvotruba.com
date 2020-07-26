@@ -6,7 +6,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('framework', [
-        'secret' => '%env(APP_SECRET)%'
+        'secret' => '%env(APP_SECRET)%',
     ]);
 
     $containerConfigurator->extension('framework', [
