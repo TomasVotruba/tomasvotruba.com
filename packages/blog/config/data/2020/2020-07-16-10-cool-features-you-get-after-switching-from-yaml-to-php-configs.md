@@ -54,7 +54,7 @@ Now the same config in PHP:
 
 Pretty clear, right?
 
-## 2. We Can See ~~Deprecated Classes~~
+## 2. We Can See ~~Deprecated Classes~~ in PHPStorm
 
 The YAML config **will not show you**, if class was deprecated:
 
