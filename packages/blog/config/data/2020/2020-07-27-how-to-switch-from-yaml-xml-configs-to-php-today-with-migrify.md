@@ -100,20 +100,20 @@ Again, it's valid to handle it manually with search & replace in PHPStorm.
 ```diff
  use Symfony\Component\Config\FileLocator;
  use Symfony\Component\DependencyInjection\ContainerBuilder;
--use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
-+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+-use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
++use Symfony\Component\DependencyInjection\Loader\PhplFileLoader;
  use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
  final class SomeExtension extends Extension
  {
      public function load(array $configs, ContainerBuilder $container)
      {
--        $loader = new XmlFileLoader($container, new FileLocator());
--        $loader->load(__DIR__ . '/../Resources/config/controller.xml');
--        $loader->load(__DIR__ . '/../Resources/config/events.xml');
-+        $loader = new YamlFileLoader($container, new FileLocator());
-+        $loader->load(__DIR__ . '/../Resources/config/controller.yaml');
-+        $loader->load(__DIR__ . '/../Resources/config/events.yaml');
+-        $loader = new YamlFileLoader($container, new FileLocator());
++        $loader = new PhplFileLoader($container, new FileLocator());
+-        $loader->load(__DIR__ . '/../Resources/config/controller.yaml');
++        $loader->load(__DIR__ . '/../Resources/config/controller.php');
+-        $loader->load(__DIR__ . '/../Resources/config/events.yaml');
++        $loader->load(__DIR__ . '/../Resources/config/events.php');
      }
  }
 ```
