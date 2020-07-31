@@ -160,11 +160,7 @@ One little tool for you, one big leap for a PHP programmer-kind.
 - autodiscovery
 - instance of
 - extensions, e.g. `framework`, `doctrine` or `twig`
-
-## Incoming Features
-
-- [routing](https://github.com/migrify/migrify/issues/121)
-
+- routing
 
 ## Let Us Know, Help You Grow
 
