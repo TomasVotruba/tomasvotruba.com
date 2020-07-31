@@ -21,6 +21,7 @@
                 <title><![CDATA[ {{ post.title|replace({'&nbsp;':' '}) }} ]]></title>
                 <link>{{ post_absolute_url }}</link>
                 <description><![CDATA[ {{ post.perex|markdown|raw }} ]]></description>
+                <content:encoded><![CDATA[ {{ post.htmlContent|raw }} ]]></content:encoded>
                 <guid isPermaLink="false">{{ post_absolute_url }}</guid>
                 <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
 
