@@ -129,14 +129,17 @@ Setup `rector.php`:
 ```php
 <?php
 
+use Migrify\ConfigTransformer\FormatSwitcher\ValueObject\Format;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Rector\Symfony\Rector\Class_\ChangeFileLoaderInExtensionAndKernelRector;
 
 return function (ContainerConfigurator $containerConfigurator) : void {
     $services = $containerConfigurator->services();
     $services->set(ChangeFileLoaderInExtensionAndKernelRector::class)
-        ->arg('$from', 'yaml')
-        ->arg('$to', 'php');
+        ->call('configure', [[
+            ChangeFileLoaderInExtensionAndKernelRector::FROM => Format::YAML,
+            ChangeFileLoaderInExtensionAndKernelRector::TO => Format::PHP,
+        ]]);
 };
 ```
 
