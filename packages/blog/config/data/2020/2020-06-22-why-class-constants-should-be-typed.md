@@ -5,7 +5,7 @@ perex: |
     Do you use PHP 7.4 [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds/)? Do you know why?
     <br>
     <br>
-    I use them, so **I don't have to think and validate the property type** every time. We just know its the type or PHP would crash otherwise.
+    I use them, so **I don't have to think and validate the property type** every time. We just know its type or PHP would crash otherwise.
     <br>
     <br>
     Until PHP 7.4 this was not possible and code was kinda crappy.
@@ -43,7 +43,7 @@ You would not use the `Name` object like this, right?
 
 ## What About Constants?
 
-**What** are constant? They hold value, like properties, but **the value doesn't change**. We can change the value in the code, but not during runtime.
+**What** are constants? They hold value, like properties, but **the value doesn't change**. We can change the value in the code, but not during runtime.
 
 *Pro-tip: Do you think all your properties have values that can change? [Dare Rector to find them](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#changereadonlypropertywithdefaultvaluetoconstantrector).*
 
@@ -73,7 +73,7 @@ final class SomeClass
 
 Because if you're first, you're 1, right? I had the pleasure to debug such cases only to figure out the constant type was changed. Why? Because it could.
 
-**Constant value can be changed manually - so their type.** It's rarely desired behavior, moreover, when using these constant in 3rd party code or from one.
+**Constants value can be changed manually - so their type.** It's rarely desired behavior, moreover, when using these constants in 3rd party code or from one.
 
 ## How Can We Prevent Constant Re-type?
 
