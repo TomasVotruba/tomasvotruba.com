@@ -2,18 +2,23 @@
 id: 105
 title: "How to Load --config With Services in Symfony Console"
 perex: |
-    PHP CLI apps usually accept config, to setup their behavior. For PHPUnit it's `phpunit.xml`, for PHP CS Fixer it's `.php_cs`, for EasyCodingStandard it's `ecs.yml`, for PHPStan it's `phpstan.neon` and so on.
+    PHP CLI apps usually accept config, to setup their behavior. For PHPUnit it's `phpunit.xml`, for PHP CS Fixer it's `.php_cs`, for ECS it's `ecs.php`, for PHPStan it's `phpstan.neon` and so on.
     <br><br>
     In the first post about PHP CLI Apps I wrote about [poor DI support in PHP CLI projects](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/).
     <br><br>
     Today we look on the first barrier that leads most people to prefer static over DI - **how to load config with services**.
+
 tweet: "New Post on My Blog: How to Load --config With Services in #Symfony Console #di #config #egg #chicken"
 tweet_image: "/assets/images/posts/2018/config-di-console/chicken-egg.jpg"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
-```php
+```bash
 vendor/bin/phpstan --configuration phpstan.neon
-vendor/bin/ecs --config ecs.yml
+vendor/bin/ecs --config ecs.php
 ```
 
 Can you spot the difference? Same CLI input, but:
@@ -42,12 +47,12 @@ We need a config to create a container. We can get a config thanks to `Symfony\C
 
 Are you lost? That's all right. Let's see it in a list:
 
-- Get a user-provided config from CLI (e.g. `--config ecs.yml`)
+- Get a user-provided config from CLI (e.g. `--config ecs.php`)
 - Use `Symfony\Component\Console\Application` to get this value
 - Create a DI container with this config
 - Get `Application` service from the container
 - Invoke the `Application` with provided config
-- Get a user-provided config from CLI (e.g. `--config ecs.yml`)
+- Get a user-provided config from CLI (e.g. `--config ecs.php`)
 - ...
 
 Very nice recursion, isn't it?
@@ -56,11 +61,11 @@ Very nice recursion, isn't it?
 
 To get the main config in PHP App is easy. Symfony has [a common path in `Kernel`](https://github.com/symfony/demo/blob/v1.0.0/app/AppKernel.php#L59), Nette [in Configurator](https://github.com/nette/sandbox/blob/b3bd786d71bdecec441121cafc63086e58355130/app/bootstrap.php#L18) and other frameworks likewise.
 
-It's usually **absolute path defined in PHP code**, usually `app/config/config.yml` or `app/config/config.neon`. It doesn't change and every developer knows that. If we put the file to `app/config.yml`, it won't be loaded. PHP Apps are nice and clear in this matter.
+It's usually **absolute path defined in PHP code**, usually `app/config/config.php` or `app/config/config.neon`. It doesn't change and every developer knows that. If we put the file to `app/config.php`, it won't be loaded. PHP Apps are nice and clear in this matter.
 
 ### PHP CLI Apps are Free
 
-Users can configure the path to the main config, they can have multiple configs, `.dist` configs, config located in the root or nested in `/config` directory, it can be named `my-own-super-cool-config.yml` and so on.
+Users can configure the path to the main config, they can have multiple configs, `.dist` configs, config located in the root or nested in `/config` directory, it can be named `my-own-super-cool-config.php` and so on.
 
 Legacy bound architecture design or static code is a price for the freedom we have to pay here. **So can we pay less?**
 
@@ -69,7 +74,7 @@ Legacy bound architecture design or static code is a price for the freedom we ha
 Imagine we call EasyCodingStandard with following `--config`:
 
 ```bash
-vendor/bin/ecs --config some-config.yml
+vendor/bin/ecs --config some-config.php
 ```
 
 ## 1. The Mainstream: No Container
@@ -120,9 +125,9 @@ class SomeCommand extends Command
 When I worked on the first version of [nette/coding-standard](https://github.com/nette/coding-standard)
 almost a year ago, David came with question: "how to use ECS with 2 different configs - one for PHP 5.6 and one for PHP 7.0"?
 
-```php
-vendor/bin/ecs check src --config vendor/nette/cofing-standard/php56.yml
-vendor/bin/ecs check src --config vendor/nette/cofing-standard/php70.yml
+```bash
+vendor/bin/ecs check src --set vendor/nette/cofing-standard/php56.php
+vendor/bin/ecs check src --set vendor/nette/cofing-standard/php70.php
 ```
 
 I had no idea. So I created [this issue at Symplify](https://github.com/symplify/symplify/issues/192) and praised the open-source Gods, because current version of `bin/ecs` was as simple as:
@@ -153,7 +158,6 @@ So what now?
 
 Do you know `ArgvInput` class? It's a Symfony\Console input helper around native PHP `$_SERVER['argv']`, that holds all the `arguments --options 1` passed via CLI.
 
-
 Let's use it:
 
 ```php
@@ -176,7 +180,7 @@ $application->run();
 Run it:
 
 ```bash
-bin/ecs check src --config custom-config.yml
+bin/ecs check src --config custom-config.php
 ```
 
 And see how all nicely works on the 1st run:
@@ -206,7 +210,7 @@ So far so good.
 Later, a `ShowCommand` was added:
 
 ```bash
-bin/ecs show --config custom-config.yml
+bin/ecs show --config custom-config.php
 ```
 
 And we see our old friend again:
@@ -311,22 +315,34 @@ And use our `Application` in `bin/rector`:
  $application->run();
 ```
 
-Don't foget to update `services.yml`:
+Don't foget to update `services.php`:
 
 ```diff
- services:
-     _defaults:
-         autowire: true
+ <?php
 
--    Symfony\Component\Console\Application:
-+    Symplify\ChangelogLinker\Console\Application:
-         public: true # for bin file
+ declare(strict_types=1);
+
+-use Symfony\Component\Console\Application;
++use Symplify\EasyCodingStandard\Console\Application;
+
+ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+ return static function (ContainerConfigurator $containerConfigurator): void {
+     $services = $containerConfigurator->services();
+
+     $services->defaults()
+         ->autowire();
+
+     $services->set(Application::class)
+         // for bin file
+         ->public();
+};
 ```
 
 And let's try this again:
 
 ```bash
-bin/ecs check src --config custom-config.yml
+bin/ecs check src --config custom-config.php
 ```
 
 <img src="/assets/images/posts/2018/config-di-console/yes.png" class="img-thumbnail">

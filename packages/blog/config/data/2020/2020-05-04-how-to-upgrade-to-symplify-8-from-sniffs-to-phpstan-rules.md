@@ -7,9 +7,13 @@ perex: |
     <br>
     What to do with these deprecations? Why were these sniffs dropped? How to handle upgrades in 1 hour?
 tweet: "New Post on #php 🐘 blog: How to Upgrade to #symplify 8 - From Sniffs to #phpstan Rules"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
-When you run [ECS](https://github.com/symplify/easycodingstandard) with version 7.3+:
+When you run [ECS](https://github.com/symplify/easy-coding-standard) with version 7.3+:
 
 ```bash
 vendor/bin/ecs check
@@ -57,7 +61,7 @@ It's better to use *abstract syntax tree* technology, in this case [PHPStan](htt
 
 ## What to do With These Deprecations?
 
-So what does it mean? Remove all the rules from `ecs.yaml` and let go?
+So what does it mean? Remove all the rules from `ecs.php` and let go?
 
 No, **all you need to do is switch to PHPStan rules**. It's better working and more reliable since it works with context and not token positions. So at first, you might discover a few new reported errors here and there.
 
@@ -68,24 +72,33 @@ There are 14 deprecated sniffs in total. Don't worry, while it might seem like a
 
 Have you used a full Symplify set?
 
-```yaml
-# ecs.yaml
-parameters:
-    sets:
-        - symplify
+```php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::SYMPLIFY]);
+};
 ```
 
-Then you won't see any deprecations, because rules were removed from the config for you. Still, I recommend adding these rules to `phpstan.neon`.
+Then you won't see any deprecations, because rules were removed from the config for you.
+Still, I recommend adding these rules to `phpstan.neon`.
 
 ## 1. Abstract, Trait and Interface Naming Sniffs
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\Naming\AbstractClassNameSniff: null
--    Symplify\CodingStandard\Sniffs\Naming\TraitNameSniff: null
--    Symplify\CodingStandard\Sniffs\Naming\InterfaceNameSniff: null
-```
+These rules were removed:
+
+- ~~`Symplify\CodingStandard\Sniffs\Naming\AbstractClassNameSniff`~~
+- ~~`Symplify\CodingStandard\Sniffs\Naming\TraitNameSniff`~~
+- ~~`Symplify\CodingStandard\Sniffs\Naming\InterfaceNameSniff`~~
+
+and replaced by:
 
 ↓
 
@@ -103,14 +116,12 @@ rules:
 
 The [only ~~sniff~~ rule your coding standard should have](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/)... just got better.
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
--        maxCognitiveComplexity: 10 # default: 8
--    Symplify\CodingStandard\Sniffs\CleanCode\ClassCognitiveComplexitySniff:
--        maxClassCognitiveComplexity: 60 # default: 50
-```
+The orifinal sniffs were removed:
+
+- ~~`Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff`~~
+- ~~`Symplify\CodingStandard\Sniffs\CleanCode\ClassCognitiveComplexitySniff`~~
+
+and replaced by more avanced AST in form of PHPStan rules:
 
 ↓
 
@@ -128,13 +139,9 @@ parameters:
 
 ## 3. Make sure Classes used in @param, @var and @return Exists
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\Commenting\AnnotationTypeExistsSniff: null
-```
+- ~~`Symplify\CodingStandard\Sniffs\Commenting\AnnotationTypeExistsSniff`~~
 
-Easy, drop it. PHPStan level 0 handles this.
+Just drop it. PHPStan level 0 handles this.
 
 ## 4. Forbidden Static → Explicit Static
 
@@ -142,11 +149,7 @@ Static functions [are best way to slowly create technical dept](/blog/2019/04/01
 
 So instead of forbidding them:
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenStaticFunctionSniff: null
-```
+- ~~`Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenStaticFunctionSniff`~~
 
 ↓
 
@@ -167,15 +170,9 @@ I've been using it for 4 days, and oh, what a shame I feel when I want to use a 
 
 Even though it's repeated over, again and again, that composition beats inheritance, the PHP code I see is full of it.
 
-Sometimes the only way to [promote so-far-the-best practise](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/), is to enforce it:
+Sometimes the only way to [promote so-far-the-best practise](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/), is to enforce it.
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenParentClassSniff:
--        forbiddenParentClasses:
--            - Doctrine\ORM\EntityRepository
-```
+- ~~`Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenParentClassSniff`~~
 
 ↓
 
@@ -192,11 +189,7 @@ parameters:
 
 ## 6. Use Custom Exceptions over Basic Ones
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\Architecture\ExplicitExceptionSniff: null
-```
+- ~~`Symplify\CodingStandard\Sniffs\Architecture\ExplicitExceptionSniff`~~
 
 ↓
 
@@ -208,13 +201,7 @@ rules:
 
 ## 7. Prefer One Class over Another
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\Architecture\PreferredClassSniff:
--        oldToPreferredClasses:
--            'DateTime': 'Nette\Utils\DateTime'
-```
+- ~~`Symplify\CodingStandard\Sniffs\Architecture\PreferredClassSniff`~~
 
 ↓
 
@@ -231,11 +218,7 @@ rules:
 
 ## 8. No Duplicated Short Classes
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\Architecture\DuplicatedClassShortNameSniff: null
-```
+- ~~`Symplify\CodingStandard\Sniffs\Architecture\DuplicatedClassShortNameSniff`~~
 
 ↓
 
@@ -247,11 +230,7 @@ rules:
 
 ## 9. Use explicit Return over `&` Reference
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenReferenceSniff: null
-```
+- ~~`Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenReferenceSniff`~~
 
 ↓
 
@@ -263,12 +242,7 @@ rules:
 
 ## 10. Don't leave `dump()` Function in the Code
 
-
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\Debug\DebugFunctionCallSniff: null
-```
+- ~~`Symplify\CodingStandard\Sniffs\Debug\DebugFunctionCallSniff`~~
 
 ↓
 
@@ -280,11 +254,7 @@ rules:
 
 ## 11. Respect Naming of Your Parents
 
-```diff
--# ecs.yaml
--services:
--    Symplify\CodingStandard\Sniffs\Naming\ClassNameSuffixByParentSniff: null
-```
+- ~~`Symplify\CodingStandard\Sniffs\Naming\ClassNameSuffixByParentSniff`~~
 
 ↓
 

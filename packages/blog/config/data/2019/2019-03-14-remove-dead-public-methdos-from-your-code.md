@@ -6,6 +6,7 @@ perex: |
     <br><br>
     But what if you're creating an application - you can remove unused with peace in mind.
     There is only one problem to resolve - **find public unused methods**.
+
 tweet: "New Post on #php 🐘 blog: Remove Dead Public Methods from Your Code"
 tweet_image: "/assets/images/posts/2019/dead-public/usages.png"
 
@@ -75,14 +76,23 @@ I consider Symplify project quite small, at least compared to private web applic
 
 ...and we don't talk about brain wasted on linear operations. This is not the way.
 
-## How to find them in 20 Seconds?
+## How to find them in 1 Minute?
 
 There is one little sniff in `symplify/coding-standard` only few people know about. Set it up:
 
-```yaml
-# ecs.yaml
-services:
-    Symplify\CodingStandard\Sniffs\DeadCode\UnusedPublicMethodSniff: ~
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(Symplify\CodingStandard\Sniffs\DeadCode\UnusedPublicMethodSniff::class);
+};
 ```
 
 And use it:

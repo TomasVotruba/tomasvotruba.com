@@ -354,7 +354,7 @@ In this case just add default value to property itself:
 +private $visitors = [];
 ```
 
-There is even coding [standard fixer for that](https://github.com/symplify/codingstandard#array-property-should-have-default-value-to-prevent-undefined-array-issues).
+There is even coding [standard fixer for that](https://github.com/symplify/coding-standard#array-property-should-have-default-value-to-prevent-undefined-array-issues).
 
 Also, **do not add any logic to constructor** apart dependency injection. Constructor injection is the main reason to use the constructor in 99 %, so most people probably don't expect any extra logic there. Create extra method instead or decouple a class, put it into the constructor and call the method on it.
 

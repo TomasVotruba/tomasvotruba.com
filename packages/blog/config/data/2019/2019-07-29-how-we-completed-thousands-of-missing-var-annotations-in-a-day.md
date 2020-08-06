@@ -11,7 +11,7 @@ tweet_image: "/assets/images/posts/2019/var/doctrine.png"
 
 updated_since: "August 2020"
 updated_message: |
-    Updated Rector YAML to PHP configuration, as current standard.
+    Updated Rector/ECS YAML to PHP configuration, as current standard.
 ---
 
 This post has 2 parts:
@@ -399,27 +399,38 @@ I'll guide you from step zero to final merge of pull-request, **so the gif will 
 ```bash
 composer require rector/rector --dev
 composer require symplify/easy-coding-standard --dev
+composer require slevomat/coding-standard --dev
 ```
 
 **Run ECS to check missing `@var` annotations at properties**
 
-```yaml
-# ecs.yaml
-services:
-    # every property should have @var annotation
-    SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff: ~
+```php
+<?php
 
-# this part is needed, because `TypeHintDeclarationSniff` is actually mix of 7 rules we don't need
-# (they also delete code, so be sure to have this section here)
-parameters:
-    skip:
-        # ↓ the first removes useful code!
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment: ~
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversablePropertyTypeHintSpecification: ~
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableReturnTypeHintSpecification: ~
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableParameterTypeHintSpecification: ~
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingParameterTypeHint: ~
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingReturnTypeHint: ~
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    // every property should have @var annotation
+    $services->set(SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff::class);
+
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SKIP, [
+        //  this part is needed, because `TypeHintDeclarationSniff` is actually mix of 7 rules we don't need
+        // (they also delete code, so be sure to have this section here)
+        'SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment' => null,
+        'SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversablePropertyTypeHintSpecification' => null,
+        'SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableReturnTypeHintSpecification' => null,
+        'SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingTraversableParameterTypeHintSpecification' => null,
+        'SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingParameterTypeHint' => null,
+        'SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.MissingReturnTypeHint' => null,
+    ]);
+};
 ```
 
 Run coding standard on your code:
@@ -432,7 +443,9 @@ vendor/bin/ecs check src tests
 
 2 500 errors? Not a problem.
 
-**Configure Rector**
+<br>
+
+**1. Configure Rector**
 
 ```php
 <?php
@@ -450,7 +463,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-**And finally run it in your code**
+**2. Run Rector to fix your code**
 
 ```bash
 vendor/bin/rector process src tests

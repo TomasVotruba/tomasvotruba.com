@@ -10,10 +10,10 @@ tweet: "New Post on #php 🐘 blog: How to Upgrade to #symplify 8 - From Fixer t
 
 updated_since: "August 2020"
 updated_message: |
-    Updated Rector YAML to PHP configuration, as current standard.
+    Updated Rector/ECS YAML to PHP configuration, as current standard.
 ---
 
-When you run [ECS](https://github.com/symplify/easycodingstandard) with version 7.3+:
+When you run [ECS](https://github.com/symplify/easy-coding-standard) with version 7.3+:
 
 ```bash
 vendor/bin/ecs check
@@ -38,7 +38,7 @@ Now we know *why*. Let's look *how* to deal with that.
 
 ## What to do With These Deprecations?
 
-So what does it mean? Remove all the rules from `ecs.yaml` and let go?
+So what does it mean? Remove all the rules from `ecs.php` and let go?
 
 No, **all you need to do is switch to Rector rules**. It's better working and more reliable since it works with context and not token positions. So at first, you might see new changes in your code.
 
@@ -57,10 +57,19 @@ composer require rector/rector --dev
 The `RemoveEmptyDocBlockFixer` rule basically copied behavior of native `NoEmptyPhpdocFixer`, so just it instead:
 
 ```diff
- # ecs.yaml
- services:
--    Symplify\CodingStandard\Fixer\Commenting\RemoveEmptyDocBlockFixer: null
-+    PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer: null
+ <?php
+
+ // ecs.php
+
+ declare(strict_types=1);
+
+ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+ return static function (ContainerConfigurator $containerConfigurator): void {
+     $services = $containerConfigurator->services();
+-    $services->set(Symplify\CodingStandard\Fixer\Commenting\RemoveEmptyDocBlockFixer::class);
++    $services->set(PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer::class);
+ };
 ```
 
 ## 2. Preg Delimiter Character
@@ -78,13 +87,7 @@ The `PregDelimiterFixer` was checking consistent preg delimiter, in this case `#
  }
 ```
 
-Instead of fixer:
-
-```diff
- # ecs.yaml
- services:
--    PhpCsFixer\Fixer\ControlStructure\PregDelimiterFixer: null
-```
+Instead of ~~`PhpCsFixer\Fixer\ControlStructure\PregDelimiterFixer`~~ fixer:
 
 ↓
 
@@ -121,13 +124,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
  }
 ```
 
-Instead of fixer:
-
-```diff
- # ecs.yaml
- services:
--    PhpCsFixer\Fixer\ControlStructure\RequireFollowedByAbsolutePathFixer: null
-```
+Instead of ~~`PhpCsFixer\Fixer\ControlStructure\RequireFollowedByAbsolutePathFixer`~~ fixer,
 
 ↓
 
@@ -167,13 +164,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
  }
 ```
 
-Instead of fixer:
-
-```diff
- # ecs.yaml
- services:
--    PhpCsFixer\Fixer\Naming\CatchExceptionNameMatchingTypeFixer: null
-```
+Instead of ~~`PhpCsFixer\Fixer\Naming\CatchExceptionNameMatchingTypeFixer`~~ Fixer:
 
 ↓
 
@@ -214,13 +205,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
  }
 ```
 
-Instead of Fixer:
-
-```diff
- # ecs.yaml
- services:
--    Symplify\CodingStandard\Fixer\Naming\PropertyNameMatchingTypeFixer: null
-```
+Instead of ~~`Symplify\CodingStandard\Fixer\Naming\PropertyNameMatchingTypeFixer`~~ Fixer
 
 ↓
 
@@ -266,14 +251,10 @@ return function (ContainerConfigurator $containerConfigurator): void {
  }
 ```
 
-Instead of Fixers:
+Instead of:
 
-```diff
- # ecs.yaml
- services:
--    Symplify\CodingStandard\Fixer\Property\BoolPropertyDefaultValueFixer: null
--    Symplify\CodingStandard\Fixer\Property\ArrayPropertyDefaultValueFixer: null
-```
+- ~~`Symplify\CodingStandard\Fixer\Property\BoolPropertyDefaultValueFixer`~~
+- ~~`Symplify\CodingStandard\Fixer\Property\ArrayPropertyDefaultValueFixer`~~
 
 ↓
 
@@ -316,13 +297,7 @@ This feature is here since PHP 5.5, and it's a massive help for static analysis 
  }
 ```
 
-Instead of Fixer:
-
-```diff
- # ecs.yaml
- services:
--    Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer: null
-```
+Instead of ~~`Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer`~~ Fixer:
 
 ↓
 
@@ -350,14 +325,10 @@ How do you order your methods? Random?
 
 **Be sure to read [How to Teach Your Team Private Method Sorting in 3 mins](/blog/2018/11/01/how-teach-your-team-private-method-sorting-in-3-mins/).**
 
-Instead of Fixers:
+Instead of:
 
-```diff
- # ecs.yaml
- services:
--    Symplify\CodingStandard\Fixer\Order\PrivateMethodOrderByUseFixer: null
--    Symplify\CodingStandard\Fixer\Order\PropertyOrderByComplexityFixer: null
-```
+- ~~`Symplify\CodingStandard\Fixer\Order\PrivateMethodOrderByUseFixer`~~
+- ~~`Symplify\CodingStandard\Fixer\Order\PropertyOrderByComplexityFixer`~~
 
 ↓
 
@@ -401,14 +372,7 @@ Do you implement one interface over and over? Do you have dozens of such classes
  }
 ```
 
-Instead of Fixer:
-
-```diff
- # ecs.yaml
- services:
--    Symplify\CodingStandard\Fixer\Order\MethodOrderByTypeFixer:
--        ...
-```
+Instead of ~~`Symplify\CodingStandard\Fixer\Order\MethodOrderByTypeFixer`~~ Fixer:
 
 ↓
 
@@ -444,13 +408,7 @@ This will be the biggest added value, as tokens have no idea if your class is ex
 
 Rector knows that, so be ready for more solid code after you run it.
 
-Instead of Fixer:
-
-```diff
- # ecs.yaml
- services:
--    Symplify\CodingStandard\Fixer\Solid\FinalInterfaceFixer: null
-```
+Instead of ~~`Symplify\CodingStandard\Fixer\Solid\FinalInterfaceFixer`~~ Fixer:
 
 ↓
 

@@ -8,11 +8,14 @@ perex: |
 tweet: "Absolutize require/include, empty line after strict_types() definition, import all the names and the best - unused public methods. Welcome and use new checkers in Symplify 3 Coding Standard #codingstandar #phpcsfixer #phpcodesniffer #php"
 tweet_image: "/assets/images/posts/2018/symplify-3-checkers/import-fixer.png"
 
-updated_since: "December 2018"
+updated_since: "August 2020"
 updated_message: |
-    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
+    Updated with **ECS 5**, Neon to YAML migration and `checkers` to `services` migration.
 
     `ImportNamespacedNameFixer` [was removed](https://github.com/symplify/symplify/pull/1110) in favor of `ReferenceUsedNamesOnlySniff` from [slevomat/coding-standard](https://github.com/slevomat/coding-standard)
+    <br>
+    <br>
+    Updated with ECS to Rector rules and PHP configuration. Removed UnusedPublicSniff, that does not exist anymore. Use Rector dead-code set instead.
 ---
 
 Starting with the simple checkers and moving to those, which save you even hours of manual work.
@@ -51,12 +54,23 @@ Of course there are cases when using absolute paths is not suitable, like templa
 +require __DIR__.'/vendor/autoload.php';
 ```
 
-And that's what this checker does for you:
+And that's what this Rector rule does for you:
 
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\ControlStructure\RequireFollowedByAbsolutePathFixer: ~
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\CodingStyle\Rector\Include_\FollowRequireByDirRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(FollowRequireByDirRector::class);
+};
 ```
 
 <br>
@@ -91,10 +105,21 @@ Which is not what we want.
 
 When the official fixer is finished, I'd be happy to use it and recommend it. But **right now you can use**:
 
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\Strict\BlankLineAfterStrictTypesFixer: ~
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\CodingStandard\Fixer\Strict\BlankLineAfterStrictTypesFixer;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(BlankLineAfterStrictTypesFixer::class);
+};
 ```
 
 Which helps official fixer to keep the space:
@@ -155,56 +180,22 @@ final class SomeClass extends \SubNamespace\PartialNamespace\AnotherClass
  }
 ```
 
-Original `ImportNamespacedNameFixer` doing this job [was removed in EasyCodingStandard 5](https://github.com/symplify/symplify/pull/1110) in favor of `ReferenceUsedNamesOnlySniff` from [slevomat/coding-standard](https://github.com/slevomat/coding-standard).
+To enable this behavior, add one parameter to Rector config:
 
-It's not able to import partial namespace or resolve conflicts, but it has extra features, like functions imports etc.
+```php
+<?php
 
-How does it Work?
+// rector.php
 
-```yaml
-# ecs.yml
-services:
-    SlevomatCodingStandard\Sniffs\Namespaces\ReferenceUsedNamesOnlySniff: ~
-```
+declare(strict_types=1);
 
-## 4. Possible Unused Public Method
+use Rector\CodingStyle\Rector\Include_\FollowRequireByDirRector;
+use Rector\Core\Configuration\Option;use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-<a href="https://github.com/symplify/symplify/pull/466" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fab fa-github"></em>
-    &nbsp;
-    Check the pull-request
-</a>
-
-
-If you create method **to be used in your code only and available as service** - no matter if open-source or closed-source - you might end-up with many public methods. Your application or packages grows, there are some refactoring going on, even few deprecations.
-
-Same happened with [Symplify](https://github.com/symplify/symplify). Eventually, I came across **unused public methods** that contained lot of unused code. A code I hade to test and maintain. There is already [Sniff from Slevomat](https://github.com/slevomat/coding-standard#slevomatcodingstandardclassesunusedprivateelements-) for unused private elements (great job guys!) - which inspired me to question:
-
-### Could a Sniff Spot Unused Public Methods?
-
-Consider this checker **as adviser, who helps to you to spot weak points** and makes rest of your code more valuable and consistent, since it contains only what it needs.
-
-This checkers **requires EasyCodingStandard** to run - it uses its "double run" feature:
-
-- on first run checker finds all public method names and all method calls
-- on second run it reports those public method names, that were not called
-
-It helps you to spot spots like [this](https://github.com/symplify/symplify/pull/466/commits/3f08ed1fb2f22dd6c4a7b46d680adf4ab5a0907d), [this](https://github.com/symplify/symplify/pull/466/commits/fa21855694d933716117b2a2db13acac55b86d69) or [this](https://github.com/symplify/symplify/pull/552/commits/2df9cbab657a701acb2163f7321216fb782fcf35).
-
-### Run it Occasionally to Save Dozens of Hours of Dead Code Maintenance
-
-I recommend it running from time to time in standalone thread, since it takes lot of performance and reports all unused public method, even those destined for public use:
-
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\DeadCode\UnusedPublicMethodSniff: ~
-```
-
-To make the first run collection effective, a `--clear-cache` option must be added:
-
-```bash
-vendor/bin/ecs check src --clear-cache
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::AUTO_IMPORT_NAMES, true);
+};
 ```
 
 <br>
@@ -213,7 +204,7 @@ vendor/bin/ecs check src --clear-cache
 
 There are **over 30 standalone checkers** in Symplify\CodingStandard 3.0 with more added every release.
 
-See [visual examples in `README`](https://github.com/Symplify/CodingStandard#rules-overview) and decide for yourself, which you like and which you don't.
+See [visual examples in `README`](https://github.com/symplify/coding-standard#rules-overview) and decide for yourself, which you like and which you don't.
 
 Thanks [@carusogabriel](https://twitter.com/carusogabriel) for the `diff` idea in `README`. It's brilliant!
 

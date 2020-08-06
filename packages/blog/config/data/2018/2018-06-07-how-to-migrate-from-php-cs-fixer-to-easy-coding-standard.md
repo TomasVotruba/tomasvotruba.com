@@ -6,6 +6,10 @@ perex: |
     <br>
     There are **a few simple A → B changes**, but one has to know about them or will get stuck. Let's learn about them.
 tweet: "New Post on my Blog: How to Migrate From PHP CS Fixer to EasyCodingStandard in 6 Steps #ecs #codingstandard #ci"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's super easy to start to use from scratch:
@@ -40,24 +44,24 @@ That can actually cause typos like:
      ->setFinder($finder);
 ```
 
-How to do that in EasyCodingStandard? Copy paste the name from README, capitalize first letter and remove `_`:
-
-```yaml
-# ecs.yml
-services:
-    DeclareStrictTypes<cursor-here>:
-```
+How to do that in ECS? Copy paste the fixer name, capitalize first letter and remove `_`:
 
 Then hit the "ctrl" + "space" for class autocomplete in PHPStorm (it works even now when I write this post in markdown, nice!).
 
-```yaml
-services:
-    PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer::class);
+};
 ```
-
-That way [Symfony plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin) will autocomplete the class for you:
-
-<img src="https://github.com/symplify/easy-coding-standard/raw/master/docs/yaml-autocomplete.gif">
 
 No more typos with *strong* over *string typing*.
 
@@ -72,60 +76,69 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__);
 ```
 
-One big cons of this is **that all fixers will skip this code**, not just one. Do you need `DeclareStrictTypesFixer` to skip thisf ile? Sorry, all fixers will skip it.
+Do you need `DeclareStrictTypesFixer` to skip this file? Sorry, PHP CS Fixer will skip it for ever rule.
 
-EasyCodingStandard solves this common case - to skip a file, just use `skip` parameter:
+ECS solves this common case - to skip a file, just use `skip` parameter:
 
-```yaml
-parameters:
-    skip:
-        PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer:
-            - 'my-nasty-dirty-file.php'
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SKIP, [
+        DeclareStrictTypesFixer::class => [
+            __DIR__ . '/my-nasty-dirty-file.php',
+            // you can add more files
+            __DIR__ . '/Legacy/too-legacy-to-look-at.php',
+
+            // or directories
+            __DIR__ . '/Legacy',
+
+            // or mask paths with fnmatch()
+            __DIR__ . '/*/Command',
+        ]
+    ]);
+};
 ```
 
-Do you have more such cases?
+Do you really want to skip **1 fixer** for all files?
 
-```yaml
-parameters:
-    skip:
-        PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer:
-            - 'my-nasty-dirty-file.php'
-            - 'sooo-dirty-file.php'
-            - 'teribly-dirty-file.php'
-            - 'sexy-dirty-file.php'
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SKIP, [
+        DeclareStrictTypesFixer::class => null,
+    ]);
+};
 ```
 
-You don't have to list them all like a typing monkey. Just use `fnmatch()` format instead:
+For all other `skip` options, [see README](https://github.com/symplify/easy-coding-standard/#ignore-what-you-cant-fix).
 
-```yaml
-parameters:
-    skip:
-        PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer:
-            - '*dirty-file.php'
-```
-
-In case you need to **skip 1 fixer**, put it under `exclude_checkers`:
-
-```yaml
-parameters:
-    exclude_checkers:
-        - PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer
-```
-
-For all other `skip` options, [see README](https://github.com/symplify/easyCodingStandard/#ignore-what-you-cant-fix).
-
-## 3. From `.php_cs` to YML Config
+## 3. From `.php_cs` to PHP Config
 
 PHP CS Fixer looks for `.php_cs` file in the root directory by default.
 
-**And EasyCodingStandard looks for:**
-
-```bash
-- ecs.yml
-- ecs.yaml
-- easy-coding-standard.yml
-- easy-coding-standard.yaml
-```
+**And ECS looks for `ecs.php`**
 
 What about non-default locations or names?
 
@@ -138,7 +151,7 @@ vendor/bin/php-cs-fixer fix /path/to/project --config=custom/location.yml --dry-
 **to:**
 
 ```bash
-vendor/bin/ecs check /path/to/project --config custom/location.yml
+vendor/bin/ecs check /path/to/project --config custom/location.php
 ```
 
 ## 4. Configuring Fixer Values
@@ -153,12 +166,26 @@ return PhpCsFixer\Config::create()
     ->setFinder($finder);
 ```
 
-**to YML parameters in EasyCodingStandard:**
+**to explicit Symfony service parameters in EasyCodingStandard:**
 
-```yaml
-services:
-    PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
-        syntax: short
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(ArraySyntaxFixer::class)
+        ->call('configure', [[
+            'syntax' => 'short'
+        ]]);
+};
 ```
 
 Nice and clear!
@@ -192,20 +219,31 @@ $config = PhpCsFixer\Config::create()
     ]);
 ```
 
-**to autocompleted config in YAML file in Easy Coding Standard**:
+**to autocompleted set constant in PHP file in ECS**:
 
-```yaml
-imports:
-    - { resource: 'vendor/symplify/easy-coding-standard/config/psr2.yml' }
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::PSR_12,
+    ]);
+};
 ```
-
-Do you want to see all the PSR-2 rules? Easy, just click on the file.
 
 <br>
 
 ### Give it a Try...
 
-...and you won't regret it. Sylius, LMC, Shopsys, Nette, and SunFox did and never came back.
+...and you won't regret it. Sylius, [PestPHP](https://github.com/pestphp/drift), LMC, Shopsys and Nette did and never came back.
 
 <br>
 

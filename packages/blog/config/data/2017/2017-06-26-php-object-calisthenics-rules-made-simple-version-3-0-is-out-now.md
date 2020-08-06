@@ -14,9 +14,10 @@ deprecated_message: |
 
     **Nowadays I shifted to 1 much better metric - [Cognitive Complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/).**
 
-updated_since: "December 2018"
+updated_since: "August 2020"
 updated_message: |
-    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
+    Updated with **ECS 5**, Neon to YAML migration and `checkers` to `services` migration.<br>
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 If you are a coding standard nerd like me, you'll probably have more than just PSR-2 standard in your ruleset. But even if you don't, [Object Calisthenics](https://github.com/object-calisthenics/phpcs-calisthenics-rules) is a developer-friendly game changer for your code.
@@ -69,24 +70,42 @@ As you can see in the bottom part of screenshot, most of rules are configurable.
 
 *Do you prefer to require min 4 chars?*
 
-```yaml
-# ecs.yml
-services:
-    # Rule 6: Do not abbreviate
-    ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff:
-        minLength: 4 # default: 3
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set('ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff')
+        ->property('minLength', 4);
+};
 ```
 
-*Do you want to add "y" to allowed short names?*
+*Do you want to add own allowed short names?*
 
-```yaml
-# ecs.yml
-services:
-    # Rule 6: Do not abbreviate
-    ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff:
-        minLength: 4
-        allowedShortNames: ["y", "i", "id", "to", "up"]
-        # default: ["i", "id", "to", "up"]
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    // Rule 6: Do not abbreviate
+    $services->set(ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff::class)
+        ->property('minLength', 4)
+        // default: ["i", "id", "to", "up"]
+        ->property('allowedShortNames', ['y', 'i', 'id', 'to', 'up']);
+};
 ```
 
 ### Minitip: What Can You Configure in Particular Sniff?

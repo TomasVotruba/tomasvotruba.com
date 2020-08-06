@@ -10,9 +10,10 @@ perex: |
     Let's look what will show all you need (and nothing more) to <strong>know to write your first sniff</strong>.
 tweet: "How to Write Custom Sniff for #phpCodeSniffer 3"
 
-updated_since: "December 2018"
+updated_since: "August 2020"
 updated_message: |
-    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
+    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.<br>
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
@@ -245,11 +246,22 @@ You can find [final Sniff on Github](https://github.com/symplify/symplify/blob/e
 
 ## How to run it?
 
-With [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) put the class to `ecs.yml`:
+With [ECS](https://github.com/symplify/easy-coding-standard) put the class to `ecs.php`:
 
-```yaml
-services:
-    Symplify\CodingStandard\Sniffs\Naming\ExceptionNameSniff: ~
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\CodingStandard\Sniffs\Naming\ExceptionNameSniff;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(ExceptionNameSniff::class);
+};
 ```
 
 And run:

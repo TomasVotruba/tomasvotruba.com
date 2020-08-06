@@ -33,7 +33,6 @@ Here is a summary of what I found and how to migrate to each other. I'll write a
 70 % of syntax is similar:
 
 ```yaml
-# ecs.yml
 services:
     Symplify\CodingStandard\Fixer\Import\ImportNamespacedNameFixer: ~
 ```
@@ -176,7 +175,6 @@ someValue:
 You can do similar shenaniganz with Yaml as well thanks to `Symfony\ExpressionLanguage`
 
 ```yaml
-# ecs.yml
 services:
     App\Mailer:
         arguments: ["@=service('App\\\\Mail\\\\MailerConfiguration').getMailerMethod()"]

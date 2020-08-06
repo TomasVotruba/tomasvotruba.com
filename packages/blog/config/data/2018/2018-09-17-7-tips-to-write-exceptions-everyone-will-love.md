@@ -9,7 +9,9 @@ perex: |
     Exceptions are not just error state. **Exceptions are the new documentation**.
 tweet: "New Post on my Blog: 7 Tips to Write #Exceptions Everyone Will Love    #tracy #donotmakemethink #php #exceptions"
 
-
+updated_since: "August 2020"
+updated_message: |
+    Updated YAML to PHP configuration, as current standard.
 ---
 
 I wrote a [50-page thesis about polyphasic sleep](/blog/2018/02/12/sleep-shorter-to-get-62-percent-smarter/). My opponent told me, that there is a missing part about uncontrolled intervening values. The part in pages 34-36 he probably skipped. Today we have too much going on **we have to scan**. Anything longer than 140 chars is exhausting. Moreover for us programmers, who dance among tsunami of information coming every hour as they code and investigate code of others.
@@ -44,12 +46,11 @@ WTF? Could you be more clear?
      <em>ConfigurationFileNotFoundException</em>
 </blockquote>
 
-
-A-ha, I create `ecs.yml` and it works!
+A-ha, I create `ecs.php` and it works!
 
 **+10 % happier programmer**
 
-Do you need help with this? There is [Sniff](https://github.com/symplify/codingstandard#use-explicit-and-informative-exception-names-over-generic-ones) that makes sure no exception is generic.
+Do you need help with this? There is [Sniff](https://github.com/symplify/coding-standard#use-explicit-and-informative-exception-names-over-generic-ones) that makes sure no exception is generic.
 
 ## 2. Use " around" Statements
 
@@ -57,10 +58,19 @@ Do you need help with this? There is [Sniff](https://github.com/symplify/codings
      <em>Filter class  VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd was not found</em>
 </blockquote>
 
-```yaml
-parameters:
-    filters:
-        -  VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd
+```php
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set('filters', [
+        ' VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd'
+    ]);
+};
 ```
 
 The class **exists** and it **is** autoloaded:
@@ -81,13 +91,22 @@ So what is wrong?
 *5 minutes later...*
 
 ```diff
- parameters:
-     filters:
--        -  VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd
-+        - VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd
+ <?php
+
+ declare(strict_types=1);
+
+ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+ return static function (ContainerConfigurator $containerConfigurator): void {
+     $parameters = $containerConfigurator->parameters();
+     $parameters->set('filters', [
+-        ' VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd'
++        'VeryLongNamespace\InNestedNamespace\WithMissingClassInTheEnd'
+     ]);
+ };
 ```
 
-Ah, there was a space, a small single space!
+Ah, there was a space, a single small space!
 
 You probably noticed it, because there are 3 lines of code and they get all your attention. In reality, there are 80 lines of code, 5 files opened in your IDE/brain and your colleague is asking you for wise advice, so your chances to spot this are much lower.
 
@@ -151,10 +170,19 @@ throw new InvalidParameterException(sprintf(
 
 Aha, now I know where to find it, thanks!
 
-```yaml
-parameters:
-    page_name:
-        main: []
+```php
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set('page_name', [
+        'main' => []
+    ]);
+};
 ```
 
 **+20 % happier programmer**

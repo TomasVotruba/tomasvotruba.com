@@ -8,9 +8,11 @@ perex: |
 tweet: "How to Write Custom Fixer for #phpcsfixer"
 tweet_image: "/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png"
 
-updated_since: "December 2018"
+updated_since: "August 2020"
 updated_message: |
-    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
+    Updated with **ECS 5**, Neon to YAML migration and `checkers` to `services` migration.
+    <br>
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
@@ -411,13 +413,23 @@ And run:
 vendor/bin/php-cs-fixer fix src --config=.php_cs --dry-run
 ```
 
-### The [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) way
+### The [ECS](https://github.com/symplify/easy-coding-standard) way
 
-Put the class to `ecs.yml`:
+Put the class to `ecs.php`:
 
-```yaml
-services:
-    App\CodingStandard\Fixer\ExceptionNameFixer: ~
+```php
+<?php
+
+declare(strict_types=1);
+
+use App\CodingStandard\Fixer\ExceptionNameFixer;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(ExceptionNameFixer::class);
+};
 ```
 
 And run:

@@ -7,6 +7,10 @@ perex: |
     <br>
     This post shows 7 news and changes, that might affect you (in a good way).
 tweet: "New Post on #php 🐘 blog: 7 News and Changes in #symplify 6  #ecs"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 What is **new**?
@@ -23,41 +27,44 @@ What is **new**?
 
 **I really love this feature, because it makes a lot of custom boiler code go away.**
 
-In old *Symplify 5*, when you needed to run sniff only on `/tests`, you had to create own ruleset and run it separately:
-
-```yaml
-# ecs.yaml
-services:
-    BasicSniff: ~
-```
-
-```yaml
-# tests-only-ecs.yaml
-services:
-    AnotherSniff: ~
-```
+In old *Symplify 5*, when you needed to run sniff only on `/tests`, you had to create own config, e.g. `ecs-only-for-tests.php` and run it separately.
 
 ```bash
-vendor/bin/ecs check src tests # --config ecs.yaml by default
-vendor/bin/ecs check tests --config tests-only-ecs.yaml
+vendor/bin/ecs check src --config ecs.php
+vendor/bin/ecs check tests --config tests-only-ecs.php
 ```
 
 That was way too complicated, right?
 
 <br>
 
-In new *Symplify 6*, you can use just one config with `only` option instead:
+In new *Symplify 8*, you can use just one config with `only` option instead:
 
-```yaml
-# ecs.yaml
-services:
-    BasicSniff: ~
-    AnotherSniff: ~
+```php
+<?php
 
-parameters:
-    only:
-        AnotherSniff:
-            - '*/tests/*'
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    // all rules must be registered
+    $services->set(BasicSniff::class);
+    $services->set(AnotherSniff::class);
+
+    $parameters = $containerConfigurator->parameters();
+    // here you can configure, what rules should only check particular paths
+    $parameters->set(Option::ONLY, [
+        AnotherSniff::class => [
+            __DIR__ . '/tests/'
+        ]
+    ]);
+};
 ```
 
 ```yaml
@@ -72,38 +79,59 @@ It's basically an inversion of `skip` parameter.
 
 What has **changed**?
 
-### 2. `*.yml` → `*.yaml`
+### 2. `*.yaml` → `*.php`
 
-As Symfony is [moving to *.yaml](https://github.com/symfony/demo/tree/master/config) suffixes, Symplify does too.
+As Symfony is [moving to *.php](https://github.com/symfony/symfony/issues/37186) configuration, Symplify does too.
 
 ## EasyCodingStandard
 
-### 3. Sets are Now In `/set` Directory
+### 3. Sets are Now In defined in `SetList` Constants
 
-Why? The `/config` directory contains `services.yaml` in Symfony application. It got cluttered with all the prepared sets.
+Why? The sets are only string references, so its useless for human to remember them. Why not let IDE help us?
 
 ```diff
- # ecs.yaml
- imports:
--    - { resource: 'vendor/symplify/easy-coding-standard/config/php71.yml' }
--    - { resource: 'vendor/symplify/easy-coding-standard/config/common.yml' }
--    - { resource: 'vendor/symplify/easy-coding-standard/config/clean-code.yml' }
-+    - { resource: 'vendor/symplify/easy-coding-standard/config/set/php71.yaml' }
-+    - { resource: 'vendor/symplify/easy-coding-standard/config/set/common.yaml' }
-+    - { resource: 'vendor/symplify/easy-coding-standard/config/set/clean-code.yaml' }
-```
+ <?php
 
+ // ecs.php
+
+ declare(strict_types=1);
+
+ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
++use Symplify\EasyCodingStandard\Configuration\Option;
++use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+
+ return static function (ContainerConfigurator $containerConfigurator): void {
+-    $containerConfigurator->import(__DIR__ . '/vendor/symplify/easy-coding-standard/config/php71.php');
+
++    $parameters = $containerConfigurator->parameters();
++    $parameters->set(Option::SETS, [
++         SetList::PHP_71,
++    ]);
+ };
+```
 
 ### 4. ~~exclude_checkers~~ → `skip`
 
 People confused this options and created *WTF* issues. That's why the `exclude_checkers` is now merged in `skip`, so you have less option names to remember:
 
 ```diff
- parameters:
--    exclude_checkers:
--        - 'PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer'
-+    skip:
-+        PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer: ~
+ <?php
+
+ // ecs.php
+
+ declare(strict_types=1);
+
+ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
++use Symplify\EasyCodingStandard\Configuration\Option;
+
+ return static function (ContainerConfigurator $containerConfigurator): void {
+     $parameters = $containerConfigurator->parameters();
+-    $parameters->set('exclude_checkers', [
++    $parameters->set(Option::SKIP, [
+-        SomeFixer::class
++        SomeFixer::class => null,
+     ]);
+ };
 ```
 
 ## PackageBuilder
@@ -113,9 +141,20 @@ People confused this options and created *WTF* issues. That's why the `exclude_c
 Do you like `SplFileInfo` that is 100 % sure the file exists? In that case, you use `Symplify\PackageBuilder\FileSystem\SmartFileInfo` instead of `SplFileInfo`. The easiest way to use it is via `FinderSanitizer` that is now available via `symplify/package-builder` package:
 
 ```diff
- services:
--    Symplify\EasyCodingStandard\Finder\FinderSanitizer: ~
-+    Symplify\PackageBuilder\FileSystem\FinderSanitizer: ~
+ <?php
+
+ // ecs.php
+
+ declare(strict_types=1);
+
+ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
++use Symplify\EasyCodingStandard\Configuration\Option;
+
+ return static function (ContainerConfigurator $containerConfigurator): void {
+     $services = $containerConfigurator->services();
+-    $services->set(Symplify\EasyCodingStandard\Finder\FinderSanitizer);
++    $services->set(Symplify\PackageBuilder\FileSystem\FinderSanitizer);
+ };
 ```
 
 ### 6. ~~ConfigurableCollectorCompilerPass~~ → `AutowireArrayParameterCompilerPass`
@@ -147,15 +186,24 @@ So instead, *Symplify 6* adds better system to pass collected services of certai
 
 ### 7. ~~RemoveUselessDocBlockFixer~~ → `NoSuperfluousPhpdocTagsFixer`
 
-`RemoveUselessDocBlockFixer` was removed, because PHP CS Fixer now provides `NoSuperfluousPhpdocTagsFixer` with similar features:
+`RemoveUselessDocBlockFixer` was removed, since [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) now provides `NoSuperfluousPhpdocTagsFixer` with similar features:
 
 ```diff
- # ecs.yaml
- services:
--    Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer: ~
-+    PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer: ~
-```
+ <?php
 
+ // ecs.php
+
+ declare(strict_types=1);
+
+ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+ return static function (ContainerConfigurator $containerConfigurator): void {
+     $services = $containerConfigurator->services();
+
+-    $services->set(Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer::class);
++    $services->set(PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer::class);
+ };
+```
 
 That's all. It was easy, right?
 

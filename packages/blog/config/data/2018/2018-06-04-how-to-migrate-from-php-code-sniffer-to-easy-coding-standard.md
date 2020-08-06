@@ -8,6 +8,10 @@ perex: |
     <br><br>
     **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
 tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingStandard in 7 Step #ecs #codingstandard #ci"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's super easy to start to use from scratch:
@@ -35,24 +39,23 @@ That can actually cause typos like:
 +<rule ref="Generic.Commenting.DocComment"/>
 ```
 
-How to do that in EasyCodingStandard? Copy paste the last name `DocComment`, add "Sniff" and `:`:
+How to do that in EasyCodingStandard? Copy paste the last name `DocComment` and add rule in `set()` method. Hit CTRL + Space and  PHPStorm will autocomplete class for you:
 
-```yaml
-# ecs.yml
-services:
-    DocCommentSniff<cursor-here>:
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(DocCommentSniff::class);
+};
 ```
-
-Then hit the "ctrl" + "space" for class autocomplete in PHPStorm.
-
-```yaml
-services:
-    PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff: ~
-```
-
-That way [Symfony plugin](https://plugins.jetbrains.com/plugin/7219-symfony-plugin) will autocomplete the class for you:
-
-<img src="https://github.com/symplify/easy-coding-standard/raw/master/docs/yaml-autocomplete.gif">
 
 No more typos with strong over string typing.
 
@@ -75,31 +78,31 @@ One big cons of this is **that all sniffs will skip this code**, not just one. S
 
 To skip this in EasyCodingStandard just use `skip` parameter:
 
-```yaml
-parameters:
-    skip:
-        PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff:
-            - 'packages/framework/src/Component/Constraints/EmailValidator.php'
-```
+```php
+<?php
 
-Do you have more such cases?
+// ecs.php
 
-```yaml
-parameters:
-    skip:
-        PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff:
-            - 'packages/framework/src/Component/Constraints/EmailValidator.php'
-            - 'packages/framework/src/Component/Constraints/NameValidator.php'
-            - 'packages/framework/src/Component/Constraints/SurnameValidator.php'
-```
+declare(strict_types=1);
 
-You don't have to list them all like a typing monkey. Just use `fnmatch()` format instead:
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+use PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff;
 
-```yaml
-parameters:
-    skip:
-        PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff:
-            - '*packages/framework/src/Component/Constraints/*Validator.php'
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SKIP, [
+        DoubleQuoteUsageSniff::class => [
+            __DIR__ . '/packages/framework/src/Component/Constraints/EmailValidator.php',
+
+            // or whole directory
+            __DIR__ . '/packages/framework/src/Component',
+
+            // or for mask directory
+            __DIR__ . '/packages/*/src/Component',
+        ]
+    ]);
+};
 ```
 
 ## 3. From `<severity>0</severity>` and `<exclude name="...">` to `skip` Parameter
@@ -122,13 +125,26 @@ or
 
 In EasyCodingStandard, we put that again under `skip` parameter in format `<Sniff>.<CodeName>`:
 
-```yaml
-parameters:
-    skip:
-        PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff.ContentAfterOpen: ~
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SKIP, [
+        DocCommentSniff::class . '.ContentAfterOpen' => null,
+    ]);
+};
 ```
 
-For all other `skip` options, [see README](https://github.com/symplify/easyCodingStandard/#ignore-what-you-cant-fix).
+For all other `skip` options, [see README](https://github.com/symplify/easy-coding-standard/#ignore-what-you-cant-fix).
 
 <br>
 
@@ -154,16 +170,29 @@ or
 </ruleset>
 ```
 
-**Put it under `exclude_checkers`:**
+**Put it under `skip` parameter:**
 
-```yaml
-parameters:
-    exclude_checkers:
-        PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff: ~
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SKIP, [
+        DocCommentSniff::class => null,
+    ]);
+};
 ```
 
-
-## 4. From XML to YML Config Paths
+## 4. From XML to PHP Config Paths
 
 These names are looked for in the root directory by PHP_CodeSniffer:
 
@@ -174,14 +203,7 @@ These names are looked for in the root directory by PHP_CodeSniffer:
 - phpcs.xml.dist
 ```
 
-**And these by EasyCodingStandard:**
-
-```bash
-- ecs.yaml
-- ecs.yml
-- easy-coding-standard.yaml
-- easy-coding-standard.yml
-```
+**And by ECS just plain `ecs.php` PHP file**
 
 What about non-default locations or names?
 
@@ -194,7 +216,7 @@ vendor/bin/phpcs /path/to/project --standard=custom/location.xml
 **to:**
 
 ```bash
-vendor/bin/ecs check /path/to/project --config custom/location.yml
+vendor/bin/ecs check /path/to/project --config custom/location.php
 ```
 
 ## 5. Configuring Sniff Values
@@ -213,13 +235,25 @@ From XML configuration in PHP_CodeSniffer:
 </ruleset>
 ```
 
-**to YML parameters in EasyCodingStandard:**
+**to PHP parameters in ECS:**
 
-```yaml
-services:
-    PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff:
-        complexity: 13
-        absoluteComplexity: 13
+```php
+<?php
+
+declare(strict_types=1);
+
+// ecs.php
+
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(CyclomaticComplexitySniff::class)
+        ->property('complexity', 13)
+        ->property('absoluteComplexity', 13);
+};
 ```
 
 ## 6. From Severity and Warning to Just Errors
@@ -246,15 +280,7 @@ And so on.
 Thus these confusing options are not supported and EasyCodingStandard simplifies that to **errors only**
 CI server either passes or not. **The rule is required and respected or removed. Simple, clear and without any confusion.**
 
-Saying that you don't need to fill values for warning properties:
-
-```diff
- services:
-     PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff:
--        complexity: 13
-         absoluteComplexity: 13
-```
-
+Saying that you don't need to fill values for warning properties.
 
 ## 7. From Beautifier to `--fix` option
 
@@ -268,15 +294,15 @@ vendor/bin/phpcbf /path/to/project --standard=custom/location.xml
 to 1 in EasyCodingStandard:
 
 ```bash
-vendor/bin/ecs check /path/to/project --config custom/location.yml
-vendor/bin/ecs check /path/to/project --config custom/location.yml --fix
+vendor/bin/ecs check /path/to/project --config custom/location.php
+vendor/bin/ecs check /path/to/project --config custom/location.php --fix
 ```
 
 <br>
 
 ### Give it a Try...
 
-...and you won't regret it. Sylius, LMC, Shopsys, Nette and SunFox did and never came back.
+...and you won't regret it. Sylius, [PestPHP](https://github.com/pestphp/drift), LMC, Shopsys, Nette did and never came back.
 
 <br>
 

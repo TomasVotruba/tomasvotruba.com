@@ -7,22 +7,34 @@ perex: |
 tweet: "New post on my blog: New in Symplify 3: 4 Improvements in EasyCodingStandard #codingstandard php"
 tweet_image: "/assets/images/posts/2018/symplify-3-ecs/exclude-files.png"
 
-updated_since: "December 2018"
+updated_since: "August 2020"
 updated_message: |
-    Updated with <strong>EasyCodingStandard 5</strong>, Neon to YAML migration and new simplified `skip` parameter syntax.
+    Updated with **ECS 5**, Neon to YAML migration and new simplified `skip` parameter syntax.<br>
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 ## 1. Exclude Files or Dirs
 
 Do you have `src/Migrations` that you need to skip from your `vendor/bin/ecs check src` command?
 
-```yaml
-# ecs.yml
-parameters:
-    exclude_files:
-        - 'src/Migrations/LastMigration.php'
-        # or better all files from the dir
-        - '*src/Migrations/*.php'
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::EXCLUDE_PATHS, [
+        __DIR__ . '/src/Migrations/*Migration.php',
+    ]);
+};
+
 ```
 
 With favorite [`fnmatch()` function](http://php.net/manual/en/function.fnmatch.php) on board.
@@ -93,48 +105,42 @@ Which one do you prefer?
     Check the PR #388
 </a>
 
-If you wanted to skip specific part of sniff, you had to **exclude whole sniff** via `exclude_checkers` option:
-
-```yaml
-# ecs.yml
-parameters:
-    exclude_checkers:
-        # to skip ".UselessDocComment"
-        - 'SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff'
-```
-
+If you wanted to skip specific part of sniff, you had to **exclude whole sniff** via "skip" option.
 But what if you liked all the other codes? **Now you can:**
 
-```yaml
-# ecs.yml
-parameters:
-    skip:
-        SomeScalarSniff.SpecificCode: ~
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use PHP_CodeSniffer\Standards\Generic\Sniffs\PHP\LowerCaseTypeSniff;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SKIP, [
+        // old in Symplify 2
+        LowerCaseTypeSniff::class => null,
+
+        // new in Symplify 3
+        LowerCaseTypeSniff::class . '.SpecificCode' => null,
+
+        // new in Symplify 3 - only some files
+        LowerCaseTypeSniff::class . '.SpecificCode' => [
+            __DIR__ . '/src/Command/*'
+        ]
+    ]);
+};
 ```
 
-And all the other codes will be checked properly in your code.
+Thanks [@ostrolucky](https://github.com/ostrolucky) for taking adding fnmatch() skip of files.
+
+Enjoy the news and thanks to the people who push these tools further by every single PR or issue report!
 
 <br>
 
-<a href="https://github.com/symplify/symplify/pull/406" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fab fa-github"></em>
-    &nbsp;
-    Check the PR #406
-</a>
-
-[@ostrolucky](https://github.com/ostrolucky) took this feature even further and added  **skipping by list of files or [`fnmatch`](http://php.net/manual/en/function.fnmatch.php)**.
-
-```diff
- # ecs.yml
- parameters:
-     skip:
--        SomeScalarSniff.SpecificCode: ~
-+        SomeScalarSniff.SpecificCode:
-+            - '*src/Form/Type/*Type.php'
-```
-
-Hope you like the changes and thanks the people who push these tools further by every single PR or issue report!
-
-<br>
-
-Happy code fixing!
+Happy coding!

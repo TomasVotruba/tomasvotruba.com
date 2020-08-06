@@ -93,7 +93,7 @@ Rector can automate them when some project will need them. Maybe your project :)
 
 ### Coding Standards
 
-After many many changes in the code, we didn't care about spaces, tabs or where the `{` is. That's the job of [EasyCodingStandard](https://github.com/symplify/easyCodingStandard/). **We had to focus full attention on code structure**, not to play with style.
+After many many changes in the code, we didn't care about spaces, tabs or where the `{` is. That's the job of [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/). **We had to focus full attention on code structure**, not to play with style.
 
 Actually, Nette uses tabs and Symfony spaces, so ECS actually helped with migration a lot too.
 
