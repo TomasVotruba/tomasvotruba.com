@@ -5,8 +5,13 @@ perex: |
     I'm currently working as Rector consultant for [Spaceflow](https://spaceflow.io/en), Prague-based rising startup with very nice codebase. One of the pre-requisites for Rector is to have code that static analyser can work with. PHPStan that Rector uses depends on `@var` annotations and not every property had that. Well... **over 2500 of them**.
     <br><br>
     I'll show you how we completed them without any manual change of the code and how you can do the same... today.
+
 tweet: "New Post on #php 🐘 blog: How we Completed Thousands of Missing @var Annotations in a Day    #casestudy"
 tweet_image: "/assets/images/posts/2019/var/doctrine.png"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 This post has 2 parts:

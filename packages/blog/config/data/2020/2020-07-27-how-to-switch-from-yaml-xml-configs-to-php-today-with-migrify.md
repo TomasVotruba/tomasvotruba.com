@@ -13,6 +13,10 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: How to Switch from YAML/XML Configs to PHP Today with Migrify"
 tweet_image: "/assets/images/posts/2020/yaml_to_php.png"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 ## Break-Even Automation

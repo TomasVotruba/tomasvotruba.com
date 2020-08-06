@@ -9,6 +9,10 @@ perex: |
     We start with the most problematic topic in PHP legacy, that every project needs, but almost none has - **transition to [PSR-4](https://www.php-fig.org/psr/psr-4/)**.
 
 tweet: "New Post on #php 🐘 blog: Cleaning Lady Notes: From Class Mess to PSR-4 Step by Step With Confidence"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 *Dedicated to [Kerrial](https://github.com/Kerrialn), my great friend who teaches me so much about not giving a f_ck and just do the stuff.<br>Thanks, dude!*

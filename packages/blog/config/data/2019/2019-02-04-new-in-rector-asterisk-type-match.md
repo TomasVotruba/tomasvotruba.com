@@ -8,6 +8,10 @@ perex: |
     The positive side effect of Rector helping to migrate real commercial project **are new features in its core** that is free and open-source Today with little, yet powerful *asterisk type match*.
 
 tweet: "New Post on #php 🐘 blog: New in Rector: Asterisk Type Match"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 MVC ([model-view-controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)) is wide-spread pattern across all PHP frameworks.

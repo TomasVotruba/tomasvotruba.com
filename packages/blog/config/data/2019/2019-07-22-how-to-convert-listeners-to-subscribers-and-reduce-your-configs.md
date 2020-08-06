@@ -9,6 +9,10 @@ perex: |
     But what can you do, if you'd like to try subscribers, but currently have over 100 listeners in your application?
 
 tweet: "New Post on the #php 🐘 blog: How to Convert Listeners to Subscribers and Reduce your Configs          #symfony @rectorphp"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 ## 2 Ways to do One Thing? = WTF! WHY TF?

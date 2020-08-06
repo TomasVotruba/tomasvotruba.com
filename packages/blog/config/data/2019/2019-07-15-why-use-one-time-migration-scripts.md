@@ -3,7 +3,12 @@ id: 218
 title: "Why use One-Time Migration Scripts"
 perex: |
     School system taught me to despise old books and consider them outdated, rather about stories than knowledge. I wanted to prove I'm right, so I've read [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X) from 1999 and *you won't believe what happened*...
+
 tweet: "New Post on #php 🐘 blog: Why use One-Time Migration Scripts"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 You already probably know about instant refactoring and [pattern refactoring](/blog/2019/04/15/pattern-refactoring/) (I'm deprecating refactoring as you know it) that's possible thanks to [Rector](https://github.com/rectorphp/rector). But they require a certain knowledge of code and it's patterns.

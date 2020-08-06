@@ -6,7 +6,12 @@ perex: |
     <br><br>
     Do you want to be clear to the maintainer, be understood and resolve your issue quickly?
     Here is how to write.
+
 tweet: "New Post on #php 🐘 blog: 7 Tips to Write Flawless Issue Reports on Github"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 **Issue report is like any other text** - it can be a piece of text you read and take nothing from or it can fun and rich for the information you really need, for e.g. a job advertisement. You can see:
