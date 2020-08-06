@@ -64,9 +64,9 @@ PHP AST can be saved, but it still needed a bit polishing:
  }
 ```
 
-There was no tool that could do this for you, until [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) + [`Symplify\CodingStandard`](https://github.com/Symplify/CodingStandard).
+There was no tool that could do this for you, until [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) + [`Symplify\CodingStandard`](https://github.com/symplify/coding-standard).
 
-With that combination, just run `vendor/bin/ecs` with [proper setup](https://github.com/Symplify/CodingStandard#types-should-not-be-referenced-via-a-fullypartially-qualified-name-but-via-a-use-statement) to fix that:
+With that combination, just run `vendor/bin/ecs` with [proper setup](https://github.com/symplify/coding-standard#types-should-not-be-referenced-via-a-fullypartially-qualified-name-but-via-a-use-statement) to fix that:
 
 ```diff
  namespace App;

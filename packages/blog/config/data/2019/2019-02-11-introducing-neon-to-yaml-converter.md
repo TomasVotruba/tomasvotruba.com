@@ -20,7 +20,7 @@ updated_message: |
 
 - You want to **migrate your package** dependency injection component from `Nette\DI` to `Symfony\HttpKernel`
 - You want to **migrate your application** from Nette to Symfony
-- One of your dependency decided to migrate from `*.neon` to `*.yaml`, e.g. EasyCodingStandard 2 → 3, and you need to **migrate your config**, e.g. from `ecs.neon` to `ecs.yaml`
+- One of your dependency decided to migrate configuration from `*.neon` to `*.yaml` (e.g. ECS)
 
 ## How to Use it?
 

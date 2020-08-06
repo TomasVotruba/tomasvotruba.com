@@ -9,13 +9,13 @@ perex: |
 tweet: "Do you hate Coding Standards, but love #cleancode? Check these 4 helpful rules #php"
 tweet_image: "/assets/images/posts/2017/clean-checkers/dependency-drop.png"
 
-updated_since: "December 2018"
+updated_since: "August 2020"
 updated_message: |
-    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.
+    Updated with **ECS 5**, Neon to YAML migration and `checkers` to `services` migration.<br>
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 There are some checkers in coding standard world, that don't check spaces, tabs, commas nor brackets. They **actually do code-review for you**.
-
 
 I use a set of 4 checkers to **check open-source packages to help them keeping their code clean**.
 
@@ -27,26 +27,37 @@ Among others it **removed dead constructor dependencies**.
 
 It will not only make your code cleaner, but also can **speed up you container build** as a side effect.
 
-
-
 ## 4 Simple Checkers
 
+```php
+<?php
 
-```yaml
-# ecs.yml
-services:
-    # use short array []
-    PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
-        syntax: short
+// ecs.php
 
-    # drop dead code
-    SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff: ~
+declare(strict_types=1);
 
-    # drop dead use namespaces
-    PhpCsFixer\Fixer\Import\NoUnusedImportsFixer: ~
+use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
+use PhpCsFixer\Fixer\Import\NoUnusedImportsFixer;
+use PhpCsFixer\Fixer\Import\OrderedImportsFixer;
+use SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-    # and sort them A → Z
-    PhpCsFixer\Fixer\Import\OrderedImportsFixer: ~
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    // use short array []
+    $services->set(ArraySyntaxFixer::class)
+        ->call('configure', [['syntax' => 'short']]);
+
+    // drop dead code
+    $services->set(UnusedPrivateElementsSniff::class);
+
+    // drop dead use namespaces
+    $services->set(NoUnusedImportsFixer::class);
+
+    // and sort them A → Z
+    $services->set(OrderedImportsFixer::class);
+};
 ```
 
 ## 4 Steps to Make Your Code Cleaner
@@ -57,7 +68,7 @@ services:
     composer require symplify/easy-coding-standard --dev
     ```
 
-2. Add checkers to `ecs.yml` file
+2. Add checkers to `ecs.php` file
 
 3. Check your code
 

@@ -39,7 +39,7 @@ How to make this first experience better? Start slowly, one touch at a time, lik
 
 ### 1. Install Your Favoring Coding Standard Tool
 
-For me, it's obviously [ECS](https://github.com/symplify/easyCodingStandard/):
+For me, it's obviously [ECS](https://github.com/symplify/easy-coding-standard/):
 
 ```bash
 composer require symplify/easy-coding-standard --dev

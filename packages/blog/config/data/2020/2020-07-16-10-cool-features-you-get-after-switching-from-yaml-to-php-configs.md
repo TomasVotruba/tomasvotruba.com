@@ -252,7 +252,6 @@ If you give me a choice of `"string"` or `CONSTANT`, 10 of 10 [I pick the `CONST
 For example, how do you ignore files in ECS?
 
 ```yaml
-# ecs.yaml
 parameters:
     excluded_files:
     # or

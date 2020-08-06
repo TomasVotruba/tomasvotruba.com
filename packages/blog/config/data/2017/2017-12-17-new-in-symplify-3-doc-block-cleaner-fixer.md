@@ -125,14 +125,27 @@ composer require symplify/easy-coding-standard --dev
 
 ### 2. Create Config
 
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer: ~
+```php
+<?php
 
-    # works best with these checkers, to remove empty docblock
-    Symplify\CodingStandard\Fixer\Commenting\RemoveSuperfluousDocBlockWhitespaceFixer: ~
-    Symplify\CodingStandard\Fixer\Commenting\RemoveEmptyDocBlockFixer: ~
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\CodingStandard\Fixer\Commenting\RemoveEmptyDocBlockFixer;
+use Symplify\CodingStandard\Fixer\Commenting\RemoveSuperfluousDocBlockWhitespaceFixer;
+use Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(RemoveUselessDocBlockFixer::class);
+
+    $services->set(RemoveSuperfluousDocBlockWhitespaceFixer::class);
+
+    $services->set(RemoveEmptyDocBlockFixer::class);
+};
 ```
 
 ### 3. Run It
@@ -152,18 +165,5 @@ vendor/bin/ecs check src
 ```bash
 vendor/bin/ecs check src --fix
 ```
-
-<br>
-
-Don't you like `mixed` or `object`? The fixer is [configurable](https://github.com/Symplify/CodingStandard#block-comment-should-only-contain-useful-information-about-types-wrench), so you can set types that you'd like to remove.
-
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer:
-        useless_types: ['mixed', 'object'] # [] by default
-```
-
-<br>
 
 Happy eye resting!

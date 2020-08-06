@@ -7,7 +7,7 @@ perex:
     Instead of reading 346 pages of [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/), you need to produce code and learn as you read it at the same time. **There will be never less information than it is today.**
     <br><br>
     That's why effective learning is a killer skill. **Today we learn how to sort private methods in 2 mins**.
-tweet: "New Post on My Blog: How to Teach Your Team Private Method Sorting in 3 mins #codingstandard #cleancode #martinfowler #automate #php"
+tweet: "New Post on My Blog: How to Teach Your Team Private Method Sorting in 3 mins #rector #cleancode #martinfowler #automate #php"
 tweet_image: "/assets/images/posts/2018/private-method-order/example.png"
 ---
 
@@ -104,8 +104,6 @@ class SomeClass
     </p>
 </div>
 
-
-
 Nor junior nor senior dev is able to check the proper private method order in these big chunks of code.
 
 ## Unless...
@@ -116,19 +114,36 @@ Nor junior nor senior dev is able to check the proper private method order in th
     "Automate everything that brings you <strong>more value until you die<br>compared to value lost to create it</strong>."
 </blockquote>
 
-I've already mentioned a coding standard. There is now a new fixer coming to [Symplify/CodingStandard](https://github.com/symplify/codingstandard) 5.2 that does exactly what we need in **a split of the second**:
-
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\Order\PrivateMethodOrderByUseFixer: ~
-```
+There is now a Rector rule that does exactly what we need in an **automated way**:
 
 ```bash
-vendor/bin/ecs check src
+composer require rector/rector --dev
 ```
 
-You might need to re-run the command few times, because of the new order of private methods will automatically change calling order. But that's it:
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Order\Rector\Class_\OrderPrivateMethodsByUseRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(OrderPrivateMethodsByUseRector::class);
+};
+```
+
+And run Rector:
+
+```bash
+vendor/bin/rector process src
+```
+
+At first, you might need to re-run the command few times, because of the new order of private methods will automatically change calling order. But that's it:
 
 - no books,
 - no lectures,
@@ -151,4 +166,4 @@ I think we're coming to times, where:
 
 <br>
 
-Have fun!
+Happy coding!

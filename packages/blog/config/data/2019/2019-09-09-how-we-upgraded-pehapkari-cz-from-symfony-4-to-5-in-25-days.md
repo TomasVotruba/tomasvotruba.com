@@ -250,7 +250,7 @@ The safest way is to use [prefixed versions](https://github.com/rectorphp/rector
 +"rector/rector-prefixed": "^0.6",
 ```
 
-[Easy Coding Standard](https://github.com/Symplify/EasyCodingStandard):
+[Easy Coding Standard](https://github.com/symplify/easy-coding-standard):
 
 ```diff
 -"symplify/easy-coding-standard": "^0.11",

@@ -6,8 +6,13 @@ perex: |
     That all is coming to Coding Standard 4 (still in alpha).
     <br><br>
     Are you curious what work will now these 4 news fixers handle for you? Look inside.
+
 tweet: "New in Coding Standard 4: Long Line Breaks Automated and 3 Legacy Prevention Fixers"
 tweet_image: "/assets/images/posts/2018/symplify-4-cs/tweet.png"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 ## 1. Let Coding Standard handle Line Length for You
@@ -22,11 +27,22 @@ tweet_image: "/assets/images/posts/2018/symplify-4-cs/tweet.png"
 
 If you use `LineLengthSniff`, you know it's painful to fix every error report it makes.
 
-```yaml
-# ecs.yml
-services:
-    PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff:
-        absoluteLineLimit: 120
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(LineLengthSniff::class)
+        ->property('absoluteLineLimit', 120);
+};
 ```
 
 The most typical use case is constructor dependencies. You code start small:
@@ -109,10 +125,20 @@ Welcome `LineLengthFixer`.
 
 ### How to Register It?
 
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer: ~
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(LineLengthFixer::class);
+};
 ```
 
 As you guessed, this fixer works with 120 chars as maximum line-size... by default ↓
@@ -127,45 +153,48 @@ As you guessed, this fixer works with 120 chars as maximum line-size... by defau
     Check the PR #751
 </a>
 
-Do you prefer shorter or longer lines?
+- Do you prefer shorter or longer lines?
+- Do you want use breaks only and not inline short code?
 
-Do you want use breaks only and not inline short code?
+```php
+<?php
 
-Just configure it:
+// ecs.php
 
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer:
-        max_line_length: 100 # default: 120
-        break_long_lines: true # default: true
-        inline_short_lines: false # default: true
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(LineLengthFixer::class)
+        ->call('configure', [[
+            'max_line_length' => 100, # default: 120
+            'break_long_lines' => true, # default: true
+            'inline_short_lines' => false, # default: true
+        ]]);
+};
 ```
 
 <br>
 
-## 3. Keep Legacy Far Away with New `ForbiddenStaticFunctionSniff`
+## 3. Make your Static Classes visible
 
-<a href="https://github.com/symplify/symplify/pull/722" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
-    Check the PR #722
-</a>
-
-It started as one simple static method. A helper method. They say: it's ok to use static methods, when you know when to use them.
-And that's how cancer started to spread slowly and legally through Symplify code.
+It started as one simple static method. A helper method. They say: it's ok to use static methods, when you know when to use them. And that's **how cancer started to spread slowly and lethally through Symplify code**.
 
 One day you wake up and from 1 static method is 60 static factories all over your code - Dependency Injection for very poor. And that not the worst. When all code works and is easy to maintain, 1 static method can't hurt it, right?
 
 **Well until you need to replace one of nested dependencies that requires few more classes. And then you realized your work is to basically manually maintain dump of dependency injection container** and that you're not coding anymore.
 
-It took weeks to get from this position back to clear dependency injection and I don't want to do it ever again. That's why this fixer was born.
+It took weeks to get from this position back to clear dependency injection and I don't want to do it ever again. That's why this PHPStan rule was born.
 
 ### How to Register It?
 
 ```yaml
-services:
-    Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenStaticFunctionSniff: ~
+rules:
+    - Symplify\CodingStandard\Rules\NoClassWithStaticMethodWithoutStaticNameRule
 ```
 
 <br>
@@ -196,14 +225,14 @@ function someFunction($var)
 }
 ```
 
-I though I would never meet them again, but they somehow pop-up in PRs. So I made a Fixer for it!
+I though I would never meet them again, but they somehow pop-up in PRs. So we made a PHPStan rule for it:
 
 ### How to Register It?
 
 ```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenReferenceSniff: ~
+# phpstan.neon
+rules:
+    - Symplify\CodingStandard\Rules\NoReferenceRule
 ```
 
 <br>
@@ -235,7 +264,7 @@ final class ProductSorter extends Command
 
 ### Which one do you open?
 
-I could also ask, which one is the interface and which is its implementation, but [there is already checker for that](https://github.com/Symplify/CodingStandard#class-should-have-suffix-by-parent-classinterface).
+I could also ask, which one is the interface and which is its implementation, but [there is already checker for that](https://github.com/symplify/coding-standard#class-should-have-suffix-by-parent-classinterface).
 
 Probably each of them manually until you find the right one, which really sucks. That why not only methods names, **but also class names should be as descriptive and as deterministic as possible**. Like this:
 
@@ -253,42 +282,19 @@ And then you have clear class names, that you're able to distinguish without the
 - `ProductSorterRepository`
 - `ProductSorterController`
 
-And that's exactly what `ClassNameSuffixByParentFixer` helps you to do.
+And that's exactly what `ClassNameRespectsParentSuffixRule` helps you to do.
 
 ### How to Register It?
 
 ```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\Naming\ClassNameSuffixByParentFixer: ~
-```
+# phpstan.neon
+rules:
+    - Symplify\CodingStandard\Rules\ClassNameRespectsParentSuffixRule
 
-And it handles all these cases for you:
-
-- `*Command`
-- `*Controller`
-- `*Repository`
-- `*Presenter`
-- `*Request`
-- `*Response`
-- `*EventSubscriber`
-- `*FixerInterface`
-- `*Sniff`
-- `*Exception`
-- `*Handler`
-
-Note: since PHP Coding Standard tools don't modify your filesystem, after the fixer run don't forget to change file names as well.
-
-### Your type is missing?
-
-The fixer is configurable to comfort your needs, so just add it:
-
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\Naming\ClassNameSuffixByParentFixer:
-        parent_types_to_suffixes:
-            '*Control': Control
+parameters:
+    symplify:
+        # it handles many default cases, but allows you to add your own
+        forbidden_parent_classes: []
 ```
 
 <br><br>

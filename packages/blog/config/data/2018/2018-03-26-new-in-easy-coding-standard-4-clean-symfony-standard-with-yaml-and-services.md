@@ -5,8 +5,13 @@ perex: |
     I wrote about [news in Easy Coding Standard 3](/blog/2018/03/01/new-in-symplify-3-4-improvements-in-easy-coding-standard/) a while ago. EasyCodingStandard 4 is released yet (still in alpha), but soon you'll be able to use all the news I'll show you today.
     <br><br>
     And what are they? Neon to YAML, semi-static to Services, customizable caching, even simpler skipper, short bin and more.
+
 tweet: "New Post on my Blog: New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Services"
 tweet_image: "/assets/images/posts/2018/symplify-4-ecs/yaml-autocomplete.gif"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 ## 1. Configure Caching Directory
@@ -19,11 +24,19 @@ tweet_image: "/assets/images/posts/2018/symplify-4-ecs/yaml-autocomplete.gif"
 
 Docker users will be happy for this feature, since it makes ECS much more usable. To enjoy speed of caching of changed files on second run, just tune your config.
 
-```yaml
-# ecs.yml
-parameters:
-    # defaults to sys_get_temp_dir() . '/_easy_coding_standard'
-    cache_directory: .ecs_cache
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set('cache_directory', '.ecs_cache');
+};
 ```
 
 Thank you [Marcin Michalski](https://github.com/marmichalski) for adding this feature.
@@ -42,21 +55,7 @@ One of the features I really like is skipping particular spots. PHP CS Fixer and
 
 What you really need? Exclude 1 file but only for 1 checker. Or 1 checker for group of files and sometimes only 1 code from sniff on 1 file. That all is possible now.
 
-**Because details matters and it's pointless to think about code or class**, you can now remove `skip_codes` key from your config and use `skip` section only:
-
-```diff
- # ecs.yml
- parameters:
-     skip:
-         PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff:
-            - 'packages/CodingStandard/src/Fixer/ClassNotation/LastPropertyAndFirstMethodSeparationFixer.php'
-
--    skip_codes:
-         SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff.UselessDocComment:
-             - '*packages*'
-```
-
-No need to think, where to put it anymore.
+**Because details matters and it's pointless to think about code or class**, you can now remove `skip_codes` key from your config and use `skip` section only.
 
 <br>
 
@@ -123,6 +122,8 @@ Well just rename `easy-coding-standard.neon` or `ecs.yml` and
 
 ## 5. From Semi-Static Checkers to Services as First-Class Citizen
 
+**Note: Symplify 8 now uses PHP configuration.**
+
 <a href="https://github.com/symplify/symplify/pull/660" class="btn btn-dark btn-sm mt-2 mb-3">
     <em class="fab fa-github"></em>
     &nbsp;
@@ -133,61 +134,8 @@ Thanks to Yaml, we could use finally use full power of Symfony\DependencyInjecti
 
 Why? **ECS is basically a Symfony application with DI Container**. It loads all checkers from config you provide, turns them into services and then uses those services to check the code.
 
-Could you tell that from?
-
-```yaml
-# ecs.yml
-checkers:
-    ArrayFixer: ~
-```
-
-I could not. **I recall how frustrated I was, when I digged through PHP_CodeSniffer and PHP CS Fixer years ago and find out that Sniffs and Fixers are only statically registered services**, nothing more.
-
-Why not make such intent explicit?
-
-```yaml
-# ecs.yml
-services:
-    ArrayFixer: ~
-```
-
-Yaml was the only missing part to do this. And ECS has it now, so does the explicit services!
+YAML was the only missing part to do this. And ECS has it now, so does the explicit services!
 And you can do and use any feature you Symfony know. Magic no more #metoo.
-
-### How to Migrate?
-
-```diff
-# ecs.yml
--    checkers:
-+    services:
-         Symplify\CodingStandard\Fixer\Import\ImportNamespacedNameFixer:
-             include_doc_blocks: true
-
--        - SlamCsFixer\FinalInternalClassFixer:
-+        SlamCsFixer\FinalInternalClassFixer: ~
-```
-
-## 6. ~~Good Bye Neon Class Autocomplete~~ Or not?
-
-Yeah, trade-offs bla bla bla... but what is ECS without class autocomplete? That is killer feature compared to other 2 tools that use strings for Fixer and Sniff names that you have to remember.
-
-<div class="text-center">
-    <img src="/assets/images/posts/2018/symplify-4-ecs/neon-autocomplete.gif">
-</div>
-<br>
-
-I [created issue at Symfony Plugin](https://github.com/Haehnchen/idea-php-symfony2-plugin/issues/1153) and hyped people all over the planet to up-vote it. I even seriously though about going to PHPStorm Plugin workshop and learn Java only to add this feature it. Should I try or should I [let it go](https://www.youtube.com/watch?v=L0MK7qz13bU)?
-
-<br>
-
-But one night, after glass of wine trying to achieve [Ballmer Peak](https://xkcd.com/323/), I accidentally made a typo in `.yml` file:
-
-<div class="text-center">
-    <img src="/assets/images/posts/2018/symplify-4-ecs/yaml-autocomplete.gif">
-</div>
-<br>
-
-And that glass of wine, my friends, was hell of a trade-off!
 
 <br><br>
 

@@ -8,6 +8,10 @@ perex: |
     <br><br>
     Did you know there is easier and more clear way to do "mocking"?
 tweet: "New Post on my Blog: How to Turn Mocks to Readable Tests #phpunit #mocking"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated with shift from sniffs to Rector rules, that handle these cases much better.
 ---
 
 At the time being, there is only 1 post about [anonymous classes in tests](http://mnapoli.fr/anonymous-classes-in-tests/) (thanks to Matthieu!). Compared to that, there are many PHP tool made just for mocking: Prophecy, Mockery, PHPUnit native mocks, Mockista and so on. If you're a developer who uses one of them, knows that he needs to add proper annotations to make autocomplete work, has the PHPStom plugin that fixes bugs in this autocomplete and it works well for you, just stop reading.
@@ -146,15 +150,29 @@ I believe now we all made it under 5 seconds with both answers:
 
 The code already tells us what to do next.
 
-Some people mock because they follow good practice and **[make every class abstract or final](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. They don't want to deal with constructors, that would often lead to more mocking. It's great practice and it's super easy to put *abstract or final* checker into CI and coding standard:
+Some people mock because they follow good practice and **[make every class abstract or final](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. They don't want to deal with constructors, that would often lead to more mocking. It's great practice and super easy to put make classes final with Rector CI:
 
-```yaml
-# ecs.yml
-services:
-    SlamCsFixer\FinalInternalClassFixer: ~
+```bash
+composer require rector/rector --dev
 ```
 
-Yes, it's that simple, you just saved your project from most of its legacy code. But final classes should not be the reason to choose to mock. Well, you can also [hack the `final` and use mocking right away](https://phpfashion.com/how-to-mock-final-classes), or you can go with the code flow. Dance with it!
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\SOLID\Rector\Class_\FinalizeClassesWithoutChildrenRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(FinalizeClassesWithoutChildrenRector::class);
+};
+```
+
+Yes, it's that simple, you just saved your project from most of its legacy code. But `final` classes should **not be the reason to choose to mocks**. Well, you can also [hack the `final` and use mocking right away](https://phpfashion.com/how-to-mock-final-classes), or you can go with the code flow. Dance with it!
 
 ## SOLID Code as a Side Effect
 

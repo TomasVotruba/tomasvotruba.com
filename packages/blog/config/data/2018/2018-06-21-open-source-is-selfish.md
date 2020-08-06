@@ -32,7 +32,7 @@ I'm exaggerating a bit, but this can easily happen to anyone, due to the *power 
 
 [Jakub Kratina](http://jakubkratina.cz/) is a friend of mine, who organizes livestreams in Péhápkaři. He helped me a lot to become a better businessman and - little may he know - about *self-love* in open-source.
 
-One day I was frustrated with [EasyCodingStandard](https://github.com/symplify/easyCodingStandard/) - I wanted to have the best (the all) features and resolve all the issues as fast as possible *to make people happy*. **Inside I felt I want to do something else.** Instead, I wanted to migrate from magic in extension to explicit services. I felt like those people are stopping me from being happy, I was a victim of all those issues.
+One day I was frustrated with [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/) - I wanted to have the best (the all) features and resolve all the issues as fast as possible *to make people happy*. **Inside I felt I want to do something else.** Instead, I wanted to migrate from magic in extension to explicit services. I felt like those people are stopping me from being happy, I was a victim of all those issues.
 
 Luckily I talked with Jakub and he told me very wise words (I even printed on my [love board](https://www.danpink.com/pinkcast/) later):
 

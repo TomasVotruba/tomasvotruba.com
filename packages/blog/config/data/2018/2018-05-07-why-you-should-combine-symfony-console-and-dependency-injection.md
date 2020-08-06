@@ -269,8 +269,8 @@ I wish there was Rector for that like there is [for Doctrine Repositories as Ser
 
 In the meantime you can use few guides:
 
-- [`ForbiddenStaticFunctionSniff`](https://github.com/symplify/codingstandard#use-services-and-constructor-injection-over-static-method)
-- [`NoClassInstantiationSniff`](https://github.com/symplify/codingstandard#use-service-and-constructor-injection-rather-than-instantiation-with-new)
+- [`ForbiddenStaticFunctionSniff`](https://github.com/symplify/coding-standard#use-services-and-constructor-injection-over-static-method)
+- [`NoClassInstantiationSniff`](https://github.com/symplify/coding-standard#use-service-and-constructor-injection-rather-than-instantiation-with-new)
 - [Stackoverflow: How to access the service in a custom console command?
 ](https://stackoverflow.com/questions/19321760/symfony2-how-to-access-the-service-in-a-custom-console-command/46007150#46007150)
 - [5,5 Steps to Migrate from Symfony 2.8 LTS to Symfony 3.4 LTS in Real PRs](https://blog.shopsys.com/5-5-steps-to-migrate-from-symfony-2-8-lts-to-symfony-3-4-lts-in-real-prs-50c98eb0e9f6)
@@ -281,7 +281,7 @@ That's what works for me in CLI apps I've been working on. Look for yourself to 
 
  - [Rector](https://github.com/rectorphp/rector),
  - [ApiGen](https://github.com/apigen/apigen),
- - and [EasyCodingStandard](https://github.com/symplify/easyCodingStandard/).
+ - and [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/).
 
 <br>
 

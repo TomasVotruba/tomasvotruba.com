@@ -2,7 +2,7 @@
 id: 51
 title: "5 Useful Rules From Symplify Coding Standard"
 perex: |
-     <a href="https://github.com/Symplify/CodingStandard">Symplify Coding Standard</a> was born from Zenify, back from the days I was only Nette programmer. It focuses on <strong>maintainability and clean architecture</strong>. I try to make them simple: <strong>each of them does one job</strong>.
+     <a href="https://github.com/symplify/coding-standard">Symplify Coding Standard</a> was born from Zenify, back from the days I was only Nette programmer. It focuses on <strong>maintainability and clean architecture</strong>. I try to make them simple: <strong>each of them does one job</strong>.
      <br><br>
      With over 108 000 downloads I think I should write about 5 of them you can use in your projects today.
 tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standard #php #architecture #php_codesniffer"
@@ -22,7 +22,7 @@ deprecated_message: |
 
 I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
 
-**Symplify Coding standard is complete opposite.** You can start with 1st checker today and your code will be probably able to handle it. It's combination of 23 sniffs and fixers.
+**Symplify Coding standard is complete opposite.** You can start with 1st checker today and your code will be probably able to handle it. It's combination of 40+ Code Sniffer Sniffs, PHP CS Fixer Fixers and PHPStan rules.
 
 The simplest would be...
 
@@ -37,7 +37,7 @@ class SomeClass
     /**
      * @var string[]
      */
-    public $apples;
+    public $apples:
 
     public function run()
     {
@@ -60,19 +60,35 @@ class SomeClass
 }
 ```
 
-**Use it**
+**Use it**:
 
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\Property/ArrayPropertyDefaultValueFixer: ~
+```php
+<?php
+
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\CodingStandard\Fixer\Property\ArrayPropertyDefaultValueFixer;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    $services->set(ArrayPropertyDefaultValueFixer::class);
+};
+
 ```
 
 ### 2. Final Interface
 
+**Note: this Symplify rule was replace by more advanced Rector rule, that also checks for child classes.**
+
 Once I read [When to declare classes final](https://ocramius.github.io/blog/when-to-declare-classes-final) by [Marco Pivetta](http://ocramius.github.io/) with **tl;dr;**:
 
-*Make your classes always final, if they implement an interface, and no other public methods are defined.*
+<blockquote class="blockquote text-center mt-5 mb-5">
+    "Make your classes always final, if they implement an interface, and no other public methods are defined."
+</blockquote>
 
 I was working at [Lekarna.cz](https://www.lekarna.cz/) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and had lots of code reviews. **So I made a sniff to save us some work.**
 
@@ -94,174 +110,39 @@ final class SomeClass implements SomeInterface
 
 **Use it**
 
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\Classes\FinalInterfaceSniff: ~
+```bash
+composer require rector/rector --dev
 ```
-
-
-### 3. Class constant fixer
-
-**Are you on PHP 5.5?** I hope you're [PHP 7.1](/blog/2017/06/05/go-php-71/) already.
-
-Well, since PHP 5.5, you can use `::class` constant instead of string.
-
-<em class="fas fa-lg fa-times text-danger"></em>
 
 ```php
-$className = 'DateTime';
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\SOLID\Rector\Class_\FinalizeClassesWithoutChildrenRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(FinalizeClassesWithoutChildrenRector::class);
+};
 ```
 
-<em class="fas fa-lg fa-check text-success"></em>
+and run [Rector](https://github.com/rectorphp/rector):
 
-```php
-$className = DateTime::class;
+```bash
+vendor/bin/rector process src
 ```
 
+### ~~4. Equal Interface~~
 
-**Use it**
+**Note: this rule was removed, as very un-reliable.**
 
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer: ~
-```
+~~What happens if you implement and interface and add few extra public methods?~~
 
-### 4. Test should be final
-
-This is lighter version of **Final Interface rule**. No brainer.
-
-<em class="fas fa-lg fa-times text-danger"></em>
-
-```php
-use PHPUnit\Framework\TestCase;
-
-class SomeTest extends TestCase
-{
-}
-```
-
-<em class="fas fa-lg fa-check text-success"></em>
-
-```php
-use PHPUnit\Framework\TestCase;
-
-final class SomeTest extends TestCase
-{
-}
-```
-
-**Use it**
-
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\PHPUnit\FinalTestCaseSniff: ~
-```
-
-
-### 5. Equal Interface
-
-What happens if you implement and interface and add few extra public methods?
-
-**Your IDE autocomplete won't work**, if you don't type hint the class and not the interface.
-
-David Grudl recently wrote about [`$template` methods suggestion in Nette](https://phpfashion.com/phpstorm-a-napovidani-nad-this-template).
-
-This sniff helps you to avoid such cases:
-
-<em class="fas fa-lg fa-times text-danger"></em>
-
-```php
-interface SomeInterface
-{
-    public function run(): void;
-}
-
-final class SomeClass implements SomeInterface
-{
-    public function run(): void
-    {
-    }
-
-    public function extra(): void
-    {
-    }
-}
-```
-
-<em class="fas fa-lg fa-check text-success"></em>
-
-```php
-interface SomeInterface
-{
-    public function run(): void;
-}
-
-final class SomeClass implements SomeInterface
-{
-    public function run(): void
-    {
-    }
-}
-```
-
-
-**Use it**
-
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\Classes\EqualInterfaceImplementationSniff: ~
-```
-
-
-## Experimental Bonus: Refactoring Sniff
-
-`@inject` annotations in Nette have their use cases, but **they are mostly overused and breaking SOLID principles** left and right from my consultancy experience.
-
-Putting annotations back to constructor is quite a work, but this Fixer will help you with that.
-
-<em class="fas fa-lg fa-times text-danger"></em>
-
-```php
-class SomeClass
-{
-    /**
-     * @inject
-     * @var RequiredDependencyClass
-     */
-    public $requiredDependencyClass;
-}
-```
-
-<em class="fas fa-lg fa-check text-success"></em>
-
-```php
-class SomeClass
-{
-    /**
-     * @var RequiredDependencyClass
-     */
-    private $requiredDependencyClass;
-
-    public function __construct(RequiredDependencyClass $requiredDependencyClass)
-    {
-        $this->requiredDependencyClass = $requiredDependencyClass;
-    }
-}
-```
-
-**Use it**
-
-```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Fixer\DependencyInjection\InjectToConstructorInjectionFixer: ~
-```
-
-### Sold? Try them
+### Sold? Try Them
 
 They are used the best with [EasyCodingStandard](/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/):
 
@@ -272,19 +153,21 @@ composer require --dev symplify/easy-coding-standard symplify/coding-standard
 Check your code:
 
 ```bash
-vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify.yml
+vendor/bin/ecs check --set psr12
 ```
 
 Fix your code:
 
 ```bash
-vendor/bin/ecs check --config vendor/symplify/easy-coding-standard/config/symplify.yml --fix
+vendor/bin/ecs check --set psr12 --fix
 ```
 
 Let me know how much errors will you find in the comments. I dare you to get to 0! :)
 
 ## Rest of the Rules
 
-You can find more rules like Abstract Class, Exception, Trait and Interface naming, indexed array indentation, Controllers with 1 method or invoke and so on in [README](https://github.com/Symplify/CodingStandard).
+You can find more rules like Abstract Class, Exception, Trait and Interface naming, indexed array indentation, Controllers with 1 method or invoke and so on in [README](https://github.com/symplify/coding-standard).
+
+<br>
 
 Happy coding!

@@ -101,21 +101,35 @@ This is another [small and easy-to-understand set](/blog/2017/09/18/4-simple-che
 
 The full set looks like this:
 
-```yaml
-# ecs.yml
-services:
-    # use short array []
-    PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
-        syntax: short
+```php
+<?php
 
-    # drop dead code
-    SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff: ~
+// ecs.php
 
-    # drop dead use namespaces
-    PhpCsFixer\Fixer\Import\NoUnusedImportsFixer: ~
+declare(strict_types=1);
 
-    # and sort them A→Z
-    PhpCsFixer\Fixer\Import\OrderedImportsFixer: ~
+use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
+use PhpCsFixer\Fixer\Import\NoUnusedImportsFixer;
+use PhpCsFixer\Fixer\Import\OrderedImportsFixer;
+use SlevomatCodingStandard\Sniffs\Classes\UnusedPrivateElementsSniff;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    // use short array []
+    $services->set(ArraySyntaxFixer::class)
+        ->call('configure', [['syntax' => 'short']]);
+
+    // drop dead code
+    $services->set(UnusedPrivateElementsSniff::class);
+
+    // drop dead use namespaces
+    $services->set(NoUnusedImportsFixer::class);
+
+    // and sort them A → Z
+    $services->set(OrderedImportsFixer::class);
+};
 ```
 
 <br>
@@ -187,8 +201,6 @@ To have an idea about real numbers, **I picked results for lvl 0 and lvl 7**:
 </table>
 
 <br>
-
-
 
 As you can see, both **Shopsys and Sylius are doing great**. Sylius is just falling bit behind in higher levels.
 

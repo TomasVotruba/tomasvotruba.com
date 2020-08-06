@@ -14,7 +14,7 @@ tweet_image: "/assets/images/posts/2019/spaceflow_10_points/07.png"
 
 updated_since: "August 2020"
 updated_message: |
-    Updated Rector YAML to PHP configuration, as current standard.
+    Updated Rector/ECS YAML to PHP configuration, as current standard.
 ---
 
 **Do you speak Czech?** Go check [64 slides](https://docs.google.com/presentation/d/1QSpTVqmtXpE8RvB73cYDBrDYpuChjp_Uz3sLJhLnLXo/edit?usp=sharing) and [watch the talk video recording on Facebook](https://www.facebook.com/pehapkari/videos/vl.404478763568491/399224180756304/?type=1) (it is 60 minutes long and the picture is broken from ~27th minute, but the audio is good).
@@ -70,23 +70,31 @@ It's better to start slow, so the first things we did was:
 
 ### How to Apply?
 
-Just run [ECS](https://github.com/symplify/easycodingstandard) with following set:
+Just run [ECS](https://github.com/symplify/easy-coding-standard) with following set:
 
-```yaml
-# ecs.yaml
-services:
-    # use ::class
-    Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer: ~
+```php
+<?php
 
-    # keep line-lenght constant
-    Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer:
-        lineLength: 120
+// ecs.php
 
-    # default value for array property
-    Symplify\CodingStandard\Fixer\Property\ArrayPropertyDefaultValueFixer: ~
+declare(strict_types=1);
 
-    # every non-Entity non-abstract class must be final - you have to skip those that are used + have children, like this ↓
-    PhpCsFixer\Fixer\ClassNotation\FinalClassFixer: ~
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
+use PhpCsFixer\Fixer\ClassNotation\FinalClassFixer;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    // keep line-length max. 120 chars long
+    $services->set(LineLengthFixer::class)
+        ->call('configure', [[
+            'lineLength' => 120
+        ]]);
+
+    // every non-Entity non-abstract class must be final - you have to skip those that are used + have children, like this ↓
+    $services->set(FinalClassFixer::class);
+};
 ```
 
 And the result?

@@ -3,7 +3,12 @@ id: 150
 title: "New in Symplify 5: 3 News in EasyCodingStandard to Smoother Your Experience"
 perex: |
     Let's get lazier and lazier.
+
 tweet: "New Post on My Blog: New in #Symplify 5 - 3 News in #EasyCodingStandard to Smoother Your Experience    #php #ecs #phpcsfixer #phpcodesniffer"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 You don't have this package installed yet?
@@ -25,29 +30,33 @@ Little details make more pleasant developer experience UX. You already know **yo
 
 **Before** you had to hit the format:
 
-```yaml
-# ecs.yml
-parameters:
-    skip:
-        SomeFixer:
-            # this does
-            - '*src/*CaseConverter.php'
+```php
+<?php
 
-            # this doesn't work
-            - 'src/*CaseConverter.php'
+// ecs.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Configuration\Option;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SKIP, [
+        SomeFixer::class => [
+            // this worked
+            '*src/*CaseConverter.php',
+
+            // this didn't work
+            'src/*CaseConverter.php',
+        ]]
+    );
+};
+
 ```
 
-**Now** you can use your intuition, copy paste the filename from error result and both versions work:
-
-```yaml
-# ecs.yml
-parameters:
-    skip:
-        SomeFixer:
-            # both works
-            - 'src/*CaseConverter.php'
-            - '*src/*CaseConverter.php'
-```
+**Now** you can use your intuition, copy paste the filename from error result and both versions work.
 
 ## 2. In Lazy We Trust
 
@@ -56,19 +65,14 @@ parameters:
     See pull-request #832
 </a>
 
-**Before** you had to type the whole config name:
+**Before** you had to type the whole config name and use YAML:
 
 ```bash
 easy-coding-standard.yaml
 easy-coding-standard.yml
 ```
 
-**Now** you can also use short version:
-
-```bash
-ecs.yaml
-ecs.yml
-```
+As you've already noticed, **now** you can use short version with **normal PHP - `ecs.php`**:
 
 ## 3. Are There Some "array" Checkers?
 
@@ -78,7 +82,6 @@ ecs.yml
 </a>
 
 Many people asked for an overview of all checkers there are, if there any related to an array, to `strict_types` position and so on.
-
 
 **Before** you had to go to huge `README.md` files of PHP CS Fixer and PHP_CodeSniffer on Github to read it all. But **why leave the luxury of CLI if these checkers are already downloaded** on your machine?
 

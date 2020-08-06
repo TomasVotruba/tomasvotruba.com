@@ -8,7 +8,7 @@ tweet: "New Post on #lazyprogrammer Blog: How I Got into Static Trap and Made Fo
 
 Today the format will be reversed - first I'll show you practical code and its journey to legacy, then theory takeaways that would save it.
 
-[Symplify\CodingStandard](https://github.com/symplify/codingstandard) contains complex Sniff and Fixers like [the doc block cleaner](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/). Job of `RemoveUselessDocBlockFixer` is clear - **remove any doc block that has no extra value over the php code itself**:
+[Symplify\CodingStandard](https://github.com/symplify/coding-standard) contains complex Sniff and Fixers like [the doc block cleaner](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/). Job of `RemoveUselessDocBlockFixer` is clear - **remove any doc block that has no extra value over the php code itself**:
 
 ```diff
  /**

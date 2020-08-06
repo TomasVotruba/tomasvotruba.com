@@ -14,6 +14,10 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: How to create Monorepo from Existing Repositories in 7 Steps"
 tweet_image: "assets/images/posts/2020/monorepo_builder_merge.png"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector/ECS YAML to PHP configuration, as current standard.
 ---
 
 **Disclaimer**: are you're into git history? Read [How to Merge 15 Repositories to 1 Monorepo, Keep their Git History and add Project-Base as Well?](https://www.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3/).
@@ -46,10 +50,10 @@ With following code:
 /src
 /test
 composer.json
-ecs.yaml
+ecs.php
 phpstan.neon
 phpunit.xml
-rector-ci.yaml
+rector-ci.php
 ```
 
 Second repository: `lazy-company/drone-delivery`
@@ -60,10 +64,10 @@ With following code:
 /src
 /test
 composer.json
-ecs.yaml
+ecs.php
 phpstan.neon
 phpunit.xml
-rector-ci.yaml
+rector-ci.php
 ```
 
 ## 1. Create a Monorepo repository
@@ -82,18 +86,18 @@ Don't worry, no git harakiri. Just copy paste your other repositories to `/packa
         /src
         /test
         composer.json
-        ecs.yaml
+        ecs.php
         phpstan.neon
         phpunit.xml
-        rector-ci.yaml
+        rector-ci.php
     /drone-delivery
         /src
         /test
         composer.json
-        ecs.yaml
+        ecs.php
         phpstan.neon
         phpunit.xml
-        rector-ci.yaml
+        rector-ci.php
 ```
 
 Not bad, right?
@@ -288,21 +292,21 @@ Instead of many configs, paths, setups, and rules, there is only 1 source of Tru
          /src
          /test
          composer.json
--        ecs.yaml
+-        ecs.php
 -        phpstan.neon
          phpunit.xml
--        rector-ci.yaml
+-        rector-ci.php
      /drone-delivery
          /src
          /test
          composer.json
--        ecs.yaml
+-        ecs.php
 -        phpstan.neon
          phpunit.xml
--        rector-ci.yaml
-+ecs.yaml
+-        rector-ci.php
++ecs.php
 +phpstan.neon
-+rector-ci.yaml
++rector-ci.php
 ```
 
 This step is pretty easy... well, it depends.
@@ -335,9 +339,9 @@ Very similar to step 6, just with unit tests.
          /test
          composer.json
 -        phpunit.xml
- ecs.yaml
+ ecs.php
  phpstan.neon
- rector-ci.yaml
+ rector-ci.php
 +phpunit.xml
 ```
 

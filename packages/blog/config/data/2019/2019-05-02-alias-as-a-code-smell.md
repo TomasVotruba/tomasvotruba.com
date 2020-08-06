@@ -7,6 +7,10 @@ perex: |
     <br>
     And that smells... Why?
 tweet: "New Post on #php 🐘 blog: Alias as a Code Smell"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated with **PHPStan rules** available in Symplify 8.
 ---
 
 In recent projects, I consult I start to notice an interesting pattern. It's how important are uniquely named short classes. Short class name = the part after last `\`.
@@ -97,21 +101,16 @@ final class ProductQuery implements ProductQueryInterface, QueryInterface
 }
 ```
 
-
 ## Automated Smell Detection
 
-Do you need to help to find these smells? Just add [`DuplicatedClassShortNameSniff`](https://github.com/symplify/codingstandard#use-unique-class-short-names) to your coding standard:
+Do you need to help to find these smells? Just add `NoDuplicatedShortClassNameRule` to your coding standard:
 
 ```yaml
-# ecs.yml
-services:
-    Symplify\CodingStandard\Sniffs\Architecture\DuplicatedClassShortNameSniff:
-        allowed_class_names:
-            - 'Request'
-            - 'Response'
+# phpstan.neon
+rules:
+    - Symplify\CodingStandard\Rules\NoDuplicatedShortClassNameRule
 ```
 
 <br>
-
 
 Happy coding!
