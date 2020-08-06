@@ -57,6 +57,8 @@ composer require rector/rector --dev
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\Core\Configuration\Option;
@@ -231,6 +233,8 @@ Here are my favorite sets I apply first:
 
 ```php
 <?php
+
+// rector.php
 
 declare(strict_types=1);
 

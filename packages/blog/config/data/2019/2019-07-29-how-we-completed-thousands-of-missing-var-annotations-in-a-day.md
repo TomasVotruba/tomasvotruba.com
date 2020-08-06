@@ -437,6 +437,8 @@ vendor/bin/ecs check src tests
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\TypeDeclaration\Rector\Property\PropertyTypeDeclarationRector;

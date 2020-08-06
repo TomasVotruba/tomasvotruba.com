@@ -93,6 +93,8 @@ use Rector rule:
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\CodingStyle\Rector\FuncCall\ConsistentPregDelimiterRector;
@@ -133,6 +135,8 @@ use Rector rule:
 
 ```php
 <?php
+
+// rector.php
 
 declare(strict_types=1);
 
@@ -178,6 +182,8 @@ use Rector rule:
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\CodingStyle\Rector\Catch_\CatchExceptionNameMatchingTypeRector;
@@ -222,6 +228,8 @@ use Rector rule:
 
 ```php
 <?php
+
+// rector.php
 
 declare(strict_types=1);
 
@@ -274,6 +282,8 @@ use Rector rules:
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\CodingStyle\Rector\Class_\AddArrayDefaultToArrayPropertyRector;
@@ -321,6 +331,8 @@ use Rector rule:
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
@@ -353,6 +365,8 @@ use Rector rules:
 
 ```php
 <?php
+
+// rector.php
 
 declare(strict_types=1);
 
@@ -403,6 +417,8 @@ use Rector rule:
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\Order\Rector\Class_\OrderPublicInterfaceMethodRector;
@@ -442,6 +458,8 @@ use Rector rule:
 
 ```php
 <?php
+
+// rector.php
 
 declare(strict_types=1);
 

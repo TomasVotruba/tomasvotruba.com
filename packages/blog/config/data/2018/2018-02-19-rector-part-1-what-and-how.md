@@ -117,6 +117,8 @@ Such a configuration looks like this (as shown in [`README`](https://github.com/
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;use Rector\Set\ValueObject\SetList;

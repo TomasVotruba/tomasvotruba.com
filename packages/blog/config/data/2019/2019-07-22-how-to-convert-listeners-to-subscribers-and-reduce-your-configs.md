@@ -170,6 +170,8 @@ Just register the rule in your `rector.php` config to start migration:
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\SymfonyCodeQuality\Rector\Class_\EventListenerToEventSubscriberRector;

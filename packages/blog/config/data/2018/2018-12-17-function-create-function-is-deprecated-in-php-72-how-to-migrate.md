@@ -162,6 +162,8 @@ composer require rector/rector --dev
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\Php72\Rector\FuncCall\CreateFunctionToAnonymousFunctionRector;

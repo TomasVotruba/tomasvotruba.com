@@ -107,6 +107,9 @@ Add the `action-injection-to-constructor-injection` set and configure your Kerne
 ```php
 <?php
 
+// rector.php
+
+
 declare(strict_types=1);
 
 use Rector\Core\Configuration\Option;

@@ -24,6 +24,8 @@ E.g. one framework has default method of controller named `run`, the other `__in
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
@@ -76,6 +78,8 @@ Wait. What if you could use [`fnmatch`](http://php.net/manual/en/function.fnmatc
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
@@ -104,6 +108,8 @@ One more thing! You can use it on any type check:
 
 ```diff
  <?php
+
+ // rector.php
 
  declare(strict_types=1);
 

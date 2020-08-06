@@ -25,6 +25,8 @@ To give you a context, now you can register particular Rectors to config as in S
 ```php
 <?php
 
+// rector.php
+
 declare(strict_types=1);
 
 use Rector\Privatization\Rector\MethodCall\PrivatizeLocalGetterToPropertyRector;
@@ -75,6 +77,8 @@ Such service is registered by user to the config:
 
 ```php
 <?php
+
+// rector.php
 
 declare(strict_types=1);
 
@@ -169,6 +173,8 @@ Damn! Mmm, tell people to use one provider per Rector?
 
 ```php
 <?php
+
+// rector.php
 
 declare(strict_types=1);
 
