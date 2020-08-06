@@ -5,9 +5,6 @@
     "composer/xdebug-handler": {
         "version": "1.4.1"
     },
-    "dealerdirect/phpcodesniffer-composer-installer": {
-        "version": "v0.6.2"
-    },
     "dg/bypass-finals": {
         "version": "v1.1.2"
     },
@@ -240,9 +237,6 @@
     },
     "sebastian/version": {
         "version": "3.0.0"
-    },
-    "slevomat/coding-standard": {
-        "version": "6.1.5"
     },
     "spatie/browsershot": {
         "version": "3.37.0"
