@@ -3,8 +3,13 @@ id: 104
 title: "Rectify: Turn All Action Injects to Constructor Injection in Your Symfony Application"
 perex: |
     Action Injections are much fun, but it can turn your project to legacy very fast. How to **refactor out of the legacy back to constructor injection** and still keep that smile on your face?
+
 tweet: "New Post on My Blog: Turn All Action Injections in Your #Symfony Application to Constructor Injection #adr #methodinjection #rector"
 tweet_image: "/assets/images/posts/2018/rectify-action-injection/show.png"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 I wrote about [How to Slowly Turn your Symfony Project to Legacy with Action Injection](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection) a few weeks ago. It surprised me that **the approach had mostly positive [feedback](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection/#comments)**:
@@ -97,23 +102,27 @@ composer install rector/rector --dev
 
 ### 2. Prepare Config
 
-Import the `action-injection-to-constructor-injection` level and configure your Kernel class name.
+Add the `action-injection-to-constructor-injection` set and configure your Kernel class name.
 
-```yaml
-# rector.yaml
-imports:
-    - { resource: 'vendor/rector/rector/config/level/architecture/action-injection-to-constructor-injection.yml' }
+```php
+<?php
 
-parameters:
-    kernel_class: 'App\Kernel' # the default value
-```
+declare(strict_types=1);
 
-<br>
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-Do you have `App\Kernel` in your application? Use `--set` in CLI this instead of `rector.yaml`:
+return function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
 
-```bash
-vendor/bin/rector ... --set action-injection-to-constructor-injection
+    $parameters->set(Option::SETS, [
+        SetList::ACTION_INJECTION_TO_CONSTRUCTOR_INJECTION
+    ]);
+
+    // the default value
+    $parameters->set('kernel_class', 'App\Kernel');
+};
 ```
 
 ### 3. Run Rector on Your Code
@@ -166,11 +175,10 @@ You've probably noticed that code itself is not looking too good. Rector's job i
 
 ```bash
 composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs --config vendor/rector/rector/ecs-after-rector.yaml --fix
+vendor/bin/ecs --config vendor/rector/rector/ecs-after-rector.php --fix
 ```
 
 And your code is now both **refactored and clean**. That's it!
-
 
 <br><br>
 

@@ -338,11 +338,20 @@ composer require rector/rector --dev
 
 ### 2. Create Config
 
-```yaml
-# rector.yaml
-services:
-    Rector\Php\Rector\FunctionLike\ParamTypeDeclarationRector: ~
-    Rector\Php\Rector\FunctionLike\ReturnTypeDeclarationRector: ~
+```php
+<?php
+
+declare(strict_types=1);
+
+use Rector\TypeDeclaration\Rector\FunctionLike\ParamTypeDeclarationRector;
+use Rector\TypeDeclaration\Rector\FunctionLike\ReturnTypeDeclarationRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(ParamTypeDeclarationRector::class);
+    $services->set(ReturnTypeDeclarationRector::class);
+};
 ```
 
 ### 3. Run

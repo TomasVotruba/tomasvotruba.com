@@ -114,15 +114,25 @@ Then it changes it into `isMethodCacheable()` (see [UPGRADE-4.0.md](https://gith
 
 Such a configuration looks like this (as shown in [`README`](https://github.com/rectorphp/rector#change-a-method-name)):
 
-```yaml
-# rector.yaml
-services:
-    # prepared service that handles method name changes
-    Rector\Rector\MethodCall\MethodNameReplacerRector:
-        # type to look for
-        Symfony\Component\HttpFoundation\Request:
-            # old method name: new method name
-            isMethodSafe: 'isMethodCacheable'
+```php
+<?php
+
+declare(strict_types=1);
+
+use Rector\Renaming\Rector\MethodCall\RenameMethodRector;use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(RenameMethodRector::class)
+        ->call('configure', [[
+            RenameMethodRector::OLD_TO_NEW_METHODS_BY_CLASS => [
+                'Symfony\Component\HttpFoundation\Request' => [
+                    'isMethodSafe' => 'isMethodCacheable'
+                ]
+            ]
+        ]]);
+};
 ```
 
 ### Member of Big AST PHP Family

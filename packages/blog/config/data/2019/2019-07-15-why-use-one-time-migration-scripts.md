@@ -165,7 +165,7 @@ Again, it took us 3-4 iterations to cover all edge cases, but then it was ready 
 
 I use this approach in Rector to create new rule + test in 1 file:
 
-Just edit `create-rector.yaml` (see in [Github repo](https://github.com/rectorphp/rector/blob/master/create-rector.yaml.dist)) and then run:
+Just edit `create-rector.php` (see in [Github repo](https://github.com/rectorphp/rector/blob/master/create-rector.php.dist)) and then run:
 
 ```bash
 bin/rector create

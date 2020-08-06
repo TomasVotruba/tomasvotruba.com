@@ -154,10 +154,18 @@ Just setup [Rector](https://github.com/rectorphp/rector) and run it:
 composer require rector/rector --dev
 ```
 
-```yaml
-# rector.yaml
-services:
-    Rector\Php\Rector\FuncCall\CreateFunctionToAnonymousFunctionRector: ~
+```php
+<?php
+
+declare(strict_types=1);
+
+use Rector\Php72\Rector\FuncCall\CreateFunctionToAnonymousFunctionRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(CreateFunctionToAnonymousFunctionRector::class);
+};
 ```
 
 ```bash

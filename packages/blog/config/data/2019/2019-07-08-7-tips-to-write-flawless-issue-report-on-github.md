@@ -247,7 +247,7 @@ The 1st questions that will pop-up in the maintainer's head are "How did you do 
 - Did you run it from command line?
 - What exact command have you used?
 - Did you use Docker?
-- Do you use custom `rector.yaml` config? What's inside?
+- Do you use custom `rector.php` config? What's inside?
 - Is the error still there with no config?
 
 Again, think of *4. The smaller the better* tip while copy-pasting the `config`.
@@ -258,7 +258,7 @@ Again, think of *4. The smaller the better* tip while copy-pasting the `config`.
 <q>I installed Rector as dev dependency to composer and run:</q>
 
 ```bash
-vendor/bin/rector process src/SomeFile.php --config rector.yaml --dry-run --set symfony43
+vendor/bin/rector process src/SomeFile.php --config rector.php --dry-run --set symfony43
 ```
 
 Perfect!
@@ -315,7 +315,6 @@ New issue - * traveling*:
 Do you have 3 different (see tip #4 again) problems with your code? Create 3 different issues. Don't be afraid, you're not complaining too much.
 
 **It's better to have 3 separated issue**, that one is easy-pick, 2nd is a question and 3rd need a test case, that all these at once.
-
 
 <br>
 

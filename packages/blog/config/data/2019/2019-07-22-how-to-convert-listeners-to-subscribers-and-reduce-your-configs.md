@@ -161,18 +161,27 @@ Without any config.
 
 The latest [Rector v0.5.8 is shipped](https://twitter.com/rectorphp/status/1152862370630459393) with rule exactly for this kind of migration.
 
-Just register the rule in your `rector.yaml` config to start migration:
+Just register the rule in your `rector.php` config to start migration:
 
-```yaml
-# rector.yaml
-services:
-    Rector\SymfonyCodeQuality\Rector\Class_\EventListenerToEventSubscriberRector: ~
+```php
+<?php
 
-# optional, when something fails
-parameters:
-    kernel_class: "App\Kernel" # use explicit Kernel, if not discovered by Rector
-    kernel_environment: "test" # use explicit environment, if not found by Rector
-```
+declare(strict_types=1);
+
+use Rector\SymfonyCodeQuality\Rector\Class_\EventListenerToEventSubscriberRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(EventListenerToEventSubscriberRector::class);
+
+    // optional, when something fails
+    $parameters = $containerConfigurator->parameters();
+    // use explicit Kernel, if not discovered by Rector
+    $parameters->set('kernel_class', 'App\Kernel');
+    // use explicit environment, if not found by Rector
+    $parameters->set('kernel_environment', 'test');
+};
 
 Run it:
 

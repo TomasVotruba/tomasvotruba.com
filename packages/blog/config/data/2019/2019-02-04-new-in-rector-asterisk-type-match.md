@@ -17,12 +17,27 @@ Each PHP frameworks has its conventions and conventions are the main topics duri
 
 E.g. one framework has default method of controller named `run`, the other `__invoke`. How can Rector help us?
 
-```yaml
-# rector.yaml
-services:
-    Rector\Rector\MethodCall\MethodNameReplacerRector:
-        SomeFramework\AbstractPresenter: # ← match type
-            run: '__invoke' # ← old method: new method
+```php
+<?php
+
+declare(strict_types=1);
+
+use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(RenameMethodRector::class)
+        ->call('configure', [[
+            RenameMethodRector::OLD_TO_NEW_METHODS_BY_CLASS => [
+                // match type
+                'SomeFramework\AbstractPresenter' => [
+                    // old method: new method
+                    'run' => '__invoke'
+                ]
+            ]
+        ]]);
+};
 ```
 
 Then Rector will change the code for you:
@@ -50,83 +65,29 @@ vendor/bin/rector process src
  }
 ```
 
-Easy! But what if you write [framework-independent controllers](https://matthiasnoback.nl/2014/06/how-to-create-framework-independent-controllers/)? (I'm not a big fan of dogmas, but always do that).
-
-```php
-<?php
-
-namespace App\SomeModule\Presenter;
-
-final class SomeController
-{
-    public function run()
-    {
-
-    }
-}
-```
-
-What now? Now you'll be punished for writing too clean code. This code is very poorly refactorable.
-
-In that case, you'll have to do it manually or with a regular expression:
-
-```php
-<?php
-
-$controllerFileContent = preg_replace(
-    '#(^class .*Controller.*?^\s+public function )run(\()#ms',
-    '$1__invoke$2',
-    $controllerFileContent
-);
-```
-
-The `'$1__invoke$2'` trick keeps all matched content (the one inside `()`) and replaces middle "run" for "__invoke". See pattern on [regex101.com](https://regex101.com/r/u5LtXX/1/) if you don't believe me.
-
-<br>
-
-Regulars are fine for e.g. [templating migrations](/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions/) where are no better tools to parse code, **but in PHP refactoring regulars migration are very bad and fragile joke**.
-
-<br>
-
-Use Rector for that instead:
-
-```yaml
-# rector.yaml
-services:
-    Rector\Rector\MethodCall\MethodNameReplacerRector:
-        App\SomeModule\Presenter\SomeController:
-            run: '__invoke'
-```
-
 Do you have more classes? No troubles! Just put each class one by one carefully to the config...
 
-```yaml
-# rector.yaml
-services:
-    Rector\Rector\MethodCall\MethodNameReplacerRector:
-        App\SomeModule\Presenter\SomeController:
-            run: '__invoke'
-        App\SomeModule\Presenter\HomepageController:
-            run: '__invoke'
-        App\AnotherModule\Presenter\HomepageController:
-            run: '__invoke'
+Wait. What if you could use [`fnmatch`](http://php.net/manual/en/function.fnmatch.php) pattern?
 
-        # ...
-        # 50+ more cases
-```
+```php
+<?php
 
-Well, **isn't that silly**? It is.
+declare(strict_types=1);
 
-## Can Asterisk Save Us?
+use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-What if you could use [`fnmatch`](http://php.net/manual/en/function.fnmatch.php) pattern?
-
-```yaml
-# rector.yaml
-services:
-    Rector\Rector\MethodCall\MethodNameReplacerRector:
-        App\*Module\Presenter\*Controller:
-            run: '__invoke'
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(RenameMethodRector::class)
+        ->call('configure', [[
+            RenameMethodRector::OLD_TO_NEW_METHODS_BY_CLASS => [
+                'App\*Module\Presenter\*Controller' => [
+                    'run' => '__invoke'
+                ]
+            ]
+        ]]);
+};
 ```
 
 Kittens will love you now!
@@ -138,21 +99,30 @@ Kittens will love you now!
 One more thing! You can use it on any type check:
 
 ```diff
- services:
-     Rector\Rector\Constant\ClassConstantReplacerRector:
--        Framework\Request:
-+        Framework\Request*:
-             200: CODE_200
-             300: CODE_300
-             400: CODE_400
-             404: CODE_404
-             500: CODE_500
--        Framework\RequestInterface:
--            200: CODE_200
--            300: CODE_300
--            400: CODE_400
--            404: CODE_404
--            500: CODE_500
+ <?php
+
+ declare(strict_types=1);
+
+ use Rector\Renaming\Rector\Constant\RenameClassConstantRector;use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
+ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+ return function (ContainerConfigurator $containerConfigurator): void {
+     $services = $containerConfigurator->services();
+     $services->set(RenameClassConstantRector::class)
+         ->call('configure', [[
+             RenameClassConstantRector::OLD_TO_NEW_CONSTANTS_BY_CLASS => [
+-                'Framework\Request' => [
++                'Framework\Request*' => [
+                     200 => 'CODE_200',
+                     300 => 'CODE_300',
+                 ],
+-                'Framework\RequestInterface' => [
+-                    200 => 'CODE_200',
+-                    300 => 'CODE_300',
+-                ],
+            ]
+        ]]);
+};
 ```
 
 <br>
