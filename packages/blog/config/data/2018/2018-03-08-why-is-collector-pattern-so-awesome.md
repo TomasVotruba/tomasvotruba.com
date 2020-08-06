@@ -8,6 +8,10 @@ perex: |
 
 tweet: "New post on my blog: Why is Collector Pattern so Awesome #symfony #colletor #compilerpass #rector #solid #decoupling"
 tweet_image: "/assets/images/posts/2018/collector/quote.jpg"
+
+deprecated_since: "August 2020"
+deprecated_message: |
+    The feature is not in Rector any more, yet the collector is still valid to SOLID code extending.
 ---
 
 I already [wrote about Collector pattern as one we can learn from Symfony or Laravel](/blog/2017/04/14/3-symfony-and-laravel-patterns-that-make-code-easy-to-extends-without-modification/#3-like-collecting-stamps-just-on-steroids). But they're so useful and underused I have need to write a more about them.
@@ -16,29 +20,22 @@ Yesterday I worked on [Rector](https://github.com/rectorphp/rector) and **needed
 
 <br>
 
-To give you a context, now you can register particular Rectors to config `services:` section as you know from Symfony:
-
-```yaml
-# rector.yaml
-services:
-    Rector\Rector\Contrib\Symfony\HttpKernel\GetterToPropertyRector: ~
-```
-
-<br>
-
-But **how would you add custom Rector class with a PHP provider**?
+To give you a context, now you can register particular Rectors to config as in Symfony:
 
 ```php
-final class YourOwnRectorProvider
-{
-    public function provider()
-    {
-        $rector = new CustomSymfonyRector;
-        // some custom modifications
+<?php
 
-        return $rector;
-    }
-}
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Privatization\Rector\MethodCall\PrivatizeLocalGetterToPropertyRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(PrivatizeLocalGetterToPropertyRector::class);
+};
 ```
 
 ## Towards Scalable Architecture
@@ -78,13 +75,22 @@ final class SymfonyRectorProvider implements RectorInterface
 
 Such service is registered by user to the config:
 
-```yaml
-# rector.yaml
-services:
-    _defaults:
-        autowire: true
+```php
+<?php
 
-    App\Rector\SymfonyRectorProvider: ~
+// rector.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->defaults()
+        ->autowire();
+
+    $services->set(\App\Rector\SymfonyRectorProvide::class);
+};
 ```
 
 <br>
@@ -165,14 +171,24 @@ The same happened for Rector - **I need to add multiple Rectors in `RectorProvid
 
 Damn! Mmm, tell people to use one provider per Rector?
 
-```yaml
-# rector.yaml
-services:
-    _defaults:
-        autowire: true
+```php
+<?php
 
-    App\Rector\SymfonyRectorProvider: ~
-    App\Rector\AnotherSymfonyRectorProvider: ~
+// rector.php
+
+declare(strict_types=1);
+
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->defaults()
+        ->autowire();
+
+    $services->set(\App\Rector\SymfonyRectorProvider::class);
+
+    $services->set(\App\Rector\AnotherSymfonyRectorProvider::class);
+};
 ```
 
 Quick solution, yet smelly:
@@ -193,10 +209,12 @@ Let's try a different approach that Colletor pattern screams at us. We now have 
 
 namespace Rector\Rector;
 
-use Rector\Contract\Rector\RectorInterface;
+use Rector\Core\Contract\Rector\RectorInterface;
 
 final class RectorCollector
 {
+    // ...
+
     public function addRector(RectorInterface $rector): void
     {
         $this->rectors[] = $rector;
@@ -289,9 +307,10 @@ I didn't forget, our dear manager. Do you have idea how would you add it?
 
 namespace Rector\RectorBuilder\Contract;
 
-use Rector\Contract\Rector\RectorInterface;
+use Rector\Core\Contract\Rector\RectorInterface;
 
-interface Rector\RectorBuilder\Contract\RectorProviderInterface
+
+interface RectorProviderInterface
 {
    /**
     * @return RectorInterface[]

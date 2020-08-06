@@ -76,23 +76,31 @@ final class PostRepository
 composer install rector/rector --dev
 ```
 
-### 2. Setup `rector.yaml`
+### 2. Setup `rector.php`
 
 There you name all the changes you'd like to perform on you code:
 
-```yaml
-# rector.yaml
-services:
-    # order matters, this needs to be first to correctly detect parent repository
+```php
+<?php
 
-    # this will replace parent calls by "$this->repository" property
-    Rector\Rector\Architecture\RepositoryAsService\ReplaceParentRepositoryCallsByRepositoryPropertyRector: ~
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Architecture\Rector\MethodCall\ReplaceParentRepositoryCallsByRepositoryPropertyRector;
+use Rector\Architecture\Rector\Class_\MoveRepositoryFromParentToConstructorRector;
 
-    # this will move the repository from parent to constructor
-    Rector\Rector\Architecture\RepositoryAsService\MoveRepositoryFromParentToConstructorRector: ~
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+
+    // order matters, this needs to be first to correctly detect parent repository
+
+    // this will replace parent calls by "$this->repository" property
+    $services->set(ReplaceParentRepositoryCallsByRepositoryPropertyRector::class);
+
+    // this will move the repository from parent to constructor
+    $services->set(MoveRepositoryFromParentToConstructorRector::class);
+};
 ```
 
-### 3. Add Repository => Entity Provider
+### 3. Add Repository → Entity Provider
 
 But how does Rector know what entity should it add to which repository? For that reasons, there is `Rector\Bridge\Contract\DoctrineEntityAndRepositoryMapperInterface` you need to implement.
 
@@ -131,12 +139,25 @@ final class DoctrineEntityAndRepositoryMapper implements DoctrineEntityAndReposi
 And register it:
 
 ```diff
- # rector.yaml
- services:
-     Rector\Rector\Architecture\RepositoryAsService\ReplaceParentRepositoryCallsByRepositoryPropertyRector: ~
-     Rector\Rector\Architecture\RepositoryAsService\MoveRepositoryFromParentToConstructorRector: ~
+ <?php
 
-+    App\Rector\DoctrineEntityAndRepositoryMapper: ~
+ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+ use Rector\Rector\Architecture\RepositoryAsService\ReplaceParentRepositoryCallsByRepositoryPropertyRector;
+ use Rector\Rector\Architecture\RepositoryAsService\MoveRepositoryFromParentToConstructorRector;
+
+ return function (ContainerConfigurator $containerConfigurator): void {
+     $services = $containerConfigurator->services();
+
+     // order matters, this needs to be first to correctly detect parent repository
+
+     // this will replace parent calls by "$this->repository" property
+     $services->set(ReplaceParentRepositoryCallsByRepositoryPropertyRector::class);
+
+     // this will move the repository from parent to constructor
+     $services->set(MoveRepositoryFromParentToConstructorRector::class);
+
++    $services->set(\App\Rector\DoctrineEntityAndRepositoryMapper::class);
+ };
 ```
 
 ### 4. Run on Your Code
@@ -144,7 +165,7 @@ And register it:
 Now the fun part:
 
 ```bash
-vendor/bin/rector process /app --dry-run # "--config rector.yaml" as default
+vendor/bin/rector process /app --dry-run # "--config rector.php" as default
 ```
 
 You should see diffs like:
@@ -198,11 +219,10 @@ You've probably noticed that code itself is not looking too good. Rector's jobs 
 
 ```bash
 composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs --config vendor/rector/rector/ecs-after-rector.yaml --fix
+vendor/bin/ecs --config vendor/rector/rector/ecs-after-rector.php --fix
 ```
 
 And your code is now both **refactored and clean**. That's it!
-
 
 <br><br>
 

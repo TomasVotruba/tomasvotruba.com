@@ -8,6 +8,10 @@ perex: |
     Do you think it's an easy task to move `@param int $number` to `(int $number)`?
 tweet: "New post on my #php blog: The Rocket Science Behind Migration of Docblock Types to PHP Typehints   #instantupgrade"
 tweet_image: "/assets/images/posts/2018/rocket-typehints/example.gif"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 Sneak peak what this post will be about:
@@ -338,11 +342,22 @@ composer require rector/rector --dev
 
 ### 2. Create Config
 
-```yaml
-# rector.yaml
-services:
-    Rector\Php\Rector\FunctionLike\ParamTypeDeclarationRector: ~
-    Rector\Php\Rector\FunctionLike\ReturnTypeDeclarationRector: ~
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\TypeDeclaration\Rector\FunctionLike\ParamTypeDeclarationRector;
+use Rector\TypeDeclaration\Rector\FunctionLike\ReturnTypeDeclarationRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(ParamTypeDeclarationRector::class);
+    $services->set(ReturnTypeDeclarationRector::class);
+};
 ```
 
 ### 3. Run

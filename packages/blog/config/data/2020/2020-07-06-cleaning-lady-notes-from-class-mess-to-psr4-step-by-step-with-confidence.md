@@ -9,6 +9,10 @@ perex: |
     We start with the most problematic topic in PHP legacy, that every project needs, but almost none has - **transition to [PSR-4](https://www.php-fig.org/psr/psr-4/)**.
 
 tweet: "New Post on #php 🐘 blog: Cleaning Lady Notes: From Class Mess to PSR-4 Step by Step With Confidence"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 *Dedicated to [Kerrial](https://github.com/Kerrialn), my great friend who teaches me so much about not giving a f_ck and just do the stuff.<br>Thanks, dude!*
@@ -269,13 +273,24 @@ For these, we have help of Rector with these 2 rules:
 
 <br>
 
-Register them in `rector.yaml`:
+Register them in `rector.php`:
 
-```yaml
-# rector.yaml
-services:
-    Rector\PSR4\Rector\Namespace_\NormalizeNamespaceByPSR4ComposerAutoloadRector: null
-    Rector\PSR4\Rector\FileSystem\NormalizeNamespaceByPSR4ComposerAutoloadFileSystemRector: null
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\PSR4\Rector\FileSystem\NormalizeNamespaceByPSR4ComposerAutoloadFileSystemRector;
+use Rector\PSR4\Rector\Namespace_\NormalizeNamespaceByPSR4ComposerAutoloadRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(NormalizeNamespaceByPSR4ComposerAutoloadRector::class);
+    $services->set(NormalizeNamespaceByPSR4ComposerAutoloadFileSystemRector::class);
+};
 ```
 
 And **manually add the desired namespace** to your `composer.json`:

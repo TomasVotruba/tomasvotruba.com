@@ -5,7 +5,12 @@ perex: |
     Symplify 8 is going to be released in the 2nd half of May. But as in Symfony, you can get ready for future version today.
     <br><br>
     [In the previous post we upgraded Coding Standard from Sniffs to PHPStan](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules). Today we finish with 2nd half - **from Fixers to Rector rules**.
+
 tweet: "New Post on #php 🐘 blog: How to Upgrade to #symplify 8 - From Fixer to @rectorphp Rules"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 When you run [ECS](https://github.com/symplify/easycodingstandard) with version 7.3+:
@@ -40,7 +45,6 @@ No, **all you need to do is switch to Rector rules**. It's better working and mo
 ## How to Handle Upgrade in 30 minutes?
 
 There are dozen deprecated fixers in total. Let's take it one by one.
-
 
 First - if you don't have Rector, install it:
 
@@ -86,11 +90,22 @@ Instead of fixer:
 
 use Rector rule:
 
-```yaml
-# rector.yaml
-services:
-    Rector\CodingStyle\Rector\FuncCall\ConsistentPregDelimiterRector:
-         $delimiter: '#' # default
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\CodingStyle\Rector\FuncCall\ConsistentPregDelimiterRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(ConsistentPregDelimiterRector::class)
+        // default
+        ->arg('delimiter', '#');
+};
 ```
 
 ## 3. Required Must be followed by Absolute Path
@@ -118,10 +133,20 @@ Instead of fixer:
 
 use Rector rule:
 
-```yaml
-# rector.yaml
-services:
-    Rector\CodingStyle\Rector\Include_\FollowRequireByDirRector: null
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\CodingStyle\Rector\Include_\FollowRequireByDirRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(FollowRequireByDirRector::class);
+};
 ```
 
 ## 4. Match Exception variable name to its Type
@@ -154,10 +179,20 @@ Instead of fixer:
 
 use Rector rule:
 
-```yaml
-# rector.yaml
-services:
-    Rector\CodingStyle\Rector\Catch_\CatchExceptionNameMatchingTypeRector: null
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\CodingStyle\Rector\Catch_\CatchExceptionNameMatchingTypeRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(CatchExceptionNameMatchingTypeRector::class);
+};
 ```
 
 ## 5. Match Property and Variable to its Type
@@ -191,10 +226,20 @@ Instead of Fixer:
 
 use Rector rule:
 
-```yaml
-# rector.yaml
-services:
-    Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector: null
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(RenamePropertyToMatchTypeRector::class);
+};
 ```
 
 ## 6. Set Default Values to bool and array Type to Prevent Undefined Value
@@ -234,11 +279,22 @@ Instead of Fixers:
 
 use Rector rules:
 
-```yaml
-# rector.yaml
-services:
-    Rector\SOLID\Rector\Property\AddFalseDefaultToBoolPropertyRector: null
-    Rector\CodingStyle\Rector\Class_\AddArrayDefaultToArrayPropertyRector: null
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\CodingStyle\Rector\Class_\AddArrayDefaultToArrayPropertyRector;
+use Rector\SOLID\Rector\Property\AddFalseDefaultToBoolPropertyRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(AddFalseDefaultToBoolPropertyRector::class);
+    $services->set(AddArrayDefaultToArrayPropertyRector::class);
+};
 ```
 
 ## 7. Use `::class` over Strings Names
@@ -272,10 +328,20 @@ Instead of Fixer:
 
 use Rector rule:
 
-```yaml
-# rector.yaml
-services:
-    Rector\Php55\Rector\String_\StringClassNameToClassConstantRector: null
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(StringClassNameToClassConstantRector::class);
+};
 ```
 
 ## 8. Order Property by Complexity, Private Methods by Use
@@ -297,11 +363,22 @@ Instead of Fixers:
 
 use Rector rules:
 
-```yaml
-# rector.yaml
-services:
-    Rector\Order\Rector\Class_\OrderPrivateMethodsByUseRector: null
-    Rector\Order\Rector\Class_\OrderPropertyByComplexityRector: null
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Order\Rector\Class_\OrderPrivateMethodsByUseRector;
+use Rector\Order\Rector\Class_\OrderPropertyByComplexityRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(OrderPrivateMethodsByUseRector::class);
+    $services->set(OrderPropertyByComplexityRector::class);
+};
 ```
 
 ## 9. Specific Order By Parent Contract
@@ -337,14 +414,28 @@ Instead of Fixer:
 
 use Rector rule:
 
-```yaml
-# rector.yaml
-services:
-    Rector\Order\Rector\Class_\OrderPublicInterfaceMethodRector:
-        $methodOrderByInterfaces:
-            FixerInterface:
-                - 'getName'
-                - 'isCandidate'
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Order\Rector\Class_\OrderPublicInterfaceMethodRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(OrderPublicInterfaceMethodRector::class)
+        ->call('configure', [[
+            OrderPublicInterfaceMethodRector::METHOD_ORDER_BY_INTERFACES => [
+                'FixerInterface' => [
+                    'getName',
+                    'isCandidate',
+                ]
+            ]
+        ]]);
+};
 ```
 
 ## 10. Make Classes `final`, if You Can
@@ -365,10 +456,20 @@ Instead of Fixer:
 
 use Rector rule:
 
-```yaml
-# rector.yaml
-services:
-    Rector\SOLID\Rector\Class_\FinalizeClassesWithoutChildrenRector: null
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\SOLID\Rector\Class_\FinalizeClassesWithoutChildrenRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(FinalizeClassesWithoutChildrenRector::class);
+};
 ```
 
 <br>

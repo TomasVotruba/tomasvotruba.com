@@ -8,8 +8,13 @@ perex: |
     <br>
     <br>
     The talk was not full of shallow tips, nor [about framework migration](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/). Instead, **we talked about small decisions that were made 2 years. Decisions, which took 3 months to get rid of**.
+
 tweet: "New Post on #php 🐘 blog: How to Get Rid of Technical Debt or What We Would Have Done Differently 2 Years ago        #symfony #rector #ecs @doctrineproject #uuid #legacycode"
 tweet_image: "/assets/images/posts/2019/spaceflow_10_points/07.png"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 **Do you speak Czech?** Go check [64 slides](https://docs.google.com/presentation/d/1QSpTVqmtXpE8RvB73cYDBrDYpuChjp_Uz3sLJhLnLXo/edit?usp=sharing) and [watch the talk video recording on Facebook](https://www.facebook.com/pehapkari/videos/vl.404478763568491/399224180756304/?type=1) (it is 60 minutes long and the picture is broken from ~27th minute, but the audio is good).
@@ -128,14 +133,24 @@ So that's what we did:
 
 This one requires lof ot manual configuration tweaking of [Rector](https://github.com/rectorphp/rector) rules, but you can run basic migration with following set:
 
-```yaml
-# rector.yaml
-services:
-    Rector\Autodiscovery\Rector\FileSystem\Rector\Autodiscovery\Rector\FileSystem: ~
-    Rector\Autodiscovery\Rector\FileSystem\MoveServicesBySuffixToDirectoryRector: ~
+```php
+<?php
 
-    # configure `composer.json` first
-    Rector\PSR4\Rector\Namespace_\NormalizeNamespaceByPSR4ComposerAutoloadRector: ~
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Autodiscovery\Rector\FileSystem\MoveServicesBySuffixToDirectoryRector;
+use Rector\PSR4\Rector\Namespace_\NormalizeNamespaceByPSR4ComposerAutoloadRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(MoveServicesBySuffixToDirectoryRector::class);
+
+    // configure `composer.json` to desired way
+    $services->set(NormalizeNamespaceByPSR4ComposerAutoloadRector::class);
+};
 ```
 
 ## 3. Make Your CI Fast or Die Trying
@@ -187,18 +202,28 @@ The moment you realize:
 
 God, don't do this manually! Automate ↓
 
-```yaml
-# ecs.yaml
-parameters:
-    sets:
-        - "dead-code"
-```
+```php
+<?php
 
-```yaml
-# rector.yaml
-sevices:
-    Rector\DeadCode\Rector\Class_\RemoveUnusedDoctrineEntityMethodAndPropertyRector: ~
-    # + some extra private rules :)
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Core\Configuration\Option;
+use Rector\DeadCode\Rector\Class_\RemoveUnusedDoctrineEntityMethodAndPropertyRector;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::DEAD_CODE,
+    ]);
+
+    $services = $containerConfigurator->services();
+    $services->set(RemoveUnusedDoctrineEntityMethodAndPropertyRector::class);
+    // + some extra private rules :)
+};
 ```
 
 **Soon, you'll be 10-20 % slimmer and you'll fit into your favorite bathing suite :)**
@@ -229,11 +254,23 @@ But there is even better one - [Nette\Utils](https://github.com/nette/utils):
 
 How to get it into your code? Easy:
 
-```yaml
-# rector.yaml
-parameters:
-    sets:
-        - "nette-utils-code-quality"
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator) : void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::NETTE_UTILS_CODE_QUALITY,
+    ]);
+};
 ```
 
 ## 6. Config SPAM
@@ -291,10 +328,19 @@ What now?
 
 Easy, we made a Rector rule for that:
 
-```yaml
-# rector.yaml
-services:
-    Rector\CodingStyle\Rector\String_\ManualJsonStringToJsonEncodeArrayRector: ~
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\CodingStyle\Rector\String_\ManualJsonStringToJsonEncodeArrayRector;use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(ManualJsonStringToJsonEncodeArrayRector::class);
+};
 ```
 
 <img src="/assets/images/posts/2019/spaceflow_10_points/25.png" class="img-thumbnail col-12 col-md-8">
@@ -366,5 +412,3 @@ And moreover:
     <br>
     What Are You Going to Clean Tomorrow in Your Code Base?
 </blockquote>
-
-<br>

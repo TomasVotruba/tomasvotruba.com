@@ -52,19 +52,29 @@ In the last [project I've helped to improve with Rector](/blog/2019/07/29/how-we
 composer require rector/rector --dev
 ```
 
-2. Create `rector-ci.yaml` config just for code-reviews
+2. Create `rector-ci.php` config just for code-reviews
 
-```yaml
-# rector-ci.yaml
-parameters:
-    sets:
-        - "dead-code"
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::DEAD_CODE]);
+};
 ```
 
 3. And add to your CI bash
 
 ```bash
-vendor/bin/rector process src --config rector-ci.yaml --dry-run
+vendor/bin/rector process src --config rector-ci.php --dry-run
 ```
 
 ## How to add Rector CI to your Favorite CI?
@@ -108,7 +118,7 @@ jobs:
           run: composer install --prefer-dist --no-progress --no-suggest
 
         - name: Code Review
-          run: ./vendor/bin/rector process --config rector-ci.yaml --dry-run
+          run: ./vendor/bin/rector process --config rector-ci.php --dry-run
 ```
 
 ### 2. GitHub + Travis CI
@@ -142,7 +152,7 @@ jobs:
             stage: test
             name: "Code Review"
             script:
-                - vendor/bin/rector process --config rector-ci.yaml --dry-run
+                - vendor/bin/rector process --config rector-ci.php --dry-run
 ```
 
 <br>
@@ -171,7 +181,7 @@ tests:
 code-review:
     stage: test
     script:
-        - vendor/bin/rector process --config rector-ci.yaml --dry-run
+        - vendor/bin/rector process --config rector-ci.php --dry-run
 ```
 
 ### 4. Bitbucket
@@ -214,35 +224,36 @@ pipelines:
                     caches:
                         - composer
                     script:
-                        - vendor/bin/rector process src --config rector-ci.yaml
+                        - vendor/bin/rector process src --config rector-ci.php
 ```
 
 ## What sets to Start With?
 
 Here are my favorite sets I apply first:
 
-```yaml
-# rector.yaml
-parameters:
-    sets:
-        - 'coding-style'
-        - 'code-quality'
-        - 'dead-code'
-        - 'nette-utils-code-quality'
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::CODING_STYLE,
+        SetList::CODE_QUALITY,
+        SetList::DEAD_CODE,
+        SetList::NETTE_UTILS_CODE_QUALITY,
+    ]);
+};
 ```
 
-But you don't have to stop there. Pick **any of [103 sets](https://github.com/rectorphp/rector/tree/master/config/set)** that Rector provides. E.g.:
-
-```yaml
-# rector.yaml
-parameters:
-    sets:
-        - 'php70'
-        - 'php71'
-        - 'php72'
-        - 'php73'
-        - 'php74'
-```
+But you don't have to stop there. Pick **any of [100+ sets](https://github.com/rectorphp/rector/tree/master/config/set)** that Rector provides.
 
 <br>
 <br>
@@ -252,12 +263,11 @@ That's it!
 Oh... one more thing. You don't have to resolve all the Rector reported flaws manually, **just remove the `--dry-run` option** and run it locally before pushing:
 
 ```bash
-vendor/bin/rector process src --config rector-ci.yaml
+vendor/bin/rector process src --config rector-ci.php
 ```
 
 <br>
 
 Enjoy your coffee!
-
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -9,8 +9,13 @@ perex: |
     <br>
     <br>
     Are these projects lost? Do you have to quit them? And what if the annotations are lying?
+
 tweet: "New Post on #php 🐘 blog: From 0 Doc Types to Full Type Declaration with Dynamic Analysis - Thank you @DaveLiddament for injecting the idea to my head"
 tweet_image: "/assets/images/posts/2019/dynamic-analysis/probe.png"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 I had a great trip with a friend of mine [Dave Liddament](https://github.com/DaveLiddament) after [PHP Day 2019 in Verona](https://2019.phpday.it/). During Venice sightseeing in beautiful wild rain, we had a short coffee break to talk about Rector. Dave was amazed by what Rector can do for the developer, with such a few lines of YAML config.
@@ -171,10 +176,20 @@ I've  [merged the PR into Rector](https://github.com/rectorphp/rector/pull/2264/
 
 ### Step 1 - Add Type Collector
 
-```yaml
-# rector.yaml
-services:
-    Rector\DynamicTypeAnalysis\Rector\ClassMethod\DecorateMethodWithArgumentTypeProbeRector: ~
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\DynamicTypeAnalysis\Rector\ClassMethod\DecorateMethodWithArgumentTypeProbeRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(DecorateMethodWithArgumentTypeProbeRector::class);
+};
 ```
 
 ```bash
@@ -185,10 +200,20 @@ vendor/bin/rector process src
 
 ### Step 3 - Complete Collected Types
 
-```yaml
-# rector.yaml
-services:
-    Rector\DynamicTypeAnalysis\Rector\ClassMethod\AddArgumentTypeWithProbeDataRector: ~
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\DynamicTypeAnalysis\Rector\ClassMethod\AddArgumentTypeWithProbeDataRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(AddArgumentTypeWithProbeDataRector::class);
+};
 ```
 
 ```bash
@@ -197,10 +222,20 @@ vendor/bin/rector process src
 
 ### Step 4 - Remove Type Collector
 
-```yaml
-# rector.yaml
-services:
-    Rector\DynamicTypeAnalysis\Rector\StaticCall\RemoveArgumentTypeProbeRector: ~
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\DynamicTypeAnalysis\Rector\StaticCall\RemoveArgumentTypeProbeRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(RemoveArgumentTypeProbeRector::class);
+};
 ```
 
 ```bash

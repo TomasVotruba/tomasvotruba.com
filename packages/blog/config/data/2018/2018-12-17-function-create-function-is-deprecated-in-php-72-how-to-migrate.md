@@ -5,8 +5,13 @@ perex: |
     If there would be "Miss Deprecation of PHP 7.2", `create_function()` would definitely win. They can be **very complex, tricky and very hard convert to PHP code**. Moreover without tests.
     <br><br>
     Do you have over 5 `create_function()` pieces in your code? Let's see how to migrate them.
+
 tweet: "New Post on my  🐘 #php blog: Function create_function() is Deprecated in #PHP 7.2 - How to Migrate?"
 tweet_image: "/assets/images/posts/2018/create-function/sonic.png"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 Why is this deprecated? Well, the string arguments of few functions behaves like `eval()` - that's [evil](https://stackoverflow.com/a/951868/1348344).
@@ -154,10 +159,20 @@ Just setup [Rector](https://github.com/rectorphp/rector) and run it:
 composer require rector/rector --dev
 ```
 
-```yaml
-# rector.yaml
-services:
-    Rector\Php\Rector\FuncCall\CreateFunctionToAnonymousFunctionRector: ~
+```php
+<?php
+
+// rector.php
+
+declare(strict_types=1);
+
+use Rector\Php72\Rector\FuncCall\CreateFunctionToAnonymousFunctionRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(CreateFunctionToAnonymousFunctionRector::class);
+};
 ```
 
 ```bash

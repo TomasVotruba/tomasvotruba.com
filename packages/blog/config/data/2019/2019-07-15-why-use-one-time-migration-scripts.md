@@ -3,7 +3,12 @@ id: 218
 title: "Why use One-Time Migration Scripts"
 perex: |
     School system taught me to despise old books and consider them outdated, rather about stories than knowledge. I wanted to prove I'm right, so I've read [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X) from 1999 and *you won't believe what happened*...
+
 tweet: "New Post on #php 🐘 blog: Why use One-Time Migration Scripts"
+
+updated_since: "August 2020"
+updated_message: |
+    Updated Rector YAML to PHP configuration, as current standard.
 ---
 
 You already probably know about instant refactoring and [pattern refactoring](/blog/2019/04/15/pattern-refactoring/) (I'm deprecating refactoring as you know it) that's possible thanks to [Rector](https://github.com/rectorphp/rector). But they require a certain knowledge of code and it's patterns.
@@ -165,7 +170,7 @@ Again, it took us 3-4 iterations to cover all edge cases, but then it was ready 
 
 I use this approach in Rector to create new rule + test in 1 file:
 
-Just edit `create-rector.yaml` (see in [Github repo](https://github.com/rectorphp/rector/blob/master/create-rector.yaml.dist)) and then run:
+Just edit `create-rector.php` (see in [Github repo](https://github.com/rectorphp/rector/blob/master/create-rector.php.dist)) and then run:
 
 ```bash
 bin/rector create
