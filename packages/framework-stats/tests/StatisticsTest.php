@@ -11,7 +11,7 @@ use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 final class StatisticsTest extends AbstractKernelTestCase
 {
     /**
-     * @var int[]
+     * @var array<string, int>
      */
     private const AVERAGE_DAILY_VALUES_BY_MONTH = ['2019-12' => 300];
 
