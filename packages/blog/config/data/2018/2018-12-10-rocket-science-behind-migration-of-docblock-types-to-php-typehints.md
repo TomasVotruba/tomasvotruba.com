@@ -321,11 +321,11 @@ Last but not least, different namespaces can cause another error:
  }
 ```
 
-**Do you want more *wild code cases*?** You'll find the full test battery of [60 snippets here in Github test](https://github.com/rectorphp/rector/tree/master/packages/Php/tests/Rector/FunctionLike/).
+**Do you want more *wild code cases*?** You'll find the full test battery of [60 snippets here in Github test](https://github.com/rectorphp/rector/tree/master/packages/Php/tests/Rector/FunctionLike).
 
 <br>
 
-This where [good old AST](/blog/2018/10/25/why-ast-fixes-your-coding-standard-better-than-tokens/) comes the rescue. It knows all the nodes in your scope = not in `/vendor`, all children, all their implementations and used traits. It can traverse up and down this tree and see if the typehint would break something.
+This where [good old AST](/blog/2018/10/25/why-ast-fixes-your-coding-standard-better-than-tokens) comes the rescue. It knows all the nodes in your scope = not in `/vendor`, all children, all their implementations and used traits. It can traverse up and down this tree and see if the typehint would break something.
 
 ## Give Your Code a Typehint Facelift
 
@@ -373,4 +373,4 @@ As there are many ways class-like elements can be connected - like the one with 
 
 <br>
 
-And when you're done, you can [get your docblocks cleaned](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/) :)
+And when you're done, you can [get your docblocks cleaned](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer) :)

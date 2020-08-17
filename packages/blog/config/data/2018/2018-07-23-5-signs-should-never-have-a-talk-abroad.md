@@ -77,7 +77,7 @@ Abroad, there are only native English speakers and they will always correct your
 This could not be far from the truth. In my experience, I've been meeting roughly 10 % of native English speakers. Instead, they're from Germany, France, Italy, Spain, Hungary, Slovakia, Netherlands, Belgium or Poland. Imagine having all these nationalities together, in one room, almost all of them having English as seconds language (in the best case scenario).
 
 In such a group being too good in English would actually hurt you. The most common vocabulary that everyone understands the most wins.
-After all, [1000 words](https://xkcd.com/simplewriter/) are all you need.
+After all, [1000 words](https://xkcd.com/simplewriter) are all you need.
 
 ## 4. You don't have Money for Traveling and AirBnb
 
@@ -89,7 +89,7 @@ If there only would be organizer you ask for accommodation or one of the other s
 
 <em class="fas fa-fw fa-check text-success fa-2x"></em>
 
-All you need to do is check [the meetup](https://www.meetup.com/sfugberlin/events/) and write to the organizer and the speakers. Why? Because these people are usually the most opened one. Thanks, [Martin Hlaváč](http://mhlavac.net/) for an awesome stay that helped me for this tip.
+All you need to do is check [the meetup](https://www.meetup.com/sfugberlin/events) and write to the organizer and the speakers. Why? Because these people are usually the most opened one. Thanks, [Martin Hlaváč](http://mhlavac.net) for an awesome stay that helped me for this tip.
 
 ## 5. It's Very Hard to Find these Meetups
 
@@ -104,7 +104,7 @@ You can go to meetup.com and [search for PHP](https://www.meetup.com/find/events
     <em>Search on meetup.com is not really friendly</em>
 </div>
 
-The second option is to go to [php.ug](http://php.ug/) and try to find meetups around you. This project is much better than meetup.com because it's [open-sourced](https://github.com/php-ug/php.ug) and community can fix it, but it's not very active for the last 2 years.
+The second option is to go to [php.ug](http://php.ug) and try to find meetups around you. This project is much better than meetup.com because it's [open-sourced](https://github.com/php-ug/php.ug) and community can fix it, but it's not very active for the last 2 years.
 
 <div class="text-center">
     <img src="/assets/images/posts/2018/friends/phpug.png" class="img-thumbnail">
@@ -114,9 +114,9 @@ The second option is to go to [php.ug](http://php.ug/) and try to find meetups a
 
 <em class="fas fa-fw fa-check text-success fa-2x"></em>
 
-Make no mistake, [Andreas Heigl](https://github.com/heiglandreas) is doing a great job with [php.ug](http://php.ug/), with Slack promotion and so on. I talked with him about this project, because I really missed a place where people could see meetups around them that would just work. Nothing more, nothing less.
+Make no mistake, [Andreas Heigl](https://github.com/heiglandreas) is doing a great job with [php.ug](http://php.ug), with Slack promotion and so on. I talked with him about this project, because I really missed a place where people could see meetups around them that would just work. Nothing more, nothing less.
 
-**Thank you, Andreas, for inspiration, working API on php.ug and super fast bugfixes under 60 minutes from reporting**. Be sure to check [his blog](http://andreas.heigl.org/) - I love his kind and wise style of sharing his experience.
+**Thank you, Andreas, for inspiration, working API on php.ug and super fast bugfixes under 60 minutes from reporting**. Be sure to check [his blog](http://andreas.heigl.org) - I love his kind and wise style of sharing his experience.
 
 ## Find Your Next Meetup on FriendsOfPHP.org
 
@@ -124,14 +124,14 @@ Today, this one last reason *Not to have a talk abroad* became history.
 
 I [Steal like an Artist](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#steal-like-and-artist-by-austing-kleon) from many projects:
 
-- [Leaflet.js](https://leafletjs.com/)
-- [Meetup.com API](https://www.meetup.com/meetup_api/)
-- [php.ug API](https://php-ug.github.io/php.ug/api/)
-- [PHP7.org design](http://gophp7.org/)
-- [GitHub Pages](https://pages.github.com/)
-- [Statie](https://www.statie.org/)
-- [Travis Daily Cron](https://docs.travis-ci.com/user/cron-jobs/)
-- and [Symfony Events](https://symfony.com/events/)
+- [Leaflet.js](https://leafletjs.com)
+- [Meetup.com API](https://www.meetup.com/meetup_api)
+- [php.ug API](https://php-ug.github.io/php.ug/api)
+- [PHP7.org design](http://gophp7.org)
+- [GitHub Pages](https://pages.github.com)
+- [Statie](https://www.statie.org)
+- [Travis Daily Cron](https://docs.travis-ci.com/user/cron-jobs)
+- and [Symfony Events](https://symfony.com/events)
 
 to put down a simple page with meetups in Europe:
 
@@ -143,7 +143,7 @@ It's a fresh MVP (*not model-view-presenter* but *minimum viable product*) from 
 
 <br>
 
-The mission of [friendsofphp.org](https://friendsofphp.org/) page is simple:
+The mission of [friendsofphp.org](https://friendsofphp.org) page is simple:
 
 <blockquote class="blockquote text-center">
     Help programmers to share their ideas and travel as easy as possible

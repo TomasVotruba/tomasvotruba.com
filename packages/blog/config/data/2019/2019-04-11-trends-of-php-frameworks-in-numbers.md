@@ -34,7 +34,7 @@ Cut the small-talk, these are the numbers (to the day of publishing this post).
 <br>
 
 <div class="alert alert-sm alert-danger mt-3" role="alert" markdown=1>
-This table is out of date as the days go by. **See [updated results](/php-framework-trends/)**.
+This table is out of date as the days go by. **See [updated results](/php-framework-trends)**.
 </div>
 
 <table class="table table-bordered table-responsive table-striped">
@@ -156,7 +156,7 @@ It seems that the most active community is now CakePHP. I've been following thei
 
 - What packages are active in those frameworks?
 - What frameworks are dinosaurs - with big long-tail effect in total downloads, but losing in trends?
-- What frameworks have [hidden](/blog/2018/07/30/hidden-gems-of-php-packages-nette-utils/) [cool](/blog/2018/08/13/hidden-gems-of-php-packages-symfony-finder-and-spl-file-info/) utils packages?
+- What frameworks have [hidden](/blog/2018/07/30/hidden-gems-of-php-packages-nette-utils) [cool](/blog/2018/08/13/hidden-gems-of-php-packages-symfony-finder-and-spl-file-info) utils packages?
 
 <br>
 

@@ -26,7 +26,7 @@ But now, back to the topic.
 
 ## Autowire service? Easy!
 
-With [autowire feature](https://dunglas.fr/2015/10/new-in-symfony-2-83-0-services-autowiring/), managing dependencies for services is now as simple as:
+With [autowire feature](https://dunglas.fr/2015/10/new-in-symfony-2-83-0-services-autowiring), managing dependencies for services is now as simple as:
 
 ```yaml
 services:
@@ -105,7 +105,7 @@ Even if you do manage to finish these steps, **these issues will appear**:
 
 ### Is there some way back from hell to heaven?
 
-Author of autowiring feature and Symfony core contributor Kévin Dunglas [sees similar problem](https://github.com/symfony/symfony/pull/16863#issuecomment-162221353) and [proposes solution with ADR pattern](https://dunglas.fr/2016/01/dunglasactionbundle-symfony-controllers-redesigned/). I think it's the right direction, but it bends controllers too much.
+Author of autowiring feature and Symfony core contributor Kévin Dunglas [sees similar problem](https://github.com/symfony/symfony/pull/16863#issuecomment-162221353) and [proposes solution with ADR pattern](https://dunglas.fr/2016/01/dunglasactionbundle-symfony-controllers-redesigned). I think it's the right direction, but it bends controllers too much.
 
 But my goal is to keep controllers the same way they are now, and just add support for...
 

@@ -2,7 +2,7 @@
 id: 252
 title: "The Future of&nbsp;Pehapkari Meetups&nbsp;and&nbsp;Training - You"
 perex: |
-    Last 2 months gave lot of time to reflect my activities, work and hobbies. One of the topic I think about a lot is our Czech PHP Community - [Pehapkari](https://pehapkari.cz/). I felt like last year I'm not giving it as much energy as before. But why?
+    Last 2 months gave lot of time to reflect my activities, work and hobbies. One of the topic I think about a lot is our Czech PHP Community - [Pehapkari](https://pehapkari.cz). I felt like last year I'm not giving it as much energy as before. But why?
 tweet: "New Post on #php 🐘 blog: The Future of @pehapkari Meetups and Training - You"
 ---
 
@@ -10,7 +10,7 @@ tweet: "New Post on #php 🐘 blog: The Future of @pehapkari Meetups and Trainin
 
 In 2014, the only place to talk about PHP in the Czech Republic, was Nette forum. A place to bring all people of PHP, regardless their framework choice was missing. That's why Pehapkari (first year *Symfonisti*) were born.
 
-Today, **in 2020** we have [Pehapkari Slack with 1600+ members](http://pehapkari.slack.com/), where **you can ask about anything you want. Instantly. Now. In Czech.**
+Today, **in 2020** we have [Pehapkari Slack with 1600+ members](http://pehapkari.slack.com), where **you can ask about anything you want. Instantly. Now. In Czech.**
 
 Online works on itself, that's great. It took a [huge effort of 25 people  to get there](https://pehapkari.cz/blog/2016/03/03/kolik-lidi-je-potreba-k-vytvoreni-jedne-komunity). But **what about offline**? In 2019 we've organized ~10 meetups and 14 trainings, both in Prague. The rest of meetups is handled by companies themselves, e.g. PeckaDesign and Oxyshop in Brno by or DigitalSolutions in Pardubice.
 

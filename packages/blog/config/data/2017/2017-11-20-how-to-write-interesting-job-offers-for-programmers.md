@@ -57,7 +57,7 @@ Show how you do it - really. Evidence beats promise.
 
 At least, your potential coworkers will get insight into the code of applications you make.
 
-One example for all: I love [delejcoumis.cz](http://www.delejcoumis.cz/). **Its [open-sourced on Github](https://github.com/peckadesign/DelejCoUmis.cz)** and it allows me:
+One example for all: I love [delejcoumis.cz](http://www.delejcoumis.cz). **Its [open-sourced on Github](https://github.com/peckadesign/DelejCoUmis.cz)** and it allows me:
 
 - to easily determine the company's skill level
 - find if I **understand the code**

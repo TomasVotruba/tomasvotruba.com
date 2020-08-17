@@ -12,11 +12,11 @@ tweet_image: "/assets/images/posts/2018/console-di/thumbnail.png"
 
 ## Symfony Evolution
 
-[7 years ago it was a total nightmare to use Controllers as services](http://richardmiller.co.uk/2011/04/15/symfony2-controller-as-service/). Luckily, Symfony evolved a lot in this matter and using Symfony 4.0 packages in a brand new application is much simpler than it was in Symfony 2.8 or even 3.2. The very same evolution allowed to enter Dependency Injection to Symfony Console-based PHP CLI App.
+[7 years ago it was a total nightmare to use Controllers as services](http://richardmiller.co.uk/2011/04/15/symfony2-controller-as-service). Luckily, Symfony evolved a lot in this matter and using Symfony 4.0 packages in a brand new application is much simpler than it was in Symfony 2.8 or even 3.2. The very same evolution allowed to enter Dependency Injection to Symfony Console-based PHP CLI App.
 
 ### Commands as Services
 
-I already wrote about [why is this important](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), today we look at **how to actually do it**. To be clear, how to do it without the need of bloated FrameworkBundle, that is an official but [rather bad-practice solution](https://matthiasnoback.nl/2013/10/symfony2-console-commands-as-services-why/).
+I already wrote about [why is this important](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/#3-symfony-console-meets-symfony-dependencyinjection), today we look at **how to actually do it**. To be clear, how to do it without the need of bloated FrameworkBundle, that is an official but [rather bad-practice solution](https://matthiasnoback.nl/2013/10/symfony2-console-commands-as-services-why).
 
 ## 3 Steps to First Command as a Service
 
@@ -126,7 +126,7 @@ What are we missing? Oh, we forgot to **load commands to the `Application` servi
 ### How to Add All Services of Type A to Service of Type B
 
 With FrameworkBundle we'd add `autoconfigure` option to `services.yml` config - it works with tags, but here we need to use clean PHP.
-[Tags magic that is often overused in wrong places](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/), so this extra works is actually a good thing. We know what happens... but **mainly readers of our code know it too**.
+[Tags magic that is often overused in wrong places](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications), so this extra works is actually a good thing. We know what happens... but **mainly readers of our code know it too**.
 
 This is the place to use [famous collector pattern](/blog/2018/03/08/why-is-collector-pattern-so-awesome/#drop-that-expression-language-magic) via `CompilerPass`:
 

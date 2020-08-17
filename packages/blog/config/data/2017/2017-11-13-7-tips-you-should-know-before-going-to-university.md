@@ -30,9 +30,9 @@ I didn't do this because I did not know anybody like that. Today I would go to F
 
 There are cheap ways to find such people (in Czech Republic):
 
-- [Naučmese](https://www.naucmese.cz/) - courses from hundreds different people, who will gladly tell you about their experiences - I met a many interesting people here
+- [Naučmese](https://www.naucmese.cz) - courses from hundreds different people, who will gladly tell you about their experiences - I met a many interesting people here
 - **Facebook Groups** - anything you like, it's there: media, programmers, marketers, copywriters, business, ppc...
-- [Eventigo](https://eventigo.cz/) - with similar focus groups as those above, Eventigo sends you weekly newsletter about **free meetups and events** you can visit and meet real people with same passions (or ideas)
+- [Eventigo](https://eventigo.cz) - with similar focus groups as those above, Eventigo sends you weekly newsletter about **free meetups and events** you can visit and meet real people with same passions (or ideas)
 
 
 ## 3. The University can be Incubator
@@ -80,7 +80,7 @@ This took me 1,5 year to find out. So simple, yet to easy to miss.
 
 The grade has nothing to do with intelligence, social status and skills. It's just **a number on a test**. That's it.
 
-Same is for IQ. **IQ only indicates your ability to achieve high scores on IQ tests**. Nothing more. Trust me, I've studied on [Faculty of Psychology](http://psych.fss.muni.cz/).
+Same is for IQ. **IQ only indicates your ability to achieve high scores on IQ tests**. Nothing more. Trust me, I've studied on [Faculty of Psychology](http://psych.fss.muni.cz).
 
 **The mark is an indicator ability to succeed in this test.** Consider what is **important to you** and if you want to invest those 60 % to:
 

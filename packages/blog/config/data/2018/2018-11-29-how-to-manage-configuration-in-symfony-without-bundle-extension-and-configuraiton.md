@@ -99,7 +99,7 @@ services:
         resource: "../src"
 ```
 
-Now we can drop all of the PHP [magic code](https://matthiasnoback.nl/2013/10/symfony2-some-things-i-dont-like-about-bundles/) down:
+Now we can drop all of the PHP [magic code](https://matthiasnoback.nl/2013/10/symfony2-some-things-i-dont-like-about-bundles) down:
 
 ```diff
  /app
@@ -122,7 +122,7 @@ imports:
    - { resource: "packages/accountant/config/services.yaml" }
 ```
 
-Or we can set this up just once for all [local packages](/blog/2017/12/25/composer-local-packages-for-dummies/) with [glob](https://symfony.com/blog/new-in-symfony-3-3-import-config-files-with-glob-patterns):
+Or we can set this up just once for all [local packages](/blog/2017/12/25/composer-local-packages-for-dummies) with [glob](https://symfony.com/blog/new-in-symfony-3-3-import-config-files-with-glob-patterns):
 
 ```yaml
 # app/config.yaml
@@ -364,7 +364,7 @@ This compiler autowires parameters by convention:
 
 - `%parameter_name%` => `$parameterName`
 
-You can [read more about it here](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/).
+You can [read more about it here](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too).
 
 ## Final Results
 

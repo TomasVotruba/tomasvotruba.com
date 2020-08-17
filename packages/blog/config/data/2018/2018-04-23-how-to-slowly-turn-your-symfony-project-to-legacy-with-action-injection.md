@@ -2,9 +2,9 @@
 id: 94
 title: "How to Slowly Turn your Symfony Project to Legacy with Action Injection"
 perex: |
-    The other day I saw the question on Reddit about [Symfony's controller action dependency injection](https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection/). More people around me are hyped about [this new feature in Symfony 3.3](https://symfony.com/doc/current/service_container/3.3-di-changes.html#controllers-are-registered-as-services) that allows to autowire services via action argument typehints. It's new, it's cool and no one has a bad experience with it. The ideal candidate for any code you write today.
+    The other day I saw the question on Reddit about [Symfony's controller action dependency injection](https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection). More people around me are hyped about [this new feature in Symfony 3.3](https://symfony.com/doc/current/service_container/3.3-di-changes.html#controllers-are-registered-as-services) that allows to autowire services via action argument typehints. It's new, it's cool and no one has a bad experience with it. The ideal candidate for any code you write today.
     <br><br>
-    Since [Nette](https://forum.nette.org/en/19365-nette-framework-2-1-0-finally-released) and [Laravel introduced](https://mattstauffer.com/blog/laravel-5.0-method-injection/) a similar feature in 2014, there are empirical data that we learn from.
+    Since [Nette](https://forum.nette.org/en/19365-nette-framework-2-1-0-finally-released) and [Laravel introduced](https://mattstauffer.com/blog/laravel-5.0-method-injection) a similar feature in 2014, there are empirical data that we learn from.
     <br><br>
     **Today I'll share the experience I have from consulting few Nette applications with dangerous overuse of this pattern and how this one thing turned the code to complete mess.**
 
@@ -205,7 +205,7 @@ services:
 
 Can you see the difference to Symfony? Well, almost none. But so far so good.
 
-Note to Nette programmers: [`@inject` is often a code smell and you should do it cleaner](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/)
+Note to Nette programmers: [`@inject` is often a code smell and you should do it cleaner](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette)
 
 ## Inspire by (Good/Bad) Example
 
@@ -262,7 +262,7 @@ foreach ($this->getContainerBuilder() as $definition) {
 }
 ```
 
-Now we can remove these annoying long constructors and use property/method injection everywhere. Be careful, [this visual debt](https://ocramius.github.io/blog/eliminating-visual-debt/) is different from [cognitive overload](https://blog.sonarsource.com/cognitive-complexity-because-testability-understandability).
+Now we can remove these annoying long constructors and use property/method injection everywhere. Be careful, [this visual debt](https://ocramius.github.io/blog/eliminating-visual-debt) is different from [cognitive overload](https://blog.sonarsource.com/cognitive-complexity-because-testability-understandability).
 
 Now our code looks like this:
 
@@ -302,7 +302,7 @@ But it's still possible. How? Take 3 breaths to think about it, you'll find a wa
 
 <br><br>
 
-Yes, our favorite [composition pattern](https://ocramius.github.io/blog/when-to-declare-classes-final/).
+Yes, our favorite [composition pattern](https://ocramius.github.io/blog/when-to-declare-classes-final).
 
 ```php
 namespace App\Model;
@@ -345,13 +345,13 @@ Now you know how to take advantage of framework architecture backdoor and save y
 There are 2 ways ho to avoid this completely and still use your framework:
 
 -
-Paul M. Jones has written [many posts Action-Domain-Responder](http://paul-m-jones.com/archives/category/programming/adr) and even created a [micro-site devoted to ADR topic](http://pmjones.io/adr/).
+Paul M. Jones has written [many posts Action-Domain-Responder](http://paul-m-jones.com/archives/category/programming/adr) and even created a [micro-site devoted to ADR topic](http://pmjones.io/adr).
 - another approach is [RequestHandler](https://jenssegers.com/85/goodbye-controllers-hello-request-handlers)
 - my favorite approach that [Symfony](https://symfony.com/doc/current/controller/service.html#invokable-controllers) and [Laravel](https://dyrynda.com.au/blog/single-action-controllers-in-laravel) support by default for a long time are **invokable controllers**, also called *single action controllers*
 
 ## What is Your Experience with Action Injects?
 
-I really recommend checking the [Reddit thread](https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection/), there are few experiences worth reading that will save your time and energy of personal research:
+I really recommend checking the [Reddit thread](https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection), there are few experiences worth reading that will save your time and energy of personal research:
 
 <blockquote class="blockquote">
 I've abandoned this [action inject] approach because it makes it harder to differentiate request parameters from services. It also makes this method definition in most cases spread to multiple lines. And it makes it harder to inject non-autowirable services

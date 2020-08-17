@@ -5,14 +5,14 @@ perex: "Doctrine filters are powerful tool. Yet their registration and managemen
 
 deprecated_since: "March 2017"
 deprecated_message: |
-    I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - **[read a post here](/blog/2017/03/27/why-is-doctrine-dying/)**.
+    I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - **[read a post here](/blog/2017/03/27/why-is-doctrine-dying)**.
 
     It's been revived by Tomáš Pilař on [Lekarna/DoctrineFilters](https://github.com/Lekarna/DoctrineFilters) though.
 ---
 
 ## Standard Process to Enable Filter
 
-If you don't know Doctrine Filters, [KnpUniversity](https://knpuniversity.com/) has very nice, short and funny tutorial about them. [Go check it](https://knpuniversity.com/screencast/doctrine-queries/filters), I'll wait here...
+If you don't know Doctrine Filters, [KnpUniversity](https://knpuniversity.com) has very nice, short and funny tutorial about them. [Go check it](https://knpuniversity.com/screencast/doctrine-queries/filters), I'll wait here...
 
 > Are you busy and smart? Just check [slides 13 to 31](https://www.slideshare.net/rosstuck/extending-doctrine-2-for-your-domain-model-13257781/13) from [@RossTuck](https://twitter.com/rosstuck)'s presentation about cool features of Doctrine.
 

@@ -2,14 +2,14 @@
 id: 159
 title: "How to Get PHP 7.4 Typed Properties to Your Code in Few Seconds"
 perex: |
-    PHP 5.6 and 7.0 is going to be dangerous [since 2019](http://php.net/supported-versions.php), PHP 7.1 is [new baseline](https://gophp71.org/) and PHP 7.3 is just about to be released in the end of 2018.
+    PHP 5.6 and 7.0 is going to be dangerous [since 2019](http://php.net/supported-versions.php), PHP 7.1 is [new baseline](https://gophp71.org) and PHP 7.3 is just about to be released in the end of 2018.
     <br><br>
     Is this **the best time to upgrade your code to PHP 7.4**?
 tweet: "New Post on My Blog: How to Get #PHP 7.4 Typed Properties to Your Code in Few Seconds   #futurecompatibility #codequality #symfony"
 tweet_image: "/assets/images/posts/2018/php74-typed/v2.png"
 ---
 
-**Probably not**. Unless you're able to compile [PHP repository](https://github.com/php/php-src/) yourself and live on the edge of the edges. PHP 7.4 can be the smoothest upgrade you've experienced. **If you'll think about in your coding since today**.
+**Probably not**. Unless you're able to compile [PHP repository](https://github.com/php/php-src) yourself and live on the edge of the edges. PHP 7.4 can be the smoothest upgrade you've experienced. **If you'll think about in your coding since today**.
 
 ## Can `@var` Annotations be Really Useful?
 
@@ -105,7 +105,7 @@ In PHP 8 or 9 this might come:
 }
 ```
 
-In [PHP Asia](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference/), *typed arrays* was the most desired feature in next versions of PHP. So were *typed properties* once and so were *strict types* before them. In 2015 we would only dream about those 2, now one is part of our every-day life, second coming soon.
+In [PHP Asia](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference), *typed arrays* was the most desired feature in next versions of PHP. So were *typed properties* once and so were *strict types* before them. In 2015 we would only dream about those 2, now one is part of our every-day life, second coming soon.
 
 ##"...in Seconds"
 
@@ -159,7 +159,7 @@ vendor/bin/rector process src --set php74
 # Done!
 ```
 
-See [pull-request #643](https://github.com/rectorphp/rector/pull/643/) to get more insight into how this very nice AST use case works.
+See [pull-request #643](https://github.com/rectorphp/rector/pull/643) to get more insight into how this very nice AST use case works.
 
 <br>
 

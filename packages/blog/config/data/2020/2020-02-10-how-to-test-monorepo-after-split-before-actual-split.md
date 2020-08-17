@@ -14,15 +14,15 @@ tweet: "New Post on #php 🐘 blog: How to Test Monorepo After Split Before Actu
 tweet_image: "/assets/images/posts/split_before_split.png"
 ---
 
-Do you use Github Actions on your Github projects? Well, if you do, **[it might cut your commit feedback loop](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/) from 17 minutes to just 3** and make you super productive by accident. 
+Do you use Github Actions on your Github projects? Well, if you do, **[it might cut your commit feedback loop](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress) from 17 minutes to just 3** and make you super productive by accident.
 
 We now use Github Actions on Symplify and Rector for over a month, and in January 2020, it helped us [to merge amazing 177 pull-requests](https://twitter.com/VotrubaT/status/1220126675436032005).
 
-## Warning: Cleaning Up Might Cause you to Spot more Bottle Necks 
+## Warning: Cleaning Up Might Cause you to Spot more Bottle Necks
 
 That's why so few developers like to tidy up. It usually only shows worse and worse mess in the code.
 
-The worse mess in our code was the 3rd layer of monorepo testing - **after split tests**. 
+The worse mess in our code was the 3rd layer of monorepo testing - **after split tests**.
 
 We had to wait till the full monorepo is split (+ 5 minutes), and CI runs on each split package (+ 2 minutes). So instead of 3 minutes, we're now back on 10 minutes. Also, the split testing can **only happen after the PR is merged into the `master` branch**.
 
@@ -31,7 +31,7 @@ Do your 1st and 2nd layer pass? All good? **You have to wait till the split to f
 ## Short Reminder: What is the 3rd layer of Monorepo Testing?
 
 Let's say you run:
- 
+
 ```bash
 git clone git@github.com:symfony/console.git
 
@@ -43,7 +43,7 @@ vendor/bin/phpunit
 
 And that's all! The standard way of testing packages.
 
-**But** with monorepo, the symfony/console is just one of directories in [big monorepo symfony/symfony repository](https://github.com/symfony/symfony/):
+**But** with monorepo, the symfony/console is just one of directories in [big monorepo symfony/symfony repository](https://github.com/symfony/symfony):
 
 ```bash
 symfony/src/Symfony/Component/Console
@@ -55,7 +55,7 @@ symfony/src/Symfony/Component/HttpKernel
 To run unit tests on symfony/console only, we'd have to call PHPUnit on the directory:
 
 ```bash
-vendor/bin/phpunit -d symfony/src/Symfony/Component/Console  
+vendor/bin/phpunit -d symfony/src/Symfony/Component/Console
 ```
 
 But there is no:
@@ -75,7 +75,7 @@ composer install
 vendor/bin/phpunit
 ```
 
-You can read more about it [in original post](/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split/).
+You can read more about it [in original post](/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split).
 
 <br>
 
@@ -112,9 +112,9 @@ Just locally for every package.
     "think in patterns, my young padawan",
     <br>
     so I knew there must be a way.
-</blockquote> 
+</blockquote>
 
-~~Then I suddenly knew what to do!~~ 
+~~Then I suddenly knew what to do!~~
 
 <br>
 
@@ -125,8 +125,8 @@ I won't lie, it took me 3-4 hours of trial and error and many toilet *eureka* vi
 - **We cannot use shared vendor**, the dependencies are conflicting
 
 ### So What Worked?
- 
-- Every package `composer.json` had to require mutually dependencies (e.g `symplify/easy-coding-standard` requires `symplify/package-builder`) with `*` 
+
+- Every package `composer.json` had to require mutually dependencies (e.g `symplify/easy-coding-standard` requires `symplify/package-builder`) with `*`
 - Every other package had to require other packages via [composer *path* repository](https://getcomposer.org/doc/05-repositories.md#path):
 
 <img src="/assets/images/posts/split_before_split.png" class="img-thumbnail">
@@ -140,7 +140,7 @@ There was **one more pit to fall into**. How many repositories we have to add he
      "require": {
 -         "symplify/package-builder": "^7.3"
 +         "symplify/package-builder": "*"
-     } 
+     }
  }
 ```
 
@@ -177,7 +177,7 @@ You know me too well, me and *manual work* don't get on very well with each othe
 
 ```bash
 vendor/bin/monorepo-builder localize-composer-paths
-``` 
+```
 
 All we need to do is run it before `composer update`.
 
@@ -188,10 +188,10 @@ This simple idea is running split tests in 14 Symplify packages. How?
 - switch to the package directory
 - modify paths to use local path packages **without** symlink to prevent path false positives
 - install dependencies
-- run `vendor/bin/phpunit` there 
+- run `vendor/bin/phpunit` there
 
 ```yaml
-# .github/workflows/after_split_testing.yaml 
+# .github/workflows/after_split_testing.yaml
 name: After Split Testing
 
 jobs:
@@ -206,16 +206,16 @@ jobs:
 
             -   run: |
                     composer install --no-progress
-                    
+
                     # this is the magic
                     packages/monorepo-builder/bin/monorepo-builder localize-composer-paths
-                
+
                     # testing one package
                     cd packages/easy-coding-standard
-    
+
                     # download dependencies
                     composer update --no-progress
-                    
+
                     # run tests
                     vendor/bin/phpunit
 ```

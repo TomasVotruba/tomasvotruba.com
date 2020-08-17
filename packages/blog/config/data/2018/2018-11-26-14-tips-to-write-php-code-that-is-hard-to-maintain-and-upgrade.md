@@ -52,7 +52,7 @@ class BetterPriceCalculator extends PriceCalculator
 }
 ```
 
-Also, it's [needed for mocking](https://github.com/cpliakas/git-wrapper/issues/159) and there is no [way around that](https://github.com/dg/bypass-finals). There's not even [8 reasons](https://ocramius.github.io/blog/when-to-declare-classes-final/) to use `final` anywhere anytime.
+Also, it's [needed for mocking](https://github.com/cpliakas/git-wrapper/issues/159) and there is no [way around that](https://github.com/dg/bypass-finals). There's not even [8 reasons](https://ocramius.github.io/blog/when-to-declare-classes-final) to use `final` anywhere anytime.
 
 ## 2. Use `protected` instead of `private`
 
@@ -417,7 +417,7 @@ Let them look into to class manually. Time well spent!
 
 ## 13. Use Fluent API with Different Return Values
 
-[Fluent interfaces are great](https://ocramius.github.io/blog/fluent-interfaces-are-evil/), they save you typing the variable name all over again:
+[Fluent interfaces are great](https://ocramius.github.io/blog/fluent-interfaces-are-evil), they save you typing the variable name all over again:
 
 ```php
 <?php declare(strict_types=1);
@@ -507,4 +507,4 @@ Do you know more tips to write code that is hard to maintain and upgrade in *not
 
 <br>
 
-P.S.: If you love sarcastic posts like this, go check [Eliminating Visual Debt](https://ocramius.github.io/blog/eliminating-visual-debt/) by Marco Pivetta or [How to Criticize like a Senior Programmer](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer/).
+P.S.: If you love sarcastic posts like this, go check [Eliminating Visual Debt](https://ocramius.github.io/blog/eliminating-visual-debt) by Marco Pivetta or [How to Criticize like a Senior Programmer](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer).

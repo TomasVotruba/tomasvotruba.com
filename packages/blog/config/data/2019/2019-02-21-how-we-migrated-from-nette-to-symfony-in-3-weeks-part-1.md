@@ -2,7 +2,7 @@
 id: 188
 title: "How we Migrated from Nette to Symfony in 3 Weeks - Part 1"
 perex: |
-    On the break of January/February 2019, we **migrated whole [Entrydo](https://entry.do/) project from Nette to Symfony**. It was API backend with no templates, but still, it wasn't as easy as I expected.
+    On the break of January/February 2019, we **migrated whole [Entrydo](https://entry.do) project from Nette to Symfony**. It was API backend with no templates, but still, it wasn't as easy as I expected.
     <br><br>
     Many ☕ and 🍺 were drunk during this migration. 0 programmers were too frustrated to give up.
     <br>
@@ -12,7 +12,7 @@ tweet: "New Post on #php 🐘 blog: How we Migrated from #nettefw to #symfony in
 tweet_image: "/assets/images/posts/2019/nette-to-symfony/nette-to-symfony.png"
 ---
 
-And when I write we and 3 weeks, I mean myself and [Jan Mikeš](https://janmikes.cz/) and **3 weeks of occasional codding**, not full-time. In total, we **spent around 30-40 hours** each on this migration.
+And when I write we and 3 weeks, I mean myself and [Jan Mikeš](https://janmikes.cz) and **3 weeks of occasional codding**, not full-time. In total, we **spent around 30-40 hours** each on this migration.
 
 <div class="text-center">
     <img src="/assets/images/posts/2019/nette-to-symfony/nette-to-symfony.png" class="img-thumbnail mt-5">
@@ -47,13 +47,13 @@ If one would decide in the middle of a migration to work for a week on another p
 
 The basic idea was to do automated instant migration. Anything manually changes on more than 1 place is a potential future black hole.
 
-We quickly discovered, it's better to use [PHP factories over config coding](/blog/2019/02/14/why-config-coding-sucks/) and [kill all parents we could](/blog/2019/01/24/how-to-kill-parents/) (except our own ones of course).
+We quickly discovered, it's better to use [PHP factories over config coding](/blog/2019/02/14/why-config-coding-sucks) and [kill all parents we could](/blog/2019/01/24/how-to-kill-parents) (except our own ones of course).
 
 ### Use Rector to PHP Changes
 
 In the start, we run **Rector with generic rules with brute-force way**. Don't think, just try it. That gave us more idea about the code - we started to spot places we can write in Rector rule.
 
-In the end, [Rector](https://getrector.org/) helped us with many following changes:
+In the end, [Rector](https://getrector.org) helped us with many following changes:
 
 - Response and Request <em class="fas fa-fw fa-lg fa-check text-success"></em>
 
@@ -93,7 +93,7 @@ Rector can automate them when some project will need them. Maybe your project :)
 
 ### Coding Standards
 
-After many many changes in the code, we didn't care about spaces, tabs or where the `{` is. That's the job of [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/). **We had to focus full attention on code structure**, not to play with style.
+After many many changes in the code, we didn't care about spaces, tabs or where the `{` is. That's the job of [EasyCodingStandard](https://github.com/symplify/easy-coding-standard). **We had to focus full attention on code structure**, not to play with style.
 
 Actually, Nette uses tabs and Symfony spaces, so ECS actually helped with migration a lot too.
 

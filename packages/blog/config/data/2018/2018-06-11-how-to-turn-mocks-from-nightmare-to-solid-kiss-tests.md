@@ -2,7 +2,7 @@
 id: 113
 title: "How to Turn Mocks from Nightmare to Solid Kiss Tests"
 perex: |
-    [Martin Hlaváč](http://mhlavac.net/) had a very nice talk about testing in [Berlin PHP Meetup](http://www.bephpug.de/2018/06/05/june.html) last week (while I hosted with [Rector](https://github.com/rectorphp/rector)), and one of the topic was mocking.
+    [Martin Hlaváč](http://mhlavac.net) had a very nice talk about testing in [Berlin PHP Meetup](http://www.bephpug.de/2018/06/05/june.html) last week (while I hosted with [Rector](https://github.com/rectorphp/rector)), and one of the topic was mocking.
     <br><br>
     I often see developers fighting with this, in places they don't have to, just because this topic is so widespread all over the internet and unit tools.
     <br><br>
@@ -14,7 +14,7 @@ updated_message: |
     Updated with shift from sniffs to Rector rules, that handle these cases much better.
 ---
 
-At the time being, there is only 1 post about [anonymous classes in tests](http://mnapoli.fr/anonymous-classes-in-tests/) (thanks to Matthieu!). Compared to that, there are many PHP tool made just for mocking: Prophecy, Mockery, PHPUnit native mocks, Mockista and so on. If you're a developer who uses one of them, knows that he needs to add proper annotations to make autocomplete work, has the PHPStom plugin that fixes bugs in this autocomplete and it works well for you, just stop reading.
+At the time being, there is only 1 post about [anonymous classes in tests](http://mnapoli.fr/anonymous-classes-in-tests) (thanks to Matthieu!). Compared to that, there are many PHP tool made just for mocking: Prophecy, Mockery, PHPUnit native mocks, Mockista and so on. If you're a developer who uses one of them, knows that he needs to add proper annotations to make autocomplete work, has the PHPStom plugin that fixes bugs in this autocomplete and it works well for you, just stop reading.
 
 This post is for developers who struggle with mocking and have a feeling, that they're doing something wrong.
 
@@ -150,7 +150,7 @@ I believe now we all made it under 5 seconds with both answers:
 
 The code already tells us what to do next.
 
-Some people mock because they follow good practice and **[make every class abstract or final](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. They don't want to deal with constructors, that would often lead to more mocking. It's great practice and super easy to put make classes final with Rector CI:
+Some people mock because they follow good practice and **[make every class abstract or final](https://ocramius.github.io/blog/when-to-declare-classes-final)**. They don't want to deal with constructors, that would often lead to more mocking. It's great practice and super easy to put make classes final with Rector CI:
 
 ```bash
 composer require rector/rector --dev
@@ -217,7 +217,7 @@ They say **your code is 10x more read than written** on average. I believe it's 
 
 - super-readable,
 - deterministic = with only one clear way one can understand it,
-- with [cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) < 8,
+- with [cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you) < 8,
 - easy to fix,
 - easy to extend,
 - easy to test.

@@ -8,8 +8,8 @@ tweet_image: "/assets/images/posts/2017/composer-local-packages/composer.png"
 ---
 
 
-I wrote about [pros and cons of local packages before](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/).
-After year of using this in [practice](https://github.com/symplify/symplify) and [mentorings](/mentoring-and-lectures/) I polished this approach to even **simpler version that is easy to start with**.
+I wrote about [pros and cons of local packages before](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages).
+After year of using this in [practice](https://github.com/symplify/symplify) and [mentorings](/mentoring-and-lectures) I polished this approach to even **simpler version that is easy to start with**.
 
 
 ### Do You Have?
@@ -29,7 +29,7 @@ After year of using this in [practice](https://github.com/symplify/symplify) and
 
 <br>
 
-There is no need to use Github, [love open-source](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/), understand [package design](https://leanpub.com/principles-of-package-design) or understand [composer beyond PSR-4](/blog/2020/06/08/drop-robot-loader-and-let-composer-deal-with-autoloading/).
+There is no need to use Github, [love open-source](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness), understand [package design](https://leanpub.com/principles-of-package-design) or understand [composer beyond PSR-4](/blog/2020/06/08/drop-robot-loader-and-let-composer-deal-with-autoloading).
 No [symlink issues](https://johannespichler.com/developing-composer-packages-locally), no forgotten `composer update`. **Anyone can start using this!**
 
 <div class="text-center">
@@ -88,7 +88,7 @@ composer.json
 
 <br>
 
-The best practise is to use your **company or application name** as namespace, e.g. [`EntryDo`](https://www.entrydo.com/).
+The best practise is to use your **company or application name** as namespace, e.g. [`EntryDo`](https://www.entrydo.com).
 Second part of namespace will be **package name** (`file-system`) in **CamelCaps format**.
 
 ```php

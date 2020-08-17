@@ -2,7 +2,7 @@
 id: 57
 title: "EasyCodingStandard and PHPStan meet 3&nbsp;Symfony E-Commerce Projects"
 perex: |
-    [In the last post](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis/), we looked at the static analysis of 3 Symfony E-Commerce projects.
+    [In the last post](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis), we looked at the static analysis of 3 Symfony E-Commerce projects.
 
     **Lines of code, Duplicated code, Cyclomatic complexity or Method length**. These metrics are very rarely used in practise (even though there is a [sniff for that](https://github.com/symplify/symplify/blob/bf802422b9528946a8bd7e7f0331d858a9bf5740/easy-coding-standard.neon#L27-L28)).
 
@@ -54,7 +54,7 @@ When a project uses coding standards - moreover CI-checkers - it is very easy to
 
 Second, [PHPStan](https://github.com/phpstan/phpstan) is the best tool when it comes to **passing type validations** (arrays of objects, like `Type[]`), **incorrect namespaces**, **calling non-existing methods** [and more](https://medium.com/@ondrejmirtes/phpstan-2939cd0ad0e3#b18f).
 
-To get the idea how it improves your code in practice, just [check this commit](https://github.com/ApiGen/ApiGen/commit/9ab5d1f94e95ac91a6cf2d0edd1d0c384f6299d7) in [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death/).
+To get the idea how it improves your code in practice, just [check this commit](https://github.com/ApiGen/ApiGen/commit/9ab5d1f94e95ac91a6cf2d0edd1d0c384f6299d7) in [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death).
 
 
 
@@ -62,7 +62,7 @@ To get the idea how it improves your code in practice, just [check this commit](
 
 ### PSR2
 
-**PSR-2 is the most spread coding standard in PHP**, described in [PHP-FIG guide](https://www.php-fig.org/psr/psr-2/). Both PHP_CodeSniffer and PHP CS Fixer have a set of ~30 rules, so why not to [combine them](https://github.com/symplify/easy-coding-standard/blob/master/config/psr2.yml) and use them on our projects?
+**PSR-2 is the most spread coding standard in PHP**, described in [PHP-FIG guide](https://www.php-fig.org/psr/psr-2). Both PHP_CodeSniffer and PHP CS Fixer have a set of ~30 rules, so why not to [combine them](https://github.com/symplify/easy-coding-standard/blob/master/config/psr2.yml) and use them on our projects?
 
 
 <br>
@@ -97,7 +97,7 @@ Shopsys **has its own [coding-standard package](https://github.com/shopsys/codin
 
 ## The Four Cleaners
 
-This is another [small and easy-to-understand set](/blog/2017/09/18/4-simple-checkers-for-coding-standard-haters-but-clean-code-lovers/) I use to keep the code of open-source packages clean. In Sylius [it removed 500 lines of unused code](https://github.com/Sylius/Sylius/pull/8557) just few days ago as of writing this article.
+This is another [small and easy-to-understand set](/blog/2017/09/18/4-simple-checkers-for-coding-standard-haters-but-clean-code-lovers) I use to keep the code of open-source packages clean. In Sylius [it removed 500 lines of unused code](https://github.com/Sylius/Sylius/pull/8557) just few days ago as of writing this article.
 
 The full set looks like this:
 
@@ -163,7 +163,7 @@ And results for our 3 projects?
 If you never used this tools before, **you probably don’t know how strict PHPStan is**.
 Doctrine2 has now level 1 and successfully passes it, thanks to [Majkl578](https://github.com/Majkl578). In order to get the idea of what had to be done, [see the PR](https://github.com/doctrine/doctrine2/pull/6535/files).
 
-Do you want to add PHPStan to your project? [Read this short intro](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/).
+Do you want to add PHPStan to your project? [Read this short intro](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too).
 
 
 <div class="text-center">
@@ -204,7 +204,7 @@ To have an idea about real numbers, **I picked results for lvl 0 and lvl 7**:
 
 As you can see, both **Shopsys and Sylius are doing great**. Sylius is just falling bit behind in higher levels.
 
-As we have seen in [the previous article](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis/), **not all the projects are of the same size**. It might not be fair to Spryker to count only PHPStan violations as its codebase is considerably larger. **If we count violations relative to the size of the project** (measured in lines of code) the graph changes significantly:
+As we have seen in [the previous article](/blog/2017/08/28/shopsys-spriker-and-sylius-under-static-analysis), **not all the projects are of the same size**. It might not be fair to Spryker to count only PHPStan violations as its codebase is considerably larger. **If we count violations relative to the size of the project** (measured in lines of code) the graph changes significantly:
 
 <br>
 

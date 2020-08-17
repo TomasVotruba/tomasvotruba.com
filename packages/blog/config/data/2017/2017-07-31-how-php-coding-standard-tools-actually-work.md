@@ -28,7 +28,7 @@ That's laziness on a completely different level :)
     <img src="https://content.artofmanliness.com/uploads/2015/08/Small-Things-Over-Time-2.jpg">
 </div>
 
-A lot is possible to do with these tools and I'll write about that in the future, but today we'll start with a much [smaller step](/blog/2017/02/22/fast-and-easy-way-to-learn-complex-topics/): a Checker that will inform us about coding standard violation. No changes, no refactoring.
+A lot is possible to do with these tools and I'll write about that in the future, but today we'll start with a much [smaller step](/blog/2017/02/22/fast-and-easy-way-to-learn-complex-topics): a Checker that will inform us about coding standard violation. No changes, no refactoring.
 
 To know how to build a Checker you need to understand 3 terms: *token*, *dispatcher* and *subscriber*.
 
@@ -110,7 +110,7 @@ Now you know what "token" is.
 
 ## 2. Dispatcher
 
-Do you know [Event Dispatcher](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch/)?
+Do you know [Event Dispatcher](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch)?
 
 If not, it's a pattern (like *repository* or *factory*) that says: **when this action happens, call all methods that listen to it**, e.g. when order is finished (event), send confirmation SMS to user and send him thank-you box full of candies (subscribed methods).
 
@@ -167,7 +167,7 @@ I think now you are ready for the real code.
 
 ### Do You Want Real Code?
 
-I already wrote [how to write a Sniff for PHP_CodeSniffer](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/) or [how to write a Fixer for PHP CS Fixer](/blog/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24/) on this topic where I write code to solve  real life use cases.
+I already wrote [how to write a Sniff for PHP_CodeSniffer](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3) or [how to write a Fixer for PHP CS Fixer](/blog/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24) on this topic where I write code to solve  real life use cases.
 
 Enjoy saved time by writing a code that works for you.
 

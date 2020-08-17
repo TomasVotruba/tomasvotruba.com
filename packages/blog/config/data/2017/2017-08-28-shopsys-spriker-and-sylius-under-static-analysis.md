@@ -203,7 +203,7 @@ However, having the **cyclomatic complexity = 1 in combination with low co-locat
 
 *This leaves you digging through dozens of tiny files, some barely longer than the class definition itself, just to find even high level logic. I normally learn frameworks by simply reading the code, but I can't help but feel fatigued when having to try and find where a line of logic actually lives in Laravel. It is almost always a journey."*
 
-You can [read similar comparison of Code Complexity in Symfony and Laravel](https://medium.com/@taylorotwell/measuring-code-complexity-64356da605f9) by Taylor Otwell. [Maintainer vs. contributor view on Cyclomatic Complexity](https://blog.sonarsource.com/discussing-cyclomatic-complexity/) is briefly described on SonarCube.
+You can [read similar comparison of Code Complexity in Symfony and Laravel](https://medium.com/@taylorotwell/measuring-code-complexity-64356da605f9) by Taylor Otwell. [Maintainer vs. contributor view on Cyclomatic Complexity](https://blog.sonarsource.com/discussing-cyclomatic-complexity) is briefly described on SonarCube.
 
 
 ## 4. It's All About Methods

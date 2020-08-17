@@ -91,7 +91,7 @@ Which one do you like so far? So many colors, so many options... maybe too many.
 
 ### United We Stand, Divided We Autumn
 
-Do you remember when there were [a dozen ways to create Dependency Injection Container](https://github.com/container-interop/container-interop)? Fortunately, the [PSR-11 was born](https://www.php-fig.org/psr/psr-11/) to solve this and moved our focus to things that matter more.
+Do you remember when there were [a dozen ways to create Dependency Injection Container](https://github.com/container-interop/container-interop)? Fortunately, the [PSR-11 was born](https://www.php-fig.org/psr/psr-11) to solve this and moved our focus to things that matter more.
 
 We don't want to play with colors, with `fg`, `underscore`, `green`, `cyan` (wtf is cyan?) words. Also, you know what they say:
 
@@ -149,7 +149,7 @@ You can create `SymfonyStyle` in simple static construction as in point 1, but w
 
 Do you have to pass the whole command there or move the `SymfonyStyle` manually?
 
-Save [the vendor-locking statics](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/) for value objects and enjoy the constructor injection. There are more lines than one because we need to register `Input` and `Output` as a service and autowire their interfaces.
+Save [the vendor-locking statics](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself) for value objects and enjoy the constructor injection. There are more lines than one because we need to register `Input` and `Output` as a service and autowire their interfaces.
 
 ```yaml
 services:

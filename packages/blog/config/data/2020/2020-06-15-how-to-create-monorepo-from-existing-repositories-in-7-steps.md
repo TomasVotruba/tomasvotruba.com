@@ -20,7 +20,7 @@ updated_message: |
     Updated Rector/ECS YAML to PHP configuration, as current standard.
 ---
 
-**Disclaimer**: are you're into git history? Read [How to Merge 15 Repositories to 1 Monorepo, Keep their Git History and add Project-Base as Well?](https://www.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3/).
+**Disclaimer**: are you're into git history? Read [How to Merge 15 Repositories to 1 Monorepo, Keep their Git History and add Project-Base as Well?](https://www.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3).
 
 In practice, keeping git history before merging **is not worth the invested time**. Why?
 
@@ -112,13 +112,13 @@ In the root directory, we only have the directory with all packages:
 
 But where is `composer.json`? We can ~~create it manually~~ use a CLI tool that does it for us - [MonorepoBuilder](https://github.com/symplify/monorepo-builder).
 
-Use [prefixed version](/blog/2019/12/02/how-to-box-symfony-app-to-phar-without-killing-yourself/) to avoid dependency conflicts with your packages.
+Use [prefixed version](/blog/2019/12/02/how-to-box-symfony-app-to-phar-without-killing-yourself) to avoid dependency conflicts with your packages.
 
 ```bash
 composer require symplify/monorepo-builder-prefixed --dev
 ```
 
-Now that we have [this power-tool for working](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command/) with monorepo, we can do:
+Now that we have [this power-tool for working](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command) with monorepo, we can do:
 
 ```bash
 vendor/bin/monorepo-builder merge
@@ -251,7 +251,7 @@ What if 2 packages require a different version of the same package?
 
 Do we apply the same approach as in step 4? **No**. Instead of the most accessible common version, we'll go with **the latest version** - `^3.0`.
 
-These numbers also tell us what the first monorepo release version will be. It has to be a [major version](https://semver.org/) because there will be BC breaks: so ^4.0.
+These numbers also tell us what the first monorepo release version will be. It has to be a [major version](https://semver.org) because there will be BC breaks: so ^4.0.
 
 <br>
 
@@ -277,7 +277,7 @@ The `replace` option tells the composer not to download anything because the `la
 
 All right, we have working `composer.json` with united versions. That was the most challenging part, so great job!
 
-No, we need to [clean configs](/cleaning-lady-checklist/) of tools that help us with daily development:
+No, we need to [clean configs](/cleaning-lady-checklist) of tools that help us with daily development:
 
 - ECS
 - PHPStan
@@ -361,7 +361,7 @@ Everything else will be more complicated than it has to, will annoy us, and demo
 
 <br>
 
-If you're serious about monorepo testing, read [How to Test Monorepo in 3 Layers](/blog/2018/11/22/how-to-test-monorepo-in-3-layers/).
+If you're serious about monorepo testing, read [How to Test Monorepo in 3 Layers](/blog/2018/11/22/how-to-test-monorepo-in-3-layers).
 
 ## Final Touches
 

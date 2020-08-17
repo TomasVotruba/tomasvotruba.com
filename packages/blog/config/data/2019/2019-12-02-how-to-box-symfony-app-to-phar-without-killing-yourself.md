@@ -56,7 +56,7 @@ Basically any `Symfony\Component\Console\Command` becomes `UniquePrefix\Symfony\
 
 ## Box + Scope Industry Standard
 
-To make it happen, we **don't need to re-invent the wheel**. There are 2 amazing tools maintained and developed by [Théo Fidry](https://github.com/theofidry/) (thank you!):
+To make it happen, we **don't need to re-invent the wheel**. There are 2 amazing tools maintained and developed by [Théo Fidry](https://github.com/theofidry) (thank you!):
 
 - [box](https://github.com/humbug/box) - a tool that creates PHAR (~= PHP zip) from an input directory
 - [php-scoper](https://github.com/humbug/php-scoper) - box *plugin* that adds namespace prefix to all the files

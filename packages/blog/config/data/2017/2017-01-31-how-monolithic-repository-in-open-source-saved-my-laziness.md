@@ -25,13 +25,13 @@ Not only Symfony, but also:
 
 - [Laravel](https://github.com/laravel/framework)
 - [Sylius](https://github.com/Sylius/Sylius)
-- [Elcodi](https://github.com/elcodi/elcodi/) - which is dead now
+- [Elcodi](https://github.com/elcodi/elcodi) - which is dead now
 
 Opposed to this is **manyrepo** approach (for many repositories), meaning every package is in his own repository.
 
 It is used by:
 
-- [Nette](https://github.com/nette/)
+- [Nette](https://github.com/nette)
 - [Doctrine](https://github.com/doctrine)
 - [PHPLeague](https://github.com/thephpleague)
 

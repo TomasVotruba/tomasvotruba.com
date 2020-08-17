@@ -2,7 +2,7 @@
 id: 233
 title: "Migrate Gedmo to KnpLabs"
 perex: |
-    With [Symfony 5 upgrade](/blog/2019/09/09/how-we-upgraded-pehapkari-cz-from-symfony-4-to-5-in-25-days/), we need any *working* Doctrine behaviors.
+    With [Symfony 5 upgrade](/blog/2019/09/09/how-we-upgraded-pehapkari-cz-from-symfony-4-to-5-in-25-days), we need any *working* Doctrine behaviors.
     <br>
     Month later, we have [KnpLabs\DoctrineBehaviors 2.0](/blog/2019/12/30/doctrine-behaviors-2-0-reloaded/#how-do-you-migrate-from-gedmo-stof-to-knplabs-doctrinebehaviors) with full Symfony 5 support.
     <br>
@@ -29,7 +29,7 @@ Pick behavior your want to migrate from Gedmo to KnpLabs:
 
 <br>
 
-If you **use other Gedmo behavior that is not listed here**, you might request or better add it to [KnpLabs](https://github.com/KnpLabs/DoctrineBehaviors/) repository via pull-request. I assure you I'll provide [stable maintenance support](/blog/2019/12/30/doctrine-behaviors-2-0-reloaded/) for KnpLabs package. It's not that hard with CI on steroids it has now.
+If you **use other Gedmo behavior that is not listed here**, you might request or better add it to [KnpLabs](https://github.com/KnpLabs/DoctrineBehaviors) repository via pull-request. I assure you I'll provide [stable maintenance support](/blog/2019/12/30/doctrine-behaviors-2-0-reloaded) for KnpLabs package. It's not that hard with CI on steroids it has now.
 
 <br>
 

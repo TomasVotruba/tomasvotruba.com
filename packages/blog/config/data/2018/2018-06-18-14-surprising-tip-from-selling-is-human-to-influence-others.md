@@ -2,7 +2,7 @@
 id: 115
 title: "14 Surprising Tips from Selling is Human to Influence Others"
 perex: |
-    Recently, I've read [Selling is Human](https://www.youtube.com/watch?v=nKrBitIQrgo&feature=youtu.be&t=290) by Daniel Pink. He's famous for [Pinkcast](https://www.danpink.com/pinkcast/) - an espresso of knowledge. I like him, because he's often right to the point, with examples, stories, and science.
+    Recently, I've read [Selling is Human](https://www.youtube.com/watch?v=nKrBitIQrgo&feature=youtu.be&t=290) by Daniel Pink. He's famous for [Pinkcast](https://www.danpink.com/pinkcast) - an espresso of knowledge. I like him, because he's often right to the point, with examples, stories, and science.
     <br><br>
     What can we learn about selling?
     Lucky for you, you don't have to read the whole book - here are the top 10 points I found very useful.
@@ -68,7 +68,7 @@ Take following quotes as list of notes you'd make by reading the whole book. Sav
 
 ## 4. Working with Feedback that Hurts
 
-I wrote [How to Deal With Haters in Comments and Github](/blog/2018/01/29/how-to-deal-with-haters-in-comments-and-github/) a while ago. And Daniel Pink shows 2 tips that can be added there right away:
+I wrote [How to Deal With Haters in Comments and Github](/blog/2018/01/29/how-to-deal-with-haters-in-comments-and-github) a while ago. And Daniel Pink shows 2 tips that can be added there right away:
 
 <blockquote class="blockquote">
     When something bad occurs, ask yourself three questions - and come up with an intelligent way to answer each one "no": 1. Is this permanent? Bad response: "Yes. I've completely lost my skill for moving others." Better response: "No. I was flat today because I haven't been getting enough sleep." 2. Is this pervasive?"

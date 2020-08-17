@@ -66,7 +66,7 @@ How can we do better?
 
 ## Narrow Scope → Increase Focus
 
-Last week [Honza](https://twitter.com/mikes_honza) showed me PHPStorm tip that fits [into instant feedback loop flow](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/) I discovered recently.
+Last week [Honza](https://twitter.com/mikes_honza) showed me PHPStorm tip that fits [into instant feedback loop flow](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress) I discovered recently.
 
 <a href="https://twitter.com/mikes_honza/status/1222557580507127811">
 <img src="/assets/images/posts/2020/external_tools_tweet.png" class="img-thumbnail">
@@ -86,7 +86,7 @@ You run **the tool only on a selected directory in the left tree**.
 
 ### Domain Directory Separation
 
-This approach requires us to keep a decoupled structure, e.g., with to [local packages](/blog/2017/12/25/composer-local-packages-for-dummies/) or domain-driven design.
+This approach requires us to keep a decoupled structure, e.g., with to [local packages](/blog/2017/12/25/composer-local-packages-for-dummies) or domain-driven design.
 
 What does it mean? That our code that handles security is not all over the place in `/src` directory but in standalone `packages/Security` directory. So if we work with security, we ~~only~~ mostly work in that directory.
 

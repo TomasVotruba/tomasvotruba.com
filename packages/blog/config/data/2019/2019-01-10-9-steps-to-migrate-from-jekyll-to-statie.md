@@ -11,7 +11,7 @@ tweet: "New Post on #php 🐘 blog: 9 Steps to Migrate from #Jekyll to #Statie"
 
 ## 1. Create Basic Statie Structure
 
-Statie 5.3 brings [new `init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/), that creates basic structure in `/source` directory, `statie.yml`, `.travis.yml` and metafiles.
+Statie 5.3 brings [new `init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie), that creates basic structure in `/source` directory, `statie.yml`, `.travis.yml` and metafiles.
 
 Before we start any moving, create a basic structure to save many copy-pasting steps:
 
@@ -100,7 +100,7 @@ To finish deploy, you need to:
 - generate Github Token
 - put it to Travis configuration of your repository
 
-How you do this? Just **follow [Statie.org documentation](https://www.statie.org/docs/github-pages/)** step by step.
+How you do this? Just **follow [Statie.org documentation](https://www.statie.org/docs/github-pages)** step by step.
 
 ## 8. Clean Metadata from Headers
 

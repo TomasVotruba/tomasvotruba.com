@@ -42,7 +42,7 @@ We tried [spatie/async](https://github.com/spatie/async) which has very nice REA
 
 ### What are the Other options?
 
-We could go [amp](https://github.com/amphp/amp) or [reactphp](https://reactphp.org/), but wouldn't that be an overkill?
+We could go [amp](https://github.com/amphp/amp) or [reactphp](https://reactphp.org), but wouldn't that be an overkill?
 
 There is also faster way like [splitsh/lite](https://github.com/splitsh/lite), but **we aim on PHP + Git combination so PHP developers could extend the code**.
 

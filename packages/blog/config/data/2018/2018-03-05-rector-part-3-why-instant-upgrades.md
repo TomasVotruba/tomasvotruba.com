@@ -9,8 +9,8 @@ todo_tweet: "New post on my blog: "
 
 *Read also:*
 
-- [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how/)
-- [Part 2 - Maturity of PHP Ecosystem and Founding Fathers](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers/)
+- [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how)
+- [Part 2 - Maturity of PHP Ecosystem and Founding Fathers](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers)
 
 <br>
 
@@ -40,7 +40,7 @@ From my experience with consulting over 50 PHP projects in last 4 years, it can 
 
 Teams don't have space to find out what changed between Symfony 2.7 and Symfony 2.8. They don't care, because their employer cares mostly about creating new website as fast and as cheap as possible. And that's logical.
 
-That's why most of [lectures](/mentoring-and-lectures/) I make is about giving teams *the knowledge* that they can use with their very limited resources to make the best out of it.
+That's why most of [lectures](/mentoring-and-lectures) I make is about giving teams *the knowledge* that they can use with their very limited resources to make the best out of it.
 
 Such approach also naturally leads to huge legacy code, team performance drop from 100 % to 20 %, which consequently leads to hiring 5x more people to keep productivity the same, more money, and pressure to faster development, which lead to huge legacy code...
 

@@ -14,7 +14,7 @@ deprecated_message: |
     This approach is very limited and creates unexpected messy behavior.
     <br>
     <br>
-    **Use [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies/) with [Symplify/MonorepoBuilder](https://github.com/symplify/monorepo-builder) instead.**
+    **Use [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies) with [Symplify/MonorepoBuilder](https://github.com/symplify/monorepo-builder) instead.**
 ---
 
 I found first [article about this topic](http://www.whitewashing.de/2015/04/11/monolithic_repositories_with_php_and_composer.html) in 2015, when Benjamin Eberlei created a tool called Fiddler. I was using similar approach in that time for a few months and I was happy I'm not alone.
@@ -49,7 +49,7 @@ Add it to `$robotLoader` (Nette) or Composer in Symfony and it works.
 
 ## 2. Create Private Packages
 
-This way is a bit pro. We used Gitlab and Satis - it took a month to set up all access rights correctly (Gitlab CI and Satis server tend to argue). It's so much pain, there is even [official paid service](https://packagist.com/) for it.
+This way is a bit pro. We used Gitlab and Satis - it took a month to set up all access rights correctly (Gitlab CI and Satis server tend to argue). It's so much pain, there is even [official paid service](https://packagist.com) for it.
 
 ### Advantages
 
@@ -72,7 +72,7 @@ This way is a bit pro. We used Gitlab and Satis - it took a month to set up all 
 
 ## 3. Publish Open-source Packages
 
-I love this most and it was great for some packages. That's how many [Zenify](https://github.com/Zenify/) Doctrine-related packages were born.
+I love this most and it was great for some packages. That's how many [Zenify](https://github.com/Zenify) Doctrine-related packages were born.
 
 ### Advantages
 

@@ -159,9 +159,9 @@ Do you like `SplFileInfo` that is 100 % sure the file exists? In that case, you 
 
 ### 6. ~~ConfigurableCollectorCompilerPass~~ → `AutowireArrayParameterCompilerPass`
 
-If you know [collectors](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code), you're using `ConfigurableCollectorCompilerPass`. It saves you so much time with configuration. The problem with that compiler pass, you still had to go to config to set it up, for no real advantage. And extra work for [no benefit sucks](/blog/2019/02/14/why-config-coding-sucks/). Also, there is big change someone will [forget it](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) and create a bug.
+If you know [collectors](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code), you're using `ConfigurableCollectorCompilerPass`. It saves you so much time with configuration. The problem with that compiler pass, you still had to go to config to set it up, for no real advantage. And extra work for [no benefit sucks](/blog/2019/02/14/why-config-coding-sucks). Also, there is big change someone will [forget it](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock) and create a bug.
 
-So instead, *Symplify 6* adds better system to pass collected services of certain type to single service - **[autowired arrays](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette/)**:
+So instead, *Symplify 6* adds better system to pass collected services of certain type to single service - **[autowired arrays](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette)**:
 
 ```diff
 <?php declare(strict_types=1);
@@ -180,7 +180,7 @@ So instead, *Symplify 6* adds better system to pass collected services of certai
 }
 ```
 
-[This post](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette/) explains how to use it without ever touching config again.
+[This post](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette) explains how to use it without ever touching config again.
 
 ## CodingStandard
 

@@ -20,7 +20,7 @@ This is native extension which exports the AST internally used by PHP 7.0+. It a
 
 ### 2. PHP AST
 
-This is AST of PHP in Object PHP. It will take your PHP code, turn into PHP object with autocomplete in IDE and **allows you to modify code**. You can find it on GitHub under [`nikic/PHP-Parser`](https://github.com/nikic/PHP-Parser/).
+This is AST of PHP in Object PHP. It will take your PHP code, turn into PHP object with autocomplete in IDE and **allows you to modify code**. You can find it on GitHub under [`nikic/PHP-Parser`](https://github.com/nikic/PHP-Parser).
 
 Nikita explains [differences between those 2 in more detailed technical way](https://github.com/nikic/php-ast#differences-to-php-parser). Personally I love [this human reason](https://github.com/nikic/PHP-Parser/blob/master/doc/0_Introduction.markdown#what-is-this-for) the most:
 
@@ -230,7 +230,7 @@ Do you want to see more advanced operations, like those we [brainstormed in the 
 
 ### This post is Tested
 
-This is the first [tested post](/blog/2019/09/16/why-software-articles-must-be-ci-tested/) I've added to my blog.
+This is the first [tested post](/blog/2019/09/16/why-software-articles-must-be-ci-tested) I've added to my blog.
  It means **it will be updated as new versions of code used here will appear** → *LTS post* that will work with newer `nikic/php-parser` versions.
 
  Do you want to see those tests? Just click *Tested* badge in the top.

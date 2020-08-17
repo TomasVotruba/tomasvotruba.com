@@ -16,7 +16,7 @@ Is there a code in your post or chapter, piece of text? It <a href="/blog/2019/0
 
 Now imagine this post would be tested, with unit tests and Travis CI that would run daily to make sure the content is still valuable in the present. The day new Symfony with BC break is released, the new version of post is published. And that works super easily for version 4, version 5, version 6...
 
-Btw, I know you can find up-to-date know-how for Symfony Forms in the documentation, but this is just an example. It could be any more complex non-documented code, like writing a [Console application with Dependency Injection](/blog/2018/05/28/build-your-first-symfony-console-application-with-dependency-injection-under-4-files/).
+Btw, I know you can find up-to-date know-how for Symfony Forms in the documentation, but this is just an example. It could be any more complex non-documented code, like writing a [Console application with Dependency Injection](/blog/2018/05/28/build-your-first-symfony-console-application-with-dependency-injection-under-4-files).
 
 ## Let People Into Your Hearth
 
@@ -30,7 +30,7 @@ Btw, I know you can find up-to-date know-how for Symfony Forms in the documentat
 If people cooperate and talk to each other, they can bring much more value and higher quality solutions.
 That's probably the reason companies have more than 1 employee, right? :)
 
-How to allow this in written content? **Simple - allow comments.** Allow them all the time, [without censorship of opposed ideas](/blog/2018/01/29/how-to-deal-with-haters-in-comments-and-github/).
+How to allow this in written content? **Simple - allow comments.** Allow them all the time, [without censorship of opposed ideas](/blog/2018/01/29/how-to-deal-with-haters-in-comments-and-github).
 
 That way people can express themselves and improve content to be:
 
@@ -100,7 +100,7 @@ You might see this as redundant work and that I'm a nerd (guilty!), but **I'm su
 
 ## The Clusters in Progress
 
-First, I started this series as to show you the idea of [clusters](/clusters/) on my site, but then it went much further beyond that.
+First, I started this series as to show you the idea of [clusters](/clusters) on my site, but then it went much further beyond that.
 
 Check the idea and feedback me, what do you think about that.
 

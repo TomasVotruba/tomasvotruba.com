@@ -15,7 +15,7 @@ deprecated_message: |
     PHPStan itself [generates the baseline since 0.11.17](https://phpstan.org/blog/phpstans-baseline-feature-lets-you-hold-new-code-to-a-higher-standard). Use it instead.
 ---
 
-I found this package by random clicking on meetups on [Friends of PHP](https://friendsofphp.org/) and reading program of the meetup. One of them was Dave with his SARB - *Static Analysis Results Baseliner* tool. What an interesting name. In the Czech, I read *SRAB*, which means *coward*... what does such tool do?
+I found this package by random clicking on meetups on [Friends of PHP](https://friendsofphp.org) and reading program of the meetup. One of them was Dave with his SARB - *Static Analysis Results Baseliner* tool. What an interesting name. In the Czech, I read *SRAB*, which means *coward*... what does such tool do?
 
 ## What Does SARB Help You With?
 
@@ -86,7 +86,7 @@ The sky is the limit :)
 
 <br>
 
-Read more about the tool in [Introduction post](https://www.daveliddament.co.uk/sarb/introduction/) and in [README](https://github.com/DaveLiddament/sarb) of the project on Github.
+Read more about the tool in [Introduction post](https://www.daveliddament.co.uk/sarb/introduction) and in [README](https://github.com/DaveLiddament/sarb) of the project on Github.
 
 Great job David!
 

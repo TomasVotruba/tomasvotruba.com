@@ -8,7 +8,7 @@ tweet: "New Post on #lazyprogrammer Blog: How I Got into Static Trap and Made Fo
 
 Today the format will be reversed - first I'll show you practical code and its journey to legacy, then theory takeaways that would save it.
 
-[Symplify\CodingStandard](https://github.com/symplify/coding-standard) contains complex Sniff and Fixers like [the doc block cleaner](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/). Job of `RemoveUselessDocBlockFixer` is clear - **remove any doc block that has no extra value over the php code itself**:
+[Symplify\CodingStandard](https://github.com/symplify/coding-standard) contains complex Sniff and Fixers like [the doc block cleaner](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer). Job of `RemoveUselessDocBlockFixer` is clear - **remove any doc block that has no extra value over the php code itself**:
 
 ```diff
  /**
@@ -296,11 +296,11 @@ And use it in code:
 
 ### 5. Keep Your Environment Clean
 
-I also admit that another code smell lead to this. In Symplify and Rector there is used [Symfony 3.3 services architecture](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) with autowiring and autodiscovery. State of art in PHP DI at the moment.
+I also admit that another code smell lead to this. In Symplify and Rector there is used [Symfony 3.3 services architecture](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3) with autowiring and autodiscovery. State of art in PHP DI at the moment.
 
 But Fixers and Checkers were exceptions. They were registered as services, **but not autowired**. So I was used to not-to add dependency to them manually, but via setters, `new` or `::static`. It eventually and logically leads to this situation.
 
-I learned something new and [migrated to full-service approach in ECS 4](/blog/2018/03/26/new-in-easy-coding-standard-4-clean-symfony-standard-with-yaml-and-services/).
+I learned something new and [migrated to full-service approach in ECS 4](/blog/2018/03/26/new-in-easy-coding-standard-4-clean-symfony-standard-with-yaml-and-services).
 
 
 ## 3 Takeaways You Should not Take Statically

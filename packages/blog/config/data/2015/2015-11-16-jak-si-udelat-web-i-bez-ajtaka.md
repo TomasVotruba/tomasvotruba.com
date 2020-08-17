@@ -10,7 +10,7 @@ deprecated_message: "This post is available only in Czech and whole website was 
 lang: cs
 ---
 
-Na [MyEagers konferenci](http://myeagers.beeager.com/) jsem se stal svědkem workshopu [Lekce svádění aneb jak to udělat online tak, aby Tě chtěli](https://www.facebook.com/events/885079758208224/permalink/896505960398937/). **Kopa šikovných hacků, které ti dají světelný náskok na tvé pracovní cestě**.
+Na [MyEagers konferenci](http://myeagers.beeager.com) jsem se stal svědkem workshopu [Lekce svádění aneb jak to udělat online tak, aby Tě chtěli](https://www.facebook.com/events/885079758208224/permalink/896505960398937). **Kopa šikovných hacků, které ti dají světelný náskok na tvé pracovní cestě**.
 
 Cílem bylo ukázat, že si i web jako `jakserodicopywriter.cz` můžeš udělat za víkend a 150 Kč.
 
@@ -47,7 +47,7 @@ Tohle využiješ, pokud...
 
 Stránky můžeš mít umístěné na Github zdarma. Github je sociální síť nejen pro ajťáky, kde můžeš sdílet zdrojový kód.
 
-1. registruj se na [Githubu](https://github.com/)
+1. registruj se na [Githubu](https://github.com)
 2. "forkni" si mé [ukázkové stránky](https://github.com/TomasVotruba/php7.cz) - tím si **základ pro vlastní stránku překopíruješ k sobě** a můžeš si ji dál upravovat, jak budeš chtít
 
     <div class="text-center">

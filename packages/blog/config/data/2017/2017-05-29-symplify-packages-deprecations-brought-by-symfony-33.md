@@ -2,7 +2,7 @@
 id: 39
 title: "Symplify packages deprecations brought by Symfony 3.3"
 perex: |
-    [Symfony 3.3 brings new Dependency Injection features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/),
+    [Symfony 3.3 brings new Dependency Injection features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3),
     that were supplemented by few of Symplify packages in Symfony 3.2 and below.
     There is no need - as [Honza Mikes](https://github.com/JanMikes) said - to *bring the wood to the forest*. So they were deprecated.
     <br><br>
@@ -34,7 +34,7 @@ Google & Facebook, USA & Russia, Symfony & Laravel or PHP & Javascript (in a way
 
 ## Swallowing My Open-Source Ego
 
-When [Symfony 3.3 introduced new Dependency Injection features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/),
+When [Symfony 3.3 introduced new Dependency Injection features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3),
 I realized they have 90% similar to feature I created my packages for.
 
 Internal dialog of my Ego and inner Zen master started:
@@ -49,8 +49,8 @@ Internal dialog of my Ego and inner Zen master started:
 **So I [asked people on Slack and Github](https://github.com/symplify/symplify/pull/162)** what they think about it. Almost everybody (my inner Zen master included)
 agreed **to drop them and let Symfony handle that**.
 
-I must say, it was much easier to decide after getting such feedback. **Thank you [Filip Prochazka](https://filip-prochazka.com/),
-[Tomas Fejfar](https://www.tomasfejfar.cz/),  [Stof](https://github.com/symplify/symplify/issues/161),
+I must say, it was much easier to decide after getting such feedback. **Thank you [Filip Prochazka](https://filip-prochazka.com),
+[Tomas Fejfar](https://www.tomasfejfar.cz),  [Stof](https://github.com/symplify/symplify/issues/161),
 [theofidry](https://github.com/symfony/symfony/pull/22234#issuecomment-297999703),
 [Jachym Tousek](https://github.com/enumag), [Jan Mikes](https://github.com/JanMikes)
 and [Javier Eguilez](https://github.com/symplify/symplify/pull/162#issuecomment-299441503)**

@@ -2,10 +2,10 @@
 id: 209
 title: "End of goPhp71.org"
 perex: |
-    I [launched goPhp71.org](/blog/2017/06/05/go-php-71/) in June 2017, just 6 months after release of PHP 7.1. In those times nobody was sure what version to require - 7.1? 7.0? Or wait for 7.2?
+    I [launched goPhp71.org](/blog/2017/06/05/go-php-71) in June 2017, just 6 months after release of PHP 7.1. In those times nobody was sure what version to require - 7.1? 7.0? Or wait for 7.2?
     <br>
     <br>
-    Future is now. There is no need for the initiative now and it's time to [let it go](https://zenhabits.net/letting-go/).
+    Future is now. There is no need for the initiative now and it's time to [let it go](https://zenhabits.net/letting-go).
     <br>
     **How much did it cost? What was the effect? Was it worth it?** I'll share answers to these question so you know what to expect when you start a similar project. Let's get numberz!
 tweet: "New Post on #php 🐘 blog: End of GoPHP71.org"
@@ -19,7 +19,7 @@ Today it's gonna about numbers, how well PHP community works together and few of
 ## How Much Did it Cost?
 
 - Domain `gophp71.org`? - 15 $ per year, 2 years = **30 $** in total
-- Hosting? **0 $** Thanks to [Github Pages hosting](https://github.com/tomasVotruba/gophp71.org) and [static site generator Statie](https://www.statie.org/)
+- Hosting? **0 $** Thanks to [Github Pages hosting](https://github.com/tomasVotruba/gophp71.org) and [static site generator Statie](https://www.statie.org)
 - And the work? I didn't Toggle it, but with all the design iterations, posts and commenting all over the internet **I'd say ~25-30 hours**. As you can guess, I'm very bad at tuning CSS for mobiles. Use your own hourly rate to have the idea in $.
 
 ## What was The Impact?
@@ -29,7 +29,7 @@ I took a while. Thanks to Jordi (thank you!), we have numbers on min. required P
 - [May 2017](https://seld.be/notes/php-versions-stats-2017-1-edition) - 1,7 %
 - [November 2017](https://seld.be/notes/php-versions-stats-2017-2-edition) - 5,3 % (+ 218 % compared to previous 6 months)
 - [May 2018](https://seld.be/notes/php-versions-stats-2018-1-edition) - 11,8 % (+ 121 %)
-- [November 2018](https://blog.packagist.com/php-versions-stats-2018-2-edition/) - 19,4 % (+ 64 %)
+- [November 2018](https://blog.packagist.com/php-versions-stats-2018-2-edition) - 19,4 % (+ 64 %)
 
 Is 19,4 % to small for you?
 
@@ -69,7 +69,7 @@ Remember this quote, we'll need it when we'll go PHP 8.1 (maybe?) later.
 
 <img src="/assets/images/posts/2019/go-php-die/most_active.png" class="img-thumbnail">
 
-Last but not the least, **[the_alias_of_andrea](https://www.reddit.com/r/PHP/comments/6xqa23/go_php_71/) helped** spread the news on Reddit 👍
+Last but not the least, **[the_alias_of_andrea](https://www.reddit.com/r/PHP/comments/6xqa23/go_php_71) helped** spread the news on Reddit 👍
 
 <img src="/assets/images/posts/2019/go-php-die/reddit.png">
 
@@ -110,7 +110,7 @@ That's all folks, hope you enjoyed it! I sure did start almost 24 months ago wit
 
 ## What's Going to be Next?
 
-Will we "Go PHP 8"? Someone from Arizona, US [already bought the `gophp8.org` domain](https://gophp8.org/).
+Will we "Go PHP 8"? Someone from Arizona, US [already bought the `gophp8.org` domain](https://gophp8.org).
 Or 8.1, when 8 becomes more mature?
 
 Who knows. All I know **I'm very happy to be part of our PHP ~~community~~ family ❤️️, where we support each other despite our differences and work together when we need to**.

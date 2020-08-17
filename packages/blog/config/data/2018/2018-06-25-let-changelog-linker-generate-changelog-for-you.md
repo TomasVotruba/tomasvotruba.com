@@ -3,7 +3,7 @@ id: 117
 title: "Let Changelog Linker Generate CHANGELOG.md for You"
 perex: |
     Do you have an open-source project on Github? Do you want your users to know about new features and changes without you writing posts about it?
-    Do you [keep a changelog](https://keepachangelog.com/en/1.0.0/)? Do you struggle with keeping it up-to-date and descriptive and with all the links to all merged pull-requests?
+    Do you [keep a changelog](https://keepachangelog.com/en/1.0.0)? Do you struggle with keeping it up-to-date and descriptive and with all the links to all merged pull-requests?
     <br>
     <br>
     Yes? Then you'll love *Changelog Linker*. A PHP CLI tool that does all this boring work for you.
@@ -13,7 +13,7 @@ tweet_image: "/assets/images/posts/2018/generate-changelog/tweet.png"
 
 Changelogs have many forms.
 
-From standard [keepachangelog.com](https://keepachangelog.com/en/1.0.0/) with *Added*, *Changed*, *Fixed* and *Removed*:
+From standard [keepachangelog.com](https://keepachangelog.com/en/1.0.0) with *Added*, *Changed*, *Fixed* and *Removed*:
 
 <img src="/assets/images/posts/2018/generate-changelog/keepachangelog.png" class="img-thumbnail">
 
@@ -27,7 +27,7 @@ Over [PHPStan Release notes](https://github.com/phpstan/phpstan/releases/tag/0.1
 
 ## Why is Every Changelog Different?
 
-There is a standard recommendation in [keepachangelog.com](https://keepachangelog.com/en/1.0.0/), so it can all be the same, right?
+There is a standard recommendation in [keepachangelog.com](https://keepachangelog.com/en/1.0.0), so it can all be the same, right?
 I think it's because **there is no easy way to generate such changelog**. And by easy I mean automated = 1 click solution. And we don't even talk about [monorepo](/clusters/#monorepo-from-zero-to-hero) changelog yet.
 
 When I looked on Github [for inspiration](https://github.com/symplify/symplify/issues/841), I found only [github-changelog-generator](https://github.com/github-changelog-generator/github-changelog-generator) - that has over 4600 stars on Github. Yet, it still doesn't work with *Added*, *Changed* etc. categories and requires labeling issues and pull-requests and adding milestones. **I wanted to save time, not to add extra work.**
@@ -206,7 +206,7 @@ composer changelog
 
 ...and the `CHANGELOG.md` file is updated. Pretty cool, huh?
 
-Find more about Composer scripts in *[Have you tried Composer Scripts? You may not need Phing](https://blog.martinhujer.cz/have-you-tried-composer-scripts/)* post by amazing Martin Hujer.
+Find more about Composer scripts in *[Have you tried Composer Scripts? You may not need Phing](https://blog.martinhujer.cz/have-you-tried-composer-scripts)* post by amazing Martin Hujer.
 
 <br>
 

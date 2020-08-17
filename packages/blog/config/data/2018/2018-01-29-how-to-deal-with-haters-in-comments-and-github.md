@@ -7,11 +7,11 @@ tweet: "New post on my blog: How to Deal With #Haters in Comments and #Github #c
 tweet_image: "/assets/images/posts/2017/feedback/feedback.jpg"
 ---
 
-I learned this process while being a maintainer of [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death/) for 1 year and then 6 months again, where I got to dozens of online-hate-wars and found that it leads nowhere.
+I learned this process while being a maintainer of [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death) for 1 year and then 6 months again, where I got to dozens of online-hate-wars and found that it leads nowhere.
 
 <img src="/assets/images/posts/2018/haters-in-comments/hearth-mind.jpg" class="img-thumbnail">
 
-Then I tried another way - a **[compassion](https://zenhabits.net/compassion/).**
+Then I tried another way - a **[compassion](https://zenhabits.net/compassion).**
 
 We could sum it up in 4 steps:
 
@@ -49,7 +49,7 @@ But in the most cases **the reaction to such question is more constructive than 
 
 ## 3. Is it Worth it? Iterate
 
-Baby steps. I do not expect that I get [sandwich feedback](http://www.rightattitudes.com/2008/02/20/sandwich-feedback-technique/) to my first answer - after all, it took me year to get from *that's wrong* to useful and well-accepted feedback.
+Baby steps. I do not expect that I get [sandwich feedback](http://www.rightattitudes.com/2008/02/20/sandwich-feedback-technique) to my first answer - after all, it took me year to get from *that's wrong* to useful and well-accepted feedback.
 
 Sometimes it takes time, sometimes I regress and mirror anger back, but I try to remember the first point - **process emotion**. When it doesn't work, I just stop and focus somewhere else.
 
@@ -57,7 +57,7 @@ Sometimes it takes time, sometimes I regress and mirror anger back, but I try to
 
 ## 4. Is it too much? Let it go
 
-It is possible, that there is no useful information at all. In that case, [let it](https://www.youtube.com/watch?v=L0MK7qz13bU) [go](https://zenhabits.net/past/). You can leave in silence...
+It is possible, that there is no useful information at all. In that case, [let it](https://www.youtube.com/watch?v=L0MK7qz13bU) [go](https://zenhabits.net/past). You can leave in silence...
 
 ...**but how useful is silence to you, when you don't understand something**?
 

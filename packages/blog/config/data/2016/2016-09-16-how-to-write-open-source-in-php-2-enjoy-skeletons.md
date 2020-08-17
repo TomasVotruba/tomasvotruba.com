@@ -22,7 +22,7 @@ I will let you think about them a little bit. We will relate with specific files
 
 ## Use solid skeleton → start solid brand
 
-Now, the first step that can positively influence all the 4 answers is **using a skeleton** with prepared metadata files. Guys from [The PHP League](https://thephpleague.com/) already did the job for you and created a [skeleton](https://github.com/thephpleague/skeleton) package.
+Now, the first step that can positively influence all the 4 answers is **using a skeleton** with prepared metadata files. Guys from [The PHP League](https://thephpleague.com) already did the job for you and created a [skeleton](https://github.com/thephpleague/skeleton) package.
 
 
 ## How to get skeleton code to your local repository in 4 steps
@@ -117,7 +117,7 @@ Just to remind you, the end user is interested in:
 
 *Meaning*
 
-- configuration for [Scrutinizer](https://scrutinizer-ci.com/) - code quality and code coverage tool
+- configuration for [Scrutinizer](https://scrutinizer-ci.com) - code quality and code coverage tool
 - to enable it, [login](https://scrutinizer-ci.com/login) and new repository
     - I recommend you to login in via Github, since it adds hooks to your repository
 - it would be triggered every time your commit to master or create a PR
@@ -140,7 +140,7 @@ Just to remind you, the end user is interested in:
 
 *Meaning*
 
-- configuration for [Travis](https://travis-ci.org/) - continuous integration tool for tests
+- configuration for [Travis](https://travis-ci.org) - continuous integration tool for tests
 - to enable it, go register there and add the repository
 
 *Profit*
@@ -150,12 +150,12 @@ Just to remind you, the end user is interested in:
 ### `composer.json`
 
 - list of dependencies
-- also configuration for [Packagist](https://packagist.org/), where you need to add your package, so it can be installed by others
+- also configuration for [Packagist](https://packagist.org), where you need to add your package, so it can be installed by others
 - to enable it, you have to:
     - go there
     - add repository
     - go to settings of package, **Integration and services** and **Add Service**
-    - select "Packagist" and add your name and token from your [user profile](https://packagist.org/profile/)
+    - select "Packagist" and add your name and token from your [user profile](https://packagist.org/profile)
 
 ### `LICENSE`
 
@@ -173,7 +173,7 @@ Just to remind you, the end user is interested in:
 
 *Meaning*
 
-- configuration for [PHPUnit](https://phpunit.de/) - testing tool
+- configuration for [PHPUnit](https://phpunit.de) - testing tool
 - this can be used either by end user or Travis
 
 *Profit*

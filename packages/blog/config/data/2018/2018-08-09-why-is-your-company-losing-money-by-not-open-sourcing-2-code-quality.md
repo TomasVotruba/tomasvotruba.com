@@ -2,7 +2,7 @@
 id: 130
 title: "Why is Your Company Losing Money By Not Open Sourcing 2: Code Quality"
 perex: |
-    There is more high-quality code in open-source than in closed-source. Open-source code is rarely rewritten from the scratch investing loads of time and effort - [apart 1st version because it's designed to be dropped](https://blog.codinghorror.com/version-1-sucks-but-ship-it-anyway/). This case is not so rare in the private sector in long-term projects.
+    There is more high-quality code in open-source than in closed-source. Open-source code is rarely rewritten from the scratch investing loads of time and effort - [apart 1st version because it's designed to be dropped](https://blog.codinghorror.com/version-1-sucks-but-ship-it-anyway). This case is not so rare in the private sector in long-term projects.
     <br><br>
     **Rubber ducking. Standard-bias of public behavior. Social learning. Embodied know-how.** Values natural for open-source, yet seen only in high-standard private coding. Why is that? And **how to make your project benefit from these values**?
 tweet: "New Post on my Blog: Why is Your Company Losing Money By Not Open Sourcing 2: Code Quality #symfony #nakedman #rubberducking #psr #fig #github #free"
@@ -46,7 +46,7 @@ By choosing a framework that is not much adopted or doesn't respect standard, **
 
 ### Frameworks Teach Bad Practises
 
-I hear you: "but most PHP frameworks teach people bad practice just to vendor lock them". I [agree](https://matthiasnoback.nl/2014/10/unnecessary-contrapositions-in-the-new-symfony-best-practices/). **But it's still easier to learn what works and what doesn't from standard frameworks. Why? The amount of paths to create a website is limited, so is the scope we have to orientate. Compared to plain PHP where you can use zillion ways to create a website.**
+I hear you: "but most PHP frameworks teach people bad practice just to vendor lock them". I [agree](https://matthiasnoback.nl/2014/10/unnecessary-contrapositions-in-the-new-symfony-best-practices). **But it's still easier to learn what works and what doesn't from standard frameworks. Why? The amount of paths to create a website is limited, so is the scope we have to orientate. Compared to plain PHP where you can use zillion ways to create a website.**
 
 It's like having parents - they bring you something good and something bad. Yet it's still better to learn from them than from no parents at all.
 
@@ -64,7 +64,7 @@ Instead, you can go vice-versa. Drop Jenkins, private Github, private Travis and
 
 ### All About the Money
 
-A reminder this is not solely about the money. You can save money for private Github and Travis just by migrating to private Gitlab that you can even host. Many friends and projects of I know work this way. But the benefit I talk about works the best in one wave with all other benefits, like embodied know-how, mentoring from experts and [open-source hiring](/blog/2018/07/26/why-is-your-company-losing-money-by-not-open-sourcing-1-hiring/).
+A reminder this is not solely about the money. You can save money for private Github and Travis just by migrating to private Gitlab that you can even host. Many friends and projects of I know work this way. But the benefit I talk about works the best in one wave with all other benefits, like embodied know-how, mentoring from experts and [open-source hiring](/blog/2018/07/26/why-is-your-company-losing-money-by-not-open-sourcing-1-hiring).
 
 ## 3. How to Pay Top PHP Mentors 0 $
 
@@ -106,13 +106,13 @@ Such programmers will give you contributions for free. They'll talk with you for
 
 By open-sourcing, you also say: "Do we have a bug? Come and fix it, please". One example for all:
 
-I was using [Naucmese.cz](http://naucmese.cz/) a lecture from anyone to anyone portal about 5 years ago. I found a bug. 2 bugs. After the 3rd bug, I wrote them "just open-source the project and I'll fix it for free". I was frustrated by those bugs that **I'd be happy to invest 30 minutes of my free time to fix them and make using the application much nicer experience**. If that project would be open-sourced, they'd get 2-3 hours per week of my work for free in that time. Instead, they hired me but that's another story.
+I was using [Naucmese.cz](http://naucmese.cz) a lecture from anyone to anyone portal about 5 years ago. I found a bug. 2 bugs. After the 3rd bug, I wrote them "just open-source the project and I'll fix it for free". I was frustrated by those bugs that **I'd be happy to invest 30 minutes of my free time to fix them and make using the application much nicer experience**. If that project would be open-sourced, they'd get 2-3 hours per week of my work for free in that time. Instead, they hired me but that's another story.
 
 My approach still stands for other projects, just write me about freshly open-sourced code and I'd be happy to be your first contributor on GitHub.
 
 ## 4. The Coding Naked Man
 
-Do you know [rubber ducking](https://blog.codinghorror.com/rubber-duck-problem-solving/)? In short: **it's way of working with an invisible second person next to you that increases the quality of code you produce**.
+Do you know [rubber ducking](https://blog.codinghorror.com/rubber-duck-problem-solving)? In short: **it's way of working with an invisible second person next to you that increases the quality of code you produce**.
 
 I've experienced this myself in many layers:
 
@@ -137,7 +137,7 @@ On the other hand, when I code-review private projects on such code smells, I ge
 
 But when I ask more, I see they have no deeper idea why. They only know the 1 reason to write bad code even if they really don't have to. **It's like a candy you steal but nobody knows about it**. Nobody else will ever see this code, and if they'll do, you'd be already in that another company.
 
-And it's super difficult to think open while being closed. But by having code open-source, you'll adopt this mindset by natural in just a few months. After years, I can now feel if I'm hacking something the wrong way [that will hunt me down 2 years later](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/) or if the code really can't be better.
+And it's super difficult to think open while being closed. But by having code open-source, you'll adopt this mindset by natural in just a few months. After years, I can now feel if I'm hacking something the wrong way [that will hunt me down 2 years later](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself) or if the code really can't be better.
 
 
 <br><br>

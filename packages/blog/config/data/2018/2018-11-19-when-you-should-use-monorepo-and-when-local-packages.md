@@ -10,7 +10,7 @@ tweet: "New Post on My Blog: When You Should Use #Monorepo and When Local Packag
 
 There are already [6 posts](/clusters/#monorepo-from-zero-to-hero) about why is monorepo so good in dealing with complexity. So if you hear about it the first time or still don't believe it might help you, go check those.
 
-Today we'll not focus on open-source projects, but **rather on your private code**. All from point of **timing and transition**. Let me show you the architecture that [Lekarna.cz](https://www.lekarna.cz/) uses to this day and how did we get there despite very chaotic start.
+Today we'll not focus on open-source projects, but **rather on your private code**. All from point of **timing and transition**. Let me show you the architecture that [Lekarna.cz](https://www.lekarna.cz) uses to this day and how did we get there despite very chaotic start.
 
 ### 1. Monolith
 
@@ -30,7 +30,7 @@ In every PR more energy and attention was invested in the maintenance of there m
 
 ### 3. Local Packages
 
-We realized, we needed the code to be at one place **and** keep it as separate as possible. In 2014 it didn't have a name, but I came with an idea to create a `/packages` directory in our main repository and *pretend* we have repositories there. *Treat it like* one day it might be decoupled to own repository, with own dependencies and own tests. Few years later it became known as [local packages](/blog/2017/12/25/composer-local-packages-for-dummies/).
+We realized, we needed the code to be at one place **and** keep it as separate as possible. In 2014 it didn't have a name, but I came with an idea to create a `/packages` directory in our main repository and *pretend* we have repositories there. *Treat it like* one day it might be decoupled to own repository, with own dependencies and own tests. Few years later it became known as [local packages](/blog/2017/12/25/composer-local-packages-for-dummies).
 
 This lead new programmers to focus deeply on a single part of huge codebase at a time and also make changes the easiest way possible. **We didn't have to explain them anything**, the knowledge was embodied in the code. This is a **golden pattern you look for** in any part of business or life - you just give people smartphone and they *intuitively know* what to do.
 
@@ -70,7 +70,7 @@ You just feel it. It's not an easy skill to build but **the more and more you de
 
 I was asked this question at [Developer Day 2018](https://www.hubbr.cz/udalosti/events/developer-day-2018) (amazing event by amazing brothers duo). To answer completely: if I were you, I'd **start every project with local packages by default**. You never ever have to jump to monorepo nor open-source, but you make any future possible transition very cheap. Very!
 
-All it costs you is to learn what local packages are how to work with them. Too busy to learn? Just [give me a call](/contact/) and I'll explain it to you.
+All it costs you is to learn what local packages are how to work with them. Too busy to learn? Just [give me a call](/contact) and I'll explain it to you.
 
 Because one day, you might see one of obvious **reasons to go monorepo**:
 

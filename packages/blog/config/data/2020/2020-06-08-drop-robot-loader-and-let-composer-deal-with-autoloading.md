@@ -21,7 +21,7 @@ RobotLoader was a very useful tool in times before Composer, because **there wer
 
 Also, when people could not agree upon where to put their classes, how to name them, whether use or don't use namespace and how many classes to put in one file, we can say **this tool saved a lot of argument-hours**.
 
-After many discussions, followed by the first standard, [PSR-0](http://www.php-fig.org/psr/psr-0/), people agreed upon [PSR-4](http://www.php-fig.org/psr/psr-4/), a more mature replacement of PSR-0.
+After many discussions, followed by the first standard, [PSR-0](http://www.php-fig.org/psr/psr-0), people agreed upon [PSR-4](http://www.php-fig.org/psr/psr-4), a more mature replacement of PSR-0.
 
 ## Why it's not Anymore
 

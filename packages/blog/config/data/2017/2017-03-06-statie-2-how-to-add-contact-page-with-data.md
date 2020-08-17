@@ -6,7 +6,7 @@ perex: |
 
 deprecated_since: "January 2019"
 deprecated_message: |
-    This post was moved to [statie.org](https://www.statie.org/). Also, **it's better to [use `vendor/bin/statie init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/) now**.
+    This post was moved to [statie.org](https://www.statie.org). Also, **it's better to [use `vendor/bin/statie init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie) now**.
 
 updated_since: "September 2018"
 updated_message: |

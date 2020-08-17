@@ -2,7 +2,7 @@
 id: 93
 title: "4 Tips To Get Emotions to Your Blogging About Programming"
 perex: |
-    Last week I wrote about [top 5 bloghacks](/blog/2018/04/12/the-best-5-of-256-bloghacks-book/) I found in this book.
+    Last week I wrote about [top 5 bloghacks](/blog/2018/04/12/the-best-5-of-256-bloghacks-book) I found in this book.
     <br>
     Today I'll share with you **5 tips that proven useful during my programming/self-education career**.
 tweet: "New Post on My Blog: 4 Tips To Get Emotions to Your Blogging About Programming #empathy #symfony #passion"
@@ -32,11 +32,11 @@ And it's not only for writing itself but also for preparation. **You can put als
 
 I got inspired by [Ocramius' blog issues](https://github.com/Ocramius/ocramius.github.com/issues), where is over 20 ideas now. I tried the same approach - add every idea I have. I end up having 30+ great ideas and **with [choice paralysis](https://www.hanselman.com/blog/AnalysisParalysisOverthinkingAndKnowingTooMuchToJustCODE.aspx) every time I wanted to blog**.
 
-Then I remembered the healing effect of minimalism on [open-source mental health](https://mikemcquaid.com/2018/03/19/open-source-maintainers-owe-you-nothing/) and **set myself a limit of 10 ideas maximum**. I still drop ideas here and there and from time to time check the count. **If it's > 10, I pick top 10 and delete the rest - ruthlessly.**
+Then I remembered the healing effect of minimalism on [open-source mental health](https://mikemcquaid.com/2018/03/19/open-source-maintainers-owe-you-nothing) and **set myself a limit of 10 ideas maximum**. I still drop ideas here and there and from time to time check the count. **If it's > 10, I pick top 10 and delete the rest - ruthlessly.**
 
 ## 2. Write About Pain Points You Meet
 
-**Every one of us has a passion for something**. It might be quiet due to [school silence treatment](/blog/2018/03/22/how-teaching-suicides-itself-by-killing-the-passion/), it might be unclear to see and maybe you think about yourself, that you have nothing to extra to add to this world that hasn't been added yet. You're probably wrong.
+**Every one of us has a passion for something**. It might be quiet due to [school silence treatment](/blog/2018/03/22/how-teaching-suicides-itself-by-killing-the-passion), it might be unclear to see and maybe you think about yourself, that you have nothing to extra to add to this world that hasn't been added yet. You're probably wrong.
 
 **If you're a programmer, you have a passion for some pattern, or framework, of the way you create your code. It might be clean code, it might be Laravel, it might be a passion for this new package or complex algorithm.**
 
@@ -71,14 +71,14 @@ This quote gets truer every year I get older.
 
 Such an expression of random gratitude will shine in the world of social networks. For inspiration:
 
-- [Thank You David](/blog/2017/06/01/thank-you-david/)
+- [Thank You David](/blog/2017/06/01/thank-you-david)
 
 - [Kolik lidí je potřeba k vytvoření jedné komunity?
-](/blog/2016/03/03/kolik-lidi-je-potreba-k-vytvoreni-jedne-komunity/) (in Czech)
+](/blog/2016/03/03/kolik-lidi-je-potreba-k-vytvoreni-jedne-komunity) (in Czech)
 
 Or just start slowly:
 
-- Be nice about concurrency package - [Symplify packages deprecations brought by Symfony 3.3](/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33/)
+- Be nice about concurrency package - [Symplify packages deprecations brought by Symfony 3.3](/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33)
 
 - Say "thank you" [to a friend who lend you a book](/blog/2018/04/12/the-best-5-of-256-bloghacks-book/#4-put-a-search-on-website) you review. And [again to another friend](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#steal-like-and-artist-by-austing-kleon).
 

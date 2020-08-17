@@ -9,8 +9,8 @@ tweet: "New Post on My Blog: The Best 5 of 256 Bloghacks Book"
 tweet_image: "/assets/images/posts/2018/bloghacks/book.png"
 ---
 
-I came across this book [in the review by Vojta Růžička](https://www.vojtechruzicka.com/book-review-256-bloghacks) on [devblogy.cz](http://devblogy.tk/) (the best place to follow Czech it bloggers by [kaja47](https://twitter.com/kaja47) whom I'm very thankful for it). You might know [Yegor](http://www.yegor256.com/) from Java world or from
-**[Software Quality Award](http://www.yegor256.com/award.html) he organizes for open-source projects** every year. [A friend of mine](https://arkadiuszkondas.com/) won the award with *the* machine learning package in PHP - [php-ai/php-ml](https://github.com/php-ai/php-ml#awards) - last year.
+I came across this book [in the review by Vojta Růžička](https://www.vojtechruzicka.com/book-review-256-bloghacks) on [devblogy.cz](http://devblogy.tk) (the best place to follow Czech it bloggers by [kaja47](https://twitter.com/kaja47) whom I'm very thankful for it). You might know [Yegor](http://www.yegor256.com) from Java world or from
+**[Software Quality Award](http://www.yegor256.com/award.html) he organizes for open-source projects** every year. [A friend of mine](https://arkadiuszkondas.com) won the award with *the* machine learning package in PHP - [php-ai/php-ml](https://github.com/php-ai/php-ml#awards) - last year.
 
 
 
@@ -21,7 +21,7 @@ Vojta was so kind to lend me the book over the lunch. This post is an answer to 
 
 ## 1. Blog Once a Week for 2 Years
 
-When I posted [my first post in late 2015](/blog/2015/11/02/ovladni-doctrine-migrace-v-nette/) and it had 24 comments and I was very happy my knowledge is worth talking about. When I posted the next one and had no responses. I was frustrated and felt hopeless and as a just not good enough writer. So I stopped blogging for a few months.
+When I posted [my first post in late 2015](/blog/2015/11/02/ovladni-doctrine-migrace-v-nette) and it had 24 comments and I was very happy my knowledge is worth talking about. When I posted the next one and had no responses. I was frustrated and felt hopeless and as a just not good enough writer. So I stopped blogging for a few months.
 
 I see now that it was a mistake, so the first tip is **to blog once a week**. Life is trying to tell me over and over again, that [Consistency Beats Talent, Luck, Good Intentions, and Even Quality](https://medium.com/@anthony_moore/consistency-beats-talent-luck-good-intentions-and-even-quality-66ba255aa4f7).
 
@@ -35,7 +35,7 @@ But not more often. I tried to blog 2x a week, right from the start and got burn
 
 ## 2. Be Active on Reddit
 
-[Reddit](https://www.reddit.com/r/PHP/) is like StackOverflow for personal opinions or like Devel.cz, but international and for everyone. It's a place, where people share ideas, comment it, up-vote it or down-vote it.
+[Reddit](https://www.reddit.com/r/PHP) is like StackOverflow for personal opinions or like Devel.cz, but international and for everyone. It's a place, where people share ideas, comment it, up-vote it or down-vote it.
 
 Vojta shared with me his first experience with Reddit: he posted 2-3 his posts and he got autoban. That **kind of ban, when you don't know you're banned** - everything works, there're up-votes on your posts, but they're all in grey. Also, Yegor wrote about the similar experience. My experience was a little better: I could post only once 10 minutes. Then I learned I could post more often when I got more profile points (up-votes of my ideas and posts).
 
@@ -53,9 +53,9 @@ And this could be at any other community, whether you like Twitter, Facebook, Sl
 
 ## 3. Use Static Website Generator
 
-This blog runs on [Statie](http://statie.org/) and [is fully open-sourced on Github](https://github.com/tomasvotruba/tomasvotruba.com) (found a *tyop* here? just edit this file and send a PR - there is a link right at the top right of this post).
+This blog runs on [Statie](http://statie.org) and [is fully open-sourced on Github](https://github.com/tomasvotruba/tomasvotruba.com) (found a *tyop* here? just edit this file and send a PR - there is a link right at the top right of this post).
 
-I love open-source and did this right from the start, but it feels so important to me that I mention this tip again. Also, I had a meeting with Vojta and he told me [how he migrated from Wordpress to GatsbyJS](https://www.vojtechruzicka.com/gatsby-migration/) (ReactJS-based static generator) and how he loves it.
+I love open-source and did this right from the start, but it feels so important to me that I mention this tip again. Also, I had a meeting with Vojta and he told me [how he migrated from Wordpress to GatsbyJS](https://www.vojtechruzicka.com/gatsby-migration) (ReactJS-based static generator) and how he loves it.
 
 Static websites are fast, simple, easy for your fan/critics-base to work with and most importantly - open. No secrets, copy anything you like.
 
@@ -73,7 +73,7 @@ Thanks to Yegor and Vojta I finally [added Google Search](https://github.com/Tom
 
 I'm sorry to all that felt frustrated when looking for any valuable content post by post, manually.
 
-In case you'd like to try Algolia and [simple DocSearch](https://community.algolia.com/docsearch/) that Roman [added to Statie](https://github.com/crazko/statie-web/commit/6c218b5d06666a098341960129617441c7cf8acb) and works very well for Statie-based website on Markdown... I tried it for you and was rejected because "blog is not a documentation".
+In case you'd like to try Algolia and [simple DocSearch](https://community.algolia.com/docsearch) that Roman [added to Statie](https://github.com/crazko/statie-web/commit/6c218b5d06666a098341960129617441c7cf8acb) and works very well for Statie-based website on Markdown... I tried it for you and was rejected because "blog is not a documentation".
 
 <div class="card mb-5">
     <div class="card-body">
@@ -89,11 +89,11 @@ Did you provide a great answer on StackOverflow? Is that answer to duplicated an
 
 - Question: [Symfony 3 - Outsourcing Controller Code into Service Layer
 ](https://stackoverflow.com/questions/38346281/symfony-3-outsourcing-controller-code-into-service-layer/38349271#38349271)
-- Post: [How to use Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/)
+- Post: [How to use Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony)
 
 - Question: [How do I read from parameters.yml in a controller in symfony2?
 ](https://stackoverflow.com/questions/13901256/how-do-i-read-from-parameters-yml-in-a-controller-in-symfony2/48371606#48371606)
-- Post: [How to Get Parameter in Symfony Controller the Clean Way](/blog/2018/01/22/how-to-get-parameter-in-symfony-controller-the-clean-way/)
+- Post: [How to Get Parameter in Symfony Controller the Clean Way](/blog/2018/01/22/how-to-get-parameter-in-symfony-controller-the-clean-way)
 
 And it works great! Now all I do is to **provide a specific answer on the StackOverflow and link the post where I explain all possible pitfalls**. So the question is answered and there is a follow-up, when they need to know more.
 
@@ -105,7 +105,7 @@ And it works great! Now all I do is to **provide a specific answer on the StackO
 
 ### Are 5 Tips not Enough for You?
 
-Well, if you're from Prague, reach out [Vojta](https://www.vojtechruzicka.com/) and ask him about the book. He's very open-minded person and eats lunch every day.
+Well, if you're from Prague, reach out [Vojta](https://www.vojtechruzicka.com) and ask him about the book. He's very open-minded person and eats lunch every day.
 
 <br>
 

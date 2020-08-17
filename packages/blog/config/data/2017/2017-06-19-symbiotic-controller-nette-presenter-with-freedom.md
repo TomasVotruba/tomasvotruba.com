@@ -18,7 +18,7 @@ deprecated_message: |
 
 ## 3 Misconceptions First
 
-When I talked about [single action or rather invokable presenters in Nette](https://www.facebook.com/pehapkari/videos/1285464581503349/) on 87. Posobota meetup in Prague, **people were talking about 3 missconceptions**. I'd like clarify them first.
+When I talked about [single action or rather invokable presenters in Nette](https://www.facebook.com/pehapkari/videos/1285464581503349) on 87. Posobota meetup in Prague, **people were talking about 3 missconceptions**. I'd like clarify them first.
 
 ### 1. Nette needs `IPresenter`
 
@@ -67,11 +67,11 @@ Also, **using an interface would only create a new dependency** for something th
 
 **Why Decouple Controller From Framework?**
 
-If you look for reasons to decouple from framework, read [this 3 parts series: Framework Independent Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller/) by [Matthias Noback](https://matthiasnoback.nl) about independent controllers in Symfony.
+If you look for reasons to decouple from framework, read [this 3 parts series: Framework Independent Controllers](https://php-and-symfony.matthiasnoback.nl/tags/controller) by [Matthias Noback](https://matthiasnoback.nl) about independent controllers in Symfony.
 
 **Why are Single Action Presenters Great for Growing Projects?**
 
-Similar [package and post](https://dunglas.fr/2016/01/dunglasactionbundle-symfony-controllers-redesigned/) was made by Kevin Dunglas exactly 1,5 year ago. You'll find your answers there.
+Similar [package and post](https://dunglas.fr/2016/01/dunglasactionbundle-symfony-controllers-redesigned) was made by Kevin Dunglas exactly 1,5 year ago. You'll find your answers there.
 
 No more questions, right to the code.
 

@@ -5,7 +5,7 @@ perex: |
     Do you test your projects with automated tests? If not, would you like to start?
     Do you work with application, integration, functional, unit, and Selenium layers and drive you crazy? Do you spend more time writing tests than the actual code behind them?
     <br><br>
-    I want my **tests to be simple, effective, and fun to write and maintain**. Today, we look at one approach used by [PHP itself](https://github.com/php/php-src/), `nikic/php-parser`. It's so good I'm surprised not everyone is using it.
+    I want my **tests to be simple, effective, and fun to write and maintain**. Today, we look at one approach used by [PHP itself](https://github.com/php/php-src), `nikic/php-parser`. It's so good I'm surprised not everyone is using it.
 
 tweet: "New Post on #php 🐘 blog: The most Effective Test I found in 7 years of Testing"
 ---
@@ -18,7 +18,7 @@ How would the situation change if you'd build houses as a developer (the buildin
 
 <br>
 
-The first case of building one house for a year - you only work on 1 PHP project at once. It's only **natural to try-out all the testing layers** you can Google. There are a couple of tests that test the product checkout process, a couple of integration tests to check the component is rendered correctly, [mocking](/blog/2018/06/11/how-to-turn-mocks-from-nightmare-to-solid-kiss-tests/) to "decouple" one part from another.
+The first case of building one house for a year - you only work on 1 PHP project at once. It's only **natural to try-out all the testing layers** you can Google. There are a couple of tests that test the product checkout process, a couple of integration tests to check the component is rendered correctly, [mocking](/blog/2018/06/11/how-to-turn-mocks-from-nightmare-to-solid-kiss-tests) to "decouple" one part from another.
 
 Every month I work with ~5 private projects, and I maintain [35 open-sources packages](https://packagist.org/profile/?page=3). I used to have very complicated tests for all possible application parts, but that turned out to take more time to maintain to develop, and it **slowed down my productivity brutally the more tests I had**.
 
@@ -63,7 +63,7 @@ The 1st line is just a description, useful for a more complicated case.
 
 It's like a smartphone or door handle in testing.
 
-This kind of testing gives you confidence, and that's by far the most important feeling that [builds senior code bases](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases/).
+This kind of testing gives you confidence, and that's by far the most important feeling that [builds senior code bases](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases).
 
 ## Domain Driven Testing
 

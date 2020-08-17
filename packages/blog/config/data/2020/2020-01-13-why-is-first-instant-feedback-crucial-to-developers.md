@@ -29,7 +29,7 @@ Do you know [TTFB](https://en.wikipedia.org/wiki/Time_to_first_byte) - *time to 
 
 There could be **TTFF** for pull-request: *time to first feedback*.
 
-In my experience, when someone creates a PR to an open-source, **they have carefully made time for it**. In today's [attention economy](https://www.calnewport.com/blog/2017/11/30/on-the-complicated-economics-of-attention-capital/), its the most expensive resource people have.
+In my experience, when someone creates a PR to an open-source, **they have carefully made time for it**. In today's [attention economy](https://www.calnewport.com/blog/2017/11/30/on-the-complicated-economics-of-attention-capital), its the most expensive resource people have.
 
 ## Example: How an Hour for Open-Source is used?
 
@@ -60,7 +60,7 @@ That's **65 % percent time wasted**.
 
 This makes me want to throw the computer out of the window, procrastinate, check my messages or another shallow work that ruins all my focus.
 
-**True story**, this was the situation for CI in Rector in 2019. It was soo frustrating. And I don't talk about [code coverage with Xdebug that took us 33 minutes](/blog/2019/09/02/how-to-speedup-test-coverage-on-travis-by-95-percent/).
+**True story**, this was the situation for CI in Rector in 2019. It was soo frustrating. And I don't talk about [code coverage with Xdebug that took us 33 minutes](/blog/2019/09/02/how-to-speedup-test-coverage-on-travis-by-95-percent).
 
 <br>
 

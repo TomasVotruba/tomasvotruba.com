@@ -26,7 +26,7 @@ Prepare for deep darkness, (almost) burning out and... team work that helped me 
 
 ## Step 1: Bump to PHP 7.1
 
-I love PHP 7.1 and I use it everywhere since its release in 2016. This year [more and more big projects are migrating](/blog/2017/06/05/go-php-71/), yet this is still low % of all packages.
+I love PHP 7.1 and I use it everywhere since its release in 2016. This year [more and more big projects are migrating](/blog/2017/06/05/go-php-71), yet this is still low % of all packages.
 
 So my condition was to [bump minimal requirement to PHP 7.1](https://github.com/ApiGen/ApiGen/issues/779#issuecomment-285960383). Current maintainers agreed, so I had green on. Thank you [Alexander Jank](https://github.com/jankal) for your support in my first PRs to ApiGen this year.
 
@@ -46,7 +46,7 @@ I knew a few, but not any that would be able to parse PHP 7.1 by itself. I was a
 
 In that time, I came across [Projects using the PHP Parser](https://github.com/nikic/PHP-Parser/wiki/Projects-using-the-PHP-Parser) on Wiki of PHP-Parse, I consulted with [Jan Tvrdik](https://github.com/jantvrdik) and [Ondrej Mirtes](https://twitter.com/OndrejMirtes).
 
-This all [led me to a package](https://github.com/ApiGen/ApiGen/issues/817) called [Roave/BetterReflection](https://github.com/roave/better-reflection) by [James Titcumb](https://www.jamestitcumb.com/) and [Marco Pivetta](https://ocramius.github.io/).
+This all [led me to a package](https://github.com/ApiGen/ApiGen/issues/817) called [Roave/BetterReflection](https://github.com/roave/better-reflection) by [James Titcumb](https://www.jamestitcumb.com) and [Marco Pivetta](https://ocramius.github.io).
 
 I'm bit suspicious to projects that were lastly tagged a half year ago, but I felt I could gave it a go.
 
@@ -57,7 +57,7 @@ All right, package picked! The ~~fun~~ hell was about to begin.
 
 Imagine your whole application uses everywhere a package, that got stuck 4 PHP versions ago. You feel it more and more. Everyday you need to patch it because there are other packages that are up-to-date. You know, like PHP itself.
 
-When I maintained the ApiGen in 2014, I felt I should [interface everything](https://ocramius.github.io/blog/when-to-declare-classes-final/) - thank you for that *past me*. All reflection classes were interfaced, and there was somewhat of a bridge between TokenReflection (the old package) and ApiGen value objects for Reflections.
+When I maintained the ApiGen in 2014, I felt I should [interface everything](https://ocramius.github.io/blog/when-to-declare-classes-final) - thank you for that *past me*. All reflection classes were interfaced, and there was somewhat of a bridge between TokenReflection (the old package) and ApiGen value objects for Reflections.
 
 Still, I could not drop all old reflections without having prepared all new ones.
 
@@ -172,7 +172,7 @@ If I should mention 4 most important changes you should know about, it would be:
 - Version 4.0 worked fine with PHP 5.4 code - newer usually crashed it. ApiGen **can deal with PHP 5.5, 5.6, 7.0 and 7.1 code** now.
 - Min PHP version bumped **from PHP 5.4 to PHP 7.1**. ApiGen is still able to parse older code.
 - **TokenReflection refactored to BetterReflection** - thanks to James and Marco for fast responses on our issues and pull-requests.
-- Switched to [Symfony 3.3 Dependency Injection](https://github.com/ApiGen/ApiGen/pull/880) with [time-saving features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) - thanks [Martin Hujer](https://martinhujer.cz) for the idea.
+- Switched to [Symfony 3.3 Dependency Injection](https://github.com/ApiGen/ApiGen/pull/880) with [time-saving features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3) - thanks [Martin Hujer](https://martinhujer.cz) for the idea.
 
 
 Look at particular releases to get complete list of changes. Changelogs are nice and clean:

@@ -9,7 +9,7 @@ tweet: "New Post on #lazyprogrammer Blog: Program Like Your Climb a Huge Mountai
 tweet_image: "/assets/images/posts/2018/climb/climb-7.jpg"
 ---
 
-Just a year ago I was deep-train traveling southern Europe and I worked on ApiGen (here [is a short story about that work](/blog/2017/09/04/how-apigen-survived-its-own-death/)). I worked on a migration of the most coupled dependency, which was unmaintained for 3 years, to new one. You can imagine it like migration your application from Nette to Symfony or from Doctrine to Eloquent (or vice versa).
+Just a year ago I was deep-train traveling southern Europe and I worked on ApiGen (here [is a short story about that work](/blog/2017/09/04/how-apigen-survived-its-own-death)). I worked on a migration of the most coupled dependency, which was unmaintained for 3 years, to new one. You can imagine it like migration your application from Nette to Symfony or from Doctrine to Eloquent (or vice versa).
 
 ## Rushing Up is Rushing to Fuck-Up
 
@@ -49,7 +49,7 @@ As you can see, it's no shame to use the spots, ~~even~~ mainly professional cli
 
 ## Use Safe Spots
 
-If you already have such safe spots, be sure to use them. I've seen many applications that had over 30 tests but didn't actually use them - no continuous integration, no [simple scripts in composer](https://blog.martinhujer.cz/have-you-tried-composer-scripts/) that could run them locally with `composer run-tests`.
+If you already have such safe spots, be sure to use them. I've seen many applications that had over 30 tests but didn't actually use them - no continuous integration, no [simple scripts in composer](https://blog.martinhujer.cz/have-you-tried-composer-scripts) that could run them locally with `composer run-tests`.
 
 <img src="/assets/images/posts/2018/climb/climb-4.jpg" class="img-thumbnail">
 
@@ -76,7 +76,7 @@ One [Peace Step](https://www.amazon.com/Peace-Every-Step-Mindfulness-Everyday/dp
 
 ## Take a Break
 
-When you're tired, frustrated, angry or sad, will you rush to climb more and more steps? No, you'd take a break. Just hang on the rope for a while (not by the neck, it's not healthy!)... well, for [17 minutes](https://lifehacker.com/52-minute-work-17-minute-break-is-the-ideal-productivi-1616541102) as I learned in one of the amazing [Pinkcasts](https://www.danpink.com/pinkcast/).
+When you're tired, frustrated, angry or sad, will you rush to climb more and more steps? No, you'd take a break. Just hang on the rope for a while (not by the neck, it's not healthy!)... well, for [17 minutes](https://lifehacker.com/52-minute-work-17-minute-break-is-the-ideal-productivi-1616541102) as I learned in one of the amazing [Pinkcasts](https://www.danpink.com/pinkcast).
 
 It might be a coffee, it might be a transfer to another train, it might be toilet visit.
 
@@ -93,7 +93,7 @@ So this is my climbing approach to code (I'm not a climber, to be clear).
 
 <img src="/assets/images/posts/2018/climb/climb-7.jpg" class="img-thumbnail">
 
-The more you climb, the better you know the terrain and the more you can improvise. [Like this guy, who climbed a 3000-feet tall mountain in 4 hours](https://www.nationalgeographic.com/adventure/features/athletes/alex-honnold/most-dangerous-free-solo-climb-yosemite-national-park-el-capitan/). **Without a rope.**
+The more you climb, the better you know the terrain and the more you can improvise. [Like this guy, who climbed a 3000-feet tall mountain in 4 hours](https://www.nationalgeographic.com/adventure/features/athletes/alex-honnold/most-dangerous-free-solo-climb-yosemite-national-park-el-capitan). **Without a rope.**
 
 <br>
 

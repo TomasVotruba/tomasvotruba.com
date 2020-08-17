@@ -1,7 +1,7 @@
 id: 179
 title: "FriendsofPHP.org is Opening API with&nbsp;250&nbsp;Meetups&nbsp;a&nbsp;Month"
 perex: |
-    [Friendsofphp.org](https://friendsofphp.org/) already checks **over 1 145 PHP groups** on meetup.com for new meetups every day. That's about 240 meetups in a single month - a great number, but some user groups don't use meetup.com.
+    [Friendsofphp.org](https://friendsofphp.org) already checks **over 1 145 PHP groups** on meetup.com for new meetups every day. That's about 240 meetups in a single month - a great number, but some user groups don't use meetup.com.
     <br><br>
     I spend last weekend adding 4 new sources for meetups... and while doing it, I thought: "why not make all that meetups and groups public in JSON"?
 
@@ -14,7 +14,7 @@ If you want to organize meetups on Meetup.com, it will cost you 10 $/month. Not 
 That's why there are other free platforms that collect meetups - each with their own way to export these meetups:
 
  - [crossweb.pl](https://crossweb.pl/feed/wydarzenia/php) with xml feed in Poland
- - [dou.ua](https://dou.ua/calendar/feed/PHP/) with xml feed in Ukraine
+ - [dou.ua](https://dou.ua/calendar/feed/PHP) with xml feed in Ukraine
  - [posobota.cz](webcal://www.posobota.cz/feed.ical.php) with ical in the Czech Republic
  - [opentechcalendar.co.uk](https://opentechcalendar.co.uk/api1/events.json) **with json** in UK
 
@@ -94,7 +94,7 @@ Well, there is none. Better bad API than no API → crawling and Xpaths. Better 
 
 **...I published all meetups and groups for anyone to use in API**.
 
-**You'll find available JSON feeds at [friendsofphp.org/api/](https://friendsofphp.org/api/).**
+**You'll find available JSON feeds at [friendsofphp.org/api/](https://friendsofphp.org/api).**
 
 <img src="/assets/images/posts/2019/fop/fop.png" class="img-thumbnail mb-5">
 
@@ -104,7 +104,7 @@ With API you can list meetups in your country, sort them by a distance from your
 
 With *encoded knowledge* approach, you don't have to think about pretty JSON, or studying XML vs JSON format. Just provide data and let program handle it.
 
-This website runs on [Statie](https://www.statie.org/) - the most downloaded PHP static website generators supporting Twig and Markdown. Why don't we Statie handle this as well?
+This website runs on [Statie](https://www.statie.org) - the most downloaded PHP static website generators supporting Twig and Markdown. Why don't we Statie handle this as well?
 
 Since Statie 5.4-dev, you can do this:
 

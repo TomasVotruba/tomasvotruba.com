@@ -4,14 +4,14 @@ title: "Rector: Part 2 - Maturity of PHP Ecosystem and Founding Fathers"
 perex: |
     What it took for Rector to be born?
     <br><br>
-    Paradigm shift, ecosystem maturity, need for speed to solve common problems community has. **And a great team you share [your work with](https://austinkleon.com/show-your-work/) that feedbacks and reflects.**
+    Paradigm shift, ecosystem maturity, need for speed to solve common problems community has. **And a great team you share [your work with](https://austinkleon.com/show-your-work) that feedbacks and reflects.**
 tweet: "New post on my blog: Rector: Part 2 - Maturity of PHP Ecosystem and Founding Fathers"
 ---
 
 *Read also:*
 
-- [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how/)
-- [Part 3 - Why Instant Upgrades](/blog/2018/03/05/rector-part-3-why-instant-upgrades/)
+- [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how)
+- [Part 3 - Why Instant Upgrades](/blog/2018/03/05/rector-part-3-why-instant-upgrades)
 
 <br>
 
@@ -25,20 +25,20 @@ It's not that PHP projects didn't need to be updated until 2017. I surely could 
 
 **It was followed by [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer)** with [it's first release in 2014](http://fabien.potencier.org/php-cs-fixer-finally-reaches-version-1-0.html) by [Fabien Potencier](http://fabien.potencier.org). Did you know the first script [had only 106 lines](https://gist.github.com/fabpot/3f25555dce956accd4dd)?
 
-I use daily both of these tools, [they're both awesome and work best together](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). Both of them fix the code for you, so you can sleep or have a coffee instead.
+I use daily both of these tools, [they're both awesome and work best together](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines). Both of them fix the code for you, so you can sleep or have a coffee instead.
 
 It took 12 years and 2 tools with over 4000 stars on Github to get here.
 
 ## Is PHP Ready for AST?
 
-A few years ago [Nikita Popov](https://nikic.github.io/) started an ambitious project [nikic/PHP-Parser](https://github.com/nikic/PHP-Parser). PHP-Parser parses PHP code to AST. If you're new to Abstract Syntax Tree (AST), check [this post that describes 2 big changes in PHP ecosystem](/blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree) thanks to AST.
+A few years ago [Nikita Popov](https://nikic.github.io) started an ambitious project [nikic/PHP-Parser](https://github.com/nikic/PHP-Parser). PHP-Parser parses PHP code to AST. If you're new to Abstract Syntax Tree (AST), check [this post that describes 2 big changes in PHP ecosystem](/blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree) thanks to AST.
 
 ### Both Read & Write?
 
 PHP_CodeSniffer was read only, which is great for letting you know what is wrong, but not much for getting a coffee instead. So fixing part was added.
 
 Same was for PHP-Parser. It can read a code and allow it analysis.
-That's what [Ondřej Mirtes](https://ondrej.mirtes.cz/) uses in [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/) - context aware PHP analysis ("this variable is of this type").
+That's what [Ondřej Mirtes](https://ondrej.mirtes.cz) uses in [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too) - context aware PHP analysis ("this variable is of this type").
 
 Again useful, but what about that coffee? It won't make itself.
 
@@ -93,11 +93,11 @@ It's not only about writing code. It's about discussing the idea, finding the ri
 
 I don't work for at any company so development of Rector doesn't solve my personal issues. That's how most project is born, like PHPStan to check Slevomat's code. That means I needed other motivation - when my frustration of wasted thousands human-hours was not enough.
 
-- **Here I'd like to thank [Petr Vácha](http://petrvacha.com/)** for cowork weekend in Brno with in summer 2017, where it all started - in those times named as *Refactor*. You've been great friend for years and courage in times, when I needed it the most.
+- **Here I'd like to thank [Petr Vácha](http://petrvacha.com)** for cowork weekend in Brno with in summer 2017, where it all started - in those times named as *Refactor*. You've been great friend for years and courage in times, when I needed it the most.
 
-- **And [David Grudl](https://davidgrudl.com/)**, who gave me the motivation to dig deep and "just try it" when I felt desperate and useless always with lightness of Zen master.
+- **And [David Grudl](https://davidgrudl.com)**, who gave me the motivation to dig deep and "just try it" when I felt desperate and useless always with lightness of Zen master.
 
-- **And also [Nikita Popov](http://nikic.github.com/)**, who patiently answered, taught me and fixed all my issues on `nikic/php-parser`.
+- **And also [Nikita Popov](http://nikic.github.com)**, who patiently answered, taught me and fixed all my issues on `nikic/php-parser`.
 
 Without you, I would not make it here today.
 

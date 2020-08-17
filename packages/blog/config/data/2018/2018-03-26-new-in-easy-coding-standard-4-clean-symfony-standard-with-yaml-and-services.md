@@ -2,7 +2,7 @@
 id: 86
 title: "New in Easy Coding Standard 4: Clean Symfony Standard with Yaml and Services"
 perex: |
-    I wrote about [news in Easy Coding Standard 3](/blog/2018/03/01/new-in-symplify-3-4-improvements-in-easy-coding-standard/) a while ago. EasyCodingStandard 4 is released yet (still in alpha), but soon you'll be able to use all the news I'll show you today.
+    I wrote about [news in Easy Coding Standard 3](/blog/2018/03/01/new-in-symplify-3-4-improvements-in-easy-coding-standard) a while ago. EasyCodingStandard 4 is released yet (still in alpha), but soon you'll be able to use all the news I'll show you today.
     <br><br>
     And what are they? Neon to YAML, semi-static to Services, customizable caching, even simpler skipper, short bin and more.
 
@@ -83,7 +83,7 @@ Now this is the only way to use ECS:
 vendor/bin/ecs
 ```
 
-Typo proof or at least less error prone. Just change it in you [`composer.json`'s `script` section](https://blog.martinhujer.cz/have-you-tried-composer-scripts/) or CI setups and you're ready to go!
+Typo proof or at least less error prone. Just change it in you [`composer.json`'s `script` section](https://blog.martinhujer.cz/have-you-tried-composer-scripts) or CI setups and you're ready to go!
 
 <br>
 
@@ -95,7 +95,7 @@ Typo proof or at least less error prone. Just change it in you [`composer.json`'
     Check the PR #651
 </a>
 
-Symplify used `Nette\DI` a long time ago and with it its markup language - Neon. Then it moved to `Symfony\DependencyInjection` in [Symplify 2.0](https://github.com/symplify/symplify/blob/master/CHANGELOG.md#v200---2017-06-16), because it was just impossible to reject [all these awesome Symfony 3.3 features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) by Nicolas Grekas. But this was just partial migration - Neon files still worked.
+Symplify used `Nette\DI` a long time ago and with it its markup language - Neon. Then it moved to `Symfony\DependencyInjection` in [Symplify 2.0](https://github.com/symplify/symplify/blob/master/CHANGELOG.md#v200---2017-06-16), because it was just impossible to reject [all these awesome Symfony 3.3 features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3) by Nicolas Grekas. But this was just partial migration - Neon files still worked.
 
 That lead to situation, where 5 *custom-cool-classes* simulated loading transforming Neon to YAML format, merging it and then passing to Symfony Container, hoping all went well. And it worked. Well, most of the times.
 
@@ -116,7 +116,7 @@ I hear you community, so lets trade! **From ECS 4, you can use Yaml everywhere w
 ### How to Migrate?
 
 Well just rename `easy-coding-standard.neon` or `ecs.yml` and
- then read about it in [Neon vs. Yaml and How to Migrate Between Them](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/).
+ then read about it in [Neon vs. Yaml and How to Migrate Between Them](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them).
 
 <br>
 

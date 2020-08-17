@@ -14,7 +14,7 @@ updated_message: |
     Updated YAML to PHP configuration, as current standard.
 ---
 
-I wrote a [50-page thesis about polyphasic sleep](/blog/2018/02/12/sleep-shorter-to-get-62-percent-smarter/). My opponent told me, that there is a missing part about uncontrolled intervening values. The part in pages 34-36 he probably skipped. Today we have too much going on **we have to scan**. Anything longer than 140 chars is exhausting. Moreover for us programmers, who dance among tsunami of information coming every hour as they code and investigate code of others.
+I wrote a [50-page thesis about polyphasic sleep](/blog/2018/02/12/sleep-shorter-to-get-62-percent-smarter). My opponent told me, that there is a missing part about uncontrolled intervening values. The part in pages 34-36 he probably skipped. Today we have too much going on **we have to scan**. Anything longer than 140 chars is exhausting. Moreover for us programmers, who dance among tsunami of information coming every hour as they code and investigate code of others.
 
 ### Do you Find this "Circle of Code" Familiar?
 
@@ -280,7 +280,7 @@ vendor/bin/ecs check src --set laravel
 - Should I register it somehow?
 - Where do I find these levels so I know what are available?
 
-[Don't make the programmer think](https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook-dp-B00HJUBRPG/dp/B00HJUBRPG/)!
+[Don't make the programmer think](https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook-dp-B00HJUBRPG/dp/B00HJUBRPG)!
 
 <blockquote class="blockquote">
      <em>Level "laravel" was not found. Pick one of: "array", "clean-code", "comments", "common", "control-structures", "docblock", "namespaces", "php70", "php71", "phpunit", "psr12", "psr2", "spaces", "strict", "symfony", "symfony-risky", "symplify"</em>

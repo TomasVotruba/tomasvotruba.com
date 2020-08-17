@@ -12,7 +12,7 @@ tweet: "New Post on #php 🐘 blog: Don't Show Your Privates to Public"
 tweet_image: "/assets/images/posts/2020/privates_meme.jpg"
 ---
 
-Last week you probably spotted **[RFC: Constructor Promotion](https://wiki.php.net/rfc/constructor_promotion)** proposed by my favorite mentor [Nikita Popov](https://github.com/nikic/). This RFC counters *public property by default* approach and **reduces the redundant code at the same time**.
+Last week you probably spotted **[RFC: Constructor Promotion](https://wiki.php.net/rfc/constructor_promotion)** proposed by my favorite mentor [Nikita Popov](https://github.com/nikic). This RFC counters *public property by default* approach and **reduces the redundant code at the same time**.
 
 <br>
 
@@ -25,7 +25,7 @@ Another counter point for public properties or methods nailed [Stefan Priebsch](
 
 That meme had just 1 public method. But what about real projects?
 
-To get **real numbers from a real project**, I run [phploc](https://matthiasnoback.nl/2019/09/using-phploc-for-quick-code-quality-estimation-part-1/) to measure size of [Rector's code](https://github.com/rectorphp/rector).
+To get **real numbers from a real project**, I run [phploc](https://matthiasnoback.nl/2019/09/using-phploc-for-quick-code-quality-estimation-part-1) to measure size of [Rector's code](https://github.com/rectorphp/rector).
 
 ```bash
 phploc src packages rules --exclude tests
@@ -149,7 +149,7 @@ But remember our children:
 
 What happens if we don't care about it? Well, **`public` element is designed to be used somewhere else.**
 
-Same way `static` method is a method to be used everywhere (and [then slowly kill you](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/)).
+Same way `static` method is a method to be used everywhere (and [then slowly kill you](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself)).
 
 <br>
 

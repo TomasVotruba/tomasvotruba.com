@@ -22,7 +22,7 @@ Do you find this story resembling your daily job? We had the same problem. We to
 
 ## Status Quo: Xdebug
 
-The most common way in the open-source nowadays is Xdebug with Coveralls. [Coveralls.io](http://coveralls.io/) is an open-source, free service, that consumes your PHPUnit coverage data, and turns them into one significant number.
+The most common way in the open-source nowadays is Xdebug with Coveralls. [Coveralls.io](http://coveralls.io) is an open-source, free service, that consumes your PHPUnit coverage data, and turns them into one significant number.
 
 That's how can have sexy coverage badge in your repository:
 
@@ -54,7 +54,7 @@ jobs:
 
 ## 2. Faster with phpdbg
 
-I've learned about phpdbg from this [short and clear post by KIZU 514](https://kizu514.com/blog/phpdbg-is-much-faster-than-xdebug-for-code-coverage/).
+I've learned about phpdbg from this [short and clear post by KIZU 514](https://kizu514.com/blog/phpdbg-is-much-faster-than-xdebug-for-code-coverage).
 
 One-line, no-install setup:
 
@@ -85,7 +85,7 @@ jobs:
 
 ## 3. Even Faster with PCOV
 
-It's better to have PHPUnit 8+, but what if [don't have it yet](/blog/2019/11/04/still-on-phpunit-4-come-to-phpunit-8-together-in-a-day/)? You can [read about PCOV here](https://kizu514.com/blog/pcov-is-better-than-phpdbg-and-xdebug-for-code-coverage/), we'll get right to the business.
+It's better to have PHPUnit 8+, but what if [don't have it yet](/blog/2019/11/04/still-on-phpunit-4-come-to-phpunit-8-together-in-a-day)? You can [read about PCOV here](https://kizu514.com/blog/pcov-is-better-than-phpdbg-and-xdebug-for-code-coverage), we'll get right to the business.
 
 2-lines run with setup:
 

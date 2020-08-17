@@ -50,7 +50,7 @@ class ComputerEntrance extends BoothCallEntrance
 }
 ```
 
-**always [mark your classes final](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. There is event [sniff for that](https://github.com/symplify/coding-standard/blob/master/src/Fixer/Solid/FinalInterfaceFixer.php). Use it.
+**always [mark your classes final](https://ocramius.github.io/blog/when-to-declare-classes-final)**. There is event [sniff for that](https://github.com/symplify/coding-standard/blob/master/src/Fixer/Solid/FinalInterfaceFixer.php). Use it.
 
 ```php
 final class BoothCallEntrance implements MatrixEntranceInterface
@@ -84,7 +84,7 @@ Back to Matrix world: imagine you can listen to every phone booth. Let's say you
 
 This approach is implemented in PHP under name of EventDispatcher. While working with Symfony, **events gave me very similar feeling of freedom** - [in docs](https://symfony.com/doc/current/reference/events.html#kernel-events) as well in small book [A Year with Symfony](https://leanpub.com/a-year-with-symfony).
 
-Do you want simple example of such listening script? [Check this tested post](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch/) with all code snippets you need.
+Do you want simple example of such listening script? [Check this tested post](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch) with all code snippets you need.
 
 ### While on Event, Listen Carefully
 

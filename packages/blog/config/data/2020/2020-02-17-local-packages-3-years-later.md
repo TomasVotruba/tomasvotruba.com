@@ -2,13 +2,13 @@
 id: 239
 title: "Local Packages 3 Years Later"
 perex: |
-    The first public idea about local packages was [published over 3 years ago](/blog/2017/12/25/composer-local-packages-for-dummies/) after 1 year of internal testing.
+    The first public idea about local packages was [published over 3 years ago](/blog/2017/12/25/composer-local-packages-for-dummies) after 1 year of internal testing.
     <br><br>
-    **How do they stand in 2020? How people use it wrong?** Are they still the best option to keep low complexity in huge projects? 
+    **How do they stand in 2020? How people use it wrong?** Are they still the best option to keep low complexity in huge projects?
 tweet: "New Post on #php 🐘 blog: Local Packages 3 Years Later"
 ---
 
-Just a reminder: *what are local packages*? 
+Just a reminder: *what are local packages*?
 
 Local packages are decoupled parts of code, located in own `packages/<package-name>` directory:
 
@@ -48,7 +48,7 @@ Simple.
 
 <br>
 
-Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies/).
+Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies).
 
 ## How People Use it Wrong?
 
@@ -153,7 +153,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
             FileSystem.php
 ```
 
-This is only useful in case of [monorepo that splits packages](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command/), e.g. Symfony, Symplify. Not for local packages.
+This is only useful in case of [monorepo that splits packages](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command), e.g. Symfony, Symplify. Not for local packages.
 
 <em class="fas fa-fw fa-2x fa-check text-success"></em>
 
@@ -175,7 +175,7 @@ This is only useful in case of [monorepo that splits packages](/blog/2018/10/08/
 
 - Keep `/app` separated.
 - Use `dash-format` for directory paths.
-- Use `CamelCase` for namespaces.  
+- Use `CamelCase` for namespaces.
 - Use `packages/<package-name>/src` and `packages/<package-name>/tests` directory convention.
 - Use single root `composer.json` to autoload them all.
 - Use single root `phpunit.xml` to run test on them all.
@@ -205,7 +205,7 @@ This is only useful in case of [monorepo that splits packages](/blog/2018/10/08/
 ## Feedback After 3 Years of Usage in Companies
 
 I've started to test this in Lekarna.cz, 6 years old project, where they still use it.
-[Elasticr](https://www.elasticr.cz/) and [Recruit.is](https://recruitis.io/) adopted local packages in ~2018, still using it.
+[Elasticr](https://www.elasticr.cz) and [Recruit.is](https://recruitis.io) adopted local packages in ~2018, still using it.
 
 The code is much cleaner, comfortable to dive in, and refactor.
 

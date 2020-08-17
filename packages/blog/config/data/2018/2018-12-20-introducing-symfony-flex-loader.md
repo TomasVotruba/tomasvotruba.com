@@ -2,7 +2,7 @@
 id: 169
 title: "Introducing Symfony Flex Loader"
 perex: |
-    Symfony 4 and Flex is heading in direction of zero-setup configuration - no bundles, no extensions, no configuration. You already know how to get rid of [Configuration](/blog/2018/11/29/how-to-manage-configuration-in-symfony-without-bundle-extension-and-configuraiton/). Flex now loads services instead of Extension class.
+    Symfony 4 and Flex is heading in direction of zero-setup configuration - no bundles, no extensions, no configuration. You already know how to get rid of [Configuration](/blog/2018/11/29/how-to-manage-configuration-in-symfony-without-bundle-extension-and-configuraiton). Flex now loads services instead of Extension class.
     <br>
     <br>
      But it has an extra price, a lot of new boilerplate code in Kernel. Today you'll learn **how to keep your Kernel Flex-ready and clean at the same time**.
@@ -83,7 +83,7 @@ How does FlexLoader look in practice?
 
 <br>
 
-**That's all!** Now you can focus on important things, like writing [cool compiler passes](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette/).
+**That's all!** Now you can focus on important things, like writing [cool compiler passes](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette).
 
 <br>
 <br>
