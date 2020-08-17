@@ -7,7 +7,7 @@ tweet: "New post on my blog: State of Monorepo in PHP"
 tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
 ---
 
-## Javasript, Java, C++, Android, iOS, Facebook, Google? Monorepo is Standard
+## Javascript, Java, C++, Android, iOS, Facebook, Google? Monorepo is Standard
 
 When you pop out of PHP bubble, you can see in [awesome-monorepo](https://github.com/korfuri/awesome-monorepo) a collection of monorepo tools, that are used out in a wild by another languages. Google has [Bazel](https://bazel.build), Facebook has [Buck](https://buckbuild.com), Twitter and Foursqaure have [Pants](https://www.pantsbuild.org).
 
