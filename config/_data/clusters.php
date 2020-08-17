@@ -10,7 +10,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters->set('clusters', [
         [
             'title' => 'Cleaning Lady Notes',
-            'post_ids' => [267],
+            'post_ids' => [267, 230, 229, 225, 104, 88],
             'description' => 'In this series, you can learn about my experience with legacy project migration. Tricks, tips, what works and what fucked me up. So you **save some frustration, where is not needed, discover hidden shortcuts and cool tools you never saw before.',
         ],
         [
