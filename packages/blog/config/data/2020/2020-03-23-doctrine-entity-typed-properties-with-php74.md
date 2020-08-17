@@ -2,7 +2,7 @@
 id: 244
 title: "Doctrine Entity Typed Properties With PHP 7.4"
 perex: |
-    Recently we've upgraded our [Czech PHP community website](https://pehapkari.cz/) to PHP 7.4. As a side effect, it broke most of our entities.
+    Recently we've upgraded our [Czech PHP community website](https://pehapkari.cz) to PHP 7.4. As a side effect, it broke most of our entities.
     Do you love how making language more strict reveals weak points in your code just by using it?
     <br>
     <br>
@@ -310,7 +310,7 @@ Do you prefer code over text? [Here is the PHP 7.4 upgrade pull-request](https:/
 
 ## Upgrade Instantly with Rector
 
-I did not do the upgrade pull-request myself (I'm way too lazy for that), [Rector](https://getrector.org/) did. Thanks to testing out Rector on Doctrine entities, its PHP 7.4 set got much more precise.
+I did not do the upgrade pull-request myself (I'm way too lazy for that), [Rector](https://getrector.org) did. Thanks to testing out Rector on Doctrine entities, its PHP 7.4 set got much more precise.
 
 **Do you want to see how Rector can upgrade your code?**
 

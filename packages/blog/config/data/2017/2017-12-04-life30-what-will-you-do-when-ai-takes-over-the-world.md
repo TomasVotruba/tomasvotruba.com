@@ -21,7 +21,7 @@ tweet_image: "/assets/images/posts/2017/life30/life30.jpg"
 
 ## Being Human in the Age of Artificial Intelligence
 
-Daniel Pink in one of his [PinkCast](http://www.danpink.com/pinkcast/) (the best value/time  deal vlogs I know, just ~ 2 minutes) shared a link to book [Life 3.0: Being Human in the Age of Artificial Intelligence](https://www.amazon.com/Life-3-0-Being-Artificial-Intelligence/dp/1101946598) by Max Tegmark.
+Daniel Pink in one of his [PinkCast](http://www.danpink.com/pinkcast) (the best value/time  deal vlogs I know, just ~ 2 minutes) shared a link to book [Life 3.0: Being Human in the Age of Artificial Intelligence](https://www.amazon.com/Life-3-0-Being-Artificial-Intelligence/dp/1101946598) by Max Tegmark.
 
 Few more people liked it too, so why not give it a try:
 
@@ -48,7 +48,7 @@ to Alpha GO beating the greatest human master in 2016:
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Worth reading Life 3.0 by <a href="https://twitter.com/tegmark?ref_src=twsrc%5Etfw">@Tegmark</a>. AI will be the best or worst thing ever for humanity, so let’s get it right.<a href="https://t.co/lT0uMH3ujZ">https://t.co/lT0uMH3ujZ</a></p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/902452162625544193?ref_src=twsrc%5Etfw">August 29, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-I knew Elon Musk is making cars and rockets, but I didn't knew he supported non-profit [Future of Life Institute](https://futureoflife.org/) with [$10M](https://futureoflife.org/2015/10/12/elon-musk-donates-10m-to-keep-ai-beneficial/).
+I knew Elon Musk is making cars and rockets, but I didn't knew he supported non-profit [Future of Life Institute](https://futureoflife.org) with [$10M](https://futureoflife.org/2015/10/12/elon-musk-donates-10m-to-keep-ai-beneficial).
 
 <br>
 

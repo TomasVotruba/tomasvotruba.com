@@ -72,7 +72,7 @@ We need to add global file argument. So, what option do we have?
 
 - Well, have you noticed the "wiht" typo? Now I have to **fix it in every single class**.
 - For every change, we have to find and modify every single place this **duplicated code** is in.
-- When a new command is added, you have to remember to **add exactly this line there** - you already know [how memory-locks backfire](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/), right?
+- When a new command is added, you have to remember to **add exactly this line there** - you already know [how memory-locks backfire](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock), right?
 
 Good for creating & sell applications, bad for projects you want to work on for a couple of years.
 
@@ -114,7 +114,7 @@ The first simple & short solution you'd [Googled up](https://gist.github.com/dhr
 
 ## 3. The ~~Symfony~~ Event Subscriber Way
 
-I found this approach on [Matthias Noback's blog](https://matthiasnoback.nl/2013/11/symfony2-add-a-global-option-to-console-commands-and-generate-pid-file/). The process is similar to above, just wrapped in event subscriber that hooks into the Console Application cycle:
+I found this approach on [Matthias Noback's blog](https://matthiasnoback.nl/2013/11/symfony2-add-a-global-option-to-console-commands-and-generate-pid-file). The process is similar to above, just wrapped in event subscriber that hooks into the Console Application cycle:
 
 ```php
 <?php
@@ -218,7 +218,7 @@ It took me a while but the track lead to [`Application::getDefaultInputDefinitio
  }
 ```
 
-`Symfony\Component\Console\Application` is **one of very few classes I'd allow to [extend](https://ocramius.github.io/blog/when-to-declare-classes-final/)**. It's just 1:1 = easy to maintain and change. Not like entity repository, that can have dozens of children.
+`Symfony\Component\Console\Application` is **one of very few classes I'd allow to [extend](https://ocramius.github.io/blog/when-to-declare-classes-final)**. It's just 1:1 = easy to maintain and change. Not like entity repository, that can have dozens of children.
 
 ### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
 

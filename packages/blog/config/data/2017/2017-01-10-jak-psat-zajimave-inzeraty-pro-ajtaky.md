@@ -150,7 +150,7 @@ Na závěr na odlehčení 2 inzeráty, které se mi líbí.
 
 ### PeckaDesign jde do naha a ještě tě naučí
 
-Tento inzerát najdeš ho na [www.delejcoumis.cz](http://www.delejcoumis.cz/).
+Tento inzerát najdeš ho na [www.delejcoumis.cz](http://www.delejcoumis.cz).
 
 Co je killer? [Jeho zdrojáky jsou open-source](https://github.com/peckadesign/DelejCoUmis.cz). To mi umožní si snadno zjistit, jaká je úroveň kódu - jestli mu rozumím nebo jestli se tam mám co naučit. A v [`composer.json`](https://github.com/peckadesign/DelejCoUmis.cz/blob/master/composer.json) najdu používané technologie.
 

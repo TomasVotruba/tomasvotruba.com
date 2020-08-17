@@ -34,26 +34,26 @@ Evolution of art is based on stealing. So is software. **Pattern are replicated 
 
 Instead of describing ideas in this master piece, **just [see this 11min TedX video](https://www.youtube.com/watch?v=oww7oB9rjgw)**. Then you can decide if you like this idea just enough to open first page.
 
-I'd like to thank [Honza Černý](http://honzacerny.com/) who lend me this book about a year ago and helped me to **build bridge between programming and art**.
+I'd like to thank [Honza Černý](http://honzacerny.com) who lend me this book about a year ago and helped me to **build bridge between programming and art**.
 
-Btw, if you read this short book, there also *second* part: [Show Your Work](https://austinkleon.com/show-your-work/).
+Btw, if you read this short book, there also *second* part: [Show Your Work](https://austinkleon.com/show-your-work).
 
 
 ## Deep Work by Cal Newport
 
 ### Isn't it only Hype?
 
-I heard about this book from [many](https://tomaskazatel.cz/) [friends](https://www.vzhurudolu.cz/blog/75-hluboka-prace) (Czech only) just in the end of 2016. So many at once, that **I was afraid of buy-but-not-read-hype**. That's when **everyone is talking about the book, buying it, but nobody actually read it**.
+I heard about this book from [many](https://tomaskazatel.cz) [friends](https://www.vzhurudolu.cz/blog/75-hluboka-prace) (Czech only) just in the end of 2016. So many at once, that **I was afraid of buy-but-not-read-hype**. That's when **everyone is talking about the book, buying it, but nobody actually read it**.
 
 Like [*Clean Code*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882). It's really great book - well it was the best you could buy in 2008. But now it's obsolete, too verbose, not to the point and difficult to understand by anyone else than Java programmers.
 
-What can you do better?  **You could reach for 80 % shorter and PHP-related [Principles of Package Design](https://leanpub.com/principles-of-package-design)** or go to fresh [*clean-code* repository on Github](https://github.com/jupeter/clean-code-php) single page **PHP yes/no examples-based** which has over **3625 stars** as of time writing this post. I help to maintain it, but main credits goes to [@jupeter](https://github.com/jupeter/).
+What can you do better?  **You could reach for 80 % shorter and PHP-related [Principles of Package Design](https://leanpub.com/principles-of-package-design)** or go to fresh [*clean-code* repository on Github](https://github.com/jupeter/clean-code-php) single page **PHP yes/no examples-based** which has over **3625 stars** as of time writing this post. I help to maintain it, but main credits goes to [@jupeter](https://github.com/jupeter).
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/non-it-books/deep.jpg">
 </div>
 
-Imagine peace with combination of 5hour train trips, [disabling twitter](/blog/2017/01/20/4-emotional-reasons-why-I-quit-my-twitter/) and other [social networks](/blog/2017/01/05/why-I-deleted-my-linkedin-account/) on your mobile and computer and [cutting of Facebook](https://zenhabits.net/unline/) activity, it is powerful skill-set that will **give you head start before any concurrency you have**.
+Imagine peace with combination of 5hour train trips, [disabling twitter](/blog/2017/01/20/4-emotional-reasons-why-I-quit-my-twitter) and other [social networks](/blog/2017/01/05/why-I-deleted-my-linkedin-account) on your mobile and computer and [cutting of Facebook](https://zenhabits.net/unline) activity, it is powerful skill-set that will **give you head start before any concurrency you have**.
 
 
 Again, instead of few bullet points that **got my** opinionated attention, check [this 13min youtube video](https://www.youtube.com/watch?v=3E7hkPZ-HTk).
@@ -68,7 +68,7 @@ Thanks to [Tomáš Kazatel](https://tomaskazatel.cz) for lending me and *selling
 
 This book is more transformative then 2 before. It's related to family system, partners, about **money you feel you deserve in your job** or about your.
 
-I see many nice-guys among programmers, un-happy with their work, payment, skill level or they spouse and children, thank to [organizing PHP meetups](https://pehapkari.cz/) in Czech Republic. I could relate to them with [my own experience](https://www.youtube.com/watch?v=GFu5ONiHnMA) (Czech only).
+I see many nice-guys among programmers, un-happy with their work, payment, skill level or they spouse and children, thank to [organizing PHP meetups](https://pehapkari.cz) in Czech Republic. I could relate to them with [my own experience](https://www.youtube.com/watch?v=GFu5ONiHnMA) (Czech only).
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/non-it-books/nice.jpg">

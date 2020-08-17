@@ -2,7 +2,7 @@
 id: 177
 title: "11 Steps to Migrate From Sculpin to Statie"
 perex: |
-    In previous post we migrated [Jekyll to Statie](/blog/2019/01/10/9-steps-to-migrate-from-jekyll-to-statie/).
+    In previous post we migrated [Jekyll to Statie](/blog/2019/01/10/9-steps-to-migrate-from-jekyll-to-statie).
     If you need to add a feature to the static website, like creating preview images for Instagram, **you need PHP**.
     <br><br>
     Sculpin is the older brother of Statie but is mostly retired last 3 years. Do you want to get on track with modern PHP on your static website? Here is how.
@@ -25,7 +25,7 @@ Statie doesn't create these problems - there is no paginator and tags/categories
 
 ## 1. Create Basic Statie Structure
 
-Statie 5.3 brings [new `init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/), that creates basic structure in `/source` directory, `statie.yml`, `.travis.yml` and metafiles.
+Statie 5.3 brings [new `init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie), that creates basic structure in `/source` directory, `statie.yml`, `.travis.yml` and metafiles.
 
 Before we start any moving, create a basic structure to save many copy-pasting steps:
 
@@ -67,7 +67,7 @@ parameters:
             route_prefix: blog/ #filename is completed by default
 ```
 
-Look at [generators docs](https://www.statie.org/docs/generators/) to see other options to configure them.
+Look at [generators docs](https://www.statie.org/docs/generators) to see other options to configure them.
 
 ## 4. Make File Names Explicit about `*.twig`
 
@@ -96,7 +96,7 @@ To finish deploy, you need to:
 - generate Github Token
 - put it to Travis configuration of your repository
 
-How you do this? Just **follow [Statie.org documentation](https://www.statie.org/docs/github-pages/)** step by step.
+How you do this? Just **follow [Statie.org documentation](https://www.statie.org/docs/github-pages)** step by step.
 
 ## 7. Complete IDs to Your Posts
 
@@ -110,7 +110,7 @@ Post:
  ---
 ```
 
-Ids are used to internally interlink items, e.g to display [related posts under the post](https://www.statie.org/docs/related-items/):
+Ids are used to internally interlink items, e.g to display [related posts under the post](https://www.statie.org/docs/related-items):
 
 ```yaml
 ---
@@ -139,7 +139,7 @@ related_items: [2]
 
 ## 8. Forget repeating Layout and Generator from Posts
 
-Since the layout is [defined in the config for all posts](https://www.statie.org/docs/generators/) by default...
+Since the layout is [defined in the config for all posts](https://www.statie.org/docs/generators) by default...
 
 ```yaml
 parameters:

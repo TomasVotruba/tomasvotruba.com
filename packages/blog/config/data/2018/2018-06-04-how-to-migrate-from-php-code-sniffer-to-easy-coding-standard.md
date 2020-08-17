@@ -14,7 +14,7 @@ updated_message: |
     Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
-ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's super easy to start to use from scratch:
+ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines). It's super easy to start to use from scratch:
 
 ```bash
 composer require symplify/easy-coding-standard --dev

@@ -2,7 +2,7 @@
 id: 76
 title: "Sleep Shorter to Get 62 % Smarter"
 perex: |
-    Even though I see [University as very poor place to learn something useful](/blog/2017/11/13/7-tips-you-should-know-before-going-to-university/), I studied Psychology in Brno for 3 years.
+    Even though I see [University as very poor place to learn something useful](/blog/2017/11/13/7-tips-you-should-know-before-going-to-university), I studied Psychology in Brno for 3 years.
     <br><br>
     *Psychological Impacts of Polyphasic Sleep* is the topic of my [bachelor thesis](https://is.muni.cz/th/363896/fss_b/Tomas-Votruba-Psychological-Impacts-of-Polyphasic-Sleep.pdf) I wrote in 2012. In the end it gave me clear answer to question: **can we sleep less than 4,5 hours a night to get smarter?**
 tweet: "New post on my blog: Research: How To Sleep Shorter to Get Twice Smarter #polyphasic #sleep #thesis #results"

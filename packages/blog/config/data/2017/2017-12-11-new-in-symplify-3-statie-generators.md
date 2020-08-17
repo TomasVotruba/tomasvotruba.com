@@ -32,7 +32,7 @@ Posts in Statie 2 were enabled by defaults with following hard coded logic:
 
 You could change a `post_route` or `layout` in specific post file, but that was it. No flexibility, no extendability and modification of `PostFile` class was not possible.
 
-In [Pehapkari.cz](https://pehapkari.cz/) we're staring community [lectures](https://pehapkari.cz/vzdelavej-se/) and we need not only posts, but **also lectures to be on stand-alone page**, e.g.
+In [Pehapkari.cz](https://pehapkari.cz) we're staring community [lectures](https://pehapkari.cz/vzdelavej-se) and we need not only posts, but **also lectures to be on stand-alone page**, e.g.
 
  - https://pehapkari.cz/course/doctrine-from-basics,
  - https://pehapkari.cz/course/phpstorm-hacks-and-tips etc.
@@ -106,7 +106,7 @@ parameters:
 
 Do you want **real code**? See [this commit](https://github.com/pehapkari/pehapkari.cz/pull/358/commits/e68d8f98172b2a04e4cf80e635c036c3f2a7bef2) that has it all.
 
-The configuration is as simple as possible, so `object` is optional. You can read **how to set own file** in [documentation](https://www.statie.org/docs/generators/).
+The configuration is as simple as possible, so `object` is optional. You can read **how to set own file** in [documentation](https://www.statie.org/docs/generators).
 
 
 ### How to add new Lecture?

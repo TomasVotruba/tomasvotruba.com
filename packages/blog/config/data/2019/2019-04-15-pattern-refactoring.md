@@ -2,7 +2,7 @@
 id: 203
 title: "Pattern Refactoring"
 perex: |
-    In [Removing Static - There and Back Again](/blog/2019/04/01/removing-static-there-and-back-again/) post we tried looked at anti-patterns in legacy code from a new point of view. It can be static in your code, it can be active record pattern you needed for fast bootstrapping of your idea, it can be moving from the code in controllers to command bus.
+    In [Removing Static - There and Back Again](/blog/2019/04/01/removing-static-there-and-back-again) post we tried looked at anti-patterns in legacy code from a new point of view. It can be static in your code, it can be active record pattern you needed for fast bootstrapping of your idea, it can be moving from the code in controllers to command bus.
     <br>
     <br>
     **They can be coupled in your code in hundreds of classes. That's a big problem, you might think, but it's only single pattern**.
@@ -53,7 +53,7 @@ How could the pitch for rewrite look like?
 
 Suddenly, your colleague comes. You don't like him, because he's too "smart", younger and has less experience than you (he's younger, how can he have more experience, right?) and he starts to argue:
 
-"*Rewrite from scratch is one of the things you should never do. Why? Because rewriting from scratch has a bad history of failures. Joel Spolsky, CEO, and co-founder of StackOverflow wrote [Things You Should Never Do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/) in 2000.*"
+"*Rewrite from scratch is one of the things you should never do. Why? Because rewriting from scratch has a bad history of failures. Joel Spolsky, CEO, and co-founder of StackOverflow wrote [Things You Should Never Do](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i) in 2000.*"
 
 <div class="text-center mb-4">
     <img src="https://i1.wp.com/www.joelonsoftware.com/wp-content/uploads/2016/12/Pong.png?zoom=1.100000023841858&w=230&ssl=1">
@@ -170,7 +170,7 @@ Play with these question, **ask them**, **break limits of your colleagues** and 
 
 There are many ways already:
 
-- pattern refactoring is already in PHPStorm, the first kick off is [Code Cleanup](https://blog.jetbrains.com/phpstorm/2019/02/phpstorm-2019-1-eap-191-5109-15/)  feature
+- pattern refactoring is already in PHPStorm, the first kick off is [Code Cleanup](https://blog.jetbrains.com/phpstorm/2019/02/phpstorm-2019-1-eap-191-5109-15)  feature
 - regular pattern
 - the most advanced is AST refactoring (I spoke about it in [this interview](https://blog.shopsys.com/2019-trends-in-the-world-of-php-interview-with-tomas-votruba-c70f138c92a3))
 

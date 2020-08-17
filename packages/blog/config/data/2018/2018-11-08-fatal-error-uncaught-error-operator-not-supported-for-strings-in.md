@@ -2,7 +2,7 @@
 id: 157
 title: "Fatal error: Uncaught Error: [] operator not supported for strings in"
 perex: |
-    That's right! PHP 5.6 and 7.0 are entering EOL - end of ~~line~~ life this December. Social networks, Slacks, Twitter, Reddit are [full](https://www.reddit.com/r/PHP/comments/9syr3m/php_56_eol_end_of_life_end_of_2018_and_php_7/) of it. Are you running PHP 7.1? Good, come next year when PHP 7.1 is *eoling*.
+    That's right! PHP 5.6 and 7.0 are entering EOL - end of ~~line~~ life this December. Social networks, Slacks, Twitter, Reddit are [full](https://www.reddit.com/r/PHP/comments/9syr3m/php_56_eol_end_of_life_end_of_2018_and_php_7) of it. Are you running PHP 7.1? Good, come next year when PHP 7.1 is *eoling*.
     <br><br>
     For the rest of you, what will you do when PHP will tell you the message in the title?
 tweet: "New Post on My Blog: Fatal error: Uncaught Error: [] operator not supported for strings in #php56 #php70 #eol #rector"
@@ -117,7 +117,7 @@ foreach (array_keys($callbacks) as $callback) {
     See pull-request #661
 </a>
 
-**Honestly, I'm not sure either.** But I took time to test all possible `each()` combinations with `list()`, `while()` and `do/while`, put them into awesome [3v4l.org](https://3v4l.org/), wrote a bunch of tests and wrote tested rules for Rector.
+**Honestly, I'm not sure either.** But I took time to test all possible `each()` combinations with `list()`, `while()` and `do/while`, put them into awesome [3v4l.org](https://3v4l.org), wrote a bunch of tests and wrote tested rules for Rector.
 
 <br>
 
@@ -127,7 +127,7 @@ foreach (array_keys($callbacks) as $callback) {
 
 ## How Rector got into pure PHP Upgrades
 
-At the [PHP Asia Conference](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference/) Rasmus Lerdorf spoke about **upgrading PHP as a big problem**. Much bigger than upgrading particular frameworks. Many WTF namings in PHP are just for BC sake. I struck me, that there is much more legacy PHP code in every company than there is framework-bound code.
+At the [PHP Asia Conference](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference) Rasmus Lerdorf spoke about **upgrading PHP as a big problem**. Much bigger than upgrading particular frameworks. Many WTF namings in PHP are just for BC sake. I struck me, that there is much more legacy PHP code in every company than there is framework-bound code.
 
 I instantly created an issue at Rector, that deals with [PHP 5.3 to 7.4 upgrades](https://github.com/rectorphp/rector/issues/638).
 I went full-time on writing PHP upgrade rules - in the train, in the buss, in the plane (the best place to code actually, wonder why).
@@ -149,7 +149,7 @@ vendor/bin/rector process src --set php74
 
 <br>
 
-I finally looked over my small framework bubble and **learned a lot about problems of the [world PHP community](https://friendsofphp.org/)**.
+I finally looked over my small framework bubble and **learned a lot about problems of the [world PHP community](https://friendsofphp.org)**.
 
 ### How to *ereg* Correctly?
 

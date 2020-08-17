@@ -15,7 +15,7 @@ updated_message: |
 tweet: "Why are service tags useless in most of #symfony and #nettefw apps? #di"
 ---
 
-This post is follow up to *[How to Avoid Inject Thanks to Decorator feature in Nette](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/)*. Go read it if you missed it.
+This post is follow up to *[How to Avoid Inject Thanks to Decorator feature in Nette](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette)*. Go read it if you missed it.
 
 
 ## What is Tagging For?
@@ -112,7 +112,7 @@ services:
 
 So much reading, huh? Imagine 50 more of these.
 
-This is exactly the place to use [Nette Decorator feature](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/).
+This is exactly the place to use [Nette Decorator feature](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette).
 
 ```yaml
 # app/config/config.neon

@@ -12,7 +12,7 @@ updated_message: |
     Updated with [Migrify](http://github.com/migrify) packages and local links.
 ---
 
-*Similar post was originally published [in Czech on Zdrojak.cz](https://www.zdrojak.cz/clanky/50k-radku-z-nette-do-symfony/), where it got colossal attention of the PHP community and hit a record of 56 comments. But when I talk about this migration with my English speaking PHP friends, it seems crazy to them, and they want to hear details - who, how, when, what exactly?*
+*Similar post was originally published [in Czech on Zdrojak.cz](https://www.zdrojak.cz/clanky/50k-radku-z-nette-do-symfony), where it got colossal attention of the PHP community and hit a record of 56 comments. But when I talk about this migration with my English speaking PHP friends, it seems crazy to them, and they want to hear details - who, how, when, what exactly?*
 
 *This post is for you (and for you of course, if you haven't read it on Zdroják).*
 
@@ -22,7 +22,7 @@ updated_message: |
 
 ## What Have We Migrated?
 
-Backend of [Entry.do](https://entry.do/) project - API application built on controllers, routing, Kdyby integrations of Symfony, Doctrine, and a few Latte templates. The application has been running in production for the last 4 years. We migrated from Nette 2.4 to Symfony&nbsp;4.2.
+Backend of [Entry.do](https://entry.do) project - API application built on controllers, routing, Kdyby integrations of Symfony, Doctrine, and a few Latte templates. The application has been running in production for the last 4 years. We migrated from Nette 2.4 to Symfony&nbsp;4.2.
 
 How big is it? If we don't count tests, migration, fixtures, etc., the application has **270 PHP files** in the length of **54 357 lines** (using [phploc](https://github.com/sebastianbergmann/phploc)).
 
@@ -50,7 +50,7 @@ Why use unmaintained integrations of [Kdyby](https://github.com/kdyby) and [Zeni
 
 ## How?
 
-I offered [Honza Mikes](https://janmikes.cz/) deal he couldn't refuse:
+I offered [Honza Mikes](https://janmikes.cz) deal he couldn't refuse:
 
 <blockquote class="blockquote text-center">
 "We will give it a week, and if we get stuck, we'll give up".
@@ -82,7 +82,7 @@ During those **17 days, we put in 80 hours of work** for both of us together (= 
 
 Although we do not like it, we had to do 20 % of the migration manually.
 
-One of the first steps was to move from [config programming to PHP programming](/blog/2019/02/14/why-config-coding-sucks/). Both frameworks try to promote their sugar syntax for Neon or YAML. It sounds cool to new programmers to write less code. Still, it's confusing, framework-specific, can be done in plain PHP anyway, and most importantly, static analysis and instant refactoring won't deal with it.
+One of the first steps was to move from [config programming to PHP programming](/blog/2019/02/14/why-config-coding-sucks). Both frameworks try to promote their sugar syntax for Neon or YAML. It sounds cool to new programmers to write less code. Still, it's confusing, framework-specific, can be done in plain PHP anyway, and most importantly, static analysis and instant refactoring won't deal with it.
 
 How does "config programming" look like?
 
@@ -154,7 +154,7 @@ Automatic tools did another 80% of the pull-request you saw above. The first one
 
 ## Neon to YAML
 
-Neon and YAML are de facto fields [with minor differences in syntax](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/), but when it comes to services, each framework writes a little differently. Config with services had 316 lines in the services section. You don't want to migrate it manually, the Neon entities. Besides, just one error in related migration, and you can do it all over again.
+Neon and YAML are de facto fields [with minor differences in syntax](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them), but when it comes to services, each framework writes a little differently. Config with services had 316 lines in the services section. You don't want to migrate it manually, the Neon entities. Besides, just one error in related migration, and you can do it all over again.
 
 I took few hours and wrote [Migrify/NeonToYaml](https://github.com/migrify/neon-to-yaml). Just pass the path to the `*.neon` file, and it will convert into a beautiful `*.yaml` file.
 
@@ -186,7 +186,7 @@ Again to the factory pattern - there were several custom Response classes in the
  }
 ```
 
-[Honza](https://janmikes.cz/) created new `NewObjectToFactoryCreateRector` rule that handled this.
+[Honza](https://janmikes.cz) created new `NewObjectToFactoryCreateRector` rule that handled this.
 
 ## What else was left?
 
@@ -331,7 +331,7 @@ From Valentine's Day to the nette-to-symfony set, a complete migration from Nett
 
 After a lot of static content changes, the code worked, and the tests went through, but it looked messy. Spaces were missing, fully qualified class names were not imported, etc.
 
-You can use your own PHP_CodeSniffer and PHP-CS-Fixer set. We used the [Rector-prepared set of 7 rules](https://github.com/rectorphp/rector/blob/master/ecs-after-rector.php) with [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/):
+You can use your own PHP_CodeSniffer and PHP-CS-Fixer set. We used the [Rector-prepared set of 7 rules](https://github.com/rectorphp/rector/blob/master/ecs-after-rector.php) with [EasyCodingStandard](https://github.com/symplify/easy-coding-standard):
 
 ```bash
 vendor/bin/ecs check app src --config vendor/rector/rector/ecs-after-rector.php

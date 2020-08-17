@@ -27,7 +27,7 @@ PHP Notice:  Fixer "..." is deprecated. Use "..." instead
 
 ## Why were These Fixer Dropped?
 
-You'll find answer to this question [in previous post](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/). To extend answer specifically for this post: Fixer and Rector do the same job - **they change code based on specific recipe**.
+You'll find answer to this question [in previous post](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules). To extend answer specifically for this post: Fixer and Rector do the same job - **they change code based on specific recipe**.
 
 ### What is the Difference?
 
@@ -323,7 +323,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
 
 How do you order your methods? Random?
 
-**Be sure to read [How to Teach Your Team Private Method Sorting in 3 mins](/blog/2018/11/01/how-teach-your-team-private-method-sorting-in-3-mins/).**
+**Be sure to read [How to Teach Your Team Private Method Sorting in 3 mins](/blog/2018/11/01/how-teach-your-team-private-method-sorting-in-3-mins).**
 
 Instead of:
 

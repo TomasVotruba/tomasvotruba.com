@@ -9,7 +9,7 @@ tweet: "Why I deleted my #LinkedIn account? #deepWork"
 
 *Disclaimer: even if I get few abroad offers, my experience is related to work environment in the Czech Republic.*
 
-I was reviewing my 2016 and how **I started to disconnect from social networks** ([thanks Steve](http://www.stevepavlina.com/blog/2015/07/one-year-without-social-media/)): I reduced 350 friends on Facebook to 20, unfollowed all but 2 groups and I dropped all people I follow on Twitter.
+I was reviewing my 2016 and how **I started to disconnect from social networks** ([thanks Steve](http://www.stevepavlina.com/blog/2015/07/one-year-without-social-media)): I reduced 350 friends on Facebook to 20, unfollowed all but 2 groups and I dropped all people I follow on Twitter.
 **My attention got better and I could focus** on things that really matter to me &ndas; reading books, writing and real friends. That's when I started to focus on quality of my environment.
 
 And the LinkedIn account was scratching my mind for a long time.
@@ -91,7 +91,7 @@ As friend of mine Albert once said:
 
 > "Once you stop learning you start dying."
 
-I want to improve inside [limits](https://zenhabits.net/limits/) I set. **Now I naturally tend to build something real.**
+I want to improve inside [limits](https://zenhabits.net/limits) I set. **Now I naturally tend to build something real.**
 
 
 ## Is it Your Time to Let Go?

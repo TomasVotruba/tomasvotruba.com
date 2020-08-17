@@ -2,7 +2,7 @@
 id: 204
 title: "Symfony 4.2 is used Twice More than Symfony 3.4"
 perex: |
-    PHP itself is very quickly adopted. Last Packagist stats from 2018/11 [report 32,6 %](https://blog.packagist.com/php-versions-stats-2018-2-edition/) people are using PHP 7.2. That's a very nice number, great job y' all!
+    PHP itself is very quickly adopted. Last Packagist stats from 2018/11 [report 32,6 %](https://blog.packagist.com/php-versions-stats-2018-2-edition) people are using PHP 7.2. That's a very nice number, great job y' all!
     <br><br>
     But most of our code is not just plain PHP. **It's framework-locked PHP**. How is framework adoption?
 
@@ -13,7 +13,7 @@ tweet: "New Post on #php 🐘 blog: Symfony 4.2 is used 2 times More than #symfo
 This post was inspired by very active reactions to <a href="/blog/2019/04/11/trends-of-php-frameworks-in-numbers/">Trends of PHP Frameworks in Numbers</a>
 </div>
 
-If you look at the [PHP Framework Trends table](/php-framework-trends/) and see Symfony with 595 mils. downloads last year, what will it tell us? What if 90 % of that is just legacy Symfony 2.8?
+If you look at the [PHP Framework Trends table](/php-framework-trends) and see Symfony with 595 mils. downloads last year, what will it tell us? What if 90 % of that is just legacy Symfony 2.8?
 
 When I talked with my friends Marek and Honza about PHP downloads trends last week, they came with an idea that stats should include **downloads numbers for each version** and **the release date** of that version. That would help us separate long-tail dinosaurs from actively adopted packages.
 
@@ -75,7 +75,7 @@ Here are [data to this day](https://github.com/TomasVotruba/tomasvotruba.com/blo
 
 This is just the tip of the iceberg that caught my eyes.
 
-**[Check the full table](/package-downloads-by-version/)** and discover more interesting details about your favorite framework.
+**[Check the full table](/package-downloads-by-version)** and discover more interesting details about your favorite framework.
 
 <br>
 

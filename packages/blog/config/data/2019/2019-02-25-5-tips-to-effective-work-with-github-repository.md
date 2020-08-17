@@ -92,7 +92,7 @@ Check more of them in [the README](https://github.com/sindresorhus/refined-githu
 
 ## 5. Extend Composer Scripts from CLI
 
-Have you read the classic post [Have you tried Composer Scripts? You may not need Phing](https://blog.martinhujer.cz/have-you-tried-composer-scripts/)? I love this approach for simple scripts like coding standard and static analysis:
+Have you read the classic post [Have you tried Composer Scripts? You may not need Phing](https://blog.martinhujer.cz/have-you-tried-composer-scripts)? I love this approach for simple scripts like coding standard and static analysis:
 
 ```json
 {

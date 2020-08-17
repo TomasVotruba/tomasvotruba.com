@@ -15,7 +15,7 @@ I'm not writing this post because I use Symfony in my projects and love the comm
 
 - from Laravel to Symfony
 - from Lumen to Symfony
-- [from Nette to Symfony](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/)
+- [from Nette to Symfony](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1)
 - from Zend to Symfony
 
 It's possible and in a small fraction of costs of manual work, but "why not" is a very poor argument. That's like taking cocaine because it gives you more energy. Life is not about solutions, it's about trade-offs. I'd like to inform you about the cons of such migration, so you can decide with more solid arguments on both sides.
@@ -94,7 +94,7 @@ Correct me if I'm wrong, but Symfony is **the only PHP framework that has [predi
     <img src="/assets/images/posts/2019/lose-symfony/stable.png" class="img-thumbnail">
 </div>
 
-I wrote about the importance of leader stability for the rest ecosystem in [What Can You Learn from Menstruation and Symfony Releases](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/).
+I wrote about the importance of leader stability for the rest ecosystem in [What Can You Learn from Menstruation and Symfony Releases](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases).
 
 ### You're Informed about Important Stuff
 
@@ -116,7 +116,7 @@ There are no numbers to describe this, yet I find it the most important pillar o
 
 I had many arguments with [Nicolas Grekas](https://github.com/nicolas-grekas) about parameters, console or dependency injection features. In the end, there is always someone who decides to go for it or stops it, there must be so it's not chaos. Was I always happy about the decision? No. **But I always feel respected. These discussions also help me to have a bigger picture and eventual implement the feature myself in a package.**
 
-Sometimes I created a package, people found it useful and in a year or two, it becomes implemented in Symfony core. Then I could deprecate them, like [these Symplify packages in Symfony 3.3](/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33/):
+Sometimes I created a package, people found it useful and in a year or two, it becomes implemented in Symfony core. Then I could deprecate them, like [these Symplify packages in Symfony 3.3](/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33):
 
 <div class="text-center">
     <img src="/assets/images/posts/2017/symplify-deprecations/pr-notes.png" class="img-thumbnail">
@@ -129,7 +129,7 @@ I love how Symfony is ruled by decisions makers, but at the same time **is opene
 The best thing is, it's not just marketing, it's not a well-bended lie, it's not a way to get money from you then say goodbye.
 It's a company setting, that you can feel in the atmosphere of Symfony conference.
 
-When I was at my first [SymfonyCon in Paris 2015](https://pariscon2015.symfony.com/), there was a keynote by Fabien Potencier (Symfony founder and CEO) about "10 Years of Symfony". I thought it will be one of these boring self-promo talks about how is Symfony awesome and what it does and how big projects it runs.
+When I was at my first [SymfonyCon in Paris 2015](https://pariscon2015.symfony.com), there was a keynote by Fabien Potencier (Symfony founder and CEO) about "10 Years of Symfony". I thought it will be one of these boring self-promo talks about how is Symfony awesome and what it does and how big projects it runs.
 
 Instead, Fabien **named people**, who contributed to Symfony in any way, **one by one and invited them to the stage, including his family**.
 

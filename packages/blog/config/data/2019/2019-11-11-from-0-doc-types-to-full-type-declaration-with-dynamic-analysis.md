@@ -2,7 +2,7 @@
 id: 225
 title: "From 0 Doc Types to Full Type Declaration with Dynamic Analysis"
 perex: |
-    I wrote [How we Completed Thousands of Missing @var Annotations in a Day](/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day/). If you have at least some annotations, you can use Rector to do the dirty work.
+    I wrote [How we Completed Thousands of Missing @var Annotations in a Day](/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day). If you have at least some annotations, you can use Rector to do the dirty work.
     <br>
     <br>
     To be honest, open-source is the top 1 % code there is, but out **in the wild of ~~legacy~~ established PHP companies, it's a miracle to see just one `string` type declaration**.
@@ -18,7 +18,7 @@ updated_message: |
     Updated Rector YAML to PHP configuration, as current standard.
 ---
 
-I had a great trip with a friend of mine [Dave Liddament](https://github.com/DaveLiddament) after [PHP Day 2019 in Verona](https://2019.phpday.it/). During Venice sightseeing in beautiful wild rain, we had a short coffee break to talk about Rector. Dave was amazed by what Rector can do for the developer, with such a few lines of YAML config.
+I had a great trip with a friend of mine [Dave Liddament](https://github.com/DaveLiddament) after [PHP Day 2019 in Verona](https://2019.phpday.it). During Venice sightseeing in beautiful wild rain, we had a short coffee break to talk about Rector. Dave was amazed by what Rector can do for the developer, with such a few lines of YAML config.
 
 As a proper curious developer, **he challenged me with series** of "Can it do...?" or "How can it...?" questions.
 

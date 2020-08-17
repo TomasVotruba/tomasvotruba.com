@@ -11,7 +11,7 @@ tweet_image: "/assets/images/posts/2018/monorepo-split/found-keys.jpg"
 
 It's great to be alive in this era. We have solved maintaining multiple repositories, even merge migration of their git history to one repository. Creating huge code bases was more never cost effective and never had a steeper learning curve.
 
-The same way it was never easier to drive an autonomous car. You just sit in the car, press the button of your destination, and Tesla will drive you there when you check all the news on [/r/PHP](https://www.reddit.com/r/PHP/).
+The same way it was never easier to drive an autonomous car. You just sit in the car, press the button of your destination, and Tesla will drive you there when you check all the news on [/r/PHP](https://www.reddit.com/r/PHP).
 
 Well, the monorepo paradigm is not there yet but it's getting there.
 
@@ -89,7 +89,7 @@ That could do, right? At least from a [developer's experience](https://symfony.c
 
 <br>
 
-But what would [security expert Michal Špaček](https://www.michalspacek.com/) say to lousy code like that?
+But what would [security expert Michal Špaček](https://www.michalspacek.com) say to lousy code like that?
 
 <img src="/assets/images/posts/2018/monorepo-split/found-keys.jpg" class="img-thumbnail">
 
@@ -116,7 +116,7 @@ Don't worry, Github and Travis thought about these cases - with a hashed `GITHUB
 
 First, you need to create a custom token, that will authorize access to your Github repositories from any command line where it will be used.
 
-Read [the Github docs](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) or use **tl;dr;**:
+Read [the Github docs](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line) or use **tl;dr;**:
 
 - Go to your [Github Tokens](https://github.com/settings/tokens)
 - Click *Generate new token*
@@ -141,7 +141,7 @@ In the end, it should look like this:
     <img src="/assets/images/posts/2018/monorepo-split/token-after.png" class="img-thumbnail">
 </div>
 
-*If you got lost in this tl;dr;s, try [this nice post with so many screenshots](https://developer.ibm.com/recipes/tutorials/separating-continuous-integration-from-continuous-deployment-using-github-and-travis-ci/).*
+*If you got lost in this tl;dr;s, try [this nice post with so many screenshots](https://developer.ibm.com/recipes/tutorials/separating-continuous-integration-from-continuous-deployment-using-github-and-travis-ci).*
 
 ### GitHub and Travis Protects You
 

@@ -12,7 +12,7 @@ tweet: "New Post on my Blog: Why Softare Articles Must be CI tested          #su
 tweet_image: "/assets/images/posts/2019/tested-article/covered.png"
 ---
 
-Do you know [Awesome lists](https://github.com/sindresorhus/awesome/)? If not, go to check them. They collect best sources about a certain topic. When I try to learn something new, I usually start on Github looking for "awesome <technology>". I recommend at least briefly to check them.
+Do you know [Awesome lists](https://github.com/sindresorhus/awesome)? If not, go to check them. They collect best sources about a certain topic. When I try to learn something new, I usually start on Github looking for "awesome <technology>". I recommend at least briefly to check them.
 
 The idea behind Awesome list is to have resources that:
 
@@ -23,7 +23,7 @@ The idea behind Awesome list is to have resources that:
 
 ## How "Awesome Doctrine" was Born
 
-When I was working with Nette, I met **Doctrine ORM** thanks to [Filip Procházka](https://filip-prochazka.com/) and his great [Kdyby](https://github.com/Kdyby) open-source boom.
+When I was working with Nette, I met **Doctrine ORM** thanks to [Filip Procházka](https://filip-prochazka.com) and his great [Kdyby](https://github.com/Kdyby) open-source boom.
 
 One day I decided to learn more about Doctrine. Documentation looked like a manual for experts rather than something I could learn from. I was also curious **how people use Doctrine in real applications, how to overcome performance issues, some cool features and pro tips**.
 
@@ -42,7 +42,7 @@ I was lucky to find many articles about Doctrine. One about Filters, others abou
 
 So I liked the concept in article and wanted to use it, but I didn't know what is different in version 2.4. I closed it.
 
-I also read [Czech series on Zdroják](https://www.zdrojak.cz/clanky/doctrine-2-uvod-do-systemu/) written by [Jan Tichy](https://www.jantichy.cz/). It could give me great insights, but it was about Doctrine 2-beta. I closed it.
+I also read [Czech series on Zdroják](https://www.zdrojak.cz/clanky/doctrine-2-uvod-do-systemu) written by [Jan Tichy](https://www.jantichy.cz). It could give me great insights, but it was about Doctrine 2-beta. I closed it.
 
 
 ### What to put in the list?

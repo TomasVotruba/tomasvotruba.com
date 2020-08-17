@@ -2,7 +2,7 @@
 id: 240
 title: "How Many Days of Technical Debt Has your PHP Project"
 perex: |
-    Every project has technical dept. But how would you measure it? With [cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/)? The age of the framework? Any other guess?
+    Every project has technical dept. But how would you measure it? With [cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you)? The age of the framework? Any other guess?
     <br>
     <br>
     This year I've started to use CI service, which tells you the number in days. And it works pretty well... how many days Rector has? Keep on learning.
@@ -23,13 +23,13 @@ When I first analyzed Rector, **top 5 worst classes had these in common**:
 - classes of length 200-500 lines
 - pain points I knew were there, but I was afraid to do something about it
 
-As the first experiment, I picked a class that had **5 hours and 40 minutes** of technical debt, and I gradually converted it to [collector pattern](/blog/2018/06/14/collector-pattern-for-dummies/).
+As the first experiment, I picked a class that had **5 hours and 40 minutes** of technical debt, and I gradually converted it to [collector pattern](/blog/2018/06/14/collector-pattern-for-dummies).
 
 Do you want to see **real code**? Look at [this PR with `NodeTypeResolver` decoupling to 10 new classes](https://github.com/rectorphp/rector/pull/2767/files#diff-23d92ff042a5c83870af8b8d30bbdd8d).
 
 ## I Thought Removing Legacy Would be Fun...
 
-...but removing my legacy code was rather painful. I had to [load huge methods](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) to my working memory, think about relations of huge monolithic class and try to split into the smallest standalone pieces.
+...but removing my legacy code was rather painful. I had to [load huge methods](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you) to my working memory, think about relations of huge monolithic class and try to split into the smallest standalone pieces.
 
 **After 3 hours of work, I was exhausted**, but CI was passing, and the god class was gone. I pushed my work, merged the PR to the `master`, and waited for SonarCloud analysis... **from 5:40 I got into 2:40**. What?
 
@@ -204,7 +204,7 @@ I tried many paths, but I'm not aware of any specific solution for this. **Delet
 
 <br>
 
-**Now you see your weakest points and [Fight the Hydra](https://joshkaufman.net/how-to-fight-a-hydra/) with courage!**
+**Now you see your weakest points and [Fight the Hydra](https://joshkaufman.net/how-to-fight-a-hydra) with courage!**
 
 <br>
 

@@ -36,7 +36,7 @@ So in general, to build applications where you:
 
 Before diving into our first Command, there is an essential rule that I want to share with you. In many tutorials, you find business logic inside Commands. That is convenient in the begging, but challenging to unlearn later, building more commands.
 
-When I wrote *commands is something like Presenter or Controller*, I talked about [Delegator Pattern](/blog/2018/01/08/clean-and-decoupled-controllers-commands-and-event-subscribers-once-and-for-all-with-delegator-pattern/). Like Controller, **it should only delegate arguments to other services and return the result to the output**.
+When I wrote *commands is something like Presenter or Controller*, I talked about [Delegator Pattern](/blog/2018/01/08/clean-and-decoupled-controllers-commands-and-event-subscribers-once-and-for-all-with-delegator-pattern). Like Controller, **it should only delegate arguments to other services and return the result to the output**.
 
 This rule will help you to **avoid**:
 

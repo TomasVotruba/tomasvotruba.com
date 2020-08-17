@@ -2,7 +2,7 @@
 id: 61
 title: "What can You Learn from Menstruation and Symfony Releases"
 perex: |
-    I [wrote about monorepo and how it turned me into lazy programmer](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/) before.
+    I [wrote about monorepo and how it turned me into lazy programmer](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness) before.
     <br><br>
     As monorepo is use [more and more](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0), we should look at it again.
     Today from a bit atypical point of view: **combined with bit of blood and sunshine**.
@@ -16,7 +16,7 @@ tweet_image: "/assets/images/posts/2017/menstruation/together.png"
 
 ## ~~Technical~~ Natural Releases
 
-We will look on release management. Non from traditional technical point of view that is already described in [semantic versioning](http://semver.org/), [Symfony BC Promise](https://symfony.com/doc/current/contributing/code/bc.html) etc., but rather from view of *nature*.
+We will look on release management. Non from traditional technical point of view that is already described in [semantic versioning](http://semver.org), [Symfony BC Promise](https://symfony.com/doc/current/contributing/code/bc.html) etc., but rather from view of *nature*.
 
 **Why?** When I'm stuck with complicated architectural problem and can't figure it out, I take a break and **go for a walk**. **Just observing world around me**, absorbing inspiration without expectations - *serendipity*.
 
@@ -66,7 +66,7 @@ You **know** when the winter comes or when **your spouse needs more attention an
 
 <img src="/assets/images/posts/2017/menstruation/symfony.jpg" class="img-thumbnail">
 
-I first realized this at Fabien's talk about Symfony new release cycle on [SymfonyCon Paris 2015](https://pariscon2015.symfony.com/):
+I first realized this at Fabien's talk about Symfony new release cycle on [SymfonyCon Paris 2015](https://pariscon2015.symfony.com):
 
 - **Major versions every 2 years, minor every 6 months.**
 
@@ -91,7 +91,7 @@ I think they're doing **the right thing** right.
 
 ## Why We Should Menstruate Together?
 
-We're getting back to software releases and monorepo. (If you see term *monorepo* first time, read [this legendary post by *danluu*](http://danluu.com/monorepo/)).
+We're getting back to software releases and monorepo. (If you see term *monorepo* first time, read [this legendary post by *danluu*](http://danluu.com/monorepo)).
 
 Some people say that big disadvantage of monorepo is that **they have to tag their packages all together** (like Symfony) even if nothing changed in any of them.
 
@@ -185,7 +185,7 @@ And what if every package has it's own destiny?
 
 ## Call Out to Package Maintainers
 
-All this is not related just to Symfony, Doctrine, Nette or any [other big PHP players](https://gophp71.org/) like Zend, Laravel, CakePHP or Yii.
+All this is not related just to Symfony, Doctrine, Nette or any [other big PHP players](https://gophp71.org) like Zend, Laravel, CakePHP or Yii.
 
 **Every package, every dependency that has own versioning system means increased work PHP developers**. That's stands if you agree with cycles or not. **Version C** being the easiest to upgrade and version **A** being the most difficult and also the most expensive.
 

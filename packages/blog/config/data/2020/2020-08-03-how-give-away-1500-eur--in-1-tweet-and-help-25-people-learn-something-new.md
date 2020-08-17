@@ -15,7 +15,7 @@ I love helping others in a way that helps them grow. In a feedback loop, their g
 
 - corona stuff, it hit many people very hard, with less work, income, and option to live a decent life
 - I saw [Jamie](https://twitter.com/_braindev/status/1276483109165416449) giving away in June - thank you, Jamie, for inspiration!
-- accidentally, I listed to an intense podcast with [Derek Sivers](https://sive.rs/), that dropped a reference to - [Give and Take](https://www.amazon.com/Give-and-Take-Adam-Grant-audiobook/dp/B07F7F8NL5/) - from the title I assumed it was a book about business and financial matters, but in the end, it gave me more insight how easy and inspiring is to give
+- accidentally, I listed to an intense podcast with [Derek Sivers](https://sive.rs), that dropped a reference to - [Give and Take](https://www.amazon.com/Give-and-Take-Adam-Grant-audiobook/dp/B07F7F8NL5) - from the title I assumed it was a book about business and financial matters, but in the end, it gave me more insight how easy and inspiring is to give
 
 It **felt right**, so I thought...
 
@@ -103,7 +103,7 @@ Last but not least, I'd like to **thank everyone who retweeted only to spread th
 
 - Many courses **don't allow buying a gift**. You have to contact support and ask if they can configure it in the database to some other email than the one you paid it from. It can be a nightmare, which is not what you want if you want to give away.
 
-- Saying that, pick a **set of courses that have an easy way to buy gifts**: [Udemy](https://www.udemy.com/) and [Laracasts](https://laracasts.com/gift-certificates) were very helpful. Also, you can configure the invoice easily.
+- Saying that, pick a **set of courses that have an easy way to buy gifts**: [Udemy](https://www.udemy.com) and [Laracasts](https://laracasts.com/gift-certificates) were very helpful. Also, you can configure the invoice easily.
 
 - The two days limit to retweet was too much. It spread too far, and it was pretty hard to pick five winners out of 1 000 people. I'd go with [Jamie's strategy with **limit of couple of hours**](https://twitter.com/_braindev/status/1276483109165416449)
 

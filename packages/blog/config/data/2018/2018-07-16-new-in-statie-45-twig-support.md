@@ -2,7 +2,7 @@
 id: 123
 title: "New in Statie 4.5: Twig Support"
 perex: |
-    Statie supports YAML and Symfony Dependency Injection for some time. But you wanted more! **You wanted Twig**. Sculpin and all [the other PHP Static Website generators](https://www.staticgen.com/) have it.
+    Statie supports YAML and Symfony Dependency Injection for some time. But you wanted more! **You wanted Twig**. Sculpin and all [the other PHP Static Website generators](https://www.staticgen.com) have it.
     <br><br>
     So there you go! Enjoy
 tweet: "New Post on my Blog: New in #Statie 4.5: #Twig Support"
@@ -109,7 +109,7 @@ All files in `_layouts` and `_snippets` are now referenced by **they full relati
 +{% include "_snippets/postMetadata.twig" %}
 ```
 
-Do you use [Generators](https://www.statie.org/docs/generators/)? Don't forget to upgrade them too:
+Do you use [Generators](https://www.statie.org/docs/generators)? Don't forget to upgrade them too:
 
 ```diff
  parameters:
@@ -138,6 +138,6 @@ Again, check these diffs, so you have the idea **how big that change really is**
 - [tomasvotruba.com](https://github.com/TomasVotruba/tomasvotruba.com/pull/380/files)
 - [Pehapkari.cz](https://github.com/pehapkari/pehapkari.cz/pull/486/files)
 
-I feel you. You can stay with Latte until... just kidding. That's a lot of work, right? Well, I'm not that hardworking, don't worry. I'm a lazy bastard, so I made [a package for Latte to Twig migration](/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions/).
+I feel you. You can stay with Latte until... just kidding. That's a lot of work, right? Well, I'm not that hardworking, don't worry. I'm a lazy bastard, so I made [a package for Latte to Twig migration](/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions).
 
 Enjoy!

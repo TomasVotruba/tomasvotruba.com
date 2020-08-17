@@ -9,13 +9,13 @@ perex: |
      "How many senior developers does your company have?"
     <br>
     <br>
-    These and similar questions come to appear when you're looking for a job. The IT market says it needs more senior developers. 
+    These and similar questions come to appear when you're looking for a job. The IT market says it needs more senior developers.
     <br><br>
-    I think there is more than enough. What we need are **senior codebases**.  
+    I think there is more than enough. What we need are **senior codebases**.
 tweet: "New Post on #php 🐘 blog: We Do Not Need Senior Developers, We Need Senior Codebases"
 ---
 
-Let's say we have 2 companies. 
+Let's say we have 2 companies.
 
 <br>
 
@@ -25,7 +25,7 @@ Let's say we have 2 companies.
 - 3 junior developers
 - 1 senior developer
 
-<br> 
+<br>
 
 **Company B** has:
 
@@ -92,14 +92,14 @@ The company also had expectations. John told them he's a senior developer, but h
 
 ## We Forget What's the Most Important
 
-We talked about junior, senior developers, teaching, experience, expectations, humans... 
+We talked about junior, senior developers, teaching, experience, expectations, humans...
 Everything was so lovely and shiny at the start. We had a great team of great developers that were joined by another great developer.
 
 **Where did it go wrong? What have we missed?**
 
-## Maturity of The Codebase  
+## Maturity of The Codebase
 
-People can make you feel better, and coffee might be good, the office might be on the highest floor with a beautiful and sunny view, your salary can be the highest you've ever seen. **But how does it relate to your everyday work?* 
+People can make you feel better, and coffee might be good, the office might be on the highest floor with a beautiful and sunny view, your salary can be the highest you've ever seen. **But how does it relate to your everyday work?*
 
 You're not going to enjoy a coffee while watching over your city from the glass-floor view all day, you're going to work with the codebase.
 
@@ -110,7 +110,7 @@ That's why before I say I'll cooperate with any company, **I need to see the cod
 Instead of asking 3 questions at the top of this post, we should focus on:
 
 - "How mature is your codebase?"
-- "From *junior* = spaghetti code with no rules to *senior* = DI, finalized classes with CI that checks everything that can be checked and [handles code-review](/blog/2019/11/18/how-to-delegate-code-reviews-to-ci/), the newest PHP and version of your favorite framework... where does the codebase stand?"
+- "From *junior* = spaghetti code with no rules to *senior* = DI, finalized classes with CI that checks everything that can be checked and [handles code-review](/blog/2019/11/18/how-to-delegate-code-reviews-to-ci), the newest PHP and version of your favorite framework... where does the codebase stand?"
 - "How do I fit into that level with my level of expertise?"
 
 <br>
@@ -119,7 +119,7 @@ Instead of asking 3 questions at the top of this post, we should focus on:
 
 The most companies I met **have junior codebases, but they look for senior developers**. That's wrong and will lead mostly to John's story with its unhappy ending.
 
-**Junior developers can work with junior codebase** because they're not being slowed down by codebase that is lower than their skill. 
+**Junior developers can work with junior codebase** because they're not being slowed down by codebase that is lower than their skill.
 
 When senior developers are hired to orientate in a terrible codebase, they can't apply their experience with clean code, and they can't build a robust application with their high standards. They have to dig through the legacy code and try to fix leaking pipes.
 
@@ -129,9 +129,9 @@ When senior developers are hired to orientate in a terrible codebase, they can't
     Monkey see, monkey doo.
 </blockquote>
 
-That's how our brain works; we're just like monkeys. We come to a new project, and we instinctively copy patterns we see. If there are [broken windows all over the code](https://blog.codinghorror.com/the-broken-window-theory/), we make more broken windows.
+That's how our brain works; we're just like monkeys. We come to a new project, and we instinctively copy patterns we see. If there are [broken windows all over the code](https://blog.codinghorror.com/the-broken-window-theory), we make more broken windows.
 
-Some people join your team, some people stay for a long time enough to be called *seniors*, and some will leave. **The codebase remains** as long as your company exists. That's why it deserves the best treatment. 
+Some people join your team, some people stay for a long time enough to be called *seniors*, and some will leave. **The codebase remains** as long as your company exists. That's why it deserves the best treatment.
 
 People learn from your codebase, it's their best teacher.
 
@@ -143,7 +143,7 @@ Let's say you have 2 teachers in your life.
 
 - is teaching children for 5 years
 - always worked in the same school
-- went to university 
+- went to university
 - wears a suit
 - makes a great coffee
 
@@ -156,7 +156,7 @@ Let's say you have 2 teachers in your life.
 - has 80% test coverage
 - sleeps well, because CI works for them
 - tries to be better every day
-- exercises and eats healthy food, so their insides look good  
+- exercises and eats healthy food, so their insides look good
 - you learn just by looking at how they do things
 
 
@@ -172,4 +172,4 @@ Take care of your codebase, and your codebase will take care of you when you're 
 
 <br>
 
-Happy coding! 
+Happy coding!

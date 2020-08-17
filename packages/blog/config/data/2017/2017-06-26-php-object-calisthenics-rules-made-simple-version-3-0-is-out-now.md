@@ -12,7 +12,7 @@ deprecated_since: "December 2018"
 deprecated_message: |
     In time and after years of use, these rules seems rather "academic". They're not helpful and shifts developer's focus too close to each code character. **They need to have broader overview of code as whole instead.**
 
-    **Nowadays I shifted to 1 much better metric - [Cognitive Complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/).**
+    **Nowadays I shifted to 1 much better metric - [Cognitive Complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you).**
 
 updated_since: "August 2020"
 updated_message: |
@@ -54,7 +54,7 @@ You can run this locally or put to your CI and you are ready to go.
 
 ## Fancy Readme With Examples
 
-We put lots of work to README for the new release. It isn't a long text describing what exactly the rule does and how it originated - there is already [a blog post for that](http://williamdurand.fr/2013/06/03/object-calisthenics/).
+We put lots of work to README for the new release. It isn't a long text describing what exactly the rule does and how it originated - there is already [a blog post for that](http://williamdurand.fr/2013/06/03/object-calisthenics).
 
 Instead, README goes right to the point:
 

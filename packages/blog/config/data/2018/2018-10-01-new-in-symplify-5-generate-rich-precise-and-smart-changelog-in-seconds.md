@@ -2,7 +2,7 @@
 id: 144
 title: "New in Symplify 5: Generate Rich, Precise and Smart Changelog in Seconds"
 perex: |
-    ChangelogLinker started as a small tool to complete links to PRs, authors, and versions in `CHANGELOG.md`. Then it started to [generate](/blog/2018/06/25/let-changelog-linker-generate-changelog-for-you/) the `CHANGELOG.md`.
+    ChangelogLinker started as a small tool to complete links to PRs, authors, and versions in `CHANGELOG.md`. Then it started to [generate](/blog/2018/06/25/let-changelog-linker-generate-changelog-for-you) the `CHANGELOG.md`.
      <br><br>
      **Where is now and how to start using it?**
 tweet: "New Post on my Blog: New in #Symplify 5: #ChangelogLinker - Generate Rich, Precise and Smart #Changelog in Seconds    #git #github #api #regex"
@@ -23,7 +23,7 @@ tweet: "New Post on my Blog: New in #Symplify 5: #ChangelogLinker - Generate Ric
 
 The first version of any software is how the author(s) think people will use it. It's like trying to see the future of people you've never met. That's why the first version is **better done than perfect**. The important part is to **collect feedback as soon as possible and improve based** on it.
 
-Saying that I recommended ChangelogLinker to Shopsys to manage news in their [monorepo](https://github.com/shopsys/shopsys/). In exchange, I got informative and clear feedback with creative ideas on how to solve it from [Rostislav Vitek](https://github.com/vitek-rostislav) and [Petr Heinz](https://github.com/petrheinz). **Huge thanks for making this tool better belongs to you guys**.
+Saying that I recommended ChangelogLinker to Shopsys to manage news in their [monorepo](https://github.com/shopsys/shopsys). In exchange, I got informative and clear feedback with creative ideas on how to solve it from [Rostislav Vitek](https://github.com/vitek-rostislav) and [Petr Heinz](https://github.com/petrheinz). **Huge thanks for making this tool better belongs to you guys**.
 
 <br>
 
@@ -115,7 +115,7 @@ When you generate a `CHANGELOG.md` you can use `--in-categories` option:
 vendor/bin/changelog-linker dump-merges --in-categories
 ```
 
-It will assign PRs to one of 4 categories: *Added*, *Fixed*, *Changed* and *Removed*. I didn't make them up, it's a standard taken from [keepachangelog.com](https://keepachangelog.com/en/1.0.0/).
+It will assign PRs to one of 4 categories: *Added*, *Fixed*, *Changed* and *Removed*. I didn't make them up, it's a standard taken from [keepachangelog.com](https://keepachangelog.com/en/1.0.0).
 
 **How it works?** It uses regex to detect keywords in the pull-request title, e.g.
 

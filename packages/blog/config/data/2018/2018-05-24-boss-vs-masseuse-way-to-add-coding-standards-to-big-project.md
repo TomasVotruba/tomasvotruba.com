@@ -16,7 +16,7 @@ It's very rare that projects have coding standards right from the first line. Th
 
 Saying that **the most projects need and then add coding standards when they grow up to a large code base**.
 
-The most [popularized way](https://akrabat.com/checking-your-code-for-psr-2/) to do this is:
+The most [popularized way](https://akrabat.com/checking-your-code-for-psr-2) to do this is:
 
 ```bash
 composer require squizlabs/php_codesniffer --dev
@@ -39,7 +39,7 @@ How to make this first experience better? Start slowly, one touch at a time, lik
 
 ### 1. Install Your Favoring Coding Standard Tool
 
-For me, it's obviously [ECS](https://github.com/symplify/easy-coding-standard/):
+For me, it's obviously [ECS](https://github.com/symplify/easy-coding-standard):
 
 ```bash
 composer require symplify/easy-coding-standard --dev
@@ -56,7 +56,7 @@ This is the most important step. This checker should be
 
 ### 3. Make it Pass Without Any Code Change
 
-Last week a [Cognitive Complexity Rule](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) was published there was [very positive feedback](https://github.com/symplify/symplify/issues/834) on it.
+Last week a [Cognitive Complexity Rule](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you) was published there was [very positive feedback](https://github.com/symplify/symplify/issues/834) on it.
 
 **If your coding standard should have only 1 rule - this is the one.**
 

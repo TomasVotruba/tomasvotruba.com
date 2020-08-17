@@ -200,7 +200,7 @@ What can you do about it?
 Well, in complicated times of circular dependencies, public property override and service juggling, it helps to get back to the basics: **what is the best use case for `@required`/`@inject`?**
 
 - Getting a dependency? **No**
-- [Eliminating visual dept](https://ocramius.github.io/blog/eliminating-visual-debt/)? **No**
+- [Eliminating visual dept](https://ocramius.github.io/blog/eliminating-visual-debt)? **No**
 - Using the *my-favorite* framework the fullest? **No**
 
 Why add such a feature, if there is no reason to use it?
@@ -227,9 +227,9 @@ class Barbar extends Foobar
 ```
 
 
-You can also find other [sources in English](https://www.rhyous.com/2016/09/27/constructor-injection-hell/).
+You can also find other [sources in English](https://www.rhyous.com/2016/09/27/constructor-injection-hell).
 
-But programmers don't know about constructor injection hell. Why? Simply because there [was no exception in the code, when they used `@inject`](https://blog.codinghorror.com/the-just-in-time-theory/). We just use features that were given to us by the framework.
+But programmers don't know about constructor injection hell. Why? Simply because there [was no exception in the code, when they used `@inject`](https://blog.codinghorror.com/the-just-in-time-theory). We just use features that were given to us by the framework.
 
 <blockquote class="blockquote text-center">
     "Everything which is not forbidden,

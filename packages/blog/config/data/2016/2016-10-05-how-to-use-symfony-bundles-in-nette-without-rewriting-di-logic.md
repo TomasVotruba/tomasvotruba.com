@@ -29,10 +29,10 @@ That's why you see "double" integrations for 3rd party packages like:
 
 **[Doctrine\Migrations](https://github.com/doctrine/migrations)**
 
-- for Symfony: [Doctrine/DoctrineMigrationsBundle](https://github.com/doctrine/DoctrineMigrationsBundle/)
+- for Symfony: [Doctrine/DoctrineMigrationsBundle](https://github.com/doctrine/DoctrineMigrationsBundle)
 - for Nette: [Zenify/DoctrineMigrations](https://github.com/Zenify/DoctrineMigrations)
 
-**[MessageBus - CQRS](http://docs.simplebus.io/)**
+**[MessageBus - CQRS](http://docs.simplebus.io)**
 
 - for Symfony: [SimpleBus/SymfonyBridge](https://github.com/SimpleBus/SymfonyBridge)
 - for Nette: [newPOPE/Nette-CQRS-Commands](https://github.com/newPOPE/Nette-CQRS-Commands)

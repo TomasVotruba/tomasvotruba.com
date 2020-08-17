@@ -2,7 +2,7 @@
 id: 83
 title: "Neon vs. Yaml and How to Migrate Between Them"
 perex: |
-    Do you know `*.neon` format? It's config file format created in Czech Republic by [David Grudl](https://davidgrudl.com/) (author of [Nette](https://github.com/nette/nette)) and if you're foreigner, you might know it from or [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/) and [PHPStan](https://github.com/phpstan/phpstan). Even suggested as [`composer.neon`](https://github.com/composer/composer/issues/3228).
+    Do you know `*.neon` format? It's config file format created in Czech Republic by [David Grudl](https://davidgrudl.com) (author of [Nette](https://github.com/nette/nette)) and if you're foreigner, you might know it from or [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) and [PHPStan](https://github.com/phpstan/phpstan). Even suggested as [`composer.neon`](https://github.com/composer/composer/issues/3228).
     <br><br>
     And `*.yaml` is similar format used almost everywhere else.
     <br><br>
@@ -47,8 +47,8 @@ items:
 
 Of course you can Google documentation and try to understand it. But documentation is  incomplete or for older version than you use. **The best way to learn it for me is** with online parsers:
 
-- [ne-on.org](https://ne-on.org/)
-- [yaml-online-parser.appspot.com](http://yaml-online-parser.appspot.com/)
+- [ne-on.org](https://ne-on.org)
+- [yaml-online-parser.appspot.com](http://yaml-online-parser.appspot.com)
 
 <br>
 

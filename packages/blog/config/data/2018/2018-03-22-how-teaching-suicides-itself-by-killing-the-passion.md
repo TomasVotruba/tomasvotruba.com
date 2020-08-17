@@ -2,7 +2,7 @@
 id: 85
 title: "How Teaching Suicides Itself by Killing the Passion"
 perex: |
-    Today I wanted to write about Rector showcase how to use it to [automate migration to Repository as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/).
+    Today I wanted to write about Rector showcase how to use it to [automate migration to Repository as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony).
     <br><br>
     Instead I read [Teaching PHP to students](https://medium.com/@romaninsh/teaching-php-to-students-with-atk-500d50b49391) by Romans Malinovskis that got me thinking how outside education can easily kill any piece passion in children.
     <br><br>
@@ -10,7 +10,7 @@ perex: |
 tweet: "New Post on my Blog: How Education Shots its Leg by Killing Passion"
 ---
 
-This started as reply to the post and I got literally on fire while writing it. Fire I want to share with you. It's not any [critique](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer/) to the post, it's the way I see the world.
+This started as reply to the post and I got literally on fire while writing it. Fire I want to share with you. It's not any [critique](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer) to the post, it's the way I see the world.
 
 <br>
 

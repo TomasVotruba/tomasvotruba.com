@@ -20,7 +20,7 @@ deprecated_message: |
     `@inject` refactoring was replaced by `AnnotatedPropertyInjectToConstructorInjectionRector` from [Rector](https://github.com/rectorphp/rector).
 ---
 
-I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
+I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
 
 **Symplify Coding standard is complete opposite.** You can start with 1st checker today and your code will be probably able to handle it. It's combination of 40+ Code Sniffer Sniffs, PHP CS Fixer Fixers and PHPStan rules.
 
@@ -84,13 +84,13 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 **Note: this Symplify rule was replace by more advanced Rector rule, that also checks for child classes.**
 
-Once I read [When to declare classes final](https://ocramius.github.io/blog/when-to-declare-classes-final) by [Marco Pivetta](http://ocramius.github.io/) with **tl;dr;**:
+Once I read [When to declare classes final](https://ocramius.github.io/blog/when-to-declare-classes-final) by [Marco Pivetta](http://ocramius.github.io) with **tl;dr;**:
 
 <blockquote class="blockquote text-center mt-5 mb-5">
     "Make your classes always final, if they implement an interface, and no other public methods are defined."
 </blockquote>
 
-I was working at [Lekarna.cz](https://www.lekarna.cz/) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and had lots of code reviews. **So I made a sniff to save us some work.**
+I was working at [Lekarna.cz](https://www.lekarna.cz) in that time (finally shipped in the beginning of August, congrats guys!) and we used a lot of interfaces and had lots of code reviews. **So I made a sniff to save us some work.**
 
 <em class="fas fa-lg fa-times text-danger"></em>
 
@@ -144,7 +144,7 @@ vendor/bin/rector process src
 
 ### Sold? Try Them
 
-They are used the best with [EasyCodingStandard](/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/):
+They are used the best with [EasyCodingStandard](/blog/2017/08/07/7-new-features-in-easy-coding-standard-22):
 
 ```bash
 composer require --dev symplify/easy-coding-standard symplify/coding-standard

@@ -10,11 +10,11 @@ perex: |
 tweet: "A new Post on #php 🐘 blog: How to Instantly Migrate #nettefw Tester to #phpunit"
 ---
 
-*If you don't know [Tester](https://tester.nette.org/en/), is a PHP unit test framework created in the Czech Republic.*
+*If you don't know [Tester](https://tester.nette.org/en), is a PHP unit test framework created in the Czech Republic.*
 
 <br>
 
-In the last post we looked on [instant migration of PhpSpec to PHPUnit](/blog/2019/03/21/how-to-instantly-migrate-phpspec-to-phpunit/).
+In the last post we looked on [instant migration of PhpSpec to PHPUnit](/blog/2019/03/21/how-to-instantly-migrate-phpspec-to-phpunit).
 
 PhpSpec has a different architecture than PHPUnit - e.g.
 

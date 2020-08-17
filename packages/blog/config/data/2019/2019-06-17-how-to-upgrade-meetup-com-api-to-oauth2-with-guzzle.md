@@ -5,7 +5,7 @@ perex: |
     I got an email from Meetup.com 5 days ago, that basically every API request will be paid since August 15, 2019. **$ 30/month**, that's like my phone bill.
     <br>
     <br>
-     **95 % of data on [Friends Of Php](https://friendsofphp.org/) depend on Meetup.com API** - updated daily. The website is free, so it might kill the content or I'd have to move to crawlers and hope for the lack of protection on Meetup.com against them.
+     **95 % of data on [Friends Of Php](https://friendsofphp.org) depend on Meetup.com API** - updated daily. The website is free, so it might kill the content or I'd have to move to crawlers and hope for the lack of protection on Meetup.com against them.
     <br>
     <br>
     **Unless we use Oauth2 before August 15**. I never used it, but how hard that can be, right?
@@ -14,9 +14,9 @@ tweet: "New Post on #php 🐘 blog: How to upgrade #Meetupcom API to #OAuth2 wit
 
 There is no information about Meetup.com API upgrade on [their blog](https://medium.com/meetup), so I'll share the email to give you an idea:
 
-- API Keys will be replaced by OAuth: We will be removing API keys on August 15, 2019 and requiring you to [authenticate with OAuth](https://www.meetup.com/meetup_api/auth/).
+- API Keys will be replaced by OAuth: We will be removing API keys on August 15, 2019 and requiring you to [authenticate with OAuth](https://www.meetup.com/meetup_api/auth).
 
-- Move to OAuth soon for continued free API access: Until August 15, members will be able [to apply for OAuth access](https://www.meetup.com/meetup_api/auth/) free of charge. **After August 15, anyone who wants to apply for API access through OAuth will need to have a [Meetup Pro account](https://www.meetup.com/pro/) in order to do so**.
+- Move to OAuth soon for continued free API access: Until August 15, members will be able [to apply for OAuth access](https://www.meetup.com/meetup_api/auth) free of charge. **After August 15, anyone who wants to apply for API access through OAuth will need to have a [Meetup Pro account](https://www.meetup.com/pro) in order to do so**.
 
 <br>
 
@@ -40,7 +40,7 @@ Why would you put the newest content first, right? You know, like on Twitter, Fa
 <img src="/assets/images/posts/2019/oauth2/old_first.png" class="img-thumbnail">
 
 If you write a code that other people read, you should read [The Design of Everyday Things](
-https://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/1452654123) or [Don't Make Me Think](https://www.amazon.com/gp/product/0321965515/)
+https://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/1452654123) or [Don't Make Me Think](https://www.amazon.com/gp/product/0321965515)
 
 So now you can imagine I'm using the latest Guzzle 6 and trying to implement a solution for Guzzle 4 & 5.
 
@@ -60,7 +60,7 @@ Fuck-Up #1 is a natural consequence of trying to support multiple versions at on
 
 Let's look at [Symfony repository](https://github.com/symfony/symfony). Instead of "Symfony" imagine any package that is version. Now there is Symfony 4, so there was version 3, 2, 1 in the past. Like Guzzle 6, 5, 4...
 
-Now you've decided to upgrade and look for `CHANGELOG.md` (because you haven't heard about [Rector](/blog/2019/02/28/how-to-upgrade-symfony-2-8-to-3-4/) yet):
+Now you've decided to upgrade and look for `CHANGELOG.md` (because you haven't heard about [Rector](/blog/2019/02/28/how-to-upgrade-symfony-2-8-to-3-4) yet):
 
 <img src="/assets/images/posts/2019/oauth2/symfony.png" class="img-thumbnail">
 
@@ -72,7 +72,7 @@ The Symfony docs does the same:
 
 <img src="/assets/images/posts/2019/oauth2/symfony_docs.png" class="img-thumbnail">
 
-I wrote about this in detail in [What can You Learn from Menstruation](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/) post.
+I wrote about this in detail in [What can You Learn from Menstruation](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases) post.
 
 <br>
 

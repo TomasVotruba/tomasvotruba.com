@@ -56,7 +56,7 @@ public function __construct(Type $type)
 }
 ```
 
-But what if you need to [test service](/blog/2018/05/17/how-to-test-private-services-in-symfony/) and get it from container?
+But what if you need to [test service](/blog/2018/05/17/how-to-test-private-services-in-symfony) and get it from container?
 
 ```php
 <?php

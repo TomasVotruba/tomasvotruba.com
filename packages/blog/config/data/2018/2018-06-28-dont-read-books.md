@@ -21,7 +21,7 @@ tweet_image: "/assets/images/posts/2018/no-books/fahrenheit-book.jpg"
 
 <br>
 
-I've read [256 Bloghacks](/blog/2018/04/12/the-best-5-of-256-bloghacks-book/), [Steal Like an Artist, Deep Work, No More Mr. Nice Guy](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/), [Selling is Human](/blog/2018/06/18/14-surprising-tip-from-selling-is-human-to-influence-others/) and [Life 3.0](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) during last 2 years and a couple more I haven't written about yet.
+I've read [256 Bloghacks](/blog/2018/04/12/the-best-5-of-256-bloghacks-book), [Steal Like an Artist, Deep Work, No More Mr. Nice Guy](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer), [Selling is Human](/blog/2018/06/18/14-surprising-tip-from-selling-is-human-to-influence-others) and [Life 3.0](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world) during last 2 years and a couple more I haven't written about yet.
 
 I mostly love books.
 
@@ -65,7 +65,7 @@ Why? Because [flow makes people happy](https://www.ted.com/talks/mihaly_csikszen
     Give him 4 hours to finish a week work &ndash; he'll finish it in 4 hours."
 </blockquote>
 
-One example for all: have you ever read my bachelor thesis about polyphasic sleep that has 50+ pages? Me neither, so I made [a short post](/blog/2018/02/12/sleep-shorter-to-get-62-percent-smarter/).
+One example for all: have you ever read my bachelor thesis about polyphasic sleep that has 50+ pages? Me neither, so I made [a short post](/blog/2018/02/12/sleep-shorter-to-get-62-percent-smarter).
 
 ## The Book Chapter Format vs. Skill Leveling
 
@@ -92,7 +92,7 @@ Having a whole book would probably confuse you and make you feel great at the sa
 
 ## Everlasting Deprecation
 
-Like [menstruation](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/), the cycle of life is very similar to the cycle of knowledge - or to *a paradigm* if you prefer.
+Like [menstruation](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases), the cycle of life is very similar to the cycle of knowledge - or to *a paradigm* if you prefer.
 
 <img src="/assets/images/posts/2018/no-books/seasons.jpg" class="img-thumbnail" width=500>
 

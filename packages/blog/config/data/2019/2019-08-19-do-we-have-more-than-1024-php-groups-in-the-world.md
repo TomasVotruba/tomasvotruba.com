@@ -71,9 +71,9 @@ Any tips? [Add new issue](https://github.com/TomasVotruba/friendsofphp.org/issue
 
 ## How Does the Website Work?
 
-Meetups are downloaded every day by Travis CRON job from Meetup.com for each group. You'll find them manually added in [this YAML file in repository](https://github.com/TomasVotruba/friendsofphp.org/blob/master/config/_data/groups.yaml). No surprise **it runs on [Symfony Static Dumper](https://github.com/symplify/symfony-static-dumper/) and is fully [open-sourced on Github](https://github.com/tomasvotruba/friendsofphp.org)**.
+Meetups are downloaded every day by Travis CRON job from Meetup.com for each group. You'll find them manually added in [this YAML file in repository](https://github.com/TomasVotruba/friendsofphp.org/blob/master/config/_data/groups.yaml). No surprise **it runs on [Symfony Static Dumper](https://github.com/symplify/symfony-static-dumper) and is fully [open-sourced on Github](https://github.com/tomasvotruba/friendsofphp.org)**.
 
-Although there [Meetup API](https://www.meetup.com/meetup_api/) often works as documented, it's impossible to find all PHP groups with it. There is [an issue](https://github.com/meetup/api/issues/249) **when you search for groups in a specific location, it ignores the area and sets back to your origin city**. Pity, that exactly what we need here.
+Although there [Meetup API](https://www.meetup.com/meetup_api) often works as documented, it's impossible to find all PHP groups with it. There is [an issue](https://github.com/meetup/api/issues/249) **when you search for groups in a specific location, it ignores the area and sets back to your origin city**. Pity, that exactly what we need here.
 
 ### What now?
 
@@ -113,11 +113,11 @@ Provide a list of codes for all countries in the world, and in a few minutes you
    Lesson learned: use what works.
 </blockquote>
 
-Events are stored with their location and rendered to Open Street Maps with fantastic [Leaflet framework](https://leafletjs.com/). You don't have to know any Javascript. Documentation is that good.
+Events are stored with their location and rendered to Open Street Maps with fantastic [Leaflet framework](https://leafletjs.com). You don't have to know any Javascript. Documentation is that good.
 
 ## How much Does it Cost to Travel abroad Meetup?
 
-There is [plenty of reasons not-to-go](/blog/2018/07/23/5-signs-should-never-have-a-talk-abroad/) visit PHP meetup abroad, but the one I hear the most **are money**.
+There is [plenty of reasons not-to-go](/blog/2018/07/23/5-signs-should-never-have-a-talk-abroad) visit PHP meetup abroad, but the one I hear the most **are money**.
 
 To give you an idea, here **are costs of my trips from Prague** to cities nearby:
 
@@ -158,7 +158,7 @@ At the start, I had to pay Airbnb. But when you go to meetups more than once, yo
 
 ### Do You Need Help With $ or Ask Where to Start?
 
-Let [me know](/contact/) - I might know a way to help you.
+Let [me know](/contact) - I might know a way to help you.
 
 <br>
 

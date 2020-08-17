@@ -26,10 +26,10 @@ tweet_image: "/assets/images/posts/2017/go-php-71-later/unity.jpg"
 ## How is GoPHP71.org Doing?
 
 
-I've created a page [GoPHP71.org](https://gophp71.org/) half year ago, inspired by [GoPHP7.org](http://gophp7.org/) and by [Go PHP 5](https://www.garfieldtech.com/blog/go-php-5-go) - read this one if you care about background values of this movement.
+I've created a page [GoPHP71.org](https://gophp71.org) half year ago, inspired by [GoPHP7.org](http://gophp7.org) and by [Go PHP 5](https://www.garfieldtech.com/blog/go-php-5-go) - read this one if you care about background values of this movement.
 
 
-In [release post](/blog/2017/06/05/go-php-71/) I've explained **why right to PHP 7.1** and not PHP 7.0, how important is **united community** in this and how this can **bring positive energy to open-source** and as well host providers upgrades.
+In [release post](/blog/2017/06/05/go-php-71) I've explained **why right to PHP 7.1** and not PHP 7.0, how important is **united community** in this and how this can **bring positive energy to open-source** and as well host providers upgrades.
 
 <br>
 
@@ -50,7 +50,7 @@ Is your project missing? [Go and it!](https://github.com/TomasVotruba/gophp71.or
 ### Prove beats Promise - Packagist Stats
 
 
-To support "PHP 7.1 is the fastest adopted minor version of PHP" statement, [Jordi](https://seld.be/) recently released [PHP Versions Stats - 2017.2 Edition](https://seld.be/notes/php-versions-stats-2017-2-edition) with very nice result from packagist stats:
+To support "PHP 7.1 is the fastest adopted minor version of PHP" statement, [Jordi](https://seld.be) recently released [PHP Versions Stats - 2017.2 Edition](https://seld.be/notes/php-versions-stats-2017-2-edition) with very nice result from packagist stats:
 
 <img src="/assets/images/posts/2017/go-php-71-later/composer-bump.png" class="img-thumbnail">
 
@@ -59,7 +59,7 @@ To support "PHP 7.1 is the fastest adopted minor version of PHP" statement, [Jor
 ## Great Job, PHP Community!
 
 
-It makes me very happy, that **people from PHP community are able to [synchronize](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/)** despite their different opinions on things.
+It makes me very happy, that **people from PHP community are able to [synchronize](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases)** despite their different opinions on things.
 <br>
 
 
@@ -67,7 +67,7 @@ It makes me very happy, that **people from PHP community are able to [synchroniz
 
 I really loved this [Doctrine bump PHP 7.1 announcement](http://www.doctrine-project.org/2017/07/25/php-7.1-requirement-and-composer.html). I completely agree with "Why dropping PHP support in a minor version is not a BC break" part. If you think PHP version bump is BC break, you should read it.
 
-I admit [I wasn't nice](/blog/2017/03/27/why-is-doctrine-dying/) to Doctrine Project this Spring and **I'm sincerely sorry about that**. I'm trying to [influence this better way](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/).
+I admit [I wasn't nice](/blog/2017/03/27/why-is-doctrine-dying) to Doctrine Project this Spring and **I'm sincerely sorry about that**. I'm trying to [influence this better way](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony).
 
 Ever since I **see Doctrine community are doing great** - from [removing YAML references](https://github.com/doctrine/doctrine2/pull/5932), to [cleaner Symfony support](https://github.com/doctrine/DoctrineBundle/pull/727).
 
@@ -96,7 +96,7 @@ All good for now, but then:
 ### Result? Double Measures & Dichotomic Coding
 
 - You have to have **2 different coding standards** - one for PHP 7.0 and one for PHP 7.1 with various paths to scan.
-- If you use static analysis like [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/), you have to have 2 configs again to validate code properly.
+- If you use static analysis like [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too), you have to have 2 configs again to validate code properly.
 - 2 testing approaches etc.
 
 

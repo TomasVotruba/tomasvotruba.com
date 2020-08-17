@@ -14,14 +14,14 @@ tweet: "New Post on my Blog: 5 Advises I Would Love to Get Before Starting to Ma
 
 Everything changes and when it comes to software, it's exponentially faster. How much changed the school system we have nowadays and how much changed content we absorb - mostly through the internet - every day in the last 5 years?
 
-I used Nette for as my favorite framework for many many years. Later I found out what components and packages are and I picked few packages from Nette and few from Symfony for my base stack. One package was the hearth of all my packages - Dependency injection component. Nette\DI with default autowiring was light-years ahead in 2014. But Nette didn't have any new features anymore and the software grew exponentially. Symfony 2.8 came with autowiring. Symfony 3.3 came with [service autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/).
+I used Nette for as my favorite framework for many many years. Later I found out what components and packages are and I picked few packages from Nette and few from Symfony for my base stack. One package was the hearth of all my packages - Dependency injection component. Nette\DI with default autowiring was light-years ahead in 2014. But Nette didn't have any new features anymore and the software grew exponentially. Symfony 2.8 came with autowiring. Symfony 3.3 came with [service autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3).
 
 
 ### Share Your Doubts
 
 I loved most of the new features in Symfony and I integrated them as packages to Nette. Since I know their both DI components by the hearth, it was easy for me. But it my lazy-brain stated itching. **Why do I create, maintain and test a code that was already written in another framework?**
 
-It was until one afternoon I was happy to share with [Martin Hujer](https://www.martinhujer.cz/). I shared my itching and how I love these Symfony DI features and he asked me very simple yet powerful question:
+It was until one afternoon I was happy to share with [Martin Hujer](https://www.martinhujer.cz). I shared my itching and how I love these Symfony DI features and he asked me very simple yet powerful question:
 
 <blockquote class="blockquote text-center">
     Why don't you switch that component from Nette to Symfony?
@@ -62,9 +62,9 @@ Now I support PHP 7.1 and 7.2 and it's just a fine amount of PHP versions to mai
 
 You don't have to make the same mistakes as me. There are many great examples that work today:
 
-- [Cyclic PHPUnit Release Process](https://github.com/sebastianbergmann/phpunit/wiki/Release-Process) - stick to [*menstruation* dependency](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/)
+- [Cyclic PHPUnit Release Process](https://github.com/sebastianbergmann/phpunit/wiki/Release-Process) - stick to [*menstruation* dependency](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases)
 - [PHP.net - Supported Versions](http://php.net/supported-versions.php) - stay green on PHP
-- [gophp71.org](https://gophp71.org/) - go with the mainstream
+- [gophp71.org](https://gophp71.org) - go with the mainstream
 
 **Go through them and suck the gold in.**
 
@@ -80,7 +80,7 @@ I didn't know, so I made an experiment. And [this PR was born](https://github.co
 
 ## 4. All You Need to Maintain is 1 Repository
 
-It's very easy to create a PHP package nowadays. It's very easy to create 10 of them. When I started with Zenify, then Symplify, the package-counter could be around 20 for 2 years. I thought that only people who earn living from the open-source project [David Grudl](/blog/2017/06/01/thank-you-david/) could maintain such a big number of packages. I had zero income from them, but I wanted them to live, so maintained them... and then I burned out.
+It's very easy to create a PHP package nowadays. It's very easy to create 10 of them. When I started with Zenify, then Symplify, the package-counter could be around 20 for 2 years. I thought that only people who earn living from the open-source project [David Grudl](/blog/2017/06/01/thank-you-david) could maintain such a big number of packages. I had zero income from them, but I wanted them to live, so maintained them... and then I burned out.
 
 After that, I recall I was looking at Symfony repository - many packages but just repository. WTF? It took a few more months to find out, [what monorepo is](/clusters/#monorepo-from-zero-to-hero) and understand how it works and how to set it up in very very basic form.
 

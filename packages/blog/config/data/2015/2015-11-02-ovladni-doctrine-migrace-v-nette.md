@@ -5,9 +5,9 @@ perex: "Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budo
 
 deprecated_since: "January 2017"
 deprecated_message: |
-    I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - **[read a post here](/blog/2017/03/27/why-is-doctrine-dying/)**.
+    I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - **[read a post here](/blog/2017/03/27/why-is-doctrine-dying)**.
 
-    **I recommend using more robust and active [Phinx migration tool](https://phinx.org/) instead.** I already do and it is great.
+    **I recommend using more robust and active [Phinx migration tool](https://phinx.org) instead.** I already do and it is great.
 
     It is still available [here for inspiration](https://github.com/DeprecatedPackages/DoctrineMigrations) though.
 
@@ -62,7 +62,7 @@ Available commands for the "migrations" namespace:
 
 ## Profi workflow ve 4 krocích
 
-Rád bych s vámi podělil o to, jak přistupujeme k migracím my v [Lékárna.cz](http://lekarna.cz/).
+Rád bych s vámi podělil o to, jak přistupujeme k migracím my v [Lékárna.cz](http://lekarna.cz).
 
 Od šéfa jsme dostali zadání: *vytvořit tabulku na články*.
 

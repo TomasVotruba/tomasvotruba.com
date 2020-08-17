@@ -4,7 +4,7 @@ title: "How to Hydrate Arrays to Objects via Constructor"
 perex: |
     One technology evolution sparks naturally another one. When electricity became accessible to masses, a huge industry of home-electric tools became possible. Like this tool, I currently write on.
     <br><br>
-    The same thing happens in software, just exponentially faster. Like tokens and AST sparked [tools that change your code](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/).
+    The same thing happens in software, just exponentially faster. Like tokens and AST sparked [tools that change your code](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code).
     <br><br>
     Recently, I introduced [Symfony Static Dumper](/blog/2020/03/16/statie-is-dead-long-live-symfony-static-dumper) that uses YAML to store data in your Symfony application. You where this goes... how can **we turn this YAML into objects**?
 
@@ -20,7 +20,7 @@ This post is about the luxury of **object IDE autocompletion** everywhere in you
 
 <br>
 
-Do you work with Doctrine entities? Then you're probably used to [use Repository service](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/) and Entity object:
+Do you work with Doctrine entities? Then you're probably used to [use Repository service](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony) and Entity object:
 
 ```php
 <?php
@@ -68,7 +68,7 @@ final class BlogController
 }
 ```
 
-And we also have **autocomplete in TWIG templates** (thanks to [amazing](/blog/2018/08/23/9-features-of-symfony-plugin-you-should-not-miss-in-gifs/) [Symfony plugin](/blog/2019/01/28/2-files-that-your-symfony-application-misses/)):
+And we also have **autocomplete in TWIG templates** (thanks to [amazing](/blog/2018/08/23/9-features-of-symfony-plugin-you-should-not-miss-in-gifs) [Symfony plugin](/blog/2019/01/28/2-files-that-your-symfony-application-misses)):
 
 <img src="/assets/images/posts/2020/easy_hydrator_twig.png" class="img-thumbnail">
 
@@ -135,7 +135,7 @@ final class Video
 We want our application to be:
 
 - open **to future database switch**
-- **and have readable code** for new developers - [less patterns is better](/blog/2020/03/09/art-of-letting-go/)
+- **and have readable code** for new developers - [less patterns is better](/blog/2020/03/09/art-of-letting-go)
 
 Saying that, the code should look like **1:1 to repositories** we know from Doctrine:
 

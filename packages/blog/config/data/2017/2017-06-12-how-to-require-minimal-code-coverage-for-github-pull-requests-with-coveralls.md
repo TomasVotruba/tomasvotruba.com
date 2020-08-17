@@ -16,7 +16,7 @@ deprecated_message: |
 
 ## Why Code Coverage Shouldn't be Ignored
 
-[Marco Pivetta](https://twitter.com/Ocramius) wrote a post about [automated code coverage check with PHPUnit](https://ocramius.github.io/blog/automated-code-coverage-check-for-github-pull-requests-with-travis/) few years ago. In the post he explains **how important is code coverage for code quality of open-source projects**:
+[Marco Pivetta](https://twitter.com/Ocramius) wrote a post about [automated code coverage check with PHPUnit](https://ocramius.github.io/blog/automated-code-coverage-check-for-github-pull-requests-with-travis) few years ago. In the post he explains **how important is code coverage for code quality of open-source projects**:
 
 > "[Code Coverage] is **not an universal metric to define if our code works**, and there is tons of examples of how your code can still be buggy even if every line of code was executed at least once. It should anyway not be ignored, and **it is up to us to decide** how hard we want to test each part of our application."
 
@@ -40,7 +40,7 @@ Simple setup to let computer handle "please, add tests" response for you.
 
 ## 3 Steps to Automate Minimal Coverage Check With Coveralls
 
-Nowadays, [Coveralls CI](http://coveralls.io/) can handle this process completely for you.
+Nowadays, [Coveralls CI](http://coveralls.io) can handle this process completely for you.
 
 Here is how:
 

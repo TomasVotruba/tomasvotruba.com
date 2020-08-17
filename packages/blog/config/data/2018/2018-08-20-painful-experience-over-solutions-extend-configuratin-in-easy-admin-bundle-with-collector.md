@@ -21,9 +21,9 @@ Instead of writing about solution how to do and how awesome I am to know the sol
 
 ### The Application
 
-I'm coding an open-sourced training platform build Symfony 4.2 and Doctrine 2.7 for [Pehapkari community training](https://github.com/pehapkari/). It's fully open-sourced on Github under the typical open-source name - [Open Training](https://github.com/tomasvotruba/open-training).
+I'm coding an open-sourced training platform build Symfony 4.2 and Doctrine 2.7 for [Pehapkari community training](https://github.com/pehapkari). It's fully open-sourced on Github under the typical open-source name - [Open Training](https://github.com/tomasvotruba/open-training).
 
-Admin is just a CRUD to maintain few entities, so I use [EasyAdminBundle](https://github.com/easyCorp/EasyAdminBundle) to handle forms, grids, update, create, delete actions in controllers for me. Huge thanks to [Javier Eguiluz](https://github.com/javiereguiluz/) for this amazingly simple and powerful idea.
+Admin is just a CRUD to maintain few entities, so I use [EasyAdminBundle](https://github.com/easyCorp/EasyAdminBundle) to handle forms, grids, update, create, delete actions in controllers for me. Huge thanks to [Javier Eguiluz](https://github.com/javiereguiluz) for this amazingly simple and powerful idea.
 
 <img src="https://symfony.com/doc/current/bundles/EasyAdminBundle/_images/easyadmin-default-backend.png">
 
@@ -316,7 +316,7 @@ The same way I don't memorize Wikipedia and just Google it instead, **I don't re
 <br>
 If artificial intelligence could figure this all out for us, we'd be screwed :).
 
-Btw, are you coming to [Human Level AI Conference](https://www.hlai-conf.org/) in Prague this weekend? I'll be there and I'd be happy if you stop me and say Hi!
+Btw, are you coming to [Human Level AI Conference](https://www.hlai-conf.org) in Prague this weekend? I'll be there and I'd be happy if you stop me and say Hi!
 
 <br>
 

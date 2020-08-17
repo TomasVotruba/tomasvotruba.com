@@ -77,7 +77,7 @@ Instead, **we can look at real-life examples in Symplify code**. That's much mor
 
 ### `replace()`
 
-It accepts content, pattern to look for and replacement. This is basic building stone for packages like [LatteToTwigConverter](/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions/):
+It accepts content, pattern to look for and replacement. This is basic building stone for packages like [LatteToTwigConverter](/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions):
 
 ```php
 // in Latte: {var $var = $anotherVar}
@@ -222,7 +222,7 @@ Nette\Utils\FileSystem::delete($source);
 
 <br>
 
-Do you like it? **Go and give [Nette\Utils](https://github.com/nette/utils) a try**. It's the only package I allow to use static methods and that's a lot, since [I'm very strict to them](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/).
+Do you like it? **Go and give [Nette\Utils](https://github.com/nette/utils) a try**. It's the only package I allow to use static methods and that's a lot, since [I'm very strict to them](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself).
 
 <blockquote class="blockquote text-center mt-5 mb-5">
     Do you want to play with details someone else already solved for you<br>

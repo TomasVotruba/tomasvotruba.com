@@ -13,7 +13,7 @@ Many frameworks propagate config coding over PHP code. It's cool, it's easy to t
 
 One of the good examples is Laravel with its [`config/app.php`](https://laravel.com/docs/5.7/configuration) - really good work!
 
-Since [Symfony 3.3+ service autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) feature, there is almost no reason to use code in config.
+Since [Symfony 3.3+ service autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3) feature, there is almost no reason to use code in config.
 
 
 
@@ -244,7 +244,7 @@ We just returned the benefits of PHP code:
 
 <br>
 
-Instead of config coding, use factories and [autowired parameters](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/). You can also remove factory from configs with [`AutoReturnFactoryCompilerPass`](https://github.com/symplify/package-builder#do-not-repeat-simple-factories).
+Instead of config coding, use factories and [autowired parameters](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too). You can also remove factory from configs with [`AutoReturnFactoryCompilerPass`](https://github.com/symplify/package-builder#do-not-repeat-simple-factories).
 
 ```diff
  services:

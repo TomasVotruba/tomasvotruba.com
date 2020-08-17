@@ -33,7 +33,7 @@ before_script:
 
 ## 2. Deliver PR Checks Fast
 
-The speed of feedback loop in PRs has the same effect as page load time. If the page is loading **more than 4 seconds**, [most people leaves thinking it's broken](https://www.hobo-web.co.uk/your-website-design-should-load-in-4-seconds/).
+The speed of feedback loop in PRs has the same effect as page load time. If the page is loading **more than 4 seconds**, [most people leaves thinking it's broken](https://www.hobo-web.co.uk/your-website-design-should-load-in-4-seconds).
 
 What is **must-have** in PR check?
 
@@ -95,9 +95,9 @@ script:
       fi
 ```
 
-Travis also allows [Stages](https://docs.travis-ci.com/user/build-stages/) oppose ENV variables. I've tried that and it has much more complicated YAML syntax, than just `VAR=value`. Also due to ENV trends lead by Docker, containers in general and Symfony, I'd stick with ENV vars for open-source projects.
+Travis also allows [Stages](https://docs.travis-ci.com/user/build-stages) oppose ENV variables. I've tried that and it has much more complicated YAML syntax, than just `VAR=value`. Also due to ENV trends lead by Docker, containers in general and Symfony, I'd stick with ENV vars for open-source projects.
 
-**For private projects stages are great** since you need to deploy migrations and the code itself. But for private projects, I think Gitlab CI is a much more valuable option. Ask [Jan Mikeš](https://janmikes.cz/) about that.
+**For private projects stages are great** since you need to deploy migrations and the code itself. But for private projects, I think Gitlab CI is a much more valuable option. Ask [Jan Mikeš](https://janmikes.cz) about that.
 
 ## 4. Use Travis to do More Just Watching
 
@@ -125,7 +125,7 @@ One more thing: **Travis is super fast.** What on my laptop takes 10 minutes, it
 
 ## 5. Rebuild your GitHub Pages Daily
 
-One of the sexy features of Travis are [Cron Jobs](https://docs.travis-ci.com/user/cron-jobs/) in combination with Github Pages and `deploy`:
+One of the sexy features of Travis are [Cron Jobs](https://docs.travis-ci.com/user/cron-jobs) in combination with Github Pages and `deploy`:
 
 It is this easy to [deploy Statie website](https://www.statie.org/docs/github-pages/#configure-travis) to Github Pages:
 
@@ -216,7 +216,7 @@ But if you as an owner do echo it like this PHP script, you're screwed :).
 
 ## 7. Make use of Composer Scripts
 
-Did you know you can define your own composer scripts and run them with `composer <name>`? If not, check [Have you tried Composer Scripts? You may not need Phing](https://blog.martinhujer.cz/have-you-tried-composer-scripts/) that explains it in a very practical way.
+Did you know you can define your own composer scripts and run them with `composer <name>`? If not, check [Have you tried Composer Scripts? You may not need Phing](https://blog.martinhujer.cz/have-you-tried-composer-scripts) that explains it in a very practical way.
 
 So instead of writing it manually in Travis and locally and just waiting for a typo or miss use of invalid config:
 

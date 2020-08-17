@@ -12,12 +12,12 @@ tweet_image: "/assets/images/posts/2018/cognitive-complexity/tweet.png"
 
 updated_since: "May 2020"
 updated_message: |
-    Updated with **EasyCodingStandard 8**, with shift from [Sniffs to PHPStan rules](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/).
+    Updated with **EasyCodingStandard 8**, with shift from [Sniffs to PHPStan rules](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules).
 ---
 
 ## What is Cognitive Complexity?
 
-*Tomáš Horváth* referenced me to [Cognitive Complexity, Because Testability != Understandability](https://blog.sonarsource.com/cognitive-complexity-because-testability-understandability) under the [Cyclomatic Complexity](https://pehapkari.cz/blog/2018/04/04/cyklomaticka-komplexita/) post. Thank you Tomas.
+*Tomáš Horváth* referenced me to [Cognitive Complexity, Because Testability != Understandability](https://blog.sonarsource.com/cognitive-complexity-because-testability-understandability) under the [Cyclomatic Complexity](https://pehapkari.cz/blog/2018/04/04/cyklomaticka-komplexita) post. Thank you Tomas.
 
 The most important source about *Cognitive Complexity* is [a 21-page long PDF](https://www.sonarsource.com/docs/CognitiveComplexity.pdf). Instead of explaining in words (you can read that in the PDF), **here are 2 examples that speak more than a thousand words**:
 
@@ -104,7 +104,7 @@ a function and all its possible paths**.
 
 ## Automation Over Information
 
-This all is nice to know information. The one that you might find interesting, remember it for few days and then forget it and never meet it again. But I'm too lazy to *learn to just forget*, so I *learn to automate*. This is place [to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
+This all is nice to know information. The one that you might find interesting, remember it for few days and then forget it and never meet it again. But I'm too lazy to *learn to just forget*, so I *learn to automate*. This is place [to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3).
 
 It took me 5 days to understand academic writings in the PDF, to convert Java and Python examples to PHP and reverse-engineer the algorithm to compute cognitive complexity to match results in the PDF. **The most difficult was to change the cyclomatic complexity approach I used for last 4 years to a human one**.
 

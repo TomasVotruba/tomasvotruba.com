@@ -139,7 +139,7 @@ What if we need to get the name of the Youtuber into the Subscriber?
 
 ## Event Objects to the Rescue!
 
-The Event objects are basically [Value Objects](http://richardmiller.co.uk/2014/11/06/value-objects/). Pass a value in the constructor and get it with getter.
+The Event objects are basically [Value Objects](http://richardmiller.co.uk/2014/11/06/value-objects). Pass a value in the constructor and get it with getter.
 
 
 ### 1. Create an Event Object

@@ -110,7 +110,7 @@ Just feel the smell of success.
 
 ## Do you want get deeper than that? Check the Checklist (~2 min)
 
-Fast and clear? Go to [PHP Package Checklist](http://phppackagechecklist.com/), that is easy to read and easy to follow.
+Fast and clear? Go to [PHP Package Checklist](http://phppackagechecklist.com), that is easy to read and easy to follow.
 This helped me to integrate workflow to all my packages in the start. I've selected [9 most important points](http://phppackagechecklist.com/#1,2,3,4,6,7,11,12,13).
 
 Some of them I've already mentioned. Other will follow in next 2 articles.

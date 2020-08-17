@@ -39,7 +39,7 @@ Now [the `filter`](https://twig.symfony.com/doc/3.x/filters/filter.html) has to 
 {% endfor %}
 ```
 
-*Thanks [Patrik for the tip](https://www.reddit.com/r/PHP/comments/ef2nit/how_we_upgraded_pehapkaricz_from_symfony_4_to_5/fbzyhsl/)*
+*Thanks [Patrik for the tip](https://www.reddit.com/r/PHP/comments/ef2nit/how_we_upgraded_pehapkaricz_from_symfony_4_to_5/fbzyhsl)*
 
 ## 2. Rector Helps You with PHP
 
@@ -188,7 +188,7 @@ Then switch to Symfony 5:
 // etc.
 ```
 
-But some packages are released out of [monorepo cycle](/blog/2019/10/28/all-you-always-wanted-to-know-about-monorepo-but-were-afraid-to-ask/):
+But some packages are released out of [monorepo cycle](/blog/2019/10/28/all-you-always-wanted-to-know-about-monorepo-but-were-afraid-to-ask):
 
 ```diff
 -"symfony/maker-bundle": "^1.14",
@@ -279,7 +279,7 @@ Let's say you want to use `symplify/easy-coding-standard` that supports Symfony 
 
 - the latest `symplify/easy-coding-standard` version 6 doesn't support it
 - `symplify/easy-coding-standard` dev-master (~= what you see on GitHub) supports it
-- but it's not tagged yet and composer forbids to install dev version; e.g. [sentry-symfony](https://github.com/getsentry/sentry-symfony/) at time of writing this post
+- but it's not tagged yet and composer forbids to install dev version; e.g. [sentry-symfony](https://github.com/getsentry/sentry-symfony) at time of writing this post
 - so you'd have to require its dev version and force composer to install it
 
 ```json
@@ -352,7 +352,7 @@ It works so well I do it more often than resolving conflicts manually.
  ];
 ```
 
-Switch the dead gedmo/stof doctrine extensions for the maintained [KnpLabs/DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors/). I'll write a standalone post about this migration, once a stable version is out (check me, pls :)).
+Switch the dead gedmo/stof doctrine extensions for the maintained [KnpLabs/DoctrineBehaviors](https://github.com/KnpLabs/DoctrineBehaviors). I'll write a standalone post about this migration, once a stable version is out (check me, pls :)).
 
 ```diff
  return [

@@ -10,8 +10,8 @@ tweet: "New post on my blog: Rector: Part 1 - What and How #php #ast #refactorin
 
 *Read also:*
 
-- [Part 2 - Maturity of PHP Ecosystem and Founding Fathers](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers/)
-- [Part 3 - Why Instant Upgrades](/blog/2018/03/05/rector-part-3-why-instant-upgrades/)
+- [Part 2 - Maturity of PHP Ecosystem and Founding Fathers](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers)
+- [Part 3 - Why Instant Upgrades](/blog/2018/03/05/rector-part-3-why-instant-upgrades)
 
 <br>
 
@@ -28,7 +28,7 @@ You can [find it on Github](https://github.com/rectorphp/rector). It has now [6 
 
 ## What are Instant Upgrades?
 
-*I'll show examples on [Symfony](https://symfony.com/), because that's the framework I know and love the best.*
+*I'll show examples on [Symfony](https://symfony.com), because that's the framework I know and love the best.*
 
 Let's say you have a project on Symfony 2.7. And you have a huge `service.yml`. You know that Symfony 2.8/3.0 brought an awesome [autowiring](https://symfony.com/blog/new-in-symfony-2-8-service-auto-wiring) feature that evolved to pure awesomenes in Symfony 3.3 and [PSR-4 services feature](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration).
 
@@ -106,7 +106,7 @@ Do you use Laravel and want to move from facades to constructor injection? Recto
 
 ## How does it Work?
 
-Rector parses the code to [AST](/blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree/) thanks to PHP superman [nikic](https://nikic.github.io/)'s [php-parser](https://github.com/nikic/PHP-Parser).
+Rector parses the code to [AST](/blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree) thanks to PHP superman [nikic](https://nikic.github.io)'s [php-parser](https://github.com/nikic/PHP-Parser).
 
 Then it finds specific places in the code, e.g. all variables that contain `Symfony\Component\HttpFoundation\Request` type and call `isMethodSafe()` method.
 
@@ -141,7 +141,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 Rector is not the only tool that uses `nikic\php-parser` for context-aware operation on your code.
 
-You've probably heard of [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). But unfortunately it's read-only for deterministic cases = when 1 error has exactly 1 possible solution.
+You've probably heard of [PHPStan](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too). But unfortunately it's read-only for deterministic cases = when 1 error has exactly 1 possible solution.
 
 Another static analysis tool - [vimeo/psalm](https://github.com/vimeo/psalm) by [Matthew Brown](https://github.com/muglug), which fixes such code. Great job Matthew!
 

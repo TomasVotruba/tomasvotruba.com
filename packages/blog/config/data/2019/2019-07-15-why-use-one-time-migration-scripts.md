@@ -11,7 +11,7 @@ updated_message: |
     Updated Rector YAML to PHP configuration, as current standard.
 ---
 
-You already probably know about instant refactoring and [pattern refactoring](/blog/2019/04/15/pattern-refactoring/) (I'm deprecating refactoring as you know it) that's possible thanks to [Rector](https://github.com/rectorphp/rector). But they require a certain knowledge of code and it's patterns.
+You already probably know about instant refactoring and [pattern refactoring](/blog/2019/04/15/pattern-refactoring) (I'm deprecating refactoring as you know it) that's possible thanks to [Rector](https://github.com/rectorphp/rector). But they require a certain knowledge of code and it's patterns.
 
 ## Instant Refactoring Today?
 

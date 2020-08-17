@@ -2,7 +2,7 @@
 id: 231
 title: "5&nbsp;Things&nbsp;I&nbsp;Improve when&nbsp;I&nbsp;Get&nbsp;&nbsp;to&nbsp;new&nbsp;Repository"
 perex: |
-    I started to write this post as follow up for [clean and sustainable code](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/) post. In the middle of writing, I've realized I have this approach to ever repository I meet.
+    I started to write this post as follow up for [clean and sustainable code](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable) post. In the middle of writing, I've realized I have this approach to ever repository I meet.
     <br>
     <br>
     Imagine it like a working desk. But not your usual stable place where you work every day. **Instead, you are assigned to a new desk of a former employee, who worked in the company for 5 years and as a bonus - it was the CTO**. For you, it's a mess.
@@ -172,7 +172,7 @@ vendor/bin/phpstan analyse src tests
 vendor/bin/phpunit
 ```
 
-Well, now you know [I use aliases in my bash](/blog/2019/11/25/the-single-best-skill-to-master-command-line/). It's **the ultimate *skill***, because your brain gets much more space to think.
+Well, now you know [I use aliases in my bash](/blog/2019/11/25/the-single-best-skill-to-master-command-line). It's **the ultimate *skill***, because your brain gets much more space to think.
 
 <blockquote class="blockquote text-center mt-5 mb-5">
     "But every project has different directories.<br>
@@ -201,7 +201,7 @@ alias pu="vendor/bin/phpunit"
 
 **I never change them**. So where is the dynamic part?
 
-Have you heard of [composer scripts](https://blog.martinhujer.cz/have-you-tried-composer-scripts/)?
+Have you heard of [composer scripts](https://blog.martinhujer.cz/have-you-tried-composer-scripts)?
 
 In every project I came to, I set up dev dependencies and scripts first:
 

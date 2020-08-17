@@ -25,7 +25,7 @@ I felt bad using Twitter last few months. **I wasn't sure** if I really want to 
     - add 1 to 5 images
 - I talked with friends how do they enjoy Twitter.
 - I requested feedback from marketing expert to my Tweets.
-- I tried using services to automate like [Buffer](https://buffer.com/) (thank you [Tomáš Fejfar](https://www.tomasfejfar.cz/) for the tip) or [Twitter API PHP packages](https://github.com/search?l=PHP&q=twitter&type=Repositories&utf8=%E2%9C%93).
+- I tried using services to automate like [Buffer](https://buffer.com) (thank you [Tomáš Fejfar](https://www.tomasfejfar.cz) for the tip) or [Twitter API PHP packages](https://github.com/search?l=PHP&q=twitter&type=Repositories&utf8=%E2%9C%93).
 
 I really tried, but none of these made me feel significantly better. So last experiment: I quit.
 
@@ -39,7 +39,7 @@ I really tried, but none of these made me feel significantly better. So last exp
 Every like made me happy. **Every retweet made happier three-times**. I only wanted to invest just a little attention, so I refocused on numbers instead of content.
 **It's like trying to build a deep connection with somebody having only a 20 minutes a day**. This frustrated me a lot, because I prefer working on content over collecting numbers.
 
-I talked about my addiction with [Petr Vácha](http://petrvacha.com/) and my intentions to quit, and he **suggested me to use it only once a day**.
+I talked about my addiction with [Petr Vácha](http://petrvacha.com) and my intentions to quit, and he **suggested me to use it only once a day**.
 I tried it for few days and it was great. I got higher dopamine shots in the end of the day.
 
 The only issue for me was **I had to focus to not to think on Twitter throughout the whole day**. It was like starving the whole day to eat once in the evening.
@@ -60,7 +60,7 @@ Few month later I realized **I'm turning into news machine**. So I asked my foll
 
 I found there are many news channel that already cover this field.
 
-Second, **I found I have reactive-response syndrome: for every message I have to have an answer**. It's close to [fear of missing out](https://zenhabits.net/miss/).
+Second, **I found I have reactive-response syndrome: for every message I have to have an answer**. It's close to [fear of missing out](https://zenhabits.net/miss).
 
 That included conversations under tweets, checking Twitter often for new answers, and trials to explain complex problems and miss-understandings under 140 characters.
 
@@ -87,29 +87,29 @@ That's why I switched from Tweetdeck-hashtag-group-following based to regular ne
 I started to follow:
 
 - [PHP Annotated Monthly](https://info.jetbrains.com/PHP-Annotated-Subscription.html) from JetBrains (PHPStorm guys)
-- [PHP Weekly](http://www.phpweekly.com/)
+- [PHP Weekly](http://www.phpweekly.com)
 - [Měsíčník pro Péhápkaře](https://pehapkari.cz/#newsletter)
 - [Jan Růžička - Týden v Médiích](https://www.respekt.cz/echo/neco-konci-neco-zacina) (in the bottom)
-- [Pink Cast](http://www.danpink.com/pinkcast/)
+- [Pink Cast](http://www.danpink.com/pinkcast)
 
 And it's much better.
 
 
 ## I Love Experiments
 
-Leo Babauta happily dropped Twitter in 2013. In [Simplify the internet](https://zenhabits.net/unline/) he wrotes:
+Leo Babauta happily dropped Twitter in 2013. In [Simplify the internet](https://zenhabits.net/unline) he wrotes:
 
 > If you’re going to do Facebook, don’t do other ones too. You can quit Twitter and Instagram. Really you can!
 
 Reading this first time in December, I felt it's the right thing to do, yet brain was opposing with "that is insane!".
 
-My great inspiration from polyphasic sleep days Steve Pavlina [got social media dumped hard](http://www.stevepavlina.com/blog/2014/07/social-media-you-got-dumped/).
+My great inspiration from polyphasic sleep days Steve Pavlina [got social media dumped hard](http://www.stevepavlina.com/blog/2014/07/social-media-you-got-dumped).
 
 > I basically asked myself which scenario seemed best over the next 10 years — going social media-free vs. continuing to use it.
 
-Followed by [a year later reflection](http://www.stevepavlina.com/blog/2015/07/one-year-without-social-media/).
+Followed by [a year later reflection](http://www.stevepavlina.com/blog/2015/07/one-year-without-social-media).
 
-**I love social experiments.** After [polyphasic sleep](https://psychologie.cz/serialy/polyfazicky-spanek/), switching main job focus after 8 years, having a baby while being infertile, dropping from university, moving to Prague after settling down in Brno, [dropping LinkedIn](/blog/2017/01/05/why-I-deleted-my-linkedin-account) and moving completely alone for the first time, **I really look forward to this one**.
+**I love social experiments.** After [polyphasic sleep](https://psychologie.cz/serialy/polyfazicky-spanek), switching main job focus after 8 years, having a baby while being infertile, dropping from university, moving to Prague after settling down in Brno, [dropping LinkedIn](/blog/2017/01/05/why-I-deleted-my-linkedin-account) and moving completely alone for the first time, **I really look forward to this one**.
 
 
 ### Where Do You Find Me?

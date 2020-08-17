@@ -2,7 +2,7 @@
 id: 192
 title: "Why we Migrated from Nette to Symfony in 3 Weeks - Part 2 - Escaping Semantic Hell"
 perex: |
-    Do you want to **migrate your project from Nette to Symfony**? In [part 1](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/) we showed you how to get your project ready, why it's important to make team commitment and what you can automate.
+    Do you want to **migrate your project from Nette to Symfony**? In [part 1](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1) we showed you how to get your project ready, why it's important to make team commitment and what you can automate.
     <br><br>
     Today we'll look on one of the core reasons for this migration - **escaping to semantic hell**.
 tweet: "New Post on #php 🐘 blog: Why we Migrated from #nettefw to #Symfony in 3 Weeks - Part 2 - Escaping Semantic Hell"
@@ -83,11 +83,11 @@ That's *nice to have* for the maintainer. But what about the developers who use 
     <br>and more <strong>pragmatic common sense</strong>. We were born with it.
 </blockquote>
 
-Maintainers should read books like [The Design of Everyday Things](https://www.amazon.com/Design-Everyday-Things-Revised-Expanded-ebook/dp/B06XCCZJ4L), [Don't Make me Think](https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook-dp-B00HJUBRPG/dp/B00HJUBRPG/) and [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master-ebook-dp-B003GCTQAE/dp/B003GCTQAE/) to understand how others see our code.
+Maintainers should read books like [The Design of Everyday Things](https://www.amazon.com/Design-Everyday-Things-Revised-Expanded-ebook/dp/B06XCCZJ4L), [Don't Make me Think](https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook-dp-B00HJUBRPG/dp/B00HJUBRPG) and [The Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master-ebook-dp-B003GCTQAE/dp/B003GCTQAE) to understand how others see our code.
 
 ## Symfony KISS = Per-Vendor Tagging
 
-So I decided **to try [per-vendor tagging](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/)** over per-package tagging. Now I have to answer questions like "Why did you release a new version of your package, but no change between version 3.2.0 and 3.3.0?" But I know **bothering developers with semver-hell** is not a better choice, so I answer patiently (with a link to this post :)).
+So I decided **to try [per-vendor tagging](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases)** over per-package tagging. Now I have to answer questions like "Why did you release a new version of your package, but no change between version 3.2.0 and 3.3.0?" But I know **bothering developers with semver-hell** is not a better choice, so I answer patiently (with a link to this post :)).
 
 After all:
 
@@ -101,4 +101,4 @@ After all:
 
 <br>
 
-Do you think it's impossible change for your project? Drop us a [message at Rector](https://getrector.org/). We'll help you.
+Do you think it's impossible change for your project? Drop us a [message at Rector](https://getrector.org). We'll help you.

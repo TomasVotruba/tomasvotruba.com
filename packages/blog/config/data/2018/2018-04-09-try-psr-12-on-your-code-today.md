@@ -26,7 +26,7 @@ Now in more detailed way.
 
 ## PSR-12 meets ECS
 
-Someone on [Reddit referred a PSR Google Group](https://www.reddit.com/r/PHP/comments/84vafc/phpfig_psr_status_update/), where they **asked for real-life PSR-12 ruleset implementation in a coding standard tool**. Korvin Szanto already prepared 1st implementation for PHP CS Fixer, at the moment [only as a commit in](https://github.com/KorvinSzanto/PHP-CS-Fixer/commit/c0b642c186d8f666a64937c2d37442dc77f6f393) the fork. I put the ruleset to `psr12.yml` level in ECS and it looks like this in time of being:
+Someone on [Reddit referred a PSR Google Group](https://www.reddit.com/r/PHP/comments/84vafc/phpfig_psr_status_update), where they **asked for real-life PSR-12 ruleset implementation in a coding standard tool**. Korvin Szanto already prepared 1st implementation for PHP CS Fixer, at the moment [only as a commit in](https://github.com/KorvinSzanto/PHP-CS-Fixer/commit/c0b642c186d8f666a64937c2d37442dc77f6f393) the fork. I put the ruleset to `psr12.yml` level in ECS and it looks like this in time of being:
 
 ```yaml
 imports:

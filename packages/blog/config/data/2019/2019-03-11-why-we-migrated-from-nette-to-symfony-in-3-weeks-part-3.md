@@ -2,7 +2,7 @@
 id: 193
 title: "Why we Migrated from Nette to Symfony in 3 Weeks - Part 3 - Brain Drain Dead Packages-Lock"
 perex: |
-    Do you want to **migrate your project from Nette to Symfony**? In [the part 2](/blog/2019/03/07/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-2/) we looked at **escaping semver hell**.
+    Do you want to **migrate your project from Nette to Symfony**? In [the part 2](/blog/2019/03/07/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-2) we looked at **escaping semver hell**.
     <br><br>
     Today we'll look on **package vendor-locks** caused by brain drain.
 tweet: "New Post on #php 🐘 blog: Why we Migrated from #nettefw to #symfony in 3 Weeks - Part 3"
@@ -13,11 +13,11 @@ tweet_image: "/assets/images/posts/2019/nette-to-symfony3/nette-object-your-code
 
 <br>
 
-**If you love Nette, [keep using it](/blog/2018/05/31/symfony-vs-laravel-vs-nette-which-php-framework-you-should-choose/). This post is for people, whose companies are hurt by being locked to Nette ecosystem and who want to solve that but don't know how or if that is even possible.**
+**If you love Nette, [keep using it](/blog/2018/05/31/symfony-vs-laravel-vs-nette-which-php-framework-you-should-choose). This post is for people, whose companies are hurt by being locked to Nette ecosystem and who want to solve that but don't know how or if that is even possible.**
 
 ## February 2017...
 
-When we talked with [Honza](https://janmikes.cz/) about framework A → framework B migration first related to [Entry.do](https://entry.do/), it was on the first PHP Mountains 2017. Rector was still 5 months before being born, so manual work was the only way.
+When we talked with [Honza](https://janmikes.cz) about framework A → framework B migration first related to [Entry.do](https://entry.do), it was on the first PHP Mountains 2017. Rector was still 5 months before being born, so manual work was the only way.
 
 First, we looked into `composer.json` and tried to get rid of some packages. What packages we won't need on Symfony?
 
@@ -103,10 +103,10 @@ Many years later, when I become a Symfony consultant, I asked companies why did 
 
 In following years, without anyone noticing, **slow brain drain from Nette to Symfony, Java or Javascript** started:
 
-- [Filip Procházka](https://prochazka.su/), the author of Kdyby → is now Java programmer
-- [Patrik Votoček](https://patrik.votocek.cz/), one of first Nette evangelist and author of Nella →  switched to Symfony, then to chaos monkey,
+- [Filip Procházka](https://prochazka.su), the author of Kdyby → is now Java programmer
+- [Patrik Votoček](https://patrik.votocek.cz), one of first Nette evangelist and author of Nella →  switched to Symfony, then to chaos monkey,
 - [Martin Zlámal](https://github.com/mrtnzlml), very active Nette evangelist who held many Nette/PHP talks on university → now works with Javascript at Kiwi.com
-- [Jáchym Toušek](http://enumag.cz/), active Symfony to Nette integrator → switched to Symfony
+- [Jáchym Toušek](http://enumag.cz), active Symfony to Nette integrator → switched to Symfony
 - I, author of Zenify and Symnedi → switched to Symfony
 - ...
 
@@ -124,7 +124,7 @@ When we realized with Honza that night, that to upgrade project means "fork ever
 
 Are you stuck with Nette at home and thinking about in your wet dreams Symfony? This is your lucky week! :)
 
-Honza will talk about Nette to Symfony migration on **[PHP meetup in Prague this Thursday - 14. 3.](https://www.meetup.com/friends-of-php-prague/events/259627000/)**
+Honza will talk about Nette to Symfony migration on **[PHP meetup in Prague this Thursday - 14. 3.](https://www.meetup.com/friends-of-php-prague/events/259627000)**
 
 Entrance free, language is English and I'll be there too!
 

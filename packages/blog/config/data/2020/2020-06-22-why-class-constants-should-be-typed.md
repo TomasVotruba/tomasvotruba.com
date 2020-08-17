@@ -2,7 +2,7 @@
 id: 264
 title: "Why Class&nbsp;Constants Should&nbsp;be&nbsp;Typed"
 perex: |
-    Do you use PHP 7.4 [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds/)? Do you know why?
+    Do you use PHP 7.4 [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds)? Do you know why?
     <br>
     <br>
     I use them, so **I don't have to think and validate the property type** every time. We just know its type or PHP would crash otherwise.
@@ -118,7 +118,7 @@ Great! But maybe in 2025?
 
 ## Future Scoping
 
-The [PHP 8.0 release will be a blast](https://stitcher.io/blog/new-in-php-8). It's already ~30 merged features, and feature freeze is still [23 days ahead of us](https://thephp.website/en/issue/php8-release-schedule/).
+The [PHP 8.0 release will be a blast](https://stitcher.io/blog/new-in-php-8). It's already ~30 merged features, and feature freeze is still [23 days ahead of us](https://thephp.website/en/issue/php8-release-schedule).
 
 If we look at selected features in PHP 8:
 
@@ -145,7 +145,7 @@ and write future compatible code your children will thank you for.
 
 ## Let Computer work For You
 
-[The sooner you discover the error](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/), the better.
+[The sooner you discover the error](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers), the better.
 
 Do you use continuous integration (Github Actions, Gitlab CI, Travis CI...) and PHPStan? Add [PHPStan rule that checks `@var` definition vs the real value](https://github.com/symplify/coding-standard#constant-type-must-match-its-value).
 

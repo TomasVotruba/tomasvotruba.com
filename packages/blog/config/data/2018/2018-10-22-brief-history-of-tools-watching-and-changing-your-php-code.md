@@ -35,14 +35,14 @@ The decision to **fix everything by default was the huge jump in history** of th
 
 With [PHP CS Fixer 1.0 release in 2014](http://fabien.potencier.org/php-cs-fixer-finally-reaches-version-1-0.html) and rising popularity of **automated fixes** was **big motivation for PHP_CodeSniffer** to add similar feature - [*code beautifier*](https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically) - to version 2.
 
-It also helped with another issue. The development of PHP_CodeSniffer 2.8 and later almost froze to zero. I remember because I started working on [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/) right between
+It also helped with another issue. The development of PHP_CodeSniffer 2.8 and later almost froze to zero. I remember because I started working on [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) right between
 PHP_CodeSniffer 2.8 and 3.0 (depending on `3.0-dev`), which took 14 uncertain months.
 
 **So PHP_CodeSniffer now holds <span class="badge badge-success">Modifies Code</span> as well.**
 
 <br>
 
-Both use `token_get_all()` that basically parses code to strings. Do you want to know [how they actually work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/)?
+Both use `token_get_all()` that basically parses code to strings. Do you want to know [how they actually work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work)?
 
 ### [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) from the Czech Republic
 
@@ -88,7 +88,7 @@ $object->missing(); // here we know that "missing" does not exist in "SomeObject
     <a href="https://github.com/phpstan/phpstan/releases/tag/0.1">* 2016</a>
 </span>
 
-If you don't use any static analysis tool, give PHPStan a try. I've made [minimalist intro that will help you with first steps ](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). It's worth investing even day or two to set it up because **these tools will join toolkit of everyday use**, like Composer or PHPUnit.
+If you don't use any static analysis tool, give PHPStan a try. I've made [minimalist intro that will help you with first steps ](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too). It's worth investing even day or two to set it up because **these tools will join toolkit of everyday use**, like Composer or PHPUnit.
 
 ### [Phan](https://github.com/phan/phan) by Rasmus Lerdorf
 
@@ -105,7 +105,7 @@ If you don't use any static analysis tool, give PHPStan a try. I've made [minima
 </span>
 <span class="badge badge-success">Modifies Code</span>
 
-Psalm is a very interesting tool that was born to fight Vimeo code complexity. It was the first tool from this group of 3, **that started [fixing the code](https://psalm.dev/docs/fixing_code/)**.
+Psalm is a very interesting tool that was born to fight Vimeo code complexity. It was the first tool from this group of 3, **that started [fixing the code](https://psalm.dev/docs/fixing_code)**.
 
 ## 3. Deprecation Detectors
 

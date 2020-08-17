@@ -45,7 +45,7 @@ final class AppKernel extends Kernel
 
 <br>
 
-As [Matthias Noback](https://twitter.com/matthiasnoback) [wrote 4 years ago](http://php-and-symfony.matthiasnoback.nl/2012/01/symfony2-dynamically-add-routes/), in Symfony 1 you could use `routing.load_configuration` event to do this, but it was removed in Symfony 2. As a replacement, Matthias suggests creating custom Route Loader. It's the best solution so far I used before.
+As [Matthias Noback](https://twitter.com/matthiasnoback) [wrote 4 years ago](http://php-and-symfony.matthiasnoback.nl/2012/01/symfony2-dynamically-add-routes), in Symfony 1 you could use `routing.load_configuration` event to do this, but it was removed in Symfony 2. As a replacement, Matthias suggests creating custom Route Loader. It's the best solution so far I used before.
 
 But I'm older and more lazy now so I tried to find a simpler way.
 

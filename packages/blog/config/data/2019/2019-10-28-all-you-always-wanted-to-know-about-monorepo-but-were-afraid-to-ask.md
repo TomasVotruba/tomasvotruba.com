@@ -25,7 +25,7 @@ Monorepo is split into many single-repos, e.g. [Symfony/Symfony](https://github.
 
 ### Many-repo
 
-The other approach to manage multiple repositories. 1 package = 1 own repository. Each package has it's own development, tagging and even maintainers. E.g. [Doctrine 2](https://github.com/doctrine/) or [Nette 2](https://github.com/nette).
+The other approach to manage multiple repositories. 1 package = 1 own repository. Each package has it's own development, tagging and even maintainers. E.g. [Doctrine 2](https://github.com/doctrine) or [Nette 2](https://github.com/nette).
 
 ### Monolith
 
@@ -45,7 +45,7 @@ Monolith ≠ monorepo. Monolith is huge amount of coupled code of 1 application 
 * Cross-project changes
 * Tests across modules are run together → finds bugs that touch multiple modules easier
 
-*These are cherry-picked reasons from legendary [Advantages of Monolithic Version Control](https://danluu.com/monorepo/). Read it to get deeper insight.*
+*These are cherry-picked reasons from legendary [Advantages of Monolithic Version Control](https://danluu.com/monorepo). Read it to get deeper insight.*
 
 ---
 
@@ -62,5 +62,5 @@ Monolith ≠ monorepo. Monolith is huge amount of coupled code of 1 application 
 
 * [Monorepo: From Zero to Hero (2018)](/clusters/#monorepo-from-zero-to-hero)
 * [Why Google stores billions of lines of code in a single repository (2016)](https://dl.acm.org/citation.cfm?id=2854146)
-* [Monorepos in Git (2015)](https://developer.atlassian.com/blog/2015/10/monorepos-in-git/)
+* [Monorepos in Git (2015)](https://developer.atlassian.com/blog/2015/10/monorepos-in-git)
 * [korfuri/awesome-monorepo](https://github.com/korfuri/awesome-monorepo)

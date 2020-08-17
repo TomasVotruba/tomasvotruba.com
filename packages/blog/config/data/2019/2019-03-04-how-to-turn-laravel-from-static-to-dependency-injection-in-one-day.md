@@ -27,7 +27,7 @@ But is switching the framework (language, girlfriends, parents...) really the be
 
 ## Do You Leave Your Kid on Puberty?
 
-Thing is, every framework (and developer) has this step in evolution. So did [Symplify with static methods](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/).
+Thing is, every framework (and developer) has this step in evolution. So did [Symplify with static methods](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself).
 
 Each framework I used in some period of its evolution used static:
 

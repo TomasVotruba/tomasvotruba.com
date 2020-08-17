@@ -59,7 +59,7 @@ This can go completely wrong, not because dependency injection is better than se
 
 At that's what we think about when *we* refactored code and know about it's previous state.
 
-When your colleague will extends this code 3 months later, he might [broke your window](https://blog.codinghorror.com/the-broken-window-theory/):
+When your colleague will extends this code 3 months later, he might [broke your window](https://blog.codinghorror.com/the-broken-window-theory):
 
 ```diff
 <?php declare(strict_types=1);
@@ -97,11 +97,11 @@ You understand your code = you know reasons why it's written this way and the bo
 
 **But that's you. Only you.** Other people don't have your experience and your memory. **They read the code and learn while reading**.
 
-That's why it's important to use as less rules as possible to prevent [cognitive overload](https://chrismm.com/blog/writing-good-code-reduce-the-cognitive-load/). Which leads to poor understanding of the code and coding further in the same file but in own personal way, not related to original code much.
+That's why it's important to use as less rules as possible to prevent [cognitive overload](https://chrismm.com/blog/writing-good-code-reduce-the-cognitive-load). Which leads to poor understanding of the code and coding further in the same file but in own personal way, not related to original code much.
 
 ### DI is the Flow &ndash; Go With It
 
-Symfony 3.3 and 3.4/4.0 brought [many new DI features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) and **with it an evolution to developer experience paradigm**. Thanks to [Nicolas Grekas](https://github.com/nicolas-grekas), and subsequently [Kévin Dunglas](https://github.com/dunglas) and [Martin Hasoň](https://github.com/hason).
+Symfony 3.3 and 3.4/4.0 brought [many new DI features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3) and **with it an evolution to developer experience paradigm**. Thanks to [Nicolas Grekas](https://github.com/nicolas-grekas), and subsequently [Kévin Dunglas](https://github.com/dunglas) and [Martin Hasoň](https://github.com/hason).
 
 ## The Clean Way
 
@@ -193,7 +193,7 @@ $this->container->getParameter('bankAccount');
 
 **Wait! No need to go easy and dirty. There *is* simpler way.**
 
-Since Symfony 3.3 we can use [PSR-4 service loading](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration/) and since [Symfony 3.4/4.0 parameter binding](https://symfony.com/blog/new-in-symfony-3-4-local-service-binding).
+Since Symfony 3.3 we can use [PSR-4 service loading](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration) and since [Symfony 3.4/4.0 parameter binding](https://symfony.com/blog/new-in-symfony-3-4-local-service-binding).
 
 How changed previous steps?
 

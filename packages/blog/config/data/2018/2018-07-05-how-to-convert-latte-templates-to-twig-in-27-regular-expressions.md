@@ -23,7 +23,7 @@ updated_message: |
 
 This regex saga started as an experiment on this site. I tested the Twig support in Statie here. This web had ~20 files in Latte and I needed them to be in Twig, so I know the Twig support works with all the edge cases I use on daily basis.
 
-After the 5th change of code from `{$value}` to `{{ value }}` I started to have a weird feeling of being a robot or [a very slow AI](/blog/2018/05/03/how-do-you-treat-your-own-first-ai/). So I stopped to think a bit...
+After the 5th change of code from `{$value}` to `{{ value }}` I started to have a weird feeling of being a robot or [a very slow AI](/blog/2018/05/03/how-do-you-treat-your-own-first-ai). So I stopped to think a bit...
 
 <blockquote class="blockquote text-center">
     "The question you should be asking isn't, "What do I want?" or "What are my goals?" but "What would excite me?"
@@ -382,7 +382,7 @@ In the end, I'd like to encourage you to do more of such experiments. I meet man
 
 In my open-source experience, these experiments give you the most knowledge. Instead of choosing the first solution because *I don't have time and I have to deliver the value*, I tried 3-4, tested them and then picked the one that worked the best. It was not the first one of course, and even if it was, I'd be much more convinced the solution is right instead of just blindly believing it.
 
-I learned a lot about regular expressions, about delimiters and universal capturing groups (easter egg: seek "http" in the source code and you'll find all the tips I found and found useful) thanks to StackOverflow and [regex101.com](https://regex101.com/). I also must thank Jáchym Toušek and Ondra Mirtes with PHPStan who got me more engaged in regular expressions in a useful and not-so-frustrating way.
+I learned a lot about regular expressions, about delimiters and universal capturing groups (easter egg: seek "http" in the source code and you'll find all the tips I found and found useful) thanks to StackOverflow and [regex101.com](https://regex101.com). I also must thank Jáchym Toušek and Ondra Mirtes with PHPStan who got me more engaged in regular expressions in a useful and not-so-frustrating way.
 
 <br>
 <br>

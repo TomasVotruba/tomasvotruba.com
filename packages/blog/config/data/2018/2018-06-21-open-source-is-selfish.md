@@ -12,7 +12,7 @@ There are 2 major views I see in open-source: *a victim* and *a selfish egoist*.
 
 ## Open-Source as a Victim
 
-We had a panel discussion at [PHPLive 2018](http://www.phplive.cz/)  about the pros and cons of making your code open-source and **it surprised me how negatively open-source is viewd**. This might be related mainly to Czech & Slovak programmers, since we were raised victims by default in communism till 1993.
+We had a panel discussion at [PHPLive 2018](http://www.phplive.cz)  about the pros and cons of making your code open-source and **it surprised me how negatively open-source is viewd**. This might be related mainly to Czech & Slovak programmers, since we were raised victims by default in communism till 1993.
 
 What am I talking about? That open-source code is something you do for the public, in your free time. You expect them to contribute to your project; in a way you expect the code to be written. You feel like a boss and you own all the keys.
 
@@ -30,11 +30,11 @@ I'm exaggerating a bit, but this can easily happen to anyone, due to the *power 
 
 ## Open-Source as a Selfish Act
 
-[Jakub Kratina](http://jakubkratina.cz/) is a friend of mine, who organizes livestreams in Péhápkaři. He helped me a lot to become a better businessman and - little may he know - about *self-love* in open-source.
+[Jakub Kratina](http://jakubkratina.cz) is a friend of mine, who organizes livestreams in Péhápkaři. He helped me a lot to become a better businessman and - little may he know - about *self-love* in open-source.
 
-One day I was frustrated with [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/) - I wanted to have the best (the all) features and resolve all the issues as fast as possible *to make people happy*. **Inside I felt I want to do something else.** Instead, I wanted to migrate from magic in extension to explicit services. I felt like those people are stopping me from being happy, I was a victim of all those issues.
+One day I was frustrated with [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) - I wanted to have the best (the all) features and resolve all the issues as fast as possible *to make people happy*. **Inside I felt I want to do something else.** Instead, I wanted to migrate from magic in extension to explicit services. I felt like those people are stopping me from being happy, I was a victim of all those issues.
 
-Luckily I talked with Jakub and he told me very wise words (I even printed on my [love board](https://www.danpink.com/pinkcast/) later):
+Luckily I talked with Jakub and he told me very wise words (I even printed on my [love board](https://www.danpink.com/pinkcast) later):
 
 "It's your open-source, your code, your passion, and your work. If you want to do it, do it. What is the point of doing work if it's not making you happy?"
 

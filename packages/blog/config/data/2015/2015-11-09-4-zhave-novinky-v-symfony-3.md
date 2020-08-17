@@ -10,7 +10,7 @@ deprecated_message: "This post is available only in Czech and whole website was 
 lang: cs
 ---
 
-Symfony už toho umí opravdu hodně. Nová verze klade velký důraz především na [DX (developer experience)](https://symfony.com/blog/making-the-symfony-experience-exceptional). Přináší nám **jednodušší a jednoznačné API**, **lepší decoupling komponent**, **integraci standardů [PSR-3](https://www.php-fig.org/psr/psr-3/) a [PSR-7](https://symfony.com/doc/current/cookbook/psr7.html)**. A spoustu dalších novinek, díky kterým bude psaní aplikací zase o něco zábavnější.
+Symfony už toho umí opravdu hodně. Nová verze klade velký důraz především na [DX (developer experience)](https://symfony.com/blog/making-the-symfony-experience-exceptional). Přináší nám **jednodušší a jednoznačné API**, **lepší decoupling komponent**, **integraci standardů [PSR-3](https://www.php-fig.org/psr/psr-3) a [PSR-7](https://symfony.com/doc/current/cookbook/psr7.html)**. A spoustu dalších novinek, díky kterým bude psaní aplikací zase o něco zábavnější.
 
 ### V tomto článku se dozvíš
 

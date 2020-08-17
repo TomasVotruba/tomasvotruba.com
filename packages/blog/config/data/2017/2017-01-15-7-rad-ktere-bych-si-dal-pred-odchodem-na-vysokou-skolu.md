@@ -26,11 +26,11 @@ Já tohle neudělal, protože jsem nikoho takového neznal. Nebo jsem netušil, 
 
 ### Kde takové lidi najít?
 
-Pro začátek asi nebudeš chtít [platit za profíka](https://poradci.cz/) řádově 1000 Kč. Naštěstí jsou levnější cesty:
+Pro začátek asi nebudeš chtít [platit za profíka](https://poradci.cz) řádově 1000 Kč. Naštěstí jsou levnější cesty:
 
-- [Naučmese](https://www.naucmese.cz/) - na kurzech za pár stovek najdeš různé lidi, kteří ti rádi poví o svých zkušenostech - sám jsem tam potkal pár zajímavých osobností
+- [Naučmese](https://www.naucmese.cz) - na kurzech za pár stovek najdeš různé lidi, kteří ti rádi poví o svých zkušenostech - sám jsem tam potkal pár zajímavých osobností
 - **FB skupiny** - dneska už je snad na všechno skupina: programátoři, markeťáci, copywriteři, podnikatelé...
-- [Eventigo](https://eventigo.cz/) - služba, která zadarmo informuje o srazech z určité oblasti (ty jsou většinou taky zdarma), týdenní newsletter můžu jen doporučit
+- [Eventigo](https://eventigo.cz) - služba, která zadarmo informuje o srazech z určité oblasti (ty jsou většinou taky zdarma), týdenní newsletter můžu jen doporučit
 
 
 ## 3. Výška je inkubátor: dá ti čas, abys mohl najít co tě baví

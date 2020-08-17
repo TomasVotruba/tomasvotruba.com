@@ -16,9 +16,9 @@ updated_message: |
 
 ## Why are Dead Routes Important for Your Code?
 
-If you know that 20 % is never used, you can **drop it and ease your maintenance**. Also, it's a must-have pre-step [to code migrations](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/).
+If you know that 20 % is never used, you can **drop it and ease your maintenance**. Also, it's a must-have pre-step [to code migrations](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable).
 
-**Static analysis** can help you with [dead code that is never used](/blog/2019/03/18/how-to-detect-dead-php-code-in-code-review-in-7-snippets) and with [public methods that are never called](/blog/2019/03/14/remove-dead-public-methdos-from-your-code/), e.g.:
+**Static analysis** can help you with [dead code that is never used](/blog/2019/03/18/how-to-detect-dead-php-code-in-code-review-in-7-snippets) and with [public methods that are never called](/blog/2019/03/14/remove-dead-public-methdos-from-your-code), e.g.:
 
 ```diff
 -$discount = $this->getDiscount();
@@ -35,7 +35,7 @@ If you know that 20 % is never used, you can **drop it and ease your maintenance
     is dead and can be deleted.
 </blockquote>
 
-In this [case study from Spaceflow](/blog/2019/12/09/how-to-get-rid-of-technical-debt-or-what-we-would-have-done-differently-2-years-ago/) project we worked in summer 2019, **we removed ~20 % of the code... and nobody noticed**.
+In this [case study from Spaceflow](/blog/2019/12/09/how-to-get-rid-of-technical-debt-or-what-we-would-have-done-differently-2-years-ago) project we worked in summer 2019, **we removed ~20 % of the code... and nobody noticed**.
 
 <img src="/assets/images/posts/2019/spaceflow_10_points/13.png" class="img-thumbnail">
 
@@ -44,7 +44,7 @@ It's quite easy to find dead calls, but when it comes to controller and API endp
 
 **Static analysis won't tell us, which controller is used and which not.** Also, the controller might call 2-3 other services... and they might call other services... and those could be dead too... **welcome fractal of dead code we have to maintain.** What now?
 
-We'll have to use similar approach we used for [From 0 Doc Types to Full Type Declaration](/blog/2019/11/11/from-0-doc-types-to-full-type-declaration-with-dynamic-analysis/).
+We'll have to use similar approach we used for [From 0 Doc Types to Full Type Declaration](/blog/2019/11/11/from-0-doc-types-to-full-type-declaration-with-dynamic-analysis).
 
 
 <img src="/assets/images/posts/2020/dead_routes_branch.jpg" class="img-thumbnail mt-4 mb-2">

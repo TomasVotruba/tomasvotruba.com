@@ -34,7 +34,7 @@ Next time you'll be standing before 2 options, remember [the least common denomi
 If the readable and clear code is not good enough reason for you and you still think
 you should stick with listeners at all cost, maybe the following steps will convince you.
 
-Symfony 3.3 introduced [PSR-4 Autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) of services. In short, it means we don't have register services manually, if they respect PSR-4 (class name ~= file location):
+Symfony 3.3 introduced [PSR-4 Autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3) of services. In short, it means we don't have register services manually, if they respect PSR-4 (class name ~= file location):
 
 ```diff
  services:
@@ -66,9 +66,9 @@ It doesn't apply only to controllers, but to all services, like Event Subscriber
 +        resource: '../src/EventSubscriber'
 ```
 
-Next time we create an event subscriber class, we don't have to [code in config](/blog/2019/02/14/why-config-coding-sucks/) anymore <em class="fas fa-fw fa-lg fa-check text-success"></em>
+Next time we create an event subscriber class, we don't have to [code in config](/blog/2019/02/14/why-config-coding-sucks) anymore <em class="fas fa-fw fa-lg fa-check text-success"></em>
 
-We've [reduced cognitive load](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) → code is easier to work with → hiring is faster → we can focus on business and feature value.
+We've [reduced cognitive load](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you) → code is easier to work with → hiring is faster → we can focus on business and feature value.
 
 ### How can we Reduce configs with Listeners?
 
@@ -90,7 +90,7 @@ services:
 
 Hm, how can be the listener called when it has now an information event?
 
-That's one of legacy [code smells of tags](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/).
+That's one of legacy [code smells of tags](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications).
 
 **We can't reduce configs**. We have to grow about configs together with code till the end of times <em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
 
@@ -100,7 +100,7 @@ If **you're paid or motivated by productivity** like me and not by produced line
 
 ## Automated Instant Migration
 
-It's very nice use case for [pattern refactoring](/blog/2019/04/15/pattern-refactoring/), from A - *Listener* to B - *Event Subscriber*.
+It's very nice use case for [pattern refactoring](/blog/2019/04/15/pattern-refactoring), from A - *Listener* to B - *Event Subscriber*.
 
 ### 1. Define Patterns
 
