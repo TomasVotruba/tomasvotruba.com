@@ -64,7 +64,7 @@ Instead, you can go vice-versa. Drop Jenkins, private Github, private Travis and
 
 ### All About the Money
 
-A reminder this is not solely about the money. You can save money for private Github and Travis just by migrating to private Gitlab that you can even host. Many friends and projects of I know work this way. But the benefit I talk about works the best in one wave with all other benefits, like embodied know-how, mentoring from experts and [open-source hiring](/blog/2018/07/26/why-is-your-company-losing-money-by-not-open-sourcing-1-hiring).
+A reminder this is not solely about the money. You can save money for private Github and Travis just by migrating to private Gitlab that you can even host. Many friends and projects of I know work this way. But the benefit I talk about works the best in one wave with all other benefits, like embodied know-how, mentoring from experts and [open-source hiring](/blog/2018/07/26/why-is-your-company-losing-money-by-not-open-sourcing-1-hiring/).
 
 ## 3. How to Pay Top PHP Mentors 0 $
 
@@ -137,7 +137,7 @@ On the other hand, when I code-review private projects on such code smells, I ge
 
 But when I ask more, I see they have no deeper idea why. They only know the 1 reason to write bad code even if they really don't have to. **It's like a candy you steal but nobody knows about it**. Nobody else will ever see this code, and if they'll do, you'd be already in that another company.
 
-And it's super difficult to think open while being closed. But by having code open-source, you'll adopt this mindset by natural in just a few months. After years, I can now feel if I'm hacking something the wrong way [that will hunt me down 2 years later](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself) or if the code really can't be better.
+And it's super difficult to think open while being closed. But by having code open-source, you'll adopt this mindset by natural in just a few months. After years, I can now feel if I'm hacking something the wrong way [that will hunt me down 2 years later](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/) or if the code really can't be better.
 
 
 <br><br>

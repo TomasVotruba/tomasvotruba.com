@@ -112,13 +112,13 @@ In the root directory, we only have the directory with all packages:
 
 But where is `composer.json`? We can ~~create it manually~~ use a CLI tool that does it for us - [MonorepoBuilder](https://github.com/symplify/monorepo-builder).
 
-Use [prefixed version](/blog/2019/12/02/how-to-box-symfony-app-to-phar-without-killing-yourself) to avoid dependency conflicts with your packages.
+Use [prefixed version](/blog/2019/12/02/how-to-box-symfony-app-to-phar-without-killing-yourself/) to avoid dependency conflicts with your packages.
 
 ```bash
 composer require symplify/monorepo-builder-prefixed --dev
 ```
 
-Now that we have [this power-tool for working](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command) with monorepo, we can do:
+Now that we have [this power-tool for working](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command/) with monorepo, we can do:
 
 ```bash
 vendor/bin/monorepo-builder merge
@@ -361,7 +361,7 @@ Everything else will be more complicated than it has to, will annoy us, and demo
 
 <br>
 
-If you're serious about monorepo testing, read [How to Test Monorepo in 3 Layers](/blog/2018/11/22/how-to-test-monorepo-in-3-layers).
+If you're serious about monorepo testing, read [How to Test Monorepo in 3 Layers](/blog/2018/11/22/how-to-test-monorepo-in-3-layers/).
 
 ## Final Touches
 
@@ -373,7 +373,7 @@ Congrats!
 
 ## Where to go next?
 
-Be sure to read each post from [Monorepo: From Hero to Zero](/clusters/#monorepo-from-zero-to-hero).
+Be sure to read each post from [Monorepo: From Hero to Zero](/clusters/#monorepo-from-zero-to-hero/).
 
 Then go to your Gitlab or Github and make your `company/company-monorepo` package. It's easier when you start.
 

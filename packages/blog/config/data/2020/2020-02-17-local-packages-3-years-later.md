@@ -2,7 +2,7 @@
 id: 239
 title: "Local Packages 3 Years Later"
 perex: |
-    The first public idea about local packages was [published over 3 years ago](/blog/2017/12/25/composer-local-packages-for-dummies) after 1 year of internal testing.
+    The first public idea about local packages was [published over 3 years ago](/blog/2017/12/25/composer-local-packages-for-dummies/) after 1 year of internal testing.
     <br><br>
     **How do they stand in 2020? How people use it wrong?** Are they still the best option to keep low complexity in huge projects?
 tweet: "New Post on #php 🐘 blog: Local Packages 3 Years Later"
@@ -48,7 +48,7 @@ Simple.
 
 <br>
 
-Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies).
+Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies/).
 
 ## How People Use it Wrong?
 
@@ -153,7 +153,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
             FileSystem.php
 ```
 
-This is only useful in case of [monorepo that splits packages](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command), e.g. Symfony, Symplify. Not for local packages.
+This is only useful in case of [monorepo that splits packages](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command/), e.g. Symfony, Symplify. Not for local packages.
 
 <em class="fas fa-fw fa-2x fa-check text-success"></em>
 

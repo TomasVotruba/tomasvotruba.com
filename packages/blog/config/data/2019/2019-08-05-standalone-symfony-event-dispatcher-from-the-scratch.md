@@ -12,7 +12,7 @@ tweet_image: "/assets/images/posts/2019/event_dispatcher_tweet.png"
 
 updated_since: "June 2020"
 updated_message: |
-    Updated with Symfony [4.3 simple dispatching](https://symfony.com/blog/new-in-symfony-4-3-simpler-event-dispatching), PHP 7.4 syntax and [`::class`-based event names](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher).
+    Updated with Symfony [4.3 simple dispatching](https://symfony.com/blog/new-in-symfony-4-3-simpler-event-dispatching), PHP 7.4 syntax and [`::class`-based event names](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher/).
 ---
 
 ## What is the Main Purpose of Event Dispatcher?

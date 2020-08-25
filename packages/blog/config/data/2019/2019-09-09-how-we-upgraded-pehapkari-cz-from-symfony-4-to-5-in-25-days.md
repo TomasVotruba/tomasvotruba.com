@@ -188,7 +188,7 @@ Then switch to Symfony 5:
 // etc.
 ```
 
-But some packages are released out of [monorepo cycle](/blog/2019/10/28/all-you-always-wanted-to-know-about-monorepo-but-were-afraid-to-ask):
+But some packages are released out of [monorepo cycle](/blog/2019/10/28/all-you-always-wanted-to-know-about-monorepo-but-were-afraid-to-ask/):
 
 ```diff
 -"symfony/maker-bundle": "^1.14",

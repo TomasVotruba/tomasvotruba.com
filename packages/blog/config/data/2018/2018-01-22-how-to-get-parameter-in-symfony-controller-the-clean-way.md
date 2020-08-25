@@ -101,7 +101,7 @@ That's why it's important to use as less rules as possible to prevent [cognitive
 
 ### DI is the Flow &ndash; Go With It
 
-Symfony 3.3 and 3.4/4.0 brought [many new DI features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3) and **with it an evolution to developer experience paradigm**. Thanks to [Nicolas Grekas](https://github.com/nicolas-grekas), and subsequently [Kévin Dunglas](https://github.com/dunglas) and [Martin Hasoň](https://github.com/hason).
+Symfony 3.3 and 3.4/4.0 brought [many new DI features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/) and **with it an evolution to developer experience paradigm**. Thanks to [Nicolas Grekas](https://github.com/nicolas-grekas), and subsequently [Kévin Dunglas](https://github.com/dunglas) and [Martin Hasoň](https://github.com/hason).
 
 ## The Clean Way
 

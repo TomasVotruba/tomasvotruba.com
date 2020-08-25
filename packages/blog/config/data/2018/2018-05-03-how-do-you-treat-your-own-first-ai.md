@@ -2,7 +2,7 @@
 id: 102
 title: "How Do You Treat Your Own First AI?"
 perex: |
-    Artificial intelligence is at boom the last couple of years. I wrote about AI and its relation to [jobs development](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world) in following years.
+    Artificial intelligence is at boom the last couple of years. I wrote about AI and its relation to [jobs development](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) in following years.
 
     Now we'll try to look a bit closer. Not in time, but in space. Take a look around you, what do you see?
     Do you see *your own first* AI already? And how do you treat it?
@@ -15,7 +15,7 @@ It might be a multi-layer network, it might be a deep-learning network, it might
 
 **In short: if you want to recognize pizza from non-pizza, you can teach it and it can do it.**
 
-I'm watching this purely machine-software discussion, by [reading books](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world) or [visiting conferences](https://www.mlprague.com) and see a connection to psychology, mentoring, education and human evolution itself in general.
+I'm watching this purely machine-software discussion, by [reading books](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/) or [visiting conferences](https://www.mlprague.com) and see a connection to psychology, mentoring, education and human evolution itself in general.
 
 (A psychotherapist friend of mine saw this inter-field connection as an [eugenics](https://en.wikipedia.org/wiki/Eugenics), but that's probably of lack of understanding of what programming and artificial intelligence is).
 
@@ -99,7 +99,7 @@ So when you decide that you can quit your job, find a new partner, move from you
 
 ## Baby Steps
 
-I wrote that neural network is a muscle. I found out when I tried to learn too many things at once, you know [in university](/blog/2017/11/13/7-tips-you-should-know-before-going-to-university), I very quickly forgot all this. I read this book about healing traumas and it has very nice approach between lines in every chapter:
+I wrote that neural network is a muscle. I found out when I tried to learn too many things at once, you know [in university](/blog/2017/11/13/7-tips-you-should-know-before-going-to-university/), I very quickly forgot all this. I read this book about healing traumas and it has very nice approach between lines in every chapter:
 
 <blockquote>
     "The slower you go, the further you get."

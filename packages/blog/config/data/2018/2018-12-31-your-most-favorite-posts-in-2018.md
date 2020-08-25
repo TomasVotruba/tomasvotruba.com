@@ -26,15 +26,15 @@ Without further ado, these are stats **for unique readers** from Google Analytic
 
 Did you miss some of them? These **will give you useful knowledge through 2019**:
 
-- [How to use Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony)
+- [How to use Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/)
 
-- [What's New in PHP 7.3 in 30 Seconds in Diffs](/blog/2018/08/16/whats-new-in-php-73-in-30-seconds-in-diffs)
+- [What's New in PHP 7.3 in 30 Seconds in Diffs](/blog/2018/08/16/whats-new-in-php-73-in-30-seconds-in-diffs/)
 
-- [7 Tips to Write Exceptions Everyone Will Love](/blog/2018/09/17/7-tips-to-write-exceptions-everyone-will-love)
+- [7 Tips to Write Exceptions Everyone Will Love](/blog/2018/09/17/7-tips-to-write-exceptions-everyone-will-love/)
 
-- [Kirill Smelov's PHPStorm Tips in 9 Gifs](/blog/2018/12/13/kirill-smelov-s-phpstorm-tips-in-9-gifs)
+- [Kirill Smelov's PHPStorm Tips in 9 Gifs](/blog/2018/12/13/kirill-smelov-s-phpstorm-tips-in-9-gifs/)
 
-- [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies)
+- [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies/)
 
 
 ## You Read a Crazy Lot

@@ -53,7 +53,7 @@ What can you do better?  **You could reach for 80 % shorter and PHP-related [Pri
     <img src="/assets/images/posts/2017/non-it-books/deep.jpg">
 </div>
 
-Imagine peace with combination of 5hour train trips, [disabling twitter](/blog/2017/01/20/4-emotional-reasons-why-I-quit-my-twitter) and other [social networks](/blog/2017/01/05/why-I-deleted-my-linkedin-account) on your mobile and computer and [cutting of Facebook](https://zenhabits.net/unline) activity, it is powerful skill-set that will **give you head start before any concurrency you have**.
+Imagine peace with combination of 5hour train trips, [disabling twitter](/blog/2017/01/20/4-emotional-reasons-why-I-quit-my-twitter/) and other [social networks](/blog/2017/01/05/why-I-deleted-my-linkedin-account/) on your mobile and computer and [cutting of Facebook](https://zenhabits.net/unline) activity, it is powerful skill-set that will **give you head start before any concurrency you have**.
 
 
 Again, instead of few bullet points that **got my** opinionated attention, check [this 13min youtube video](https://www.youtube.com/watch?v=3E7hkPZ-HTk).

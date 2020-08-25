@@ -84,7 +84,7 @@ Back to Matrix world: imagine you can listen to every phone booth. Let's say you
 
 This approach is implemented in PHP under name of EventDispatcher. While working with Symfony, **events gave me very similar feeling of freedom** - [in docs](https://symfony.com/doc/current/reference/events.html#kernel-events) as well in small book [A Year with Symfony](https://leanpub.com/a-year-with-symfony).
 
-Do you want simple example of such listening script? [Check this tested post](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch) with all code snippets you need.
+Do you want simple example of such listening script? [Check this tested post](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch/) with all code snippets you need.
 
 ### While on Event, Listen Carefully
 

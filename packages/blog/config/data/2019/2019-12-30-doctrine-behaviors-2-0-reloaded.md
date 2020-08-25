@@ -2,7 +2,7 @@
 id: 232
 title: "Doctrine Behaviors 2.0 - Reloaded"
 perex: |
-    In [How we Upgraded Pehapkari.cz from Symfony 4 to 5 in 25 days](/blog/2019/09/09/how-we-upgraded-pehapkari-cz-from-symfony-4-to-5-in-25-days/) post, there is a section about Doctrine Behaviors in Symfony 5.
+    In [How we Upgraded Pehapkari.cz from Symfony 4 to 5 in 25 days](/blog/2019/09/09/how-we-upgraded-pehapkari-cz-from-symfony-4-to-5-in-25-days//) post, there is a section about Doctrine Behaviors in Symfony 5.
     <br><br>
     **None of stof, gedmo, nor KnpLabs is working with Symfony 5**. There are many issues in each of those projects asking for maintainers to merge PRs and tag it. One of those issues was heard, and the owner gave me maintainer access.
     <br><br>
@@ -20,7 +20,7 @@ When I got a message from KnpLabs with an offer to maintain, I was super happy t
 
 A moment later, when I realized what happened and how quickly, I started to be scared. The repository looked like a massive chunk of code that will need many design changes,  back compatibility breaks, etc. **All the responsibility started to fall on my shoulders, and it was heavy**.
 
-I took it as challenge and started to [climb mountain](/blog/2018/04/30/programming-climbing-a-huge-mountain), without knowing if or how this will end-up.
+I took it as challenge and started to [climb mountain](/blog/2018/04/30/programming-climbing-a-huge-mountain/), without knowing if or how this will end-up.
 
 <blockquote class="blockquote text-center">
     There were only 2 options:<br>finished tagged version 2 or burn-out in the process.
@@ -236,7 +236,7 @@ Migration path for these types will be provided based on feedback, so **in case 
 
 ### Code Quality Changes
 
-Feature improvements are essential. But to make them fast and stable, the [**code quality has the same importance**](/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository).
+Feature improvements are essential. But to make them fast and stable, the [**code quality has the same importance**](/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/).
 
 <blockquote class="blockquote text-center">
     Energy saved on manual maintenance<br>
@@ -300,7 +300,7 @@ KnpLabs\DoctrineBehaviors don't support softdeletable and non-materialized tree 
 
 ### How do you Migrate from Gedmo/Stof to KnpLabs\DoctrineBehaviors?
 
-Read [Migrate Gedmo to KnpLabs](/blog/2020/01/06/migrate-gedmo-to-knplabs) post to find the answer.
+Read [Migrate Gedmo to KnpLabs](/blog/2020/01/06/migrate-gedmo-to-knplabs/) post to find the answer.
 
 <br>
 

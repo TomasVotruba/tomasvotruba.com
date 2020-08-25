@@ -8,7 +8,7 @@ deprecated_since: "July 2018"
 deprecated_message: |
     Doctrine came through **many great and healthy changes during last ~18 months**, so this statement is no longer true.
 
-    See [Doctrine is Alive and Kicking post for more](/blog/2018/07/09/6-reasons-why-doctrine-is-alive-and-kicking).
+    See [Doctrine is Alive and Kicking post for more](/blog/2018/07/09/6-reasons-why-doctrine-is-alive-and-kicking/).
 ---
 
 I've been thinking over 2 years about this post. I wasn't sure if it's only a negative hype feeling or the real thing. It's still the same so it's time to write about it.
@@ -70,7 +70,7 @@ There is no more powerful motivation than competition. Moreover in man's worlds.
 
 ### 2. Using Monolithic Repository
 
-I see Symfony, Laravel and many huge projects [using this pattern](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness) and I am profiting a lot from it. After ~8 years in open-source, I've tried too (don't judge, just try for yourself) and it's the best! Trust me.
+I see Symfony, Laravel and many huge projects [using this pattern](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/) and I am profiting a lot from it. After ~8 years in open-source, I've tried too (don't judge, just try for yourself) and it's the best! Trust me.
 
 **Having Doctrine (or any other project) split in over 20 repositories requires a lot of work**.
 

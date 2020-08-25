@@ -58,7 +58,7 @@ vendor/bin/ecs
 
 I will not bother you with technical details, but if you're working on PHP CLI app and you want to **make it accessible to the majority of PHP developers**, you can learn more here:
 
-- [How to Box Symfony App to PHAR without Killing Yourself](/blog/2019/12/02/how-to-box-symfony-app-to-phar-without-killing-yourself)
+- [How to Box Symfony App to PHAR without Killing Yourself](/blog/2019/12/02/how-to-box-symfony-app-to-phar-without-killing-yourself/)
 - [How to install Rector despite Composer Conflicts](https://getrector.org/blog/2020/01/20/how-to-install-rector-despite-composer-conflicts)
 
 <br>

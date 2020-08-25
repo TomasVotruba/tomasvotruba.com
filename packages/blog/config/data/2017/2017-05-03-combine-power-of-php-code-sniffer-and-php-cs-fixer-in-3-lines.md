@@ -103,6 +103,6 @@ vendor/bin/ecs check src --fix
 
 That's all for short ECS intro.
 
-Do you want to know more? Learn [how to write own sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3) or [even better - a fixer](/blog/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24).
+Do you want to know more? Learn [how to write own sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/) or [even better - a fixer](/blog/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24/).
 
 Happy coding!

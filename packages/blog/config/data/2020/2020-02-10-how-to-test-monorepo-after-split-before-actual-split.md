@@ -14,7 +14,7 @@ tweet: "New Post on #php 🐘 blog: How to Test Monorepo After Split Before Actu
 tweet_image: "/assets/images/posts/split_before_split.png"
 ---
 
-Do you use Github Actions on your Github projects? Well, if you do, **[it might cut your commit feedback loop](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress) from 17 minutes to just 3** and make you super productive by accident.
+Do you use Github Actions on your Github projects? Well, if you do, **[it might cut your commit feedback loop](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/) from 17 minutes to just 3** and make you super productive by accident.
 
 We now use Github Actions on Symplify and Rector for over a month, and in January 2020, it helped us [to merge amazing 177 pull-requests](https://twitter.com/VotrubaT/status/1220126675436032005).
 
@@ -75,7 +75,7 @@ composer install
 vendor/bin/phpunit
 ```
 
-You can read more about it [in original post](/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split).
+You can read more about it [in original post](/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split/).
 
 <br>
 

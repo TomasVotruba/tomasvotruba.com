@@ -2,7 +2,7 @@
 id: 121
 title: "6 Reasons Why Doctrine is Alive and Kicking"
 perex: |
-    Almost 1,5 year ago I wrote [Why is Doctrine Dying](/blog/2017/03/27/why-is-doctrine-dying). I didn't use *dead*, because it's is just state of time being. Open-source projects - like people - tend to find themselves on the top, being stuck or struggling with the right path from time to time. It's a completely normal process of evolution.
+    Almost 1,5 year ago I wrote [Why is Doctrine Dying](/blog/2017/03/27/why-is-doctrine-dying/). I didn't use *dead*, because it's is just state of time being. Open-source projects - like people - tend to find themselves on the top, being stuck or struggling with the right path from time to time. It's a completely normal process of evolution.
     <br><br>
     I don't know if that post helped it, but since then many **things changed for better in Doctrine project**. Saying that this post deprecates my old view and celebrate changes.
     <br><br>
@@ -34,7 +34,7 @@ Although the coding standard is standard nowadays, it's not very easy to setup t
 
 Coding Standard makes contributing much more fearless since **you don't have to worry I'll get smashed in code-review by "extra space here" comment**.
 
-Since it uses only PHP_CodeSniffer and not PHP CS Fixer, these still is a lot of manual work and space for huge cost-effective improvement. I tried to help with EasyCodingStandard implementation many months ago, but in that time ECS required PHP 7.1 and Doctrine not and used Neon of YAML to configure. Not anymore! [YAML is now default since ECS 4](/blog/2018/03/26/new-in-easy-coding-standard-4-clean-symfony-standard-with-yaml-and-services), so the path is open from the technical point of view.
+Since it uses only PHP_CodeSniffer and not PHP CS Fixer, these still is a lot of manual work and space for huge cost-effective improvement. I tried to help with EasyCodingStandard implementation many months ago, but in that time ECS required PHP 7.1 and Doctrine not and used Neon of YAML to configure. Not anymore! [YAML is now default since ECS 4](/blog/2018/03/26/new-in-easy-coding-standard-4-clean-symfony-standard-with-yaml-and-services/), so the path is open from the technical point of view.
 
 ## 3. Cut the Weight to Save Yourself
 
@@ -57,9 +57,9 @@ Now it's clear the Doctrine 3.0 will include this drop. This is very similar to 
 
 ### Get rid of Over-Support as part of Psychohygiene
 
-*Over-support* is very common in open source. It happened to me in ECS, [I saw it ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death) and almost burned out while getting rid of it (it also took me many months to even realize it and step out of it). **People request features, your project is popular, you gave people these features and that makes it more popular, so more people request features... it's challenging to keep on track when you're on celebrity power-trip**.
+*Over-support* is very common in open source. It happened to me in ECS, [I saw it ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death//) and almost burned out while getting rid of it (it also took me many months to even realize it and step out of it). **People request features, your project is popular, you gave people these features and that makes it more popular, so more people request features... it's challenging to keep on track when you're on celebrity power-trip**.
 
-It's very healthy to be [selfish in open-source](/blog/2018/06/21/open-source-is-selfish), not just for you for for the project to live and prosper.
+It's very healthy to be [selfish in open-source](/blog/2018/06/21/open-source-is-selfish//), not just for you for for the project to live and prosper.
 
 ## 4. Give People Vision to Follow
 

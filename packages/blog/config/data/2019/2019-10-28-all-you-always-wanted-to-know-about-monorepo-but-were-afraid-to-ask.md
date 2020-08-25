@@ -60,7 +60,7 @@ Monolith ≠ monorepo. Monolith is huge amount of coupled code of 1 application 
 
 ## What to Read Next?
 
-* [Monorepo: From Zero to Hero (2018)](/clusters/#monorepo-from-zero-to-hero)
+* [Monorepo: From Zero to Hero (2018)](/clusters/#monorepo-from-zero-to-hero/)
 * [Why Google stores billions of lines of code in a single repository (2016)](https://dl.acm.org/citation.cfm?id=2854146)
 * [Monorepos in Git (2015)](https://developer.atlassian.com/blog/2015/10/monorepos-in-git)
 * [korfuri/awesome-monorepo](https://github.com/korfuri/awesome-monorepo)

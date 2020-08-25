@@ -17,7 +17,7 @@ tweet_image: "/assets/images/posts/2020/symfonize_merged.png"
 
 <em class="fas fa-fw mt-4 fa-star-half text-warning"></em> **We were ok with** keeping original business logic code untouched. We will handle spaghetti decoupling to Controller and Twig in the next phase. This was just a 1st step of many.
 
-<em class="fas fa-fw mt-4 fa-check text-success"></em> **We wanted** to be able to use Symfony dependency injection, Twig templates, Controller rendering, Symfony Security, Events, Repository, connection to database, `.env`, Flex, Bundles, YAML configs, [local packages](/blog/2020/02/17/local-packages-3-years-later).
+<em class="fas fa-fw mt-4 fa-check text-success"></em> **We wanted** to be able to use Symfony dependency injection, Twig templates, Controller rendering, Symfony Security, Events, Repository, connection to database, `.env`, Flex, Bundles, YAML configs, [local packages](/blog/2020/02/17/local-packages-3-years-later/).
 
 <em class="fas fa-fw mt-4 fa-check text-success"></em> **We wanted automate** everything that is possible to automate.
 
@@ -71,9 +71,9 @@ echo $content;
 
 ## First: Make a Plan
 
-The migration pull-request itself is just **half of the work**. First, we had to have [coding standards, PSR-4 autoloading, PHPStan on level 8](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable) etc. When I say PHPStan on level 8, we skipped those errors with 50+ cases.
+The migration pull-request itself is just **half of the work**. First, we had to have [coding standards, PSR-4 autoloading, PHPStan on level 8](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/) etc. When I say PHPStan on level 8, we skipped those errors with 50+ cases.
 
-The next half is [to have a full team on board](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours) and have **a clear plan**.
+The next half is [to have a full team on board](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/) and have **a clear plan**.
 
 ## PHP Template in Symfony 5?
 
@@ -336,7 +336,7 @@ final class ContactController extends AbstractController
 
 With this approach, we have all we wanted:
 
-<em class="fas fa-fw mt-4 fa-check text-success"></em> **We can** use Symfony dependency injection, Twig templates, Controller rendering, Symfony Security, Events, Repository, connection to database, `.env`, Flex, Bundles, YAML configs, [local packages](/blog/2020/02/17/local-packages-3-years-later).
+<em class="fas fa-fw mt-4 fa-check text-success"></em> **We can** use Symfony dependency injection, Twig templates, Controller rendering, Symfony Security, Events, Repository, connection to database, `.env`, Flex, Bundles, YAML configs, [local packages](/blog/2020/02/17/local-packages-3-years-later/).
 
 <em class="fas fa-fw mt-4 fa-check text-success"></em> **We can to write** any future code as if in any other Symfony application without going back.
 
@@ -356,7 +356,7 @@ And that's it!
 
 ### Caveats
 
-- do [8 Steps You Can Make Before Huge Upgrade to Make it Faster, Cheaper and More Stable](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable) first
+- do [8 Steps You Can Make Before Huge Upgrade to Make it Faster, Cheaper and More Stable](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/) first
 - **have a strict deadline** - our original plan was the end of May, but when Easter came, we couldn't resist
 - **don't fall in the bait of manual refactoring** of that one thing in the code you don't like - **stay focused on the migration** and improve code when the 1st step is finished and merged
 - **have a buddy**, that helps you psychically when you're stuck - without a friend, this might turn into a nightmare of being stuck in circles; even only talking about the problem helps - it's better if it's somebody outside your normal work (consultant, old collegaue), so they're not stuck in your legacy project mindset

@@ -2,7 +2,7 @@
 id: 124
 title: "How to Make Github and Travis Split Monorepo to Multiple Git Repositories for You"
 perex: |
-    Do you use a [monorepo](/clusters/#monorepo-from-zero-to-hero)? Then you know [How to maintain multiple Git repositories with ease](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0). If you're not there yet, you may wonder [How to Merge 15 Repositories to 1 Monorepo and Keep their Git History](https://blog.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3).
+    Do you use a [monorepo](/clusters/#monorepo-from-zero-to-hero/)? Then you know [How to maintain multiple Git repositories with ease](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0). If you're not there yet, you may wonder [How to Merge 15 Repositories to 1 Monorepo and Keep their Git History](https://blog.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3).
     <br><br>
     Are you and your monorepo ready? Today we'll focus on **fast, secured and outsourced monorepo auto split** - all that under 10 minutes.
 tweet: "New Post on My Blog: How to Make #Github and #Travis Split #Monorepo to Multiple #Git Repositories for You   #security"

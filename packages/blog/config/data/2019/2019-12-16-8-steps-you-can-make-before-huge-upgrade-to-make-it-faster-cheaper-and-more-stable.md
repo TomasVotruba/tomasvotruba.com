@@ -38,7 +38,7 @@ If you have PSR-4 standard applied, your `composer.json` looks like this:
 ```
 
 - No `classmap`, no `files`
-- No [Nette\RobotLoader](/blog/2020/06/08/drop-robot-loader-and-let-composer-deal-with-autoloading) magic autoloading
+- No [Nette\RobotLoader](/blog/2020/06/08/drop-robot-loader-and-let-composer-deal-with-autoloading/) magic autoloading
 - No [extra autoloading](https://stackoverflow.com/a/31847204/1348344) for PHPUnit
 - No [PHPUnit magic autoloading](https://github.com/sebastianbergmann/phpunit/blob/c27ac794f809a73bb04bcd4cdd0c33f3265921a4/src/Runner/StandardTestSuiteLoader.php#L39)
 
@@ -293,7 +293,7 @@ When we come to a completely new project, **we need instant feedback, if we brea
 
 We don't care if it's functional, integration or unit tests - we just need the coverage to be sure nothing is wrong with the code. Without tests, **any change in the code is like shooting blindfolded in the dark without hands at a target that is both invisible, moving and Shrodinger's cat**.
 
-On the other hand, if you have a code coverage over 80 % percent, even change of [the framework can be as fast as 80 hours](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours).
+On the other hand, if you have a code coverage over 80 % percent, even change of [the framework can be as fast as 80 hours](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/).
 
 <blockquote class="blockquote text-center mt-5 mb-3">
     If you make it pass ~70 % code coverage,<br>

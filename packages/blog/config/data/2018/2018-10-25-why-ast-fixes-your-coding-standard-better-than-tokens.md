@@ -2,7 +2,7 @@
 id: 153
 title: "Why AST Fixes your Coding Standard Better than Tokens"
 perex:
-    In the last post [*Brief History of Tools Watching and Changing Your PHP Code*](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code) we saw there are over **dozen tools in PHP that can modify code**. So there is no surprise coding standard tools are "upgrading" code from PHP 5.6 to PHP 7.2 without knowing types and that AST is moving `false` to `!`.
+    In the last post [*Brief History of Tools Watching and Changing Your PHP Code*](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/) we saw there are over **dozen tools in PHP that can modify code**. So there is no surprise coding standard tools are "upgrading" code from PHP 5.6 to PHP 7.2 without knowing types and that AST is moving `false` to `!`.
     <br><br>
     Should coding standard upgrade your code? Should AST make your code cleaner? Should AST take of coding standard changes?
     **Which is born for it?**
@@ -58,7 +58,7 @@ Huge thanks to [Gabriel Caruso](https://github.com/carusogabriel), who brought t
 
 <br>
 
-If there would be no AST, this all could be handled by `token_get_all` ([like PHP_CodeSniffer and PHP CS Fixer](/blog/2017/07/31/how-php-coding-standard-tools-actually-work)), but **such implementation needs to be lot longer to achieve similar quality**, since you have to check every previous and next tokens for any unexpected values.
+If there would be no AST, this all could be handled by `token_get_all` ([like PHP_CodeSniffer and PHP CS Fixer](/blog/2017/07/31/how-php-coding-standard-tools-actually-work)/), but **such implementation needs to be lot longer to achieve similar quality**, since you have to check every previous and next tokens for any unexpected values.
 
 <blockquote class="blockquote text-center pb-5 pt-5">
     "I really don't like programming. I built this tool to program less so that I could just reuse code."

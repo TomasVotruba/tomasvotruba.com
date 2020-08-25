@@ -15,7 +15,7 @@ updated_message: |
     Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
-**Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
+**Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
 
 <br>
 
@@ -46,7 +46,7 @@ Personally I like PHP CS Fixer a bit more, **because of more friendlier API, act
 <br>
 
 Apart that, they are similar: they share [tokens](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#1-token),
-[dispatcher](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#2-dispatcher)
+[dispatcher](/blog//blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#2-dispatcher)
  and [subscribers](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#2-dispatcher).
 
 

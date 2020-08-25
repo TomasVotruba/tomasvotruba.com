@@ -5,7 +5,7 @@ perex: "Doctrine filters are powerful tool. Yet their registration and managemen
 
 deprecated_since: "March 2017"
 deprecated_message: |
-    I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - **[read a post here](/blog/2017/03/27/why-is-doctrine-dying)**.
+    I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - **[read a post here](/blog/2017/03/27/why-is-doctrine-dying/)**.
 
     It's been revived by Tomáš Pilař on [Lekarna/DoctrineFilters](https://github.com/Lekarna/DoctrineFilters) though.
 ---

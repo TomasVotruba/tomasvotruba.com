@@ -2,7 +2,7 @@
 id: 165
 title: "Don't Learn to Code"
 perex: |
-    Do you know what each letter in S.O.L.I.D. means? Do you know commonly used design patterns? Do you know the most popular PHP frameworks? Do know what [cyclomatic complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you) is?
+    Do you know what each letter in S.O.L.I.D. means? Do you know commonly used design patterns? Do you know the most popular PHP frameworks? Do know what [cyclomatic complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) is?
     <br><br>
     Don't learn to code. **Learn how to think.**
 tweet: "New post on my #php blog: Don't Learn to Code"
@@ -18,7 +18,7 @@ tweet: "New post on my #php blog: Don't Learn to Code"
     "Do this." vs. "I prefer this, because..."
 </blockquote>
 
-But do you know why? If you do, take one more step: do you know why do you think that? Have you read it somewhere, did you best friends told or did you actually experience it? *Cult thinking* is also common for people who followed trend-setters in PHP community - those who speak, write, tweet or comments on Reddit and StackOverflow the internet. I meet many people who read my blog and think monorepo is the best approach to work with repositories. But why, when do you use monorepo and when rather not? They don't know. Don't be afraid to question me or other people like me, be [critical](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer) so we can both learn something. I've noticed it's common for lecturers and speakers like this to repeat what they've learned in last 10 years of the coding. Today is the slowest changing day for the rest of the humankind. Everything changes so help us see it so we can [share back valid ideas](/blog/2018/12/03/it-bloggers-deprecate-your-posts-to-stop-spreading-legacy).
+But do you know why? If you do, take one more step: do you know why do you think that? Have you read it somewhere, did you best friends told or did you actually experience it? *Cult thinking* is also common for people who followed trend-setters in PHP community - those who speak, write, tweet or comments on Reddit and StackOverflow the internet. I meet many people who read my blog and think monorepo is the best approach to work with repositories. But why, when do you use monorepo and when rather not? They don't know. Don't be afraid to question me or other people like me, be [critical](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer/) so we can both learn something. I've noticed it's common for lecturers and speakers like this to repeat what they've learned in last 10 years of the coding. Today is the slowest changing day for the rest of the humankind. Everything changes so help us see it so we can [share back valid ideas](/blog/2018/12/03/it-bloggers-deprecate-your-posts-to-stop-spreading-legacy/).
 
 Ask in comments, learn how to disagree - there is a beautiful 6-point overview on how to [disagree](http://www.paulgraham.com/disagree.html) by Paul Graham.
 

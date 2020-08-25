@@ -82,7 +82,7 @@ Do you recall YAML struggle, when you want to **register a service**?
 
 <br>
 
-In PHP config you can [forget it](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock) and just type:
+In PHP config you can [forget it](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) and just type:
 
 <img src="/assets/images/posts/2020/yaml_php_class_autocomplete.gif" class="img-thumbnail">
 
@@ -241,7 +241,7 @@ Since `*.php` is PHP code, all the powerful CI tools have access to it.
 
 Last but not least. You've probably noticed I hete typoes. I'm so used to tool watching my back, that I type much faster than my fingers can. Then I run the tools and code works (usually).
 
-If you give me a choice of `"string"` or `CONSTANT`, 10 of 10 [I pick the `CONSTANT`](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher) (unless the string is `"really sexy and smart, verified"`).
+If you give me a choice of `"string"` or `CONSTANT`, 10 of 10 [I pick the `CONSTANT`](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher/) (unless the string is `"really sexy and smart, verified"`).
 
 <br>
 

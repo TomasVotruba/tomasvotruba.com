@@ -10,7 +10,7 @@ tweet_image: "/assets/images/posts/2019/mocking-final/final-case.png"
 
 ---
 
-Since I started using *`final` first* [I got rid of many problems](/blog/2019/01/24/how-to-kill-parents). Most programmers I meet already know about the benefits of not having 6 classes extended in a row and that `final` remove this issue.
+Since I started using *`final` first* [I got rid of many problems](/blog/2019/01/24/how-to-kill-parents/). Most programmers I meet already know about the benefits of not having 6 classes extended in a row and that `final` remove this issue.
 
 But many of those programmers are skilled and they write tests.
 
@@ -188,7 +188,7 @@ There were 7 warnings:
 Class "AnotherClass" is declared "final" and cannot be mocked.
 ```
 
-Damn you, black magic! We're getting there, but there are still mocks in the `setUp()` method, and we've also added work to our future self - for every new test case, we [have to remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock) to add `BypassFinals::enable();` manually.
+Damn you, black magic! We're getting there, but there are still mocks in the `setUp()` method, and we've also added work to our future self - for every new test case, we [have to remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) to add `BypassFinals::enable();` manually.
 
 <em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
 

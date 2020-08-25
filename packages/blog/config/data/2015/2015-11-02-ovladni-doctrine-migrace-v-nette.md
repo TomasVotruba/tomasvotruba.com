@@ -5,7 +5,7 @@ perex: "Pokud používáte Doctrine, Nette a potřebujete měnit databázi, budo
 
 deprecated_since: "January 2017"
 deprecated_message: |
-    I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - **[read a post here](/blog/2017/03/27/why-is-doctrine-dying)**.
+    I have deprecated this package, because I see Doctrine ORM as over-complex tool not useful for new projects - **[read a post here](/blog/2017/03/27/why-is-doctrine-dying/)**.
 
     **I recommend using more robust and active [Phinx migration tool](https://phinx.org) instead.** I already do and it is great.
 

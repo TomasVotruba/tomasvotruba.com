@@ -19,7 +19,7 @@ deprecated_message: |
 
 **I still prefer constructor injection in controllers**. Are you asking why and how to achieve that in Symfony?
 
-In 3 minutes [you will find out in my other article](/blog/2016/03/10/autowired-controllers-as-services-for-lazy-people).
+In 3 minutes [you will find out in my other article](/blog/2016/03/10/autowired-controllers-as-services-for-lazy-people/).
 I will wait here...
 
 <br>

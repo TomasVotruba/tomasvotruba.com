@@ -2,7 +2,7 @@
 id: 173
 title: "How to Complete Type Declarations without Docblocks with Rector"
 perex: |
-    In [previous post](/blog/2018/12/10/rocket-science-behind-migration-of-docblock-types-to-php-typehints) we looked at how to migrate from docblocks to type declarations. From `@param Type $param` to `Type $param`. Even if it doesn't break code like coding standards do, works with inheritance, localized `self` and `static` and propagates types to all child classes, it's still not such a big deal.
+    In [previous post](/blog/2018/12/10/rocket-science-behind-migration-of-docblock-types-to-php-typehints/) we looked at how to migrate from docblocks to type declarations. From `@param Type $param` to `Type $param`. Even if it doesn't break code like coding standards do, works with inheritance, localized `self` and `static` and propagates types to all child classes, it's still not such a big deal.
     <br><br>
     But **how do you complete type declarations if don't have any docblocks?**
 
@@ -14,7 +14,7 @@ updated_message: |
     Updated Rector YAML to PHP configuration, as current standard.
 ---
 
-Well, you're doomed, because **you should write** [docblocks everywhere where useful](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer).
+Well, you're doomed, because **you should write** [docblocks everywhere where useful](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/).
 
 ```php
 <?php

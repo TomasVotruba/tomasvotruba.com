@@ -2,10 +2,10 @@
 id: 158
 title: "Will Autowired Arrays Finally Deprecate Tags in Symfony and Nette?"
 perex: |
-    To be clear: we talk about those tags that only have a name. No priority, no level, no event name, nothing, **just the name**. If you're not sure why these tags are bad, read *[Drop all Service Tags in Your Nette and Symfony Applications](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications)* first.
+    To be clear: we talk about those tags that only have a name. No priority, no level, no event name, nothing, **just the name**. If you're not sure why these tags are bad, read *[Drop all Service Tags in Your Nette and Symfony Applications](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/)* first.
     <br>
     <br>
-    I'm very happy to see that [collectors](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code) are finally getting to the core of DI components of PHP frameworks. Tags, extensions, compiler passes and `autoconfigure` now became workarounds. Collectors are now in the best place they can... **the PHP code**.
+    I'm very happy to see that [collectors](/clusters/#collector-pattern-the-shortcut-hack-to-solid-code/) are finally getting to the core of DI components of PHP frameworks. Tags, extensions, compiler passes and `autoconfigure` now became workarounds. Collectors are now in the best place they can... **the PHP code**.
 
 tweet: "New Post on My Blog: Can Autowired Arrays Finally Deprecate Tags in #symfony and #nettefw?    #collector #nettefw30 #php #simplestupid"
 ---
@@ -92,7 +92,7 @@ foreach ($containerBuilder->findByTags('release_worker') as $workerDefinition) {
 }
 ```
 
-This is what we would do in 2010. **This brings [memory-lock](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock) on tag name and disables common sense**. And we need common sense to create usable code.
+This is what we would do in 2010. **This brings [memory-lock](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) on tag name and disables common sense**. And we need common sense to create usable code.
 
 What's the next option we have?
 
@@ -154,7 +154,7 @@ We already know that **public properties, setters, and drugs are bad**. **Missin
 We should make a design that is reliable.
 
 - Do you need these services? Tell us in the constructor.
-- Do you need this parameter to work? [Tell us constructor](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too).
+- Do you need this parameter to work? [Tell us constructor](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/).
 - Do you need all `ReleaseWorkerInterface`s? **Tell us in the constructor.**
 
 ```php

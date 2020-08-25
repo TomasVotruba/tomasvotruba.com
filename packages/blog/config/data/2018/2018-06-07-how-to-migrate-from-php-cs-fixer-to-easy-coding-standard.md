@@ -12,7 +12,7 @@ updated_message: |
     Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
-ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines). It's super easy to start to use from scratch:
+ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's super easy to start to use from scratch:
 
 ```bash
 composer require symplify/easy-coding-standard --dev
@@ -208,7 +208,7 @@ vendor/bin/ecs check /path/to/project --fix
 
 ### 6. From `@Rules` to `imports`
 
-Do you like to use standards like PSR-2 or even [PSR-12](/blog/2018/04/09/try-psr-12-on-your-code-today)?
+Do you like to use standards like PSR-2 or even [PSR-12](/blog/2018/04/09/try-psr-12-on-your-code-today/)?
 
 From `@strings` in PHP CS Fixer:
 

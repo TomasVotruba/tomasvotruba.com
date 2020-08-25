@@ -2,7 +2,7 @@
 id: 128
 title: "5 Gotchas of the Bin File in PHP CLI Applications"
 perex: |
-    This post from [Master PHP CLI Apps with Symfony](/clusters/#master-php-cli-apps-with-symfony) cluster will focus on bin files. It's the smallest part of PHP CLI Application, so I usually start with it.
+    This post from [Master PHP CLI Apps with Symfony](/clusters/#master-php-cli-apps-with-symfony/) cluster will focus on bin files. It's the smallest part of PHP CLI Application, so I usually start with it.
     <br><br>
     Yet, there are still a few blind paths you can struggle with. I'll drop a few extra tricks to make your bin file clean and easy to maintain.
 tweet: "New Post on my Blog: 5 Gotchas of the #Bin #File in PHP CLI Applications  #symfony #composerphp"
@@ -98,7 +98,7 @@ foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
 
 **Comments are very important** because this is very easy to get lost in. Trust me, I managed to fail a dozen times. Also, other people will appreciate it because it's WTF to see loading more than one `vendor/autoload.php`.
 
-Imagine you'd move your package to a [monorepo structure](/clusters/#monorepo-from-zero-to-hero):
+Imagine you'd move your package to a [monorepo structure](/clusters/#monorepo-from-zero-to-hero/):
 
 ```diff
  $possibleAutoloadPaths = [
@@ -255,7 +255,7 @@ exit($application->run());
 
 And that's it!
 
-Do you want to know more? See the [PHP CLI APP cluster](/clusters/#master-php-cli-apps-with-symfony).
+Do you want to know more? See the [PHP CLI APP cluster](/clusters/#master-php-cli-apps-with-symfony/).
 
 <br>
 

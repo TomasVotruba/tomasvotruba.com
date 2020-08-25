@@ -4,7 +4,7 @@ title: "How to Load --config With Services in Symfony Console"
 perex: |
     PHP CLI apps usually accept config, to setup their behavior. For PHPUnit it's `phpunit.xml`, for PHP CS Fixer it's `.php_cs`, for ECS it's `ecs.php`, for PHPStan it's `phpstan.neon` and so on.
     <br><br>
-    In the first post about PHP CLI Apps I wrote about [poor DI support in PHP CLI projects](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection).
+    In the first post about PHP CLI Apps I wrote about [poor DI support in PHP CLI projects](/blog/2018/05/07/why-you-should-combine-symfony-console-and-dependency-injection/).
     <br><br>
     Today we look on the first barrier that leads most people to prefer static over DI - **how to load config with services**.
 
@@ -89,7 +89,7 @@ Use static approach, no services config, just list of items. Most spread solutio
 
 ## 2. DI for Poor People: Container in a Command
 
-I'm used to container [thanks to great work of David Grudl](/blog/2017/06/01/thank-you-david) and many posts [he wrote about dependency injection](https://phpfashion.com/co-je-dependency-injection), so this one is very counter-intuitive to me, but I still see it quite often in the wild.
+I'm used to container [thanks to great work of David Grudl](/blog/2017/06/01/thank-you-david/) and many posts [he wrote about dependency injection](https://phpfashion.com/co-je-dependency-injection), so this one is very counter-intuitive to me, but I still see it quite often in the wild.
 
 **The easiest way to start** using Container in a static application is to **create it at the class we need it:**
 

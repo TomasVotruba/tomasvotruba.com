@@ -2,7 +2,7 @@
 id: 236
 title: "Switch Travis to GitHub Actions to Reduce Stress"
 perex: |
-    In the previous post, we looked at [Why is First Instant Feedback Crucial to Developers?](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers).
+    In the previous post, we looked at [Why is First Instant Feedback Crucial to Developers?](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/).
     <br><br>
     We know why now we look at *how*. How exactly migrate all jobs from Travis to GitHub Actions, **reduce stress from long feedback loops** and live a more healthy life as a programmer.
     <br><br>
@@ -18,7 +18,7 @@ In this post, we'll look at examples of migration. I'll share my good and bad ti
     From ~15 minutes to just 3 minutes.
 </blockquote>
 
-I mean, that's a crazy improvement of 80 %. You can read about in [the previous post](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers), so let's move on.
+I mean, that's a crazy improvement of 80 %. You can read about in [the previous post](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/), so let's move on.
 
 ## The Developer's Joy
 

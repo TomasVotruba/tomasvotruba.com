@@ -23,7 +23,7 @@ updated_message: |
 
 This regex saga started as an experiment on this site. I tested the Twig support in Statie here. This web had ~20 files in Latte and I needed them to be in Twig, so I know the Twig support works with all the edge cases I use on daily basis.
 
-After the 5th change of code from `{$value}` to `{{ value }}` I started to have a weird feeling of being a robot or [a very slow AI](/blog/2018/05/03/how-do-you-treat-your-own-first-ai). So I stopped to think a bit...
+After the 5th change of code from `{$value}` to `{{ value }}` I started to have a weird feeling of being a robot or [a very slow AI](/blog/2018/05/03/how-do-you-treat-your-own-first-ai/). So I stopped to think a bit...
 
 <blockquote class="blockquote text-center">
     "The question you should be asking isn't, "What do I want?" or "What are my goals?" but "What would excite me?"

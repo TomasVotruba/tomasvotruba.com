@@ -2,7 +2,7 @@
 id: 253
 title: "The Bulletproof Event Naming For Symfony Event Dispatcher"
 perex: |
-    I wrote [intro to Symfony\EventDispatcher](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch) and how to use it with simple event.
+    I wrote [intro to Symfony\EventDispatcher](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch/) and how to use it with simple event.
     <br><br>
     But when it comes to dispatching events, you can choose from 4 different ways. Which one to choose and why? Today I will show you pros and cons of them to make it easier for you.
 

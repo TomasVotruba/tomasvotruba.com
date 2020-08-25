@@ -4,7 +4,7 @@ title: "How to Upgrade to Symplify 8 - From Fixers to Rector Rules"
 perex: |
     Symplify 8 is going to be released in the 2nd half of May. But as in Symfony, you can get ready for future version today.
     <br><br>
-    [In the previous post we upgraded Coding Standard from Sniffs to PHPStan](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules). Today we finish with 2nd half - **from Fixers to Rector rules**.
+    [In the previous post we upgraded Coding Standard from Sniffs to PHPStan](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/). Today we finish with 2nd half - **from Fixers to Rector rules**.
 
 tweet: "New Post on #php 🐘 blog: How to Upgrade to #symplify 8 - From Fixer to @rectorphp Rules"
 
@@ -27,7 +27,7 @@ PHP Notice:  Fixer "..." is deprecated. Use "..." instead
 
 ## Why were These Fixer Dropped?
 
-You'll find answer to this question [in previous post](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules). To extend answer specifically for this post: Fixer and Rector do the same job - **they change code based on specific recipe**.
+You'll find answer to this question [in previous post](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/). To extend answer specifically for this post: Fixer and Rector do the same job - **they change code based on specific recipe**.
 
 ### What is the Difference?
 
@@ -323,7 +323,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
 
 How do you order your methods? Random?
 
-**Be sure to read [How to Teach Your Team Private Method Sorting in 3 mins](/blog/2018/11/01/how-teach-your-team-private-method-sorting-in-3-mins).**
+**Be sure to read [How to Teach Your Team Private Method Sorting in 3 mins](/blog/2018/11/01/how-teach-your-team-private-method-sorting-in-3-mins/).**
 
 Instead of:
 

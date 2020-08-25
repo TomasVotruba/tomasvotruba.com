@@ -151,7 +151,7 @@ $product = new Product(5); // this passes without error
 
 But the working code `getName(): string` says **it must be `string`**, so we can rely on it.
 
-Also, this is just `@var` annotation not [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds), so the change cannot break anything.
+Also, this is just `@var` annotation not [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds/), so the change cannot break anything.
 
 ### 5. From Nullables
 

@@ -149,7 +149,7 @@ But remember our children:
 
 What happens if we don't care about it? Well, **`public` element is designed to be used somewhere else.**
 
-Same way `static` method is a method to be used everywhere (and [then slowly kill you](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself)).
+Same way `static` method is a method to be used everywhere (and [then slowly kill you](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself)/).
 
 <br>
 

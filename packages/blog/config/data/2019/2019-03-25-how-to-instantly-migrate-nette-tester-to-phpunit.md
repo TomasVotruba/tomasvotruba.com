@@ -14,7 +14,7 @@ tweet: "A new Post on #php 🐘 blog: How to Instantly Migrate #nettefw Tester t
 
 <br>
 
-In the last post we looked on [instant migration of PhpSpec to PHPUnit](/blog/2019/03/21/how-to-instantly-migrate-phpspec-to-phpunit).
+In the last post we looked on [instant migration of PhpSpec to PHPUnit](/blog/2019/03/21/how-to-instantly-migrate-phpspec-to-phpunit/).
 
 PhpSpec has a different architecture than PHPUnit - e.g.
 

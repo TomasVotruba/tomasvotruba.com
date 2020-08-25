@@ -217,7 +217,7 @@ They say **your code is 10x more read than written** on average. I believe it's 
 
 - super-readable,
 - deterministic = with only one clear way one can understand it,
-- with [cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you) < 8,
+- with [cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) < 8,
 - easy to fix,
 - easy to extend,
 - easy to test.

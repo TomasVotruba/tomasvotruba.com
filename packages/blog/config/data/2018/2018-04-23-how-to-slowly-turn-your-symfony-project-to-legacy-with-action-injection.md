@@ -205,7 +205,7 @@ services:
 
 Can you see the difference to Symfony? Well, almost none. But so far so good.
 
-Note to Nette programmers: [`@inject` is often a code smell and you should do it cleaner](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette)
+Note to Nette programmers: [`@inject` is often a code smell and you should do it cleaner](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/)
 
 ## Inspire by (Good/Bad) Example
 

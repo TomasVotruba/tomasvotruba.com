@@ -60,7 +60,7 @@ That's **65 % percent time wasted**.
 
 This makes me want to throw the computer out of the window, procrastinate, check my messages or another shallow work that ruins all my focus.
 
-**True story**, this was the situation for CI in Rector in 2019. It was soo frustrating. And I don't talk about [code coverage with Xdebug that took us 33 minutes](/blog/2019/09/02/how-to-speedup-test-coverage-on-travis-by-95-percent).
+**True story**, this was the situation for CI in Rector in 2019. It was soo frustrating. And I don't talk about [code coverage with Xdebug that took us 33 minutes](/blog/2019/09/02/how-to-speedup-test-coverage-on-travis-by-95-percent/).
 
 <br>
 

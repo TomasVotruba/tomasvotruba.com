@@ -17,11 +17,11 @@ deprecated_message: |
 
 Until today, to create and understand static website basics, you had to learn:
 
-- [Statie - part 1: How to run it Locally](/blog/2017/02/20/statie-how-to-run-it-locally)
+- [Statie - part 1: How to run it Locally](/blog/2017/02/20/statie-how-to-run-it-locally/)
 - [Statie - part 2: How to add Contact Page With Data
 ](/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data)
-- [Statie - part 3: How to Add Reusable Parts of Code](/blog/2017/03/09/statie-3-how-to-add-reusable-parts-of-code)
-- [Statie - part 4: How to Create The Simplest Blog](/blog/2017/03/13/statie-4-how-to-create-the-simplest-blog)
+- [Statie - part 3: How to Add Reusable Parts of Code](/blog/2017/03/09/statie-3-how-to-add-reusable-parts-of-code/)
+- [Statie - part 4: How to Create The Simplest Blog](/blog/2017/03/13/statie-4-how-to-create-the-simplest-blog/)
 
 **Don't read it! It's an utter waste of time.**
 
@@ -36,7 +36,7 @@ In recent years, there is a trend towards **embodied knowledge**:
 
 In other words, **the knowledge is shifting from human brain storage to tool's abilities**.
 
-Not the *smart knowledge* that helps us create algorithms, but the dummy knowledge like "what is the 3rd most largest river in the USA" that I can Google in 2-3 seconds (depending on internet connection in the train). We [don't become retarded](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world), we become more powerful to use our brains for what they're best at.
+Not the *smart knowledge* that helps us create algorithms, but the dummy knowledge like "what is the 3rd most largest river in the USA" that I can Google in 2-3 seconds (depending on internet connection in the train). We [don't become retarded](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/), we become more powerful to use our brains for what they're best at.
 
 ## Your First Statie in 2 minutes
 

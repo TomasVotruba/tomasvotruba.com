@@ -2,7 +2,7 @@
 id: 243
 title: "Statie is Dead, Long live Symfony Static Dumper"
 perex: |
-    Last week [I wrote about how Statie turned from a feature to a burden](/blog/2020/03/09/art-of-letting-go) and why we had to let it go.
+    Last week [I wrote about how Statie turned from a feature to a burden](/blog/2020/03/09/art-of-letting-go/) and why we had to let it go.
     <br>
     **What will replace it? How do you migrate?**
 

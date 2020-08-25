@@ -52,7 +52,7 @@ services:
     OpenProject\SecondClass: ~
 ```
 
-...or even on the final one - [autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3):
+...or even on the final one - [autodiscovery](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/):
 
 ```yaml
 # services.yml
@@ -66,7 +66,7 @@ services:
 
 This allows you to forget, that you actually have any config with services.
 
-Why? Because **creating and using new service** = creating a PHP class. No YAML, no XML, no *whatever* [memory-locking](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock) configuration.
+Why? Because **creating and using new service** = creating a PHP class. No YAML, no XML, no *whatever* [memory-locking](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) configuration.
 
 <br>
 
@@ -76,7 +76,7 @@ Suddenly...
 
 ## ...You Want to Use Parameters
 
-No problem! Since you already know [the clean-way](/blog/2018/01/22/how-to-get-parameter-in-symfony-controller-the-clean-way), you'll use constructor:
+No problem! Since you already know [the clean-way](/blog/2018/01/22/how-to-get-parameter-in-symfony-controller-the-clean-way/), you'll use constructor:
 
 ```php
 <?php

@@ -12,7 +12,7 @@ tweet_image: "/assets/images/posts/2018/cognitive-complexity/tweet.png"
 
 updated_since: "May 2020"
 updated_message: |
-    Updated with **EasyCodingStandard 8**, with shift from [Sniffs to PHPStan rules](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules).
+    Updated with **EasyCodingStandard 8**, with shift from [Sniffs to PHPStan rules](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/).
 ---
 
 ## What is Cognitive Complexity?
@@ -104,7 +104,7 @@ a function and all its possible paths**.
 
 ## Automation Over Information
 
-This all is nice to know information. The one that you might find interesting, remember it for few days and then forget it and never meet it again. But I'm too lazy to *learn to just forget*, so I *learn to automate*. This is place [to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3).
+This all is nice to know information. The one that you might find interesting, remember it for few days and then forget it and never meet it again. But I'm too lazy to *learn to just forget*, so I *learn to automate*. This is place [to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
 
 It took me 5 days to understand academic writings in the PDF, to convert Java and Python examples to PHP and reverse-engineer the algorithm to compute cognitive complexity to match results in the PDF. **The most difficult was to change the cyclomatic complexity approach I used for last 4 years to a human one**.
 

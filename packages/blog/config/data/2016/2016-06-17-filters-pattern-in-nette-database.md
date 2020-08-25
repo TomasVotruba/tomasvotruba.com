@@ -68,7 +68,7 @@ This approach is bad practise, because it will eventually **make your every repo
 
 No need for that! This has been already solved somewhere else.
 
-Do you know Doctrine Filters? No? Go check [this short article to get the clue](/blog/2016/04/30/decouple-your-doctrine-filters). I'll wait here.
+Do you know Doctrine Filters? No? Go check [this short article to get the clue](/blog/2016/04/30/decouple-your-doctrine-filters/). I'll wait here.
 
 
 ## Soft delete filter - in theory

@@ -206,7 +206,7 @@ This worked well for a long period of time. Today I feel confident enough to say
 - "small steps"
 - "extended period of time"
 
-In 2019, we can do refactoring in **[one big step in short period of time](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1)** - and still get working application in the end.
+In 2019, we can do refactoring in **[one big step in short period of time](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/)** - and still get working application in the end.
 
 Clear proof is **PHPStorm refactorings** over the whole code base. They're still dumb compared to human and sometimes cause errors, but [they get better and better each version](https://www.jetbrains.com/phpstorm/whatsnew). Trend beats the status quo. You probably also know **[Php Inspections (EA Extended)](https://github.com/kalessil/phpinspectionsea) plugin** to PHPStorm.
 

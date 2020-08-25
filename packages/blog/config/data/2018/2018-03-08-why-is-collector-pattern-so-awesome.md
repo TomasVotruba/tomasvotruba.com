@@ -360,7 +360,7 @@ Now we have:
 
 ## 4. Add Tagging?
 
-We forget tagging, right? The most [spread useless code in Symfony configs](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications).
+We forget tagging, right? The most [spread useless code in Symfony configs](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/).
 
 <br>
 

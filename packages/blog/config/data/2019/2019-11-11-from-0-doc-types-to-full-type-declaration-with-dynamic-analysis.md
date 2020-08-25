@@ -2,7 +2,7 @@
 id: 225
 title: "From 0 Doc Types to Full Type Declaration with Dynamic Analysis"
 perex: |
-    I wrote [How we Completed Thousands of Missing @var Annotations in a Day](/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day). If you have at least some annotations, you can use Rector to do the dirty work.
+    I wrote [How we Completed Thousands of Missing @var Annotations in a Day](/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day/). If you have at least some annotations, you can use Rector to do the dirty work.
     <br>
     <br>
     To be honest, open-source is the top 1 % code there is, but out **in the wild of ~~legacy~~ established PHP companies, it's a miracle to see just one `string` type declaration**.

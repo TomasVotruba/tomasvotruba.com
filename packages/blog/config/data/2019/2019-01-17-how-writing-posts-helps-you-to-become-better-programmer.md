@@ -61,7 +61,7 @@ Isn't there something you can do just by yourself that would keep their shoes on
 
 ## 3. Write Post About It
 
-I love writing about packages, about [those I create](/blog/2018/09/20/new-in-symplify-5-3-new-cool-features-of-package-builder) and [those I use](/blog/2018/07/30/hidden-gems-of-php-packages-nette-utils). It starts very simply, why it exists, what problems it solves and how you can use it in your home today. Why I love this writing?
+I love writing about packages, about [those I create](/blog/2018/09/20/new-in-symplify-5-3-new-cool-features-of-package-builder/) and [those I use](/blog/2018/07/30/hidden-gems-of-php-packages-nette-utils/). It starts very simply, why it exists, what problems it solves and how you can use it in your home today. Why I love this writing?
 
 **It helps me shift my thinking from fast to slow one**. It's very rare in programming because thanks to IDE we barely type in words:
 
@@ -104,8 +104,8 @@ Writing such text - in private, for your colleagues or on your public blog - **w
 
 ## How Post about Statie improves Statie
 
-One example for all - after writing of my last 2 posts - [11 Steps to Migrate From Sculpin to Statie](/blog/2019/01/14/11-steps-to-migrate-from-sculpin-to-statie)
-and [9 Steps to Migrate From Jekyll to Statie](/blog/2019/01/10/9-steps-to-migrate-from-jekyll-to-statie) I realized, it's really difficult to switch from one static website to another. You need to follow many steps, in the correct order:
+One example for all - after writing of my last 2 posts - [11 Steps to Migrate From Sculpin to Statie](/blog/2019/01/14/11-steps-to-migrate-from-sculpin-to-statie/)
+and [9 Steps to Migrate From Jekyll to Statie](/blog/2019/01/10/9-steps-to-migrate-from-jekyll-to-statie/) I realized, it's really difficult to switch from one static website to another. You need to follow many steps, in the correct order:
 
 - move files
 - remove files

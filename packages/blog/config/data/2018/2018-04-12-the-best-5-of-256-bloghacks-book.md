@@ -21,7 +21,7 @@ Vojta was so kind to lend me the book over the lunch. This post is an answer to 
 
 ## 1. Blog Once a Week for 2 Years
 
-When I posted [my first post in late 2015](/blog/2015/11/02/ovladni-doctrine-migrace-v-nette) and it had 24 comments and I was very happy my knowledge is worth talking about. When I posted the next one and had no responses. I was frustrated and felt hopeless and as a just not good enough writer. So I stopped blogging for a few months.
+When I posted [my first post in late 2015](/blog/2015/11/02/ovladni-doctrine-migrace-v-nette/) and it had 24 comments and I was very happy my knowledge is worth talking about. When I posted the next one and had no responses. I was frustrated and felt hopeless and as a just not good enough writer. So I stopped blogging for a few months.
 
 I see now that it was a mistake, so the first tip is **to blog once a week**. Life is trying to tell me over and over again, that [Consistency Beats Talent, Luck, Good Intentions, and Even Quality](https://medium.com/@anthony_moore/consistency-beats-talent-luck-good-intentions-and-even-quality-66ba255aa4f7).
 
@@ -89,11 +89,11 @@ Did you provide a great answer on StackOverflow? Is that answer to duplicated an
 
 - Question: [Symfony 3 - Outsourcing Controller Code into Service Layer
 ](https://stackoverflow.com/questions/38346281/symfony-3-outsourcing-controller-code-into-service-layer/38349271#38349271)
-- Post: [How to use Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony)
+- Post: [How to use Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/)
 
 - Question: [How do I read from parameters.yml in a controller in symfony2?
 ](https://stackoverflow.com/questions/13901256/how-do-i-read-from-parameters-yml-in-a-controller-in-symfony2/48371606#48371606)
-- Post: [How to Get Parameter in Symfony Controller the Clean Way](/blog/2018/01/22/how-to-get-parameter-in-symfony-controller-the-clean-way)
+- Post: [How to Get Parameter in Symfony Controller the Clean Way](/blog/2018/01/22/how-to-get-parameter-in-symfony-controller-the-clean-way/)
 
 And it works great! Now all I do is to **provide a specific answer on the StackOverflow and link the post where I explain all possible pitfalls**. So the question is answered and there is a follow-up, when they need to know more.
 

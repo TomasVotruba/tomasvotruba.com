@@ -28,7 +28,7 @@ The story could end here with success final note. I turned 0  % coverage to 84 %
 
 <img src="/assets/images/posts/2018/fuckups/before-after.png" class="img-thumbnail">
 
-ApiGen used 3rd party reflection package that was not developed for 4 years in that time. The only reasonable way to add PHP 5.5+ and features was to use BetterReflection. I won't go in much details here, but you can [read the whole story of migration here](/blog/2017/09/04/how-apigen-survived-its-own-death).
+ApiGen used 3rd party reflection package that was not developed for 4 years in that time. The only reasonable way to add PHP 5.5+ and features was to use BetterReflection. I won't go in much details here, but you can [read the whole story of migration here](/blog/2017/09/04/how-apigen-survived-its-own-death/).
 
 <img src="/assets/images/posts/2018/fuckups/change.png" class="img-thumbnail">
 
@@ -72,7 +72,7 @@ This is clearly opposite extreme thinking, that has its flaws. Mock everything a
 
 - Instead of testing the lowest levels, **I started to use the main parts of the application with before/after approach**. You can see it nicely in this [Symplify\CodingStandard test](https://github.com/symplify/symplify/blob/e35b7e0564e08028f626241ca4860123c29a5b5e/packages/CodingStandard/tests/Fixer/Property/ArrayPropertyDefaultValueFixer/ArrayPropertyDefaultValueFixerTest.php#L34-L40). They've proven to be easily extendable and easier to understand. You see PHP code before and PHP code after. Good old common sense.
 
-- Instead of mocking, **I started to use [anonymous classes](/blog/2018/06/11/how-to-turn-mocks-from-nightmare-to-solid-kiss-tests)**. They've proven to be readable, programmers understand them (it's PHP code, you know) and there are no strings or plugins attached.
+- Instead of mocking, **I started to use [anonymous classes](/blog/2018/06/11/how-to-turn-mocks-from-nightmare-to-solid-kiss-tests/)**. They've proven to be readable, programmers understand them (it's PHP code, you know) and there are no strings or plugins attached.
 
 ## What I Learned From this Fail?
 
@@ -90,7 +90,7 @@ This *false positive* is called [anecdotal evidence](https://www.google.cz/searc
 
 <img src="https://pixfeeds.com/images/32/608973/1200-608973-7125124.jpg" class="img-thumbnail">
 
-*Fail fast and fail safe.* Try 2 frameworks to understand the first one, try [3 e-commerce projects to make yours better](/blog/2017/10/02/easy-coding-standard-and-phpstan-meet-3-symfony-ecommerce-projects), try 10-20 projects to understand yours.
+*Fail fast and fail safe.* Try 2 frameworks to understand the first one, try [3 e-commerce projects to make yours better](/blog/2017/10/02/easy-coding-standard-and-phpstan-meet-3-symfony-ecommerce-projects/), try 10-20 projects to understand yours.
 
 ### 2. What Maintenance Cost it Brings?
 

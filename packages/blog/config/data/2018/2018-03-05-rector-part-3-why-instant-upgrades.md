@@ -9,8 +9,8 @@ todo_tweet: "New post on my blog: "
 
 *Read also:*
 
-- [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how)
-- [Part 2 - Maturity of PHP Ecosystem and Founding Fathers](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers)
+- [Part 1 - What and How](/blog/2018/02/19/rector-part-1-what-and-how/)
+- [Part 2 - Maturity of PHP Ecosystem and Founding Fathers](/blog/2018/02/26/rector-part-2-maturity-of-php-ecocystem-and-founding-fathers/)
 
 <br>
 
