@@ -6,12 +6,12 @@ perex: |
     <br><br>
     That way there is no excuse left to change your legacy application to clean code you'll love to extend.
     <br><br>
-    We'll start with very popular post - [Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony).
+    We'll start with very popular post - [Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/).
 
 tweet: "New Post on my Blog: Rectify: Turn All Doctrine Repositories From Composition To Inheritance in Seconds"
 ---
 
-I wrote about [How to use Repository with Doctrine as Service Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony) a while ago. There are many posts about this topic, but not as simple to apply as this one. At least for one repository.
+I wrote about [How to use Repository with Doctrine as Service Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/) a while ago. There are many posts about this topic, but not as simple to apply as this one. At least for one repository.
 
 ## The One-to-Many Problem of The Best Practise
 

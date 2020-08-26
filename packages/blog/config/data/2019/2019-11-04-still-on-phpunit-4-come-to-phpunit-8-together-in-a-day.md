@@ -2,7 +2,7 @@
 id: 224
 title: "Still on PHPUnit 4? Come to PHPUnit 8 Together in a Day"
 perex: |
-    Last month I was on [PHPSW meetup](https://twitter.com/akrabat/status/1181998973588037632) in Bristol UK with Rector talk. To be honest, [Nette to Symfony migration under 80 hours](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours) was not a big deal there.
+    Last month I was on [PHPSW meetup](https://twitter.com/akrabat/status/1181998973588037632) in Bristol UK with Rector talk. To be honest, [Nette to Symfony migration under 80 hours](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/) was not a big deal there.
     <br><br>
     To my surprise, **upgrading PHPUnit tests was**. So I was thinking, let's take it from the floor in one go, from PHPUnit 4 to the latest PHPUnit 8.
 
@@ -81,7 +81,7 @@ The same thing happens with upgrading code - we upgrade PHP and tests passes, gr
     <strong>STOP!</strong>
 </span>
 
-This is the easiest way **to get stuck** in broken tests, with dug up pieces of code all over the project, overheat our brain in [huge cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you) and ~~give up~~ rage quit the upgrade saying "it's hard as they say".
+This is the easiest way **to get stuck** in broken tests, with dug up pieces of code all over the project, overheat our brain in [huge cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) and ~~give up~~ rage quit the upgrade saying "it's hard as they say".
 
 ### The Golden Rule of Successful Upgrade
 

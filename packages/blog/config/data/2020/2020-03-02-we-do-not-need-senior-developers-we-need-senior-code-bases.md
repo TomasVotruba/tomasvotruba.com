@@ -110,7 +110,7 @@ That's why before I say I'll cooperate with any company, **I need to see the cod
 Instead of asking 3 questions at the top of this post, we should focus on:
 
 - "How mature is your codebase?"
-- "From *junior* = spaghetti code with no rules to *senior* = DI, finalized classes with CI that checks everything that can be checked and [handles code-review](/blog/2019/11/18/how-to-delegate-code-reviews-to-ci), the newest PHP and version of your favorite framework... where does the codebase stand?"
+- "From *junior* = spaghetti code with no rules to *senior* = DI, finalized classes with CI that checks everything that can be checked and [handles code-review](/blog/2019/11/18/how-to-delegate-code-reviews-to-ci/), the newest PHP and version of your favorite framework... where does the codebase stand?"
 - "How do I fit into that level with my level of expertise?"
 
 <br>

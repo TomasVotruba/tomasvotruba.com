@@ -2,7 +2,7 @@
 id: 33
 title: "Statie - part 3: How to Add Reusable Parts of Code"
 perex: |
-    You already know [how to run Statie with layout](/blog/2017/02/20/statie-how-to-run-it-locally) and [how to add data structures](/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data).
+    You already know [how to run Statie with layout](/blog/2017/02/20/statie-how-to-run-it-locally/) and [how to add data structures](/blog/2017/03/06/statie-2-how-to-add-contact-page-with-data/).
     <br><br>
     Today you'll learn how to **decouple big templates to smaller and reusable snippets**. Like Google Analytics code.
 tweet: "#Statie 3: Reusable code snippets #php #static #github"

@@ -15,7 +15,7 @@ I did not and I was surprised. Psalm added this feature long time ago in March 2
 
 ## Static Analyzers Evolving to Code Fixers
 
-**But it's not an unexpected development.** As I wrote in *[Brief History of Tools Watching and Changing Your PHP Code](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code)*, coding standard tools were *read-only* too and you had to change all the spaces manually. That was so annoying with large code-bases and many programmers didn't adopt it because it added the extra work on a daily basis, instead of saving time.
+**But it's not an unexpected development.** As I wrote in *[Brief History of Tools Watching and Changing Your PHP Code](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/)*, coding standard tools were *read-only* too and you had to change all the spaces manually. That was so annoying with large code-bases and many programmers didn't adopt it because it added the extra work on a daily basis, instead of saving time.
 
 In response to this pressure, they **had to become more useful by working for the programmer**. PHP CS Fixer fixed code from the very first commit and PHP_CodeSniffer added this feature in response.
 
@@ -27,7 +27,7 @@ So what Psalm can do for you?
 
 ## 1. Missing Type Declaration?
 
-Do you know that feeling when PHPStan reports "Method X is returning an int, but should be a string" in 10 000 places? Yes, you can use [Baseliner](/blog/2019/04/22/hidden-gems-of-php-packages-srab) to ignore them and check only new code, **but that only postpones the problem**. One day there still will be 3-4 days of full-time boring work ahead of you.
+Do you know that feeling when PHPStan reports "Method X is returning an int, but should be a string" in 10 000 places? Yes, you can use [Baseliner](/blog/2019/04/22/hidden-gems-of-php-packages-srab/) to ignore them and check only new code, **but that only postpones the problem**. One day there still will be 3-4 days of full-time boring work ahead of you.
 
 ```php
 /**

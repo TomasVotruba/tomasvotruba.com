@@ -2,14 +2,14 @@
 id: 210
 title: "Is Rector Saving you Time? Support it on Patreon!"
 perex: |
-    Rector's [mission](/blog/2018/09/27/open-source-behind-the-scenes-finding-the-rector-vision) is to upgrade anything you want. It already can upgrade PHP 5.2 all the way to PHP 7.4 (I've added arrow functions yesterday to php-parser and today to Rector), Symfony from 2.8 to 4.3, remove code that does nothing, import namespaces in a smart way and 29 more levels.
+    Rector's [mission](/blog/2018/09/27/open-source-behind-the-scenes-finding-the-rector-vision/) is to upgrade anything you want. It already can upgrade PHP 5.2 all the way to PHP 7.4 (I've added arrow functions yesterday to php-parser and today to Rector), Symfony from 2.8 to 4.3, remove code that does nothing, import namespaces in a smart way and 29 more levels.
     <br><br>
     I've started project 2 years ago as a small idea challenge and I'm creating Rector in my free time. I think every Rector rule ever created should be free for everyone and for a that I need your help.
 tweet: "New Post on a #php 🐘 blog: Is Rector Saving you Time? Support it on Patreon! → https://www.patreon.com/rectorphp"
 tweet_image: "/assets/images/posts/2019/patreon/rector_and_patreon.png"
 ---
 
-Rector can squash time that requires migration of 100 000 lines of code from 2-3 months to 5 days. We already made that happen [with Nette to Symfony migration](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours).
+Rector can squash time that requires migration of 100 000 lines of code from 2-3 months to 5 days. We already made that happen [with Nette to Symfony migration](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/).
 
 I want to make Rector even better - make **migration of legacy code more affordable to anyone**, let you instantly upgrade from an old framework that is not supported over 5 years to the newest version or even switch from framework that is no more useful to you to a one you want to use for age.
 

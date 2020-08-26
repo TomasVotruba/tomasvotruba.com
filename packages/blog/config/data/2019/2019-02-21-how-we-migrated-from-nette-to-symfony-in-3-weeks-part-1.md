@@ -47,7 +47,7 @@ If one would decide in the middle of a migration to work for a week on another p
 
 The basic idea was to do automated instant migration. Anything manually changes on more than 1 place is a potential future black hole.
 
-We quickly discovered, it's better to use [PHP factories over config coding](/blog/2019/02/14/why-config-coding-sucks) and [kill all parents we could](/blog/2019/01/24/how-to-kill-parents) (except our own ones of course).
+We quickly discovered, it's better to use [PHP factories over config coding](/blog/2019/02/14/why-config-coding-sucks/) and [kill all parents we could](/blog/2019/01/24/how-to-kill-parents/) (except our own ones of course).
 
 ### Use Rector to PHP Changes
 

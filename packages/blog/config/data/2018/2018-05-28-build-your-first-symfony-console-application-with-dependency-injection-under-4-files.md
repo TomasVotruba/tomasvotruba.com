@@ -126,7 +126,7 @@ What are we missing? Oh, we forgot to **load commands to the `Application` servi
 ### How to Add All Services of Type A to Service of Type B
 
 With FrameworkBundle we'd add `autoconfigure` option to `services.yml` config - it works with tags, but here we need to use clean PHP.
-[Tags magic that is often overused in wrong places](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications), so this extra works is actually a good thing. We know what happens... but **mainly readers of our code know it too**.
+[Tags magic that is often overused in wrong places](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/), so this extra works is actually a good thing. We know what happens... but **mainly readers of our code know it too**.
 
 This is the place to use [famous collector pattern](/blog/2018/03/08/why-is-collector-pattern-so-awesome/#drop-that-expression-language-magic) via `CompilerPass`:
 

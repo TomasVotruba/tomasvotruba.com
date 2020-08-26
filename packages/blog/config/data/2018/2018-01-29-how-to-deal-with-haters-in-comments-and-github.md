@@ -7,7 +7,7 @@ tweet: "New post on my blog: How to Deal With #Haters in Comments and #Github #c
 tweet_image: "/assets/images/posts/2017/feedback/feedback.jpg"
 ---
 
-I learned this process while being a maintainer of [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death) for 1 year and then 6 months again, where I got to dozens of online-hate-wars and found that it leads nowhere.
+I learned this process while being a maintainer of [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death/) for 1 year and then 6 months again, where I got to dozens of online-hate-wars and found that it leads nowhere.
 
 <img src="/assets/images/posts/2018/haters-in-comments/hearth-mind.jpg" class="img-thumbnail">
 

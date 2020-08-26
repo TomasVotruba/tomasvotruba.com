@@ -56,7 +56,7 @@ This is the most important step. This checker should be
 
 ### 3. Make it Pass Without Any Code Change
 
-Last week a [Cognitive Complexity Rule](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you) was published there was [very positive feedback](https://github.com/symplify/symplify/issues/834) on it.
+Last week a [Cognitive Complexity Rule](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) was published there was [very positive feedback](https://github.com/symplify/symplify/issues/834) on it.
 
 **If your coding standard should have only 1 rule - this is the one.**
 

@@ -60,7 +60,7 @@ Fuck-Up #1 is a natural consequence of trying to support multiple versions at on
 
 Let's look at [Symfony repository](https://github.com/symfony/symfony). Instead of "Symfony" imagine any package that is version. Now there is Symfony 4, so there was version 3, 2, 1 in the past. Like Guzzle 6, 5, 4...
 
-Now you've decided to upgrade and look for `CHANGELOG.md` (because you haven't heard about [Rector](/blog/2019/02/28/how-to-upgrade-symfony-2-8-to-3-4) yet):
+Now you've decided to upgrade and look for `CHANGELOG.md` (because you haven't heard about [Rector](/blog/2019/02/28/how-to-upgrade-symfony-2-8-to-3-4/) yet):
 
 <img src="/assets/images/posts/2019/oauth2/symfony.png" class="img-thumbnail">
 
@@ -72,7 +72,7 @@ The Symfony docs does the same:
 
 <img src="/assets/images/posts/2019/oauth2/symfony_docs.png" class="img-thumbnail">
 
-I wrote about this in detail in [What can You Learn from Menstruation](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases) post.
+I wrote about this in detail in [What can You Learn from Menstruation](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/) post.
 
 <br>
 

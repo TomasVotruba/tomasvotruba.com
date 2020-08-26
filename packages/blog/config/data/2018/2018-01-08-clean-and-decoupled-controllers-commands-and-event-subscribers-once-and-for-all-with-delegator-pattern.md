@@ -100,7 +100,7 @@ Little we know, here starts our [Broken Window Theory](https://blog.codinghorror
 
 ### 2016 - Add few Commands
 
-Application grows and the size needs pre-caching handled by running commands in CRON. So you start using [Symfony\Console](/blog/2019/08/12/standalone-symfony-console-from-scratch). You get inspired by `Controller`, because `Command` looks like it and by the end of year, there are many command like this one:
+Application grows and the size needs pre-caching handled by running commands in CRON. So you start using [Symfony\Console](/blog/2019/08/12/standalone-symfony-console-from-scratch/). You get inspired by `Controller`, because `Command` looks like it and by the end of year, there are many command like this one:
 
 ```php
 class CacheProductsCommand extends Command
@@ -127,7 +127,7 @@ class CacheProductsCommand extends Command
 
 ### 2017 - Add just few more EventSubscribers
 
-It's 2017, AI is on hype and you start thinking about product recommendation feature. You use [EventSubscribers](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch) that saves many information about user behavior and return best producs just for him.
+It's 2017, AI is on hype and you start thinking about product recommendation feature. You use [EventSubscribers](/blog/2019/08/05/standalone-symfony-event-dispatcher-from-the-scratch/) that saves many information about user behavior and return best producs just for him.
 
 ```php
 class RecommendedProductsEventSubscriber implements EventSubscriber
@@ -167,7 +167,7 @@ So far so good?
     <footer class="blockquote-footer">John Candee Dean</footer>
 </blockquote>
 
-New owner with technical skills comes the the play. And he wants to finally use `VueJs`, the company is now big enough to use Docker as standards and **there are more programmers that know [Eloquent](https://laravel.com/docs/eloquent) than [Doctrine](/blog/2017/03/27/why-is-doctrine-dying) in his country**:
+New owner with technical skills comes the the play. And he wants to finally use `VueJs`, the company is now big enough to use Docker as standards and **there are more programmers that know [Eloquent](https://laravel.com/docs/eloquent) than [Doctrine](/blog/2017/03/27/why-is-doctrine-dying/) in his country**:
 
 *"Alibaba is catching up and we might lose the position #1 leader on market. Just switch it to Eloquent, so we can hire and on board faster.*"
 
@@ -198,7 +198,7 @@ Same can be applied to your code.
 
 ### Delegator Pattern to the ~~Rescue~~ Prevention
 
-This is what we did in [Lekarna.cz](https://www.lekarna.cz) - The biggest online drugstore in the Czech Republic. It started on Nette 2.4 and Doctrine 2.5, with [monorepo approach](/blog/2017/12/25/composer-local-packages-for-dummies).
+This is what we did in [Lekarna.cz](https://www.lekarna.cz) - The biggest online drugstore in the Czech Republic. It started on Nette 2.4 and Doctrine 2.5, with [monorepo approach](/blog/2017/12/25/composer-local-packages-for-dummies/).
 
 When a class pattern is marked as *delegator*, it **can't contain any direct connection to database layer** (Doctrine in this case).
 
@@ -227,7 +227,7 @@ class ProductRepository
 }
 ```
 
-You don't want to check this in code reviews (imagine 5 years doing it), just [write a sniff for that](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3) and forget it.
+You don't want to check this in code reviews (imagine 5 years doing it), just [write a sniff for that](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/) and forget it.
 
 This will remove any database layer reference from all our `delegators`:
 

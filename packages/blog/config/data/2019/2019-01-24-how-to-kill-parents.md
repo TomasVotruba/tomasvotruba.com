@@ -91,7 +91,7 @@ final class PostRepository extends ServiceEntityRepository
 **Switching 3rd party dependency from one class to another doesn't solve your issue**. You might switch heroin for meth, but you're still an addict.
 
 Doctrine and Symfony documentation is full of this nonsense and it gives developers an idea that inheritance is a good thing.
- That's why migration of database layer is so difficult. Read about [How to use Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony) if you still have `extends` in your repository.
+ That's why migration of database layer is so difficult. Read about [How to use Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/) if you still have `extends` in your repository.
 
 ## Why is this Such A Big Deal?
 
@@ -140,7 +140,7 @@ This code is not made up, but the common sense of applying *inheritance over com
 
 ## Vendor-Lock Payback
 
-Overusing `extends` is similar to overuse of static methods in Laravel. Everyone with [bad expensive experience](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself) knows why it's bad, but they're not able to pass this experience who are in "the zone" of using.
+Overusing `extends` is similar to overuse of static methods in Laravel. Everyone with [bad expensive experience](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/) knows why it's bad, but they're not able to pass this experience who are in "the zone" of using.
 
 Then comes the day when 3rd party code changes:
 
@@ -252,7 +252,7 @@ Oh, and the arguments are in different order and there is one extra:
 
 Now we have to go through all these cases and change them. To add more salt to the wound, once there is `OkResponse` or `DeniedResponse`, all children of `Nette\...\Response`. This got us by shock. **Our big plan to refactor application in one afternoon went to dust.**
 
-And it doesn't have to be such a big change as a framework, but argument swap or just new type declaration - **there will be so many BC breaks just for [type declarations](/blog/2019/01/03/how-to-complete-type-declarations-without-docblocks-with-rector) in next 2 years**.
+And it doesn't have to be such a big change as a framework, but argument swap or just new type declaration - **there will be so many BC breaks just for [type declarations](/blog/2019/01/03/how-to-complete-type-declarations-without-docblocks-with-rector/) in next 2 years**.
 
 "What if instead, we'd have a factory."
 

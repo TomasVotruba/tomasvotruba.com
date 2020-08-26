@@ -7,7 +7,7 @@ perex: |
     Who is *we*? Me and CTO of the [company I worked for](https://spaceflow.io/en), a great leader and technical expert who taught me a lot, [Milan Mimra](https://www.linkedin.com/in/milanmimra).
     <br>
     <br>
-    The talk was not full of shallow tips, nor [about framework migration](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours). Instead, **we talked about small decisions that were made 2 years. Decisions, which took 3 months to get rid of**.
+    The talk was not full of shallow tips, nor [about framework migration](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/). Instead, **we talked about small decisions that were made 2 years. Decisions, which took 3 months to get rid of**.
 
 tweet: "New Post on #php 🐘 blog: How to Get Rid of Technical Debt or What We Would Have Done Differently 2 Years ago        #symfony #rector #ecs @doctrineproject #uuid #legacycode"
 tweet_image: "/assets/images/posts/2019/spaceflow_10_points/07.png"
@@ -63,7 +63,7 @@ It's better to start slow, so the first things we did was:
 
 - moving from string `"SomeClass"` to `SomeClass::class`
 - coding standard enforced line-ending - not just sniff, but a fixer
-- [finalized (almost) everything](/blog/2019/01/24/how-to-kill-parents)
+- [finalized (almost) everything](/blog/2019/01/24/how-to-kill-parents/)
 - accidental fatal error check of an empty array
 
 <img src="/assets/images/posts/2019/spaceflow_10_points/04.png" class="img-thumbnail col-12 col-md-8">
@@ -108,7 +108,7 @@ And the result?
 Have you heard about PSR-4? Well, so did many people before you, but it's very to forget it thanks to:
 
 - PHPUnit magic autoload - you can place your tests anywhere, PHPUnit will find them
-- [Nette\RobotLoader](/blog/2020/06/08/drop-robot-loader-and-let-composer-deal-with-autoloading) - load anything from anywhere, for free
+- [Nette\RobotLoader](/blog/2020/06/08/drop-robot-loader-and-let-composer-deal-with-autoloading/) - load anything from anywhere, for free
 - composer "classmap" - just load the directory, who cares
 - DDD - Domain Driven Design - apparently, one of the most favorite principles is to put all files in one directory, templates, configs, services, objects... just put it there
 
@@ -120,7 +120,7 @@ This all helps a lot to messy applications. As basic as this rule seems, I must 
 
 To add more salt into the wound, now imagine **you want to use some sort of services autoregistration** (and you should, unless you want to kill your project slowly). That means you tell your dependency injection container "load these services from this directory".
 
-One of such [implementaions is PSR-4 autodiscovery in Symfony](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3):
+One of such [implementaions is PSR-4 autodiscovery in Symfony](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/):
 
 <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">
 <img src="/assets/images/posts/2019/spaceflow_10_points/08.png" class="img-thumbnail col-12 col-md-8">
@@ -292,14 +292,14 @@ We already wrote that config suffers from manual services registration spam. But
 <img src="/assets/images/posts/2019/spaceflow_10_points/21.png" class="img-thumbnail col-12 col-md-8">
 
 
-This is **[famous Symfony tag spam](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette)**.
+This is **[famous Symfony tag spam](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette/)**.
 
 - not needed
 - overly promoted in documentation
 - thus at the end used by everybody
 - making application stupidly complex and hard to maintain and extend in the end
 
-Another typical issues is **[manual parameter spam](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too)**.
+Another typical issues is **[manual parameter spam](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/)**.
 
 ### Add Spam Filter
 
@@ -357,7 +357,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
 
 <img src="/assets/images/posts/2019/spaceflow_10_points/26.png" class="img-thumbnail col-12 col-md-8">
 
-I already wrote about this here: [How we Completed Thousands of Missing @var Annotations in a Day](/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day)
+I already wrote about this here: [How we Completed Thousands of Missing @var Annotations in a Day](/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day/)
 
 **This is super important to make instant refactoring reliable!**
 
@@ -367,8 +367,8 @@ I already wrote about this here: [How we Completed Thousands of Missing @var Ann
 
 I already wrote about it... twice:
 
-- [Don't Ever use Symfony Listeners](/blog/2019/05/16/don-t-ever-use-listeners)
-- [How to Convert Listeners to Subscribers and Reduce your Configs](/blog/2019/07/22/how-to-convert-listeners-to-subscribers-and-reduce-your-configs)
+- [Don't Ever use Symfony Listeners](/blog/2019/05/16/don-t-ever-use-listeners/)
+- [How to Convert Listeners to Subscribers and Reduce your Configs](/blog/2019/07/22/how-to-convert-listeners-to-subscribers-and-reduce-your-configs/)
 
 <img src="/assets/images/posts/2019/spaceflow_10_points/28.png" class="img-thumbnail col-12 col-md-8 mt-5">
 

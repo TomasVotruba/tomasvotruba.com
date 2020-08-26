@@ -72,7 +72,7 @@ We need to add global file argument. So, what option do we have?
 
 - Well, have you noticed the "wiht" typo? Now I have to **fix it in every single class**.
 - For every change, we have to find and modify every single place this **duplicated code** is in.
-- When a new command is added, you have to remember to **add exactly this line there** - you already know [how memory-locks backfire](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock), right?
+- When a new command is added, you have to remember to **add exactly this line there** - you already know [how memory-locks backfire](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/), right?
 
 Good for creating & sell applications, bad for projects you want to work on for a couple of years.
 

@@ -2,9 +2,9 @@
 id: 140
 title: "Your Brain is Your Garden"
 perex: |
-    After a few technical and open-source posts, it's time [for brain hacking](/blog/2018/05/03/how-do-you-treat-your-own-first-ai). Thanks to the recent boom of AI, neuroscience starts to overlap with human psychology. When it comes to learning methods, humans and computers are more alike than ever before.
+    After a few technical and open-source posts, it's time [for brain hacking](/blog/2018/05/03/how-do-you-treat-your-own-first-ai/). Thanks to the recent boom of AI, neuroscience starts to overlap with human psychology. When it comes to learning methods, humans and computers are more alike than ever before.
     <br><br>
-    To overcome [AI disruption](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world), you'll be valuable by actually making AI or by hacking your brain to be super-adaptable and irreplaceable.
+    To overcome [AI disruption](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/), you'll be valuable by actually making AI or by hacking your brain to be super-adaptable and irreplaceable.
 tweet: "New Post on my Blog: Your Brain is Your Garden   #eduhacking #ai #hi #learning "
 ---
 
@@ -34,7 +34,7 @@ In reality, most people prefer flowers because they're easier to take care of no
     <footer class="blockquote-footer">James Dean</footer>
 </blockquote>
 
-But instant gratification doesn't work very well for a long term. You might learn a lot on a shallow level, but you'd not understand much in depth. One example for all, I went to school for 9 + 4 + [4 years](/blog/2017/11/13/7-tips-you-should-know-before-going-to-university) and I learned about somewhat 40 subjects. I **would not dare to ask for a job in any of that**. Luckily, my parent taught me to *learn what you want* principle so I grew my 5 trees that hold my back now outside the school myself.
+But instant gratification doesn't work very well for a long term. You might learn a lot on a shallow level, but you'd not understand much in depth. One example for all, I went to school for 9 + 4 + [4 years](/blog/2017/11/13/7-tips-you-should-know-before-going-to-university/) and I learned about somewhat 40 subjects. I **would not dare to ask for a job in any of that**. Luckily, my parent taught me to *learn what you want* principle so I grew my 5 trees that hold my back now outside the school myself.
 
 ## Children and Adult are Alike, Even Smarter
 

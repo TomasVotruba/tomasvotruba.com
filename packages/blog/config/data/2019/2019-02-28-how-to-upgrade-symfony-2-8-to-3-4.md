@@ -21,7 +21,7 @@ I'm happy Symfony core team is supporting generic solution to all PHP-code upgra
 
 To make a bad situation more complicated, this upgrade is also related to upgrading of PHP - **Symfony 3.4 requires PHP 5.5.**
 
-I wrote about [PHP upgrades before](/blog/2018/11/08/fatal-error-uncaught-error-operator-not-supported-for-strings-in), but the main away is to upgrade **one minor version at once**:
+I wrote about [PHP upgrades before](/blog/2018/11/08/fatal-error-uncaught-error-operator-not-supported-for-strings-in/), but the main away is to upgrade **one minor version at once**:
 
 - Symfony 2.8 → 3.0
 - PHP 5.3 → 5.4
@@ -35,7 +35,7 @@ If you split each of these lines into standalone pull-requests, you're the best!
 
 ## Forget `UPGRADE.md`
 
-You probably know I work almost part-time on [the Rector project](https://getrector.org). I gather feedback from conferences and meetups all over Europe and try to make Rector better every day. Recently he also migrated between [2 PHP frameworks](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1), because why not?
+You probably know I work almost part-time on [the Rector project](https://getrector.org). I gather feedback from conferences and meetups all over Europe and try to make Rector better every day. Recently he also migrated between [2 PHP frameworks](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/), because why not?
 
 The PHP community gives me really positive vibes about going the right direction. That helps me to make PHP and Symfony **sets more and more complete**:
 
@@ -69,7 +69,7 @@ vendor/bin/rector process app src --set php55
 
 ## Awesome Symfony 3.3+ Dependency Injection
 
-Upgrade to Symfony 3.3 shrunk my configs to 1/5 of its original size. That's the  #1 reason you want to upgrade. If you don't know what I'm talking about, check [the diff post about those features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3). But wait, don't do it manually! **[This tool converts it all](/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery) for you.**
+Upgrade to Symfony 3.3 shrunk my configs to 1/5 of its original size. That's the  #1 reason you want to upgrade. If you don't know what I'm talking about, check [the diff post about those features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/). But wait, don't do it manually! **[This tool converts it all](/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/) for you.**
 
 <br>
 

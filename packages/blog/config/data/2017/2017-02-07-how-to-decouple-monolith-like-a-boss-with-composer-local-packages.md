@@ -14,7 +14,7 @@ deprecated_message: |
     This approach is very limited and creates unexpected messy behavior.
     <br>
     <br>
-    **Use [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies) with [Symplify/MonorepoBuilder](https://github.com/symplify/monorepo-builder) instead.**
+    **Use [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies/) with [Symplify/MonorepoBuilder](https://github.com/symplify/monorepo-builder) instead.**
 ---
 
 I found first [article about this topic](http://www.whitewashing.de/2015/04/11/monolithic_repositories_with_php_and_composer.html) in 2015, when Benjamin Eberlei created a tool called Fiddler. I was using similar approach in that time for a few months and I was happy I'm not alone.

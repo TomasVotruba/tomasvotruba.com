@@ -20,7 +20,7 @@ deprecated_message: |
     `@inject` refactoring was replaced by `AnnotatedPropertyInjectToConstructorInjectionRector` from [Rector](https://github.com/rectorphp/rector).
 ---
 
-I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
+I wrote about [Object Calisthenics](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) few weeks ago - they are very strict and not very handy if you're beginner in coding standard worlds.
 
 **Symplify Coding standard is complete opposite.** You can start with 1st checker today and your code will be probably able to handle it. It's combination of 40+ Code Sniffer Sniffs, PHP CS Fixer Fixers and PHPStan rules.
 
@@ -144,7 +144,7 @@ vendor/bin/rector process src
 
 ### Sold? Try Them
 
-They are used the best with [EasyCodingStandard](/blog/2017/08/07/7-new-features-in-easy-coding-standard-22):
+They are used the best with [EasyCodingStandard](/blog/2017/08/07/7-new-features-in-easy-coding-standard-22/):
 
 ```bash
 composer require --dev symplify/easy-coding-standard symplify/coding-standard

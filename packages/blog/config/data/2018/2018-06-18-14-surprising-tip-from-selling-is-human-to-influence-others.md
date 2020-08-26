@@ -68,7 +68,7 @@ Take following quotes as list of notes you'd make by reading the whole book. Sav
 
 ## 4. Working with Feedback that Hurts
 
-I wrote [How to Deal With Haters in Comments and Github](/blog/2018/01/29/how-to-deal-with-haters-in-comments-and-github) a while ago. And Daniel Pink shows 2 tips that can be added there right away:
+I wrote [How to Deal With Haters in Comments and Github](/blog/2018/01/29/how-to-deal-with-haters-in-comments-and-github/) a while ago. And Daniel Pink shows 2 tips that can be added there right away:
 
 <blockquote class="blockquote">
     When something bad occurs, ask yourself three questions - and come up with an intelligent way to answer each one "no": 1. Is this permanent? Bad response: "Yes. I've completely lost my skill for moving others." Better response: "No. I was flat today because I haven't been getting enough sleep." 2. Is this pervasive?"

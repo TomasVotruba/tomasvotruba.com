@@ -70,7 +70,7 @@ I thought when I deprecate package, application who use it as a dependency stops
 <img src="https://seld.be/images/update-reqs.png" class="img-thumbnail">
 </a>
 
-It works the same for releases. When you release version 2.0 that [requires PHP 7.1](/blog/2017/06/05/go-php-71), it doesn't mean your package won't work on PHP 5.6. Version 1.0 still does.
+It works the same for releases. When you release version 2.0 that [requires PHP 7.1](/blog/2017/06/05/go-php-71/), it doesn't mean your package won't work on PHP 5.6. Version 1.0 still does.
 
 
 ## 3 Steps To Perform Safe Deprecation
@@ -86,7 +86,7 @@ It's common psychological effect that people accept change with [**an explanatio
 Software develops all the time. New and better packages are born everyday.
 It so much helpful if you suggest a way to go. It doesn't have to share 100 % features of your package. **A package that you'd use if your package won't exist is fine**.
 
-You can combine both [like this](/blog/2016/03/10/autowired-controllers-as-services-for-lazy-people):
+You can combine both [like this](/blog/2016/03/10/autowired-controllers-as-services-for-lazy-people/):
 
 > Since Symfony 3.3 you can use PSR4-based service discovery and registration. It does pretty much the
 same thing - registers autowired controllers (and more) - and it has native support in Symfony.
@@ -178,7 +178,7 @@ I've [created a simple warning system](https://github.com/TomasVotruba/tomasvotr
 ## What's in it For You as Maintainer?
 
 This all you do is for package users - what a great and altruistic person you are!
-**But it has one great upside for you as well.** When I've [deprecated 5 of Symplify packages](/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33) I was sad to lose a legacy, my baby, my work... **But it's worth it!**
+**But it has one great upside for you as well.** When I've [deprecated 5 of Symplify packages](/blog/2017/05/29/symplify-packages-deprecations-brought-by-symfony-33/) I was sad to lose a legacy, my baby, my work... **But it's worth it!**
 
 In following weeks I found:
 
@@ -186,4 +186,4 @@ In following weeks I found:
 - I have **much less responsibility** so I can breathe more lightly,
 - and I can put more work into less projects
 
-Thanks to that, I've [added new features to EasyCodingStandard](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines), released [Object Calisthenics Coding Standard 3.0](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now) and [released ApiGen 5.0-RC2](https://github.com/ApiGen/ApiGen/releases/tag/v5.0.0-RC2). The last one is secret in progress, so don't tell anybody.
+Thanks to that, I've [added new features to EasyCodingStandard](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/), released [Object Calisthenics Coding Standard 3.0](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) and [released ApiGen 5.0-RC2](https://github.com/ApiGen/ApiGen/releases/tag/v5.0.0-RC2). The last one is secret in progress, so don't tell anybody.

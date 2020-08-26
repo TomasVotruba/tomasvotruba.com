@@ -2,13 +2,13 @@
 id: 160
 title: "When You Should Use Monorepo and When&nbsp;Local&nbsp;Packages"
 perex: |
-    Recently I gave [a few talks about monorepo in PHP](/talks/#monorepo) and how to integrate it to companies in a useful way. I'm very happy to see many people already use it and know what problems it solves.
+    Recently I gave [a few talks about monorepo in PHP](/talks/#monorepo/) and how to integrate it to companies in a useful way. I'm very happy to see many people already use it and know what problems it solves.
     <br><br>
-    Before monorepo hype takes over private PHP projects, I think **you should know about its limits**: When is the best time for you to [go monorepo](/clusters/#monorepo-from-zero-to-hero)? When you gain less complexity while integrating it? How can you make the transition better? Is it really needed?
+    Before monorepo hype takes over private PHP projects, I think **you should know about its limits**: When is the best time for you to [go monorepo](/clusters/#monorepo-from-zero-to-hero/)? When you gain less complexity while integrating it? How can you make the transition better? Is it really needed?
 tweet: "New Post on My Blog: When You Should Use #Monorepo and When Local Packages    #maturity #transition #balls @LekarnaNovinky #lekarnacz"
 ---
 
-There are already [6 posts](/clusters/#monorepo-from-zero-to-hero) about why is monorepo so good in dealing with complexity. So if you hear about it the first time or still don't believe it might help you, go check those.
+There are already [6 posts](/clusters/#monorepo-from-zero-to-hero/) about why is monorepo so good in dealing with complexity. So if you hear about it the first time or still don't believe it might help you, go check those.
 
 Today we'll not focus on open-source projects, but **rather on your private code**. All from point of **timing and transition**. Let me show you the architecture that [Lekarna.cz](https://www.lekarna.cz) uses to this day and how did we get there despite very chaotic start.
 
@@ -30,7 +30,7 @@ In every PR more energy and attention was invested in the maintenance of there m
 
 ### 3. Local Packages
 
-We realized, we needed the code to be at one place **and** keep it as separate as possible. In 2014 it didn't have a name, but I came with an idea to create a `/packages` directory in our main repository and *pretend* we have repositories there. *Treat it like* one day it might be decoupled to own repository, with own dependencies and own tests. Few years later it became known as [local packages](/blog/2017/12/25/composer-local-packages-for-dummies).
+We realized, we needed the code to be at one place **and** keep it as separate as possible. In 2014 it didn't have a name, but I came with an idea to create a `/packages` directory in our main repository and *pretend* we have repositories there. *Treat it like* one day it might be decoupled to own repository, with own dependencies and own tests. Few years later it became known as [local packages](/blog/2017/12/25/composer-local-packages-for-dummies/).
 
 This lead new programmers to focus deeply on a single part of huge codebase at a time and also make changes the easiest way possible. **We didn't have to explain them anything**, the knowledge was embodied in the code. This is a **golden pattern you look for** in any part of business or life - you just give people smartphone and they *intuitively know* what to do.
 

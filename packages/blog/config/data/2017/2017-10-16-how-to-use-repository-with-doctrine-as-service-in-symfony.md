@@ -2,7 +2,7 @@
 id: 59
 title: "How to use Repository with Doctrine as Service in Symfony"
 perex: |
-    Dependency injection with autowiring is super easy [since Symfony 3.3](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3). Yet on my mentoring I still meet service locators.
+    Dependency injection with autowiring is super easy [since Symfony 3.3](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/). Yet on my mentoring I still meet service locators.
     <br><br>
     Mostly due to traditional registration of Doctrine repositories.
     <br><br>
@@ -457,7 +457,7 @@ There is no sign of Doctrine.
 
 **Easier to maintain and extend.**
 
-Also space to decoupling to [local packages](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages) is now opened.
+Also space to decoupling to [local packages](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/) is now opened.
 
 
 <br>

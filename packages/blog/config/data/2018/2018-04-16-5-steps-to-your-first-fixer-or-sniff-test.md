@@ -2,9 +2,9 @@
 id: 92
 title: "5 Steps to Your First Fixer or Sniff Test"
 perex: |
-    When [I wrote my first Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3) 4 years ago I wanted to test it. I expected testing class, that would register sniff, provide ugly code and compare it to fixed one. So I started to explore PHP_CodeSniffer looking for such feature. Found one class, second class, warnings, errors, uff and after 10th error, I closed it.
+    When [I wrote my first Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/) 4 years ago I wanted to test it. I expected testing class, that would register sniff, provide ugly code and compare it to fixed one. So I started to explore PHP_CodeSniffer looking for such feature. Found one class, second class, warnings, errors, uff and after 10th error, I closed it.
     <br><br>
-    When [I wrote my first Fixer](/blog/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24), the story was a bit shorter but very similar. No wonder people don't test when the entry barrier is so huge.
+    When [I wrote my first Fixer](/blog/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24/), the story was a bit shorter but very similar. No wonder people don't test when the entry barrier is so huge.
     <br><br>
     **Since I use both of them and I want to motivate people to write their own sniffs and fixers, I turned this barrier to just 5 short steps** for both of them.
 tweet: "New post on my blog: 5 Steps to Your First Fixer or Sniff Test #php #codingstandard #phpcodesniffer #phpcsfixer #phpunit"

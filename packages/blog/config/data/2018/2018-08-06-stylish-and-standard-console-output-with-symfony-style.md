@@ -149,7 +149,7 @@ You can create `SymfonyStyle` in simple static construction as in point 1, but w
 
 Do you have to pass the whole command there or move the `SymfonyStyle` manually?
 
-Save [the vendor-locking statics](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself) for value objects and enjoy the constructor injection. There are more lines than one because we need to register `Input` and `Output` as a service and autowire their interfaces.
+Save [the vendor-locking statics](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/) for value objects and enjoy the constructor injection. There are more lines than one because we need to register `Input` and `Output` as a service and autowire their interfaces.
 
 ```yaml
 services:

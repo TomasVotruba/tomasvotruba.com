@@ -9,7 +9,7 @@ perex: |
 tweet: "New Post on #php 🐘 blog: What I Learned by Using thecodingmachine/safe #php #phpgems #nettefw #symfony"
 ---
 
-I'm a big fan of [instant personal experience](/blog/2018/12/06/dont-learn-to-code) over over-thinking. I didn't know if this package would be useful for me, so I tried it. My code is different from yours, so your experience might be different.
+I'm a big fan of [instant personal experience](/blog/2018/12/06/dont-learn-to-code/) over over-thinking. I didn't know if this package would be useful for me, so I tried it. My code is different from yours, so your experience might be different.
 
 <blockquote class="blockquote text-center">
     If you don't know, just try it.
@@ -53,7 +53,7 @@ But the combination of PHPStan rule CI fail or code fails forced to upgrade. **O
 
 ### Memory Lock on Every Native Function
 
-This leads me to [memory lock](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock) problem.
+This leads me to [memory lock](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) problem.
 
 When I add new native function `array_filter`, should I use the *Safe* version or not? I have to:
 
@@ -151,8 +151,8 @@ So...
 
 Have you read *Hidden Gems of PHP Packages*?
 
-- [Hidden Gems of PHP Packages: Symfony\Finder and SplFileInfo](/blog/2018/08/13/hidden-gems-of-php-packages-symfony-finder-and-spl-file-info)
-- [Hidden Gems of PHP Packages: Nette\Utils](/blog/2018/07/30/hidden-gems-of-php-packages-nette-utils)
+- [Hidden Gems of PHP Packages: Symfony\Finder and SplFileInfo](/blog/2018/08/13/hidden-gems-of-php-packages-symfony-finder-and-spl-file-info/)
+- [Hidden Gems of PHP Packages: Nette\Utils](/blog/2018/07/30/hidden-gems-of-php-packages-nette-utils/)
 
 The point is simple - replace native functions with classes methods or objects that:
 

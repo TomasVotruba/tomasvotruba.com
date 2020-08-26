@@ -507,4 +507,4 @@ Do you know more tips to write code that is hard to maintain and upgrade in *not
 
 <br>
 
-P.S.: If you love sarcastic posts like this, go check [Eliminating Visual Debt](https://ocramius.github.io/blog/eliminating-visual-debt) by Marco Pivetta or [How to Criticize like a Senior Programmer](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer).
+P.S.: If you love sarcastic posts like this, go check [Eliminating Visual Debt](https://ocramius.github.io/blog/eliminating-visual-debt) by Marco Pivetta or [How to Criticize like a Senior Programmer](/blog/2018/03/19/how-to-criticize-like-a-senior-programmer/).

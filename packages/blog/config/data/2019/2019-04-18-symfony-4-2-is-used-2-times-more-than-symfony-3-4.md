@@ -23,7 +23,7 @@ So I closed myself in a closet for 3 days and put together framework downloads g
 
 They say it's best practice to use LTS version - now Symfony 3.4. I personally prefer living on the edge with the 4.x version, but after feedback from the community, I lowered requirements to Symfony 3.4 as well.
 
-Let's look at a base stone for Symfony applications - [symfony/http-kernel](/package-downloads-by-version/#symfony-http-kernel).
+Let's look at a base stone for Symfony applications - [symfony/http-kernel](/package-downloads-by-version/#symfony-http-kernel/).
 
 - v4.2 - **1 838 593** downloads monthly - **54 %** of all downloads
 - v4.1 - 230 975
@@ -35,7 +35,7 @@ It's that Symfony community doesn't wait on another LTS. It grabs the new featur
 ## Laravel wide Spread and Stable
 
 I don't follow Laravel releases much. There is no clear release plan like PHP or Symfony has and they seemed somewhat random to me.
-So when I looked at stats of [laravel/framework](/package-downloads-by-version/#laravel-framework), I was surprised there are **basically 2 release/year every ~6 months**.
+So when I looked at stats of [laravel/framework](/package-downloads-by-version/#laravel-framework/), I was surprised there are **basically 2 release/year every ~6 months**.
 
 It's also interesting, that people stick with various versions:
 
@@ -53,7 +53,7 @@ It's also notable that **89,5 %** downloads are for Laravel 5.x.
 
 This week was [Matthew announced moving Zend to Laminas project](https://mwop.net/blog/2019-04-17-from-zend-to-laminas.html). For users, it technically means just change of `Zend` namespace to `Laminas`, but potentially growth of Zend features thanks Linux Foundation funding. Great news!
 
-How is the [Zend adoption doing now](/package-downloads-by-version/#zend)?
+How is the [Zend adoption doing now](/package-downloads-by-version/#zend/)?
 
 - 27 of 91 packages has an adoption rate of 80 %+
 - 51 of 91 packages has an adoption rate of 60 %+
@@ -66,7 +66,7 @@ The Zend community is clearly interested in new features, far from "Zend is Dead
 
 ## Nette slowly Adopting
 
-- The backbone for applications - [`nette/application`](/package-downloads-by-version/#nette-application) - **has only 4 % adoption**. No surprise there, since Nette 3.0 was released only on April 2nd, 2019. Keep updating!
+- The backbone for applications - [`nette/application`](/package-downloads-by-version/#nette-application/) - **has only 4 % adoption**. No surprise there, since Nette 3.0 was released only on April 2nd, 2019. Keep updating!
 
 
 Here are [data to this day](https://github.com/TomasVotruba/tomasvotruba.com/blob/6c9df3aa834a213ea1a94d619f4cbc1564ff727e/source/_data/generated/vendor_packages_by_version.yaml), I wonder how they change in 6 months.

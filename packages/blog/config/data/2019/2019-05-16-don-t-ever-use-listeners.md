@@ -35,19 +35,19 @@ That's how you write a manipulative text if you wanted people to never use subsc
 
 - Juniors will use Listeners by default (everywhere they can) <em class="fas fa-fw fa-lg fa-times text-danger"></em>
 - YAML configs will get fat with listener configuration for basically no advantage <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-    - Since [PSR-4 autodiscovery](/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery) this hurts config readability more then ever
+    - Since [PSR-4 autodiscovery](/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/) this hurts config readability more then ever
     - You have to remember the YAML syntax for right registration
     - Do you know you have to tag it with `name` & `event`?
     - Will `_autoconfigure: true` help you here?
     - What's the name of event - `kernel_exception` or `kernel.error`? Well, neither
 - What will you do if name of Kernel event will change? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
 - How do you analyse it with PHPStan? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- How do you upgrade it with Rector, when Symfony will create a [BC break](https://symfony.com/blog/new-in-symfony-4-3-simpler-event-dispatching) [change](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher)? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- How do you upgrade it with Rector, when Symfony will create a [BC break](https://symfony.com/blog/new-in-symfony-4-3-simpler-event-dispatching) [change](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher/)? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
 - What if you decide to migrate to Laravel or the *new best framework X* later? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
 
 All these problems will shoot you or your colleague in the back in the future. **You've just opened doors for 6 more possible bugs and problems** to come to your project #carpeyolodiem.
 
-Most of these problems are a result of config programming - [that just sucks](/blog/2019/02/14/why-config-coding-sucks).
+Most of these problems are a result of config programming - [that just sucks](/blog/2019/02/14/why-config-coding-sucks/).
 
 ## Why You Should Always use Event Subscriber?
 
@@ -85,7 +85,7 @@ final class YourListener extends UseMeListener implements EventSubscriberInterfa
 }
 ```
 
-What's wrong with this code? First, `UseMeListener` should be [`final`](/blog/2019/01/24/how-to-kill-parents), so you cannot break SOLID like this.
+What's wrong with this code? First, `UseMeListener` should be [`final`](/blog/2019/01/24/how-to-kill-parents/), so you cannot break SOLID like this.
 
 Let's take part by part.
 
@@ -134,7 +134,7 @@ final class MyCustomEventSubscriber implements EventSubscriberInterface
 }
 ```
 
-There is still a bit of magic... what should be in `getSubscribedEvents()` method? Honestly, I have no idea. I don't want to [remember what's written in code](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock). So I'll use PHPStorm:
+There is still a bit of magic... what should be in `getSubscribedEvents()` method? Honestly, I have no idea. I don't want to [remember what's written in code](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/). So I'll use PHPStorm:
 
 <img src="/assets/images/posts/2019/sub/event_names.gif" class="img-thumbnail">
 
@@ -188,7 +188,7 @@ $input->getOption('resource');
 
 <img src="/assets/images/posts/2019/sub/constant.gif" class="img-thumbnail">
 
-[Don't remember what you don't need to](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock).
+[Don't remember what you don't need to](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/).
 
 <br>
 

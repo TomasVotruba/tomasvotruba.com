@@ -2,7 +2,7 @@
 id: 250
 title: "How to Upgrade to Symplify 8 - From Sniffs to PHPStan Rules"
 perex: |
-    Since Symplify 7.3, you might notice a few deprecation notices in your coding standards. As Symplify 8 release is [synced with Symfony cycle](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases), both will be released at the end of May.
+    Since Symplify 7.3, you might notice a few deprecation notices in your coding standards. As Symplify 8 release is [synced with Symfony cycle](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/), both will be released at the end of May.
     <br>
     <br>
     What to do with these deprecations? Why were these sniffs dropped? How to handle upgrades in 1 hour?
@@ -114,7 +114,7 @@ rules:
 
 ## 2. Cognitive Complexity
 
-The [only ~~sniff~~ rule your coding standard should have](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you)... just got better.
+The [only ~~sniff~~ rule your coding standard should have](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/)... just got better.
 
 The orifinal sniffs were removed:
 
@@ -145,7 +145,7 @@ Just drop it. PHPStan level 0 handles this.
 
 ## 4. Forbidden Static → Explicit Static
 
-Static functions [are best way to slowly create technical dept](/blog/2019/04/01/removing-static-there-and-back-again). But sometimes it's tough to code without them.
+Static functions [are best way to slowly create technical dept](/blog/2019/04/01/removing-static-there-and-back-again/). But sometimes it's tough to code without them.
 
 So instead of forbidding them:
 
@@ -170,7 +170,7 @@ I've been using it for 4 days, and oh, what a shame I feel when I want to use a 
 
 Even though it's repeated over, again and again, that composition beats inheritance, the PHP code I see is full of it.
 
-Sometimes the only way to [promote so-far-the-best practise](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony), is to enforce it.
+Sometimes the only way to [promote so-far-the-best practise](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/), is to enforce it.
 
 - ~~`Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenParentClassSniff`~~
 
@@ -273,7 +273,7 @@ And that's it! You've just migrated all deprecated sniffs to PHPStan rules. Upgr
 
 <br>
 
-[In the next post, we'll look on the 2nd half](/blog/2020/05/11/how-to-upgrade-to-symplify-8-from-fixers-to-rector-rules) - **how to migrate fixers into Rector rules**.
+[In the next post, we'll look on the 2nd half](/blog/2020/05/11/how-to-upgrade-to-symplify-8-from-fixers-to-rector-rules/) - **how to migrate fixers into Rector rules**.
 
 <br>
 

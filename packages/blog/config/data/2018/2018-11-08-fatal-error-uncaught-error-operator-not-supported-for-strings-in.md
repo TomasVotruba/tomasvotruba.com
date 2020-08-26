@@ -127,7 +127,7 @@ foreach (array_keys($callbacks) as $callback) {
 
 ## How Rector got into pure PHP Upgrades
 
-At the [PHP Asia Conference](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference) Rasmus Lerdorf spoke about **upgrading PHP as a big problem**. Much bigger than upgrading particular frameworks. Many WTF namings in PHP are just for BC sake. I struck me, that there is much more legacy PHP code in every company than there is framework-bound code.
+At the [PHP Asia Conference](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference/) Rasmus Lerdorf spoke about **upgrading PHP as a big problem**. Much bigger than upgrading particular frameworks. Many WTF namings in PHP are just for BC sake. I struck me, that there is much more legacy PHP code in every company than there is framework-bound code.
 
 I instantly created an issue at Rector, that deals with [PHP 5.3 to 7.4 upgrades](https://github.com/rectorphp/rector/issues/638).
 I went full-time on writing PHP upgrade rules - in the train, in the buss, in the plane (the best place to code actually, wonder why).

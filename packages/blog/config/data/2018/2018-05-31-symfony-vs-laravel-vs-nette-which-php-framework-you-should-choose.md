@@ -27,7 +27,7 @@ And that does not apply only framework, I've seen very good programmer moving fr
 
 ## The Best PHP Framework based on My Experience
 
-So which PHP framework would I recommend to you in 2018? You know from my posts and from founding PHP group "Symfonists" in the Czech Republic in 2016, that **I'm all over the Symfony**. Even though there are [many](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/#get-rid-of-tagging-in-symfony) [things](https://github.com/symfony/symfony/pull/26686) I [disagree](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection) with.
+So which PHP framework would I recommend to you in 2018? You know from my posts and from founding PHP group "Symfonists" in the Czech Republic in 2016, that **I'm all over the Symfony**. Even though there are [many](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/#get-rid-of-tagging-in-symfony) [things](https://github.com/symfony/symfony/pull/26686) I [disagree](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection/) with.
 
 Luckily, I'm aware of this *confirmation bias*, so when somebody asks me the question in the title, **I think the right answer is**:
 

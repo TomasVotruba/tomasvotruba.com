@@ -14,7 +14,7 @@ I was also frustrated by the previous tool I used - [Sculpin](https://github.com
 
 The 0 $ was partial motivation, but **I was astonished much more by the miracle of deploying the PHP app into HTML and CSS**. In times of MVC frameworks build on Request and Response, it took me many days to shift my mind.
 
-I had my first talk about Statie abroad, in Berlin I think, and I enjoyed it. Why? It was my first talk in English, and [I was so scared](/blog/2018/07/23/5-signs-should-never-have-a-talk-abroad) about the feedback and people will understand my poor English (at least what I thought about it).
+I had my first talk about Statie abroad, in Berlin I think, and I enjoyed it. Why? It was my first talk in English, and [I was so scared](/blog/2018/07/23/5-signs-should-never-have-a-talk-abroad/) about the feedback and people will understand my poor English (at least what I thought about it).
 
 I wrote a few posts about it and also used it for our community website [Pehapkari.cz](https://pehapkari.cz) - proudly of a piece of art at that time. I mean, **anyone could edit the website on GitHub**, and it was **deployed to production after merging the pull-request** in a matter of 5 minutes. How long does it take to projects, you know?
 
@@ -130,7 +130,7 @@ It will be only better and **that's good enough because that how we learn and gr
 ## Spread The Code you Want to See in The World
 
 I realized I made the project that worked before, **but doesn't anymore**. And that's the lesson for open-source I want to see in the world.
-**I don't want to spread bad habits amongst programmers who read my code** when I already know it's wrong. I feel it's my personal responsibility to correct mistakes of past, moreover when [the code teaches programmers](/blog/2020/02/24/how-many-days-of-technical-debt-has-your-php-project).
+**I don't want to spread bad habits amongst programmers who read my code** when I already know it's wrong. I feel it's my personal responsibility to correct mistakes of past, moreover when [the code teaches programmers](/blog/2020/02/24/how-many-days-of-technical-debt-has-your-php-project/).
 
 <blockquote class="blockquote text-center">
     If something doesn't work and we feel there might be a better way,<br>

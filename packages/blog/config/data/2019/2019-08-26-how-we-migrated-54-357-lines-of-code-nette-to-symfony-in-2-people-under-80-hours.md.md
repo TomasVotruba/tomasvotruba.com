@@ -82,7 +82,7 @@ During those **17 days, we put in 80 hours of work** for both of us together (= 
 
 Although we do not like it, we had to do 20 % of the migration manually.
 
-One of the first steps was to move from [config programming to PHP programming](/blog/2019/02/14/why-config-coding-sucks). Both frameworks try to promote their sugar syntax for Neon or YAML. It sounds cool to new programmers to write less code. Still, it's confusing, framework-specific, can be done in plain PHP anyway, and most importantly, static analysis and instant refactoring won't deal with it.
+One of the first steps was to move from [config programming to PHP programming](/blog/2019/02/14/why-config-coding-sucks/). Both frameworks try to promote their sugar syntax for Neon or YAML. It sounds cool to new programmers to write less code. Still, it's confusing, framework-specific, can be done in plain PHP anyway, and most importantly, static analysis and instant refactoring won't deal with it.
 
 How does "config programming" look like?
 
@@ -154,7 +154,7 @@ Automatic tools did another 80% of the pull-request you saw above. The first one
 
 ## Neon to YAML
 
-Neon and YAML are de facto fields [with minor differences in syntax](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them), but when it comes to services, each framework writes a little differently. Config with services had 316 lines in the services section. You don't want to migrate it manually, the Neon entities. Besides, just one error in related migration, and you can do it all over again.
+Neon and YAML are de facto fields [with minor differences in syntax](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/), but when it comes to services, each framework writes a little differently. Config with services had 316 lines in the services section. You don't want to migrate it manually, the Neon entities. Besides, just one error in related migration, and you can do it all over again.
 
 I took few hours and wrote [Migrify/NeonToYaml](https://github.com/migrify/neon-to-yaml). Just pass the path to the `*.neon` file, and it will convert into a beautiful `*.yaml` file.
 

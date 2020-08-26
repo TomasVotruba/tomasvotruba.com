@@ -117,7 +117,7 @@ Events are stored with their location and rendered to Open Street Maps with fant
 
 ## How much Does it Cost to Travel abroad Meetup?
 
-There is [plenty of reasons not-to-go](/blog/2018/07/23/5-signs-should-never-have-a-talk-abroad) visit PHP meetup abroad, but the one I hear the most **are money**.
+There is [plenty of reasons not-to-go](/blog/2018/07/23/5-signs-should-never-have-a-talk-abroad/) visit PHP meetup abroad, but the one I hear the most **are money**.
 
 To give you an idea, here **are costs of my trips from Prague** to cities nearby:
 

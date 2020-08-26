@@ -2,14 +2,14 @@
 id: 273
 title: "4&nbsp;Ways to Make Your&nbsp;Nette&nbsp;Project More&nbsp;Readable"
 perex: |
-    You can [switch PHP framework you use in a month](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours). Yet, **80 % of work lays before the migration** itself, is to take unreliable PHP code structures and **make [it readable](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases) for developers**.
+    You can [switch PHP framework you use in a month](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/). Yet, **80 % of work lays before the migration** itself, is to take unreliable PHP code structures and **make [it readable](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases/) for developers**.
     <br><br>
     What belongs to these 80 % when it comes to Nette-specific code?
 tweet: "New Post on #php 🐘 blog: 4 Ways to Make Your #nettefw Project More Readable"
 tweet_image: "/post_images/2020/nette_readability_get_component.gif"
 ---
 
-Each framework has its documentation. The developers take it and test it in practice, how good the examples stand in real life. Sometimes **the practical experience goes against the documentation primary choice**, like using [dependency injection in Laravel](/blog/2019/03/04/how-to-turn-laravel-from-static-to-dependency-injection-in-one-day).
+Each framework has its documentation. The developers take it and test it in practice, how good the examples stand in real life. Sometimes **the practical experience goes against the documentation primary choice**, like using [dependency injection in Laravel](/blog/2019/03/04/how-to-turn-laravel-from-static-to-dependency-injection-in-one-day/).
 
 These practical tips are golden mine, **because they save the company money and developer work time in the further future**.
 Do you use Nette? Today, we look at 10 such spots that will bring you code advantage and make changes more comfortable and stable.
@@ -93,7 +93,7 @@ $entity->...
 $entity->getName();
 ```
 
-Honestly, [I don't memorize code](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock), my super-smart IDE does it for me.
+Honestly, [I don't memorize code](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/), my super-smart IDE does it for me.
 
 ### How to Make Such Code Readable?
 

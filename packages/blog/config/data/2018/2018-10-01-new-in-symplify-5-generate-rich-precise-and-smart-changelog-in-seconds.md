@@ -2,7 +2,7 @@
 id: 144
 title: "New in Symplify 5: Generate Rich, Precise and Smart Changelog in Seconds"
 perex: |
-    ChangelogLinker started as a small tool to complete links to PRs, authors, and versions in `CHANGELOG.md`. Then it started to [generate](/blog/2018/06/25/let-changelog-linker-generate-changelog-for-you) the `CHANGELOG.md`.
+    ChangelogLinker started as a small tool to complete links to PRs, authors, and versions in `CHANGELOG.md`. Then it started to [generate](/blog/2018/06/25/let-changelog-linker-generate-changelog-for-you/) the `CHANGELOG.md`.
      <br><br>
      **Where is now and how to start using it?**
 tweet: "New Post on my Blog: New in #Symplify 5: #ChangelogLinker - Generate Rich, Precise and Smart #Changelog in Seconds    #git #github #api #regex"

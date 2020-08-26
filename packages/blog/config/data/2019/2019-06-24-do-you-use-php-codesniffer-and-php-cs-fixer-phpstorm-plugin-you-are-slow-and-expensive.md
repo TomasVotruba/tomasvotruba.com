@@ -52,7 +52,7 @@ Everyone writes about the benefits of these plugins, but **how much do you pay f
 
 ## Attention Economy
 
-Well, it's not. If you've never heard about *dopamine - notification* effect, read [Are You Using Social Media or Being Used By It?](http://www.calnewport.com/blog/2017/10/02/are-you-using-social-media-or-being-used-by-it) by *Cal Newport*. This amazing guy helped me to [quit Twitter](/blog/2017/01/20/4-emotional-reasons-why-I-quit-my-twitter) and [go deeper](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport) in topics I really care about in my life.
+Well, it's not. If you've never heard about *dopamine - notification* effect, read [Are You Using Social Media or Being Used By It?](http://www.calnewport.com/blog/2017/10/02/are-you-using-social-media-or-being-used-by-it) by *Cal Newport*. This amazing guy helped me to [quit Twitter](/blog/2017/01/20/4-emotional-reasons-why-I-quit-my-twitter/) and [go deeper](/blog/2017/09/25/3-non-it-books-that-help-you-to-become-better-programmer/#deep-work-by-cal-newport) in topics I really care about in my life.
 
 <img src="/assets/images/posts/2019/plugin/addict.jpg">
 
@@ -77,7 +77,7 @@ Let's get back to our code again.
 **If we're lucky, it's gone** under 15 seconds. If not, we get back to "we try to understand it" step.
 In time, we get better, faster and we create a small database of "message → solution" in our brains. In a few weeks, we learn how to write perfect code without any underscores.
 
-Then our team extends rule set with [PSR-12](/blog/2018/04/09/try-psr-12-on-your-code-today) and we have to upgrade our brain database. So we start to hate extending of coding standards and prefer less.
+Then our team extends rule set with [PSR-12](/blog/2018/04/09/try-psr-12-on-your-code-today/) and we have to upgrade our brain database. So we start to hate extending of coding standards and prefer less.
 
 ## Expensive Fun
 
@@ -125,7 +125,7 @@ Now imagine all the PHP projects in the world. Which of those is faster?
 
 Does it ring a bell? Now think about the same way about instant upgrades or refactoring?
 
-If there will be Rector plugin for PHPStorm (I honestly hope it won't), **you'd have to find every [new pattern](/blog/2019/04/15/pattern-refactoring) there is in your project, again manually and randomly in your PHP files** and hit the "refactor" button.
+If there will be Rector plugin for PHPStorm (I honestly hope it won't), **you'd have to find every [new pattern](/blog/2019/04/15/pattern-refactoring/) there is in your project, again manually and randomly in your PHP files** and hit the "refactor" button.
 
 If you're effective, lazy and don't want to produce waste, you'll run:
 

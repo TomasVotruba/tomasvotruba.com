@@ -35,7 +35,7 @@ services:
     # 20 more files similar to this one
 ```
 
-I already wrote [How to refactor to new Dependency Injection features in Symfony 3.3](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3), so you can read it. But you don't have to, since **this conversion can be automated**...
+I already wrote [How to refactor to new Dependency Injection features in Symfony 3.3](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/), so you can read it. But you don't have to, since **this conversion can be automated**...
 
 ```yaml
 services:

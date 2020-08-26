@@ -42,7 +42,7 @@ PHP_CodeSniffer 2.8 and 3.0 (depending on `3.0-dev`), which took 14 uncertain mo
 
 <br>
 
-Both use `token_get_all()` that basically parses code to strings. Do you want to know [how they actually work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work)?
+Both use `token_get_all()` that basically parses code to strings. Do you want to know [how they actually work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/)?
 
 ### [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) from the Czech Republic
 
@@ -88,7 +88,7 @@ $object->missing(); // here we know that "missing" does not exist in "SomeObject
     <a href="https://github.com/phpstan/phpstan/releases/tag/0.1">* 2016</a>
 </span>
 
-If you don't use any static analysis tool, give PHPStan a try. I've made [minimalist intro that will help you with first steps ](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too). It's worth investing even day or two to set it up because **these tools will join toolkit of everyday use**, like Composer or PHPUnit.
+If you don't use any static analysis tool, give PHPStan a try. I've made [minimalist intro that will help you with first steps ](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). It's worth investing even day or two to set it up because **these tools will join toolkit of everyday use**, like Composer or PHPUnit.
 
 ### [Phan](https://github.com/phan/phan) by Rasmus Lerdorf
 

@@ -2,7 +2,7 @@
 id: 177
 title: "11 Steps to Migrate From Sculpin to Statie"
 perex: |
-    In previous post we migrated [Jekyll to Statie](/blog/2019/01/10/9-steps-to-migrate-from-jekyll-to-statie).
+    In previous post we migrated [Jekyll to Statie](/blog/2019/01/10/9-steps-to-migrate-from-jekyll-to-statie/).
     If you need to add a feature to the static website, like creating preview images for Instagram, **you need PHP**.
     <br><br>
     Sculpin is the older brother of Statie but is mostly retired last 3 years. Do you want to get on track with modern PHP on your static website? Here is how.
@@ -25,7 +25,7 @@ Statie doesn't create these problems - there is no paginator and tags/categories
 
 ## 1. Create Basic Statie Structure
 
-Statie 5.3 brings [new `init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie), that creates basic structure in `/source` directory, `statie.yml`, `.travis.yml` and metafiles.
+Statie 5.3 brings [new `init` command](/blog/2019/01/07/how-to-create-your-first-php-twig-static-website-under-2-minutes-with-statie/), that creates basic structure in `/source` directory, `statie.yml`, `.travis.yml` and metafiles.
 
 Before we start any moving, create a basic structure to save many copy-pasting steps:
 

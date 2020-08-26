@@ -8,7 +8,7 @@ perex: |
 tweet: "New Post on #php 🐘 blog: Don't Give up Your PHP Code for Compiler Passes so Easily      #symfony #laravel #nettfw"
 ---
 
-This mini-series started in [Why Config Coding Sucks](/blog/2019/02/14/why-config-coding-sucks). **There we learned to move ~~weakly~~ un-typed strings to strict-typed PHP code**. It's not only about YAML or NEON files, but about any config-like syntax in general (XML, in...).
+This mini-series started in [Why Config Coding Sucks](/blog/2019/02/14/why-config-coding-sucks/). **There we learned to move ~~weakly~~ un-typed strings to strict-typed PHP code**. It's not only about YAML or NEON files, but about any config-like syntax in general (XML, in...).
 
 Today we move to PHP-only land, that suffers a similar problem.
 
@@ -16,7 +16,7 @@ Today we move to PHP-only land, that suffers a similar problem.
 
 So we talk about [Compiler Passes in Symfony](https://symfony.com/doc/current/service_container/compiler_passes.html)? Well, yes and no. Not only about them, but about any PHP code that moves around services in the DI container.
 
-- in Nette it's a class that extends [`CompilerExtension`](/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension)
+- in Nette it's a class that extends [`CompilerExtension`](/blog/2017/02/15/minimalistic-way-to-create-your-first-nette-extension/)
 - in Symfony it's class that implements [`CompilerPassInterface`](https://github.com/symfony/symfony/blob/fba11b4dc34e7c589d8c30d5b6a090387d52e648/src/Symfony/Component/DependencyInjection/Compiler/CompilerPassInterface.php) or extends [`Extension`](https://github.com/symfony/symfony/blob/fba11b4dc34e7c589d8c30d5b6a090387d52e648/src/Symfony/Component/DependencyInjection/Extension/Extension.php)
 - in Laravel it can be [service providers](https://laravel.com/docs/master/providers)
 
@@ -69,7 +69,7 @@ final class PriceCompilerPass implements CompilerPassInterface
 
 - add tagging in extension/bundle or better type resolution <em class="fas fa-fw fa-times text-danger fa-lg"></em>
 - register this in Kernel <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- remember the tag name ([don't remember anything](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock)) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+- remember the tag name ([don't remember anything](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock)/) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
 - use the tag everywhere (YAML) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
 - vendor-lock the metadata in the config (YAML) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
 - people maintaining project after you leave have to learn this *Symfony way* <em class="fas fa-fw fa-times text-danger fa-lg"></em>
@@ -165,7 +165,7 @@ services:
 
 I use [compiler pass](https://github.com/symplify/package-builder#do-not-repeat-simple-factories) for now, but if you know how to remove it, let me know.
 
-How we get `$priceModifiers` is not that important now, it's [an implementation detail](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette).
+How we get `$priceModifiers` is not that important now, it's [an implementation detail](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette/).
 
 ## Durable & Readable
 

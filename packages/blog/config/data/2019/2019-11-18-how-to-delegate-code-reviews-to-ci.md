@@ -35,7 +35,7 @@ Well, the 2nd cannot be automated, unless you're able to put it in clear step-by
 ## Dead Fat Code
 
 But 1st step can be easily automated. How? Well, let's take a dead code for example.
-In the last [project I've helped to improve with Rector](/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day), there were 2 years of dead-code piled up. A dead that you have to:
+In the last [project I've helped to improve with Rector](/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day/), there were 2 years of dead-code piled up. A dead that you have to:
 
 - test
 - maintain

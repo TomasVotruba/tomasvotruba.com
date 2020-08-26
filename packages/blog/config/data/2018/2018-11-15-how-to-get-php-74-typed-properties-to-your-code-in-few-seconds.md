@@ -105,7 +105,7 @@ In PHP 8 or 9 this might come:
 }
 ```
 
-In [PHP Asia](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference), *typed arrays* was the most desired feature in next versions of PHP. So were *typed properties* once and so were *strict types* before them. In 2015 we would only dream about those 2, now one is part of our every-day life, second coming soon.
+In [PHP Asia](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference/), *typed arrays* was the most desired feature in next versions of PHP. So were *typed properties* once and so were *strict types* before them. In 2015 we would only dream about those 2, now one is part of our every-day life, second coming soon.
 
 ##"...in Seconds"
 

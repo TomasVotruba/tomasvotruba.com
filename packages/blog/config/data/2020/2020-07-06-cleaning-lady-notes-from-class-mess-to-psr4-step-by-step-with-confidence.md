@@ -2,7 +2,7 @@
 id: 267
 title: "Cleaning Lady Notes: From Class Mess to PSR-4 Step by Step With Confidence"
 perex: |
-    Today I'm starting a new post series - *Cleaning Notes*. These posts are for people who are [aspiring legacy migrators](/blog/2020/06/29/how-will-programming-look-like-in-2025) with a vision to improve private PHP ecosystem and bring joy to coding with gigantic applications again. The same vision we have in the Rector team.
+    Today I'm starting a new post series - *Cleaning Notes*. These posts are for people who are [aspiring legacy migrators](/blog/2020/06/29/how-will-programming-look-like-in-2025/) with a vision to improve private PHP ecosystem and bring joy to coding with gigantic applications again. The same vision we have in the Rector team.
     <br><br>
     In this series, you can learn about my experience, tricks, tips, and what fucked me up. So you **save some frustration, where is not needed, discover hidden shortcuts and cool tools you never saw before**.
     <br><br>
@@ -23,7 +23,7 @@ updated_message: |
 
 ### Know Your Enemy
 
-There are many use cases that we have to handle to get to PSR-4. Honestly, I find it easier to [switch a framework](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours), where start is clear and goal is clear.
+There are many use cases that we have to handle to get to PSR-4. Honestly, I find it easier to [switch a framework](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/), where start is clear and goal is clear.
 
 In PSR-4 migration, we have a clear goal:
 
@@ -54,7 +54,7 @@ A lot to suck in, right? Don't worry; each of them has a guide to follow.
 
 ### Low Hanging Fruit
 
-Each project is different, some of them has [functions mixed with HTML](/blog/2020/04/13/how-to-migrate-spaghetti-to-304-symfony-5-controllers-over-weekend), some is missing composer completely, some needs to [switch from custom-framework autoloading](/blog/2020/06/08/drop-robot-loader-and-let-composer-deal-with-autoloading).
+Each project is different, some of them has [functions mixed with HTML](/blog/2020/04/13/how-to-migrate-spaghetti-to-304-symfony-5-controllers-over-weekend/), some is missing composer completely, some needs to [switch from custom-framework autoloading](/blog/2020/06/08/drop-robot-loader-and-let-composer-deal-with-autoloading/).
 
 But you should always apply basic rule:
 

@@ -2,7 +2,7 @@
 id: 270
 title: "How to Update Hundreds of Test Fixtures with Single PHPUnit run"
 perex: |
-    In [previous post](/blog/2020/07/13/the-most-effetive-test-i-found-in-7-years-of-testing), we look at the benefits of visual snapshot testing for lazy people. How bare *input/output* code in a single file makes tests easy to read for new contributors.
+    In [previous post](/blog/2020/07/13/the-most-effetive-test-i-found-in-7-years-of-testing/), we look at the benefits of visual snapshot testing for lazy people. How bare *input/output* code in a single file makes tests easy to read for new contributors.
     <br><br>
     Today, we look at **how to maintain visual snapshot tests**.
     <br><br>

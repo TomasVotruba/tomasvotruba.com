@@ -18,7 +18,7 @@ How would the situation change if you'd build houses as a developer (the buildin
 
 <br>
 
-The first case of building one house for a year - you only work on 1 PHP project at once. It's only **natural to try-out all the testing layers** you can Google. There are a couple of tests that test the product checkout process, a couple of integration tests to check the component is rendered correctly, [mocking](/blog/2018/06/11/how-to-turn-mocks-from-nightmare-to-solid-kiss-tests) to "decouple" one part from another.
+The first case of building one house for a year - you only work on 1 PHP project at once. It's only **natural to try-out all the testing layers** you can Google. There are a couple of tests that test the product checkout process, a couple of integration tests to check the component is rendered correctly, [mocking](/blog/2018/06/11/how-to-turn-mocks-from-nightmare-to-solid-kiss-tests/) to "decouple" one part from another.
 
 Every month I work with ~5 private projects, and I maintain [35 open-sources packages](https://packagist.org/profile/?page=3). I used to have very complicated tests for all possible application parts, but that turned out to take more time to maintain to develop, and it **slowed down my productivity brutally the more tests I had**.
 
@@ -63,7 +63,7 @@ The 1st line is just a description, useful for a more complicated case.
 
 It's like a smartphone or door handle in testing.
 
-This kind of testing gives you confidence, and that's by far the most important feeling that [builds senior code bases](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases).
+This kind of testing gives you confidence, and that's by far the most important feeling that [builds senior code bases](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases/).
 
 ## Domain Driven Testing
 
@@ -148,7 +148,7 @@ And that's it :) See [3v4l.org code sample](https://3v4l.org/sEudR).
 
 "But what happens when we add a new property to the output? Do we have to change all the files manually? That's crazy."
 
-It would be crazy. I tried to update 60 files in php-parser when I only added typed properties... oh, that was too much work. At file 50, I figured out there is an automated way exactly my case. We will look at how we can **turn these tests into snapshot tests that update themselves** [in the next post](/blog/2020/07/20/how-to-update-hundreds-of-test-fixtures-with-single-phpunit-run).
+It would be crazy. I tried to update 60 files in php-parser when I only added typed properties... oh, that was too much work. At file 50, I figured out there is an automated way exactly my case. We will look at how we can **turn these tests into snapshot tests that update themselves** [in the next post](/blog/2020/07/20/how-to-update-hundreds-of-test-fixtures-with-single-phpunit-run/).
 
 <br>
 

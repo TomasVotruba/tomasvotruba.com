@@ -2,7 +2,7 @@
 id: 274
 title: "How to Get Rid of Magic, Static and Chaos from Latte Filters"
 perex: |
-    [In the previous post](/blog/2020/08/10/4-ways-to-make-your-nette-project-more-readable), we looked at how to avoid array magic and duplicates of Latte in Presenter and Components.
+    [In the previous post](/blog/2020/08/10/4-ways-to-make-your-nette-project-more-readable/), we looked at how to avoid array magic and duplicates of Latte in Presenter and Components.
     <br>
     <br>
     Today we'll leverage those tips to make your code around Latte filters **easy and smooth to work with**.
@@ -38,7 +38,7 @@ final class LatteFactory
 
 ## How to register a new Latte Filter?
 
-This simple question can add easily add an anti-pattern to your code, that spreads like COVID and [inspires developers to add more anti-patterns](https://blog.codinghorror.com/the-broken-window-theory/). It's easy to [submit to static infinite loop](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/), I did it too.
+This simple question can add easily add an anti-pattern to your code, that spreads like COVID and [inspires developers to add more anti-patterns](https://blog.codinghorror.com/the-broken-window-theory/). It's easy to [submit to static infinite loop](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself//), I did it too.
 
 But let's look at practice... **how to add a filter**?
 
@@ -245,7 +245,7 @@ The goal is simple:
 
 <br>
 
-What if we use [autowired arrays feature from Nette 3.0](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette/)?
+What if we use [autowired arrays feature from Nette 3.0](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette//)?
 
 <br>
 

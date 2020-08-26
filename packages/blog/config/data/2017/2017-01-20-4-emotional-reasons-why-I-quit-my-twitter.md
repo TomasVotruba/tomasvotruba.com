@@ -109,7 +109,7 @@ My great inspiration from polyphasic sleep days Steve Pavlina [got social media 
 
 Followed by [a year later reflection](http://www.stevepavlina.com/blog/2015/07/one-year-without-social-media).
 
-**I love social experiments.** After [polyphasic sleep](https://psychologie.cz/serialy/polyfazicky-spanek), switching main job focus after 8 years, having a baby while being infertile, dropping from university, moving to Prague after settling down in Brno, [dropping LinkedIn](/blog/2017/01/05/why-I-deleted-my-linkedin-account) and moving completely alone for the first time, **I really look forward to this one**.
+**I love social experiments.** After [polyphasic sleep](https://psychologie.cz/serialy/polyfazicky-spanek), switching main job focus after 8 years, having a baby while being infertile, dropping from university, moving to Prague after settling down in Brno, [dropping LinkedIn](/blog/2017/01/05/why-I-deleted-my-linkedin-account/) and moving completely alone for the first time, **I really look forward to this one**.
 
 
 ### Where Do You Find Me?

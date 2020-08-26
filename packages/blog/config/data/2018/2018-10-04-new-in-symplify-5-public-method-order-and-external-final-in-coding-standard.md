@@ -24,7 +24,7 @@ Now enjoy the news ↓
 
 If you're strict enough to `final` or `abstract` everywhere, you'll love this. Sometimes 3rd party code is not `final`, but you'd love to never see that class in your code - Abstract Controller, Abstract Doctrine Repository or Abstract Object.
 
-Those `abstract` classes are full of **magic everyone has to [remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock)**. What if you could **prevent that spreading to your code without constant code-reviews**?
+Those `abstract` classes are full of **magic everyone has to [remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/)**. What if you could **prevent that spreading to your code without constant code-reviews**?
 
 Let PHPStan rule do the job:
 
@@ -40,7 +40,7 @@ parameters:
             - 'Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository'
 ```
 
-This will prevent over-inheritance and embrace composition - like in [Repositories as Services](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony) approach:
+This will prevent over-inheritance and embrace composition - like in [Repositories as Services](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/) approach:
 
 <em class="fas fa-fw fa-times text-danger fa-lg"></em>
 

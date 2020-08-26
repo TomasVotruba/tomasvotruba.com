@@ -230,7 +230,7 @@ Do you want to see more advanced operations, like those we [brainstormed in the 
 
 ### This post is Tested
 
-This is the first [tested post](/blog/2019/09/16/why-software-articles-must-be-ci-tested) I've added to my blog.
+This is the first [tested post](/blog/2019/09/16/why-software-articles-must-be-ci-tested/) I've added to my blog.
  It means **it will be updated as new versions of code used here will appear** → *LTS post* that will work with newer `nikic/php-parser` versions.
 
  Do you want to see those tests? Just click *Tested* badge in the top.

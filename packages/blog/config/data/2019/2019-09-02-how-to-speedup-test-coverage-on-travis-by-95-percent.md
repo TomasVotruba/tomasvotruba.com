@@ -85,7 +85,7 @@ jobs:
 
 ## 3. Even Faster with PCOV
 
-It's better to have PHPUnit 8+, but what if [don't have it yet](/blog/2019/11/04/still-on-phpunit-4-come-to-phpunit-8-together-in-a-day)? You can [read about PCOV here](https://kizu514.com/blog/pcov-is-better-than-phpdbg-and-xdebug-for-code-coverage), we'll get right to the business.
+It's better to have PHPUnit 8+, but what if [don't have it yet](/blog/2019/11/04/still-on-phpunit-4-come-to-phpunit-8-together-in-a-day/)? You can [read about PCOV here](https://kizu514.com/blog/pcov-is-better-than-phpdbg-and-xdebug-for-code-coverage), we'll get right to the business.
 
 2-lines run with setup:
 
