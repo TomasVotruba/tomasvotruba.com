@@ -248,7 +248,9 @@ Another huge benefit for programmers **is focus - along with [instant feedback l
 
 - If the project crashes on the localhost server and tests are failing, our feedback look is fast.
 
-**How is related to value objects and require arguments?** Good question!
+<br>
+
+**How is instant feedback loop related to value objects and require arguments?** Good question!
 
 If we put user and password but forget the database name, the application will crash **when** it's connected:
 
