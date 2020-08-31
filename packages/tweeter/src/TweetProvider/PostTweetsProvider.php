@@ -33,7 +33,7 @@ final class PostTweetsProvider
     {
         $tweets = [];
 
-        foreach ($this->postRepository->fetchAll() as $post) {
+        foreach ($this->postRepository->getPosts() as $post) {
             if (! $post->hasTweet()) {
                 continue;
             }

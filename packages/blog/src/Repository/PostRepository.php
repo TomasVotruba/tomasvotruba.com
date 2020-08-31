@@ -37,7 +37,7 @@ final class PostRepository
     /**
      * @return array<string, Post>
      */
-    public function fetchAll(): array
+    public function getPosts(): array
     {
         return $this->posts;
     }
@@ -94,7 +94,7 @@ final class PostRepository
 
     public function get(int $id): Post
     {
-        foreach ($this->fetchAll() as $post) {
+        foreach ($this->getPosts() as $post) {
             if ($post->getId() !== $id) {
                 continue;
             }
