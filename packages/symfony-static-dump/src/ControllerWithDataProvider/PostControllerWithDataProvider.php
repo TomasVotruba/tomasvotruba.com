@@ -34,7 +34,7 @@ final class PostControllerWithDataProvider implements ControllerWithDataProvider
     {
         $slugs = [];
 
-        foreach ($this->postRepository->fetchAll() as $post) {
+        foreach ($this->postRepository->getPosts() as $post) {
             $slugs[] = $post->getSlug();
         }
 

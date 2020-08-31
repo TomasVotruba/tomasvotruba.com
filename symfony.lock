@@ -5,6 +5,9 @@
     "composer/xdebug-handler": {
         "version": "1.4.1"
     },
+    "dealerdirect/phpcodesniffer-composer-installer": {
+        "version": "v0.7.0"
+    },
     "dg/bypass-finals": {
         "version": "v1.1.2"
     },
@@ -74,11 +77,17 @@
     "league/glide": {
         "version": "1.5.0"
     },
+    "league/mime-type-detection": {
+        "version": "1.4.0"
+    },
     "migrify/config-transformer": {
         "version": "v0.3.8"
     },
     "migrify/latte-to-twig": {
         "version": "dev-master"
+    },
+    "migrify/php-config-printer": {
+        "version": "v0.3.32"
     },
     "myclabs/deep-copy": {
         "version": "1.9.5"
@@ -158,9 +167,6 @@
     "phpunit/php-timer": {
         "version": "3.0.0"
     },
-    "phpunit/php-token-stream": {
-        "version": "4.0.0"
-    },
     "phpunit/phpunit": {
         "version": "4.7",
         "recipe": {
@@ -199,6 +205,9 @@
     "rector/rector": {
         "version": "0.8-dev"
     },
+    "sebastian/cli-parser": {
+        "version": "1.0.0"
+    },
     "sebastian/code-unit": {
         "version": "1.0.0"
     },
@@ -207,6 +216,9 @@
     },
     "sebastian/comparator": {
         "version": "4.0.0"
+    },
+    "sebastian/complexity": {
+        "version": "2.0.0"
     },
     "sebastian/diff": {
         "version": "4.0.0"
@@ -219,6 +231,9 @@
     },
     "sebastian/global-state": {
         "version": "4.0.0"
+    },
+    "sebastian/lines-of-code": {
+        "version": "1.0.0"
     },
     "sebastian/object-enumerator": {
         "version": "4.0.0"
@@ -237,6 +252,9 @@
     },
     "sebastian/version": {
         "version": "3.0.0"
+    },
+    "slevomat/coding-standard": {
+        "version": "6.4.0"
     },
     "spatie/browsershot": {
         "version": "3.37.0"
@@ -458,14 +476,14 @@
     "symplify/easy-coding-standard": {
         "version": "v7.2.4"
     },
+    "symplify/easy-testing": {
+        "version": "v8.2.16"
+    },
     "symplify/flex-loader": {
         "version": "v7.2.4"
     },
     "symplify/package-builder": {
         "version": "v7.2.4"
-    },
-    "symplify/parameter-name-guard": {
-        "version": "v7.3.14"
     },
     "symplify/phpstan-extensions": {
         "version": "v7.2.4"

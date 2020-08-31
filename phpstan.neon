@@ -32,3 +32,11 @@ parameters:
 
         - '#PHPDoc tag @var for variable \$finalClassMock contains unresolvable type#'
         - '#Cannot cast array<string\>\|string\|null to string#'
+
+        -
+            message: '#Array with keys is not allowed\. Use value object to pass data instead#'
+            paths:
+                # json
+                - 'packages/github-contributor-thanker/src/Api/GithubApi.php'
+                # calling API with data
+                - 'packages/tweeter/src/TwitterApi/TwitterPostApiWrapper.php'
