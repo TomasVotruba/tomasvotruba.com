@@ -10,7 +10,7 @@ tweet: "New Post on #php 🐘 blog: What if We Remove Strings from #symfony Exte
 tweet_image: "/assets/images/posts/2020/remove_string_extension.png"
 ---
 
-I like the service configuration provided by Symfony. Typo-proof, everything is autocompleted by IE, hard to put the wrong argument or make a typo.
+I like the service configuration provided by Symfony. Typo-proof, everything is autocompleted by IDE, hard to put the wrong argument or make a typo.
 
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
