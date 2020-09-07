@@ -20,12 +20,13 @@
         "symfony/http-kernel": "^5.1",
         "symfony/twig-bridge": "^5.1",
         "symfony/twig-bundle": "^5.1",
-        "symplify/auto-bind-parameter": "^8.1",
-        "symplify/autodiscovery": "^8.1",
-        "symplify/autowire-array-parameter": "^8.0",
-        "symplify/flex-loader": "^8.1",
-        "symplify/package-builder": "^8.1",
-        "symplify/symfony-static-dumper": "^8.1",
+        "symplify/auto-bind-parameter": "dev-master",
+        "symplify/autodiscovery": "dev-master",
+        "symplify/autowire-array-parameter": "dev-master",
+        "symplify/flex-loader": "dev-master",
+        "symplify/package-builder": "dev-master",
+        "symplify/smart-file-system": "dev-master",
+        "symplify/symfony-static-dumper": "dev-master",
         "twig/twig": "^3.0"
     },
     "require-dev": {
@@ -43,8 +44,11 @@
         "symfony/process": "^5.1",
         "symfony/stopwatch": "^5.1",
         "symfony/yaml": "^5.1",
-        "symplify/easy-coding-standard": "^8.1",
-        "symplify/phpstan-extensions": "^8.1",
+        "symplify/easy-coding-standard": "dev-master",
+        "symplify/set-config-resolver": "dev-master",
+        "symplify/console-color-diff": "dev-master",
+        "symplify/coding-standard": "dev-master",
+        "symplify/phpstan-extensions": "dev-master",
         "tracy/tracy": "^2.7"
     },
     "autoload": {

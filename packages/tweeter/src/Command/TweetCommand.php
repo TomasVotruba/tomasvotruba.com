@@ -39,10 +39,9 @@ final class TweetCommand extends Command
         $this->postTweetsProvider = $postTweetsProvider;
         $this->tweetsFilter = $tweetsFilter;
         $this->symfonyStyle = $symfonyStyle;
+        $this->twitterPostApiWrapper = $twitterPostApiWrapper;
 
         parent::__construct();
-
-        $this->twitterPostApiWrapper = $twitterPostApiWrapper;
     }
 
     protected function configure(): void

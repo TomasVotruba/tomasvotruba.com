@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\Tests\Posts\Year2017\Ast;
 
-use Nette\Utils\FileSystem;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassMethod;
@@ -14,6 +13,7 @@ use PhpParser\NodeTraverser;
 use PhpParser\Parser;
 use PhpParser\ParserFactory;
 use PHPUnit\Framework\TestCase;
+use Symplify\SmartFileSystem\SmartFileSystem;
 use TomasVotruba\Blog\Posts\Year2017\Ast\NodeVisitor\ChangeMethodNameNodeVisitor;
 use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
@@ -37,7 +37,8 @@ final class ModifyTest extends TestCase implements PostTestInterface
         $this->nodeFinder = new NodeFinder();
         $this->nodeTraverser = new NodeTraverser();
 
-        $this->someClassFileContent = FileSystem::read($this->srcDirectory . '/SomeClass.php');
+        $smartFileSystem = new SmartFileSystem();
+        $this->someClassFileContent = $smartFileSystem->readFile($this->srcDirectory . '/SomeClass.php');
     }
 
     public function testParse(): void

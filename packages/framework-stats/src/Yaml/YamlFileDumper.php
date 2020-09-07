@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace TomasVotruba\FrameworkStats\Yaml;
 
 use Nette\Utils\DateTime;
-use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Yaml\Yaml;
+use Symplify\SmartFileSystem\SmartFileSystem;
 
 final class YamlFileDumper
 {
-    private Filesystem $filesystem;
+    private SmartFileSystem $smartFileSystem;
 
-    public function __construct(Filesystem $filesystem)
+    public function __construct(SmartFileSystem $smartFileSystem)
     {
-        $this->filesystem = $filesystem;
+        $this->smartFileSystem = $smartFileSystem;
     }
 
     /**
@@ -28,7 +28,7 @@ final class YamlFileDumper
         $yamlDump = Yaml::dump($data, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK);
         $timestampComment = $this->createTimestampComment();
 
-        $this->filesystem->dumpFile($filePath, $timestampComment . $yamlDump);
+        $this->smartFileSystem->dumpFile($filePath, $timestampComment . $yamlDump);
     }
 
     private function createTimestampComment(): string

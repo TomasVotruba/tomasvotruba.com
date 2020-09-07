@@ -15,6 +15,7 @@ final class RelativePathTest extends TestCase implements PostTestInterface
 {
     public function testSplFileInfo(): void
     {
+        // on purpose
         $splFileInfo = new NativeSplFileInfo('packages/blog/tests/Posts/Year2018/Exceptions/Source/some_file.txt');
 
         // is relative
