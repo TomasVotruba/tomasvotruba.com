@@ -111,6 +111,12 @@ final class PostRepository
             return $this->posts[$slug];
         }
 
+        // extra dash
+        $slughWithoutDash = rtrim($slug, '/');
+        if (isset($this->posts[$slughWithoutDash])) {
+            return $this->posts[$slughWithoutDash];
+        }
+
         throw new ShouldNotHappenException(sprintf('Post for slug "%s" was not found.', $slug));
     }
 
