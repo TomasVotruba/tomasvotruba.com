@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TwitterApi;
 
-use Nette\Utils\FileSystem;
+use Symplify\SmartFileSystem\SmartFileSystem;
 use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
 use TomasVotruba\Tweeter\ValueObject\TwitterApi;
 
@@ -34,9 +34,12 @@ final class TwitterImageApiWrapper
 
     private TwitterApiCaller $twitterApiCaller;
 
-    public function __construct(TwitterApiCaller $twitterApiCaller)
+    private SmartFileSystem $smartFileSystem;
+
+    public function __construct(TwitterApiCaller $twitterApiCaller, SmartFileSystem $smartFileSystem)
     {
         $this->twitterApiCaller = $twitterApiCaller;
+        $this->smartFileSystem = $smartFileSystem;
     }
 
     /**
@@ -78,7 +81,7 @@ final class TwitterImageApiWrapper
 
     private function runImageAppend(string $imageFile, int $mediaId): void
     {
-        $based64EncodedBinaryFile = base64_encode(FileSystem::read($imageFile));
+        $based64EncodedBinaryFile = base64_encode($this->smartFileSystem->readFile($imageFile));
 
         // just 200 response
         $this->twitterApiCaller->callPost(self::IMAGE_UPLOAD_URL, [

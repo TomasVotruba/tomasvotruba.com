@@ -7,25 +7,22 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\Event\YoutuberNameEvent;
-use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\EventSubscriber\EventAwareNotifyMeOnVideoPublishedEventSubscriber;
+use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\EventSubscriber\OnVideoPublishedEventSubscriber;
 
 final class EventDispatchingWithEventTest extends TestCase
 {
     public function test(): void
     {
         $eventDispatcher = new EventDispatcher();
-        $eventAwareNotifyMeOnVideoPublishedEventSubscriber = new EventAwareNotifyMeOnVideoPublishedEventSubscriber();
-        $eventDispatcher->addSubscriber($eventAwareNotifyMeOnVideoPublishedEventSubscriber);
 
-        $this->assertSame('', $eventAwareNotifyMeOnVideoPublishedEventSubscriber->getYoutuberUserName());
+        $onVideoPublishedEventSubscriber = new OnVideoPublishedEventSubscriber();
+        $eventDispatcher->addSubscriber($onVideoPublishedEventSubscriber);
+
+        $this->assertSame('', $onVideoPublishedEventSubscriber->getYoutuberUserName());
 
         $youtuberNameEvent = new YoutuberNameEvent('Jirka Král');
-
         $eventDispatcher->dispatch($youtuberNameEvent);
 
-        $this->assertSame(
-            'Jirka Král',
-            $eventAwareNotifyMeOnVideoPublishedEventSubscriber->getYoutuberUserName()
-        );
+        $this->assertSame('Jirka Král', $onVideoPublishedEventSubscriber->getYoutuberUserName());
     }
 }

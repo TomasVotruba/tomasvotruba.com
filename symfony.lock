@@ -86,6 +86,9 @@
     "migrify/latte-to-twig": {
         "version": "dev-master"
     },
+    "migrify/migrify-kernel": {
+        "version": "0.3.35"
+    },
     "migrify/php-config-printer": {
         "version": "v0.3.32"
     },

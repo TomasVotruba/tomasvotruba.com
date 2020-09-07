@@ -217,7 +217,7 @@ $coronaCure = new CoronaCure();
 $infectables = $container->getByType(InfectableInteface::class);
 
 foreach ($infectables as $infectable) {
-    if ($infectable->isInfected()) {
+    if (! $infectable->isInfected()) {
         continue;
     }
 
@@ -225,7 +225,7 @@ foreach ($infectables as $infectable) {
 }
 ```
 
-Be sure to have all your services in your container, so they're available **when you need them.
+Be sure to have all your services in your container, so they're available **when you need them**.
 
 <br>
 

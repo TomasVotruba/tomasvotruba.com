@@ -7,6 +7,15 @@ parameters:
         max_class_cognitive_complexity: 20
         max_cognitive_complexity: 8
 
+        old_to_preffered_classes:
+            SplFileInfo: 'Symplify\SmartFileSystem\SmartFileInfo'
+            DateTime: 'Nette\Utils\DateTime'
+            'PhpCsFixer\Finder': 'Symfony\Component\Finder\Finder'
+            # smart file system
+            'Symfony\Component\Finder\SplFileInfo': 'Symplify\SmartFileSystem\SmartFileInfo'
+            'Nette\Utils\FileSystem': 'Symplify\SmartFileSystem\SmartFileSystem'
+            'Symfony\Component\Filesystem\Filesystem': 'Symplify\SmartFileSystem\SmartFileSystem'
+
     paths:
         - bin
         - src
@@ -15,6 +24,7 @@ parameters:
 
     level: max
     checkMissingIterableValueType: false
+    reportUnmatchedIgnoredErrors: false
 
     excludes_analyse:
         # test fixture file
@@ -40,3 +50,23 @@ parameters:
                 - 'packages/github-contributor-thanker/src/Api/GithubApi.php'
                 # calling API with data
                 - 'packages/tweeter/src/TwitterApi/TwitterPostApiWrapper.php'
+
+        -
+            message: '#Class has too many properties \d+\. Try narrowing it down under 10#'
+            path: packages/blog/src/ValueObject/Post.php
+
+        -
+            message: '#Class has too many properties \d+\. Try narrowing it down under 10#'
+            path: packages/blog/src/ValueObject/Post.php
+
+        -
+            message: '#Too many public elements on class \- 24\. Try narrow it down under 10#'
+            path: packages/blog/src/ValueObject/Post.php
+
+        -
+            message: '#Method "__construct\(\)" is using too many parameters \- 17\. Make it under 10#'
+            path: packages/blog/src/ValueObject/Post.php
+
+        -
+            message: '#Instead of "SplFileInfo" class/interface use "Symplify\\SmartFileSystem\\SmartFileInfo"#'
+            path: 'packages/blog/tests/Posts/Year2018/Exceptions/RelativePathTest.php'

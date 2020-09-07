@@ -7,7 +7,7 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\E
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\Event\YoutuberNameEvent;
 
-final class EventAwareNotifyMeOnVideoPublishedEventSubscriber implements EventSubscriberInterface
+final class OnVideoPublishedEventSubscriber implements EventSubscriberInterface
 {
     private string $youtuberUserName = '';
 
