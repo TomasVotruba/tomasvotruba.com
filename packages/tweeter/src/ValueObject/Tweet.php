@@ -9,6 +9,12 @@ use Nette\Utils\Strings;
 
 final class Tweet
 {
+    /**
+     * @var string
+     * @see https://regex101.com/r/sSpccz/1
+     */
+    private const HTTP_PATTERN = '#http(s)?\:\/\/#';
+
     private string $text;
 
     private ?string $image;
@@ -45,7 +51,7 @@ final class Tweet
         }
 
         // website in title without link is automatically converted to http://, so we might wanna remove it
-        $textWithoutHttp = Strings::replace($publishedTweet->getText(), '#http(s)?\:\/\/#');
+        $textWithoutHttp = Strings::replace($publishedTweet->getText(), self::HTTP_PATTERN);
 
         return $this->areTextSimilar($this->text, $textWithoutHttp);
     }

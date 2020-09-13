@@ -28,6 +28,12 @@ final class PostFactory
      */
     private const CONFIG_CONTENT_PATTERN = '#^\s*' . self::SLASHES_WITH_SPACES_PATTERN . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_PATTERN . '(?<content>.*?)$#s';
 
+    /**
+     * @see https://regex101.com/r/9xssch/1
+     * @var string
+     */
+    private const HEADLINE_LEVEL_PATTERN = '#<h(?<level>\d+)>(?<headline>.*?)<\/h\d+>#';
+
     private ParsedownExtra $parsedownExtra;
 
     private PathAnalyzer $pathAnalyzer;
@@ -161,7 +167,7 @@ final class PostFactory
      */
     private function decorateHeadlineWithId(string $htmlContent): string
     {
-        return Strings::replace($htmlContent, '#<h(?<level>\d+)>(?<headline>.*?)</h\d+>#', function ($matches) {
+        return Strings::replace($htmlContent, self::HEADLINE_LEVEL_PATTERN, function ($matches) {
             $level = $matches['level'];
             $headline = $matches['headline'];
             $idValue = Strings::webalize($headline);

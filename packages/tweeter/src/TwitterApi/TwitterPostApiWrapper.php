@@ -15,6 +15,12 @@ final class TwitterPostApiWrapper
 {
     /**
      * @var string
+     * @see https://regex101.com/r/Z9vHts/1
+     */
+    private const NEW_POST_PATTERN = '#New post on#i';
+
+    /**
+     * @var string
      */
     private const UPDATE_URL = 'https://api.twitter.com/' . TwitterApi::API_VERSION . '/statuses/update.json';
 
@@ -147,7 +153,10 @@ final class TwitterPostApiWrapper
     {
         return array_filter(
             $tweets,
-            fn (PublishedTweet $publishedTweet) => (bool) Strings::match($publishedTweet->getText(), '#New post on#i')
+            fn (PublishedTweet $publishedTweet) => (bool) Strings::match(
+                $publishedTweet->getText(),
+                self::NEW_POST_PATTERN
+            )
         );
     }
 

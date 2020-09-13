@@ -70,3 +70,12 @@ parameters:
         -
             message: '#Instead of "SplFileInfo" class/interface use "Symplify\\SmartFileSystem\\SmartFileInfo"#'
             path: 'packages/blog/tests/Posts/Year2018/Exceptions/RelativePathTest.php'
+
+        -
+            message: '#The path "/\.\./\.env\.local" was not found#'
+            path: 'tests/bootstrap.php'
+
+        # false positive
+        -
+            message: '#Add regex101\.org link to that shows the regex in practise, so it will be easier to maintain in case of bug/extension in the future#'
+            path: 'packages/tweeter/src/Configuration/Keys.php'

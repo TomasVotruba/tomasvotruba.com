@@ -23,7 +23,7 @@ final class PostRepository
     private PostFactory $postFactory;
 
     /**
-     * @var array<string, Post>
+     * @var Post[]
      */
     private array $posts = [];
 
@@ -35,7 +35,7 @@ final class PostRepository
     }
 
     /**
-     * @return array<string, Post>
+     * @return Post[]
      */
     public function getPosts(): array
     {
@@ -107,8 +107,10 @@ final class PostRepository
 
     public function getBySlug(string $slug): Post
     {
-        if (isset($this->posts[$slug])) {
-            return $this->posts[$slug];
+        foreach ($this->posts as $post) {
+            if ($post->getSlug() === $slug) {
+                return $post;
+            }
         }
 
         // extra dash
@@ -121,14 +123,13 @@ final class PostRepository
     }
 
     /**
-     * @return array<string, Post>
+     * @return Post[]
      */
     private function createPosts(): array
     {
         $posts = [];
         foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
-            $post = $this->postFactory->createFromFileInfo($smartFileInfo);
-            $posts[$post->getSlug()] = $post;
+            $posts[] = $this->postFactory->createFromFileInfo($smartFileInfo);
         }
 
         return $this->sortByDateTime($posts);
