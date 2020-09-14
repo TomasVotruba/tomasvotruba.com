@@ -8,6 +8,10 @@ perex: |
     Today we'll leverage those tips to make your code around Latte filters **easy and smooth to work with**.
 
 tweet: "New Post on #php 🐘 blog: How to Get Rid of Magic, Static and Chaos from Latte Filters #nettefw"
+
+updated_since: "September 2020"
+updated_message: |
+    Added options 6 - **invokable filter providers**.
 ---
 
 Do you have your `LatteFactory` service ready? If not, [create it first](/blog/2020/08/10/4-ways-to-make-your-nette-project-more-readable#4-move-latte-engine-tuning-from-presenter-control-to-lattefactory), because we'll build on it.
@@ -383,7 +387,7 @@ But what if money filters grow, included timezones and logged in user country? I
          return [
              'money' => function (int $amount): string {
 -                return $this->money($mount);
-+                return $this->moneyFormatResolver->resolve($mount);
++                return $this->moneyFormatResolver->resolve($amount);
              }
          ];
      }
@@ -401,11 +405,117 @@ But what if money filters grow, included timezones and logged in user country? I
 - We can re-use the used-to-be filter logic with `MoneyFormatResolver` in other places of application <em class="fas fa-fw fa-check text-success"></em>
 - We are motivated to use DI and decouple code clearly to new service, if it ever becomes too complex <em class="fas fa-fw fa-check text-success"></em>
 - We are ready for any changes that come in the future <em class="fas fa-fw fa-check text-success"></em>
-- We think this is the best way, just because it's last <em class="fas fa-fw fa-times text-danger"></em>
+- ~~We think this is the best way, just because it's last <em class="fas fa-fw fa-times text-danger"></em>~~ Not anymore ↓
 
 <br>
 
 My question is: can we do better...?
+
+---
+
+**Update 1 month later with new option:**
+
+## 6. Invokable Filter Providers
+
+In fashion of [single-action controller](https://symfony.com/doc/current/controller/service.html#invokable-controllers) a tip from [@FrantisekMasa](https://twitter.com/FrantisekMasa) and [@dada_amater](https://twitter.com/dada_amater) for similar approach in filters. It look weird, new... so I had to try it in practise to see for myself.
+
+```php
+namespace App\Contract;
+
+interface FilterProviderInterface
+{
+    public function getName(): string;
+}
+```
+
+The filter itself - 1 filter = 1 class:
+
+```php
+use App\Contract\FilterProviderInterface;
+
+final class MoneyFilterProvider implements FilterProviderInterface
+{
+    private MoneyFormatResolver $moneyFormatResolver;
+
+    public function __construct(MoneyFormatResolver $moneyFormatResolver)
+    {
+       $this->moneyFormatResolver = $moneyFormatResolver;
+    }
+
+    public function __invoke(int $amount): string
+    {
+        return $this->moneyFormatResolver->resolve($amount);
+    }
+}
+```
+
+The `LatteFactory` now acceps the whole filter as callable object:
+
+```php
+namespace App\Latte;
+
+use Latte\Engine;
+use Latte\Runtime\FilterInfo;
+
+final class LatteFactory
+{
+    /**
+     * @var FilterProviders[]
+     */
+    private array $filterProviders = [];
+
+    /**
+     * @param FilterProvider[]
+     */
+    public function __construct(array $filterProviders)
+    {
+        $this->filterProviders = $filterProviders;
+    }
+
+    public function create(): Engine
+    {
+        $engine = new Engine();
+        $engine->setStrictTypes(true);
+
+        foreach ($this->filterProviders as $filterProvider) {
+            $engine->addFilter($filterProvider->getName(), $filterProvider);
+        }
+
+        return $engine;
+    }
+}
+```
+
+#### Pros & Cons
+
+- All of the advantages of previous approaches <em class="fas fa-fw fa-check text-success"></em>
+- 1 class = 1 rule, this is really challenge to clutter <em class="fas fa-fw fa-check text-success"></em>
+- It's very intuitive to use  <em class="fas fa-fw fa-check text-success"></em>
+- We don't have to maintain duplicated `provideFilters()` callables with private methods <em class="fas fa-fw fa-check text-success"></em>
+- The `__invoke()` method has no contract, so we can forget to implement it <em class="fas fa-fw fa-times text-danger"></em>
+
+We compensate this in `LatteFactory` itself:
+
+```php
+public function create(): Engine
+{
+    $engine = new Engine();
+    $engine->setStrictTypes(true);
+
+    foreach ($this->filterProviders as $filterProvider) {
+        if (! method_exists($filterProvider, '__invoke')) {
+            $message = sprintf('Add "__invoke()" method to filter provider "%s"', get_class($filterProvider));
+            throw new ShouldNotHappenException($message);
+        }
+
+        $engine->addFilter($filterProvider->getName(), $filterProvider);
+    }
+
+    return $engine;
+}
+```
+
+That's it!
 
 <br>
 

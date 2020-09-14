@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\FrameworkStats\Result;
 
+use Symfony\Component\Asset\Package;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 use TomasVotruba\FrameworkStats\Packagist\PackageMonthlyDownloadsProvider;
@@ -48,6 +49,9 @@ final class PackageDataFactory
         $this->phpStanNettePackagesPurifier = $phpStanNettePackagesPurifier;
     }
 
+    /**
+     * @param string[] $packageNames
+     */
     public function createPackagesData(array $packageNames): array
     {
         $packagesData = [];
@@ -87,15 +91,13 @@ final class PackageDataFactory
 
             $lastYearTrend = round($lastYearTrend, 1);
 
-            $packageData = new PackageData(
+            $packagesData[] = new PackageData(
                 $packageName,
                 // numbers
                 $lastYearTrend,
                 $last12Months,
                 $previous12Months
             );
-
-            $packagesData[$packageData->getPackageKey()] = $packageData;
         }
 
         return $this->sorter->sortArrayByLastYearTrend($packagesData);

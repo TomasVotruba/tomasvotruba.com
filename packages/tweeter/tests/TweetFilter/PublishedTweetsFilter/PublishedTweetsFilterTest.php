@@ -34,7 +34,7 @@ final class PublishedTweetsFilterTest extends AbstractTwitterTestCase
 
         // just to be sure there is no leak
         $unpublishedTweetCount = count($unpublishedTweets);
-        $this->assertLessThan(20, $unpublishedTweetCount);
+        $this->assertLessThan(50, $unpublishedTweetCount);
 
         foreach ($unpublishedTweets as $unpublishedTweet) {
             // this tweet is already published, so it should not be here

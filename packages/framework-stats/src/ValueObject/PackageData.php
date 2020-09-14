@@ -9,6 +9,12 @@ use TomasVotruba\FrameworkStats\Contract\LastYearTrendAwareInterface;
 
 final class PackageData implements LastYearTrendAwareInterface
 {
+    /**
+     * @var string
+     * @see https://regex101.com/r/PWqxoE/1
+     */
+    private const DASH_OR_SLASH_PATTERN = '#(\/|-)#';
+
     private string $packageName;
 
     private float $lastYearTrend;
@@ -30,7 +36,7 @@ final class PackageData implements LastYearTrendAwareInterface
         $this->packageName = $packageName;
         $this->packageShortName = (string) Strings::after($packageName, '/');
 
-        $this->packageKey = Strings::replace($packageName, '#(/|-)#', '_');
+        $this->packageKey = Strings::replace($packageName, self::DASH_OR_SLASH_PATTERN, '_');
 
         $this->lastYearTrend = $lastYearTrend;
         $this->last12Months = $last12Months;
