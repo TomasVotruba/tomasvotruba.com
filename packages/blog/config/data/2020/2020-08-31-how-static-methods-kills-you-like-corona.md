@@ -92,7 +92,7 @@ final class HealthyGrandma
     public function seeGrandChildren(array $youngChildren)
     {
         foreach ($youngChildren as $youngChild) {
-            if ($youngChild instanceof HuggableInterfae) {
+            if ($youngChild instanceof HuggableInterface) {
                 $youngChild->hug($this);
             }
         }
@@ -115,7 +115,7 @@ final class HealthyGrandma
                 }
             }
 
-            if ($youngChild instanceof HuggableInterfae) {
+            if ($youngChild instanceof HuggableInterface) {
                 $youngChild->hug($this);
             }
         }
