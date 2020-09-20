@@ -6,8 +6,8 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\Event\YoutuberNameEvent;
 use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\EventSubscriber\OnVideoPublishedEventSubscriber;
+use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\ValueObject\Event\YoutuberNameEvent;
 
 final class EventDispatchingWithEventTest extends TestCase
 {

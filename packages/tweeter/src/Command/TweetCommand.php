@@ -10,6 +10,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
+use TomasVotruba\Blog\ValueObject\Option;
 use TomasVotruba\Tweeter\Configuration\Keys;
 use TomasVotruba\Tweeter\TweetFilter\TweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
@@ -29,13 +31,13 @@ final class TweetCommand extends Command
     private TwitterPostApiWrapper $twitterPostApiWrapper;
 
     public function __construct(
-        int $twitterMinimalGapInDays,
+        ParameterProvider $parameterProvider,
         PostTweetsProvider $postTweetsProvider,
         TweetsFilter $tweetsFilter,
         TwitterPostApiWrapper $twitterPostApiWrapper,
         SymfonyStyle $symfonyStyle
     ) {
-        $this->twitterMinimalGapInDays = $twitterMinimalGapInDays;
+        $this->twitterMinimalGapInDays = $parameterProvider->provideIntParameter(Option::TWITTER_MINIMAL_GAP_IN_DAYS);
         $this->postTweetsProvider = $postTweetsProvider;
         $this->tweetsFilter = $tweetsFilter;
         $this->symfonyStyle = $symfonyStyle;

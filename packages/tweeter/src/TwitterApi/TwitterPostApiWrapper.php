@@ -6,6 +6,8 @@ namespace TomasVotruba\Tweeter\TwitterApi;
 
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
+use TomasVotruba\Blog\ValueObject\Option;
 use TomasVotruba\Tweeter\TweetEntityCompleter;
 use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
 use TomasVotruba\Tweeter\ValueObject\TwitterApi;
@@ -17,7 +19,7 @@ final class TwitterPostApiWrapper
      * @var string
      * @see https://regex101.com/r/Z9vHts/1
      */
-    private const NEW_POST_PATTERN = '#New post on#i';
+    private const NEW_POST_REGEX = '#New post on#i';
 
     /**
      * @var string
@@ -57,13 +59,13 @@ final class TwitterPostApiWrapper
     private TwitterImageApiWrapper $twitterImageApiWrapper;
 
     public function __construct(
-        string $twitterName,
+        ParameterProvider $parameterProvider,
         TwitterApiCaller $twitterApiCaller,
         TwitterImageApiWrapper $twitterImageApiWrapper,
         TweetEntityCompleter $tweetEntityCompleter,
         PublishedTweetFactory $publishedTweetFactory
     ) {
-        $this->twitterName = $twitterName;
+        $this->twitterName = $parameterProvider->provideStringParameter(Option::TWITTER_NAME);
         $this->tweetEntityCompleter = $tweetEntityCompleter;
         $this->publishedTweetFactory = $publishedTweetFactory;
         $this->twitterApiCaller = $twitterApiCaller;
@@ -155,7 +157,7 @@ final class TwitterPostApiWrapper
             $tweets,
             fn (PublishedTweet $publishedTweet) => (bool) Strings::match(
                 $publishedTweet->getText(),
-                self::NEW_POST_PATTERN
+                self::NEW_POST_REGEX
             )
         );
     }

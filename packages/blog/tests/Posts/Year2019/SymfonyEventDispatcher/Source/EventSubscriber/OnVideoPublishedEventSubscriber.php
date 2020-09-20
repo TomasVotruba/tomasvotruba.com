@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\Event\YoutuberNameEvent;
+use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\ValueObject\Event\YoutuberNameEvent;
 
 final class OnVideoPublishedEventSubscriber implements EventSubscriberInterface
 {

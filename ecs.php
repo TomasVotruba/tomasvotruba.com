@@ -6,7 +6,7 @@ use PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\ArrayNotation\StandaloneLineInMultilineArrayFixer;
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
-use Symplify\EasyCodingStandard\Configuration\Option;
+use Symplify\EasyCodingStandard\ValueObject\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
@@ -20,6 +20,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/tests',
         __DIR__ . '/ecs.php',
         __DIR__ . '/rector-ci.php',
+        __DIR__ . '/packages/framework-stats/config/parameters.php',
+
     ]);
 
     $parameters->set(Option::EXCLUDE_PATHS, [__DIR__ . '/config/bundles.php']);
@@ -38,8 +40,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     ]);
 
     $services = $containerConfigurator->services();
-
     $services->set(StandaloneLineInMultilineArrayFixer::class);
-
     $services->set(LineLengthFixer::class);
 };

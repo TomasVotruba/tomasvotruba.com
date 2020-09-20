@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\Event;
+namespace TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyEventDispatcher\Source\ValueObject\Event;
 
 use Symfony\Contracts\EventDispatcher\Event;
 

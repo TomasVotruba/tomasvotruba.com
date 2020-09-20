@@ -79,3 +79,10 @@ parameters:
         -
             message: '#Add regex101\.org link to that shows the regex in practise, so it will be easier to maintain in case of bug/extension in the future#'
             path: 'packages/tweeter/src/Configuration/Keys.php'
+
+        # symfony magic
+        -
+            message: '#Do not use protected element in final class#'
+            paths:
+                - src/HttpKernel/TomasVotrubaKernel.php # 39
+                - src/HttpKernel/TomasVotrubaKernel.php # 46

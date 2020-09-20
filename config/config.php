@@ -22,8 +22,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->defaults()
         ->autowire()
         ->autoconfigure()
-        ->public()
-        ->bind('$projectDir', '%kernel.project_dir%');
+        ->public();
 
     $services->load('TomasVotruba\Website\\', __DIR__ . '/../src')
         ->exclude([__DIR__ . '/../src/HttpKernel']);

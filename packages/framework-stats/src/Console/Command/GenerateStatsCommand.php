@@ -10,8 +10,10 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\FrameworkStats\Mapper\VendorDataMapper;
 use TomasVotruba\FrameworkStats\Result\VendorDataFactory;
+use TomasVotruba\FrameworkStats\ValueObject\Option;
 use TomasVotruba\FrameworkStats\Yaml\YamlFileDumper;
 
 final class GenerateStatsCommand extends Command
@@ -35,27 +37,24 @@ final class GenerateStatsCommand extends Command
     private VendorDataMapper $vendorDataMapper;
 
     /**
-     * @var string[]
+     * @var array<string, string>
      */
     private array $frameworksVendorToName = [];
 
-    /**
-     * @param string[] $frameworksVendorToName
-     */
     public function __construct(
         SymfonyStyle $symfonyStyle,
         YamlFileDumper $yamlFileDumper,
         VendorDataFactory $vendorDataFactory,
         VendorDataMapper $vendorDataMapper,
-        array $frameworksVendorToName
-    ) {
+        ParameterProvider $parameterProvider
+   ) {
         parent::__construct();
 
         $this->symfonyStyle = $symfonyStyle;
         $this->yamlFileDumper = $yamlFileDumper;
         $this->vendorDataFactory = $vendorDataFactory;
         $this->vendorDataMapper = $vendorDataMapper;
-        $this->frameworksVendorToName = $frameworksVendorToName;
+        $this->frameworksVendorToName = $parameterProvider->provideArrayParameter(Option::FRAMEWORKS_VENDOR_TO_NAME);
     }
 
     protected function configure(): void

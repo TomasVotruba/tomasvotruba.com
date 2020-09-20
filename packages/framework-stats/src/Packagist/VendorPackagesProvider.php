@@ -5,8 +5,10 @@ declare(strict_types=1);
 namespace TomasVotruba\FrameworkStats\Packagist;
 
 use Nette\Utils\Strings;
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 use TomasVotruba\FrameworkStats\Json\FileToJsonLoader;
+use TomasVotruba\FrameworkStats\ValueObject\Option;
 
 final class VendorPackagesProvider
 {
@@ -22,13 +24,12 @@ final class VendorPackagesProvider
      */
     private array $excludedFrameworkPackages = [];
 
-    /**
-     * @param string[] $excludedFrameworkPackages
-     */
-    public function __construct(FileToJsonLoader $fileToJsonLoader, array $excludedFrameworkPackages)
+    public function __construct(FileToJsonLoader $fileToJsonLoader, ParameterProvider $parameterProvider)
     {
         $this->fileToJsonLoader = $fileToJsonLoader;
-        $this->excludedFrameworkPackages = $excludedFrameworkPackages;
+        $this->excludedFrameworkPackages = $parameterProvider->provideArrayParameter(
+            Option::EXCLUDED_FRAMEWORK_PACKAGES
+        );
     }
 
     /**

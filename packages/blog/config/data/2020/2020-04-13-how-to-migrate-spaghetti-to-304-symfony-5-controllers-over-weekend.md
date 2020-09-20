@@ -95,7 +95,7 @@ Hm, so what now? If it too huge, take something smaller. First, we need to actua
 ```bash
 composer require symfony/asset symfony/cache symfony/console symfony/dotenv \
     symfony/flex symfony/framework-bundle symfony/http-foundation symfony/http-kernel \
-    symfony/twig-bridge symfony/twig-bundle symplify/auto-bind-parameter \
+    symfony/twig-bridge symfony/twig-bundle \
     symplify/autodiscovery symplify/autowire-array-parameter symplify/flex-loader \
     symplify/package-builder twig/twig doctrine/cache symfony/security-core \
     symfony/security-bundle symfony/security-csrf doctrine/orm doctrine/doctrine-bundle \

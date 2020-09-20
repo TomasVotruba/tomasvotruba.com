@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TwitterApi;
 
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
+use TomasVotruba\Blog\ValueObject\Option;
 use TwitterAPIExchange;
 
 /**
@@ -19,16 +21,14 @@ final class TwitterApiFactory
 
     private string $twitterOauthAccessTokenSecret;
 
-    public function __construct(
-        string $twitterConsumerKey,
-        string $twitterConsumerSecret,
-        string $twitterOauthAccessToken,
-        string $twitterOauthAccessTokenSecret
-    ) {
-        $this->twitterConsumerKey = $twitterConsumerKey;
-        $this->twitterConsumerSecret = $twitterConsumerSecret;
-        $this->twitterOauthAccessToken = $twitterOauthAccessToken;
-        $this->twitterOauthAccessTokenSecret = $twitterOauthAccessTokenSecret;
+    public function __construct(ParameterProvider $parameterProvider)
+    {
+        $this->twitterConsumerKey = $parameterProvider->provideStringParameter(Option::TWITTER_CONSUMER_KEY);
+        $this->twitterConsumerSecret = $parameterProvider->provideStringParameter(Option::TWITTER_CONSUMER_SECRET);
+        $this->twitterOauthAccessToken = $parameterProvider->provideStringParameter(Option::TWITTER_OAUTH_ACCESS_TOKEN);
+        $this->twitterOauthAccessTokenSecret = $parameterProvider->provideStringParameter(
+            Option::TWITTER_OAUTH_ACCESS_TOKEN_SECRET
+        );
     }
 
     public function create(): TwitterAPIExchange
