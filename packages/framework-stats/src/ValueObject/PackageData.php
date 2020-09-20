@@ -13,7 +13,7 @@ final class PackageData implements LastYearTrendAwareInterface
      * @var string
      * @see https://regex101.com/r/PWqxoE/1
      */
-    private const DASH_OR_SLASH_PATTERN = '#(\/|-)#';
+    private const DASH_OR_SLASH_REGEX = '#(\/|-)#';
 
     private string $packageName;
 
@@ -36,7 +36,7 @@ final class PackageData implements LastYearTrendAwareInterface
         $this->packageName = $packageName;
         $this->packageShortName = (string) Strings::after($packageName, '/');
 
-        $this->packageKey = Strings::replace($packageName, self::DASH_OR_SLASH_PATTERN, '_');
+        $this->packageKey = Strings::replace($packageName, self::DASH_OR_SLASH_REGEX, '_');
 
         $this->lastYearTrend = $lastYearTrend;
         $this->last12Months = $last12Months;

@@ -12,15 +12,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->defaults()
         ->public()
         ->autowire()
-        ->autoconfigure()
-        ->bind('$projectDir', '%kernel.project_dir%');
+        ->autoconfigure();
 
     $services->load('TomasVotruba\Blog\\', __DIR__ . '/../src')
-        ->exclude([
-            __DIR__ . '/../src/ValueObject/*',
-            __DIR__ . '/../src/Exception/*',
-            __DIR__ . '/../src/Posts/*',
-        ]);
+        ->exclude([__DIR__ . '/../src/ValueObject', __DIR__ . '/../src/Exception', __DIR__ . '/../src/Posts']);
 
     $services->set(FinderSanitizer::class);
 

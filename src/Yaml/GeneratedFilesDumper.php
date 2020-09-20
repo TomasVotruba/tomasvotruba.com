@@ -6,7 +6,9 @@ namespace TomasVotruba\Website\Yaml;
 
 use Nette\Utils\DateTime;
 use Symfony\Component\Yaml\Yaml;
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use Symplify\SmartFileSystem\SmartFileSystem;
+use TomasVotruba\Blog\ValueObject\Option;
 use TomasVotruba\Website\Exception\NotImplementedYetException;
 
 final class GeneratedFilesDumper
@@ -15,9 +17,9 @@ final class GeneratedFilesDumper
 
     private SmartFileSystem $smartFileSystem;
 
-    public function __construct(string $projectDir, SmartFileSystem $smartFileSystem)
+    public function __construct(ParameterProvider $parameterProvider, SmartFileSystem $smartFileSystem)
     {
-        $this->projectDir = $projectDir;
+        $this->projectDir = $parameterProvider->provideStringParameter(Option::KERNEL_PROJECT_DIR);
         $this->smartFileSystem = $smartFileSystem;
     }
 

@@ -9,10 +9,12 @@ use Nette\Utils\Strings;
 use ParsedownExtra;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Yaml\Yaml;
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileInfo;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
 use TomasVotruba\Blog\Testing\TestedPostAnalyzer;
+use TomasVotruba\Blog\ValueObject\Option;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 
@@ -21,18 +23,18 @@ final class PostFactory
     /**
      * @var string
      */
-    private const SLASHES_WITH_SPACES_PATTERN = '(?:---[\s]*[\r\n]+)';
+    private const SLASHES_WITH_SPACES_REGEX = '(?:---[\s]*[\r\n]+)';
 
     /**
      * @var string
      */
-    private const CONFIG_CONTENT_PATTERN = '#^\s*' . self::SLASHES_WITH_SPACES_PATTERN . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_PATTERN . '(?<content>.*?)$#s';
+    private const CONFIG_CONTENT_REGEX = '#^\s*' . self::SLASHES_WITH_SPACES_REGEX . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_REGEX . '(?<content>.*?)$#s';
 
     /**
      * @see https://regex101.com/r/9xssch/1
      * @var string
      */
-    private const HEADLINE_LEVEL_PATTERN = '#<h(?<level>\d+)>(?<headline>.*?)<\/h\d+>#';
+    private const HEADLINE_LEVEL_REGEX = '#<h(?<level>\d+)>(?<headline>.*?)<\/h\d+>#';
 
     private ParsedownExtra $parsedownExtra;
 
@@ -53,22 +55,26 @@ final class PostFactory
         PathAnalyzer $pathAnalyzer,
         RouterInterface $router,
         TestedPostAnalyzer $testedPostAnalyzer,
-        string $siteUrl,
-        string $projectDir,
+        ParameterProvider $parameterProvider,
         FileSystemGuard $fileSystemGuard
     ) {
         $this->parsedownExtra = $parsedownExtra;
         $this->pathAnalyzer = $pathAnalyzer;
         $this->router = $router;
+
+        $siteUrl = $parameterProvider->provideStringParameter(Option::SITE_URL);
         $this->siteUrl = rtrim($siteUrl, '/');
+
+        $projectDir = $parameterProvider->provideStringParameter(Option::KERNEL_PROJECT_DIR);
         $this->projectDir = $projectDir;
+
         $this->fileSystemGuard = $fileSystemGuard;
         $this->testedPostAnalyzer = $testedPostAnalyzer;
     }
 
     public function createFromFileInfo(SmartFileInfo $smartFileInfo): Post
     {
-        $matches = Strings::match($smartFileInfo->getContents(), self::CONFIG_CONTENT_PATTERN);
+        $matches = Strings::match($smartFileInfo->getContents(), self::CONFIG_CONTENT_REGEX);
 
         if (! isset($matches['config'])) {
             throw new ShouldNotHappenException();
@@ -167,7 +173,7 @@ final class PostFactory
      */
     private function decorateHeadlineWithId(string $htmlContent): string
     {
-        return Strings::replace($htmlContent, self::HEADLINE_LEVEL_PATTERN, function ($matches) {
+        return Strings::replace($htmlContent, self::HEADLINE_LEVEL_REGEX, function ($matches) {
             $level = $matches['level'];
             $headline = $matches['headline'];
             $idValue = Strings::webalize($headline);
