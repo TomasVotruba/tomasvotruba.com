@@ -154,7 +154,6 @@ We already know that **public properties, setters, and drugs are bad**. **Missin
 We should make a design that is reliable.
 
 - Do you need these services? Tell us in the constructor.
-- Do you need this parameter to work? [Tell us constructor](/blog/2018/11/05/do-you-autowire-services-in-symfony-you-can-autowire-parameters-too/).
 - Do you need all `ReleaseWorkerInterface`s? **Tell us in the constructor.**
 
 ```php
