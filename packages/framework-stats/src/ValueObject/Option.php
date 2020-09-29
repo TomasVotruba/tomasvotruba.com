@@ -17,4 +17,9 @@ final class Option
      * @var string
      */
     public const EXCLUDED_FRAMEWORK_PACKAGES = 'excluded_framework_packages';
+
+    /**
+     * @var string
+     */
+    public const PHP_FRAMEWORK_TRENDS = 'php_framework_trends';
 }

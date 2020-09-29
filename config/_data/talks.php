@@ -3,11 +3,12 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use TomasVotruba\Website\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set('talks', [
+    $parameters->set(Option::TALKS, [
         [
             'title' => 'Instant Upgrades with Rector (and variations)',
             'anchor' => 'rector',

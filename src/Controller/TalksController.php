@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class TalksController extends AbstractController
 {
@@ -23,8 +24,8 @@ final class TalksController extends AbstractController
 
     public function __construct(ParameterProvider $parameterProvider)
     {
-        $this->talks = $parameterProvider->provideArrayParameter('talks');
-        $this->talksFeedback = $parameterProvider->provideArrayParameter('talks_feedback');
+        $this->talks = $parameterProvider->provideArrayParameter(Option::TALKS);
+        $this->talksFeedback = $parameterProvider->provideArrayParameter(Option::TALKS_FEEDBACK);
     }
 
     /**

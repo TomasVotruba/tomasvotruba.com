@@ -16,6 +16,18 @@ services:
                 'Nette\Utils\FileSystem': 'Symplify\SmartFileSystem\SmartFileSystem'
                 'Symfony\Component\Filesystem\Filesystem': 'Symplify\SmartFileSystem\SmartFileSystem'
 
+    -
+        class: Symplify\CodingStandard\Rules\ForceMethodCallArgumentConstantRule
+        tags: [phpstan.rules.rule]
+        arguments:
+            constantArgByMethodByType:
+                Symfony\Component\DependencyInjection\Loader\Configurator\ParametersConfigurator:
+                    set: [0]
+                Symplify\PackageBuilder\Parameter\ParameterProvider:
+                    provideArrayParameter: [0]
+                    provideStringParameter: [0]
+                    provideIntParameter: [0]
+
 parameters:
     symplify:
         max_class_cognitive_complexity: 20
@@ -26,6 +38,14 @@ parameters:
         - src
         - tests
         - packages
+        - packages/symfony-static-dump/config/config.php
+        - packages/blog/config/config.php
+        - packages/cleaning-lady/config/config.php
+        - packages/framework-stats/config/config.php
+        - packages/github-contributor-thanker/config/services.php
+        - packages/projects/config/config.php
+        - config/_data
+        - config/config.php
 
     level: max
     checkMissingIterableValueType: false
