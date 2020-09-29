@@ -6,6 +6,14 @@ perex: |
     <br><br>
     That opens new possibilities to **almost config-less registration**, doesn't it?
 tweet: "New Post on My Blog: Do you Autowire Services in #Symfony? You can Autowire Parameters Too"
+
+deprecated_since: "September 2020"
+deprecated_message: |
+    The [AutoBindParameter](https://github.com/symplify/auto-bind-parameter) package is now deprecated.
+    <br>
+    <br>
+    **Use [constant parameters](/blog/2020/09/21/replacing-parameter-autobind-with-constant-parameters) instead**.
+
 ---
 
 Do you still have these old-school Symfony 2.7- configs?
@@ -245,19 +253,6 @@ class SomeClass
 ```
 
 <em class="fas fa-lg fa-check text-success"></em> &nbsp;Done for [Symfony 3.4+](https://github.com/symplify/symplify/pull/1145) and in [Nette 3.0](https://github.com/nette/di/pull/178).
-
-<br>
-
-Maybe convention factory using `create()` method and it's `@return Type` or `create(): Type`?
-
-```diff
- services:
-     SomeFactory: ~
--    SomeObject:
--        factory: ['@SomeFactory', 'create']
-```
-
-EDITED: <em class="fas fa-lg fa-check text-success"></em> &nbsp;Done for [Symfony 3.4+](https://github.com/symplify/symplify/pull/1185)
 
 <br>
 

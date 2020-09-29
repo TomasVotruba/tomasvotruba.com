@@ -2,19 +2,24 @@ includes:
     - vendor/symplify/phpstan-extensions/config/config.neon
     - vendor/symplify/coding-standard/config/symplify-rules.neon
 
+services:
+    -
+        class: Symplify\CodingStandard\Rules\PreferredClassRule
+        tags: [phpstan.rules.rule]
+        arguments:
+            oldToPrefferedClasses:
+                SplFileInfo: 'Symplify\SmartFileSystem\SmartFileInfo'
+                DateTime: 'Nette\Utils\DateTime'
+                'PhpCsFixer\Finder': 'Symfony\Component\Finder\Finder'
+                # smart file system
+                'Symfony\Component\Finder\SplFileInfo': 'Symplify\SmartFileSystem\SmartFileInfo'
+                'Nette\Utils\FileSystem': 'Symplify\SmartFileSystem\SmartFileSystem'
+                'Symfony\Component\Filesystem\Filesystem': 'Symplify\SmartFileSystem\SmartFileSystem'
+
 parameters:
     symplify:
         max_class_cognitive_complexity: 20
         max_cognitive_complexity: 8
-
-        old_to_preffered_classes:
-            SplFileInfo: 'Symplify\SmartFileSystem\SmartFileInfo'
-            DateTime: 'Nette\Utils\DateTime'
-            'PhpCsFixer\Finder': 'Symfony\Component\Finder\Finder'
-            # smart file system
-            'Symfony\Component\Finder\SplFileInfo': 'Symplify\SmartFileSystem\SmartFileInfo'
-            'Nette\Utils\FileSystem': 'Symplify\SmartFileSystem\SmartFileSystem'
-            'Symfony\Component\Filesystem\Filesystem': 'Symplify\SmartFileSystem\SmartFileSystem'
 
     paths:
         - bin
@@ -86,3 +91,8 @@ parameters:
             paths:
                 - src/HttpKernel/TomasVotrubaKernel.php # 39
                 - src/HttpKernel/TomasVotrubaKernel.php # 46
+
+        -
+            message: '#Method "__construct\(\)" is using too many parameters \- \d+\. Make it under 8#'
+            paths:
+                - packages/blog/src/ValueObject/Post.php
