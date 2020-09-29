@@ -6,7 +6,7 @@
         "php": ">=7.4",
         "doctrine/cache": "^1.10",
         "erusev/parsedown-extra": "^0.8.1",
-        "guzzlehttp/guzzle": "^6.5",
+        "guzzlehttp/guzzle": "^7.0",
         "j7mbo/twitter-api-php": "^1.0",
         "kevinrob/guzzle-cache-middleware": "^3.3",
         "nette/finder": "^2.5",
@@ -44,13 +44,13 @@
         "symfony/console": "^5.1",
         "symfony/process": "^5.1",
         "symfony/stopwatch": "^5.1",
+        "symfony/var-dumper": "^5.1",
         "symfony/yaml": "^5.1",
-        "symplify/easy-coding-standard": "^8.3.17",
-        "symplify/set-config-resolver": "^8.3.17",
-        "symplify/console-color-diff": "^8.3.17",
         "symplify/coding-standard": "^8.3.17",
+        "symplify/console-color-diff": "^8.3.17",
+        "symplify/easy-coding-standard": "^8.3.17",
         "symplify/phpstan-extensions": "^8.3.17",
-        "tracy/tracy": "^2.7"
+        "symplify/set-config-resolver": "^8.3.17"
     },
     "autoload": {
         "psr-4": {

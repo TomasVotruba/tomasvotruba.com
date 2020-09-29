@@ -15,4 +15,13 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             'disqus_shortname' => 'itsworthsharing',
         ],
     ]);
+
+    // see https://symfony.com/blog/new-in-symfony-2-7-default-date-and-number-format-configuration
+    $containerConfigurator->extension('twig', [
+        'number_format' => [
+            'decimals' => 0,
+            'decimal_point' => '.',
+            'thousands_separator' => ' ',
+        ],
+    ]);
 };

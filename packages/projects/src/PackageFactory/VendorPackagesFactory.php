@@ -8,6 +8,9 @@ use Spatie\Packagist\PackagistClient;
 use TomasVotruba\Projects\ValueObject\Package;
 use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
 
+/**
+ * @see https://github.com/spatie/packagist-api
+ */
 final class VendorPackagesFactory
 {
     private PackagistClient $packagistClient;
@@ -22,7 +25,28 @@ final class VendorPackagesFactory
      */
     public function createPackagesByVendor(string $vendor): array
     {
-        $packagistPackages = [];
+        $packages = $this->createPackages($vendor);
+
+        usort($packages, function (Package $firstPackage, Package $secondPackage) {
+            return $secondPackage->getTotalDownloads() <=> $firstPackage->getTotalDownloads();
+        });
+
+        return $packages;
+    }
+
+    private function getPackageData(string $packageName): array
+    {
+        $packageData = $this->packagistClient->getPackage($packageName);
+        if ($packageData === null) {
+            throw new ShouldNotHappenException();
+        }
+
+        return $packageData['package'];
+    }
+
+    private function createPackages(string $vendor): array
+    {
+        $packages = [];
 
         $symplifyPackages = $this->packagistClient->getPackagesNamesByVendor($vendor);
         if ($symplifyPackages === null) {
@@ -30,31 +54,22 @@ final class VendorPackagesFactory
         }
 
         foreach ($symplifyPackages['packageNames'] as $symplifyPackageName) {
-            $packageMetadata = $this->getPackageMetadata($symplifyPackageName);
+            $packageData = $this->getPackageData($symplifyPackageName);
 
             // skip
-            if (isset($packageMetadata['abandoned'])) {
+            if (isset($packageData['abandoned'])) {
                 continue;
             }
 
-            $packagistPackages[] = new Package(
-                $packageMetadata['name'],
-                $packageMetadata['description'],
-                $packageMetadata['source']['url']
+            $packages[] = new Package(
+                $packageData['name'],
+                $packageData['description'],
+                $packageData['repository'],
+                $packageData['github_stars'],
+                $packageData['downloads']['total']
             );
         }
 
-        return $packagistPackages;
-    }
-
-    private function getPackageMetadata(string $packageName): array
-    {
-        $packageMetadata = $this->packagistClient->getPackageMetadata($packageName);
-        if ($packageMetadata === null) {
-            throw new ShouldNotHappenException();
-        }
-
-        $packageMetadata = $packageMetadata['packages'][$packageName];
-        return array_pop($packageMetadata);
+        return $packages;
     }
 }
