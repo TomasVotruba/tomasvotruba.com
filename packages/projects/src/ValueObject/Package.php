@@ -7,7 +7,7 @@ namespace TomasVotruba\Projects\ValueObject;
 use Nette\Utils\Strings;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
-final class PackagistPackage
+final class Package
 {
     private string $name;
 
@@ -15,12 +15,15 @@ final class PackagistPackage
 
     private string $description;
 
-    public function __construct(string $name, string $description)
+    private string $githubUrl;
+
+    public function __construct(string $name, string $description, string $githubUrl)
     {
         $this->name = $name;
         $this->resolveShortName($name);
 
         $this->description = $description;
+        $this->resolveGithubUrl($githubUrl);
     }
 
     public function getName(): string
@@ -38,6 +41,11 @@ final class PackagistPackage
         return $this->description;
     }
 
+    public function getGithubUrl(): string
+    {
+        return $this->githubUrl;
+    }
+
     private function resolveShortName(string $name): void
     {
         $shortName = (string) Strings::after($name, '/');
@@ -47,5 +55,16 @@ final class PackagistPackage
         }
 
         $this->shortName = $shortName;
+    }
+
+    private function resolveGithubUrl(string $githubUrl): void
+    {
+        $shortName = (string) Strings::before($githubUrl, '.git');
+        if ($shortName === '') {
+            $message = sprintf('Github url could not be determined from "%s"', $githubUrl);
+            throw new ShouldNotHappenException($message);
+        }
+
+        $this->githubUrl = $githubUrl;
     }
 }

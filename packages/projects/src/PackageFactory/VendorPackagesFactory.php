@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TomasVotruba\Projects\PackageFactory;
 
 use Spatie\Packagist\PackagistClient;
-use TomasVotruba\Projects\ValueObject\PackagistPackage;
+use TomasVotruba\Projects\ValueObject\Package;
 use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
 
 final class VendorPackagesFactory
@@ -18,7 +18,7 @@ final class VendorPackagesFactory
     }
 
     /**
-     * @return PackagistPackage[]
+     * @return Package[]
      */
     public function createPackagesByVendor(string $vendor): array
     {
@@ -30,19 +30,31 @@ final class VendorPackagesFactory
         }
 
         foreach ($symplifyPackages['packageNames'] as $symplifyPackageName) {
-            $packageMetadata = $this->packagistClient->getPackageMetadata($symplifyPackageName);
-            if ($packageMetadata === null) {
-                throw new ShouldNotHappenException();
+            $packageMetadata = $this->getPackageMetadata($symplifyPackageName);
+
+            // skip
+            if (isset($packageMetadata['abandoned'])) {
+                continue;
             }
 
-            $packageMetadata = $packageMetadata['packages'][$symplifyPackageName];
-            $packageMetadata = array_pop($packageMetadata);
-
-            $packagistPackages[] = new PackagistPackage($packageMetadata['name'], $packageMetadata['description']);
-
-            // @todo stats
+            $packagistPackages[] = new Package(
+                $packageMetadata['name'],
+                $packageMetadata['description'],
+                $packageMetadata['source']['url']
+            );
         }
 
         return $packagistPackages;
+    }
+
+    private function getPackageMetadata(string $packageName): array
+    {
+        $packageMetadata = $this->packagistClient->getPackageMetadata($packageName);
+        if ($packageMetadata === null) {
+            throw new ShouldNotHappenException();
+        }
+
+        $packageMetadata = $packageMetadata['packages'][$packageName];
+        return array_pop($packageMetadata);
     }
 }

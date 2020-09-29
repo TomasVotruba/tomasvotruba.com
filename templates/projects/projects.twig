@@ -48,7 +48,9 @@
         {# @todo packagist api - show all packagest and downloads #}
 
         {% for symplify_package in symplify_packages %}
-            <h3>{{ symplify_package.shortName }}</h3>
+            <h3>
+                <a href="{{ symplify_package.githubUrl }}">{{ symplify_package.shortName }}</a>
+            </h3>
             <p>{{ symplify_package.description }}</p>
         {% endfor %}
 
