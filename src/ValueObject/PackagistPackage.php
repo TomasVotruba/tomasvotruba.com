@@ -18,12 +18,7 @@ final class PackagistPackage
     public function __construct(string $name, string $description)
     {
         $this->name = $name;
-        $shortName = (string) Strings::after($name, '/');
-        if ($shortName === '') {
-            $message = sprintf('Short name could not be determined from "%s"', $name);
-            throw new ShouldNotHappenException($message);
-        }
-        $this->shortName = $shortName;
+        $this->resolveShortName($name);
 
         $this->description = $description;
     }
@@ -41,5 +36,16 @@ final class PackagistPackage
     public function getDescription(): string
     {
         return $this->description;
+    }
+
+    private function resolveShortName(string $name): void
+    {
+        $shortName = (string) Strings::after($name, '/');
+        if ($shortName === '') {
+            $message = sprintf('Short name could not be determined from "%s"', $name);
+            throw new ShouldNotHappenException($message);
+        }
+
+        $this->shortName = $shortName;
     }
 }

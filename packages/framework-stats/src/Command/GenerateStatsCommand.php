@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\FrameworkStats\Console\Command;
+namespace TomasVotruba\FrameworkStats\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -14,22 +14,10 @@ use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\FrameworkStats\Mapper\VendorDataMapper;
 use TomasVotruba\FrameworkStats\Result\VendorDataFactory;
 use TomasVotruba\FrameworkStats\ValueObject\Option;
-use TomasVotruba\FrameworkStats\Yaml\YamlFileDumper;
+use TomasVotruba\Website\FIleSystem\ParametersConfigDumper;
 
 final class GenerateStatsCommand extends Command
 {
-    /**
-     * @var string
-     */
-    private const PARAMETER_KEY = 'php_framework_trends';
-
-    /**
-     * @var string
-     */
-    private const GENERATED_FILE_OUTPUT_PATH = __DIR__ . '/../../../../../config/_data/generated/php_framework_trends.yaml';
-
-    private YamlFileDumper $yamlFileDumper;
-
     private SymfonyStyle $symfonyStyle;
 
     private VendorDataFactory $vendorDataFactory;
@@ -41,20 +29,22 @@ final class GenerateStatsCommand extends Command
      */
     private array $frameworksVendorToName = [];
 
+    private ParametersConfigDumper $parametersConfigDumper;
+
     public function __construct(
         SymfonyStyle $symfonyStyle,
-        YamlFileDumper $yamlFileDumper,
         VendorDataFactory $vendorDataFactory,
         VendorDataMapper $vendorDataMapper,
-        ParameterProvider $parameterProvider
+        ParameterProvider $parameterProvider,
+        ParametersConfigDumper $parametersConfigDumper
    ) {
         parent::__construct();
 
         $this->symfonyStyle = $symfonyStyle;
-        $this->yamlFileDumper = $yamlFileDumper;
         $this->vendorDataFactory = $vendorDataFactory;
         $this->vendorDataMapper = $vendorDataMapper;
         $this->frameworksVendorToName = $parameterProvider->provideArrayParameter(Option::FRAMEWORKS_VENDOR_TO_NAME);
+        $this->parametersConfigDumper = $parametersConfigDumper;
     }
 
     protected function configure(): void
@@ -71,13 +61,14 @@ final class GenerateStatsCommand extends Command
             $vendorsData['vendors'][$key] = $this->vendorDataMapper->mapObjectToArray($vendorData);
         }
 
-        $this->yamlFileDumper->dumpAsParametersToFile(
-            self::PARAMETER_KEY,
-            $vendorsData,
-            self::GENERATED_FILE_OUTPUT_PATH
-        );
+        $fileInfo = $this->parametersConfigDumper->dumpPhp(Option::PHP_FRAMEWORK_TRENDS, $vendorsData);
 
-        $this->symfonyStyle->success('Data imported!');
+        $message = sprintf(
+            'Data for %d frameworks dumped into" %s" file',
+            count($vendorsData['vendors']),
+            $fileInfo->getRelativeFilePathFromCwd()
+        );
+        $this->symfonyStyle->success($message);
 
         return ShellCode::SUCCESS;
     }
