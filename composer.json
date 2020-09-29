@@ -9,6 +9,7 @@
         "guzzlehttp/guzzle": "^7.0",
         "j7mbo/twitter-api-php": "^1.0",
         "kevinrob/guzzle-cache-middleware": "^3.3",
+        "migrify/php-config-printer": "^0.3.48",
         "nette/finder": "^2.5",
         "nette/utils": "^3.0",
         "spatie/packagist-api": "^2.0",
@@ -79,7 +80,8 @@
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.com --output invalid-links.txt --ansi",
-        "rector": "vendor/bin/rector process --config rector-ci.php --ansi --dry-run",
+        "rector": "vendor/bin/rector process --config rector-ci.php --ansi",
+        "rector-ci": "vendor/bin/rector process --config rector-ci.php --ansi --dry-run",
         "thank": "bin/console thank-contributors",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",

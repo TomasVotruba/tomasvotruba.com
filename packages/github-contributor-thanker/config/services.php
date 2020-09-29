@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use GuzzleHttp\Client;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\PackageBuilder\Http\BetterGuzzleClient;
 use Symplify\SmartFileSystem\SmartFileSystem;
@@ -27,5 +26,4 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $services->set(SmartFileSystem::class);
     $services->set(BetterGuzzleClient::class);
-    $services->set(Client::class);
 };

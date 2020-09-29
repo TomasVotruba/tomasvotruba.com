@@ -27,9 +27,10 @@ final class VendorPackagesFactory
     {
         $packages = $this->createPackages($vendor);
 
-        usort($packages, function (Package $firstPackage, Package $secondPackage) {
-            return $secondPackage->getTotalDownloads() <=> $firstPackage->getTotalDownloads();
-        });
+        usort(
+            $packages,
+            fn (Package $firstPackage, Package $secondPackage) => $secondPackage->getTotalDownloads() <=> $firstPackage->getTotalDownloads()
+        );
 
         return $packages;
     }
