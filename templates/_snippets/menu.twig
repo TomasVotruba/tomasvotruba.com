@@ -17,6 +17,9 @@
                 <li class="{% if is_current_route('clusters') %}active{% endif %}">
                     <a href="{{ path('clusters') }}">Clusters</a>
                 </li>
+                <li class="{% if is_current_route('projects') %}active{% endif %}">
+                    <a href="{{ path('projects') }}">Projects</a>
+                </li>
                 <li class="{% if is_current_route('mission') %}active{% endif %}">
                     <a href="{{ path('mission') }}">Mission</a>
                 </li>
