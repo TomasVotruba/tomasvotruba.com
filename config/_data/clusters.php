@@ -3,11 +3,17 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use TomasVotruba\Website\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set('clusters', [
+    $parameters->set(Option::CLUSTERS, [
+        [
+            'title' => 'From YAML to PHP Symfony Configs',
+            'post_ids' => [269, 271, 275, 279],
+            'description' => 'In this series, you will learn about pros and cons of YAML and PHP configs, how to migrate and also tips. I will also show how to make your PHP configs more useful to your daily work in way you would not expect.',
+        ],
         [
             'title' => 'Cleaning Lady Notes',
             'post_ids' => [267, 230, 229, 225, 104, 88],

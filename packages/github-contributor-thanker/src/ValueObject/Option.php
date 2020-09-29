@@ -23,4 +23,9 @@ final class Option
      * @api
      */
     public const GITHUB_TOKEN = 'github_token';
+
+    /**
+     * @var string
+     */
+    public const CONTRIBUTORS = 'contributors';
 }

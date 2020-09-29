@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace TomasVotruba\SymfonyStaticDump\ControllerWithDataProvider;
 
 use Symplify\SymfonyStaticDumper\Contract\ControllerWithDataProviderInterface;
+use TomasVotruba\Blog\Controller\BlogArchiveController;
 use TomasVotruba\Blog\Repository\PostRepository;
-use TomasVotruba\Website\Controller\BlogArchiveController;
 
 final class BlogArchiveControllerWithDataProvider implements ControllerWithDataProviderInterface
 {

@@ -11,7 +11,8 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
 use TomasVotruba\GithubContributorsThanker\Api\GithubApi;
-use TomasVotruba\Website\Yaml\GeneratedFilesDumper;
+use TomasVotruba\GithubContributorsThanker\ValueObject\Option;
+use TomasVotruba\Website\FIleSystem\ParametersConfigDumper;
 
 final class ThankContributorsCommand extends Command
 {
@@ -19,12 +20,12 @@ final class ThankContributorsCommand extends Command
 
     private SymfonyStyle $symfonyStyle;
 
-    private GeneratedFilesDumper $generatedFilesDumper;
+    private ParametersConfigDumper $generatedFilesDumper;
 
     public function __construct(
         GithubApi $githubApi,
         SymfonyStyle $symfonyStyle,
-        GeneratedFilesDumper $generatedFilesDumper
+        ParametersConfigDumper $generatedFilesDumper
     ) {
         parent::__construct();
 
@@ -36,21 +37,29 @@ final class ThankContributorsCommand extends Command
     protected function configure(): void
     {
         $this->setName(CommandNaming::classToName(self::class));
-        $this->setDescription('Dump contributors.yaml file with your Github repository contributors');
+        $this->setDescription('Dump "contributors.php" file with your Github repository contributors');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $contributors = $this->githubApi->getContributors();
         if (count($contributors) === 0) {
-            $this->symfonyStyle->note('Found 0 contributions - stick with the current dump');
+            $message = sprintf(
+                'Found 0 contributions - stick with the current dump. Try running the same command with "GITHUB_TOKEN=xxx bin/console ...". Get your token here: %s',
+                'https://github.com/settings/tokens/new'
+            );
+            $this->symfonyStyle->warning($message);
 
             return ShellCode::SUCCESS;
         }
 
-        $this->generatedFilesDumper->dump('contributors', $contributors, 'yaml');
+        $dumpFileInfo = $this->generatedFilesDumper->dumpPhp(Option::CONTRIBUTORS, $contributors);
 
-        $successMessage = sprintf('Dumped %d contributors', count($contributors));
+        $successMessage = sprintf(
+            'Dumped %d contributors to "%s" file',
+            count($contributors),
+            $dumpFileInfo->getRelativeFilePathFromCwd()
+        );
         $this->symfonyStyle->success($successMessage);
 
         return ShellCode::SUCCESS;

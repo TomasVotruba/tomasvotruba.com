@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use Spatie\Packagist\PackagistClient;
-use Spatie\Packagist\PackagistUrlGenerator;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use TomasVotruba\Website\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/../packages/*/config/*.php');
@@ -16,7 +15,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/_data/generated/*');
 
     $parameters = $containerConfigurator->parameters();
-    $parameters->set('site_url', '%env(SITE_URL)%');
+    $parameters->set(Option::SITE_URL, '%env(SITE_URL)%');
 
     $services = $containerConfigurator->services();
     $services->alias(ClientInterface::class, Client::class);
@@ -28,9 +27,4 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $services->load('TomasVotruba\Website\\', __DIR__ . '/../src')
         ->exclude([__DIR__ . '/../src/HttpKernel', __DIR__ . '/../src/ValueObject']);
-
-    // packagist
-    $services->set(Client::class);
-    $services->set(PackagistUrlGenerator::class);
-    $services->set(PackagistClient::class);
 };

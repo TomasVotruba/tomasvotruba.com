@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class MissionController extends AbstractController
 {
@@ -18,7 +19,7 @@ final class MissionController extends AbstractController
 
     public function __construct(ParameterProvider $parameterProvider)
     {
-        $this->helpedCompanies = $parameterProvider->provideArrayParameter('helped_companies');
+        $this->helpedCompanies = $parameterProvider->provideArrayParameter(Option::HELPED_COMPANIES);
     }
 
     /**

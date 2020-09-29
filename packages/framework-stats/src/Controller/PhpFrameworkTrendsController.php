@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Blog\Repository\PostRepository;
+use TomasVotruba\FrameworkStats\ValueObject\Option;
 
 final class PhpFrameworkTrendsController extends AbstractController
 {
@@ -22,7 +23,7 @@ final class PhpFrameworkTrendsController extends AbstractController
     public function __construct(PostRepository $postRepository, ParameterProvider $parameterProvider)
     {
         $this->postRepository = $postRepository;
-        $this->phpFrameworkTrends = $parameterProvider->provideArrayParameter('php_framework_trends');
+        $this->phpFrameworkTrends = $parameterProvider->provideArrayParameter(Option::PHP_FRAMEWORK_TRENDS);
     }
 
     /**

@@ -6,8 +6,10 @@
         "php": ">=7.4",
         "doctrine/cache": "^1.10",
         "erusev/parsedown-extra": "^0.8.1",
-        "guzzlehttp/guzzle": "^6.5",
+        "guzzlehttp/guzzle": "^7.0",
         "j7mbo/twitter-api-php": "^1.0",
+        "kevinrob/guzzle-cache-middleware": "^3.3",
+        "migrify/php-config-printer": "^0.3.48",
         "nette/finder": "^2.5",
         "nette/utils": "^3.0",
         "spatie/packagist-api": "^2.0",
@@ -43,19 +45,20 @@
         "symfony/console": "^5.1",
         "symfony/process": "^5.1",
         "symfony/stopwatch": "^5.1",
+        "symfony/var-dumper": "^5.1",
         "symfony/yaml": "^5.1",
-        "symplify/easy-coding-standard": "^8.3.17",
-        "symplify/set-config-resolver": "^8.3.17",
-        "symplify/console-color-diff": "^8.3.17",
         "symplify/coding-standard": "^8.3.17",
+        "symplify/console-color-diff": "^8.3.17",
+        "symplify/easy-coding-standard": "^8.3.17",
         "symplify/phpstan-extensions": "^8.3.17",
-        "tracy/tracy": "^2.7"
+        "symplify/set-config-resolver": "^8.3.17"
     },
     "autoload": {
         "psr-4": {
             "TomasVotruba\\Website\\": "src",
             "TomasVotruba\\FrameworkStats\\": "packages/framework-stats/src",
             "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
+            "TomasVotruba\\Projects\\": "packages/projects/src",
             "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
             "TomasVotruba\\Blog\\": "packages/blog/src",
             "TomasVotruba\\CleaningLady\\": "packages/cleaning-lady/src",
@@ -77,7 +80,8 @@
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.com --output invalid-links.txt --ansi",
-        "rector": "vendor/bin/rector process --config rector-ci.php --ansi --dry-run",
+        "rector": "vendor/bin/rector process --config rector-ci.php --ansi",
+        "rector-ci": "vendor/bin/rector process --config rector-ci.php --ansi --dry-run",
         "thank": "bin/console thank-contributors",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",

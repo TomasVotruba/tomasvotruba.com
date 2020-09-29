@@ -71,6 +71,9 @@
     "jean85/pretty-package-versions": {
         "version": "1.2"
     },
+    "kevinrob/guzzle-cache-middleware": {
+        "version": "v3.3.1"
+    },
     "league/flysystem": {
         "version": "1.0.69"
     },

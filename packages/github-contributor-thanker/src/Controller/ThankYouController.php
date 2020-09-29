@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Controller;
+namespace TomasVotruba\GithubContributorsThanker\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
+use TomasVotruba\GithubContributorsThanker\ValueObject\Option;
 
 final class ThankYouController extends AbstractController
 {
@@ -18,7 +19,7 @@ final class ThankYouController extends AbstractController
 
     public function __construct(ParameterProvider $parameterProvider)
     {
-        $this->contributors = $parameterProvider->provideArrayParameter('contributors');
+        $this->contributors = $parameterProvider->provideArrayParameter(Option::CONTRIBUTORS);
     }
 
     /**

@@ -3,11 +3,12 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use TomasVotruba\Website\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set('talks_feedback', [
+    $parameters->set(Option::TALKS_FEEDBACK, [
         [
             'name' => 'Iurii Golikov',
             'photo' => 'https://secure.gravatar.com/avatar/019533bbd162b35aaf403145491843c1?d=mm&s=200',
