@@ -56,6 +56,7 @@
             "TomasVotruba\\Website\\": "src",
             "TomasVotruba\\FrameworkStats\\": "packages/framework-stats/src",
             "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
+            "TomasVotruba\\Projects\\": "packages/projects/src",
             "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
             "TomasVotruba\\Blog\\": "packages/blog/src",
             "TomasVotruba\\CleaningLady\\": "packages/cleaning-lady/src",

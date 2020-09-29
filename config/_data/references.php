@@ -3,18 +3,19 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use TomasVotruba\Website\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set('helped_companies', [
+    $parameters->set(Option::HELPED_COMPANIES, [
         'lekarna.png' => 'https://www.lekarna.cz/',
         'mall.png' => 'https://www.mall.cz/',
         'shopsys.png' => 'https://www.shopsys.com/',
         'elasticr.png' => 'https://www.elasticr.cz/',
     ]);
 
-    $parameters->set('references', [
+    $parameters->set(Option::REFERENCES, [
         [
             'text' => 'Tomas was able to prepare us lecture fulfilling our specific needs even beyond the area of his portfolio. Thoughts and techniques were clearly provided and easy to comprehend for the whole team.',
             'author' => 'Roman Veselý, Internal Systems Developer',

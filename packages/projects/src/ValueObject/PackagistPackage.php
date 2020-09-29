@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\ValueObject;
+namespace TomasVotruba\Projects\ValueObject;
 
 use Nette\Utils\Strings;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;

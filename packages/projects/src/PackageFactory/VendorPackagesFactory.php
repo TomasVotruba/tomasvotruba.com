@@ -2,16 +2,13 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Controller;
+namespace TomasVotruba\Projects\PackageFactory;
 
 use Spatie\Packagist\PackagistClient;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use TomasVotruba\Projects\ValueObject\PackagistPackage;
 use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
-use TomasVotruba\Website\ValueObject\PackagistPackage;
 
-final class ProjectsController extends AbstractController
+final class VendorPackagesFactory
 {
     private PackagistClient $packagistClient;
 
@@ -21,21 +18,9 @@ final class ProjectsController extends AbstractController
     }
 
     /**
-     * @Route(path="projects", name="projects")
-     */
-    public function __invoke(): Response
-    {
-        return $this->render('projects/projects.twig', [
-            'title' => 'Projects',
-            'symplify_packages' => $this->createPackagesByVendor('symplify'),
-            'migrify_packages' => $this->createPackagesByVendor('migrify'),
-        ]);
-    }
-
-    /**
      * @return PackagistPackage[]
      */
-    private function createPackagesByVendor(string $vendor): array
+    public function createPackagesByVendor(string $vendor): array
     {
         $packagistPackages = [];
 
