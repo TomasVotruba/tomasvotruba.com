@@ -186,6 +186,8 @@ final class PostFactory
     {
         $siteUrl = rtrim($this->siteUrl, '/');
 
-        return $siteUrl . $this->router->generate('post_detail', ['slug' => $slug]);
+        return $siteUrl . $this->router->generate('post_detail', [
+            'slug' => $slug,
+        ]);
     }
 }

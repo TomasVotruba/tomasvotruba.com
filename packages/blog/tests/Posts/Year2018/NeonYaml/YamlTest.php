@@ -44,7 +44,9 @@ final class YamlTest extends TestCase implements PostTestInterface
                     ],
                 ], ],
             # multi lines
-            [__DIR__ . '/Yaml/multi-lines.yml', ['perex' => 'Multi' . PHP_EOL . 'line']],
+            [__DIR__ . '/Yaml/multi-lines.yml', [
+                'perex' => 'Multi' . PHP_EOL . 'line',
+            ]],
         ];
     }
 

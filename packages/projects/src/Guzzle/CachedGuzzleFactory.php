@@ -26,6 +26,8 @@ final class CachedGuzzleFactory
         );
         $handlerStack->push($localCacheMiddleware, 'cache');
 
-        return new Client(['handler' => $handlerStack]);
+        return new Client([
+            'handler' => $handlerStack,
+        ]);
     }
 }
