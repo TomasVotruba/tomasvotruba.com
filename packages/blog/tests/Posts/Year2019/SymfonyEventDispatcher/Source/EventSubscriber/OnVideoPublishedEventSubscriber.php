@@ -16,7 +16,9 @@ final class OnVideoPublishedEventSubscriber implements EventSubscriberInterface
      */
     public static function getSubscribedEvents(): array
     {
-        return [YoutuberNameEvent::class => 'notifyUserAboutVideo'];
+        return [
+            YoutuberNameEvent::class => 'notifyUserAboutVideo',
+        ];
     }
 
     public function notifyUserAboutVideo(YoutuberNameEvent $youtuberNameEvent): void

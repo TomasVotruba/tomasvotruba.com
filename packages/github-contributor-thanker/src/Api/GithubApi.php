@@ -6,7 +6,7 @@ namespace TomasVotruba\GithubContributorsThanker\Api;
 
 use Symplify\PackageBuilder\Http\BetterGuzzleClient;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
-use TomasVotruba\GithubContributorsThanker\ValueObject\Option;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class GithubApi
 {

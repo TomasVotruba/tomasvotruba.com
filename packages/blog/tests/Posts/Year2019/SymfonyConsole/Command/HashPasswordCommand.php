@@ -12,16 +12,21 @@ use Symplify\PackageBuilder\Console\ShellCode;
 
 final class HashPasswordCommand extends Command
 {
+    /**
+     * @var string
+     */
+    private const ARGUMENT_PASSWORD = 'password';
+
     protected function configure(): void
     {
         $this->setName('hash-password');
         $this->setDescription('Hashes provided password with BCRYPT and prints to output.');
-        $this->addArgument('password', InputArgument::REQUIRED, 'Password to be hashed.');
+        $this->addArgument(self::ARGUMENT_PASSWORD, InputArgument::REQUIRED, 'Password to be hashed.');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $password = (string) $input->getArgument('password');
+        $password = (string) $input->getArgument(self::ARGUMENT_PASSWORD);
 
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 

@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\PackageBuilder\Http\BetterGuzzleClient;
 use Symplify\SmartFileSystem\SmartFileSystem;
-use TomasVotruba\GithubContributorsThanker\ValueObject\Option;
+use TomasVotruba\Website\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();

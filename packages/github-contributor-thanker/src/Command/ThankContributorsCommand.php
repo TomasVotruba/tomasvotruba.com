@@ -11,8 +11,8 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
 use TomasVotruba\GithubContributorsThanker\Api\GithubApi;
-use TomasVotruba\GithubContributorsThanker\ValueObject\Option;
 use TomasVotruba\Website\FIleSystem\ParametersConfigDumper;
+use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 final class ThankContributorsCommand extends Command
 {
@@ -53,7 +53,7 @@ final class ThankContributorsCommand extends Command
             return ShellCode::SUCCESS;
         }
 
-        $dumpFileInfo = $this->generatedFilesDumper->dumpPhp(Option::CONTRIBUTORS, $contributors);
+        $dumpFileInfo = $this->generatedFilesDumper->dumpPhp(OptionAlias::CONTRIBUTORS, $contributors);
 
         $successMessage = sprintf(
             'Dumped %d contributors to "%s" file',

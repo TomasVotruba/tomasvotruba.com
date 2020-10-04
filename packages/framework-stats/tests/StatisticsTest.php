@@ -13,7 +13,9 @@ final class StatisticsTest extends AbstractKernelTestCase
     /**
      * @var array<string, int>
      */
-    private const AVERAGE_DAILY_VALUES_BY_MONTH = ['2019-12' => 300];
+    private const AVERAGE_DAILY_VALUES_BY_MONTH = [
+        '2019-12' => 300,
+    ];
 
     private Statistics $statistics;
 
@@ -27,6 +29,8 @@ final class StatisticsTest extends AbstractKernelTestCase
     public function test(): void
     {
         $monthlyValuesByMonth = $this->statistics->expandDailyAverageToMonthTotal(self::AVERAGE_DAILY_VALUES_BY_MONTH);
-        $this->assertSame(['2019-12' => 9_300], $monthlyValuesByMonth);
+        $this->assertSame([
+            '2019-12' => 9_300,
+        ], $monthlyValuesByMonth);
     }
 }

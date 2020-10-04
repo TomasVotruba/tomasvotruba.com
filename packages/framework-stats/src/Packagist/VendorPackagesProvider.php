@@ -8,7 +8,7 @@ use Nette\Utils\Strings;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 use TomasVotruba\FrameworkStats\Json\FileToJsonLoader;
-use TomasVotruba\FrameworkStats\ValueObject\Option;
+use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 final class VendorPackagesProvider
 {
@@ -28,7 +28,7 @@ final class VendorPackagesProvider
     {
         $this->fileToJsonLoader = $fileToJsonLoader;
         $this->excludedFrameworkPackages = $parameterProvider->provideArrayParameter(
-            Option::EXCLUDED_FRAMEWORK_PACKAGES
+            OptionAlias::EXCLUDED_FRAMEWORK_PACKAGES
         );
     }
 

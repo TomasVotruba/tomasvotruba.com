@@ -14,9 +14,9 @@ use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileInfo;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
 use TomasVotruba\Blog\Testing\TestedPostAnalyzer;
-use TomasVotruba\Blog\ValueObject\Option;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
+use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 final class PostFactory
 {
@@ -62,10 +62,10 @@ final class PostFactory
         $this->pathAnalyzer = $pathAnalyzer;
         $this->router = $router;
 
-        $siteUrl = $parameterProvider->provideStringParameter(Option::SITE_URL);
+        $siteUrl = $parameterProvider->provideStringParameter(OptionAlias::SITE_URL);
         $this->siteUrl = rtrim($siteUrl, '/');
 
-        $projectDir = $parameterProvider->provideStringParameter(Option::KERNEL_PROJECT_DIR);
+        $projectDir = $parameterProvider->provideStringParameter(OptionAlias::KERNEL_PROJECT_DIR);
         $this->projectDir = $projectDir;
 
         $this->fileSystemGuard = $fileSystemGuard;
@@ -186,6 +186,8 @@ final class PostFactory
     {
         $siteUrl = rtrim($this->siteUrl, '/');
 
-        return $siteUrl . $this->router->generate('post_detail', ['slug' => $slug]);
+        return $siteUrl . $this->router->generate('post_detail', [
+            'slug' => $slug,
+        ]);
     }
 }
