@@ -6,19 +6,30 @@ namespace TomasVotruba\Website\Twig;
 
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Website\ValueObject\Option;
-use Twig\Environment;
 use Twig\Extension\AbstractExtension;
+use Twig\Extension\GlobalsInterface;
 
-final class GlobalVariablesTwigExtension extends AbstractExtension
+final class GlobalVariablesTwigExtension extends AbstractExtension implements GlobalsInterface
 {
-    public function __construct(Environment $environment, ParameterProvider $parameterProvider)
+    private ParameterProvider $parameterProvider;
+
+    public function __construct(ParameterProvider $parameterProvider)
     {
-        $contributors = $parameterProvider->provideArrayParameter(Option::CONTRIBUTORS);
-        $clusters = $parameterProvider->provideArrayParameter(Option::CLUSTERS);
+        $this->parameterProvider = $parameterProvider;
+    }
 
-        $contributorCount = count($contributors);
+    /**
+     * @see https://stackoverflow.com/a/42540337/1348344
+     * @return array<string, mixed>
+     */
+    public function getGlobals(): array
+    {
+        $contributors = $this->parameterProvider->provideArrayParameter(Option::CONTRIBUTORS);
+        $clusters = $this->parameterProvider->provideArrayParameter(Option::CLUSTERS);
 
-        $environment->addGlobal('contributors_count', $contributorCount);
-        $environment->addGlobal('clusters', $clusters);
+        return [
+            'contributors_count' => count($contributors),
+            'clusters' => $clusters,
+        ];
     }
 }

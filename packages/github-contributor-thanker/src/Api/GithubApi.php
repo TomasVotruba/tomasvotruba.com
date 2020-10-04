@@ -6,8 +6,7 @@ namespace TomasVotruba\GithubContributorsThanker\Api;
 
 use Symplify\PackageBuilder\Http\BetterGuzzleClient;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
-use TomasVotruba\GithubContributorsThanker\ValueObject\Option;
-use TomasVotruba\Website\ValueObject\Option as OptionAlias;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class GithubApi
 {
@@ -31,7 +30,7 @@ final class GithubApi
 
     public function __construct(BetterGuzzleClient $betterGuzzleClient, ParameterProvider $parameterProvider)
     {
-        $this->thankerRepositoryName = $parameterProvider->provideStringParameter(OptionAlias::THANKER_REPOSITORY_NAME);
+        $this->thankerRepositoryName = $parameterProvider->provideStringParameter(Option::THANKER_REPOSITORY_NAME);
         $this->thankerAuthorName = $parameterProvider->provideStringParameter(Option::THANKER_AUTHOR_NAME);
         $this->betterGuzzleClient = $betterGuzzleClient;
     }

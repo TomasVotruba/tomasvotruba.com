@@ -29,9 +29,9 @@ services:
                     provideIntParameter: [0]
 
 parameters:
-    symplify:
-        max_class_cognitive_complexity: 20
-        max_cognitive_complexity: 8
+#    symplify:
+#        max_class_cognitive_complexity: 20
+#        max_cognitive_complexity: 8
 
     paths:
         - bin
@@ -116,3 +116,15 @@ parameters:
             message: '#Method "__construct\(\)" is using too many parameters \- \d+\. Make it under 8#'
             paths:
                 - packages/blog/src/ValueObject/Post.php
+
+        # is fixed in dev-master
+        -
+            message: '#Array with keys is not allowed\. Use value object to pass data instead#'
+            paths:
+                - src/Twig/GlobalVariablesTwigExtension.php
+
+        -
+            message: '#Do not call parent method if no override process#'
+            paths:
+                - packages/blog/src/Posts/Year2018/ConsoleDI/App/AppKernel.php # 18
+                - packages/blog/src/Posts/Year2018/ParameterToSymfonyController/App/ParameterToSymfonyControllerAppKernel.php # 16
