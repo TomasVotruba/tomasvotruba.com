@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use TomasVotruba\FrameworkStats\ValueObject\Option;
+use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set(Option::FRAMEWORKS_VENDOR_TO_NAME, [
+    $parameters->set(OptionAlias::FRAMEWORKS_VENDOR_TO_NAME, [
         'nette' => 'Nette',
         'symfony' => 'Symfony',
         'illuminate' => 'Laravel',
@@ -18,7 +18,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         'doctrine' => 'Doctrine',
     ]);
 
-    $parameters->set(Option::EXCLUDED_FRAMEWORK_PACKAGES, [
+    $parameters->set(OptionAlias::EXCLUDED_FRAMEWORK_PACKAGES, [
         'symfony/security-guard',
         'symfony/security-http',
         'symfony/security-csrf',

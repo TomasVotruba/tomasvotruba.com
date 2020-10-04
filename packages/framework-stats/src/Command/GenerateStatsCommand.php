@@ -13,8 +13,8 @@ use Symplify\PackageBuilder\Console\ShellCode;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\FrameworkStats\Mapper\VendorDataMapper;
 use TomasVotruba\FrameworkStats\Result\VendorDataFactory;
-use TomasVotruba\FrameworkStats\ValueObject\Option;
 use TomasVotruba\Website\FIleSystem\ParametersConfigDumper;
+use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 final class GenerateStatsCommand extends Command
 {
@@ -43,7 +43,9 @@ final class GenerateStatsCommand extends Command
         $this->symfonyStyle = $symfonyStyle;
         $this->vendorDataFactory = $vendorDataFactory;
         $this->vendorDataMapper = $vendorDataMapper;
-        $this->frameworksVendorToName = $parameterProvider->provideArrayParameter(Option::FRAMEWORKS_VENDOR_TO_NAME);
+        $this->frameworksVendorToName = $parameterProvider->provideArrayParameter(
+            OptionAlias::FRAMEWORKS_VENDOR_TO_NAME
+        );
         $this->parametersConfigDumper = $parametersConfigDumper;
     }
 
@@ -61,7 +63,7 @@ final class GenerateStatsCommand extends Command
             $vendorsData['vendors'][$key] = $this->vendorDataMapper->mapObjectToArray($vendorData);
         }
 
-        $fileInfo = $this->parametersConfigDumper->dumpPhp(Option::PHP_FRAMEWORK_TRENDS, $vendorsData);
+        $fileInfo = $this->parametersConfigDumper->dumpPhp(OptionAlias::PHP_FRAMEWORK_TRENDS, $vendorsData);
 
         $message = sprintf(
             'Data for %d frameworks dumped into" %s" file',

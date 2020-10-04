@@ -6,19 +6,19 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use function Symfony\Component\DependencyInjection\Loader\Configurator\ref;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use Symplify\SmartFileSystem\FileSystemGuard;
-use TomasVotruba\Blog\ValueObject\Option;
 use TomasVotruba\Tweeter\TwitterApi\TwitterApiFactory;
+use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set(Option::TWITTER_NAME, '%env(TWEETER_NAME)%');
-    $parameters->set(Option::TWITTER_MINIMAL_GAP_IN_DAYS, 1);
-    $parameters->set(Option::TWITTER_MAXIMAL_DAYS_IN_PAST, 300);
-    $parameters->set(Option::TWITTER_CONSUMER_KEY, '%env(TWITTER_CONSUMER_KEY)%');
-    $parameters->set(Option::TWITTER_CONSUMER_SECRET, '%env(TWITTER_CONSUMER_SECRET)%');
-    $parameters->set(Option::TWITTER_OAUTH_ACCESS_TOKEN, '%env(TWITTER_OAUTH_ACCESS_TOKEN)%');
-    $parameters->set(Option::TWITTER_OAUTH_ACCESS_TOKEN_SECRET, '%env(TWITTER_OAUTH_ACCESS_TOKEN_SECRET)%');
+    $parameters->set(OptionAlias::TWITTER_NAME, '%env(TWEETER_NAME)%');
+    $parameters->set(OptionAlias::TWITTER_MINIMAL_GAP_IN_DAYS, 1);
+    $parameters->set(OptionAlias::TWITTER_MAXIMAL_DAYS_IN_PAST, 300);
+    $parameters->set(OptionAlias::TWITTER_CONSUMER_KEY, '%env(TWITTER_CONSUMER_KEY)%');
+    $parameters->set(OptionAlias::TWITTER_CONSUMER_SECRET, '%env(TWITTER_CONSUMER_SECRET)%');
+    $parameters->set(OptionAlias::TWITTER_OAUTH_ACCESS_TOKEN, '%env(TWITTER_OAUTH_ACCESS_TOKEN)%');
+    $parameters->set(OptionAlias::TWITTER_OAUTH_ACCESS_TOKEN_SECRET, '%env(TWITTER_OAUTH_ACCESS_TOKEN_SECRET)%');
 
     $services = $containerConfigurator->services();
 

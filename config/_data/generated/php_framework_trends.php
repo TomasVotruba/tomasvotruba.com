@@ -3,11 +3,12 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set('php_framework_trends', [
+    $parameters->set(OptionAlias::PHP_FRAMEWORK_TRENDS, [
         'vendors' => [[
             'vendor_name' => 'CakePHP',
             'vendor_total_last_year' => 24833878,

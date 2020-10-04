@@ -17,7 +17,7 @@ services:
                 'Symfony\Component\Filesystem\Filesystem': 'Symplify\SmartFileSystem\SmartFileSystem'
 
     -
-        class: Symplify\CodingStandard\Rules\ForceMethodCallArgumentConstantRule
+        class: Symplify\CodingStandard\Rules\RequireMethodCallArgumentConstantRule
         tags: [phpstan.rules.rule]
         arguments:
             constantArgByMethodByType:

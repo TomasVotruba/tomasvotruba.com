@@ -3,13 +3,12 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use TomasVotruba\GithubContributorsThanker\ValueObject\Option;
+use TomasVotruba\Website\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set(
-        Option::CONTRIBUTORS,
+    $parameters->set(Option::CONTRIBUTORS,
         [[
             'name' => 'vrbata',
             'url' => 'https://github.com/vrbata',
