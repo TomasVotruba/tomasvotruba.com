@@ -95,6 +95,9 @@
     "migrify/php-config-printer": {
         "version": "v0.3.32"
     },
+    "migrify/static-detector": {
+        "version": "0.3.48"
+    },
     "myclabs/deep-copy": {
         "version": "1.9.5"
     },

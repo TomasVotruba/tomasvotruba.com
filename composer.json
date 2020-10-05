@@ -36,6 +36,7 @@
         "friendsofphp/php-cs-fixer": "^2.16",
         "migrify/config-transformer": "^0.3.11",
         "migrify/latte-to-twig": "^0.3.11",
+        "migrify/static-detector": "^0.3.48",
         "nette/neon": "^3.1",
         "nette/security": "^3.0",
         "phpstan/phpstan": "^0.12.34",
