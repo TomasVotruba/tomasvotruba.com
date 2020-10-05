@@ -27,6 +27,10 @@ final class ProjectsController extends AbstractController
             'title' => 'Projects',
             'symplify_packages' => $this->vendorPackagesFactory->createPackagesByVendor('symplify'),
             'migrify_packages' => $this->vendorPackagesFactory->createPackagesByVendor('migrify'),
+            'other_packages' => $this->vendorPackagesFactory->createPackagesByPackageNames([
+                'knplabs/doctrine-behaviors',
+                'cpliakas/git-wrapper',
+            ]),
         ]);
     }
 }

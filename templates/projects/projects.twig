@@ -51,14 +51,17 @@
 
         <p>A monorepo of PHP packagest, that helps with PHP projects migrations and then make sure that project stays healthy = check your code in CI.</p>
 
-        <p class="mt-3">
-            <a href="http://github.com/migrify/migrify" class="btn btn-dark btn-sm">
-                <em class="fab fa-github fa-fw"></em>
-                Github Repository
-            </a>
-        </p>
-
         {% include "_snippets/package_list.twig" with { packages: migrify_packages } %}
+
+        <hr class="mt-5">
+
+        <h2>
+            3rd Party Open-Source Maintenance
+        </h2>
+
+        <p>I took over few packages, that were dying, abandoned in sand of time in dark lonely walley. Now they thrive and live on with high quality CI setup and occasional care.</p>
+
+        {% include "_snippets/package_list.twig" with { packages: other_packages } %}
 
         <hr class="mt-5">
 
