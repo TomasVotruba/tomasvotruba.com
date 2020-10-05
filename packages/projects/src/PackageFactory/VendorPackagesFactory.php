@@ -35,6 +35,15 @@ final class VendorPackagesFactory
         return $packages;
     }
 
+    /**
+     * @param string[] $packageNames
+     * @return Package[]
+     */
+    public function createPackagesByPackageNames(array $packageNames): array
+    {
+        return $this->createPackagesFromPackagesNames($packageNames);
+    }
+
     private function getPackageData(string $packageName): array
     {
         $packageData = $this->packagistClient->getPackage($packageName);
@@ -45,17 +54,35 @@ final class VendorPackagesFactory
         return $packageData['package'];
     }
 
+    /**
+     * @return Package[]
+     */
     private function createPackages(string $vendor): array
     {
-        $packages = [];
+        $packageNames = $this->resolvePackageNamesByVendorName($vendor);
+        return $this->createPackagesFromPackagesNames($packageNames);
+    }
 
-        $symplifyPackages = $this->packagistClient->getPackagesNamesByVendor($vendor);
-        if ($symplifyPackages === null) {
+    private function resolvePackageNamesByVendorName(string $vendor): array
+    {
+        $vendorPackages = $this->packagistClient->getPackagesNamesByVendor($vendor);
+        if ($vendorPackages === null) {
             throw new ShouldNotHappenException();
         }
 
-        foreach ($symplifyPackages['packageNames'] as $symplifyPackageName) {
-            $packageData = $this->getPackageData($symplifyPackageName);
+        return $vendorPackages['packageNames'];
+    }
+
+    /**
+     * @param string[] $packageNames
+     * @return Package[]
+     */
+    private function createPackagesFromPackagesNames(array $packageNames): array
+    {
+        $packages = [];
+
+        foreach ($packageNames as $packageName) {
+            $packageData = $this->getPackageData($packageName);
 
             // skip
             if (isset($packageData['abandoned'])) {
