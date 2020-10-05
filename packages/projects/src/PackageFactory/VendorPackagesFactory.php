@@ -35,6 +35,15 @@ final class VendorPackagesFactory
         return $packages;
     }
 
+    /**
+     * @param string[] $packageNames
+     * @return Package[]
+     */
+    public function createPackagesByPackageNames(array $packageNames): array
+    {
+        return $this->createPackagesFromPackagesNames($packageNames);
+    }
+
     private function getPackageData(string $packageName): array
     {
         $packageData = $this->packagistClient->getPackage($packageName);
@@ -51,15 +60,6 @@ final class VendorPackagesFactory
     private function createPackages(string $vendor): array
     {
         $packageNames = $this->resolvePackageNamesByVendorName($vendor);
-        return $this->createPackagesFromPackagesNames($packageNames);
-    }
-
-    /**
-     * @param string[] $packageNames
-     * @param Package[]
-     */
-    public function createPackagesByPackageNames(array $packageNames): array
-    {
         return $this->createPackagesFromPackagesNames($packageNames);
     }
 
