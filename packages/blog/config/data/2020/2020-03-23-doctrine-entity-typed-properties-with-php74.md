@@ -34,7 +34,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Trainer
 {
     /**
-     * @ORM\OneToMany(targetEntity="Pehapkari\Training\Entity\Training", mappedBy="trainer")
+     * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
      * @var Collection|Trainer[]
      */
     private $trainings = [];
@@ -73,7 +73,7 @@ In PHP 7.4, **the property is the king** - the rest of the code has to respect t
 
 ```diff
  /**
-  * @ORM\OneToMany(targetEntity="Pehapkari\Training\Entity\Training", mappedBy="trainer")
+  * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
   * @var Collection|Trainer[]
   */
 -private $trainings = [];
@@ -96,7 +96,7 @@ Pick one...
 
 ```diff
  /**
-  * @ORM\OneToMany(targetEntity="Pehapkari\Training\Entity\Training", mappedBy="trainer")
+  * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
   * @var Collection|Trainer[]
   */
 -private $trainings = [];
@@ -109,7 +109,7 @@ But PHP 7.4 now complains that the `Collection` object cannot be `[]` by default
 
 ```diff
  /**
-  * @ORM\OneToMany(targetEntity="Pehapkari\Training\Entity\Training", mappedBy="trainer")
+  * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
   * @var Collection|Trainer[]
   */
 -private Collection $trainings = [];
@@ -160,7 +160,7 @@ All right, we have correct type, it's initialized in the constructor... now a bi
 
 ```diff
  /**
-  * @ORM\OneToMany(targetEntity="Pehapkari\Training\Entity\Training", mappedBy="trainer")
+  * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
 - * @var Collection|Trainer[]
 + * @var Collection&Trainer[]
   */
@@ -171,7 +171,7 @@ You might also use this PHPStan format, but I'm not sure how PHPStorm handles th
 
 ```diff
  /**
-  * @ORM\OneToMany(targetEntity="Pehapkari\Training\Entity\Training", mappedBy="trainer")
+  * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
 - * @var Collection|Trainer[]
 + * @var Collection<Trainer>
   */
