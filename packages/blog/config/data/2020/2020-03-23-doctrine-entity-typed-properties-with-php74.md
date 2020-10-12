@@ -173,7 +173,7 @@ You might also use this PHPStan format, but I'm not sure how PHPStorm handles th
  /**
   * @ORM\OneToMany(targetEntity="Pehapkari\Training\Entity\Training", mappedBy="trainer")
 - * @var Collection|Trainer[]
-+ * @var Collection<Trainer>
++ * @var Collection<int, Trainer>
   */
  private Collection $trainings;
 ```
