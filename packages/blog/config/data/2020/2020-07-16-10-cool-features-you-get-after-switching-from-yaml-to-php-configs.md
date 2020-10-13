@@ -60,7 +60,7 @@ The YAML config **will not show you**, if class was deprecated:
 
 <img src="/assets/images/posts/2020/yaml_php_deprecated_class_yaml.png" class="img-thumbnail">
 
-PHP will ~~cross the deprecated class~~ and prepare you better for the future:
+PHPStorm will ~~cross the deprecated class~~ and prepare you better for the future:
 
 <img src="/assets/images/posts/2020/yaml_php_deprecated.png" class="img-thumbnail">
 
@@ -69,7 +69,7 @@ PHP will ~~cross the deprecated class~~ and prepare you better for the future:
 
 In YAML, everything is a string by default, so YAML doesn't know that you mean *a class*.
 
-PHP show that pretty clearly:
+PHPStorm shows that pretty clearly:
 
 <img src="/assets/images/posts/2020/yaml_php_missing_class.png" class="img-thumbnail">
 
