@@ -122,11 +122,11 @@ But PHP 7.4 now complains that it's `null` by default, so it has to nullable.
 If it's not enforced, nobody cares.
 </blockquote>
 
-Here is where *best practices* become defaults. Do you know [initialize collections in the constructor](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/best-practices.html#initialize-collections-in-the-constructor) best practice?
+Here is where *best practices* become defaults. Do you know the "[initialize collections in the constructor](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/best-practices.html#initialize-collections-in-the-constructor)" best practice?
 
 <img src="/assets/images/posts/2020/typed_doctrine_properties_best_practise.png" class="img-thumbnail">
 
-This helps to work Doctrine in more realiable way. Well, it *was*.
+This was an optional improvement to help Doctrine work in a more realiable way. Well, it *was*.
 Now we **have to use it** to make our code work:
 
 ```diff
@@ -156,7 +156,7 @@ Now we **have to use it** to make our code work:
  }
 ```
 
-All right, we have correct type, it's initialized in the constructor... now a bit more polishing:
+All right, we have the correct type, it's initialized in the constructor... now a bit more polishing:
 
 ```diff
  /**
@@ -198,7 +198,7 @@ public function getTrainings(): iterable
 }
 ```
 
-What about return type? Look on the property type:
+What about the return type? Look at the property type:
 
 ```diff
  <?php
@@ -235,7 +235,7 @@ And we're ready to go!
 
 ## 3. Setter Method?
 
-I bet you handle this already from the top of your head, so to compare:
+I bet you handled this already from the top of your head, so let's compare:
 
 ```diff
  <?php
@@ -253,7 +253,7 @@ I bet you handle this already from the top of your head, so to compare:
 
 <br>
 
-Do you want to see real code? Look at full pull request:
+Do you want to see real code? Look at the full pull request:
 
 <a href="https://github.com/pehapkari/pehapkari.cz/pull/297/files">
 <img src="/assets/images/posts/2020/typed_doctrine_properties_collection.png" class="img-thumbnail">
@@ -263,11 +263,11 @@ Do you want to see real code? Look at full pull request:
 
 Have you tried [EasyAdminBundle](https://github.com/EasyCorp/EasyAdminBundle) to delegate your full administration? If not, give it go.
 
-**It creates data grids, forms, edit/update/add/delete controllers. All this with simple and beautiful UX. All you need to do is define your entities and register then in YAML config.** I love it!
+**It creates data grids, forms, edit/update/add/delete controllers. All this with simple and beautiful UX. All you need to do is define your entities and register them in YAML config.** I love it!
 
 <br>
 
-Huge thanks to [Javier Eguiluz](https://github.com/javiereguiluz), creator and maintainer of this bundle, who also behind amazing **690&nbsp;issues** of [Weeks of Symfony](https://symfony.com/blog/category/a-week-of-symfony).
+Huge thanks to [Javier Eguiluz](https://github.com/javiereguiluz), creator and maintainer of this bundle, who's also behind amazing **690&nbsp;issues** of [Weeks of Symfony](https://symfony.com/blog/category/a-week-of-symfony).
 
 <br>
 
