@@ -40,7 +40,7 @@ class Trainer
     private $trainings = [];
 
     /**
-     * @param Training[]|Collection $collection
+     * @param Collection<int, Training>|Training[] $collection
      */
     public function setTrainings(array $collection): void
     {
@@ -48,7 +48,7 @@ class Trainer
     }
 
     /**
-     * @return Collection|Training[]
+     * @return Collection<int, Training>|Training[]
      */
     public function getTrainings(): iterable
     {
@@ -97,7 +97,7 @@ Pick one...
 ```diff
  /**
   * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
-  * @var Collection|Trainer[]
+  * @var Collection<int, Trainer>|Trainer[]
   */
 -private $trainings = [];
 +private Collection $trainings = [];
@@ -110,7 +110,7 @@ But PHP 7.4 now complains that the `Collection` object cannot be `[]` by default
 ```diff
  /**
   * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
-  * @var Collection|Trainer[]
+  * @var Collection<int, Trainer>|Trainer[]
   */
 -private Collection $trainings = [];
 +private Collection $trainings;
@@ -156,29 +156,9 @@ Now we **have to use it** to make our code work:
  }
 ```
 
-All right, we have the correct type, it's initialized in the constructor... now a bit more polishing:
+All right, we have the correct type, it's initialized in the constructor.
 
-```diff
- /**
-  * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
-- * @var Collection|Trainer[]
-+ * @var Collection&Trainer[]
-  */
- private Collection $trainings;
-```
-
-You might also use this PHPStan format, but I'm not sure how PHPStorm handles that:
-
-```diff
- /**
-  * @ORM\OneToMany(targetEntity=Training::class, mappedBy="trainer")
-- * @var Collection|Trainer[]
-+ * @var Collection<int, Trainer>
-  */
- private Collection $trainings;
-```
-
-And that's it. Our property is ready!
+Our property is ready!
 
 <br>
 
@@ -190,7 +170,7 @@ And that's it. Our property is ready!
 // ...
 
 /**
- * @return Collection|Training[]
+ * @return Collection<int, Training>|Training[]
  */
 public function getTrainings(): iterable
 {
@@ -204,7 +184,7 @@ What about the return type? Look at the property type:
  <?php
 
  /**
-  * @return Collection|Training[]
+  * @return Collection<int, Training>|Training[]
   */
 -public function getTrainings(): iterable
 +public function getTrainings(): Collection
@@ -213,25 +193,7 @@ What about the return type? Look at the property type:
  }
 ```
 
-Drop in a bit of polishing:
-
-```diff
- <?php
-
- /**
-- * @return Collection|Training[]
-+ * @return Collection&Training[]
-  */
- public function getTrainings(): Collection
- {
-     return $this->trainings;
- }
-```
-
 And we're ready to go!
-
-
-
 
 ## 3. Setter Method?
 
@@ -241,8 +203,7 @@ I bet you handled this already from the top of your head, so let's compare:
  <?php
 
  /**
-- * @param Collection|Training[] $trainings
-+ * @param Collection&Training[] $trainings
+  * @param Collection<int, Training>|Training[] $trainings
   */
 -public function setTrainings(array $trainings): void
 +public function setTrainings(Collection $trainings): void

@@ -14,47 +14,8 @@ final class CleaningCheckListFactory
     {
         $cleaningSections = [];
 
-        $cleaningSections[] = new CleaningSection('Repository', [
-            new CleaningItem(
-                'add .editorconfig for all files',
-                null,
-                'https://tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
-            ),
-            new CleaningItem(
-                'apply .editorconfig indent with eclint for all files',
-                'https://stackoverflow.com/a/41655803/1348344',
-            ),
-            new CleaningItem(
-                'move vendor to /vendor if somewhere else',
-                null,
-                'https://tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
-            ),
-            new CleaningItem(
-                'apply 1-level directory approach, e.g. configs in /config',
-                null,
-                'https://tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
-            ),
-        ]);
-
-        $cleaningSections[] = new CleaningSection('composer.json', [
-            new CleaningItem(
-                'make sure php version is specified',
-                null,
-                'https://tomasvotruba.com/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/#2-explicit-php-version'
-            ),
-            new CleaningItem(
-                'make sure "classmap" is converted to PSR-4',
-                null,
-                'https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading'
-            ),
-            new CleaningItem('make sure "files" is converted to PSR-4'),
-            new CleaningItem(
-                'add composer scripts for coding standard, PHPStan and Rector',
-                'https://blog.martinhujer.cz/have-you-tried-composer-scripts/'
-            ),
-            new CleaningItem('each composer script has --ansi option, to enable colors in CI'),
-            new CleaningItem('move composer scripts options (e.g. --set or --autoload) to config'),
-        ]);
+        $cleaningSections[] = $this->createRepositoryCleaningSection();
+        $cleaningSections[] = $this->createComposerCleaningSection();
 
         $cleaningSections[] = new CleaningSection('Class naming', [
             new CleaningItem(
@@ -64,33 +25,9 @@ final class CleaningCheckListFactory
             new CleaningItem('suffix interface "Interface"', 'https://github.com/Slamdunk/phpstan-extensions'),
         ]);
 
-        $cleaningSections[] = new CleaningSection('Tests', [
-            new CleaningItem('make sure tests are in PSR-4, not in PHPUnit autoload magic format'),
-            new CleaningItem('run tests in continuous integration'),
-            new CleaningItem('make use phpunit.xml is in the root directory'),
-            new CleaningItem('make sure the file structure is idential to /src'),
-        ]);
-
-        $cleaningSections[] = new CleaningSection('Docblocks', [
-            new CleaningItem(
-                'remove @author, @covers, @groups',
-                'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/2.16/src/Fixer/Phpdoc/GeneralPhpdocAnnotationRemoveFixer.php'
-            ),
-            new CleaningItem('remove "class generated ..." spam'),
-            new CleaningItem('remove license spam from every file, put into LICENSE file in the root'),
-        ]);
-
-        $cleaningSections[] = new CleaningSection('Docker', [
-            new CleaningItem('have Dockerfile', 'https://github.com/rectorphp/getrector.org/blob/master/Dockerfile'),
-            new CleaningItem(
-                'have docker-composer.dist.yml',
-                'https://github.com/rectorphp/getrector.org/blob/master/docker-compose.dist.yml'
-            ),
-            new CleaningItem(
-                'have a docs/run_in_docker.md with manual',
-                'https://github.com/rectorphp/getrector.org#configure'
-            ),
-        ]);
+        $cleaningSections[] = $this->createTestsCleaningSection();
+        $cleaningSections[] = $this->createDocBlocksCleaningSection();
+        $cleaningSections[] = $this->createDockerCleaningItems();
 
         $cleaningSections[] = new CleaningSection('Config', [
             new CleaningItem(
@@ -106,7 +43,60 @@ final class CleaningCheckListFactory
             ),
         ]);
 
-        $cleaningSections[] = new CleaningSection('Coding Standard', [
+        $cleaningSections[] = $this->createCodingStandardCleaningSection();
+        $cleaningSections[] = $this->createPHPStanCleaningSection();
+
+        $rectorCleaningItems = [
+            new CleaningItem(
+                'add Rector',
+                'https://getrector.org/blog/2020/01/20/how-to-install-rector-despite-composer-conflicts'
+            ),
+            new CleaningItem(
+                'add Rector standalone CI job',
+                'https://github.com/symplify/symplify/blob/master/.github/workflows/rector_ci.yaml'
+            ),
+            new CleaningItem(
+                'finalize classes without children',
+                'https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#finalizeclasseswithoutchildrenrector',
+                'https://tomasvotruba.com/blog/2019/01/24/how-to-kill-parents/'
+            ),
+            new CleaningItem(
+                'complete @var types to all your properties',
+                'https://tomasvotruba.com/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day/'
+            ),
+            new CleaningItem(
+                'remove dead code',
+                null,
+                'https://tomasvotruba.com/blog/2019/12/09/how-to-get-rid-of-technical-debt-or-what-we-would-have-done-differently-2-years-ago/'
+            ),
+            new CleaningItem(
+                'split grouped property and constant definitions',
+                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#splitgroupedconstantsandpropertiesrector',
+            ),
+            new CleaningItem(
+                'split grouped use imports definitions',
+                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#splitgroupeduseimportsrector',
+            ),
+        ];
+        $cleaningSections[] = new CleaningSection('Rector', $rectorCleaningItems);
+
+        $cleaningSections[] = new CleaningSection('Symfony', [
+            new CleaningItem(
+                'migrate configs to PSR-4 autodiscovery',
+                'https://tomasvotruba.com/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/'
+            ),
+        ]);
+
+        $cleaningSections[] = new CleaningSection('Nette', [
+            new CleaningItem('decouple RouterFactory to own service'),
+        ]);
+
+        return new CleaningChecklist($cleaningSections);
+    }
+
+    private function createCodingStandardCleaningSection(): CleaningSection
+    {
+        $cleaningItems = [
             new CleaningItem('add Easy Coding Standard', 'https://github.com/symplify/easy-coding-standard'),
             new CleaningItem(
                 'add coding standard as standalone CI job',
@@ -142,9 +132,14 @@ final class CleaningCheckListFactory
                 'change class::method() string references to ::class',
                 'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#splitstringclassconstanttoclassconstfetchrector'
             ),
-        ]);
+        ];
 
-        $cleaningSections[] = new CleaningSection('PHPStan', [
+        return new CleaningSection('Coding Standard', $cleaningItems);
+    }
+
+    private function createPHPStanCleaningSection(): CleaningSection
+    {
+        $cleaningItems = [
             new CleaningItem('add PHPStan'),
             new CleaningItem('add level 0'),
             new CleaningItem(
@@ -155,52 +150,103 @@ final class CleaningCheckListFactory
                 'add PHPStan as standalone CI job',
                 'https://github.com/rectorphp/rector/blob/a51551c246a2bbbbabd30ab8512df08e8fa26444/.github/workflows/phpstan.yaml'
             ),
-        ]);
+        ];
 
-        $cleaningSections[] = new CleaningSection('Rector', [
+        return new CleaningSection('PHPStan', $cleaningItems);
+    }
+
+    private function createComposerCleaningSection(): CleaningSection
+    {
+        $cleaningItems = [
             new CleaningItem(
-                'add Rector',
-                'https://getrector.org/blog/2020/01/20/how-to-install-rector-despite-composer-conflicts'
-            ),
-            new CleaningItem(
-                'add Rector standalone CI job',
-                'https://github.com/symplify/symplify/blob/master/.github/workflows/rector_ci.yaml'
-            ),
-            new CleaningItem(
-                'finalize classes without children',
-                'https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#finalizeclasseswithoutchildrenrector',
-                'https://tomasvotruba.com/blog/2019/01/24/how-to-kill-parents/'
-            ),
-            new CleaningItem(
-                'complete @var types to all your properties',
-                'https://tomasvotruba.com/blog/2019/07/29/how-we-completed-thousands-of-missing-var-annotations-in-a-day/'
-            ),
-            new CleaningItem(
-                'remove dead code',
+                'make sure php version is specified',
                 null,
-                'https://tomasvotruba.com/blog/2019/12/09/how-to-get-rid-of-technical-debt-or-what-we-would-have-done-differently-2-years-ago/'
+                'https://tomasvotruba.com/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/#2-explicit-php-version'
             ),
             new CleaningItem(
-                'split grouped property and constant definitions',
-                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#splitgroupedconstantsandpropertiesrector',
+                'make sure "classmap" is converted to PSR-4',
+                null,
+                'https://pehapkari.cz/blog/2017/03/02/drop-robot-loader-and-let-composer-deal-with-autoloading'
+            ),
+            new CleaningItem('make sure "files" is converted to PSR-4'),
+            new CleaningItem(
+                'add composer scripts for coding standard, PHPStan and Rector',
+                'https://blog.martinhujer.cz/have-you-tried-composer-scripts/'
+            ),
+            new CleaningItem('each composer script has --ansi option, to enable colors in CI'),
+            new CleaningItem('move composer scripts options (e.g. --set or --autoload) to config'),
+        ];
+
+        return new CleaningSection('composer.json', $cleaningItems);
+    }
+
+    private function createRepositoryCleaningSection(): CleaningSection
+    {
+        $cleaningItems = [
+            new CleaningItem(
+                'add .editorconfig for all files',
+                null,
+                'https://tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
             ),
             new CleaningItem(
-                'split grouped use imports definitions',
-                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#splitgroupeduseimportsrector',
+                'apply .editorconfig indent with eclint for all files',
+                'https://stackoverflow.com/a/41655803/1348344',
             ),
-        ]);
-
-        $cleaningSections[] = new CleaningSection('Symfony', [
             new CleaningItem(
-                'migrate configs to PSR-4 autodiscovery',
-                'https://tomasvotruba.com/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/'
+                'move vendor to /vendor if somewhere else',
+                null,
+                'https://tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
             ),
-        ]);
+            new CleaningItem(
+                'apply 1-level directory approach, e.g. configs in /config',
+                null,
+                'https://tomasvotruba.com/blog/2019/12/23/5-things-i-improve-when-i-get-to-new-repository/'
+            ),
+        ];
 
-        $cleaningSections[] = new CleaningSection('Nette', [
-            new CleaningItem('decouple RouterFactory to own service'),
-        ]);
+        return new CleaningSection('Repository', $cleaningItems);
+    }
 
-        return new CleaningChecklist($cleaningSections);
+    private function createTestsCleaningSection(): CleaningSection
+    {
+        $cleaningItems = [
+            new CleaningItem('make sure tests are in PSR-4, not in PHPUnit autoload magic format'),
+            new CleaningItem('run tests in continuous integration'),
+            new CleaningItem('make use phpunit.xml is in the root directory'),
+            new CleaningItem('make sure the file structure is idential to /src'),
+        ];
+
+        return new CleaningSection('Tests', $cleaningItems);
+    }
+
+    private function createDocBlocksCleaningSection(): CleaningSection
+    {
+        $cleaningItems = [
+            new CleaningItem(
+                'remove @author, @covers, @groups',
+                'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/2.16/src/Fixer/Phpdoc/GeneralPhpdocAnnotationRemoveFixer.php'
+            ),
+            new CleaningItem('remove "class generated ..." spam'),
+            new CleaningItem('remove license spam from every file, put into LICENSE file in the root'),
+        ];
+
+        return new CleaningSection('Docblocks', $cleaningItems);
+    }
+
+    private function createDockerCleaningItems(): CleaningSection
+    {
+        $cleaningItems = [
+            new CleaningItem('have Dockerfile', 'https://github.com/rectorphp/getrector.org/blob/master/Dockerfile'),
+            new CleaningItem(
+                'have docker-composer.dist.yml',
+                'https://github.com/rectorphp/getrector.org/blob/master/docker-compose.dist.yml'
+            ),
+            new CleaningItem(
+                'have a docs/run_in_docker.md with manual',
+                'https://github.com/rectorphp/getrector.org#configure'
+            ),
+        ];
+
+        return new CleaningSection('Docker', $cleaningItems);
     }
 }

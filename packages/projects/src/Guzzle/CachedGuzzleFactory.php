@@ -21,9 +21,8 @@ final class CachedGuzzleFactory
     {
         $handlerStack = HandlerStack::create();
 
-        $localCacheMiddleware = new CacheMiddleware(
-            new GreedyCacheStrategy(new FlysystemStorage(new Local(sys_get_temp_dir() . '/guzzle_cache')), 180)
-        );
+        $flysystemStorage = new FlysystemStorage(new Local(sys_get_temp_dir() . '/guzzle_cache'));
+        $localCacheMiddleware = new CacheMiddleware(new GreedyCacheStrategy($flysystemStorage, 180));
         $handlerStack->push($localCacheMiddleware, 'cache');
 
         return new Client([
