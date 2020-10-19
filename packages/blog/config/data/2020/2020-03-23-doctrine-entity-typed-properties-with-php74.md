@@ -8,6 +8,10 @@ perex: |
     <br>
     Today we'll look at **the impact of typed properties on weak points of Doctrine entities and how to solve them**.
 
+updated_since: "October 2020"
+updated_message: |
+    Updated with **PHPStorm and PHPStan friendly** `Collection` syntax and [Rector rule](https://github.com/rectorphp/rector/pull/4442) that handles the change for you.
+
 tweet: "New Post on #php 🐘 blog: #doctrine Entity Typed Properties With PHP 7.4"
 tweet_image: "/assets/images/posts/2020/typed_doctrine_properties_collection.png"
 ---
@@ -278,6 +282,12 @@ I did not do the upgrade pull-request myself (I'm way too lazy for that), [Recto
 ```bash
 composer require rector/rector --dev
 vendor/bin/rector process src --set php74 # add "--dry-run" to check first
+```
+
+Tip: Do you want to update your `Collection` syntax for PHPStorm and PHPStan friendly?
+
+```bash
+vendor/bin/rector process src --set doctrine-code-quality
 ```
 
 If you got any troubles, [let us know on GitHub](https://github.com/rectorphp/rector/issues/new/choose). That's all, folks.

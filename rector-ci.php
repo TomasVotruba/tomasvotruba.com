@@ -16,6 +16,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         SetList::NETTE_UTILS_CODE_QUALITY,
         SetList::SOLID,
         SetList::NAMING,
+        SetList::DOCTRINE_CODE_QUALITY,
     ]);
 
     $parameters->set(Option::PATHS, [__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages']);
