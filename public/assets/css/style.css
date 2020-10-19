@@ -374,9 +374,11 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 }
 
 #post {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     /* inspiration https://christoph-rumpel.com/2020/8/refactoring-php */
     font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+
+    line-height: 1.6em;
 }
 
 /* default post setting */
@@ -390,6 +392,10 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 #post img {
     text-align: center;
     margin: .5em auto 1.5em auto;
+}
+
+#post h2 {
+    font-size: 1.6em;
 }
 
 #post h1 {
