@@ -37,7 +37,7 @@ They will be able to focus more and produce better quality code."
 
 In [Rector](https://github.com/rectorphp/rector/pulse/monthly), [Symplify](https://github.com/symplify/symplify/pulse/monthly) and [Migrify](https://github.com/migrify/migrify/pulse/monthly) [mono-repositories](/clusters/#monorepo-from-zero-to-hero) we had 240 merge-request for just last month.
 
-That's **240 distractions with ~5 minutes upkeep** = 2O hours wasted by brain-waiting and much more work ruined.
+That's **240 distractions with ~5 minutes upkeep** = 20 hours wasted by brain-waiting and much more work ruined.
 
 
 ## Delegate and Automate Merge Request
