@@ -199,6 +199,9 @@
     "psr/event-dispatcher": {
         "version": "1.0.0"
     },
+    "psr/http-client": {
+        "version": "1.0.1"
+    },
     "psr/http-message": {
         "version": "1.0.1"
     },
@@ -329,6 +332,9 @@
     "symfony/dependency-injection": {
         "version": "v5.0.5"
     },
+    "symfony/deprecation-contracts": {
+        "version": "v2.2.0"
+    },
     "symfony/dom-crawler": {
         "version": "v5.1.2"
     },
@@ -385,6 +391,9 @@
             "src/Kernel.php"
         ]
     },
+    "symfony/http-client-contracts": {
+        "version": "v2.3.1"
+    },
     "symfony/http-foundation": {
         "version": "v5.0.5"
     },
@@ -400,8 +409,14 @@
     "symfony/polyfill-ctype": {
         "version": "v1.14.0"
     },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.20.0"
+    },
     "symfony/polyfill-intl-idn": {
         "version": "v1.14.0"
+    },
+    "symfony/polyfill-intl-normalizer": {
+        "version": "v1.20.0"
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.14.0"
@@ -440,6 +455,9 @@
     },
     "symfony/stopwatch": {
         "version": "v5.0.5"
+    },
+    "symfony/string": {
+        "version": "v5.1.8"
     },
     "symfony/translation-contracts": {
         "version": "v2.0.1"
@@ -482,6 +500,9 @@
     "symplify/coding-standard": {
         "version": "v7.2.4"
     },
+    "symplify/composer-json-manipulator": {
+        "version": "8.3.48"
+    },
     "symplify/console-color-diff": {
         "version": "v7.3.13"
     },
@@ -508,6 +529,9 @@
     },
     "symplify/symfony-static-dumper": {
         "version": "v7.2.4"
+    },
+    "symplify/symplify-kernel": {
+        "version": "8.3.48"
     },
     "theseer/tokenizer": {
         "version": "1.1.3"
