@@ -10,19 +10,6 @@ install:
     - composer install
 
 scripts:
-    # build static version to /output directory
-    # used for deploy
-    - bin/console dump-static-site --ansi
-
-deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    on:
-        branch: master
-    local_dir: output
-
-after_deploy:
     # tweet a new post - depends on content being published on server, so must be AFTER deploy
     # get tokens to Travis ENV: https://travis-ci.com/TomasVotruba/tomasvotruba.com/settings
     # from here: https://developer.twitter.com/en/apps/14147884

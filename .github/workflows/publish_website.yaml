@@ -1,0 +1,32 @@
+name: Publish Website
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    publish_website:
+        runs-on: ubuntu-latest
+
+        steps:
+            -   uses: actions/checkout@v1
+
+            -   uses: shivammathur/setup-php@v2
+                with:
+                    php-version: 7.4
+
+            -   run: composer install --no-progress --ansi
+
+            # generate website to /output directory
+            -   run: bin/console dump-static-site --ansi
+
+            # see https://github.com/JamesIves/github-pages-deploy-action
+            -
+                name: Deploy 🚀
+                uses: JamesIves/github-pages-deploy-action@3.7.1
+                with:
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    BRANCH: gh-pages
+                    FOLDER: output
+                    CLEAN: true
