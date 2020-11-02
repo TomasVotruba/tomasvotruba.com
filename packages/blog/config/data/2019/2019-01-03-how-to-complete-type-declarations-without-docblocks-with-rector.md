@@ -9,6 +9,10 @@ perex: |
 tweet: "New Post on #php 🐘 blog: How to Complete Type Declarations without Docblocks with #Rectorphp"
 tweet_image: "/assets/images/posts/2019/type-declarations/peek.gif"
 
+deprecated_since: "November 2020"
+deprecated_message: |
+    `DynamicTypeAnalysis` was removed from Rector on November 30, 2020 as it was not alligned with Rector philosophy of instant refactoring and was way too theoretical.
+
 updated_since: "August 2020"
 updated_message: |
     Updated Rector YAML to PHP configuration, as current standard.
