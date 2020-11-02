@@ -1,8 +1,11 @@
 name: Refresh Framework Stats
 
 on:
+    push:
+        branches:
+            - master
+
     # to try it out
-    pull_request: null
     schedule:
         # every 1st day in month at 12:00 https://crontab.guru/#00_12_1_*_*
         -   cron: "00 12 1 * *"
