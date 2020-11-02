@@ -26,11 +26,16 @@ jobs:
                 run: bin/console generate-stats
 
             -
+                name: Get current Month
+                id: date
+                run: echo "::set-output name=date::$(date +'%Y-%m')"
+
+            -
                 name: Create pull-request
                 uses: peter-evans/create-pull-request@v3
                 with:
                     token: ${{ secrets.GITHUB_TOKEN }}
-                    commit-message: "update framework stats"
+                    commit-message: "update framework stats ${{ steps.date.outputs.date }}"
                     branch: ci-generated-framework-stats
-                    title: "Automated Update of Framework Stats for {{ ... }}"
+                    title: "Automated Update of Framework Stats for ${{ steps.date.outputs.date }}"
                     delete-branch: true
