@@ -7,6 +7,7 @@ branches:
         - master
 
 install:
+    - composer self-update --2
     - composer install
 
 scripts:
