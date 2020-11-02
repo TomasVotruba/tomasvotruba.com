@@ -7,9 +7,6 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('framework', [
         'secret' => '%env(APP_SECRET)%',
-    ]);
-
-    $containerConfigurator->extension('framework', [
         'php_errors' => [
             'log' => true,
         ],
