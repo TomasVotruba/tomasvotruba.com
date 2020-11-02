@@ -54,6 +54,7 @@ parameters:
     excludes_analyse:
         # test fixture file
         - 'packages/blog/src/Posts/Year2017/Ast/SomeClass.php'
+        - packages/blog/tests/Posts
 
     ignoreErrors:
         # intentional for tests

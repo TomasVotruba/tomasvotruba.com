@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\Tests\Posts\Year2018\NeonYaml;
 
+use Iterator;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
@@ -20,34 +21,30 @@ final class YamlTest extends TestCase implements PostTestInterface
         $this->assertSame($expectedContent, Yaml::parseFile($file));
     }
 
-    /**
-     * @return mixed[][]
-     */
-    public function provideFilesToContent(): array
+    public function provideFilesToContent(): Iterator
     {
-        return [
-            [
-                __DIR__ . '/Yaml/spaces.yml', [
-                    'address' => [
-                        'street' => '742 Evergreen Terrace',
-                    ],
-                ], ],
-            # arrays
-            [
-                __DIR__ . '/Yaml/list.yml', [
-                    'services' => ['SomeService', 'SomeService'],
-                ], ],
-            [
-                __DIR__ . '/Yaml/array.yml', [
-                    'services' => [
-                        'SomeService' => null,
-                    ],
-                ], ],
-            # multi lines
-            [__DIR__ . '/Yaml/multi-lines.yml', [
-                'perex' => 'Multi' . PHP_EOL . 'line',
-            ]],
-        ];
+        yield [
+            __DIR__ . '/Yaml/spaces.yml', [
+                'address' => [
+                    'street' => '742 Evergreen Terrace',
+                ],
+            ], ]
+        ;
+        # arrays
+        yield [
+            __DIR__ . '/Yaml/list.yml', [
+                'services' => ['SomeService', 'SomeService'],
+            ], ];
+        yield [
+            __DIR__ . '/Yaml/array.yml', [
+                'services' => [
+                    'SomeService' => null,
+                ],
+            ], ];
+        # multi lines
+        yield [__DIR__ . '/Yaml/multi-lines.yml', [
+            'perex' => 'Multi' . PHP_EOL . 'line',
+        ]];
     }
 
     /**

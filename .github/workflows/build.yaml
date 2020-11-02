@@ -8,10 +8,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   uses: actions/checkout@v1
-            -   uses: shivammathur/setup-php@v1
+            -   uses: shivammathur/setup-php@v2
                 with:
                     php-version: 7.4
-                    coverage: none
 
-            -   run: composer install --no-progress
-            -   run: bin/console dump-static-site
+            -   run: composer install --no-progress --ansi
+
+            -   run: bin/console dump-static-site --ansi
