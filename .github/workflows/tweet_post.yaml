@@ -2,6 +2,7 @@
 name: Tweet Post
 
 on:
+    pull_request: null
     push:
         branches:
             - master
@@ -21,7 +22,7 @@ jobs:
 
             -
                 name: Tweet New Post
-                run: bin/console tweet-post --ansi
+                run: bin/console tweet --ansi
 
                 env:
                     # get tokens to Github Secrets:
