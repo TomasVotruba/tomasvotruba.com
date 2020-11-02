@@ -1,0 +1,36 @@
+name: Refresh Framework Stats
+
+on:
+    # to try it out
+    pull_request: null
+    schedule:
+        # every 1st day in month at 12:00 https://crontab.guru/#00_12_1_*_*
+        -   cron: "00 12 1 * *"
+
+jobs:
+    refresh_framework_stats:
+        runs-on: ubuntu-latest
+
+        steps:
+            -   uses: actions/checkout@v2
+
+            -   uses: shivammathur/setup-php@v2
+                with:
+                    php-version: 7.4
+                    tools: composer:v2
+
+            -   run: composer install --no-progress --ansi
+
+            -
+                name: Generate Framework Stats for Last Month
+                run: bin/console generate-stats
+
+            -
+                name: Create pull-request
+                uses: peter-evans/create-pull-request@v3
+                with:
+                    token: ${{ secrets.GITHUB_TOKEN }}
+                    commit-message: "update framework stats"
+                    branch: ci-generated-framework-stats
+                    title: "Automated Update of Framework Stats for {{ ... }}"
+                    delete-branch: true
