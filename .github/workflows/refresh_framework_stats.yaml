@@ -23,7 +23,7 @@ jobs:
 
             -
                 name: Generate Framework Stats for Last Month
-                run: bin/console generate-stats
+                run: bin/console generate-stats --ansi
 
             -
                 name: Get current Month
@@ -37,5 +37,6 @@ jobs:
                     token: ${{ secrets.GITHUB_TOKEN }}
                     commit-message: "update framework stats ${{ steps.date.outputs.date }}"
                     branch: ci-generated-framework-stats
+                    base: 'master'
                     title: "Automated Update of Framework Stats for ${{ steps.date.outputs.date }}"
                     delete-branch: true
