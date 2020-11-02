@@ -2,7 +2,6 @@
 name: Tweet Post
 
 on:
-    pull_request: null
     push:
         branches:
             - master
@@ -13,17 +12,17 @@ jobs:
 
         steps:
             -   uses: actions/checkout@v2
-            -   uses: shivammathur/setup-php@v1
+
+            -   uses: shivammathur/setup-php@v2
                 with:
                     php-version: 7.4
-                    coverage: none
 
-            -   run: composer install --no-progress
+            -   run: composer install --no-progress --ansi
 
             -
                 name: Tweet New Post
-                run: |
-                    bin/console tweet-post
+                run: bin/console tweet-post --ansi
+
                 env:
                     # get tokens to Github Secrets:
                     # from here: https://developer.twitter.com/en/apps/14147884
