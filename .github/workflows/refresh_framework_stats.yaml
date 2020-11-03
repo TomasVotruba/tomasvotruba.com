@@ -1,6 +1,8 @@
 name: Refresh Framework Stats
 
 on:
+    push: null
+
     # to try it out
     schedule:
         # every 1st day in month at 12:00 https://crontab.guru/#00_12_1_*_*
