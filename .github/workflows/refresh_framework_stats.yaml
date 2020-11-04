@@ -16,7 +16,7 @@ jobs:
             -
                 name: Get current Month
                 # see https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#example-4
-                run: echo "CURRENT_MONTH=$(echodate::$(date +'%Y-%m'))" >> $GITHUB_ENV
+                run: echo "CURRENT_MONTH=$(echo date::$(date +'%Y-%m'))" >> $GITHUB_ENV
 
             -
                 run: echo $CURRENT_MONTH
