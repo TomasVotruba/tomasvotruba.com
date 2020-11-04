@@ -43,8 +43,8 @@ jobs:
                 uses: peter-evans/create-pull-request@v3
                 with:
                     token: ${{ secrets.GITHUB_TOKEN }}
-                    commit-message: "update framework stats $CURRENT_MONTH"
+                    commit-message: "update framework stats ${CURRENT_MONTH}"
                     branch: ci-generated-framework-stats
                     base: 'master'
-                    title: "Automated Update of Framework Stats for $CURRENT_MONTH"
+                    title: "Automated Update of Framework Stats for ${CURRENT_MONTH}"
                     delete-branch: true
