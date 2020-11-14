@@ -30,7 +30,6 @@ final class ProjectsController extends AbstractController
             'other_packages' => $this->vendorPackagesFactory->createPackagesByPackageNames([
                 'knplabs/doctrine-behaviors',
                 'cpliakas/git-wrapper',
-                'jupeter/clean-code-php',
             ]),
         ]);
     }
