@@ -1,12 +1,16 @@
 ---
 id: 190
-title: "How to Upgrade Symfony 2.8 to 3.4"
+title: "How to Upgrade Symfony&nbsp;2.8&nbsp;to&nbsp;3.4"
 perex: |
     Are you Symfony programmer? Do you work on a successful project? Then upgrading the Symfony project is a work you can't avoid.
     Almost a year ago I wrote about [Five and Half Steps to Migrate from Symfony 2.8 LTS to Symfony 3.4 LTS in Real PRs](https://blog.shopsys.com/5-5-steps-to-migrate-from-symfony-2-8-lts-to-symfony-3-4-lts-in-real-prs-50c98eb0e9f6).
     <br><br>
     Now it's much easier to jump from one LTS to another - with **instant upgrades**.
 tweet: "New Post on #php 🐘 blog: How to Upgrade #Symfony 2.8 to 3.4"
+
+updated_since: "November 2020"
+updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
 ---
 
 Recently, more and more issues pop-up at Symfony repository **asking for automated upgrade**:
@@ -35,11 +39,9 @@ If you split each of these lines into standalone pull-requests, you're the best!
 
 ## Forget `UPGRADE.md`
 
-You probably know I work almost part-time on [the Rector project](https://getrector.org). I gather feedback from conferences and meetups all over Europe and try to make Rector better every day. Recently he also migrated between [2 PHP frameworks](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/), because why not?
+You probably know I work almost part-time on [the Rector project](https://getrector.org). I gather feedback from conferences and meetups all over Europe and try to make Rector better every day. Recently he also migrated between [2 PHP frameworks](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1), because why not?
 
-The PHP community gives me really positive vibes about going the right direction. That helps me to make PHP and Symfony **sets more and more complete**:
-
-<img src="/assets/images/posts/2019/symfony-up/sets.png" class="img-thumbnail">
+The PHP community gives me positive vibes about going the right direction. It helps me to make PHP and Symfony **sets more and more complete**.
 
 ## How to Upgrade then?
 
@@ -49,22 +51,63 @@ All you need to do to upgrade your PHP code is to install Rector and run particu
 
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process app src --set symfony28
-vendor/bin/rector process app src --set symfony30
-vendor/bin/rector process app src --set symfony31
-vendor/bin/rector process app src --set symfony32
-vendor/bin/rector process app src --set symfony33
-vendor/bin/rector process app src --set symfony34
 ```
 
-You still need to upgrade YAML files, but then you're ready to go.
+Create `rector.php` config:
+
+```bash
+vendor/bin/rector init
+```
+
+Add Symfony sets in it:
+
+```php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SETS, [
+        SetList::SYMFONY_28,
+        // take it 1 set at a time to so next set works with output of the previous set; I do 1 set per pull-request
+        // SetList::SYMFONY_30,
+        // SetList::SYMFONY_31,
+        // SetList::SYMFONY_32,
+        // SetList::SYMFONY_33,
+        // SetList::SYMFONY_34,
+    ]);
+
+    // set paths to directories with your code
+    $parameters->set(Option::PATHS, [
+        __DIR__ . '/app',
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
+    ]);
+};
+```
 
 **Are you stuck on old PHP 5.3?** Rector got you covered:
 
-```bash
-vendor/bin/rector process app src --set php53
-vendor/bin/rector process app src --set php54
-vendor/bin/rector process app src --set php55
+```php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SETS, [
+        SetList::PHP_53,
+        // again 1 set at a time
+        // SetList::PHP_54,
+        // SetList::PHP_55,
+        // SetList::PHP_56,
+    ]);
+
+    // ...
+};
 ```
 
 ## Awesome Symfony 3.3+ Dependency Injection

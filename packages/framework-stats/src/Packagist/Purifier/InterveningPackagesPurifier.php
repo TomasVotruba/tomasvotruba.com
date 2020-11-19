@@ -67,12 +67,7 @@ final class InterveningPackagesPurifier
         'illuminate/console' => ['symfony/console', 'symfony/process'],
         'illuminate/view' => ['symfony/debug'],
         'illuminate/filesystem' => ['symfony/finder'],
-        'illuminate/routing' => [
-            'symfony/debug',
-            'symfony/http-foundation',
-            'symfony/http-kernel',
-            'symfony/routing',
-        ],
+        'illuminate/routing' => ['symfony/debug', 'symfony/http-foundation', 'symfony/http-kernel', 'symfony/routing'],
     ];
 
     private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider;

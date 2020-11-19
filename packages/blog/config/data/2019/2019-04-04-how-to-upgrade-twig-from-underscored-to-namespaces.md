@@ -8,6 +8,10 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: How to Upgrade #twig from Underscored to Namespaces"
 tweet_image: "/assets/images/posts/2019/twig-under/twig-image.png"
+
+updated_since: "November 2020"
+updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
 ---
 
 <div class="text-center">
@@ -70,9 +74,32 @@ In a reaction to the Symfony blog post, I see many developers [do upgrades manua
 
 For [Rector](https://github.com/rectorphp/rector) it just 1 pattern to refactor. Just tell him to process your files `src`:
 
+1. Install Rector
+
 ```bash
-composer require rector/rector --dev # make sure you have version 0.4.10+ at least
-vendor/bin/rector process src --set twig-underscore-to-namespace
+composer require rector/rector --dev
+```
+
+2. Update `rector.php`
+
+```php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SETS, [
+        SetList::TWIG_UNDERSCORE_TO_NAMESPACE,
+    ]);
+};
+```
+
+3. Run Rector
+
+```bash
+vendor/bin/rector process src
 ```
 
 Happy coding!

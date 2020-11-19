@@ -7,83 +7,33 @@ perex: |
     Try PSR-12 today and see, how it works for your code.
 tweet: "New Post on My Blog: Try PSR-12 on Your Code Today"
 tweet_image: "/assets/images/posts/2018/psr-12/preview.png"
+
+
 ---
-
-## tl;dr;
-
-```bash
-composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs check /src --set psr12
-```
-
-And to fix the code:
-
-```bash
-vendor/bin/ecs check /src --set psr12 --fix
-```
-
-Now in more detailed way.
 
 ## PSR-12 meets ECS
 
-Someone on [Reddit referred a PSR Google Group](https://www.reddit.com/r/PHP/comments/84vafc/phpfig_psr_status_update), where they **asked for real-life PSR-12 ruleset implementation in a coding standard tool**. Korvin Szanto already prepared 1st implementation for PHP CS Fixer, at the moment [only as a commit in](https://github.com/KorvinSzanto/PHP-CS-Fixer/commit/c0b642c186d8f666a64937c2d37442dc77f6f393) the fork. I put the ruleset to `psr12.yml` level in ECS and it looks like this in time of being:
+Someone on [Reddit referred a PSR Google Group](https://www.reddit.com/r/PHP/comments/84vafc/phpfig_psr_status_update), where they **asked for real-life PSR-12 ruleset implementation in a coding standard tool**. Korvin Szanto already prepared 1st implementation for PHP CS Fixer, at the moment [only as a commit in](https://github.com/KorvinSzanto/PHP-CS-Fixer/commit/c0b642c186d8f666a64937c2d37442dc77f6f393) the fork.
 
-```yaml
-imports:
-    - { resource: 'php_cs_fixer/psr2.yml' }
+I put the ruleset to `PSR_12` set in ECS, so you can use it:
 
-services:
-    PhpCsFixer\Fixer\CastNotation\LowercaseCastFixer: ~
-    PhpCsFixer\Fixer\CastNotation\ShortScalarCastFixer: ~
-    PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer: ~
-    PhpCsFixer\Fixer\Import\NoLeadingImportSlashFixer: ~
-    PhpCsFixer\Fixer\Import\OrderedImportsFixer:
-        importsOrder:
-            - 'class'
-            - 'const'
-            - 'function'
-    PhpCsFixer\Fixer\LanguageConstruct\DeclareEqualNormalizeFixer:
-        space: 'none'
-    PhpCsFixer\Fixer\Operator\NewWithBracesFixer: ~
-    PhpCsFixer\Fixer\Basic\BracesFixer:
-        'allow_single_line_closure': false
-        'position_after_functions_and_oop_constructs': 'next'
-        'position_after_control_structures': 'same'
-        'position_after_anonymous_constructs': 'same'
+```php
+// ecs.php
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\ValueObject\Option;
+use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-    PhpCsFixer\Fixer\ClassNotation\NoBlankLinesAfterClassOpeningFixer: ~
-    PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer:
-        order:
-            - 'use_trait'
-    PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer:
-        elements:
-            - 'const'
-            - 'method'
-            - 'property'
-    PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer: ~
-    PhpCsFixer\Fixer\Operator\TernaryOperatorSpacesFixer: ~
-    PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer: ~
-    PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer: ~
-    PhpCsFixer\Fixer\Whitespace\NoTrailingWhitespaceFixer: ~
-
-    PhpCsFixer\Fixer\Operator\ConcatSpaceFixer:
-        spacing: 'one'
-
-    PhpCsFixer\Fixer\Semicolon\NoSinglelineWhitespaceBeforeSemicolonsFixer: ~
-    PhpCsFixer\Fixer\ArrayNotation\NoWhitespaceBeforeCommaInArrayFixer:
-    PhpCsFixer\Fixer\ArrayNotation\WhitespaceAfterCommaInArrayFixer:
-
-parameters:
-    exclude_checkers:
-        - 'PhpCsFixer\Fixer\Import\SingleImportPerStatementFixer'
-        - 'PhpCsFixer\Fixer\Whitespace\NoExtraBlankLinesFixer'
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::PSR_12,
+    ]);
+};
 ```
-
-
 
 ## Do You Agree or Disagree with PSR12?
 
-There are still many [missed cases to be integrated into the standard](https://github.com/KorvinSzanto/PHP-CS-Fixer/milestones), but there is never to soon to get feedback from the community.
+There are still few [missed cases to be covered](https://github.com/KorvinSzanto/PHP-CS-Fixer/milestones), but there is never to soon to get feedback from the community.
 
 <div class="text-center">
     <img src="/assets/images/posts/2018/psr-12/php-cs-fixer-thing.png" alt="PR in PHP CS Fixer?" class="img-thumbnail">
@@ -110,29 +60,9 @@ Symplify code is already checked by PSR-12 ([see pull-request](https://github.co
     <img src="/assets/images/posts/2018/psr-12/symplify-implementation.png" alt="Integration to project with ECS" class="img-thumbnail">
 </div>
 
-It was easy to setup and works with 0 changes in the code. But as you can see, there 2 rules I don't fully agree with.
+It was easy to setup and works with 0 changes in the code. But as you can see, there is 1 rule I don't fully agree with.
 
-#### 1. `PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer`
-
-This rule creates this code:
-
-```php
-<?php
-
-declare(strict_types=1);
-```
-
-Namespace changes, file doc changes, `use`, `class`, `interface`... that all changes in every file, so it should be on a standalone line, **that will force you to notice it and orientate**. But not `declare(strict_types=1);`, that is the same in every file.
-
-I think our attention deserves to ignore anything that is the same in every file so inline its line:
-
-```php
-<?php declare(strict_types=1);
-```
-
-<br>
-
-#### 2. `PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixex`
+#### `PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixex`
 
 It takes care of spacing around `!`
 
@@ -144,7 +74,7 @@ if ($isNotTrue) {
 }
 ```
 
-Here we can apply the same approach we did in 1. An important code should be visually clear, an unimportant code should not bother us. Personally, **I prefer seeing the negation clearly**, so I know it's a negation:
+An important code should be visually clear, an unimportant code should not bother us. Personally, **I prefer seeing the negation clearly**, so I know it's a negation:
 
 ```php
 if (! $isNotTrue) {
@@ -155,9 +85,9 @@ if (! $isNotTrue) {
 
 Communicate, spread the ideas and find your way. This is only PSR - PS **Recommendation**. It's better to keep things standard for others, [so they can drink water if they're thirsty and not start a research on bottle colors instead](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/#why-are-standards-so-important). But not a rigid rule that cannot be improved.
 
-So just [try it](#tl-dr). Maybe your code is already PSR-12 ready.
+<br>
 
-And let me know in the comments, if you love it or rather hate it :)
+You love it or hate it? Let me know in the comments ↓
 
 <br>
 

@@ -6,6 +6,9 @@ perex: |
     <br><br>
     What exactly Rector does and how does it work?
 tweet: "New post on my blog: Rector: Part 1 - What and How #php #ast #refactoring #instantupgrades"
+
+updated_since: "November 2020"
+updated_message: "Switch from deprecated `--set` option to `rector.php` config."
 ---
 
 *Read also:*
@@ -32,14 +35,40 @@ You can [find it on Github](https://github.com/rectorphp/rector). It has now [6 
 
 Let's say you have a project on Symfony 2.7. And you have a huge `service.yml`. You know that Symfony 2.8/3.0 brought an awesome [autowiring](https://symfony.com/blog/new-in-symfony-2-8-service-auto-wiring) feature that evolved to pure awesomenes in Symfony 3.3 and [PSR-4 services feature](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#4-use-psr-4-based-service-autodiscovery-and-registration).
 
-Would you like to do this upgrade work manually? No. You can use Rector instead.
-Just run it with target `level` of `symfony33` and it will change everything it knows about.
+**Would you prefer to do this upgrade manually?** No? Use Rector instead:
 
-Such a command looks like this:
+1. Install Rector
 
 ```bash
-vendor/bin/rector process src --set symfony33
+composer require rector/rector --dev
 ```
+
+2. Then create `rector.php`
+
+```bash
+vendor/bin/rector init
+```
+
+3. Configure it with set:
+
+```php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::SYMFONY_33]);
+};
+```
+
+4. Run Rector on `/src` directory:
+
+```bash
+vendor/bin/rector process src
+```
+
+That's it!
 
 ## What are Architecture Refactorings?
 
@@ -121,7 +150,7 @@ Such a configuration looks like this (as shown in [`README`](https://github.com/
 
 declare(strict_types=1);
 
-use Rector\Renaming\Rector\MethodCall\RenameMethodRector;use Rector\Set\ValueObject\SetList;
+use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {

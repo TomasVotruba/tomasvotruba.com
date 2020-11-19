@@ -7,6 +7,10 @@ perex: |
     Let's look at 7 snippets of PHP code, that [happily takes your attention](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) but **is never run**.
 tweet: "New Post on #php 🐘 blog: How to Detect Dead PHP Code in Code Review in 7 Snippets"
 tweet_image: "/assets/images/posts/2019/dead-code/fine.jpg"
+
+updated_since: "November 2020"
+updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
 ---
 
 Imagine you're doing a code review of "various improvements" pull-request with **150 changed files**...
@@ -396,9 +400,31 @@ What if there would be a way to **automate all that checks above** + 10 more wit
 
 Rector doesn't only refactor applications from one framework to another, upgrade your codebase and get you out of legacy. It can be also **part of your CI**:
 
+1. Install Rector
+
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process src --set dead-code --dry-run
+```
+
+2. Update `rector.php` with dead code set
+
+```php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::DEAD_CODE,
+    ]);
+};
+```
+
+3. Run Rector
+
+```bash
+vendor/bin/rector process src --dry-run
 ```
 
 **If Rector detects any dead code, CI will fail**. You can, of course, run it without `--dry-run` after to actually remove the code.

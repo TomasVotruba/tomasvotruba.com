@@ -18,10 +18,7 @@ final class CleaningCheckListFactory
         $cleaningSections[] = $this->createComposerCleaningSection();
 
         $cleaningSections[] = new CleaningSection('Class naming', [
-            new CleaningItem(
-                'prefix abstract classes "Abstract"',
-                'https://github.com/Slamdunk/phpstan-extensions'
-            ),
+            new CleaningItem('prefix abstract classes "Abstract"', 'https://github.com/Slamdunk/phpstan-extensions'),
             new CleaningItem('suffix interface "Interface"', 'https://github.com/Slamdunk/phpstan-extensions'),
         ]);
 
@@ -87,9 +84,7 @@ final class CleaningCheckListFactory
             ),
         ]);
 
-        $cleaningSections[] = new CleaningSection('Nette', [
-            new CleaningItem('decouple RouterFactory to own service'),
-        ]);
+        $cleaningSections[] = new CleaningSection('Nette', [new CleaningItem('decouple RouterFactory to own service')]);
 
         return new CleaningChecklist($cleaningSections);
     }

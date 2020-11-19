@@ -18,20 +18,20 @@ This is our code now. Each process waits on each other - one is finished, then n
 
 ```php
 foreach ($splitConfiguration as $directory => $repository) {
-	$process = new Process(['git', 'subsplit', $directory . ':' . $repository]);
-	$process->run();
+    $process = new Process(['git', 'subsplit', $directory . ':' . $repository]);
+    $process->run();
 
-	// here the process is finished
-	if (! $process->isSuccessful()) {
-		throw new PackageToRepositorySplitException($process->getErrorOutput());
-	}
+    // here the process is finished
+    if (! $process->isSuccessful()) {
+        throw new PackageToRepositorySplitException($process->getErrorOutput());
+    }
 
-	// report exactly what happened, so it's easier to know result and debug
-	$symfonyStyle->success(sprintf(
-		'Split from "%s" to "%s" is done',
-		$directory,
-		$repository
-	));
+    // report exactly what happened, so it's easier to know result and debug
+    $symfonyStyle->success(sprintf(
+        'Split from "%s" to "%s" is done',
+        $directory,
+        $repository
+    ));
 }
 ```
 
@@ -65,11 +65,11 @@ $runningProcesses = [];
 
 foreach ($splitConfiguration as $directory => $repository) {
     $process = new Process(['git', 'subsplit', $directory . ':' . $repository]);
-	// start() doesn't wait until the process is finished, oppose to run()
-	$process->start();
+    // start() doesn't wait until the process is finished, oppose to run()
+    $process->start();
 
     // store process for later, so we evaluate it's finished
-	$runningProcesses[] = $process;
+    $runningProcesses[] = $process;
 }
 ```
 
@@ -82,11 +82,11 @@ In our case it's only 8, so we survive this.
 
 ```php
 while (count($activeProcesses)) {
-	foreach ($activeProcesses as $i => $runningProcess) {
-		// specific process is finished, so we remove it
-		if (! $runningProcess->isRunning()) {
-			unset($activeProcesses[$i]);
-		}
+    foreach ($activeProcesses as $i => $runningProcess) {
+        // specific process is finished, so we remove it
+        if (! $runningProcess->isRunning()) {
+            unset($activeProcesses[$i]);
+        }
 
         // check every second
         sleep(1);
@@ -124,7 +124,7 @@ And what if any processes failed?
      $process = new Process(['git', 'subsplit', $directory . ':' . $repository]);
      $process->start();
 
-	 $runningProcesses[] = $process;
+     $runningProcesses[] = $process;
 +    // value object with types would be better and faster here, this is just example
 +    $allProcessInfos[] = [
 +        'process' => $process,
@@ -138,8 +138,8 @@ So final reporting would look like this:
 
 ```php
 foreach ($allProcessInfos as $processInfo) {
-	/** @var Process $process */
-	$process = $processInfo['process'];
+    /** @var Process $process */
+    $process = $processInfo['process'];
     if (! $process->isSuccessful()) {
         throw new PackageToRepositorySplitException($process->getErrorOutput());
     }

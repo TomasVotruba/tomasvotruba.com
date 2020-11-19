@@ -8,6 +8,10 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: Still on #PHPUnit 4? Come to @PHPUnit 8 Together in a Day"
 tweet_image: "/assets/images/posts/2019/phpunit/tweet.png"
+
+updated_since: "November 2020"
+updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
 ---
 
 <img src="/assets/images/posts/2019/phpunit/tweet.png" class="mt-4 mb-4">
@@ -98,8 +102,6 @@ Unless you're upgrading 10 test files, of course. But in the rest of the case, t
 ### From `getMock()` to `getMockBuilder()`
 
 ```diff
- <?php
-
  final class MyTest extends PHPUnit_Framework_TestCase
  {
      public function test()
@@ -116,7 +118,26 @@ These changes can be delegated to Rector:
 
 ```bash
 composer require phpunit/phpunit "^5.0" --dev
-vendor/bin/rector process tests --set phpunit50
+```
+
+Update set in `rector.php`
+
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::PHPUNIT_50]);
+};
+```
+
+Run Rector
+
+```bash
+vendor/bin/rector process tests
 ```
 
 ## 4. PHPUnit 5 to 6
@@ -211,7 +232,26 @@ These changes can be delegated to Rector:
 
 ```bash
 composer require phpunit/phpunit "^6.0" --dev
-vendor/bin/rector process tests --set phpunit60
+```
+
+Update set in `rector.php`
+
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::PHPUNIT_60]);
+};
+```
+
+Run Rector
+
+```bash
+vendor/bin/rector process tests
 ```
 
 ## 5. PHPUnit 6 to 7
@@ -221,8 +261,6 @@ vendor/bin/rector process tests --set phpunit60
 I have no idea how tests and data provider methods were detected before this:
 
 ```diff
- <?php
-
  class WithTestAnnotation extends \PHPUnit\Framework\TestCase
  {
      /**
@@ -245,8 +283,6 @@ I have no idea how tests and data provider methods were detected before this:
 ### Rename `@scenario` annotation to `@test`
 
 ```diff
- <?php
-
  class WithTestAnnotation extends \PHPUnit\Framework\TestCase
  {
      /**
@@ -267,8 +303,6 @@ This rather small change can cause a huge headache. It's [a fix of silent false 
 How would you fix the following code, if you know that the argument of `withConsecutive()` must be iterable (array, iterator...)?
 
 ```php
-<?php
-
 class SomeClass
 {
     public function run($one, $two)
@@ -311,8 +345,27 @@ These changes can be delegated to Rector:
 
 ```bash
 composer require phpunit/phpunit "^7.0" --dev
-vendor/bin/rector process tests --set phpunit70
-vendor/bin/rector process tests --set phpunit75
+```
+
+Update set in `rector.php`
+
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::PHPUNIT_70]);
+    $parameters->set(Option::SETS, [SetList::PHPUNIT_75]);
+};
+```
+
+Run Rector
+
+```bash
+vendor/bin/rector process tests
 ```
 
 ## 6. PHPUnit 7 to 8
@@ -415,8 +468,6 @@ This method was removed [because of its vague behavior](https://github.com/sebas
 The proposed solution is [rdohms/phpunit-arraysubset-asserts](https://github.com/rdohms/phpunit-arraysubset-asserts) polyfill.
 
 ```diff
- <?php
-
  namespace Acme\Tests;
 
 +use DMS\PHPUnitExtensions\ArraySubset\Assert;
@@ -435,7 +486,26 @@ To use this package and upgrade to it, run:
 
 ```bash
 composer require --dev dms/phpunit-arraysubset-asserts
-vendor/bin/rector process tests --set phpunit80-dms
+```
+
+Update set in `rector.php`
+
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::PHPUNIT80_DMS]);
+};
+```
+
+Run Rector
+
+```bash
+vendor/bin/rector process tests
 ```
 
 ### Add `void` to `PHPUnit\Framework\TestCase` Methods
@@ -460,20 +530,37 @@ Also less common ones:
 - `tearDownAfterClass()`
 - `onNotSuccessfulTest()`
 
-<br>
-
-**You need to run Rector before upgrading** to PHPUnit 7. Otherwise, it will cause a fatal error.
-
-<a class="btn btn-primary" href="https://3v4l.org/1bD6H">
-    See 3v4l.org to know why
-</a>
-
-<br>
+For this one, we'll use little help from Migrify:
 
 ```bash
-vendor/bin/rector process tests --set phpunit80
+composer require migrify/phpunit-upgrader --dev
+vendor/bin/phpunit-upgrader voids /tests
+```
+
+That's it!
+
+<br>
+
+Then back to Rector - Update set in `rector.php`
+
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::PHPUNIT_80]);
+};
+```
+
+Then:
+
+```bash
 composer require phpunit/phpunit "^8.0" --dev
 ```
+
 
 <br>
 
@@ -489,3 +576,7 @@ That's it! Congrats!
 <br>
 
 **Did you find a change that we missed here?** Share it in comments, so we can make this upgrade path complete and smooth for all future readers. Thank you for the whole PHP community!
+
+<br>
+
+Happy coding!

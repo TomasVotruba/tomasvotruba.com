@@ -15,6 +15,10 @@ perex: |
     **I'll show you how you can migrate Gedmo to KnpLabs**.
 
 tweet: "New Post on #php 🐘 blog: Migrate Gedmo to KnpLabs"
+
+updated_since: "November 2020"
+updated_message: |
+    Switched from deprecated `--set` option to `rector.php` config.
 ---
 
 Pick behavior your want to migrate from Gedmo to KnpLabs:
@@ -622,19 +626,44 @@ class Category implements SoftDeletableInterface
 }
 ```
 
-## Instant Upgrade what you Can
+Would you like to avoid doing this manually? Rector has a set just for you:
 
-All right, for all the behaviors listed above, there is a Rector set:
+## 3 Step to Migrate Gedmo to KnpLabs with Rector
+
+1. Install Rector
 
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process src --set doctrine-gedmo-to-knplabs
+````
+
+2. Add `rector.php` config
+
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->services();
+    $parameters->set(Option::SETS, [
+        SetList::DOCTRINE_GEDMO_TO_KNPLABS,
+    ]);
+};
 ```
 
-Instant upgrades never cover the whole migration path - e.g., they lack database migrations - but they're are always **saving you 80 % of boring work**.
+3. Run Rector
 
-If anything breaks, [create and issue on Github](https://github.com/rectorphp/rector/issues/new?template=1_Bug_report.md) so you can enjoy fixed version soon.
+```bash
+vendor/bin/rector process src
+```
+
+That's it!
 
 <br>
 
-Happy migration!
+Instant upgrades never cover the whole migration path - e.g., they lack database migrations - but they're are always **saving you 80 % of boring work**. If anything breaks, [create and issue on Github](https://github.com/rectorphp/rector/issues/new?template=1_Bug_report.md) so you can enjoy fixed version soon.
+
+<br>
+
+Happy coding!

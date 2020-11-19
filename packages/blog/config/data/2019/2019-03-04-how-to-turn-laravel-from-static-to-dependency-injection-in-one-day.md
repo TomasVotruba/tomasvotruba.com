@@ -7,11 +7,15 @@ perex: |
     <br><br>
     What then? Switch framework or rewrite? But what if all you need is to **switch single pattern**?
 tweet: "New Post on #php 🐘 blog: How to turn #Laravel from Static to Dependency Injection in one Day"
+
+updated_since: "November 2020"
+updated_message: |
+    Switched deprecated `--set` option to `ecs.php` config.
 ---
 
 I don't use Laravel in my own life, but I follow the community closely. It likes the idea of Contracts from day 1 and it's also part of Rector upgrade set.
 
-Recently I read the [Moving away from magic — or: why I don’t want to use Laravel anymore](https://medium.freecodecamp.org/moving-away-from-magic-or-why-i-dont-want-to-use-laravel-anymore-2ce098c979bd) on medium by *Niklas Schöllhorn*.
+Recently I read the [Moving away from magic—or: why I don’t want to use Laravel anymore](https://www.freecodecamp.org/news/moving-away-from-magic-or-why-i-dont-want-to-use-laravel-anymore-2ce098c979bd/) on medium by *Niklas Schöllhorn*.
 
 <a href="https://medium.freecodecamp.org/moving-away-from-magic-or-why-i-dont-want-to-use-laravel-anymore-2ce098c979bd">
     <img src="/assets/images/posts/2019/laravel/best-seller.png" class="img-thumbnail">
@@ -115,10 +119,33 @@ These kinds of problems are *so 2018*. Recently Rector got on board [Laravel ins
 
 Next impulse was the post by Niklas, so I've **converted his idea to Rector rule**. The change from facades to constructor injection can be done with new `laravel-static-to-injection`:
 
+1. Install Rector
+
 ```bash
-vendor/bin/rector process /src --set laravel-static-to-injection
+composer require rector/rector --dev
+```
+
+2. Create `rector.php` config with `SetList::LARAVEL_STATIC_TO_INJECTION` set
+
+```php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::LARAVEL_STATIC_TO_INJECTION]);
+};
+```
+
+3. Run Rector
+
+```bash
+vendor/bin/rector process /src
 ```
 
 No need to switch framework and you can enjoy new constructor injection in your Laravel application matter of minutes.
+
+<br>
 
 Happy coding!

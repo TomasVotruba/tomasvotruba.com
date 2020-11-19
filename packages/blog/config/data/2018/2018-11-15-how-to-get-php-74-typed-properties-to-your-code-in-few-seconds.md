@@ -7,17 +7,19 @@ perex: |
     Is this **the best time to upgrade your code to PHP 7.4**?
 tweet: "New Post on My Blog: How to Get #PHP 7.4 Typed Properties to Your Code in Few Seconds   #futurecompatibility #codequality #symfony"
 tweet_image: "/assets/images/posts/2018/php74-typed/v2.png"
+
+updated_since: "November 2020"
+updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
 ---
 
-**Probably not**. Unless you're able to compile [PHP repository](https://github.com/php/php-src) yourself and live on the edge of the edges. PHP 7.4 can be the smoothest upgrade you've experienced. **If you'll think about in your coding since today**.
+Yes, because PHP 7.4 was released 2 years ago.
 
-## Can `@var` Annotations be Really Useful?
+## Can `@var` Annotations be Useful?
 
 Annotations were always in the bottom, ashamed and not considered a *real code*. They help us to guess the type of the property. Not only to us, but also to [static analysis tools](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/#2-static-analysis-tools).
 
 ```php
-<?php
-
 final class SomeClass
 {
    /**
@@ -149,17 +151,34 @@ Let's say we're thinking about the future and adding all `@var` annotations we c
 }
 ```
 
-Or you could **be actually rewarded for your daunting `@var` work**. Good news! Rector will do this one for you:
+Or you could **be actually rewarded for your daunting `@var` work**. Good news! Rector handles this for you.
+
+## 3 Steps to Add Typed Properties to your code With Rector
+
+1. Install Rector
 
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process src --set php74
-# few seconds...
-#
-# Done!
 ```
 
-See [pull-request #643](https://github.com/rectorphp/rector/pull/643) to get more insight into how this very nice AST use case works.
+2. Add `rector.php` config with `TypedPropertyRector` Rule
+
+```php
+// rector.php
+use Rector\Php74\Rector\Property\TypedPropertyRector;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(TypedPropertyRector::class);
+};
+```
+
+3. Run Rector
+
+```bash
+vendor/bin/rector process src
+````
 
 <br>
 

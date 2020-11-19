@@ -8,6 +8,10 @@ perex: |
     Last week I was approached by 2 different people with single need - **migrate their tests to PHPUnit**.
 tweet: 'New Post on #php 🐘 blog: How to Instantly Migrate #PhpSpec to #phpunit'
 tweet_image: '/assets/images/posts/2019/unit-mig/phpunit.png'
+
+updated_since: "November 2020"
+updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
 ---
 
 <blockquote class="blockquote text-center">
@@ -17,7 +21,7 @@ tweet_image: '/assets/images/posts/2019/unit-mig/phpunit.png'
     <footer class="blockquote-footer">Peter Altenberg</a>
 </blockquote>
 
-*Disclaimer: I never used nor saw PhpSpec in code before this mentoring session. All I learned was from my client and his needs (and bit of reading the documentation)*.
+*Disclaimer: I never saw PhpSpec code before this mentoring session. All I learned was from my client and their needs (and bit of reading the documentation)*.
 
 ## "Why do you Have 2 Unit-Testing Frameworks?"
 
@@ -161,18 +165,39 @@ Pretty clear, right?
 
 First, take a 2-week paid vacation... Just kidding. Start with Rector which migrates ~95 % of code cases. It also renames `*Spec.php` to `*Test.php` and moves them from `/spec` to `/tests` directory:
 
+1. Add Rector
+
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process spec --set phpspec-to-phpunit
 ```
 
-Rector is getting smarter every set, but I bet there are still some missed cases. **When the code doesn't work, just go and [report the issue](https://github.com/rectorphp/rector/issues)** with expected vs. current output.
+2. Create `rector.php` config
 
-Take 10 more minutes to polish the rest of code and send PR to your project <em class="fas fa-fw fa-check text-success fa-lg"></em>
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::PHPSPEC_TO_PHPUNIT]);
+};
+```
+
+3. Run Rector on your tests directories
+
+```bash
+vendor/bin/rector process tests
+```
 
 <br>
 
-And what was the other unit testing framework that Rector migrated? You'll see in the next post.
+Take couple of minutes to polish the rest of code and send PR to your project <em class="fas fa-fw fa-check text-success fa-lg"></em>
+
+<br>
+
+And what was the 2nd testing framework that Rector migrated? [Nette\Tester](/blog/2019/03/25/how-to-instantly-migrate-nette-tester-to-phpunit).
 
 <br>
 

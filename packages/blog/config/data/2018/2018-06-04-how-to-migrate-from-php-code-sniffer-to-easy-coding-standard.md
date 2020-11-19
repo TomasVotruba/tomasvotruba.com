@@ -9,16 +9,38 @@ perex: |
     **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
 tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingStandard in 7 Step #ecs #codingstandard #ci"
 
-updated_since: "August 2020"
+updated_since: "November 2020"
 updated_message: |
-    Updated ECS YAML to PHP configuration since **ECS 8**.
+    Switch from deprecated `--set` option to `ecs.php` config.
+    Switch **YAML** to **PHP** configuration.
 ---
 
-ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's super easy to start to use from scratch:
+ECS is a tool build on Symfony components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's easy to use from scratch:
 
 ```bash
 composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs check src --set psr12
+```
+
+ECS uses standard Symfony PHP config:
+
+```php
+// ecs.php
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\ValueObject\Option;
+use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::PSR_12,
+    ]);
+};
+```
+
+And runs as CLI command:
+
+```bash
+vendor/bin/ecs check src
 ```
 
 But what if you already have PHP_CodeSniffer on your project and want to switch?
@@ -42,12 +64,7 @@ That can actually cause typos like:
 How to do that in EasyCodingStandard? Copy paste the last name `DocComment` and add rule in `set()` method. Hit CTRL + Space and  PHPStorm will autocomplete class for you:
 
 ```php
-<?php
-
 // ecs.php
-
-declare(strict_types=1);
-
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -79,14 +96,9 @@ One big cons of this is **that all sniffs will skip this code**, not just one. S
 To skip this in EasyCodingStandard just use `skip` parameter:
 
 ```php
-<?php
-
 // ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\Configuration\Option;
+use Symplify\EasyCodingStandard\ValueObject\Option;
 use PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
@@ -133,7 +145,7 @@ In EasyCodingStandard, we put that again under `skip` parameter in format `<Snif
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\Configuration\Option;
+use Symplify\EasyCodingStandard\ValueObject\Option;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
@@ -166,7 +178,7 @@ or
 <ruleset name="ruleset">
     <rule ref="ruleset.xml">
         <exclude name="Generic.Commenting.DocComment"/>
-	</rule>
+    </rule>
 </ruleset>
 ```
 
@@ -181,7 +193,7 @@ declare(strict_types=1);
 
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\Configuration\Option;
+use Symplify\EasyCodingStandard\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();

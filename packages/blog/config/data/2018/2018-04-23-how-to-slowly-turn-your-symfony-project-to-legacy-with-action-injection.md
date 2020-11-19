@@ -216,11 +216,11 @@ This effect appeared in Nette many months before 2.1 even became stable and [met
 ```php
 final class SomeController
 {
-	public function someAction(SomeService $someService)
-	{
-		$someData = $someService->getSomeData();
-		// ...
-	}
+    public function someAction(SomeService $someService)
+    {
+        $someData = $someService->getSomeData();
+        // ...
+    }
 }
 ```
 

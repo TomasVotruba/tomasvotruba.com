@@ -122,22 +122,22 @@ use Doctrine\DBAL\Schema\Schema;
 class Version20151031185405 extends AbstractMigration
 {
 
-	/**
-	 * @param Schema $schema
-	 */
-	public function up(Schema $schema)
-	{
-		$this->addSql('CREATE TABLE "article" ("id" serial NOT NULL, "name" text NOT NULL);');
-	}
+    /**
+     * @param Schema $schema
+     */
+    public function up(Schema $schema)
+    {
+        $this->addSql('CREATE TABLE "article" ("id" serial NOT NULL, "name" text NOT NULL);');
+    }
 
 
-	/**
-	 * @param Schema $schema
-	 */
-	public function down(Schema $schema)
-	{
-		$this->addSql('DROP TABLE "article";');
-	}
+    /**
+     * @param Schema $schema
+     */
+    public function down(Schema $schema)
+    {
+        $this->addSql('DROP TABLE "article";');
+    }
 
 }
 ```

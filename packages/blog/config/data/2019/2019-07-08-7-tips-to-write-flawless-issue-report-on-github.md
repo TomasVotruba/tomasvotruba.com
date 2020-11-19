@@ -9,9 +9,10 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: 7 Tips to Write Flawless Issue Reports on Github"
 
-updated_since: "August 2020"
+updated_since: "November 2020"
 updated_message: |
-    Updated Rector YAML to PHP configuration, as current standard.
+    Switch from deprecated `--set` option to `rector.php` config.
+    Updated Rector **YAML** to **PHP** configuration, as current standard.
 ---
 
 **Issue report is like any other text** - it can be a piece of text you read and take nothing from or it can fun and rich for the information you really need, for e.g. a job advertisement. You can see:
@@ -263,7 +264,22 @@ Again, think of *4. The smaller the better* tip while copy-pasting the `config`.
 <q>I installed Rector as dev dependency to composer and run:</q>
 
 ```bash
-vendor/bin/rector process src/SomeFile.php --config rector.php --dry-run --set symfony43
+vendor/bin/rector process src/SomeFile.php --dry-run
+```
+
+With `rector.php` config:
+
+```php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->services();
+    $parameters->set(Option::SETS, [
+        SetList::SYMFONY_43,
+    ]);
+};
 ```
 
 Perfect!

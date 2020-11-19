@@ -9,9 +9,10 @@ perex: |
     Exceptions are not just error state. **Exceptions are the new documentation**.
 tweet: "New Post on my Blog: 7 Tips to Write #Exceptions Everyone Will Love    #tracy #donotmakemethink #php #exceptions"
 
-updated_since: "August 2020"
+updated_since: "November 2020"
 updated_message: |
-    Updated YAML to PHP configuration, as current standard.
+    Updated content with simpler examples.
+    Switched YAML to PHP configuration, as current standard.
 ---
 
 I wrote a [50-page thesis about polyphasic sleep](/blog/2018/02/12/sleep-shorter-to-get-62-percent-smarter/). My opponent told me, that there is a missing part about uncontrolled intervening values. The part in pages 34-36 he probably skipped. Today we have too much going on **we have to scan**. Anything longer than 140 chars is exhausting. Moreover for us programmers, who dance among tsunami of information coming every hour as they code and investigate code of others.
@@ -269,11 +270,11 @@ throw new FileProcessingException(sprintf(
 ## 6. What Options do I have?
 
 ```bash
-vendor/bin/ecs check src --set laravel
+vendor/bin/finder show laravel
 ```
 
 <blockquote class="blockquote">
-     <em>"Laravel" level was not found</em>
+     <em>"laravel" was not found</em>
 </blockquote>
 
 - Is incorrectly loaded?
@@ -283,7 +284,7 @@ vendor/bin/ecs check src --set laravel
 [Don't make the programmer think](https://www.amazon.com/Dont-Make-Think-Revisited-Usability-ebook-dp-B00HJUBRPG/dp/B00HJUBRPG)!
 
 <blockquote class="blockquote">
-     <em>Level "laravel" was not found. Pick one of: "array", "clean-code", "comments", "common", "control-structures", "docblock", "namespaces", "php70", "php71", "phpunit", "psr12", "psr2", "spaces", "strict", "symfony", "symfony-risky", "symplify"</em>
+     <em>Level "laravel" was not found. Pick one of: "symfony", "nette", "zend"</em>
 </blockquote>
 
 That's better!
@@ -291,16 +292,14 @@ That's better!
 If there is the limited or reasonable amount of options, don't be shy. Show them!
 
 ```php
-$allLevels = $this->findAllLevelsInDirectory($configDirectory);
+$allOptions = $this->findAllLevelsInDirectory($configDirectory);
 
-throw new LevelNotFoundException(sprintf(
-    'Level "%s" was not found. Pick one of: "%s"',
-    $levelName,
-    implode('", "', $allLevels)
+throw new OptionNotFoundException(sprintf(
+    'Option "%s" was not found. Pick one of: "%s"',
+    $optionName,
+    implode('", "', $allOptions)
 ));
 ```
-
-This code is real! It's from [Symplify\PackageBuilder code](https://github.com/symplify/symplify/blob/aad50fba97046f70416cce4d7c5b094c16bf770d/packages/PackageBuilder/src/Configuration/LevelFileFinder.php#L61-L70).
 
 **+40 % happier programmer**
 

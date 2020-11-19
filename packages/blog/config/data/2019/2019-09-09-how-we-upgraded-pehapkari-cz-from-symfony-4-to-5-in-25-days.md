@@ -9,6 +9,10 @@ perex: |
 
 tweet: "New Post my Blog: How we Upgraded Pehapkari.cz from #symfony 4 to 5 in 25 days"
 tweet_image: "/assets/images/posts/2019/symfony5_pr.png"
+
+updated_since: "November 2020"
+updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
 ---
 
 This post is based on the real problems we faced when we upgraded our website. **It is full of experience** with pieces of explanation, real code snippets in diffs, painful frustration of Symfony ecosystem and bright light at the end of the tunnel.
@@ -45,7 +49,7 @@ Now [the `filter`](https://twig.symfony.com/doc/3.x/filters/filter.html) has to 
 
 Do you want to know, what is needed for the upgrade to Symfony 5? [Just read upgrade notes](https://github.com/symfony/symfony/blob/5.0/UPGRADE-5.0.md) in Symfony repository.
 
-For PHP stuff, use [Rector](https://github.com/rectorphp/rector):
+1. For PHP stuff, use [Rector](https://github.com/rectorphp/rector):
 
 ```bash
 # install Rector
@@ -56,20 +60,36 @@ composer require rector/rector-prefixed --dev
 ```
 
 Rector has minimal sets, meaning each minor version is standalone and independent.
-What does that mean? For upgrading from Symfony 4 to 5, you need to **run all the minor version sets**:
+What does that mean? For upgrading from Symfony 4 to 5, you need to **run all the minor version sets**, one by one.
 
-```bash
-vendor/bin/rector process bin src packages --set symfony41
+2. Update `rector.php` config
+
+```php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SETS, [
+        SetList::SYMFONY_41,
+        // take it 1 set at a time to so next set works with output of the previous set; I do 1 set per pull-request
+        // SetList::SYMFONY_42,
+        // SetList::SYMFONY_43,
+        // SetList::SYMFONY_44,
+        // SetList::SYMFONY_50,
+    ]);
+};
 ```
 
-Verify, check that CI passes and then continue with following Symfony minor versions:
+3. Run Rector
 
 ```bash
-vendor/bin/rector process bin src packages --set symfony42
-vendor/bin/rector process bin src packages --set symfony43
-vendor/bin/rector process bin src packages --set symfony44
-vendor/bin/rector process bin src packages --set symfony50
+vendor/bin/rector process app src tests
 ```
+
+Verify, check that CI passes and then continue with next Symfony minor version.
 
 ## 3. Update `composer.json` before `composer update`
 

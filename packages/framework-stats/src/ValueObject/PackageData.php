@@ -27,12 +27,8 @@ final class PackageData implements LastYearTrendAwareInterface
 
     private string $packageKey;
 
-    public function __construct(
-        string $packageName,
-        float $lastYearTrend,
-        int $last12Months,
-        int $previous12Months
-    ) {
+    public function __construct(string $packageName, float $lastYearTrend, int $last12Months, int $previous12Months)
+    {
         $this->packageName = $packageName;
         $this->packageShortName = (string) Strings::after($packageName, '/');
 

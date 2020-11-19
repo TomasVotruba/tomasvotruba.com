@@ -124,12 +124,12 @@ If you assume an application without testing and want to add at least some contr
 ```php
 public function testContainerServices()
 {
-	$client = static::createClient();
+    $client = static::createClient();
 
-	foreach ($client->getContainer()->getServiceIds() as $serviceId) {
+    foreach ($client->getContainer()->getServiceIds() as $serviceId) {
         $service = $client->getContainer()->get($serviceId);
         $this->assertNotNull($service);
-	}
+    }
 }
 ```
 
