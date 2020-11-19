@@ -73,10 +73,7 @@ final class PackageDataFactory
                 continue;
             }
 
-            $last12Months = $this->phpStanNettePackagesPurifier->correctLastYearDownloads(
-                $last12Months,
-                $packageName
-            );
+            $last12Months = $this->phpStanNettePackagesPurifier->correctLastYearDownloads($last12Months, $packageName);
 
             $previous12Months = $this->phpStanNettePackagesPurifier->correctPreviousYearDownloads(
                 $previous12Months,

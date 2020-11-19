@@ -116,12 +116,12 @@ Pokud přebíráš aplikaci bez testů a chceš přidat aspoň nějakou kontrolu
 ```php
 public function testContainerServices()
 {
-	$client = static::createClient();
+    $client = static::createClient();
 
-	foreach ($client->getContainer()->getServiceIds() as $serviceId) {
+    foreach ($client->getContainer()->getServiceIds() as $serviceId) {
         $service = $client->getContainer()->get($serviceId);
         $this->assertNotNull($service);
-	}
+    }
 }
 ```
 

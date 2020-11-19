@@ -8,13 +8,13 @@ perex: |
     <br>
     "Hold my 🍺"
 tweet: "A new Post on #php 🐘 blog: How to Instantly Migrate #nettefw Tester to #phpunit"
+
+updated_since: "November 2020"
+updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
 ---
 
-*If you don't know [Tester](https://tester.nette.org/en), is a PHP unit test framework created in the Czech Republic.*
-
-<br>
-
-In the last post we looked on [instant migration of PhpSpec to PHPUnit](/blog/2019/03/21/how-to-instantly-migrate-phpspec-to-phpunit/).
+In the last post we looked on [instant migration of PhpSpec to PHPUnit](/blog/2019/03/21/how-to-instantly-migrate-phpspec-to-phpunit).
 
 PhpSpec has a different architecture than PHPUnit - e.g.
 
@@ -140,15 +140,34 @@ Luckily, last 2 operations are subtractions, so we can just remove them.
 
 ## How to Instantly Migrate from Nette\Tester to PHPUnit?
 
+1. Install Rector
+
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process spec --set nette-tetser-to-phpunit
 ```
 
-Rector **doesn't replace you**, **it helps you** - so take few minutes to polish the details that Rectors missed and send the PR to your project
- <em class="fas fa-fw fa-check text-success fa-lg"></em>
+2. Add `rector.php` config:
 
-But if it's something daunting, [create an issue](https://github.com/rectorphp/rector/issues) - there might be a way to automate it.
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::NETTE_TESTER_TO_PHPUNIT]);
+};
+```
+
+3. Run it on `/tests` directory
+
+```bash
+vendor/bin/rector process tests
+```
+
+Then take few minutes to polish the details that Rectors missed and send the PR to your project
+<em class="fas fa-fw fa-check text-success fa-lg"></em>
 
 <br>
 

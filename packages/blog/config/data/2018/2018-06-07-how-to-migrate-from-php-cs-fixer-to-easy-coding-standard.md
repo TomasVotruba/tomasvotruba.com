@@ -7,16 +7,38 @@ perex: |
     There are **a few simple A → B changes**, but one has to know about them or will get stuck. Let's learn about them.
 tweet: "New Post on my Blog: How to Migrate From PHP CS Fixer to EasyCodingStandard in 6 Steps #ecs #codingstandard #ci"
 
-updated_since: "August 2020"
+updated_since: "November 2020"
 updated_message: |
-    Updated ECS YAML to PHP configuration since **ECS 8**.
+    Switched deprecated `--set` option to `ecs.php` config.
+    Switched **YAML** to **PHP** configuration.
 ---
 
-ECS is a tool build on Symfony 3.4 components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's super easy to start to use from scratch:
+ECS is a tool build on Symfony components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's easy to use from scratch:
 
 ```bash
 composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs check src --set psr12
+```
+
+ECS uses standard Symfony PHP config:
+
+```php
+// ecs.php
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\ValueObject\Option;
+use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::PSR_12,
+    ]);
+};
+```
+
+And runs as CLI command:
+
+```bash
+vendor/bin/ecs check src
 ```
 
 But what if you already have PHP CS Fixer on your project and want to switch?
@@ -49,17 +71,13 @@ How to do that in ECS? Copy paste the fixer name, capitalize first letter and re
 Then hit the "ctrl" + "space" for class autocomplete in PHPStorm (it works even now when I write this post in markdown, nice!).
 
 ```php
-<?php
-
 // ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
-    $services->set(PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer::class);
+    $services->set(DeclareStrictTypesFixer::class);
 };
 ```
 
@@ -81,15 +99,10 @@ Do you need `DeclareStrictTypesFixer` to skip this file? Sorry, PHP CS Fixer wil
 ECS solves this common case - to skip a file, just use `skip` parameter:
 
 ```php
-<?php
-
 // ecs.php
-
-declare(strict_types=1);
-
 use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\Configuration\Option;
+use Symplify\EasyCodingStandard\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
@@ -113,15 +126,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 Do you really want to skip **1 fixer** for all files?
 
 ```php
-<?php
-
 // ecs.php
-
-declare(strict_types=1);
-
 use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\Configuration\Option;
+use Symplify\EasyCodingStandard\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
@@ -222,14 +230,10 @@ $config = PhpCsFixer\Config::create()
 **to autocompleted set constant in PHP file in ECS**:
 
 ```php
-<?php
-
 // ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\Configuration\Option;use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+use Symplify\EasyCodingStandard\ValueObject\Option;
+use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
@@ -250,6 +254,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 Did I forget a step that you had to fight with? **Please, let me know in the comments or just send PR to this post to add it**, so we help other readers.
 
 <br>
-<br>
 
-Happy code sniffixing!
+Happy coding!

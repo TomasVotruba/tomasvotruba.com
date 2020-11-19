@@ -109,7 +109,7 @@ extensions:
 # app/config/config.neon
 symfonyBundles:
     bundles:
-		- League\Tactician\Bundle\TacticianBundle
+        - League\Tactician\Bundle\TacticianBundle
 ```
 
 And that's it!

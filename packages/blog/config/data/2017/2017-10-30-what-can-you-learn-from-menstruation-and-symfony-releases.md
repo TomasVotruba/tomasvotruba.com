@@ -108,17 +108,17 @@ Which of these 3 applications would you pick to maintain and upgrade based on th
 
 ```javascript
 {
-  	"require": {
-		"symfony/http-foundation": "3.3",
-		"symfony/console": "3.1",
-		"symfony/dependency-injection": "2.8",
-		"symfony/event-dispatcher": "3.2",
-		"doctrine/orm": "2.5",
-		"doctrine/dbal": "2.3",
-		"doctrine/annotations": "1.7",
-		"nette/utils": "2.3",
-		"nette/finder": "3.0"
-  	}
+      "require": {
+        "symfony/http-foundation": "3.3",
+        "symfony/console": "3.1",
+        "symfony/dependency-injection": "2.8",
+        "symfony/event-dispatcher": "3.2",
+        "doctrine/orm": "2.5",
+        "doctrine/dbal": "2.3",
+        "doctrine/annotations": "1.7",
+        "nette/utils": "2.3",
+        "nette/finder": "3.0"
+      }
 }
 ```
 
@@ -128,17 +128,17 @@ or **B** with [*per-vendor-sync*](https://getcomposer.org/doc/04-schema.md#name)
 
 ```javascript
 {
-  	"require": {
-		"symfony/http-foundation": "3.3",
-		"symfony/console": "3.3",
-		"symfony/dependency-injection": "3.3",
-		"symfony/event-dispatcher": "3.3",
-		"doctrine/orm": "2.5",
-		"doctrine/dbal": "2.5",
-		"doctrine/annotations": "2.5",
-		"nette/utils": "3.0",
-		"nette/finder": "3.0"
-  	}
+      "require": {
+        "symfony/http-foundation": "3.3",
+        "symfony/console": "3.3",
+        "symfony/dependency-injection": "3.3",
+        "symfony/event-dispatcher": "3.3",
+        "doctrine/orm": "2.5",
+        "doctrine/dbal": "2.5",
+        "doctrine/annotations": "2.5",
+        "nette/utils": "3.0",
+        "nette/finder": "3.0"
+      }
 }
 ```
 
@@ -148,17 +148,17 @@ or **C** that looks like sci-fi:
 
 ```javascript
 {
-  	"require": {
-		"symfony/http-foundation": "3.3",
-		"symfony/console": "3.3",
-		"symfony/dependency-injection": "3.3",
-		"symfony/event-dispatcher": "3.3",
-		"doctrine/orm": "3.3",
-		"doctrine/dbal": "3.3",
-		"doctrine/annotations": "3.3",
-		"nette/utils": "3.3",
-		"nette/finder": "3.3"
-  	}
+      "require": {
+        "symfony/http-foundation": "3.3",
+        "symfony/console": "3.3",
+        "symfony/dependency-injection": "3.3",
+        "symfony/event-dispatcher": "3.3",
+        "doctrine/orm": "3.3",
+        "doctrine/dbal": "3.3",
+        "doctrine/annotations": "3.3",
+        "nette/utils": "3.3",
+        "nette/finder": "3.3"
+      }
 }
 ```
 

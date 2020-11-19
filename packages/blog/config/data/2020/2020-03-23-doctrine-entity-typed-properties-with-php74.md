@@ -8,8 +8,9 @@ perex: |
     <br>
     Today we'll look at **the impact of typed properties on weak points of Doctrine entities and how to solve them**.
 
-updated_since: "October 2020"
+updated_since: "November 2020"
 updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
     Updated with **PHPStorm and PHPStan friendly** `Collection` syntax and [Rector rule](https://github.com/rectorphp/rector/pull/4442) that handles the change for you.
 
 tweet: "New Post on #php 🐘 blog: #doctrine Entity Typed Properties With PHP 7.4"
@@ -279,19 +280,31 @@ I did not do the upgrade pull-request myself (I'm way too lazy for that), [Recto
 
 **Do you want to see how Rector can upgrade your code?**
 
+1. Install Rector
 ```bash
 composer require rector/rector --dev
-vendor/bin/rector process src --set php74 # add "--dry-run" to check first
 ```
 
-Tip: Do you want to update your `Collection` syntax for PHPStorm and PHPStan friendly?
+2. Create `rector.php` config
 
-```bash
-vendor/bin/rector process src --set doctrine-code-quality
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::PHP_74,
+        // Protip: Do you want to update your `Collection` syntax for PHPStorm and PHPStan friendly?
+        SetList::DOCTRINE_CODE_QUALITY,
+    ]);
+};
 ```
 
 If you got any troubles, [let us know on GitHub](https://github.com/rectorphp/rector/issues/new/choose). That's all, folks.
 
 <br>
 
-Happy coding & stay alive!
+Happy coding!

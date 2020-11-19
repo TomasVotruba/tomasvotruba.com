@@ -2,90 +2,95 @@
 id: 49
 title: "7 New Features in Easy Coding Standard 2.2"
 perex: |
-    After extensive cooperation with [David Grudl on Nette\CodingStandard](https://twitter.com/geekovo/status/885152407948333056) EasyCodingStandard got new features, that **moved the project to completely new level of comfort**.
+    After extensive cooperation with [David Grudl on Nette\CodingStandard](https://twitter.com/geekovo/status/885152407948333056) ECS got new features with **focus on developer experience**. Smart experience.
 
     Prepared configs, reduction of config to few lines, `--config` option and more.
 tweet: "7 New Features in Easy Coding Standard #codingStandard #php #solid"
 
-deprecated_since: "December 2018"
-deprecated_message: |
-    Now there is **EasyCodingStandard 5**, so this is rather _7 oldies_.
-
-updated_since: "November 2019"
+updated_since: "November 2020"
 updated_message: |
-    Updated with **EasyCodingStandard 6**, Neon → YAML, config import → `sets` parameters, `checkers` → `services`.
+    Switched from deprecated `--set` option to PHP config.
+    Switched from YAML to PHP configs in **Symplify 9.**
 ---
 
-Huge thanks to [David Grudl](https://github.com/dg) who gave me the feedback, ideas and Windows bug fixes while working on [Nette\CodingStandard](https://github.com/nette/coding-standard) package. I'll write "how to" for Nette\CodingStandard later, but today we'll look on **new features it uses from EasyCodingStandard 2.2**.
+Today we'll look on **new features it uses from ECS**.
 
 ## 1. Shorter Bin
 
-Are you tired of tyops in `vendor/bin/easy-coding-standard`?
-
-**Now you can use `ecs` bin instead**:
-
 ```bash
+# before
+vendor/bin/easy-coding-standard
+
+# now
 vendor/bin/ecs
 ```
 
+## 2. Prepared Rule Sets
 
-## 2. Prepared Configs
-
-Before you had to name all the checkers manually in your config. There was no *PSR2* group nor *Symfony* like there is in other tools.
-
-**Now you can pick from 9 prepared configs**.
+Before you had to name all the checkers manually in your config. There was no *PSR2* group nor *Symfony* like there is in other tools. **Now you can pick from 10 prepared configs**.
 
 *PHP_CodeSniffer + PHP CS Fixer*
 
-```yaml
-vendor/symplify/easy-coding-standard/config/php70.yml
-vendor/symplify/easy-coding-standard/config/php71.yml
-vendor/symplify/easy-coding-standard/config/psr2.yml
-vendor/symplify/easy-coding-standard/config/symfony.yml
-vendor/symplify/easy-coding-standard/config/symfony-risky.yml
+```php
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\ValueObject\Option;
+use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+
+    $parameters->set(Option::SETS, [
+        SetList::PSR_12,
+        SetList::PHP_70,
+        SetList::PHP_71,
+        SetList::COMMON,
+        SetList::SYMPLIFY,
+        // ...
+        // explore the constants on `SetList` class
+    ]);
+};
 ```
-
-*Custom*
-
-```yaml
-vendor/symplify/easy-coding-standard/config/symplify.yml
-vendor/symplify/easy-coding-standard/config/common/spaces.yml
-vendor/symplify/easy-coding-standard/config/common.yml
-```
-
-This shortened Symplify config from [256 lines](https://github.com/symplify/symplify/blob/v2.0.0/easy-coding-standard.neon#L1-L256) **to [just 22 lines](https://github.com/symplify/symplify/blob/458082a5d534182e4ad723958c417399442abc82/easy-coding-standard.neon#L1-L22)**.
-
 
 ## 3. Use Whole Set But 1 Checker
 
-I like Symfony set from PHP CS Fixer, but **I'd like to remove 4 checkers**. Do I have to put all checkers I want to use explicitly to the config?
+Imagine you love the PSR-12 set, **except that 1 checker**. Do you skip the set completely or copy all the rules manually except the one?
 
 Not anymore!
 
-**Use the set and exclude unwanted checkers in `exclude_checkers` option**:
+```php
+use PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\ValueObject\Option;
+use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-```yaml
-parameters:
-    sets:
-        - 'symfony'
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
 
-    exclude_checkers:
-        # from PHP CS Fixer Symfony set
-        - 'PhpCsFixer\Fixer\PhpTag\BlankLineAfterOpeningTagFixer'
-        - 'PhpCsFixer\Fixer\Operator\NewWithBracesFixer'
-        - 'PhpCsFixer\Fixer\Phpdoc\PhpdocAlignFixer'
-        - 'PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer'
+    $parameters->set(Option::SETS, [
+        SetList::PSR_12,
+    ]);
+
+    $parameters->set(Option::SKIP, [
+        // ignore 1 rule everywhere
+        UnaryOperatorSpacesFixer::class => null,
+    ]);
+};
+
 ```
 
 ## 4. Skip More Than 1 File For Specific Checker
 
-If you need to skip more files, just **use [`fnmatch`](https://php.net/manual/en/function.fnmatch.php) pattern** in `skip` section.
+Do you need to skip more files for 1 specific checker? **Now you can [`fnmatch`](https://php.net/manual/en/function.fnmatch.php) pattern**:
 
-```yaml
-parameters:
-    skip:
-        SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff:
-            - '*packages/CodingStandard/src/Sniffs/*/*Sniff.php'
+```php
+use SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff;
+
+// ...
+$parameters->set(Option::SKIP, [
+    TypeHintDeclarationSniff::class => [
+        '*packages/CodingStandard/src/Sniffs/*/*Sniff.php'
+    ],
+]);
 ```
 
 ## 5. New Command `Show` Display Used Checkers
@@ -96,79 +101,35 @@ Do you know, what checkers do you use?
 vendor/bin/ecs show
 ```
 
-Or what checkers are in particular config?
-
-```bash
-vendor/bin/ecs show --config vendor/nette/coding-standard/coding-standard-php71.yml
-```
-
 This is rather debug or info tool, but it might come handy.
 
-**You can find [more options of this command in README](https://github.com/symplify/easy-coding-standard#show-command-to-display-all-checkers)**.
+**You can find [more options of this command in README](https://github.com/symplify/easy-coding-standard)**.
 
 
 ## 6. Scan `*.php` and `*.phpt` Files
 
 EasyCodingStandard checks only `*.php` files by default. But what if you want to check `*.phpt` as well as in case of [Nette\CodingStandard](https://github.com/nette/coding-standard)?
 
-**To add files with another suffixes you need to add own source provider**:
+Use `Option::FILE_EXTENSIONS`:
 
 ```php
-namespace App\Finder;
-
-use IteratorAggregate;
-use Nette\Utils\Finder;
-use SplFileInfo;
-use Symplify\EasyCodingStandard\Contract\Finder\CustomSourceProviderInterface;
-
-final class PhpAndPhptFilesProvider implements CustomSourceProviderInterface
-{
-    /**
-     * @param string[] $source
-     */
-    public function find(array $source): IteratorAggregate
-    {
-        # $source is "source" argument passed in CLI
-        # inc CLI: "vendor/bin/ecs check /src" => here: ['/src']
-        return Finder::find('*.php', '*.phpt')->in($source);
-    }
-}
+// ...
+$parameters->set(Option::FILE_EXTENSIONS, ['php', 'phpt']);
 ```
-
-And register it as a normal Symfony service:
-
-```yaml
-# easy-coding-standard.neon
-services:
-    App\Finder\PhpAndPhptFilesProvider: ~
-```
-
-[Explore README](https://github.com/symplify/easy-coding-standard#do-you-need-to-include-tests-php-inc-or-phpt-files) or [`SourceProvider`](https://github.com/nette/coding-standard/blob/2f935070b82fbe4b1da8e564a8dc6dcb9bbeca25/src/Finder/SourceProvider.php) in Nette\CodingStandard for more.
-
 
 ## 7. Are you Tabs Person?
 
-You're welcomed:
+There you go:
 
-```yaml
-parameters:
-    indentation: tab # "spaces" by default
+```php
+// ...
+$parameters->set(Option::INDENTATION, Option::INDENTATION_TAB);
 ```
-
-
-<br>
-
-You can find [these features in README](https://github.com/symplify/easy-coding-standard) with more detailed use examples.
-
 
 ### Like it? Try It
 
-If you find these 7 news useful, you can try [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) right now:
+If you find these 7 news useful, try [ECS](https://github.com/symplify/easy-coding-standard) right now.
 
+<br>
 
-```bash
-composer require symplify/easy-coding-standard --dev
-vendor/bin/ecs check src --set psr12
-```
-
-Happy code-style checking!
+Happy coding!

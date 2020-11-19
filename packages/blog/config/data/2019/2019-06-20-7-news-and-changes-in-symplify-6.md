@@ -8,8 +8,9 @@ perex: |
     This post shows 7 news and changes, that might affect you (in a good way).
 tweet: "New Post on #php 🐘 blog: 7 News and Changes in #symplify 6  #ecs"
 
-updated_since: "August 2020"
+updated_since: "November 2020"
 updated_message: |
+    Switch from deprecated `--set` option to `rector.php` config.
     Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
@@ -41,14 +42,10 @@ That was way too complicated, right?
 In new *Symplify 8*, you can use just one config with `only` option instead:
 
 ```php
-<?php
-
 // ecs.php
 
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\Configuration\Option;
+use Symplify\EasyCodingStandard\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
@@ -97,7 +94,7 @@ Why? The sets are only string references, so its useless for human to remember t
  declare(strict_types=1);
 
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-+use Symplify\EasyCodingStandard\Configuration\Option;
++use Symplify\EasyCodingStandard\ValueObject\Option;
 +use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
  return static function (ContainerConfigurator $containerConfigurator): void {
@@ -115,14 +112,9 @@ Why? The sets are only string references, so its useless for human to remember t
 People confused this options and created *WTF* issues. That's why the `exclude_checkers` is now merged in `skip`, so you have less option names to remember:
 
 ```diff
- <?php
-
  // ecs.php
-
- declare(strict_types=1);
-
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-+use Symplify\EasyCodingStandard\Configuration\Option;
++use Symplify\EasyCodingStandard\ValueObject\Option;
 
  return static function (ContainerConfigurator $containerConfigurator): void {
      $parameters = $containerConfigurator->parameters();
@@ -148,7 +140,7 @@ Do you like `SplFileInfo` that is 100 % sure the file exists? In that case, you 
  declare(strict_types=1);
 
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-+use Symplify\EasyCodingStandard\Configuration\Option;
++use Symplify\EasyCodingStandard\ValueObject\Option;
 
  return static function (ContainerConfigurator $containerConfigurator): void {
      $services = $containerConfigurator->services();
@@ -189,12 +181,7 @@ So instead, *Symplify 6* adds better system to pass collected services of certai
 `RemoveUselessDocBlockFixer` was removed, since [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) now provides `NoSuperfluousPhpdocTagsFixer` with similar features:
 
 ```diff
- <?php
-
  // ecs.php
-
- declare(strict_types=1);
-
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
  return static function (ContainerConfigurator $containerConfigurator): void {

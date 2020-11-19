@@ -193,12 +193,24 @@ Do you want to know all the possible code changes?
 
 ## In CI pipeline, or Won't Happen
 
-What now? Go to your code and check method one by one clicking on them in PHPStorm to *Find Usages*, if they're used somewhere else or *false public* and should be private. It will make your code much more robust and senior.
+What now? Go to your code and check method one by one clicking on them in PHPStorm to *Find Usages*, if they're used somewhere else or *false public* and should be private. It will make your code much more robust and senior...
 
-Just kidding. Just use new Rector set `privatization` locally and it to your CI:
+*Just kidding*. Let Rector handle it with `PRIVATIZATION` set:
+
+```php
+// rector.php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [SetList::PRIVATIZATION]);
+};
+```
 
 ```bash
-vendor/bin/rector process src --set privatization
+vendor/bin/rector process src
 ```
 
 It has now 4 rules:

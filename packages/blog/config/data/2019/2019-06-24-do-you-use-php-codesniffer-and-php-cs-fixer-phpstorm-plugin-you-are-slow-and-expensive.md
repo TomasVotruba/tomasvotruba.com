@@ -130,7 +130,7 @@ If there will be Rector plugin for PHPStorm (I honestly hope it won't), **you'd 
 If you're effective, lazy and don't want to produce waste, you'll run:
 
 ```bash
-vendor/bin/rector process src --set php74
+vendor/bin/rector process src
 ```
 
 And save millions of your brain cells :)

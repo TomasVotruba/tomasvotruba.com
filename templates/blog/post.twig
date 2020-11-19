@@ -18,7 +18,7 @@
                         <div class="card-header text-white bg-danger">
                             <strong>This post is deprecated at {{ post.deprecatedAt|date("F Y") }}</strong>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body pb-2">
                             {{ post.deprecatedMessage|markdown|raw }}
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                             <strong>This post was updated at {{ post.updatedAt|date("F Y") }}</strong>
                         </div>
                         {% if post.updatedMessage is not null %}
-                            <div class="card-body">
+                            <div class="card-body pb-2">
                                 {{ post.updatedMessage|markdown|raw }}
                             </div>
                         {% endif %}
@@ -42,7 +42,7 @@
                 {% endif %}
 
                 <div class="card card-bigger mb-5">
-                    <div class="card-body">
+                    <div class="card-body pb-2">
                         {{ post.perex|markdown|raw }}
                     </div>
                 </div>

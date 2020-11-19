@@ -7,6 +7,11 @@ perex: |
     For the rest of you, what will you do when PHP will tell you the message in the title?
 tweet: "New Post on My Blog: Fatal error: Uncaught Error: [] operator not supported for strings in #php56 #php70 #eol #rector"
 tweet_image: "/assets/images/posts/2018/upgrade-php/swap.png"
+
+updated_since: "November 2020"
+updated_message: |
+    Switched deprecated `--set` option to `rector.php` config.
+    Switched **YAML** to **PHP** configuration.
 ---
 
 <div class="text-center">
@@ -137,14 +142,24 @@ I went full-time on writing PHP upgrade rules - in the train, in the buss, in th
    <strong>Today I'm proud to announce 7 new Rector levels</strong> that were not here a month ago:
 </p>
 
-```bash
-vendor/bin/rector process src --set php54
-vendor/bin/rector process src --set php56
-vendor/bin/rector process src --set php70
-vendor/bin/rector process src --set php71
-vendor/bin/rector process src --set php72
-vendor/bin/rector process src --set php73
-vendor/bin/rector process src --set php74
+```php
+use Rector\Core\Configuration\Option;
+use Rector\Set\ValueObject\SetList;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $parameters = $containerConfigurator->parameters();
+    $parameters->set(Option::SETS, [
+        SetList::PHP_54,
+        SetList::PHP_55,
+        SetList::PHP_56,
+        SetList::PHP_70,
+        SetList::PHP_71,
+        SetList::PHP_72,
+        SetList::PHP_73,
+        SetList::PHP_74,
+    ]);
+};
 ```
 
 <br>
@@ -187,4 +202,4 @@ You'll be helping each other developer, who upgrades the same PHP version you di
 
 <br>
 
-Happy stress-free upgrading!
+Happy coding!

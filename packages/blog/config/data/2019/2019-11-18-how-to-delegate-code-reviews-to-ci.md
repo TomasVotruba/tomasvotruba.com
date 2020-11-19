@@ -55,12 +55,6 @@ composer require rector/rector --dev
 2. Create `rector-ci.php` config just for code-reviews
 
 ```php
-<?php
-
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;

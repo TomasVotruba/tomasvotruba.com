@@ -119,32 +119,32 @@ Cyclomatic complexity in PHP code would, **for the example B**, look like this:
 ```php
 final class ProductController extends Controller
 {
-	public function renderDetail(Request $request)
-	{
-		$id = $request->get('id'); # 1
-		if ($id === null) { # 2
-			throw new ProductIdMissingException('Id is required for product detail'.);
-		}
+    public function renderDetail(Request $request)
+    {
+        $id = $request->get('id'); # 1
+        if ($id === null) { # 2
+            throw new ProductIdMissingException('Id is required for product detail'.);
+        }
 
-		$product = $this->productRepository->get($id);
-		if ($product === null) { # 3
-			throw new ProductNotFoundException(sprintf('Product with id %d was not found.', $id);
-		}
+        $product = $this->productRepository->get($id);
+        if ($product === null) { # 3
+            throw new ProductNotFoundException(sprintf('Product with id %d was not found.', $id);
+        }
 
-		if (! $product->isAvailable) { # 4
-			$this->redirect('sold-out');
-		}
+        if (! $product->isAvailable) { # 4
+            $this->redirect('sold-out');
+        }
 
-		if ($this->isOnMobile()) { # 5
-			foreach ($product->getImages() as $image) { # 6
-				$image->resizeToMobile();
-			}
-		}
+        if ($this->isOnMobile()) { # 5
+            foreach ($product->getImages() as $image) { # 6
+                $image->resizeToMobile();
+            }
+        }
 
-		$this->render('detail', [
-			'product' => $product;
-		]);
-	}
+        $this->render('detail', [
+            'product' => $product;
+        ]);
+    }
 }
 ```
 
@@ -155,15 +155,15 @@ And for **the example A** like this:
 ```php
 final class ProductController extends Controller
 {
-	public function renderDetail(Product $product)
-	{
-		$this->ensureIsAvailable($product); # 1
-		$this->prepareForMobile($product);
+    public function renderDetail(Product $product)
+    {
+        $this->ensureIsAvailable($product); # 1
+        $this->prepareForMobile($product);
 
-		$this->render('detail', [
-			'product' => $product;
-		]);
-	}
+        $this->render('detail', [
+            'product' => $product;
+        ]);
+    }
 }
 ```
 

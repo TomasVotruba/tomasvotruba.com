@@ -53,15 +53,15 @@ Dřívější dlouhý zápis
 # services.yml
 
 services:
-	myService:
-		class: MyBundle\MyService
-    	arguments: [ @dependency1, @dependency2 ]
+    myService:
+        class: MyBundle\MyService
+        arguments: [ @dependency1, @dependency2 ]
 
-	dependency1:
-		class: MyBundle\Dependency1
+    dependency1:
+        class: MyBundle\Dependency1
 
-	dependency2:
-		class: MyBundle\Dependency2
+    dependency2:
+        class: MyBundle\Dependency2
 ```
 
 nyní můžeš zkrátit na
@@ -70,9 +70,9 @@ nyní můžeš zkrátit na
 # services.yml
 
 services:
-	myService:
-		class: MyBundle\MyService
-	    autowiring: true
+    myService:
+        class: MyBundle\MyService
+        autowiring: true
 ```
 
 ### Jak to funguje?
@@ -91,8 +91,8 @@ Místo konkretního typu služby můžeš vyžádat interface, který služba im
 
 services:
     dependency1:
-	    class: MyBundle\Dependency1
-	    autowiring_types: MyBundle\MyInterface
+        class: MyBundle\Dependency1
+        autowiring_types: MyBundle\MyInterface
 ```
 
 <blockquote>
