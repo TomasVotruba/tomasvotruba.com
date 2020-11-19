@@ -2,16 +2,6 @@ name: Code Analysis
 
 on:
     pull_request: null
-    # is required, so automated pull-requests trigger this
-    push: null
-
-    # testing out https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#workflow_run
-    workflow_run:
-        workflows: ["Refresh Framework Stats"]
-        branches: null
-        types:
-            - completed
-            - requested
 
 jobs:
     code_analysis:
