@@ -25,15 +25,15 @@ Read the post, it's really beautifully written with respect to the framework by 
 
 Niklas finishes the post with a reasonable statement:
 
-> Other frameworks and tools come with better-designed defaults and less magic. So for now, I’ll say goodbye to Laravel.
+<blockquote class="blockquote text-center">
+"Other frameworks and tools come with better-designed defaults and less magic. So for now, I’ll say goodbye to Laravel."
+</blockquote>
 
 But is switching the framework (language, girlfriends, parents...) really the best solution?
 
 ## Do You Leave Your Kid on Puberty?
 
-Thing is, every framework (and developer) has this step in evolution. So did [Symplify with static methods](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/).
-
-Each framework I used in some period of its evolution used static:
+Thing is, every framework (and developer) has this step in evolution. So did [Symplify with static methods](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/). Each framework I used in some period of its evolution used static:
 
 **Nette**
 
@@ -61,9 +61,9 @@ $result = SomeService::someMethod();
 
 ## Help Your Parents Grow
 
-I don't think the point is to leave the framework but to help it to the quality. E.g. Symfony constructor injection autowiring as we know it today wasn't always there. It was first suggested around Symfony 2.3 but strictly rejected by Fabien as an anti-pattern.
+I don't think the point is to leave the framework but to help it to the quality. E.g. Symfony **constructor injection autowiring wasn't always there**. It was first suggested around Symfony 2.3 but strictly rejected by Fabien as an anti-pattern.
 
-It took many bundles like Kutny\AutowiringBundle, Skrz\Autowiring or Symplify\Autowiring, closed issues and PRs with proof of concept before the Symfony core team was convinced enough to accept next autowiring-PR, that laid the foundation to autowiring we use today.
+It took many bundles like `Kutny\AutowiringBundle`, `Skrz\Autowiring` or `symplify\autowiring`, closed issues and PRs with proof of concept before the Symfony core team was convinced enough to accept next autowiring-PR, **that laid the foundation to autowiring we use today**.
 
 This is a completely normal process of community learning.
 
