@@ -17,31 +17,14 @@ jobs:
             matrix:
                 actions:
                     -
-                        name: Generate Framework Stats for Last Month
+                        name: Re-Generate Framework Stats
                         run: bin/console generate-stats --ansi
 
                     -
                         name: Re-Generate Thank You Contributors
                         run: bin/console thank-contributors --ansi
 
-        steps:
-            -
-                uses: actions/checkout@v2
-                with:
-                    token: ${{ secrets.GITHUB_TOKEN }}
-
-            -
-                uses: shivammathur/setup-php@v2
-                with:
-                    php-version: 7.4
-                    tools: composer:v2
-
-            -   run: composer install --no-progress --ansi
-
-    refresh_framework_stats:
         name: ${{ matrix.actions.run }}
-
-        runs-on: ubuntu-latest
 
         steps:
             -

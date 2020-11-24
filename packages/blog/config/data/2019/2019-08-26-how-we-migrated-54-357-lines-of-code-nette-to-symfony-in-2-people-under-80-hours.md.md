@@ -72,9 +72,9 @@ In 2019 we already had a **lot of tools to do the work for you**:
 
 - The first is [Rector](https://github.com/rectorphp/rector), a tool I made that can change any code that runs at least on PHP 5.3 from pattern A to pattern B. It can instantly update the code from PHP 5.3, 5.4, 5.5, 5.6... to 7.4, Symfony from 2.8 to 4.2, Laravel from static code to constructor injection, and more. You can add your own rules tailored to migrate your specific code, that can handle anything that PHP programmer can do (A → B) in a fraction of the time.
 
-- The second is [NeonToYaml](https://github.com/symplify/neon-to-yaml) - as you can guess, it converts NEON syntax to YAML
+- The second is [NeonToYamlConverter](https://github.com/symplify/neon-to-yaml-converter) - as you can guess, it converts NEON syntax to YAML
 
-- The third assistant is [LatteToTwigConverter](https://github.com/symplify/latte-to-twig) - it migrates Latte files to TWIG syntax
+- The third assistant is [LatteToTwigConverter](https://github.com/symplify/latte-to-twig-converter) - it migrates Latte files to TWIG syntax
 
 During those **17 days, we put in 80 hours of work** for both of us together (= 40 hours each).
 
@@ -156,7 +156,7 @@ Automatic tools did another 80% of the pull-request you saw above. The first one
 
 Neon and YAML are de facto fields [with minor differences in syntax](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/), but when it comes to services, each framework writes a little differently. Config with services had 316 lines in the services section. You don't want to migrate it manually, the Neon entities. Besides, just one error in related migration, and you can do it all over again.
 
-I took few hours and wrote [Symplify/NeonToYaml](https://github.com/symplify/neon-to-yaml). Just pass the path to the `*.neon` file, and it will convert into a beautiful `*.yaml` file.
+I took few hours and wrote [Symplify/NeonToYamlConverter](https://github.com/symplify/neon-to-yaml-converter). Just pass the path to the `*.neon` file, and it will convert into a beautiful `*.yaml` file.
 
 ## PHP Migration
 
@@ -347,4 +347,4 @@ As you can see, any application can be migrated from one framework to another un
 
 <br>
 
-Happy migrating!
+Happy coding!
