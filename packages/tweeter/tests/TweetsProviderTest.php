@@ -27,8 +27,7 @@ final class TweetsProviderTest extends AbstractTwitterTestCase
 
         $oldestPost = $postTweets[array_key_last($postTweets)];
 
-        $postDate = $oldestPost->getPostDateTime()
-            ->format('Y-m-d');
+        $postDate = $oldestPost->getPostDateTimeInFormat('Y-m-d');
         $this->assertSame('2019-01-03', $postDate);
     }
 }

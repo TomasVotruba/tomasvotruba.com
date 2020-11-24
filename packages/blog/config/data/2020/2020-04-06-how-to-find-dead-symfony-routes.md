@@ -74,7 +74,7 @@ composer require symplify/symfony-route-usage
 ```php
 // config/bundles.php
 return [
-    Migrify\SymfonyRouteUsage\SymfonyRouteUsageBundle::class => ['all' => true],
+    Symplify\SymfonyRouteUsage\SymfonyRouteUsageBundle::class => ['all' => true],
 ];
 ```
 

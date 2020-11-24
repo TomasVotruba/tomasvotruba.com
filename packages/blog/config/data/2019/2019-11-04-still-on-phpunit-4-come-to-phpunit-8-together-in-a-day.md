@@ -530,7 +530,7 @@ Also less common ones:
 - `tearDownAfterClass()`
 - `onNotSuccessfulTest()`
 
-For this one, we'll use little help from Migrify:
+For this one, we'll use little help from Symplify:
 
 ```bash
 composer require symplify/phpunit-upgrader --dev

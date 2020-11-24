@@ -26,7 +26,6 @@ final class ProjectsController extends AbstractController
         return $this->render('projects/projects.twig', [
             'title' => 'Projects',
             'symplify_packages' => $this->vendorPackagesFactory->createPackagesByVendor('symplify'),
-            'migrify_packages' => $this->vendorPackagesFactory->createPackagesByVendor('migrify'),
             'other_packages' => $this->vendorPackagesFactory->createPackagesByPackageNames([
                 'knplabs/doctrine-behaviors',
                 'cpliakas/git-wrapper',

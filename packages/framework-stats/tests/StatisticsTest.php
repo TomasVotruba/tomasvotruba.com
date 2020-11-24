@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\FrameworkStats\Tests;
 
-use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
+use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use TomasVotruba\FrameworkStats\Statistics;
 use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 

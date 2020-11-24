@@ -36,7 +36,8 @@ final class FormatPreservingPrinter
 
         // our code end
 
-        return (new Standard())->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
+        $standardPrinter = new Standard();
+        return $standardPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
     }
 
     private function createLexer(): Emulative

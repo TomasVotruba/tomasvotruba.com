@@ -524,6 +524,9 @@
     "symplify/phpstan-extensions": {
         "version": "v7.2.4"
     },
+    "symplify/phpstan-rules": {
+        "version": "9.0.0-beta2"
+    },
     "symplify/rule-doc-generator": {
         "version": "9.0-dev"
     },

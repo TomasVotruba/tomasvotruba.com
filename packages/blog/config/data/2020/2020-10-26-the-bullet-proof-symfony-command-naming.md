@@ -155,7 +155,7 @@ Pretty clear, right?
 
 Well, that happens when you try to impress your readers.
 
-How could we avoid such an awkward situation? If you contribute Symplify or Migrify, you might already know the answer... or if you get inspiration from **the controller and event classes** above.
+How could we avoid such an awkward situation? If you contribute Symplify or Symplify, you might already know the answer... or if you get inspiration from **the controller and event classes** above.
 
 <br>
 

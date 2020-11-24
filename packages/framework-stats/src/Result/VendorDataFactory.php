@@ -57,7 +57,8 @@ final class VendorDataFactory
 
         // metadata
         $data['vendors'] = $vendorsData;
-        $data['updated_at'] = (new DateTime())->format('Y-m-d H:i:s');
+        $nowDateTime = new DateTime();
+        $data['updated_at'] = $nowDateTime->format('Y-m-d H:i:s');
 
         return $data;
     }

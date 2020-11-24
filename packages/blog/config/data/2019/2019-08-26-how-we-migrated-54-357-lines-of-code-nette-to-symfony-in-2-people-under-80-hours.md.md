@@ -9,7 +9,7 @@ twee_image: "/assets/images/posts/2019/fw-migration/pull-request.png"
 
 updated_since: "June 2020"
 updated_message: |
-    Updated with [Migrify](http://github.com/migrify) packages and local links.
+    Updated with [Symplify](http://github.com/symplify) packages and local links.
 ---
 
 *Similar post was originally published [in Czech on Zdrojak.cz](https://www.zdrojak.cz/clanky/50k-radku-z-nette-do-symfony), where it got colossal attention of the PHP community and hit a record of 56 comments. But when I talk about this migration with my English speaking PHP friends, it seems crazy to them, and they want to hear details - who, how, when, what exactly?*
@@ -156,7 +156,7 @@ Automatic tools did another 80% of the pull-request you saw above. The first one
 
 Neon and YAML are de facto fields [with minor differences in syntax](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/), but when it comes to services, each framework writes a little differently. Config with services had 316 lines in the services section. You don't want to migrate it manually, the Neon entities. Besides, just one error in related migration, and you can do it all over again.
 
-I took few hours and wrote [Migrify/NeonToYaml](https://github.com/symplify/neon-to-yaml). Just pass the path to the `*.neon` file, and it will convert into a beautiful `*.yaml` file.
+I took few hours and wrote [Symplify/NeonToYaml](https://github.com/symplify/neon-to-yaml). Just pass the path to the `*.neon` file, and it will convert into a beautiful `*.yaml` file.
 
 ## PHP Migration
 

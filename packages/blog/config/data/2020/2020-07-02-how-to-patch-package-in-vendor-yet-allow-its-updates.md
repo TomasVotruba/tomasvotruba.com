@@ -83,7 +83,7 @@ Idea behind [composer patches](https://github.com/cweagans/composer-patches) is 
 
 I don't want developers to be frustrated over pixel coding. I want developers to play and explore their abilities to their limits.
 
-We made a Migrify package that adds UX layer **that handles the tedious maintenance for you**.
+We made a Symplify package that adds UX layer **that handles the tedious maintenance for you**.
 
 ## 4 Steps to Generate Your First Patch
 
@@ -125,7 +125,7 @@ Only `*.php` file is loaded, not the `*.php.old` one. This way, you can **be sur
 vendor/bin/vendor-patches generate
 ```
 
-The Migrify tool will generate patch files for all files created this way in `/patches` directory:
+The Symplify tool will generate patch files for all files created this way in `/patches` directory:
 
 ```bash
 /patches/nette-di-di-extensions-injectextension.php.patch

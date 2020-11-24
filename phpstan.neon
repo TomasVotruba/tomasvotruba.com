@@ -1,13 +1,13 @@
 includes:
     - vendor/symplify/phpstan-extensions/config/config.neon
-    - vendor/symplify/coding-standard/config/symplify-rules.neon
+    - vendor/symplify/phpstan-rules/config/symplify-rules.neon
 
 services:
     -
-        class: Symplify\CodingStandard\Rules\PreferredClassRule
+        class: Symplify\PHPStanRules\Rules\PreferredClassRule
         tags: [phpstan.rules.rule]
         arguments:
-            oldToPrefferedClasses:
+            oldToPreferredClasses:
                 SplFileInfo: 'Symplify\SmartFileSystem\SmartFileInfo'
                 DateTime: 'Nette\Utils\DateTime'
                 'PhpCsFixer\Finder': 'Symfony\Component\Finder\Finder'
@@ -17,7 +17,7 @@ services:
                 'Symfony\Component\Filesystem\Filesystem': 'Symplify\SmartFileSystem\SmartFileSystem'
 
     -
-        class: Symplify\CodingStandard\Rules\RequireMethodCallArgumentConstantRule
+        class: Symplify\PHPStanRules\Rules\RequireMethodCallArgumentConstantRule
         tags: [phpstan.rules.rule]
         arguments:
             constantArgByMethodByType:
@@ -131,3 +131,17 @@ parameters:
             paths:
                 - packages/blog/src/Posts/Year2018/ConsoleDI/App/AppKernel.php # 18
                 - packages/blog/src/Posts/Year2018/ParameterToSymfonyController/App/ParameterToSymfonyControllerAppKernel.php # 16
+
+        -
+            message: '#Do not use chained method calls\. Put each on separated lines#'
+            paths:
+                - packages/tweeter/src/TwitterApi/TwitterApiCaller.php # 26
+
+        # this would be switched to twitter action anyway
+        -
+             message: '#Private method in is not allowed here \- it should only delegate to others\. Decouple the private method to a new service class#'
+             paths:
+                - packages/tweeter/src/Command/TweetCommand.php # 96
+                - packages/tweeter/src/Command/TweetCommand.php # 103
+                - packages/tweeter/src/Command/TweetCommand.php # 117
+                - packages/tweeter/src/Command/TweetCommand.php # 128

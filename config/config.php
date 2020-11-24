@@ -5,6 +5,7 @@ declare(strict_types=1);
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 use TomasVotruba\Website\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
@@ -27,4 +28,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $services->load('TomasVotruba\Website\\', __DIR__ . '/../src')
         ->exclude([__DIR__ . '/../src/HttpKernel', __DIR__ . '/../src/ValueObject']);
+
+    $services->set(PrivatesAccessor::class);
 };

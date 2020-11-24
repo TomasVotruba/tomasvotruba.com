@@ -11,7 +11,7 @@ tweet_image: "/assets/images/posts/2019/neon-to-yaml/convert-neon-to-yaml.gif"
 
 updated_since: "July 2020"
 updated_message: |
-    Updated to Migrify package.
+    Updated to Symplify package.
 ---
 
 <img src="/assets/images/posts/2019/neon-to-yaml/convert-neon-to-yaml.gif" class="img-thumbnail">
