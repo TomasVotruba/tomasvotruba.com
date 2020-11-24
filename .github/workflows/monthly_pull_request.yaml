@@ -1,4 +1,4 @@
-name: Refresh Framework Stats
+name: Monthly Pull Request
 
 on:
     push: null
@@ -9,17 +9,44 @@ on:
         -   cron: "00 12 1 * *"
 
 jobs:
+    monthly_pull_request:
+        runs-on: ubuntu-latest
+
+        strategy:
+            fail-fast: false
+            matrix:
+                actions:
+                    -
+                        name: Generate Framework Stats for Last Month
+                        run: bin/console generate-stats --ansi
+
+                    -
+                        name: Re-Generate Thank You Contributors
+                        run: bin/console thank-contributors --ansi
+
+        steps:
+            -
+                uses: actions/checkout@v2
+                with:
+                    token: ${{ secrets.GITHUB_TOKEN }}
+
+            -
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: 7.4
+                    tools: composer:v2
+
+            -   run: composer install --no-progress --ansi
+
     refresh_framework_stats:
+        name: ${{ matrix.actions.run }}
+
         runs-on: ubuntu-latest
 
         steps:
             -
-                name: Get current Month
                 # see https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#example-4
                 run: echo "CURRENT_MONTH=$(echo date::$('%Y-%m'))" >> $GITHUB_ENV
-
-            -
-                run: echo $CURRENT_MONTH
 
             -   uses: actions/checkout@v2
                 with:
@@ -32,12 +59,9 @@ jobs:
 
             -   run: composer install --no-progress --ansi
 
-            -
-                name: Generate Framework Stats for Last Month
-                run: bin/console generate-stats --ansi
+            -   run: ${{ matrix.actions.run }}
 
-
-
+            # see https://github.com/peter-evans/create-pull-request
             -
                 name: Create pull-request
                 uses: peter-evans/create-pull-request@v3
