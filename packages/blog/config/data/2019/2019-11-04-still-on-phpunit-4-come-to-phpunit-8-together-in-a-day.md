@@ -533,7 +533,7 @@ Also less common ones:
 For this one, we'll use little help from Migrify:
 
 ```bash
-composer require migrify/phpunit-upgrader --dev
+composer require symplify/phpunit-upgrader --dev
 vendor/bin/phpunit-upgrader voids /tests
 ```
 

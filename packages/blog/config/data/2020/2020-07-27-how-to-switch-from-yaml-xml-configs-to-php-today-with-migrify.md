@@ -25,7 +25,7 @@ With legacy migrations, we have to handle a lot of processes that are automated.
 
 <br>
 
-We made [migrify/config-transformer](https://github.com/migrify/config-transformer) to handle this work for us.
+We made [symplify/config-transformer](https://github.com/symplify/config-transformer) to handle this work for us.
 
 <img src="/assets/images/posts/2020/yaml_to_php.png" class="img-thumbnail">
 
@@ -36,10 +36,10 @@ We made [migrify/config-transformer](https://github.com/migrify/config-transform
 
 <br>
 
-## 1. Install migrify/config-transformer
+## 1. Install symplify/config-transformer
 
 ```bash
-composer require migrify/config-transformer --dev
+composer require symplify/config-transformer --dev
 ```
 
 ## 2. Run `switch-format` Command
@@ -173,7 +173,7 @@ One little tool for you, one big leap for a PHP programmer-kind.
 
 **Is something broken? Have you found a space for improvement?**
 
-Create [an issue](https://github.com/migrify/migrify/issues/new) and let us know. We'd love to hear it.
+Create [an issue](https://github.com/symplify/symplify/issues/new) and let us know. We'd love to hear it.
 
 <br>
 

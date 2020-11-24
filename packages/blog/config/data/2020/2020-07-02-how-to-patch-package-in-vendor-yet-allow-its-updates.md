@@ -90,7 +90,7 @@ We made a Migrify package that adds UX layer **that handles the tedious maintena
 ### 1. Install Packages
 
 ```bash
-composer require cweagans/composer-patches migrify/vendor-patches --dev
+composer require cweagans/composer-patches symplify/vendor-patches --dev
 ```
 
 ### 2. Create a Copy of `/vendor` file you Want To Change with `*.old` Suffix

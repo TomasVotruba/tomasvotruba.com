@@ -5,4 +5,5 @@ return [
     Symfony\Bundle\FrameworkBundle\FrameworkBundle::class => ['all' => true],
     Migrify\PhpConfigPrinter\Bundle\PhpConfigPrinterBundle::class => ['all' => true],
     Symplify\ComposerJsonManipulator\ComposerJsonManipulatorBundle::class => ['dev' => true, 'test' => true],
+    Symplify\MarkdownDiff\MarkdownDiffBundle::class => ['dev' => true, 'test' => true],
 ];
