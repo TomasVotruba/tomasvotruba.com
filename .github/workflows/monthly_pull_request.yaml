@@ -72,3 +72,4 @@ jobs:
                     base: 'master'
                     title: "Automated Update of Framework Stats for ${{CURRENT_MONTH }}"
                     delete-branch: true
+                    author: "kaizen-ci <info@kaizen-ci.org>"
