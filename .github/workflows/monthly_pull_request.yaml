@@ -1,8 +1,6 @@
 name: Monthly Pull Request
 
 on:
-    push: null
-
     # to try it out
     schedule:
         # every 1st day in month at 12:00 https://crontab.guru/#00_12_1_*_*
@@ -21,18 +19,18 @@ jobs:
                     -
                         name: Re-Generate Framework Stats
                         run: bin/console generate-stats --ansi
+                        # to prevent mutual override
+                        branch: re-generated-framework-stats
 
                     -
                         name: Re-Generate Thank You Contributors
                         run: bin/console thank-contributors --ansi
+                        # to prevent mutual override
+                        branch: re-generated-thank-you
 
-        name: ${{ matrix.actions.run }}
+        name: ${{ matrix.actions.name }}
 
         steps:
-            -
-                # see https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#example-4
-                run: echo "CURRENT_MONTH=$(echo date::$('%Y-%m'))" >> $GITHUB_ENV
-
             -   uses: actions/checkout@v2
                 with:
                     token: ${{ secrets.GITHUB_TOKEN }}
@@ -45,6 +43,11 @@ jobs:
             -   run: composer install --no-progress --ansi
 
             -   run: ${{ matrix.actions.run }}
+                env:
+                     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+            # fix coding standards
+            -   run: 'composer fix-cs --ansi'
 
             # see https://github.com/peter-evans/create-pull-request
             -
@@ -52,9 +55,9 @@ jobs:
                 uses: peter-evans/create-pull-request@v3
                 with:
                     token: ${{ secrets.GITHUB_TOKEN }}
-                    commit-message: "update framework stats ${{ CURRENT_MONTH }}"
-                    branch: ci-generated-framework-stats
-                    base: 'master'
-                    title: "Automated Update of Framework Stats for ${{CURRENT_MONTH }}"
+                    title: "${{ matrix.actions.name }}"
+                    commit-message: "${{ matrix.actions.name }}"
+                    base: "master"
                     delete-branch: true
                     author: "kaizen-ci <info@kaizen-ci.org>"
+                    committer: "kaizen-ci <info@kaizen-ci.org>"
