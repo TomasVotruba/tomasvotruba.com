@@ -45,7 +45,7 @@ final class ThankContributorsCommand extends Command
         $contributors = $this->githubApi->getContributors();
         if (count($contributors) === 0) {
             $message = sprintf(
-                'Found 0 contributions - stick with the current dump. Try running the same command with "GITHUB_TOKEN=xxx bin/console ...". Get your token here: %s',
+                'Found 0 contributions - stick with the current dump. Try running the same command with "ACCESS_TOKEN=xxx bin/console ...". Get your token here: %s',
                 'https://github.com/settings/tokens/new'
             );
             $this->symfonyStyle->warning($message);

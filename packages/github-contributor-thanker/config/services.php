@@ -12,7 +12,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $parameters->set(Option::THANKER_REPOSITORY_NAME, 'tomasvotruba/tomasvotruba.com');
     $parameters->set(Option::THANKER_AUTHOR_NAME, 'TomasVotruba');
-    $parameters->set(Option::GITHUB_TOKEN, '%env(GITHUB_TOKEN)%');
+    $parameters->set(Option::GITHUB_TOKEN, '%env(ACCESS_TOKEN)%');
 
     $services = $containerConfigurator->services();
 
