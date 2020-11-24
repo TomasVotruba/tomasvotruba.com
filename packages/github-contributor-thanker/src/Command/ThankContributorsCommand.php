@@ -11,7 +11,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
 use TomasVotruba\GithubContributorsThanker\Api\GithubApi;
-use TomasVotruba\Website\FIleSystem\ParametersConfigDumper;
+use TomasVotruba\Website\FileSystem\ParametersConfigDumper;
 use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 final class ThankContributorsCommand extends Command
@@ -45,7 +45,7 @@ final class ThankContributorsCommand extends Command
         $contributors = $this->githubApi->getContributors();
         if (count($contributors) === 0) {
             $message = sprintf(
-                'Found 0 contributions - stick with the current dump. Try running the same command with "GITHUB_TOKEN=xxx bin/console ...". Get your token here: %s',
+                'Found 0 contributions - stick with the current dump. Try running the same command with "ACCESS_TOKEN=xxx bin/console ...". Get your token here: %s',
                 'https://github.com/settings/tokens/new'
             );
             $this->symfonyStyle->warning($message);

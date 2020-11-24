@@ -57,15 +57,13 @@ final class YamlTest extends TestCase implements PostTestInterface
     }
 
     /**
-     * @return string[][]
+     * @return string[]
      */
-    public function provideFilesWithParseError(): array
+    public function provideFilesWithParseError(): Iterator
     {
-        return [
-            [__DIR__ . '/Yaml/tabs.yml'],
-            [__DIR__ . '/Yaml/mixed-list.yml'],
-            [__DIR__ . '/Yaml/multi-lines-incorrect.yml'],
-        ];
+        yield [__DIR__ . '/Yaml/tabs.yml'];
+        yield [__DIR__ . '/Yaml/mixed-list.yml'];
+        yield [__DIR__ . '/Yaml/multi-lines-incorrect.yml'];
     }
 
     public function getPostId(): int

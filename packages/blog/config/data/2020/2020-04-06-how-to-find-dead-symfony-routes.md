@@ -61,12 +61,12 @@ Let's use **dynamic analysis** here - you **measure data in time** and decide ba
 
 ## 2 Steps to add Route Usage to Your Symfony App
 
-Inspired by the Laravel package, I've made a [Symfony Route Usage](https://github.com/migrify/symfony-route-usage).
+Inspired by the Laravel package, I've made a [Symfony Route Usage](https://github.com/symplify/symfony-route-usage).
 
 ### 1. Install it
 
 ```bash
-composer require migrify/symfony-route-usage
+composer require symplify/symfony-route-usage
 ```
 
 ### 2. Enable Bundle
@@ -74,7 +74,7 @@ composer require migrify/symfony-route-usage
 ```php
 // config/bundles.php
 return [
-    Migrify\SymfonyRouteUsage\SymfonyRouteUsageBundle::class => ['all' => true],
+    Symplify\SymfonyRouteUsage\SymfonyRouteUsageBundle::class => ['all' => true],
 ];
 ```
 
@@ -106,7 +106,7 @@ bin/console show-dead-routes
 
 <br>
 
-**What about the performance?** Pehapkari website takes 72 ms to load, of which 10 ms (13 %) is Symfony Route Visit. If that would be too much for your website, add partial logging by overloading [the subscriber](https://github.com/migrify/symfony-route-usage/blob/master/src/EventSubscriber/LogRouteUsageEventSubscriber.php) - e.g., every 100th or 1000th request.
+**What about the performance?** Pehapkari website takes 72 ms to load, of which 10 ms (13 %) is Symfony Route Visit. If that would be too much for your website, add partial logging by overloading [the subscriber](https://github.com/symplify/symfony-route-usage/blob/master/src/EventSubscriber/LogRouteUsageEventSubscriber.php) - e.g., every 100th or 1000th request.
 
 <br>
 

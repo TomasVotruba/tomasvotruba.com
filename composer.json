@@ -9,7 +9,7 @@
         "guzzlehttp/guzzle": "^7.0",
         "j7mbo/twitter-api-php": "^1.0",
         "kevinrob/guzzle-cache-middleware": "^3.3",
-        "migrify/php-config-printer": "^0.3.48",
+        "symplify/php-config-printer": "^9.0",
         "nette/finder": "^2.5",
         "nette/utils": "^3.0",
         "spatie/packagist-api": "^2.0",
@@ -23,36 +23,37 @@
         "symfony/http-kernel": "^5.1",
         "symfony/twig-bridge": "^5.1",
         "symfony/twig-bundle": "^5.1",
-        "symplify/autodiscovery": "^8.3.17",
-        "symplify/autowire-array-parameter": "^8.3.17",
-        "symplify/flex-loader": "^8.3.17",
-        "symplify/package-builder": "^8.3.17",
-        "symplify/smart-file-system": "^8.3.17",
-        "symplify/symfony-static-dumper": "^8.3.17",
+        "symplify/autodiscovery": "^9.0",
+        "symplify/autowire-array-parameter": "^9.0",
+        "symplify/flex-loader": "^9.0",
+        "symplify/package-builder": "^9.0",
+        "symplify/smart-file-system": "^9.0",
+        "symplify/symfony-static-dumper": "^9.0",
         "twig/twig": "^3.0"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.1",
         "friendsofphp/php-cs-fixer": "^2.16",
-        "migrify/config-transformer": "^0.3.11",
-        "migrify/latte-to-twig": "^0.3.11",
-        "migrify/static-detector": "^0.3.48",
+        "symplify/config-transformer": "^9.0",
+        "symplify/latte-to-twig-converter": "^9.0",
+        "symplify/static-detector": "^9.0",
         "nette/neon": "^3.1",
         "nette/security": "^3.0",
         "phpstan/phpstan": "^0.12.34",
         "phpunit/phpunit": "^9.0",
-        "rector/rector": "^0.8.6",
+        "rector/rector": "dev-master",
         "spatie/http-status-check": "^3.2",
         "symfony/console": "^5.1",
         "symfony/process": "^5.1",
         "symfony/stopwatch": "^5.1",
         "symfony/var-dumper": "^5.1",
         "symfony/yaml": "^5.1",
-        "symplify/coding-standard": "^8.3.17",
-        "symplify/console-color-diff": "^8.3.17",
-        "symplify/easy-coding-standard": "^8.3.17",
-        "symplify/phpstan-extensions": "^8.3.17",
-        "symplify/set-config-resolver": "^8.3.17"
+        "symplify/coding-standard": "^9.0",
+        "symplify/phpstan-rules": "^9.0",
+        "symplify/console-color-diff": "^9.0",
+        "symplify/easy-coding-standard": "^9.0",
+        "symplify/phpstan-extensions": "^9.0",
+        "symplify/set-config-resolver": "^9.0"
     },
     "autoload": {
         "psr-4": {
@@ -91,5 +92,7 @@
     },
     "config": {
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

@@ -530,10 +530,10 @@ Also less common ones:
 - `tearDownAfterClass()`
 - `onNotSuccessfulTest()`
 
-For this one, we'll use little help from Migrify:
+For this one, we'll use little help from Symplify:
 
 ```bash
-composer require migrify/phpunit-upgrader --dev
+composer require symplify/phpunit-upgrader --dev
 vendor/bin/phpunit-upgrader voids /tests
 ```
 

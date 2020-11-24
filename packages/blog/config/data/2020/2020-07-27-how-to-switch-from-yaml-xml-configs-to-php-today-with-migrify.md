@@ -1,6 +1,6 @@
 ---
 id: 271
-title: "How to Switch from YAML/XML Configs to PHP Today with Migrify"
+title: "How to Switch from YAML/XML Configs to PHP Today with Symplify"
 perex: |
     In [previous post](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs/), we looked 10 reasons to switch from YAML to PHP configs. Still asking *why*? I dare you to [disagree with 1 reason there](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs/).
     <br><br>
@@ -11,7 +11,7 @@ perex: |
     <br>
     Or maybe... **5 minute job**?
 
-tweet: "New Post on #php 🐘 blog: How to Switch from YAML/XML Configs to PHP Today with Migrify"
+tweet: "New Post on #php 🐘 blog: How to Switch from YAML/XML Configs to PHP Today with Symplify"
 tweet_image: "/assets/images/posts/2020/yaml_to_php.png"
 
 updated_since: "August 2020"
@@ -25,21 +25,21 @@ With legacy migrations, we have to handle a lot of processes that are automated.
 
 <br>
 
-We made [migrify/config-transformer](https://github.com/migrify/config-transformer) to handle this work for us.
+We made [symplify/config-transformer](https://github.com/symplify/config-transformer) to handle this work for us.
 
 <img src="/assets/images/posts/2020/yaml_to_php.png" class="img-thumbnail">
 
 
 <br>
 
-**Credit** for inspiration first reported bugs, feature feedback, and exceptional test cases **goes to [archeoprog](https://github.com/archeoprog) and [Ryan Weaver](https://github.com/weaverryan)**. Their input helped get the migrify package to high quality and covered Symfony features I didn't even know. Thank you, guys!
+**Credit** for inspiration first reported bugs, feature feedback, and exceptional test cases **goes to [archeoprog](https://github.com/archeoprog) and [Ryan Weaver](https://github.com/weaverryan)**. Their input helped get the Symplify package to high quality and covered Symfony features I didn't even know. Thank you, guys!
 
 <br>
 
-## 1. Install migrify/config-transformer
+## 1. Install symplify/config-transformer
 
 ```bash
-composer require migrify/config-transformer --dev
+composer require symplify/config-transformer --dev
 ```
 
 ## 2. Run `switch-format` Command
@@ -133,7 +133,7 @@ Setup `rector.php`:
 ```php
 <?php
 
-use Migrify\ConfigTransformer\FormatSwitcher\ValueObject\Format;
+use Symplify\ConfigTransformer\FormatSwitcher\ValueObject\Format;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Rector\Symfony\Rector\Class_\ChangeFileLoaderInExtensionAndKernelRector;
 
@@ -173,7 +173,7 @@ One little tool for you, one big leap for a PHP programmer-kind.
 
 **Is something broken? Have you found a space for improvement?**
 
-Create [an issue](https://github.com/migrify/migrify/issues/new) and let us know. We'd love to hear it.
+Create [an issue](https://github.com/symplify/symplify/issues/new) and let us know. We'd love to hear it.
 
 <br>
 

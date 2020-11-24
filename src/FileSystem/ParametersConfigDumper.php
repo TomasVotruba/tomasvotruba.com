@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\FIleSystem;
+namespace TomasVotruba\Website\FileSystem;
 
-use Migrify\PhpConfigPrinter\YamlToPhpConverter;
+use Symplify\PhpConfigPrinter\YamlToPhpConverter;
 use Symplify\SmartFileSystem\SmartFileInfo;
 use Symplify\SmartFileSystem\SmartFileSystem;
 

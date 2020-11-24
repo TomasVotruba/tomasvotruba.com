@@ -33,6 +33,11 @@ final class Tweet
         return $this->text;
     }
 
+    public function getPostDateTimeInFormat(string $format): string
+    {
+        return $this->postDateTime->format($format);
+    }
+
     public function getPostDateTime(): DateTimeInterface
     {
         return $this->postDateTime;

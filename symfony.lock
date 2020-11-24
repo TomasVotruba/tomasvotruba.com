@@ -83,21 +83,6 @@
     "league/mime-type-detection": {
         "version": "1.4.0"
     },
-    "migrify/config-transformer": {
-        "version": "v0.3.8"
-    },
-    "migrify/latte-to-twig": {
-        "version": "dev-master"
-    },
-    "migrify/migrify-kernel": {
-        "version": "0.3.35"
-    },
-    "migrify/php-config-printer": {
-        "version": "v0.3.32"
-    },
-    "migrify/static-detector": {
-        "version": "0.3.48"
-    },
     "myclabs/deep-copy": {
         "version": "1.9.5"
     },
@@ -503,6 +488,9 @@
     "symplify/composer-json-manipulator": {
         "version": "8.3.48"
     },
+    "symplify/config-transformer": {
+        "version": "v0.3.8"
+    },
     "symplify/console-color-diff": {
         "version": "v7.3.13"
     },
@@ -515,17 +503,44 @@
     "symplify/flex-loader": {
         "version": "v7.2.4"
     },
+    "symplify/latte-to-twig": {
+        "version": "dev-master"
+    },
+    "symplify/latte-to-twig-converter": {
+        "version": "9.0.0-beta2"
+    },
+    "symplify/markdown-diff": {
+        "version": "9.0.0-beta2"
+    },
+    "symplify/migrify-kernel": {
+        "version": "0.3.35"
+    },
     "symplify/package-builder": {
         "version": "v7.2.4"
+    },
+    "symplify/php-config-printer": {
+        "version": "v0.3.32"
     },
     "symplify/phpstan-extensions": {
         "version": "v7.2.4"
     },
+    "symplify/phpstan-rules": {
+        "version": "9.0.0-beta2"
+    },
+    "symplify/rule-doc-generator": {
+        "version": "9.0-dev"
+    },
     "symplify/set-config-resolver": {
         "version": "v7.2.4"
     },
+    "symplify/skipper": {
+        "version": "9.0.0-beta2"
+    },
     "symplify/smart-file-system": {
         "version": "v7.2.4"
+    },
+    "symplify/static-detector": {
+        "version": "0.3.48"
     },
     "symplify/symfony-static-dumper": {
         "version": "v7.2.4"

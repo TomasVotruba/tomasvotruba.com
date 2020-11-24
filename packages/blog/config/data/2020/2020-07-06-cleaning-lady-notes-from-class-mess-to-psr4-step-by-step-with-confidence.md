@@ -116,13 +116,13 @@ How does it look?
 
 <br>
 
-The **1st cool tool** we look at today is [migrify/psr4-switcher](https://github.com/migrify/psr4-switcher).
+The **1st cool tool** we look at today is [symplify/psr4-switcher](https://github.com/symplify/psr4-switcher).
 It doesn't need projects' autoloader so that it can be installed outside the project, e.g., in `/var/www/tools`, while your project is in `/var/www/old_project`.
 
 Install it:
 
 ```bash
-composer require migrify/psr4-switcher --dev
+composer require symplify/psr4-switcher --dev
 ```
 
 It would be great to have a list of all such multi-class files, right?

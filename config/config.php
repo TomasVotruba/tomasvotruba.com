@@ -5,12 +5,12 @@ declare(strict_types=1);
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 use TomasVotruba\Website\ValueObject\Option;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/../packages/*/config/*.php');
     $containerConfigurator->import(__DIR__ . '/packages/*');
-    $containerConfigurator->import(__DIR__ . '/../vendor/symplify/symfony-static-dumper/config/config.php');
     $containerConfigurator->import(__DIR__ . '/_data/*');
     $containerConfigurator->import(__DIR__ . '/_data/generated/*');
 
@@ -27,4 +27,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $services->load('TomasVotruba\Website\\', __DIR__ . '/../src')
         ->exclude([__DIR__ . '/../src/HttpKernel', __DIR__ . '/../src/ValueObject']);
+
+    $services->set(PrivatesAccessor::class);
 };

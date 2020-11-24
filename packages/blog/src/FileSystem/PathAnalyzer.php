@@ -13,18 +13,20 @@ use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 final class PathAnalyzer
 {
     /**
+     * @see https://regex101.com/r/kHFrUl/1
      * @var string
      */
-    private const DATE_PATTERN = '(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})';
+    private const DATE_REGEX = '(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})';
 
     /**
+     * @see https://regex101.com/r/1XjsjR/1/
      * @var string
      */
-    private const NAME_PATTERN = '(?<name>[\w\d-]*)';
+    private const NAME_REGEX = '(?<name>[\w\d-]*)';
 
     public function detectDate(SmartFileInfo $fileInfo): ?DateTimeInterface
     {
-        $match = Strings::match($fileInfo->getFilename(), '#' . self::DATE_PATTERN . '#');
+        $match = Strings::match($fileInfo->getFilename(), '#' . self::DATE_REGEX . '#');
         if ($match === null) {
             return null;
         }
@@ -42,7 +44,7 @@ final class PathAnalyzer
             throw new ShouldNotHappenException();
         }
 
-        $dateAndNamePattern = sprintf('#%s-%s#', self::DATE_PATTERN, self::NAME_PATTERN);
+        $dateAndNamePattern = sprintf('#%s-%s#', self::DATE_REGEX, self::NAME_REGEX);
 
         $match = (array) Strings::match($fileInfo->getFilename(), $dateAndNamePattern);
 

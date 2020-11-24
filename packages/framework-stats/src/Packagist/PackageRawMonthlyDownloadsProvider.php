@@ -53,7 +53,9 @@ final class PackageRawMonthlyDownloadsProvider
 
         // drop current is uncompleted month and can return different values for inter-dependent packages, not needed
         $firstKey = array_key_first($valuesSortedByNewest);
-        $currentMonth = (new DateTime())->format('Y-m');
+
+        $nowDateTime = new DateTime();
+        $currentMonth = $nowDateTime->format('Y-m');
         if ($currentMonth === $firstKey) {
             array_shift($valuesSortedByNewest);
         }

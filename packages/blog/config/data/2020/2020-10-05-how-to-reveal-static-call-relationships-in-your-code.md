@@ -69,14 +69,14 @@ What is the hard problem? How can we be sure the method is not really used?
 
 ## Static Detector to the Rescue
 
-To get these data, we use a handy tool [migrify/static-detector](https://github.com/migrify/static-detector).
+To get these data, we use a handy tool [symplify/static-detector](https://github.com/symplify/static-detector).
 
 <br>
 
 Install it:
 
 ```bash
-composer require migrify/static-detector --dev
+composer require symplify/static-detector --dev
 ```
 
 Run it on your directory:

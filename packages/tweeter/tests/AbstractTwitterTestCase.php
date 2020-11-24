@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\Tests;
 
-use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
+use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 
 abstract class AbstractTwitterTestCase extends AbstractKernelTestCase
 {

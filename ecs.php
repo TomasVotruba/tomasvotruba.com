@@ -26,7 +26,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $parameters->set(Option::EXCLUDE_PATHS, [
         __DIR__ . '/config/bundles.php',
-        __DIR__ . '/config/_data/generated/php_framework_trends.php',
+        // @todo fix also for without *
+        __DIR__ . '/config/_data/generated/*',
     ]);
 
     $parameters->set(Option::SETS, [

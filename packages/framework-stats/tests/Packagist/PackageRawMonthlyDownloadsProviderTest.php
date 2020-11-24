@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TomasVotruba\FrameworkStats\Tests\Packagist;
 
 use Nette\Utils\DateTime;
-use Symplify\PackageBuilder\Tests\AbstractKernelTestCase;
+use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use TomasVotruba\FrameworkStats\Packagist\PackageRawMonthlyDownloadsProvider;
 use TomasVotruba\Website\HttpKernel\TomasVotrubaKernel;
 
