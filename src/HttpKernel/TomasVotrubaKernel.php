@@ -13,6 +13,7 @@ use Symfony\Component\Routing\RouteCollectionBuilder;
 use Symplify\Autodiscovery\Discovery;
 use Symplify\AutowireArrayParameter\DependencyInjection\CompilerPass\AutowireArrayParameterCompilerPass;
 use Symplify\FlexLoader\Flex\FlexLoader;
+use TomasVotruba\Website\DependencyInjection\Extension\NameLessConsoleCommandsCompilerPass;
 
 final class TomasVotrubaKernel extends Kernel
 {
@@ -51,5 +52,6 @@ final class TomasVotrubaKernel extends Kernel
     protected function build(ContainerBuilder $containerBuilder): void
     {
         $containerBuilder->addCompilerPass(new AutowireArrayParameterCompilerPass());
+        $containerBuilder->addCompilerPass(new NameLessConsoleCommandsCompilerPass());
     }
 }

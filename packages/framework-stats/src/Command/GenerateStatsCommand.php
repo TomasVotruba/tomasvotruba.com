@@ -13,7 +13,7 @@ use Symplify\PackageBuilder\Console\ShellCode;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\FrameworkStats\Mapper\VendorDataMapper;
 use TomasVotruba\FrameworkStats\Result\VendorDataFactory;
-use TomasVotruba\Website\FIleSystem\ParametersConfigDumper;
+use TomasVotruba\Website\FileSystem\ParametersConfigDumper;
 use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 final class GenerateStatsCommand extends Command

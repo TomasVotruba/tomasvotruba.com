@@ -11,7 +11,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
 use TomasVotruba\GithubContributorsThanker\Api\GithubApi;
-use TomasVotruba\Website\FIleSystem\ParametersConfigDumper;
+use TomasVotruba\Website\FileSystem\ParametersConfigDumper;
 use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
 final class ThankContributorsCommand extends Command
