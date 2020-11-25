@@ -31,7 +31,7 @@ $composerJson->getJsonArray();
 $composerJson->setLicense('MIT');
 ```
 
-We've been testing this package for a couple of ~~weeks~~ months, just to be sure it works well in practise.
+We've been testing [the symplify/composer-json-manipulator package](https://github.com/symplify/composer-json-manipulator) for a couple of ~~weeks~~ months, just to be sure it works well in practise.
 
 <img src="/assets/images/posts/2020/composer-json-manipulator-tested.png" class="img-thumbnail">
 
