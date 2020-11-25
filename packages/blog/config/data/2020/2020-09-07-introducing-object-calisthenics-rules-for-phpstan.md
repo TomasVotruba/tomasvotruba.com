@@ -81,8 +81,8 @@ And you're ready to go!
 
 Most likely, you're not using all the rules at once, so we look at migrating particular rules.
 
-- Look at the [list of PHPStan rules](https://github.com/symplify/coding-standard/blob/master/docs/phpstan_rules_object_calisthenics.md)
-- Look at the full set - [`object-calisthenics-rules.neon`](https://github.com/symplify/coding-standard/blob/master/packages/object-calisthenics/config/object-calisthenics-rules.neon)
+- Look at the [list of PHPStan rules](https://github.com/symplify/phpstan-rules/blob/master/docs/rules_overview.md)
+- Look at the full set - [`object-calisthenics-rules.neon`](https://github.com/symplify/phpstan-rules/blob/master/packages/object-calisthenics/config/object-calisthenics-rules.neon)
 - Pick the rules you need and copy-paste them to your `phpstan.neon`
 - You can use parameters to configure them, or explicit values (like in 2 cases above)
 - Add only **1 rule at a time** and then try to run PHPStan (`vendor/bin/phpstan analyse`) to make sure, it works
