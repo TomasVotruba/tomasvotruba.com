@@ -6,8 +6,6 @@ on:
         # every 1st day in month at 12:00 https://crontab.guru/#00_12_1_*_*
         -   cron: "00 12 1 * *"
 
-    pull_request: null
-
 jobs:
     monthly_pull_request:
         runs-on: ubuntu-latest

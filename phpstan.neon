@@ -56,7 +56,7 @@ parameters:
         - 'packages/blog/src/Posts/Year2017/Ast/SomeClass.php'
         - packages/blog/tests/Posts
         # generated file
-        - config/_data/generated/php_framework_trends.php
+        - config/_data/generated/*
 
     ignoreErrors:
         # intentional for tests
