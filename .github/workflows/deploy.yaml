@@ -33,7 +33,6 @@ jobs:
                     FOLDER: output
                     CLEAN: true
 
-        tweet_post:
             -
                 name: Tweet New Post
                 run: bin/console tweet --ansi
