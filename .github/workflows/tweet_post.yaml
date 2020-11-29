@@ -8,6 +8,9 @@ on:
 
 jobs:
     tweet_post:
+        # it uses the image file from the website after its deploy
+        needs: deploy
+
         runs-on: ubuntu-latest
 
         steps:
