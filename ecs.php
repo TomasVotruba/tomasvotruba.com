@@ -24,10 +24,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     ]);
 
-    $parameters->set(Option::EXCLUDE_PATHS, [
+    $parameters->set(Option::SKIP, [
         __DIR__ . '/config/bundles.php',
-        // @todo fix also for without *
-        __DIR__ . '/config/_data/generated/*',
+        __DIR__ . '/config/_data/generated',
+        UnaryOperatorSpacesFixer::class,
     ]);
 
     $parameters->set(Option::SETS, [
@@ -37,10 +37,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         SetList::COMMON,
         SetList::SYMPLIFY,
         SetList::CLEAN_CODE,
-    ]);
-
-    $parameters->set(Option::SKIP, [
-        UnaryOperatorSpacesFixer::class => null,
     ]);
 
     $services = $containerConfigurator->services();
