@@ -8,6 +8,8 @@ use TomasVotruba\Website\ValueObject\Option;
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
+    // @todo use value objects here :)
+    // new Cluster()...
     $parameters->set(Option::CLUSTERS, [
         [
             'title' => 'From YAML to PHP Symfony Configs',
@@ -26,7 +28,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ],
         [
             'title' => 'Monorepo: From Zero to Hero',
-            'post_ids' => [283, 256, 223, 69, 25, 82, 124, 138, 143, 160, 161, 182],
+            'post_ids' => [288, 287, 286, 283, 256, 223, 69, 25, 82, 124, 138, 143, 160, 161, 182],
             'description' => 'What is monorepo? How can you use it to speed up your packages\' and projects\' development? How to run your own monorepo in 10 minutes?',
         ],
         [
