@@ -53,6 +53,11 @@ final class TwitterImageApiWrapper
             throw new ShouldNotHappenException();
         }
 
+        if (! file_exists($imageFile)) {
+            $message = sprintf('Tweet image "%s" was not found', $imageFile);
+            throw new ShouldNotHappenException($message);
+        }
+
         $fileSizeInBytes = $headers['Content-Length'];
         $mediaType = $headers['Content-Type'];
 
