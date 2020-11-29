@@ -21,7 +21,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $parameters->set(Option::PATHS, [__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages']);
 
-    $parameters->set(Option::EXCLUDE_PATHS, [
+    $parameters->set(Option::SKIP, [
         __DIR__ . '/packages/blog/tests/Posts/Year2018/Php73/Php73Test.php',
         __DIR__ . '/packages/blog/tests/Posts/Year2018/Exceptions/RelativePathTest.php',
     ]);
