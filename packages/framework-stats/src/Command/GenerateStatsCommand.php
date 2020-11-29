@@ -14,10 +14,15 @@ use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\FrameworkStats\Mapper\VendorDataMapper;
 use TomasVotruba\FrameworkStats\Result\VendorDataFactory;
 use TomasVotruba\Website\FileSystem\ParametersConfigDumper;
-use TomasVotruba\Website\ValueObject\Option as OptionAlias;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class GenerateStatsCommand extends Command
 {
+    /**
+     * @var string
+     */
+    private const VENDORS = 'vendors';
+
     private SymfonyStyle $symfonyStyle;
 
     private VendorDataFactory $vendorDataFactory;
@@ -44,7 +49,7 @@ final class GenerateStatsCommand extends Command
         $this->vendorDataFactory = $vendorDataFactory;
         $this->vendorDataMapper = $vendorDataMapper;
         $this->frameworksVendorToName = $parameterProvider->provideArrayParameter(
-            OptionAlias::FRAMEWORKS_VENDOR_TO_NAME
+            Option::FRAMEWORKS_VENDOR_TO_NAME
         );
         $this->parametersConfigDumper = $parametersConfigDumper;
     }
@@ -59,15 +64,15 @@ final class GenerateStatsCommand extends Command
     {
         $vendorsData = $this->vendorDataFactory->createVendorsData($this->frameworksVendorToName);
 
-        foreach ($vendorsData['vendors'] as $key => $vendorData) {
-            $vendorsData['vendors'][$key] = $this->vendorDataMapper->mapObjectToArray($vendorData);
+        foreach ($vendorsData[self::VENDORS] as $key => $vendorData) {
+            $vendorsData[self::VENDORS][$key] = $this->vendorDataMapper->mapObjectToArray($vendorData);
         }
 
-        $fileInfo = $this->parametersConfigDumper->dumpPhp(OptionAlias::PHP_FRAMEWORK_TRENDS, $vendorsData);
+        $fileInfo = $this->parametersConfigDumper->dumpPhp(Option::PHP_FRAMEWORK_TRENDS, $vendorsData);
 
         $message = sprintf(
             'Data for %d frameworks dumped into" %s" file',
-            count($vendorsData['vendors']),
+            count($vendorsData[self::VENDORS]),
             $fileInfo->getRelativeFilePathFromCwd()
         );
         $this->symfonyStyle->success($message);

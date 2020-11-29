@@ -11,7 +11,7 @@ use TomasVotruba\Tweeter\TweetEntityCompleter;
 use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
 use TomasVotruba\Tweeter\ValueObject\TwitterApi;
 use TomasVotruba\Tweeter\ValueObjectFactory\PublishedTweetFactory;
-use TomasVotruba\Website\ValueObject\Option as OptionAlias;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class TwitterPostApiWrapper
 {
@@ -65,7 +65,7 @@ final class TwitterPostApiWrapper
         TweetEntityCompleter $tweetEntityCompleter,
         PublishedTweetFactory $publishedTweetFactory
     ) {
-        $this->twitterName = $parameterProvider->provideStringParameter(OptionAlias::TWITTER_NAME);
+        $this->twitterName = $parameterProvider->provideStringParameter(Option::TWITTER_NAME);
         $this->tweetEntityCompleter = $tweetEntityCompleter;
         $this->publishedTweetFactory = $publishedTweetFactory;
         $this->twitterApiCaller = $twitterApiCaller;

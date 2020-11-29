@@ -16,7 +16,7 @@ use TomasVotruba\Blog\FileSystem\PathAnalyzer;
 use TomasVotruba\Blog\Testing\TestedPostAnalyzer;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
-use TomasVotruba\Website\ValueObject\Option as OptionAlias;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class PostFactory
 {
@@ -62,10 +62,10 @@ final class PostFactory
         $this->pathAnalyzer = $pathAnalyzer;
         $this->router = $router;
 
-        $siteUrl = $parameterProvider->provideStringParameter(OptionAlias::SITE_URL);
+        $siteUrl = $parameterProvider->provideStringParameter(Option::SITE_URL);
         $this->siteUrl = rtrim($siteUrl, '/');
 
-        $projectDir = $parameterProvider->provideStringParameter(OptionAlias::KERNEL_PROJECT_DIR);
+        $projectDir = $parameterProvider->provideStringParameter(Option::KERNEL_PROJECT_DIR);
         $this->projectDir = $projectDir;
 
         $this->fileSystemGuard = $fileSystemGuard;
