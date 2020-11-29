@@ -32,12 +32,12 @@ final class FormatPreservingPrinter
         $nodeTraverser->addVisitor($nodeVisitor);
 
         $traversedNodes = $nodeTraverser->traverse($newStmts);
-        $newStmts = $traversedNodes;
 
         // our code end
 
-        $standardPrinter = new Standard();
-        return $standardPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
+        $standard = new Standard();
+        $newStmts = $traversedNodes;
+        return $standard->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
     }
 
     private function createLexer(): Emulative

@@ -7,7 +7,7 @@ namespace TomasVotruba\Tweeter\TweetFilter;
 use Nette\Utils\DateTime;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Tweeter\ValueObject\Tweet;
-use TomasVotruba\Website\ValueObject\Option as OptionAlias;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class OldTweetsFilter
 {
@@ -15,7 +15,7 @@ final class OldTweetsFilter
 
     public function __construct(ParameterProvider $parameterProvider)
     {
-        $twitterMaximalDaysInPast = $parameterProvider->provideIntParameter(OptionAlias::TWITTER_MAXIMAL_DAYS_IN_PAST);
+        $twitterMaximalDaysInPast = $parameterProvider->provideIntParameter(Option::TWITTER_MAXIMAL_DAYS_IN_PAST);
 
         $this->maxPastDateTime = DateTime::from('-' . $twitterMaximalDaysInPast . 'days');
     }

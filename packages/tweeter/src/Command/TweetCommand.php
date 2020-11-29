@@ -16,7 +16,7 @@ use TomasVotruba\Tweeter\TweetFilter\TweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\Tweet;
-use TomasVotruba\Website\ValueObject\Option as OptionAlias;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class TweetCommand extends Command
 {
@@ -38,7 +38,7 @@ final class TweetCommand extends Command
         SymfonyStyle $symfonyStyle
     ) {
         $this->twitterMinimalGapInDays = $parameterProvider->provideIntParameter(
-            OptionAlias::TWITTER_MINIMAL_GAP_IN_DAYS
+            Option::TWITTER_MINIMAL_GAP_IN_DAYS
         );
         $this->postTweetsProvider = $postTweetsProvider;
         $this->tweetsFilter = $tweetsFilter;

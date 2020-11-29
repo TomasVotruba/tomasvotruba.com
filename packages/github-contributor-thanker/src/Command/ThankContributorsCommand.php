@@ -12,7 +12,7 @@ use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Console\ShellCode;
 use TomasVotruba\GithubContributorsThanker\Api\GithubApi;
 use TomasVotruba\Website\FileSystem\ParametersConfigDumper;
-use TomasVotruba\Website\ValueObject\Option as OptionAlias;
+use TomasVotruba\Website\ValueObject\Option;
 
 final class ThankContributorsCommand extends Command
 {
@@ -25,13 +25,13 @@ final class ThankContributorsCommand extends Command
     public function __construct(
         GithubApi $githubApi,
         SymfonyStyle $symfonyStyle,
-        ParametersConfigDumper $generatedFilesDumper
+        ParametersConfigDumper $parametersConfigDumper
     ) {
         parent::__construct();
 
         $this->githubApi = $githubApi;
         $this->symfonyStyle = $symfonyStyle;
-        $this->generatedFilesDumper = $generatedFilesDumper;
+        $this->generatedFilesDumper = $parametersConfigDumper;
     }
 
     protected function configure(): void
@@ -53,7 +53,7 @@ final class ThankContributorsCommand extends Command
             return ShellCode::SUCCESS;
         }
 
-        $dumpFileInfo = $this->generatedFilesDumper->dumpPhp(OptionAlias::CONTRIBUTORS, $contributors);
+        $dumpFileInfo = $this->generatedFilesDumper->dumpPhp(Option::CONTRIBUTORS, $contributors);
 
         $successMessage = sprintf(
             'Dumped %d contributors to "%s" file',
