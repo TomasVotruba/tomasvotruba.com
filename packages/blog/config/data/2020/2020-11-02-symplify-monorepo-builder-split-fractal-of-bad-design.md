@@ -73,7 +73,7 @@ In [reality](https://travis-ci.com/github/symplify/symplify/jobs/363743493), you
 
 I do appreciate a good error message.
 
-## 5. It requires both Travis and GitHub to run:
+## 5. It Depends on both Travis and GitHub
 
 If you want to make it work on your monorepo, [you have to follow these steps](/blog/2018/07/19/how-to-make-github-and-travis-split-monorepo-to-multiple-git-repositories-for-you/):
 
