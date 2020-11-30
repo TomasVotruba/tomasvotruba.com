@@ -13,7 +13,5 @@ tweet: "New Post on #php 🐘 blog: How to make a Dynamic Matrix in GitHub Actio
 
 2 examples...
 
-PHP and Monorepo Package PSlit
-
-@todo add php version to symplify/easy-ci package
-
+* PHP and Monorepo Package Split
+* @todo add php version to symplify/easy-ci package
