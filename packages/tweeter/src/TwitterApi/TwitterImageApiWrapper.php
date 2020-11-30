@@ -53,14 +53,9 @@ final class TwitterImageApiWrapper
             throw new ShouldNotHappenException();
         }
 
-        if (! file_exists($imageFile)) {
-            $message = sprintf('Tweet image "%s" was not found', $imageFile);
-            throw new ShouldNotHappenException($message);
-        }
-
         if (!isset($headers['Content-Length'])) {
             $headerList = implode('", "', array_keys($headers));
-            $message = sprintf('Header "%s" was not found. Picke one of: "%s"', 'Content-Length', $headerList);
+            $message = sprintf('Header "%s" was not found. Pick one of: "%s"', 'Content-Length', $headerList);
             throw new ShouldNotHappenException($message);
         }
 
