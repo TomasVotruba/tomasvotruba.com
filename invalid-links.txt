@@ -1,0 +1,1 @@
+--- Host did not respond - https://packagist.org/packages/symfony/security-core/stats (found on https://tomasvotruba.com/php-framework-trends/)
