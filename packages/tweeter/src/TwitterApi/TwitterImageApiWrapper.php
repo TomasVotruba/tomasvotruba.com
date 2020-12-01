@@ -53,7 +53,7 @@ final class TwitterImageApiWrapper
             throw new ShouldNotHappenException();
         }
 
-        if (!isset($headers['Content-Length'])) {
+        if (! isset($headers['Content-Length'])) {
             $headerList = implode('", "', array_keys($headers));
             $message = sprintf('Header "%s" was not found. Pick one of: "%s"', 'Content-Length', $headerList);
             throw new ShouldNotHappenException($message);
