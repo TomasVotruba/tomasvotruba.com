@@ -5,13 +5,17 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Twig;
 
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
+use TomasVotruba\Blog\Repository\ClusterRepository;
 use TomasVotruba\Website\ValueObject\Option;
 use Twig\Extension\AbstractExtension;
 use Twig\Extension\GlobalsInterface;
 
 final class GlobalVariablesTwigExtension extends AbstractExtension implements GlobalsInterface
 {
-    public function __construct(private ParameterProvider $parameterProvider)
+    public function __construct(
+        private ParameterProvider $parameterProvider,
+        private ClusterRepository $clusterRepository,
+    )
     {
     }
 
@@ -22,7 +26,7 @@ final class GlobalVariablesTwigExtension extends AbstractExtension implements Gl
     public function getGlobals(): array
     {
         $contributors = $this->parameterProvider->provideArrayParameter(Option::CONTRIBUTORS);
-        $clusters = $this->parameterProvider->provideArrayParameter(Option::CLUSTERS);
+        $clusters = $this->clusterRepository->getClusters();
 
         return [
             'contributors_count' => count($contributors),

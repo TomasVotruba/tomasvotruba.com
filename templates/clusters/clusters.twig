@@ -36,22 +36,20 @@
                     </thead>
 
                     <tbody class="active-cluster-part">
-                        {% for post_id in cluster.post_ids %}
-
-                            {# @var active_post \TomasVotruba\Blog\ValueObject\Post #}
-                            {% set active_post = posts[post_id] %}
+                        {% for post in cluster.posts %}
+                            {# @var cluster \TomasVotruba\Blog\ValueObject\Cluster #}
 
                             <tr>
                                 <td class="pt-4 pb-4">
                                     <div class="checklist__item">
-                                        <input class="checklist__input" type="checkbox" id="item_{{ active_post.id }}" value="{{ active_post.id }}">
-                                        <label class="checklist__label" for="item_{{ active_post.id }}">
-                                            <em class="checklist_icon fa fa-2x fa-check" id="item_{{ active_post.id }}"></em>
+                                        <input class="checklist__input" type="checkbox" id="item_{{ post.id }}" value="{{ post.id }}">
+                                        <label class="checklist__label" for="item_{{ post.id }}">
+                                            <em class="checklist_icon fa fa-2x fa-check" id="item_{{ post.id }}"></em>
                                         </label>
 
                                         <div class="checklist__details post-title">
-                                            <a href="{{ path('post_detail', {'slug': active_post.slug}) }}">
-                                                {{ active_post.title|raw }}
+                                            <a href="{{ path('post_detail', {'slug': post.slug}) }}">
+                                                {{ post.title|raw }}
                                             </a>
                                         </div>
                                     </div>
