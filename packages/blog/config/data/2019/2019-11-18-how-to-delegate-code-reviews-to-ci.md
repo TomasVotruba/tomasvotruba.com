@@ -6,8 +6,13 @@ perex: |
     <br>
     <br>
     **In both cases, you won't have too**. Just add a couple of YAML lines to your CI.
+
 tweet: "New Post on #php 🐘 blog: How to Delegate Code Reviews to CI"
 tweet_image: "/assets/images/posts/2019/rector-ci-code-review/result.png"
+
+updated_since: "December 2020"
+updated_message: |
+    The Bitbucket was dropped, as unused services and the demo repository is not maintained.
 ---
 
 I'm very grateful that Rector is getting traction lately. More and more PHP developers save dozens of hours by running simple CLI commands on their codebases.

@@ -64,7 +64,7 @@
                         <ul>
                             {% for event in talk.events %}
                                 <li>
-                                    {% if event.url is set % }}
+                                    {% if event.url is defined %}
                                         <a href="{{ event.url }}" class="mt-2 mb-2">{{ event.name }}</a>
                                     {% else %}
                                         {{ event.name }}
