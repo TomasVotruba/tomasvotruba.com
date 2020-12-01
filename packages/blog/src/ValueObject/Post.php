@@ -16,79 +16,28 @@ final class Post
 
     private string $content;
 
-    private ?string $tweetText;
-
-    private ?string $updatedMessage;
-
-    private string $title;
-
-    private string $perex;
-
-    private string $htmlContent;
-
-    private int $id;
-
     private string $plaintextContent;
 
-    private ?string $tweetImage;
-
-    private string $slug;
-
-    private bool $isTested = false;
-
-    private ?string $testSlug;
-
-    private string $sourceRelativePath;
-
-    private ?string $deprecatedMessage;
-
-    private ?string $language;
-
-    private DateTimeInterface $dateTime;
-
-    private ?DateTimeInterface $updatedAt;
-
-    private ?DateTimeInterface $deprecatedAt;
-
-    private string $absoluteUrl;
-
     public function __construct(
-        int $id,
-        string $title,
-        string $slug,
-        DateTimeInterface $dateTime,
-        string $perex,
-        string $htmlContent,
-        ?string $tweetText,
-        ?string $tweetImage,
-        ?DateTimeInterface $updatedAt,
-        ?string $updatedMessage,
-        bool $isTested,
-        ?string $testSlug,
-        string $sourceRelativePath,
-        ?DateTimeInterface $deprecatedAt,
-        ?string $deprecatedMessage,
-        ?string $language,
-        string $absoluteUrl
+        private int $id,
+        private string $title,
+        private string $slug,
+        private DateTimeInterface $dateTime,
+        private string $perex,
+        private string $htmlContent,
+        private ?string $tweetText,
+        private ?string $tweetImage,
+        private ?DateTimeInterface $updatedAt,
+        private ?string $updatedMessage,
+        private bool $isTested,
+        private ?string $testSlug,
+        private string $sourceRelativePath,
+        private ?DateTimeInterface $deprecatedAt,
+        private ?string $deprecatedMessage,
+        private ?string $language,
+        private string $absoluteUrl
     ) {
-        $this->id = $id;
-        $this->title = $title;
-        $this->perex = $perex;
-        $this->htmlContent = $htmlContent;
         $this->plaintextContent = strip_tags($htmlContent);
-        $this->tweetText = $tweetText;
-        $this->tweetImage = $tweetImage;
-        $this->slug = $slug;
-        $this->dateTime = $dateTime;
-        $this->updatedAt = $updatedAt;
-        $this->isTested = $isTested;
-        $this->testSlug = $testSlug;
-        $this->sourceRelativePath = $sourceRelativePath;
-        $this->deprecatedAt = $deprecatedAt;
-        $this->deprecatedMessage = $deprecatedMessage;
-        $this->updatedMessage = $updatedMessage;
-        $this->language = $language;
-        $this->absoluteUrl = $absoluteUrl;
     }
 
     public function getContent(): string

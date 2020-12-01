@@ -16,22 +16,12 @@ use TomasVotruba\Website\ValueObject\Option;
 
 final class ThankContributorsCommand extends Command
 {
-    private GithubApi $githubApi;
-
-    private SymfonyStyle $symfonyStyle;
-
-    private ParametersConfigDumper $generatedFilesDumper;
-
     public function __construct(
-        GithubApi $githubApi,
-        SymfonyStyle $symfonyStyle,
-        ParametersConfigDumper $parametersConfigDumper
+        private GithubApi $githubApi,
+        private SymfonyStyle $symfonyStyle,
+        private ParametersConfigDumper $generatedFilesDumper
     ) {
         parent::__construct();
-
-        $this->githubApi = $githubApi;
-        $this->symfonyStyle = $symfonyStyle;
-        $this->generatedFilesDumper = $parametersConfigDumper;
     }
 
     protected function configure(): void

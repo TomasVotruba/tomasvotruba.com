@@ -11,11 +11,8 @@ use Twig\Extension\GlobalsInterface;
 
 final class GlobalVariablesTwigExtension extends AbstractExtension implements GlobalsInterface
 {
-    private ParameterProvider $parameterProvider;
-
-    public function __construct(ParameterProvider $parameterProvider)
+    public function __construct(private ParameterProvider $parameterProvider)
     {
-        $this->parameterProvider = $parameterProvider;
     }
 
     /**

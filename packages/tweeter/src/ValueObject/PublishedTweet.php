@@ -10,15 +10,9 @@ final class PublishedTweet
 {
     private string $text;
 
-    private int $id;
-
-    private DateTimeInterface $createdAt;
-
-    public function __construct(string $text, DateTimeInterface $createdAt, int $id)
+    public function __construct(string $text, private DateTimeInterface $createdAt, private int $id)
     {
         $this->text = htmlspecialchars_decode($text);
-        $this->id = $id;
-        $this->createdAt = $createdAt;
     }
 
     public function getText(): string

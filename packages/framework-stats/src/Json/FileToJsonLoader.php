@@ -9,11 +9,8 @@ use Symplify\SmartFileSystem\SmartFileSystem;
 
 final class FileToJsonLoader
 {
-    private SmartFileSystem $smartFileSystem;
-
-    public function __construct(SmartFileSystem $smartFileSystem)
+    public function __construct(private SmartFileSystem $smartFileSystem)
     {
-        $this->smartFileSystem = $smartFileSystem;
     }
 
     public function load(string $file): array

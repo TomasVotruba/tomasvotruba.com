@@ -10,14 +10,10 @@ use Symplify\SmartFileSystem\SmartFileSystem;
 
 final class ParametersConfigDumper
 {
-    private SmartFileSystem $smartFileSystem;
-
-    private YamlToPhpConverter $yamlToPhpConverter;
-
-    public function __construct(SmartFileSystem $smartFileSystem, YamlToPhpConverter $yamlToPhpConverter)
-    {
-        $this->smartFileSystem = $smartFileSystem;
-        $this->yamlToPhpConverter = $yamlToPhpConverter;
+    public function __construct(
+        private SmartFileSystem $smartFileSystem,
+        private YamlToPhpConverter $yamlToPhpConverter
+    ) {
     }
 
     /**

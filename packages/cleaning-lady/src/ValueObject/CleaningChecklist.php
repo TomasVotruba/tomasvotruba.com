@@ -7,16 +7,10 @@ namespace TomasVotruba\CleaningLady\ValueObject;
 final class CleaningChecklist
 {
     /**
-     * @var CleaningSection[]
-     */
-    private array $cleaningSections = [];
-
-    /**
      * @param CleaningSection[] $cleaningSections
      */
-    public function __construct(array $cleaningSections)
+    public function __construct(private array $cleaningSections)
     {
-        $this->cleaningSections = $cleaningSections;
     }
 
     /**

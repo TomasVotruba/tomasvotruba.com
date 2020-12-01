@@ -11,20 +11,14 @@ use TomasVotruba\Blog\Repository\PostRepository;
 
 final class BlogArchiveController extends AbstractController
 {
-    private PostRepository $postRepository;
-
-    public function __construct(PostRepository $postRepository)
+    public function __construct(private PostRepository $postRepository)
     {
-        $this->postRepository = $postRepository;
     }
 
-    /**
-     * @Route(path="/archive", name="blog_archive")
-     */
+    #[Route('/archive', name: 'blog_archive')]
     public function __invoke(): Response
     {
         $postsByYear = $this->postRepository->groupByYear();
-
         return $this->render('blog/archive.twig', [
             'title' => 'Post Archive',
             'posts_by_year' => $postsByYear,

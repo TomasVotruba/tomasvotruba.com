@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
+use PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer;
+use PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer;
 use PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer;
+use SlevomatCodingStandard\Sniffs\Classes\DisallowMultiPropertyDefinitionSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\ArrayNotation\StandaloneLineInMultilineArrayFixer;
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
@@ -19,7 +22,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/src',
         __DIR__ . '/tests',
         __DIR__ . '/ecs.php',
-        __DIR__ . '/rector-ci.php',
         __DIR__ . '/packages/framework-stats/config/parameters.php',
 
     ]);
@@ -28,6 +30,11 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/config/bundles.php',
         __DIR__ . '/config/_data/generated',
         UnaryOperatorSpacesFixer::class,
+
+        // broken on PHP 8.0
+        DisallowMultiPropertyDefinitionSniff::class . '.DisallowedMultiPropertyDefinition',
+        BinaryOperatorSpacesFixer::class,
+        ClassAttributesSeparationFixer::class,
     ]);
 
     $parameters->set(Option::SETS, [

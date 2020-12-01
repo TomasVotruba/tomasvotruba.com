@@ -11,11 +11,8 @@ use Twig\TwigFunction;
 
 final class PreviousPostExtension extends AbstractExtension
 {
-    private PostRepository $postRepository;
-
-    public function __construct(PostRepository $postRepository)
+    public function __construct(private PostRepository $postRepository)
     {
-        $this->postRepository = $postRepository;
     }
 
     /**

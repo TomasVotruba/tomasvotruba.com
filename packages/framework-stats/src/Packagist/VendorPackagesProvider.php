@@ -17,16 +17,13 @@ final class VendorPackagesProvider
      */
     private const URL_VENDOR_PACKAGES = 'https://packagist.org/packages/list.json?vendor=%s';
 
-    private FileToJsonLoader $fileToJsonLoader;
-
     /**
      * @var string[]
      */
     private array $excludedFrameworkPackages = [];
 
-    public function __construct(FileToJsonLoader $fileToJsonLoader, ParameterProvider $parameterProvider)
+    public function __construct(private FileToJsonLoader $fileToJsonLoader, ParameterProvider $parameterProvider)
     {
-        $this->fileToJsonLoader = $fileToJsonLoader;
         $this->excludedFrameworkPackages = $parameterProvider->provideArrayParameter(
             Option::EXCLUDED_FRAMEWORK_PACKAGES
         );

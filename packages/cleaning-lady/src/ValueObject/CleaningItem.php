@@ -6,17 +6,11 @@ namespace TomasVotruba\CleaningLady\ValueObject;
 
 final class CleaningItem
 {
-    private string $description;
-
-    private ?string $helpLink;
-
-    private ?string $whyLink;
-
-    public function __construct(string $description, ?string $helpLink = null, ?string $whyLink = null)
-    {
-        $this->description = $description;
-        $this->helpLink = $helpLink;
-        $this->whyLink = $whyLink;
+    public function __construct(
+        private string $description,
+        private ?string $helpLink = null,
+        private ?string $whyLink = null
+    ) {
     }
 
     public function getId(): string

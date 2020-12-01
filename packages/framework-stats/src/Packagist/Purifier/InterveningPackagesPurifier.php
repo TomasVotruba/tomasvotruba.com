@@ -70,16 +70,13 @@ final class InterveningPackagesPurifier
         'illuminate/routing' => ['symfony/debug', 'symfony/http-foundation', 'symfony/http-kernel', 'symfony/routing'],
     ];
 
-    private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider;
-
     /**
      * @var mixed[][]
      */
     private array $interveningPackagesDownloads = [];
 
-    public function __construct(PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider)
+    public function __construct(private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider)
     {
-        $this->packageRawMonthlyDownloadsProvider = $packageRawMonthlyDownloadsProvider;
     }
 
     public function correctInterveningPackages(array $monthlyDownloads, string $packageName): array

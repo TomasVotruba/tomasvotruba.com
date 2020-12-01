@@ -13,11 +13,8 @@ use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
  */
 final class VendorPackagesFactory
 {
-    private PackagistClient $packagistClient;
-
-    public function __construct(PackagistClient $packagistClient)
+    public function __construct(private PackagistClient $packagistClient)
     {
-        $this->packagistClient = $packagistClient;
     }
 
     /**

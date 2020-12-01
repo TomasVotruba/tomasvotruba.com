@@ -10,11 +10,8 @@ use Twig\TwigFilter;
 
 final class MarkdownTwigExtension extends AbstractExtension
 {
-    private ParsedownExtra $parsedownExtra;
-
-    public function __construct(ParsedownExtra $parsedownExtra)
+    public function __construct(private ParsedownExtra $parsedownExtra)
     {
-        $this->parsedownExtra = $parsedownExtra;
     }
 
     /**

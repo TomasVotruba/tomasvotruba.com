@@ -12,7 +12,7 @@
         "symplify/php-config-printer": "^9.0",
         "nette/finder": "^2.5",
         "nette/utils": "^3.0",
-        "spatie/packagist-api": "^2.0",
+        "spatie/packagist-api": "^2.0.2",
         "symfony/asset": "^5.2",
         "symfony/cache": "^5.2",
         "symfony/console": "^5.2",

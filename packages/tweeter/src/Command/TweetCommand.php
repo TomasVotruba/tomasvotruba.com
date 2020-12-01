@@ -22,28 +22,16 @@ final class TweetCommand extends Command
 {
     private int $twitterMinimalGapInDays;
 
-    private SymfonyStyle $symfonyStyle;
-
-    private PostTweetsProvider $postTweetsProvider;
-
-    private TweetsFilter $tweetsFilter;
-
-    private TwitterPostApiWrapper $twitterPostApiWrapper;
-
     public function __construct(
         ParameterProvider $parameterProvider,
-        PostTweetsProvider $postTweetsProvider,
-        TweetsFilter $tweetsFilter,
-        TwitterPostApiWrapper $twitterPostApiWrapper,
-        SymfonyStyle $symfonyStyle
+        private PostTweetsProvider $postTweetsProvider,
+        private TweetsFilter $tweetsFilter,
+        private TwitterPostApiWrapper $twitterPostApiWrapper,
+        private SymfonyStyle $symfonyStyle
     ) {
         $this->twitterMinimalGapInDays = $parameterProvider->provideIntParameter(
             Option::TWITTER_MINIMAL_GAP_IN_DAYS
         );
-        $this->postTweetsProvider = $postTweetsProvider;
-        $this->tweetsFilter = $tweetsFilter;
-        $this->symfonyStyle = $symfonyStyle;
-        $this->twitterPostApiWrapper = $twitterPostApiWrapper;
 
         parent::__construct();
     }

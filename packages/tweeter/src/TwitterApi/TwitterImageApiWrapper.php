@@ -32,14 +32,8 @@ final class TwitterImageApiWrapper
      */
     private const MEDIA_ID = 'media_id';
 
-    private TwitterApiCaller $twitterApiCaller;
-
-    private SmartFileSystem $smartFileSystem;
-
-    public function __construct(TwitterApiCaller $twitterApiCaller, SmartFileSystem $smartFileSystem)
+    public function __construct(private TwitterApiCaller $twitterApiCaller, private SmartFileSystem $smartFileSystem)
     {
-        $this->twitterApiCaller = $twitterApiCaller;
-        $this->smartFileSystem = $smartFileSystem;
     }
 
     /**
@@ -49,7 +43,7 @@ final class TwitterImageApiWrapper
     public function uploadImage(string $imageFile): array
     {
         $headers = get_headers($imageFile, 1);
-        if (! is_array($headers)) {
+        if ($headers === false) {
             throw new ShouldNotHappenException();
         }
 

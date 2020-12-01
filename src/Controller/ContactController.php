@@ -10,9 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class ContactController extends AbstractController
 {
-    /**
-     * @Route(path="contact", name="contact")
-     */
+    #[Route('contact', name: 'contact')]
     public function __invoke(): Response
     {
         return $this->render('contact.twig', [

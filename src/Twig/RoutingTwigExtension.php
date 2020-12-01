@@ -12,11 +12,8 @@ use Twig\TwigFunction;
 
 final class RoutingTwigExtension extends AbstractExtension
 {
-    private RequestStack $requestStack;
-
-    public function __construct(RequestStack $requestStack)
+    public function __construct(private RequestStack $requestStack)
     {
-        $this->requestStack = $requestStack;
     }
 
     /**

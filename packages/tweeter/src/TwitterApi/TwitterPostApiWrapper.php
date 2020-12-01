@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TwitterApi;
 
+use DateTimeInterface;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
@@ -45,31 +46,19 @@ final class TwitterPostApiWrapper
 
     private string $twitterName;
 
-    private TweetEntityCompleter $tweetEntityCompleter;
-
     /**
      * @var PublishedTweet[]
      */
     private array $publishedTweets = [];
 
-    private PublishedTweetFactory $publishedTweetFactory;
-
-    private TwitterApiCaller $twitterApiCaller;
-
-    private TwitterImageApiWrapper $twitterImageApiWrapper;
-
     public function __construct(
         ParameterProvider $parameterProvider,
-        TwitterApiCaller $twitterApiCaller,
-        TwitterImageApiWrapper $twitterImageApiWrapper,
-        TweetEntityCompleter $tweetEntityCompleter,
-        PublishedTweetFactory $publishedTweetFactory
+        private TwitterApiCaller $twitterApiCaller,
+        private TwitterImageApiWrapper $twitterImageApiWrapper,
+        private TweetEntityCompleter $tweetEntityCompleter,
+        private PublishedTweetFactory $publishedTweetFactory
     ) {
         $this->twitterName = $parameterProvider->provideStringParameter(Option::TWITTER_NAME);
-        $this->tweetEntityCompleter = $tweetEntityCompleter;
-        $this->publishedTweetFactory = $publishedTweetFactory;
-        $this->twitterApiCaller = $twitterApiCaller;
-        $this->twitterImageApiWrapper = $twitterImageApiWrapper;
     }
 
     /**
@@ -120,6 +109,8 @@ final class TwitterPostApiWrapper
         $lastRawTweet = reset($publishedTweetsRaw);
 
         $dateTime = DateTime::from($lastRawTweet['created_at']);
+
+        /** @var DateTimeInterface $dateInterval */
         $dateInterval = $dateTime->diff(DateTime::from('today'));
 
         return (int) $dateInterval->format('%a');

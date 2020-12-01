@@ -18,19 +18,13 @@ final class PostRepository
      */
     private const POST_DIRECTORY = __DIR__ . '/../../config/data';
 
-    private FinderSanitizer $finderSanitizer;
-
-    private PostFactory $postFactory;
-
     /**
      * @var Post[]
      */
     private array $posts = [];
 
-    public function __construct(FinderSanitizer $finderSanitizer, PostFactory $postFactory)
+    public function __construct(private FinderSanitizer $finderSanitizer, private PostFactory $postFactory)
     {
-        $this->finderSanitizer = $finderSanitizer;
-        $this->postFactory = $postFactory;
         $this->posts = $this->createPosts();
     }
 

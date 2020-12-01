@@ -15,28 +15,19 @@ final class PackageData implements LastYearTrendAwareInterface
      */
     private const DASH_OR_SLASH_REGEX = '#(\/|-)#';
 
-    private string $packageName;
-
-    private float $lastYearTrend;
-
-    private int $last12Months;
-
-    private int $previous12Months;
-
     private string $packageShortName;
 
     private string $packageKey;
 
-    public function __construct(string $packageName, float $lastYearTrend, int $last12Months, int $previous12Months)
-    {
-        $this->packageName = $packageName;
+    public function __construct(
+        private string $packageName,
+        private float $lastYearTrend,
+        private int $last12Months,
+        private int $previous12Months
+    ) {
         $this->packageShortName = (string) Strings::after($packageName, '/');
 
         $this->packageKey = Strings::replace($packageName, self::DASH_OR_SLASH_REGEX, '_');
-
-        $this->lastYearTrend = $lastYearTrend;
-        $this->last12Months = $last12Months;
-        $this->previous12Months = $previous12Months;
     }
 
     public function getPackageName(): string

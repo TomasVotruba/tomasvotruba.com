@@ -23,35 +23,23 @@ final class GenerateStatsCommand extends Command
      */
     private const VENDORS = 'vendors';
 
-    private SymfonyStyle $symfonyStyle;
-
-    private VendorDataFactory $vendorDataFactory;
-
-    private VendorDataMapper $vendorDataMapper;
-
     /**
      * @var array<string, string>
      */
     private array $frameworksVendorToName = [];
 
-    private ParametersConfigDumper $parametersConfigDumper;
-
     public function __construct(
-        SymfonyStyle $symfonyStyle,
-        VendorDataFactory $vendorDataFactory,
-        VendorDataMapper $vendorDataMapper,
+        private SymfonyStyle $symfonyStyle,
+        private VendorDataFactory $vendorDataFactory,
+        private VendorDataMapper $vendorDataMapper,
         ParameterProvider $parameterProvider,
-        ParametersConfigDumper $parametersConfigDumper
+        private ParametersConfigDumper $parametersConfigDumper
    ) {
         parent::__construct();
 
-        $this->symfonyStyle = $symfonyStyle;
-        $this->vendorDataFactory = $vendorDataFactory;
-        $this->vendorDataMapper = $vendorDataMapper;
         $this->frameworksVendorToName = $parameterProvider->provideArrayParameter(
             Option::FRAMEWORKS_VENDOR_TO_NAME
         );
-        $this->parametersConfigDumper = $parametersConfigDumper;
     }
 
     protected function configure(): void

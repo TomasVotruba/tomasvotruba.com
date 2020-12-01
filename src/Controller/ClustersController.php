@@ -11,16 +11,11 @@ use TomasVotruba\Blog\Repository\PostRepository;
 
 final class ClustersController extends AbstractController
 {
-    private PostRepository $postRepository;
-
-    public function __construct(PostRepository $postRepository)
+    public function __construct(private PostRepository $postRepository)
     {
-        $this->postRepository = $postRepository;
     }
 
-    /**
-     * @Route(path="clusters", name="clusters")
-     */
+    #[Route('clusters', name: 'clusters')]
     public function __invoke(): Response
     {
         return $this->render('clusters/clusters.twig', [

@@ -8,34 +8,16 @@ use TomasVotruba\FrameworkStats\Contract\LastYearTrendAwareInterface;
 
 final class VendorData implements LastYearTrendAwareInterface
 {
-    private string $vendorName;
-
-    private int $vendorTotalLastYear;
-
-    private int $vendorTotalPreviousYear;
-
-    private float $lastYearTrend;
-
-    /**
-     * @var PackageData[]
-     */
-    private array $packagesData = [];
-
     /**
      * @param PackageData[] $packagesData
      */
     public function __construct(
-        string $vendorName,
-        int $vendorTotalLastYear,
-        int $vendorTotalPreviousYear,
-        float $lastYearTrend,
-        array $packagesData
+        private string $vendorName,
+        private int $vendorTotalLastYear,
+        private int $vendorTotalPreviousYear,
+        private float $lastYearTrend,
+        private array $packagesData
     ) {
-        $this->vendorName = $vendorName;
-        $this->vendorTotalLastYear = $vendorTotalLastYear;
-        $this->vendorTotalPreviousYear = $vendorTotalPreviousYear;
-        $this->lastYearTrend = $lastYearTrend;
-        $this->packagesData = $packagesData;
     }
 
     public function getVendorName(): string
