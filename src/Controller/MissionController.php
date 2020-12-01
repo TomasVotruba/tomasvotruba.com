@@ -22,9 +22,7 @@ final class MissionController extends AbstractController
         $this->helpedCompanies = $parameterProvider->provideArrayParameter(Option::HELPED_COMPANIES);
     }
 
-    /**
-     * @Route(path="mission", name="mission")
-     */
+    #[Route('mission', name: 'mission')]
     public function __invoke(): Response
     {
         return $this->render('mission.twig', [

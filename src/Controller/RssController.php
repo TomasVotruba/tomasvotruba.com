@@ -13,20 +13,14 @@ use TomasVotruba\Blog\ValueObject\Post;
 
 final class RssController extends AbstractController
 {
-    private PostRepository $postRepository;
-
-    public function __construct(PostRepository $postRepository)
+    public function __construct(private PostRepository $postRepository)
     {
-        $this->postRepository = $postRepository;
     }
 
-    /**
-     * @Route(path="rss.xml", name="rss")
-     */
+    #[Route('rss.xml', name: 'rss')]
     public function __invoke(): Response
     {
         $posts = $this->postRepository->fetchForRss();
-
         return $this->render('rss.twig', [
             'posts' => $posts,
             'most_recent_post_date_time' => $this->getMostRecentPostDateTime($posts),

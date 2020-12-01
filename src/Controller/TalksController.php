@@ -28,9 +28,7 @@ final class TalksController extends AbstractController
         $this->talksFeedback = $parameterProvider->provideArrayParameter(Option::TALKS_FEEDBACK);
     }
 
-    /**
-     * @Route(path="talks", name="talks")
-     */
+    #[Route('talks', name: 'talks')]
     public function __invoke(): Response
     {
         return $this->render('talks.twig', [
