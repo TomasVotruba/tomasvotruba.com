@@ -49,7 +49,7 @@ final class TwitterImageApiWrapper
     public function uploadImage(string $imageFile): array
     {
         $headers = get_headers($imageFile, 1);
-        if (! is_array($headers)) {
+        if ($headers === false) {
             throw new ShouldNotHappenException();
         }
 

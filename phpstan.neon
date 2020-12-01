@@ -145,3 +145,6 @@ parameters:
                 - packages/tweeter/src/Command/TweetCommand.php # 103
                 - packages/tweeter/src/Command/TweetCommand.php # 117
                 - packages/tweeter/src/Command/TweetCommand.php # 128
+
+        # php 8.0 bugs
+        - '#Parameter \#2 \$associative of function get_headers expects bool, int given#'

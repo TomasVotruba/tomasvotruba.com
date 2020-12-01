@@ -10,7 +10,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
     $parameters->set(Option::SETS, [
-        SetList::PHP_74,
+        //SetList::PHP_74,
         SetList::PHP_80,
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,

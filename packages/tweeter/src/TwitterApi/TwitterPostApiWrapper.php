@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TwitterApi;
 
+use DateTimeInterface;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
@@ -120,6 +121,8 @@ final class TwitterPostApiWrapper
         $lastRawTweet = reset($publishedTweetsRaw);
 
         $dateTime = DateTime::from($lastRawTweet['created_at']);
+
+        /** @var DateTimeInterface $dateInterval */
         $dateInterval = $dateTime->diff(DateTime::from('today'));
 
         return (int) $dateInterval->format('%a');
