@@ -429,4 +429,4 @@ vendor/bin/rector process src --dry-run
 
 **If Rector detects any dead code, CI will fail**. You can, of course, run it without `--dry-run` after to actually remove the code.
 
-See [Dead Code set](https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#deadcode) for more features.
+See [Dead Code set](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#deadcode) for more features.

@@ -12,7 +12,7 @@ tweet_image: "/assets/images/posts/2020/dump_static_site_demo.gif"
 
 Deprecations without replacements are like nails in the coffin of your forehead while reciting a poem about the beauty of life.
 
-The [friendsofphp.org](github.com/tomasvotruba/friendsofphp.org) and this blog **still uses PHP and is deployed to GitHub pages**. How is that possible without Statie?
+The [friendsofphp.org](https://github.com/tomasvotruba/friendsofphp.org) and this blog **still uses PHP and is deployed to GitHub pages**. How is that possible without Statie?
 
 From Statie, we **fluently switch to brand new package - [Symfony Static Dumper](https://github.com/symplify/symfony-static-dumper)**. A single command that **generates HTML and CSS from your Symfony application.**
 
@@ -64,7 +64,6 @@ composer remove symplify/statie
 - add [`config/bootstrap.php`](https://github.com/symfony/demo/blob/master/config/bootstrap.php)
 - add [`bin/console`](https://github.com/symfony/demo/blob/master/bin/console)
 - add [`src/HttpKernel/YourAppKernel.php`](https://github.com/TomasVotruba/friendsofphp.org/blob/master/src/HttpKernel/FopKernel.php)
-
 
 ### Move `/source`
 

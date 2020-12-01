@@ -64,7 +64,6 @@ You don't have to make the same mistakes as me. There are many great examples th
 
 - [Cyclic PHPUnit Release Process](https://github.com/sebastianbergmann/phpunit/wiki/Release-Process) - stick to [*menstruation* dependency](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/)
 - [PHP.net - Supported Versions](http://php.net/supported-versions.php) - stay green on PHP
-- [gophp71.org](https://gophp71.org) - go with the mainstream
 
 **Go through them and suck the gold in.**
 

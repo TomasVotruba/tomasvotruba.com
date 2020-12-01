@@ -164,7 +164,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
                     'name' => 'Friends of PHP Prague',
                     'location' => 'The Czech Republic',
                     'date' => '2018-09',
-                    'url' => 'https://www.meetup.com/friends-of-php-prague/events/254388973/',
                 ],
             ],
         ],

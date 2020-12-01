@@ -1,1 +1,2 @@
---- Host did not respond - https://packagist.org/packages/symfony/security-core/stats (found on https://tomasvotruba.com/php-framework-trends/)
+404 Not Found - https://github.com/rectorphp/rector/blob/master/create-rector.php.dist (found on https://tomasvotruba.com/blog/2019/07/15/why-use-one-time-migration-scripts/)
+

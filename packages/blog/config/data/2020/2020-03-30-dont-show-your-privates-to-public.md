@@ -53,7 +53,7 @@ This **is 3 500 children**:
 
 <img src="/assets/images/posts/2020/privates_3500_children.jpg" class="img-thumbnail">
 
-There is [~480 Rector rules](https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md), each has 3 public methods required by interface contract. That's 1 500 public contract methods. Even if we remove thos, 3 500 - 1 500, we still have **over 2 000 public methods**:
+There is [~480 Rector rules](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md), each has 3 public methods required by interface contract. That's 1 500 public contract methods. Even if we remove thos, 3 500 - 1 500, we still have **over 2 000 public methods**:
 
 <img src="/assets/images/posts/2020/privates_2000_children.jpg" class="img-thumbnail">
 

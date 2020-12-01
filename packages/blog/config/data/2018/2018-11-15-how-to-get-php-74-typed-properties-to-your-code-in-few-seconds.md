@@ -2,7 +2,7 @@
 id: 159
 title: "How to Get PHP 7.4 Typed Properties to Your Code in Few Seconds"
 perex: |
-    PHP 5.6 and 7.0 is going to be dangerous [since 2019](http://php.net/supported-versions.php), PHP 7.1 is [new baseline](https://gophp71.org) and PHP 7.3 is just about to be released in the end of 2018.
+    PHP 5.6 and 7.0 is going to be dangerous [since 2019](http://php.net/supported-versions.php), PHP 7.1 is new baseline and PHP 7.3 is just about to be released in the end of 2018.
     <br><br>
     Is this **the best time to upgrade your code to PHP 7.4**?
 tweet: "New Post on My Blog: How to Get #PHP 7.4 Typed Properties to Your Code in Few Seconds   #futurecompatibility #codequality #symfony"

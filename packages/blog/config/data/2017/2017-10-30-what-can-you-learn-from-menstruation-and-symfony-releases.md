@@ -185,7 +185,7 @@ And what if every package has it's own destiny?
 
 ## Call Out to Package Maintainers
 
-All this is not related just to Symfony, Doctrine, Nette or any [other big PHP players](https://gophp71.org) like Zend, Laravel, CakePHP or Yii.
+All this is not related just to Symfony, Doctrine, Nette or any other big PHP players like Zend, Laravel, CakePHP or Yii.
 
 **Every package, every dependency that has own versioning system means increased work PHP developers**. That's stands if you agree with cycles or not. **Version C** being the easiest to upgrade and version **A** being the most difficult and also the most expensive.
 

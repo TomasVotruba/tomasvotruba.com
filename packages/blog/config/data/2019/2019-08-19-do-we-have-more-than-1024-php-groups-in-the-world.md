@@ -24,9 +24,9 @@ tweet_image: "/assets/images/posts/2019/friends/preview.png"
     1, 2, 3... <strong>1023 groups</strong>
 </blockquote>
 
-I bet there is one group out there that isn't listed yet. It might have a local non-PHP name like ["AFUP" community in France](https://friendsofphp.org/groups/#france).
+I bet there is one group out there that isn't listed yet. It might have a local non-PHP name like "AFUP" community in France.
 
-Whoever finds this group wins 🍺!
+Whoever finds this group wins🍺!
 
 ## The Most Active Region
 
@@ -73,7 +73,7 @@ Any tips? [Add new issue](https://github.com/TomasVotruba/friendsofphp.org/issue
 
 Meetups are downloaded every day by Travis CRON job from Meetup.com for each group. You'll find them manually added in [this YAML file in repository](https://github.com/TomasVotruba/friendsofphp.org/blob/master/config/_data/groups.yaml). No surprise **it runs on [Symfony Static Dumper](https://github.com/symplify/symfony-static-dumper) and is fully [open-sourced on Github](https://github.com/tomasvotruba/friendsofphp.org)**.
 
-Although there [Meetup API](https://www.meetup.com/meetup_api) often works as documented, it's impossible to find all PHP groups with it. There is [an issue](https://github.com/meetup/api/issues/249) **when you search for groups in a specific location, it ignores the area and sets back to your origin city**. Pity, that exactly what we need here.
+Although there [Meetup API](https://www.meetup.com/meetup_api) often works as documented, it's impossible to find all PHP groups with it. There is an issue **when you search for groups in a specific location, it ignores the area and sets back to your origin city**. Pity, that exactly what we need here.
 
 ### What now?
 

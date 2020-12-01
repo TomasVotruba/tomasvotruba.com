@@ -12,8 +12,7 @@ deprecated_message: |
     The [AutoBindParameter](https://github.com/symplify/auto-bind-parameter) package is now deprecated.
     <br>
     <br>
-    **Use [constant parameters](/blog/2020/09/21/replacing-parameter-autobind-with-constant-parameters) instead**.
-
+    **Use [constant parameters](/blog/2020/09/21/symfony-autobind-parameter-is-dead-long-live-constant-parameters) instead**.
 ---
 
 Do you still have these old-school Symfony 2.7- configs?

@@ -32,7 +32,7 @@ We made [symplify/config-transformer](https://github.com/symplify/config-transfo
 
 <br>
 
-**Credit** for inspiration first reported bugs, feature feedback, and exceptional test cases **goes to [archeoprog](https://github.com/archeoprog) and [Ryan Weaver](https://github.com/weaverryan)**. Their input helped get the Symplify package to high quality and covered Symfony features I didn't even know. Thank you, guys!
+**Credit** for inspiration first reported bugs, feature feedback, and exceptional test cases **goes to *archeoprog* and [Ryan Weaver](https://github.com/weaverryan)**. Their input helped get the Symplify package to high quality and covered Symfony features I didn't even know. Thank you, guys!
 
 <br>
 

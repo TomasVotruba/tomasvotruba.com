@@ -56,24 +56,17 @@ In the start, we run **Rector with generic rules with brute-force way**. Don't t
 In the end, [Rector](https://getrector.org) helped us with many following changes:
 
 - Response and Request <em class="fas fa-fw fa-lg fa-check text-success"></em>
-
 - Presenter to Controller <em class="fas fa-fw fa-lg fa-check text-success"></em>
-
 - RouterFactory to Controller Annotation <em class="fas fa-fw fa-lg fa-check text-success"></em> - REST Routes and Invocable Controllers included
-
 - Kdyby/Events and Contributte/Events to Symfony/EventDispatcher <em class="fas fa-fw fa-lg fa-check text-success"></em>
-
 - Kdyby/Doctrine to Doctrine/DoctrineBundle <em class="fas fa-fw fa-lg fa-check text-success"></em>
-
 - Kdyby/Events to Symfony/EventDispatcher <em class="fas fa-fw fa-lg fa-check text-success"></em>
-
 - Kdyby/Translation to Symfony/Translation <em class="fas fa-fw fa-lg fa-check text-success"></em>
-
 - Nette DI methods to Symfony/DependendyInjection <em class="fas fa-fw fa-lg fa-check text-success"></em>
 
 The tricky part was to discover differences and create the bridge between both frameworks - *"In Nette, you use this, in Symfony you'd use this."*
 
-**Now it's done**, so you can use them [in `nette-to-symfony`](https://github.com/rectorphp/rector/blob/master/config/level/framework-migration/nette-to-symfony.yaml) level in Rector 0.4 to migrate your code.
+**Now it's done**, so you can use them [in `NETTE_TO_SYMFONY` set](https://github.com/rectorphp/rector/blob/267989bb05372db937a5e9ece7f2d68cfdec34bf/config/set/nette-to-symfony.php) Rector set to migrate your code.
 
 <br>
 

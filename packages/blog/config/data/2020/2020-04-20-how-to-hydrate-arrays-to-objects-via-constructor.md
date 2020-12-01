@@ -75,7 +75,7 @@ And we also have **autocomplete in TWIG templates** (thanks to [amazing](/blog/2
 
 ## What now with all the Arrays?
 
-Each local PHP community produces videos, livestreams, or talk recordings. We make such videos too, and we store [them in YAML](https://github.com/pehapkari/pehapkari.cz/blob/master/config/_data/youtube_videos.yaml). How can we get objects from that?
+Each local PHP community produces videos, livestreams, or talk recordings. We make such videos too, and we store them in YAML format. How can we get objects from that?
 
 Let's use the most straightforward example possible.
 

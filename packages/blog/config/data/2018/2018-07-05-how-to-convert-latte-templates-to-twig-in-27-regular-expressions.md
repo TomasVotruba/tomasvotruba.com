@@ -339,7 +339,7 @@ vendor/bin/latte-to-twig-converter convert app/templates
 
 It will find all the `*.twig` files, look for Latte code in it and if that matches, it will convert it to Twig. That way your `*.latte` files will keep Latte as long as you don't rename them.
 
-I'd link you to [README](http://github.com/symplify/lattetotwigconverter) now for more, but actually, there is no more, this is all the usage.
+I'd link you to [README](https://github.com/symplify/lattetotwigconverter) now for more, but actually, there is no more, this is all the usage.
 
 <br>
 
@@ -350,35 +350,11 @@ or [the PR to Pehapkari.cz website](https://github.com/pehapkari/pehapkari.cz/pu
 
 <img src="/assets/images/posts/2018/latte-twig/diff.png" class="img-thumbnail">
 
-## Twig To Latte Converter?
-
-Are you Latte fan and do you want to migrate to Latte? Let's do this! There [is a test set of both engines](https://github.com/symplify/symplify/tree/a6b7c71a90fd984d2f31c5ed28957e2927608001/packages/LatteToTwigConverter/tests/LatteToTwigConverterSource), that can help you to start.
-
-All you need to do is create the **exact reverse of the match to replace rules**:
-
-For example from [`Symplify\LatteToTwigConverter\CaseConverter\ConditionCaseConverter`](https://github.com/symplify/symplify/blob/master/packages/LatteToTwigConverter/src/CaseConverter/ConditionCaseConverter.php):
-
-```php
-# Twig to Latte
-use Nette\Utils\String;
-
-$content = Strings::replace($content, '{% else %}', '#{else}#');
-```
-
-↓
-
-```php
-# Latte to Twig
-use Nette\Utils\String;
-
-$content = Strings::replace($content, '#{else}#', '{% else %}');
-```
-
-<br><br>
+<br>
 
 ## Go Out and Play
 
-In the end, I'd like to encourage you to do more of such experiments. I meet many programmers over meetups all across Europe and they often don't have space - either the time in work or they won't allow themselves - to do such experiments.
+In the end, I'd like to encourage you to do more of such experiments. I meet many programmers on meetups all across the Europe and they often don't have space - either the time in work or they won't allow themselves - to **do such experiments**.
 
 In my open-source experience, these experiments give you the most knowledge. Instead of choosing the first solution because *I don't have time and I have to deliver the value*, I tried 3-4, tested them and then picked the one that worked the best. It was not the first one of course, and even if it was, I'd be much more convinced the solution is right instead of just blindly believing it.
 

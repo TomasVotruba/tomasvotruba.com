@@ -39,7 +39,7 @@ But first...
 
 This packages requires PHP 7.1 to run as the rest of the Nette (mostly current `master` or `3.0`).
 
-If you still don't know why should you **join [Symfony, Nette, Doctrine, Zend or Sylius](https://gophp71.org)**, you can read [this post](/blog/2017/06/05/go-php-71/#why-go-right-to-php-7-1) or wait a bit longer. It's up to you.
+If you still don't know why should you **join Symfony, Nette, Doctrine, Zend or Sylius. You can read [this post](/blog/2017/06/05/go-php-71/#why-go-right-to-php-7-1) or wait a bit longer. It's up to you.
 
 ## Setup Your Project
 

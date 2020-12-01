@@ -107,7 +107,6 @@ This fixer scans docs blocks, compares it with code types, evaluates value of ea
 
 Docblocks don't have any standard format, so I **first tested this Fixer** on handful of PHP open-source projects. **Open them** to see, what this fixer can do in real code:
 
-- [php-ml](https://github.com/php-ai/php-ml/pull/145) and [other PR](https://github.com/php-ai/php-ml/pull/146)
 - [ReflectionDocBlock](https://github.com/phpDocumentor/ReflectionDocBlock/pull/137)
 - and [Symfony](https://github.com/symfony/symfony/pull/24931)
 

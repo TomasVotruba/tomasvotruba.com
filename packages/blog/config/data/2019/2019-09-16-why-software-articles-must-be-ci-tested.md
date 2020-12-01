@@ -115,7 +115,7 @@ And that's why and how *tested articles* were born.
 
 <br>
 
-**How does tested article look like?** [See this commit](https://github.com/pehapkari/pehapkari.cz/commit/85b69950b32c39b9e972582720a23a18a1adc4be). It will last for years, will work on Symfony 4, 5, 6...
+**How does tested article look like?** [See `HashPasswordCommandTest.php`](https://github.com/TomasVotruba/tomasvotruba.com/blob/8c68d0fcb64a73fb71f157452288711219501763/packages/blog/tests/Posts/Year2019/SymfonyConsole/HashPasswordCommandTest.php). It will last for years, will work on Symfony 4, 5, 6... 42.
 
 **Feel free to send one.** We'll make sure it will make it into 2018 and beyond.
 

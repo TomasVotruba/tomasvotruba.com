@@ -2,7 +2,7 @@
 id: 193
 title: "Why we Migrated from Nette to Symfony in 3 Weeks - Part 3 - Brain Drain Dead Packages-Lock"
 perex: |
-    Do you want to **migrate your project from Nette to Symfony**? In [the part 2](/blog/2019/03/07/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-2/) we looked at **escaping semver hell**.
+    Do you want to **migrate your project from Nette to Symfony**? In [the part 2](/blog/2019/03/07/why-we-migrated-from-nette-to-symfony-in-3-weeks-part-2/) we looked at **escaping semver hell**.
     <br><br>
     Today we'll look on **package vendor-locks** caused by brain drain.
 tweet: "New Post on #php 🐘 blog: Why we Migrated from #nettefw to #symfony in 3 Weeks - Part 3"
@@ -65,7 +65,7 @@ Nette had class `Nette\Object` that was actively promoted as the parent of all c
  }
 ```
 
-*If you still have this problem, [use Rector that handles this case](https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#parentclasstotraitsrector).*
+*If you still have this problem, [use Rector that handles this case](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#parentclasstotraitsrector).*
 
 <br>
 
@@ -124,7 +124,7 @@ When we realized with Honza that night, that to upgrade project means "fork ever
 
 Are you stuck with Nette at home and thinking about in your wet dreams Symfony? This is your lucky week! :)
 
-Honza will talk about Nette to Symfony migration on **[PHP meetup in Prague this Thursday - 14. 3.](https://www.meetup.com/friends-of-php-prague/events/259627000)**
+Honza Mikes will talk about Nette to Symfony migration on PHP meetup in Prague this Thursday - 14. 3.
 
 Entrance free, language is English and I'll be there too!
 

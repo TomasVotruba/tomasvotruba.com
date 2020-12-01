@@ -26,7 +26,7 @@ tweet_image: "/assets/images/posts/2017/go-php-71-later/unity.jpg"
 ## How is GoPHP71.org Doing?
 
 
-I've created a page [GoPHP71.org](https://gophp71.org) half year ago, inspired by [GoPHP7.org](http://gophp7.org) and by [Go PHP 5](https://www.garfieldtech.com/blog/go-php-5-go) - read this one if you care about background values of this movement.
+I've created a page gophp71.org half year ago, inspired by gophp7.org and by [Go PHP 5](https://www.garfieldtech.com/blog/go-php-5-go) - read this one if you care about background values of this movement.
 
 
 In [release post](/blog/2017/06/05/go-php-71/) I've explained **why right to PHP 7.1** and not PHP 7.0, how important is **united community** in this and how this can **bring positive energy to open-source** and as well host providers upgrades.
@@ -71,13 +71,11 @@ I admit [I wasn't nice](/blog/2017/03/27/why-is-doctrine-dying/) to Doctrine Pro
 
 Ever since I **see Doctrine community are doing great** - from [removing YAML references](https://github.com/doctrine/doctrine2/pull/5932), to [cleaner Symfony support](https://github.com/doctrine/DoctrineBundle/pull/727).
 
-
-
 ## But I want to go PHP 7.0
 
-Still not convinced about reasons? Check [this issue](https://github.com/php-ai/php-ml/issues/148) on `php-ai/php-ml` library.
+Still not convinced about reasons?
 
-[@dmonllao poses question or rather idea](https://github.com/php-ai/php-ml/issues/148#issuecomment-346790142) there: *I want to take is slowly <or another reason> and go only to PHP 7.0*.
+[@dmonllao](https://github.com/dmonllao) poses an idea: *I want to take is slowly <or another reason> and go only to PHP 7.0*.
 
 Let me explain how that could influence PHP ecosystem and slow down productivity of many projects:
 

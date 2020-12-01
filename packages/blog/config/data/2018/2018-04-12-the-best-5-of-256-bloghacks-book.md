@@ -10,7 +10,7 @@ tweet_image: "/assets/images/posts/2018/bloghacks/book.png"
 ---
 
 I came across this book [in the review by Vojta Růžička](https://www.vojtechruzicka.com/book-review-256-bloghacks) on [devblogy.cz](http://devblogy.tk) (the best place to follow Czech it bloggers by [kaja47](https://twitter.com/kaja47) whom I'm very thankful for it). You might know [Yegor](http://www.yegor256.com) from Java world or from
-**[Software Quality Award](http://www.yegor256.com/award.html) he organizes for open-source projects** every year. [A friend of mine](https://arkadiuszkondas.com) won the award with *the* machine learning package in PHP - [php-ai/php-ml](https://github.com/php-ai/php-ml#awards) - last year.
+**[Software Quality Award](http://www.yegor256.com/award.html) he organizes for open-source projects** every year. [A friend of mine](https://arkadiuszkondas.com) won the award with *the* machine learning package in PHP - [jorgecasas/php-ml](https://github.com/jorgecasas/php-ml#awards) - last year.
 
 
 
