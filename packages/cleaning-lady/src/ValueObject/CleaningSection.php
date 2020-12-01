@@ -8,20 +8,11 @@ use Nette\Utils\Strings;
 
 final class CleaningSection
 {
-    private string $headline;
-
-    /**
-     * @var CleaningItem[]
-     */
-    private array $cleaningItems = [];
-
     /**
      * @param CleaningItem[] $cleaningItems
      */
-    public function __construct(string $headline, array $cleaningItems)
+    public function __construct(private string $headline, private array $cleaningItems)
     {
-        $this->headline = $headline;
-        $this->cleaningItems = $cleaningItems;
     }
 
     public function getHeadline(): string

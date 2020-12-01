@@ -46,31 +46,19 @@ final class TwitterPostApiWrapper
 
     private string $twitterName;
 
-    private TweetEntityCompleter $tweetEntityCompleter;
-
     /**
      * @var PublishedTweet[]
      */
     private array $publishedTweets = [];
 
-    private PublishedTweetFactory $publishedTweetFactory;
-
-    private TwitterApiCaller $twitterApiCaller;
-
-    private TwitterImageApiWrapper $twitterImageApiWrapper;
-
     public function __construct(
         ParameterProvider $parameterProvider,
-        TwitterApiCaller $twitterApiCaller,
-        TwitterImageApiWrapper $twitterImageApiWrapper,
-        TweetEntityCompleter $tweetEntityCompleter,
-        PublishedTweetFactory $publishedTweetFactory
+        private TwitterApiCaller $twitterApiCaller,
+        private TwitterImageApiWrapper $twitterImageApiWrapper,
+        private TweetEntityCompleter $tweetEntityCompleter,
+        private PublishedTweetFactory $publishedTweetFactory
     ) {
         $this->twitterName = $parameterProvider->provideStringParameter(Option::TWITTER_NAME);
-        $this->tweetEntityCompleter = $tweetEntityCompleter;
-        $this->publishedTweetFactory = $publishedTweetFactory;
-        $this->twitterApiCaller = $twitterApiCaller;
-        $this->twitterImageApiWrapper = $twitterImageApiWrapper;
     }
 
     /**

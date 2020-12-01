@@ -11,16 +11,11 @@ use TomasVotruba\Projects\PackageFactory\VendorPackagesFactory;
 
 final class ProjectsController extends AbstractController
 {
-    private VendorPackagesFactory $vendorPackagesFactory;
-
-    public function __construct(VendorPackagesFactory $vendorPackagesFactory)
+    public function __construct(private VendorPackagesFactory $vendorPackagesFactory)
     {
-        $this->vendorPackagesFactory = $vendorPackagesFactory;
     }
 
-    /**
-     * @Route(path="projects", name="projects")
-     */
+    #[Route('projects', name: 'projects')]
     public function __invoke(): Response
     {
         return $this->render('projects/projects.twig', [

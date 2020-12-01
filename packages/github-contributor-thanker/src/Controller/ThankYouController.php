@@ -22,14 +22,11 @@ final class ThankYouController extends AbstractController
         $this->contributors = $parameterProvider->provideArrayParameter(Option::CONTRIBUTORS);
     }
 
-    /**
-     * @Route(path="thank-you", name="thank_you")
-     */
+    #[Route('thank-you', name: 'thank_you')]
     public function __invoke(): Response
     {
         $mostActiveContributors = array_slice($this->contributors, 0, 9);
         $otherContributors = array_slice($this->contributors, 9);
-
         return $this->render('thank_you.twig', [
             'title' => 'Thank You',
             'most_active_contributors' => $mostActiveContributors,

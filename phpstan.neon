@@ -148,3 +148,10 @@ parameters:
 
         # php 8.0 bugs
         - '#Parameter \#2 \$associative of function get_headers expects bool, int given#'
+
+
+        # bug in Symplify for PHP 8.0 attributes with arrays
+        -
+            message: '#Array with keys is not allowed\. Use value object to pass data instead#'
+            paths:
+                - packages/blog/src/Controller/PostController.php

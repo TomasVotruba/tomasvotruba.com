@@ -25,28 +25,13 @@ final class PackageDataFactory
      */
     private const MIN_DOWNLOADS_LIMIT = 1_000;
 
-    private PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider;
-
-    private Statistics $statistics;
-
-    private SymfonyStyle $symfonyStyle;
-
-    private Sorter $sorter;
-
-    private PHPStanNettePackagesPurifier $phpStanNettePackagesPurifier;
-
     public function __construct(
-        PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
-        PHPStanNettePackagesPurifier $phpStanNettePackagesPurifier,
-        Statistics $statistics,
-        Sorter $sorter,
-        SymfonyStyle $symfonyStyle
+        private PackageMonthlyDownloadsProvider $packageMonthlyDownloadsProvider,
+        private PHPStanNettePackagesPurifier $phpStanNettePackagesPurifier,
+        private Statistics $statistics,
+        private Sorter $sorter,
+        private SymfonyStyle $symfonyStyle
     ) {
-        $this->packageMonthlyDownloadsProvider = $packageMonthlyDownloadsProvider;
-        $this->statistics = $statistics;
-        $this->symfonyStyle = $symfonyStyle;
-        $this->sorter = $sorter;
-        $this->phpStanNettePackagesPurifier = $phpStanNettePackagesPurifier;
     }
 
     /**

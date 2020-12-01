@@ -36,40 +36,23 @@ final class PostFactory
      */
     private const HEADLINE_LEVEL_REGEX = '#<h(?<level>\d+)>(?<headline>.*?)<\/h\d+>#';
 
-    private ParsedownExtra $parsedownExtra;
-
-    private PathAnalyzer $pathAnalyzer;
-
-    private RouterInterface $router;
-
     private string $projectDir;
 
     private string $siteUrl;
 
-    private FileSystemGuard $fileSystemGuard;
-
-    private TestedPostAnalyzer $testedPostAnalyzer;
-
     public function __construct(
-        ParsedownExtra $parsedownExtra,
-        PathAnalyzer $pathAnalyzer,
-        RouterInterface $router,
-        TestedPostAnalyzer $testedPostAnalyzer,
+        private ParsedownExtra $parsedownExtra,
+        private PathAnalyzer $pathAnalyzer,
+        private RouterInterface $router,
+        private TestedPostAnalyzer $testedPostAnalyzer,
         ParameterProvider $parameterProvider,
-        FileSystemGuard $fileSystemGuard
+        private FileSystemGuard $fileSystemGuard
     ) {
-        $this->parsedownExtra = $parsedownExtra;
-        $this->pathAnalyzer = $pathAnalyzer;
-        $this->router = $router;
-
         $siteUrl = $parameterProvider->provideStringParameter(Option::SITE_URL);
         $this->siteUrl = rtrim($siteUrl, '/');
 
         $projectDir = $parameterProvider->provideStringParameter(Option::KERNEL_PROJECT_DIR);
         $this->projectDir = $projectDir;
-
-        $this->fileSystemGuard = $fileSystemGuard;
-        $this->testedPostAnalyzer = $testedPostAnalyzer;
     }
 
     public function createFromFileInfo(SmartFileInfo $smartFileInfo): Post

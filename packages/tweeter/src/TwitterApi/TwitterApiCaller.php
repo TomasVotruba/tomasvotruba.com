@@ -10,11 +10,8 @@ use TwitterAPIExchange;
 
 final class TwitterApiCaller
 {
-    private TwitterAPIExchange $twitterAPIExchange;
-
-    public function __construct(TwitterAPIExchange $twitterAPIExchange)
+    public function __construct(private TwitterAPIExchange $twitterAPIExchange)
     {
-        $this->twitterAPIExchange = $twitterAPIExchange;
     }
 
     /**

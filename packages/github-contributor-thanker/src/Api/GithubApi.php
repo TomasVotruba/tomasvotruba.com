@@ -26,13 +26,10 @@ final class GithubApi
 
     private string $thankerAuthorName;
 
-    private BetterGuzzleClient $betterGuzzleClient;
-
-    public function __construct(BetterGuzzleClient $betterGuzzleClient, ParameterProvider $parameterProvider)
+    public function __construct(private BetterGuzzleClient $betterGuzzleClient, ParameterProvider $parameterProvider)
     {
         $this->thankerRepositoryName = $parameterProvider->provideStringParameter(Option::THANKER_REPOSITORY_NAME);
         $this->thankerAuthorName = $parameterProvider->provideStringParameter(Option::THANKER_AUTHOR_NAME);
-        $this->betterGuzzleClient = $betterGuzzleClient;
     }
 
     /**

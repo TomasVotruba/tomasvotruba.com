@@ -12,17 +12,10 @@ use TomasVotruba\Tweeter\ValueObject\Tweet;
 
 final class PostTweetsProvider
 {
-    private TweetGuard $tweetGuard;
-
-    private PostRepository $postRepository;
-
     private DateTimeInterface $maximumDateTimeLimit;
 
-    public function __construct(TweetGuard $tweetGuard, PostRepository $postRepository)
+    public function __construct(private TweetGuard $tweetGuard, private PostRepository $postRepository)
     {
-        $this->tweetGuard = $tweetGuard;
-        $this->postRepository = $postRepository;
-
         $this->maximumDateTimeLimit = DateTime::from('2019-01-01');
     }
 

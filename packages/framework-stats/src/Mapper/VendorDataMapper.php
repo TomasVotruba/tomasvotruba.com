@@ -8,11 +8,8 @@ use TomasVotruba\FrameworkStats\ValueObject\VendorData;
 
 final class VendorDataMapper
 {
-    private PackageDataMapper $packageDataMapper;
-
-    public function __construct(PackageDataMapper $packageDataMapper)
+    public function __construct(private PackageDataMapper $packageDataMapper)
     {
-        $this->packageDataMapper = $packageDataMapper;
     }
 
     public function mapObjectToArray(VendorData $vendorData): array

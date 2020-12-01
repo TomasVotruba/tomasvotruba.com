@@ -11,16 +11,11 @@ use TomasVotruba\CleaningLady\CleaningCheckList\CleaningCheckListFactory;
 
 final class CleaningLadyCheckListController extends AbstractController
 {
-    private CleaningCheckListFactory $cleaningCheckListFactory;
-
-    public function __construct(CleaningCheckListFactory $cleaningCheckListFactory)
+    public function __construct(private CleaningCheckListFactory $cleaningCheckListFactory)
     {
-        $this->cleaningCheckListFactory = $cleaningCheckListFactory;
     }
 
-    /**
-     * @Route(path="cleaning-lady-checklist", name="cleaning_lady_checklist")
-     */
+    #[Route('cleaning-lady-checklist', name: 'cleaning_lady_checklist')]
     public function __invoke(): Response
     {
         return $this->render('cleaning_lady_checklist.twig', [

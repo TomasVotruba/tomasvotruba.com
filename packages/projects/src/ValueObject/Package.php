@@ -9,32 +9,16 @@ use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class Package
 {
-    private string $name;
-
     private string $shortName;
 
-    private string $description;
-
-    private string $repositoryUrl;
-
-    private int $githubStartsCount;
-
-    private int $totalDownloads;
-
     public function __construct(
-        string $name,
-        string $description,
-        string $repositoryUrl,
-        int $githubStartsCount,
-        int $totalDownloads
+        private string $name,
+        private string $description,
+        private string $repositoryUrl,
+        private int $githubStartsCount,
+        private int $totalDownloads
     ) {
-        $this->name = $name;
         $this->resolveShortName($name);
-
-        $this->description = $description;
-        $this->repositoryUrl = $repositoryUrl;
-        $this->githubStartsCount = $githubStartsCount;
-        $this->totalDownloads = $totalDownloads;
     }
 
     public function getName(): string

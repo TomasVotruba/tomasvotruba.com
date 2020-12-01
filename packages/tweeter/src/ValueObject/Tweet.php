@@ -17,15 +17,9 @@ final class Tweet
 
     private string $text;
 
-    private ?string $image;
-
-    private DateTimeInterface $postDateTime;
-
-    public function __construct(string $text, DateTimeInterface $postDateTime, ?string $image)
+    public function __construct(string $text, private DateTimeInterface $postDateTime, private ?string $image)
     {
         $this->text = htmlspecialchars_decode($text);
-        $this->postDateTime = $postDateTime;
-        $this->image = $image;
     }
 
     public function getText(): string

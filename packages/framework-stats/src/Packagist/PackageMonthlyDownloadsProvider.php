@@ -11,16 +11,10 @@ use TomasVotruba\FrameworkStats\Packagist\Purifier\InterveningPackagesPurifier;
  */
 final class PackageMonthlyDownloadsProvider
 {
-    private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider;
-
-    private InterveningPackagesPurifier $interveningPackagesPurifier;
-
     public function __construct(
-        PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider,
-        InterveningPackagesPurifier $interveningPackagesPurifier
+        private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider,
+        private InterveningPackagesPurifier $interveningPackagesPurifier
     ) {
-        $this->packageRawMonthlyDownloadsProvider = $packageRawMonthlyDownloadsProvider;
-        $this->interveningPackagesPurifier = $interveningPackagesPurifier;
     }
 
     /**

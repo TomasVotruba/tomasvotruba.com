@@ -8,14 +8,10 @@ use TomasVotruba\Tweeter\ValueObject\Tweet;
 
 final class TweetsFilter
 {
-    private OldTweetsFilter $oldTweetsFilter;
-
-    private PublishedTweetsFilter $publishedTweetsFilter;
-
-    public function __construct(OldTweetsFilter $oldTweetsFilter, PublishedTweetsFilter $publishedTweetsFilter)
-    {
-        $this->oldTweetsFilter = $oldTweetsFilter;
-        $this->publishedTweetsFilter = $publishedTweetsFilter;
+    public function __construct(
+        private OldTweetsFilter $oldTweetsFilter,
+        private PublishedTweetsFilter $publishedTweetsFilter
+    ) {
     }
 
     /**
