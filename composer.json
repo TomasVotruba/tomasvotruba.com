@@ -43,7 +43,7 @@
         "symplify/symfony-php-config": "^9.0",
         "phpunit/phpunit": "^9.4",
         "rector/rector": "dev-master",
-        "spatie/http-status-check": "^3.2",
+        "spatie/http-status-check": "^3.3",
         "symfony/console": "^5.2",
         "symfony/process": "^5.2",
         "symfony/stopwatch": "^5.2",
