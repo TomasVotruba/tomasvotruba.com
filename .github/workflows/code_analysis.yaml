@@ -35,6 +35,6 @@ jobs:
                     # needed by phpunit
                     extensions: mbstring
 
-            -   run: composer install --no-progress --ansi
+            -   run: composer install --no-progress --ansi --ignore-platform-reqs
 
             -   run: ${{ matrix.actions.run }}

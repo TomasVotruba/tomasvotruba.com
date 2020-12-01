@@ -3,7 +3,7 @@
     "license": "MIT",
     "description": "Blog about hacking PHP, education and being the laziest PHP programmer in the world",
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.0",
         "doctrine/cache": "^1.10",
         "erusev/parsedown-extra": "^0.8.1",
         "guzzlehttp/guzzle": "^7.0",

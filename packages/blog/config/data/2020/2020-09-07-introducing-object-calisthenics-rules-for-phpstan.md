@@ -36,7 +36,7 @@ Some of the rules are rather theoretical to entertain the mind, but some can be 
 
 ## Introducing PHPStan Rules
 
-You can add all of the rules above as [a PHPStan ruleset](https://github.com/symplify/coding-standard/blob/master/docs/phpstan_rules_object_calisthenics.md). I've ported these rules to `symplify/coding-standard` in the last 2 days.
+You can add all of the rules above as [a PHPStan ruleset](https://github.com/symplify/phpstan-rules/blob/master/packages/object-calisthenics/config/object-calisthenics-rules.neon). I've ported these rules to `symplify/coding-standard` in the last 2 days.
 
 ```bash
 composer require symplify/coding-standard --dev

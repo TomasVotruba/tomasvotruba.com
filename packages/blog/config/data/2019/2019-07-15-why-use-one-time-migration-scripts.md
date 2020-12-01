@@ -170,7 +170,7 @@ Again, it took us 3-4 iterations to cover all edge cases, but then it was ready 
 
 I use this approach in Rector to create new rule + test in 1 file:
 
-Just edit `create-rector.php` (see in [Github repo](https://github.com/rectorphp/rector/blob/master/create-rector.php.dist)) and then run:
+Just copy `create-rector.php.dist` to `rector-recipe.php`, edit it and then run:
 
 ```bash
 bin/rector create

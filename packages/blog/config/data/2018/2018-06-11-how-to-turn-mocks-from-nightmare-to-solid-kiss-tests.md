@@ -14,7 +14,7 @@ updated_message: |
     Updated with shift from sniffs to Rector rules, that handle these cases much better.
 ---
 
-At the time being, there is only 1 post about [anonymous classes in tests](http://mnapoli.fr/anonymous-classes-in-tests) (thanks to Matthieu!). Compared to that, there are many PHP tool made just for mocking: Prophecy, Mockery, PHPUnit native mocks, Mockista and so on. If you're a developer who uses one of them, knows that he needs to add proper annotations to make autocomplete work, has the PHPStom plugin that fixes bugs in this autocomplete and it works well for you, just stop reading.
+At the time being, there is only 1 post about [anonymous classes in tests](https://mnapoli.fr/anonymous-classes-in-tests/) (thanks to Matthieu!). Compared to that, there are many PHP tool made just for mocking: Prophecy, Mockery, PHPUnit native mocks, Mockista and so on. If you're a developer who uses one of them, knows that he needs to add proper annotations to make autocomplete work, has the PHPStom plugin that fixes bugs in this autocomplete and it works well for you, just stop reading.
 
 This post is for developers who struggle with mocking and have a feeling, that they're doing something wrong.
 

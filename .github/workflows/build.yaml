@@ -12,6 +12,6 @@ jobs:
                 with:
                     php-version: 7.4
 
-            -   run: composer install --no-progress --ansi
+            -   run: composer install --no-progress --ansi --ignore-platform-reqs
 
             -   run: bin/console dump-static-site --ansi

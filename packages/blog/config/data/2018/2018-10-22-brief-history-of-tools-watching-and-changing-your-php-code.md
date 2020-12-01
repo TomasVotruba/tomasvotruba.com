@@ -105,7 +105,7 @@ If you don't use any static analysis tool, give PHPStan a try. I've made [minima
 </span>
 <span class="badge badge-success">Modifies Code</span>
 
-Psalm is a very interesting tool that was born to fight Vimeo code complexity. It was the first tool from this group of 3, **that started [fixing the code](https://psalm.dev/docs/fixing_code)**.
+Psalm is a very interesting tool that was born to fight Vimeo code complexity. It was the first tool from this group of 3, **that started [fixing the code](https://psalm.dev/docs/manipulating_code/fixing/)**.
 
 ## 3. Deprecation Detectors
 
@@ -161,7 +161,7 @@ CakePHP is jumping faster and faster in recent years, they made their own tool. 
 
 SilverStripe is a PHP CMS coming from New Zealand. Its logic is very similar to Rector and I like it. It's also quite small, so the code is easy to understand. Be sure to check it!
 
-### [Rector](github.com/rectorphp/rector)
+### [Rector](https://github.com/rectorphp/rector)
 
 <span class="badge badge-danger">AST</span>
 <span class="badge badge-success">Modifies Code</span>

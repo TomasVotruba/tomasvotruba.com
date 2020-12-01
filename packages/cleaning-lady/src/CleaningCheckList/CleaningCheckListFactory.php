@@ -50,11 +50,11 @@ final class CleaningCheckListFactory
             ),
             new CleaningItem(
                 'add Rector standalone CI job',
-                'https://github.com/symplify/symplify/blob/master/.github/workflows/rector_ci.yaml'
+                'https://github.com/symplify/symplify/blob/3e90d3d170b919e373e26de8725b4570d560e3c2/.github/workflows/daily_pull_request.yaml#L30-L34'
             ),
             new CleaningItem(
                 'finalize classes without children',
-                'https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#finalizeclasseswithoutchildrenrector',
+                'https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#finalizeclasseswithoutchildrenrector',
                 'https://tomasvotruba.com/blog/2019/01/24/how-to-kill-parents/'
             ),
             new CleaningItem(

@@ -9,7 +9,7 @@ twee_image: "/assets/images/posts/2019/fw-migration/pull-request.png"
 
 updated_since: "June 2020"
 updated_message: |
-    Updated with [Symplify](http://github.com/symplify) packages and local links.
+    Updated with [Symplify](https://github.com/symplify) packages and local links.
 ---
 
 *Similar post was originally published [in Czech on Zdrojak.cz](https://www.zdrojak.cz/clanky/50k-radku-z-nette-do-symfony), where it got colossal attention of the PHP community and hit a record of 56 comments. But when I talk about this migration with my English speaking PHP friends, it seems crazy to them, and they want to hear details - who, how, when, what exactly?*

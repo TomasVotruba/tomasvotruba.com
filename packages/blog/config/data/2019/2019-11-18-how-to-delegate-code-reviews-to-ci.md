@@ -6,8 +6,13 @@ perex: |
     <br>
     <br>
     **In both cases, you won't have too**. Just add a couple of YAML lines to your CI.
+
 tweet: "New Post on #php 🐘 blog: How to Delegate Code Reviews to CI"
 tweet_image: "/assets/images/posts/2019/rector-ci-code-review/result.png"
+
+updated_since: "December 2020"
+updated_message: |
+    The Bitbucket was dropped, as unused services and the demo repository is not maintained.
 ---
 
 I'm very grateful that Rector is getting traction lately. More and more PHP developers save dozens of hours by running simple CLI commands on their codebases.
@@ -88,8 +93,7 @@ There you'll find all the configuration you need to **let your CI do code-review
 
 <br>
 
-<a href="http://github.com/tomasvotruba/rector-ci-demo" class="btn btn-info">Repository</a>
-<a href="https://github.com/GenieTim/rector-ci-demo/commit/346486384586f327531efff12b8367bbdaf817ad/checks?check_suite_id=320630971#step:4:2" class="btn btn-success ml-3">CI Feedback</a>
+<a href="https://github.com/tomasvotruba/rector-ci-demo" class="btn btn-info">Repository</a>
 
 ```yaml
 # .github/workflows/php.yml
@@ -119,7 +123,7 @@ jobs:
 
 <br>
 
-<a href="http://github.com/tomasvotruba/rector-ci-demo" class="btn btn-info">Repository</a>
+<a href="https://github.com/tomasvotruba/rector-ci-demo" class="btn btn-info">Repository</a>
 <a href="https://travis-ci.com/TomasVotruba/rector-ci-demo/jobs/258286278#L320"  class="btn btn-success ml-3">CI Feedback</a>
 
 ```yaml
@@ -176,49 +180,6 @@ code-review:
     stage: test
     script:
         - vendor/bin/rector process --config rector-ci.php --dry-run
-```
-
-### 4. Bitbucket
-
-<br>
-
-<a href="https://bitbucket.org/tomas-votruba/rector-ci-demo/src/master/" class="btn btn-info">Repository</a>
-<a href="https://bitbucket.org/tomas-votruba/rector-ci-demo/addon/pipelines/home#!/results/3" class="btn btn-success ml-3">CI Feedback</a>
-
-```yaml
-# bitbucket-pipelines.yml
-# see https://github.com/RobBrazier/docker-php-composer
-image: robbrazier/php:7.2
-
-pipelines:
-    default:
-        - step:
-              name: "Build"
-              script:
-                  - composer install --prefer-dist --no-ansi --no-interaction --no-progress
-
-              artifacts:
-                  - build/**
-                  - vendor/**
-                  - composer.json # beacause of scripts
-                  - composer
-
-        # @see https://confluence.atlassian.com/bitbucket/parallel-steps-946606807.html
-        - parallel:
-              - step:
-                    name: "Tests"
-                    caches:
-                        - composer
-                    script:
-                        - vendor/bin/phpunit
-
-              # Run Rector CI
-              - step:
-                    name: "Code Review"
-                    caches:
-                        - composer
-                    script:
-                        - vendor/bin/rector process src --config rector-ci.php
 ```
 
 ## What sets to Start With?

@@ -56,7 +56,7 @@ class Some_Fake_Namespace_Class
 require __DIR__ . '/libs/SomeFramework/File.php';
 ```
 
-...nor [multiple classes in one file](https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#multipleclassfiletopsr4classesrector)...
+...nor [multiple classes in one file](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#multipleclassfiletopsr4classesrector)...
 
 ```php
 class SomeException extends Exception
@@ -224,7 +224,7 @@ vendor/bin/phpstan analyse src --level 2
 vendor/bin/phpstan analyse src --level 8
 ```
 
-There are many Rector rules, [that help you with rules jumping](https://github.com/rectorphp/rector/blob/master/docs/AllRectorsOverview.md#addclosurereturntyperector).
+There are many Rector rules, [that help you with rules jumping](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#addclosurereturntyperector).
 
 <blockquote class="blockquote text-center mt-5 mb-3">
     If you make PHPStan to level 8 and passing,<br>
@@ -260,7 +260,7 @@ bin/console doctrine:migrations:migrate
 php -S localhost:8000 -t public
 ```
 
-That's it. It takes 15-30 minutes to run [pehapkari.cz](http://github.com/pehapkari/pehapkari.cz) project locally, if you see it first.
+That's it. It takes 15-30 minutes to run [pehapkari.cz](https://github.com/pehapkari/pehapkari.cz) project locally, if you see it first.
 
 <br>
 

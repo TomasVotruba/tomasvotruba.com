@@ -104,7 +104,7 @@ In Symplify `CHANGELOG.md` itself it [removed 50 dead lines](https://github.com/
 </a>
 
 <small>
-Thanks to <a href="http://github.com/petrheinz">Petr Heinz</a> ❤️️
+Thanks to <a href="https://github.com/petrheinz">Petr Heinz</a> ❤️️
 </small>
 
 <br>

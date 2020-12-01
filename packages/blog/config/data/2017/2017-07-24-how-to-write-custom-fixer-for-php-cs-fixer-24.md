@@ -46,7 +46,7 @@ Personally I like PHP CS Fixer a bit more, **because of more friendlier API, act
 <br>
 
 Apart that, they are similar: they share [tokens](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#1-token),
-[dispatcher](/blog//blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#2-dispatcher)
+[dispatcher](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#2-dispatcher)
  and [subscribers](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/#2-dispatcher).
 
 

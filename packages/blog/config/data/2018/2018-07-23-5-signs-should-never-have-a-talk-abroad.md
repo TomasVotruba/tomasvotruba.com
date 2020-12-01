@@ -127,7 +127,6 @@ I [Steal like an Artist](/blog/2017/09/25/3-non-it-books-that-help-you-to-become
 - [Leaflet.js](https://leafletjs.com)
 - [Meetup.com API](https://www.meetup.com/meetup_api)
 - [php.ug API](https://php-ug.github.io/php.ug/api)
-- [PHP7.org design](http://gophp7.org)
 - [GitHub Pages](https://pages.github.com)
 - [Statie](https://www.statie.org)
 - [Travis Daily Cron](https://docs.travis-ci.com/user/cron-jobs)

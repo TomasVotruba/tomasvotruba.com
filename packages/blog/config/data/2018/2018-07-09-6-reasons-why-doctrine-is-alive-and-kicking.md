@@ -26,7 +26,7 @@ In [the official post](https://www.doctrine-project.org/2017/07/25/php-7.1-requi
 However, when we drop support for an older version of PHP, <strong>composer will not consider the new version if the PHP version requirement is no longer fulfilled</strong>. Thus, you won't end up with a fatal error due to a wrong method signature, you just won't get the new version.
 </blockquote>
 
-Until we agree on regular PHP minor version bumping as a community, I think it's the best to jump to *the unicorn* versions. Those with the biggest impact, the most stable and helpful - and [go PHP 7.1](https://gophp71.org) as one.
+Until we agree on regular PHP minor version bumping as a community, I think it's the best to jump to *the unicorn* versions. Those with the biggest impact, the most stable and helpful - and go PHP 7.1 as one.
 
 ## 2. Use Coding Standard
 

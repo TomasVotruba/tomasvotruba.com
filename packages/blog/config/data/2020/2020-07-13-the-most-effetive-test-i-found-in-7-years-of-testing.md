@@ -140,7 +140,7 @@ And that's it :) See [3v4l.org code sample](https://3v4l.org/sEudR).
 
 - the file name is the description
 - **it scales** - you can build a test that combines multiple problems at once, and still get the same input/output format
-- you can also **combine formats** in one fixture, e.g., for [migration of Symfony configs from YAML to PHP](https://github.com/symplify/symplify/blob/master/packages/config-transformer/packages/format-switcher/tests/Converter/ConfigFormatConverter/FixtureYamlToPhp/normal/some.yaml).
+- you can also **combine formats** in one fixture, e.g., for [migration of Symfony configs from YAML to PHP](https://github.com/symplify/config-transformer/blob/a2a087d1ea759c394fe4e93c5d0d4828a46c5c26/tests/Converter/ConfigFormatConverter/YamlToPhp/Fixture/normal/services_default_private.yaml).
 
 <br>
 

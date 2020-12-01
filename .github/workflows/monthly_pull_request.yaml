@@ -38,7 +38,7 @@ jobs:
                     php-version: 7.4
                     tools: composer:v2
 
-            -   run: composer install --no-progress --ansi
+            -   run: composer install --no-progress --ansi --ignore-platform-reqs
 
             -   run: ${{ matrix.actions.run }}
                 env:
