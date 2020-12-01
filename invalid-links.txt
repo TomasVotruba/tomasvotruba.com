@@ -1,2 +1,0 @@
-404 Not Found - https://github.com/rectorphp/rector/blob/master/create-rector.php.dist (found on https://tomasvotruba.com/blog/2019/07/15/why-use-one-time-migration-scripts/)
-
