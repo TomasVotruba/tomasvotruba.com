@@ -43,4 +43,9 @@ final class Cluster
     {
         return $this->slug;
     }
+
+    public function getPostCount(): int
+    {
+        return count($this->posts);
+    }
 }

@@ -15,11 +15,15 @@
 
         {# @todo add pictures, even random ones - or categorizer #}
         {% for cluster in clusters %}
+            {# @var cluster \TomasVotruba\Blog\ValueObject\Cluster #}
             <div class="cluster mb-5">
                 <h2>
                     <a href="{{ path('cluster_detail', {'slug': cluster.slug}) }}">
                         {{ cluster.title }}
                     </a>
+                    <small class="text-muted">
+                        ({{ cluster.postCount }} parts)
+                    </small>
                 </h2>
 
                 <p>{{ cluster.description|markdown|raw }}</p>

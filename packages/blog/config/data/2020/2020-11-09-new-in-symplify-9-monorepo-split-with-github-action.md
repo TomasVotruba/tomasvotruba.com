@@ -12,13 +12,19 @@ tweet: "New Post on #php 🐘 blog: New in Symplify 9: Monorepo Split With GitHu
 
 In past years, the `split` command was one of the poorest part of whole Symplify code base. [Here is why](/blog/2020/11/02/symplify-monorepo-builder-split-fractal-of-bad-design/). In Symplify 9, **we've finally fixed it** - with a [`symplify/monorepo-split-github-action`](https://github.com/symplify/monorepo-split-github-action).
 
-We've been testing it last 3 weeks on 3 monorepo repositories. Nathan good friend of mine was eager to test them too on [eonx-com monorepo](https://github.com/eonx-com/easy-monorepo/blob/master/.github/workflows/split_packages.yml). So far they work perfectly, so we're confident to go public - **to you**.
+## Battle Tested
+
+We've been testing it last 3 weeks on 3 different monorepos. Nathan, good friend of mine, was eager to test them too on [eonx-com monorepo](https://github.com/eonx-com/easy-monorepo/blob/master/.github/workflows/split_packages.yml).
+
+This week, also [Ruud Kamphuis](https://github.com/ruudk) [pushed](https://github.com/symplify/github-actions/commits?author=ruudk) the package even further - thank you Ruud.
+
+After dozens of successful GitHub Actions runs we're ready to go public - **to you**!
 
 ## GitHub Actions - Composer for your CI
 
 The idea of GitHub Actions is as simple as Composer or Dependency Injection: **Do you need something? Ask for it.**
 
-If you're not yet familiar with GitHub Actions, give them a try. [I first tried them almost a year ago](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/) and every month I found something new to fell in a love with.
+If you're not yet familiar with GitHub Actions, give them a try. [I first tried them almost a year ago](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/), and every month I found something new to fell in love with.
 
 ## The Simplest GitHub Action for 1 Package Split
 
@@ -51,6 +57,10 @@ jobs:
                     # ↓ into https://github.com/symplify/easy-coding-standard repository
                     split-repository-organization: 'symplify'
                     split-repository-name: 'easy-coding-standard'
+
+                    # ↓ the user signed under the split commit
+                    user-name: "kaizen-ci"
+                    user-email: "info@kaizen-ci.org"
 ```
 
 The section `with:` is where you configure the output.
@@ -61,7 +71,7 @@ The section `with:` is where you configure the output.
 
 ## How to Split with Tags?
 
-The splitting itself is kind-off useless if you can't split tags too, right?
+What is splitting good for without tags, right?
 
 We need a tag, so we ask for it [WyriHaximus/github-action-get-previous-tag](https://github.com/WyriHaximus/github-action-get-previous-tag):
 
@@ -101,13 +111,17 @@ We need a tag, so we ask for it [WyriHaximus/github-action-get-previous-tag](htt
                     split-repository-name: 'easy-coding-standard'
 
 +                   tag: ${{ steps.previous_tag.outputs.tag }}
+
+                    # ↓ the user signed under the split commit
+                    user-name: "kaizen-ci"
+                    user-email: "info@kaizen-ci.org"
 ```
 
 ## How to Split Multiple Packages?
 
 But wait, that's just one package. How can we do it for all 15 of them? Do we need 15 workflows files like this?
 
-No, GitHub Actions are ready for this - just add `strategy` section:
+No, GitHub Actions are ready for this - add `strategy` section:
 
 ```diff
  ...
@@ -129,15 +143,15 @@ And update `with:` section with dynamic content:
 ```diff
                 with:
 -                   package-directory: 'packages/easy-coding-standard'
--+                   package-directory: 'packages/${{ matrix.package }}'
++                   package-directory: 'packages/${{ matrix.package }}'
                     split-repository-organization: 'symplify'
 -                   split-repository-name: 'easy-coding-standard'
 +                   split-repository-name: '${{ matrix.package }}'
 ```
 
-**This is huge performance improvement**, just like parallel run.
+**This is a vast performance improvement**, just like a parallel run.
 
-Now GitHub Actions will run standalone build for each package provided.
+Now GitHub Actions will run a standalone build for each package provided.
 
 
 That's it!
@@ -148,7 +162,9 @@ That's it!
 
 The `split` command [was dropped in Symplify 9](https://github.com/symplify/symplify/pull/2490/files#diff-f4265307118be2f5d2389968d183656ebf8a0e8a7e711ed42101bd1bb179034f). Do you use it?
 
-We prepared a 3 step switch for you:
+<br>
+
+We've prepared a 3 step switch for you:
 
 1. Remove `directories_to_repositories` parameter `from monorepo-builder.(yaml|php)`:
 
@@ -170,7 +186,7 @@ We prepared a 3 step switch for you:
 vendor/bin/monorepo-builder split
 ```
 
-3. Add GitHub Action with list of your packages in a `matrix`
+3. Add GitHub Action with a list of your packages in a `matrix`
 
 <br>
 

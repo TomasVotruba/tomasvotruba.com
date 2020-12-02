@@ -382,7 +382,7 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 }
 
 /* default post setting */
-#blog .firstPost, #post h1 {
+#blog .firstPost {
     font-size: 3.3em;
     font-weight: 300;
     margin-top: 1em;

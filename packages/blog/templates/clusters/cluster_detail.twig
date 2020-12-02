@@ -5,7 +5,7 @@
         <h1 class="mt-5">
             {{ cluster.title }}
             <br>
-            <span class="subtext mb-0">(cluster)</span>
+            <span class="subtext mb-0">(cluster of {{ cluster.postCount }} parts)</span>
         </h1>
 
         <div id="cluster">
@@ -18,7 +18,7 @@
 
         <br>
 
-        {% include "_snippets/post/post_list.twig" with { posts: cluster.posts } %}
+        {% include "_snippets/post/post_list.twig" with { posts: cluster.posts, counter: true } %}
     </div>
 
     <br>
