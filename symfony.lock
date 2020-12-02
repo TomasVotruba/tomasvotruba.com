@@ -494,6 +494,9 @@
     "symplify/console-color-diff": {
         "version": "v7.3.13"
     },
+    "symplify/console-package-builder": {
+        "version": "9.0.0-beta9"
+    },
     "symplify/easy-coding-standard": {
         "version": "v7.2.4"
     },
