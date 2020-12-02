@@ -11,18 +11,11 @@
 
             {% if post.updatedAt is not null %}
                 {{ post.getDateTime|date('M, Y') }}
-            {% else %}
-                {{ post.getDateTime|date('D, M j, Y') }}
-            {% endif %}
-
-            {% if post.getDateTime|date('Y') == "now"|date("Y") %}
+            {% elseif post.getDateTime|date('Y') == "now"|date("Y") %}
+                {# this year #}
                 {{ post.getDateTime|date('D, M j') }}
             {% else %}
-                {% if post.updatedAt is not null %}
-                    {{ post.getDateTime|date('M, Y') }}
-                {% else %}
-                    {{ post.getDateTime|date('D, M j, Y') }}
-                {% endif %}
+                {{ post.getDateTime|date('D, M j, Y') }}
             {% endif %}
 
             {% if post.updatedAt is defined %}</strike>{% endif %}
