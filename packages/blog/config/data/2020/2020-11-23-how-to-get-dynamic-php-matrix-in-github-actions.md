@@ -22,3 +22,10 @@ https://github.com/spatie/packagist-api/pull/19/commits/bf441dda3d0ca8bcec81f808
 
 * PHP and Monorepo Package Split
 * @todo add php version to symplify/easy-ci package
+
+
+open or closed php version?
+
+why?
+
+https://www.youtube.com/watch?v=c3bpTBjhK2Y&feature=emb_logo&ab_channel=JetBrainsTV
