@@ -11,25 +11,20 @@ use TomasVotruba\Blog\Repository\ClusterRepository;
 
 final class ClusterController extends AbstractController
 {
-    private ClusterRepository $clusterRepository;
-
-    public function __construct(ClusterRepository $clusterRepository)
+    public function __construct(private ClusterRepository $clusterRepository)
     {
-        $this->clusterRepository = $clusterRepository;
     }
 
-    /**
-     * @Route(path="/cluster/{slug}", name="cluster_detail", requirements={"slug"="\d+\/\d+.+"})
-     */
+    #[Route('/cluster/{slug}', name: 'cluster_detail', requirements: [
+        'slug' => '[\w\-]+',
+    ])]
     public function __invoke(string $slug): Response
     {
-        dump($slug);
-        die;
-//        $post = $this->postRepository->getBySlug($slug);
-//
-//        return $this->render('blog/post.twig', [
-//            'post' => $post,
-//            'title' => $post->getTitle(),
-//        ]);
+        $cluster = $this->clusterRepository->getBySlug($slug);
+
+        return $this->render('clusters/cluster_detail.twig', [
+            'cluster' => $cluster,
+            'title' => $cluster->getTitle(),
+        ]);
     }
 }

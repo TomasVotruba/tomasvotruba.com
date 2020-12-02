@@ -4,25 +4,21 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\ValueObject;
 
+use Nette\Utils\Strings;
+
 final class Cluster
 {
-    private string $title;
+    private string $slug;
 
-    private string $description;
-
-    /**
-     * @var Post[]
-     */
-    private array $posts;
-
-    /**
-     * @param Post[] $posts
-     */
-    public function __construct(string $title, string $description, array $posts)
-    {
-        $this->title = $title;
-        $this->posts = $posts;
-        $this->description = $description;
+    public function __construct(
+        private string $title,
+        private string $description,
+        /**
+         * @var Post[]
+         */
+        private array $posts = []
+    ) {
+        $this->slug = Strings::webalize($title);
     }
 
     public function getTitle(): string
@@ -41,5 +37,10 @@ final class Cluster
     public function getPosts(): array
     {
         return $this->posts;
+    }
+
+    public function getSlug(): string
+    {
+        return $this->slug;
     }
 }

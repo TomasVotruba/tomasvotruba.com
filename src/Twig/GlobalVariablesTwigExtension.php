@@ -15,8 +15,7 @@ final class GlobalVariablesTwigExtension extends AbstractExtension implements Gl
     public function __construct(
         private ParameterProvider $parameterProvider,
         private ClusterRepository $clusterRepository,
-    )
-    {
+    ) {
     }
 
     /**

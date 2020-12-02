@@ -14,7 +14,7 @@
                 <li class="{% if is_current_route('php_framework_trends') %}active{% endif %}">
                     <a href="{{ path('php_framework_trends') }}">Trends</a>
                 </li>
-                <li class="{% if is_current_route('clusters') %}active{% endif %}">
+                <li class="{% if is_current_routes(['clusters', 'cluster_detail']) %}active{% endif %}">
                     <a href="{{ path('clusters') }}">Clusters</a>
                 </li>
                 <li class="{% if is_current_route('projects') %}active{% endif %}">

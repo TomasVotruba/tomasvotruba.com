@@ -96,7 +96,8 @@ final class PostRepository
             return $post;
         }
 
-        throw new ShouldNotHappenException();
+        $message = sprintf('Post with id "%d" was not found', $id);
+        throw new ShouldNotHappenException($message);
     }
 
     public function getBySlug(string $slug): Post

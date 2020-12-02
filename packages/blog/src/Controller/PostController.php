@@ -21,7 +21,7 @@ final class PostController extends AbstractController
     public function __invoke(string $slug): Response
     {
         $post = $this->postRepository->getBySlug($slug);
-        return $this->render('blog/post.twig', [
+        return $this->render('blog/post_detail.twig', [
             'post' => $post,
             'title' => $post->getTitle(),
         ]);
