@@ -7,7 +7,6 @@ perex: |
     Luckily, is easy to start using it and very difficult to
 tweet: "New Post on My Blog: Build Your First #Symfony Console Application with Dependency Injection Under 4 Files #cli #php"
 tweet_image: "/assets/images/posts/2018/console-di/thumbnail.png"
-
 ---
 
 ## Symfony Evolution
