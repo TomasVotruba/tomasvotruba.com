@@ -373,7 +373,7 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     float: right;
 }
 
-#post {
+#post, #cluster {
     font-size: 1.3rem;
     /* inspiration https://christoph-rumpel.com/2020/8/refactoring-php */
     font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
@@ -382,7 +382,7 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 }
 
 /* default post setting */
-#blog .firstPost, #post h1 {
+#blog .firstPost {
     font-size: 3.3em;
     font-weight: 300;
     margin-top: 1em;
@@ -398,12 +398,21 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
     font-size: 1.6em;
 }
 
-#post h1 {
-    font-size: 3em;
+h1 {
+    font-size: 3.2rem;
     font-weight: 300;
-    /*margin-top: 1em;*/
-    /*margin-bottom: 1em;*/
 }
+
+h1 small {
+    font-size: 1.6rem;
+    color: #666;
+}
+
+h1 .subtext {
+    font-size: .6em;
+    color: #666;
+}
+
 
 /* own util classe */
 .mmt-3 {
@@ -735,6 +744,7 @@ a.btn {
 
 .text-bigger {
     font-size: 1.3em;
+    line-height: 1.5em;
 }
 
 .btn-wrappable {
@@ -774,5 +784,6 @@ a.btn {
 }
 
 .text-smaller {
-    font-size: 0.9em;
+    font-weight: normal;
+    font-size: 0.8em;
 }

@@ -1,0 +1,25 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <h1 class="mt-5">
+            {{ cluster.title }}
+            <br>
+            <span class="subtext mb-0">(cluster of {{ cluster.postCount }} parts)</span>
+        </h1>
+
+        <div id="cluster">
+            <div class="card card-bigger mb-5">
+                <div class="card-body pb-2">
+                    {{ cluster.description|markdown|raw }}
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        {% include "_snippets/post/post_list.twig" with { posts: cluster.posts, counter: true } %}
+    </div>
+
+    <br>
+{% endblock %}

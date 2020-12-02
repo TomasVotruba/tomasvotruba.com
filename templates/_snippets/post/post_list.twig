@@ -1,6 +1,9 @@
 <ul class="list-unstyled line-separated post-metadata-line">
     {% for post in posts %}
         <li class="col-md-12">
+            {% if counter is defined %}
+                <span class="text-bigger text-muted">{{ loop.index }}.</span>
+            {% endif %}
             <a href="{{ path('post_detail', {'slug': post.slug}) }}" class="post-list-title">{{ post.title|raw }}</a>
             {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
         </li>

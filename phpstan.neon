@@ -155,3 +155,9 @@ parameters:
             message: '#Array with keys is not allowed\. Use value object to pass data instead#'
             paths:
                 - packages/blog/src/Controller/PostController.php
+
+        -
+            message: '#Do not use factory/method call in constructor\. Put factory in config and get service with dependency injection#'
+            paths:
+                # data provider
+                -  packages/blog/src/Repository/ClusterRepository.php

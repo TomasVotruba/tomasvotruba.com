@@ -9,10 +9,20 @@
         <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
             {% if post.updatedAt is not null %}<strike>{% endif %}
 
+            {% if post.updatedAt is not null %}
+                {{ post.getDateTime|date('M, Y') }}
+            {% else %}
+                {{ post.getDateTime|date('D, M j, Y') }}
+            {% endif %}
+
             {% if post.getDateTime|date('Y') == "now"|date("Y") %}
                 {{ post.getDateTime|date('D, M j') }}
             {% else %}
-                {{ post.getDateTime|date('D, M j, Y') }}
+                {% if post.updatedAt is not null %}
+                    {{ post.getDateTime|date('M, Y') }}
+                {% else %}
+                    {{ post.getDateTime|date('D, M j, Y') }}
+                {% endif %}
             {% endif %}
 
             {% if post.updatedAt is defined %}</strike>{% endif %}

@@ -1,0 +1,37 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <div class="container" id="clusters">
+        <h1>{{ title }}</h1>
+
+        <div class="subline text-center">
+            Do you want to master one of topics I write about?
+            <br>
+            Pick one, <strong>start slowly</strong> and <strong>go in-depth</strong> when you're ready!
+        </div>
+
+        <br>
+        <br>
+
+        {# @todo add pictures, even random ones - or categorizer #}
+        {% for cluster in clusters %}
+            {# @var cluster \TomasVotruba\Blog\ValueObject\Cluster #}
+            <div class="cluster mb-5">
+                <h2>
+                    <a href="{{ path('cluster_detail', {'slug': cluster.slug}) }}">
+                        {{ cluster.title }}
+                    </a>
+                    <small class="text-muted">
+                        ({{ cluster.postCount }} parts)
+                    </small>
+                </h2>
+
+                <p>{{ cluster.description|markdown|raw }}</p>
+
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+
+    <br>
+{% endblock %}
