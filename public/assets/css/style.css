@@ -374,7 +374,7 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 }
 
 #post, #cluster {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     /* inspiration https://christoph-rumpel.com/2020/8/refactoring-php */
     font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 
@@ -466,20 +466,6 @@ ul.line-separated > li:not(:last-child) {
     width: 28px;
     margin-right: .5em;
     margin-top: -.2em;
-}
-
-.thank_you_person .avatar {
-    height: 3em;
-    width: 3em;
-    margin-right: .8em;
-    margin-top: .4em;
-}
-
-.thank_you_person .name {
-    margin-top: -.4em;
-    font-weight: bold;
-    font-size: 1.3em;
-    line-height: 1.5em;
 }
 
 #top-menu-search form {

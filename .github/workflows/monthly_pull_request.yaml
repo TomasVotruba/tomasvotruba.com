@@ -20,12 +20,6 @@ jobs:
                         # to prevent mutual override
                         branch: re-generated-framework-stats
 
-                    -
-                        name: Re-Generate Thank You Contributors
-                        run: bin/console thank-contributors --ansi
-                        # to prevent mutual override
-                        branch: re-generated-thank-you
-
         name: ${{ matrix.actions.name }}
 
         steps:

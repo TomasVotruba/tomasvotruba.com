@@ -42,7 +42,6 @@ parameters:
         - packages/blog/config/config.php
         - packages/cleaning-lady/config/config.php
         - packages/framework-stats/config/config.php
-        - packages/github-contributor-thanker/config/services.php
         - packages/projects/config/config.php
         - config/_data
         - config/config.php
@@ -161,3 +160,6 @@ parameters:
             paths:
                 # data provider
                 -  packages/blog/src/Repository/ClusterRepository.php
+
+        # bug on Symplify rule
+        - '#Only EntityManager\* type as dependency is allowed#'
