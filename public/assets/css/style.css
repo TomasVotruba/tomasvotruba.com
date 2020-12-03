@@ -374,7 +374,7 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 }
 
 #post, #cluster {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     /* inspiration https://christoph-rumpel.com/2020/8/refactoring-php */
     font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 
