@@ -468,20 +468,6 @@ ul.line-separated > li:not(:last-child) {
     margin-top: -.2em;
 }
 
-.thank_you_person .avatar {
-    height: 3em;
-    width: 3em;
-    margin-right: .8em;
-    margin-top: .4em;
-}
-
-.thank_you_person .name {
-    margin-top: -.4em;
-    font-weight: bold;
-    font-size: 1.3em;
-    line-height: 1.5em;
-}
-
 #top-menu-search form {
     width: 100%;
 }
