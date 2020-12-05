@@ -5,6 +5,11 @@ on:
         branches:
             - master
 
+    # tweet a day, in case of pipe-line of posts
+    schedule:
+        # https://crontab.guru/once-a-day
+        -   cron: "0 0 * * *"
+
 jobs:
     deploy:
         runs-on: ubuntu-latest
