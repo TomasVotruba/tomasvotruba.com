@@ -61,7 +61,7 @@ The above could be written in PHP like:
 
 ```php
 $matrix = [
-    'package' => [
+    'packages' => [
         'coding-standard',
         'phpstan-rules',
     ]
