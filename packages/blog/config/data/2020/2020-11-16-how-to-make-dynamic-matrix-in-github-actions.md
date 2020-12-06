@@ -99,11 +99,11 @@ GitHub Actions are ready to make our life easier. Since April 2020, there is [a 
 It converts a json to an array, like this:
 
 ```diff
--           matrix:
+            matrix:
 -                 package:
 -                   - coding-standard
 -                   - phpstan-rules
-+           matrix: ${{ fromJson({"packages": ["coding-standard", "phpstan-rules"]}) }}
++                 package: ${{ fromJson(["coding-standard", "phpstan-rules"]) }}
 ```
 
 You are probably thinking, *"Well, that's just terrible, Tomas"*. Thank you, and you're right.
@@ -114,27 +114,24 @@ You are probably thinking, *"Well, that's just terrible, Tomas"*. Thank you, and
 The [Symplify\MonorepoBuilder](https://github.com/symplify/monorepo-builder) is using this trick to **get all the packages from `/packages` directory in handy json format**:
 
 ```bash
-vendor/bin/monorepo-builder packages-json --names
+vendor/bin/monorepo-builder packages-json
 ```
 
 ↓
 
 ```json
-{
-    "packages": [
-        "coding-standard",
-        "phpstan-rules"
-    ]
-}
+[
+    "coding-standard",
+    "phpstan-rules"
+]
 ```
 
 This version is not final, but very roughly the command above would be written like this:
 
 ```diff
--           matrix: ${{ fromJson({"packages": ["coding-standard", "phpstan-rules"]}) }}
-+           matrix: ${{ fromJson(vendor/bin/monorepo-builder packages-json --names) }}
+-           matrix: ${{ fromJson(["coding-standard", "phpstan-rules"]) }}
++           matrix: ${{ fromJson(vendor/bin/monorepo-builder packages-json) }}
 ```
-
 
 ## From Json to Fully Dynamic Matrix
 
@@ -150,8 +147,7 @@ We have to do the same here:
 - In the 1st step, we create the JSON with all packages
 - In the 2nd step, we use this JSON as input for the matrix, **that will create a standalone run for each package**
 
-**How does the code look like?**
-
+### How does the Workflow look Like?
 
 ```yaml
 jobs:
@@ -184,7 +180,8 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             # ↓ the real magic happens here - create dynamic matrix from the json
-            matrix: ${{fromJson(needs.provide_packages_json.outputs.matrix)}}
+            matrix:
+                package: ${{ fromJson(needs.provide_packages_json.outputs.matrix) }}
 
         steps:
             # ...
