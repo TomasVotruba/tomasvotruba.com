@@ -4,28 +4,23 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\Repository;
 
-use Symfony\Component\Finder\Finder;
 use Symplify\SmartFileSystem\Finder\FinderSanitizer;
-use Symplify\SmartFileSystem\SmartFileInfo;
+use TomasVotruba\Blog\DataProvider\PostDataProvider;
 use TomasVotruba\Blog\ValueObject\Post;
-use TomasVotruba\Blog\ValueObjectFactory\PostFactory;
 use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
 
 final class PostRepository
 {
     /**
-     * @var string
-     */
-    private const POST_DIRECTORY = __DIR__ . '/../../config/data';
-
-    /**
      * @var Post[]
      */
     private array $posts = [];
 
-    public function __construct(private FinderSanitizer $finderSanitizer, private PostFactory $postFactory)
-    {
-        $this->posts = $this->createPosts();
+    public function __construct(
+        private FinderSanitizer $finderSanitizer,
+        private PostDataProvider $postDataProvider
+    ) {
+        $this->posts = $postDataProvider->provide();
     }
 
     /**
@@ -41,17 +36,12 @@ final class PostRepository
      */
     public function fetchForRss(): array
     {
-        $posts = [];
-        foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
-            $post = $this->postFactory->createFromFileInfo($smartFileInfo);
-            $posts[$post->getId()] = $post;
-        }
+        $posts = $this->posts;
 
         $posts = $this->filterOutNonEnglish($posts);
         $posts = $this->filterOutDeprecated($posts);
-        $posts = $this->filterOutFuture($posts);
 
-        return $this->sortByDateTime($posts);
+        return $this->filterOutFuture($posts);
     }
 
     /**
@@ -59,17 +49,11 @@ final class PostRepository
      */
     public function fetchAllEnglishNonDeprecated(): array
     {
-        $posts = [];
-
-        foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
-            $post = $this->postFactory->createFromFileInfo($smartFileInfo);
-            $posts[$post->getId()] = $post;
-        }
+        $posts = $this->posts;
 
         $posts = $this->filterOutNonEnglish($posts);
-        $posts = $this->filterOutDeprecated($posts);
 
-        return $this->sortByDateTime($posts);
+        return $this->filterOutDeprecated($posts);
     }
 
     /**
@@ -118,32 +102,6 @@ final class PostRepository
     }
 
     /**
-     * @return Post[]
-     */
-    private function createPosts(): array
-    {
-        $posts = [];
-        foreach ($this->findPostMarkdownFileInfos() as $smartFileInfo) {
-            $posts[] = $this->postFactory->createFromFileInfo($smartFileInfo);
-        }
-
-        return $this->sortByDateTime($posts);
-    }
-
-    /**
-     * @return SmartFileInfo[]
-     */
-    private function findPostMarkdownFileInfos(): array
-    {
-        $finder = new Finder();
-        $finder->files()
-            ->in(self:: POST_DIRECTORY)
-            ->name('*.md');
-
-        return $this->finderSanitizer->sanitize($finder);
-    }
-
-    /**
      * @param Post[] $posts
      * @return Post[]
      */
@@ -168,19 +126,5 @@ final class PostRepository
     private function filterOutFuture(array $posts): array
     {
         return array_filter($posts, fn (Post $post) => ! $post->isFuture());
-    }
-
-    /**
-     * @param Post[] $posts
-     * @return Post[]
-     */
-    private function sortByDateTime(array $posts): array
-    {
-        uasort(
-            $posts,
-            fn (Post $firstPost, Post $secondPost) => $secondPost->getDateTime() <=> $firstPost->getDateTime()
-        );
-
-        return $posts;
     }
 }
