@@ -163,3 +163,4 @@ parameters:
 
         # bug on Symplify rule
         - '#Only EntityManager\* type as dependency is allowed#'
+        - '#Do not use factory/method call in constructor\. Put factory in config and get service with dependency injection#'
