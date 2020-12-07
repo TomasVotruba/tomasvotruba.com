@@ -6,27 +6,27 @@ perex: |
     Instead of 3 workflows with copy-paste steps, you can define **just one with a matrix for PHP versions**.
     <br><br>
     But PHP is released every year. The version constraints are already defined in `composer.json`.
-    Hm, how could we use this knowledge to provide list of PHP version for a dynamic matrix?
+    Hmm, how could we use this knowledge to provide a list of PHP version for a dynamic matrix?
 
 tweet: "New Post on #php 🐘 blog: How to make a Dynamic PHP Version Matrix in GitHub Actions"
 tweet_image: "/assets/images/posts/2020/php-json-useless.png"
 ---
 
-Do you know [memory locks](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/)? An "if this then that" code smell. E.g. you have to always put keys into your left pocket, after you lock the door of your office.
+Do you know [memory locks](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/)? An "if this then that" code smell. E.g., you always have to put keys into your left pocket, after you lock your office door.
 
-If we have tests, we want **them run on all PHP versions** we support. Just to be sure there are no PHP 8 features running on PHP 7.4.
+If we have tests, we want **them run on all PHP versions** we support. To be sure, no PHP 8 features are running on PHP 7.4.
 
 <br>
 
 **When** new PHP version [once a year](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/), **then** we have to:
 
 - update `composer.json`
-    <img src="/assets/images/posts/2020/php-json-composer.png" class="img-thumbnail">
+  <img src="/assets/images/posts/2020/php-json-composer.png" class="img-thumbnail">
 
 - update test workflow
-    <img src="/assets/images/posts/2020/php-json-useless.png" class="img-thumbnail">
+  <img src="/assets/images/posts/2020/php-json-useless.png" class="img-thumbnail">
 
-**This is completely useless operation** = double the work and double the maintenance. No gain, except fear of control.
+**This is utterly useless operation** = double the work and double the maintenance—no gain, except the fear of control.
 
 ## Memory Lock is Expensive
 
@@ -34,7 +34,7 @@ Could you guess how much time it took to send both commits? 2 minutes? 10 minute
 
 <img src="/assets/images/posts/2020/php-json-time.png" class="img-thumbnail">
 
-Almost **2 hours**. I had to send a new commit based on feedback in code-review. That's hidden cost of memory lock code smell.
+Almost **2 hours**. I had to send a new commit based on feedback in code-review. That's a hidden cost of memory lock code smell.
 Hidden cost in attention, work and [slow feedback loop](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/).
 
 ## Trust `composer.json`
@@ -49,14 +49,14 @@ What PHP version should be tested? The information is already in `composer.json`
 }
 ```
 
-You're right, it's this list:
+You're right. It's this list:
 
 - 7.2
 - 7.3
 - 7.4
 - 8.0
 
-So **why should we duplicate** this information in GitHub Actions workflow config?
+So **why should we duplicate** this information in the GitHub Actions workflow config?
 
 We can do better with [dynamic matrix](/blog/2020/11/16/how-to-make-dynamic-matrix-in-github-actions/).
 
@@ -92,7 +92,7 @@ jobs:
 
             -   uses: shivammathur/setup-php@v2
                 with:
-                    # this is the only place we have to use PHP, to avoid lock to bash scripting
+                    # this is the only place we have to use PHP to avoid the lock to bash scripting
                     php-version: 8.0
 
             -   run: composer install --no-progress --ansi
