@@ -6,9 +6,7 @@ namespace TomasVotruba\SymfonyStaticDump\ControllerWithDataProvider;
 
 use Symplify\SymfonyStaticDumper\Contract\ControllerWithDataProviderInterface;
 use TomasVotruba\Blog\Controller\ClusterController;
-use TomasVotruba\Blog\Controller\PostController;
 use TomasVotruba\Blog\Repository\ClusterRepository;
-use TomasVotruba\Blog\Repository\PostRepository;
 
 final class ClusterControllerWithDataProvider implements ControllerWithDataProviderInterface
 {
