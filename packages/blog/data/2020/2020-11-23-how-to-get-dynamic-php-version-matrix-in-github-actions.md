@@ -9,6 +9,7 @@ perex: |
     Hm, how could we use this knowledge to provide list of PHP version for a dynamic matrix?
 
 tweet: "New Post on #php 🐘 blog: How to make a Dynamic PHP Version Matrix in GitHub Actions"
+tweet_image: "/assets/images/posts/2020/php-json-useless.png"
 ---
 
 Do you know [memory locks](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/)? An "if this then that" code smell. E.g. you have to always put keys into your left pocket, after you lock the door of your office.
@@ -70,7 +71,7 @@ vendor/bin/easy-ci php-json
 # "[7.2, 7.3, 7.4, 8.0]"
 ```
 
-Now we have a problem, the command to provide JSON dynamic data and GitHub Actions. Let's put them together.
+Now we have a problem, the command to provide JSON data and GitHub Actions. Let's put them together.
 
 ## Workflow with Dynamic PHP Versions
 
@@ -79,7 +80,7 @@ There are **2 steps** in our unit tests workflow:
 - first provides the list of PHP version
 - the other creates a dynamic job run with each PHP version
 
-The first step:
+### The First Step
 
 ```yaml
 jobs:
@@ -109,7 +110,7 @@ jobs:
             matrix: ${{ steps.output_data.outputs.matrix }}
 ```
 
-The second step:
+### The Second Step
 
 ```yaml
     # continue from above
@@ -131,7 +132,9 @@ The second step:
 
 <br>
 
-Here is full [`.github/workflows/unit_tests.yaml`](https://github.com/symplify/symplify/blob/aeb8e03dfb2948474f5a7d267ab05541ee00d90b/.github/workflows/unit_tests.yaml) to explore.
+This workflow is not just a theory. **It's tested for last week on Symplify repository** and it works :).
+
+Here is full [`.github/workflows/unit_tests.yaml`](https://github.com/symplify/symplify/blob/aeb8e03dfb2948474f5a7d267ab05541ee00d90b/.github/workflows/unit_tests.yaml) worfklow to explore.
 
 <br>
 
