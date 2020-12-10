@@ -34,14 +34,10 @@
     },
     "require-dev": {
         "dg/bypass-finals": "^1.3",
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "symplify/config-transformer": "dev-master",
-        "symplify/latte-to-twig-converter": "dev-master",
-        "symplify/static-detector": "dev-master",
+        "friendsofphp/php-cs-fixer": "^2.17",
         "nette/neon": "^3.1",
         "nette/security": "^3.0",
         "phpstan/phpstan": "^0.12.58",
-        "symplify/symfony-php-config": "dev-master",
         "phpunit/phpunit": "^9.4",
         "rector/rector": "dev-master",
         "spatie/http-status-check": "^3.3",
@@ -50,12 +46,17 @@
         "symfony/stopwatch": "^5.2",
         "symfony/var-dumper": "^5.2",
         "symfony/yaml": "^5.2",
-        "symplify/phpstan-rules": "dev-master",
+        "symplify/coding-standard": "dev-master",
+        "symplify/config-transformer": "dev-master",
         "symplify/console-color-diff": "dev-master",
         "symplify/easy-coding-standard": "dev-master",
-        "symplify/coding-standard": "dev-master",
+        "symplify/latte-to-twig-converter": "dev-master",
+        "symplify/markdown-diff": "^9.0",
         "symplify/phpstan-extensions": "dev-master",
-        "symplify/set-config-resolver": "dev-master"
+        "symplify/phpstan-rules": "dev-master",
+        "symplify/set-config-resolver": "dev-master",
+        "symplify/static-detector": "dev-master",
+        "symplify/symfony-php-config": "dev-master"
     },
     "autoload": {
         "psr-4": {
