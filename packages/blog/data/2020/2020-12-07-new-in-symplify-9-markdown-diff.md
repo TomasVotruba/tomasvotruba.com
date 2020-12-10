@@ -78,12 +78,12 @@ Pretty simple, right?
 
 ## Smarter than Normal
 
-Compared to [sebastian/diff](https://packagist.org/packages/sebastian/diff) it builds on, this package does extra cleaning job:
+Compared to [sebastian/diff](https://packagist.org/packages/sebastian/diff) it builds on, this package does an extra cleaning job:
 
 - removes line numbers
 - removes `---/+++ @@` spam
 - removes trailing white space
-- most important one: **provides full diff, so you'll get full contents of compared filse**
+- most important one: **provides full diff, so you'll get full contents of compared files**
 
 That's all for today.
 
