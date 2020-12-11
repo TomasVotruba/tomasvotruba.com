@@ -2,9 +2,11 @@
 id: 292
 title: "New in Symplify 9: Skipper - Skipping Files and Rules made Simple"
 perex: |
-    Symplify 9 brings **another component to easy life for package developers**. In Rector and ECS, you can ignore specific absolute paths or dynamic with `fnmatch()`. You can also ignore specific Rector, Fixer, and Sniff classes.
+    Symplify 9 brings another component **to ease the life for package developers**. In Rector and ECS, you can ignore specific absolute paths or dynamic paths by `fnmatch()`. You can also ignore specific Rector, Fixer, and Sniff classes.
     <br><br>
-    Both packages used almost the same syntax, yet there were differences based on which of them got fixed first. New Skipper component prevents this and allows **you to use standardized syntax in single `skip` parameters**.
+    Both packages use almost the same syntax, yet there are minor differences based and syntax tweaks.
+    <br><br>
+    New Skipper component prevents this and allows **you to use standardized syntax in a single `skip` parameters**.
 
 tweet: "New Post on #php 🐘 blog: New in #Symplify 9: Skipper -
 Skipping Files and Rules made Simple"
