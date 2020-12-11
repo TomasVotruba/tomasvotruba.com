@@ -8,7 +8,9 @@ perex: |
     During summer 2020, our Rector team grew from 1 member to 4. To keep onboarding smooth, we started to use PHPStan **to help with code-reviews in Rector**. We got obsessed with [moving human code-reviews to CI](/blog/2019/11/18/how-to-delegate-code-reviews-to-ci/).
     <br><br>
     Was it worth it? Hell yea!
+
 tweet: "New Post on #php 🐘 blog: New in #Symplify 9: PHPStan Rules - More than 110"
+tweet_image: "/assets/images/posts/2020/phpstan-rules-sets.png"
 ---
 
 That's how we grew from 20 rules to 110 PHPStan Rules in ~3 months. I'd say we are barely **scratching the surface of what CI can handle** for us in code-reviews, but 110 rules is a solid base to start from.
