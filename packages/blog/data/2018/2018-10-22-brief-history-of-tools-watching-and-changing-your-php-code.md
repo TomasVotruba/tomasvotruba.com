@@ -6,7 +6,10 @@ perex:
     <br>
     <br>
     Which tool was first? How they **build on shoulders of each other**?
-tweet: "New Post on my Blog: Brief History of Tools Watching and Changing PHP Code #phpcsfixer #phpcodesniffer @phpstan #psalm #phan @sensiolabsde #symfony #rector @cakephp"
+tweet: "New Post on my Blog: Brief History of Tools Watching and Changing PHP Code #phpcsfixer #phpcodesniffer @phpstan #psalm #symfony #rector"
+
+updated_since: "December 2020"
+updated_message: "Removed deprecated and unused tools, to keep focus on relevant ones."
 ---
 
 ## 1. Coding Standard Tools
@@ -90,13 +93,6 @@ $object->missing(); // here we know that "missing" does not exist in "SomeObject
 
 If you don't use any static analysis tool, give PHPStan a try. I've made [minimalist intro that will help you with first steps ](/blog/2017/01/28/why-I-switched-scrutinizer-for-phpstan-and-you-should-too/). It's worth investing even day or two to set it up because **these tools will join toolkit of everyday use**, like Composer or PHPUnit.
 
-### [Phan](https://github.com/phan/phan) by Rasmus Lerdorf
-
-<span class="badge badge-danger">AST</span>
-<span class="badge badge-info">
-    <a href="https://github.com/phan/phan/releases/tag/0.1">* 2015</a>
-</span>
-
 ### [vimeo/psalm](https://github.com/vimeo/psalm) by Matthew Brown
 
 <span class="badge badge-danger">AST</span>
@@ -110,20 +106,6 @@ Psalm is a very interesting tool that was born to fight Vimeo code complexity. I
 ## 3. Deprecation Detectors
 
 This group is widely used in the framework-agnostic PHP community.
-
-### [PHP 7 Compatibility Checker](https://github.com/sstalle/php7cc)
-
-<span class="badge badge-secondary">Deprecated</span>
-<span class="badge badge-danger">AST</span>
-
-This tool checked for compatibility with PHP 7.
-
-### [sensiolabs-de/deprecation-detector](https://github.com/sensiolabs-de/deprecation-detector)
-
-<span class="badge badge-secondary">Deprecated</span>
-<span class="badge badge-danger">AST</span>
-
-This package helped to look for Symfony 3 deprecations in your code.
 
 ### [PHPCompatibility/PHPCompatibility](https://github.com/PHPCompatibility/PHPCompatibility)
 
@@ -146,20 +128,6 @@ It's useful to know what places are wrong, but you still have to fix them all ma
 This tool was created in **2015** and it's revolutionary. Why? It wisely connects the token analysis of PHP CS Fixer with deprecations in Symfony 2 to 3. Imagine it like PHP CS Fixer + `sensiolabs-de/deprecation-detector` **working for you**.
 
 Isn't that amazing? **You just sit, run this tool and send invoices. Genius!** The features are limited due to Tokens, but still, I love this.
-
-### [cakephp/upgrade](https://github.com/cakephp/upgrade)
-
-<span class="badge badge-success">Modifies Code</span>
-
-It's completely natural, that frameworks that evolve fast need a tool that helps their users to migrate.
-CakePHP is jumping faster and faster in recent years, they made their own tool. It's based on regular expressions.
-
-### [silverstripe-upgrader](https://github.com/silverstripe/silverstripe-upgrader)
-
-<span class="badge badge-danger">AST</span>
-<span class="badge badge-success">Modifies Code</span>
-
-SilverStripe is a PHP CMS coming from New Zealand. Its logic is very similar to Rector and I like it. It's also quite small, so the code is easy to understand. Be sure to check it!
 
 ### [Rector](https://github.com/rectorphp/rector)
 
