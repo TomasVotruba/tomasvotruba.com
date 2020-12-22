@@ -113,7 +113,7 @@ final class TwitterPostApiWrapper
         /** @var DateTimeInterface $dateInterval */
         $dateInterval = $dateTime->diff(DateTime::from('now'));
 
-        return (int) $dateInterval->format('%a');
+        return (int) $dateInterval->format('%h');
     }
 
     /**

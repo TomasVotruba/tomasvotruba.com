@@ -13,7 +13,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
     $parameters->set(OptionAlias::TWITTER_NAME, '%env(TWEETER_NAME)%');
-    $parameters->set(OptionAlias::TWITTER_MINIMAL_GAP_IN_HOURS, 1);
+    $parameters->set(OptionAlias::TWITTER_MINIMAL_GAP_IN_HOURS, 12);
     $parameters->set(OptionAlias::TWITTER_MAXIMAL_DAYS_IN_PAST, 300);
     $parameters->set(OptionAlias::TWITTER_CONSUMER_KEY, '%env(TWITTER_CONSUMER_KEY)%');
     $parameters->set(OptionAlias::TWITTER_CONSUMER_SECRET, '%env(TWITTER_CONSUMER_SECRET)%');
