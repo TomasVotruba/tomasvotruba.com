@@ -108,12 +108,15 @@ final class TwitterPostApiWrapper
         $publishedTweetsRaw = $this->getPublishedTweetsRaw();
         $lastRawTweet = reset($publishedTweetsRaw);
 
-        $dateTime = DateTime::from($lastRawTweet['created_at']);
+        $lastTweetDateTime = DateTime::from($lastRawTweet['created_at']);
+        $nowDateTime = DateTime::from('now');
 
-        /** @var DateTimeInterface $dateInterval */
-        $dateInterval = $dateTime->diff(DateTime::from('now'));
+        $nowDateTimeInSeconds = strtotime((string) $nowDateTime);
+        $lastTweetDateTimeInSeconds = strtotime((string) $lastTweetDateTime);
 
-        return (int) $dateInterval->format('%h');
+        $diffInSeconds = $nowDateTimeInSeconds - $lastTweetDateTimeInSeconds;
+
+        return (int) ($diffInSeconds / 3600);
     }
 
     /**
