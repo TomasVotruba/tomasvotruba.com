@@ -103,7 +103,7 @@ final class TwitterPostApiWrapper
         ]);
     }
 
-    public function getDaysSinceLastTweet(): int
+    public function getHoursSinceLastTweet(): int
     {
         $publishedTweetsRaw = $this->getPublishedTweetsRaw();
         $lastRawTweet = reset($publishedTweetsRaw);
@@ -111,7 +111,7 @@ final class TwitterPostApiWrapper
         $dateTime = DateTime::from($lastRawTweet['created_at']);
 
         /** @var DateTimeInterface $dateInterval */
-        $dateInterval = $dateTime->diff(DateTime::from('today'));
+        $dateInterval = $dateTime->diff(DateTime::from('now'));
 
         return (int) $dateInterval->format('%a');
     }

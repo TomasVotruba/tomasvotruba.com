@@ -107,5 +107,5 @@ final class Option
      * @api
      * @var string
      */
-    public const TWITTER_MINIMAL_GAP_IN_DAYS = 'twitter_minimal_gap_in_days';
+    public const TWITTER_MINIMAL_GAP_IN_HOURS = 'twitter_minimal_gap_in_days';
 }

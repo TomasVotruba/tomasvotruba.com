@@ -20,7 +20,7 @@ use TomasVotruba\Website\ValueObject\Option;
 
 final class TweetCommand extends Command
 {
-    private int $twitterMinimalGapInDays;
+    private int $twitterMinimalGapInHours;
 
     public function __construct(
         ParameterProvider $parameterProvider,
@@ -29,8 +29,8 @@ final class TweetCommand extends Command
         private TwitterPostApiWrapper $twitterPostApiWrapper,
         private SymfonyStyle $symfonyStyle
     ) {
-        $this->twitterMinimalGapInDays = $parameterProvider->provideIntParameter(
-            Option::TWITTER_MINIMAL_GAP_IN_DAYS
+        $this->twitterMinimalGapInHours = $parameterProvider->provideIntParameter(
+            Option::TWITTER_MINIMAL_GAP_IN_HOURS
         );
 
         parent::__construct();
@@ -45,7 +45,7 @@ final class TweetCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $message = sprintf('There is %d days since last tweet', $this->twitterPostApiWrapper->getDaysSinceLastTweet());
+        $message = sprintf('There is %d hours since last tweet', $this->twitterPostApiWrapper->getHoursSinceLastTweet());
 
         $this->symfonyStyle->note($message);
 
@@ -83,19 +83,19 @@ final class TweetCommand extends Command
 
     private function isNewTweetAllowed(): bool
     {
-        $daysSinceLastTweet = $this->twitterPostApiWrapper->getDaysSinceLastTweet();
+        $daysSinceLastTweet = $this->twitterPostApiWrapper->getHoursSinceLastTweet();
 
-        return $daysSinceLastTweet >= $this->twitterMinimalGapInDays;
+        return $daysSinceLastTweet >= $this->twitterMinimalGapInHours;
     }
 
     private function reportTooSoonToTweet(): int
     {
-        $daysSinceLastTweet = $this->twitterPostApiWrapper->getDaysSinceLastTweet();
+        $daysSinceLastTweet = $this->twitterPostApiWrapper->getHoursSinceLastTweet();
 
         $toSoonMessage = sprintf(
-            'Only %d days passed since last tweet. Minimal gap is %d days, so no tweet until then.',
+            '%d hours since last tweet is lower than minimal gap of %d hours',
             $daysSinceLastTweet,
-            $this->twitterMinimalGapInDays
+            $this->twitterMinimalGapInHours
         );
         $this->symfonyStyle->warning($toSoonMessage);
 
