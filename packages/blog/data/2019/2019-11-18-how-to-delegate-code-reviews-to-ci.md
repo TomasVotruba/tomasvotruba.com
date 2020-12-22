@@ -83,7 +83,6 @@ I've prepared a demo with PHP code and a testing pipeline for all widely used CI
 - [GitHub Actions](#1-github-actions)
 - [GitHub + Travis CI](#2-github-travis-ci)
 - [Gitlab CI](#3-gitlab-ci)
-- [BitBucket](#4-bitbucket)
 
 <br>
 
