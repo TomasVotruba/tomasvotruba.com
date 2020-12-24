@@ -13,7 +13,7 @@ tweet: "New Post on #php 🐘 blog: New in #Symplify 9: Markdown Diff"
 
 But creating automated diff in Markdown is a pickle. We picked the pickle and turned it into a package - **[symplify/markdown-diff](https://github.com/symplify/markdown-diff) package**.
 
-The package does exactly what it says and is mostly used in [symplify/rule-doc-generator](/blog/2020/11/30/new-in-symplify-9-documentation-generator-for-php-cs-fixer-code-sniffer-phpstan-rector-rules. I'd say this is the smallest package on Symplify.
+The package does exactly what it says and is mostly used in [symplify/rule-doc-generator](/blog/2020/11/30/new-in-symplify-9-documentation-generator-for-php-cs-fixer-code-sniffer-phpstan-rector-rules). I'd say this is the smallest package on Symplify.
 
 
 ## 3 step to  Markdown Diff
