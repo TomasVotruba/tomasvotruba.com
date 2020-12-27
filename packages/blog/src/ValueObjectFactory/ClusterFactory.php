@@ -10,11 +10,8 @@ use Webmozart\Assert\Assert;
 
 final class ClusterFactory
 {
-    private PostRepository $postRepository;
-
-    public function __construct(PostRepository $postRepository)
+    public function __construct(private PostRepository $postRepository)
     {
-        $this->postRepository = $postRepository;
     }
 
     public function create(string $name, string $description, array $postIds): Cluster

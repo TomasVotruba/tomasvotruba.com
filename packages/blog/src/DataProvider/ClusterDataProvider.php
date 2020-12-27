@@ -40,13 +40,13 @@ final class ClusterDataProvider
 
         $clusters[] = $this->clusterFactory->create(
                 'Collector Pattern, The Shortcut Hack to SOLID Code',
-                'Collector is the one pattern that will help your code exponentially. It\'s super easy to start using in every level of application. Stop learning 5 SOLID principles theory and start using it in your code today.',
+                "Collector is the one pattern that will help your code exponentially. It's super easy to start using in every level of application. Stop learning 5 SOLID principles theory and start using it in your code today.",
                 [114, 158, 36, 133]
             );
 
         $clusters[] = $this->clusterFactory->create(
                 'Monorepo: From Zero to Hero',
-                'What is monorepo? How can you use it to speed up your packages\' and projects\' development? How to run your own monorepo in 10 minutes?',
+                "What is monorepo? How can you use it to speed up your packages' and projects' development? How to run your own monorepo in 10 minutes?",
                 [287, 286, 283, 256, 223, 69, 25, 82, 124, 138, 143, 160, 161, 182]
             );
 
@@ -70,7 +70,7 @@ final class ClusterDataProvider
 
         $clusters[] = $this->clusterFactory->create(
                 'Master PHP CLI Apps with Symfony',
-                'Do you want to write CLI Apps in PHP like a boss but you never did that before? Or do you look for tips to improve your CLI project? This will help you write better and cleaner code no matter level you\'re on.',
+                "Do you want to write CLI Apps in PHP like a boss but you never did that before? Or do you look for tips to improve your CLI project? This will help you write better and cleaner code no matter level you're on.",
                 [128, 103, 109, 105, 129, 137]
             );
 

@@ -19,7 +19,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,
         SetList::NETTE_UTILS_CODE_QUALITY,
-        SetList::SOLID,
         SetList::NAMING,
         SetList::DOCTRINE_CODE_QUALITY,
     ]);

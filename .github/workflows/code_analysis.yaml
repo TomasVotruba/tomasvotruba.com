@@ -17,7 +17,7 @@ jobs:
                         run: 'composer phpstan --ansi'
                     -
                         name: 'Rector'
-                        run: 'composer rector --ansi'
+                        run: 'composer rector-ci --ansi'
                     -
                         name: 'Unit Tests'
                         run: 'vendor/bin/phpunit'
