@@ -53,7 +53,7 @@ composer.json
 ecs.php
 phpstan.neon
 phpunit.xml
-rector-ci.php
+rector.php
 ```
 
 Second repository: `lazy-company/drone-delivery`
@@ -67,7 +67,7 @@ composer.json
 ecs.php
 phpstan.neon
 phpunit.xml
-rector-ci.php
+rector.php
 ```
 
 ## 1. Create a Monorepo repository
@@ -89,7 +89,7 @@ Don't worry, no git harakiri. Just copy paste your other repositories to `/packa
         ecs.php
         phpstan.neon
         phpunit.xml
-        rector-ci.php
+        rector.php
     /drone-delivery
         /src
         /test
@@ -97,7 +97,7 @@ Don't worry, no git harakiri. Just copy paste your other repositories to `/packa
         ecs.php
         phpstan.neon
         phpunit.xml
-        rector-ci.php
+        rector.php
 ```
 
 Not bad, right?
@@ -295,7 +295,7 @@ Instead of many configs, paths, setups, and rules, there is only 1 source of Tru
 -        ecs.php
 -        phpstan.neon
          phpunit.xml
--        rector-ci.php
+-        rector.php
      /drone-delivery
          /src
          /test
@@ -303,10 +303,10 @@ Instead of many configs, paths, setups, and rules, there is only 1 source of Tru
 -        ecs.php
 -        phpstan.neon
          phpunit.xml
--        rector-ci.php
+-        rector.php
 +ecs.php
 +phpstan.neon
-+rector-ci.php
++rector.php
 ```
 
 This step is pretty easy... well, it depends.
@@ -341,7 +341,7 @@ Very similar to step 6, just with unit tests.
 -        phpunit.xml
  ecs.php
  phpstan.neon
- rector-ci.php
+ rector.php
 +phpunit.xml
 ```
 

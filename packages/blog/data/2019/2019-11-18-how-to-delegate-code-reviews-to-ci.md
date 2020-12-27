@@ -13,6 +13,7 @@ tweet_image: "/assets/images/posts/2019/rector-ci-code-review/result.png"
 updated_since: "December 2020"
 updated_message: |
     The Bitbucket was dropped, as unused services and the demo repository is not maintained.
+    The Travis was dropped, as it does not support open-source anymore and for private projects are better alternatives.
 ---
 
 I'm very grateful that Rector is getting traction lately. More and more PHP developers save dozens of hours by running simple CLI commands on their codebases.
@@ -57,7 +58,7 @@ In the last [project I've helped to improve with Rector](/blog/2019/07/29/how-we
 composer require rector/rector --dev
 ```
 
-2. Create `rector-ci.php` config just for code-reviews
+2. Create `rector.php` config just for code-reviews
 
 ```php
 use Rector\Core\Configuration\Option;
@@ -73,7 +74,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 3. And add to your CI bash
 
 ```bash
-vendor/bin/rector process src --config rector-ci.php --dry-run
+vendor/bin/rector process src --dry-run
 ```
 
 ## How to add Rector CI to your Favorite CI?
@@ -81,8 +82,7 @@ vendor/bin/rector process src --config rector-ci.php --dry-run
 I've prepared a demo with PHP code and a testing pipeline for all widely used CI services.
 
 - [GitHub Actions](#1-github-actions)
-- [GitHub + Travis CI](#2-github-travis-ci)
-- [Gitlab CI](#3-gitlab-ci)
+- [Gitlab CI](#2-gitlab-ci)
 
 <br>
 
@@ -106,55 +106,22 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - uses: actions/checkout@v1
+            - uses: actions/checkout@v1
 
-        - name: Validate composer.json and composer.lock
-          run: composer validate
+            -
+                name: Validate composer.json and composer.lock
+                run: composer validate
 
-        - name: Install dependencies
-          run: composer install --prefer-dist --no-progress --no-suggest
+            -
+                name: Install dependencies
+                run: composer install --no-progress --no-suggest
 
-        - name: Code Review
-          run: ./vendor/bin/rector process --config rector-ci.php --dry-run
+            -
+                name: Code Review
+                run: ./vendor/bin/rector process --dry-run
 ```
 
-### 2. GitHub + Travis CI
-
-<br>
-
-<a href="https://github.com/tomasvotruba/rector-ci-demo" class="btn btn-info">Repository</a>
-<a href="https://travis-ci.com/TomasVotruba/rector-ci-demo/jobs/258286278#L320"  class="btn btn-success ml-3">CI Feedback</a>
-
-```yaml
-# .travis.yml
-os: linux
-language: php
-
-php:
-    - '7.2'
-
-install:
-    # install composer dependencies for all stages
-    - composer install --prefer-dist --no-ansi --no-interaction --no-progress
-
-jobs:
-    include:
-        -
-            stage: test
-            name: "Tests"
-            script:
-                - vendor/bin/phpunit
-
-        -
-            stage: test
-            name: "Code Review"
-            script:
-                - vendor/bin/rector process --config rector-ci.php --dry-run
-```
-
-<br>
-
-### 3. Gitlab CI
+### 2. Gitlab CI
 
 ```yaml
 # .gitlab-ci.yml
@@ -178,7 +145,7 @@ tests:
 code-review:
     stage: test
     script:
-        - vendor/bin/rector process --config rector-ci.php --dry-run
+        - vendor/bin/rector process --dry-run
 ```
 
 ## What sets to Start With?
@@ -217,7 +184,7 @@ That's it!
 Oh... one more thing. You don't have to resolve all the Rector reported flaws manually, **just remove the `--dry-run` option** and run it locally before pushing:
 
 ```bash
-vendor/bin/rector process src --config rector-ci.php
+vendor/bin/rector process src
 ```
 
 <br>

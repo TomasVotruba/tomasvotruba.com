@@ -115,7 +115,7 @@ final class TwitterPostApiWrapper
 
         $diffInSeconds = $nowDateTimeInSeconds - $lastTweetDateTimeInSeconds;
 
-        return (int) ($diffInSeconds / 3600);
+        return (int) ($diffInSeconds / DateTime::HOUR);
     }
 
     /**
