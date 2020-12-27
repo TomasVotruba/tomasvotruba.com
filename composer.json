@@ -37,7 +37,7 @@
         "nette/security": "^3.0",
         "phpstan/phpstan": "^0.12.59",
         "phpunit/phpunit": "^9.5",
-        "rector/rector": "dev-master",
+        "rector/rector-prefixed": "dev-master",
         "spatie/http-status-check": "^3.3",
         "symfony/console": "^5.2",
         "symfony/process": "^5.2",
