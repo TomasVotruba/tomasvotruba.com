@@ -45,7 +45,10 @@ final class TweetCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $message = sprintf('There is %d hours since last tweet', $this->twitterPostApiWrapper->getHoursSinceLastTweet());
+        $message = sprintf(
+            'There is %d hours since last tweet',
+            $this->twitterPostApiWrapper->getHoursSinceLastTweet()
+        );
 
         $this->symfonyStyle->note($message);
 

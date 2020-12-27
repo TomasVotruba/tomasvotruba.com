@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TwitterApi;
 
-use DateTimeInterface;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;

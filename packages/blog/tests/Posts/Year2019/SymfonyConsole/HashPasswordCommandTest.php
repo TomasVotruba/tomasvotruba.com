@@ -8,6 +8,7 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
+use Symplify\PackageBuilder\Console\ShellCode;
 use TomasVotruba\Blog\Tests\Posts\Year2019\SymfonyConsole\Command\HashPasswordCommand;
 
 final class HashPasswordCommandTest extends TestCase
@@ -25,8 +26,7 @@ final class HashPasswordCommandTest extends TestCase
 
         $result = $application->run($stringInput, $bufferedOutput);
 
-        // 0 = success, sth else = fail
-        $this->assertSame(0, $result);
+        $this->assertSame(ShellCode::SUCCESS, $result);
         $this->assertStringStartsWith('Your hashed password is: $2y$10$', $bufferedOutput->fetch());
     }
 }
