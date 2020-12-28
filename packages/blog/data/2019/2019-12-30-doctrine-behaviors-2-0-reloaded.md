@@ -287,7 +287,7 @@ That's why during such BC breaking changes **I've prepared [instant upgrade Rect
 
 ```yaml
 composer require rector/rector --dev
-vendor/bin/rector process src --config vendor/knplabs/doctrine-behaviors/upgrade/rector/doctrine-behaviors-20.yaml
+vendor/bin/rector process src --config vendor/rector/rector/config/set/doctrine-behaviors-20.php
 ```
 
 Single command turns to upgrade from 1 to 2 from days to few dozens of minutes.
