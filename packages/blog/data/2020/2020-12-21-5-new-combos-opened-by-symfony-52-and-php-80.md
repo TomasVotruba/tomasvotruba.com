@@ -4,12 +4,14 @@ title: "5 New Combos opened by Symfony&nbsp;5.2&nbsp;and PHP&nbsp;8.0"
 perex: |
     Conjunction of 2 releases came in December 2020, Symfony 5.2 and [PHP 8.0](https://getrector.org/blog/2020/11/30/smooth-upgrade-to-php-8-in-diffs).
     I wanted to give them a fresh try, so I've updated `composer.json` in 3 projects, run the Rector upgrade set, and this happened...
+
 tweet: "New Post on #php 🐘 blog: 5 New Combos opened by Symfony 5.2 and PHP 8.0"
+tweet_image: "/assets/images/posts/2020/combo-route-value-object.png"
 ---
 
 For code-screeners who understand diffs better than words like me, here are direct links to pull-requests to get the real deal of migration porn:
 
-- [tomasvotruba.cz upgrade](https://github.com/TomasVotruba/tomasvotruba.com/pull/1107/files)
+- [tomasvotruba.com upgrade](https://github.com/TomasVotruba/tomasvotruba.com/pull/1107/files)
 - [getrector.org upgrade](https://github.com/rectorphp/getrector.org/pull/190/files)
 - [friendsofphp.org upgrade](https://github.com/TomasVotruba/friendsofphp.org/pull/176/files)
 
