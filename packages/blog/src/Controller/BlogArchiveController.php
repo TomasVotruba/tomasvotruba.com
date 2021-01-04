@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use TomasVotruba\Blog\Repository\PostRepository;
+use TomasVotruba\Website\ValueObject\RouteName;
 
 final class BlogArchiveController extends AbstractController
 {
@@ -15,7 +16,7 @@ final class BlogArchiveController extends AbstractController
     {
     }
 
-    #[Route('/archive', name: 'blog_archive')]
+    #[Route(path: '/archive', name: RouteName::BLOG_ARCHIVE)]
     public function __invoke(): Response
     {
         $postsByYear = $this->postRepository->groupByYear();
