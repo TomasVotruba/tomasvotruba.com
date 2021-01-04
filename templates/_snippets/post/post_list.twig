@@ -4,7 +4,7 @@
             {% if counter is defined %}
                 <span class="text-bigger text-muted">{{ loop.index }}.</span>
             {% endif %}
-            <a href="{{ path('post_detail', {'slug': post.slug}) }}" class="post-list-title">{{ post.title|raw }}</a>
+            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {'slug': post.slug}) }}" class="post-list-title">{{ post.title|raw }}</a>
             {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
         </li>
     {% endfor %}

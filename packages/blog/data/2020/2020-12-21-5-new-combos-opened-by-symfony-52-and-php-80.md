@@ -62,29 +62,58 @@ Annotations have somewhat autocomplete support, but lack of docblock standard ma
 
 With attributes we can forget this bag of problems and welcome features we use in normal PHP code. E.g. **using constants for repeated strings across many PHP files**.
 
-During refactoring, I used `"archive"` as route name and project crashed. Why? The correct value was `"blog_archive"`. What a dump [memory locker](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/). I don't want to play with strings in my brain, I want code as safely as possible with IDE having my back.
+<br>
+
+During refactoring, I used `"archive"` as route name and project crashed. Why? The correct value was `"blog_archive"`. What a dumb [memory locker](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/). We don't want to store and search strings in my brain, we want code as safely as possible with IDE having our back.
 
 <br>
 
-What if we have a `RouteName` object with constants of route names?
+Here is the deal. What if we have a `RouteName` object with constants of route names?
 
 <img src="/assets/images/posts/2020/combo-route-value-object.png" class="img-thumbnail">
 
-### What we get?
+No we have **one place** to manage route names <em class="fas fa-fw fa-check text-success"></em>
 
-- the IDE autocomplete <em class="fas fa-fw fa-check text-success"></em>
-- we have **one place** to manage route names <em class="fas fa-fw fa-check text-success"></em>
-- we know what routes are available in the project <em class="fas fa-fw fa-check text-success"></em>
-- we can rename route in 1 place <em class="fas fa-fw fa-check text-success"></em>
+<br>
 
-Why should we rename routes? That's a good question. But better question is: why should we think about route names at all? We'll get into that.
+What else extra can we get out of this...
+
+<br>
+
+**Where is route used?** Just click on it <em class="fas fa-fw fa-check text-success"></em>
+
+<img src="/assets/images/posts/2020/combo-route-use-cases.png" class="img-thumbnail">
+
+<br>
+
+**What routes can we use?** Ask your IDE <em class="fas fa-fw fa-check text-success"></em>
+
+<img src="/assets/images/posts/2020/combo-route-value-object.png" class="img-thumbnail">
+
+Attribute and redirect autocomplete <em class="fas fa-fw fa-check text-success"></em>
+
+```php
+return $this->redirectToRoute(RouteName::CONTACT);
+```
+
+Twig autocomplete - kind of crappy now <em class="fas fa-fw fa-question text-warning"></em>
+
+```twig
+<a href="{{ path(constant('Rector\\Website\\ValueObject\\RouteName::CONTACT')) }}">Dare us</a>
+```
+
+<br>
+
+**How can we rename a route?** In 1 line <em class="fas fa-fw fa-check text-success"></em>
+
+Wait, why should we ever rename a route? That's a good question. But better question is: why should we think about route names at all? We'll get into that.
 
 ## 3. Property Promotion empowers Invokable Controllers
 
 What is invokable controller? A controller that you can't turn into a controller with 50 actions even if you had 20 years for that.
 **Invokable controller has exactly 1 action called `__invoke()`**. We only think about the controller name and what it should do. It similar to CQRS applied on controller level.
 
-- propperty promotion
+- property promotion
 - action injection bring mostly clutter PHP 8.0 promoted properties
 - ...
 
