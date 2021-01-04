@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use TomasVotruba\Blog\Repository\ClusterRepository;
+use TomasVotruba\Website\ValueObject\RouteName;
 
 final class ClusterController extends AbstractController
 {
@@ -15,7 +16,7 @@ final class ClusterController extends AbstractController
     {
     }
 
-    #[Route('/cluster/{slug}', name: 'cluster_detail', requirements: [
+    #[Route(path: '/cluster/{slug}', name: RouteName::CLUSTER_DETAIL, requirements: [
         'slug' => '[\w\-]+',
     ])]
     public function __invoke(string $slug): Response

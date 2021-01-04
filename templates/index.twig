@@ -9,7 +9,8 @@
 
             {# updated from Google Analytics, 2020-04-25 #}
             <p>
-                Join <strong>25 087 learning PHP developers</strong> every month on <a href="https://twitter.com/votrubaT">Twitter</a> or <a href="{{ path('rss') }}">RSS</a>
+                Join <strong>25 087 learning PHP developers</strong> every month on <a href="https://twitter.com/votrubaT">Twitter</a> or
+                <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">RSS</a>
             </p>
         </div>
 
@@ -40,7 +41,7 @@
                     {% if loop.first %}
                         <article class="pt-2 pb-4 col-md-12">
                             <h2 class="firstPost text-center">
-                                <a href="{{ path('post_detail', {slug: post.slug }) }}">
+                                <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}">
                                     {{ post.title|raw }}
                                 </a>
                             </h2>
@@ -53,7 +54,7 @@
                         {% if loop.index == 2 %}<ul class="mt-5 list-unstyled">{% endif %}
 
                         <li class="mb-3 col-md-12">
-                            <a href="{{ path('post_detail', {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
+                            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
 
                             {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
                         </li>
@@ -78,7 +79,7 @@
         </div>
 
         <div class="mt-4">
-            <p>2. Or explore <a href="{{ path('blog_archive') }}">the Archive</a></p>
+            <p>2. Or explore <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG_ARCHIVE')) }}">the Archive</a></p>
         </div>
     </div>
 {% endblock %}

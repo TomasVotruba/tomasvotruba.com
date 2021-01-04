@@ -18,7 +18,7 @@
             {# @var cluster \TomasVotruba\Blog\ValueObject\Cluster #}
             <div class="cluster mb-5">
                 <h2>
-                    <a href="{{ path('cluster_detail', {'slug': cluster.slug}) }}">
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTER_DETAIL'), {'slug': cluster.slug}) }}">
                         {{ cluster.title }}
                     </a>
                     <small class="text-muted">

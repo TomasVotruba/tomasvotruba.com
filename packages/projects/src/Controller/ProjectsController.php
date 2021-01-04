@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use TomasVotruba\Projects\PackageFactory\VendorPackagesFactory;
+use TomasVotruba\Website\ValueObject\RouteName;
 
 final class ProjectsController extends AbstractController
 {
@@ -15,7 +16,7 @@ final class ProjectsController extends AbstractController
     {
     }
 
-    #[Route('projects', name: 'projects')]
+    #[Route(path: 'projects', name: RouteName::PROJECTS)]
     public function __invoke(): Response
     {
         return $this->render('projects/projects.twig', [

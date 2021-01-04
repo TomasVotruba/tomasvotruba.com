@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use TomasVotruba\Blog\Repository\PostRepository;
+use TomasVotruba\Website\ValueObject\RouteName;
 
 final class PostController extends AbstractController
 {
@@ -15,7 +16,7 @@ final class PostController extends AbstractController
     {
     }
 
-    #[Route('/blog/{slug}', name: 'post_detail', requirements: [
+    #[Route(path: '/blog/{slug}', name: RouteName::POST_DETAIL, requirements: [
         'slug' => '\d+\/\d+.+',
     ])]
     public function __invoke(string $slug): Response

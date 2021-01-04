@@ -15,7 +15,7 @@
 
         {# https://stackoverflow.com/a/29161205/1348344 #}
         {% for post in posts %}
-            {% set post_absolute_url %}{{ site_url }}{{ path('post_detail', {'slug': post.slug }) }}{% endset %}
+            {% set post_absolute_url %}{{ site_url }}{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {'slug': post.slug }) }}{% endset %}
 
             <item>
                 <title><![CDATA[ {{ post.title|replace({'&nbsp;':' '}) }} ]]></title>

@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Blog\Repository\PostRepository;
 use TomasVotruba\Website\ValueObject\Option;
+use TomasVotruba\Website\ValueObject\RouteName;
 
 final class PhpFrameworkTrendsController extends AbstractController
 {
@@ -23,7 +24,7 @@ final class PhpFrameworkTrendsController extends AbstractController
         $this->phpFrameworkTrends = $parameterProvider->provideArrayParameter(Option::PHP_FRAMEWORK_TRENDS);
     }
 
-    #[Route('php-framework-trends', name: 'php_framework_trends')]
+    #[Route(path: 'php-framework-trends', name: RouteName::PHP_FRAMEWORK_TRENDS)]
     public function __invoke(): Response
     {
         $promoPost = $this->postRepository->get(202);

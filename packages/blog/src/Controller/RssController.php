@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use TomasVotruba\Blog\Repository\PostRepository;
 use TomasVotruba\Blog\ValueObject\Post;
+use TomasVotruba\Website\ValueObject\RouteName;
 
 final class RssController extends AbstractController
 {
@@ -17,7 +18,7 @@ final class RssController extends AbstractController
     {
     }
 
-    #[Route('rss.xml', name: 'rss')]
+    #[Route(path: 'rss.xml', name: RouteName::RSS)]
     public function __invoke(): Response
     {
         $posts = $this->postRepository->fetchForRss();

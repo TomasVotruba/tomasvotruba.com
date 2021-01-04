@@ -31,7 +31,7 @@
     {% if show_comment_count is defined %}
         <li class="list-inline-item mr-3">
             <em class="fas fa-fw fa-comments"></em>
-            <a href="{{ path('post_detail', {slug: post.slug }) }}/#disqus_thread">X</a> comments
+            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}/#disqus_thread">X</a> comments
         </li>
     {% endif %}
 

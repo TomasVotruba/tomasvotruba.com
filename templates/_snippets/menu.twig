@@ -8,23 +8,30 @@
                     <img src="https://avatars1.githubusercontent.com/u/924196?s=60&v=4" class="me_avatar">
                     Tomas Votruba
                 </li>
-                <li class="{% if is_current_routes(['homepage', 'blog_archive', 'post_detail']) %}active{% endif %}">
-                    <a href="{{ path('homepage') }}">Blog</a>
+                <li class="{% if is_current_routes([
+                    constant('TomasVotruba\\Website\\ValueObject\\RouteName::HOMEPAGE'),
+                    constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG_ARCHIVE'),
+                    constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL')
+                ]) %}active{% endif %}">
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::HOMEPAGE')) }}">Blog</a>
                 </li>
-                <li class="{% if is_current_route('php_framework_trends') %}active{% endif %}">
-                    <a href="{{ path('php_framework_trends') }}">Trends</a>
+                <li class="{% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PHP_FRAMEWORK_TRENDS')) %}active{% endif %}">
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PHP_FRAMEWORK_TRENDS')) }}">Trends</a>
                 </li>
-                <li class="{% if is_current_routes(['clusters', 'cluster_detail']) %}active{% endif %}">
-                    <a href="{{ path('clusters') }}">Clusters</a>
+                <li class="{% if is_current_routes([
+                    constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTERS'),
+                    constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTER_DETAIL')
+                ]) %}active{% endif %}">
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTERS')) }}">Clusters</a>
                 </li>
-                <li class="{% if is_current_route('projects') %}active{% endif %}">
-                    <a href="{{ path('projects') }}">Projects</a>
+                <li class="{% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PROJECTS')) %}active{% endif %}">
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PROJECTS')) }}">Projects</a>
                 </li>
-                <li class="{% if is_current_route('mission') %}active{% endif %}">
-                    <a href="{{ path('mission') }}">Mission</a>
+                <li class="{% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::MISSION')) %}active{% endif %}">
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::MISSION')) }}">Mission</a>
                 </li>
-                <li class="{% if is_current_route('contact') %}active{% endif %}">
-                    <a href="{{ path('contact') }}">Contact</a>
+                <li class="{% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) %}active{% endif %}">
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) }}">Contact</a>
                 </li>
                 <li id="top-menu-search">
                     {% include "_snippets/search_form.twig" %}
@@ -38,26 +45,34 @@
 <div class="hidden-md-up">
     <nav class="navbar" id="mobile-menu">
         <div class="container">
-            <a href="{{ path('homepage') }}" class="col-3 col-sm-3 {% if is_current_routes(['homepage', 'blog_archive', 'post_detail']) %}active{% endif %}">
+            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::HOMEPAGE')) }}" class="col-3 col-sm-3 {% if is_current_routes([
+                constant('TomasVotruba\\Website\\ValueObject\\RouteName::HOMEPAGE'),
+                constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG_ARCHIVE'),
+                constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL')
+            ]) %}active{% endif %}">
                 <em class="fas fa-book"></em>
                 <br>
                 Blog
             </a>
 
 
-            <a href="{{ path('clusters') }}" class="col-3 col-sm-3 {% if is_current_route('clusters') %}active{% endif %}">
+            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTERS')) }}" class="col-3 col-sm-3 {% if is_current_route(
+                constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTERS')
+            ) %}active{% endif %}">
                 <em class="fas fa-share-alt"></em>
                 <br>
                 Clusters
             </a>
 
-            <a href="{{ path('projects') }}" class="col-3 col-sm-3 {% if is_current_route('projects') %}active{% endif %}">
+            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PROJECTS')) }}" class="col-3 col-sm-3 {% if is_current_route(
+                constant('TomasVotruba\\Website\\ValueObject\\RouteName::PROJECTS')
+            ) %}active{% endif %}">
                 <em class="fas fa-chart-bar"></em>
                 <br>
                 Trends
             </a>
 
-            <a href="{{ path('contact') }}" class="col-3 col-sm-3 {% if is_current_route('contact') %}active{% endif %}">
+            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) }}" class="col-3 col-sm-3 {% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) %}active{% endif %}">
                 <em class="fas fa-phone"></em>
                 <br>
                 Contact

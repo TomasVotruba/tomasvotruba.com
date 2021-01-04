@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Website\ValueObject\Option;
+use TomasVotruba\Website\ValueObject\RouteName;
 
 final class MissionController extends AbstractController
 {
@@ -22,7 +23,7 @@ final class MissionController extends AbstractController
         $this->helpedCompanies = $parameterProvider->provideArrayParameter(Option::HELPED_COMPANIES);
     }
 
-    #[Route('mission', name: 'mission')]
+    #[Route(path: 'mission', name: RouteName::MISSION)]
     public function __invoke(): Response
     {
         return $this->render('mission.twig', [
