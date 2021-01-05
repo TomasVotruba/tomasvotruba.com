@@ -187,7 +187,8 @@ What do you think about this controller?
      {
         // ...
      }
- }
+ }    push: null
+
 ```
 
 What about this controller?
@@ -221,7 +222,7 @@ This could have been spotted during code-review... or not.
 
 Abdul is [just now working on a PHPStan rule](https://github.com/symplify/symplify/pull/2740), which makes sure **the class name matches the route name**.
 
-- `BlogArchiveController` - route name: CONTACT <em class="fas fa-fw fa-times text-danger"></em>
+- `BlogArchiveController` - route name: `CONTACT` <em class="fas fa-fw fa-times text-danger"></em>
 -  `ContactController` - route name: `CONTACT` <em class="fas fa-fw fa-check text-success"></em>
 
 ## 5. Move from YAML to PHP to get REP
