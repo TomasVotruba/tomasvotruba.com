@@ -11,7 +11,7 @@ tweet: "New Post on #php 🐘 blog: Why Coding Standard Should Not Be Part of CI
 
 "What?" Wait a sec. We'll get to that.
 
-Do you use using PHPStorm plugins for coding standards? I [argued it's a waste of time](/2019/06/24/do-you-use-php-codesniffer-and-php-cs-fixer-phpstorm-plugin-you-are-slow-and-expensive/) and that you should move to CI. In recent months, I conclude **that even coding standard in CI is rather limiting for daily work**. We have to wait for CI feedback, process the feedback, and pay for CI work-minutes.
+Do you use using PHPStorm plugins for coding standards? I [argued it's a waste of time](/blog/2019/06/24/do-you-use-php-codesniffer-and-php-cs-fixer-phpstorm-plugin-you-are-slow-and-expensive/) and that you should move to CI. In recent months, I conclude **that even coding standard in CI is rather limiting for daily work**. We have to wait for CI feedback, process the feedback, and pay for CI work-minutes.
 
 I believe we can get rid of this technical debt. Why even care? [Because faster CI feedback is](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/), the addictive is coding against it. We'll get to that.
 
