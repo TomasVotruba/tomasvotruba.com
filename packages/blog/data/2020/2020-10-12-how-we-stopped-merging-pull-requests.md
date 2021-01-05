@@ -35,7 +35,7 @@ They will be able to focus more and produce better quality code."
 
 ## Wait for 240 pull-requests a Month? No, Thanks!
 
-In [Rector](https://github.com/rectorphp/rector/pulse/monthly) and [Symplify](https://github.com/symplify/symplify/pulse/monthly) [mono-repositories](/clusters/#monorepo-from-zero-to-hero) we had 240 merge-request for just last month.
+In [Rector](https://github.com/rectorphp/rector/pulse/monthly) and [Symplify](https://github.com/symplify/symplify/pulse/monthly) [mono-repositories](/cluster/monorepo-from-zero-to-hero) we had 240 merge-request for just last month.
 
 That's **240 distractions with ~5 minutes upkeep** = 20 hours wasted by brain-waiting and much more work ruined.
 

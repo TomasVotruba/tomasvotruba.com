@@ -35,4 +35,4 @@ It's slowly getting better with monorepo in PHP. But still many people don't kno
 
 ## Where you can Learn More?
 
-Follow the post cluster → [Monorepo From Zero to Hero](/clusters/#monorepo-from-zero-to-hero/)
+Follow the post cluster → [Monorepo From Zero to Hero](/cluster/monorepo-from-zero-to-hero/)

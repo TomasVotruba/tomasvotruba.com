@@ -2,11 +2,15 @@
 id: 124
 title: "How to Make Github and Travis Split Monorepo to Multiple Git Repositories for You"
 perex: |
-    Do you use a [monorepo](/clusters/#monorepo-from-zero-to-hero/)? Then you know [How to maintain multiple Git repositories with ease](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0). If you're not there yet, you may wonder [How to Merge 15 Repositories to 1 Monorepo and Keep their Git History](https://blog.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3).
+    Do you use a [monorepo](/cluster/monorepo-from-zero-to-hero/)? Then you know [How to maintain multiple Git repositories with ease](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0). If you're not there yet, you may wonder [How to Merge 15 Repositories to 1 Monorepo and Keep their Git History](https://blog.shopsys.com/how-to-merge-15-repositories-to-1-monorepo-keep-their-git-history-and-add-project-base-as-well-6e124f3a0ab3).
     <br><br>
     Are you and your monorepo ready? Today we'll focus on **fast, secured and outsourced monorepo auto split** - all that under 10 minutes.
 tweet: "New Post on My Blog: How to Make #Github and #Travis Split #Monorepo to Multiple #Git Repositories for You   #security"
 tweet_image: "/assets/images/posts/2018/monorepo-split/found-keys.jpg"
+
+deprecated_since: "December 2020"
+deprecated_message: |
+    Travis and Monorepo Split is dead now. Use faster [GitHub Action](/blog/2020/11/09/new-in-symplify-9-monorepo-split-with-github-action/) instead.
 ---
 
 It's great to be alive in this era. We have solved maintaining multiple repositories, even merge migration of their git history to one repository. Creating huge code bases was more never cost effective and never had a steeper learning curve.
@@ -228,46 +232,6 @@ Wait wait, no vague statements like *a matter of minutes*. How **fast it really 
 **It takes under 7,5 minutes** including all the tests, static analysis and code style validation.
 
 That's all folks. You're ready to go and try it on your monorepo.
-
-<br>
-
-## Are You Into Git Internals?
-
-I knew you are, so here are few details.
-
-All it' wrapped in a bash file at the moment. It could be done in `symfony\process`, but the original source [subsplit.sh](https://github.com/dflydev/git-subsplit) was in bash so I used it.
-
-There are ~160 lines but most of them are arguments and options configuration, their resolving, preparing the repository and other boring stuff. The interesting part is really [in this 1](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L107) and [these 3 lines](https://github.com/Symplify/MonorepoBuilder/blob/db9a1aa840092a66234c166cbcc9d6d9196d81b1/packages/Split/bash/subsplit.sh#L123-L126):
-
-```bash
-git remote add origin "git@github.com:Symplify/MonorepoBuilder.git"
-
-git checkout -b "master"
-git subtree split -q --prefix="/packages/MonorepoBuilder" --branch="master"
-git push -q --force origin "master"
-```
-
-I used "real values" instead of `$VARIABLES`, so it's more clear to you.
-
-In human words it works like this:
-
-```bash
-# in what repository should we push the code?
-git remote add origin "git@github.com:Symplify/MonorepoBuilder.git"
-
-# what branch do we push there?
-git checkout -b "master"
-
-# the split magic!
-git subtree split -q --prefix="/packages/MonorepoBuilder" --branch="master"
-
-# push this branch to remote branch
-git push -q --force origin "master"
-```
-
-That is really it!
-
-**If you're git split geek (like me), feel free to explore the whole [`subsplit.sh` script](https://github.com/Symplify/MonorepoBuilder/blob/master/packages/Split/bash/subsplit.sh)**. There are many nice little details to learn from.
 
 <br>
 
