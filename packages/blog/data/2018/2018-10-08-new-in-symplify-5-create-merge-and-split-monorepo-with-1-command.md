@@ -6,6 +6,10 @@ perex: |
     <br><br>
     And now there is a **tool that will handle these steps for you**.
 tweet: "New Post on my Blog: New in Symplify 5: Create, Merge and Split #Monorepo with 1 Command"
+
+updated_since: "December 2020"
+updated_message: |
+    Removed the deprecated `split` command. Use faster and reliable [GitHub Action](/blog/2020/11/09/new-in-symplify-9-monorepo-split-with-github-action/) instead.
 ---
 
 This package was initially released in Symplify 4.5, but it took some time to test in practice, remove WTFs and be sure it contains all people need.
@@ -80,27 +84,6 @@ parameters:
 That's what `data_to_append` section is for. These packages and versions will be added to `composer.json`.
 
 *Btw, all packages are nicely sorted by name so you always find them quickly.*
-
-## 4. Split It to Multiple Repositories
-
-Let's do the split! Wait, do you even want to split packages into separate repositories? If so:
-
-```bash
-vendor/bin/monorepo-builder split
-```
-
-It's all prepared in config:
-
-```yaml
-parameters:
-    # for "split" command
-    directories_to_repositories:
-        packages/first-package: 'git@github.com:your-monorepo/first-package.git'
-        packages/secnod-package: 'git@github.com:your-monorepo/second-package.git'
-
-```
-
-This step is optional. Most people use only `init` and `merge` command at the start.
 
 
 ### Do you Want to Know More?
