@@ -81,11 +81,11 @@ I didn't know, so I made an experiment. And [this PR was born](https://github.co
 
 It's very easy to create a PHP package nowadays. It's very easy to create 10 of them. When I started with Zenify, then Symplify, the package-counter could be around 20 for 2 years. I thought that only people who earn living from the open-source project [David Grudl](/blog/2017/06/01/thank-you-david/) could maintain such a big number of packages. I had zero income from them, but I wanted them to live, so maintained them... and then I burned out.
 
-After that, I recall I was looking at Symfony repository - many packages but just repository. WTF? It took a few more months to find out, [what monorepo is](/clusters/#monorepo-from-zero-to-hero/) and understand how it works and how to set it up in very very basic form.
+After that, I recall I was looking at Symfony repository - many packages but just repository. WTF? It took a few more months to find out, [what monorepo is](/cluster/monorepo-from-zero-to-hero/) and understand how it works and how to set it up in very very basic form.
 
 Nowadays there are **projects to guide you**:
 
-- [Monorepo: From Zero to Hero](/clusters/#monorepo-from-zero-to-hero/)
+- [Monorepo: From Zero to Hero](/cluster/monorepo-from-zero-to-hero/)
 - [Symplify\MonorepoBuilder](https://github.com/symplify/monorepobuilder) for Travis split project
 
 ...so if you know YAML syntax, how to open a command line and you have a Github account, you also know how to run your own monorepo in 10 minutes even if you see it for the first time.

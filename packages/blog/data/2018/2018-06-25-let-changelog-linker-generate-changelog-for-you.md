@@ -28,7 +28,7 @@ Over [PHPStan Release notes](https://github.com/phpstan/phpstan/releases/tag/0.1
 ## Why is Every Changelog Different?
 
 There is a standard recommendation in [keepachangelog.com](https://keepachangelog.com/en/1.0.0), so it can all be the same, right?
-I think it's because **there is no easy way to generate such changelog**. And by easy I mean automated = 1 click solution. And we don't even talk about [monorepo](/clusters/#monorepo-from-zero-to-hero/) changelog yet.
+I think it's because **there is no easy way to generate such changelog**. And by easy I mean automated = 1 click solution. And we don't even talk about [monorepo](/cluster/monorepo-from-zero-to-hero/) changelog yet.
 
 When I looked on Github [for inspiration](https://github.com/symplify/symplify/issues/841), I found only [github-changelog-generator](https://github.com/github-changelog-generator/github-changelog-generator) - that has over 4600 stars on Github. Yet, it still doesn't work with *Added*, *Changed* etc. categories and requires labeling issues and pull-requests and adding milestones. **I wanted to save time, not to add extra work.**
 
