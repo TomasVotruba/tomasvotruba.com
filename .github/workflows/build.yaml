@@ -12,6 +12,6 @@ jobs:
                 with:
                     php-version: 8.0
 
-            -   run: composer install --no-progress --ansi --ignore-platform-reqs
+            -   run: composer install --no-progress --ansi
 
             -   run: bin/console dump-static-site --ansi
