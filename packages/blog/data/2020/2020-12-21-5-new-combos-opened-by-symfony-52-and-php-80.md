@@ -187,8 +187,7 @@ What do you think about this controller?
      {
         // ...
      }
- }    push: null
-
+ }
 ```
 
 What about this controller?
