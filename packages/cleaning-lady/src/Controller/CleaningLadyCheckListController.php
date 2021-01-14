@@ -12,8 +12,9 @@ use TomasVotruba\Website\ValueObject\RouteName;
 
 final class CleaningLadyCheckListController extends AbstractController
 {
-    public function __construct(private CleaningCheckListFactory $cleaningCheckListFactory)
-    {
+    public function __construct(
+        private CleaningCheckListFactory $cleaningCheckListFactory
+    ) {
     }
 
     #[Route(path: 'cleaning-lady-checklist', name: RouteName::CLEANING_LADY_CHECKLIST)]

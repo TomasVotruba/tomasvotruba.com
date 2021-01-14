@@ -9,8 +9,9 @@ use TomasVotruba\Blog\ValueObjectFactory\ClusterFactory;
 
 final class ClusterDataProvider
 {
-    public function __construct(private ClusterFactory $clusterFactory)
-    {
+    public function __construct(
+        private ClusterFactory $clusterFactory
+    ) {
     }
 
     /**

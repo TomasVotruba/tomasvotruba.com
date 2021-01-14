@@ -11,8 +11,9 @@ use Twig\TwigFunction;
 
 final class PreviousPostExtension extends AbstractExtension
 {
-    public function __construct(private PostRepository $postRepository)
-    {
+    public function __construct(
+        private PostRepository $postRepository
+    ) {
     }
 
     /**

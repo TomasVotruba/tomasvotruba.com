@@ -11,8 +11,9 @@ final class TestedPostAnalyzer
     /**
      * @param PostTestInterface[] $postTests
      */
-    public function __construct(private array $postTests)
-    {
+    public function __construct(
+        private array $postTests
+    ) {
     }
 
     public function isPostIdTested(int $id): bool

@@ -10,16 +10,10 @@ perex: |
 tweet: "🐘 New Post on #php blog: How To Convert All Your #Symfony Service Configs to Autodiscovery"
 tweet_image: "/assets/images/posts/2018/autodiscovery/demo.gif"
 
-updated_since: "April 2020"
-updated_message: |
-    Updated to Symfony 5+ syntax with [per-line excludes](https://github.com/symfony/symfony/pull/27075).
+deprecated_since: "January 2021"
+deprecated_message: |
+    Autodiscovery package was deprecated, because Symfony is moving towards [united PHP configs](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/). They make more sense and use united syntax in Kernel, Extension and configs. Use PHP configs with configurators instead.
 ---
-
-## tl;dr;
-
-<img src="/assets/images/posts/2018/autodiscovery/demo.gif" class="img-thumbnail">
-
-<br>
 
 I've been consulting a few Symfony e-commerce projects recently that all have `service.yml`. Big configs with manual service registration:
 
@@ -35,43 +29,7 @@ services:
     # 20 more files similar to this one
 ```
 
-I already wrote [How to refactor to new Dependency Injection features in Symfony 3.3](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/), so you can read it. But you don't have to, since **this conversion can be automated**...
-
-```yaml
-services:
-    _defaults:
-        autowire: true
-    App\:
-        resource: /src
-```
-
-...with [Symplify\Autodiscovery](https://github.com/symplify/autodiscovery).
-
-## 3 Steps to Your Minimalistic Configs
-
-1. Install the package
-
-    ```bash
-    composer require symplify/autodiscovery
-    ```
-
-2. Convert Configs
-
-    Run on `/src` directory:
-
-    ```diff
-    vendor/bin/autodiscovery convert-yaml /src
-    ```
-
-    It converts all `services.yml`, `config.yml`, `config.dev.yml` etc. configs that contain `services:` to autodiscovery format.
-
-    `*.yaml` included.
-
-3. See the changes:
-
-    ```bash
-    git diff
-    ```
+I already wrote [How to refactor to new Dependency Injection features in Symfony 3.3](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/), so you can read it.
 
 ## What Can Go Wrong?
 
@@ -187,8 +145,6 @@ When you try to autoload a class with a constructor, it's considered a service. 
 +           - ../src/Contract/*
 ```
 
-The converter includes support for basic dirs to be excluded.
-
 <br>
 
-**Do you want minimalist configs for your application?** [Give Autodiscovery a try](#3-steps-to-your-minimalistic-configs).
+Happy coding!

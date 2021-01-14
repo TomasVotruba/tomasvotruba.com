@@ -9,8 +9,9 @@ final class CleaningChecklist
     /**
      * @param CleaningSection[] $cleaningSections
      */
-    public function __construct(private array $cleaningSections)
-    {
+    public function __construct(
+        private array $cleaningSections
+    ) {
     }
 
     /**

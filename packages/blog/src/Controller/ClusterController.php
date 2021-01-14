@@ -12,8 +12,9 @@ use TomasVotruba\Website\ValueObject\RouteName;
 
 final class ClusterController extends AbstractController
 {
-    public function __construct(private ClusterRepository $clusterRepository)
-    {
+    public function __construct(
+        private ClusterRepository $clusterRepository
+    ) {
     }
 
     #[Route(path: '/cluster/{slug}', name: RouteName::CLUSTER_DETAIL, requirements: [
