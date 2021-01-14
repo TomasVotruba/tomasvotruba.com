@@ -24,7 +24,7 @@ final class ParametersConfigDumper
         $data['parameters'][$key] = $items;
 
         $fileContent = $this->yamlToPhpConverter->convertYamlArray($data);
-        $dumpFilePath = getcwd() . '/config/_data/generated/' . $key . '.php';
+        $dumpFilePath = __DIR__ . '/../../config/_data/generated/' . $key . '.php';
         $this->smartFileSystem->dumpFile($dumpFilePath, $fileContent);
 
         return new SmartFileInfo($dumpFilePath);
