@@ -49,7 +49,7 @@ Do you still use Statie? Don't worry; we have a migration path for you.
 First, you need to install Symfony packages:
 
 ```bash
-composer require symfony/http-foundation symfony/asset symfony/twig-bridge symfony/twig-bundle symfony/flex symplify/flex-loader symplify/autodiscovery symfony/framework-bundle symfony/dotenv doctrine/cache erusev/parsedown-extra
+composer require symfony/http-foundation symfony/asset symfony/twig-bridge symfony/twig-bundle symfony/flex symfony/framework-bundle symfony/dotenv doctrine/cache erusev/parsedown-extra
 ```
 
 And replace the static generator:
