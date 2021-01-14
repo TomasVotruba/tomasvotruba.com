@@ -34,7 +34,7 @@ final class GenerateStatsCommand extends Command
         private VendorDataMapper $vendorDataMapper,
         ParameterProvider $parameterProvider,
         private ParametersConfigDumper $parametersConfigDumper
-   ) {
+    ) {
         parent::__construct();
 
         $this->frameworksVendorToName = $parameterProvider->provideArrayParameter(

@@ -7,12 +7,6 @@ perex: |
     <br><br>
     Today I will show you what code can you drop and how to migrate it.
 tweet: "Learn new  🐘 hack: How to refactor to new #symfony 3.3 DI features? #examples #php #yaml #tool"
-
-updated_since: "December 2018"
-updated_message: |
-    I've released [Symplify/Autodiscovery](https://github.com/symplify/autodiscovery) package, that **[migrates](https://github.com/symplify/symplify/blob/master/packages/autodiscovery/README.md#yaml-convertor) old `service.yml` configs to autodiscovery format** for you. [Here is how](/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/).
-
-    Why do it manually? :)
 ---
 
 ## What is New?

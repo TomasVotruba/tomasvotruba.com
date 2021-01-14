@@ -10,8 +10,11 @@ final class PublishedTweet
 {
     private string $text;
 
-    public function __construct(string $text, private DateTimeInterface $createdAt, private int $id)
-    {
+    public function __construct(
+        string $text,
+        private DateTimeInterface $createdAt,
+        private int $id
+    ) {
         $this->text = htmlspecialchars_decode($text);
     }
 

@@ -75,8 +75,9 @@ final class InterveningPackagesPurifier
      */
     private array $interveningPackagesDownloads = [];
 
-    public function __construct(private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider)
-    {
+    public function __construct(
+        private PackageRawMonthlyDownloadsProvider $packageRawMonthlyDownloadsProvider
+    ) {
     }
 
     public function correctInterveningPackages(array $monthlyDownloads, string $packageName): array

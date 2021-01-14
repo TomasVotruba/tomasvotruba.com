@@ -11,8 +11,10 @@ final class CleaningSection
     /**
      * @param CleaningItem[] $cleaningItems
      */
-    public function __construct(private string $headline, private array $cleaningItems)
-    {
+    public function __construct(
+        private string $headline,
+        private array $cleaningItems
+    ) {
     }
 
     public function getHeadline(): string

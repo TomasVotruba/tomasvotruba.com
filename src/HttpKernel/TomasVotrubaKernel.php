@@ -16,11 +16,6 @@ final class TomasVotrubaKernel extends Kernel
 {
     use MicroKernelTrait;
 
-    public function __construct(string $environment, bool $debug)
-    {
-        parent::__construct($environment, $debug);
-    }
-
     protected function configureContainer(ContainerBuilder $containerBuilder, LoaderInterface $loader): void
     {
         $loader->load(__DIR__ . '/../../config/config.php');

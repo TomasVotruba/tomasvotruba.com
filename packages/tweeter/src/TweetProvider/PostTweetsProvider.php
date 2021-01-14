@@ -14,8 +14,10 @@ final class PostTweetsProvider
 {
     private DateTimeInterface $maximumDateTimeLimit;
 
-    public function __construct(private TweetGuard $tweetGuard, private PostRepository $postRepository)
-    {
+    public function __construct(
+        private TweetGuard $tweetGuard,
+        private PostRepository $postRepository
+    ) {
         $this->maximumDateTimeLimit = DateTime::from('2019-01-01');
     }
 

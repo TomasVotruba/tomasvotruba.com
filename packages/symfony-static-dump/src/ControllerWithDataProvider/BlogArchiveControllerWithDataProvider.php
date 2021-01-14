@@ -10,8 +10,9 @@ use TomasVotruba\Blog\Repository\PostRepository;
 
 final class BlogArchiveControllerWithDataProvider implements ControllerWithDataProviderInterface
 {
-    public function __construct(private PostRepository $postRepository)
-    {
+    public function __construct(
+        private PostRepository $postRepository
+    ) {
     }
 
     public function getControllerClass(): string
