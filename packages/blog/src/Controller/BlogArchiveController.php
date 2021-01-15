@@ -12,8 +12,9 @@ use TomasVotruba\Website\ValueObject\RouteName;
 
 final class BlogArchiveController extends AbstractController
 {
-    public function __construct(private PostRepository $postRepository)
-    {
+    public function __construct(
+        private PostRepository $postRepository
+    ) {
     }
 
     #[Route(path: '/archive', name: RouteName::BLOG_ARCHIVE)]

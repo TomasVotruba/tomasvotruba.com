@@ -15,8 +15,10 @@ final class PostDataProvider
      */
     private const POST_DIRECTORY = __DIR__ . '/../../data';
 
-    public function __construct(private PostFactory $postFactory, private SmartFinder $smartFinder)
-    {
+    public function __construct(
+        private PostFactory $postFactory,
+        private SmartFinder $smartFinder
+    ) {
     }
 
     /**

@@ -19,8 +19,10 @@ final class PhpFrameworkTrendsController extends AbstractController
      */
     private array $phpFrameworkTrends = [];
 
-    public function __construct(private PostRepository $postRepository, ParameterProvider $parameterProvider)
-    {
+    public function __construct(
+        private PostRepository $postRepository,
+        ParameterProvider $parameterProvider
+    ) {
         $this->phpFrameworkTrends = $parameterProvider->provideArrayParameter(Option::PHP_FRAMEWORK_TRENDS);
     }
 

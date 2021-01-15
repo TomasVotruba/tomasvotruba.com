@@ -55,6 +55,7 @@ final class RouteName
      * @var string
      */
     public const PROJECTS = 'projects';
+
     /**
      * @var string
      */

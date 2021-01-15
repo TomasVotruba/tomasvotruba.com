@@ -12,8 +12,9 @@ use TomasVotruba\Website\ValueObject\RouteName;
 
 final class ProjectsController extends AbstractController
 {
-    public function __construct(private VendorPackagesFactory $vendorPackagesFactory)
-    {
+    public function __construct(
+        private VendorPackagesFactory $vendorPackagesFactory
+    ) {
     }
 
     #[Route(path: 'projects', name: RouteName::PROJECTS)]

@@ -10,8 +10,9 @@ use TomasVotruba\Blog\Repository\ClusterRepository;
 
 final class ClusterControllerWithDataProvider implements ControllerWithDataProviderInterface
 {
-    public function __construct(private ClusterRepository $clusterRepository)
-    {
+    public function __construct(
+        private ClusterRepository $clusterRepository
+    ) {
     }
 
     public function getControllerClass(): string

@@ -22,8 +22,10 @@ final class VendorPackagesProvider
      */
     private array $excludedFrameworkPackages = [];
 
-    public function __construct(private FileToJsonLoader $fileToJsonLoader, ParameterProvider $parameterProvider)
-    {
+    public function __construct(
+        private FileToJsonLoader $fileToJsonLoader,
+        ParameterProvider $parameterProvider
+    ) {
         $this->excludedFrameworkPackages = $parameterProvider->provideArrayParameter(
             Option::EXCLUDED_FRAMEWORK_PACKAGES
         );

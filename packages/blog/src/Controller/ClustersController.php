@@ -12,8 +12,9 @@ use TomasVotruba\Website\ValueObject\RouteName;
 
 final class ClustersController extends AbstractController
 {
-    public function __construct(private PostRepository $postRepository)
-    {
+    public function __construct(
+        private PostRepository $postRepository
+    ) {
     }
 
     #[Route(path: 'clusters', name: RouteName::CLUSTERS)]

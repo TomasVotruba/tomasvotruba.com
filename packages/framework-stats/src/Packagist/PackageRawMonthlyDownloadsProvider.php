@@ -20,8 +20,9 @@ final class PackageRawMonthlyDownloadsProvider
      */
     private const VALUES = 'values';
 
-    public function __construct(private FileToJsonLoader $fileToJsonLoader)
-    {
+    public function __construct(
+        private FileToJsonLoader $fileToJsonLoader
+    ) {
     }
 
     /**

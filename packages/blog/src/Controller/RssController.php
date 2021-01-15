@@ -14,8 +14,9 @@ use TomasVotruba\Website\ValueObject\RouteName;
 
 final class RssController extends AbstractController
 {
-    public function __construct(private PostRepository $postRepository)
-    {
+    public function __construct(
+        private PostRepository $postRepository
+    ) {
     }
 
     #[Route(path: 'rss.xml', name: RouteName::RSS)]

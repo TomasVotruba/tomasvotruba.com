@@ -15,8 +15,9 @@ final class PublishedTweetsFilter
      */
     private array $publishedPostTweets = [];
 
-    public function __construct(private TwitterPostApiWrapper $twitterPostApiWrapper)
-    {
+    public function __construct(
+        private TwitterPostApiWrapper $twitterPostApiWrapper
+    ) {
     }
 
     /**

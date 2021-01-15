@@ -8,8 +8,9 @@ use Symfony\Contracts\EventDispatcher\Event;
 
 final class YoutuberNameEvent extends Event
 {
-    public function __construct(private string $youtuberName)
-    {
+    public function __construct(
+        private string $youtuberName
+    ) {
     }
 
     public function getYoutuberName(): string
