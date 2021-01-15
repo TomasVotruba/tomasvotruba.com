@@ -7,7 +7,7 @@ perex: |
     Are methods `getName()` and `getName()` on 2 entities duplicated?
     <br>
     <br>
-    Today we look at PHPStan and hot to use it to find duplicated class methods.
+    Today we look at PHPStan and how to use it to find duplicated class methods.
 
 tweet: "New Post on #php 🐘 blog: How to detect Complex Duplicated Methods With #phpstan"
 ---
