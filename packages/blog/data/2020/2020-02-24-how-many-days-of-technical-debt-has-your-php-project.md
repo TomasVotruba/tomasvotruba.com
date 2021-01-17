@@ -8,6 +8,13 @@ perex: |
     This year I've started to use CI service, which tells you the number in days. And it works pretty well... how many days Rector has? Keep on learning.
 tweet: "New Post on #php 🐘 blog: How Many Days of Technical Debt Has your PHP Project   #sonarcube #githubactions"
 tweet_image: "/assets/images/posts/2020/sonar_rector.png"
+
+deprecated_since: "December 2021"
+deprecated_message: |
+    Sonarcube is an external tool that must be checked manually. It's an extra obstacle and we barely checked it every month or two.
+    <br>
+    <br>
+    Much better approach is [CI-based feedback loop](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/). **Use PHPStan and [cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) instead**.
 ---
 
 <a href="https://sonarcloud.io/dashboard?id=rectorphp_rector">
