@@ -22,6 +22,7 @@
         "symfony/http-kernel": "^5.2",
         "symfony/twig-bridge": "^5.2",
         "symfony/twig-bundle": "^5.2",
+        "symplify/amnesia": "dev-master",
         "symplify/autowire-array-parameter": "^9.0.20",
         "symplify/package-builder": "^9.0.20",
         "symplify/smart-file-system": "^9.0.20",
