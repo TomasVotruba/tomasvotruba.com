@@ -211,7 +211,7 @@ services:
 ### 3. Run PHPStan
 
 ```bash
-vendor/bin/phsptan analyse
+vendor/bin/phpstan analyse
 ```
 
 Now you won't miss any single duplicated method in your code.
