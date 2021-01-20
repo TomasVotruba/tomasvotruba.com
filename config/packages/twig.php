@@ -11,6 +11,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             __DIR__ . '/../../packages/framework-stats/templates',
             __DIR__ . '/../../packages/cleaning-lady/templates',
             __DIR__ . '/../../packages/blog/templates',
+            __DIR__ . '/../../packages/cleaning-lady/templates',
         ],
         'globals' => [
             'google_analytics_tracking_id' => 'UA-46082345-1',
