@@ -12,4 +12,5 @@ return static function (RoutingConfigurator $routes): void {
     $routes->import(__DIR__ . '/../packages/blog/src/Controller', RoutingExtension::TYPE_ANNOTATION);
     $routes->import(__DIR__ . '/../packages/framework-stats/src/Controller', RoutingExtension::TYPE_ANNOTATION);
     $routes->import(__DIR__ . '/../packages/projects/src/Controller', RoutingExtension::TYPE_ANNOTATION);
+    $routes->import(__DIR__ . '/../packages/cleaning-lady/src/Controller', RoutingExtension::TYPE_ANNOTATION);
 };
