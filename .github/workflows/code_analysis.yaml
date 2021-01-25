@@ -35,6 +35,7 @@ jobs:
                     # needed by phpunit
                     extensions: mbstring
 
-            -   run: composer install --no-progress --ansi --ignore-platform-reqs
+            # composer install cache - https://github.com/ramsey/composer-install
+            -   uses: "ramsey/composer-install@v1"
 
             -   run: ${{ matrix.actions.run }}
