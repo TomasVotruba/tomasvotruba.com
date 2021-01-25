@@ -7,6 +7,7 @@ use GuzzleHttp\ClientInterface;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 use TomasVotruba\Website\ValueObject\Option;
+use function Symplify\Amnesia\Functions\env;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/../packages/*/config/*.php');
@@ -15,7 +16,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/_data/generated/*');
 
     $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SITE_URL, '%env(SITE_URL)%');
+    $parameters->set(Option::SITE_URL, env('SITE_URL'));
 
     $services = $containerConfigurator->services();
     $services->alias(ClientInterface::class, Client::class);
