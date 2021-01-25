@@ -197,7 +197,7 @@ composer require symplify/phpstan-rules --dev
 
 ### 2. Add it to `phpstan.neon`
 
-```neon
+```yaml
 includes:
     # set services that are needed by PHPStan rules
     - vendor/symplify/phpstan-rules/config/services/services.neon
