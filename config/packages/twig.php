@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use function Symplify\Amnesia\Functions\env;
 use Symplify\Amnesia\ValueObject\Symfony\Extension\Twig\NumberFormat;
 use Symplify\Amnesia\ValueObject\Symfony\Extension\TwigExtension;
-use function Symplify\Amnesia\Functions\env;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension(TwigExtension::NAME, [

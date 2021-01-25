@@ -27,9 +27,6 @@ final class NumberTwigExtension extends AbstractExtension
         });
     }
 
-    /**
-     * @param float|int $number
-     */
     private function formatNumber(float|int $number): string
     {
         return number_format($number, 1, '.', ' ');

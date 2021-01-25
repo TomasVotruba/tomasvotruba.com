@@ -473,6 +473,9 @@
     "symfony/yaml": {
         "version": "v5.0.5"
     },
+    "symplify/amnesia": {
+        "version": "9.1-dev"
+    },
     "symplify/auto-bind-parameter": {
         "version": "v7.2.4"
     },
