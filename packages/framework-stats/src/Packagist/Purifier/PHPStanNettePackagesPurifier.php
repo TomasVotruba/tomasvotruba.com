@@ -34,7 +34,7 @@ final class PHPStanNettePackagesPurifier
 
         // packagist doesn't provide way to count this number, so it is estimation compared to another nette packages,
         // and phpstan downloads from https://packagist.org/packages/phpstan/phpstan/stats
-        $phpstanLastYearInfluence = 3_500_000;
+        $phpstanLastYearInfluence = 1_500_000;
 
         if ($yearDownloads > $phpstanLastYearInfluence) {
             $yearDownloads -= $phpstanLastYearInfluence;
