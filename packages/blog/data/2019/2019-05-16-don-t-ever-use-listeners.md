@@ -176,7 +176,7 @@ $configuration->setOption('resource');
 $input->getOption('resource');
 ```
 
-Now you need to get resource somewhere else. Was is "source", "sources", "resource" or "directory"? You don't care, constant autocomplete in PHPStorm tells you:
+Now you need to get this resource somewhere else. Was it "source", "sources", "resource" or "directory"? You don't care, constant autocomplete in PHPStorm tells you:
 
 ```php
 # in class A
