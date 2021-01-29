@@ -146,7 +146,7 @@ There is still a bit of magic... what should be in `getSubscribedEvents()` metho
 - No option to miss-use delegators <em class="fas fa-fw fa-lg fa-check text-success"></em>
 - Easy to statically analyse <em class="fas fa-fw fa-lg fa-check text-success"></em>
 - Easy to instantly upgrade <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Any Symfony BC break will be easy to discovery due to unused constant in exact line of code <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- Any Symfony BC break will be easy to discover due to unused constant in exact line of code <em class="fas fa-fw fa-lg fa-check text-success"></em>
 
 The trade-off worth the change
 
@@ -158,15 +158,15 @@ Where is `KernelEvents::VIEW` event actually dispatched? Just search `KernelEven
 
 Also, when the event name is changed in a constant to `view_event`, you don't mind. If you have `view` in the config, good luck!
 
-This makes using constants so fun. My rule fo a thumb is:
+This makes using constants so fun. My rule of thumb is:
 
 <blockquote class="blockquote text-center mb-4 mt-4">
     When the same string is used at 2 different classes,
     <br>
-    it's worth creating a constant list to make it typo-proof.
+    it's worth creating a constant to make it typo-proof.
 </blockquote>
 
-E.g. imagine you have code like:
+Imagine you have some code like:
 
 ```php
 # in class A
@@ -177,14 +177,6 @@ $input->getOption('resource');
 ```
 
 Now you need to get this resource somewhere else. Was it "source", "sources", "resource" or "directory"? You don't care, constant autocomplete in PHPStorm tells you:
-
-```php
-# in class A
-$configuration->setOption('resource');
-
-# in class B
-$input->getOption('resource');
-```
 
 <img src="/assets/images/posts/2019/sub/constant.gif" class="img-thumbnail">
 
