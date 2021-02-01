@@ -715,7 +715,6 @@ a.btn:hover {
 }
 
 a.btn {
-    font-size: 1em;
     line-height: 1.6em;
 }
 
@@ -772,4 +771,8 @@ a.btn {
 .text-smaller {
     font-weight: normal;
     font-size: 0.8em;
+}
+
+.btn-sm {
+    font-size: .9em;
 }
