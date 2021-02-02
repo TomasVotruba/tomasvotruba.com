@@ -7,6 +7,7 @@ namespace TomasVotruba\Blog\DataProvider;
 use Symplify\SmartFileSystem\Finder\SmartFinder;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Blog\ValueObjectFactory\PostFactory;
+use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class PostDataProvider
 {
@@ -31,6 +32,11 @@ final class PostDataProvider
         $fileInfos = $this->smartFinder->find([self::POST_DIRECTORY], '*.md');
         foreach ($fileInfos as $fileInfo) {
             $post = $this->postFactory->createFromFileInfo($fileInfo);
+            if (isset($posts[$post->getId()])) {
+                $message = sprintf('Post with id "%d" is duplicated', $post->getId());
+                throw new ShouldNotHappenException($message);
+            }
+
             $posts[$post->getId()] = $post;
         }
 

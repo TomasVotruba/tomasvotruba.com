@@ -259,7 +259,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         // ...
 ```
 
-This way, we can easily see **what is a constant configuration and what is a manually defined value.**
+This way, we can easily see:
+
+- what is a **constant configuration**
+- and what is a **manually defined value**
 
 <br>
 
