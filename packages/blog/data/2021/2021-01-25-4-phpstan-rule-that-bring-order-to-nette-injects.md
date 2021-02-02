@@ -237,19 +237,6 @@ final class ProductPresenter extends AbstractPresenter
 
 <br>
 
-```php
-abstract class SomePresenter
-{
-    /**
-     * @inject
-     * @var SomeDependency
-     */
-    public $someDependency;
-}
-```
-
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
-
 Covered by `Symplify\PHPStanRules\Rules\NoInjectOnFinalRule` rule.
 
 <br>
