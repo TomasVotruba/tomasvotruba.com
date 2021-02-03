@@ -11,10 +11,9 @@ perex: |
 tweet: "New Post on #php 🐘 blog: Effective Debug Tricks: Narrow Scoping"
 ---
 
-Effective debugging is not about finding the responsible line,  not about it's not about fixing the bug.
+Effective debugging is not about finding the responsible line, nor about fixing the bug.
 
-Effective debugging is about **getting to the minimal amount of code that is *probably* causing the error**.
-
+Effective debugging is about **getting to the minimal amount of code that is *probably* causing the error** with the minimal energy invested.
 
 ## Why it's important?
 
@@ -57,11 +56,12 @@ Remember, the goal of reporting an issue is to invest as little energy from our 
 The bug fix effectiveness formula states:
 
 <blockquote class="blockquote text-center">
-    Bug Fix Effectiveness = (Reporter Work + Maintainer Work) / 1
+    Bug Fix Effectiveness = (Reporter Work + Maintainer Work) / 100
 </blockquote>
 
-- If *Bug Fix Effectiveness* = 0.01, you have both more energy left to fix even more bugs
-- If *Bug Fix Effectiveness* = 5, the issue will probably end up in stale of dozens of comments that never fix anything
+- If *BFE* < 0.5, you have both more energy left to fix even more bugs <em class="fas fa-fw fa-check text-success fa-lg"></em>
+
+- If *BFE* > 5, the issue will probably end up in stale of dozens of comments that never fix anything <em class="fas fa-fw fa-times text-danger fa-lg"></em>
 
 <br>
 
@@ -107,6 +107,7 @@ How can we do it better?
 ## Level 3: "I did this, then this happened" report
 
 *I tried to run Rector on my project with this `rector.php`*
+
 *I used `vendor/bin/rector process p src`*
 
 *The printing does not work, it ends with a fatal error.*
@@ -132,18 +133,22 @@ Now both you and the maintainers now:
 Do you remember Bug Fix Effectiveness Formula?
 
 <blockquote class="blockquote text-center">
-    Bug Fix Effectiveness = (Reporter Work + Maintainer Work) / 1
+    BFE = (Reporter Work + Maintainer Work) / 100
 </blockquote>
 
 From level 1 to 3, we invested a lot of more energy on first issue reporting:
 
 Level 1:
 
-- Bug Fix Effectiveness = (0.2 + 3.8) / 1 = 4.0
+<blockquote class="blockquote text-center" markdown=1>
+BFE = (20 + 380) / 100 = **4.0**
+</blockquote>
 
 Level 3:
 
-- Bug Fix Effectiveness = (0.4 + 1.6) / 1 = 2.0
+<blockquote class="blockquote text-center" markdown=1>
+BFE = (40 + 160) / 100 = **2.0**
+</blockquote>
 
 But because the maintainer doesn't have to ask us more questions and doesn't have to reply to them, we **also increased the chance to get a bug fixed by ~100 %**.
 
@@ -159,6 +164,7 @@ How can we do it better? Don't worry; it's not about learning project test conve
 Let's look at the **narrow scoping**. What can we read from this report?
 
 *I tried to run Rector on my project with this `rector.php`*
+
 *I used `vendor/bin/rector process p src`*
 
 - There are 1-INF rules and settings in `rector.php` and 1-INF files in the `/src` directory.
@@ -189,7 +195,7 @@ The idea is comment out half of the configuration, run the tool and see if the b
     ]);
 ```
 
-Is the bug still there? Let's go with other half:
+Is the bug still there? Remove the commended lines and repeated the half-commented/half-active process with the other half:
 
 ```diff
  // rector.php
@@ -205,7 +211,7 @@ Is the bug still there? Let's go with other half:
     ]);
 ```
 
-Is the bug gone? It must be one of them:
+Is the bug gone? It must be one of those commented sets, so comment out half of them and let the ofher half active:
 
 ```diff
  // rector.php
@@ -225,7 +231,7 @@ This way, we discover quickly which exact set and which exact rule is causing th
 
 <br>
 
-But, running the whole codebase to find out a single rule might take hours. How can we avoid it?
+But, running **the whole codebase to find out a single rule** might take hours. How can we avoid it?
 Let's apply narrow scoping on the filesystem first. Instead of running tool globally:
 
 ```bash
@@ -244,25 +250,30 @@ Is it not there? Pick another directory:
 vendor/bin/rector p src/Repository
 ```
 
-It's there, bingo!
+Is it there? Bingo!
 
 <br>
 
-Then we can report all the information that the maintainer needs.
+Then we can report all the information that the maintainer needs:
 
 *I tried to run Rector on my project with `rector.php`*
-*When I run `TypedPropertyRector` like this:
-*I used `vendor/bin/rector process p src/Repository/AbstractRepository.php`*
+
+<br>
+
+*When I run `TypedPropertyRector` rule like this*:
+
+*`vendor/bin/rector process p src/Repository/AbstractRepository.php`*
 
 *it fails with...*
 
 
 We just reached the most effective value:
 
-<blockquote class="blockquote text-center">
-    Bug Fix Effectiveness = (0.6 + 0.6) / 1 = 1.2
+<blockquote class="blockquote text-center" markdown=1>
+BFE = (60 + 60) / 100 = **1.2**
 </blockquote>
 
+Now we get **4-times more bugs fixed** then with level 1.
 Thank you for reporting!
 
 <br>
