@@ -10,6 +10,9 @@ tweet_image: "/assets/images/posts/2018/rectify-action-injection/show.png"
 updated_since: "August 2020"
 updated_message: |
     Updated Rector YAML to PHP configuration, as current standard.
+
+deprecated_since: "February 2021"
+deprecated_message: "Moved to [Rector Blog](https://getrector.org/blog/2021/02/01/how-to-change-symfony-action-injects-to-constructor-injection)"
 ---
 
 I wrote about [How to Slowly Turn your Symfony Project to Legacy with Action Injection](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection/) a few weeks ago. It surprised me that **the approach had mostly positive [feedback](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection/#comments)**:
