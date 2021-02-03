@@ -233,9 +233,7 @@ final class ProductPresenter extends AbstractPresenter
 }
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
-
-<br>
+<em class="fas fa-fw fa-2x fa-check text-success"></em>
 
 Covered by `Symplify\PHPStanRules\Rules\NoInjectOnFinalRule` rule.
 
