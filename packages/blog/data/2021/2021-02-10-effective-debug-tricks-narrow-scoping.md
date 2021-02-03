@@ -2,55 +2,59 @@
 id: 300
 title: "Effective Debug Tricks: Narrow Scoping"
 perex: |
-    Writing a code that only you work with is easy. Debugging such code is a bit harder. Writing a code that someone else reviews is quite hard. We must past the code review, the code must be understandable to the other reader.
+    Writing a code that only you work with is easy. Debugging such code is a bit harder. Writing a code for someone else review is quite hard. The code must be understandable to the other reader to pass the code review.
     <br><br>
-How hard is reading a code that someone else wrote 3 months ago?
+    How hard is reading a code that someone else wrote three months ago?
     <br>
     <br>
     But what about debugging a code that someone wrote a year ago?
 tweet: "New Post on #php 🐘 blog: Effective Debug Tricks: Narrow Scoping"
 ---
 
-The effective debugging is not about finding the responsible line,  not about it's not about fixing the bug.
+Effective debugging is not about finding the responsible line,  not about it's not about fixing the bug.
 
-The effective debugging is about **getting to the minimal amount of code that is *probably* causing the error**.
+Effective debugging is about **getting to the minimal amount of code that is *probably* causing the error**.
 
 
 ## Why it's important?
 
-When we report a bug in a project's issue tracker, we're usually interested in its fix. Why would we report if really don't care? **The faster bug gets fixed the better for us**, so we can continue with our original coding goal. We need [instant feedback](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers) to stay in the flow.
+When we report a bug in a project's issue tracker, we're usually interested in its fix. Why would we report if we don't care? **The faster bug gets fixed, the better for us**, so we can continue with our original coding goal. We need [instant feedback](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers) to stay in the flow.
 
 <br>
 
-Today we look a on technique, that I use for open-source projects report and for teaching private projects to debug their legacy code with peace. We also have it as a standard in Rector and Symplify projects. It saves us many hours wasted on issues tracker comment ping-pong and help us to focus on the cooperative solution.
+Today we look at one technique that I use for open-source project reports and for teaching private projects to debug their legacy code with peace.
 
-You might notice it's similar to *minimum common denominator* process that you probably know from 5th grade. What a powerful concept.
+We also have it as a standard in Rector and Symplify projects. It saves us many hours wasted on issues tracker comment ping-pong and focuses on the cooperative solution.
+
+You might notice it's similar to * the minimum common denominator* process that you probably know from 5th grade—what a powerful concept.
 
 <br>
 
 ## Level 1: "There is a bug" report
 
-What will happen if we provide report like this?
+What will happen if we provide a report like this?
 
-- *The printing does not work, it ends with fatal error.*
+- *The printing does not work. It ends with a fatal error.*
 
 **What can the maintainer do?** Can they fix the error and close the issue? Probably not, because there is no information about where to look first. So what will the maintainer do? They will ask us for more information:
 
 - *ask us about the exact fatal error message*
 - *ask us about stack trace with `--debug` or `-vvv` option in command line*
-- *ask us about version we use, because maybe this bug got fixed on `master` 2 days ago already and the work would be duplicated*
+- *ask us about the version we use, because maybe this bug got fixed on `master` 2 days ago already and the work would be duplicated*
 
 ---
 
-This interaction is a problem already, because **you've lost energy that you're willing to invest** to reporting the bug and the **maintainer lost energy that is willing to put** into narrow the scope of bug.
+This interaction is a problem already because **you've lost energy that you're willing to invest** to reporting the bug and the **maintainer lost energy that is willing to put** into narrow the scope of the bug.
 
-It's like going to a mall, stopping right in front of the first door and shouting "open the door". It will take couple of minutes time to security to get to you and figure out what you want. Why not just take the handle yourself? Good luck next time you'll report a robbery to them - they will to help will be a bit lowered, if not depleted.
+It's like going to a mall, stopping right in front of the first door and shouting "open the door". It will take a couple of minutes for security to get to you and figure out what you want. Why not just take the handle yourself? Good luck next time you'll report a robbery to them - they will to help will be a bit lowered, if not depleted.
 
 ---
 
 ## Bug Fix Effectiveness
 
-Remember, the goal of reporting an issue, is to invest as little energy from our side and maintainer's side and get the bug fixed at the same time. The bug report effectivity formula could be written like this:
+Remember, the goal of reporting an issue is to invest as little energy from our side and maintainer's side and get the bug fixed at the same time.
+
+The bug fix effectiveness formula states:
 
 <blockquote class="blockquote text-center">
     Bug Fix Effectiveness = (Reporter Work + Maintainer Work) / 1
@@ -65,7 +69,7 @@ So can we do it better for everyone?
 
 ## Level 2: "There is a bug with this full message" report
 
-*The printing does not work, it ends with fatal error.*
+*The printing does not work, it ends with a fatal error.*
 
 *Here is the output I got with `--debug`/`-vvv`:*
 *...*
@@ -74,27 +78,27 @@ So can we do it better for everyone?
 
 <br>
 
-Good job! we've just saved both ourselves and the maintainer a big amount of energy. Now the maintainer know **what happens** to use and how it looks like.
+Good job! We've just saved both ourselves and the maintainer a significant amount of energy. Now the maintainer know **what happens** to use and how it looks like.
 
 ---
 
-Have you seen any detective movie lately? There is a murder, the detective arrives to the scene and the first witness shows the body and location. That's what we just did in our issue report. "Here is somebody dead, I saw him at 22:00". What happens next? The detective smiles, says thank you and goes home... that would be weird, right? They always ask the same question:
+Have you seen any detective movies lately? There is a murder, the detective arrives at the scene, and the first witness shows the body and location. That's what we just did in our issue report. "Here is somebody dead, I saw him at 22:00". What happens next? The detective smiles, says thank you, and goes home... that would be weird, right? They always ask the same question:
 
 - "How did you get there?"
 - "Where were you before?"
 - "Do you know the person?"
 - "If so, what was the relationship to him/her?"
 
-The detective is looking for prerequisites. They need this information about you to get specific idea how you fit the whole picture. Maybe you're innocent, maybe you're a murderer. They don't know, but they have to decided - so they ask.
+The detective is looking for prerequisites. They need this information about you to get a specific idea of how you fit the whole picture. Maybe you're innocent; maybe you're a murderer. They don't know, but they have to decide - so they ask.
 
 ---
 
-Could you figure out, what is the report missing? Yes, *the prerequisites*.
+Could you figure out what the report is missing? Yes, *the prerequisites*.
 
 We know what is wrong with your issue now. But the maintainer doesn't know, **what did you do before that you got yourself into this state**.
 
 - What CLI command did you run?
-- What controller did you click on?
+- What controller did you open in your browser?
 
 <br>
 
@@ -105,7 +109,7 @@ How can we do it better?
 *I tried to run Rector on my project with this `rector.php`*
 *I used `vendor/bin/rector process p src`*
 
-*The printing does not work, it ends with fatal error.*
+*The printing does not work, it ends with a fatal error.*
 *Here is the output I got with `--debug`/`-vvv`:*
 
 *...*
@@ -131,7 +135,7 @@ Do you remember Bug Fix Effectiveness Formula?
     Bug Fix Effectiveness = (Reporter Work + Maintainer Work) / 1
 </blockquote>
 
-From level 1 to 3, we invested lot of more energy on first issue reporting:
+From level 1 to 3, we invested a lot of more energy on first issue reporting:
 
 Level 1:
 
@@ -141,32 +145,32 @@ Level 3:
 
 - Bug Fix Effectiveness = (0.4 + 1.6) / 1 = 2.0
 
-But because the maintainer don't have to ask us more questoins and we don't have to reply them, we **also increased change to get bug fixed by ~100 %**.
+But because the maintainer doesn't have to ask us more questions and doesn't have to reply to them, we **also increased the chance to get a bug fixed by ~100 %**.
 
 <br>
 
-There is one more step that we found to be the most effective. **It usually requires only 1 comment from report and 1 reply from the maintainer**. Well, if you count closing the issue with pull-request as a comment.
+There is one more step that we found to be the most effective. **It usually requires only one comment from the report and one reply from the maintainer**. Well, if you count closing the issue with pull-request as a comment.
 
-How can we do it better? Don't worry, it's not about learning project tests conventions and sending a failing pull-request.
+How can we do it better? Don't worry; it's not about learning project test conventions and sending a failing pull-request.
 
 
 ## Level 4: "I did exactly this, then this happened" report
 
-Let's look at the **narrow scoping**. What we can read from this report?
+Let's look at the **narrow scoping**. What can we read from this report?
 
 *I tried to run Rector on my project with this `rector.php`*
 *I used `vendor/bin/rector process p src`*
 
-- There is 1-INF rules and settings in `rector.php` and 1-INF files in `/src` directory.
+- There are 1-INF rules and settings in `rector.php` and 1-INF files in the `/src` directory.
 - One of rule and one of rile is causing a bug.
 
 The question is: **what rule and what file is causing this bug?**
 
-We need to narrow the scope of INF * INF, to 1 * 1. How can we do it?
+We need to narrow the scope of INF * INF to 1 * 1. How can we do it?
 
 ### Half-Half Cutting
 
-This technique can be applied to services, to PHPStan rule, to Rector rules, to coding standard, to registered event subscribers... to anything. Similar algorithm is used to sort files in an array.
+This technique can be applied to services, to PHPStan rule, to Rector rules, to a coding standard, to registered event subscribers... to anything. A similar algorithm is used to sort files in an array.
 
 The idea is comment out half of the configuration, run the tool and see if the bug still remains:
 
@@ -217,11 +221,11 @@ Is the bug gone? It must be one of them:
     ]);
 ```
 
-This way we discovery quickly which exact set and which exact rule is causing the problem.
+This way, we discover quickly which exact set and which exact rule is causing the problem.
 
 <br>
 
-But, running whole code base to find out single rule might take hours. How can we avoid it?
+But, running the whole codebase to find out a single rule might take hours. How can we avoid it?
 Let's apply narrow scoping on the filesystem first. Instead of running tool globally:
 
 ```bash
@@ -234,7 +238,7 @@ Let's run it only on one directory:
 vendor/bin/rector p src/Controllers
 ```
 
-It's not there? Pick another directory:
+Is it not there? Pick another directory:
 
 ```bash
 vendor/bin/rector p src/Repository
@@ -244,7 +248,7 @@ It's there, bingo!
 
 <br>
 
-Then we can report all the information that maintainer needs.
+Then we can report all the information that the maintainer needs.
 
 *I tried to run Rector on my project with `rector.php`*
 *When I run `TypedPropertyRector` like this:
