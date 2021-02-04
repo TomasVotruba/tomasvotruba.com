@@ -71,7 +71,7 @@ services:
         class: Symplify\CodingStandard\ObjectCalisthenics\Rules\NoShortNameRule
         tags: [phpstan.rules.rule]
         arguments:
-            minNameLenght: 3
+            minNameLength: 3
             allowedShortNames: ['id', 'to', 'up']
 ```
 
