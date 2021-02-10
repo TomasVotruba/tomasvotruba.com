@@ -80,6 +80,10 @@ final class InterveningPackagesPurifier
     ) {
     }
 
+    /**
+     * @param array<string, int> $monthlyDownloads
+     * @return array<string, int>
+     */
     public function correctInterveningPackages(array $monthlyDownloads, string $packageName): array
     {
         foreach (self::INTERVENING_DEPENDENCIES as $interveningDependency => $dependingPackages) {
@@ -102,6 +106,9 @@ final class InterveningPackagesPurifier
         return $monthlyDownloads;
     }
 
+    /**
+     * @return array<string, int[]>
+     */
     private function getInterveningPackageDownloads(string $packageName): array
     {
         if (isset($this->interveningPackagesDownloads[$packageName])) {

@@ -24,6 +24,7 @@ final class VendorDataFactory
 
     /**
      * @param string[] $frameworksVendorToName
+     * @return mixed[]
      */
     public function createVendorsData(array $frameworksVendorToName): array
     {

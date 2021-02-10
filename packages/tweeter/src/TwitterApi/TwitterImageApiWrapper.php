@@ -41,6 +41,8 @@ final class TwitterImageApiWrapper
     /**
      * Ref: https://developer.twitter.com/en/docs/media/upload-media/api-reference/post-media-upload and
      * https://developer.twitter.com/en/docs/tweets/post-and-engage/api-reference/post-statuses-update.html "media_ids"
+     *
+     * @return mixed[]
      */
     public function uploadImage(string $imageFile): array
     {

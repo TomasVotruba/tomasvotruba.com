@@ -15,6 +15,9 @@ final class ClusterFactory
     ) {
     }
 
+    /**
+     * @param int[] $postIds
+     */
     public function create(string $name, string $description, array $postIds): Cluster
     {
         Assert::allInteger($postIds);

@@ -36,6 +36,7 @@ final class PackageDataFactory
 
     /**
      * @param string[] $packageNames
+     * @return PackageData[]
      */
     public function createPackagesData(array $packageNames): array
     {
