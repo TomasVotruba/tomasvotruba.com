@@ -37,14 +37,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         NullableTypeDeclarationForDefaultNullValueFixer::class,
     ]);
 
-    $parameters->set(Option::SETS, [
-        SetList::PSR_12,
-        SetList::PHP_70,
-        SetList::PHP_71,
-        SetList::COMMON,
-        SetList::SYMPLIFY,
-        SetList::CLEAN_CODE,
-    ]);
+    $parameters->set(Option::SETS, [SetList::PSR_12, SetList::COMMON, SetList::SYMPLIFY, SetList::CLEAN_CODE]);
 
     $services = $containerConfigurator->services();
     $services->set(StandaloneLineInMultilineArrayFixer::class);
