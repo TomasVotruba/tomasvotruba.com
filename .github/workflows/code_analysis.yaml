@@ -12,12 +12,15 @@ jobs:
                     -
                         name: 'ECS'
                         run: 'composer fix-cs --ansi'
+
                     -
                         name: 'PHPStan'
                         run: 'composer phpstan --ansi'
+
                     -
                         name: 'Rector'
-                        run: 'composer rector-ci --ansi'
+                        run: 'vendor/bin/rector process --ansi --dry-run'
+
                     -
                         name: 'Unit Tests'
                         run: 'vendor/bin/phpunit'

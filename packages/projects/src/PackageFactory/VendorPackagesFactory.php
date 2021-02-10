@@ -42,6 +42,9 @@ final class VendorPackagesFactory
         return $this->createPackagesFromPackagesNames($packageNames);
     }
 
+    /**
+     * @return mixed[]
+     */
     private function getPackageData(string $packageName): array
     {
         $packageData = $this->packagistClient->getPackage($packageName);
@@ -61,6 +64,9 @@ final class VendorPackagesFactory
         return $this->createPackagesFromPackagesNames($packageNames);
     }
 
+    /**
+     * @return string[]
+     */
     private function resolvePackageNamesByVendorName(string $vendor): array
     {
         $vendorPackages = $this->packagistClient->getPackagesNamesByVendor($vendor);

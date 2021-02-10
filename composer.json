@@ -6,35 +6,35 @@
         "php": ">=8.0",
         "doctrine/cache": "^1.10",
         "erusev/parsedown-extra": "^0.8.1",
-        "guzzlehttp/guzzle": "^7.0",
+        "guzzlehttp/guzzle": "^7.2",
         "j7mbo/twitter-api-php": "^1.0",
         "kevinrob/guzzle-cache-middleware": "^3.3",
         "nette/finder": "^2.5",
-        "nette/utils": "^3.0",
+        "nette/utils": "^3.2",
         "spatie/packagist-api": "^2.0.2",
         "symfony/asset": "^5.2",
         "symfony/cache": "^5.2",
         "symfony/console": "^5.2",
         "symfony/dotenv": "^5.2",
-        "symfony/flex": "^1.6",
+        "symfony/flex": "^1.11",
         "symfony/framework-bundle": "^5.2",
         "symfony/http-foundation": "^5.2",
         "symfony/http-kernel": "^5.2",
         "symfony/twig-bridge": "^5.2",
         "symfony/twig-bundle": "^5.2",
         "symplify/amnesia": "dev-master",
-        "symplify/autowire-array-parameter": "^9.0.20",
-        "symplify/package-builder": "^9.0.20",
-        "symplify/smart-file-system": "^9.0.20",
-        "symplify/symfony-static-dumper": "^9.0.20",
+        "symplify/autowire-array-parameter": "^9.1",
+        "symplify/package-builder": "^9.1",
+        "symplify/smart-file-system": "^9.1",
+        "symplify/symfony-static-dumper": "^9.1",
         "twig/twig": "^3.0"
     },
     "require-dev": {
         "dg/bypass-finals": "^1.3",
-        "friendsofphp/php-cs-fixer": "^2.17",
-        "nette/neon": "^3.1",
-        "nette/security": "^3.0",
-        "phpstan/phpstan": "^0.12.64",
+        "friendsofphp/php-cs-fixer": "^2.18",
+        "nette/neon": "^3.2",
+        "nette/security": "^3.1",
+        "phpstan/phpstan": "^0.12.69",
         "phpunit/phpunit": "^9.5",
         "rector/rector-prefixed": "^0.9",
         "spatie/http-status-check": "^3.3",
@@ -43,14 +43,14 @@
         "symfony/stopwatch": "^5.2",
         "symfony/var-dumper": "^5.2",
         "symfony/yaml": "^5.2",
-        "symplify/amnesia": "dev-master",
-        "symplify/coding-standard": "^9.0.20",
-        "symplify/config-transformer": "^9.0.20",
-        "symplify/easy-coding-standard": "^9.0.20",
-        "symplify/latte-to-twig-converter": "^9.0.20",
-        "symplify/phpstan-extensions": "^9.0.20",
-        "symplify/phpstan-rules": "^9.0.20",
-        "symplify/static-detector": "^9.0.20"
+        "symplify/amnesia": "^9.1",
+        "symplify/coding-standard": "^9.1",
+        "symplify/config-transformer": "^9.1",
+        "symplify/easy-coding-standard": "^9.1",
+        "symplify/latte-to-twig-converter": "^9.1",
+        "symplify/phpstan-extensions": "^9.1",
+        "symplify/phpstan-rules": "^9.1",
+        "symplify/static-detector": "^9.1"
     },
     "autoload": {
         "psr-4": {
@@ -79,8 +79,6 @@
             "bin/clear_posts_trailing_whitespaces.sh"
         ],
         "check-status": "vendor/bin/http-status-check scan https://tomasvotruba.com --output invalid-links.txt --ansi",
-        "rector": "vendor/bin/rector process --ansi",
-        "rector-ci": "vendor/bin/rector process --ansi --dry-run",
         "thank": "bin/console thank-contributors",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
@@ -89,7 +87,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

@@ -10,6 +10,7 @@ use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
 final class PublishedTweetFactory
 {
     /**
+     * @param mixed[] $rawTweets
      * @return PublishedTweet[]
      */
     public function createFromRawTweets(array $rawTweets): array

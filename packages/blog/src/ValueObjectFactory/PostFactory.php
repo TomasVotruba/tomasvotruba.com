@@ -124,6 +124,9 @@ final class PostFactory
         );
     }
 
+    /**
+     * @param array<string, mixed> $configuration
+     */
     private function resolveTweetImage(array $configuration): ?string
     {
         $tweetImage = $configuration['tweet_image'] ?? null;

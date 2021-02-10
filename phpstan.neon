@@ -29,9 +29,8 @@ services:
                     provideIntParameter: [0]
 
 parameters:
-#    symplify:
-#        max_class_cognitive_complexity: 20
-#        max_cognitive_complexity: 8
+    bootstrapFiles:
+        - vendor/rector/rector-prefixed/vendor/autoload.php
 
     paths:
         - bin
@@ -45,9 +44,10 @@ parameters:
         - packages/projects/config/config.php
         - config/_data
         - config/config.php
+        - ecs.php
+        - rector.php
 
     level: max
-    checkMissingIterableValueType: false
     reportUnmatchedIgnoredErrors: false
 
     excludes_analyse:
@@ -58,41 +58,18 @@ parameters:
         - config/_data/generated/*
 
     ignoreErrors:
-        # intentional for tests
-        - '#Call to function is_countable\(\) with null will always evaluate to false#'
-
         # php-parser Node/Stmt mixups
         - '#(.*?)array<PhpParser\\Node>, array<PhpParser\\Node\\Stmt(.*?)#'
 
         - '#Offset 1 does not exist on array<PhpParser\\Node\\Stmt\>\|null#'
-        - '#Access to an undefined property PhpParser\\Node\\Stmt\:\:\$stmts#'
 
-        - '#PHPDoc tag @var for variable \$finalClassMock contains unresolvable type#'
         - '#Cannot cast array<string\>\|string\|null to string#'
 
         -
             message: '#Array with keys is not allowed\. Use value object to pass data instead#'
             paths:
-                # json
-                - 'packages/github-contributor-thanker/src/Api/GithubApi.php'
                 # calling API with data
                 - 'packages/tweeter/src/TwitterApi/TwitterPostApiWrapper.php'
-
-        -
-            message: '#Class has too many properties \d+\. Try narrowing it down under 10#'
-            path: packages/blog/src/ValueObject/Post.php
-
-        -
-            message: '#Class has too many properties \d+\. Try narrowing it down under 10#'
-            path: packages/blog/src/ValueObject/Post.php
-
-        -
-            message: '#Too many public elements on class \- 24\. Try narrow it down under 10#'
-            path: packages/blog/src/ValueObject/Post.php
-
-        -
-            message: '#Method "__construct\(\)" is using too many parameters \- 17\. Make it under 10#'
-            path: packages/blog/src/ValueObject/Post.php
 
         -
             message: '#Instead of "SplFileInfo" class/interface use "Symplify\\SmartFileSystem\\SmartFileInfo"#'
@@ -102,59 +79,6 @@ parameters:
             message: '#The path "/\.\./\.env\.local" was not found#'
             path: 'tests/bootstrap.php'
 
-        # false positive
-        -
-            message: '#Add regex101\.org link to that shows the regex in practise, so it will be easier to maintain in case of bug/extension in the future#'
-            path: 'packages/tweeter/src/Configuration/Keys.php'
-
-        # symfony magic
-        -
-            message: '#Do not use protected element in final class#'
-            paths:
-                - src/HttpKernel/TomasVotrubaKernel.php # 39
-                - src/HttpKernel/TomasVotrubaKernel.php # 46
-
-        -
-            message: '#Method "__construct\(\)" is using too many parameters \- \d+\. Make it under 8#'
-            paths:
-                - packages/blog/src/ValueObject/Post.php
-
-        # is fixed in dev-master
-        -
-            message: '#Array with keys is not allowed\. Use value object to pass data instead#'
-            paths:
-                - src/Twig/GlobalVariablesTwigExtension.php
-
-        -
-            message: '#Do not call parent method if no override process#'
-            paths:
-                - packages/blog/src/Posts/Year2018/ConsoleDI/App/AppKernel.php # 18
-                - packages/blog/src/Posts/Year2018/ParameterToSymfonyController/App/ParameterToSymfonyControllerAppKernel.php # 16
-
-        -
-            message: '#Do not use chained method calls\. Put each on separated lines#'
-            paths:
-                - packages/tweeter/src/TwitterApi/TwitterApiCaller.php # 26
-
-        # this would be switched to twitter action anyway
-        -
-             message: '#Private method in is not allowed here \- it should only delegate to others\. Decouple the private method to a new service class#'
-             paths:
-                - packages/tweeter/src/Command/TweetCommand.php # 96
-                - packages/tweeter/src/Command/TweetCommand.php # 103
-                - packages/tweeter/src/Command/TweetCommand.php # 117
-                - packages/tweeter/src/Command/TweetCommand.php # 128
-
-        # php 8.0 bugs
-        - '#Parameter \#2 \$associative of function get_headers expects bool, int given#'
-
-
-        # bug in Symplify for PHP 8.0 attributes with arrays
-        -
-            message: '#Array with keys is not allowed\. Use value object to pass data instead#'
-            paths:
-                - packages/blog/src/Controller/PostController.php
-
         -
             message: '#Do not use factory/method call in constructor\. Put factory in config and get service with dependency injection#'
             paths:
@@ -162,5 +86,11 @@ parameters:
                 -  packages/blog/src/Repository/ClusterRepository.php
 
         # bug on Symplify rule
-        - '#Only EntityManager\* type as dependency is allowed#'
         - '#Do not use factory/method call in constructor\. Put factory in config and get service with dependency injection#'
+
+        -
+            message: '#Private method in is not allowed here \- it should only delegate to others\. Decouple the private method to a new service class#'
+            paths:
+                - packages/tweeter/src/Command/TweetCommand.php
+
+        - '#Method TomasVotruba\\FrameworkStats\\Result\\PackageDataFactory\:\:createPackagesData\(\) should return array<TomasVotruba\\FrameworkStats\\ValueObject\\PackageData\> but returns array<TomasVotruba\\FrameworkStats\\Contract\\LastYearTrendAwareInterface\>#'

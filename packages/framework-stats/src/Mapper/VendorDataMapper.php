@@ -13,6 +13,9 @@ final class VendorDataMapper
     ) {
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function mapObjectToArray(VendorData $vendorData): array
     {
         $vendorDataArray['vendor_name'] = $vendorData->getVendorName();

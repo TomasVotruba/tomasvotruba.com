@@ -8,6 +8,9 @@ use TomasVotruba\FrameworkStats\ValueObject\PackageData;
 
 final class PackageDataMapper
 {
+    /**
+     * @return array<string, string|int|float>
+     */
     public function mapObjectToArray(PackageData $packageData): array
     {
         $packageDataArray = [];

@@ -14,6 +14,9 @@ final class FileToJsonLoader
     ) {
     }
 
+    /**
+     * @return mixed[]
+     */
     public function load(string $file): array
     {
         $fileContent = $this->smartFileSystem->readFile($file);

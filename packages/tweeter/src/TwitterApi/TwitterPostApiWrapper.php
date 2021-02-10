@@ -157,6 +157,9 @@ final class TwitterPostApiWrapper
         );
     }
 
+    /**
+     * @return mixed[]
+     */
     private function getResult(?int $maxId = null): array
     {
         $data = [
