@@ -1,5 +1,0 @@
-# see https://kodiakhq.com/#quickstart
-version = 1
-
-merge.delete_branch_on_merge = true
-merge.method = "squash"
