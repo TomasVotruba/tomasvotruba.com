@@ -401,8 +401,6 @@ How can we get out of this bush? It's simpler than the two examples before. What
 
 Use a variable, of course.
 
-$this->template->welcomeHere = '...';
-
 ```diff
 -$this->template->welcomeHere = '...';
 +$welcomeHere = '...';
