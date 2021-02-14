@@ -9,9 +9,6 @@ tweet: "New Post on #php 🐘 blog: Removing Static - There and Back Again"
 tweet_image: "/assets/images/posts/2019/removing-static/there.jpg"
 ---
 
-*This process will be (in a more practical and detailed way) part of future [Rector training](https://getrector.org), so you'll be to **solve any problem with your PHP** code regardless the size of your project. Static refactoring is just a very nice example, that happens to be very popular around me nowadays and no-one solves it.*
-
-
 ## 1. Show Code
 
 I usually start with a minimal code snippet possible, that explore the problem. No comments, no types, just the code. This is the real code I'm currently refactoring:
