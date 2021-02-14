@@ -11,7 +11,7 @@ abstract class AbstractTwitterTestCase extends AbstractKernelTestCase
     protected function ensureEnvVariablesAreSet(): void
     {
         // merge for Github Actions to work
-        $envs = getenv();
+        $envs = (array) getenv();
         $_ENV = array_merge($_ENV, $envs);
 
         if ($_ENV['TWITTER_CONSUMER_KEY'] && $_ENV['TWITTER_CONSUMER_SECRET'] && $_ENV['TWITTER_OAUTH_ACCESS_TOKEN'] && $_ENV['TWITTER_OAUTH_ACCESS_TOKEN_SECRET']) {
