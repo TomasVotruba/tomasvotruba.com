@@ -105,7 +105,7 @@ I have come around some bushes in my code before:
 
 Today we look on 3 more examples that can be easily missed while slowly poluting your code:
 
-## 1. Service Inside Value Object <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+## 1. Service Inside Value Object
 
 By value object, we talk about any entity, value object, or data transfer object. Anything that can be created multiple times, like vaccines.
 
@@ -202,7 +202,7 @@ Let's refactor service from the object...
 
 <em class="fas fa-fw fa-2x fa-check text-success"></em>
 
-## 2. Trait adding Dependency <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+## 2. Trait adding Dependency
 
 Let's stay with a vaccine from previous example. We got into the same problem:
 
@@ -285,7 +285,7 @@ $vaccinatingService->vaccinate($animal);
 
 After this incident, we [forbid trait completely](https://github.com/symplify/phpstan-rules/blob/master/docs/rules_overview.md#notraitrule) with PHPStan.
 
-## 3. Using Nette Template to Transfer Data <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+## 3. Using Nette Template to Transfer Data
 
 Last but not least, there are template objects. It about any object that magically **sets its variables on the fly**:
 
