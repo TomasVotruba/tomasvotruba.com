@@ -9,14 +9,7 @@ use Nette\Utils\DateTime;
 
 final class Post
 {
-    /**
-     * @var int
-     */
-    private const READ_WORDS_PER_MINUTE = 260;
-
     private string $content;
-
-    private string $plaintextContent;
 
     public function __construct(
         private int $id,
@@ -37,7 +30,6 @@ final class Post
         private ?string $language,
         private string $absoluteUrl
     ) {
-        $this->plaintextContent = strip_tags($htmlContent);
     }
 
     public function getContent(): string
@@ -88,13 +80,6 @@ final class Post
     public function getDateTime(): DateTimeInterface
     {
         return $this->dateTime;
-    }
-
-    public function getReadingTimeInMinutes(): int
-    {
-        $wordCount = substr_count($this->plaintextContent, ' ') + 1;
-
-        return (int) ceil($wordCount / self::READ_WORDS_PER_MINUTE);
     }
 
     public function getUpdatedAt(): ?DateTimeInterface

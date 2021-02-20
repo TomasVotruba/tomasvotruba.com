@@ -1,10 +1,5 @@
 <ul class="list-inline post-metadata">
     <li class="list-inline-item mr-3">
-        <em class="fas fa-clock fa-fw"></em>
-        <strong>{{ post.getReadingTimeInMinutes() }} min</strong>
-    </li>
-
-    <li class="list-inline-item mr-3">
         <em class="fas fa-calendar fa-fw"></em>
         <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
             {% if post.updatedAt is not null %}<strike>{% endif %}
