@@ -107,7 +107,7 @@ final class InterveningPackagesPurifier
     }
 
     /**
-     * @return array<string, int[]>
+     * @return array<string, int>
      */
     private function getInterveningPackageDownloads(string $packageName): array
     {
