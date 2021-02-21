@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use PhpCsFixer\Fixer\ClassNotation\ClassAttributesSeparationFixer;
 use PhpCsFixer\Fixer\FunctionNotation\NullableTypeDeclarationForDefaultNullValueFixer;
 use PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer;
 use PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer;
@@ -33,7 +32,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
         // broken on PHP 8.0
         BinaryOperatorSpacesFixer::class,
-        ClassAttributesSeparationFixer::class,
         NullableTypeDeclarationForDefaultNullValueFixer::class,
     ]);
 
