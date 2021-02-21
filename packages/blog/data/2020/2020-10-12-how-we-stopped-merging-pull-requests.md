@@ -6,8 +6,10 @@ perex: |
     <br><br>
     Here is an idea - **don't merge any pull-request from now on**...
 
-tweet: "New Post on #php 🐘 blog: How We Stopped Merging Pull Requests    #cireview #kodiak"
-tweet_image: "/assets/images/posts/2020/kodiak/kodiak_waiting.png"
+tweet: "New Post on #php 🐘 blog: How We Stopped Merging Pull Requests    #cireview"
+
+updated_since: "February 2021"
+updated_message: "From Kodiak to native [GitHub Auto-merge](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/automatically-merging-a-pull-request)"
 ---
 
 ...and let them opened for ages... no, just kidding.
@@ -26,7 +28,7 @@ How to kill the waiting time? Go for a coffee, toilet break, or a social leak (F
 <blockquote class="blockquote text-center mt-5 mb-5" markdown="1">
 "**Can you automate** responsibility developers have to think about?
 <br>
-Please do it!
+Just do it!
 <br>
 They will be able to focus more and produce better quality code."
 </blockquote>
@@ -42,11 +44,11 @@ That's **240 distractions with ~5 minutes upkeep** = 20 hours wasted by brain-wa
 
 ## Delegate and Automate Merge Request
 
-What if I told you just a few percent of these manually? The rest is done by [Kodiak](https://github.com/marketplace/kodiakhq). That's not my full-time on-demand coworker, but Github Application that **handles automated merging**.
+What if I told you just a few percent of these manually? The rest is done by GitHub Auto-merge.
 
-How does *Kodiak* work? You mark the pull-request with the "automerge" tag, then - if CI passes - the pull-request is merged. So instead of waiting 240 times for CI feedback, you'll **add the tag when you finish the review**. Then the pull-request is closed, and you can focus on the next work in the peace.
+How does *GitHub Auto-merge* work? You mark the pull-request with the "automerge" tag, then - if CI passes - the pull-request is merged. So instead of waiting 240 times for CI feedback, you'll **add the tag when you finish the review**. Then the pull-request is closed, and you can focus on the next work in the peace.
 
-## 4 Steps to Setup Kodiak
+## 4 Steps to Setup Auto-Merge
 
 ### 1. Go to Setting of your GitHub Repository
 
@@ -60,41 +62,27 @@ How does *Kodiak* work? You mark the pull-request with the "automerge" tag, then
 
 <img src="/assets/images/posts/2020/kodiak/kodiak_require.png" alt="" class="img-thumbnail mt-3">
 
-### 4. Enable Kodiak
+### 4. Enable GitHub Auto-merge
 
-Go to <a href="https://github.com/marketplace/kodiakhq">marketplace</a> and enable it.
+Go to your project settings, e.g. https://github.com/symplify/symplify/settings
 
-### 5. Add `.kodiak.toml` Setup To the Repository code
-
-```yaml
-# .kodiak.toml
-version = 1
-
-# this saves deleting merged branches manually
-merge.delete_branch_on_merge = true
-```
+<img src="https://user-images.githubusercontent.com/924196/108640310-3270be80-7499-11eb-93e8-ceb380be00e0.png"  class="img-thumbnail mt-3">
 
 <br>
 
-Now Kodiak is enabled and waiting for your work!
+Now GitHub is enabled and waiting for your work!
 
-## 1 Step to Automerge Pull-Request with Kodiak
+## 1 Step to Automerge Pull-Request with GitHub
 
-### 1. After You Decide the PR is Ready, add the "automerge" tag
+Is your PR ready? Go down and enable the automerge:
 
-<img src="/assets/images/posts/2020/kodiak/koidak_tag.png" alt="" class="img-thumbnail mt-3">
+<img src="https://user-images.githubusercontent.com/924196/108640368-8380b280-7499-11eb-9545-e9c96f6d4cb5.png" class="img-thumbnail">
 
-Then you're finished. The Kodiak will handle the rest...
+GitHub waits for the CI to pass and then merges and deletes branch:
 
-<br>
+<img src="https://user-images.githubusercontent.com/924196/108640447-f0944800-7499-11eb-81ab-05870aa999f9.png" alt="" class="img-thumbnail">
 
-Kodiak waits for the CI to pass...
-
-<img src="/assets/images/posts/2020/kodiak/kodiak_waiting.png" alt="" class="img-thumbnail mt-3">
-
-...then merges and deletes branch:
-
-<img src="/assets/images/posts/2020/kodiak/kodiak_merge.png" alt="" class="img-thumbnail mt-3">
+<em class="fas fa-fw fa-check text-success fa-2x"></em>
 
 <br>
 
