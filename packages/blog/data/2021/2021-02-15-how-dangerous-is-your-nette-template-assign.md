@@ -153,7 +153,7 @@ $product->changePrice(100);
 $product->changePrice(10);
 ```
 
-So after many years of tears learned to **use a constructor, where we require the values that cannot be changed**:
+So after many years of tears we learned to **use a constructor, where we require the values that cannot be changed**:
 
 ```php
 final class Product
