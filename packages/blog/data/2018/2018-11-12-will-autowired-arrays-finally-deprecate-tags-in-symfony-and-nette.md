@@ -8,6 +8,10 @@ perex: |
     I'm very happy to see that [collectors](/cluster/collector-pattern-the-shortcut-hack-to-solid-code/) are finally getting to the core of DI components of PHP frameworks. Tags, extensions, compiler passes and `autoconfigure` now became workarounds. Collectors are now in the best place they can... **the PHP code**.
 
 tweet: "New Post on My Blog: Can Autowired Arrays Finally Deprecate Tags in #symfony and #nettefw?    #collector #nettefw30 #php #simplestupid"
+
+updated_since: "February 2021"
+updated_message: |
+    Updated YAML to PHP config syntax, use new [symplify/autowire-array-package](https://github.com/symplify/autowire-array-parameter).
 ---
 
 Let's say we need to build a tool for releasing a new version of the open-source package. Something like what I use for
@@ -18,8 +22,6 @@ You want it to be *open for extension and closed for modification*. How do we do
 You introduce and a `ReleaseWorkerInterface`:
 
 ```php
-<?php declare(strict_types=1);
-
 namespace Moses\ReleaseWorker;
 
 interface ReleaseWorkerInterface
@@ -31,8 +33,6 @@ interface ReleaseWorkerInterface
 Good, now if anyone wants to extend it, they' just create a new service:
 
 ```php
-<?php declare(strict_types=1);
-
 namespace Moses\ReleaseWorker;
 
 use Nette\Utils\Strings;
@@ -59,10 +59,13 @@ final class CheckBlogHasReleasePostReleaseWorker implements ReleaseWorkerInterfa
 
 and register it
 
-```yaml
-# moses.yml
-services:
-    Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker: ~
+```php
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker::class);
+};
 ```
 
 ## Find all the `ReleaseWorkerInterface`?
@@ -73,18 +76,19 @@ How can we get all the services that implement `ReleaseWorkerInterface`?
 
 ### 1. Tags!
 
-```yaml
-services:
-    Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker:
-        tags:
-            - "release_worker"
+```php
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+
+return static function (ContainerConfigurator $containerConfigurator): void {
+    $services = $containerConfigurator->services();
+    $services->set(Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker::class)
+        ->tag('release_worker');
+};
 ```
 
 In extension/compiler pass:
 
 ```php
-<?php declare(strict_types=1);
-
 $mosesDefinition = $containerBuilder->getDefinition(Moses::class);
 
 foreach ($containerBuilder->findByTags('release_worker') as $workerDefinition) {
@@ -101,8 +105,6 @@ What's the next option we have?
 In extension/compiler pass:
 
 ```php
-<?php declare(strict_types=1);
-
 $mosesDefinition = $containerBuilder->getDefinition(Moses::class);
 
 foreach ($containerBuilder->findByType(ReleaseWorkerInterface::class) as $workerDefinition) {
@@ -119,8 +121,6 @@ What about something "2018"?
 All options above hides a contract. Which one? The `Moses` class looks like this:
 
 ```php
-<?php declare(strict_types=1);
-
 final class Moses
 {
     // property + setter
@@ -137,8 +137,6 @@ final class Moses
 What is wrong with this contract? Have you noticed the constructor? Me neither, **it's not there!** It needs at least some release workers, it's useless without it, but we lie about this contract:
 
 ```php
-<?php declare(strict_types=1);
-
 $moses = new Moses\Moses;
 $moses->release('v5.0.0');
 
@@ -157,8 +155,6 @@ We should make a design that is reliable.
 - Do you need all `ReleaseWorkerInterface`s? **Tell us in the constructor.**
 
 ```php
-<?php declare(strict_types=1);
-
 $releaseWorkers = [
     new Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker,
 ];
@@ -169,8 +165,6 @@ $moses = new Moses\Moses($releaseWorkers);
 Now when we call the service, **we can actually see some output**:
 
 ```php
-<?php declare(strict_types=1);
-
 $moses->release('v5.0.0');
 
 // "Good job! The blog post was released."
@@ -187,8 +181,6 @@ Sound nice, right? Is that even possible? Without that, we could drop tags, the 
 It sounds really nice. But how would that work in PHP? How does container now what we need in the constructor. Yes, Mr. Potter?
 
 ```php
-<?php declare(strict_types=1);
-
 namespace Moses;
 
 use Moses\ReleaseWorker\ReleaseWorkerInterface;
@@ -216,13 +208,17 @@ I have no idea.
 
 But you can **install it today**:
 
- - with `"nette/di": "v3.0.0-beta1"` with [this feature enabled in the core](https://github.com/nette/di/pull/178)
- - and `"symplify/package-builder": "^5.2"` and [`AutowireArrayParameterCompilerPass`](https://github.com/symplify/package-builder#autowire-array-parameters)
+ - with `"nette/di": "v3.0"` with [this feature enabled in the core](https://github.com/nette/di/pull/178)
+ - and [`symplify/autowire-array-parameter`](https://github.com/symplify/autowire-array-parameter)
 
 ## Does it Work?
 
-Yes, for the cases above it's 1:1 substitution with 0-configuration. It's part of [Symplify since 5.1](https://github.com/symplify/symplify/pull/1145/files) (released 1,5 month ago) and **it works flawlessly**.
+Yes, for the cases above it's 1:1 substitution with 0-configuration. It's part of [Symplify since 5.1](https://github.com/symplify/symplify/pull/1145/files) and it works flawlessly.
 
 <br>
 
-And why *Moses*? Well, he *released* the most of people from slavery :)
+And why *Moses*? Well, he *released* thousands of people from slavery :)
+
+<br>
+
+Happy coding!

@@ -61,8 +61,6 @@ parameters:
         # php-parser Node/Stmt mixups
         - '#(.*?)array<PhpParser\\Node>, array<PhpParser\\Node\\Stmt(.*?)#'
 
-        - '#Offset 1 does not exist on array<PhpParser\\Node\\Stmt\>\|null#'
-
         - '#Cannot cast array<string\>\|string\|null to string#'
 
         -

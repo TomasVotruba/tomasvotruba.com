@@ -3,11 +3,6 @@ id: 95
 title: "Jak psát zajímavé inzeráty pro ajťáky"
 perex: |
     Už pár let sleduji pracovní PHP trh z pozice programátorů i z pohledu firem. S oběma stranami mám dobrý vztah. Tuším, co potřebují a co je trápí. <strong>Vidím, že se navzájem chtějí, jen komunikace trochu vázne</strong>.<br><br>Původně z toho měl být feedback na inzeráty Jobs.cz a Skrz.cz. Při jejich čtení mě ale napadlo <strong>spoustu dalších tipů, o které se chci podělit</strong>.
-
-deprecated_since: "August 2017"
-deprecated_message: "This post is available only in Czech and whole website was moved to English."
-
-lang: cs
 ---
 
 

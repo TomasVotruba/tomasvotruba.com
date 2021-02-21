@@ -2,30 +2,34 @@
 id: 161
 title: "How to Test Monorepo in 3 Layers"
 perex: |
-    You already have a monorepo, you have at least 2 packages, autoloaded with composer and splitting works.
-     Now you're about to set up testing and code quality tools.
+    Do you have a monorepo, with 2 packages at least, autoloaded with composer and splitting works?
+    Good! Now you're about to set up testing and code quality tools.
     <br><br>
     How to make testing so tight no bug can escape?
+
 tweet: "New Post on My Blog: How to Test #Monorepo in 3 Layers"
+
+updated_since: "February 2021"
+updated_message: "Changed from Travis to GitHub Actions, from post-split testing to local split testing."
 ---
 
-There are 3 layers you test your monorepo in. Often projects go just a few of them:
+There are 3 layers you test your monorepo in. Most projects have 2 of them max.:
 
 - **Testing Monorepo** (Symfony, Sylius)
 - **Testing Standalone Packages in Monorepo** (Symfony, Sylius)
 - **After Split Testing**
 
-I'm not sure why the last one is often skipped. Surprisingly, it's very easy to setup - add `.travis.yml` and enable the repository testing on Travis.
+I'm not sure why the last one is often skipped. Surprisingly, it's very easy to setup - a matter of single a new workflow file in `.github/workflows`.
 
-Now you know, what testing layers there are. It's time to look **why each layer is important**.
+Now we know the 3 testing layers. It's time to look **why each particular layer is important**.
 
 ## 1. Testing Monorepo
 
 ```bash
+/.github/workflows/...
 /packages
     /first-package
     /second-package
-.travis.yml
 phpunit.xml
 ```
 
@@ -46,16 +50,16 @@ One run and I we can see test are passing or failing. Must have.
 ## 2. Testing Standalone Packages in Monorepo
 
 ```diff
+ /.github/workflows/...
  /packages
      /first-package
 +        phpunit.xml
      /second-package
 +        phpunit.xml
- .travis.yml
  phpunit.xml
 ```
 
-In this layer, each package has own PHPUnit setup. It still uses root `vendor/autoload.php`, but the testing scope is more similar to standalone package testing. If's *faking* after split testing for poor people.
+In this layer, each package has own PHPUnit setup. It still uses root `vendor/autoload.php`, but the testing scope is more similar to standalone package testing. If's *faking* split testing for poor people.
 
 ```bash
 vendor/bin/phpunit packages/first-package
@@ -68,25 +72,12 @@ PHPUnit **has own autoloading so it autoloads tests** without relying on your `c
 
 <br>
 
-**Use PSR-4 in your tests**:
-
-- `/packages/first-package/src/SomeClass.php` → `FirstPackage\SomeClass`
-- `/packages/first-package/tests/SomeClassTests.php` → `FirstPackage\Tests\SomeClassTest`
-
-PHPStan and Rector are already forcing you to do it because they need to know the exact class type of every element to works correctly.
-
-Thank you!
-
-<br>
-
-Back to testing...
-
-So when you run e.g. `vendor/bin/phpunit packages`, you basically tell the PHPUnit *autoload `packages` directory*.
+So when we run e.g. `vendor/bin/phpunit packages`, we basically tell the PHPUnit *autoload `packages` directory*.
 
 What happens, when:
 
- - `packages/first-package/tests/Fixture/SomeClass.php` is used in test
- - in `packages/second-package/tests/UnrelatedTest.php`?
+ - `packages/first-package/tests/Fixture/SomeClass.php` is used in test in
+ - `packages/second-package/tests/UnrelatedTest.php`?
 
 <em class="fas fa-3x fa-times text-danger"></em>
 
@@ -94,48 +85,22 @@ What happens, when:
 
 You'll find out eventually when `second-package` is downloaded and break the code to somebody but isn't automated testing suppose to prevent that?
 
-## 3. After Split testing
-
-```diff
- /packages
-     /first-package
-         phpunit.xml
-+        .travis.yml
-     /second-package
-         phpunit.xml
-+        .travis.yml
- .travis.yml
- phpunit.xml
-```
-
-In each `.travis.yml` you put script to run tests:
-
-```yaml
-script:
-    - vendor/bin/phpunit
-```
-
-It will trigger standalone Travis for each package after splitting the monorepo:
-
-- `our-project/our-project` - monorepo running...
-- `our-project/first-package` - Travis running...
-- `our-project/second-package` - Travis running...
+## 3. Split Testing
 
 ### Why is it Important?
 
-This is like a double condom with birth control - the best quality testing you can get. It's **almost identical with real use when programmer downloads** a package by `our-project/second-package`.
+This is like a double condom with birth control - the best quality testing we can get. It's **almost identical with real use when programmer downloads** a package by `packages/second-package`.
 
-It will download:
+Our goal is to autoload:
 
-- the second-package code in `/src`
-- dependencies from `composer.json` **ONLY** of that package
+- the second-package code in `packages/second-package/src`
+- dependencies from `packages/second-package/composer.json` **ONLY**
 
 <br>
 
-I think you've figured out by now the why by seeing **ONLY**. You can't find this bug in layer 1 or 2.
+You've figured out by now *the why* by seeing **ONLY**. You can't find this bug in layer 1 or 2.
 
-
-Our first package uses Doctrine `/packages/first-package/composer.json`
+Our first package uses Doctrine `packages/first-package/composer.json`
 
 ```json
 {
@@ -147,16 +112,14 @@ Our first package uses Doctrine `/packages/first-package/composer.json`
 }
 ```
 
-At the same time, `second-package` has this class:
+At the same time, `second-package` is using the Doctrine class:
 
 ```php
-<?php
-
 namespace OurProject\SecondPackage;
 
 use Doctrine\ORM\EntityManagerInterface;
 
-class ProductController
+final class ProductController
 {
     public function __construct(EntityManagerInterface $entityManager)
     {
@@ -164,7 +127,7 @@ class ProductController
 }
 ```
 
-And this `composer.json`:
+But does **not require Doctrine** it in `composer.json`:
 
 ```json
 {
@@ -175,29 +138,10 @@ And this `composer.json`:
 }
 ```
 
-What happens, when we run one all previous layers?
+How does the GitHub Action **workflow look like exactly**? Checkout [How to Test Monorepo After Split Before Actual Split](/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split/).
 
-```yaml
-vendor/bin/phpunit
-vendor/bin/phpunit packages/first-package
-vendor/bin/phpunit packages/second-package
-```
+That's why after split testing is so important. GitHub Action will tell us!
 
-<em class="fas fa-3x fa-times text-danger"></em>
+<br>
 
-**It will silently pass**, because our monorepo has `doctrine/orm` installed, thanks to dependency in `first-package` (it's actually propagated by [tools](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command/#3-merge-code-composer-json-code) to root `composer.json`).
-
-This is **the most common error while developing with monorepo first year**. You add dependencies here and there, you add a couple of new packages and code grows and grows.
-
-That's why after split testing is so important. Travis will tell you this instantly.
-
-
-## The Better Your Test Are, The More You Focus on Coding
-
-Of course, you can manage these mutual dependencies by manual testing, in code-reviews, have a tool that will scan the code and composer it to `composer.json` requirements and so on. Their options are very stressful for developers because they need to automated work manually - imagine you'd check each space on each line instead of using Easy Coding Standard.
-
-**So instead of focusing on machines work, just add `.travis.yml` to each of your packages and let Travis handle that.**
-
-Travis has a purpose and you can focus on what you enjoy the most - coding.
-
-Win-win :)
+Happy coding!
