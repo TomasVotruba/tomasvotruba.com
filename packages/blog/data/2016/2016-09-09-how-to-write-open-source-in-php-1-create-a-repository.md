@@ -4,16 +4,21 @@ title: "How to write open-source in PHP 1: Create a repository on Github"
 perex: |
     Do you have some code you want to share but you don't know exactly how? Well, writing open-source is complex process.
     In this series, I'll break it down to <strong>the smallest steps possible</strong>, so that you
-    can <strong>start your own OS project with zero-knowledge</strong> (OS = open-source).
+    can **start your own open-source project with zero-knowledge**.
     Ready? Let's start with creating a Github repository!
+
 tweet: "How to write #openSource in #php 1: Create a repository on @Github"
+
+updated_since: "February 2021"
+updated_message: |
+    Added new tip on package naming, little details.
 ---
 
-## Meet Github, OS's best friend
+## Meet GitHub, OS's best friend
 
 If not already, [register on Github](https://github.com). It's a place where all open-source lives and breathes. For free!
 
-Then create a repository with <a href="https://github.com/new">New Repository</a> button.
+Then create a repository with [New Repository](https://github.com/new) button.
 
 ### Name repository well... well how?
 
@@ -25,7 +30,7 @@ Then create a repository with <a href="https://github.com/new">New Repository</a
 
 Nice theory. What about some examples?
 
-- **good names**: *Datagrid*, *ImageResizer*, *DoctrineFilters*
+- **good names**: *datagrid*, *image-resizer*, *doctrine-filters*
 - **bad names**: *TomasPackage*, *DoctrineExtras*, *Translate*
 
 That's all you need now. Hit "Create repository" and you are done!
@@ -49,7 +54,7 @@ echo "# OpenSourcePackageDemo" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin git@github.com:TomasVotruba/OpenSourcePackageDemo.git
+git remote add origin git@github.com:tomasvotruba/open-source-package-demo.git
 git push -u origin master
 ```
 
@@ -71,7 +76,7 @@ git init
 Add ONLINE address where we want publish your code
 
 ```bash
-git remote add origin git@github.com:TomasVotruba/OpenSourcePackageDemo.git
+git remote add origin git@github.com:tomasvotruba/open-source-package-demo.git
 ```
 
 #### 2. Add some code
@@ -123,7 +128,7 @@ Before creating next package, just go trough it to remind yourself what is most 
 
 What have you learned today?
 
-- That OS stands for open-source. You can also find *OSS* as for *open-source software*.
+- That *OS* stands for *open-source*. You can also find *OSS* as for *open-source software*.
 - How to **create proper OS repository**.
 - How to **add few lines there with git**.
 
@@ -133,13 +138,6 @@ What have you learned today?
 - What are **repository meta files**.
 - How and why to **use badges**.
 
----
+<br>
 
-## Hate me, please!
-
-Did you came across some error or wtf? Is it boring, too long or too vague?
-Just write me a comment. I want to make this series bulletproof and as much as helpful as possible.
-
-**You will help thousands of others if you help me to fix one issue.**
-
-Thank you!
+Happy coding!

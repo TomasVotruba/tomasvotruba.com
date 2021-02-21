@@ -2,10 +2,14 @@
 id: 13
 title: "How to write open-source in PHP 2: Rise value of your package with help of skeleton"
 perex: |
-    After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some <strong>metadata files</strong>.
+    After creating a repo, we have to fill it with something useful. Our code! Of course, but we also need some **metadata files**.
     What are they for? Is there some prepared code we can use? What are badges for? <strong>I will answer all these questions today.</strong>
 
-tweet: "How to write #openSource in #php 2: Use package skeleton @travisCI"
+tweet: "How to write #openSource in #php 2: Use package skeleton"
+
+updated_since: "February 2021"
+updated_message: |
+    The thephpleague/skeleton is falling behind last 3 years, promoting deprecated practise, so it was dropped. Scrutinizer to PHPStan, ECS added.
 ---
 
 Other programmers who want to use your package are usually looking for **long term value**.
@@ -24,8 +28,7 @@ I will let you think about them a little bit. We will relate with specific files
 
 Now, the first step that can positively influence all the 4 answers is **using a skeleton** with prepared metadata files. Guys from [The PHP League](https://thephpleague.com) already did the job for you and created a [skeleton](https://github.com/thephpleague/skeleton) package.
 
-
-## How to get skeleton code to your local repository in 4 steps
+## How to get Skeleton code to your local Repository in 4 steps
 
 1. Go to repository on Github and click on *Clone or download*
 2. Then *Download a ZIP*
@@ -50,7 +53,7 @@ directories and I'm ready to roll. This is because:
     - e.g. A new PHP version is out, I tune my continuous integration (CI) setup etc.
 
 
-## What is the purpose of these files
+## What is the Purpose of these Files?
 
 Now we look on every directory and file and how it's related to the 4 key questions.
 Just to remind you, the end user is interested in:
@@ -86,7 +89,6 @@ Just to remind you, the end user is interested in:
 - **Quality**: tested code is perceived better quality
 - **Trust**: I don't have to hope that code works, **I can trust the code**
 
-
 ### `.gitattributes`
 
 *Meaning*
@@ -98,7 +100,6 @@ Just to remind you, the end user is interested in:
 *Profit*
 
 - **Usability**: Since your package save some internet traffic and space on hard drives, it's a bit more usable.
-
 
 ### `.gitignore`
 
@@ -112,45 +113,33 @@ Just to remind you, the end user is interested in:
 
 - **Trust**: Without this I would not trust you know anything about open-source.
 
-
-### `.scrutinzer.yml`
-
-*Meaning*
-
-- configuration for [Scrutinizer](https://scrutinizer-ci.com) - code quality and code coverage tool
-- to enable it, [login](https://scrutinizer-ci.com/login) and new repository
-    - I recommend you to login in via Github, since it adds hooks to your repository
-- it would be triggered every time your commit to master or create a PR
-
-*Profit*
-
-<div>
-    <img src="/assets/images/posts/2016/open-source/quality-and-coverage.png" alt="Code quality and coverage badges in README">
-    <br>
-    <em>Code quality and coverage badges in README</em>
-</div>
-<br>
-
-- **Quality**: Tests are fine, but with 5 % coverage, they have no added value. When you have 90% coverage, you got attention.
-    Also there is code quality score from 0 to 10. It tells you about code complexity, which is the most important. **Simple code is easier to maintain and debug**.
-    I will show you how to get 10 with bit of practise later.
-
-
-### `.travis.yml`
+### `ecs.php`
 
 *Meaning*
 
-- configuration for [Travis](https://travis-ci.org) - continuous integration tool for tests
-- to enable it, go register there and add the repository
+- config for [Easy Coding Standard](https://github.com/symplify/easy-coding-standard) - the easiest tool for coding standard
+- it checks code to keep it in one compatible coding standard format
 
 *Profit*
 
-- **Trust**: Do you have test but you don't run them for every change? How can I know the code works?
+- **Quality**: coders can contribute in any format their like and the coding standard tool will take care of it for them
+
+### `phpstan.neon`
+
+*Meaning*
+
+- configuration for [PHPStan](https://phpstan.org/) - *the* best static analyzer to PHP
+- it run on every commit, checking obvious mistakes for you, like call on possible `null`
+
+*Profit*
+
+- **Trust**: you and your contributors can stop thinking about detailed code and go a relax - everyone can contribute easily
+- **Quality**: tested code is perceived better quality
 
 ### `composer.json`
 
 - list of dependencies
-- also configuration for [Packagist](https://packagist.org), where you need to add your package, so it can be installed by others
+- configuration for [Packagist](https://packagist.org), where you need to add your package, so it can be installed by others
 - to enable it, you have to:
     - go there
     - add repository
@@ -209,7 +198,7 @@ Look on these 2 - what information can we get?
 - Last version is probably 2.5, but not sure. Do they update manually? - **CONFUSING**
 - Why is master promoted on first place? Should I use that? - **CONFUSING**
 
-<small>From [Doctrine2 repository](https://github.com/doctrine/doctrine2/blob/master/README.md).</small>
+<small>From [Doctrine2 repository](https://github.com/doctrine/orm/blob/master/README.md).</small>
 
 <img src="/assets/images/posts/2016/open-source/badge-1.png" alt="Well informative badge">
 
@@ -219,10 +208,7 @@ Look on these 2 - what information can we get?
 - It has 166 downloads. Here it depends on the age of package. → Go check release date! - **GOOD**
 - It's tagged and has stable version. - **GOOD**
 
-<small>From [Symplify/ControllerAutowire repository](https://github.com/Symplify/ControllerAutowire/blob/master/README.md).</small>
-
-
-## What have we done today?
+## What have we Done Today?
 
 - Where to go when **starting a new repository**.
 - What is **the purpose meta files**.
@@ -234,13 +220,6 @@ Look on these 2 - what information can we get?
 - How do **releases** work a what is **semantic versioning**.
 - How to **pick min PHP version and package versions in composer**.
 
----
+<br>
 
-## Hate me, please!
-
-Did you came across some error or wtf? Is it boring, too long or too vague?
-Just send me a comment. I want to make this series bulletproof and as helpful as possible.
-
-**You will help thousands of others if you help me to fix one issue.**
-
-Thank you!
+Happy coding!
