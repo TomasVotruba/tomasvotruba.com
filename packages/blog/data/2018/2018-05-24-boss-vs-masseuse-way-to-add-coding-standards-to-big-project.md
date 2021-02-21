@@ -6,8 +6,13 @@ perex: |
     or a **masseuse who's taking care of your hands** tired from programming with her gentle hands?
     <br><br>
     When it comes to coding standards, the love and fun is the best experience with it. Let's look how such "masseuse" can be added to your big project.
+
 tweet: "New Post on My Blog: Boss vs. Masseuse Way How to Add Coding Standards to a Big Project #php #kaizen #fromzerotohero"
 tweet_image: "/assets/images/posts/2018/cs-masseuce/unknown-error.png"
+
+updated_since: "February 2021"
+updated_message: |
+    Use new Symplify 9 syntax for PHPStan rule registration.
 ---
 
 ## "The Boss" Way to Add Coding Standard
@@ -63,11 +68,14 @@ Last week a [Cognitive Complexity Rule](/blog/2018/05/21/is-your-code-readable-b
 ```yaml
 # phpstan.neon
 includes:
-    - vendor/symplify/coding-standard/packages/cognitive-complexity/config/cognitive-complexity-rules.neon
+    - vendor/symplify/phpstan-rules/packages/cognitive-complexity/config/cognitive-complexity-services.neon
 
-parameters:
-    symplify:
-        max_cognitive_complexity: 8 # default
+services:
+    -
+        class: Symplify\PHPStanRules\CognitiveComplexity\Rules\FunctionLikeCognitiveComplexityRule
+        tags: [phpstan.rules.rule]
+        arguments:
+            maxMethodCognitiveComplexity: 8
 ```
 
 But when you run your tool (`vendor/bin/phpstan analyse /src`), it will probably drop dozens of errors. And we don't want to go to the boss approach.
@@ -76,38 +84,37 @@ But when you run your tool (`vendor/bin/phpstan analyse /src`), it will probably
 
 Saying that, **we make the rule so free, that your code passes it**:
 
-```yaml
-# phpstan.neon
-parameters:
-    symplify:
-        max_cognitive_complexity: 50
-```
-
-Still 10 errors?
-
-```yaml
-# phpstan.neon
-parameters:
-    symplify:
-        max_cognitive_complexity: 100
+```diff
+ services:
+     -
+         class: Symplify\PHPStanRules\CognitiveComplexity\Rules\FunctionLikeCognitiveComplexityRule
+         tags: [phpstan.rules.rule]
+         arguments:
+-            maxMethodCognitiveComplexity: 8
++            maxMethodCognitiveComplexity: 50
 ```
 
 **0 errors!**
 
-### Great Job Done!
+You can now add this to your GitHub Actions and make the PR. Merge it and take a 2 weeks break.
 
-You can now add this to your `.travis.yml` or any other CI tools and make the PR merge and take a 2 weeks break.
+<br>
 
 Then decrease the criteria for 10 %:
 
-```yaml
-# phpstan.neon
-parameters:
-    symplify:
-        max_cognitive_complexity: 90
+```diff
+ services:
+     -
+         class: Symplify\PHPStanRules\CognitiveComplexity\Rules\FunctionLikeCognitiveComplexityRule
+         tags: [phpstan.rules.rule]
+         arguments:
+-            maxMethodCognitiveComplexity: 8
++            maxMethodCognitiveComplexity: 45
 ```
 
-and fix only 3-4 cases that will pop-up. One touch at a time. Then make a PR, merge & take a break again. "[Rinse & Repeat](https://www.youtube.com/watch?v=f4oWpvJ0f8Q)".
+- Fix couple the cases that will appear.
+- One at a time.
+- Then repeat previous workflow: PR, merge and take a week break.
 
 When **you feel ready**, you can add 1 more checker, make a rule more strict... you get the idea to enjoy your massage :).
 
@@ -121,4 +128,4 @@ This way I was able to add coding standards to quite a big codebase in [Lekarna.
 
 <br><br>
 
-Enjoy the Massage!
+Happy coding!
