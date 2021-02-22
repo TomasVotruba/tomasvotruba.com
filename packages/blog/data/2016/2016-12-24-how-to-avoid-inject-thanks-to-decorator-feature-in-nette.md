@@ -250,10 +250,10 @@ That's it!
 
 In next article, we will look at other practical use cases for Decorator Extension.
 
-
-### P.S.: What about Symfony?
-
-Would like to see this feature in Symfony? Let me know. Maybe we can port it there.
-
+<br>
 
 How do you use `@inject`, constructor injection or Decorator Extension? Let me know in the comments, I'm curious.
+
+<br>
+
+Happy coding!
