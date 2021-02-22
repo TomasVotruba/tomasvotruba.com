@@ -96,7 +96,6 @@ final class PostFactory
 
         $language = $configuration['lang'] ?? null;
 
-        $testSlug = $configuration['test_slug'] ?? null;
         $sourceRelativePath = $this->getSourceRelativePath($smartFileInfo);
 
         $htmlContent = $this->decorateHeadlineWithId($htmlContent);
@@ -115,7 +114,6 @@ final class PostFactory
             $updatedAt,
             $updatedMessage,
             $isTested,
-            $testSlug,
             $sourceRelativePath,
             $deprecatedAt,
             $deprecatedMessage,

@@ -23,7 +23,6 @@ final class Post
         private ?DateTimeInterface $updatedAt,
         private ?string $updatedMessage,
         private bool $isTested,
-        private ?string $testSlug,
         private string $sourceRelativePath,
         private ?DateTimeInterface $deprecatedAt,
         private ?string $deprecatedMessage,
@@ -90,11 +89,6 @@ final class Post
     public function isTested(): bool
     {
         return $this->isTested;
-    }
-
-    public function getTestSlug(): ?string
-    {
-        return $this->testSlug;
     }
 
     public function getGitHubEditUrl(): string

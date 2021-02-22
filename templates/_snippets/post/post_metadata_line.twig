@@ -8,9 +8,9 @@
                 {{ post.getDateTime|date('M, Y') }}
             {% elseif post.getDateTime|date('Y') == "now"|date("Y") %}
                 {# this year #}
-                {{ post.getDateTime|date('D, M j') }}
+                {{ post.getDateTime|date('M j') }}
             {% else %}
-                {{ post.getDateTime|date('D, M j, Y') }}
+                {{ post.getDateTime|date('M j, Y') }}
             {% endif %}
 
             {% if post.updatedAt is defined %}</strike>{% endif %}
