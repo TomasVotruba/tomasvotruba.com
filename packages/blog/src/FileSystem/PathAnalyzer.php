@@ -48,6 +48,11 @@ final class PathAnalyzer
 
         $match = (array) Strings::match($fileInfo->getFilename(), $dateAndNamePattern);
 
+        $dateLessBreakDateTime = DateTime::from('2021-02-22');
+        if ($date >= $dateLessBreakDateTime) {
+            return $match['name'];
+        }
+
         return $date->format('Y/m/d') . '/' . $match['name'];
     }
 }

@@ -18,7 +18,7 @@ final class PostController extends AbstractController
     }
 
     #[Route(path: '/blog/{slug}', name: RouteName::POST_DETAIL, requirements: [
-        'slug' => '\d+\/\d+.+',
+        'slug' => '(\d+\/\d+.+|[\w\-]+)',
     ])]
     public function __invoke(string $slug): Response
     {

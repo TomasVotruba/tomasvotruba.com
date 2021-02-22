@@ -92,3 +92,8 @@ parameters:
                 - packages/tweeter/src/Command/TweetCommand.php
 
         - '#Method TomasVotruba\\FrameworkStats\\Result\\PackageDataFactory\:\:createPackagesData\(\) should return array<TomasVotruba\\FrameworkStats\\ValueObject\\PackageData\> but returns array<TomasVotruba\\FrameworkStats\\Contract\\LastYearTrendAwareInterface\>#'
+
+
+        # fix in next PR
+        - '#Parameter "(.*?)" cannot be nullable#'
+        - '#Do not inherit from abstract class, better use composition#'
