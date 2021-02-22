@@ -111,7 +111,7 @@ It seems the priority was chosen or not. If we put this sentence in the code:
 +$this->sort($changes, 'none');
 ```
 
-But! Should we use strings around the project without any boundaries?
+But should we use strings around the project without any boundaries?
 
 ## 5. Extract the Enum
 
