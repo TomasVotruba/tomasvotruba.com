@@ -44,7 +44,7 @@ Why is this step necessary for success? When you read a post about ["every class
 
 <br>
 
-By writing a **PHPStan rule first, we avoid this whole mess**. Also, we realize the ideal statements like "every <x> should be <y>" have to be adapted into practical coding habits. While I was writing a `ForbiddenNullableParameterRule` I learned that:
+By writing a **PHPStan rule first, we avoid this whole mess**. Also, we realize the ideal statements like "every *x* should be *y*" have to be adapted into practical coding habits. While I was writing a `ForbiddenNullableParameterRule` I learned that:
 
 - nullable `$param` required by `interface` from `/vendor` - we should skip these because refactoring the world is not a weekend goal
 - we need to forbid specific types first to keep refactoring gradually
