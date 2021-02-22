@@ -90,7 +90,7 @@ First step would be to remove the `?`:
  }
 ```
 
-Now we've removed the nullable parameter, mission complete! All we need to do now is to fix dozens of new PHPStan errors.
+We've removed the nullable parameter - mission complete! All we need to do now is to fix dozens of new PHPStan errors.
 
 I realized that `?string` is a code smell for enum only in hindsight, but I started to be suspicious.
 
