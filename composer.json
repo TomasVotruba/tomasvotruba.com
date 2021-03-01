@@ -58,8 +58,7 @@
             "TomasVotruba\\Projects\\": "packages/projects/src",
             "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
             "TomasVotruba\\Blog\\": "packages/blog/src",
-            "TomasVotruba\\CleaningLady\\": "packages/cleaning-lady/src",
-            "TomasVotruba\\GithubContributorsThanker\\": "packages/github-contributor-thanker/src"
+            "TomasVotruba\\CleaningLady\\": "packages/cleaning-lady/src"
         }
     },
     "autoload-dev": {
