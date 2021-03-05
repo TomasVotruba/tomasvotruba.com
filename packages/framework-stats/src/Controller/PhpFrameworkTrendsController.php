@@ -32,7 +32,7 @@ final class PhpFrameworkTrendsController
     {
         $promoPost = $this->postRepository->get(202);
 
-        return $this->responseRenderer->render('php-framework-trends.twig', [
+        return $this->responseRenderer->render('framework-stats/php-framework-trends.twig', [
             'title' => 'PHP Framework Trends',
             'promo_post' => $promoPost,
             'php_framework_trends' => $this->phpFrameworkTrends,

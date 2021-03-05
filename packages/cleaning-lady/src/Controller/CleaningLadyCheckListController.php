@@ -21,7 +21,7 @@ final class CleaningLadyCheckListController
     #[Route(path: 'cleaning-lady-checklist', name: RouteName::CLEANING_LADY_CHECKLIST)]
     public function __invoke(): Response
     {
-        return $this->responseRenderer->render('cleaning_lady_checklist.twig', [
+        return $this->responseRenderer->render('cleaning-lady/cleaning_lady_checklist.twig', [
             'title' => 'Cleaning Lady Check list',
             'checklist' => $this->cleaningCheckListFactory->create(),
         ]);

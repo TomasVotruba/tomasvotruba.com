@@ -3,33 +3,29 @@ name: Rector
 on:
     pull_request: null
 
+
 jobs:
     rector:
+        # run only on core developers with access
+        if: github.event.pull_request.head.repo.full_name == github.repository
+
         runs-on: ubuntu-latest
 
         steps:
             -
-                if: github.event.pull_request.head.repo.full_name == github.repository
                 uses: actions/checkout@v2
                 with:
-                    # Must be used to trigger workflow after push
                     token: ${{ secrets.ACCESS_TOKEN }}
-
-            # in forks, the token is not available - so we cannot us eit
-            -
-                if: github.event.pull_request.head.repo.full_name != github.repository
-                uses: actions/checkout@v2
 
             -
                 uses: shivammathur/setup-php@v2
                 with:
                     php-version: 8.0
-                    coverage: none
 
-            -   run: composer install --no-progress --ansi
+            -   uses: "ramsey/composer-install@v1"
 
             ## First run Rector - here can't be --dry-run !!! it would stop the job with it and not commit anything in the future
-            -   run: vendor/bin/rector process ${{ matrix.directories }} --ansi --no-progress-bar
+            -   run: vendor/bin/rector process ${{ matrix.directories }} --ansi
 
             -   run: vendor/bin/ecs check --match-git-diff --fix --ansi
 
@@ -45,5 +41,4 @@ jobs:
                     author_name: "kaizen-ci"
                     author_email: "info@kaizen-ci.org"
                 env:
-                    # to get push access
                     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}

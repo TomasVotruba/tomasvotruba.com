@@ -21,7 +21,7 @@ final class ClustersController
     #[Route(path: 'clusters', name: RouteName::CLUSTERS)]
     public function __invoke(): Response
     {
-        return $this->responseRenderer->render('clusters/clusters.twig', [
+        return $this->responseRenderer->render('blog/clusters.twig', [
             'title' => 'Clusters',
             'posts' => $this->postRepository->fetchAllEnglishNonDeprecated(),
         ]);

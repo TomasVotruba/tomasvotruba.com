@@ -25,7 +25,7 @@ final class ClusterController
     {
         $cluster = $this->clusterRepository->getBySlug($slug);
 
-        return $this->responseRenderer->render('clusters/cluster_detail.twig', [
+        return $this->responseRenderer->render('blog/cluster_detail.twig', [
             'cluster' => $cluster,
             'title' => $cluster->getTitle(),
         ]);
