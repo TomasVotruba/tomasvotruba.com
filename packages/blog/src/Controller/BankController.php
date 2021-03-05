@@ -2,25 +2,24 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Controller;
+namespace TomasVotruba\Blog\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use TomasVotruba\Blog\Templating\ResponseRenderer;
-use TomasVotruba\Website\ValueObject\RouteName;
 
-final class ContactController
+final class BankController
 {
     public function __construct(
         private ResponseRenderer $responseRenderer
     ) {
     }
 
-    #[Route(path: 'contact', name: RouteName::CONTACT)]
+    #[Route(path: '/bank')]
     public function __invoke(): Response
     {
-        return $this->responseRenderer->render('contact.twig', [
-            'title' => 'Get in Touch',
+        return $this->responseRenderer->render('blog/bank.twig', [
+            'title' => 'Bank Details',
         ]);
     }
 }

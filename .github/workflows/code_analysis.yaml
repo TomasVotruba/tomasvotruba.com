@@ -18,10 +18,6 @@ jobs:
                         run: 'composer phpstan --ansi'
 
                     -
-                        name: 'Rector'
-                        run: 'vendor/bin/rector process --ansi --dry-run'
-
-                    -
                         name: 'Unit Tests'
                         run: 'vendor/bin/phpunit'
 

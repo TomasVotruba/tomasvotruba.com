@@ -1,4 +1,7 @@
 {
+    "composer/package-versions-deprecated": {
+        "version": "1.11.99.1"
+    },
     "composer/semver": {
         "version": "1.5.1"
     },
@@ -201,6 +204,9 @@
     },
     "rector/rector": {
         "version": "0.8-dev"
+    },
+    "rector/rector-prefixed": {
+        "version": "0.9.31"
     },
     "sebastian/cli-parser": {
         "version": "1.0.0"
@@ -475,6 +481,9 @@
     },
     "symplify/amnesia": {
         "version": "9.1-dev"
+    },
+    "symplify/astral": {
+        "version": "v9.2.4"
     },
     "symplify/auto-bind-parameter": {
         "version": "v7.2.4"
