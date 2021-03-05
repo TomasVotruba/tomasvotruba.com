@@ -2,10 +2,10 @@
 id: 305
 title: "The Best Time to Switch Gitlab&nbsp;to&nbsp;GitHub"
 perex: |
-    I'm known for being in love with GitHub Actions, a true paradise for any open-source project. I don't have much experience with private projects pricing for this and other services like GitLab or Bitbucket.
+    I'm known for using GitHub, a true paradise for any open-source project. But I don't have much experience with private projects pricing for this and other services like GitLab or Bitbucket.
     <br>
     <br>
-    I assumed they all are at a similar price layer. After today's call with one of my clients, I've learned about one benefit of GitHub Actions for private projects I didn't consider before. So much it's worth the switch.
+    I assumed they all were at a similar price layer. After today's call with one of my clients, I've learned about one benefit of GitHub Actions for private projects I didn't consider before. **So much it's worth the switch.**
 
 tweet: "New Post on #php 🐘 blog: The Best Time to Switch @gitlab to @github"
 ---
@@ -51,7 +51,7 @@ As time went by and both companies grew, GitHub introduced private repositories 
 
 But today, pricing is about something different.
 
-## 4. 2020: It's all About CI Minutes, Baby
+## 5. 2020: It's all About CI Minutes, Baby
 
 During consulting, I teach companies to switch positions with their CI. It's not rare that in smaller companies with up to 15 devs, the CI is set up once for a particular job, but no-one knows how to use it practically. Everyone is trying to make a build pass. That's it.
 
@@ -67,16 +67,32 @@ Do you recall how much time do you spend in your CI per pull-request run? How mu
 
 From my personal experience, basic CI setup with two developers took around **2000-5000 minutes a month**. Both services have a limit of 3000 minutes/month for one-tier. If you cross it, you have to pay more or stop using it.
 
-Let's compare compare [GitHub pricing](https://github.com/pricing) and [GitLab pricing](https://about.gitlab.com/pricing/) from today:
+But that's **just bare setup**. Once we add:
 
+* monorepo split
+* template checks
+* config checks
+* translation validation
+* [custom PHPStan rules](https://tomasvotruba.com/blog/2020/12/14/new-in-symplify-9-more-than-110-phpstan-rules/)
+* automated [coding standard merging](https://tomasvotruba.com/blog/2020/12/28/why-coding-standards-should-not-be-part-of-ci/)
+* or Rector run...
 
-<img src="https://user-images.githubusercontent.com/924196/110146332-b9e3f900-7dda-11eb-99fd-9ffb500095fc.png" class="img-thumbnail">
-<em>GitHub pricing</em>
+...we can easily get over 10 000-15 000 minutes month.
 
 <br>
 
-<img src="https://user-images.githubusercontent.com/924196/110146328-b94b6280-7dda-11eb-97a2-332bbc0fd8f0.png" class="img-thumbnail">
+Now the interesting parts comes. Let's compare compare [GitHub pricing](https://github.com/pricing) and [GitLab pricing](https://about.gitlab.com/pricing/) from today:
+
+
+<img src="https://user-images.githubusercontent.com/924196/110146332-b9e3f900-7dda-11eb-99fd-9ffb500095fc.png" class="img-thumbnail mb-2">
 <em>Gitlab pricing</em>
+
+<br>
+
+<img src="https://user-images.githubusercontent.com/924196/110146328-b94b6280-7dda-11eb-97a2-332bbc0fd8f0.png" class="img-thumbnail mb-2">
+<em>GitHub pricing</em>
+
+<br>
 
 If we take it by the best price per minute:
 
@@ -89,9 +105,11 @@ For only 2 $, you get 40 000 extra minutes. That's madness, and that's the last 
 
 <br>
 
-I think GitHub might take advantage of this an go from 21 $ to 69 $, but it seems their product does not focus on profit, but on us - customers:
+I think GitHub might take advantage of this an go from *21 $* to *69 $* without loosing an advantage. But it seems their product does not focus on profit, but **on us - customers**:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In a world where rich companies take more and more, this is an amazing move by <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> <br><br>Thank you for taking whole open-source community to a brand new level for last 5 years ❤️️<br><br>I&#39;m very happy to be one of your customers <a href="https://t.co/RbtpdA9s9W">pic.twitter.com/RbtpdA9s9W</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1360353684396380171?ref_src=twsrc%5Etfw">February 12, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In a world where rich companies take more and more, this is an amazing move by <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> <br><br>Thank you for taking whole open-source community to a brand new level for last 5 years ❤️️<br><br>I'm very happy to be one of your customers <a href="https://t.co/RbtpdA9s9W">pic.twitter.com/RbtpdA9s9W</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1360353684396380171?ref_src=twsrc%5Etfw">February 12, 2021</a></blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
 
