@@ -4,6 +4,13 @@ includes:
 
 services:
     -
+        class: Symplify\PHPStanRules\Rules\ForbiddenParentClassRule
+        tags: [phpstan.rules.rule]
+        arguments:
+            forbiddenParentClasses:
+                - Symfony\Bundle\FrameworkBundle\Controller\AbstractController
+
+    -
         class: Symplify\PHPStanRules\Rules\PreferredClassRule
         tags: [phpstan.rules.rule]
         arguments:
@@ -61,8 +68,6 @@ parameters:
         # php-parser Node/Stmt mixups
         - '#(.*?)array<PhpParser\\Node>, array<PhpParser\\Node\\Stmt(.*?)#'
 
-        - '#Cannot cast array<string\>\|string\|null to string#'
-
         -
             message: '#Array with keys is not allowed\. Use value object to pass data instead#'
             paths:
@@ -93,7 +98,6 @@ parameters:
 
         - '#Method TomasVotruba\\FrameworkStats\\Result\\PackageDataFactory\:\:createPackagesData\(\) should return array<TomasVotruba\\FrameworkStats\\ValueObject\\PackageData\> but returns array<TomasVotruba\\FrameworkStats\\Contract\\LastYearTrendAwareInterface\>#'
 
-
         # fix in next PR
         - '#Parameter "(.*?)" cannot be nullable#'
-        - '#Do not inherit from abstract class, better use composition#'
+        - '#Use decoupled factory service to create "Symfony\\Component\\HttpFoundation\\Response" object#'
