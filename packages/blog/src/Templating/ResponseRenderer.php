@@ -9,11 +9,9 @@ use Twig\Environment;
 
 final class ResponseRenderer
 {
-    private Environment $environment;
-
-    public function __construct(Environment $environment)
-    {
-        $this->environment = $environment;
+    public function __construct(
+        private Environment $environment
+    ) {
     }
 
     /**
