@@ -21,7 +21,7 @@ final class PrintTest extends TestCase implements PostTestInterface
 
     protected function setUp(): void
     {
-        /** stops @see BypassFinals just for this test to keep "final" in the code */
+        // helps BypassFinals for this test to keep "final" in the code
         stream_wrapper_restore('file');
 
         $this->srcDirectory = __DIR__ . '/../../../../src/Posts/Year2017/Ast';

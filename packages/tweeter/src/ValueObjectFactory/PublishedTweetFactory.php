@@ -16,11 +16,11 @@ final class PublishedTweetFactory
     public function createFromRawTweets(array $rawTweets): array
     {
         $tweets = [];
-        foreach ($rawTweets as $fullTweet) {
-            $createdAt = DateTime::from($fullTweet['created_at']);
+        foreach ($rawTweets as $rawTweet) {
+            $createdAt = DateTime::from($rawTweet['created_at']);
 
-            $text = trim($fullTweet['text']);
-            $tweets[] = new PublishedTweet($text, $createdAt, $fullTweet['id']);
+            $text = trim($rawTweet['text']);
+            $tweets[] = new PublishedTweet($text, $createdAt, $rawTweet['id']);
         }
 
         return $tweets;

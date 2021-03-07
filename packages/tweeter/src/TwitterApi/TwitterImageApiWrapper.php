@@ -18,6 +18,7 @@ final class TwitterImageApiWrapper
 
     /**
      * 5 MB
+     *
      * @var int
      */
     private const MAX_IMAGE_FILE_SIZE = 5 * 1_024 * 1_024;
