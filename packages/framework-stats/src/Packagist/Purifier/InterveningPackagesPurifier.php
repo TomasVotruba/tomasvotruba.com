@@ -9,7 +9,7 @@ use TomasVotruba\FrameworkStats\Packagist\PackageRawMonthlyDownloadsProvider;
 final class InterveningPackagesPurifier
 {
     /**
-     * @var string[][]
+     * @var array<string, string[]>
      */
     private const INTERVENING_DEPENDENCIES = [
         // https://packagist.org/packages/friendsofphp/php-cs-fixer

@@ -34,6 +34,7 @@ final class TwitterPostApiWrapper
 
     /**
      * Dont go beyond 2019-01-01, way too old content
+     *
      * @var int
      */
     private const FIRST_TWEET_ID = 1_080_944_076_000_817_154;

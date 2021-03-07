@@ -11,6 +11,7 @@ final class PHPStanNettePackagesPurifier
 {
     /**
      * List packages used by PHPStan up to version 0.11.* included
+     *
      * @var string[]
      */
     private const INTERVENING_DEPENDENCIES = [

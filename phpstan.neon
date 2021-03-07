@@ -4,11 +4,8 @@ includes:
 
 services:
     -
-        class: Symplify\PHPStanRules\Rules\ForbiddenParentClassRule
+        class: Symplify\PHPStanRules\Rules\NoInheritanceRule
         tags: [phpstan.rules.rule]
-        arguments:
-            forbiddenParentClasses:
-                - Symfony\Bundle\FrameworkBundle\Controller\AbstractController
 
     -
         class: Symplify\PHPStanRules\Rules\PreferredClassRule
