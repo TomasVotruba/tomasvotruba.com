@@ -23,10 +23,10 @@
         "symfony/twig-bridge": "^5.2",
         "symfony/twig-bundle": "^5.2",
         "symplify/amnesia": "dev-master",
-        "symplify/autowire-array-parameter": "^9.1",
-        "symplify/package-builder": "^9.1",
-        "symplify/smart-file-system": "^9.1",
-        "symplify/symfony-static-dumper": "^9.1",
+        "symplify/autowire-array-parameter": "^9.2",
+        "symplify/package-builder": "^9.2",
+        "symplify/smart-file-system": "^9.2",
+        "symplify/symfony-static-dumper": "^9.2",
         "twig/twig": "^3.0"
     },
     "require-dev": {
@@ -43,14 +43,14 @@
         "symfony/stopwatch": "^5.2",
         "symfony/var-dumper": "^5.2",
         "symfony/yaml": "^5.2",
-        "symplify/amnesia": "^9.1",
-        "symplify/coding-standard": "^9.1",
-        "symplify/config-transformer": "^9.1",
-        "symplify/easy-coding-standard": "^9.1",
-        "symplify/latte-to-twig-converter": "^9.1",
-        "symplify/phpstan-extensions": "^9.1",
-        "symplify/phpstan-rules": "^9.1",
-        "symplify/static-detector": "^9.1"
+        "symplify/amnesia": "^9.2",
+        "symplify/coding-standard": "^9.2",
+        "symplify/config-transformer": "^9.2",
+        "symplify/easy-coding-standard": "^9.2",
+        "symplify/latte-to-twig-converter": "^9.2",
+        "symplify/phpstan-extensions": "^9.2",
+        "symplify/phpstan-rules": "^9.2",
+        "symplify/static-detector": "^9.2"
     },
     "autoload": {
         "psr-4": {
