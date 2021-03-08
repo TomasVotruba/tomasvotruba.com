@@ -300,7 +300,7 @@ vendor/bin/ecs check /path/to/project --config custom/location.php --fix
 
 <br>
 
-### Give it a Try...
+## Give it a Try...
 
 ...and you won't regret it. Sylius, [PestPHP](https://github.com/pestphp/drift), LMC, Shopsys, Nette did and never came back.
 
@@ -311,4 +311,4 @@ Did I forget a step that you had to fight with? **Please, let me know in the com
 <br>
 <br>
 
-In the next post we look on how to migrate from PHP CS Fixer!
+In the next post we look on [how to migrate from PHP CS Fixer](/blog/2018/06/07/how-to-migrate-from-php-cs-fixer-to-easy-coding-standard/)!
