@@ -186,4 +186,4 @@ In following weeks I found:
 - I have **much less responsibility** so I can breathe more lightly,
 - and I can put more work into less projects
 
-Thanks to that, I've [added new features to EasyCodingStandard](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/), released [Object Calisthenics Coding Standard 3.0](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) and [released ApiGen 5.0-RC2](https://github.com/ApiGen/ApiGen/releases/tag/v5.0.0-RC2). The last one is secret in progress, so don't tell anybody.
+Thanks to that, I've [added new features to ECS](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/), released [Object Calisthenics Coding Standard 3.0](/blog/2017/06/26/php-object-calisthenics-rules-made-simple-version-3-0-is-out-now/) and [released ApiGen 5.0-RC2](https://github.com/ApiGen/ApiGen/releases/tag/v5.0.0-RC2). The last one is secret in progress, so don't tell anybody.

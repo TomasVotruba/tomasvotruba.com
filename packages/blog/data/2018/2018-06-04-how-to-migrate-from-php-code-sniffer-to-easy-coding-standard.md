@@ -1,13 +1,13 @@
 ---
 id: 111
-title: "How to Migrate From PHP_CodeSniffer to EasyCodingStandard in 7 Steps"
+title: "How to Migrate From PHP_CodeSniffer to ECS in 7 Steps"
 perex: |
-    Last year, I helped [Shopsys Coding Standards](https://github.com/shopsys/coding-standards) and [LMC PHP Coding Standard](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to EasyCodingStandard.
+    Last year, I helped [Shopsys Coding Standards](https://github.com/shopsys/coding-standards) and [LMC PHP Coding Standard](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to ECS.
     <br><br>
     There are **a few simple A → B changes**, but one has to know about them or will get stuck.
     <br><br>
     **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
-tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingStandard in 7 Step #ecs #codingstandard #ci"
+tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to ECS in 7 Step #ecs #codingstandard #ci"
 
 updated_since: "November 2020"
 updated_message: |
