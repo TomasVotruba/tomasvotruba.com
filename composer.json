@@ -22,11 +22,7 @@
         "symfony/http-kernel": "^5.2",
         "symfony/twig-bridge": "^5.2",
         "symfony/twig-bundle": "^5.2",
-<<<<<<< HEAD
         "symplify/amnesia": "^9.2",
-=======
-        "symplify/amnesia": "^5.2",
->>>>>>> 47d75ac8... remove boiler plate code
         "symplify/autowire-array-parameter": "^9.2",
         "symplify/package-builder": "^9.2",
         "symplify/smart-file-system": "^9.2",
