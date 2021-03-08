@@ -57,7 +57,7 @@ final class YamlTest extends TestCase implements PostTestInterface
     }
 
     /**
-     * @return string[]
+     * @return Iterator<string[]>
      */
     public function provideFilesWithParseError(): Iterator
     {
