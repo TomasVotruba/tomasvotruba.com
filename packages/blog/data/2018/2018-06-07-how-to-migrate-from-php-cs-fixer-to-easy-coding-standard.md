@@ -214,7 +214,7 @@ vendor/bin/ecs check /path/to/project
 vendor/bin/ecs check /path/to/project --fix
 ```
 
-### 6. From `@Rules` to `imports`
+## 6. From `@Rules` to `imports`
 
 Do you like to use standards like PSR-2 or even [PSR-12](/blog/2018/04/09/try-psr-12-on-your-code-today/)?
 
@@ -245,7 +245,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 <br>
 
-### Give it a Try...
+## Give it a Try...
 
 ...and you won't regret it. Sylius, [PestPHP](https://github.com/pestphp/drift), LMC, Shopsys and Nette did and never came back.
 

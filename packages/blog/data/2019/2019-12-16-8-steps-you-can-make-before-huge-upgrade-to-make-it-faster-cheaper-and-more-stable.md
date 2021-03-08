@@ -180,8 +180,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set(Option::SETS, [
         SetList::PSR_12,
-        SetList::PHP_70,
-        SetList::PHP_71,
         SetList::CLEAN_CODE,
         SetList::COMMENTS,
         // very nice to have ↓
