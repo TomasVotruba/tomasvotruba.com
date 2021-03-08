@@ -1,11 +1,11 @@
 ---
 id: 112
-title: "How to Migrate From PHP CS Fixer to EasyCodingStandard in 6 Steps"
+title: "How to Migrate From PHP CS Fixer to ECS in 6 Steps"
 perex: |
     We looked at how to migrate from PHP_CodeSniffer to Easy Coding Standard on Monday. But what if your weapon of choice is PHP CS Fixer and you'd to run also some sniffs?
     <br>
     There are **a few simple A → B changes**, but one has to know about them or will get stuck. Let's learn about them.
-tweet: "New Post on my Blog: How to Migrate From PHP CS Fixer to EasyCodingStandard in 6 Steps #ecs #codingstandard #ci"
+tweet: "New Post on my Blog: How to Migrate From PHP CS Fixer to ECS in 6 Steps #ecs #codingstandard #ci"
 
 updated_since: "November 2020"
 updated_message: |
@@ -177,12 +177,6 @@ return PhpCsFixer\Config::create()
 **to explicit Symfony service parameters in EasyCodingStandard:**
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -207,14 +201,14 @@ vendor/bin/php-cs-fixer fix /path/to/project --dry-run
 vendor/bin/php-cs-fixer fix /path/to/project
 ```
 
-to EasyCodingStandard equivalent:
+to ECS equivalent:
 
 ```bash
 vendor/bin/ecs check /path/to/project
 vendor/bin/ecs check /path/to/project --fix
 ```
 
-### 6. From `@Rules` to `imports`
+## 6. From `@Rules` to `imports`
 
 Do you like to use standards like PSR-2 or even [PSR-12](/blog/2018/04/09/try-psr-12-on-your-code-today/)?
 
@@ -245,7 +239,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 <br>
 
-### Give it a Try...
+## Give it a Try...
 
 ...and you won't regret it. Sylius, [PestPHP](https://github.com/pestphp/drift), LMC, Shopsys and Nette did and never came back.
 

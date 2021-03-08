@@ -71,12 +71,6 @@ As you can see in the bottom part of screenshot, most of rules are configurable.
 *Do you prefer to require min 4 chars?*
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
@@ -89,12 +83,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 *Do you want to add own allowed short names?*
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {

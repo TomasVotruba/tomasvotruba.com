@@ -106,12 +106,6 @@ Which is not what we want.
 When the official fixer is finished, I'd be happy to use it and recommend it. But **right now you can use**:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\Strict\BlankLineAfterStrictTypesFixer;
 

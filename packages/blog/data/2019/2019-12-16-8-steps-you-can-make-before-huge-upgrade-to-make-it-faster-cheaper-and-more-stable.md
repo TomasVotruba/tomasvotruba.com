@@ -167,12 +167,6 @@ Why are coding standards needed for the migration? The AST libraries that Rector
 The basic [ECS](https://github.com/symplify/easy-coding-standard) setup we use looks like:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
@@ -180,8 +174,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set(Option::SETS, [
         SetList::PSR_12,
-        SetList::PHP_70,
-        SetList::PHP_71,
         SetList::CLEAN_CODE,
         SetList::COMMENTS,
         // very nice to have ↓

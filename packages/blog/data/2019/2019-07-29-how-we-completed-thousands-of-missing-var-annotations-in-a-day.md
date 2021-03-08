@@ -405,12 +405,6 @@ composer require slevomat/coding-standard --dev
 **Run ECS to check missing `@var` annotations at properties**
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 

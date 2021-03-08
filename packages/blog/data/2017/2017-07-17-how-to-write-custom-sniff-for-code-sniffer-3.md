@@ -249,12 +249,6 @@ You can find [final Sniff on Github](https://github.com/symplify/symplify/blob/e
 With [ECS](https://github.com/symplify/easy-coding-standard) put the class to `ecs.php`:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Sniffs\Naming\ExceptionNameSniff;
 

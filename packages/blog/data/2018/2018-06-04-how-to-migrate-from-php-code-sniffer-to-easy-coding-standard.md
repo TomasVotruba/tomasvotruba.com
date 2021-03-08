@@ -1,13 +1,13 @@
 ---
 id: 111
-title: "How to Migrate From PHP_CodeSniffer to EasyCodingStandard in 7 Steps"
+title: "How to Migrate From PHP_CodeSniffer to ECS in 7 Steps"
 perex: |
-    Last year, I helped [Shopsys Coding Standards](https://github.com/shopsys/coding-standards) and [LMC PHP Coding Standard](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to EasyCodingStandard.
+    Last year, I helped [Shopsys Coding Standards](https://github.com/shopsys/coding-standards) and [LMC PHP Coding Standard](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to ECS.
     <br><br>
     There are **a few simple A → B changes**, but one has to know about them or will get stuck.
     <br><br>
     **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
-tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to EasyCodingStandard in 7 Step #ecs #codingstandard #ci"
+tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to ECS in 7 Step #ecs #codingstandard #ci"
 
 updated_since: "November 2020"
 updated_message: |
@@ -138,12 +138,6 @@ or
 In EasyCodingStandard, we put that again under `skip` parameter in format `<Sniff>.<CodeName>`:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
@@ -185,12 +179,6 @@ or
 **Put it under `skip` parameter:**
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
@@ -312,7 +300,7 @@ vendor/bin/ecs check /path/to/project --config custom/location.php --fix
 
 <br>
 
-### Give it a Try...
+## Give it a Try...
 
 ...and you won't regret it. Sylius, [PestPHP](https://github.com/pestphp/drift), LMC, Shopsys, Nette did and never came back.
 
@@ -323,4 +311,4 @@ Did I forget a step that you had to fight with? **Please, let me know in the com
 <br>
 <br>
 
-In the next post we look on how to migrate from PHP CS Fixer!
+In the next post we look on [how to migrate from PHP CS Fixer](/blog/2018/06/07/how-to-migrate-from-php-cs-fixer-to-easy-coding-standard/)!

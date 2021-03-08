@@ -31,12 +31,6 @@ Little details make more pleasant developer experience UX. You already know **yo
 **Before** you had to hit the format:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 
