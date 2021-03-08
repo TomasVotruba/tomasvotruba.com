@@ -18,12 +18,6 @@ updated_message: |
 Do you have `src/Migrations` that you need to skip from your `vendor/bin/ecs check src` command?
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 
@@ -109,12 +103,6 @@ If you wanted to skip specific part of sniff, you had to **exclude whole sniff**
 But what if you liked all the other codes? **Now you can:**
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PHP_CodeSniffer\Standards\Generic\Sniffs\PHP\LowerCaseTypeSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;

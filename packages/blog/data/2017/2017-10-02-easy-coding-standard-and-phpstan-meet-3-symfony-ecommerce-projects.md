@@ -102,12 +102,6 @@ This is another [small and easy-to-understand set](/blog/2017/09/18/4-simple-che
 The full set looks like this:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
 use PhpCsFixer\Fixer\Import\NoUnusedImportsFixer;
 use PhpCsFixer\Fixer\Import\OrderedImportsFixer;

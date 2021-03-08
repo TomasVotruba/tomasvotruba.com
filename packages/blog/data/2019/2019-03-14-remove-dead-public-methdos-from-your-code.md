@@ -81,12 +81,6 @@ I consider Symplify project quite small, at least compared to private web applic
 There is one little sniff in `symplify/coding-standard` only few people know about. Set it up:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {

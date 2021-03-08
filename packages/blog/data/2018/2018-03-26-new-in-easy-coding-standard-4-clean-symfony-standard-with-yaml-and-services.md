@@ -25,12 +25,6 @@ updated_message: |
 Docker users will be happy for this feature, since it makes ECS much more usable. To enjoy speed of caching of changed files on second run, just tune your config.
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {

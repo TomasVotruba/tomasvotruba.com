@@ -30,12 +30,6 @@ It will not only make your code cleaner, but also can **speed up you container b
 ## 4 Simple Checkers
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
 use PhpCsFixer\Fixer\Import\NoUnusedImportsFixer;
 use PhpCsFixer\Fixer\Import\OrderedImportsFixer;

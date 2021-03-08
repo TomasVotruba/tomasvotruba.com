@@ -73,12 +73,6 @@ It's better to start slow, so the first things we did was:
 Just run [ECS](https://github.com/symplify/easy-coding-standard) with following set:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
 use PhpCsFixer\Fixer\ClassNotation\FinalClassFixer;

@@ -28,12 +28,6 @@ updated_message: |
 If you use `LineLengthSniff`, you know it's painful to fix every error report it makes.
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -126,12 +120,6 @@ Welcome `LineLengthFixer`.
 ### How to Register It?
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
 
@@ -157,12 +145,6 @@ As you guessed, this fixer works with 120 chars as maximum line-size... by defau
 - Do you want use breaks only and not inline short code?
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
 

@@ -138,12 +138,6 @@ or
 In EasyCodingStandard, we put that again under `skip` parameter in format `<Sniff>.<CodeName>`:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
@@ -185,12 +179,6 @@ or
 **Put it under `skip` parameter:**
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;

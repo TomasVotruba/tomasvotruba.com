@@ -177,12 +177,6 @@ return PhpCsFixer\Config::create()
 **to explicit Symfony service parameters in EasyCodingStandard:**
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 

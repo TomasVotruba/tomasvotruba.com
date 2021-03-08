@@ -24,12 +24,6 @@ updated_message: |
 Let's say we want to check arrays. We add first *checker* that requires short PHP 5.4 `[]` syntax:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
@@ -46,12 +40,6 @@ Great start. Then we want to check for trailing commas, so every line has them.
 So add one more checker:
 
 ```php
-<?php
-
-// ecs.php
-
-declare(strict_types=1);
-
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff;
 use PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
