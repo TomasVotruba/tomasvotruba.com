@@ -5,10 +5,15 @@ perex: |
     ChangelogLinker started as a small tool to complete links to PRs, authors, and versions in `CHANGELOG.md`. Then it started to [generate](/blog/2018/06/25/let-changelog-linker-generate-changelog-for-you/) the `CHANGELOG.md`.
      <br><br>
      **Where is now and how to start using it?**
+
 tweet: "New Post on my Blog: New in #Symplify 5: #ChangelogLinker - Generate Rich, Precise and Smart #Changelog in Seconds    #git #github #api #regex"
+
+deprecated_since: "March 2021"
+deprecated_message: |
+    ChangelogLinker is now deprecated, because it has same features as GitHub pull-request overview with no added value. See [this issue in detail](https://github.com/symplify/symplify/issues/3027). Use [lob/generate-changelog](https://github.com/lob/generate-changelog) or [github-changelog-generator](https://github.com/github-changelog-generator/github-changelog-generator) instead or better switch to **[GitHub releases](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository)**.
 ---
 
-### Tested on Humans ✅
+## Tested on Humans ✅
 
 <a href="https://github.com/shopsys/shopsys/pull/446/files" class="btn btn-dark btn-sm mt-2">
     <em class="fab fa-github fa-fw"></em>
