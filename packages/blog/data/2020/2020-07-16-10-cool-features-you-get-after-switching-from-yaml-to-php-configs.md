@@ -286,10 +286,7 @@ Do you need more real-life examples to try it yourself? Learn from merged pull-r
 
 <br>
 
-And of course, don't do it manually. Use **automated tools**:
-
-- [`symplify/config-transformer`](https://github.com/symplify/config-transformer) - handles YAML/XML to PHP/YAML
-- [`symfony/maker-bundle`](https://github.com/symfony/maker-bundle/pull/604) - work in progress, handles YAML to PHP
+And of course, don't do it manually. Use **automated tool** - [`symplify/config-transformer`](https://github.com/symplify/config-transformer) - handles YAML/XML to PHP/YAML.
 
 <br>
 

@@ -133,8 +133,11 @@ final class PostFactory
         }
 
         $tweetImage = ltrim($tweetImage, '/');
-        $localTweetImagePath = $this->projectDir . '/public/' . $tweetImage;
+        if (Strings::startsWith($tweetImage, 'https://')) {
+            return $tweetImage;
+        }
 
+        $localTweetImagePath = $this->projectDir . '/public/' . $tweetImage;
         $this->fileSystemGuard->ensureFileExists($localTweetImagePath, __METHOD__);
 
         return $this->siteUrl . '/' . $tweetImage;
