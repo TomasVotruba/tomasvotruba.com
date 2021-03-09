@@ -8,7 +8,7 @@ perex: |
     <br><br>
     That's where **Astral package helps**.
 
-tweet: "New Post on #php 🐘 blog: Astral - Starter Kit for AST Developers"
+tweet: "New Post on #php 🐘 blog: Astral - The Best Kit for AST Developers    @rectorphp @phpstan"
 ---
 
 <blockquote class="blockquote text-center mb-5">
