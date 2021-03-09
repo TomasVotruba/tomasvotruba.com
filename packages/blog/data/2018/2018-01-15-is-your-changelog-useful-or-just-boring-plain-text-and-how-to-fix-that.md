@@ -10,6 +10,10 @@ tweet_image: "/assets/images/posts/2018/changelog/keep-a-changelog.jpg"
 
 updated_since: "June 2018"
 updated_message: "Updated with new `run` command."
+
+deprecated_since: "March 2021"
+deprecated_message: |
+    ChangelogLinker is now deprecated, because it has same features as GitHub pull-request overview with no added value. See [this issue in detail](https://github.com/symplify/symplify/issues/3027). Use [lob/generate-changelog](https://github.com/lob/generate-changelog) or [github-changelog-generator](https://github.com/github-changelog-generator/github-changelog-generator) instead or better switch to **[GitHub releases](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository)**.
 ---
 
 <br>
