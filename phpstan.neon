@@ -33,9 +33,6 @@ services:
                     provideIntParameter: [0]
 
 parameters:
-    bootstrapFiles:
-        - vendor/rector/rector-prefixed/vendor/autoload.php
-
     paths:
         - bin
         - src
