@@ -7,7 +7,7 @@ namespace TomasVotruba\Blog\Repository;
 use Symplify\SmartFileSystem\Finder\FinderSanitizer;
 use TomasVotruba\Blog\DataProvider\PostDataProvider;
 use TomasVotruba\Blog\ValueObject\Post;
-use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
+use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class PostRepository
 {

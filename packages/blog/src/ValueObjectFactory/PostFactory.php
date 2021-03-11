@@ -15,7 +15,7 @@ use Symplify\SmartFileSystem\SmartFileInfo;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
 use TomasVotruba\Blog\Testing\TestedPostAnalyzer;
 use TomasVotruba\Blog\ValueObject\Post;
-use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
+use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\ValueObject\Option;
 
 final class PostFactory

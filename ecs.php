@@ -21,13 +21,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/src',
         __DIR__ . '/tests',
         __DIR__ . '/ecs.php',
-        __DIR__ . '/packages/framework-stats/config/parameters.php',
-
     ]);
 
     $parameters->set(Option::SKIP, [
         __DIR__ . '/config/bundles.php',
-        __DIR__ . '/config/_data/generated',
         UnaryOperatorSpacesFixer::class,
 
         // broken on PHP 8.0
