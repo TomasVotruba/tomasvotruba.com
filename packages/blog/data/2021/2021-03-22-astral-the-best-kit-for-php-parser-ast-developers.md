@@ -132,7 +132,7 @@ final class SomeRule
 No boiler plate code, overly safe check for `Expr` or node type. The `getName()` just gets the name or `null` if it's not possible, e.g. for magical naming:
 
 ```php
-$someMethod->${$someMethodName}(100);
+$someMethod->{$someMethodName}(100);
 ```
 
 Make use of other method that save you some work:
