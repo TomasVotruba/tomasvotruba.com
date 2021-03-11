@@ -77,7 +77,7 @@ on:
     pull_request: null
     push:
         branches:
-            - master
+            - main
 
 jobs:
     tests:
