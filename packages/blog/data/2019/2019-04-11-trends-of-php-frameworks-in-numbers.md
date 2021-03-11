@@ -162,7 +162,7 @@ It seems that the most active community is now CakePHP. I've been following thei
 
 There is a **detailed table** where you can find these answers:
 
-<a href="/php-framework-trends/" class="btn btn-success">See full PHP Framework Trends table</a>
+<a href="https://phpfwtrends.org class="btn btn-success">See full PHP Framework Trends table</a>
 
 <br>
 
