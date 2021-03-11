@@ -6,14 +6,14 @@ namespace TomasVotruba\Blog\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use TomasVotruba\Blog\Repository\PostRepository;
+use TomasVotruba\Blog\Repository\ClusterRepository;
 use TomasVotruba\Blog\Templating\ResponseRenderer;
 use TomasVotruba\Website\ValueObject\RouteName;
 
 final class ClustersController
 {
     public function __construct(
-        private PostRepository $postRepository,
+        private ClusterRepository $clusterRepository,
         private ResponseRenderer $responseRenderer
     ) {
     }
@@ -23,7 +23,7 @@ final class ClustersController
     {
         return $this->responseRenderer->render('blog/clusters.twig', [
             'title' => 'Clusters',
-            'posts' => $this->postRepository->fetchAllEnglishNonDeprecated(),
+            'clusters' => $this->clusterRepository->getClusters(),
         ]);
     }
 }
