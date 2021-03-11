@@ -44,11 +44,6 @@ final class RouteName
     /**
      * @var string
      */
-    public const PHP_FRAMEWORK_TRENDS = 'php_framework_trends';
-
-    /**
-     * @var string
-     */
     public const POST_DETAIL = 'post_detail';
 
     /**
