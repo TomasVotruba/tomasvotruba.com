@@ -6,7 +6,7 @@ namespace TomasVotruba\Website\Twig;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
-use TomasVotruba\FrameworkStats\Exception\ShouldNotHappenException;
+use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 

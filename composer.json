@@ -53,19 +53,16 @@
     "autoload": {
         "psr-4": {
             "TomasVotruba\\Website\\": "src",
-            "TomasVotruba\\FrameworkStats\\": "packages/framework-stats/src",
             "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
             "TomasVotruba\\Projects\\": "packages/projects/src",
             "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
             "TomasVotruba\\Blog\\": "packages/blog/src",
-            "TomasVotruba\\CleaningLady\\": "packages/cleaning-lady/src",
-            "TomasVotruba\\GithubContributorsThanker\\": "packages/github-contributor-thanker/src"
+            "TomasVotruba\\CleaningLady\\": "packages/cleaning-lady/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "TomasVotruba\\Blog\\Tests\\": "packages/blog/tests",
-            "TomasVotruba\\FrameworkStats\\Tests\\": "packages/framework-stats/tests",
             "TomasVotruba\\Tweeter\\Tests\\": "packages/tweeter/tests"
         }
     },

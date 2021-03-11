@@ -15,8 +15,8 @@
                 ]) %}active{% endif %}">
                     <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::HOMEPAGE')) }}">Blog</a>
                 </li>
-                <li class="{% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PHP_FRAMEWORK_TRENDS')) %}active{% endif %}">
-                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PHP_FRAMEWORK_TRENDS')) }}">Trends</a>
+                <li>
+                    <a href="https://phpfwtrends.org">Trends</a>
                 </li>
                 <li class="{% if is_current_routes([
                     constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTERS'),
@@ -64,9 +64,7 @@
                 Clusters
             </a>
 
-            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PHP_FRAMEWORK_TRENDS')) }}" class="col-3 col-sm-3 {% if is_current_route(
-                constant('TomasVotruba\\Website\\ValueObject\\RouteName::PHP_FRAMEWORK_TRENDS')
-            ) %}active{% endif %}">
+            <a href="https://phpfwtrends.org">
                 <em class="fas fa-chart-bar"></em>
                 <br>
                 Trends
