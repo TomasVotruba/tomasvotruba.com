@@ -55,4 +55,9 @@ final class RouteName
      * @var string
      */
     public const RSS = 'rss';
+
+    /**
+     * @var string
+     */
+    public const PHP_FRAMEWORK_TRENDS = 'php-framework-trends';
 }
