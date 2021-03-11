@@ -49,7 +49,7 @@ name: 'Monorepo Split'
 on:
     push:
         branches:
-            - master
+            - main
 
 jobs:
     monorepo_split:

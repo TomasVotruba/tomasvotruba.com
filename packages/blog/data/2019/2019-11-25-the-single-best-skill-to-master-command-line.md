@@ -194,7 +194,7 @@ That's what helped me, to always pick the first letter of the work.
 - git pull? → **gp**
 - git commit? → **gc**
 - composer update? → **cu**
-- rebase on master → **rema**
+- rebase on `main` → **rema**
 
 Keep it simple and your brain gets it :)
 
