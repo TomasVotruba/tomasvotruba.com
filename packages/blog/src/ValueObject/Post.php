@@ -93,7 +93,7 @@ final class Post
 
     public function getGitHubEditUrl(): string
     {
-        return 'https://github.com/tomasvotruba/tomasvotruba.com/edit/master/' . $this->sourceRelativePath;
+        return 'https://github.com/tomasvotruba/tomasvotruba.com/edit/main/' . $this->sourceRelativePath;
     }
 
     public function getDeprecatedAt(): ?DateTimeInterface
