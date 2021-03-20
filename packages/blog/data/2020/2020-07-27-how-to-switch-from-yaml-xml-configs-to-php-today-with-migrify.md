@@ -133,7 +133,7 @@ Setup `rector.php`:
 ```php
 <?php
 
-use Symplify\ConfigTransformer\FormatSwitcher\ValueObject\Format;
+use Symplify\ConfigTransformer\ValueObject\Format;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Rector\Symfony\Rector\Class_\ChangeFileLoaderInExtensionAndKernelRector;
 
