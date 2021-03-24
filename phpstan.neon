@@ -48,6 +48,11 @@ parameters:
         - rector.php
 
     level: max
+
+    bootstrapFiles:
+        # to autoload rector
+        - vendor/rector/rector-prefixed/vendor/autoload.php
+
     reportUnmatchedIgnoredErrors: false
 
     excludes_analyse:
@@ -68,10 +73,6 @@ parameters:
                 - 'packages/tweeter/src/TwitterApi/TwitterPostApiWrapper.php'
 
         -
-            message: '#Instead of "SplFileInfo" class/interface use "Symplify\\SmartFileSystem\\SmartFileInfo"#'
-            path: 'packages/blog/tests/Posts/Year2018/Exceptions/RelativePathTest.php'
-
-        -
             message: '#The path "/\.\./\.env\.local" was not found#'
             path: 'tests/bootstrap.php'
 
@@ -89,8 +90,12 @@ parameters:
             paths:
                 - packages/tweeter/src/Command/TweetCommand.php
 
-        - '#Method TomasVotruba\\FrameworkStats\\Result\\PackageDataFactory\:\:createPackagesData\(\) should return array<TomasVotruba\\FrameworkStats\\ValueObject\\PackageData\> but returns array<TomasVotruba\\FrameworkStats\\Contract\\LastYearTrendAwareInterface\>#'
-
         # fix in next PR
         - '#Parameter "(.*?)" cannot be nullable#'
         - '#Use decoupled factory service to create "Symfony\\Component\\HttpFoundation\\Response" object#'
+
+
+        -
+            message: '#Use void instead of modify and return self object#'
+            paths:
+                - packages/blog/src/Posts/Year2017/Ast/NodeVisitor/*NodeVisitor.php
