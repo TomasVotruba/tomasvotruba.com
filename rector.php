@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 use Rector\CodingStyle\Rector\MethodCall\UseMessageVariableForSprintfInSymfonyStyleRector;
 use Rector\Core\Configuration\Option;
-use Rector\DoctrineCodeQuality\Rector\Class_\MoveCurrentDateTimeDefaultInEntityToConstructorRector;
+use Rector\Doctrine\Rector\Class_\MoveCurrentDateTimeDefaultInEntityToConstructorRector;
+use Rector\Doctrine\Set\DoctrineSetList;
 use Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector;
 use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
 use Rector\Set\ValueObject\SetList;
-use Rector\SymfonyCodeQuality\Rector\Attribute\ExtractAttributeRouteNameConstantsRector;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
@@ -23,9 +23,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         SetList::CODING_STYLE,
         SetList::NETTE_UTILS_CODE_QUALITY,
         SetList::NAMING,
-        SetList::DOCTRINE_CODE_QUALITY,
         SetList::TYPE_DECLARATION,
         SetList::TYPE_DECLARATION_STRICT,
+        DoctrineSetList::DOCTRINE_CODE_QUALITY,
     ]);
 
     $parameters->set(Option::PATHS, [__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages']);

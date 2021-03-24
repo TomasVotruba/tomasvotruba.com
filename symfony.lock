@@ -551,6 +551,9 @@
     "symplify/rule-doc-generator": {
         "version": "9.0-dev"
     },
+    "symplify/rule-doc-generator-contracts": {
+        "version": "v9.2.14"
+    },
     "symplify/set-config-resolver": {
         "version": "v7.2.4"
     },
