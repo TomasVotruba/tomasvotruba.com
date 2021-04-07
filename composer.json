@@ -35,7 +35,7 @@
         "nette/security": "^3.1",
         "phpstan/phpstan": "^0.12.69",
         "phpunit/phpunit": "^9.5",
-        "rector/rector-prefixed": "^0.10.3",
+        "rector/rector": "^0.10",
         "spatie/http-status-check": "^3.3",
         "symfony/process": "^5.2",
         "symfony/stopwatch": "^5.2",
@@ -47,7 +47,7 @@
         "symplify/latte-to-twig-converter": "^9.2",
         "symplify/phpstan-extensions": "^9.2",
         "symplify/phpstan-rules": "^9.2",
-        "symplify/simple-php-doc-parser": "^9.3",
+        "symplify/simple-php-doc-parser": "^9.2",
         "symplify/static-detector": "^9.2"
     },
     "autoload": {
@@ -81,7 +81,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
