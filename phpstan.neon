@@ -49,10 +49,6 @@ parameters:
 
     level: max
 
-    bootstrapFiles:
-        # to autoload rector
-        - vendor/rector/rector-prefixed/vendor/autoload.php
-
     reportUnmatchedIgnoredErrors: false
 
     excludes_analyse:

@@ -3,7 +3,6 @@ name: Rector
 on:
     pull_request: null
 
-
 jobs:
     rector:
         # run only on core developers with access

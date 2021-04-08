@@ -8,6 +8,9 @@
     "composer/xdebug-handler": {
         "version": "1.4.1"
     },
+    "danielstjules/stringy": {
+        "version": "3.1.0"
+    },
     "dealerdirect/phpcodesniffer-composer-installer": {
         "version": "v0.7.0"
     },
@@ -88,6 +91,9 @@
     },
     "myclabs/deep-copy": {
         "version": "1.9.5"
+    },
+    "nette/caching": {
+        "version": "v3.1.1"
     },
     "nette/finder": {
         "version": "v2.5.2"
@@ -205,8 +211,26 @@
     "rector/rector": {
         "version": "0.8-dev"
     },
+    "rector/rector-cakephp": {
+        "version": "0.10.1"
+    },
+    "rector/rector-doctrine": {
+        "version": "0.10.0"
+    },
+    "rector/rector-laravel": {
+        "version": "0.10.0"
+    },
+    "rector/rector-nette": {
+        "version": "0.10.1"
+    },
+    "rector/rector-phpunit": {
+        "version": "0.10.2"
+    },
     "rector/rector-prefixed": {
         "version": "0.9.31"
+    },
+    "rector/rector-symfony": {
+        "version": "0.10.0"
     },
     "sebastian/cli-parser": {
         "version": "1.0.0"
