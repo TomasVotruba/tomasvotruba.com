@@ -15,15 +15,18 @@
                 ]) %}active{% endif %}">
                     <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::HOMEPAGE')) }}">Blog</a>
                 </li>
+
                 <li class="{% if is_current_routes([
                     constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTERS'),
                     constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTER_DETAIL')
                 ]) %}active{% endif %}">
                     <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTERS')) }}">Clusters</a>
                 </li>
-                <li class="{% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PROJECTS')) %}active{% endif %}">
-                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::PROJECTS')) }}">Projects</a>
+
+                <li>
+                    <a href="https://github.com/sponsors/TomasVotruba">Sponsor Me</a>
                 </li>
+
                 <li class="{% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::MISSION')) %}active{% endif %}">
                     <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::MISSION')) }}">Mission</a>
                 </li>

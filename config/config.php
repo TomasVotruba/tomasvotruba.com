@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use GuzzleHttp\Client;
-use GuzzleHttp\ClientInterface;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use function Symplify\Amnesia\Functions\env;
 use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
@@ -18,8 +16,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters->set(Option::SITE_URL, env('SITE_URL'));
 
     $services = $containerConfigurator->services();
-    $services->alias(ClientInterface::class, Client::class);
-
     $services->defaults()
         ->autowire()
         ->autoconfigure()

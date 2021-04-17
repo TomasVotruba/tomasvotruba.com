@@ -6,12 +6,9 @@
         "php": ">=8.0",
         "doctrine/cache": "^1.10",
         "erusev/parsedown-extra": "^0.8.1",
-        "guzzlehttp/guzzle": "^7.2",
         "j7mbo/twitter-api-php": "^1.0",
-        "kevinrob/guzzle-cache-middleware": "^3.3",
         "nette/finder": "^2.5",
         "nette/utils": "^3.2",
-        "spatie/packagist-api": "^2.0.2",
         "symfony/asset": "^5.2",
         "symfony/cache": "^5.2",
         "symfony/console": "^5.2",
@@ -54,7 +51,6 @@
         "psr-4": {
             "TomasVotruba\\Website\\": "src",
             "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
-            "TomasVotruba\\Projects\\": "packages/projects/src",
             "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
             "TomasVotruba\\Blog\\": "packages/blog/src",
             "TomasVotruba\\CleaningLady\\": "packages/cleaning-lady/src"
