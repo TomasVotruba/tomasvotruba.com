@@ -10,15 +10,22 @@ perex: |
     **How to use it with GitLab split repositories and custom git hosting?**
 
 tweet: "New Post on #php 🐘 blog: Monorepo Split GitHub Action 2.0 with Gitlab split is Out!"
+tweet_image: "/assets/images/posts/2021/split_news.png"
 ---
 
-## Private Repositories Support
+<img src="/assets/images/posts/2021/split_news.png" class="img-thumbnail">
+
+I have 3 news today that make Monorepo Split more accessible to private packages.
+
+<br>
+
+## 1. Private Repositories Support
 
 [Monorepo split](https://github.com/symplify/monorepo-split-github-action) was built on open-source principles and thus used only for public repositories on GitHub. As time went by, this GitHub Action got into private repositories.
 
 Do you have a private monorepo repository on GitHub? **Monorepo Split 2.0 now supports it!**
 
-## Split to Private Gitlab Repository
+## 2. Split to Private Gitlab Repository
 
 GitHub Action can be used only on GitHub, obviously, but the target repository should not matter. Version 1.x had some troubles with splitting without the correct token. In version 2.0, we've **added support for Gitlab as target repositories**.
 
@@ -33,7 +40,7 @@ The token must include `read_repository` + `write_repository` rights. Where can 
 
 Now you can build monorepo on GitHub and split it into repositories on Gitlab.
 
-## Split to custom Git Hosting
+## 3. Split to custom Git Hosting
 
 Do you use GitLab? If so, there is a big chance you host it on your server because the [saas is getting more and more expensive](/blog/best-time-to-switch-GitLab-to-github/).
 
