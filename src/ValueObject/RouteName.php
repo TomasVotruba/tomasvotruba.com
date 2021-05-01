@@ -80,4 +80,5 @@ final class RouteName
      * @var string
      */
     public const BOOK_DETAIL = 'book-detail';
+    const BLOG = 'blog';
 }

@@ -10,7 +10,7 @@
         <div class="container-fluid" id="post">
             <h1>{{ post.title|raw }}</h1>
 
-            {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "show_comment_count": true, "show_edit_link": true } %}
+            {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "show_edit_link": true } %}
 
             {% if post.deprecated %}
                 <div class="card border-danger card-bigger">
@@ -50,17 +50,27 @@
 
             <br>
 
-            <div class="row mb-5 mt-5">
-                <div class="col-12 mb-5">
+
+            <div class="card mt-5">
+                <div class="card-body text-center mt-2">
+                    <p>
+                        Have you find this post useful? <strong> Do you want more?</strong>
+                    </p>
+                    <p>
+                        Follow me on <a href="https://twitter.com/votrubaT">Twitter</a>, <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">RSS</a> or <a href="https://github.com/sponsors/TomasVotruba">GitHub Sponsors</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body text-white bg-success text-center">
                     {% set previous_post = previous_post(post) %}
                     {% if previous_post is not null %}
-                        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {'slug': previous_post.getSlug }) }}" class="d-block pt-4 pb-4 pl-4 pr-4 btn btn-success btn-wrappable">
-                            <em class="fas fa-fw fa-forward"></em>
-                            <strong>Read Next</strong>
-                            <br>
-                            <span class="text-bigger">
-                                {{ previous_post.title|replace({'&nbsp;': ' '}) }}
-                            </span>
+                        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {'slug': previous_post.getSlug }) }}" class="d-block">
+
+                            <div>
+                                Read next → <strong>{{ previous_post.title|replace({'&nbsp;': ' '}) }}</strong>
+                            </div>
                         </a>
                     {% endif %}
                 </div>

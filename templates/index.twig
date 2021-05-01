@@ -1,68 +1,54 @@
 {% extends 'base.twig' %}
 
+
+{#
+    quotes:
+    "clean code is a code, that junior and senior can understand in the same amount of time"
+    https://twitter.com/votrubat/status/1275863668878688257
+#}
+
+
 {% block content %}
     <div class="container-fluid" id="blog">
         <div class="mt-5 mb-2 subline text-center">
-            <p>
-                Read weekly insights of <strong><a href="http://threevirtues.com/">the laziest PHP developer</a></strong> you've met
-            </p>
-
-            {# updated from Google Analytics, 2020-04-25 #}
-            <p>
-                Join <strong>25 087 learning PHP developers</strong> every month on <a href="https://twitter.com/votrubaT">Twitter</a> or
-                <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">RSS</a>
-            </p>
+            Hi, I'm Tomas Votruba and I help PHP companies to make digital transformations both safe and fast.
         </div>
 
-        <div class="row">
-            {% set date_lines = [] %}
+            <p>
+                My passion is to tidy up code, cut out frictions and remove the weakest parts that. I believe end junior should understand logic from the code. I love reconstructions of huge old projects to a brand new architecture with modern and smooth code. To open this experience to any developers, I created an instant upgrade tool called <a href="http://github.com/rectorphp/rector">Rector</a> in 2017.
+                <br>
 
-            {% set was_first_post_marked = false %}
-            {% set displayed_post_count = 0 %}
-            {% set currentYear = "now"|date('Y') %}
+        <div class="flash flash-success">
+            Open to opportunities for 20 hours/week. A href contantc me
+        </div>
 
-            {# display only last X posts, for DOM performance on mobile #}
-            {% for post in posts %}
-                {% set postYear = post.dateTime|date('Y') %}
+        <p class="mt-2">
+            I live open-source so much, that <a href="https://stars.github.com/profiles/tomasvotruba/">GitHub awarded me</a> as one of 100 GitHub Stars.
+        </p>
 
-                {% if postYear != currentYear and postYear not in date_lines %}
-                    <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
-                        <br>
-                        <br>
-                        {{ postYear }}
-                        {# https://stackoverflow.com/a/9432583/1348344 #}
-                        {% set date_lines = date_lines|merge({postYear: postYear}) %}
-                    </div>
-                {% endif %}
+                {#                        <img src="https://avatars1.githubusercontent.com/u/924196?s=60&v=4" class="me_avatar">#}
+                Tomas Votruba
+                </a>
 
-                {% set displayed_post_count = displayed_post_count + 1 %}
+                {#        #}
+                {#        #}
+                {#        <em class="fas fa-heart text-danger fa-lg"></em>#}
 
-                {% if loop.first %}
-                    <article class="pt-2 pb-4 col-md-12">
-                        <h2 class="firstPost text-center">
-                            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}">
-                                {{ post.title|raw }}
-                            </a>
-                        </h2>
+                {#        &nbsp;#}
+                {#        <span class="pl-2 pr-2">•</span>#}
+                {#        &nbsp;#}
 
-                        <div class="text-center">
-                            {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                        </div>
-                    </article>
-                {% else %}
-                    {% if loop.index == 2 %}<ul class="mt-5 list-unstyled">{% endif %}
+                {#        See <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG_ARCHIVE')) }}">Post Archive</a>#}
 
-                    <li class="mb-3 col-md-12">
-                        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
+                {#        &nbsp;#}
+                {#        <span class="pl-2 pr-2">•</span>#}
+                {#        &nbsp;#}
 
-                        {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                    </li>
-                    <hr>
-                {% endif %}
-            {% endfor %}
-            </ul>
+                {#        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">Get RSS</a>#}
+            </p>
         </div>
 
         <br>
     </div>
 {% endblock %}
+

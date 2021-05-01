@@ -23,13 +23,6 @@
         </li>
     {% endif %}
 
-    {% if show_comment_count is defined %}
-        <li class="list-inline-item mr-3">
-            <em class="fas fa-fw fa-comments"></em>
-            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}/#disqus_thread">X</a> comments
-        </li>
-    {% endif %}
-
     {% if post.tested %}
         <li class="list-inline-item mr-3 text-primary">
             <em class="fas fa-fw fa-check-circle"></em>
@@ -38,7 +31,7 @@
     {% endif %}
 
     {% if show_edit_link is defined %}
-        <li class="list-inline-item mr-3 text-primary">
+        <li class="list-inline-item mr-3 text-primary pull-right">
             <em class="fab fa-fw fa-github"></em>
             <a href="{{ post.gitHubEditUrl }}">Found a typo? Edit me</a>
         </li>

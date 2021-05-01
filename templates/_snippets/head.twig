@@ -9,8 +9,13 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@votrubaT"/>
+
     {% if block('socialTags') is defined %}
         {{ block('socialTags') }}
+
+
     {% endif %}
 
     <link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog RSS" href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">
@@ -28,6 +33,7 @@
 
     {# this is the last, so prism can be overriden here #}
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
+
 
 
     {# bookies checklist #}
