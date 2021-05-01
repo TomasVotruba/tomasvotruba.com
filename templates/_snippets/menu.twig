@@ -17,19 +17,28 @@
                 </li>
 
                 <li class="{% if is_current_routes([
+                    constant('TomasVotruba\\Website\\ValueObject\\RouteName::TRAININGS'),
+                    constant('TomasVotruba\\Website\\ValueObject\\RouteName::TRAINING_DETAIL')
+                ]) %}active{% endif %}">
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::TRAININGS')) }}">Trainings</a>
+                </li>
+
+
+                <li class="{% if is_current_routes([
                     constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTERS'),
                     constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTER_DETAIL')
                 ]) %}active{% endif %}">
                     <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CLUSTERS')) }}">Clusters</a>
                 </li>
 
-                <li>
-                    <a href="https://github.com/sponsors/TomasVotruba">Sponsor Me</a>
+
+                <li class="{% if is_current_routes([
+                    constant('TomasVotruba\\Website\\ValueObject\\RouteName::BOOKS'),
+                    constant('TomasVotruba\\Website\\ValueObject\\RouteName::BOOK_DETAIL'),
+                ]) %}active{% endif %}">
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BOOKS')) }}">Book</a>
                 </li>
 
-                <li class="{% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::MISSION')) %}active{% endif %}">
-                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::MISSION')) }}">Mission</a>
-                </li>
                 <li class="{% if is_current_route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) %}active{% endif %}">
                     <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) }}">Contact</a>
                 </li>

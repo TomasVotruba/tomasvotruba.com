@@ -511,10 +511,9 @@ table ul {
 
 #footer {
     background: #24292e;
-    color: hsla(0,0%,100%,.75);
-    padding-top: 1.5em;
-    padding-bottom: 1em;
-    line-height: 3em;
+    color: hsla(0,0%,100%,.9);
+    padding: 2em 0;
+    line-height: 2.2em;
 }
 
 #footer a {

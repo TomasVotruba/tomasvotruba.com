@@ -23,63 +23,46 @@
 
             {# display only last X posts, for DOM performance on mobile #}
             {% for post in posts %}
-                {% if displayed_post_count < post_homepage_limit %}
-                    {% set postYear = post.dateTime|date('Y') %}
+                {% set postYear = post.dateTime|date('Y') %}
 
-                    {% if postYear != currentYear and postYear not in date_lines %}
-                        <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
-                            <br>
-                            <br>
-                            {{ postYear }}
-                            {# https://stackoverflow.com/a/9432583/1348344 #}
-                            {% set date_lines = date_lines|merge({postYear: postYear}) %}
-                        </div>
-                    {% endif %}
+                {% if postYear != currentYear and postYear not in date_lines %}
+                    <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
+                        <br>
+                        <br>
+                        {{ postYear }}
+                        {# https://stackoverflow.com/a/9432583/1348344 #}
+                        {% set date_lines = date_lines|merge({postYear: postYear}) %}
+                    </div>
+                {% endif %}
 
-                    {% set displayed_post_count = displayed_post_count + 1 %}
+                {% set displayed_post_count = displayed_post_count + 1 %}
 
-                    {% if loop.first %}
-                        <article class="pt-2 pb-4 col-md-12">
-                            <h2 class="firstPost text-center">
-                                <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}">
-                                    {{ post.title|raw }}
-                                </a>
-                            </h2>
+                {% if loop.first %}
+                    <article class="pt-2 pb-4 col-md-12">
+                        <h2 class="firstPost text-center">
+                            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}">
+                                {{ post.title|raw }}
+                            </a>
+                        </h2>
 
-                            <div class="text-center">
-                                {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                            </div>
-                        </article>
-                    {% else %}
-                        {% if loop.index == 2 %}<ul class="mt-5 list-unstyled">{% endif %}
-
-                        <li class="mb-3 col-md-12">
-                            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
-
+                        <div class="text-center">
                             {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                        </li>
-                        <hr>
-                    {% endif %}
+                        </div>
+                    </article>
+                {% else %}
+                    {% if loop.index == 2 %}<ul class="mt-5 list-unstyled">{% endif %}
+
+                    <li class="mb-3 col-md-12">
+                        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
+
+                        {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
+                    </li>
+                    <hr>
                 {% endif %}
             {% endfor %}
             </ul>
         </div>
 
-        <p>This is the last {{ post_homepage_limit }} posts I wrote.</p>
-
         <br>
-        <br>
-        <br>
-
-        <h2>Haven't you find what you've been looking for?</h2>
-
-        <div class="mt-4">
-            <p>1. Type it here and hit enter...</p>
-            <div style="max-width:20em">{% include "_snippets/search_form.twig" %}</div>
-        </div>
-
-        <div class="mt-4">
-            <p>2. Or explore <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG_ARCHIVE')) }}">the Archive</a></p>
-        </div>
     </div>
 {% endblock %}

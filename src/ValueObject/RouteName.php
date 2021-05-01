@@ -60,4 +60,24 @@ final class RouteName
      * @var string
      */
     public const PHP_FRAMEWORK_TRENDS = 'php-framework-trends';
+
+    /**
+     * @var string
+     */
+    public const TRAININGS = 'trainings';
+
+    /**
+     * @var string
+     */
+    public const TRAINING_DETAIL = 'training-detail';
+
+    /**
+     * @var string
+     */
+    public const BOOKS = 'books';
+
+    /**
+     * @var string
+     */
+    public const BOOK_DETAIL = 'book-detail';
 }
