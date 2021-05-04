@@ -9,6 +9,10 @@ perex: |
     So I tried to use [PHPStan generics](https://phpstan.org/blog/generics-in-php-using-phpdocs) and failed hard.
 
 tweet: "New Post on #php 🐘 blog: #phpstan Abstract Parent Generics for Dummies"
+
+updated_since: "May 2021"
+updated_message: |
+    Simplified to 1-line `@extends` syntax.
 ---
 
 <blockquote class="blockquote text-center">
@@ -124,6 +128,8 @@ But what **do you see**? You probably assume it's a specific `object` with a spe
 
 We can see these solutions out in the wild. All of them are valid. They verify an assumption - is object a `Product` type?
 
+## Validation !== Type Declaration
+
 But **validation is not designed for type specification**. It's a layer to verify external input from QA when they walk in a bar order beer, `-5`, `$^@'ł`, an array of `T_INF`, and a bottomless glass of invisible water.
 
 Here **we know** the `$product` is always the `Product` type unless some very nasty bug will get into Doctrine.
@@ -131,11 +137,13 @@ How can we teach our PHP code this knowledge?
 
 ## Generics!
 
-Adding generics to 2 classes is 2 step process. Surprise, right?
+Adding generics to 2 classes is 2-steps
 
-### Open Parent
+### 1. Open Parent
 
 **First**, we need to tell the abstract class to be opened to type override from children. By convention, the generics are not defined with the `@generics` keyword but by `@template`. It has nothing to do with rendering templates.
+
+<br>
 
 With `@template` we define a keyword and a type. Same as `@param int $age` does.
 
@@ -165,7 +173,7 @@ Now we use this `TEntity` keyword in places where we know the specific type will
 
 Good job, we're halfway through.
 
-### Specify Child
+### 2. Specify Child
 
 So how do we tell `ProductRepository` to treat every object as `Product`?
 
@@ -197,11 +205,11 @@ While `@return int` gets promoted to child methods, `@template` does not.
 - So `TEntity` is `Product` only in class we defined it in - `ProductRepository`
 - And `TEntity` is only an `object` in class we defined it in - `AbstractRepository`
 
-So we need to tell `AbstractRepository` to use `TEntity` as `Product`, without modifying it. That's a headache task, right?
+So we need to tell `AbstractRepository` to use `TEntity` as `Product`, without modifying it.
 
 <br>
 
-In the documentation, there is mentioned `@extends` annotation. It is not related to extending any class, **but instead promoting types to parent class**. Probably another generics convention, confusing to a newbie like me.
+In the documentation, there is mentioned `@extends` annotation. It is not related to extending a class, **but promoting types to parent class**.
 
 Let's get back to our repository:
 
@@ -228,7 +236,7 @@ How do we tell the parent class to use `TEntity` as `Product`?
  }
 ```
 
-As we don't use `TEntity` in our child class, we can merge it to `@extends`:
+As we don't use `TEntity` in our child class, we can merge it to `@extends` (thanks Ondra for pointing that out in the comments):
 
 ```diff
  /**
@@ -246,9 +254,9 @@ Beware! Even though it looks like any `array<shape>`, it has nothing to do with 
 
 <br>
 
-## How to propagate 2 and more Types?
+## How to Propagate 2 and more Types?
 
-What if you have 2 generics types in your abstract class?
+Let's say you have 2 generics types in your abstract class:
 
 ```php
 /**
