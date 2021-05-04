@@ -16,7 +16,6 @@ tweet: "New Post on #php 🐘 blog: #phpstan Generics for Dummies - With 2 Paren
 
 Let's start where we ended last time:
 
-
 ```php
 /**
  * @extends AbstractRepository<Product>
@@ -26,7 +25,7 @@ final class ProductRepository extends AbstractRepository
 }
 ```
 
-With abstract parent:
+With an abstract parent:
 
 ```php
 /**
@@ -59,11 +58,11 @@ Here we always have a `Product` type.
 
 ## Constraints Have Changed
 
-Everything works well, our project grows and more and more users are visiting our website. Life is good.
+Everything works well, our project grows, and more and more users are visiting our website. Life is good.
 
 Just the response time is lagging more and more. How could we improve it? One way is to **cache the most visited entities**.
 
-Allright! We'll add a new repository class with cache:
+Alright! We'll add a new repository class with cache:
 
 ```php
 abstract class AbstractCachedRepository extends AbstractRepository
@@ -92,7 +91,7 @@ Our class structure changes like this:
 + ProductRepository -> AbstractCachedRepository -> AbstractRepository
 ```
 
-Cache is working, lagging is gone... we run PHPStan and... it crashes. **Why?** Because the class in `@extends class` is no longer there:
+The cache is working, and lagging is gone... we run PHPStan, and... it crashes. **Why?** Because the class in `@extends class` is no longer there:
 
 ```php
 /**
@@ -103,7 +102,7 @@ final class ProductRepository extends AbstractCachedRepository
 }
 ```
 
-The `ProductRepository` class does not see it's grand-parent class `AbstractRepository`, only it's direct parent.
+The `ProductRepository` class does not see its grand-parent class `AbstractRepository`, only its direct parent.
 **We'll fix that:**
 
 ```diff
@@ -116,11 +115,11 @@ The `ProductRepository` class does not see it's grand-parent class `AbstractRepo
  }
 ```
 
-Well done! Now we run PHPStan again to see result... and it crashes. **Why?**
+Well done! Now we rerun PHPStan to see the result... and it crashes. **Why?**
 
 ## 2 Steps to Man in the Middle Class
 
-`AbstractCachedRepository` is a middle man. **Its job is to take type from the child class and send it to parent class.** But it's just a bare class with no annotations.
+`AbstractCachedRepository` is a middle man. **Its job is to take type from the child class and send it to the parent class.** But it's just a bare class with no annotations.
 
 <br>
 
@@ -149,13 +148,13 @@ It has no idea what to do. We have to tell it to...
   }
 ```
 
-We run PHPStan and... it works!
+We run PHPStan, and... it works!
 
 <em class="fas fa-fw fa-2x fa-check text-success mb-3"></em>
 
 <br>
 
-## Let PHPStan watch Your Back
+## Let PHPStan Watch Your Back
 
 Is your PHPStan passing **even without generic definition in child class**? You need to enable it first.
 
