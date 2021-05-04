@@ -228,6 +228,17 @@ How do we tell the parent class to use `TEntity` as `Product`?
  }
 ```
 
+As we don't use `TEntity` in our child class, we can merge it to `@extends`:
+
+```diff
+ /**
+- * @template TEntity as Product
++ * @extends AbstractRepository<Product>
+  */
+ final class ProductRepository extends AbstractRepository
+ {
+ }
+```
 
 Now the `TEntity` in `AbstractRepository` will be overridden by type defined here. So `TEntity` will be treated as `Product` <em class="fas fa-fw fa-lg fa-check text-success"></em>
 
@@ -235,25 +246,32 @@ Beware! Even though it looks like any `array<shape>`, it has nothing to do with 
 
 <br>
 
-It can take multiple arguments, separated by comma:
+## How to propagate 2 and more Types?
 
-```diff
+What if you have 2 generics types in your abstract class?
+
+```php
 /**
- * @template TEntity as Product
-+* @template TQuery as ProductQuery
--* @extends AbstractRepository<TEntity>
-+* @extends AbstractRepository<TEntity, TQuery>
+ * @template TEntity as object
+ * @template TQuery as object
  */
- final class ProductRepository extends AbstractRepository
- {
- }
+abstract class AbstractRepository
+{
+}
 ```
 
-And that's how you use generics with parent abstract class with PHPStan.
+The `@extends` tag can take multiple arguments, separated by comma - in **the same order the types are defined** in abstract class:
 
-<br>
+```php
+/**
+ * @extends AbstractRepository<Product, ProductQuery>
+ */
+final class ProductRepository extends AbstractRepository
+{
+}
+```
 
-It's my first generic time, so I bet this setup is not the best. Do you have a tip to improve? Share it. I'd love to learn a better way.
+That's how you use generics with parent abstract class with PHPStan.
 
 <br>
 
