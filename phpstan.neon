@@ -43,7 +43,6 @@ parameters:
         - packages/cleaning-lady/config/config.php
         - config/_data
         - config/config.php
-        - ecs.php
         - rector.php
 
     level: max
