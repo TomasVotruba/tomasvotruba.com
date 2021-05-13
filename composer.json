@@ -32,7 +32,7 @@
         "nette/security": "^3.1",
         "phpstan/phpstan": "^0.12.86",
         "phpunit/phpunit": "^9.5",
-        "rector/rector": "^0.10-dev",
+        "rector/rector": "^0.11.1",
         "spatie/http-status-check": "^3.3",
         "symfony/process": "^5.2",
         "symfony/stopwatch": "^5.2",
