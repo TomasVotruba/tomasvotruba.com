@@ -111,12 +111,16 @@ Now we have:
 The ECS with PHP 7.1 and scoped code is available since version 9.3.10. You can run bare `composer update` or specify the exact version to be sure:
 
 ```bash
+composer remove squizlabs/php_codesniffer
+composer remove friendsofphp/php-cs-fixer
 composer update symplify/easy-coding-standard:^9.3.10
 ```
 
 Do you use `symplify/easy-coding-standard-prefixed`? Replace it with a new package:
 
 ```bash
+composer remove squizlabs/php_codesniffer
+composer remove friendsofphp/php-cs-fixer
 composer remove symplify/easy-coding-standard-prefixed
 composer require symplify/easy-coding-standard:^9.3.10 --dev
 ```
