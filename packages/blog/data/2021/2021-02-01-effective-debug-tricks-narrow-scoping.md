@@ -2,12 +2,12 @@
 id: 300
 title: "Effective Debug Tricks: Narrow Scoping"
 perex: |
-    Writing a code that only you work with is easy. Debugging such code is a bit harder. Writing a code for someone else review is quite hard. The code must be understandable to the other reader to pass the code review.
+    Writing code that only you work with is easy. Debugging such code is a bit harder. Writing code for someone else review is quite hard. The code must be understandable to the other reader to pass the code review.
     <br><br>
-    How hard is reading a code that someone else wrote three months ago?
+    How hard is reading code that someone else wrote three months ago?
     <br>
     <br>
-    But what about debugging a code that someone wrote a year ago?
+    But what about debugging code that someone wrote a year ago?
 tweet: "New Post on #php 🐘 blog: Effective Debug Tricks: Narrow Scoping"
 ---
 
@@ -17,7 +17,7 @@ Effective debugging is about **getting to the minimal amount of code that is *pr
 
 ## Why it's important?
 
-When we report a bug in a project's issue tracker, we're usually interested in its fix. Why would we report if we don't care? **The faster bug gets fixed, the better for us**, so we can continue with our original coding goal. We need [instant feedback](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers) to stay in the flow.
+When we report a bug in a project's issue tracker, we're usually interested in its fix. Why would we report if we don't care? **The faster the bug gets fixed, the better for us**, so we can continue with our original coding goal. We need [instant feedback](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers) to stay in the flow.
 
 <br>
 
@@ -43,20 +43,20 @@ What will happen if we provide a report like this?
 
 ---
 
-This interaction is a problem already because **you've lost energy that you're willing to invest** to reporting the bug and the **maintainer lost energy that is willing to put** into narrow the scope of the bug.
+This interaction is a problem already because **you've lost energy that you're willing to invest** to report the bug and the **maintainer lost energy that he/she is willing to put** into narrow the scope of the bug.
 
-It's like going to a mall, stopping right in front of the first door and shouting "open the door". It will take a couple of minutes for security to get to you and figure out what you want. Why not just take the handle yourself? Good luck next time you'll report a robbery to them - they will to help will be a bit lowered, if not depleted.
+It's like going to a mall, stopping right in front of the first door and shouting "open the door". It will take a couple of minutes for security to get to you and figure out what you want. Why not just take the handle yourself? Good luck next time you'll report a robbery to them - the will to help will be a bit lowered, if not depleted.
 
 ---
 
-## Bug Fix Effectiveness
+## Bugfix Effectiveness
 
 Remember, the goal of reporting an issue is to invest as little energy from our side and maintainer's side and get the bug fixed at the same time.
 
-The bug fix effectiveness formula states:
+The bugfix effectiveness formula states:
 
 <blockquote class="blockquote text-center">
-    Bug Fix Effectiveness = (Reporter Work + Maintainer Work) / 100
+    Bugfix Effectiveness = (Reporter Work + Maintainer Work) / 100
 </blockquote>
 
 - If *BFE* < 0.5, you have both more energy left to fix even more bugs <em class="fas fa-fw fa-check text-success fa-lg"></em>
@@ -78,7 +78,7 @@ So can we do it better for everyone?
 
 <br>
 
-Good job! We've just saved both ourselves and the maintainer a significant amount of energy. Now the maintainer know **what happens** to use and how it looks like.
+Good job! We've just saved both ourselves and the maintainer a significant amount of energy. Now the maintainer knows **what happens** to use and how it looks like.
 
 ---
 
@@ -121,7 +121,7 @@ How can we do it better?
 
 **Great job!**
 
-Now both you and the maintainers now:
+Now both you and the maintainers know:
 
 - what steps were made
 - what happened
@@ -130,7 +130,7 @@ Now both you and the maintainers now:
 
 <br>
 
-Do you remember Bug Fix Effectiveness Formula?
+Do you remember Bugfix Effectiveness Formula?
 
 <blockquote class="blockquote text-center">
     BFE = (Reporter Work + Maintainer Work) / 100
@@ -154,7 +154,7 @@ But because the maintainer doesn't have to ask us more questions and doesn't hav
 
 <br>
 
-There is one more step that we found to be the most effective. **It usually requires only one comment from the report and one reply from the maintainer**. Well, if you count closing the issue with pull-request as a comment.
+There is one more step that we found to be the most effective. **It usually requires only one comment from the reporter and one reply from the maintainer**. Well, if you count closing the issue with pull-request as a comment.
 
 How can we do it better? Don't worry; it's not about learning project test conventions and sending a failing pull-request.
 
@@ -168,15 +168,15 @@ Let's look at the **narrow scoping**. What can we read from this report?
 *I used `vendor/bin/rector process p src`*
 
 - There are 1-INF rules and settings in `rector.php` and 1-INF files in the `/src` directory.
-- One of rule and one of rile is causing a bug.
+- One of rule and one of file is causing a bug.
 
 The question is: **what rule and what file is causing this bug?**
 
-We need to narrow the scope of INF * INF to 1 * 1. How can we do it?
+We need to narrow the scope of `INF * INF` to `1 * 1`. How can we do it?
 
 ### Half-Half Cutting
 
-This technique can be applied to services, to PHPStan rule, to Rector rules, to a coding standard, to registered event subscribers... to anything. A similar algorithm is used to sort files in an array.
+This technique can be applied to services, to PHPStan rules, to Rector rules, to a coding standard, to registered event subscribers... to anything. A similar algorithm is used to sort files in an array.
 
 The idea is comment out half of the configuration, run the tool and see if the bug still remains:
 
