@@ -39,7 +39,6 @@ parameters:
         - tests
         - packages
         - packages/symfony-static-dump/config/config.php
-        - packages/blog/config/config.php
         - config/_data
         - config/config.php
         - rector.php
@@ -99,3 +98,5 @@ parameters:
             paths:
                 - src/Controller
                 - packages/blog/src/Controller
+
+        - '#Class like namespace "TomasVotruba\\Blog\\(.*?)" does not follow PSR\-4 configuration in composer\.json#'

@@ -50,14 +50,13 @@
     "autoload": {
         "psr-4": {
             "TomasVotruba\\Website\\": "src",
+            "TomasVotruba\\Blog\\": "packages/blog/src",
             "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
-            "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
-            "TomasVotruba\\Blog\\": "packages/blog/src"
+            "TomasVotruba\\Tweeter\\": "packages/tweeter/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\Blog\\Tests\\": "packages/blog/tests",
             "TomasVotruba\\Tweeter\\Tests\\": "packages/tweeter/tests"
         }
     },

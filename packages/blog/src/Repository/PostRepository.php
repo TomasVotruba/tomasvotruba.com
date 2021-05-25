@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\Repository;
 
-use Symplify\SmartFileSystem\Finder\FinderSanitizer;
 use TomasVotruba\Blog\DataProvider\PostDataProvider;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
@@ -16,10 +15,8 @@ final class PostRepository
      */
     private array $posts = [];
 
-    public function __construct(
-        private FinderSanitizer $finderSanitizer,
-        private PostDataProvider $postDataProvider
-    ) {
+    public function __construct(PostDataProvider $postDataProvider)
+    {
         $this->posts = $postDataProvider->provide();
     }
 
@@ -54,20 +51,6 @@ final class PostRepository
         $posts = $this->filterOutNonEnglish($posts);
 
         return $this->filterOutDeprecated($posts);
-    }
-
-    /**
-     * @return Post[][]
-     */
-    public function groupByYear(): array
-    {
-        $postsByYear = [];
-
-        foreach ($this->fetchAllEnglishNonDeprecated() as $post) {
-            $postsByYear[$post->getYear()][] = $post;
-        }
-
-        return $postsByYear;
     }
 
     public function get(int $id): Post
