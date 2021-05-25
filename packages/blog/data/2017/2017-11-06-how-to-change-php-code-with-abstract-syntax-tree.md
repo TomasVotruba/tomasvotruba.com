@@ -228,16 +228,7 @@ Do you want to see more advanced operations, like those we [brainstormed in the 
 
 <br>
 
-### This post is Tested
-
-This is the first [tested post](/blog/2019/09/16/why-software-articles-must-be-ci-tested/) I've added to my blog.
- It means **it will be updated as new versions of code used here will appear** → *LTS post* that will work with newer `nikic/php-parser` versions.
-
- Do you want to see those tests? Just click *Tested* badge in the top.
-
-<br>
-
 Let me know in the comments, what would you like to read about AST and its Traversing and Modification. I might inspire by your ideas.
 
 
-Happy traversing!
+Happy coding!

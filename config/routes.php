@@ -9,6 +9,4 @@ use Symplify\Amnesia\ValueObject\Symfony\Routing;
 
 return static function (RoutingConfigurator $routes): void {
     $routes->import(__DIR__ . '/../src/Controller', Routing::TYPE_ANNOTATION);
-    $routes->import(__DIR__ . '/../packages/blog/src/Controller', Routing::TYPE_ANNOTATION);
-    $routes->import(__DIR__ . '/../packages/cleaning-lady/src/Controller', Routing::TYPE_ANNOTATION);
 };

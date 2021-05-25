@@ -8,9 +8,8 @@ use Iterator;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
-use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class YamlTest extends TestCase implements PostTestInterface
+final class YamlTest extends TestCase
 {
     /**
      * @dataProvider provideFilesToContent()

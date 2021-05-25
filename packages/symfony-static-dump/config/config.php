@@ -12,6 +12,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autowire()
         ->autoconfigure();
 
-    $services->load('TomasVotruba\SymfonyStaticDump\\', __DIR__ . '/../src')
-        ->exclude([__DIR__ . '/../src/Contract/*']);
+    $services->load('TomasVotruba\SymfonyStaticDump\\', __DIR__ . '/../src');
 };

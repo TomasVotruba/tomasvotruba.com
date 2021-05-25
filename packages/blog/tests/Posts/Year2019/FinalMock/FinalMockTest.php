@@ -7,9 +7,8 @@ namespace TomasVotruba\Blog\Tests\Posts\Year2019\FinalMock;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use TomasVotruba\Blog\Posts\Year2019\FinalMock\FinalClass;
-use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class FinalMockTest extends TestCase implements PostTestInterface
+final class FinalMockTest extends TestCase
 {
     public function test(): void
     {

@@ -15,9 +15,8 @@ use PhpParser\ParserFactory;
 use PHPUnit\Framework\TestCase;
 use Symplify\SmartFileSystem\SmartFileSystem;
 use TomasVotruba\Blog\Posts\Year2017\Ast\NodeVisitor\ChangeMethodNameNodeVisitor;
-use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class ModifyTest extends TestCase implements PostTestInterface
+final class ModifyTest extends TestCase
 {
     private string $srcDirectory;
 

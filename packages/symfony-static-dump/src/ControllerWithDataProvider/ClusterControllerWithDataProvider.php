@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace TomasVotruba\SymfonyStaticDump\ControllerWithDataProvider;
 
 use Symplify\SymfonyStaticDumper\Contract\ControllerWithDataProviderInterface;
-use TomasVotruba\Blog\Controller\ClusterController;
 use TomasVotruba\Blog\Repository\ClusterRepository;
+use TomasVotruba\Website\Controller\ClusterController;
 
 final class ClusterControllerWithDataProvider implements ControllerWithDataProviderInterface
 {

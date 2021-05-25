@@ -9,9 +9,8 @@ use PHPUnit\Framework\TestCase;
 use Symplify\SmartFileSystem\SmartFileSystem;
 use TomasVotruba\Blog\Posts\Year2017\Ast\NodeVisitor\ChangeMethodNameNodeVisitor;
 use TomasVotruba\Blog\Posts\Year2017\Ast\Printer\FormatPreservingPrinter;
-use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class PrintTest extends TestCase implements PostTestInterface
+final class PrintTest extends TestCase
 {
     private string $srcDirectory;
 

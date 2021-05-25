@@ -52,8 +52,7 @@
             "TomasVotruba\\Website\\": "src",
             "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
             "TomasVotruba\\Tweeter\\": "packages/tweeter/src",
-            "TomasVotruba\\Blog\\": "packages/blog/src",
-            "TomasVotruba\\CleaningLady\\": "packages/cleaning-lady/src"
+            "TomasVotruba\\Blog\\": "packages/blog/src"
         }
     },
     "autoload-dev": {

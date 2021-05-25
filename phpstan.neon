@@ -40,7 +40,6 @@ parameters:
         - packages
         - packages/symfony-static-dump/config/config.php
         - packages/blog/config/config.php
-        - packages/cleaning-lady/config/config.php
         - config/_data
         - config/config.php
         - rector.php

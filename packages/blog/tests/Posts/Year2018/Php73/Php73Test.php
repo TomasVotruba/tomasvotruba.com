@@ -8,9 +8,8 @@ use JsonException;
 use Nette\Utils\Json;
 use Nette\Utils\JsonException as NetteJsonException;
 use PHPUnit\Framework\TestCase;
-use TomasVotruba\Blog\Tests\Contract\PostTestInterface;
 
-final class Php73Test extends TestCase implements PostTestInterface
+final class Php73Test extends TestCase
 {
     /**
      * @var string[]
