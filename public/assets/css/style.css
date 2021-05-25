@@ -13,13 +13,14 @@ body {
     font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 
     color: #333;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5em;
 }
 
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    margin-bottom: 3em;
 }
 
 /*!* Typography *!*/
@@ -52,7 +53,6 @@ h1 {
     line-height: 1.3em;
     text-align: center;
     padding-bottom: 1em;
-    border-bottom: 1px solid #EEE;
 }
 
 h1, h2, h3 {
@@ -63,12 +63,12 @@ h2 {
     line-height: 1.3em;
 }
 
-a, a:active {
+h3 a, h2 a, a, h2 a:active, h3 a:active, a:active {
     color: rgba(26, 137, 23, 1);
     text-decoration: underline;
 }
 
-a:hover, a:focus {
+h3 a:hover, h2 a:hover, a:hover, h3 a:focus, h2 a:focus, a:focus {
     color: rgba(15, 115, 12, 1);
     text-decoration: none;
 }
@@ -95,7 +95,7 @@ ul {
 
 #menu {
     /*background-color: #24292e;*/
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: 1.7em 0;
     margin-bottom: 2em;
     /*color: #ddd;*/
@@ -125,23 +125,6 @@ ul {
 pre {
     border: none;
     border-radius: 2px;
-}
-
-article {
-    border-bottom: 1px solid #eeeeee;
-}
-
-#blog h2 {
-    margin-bottom: .2em;
-}
-
-.list-unstyled {
-    width: 100%;
-}
-
-.post-metadata {
-    color: #919191;
-    font-size: .9em;
 }
 
 .card-bigger {
@@ -225,7 +208,12 @@ pre {
     float: right;
 }
 
-#post, #cluster {
+#content h1 {
+    margin-top: 1.5em;
+    margin-bottom: 1.3em;
+}
+
+.post, .cluster {
     font-size: 1.2rem;
     /* inspiration https://christoph-rumpel.com/2020/8/refactoring-php */
     /*font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;*/
@@ -246,13 +234,8 @@ pre {
     margin: .5em auto 1.5em auto;
 }
 
-#post h2 {
-    font-size: 1.9em;
-}
-
 h1 {
     font-size: 3.2rem;
-    /*font-weight: 300;*/
 }
 
 /* @see https://stackoverflow.com/a/50174132/1348344 */
@@ -310,14 +293,14 @@ table ul {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    #blog .firstPost, #post h1 {
-        font-size: 2.3em;
-        /*font-weight: 300;*/
-        margin-top: .8em;
-        margin-bottom: .5em;
-    }
-}
+/*@media (max-width: 768px) {*/
+/*    #blog .firstPost, #post h1 {*/
+/*        font-size: 2.3em;*/
+/*        !*font-weight: 300;*!*/
+/*        margin-top: .8em;*/
+/*        margin-bottom: .5em;*/
+/*    }*/
+/*}*/
 
 .btn {
     cursor: pointer;
@@ -400,21 +383,6 @@ a.btn-dark, a.btn-dark:active {
 q {
     padding: .6em 0 .6em 0;
     font-size: 1.3em;
-}
-
-#support-me-button {
-    line-height: 1.6em;
-}
-
-@media (max-width: 768px) {
-    #support-me-button {
-        line-height: 1.1em;
-    }
-}
-
-.card h2, .card h3 {
-    padding-top: 0;
-    margin-top: 0;
 }
 
 a.btn:hover {

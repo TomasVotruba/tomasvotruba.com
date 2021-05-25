@@ -6,8 +6,9 @@
         <!-- post_id: {{ post.getId() }} -->
         {% include "_snippets/menu.twig" %}
 
-        <div class="container-fluid" id="post">
+        <div class="container-fluid post" id="content">
             <h1>{{ post.title|raw }}</h1>
+            <br>
 
             {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "show_edit_link": true } %}
 
