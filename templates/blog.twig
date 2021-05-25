@@ -30,7 +30,7 @@
         <div class="row">
             {% set date_lines = [] %}
 
-            {% set was_first_post_marked = false %}
+{#            {% set was_first_post_marked = false %}#}
             {% set displayed_post_count = 0 %}
             {% set currentYear = "now"|date('Y') %}
 
@@ -39,13 +39,12 @@
                 {% set postYear = post.dateTime|date('Y') %}
 
                 {% if postYear != currentYear and postYear not in date_lines %}
-                    <div class="col-md-12 yearLine mb-5 clearfix" id="year-{{ postYear }}">
-                        <br>
+                    <h2 class="col-md-12 mb-5 clearfix" id="year-{{ postYear }}">
                         <br>
                         {{ postYear }}
                         {# https://stackoverflow.com/a/9432583/1348344 #}
                         {% set date_lines = date_lines|merge({postYear: postYear}) %}
-                    </div>
+                    </h2>
                 {% endif %}
 
                 {% set displayed_post_count = displayed_post_count + 1 %}
@@ -65,30 +64,14 @@
                 {% else %}
                     {% if loop.index == 2 %}<ul class="mt-5 list-unstyled">{% endif %}
 
-                    <li class="mb-3 col-md-12">
+                    <li class="mb-3 col-md-12 {% if post.updatedAt is not null %}bg-success text-white pt-2 pb-2{% endif %}">
                         <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
-
                         {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
                     </li>
                     <hr>
                 {% endif %}
             {% endfor %}
             </ul>
-        </div>
-
-        <div class="mt-4">
-            <a href="https://twitter.com/votrubaT" class="btn btn-info">
-                <em class="fab fa-twitter fa-fw"></em>
-                &nbsp;
-                Follow me on Twitter
-            </a>
-
-            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}" class="btn btn-warning ml-2">
-                <em class="fas fa-rss fa-fw"></em>
-                &nbsp;
-                Get RSS weekly
-            </a>
-
         </div>
 
         <br>

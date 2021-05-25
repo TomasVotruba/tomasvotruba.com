@@ -24,8 +24,9 @@ html, body {
 
 /*!* Typography *!*/
 h1, h2, h3 {
-    font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Source Sans Pro',"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 h1 a, h1 a:hover, h1 a:focus, h2 a, h2 a:hover, h2 a:focus, h3 a, h3 a:hover, h3 a:focus {
@@ -41,11 +42,11 @@ h2 {
 h3 {
     font-size: 1.5em;
     margin: 1.2em 0 .4em;
-    font-weight: 300;
+    /*font-weight: 300;*/
 }
 
 h1 {
-    font-weight: 600;
+    /*font-weight: 600;*/
     margin: .9em 0 .6em 0;
     font-size: 2em;
     line-height: 1.3em;
@@ -93,19 +94,12 @@ ul {
 }
 
 #menu {
-    background-color: #24292e;
+    /*background-color: #24292e;*/
     font-size: 1.2em;
     padding: 1.7em 0;
     margin-bottom: 2em;
-    color: #ddd;
-}
-
-#menu a {
-    color: #EEE;
-}
-
-#menu a:hover {
-    color: #FFF;
+    /*color: #ddd;*/
+    border-bottom: 5px solid #333;
 }
 
 @media (min-width: 768px) {
@@ -184,13 +178,6 @@ img {
     max-width: 100%;
 }
 
-.yearLine {
-    font-size: 3em;
-    text-align: center;
-    padding: .5em 0;
-    font-weight: 200;
-}
-
 pre {
     font-size: 1em;
     background-color: #fdf6e3;
@@ -241,7 +228,7 @@ pre {
 #post, #cluster {
     font-size: 1.2rem;
     /* inspiration https://christoph-rumpel.com/2020/8/refactoring-php */
-    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    /*font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;*/
 
     line-height: 1.6em;
 }
@@ -249,7 +236,7 @@ pre {
 /* default post setting */
 #blog .firstPost {
     font-size: 3.3em;
-    font-weight: 300;
+    /*font-weight: 300;*/
     margin-top: 1em;
     margin-bottom: 1em;
 }
@@ -260,12 +247,12 @@ pre {
 }
 
 #post h2 {
-    font-size: 1.6em;
+    font-size: 1.9em;
 }
 
 h1 {
     font-size: 3.2rem;
-    font-weight: 300;
+    /*font-weight: 300;*/
 }
 
 /* @see https://stackoverflow.com/a/50174132/1348344 */
@@ -326,26 +313,26 @@ table ul {
 @media (max-width: 768px) {
     #blog .firstPost, #post h1 {
         font-size: 2.3em;
-        font-weight: 300;
+        /*font-weight: 300;*/
         margin-top: .8em;
         margin-bottom: .5em;
     }
 }
 
-.cluster h2 {
-    margin-top: .4em;
-    margin-bottom: 0;
-    font-size: 1.8em;
-}
+/*.cluster h2 {*/
+/*    margin-top: .4em;*/
+/*    margin-bottom: 0;*/
+/*    font-size: 1.8em;*/
+/*}*/
 
-/* active cluster */
-.cluster:not(.active-cluster) .active-cluster-part {
-    display: none;
-}
+/*!* active cluster *!*/
+/*.cluster:not(.active-cluster) .active-cluster-part {*/
+/*    display: none;*/
+/*}*/
 
-.cluster.active-cluster .inactive-cluster-part  {
-    display: none;
-}
+/*.cluster.active-cluster .inactive-cluster-part  {*/
+/*    display: none;*/
+/*}*/
 
 .btn {
     cursor: pointer;
@@ -407,7 +394,7 @@ table ul {
 .thead-inverse a, .thead-inverse a:visited, #content .thead-inverse a:visited:not(.btn):not(.badge), .badge-info a, .badge-info a:visited {
     color: #DDD;
     text-decoration: underline;
-    font-weight: normal;
+    /*font-weight: normal;*/
 }
 
 .thead-inverse a:hover, .badge-info a:hover {

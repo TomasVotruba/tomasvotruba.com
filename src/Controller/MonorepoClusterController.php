@@ -18,7 +18,7 @@ use TomasVotruba\Website\ValueObject\RouteName;
 final class MonorepoClusterController extends AbstractController
 {
     /**
-     * @var int
+     * @var int[]
      */
     private const MONOREPO_POST_IDS = [287, 286, 283, 256, 223, 69, 25, 82, 124, 138, 143, 160, 161, 182];
 
