@@ -81,7 +81,7 @@ This creates a grid and form with all the entity properties - `name` and `traini
 
 ### Google First
 
-Now what? I Google *easy admin custom field form* and after while I find [*Customize the Properties Displayed*](https://symfony.com/doc/current/bundles/EasyAdminBundle/book/edit-new-configuration.html#customize-the-properties-displayed) tutorial. It looks like exactly what I need.
+Now what? I Google *easy admin custom field form* and after while I find [*Customize the Properties Displayed*](https://symfony.com/doc/2.x/bundles/EasyAdminBundle/book/edit-new-configuration.html#customize-the-properties-displayed) tutorial. It looks like exactly what I need.
 
 ```diff
  easy_admin:

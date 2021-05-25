@@ -94,8 +94,6 @@ Well, there is none. Better bad API than no API → crawling and Xpaths. Better 
 
 **...I published all meetups and groups for anyone to use in API**.
 
-**You'll find available JSON feeds at [friendsofphp.org/api/](https://friendsofphp.org/api).**
-
 <img src="/assets/images/posts/2019/fop/fop.png" class="img-thumbnail mb-5">
 
 With API you can list meetups in your country, sort them by a distance from your city, get all groups from your neighbor countries, render a map with Wordpress meetups... or whatever comes to your mind. It's all up to your creativity.

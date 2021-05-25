@@ -321,7 +321,7 @@ Last but not least, different namespaces can cause another error:
  }
 ```
 
-**Do you want more *wild code cases*?** You'll find the full test battery of [60 snippets here in Github test](https://github.com/rectorphp/rector/tree/master/packages/Php/tests/Rector/FunctionLike).
+**Do you want more *wild code cases*?** You'll find the full test battery of [60 snippets here in Github test](https://github.com/rectorphp/rector/tree/main/packages/Php/tests/Rector/FunctionLike).
 
 <br>
 

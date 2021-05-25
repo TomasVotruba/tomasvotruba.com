@@ -1,2 +1,1 @@
-404 Not Found - https://tomasvotruba.com/talks/ (found on https://tomasvotruba.com/mission/)
-404 Not Found - https://tomasvotruba.com/blog/best-time-to-switch-GitLab-to-github/ (found on https://tomasvotruba.com/blog/monorepo-split-github-action-20-with-gitlab-split-is-out/)
+404 Not Found - https://phpunit.readthedocs.io/en/8.0/extending-phpunit.html (found on https://tomasvotruba.com/blog/2019/03/28/how-to-mock-final-classes-in-phpunit/)

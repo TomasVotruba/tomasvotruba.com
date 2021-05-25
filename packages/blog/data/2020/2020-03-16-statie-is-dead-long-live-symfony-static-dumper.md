@@ -61,8 +61,7 @@ composer require symplify/symfony-static-dumper
 
 ### Setup Basic Symfony App
 
-- add [`config/bootstrap.php`](https://github.com/symfony/demo/blob/master/config/bootstrap.php)
-- add [`bin/console`](https://github.com/symfony/demo/blob/master/bin/console)
+- add [`bin/console`](https://github.com/symfony/demo/blob/main/bin/console)
 - add [`src/HttpKernel/YourAppKernel.php`](https://github.com/TomasVotruba/friendsofphp.org/blob/master/src/HttpKernel/FopKernel.php)
 
 ### Move `/source`

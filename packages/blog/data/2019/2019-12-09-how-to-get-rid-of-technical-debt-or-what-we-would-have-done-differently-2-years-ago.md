@@ -2,7 +2,7 @@
 id: 229
 title: "How to Get Rid of Technical Debt or What We Would Have Done Differently 2 Years ago"
 perex: |
-    We talked about cleaning legacy code with Rector 2 months ago on [40th meetup of PHP friends in Prague](https://www.meetup.com/friends-of-php-prague/events/265615371).
+    We talked about cleaning legacy code with Rector 2 months ago on 40th meetup of PHP friends in Prague.
     <br>
     Who is *we*? Me and CTO of the [company I worked for](https://spaceflow.io/en), a great leader and technical expert who taught me a lot, [Milan Mimra](https://www.linkedin.com/in/milanmimra).
     <br>
@@ -382,8 +382,6 @@ This was the biggest problem in the whole project. First, it used classic `int` 
 And not only the user but also external API, mobile applications, invoice systems, etc.
 
 This was a real challenge for the whole team - it included database, Doctrine refactoring rules, external service unification refactoring and also changing PHP types all over the application.
-
-From this [`id-to-uuid` set was born](https://github.com/rectorphp/rector/tree/master/config/set/doctrine). Use at own risk, but it might be worth it, **since it can save you months** of work while your team can keep delivering features.
 
 <br>
 

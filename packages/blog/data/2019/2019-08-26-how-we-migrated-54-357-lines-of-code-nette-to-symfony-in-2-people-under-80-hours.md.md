@@ -331,7 +331,7 @@ From Valentine's Day to the nette-to-symfony set, a complete migration from Nett
 
 After a lot of static content changes, the code worked, and the tests went through, but it looked messy. Spaces were missing, fully qualified class names were not imported, etc.
 
-You can use your own PHP_CodeSniffer and PHP-CS-Fixer set. We used the [Rector-prepared set of 7 rules](https://github.com/rectorphp/rector/blob/master/ecs-after-rector.php) with [EasyCodingStandard](https://github.com/symplify/easy-coding-standard):
+You can use your own PHP_CodeSniffer and PHP-CS-Fixer set. We used the [Rector-prepared set] with [ECS](https://github.com/symplify/easy-coding-standard):
 
 ```bash
 vendor/bin/ecs check app src --config vendor/rector/rector/ecs-after-rector.php

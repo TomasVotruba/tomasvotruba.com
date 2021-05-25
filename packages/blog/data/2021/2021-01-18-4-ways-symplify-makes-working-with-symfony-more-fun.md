@@ -161,7 +161,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-That looks like a valid Symfony code. But what if you register a resource processor in another config or package? Boom, it's missed out. Three hours later, you want to kill yourself. And there [is more problems on the way](/blog/2018/11/12/will-autowired-arrays-finally-deprecated-tags-in-symfony-and-nette/).
+That looks like a valid Symfony code. But what if you register a resource processor in another config or package? Boom, it's missed out. Three hours later, you want to kill yourself. And there [is more problems on the way](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette/).
 
 We can reduce this boring code to:
 

@@ -145,8 +145,6 @@ In the end, it should look like this:
     <img src="/assets/images/posts/2018/monorepo-split/token-after.png" class="img-thumbnail">
 </div>
 
-*If you got lost in this tl;dr;s, try [this nice post with so many screenshots](https://developer.ibm.com/recipes/tutorials/separating-continuous-integration-from-continuous-deployment-using-github-and-travis-ci).*
-
 ### GitHub and Travis Protects You
 
 Now the best part. If you accidentally commit your access token in `.travis.yml` (like I did while testing), **GitHub will immediately disable it** and sends you an email (to bad I found that out the next day after 4 hours of debugging with that token).

@@ -90,7 +90,7 @@ Nowadays there are **projects to guide you**:
 
 ...so if you know YAML syntax, how to open a command line and you have a Github account, you also know how to run your own monorepo in 10 minutes even if you see it for the first time.
 
-In that time, [Nette went from monorepo to multirepo](https://phpfashion.com/prave-jsem-smazal-nette-framework). I didn't know if that opposite way was the right step for me but I wanted to know. **So I made a small experiment** - a monorepo with 2 packages. It was just awesome. 1 commit to all, instead of duplicated commits in each package.
+In that time, Nette went from monorepo to multirepo. I didn't know if that opposite way was the right step for me but I wanted to know. **So I made a small experiment** - a monorepo with 2 packages. It was just awesome. 1 commit to all, instead of duplicated commits in each package.
 
 **I never came back.**
 
