@@ -15,6 +15,8 @@ final class BookController extends AbstractController
     #[Route(path: 'book/the-power-of-automated-refactoring', name: RouteName::BOOK)]
     public function __invoke(): Response
     {
-        return $this->render('book/book.twig');
+        return $this->render('book/book.twig', [
+            'title' => 'Rector - The Power of Automated Refactoring'
+        ]);
     }
 }

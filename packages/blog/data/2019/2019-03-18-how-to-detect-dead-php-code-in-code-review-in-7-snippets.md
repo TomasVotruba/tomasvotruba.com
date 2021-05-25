@@ -2,7 +2,7 @@
 id: 195
 title: "How to Detect Dead PHP Code in Code Review in 7&nbsp;Snippets"
 perex: |
-    After few long [Nette to Symfony migration series](/cluster/from-nette-to-symfony/), it's time for relax.
+    After few long Nette to Symfony migration series, it's time for relax.
     <br>
     Let's look at 7 snippets of PHP code, that [happily takes your attention](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) but **is never run**.
 tweet: "New Post on #php 🐘 blog: How to Detect Dead PHP Code in Code Review in 7 Snippets"
