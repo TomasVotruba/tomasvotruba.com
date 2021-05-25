@@ -63,22 +63,13 @@ h2 {
 }
 
 a, a:active {
-    color: #A30444;
-    text-decoration: none;
+    /*color: #A30444;*/
+    text-decoration: underline;
 }
 
 a:hover, a:focus {
-    color: #C60E58;
-    text-decoration: underline;
-    transition: 0.3s;
-}
-
-#content a:visited:not(.btn):not(.badge) {
-    color: rgba(122, 0, 73, 0.78);
-}
-
-#footer a:visited:not(.btn):not(.badge) {
-    color: #DDD;
+    /*color: #C60E58;*/
+    text-decoration: none;
 }
 
 a:focus {
@@ -86,15 +77,15 @@ a:focus {
     outline-offset: -2px;
 }
 
-h2 a, h2 a:active, h3 a, h3 a:active  {
-    color: #A30444;
-    text-decoration: none;
-}
+/*h2 a, h2 a:active, h3 a, h3 a:active  {*/
+/*    color: #A30444;*/
+/*    text-decoration: none;*/
+/*}*/
 
-h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus {
-    color: #C60E58;
-    text-decoration: underline;
-}
+/*h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus {*/
+/*    color: #C60E58;*/
+/*    text-decoration: underline;*/
+/*}*/
 
 hr {
     margin: 1.2em 0;
@@ -112,11 +103,19 @@ ul {
 }
 
 #menu {
-    font-size: 1.3em;
-    margin-top: 2em;
+    background-color: #333;
+    font-size: 1.2em;
+    padding: 1.7em 0;
     margin-bottom: 2em;
-    padding-bottom: 2em;
-    border-bottom: 5px solid #555;
+    color: #EEE;
+}
+
+#menu a {
+    color: #EEE;
+}
+
+#menu a:hover {
+    color: #FFF;
 }
 
 @media (min-width: 768px) {
@@ -500,32 +499,6 @@ a.btn {
 .text-bigger {
     font-size: 1.3em;
     line-height: 1.5em;
-}
-
-/* cleaning lady checklist */
-.form-check-label
-{
-    padding-left: 0.4em;
-}
-
-#cleaning_checklist .form-check
-{
-    font-size: 1.2em;
-}
-
-#cleaning_checklist .btn
-{
-    font-size: .7em;
-    margin-top: -.2em;
-}
-
-/* @see https://css-tricks.com/almanac/selectors/c/checked/ */
-#cleaning_checklist input[type=checkbox]:checked + label {
-    opacity: .2;
-}
-
-#cleaning_checklist input[type=checkbox] + label {
-    transition: opacity .6s;
 }
 
 .text-smaller {
