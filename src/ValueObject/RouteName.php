@@ -9,11 +9,6 @@ final class RouteName
     /**
      * @var string
      */
-    public const BLOG_ARCHIVE = 'blog_archive';
-
-    /**
-     * @var string
-     */
     public const CLUSTER_DETAIL = 'cluster_detail';
 
     /**
@@ -72,13 +67,12 @@ final class RouteName
     public const TRAINING_DETAIL = 'training-detail';
 
     /**
-     * @var string
+     * @see
      */
-    public const BOOKS = 'books';
+    public const BLOG = 'blog';
 
     /**
      * @var string
      */
-    public const BOOK_DETAIL = 'book-detail';
-    const BLOG = 'blog';
+    public const BOOK = 'book';
 }

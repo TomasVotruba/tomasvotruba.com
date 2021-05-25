@@ -93,3 +93,10 @@ parameters:
             message: '#Use void instead of modify and return self object#'
             paths:
                 - packages/blog/src/Posts/Year2017/Ast/NodeVisitor/*NodeVisitor.php
+
+
+        -
+            message: '#Do not inherit from abstract class, better use composition#'
+            paths:
+                - src/Controller
+                - packages/blog/src/Controller

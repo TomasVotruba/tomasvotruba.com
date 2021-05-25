@@ -4,23 +4,17 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use TomasVotruba\Blog\Templating\ResponseRenderer;
 use TomasVotruba\Website\ValueObject\RouteName;
 
-final class TrainingsController
+final class TrainingsController extends AbstractController
 {
-    public function __construct(
-        private ResponseRenderer $responseRenderer
-    )
-    {
-    }
-
     #[Route(path: 'trainings', name: RouteName::TRAININGS)]
     public function __invoke(): Response
     {
-        return $this->responseRenderer->render('trainings/trainings.twig', [
+        return $this->render('trainings/trainings.twig', [
             'title' => 'Trainings',
         ]);
     }

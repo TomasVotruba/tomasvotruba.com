@@ -111,6 +111,14 @@ ul {
     margin-bottom: .5em;
 }
 
+#menu {
+    font-size: 1.3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 5px solid #555;
+}
+
 @media (min-width: 768px) {
     .container {
         max-width: 100%;
@@ -136,34 +144,8 @@ pre {
     border-radius: 2px;
 }
 
-.navbar {
-    border: 0;
-    padding: 0;
-    background-color: #7A1E48;
-}
-
-nav a, nav a:active, nav a:focus, nav a:visited {
-    margin-top: 1px;
-    color: #f6f6f6;
-    border: 0;
-    text-decoration: none;
-}
-
 article {
     border-bottom: 1px solid #eeeeee;
-}
-
-#blog #welcome h1 {
-    text-align: left;
-    font-size: 1.4em;
-    border-bottom: 0;
-    padding: 0;
-    margin: .4em 0 .6em 0;
-}
-
-#welcome p {
-    font-size: 1.2em;
-    line-height: 1.5em;
 }
 
 #blog h2 {
@@ -231,104 +213,8 @@ pre {
     border-radius: 6px;
 }
 
-/* menu */
-nav {
-    background-color: #7A1E48;
-    font-weight: 400;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 0;
-    width: 100%;
-}
-
-/* https://stackoverflow.com/a/19027954/1348344 */
-nav ul li a, nav #logo, nav a {
-    padding: .81em 1em;
-    color: #FFF;
-}
-
-nav ul li a {
-    display: block;
-    background: #9D2053;
-}
-
-/*nav #logo {*/
-    /*background-color: #9D2053;*/
-/*}*/
-
-nav a:hover, nav ul li.active a, nav a.active, nav a:active
-{
-    background: #FFF;
-    text-decoration: none;
-    color: #64163f;
-}
-
-#mobile-menu {
-    padding: 0;
-    width: 100%;
-    text-align: center;
-}
-
-#mobile-menu .container {
-    padding: 0;
-    max-width: 100%;
-}
-
-#mobile-menu a {
-    float: left;
-    width: 100%;
-}
-
-.ico-note {
-    font-size: .7em;
-    color: #BBB;
-}
-
-.hireMe {
-    font-size: 1.6rem;
-    margin: 2rem auto;
-}
-
-.hireMe a {
-    color: #f6f6f6;
-    display: block;
-}
-
 .shadow {
     box-shadow: 1px 2px 15px -2px rgb(0 0 0/20%);
-}
-
-
-/* show/hidden menu; ref https://stackoverflow.com/a/35362821/1348344 */
-@media (max-width: 768px) {
-    .hidden-sm-down {
-        display: none !important;
-    }
-}
-
-@media (min-width: 769px) {
-    .hidden-md-up {
-        display: none !important;
-    }
-}
-
-
-#about-quote {
-    font-size: 1.4em;
-    line-height: 1.6em;
-}
-
-#about-items {
-    font-size: 1.2em;
-    line-height: 1.7em;
-}
-
-#contact .bigger {
-    font-size: 1.2em;
-    line-height: 2.3em;
 }
 
 .card-normal .card-body p {
@@ -359,20 +245,6 @@ nav a:hover, nav ul li.active a, nav a.active, nav a:active
 }
 
 /* style in cards */
-#mission .card h2 {
-    margin: .3em 0 .3em 0;
-}
-
-#mission ul li
-{
-    line-height: 1.6em;
-}
-
-#mission .card ul {
-    margin: .3em 0 0 0;
-    padding-left: 1.2em;
-}
-
 .pull-right {
     float: right;
 }
@@ -418,27 +290,6 @@ h1 .subtext {
 }
 
 
-/* own util classe */
-.mmt-3 {
-    margin-top: -.3em;
-}
-
-.mmt-2 {
-    margin-top: -.2em;
-}
-
-#talks h2 {
-    margin-top: .5em;
-}
-
-#talks h2.slim {
-    font-weight: 300;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 2.2em;
-    text-align: center;
-}
-
 /* @see https://stackoverflow.com/a/50174132/1348344 */
 .container li {
     margin-bottom: .4em;
@@ -472,37 +323,6 @@ ul.line-separated > li:not(:last-child) {
     margin-top: -.2em;
 }
 
-#top-menu-search form {
-    width: 100%;
-}
-
-nav ul li form {
-    padding: .4em 0 0 1em;
-}
-
-/* @see https://stackoverflow.com/a/19027954/1348344 */
-nav ul li {
-    display: block;
-    float: left;
-}
-
-nav ul li#top-menu-search {
-    float: none;
-    overflow: hidden;
-}
-
-#top-menu-search-mobile {
-    background: #7A1E48;
-}
-#top-menu-search-mobile {
-    padding: .6em 1em;
-    text-align: center;
-}
-
-#top-menu-search-mobile form {
-    width: 100%;
-}
-
 .subline, .subtitle {
     font-size: 1.4em;
     line-height: 1.9em;
@@ -530,36 +350,12 @@ table ul {
     text-decoration: none;
 }
 
-/* contact.twig */
-#contact-points
-{
-    font-size: 1.8em;
-    line-height: 1.3em;
-}
-
-.avatar-bigger {
-    border-radius: 6px;
-    border-style: none;
-}
-
 @media (max-width: 768px) {
-    #contact-points {
-        font-size: 1.2em;
-        line-height: 2.4em;
-    }
-
     #blog .firstPost, #post h1 {
         font-size: 2.3em;
         font-weight: 300;
         margin-top: .8em;
         margin-bottom: .5em;
-    }
-}
-
-@media (max-width: 450px) {
-    #contact-points {
-        font-size: 1.1em;
-        line-height: 2em;
     }
 }
 
@@ -660,19 +456,6 @@ nobr {
 .normal-list {
     margin-left: -1em;
     line-height: 1.8em;
-}
-
-#contact .when
-{
-    font-size: .5em;
-    line-height: 3em;
-}
-
-@media (max-width: 768px) {
-    #contact .when {
-        line-height: 1.7em;
-        font-size: .7em;
-    }
 }
 
 .bg-success a, .bg-success a:active {

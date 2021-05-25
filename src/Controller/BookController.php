@@ -10,13 +10,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 use TomasVotruba\Website\ValueObject\RouteName;
 
-final class TrainingDetailController extends AbstractController
+final class BookController extends AbstractController
 {
-    #[Route(path: 'training/{name}', name: RouteName::TRAINING_DETAIL)]
-    public function __invoke(string $name): Response
+    #[Route(path: 'book/the-power-of-automated-refactoring', name: RouteName::BOOK)]
+    public function __invoke(): Response
     {
-        return $this->render('trainings/training_detail.twig', [
-            'title' => 'Trainings',
-        ]);
+        return $this->render('book/book.twig');
     }
 }

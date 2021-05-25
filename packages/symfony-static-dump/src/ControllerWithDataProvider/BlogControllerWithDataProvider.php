@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace TomasVotruba\SymfonyStaticDump\ControllerWithDataProvider;
 
 use Symplify\SymfonyStaticDumper\Contract\ControllerWithDataProviderInterface;
-use TomasVotruba\Blog\Controller\BlogArchiveController;
+use TomasVotruba\Blog\Controller\BlogController;
 use TomasVotruba\Blog\Repository\PostRepository;
 
-final class BlogArchiveControllerWithDataProvider implements ControllerWithDataProviderInterface
+final class BlogControllerWithDataProvider implements ControllerWithDataProviderInterface
 {
     public function __construct(
         private PostRepository $postRepository
@@ -17,7 +17,7 @@ final class BlogArchiveControllerWithDataProvider implements ControllerWithDataP
 
     public function getControllerClass(): string
     {
-        return BlogArchiveController::class;
+        return BlogController::class;
     }
 
     public function getControllerMethod(): string
