@@ -15,7 +15,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autoconfigure();
 
     $services->load('TomasVotruba\Blog\\', __DIR__ . '/../src')
-        ->exclude([__DIR__ . '/../src/ValueObject', __DIR__ . '/../src/Exception']);
+        ->exclude([__DIR__ . '/../src/ValueObject']);
 
     $services->set(FinderSanitizer::class);
     $services->set(StringFormatConverter::class);

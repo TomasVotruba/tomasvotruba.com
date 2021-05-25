@@ -22,7 +22,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->public();
 
     $services->load('TomasVotruba\Website\\', __DIR__ . '/../src')
-        ->exclude([__DIR__ . '/../src/HttpKernel', __DIR__ . '/../src/ValueObject']);
+        ->exclude([__DIR__ . '/../src/HttpKernel', __DIR__ . '/../src/ValueObject', __DIR__ . '/../src/Exception']);
 
     $services->set(PrivatesAccessor::class);
 };

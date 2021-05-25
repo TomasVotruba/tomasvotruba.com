@@ -2,11 +2,7 @@
 
 {% block content %}
     <div class="container-fluid">
-        <h1 class="mt-5">
-            {{ title }}
-            <br>
-            <span class="subtext mb-0">(cluster of {{ posts|length }} parts)</span>
-        </h1>
+        <h1>{{ title }}</h1>
 
         <div id="cluster">
             <div class="card card-bigger mb-5">
@@ -15,8 +11,6 @@
                 </div>
             </div>
         </div>
-
-        <br>
 
         {% include "_snippets/post/post_list.twig" with { posts: posts } %}
     </div>
