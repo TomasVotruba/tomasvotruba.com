@@ -58,12 +58,6 @@ final class ClusterDataProvider
         );
 
         $clusters[] = $this->clusterFactory->create(
-            'Books in a Post',
-            'Reading Books is what separates programmers from craftsmen. I love books, because they open for deep conversation that last hours and hours. Care for ittle intro first?',
-            [65, 149, 115, 91, 56]
-        );
-
-        $clusters[] = $this->clusterFactory->create(
             'From Nette to Symfony',
             'How to migrate from Nette to Symfony?',
             [188, 192, 193, 186, 185, 171, 120, 197],

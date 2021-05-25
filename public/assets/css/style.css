@@ -279,12 +279,6 @@ h1 {
     font-weight: 300;
 }
 
-h1 .subtext {
-    font-size: .6em;
-    color: #666;
-}
-
-
 /* @see https://stackoverflow.com/a/50174132/1348344 */
 .container li {
     margin-bottom: .4em;
@@ -316,11 +310,6 @@ ul.line-separated > li:not(:last-child) {
     width: 28px;
     margin-right: .5em;
     margin-top: -.2em;
-}
-
-.subline, .subtitle {
-    font-size: 1.4em;
-    line-height: 1.9em;
 }
 
 table ul {
