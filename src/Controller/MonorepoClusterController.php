@@ -17,7 +17,10 @@ use TomasVotruba\Website\ValueObject\RouteName;
  */
 final class MonorepoClusterController extends AbstractController
 {
-    public const MONOREPO_POST_IDS = [287, 286, 283, 256, 223, 69, 25, 82, 124, 138, 143, 160, 161, 182];
+    /**
+     * @var int
+     */
+    private const MONOREPO_POST_IDS = [287, 286, 283, 256, 223, 69, 25, 82, 124, 138, 143, 160, 161, 182];
 
     public function __construct(
         private PostRepository $postRepository,

@@ -1,1 +1,0 @@
-404 Not Found - https://phpunit.readthedocs.io/en/8.0/extending-phpunit.html (found on https://tomasvotruba.com/blog/2019/03/28/how-to-mock-final-classes-in-phpunit/)

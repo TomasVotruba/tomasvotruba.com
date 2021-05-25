@@ -42,7 +42,7 @@ final class RouteName
     public const TRAINING_DETAIL = 'training-detail';
 
     /**
-     * @see
+     * @var string
      */
     public const BLOG = 'blog';
 
