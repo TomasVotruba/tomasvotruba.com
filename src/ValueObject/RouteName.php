@@ -9,12 +9,7 @@ final class RouteName
     /**
      * @var string
      */
-    public const CLUSTER_DETAIL = 'cluster_detail';
-
-    /**
-     * @var string
-     */
-    public const CLUSTERS = 'clusters';
+    public const CLUSTER_MONOREPO = 'cluster_monorepo';
 
     /**
      * @var string
@@ -29,22 +24,7 @@ final class RouteName
     /**
      * @var string
      */
-    public const CLEANING_LADY_CHECKLIST = 'cleaning_lady_checklist';
-
-    /**
-     * @var string
-     */
-    public const MISSION = 'mission';
-
-    /**
-     * @var string
-     */
     public const POST_DETAIL = 'post_detail';
-
-    /**
-     * @var string
-     */
-    public const PROJECTS = 'projects';
 
     /**
      * @var string

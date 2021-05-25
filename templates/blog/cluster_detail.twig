@@ -3,22 +3,22 @@
 {% block content %}
     <div class="container-fluid">
         <h1 class="mt-5">
-            {{ cluster.title }}
+            {{ title }}
             <br>
-            <span class="subtext mb-0">(cluster of {{ cluster.postCount }} parts)</span>
+            <span class="subtext mb-0">(cluster of {{ posts|length }} parts)</span>
         </h1>
 
         <div id="cluster">
             <div class="card card-bigger mb-5">
                 <div class="card-body pb-2">
-                    {{ cluster.description|markdown|raw }}
+                    What is monorepo? How can you use it to speed up your packages' and projects' development? How to run your own monorepo in 10 minutes?
                 </div>
             </div>
         </div>
 
         <br>
 
-        {% include "_snippets/post/post_list.twig" with { posts: cluster.posts, counter: true } %}
+        {% include "_snippets/post/post_list.twig" with { posts: posts } %}
     </div>
 
     <br>
