@@ -319,21 +319,6 @@ table ul {
     }
 }
 
-/*.cluster h2 {*/
-/*    margin-top: .4em;*/
-/*    margin-bottom: 0;*/
-/*    font-size: 1.8em;*/
-/*}*/
-
-/*!* active cluster *!*/
-/*.cluster:not(.active-cluster) .active-cluster-part {*/
-/*    display: none;*/
-/*}*/
-
-/*.cluster.active-cluster .inactive-cluster-part  {*/
-/*    display: none;*/
-/*}*/
-
 .btn {
     cursor: pointer;
 }
@@ -367,16 +352,6 @@ table ul {
 
 .alert-sm {
     font-size: 0.9em;
-
-}
-
-#mission h2 {
-    margin-bottom: 1.2em;
-}
-
-#mission .card h3 {
-    text-align: center;
-    font-size: 2em;
 }
 
 .thead-inverse th h3 {
@@ -402,20 +377,10 @@ table ul {
     text-decoration: none;
 }
 
-.lesser {
-    font-size: .8em;
-    color: #868e96!important; /* same as text-muted */
-}
-
 /* @see https://stackoverflow.com/a/48309999/1348344 */
 nobr {
     white-space: nowrap;
     hyphens: none;
-}
-
-.normal-list {
-    margin-left: -1em;
-    line-height: 1.8em;
 }
 
 .bg-success a, .bg-success a:active {
@@ -430,10 +395,6 @@ nobr {
 
 a.btn-dark, a.btn-dark:active {
     color: #FFF;
-}
-
-.text-underline {
-    text-decoration: underline;
 }
 
 q {
