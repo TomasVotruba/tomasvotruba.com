@@ -4,7 +4,6 @@
     "description": "Blog about hacking PHP, education and being the laziest PHP programmer in the world",
     "require": {
         "php": ">=8.0",
-        "doctrine/cache": "^1.10",
         "erusev/parsedown-extra": "^0.8.1",
         "j7mbo/twitter-api-php": "^1.0",
         "nette/utils": "^3.2",
@@ -40,7 +39,6 @@
         "psr-4": {
             "TomasVotruba\\Website\\": "src",
             "TomasVotruba\\Blog\\": "packages/blog/src",
-            "TomasVotruba\\SymfonyStaticDump\\": "packages/symfony-static-dump/src",
             "TomasVotruba\\Tweeter\\": "packages/tweeter/src"
         }
     },

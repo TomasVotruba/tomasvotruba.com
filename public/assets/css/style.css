@@ -63,12 +63,12 @@ h2 {
 }
 
 a, a:active {
-    /*color: #A30444;*/
+    color: rgba(26, 137, 23, 1);
     text-decoration: underline;
 }
 
 a:hover, a:focus {
-    /*color: #C60E58;*/
+    color: rgba(15, 115, 12, 1);
     text-decoration: none;
 }
 
@@ -76,16 +76,6 @@ a:focus {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
 }
-
-/*h2 a, h2 a:active, h3 a, h3 a:active  {*/
-/*    color: #A30444;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus {*/
-/*    color: #C60E58;*/
-/*    text-decoration: underline;*/
-/*}*/
 
 hr {
     margin: 1.2em 0;
@@ -103,11 +93,11 @@ ul {
 }
 
 #menu {
-    background-color: #333;
+    background-color: #24292e;
     font-size: 1.2em;
     padding: 1.7em 0;
     margin-bottom: 2em;
-    color: #EEE;
+    color: #ddd;
 }
 
 #menu a {

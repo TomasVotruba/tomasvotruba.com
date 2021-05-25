@@ -55,8 +55,8 @@ composer require symfony/http-foundation symfony/asset symfony/twig-bridge symfo
 And replace the static generator:
 
 ```bash
-composer require symplify/symfony-static-dumper
 composer remove symplify/statie
+composer require symplify/symfony-static-dumper
 ```
 
 ### Setup Basic Symfony App

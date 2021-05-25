@@ -10,7 +10,6 @@ use TomasVotruba\Website\ValueObject\Option;
 return static function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/../packages/*/config/*.php');
     $containerConfigurator->import(__DIR__ . '/packages/*');
-    $containerConfigurator->import(__DIR__ . '/_data/*');
 
     $parameters = $containerConfigurator->parameters();
     $parameters->set(Option::SITE_URL, env('SITE_URL'));

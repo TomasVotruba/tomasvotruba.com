@@ -1,0 +1,2 @@
+404 Not Found - https://tomasvotruba.com/talks/ (found on https://tomasvotruba.com/mission/)
+404 Not Found - https://tomasvotruba.com/blog/best-time-to-switch-GitLab-to-github/ (found on https://tomasvotruba.com/blog/monorepo-split-github-action-20-with-gitlab-split-is-out/)

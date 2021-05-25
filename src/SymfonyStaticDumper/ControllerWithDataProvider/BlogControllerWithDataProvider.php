@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\SymfonyStaticDump\ControllerWithDataProvider;
+namespace TomasVotruba\Website\SymfonyStaticDumper\ControllerWithDataProvider;
 
 use Symplify\SymfonyStaticDumper\Contract\ControllerWithDataProviderInterface;
 use TomasVotruba\Blog\Repository\PostRepository;
