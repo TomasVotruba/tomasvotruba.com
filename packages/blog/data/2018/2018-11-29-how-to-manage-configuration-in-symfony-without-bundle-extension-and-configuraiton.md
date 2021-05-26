@@ -278,7 +278,7 @@ $container->getDefinition('Project\Accountant\BitcoinSender')
     ->setArgument('accountNumber', $config['account_number']);
 ```
 
-<em class="fas fa-lg fa-times text-danger"></em>
+❌
 
 We want to get rid of this code, not to maintain it.
 

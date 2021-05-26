@@ -252,10 +252,10 @@ This removes all `public: true` lines from all your configs.
 
 It is. But in 6 months of using this method **I got different feedback from the PHP community**:
 
-- Why there are no public services, but we can get them from container anyway? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- Why test and dev services behave differently? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- Why I can't get the service from container in the second application as in the first one? <em class="fas fa-fw fa-lg fa-times text-danger"></em> (They [forgot to add](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) a compiler pass to new Kernel.)
-- Why I have to add `public: true` for Symfony\Console\Application in bin file, but not in tests? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- Why there are no public services, but we can get them from container anyway? ❌
+- Why test and dev services behave differently? ❌
+- Why I can't get the service from container in the second application as in the first one? ❌ (They [forgot to add](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) a compiler pass to new Kernel.)
+- Why I have to add `public: true` for Symfony\Console\Application in bin file, but not in tests? ❌
 
 **People were confused 😕🤔**. The trade of compiler pass feature was putting too much knowledge pressure on the programmers. **The application uses constructor injection everywhere, so there is no real added value by working with term *public/private* services**.
 

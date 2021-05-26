@@ -72,9 +72,9 @@ The tricky part was to discover differences and create the bridge between both f
 
 We didn't have to change any of these parts, because the code didn't use them:
 
-- Components to Controllers <em class="fas fa-fw fa-lg fa-times text-secondary"></em>
+- Components to Controllers ❌
 
-- CompilerExtensions to Bundles/CompilerPasses <em class="fas fa-fw fa-lg fa-times text-secondary"></em>
+- CompilerExtensions to Bundles/CompilerPasses ❌
 
 Rector can automate them when some project will need them. Maybe your project :)
 

@@ -68,7 +68,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 <br>
 
@@ -123,7 +123,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 Having multiple `inject*()` methods allow us to **accidentally put two dependencies** in the same class. This has performance hit, maintenance hit, and duplicated parasitic code that needs our attention for no gain.
 
@@ -166,7 +166,7 @@ class SomeClass
 
 ...and the property was `null`.
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 <br>
 

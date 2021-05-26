@@ -42,7 +42,7 @@ tweet_image: "/assets/images/posts/2020/ansi_no_mix_colors.png"
 
 For many years I've run Travis, Gitlab, and [now Github Actions](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/). I never knew the output could be readable for humans, so I always looked at the final checkmark for all the scripts.
 
-It was <em class="fas fa-fw fa-check text-success"></em> or <em class="fas fa-fw fa-times text-danger"></em>.
+It was <em class="fas fa-fw fa-check text-success"></em> or ❌.
 
 <br>
 

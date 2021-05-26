@@ -15,7 +15,7 @@ composer require symfony/console:2.8
 composer require symplify/easy-coding-standard --dev
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ...we'll end up with composer "ECS requires at least symfony 4.4 version, cannot install" error.
 

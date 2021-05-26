@@ -107,7 +107,7 @@ I wish I knew this answer :). In my opinion and experience with building cli app
 - It's easy, quick and simple.
 - Who would use container right from the start of 1 command, right?
 
-### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### ❌ Disadvantages
 
 - If you start a project with `new` static, it's difficult to migrate.
 - The need of refactoring is clear much earlier before it really happens.
@@ -154,7 +154,7 @@ class FixerFactory
 }
 ```
 
-### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### ❌ Disadvantages
 
 - Well, ambiguous approach to creating service-like-classes.
 - There is an inconsistent approach to services. How do you know where to put it? Is it a service or is it a class to be created manually?
@@ -251,7 +251,7 @@ $application = $container->get(Application::class);
 $application->run();
 ```
 
-### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### ❌ Disadvantages
 
 - You need to rethink the [static `new` service approach](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/), if you're used to it.
 

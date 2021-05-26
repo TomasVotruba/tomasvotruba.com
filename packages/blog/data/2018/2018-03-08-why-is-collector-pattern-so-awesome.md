@@ -379,11 +379,11 @@ Try to convince me though if you're sure about its advantages.
 
 <em class="fas fa-fw fa-lg fa-check text-success"></em> Add provider
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> Use expression language?
+❌ Use expression language?
 
 <em class="fas fa-fw fa-lg fa-check text-success"></em> Does collector scale?
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> Add tagging
+❌ Add tagging
 
 ## "Git Story" over git history
 

@@ -67,7 +67,7 @@ We want to reduce the number of public methods to a minimum. How?
 
 We can go for a method by method refactoring with careful analysis if the method should be public or private and how we can change it to private. **It takes time, patience, attention, human performance and doesn't scale on massive projects.** That's way too expensive.
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 What simpler way can we apply today on an any-sized project? What low hanging fruit can we focus on?
 

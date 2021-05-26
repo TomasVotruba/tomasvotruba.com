@@ -32,8 +32,8 @@ final class FinalClass
 
 We have few options out in the wild:
 
-- [You can use `uopz` extension](https://stackoverflow.com/a/33095281/1348344) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- [You can use reflection](https://gist.github.com/DragonBe/24761f350984c35b73966809dd439135) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+- [You can use `uopz` extension](https://stackoverflow.com/a/33095281/1348344) ❌
+- [You can use reflection](https://gist.github.com/DragonBe/24761f350984c35b73966809dd439135) ❌
 
 or...
 
@@ -86,7 +86,7 @@ This is obviously annoying maintenance and it will lead you to one of 2 bad path
 - **don't use `final`** at all
 - or **do not test**
 
-<em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
+❌
 
 ## By Pass Finals!
 
@@ -146,7 +146,7 @@ Class "SomeClass" is declared "final" and cannot be mocked.
 
 Hm, most mocks work, but there are still some errors.
 
-<em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
+❌
 
 ### 2. `setUp()` Method?
 
@@ -188,7 +188,7 @@ Class "AnotherClass" is declared "final" and cannot be mocked.
 
 Damn you, black magic! We're getting there, but there are still mocks in the `setUp()` method, and we've also added work to our future self - for every new test case, we [have to remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) to add `BypassFinals::enable();` manually.
 
-<em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
+❌
 
 <br>
 <br>

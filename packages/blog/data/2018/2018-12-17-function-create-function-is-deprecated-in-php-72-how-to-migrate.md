@@ -32,7 +32,7 @@ create_function("$a", "return $a");
 create_function('$a', 'return $a');
 ```
 
-You don't want to think which if `"` or <code>`</code> [breaks the code](/blog/2018/10/11/hi-my-name-is-tom-conctat-vs-in-sprintf-vs-in-string-variables/#em-class-fas-fa-fw-fa-times-text-danger-fa-lg-em-em-class-fas-fa-fw-fa-times-text-danger-fa-lg-em-in-string-variable) - you want make code.
+You don't want to think which if `"` or <code>`</code> breaks the code - you want make code.
 
 I think it's a good move, **so how do we refactor them?** Let's start with simple code:
 

@@ -232,7 +232,7 @@ That's it!
  }
 ```
 
-There is one disadvantage, though. In case of command rename, the configs that use the command have to updated too <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+There is one disadvantage, though. In case of command rename, the configs that use the command have to updated too ❌
 
 Is it a good trade-off? I don't know.
 

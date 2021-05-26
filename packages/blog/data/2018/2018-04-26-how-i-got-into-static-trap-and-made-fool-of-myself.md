@@ -232,7 +232,7 @@ If you ever have a feeling that there is a better way to do things but you'll se
 
 To prevent this 10 hours of trauma happening ever again, I made `NoClassWithStaticMethodWithoutStaticNameRule` that will look after our code.
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 class SomeClass

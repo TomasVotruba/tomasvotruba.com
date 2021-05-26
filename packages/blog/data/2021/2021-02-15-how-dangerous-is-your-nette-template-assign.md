@@ -203,7 +203,7 @@ private function sendNotification(): void
 
 What is the `$bitcoinCount`? `10` or `100`? It depends on the `$this->template` override mechanism, I guess.
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 ## 2. Call Me... Maybe
 
@@ -227,7 +227,7 @@ Quick quiz: **what is the `$bitcoinCount` value in the template?**
 - nothing, use `isset()` to check if exists
 - nothing, use `empty()` to check if exists
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 ## 3. Unset or Nullable Variable?
 
@@ -254,7 +254,7 @@ if ($this->inGoodMood) {
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 ## 4. Forgotten Require Variable
 
@@ -267,7 +267,7 @@ I'll give {$bitcoinCount} Bitcoins to people in need
 
 How can you **define what is required variable**? In objects and services, we have `__construct()` for that, but here?
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 ## 5. Two Ways to do One Thing
 
@@ -292,7 +292,7 @@ What is the final template we'll see?
 - A. `I'll give 100 Bitcoins to people in need`
 - B. `I'll give 10 Bitcoins to people in need`
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 ## 6. Read It!
 
@@ -311,7 +311,7 @@ public function render(): void
 
 Soon we're using `$this->template` for any variable operation.
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 ## 7. Killing Known Types
 
@@ -329,7 +329,7 @@ public function render(): void
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 ## 8. Making Magic more Magical
 
@@ -337,7 +337,7 @@ With Nette 3.0, there has been an attempt to fix the magic with [typed template 
 
 The `$this->template` is not a service anymore, but a value object. That can hold parameters. And also render itself somehow. That's typical example of **[active record anti-pattern](https://en.wikipedia.org/wiki/Active_record_pattern)**. Are you able to give birth yourself? **Not a way to go.**
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 There is a better way to have both **typed template** and **pass parameters just once**. I'll write about it soon - stay tuned.
 
@@ -362,7 +362,7 @@ The condition is obviously a `true`, right?
 
 Well, the second variable *bitcoin**t**Count* does not exists, so we're now `-10` bitcoints.
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 ## Back to Basics
 

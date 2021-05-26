@@ -15,7 +15,7 @@ tweet_image: "/assets/images/posts/2018/friends/homepage.png"
 
 ## 1. You're not Famous Enough to be Accepted
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 I'm sorry, but you were not born lucky enough to be Linus Torvalds, Rasmus Lerdorf, Fabien Potencier or Marco Pivetta. You'd have to work hard on yourself, have at least 1000 followers, 3 popular open-source packages and own website with real PHP blog posts.
 
@@ -54,7 +54,7 @@ Some groups make this experience even more exceptional, like:
 
 ## 2. You're too Shy to Talk
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 People living abroad are much more skilled, have high standards and are very critique. Just imagine you'd confuse `sort` with `asort` - you're dead.
 
@@ -68,7 +68,7 @@ Are you shy? Don't have a talk in your hometown where everyone knows you, but go
 
 ## 3. You're not very Good at English Tongue
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 Abroad, there are only native English speakers and they will always correct your mistakes, typos and non-precise wording. Why do you think English programmers go to meetup anyway?
 
@@ -81,7 +81,7 @@ After all, [1000 words](https://xkcd.com/simplewriter) are all you need.
 
 ## 4. You don't have Money for Traveling and AirBnb
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 Let's admit it, traveling abroad is not cheap. A return ticket from Prague to Berlin can cost over 50 €! And the AirBnb once more the same amount. And who of our programmers with poor pays can afford that?
 
@@ -93,7 +93,7 @@ All you need to do is check [the meetup](https://www.meetup.com/sfugberlin/event
 
 ## 5. It's Very Hard to Find these Meetups
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 You can go to meetup.com and [search for PHP](https://www.meetup.com/find/events/?allMeetups=false&keywords=php). But meetup.com is designed for all meetups, not just PHP, so there are many boiler place features you don't need and nice map around your location is missing. Despite that, not all groups are there, they' use GitHub Page, Facebook, Twitter or own calendar.
 

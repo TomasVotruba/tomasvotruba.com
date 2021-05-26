@@ -65,7 +65,7 @@ We needed the same commit in our codebase with Nette 2.4.
 - edit file in `/vendor/nette/di/*` manually
 - fork the package at version 2.4, edit it, release it, maintain it
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 These options are slow or will keep the code changed only on your local machine = your `composer install` would suck a long time.
 

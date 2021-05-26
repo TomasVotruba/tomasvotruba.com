@@ -87,7 +87,7 @@ Use static approach, no services config, just list of items. Most spread solutio
 
 <em class="fas fa-fw fa-lg fa-check text-success"></em> Ready in 2 minutes
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> Well, static
+❌ Well, static
 
 ## 2. DI for Poor People: Container in a Command
 
@@ -118,9 +118,9 @@ class SomeCommand extends Command
 
 <em class="fas fa-fw fa-lg fa-check text-success"></em> Ready in 10 minutes
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> Only local scope, we need to re-create container everywhere we need it
+❌ Only local scope, we need to re-create container everywhere we need it
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> The Chicken vs. Egg problem still remains very clear
+❌ The Chicken vs. Egg problem still remains very clear
 
 ## 3. Kill the Egg: The bin File Tuning
 
@@ -212,7 +212,7 @@ bin/ecs check src --config custom-config.php
 
 ### How if Fits?
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> Ready in 15 minutes
+❌ Ready in 15 minutes
 
 <em class="fas fa-fw fa-lg fa-check text-success"></em> Setup & Forget
 

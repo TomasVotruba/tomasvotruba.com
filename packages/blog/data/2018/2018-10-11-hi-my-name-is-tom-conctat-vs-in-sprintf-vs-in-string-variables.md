@@ -55,7 +55,7 @@ $message = 'Hi, my name is $name';
 
 Just like a `+` for numbers, but for strings.
 
-### <em class="fas fa-fw fa-times text-danger fa-lg"></em> Sprintf
+### ❌ Sprintf
 
 What the hell is `%s`? I'd have to read [the manual](http://php.net/manual/en/function.sprintf.php)... `%s` for strings, `%d` for numbers.
 
@@ -107,7 +107,7 @@ Or quote the name to express it's a variable string:
 +$message = 'Hi, my name is "$name" and I love $php';
 ```
 
-### <em class="fas fa-fw fa-times text-danger fa-lg"></em> Concat
+### ❌ Concat
 
 1 new element = 2 new dots `.`. I have to think where to put it. Imagine there will be 4 elements one day.
 I also type like a dyslexic, so seeing `'"'` hurts.
@@ -122,7 +122,7 @@ Still the same.
 
 ## 3. Hard to Fuck Up
 
-### <em class="fas fa-fw fa-times text-danger fa-lg"></em> Concat
+### ❌ Concat
 
 ```php
 <?php
@@ -164,7 +164,7 @@ $message = sprintf('Hi my name is %s and I love s', $name, $love);
 
 ...but PHP and PHPStan got us covered.
 
-### <em class="fas fa-fw fa-times text-danger fa-lg"></em><em class="fas fa-fw fa-times text-danger fa-lg"></em> In-String Variable
+### ❌❌ In-String Variable
 
 I must confess, I've tricked you (and myself too until I tried [running the code](https://3v4l.org/RXpu1)):
 

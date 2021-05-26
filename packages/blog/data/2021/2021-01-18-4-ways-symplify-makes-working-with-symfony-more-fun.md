@@ -61,7 +61,7 @@ class SomeController
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 use Symfony\Component\Routing\Annotation\Route;

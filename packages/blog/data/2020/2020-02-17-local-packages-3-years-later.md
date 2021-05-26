@@ -60,7 +60,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
         FileSystem.php
 ```
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 <br>
 
@@ -88,7 +88,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 <br>
 
@@ -116,7 +116,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
             FileSystem.php
 ```
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 <br>
 
@@ -141,7 +141,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
         composer.json
 ```
 
-<em class="fas fa-fw fa-2x fa-times text-danger"></em>
+❌
 
 <br>
 

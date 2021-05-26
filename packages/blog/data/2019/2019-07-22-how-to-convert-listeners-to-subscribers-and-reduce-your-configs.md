@@ -92,7 +92,7 @@ Hm, how can be the listener called when it has now an information event?
 
 That's one of legacy [code smells of tags](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/).
 
-**We can't reduce configs**. We have to grow about configs together with code till the end of times <em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
+**We can't reduce configs**. We have to grow about configs together with code till the end of times ❌
 
 <br>
 

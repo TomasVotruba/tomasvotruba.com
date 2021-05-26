@@ -13,7 +13,7 @@ tweet_image: "/assets/images/posts/2020/symfonize_merged.png"
 
 ## What is the Goal?
 
-<em class="fas fa-fw mt-4 fa-times text-danger"></em> **We didn't want a  hybrid** with static dependency injection container, legacy controller, request separation for new website and for old website. It only creates more legacy code than in the beginning.
+❌ **We didn't want a  hybrid** with static dependency injection container, legacy controller, request separation for new website and for old website. It only creates more legacy code than in the beginning.
 
 <em class="fas fa-fw mt-4 fa-star-half text-warning"></em> **We were ok with** keeping original business logic code untouched. We will handle spaghetti decoupling to Controller and Twig in the next phase. This was just a 1st step of many.
 

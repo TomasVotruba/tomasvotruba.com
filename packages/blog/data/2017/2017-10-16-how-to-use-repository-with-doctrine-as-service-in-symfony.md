@@ -73,13 +73,13 @@ final class PostRepository extends EntityRepository
 
 ### Disadvantages
 
-- What if we try to register repository as a service? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- What if we try to register repository as a service? ❌
 
 <img src="/assets/images/posts/2017/repository-as-service/autowire-fail.png" class="img-thumbnail mb-4">
 
 - Why? Because parent constructor of `Doctrine\ORM\EntityRepository` is [missing `EntityManager` typehint](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L64) (this is fixed in doctrine/orm 2.7+)
 
-- **We can't get another dependency**, because parent constructor [requires `EntityManager` and `ClassMetadata` instances](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L64) <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- **We can't get another dependency**, because parent constructor [requires `EntityManager` and `ClassMetadata` instances](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L64) ❌
 
 ```php
 namespace App\Repository;
@@ -96,14 +96,14 @@ final class PostRepository extends EntityRepository
 }
 ```
 
-- Prepared methods like `findBy()` **don't have param and return type declarations** <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- Prepared methods like `findBy()` **don't have param and return type declarations** ❌
 
 ```php
 // param should be "int", but whatever passes
 $this->postRepository->find('someString');
 ```
 
-- We don't know what object we get back <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- We don't know what object we get back ❌
 
 ```php
 $post = $this->postRepository->find(1);
@@ -156,11 +156,11 @@ Instead of **registration to Symfony container like any other service, here is u
 
 ### Disadvantages
 
-- What if I want to have `PostRedisRepository` for Redis-related operations and `PostFrontRepository` for reading-only? It is **not possible to have more repositories** for one entity <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- What if I want to have `PostRedisRepository` for Redis-related operations and `PostFrontRepository` for reading-only? It is **not possible to have more repositories** for one entity ❌
 
 - Would you have one Controller for every operation related to `Product` entity?
 
-- **We're losing all features** of our framework's Dependency Injection container (events, autowiring, automated registration, logging etc.). <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- **We're losing all features** of our framework's Dependency Injection container (events, autowiring, automated registration, logging etc.). ❌
 
 <br>
 
@@ -211,9 +211,9 @@ final class PostController
 
 ### Disadvantages
 
-- IDE doesn't know it's `App\Repository\PostRepository`, so **we have add extra typehint for every single method** <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- IDE doesn't know it's `App\Repository\PostRepository`, so **we have add extra typehint for every single method** ❌
 
-- Example above would work because there is typehinted property, but these would fail <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- Example above would work because there is typehinted property, but these would fail ❌
 
 ```php
 $postRepository = $entityManager->getRepository(Post::class);
@@ -225,7 +225,7 @@ $post = $this->postRepository->find(1);
 $post->...?;
 ```
 
-- To enable autocomplete, we have to add them manually <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- To enable autocomplete, we have to add them manually ❌
 
 ```php
 /** @var App\Entity\Post $post */
@@ -243,15 +243,15 @@ $post->getName();
 
 ## Disadvantages Summary
 
-- We **cannot use autowiring** <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- We **cannot inject repository to other service just via constructor** <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- We have to **typehint manually** everything (IDE Plugins put aside) <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- **We have Doctrine in our Controller** - Controller should only delegate to model, without knowing what Database package is used. <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- To allow constructor injection, we have to prepare for much *config programming* <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- Thus **it's coupled to the framework you use and less reusable** <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- We cannot use multiple repository for single entity. **It naturally leads to huge repositories** <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- We cannot use constructor injection in repositories, which **can easily lead you to creating static helper classes** <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- Also, you directly depend on Doctrine's or Symfony's API, so if `find()` changes to `get()` in one `composer update`, your app is down <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- We **cannot use autowiring** ❌
+- We **cannot inject repository to other service just via constructor** ❌
+- We have to **typehint manually** everything (IDE Plugins put aside) ❌
+- **We have Doctrine in our Controller** - Controller should only delegate to model, without knowing what Database package is used. ❌
+- To allow constructor injection, we have to prepare for much *config programming* ❌
+- Thus **it's coupled to the framework you use and less reusable** ❌
+- We cannot use multiple repository for single entity. **It naturally leads to huge repositories** ❌
+- We cannot use constructor injection in repositories, which **can easily lead you to creating static helper classes** ❌
+- Also, you directly depend on Doctrine's or Symfony's API, so if `find()` changes to `get()` in one `composer update`, your app is down ❌
 
 ## How to make this Better with Symfony 3.3+ and Composition?
 

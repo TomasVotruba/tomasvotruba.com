@@ -107,7 +107,7 @@ That was Rule 6.
 
 ### 1. Only X Level of Indentation per Method
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 foreach ($sniffGroups as $sniffGroup) {
@@ -135,7 +135,7 @@ private function ensureIsAllInstanceOf(array $objects, string $type)
 
 ### 2. Do Not Use "else" Keyword
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 if ($status === self::DONE) {
@@ -158,7 +158,7 @@ $this->advance();
 
 ### 5. Use Only One Object Operator (`->`) per Line
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 $this->container->getBuilder()->addDefinition(SniffRunner::class);
@@ -173,7 +173,7 @@ $containerBuilder->addDefinition(SniffRunner::class);
 
 ### 7. Keep Your Classes Small
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 class SimpleStartupController
@@ -191,7 +191,7 @@ class SimpleStartupController
 }
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 class SomeClass
@@ -215,7 +215,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 class SomeClass
@@ -233,7 +233,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 class SomeClass
@@ -255,7 +255,7 @@ class SomeClass
 
 Classes should not contain public properties.
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 class ImmutableBankAccount
@@ -273,7 +273,7 @@ class ImmutableBankAccount
 
 Method should represent behavior, not set values.
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
     private $amount;

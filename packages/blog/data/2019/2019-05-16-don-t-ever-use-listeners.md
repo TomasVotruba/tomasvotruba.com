@@ -33,17 +33,17 @@ That's how you write a manipulative text if you wanted people to never use subsc
 
 ## What's Wrong With Listeners?
 
-- Juniors will use Listeners by default (everywhere they can) <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- YAML configs will get fat with listener configuration for basically no advantage <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- Juniors will use Listeners by default (everywhere they can) ❌
+- YAML configs will get fat with listener configuration for basically no advantage ❌
     - Since [PSR-4 autodiscovery](/blog/2018/12/27/how-to-convert-all-your-symfony-service-configs-to-autodiscovery/) this hurts config readability more then ever
     - You have to remember the YAML syntax for right registration
     - Do you know you have to tag it with `name` & `event`?
     - Will `_autoconfigure: true` help you here?
     - What's the name of event - `kernel_exception` or `kernel.error`? Well, neither
-- What will you do if name of Kernel event will change? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- How do you analyse it with PHPStan? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- How do you upgrade it with Rector, when Symfony will create a [BC break](https://symfony.com/blog/new-in-symfony-4-3-simpler-event-dispatching) [change](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher/)? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- What if you decide to migrate to Laravel or the *new best framework X* later? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- What will you do if name of Kernel event will change? ❌
+- How do you analyse it with PHPStan? ❌
+- How do you upgrade it with Rector, when Symfony will create a [BC break](https://symfony.com/blog/new-in-symfony-4-3-simpler-event-dispatching) [change](/blog/2020/05/25/the-bulletproof-event-naming-for-symfony-event-dispatcher/)? ❌
+- What if you decide to migrate to Laravel or the *new best framework X* later? ❌
 
 All these problems will shoot you or your colleague in the back in the future. **You've just opened doors for 6 more possible bugs and problems** to come to your project #carpeyolodiem.
 

@@ -79,7 +79,7 @@ What happens, when:
  - `packages/first-package/tests/Fixture/SomeClass.php` is used in test in
  - `packages/second-package/tests/UnrelatedTest.php`?
 
-<em class="fas fa-3x fa-times text-danger"></em>
+❌
 
 **It will silently pass**. Monorepo has many classes you work with and some test classes can be accidentally reused in another package. Your test run says it passes, even though it's broken.
 

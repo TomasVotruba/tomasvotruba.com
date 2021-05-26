@@ -221,7 +221,7 @@ This could have been spotted during code-review... or not.
 
 Abdul is [just now working on a PHPStan rule](https://github.com/symplify/symplify/pull/2740), which makes sure **the class name matches the route name**.
 
-- `BlogArchiveController` - route name: `CONTACT` <em class="fas fa-fw fa-times text-danger"></em>
+- `BlogArchiveController` - route name: `CONTACT` ❌
 -  `ContactController` - route name: `CONTACT` <em class="fas fa-fw fa-check text-success"></em>
 
 ## 5. Move from YAML to PHP to get REP
@@ -245,7 +245,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-2x" style="margin-left: 0em; float: left; padding-right: .2em;"></em> `autoconfigure()` and `autowire()` is missing
+❌ `autoconfigure()` and `autowire()` is missing
 
 <br>
 
@@ -262,7 +262,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-2x" style="margin-left: 0em; float: left; padding-right: .2em;"></em> `"some_param"` is overridden
+❌ `"some_param"` is overridden
 
 <br>
 
@@ -277,7 +277,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-2x" style="margin-left: 0em; float: left; padding-right: .2em;"></em> string `"some_param"` can create typoes, use constant instead
+❌ string `"some_param"` can create typoes, use constant instead
 
 <br>
 

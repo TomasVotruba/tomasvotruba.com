@@ -42,7 +42,7 @@ parameters:
 
 This will prevent over-inheritance and embrace composition - like in [Repositories as Services](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/) approach:
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 <?php
