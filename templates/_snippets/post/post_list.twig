@@ -11,7 +11,7 @@
                 {% elseif post.updatedAt is not null %}
                     Updated {{ post.updatedAt|date('Y-m-d') }}
                 {% else %}
-                    {{ post.dateTime|date('Y-m-d') }}
+                    <span class="text-muted">{{ post.dateTime|date('Y-m-d') }}</span>
                 {% endif %}
             </time>
         </div>

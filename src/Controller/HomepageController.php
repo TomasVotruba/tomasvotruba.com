@@ -15,7 +15,7 @@ final class HomepageController extends AbstractController
     public function __invoke(): Response
     {
         return $this->render('index.twig', [
-            'title' => 'PHP Lectures, Mentoring, Communities and Posts',
+            'title' => 'PHP Trainings, Rectoring and Posts',
         ]);
     }
 }
