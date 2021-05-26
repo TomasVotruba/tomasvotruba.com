@@ -5,15 +5,13 @@
         </a>
 
         <div class="mt-2">
-            <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
-                {% if post.deprecatedAt is not null %}
-                    <span class="text-danger">Deprecated {{ post.deprecatedAt|date('Y-m-d') }}</span>
-                {% elseif post.updatedAt is not null %}
-                    Updated {{ post.updatedAt|date('Y-m-d') }}
-                {% else %}
-                    <span class="text-muted">{{ post.dateTime|date('Y-m-d') }}</span>
-                {% endif %}
-            </time>
+            {% if post.deprecatedAt is not null %}
+                <span class="text-danger">Deprecated {{ post.deprecatedAt|date('Y-m-d') }}</span>
+            {% elseif post.updatedAt is not null %}
+                Updated {{ post.updatedAt|date('Y-m-d') }}
+            {% else %}
+                <span class="text-muted">{{ post.dateTime|date('Y-m-d') }}</span>
+            {% endif %}
         </div>
     </div>
 
