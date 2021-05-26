@@ -32,6 +32,9 @@
             {% set date_lines = [] %}
 =======
     <div class="container-fluid">
+        <h1>Weekly Blog About PHP Innovations</h1>
+
+
         {% set date_lines = [] %}
 >>>>>>> f5a08293 (styling posts)
 
@@ -39,15 +42,13 @@
         {% set displayed_post_count = 0 %}
         {% set currentYear = "now"|date('Y') %}
 
-        {# display only last X posts, for DOM performance on mobile #}
-
-        <ul class="mt-5 list-unstyled">
+        {# display posts with as few divs as possible, for DOM performance on mobile #}
 
         {% for post in posts %}
             {% set postYear = post.dateTime|date('Y') %}
 
             {% if postYear != currentYear and postYear not in date_lines %}
-                <h2 class="col-md-12 mb-5 clearfix" id="year-{{ postYear }}">
+                <h2 class="col-md-12 mt-5 mb-5" id="year-{{ postYear }}">
                     <br>
                     {{ postYear }}
                     {# https://stackoverflow.com/a/9432583/1348344 #}
@@ -57,26 +58,13 @@
 
             {% set displayed_post_count = displayed_post_count + 1 %}
 
-{#            {% if loop.first %}#}
-{#                <h1>#}
-{#                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}">#}
-{#                        {{ post.title|raw }}#}
-{#                    </a>#}
-{#                </h1>#}
-{##}
-{#                <div class="text-center m-auto">#}
-{#                    {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}#}
-{#                </div>#}
-{#            {% else %}#}
-{#                <ul class="mt-5 list-unstyled">#}
-                    <li class="mb-3 col-md-12 {% if post.updatedAt is not null %}bg-success text-white pt-3 pb-4 pl-4 rounded shadow{% endif %}">
-                        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
-                        {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                    </li>
-                <hr>
-{#            {% endif %}#}
+            <div class="mb-3 col-md-12 {% if post.updatedAt is not null %}bg-success text-white pt-3 pb-4 pl-4 pr-4 rounded shadow{% endif %}">
+                <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
+                {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
+            </div>
+
+            <hr>
         {% endfor %}
-        </ul>
         <br>
     </div>
 {% endblock %}

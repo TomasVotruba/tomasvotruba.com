@@ -8,16 +8,17 @@
 
         <div class="container-fluid post" id="content">
             <h1>{{ post.title|raw }}</h1>
-            <br>
 
             <div class="pull-right">
                 <a href="{{ post.gitHubEditUrl }}">Found a typo? Edit me</a>
             </div>
 
-            {% include "_snippets/post/post_metadata_line.twig" with { "post": post } %}
+            <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
+                {{ post.getDateTime|date('Y-m-d') }}
+            </time>
 
             {% if post.deprecated %}
-                <div class="card border-danger card-bigger">
+                <div class="card border-danger">
                     <div class="card-header text-white bg-danger">
                         <strong>This post is deprecated at {{ post.deprecatedAt|date("F Y") }}</strong>
                     </div>
@@ -30,9 +31,9 @@
             {% endif %}
 
             {% if post.updated %}
-                <div class="card border-success card-bigger mt-5">
+                <div class="card border-success mt-4">
                     <div class="card-header text-white bg-success">
-                        This post was updated at <strong>{{ post.updatedAt|date("F Y") }}</strong>.
+                        This post was updated at {{ post.updatedAt|date("F Y") }}.
 
                         <strong>What is new?</strong>
                     </div>
@@ -68,12 +69,11 @@
                 </div>
             </div>
 
-            <div class="card mt-3">
+            <div class="card mt-4">
                 <div class="card-body text-white bg-success text-center">
                     {% set previous_post = previous_post(post) %}
                     {% if previous_post is not null %}
                         <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {'slug': previous_post.getSlug }) }}" class="d-block">
-
                             <div>
                                 Read next → <strong>{{ previous_post.title|replace({'&nbsp;': ' '}) }}</strong>
                             </div>
