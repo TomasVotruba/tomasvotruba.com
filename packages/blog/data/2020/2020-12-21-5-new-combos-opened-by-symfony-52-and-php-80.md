@@ -72,7 +72,7 @@ Here is the deal. What if we have a `RouteName` object with constants of route n
 
 <img src="/assets/images/posts/2020/combo-route-value-object.png" class="img-thumbnail">
 
-No we have **one place** to manage route names <em class="fas fa-fw fa-check text-success"></em>
+No we have **one place** to manage route names ✅
 
 <br>
 
@@ -80,17 +80,17 @@ What else extra can we get out of this...
 
 <br>
 
-**Where is route used?** Just click on it <em class="fas fa-fw fa-check text-success"></em>
+**Where is route used?** Just click on it ✅
 
 <img src="/assets/images/posts/2020/combo-route-use-cases.png" class="img-thumbnail">
 
 <br>
 
-**What routes can we use?** Ask your IDE <em class="fas fa-fw fa-check text-success"></em>
+**What routes can we use?** Ask your IDE ✅
 
 <img src="/assets/images/posts/2020/combo-route-value-object.png" class="img-thumbnail">
 
-Attribute and redirect autocomplete <em class="fas fa-fw fa-check text-success"></em>
+Attribute and redirect autocomplete ✅
 
 ```php
 return $this->redirectToRoute(RouteName::CONTACT);
@@ -104,7 +104,7 @@ Twig autocomplete - kind of crappy now <em class="fas fa-fw fa-question text-war
 
 <br>
 
-**How can we rename a route?** In 1 line <em class="fas fa-fw fa-check text-success"></em>
+**How can we rename a route?** In 1 line ✅
 
 Wait, why should we ever rename a route? That's a good question. But a better question is: why should we think about route names at all? We'll get into that.
 
@@ -128,7 +128,7 @@ What is property promotion? It's a PHP 8 feature that does this:
     }
 ```
 
-2/3 less lines, 100 % of duplicated code removed <em class="fas fa-fw fa-check text-success"></em>
+2/3 less lines, 100 % of duplicated code removed ✅
 
 Note: Are you using action injection? Migrate to promoted properties and [stop now](/blog/2018/04/23/how-to-slowly-turn-your-symfony-project-to-legacy-with-action-injection/).
 
@@ -222,7 +222,7 @@ This could have been spotted during code-review... or not.
 Abdul is [just now working on a PHPStan rule](https://github.com/symplify/symplify/pull/2740), which makes sure **the class name matches the route name**.
 
 - `BlogArchiveController` - route name: `CONTACT` ❌
--  `ContactController` - route name: `CONTACT` <em class="fas fa-fw fa-check text-success"></em>
+-  `ContactController` - route name: `CONTACT` ✅
 
 ## 5. Move from YAML to PHP to get REP
 

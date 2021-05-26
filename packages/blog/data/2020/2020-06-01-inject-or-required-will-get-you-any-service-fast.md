@@ -275,7 +275,7 @@ final class ProductRepository extends AbstractRepository
 }
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 *Note: prefer "inject" method over public property to lower risk of 2 bugs mentioned in the start of the post.*
 

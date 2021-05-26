@@ -200,7 +200,7 @@ Let's refactor service from the object...
 +$vaccinatingService->vaccinate($animal);
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 ## 2. Trait adding Dependency
 
@@ -281,7 +281,7 @@ $vaccinatingService->vaccinate($human);
 $vaccinatingService->vaccinate($animal);
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 After this incident, we [forbid trait completely](https://github.com/symplify/phpstan-rules/blob/master/docs/rules_overview.md#notraitrule) with PHPStan.
 
@@ -421,7 +421,7 @@ This way we:
 - we have a type of `string`, so does PHPStan and Rector
 - and if we know the template parameters types... we can... wait, that's a topic for another post
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 We [made a rule for PHPStan](https://github.com/symplify/phpstan-rules/blob/master/docs/rules_overview.md#nonettetemplatevariablereadrule) to keep an eye on us.
 

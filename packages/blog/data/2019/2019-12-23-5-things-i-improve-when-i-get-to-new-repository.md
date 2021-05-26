@@ -53,9 +53,7 @@ indent_style = space
 indent_size = 4
 ```
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 <br>
 
@@ -83,9 +81,7 @@ Unless there is some supercritical issue, I always make it a standard way:
 -}
 ```
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 <br>
 
@@ -119,9 +115,7 @@ vendor/bin/phpstan a src
 vendor/bin/rector p src
 ```
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 <br>
 
@@ -148,9 +142,7 @@ It's very intuitive to use, based on UX, DX and well... **human brain. We tend t
 
 I have a special case for Rector, coding standards, PHPStan rules, utils that helps in development, but aren't part of the project itself → `utils/<project>/src`
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 <br>
 
@@ -271,9 +263,7 @@ Is there one new directory `utils` to check? Just update `composer.json`:
 
 This way I also see, **what directories contain PHP code, that needs to be checked**.
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 <br>
 

@@ -119,7 +119,7 @@ foreach ($sniffGroups as $sniffGroup) {
 }
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
 foreach ($sniffGroups as $sniffGroup) {
@@ -145,7 +145,7 @@ if ($status === self::DONE) {
 }
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
 if ($status === self::DONE) {
@@ -164,7 +164,7 @@ $this->advance();
 $this->container->getBuilder()->addDefinition(SniffRunner::class);
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
 $containerBuilder = $this->getContainerBuilder();
@@ -182,7 +182,7 @@ class SimpleStartupController
 }
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
 class SimpleStartupController
@@ -203,7 +203,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
 class SomeClass
@@ -224,7 +224,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
 class SomeClass
@@ -242,7 +242,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
 class SomeClass
@@ -263,7 +263,7 @@ class ImmutableBankAccount
     public $currency = 'USD';
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
 class ImmutableBankAccount
@@ -285,7 +285,7 @@ Method should represent behavior, not set values.
 }
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
     private $amount;

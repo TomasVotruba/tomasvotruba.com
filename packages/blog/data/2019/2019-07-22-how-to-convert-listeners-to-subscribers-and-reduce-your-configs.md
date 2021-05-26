@@ -66,7 +66,7 @@ It doesn't apply only to controllers, but to all services, like Event Subscriber
 +        resource: '../src/EventSubscriber'
 ```
 
-Next time we create an event subscriber class, we don't have to [code in config](/blog/2019/02/14/why-config-coding-sucks/) anymore <em class="fas fa-fw fa-lg fa-check text-success"></em>
+Next time we create an event subscriber class, we don't have to [code in config](/blog/2019/02/14/why-config-coding-sucks/) anymore ✅
 
 We've [reduced cognitive load](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) → code is easier to work with → hiring is faster → we can focus on business and feature value.
 
@@ -195,7 +195,7 @@ Run it:
 vendor/bin/rector process app src
 ```
 
-And now all the listeners were migrated to event subscribers <em class="fas fa-fw fa-lg fa-check text-success"></em>
+And now all the listeners were migrated to event subscribers ✅
 
 ### 4. Update Configs
 

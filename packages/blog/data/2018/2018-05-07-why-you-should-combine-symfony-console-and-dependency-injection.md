@@ -87,7 +87,7 @@ $application->run(new ArgInput);
 
 I wish I knew this answer :). In my opinion and experience with building cli apps, there might be few...
 
-### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
+### ✅ Advantages
 
 - CLI apps almost always start with simple plain PHP code:
 
@@ -160,7 +160,7 @@ class FixerFactory
 - There is an inconsistent approach to services. How do you know where to put it? Is it a service or is it a class to be created manually?
 - Should you inject dependency manually or let container (or any higher service) handle that?
 
-### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
+### ✅ Advantages
 
 - It's better than no container at all.
 - It gives at least some basis for future refactoring.
@@ -255,7 +255,7 @@ $application->run();
 
 - You need to rethink the [static `new` service approach](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/), if you're used to it.
 
-### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
+### ✅ Advantages
 
 - Web apps = CLI apps, nothing extra to learn for new contributors, even though they contribute a CLI app for their first time.
 - You can use all [Symfony 3.3+ super cool features](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/).

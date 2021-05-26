@@ -68,8 +68,8 @@ final class PostRepository extends EntityRepository
 
 ### Advantages
 
-- It's easy and everybody does that <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- You can use prepared methods like [`findBy()`](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L177), [`findOneBy()`](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L192) right away <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- It's easy and everybody does that ✅
+- You can use prepared methods like [`findBy()`](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L177), [`findOneBy()`](https://github.com/doctrine/doctrine2/blob/2.5/lib/Doctrine/ORM/EntityRepository.php#L192) right away ✅
 
 ### Disadvantages
 
@@ -152,7 +152,7 @@ Instead of **registration to Symfony container like any other service, here is u
 
 ### Advantages
 
-- It's in documentation <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- It's in documentation ✅
 
 ### Disadvantages
 
@@ -207,7 +207,7 @@ final class PostController
 
 ### Advantages
 
-- Again, status quo = that's how Doctrine and Symfony Documentation promotes it <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- Again, status quo = that's how Doctrine and Symfony Documentation promotes it ✅
 
 ### Disadvantages
 
@@ -237,9 +237,9 @@ $post->getName();
 
 ## Advantages Summary
 
-- It's easy to copy-paste if already present in our code <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- It's spread in most of documentation, both in Doctrine and Symfony and in many posts about Doctrine <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- No brain, no gain <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- It's easy to copy-paste if already present in our code ✅
+- It's spread in most of documentation, both in Doctrine and Symfony and in many posts about Doctrine ✅
+- No brain, no gain ✅
 
 ## Disadvantages Summary
 
@@ -341,9 +341,9 @@ final class PostRepository
 
 ### Advantages
 
-- Everything is **strictly typehinted**, **no more frustration from missing autocompletion** <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- **Constructor injection works** like you expect it to <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- You can get another dependency if you like <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- Everything is **strictly typehinted**, **no more frustration from missing autocompletion** ✅
+- **Constructor injection works** like you expect it to ✅
+- You can get another dependency if you like ✅
 
 <br>
 
@@ -365,9 +365,9 @@ class Post
 
 ###  Advantages
 
-- Clean and standalone object <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- No service locators smells <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- **Allows multiple repositories per entity** <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- Clean and standalone object ✅
+- No service locators smells ✅
+- **Allows multiple repositories per entity** ✅
 
 ```php
 // app/config/services.php
@@ -407,11 +407,11 @@ final class PostController
 
 ### Advantages
 
-- **IDE knows** the type and autocomplete 100% works <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- PHPStan and Rector knows types too <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- There is no sign of Doctrine, the code is cleanly decoupled <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- **The code easier to maintain and extend, thanks to composition over inheritance** <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- The possibility to decouple to [local packages](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/) is now opened <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- **IDE knows** the type and autocomplete 100% works ✅
+- PHPStan and Rector knows types too ✅
+- There is no sign of Doctrine, the code is cleanly decoupled ✅
+- **The code easier to maintain and extend, thanks to composition over inheritance** ✅
+- The possibility to decouple to [local packages](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/) is now opened ✅
 
 <br>
 

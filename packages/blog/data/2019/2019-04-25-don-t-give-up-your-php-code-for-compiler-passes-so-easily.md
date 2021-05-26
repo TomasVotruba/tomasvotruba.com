@@ -171,12 +171,12 @@ How we get `$priceModifiers` is not that important now, it's [an implementation 
 
 The important thing is we got a code that:
 
-- is **strictly typed** <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- we all understand it <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- will not be affected by any syntax/architecture changes in our favorite framework <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- can be checked by **coding standard tools** <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- can be analysed by **static analysis tools** <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- and refactored by **instant upgrade tools** <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- is **strictly typed** ✅
+- we all understand it ✅
+- will not be affected by any syntax/architecture changes in our favorite framework ✅
+- can be checked by **coding standard tools** ✅
+- can be analysed by **static analysis tools** ✅
+- and refactored by **instant upgrade tools** ✅
 
 <br>
 

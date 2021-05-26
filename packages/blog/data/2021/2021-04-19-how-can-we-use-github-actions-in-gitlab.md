@@ -19,9 +19,9 @@ Critical thinking can be easily disabled by [confirmation bias](https://en.wikip
 
 **What we have now?**
 
-- GitHub mono repository <em class="fas fa-fw fa-check text-success"></em>
-- working split on GitHub thanks to GitHub Action <em class="fas fa-fw fa-check text-success"></em>
-- Gitlab repositories <em class="fas fa-fw fa-check text-success"></em>
+- GitHub mono repository ✅
+- working split on GitHub thanks to GitHub Action ✅
+- Gitlab repositories ✅
 
 **What we need?**
 

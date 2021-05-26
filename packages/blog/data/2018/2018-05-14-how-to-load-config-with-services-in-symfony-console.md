@@ -85,7 +85,7 @@ Use static approach, no services config, just list of items. Most spread solutio
 
 ### How if Fits?
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> Ready in 2 minutes
+✅ Ready in 2 minutes
 
 ❌ Well, static
 
@@ -116,7 +116,7 @@ class SomeCommand extends Command
 
 ### How if Fits?
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> Ready in 10 minutes
+✅ Ready in 10 minutes
 
 ❌ Only local scope, we need to re-create container everywhere we need it
 
@@ -214,13 +214,13 @@ bin/ecs check src --config custom-config.php
 
 ❌ Ready in 15 minutes
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> Setup & Forget
+✅ Setup & Forget
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> Much more legacy-proof
+✅ Much more legacy-proof
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> We can now use Dependency Injection **everywhere we need**
+✅ We can now use Dependency Injection **everywhere we need**
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> And make use off Symfony, Nette or any other container features we're used to from Web Apps.
+✅ And make use off Symfony, Nette or any other container features we're used to from Web Apps.
 
 <br>
 

@@ -26,7 +26,7 @@ composer require symfony/console:2.8
 composer require symplify/easy-coding-standard-prefixed --dev
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 Imagine you have keys from your car. They work like regular keys most of the week, but on weekends not. Unless, of course, you drop them 2x times before putting the key inside the lock.
 
@@ -42,7 +42,7 @@ composer require symfony/console:2.8
 composer require symplify/easy-coding-standard --dev
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 Me too. So how can we do that? First, we need to understand the current project architecture.
 
@@ -104,7 +104,7 @@ Now we have:
 
 - `symplify/easy-coding-standard` on **PHP 7.1 with scoping**
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ## How to Upgrade?
 

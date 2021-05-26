@@ -243,7 +243,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ```php
 class StaticSomeClass

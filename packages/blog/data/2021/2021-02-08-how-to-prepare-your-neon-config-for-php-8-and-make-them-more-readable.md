@@ -134,7 +134,7 @@ Now, what happens if we add a new **required argument** to the constructor? But 
  }
 ```
 
-The code will still work thanks to named arguments <em class="fas fa-fw fa-check text-success fa-lg"></em>
+The code will still work thanks to named arguments ✅
 
 ## 3. Unwrap Inlined Arrays
 

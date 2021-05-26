@@ -348,10 +348,10 @@ vendor/bin/rector process src
 
 In matter of seconds now we have:
 
-- Better static type analysis <em class="fas fa-lg fa-check text-success"></em>
-- Better PHPStorm autocomplete <em class="fas fa-lg fa-check text-success"></em>
-- Better coding standards <em class="fas fa-lg fa-check text-success"></em>
-- No manual boring work required from the developer <em class="fas fa-lg fa-check text-success"></em>
+- Better static type analysis ✅
+- Better PHPStorm autocomplete ✅
+- Better coding standards ✅
+- No manual boring work required from the developer ✅
 
 <br>
 

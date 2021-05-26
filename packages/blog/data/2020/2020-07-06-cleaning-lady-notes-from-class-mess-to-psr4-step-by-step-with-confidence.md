@@ -71,7 +71,7 @@ Always **go for a simple target first**. Don't be a hero. A hero falls from the 
 - create pull-request
 - merge it
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 Done. You've just made a first small step. Cross [one step of your list](/cleaning-lady-checklist), 9/10 is left.
 But all those 9 steps are now 10 % less complicated.
@@ -170,7 +170,7 @@ You will get a list of files that don't match. Use PHPStorm refactoring to chang
 
 Commit, PR, CI passes, merge.
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 ## 3. Upper-case Directories First Letter
 
@@ -187,7 +187,7 @@ Go through directory in the left panel in PHPStorm and rename the directories th
 
 Commit, PR, CI passes, merge.
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 ## 4. Check PSR-4 root
 
@@ -221,7 +221,7 @@ There may be over 10 or even 50 of those. **Don't worry about it now**.
 
 If everything passes... Commit, PR, CI passes, merge.
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 ## 5. Narrow the Namespace Root and Directories in `composer.json`
 
@@ -260,7 +260,7 @@ Here use PHPStorm refactoring on the directory as in step 3.
 
 If everything passes... Commit, PR, CI passes, merge.
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 ## 6. What if there are No Namespaces or Are Very Very Bad?
 
@@ -318,7 +318,7 @@ This is one of **the most significant changes in your application**, so **be sur
 
 If everything passes... Commit, PR, CI passes, merge.
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 <br>
 

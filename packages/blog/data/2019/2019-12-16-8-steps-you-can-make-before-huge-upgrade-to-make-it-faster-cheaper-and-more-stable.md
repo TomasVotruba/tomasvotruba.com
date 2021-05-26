@@ -96,9 +96,7 @@ Should be:
     the migration is <strong>~20 % cheaper</strong>.
 </blockquote>
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 ## 2. Explicit PHP Version
 
@@ -156,9 +154,7 @@ Is it in the Docker? No way! Docker is not version control. It only runs what yo
     the migration is <strong>~5 % cheaper</strong>.
 </blockquote>
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 ## 3. EasyCoding Standard with Basic Sets
 
@@ -194,9 +190,7 @@ vendor/bin/ecs check src --fix
     the migration is <strong>~5 % cheaper</strong>.
 </blockquote>
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 ## 4. PHPStan on Level 8
 
@@ -223,9 +217,7 @@ There are many Rector rules, [that help you with rules jumping](https://github.c
     the migration is <strong>~15 % cheaper</strong>.
 </blockquote>
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 ## 5. Newbie Composer Install Under 2 Hours
 
@@ -273,9 +265,7 @@ One project took me 2 weeks to ask for SSH keys 3 different people by 7 mails, 4
     the migration is <strong>~5 % cheaper</strong>.
 </blockquote>
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 ## 6. 70 % Code Coverage
 
@@ -292,9 +282,7 @@ On the other hand, if you have a code coverage over 80 % percent, even change of
     the migration is <strong>~50 % cheaper</strong>.
 </blockquote>
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 ## 7. Not Versioned Vendor
 
@@ -309,9 +297,7 @@ But getting packages out of *local vendor* is the real adventure. We need to com
     the migration is <strong>~10 % cheaper</strong>.
 </blockquote>
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 
 ## 8. Solid Gitlab CI
@@ -336,9 +322,7 @@ As a side bonus, **it's free for private projects with unlimited users** and 2 0
     the migration is <strong>~10 % cheaper</strong>.
 </blockquote>
 
-<div class="text-center">
-    <em class="fas fa-4x fa-check text-success margin-auto"></em>
-</div>
+✅
 
 
 ## Worth It?

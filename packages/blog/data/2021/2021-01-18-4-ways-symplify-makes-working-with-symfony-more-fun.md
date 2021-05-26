@@ -75,7 +75,7 @@ class SomeController
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 <br>
 
@@ -127,7 +127,7 @@ services:
 
 Now you can type configs as you like, and PHPStan will warn you about every duplicated param in your config!
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em>
+✅
 
 
 ## 3. Autowire List of Services
@@ -199,7 +199,7 @@ Much better. How did we do it? With **autowired array** compiler pass:
 
 Everything else still looks the same. You've just made your configs more readable and code more robust.
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em>
+✅
 
 ## 4. What is the Doctrine Extension key name in the config?
 

@@ -72,7 +72,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
             FileSystem.php
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 <br>
 
@@ -103,7 +103,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 <br>
 
@@ -128,7 +128,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
             FileSystem.php
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 
 ### 4. `composer.json` in Packages
@@ -155,7 +155,7 @@ Do you want to **know more**? Look at [Composer Local Packages for Dummies](/blo
 
 This is only useful in case of [monorepo that splits packages](/blog/2018/10/08/new-in-symplify-5-create-merge-and-split-monorepo-with-1-command/), e.g. Symfony, Symplify. Not for local packages.
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 
 ## How to Do it Right?

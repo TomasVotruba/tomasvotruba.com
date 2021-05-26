@@ -155,7 +155,7 @@ Of course, you can put `file_exists()` and `is_file()` validation everywhere and
 Nette\Utils\FileSystem::read($accidentallyMissingFile);
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em> Kaboom! An Exception!
+✅ Kaboom! An Exception!
 
 ### `createDir()`
 
@@ -186,7 +186,7 @@ Ok, but what if we don't care about these because **all we need is to create a d
 Nette\Utils\FileSystem::createDir($cacheDirectory);
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ### `delete()`
 
@@ -218,7 +218,7 @@ Or maybe **we just want to delete it**:
 Nette\Utils\FileSystem::delete($source);
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 <br>
 

@@ -90,11 +90,11 @@ Now the method is always re-used because PHPStan reports all the future cases of
 
 What are other benefits?
 
-- 1 place to fix it <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- 1 place to maintain it <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- Code is much more robust and easier to change <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- The service is doing exactly 1 thing <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- Other services are not cluttered with "util code" <em class="fas fa-fw fa-check text-success fa-lg"></em>
+- 1 place to fix it ✅
+- 1 place to maintain it ✅
+- Code is much more robust and easier to change ✅
+- The service is doing exactly 1 thing ✅
+- Other services are not cluttered with "util code" ✅
 
 
 ## What is Not Duplicated Method?

@@ -216,9 +216,9 @@ final class PackageScoperApplication extends Application
 
 That's it!
 
-- 1 place to handle command naming <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- no more typos <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- don't ever think about that <em class="fas fa-fw fa-check text-success fa-lg"></em>
+- 1 place to handle command naming ✅
+- no more typos ✅
+- don't ever think about that ✅
 
 ```diff
  use Symfony\Component\Console\Command;

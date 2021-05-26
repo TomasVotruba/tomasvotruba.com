@@ -105,7 +105,7 @@ Can you see it?
 -private function prepareData(): array
 ```
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 <br>
 
@@ -132,7 +132,7 @@ final class AirCleaner
 +private const NAME = 'cleaner';
 ```
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 The most common *false publics* are constants because they're [last that got visibility in PHP 7.1](https://wiki.php.net/rfc/class_const_visibility).
 

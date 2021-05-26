@@ -75,7 +75,7 @@ Is there some automated way with all the benefits and almost zero maintenance?
 
 - [composer patches](https://github.com/cweagans/composer-patches)
 
-<em class="fas fa-check text-success margin-auto fa-2x"></em>
+✅
 
 ## Patching For Dummies
 

@@ -251,7 +251,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-lg fa-check text-success"></em> &nbsp;Done for [Symfony 3.4+](https://github.com/symplify/symplify/pull/1145) and in [Nette 3.0](https://github.com/nette/di/pull/178).
+✅ &nbsp;Done for [Symfony 3.4+](https://github.com/symplify/symplify/pull/1145) and in [Nette 3.0](https://github.com/nette/di/pull/178).
 
 <br>
 

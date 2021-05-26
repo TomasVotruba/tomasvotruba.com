@@ -129,7 +129,7 @@ Do you have any what is happening there? I don't.
 - We have to use `static` ❌
 - We can't use any service in `SomeFilter`, we have to use static only ❌
 - We violate `addFilter()` method with magic and make it harder to read, maintain and refactor ❌
-- We have one place to add filters <em class="fas fa-fw fa-check text-success "></em>
+- We have one place to add filters ✅
 
 <br>
 
@@ -164,7 +164,7 @@ Straight forward, transparent, and a few lines of code.
 
 #### Pros & Cons
 
-- We have very little code <em class="fas fa-fw fa-check text-success"></em>
+- We have very little code ✅
 - The framework part (Latte) is now directly bounded to our application domain - this makes code hard to refactor, decopule from framework or re-use in another context ❌
 - We break dependency inversion principle - we have to edit `LatteFactory` to add a new filter ❌
 - We made a seed for God class antipattern - soon our `LatteFactory` will have over 100 of lines with various filters ❌
@@ -230,8 +230,8 @@ The filter class is decoupled - no more hard-coded filters!
 
 #### Pros & Cons
 
-- We can add a new filter without every touching `LatteFactory` <em class="fas fa-fw fa-check text-success"></em>
-- We can use services in filters <em class="fas fa-fw fa-check text-success"></em>
+- We can add a new filter without every touching `LatteFactory` ✅
+- We can use services in filters ✅
 - We **only moved a seed for God class antipattern** - soon our `FilterProvider` will have over 100 of lines with various filters ❌
 
 <br>
@@ -322,9 +322,9 @@ interface FilterProviderInterface
 
 #### Pros & Cons
 
-- We have decoupled framework and our domain-specific filter <em class="fas fa-fw fa-check text-success"></em>
-- To add a new filters, we only need to create a new service <em class="fas fa-fw fa-check text-success"></em>
-- We finally use dependency injection at its best - Nette handles registering filters and collecting service for us <em class="fas fa-fw fa-check text-success"></em>
+- We have decoupled framework and our domain-specific filter ✅
+- To add a new filters, we only need to create a new service ✅
+- We finally use dependency injection at its best - Nette handles registering filters and collecting service for us ✅
 - We **add a seed for God method** - soon `provide()` will be full of weird callbacks and long methods ❌
 
 <br>
@@ -401,10 +401,10 @@ But what if money filters grow, included timezones and logged in user country? I
 
 #### Pros & Cons
 
-- We have decoupled domain logic from filters <em class="fas fa-fw fa-check text-success"></em>
-- We can re-use the used-to-be filter logic with `MoneyFormatResolver` in other places of application <em class="fas fa-fw fa-check text-success"></em>
-- We are motivated to use DI and decouple code clearly to new service, if it ever becomes too complex <em class="fas fa-fw fa-check text-success"></em>
-- We are ready for any changes that come in the future <em class="fas fa-fw fa-check text-success"></em>
+- We have decoupled domain logic from filters ✅
+- We can re-use the used-to-be filter logic with `MoneyFormatResolver` in other places of application ✅
+- We are motivated to use DI and decouple code clearly to new service, if it ever becomes too complex ✅
+- We are ready for any changes that come in the future ✅
 - ~~We think this is the best way, just because it's last ❌~~ Not anymore ↓
 
 <br>
@@ -488,10 +488,10 @@ final class LatteFactory
 
 #### Pros & Cons
 
-- All of the advantages of previous approaches <em class="fas fa-fw fa-check text-success"></em>
-- 1 class = 1 rule, this is really challenge to clutter <em class="fas fa-fw fa-check text-success"></em>
-- It's very intuitive to use  <em class="fas fa-fw fa-check text-success"></em>
-- We don't have to maintain duplicated `provideFilters()` callables with private methods <em class="fas fa-fw fa-check text-success"></em>
+- All of the advantages of previous approaches ✅
+- 1 class = 1 rule, this is really challenge to clutter ✅
+- It's very intuitive to use  ✅
+- We don't have to maintain duplicated `provideFilters()` callables with private methods ✅
 - The `__invoke()` method has no contract, so we can forget to implement it ❌
 
 We compensate this in `LatteFactory` itself:

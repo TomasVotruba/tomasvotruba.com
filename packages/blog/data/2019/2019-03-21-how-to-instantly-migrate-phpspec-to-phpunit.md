@@ -193,7 +193,7 @@ vendor/bin/rector process tests
 
 <br>
 
-Take couple of minutes to polish the rest of code and send PR to your project <em class="fas fa-fw fa-check text-success fa-lg"></em>
+Take couple of minutes to polish the rest of code and send PR to your project ✅
 
 <br>
 

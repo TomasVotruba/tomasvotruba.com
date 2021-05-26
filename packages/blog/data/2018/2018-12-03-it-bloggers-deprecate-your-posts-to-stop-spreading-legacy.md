@@ -57,12 +57,12 @@ Right now, **I feel it's our responsibility as writers to inform our readers** w
 
 <br>
 
-[Symfony blog](https://symfony.com/doc/3.1/components/console.html) &nbsp;<em class="fas fa-lg fa-check text-success"></em>
+[Symfony blog](https://symfony.com/doc/3.1/components/console.html) &nbsp;✅
 
 <img src="/assets/images/posts/2018/version-blog/symfony-warning.png">
 
 
-[Matt Stauffer blog](https://mattstauffer.com/blog/how-to-organize-class-namespaces) &nbsp;<em class="fas fa-lg fa-check text-success"></em>
+[Matt Stauffer blog](https://mattstauffer.com/blog/how-to-organize-class-namespaces) &nbsp;✅
 
 <img src="/assets/images/posts/2018/version-blog/update.png" class="img-thumbnail">
 

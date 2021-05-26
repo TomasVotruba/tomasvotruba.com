@@ -81,7 +81,7 @@ vendor/bin/phpunit tests
 ```
 
 <p class="text-success pt-3 pb-3">
-    <em class="fas fa-fw fa-lg fa-check"></em> Voilá!
+    ✅ Voilá!
 </p>
 
 ## Down the Smelly Rabbit Hole
@@ -239,7 +239,7 @@ This removes all `public: true` lines from all your configs.
 <img src="/assets/images/posts/2018/private-services/gone.png" class="img-thumbnail">
 
 <p class="text-success pt-3 pb-3">
-    <em class="fas fa-fw fa-lg fa-check"></em> That's it!
+    ✅ That's it!
 </p>
 
 ## But Why?
@@ -272,9 +272,9 @@ In the end **I removed the compiler pass and moved back to `public: true` in all
 
 Thanks to that, the **whole process became clear**:
 
-- We're using native Symfony syntax, you don't have to learn compiler passes <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Configs are clear and people know what to expect <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- The location is always behind `autowire: true` → all configs have the same setup <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- We're using native Symfony syntax, you don't have to learn compiler passes ✅
+- Configs are clear and people know what to expect ✅
+- The location is always behind `autowire: true` → all configs have the same setup ✅
 
 <br><br>
 

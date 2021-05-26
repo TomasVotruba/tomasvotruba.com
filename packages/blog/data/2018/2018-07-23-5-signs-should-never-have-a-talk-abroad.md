@@ -31,7 +31,7 @@ From my experience, if you response to Call for Papers to one of [the PHP confer
 
 Only a madman would not give up this, right?
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 How wrong was I thinking this? Meetups and conferences are a completely different field. Meetups are held almost every month and I can tell you, every organizer is super happy for an active speaker who writes him with a talk proposal. And an active speaker from abroad? **Shut-up up and take my money!**
 
@@ -58,7 +58,7 @@ Some groups make this experience even more exceptional, like:
 
 People living abroad are much more skilled, have high standards and are very critique. Just imagine you'd confuse `sort` with `asort` - you're dead.
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 I'm not sure if that's *the Czech Republic* or *home-country* effect, but I find programmers in other countries more curious, with questions, own ideas, and own experiments. Instead of saying how your idea is bad or why they propose situations when it could go wrong and want to hear arguments from you. Also, they're not so focused on nitpicking, but rather they try to understand the main idea of your talk.
 
@@ -72,7 +72,7 @@ Are you shy? Don't have a talk in your hometown where everyone knows you, but go
 
 Abroad, there are only native English speakers and they will always correct your mistakes, typos and non-precise wording. Why do you think English programmers go to meetup anyway?
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 This could not be far from the truth. In my experience, I've been meeting roughly 10 % of native English speakers. Instead, they're from Germany, France, Italy, Spain, Hungary, Slovakia, Netherlands, Belgium or Poland. Imagine having all these nationalities together, in one room, almost all of them having English as seconds language (in the best case scenario).
 
@@ -87,7 +87,7 @@ Let's admit it, traveling abroad is not cheap. A return ticket from Prague to Be
 
 If there only would be organizer you ask for accommodation or one of the other speakers or a friend. But that would be pure hope, no chance.
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 All you need to do is check [the meetup](https://www.meetup.com/sfugberlin/events) and write to the organizer and the speakers. Why? Because these people are usually the most opened one. Thanks, [Martin Hlaváč](http://mhlavac.net) for an awesome stay that helped me for this tip.
 
@@ -112,7 +112,7 @@ The second option is to go to [php.ug](http://php.ug) and try to find meetups ar
     <em>Current Meetup coverage at php.ug</em>
 </div>
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 Make no mistake, [Andreas Heigl](https://github.com/heiglandreas) is doing a great job with [php.ug](http://php.ug), with Slack promotion and so on. I talked with him about this project, because I really missed a place where people could see meetups around them that would just work. Nothing more, nothing less.
 

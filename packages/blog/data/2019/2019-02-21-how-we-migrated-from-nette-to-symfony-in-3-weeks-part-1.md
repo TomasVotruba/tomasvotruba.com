@@ -55,14 +55,14 @@ In the start, we run **Rector with generic rules with brute-force way**. Don't t
 
 In the end, [Rector](https://getrector.org) helped us with many following changes:
 
-- Response and Request <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Presenter to Controller <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- RouterFactory to Controller Annotation <em class="fas fa-fw fa-lg fa-check text-success"></em> - REST Routes and Invocable Controllers included
-- Kdyby/Events and Contributte/Events to Symfony/EventDispatcher <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Kdyby/Doctrine to Doctrine/DoctrineBundle <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Kdyby/Events to Symfony/EventDispatcher <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Kdyby/Translation to Symfony/Translation <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Nette DI methods to Symfony/DependendyInjection <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- Response and Request ✅
+- Presenter to Controller ✅
+- RouterFactory to Controller Annotation ✅ - REST Routes and Invocable Controllers included
+- Kdyby/Events and Contributte/Events to Symfony/EventDispatcher ✅
+- Kdyby/Doctrine to Doctrine/DoctrineBundle ✅
+- Kdyby/Events to Symfony/EventDispatcher ✅
+- Kdyby/Translation to Symfony/Translation ✅
+- Nette DI methods to Symfony/DependendyInjection ✅
 
 The tricky part was to discover differences and create the bridge between both frameworks - *"In Nette, you use this, in Symfony you'd use this."*
 
@@ -80,9 +80,9 @@ Rector can automate them when some project will need them. Maybe your project :)
 
 ### Non-PHP Migrations
 
-- <a href="/blog/2019/02/11/introducing-neon-to-yaml-converter/">Neon to YAML</a> <em class="fas fa-fw fa-lg fa-check - text-success"></em> - this package was created for needs of Entrydo
+- <a href="/blog/2019/02/11/introducing-neon-to-yaml-converter/">Neon to YAML</a> ✅ - this package was created for needs of Entrydo
 
-- <a href="/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions/">Latte to TWIG</a> <em class="fas fa-fw fa-lg fa-check - text-success"></em>
+- <a href="/blog/2018/07/05/how-to-convert-latte-templates-to-twig-in-27-regular-expressions/">Latte to TWIG</a> ✅
 
 ### Coding Standards
 

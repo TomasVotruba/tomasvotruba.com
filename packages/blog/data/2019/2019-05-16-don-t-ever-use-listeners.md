@@ -140,13 +140,13 @@ There is still a bit of magic... what should be in `getSubscribedEvents()` metho
 
 ## What's Better with Event Subscriber?
 
-- No config coding and all the related possible bugs <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- No config coding and all the related possible bugs ✅
 - Adding new subscribers mean 0-work in config
 - Adding new subscribed event mean 0-work in config
-- No option to miss-use delegators <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Easy to statically analyse <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Easy to instantly upgrade <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Any Symfony BC break will be easy to discover due to unused constant in exact line of code <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- No option to miss-use delegators ✅
+- Easy to statically analyse ✅
+- Easy to instantly upgrade ✅
+- Any Symfony BC break will be easy to discover due to unused constant in exact line of code ✅
 
 The trade-off worth the change
 

@@ -50,7 +50,7 @@ composer require symplify/easy-coding-standard-prefixed --dev
 vendor/bin/ecs
 ```
 
-## <em class="fas fa-fw fa-lg fa-check text-success"></em>
+## ✅
 
 <br>
 

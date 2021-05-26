@@ -323,7 +323,7 @@ Good idea! Since [Symfony 3.4](https://symfony.com/blog/new-in-symfony-3-4-local
          resource: "../src"
 ```
 
-<em class="fas fa-lg fa-check text-success"></em>
+✅
 
 ### 4. Autowire the Parameter
 
@@ -358,7 +358,7 @@ You set up this only once, but then you can enjoy short and clear configs:
          resource: "../src"
 ```
 
-<em class="fas fa-lg fa-check text-success"></em>
+✅
 
 This compiler autowires parameters by convention:
 

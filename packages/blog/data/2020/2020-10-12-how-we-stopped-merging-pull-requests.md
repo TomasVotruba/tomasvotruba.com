@@ -82,7 +82,7 @@ GitHub waits for the CI to pass and then merges and deletes branch:
 
 <img src="https://user-images.githubusercontent.com/924196/108640447-f0944800-7499-11eb-81ab-05870aa999f9.png" alt="" class="img-thumbnail">
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 <br>
 

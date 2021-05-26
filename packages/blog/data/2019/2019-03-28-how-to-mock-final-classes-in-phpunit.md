@@ -104,7 +104,7 @@ And enable:
 DG\BypassFinals::enable();
 ```
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em>
+✅
 
 <div class="alert alert-sm alert-warning mt-5 mb-5" role="alert">
     Do you want to know, <strong>how BypassFinals works?</strong> Read author's <a href="https://phpfashion.com/how-to-mock-final-classes">blog post</a> or check <a href="https://github.com/dg/bypass-finals/blob/8f0f7ab7a17a6b5c188dde1cf5edc6ceb06c70c1/src/BypassFinals.php#L217">this line on Github</a>.
@@ -284,7 +284,7 @@ Great! **All our objects can be final and tests can mock them**.
 
 Is it a good enough solution? Yes, **it works and it's a single place of origin** - use it, close this post and your code will thank you in 2 years later.
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em>
+✅
 
 <br>
 
@@ -333,9 +333,9 @@ vendor/bin/phpunit
 Success!
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
+✅
+✅
 
 ### Before
 

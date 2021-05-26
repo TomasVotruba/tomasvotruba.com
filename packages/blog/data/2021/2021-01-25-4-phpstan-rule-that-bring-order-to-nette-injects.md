@@ -90,7 +90,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 Covered by `Symplify\PHPStanRules\Rules\NoNetteInjectAndConstructorRule` rule.
 
@@ -143,7 +143,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 Covered by `Symplify\PHPStanRules\Rules\SingleNetteInjectMethodRule` rule.
 
@@ -184,7 +184,7 @@ Let's not do that ever again and validate **letter by letter** of `@inject` anno
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 Covered by `Symplify\PHPStanRules\Rules\ValidNetteInjectRule
 ` rule.
@@ -233,7 +233,7 @@ final class ProductPresenter extends AbstractPresenter
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 Covered by `Symplify\PHPStanRules\Rules\NoInjectOnFinalRule` rule.
 
