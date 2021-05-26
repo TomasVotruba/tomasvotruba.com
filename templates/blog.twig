@@ -40,6 +40,9 @@
         {% set currentYear = "now"|date('Y') %}
 
         {# display only last X posts, for DOM performance on mobile #}
+
+        <ul class="mt-5 list-unstyled">
+
         {% for post in posts %}
             {% set postYear = post.dateTime|date('Y') %}
 
@@ -54,25 +57,24 @@
 
             {% set displayed_post_count = displayed_post_count + 1 %}
 
-            {% if loop.first %}
-                <h1>
-                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}">
-                        {{ post.title|raw }}
-                    </a>
-                </h1>
-
-                <div class="text-center m-auto">
-                    {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                </div>
-            {% else %}
-                {% if loop.index == 2 %}<ul class="mt-5 list-unstyled">{% endif %}
-
-                <li class="mb-3 col-md-12 {% if post.updatedAt is not null %}bg-success text-white pt-2 pb-2 rounded shadow{% endif %}">
-                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
-                    {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
-                </li>
+{#            {% if loop.first %}#}
+{#                <h1>#}
+{#                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}">#}
+{#                        {{ post.title|raw }}#}
+{#                    </a>#}
+{#                </h1>#}
+{##}
+{#                <div class="text-center m-auto">#}
+{#                    {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}#}
+{#                </div>#}
+{#            {% else %}#}
+{#                <ul class="mt-5 list-unstyled">#}
+                    <li class="mb-3 col-md-12 {% if post.updatedAt is not null %}bg-success text-white pt-3 pb-4 pl-4 rounded shadow{% endif %}">
+                        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
+                        {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
+                    </li>
                 <hr>
-            {% endif %}
+{#            {% endif %}#}
         {% endfor %}
         </ul>
         <br>

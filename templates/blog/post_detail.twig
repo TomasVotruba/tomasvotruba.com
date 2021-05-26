@@ -10,7 +10,11 @@
             <h1>{{ post.title|raw }}</h1>
             <br>
 
-            {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "show_edit_link": true } %}
+            <div class="pull-right">
+                <a href="{{ post.gitHubEditUrl }}">Found a typo? Edit me</a>
+            </div>
+
+            {% include "_snippets/post/post_metadata_line.twig" with { "post": post } %}
 
             {% if post.deprecated %}
                 <div class="card border-danger card-bigger">
@@ -28,7 +32,9 @@
             {% if post.updated %}
                 <div class="card border-success card-bigger mt-5">
                     <div class="card-header text-white bg-success">
-                        <strong>This post was updated at {{ post.updatedAt|date("F Y") }}</strong>
+                        This post was updated at <strong>{{ post.updatedAt|date("F Y") }}</strong>.
+
+                        <strong>What is new?</strong>
                     </div>
                     {% if post.updatedMessage is not null %}
                         <div class="card-body pb-2">
