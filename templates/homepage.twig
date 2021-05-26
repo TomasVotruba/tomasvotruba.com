@@ -1,13 +1,5 @@
 {% extends 'base.twig' %}
 
-
-{#
-    quotes:
-    "clean code is a code, that junior and senior can understand in the same amount of time"
-    https://twitter.com/votrubat/status/1275863668878688257
-#}
-
-
 {% block content %}
     <div class="container-fluid">
         <h1>Hi, I'm Tomas Votruba and I help PHP companies to change fast and safe</h1>
@@ -19,7 +11,7 @@
         <div class="text-bigger">
             <p>
                 I'm a <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::TRAININGS')) }}">trainer</a>,
-                <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG')) }}">blogger</a> and <a href="http://github.com/TomasVotruba">award-winning open-source developer</a>.
+                <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG')) }}">blogger</a> and <a href="https://github.blog/2020-09-03-introducing-the-github-stars-program" target="blank">award-winning</a> <a href="http://github.com/TomasVotruba" target="blank">open-source developer</a>.
             </p>
 
             <p>
@@ -34,10 +26,10 @@
             </div>
 
             <p>
-                To make this happen faster and in scale, I created <a href="http://github.com/rectorphp/rector">Rector</a> - a PHP CLI tool for instant upgrades and automated refactoring. It's catching up pretty well among PHP community around the world - from Symfony to Drupal.
+                To make this happen faster and in scale, I created <a href="http://github.com/rectorphp/rector" target="blank">Rector</a> - a PHP CLI tool for instant upgrades and automated refactoring. It's catching up pretty well among PHP community around the world - from Symfony to Drupal.
             </p>
             <p>
-                I connected with <a href="https://matthiasnoback.nl">Matthias Noback</a> and we wrote book about <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BOOK')) }}">Rector - The Power of Automated Refactoring</a>.
+                I connected with <a href="https://matthiasnoback.nl" target="blank">Matthias Noback</a> and we wrote book about <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BOOK')) }}">Rector - The Power of Automated Refactoring</a>.
             </p>
 
             <div class="text-center mt-5 mb-5">
@@ -52,6 +44,8 @@
                 For these efforts, <a href="https://stars.github.com/profiles/tomasvotruba/">GitHub awarded me</a> as one of 100 <a href="https://github.blog/2020-09-03-introducing-the-github-stars-program/">GitHub Stars</a>.
             </p>
         </div>
+
+        <br>
 
         <div class="card border-warning mt-5">
             <div class="card-body">

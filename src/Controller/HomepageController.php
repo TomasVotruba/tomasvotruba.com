@@ -17,6 +17,8 @@ final class HomepageController extends AbstractController
     private const QUOTES = [
         "If you don't want to do something, you'll find an excuse.<br>If you really do, you'll find a way.",
         'Every day is a new life to a wise man.',
+        // 'Clean code is a code, that junior and senior can understand in the same amount of time'
+        // https://twitter.com/votrubat/status/1275863668878688257
     ];
 
     #[Route(path: '/', name: RouteName::HOMEPAGE)]
