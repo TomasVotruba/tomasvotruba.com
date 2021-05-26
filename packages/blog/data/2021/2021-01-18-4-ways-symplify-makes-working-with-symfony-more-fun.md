@@ -20,8 +20,6 @@ tweet_image: "/assets/images/posts/2021/doctrine_host.gif"
 ## 1. Is the Annotation available as the Attribute?
 
 <a href="https://github.com/symplify/phpstan-rules" class="btn btn-dark btn-sm mb-1">
-    <em class="fab fa-github"></em>
-    &nbsp;
     From phpstan-rules package
 </a>
 
@@ -91,8 +89,6 @@ includes:
 ## 2. Is Parameter in Config used Just Once?
 
 <a href="https://github.com/symplify/phpstan-rules" class="btn btn-dark btn-sm mb-1">
-    <em class="fab fa-github"></em>
-    &nbsp;
     From phpstan-rules package
 </a>
 
@@ -204,8 +200,6 @@ Everything else still looks the same. You've just made your configs more readabl
 ## 4. What is the Doctrine Extension key name in the config?
 
 <a href="https://github.com/symplify/amnesia" class="btn btn-dark btn-sm mb-1">
-    <em class="fab fa-github"></em>
-    &nbsp;
     From amnesia package
 </a>
 

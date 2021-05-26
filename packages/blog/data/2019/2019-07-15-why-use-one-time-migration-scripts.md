@@ -164,7 +164,7 @@ Again, it took us 3-4 iterations to cover all edge cases, but then it was ready 
 
 ## Start Small, then Take it to the Next Level
 
-**If you want to get deeper into this thinking and find more inspiration, read the *Pragmatic Programmer* book**. I personally found useful about 60 % of the content (compared to usual ~30 % in technical books), so <em class="fas fa-2x fa-thumbs-up text-success"></em>.
+**If you want to get deeper into this thinking and find more inspiration, read the *Pragmatic Programmer* book**. I personally found useful about 60 % of the content (compared to usual ~30 % in technical books), so 👍
 
 <img src="/assets/images/posts/2019/one-time/pragmatic_programmer.jpg" class="img-thumbnail">
 

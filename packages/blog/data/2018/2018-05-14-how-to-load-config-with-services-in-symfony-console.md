@@ -153,7 +153,6 @@ So what now?
 ### `ArgvInput` to the Rescue
 
 <a href="https://github.com/symplify/symplify/pull/198" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #198
 </a>
 

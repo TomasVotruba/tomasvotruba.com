@@ -96,7 +96,7 @@ Attribute and redirect autocomplete ✅
 return $this->redirectToRoute(RouteName::CONTACT);
 ```
 
-Twig autocomplete - kind of crappy now <em class="fas fa-fw fa-question text-warning"></em>
+Twig autocomplete - kind of crappy now...
 
 ```twig
 <a href="{{ path(constant('Rector\\Website\\ValueObject\\RouteName::CONTACT')) }}">Dare us</a>

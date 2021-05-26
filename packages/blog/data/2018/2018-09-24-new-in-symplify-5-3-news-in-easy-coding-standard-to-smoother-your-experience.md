@@ -22,7 +22,6 @@ Now enjoy the news ↓
 ## 1. Friendlier Skips
 
 <a href="https://github.com/symplify/symplify/pull/948/files" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #948
 </a>
 
@@ -55,7 +54,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 ## 2. In Lazy We Trust
 
 <a href="https://github.com/symplify/symplify/pull/832/files" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #832
 </a>
 
@@ -71,7 +69,6 @@ As you've already noticed, **now** you can use short version with **normal PHP -
 ## 3. Are There Some "array" Checkers?
 
 <a href="https://github.com/symplify/symplify/pull/967/files" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #967
 </a>
 

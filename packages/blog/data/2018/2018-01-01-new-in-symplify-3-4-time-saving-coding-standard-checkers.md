@@ -23,8 +23,6 @@ Starting with the simple checkers and moving to those, which save you even hours
 ## 1. Absolutely Require and Include
 
 <a href="https://github.com/symplify/symplify/pull/385" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the pull-request
 </a>
 
@@ -78,8 +76,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 ## 2. Empty Line after `declare(strict_types=1)`
 
 <a href="https://github.com/symplify/symplify/pull/443" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the pull-request
 </a>
 

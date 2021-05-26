@@ -20,7 +20,6 @@ Now enjoy the news ↓
 ## 1. Drop Manual Binds in Symfony configs
 
 <a href="https://github.com/symplify/symplify/pull/998" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #998
 </a>
 
@@ -126,7 +125,6 @@ services:
 ## 2. Separate Files from Directories
 
 <a href="https://github.com/symplify/symplify/pull/963" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #963
 </a>
 
@@ -155,7 +153,6 @@ $symplifyFileSystem = new Symplify\PackageBuilder\FileSystem\FileSystem;
 ## 3. Merge Parameters without Leaving Any Behind
 
 <a href="https://github.com/symplify/symplify/pull/989" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #989
 </a>
 

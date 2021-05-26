@@ -102,7 +102,7 @@ The `StringTypeResolver` now handles its dependencies on its own:
  }
 ```
 
-<em class="fas fa-2x fa-thumbs-up text-warning"></em>
+👍
 
 <br>
 

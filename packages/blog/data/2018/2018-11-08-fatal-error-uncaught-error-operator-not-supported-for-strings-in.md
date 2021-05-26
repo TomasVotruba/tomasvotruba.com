@@ -118,7 +118,6 @@ foreach (array_keys($callbacks) as $callback) {
 ```
 
 <a href="https://github.com/rectorphp/rector/pull/661/" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #661
 </a>
 
@@ -171,7 +170,6 @@ I finally looked over my small framework bubble and **learned a lot about proble
 One example for all:
 
 <a href="https://github.com/rectorphp/rector/pull/661/" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #661
 </a>
 

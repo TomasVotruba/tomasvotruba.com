@@ -186,7 +186,6 @@ Actually, that was not a feature, it was a bug. **This method should have been u
 Do you want to know all the possible code changes?
 
 <a href="https://github.com/rectorphp/rector/pull/3084/commits/626287ec76ed16d15136115e1510b2154c2712a9" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 

@@ -21,7 +21,6 @@ What is **new**?
 ### 1. Run Checker only on Specific Path
 
 <a href="https://github.com/symplify/symplify/pull/1537" class="btn btn-dark btn-sm pull-right mt-2 mb-2">
-    <em class="fab fa-github fa-fw"></em>
     &nbsp;
     See PR #1357
 </a>

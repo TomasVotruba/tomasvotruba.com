@@ -36,8 +36,6 @@ With favorite [`fnmatch()` function](http://php.net/manual/en/function.fnmatch.p
 ## 2. Warnings are Reported for Specific Sniffs
 
 <a href="https://github.com/symplify/symplify/pull/481" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #481
 </a>
 
@@ -50,8 +48,6 @@ That changed. New property [`$reportWarningsSniffs` in `Symplify\EasyCodingStand
 ## 3. Nice and Clear Diff over Boring Table Report
 
 <a href="https://github.com/symplify/symplify/pull/474" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #474
 </a>
 
@@ -94,8 +90,6 @@ Which one do you prefer?
 ## 4. Skip Sniff Codes instead of Whole Sniffs
 
 <a href="https://github.com/symplify/symplify/pull/388" class="btn btn-dark btn-sm mb-3 mt-2">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #388
 </a>
 

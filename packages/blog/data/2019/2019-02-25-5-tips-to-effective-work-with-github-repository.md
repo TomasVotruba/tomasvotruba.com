@@ -38,7 +38,7 @@ Works every-time there is no command named with that letter:
 +vendor/bin/ecs c
 ```
 
-<div class="fa-2x">👍</div>
+👍
 
 ## 2. Be informed about New Packages - with no Spam!
 
@@ -48,7 +48,7 @@ GitHub recently introduced a very nice feature. It will add notification **only 
 
 <img src="/assets/images/posts/2019/github-tips/github-subscription.png" class="img-thumbnail">
 
-<div class="fa-2x">👍</div>
+👍
 
 ## 3. Fix Typos with UP
 
@@ -62,7 +62,7 @@ Now move your cursor to the 3 dots in the right corner of the comment, click, se
 
 Just **hit ↑** (arrow up), and you're there!
 
-<div class="fa-2x mt-4">👍</div>
+👍
 
 ## 4. Refine your Github
 
@@ -110,7 +110,7 @@ But what if you forget it's "check-cs"? And what if you open a new project - wha
 
 <img src="/assets/images/posts/2019/github-tips/list.gif" class="img-thumbnail">
 
-<div class="fa-2x">👍</div>
+👍
 
 <br>
 
@@ -118,7 +118,7 @@ Great, now we know the name! But what if you want to add **one extra option** ju
 
 <img src="/assets/images/posts/2019/github-tips/cached.gif" class="img-thumbnail">
 
-<div class="fa-2x">👍</div>
+👍
 
 <br>
 

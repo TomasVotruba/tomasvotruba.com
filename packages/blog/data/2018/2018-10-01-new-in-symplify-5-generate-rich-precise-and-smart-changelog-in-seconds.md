@@ -16,7 +16,6 @@ deprecated_message: |
 ## Tested on Humans ✅
 
 <a href="https://github.com/shopsys/shopsys/pull/446/files" class="btn btn-dark btn-sm mt-2">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #446 on Shopsys
 </a>
 
@@ -41,7 +40,6 @@ composer require symplify/changelog-linker --dev
 ## 1. Multiple `CHANGELOG.md` for Smaller Versions
 
 <a href="https://github.com/symplify/symplify/pull/1047/files#diff-3b69acbe6b33a88158b373e6e96de097" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #1047
 </a>
 
@@ -65,7 +63,6 @@ vendor/bin/changelog-linker link CHANGELOG-3.md
 ## 2. Smarter Last Change Detection
 
 <a href="https://github.com/symplify/symplify/commit/05d91b9412ebec49a66a4717d856a5a2c6718232" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See commit
 </a>
 
@@ -82,7 +79,6 @@ vendor/bin/changelog-linker dump-merges
 ## 3. Remove Dead Links
 
 <a href="https://github.com/symplify/symplify/pull/1045/files" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #1045
 </a>
 
@@ -104,7 +100,6 @@ In Symplify `CHANGELOG.md` itself it [removed 50 dead lines](https://github.com/
 ## 4. Improved Category Detection
 
 <a href="https://github.com/symplify/symplify/pull/1064/files#diff-2ee93fc74523d03ea046d5419ae75a9a" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #1064
 </a>
 

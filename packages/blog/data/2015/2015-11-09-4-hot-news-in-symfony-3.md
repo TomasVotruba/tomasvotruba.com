@@ -41,7 +41,6 @@ And now 4 the most expected news.
 ## 1. Service Autowiring
 
 <a href="https://github.com/symfony/symfony/pull/15613" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 
@@ -123,7 +122,6 @@ Tests you can run simply in command line via `vendor/bin/phpunit`.
 ## 3. Symfony Profiler in a New Jacket
 
 <a href="https://github.com/symfony/symfony/pull/15523" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 
@@ -157,7 +155,6 @@ Important information and above all error messages are now much easier to read.
 ## 4. Micro Kernel
 
 <a href="https://github.com/symfony/symfony/pull/15990" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 

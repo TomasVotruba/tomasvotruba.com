@@ -41,7 +41,6 @@ Not the *smart knowledge* that helps us create algorithms, but the dummy knowled
 ## Your First Statie in 2 minutes
 
 <a href="https://github.com/symplify/symplify/pull/1285" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #1285
 </a>
 

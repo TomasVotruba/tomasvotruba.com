@@ -17,8 +17,6 @@ updated_message: |
 ## 1. Configure Caching Directory
 
 <a href="https://github.com/symplify/symplify/pull/656" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #661
 </a>
 
@@ -40,8 +38,6 @@ Thank you [Marcin Michalski](https://github.com/marmichalski) for adding this fe
 ## 2. Skip Anything, Anywhere
 
 <a href="https://github.com/symplify/symplify/pull/661" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #661
 </a>
 
@@ -56,8 +52,6 @@ What you really need? Exclude 1 file but only for 1 checker. Or 1 checker for gr
 ## 3. Short `vendor/bin/ecs` is the King
 
 <a href="https://github.com/symplify/symplify/pull/647" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #647
 </a>
 
@@ -84,8 +78,6 @@ Typo proof or at least less error prone. Just change it in you [`composer.json`'
 ## 4. DI Migration Finished: From Neon to YAML
 
 <a href="https://github.com/symplify/symplify/pull/651" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #651
 </a>
 
@@ -119,8 +111,6 @@ Well just rename `easy-coding-standard.neon` or `ecs.yml` and
 **Note: Symplify 8 now uses PHP configuration.**
 
 <a href="https://github.com/symplify/symplify/pull/660" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #660
 </a>
 

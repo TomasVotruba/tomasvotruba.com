@@ -436,8 +436,6 @@ Small update of the EasyAdmin bundle:
     <br>
 
     <a href="https://github.com/pehapkari/pehapkari.cz/pull/243/files" class="btn btn-dark mb-5 mt-3">
-        <em class="fab fa-github"></em>
-        &nbsp;
         Check the PR on Github
     </a>
 </div>
