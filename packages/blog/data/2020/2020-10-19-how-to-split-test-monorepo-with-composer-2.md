@@ -12,8 +12,6 @@ perex: |
 tweet: "New Post on #php 🐘 blog: How to Split Test Monorepo with #composer v2"
 ---
 
-*Note: following feature will be available in Symplify 9, that will be released [along with Symfony 5.2](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/).*
-
 Monorepo split testing is made easier by [`symplify/monorepo-builder` package](https://github.com/symplify/monorepo-builder). This is how it ["works" for Composer 1](/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split/). Why "works"? There are 2 problems, that we fix during upgrade to Composer 2.
 
 <br>

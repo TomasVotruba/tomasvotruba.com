@@ -20,7 +20,7 @@
             {% if post.deprecated %}
                 <div class="card border-danger mt-4">
                     <div class="card-header text-white bg-danger">
-                        This post is deprecated at {{ post.deprecatedAt|date("F Y") }}. The knowledge is outdated and should not be used anymore.
+                        This post is deprecated since {{ post.deprecatedAt|date("F Y") }}. Its knowledge is outdated and should not be used.
                         <br>
                         <strong>Why?</strong>
                     </div>
@@ -63,10 +63,10 @@
             <div class="card mt-5">
                 <div class="card-body text-center mt-2">
                     <p>
-                        Have you find this post useful? <strong> Do you want more?</strong>
+                        Have you find this post useful? <strong>Do you want more?</strong>
                     </p>
                     <p>
-                        Follow me on <a href="https://twitter.com/votrubaT">Twitter</a>, <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">RSS</a> or <a href="https://github.com/sponsors/TomasVotruba">GitHub Sponsors</a>.
+                        Follow me on <a href="https://twitter.com/votrubaT">Twitter</a>, <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">RSS</a> or support me on <a href="https://github.com/sponsors/TomasVotruba">GitHub Sponsors</a>.
                     </p>
                 </div>
             </div>

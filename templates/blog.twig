@@ -34,6 +34,7 @@
     <div class="container-fluid">
         <h1>Weekly Blog About PHP Innovations</h1>
 
+<<<<<<< HEAD
 
         {% set date_lines = [] %}
 >>>>>>> f5a08293 (styling posts)
@@ -42,41 +43,30 @@
         {% set displayed_post_count = 0 %}
         {% set currentYear = "now"|date('Y') %}
 
+=======
+>>>>>>> ec62b2ff (merge cluster and blog design list)
         {# display posts with as few divs as possible, for DOM performance on mobile #}
 
-        {% for post in posts %}
-            {% set postYear = post.dateTime|date('Y') %}
-
-            {% if postYear != currentYear and postYear not in date_lines %}
-                <h2 class="col-md-12 mt-5 mb-5" id="year-{{ postYear }}">
-                    <br>
-                    {{ postYear }}
-                    {# https://stackoverflow.com/a/9432583/1348344 #}
-                    {% set date_lines = date_lines|merge({postYear: postYear}) %}
-                </h2>
-            {% endif %}
-
-            {% set displayed_post_count = displayed_post_count + 1 %}
-
-            <div class="mb-3 col-md-12 {% if post.deprecatedAt is not null %}border opacity-70 border-danger rounded shadow-danger pt-3 pb-4 pl-4 pr-4 {% elseif post.updatedAt is not null %}bg-success text-white pt-3 pb-4 pl-4 pr-4 rounded shadow{% endif %}">
-                <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
-                <div>
-                    <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
-                        {% if post.deprecatedAt is not null %}
-                            <span class="text-danger">Deprecated {{ post.deprecatedAt|date('Y-m-d') }}</span>
-                        {% elseif post.updatedAt is not null %}
-                            Updated {{ post.updatedAt|date('Y-m-d') }}
-                        {% else %}
-                            {{ post.dateTime|date('Y-m-d') }}
-                        {% endif %}
-                    </time>
-                </div>
-            </div>
-
-            <hr>
-        {% endfor %}
-        <br>
+        {% include "_snippets/post/post_list.twig" with { posts: posts } %}
     </div>
 {% endblock %}
 
+
+{% block custom_footer %}
+    {# special footer just for blog page #}
+    <div id="footer">
+        <div class="container-fluid text-center">
+            Get next post first →
+
+            <a href="https://twitter.com/votrubaT">Twitter</a>
+            <span class="pl-2 pr-2">•</span>
+
+            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">RSS</a>
+        </div>
+    </div>
+{% endblock %}
+<<<<<<< HEAD
+
 >>>>>>> 6b281c30 (init blog on own page)
+=======
+>>>>>>> ec62b2ff (merge cluster and blog design list)

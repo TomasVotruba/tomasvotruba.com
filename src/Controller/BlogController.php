@@ -24,6 +24,7 @@ final class BlogController extends AbstractController
         return $this->render('blog.twig', [
             'title' => 'Blog',
             'posts' => $this->postRepository->fetchAllEnglish(),
+            'page_id' => 'blog',
         ]);
     }
 }

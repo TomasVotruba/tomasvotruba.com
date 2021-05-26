@@ -48,7 +48,7 @@ h1 a:hover, h2 a:hover,  h3 a:focus {
 
 h2 {
     font-size: 1.9em;
-    margin: 1.7em 0 .7em;
+    margin: 1.3em 0 .6em;
 }
 
 h3 {
@@ -172,6 +172,10 @@ img {
     max-width: 100%;
 }
 
+.img-thumbnail {
+    margin-bottom: .7em;
+}
+
 pre {
     font-size: 1em;
     background-color: #fdf6e3;
@@ -190,14 +194,6 @@ pre {
 .shadow-danger {
     /* color "darkred" */
     box-shadow: 1px 2px 15px -2px rgb(139 0 0/20%);
-}
-
-.card-normal .card-body p {
-    line-height: 1.5em;
-}
-
-.card-normal ul {
-    padding-left: 1em;
 }
 
 /* prism remove color in diff */
@@ -293,37 +289,14 @@ table ul {
 }
 
 #footer {
-    background: #24292e;
-    color: hsla(0,0%,100%,.9);
-    padding: 2em 0;
-    line-height: 2.2em;
+    font-size: 1.1em;
+    padding: 1.5em 0;
+    margin-top: 4em;
+    border-top: 5px solid #999;
 }
-
-#footer a {
-    color: white;
-    text-decoration: underline;
-}
-
-#footer a:hover {
-    color: #DDD;
-    text-decoration: none;
-}
-
-/*@media (max-width: 768px) {*/
-/*    #blog .firstPost, #post h1 {*/
-/*        font-size: 2.3em;*/
-/*        !*font-weight: 300;*!*/
-/*        margin-top: .8em;*/
-/*        margin-bottom: .5em;*/
-/*    }*/
-/*}*/
 
 .btn {
     cursor: pointer;
-}
-
-#clusters .post-title {
-    font-size: 1.2em;
 }
 
 #post p.text-muted {
@@ -407,6 +380,7 @@ a.btn:hover {
 
 a.btn {
     line-height: 1.6em;
+    text-decoration: none;
 }
 
 .post-list-title {
@@ -426,4 +400,8 @@ a.btn {
 
 .btn-sm {
     font-size: .9em;
+}
+
+.text-danger > a {
+    color: #dc3545;
 }
