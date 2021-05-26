@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    <div class="container" id="contact">
+    <div class="container">
         <h1>{{ title }}</h1>
 
         <p>
@@ -9,7 +9,7 @@
         </p>
 
         <p>
-            Trainings are practical - we code, everyone codes. Not just for ourselves but against continuous integration. Don't worry, my job is to help you make the CI green and understand why it broke. <strong>In the end you'll have the confidence to code yourself</strong>.
+            Trainings are practical - we code, <strong>everyone codes</strong>. Not just for ourselves but against CI. Don't worry, my job is to help you make the CI green and understand why it broke. <strong>In the end you'll have the confidence to code yourself</strong>.
         </p>
 
         <hr>
@@ -19,20 +19,26 @@
 
         <p>Do you want to <a href="http://github.com/rectorphp/rector/">run Rector</a> on your project? Not just run, but get the most out of it and be able to write your own rules? First steps are the hardest, so I prepared a training to get you on-board fast. This trainings replaces 3 months of self-taught experience with Rector.</p>
 
-        <h3>What Will you Learn?</h3>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h3>What Will you Learn?</h3>
 
-        <img src="{{ asset('assets/images/trainings/training_online.png') }}" style="max-width: 25em; padding: .7em; margin-left: .5em;" class="shadow pull-right" alt="Training in 04/2021 with Quentic">
+                <ul>
+                    <li>what Rector is</li>
+                    <li>what is abstract syntax tree and what are nodes</li>
+                    <li>difference between traverser and visitors</li>
+                    <li>how to setup Rector in your project</li>
+                    <li>how to configure Rector</li>
+                    <li>what are rules and set</li>
+                    <li>how to write your custom rule</li>
+                    <li>how to test Rector rule</li>
+                </ul>
+            </div>
 
-        <ul>
-            <li>what Rector is</li>
-            <li>what is abstract syntax tree and what are nodes</li>
-            <li>difference between traverser and visitors</li>
-            <li>how to setup Rector in your project</li>
-            <li>how to configure Rector</li>
-            <li>what are rules and set</li>
-            <li>how to write your custom rule</li>
-            <li>how to test Rector rule</li>
-        </ul>
+            <div class="col-12 col-md-6">
+                <img src="{{ asset('assets/images/trainings/training_online.png') }}" style="padding: .7em; margin-left: .5em; width: fit-content" class="shadow pull-right mt-3" alt="Training in 04/2021 with Quentic">
+            </div>
+        </div>
 
         <h3>Training Parameters</h3>
 
@@ -47,7 +53,7 @@
         <p>Do you want to avoid trial-end errors and get the most out of Rector as soon as possible?</p>
 
         <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) }}" class="btn btn-success mt-3">
-            Contact me
+            Book a Training Day
         </a>
 
         <hr class="mt-5">
@@ -63,7 +69,7 @@
         <h2>What do People Say?</h2>
 
         <blockquote class="blockquote">
-            Today we finally had our Rector workshop with Tomas Votruba and it really was fun! Learned a lot and wrote my first rector rule. Can't wait to see this tool in action in our code base :) Thanks Tomas!
+            "Today we finally had our Rector workshop with Tomas Votruba and it really was fun! Learned a lot and wrote my first Rector rule. Can't wait to see this tool in <strong>action in our code base</strong> :) Thanks Tomas!"
 
             <footer class="blockquote-footer text-right">
                 Christopher Hertel, <a href="https://www.quentic.com/">Quentic</a>
@@ -73,7 +79,7 @@
         <br>
 
         <blockquote class="blockquote">
-            Tomas was able to prepare us lecture fulfilling our specific needs even beyond the area of his portfolio. Thoughts and techniques were clearly provided and easy to comprehend for the whole team.
+            "Tomas was able to prepare a lecture fulfilling <strong>our specific needs even beyond the area of his portfolio</strong>. Thoughts and techniques were clearly provided and easy to comprehend for the whole team."
             <footer class="blockquote-footer text-right">
                 Roman Vesely, <a href="https://www.nesskdc.sk/en/">Ness KDC</a>
             </footer>
@@ -82,7 +88,7 @@
         <br>
 
         <blockquote class="blockquote">
-            Tomas doesn't speak about theory you can read on the Internet. He passes you his practical experiences. I recommend him to everyone who's looking for a specialist.
+            "Tomas doesn't talk about theory you can read on the Internet. He passes <strong>his practical experiences</strong>. I recommend him to everyone who's looking for a specialist."
 
             <footer class="blockquote-footer text-right">
                 Radek Strnad, <a href="http://erudio.cz/">Erudio</a>
