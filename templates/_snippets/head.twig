@@ -20,8 +20,9 @@
 
     <link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog RSS" href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">
 
-    {# Twitter Bootstrap - locally for css classes autocomplete #}
-    <link href="{{ asset('assets/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    {# !!! Twitter Bootstrap - keep the local copy css classes autocomplete #}
+    {# to speed-up delivery https://stackoverflow.com/a/46142270/1348344 #}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css" />
 

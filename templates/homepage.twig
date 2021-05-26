@@ -23,7 +23,10 @@
             </p>
 
             <p>
-                My passion and daily work is to tidy up code and remove the weakest parts. By removing these frictions, the code become stable, easy to understand and even self-repairing. I love to connect with people and improve their daily lives.
+                My passion and daily work is to tidy up code and remove the weakest parts. By removing these frictions, the code become stable, easy to understand and even self-repairing.
+            </p>
+            <p>
+                I love to connect with people and improve their daily lives.
             </p>
 
             <div class="text-center mt-5 mb-5">
@@ -43,19 +46,12 @@
             </div>
 
             <p>
-                I love open-source since I was a little boy. I founded <a href="https://pehapkari.cz/">Czech PHP community</a> and lead it 2015-2020, I <a href="https://www.youtube.com/watch?v=gQWQA-GZxXc&ab_channel=fwdays">give talks</a> in <a href="https://joind.in/user/TomasVotruba">world conferences</a> and local meetups, I keep <a href="https://stackoverflow.com/users/1348344/tomas-votruba">top 1 % in Stackoverflow</a> and I'm main contributor to <a href="https://github.com/nikic/PHP-Parser/graphs/contributors">nikic/php-parser</a>.
+                I love open-source since I remember. I founded <a href="https://pehapkari.cz/">Czech PHP community</a> and lead it 2015-2020, I <a href="https://www.youtube.com/watch?v=gQWQA-GZxXc&ab_channel=fwdays">give talks</a> in <a href="https://joind.in/user/TomasVotruba">world conferences</a> and local meetups, I keep <a href="https://stackoverflow.com/users/1348344/tomas-votruba">top 1 % in Stackoverflow</a> and I'm main contributor to <a href="https://github.com/nikic/PHP-Parser/graphs/contributors">nikic/php-parser</a>.
             </p>
             <p>
                 For these efforts, <a href="https://stars.github.com/profiles/tomasvotruba/">GitHub awarded me</a> as one of 100 <a href="https://github.blog/2020-09-03-introducing-the-github-stars-program/">GitHub Stars</a>.
             </p>
         </div>
-
-        <blockquote class="blockquote text-center">
-            "If you don't want to do something, you'll find an excuse.<br>
-            If you do, you'll find a way."
-        </blockquote>
-
-        <div class="clearfix"></div>
 
         <div class="card border-warning mt-5">
             <div class="card-body">
@@ -63,5 +59,14 @@
                 I'm open to a new opportunity for 10-20 hours/week. <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) }}">Contact me</a>, maybe we'll have a match.
             </div>
         </div>
+
+        <br>
+
+        {# my dad raised me with quotes, at first I didn't understand them,
+        as I was older, I ralized the Truth - it's a coding standard for Life #}
+
+        <blockquote class="blockquote text-center">
+            "{{ quote|raw }}"
+        </blockquote>
     </div>
 {% endblock %}
