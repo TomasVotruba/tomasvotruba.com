@@ -1,31 +1,29 @@
-<head>
-    <title>{{ title|replace({'&nbsp;':' '})|escape }} | {{ site_title }}</title>
-    <meta charset="utf-8">
-    <meta name="robots" content="index, follow">
+<title>{{ title|replace({'&nbsp;':' '})|escape }} | {{ site_title }}</title>
+<meta charset="utf-8">
+<meta name="robots" content="index, follow">
 
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.media='all';" id="ao_optimized_gfonts" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap" />
+<link rel="stylesheet" media="print" onload="this.onload=null;this.media='all';" id="ao_optimized_gfonts" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap" />
 
-    {# mobile #}
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{# mobile #}
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:creator" content="@votrubaT"/>
+{# social sharing #}
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:creator" content="@votrubaT"/>
 
-    {% if block('socialTags') is defined %}
-        {{ block('socialTags') }}
-    {% endif %}
+<meta property="og:url" content="{{ current_absolute_url }}"/>
+<meta property="og:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
 
-    <link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog RSS" href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog RSS" href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">
 
-    {# !!! Twitter Bootstrap - keep the local copy css classes autocomplete #}
-    {# to speed-up delivery https://stackoverflow.com/a/46142270/1348344 #}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+{# !!! Twitter Bootstrap - keep the local copy css classes autocomplete #}
+{# to speed-up delivery https://stackoverflow.com/a/46142270/1348344 #}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css" />
 
-    {# this is the last, so prism can be overriden here #}
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
-</head>
+{# this is the last, so prism can be overriden here #}
+<link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />

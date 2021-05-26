@@ -71,3 +71,7 @@ parameters:
             message: '#Do not inherit from abstract class, better use composition#'
             paths:
                 - src/Controller
+
+        # PHPStorm attributes
+        - '#Attribute must have all names explicitly defined#'
+        - '#Attribute class JetBrains\\PhpStorm\\ArrayShape does not exist#'

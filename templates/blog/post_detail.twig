@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include "_snippets/head.twig" %}
+    <head>
+        {% include "_snippets/head.twig" %}
+
+        {#  social tags based on https://www.phpied.com/minimum-viable-sharing-meta-tags/ #}
+        <meta property="og:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
+        <meta name="description" property="og:description" content="{{ post.perex|striptags }}" />
+
+        {% if post.tweetImage %}
+            <meta property="og:image" content="{{ post.tweetImage }}" />
+            <meta name="twitter:card" content="summary_large_image"/>
+        {% endif %}
+    </head>
+
     <body>
         {# @var post \TomasVotruba\Blog\ValueObject\Post #}
         <!-- post_id: {{ post.getId() }} -->
@@ -95,17 +107,3 @@
         {% include "_snippets/footer.twig" %}
     </body>
 </html>
-
-{% block socialTags %}
-    {# Facebook sharing #}
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
-    <meta property="og:description" content="{{ post.perex|striptags }}" />
-    <meta property="og:url" content="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" />
-
-    {# Twitter sharing #}
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@votrubaT">
-    <meta name="twitter:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
-    <meta name="twitter:description" content="{{ post.perex|striptags }}" />
-{% endblock %}
