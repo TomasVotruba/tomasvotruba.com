@@ -1,4 +1,4 @@
-<ul class="list-inline post-metadata">
+<ul class="list-inline">
     <li class="list-inline-item mr-3">
         <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
             {% if post.updatedAt is not null %}<strike>{% endif %}
@@ -10,7 +10,7 @@
     </li>
 
     {% if post.updated %}
-        <li class="list-inline-item mr-3 text-success">
+        <li class="list-inline-item mr-3">
             <em class="fas fa-fw fa-sync"></em> Updated {{ post.updatedAt|date('Y-m-d') }}
         </li>
     {% endif %}

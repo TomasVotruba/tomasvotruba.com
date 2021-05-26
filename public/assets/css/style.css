@@ -30,8 +30,11 @@ h1, h2, h3 {
     font-family: 'Source Sans Pro',"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-h1 a, h1 a:hover, h1 a:focus, h2 a, h2 a:hover, h2 a:focus, h3 a, h3 a:hover, h3 a:focus {
-    color: inherit;
+h1 a,  h1 a:focus, h2 a, h2 a:focus, h3 a, h3 a:hover {
+    text-decoration: underline;
+}
+
+h1 a:hover, h2 a:hover,  h3 a:focus {
     text-decoration: none;
 }
 
@@ -96,7 +99,7 @@ ul {
 #menu {
     /*background-color: #24292e;*/
     font-size: 1.1em;
-    padding: 1.7em 0;
+    padding: 1.5em 0;
     margin-bottom: 2em;
     /*color: #ddd;*/
     border-bottom: 5px solid #333;
@@ -394,12 +397,8 @@ a.btn {
 }
 
 .post-list-title {
-    font-size: 1.3em;
-    line-height: 1.6em;
-}
-
-.post-metadata-line {
-    margin-top: 1em;
+    font-size: 1.4em;
+    line-height: 1.8em;
 }
 
 .text-bigger {
