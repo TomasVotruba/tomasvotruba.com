@@ -39,11 +39,6 @@ final class RouteName
     /**
      * @var string
      */
-    public const TRAINING_DETAIL = 'training-detail';
-
-    /**
-     * @var string
-     */
     public const BLOG = 'blog';
 
     /**

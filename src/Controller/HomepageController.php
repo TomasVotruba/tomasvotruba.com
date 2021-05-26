@@ -14,7 +14,7 @@ final class HomepageController extends AbstractController
     #[Route(path: '/', name: RouteName::HOMEPAGE)]
     public function __invoke(): Response
     {
-        return $this->render('index.twig', [
+        return $this->render('homepage.twig', [
             'title' => 'PHP Trainings, Rectoring and Posts',
         ]);
     }

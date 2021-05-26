@@ -1,0 +1,45 @@
+{% extends 'base.twig' %}
+
+
+{#
+    quotes:
+    "clean code is a code, that junior and senior can understand in the same amount of time"
+    https://twitter.com/votrubat/status/1275863668878688257
+#}
+
+
+{% block content %}
+    <div class="container-fluid">
+        <h1>Hi, I'm Tomas Votruba and I help PHP companies to change fast and safe</h1>
+
+        <div class="float-left mr-5" style="max-width: 10em">
+            <img src="https://avatars1.githubusercontent.com/u/924196?s=400&v=4" class="avatar-bigger rounded-circle shadow">
+        </div>
+
+        <p>
+            I organize <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::TRAININGS')) }}">practical trainings</a> online and offline.
+        </p>
+
+
+        <p>
+            My passion and daily work is to tidy up code, cut out frictions and remove the weakest parts that. I believe end junior should understand logic from the code. I love reconstructions of huge old projects to a brand new architecture with modern and smooth code. To open this experience to any developers, I created an instant upgrade tool called <a href="http://github.com/rectorphp/rector">Rector</a> in 2017.
+            <br>
+        </p>
+
+        <p class="mt-2">
+            <img src="https://github.blog/wp-content/uploads/2020/09/github-stars-logo_Color.png" style="max-width: 3em">
+
+            <br>
+            I live open-source so much, that <a href="https://github.blog/2020-09-03-introducing-the-github-stars-program/">GitHub awarded me</a> as one of 100 GitHub Stars.
+        </p>
+
+        <div class="clearfix"></div>
+
+        <div class="card border-warning mt-5">
+            <div class="card-body">
+                <strong>May, 2021</strong>: I'm open to new opportunity for 10-20 hours/week.<br>
+                <a href="/contact">Contact me</a> with your project. Maybe we'll have a match.
+            </div>
+        </div>
+    </div>
+{% endblock %}
