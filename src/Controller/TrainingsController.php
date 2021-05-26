@@ -15,7 +15,7 @@ final class TrainingsController extends AbstractController
     public function __invoke(): Response
     {
         return $this->render('trainings/trainings.twig', [
-            'title' => 'Trainings',
+            'title' => 'Practical Trainings',
         ]);
     }
 }
