@@ -8,7 +8,6 @@ perex: |
     **To simple setup in a single GitHub Action.**
 
 tweet: "New Post on #php 🐘 blog: New in Symplify 9: Monorepo Split With GitHub Action"
-tweet_image: "/post_images/2020/split_monorepo.png"
 ---
 
 In past years, the `split` command was one of the poorest part of whole Symplify code base. [Here is why](/blog/2020/11/02/symplify-monorepo-builder-split-fractal-of-bad-design/).
@@ -18,7 +17,7 @@ In past years, the `split` command was one of the poorest part of whole Symplify
 In Symplify 9, **we've finally fixed it** - with a [`symplify/monorepo-split-github-action`](https://github.com/symplify/monorepo-split-github-action) ↓
 
 <div class="text-center mt-3 mb-5">
-    <img src="/post_images/2020/split_monorepo.png" class="img-thumbnail">
+    <img src="/assets/images/posts/2020/split_monorepo.png" class="img-thumbnail">
     <br>
     <em>42 packages split under <strong>3,5 minutes</strong></em>
 </div>
