@@ -18,9 +18,11 @@
             </time>
 
             {% if post.deprecated %}
-                <div class="card border-danger">
+                <div class="card border-danger mt-4">
                     <div class="card-header text-white bg-danger">
-                        <strong>This post is deprecated at {{ post.deprecatedAt|date("F Y") }}</strong>
+                        This post is deprecated at {{ post.deprecatedAt|date("F Y") }}. The knowledge is outdated and should not be used anymore.
+                        <br>
+                        <strong>Why?</strong>
                     </div>
                     <div class="card-body pb-2">
                         {{ post.deprecatedMessage|markdown|raw }}
@@ -33,8 +35,8 @@
             {% if post.updated %}
                 <div class="card border-success mt-4">
                     <div class="card-header text-white bg-success">
-                        This post was updated at {{ post.updatedAt|date("F Y") }}.
-
+                        This post was updated at {{ post.updatedAt|date("F Y") }} with fresh know-how.
+                        <br>
                         <strong>What is new?</strong>
                     </div>
                     {% if post.updatedMessage is not null %}

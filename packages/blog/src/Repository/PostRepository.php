@@ -36,21 +36,16 @@ final class PostRepository
         $posts = $this->posts;
 
         $posts = $this->filterOutNonEnglish($posts);
-        $posts = $this->filterOutDeprecated($posts);
-
         return $this->filterOutFuture($posts);
     }
 
     /**
      * @return Post[]
      */
-    public function fetchAllEnglishNonDeprecated(): array
+    public function fetchAllEnglish(): array
     {
         $posts = $this->posts;
-
-        $posts = $this->filterOutNonEnglish($posts);
-
-        return $this->filterOutDeprecated($posts);
+        return $this->filterOutNonEnglish($posts);
     }
 
     public function get(int $id): Post
@@ -91,15 +86,6 @@ final class PostRepository
     private function filterOutNonEnglish(array $posts): array
     {
         return array_filter($posts, fn (Post $post) => $post->getLanguage() === null);
-    }
-
-    /**
-     * @param Post[] $posts
-     * @return Post[]
-     */
-    private function filterOutDeprecated(array $posts): array
-    {
-        return array_filter($posts, fn (Post $post) => ! $post->isDeprecated());
     }
 
     /**

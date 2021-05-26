@@ -58,9 +58,19 @@
 
             {% set displayed_post_count = displayed_post_count + 1 %}
 
-            <div class="mb-3 col-md-12 {% if post.updatedAt is not null %}bg-success text-white pt-3 pb-4 pl-4 pr-4 rounded shadow{% endif %}">
+            <div class="mb-3 col-md-12 {% if post.deprecatedAt is not null %}border opacity-70 border-danger rounded shadow-danger pt-3 pb-4 pl-4 pr-4 {% elseif post.updatedAt is not null %}bg-success text-white pt-3 pb-4 pl-4 pr-4 rounded shadow{% endif %}">
                 <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">{{ post.title|raw }}</a>
-                {% include "_snippets/post/post_metadata_line.twig" with { post: post } %}
+                <div>
+                    <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
+                        {% if post.deprecatedAt is not null %}
+                            <span class="text-danger">Deprecated {{ post.deprecatedAt|date('Y-m-d') }}</span>
+                        {% elseif post.updatedAt is not null %}
+                            Updated {{ post.updatedAt|date('Y-m-d') }}
+                        {% else %}
+                            {{ post.dateTime|date('Y-m-d') }}
+                        {% endif %}
+                    </time>
+                </div>
             </div>
 
             <hr>

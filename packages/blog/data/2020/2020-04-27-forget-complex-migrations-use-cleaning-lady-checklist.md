@@ -14,7 +14,10 @@ tweet: "New Post on #php 🐘 blog: Forget Complex Migrations, Use Cleaning Lady
 
 deprecated_since: "May 2021"
 deprecated_message: |
-    The checklist would require more work to be useful. Also every migration is a bit different and deserves custom automated set to safe the work for you. We work on project that will include the spirit of Cleaning Lady List, but handle the work for you - stay tuned for *Rector Click*.
+    The checklist would require more work to be useful. Also every migration is a bit different and requires specific list of steps.
+    <br>
+    <br>
+    **We work on project that will include "Cleaning Lady List" spirit, but will handle the work for you - stay tuned for *Rector Click***.
 ---
 
 ## Simplicity beats Unread Knowledge

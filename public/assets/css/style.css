@@ -23,6 +23,14 @@ html, body {
     margin-bottom: 3em;
 }
 
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-70 {
+    opacity: 0.7;
+}
+
 /*!* Typography *!*/
 h1, h2, h3 {
     font-weight: bold;
@@ -40,7 +48,7 @@ h1 a:hover, h2 a:hover,  h3 a:focus {
 
 h2 {
     font-size: 1.9em;
-    margin: 1.7em 0 .4em;
+    margin: 1.7em 0 .7em;
 }
 
 h3 {
@@ -177,6 +185,11 @@ pre {
 
 .shadow {
     box-shadow: 1px 2px 15px -2px rgb(0 0 0/20%);
+}
+
+.shadow-danger {
+    /* color "darkred" */
+    box-shadow: 1px 2px 15px -2px rgb(139 0 0/20%);
 }
 
 .card-normal .card-body p {

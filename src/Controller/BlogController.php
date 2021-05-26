@@ -23,7 +23,7 @@ final class BlogController extends AbstractController
     {
         return $this->render('blog.twig', [
             'title' => 'Blog',
-            'posts' => $this->postRepository->fetchAllEnglishNonDeprecated(),
+            'posts' => $this->postRepository->fetchAllEnglish(),
         ]);
     }
 }

@@ -22,7 +22,7 @@ final class PreviousPostExtension extends AbstractExtension
     public function getFunctions(): array
     {
         $twigFunction = new TwigFunction('previous_post', function (Post $currentPost): ?Post {
-            $posts = $this->postRepository->fetchAllEnglishNonDeprecated();
+            $posts = $this->postRepository->fetchAllEnglish();
 
             foreach ($posts as $post) {
                 if ($post->getId() >= $currentPost->getId()) {

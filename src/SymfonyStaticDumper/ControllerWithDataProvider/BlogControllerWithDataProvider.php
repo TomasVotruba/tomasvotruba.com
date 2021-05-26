@@ -31,7 +31,7 @@ final class BlogControllerWithDataProvider implements ControllerWithDataProvider
     public function getArguments(): array
     {
         $years = [];
-        foreach ($this->postRepository->fetchAllEnglishNonDeprecated() as $post) {
+        foreach ($this->postRepository->fetchAllEnglish() as $post) {
             $years[] = $post->getYear();
         }
 
