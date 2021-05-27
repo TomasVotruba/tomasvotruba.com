@@ -43,7 +43,7 @@ I'm known to be a minimalist so my bookshelf bears only 5 books, while all my ot
 
 The answers vary a bit, but the last question usually hits the nail on the head. It's barely a 1/4 on average.
 
-### Buy a Book to Have Friends
+## Buy a Book to Have Friends
 
 Then I realized that "bestseller" has nothing to do with the content. It's like having a cool free application in your phone that you never use or famous "friend" on Facebook you never write but anyone can see you're "friends".
 
@@ -106,7 +106,7 @@ Using old one (for whatever business reasons) is called *vendor lock* or *legacy
 
 Same vendor lock happens to knowledge. You can see it the most in school systems, where 40-year-old people teach 15-year-olds their "up-to-date" know-how. People write PHP 7 as PHP 5.3 because there are so many old books out there about PHP 5.3.
 
-### Wikipedia 2010 in 2018?
+## Wikipedia 2010 in 2018?
 
 **Imagine that Wikipedia would be published just once 10 years as a book**. So today, in 2018, somebody would quote a 8-year-old information in his school essay. It's crazy, right? But that's how books work naturally.
 
