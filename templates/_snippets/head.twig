@@ -19,8 +19,8 @@
 {# !!! Twitter Bootstrap - keep the local copy css classes autocomplete #}
 {# to speed-up delivery https://stackoverflow.com/a/46142270/1348344 #}
 
-{# see https://web.dev/defer-non-critical-css/ for preload #}
-<link rel="preload" media="print"  as="style" onload="this.onload=null;this.rel='stylesheet'" id="ao_optimized_gfonts" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap" />
+{# next attempts https://stackoverflow.com/a/64439406/1348344 #}
+<link rel="stylesheet" rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap" />
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" media="print" onload="this.media='all'">
 
