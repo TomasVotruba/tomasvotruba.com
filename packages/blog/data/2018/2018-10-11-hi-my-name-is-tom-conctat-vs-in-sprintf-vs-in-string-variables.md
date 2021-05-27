@@ -51,15 +51,15 @@ $message = sprintf('Hi, my name is %s', $name);
 $message = 'Hi, my name is $name';
 ```
 
-### <em class="fas fa-fw fa-check text-success fa-lg"></em> Concat
+### ✅ Concat
 
 Just like a `+` for numbers, but for strings.
 
-### <em class="fas fa-fw fa-times text-danger fa-lg"></em> Sprintf
+### ❌ Sprintf
 
 What the hell is `%s`? I'd have to read [the manual](http://php.net/manual/en/function.sprintf.php)... `%s` for strings, `%d` for numbers.
 
-### <em class="fas fa-fw fa-check text-success fa-lg"></em> In-String Variable
+### ✅ In-String Variable
 
 I guess I copy the variable inside the string.
 
@@ -107,22 +107,22 @@ Or quote the name to express it's a variable string:
 +$message = 'Hi, my name is "$name" and I love $php';
 ```
 
-### <em class="fas fa-fw fa-times text-danger fa-lg"></em> Concat
+### ❌ Concat
 
 1 new element = 2 new dots `.`. I have to think where to put it. Imagine there will be 4 elements one day.
 I also type like a dyslexic, so seeing `'"'` hurts.
 
-### <em class="fas fa-fw fa-check text-success fa-lg"></em> Sprintf
+### ✅ Sprintf
 
 Nice to read.
 
-### <em class="fas fa-fw fa-check text-success fa-lg"></em> In-String Variable
+### ✅ In-String Variable
 
 Still the same.
 
 ## 3. Hard to Fuck Up
 
-### <em class="fas fa-fw fa-times text-danger fa-lg"></em> Concat
+### ❌ Concat
 
 ```php
 <?php
@@ -136,7 +136,7 @@ $message = 'Hi, my name is ' . $name . ' and I love ' . $love . 'and also' . $al
 
 Can you spot it? This already happened me million times. I never make extra spaces anywhere else in the code.
 
-### <em class="fas fa-fw fa-check text-success fa-lg"></em> Sprintf
+### ✅ Sprintf
 
 This also happens...
 
@@ -164,7 +164,7 @@ $message = sprintf('Hi my name is %s and I love s', $name, $love);
 
 ...but PHP and PHPStan got us covered.
 
-### <em class="fas fa-fw fa-times text-danger fa-lg"></em><em class="fas fa-fw fa-times text-danger fa-lg"></em> In-String Variable
+### ❌❌ In-String Variable
 
 I must confess, I've tricked you (and myself too until I tried [running the code](https://3v4l.org/RXpu1)):
 
@@ -215,7 +215,7 @@ And it's a hell to upgrade such a code (even with Rector). Read more about it in
 
 <br>
 
-## <em class="fas fa-fw fa-check text-success fa-lg"></em> Whatever You Pick, Stick With It
+## ✅ Whatever You Pick, Stick With It
 
 We all **start with one approach, then jump to another whenever we need**. *Damn you, brain!*
 

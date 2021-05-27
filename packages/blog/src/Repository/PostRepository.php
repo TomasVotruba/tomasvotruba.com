@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\Repository;
 
-use Symplify\SmartFileSystem\Finder\FinderSanitizer;
 use TomasVotruba\Blog\DataProvider\PostDataProvider;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
@@ -16,10 +15,8 @@ final class PostRepository
      */
     private array $posts = [];
 
-    public function __construct(
-        private FinderSanitizer $finderSanitizer,
-        private PostDataProvider $postDataProvider
-    ) {
+    public function __construct(PostDataProvider $postDataProvider)
+    {
         $this->posts = $postDataProvider->provide();
     }
 
@@ -39,35 +36,16 @@ final class PostRepository
         $posts = $this->posts;
 
         $posts = $this->filterOutNonEnglish($posts);
-        $posts = $this->filterOutDeprecated($posts);
-
         return $this->filterOutFuture($posts);
     }
 
     /**
      * @return Post[]
      */
-    public function fetchAllEnglishNonDeprecated(): array
+    public function fetchAllEnglish(): array
     {
         $posts = $this->posts;
-
-        $posts = $this->filterOutNonEnglish($posts);
-
-        return $this->filterOutDeprecated($posts);
-    }
-
-    /**
-     * @return Post[][]
-     */
-    public function groupByYear(): array
-    {
-        $postsByYear = [];
-
-        foreach ($this->fetchAllEnglishNonDeprecated() as $post) {
-            $postsByYear[$post->getYear()][] = $post;
-        }
-
-        return $postsByYear;
+        return $this->filterOutNonEnglish($posts);
     }
 
     public function get(int $id): Post
@@ -108,15 +86,6 @@ final class PostRepository
     private function filterOutNonEnglish(array $posts): array
     {
         return array_filter($posts, fn (Post $post) => $post->getLanguage() === null);
-    }
-
-    /**
-     * @param Post[] $posts
-     * @return Post[]
-     */
-    private function filterOutDeprecated(array $posts): array
-    {
-        return array_filter($posts, fn (Post $post) => ! $post->isDeprecated());
     }
 
     /**

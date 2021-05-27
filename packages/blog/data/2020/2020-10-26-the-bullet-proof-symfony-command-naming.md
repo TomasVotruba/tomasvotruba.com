@@ -216,9 +216,9 @@ final class PackageScoperApplication extends Application
 
 That's it!
 
-- 1 place to handle command naming <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- no more typos <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- don't ever think about that <em class="fas fa-fw fa-check text-success fa-lg"></em>
+- 1 place to handle command naming ✅
+- no more typos ✅
+- don't ever think about that ✅
 
 ```diff
  use Symfony\Component\Console\Command;
@@ -232,7 +232,7 @@ That's it!
  }
 ```
 
-There is one disadvantage, though. In case of command rename, the configs that use the command have to updated too <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+There is one disadvantage, though. In case of command rename, the configs that use the command have to updated too ❌
 
 Is it a good trade-off? I don't know.
 

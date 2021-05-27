@@ -12,8 +12,6 @@ perex: |
 tweet: "New Post on #php 🐘 blog: How to Split Test Monorepo with #composer v2"
 ---
 
-*Note: following feature will be available in Symplify 9, that will be released [along with Symfony 5.2](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/).*
-
 Monorepo split testing is made easier by [`symplify/monorepo-builder` package](https://github.com/symplify/monorepo-builder). This is how it ["works" for Composer 1](/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split/). Why "works"? There are 2 problems, that we fix during upgrade to Composer 2.
 
 <br>
@@ -37,19 +35,19 @@ In short:
 
 This the result of localized package `composer install` on GitHub Action with Composer 1:
 
-- Package *a* and *b* and used in local version <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- Package *c* is used from packagist <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+- Package *a* and *b* and used in local version ✅
+- Package *c* is used from packagist ❌
 
 <img src="/assets/images/posts/2020/test_split_composer_2_require_3rd_package_fail.png" class="img-thumbnail">
 
-What happens with changes of `symplify/package-builder` in this pull-request? **They're ignored**, and last stable version is used instead. <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+What happens with changes of `symplify/package-builder` in this pull-request? **They're ignored**, and last stable version is used instead. ❌
 
 <br>
 
 This is the same process, with **Composer 2**:
 
-- Package *a* and *b* and used in local version <em class="fas fa-fw fa-check text-success fa-lg"></em>
-- Package *c* is used in local version <em class="fas fa-fw fa-check text-success fa-lg"></em>
+- Package *a* and *b* and used in local version ✅
+- Package *c* is used in local version ✅
 
 <img src="/assets/images/posts/2020/test_split_composer_2_require_3rd_package_fixed.png" class="img-thumbnail">
 

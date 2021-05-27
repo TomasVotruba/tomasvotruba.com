@@ -120,7 +120,7 @@ Can you see the shared pattern? GitHub is using ENV, Gitlab is using ENV...
 
 **Heureka! We've found it!**
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 
 ## How to Write it Once?

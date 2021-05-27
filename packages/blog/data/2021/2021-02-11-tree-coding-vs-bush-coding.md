@@ -146,7 +146,7 @@ $vaccine->vaccinateAnimal($animal);
 
 Our simple vaccine with a basic method is now **powerful service locator** that can vaccinate itself and order itself. It's like **giving birth to yourself**.
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 What happened? In a factory, someone had an idea to put the services right into vaccine itself:
 
@@ -200,7 +200,7 @@ Let's refactor service from the object...
 +$vaccinatingService->vaccinate($animal);
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 ## 2. Trait adding Dependency
 
@@ -255,7 +255,7 @@ trait SomeHelperTrait
 
 Oh, so it's using frameworks (Nette/Symfony) dependency injection to add dependencies... how ~~smart~~ bush coding!
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 To be honest, I put similar crap code into Rector. Shame on me. It took [bunch](https://github.com/rectorphp/rector/pull/5385) [of](https://github.com/rectorphp/rector/pull/5466) [pull](https://github.com/rectorphp/rector/pull/5383) [request](https://github.com/rectorphp/rector/pull/5384) to get rid of completely.
 
@@ -281,7 +281,7 @@ $vaccinatingService->vaccinate($human);
 $vaccinatingService->vaccinate($animal);
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 After this incident, we [forbid trait completely](https://github.com/symplify/phpstan-rules/blob/master/docs/rules_overview.md#notraitrule) with PHPStan.
 
@@ -393,7 +393,7 @@ if (isset($this->template->welcomeHere) && $this->template->welcomeHere !== null
 - we're promoting to use a magical object for anything in `render()` methods
 - we're saying it's ok **to set a single variable twice in one method**
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 ### How to Refactor?
 
@@ -421,7 +421,7 @@ This way we:
 - we have a type of `string`, so does PHPStan and Rector
 - and if we know the template parameters types... we can... wait, that's a topic for another post
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 We [made a rule for PHPStan](https://github.com/symplify/phpstan-rules/blob/master/docs/rules_overview.md#nonettetemplatevariablereadrule) to keep an eye on us.
 

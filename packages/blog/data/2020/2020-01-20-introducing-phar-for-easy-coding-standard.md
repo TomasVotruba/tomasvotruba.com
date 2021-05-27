@@ -30,7 +30,7 @@ So I took a few-days effort and made a prefixed PHAR Easy Coding Standard versio
 
 The first release of the prefixed version is v7.2.2, so you can enjoy all the cool features like [`only`](https://github.com/symplify/symplify/pull/1537) and [`paths` parameters](https://github.com/symplify/symplify/pull/1735).
 
-### Add `-prefixed` and It Works
+## Add `-prefixed` and It Works
 
 Really. So instead of normal package installation:
 
@@ -50,7 +50,7 @@ composer require symplify/easy-coding-standard-prefixed --dev
 vendor/bin/ecs
 ```
 
-## <em class="fas fa-fw fa-lg fa-check text-success"></em>
+## ✅
 
 <br>
 

@@ -6,7 +6,6 @@ perex: |
     <br><br>
     What belongs to these 80 % when it comes to Nette-specific code?
 tweet: "New Post on #php 🐘 blog: 4 Ways to Make Your #nettefw Project More Readable"
-tweet_image: "/post_images/2020/nette_readability_get_component.gif"
 ---
 
 Each framework has its documentation. The developers take it and test it in practice, how good the examples stand in real life. Sometimes **the practical experience goes against the documentation primary choice**, like using [dependency injection in Laravel](/blog/2019/03/04/how-to-turn-laravel-from-static-to-dependency-injection-in-one-day/).
@@ -36,7 +35,7 @@ final class SomePresenter extends Presenter
 
 What do you think? I'd go with `int` or `User`. It can be a form, a control, a form input... because array access in `Control` or `Presenter` is delegated to...
 
-<img src="/post_images/2020/nette_readability_array_access.png" class="img-thumbnail">
+<img src="/assets/images/posts/2020/nette_readability_array_access.png" class="img-thumbnail">
 
 ... `getComponent()`/`addComponent()` methods.
 
@@ -112,7 +111,7 @@ $user = $this->getUser();
 // another way or two you can think of
 ```
 
-<img src="/post_images/2020/nette_readability_get_component.gif" class="img-thumbnail">
+<img src="/assets/images/posts/2020/nette_readability_get_component.gif" class="img-thumbnail">
 
 
 ### What are Benefits of Typed Code?
@@ -174,7 +173,7 @@ Different class, same array access magic, same problem.
 
 ### How to Make Such Code Readable?
 
-<img src="/post_images/2020/nette_readability_get_form_control.gif" class="img-thumbnail">
+<img src="/assets/images/posts/2020/nette_readability_get_form_control.gif" class="img-thumbnail">
 
 This makes code readable in the same points above - for IDE, PHPStan, and Rector.
 

@@ -83,7 +83,7 @@ But the config has to be changed manually - everywhere where Symfony/Nette/... p
 
 *How can we do this better?*
 
-### In PHP <em class="fas fa-fw fa-lg fa-check text-success"></em>
+### In PHP ✅
 
 ```php
 <?php
@@ -136,7 +136,7 @@ We don't want to pollute our brains with these syntax details, **we want to code
 
 *How can we do this better?*
 
-### In PHP <em class="fas fa-fw fa-lg fa-check text-success"></em>
+### In PHP ✅
 
 ```php
 <?php
@@ -218,7 +218,7 @@ You already know, that's because `create()` had different arguments.
 
 *How can we remove this potential bug?*
 
-### In PHP <em class="fas fa-fw fa-lg fa-check text-success"></em>
+### In PHP ✅
 
 ```php
 <?php

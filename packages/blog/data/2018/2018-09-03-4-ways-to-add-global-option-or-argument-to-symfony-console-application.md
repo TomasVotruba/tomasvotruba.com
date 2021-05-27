@@ -63,12 +63,12 @@ We need to add global file argument. So, what option do we have?
  }
 ```
 
-### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
+### ✅ Advantages
 
 - It's the fastest way - under 2 minutes including reading this post.
 - It's the most common way to add argument and options to Commands - most people would understand it.
 
-### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### ❌ Disadvantages
 
 - Well, have you noticed the "wiht" typo? Now I have to **fix it in every single class**.
 - For every change, we have to find and modify every single place this **duplicated code** is in.
@@ -96,11 +96,11 @@ The first simple & short solution you'd [Googled up](https://gist.github.com/dhr
  $application->run();
 ```
 
-### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
+### ✅ Advantages
 
 - 1 place to maintain the code
 
-### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### ❌ Disadvantages
 
 - we program outside the Application - when we get the application somewhere else (e.g. tests), it might break
 
@@ -144,12 +144,12 @@ final class FileArgumentEventSubscriber implements EventSubscriberInterface
 }
 ```
 
-### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
+### ✅ Advantages
 
 - there is 1 place to maintain the code
 - our application is consistent everywhere
 
-### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### ❌ Disadvantages
 
 There are now new memory-locks, that not really needed:
 
@@ -220,7 +220,7 @@ It took me a while but the track lead to [`Application::getDefaultInputDefinitio
 
 `Symfony\Component\Console\Application` is **one of very few classes I'd allow to [extend](https://ocramius.github.io/blog/when-to-declare-classes-final)**. It's just 1:1 = easy to maintain and change. Not like entity repository, that can have dozens of children.
 
-### <em class="fas fa-fw fa-lg fa-times text-danger"></em> Disadvantages
+### ❌ Disadvantages
 
 - very little known → very hard to discover and debug - we should add a note about this to `config.yml`
 
@@ -230,7 +230,7 @@ It took me a while but the track lead to [`Application::getDefaultInputDefinitio
         SomePackage\Console\SomeApplication: ~
     ```
 
-### <em class="fas fa-fw fa-lg fa-check text-success"></em> Advantages
+### ✅ Advantages
 
 - **one place**, that creates a consistent code
 - **we use API that is designed for these changes**

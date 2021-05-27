@@ -345,8 +345,8 @@ Now you know how to take advantage of framework architecture backdoor and save y
 There are 2 ways ho to avoid this completely and still use your framework:
 
 -
-Paul M. Jones has written [many posts Action-Domain-Responder](http://paul-m-jones.com/archives/category/programming/adr) and even created a [micro-site devoted to ADR topic](http://pmjones.io/adr).
-- another approach is [RequestHandler](https://jenssegers.com/85/goodbye-controllers-hello-request-handlers)
+Paul M. Jones has written [many posts about Action-Domain-Responder](https://paul-m-jones.com/adr)
+- another approach is [RequestHandler](https://jenssegers.com/goodbye-controllers-hello-request-handlers)
 - my favorite approach that [Symfony](https://symfony.com/doc/current/controller/service.html#invokable-controllers) and [Laravel](https://dyrynda.com.au/blog/single-action-controllers-in-laravel) support by default for a long time are **invokable controllers**, also called *single action controllers*
 
 ## What is Your Experience with Action Injects?

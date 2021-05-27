@@ -82,7 +82,7 @@ Another thing I love is testing both monorepo (all packages together) and manyre
 
 **That could be caught testing on monorepo level.**
 
-On the other hand, monorepo testing is also important. When Nette [was split from monorepo to manyrepo only](https://phpfashion.com/prave-jsem-smazal-nette-framework), all tests were passing packages were standalone. But in combination some of them didn't.
+On the other hand, monorepo testing is also important. When Nette was split from monorepo to manyrepo only, all tests were passing packages were standalone. But in combination some of them didn't.
 
 This is not issue of the code itself, but of the testing architecture.
 

@@ -81,7 +81,7 @@ This creates a grid and form with all the entity properties - `name` and `traini
 
 ### Google First
 
-Now what? I Google *easy admin custom field form* and after while I find [*Customize the Properties Displayed*](https://symfony.com/doc/current/bundles/EasyAdminBundle/book/edit-new-configuration.html#customize-the-properties-displayed) tutorial. It looks like exactly what I need.
+Now what? I Google *easy admin custom field form* and after while I find [*Customize the Properties Displayed*](https://symfony.com/doc/2.x/bundles/EasyAdminBundle/book/edit-new-configuration.html#customize-the-properties-displayed) tutorial. It looks like exactly what I need.
 
 ```diff
  easy_admin:
@@ -252,7 +252,7 @@ I see a tag: `easyadmin.config_pass`. Let's look for that string:
 
 <img src="/assets/images/posts/2018/collector-easy-admin-bundle/bingo.png" class="img-thumbnail">
 
-Warmer! **I've just [found a collector](/cluster/collector-pattern-the-shortcut-hack-to-solid-code/).** To config, I look for service under `easyadmin.config.manager` name - [`ConfigManager`](https://github.com/EasyCorp/EasyAdminBundle/blob/07194017918aebe382e1ab0e53c68f6242547a0e/src/Configuration/ConfigManager.php#L112-L119) and look for `foreach` on collected services:
+Warmer! **I've just found a collector pattern.** To config, I look for service under `easyadmin.config.manager` name - [`ConfigManager`](https://github.com/EasyCorp/EasyAdminBundle/blob/07194017918aebe382e1ab0e53c68f6242547a0e/src/Configuration/ConfigManager.php#L112-L119) and look for `foreach` on collected services:
 
 ```php
 private function doProcessConfig($backendConfig): array

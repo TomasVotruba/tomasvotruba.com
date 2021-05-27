@@ -32,8 +32,8 @@ final class FinalClass
 
 We have few options out in the wild:
 
-- [You can use `uopz` extension](https://stackoverflow.com/a/33095281/1348344) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- [You can use reflection](https://gist.github.com/DragonBe/24761f350984c35b73966809dd439135) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+- [You can use `uopz` extension](https://stackoverflow.com/a/33095281/1348344) ❌
+- [You can use reflection](https://gist.github.com/DragonBe/24761f350984c35b73966809dd439135) ❌
 
 or...
 
@@ -86,7 +86,7 @@ This is obviously annoying maintenance and it will lead you to one of 2 bad path
 - **don't use `final`** at all
 - or **do not test**
 
-<em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
+❌
 
 ## By Pass Finals!
 
@@ -104,7 +104,7 @@ And enable:
 DG\BypassFinals::enable();
 ```
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em>
+✅
 
 <div class="alert alert-sm alert-warning mt-5 mb-5" role="alert">
     Do you want to know, <strong>how BypassFinals works?</strong> Read author's <a href="https://phpfashion.com/how-to-mock-final-classes">blog post</a> or check <a href="https://github.com/dg/bypass-finals/blob/8f0f7ab7a17a6b5c188dde1cf5edc6ceb06c70c1/src/BypassFinals.php#L217">this line on Github</a>.
@@ -146,7 +146,7 @@ Class "SomeClass" is declared "final" and cannot be mocked.
 
 Hm, most mocks work, but there are still some errors.
 
-<em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
+❌
 
 ### 2. `setUp()` Method?
 
@@ -188,7 +188,7 @@ Class "AnotherClass" is declared "final" and cannot be mocked.
 
 Damn you, black magic! We're getting there, but there are still mocks in the `setUp()` method, and we've also added work to our future self - for every new test case, we [have to remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) to add `BypassFinals::enable();` manually.
 
-<em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
+❌
 
 <br>
 <br>
@@ -284,7 +284,7 @@ Great! **All our objects can be final and tests can mock them**.
 
 Is it a good enough solution? Yes, **it works and it's a single place of origin** - use it, close this post and your code will thank you in 2 years later.
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em>
+✅
 
 <br>
 
@@ -296,7 +296,7 @@ After bit of Googling on PHPUnit Github and documentation I found something call
 
 ### 4. Single Hook
 
-You can read about them in the [PHPUnit documentation](https://phpunit.readthedocs.io/en/8.0/extending-phpunit.html#extending-the-testrunner), but in short: they're the same as the listener, just **with 1 event**.
+You can read about them in the PHPUnit documentation](https://phpunit.readthedocs.io/en/9.5/extending-phpunit.html#extending-the-testrunner), but in short: they're the same as the listener, just **with 1 event**.
 
 ```php
 <?php declare(strict_types=1);
@@ -333,9 +333,9 @@ vendor/bin/phpunit
 Success!
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
+✅
+✅
 
 ### Before
 

@@ -174,7 +174,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-But you don't have to stop there. Pick **any of [100+ sets](https://github.com/rectorphp/rector/tree/master/config/set)** that Rector provides.
+But you don't have to stop there. Pick **any of [100+ sets](https://github.com/rectorphp/rector/tree/main/config/set)** that Rector provides.
 
 <br>
 <br>

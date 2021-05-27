@@ -1,35 +1,29 @@
-<head>
-    <title>{{ title|replace({'&nbsp;':' '})|escape }} | {{ site_title }}</title>
-    <meta charset="utf-8">
-    <meta name="robots" content="index, follow">
+<title>{{ title|replace({'&nbsp;':' '})|escape }} | {{ site_title }}</title>
+<meta charset="utf-8">
+<meta name="robots" content="index, follow">
 
-    {# mobile #}
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" media="print" onload="this.onload=null;this.media='all';" id="ao_optimized_gfonts" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap" />
 
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+{# mobile #}
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    {% if block('socialTags') is defined %}
-        {{ block('socialTags') }}
-    {% endif %}
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 
-    <link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog RSS" href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+{# social sharing #}
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:creator" content="@votrubaT"/>
 
-    {# Font Awesome 5.2 - 2018-07 #}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous">
+<meta property="og:url" content="{{ current_absolute_url }}"/>
+<meta property="og:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
 
-    {# Twitter Bootstrap - locally for css classes autocomplete #}
-    <link href="{{ asset('assets/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog RSS" href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">
 
-    <link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css" />
+{# !!! Twitter Bootstrap - keep the local copy css classes autocomplete #}
+{# to speed-up delivery https://stackoverflow.com/a/46142270/1348344 #}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    {# this is the last, so prism can be overriden here #}
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css" />
 
-
-    {# bookies checklist #}
-    <link href="{{ asset('assets/css/checklist.css') }}" rel="stylesheet" type="text/css" />
-</head>
+{# this is the last, so prism can be overriden here #}
+<link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />

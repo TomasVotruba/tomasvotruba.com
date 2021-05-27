@@ -13,17 +13,17 @@ tweet_image: "/assets/images/posts/2020/symfonize_merged.png"
 
 ## What is the Goal?
 
-<em class="fas fa-fw mt-4 fa-times text-danger"></em> **We didn't want a  hybrid** with static dependency injection container, legacy controller, request separation for new website and for old website. It only creates more legacy code than in the beginning.
+❌ **We didn't want a  hybrid** with static dependency injection container, legacy controller, request separation for new website and for old website. It only creates more legacy code than in the beginning.
 
-<em class="fas fa-fw mt-4 fa-star-half text-warning"></em> **We were ok with** keeping original business logic code untouched. We will handle spaghetti decoupling to Controller and Twig in the next phase. This was just a 1st step of many.
+❌✅ **We were ok with** keeping original business logic code untouched. We will handle spaghetti decoupling to Controller and Twig in the next phase. This was just a 1st step of many.
 
-<em class="fas fa-fw mt-4 fa-check text-success"></em> **We wanted** to be able to use Symfony dependency injection, Twig templates, Controller rendering, Symfony Security, Events, Repository, connection to database, `.env`, Flex, Bundles, YAML configs, [local packages](/blog/2020/02/17/local-packages-3-years-later/).
+✅ **We wanted** to be able to use Symfony dependency injection, Twig templates, Controller rendering, Symfony Security, Events, Repository, connection to database, `.env`, Flex, Bundles, YAML configs, [local packages](/blog/2020/02/17/local-packages-3-years-later/).
 
-<em class="fas fa-fw mt-4 fa-check text-success"></em> **We wanted automate** everything that is possible to automate.
+✅ **We wanted automate** everything that is possible to automate.
 
-<em class="fas fa-fw mt-4 fa-check text-success"></em> **We wanted to run** on Symfony 5.0 and PHP 7.4.
+✅ **We wanted to run** on Symfony 5.0 and PHP 7.4.
 
-<em class="fas fa-fw mt-4 fa-check text-success"></em> **We wanted to write** any future code as if in any other Symfony application without going back.
+✅ **We wanted to write** any future code as if in any other Symfony application without going back.
 
 <br>
 
@@ -336,9 +336,9 @@ final class ContactController extends AbstractController
 
 With this approach, we have all we wanted:
 
-<em class="fas fa-fw mt-4 fa-check text-success"></em> **We can** use Symfony dependency injection, Twig templates, Controller rendering, Symfony Security, Events, Repository, connection to database, `.env`, Flex, Bundles, YAML configs, [local packages](/blog/2020/02/17/local-packages-3-years-later/).
+✅ **We can** use Symfony dependency injection, Twig templates, Controller rendering, Symfony Security, Events, Repository, connection to database, `.env`, Flex, Bundles, YAML configs, [local packages](/blog/2020/02/17/local-packages-3-years-later/).
 
-<em class="fas fa-fw mt-4 fa-check text-success"></em> **We can to write** any future code as if in any other Symfony application without going back.
+✅ **We can to write** any future code as if in any other Symfony application without going back.
 
 <br>
 

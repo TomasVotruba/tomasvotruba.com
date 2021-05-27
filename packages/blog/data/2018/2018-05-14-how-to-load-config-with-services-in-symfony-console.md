@@ -85,9 +85,9 @@ Use static approach, no services config, just list of items. Most spread solutio
 
 ### How if Fits?
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> Ready in 2 minutes
+✅ Ready in 2 minutes
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> Well, static
+❌ Well, static
 
 ## 2. DI for Poor People: Container in a Command
 
@@ -116,11 +116,11 @@ class SomeCommand extends Command
 
 ### How if Fits?
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> Ready in 10 minutes
+✅ Ready in 10 minutes
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> Only local scope, we need to re-create container everywhere we need it
+❌ Only local scope, we need to re-create container everywhere we need it
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> The Chicken vs. Egg problem still remains very clear
+❌ The Chicken vs. Egg problem still remains very clear
 
 ## 3. Kill the Egg: The bin File Tuning
 
@@ -153,7 +153,6 @@ So what now?
 ### `ArgvInput` to the Rescue
 
 <a href="https://github.com/symplify/symplify/pull/198" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #198
 </a>
 
@@ -212,15 +211,15 @@ bin/ecs check src --config custom-config.php
 
 ### How if Fits?
 
-<em class="fas fa-fw fa-lg fa-times text-danger"></em> Ready in 15 minutes
+❌ Ready in 15 minutes
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> Setup & Forget
+✅ Setup & Forget
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> Much more legacy-proof
+✅ Much more legacy-proof
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> We can now use Dependency Injection **everywhere we need**
+✅ We can now use Dependency Injection **everywhere we need**
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> And make use off Symfony, Nette or any other container features we're used to from Web Apps.
+✅ And make use off Symfony, Nette or any other container features we're used to from Web Apps.
 
 <br>
 

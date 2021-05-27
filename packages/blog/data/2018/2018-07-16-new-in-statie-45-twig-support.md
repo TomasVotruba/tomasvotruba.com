@@ -20,7 +20,6 @@ deprecated_message: |
 ---
 
 <a href="https://github.com/symplify/symplify/pull/892" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 

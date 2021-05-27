@@ -20,8 +20,6 @@ tweet_image: "/assets/images/posts/2021/doctrine_host.gif"
 ## 1. Is the Annotation available as the Attribute?
 
 <a href="https://github.com/symplify/phpstan-rules" class="btn btn-dark btn-sm mb-1">
-    <em class="fab fa-github"></em>
-    &nbsp;
     From phpstan-rules package
 </a>
 
@@ -61,7 +59,7 @@ class SomeController
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-times text-danger fa-lg"></em>
+❌
 
 ```php
 use Symfony\Component\Routing\Annotation\Route;
@@ -75,7 +73,7 @@ class SomeController
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 <br>
 
@@ -91,8 +89,6 @@ includes:
 ## 2. Is Parameter in Config used Just Once?
 
 <a href="https://github.com/symplify/phpstan-rules" class="btn btn-dark btn-sm mb-1">
-    <em class="fab fa-github"></em>
-    &nbsp;
     From phpstan-rules package
 </a>
 
@@ -127,7 +123,7 @@ services:
 
 Now you can type configs as you like, and PHPStan will warn you about every duplicated param in your config!
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em>
+✅
 
 
 ## 3. Autowire List of Services
@@ -161,7 +157,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-That looks like a valid Symfony code. But what if you register a resource processor in another config or package? Boom, it's missed out. Three hours later, you want to kill yourself. And there [is more problems on the way](/blog/2018/11/12/will-autowired-arrays-finally-deprecated-tags-in-symfony-and-nette/).
+That looks like a valid Symfony code. But what if you register a resource processor in another config or package? Boom, it's missed out. Three hours later, you want to kill yourself. And there [is more problems on the way](/blog/2018/11/12/will-autowired-arrays-finally-deprecate-tags-in-symfony-and-nette/).
 
 We can reduce this boring code to:
 
@@ -199,13 +195,11 @@ Much better. How did we do it? With **autowired array** compiler pass:
 
 Everything else still looks the same. You've just made your configs more readable and code more robust.
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em>
+✅
 
 ## 4. What is the Doctrine Extension key name in the config?
 
 <a href="https://github.com/symplify/amnesia" class="btn btn-dark btn-sm mb-1">
-    <em class="fab fa-github"></em>
-    &nbsp;
     From amnesia package
 </a>
 

@@ -67,7 +67,7 @@ We want to reduce the number of public methods to a minimum. How?
 
 We can go for a method by method refactoring with careful analysis if the method should be public or private and how we can change it to private. **It takes time, patience, attention, human performance and doesn't scale on massive projects.** That's way too expensive.
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em>
+❌
 
 What simpler way can we apply today on an any-sized project? What low hanging fruit can we focus on?
 
@@ -105,7 +105,7 @@ Can you see it?
 -private function prepareData(): array
 ```
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 <br>
 
@@ -132,7 +132,7 @@ final class AirCleaner
 +private const NAME = 'cleaner';
 ```
 
-<em class="fas fa-fw fa-check text-success fa-2x"></em>
+✅
 
 The most common *false publics* are constants because they're [last that got visibility in PHP 7.1](https://wiki.php.net/rfc/class_const_visibility).
 
@@ -186,7 +186,6 @@ Actually, that was not a feature, it was a bug. **This method should have been u
 Do you want to know all the possible code changes?
 
 <a href="https://github.com/rectorphp/rector/pull/3084/commits/626287ec76ed16d15136115e1510b2154c2712a9" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 

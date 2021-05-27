@@ -155,7 +155,7 @@ Of course, you can put `file_exists()` and `is_file()` validation everywhere and
 Nette\Utils\FileSystem::read($accidentallyMissingFile);
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em> Kaboom! An Exception!
+✅ Kaboom! An Exception!
 
 ### `createDir()`
 
@@ -167,7 +167,7 @@ mkdir($cacheDiretory);
 
 Oh, but what if that already exists?
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em> **Already exists error!**
+❌ **Already exists error!**
 
 Ok, let's say you're lucky, your hard drive was wiped out and it doesn't exist yet.
 
@@ -177,7 +177,7 @@ mkdir($cacheDiretory);
 
 But what if the directory is `some/cache`?
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em> **Nested directory error!**
+❌ **Nested directory error!**
 
 
 Ok, but what if we don't care about these because **all we need is to create a directory**?
@@ -186,7 +186,7 @@ Ok, but what if we don't care about these because **all we need is to create a d
 Nette\Utils\FileSystem::createDir($cacheDirectory);
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 ### `delete()`
 
@@ -200,7 +200,7 @@ So let's try:
 unlink($source);
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em> **It's a directory error.**
+❌ **It's a directory error.**
 
 Ah, let's try this then:
 
@@ -208,7 +208,7 @@ Ah, let's try this then:
 rmdir($source);
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-lg"></em> **The directory is not empty error.**
+❌ **The directory is not empty error.**
 
 Doh, I already imagine some `glob()` of `Finder` madness.
 
@@ -218,7 +218,7 @@ Or maybe **we just want to delete it**:
 Nette\Utils\FileSystem::delete($source);
 ```
 
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 <br>
 

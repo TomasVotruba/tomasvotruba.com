@@ -1,46 +1,9 @@
-<ul class="list-inline post-metadata">
-    <li class="list-inline-item mr-3">
-        <em class="fas fa-calendar fa-fw"></em>
-        <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
-            {% if post.updatedAt is not null %}<strike>{% endif %}
-
-            {% if post.updatedAt is not null %}
-                {{ post.getDateTime|date('M, Y') }}
-            {% elseif post.getDateTime|date('Y') == "now"|date("Y") %}
-                {# this year #}
-                {{ post.getDateTime|date('M j') }}
-            {% else %}
-                {{ post.getDateTime|date('M j, Y') }}
-            {% endif %}
-
-            {% if post.updatedAt is defined %}</strike>{% endif %}
-        </time>
-    </li>
-
-    {% if post.updated %}
-        <li class="list-inline-item mr-3 text-success">
-            <em class="fas fa-fw fa-sync"></em> Updated {{ post.updatedAt|date('M, Y') }}
-        </li>
-    {% endif %}
-
-    {% if show_comment_count is defined %}
-        <li class="list-inline-item mr-3">
-            <em class="fas fa-fw fa-comments"></em>
-            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}/#disqus_thread">X</a> comments
-        </li>
-    {% endif %}
-
-    {% if post.tested %}
-        <li class="list-inline-item mr-3 text-primary">
-            <em class="fas fa-fw fa-check-circle"></em>
-            Tested
-        </li>
-    {% endif %}
-
-    {% if show_edit_link is defined %}
-        <li class="list-inline-item mr-3 text-primary">
-            <em class="fab fa-fw fa-github"></em>
-            <a href="{{ post.gitHubEditUrl }}">Found a typo? Edit me</a>
-        </li>
-    {% endif %}
-</ul>
+<div>
+    <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
+        {% if post.updatedAt is null %}
+            {{ post.getDateTime|date('Y-m-d') }}
+        {% else %}
+            Updated {{ post.updatedAt|date('Y-m-d') }}
+        {% endif %}
+    </time>
+</div>

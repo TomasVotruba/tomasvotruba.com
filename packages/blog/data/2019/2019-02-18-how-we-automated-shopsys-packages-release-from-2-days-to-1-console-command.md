@@ -145,7 +145,7 @@ vendor/bin/monorepo-builder release v7.0.0-beta6 --stage release
 vendor/bin/monorepo-builder release v7.0.0-beta6 --stage after-release
 ```
 
-Complex process made simple with PHP! <em class="fas fa-lg fa-check text-success"></em>
+Complex process made simple with PHP! ✅
 
 <br>
 

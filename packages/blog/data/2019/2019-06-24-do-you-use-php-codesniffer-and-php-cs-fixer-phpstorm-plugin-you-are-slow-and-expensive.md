@@ -31,7 +31,7 @@ The last benefit is wired to our brains.
 
 <img src="/assets/images/posts/2019/plugin/porn.jpg" class="img-thumbnail">
 
-Slack notification, Instagram likes, underline of <span class="text-underline">typoes</span> and suggestions in your IDE.<br>
+Slack notification, Instagram likes, underline of *typoes* and suggestions in your IDE.<br>
 **This all makes us happy by brain design**.
 
 <br>

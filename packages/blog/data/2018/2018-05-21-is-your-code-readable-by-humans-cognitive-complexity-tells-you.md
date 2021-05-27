@@ -140,7 +140,6 @@ vendor/bin/phpstan analyse src
 ## Refactor to Lower Cognitive Complexity in Examples
 
 <a href="https://github.com/symplify/symplify/pull/823/files" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request
 </a>
 

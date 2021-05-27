@@ -40,7 +40,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
             __DIR__ . '/packages/tweeter/src/ValueObject/Tweet.php',
             __DIR__ . '/packages/tweeter/src/ValueObject/PublishedTweet.php',
         ],
-
-        __DIR__ . '/packages/blog/tests/Posts/Year2018/Php73/Php73Test.php',
     ]);
 };

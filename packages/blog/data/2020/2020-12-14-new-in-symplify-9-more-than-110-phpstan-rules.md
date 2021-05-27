@@ -67,7 +67,7 @@ That's it!
 
 ## 2. Prepared Sets
 
-Special group of static rules are [prepared sets](https://github.com/symplify/phpstan-rules/tree/master/config/symplify-rules). Similar to ECS sets, each has one area it focuses on:
+Special group of static rules are [prepared sets](https://github.com/symplify/phpstan-rules/tree/master/config/symplify-rules.neon). Similar to ECS sets, each has one area it focuses on:
 
 ```yaml
 includes:
@@ -104,7 +104,7 @@ Symplify standards might not fit your standard, so it's better to use rules sepa
 
 ### Example: Configuring `ForbiddenNodeRule`
 
-Let's look at [`ForbiddenNodeRule`](https://github.com/symplify/phpstan-rules/blob/master/docs/rules_overview.md#forbiddennoderule). In this rule, you can say what [nodes](https://github.com/rectorphp/rector/blob/master/docs/nodes_overview.md) are forbidden to use.
+Let's look at [`ForbiddenNodeRule`](https://github.com/symplify/phpstan-rules/blob/master/docs/rules_overview.md#forbiddennoderule). In this rule, you can say what [nodes](https://github.com/rectorphp/php-parser-nodes-docs) are forbidden to use.
 
 We don't like `switch()`, `empty()` and `@`, so we forbid them:
 

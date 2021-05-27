@@ -43,7 +43,7 @@ abstract class AbstractRepository
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success mb-3"></em>
+✅
 
 PHPStan now knows exact returned type of all method annotated with `TEntity`:
 
@@ -150,7 +150,7 @@ It has no idea what to do. We have to tell it to...
 
 We run PHPStan, and... it works!
 
-<em class="fas fa-fw fa-2x fa-check text-success mb-3"></em>
+✅
 
 <br>
 

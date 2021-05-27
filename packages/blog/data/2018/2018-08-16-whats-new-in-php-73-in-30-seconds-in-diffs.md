@@ -13,8 +13,6 @@ From features that might be the most interesting to those lesser ones, that anyb
 ## 1. Comma After the Last Argument
 
 <a href="https://wiki.php.net/rfc/trailing-comma-function-calls" class="btn btn-info btn-sm">
-    <em class="fab fa-php fa-fw"></em>
-    &nbsp;
     See RFC
 </a>
 
@@ -56,8 +54,6 @@ Thanks [Jacob](/blog/2018/08/16/whats-new-in-php-73-in-30-seconds-in-diffs/#comm
 ## 2. First and Last Array Key
 
 <a href="https://wiki.php.net/rfc/array_key_first_last" class="btn btn-info btn-sm">
-    <em class="fab fa-php fa-fw"></em>
-    &nbsp;
     See RFC
 </a>
 
@@ -100,8 +96,6 @@ These will be handy in [coding standard](https://github.com/symplify/symplify/bl
 ## 3. Countable for Risky Variables
 
 <a href="https://wiki.php.net/rfc/is-countable" class="btn btn-info btn-sm">
-    <em class="fab fa-php fa-fw"></em>
-    &nbsp;
     See RFC
 </a>
 
@@ -136,8 +130,6 @@ But in case of that smelly (3rd party) code, there is a help:
 ## 4. Safer JSON Parsing
 
 <a href="https://wiki.php.net/rfc/json_throw_on_error" class="btn btn-info btn-sm">
-    <em class="fab fa-php fa-fw"></em>
-    &nbsp;
     See RFC
 </a>
 

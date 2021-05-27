@@ -248,7 +248,7 @@ As we don't use `TEntity` in our child class, we can merge it to `@extends` (tha
  }
 ```
 
-Now the `TEntity` in `AbstractRepository` will be overridden by type defined here. So `TEntity` will be treated as `Product` <em class="fas fa-fw fa-lg fa-check text-success"></em>
+Now the `TEntity` in `AbstractRepository` will be overridden by type defined here. So `TEntity` will be treated as `Product` ✅
 
 Beware! Even though it looks like any `array<shape>`, it has nothing to do with arrays.
 

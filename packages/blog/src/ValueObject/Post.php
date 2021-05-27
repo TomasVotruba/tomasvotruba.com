@@ -22,7 +22,6 @@ final class Post
         private ?string $tweetImage,
         private ?DateTimeInterface $updatedAt,
         private ?string $updatedMessage,
-        private bool $isTested,
         private string $sourceRelativePath,
         private ?DateTimeInterface $deprecatedAt,
         private ?string $deprecatedMessage,
@@ -84,11 +83,6 @@ final class Post
     public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;
-    }
-
-    public function isTested(): bool
-    {
-        return $this->isTested;
     }
 
     public function getGitHubEditUrl(): string

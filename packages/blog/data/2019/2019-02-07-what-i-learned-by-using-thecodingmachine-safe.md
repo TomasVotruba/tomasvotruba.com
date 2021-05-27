@@ -61,7 +61,7 @@ When I add new native function `array_filter`, should I use the *Safe* version o
 - fix it manually or [better with Rector](https://github.com/thecodingmachine/safe#automated-refactoring)
 - import namespace to `Safe\array_filter` with Easy Coding Standard
 
-Before? I just typed `array_filter` <em class="fas fa-fw fa-check text-success fa-lg"></em>
+Before? I just typed `array_filter` ✅
 
 <br>
 
@@ -179,7 +179,7 @@ Here are few examples I use in my code:
 +$fileInfo = new Symplify\PackageBuilder\FileSystem\SmartFileInfo($somePath);
 ```
 
-They also make PHPStan happy, because they return `string`, `array`... or throw an exception <em class="fas fa-fw fa-check text-success fa-lg"></em>
+They also make PHPStan happy, because they return `string`, `array`... or throw an exception ✅
 
 <br>
 

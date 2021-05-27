@@ -38,28 +38,14 @@ parameters:
         - src
         - tests
         - packages
-        - packages/symfony-static-dump/config/config.php
-        - packages/blog/config/config.php
-        - packages/cleaning-lady/config/config.php
-        - config/_data
         - config/config.php
         - rector.php
 
     level: max
 
     reportUnmatchedIgnoredErrors: false
-
-    excludes_analyse:
-        # test fixture file
-        - 'packages/blog/src/Posts/Year2017/Ast/SomeClass.php'
-        - packages/blog/tests/Posts
-        # generated file
-        - config/_data/generated/*
-
     ignoreErrors:
         # php-parser Node/Stmt mixups
-        - '#(.*?)array<PhpParser\\Node>, array<PhpParser\\Node\\Stmt(.*?)#'
-
         -
             message: '#Array with keys is not allowed\. Use value object to pass data instead#'
             paths:
@@ -69,12 +55,6 @@ parameters:
         -
             message: '#The path "/\.\./\.env\.local" was not found#'
             path: 'tests/bootstrap.php'
-
-        -
-            message: '#Do not use factory/method call in constructor\. Put factory in config and get service with dependency injection#'
-            paths:
-                # data provider
-                -  packages/blog/src/Repository/ClusterRepository.php
 
         # bug on Symplify rule
         - '#Do not use factory/method call in constructor\. Put factory in config and get service with dependency injection#'
@@ -86,10 +66,12 @@ parameters:
 
         # fix in next PR
         - '#Parameter "(.*?)" cannot be nullable#'
-        - '#Use decoupled factory service to create "Symfony\\Component\\HttpFoundation\\Response" object#'
-
 
         -
-            message: '#Use void instead of modify and return self object#'
+            message: '#Do not inherit from abstract class, better use composition#'
             paths:
-                - packages/blog/src/Posts/Year2017/Ast/NodeVisitor/*NodeVisitor.php
+                - src/Controller
+
+        # PHPStorm attributes
+        - '#Attribute must have all names explicitly defined#'
+        - '#Attribute class JetBrains\\PhpStorm\\ArrayShape does not exist#'

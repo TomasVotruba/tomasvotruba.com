@@ -81,7 +81,7 @@ vendor/bin/phpunit tests
 ```
 
 <p class="text-success pt-3 pb-3">
-    <em class="fas fa-fw fa-lg fa-check"></em> Voilá!
+    ✅ Voilá!
 </p>
 
 ## Down the Smelly Rabbit Hole
@@ -239,7 +239,7 @@ This removes all `public: true` lines from all your configs.
 <img src="/assets/images/posts/2018/private-services/gone.png" class="img-thumbnail">
 
 <p class="text-success pt-3 pb-3">
-    <em class="fas fa-fw fa-lg fa-check"></em> That's it!
+    ✅ That's it!
 </p>
 
 ## But Why?
@@ -252,10 +252,10 @@ This removes all `public: true` lines from all your configs.
 
 It is. But in 6 months of using this method **I got different feedback from the PHP community**:
 
-- Why there are no public services, but we can get them from container anyway? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- Why test and dev services behave differently? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
-- Why I can't get the service from container in the second application as in the first one? <em class="fas fa-fw fa-lg fa-times text-danger"></em> (They [forgot to add](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) a compiler pass to new Kernel.)
-- Why I have to add `public: true` for Symfony\Console\Application in bin file, but not in tests? <em class="fas fa-fw fa-lg fa-times text-danger"></em>
+- Why there are no public services, but we can get them from container anyway? ❌
+- Why test and dev services behave differently? ❌
+- Why I can't get the service from container in the second application as in the first one? ❌ (They [forgot to add](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) a compiler pass to new Kernel.)
+- Why I have to add `public: true` for Symfony\Console\Application in bin file, but not in tests? ❌
 
 **People were confused 😕🤔**. The trade of compiler pass feature was putting too much knowledge pressure on the programmers. **The application uses constructor injection everywhere, so there is no real added value by working with term *public/private* services**.
 
@@ -272,9 +272,9 @@ In the end **I removed the compiler pass and moved back to `public: true` in all
 
 Thanks to that, the **whole process became clear**:
 
-- We're using native Symfony syntax, you don't have to learn compiler passes <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- Configs are clear and people know what to expect <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- The location is always behind `autowire: true` → all configs have the same setup <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- We're using native Symfony syntax, you don't have to learn compiler passes ✅
+- Configs are clear and people know what to expect ✅
+- The location is always behind `autowire: true` → all configs have the same setup ✅
 
 <br><br>
 

@@ -167,7 +167,7 @@ vendor/bin/rector process tests
 ```
 
 Then take few minutes to polish the details that Rectors missed and send the PR to your project
-<em class="fas fa-fw fa-check text-success fa-lg"></em>
+✅
 
 <br>
 

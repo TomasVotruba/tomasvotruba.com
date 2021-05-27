@@ -59,9 +59,9 @@ The bugfix effectiveness formula states:
     Bugfix Effectiveness = (Reporter Work + Maintainer Work) / 100
 </blockquote>
 
-- If *BFE* < 0.5, you have both more energy left to fix even more bugs <em class="fas fa-fw fa-check text-success fa-lg"></em>
+- If *BFE* < 0.5, you have both more energy left to fix even more bugs ✅
 
-- If *BFE* > 5, the issue will probably end up in stale of dozens of comments that never fix anything <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+- If *BFE* > 5, the issue will probably end up in stale of dozens of comments that never fix anything ❌
 
 <br>
 

@@ -18,8 +18,6 @@ updated_message: |
 ## 1. Let Coding Standard handle Line Length for You
 
 <a href="https://github.com/symplify/symplify/pull/749" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #749
 </a>
 
@@ -136,8 +134,6 @@ As you guessed, this fixer works with 120 chars as maximum line-size... by defau
 ## 2. Choose Line Length to Match Your Display
 
 <a href="https://github.com/symplify/symplify/pull/747" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #751
 </a>
 
@@ -184,8 +180,6 @@ rules:
 ## 4. Prevent & references with `ForbiddenStaticFunctionSniff`
 
 <a href="https://github.com/symplify/symplify/pull/692" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #692
 </a>
 
@@ -222,8 +216,6 @@ rules:
 ## 5. Clear Child Class Naming Once and For All with `ClassNameSuffixByParentFixer`
 
 <a href="https://github.com/symplify/symplify/pull/633" class="btn btn-dark btn-sm mt-2 mb-3">
-    <em class="fab fa-github"></em>
-    &nbsp;
     Check the PR #633
 </a>
 

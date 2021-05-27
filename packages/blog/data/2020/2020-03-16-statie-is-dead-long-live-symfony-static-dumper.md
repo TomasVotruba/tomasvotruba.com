@@ -30,14 +30,14 @@ What I love the most about it, that the Symfony Static Dumper **only handles the
 
 Do you want more advantages?
 
-- no more Javascript to run the website <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- we can use most of the Symfony Ecosystem <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- we can use database, even Doctrine <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- develop normal Symfony application, then dump the HTML + CSS on deploy <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- standard Symfony app structure <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- use `{{ path('contact') }}` in templates <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- use Symfony plugin <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- single command use <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- no more Javascript to run the website ✅
+- we can use most of the Symfony Ecosystem ✅
+- we can use database, even Doctrine ✅
+- develop normal Symfony application, then dump the HTML + CSS on deploy ✅
+- standard Symfony app structure ✅
+- use `{{ path('contact') }}` in templates ✅
+- use Symfony plugin ✅
+- single command use ✅
 
 
 ## How to Migrate from Statie to Symfony Static Site Dumper?
@@ -55,14 +55,13 @@ composer require symfony/http-foundation symfony/asset symfony/twig-bridge symfo
 And replace the static generator:
 
 ```bash
-composer require symplify/symfony-static-dumper
 composer remove symplify/statie
+composer require symplify/symfony-static-dumper
 ```
 
 ### Setup Basic Symfony App
 
-- add [`config/bootstrap.php`](https://github.com/symfony/demo/blob/master/config/bootstrap.php)
-- add [`bin/console`](https://github.com/symfony/demo/blob/master/bin/console)
+- add [`bin/console`](https://github.com/symfony/demo/blob/main/bin/console)
 - add [`src/HttpKernel/YourAppKernel.php`](https://github.com/TomasVotruba/friendsofphp.org/blob/master/src/HttpKernel/FopKernel.php)
 
 ### Move `/source`

@@ -5,7 +5,7 @@ perex: |
     To be clear: we talk about those tags that only have a name. No priority, no level, no event name, nothing, **just the name**. If you're not sure why these tags are bad, read *[Drop all Service Tags in Your Nette and Symfony Applications](/blog/2017/02/12/drop-all-service-tags-in-your-nette-and-symfony-applications/)* first.
     <br>
     <br>
-    I'm very happy to see that [collectors](/cluster/collector-pattern-the-shortcut-hack-to-solid-code/) are finally getting to the core of DI components of PHP frameworks. Tags, extensions, compiler passes and `autoconfigure` now became workarounds. Collectors are now in the best place they can... **the PHP code**.
+    I'm very happy to see that collectors are getting to the core of DI components of PHP frameworks. Tags, extensions, compiler passes and `autoconfigure` now became workarounds. Collectors are now in the best place they can... **the PHP code**.
 
 tweet: "New Post on My Blog: Can Autowired Arrays Finally Deprecate Tags in #symfony and #nettefw?    #collector #nettefw30 #php #simplestupid"
 

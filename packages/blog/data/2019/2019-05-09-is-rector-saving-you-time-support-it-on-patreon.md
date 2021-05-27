@@ -39,7 +39,6 @@ Rector can make remove "legacy code" from our dictionaries. For that, I need you
 </div>
 
 <a href="https://www.patreon.com/rectorphp" class="btn btn-success btn-lg mt-2 mb-4">
-    <em class="fab fa-patreon fa-fw"></em>
     Support Rector on Patreon
 </a>
 </div>
@@ -57,7 +56,6 @@ Aren't you sure about long-term contribution of Rector for you but still want to
 Use ↓
 
 <a href="https://www.paypal.me/rectorphp" class="btn btn-primary mt-2">
-    <em class="fab fa-paypal fa-fw"></em>
     One-Time donation through PayPal
 </a>
 

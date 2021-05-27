@@ -11,7 +11,13 @@ perex: |
     How **could any programmer start migration today** without any daunting studying?
 
 tweet: "New Post on #php 🐘 blog: Forget Complex Migrations, Use Cleaning Lady Checklist"
-#tweet_image: "/assets/images/posts/2020/checklist_howto.gif"
+
+deprecated_since: "May 2021"
+deprecated_message: |
+    The checklist would require more work to be useful. Also every migration is a bit different and requires specific list of steps.
+    <br>
+    <br>
+    **We work on project that will include "Cleaning Lady List" spirit, but will handle the work for you - stay tuned for *Rector Click***.
 ---
 
 ## Simplicity beats Unread Knowledge

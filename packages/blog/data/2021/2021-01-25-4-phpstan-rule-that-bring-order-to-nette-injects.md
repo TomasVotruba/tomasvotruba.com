@@ -68,7 +68,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 <br>
 
@@ -90,7 +90,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 Covered by `Symplify\PHPStanRules\Rules\NoNetteInjectAndConstructorRule` rule.
 
@@ -123,7 +123,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 Having multiple `inject*()` methods allow us to **accidentally put two dependencies** in the same class. This has performance hit, maintenance hit, and duplicated parasitic code that needs our attention for no gain.
 
@@ -143,7 +143,7 @@ class SomeClass
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 Covered by `Symplify\PHPStanRules\Rules\SingleNetteInjectMethodRule` rule.
 
@@ -166,7 +166,7 @@ class SomeClass
 
 ...and the property was `null`.
 
-<em class="fas fa-fw fa-times text-danger fa-2x"></em>
+❌
 
 <br>
 
@@ -184,7 +184,7 @@ Let's not do that ever again and validate **letter by letter** of `@inject` anno
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 Covered by `Symplify\PHPStanRules\Rules\ValidNetteInjectRule
 ` rule.
@@ -233,7 +233,7 @@ final class ProductPresenter extends AbstractPresenter
 }
 ```
 
-<em class="fas fa-fw fa-2x fa-check text-success"></em>
+✅
 
 Covered by `Symplify\PHPStanRules\Rules\NoInjectOnFinalRule` rule.
 

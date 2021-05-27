@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include "_snippets/head.twig" %}
+    <head>
+        {% include "_snippets/head.twig" %}
+
+        {#  social tags based on https://www.phpied.com/minimum-viable-sharing-meta-tags/ #}
+        <meta property="og:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
+        <meta name="description" property="og:description" content="{{ post.perex|striptags }}" />
+
+        {% if post.tweetImage %}
+            <meta property="og:image" content="{{ post.tweetImage }}" />
+            <meta name="twitter:card" content="summary_large_image"/>
+        {% endif %}
+    </head>
+
     <body>
         {# @var post \TomasVotruba\Blog\ValueObject\Post #}
         <!-- post_id: {{ post.getId() }} -->
-
         {% include "_snippets/menu.twig" %}
 
-        <div class="container-fluid" id="post">
+        <div class="container-fluid post" id="content">
             <h1>{{ post.title|raw }}</h1>
 
-            {% include "_snippets/post/post_metadata_line.twig" with { "post": post, "show_comment_count": true, "show_edit_link": true } %}
+            <div class="pull-right">
+                <a href="{{ post.gitHubEditUrl }}">Found a typo? Edit me</a>
+            </div>
+
+            <time datetime="{{ post.getDateTime|date('Y-m-D') }}" class="text-muted">
+                {{ post.getDateTime|date('Y-m-d') }}
+            </time>
 
             {% if post.deprecated %}
-                <div class="card border-danger card-bigger">
+                <div class="card border-danger mt-4">
                     <div class="card-header text-white bg-danger">
-                        <strong>This post is deprecated at {{ post.deprecatedAt|date("F Y") }}</strong>
+                        This post is deprecated since {{ post.deprecatedAt|date("F Y") }}. Its knowledge is outdated and should not be used.
+                        <br>
+                        <strong>Why?</strong>
                     </div>
                     <div class="card-body pb-2">
                         {{ post.deprecatedMessage|markdown|raw }}
@@ -26,9 +45,11 @@
             {% endif %}
 
             {% if post.updated %}
-                <div class="card border-success card-bigger mt-5">
+                <div class="card border-success mt-4">
                     <div class="card-header text-white bg-success">
-                        <strong>This post was updated at {{ post.updatedAt|date("F Y") }}</strong>
+                        This post was updated at {{ post.updatedAt|date("F Y") }} with fresh know-how.
+                        <br>
+                        <strong>What is new?</strong>
                     </div>
                     {% if post.updatedMessage is not null %}
                         <div class="card-body pb-2">
@@ -50,22 +71,32 @@
 
             <br>
 
-            <div class="row mb-5 mt-5">
-                <div class="col-12 mb-5">
+
+            <div class="card mt-5">
+                <div class="card-body text-center mt-2">
+                    <p>
+                        Have you find this post useful? <strong>Do you want more?</strong>
+                    </p>
+                    <p>
+                        Follow me on <a href="https://twitter.com/votrubaT">Twitter</a>, <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">RSS</a> or support me on <a href="https://github.com/sponsors/TomasVotruba">GitHub Sponsors</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-body text-white bg-success text-center">
                     {% set previous_post = previous_post(post) %}
                     {% if previous_post is not null %}
-                        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {'slug': previous_post.getSlug }) }}" class="d-block pt-4 pb-4 pl-4 pr-4 btn btn-success btn-wrappable">
-                            <em class="fas fa-fw fa-forward"></em>
-                            <strong>Read Next</strong>
-                            <br>
-                            <span class="text-bigger">
-                                {{ previous_post.title|replace({'&nbsp;': ' '}) }}
-                            </span>
+                        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {'slug': previous_post.getSlug }) }}" class="d-block">
+                            <div>
+                                Read next → <strong>{{ previous_post.title|replace({'&nbsp;': ' '}) }}</strong>
+                            </div>
                         </a>
                     {% endif %}
                 </div>
             </div>
 
+            <br>
             <br>
 
             <a name="comments"></a>
@@ -77,17 +108,3 @@
         {% include "_snippets/footer.twig" %}
     </body>
 </html>
-
-{% block socialTags %}
-    {# Facebook sharing #}
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
-    <meta property="og:description" content="{{ post.perex|striptags }}" />
-    <meta property="og:url" content="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" />
-
-    {# Twitter sharing #}
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@votrubaT">
-    <meta name="twitter:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
-    <meta name="twitter:description" content="{{ post.perex|striptags }}" />
-{% endblock %}

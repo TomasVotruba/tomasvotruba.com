@@ -9,9 +9,19 @@ perex: |
 tweet: "New Post on #php 🐘 blog: @rectorphp - The Power of Automated Refactoring Book Released"
 ---
 
-<a href="https://leanpub.com/rector-the-power-of-automated-refactoring/c/RELEASE_DAY">
-    <img src="https://d2sofvawe08yqg.cloudfront.net/rector-the-power-of-automated-refactoring/hero" style="border: 1px solid #DDD; padding: 0.4em;float:right;max-width: 13em;margin-left: 1em">
-</a>
+<div class="float-right text-center">
+    <a href="https://leanpub.com/rector-the-power-of-automated-refactoring" target="blank">
+        <img src="https://getrector.org/assets/images/logo/logo_bigger/rector_book.png" style="max-width: 15em; padding: .5em;margin:0 0 .5em 1em" class="shadow" alt="Rector book cover">
+    </a>
+
+    <br>
+
+    <a href="https://leanpub.com/rector-the-power-of-automated-refactoring" target="blank" class="btn btn-success btn-lg mt-4 mb-2">
+        Buy a copy
+    </a>
+</div>
+
+
 
 I thought of writing a book ever since I started blogging. I wanted to put knowledge into a concise source, where you could deep dive into one topic, have a space to think about it and reflect on it. Not just documentation and code samples, but also **broader vision** behind it, share challenging experiences about why do we choose A and not B and ideally, spark inspiration in the reader for their creative coding.
 
@@ -33,21 +43,23 @@ Do you Rector daily, write your own custom Rector rules, and have tests for them
 
 Do you use Rector in CI on your new projects and find it easy? Yet, do you struggle with your legacy project and don't believe Rector can help you? Are you lost in the terminology of AST, nodes, and traversing?
 
-[**Read this book**](https://leanpub.com/rector-the-power-of-automated-refactoring/c/RELEASE_DAY). It will take you step by step, explain pitfalls you struggle with, and give you the confidence to migrate any legacy project with automated refactoring.
+[**Read this book**](https://leanpub.com/rector-the-power-of-automated-refactoring). It will take you step by step, explain pitfalls you struggle with, and give you the confidence to migrate any legacy project with automated refactoring.
 
 <br>
 
 Would you like to get a job faster than your peers? Do you see yourself as an innovative person? Do you lack time to do changes you see as positive? Would you love to automated your code reviews and get more time for human interactions? Do you dream of a world without legacy code?
 
-[**Read this book**](https://leanpub.com/rector-the-power-of-automated-refactoring/c/RELEASE_DAY). It will give you a broad picture of the PHP toolchain, the knowledge framework of using them together, and the power to make automated refactoring your daily bread with Rector. Who knows, maybe your next project will run Rector beneath and turn into disruptive innovation.
+[**Read this book**](https://leanpub.com/rector-the-power-of-automated-refactoring). It will give you a broad picture of the PHP toolchain, the knowledge framework of using them together, and the power to make automated refactoring your daily bread with Rector. Who knows, maybe your next project will run Rector beneath and turn into disruptive innovation.
 
 <br>
+
+## Support Rector Development
 
 By buying this book, you also support the Rector ecosystem and help [developers around](https://github.com/rectorphp/rector-src/graphs/contributors) to improve it.
 
 <br>
 
-**Hey, pst... do you want a 5 $ discount**? Get it this week by [using this link](https://leanpub.com/rector-the-power-of-automated-refactoring/c/RELEASE_DAY). When you buy it, make sure to sign up for notifications about future updates, so you'll get an email when we release the final chapters.
+**Hey, pst... do you want a 5 $ discount**? Get it this week by [using this link](https://leanpub.com/rector-the-power-of-automated-refactoring). When you buy it, make sure to sign up for notifications about future updates, so you'll get an email when we release the final chapters.
 
 <br>
 

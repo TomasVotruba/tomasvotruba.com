@@ -180,7 +180,6 @@ With use strict typed classes written on the bottom of the file and use them in 
 Do you want to know more about Box + Scoper automated Travis CI deploy in practice?
 
 <a href="https://github.com/rectorphp/rector/pull/2373" class="btn btn-dark mt-3 mb-3">
-    <em class="fab fa-github fa-fw"></em>
     Check this PR on Rector
 </a>
 

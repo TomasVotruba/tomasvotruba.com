@@ -246,7 +246,7 @@ Now the maintainer knows:
 - what is the code causing it
 - what is the error message
 
-<em class="fas fa-fw fa-lg fa-check text-success"></em> Great job! If all the issues were reported like this, the productivity in open-source will sky-rocket (and I mean "Elon Musk" sky-rocket).
+✅ Great job! If all the issues were reported like this, the productivity in open-source will sky-rocket (and I mean "Elon Musk" sky-rocket).
 
 The 1st questions that will pop-up in the maintainer's head are "How did you do that?"
 

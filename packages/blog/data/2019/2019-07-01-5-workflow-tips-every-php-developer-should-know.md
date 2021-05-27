@@ -30,7 +30,7 @@ Great documentation is useless without the even better search.
 
 **Just press <span class="btn btn-light btn-outline-dark">t</span> on your keyboard and "TypeYourClass".**
 
-<div class="fa-2x mt-3">👍</div>
+👍
 
 ## 2. Get rid of Phing
 
@@ -39,7 +39,7 @@ So I migrate them to composer scripts, so people can actually use them without h
 
 Martin already wrote about it in [Have you tried Composer Scripts? You may not need Phing](https://blog.martinhujer.cz/have-you-tried-composer-scripts)
 
-<div class="fa-2x mt-3">👍</div>
+👍
 
 ## 3. Enable Colors in Composer Scripts
 
@@ -78,7 +78,7 @@ How to fix this? Just add `--ansi`:
 }
 ```
 
-<div class="fa-2x mt-3 mb-4">👍</div>
+👍
 
 Thanks for this tip to [Jan Mikes](https://janmikes.cz) ❤️️.
 
@@ -120,7 +120,7 @@ I've migrated over 5 of these recently and you can see its a relief in developer
 
 Just look at [PHPMD migration to PHP_CodeSniffer in Shopsys repository](https://github.com/shopsys/shopsys/search?p=2&q=phpmd&type=Commits).
 
-<div class="fa-2x mt-3">👍</div>
+👍
 
 ## 5. Use Elementary Maths to become Master
 
@@ -162,7 +162,7 @@ The right path is how the legacy code is manufactured in companies every day.
 
 That's the beauty example of pattern thinking. Instead of remembering 3 different terms, you pick one and use it.
 
-<div class="fa-2x mt-3">👍</div>
+👍
 
 <br>
 

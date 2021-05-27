@@ -42,7 +42,7 @@ Now you can build monorepo on GitHub and split it into repositories on Gitlab.
 
 ## 3. Split to custom Git Hosting
 
-Do you use GitLab? If so, there is a big chance you host it on your server because the [saas is getting more and more expensive](/blog/best-time-to-switch-GitLab-to-github/).
+Do you use GitLab? If so, there is a big chance you host it on your server because the [saas is getting more and more expensive](/blog/best-time-to-switch-gitlab-to-github/).
 
 That means your target hosting is not `github.com`, neither `gitlab.com`. That's why we've added a new parameter to set the host:
 

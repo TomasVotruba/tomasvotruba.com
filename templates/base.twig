@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include "_snippets/head.twig" %}
+    <head>
+        {% include "_snippets/head.twig" %}
+    </head>
     <body>
         {% include "_snippets/menu.twig" %}
 
-        <div id="content">
-            {% block content %}{% endblock %}
+        <div class="container-fluid">
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
         </div>
+
+        {% block custom_footer %}{% endblock %}
 
         {% include "_snippets/footer.twig" %}
     </body>

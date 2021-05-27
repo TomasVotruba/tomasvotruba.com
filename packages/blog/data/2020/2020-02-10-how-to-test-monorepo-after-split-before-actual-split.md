@@ -160,8 +160,8 @@ Just this one, right?
 
 Well, I assumed so, but this would eventually download `symplify/package-builder` with local version, **but all the rest of `symplify/*` packages from packagist**. In the end we'll have a mess like:
 
-- `symplify/package-builder` - local <em class="fas fa-fw fa-check text-success"></em>
-- `symplify/autowire-array-parameter` - from packagist before split !== different code that we use <em class="fas fa-fw fa-times text-danger"></em>
+- `symplify/package-builder` - local ✅
+- `symplify/autowire-array-parameter` - from packagist before split !== different code that we use ❌
 
 We have to **add all the possible local repositories**, so the package always has the local version of the code.
 

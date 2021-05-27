@@ -158,7 +158,6 @@ foreach ($allProcessInfos as $processInfo) {
 Symplify has 8 packages to build at the moment. Putting split commands to async had amazing improvement!
 
 <a href="https://github.com/symplify/symplify/pull/620" class="btn btn-dark btn-sm">
-    <em class="fab fa-github fa-fw"></em>
     See pull-request #620
 </a>
 

@@ -9,11 +9,6 @@ final class Option
     /**
      * @var string
      */
-    public const HELPED_COMPANIES = 'helped_companies';
-
-    /**
-     * @var string
-     */
     public const REFERENCES = 'references';
 
     /**

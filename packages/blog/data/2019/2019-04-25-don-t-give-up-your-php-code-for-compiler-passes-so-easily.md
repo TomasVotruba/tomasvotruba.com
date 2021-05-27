@@ -67,12 +67,12 @@ final class PriceCompilerPass implements CompilerPassInterface
 
 **Again, we need to create some legacy code that is hard to maintain:**
 
-- add tagging in extension/bundle or better type resolution <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- register this in Kernel <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- remember the tag name ([don't remember anything](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock)/) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- use the tag everywhere (YAML) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- vendor-lock the metadata in the config (YAML) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- people maintaining project after you leave have to learn this *Symfony way* <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+- add tagging in extension/bundle or better type resolution ❌
+- register this in Kernel ❌
+- remember the tag name ([don't remember anything](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock)/) ❌
+- use the tag everywhere (YAML) ❌
+- vendor-lock the metadata in the config (YAML) ❌
+- people maintaining project after you leave have to learn this *Symfony way* ❌
 
 <br>
 
@@ -102,9 +102,9 @@ final class PriceExtension extends CompilerExtension
 
 **Also, we create legacy code that is hard to maintain:**
 
-- register extension to a config (Neon) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- vendor-lock the metadata in the config (Neon) <em class="fas fa-fw fa-times text-danger fa-lg"></em>
-- people maintaining project after you leave have to learn this *Nette way* <em class="fas fa-fw fa-times text-danger fa-lg"></em>
+- register extension to a config (Neon) ❌
+- vendor-lock the metadata in the config (Neon) ❌
+- people maintaining project after you leave have to learn this *Nette way* ❌
 
 I need to take a break, my brain is tired just **by making up this complicated and non-sense code**. I mean, I used to write this code in my every project for 5 years in Symfony and Nette projects, because it was "the best practice" and I didn't question it, but **there was always something scratching in the back of my head**.
 
@@ -155,7 +155,7 @@ final class PriceCalculatorFactory
 }
 ```
 
-In some framework we have still have to add 1 config vendor-lock <em class="fas fa-fw fa-times text-danger fa-lg"></em> :
+In some framework we have still have to add 1 config vendor-lock ❌ :
 
 ```yaml
 services:
@@ -171,12 +171,12 @@ How we get `$priceModifiers` is not that important now, it's [an implementation 
 
 The important thing is we got a code that:
 
-- is **strictly typed** <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- we all understand it <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- will not be affected by any syntax/architecture changes in our favorite framework <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- can be checked by **coding standard tools** <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- can be analysed by **static analysis tools** <em class="fas fa-fw fa-lg fa-check text-success"></em>
-- and refactored by **instant upgrade tools** <em class="fas fa-fw fa-lg fa-check text-success"></em>
+- is **strictly typed** ✅
+- we all understand it ✅
+- will not be affected by any syntax/architecture changes in our favorite framework ✅
+- can be checked by **coding standard tools** ✅
+- can be analysed by **static analysis tools** ✅
+- and refactored by **instant upgrade tools** ✅
 
 <br>
 
