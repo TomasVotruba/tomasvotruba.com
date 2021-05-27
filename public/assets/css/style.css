@@ -309,7 +309,12 @@ a.btn {
 
 .text-bigger {
     font-size: 1.3em;
-    line-height: 1.5em;
+    line-height: 1.6em;
+}
+
+.text-bigger {
+    font-size: 1.3em;
+    line-height: 1.6em;
 }
 
 .btn-sm {
@@ -374,6 +379,10 @@ a.btn {
     }
 
     blockquote.blockquote {
+        font-size: 1.3rem;
+    }
+
+    .post-list-title {
         font-size: 1.3rem;
     }
 }
