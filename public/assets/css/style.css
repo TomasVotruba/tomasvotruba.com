@@ -411,3 +411,9 @@ a.btn {
 .blockquote-footer {
     margin-top: 1em;
 }
+
+.article-row {
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 1.2em;
+    padding-bottom: 1.3em;
+}

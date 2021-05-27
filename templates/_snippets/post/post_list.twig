@@ -1,19 +1,17 @@
 {% for post in posts %}
-    <div class="mb-3 col-md-12 {% if post.deprecatedAt is not null %}border opacity-70 border-danger text-danger rounded shadow-danger pt-3 pb-4 pl-4 pr-4 {% elseif post.updatedAt is not null %}bg-success text-white pt-3 pb-4 pl-4 pr-4 rounded shadow{% endif %}">
+    <div class="article-row col-md-12 {% if post.deprecatedAt is not null %}border opacity-70 border-danger text-danger rounded shadow-danger pt-3 pb-4 pl-4 pr-4 mb-4 {% elseif post.updatedAt is not null %}bg-success text-white pt-3 pb-4 pl-4 pr-4 mb-4 rounded shadow{% endif %}">
         <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="post-list-title">
             {{ post.title|raw }}
         </a>
 
-        <div class="mt-2">
-            {% if post.deprecatedAt is not null %}
-                <span class="text-danger">Deprecated {{ post.deprecatedAt|date('Y-m-d') }}</span>
-            {% elseif post.updatedAt is not null %}
+        {% if post.deprecatedAt is not null %}
+            <div class="text-danger">Deprecated {{ post.deprecatedAt|date('Y-m-d') }}</div>
+        {% elseif post.updatedAt is not null %}
+            <div>
                 Updated {{ post.updatedAt|date('Y-m-d') }}
-            {% else %}
-                <span class="text-muted">{{ post.dateTime|date('Y-m-d') }}</span>
-            {% endif %}
-        </div>
+            </div>
+        {% else %}
+            <div class="text-muted">{{ post.dateTime|date('Y-m-d') }}</div>
+        {% endif %}
     </div>
-
-    <hr>
 {% endfor %}

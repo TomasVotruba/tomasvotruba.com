@@ -49,9 +49,7 @@ Like [*Clean Code*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsma
 
 What can you do better?  **You could reach for 80 % shorter and PHP-related [Principles of Package Design](https://leanpub.com/principles-of-package-design)** or go to fresh [*clean-code* repository on Github](https://github.com/jupeter/clean-code-php) single page **PHP yes/no examples-based** which has over **3625 stars** as of time writing this post. I help to maintain it, but main credits goes to [@jupeter](https://github.com/jupeter).
 
-<div class="text-center">
-    <img src="/assets/images/posts/2017/non-it-books/deep.jpg">
-</div>
+<img src="/assets/images/posts/2017/non-it-books/deep.jpg" class="img-thumbnail">
 
 Imagine peace with combination of 5hour train trips, [disabling twitter](/blog/2017/01/20/4-emotional-reasons-why-I-quit-my-twitter/) and other [social networks](/blog/2017/01/05/why-I-deleted-my-linkedin-account/) on your mobile and computer and [cutting of Facebook](https://zenhabits.net/unline) activity, it is powerful skill-set that will **give you head start before any concurrency you have**.
 
@@ -70,9 +68,7 @@ This book is more transformative then 2 before. It's related to family system, p
 
 I see many nice-guys among programmers, un-happy with their work, payment, skill level or they spouse and children, thank to [organizing PHP meetups](https://pehapkari.cz) in Czech Republic. I could relate to them with [my own experience](https://www.youtube.com/watch?v=GFu5ONiHnMA) (Czech only).
 
-<div class="text-center">
-    <img src="/assets/images/posts/2017/non-it-books/nice.jpg">
-</div>
+<img src="/assets/images/posts/2017/non-it-books/nice.jpg" class="img-thumbnail">
 
 This book helped my to take over responsibility for things I'm un-happy with and take the first step to unknown future hidden in fog. Pain worth it!
 
