@@ -5,6 +5,7 @@
 
         {#  social tags based on https://www.phpied.com/minimum-viable-sharing-meta-tags/ #}
         <meta property="og:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
+        <meta property="og:url" content="{{ site_url}}{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" />
         <meta name="description" property="og:description" content="{{ post.perex|striptags }}" />
 
         {% if post.tweetImage %}
