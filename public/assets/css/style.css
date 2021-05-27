@@ -112,6 +112,10 @@ ul {
 
 /* mobile optimization */
 @media (max-width: 768px) {
+    #menu {
+        font-size: 1.1rem;
+    }
+
     .container {
         max-width: 100%;
     }
