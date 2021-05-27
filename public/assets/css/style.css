@@ -86,6 +86,10 @@ a:focus {
     outline-offset: -2px;
 }
 
+.head_picture {
+    width: 10em; height: 10em;
+}
+
 hr {
     margin: 1.2em 0;
     border: 0;
@@ -112,6 +116,11 @@ ul {
 
 /* mobile optimization */
 @media (max-width: 768px) {
+    .head_picture {
+        width: 5em;
+        height: 5em;
+    }
+
     #menu {
         font-size: 1.1rem;
     }
