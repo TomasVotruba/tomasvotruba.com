@@ -9,7 +9,7 @@ perex: |
 tweet: "New Post on #php 🐘 blog: Symfony 4.2 is used 2 times More than #symfony 3.4 ... Includes also #laravel #zend #yii #nettefw and #cakephp download stats by version"
 ---
 
-<div class="alert alert-sm alert-success mt-3">
+<div class="alert alert-success mt-3">
 This post was inspired by very active reactions to <a href="/blog/2019/04/11/trends-of-php-frameworks-in-numbers/">Trends of PHP Frameworks in Numbers</a>
 </div>
 

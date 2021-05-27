@@ -75,7 +75,7 @@ CurrencyProvider::set('eur'); // this will be invoked in some other method, wher
 $product->getPrice(); // ups, 2500?
 ```
 
-<div class="alert alert-sm alert-danger mt-3">
+<div class="alert alert-danger mt-3">
    1. An entity with the same ID can return different values on different calls of the same method.
 </div>
 
@@ -92,7 +92,7 @@ $product->getPrice(); // Error: 2nd argument of price cannot be null
 CurrencyProvider::set('czk');
 ```
 
-<div class="alert alert-sm alert-danger mt-3">
+<div class="alert alert-danger mt-3">
     2. Due to a static design of <code>CurrencyProvider</code>, we cannot set currency at the single place of application, e.g. container creation, but we have to put it in the "right" place so it doesn't break the code. Here it broke the code because we set it too late.
 </div>
 
@@ -112,7 +112,7 @@ foreach ($allCurrencies as $currency) {
 // what is the currency now?
 ```
 
-<div class="alert alert-sm alert-danger mt-3">
+<div class="alert alert-danger mt-3">
    3. How do I show a price for all the currencies we support?
 </div>
 

@@ -18,7 +18,7 @@ updated_message: |
     <img src="/assets/images/posts/2019/twig-under/twig-image.png" style="max-width: 28em" >
 </div>
 
-<div class="alert alert-sm alert-success mt-3">
+<div class="alert alert-success mt-3">
     <p>This set would not be possible and as good as it is without you, open-source PHP community.
     I'd like to thank 👏:</p>
 

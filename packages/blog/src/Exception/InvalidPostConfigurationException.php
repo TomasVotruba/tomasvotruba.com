@@ -8,5 +8,4 @@ use Exception;
 
 final class InvalidPostConfigurationException extends Exception
 {
-
 }

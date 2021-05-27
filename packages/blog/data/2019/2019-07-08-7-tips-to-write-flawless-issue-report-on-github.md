@@ -52,7 +52,7 @@ Now you know *why* and *where*. I think you're ready for creating the very first
 
 The version of the used project is very important. Maybe you use LTS version, maybe it's legacy already, maybe it's experimental version and it's expected to break. You don't care about this, but it will give maintainer the context of your issue.
 
-<q>I use Rector v0.5.7</q>
+"I use Rector v0.5.7"
 
 How do you find this information quickly?
 
@@ -65,7 +65,7 @@ composer show rector/rector | grep version
 
 This one is nice to have if you're into bleeding edge technologies:
 
-<q>I use Rector v0.5.7, and it's still broken on `dev-master`</q>
+"I use Rector v0.5.7, and it's still broken on `dev-master`"
 
 Test `dev-master` as well. Maybe this issue was reported before 2 days and is already fixed on `master`?
 You don't have to read all the past issues - it's a waste of time (maybe there was just PR, or maybe just commit right to the `master`), just try it:
@@ -103,7 +103,7 @@ What should you go for instead? Remove the ambiguous:
 
 In an issue:
 
-<q>I run Rector on [this-code] and I got [this-exception] with [this-exception-message]</q>
+"I run Rector on [this-code] and I got [this-exception] with [this-exception-message]"
 
 ## 3. Code over Text
 
@@ -113,7 +113,7 @@ In an issue:
 
 These reports could be replaced by black-box style "...on something unknown". 0-value.
 
-- <q>On this code</q>
+- "On this code"
 
 ```php
 <?php
@@ -261,7 +261,7 @@ Again, think of *4. The smaller the better* tip while copy-pasting the `config`.
 - Which of those 400 lines in the config are responsible for this error?
 - What combinations of rules and parameters are causing the error?
 
-<q>I installed Rector as dev dependency to composer and run:</q>
+"I installed Rector as dev dependency to composer and run:"
 
 ```bash
 vendor/bin/rector process src/SomeFile.php --dry-run
