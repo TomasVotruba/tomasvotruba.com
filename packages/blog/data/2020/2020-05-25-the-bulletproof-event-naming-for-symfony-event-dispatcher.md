@@ -9,6 +9,7 @@ perex: |
 tweet: "New Post on #php 🐘 blog: The Bulletproof Event Naming For #Symfony Event Dispatcher"
 
 updated_since: "May 2020"
+updated_message: "Updated with Symfony 4.3 syntax, that supports class-name events out of the box."
 ---
 
 ## 1. Start with *Stringly*

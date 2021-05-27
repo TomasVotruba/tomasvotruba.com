@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\ValueObjectFactory;
 
+use DateTimeInterface;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use ParsedownExtra;
@@ -12,6 +13,7 @@ use Symfony\Component\Yaml\Yaml;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileInfo;
+use TomasVotruba\Blog\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
@@ -84,6 +86,14 @@ final class PostFactory
 
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
         $updatedMessage = $configuration['updated_message'] ?? null;
+
+        // message is required
+        if ($updatedAt instanceof DateTimeInterface) {
+            if ($updatedMessage === null || $updatedMessage === '') {
+                $message = sprintf('"updated_message" is missing in post %d', $id);
+                throw new InvalidPostConfigurationException($message);
+            }
+        }
 
         $deprecatedAt = isset($configuration['deprecated_since']) ? DateTime::from(
             $configuration['deprecated_since']
