@@ -9,7 +9,7 @@ tweet_image: "/assets/images/posts/2017/composer-local-packages/composer.png"
 
 
 I wrote about [pros and cons of local packages before](/blog/2017/02/07/how-to-decouple-monolith-like-a-boss-with-composer-local-packages/).
-After year of using this in [practice](https://github.com/symplify/symplify) and [mentorings](/mentoring-and-lectures) I polished this approach to even **simpler version that is easy to start with**.
+After year of using this in [practice](https://github.com/symplify/symplify) and [mentorings](/trainings) I polished this approach to even **simpler version that is easy to start with**.
 
 
 ### Do You Have?

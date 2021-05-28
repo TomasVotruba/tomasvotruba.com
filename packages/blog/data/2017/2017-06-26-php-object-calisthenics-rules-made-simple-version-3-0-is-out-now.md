@@ -302,7 +302,7 @@ Check [the README](https://github.com/object-calisthenics/phpcs-calisthenics-rul
 
 ## 9 &ndash; 6 = 3... Where is the Rest of Rules?
 
-There are 3 more rules to complete the list from [the original manifesto](https://pragprog.com/book/twa/thoughtworks-anthology):
+There are 3 more rules to complete the list from [the original manifesto](https://www.amazon.com/ThoughtWorks-Anthology-Technology-Innovation-Programmers/dp/193435614X):
 
 3. Wrap Primitive Types and Strings
 4. Use First Class Collections

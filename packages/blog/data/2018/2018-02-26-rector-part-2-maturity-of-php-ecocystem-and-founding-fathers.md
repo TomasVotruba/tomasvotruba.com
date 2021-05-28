@@ -31,7 +31,7 @@ It took 12 years and 2 tools with over 4000 stars on Github to get here.
 
 ## Is PHP Ready for AST?
 
-A few years ago [Nikita Popov](https://nikic.github.io) started an ambitious project [nikic/PHP-Parser](https://github.com/nikic/PHP-Parser). PHP-Parser parses PHP code to AST. If you're new to Abstract Syntax Tree (AST), check [this post that describes 2 big changes in PHP ecosystem](/blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree/) thanks to AST.
+A few years ago [Nikita Popov](https://www.npopov.com) started an ambitious project [nikic/PHP-Parser](https://github.com/nikic/PHP-Parser). PHP-Parser parses PHP code to AST. If you're new to Abstract Syntax Tree (AST), check [this post that describes 2 big changes in PHP ecosystem](/blog/2017/11/06/wow-to-change-php-code-with-abstract-syntax-tree/) thanks to AST.
 
 ### Both Read & Write?
 

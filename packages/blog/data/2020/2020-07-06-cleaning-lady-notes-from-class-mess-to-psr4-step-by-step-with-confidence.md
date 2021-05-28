@@ -73,7 +73,7 @@ Always **go for a simple target first**. Don't be a hero. A hero falls from the 
 
 ✅
 
-Done. You've just made a first small step. Cross [one step of your list](/cleaning-lady-checklist), 9/10 is left.
+Done. You've just made a first small step. Cross one step of your list, 9/10 is left.
 But all those 9 steps are now 10 % less complicated.
 
 <blockquote class="blockquote text-center mt-5 mb-5">

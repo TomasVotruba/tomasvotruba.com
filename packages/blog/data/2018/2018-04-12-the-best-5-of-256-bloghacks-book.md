@@ -21,7 +21,7 @@ Vojta was so kind to lend me the book over the lunch. This post is an answer to 
 
 ## 1. Blog Once a Week for 2 Years
 
-When I posted [my first post in late 2015](/blog/2015/11/02/ovladni-doctrine-migrace-v-nette/) and it had 24 comments and I was very happy my knowledge is worth talking about. When I posted the next one and had no responses. I was frustrated and felt hopeless and as a just not good enough writer. So I stopped blogging for a few months.
+When I posted my first post in late 2015 and it had 24 comments and I was very happy my knowledge is worth talking about. When I posted the next one and had no responses. I was frustrated and felt hopeless and as a just not good enough writer. So I stopped blogging for a few months.
 
 I see now that it was a mistake, so the first tip is **to blog once a week**. Life is trying to tell me over and over again, that [Consistency Beats Talent, Luck, Good Intentions, and Even Quality](https://medium.com/@anthony_moore/consistency-beats-talent-luck-good-intentions-and-even-quality-66ba255aa4f7).
 

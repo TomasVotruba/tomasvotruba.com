@@ -66,9 +66,7 @@ I was running towards sunset this Saturday, and a simple idea came to me. It fel
 
 2 hours later... voilá 🎉
 
-<a href="/cleaning-lady-checklist">
-    <img src="/assets/images/posts/2020/checklist_overview.png" alt="" class="img-thumbnail">
-</a>
+<img src="/assets/images/posts/2020/checklist_overview.png" alt="" class="img-thumbnail">
 
 ## How to use it?
 
@@ -78,9 +76,7 @@ I was running towards sunset this Saturday, and a simple idea came to me. It fel
 - It uses local storage of your browser, so no-one will steal your data
 
 
-<a href="/cleaning-lady-checklist">
-    <img src="/assets/images/posts/2020/checklist_howto.gif" alt="" class="img-thumbnail">
-</a>
+<img src="/assets/images/posts/2020/checklist_howto.gif" alt="" class="img-thumbnail">
 
 <br>
 

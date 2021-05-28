@@ -103,7 +103,7 @@ You might see this as redundant work and that I'm a nerd (guilty!), but **I'm su
 
 ## The Clusters in Progress
 
-First, I started this series as to show you the idea of [clusters](/clusters) on my site, but then it went much further beyond that.
+First, I started this series as to show you the idea of clusters on my site, but then it went much further beyond that.
 
 Check the idea and feedback me, what do you think about that.
 

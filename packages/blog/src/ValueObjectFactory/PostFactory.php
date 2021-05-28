@@ -18,6 +18,7 @@ use TomasVotruba\Blog\FileSystem\PathAnalyzer;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\ValueObject\Option;
+use TomasVotruba\Website\ValueObject\RouteName;
 
 final class PostFactory
 {
@@ -88,17 +89,14 @@ final class PostFactory
         $updatedMessage = $configuration['updated_message'] ?? null;
 
         // message is required
-        if ($updatedAt instanceof DateTimeInterface) {
-            if ($updatedMessage === null || $updatedMessage === '') {
-                $message = sprintf('"updated_message" is missing in post %d', $id);
-                throw new InvalidPostConfigurationException($message);
-            }
-        }
+        $this->ensureUpdatedHasMessage($updatedAt, $updatedMessage, $id);
 
         $deprecatedAt = isset($configuration['deprecated_since']) ? DateTime::from(
             $configuration['deprecated_since']
         ) : null;
         $deprecatedMessage = $configuration['deprecated_message'] ?? null;
+
+        $this->ensureDeprecatedHasMessage($deprecatedAt, $deprecatedMessage, $id);
 
         $language = $configuration['lang'] ?? null;
 
@@ -176,8 +174,31 @@ final class PostFactory
     {
         $siteUrl = rtrim($this->siteUrl, '/');
 
-        return $siteUrl . $this->router->generate('post_detail', [
+        return $siteUrl . $this->router->generate(RouteName::POST_DETAIL, [
             'slug' => $slug,
         ]);
+    }
+
+    private function ensureDeprecatedHasMessage(?DateTime $deprecatedAt, mixed $deprecatedMessage, int $id): void
+    {
+        if (! $deprecatedAt instanceof DateTimeInterface) {
+            return;
+        }
+
+        if ($deprecatedMessage === null || $deprecatedMessage === '') {
+            $message = sprintf('"deprecated_message" is missing in post %d', $id);
+            throw new InvalidPostConfigurationException($message);
+        }
+    }
+
+    private function ensureUpdatedHasMessage(?DateTime $updatedAt, mixed $updatedMessage, int $id): void
+    {
+        if (! $updatedAt instanceof DateTimeInterface) {
+            return;
+        }
+        if ($updatedMessage === null || $updatedMessage === '') {
+            $message = sprintf('"updated_message" is missing in post %d', $id);
+            throw new InvalidPostConfigurationException($message);
+        }
     }
 }
