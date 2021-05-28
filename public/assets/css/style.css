@@ -341,6 +341,11 @@ a.btn {
     height: 5em;
 }
 
+.post-snippet {
+    font-size: 1.05rem;
+    line-height: 1.6rem;
+}
+
 /* mobile optimization */
 @media (max-width: 768px) {
     .homepage-face {

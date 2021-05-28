@@ -14,6 +14,7 @@ use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileInfo;
 use TomasVotruba\Blog\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
+use TomasVotruba\Blog\PostSnippetDecorator;
 use TomasVotruba\Blog\Validation\PostGuard;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
@@ -47,6 +48,7 @@ final class PostFactory
         private PathAnalyzer $pathAnalyzer,
         private RouterInterface $router,
         private PostGuard $postGuard,
+        private PostSnippetDecorator $postSnippetDecorator,
         ParameterProvider $parameterProvider,
         private FileSystemGuard $fileSystemGuard
     ) {
@@ -75,6 +77,8 @@ final class PostFactory
 
         $slug = $this->pathAnalyzer->getSlug($smartFileInfo);
         $htmlContent = $this->parsedownExtra->parse($matches['content']);
+
+        $htmlContent = $this->postSnippetDecorator->decorateHtmlContent($htmlContent);
 
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
         $deprecatedAt = isset($configuration['deprecated_since']) ? DateTime::from(
