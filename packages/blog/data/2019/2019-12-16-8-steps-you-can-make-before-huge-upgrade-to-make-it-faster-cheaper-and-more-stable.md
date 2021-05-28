@@ -306,6 +306,8 @@ If the answer is not "at every commit", it's not good enough. You need to have C
 
 Why? It's not that Bitbucket CI is worse than Gitlab CI or GitHub actions. It's the ecosystem support. **The Gitlab CI has the longest support for CI of a private project there is.**
 
+[link_rector_book]
+
 That means:
 
 - a lot of tutorials
@@ -314,6 +316,7 @@ That means:
 - community support in case of troubles
 
 As a side bonus, **it's free for private projects with unlimited users** and 2 000 build minutes per month (I've never reached that).
+
 
 <blockquote class="blockquote text-center mt-5 mb-3">
     If you use Gitlab CI on every commit,<br>

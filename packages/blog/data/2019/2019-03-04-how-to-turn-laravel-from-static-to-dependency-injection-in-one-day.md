@@ -73,6 +73,8 @@ One option is change pattern by **switching to another framework**, that already
 
 The second option is to try the approach in your framework, regardless of what is considered *best practice* or the *framework-way*.
 
+[link_rector_book]
+
 ## How move to Dependency Injection in Laravel?
 
 I like the way suggested in [post above](https://medium.freecodecamp.org/moving-away-from-magic-or-why-i-dont-want-to-use-laravel-anymore-2ce098c979bd).

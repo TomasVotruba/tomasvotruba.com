@@ -131,13 +131,13 @@ So that's what we did:
 <img src="/assets/images/posts/2019/spaceflow_10_points/09.png" class="img-thumbnail col-12 col-md-8">
 
 
+[link_rector_book]
+
 ### How to Apply?
 
 This one requires lof ot manual configuration tweaking of [Rector](https://github.com/rectorphp/rector) rules, but you can run basic migration with following set:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

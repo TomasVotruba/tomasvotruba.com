@@ -37,6 +37,8 @@ I wrote about [PHP upgrades before](/blog/2018/11/08/fatal-error-uncaught-error-
 
 If you split each of these lines into standalone pull-requests, you're the best!
 
+[link_rector_book]
+
 ## Forget `UPGRADE.md`
 
 You probably know I work almost part-time on [the Rector project](https://getrector.org). I gather feedback from conferences and meetups all over Europe and try to make Rector better every day. Recently he also migrated between [2 PHP frameworks](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1), because why not?
