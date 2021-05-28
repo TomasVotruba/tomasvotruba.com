@@ -82,10 +82,6 @@ a:focus {
     outline-offset: -2px;
 }
 
-.head_picture {
-    width: 10em; height: 10em;
-}
-
 hr {
     margin: 1.2em 0;
     border: 0;
@@ -335,14 +331,26 @@ a.btn {
     padding-bottom: 1.3em;
 }
 
+.homepage-face {
+    width: 8em;
+    height: 8em;
+}
 
-
+.homepage-logo {
+    width: 5em;
+    height: 5em;
+}
 
 /* mobile optimization */
 @media (max-width: 768px) {
-    .head_picture {
+    .homepage-face {
         width: 5em;
         height: 5em;
+    }
+
+    .homepage-logo {
+        width: 3em;
+        height: 3em;
     }
 
     #menu {
