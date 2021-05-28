@@ -69,17 +69,11 @@ final class PostFactory
         $id = $configuration['id'];
         $title = $configuration['title'];
 
-        $slug = $this->pathAnalyzer->getSlug($smartFileInfo);
-
-        $dateTime = $this->pathAnalyzer->detectDate($smartFileInfo);
-        if ($dateTime === null) {
-            throw new InvalidPostConfigurationException('Post date time was not resolved correctly');
-        }
-
         if (! isset($matches['content'])) {
             throw new InvalidPostConfigurationException('Post content is missing');
         }
 
+        $slug = $this->pathAnalyzer->getSlug($smartFileInfo);
         $htmlContent = $this->parsedownExtra->parse($matches['content']);
 
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
@@ -90,8 +84,8 @@ final class PostFactory
         $post = new Post(
             $id,
             $title,
-            $slug,
-            $dateTime,
+            slug: $slug,
+            dateTime: $this->pathAnalyzer->resolveDateTime($smartFileInfo),
             perex: $configuration['perex'],
             htmlContent: $this->decorateHeadlineWithId($htmlContent),
             tweetText: $configuration['tweet'] ?? null,
