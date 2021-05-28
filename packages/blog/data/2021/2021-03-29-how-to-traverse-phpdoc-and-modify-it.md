@@ -29,13 +29,15 @@ composer require symplify/simple-phpdoc-parser
 ```
 
 ```php
+use Symplify\SimplePhpDocParser\StaticFactory\SimplePhpDocParserStaticFactory;
+
 $values = <<<'PHPDOC'
 /**
  * @return int
  */
 PHPDOC;
 
-$simplePhpDocParser = Symplify\SimplePhpDocParser\StaticFactory\SimplePhpDocParserStaticFactory::create();
+$simplePhpDocParser = SimplePhpDocParserStaticFactory::create();
 $phpDocNode = $simplePhpDocParser->parse($values);
 ```
 
@@ -74,7 +76,8 @@ foreach ($phpDocNode->children as $phpDocChildNode) {
         continue;
     }
 
-    // does @return have simple type? here can be any TypeNode, e.g. UnionTypeNode, IntersectionTypeNode, CallableTypeNode etc.
+    // does @return have simple type? here can be any TypeNode
+    // e.g. UnionTypeNode, IntersectionTypeNode, CallableTypeNode etc.
     $returnTagValueNode = $phpDocChildNode->value;
     if (! $returnTagValueNode->type instanceof IdentifierTypeNode) {
         continue;
@@ -131,10 +134,12 @@ PhpDocNode:
 How should we extend the logic above to cover the `@param` tag too?
 
 ```diff
--   if (! $phpDocChildNode->value instanceof ReturnTagValueNode) {
-+   if (! $phpDocChildNode->value instanceof ReturnTagValueNode && ! $phpDocChildNode->value instanceof ParamTagValueNode) {
-        continue;
-    }
+ if (
+     ! $phpDocChildNode->value instanceof ReturnTagValueNode
++    && ! $phpDocChildNode->value instanceof ParamTagValueNode
+ ) {
+      continue;
+ }
 ```
 
 Easy pick, right?
