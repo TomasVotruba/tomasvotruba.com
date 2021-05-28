@@ -385,4 +385,9 @@ a.btn {
     .post-list-title {
         font-size: 1.3rem;
     }
+
+    .card-bigger {
+        font-size: 1.2rem;
+        line-height: 1.5em;
+    }
 }
