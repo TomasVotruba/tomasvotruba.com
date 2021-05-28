@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\ValueObjectFactory;
 
-use DateTimeInterface;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use ParsedownExtra;
@@ -15,6 +14,7 @@ use Symplify\SmartFileSystem\FileSystemGuard;
 use Symplify\SmartFileSystem\SmartFileInfo;
 use TomasVotruba\Blog\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
+use TomasVotruba\Blog\Validation\PostGuard;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\ValueObject\Option;
@@ -46,6 +46,7 @@ final class PostFactory
         private ParsedownExtra $parsedownExtra,
         private PathAnalyzer $pathAnalyzer,
         private RouterInterface $router,
+        private PostGuard $postGuard,
         ParameterProvider $parameterProvider,
         private FileSystemGuard $fileSystemGuard
     ) {
@@ -68,61 +69,46 @@ final class PostFactory
 
         $id = $configuration['id'];
         $title = $configuration['title'];
-        $perex = $configuration['perex'];
 
         $slug = $this->pathAnalyzer->getSlug($smartFileInfo);
 
         $dateTime = $this->pathAnalyzer->detectDate($smartFileInfo);
         if ($dateTime === null) {
-            throw new ShouldNotHappenException();
+            throw new InvalidPostConfigurationException('Post date time was not resolved correctly');
         }
 
         if (! isset($matches['content'])) {
-            throw new ShouldNotHappenException();
+            throw new InvalidPostConfigurationException('Post content is missing');
         }
+
         $htmlContent = $this->parsedownExtra->parse($matches['content']);
 
-        $tweetText = $configuration['tweet'] ?? null;
-        $tweetImage = $this->resolveTweetImage($configuration);
-
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
-        $updatedMessage = $configuration['updated_message'] ?? null;
-
-        // message is required
-        $this->ensureUpdatedHasMessage($updatedAt, $updatedMessage, $id);
-
         $deprecatedAt = isset($configuration['deprecated_since']) ? DateTime::from(
             $configuration['deprecated_since']
         ) : null;
-        $deprecatedMessage = $configuration['deprecated_message'] ?? null;
 
-        $this->ensureDeprecatedHasMessage($deprecatedAt, $deprecatedMessage, $id);
-
-        $language = $configuration['lang'] ?? null;
-
-        $sourceRelativePath = $this->getSourceRelativePath($smartFileInfo);
-
-        $htmlContent = $this->decorateHeadlineWithId($htmlContent);
-
-        $absoluteUrl = $this->createAbsoluteUrl($slug);
-
-        return new Post(
+        $post = new Post(
             $id,
             $title,
             $slug,
             $dateTime,
-            $perex,
-            $htmlContent,
-            $tweetText,
-            $tweetImage,
-            $updatedAt,
-            $updatedMessage,
-            $sourceRelativePath,
-            $deprecatedAt,
-            $deprecatedMessage,
-            $language,
-            $absoluteUrl
+            perex: $configuration['perex'],
+            htmlContent: $this->decorateHeadlineWithId($htmlContent),
+            tweetText: $configuration['tweet'] ?? null,
+            tweetImage: $this->resolveTweetImage($configuration),
+            updatedAt: $updatedAt,
+            updatedMessage: $configuration['updated_message'] ?? null,
+            sourceRelativePath: $this->getSourceRelativePath($smartFileInfo),
+            deprecatedAt: $deprecatedAt,
+            deprecatedMessage: $configuration['deprecated_message'] ?? null,
+            language: $configuration['lang'] ?? null,
+            absoluteUrl: $this->createAbsoluteUrl($slug)
         );
+
+        $this->postGuard->validate($post);
+
+        return $post;
     }
 
     /**
@@ -177,28 +163,5 @@ final class PostFactory
         return $siteUrl . $this->router->generate(RouteName::POST_DETAIL, [
             'slug' => $slug,
         ]);
-    }
-
-    private function ensureDeprecatedHasMessage(?DateTime $deprecatedAt, mixed $deprecatedMessage, int $id): void
-    {
-        if (! $deprecatedAt instanceof DateTimeInterface) {
-            return;
-        }
-
-        if ($deprecatedMessage === null || $deprecatedMessage === '') {
-            $message = sprintf('"deprecated_message" is missing in post %d', $id);
-            throw new InvalidPostConfigurationException($message);
-        }
-    }
-
-    private function ensureUpdatedHasMessage(?DateTime $updatedAt, mixed $updatedMessage, int $id): void
-    {
-        if (! $updatedAt instanceof DateTimeInterface) {
-            return;
-        }
-        if ($updatedMessage === null || $updatedMessage === '') {
-            $message = sprintf('"updated_message" is missing in post %d', $id);
-            throw new InvalidPostConfigurationException($message);
-        }
     }
 }

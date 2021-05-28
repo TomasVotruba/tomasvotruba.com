@@ -25,7 +25,7 @@ You might see such notices right before your code gets checked:
 PHP Notice:  Fixer "..." is deprecated. Use "..." instead
 ```
 
-## Why were These Fixer Dropped?
+## Why were These Fixers Dropped?
 
 You'll find answer to this question [in previous post](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/). To extend answer specifically for this post: Fixer and Rector do the same job - **they change code based on specific recipe**.
 
@@ -35,6 +35,8 @@ You'll find answer to this question [in previous post](/blog/2020/05/04/how-to-u
 - Rector works with abstract syntax tree → **great for refactoring, method/property position changes**, rename across the code base, etc.
 
 Now we know *why*. Let's look *how* to deal with that.
+
+[link_rector_book]
 
 ## What to do With These Deprecations?
 
