@@ -23,7 +23,7 @@ What is the practical approach to finding a duplicated code? You probably know a
 1.82% duplicated lines out of 446676 total lines of code
 ```
 
-Is this number high? Is it low? How low should it be? The output is so generic. There is no clear answer to what to do with it. That's because [phpcpd is using tokens](https://tomasvotruba.com/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/).
+Is this number high? Is it low? How low should it be? The output is so generic. There is no clear answer to what to do with it. That's because [phpcpd is using tokens](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/).
 
 PHPStan changes an approach to duplicated code. It runs on php-parser and uses an abstract syntax tree. So why should we care?
 

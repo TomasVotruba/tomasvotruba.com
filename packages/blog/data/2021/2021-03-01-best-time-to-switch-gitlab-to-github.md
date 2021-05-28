@@ -73,8 +73,8 @@ But that's **just bare setup**. Once we add:
 * template checks
 * config checks
 * translation validation
-* [custom PHPStan rules](https://tomasvotruba.com/blog/2020/12/14/new-in-symplify-9-more-than-110-phpstan-rules/)
-* automated [coding standard merging](https://tomasvotruba.com/blog/2020/12/28/why-coding-standards-should-not-be-part-of-ci/)
+* [custom PHPStan rules](/blog/2020/12/14/new-in-symplify-9-more-than-110-phpstan-rules/)
+* automated [coding standard merging](/blog/2020/12/28/why-coding-standards-should-not-be-part-of-ci/)
 * or Rector run...
 
 ...we can easily get over 10 000-15 000 minutes month.
@@ -122,7 +122,7 @@ I'm delighted to have experienced GitHub and Gitlab on both open-source and priv
 
 <br>
 
-Do you want to switch from GitLab/Travis/Bitbucket to GitHub? Are you afraid of too high learning costs? [Hire me](https://tomasvotruba.com/contact/) to get it done fast.
+Do you want to switch from GitLab/Travis/Bitbucket to GitHub? Are you afraid of too high learning costs? [Hire me](/contact/) to get it done fast.
 
 Are you standing behind Gitlab even with its pricing? Let me know in the comments why.
 

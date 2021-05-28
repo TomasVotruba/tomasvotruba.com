@@ -141,7 +141,7 @@ Easy pick, right?
 
 <br>
 
-<img src="https://tomasvotruba.com/assets/images/posts/2020/symplify_monorepo_split.jpg" class="img-thumbnail">
+<img src="/assets/images/posts/2020/symplify_monorepo_split.jpg" class="img-thumbnail">
 
 
 ## Next Level: 2 Nodes with Nested Types
