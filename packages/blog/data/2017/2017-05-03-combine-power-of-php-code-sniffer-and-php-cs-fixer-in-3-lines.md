@@ -27,7 +27,7 @@ Let's say we want to check arrays. We add first *checker* that requires short PH
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(DisallowLongArraySyntaxSniff::class);
 };
@@ -44,7 +44,7 @@ use PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff
 use PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(DisallowLongArraySyntaxSniff::class);
     $services->set(TrailingCommaInMultilineArrayFixer::class);

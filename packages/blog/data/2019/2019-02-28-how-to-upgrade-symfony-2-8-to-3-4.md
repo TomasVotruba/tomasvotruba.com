@@ -63,23 +63,20 @@ Add Symfony sets in it:
 
 ```php
 use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\Symfony\Set\SymfonySetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-
-    $parameters->set(Option::SETS, [
-        SetList::SYMFONY_28,
-        // take it 1 set at a time to so next set works with output of the previous set; I do 1 set per pull-request
-        // SetList::SYMFONY_30,
-        // SetList::SYMFONY_31,
-        // SetList::SYMFONY_32,
-        // SetList::SYMFONY_33,
-        // SetList::SYMFONY_34,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SymfonySetList::SYMFONY_28);
+    // take it 1 set at a time to so next set works with output of the previous set; I do 1 set per pull-request
+    // $containerConfigurator->import(SetList::SYMFONY_30);
+    // $containerConfigurator->import(SetList::SYMFONY_31);
+    // $containerConfigurator->import(SetList::SYMFONY_32);
+    // $containerConfigurator->import(SetList::SYMFONY_33);
+    // $containerConfigurator->import(SetList::SYMFONY_34);
 
     // set paths to directories with your code
+    $parameters = $containerConfigurator->parameters();
     $parameters->set(Option::PATHS, [
         __DIR__ . '/app',
         __DIR__ . '/src',
@@ -95,17 +92,12 @@ use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-
-    $parameters->set(Option::SETS, [
-        SetList::PHP_53,
-        // again 1 set at a time
-        // SetList::PHP_54,
-        // SetList::PHP_55,
-        // SetList::PHP_56,
-    ]);
-
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PHP_53);
+    // again 1 set at a time
+    // $containerConfigurator->import(SetList::PHP_54);
+    // $containerConfigurator->import(SetList::PHP_55);
+    // $containerConfigurator->import(SetList::PHP_56);
     // ...
 };
 ```

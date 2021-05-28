@@ -12,7 +12,7 @@ use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
 use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
     $parameters->set(Option::AUTO_IMPORT_NAMES, true);

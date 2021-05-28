@@ -15,7 +15,7 @@ I like the service configuration provided by Symfony. Typo-proof, everything is 
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->defaults()
@@ -37,7 +37,7 @@ But that's not everything we have in our configs. Let's look at a common extensi
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('break', [
         'dbal' => [
             'host' => '%env(DATABASE_HOST)%',
@@ -55,7 +55,7 @@ I'll share you secret deep from my traumatized mind - this is what I see:
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension('error', [
         'bug' => [
             'typo' => ' _missing',

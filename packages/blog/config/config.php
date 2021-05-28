@@ -6,7 +6,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Symplify\PackageBuilder\Strings\StringFormatConverter;
 use Symplify\SmartFileSystem\Finder\FinderSanitizer;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->defaults()

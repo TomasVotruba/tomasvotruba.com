@@ -24,14 +24,10 @@ ECS uses standard Symfony PHP config:
 ```php
 // ecs.php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [
-        SetList::PSR_12,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PSR_12);
 };
 ```
 
@@ -75,7 +71,7 @@ Then hit the "ctrl" + "space" for class autocomplete in PHPStorm (it works even 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(DeclareStrictTypesFixer::class);
 };
@@ -104,7 +100,7 @@ use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
     $parameters->set(Option::SKIP, [
@@ -131,7 +127,7 @@ use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
     $parameters->set(Option::SKIP, [
@@ -180,7 +176,7 @@ return PhpCsFixer\Config::create()
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set(ArraySyntaxFixer::class)
@@ -226,14 +222,10 @@ $config = PhpCsFixer\Config::create()
 ```php
 // ecs.php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [
-        SetList::PSR_12,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PSR_12);
 };
 ```
 

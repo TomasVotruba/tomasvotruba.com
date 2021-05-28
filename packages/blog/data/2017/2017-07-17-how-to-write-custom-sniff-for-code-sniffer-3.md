@@ -252,7 +252,7 @@ With [ECS](https://github.com/symplify/easy-coding-standard) put the class to `e
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Sniffs\Naming\ExceptionNameSniff;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(ExceptionNameSniff::class);
 };

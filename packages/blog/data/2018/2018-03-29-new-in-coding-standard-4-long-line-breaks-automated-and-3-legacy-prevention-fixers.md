@@ -29,7 +29,7 @@ If you use `LineLengthSniff`, you know it's painful to fix every error report it
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set(LineLengthSniff::class)
@@ -121,7 +121,7 @@ Welcome `LineLengthFixer`.
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(LineLengthFixer::class);
 };
@@ -144,7 +144,7 @@ As you guessed, this fixer works with 120 chars as maximum line-size... by defau
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set(LineLengthFixer::class)

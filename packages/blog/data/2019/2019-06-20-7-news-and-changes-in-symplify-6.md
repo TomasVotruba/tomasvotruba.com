@@ -46,7 +46,7 @@ In new *Symplify 8*, you can use just one config with `only` option instead:
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     // all rules must be registered
@@ -96,13 +96,9 @@ Why? The sets are only string references, so its useless for human to remember t
 +use Symplify\EasyCodingStandard\ValueObject\Option;
 +use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
 -    $containerConfigurator->import(__DIR__ . '/vendor/symplify/easy-coding-standard/config/php71.php');
-
-+    $parameters = $containerConfigurator->parameters();
-+    $parameters->set(Option::SETS, [
-+         SetList::PHP_71,
-+    ]);
++    $containerConfigurator->import(SetList::PHP_71);
  };
 ```
 
@@ -115,7 +111,7 @@ People confused this options and created *WTF* issues. That's why the `exclude_c
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 +use Symplify\EasyCodingStandard\ValueObject\Option;
 
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
      $parameters = $containerConfigurator->parameters();
 -    $parameters->set('exclude_checkers', [
 +    $parameters->set(Option::SKIP, [
@@ -141,7 +137,7 @@ Do you like `SplFileInfo` that is 100 % sure the file exists? In that case, you 
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 +use Symplify\EasyCodingStandard\ValueObject\Option;
 
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
      $services = $containerConfigurator->services();
 -    $services->set(Symplify\EasyCodingStandard\Finder\FinderSanitizer);
 +    $services->set(Symplify\PackageBuilder\FileSystem\FinderSanitizer);
@@ -183,7 +179,7 @@ So instead, *Symplify 6* adds better system to pass collected services of certai
  // ecs.php
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
      $services = $containerConfigurator->services();
 
 -    $services->set(Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer::class);

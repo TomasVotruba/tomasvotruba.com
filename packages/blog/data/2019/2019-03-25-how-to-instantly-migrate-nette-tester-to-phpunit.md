@@ -57,6 +57,8 @@ Putting numbers and trends aside - **this is about your needs**. Do you need to 
 
 The guy in the pub that night needed this, so...  *challenge accepted*!
 
+[link_rector_book]
+
 ## Single Test Case
 
 Luckily, Tester and PHPUnit are like twins:
@@ -154,9 +156,8 @@ use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [SetList::NETTE_TESTER_TO_PHPUNIT]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::NETTE_TESTER_TO_PHPUNIT);
 };
 ```
 

@@ -73,7 +73,7 @@ As you can see in the bottom part of screenshot, most of rules are configurable.
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set('ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff')
         ->property('minLength', 4);
@@ -85,7 +85,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     // Rule 6: Do not abbreviate

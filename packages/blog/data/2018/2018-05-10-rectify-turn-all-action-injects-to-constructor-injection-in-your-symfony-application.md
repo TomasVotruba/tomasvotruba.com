@@ -120,11 +120,9 @@ use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
+    $containerConfigurator->import(SetList::ACTION_INJECTION_TO_CONSTRUCTOR_INJECTION);
 
-    $parameters->set(Option::SETS, [
-        SetList::ACTION_INJECTION_TO_CONSTRUCTOR_INJECTION
-    ]);
+    $parameters = $containerConfigurator->parameters();
 
     // the default value
     $parameters->set('kernel_class', 'App\Kernel');

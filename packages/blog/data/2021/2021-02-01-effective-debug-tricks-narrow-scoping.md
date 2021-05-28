@@ -182,16 +182,16 @@ The idea is comment out half of the configuration, run the tool and see if the b
 
 ```diff
  // rector.php
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
+     $parameters = $containerConfigurator->parameters();
      $parameters->set(Option::AUTO_IMPORT_NAMES, true);
 
-     $parameters->set(Option::SETS, [
-         SetList::PHP_74,
-         SetList::PHP_80,
--        SetList::CODE_QUALITY,
-+//      SetList::CODE_QUALITY,
--        SetList::CODING_STYLE,
-+//      SetList::CODING_STYLE,
+     $containerConfigurator->import(SetList::PHP_74);
+     $containerConfigurator->import(SetList::PHP_80);
+-    $containerConfigurator->import(SetList::CODE_QUALITY);
++//  $containerConfigurator->import(SetList::CODE_QUALITY);
+-    $containerConfigurator->import(SetList::CODING_STYLE);
++//  $containerConfigurator->import(SetList::CODING_STYLE);
     ]);
 ```
 
@@ -199,32 +199,32 @@ Is the bug still there? Remove the commended lines and repeated the half-comment
 
 ```diff
  // rector.php
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
+     $parameters = $containerConfigurator->parameters();
      $parameters->set(Option::AUTO_IMPORT_NAMES, true);
 
-     $parameters->set(Option::SETS, [
-         SetList::PHP_74,
--        SetList::PHP_80,
-+//      SetList::PHP_80,
--        SetList::CODE_QUALITY,
--        SetList::CODING_STYLE,
-    ]);
+     $containerConfigurator->import(SetList::PHP_74);
+-    $containerConfigurator->import(SetList::PHP_80);
++//  $containerConfigurator->import(SetList::PHP_80);
+-    $containerConfigurator->import(SetList::CODE_QUALITY);
+-    $containerConfigurator->import(SetList::CODING_STYLE);
+ ]);
 ```
 
 Is the bug gone? It must be one of those commented sets, so comment out half of them and let the ofher half active:
 
 ```diff
  // rector.php
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
+     $parameters = $containerConfigurator->parameters();
      $parameters->set(Option::AUTO_IMPORT_NAMES, true);
 
-     $parameters->set(Option::SETS, [
--        SetList::PHP_74,
--        SetList::PHP_80,
-         SetList::CODE_QUALITY,
--        SetList::CODING_STYLE,
-+//      SetList::CODING_STYLE,
-    ]);
+-    $containerConfigurator->import(SetList::PHP_74);
+-    $containerConfigurator->import(SetList::PHP_80);
+     $containerConfigurator->import(SetList::CODE_QUALITY);
+-    $containerConfigurator->import(SetList::CODING_STYLE);
++//  $containerConfigurator->import(SetList::CODING_STYLE);
+ ]);
 ```
 
 This way, we discover quickly which exact set and which exact rule is causing the problem.

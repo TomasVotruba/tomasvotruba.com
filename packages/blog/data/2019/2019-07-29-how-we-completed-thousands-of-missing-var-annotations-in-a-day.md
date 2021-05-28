@@ -408,7 +408,7 @@ composer require slevomat/coding-standard --dev
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     // every property should have @var annotation
     $services->set(SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff::class);

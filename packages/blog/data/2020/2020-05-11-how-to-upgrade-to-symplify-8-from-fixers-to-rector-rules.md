@@ -68,7 +68,7 @@ The `RemoveEmptyDocBlockFixer` rule basically copied behavior of native `NoEmpty
 
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
      $services = $containerConfigurator->services();
 -    $services->set(Symplify\CodingStandard\Fixer\Commenting\RemoveEmptyDocBlockFixer::class);
 +    $services->set(PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer::class);

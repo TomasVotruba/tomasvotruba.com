@@ -289,17 +289,14 @@ composer require rector/rector --dev
 
 ```php
 // rector.php
-use Rector\Core\Configuration\Option;
+use Rector\Doctrine\Set\DoctrineSetList;
 use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [
-        SetList::PHP_74,
-        // Protip: Do you want to update your `Collection` syntax for PHPStorm and PHPStan friendly?
-        SetList::DOCTRINE_CODE_QUALITY,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PHP_74);
+    // Protip: Do you want to update your `Collection` syntax for PHPStorm and PHPStan friendly?
+    $containerConfigurator->import(DoctrineSetList::DOCTRINE_CODE_QUALITY);
 };
 ```
 

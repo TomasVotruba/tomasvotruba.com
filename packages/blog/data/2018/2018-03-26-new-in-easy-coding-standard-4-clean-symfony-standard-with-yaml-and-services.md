@@ -25,7 +25,7 @@ Docker users will be happy for this feature, since it makes ECS much more usable
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set('cache_directory', '.ecs_cache');
 };

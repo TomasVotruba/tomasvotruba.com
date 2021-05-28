@@ -129,7 +129,7 @@ use Symplify\CodingStandard\Fixer\Commenting\RemoveEmptyDocBlockFixer;
 use Symplify\CodingStandard\Fixer\Commenting\RemoveSuperfluousDocBlockWhitespaceFixer;
 use Symplify\CodingStandard\Fixer\Commenting\RemoveUselessDocBlockFixer;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set(RemoveUselessDocBlockFixer::class);

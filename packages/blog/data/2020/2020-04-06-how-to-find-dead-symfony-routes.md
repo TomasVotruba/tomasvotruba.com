@@ -12,6 +12,9 @@ tweet_image: "/assets/images/posts/2019/spaceflow_10_points/13.png"
 updated_since: "April 2020"
 updated_message: |
     Route visit table structure has changed and new command `show-dead-routes` was added.
+
+deprecated_since: "November 2020"
+deprecated_message: "This package didn't shown as very useful, so we deprected it. Use classic logging services instead."
 ---
 
 ## Why are Dead Routes Important for Your Code?

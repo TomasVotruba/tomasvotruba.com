@@ -77,7 +77,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
 use PhpCsFixer\Fixer\ClassNotation\FinalClassFixer;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     // keep line-length max. 120 chars long
@@ -217,10 +217,7 @@ use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [
-        SetList::DEAD_CODE,
-    ]);
+    $containerConfigurator->import(SetList::DEAD_CODE);
 
     $services = $containerConfigurator->services();
     $services->set(RemoveUnusedDoctrineEntityMethodAndPropertyRector::class);
@@ -264,14 +261,11 @@ How to get it into your code? Easy:
 declare(strict_types=1);
 
 use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\Nette\Set\NetteSetList;use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return function (ContainerConfigurator $containerConfigurator) : void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [
-        SetList::NETTE_UTILS_CODE_QUALITY,
-    ]);
+    $containerConfigurator->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
 };
 ```
 

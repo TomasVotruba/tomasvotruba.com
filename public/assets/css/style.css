@@ -200,7 +200,7 @@ pre {
 }
 
 .post {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     /* inspiration https://christoph-rumpel.com/2020/8/refactoring-php */
     /*font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;*/
 
@@ -227,6 +227,10 @@ pre {
 
 .container ul li {
     line-height: 1.6em;
+}
+
+.post li {
+    margin-left: -1em;
 }
 
 table ul {

@@ -7,7 +7,7 @@ use function Symplify\Amnesia\Functions\env;
 use Symplify\Amnesia\ValueObject\Symfony\Extension\Twig\NumberFormat;
 use Symplify\Amnesia\ValueObject\Symfony\Extension\TwigExtension;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension(TwigExtension::NAME, [
         TwigExtension::DEFAULT_PATH => '%kernel.project_dir%/templates',
         TwigExtension::GLOBALS => [

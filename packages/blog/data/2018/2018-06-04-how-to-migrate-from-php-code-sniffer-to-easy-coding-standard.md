@@ -29,11 +29,8 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Symplify\EasyCodingStandard\ValueObject\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [
-        SetList::PSR_12,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PSR_12);
 };
 ```
 
@@ -68,7 +65,7 @@ How to do that in EasyCodingStandard? Copy paste the last name `DocComment` and 
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(DocCommentSniff::class);
 };
@@ -101,7 +98,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Symplify\EasyCodingStandard\ValueObject\Option;
 use PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set(Option::SKIP, [
         DoubleQuoteUsageSniff::class => [
@@ -142,7 +139,7 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Symplify\EasyCodingStandard\ValueObject\Option;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set(Option::SKIP, [
         DocCommentSniff::class . '.ContentAfterOpen' => null,
@@ -183,7 +180,7 @@ use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
     $parameters->set(Option::SKIP, [
@@ -247,7 +244,7 @@ declare(strict_types=1);
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set(CyclomaticComplexitySniff::class)

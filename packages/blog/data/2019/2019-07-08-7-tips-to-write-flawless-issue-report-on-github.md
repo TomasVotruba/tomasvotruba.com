@@ -270,15 +270,11 @@ vendor/bin/rector process src/SomeFile.php --dry-run
 With `rector.php` config:
 
 ```php
-use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\Symfony\Set\SymfonySetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->services();
-    $parameters->set(Option::SETS, [
-        SetList::SYMFONY_43,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SymfonySetList::SYMFONY_43);
 };
 ```
 

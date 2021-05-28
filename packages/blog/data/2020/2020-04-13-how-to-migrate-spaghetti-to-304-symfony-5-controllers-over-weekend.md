@@ -363,6 +363,8 @@ And that's it!
 - **be ok with broken code** for a while, it's normal even with small changes
 - don't deploy code to the production, merge the PR as soon as possible, but test the application on a separate server at least for a week
 
+[link_rector_book]
+
 ## The Final Plan
 
 - install Symfony dependencies

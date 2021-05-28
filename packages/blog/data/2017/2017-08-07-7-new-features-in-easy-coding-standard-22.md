@@ -36,16 +36,12 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Symplify\EasyCodingStandard\ValueObject\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-
-    $parameters->set(Option::SETS, [
-        SetList::PSR_12,
-        SetList::COMMON,
-        SetList::SYMPLIFY,
-        // ...
-        // explore the constants on `SetList` class
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PSR_12);
+    $containerConfigurator->import(SetList::COMMON);
+    $containerConfigurator->import(SetList::SYMPLIFY);
+    // ...
+    // explore the constants on `SetList` class
 };
 ```
 
@@ -61,13 +57,10 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 use Symplify\EasyCodingStandard\ValueObject\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PSR_12);
+
     $parameters = $containerConfigurator->parameters();
-
-    $parameters->set(Option::SETS, [
-        SetList::PSR_12,
-    ]);
-
     $parameters->set(Option::SKIP, [
         // ignore 1 rule everywhere
         UnaryOperatorSpacesFixer::class => null,

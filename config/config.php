@@ -7,7 +7,7 @@ use function Symplify\Amnesia\Functions\env;
 use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 use TomasVotruba\Website\ValueObject\Option;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/../packages/*/config/*.php');
     $containerConfigurator->import(__DIR__ . '/packages/*');
 

@@ -166,15 +166,13 @@ The basic [ECS](https://github.com/symplify/easy-coding-standard) setup we use l
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [
-        SetList::PSR_12,
-        SetList::CLEAN_CODE,
-        SetList::COMMENTS,
-        // very nice to have ↓
-        SetList::SYMPLIFY,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PSR_12);
+    $containerConfigurator->import(SetList::CLEAN_CODE);
+    $containerConfigurator->import(SetList::COMMENTS);
+
+    // very nice to have ↓
+    $containerConfigurator->import(SetList::SYMPLIFY);
 };
 ```
 
