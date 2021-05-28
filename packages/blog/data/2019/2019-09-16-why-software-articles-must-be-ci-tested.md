@@ -10,6 +10,9 @@ perex: |
 
 tweet: "New Post on my Blog: Why Softare Articles Must be CI tested          #sustainability"
 tweet_image: "/assets/images/posts/2019/tested-article/covered.png"
+
+deprecated_since: "May 2021"
+deprecated_message: "In the end, testing articles required so much work to be useful. I will let testing for book content, so updates can be released more easily. And the book of life will be prolonged :)."
 ---
 
 Do you know [Awesome lists](https://github.com/sindresorhus/awesome)? If not, go to check them. They collect best sources about a certain topic. When I try to learn something new, I usually start on Github looking for "awesome <technology>". I recommend at least briefly to check them.
