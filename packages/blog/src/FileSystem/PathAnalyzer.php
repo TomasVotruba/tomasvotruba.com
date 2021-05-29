@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\FileSystem;
 
-use DateTimeInterface;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use Symplify\SmartFileSystem\SmartFileInfo;
@@ -24,7 +23,7 @@ final class PathAnalyzer
      */
     private const NAME_REGEX = '(?<name>[\w\d-]*)';
 
-    public function resolveDateTime(SmartFileInfo $fileInfo): DateTimeInterface
+    public function resolveDateTime(SmartFileInfo $fileInfo): DateTime
     {
         $match = Strings::match($fileInfo->getFilename(), '#' . self::DATE_REGEX . '#');
         if ($match === null) {
