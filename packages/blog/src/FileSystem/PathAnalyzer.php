@@ -37,16 +37,16 @@ final class PathAnalyzer
 
     public function getSlug(SmartFileInfo $fileInfo): string
     {
-        $date = $this->resolveDateTime($fileInfo);
+        $dateTime = $this->resolveDateTime($fileInfo);
         $dateAndNamePattern = sprintf('#%s-%s#', self::DATE_REGEX, self::NAME_REGEX);
 
         $match = (array) Strings::match($fileInfo->getFilename(), $dateAndNamePattern);
 
         $dateLessBreakDateTime = DateTime::from('2021-02-22');
-        if ($date >= $dateLessBreakDateTime) {
+        if ($dateTime >= $dateLessBreakDateTime) {
             return $match['name'];
         }
 
-        return $date->format('Y/m/d') . '/' . $match['name'];
+        return $dateTime->format('Y/m/d') . '/' . $match['name'];
     }
 }
