@@ -93,8 +93,6 @@ Which one would you pick from this 2 information? I'd go for the last one, so di
 This is how 1 spec migration might look like:
 
 ```diff
- <?php
-
 -namespace spec\App\Product;
 +namespace Tests\App\Product;
 
@@ -129,39 +127,15 @@ This is how 1 spec migration might look like:
 +        $this->expectException('SomeException');
 +        $this->createMe->item(5);
      }
-
--    public function it_should_be_called(Cart $cart)
-+    public function testCalled()
-     {
-+        /** @var Cart|\PHPUnit\Framework\MockObject\MockObject $cart */
-+        $cart = $this->createMock(Cart::class);
--        $cart->price()->shouldBeCalled()->willReturn(5);
-+        $cart->expects($this->atLeastOnce())->method('price')->willReturn(5);
--        $cart->shippingAddress(Argument::type(Address::class))->shouldBeCalled();
-+        $cart->expects($this->atLeastOnce())->method('shippingAddress')->with($this->isType(Address::class));
-     }
-
--     public function is_bool_check()
-+     public function testBoolCheck()
-      {
--         $this->hasFailed()->shouldBe(false);
-+         $this->assertFalse($this->createMe->hasFailed());
--         $this->hasFailed()->shouldNotBe(false);
-+         $this->assertNotFalse($this->createMe->hasFailed());
-      }
-
--     public function is_array_type()
-+     public function testArrayType()
-      {
--         $this->shippingAddresses()->shouldBeArray();
-+         $this->assertIsIterable($this->createMe->shippingAddresses());
-      }
  }
 ```
 
 Pretty clear, right?
 
+
 ## How to Instantly Migrate from PhpSpec to PHPUnit?
+
+[link_rector_book]
 
 First, take a 2-week paid vacation... Just kidding. Start with Rector which migrates ~95 % of code cases. It also renames `*Spec.php` to `*Test.php` and moves them from `/spec` to `/tests` directory:
 
@@ -179,9 +153,8 @@ use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [SetList::PHPSPEC_TO_PHPUNIT]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PHPSPEC_TO_PHPUNIT);
 };
 ```
 

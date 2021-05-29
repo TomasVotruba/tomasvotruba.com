@@ -99,7 +99,7 @@ One of these places is in Symfony PHP configs. If you haven't switched from YAML
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set('secret_hash', 'ASDF1234');
 
@@ -144,7 +144,7 @@ How would you pass all of them to `BookProcessor`?
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use function Symfony\Component\DependencyInjection\Loader\Configurator\tagged_iterator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $resourceProcessorTag = 'resource_processor';
@@ -165,7 +165,7 @@ We can reduce this boring code to:
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 - use function Symfony\Component\DependencyInjection\Loader\Configurator\tagged_iterator;
 
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
      $services = $containerConfigurator->services();
 -
 -    $resourceProcessorTag = 'resource_processor';
@@ -236,7 +236,7 @@ use Symplify\Amnesia\ValueObject\Symfony\Extension\Doctrine\Mapping;
 use Symplify\Amnesia\ValueObject\Symfony\Extension\Doctrine\ORM;
 use Symplify\Amnesia\ValueObject\Symfony\Extension\DoctrineExtension;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->extension(DoctrineExtension::NAME, [
         DoctrineExtension::DBAL => [
             DBAL::DRIVER => 'pdo_mysql',

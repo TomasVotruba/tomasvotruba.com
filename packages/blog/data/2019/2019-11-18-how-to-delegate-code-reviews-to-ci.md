@@ -28,6 +28,8 @@ It's a lot. But you want more laziness, right?
 
 **Rector can do much more without you even running it**.
 
+[link_rector_book]
+
 ## What do you Review in Code?
 
 If you do code-review, what do you mostly do?
@@ -65,9 +67,8 @@ use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [SetList::DEAD_CODE]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::DEAD_CODE);
 };
 ```
 
@@ -160,17 +161,14 @@ Here are my favorite sets I apply first:
 declare(strict_types=1);
 
 use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\Nette\Set\NetteSetList;use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [
-        SetList::CODING_STYLE,
-        SetList::CODE_QUALITY,
-        SetList::DEAD_CODE,
-        SetList::NETTE_UTILS_CODE_QUALITY,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::CODING_STYLE);
+    $containerConfigurator->import(SetList::CODE_QUALITY);
+    $containerConfigurator->import(SetList::DEAD_CODE);
+    $containerConfigurator->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
 };
 ```
 

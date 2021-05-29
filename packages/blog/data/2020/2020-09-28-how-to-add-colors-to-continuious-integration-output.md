@@ -12,13 +12,7 @@ tweet_image: "/assets/images/posts/2020/ansi_no_mix_colors.png"
 ---
 
 - Do you use Travis, Github Actions, or Gitlab CI?
-
-<br>
-
 - Do you use composer, PHPUnit, ECS, Rector, or PHPStan?
-
-<br>
-
 - Do you have colors enabled in `phpunit.xml`?
 
 ```xml
@@ -27,8 +21,6 @@ tweet_image: "/assets/images/posts/2020/ansi_no_mix_colors.png"
     <!-- ... -->
 </phpunit>
 ```
-
-<br>
 
 - Do you use [composer scripts](https://blog.martinhujer.cz/have-you-tried-composer-scripts/) to prevent typos and re-use CI tool setup?
 
@@ -68,8 +60,8 @@ This was usually the output:
 
 The colors came to my life. I could read again, and the output was the same as in local environment!
 
-<img src="/assets/images/posts/2020/ansi_colors.png">
-<img src="/assets/images/posts/2020/ansi_colors_2.png">
+<img src="/assets/images/posts/2020/ansi_colors.png" class="shadow img-thumbnail">
+<img src="/assets/images/posts/2020/ansi_colors_2.png" class="shadow img-thumbnail">
 
 What happened? Did they fix something on Github Actions? Or composer (and all the other tools were) was fixed?
 

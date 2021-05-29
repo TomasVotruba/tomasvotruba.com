@@ -23,7 +23,7 @@ What is the name of the key? Secret, secrets...? We don't know, and we only copy
 
 ## 2. Plain PHP
 
-So how does this [memory-lock](https://tomasvotruba.com/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) change with PHP?
+So how does this [memory-lock](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) change with PHP?
 
 <img src="https://user-images.githubusercontent.com/924196/110402071-02214680-807b-11eb-894b-48830713fecf.gif" class="img-thumbnail">
 

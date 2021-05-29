@@ -183,7 +183,7 @@ We've prepared a 3 step switch for you:
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
  use Symplify\MonorepoBuilder\ValueObject\Option;
 
- return static function (ContainerConfigurator $containerConfigurator): void {
+ return function (ContainerConfigurator $containerConfigurator): void {
      $parameters = $containerConfigurator->parameters();
 -    $parameters->set(Option::DIRECTORIES_TO_REPOSITORIES, [
 -        'packages/*' => 'git@github.com:symplify/*.git',

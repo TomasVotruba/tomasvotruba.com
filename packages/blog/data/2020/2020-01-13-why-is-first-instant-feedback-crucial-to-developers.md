@@ -42,6 +42,8 @@ Let's say you have started your dedicated hour to open-source a week.
 - 13 minutes...
 - ...and CI failed on test case
 
+<br>
+
 **You fix the test**, send new commit to the PR branch and wait:
 
 - 5 minutes...
@@ -58,7 +60,9 @@ Now you've spend **40 minutes** of your 60 minutes by:
 
 That's **65 % percent time wasted**.
 
-This makes me want to throw the computer out of the window, procrastinate, check my messages or another shallow work that ruins all my focus.
+<br>
+
+This makes me wanna throw the computer out of the window, procrastinate, check my messages or another shallow work that ruins all my focus.
 
 **True story**, this was the situation for CI in Rector in 2019. It was soo frustrating. And I don't talk about [code coverage with Xdebug that took us 33 minutes](/blog/2019/09/02/how-to-speedup-test-coverage-on-travis-by-95-percent/).
 
@@ -68,7 +72,7 @@ This makes me want to throw the computer out of the window, procrastinate, check
 
 A miracle came to my life. Exactly week ago [Markus Staab](https://github.com/staabm) talked about the idea of trying Github Actions in Rector repository to ease work to Travis CI.
 
-### What are Github Actions?
+## What are Github Actions?
 
 I've heard about Github Actions, but I didn't get the idea. Is it for deploy or a bot?
 
@@ -121,4 +125,4 @@ In the next post, we'll look at **practical migration** of common and less-commo
 
 <br>
 
-Happy feedback looping!
+Happy coding!

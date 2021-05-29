@@ -49,7 +49,9 @@ The basic idea was to do automated instant migration. Anything manually changes 
 
 We quickly discovered, it's better to use [PHP factories over config coding](/blog/2019/02/14/why-config-coding-sucks/) and [kill all parents we could](/blog/2019/01/24/how-to-kill-parents/) (except our own ones of course).
 
-### Use Rector to PHP Changes
+[link_rector_book]
+
+### Use Rector for PHP Changes
 
 In the start, we run **Rector with generic rules with brute-force way**. Don't think, just try it. That gave us more idea about the code - we started to spot places we can write in Rector rule.
 

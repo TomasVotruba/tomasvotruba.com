@@ -28,6 +28,8 @@ updated_message: |
     </ul>
 </div>
 
+[link_rector_book]
+
 ## Find and Replace?
 
 So all we need to do is replace `Twig_` with `Twig\`?
@@ -83,16 +85,11 @@ composer require rector/rector --dev
 2. Update `rector.php`
 
 ```php
-use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\Symfony\Set\TwigSetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-
-    $parameters->set(Option::SETS, [
-        SetList::TWIG_UNDERSCORE_TO_NAMESPACE,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(TwigSetList::TWIG_UNDERSCORE_TO_NAMESPACE);
 };
 ```
 

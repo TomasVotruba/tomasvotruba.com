@@ -139,7 +139,7 @@ use Rector\NetteCodeQuality\Rector\Assign\ArrayAccessSetControlToAddComponentMet
 use Rector\NetteCodeQuality\Rector\Assign\MakeGetComponentAssignAnnotatedRector;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set(MakeGetComponentAssignAnnotatedRector::class);
@@ -185,7 +185,7 @@ This makes code readable in the same points above - for IDE, PHPStan, and Rector
 use Rector\NetteCodeQuality\Rector\ArrayDimFetch\ChangeControlArrayAccessToAnnotatedControlVariableRector;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(ChangeControlArrayAccessToAnnotatedControlVariableRector::class);
 };

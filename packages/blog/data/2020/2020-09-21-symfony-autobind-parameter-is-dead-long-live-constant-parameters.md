@@ -64,7 +64,7 @@ With [Symfony configs in `*.php` format](/blog/2020/07/16/10-cool-features-you-g
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set('location', 'Prague');
 };
@@ -76,7 +76,7 @@ Wait, this was just a string. We want **constant parameters**:
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use App\Configuration\Option;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set(Option::LOCATION, 'Prague');
 };

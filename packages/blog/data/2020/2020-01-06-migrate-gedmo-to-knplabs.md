@@ -137,29 +137,29 @@ class Meetup
 
     E.g., from:
 
-    ```php
-    use Gedmo\Mapping\Annotation as Gedmo;
+```php
+use Gedmo\Mapping\Annotation as Gedmo;
 
-    // ...
+// ...
 
-    /**
-     * @Gedmo\Slug(fields={"name", "surname"})
-     */
-    private $slug;
-    ```
+/**
+ * @Gedmo\Slug(fields={"name", "surname"})
+ */
+private $slug;
+```
 
-    to
+to
 
-    ```php
+```php
 
-    /**
-     * @return string[]
-     */
-    public function getSluggableFields(): array
-    {
-        return ['name', 'surname'];
-    }
-    ```
+/**
+ * @return string[]
+ */
+public function getSluggableFields(): array
+{
+    return ['name', 'surname'];
+}
+```
 
 <br>
 
@@ -636,19 +636,18 @@ Would you like to avoid doing this manually? Rector has a set just for you:
 composer require rector/rector --dev
 ````
 
+[link_rector_book]
+
 2. Add `rector.php` config
 
 ```php
 // rector.php
 use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\Doctrine\Set\DoctrineSetList;use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->services();
-    $parameters->set(Option::SETS, [
-        SetList::DOCTRINE_GEDMO_TO_KNPLABS,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(DoctrineSetList::DOCTRINE_GEDMO_TO_KNPLABS);
 };
 ```
 
@@ -659,6 +658,7 @@ vendor/bin/rector process src
 ```
 
 That's it!
+
 
 <br>
 

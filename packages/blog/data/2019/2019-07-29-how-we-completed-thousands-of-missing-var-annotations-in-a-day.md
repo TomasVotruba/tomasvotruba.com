@@ -334,6 +334,8 @@ Ups, not so fast. Database types and PHP scalar types are not 1:1 compatible. To
   private $content;
 ```
 
+[link_rector_book]
+
 ### 9. From Doctrine Relation Annotations
 
 Let's finish with the most complex case, yet brutally common. What do we mean by Doctrine Relation annotations?
@@ -408,7 +410,7 @@ composer require slevomat/coding-standard --dev
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     // every property should have @var annotation
     $services->set(SlevomatCodingStandard\Sniffs\TypeHints\TypeHintDeclarationSniff::class);

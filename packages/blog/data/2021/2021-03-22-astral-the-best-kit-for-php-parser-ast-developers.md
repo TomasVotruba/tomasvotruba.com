@@ -4,7 +4,7 @@ title: "Astral - The Best Kit for php-parser AST Developers"
 perex: |
     Working with php-parser abstract syntax tree is fun. You can modify [any node](https://github.com/rectorphp/php-parser-nodes-docs) in the tree, change class method names or add new arguments.
     <br><br>
-    Such work requires **abstract and [deeply focused thinking](https://tomasvotruba.com/blog/2018/09/13/your-brain-is-your-garden/)**. But sometimes, all we need is to get a method call name or constant value. That's completely different detailed nitpicking boring thinking...
+    Such work requires **abstract and [deeply focused thinking](/blog/2018/09/13/your-brain-is-your-garden/)**. But sometimes, all we need is to get a method call name or constant value. That's completely different detailed nitpicking boring thinking...
     <br><br>
     That's where **Astral package helps**.
 
@@ -230,7 +230,7 @@ Straightforward and simple. The `NodeValueResolver` can deal with constant refer
 
 Now we put all three parts together to demonstrate the real power of Astral. **We already know that simple operations in AST are very hard to write**. AST is a low-level language that has to account for various errors.
 
-How to change node in pure php-parser? It's a topic so extensive it would make a standalone post. Fortunately, there is one. I wrote [How to change PHP code with Abstract Syntax Tree](https://tomasvotruba.com/blog/2017/11/06/how-to-change-php-code-with-abstract-syntax-tree/) 3 years ago. Beware, it's a lot of code simple method rename.
+How to change node in pure php-parser? It's a topic so extensive it would make a standalone post. Fortunately, there is one. I wrote [How to change PHP code with Abstract Syntax Tree](/blog/2017/11/06/how-to-change-php-code-with-abstract-syntax-tree/) 3 years ago. Beware, it's a lot of code simple method rename.
 
 <br>
 

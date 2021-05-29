@@ -52,13 +52,11 @@ vendor/bin/rector init
 3. Configure it with set:
 
 ```php
-use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\Symfony\Set\SymfonySetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [SetList::SYMFONY_33]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SymfonySetList::SYMFONY_33);
 };
 ```
 
@@ -153,7 +151,7 @@ declare(strict_types=1);
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(RenameMethodRector::class)
         ->call('configure', [[

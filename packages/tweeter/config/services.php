@@ -10,7 +10,7 @@ use Symplify\SmartFileSystem\FileSystemGuard;
 use TomasVotruba\Tweeter\TwitterApi\TwitterApiFactory;
 use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
     $parameters->set(OptionAlias::TWITTER_NAME, env('TWEETER_NAME'));

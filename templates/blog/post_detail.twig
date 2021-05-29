@@ -33,7 +33,7 @@
             {% if post.deprecated %}
                 <div class="card border-danger mt-4">
                     <div class="card-header text-white bg-danger">
-                        This post is deprecated since {{ post.deprecatedAt|date("F Y") }}. Its knowledge is outdated and should not be used.
+                        This post is deprecated since {{ post.deprecatedAt|date("F Y") }}. Its knowledge is old and should not be used.
                         <br>
                         <strong>Why?</strong>
                     </div>
@@ -87,6 +87,7 @@
             <div class="card mt-4">
                 <div class="card-body text-white bg-success text-center">
                     {% set previous_post = previous_post(post) %}
+
                     {% if previous_post is not null %}
                         <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {'slug': previous_post.getSlug }) }}" class="d-block">
                             <div>
@@ -106,9 +107,9 @@
 
         <script id="dsq-count-scr" src="https://{{ disqus_shortname }}.disqus.com/count.js" async defer></script>
 
-        {% include "_snippets/footer.twig" %}
-
         <link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css" />
         <script src="{{ asset('assets/prism/prism.js') }}"></script>
+
+        {% include "_snippets/google_analytics.twig" %}
     </body>
 </html>

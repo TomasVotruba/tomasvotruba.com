@@ -166,15 +166,13 @@ The basic [ECS](https://github.com/symplify/easy-coding-standard) setup we use l
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\EasyCodingStandard\ValueObject\Option;use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [
-        SetList::PSR_12,
-        SetList::CLEAN_CODE,
-        SetList::COMMENTS,
-        // very nice to have ↓
-        SetList::SYMPLIFY,
-    ]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SetList::PSR_12);
+    $containerConfigurator->import(SetList::CLEAN_CODE);
+    $containerConfigurator->import(SetList::COMMENTS);
+
+    // very nice to have ↓
+    $containerConfigurator->import(SetList::SYMPLIFY);
 };
 ```
 
@@ -308,6 +306,8 @@ If the answer is not "at every commit", it's not good enough. You need to have C
 
 Why? It's not that Bitbucket CI is worse than Gitlab CI or GitHub actions. It's the ecosystem support. **The Gitlab CI has the longest support for CI of a private project there is.**
 
+[link_rector_book]
+
 That means:
 
 - a lot of tutorials
@@ -316,6 +316,7 @@ That means:
 - community support in case of troubles
 
 As a side bonus, **it's free for private projects with unlimited users** and 2 000 build minutes per month (I've never reached that).
+
 
 <blockquote class="blockquote text-center mt-5 mb-3">
     If you use Gitlab CI on every commit,<br>

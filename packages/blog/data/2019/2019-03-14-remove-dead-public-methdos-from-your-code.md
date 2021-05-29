@@ -83,7 +83,7 @@ There is one little sniff in `symplify/coding-standard` only few people know abo
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(Symplify\CodingStandard\Sniffs\DeadCode\UnusedPublicMethodSniff::class);
 };

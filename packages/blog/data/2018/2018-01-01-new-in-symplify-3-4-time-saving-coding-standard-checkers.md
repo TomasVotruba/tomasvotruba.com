@@ -64,7 +64,7 @@ declare(strict_types=1);
 use Rector\CodingStyle\Rector\Include_\FollowRequireByDirRector;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set(FollowRequireByDirRector::class);
@@ -105,7 +105,7 @@ When the official fixer is finished, I'd be happy to use it and recommend it. Bu
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\Strict\BlankLineAfterStrictTypesFixer;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->set(BlankLineAfterStrictTypesFixer::class);
@@ -182,7 +182,7 @@ declare(strict_types=1);
 use Rector\CodingStyle\Rector\Include_\FollowRequireByDirRector;
 use Rector\Core\Configuration\Option;use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
 };

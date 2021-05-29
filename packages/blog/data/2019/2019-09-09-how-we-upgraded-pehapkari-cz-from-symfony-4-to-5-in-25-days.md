@@ -67,19 +67,15 @@ What does that mean? For upgrading from Symfony 4 to 5, you need to **run all th
 ```php
 use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Symfony\Set\SymfonySetList;use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-
-    $parameters->set(Option::SETS, [
-        SetList::SYMFONY_41,
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(SymfonySetList::SYMFONY_41);
         // take it 1 set at a time to so next set works with output of the previous set; I do 1 set per pull-request
-        // SetList::SYMFONY_42,
-        // SetList::SYMFONY_43,
-        // SetList::SYMFONY_44,
-        // SetList::SYMFONY_50,
-    ]);
+    // $containerConfigurator->import(SetList::SYMFONY_42);
+    // $containerConfigurator->import(SetList::SYMFONY_43);
+    // $containerConfigurator->import(SetList::SYMFONY_44);
+    // $containerConfigurator->import(SetList::SYMFONY_50);
 };
 ```
 

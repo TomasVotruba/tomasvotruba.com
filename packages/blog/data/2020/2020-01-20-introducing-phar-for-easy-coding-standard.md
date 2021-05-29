@@ -15,6 +15,12 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: Introducing PHAR for Easy Coding Standard"
 tweet_image: "/assets/images/posts/ecs_prefixed.gif"
+
+deprecated_since: "April 2021"
+deprecated_message: |
+    ECS is now downgraded and prefixed by default to `symplify/easy-coding-standards`.
+    <br>
+    **See [Introducing ECS Prefixed and Downgraded to PHP 7.1](/blog/introducing-ecs-prefixed-and-downgraded-to-php-71).**
 ---
 
 <br>

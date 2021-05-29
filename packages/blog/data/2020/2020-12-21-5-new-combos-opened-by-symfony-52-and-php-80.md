@@ -237,7 +237,7 @@ Then, you can add PHPStan rules, e.g. [one](https://github.com/symplify/phpstan-
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
 
     $services->defaults()
@@ -254,7 +254,7 @@ You can avoid [parameter override](https://github.com/symplify/phpstan-rules/blo
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
     $parameters->set('some_param', [1]);
@@ -271,7 +271,7 @@ Or [require constant](https://github.com/symplify/phpstan-rules/blob/master/docs
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
     $parameters->set('some_param', [1]);
 };

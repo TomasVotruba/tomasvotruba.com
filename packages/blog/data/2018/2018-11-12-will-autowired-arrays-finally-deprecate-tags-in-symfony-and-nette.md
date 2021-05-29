@@ -62,7 +62,7 @@ and register it
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker::class);
 };
@@ -79,7 +79,7 @@ How can we get all the services that implement `ReleaseWorkerInterface`?
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(Moses\ReleaseWorker\CheckBlogHasReleasePostReleaseWorker::class)
         ->tag('release_worker');

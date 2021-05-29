@@ -82,7 +82,7 @@ Second, we add a new parameter to `config/config.php`:
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
+return function (ContainerConfigurator $containerConfigurator): void {
     $contactMethods = [
         [
             'type' => 'Email',

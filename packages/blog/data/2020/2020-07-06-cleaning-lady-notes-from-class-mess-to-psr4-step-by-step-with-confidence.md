@@ -264,6 +264,8 @@ If everything passes... Commit, PR, CI passes, merge.
 
 ## 6. What if there are No Namespaces or Are Very Very Bad?
 
+[link_rector_book]
+
 In many codebases, there are just random files—no namespace, no fake namespace, etc.
 
 For these, we have help of Rector with these 2 rules:

@@ -87,6 +87,8 @@ The same thing happens with upgrading code - we upgrade PHP and tests passes, gr
 
 This is the easiest way **to get stuck** in broken tests, with dug up pieces of code all over the project, overheat our brain in [huge cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) and ~~give up~~ rage quit the upgrade saying "it's hard as they say".
 
+[link_rector_book]
+
 ### The Golden Rule of Successful Upgrade
 
 - one minor version at a time
@@ -124,13 +126,11 @@ Update set in `rector.php`
 
 ```php
 // rector.php
-use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\PHPUnit\Set\PHPUnitSetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [SetList::PHPUNIT_50]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_50);
 };
 ```
 
@@ -238,13 +238,11 @@ Update set in `rector.php`
 
 ```php
 // rector.php
-use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\PHPUnit\Set\PHPUnitSetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [SetList::PHPUNIT_60]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_60);
 };
 ```
 
@@ -351,14 +349,12 @@ Update set in `rector.php`
 
 ```php
 // rector.php
-use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\PHPUnit\Set\PHPUnitSetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [SetList::PHPUNIT_70]);
-    $parameters->set(Option::SETS, [SetList::PHPUNIT_75]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_70);
+    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_75);
 };
 ```
 
@@ -492,13 +488,11 @@ Update set in `rector.php`
 
 ```php
 // rector.php
-use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\PHPUnit\Set\PHPUnitSetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [SetList::PHPUNIT80_DMS]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(PHPUnitSetList::PHPUNIT80_DMS);
 };
 ```
 
@@ -545,13 +539,11 @@ Then back to Rector - Update set in `rector.php`
 
 ```php
 // rector.php
-use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
+use Rector\PHPUnit\Set\PHPUnitSetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SETS, [SetList::PHPUNIT_80]);
+return function (ContainerConfigurator $containerConfigurator): void {
+    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_80);
 };
 ```
 
