@@ -194,6 +194,10 @@ pre {
     color: #555;
 }
 
+.blockquote-smaller {
+    font-size: 1.6rem;
+}
+
 /* style in cards */
 .pull-right {
     float: right;
