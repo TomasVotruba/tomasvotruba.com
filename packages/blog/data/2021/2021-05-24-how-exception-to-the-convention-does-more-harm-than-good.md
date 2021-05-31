@@ -78,7 +78,7 @@ The project we looked at above is not a fiction I made up. It's typical project 
 
 We don't need senior developers, we need [senior code bases](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases/). Code bases that **are easy to understand to junior developers who just got on board**. These projects are sustainable, easy to modify, and cheap to maintain.
 
-Next time you'll be frustrated and tempted to exclude just this one file. **For a momenet, take a pause and a deep breath.**
+Next time you'll be frustrated and tempted to exclude just this one file. **For a moment, take a pause and a deep breath.**
 
 What future will you shape for your project? Safe and stable to walks or possible hit by a car?
 
