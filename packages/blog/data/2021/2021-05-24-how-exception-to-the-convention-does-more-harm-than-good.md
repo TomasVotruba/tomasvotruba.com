@@ -80,7 +80,7 @@ We don't need senior developers, we need [senior code bases](/blog/2020/03/02/we
 
 Next time you'll be frustrated and tempted to exclude just this one file. **For a moment, take a pause and a deep breath.**
 
-What future will you shape for your project? Safe and stable to walks or possible hit by a car?
+What future will you shape for your project? Safe and stable to walk or possibly hit by a car?
 
 <br>
 
