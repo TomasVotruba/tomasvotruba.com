@@ -14,9 +14,9 @@ perex: |
 tweet: "New Post on #php 🐘 blog: How to Switch from YAML/XML Configs to PHP Today with Symplify"
 tweet_image: "/assets/images/posts/2020/yaml_to_php.png"
 
-updated_since: "August 2020"
+updated_since: "June 2021"
 updated_message: |
-    Updated Rector YAML to PHP configuration, as current standard.
+    Updated Rector YAML to PHP configuration, as current standard. With automated input types.
 ---
 
 ## Break-Even Automation
@@ -44,55 +44,28 @@ composer require symplify/config-transformer --dev
 
 ## 2. Run `switch-format` Command
 
-This command has 2 requires options and 1 argument:
-
-- `--input-format` - the format of the config you want to convert
-- `--output-format` - desired output format (PHP is the default, YAML is also supported, useful for legacy projects with XML and but old Symfony)
-- the argument is paths to file/s or directories you want to convert
+This command takes 1 argument - paths to files or directories to convert:
 
 ```bash
-vendor/bin/config-transformer switch-format --input-format yaml app/config
-vendor/bin/config-transformer switch-format --input-format xml app/config
+vendor/bin/config-transformer switch-format app/config
 ```
 
-Are you lazy like me? Use shortcut:
-
-```bash
-vendor/bin/config-transformer switch-format -i yaml -o php app/config
-vendor/bin/config-transformer switch-format -i xml -o php app/config
-```
-
-
-## Why am I Putting the Path Argument as the Last one?
-
-You've noticed, the path argument is the last in the command line. That's rather confusing, right?
-
-```bash
-# conventional
-vendor/bin/config-transformer PATH switch-format -i yaml -o php
-
-# convenient
-vendor/bin/config-transformer switch-format -i yaml -o php PATH
-```
-
-Do you need to switch multiple paths in separated commits or apply them on multiple projects?
 <br>
-Re-use previous command and **change the last part only**.
 
 This is how my **real workflow** looks like: from low hanging fruit of 1 file to the main config, to all packages.
 Each followed by a separated commit, so it's easier to review and fix in case of regression.
 
 ```bash
-vendor/bin/config-transformer switch-format -i yaml -o php ecs.yaml
+vendor/bin/config-transformer switch-format ecs.yaml
 # commit
 
-vendor/bin/config-transformer switch-format -i yaml -o php rector.yaml
+vendor/bin/config-transformer switch-format rector.yaml
 # commit
 
-vendor/bin/config-transformer switch-format -i yaml -o php app/packages
+vendor/bin/config-transformer switch-format app/packages
 # commit
 
-vendor/bin/config-transformer switch-format -i yaml -o php app/config/config.yaml
+vendor/bin/config-transformer switch-format app/config/config.yaml
 # commit
 ```
 
@@ -150,14 +123,12 @@ return function (ContainerConfigurator $containerConfigurator): void {
 And let Rector handle the boring work:
 
 ```bash
-vendor/bin/rector p app src
+vendor/bin/rector process app src
 ```
 
 <br>
 
-And that's it!
-
-One little tool for you, one big leap for a PHP programmer-kind.
+That's it! One little tool for you, one big leap for a PHP programmer-kind.
 
 ## Supported Features
 
