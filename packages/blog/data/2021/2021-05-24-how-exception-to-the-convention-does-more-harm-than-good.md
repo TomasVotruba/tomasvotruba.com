@@ -51,9 +51,7 @@ Soon the same colleague who made our code-review is contributing her PR. She com
 
 A few weeks later, this approach is spreading from PR to PR. Now almost half of the tests are excluded from standards, and our CTO looks at the project. He has an idea: "It's a mess; we should standardize this. Why not ignore all the tests?"
 
-Now, all your tests and test fixtures have no requirements for standards at all. There is no need for autoloading, so we can finally drop the `psr-4` standard and move to `classmap` to autoload classes we need. So much freedom feels great.
-
-This is a scientifically **proven effect called [broken window theory](https://blog.codinghorror.com/the-broken-window-theory/)** (written by Stackoverflow co-founder).
+Now, all your tests and test fixtures have no requirements for standards at all. There is no need for autoloading, so we can finally drop the `psr-4` standard and move to `classmap` to autoload classes we need. So much freedom feels great. In case you're interested in psychology, this effect is called [broken window theory](https://blog.codinghorror.com/the-broken-window-theory/) (written by Stackoverflow co-founder).
 
 ## Instant Gratification
 
