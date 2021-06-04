@@ -30,7 +30,7 @@ final class NumberTwigExtension extends AbstractExtension
         return $twigFilters;
     }
 
-    private function formatNumber(float|int $number): string
+    private function formatNumber(float | int $number): string
     {
         return number_format($number, 1, '.', ' ');
     }

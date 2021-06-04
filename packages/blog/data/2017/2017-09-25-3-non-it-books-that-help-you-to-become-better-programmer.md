@@ -17,8 +17,14 @@ tweet_image: "/assets/images/posts/2017/non-it-books/deep.jpg"
 
 <br>
 
-<blockquote class="blockquote">
-    "<a href="http://notes.torrez.org/2011/04/an-empathetic-plan.html">Complain about the way other people make software by making software.</a>"
+<blockquote class="blockquote text-center">
+    "<a href="http://notes.torrez.org/2011/04/an-empathetic-plan.html">
+    Complain about the way other people make software<br>
+    by making software.</a>"
+
+    <footer class="blockquote-footer text-right">
+        Antoine de Saint-Exupery
+    </footer>
 </blockquote>
 
 <br>
@@ -29,7 +35,7 @@ tweet_image: "/assets/images/posts/2017/non-it-books/deep.jpg"
 Evolution of art is based on stealing. So is software. **Pattern are replicated through languages and frameworks**. Just imagine how many frameworks are using MVC pattern.
 
 <div class="text-center">
-    <img src="/assets/images/posts/2017/non-it-books/steal.jpg">
+    <img src="/assets/images/posts/2017/non-it-books/steal.jpg" class="img-thumbnail">
 </div>
 
 Instead of describing ideas in this master piece, **just [see this 11min TedX video](https://www.youtube.com/watch?v=oww7oB9rjgw)**. Then you can decide if you like this idea just enough to open first page.
