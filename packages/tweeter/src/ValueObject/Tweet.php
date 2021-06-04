@@ -60,7 +60,7 @@ final class Tweet
 
     private function areTextSimilar(string $firstText, string $publishedText): bool
     {
-        return Strings::startsWith(
+        return \str_starts_with(
             $firstText,
             // published tweet is usually modified by Twitter API, so we just use starting part of it
             Strings::substring($publishedText, 0, 50)

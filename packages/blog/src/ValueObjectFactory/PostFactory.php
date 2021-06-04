@@ -119,7 +119,7 @@ final class PostFactory
         }
 
         $tweetImage = ltrim($tweetImage, '/');
-        if (Strings::startsWith($tweetImage, 'https://')) {
+        if (\str_starts_with($tweetImage, 'https://')) {
             return $tweetImage;
         }
 
