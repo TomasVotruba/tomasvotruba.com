@@ -126,24 +126,18 @@ Ok, we already have upgraded all custom annotation classes to attribute ones. No
 
 ```diff
 -/**
-- * @Validation(validatorClass=RangeBoundariesValidator::class)
+- * @Validation(RangeBoundariesValidator::class, ['key' => 'value'])
 - */
-+#[Validation(validatorClass: RangeBoundariesValidator::class)]
++#[Validation(RangeBoundariesValidator::class)]
 ```
 
-As you can see, the syntax is very similar. In the first case, it's an `array` that can be anything. But in the second case, it's a value object with autocomplete:
+As you can see, the syntax is very similar. In the first case, it's an `array` that can be anything. But in the second case, it's a value object. But what exactly is first and second value for? Without looking into the value object, we cannot know know... or can we?
 
 ```php
-#[Validation(validatorClass: RangeBoundariesValidator::class)]
+#[Validation(validatorClass: RangeBoundariesValidator::class, parameters: ['key' => 'value'])]
 ```
 
-The `validatorClass` is [named argument](https://php.watch/versions/8.0/named-parameters). Compare to magical implicit key:
-
-```php
-#[Validation(RangeBoundariesValidator::class)]
-```
-
-*Pst... there is [a PHPStan rule](https://github.com/symplify/phpstan-rules/blob/main/docs/rules_overview.md#requireattributenamerule) to help with this in code-reviews.*
+Thanks to [named argument](https://php.watch/versions/8.0/named-parameters), we can. There is also [a PHPStan rule](https://github.com/symplify/phpstan-rules/blob/main/docs/rules_overview.md#requireattributenamerule) to help with this in code-reviews.
 
 Another advantage of named arguments is that we can click on the name and right to the typed promoted property:
 
@@ -151,7 +145,7 @@ Another advantage of named arguments is that we can click on the name and right 
 #[Validation(validatorClass: RangeBoundariesValidator::class)]
 ```
 
-## Refactor Annotation Reader to Understand Attributes
+## Refactor Annotation Reader to Native Attributes
 
 Last but not least, we have to upgrade our annotation reader that does not understand attributes yet. In the past, the only way to read custom annotations was to use a combination of reflection and Doctrine annotation reader:
 
