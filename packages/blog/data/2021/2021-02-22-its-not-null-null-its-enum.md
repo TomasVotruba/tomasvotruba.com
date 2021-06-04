@@ -11,7 +11,8 @@ tweet_image: "/assets/images/posts/2021/priority_enum.gif"
 ---
 
 <blockquote class="blockquote text-center">
-    "Complain about the way other people make software<br>
+    "Complain about the way other people make software
+    <br>
     by making software."
 </blockquote>
 

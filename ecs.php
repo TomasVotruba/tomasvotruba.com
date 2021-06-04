@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-use PhpCsFixer\Fixer\FunctionNotation\NullableTypeDeclarationForDefaultNullValueFixer;
-use PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer;
 use PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Symplify\CodingStandard\Fixer\ArrayNotation\StandaloneLineInMultilineArrayFixer;
@@ -23,14 +21,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/ecs.php',
     ]);
 
-    $parameters->set(Option::SKIP, [
-        __DIR__ . '/config/bundles.php',
-        UnaryOperatorSpacesFixer::class,
-
-        // broken on PHP 8.0
-        BinaryOperatorSpacesFixer::class,
-        NullableTypeDeclarationForDefaultNullValueFixer::class,
-    ]);
+    $parameters->set(Option::SKIP, [__DIR__ . '/config/bundles.php', UnaryOperatorSpacesFixer::class]);
 
     $containerConfigurator->import(SetList::PSR_12);
     $containerConfigurator->import(SetList::COMMON);
