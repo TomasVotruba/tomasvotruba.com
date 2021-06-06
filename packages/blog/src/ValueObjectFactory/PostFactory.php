@@ -7,6 +7,7 @@ namespace TomasVotruba\Blog\ValueObjectFactory;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use ParsedownExtra;
+use Stringy\Stringy;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Yaml\Yaml;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
@@ -147,7 +148,11 @@ final class PostFactory
         return Strings::replace($htmlContent, self::HEADLINE_LEVEL_REGEX, function ($matches): string {
             $level = $matches['level'];
             $headline = $matches['headline'];
-            $idValue = Strings::webalize($headline);
+
+            $stringyHeadline = new Stringy($headline);
+            $idValue = $stringyHeadline->dasherize()
+                ->replace('\'', '')
+                ->toLowerCase();
 
             return sprintf('<h%d id="%s">%s</h%d>', $level, $idValue, $headline, $level);
         });
