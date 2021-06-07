@@ -149,8 +149,8 @@ final class PostFactory
             $level = $matches['level'];
             $headline = $matches['headline'];
 
-            $stringyHeadline = new Stringy($headline);
-            $idValue = $stringyHeadline->dasherize()
+            $headlineStringy = new Stringy($headline);
+            $idValue = $headlineStringy->dasherize()
                 ->replace('\'', '')
                 ->toLowerCase();
 
