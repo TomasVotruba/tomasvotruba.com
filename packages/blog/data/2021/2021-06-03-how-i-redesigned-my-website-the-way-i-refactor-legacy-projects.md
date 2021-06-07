@@ -1,3 +1,4 @@
+
 ---
 id: 321
 title: "How I Redesigned my Website the Way I&nbsp;Refactor Legacy Projects"
@@ -71,6 +72,8 @@ In the end, there are now fewer sections, less nesting, and more focus on conten
 
 ## Design With Focus on Content
 
+<img src="https://user-images.githubusercontent.com/924196/120992700-23c9c100-c783-11eb-8d57-e20f898b21c0.jpg" class="img-thumbnail mt-2 mb-4" style="max-width: 20em">
+
 What if we apply the refactoring legacy approach to the website design itself?
 
 * Do we need 1609 Font Awesome icons for the content? I've checked the content, and 95 % of them are ✅ and ❌ emojis
@@ -141,6 +144,8 @@ Do you know the 80/20 rule? 20 % of a project takes 80 % of the time to finish. 
 I'm not sure if the stars were right, if I accidentally took some deep-focus drugs or if that was the right thing to do. I went to a coffee house in Tenerife at 10 AM. I'm thinking... what should I do today? I worked on a work project refactoring yesterday; Rector is running and released, and I already published a post for the week. Mmm, maybe I'll check what I can do on the website design.
 
 I turned off my phone, opened my laptop, got a cortado (it's like flat white for Spanish), and started working.
+
+<img src="https://user-images.githubusercontent.com/924196/120992704-24625780-c783-11eb-827e-c3f110c2af36.jpg" class="img-thumbnail mt-4 mb-4">
 
 Three hours later, I was tired, my battery was almost 0 %, and my table didn't have the electrical plug. The table next to me got it, but one family occupied it. Suddenly, when I was about to leave, they stood up and went to the counter. I thought... ok, I'll charge my laptop for 20 mins first. Suddenly it's 4 PM, and I'm leaving the coffee house with **half of the website redesign done**. Most importantly, with a clear vision of what to do next and how the website will look.
 
