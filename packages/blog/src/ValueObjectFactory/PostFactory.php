@@ -150,11 +150,11 @@ final class PostFactory
             $headline = $matches['headline'];
 
             $headlineStringy = new Stringy($headline);
-            $idValue = $headlineStringy->dasherize()
-                ->replace('\'', '')
+            $stringy = $headlineStringy->dasherize()
+                ->replace("'", '')
                 ->toLowerCase();
 
-            return sprintf('<h%d id="%s">%s</h%d>', $level, $idValue, $headline, $level);
+            return sprintf('<h%d id="%s">%s</h%d>', $level, $stringy, $headline, $level);
         });
     }
 
