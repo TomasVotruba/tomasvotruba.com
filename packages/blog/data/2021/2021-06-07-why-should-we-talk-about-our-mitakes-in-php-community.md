@@ -91,7 +91,7 @@ That's why making mistakes is so important. Reading other people's mistakes is a
 
 Writing these lines, I recall a post from Martin Michalek - co-founder of Czech front-end community - [What I fucked up in 2016?](https://www.vzhurudolu.cz/blog/100-2016-podelal)  It was a huge source of inspiration, Martin being honest about finances, writing a book, and personal risks. Hats off to him. In my next post, I'll write about a couple of mines.
 
-Last but now least, have you heard of [Fuck Up Nights](https://www.fuckupnights.cz/)? Every month 5 speakers share their worst in life. I've visited a couple of them, and they're a profound source of knowledge and laughter.
+Last but not least, have you heard of [Fuck Up Nights](https://www.fuckupnights.cz/)? Every month 5 speakers share their worst in life. I've visited a couple of them, and they're a profound source of knowledge and laughter.
 
 <br>
 
