@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TweetFilter;
 
-use TomasVotruba\Tweeter\ValueObject\Tweet;
+use TomasVotruba\Tweeter\ValueObject\PostTweet;
 
 final class TweetsFilter
 {
@@ -15,13 +15,12 @@ final class TweetsFilter
     }
 
     /**
-     * @param Tweet[] $postTweets
-     * @return Tweet[]
+     * @param PostTweet[] $postTweets
+     * @return PostTweet[]
      */
     public function filter(array $postTweets): array
     {
         $postTweets = $this->oldTweetsFilter->filter($postTweets);
-
         return $this->publishedTweetsFilter->filter($postTweets);
     }
 }

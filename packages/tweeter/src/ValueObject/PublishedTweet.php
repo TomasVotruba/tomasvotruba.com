@@ -13,7 +13,8 @@ final class PublishedTweet
     public function __construct(
         string $text,
         private DateTimeInterface $createdAt,
-        private int $id
+        private int $id,
+        private ?string $link
     ) {
         $this->text = htmlspecialchars_decode($text);
     }
@@ -31,5 +32,10 @@ final class PublishedTweet
     public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
+    }
+
+    public function getLink(): ?string
+    {
+        return $this->link;
     }
 }

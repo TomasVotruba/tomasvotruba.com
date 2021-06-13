@@ -6,7 +6,7 @@
         "php": ">=8.0",
         "danielstjules/stringy": "^3.1",
         "erusev/parsedown-extra": "^0.8.1",
-        "j7mbo/twitter-api-php": "^1.0",
+        "j7mbo/twitter-api-php": "^1.0.6",
         "nette/utils": "^3.2",
         "symfony/asset": "^5.3",
         "symfony/cache": "^5.3",
