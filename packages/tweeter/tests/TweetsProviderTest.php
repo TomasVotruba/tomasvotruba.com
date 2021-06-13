@@ -16,7 +16,6 @@ final class TweetsProviderTest extends AbstractTwitterTestCase
         $this->bootKernel(TomasVotrubaKernel::class);
 
         $this->postTweetsProvider = self::$container->get(PostTweetsProvider::class);
-
         $this->ensureEnvVariablesAreSet();
     }
 

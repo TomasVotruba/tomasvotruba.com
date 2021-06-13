@@ -38,12 +38,6 @@ final class Option
      * @var string
      * @api
      */
-    public const GITHUB_TOKEN = 'github_token';
-
-    /**
-     * @var string
-     * @api
-     */
     public const THANKER_AUTHOR_NAME = 'thanker_author_name';
 
     /**
