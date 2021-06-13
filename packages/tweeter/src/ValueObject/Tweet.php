@@ -47,8 +47,7 @@ final class Tweet
 
     public function isSimilarToPublishedTweet(PublishedTweet $publishedTweet): bool
     {
-        $areTextsSimilar = $this->areTextSimilar($this->text, $publishedTweet->getText());
-        if ($areTextsSimilar) {
+        if ($this->areTextSimilar($this->text, $publishedTweet->getText())) {
             return true;
         }
 
