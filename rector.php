@@ -37,7 +37,6 @@ return function (ContainerConfigurator $containerConfigurator): void {
         // broken for DateTime interface
         RenamePropertyToMatchTypeRector::class => [
             __DIR__  . '/packages/blog/src/ValueObject/Post.php',
-            __DIR__ . '/packages/tweeter/src/ValueObject/Tweet.php',
             __DIR__ . '/packages/tweeter/src/ValueObject/PublishedTweet.php',
         ],
     ]);

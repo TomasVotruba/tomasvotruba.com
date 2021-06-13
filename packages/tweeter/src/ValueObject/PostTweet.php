@@ -13,7 +13,7 @@ final class PostTweet
     public function __construct(
         private int $postId,
         string $text,
-        private DateTimeInterface $postDateTime,
+        private DateTimeInterface $dateTime,
         private ?string $image,
         private string $link
     ) {
@@ -27,12 +27,12 @@ final class PostTweet
 
     public function getPostDateTimeInFormat(string $format): string
     {
-        return $this->postDateTime->format($format);
+        return $this->dateTime->format($format);
     }
 
-    public function getPostDateTime(): DateTimeInterface
+    public function getDateTime(): DateTimeInterface
     {
-        return $this->postDateTime;
+        return $this->dateTime;
     }
 
     public function getImage(): ?string

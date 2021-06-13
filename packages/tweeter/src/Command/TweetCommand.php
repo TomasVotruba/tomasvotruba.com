@@ -68,10 +68,10 @@ final class TweetCommand extends Command
         }
         $this->symfonyStyle->newLine();
 
-        $aboutToBePublishedTweet = $this->resolveRandomTweet($unpublishedPostTweets);
-        $this->tweet($aboutToBePublishedTweet);
+        $postTweet = $this->resolveRandomTweet($unpublishedPostTweets);
+        $this->tweet($postTweet);
 
-        $message = sprintf('Tweet "%s" was successfully published.', $aboutToBePublishedTweet->getText());
+        $message = sprintf('Tweet "%s" was successfully published.', $postTweet->getText());
         $this->symfonyStyle->success($message);
 
         return ShellCode::SUCCESS;

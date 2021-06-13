@@ -28,7 +28,7 @@ final class OldTweetsFilter
     {
         return array_filter(
             $postTweets,
-            fn (PostTweet $postTweet): bool => $postTweet->getPostDateTime() >= $this->maxPastDateTime
+            fn (PostTweet $postTweet): bool => $postTweet->getDateTime() >= $this->maxPastDateTime
         );
     }
 }

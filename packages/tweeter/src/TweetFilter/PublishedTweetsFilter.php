@@ -28,18 +28,20 @@ final class PublishedTweetsFilter
     {
         $publishedTweets = $this->getPublishedPostTweets();
 
-        return array_filter(
-            $postTweets,
-            function (PostTweet $postTweet) use ($publishedTweets): bool {
-                foreach ($publishedTweets as $publishedTweet) {
-                    if ($publishedTweet->getLink() === $postTweet->getLink()) {
-                        return true;
-                    }
-                }
+        $unpublishedPostTweets = [];
 
-                return false;
+        foreach ($postTweets as $postTweet) {
+            foreach ($publishedTweets as $publishedTweet) {
+                if ($postTweet->getLink() === $publishedTweet->getLink()) {
+                    // already published
+                    continue 2;
+                }
             }
-        );
+
+            $unpublishedPostTweets[] = $postTweet;
+        }
+
+        return $unpublishedPostTweets;
     }
 
     /**
