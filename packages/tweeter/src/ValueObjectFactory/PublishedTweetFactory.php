@@ -17,10 +17,11 @@ final class PublishedTweetFactory
     {
         $tweets = [];
         foreach ($rawTweets as $rawTweet) {
-            $createdAt = DateTime::from($rawTweet['created_at']);
-
             $text = trim($rawTweet['text']);
-            $tweets[] = new PublishedTweet($text, $createdAt, $rawTweet['id']);
+            $createdAt = DateTime::from($rawTweet['created_at']);
+            $link = $rawTweet['entities']['urls'][0]['expanded_url'] ?? null;
+
+            $tweets[] = new PublishedTweet($text, $createdAt, $rawTweet['id'], $link);
         }
 
         return $tweets;

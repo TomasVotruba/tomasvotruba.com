@@ -8,7 +8,7 @@ use DateTimeInterface;
 use Nette\Utils\DateTime;
 use TomasVotruba\Blog\Repository\PostRepository;
 use TomasVotruba\Tweeter\Validation\TweetGuard;
-use TomasVotruba\Tweeter\ValueObject\Tweet;
+use TomasVotruba\Tweeter\ValueObject\PostTweet;
 
 final class PostTweetsProvider
 {
@@ -22,7 +22,7 @@ final class PostTweetsProvider
     }
 
     /**
-     * @return Tweet[]
+     * @return PostTweet[]
      */
     public function provide(): array
     {
@@ -36,7 +36,7 @@ final class PostTweetsProvider
             /** @var string $tweetText */
             $tweetText = $post->getTweetText();
             $this->tweetGuard->ensureTweetFitsAllowedLength($tweetText);
-            $tweetText .= PHP_EOL . PHP_EOL . $post->getAbsoluteUrl();
+            $tweetText .= PHP_EOL . $post->getAbsoluteUrl();
 
             $tweetImage = $post->getTweetImage();
 
@@ -45,7 +45,13 @@ final class PostTweetsProvider
                 continue;
             }
 
-            $tweets[] = new Tweet($tweetText, $post->getDateTime(), $tweetImage);
+            $tweets[] = new PostTweet(
+                $post->getId(),
+                $tweetText,
+                $post->getDateTime(),
+                $tweetImage,
+                $post->getAbsoluteUrl()
+            );
         }
 
         return $tweets;

@@ -6,7 +6,7 @@ namespace TomasVotruba\Tweeter\TweetFilter;
 
 use Nette\Utils\DateTime;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
-use TomasVotruba\Tweeter\ValueObject\Tweet;
+use TomasVotruba\Tweeter\ValueObject\PostTweet;
 use TomasVotruba\Website\ValueObject\Option;
 
 final class OldTweetsFilter
@@ -21,14 +21,14 @@ final class OldTweetsFilter
     }
 
     /**
-     * @param Tweet[] $postTweets
-     * @return Tweet[]
+     * @param PostTweet[] $postTweets
+     * @return PostTweet[]
      */
     public function filter(array $postTweets): array
     {
         return array_filter(
             $postTweets,
-            fn (Tweet $postTweet): bool => $postTweet->getPostDateTime() >= $this->maxPastDateTime
+            fn (PostTweet $postTweet): bool => $postTweet->getPostDateTime() >= $this->maxPastDateTime
         );
     }
 }
