@@ -7,6 +7,10 @@ perex: |
     It's been an adventurous journey for the past seven months, and today, we're proud to launch the first release of this book.
 
 tweet: "New Post on #php 🐘 blog: @rectorphp - The Power of Automated Refactoring Book Released"
+
+updated_since: "June 2021"
+updated_message: |
+    The book is now 100 % complete. Go get it!
 ---
 
 <div class="float-right text-center">
