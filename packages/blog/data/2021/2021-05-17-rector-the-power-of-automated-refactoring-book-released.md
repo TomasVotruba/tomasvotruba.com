@@ -63,8 +63,4 @@ By buying this book, you also support the Rector ecosystem and help [developers 
 
 <br>
 
-**Hey, pst... do you want a 5 $ discount**? Get it this week by [using this link](https://leanpub.com/rector-the-power-of-automated-refactoring). When you buy it, make sure to sign up for notifications about future updates, so you'll get an email when we release the final chapters.
-
-<br>
-
 Happy coding!
