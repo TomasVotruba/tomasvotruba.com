@@ -4,11 +4,11 @@ title: "Doctrine Annotations and Attributes Living Together in Peace"
 perex: |
     In previous post [How to Refactor Custom Doctrine Annotations to Attributes](/blog/how-to-refactor-custom-doctrine-annotations-to-attributes) we looked on how to make the `@annotation` to `#[Attribute]` transition.
     <br><br>
-    Last week we started such refactoring in [my favorite long-term project](https://www.startupjobs.cz/startup/scrumworks-s-r-o) and we came hard situation. When we started to move all annotations to attributes at once, we lost control over the results. It was also impossible because 3rd party annotations were not attributes ready.
+    Last week, we started refactoring in [my favorite long-term project](https://www.startupjobs.cz/startup/scrumworks-s-r-o), and we came to a challenging situation. When we started to move all annotations to attributes at once, we lost control over the results. It was also impossible because 3rd party annotations were not attributes ready.
     <br><br>
-    We had to **support annotations and attributes at the same time**. Do you have plenty of custom annotations yourself? In this post you'll learn to build a bridge with both annotations and attributes on board.
+    We had to **support annotations and attributes at the same time**. Do you have plenty of custom annotations yourself? In this post, you'll learn to build a bridge with both annotations and attributes on board.
 
-tweet: "New Post on 🐘 blog: Doctrine Annotations and Attributes Living Together in Peace"
+tweet: "New Post on the 🐘 blog: Doctrine Annotations and Attributes Living Together in Peace"
 tweet_image: "/assets/images/posts/2021/named_argument_constructor.png"
 ---
 
@@ -19,10 +19,10 @@ tweet_image: "/assets/images/posts/2021/named_argument_constructor.png"
 
 ## Safety First
 
-Before we start, we have to prepare safe environment. No razors, no matches and couple of test.
-The bridge testing technique is one of safety nets I use while refactoring to a new technology.
+Before we start, we have to prepare a safe environment. No razors, no matches, and a couple of tests.
+The bridge testing technique is one of the safety nets I use while refactoring to new technology.
 
-The idea is simple - in total we should have 3 tests:
+The idea is simple - in total, we should have three tests:
 
 * test for current behavior - compare with exact output
 * *add alternative feature*
@@ -68,11 +68,11 @@ final class DesignPattern
 }
 ```
 
-Here we can clearly see that public property takes much more attention than a private one. Public properties can be used in the class, outside the class and changed basically anytime. On the other hand, private property can be used exclusively in this class.
+Here we can see that public property takes much more attention than private one. Public properties can be used in the class, outside the class, and changed anytime. On the other hand, private property can be used exclusively in this class.
 
 ## Bridge Test
 
-Let's add a bridge test, so we are sure the refactoring works for both annotations and attributes. How would the bridge test look like for a public property?
+Let's add a bridge test so we are sure the refactoring works for both annotations and attributes. How would the bridge test look like for public property?
 
 ```php
 use PHPUnit\Framework\TestCase;
@@ -107,7 +107,7 @@ It should pass - it only confirms already existing behavior.
 
 <br>
 
-Let's add a new method `resolveAttributeValue()` that will be able to read PHP 8 attribute values too:
+Let's add a new method, `resolveAttributeValue()` that will be able to read PHP 8 attribute values too:
 
 ```php
     // ...
@@ -123,7 +123,7 @@ Let's add a new method `resolveAttributeValue()` that will be able to read PHP 8
     // ...
 ```
 
-Now the test should fail, because we have to yet implement the `resolveAttributeValue()` method:
+Now the test should fail because we have yet to implement the `resolveAttributeValue()` method:
 
 ```bash
 vendor/bin/phpunit tests/BridgeTest.php
@@ -154,14 +154,14 @@ Last but not least, the bridge test compares the results of both methods:
 
 ## Why Not Just The Bridge Test?
 
-Looking at the test, it seems the `testBridge()` already includes the test of their former 2 methods. Why not delete those two? ...
+Looking at the test, it seems the `testBridge()` already includes the test of their former two methods. Why not delete those two? ...
 Wait, wouldn't that be like cutting our safety ropes?
 
 <img src="https://images.squarespace-cdn.com/content/v1/5a54afc2e9bfdf89573d7cf7/1551374451263-U7I7L1NLOJY6XWNL028T/ke17ZwdGBToddI8pDm48kJUlZr2Ql5GtSKWrQpjur5t7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UfNdxJhjhuaNor070w_QAc94zjGLGXCa1tSmDVMXf8RUVhMJRmnnhuU1v2M8fLFyJw/Rope-Bridge-project-Salwa+Resort-Abu+Samra-Qatar-5.jpeg?format=500w" class="img-thumbnail">
 
 <br>
 
-At first the test passes, both of used methods return `1000` and `assertSame()` works correctly.
+At first, the test passes, and both methods return `1000` and `assertSame()` works correctly.
 
 ```php
 $resolvedAnnotationValue = ...; // 1000
@@ -171,24 +171,24 @@ $this->assertSame($resolvedAnnotationValue, $resolvedAttributeValue);
 
 <br>
 
-Later that day we do a bit refactoring. Let's run tests now:
+Later that day, we do a bit of refactoring. Let's run tests now:
 
 ```bash
 vendor/bin/phpunit tests/BridgeTest.php
 ```
 
-Still passes, yay!
+It still passes, yay!
 
 <br>
 
-Few week later we find out the production annotations and attributes **were ignored**, your admin was publicly available and test passes with these values:
+A few weeks later, we find out the production annotations and attributes **were ignored**, your admin was publicly available, and the test passes with these values:
 
 ```php
 $this->assertSame(null, null);
 ```
 
-That's why it's important to have 2 previous methods and compare exact values.
-Now that we have safety rules defined, lets start the dirty work.
+That's why it's essential to have two previous methods and compare exact values.
+Now that we have safety rules defined let's start the dirty work.
 
 ## 1. Teaching Annotation Attributes
 
@@ -225,7 +225,7 @@ But attributes accept specific value:
 
 <br>
 
-What can we do about different needs for construction?
+What can we do about different construction needs?
 
 ### 2 Different Classes?
 
@@ -277,12 +277,12 @@ class AttentionPrice
 
 <br>
 
-Try both options and you'll soon see that **they both smell**:
+Try both options, and you'll soon see that **they both smell**:
 
-* First is nice and clean, but gives you extra work with duplicated classes ❌
-* Second is headache to write and read. A that's only 1 value, imagine there are 2 or 3 values ❌
+* First is nice and clean but gives you extra work with duplicated classes ❌
+* Second is a headache to write and read. A that's only one value, imagine there are 2 or 3 values ❌
 
-Hm, what can we do now?
+Hmm, what can we do now?
 
 <br>
 
@@ -312,11 +312,11 @@ We're lucky, `doctrine/annotations` got us covered since `1.12`. I've learned th
  }
 ```
 
-Thanks to the `@NamedArgumentConstructor` the constructors are now the same for both annotation and attribute ✅
+Thanks to the `@NamedArgumentConstructor`, the constructors are now the same for both annotation and attribute ✅
 
 <br>
 
-Big thanks to Alexander M. Turek who [contributed this feature](https://github.com/doctrine/annotations/pull/391) to `doctrine/annotations` and Vincent who added support for [default value](https://github.com/doctrine/annotations/pull/402) unwrap.
+Big thanks to Alexander M. Turek, who [contributed this feature](https://github.com/doctrine/annotations/pull/391) for `doctrine/annotations` and Vincent who added support for [default value](https://github.com/doctrine/annotations/pull/402) unwrap.
 
 <br>
 
