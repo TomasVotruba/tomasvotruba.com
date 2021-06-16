@@ -190,7 +190,7 @@ $this->assertSame(null, null);
 That's why it's essential to have two previous methods and compare exact values.
 Now that we have safety rules defined let's start the dirty work.
 
-## 1. Teaching Annotation Attributes
+## Teaching Annotation Attributes
 
 We already know the first steps [from previous post](/blog/how-to-refactor-custom-doctrine-annotations-to-attributes) - add `#[Attribute]`:
 
