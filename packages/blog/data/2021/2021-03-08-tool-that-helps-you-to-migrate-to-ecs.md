@@ -7,6 +7,12 @@ perex: |
     But who has time to read the step-by-step manual and do manual work? Nobody. That's why today, we'll look at a tool that **will handle the migration to ECS for you**.
 
 tweet: "New Post on #php 🐘 blog: A Tool that helps you to Migrate to ECS"
+
+deprecated_since: "2021-06"
+deprecated_message: |
+    This package didn't get much traction since it was introduced and was deprecated.
+    <br>
+    Use [migration post from PHP_CodeSniffer](/blog/2018/06/04/how-to-migrate-from-php-code-sniffer-to-easy-coding-standard) or [from PHP-CS-Fixer](/blog/2018/06/07/how-to-migrate-from-php-cs-fixer-to-easy-coding-standard) instead.
 ---
 
 More and more projects I worked with wanted to try ECS, but they didn't want to look at every rule in XML and write them in PHP. I helped the first 3 to do manually and guide them on differences in configuration and rule naming. It was daunting work.
