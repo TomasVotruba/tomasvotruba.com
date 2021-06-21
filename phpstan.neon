@@ -72,5 +72,10 @@ parameters:
                 - src/Controller
 
         # PHPStorm attributes
-        - '#Attribute must have all names explicitly defined#'
         - '#Attribute class JetBrains\\PhpStorm\\ArrayShape does not exist#'
+
+        # part of arrow function
+        -
+            message: '#Use separate function calls with readable variable names#'
+            paths:
+                - packages/tweeter/src/TwitterApi/TwitterPostApiWrapper.php

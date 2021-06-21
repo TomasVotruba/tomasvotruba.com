@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace TomasVotruba\Tweeter\TwitterApi;
 
 use Nette\Utils\DateTime;
-use Nette\Utils\Strings;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Tweeter\TweetEntityCompleter;
 use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
@@ -15,12 +14,6 @@ use TomasVotruba\Website\ValueObject\Option;
 
 final class TwitterPostApiWrapper
 {
-    /**
-     * @var string
-     * @see https://regex101.com/r/Z9vHts/1
-     */
-    private const NEW_POST_REGEX = '#New post on#i';
-
     /**
      * @var string
      */
@@ -151,10 +144,7 @@ final class TwitterPostApiWrapper
     {
         return array_filter(
             $tweets,
-            fn (PublishedTweet $publishedTweet) => (bool) Strings::match(
-                $publishedTweet->getText(),
-                self::NEW_POST_REGEX
-            )
+            fn (PublishedTweet $publishedTweet) => str_contains($publishedTweet->getText(), 'tomasvotruba.com')
         );
     }
 
