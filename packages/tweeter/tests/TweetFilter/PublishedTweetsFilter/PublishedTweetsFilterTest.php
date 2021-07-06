@@ -19,8 +19,8 @@ final class PublishedTweetsFilterTest extends AbstractTwitterTestCase
     {
         $this->bootKernel(TomasVotrubaKernel::class);
 
-        $this->postTweetsProvider = self::$container->get(PostTweetsProvider::class);
-        $this->publishedTweetsFilter = self::$container->get(PublishedTweetsFilter::class);
+        $this->postTweetsProvider = $this->getService(PostTweetsProvider::class);
+        $this->publishedTweetsFilter = $this->getService(PublishedTweetsFilter::class);
 
         $this->ensureEnvVariablesAreSet();
     }

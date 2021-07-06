@@ -79,3 +79,6 @@ parameters:
             message: '#Use separate function calls with readable variable names#'
             paths:
                 - packages/tweeter/src/TwitterApi/TwitterPostApiWrapper.php
+
+        # fix later
+        - '#Private method in is not allowed here \- it should only delegate to others\. Decouple the private method to a new service class#'

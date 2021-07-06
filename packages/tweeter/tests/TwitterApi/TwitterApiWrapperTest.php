@@ -17,7 +17,7 @@ final class TwitterApiWrapperTest extends AbstractTwitterTestCase
     {
         $this->bootKernel(TomasVotrubaKernel::class);
 
-        $this->twitterPostApiWrapper = self::$container->get(TwitterPostApiWrapper::class);
+        $this->twitterPostApiWrapper = $this->getService(TwitterPostApiWrapper::class);
 
         $this->ensureEnvVariablesAreSet();
     }
