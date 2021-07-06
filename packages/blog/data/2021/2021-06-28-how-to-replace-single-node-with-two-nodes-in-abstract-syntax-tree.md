@@ -307,8 +307,10 @@ public function refactor(Node $node)
 
 And that's it! Now we've replaced the `Assign` node with two different `Assing`s ✅ .
 
+<br>
+
 **Would you like to learn more about Rector internals like this and how to make it work for your project?**
-I'm launching [a Rector training](/trainings) where you'll learn practical tips and tricks in just 3 hours.
+[Get a Rector training](/trainings) where you'll learn practical tips and tricks in just 3 hours and save dozens of self-learning.
 
 <br>
 
