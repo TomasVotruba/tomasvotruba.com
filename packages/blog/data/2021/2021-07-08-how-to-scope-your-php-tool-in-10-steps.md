@@ -159,7 +159,7 @@ Our callable above has one job - it finds `config/config.php`, then it will remo
 
 That's it. Now the Symfony autodiscovery works again.
 
-## 4. In scope Public API of Your Project
+## 4. Scope other Public API of Your Project
 
 We've already unscoped the `Symplify\MonorepoBuilder\` namespace. The Monorepo Builder provides an interface that developers can implements, register in the `monorepo-builder.php` config, and the tool will collect it. It looks like this:
 
@@ -256,7 +256,7 @@ The scoped version is published in:
 
 * https://github.com/symplify/monorepo-builder
 
-## 7. Push Scoped Project to Developer Repository
+## 7. Push Scoped Project to Release Repository
 
 The same way we push commits to our repository, we will push scoped code to the remote scoped repository:
 
@@ -300,9 +300,9 @@ The best way to learn is to copy already working processes. It's essential to ha
 
 That's why you can learn of the full scoping in `symplify/monorepo-builder` that is spread across 3 files.
 
-* [Scoping GitHub Action Workflow](https://github.com/symplify/symplify/blob/main/.github/workflows/build_monorepo_builder_prefixed.yaml):
+* [Scoping GitHub Action Workflow](https://github.com/symplify/symplify/blob/main/.github/workflows/build_monorepo_builder_prefixed.yaml)
 * [Bash for Scoping and local testing](https://github.com/symplify/symplify/blob/main/packages/monorepo-builder/build/build-monorepo-builder-scoped.sh)
-* [Scoper configuration](https://github.com/symplify/symplify/blob/main/packages/monorepo-builder/scoper.php)
+* [`scoper.php` configuration](https://github.com/symplify/symplify/blob/main/packages/monorepo-builder/scoper.php)
 
 <br>
 
