@@ -30,9 +30,10 @@ final class PublishedTweetsCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $publishedPostTweets = $this->publishedPostTweetsProvider->provide();
+
         foreach ($publishedPostTweets as $publishedPostTweet) {
-            $this->symfonyStyle->note($publishedPostTweet->getText());
-            $this->symfonyStyle->note($publishedPostTweet->getLink());
+            $this->symfonyStyle->writeln($publishedPostTweet->getText());
+            $this->symfonyStyle->note($publishedPostTweet->getCreatedAt()->format('Y-m-d H:i'));
             $this->symfonyStyle->newLine(2);
         }
 

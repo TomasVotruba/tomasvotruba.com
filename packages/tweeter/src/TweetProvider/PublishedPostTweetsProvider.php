@@ -10,6 +10,8 @@ use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
 final class PublishedPostTweetsProvider
 {
     /**
+     * Cached published tweets
+     *
      * @var PublishedTweet[]
      */
     private array $publishedPostTweets = [];
@@ -29,6 +31,7 @@ final class PublishedPostTweetsProvider
         }
 
         $this->publishedPostTweets = $this->twitterPostApiWrapper->getPublishedTweets();
+
         return $this->publishedPostTweets;
     }
 }

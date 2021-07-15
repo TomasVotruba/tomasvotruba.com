@@ -9,6 +9,9 @@ use Nette\Utils\DateTime;
 
 final class Post
 {
+    /**
+     * Seems like unused property, but used in twig actually with dot syntax.
+     */
     private string $content;
 
     public function __construct(
