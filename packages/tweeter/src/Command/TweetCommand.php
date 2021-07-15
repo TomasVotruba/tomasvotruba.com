@@ -50,7 +50,7 @@ final class TweetCommand extends Command
     {
         $isDryRun = (bool) $input->getOption(Option::DRY_RUN);
 
-        if ($isDryRun === false) {
+        if (! $isDryRun) {
             $hoursSinceLastTweet = $this->twitterPostApiWrapper->getHoursSinceLastTweet();
             if ($hoursSinceLastTweet < $this->twitterMinimalGapInHours) {
                 return $this->reportTooSoon($hoursSinceLastTweet);
