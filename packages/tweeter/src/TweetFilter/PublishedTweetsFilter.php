@@ -4,19 +4,13 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TweetFilter;
 
-use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
+use TomasVotruba\Tweeter\TweetProvider\PublishedPostTweetsProvider;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
-use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
 
 final class PublishedTweetsFilter
 {
-    /**
-     * @var PublishedTweet[]
-     */
-    private array $publishedPostTweets = [];
-
     public function __construct(
-        private TwitterPostApiWrapper $twitterPostApiWrapper
+        private PublishedPostTweetsProvider $publishedPostTweetsProvider
     ) {
     }
 
@@ -26,13 +20,13 @@ final class PublishedTweetsFilter
      */
     public function filter(array $postTweets): array
     {
-        $publishedTweets = $this->getPublishedPostTweets();
+        $publishedPostTweets = $this->publishedPostTweetsProvider->provide();
 
         $unpublishedPostTweets = [];
 
         foreach ($postTweets as $postTweet) {
-            foreach ($publishedTweets as $publishedTweet) {
-                if ($postTweet->getLink() === $publishedTweet->getLink()) {
+            foreach ($publishedPostTweets as $publishedPostTweet) {
+                if ($postTweet->getLink() === $publishedPostTweet->getLink()) {
                     // already published
                     continue 2;
                 }
@@ -42,18 +36,5 @@ final class PublishedTweetsFilter
         }
 
         return $unpublishedPostTweets;
-    }
-
-    /**
-     * @return PublishedTweet[]
-     */
-    private function getPublishedPostTweets(): array
-    {
-        if ($this->publishedPostTweets !== []) {
-            return $this->publishedPostTweets;
-        }
-
-        $this->publishedPostTweets = $this->twitterPostApiWrapper->getPublishedTweets();
-        return $this->publishedPostTweets;
     }
 }

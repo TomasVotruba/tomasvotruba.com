@@ -6,7 +6,7 @@ perex: |
     <br><br>
     It leads to more developers **who can write their own custom Rector rules to improve their specific projects**. That leads to more "how-to" questions in the Rector repository. I've decided to answer one of the frequent ones today.
 
-tweet: "New Post on the 🐘 blog: How to Replace Single Node with Two Nodes in Abstract Syntax Tree      @rectorphp"
+tweet: "New Post on the 🐘 blog: How to Replace Single Node with Two Nodes in Abstract Syntax Tree"
 tweet_image: "/assets/images/posts/2021/replace_two_nodes_stmt.png"
 ---
 

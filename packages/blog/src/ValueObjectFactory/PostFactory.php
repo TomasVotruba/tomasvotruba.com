@@ -86,6 +86,8 @@ final class PostFactory
             $configuration['deprecated_since']
         ) : null;
 
+        $tweetText = $configuration['tweet'] ?? null;
+
         $post = new Post(
             $id,
             $title,
@@ -93,7 +95,7 @@ final class PostFactory
             dateTime: $this->pathAnalyzer->resolveDateTime($smartFileInfo),
             perex: $configuration['perex'],
             htmlContent: $this->decorateHeadlineWithId($htmlContent),
-            tweetText: $configuration['tweet'] ?? null,
+            tweetText: $tweetText,
             tweetImage: $this->resolveTweetImage($configuration),
             updatedAt: $updatedAt,
             updatedMessage: $configuration['updated_message'] ?? null,
