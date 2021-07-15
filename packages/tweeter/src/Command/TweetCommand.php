@@ -6,6 +6,7 @@ namespace TomasVotruba\Tweeter\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
@@ -40,15 +41,20 @@ final class TweetCommand extends Command
     protected function configure(): void
     {
         $this->setName(CommandNaming::classToName(self::class));
-        $description = sprintf('Publish new tweet from post "%s:" config', Keys::TWEET);
-        $this->setDescription($description);
+        $this->setDescription('Publish new tweet from post');
+
+        $this->addOption(Option::DRY_RUN, null, InputOption::VALUE_NONE, 'Show what tweet is next to be tweeted');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $hoursSinceLastTweet = $this->twitterPostApiWrapper->getHoursSinceLastTweet();
-        if ($hoursSinceLastTweet < $this->twitterMinimalGapInHours) {
-            return $this->reportTooSoon($hoursSinceLastTweet);
+        $isDryRun = (bool) $input->getOption(Option::DRY_RUN);
+
+        if ($isDryRun === false) {
+            $hoursSinceLastTweet = $this->twitterPostApiWrapper->getHoursSinceLastTweet();
+            if ($hoursSinceLastTweet < $this->twitterMinimalGapInHours) {
+                return $this->reportTooSoon($hoursSinceLastTweet);
+            }
         }
 
         $postTweets = $this->postTweetsProvider->provide();
@@ -69,10 +75,16 @@ final class TweetCommand extends Command
         $this->symfonyStyle->newLine();
 
         $postTweet = $this->resolveRandomTweet($unpublishedPostTweets);
-        $this->tweet($postTweet);
 
-        $message = sprintf('Tweet "%s" was successfully published.', $postTweet->getText());
-        $this->symfonyStyle->success($message);
+        if ($isDryRun) {
+            $message = sprintf('Tweet "%s" would be published.', $postTweet->getText());
+            $this->symfonyStyle->success($message);
+        } else {
+            $this->tweet($postTweet);
+
+            $message = sprintf('Tweet "%s" was successfully published.', $postTweet->getText());
+            $this->symfonyStyle->success($message);
+        }
 
         return ShellCode::SUCCESS;
     }
