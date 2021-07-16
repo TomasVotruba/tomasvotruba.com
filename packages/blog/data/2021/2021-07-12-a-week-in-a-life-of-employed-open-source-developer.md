@@ -311,7 +311,7 @@ This testing found at least five bugs that we would discover only after merging 
 
 ## One Week Later
 
-The `appetite/core` annotations and attributes now work in the `dev-master. I hope Milan will tag the next version soon to remove `dev-main` from our composer.
+The `appetite/core` annotations and attributes now work in the `dev-master`. I hope Milan will tag the next version soon to remove `dev-main` from our composer.
 
 Good, now we have the tools ready, `apitte/core` is up to date and ready. I can finally start the refactoring that seemed "so easy" a few days before. The **safest refactoring is one class at a time**, try it, test it and then merge it. If everything works, we can refactor 2 more classes and so on.
 
