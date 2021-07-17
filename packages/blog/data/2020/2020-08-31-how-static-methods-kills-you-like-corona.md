@@ -161,7 +161,7 @@ And also...
 
 ```diff
 -final class ClassRoom
-+final class ClassRoom implements InfectalbeImterface
++final class ClassRoom implements InfectableInterface
  {
 +    private InfectedYoungChild $infectedYoungChild;
 +
