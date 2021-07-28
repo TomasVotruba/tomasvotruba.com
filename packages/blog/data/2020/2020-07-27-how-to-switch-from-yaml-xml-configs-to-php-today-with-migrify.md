@@ -104,9 +104,6 @@ composer require rector/rector --dev
 Setup `rector.php`:
 
 ```php
-<?php
-
-use Symplify\ConfigTransformer\ValueObject\Format;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Rector\Symfony\Rector\Class_\ChangeFileLoaderInExtensionAndKernelRector;
 
@@ -114,8 +111,8 @@ return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(ChangeFileLoaderInExtensionAndKernelRector::class)
         ->call('configure', [[
-            ChangeFileLoaderInExtensionAndKernelRector::FROM => Format::YAML,
-            ChangeFileLoaderInExtensionAndKernelRector::TO => Format::PHP,
+            ChangeFileLoaderInExtensionAndKernelRector::FROM => 'yaml',
+            ChangeFileLoaderInExtensionAndKernelRector::TO => 'php',
         ]]);
 };
 ```
