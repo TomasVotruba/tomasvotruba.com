@@ -10,9 +10,10 @@ perex: |
 tweet: "New Post on #php 🐘 blog: Is #zendframework Dead? Is #laravel Losing Breath? Trends of PHP Frameworks in Numbers        #cakephp #nettefw #symfony #yii #php #mvc"
 tweet_image: "/assets/images/posts/2019/trends/trends.png"
 
-updated_since: "March 2021"
-updated_message: |
-    Updated with 1000 → **500 downloads**/day and 24 months to **12 months** minimal age. Link and screen to brand new website [phpfwtrends.org](https://phpfwtrends.org/) added.
+deprecated_since: "July 2021"
+deprecated_message: |
+    This project was introduced 2 years ago with a goal to compare download statistics over "what they say on the internet". The methodology was based on Packagist data, which worked but had some flaws.<br><br>
+    Also, monorepo and split packages downloads lead to a problem, when 1 monorepo download has hidden 10-30 package downloads. **There is no way to detect what packages are downloaded or used exactly**, so this project should be stopped to avoid showing irrelevant data far from reality.
 ---
 
 There are plenty *What is the Best PHP framework(s) in 20X* posts all over the Internet. Usually written by someone, who uses one of them and prefer them. It's pretty easy to put out many arguments, why is your favorite framework "the best framework". These posts mislead the reader because only someone using all PHP frameworks out there in equal time and skill could evaluate it objectively.
