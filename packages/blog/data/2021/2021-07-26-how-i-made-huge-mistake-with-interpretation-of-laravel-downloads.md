@@ -57,7 +57,7 @@ The first package has 2.x million downloads, and the second has 24.x million dow
 
 <br>
 
-Can you see the problem?
+## Can You See the Problem?
 
 * `illuminate/framework` will give us all Laravel packages but will mark only one download
 * `illuminate/console` will give us one Laravel package and will mark only 1 download too

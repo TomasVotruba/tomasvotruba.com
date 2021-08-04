@@ -12,6 +12,10 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: How to Reveal Static Call Relationships in Your Code"
 tweet_image: "/assets/images/posts/2020/static_detector_result.png"
+
+updated_since: "August 2021"
+updated_message: |
+    Updated with EasyCI package, that acquired the Static Detector package.
 ---
 
 "3 developers try to find one static method they can safely change."
@@ -69,20 +73,20 @@ What is the hard problem? How can we be sure the method is not really used?
 
 ## Static Detector to the Rescue
 
-To get these data, we use a handy tool [symplify/static-detector](https://github.com/symplify/static-detector).
+To get these data, we use a handy tool [symplify/easy-ci](https://github.com/symplify/easy-ci).
 
 <br>
 
 Install it:
 
 ```bash
-composer require symplify/static-detector --dev
+composer require symplify/easy-ci --dev
 ```
 
 Run it on your directory:
 
 ```bash
-vendor/bin/static-detector detect src
+vendor/bin/easy-ci detect-static src
 ```
 
 We'll see the overview of all static methods, with all related static calls.
