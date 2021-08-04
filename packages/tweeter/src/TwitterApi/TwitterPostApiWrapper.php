@@ -141,7 +141,7 @@ final class TwitterPostApiWrapper
     {
         return array_filter(
             $tweets,
-            fn (PublishedTweet $publishedTweet) => str_contains($publishedTweet->getText(), 'tomasvotruba.com')
+            fn (PublishedTweet $publishedTweet): bool => str_contains($publishedTweet->getText(), 'tomasvotruba.com')
         );
     }
 
