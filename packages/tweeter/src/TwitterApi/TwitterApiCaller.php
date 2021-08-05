@@ -59,7 +59,7 @@ final class TwitterApiCaller
     }
 
     /**
-     * @param mixed[] $result
+     * @param array<string, mixed> $result
      */
     private function ensureNoError(array $result): void
     {
@@ -67,6 +67,7 @@ final class TwitterApiCaller
             return;
         }
 
+        /** @var string $errorMessage */
         $errorMessage = $result['errors'][0]['message'] ?? $result['error'];
 
         throw new TwitterApiException(sprintf('Twitter API failed due to: "%s"', $errorMessage));
