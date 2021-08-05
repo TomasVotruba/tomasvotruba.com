@@ -148,8 +148,8 @@ final class PostFactory
     private function decorateHeadlineWithId(string $htmlContent): string
     {
         return Strings::replace($htmlContent, self::HEADLINE_LEVEL_REGEX, function ($matches): string {
-            $level = $matches['level'];
-            $headline = $matches['headline'];
+            $level = (int) $matches['level'];
+            $headline = (string) $matches['headline'];
 
             $clearHeadline = strip_tags($headline);
             $headlineStringy = new Stringy($clearHeadline);

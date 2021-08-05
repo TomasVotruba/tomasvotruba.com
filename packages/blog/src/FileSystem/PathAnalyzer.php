@@ -31,7 +31,11 @@ final class PathAnalyzer
             throw new ShouldNotHappenException($message);
         }
 
-        $date = sprintf('%d-%d-%d', $match['year'], $match['month'], $match['day']);
+        $year = (int) $match['year'];
+        $month = (int) $match['month'];
+        $day = (int) $match['day'];
+
+        $date = sprintf('%d-%d-%d', $year, $month, $day);
         return DateTime::from($date);
     }
 

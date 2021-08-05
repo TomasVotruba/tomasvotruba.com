@@ -59,7 +59,7 @@ final class TwitterImageApiWrapper
             throw new ShouldNotHappenException($message);
         }
 
-        $fileSizeInBytes = $headers['Content-Length'];
+        $fileSizeInBytes = (int) $headers['Content-Length'];
         $mediaType = $headers['Content-Type'];
 
         if ($fileSizeInBytes > self::MAX_IMAGE_FILE_SIZE) {
