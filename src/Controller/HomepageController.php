@@ -26,12 +26,22 @@ final class HomepageController extends AbstractController
     #[Route(path: '/', name: RouteName::HOMEPAGE)]
     public function __invoke(): Response
     {
-        $randomQuoteKey = array_rand(self::QUOTES);
-        $quote = self::QUOTES[$randomQuoteKey];
-
         return $this->render('homepage.twig', [
             'title' => 'Change Fast and Safe',
-            'quote' => $quote,
+            'quote' => $this->getRandomQuote(),
+            'next_month' => $this->getNextMonthName(),
         ]);
+    }
+
+    private function getRandomQuote(): string
+    {
+        $randomQuoteKey = array_rand(self::QUOTES);
+        return self::QUOTES[$randomQuoteKey];
+    }
+
+    private function getNextMonthName(): string
+    {
+        $nextMonthTime = strtotime('first day of +1 month');
+        return date('F', $nextMonthTime);
     }
 }
