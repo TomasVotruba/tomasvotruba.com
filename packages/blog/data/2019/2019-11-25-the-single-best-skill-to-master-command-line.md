@@ -111,7 +111,7 @@ That's it! This single hack makes me so productive.
 
 ## What do I use for CLI?
 
-### Oh My Zsh shell
+### Oh My Zen shell
 
 I've used this on Ubuntu for the last 8 years (thanks to Michal Svec for helping me with it). It's a smart shell you can install from here - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
 
