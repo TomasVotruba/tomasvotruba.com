@@ -74,7 +74,7 @@ And I keep replying:
 
 <br>
 
-What does that mean? If you'd record my keyboard for the process above, it would look more like this:
+What does that mean? If you'd recorded my keyboard for the process above, it would look more like this:
 
 ```bash
 nb new-branch
@@ -111,9 +111,9 @@ That's it! This single hack makes me so productive.
 
 ## What do I use for CLI?
 
-### Oh My Zen shell
+### Oh My Zsh shell
 
-I use this on Ubuntu for the last 8 years (thanks to Michal Svec for helping me with it). It's a smart shell you can install from here - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
+I've used this on Ubuntu for the last 8 years (thanks to Michal Svec for helping me with it). It's a smart shell you can install from here - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh).
 
 ## How to Add Aliases?
 
