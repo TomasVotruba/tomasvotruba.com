@@ -21,6 +21,7 @@ final class HomepageController extends AbstractController
         // source https://twitter.com/syaranza_/status/1403034104845660161
         // 'Clean code is a code, that junior and senior can understand in the same amount of time'
         // https://twitter.com/votrubat/status/1275863668878688257
+        "If you can't explain it to a six-year-old,<br>you don't understand it yourself.",
     ];
 
     #[Route(path: '/', name: RouteName::HOMEPAGE)]
