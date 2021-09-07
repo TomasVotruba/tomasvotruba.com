@@ -41,7 +41,7 @@ final class HomepageController extends AbstractController
 
     private function getNextMonthName(): string
     {
-        $nextMonthTime = strtotime('first day of +1 month');
+        $nextMonthTime = strtotime('+45 days');
         return date('F', $nextMonthTime);
     }
 }
