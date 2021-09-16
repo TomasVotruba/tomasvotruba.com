@@ -3,10 +3,6 @@ includes:
 
 services:
     -
-        class: Symplify\PHPStanRules\Rules\NoInheritanceRule
-        tags: [phpstan.rules.rule]
-
-    -
         class: Symplify\PHPStanRules\Rules\PreferredClassRule
         tags: [phpstan.rules.rule]
         arguments:
@@ -82,3 +78,21 @@ parameters:
 
         # fix later
         - '#Private method in is not allowed here \- it should only delegate to others\. Decouple the private method to a new service class#'
+
+
+        # global variables
+        - '#Variable "(site_url|disqus_shortname)" is used in template but missing in render\(\) method#'
+
+        # false positives - in {% set ... %}
+        - '#Variable "post_absolute_url" is used in template but missing in render\(\) method#'
+        - '#Variable "previous_post" is used in template but missing in render\(\) method#'
+
+        # false positive - in include
+        - '#Passed "title" variable is not used in the template#'
+
+
+        # required by Symfony setter
+        -
+            message: '#This call has duplicate argument#'
+            paths:
+                -  packages/*/config/*
