@@ -61,7 +61,7 @@ final class TweetCommand extends Command
         $unpublishedPostTweets = $this->tweetsFilter->filter($postTweets);
 
         // no tweetable tweet
-        if (count($unpublishedPostTweets) === 0) {
+        if ($unpublishedPostTweets === []) {
             return $this->reportNoNewTweet();
         }
 
@@ -72,6 +72,7 @@ final class TweetCommand extends Command
             $this->symfonyStyle->writeln(' * ' . $unpublishedPostTweet->getText());
             $this->symfonyStyle->newLine();
         }
+
         $this->symfonyStyle->newLine();
 
         $postTweet = $this->resolveRandomTweet($unpublishedPostTweets);

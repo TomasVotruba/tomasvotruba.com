@@ -119,7 +119,7 @@ final class TwitterPostApiWrapper
 
         // simulate "paging"
         $page = 0;
-        while (count($currentResult) > 0 && $page < self::MAX_TWEET_PAGES) {
+        while ($currentResult !== [] && $page < self::MAX_TWEET_PAGES) {
             $lastResult = $result[array_key_last($result)];
 
             $maxId = $lastResult['id'];
