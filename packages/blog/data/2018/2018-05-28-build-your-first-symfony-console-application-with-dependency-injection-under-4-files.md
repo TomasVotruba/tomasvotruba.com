@@ -53,7 +53,7 @@ The basic stone of all Symfony Applications. Nothing extra here, we just load th
 ```php
 <?php
 
-# app/Kernel.php
+# app/AppKernel.php
 
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
@@ -79,7 +79,7 @@ final class AppKernel extends Kernel
 }
 ```
 
-There is one more thing. We'll
+There is one more thing. We'll have to do.
 
 ### 3. The bin file
 
@@ -96,7 +96,7 @@ $kernel = new AppKernel;
 $kernel->boot();
 
 $container = $kernel->getContainer();
-$application = $container->get(Application::class)
+$application = $container->get(Application::class);
 $application->run();
 ```
 
@@ -130,7 +130,7 @@ With FrameworkBundle we'd add `autoconfigure` option to `services.yml` config - 
 This is the place to use [famous collector pattern](/blog/2018/03/08/why-is-collector-pattern-so-awesome/#drop-that-expression-language-magic) via `CompilerPass`:
 
 ```php
-# app/DependencyInjection/CompilerPass/CollectCommandsToApplicationCompilerPass.php
+# app/DependencyInjection/CompilerPass/CommandsToApplicationCompilerPass.php
 
 namespace App\DependencyInjection\CompilerPass;
 
@@ -140,7 +140,7 @@ use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
 
-final class CollectCommandsToApplicationCompilerPass implements CompilerPassInterface
+final class CommandsToApplicationCompilerPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $containerBuilder): void
     {
@@ -158,11 +158,11 @@ final class CollectCommandsToApplicationCompilerPass implements CompilerPassInte
 And make our `Kernel` aware of it:
 
 ```php
-# app/Kernel.php
+# app/AppKernel.php
 
 // ...
 
-use App\DependencyInjection\CompilerPass\CollectCommandsToApplicationCompilerPass;
+use App\DependencyInjection\CompilerPass\CommandsToApplicationCompilerPass;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 
