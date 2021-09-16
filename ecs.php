@@ -20,7 +20,12 @@ return function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/ecs.php',
     ]);
 
-    $parameters->set(Option::SKIP, [__DIR__ . '/config/bundles.php', UnaryOperatorSpacesFixer::class]);
+    $parameters->set(Option::SKIP, [
+        // symfony magic mess
+        __DIR__ . '/config/bootstrap.php',
+        __DIR__ . '/config/bundles.php',
+        UnaryOperatorSpacesFixer::class,
+    ]);
 
     $containerConfigurator->import(SetList::PSR_12);
     $containerConfigurator->import(SetList::COMMON);

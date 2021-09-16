@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TweetFilter;
 
+use DateTimeImmutable;
+use DateTimeInterface;
 use Nette\Utils\DateTime;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
@@ -11,7 +13,10 @@ use TomasVotruba\Website\ValueObject\Option;
 
 final class OldTweetsFilter
 {
-    private DateTime $maxPastDateTime;
+    /**
+     * @var \DateTime|DateTimeImmutable
+     */
+    private DateTimeInterface $maxPastDateTime;
 
     public function __construct(ParameterProvider $parameterProvider)
     {
