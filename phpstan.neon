@@ -71,7 +71,6 @@ parameters:
         # fix later
         - '#Private method in is not allowed here \- it should only delegate to others\. Decouple the private method to a new service class#'
 
-
         # global variables
         - '#Variable "(site_url|disqus_shortname)" is used in template but missing in render\(\) method#'
 
