@@ -62,14 +62,6 @@ parameters:
         # fix in next PR
         - '#Parameter "(.*?)" cannot be nullable#'
 
-        -
-            message: '#Do not inherit from abstract class, better use composition#'
-            paths:
-                - src/Controller
-
-        # PHPStorm attributes
-        - '#Attribute class JetBrains\\PhpStorm\\ArrayShape does not exist#'
-
         # part of arrow function
         -
             message: '#Use separate function calls with readable variable names#'
@@ -83,13 +75,8 @@ parameters:
         # global variables
         - '#Variable "(site_url|disqus_shortname)" is used in template but missing in render\(\) method#'
 
-        # false positives - in {% set ... %}
-        - '#Variable "post_absolute_url" is used in template but missing in render\(\) method#'
-        - '#Variable "previous_post" is used in template but missing in render\(\) method#'
-
         # false positive - in include
         - '#Passed "title" variable is not used in the template#'
-
 
         # required by Symfony setter
         -
