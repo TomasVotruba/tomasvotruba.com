@@ -29,7 +29,7 @@
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan": "^0.12.99",
         "phpunit/phpunit": "^10.0",
-        "rector/rector": "^0.11.60",
+        "rector/rector": "^0.11.53",
         "spatie/http-status-check": "^3.3",
         "symplify/coding-standard": "^9.4.64",
         "symplify/easy-coding-standard": "^9.4.64",
