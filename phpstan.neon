@@ -1,5 +1,6 @@
 includes:
     - vendor/symplify/phpstan-rules/config/symplify-rules.neon
+    - vendor/symplify/phpstan-rules/packages/symfony/config/twig-rules.neon
 
 services:
     -
