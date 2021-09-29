@@ -23,6 +23,8 @@ return function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/ecs.php',
     ]);
 
+    $parameters->set(Option::PARALLEL, true);
+
     $parameters->set(Option::SKIP, [
         // symfony magic mess
         __DIR__ . '/config/bootstrap.php',
