@@ -79,6 +79,21 @@ final class PostRepository
         throw new ShouldNotHappenException(sprintf('Post for slug "%s" was not found.', $slug));
     }
 
+    public function findPreviousPost(Post $currentPost): Post|null
+    {
+        $posts = $this->fetchAllEnglish();
+
+        foreach ($posts as $post) {
+            if ($post->getId() >= $currentPost->getId()) {
+                continue;
+            }
+
+            return $post;
+        }
+
+        return null;
+    }
+
     /**
      * @param Post[] $posts
      * @return Post[]

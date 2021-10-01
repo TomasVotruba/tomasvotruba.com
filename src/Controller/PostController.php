@@ -24,9 +24,11 @@ final class PostController extends AbstractController
     public function __invoke(string $slug): Response
     {
         $post = $this->postRepository->getBySlug($slug);
+        $previousPost = $this->postRepository->findPreviousPost($post);
 
         return $this->render('blog/post_detail.twig', [
             'post' => $post,
+            'previous_post' => $previousPost,
             'title' => $post->getTitle(),
         ]);
     }
