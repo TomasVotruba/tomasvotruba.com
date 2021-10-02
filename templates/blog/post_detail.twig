@@ -1,3 +1,5 @@
+{# @var post \TomasVotruba\Blog\ValueObject\Post #}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,7 +17,6 @@
     </head>
 
     <body>
-        {# @var post \TomasVotruba\Blog\ValueObject\Post #}
         <!-- post_id: {{ post.getId() }} -->
         {% include "_snippets/menu.twig" %}
 
@@ -86,8 +87,6 @@
 
             <div class="card mt-4">
                 <div class="card-body text-white bg-success text-center">
-                    {% set previous_post = previous_post(post) %}
-
                     {% if previous_post is not null %}
                         <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {'slug': previous_post.getSlug }) }}" class="d-block">
                             <div>

@@ -1,5 +1,6 @@
 includes:
     - vendor/symplify/phpstan-rules/config/symplify-rules.neon
+    - vendor/symplify/phpstan-rules/packages/symfony/config/twig-rules.neon
 
 services:
     -
@@ -83,3 +84,6 @@ parameters:
             message: '#This call has duplicate argument#'
             paths:
                 -  packages/*/config/*
+
+        # twig global variables
+        - '#Variable \$(disqus_shortname|site_url) might not be defined#'
