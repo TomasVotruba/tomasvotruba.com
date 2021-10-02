@@ -37,6 +37,21 @@ final class TwitterPostApiWrapper
      */
     private const MAX_TWEET_PAGES = 4;
 
+    /**
+     * @var array<string, int>
+     */
+    private const DEFAULT_CRITERIA = [
+        // these will be filtered down by following conditions; at least number of posts
+        'count' => 200,
+        // we don't need any user info
+        'trim_user' => true,
+        // we don't need replies
+        'exclude_replies' => true,
+        // we don't need retweets
+        'include_rts' => false,
+        'since_id' => self::FIRST_TWEET_ID,
+    ];
+
     private string $twitterName;
 
     /**
@@ -114,7 +129,7 @@ final class TwitterPostApiWrapper
      */
     private function getPublishedTweetsRaw(): array
     {
-        $result = $this->getResult();
+        $result = $this->callUserTimelineByCriteria(self::DEFAULT_CRITERIA);
         $currentResult = $result;
 
         // simulate "paging"
@@ -124,7 +139,7 @@ final class TwitterPostApiWrapper
 
             $maxId = $lastResult['id'];
 
-            $currentResult = $this->getResult($maxId);
+            $currentResult = $this->getResultChunk($maxId);
             $result = array_merge($result, $currentResult);
 
             ++$page;
@@ -148,29 +163,25 @@ final class TwitterPostApiWrapper
     /**
      * @return mixed[]
      */
-    private function getResult(?int $maxId = null): array
+    private function getResultChunk(int $maxId): array
     {
-        $data = [
-            // these will be filtered down by following conditions; at least number of posts
-            'count' => 200,
-            // we don't need any user info
-            'trim_user' => true,
-            // we don't need replies
-            'exclude_replies' => true,
-            // we don't need retweets
-            'include_rts' => false,
-            'since_id' => self::FIRST_TWEET_ID,
-        ];
-
-        if ($maxId !== null) {
-            // we're way back in the past
-            if ($maxId < self::FIRST_TWEET_ID) {
-                return [];
-            }
-
-            $data['max_id'] = $maxId;
+        // we're way back in the past
+        if ($maxId < self::FIRST_TWEET_ID) {
+            return [];
         }
 
+        $data = self::DEFAULT_CRITERIA;
+        $data['max_id'] = $maxId;
+
+        return $this->callUserTimelineByCriteria($data);
+    }
+
+    /**
+     * @param array<string, mixed> $data
+     * @return mixed[]
+     */
+    private function callUserTimelineByCriteria(array $data): array
+    {
         return $this->twitterApiCaller->callGet(self::TIMELINE_URL, '* from:' . $this->twitterName, $data);
     }
 }
