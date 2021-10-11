@@ -10,7 +10,6 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
-use Symplify\PackageBuilder\Console\ShellCode;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Tweeter\Configuration\Keys;
 use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
@@ -87,7 +86,7 @@ final class TweetCommand extends Command
             $this->symfonyStyle->success($message);
         }
 
-        return ShellCode::SUCCESS;
+        return self::SUCCESS;
     }
 
     private function reportNoNewTweet(): int
@@ -98,7 +97,7 @@ final class TweetCommand extends Command
         );
         $this->symfonyStyle->warning($noTweetMessage);
 
-        return ShellCode::SUCCESS;
+        return self::SUCCESS;
     }
 
     private function tweet(PostTweet $postTweet): void
@@ -121,7 +120,7 @@ final class TweetCommand extends Command
 
         $this->symfonyStyle->warning($toSoonMessage);
 
-        return ShellCode::SUCCESS;
+        return self::SUCCESS;
     }
 
     /**

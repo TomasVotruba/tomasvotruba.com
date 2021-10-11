@@ -1,6 +1,5 @@
 includes:
     - vendor/symplify/phpstan-rules/config/symplify-rules.neon
-    - vendor/symplify/phpstan-rules/packages/symfony/config/twig-rules.neon
 
 services:
     -
@@ -41,13 +40,6 @@ parameters:
 
     reportUnmatchedIgnoredErrors: false
     ignoreErrors:
-        # php-parser Node/Stmt mixups
-        -
-            message: '#Array with keys is not allowed\. Use value object to pass data instead#'
-            paths:
-                # calling API with data
-                - 'packages/tweeter/src/TwitterApi/TwitterPostApiWrapper.php'
-
         -
             message: '#The path "/\.\./\.env\.local" was not found#'
             path: 'tests/bootstrap.php'
@@ -72,18 +64,13 @@ parameters:
         # fix later
         - '#Private method in is not allowed here \- it should only delegate to others\. Decouple the private method to a new service class#'
 
-
-        # global variables
-        - '#Variable "(site_url|disqus_shortname)" is used in template but missing in render\(\) method#'
-
-        # false positive - in include
-        - '#Passed "title" variable is not used in the template#'
-
         # required by Symfony setter
         -
             message: '#This call has duplicate argument#'
             paths:
                 -  packages/*/config/*
 
-        # twig global variables
-        - '#Variable \$(disqus_shortname|site_url) might not be defined#'
+        # parent layout
+        - '#Variable \$(site_url|disqus_shortname) might not be defined#'
+        - '#Passed "title" variable is not used in the template#'
+        - '#Variable "(site_url|disqus_shortname)" is used in template but missing in render\(\) method#'

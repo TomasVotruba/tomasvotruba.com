@@ -48,6 +48,21 @@ final class PostRepository
         return $this->filterOutNonEnglish($posts);
     }
 
+    /**
+     * @param int[] $ids
+     * @return Post[]
+     */
+    public function findByIds(array $ids): array
+    {
+        $posts = [];
+
+        foreach ($ids as $id) {
+            $posts[] = $this->get($id);
+        }
+
+        return $posts;
+    }
+
     public function get(int $id): Post
     {
         foreach ($this->getPosts() as $post) {
