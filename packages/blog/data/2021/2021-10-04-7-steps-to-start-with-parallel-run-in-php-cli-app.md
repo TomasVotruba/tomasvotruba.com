@@ -7,6 +7,7 @@ perex: |
     What I missed **was a to-do list for a 6-year old PHP programmer**. Straightforward, with everyday terminology developers, already know.
     <br><br>
     Do you want to have **a better idea of how to add a parallel run to one of PHP CLI apps**?<br>
+    <br>
     This post will get you from 0 to padawan in a couple of minutes.
 
 tweet: "New Post on the 🐘 blog: How to Implement Parallel Run in CLI PHP App from a Dummy"
@@ -97,7 +98,7 @@ Before the 2nd file can be processed by coding standard, we have to wait for the
 
 How to start with parallelization? Look for "the main" `foreach (...)` in your code.
 
-## 5. Processes are Independent
+## 5. Processes are on Their Own
 
 What do you do when you need a repository service in your project? We inject it via the constructor and use it. It has access to a database, where are data all up-to-date, and we can load, edit and delete them. We trust the stability.
 
@@ -105,42 +106,9 @@ In parallel, this is a bit different. How?
 
 <br>
 
-Imagine you're cooking dinner for your family, and you miss the last 4 ingredients to make the meal tasty. Thank God you have 2 kids! You could send them both to get 4 ingredients, but it would be faster if each of them could get just 2 ingredients.
+This point started as a few sentences, but soon grew to its own post with. It's a metaphor that hits the nail on the head.
 
-You're rushing them to get it, and after they leave, you realize they forgot their phones. They can't talk to you, and they can't talk to each other. We don't know when they'll be back or if they found what you need.
-
-**We have to wait till everyone gets back** to see the result.
-
-<br>
-
-How does this story look in PHP code?
-
-```php
-// 1. input phase
-$neededIngredients = ['onion', 'garlic', 'ajvar', 'chilli'];
-$familyMembers = ['son', 'daughter'];
-
-// 2. prepare phase
-$familyMembersCount = count($familyMembers);
-$ingredientsChunks = array_chunk($neededIngredients, $familyMembersCount)
-
-// 3. run process phase
-$foundIngredients = [...];
-foreach ($familyMembers as $key => $familyMember) {
-    $ingredientsChunk = $ingredientsChunks[$key];
-    $foundIngredients[] = $familyMember->findIngredients($ingredientsChunk);
-}
-
-return $foundIngredients;
-```
-
-<br>
-
-And that's precisely how parallel works in ECS!
-
-* 1 Family member = 1 CPU thread
-* 1 needed ingredient = 1 input file
-* Ingredients chunk = array of input files for 1 CPU thread
+**Go read [Parallel in PHP for Dummies? Cooking a Family Dinner](/blog/parallel-in-php-for-dummies-cooking-a-family-dinner)** and then come back for the best experience of this list.
 
 ## 6. From Foreach to Command
 
