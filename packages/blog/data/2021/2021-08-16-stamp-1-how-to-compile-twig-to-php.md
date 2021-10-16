@@ -76,13 +76,6 @@ We pass a TWIG `'templates/meal.twig'` and get rendered HTML `$content`. How can
 
 ## TWIG → ? → HTML
 
-<<<<<<< HEAD
-We're getting closer. Now we know how to render TWIG file path to HTML content. We need a couple of lines in PHP using only the `twig/twig` package. That's great! But how is that useful for static analysis in PHP?
-
-Now we'll one of TWIG rendering lifecycle steps. It would be costly to convert every TWIG template to PHP, then complete variables and `echo` it to HTML string.
-
-The simple TWIG lifecycle has 3 steps:
-=======
 We're getting closer. Now we know how to render TWIG file path to HTML content with couple of PHP lines and the `twig/twig` package. That's great! But **how is that useful for static analysis in PHP**?
 
 First, we need to understand TWIG rendering lifecycle. It would be costly to convert every TWIG template to PHP, then complete variables and `echo` it to HTML string.
@@ -90,7 +83,6 @@ First, we need to understand TWIG rendering lifecycle. It would be costly to con
 How does TWIG make sure it's fast?
 
 ## 3-Step TWIG Lifecycle
->>>>>>> [post] compiler twig to php
 
 1. find `templates/meal.twig` absolute path and load its contents
 2. **check if this template was already parsed to PHP**
