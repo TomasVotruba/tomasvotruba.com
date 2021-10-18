@@ -1,11 +1,11 @@
  ---
 id: 340
-title: "STAMP #2: How to Turn Messy Twig PHP to Something Useful"
+title: "STAMP #2: How to Turn Messy TWIG PHP to Something Useful"
 perex: |
     In the previous post, we looked [at *how* to compile TWIG to raw PHP](/blog/stamp-1-how-to-compile-twig-to-php). It's one step forward, but it's not enough.
     <br><br>
     Today we look at *how* we turn **the raw PHP code to the code PHPStan understands**.
-tweet: "New Post on the 🐘 blog: Stamp #2: How to Turn Messy Twig PHP to Something Useful"
+tweet: "New Post on the 🐘 blog: Stamp #2: How to Turn Messy TWIG PHP to Something Useful"
 ---
 
 In the previous post, we successfully ~~rendered~~ compiled `templates/meal.twig` template:
@@ -58,10 +58,11 @@ class __TwigTemplate_8a9d1381e8329967... extends Template
                 ($context["meal"] ?? null),
                 "title",
                 "any",
-                 false,
-                 false,
-                 false,
-            1),
+                false,
+                false,
+                false,
+                1
+            ),
             "html",
             null,
             true
@@ -125,7 +126,7 @@ How do we define if the class method is proper? Let's use common sense to drop c
 Look for the keywords mentioned in TWIG template: "meal" and "title". They are mentioned in `doDisplay()` class method, let's keep that.
 
 ```diff
- use Twig\Environment;
+-use Twig\Environment;
 -use Twig\Source;
  use Twig\Template;
 
@@ -145,20 +146,21 @@ Look for the keywords mentioned in TWIG template: "meal" and "title". They are m
 -
     protected function doDisplay(array $context, array $blocks = [])
     {
-        $macros = $this->macros;
+-       $macros = $this->macros;
         // line 1
         echo twig_escape_filter(
             $this->env,
             twig_get_attribute(
                 $this->env,
-                $this->source,
+-               $this->source,
                 ($context["meal"] ?? null),
                 "title",
                 "any",
                  false,
                  false,
                  false,
-            1),
+                 1
+            ),
             "html",
             null,
             true
@@ -192,7 +194,6 @@ Look for the keywords mentioned in TWIG template: "meal" and "title". They are m
 In the end we keep only `__construct` and `doDisplay()` methods:
 
 ```php
-use Twig\Environment;
 use Twig\Template;
 
 /* templates/meal.twig */
@@ -205,14 +206,14 @@ class __TwigTemplate_8a9d1381e8329967... extends Template
             $this->env,
             twig_get_attribute(
                 $this->env,
-                $this->source,
                 ($context["meal"] ?? null),
                 "title",
                 "any",
                  false,
                  false,
                  false,
-            1),
+                 1
+            ),
             "html",
             null,
             true
