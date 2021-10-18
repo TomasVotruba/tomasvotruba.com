@@ -12,6 +12,14 @@ tweet: "New Post on the 🐘 blog: Stamp #1: How to Compile Twig to PHP"
 tweet_image: "/assets/images/posts/2021/stamp_twig_simple.png"
 ---
 
+In the previous post we worked with `templates/meal.twig` with single method call:
+
+```twig
+{{ meal.title }}
+```
+
+Today we'll try to turn this single line into PHP syntax.
+
 ## How do we Render Twig in our Projects?
 
 The most common use case for rendering templates is in a Symfony controller. We call `$this->render()` with a template name as 1st argument:
@@ -215,7 +223,7 @@ class __TwigTemplate_8a9d1381e8329967... extends Template
 
 Not much, to be honest. Yet.
 
-We'll give it a look in the next post. Maybe we can come up with something useful.
+We'll give it a look [in the next post](/blog/stamp-2-how-to-turn-messy-twig-php-to-something-useful). Maybe we can come up with something useful.
 
 <br>
 

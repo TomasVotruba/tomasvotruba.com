@@ -178,12 +178,16 @@ pre {
 .token.deleted {
     color: #980707;
     background: #fdd;
+    display: inline-block;
+    width: 100%;
 }
 
 /* prism remove color in diff */
 .token.inserted {
     color: #488b3a;
     background: #dfd;
+    display: inline-block;
+    width: 100%;
 }
 
 .blockquote {

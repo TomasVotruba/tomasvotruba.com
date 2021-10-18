@@ -1,6 +1,6 @@
 ---
 id: 344
-title: "STAMP: Static Analysis of Templates"
+title: "STAMP #0: Static Analysis of Templates"
 perex: |
     Today we have static analysis checking every line of our PHP code - with PHPStan, Psalm, and PHPStorm. With php-parser and abstract syntax tree, we can do **instant changes across hundreds of files** in a second, with a precision of human hair.
     <br><br>
