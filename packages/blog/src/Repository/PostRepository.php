@@ -96,6 +96,11 @@ final class PostRepository
 
     public function findPreviousPost(Post $currentPost): Post|null
     {
+        $nextPostId = $currentPost->getNextPostId();
+        if ($nextPostId !== null) {
+            return $this->get($nextPostId);
+        }
+
         $posts = $this->fetchAllEnglish();
 
         foreach ($posts as $post) {
