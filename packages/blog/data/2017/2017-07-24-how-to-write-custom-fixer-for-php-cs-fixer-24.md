@@ -2,17 +2,16 @@
 id: 47
 title: "How to Write Custom Fixer for PHP CS Fixer 2.12"
 perex: |
-    You already know <a href="/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/">how coding standard tools work with tokens and how to write a Sniff</a>.
+    You already know [how coding standard tools work with tokens and how to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
      <br><br>
-     Today we'll explore a bit younger tool - <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">PHP CS Fixer</a> and we get <strong>from only finding the smelly spot to fixing it</strong>.
+     Today we'll explore another tool - [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and we get **from finding the smelly spot to fixing it**.
+
 tweet: "How to Write Custom Fixer for #phpcsfixer"
 tweet_image: "/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png"
 
-updated_since: "August 2020"
+updated_since: "October 2021"
 updated_message: |
-    Updated with **ECS 5**, Neon to YAML migration and `checkers` to `services` migration.
-    <br>
-    Updated ECS YAML to PHP configuration since **ECS 8**.
+    Updated ECS PHP configuration since **ECS 8** and PHP CS Fixer 3.
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
@@ -74,17 +73,17 @@ Today we'll add one more step:
 
 ### 1. Implement an Interface
 
-Create a fixer class and implement a `PhpCsFixer\Fixer\DefinedFixerInterface` interface.
+Create a fixer class and implement a `PhpCsFixer\Fixer\FixerInterface` interface.
 
 It covers 7 required methods, but most of them are easy one-liners:
 
 ```php
-use PhpCsFixer\Fixer\DefinedFixerInterface;
+use PhpCsFixer\Fixer\FixerInterface;
 use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
 use PhpCsFixer\Tokenizer\Tokens;
 use SplFileInfo;
 
-final class ExceptionNameFixer implements DefinedFixerInterface
+final class ExceptionNameFixer implements FixerInterface
 {
     # first 5 methods are rutine and descriptive
 
@@ -133,7 +132,7 @@ use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
 use PhpCsFixer\Tokenizer\Tokens;
 use SplFileInfo;
 
-final class ExceptionNameFixer implements DefinedFixerInterface
+final class ExceptionNameFixer implements FixerInterface
 {
     public function getName(): string
     {
@@ -307,7 +306,7 @@ Is that it? Yea, that's it :)
 
 namespace App\CodingStandard\Fixer;
 
-use PhpCsFixer\Fixer\DefinedFixerInterface;
+use PhpCsFixer\Fixer\FixerInterface;
 use PhpCsFixer\FixerDefinition\CodeSample;
 use PhpCsFixer\FixerDefinition\FixerDefinition;
 use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
@@ -315,7 +314,7 @@ use PhpCsFixer\Tokenizer\Token;
 use PhpCsFixer\Tokenizer\Tokens;
 use SplFileInfo;
 
-final class ExceptionNameFixer implements DefinedFixerInterface
+final class ExceptionNameFixer extends FixerInterface
 {
     public function getName(): string
     {
@@ -394,40 +393,16 @@ final class ExceptionNameFixer implements DefinedFixerInterface
 }
 ```
 
-## How to run it?
+## How to Run Fixer in ECS?
 
-### The PHP CS Fixer way
-
-Create `.php_cs` config and register fixer with `registerCustomFixers()` method, like here in [`shopsys/coding-standard`](https://github.com/shopsys/coding-standards/blob/5f7c5e61f3a5ddd279887ac51a2bcb5f6bc81d78/build/phpcs-fixer.php_cs#L54).
+Register fixer in `ecs.php`:
 
 ```php
-return PhpCsFixer\Config::create()
-    ->registerCustomFixers([
-        new App\CodingStandard\Fixer\ExceptionNameFixer,
-    ]);
-```
-
-And run:
-
-```bash
-vendor/bin/php-cs-fixer fix src --config=.php_cs --dry-run
-```
-
-### The [ECS](https://github.com/symplify/easy-coding-standard) way
-
-Put the class to `ecs.php`:
-
-```php
-<?php
-
-declare(strict_types=1);
-
 use App\CodingStandard\Fixer\ExceptionNameFixer;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
-
     $services->set(ExceptionNameFixer::class);
 };
 ```
@@ -442,5 +417,4 @@ That was your first fixer.
 
 Happy fixing!
 
-
-And if you want **more detailed tutorial**, there is one in [official cookbook](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/COOKBOOK-FIXERS.md).
+And if you want **more detailed tutorial**, there is one in [official cookbook](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/cookbook_fixers.rst).
