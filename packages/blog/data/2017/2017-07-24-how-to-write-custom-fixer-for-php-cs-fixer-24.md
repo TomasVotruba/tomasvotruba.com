@@ -1,6 +1,6 @@
 ---
 id: 47
-title: "How to Write Custom Fixer for PHP CS Fixer 2.12"
+title: "How to Write Custom Fixer for PHP CS Fixer 3"
 perex: |
     You already know [how coding standard tools work with tokens and how to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
      <br><br>
