@@ -1,5 +1,6 @@
  ---
 id: 341
+next_post_id: 342
 title: "STAMP #3: How to Turn TWIG Helper Functions to Origin Object"
 perex: |
     In the previous post, we looked at [*how* to turn Messy TWIG PHP to something useful](/blog/stamp-2-how-to-turn-messy-twig-php-to-something-useful) in general.
@@ -263,23 +264,40 @@ echo twig_get_attribute(
 +echo $meal->getTitle();
 ```
 
-**Great! It's a method call we've been waiting for.** Now PHPStan can check the file and tell us if the `getTitle` method exists on `App\Meal` or not.
+<br>
 
-PHPStan also knows that `echo $meal->getTitle()` returns a `string` type. So it can report type errors like:
+Great! It's a **method call we've been waiting for:**
+
+```php
+/** @var \App\Meal $meal */
+echo $meal->getTitle();
+```
+
+Now PHPStan can check the file and tell us if the `getTitle` method exists on `App\Meal` or not.
+
+PHPStan now knows that `$meal->getTitle()` returns a `string`, and can report type errors:
 
 ```twig
 10 * {{ meal.title }}
 ```
 
-## PHP Line vs. TWIG Line?
+## PHP Line vs. TWIG Line
 
-You've probably noticed we kept `// line 1` comment in every snippet. That's because **every proper PHPStan error has a message, file, and line**.
+You've probably noticed we kept `// line 1` comment in every snippet. What is it for?
+
+**Every proper PHPStan error** has:
+
+* an error message,
+* file of origin,
+* and exact line.
+
+<br>
 
 Here we analyze a PHP file that is much bigger than the original TWIG file. Our 1 line in TWIG template was compiled to **~80 lines of PHP.**
 
 So why is the `// line 1` important? The metadata from the native TWIG compiler tells us that **code under this comment belongs to line `X` in the TWIG template**.
 
-## Smart PHP → TWIG Line Mapping
+## Smart PHP => TWIG Line Mapping
 
 How can we use line mapping? Let's say we change the method name in our template:
 
@@ -302,13 +320,21 @@ Error in /templates/meal.twig file on line 1:
 
 <br>
 
-All right, we have removed clutter from the compiled PHP template file and used `NodeVisitor` from `php-parser` to convert magical TWIG functions to explicit PHP code. We're now ready use PHPStan for analysis:
+## To Sum Up
+
+All right, we have removed clutter from the compiled PHP template file and used `NodeVisitor` from `php-parser` to convert magical TWIG functions to explicit PHP code.
+
+We're now ready use PHPStan for analysis:
 
 ```bash
 vendor/bin/phpstan analyze /temp/twig/__TwigTemplate_8a9d1381e8329967...php
 ```
 
-Or is there a better way to run all PHPStan rules on a single file? Let's see in the next post.
+<br>
+
+Or is there a better way to run all PHPStan rules on a single file? 🤔
+
+You'll find the answer in the next post.
 
 <br>
 
