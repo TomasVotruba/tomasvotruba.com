@@ -103,7 +103,8 @@ final class PostFactory
             deprecatedAt: $deprecatedAt,
             deprecatedMessage: $configuration['deprecated_message'] ?? null,
             language: $configuration['lang'] ?? null,
-            absoluteUrl: $this->createAbsoluteUrl($slug)
+            absoluteUrl: $this->createAbsoluteUrl($slug),
+            nextPostId: $configuration['next_post_id'] ?? null,
         );
 
         $this->postGuard->validate($post);

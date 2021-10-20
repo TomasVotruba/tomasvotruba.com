@@ -29,7 +29,8 @@ final class Post
         private ?DateTimeInterface $deprecatedAt,
         private ?string $deprecatedMessage,
         private ?string $language,
-        private string $absoluteUrl
+        private string $absoluteUrl,
+        private ?int $nextPostId
     ) {
     }
 
@@ -136,5 +137,10 @@ final class Post
     public function getAbsoluteUrl(): string
     {
         return $this->absoluteUrl;
+    }
+
+    public function getNextPostId(): int|null
+    {
+        return $this->nextPostId;
     }
 }
