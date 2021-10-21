@@ -70,6 +70,8 @@ final class TwigCompleteCheckRule implements Rule
 }
 ```
 
+<br>
+
 This rule looks for method calls that render TWIG templates:
 
 ```php
