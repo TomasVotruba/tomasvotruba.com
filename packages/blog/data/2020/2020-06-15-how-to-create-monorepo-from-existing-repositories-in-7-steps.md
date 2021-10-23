@@ -367,17 +367,4 @@ If you're serious about monorepo testing, read [How to Test Monorepo in 3 Layers
 
 Don't forget to add `.gitignore` with `/vendor`. Then `git push` and we're finished.
 
-Congrats!
-
-<br>
-
-## Where to go next?
-
-Be sure to read each post from [Monorepo: From Hero to Zero](/cluster/monorepo-from-zero-to-hero/).
-
-Then go to your Gitlab or Github and make your `company/company-monorepo` package. It's easier when you start.
-
-
-<br>
-
 Happy coding!
