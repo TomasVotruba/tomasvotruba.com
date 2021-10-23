@@ -98,7 +98,7 @@ foreach ($possibleAutoloadPaths as $possibleAutoloadPath) {
 
 **Comments are very important** because this is very easy to get lost in. Trust me, I managed to fail a dozen times. Also, other people will appreciate it because it's WTF to see loading more than one `vendor/autoload.php`.
 
-Imagine you'd move your package to a [monorepo structure](/cluster/monorepo-from-zero-to-hero/):
+Imagine you'd move your package to a monorepo structure:
 
 ```diff
  $possibleAutoloadPaths = [

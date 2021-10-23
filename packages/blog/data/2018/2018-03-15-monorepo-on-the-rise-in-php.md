@@ -32,7 +32,3 @@ I work on [Shopsys Framework](https://www.shopsys.com), an open-source e-commerc
 That's how [`shopsys/monorepo-tools`](https://github.com/shopsys/monorepo-tools), that covers both build and split was given birth by [Petr Heinz](https://github.com/PetrHeinz).
 
 It's slowly getting better with monorepo in PHP. But still many people don't know what is difference between *a monorepo* and *a monolith*.
-
-## Where you can Learn More?
-
-Follow the post cluster → [Monorepo From Zero to Hero](/cluster/monorepo-from-zero-to-hero/)
