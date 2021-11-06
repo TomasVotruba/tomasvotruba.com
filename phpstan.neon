@@ -36,9 +36,9 @@ parameters:
         - config/config.php
         - rector.php
 
-    level: max
+    level: 8
 
-    reportUnmatchedIgnoredErrors: false
+#    reportUnmatchedIgnoredErrors: false
     ignoreErrors:
         -
             message: '#The path "/\.\./\.env\.local" was not found#'
@@ -74,3 +74,8 @@ parameters:
         - '#Variable \$(site_url|disqus_shortname) might not be defined#'
         - '#Passed "title" variable is not used in the template#'
         - '#Variable "(site_url|disqus_shortname)" is used in template but missing in render\(\) method#'
+
+        # false positive - read in twig template
+        -
+            message: '#Property TomasVotruba\\Blog\\ValueObject\\Post\:\:\$content is never written, only read#'
+            path: packages/blog/src/ValueObject/Post.php
