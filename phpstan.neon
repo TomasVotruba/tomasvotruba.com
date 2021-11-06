@@ -38,7 +38,7 @@ parameters:
 
     level: 8
 
-#    reportUnmatchedIgnoredErrors: false
+    reportUnmatchedIgnoredErrors: false
     ignoreErrors:
         -
             message: '#The path "/\.\./\.env\.local" was not found#'
