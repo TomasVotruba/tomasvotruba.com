@@ -38,7 +38,7 @@ final class TwitterPostApiWrapper
     private const MAX_TWEET_PAGES = 4;
 
     /**
-     * @var array<string, int>
+     * @var array<string, int|bool>
      */
     private const DEFAULT_CRITERIA = [
         // these will be filtered down by following conditions; at least number of posts

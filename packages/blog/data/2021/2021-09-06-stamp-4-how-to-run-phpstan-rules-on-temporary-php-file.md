@@ -8,6 +8,10 @@ perex: |
 
 tweet: "New Post on the 🐘 blog: Stamp #4: How to Run PHPStan Rules on Temporary PHP File"
 tweet_image: "/assets/images/posts/2021/twig_final_example.gif"
+
+updated_since: "November 2021"
+updated_message: |
+    Added **PHPStan 1.0** approach with `DerivativeContainerFactory`.
 ---
 
 Note: **all credit for technique in this post goes to [Michal Lulco](https://twitter.com/lulco)**. He's an impressive developer from Slovakia who comes with innovative, simple ideas that work. It's a scarce combination to see in the world, and I'm very grateful for him.
@@ -135,17 +139,59 @@ The dependency injection mantra says, "if you want something, ask for it in the 
 
 The `FileAnalyser` has single public method [`analyzeFile()`](https://github.com/phpstan/phpstan-src/blob/2c1107588603afaa8cd3e97165b7eb1736cb4393/src/Analyser/FileAnalyser.php#L59), with 4 required parameters.
 
-Let's ask for it and try to complete it.
+## ~~Ask for It~~ Create New Container With Fresh Instance!
+
+Now, we could ask for `PHPStan\Analyser\FileAnalyser` in the constructor as any other service. But that will lead to side-effects and bugs. Instead, Ondrej Mirtes advised me to use own instance with help of `DerivativeContainerFactory`:
+
+```php
+use PHPStan\DependencyInjection\DerivativeContainerFactory;
+
+public function __construct(
+    private DerivativeContainerFactory $derivativeContainerFactory
+) {
+}
+
+public function analyse()
+{
+    // @todo add cache to create just once
+    $container = $this->derivativeContainerFactory->create([__DIR__ . '/../config/php-parser.neon']);
+    $fileAnalyser = $container->getByType(FileAnalyser::class);
+}
+```
+
+PHPStan 1.0 uses [various of php-parser versions](https://github.com/rectorphp/rector/issues/6744#issuecomment-950282826), depending on use case - some are optimized for cache, some for performance and some for deep analysis. Saying that, we need to ask for the right one in our custom config:
+
+```yaml
+// config/php-parser.neon
+services:
+    defaultAnalysisParser:
+        factory: @cachedCurrentPhpVersionRichParser
+        arguments!: []
+
+    cachedCurrentPhpVersionRichParser:
+        class: PHPStan\Parser\CachedParser
+        arguments:
+            originalParser: @currentPhpVersionRichParser
+            cachedNodesByStringCountMax: 1024
+        autowired: no
+```
+
+Now we created custom container with fresh `PHPStan\Analyser\FileAnalyser` that will work exactly for our use case!
+
+## Make use of FileAnalyser
+
+Let's combine the parts together:
 
 ```diff
  use PhpParser\Node\Expr\MethodCall;
++use PHPStan\DependencyInjection\DerivativeContainerFactory;
 +use PHPStan\Analyser\FileAnalyser;
 +use PHPStan\Rules\Registry;
 
  final class TwigCompleteCheckRule implements Rule
  {
 +    public function __construct(
-+        private FileAnalyser $fileAnalyser,
++        private DerivativeContainerFactory $derivativeContainerFactory,
 +        private Registry $registry,
 +    ) {
 +    }
@@ -172,9 +218,14 @@ Let's ask for it and try to complete it.
          // 3. PHPStan needs physical file, so we dump string to temporary file
          file_put_contents('temporary_file.php', $temporaryPHPFileContent);
 
-         // 4. pseudo-code! feed PHPStan the temporary file
+         // 4. feed PHPStan the temporary file
 -        $foundErrors = $this->phpstanAnalyzer->analyzeFile($temporaryPHPFileContent);
-+        $fileAnalyserResult = $this->fileAnalyser->analyseFile(
++        $container = $this->derivativeContainerFactory->create([
++            __DIR__ . '/../config/php-parser.neon'
++        ]);
++
++        $fileAnalyser = $container->getByType(FileAnalyser::class);
++        $fileAnalyserResult = $fileAnalyser->analyseFile(
 +            $temporaryPHPFileContent, [], $this->registry, null
 +        );
 
@@ -185,6 +236,8 @@ Let's ask for it and try to complete it.
  }
 ```
 
+<br>
+
 One service, one method. Nice and clean design in practice.
 All is looking good. Let's run PHPStan:
 
@@ -194,7 +247,7 @@ vendor/bin/phpstan
 
 ↓
 
-PHPStan crashes, and we get this error:
+PHPStan crashes with following error:
 
 ```bash
 InvalidStateException: Circular reference detected for services: 0282, registry.
@@ -235,8 +288,6 @@ Seeing this, we cannot use `PHPStan\Rules\Registry` in our `TwigCompleteCheckRul
 In our single rule, we need all the other rules. `PHPStan\Rules\Registry` is just injected service; it's a wrapper object. We can unwrap this object!
 
 ```diff
- use PhpParser\Node\Expr\MethodCall;
- use PHPStan\Analyser\FileAnalyser;
  use PHPStan\Rules\Registry;
 +use PHPStan\Rules\Rule;
 
@@ -248,7 +299,6 @@ In our single rule, we need all the other rules. `PHPStan\Rules\Registry` is jus
       * @param Rules[]
       */
      public function __construct(
-         private FileAnalyser $fileAnalyser,
 -        private Registry $registry,
 +        array $rules,
 +    ) {
@@ -267,7 +317,10 @@ That's it? Let's try to run the PHPStan rule and see if it works:
 
 ## 🥳️🥳️🥳️
 
-Once more time, huge thanks to Lulco, who made all this possible!
+<br>
+
+Once more time, [huge thanks to Lulco](https://twitter.com/lulco), who made all this possible!<br>
+Also, thank you [Ondra Mirtes](https://twitter.com/ondrejmirtes) for PHPStan 1.0 tips with custom `PHPStan\Analyser\FileAnalyser`.
 
 <br>
 

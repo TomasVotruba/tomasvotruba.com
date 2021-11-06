@@ -34,6 +34,9 @@ final class Post
     ) {
     }
 
+    /**
+     * @api
+     */
     public function getContent(): string
     {
         return $this->content;
