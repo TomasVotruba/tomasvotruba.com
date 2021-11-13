@@ -2,7 +2,7 @@
 id: 297
 title: "PHPStan Abstract Parent Generics for Dummies"
 perex: |
-    I'm trying to write code that is independent of abstract classes. Type-juggling can create n-matrix complexity in both directions and remind me of stringy static code where everything is one type - `mixed`.
+    I'm trying to write code that is independent of abstract classes. Type-juggling can create n-matrix complexity in both directions and remind me of stringy static code where everything is one type – `mixed`.
     <br><br>
     But we cannot always avoid it. Do you use repositories with one abstract repository? Projects [I upgrade](https://getrector.org/) do.
     <br><br>
@@ -25,7 +25,7 @@ The documentation [barely scratches this topic](https://phpstan.org/blog/generic
 
 <br>
 
-What is the use case? We have two classes - an abstract repository:
+What is the use case? We have two classes – an abstract repository:
 
 ```php
 abstract class AbstractRepository
@@ -76,7 +76,7 @@ $product = $this->productRepository->get($id);
 
 The class method `AbstractRepository->get()` returns and `object`, so for PHP, PHPStan, Rector and IDE it's an `object`. Nothing less, nothing more.
 
-But what **do you see**? You probably assume it's a specific `object` with a specific type - `Product`. How can we get this knowledge to the code?
+But what **do you see**? You probably assume it's a specific `object` with a specific type – `Product`. How can we get this knowledge to the code?
 
 <br>
 
@@ -126,7 +126,7 @@ But what **do you see**? You probably assume it's a specific `object` with a spe
 +}
 ```
 
-We can see these solutions out in the wild. All of them are valid. They verify an assumption - is object a `Product` type?
+We can see these solutions out in the wild. All of them are valid. They verify an assumption – is object a `Product` type?
 
 ## Validation !== Type Declaration
 
@@ -137,7 +137,7 @@ How can we teach our PHP code this knowledge?
 
 ## Generics!
 
-Adding generics to 2 classes is 2-steps
+Adding generics to 2 classes is 2-steps.
 
 ### 1. Open Parent
 
@@ -202,14 +202,14 @@ I stuck on this part and could not go on. We defined `TEntity` in both of our cl
 The problem is, PHPStan sees **generic types only in the classes they're defined** by default.
 While `@return int` gets promoted to child methods, `@template` does not.
 
-- So `TEntity` is `Product` only in class we defined it in - `ProductRepository`
-- And `TEntity` is only an `object` in class we defined it in - `AbstractRepository`
+- So `TEntity` is `Product` only in class we defined it in – `ProductRepository`
+- And `TEntity` is only an `object` in class we defined it in – `AbstractRepository`
 
 So we need to tell `AbstractRepository` to use `TEntity` as `Product`, without modifying it.
 
 <br>
 
-In the documentation, there is mentioned `@extends` annotation. It is not related to extending a class, **but promoting types to parent class**.
+The documentation mentions the `@extends` annotation. It is not related to extending a class, **but promoting types to the parent class**.
 
 Let's get back to our repository:
 
@@ -222,7 +222,7 @@ Let's get back to our repository:
  }
 ```
 
-The `@extends` annotation takes an argument of 1-n item names. These items will be pushed parent repository.
+The `@extends` annotation takes an argument of 1-n item names. These items will be pushed to the parent repository.
 
 How do we tell the parent class to use `TEntity` as `Product`?
 
@@ -268,7 +268,7 @@ abstract class AbstractRepository
 }
 ```
 
-The `@extends` tag can take multiple arguments, separated by comma - in **the same order the types are defined** in abstract class:
+The `@extends` tag can take multiple arguments, separated by comma – in **the same order the types are defined** in the abstract class:
 
 ```php
 /**
