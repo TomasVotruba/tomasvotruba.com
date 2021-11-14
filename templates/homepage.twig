@@ -21,7 +21,7 @@
                 </p>
 
                 {% for post in last_three_posts %}
-                    {# @var \TomasVotruba\Blog\ValueObject\Post post #}
+                    {# @var post \TomasVotruba\Blog\ValueObject\Post #}
                     <p>
                         •&nbsp;&nbsp;<a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
                     </p>
