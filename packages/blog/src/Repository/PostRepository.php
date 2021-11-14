@@ -112,6 +112,14 @@ final class PostRepository
     }
 
     /**
+     * @return Post[]
+     */
+    public function fetchLast(int $limit): array
+    {
+        return array_slice($this->fetchAllEnglish(), 0, $limit);
+    }
+
+    /**
      * @param Post[] $posts
      * @return Post[]
      */
@@ -127,13 +135,5 @@ final class PostRepository
     private function filterOutFuture(array $posts): array
     {
         return array_filter($posts, fn (Post $post): bool => ! $post->isFuture());
-    }
-
-    /**
-     * @return Post[]
-     */
-    public function fetchLast(int $limit): array
-    {
-        return array_slice($this->fetchAllEnglish(), 0, $limit);
     }
 }
