@@ -33,9 +33,7 @@ final class PostRepository
      */
     public function fetchForRss(): array
     {
-        $posts = $this->posts;
-
-        $posts = $this->filterOutNonEnglish($posts);
+        $posts = $this->filterOutNonEnglish($this->posts);
         return $this->filterOutFuture($posts);
     }
 
@@ -44,8 +42,7 @@ final class PostRepository
      */
     public function fetchAllEnglish(): array
     {
-        $posts = $this->posts;
-        return $this->filterOutNonEnglish($posts);
+        return $this->filterOutNonEnglish($this->posts);
     }
 
     /**
@@ -130,5 +127,13 @@ final class PostRepository
     private function filterOutFuture(array $posts): array
     {
         return array_filter($posts, fn (Post $post): bool => ! $post->isFuture());
+    }
+
+    /**
+     * @return Post[]
+     */
+    public function fetchLast(int $limit): array
+    {
+        return array_slice($this->fetchAllEnglish(), 0, $limit);
     }
 }

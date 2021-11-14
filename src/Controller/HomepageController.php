@@ -7,6 +7,7 @@ namespace TomasVotruba\Website\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use TomasVotruba\Blog\Repository\PostRepository;
 use TomasVotruba\Website\ValueObject\RouteName;
 
 final class HomepageController extends AbstractController
@@ -24,10 +25,18 @@ final class HomepageController extends AbstractController
         "If you can't explain it to a six-year-old,<br>you don't understand it yourself.",
     ];
 
+    public function __construct(
+        private PostRepository $postRepository
+    ) {
+    }
+
     #[Route(path: '/', name: RouteName::HOMEPAGE)]
     public function __invoke(): Response
     {
+        $lastThreePosts = $this->postRepository->fetchLast(3);
+
         return $this->render('homepage.twig', [
+            'last_three_posts' => $lastThreePosts,
             'title' => 'Change Fast and Safe',
             'quote' => $this->getRandomQuote(),
             'next_month' => $this->getNextMonthName(),
