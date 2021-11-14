@@ -13,6 +13,24 @@
             Change Fast&nbsp;and&nbsp;Safely
         </h1>
 
+        <div class="card border-info mb-4">
+            <div class="card-body">
+                <p class="mb-3">
+                    <strong>Latest posts from <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG')) }}">my blog</a></strong>:
+
+                </p>
+
+                {% for post in last_three_posts %}
+                    {# @var post \TomasVotruba\Blog\ValueObject\Post #}
+                    <p>
+                        •&nbsp;&nbsp;<a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
+                    </p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <br>
+
         <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="float-left mt-0 mt-sm-4 mb-1 mb-sm-2 rounded-circle shadow homepage-face" style="margin-right: 2rem" alt="Face of Tomas Votruba">
 
         <div class="text-bigger">
@@ -37,7 +55,7 @@
                 To make this happen faster and in scale, I created <a href="http://github.com/rectorphp/rector" target="blank">Rector</a> - a PHP CLI tool for instant upgrades and automated refactoring. It's catching up pretty well among PHP community around the world - from Symfony to Drupal.
             </p>
             <p>
-                I connected with Matthias Noback and we wrote a book!<br>
+                I connected with Matthias Noback and <strong>we wrote a book about Rector</strong>:<br>
                 <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BOOK')) }}">Rector - The Power of Automated Refactoring</a>
             </p>
 
@@ -61,8 +79,13 @@
 
         <div class="card border-warning mt-5">
             <div class="card-body">
-                <strong>{{ next_month }}, 2021</strong>: Do you want improve quality of your project and remove in-effective processes?
-                I'm open to a new opportunity for 10-20 hours/week. <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) }}">Contact me</a>, maybe we'll have a match.
+                <p>
+                    <strong>{{ next_month }}, 2021</strong>: Do you want improve quality of your project and empower your developers to work faster with more joy?
+                </p>
+                <p>
+                    I'm open to a new opportunity for <strong>10-20 hours/week</strong>.<br>
+                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) }}">Contact me</a>, maybe we'll have a match.
+                </p>
             </div>
         </div>
 
