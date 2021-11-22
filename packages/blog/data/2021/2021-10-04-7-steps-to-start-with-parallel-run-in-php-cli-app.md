@@ -88,7 +88,7 @@ This command finds all PHP files in the `/src` directory and runs foreach to che
 $foundFiles = $this->findFiles(__DIR__ . '/src');
 
 foreach ($foundFiles as $foundFile) {
-    $this->codingStandardApplication->procesFile($foundFile);
+    $this->codingStandardApplication->processFile($foundFile);
 }
 ```
 
