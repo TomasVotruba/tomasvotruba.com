@@ -17,7 +17,7 @@ final class PublishedPostTweetsProvider
     private array $publishedPostTweets = [];
 
     public function __construct(
-        private TwitterPostApiWrapper $twitterPostApiWrapper
+        private readonly TwitterPostApiWrapper $twitterPostApiWrapper
     ) {
     }
 

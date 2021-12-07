@@ -9,40 +9,40 @@ final class RouteName
     /**
      * @var string
      */
-    public const CLUSTER_MONOREPO = 'cluster_monorepo';
+    final public const CLUSTER_MONOREPO = 'cluster_monorepo';
 
     /**
      * @var string
      */
-    public const CONTACT = 'contact';
+    final public const CONTACT = 'contact';
 
     /**
      * @var string
      */
-    public const HOMEPAGE = 'homepage';
+    final public const HOMEPAGE = 'homepage';
 
     /**
      * @var string
      */
-    public const POST_DETAIL = 'post_detail';
+    final public const POST_DETAIL = 'post_detail';
 
     /**
      * @var string
      */
-    public const RSS = 'rss';
+    final public const RSS = 'rss';
 
     /**
      * @var string
      */
-    public const TRAININGS = 'trainings';
+    final public const TRAININGS = 'trainings';
 
     /**
      * @var string
      */
-    public const BLOG = 'blog';
+    final public const BLOG = 'blog';
 
     /**
      * @var string
      */
-    public const BOOK = 'book';
+    final public const BOOK = 'book';
 }

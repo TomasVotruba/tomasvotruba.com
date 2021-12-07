@@ -12,25 +12,25 @@ final class Post
     /**
      * Seems like unused property, but used in twig actually with dot syntax.
      */
-    private string $content;
+    private readonly string $content;
 
     public function __construct(
-        private int $id,
-        private string $title,
-        private string $slug,
-        private DateTimeInterface $dateTime,
-        private string $perex,
-        private string $htmlContent,
-        private ?string $tweetText,
-        private ?string $tweetImage,
-        private ?DateTimeInterface $updatedAt,
-        private ?string $updatedMessage,
-        private string $sourceRelativePath,
-        private ?DateTimeInterface $deprecatedAt,
-        private ?string $deprecatedMessage,
-        private ?string $language,
-        private string $absoluteUrl,
-        private ?int $nextPostId
+        private readonly int $id,
+        private readonly string $title,
+        private readonly string $slug,
+        private readonly DateTimeInterface $dateTime,
+        private readonly string $perex,
+        private readonly string $htmlContent,
+        private readonly ?string $tweetText,
+        private readonly ?string $tweetImage,
+        private readonly ?DateTimeInterface $updatedAt,
+        private readonly ?string $updatedMessage,
+        private readonly string $sourceRelativePath,
+        private readonly ?DateTimeInterface $deprecatedAt,
+        private readonly ?string $deprecatedMessage,
+        private readonly ?string $language,
+        private readonly string $absoluteUrl,
+        private readonly ?int $nextPostId
     ) {
     }
 

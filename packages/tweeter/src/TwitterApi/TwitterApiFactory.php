@@ -13,13 +13,13 @@ use TwitterAPIExchange;
  */
 final class TwitterApiFactory
 {
-    private string $twitterConsumerKey;
+    private readonly string $twitterConsumerKey;
 
-    private string $twitterConsumerSecret;
+    private readonly string $twitterConsumerSecret;
 
-    private string $twitterOauthAccessToken;
+    private readonly string $twitterOauthAccessToken;
 
-    private string $twitterOauthAccessTokenSecret;
+    private readonly string $twitterOauthAccessTokenSecret;
 
     public function __construct(ParameterProvider $parameterProvider)
     {

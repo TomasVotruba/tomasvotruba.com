@@ -9,8 +9,8 @@ use TomasVotruba\Tweeter\ValueObject\PostTweet;
 final class TweetsFilter
 {
     public function __construct(
-        private OldTweetsFilter $oldTweetsFilter,
-        private PublishedTweetsFilter $publishedTweetsFilter
+        private readonly OldTweetsFilter $oldTweetsFilter,
+        private readonly PublishedTweetsFilter $publishedTweetsFilter
     ) {
     }
 

@@ -14,8 +14,8 @@ use TomasVotruba\Tweeter\TweetProvider\PublishedPostTweetsProvider;
 final class PublishedTweetsCommand extends Command
 {
     public function __construct(
-        private PublishedPostTweetsProvider $publishedPostTweetsProvider,
-        private SymfonyStyle $symfonyStyle
+        private readonly PublishedPostTweetsProvider $publishedPostTweetsProvider,
+        private readonly SymfonyStyle $symfonyStyle
     ) {
         parent::__construct();
     }

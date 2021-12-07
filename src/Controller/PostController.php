@@ -14,7 +14,7 @@ use TomasVotruba\Website\ValueObject\RouteName;
 final class PostController extends AbstractController
 {
     public function __construct(
-        private PostRepository $postRepository,
+        private readonly PostRepository $postRepository,
     ) {
     }
 

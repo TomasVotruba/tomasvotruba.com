@@ -16,7 +16,7 @@ final class OldTweetsFilter
     /**
      * @var \DateTime|DateTimeImmutable
      */
-    private DateTimeInterface $maxPastDateTime;
+    private readonly DateTimeInterface $maxPastDateTime;
 
     public function __construct(ParameterProvider $parameterProvider)
     {

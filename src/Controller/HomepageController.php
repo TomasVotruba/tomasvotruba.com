@@ -26,7 +26,7 @@ final class HomepageController extends AbstractController
     ];
 
     public function __construct(
-        private PostRepository $postRepository
+        private readonly PostRepository $postRepository
     ) {
     }
 

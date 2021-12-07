@@ -116,19 +116,19 @@ How does it look?
 
 <br>
 
-The **1st cool tool** we look at today is [symplify/psr4-switcher](https://github.com/symplify/psr4-switcher).
+The **1st cool tool** we look at today is [symplify/easy-ci](https://github.com/symplify/easy-ci).
 It doesn't need projects' autoloader so that it can be installed outside the project, e.g., in `/var/www/tools`, while your project is in `/var/www/old_project`.
 
 Install it:
 
 ```bash
-composer require symplify/psr4-switcher --dev
+composer require symplify/easy-ci --dev
 ```
 
 It would be great to have a list of all such multi-class files, right?
 
 ```bash
-vendor/bin/psr4-switcher find-multi-classes /src
+vendor/bin/easy-ci find-multi-classes /src
 ```
 
 ↓
@@ -142,7 +142,7 @@ vendor/bin/psr4-switcher find-multi-classes /src
 Now we know how big a problem we're dealing with.
 
 - Are there 3 files with 20 classes? **Separate them manually**.
-- Is that 50 files with 300 classes? Use **Rector rule** - [`MultipleClassFileToPsr4ClassesRector`](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#multipleclassfiletopsr4classesrector).
+- Is that 50 files with 300 classes? Use **Rector rule** - [`MultipleClassFileToPsr4ClassesRector`](https://github.com/rectorphp/rector/blob/main/docs/rector_rules_overview.md#multipleclassfiletopsr4classesrector).
 
 Now 1 file has exactly 1 class/interface/trait.
 
@@ -158,10 +158,10 @@ Send pull request, make sure your project's autoloader autoloads them, and tests
  }
 ```
 
-If we only knew how many such files are there and where... back to PSR4-Switcher:
+If we only knew how many such files are there and where... back to Easy CI:
 
 ```bash
-vendor/bin/psr4-switcher check-file-class-name src
+vendor/bin/easy-ci check-file-class-name src
 ```
 
 You will get a list of files that don't match. Use PHPStorm refactoring to change the class name everywhere:
@@ -209,7 +209,7 @@ It will not be as pretty as 1 root line, but that's not what we go here now. Our
 We can guess what namespace roots (`"Amateri\\Payment\\"`) should be loaded from which directory (`"src/somewhere-else/Payment"`)... or we can use science!
 
 ```bash
-vendor/bin/psr4-switcher generate-psr4-paths project/src --composer-json project/composer.json
+vendor/bin/easy-ci generate-psr4-paths project/src --composer-json project/composer.json
 ```
 
 The command will generate such paths for us, based on existing namespaces and file locations.
@@ -266,12 +266,12 @@ If everything passes... Commit, PR, CI passes, merge.
 
 [link_rector_book]
 
-In many codebases, there are just random files—no namespace, no fake namespace, etc.
+In many code bases, there are just random files—no namespace, no fake namespace, etc.
 
 For these, we have help of Rector with these 2 rules:
 
-- [`NormalizeNamespaceByPSR4ComposerAutoloadRector`](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#normalizenamespacebypsr4composerautoloadfilesystemrector)
-- [`NormalizeNamespaceByPSR4ComposerAutoloadFileSystemRector`](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md#normalizenamespacebypsr4composerautoloadrector)
+- [`NormalizeNamespaceByPSR4ComposerAutoloadRector`](https://github.com/rectorphp/rector/blob/main/docs/rector_rules_overview.md#normalizenamespacebypsr4composerautoloadfilesystemrector)
+- [`NormalizeNamespaceByPSR4ComposerAutoloadFileSystemRector`](https://github.com/rectorphp/rector/blob/main/docs/rector_rules_overview.md#normalizenamespacebypsr4composerautoloadrector)
 
 <br>
 

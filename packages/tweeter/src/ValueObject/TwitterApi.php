@@ -9,5 +9,5 @@ final class TwitterApi
     /**
      * @var string
      */
-    public const API_VERSION = '1.1';
+    final public const API_VERSION = '1.1';
 }
