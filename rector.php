@@ -29,13 +29,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
 
     $parameters->set(Option::SKIP, [
         RemoveExtraParametersRector::class,
-        UseMessageVariableForSprintfInSymfonyStyleRector::class,
         MoveCurrentDateTimeDefaultInEntityToConstructorRector::class,
-
-        // bug in rector-dev
-        \Rector\Php81\Rector\Property\ReadOnlyPropertyRector::class => [
-            __DIR__ . '/packages/blog/src/Repository/PostRepository.php',
-        ],
 
         // broken for DateTime interface
         RenamePropertyToMatchTypeRector::class => [
