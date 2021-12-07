@@ -8,14 +8,14 @@ use DateTimeInterface;
 
 final class PostTweet
 {
-    private string $text;
+    private readonly string $text;
 
     public function __construct(
-        private int $postId,
+        private readonly int $postId,
         string $text,
-        private DateTimeInterface $dateTime,
-        private ?string $image,
-        private string $link
+        private readonly DateTimeInterface $dateTime,
+        private readonly ?string $image,
+        private readonly string $link
     ) {
         $this->text = htmlspecialchars_decode($text);
     }

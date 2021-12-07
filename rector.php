@@ -17,13 +17,11 @@ return function (ContainerConfigurator $containerConfigurator): void {
 
     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
 
-    $containerConfigurator->import(SetList::PHP_74);
-    $containerConfigurator->import(SetList::PHP_80);
+    $containerConfigurator->import(\Rector\Set\ValueObject\LevelSetList::UP_TO_PHP_81);
     $containerConfigurator->import(SetList::CODE_QUALITY);
     $containerConfigurator->import(SetList::CODING_STYLE);
     $containerConfigurator->import(SetList::NAMING);
     $containerConfigurator->import(SetList::TYPE_DECLARATION);
-    $containerConfigurator->import(SetList::TYPE_DECLARATION_STRICT);
     $containerConfigurator->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
     $containerConfigurator->import(DoctrineSetList::DOCTRINE_CODE_QUALITY);
 
@@ -33,6 +31,11 @@ return function (ContainerConfigurator $containerConfigurator): void {
         RemoveExtraParametersRector::class,
         UseMessageVariableForSprintfInSymfonyStyleRector::class,
         MoveCurrentDateTimeDefaultInEntityToConstructorRector::class,
+
+        // bug in rector-dev
+        \Rector\Php81\Rector\Property\ReadOnlyPropertyRector::class => [
+            __DIR__ . '/packages/blog/src/Repository/PostRepository.php',
+        ],
 
         // broken for DateTime interface
         RenamePropertyToMatchTypeRector::class => [

@@ -11,7 +11,7 @@ use TomasVotruba\Website\Controller\BlogController;
 final class BlogControllerWithDataProvider implements ControllerWithDataProviderInterface
 {
     public function __construct(
-        private PostRepository $postRepository
+        private readonly PostRepository $postRepository
     ) {
     }
 

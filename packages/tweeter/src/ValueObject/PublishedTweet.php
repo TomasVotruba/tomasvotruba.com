@@ -8,13 +8,13 @@ use DateTimeInterface;
 
 final class PublishedTweet
 {
-    private string $text;
+    private readonly string $text;
 
     public function __construct(
         string $text,
-        private DateTimeInterface $createdAt,
-        private int $id,
-        private string $link
+        private readonly DateTimeInterface $createdAt,
+        private readonly int $id,
+        private readonly string $link
     ) {
         $this->text = htmlspecialchars_decode($text);
     }

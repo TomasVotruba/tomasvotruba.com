@@ -34,8 +34,8 @@ final class TwitterImageApiWrapper
     private const MEDIA_ID = 'media_id';
 
     public function __construct(
-        private TwitterApiCaller $twitterApiCaller,
-        private SmartFileSystem $smartFileSystem
+        private readonly TwitterApiCaller $twitterApiCaller,
+        private readonly SmartFileSystem $smartFileSystem
     ) {
     }
 

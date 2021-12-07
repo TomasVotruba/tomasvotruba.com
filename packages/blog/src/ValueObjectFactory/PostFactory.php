@@ -40,18 +40,18 @@ final class PostFactory
      */
     private const HEADLINE_LEVEL_REGEX = '#<h(?<level>\d+)>(?<headline>.*?)<\/h\d+>#';
 
-    private string $projectDir;
+    private readonly string $projectDir;
 
-    private string $siteUrl;
+    private readonly string $siteUrl;
 
     public function __construct(
-        private ParsedownExtra $parsedownExtra,
-        private PathAnalyzer $pathAnalyzer,
-        private RouterInterface $router,
-        private PostGuard $postGuard,
-        private PostSnippetDecorator $postSnippetDecorator,
+        private readonly ParsedownExtra $parsedownExtra,
+        private readonly PathAnalyzer $pathAnalyzer,
+        private readonly RouterInterface $router,
+        private readonly PostGuard $postGuard,
+        private readonly PostSnippetDecorator $postSnippetDecorator,
         ParameterProvider $parameterProvider,
-        private FileSystemGuard $fileSystemGuard
+        private readonly FileSystemGuard $fileSystemGuard
     ) {
         $siteUrl = $parameterProvider->provideStringParameter(Option::SITE_URL);
         $this->siteUrl = rtrim($siteUrl, '/');
@@ -155,9 +155,9 @@ final class PostFactory
             $clearHeadline = strip_tags($headline);
 
             $asciiSlugger = new AsciiSlugger('en');
-            $stringy = $asciiSlugger->slug($clearHeadline);
+            $unicodeString = $asciiSlugger->slug($clearHeadline);
 
-            return sprintf('<h%d id="%s">%s</h%d>', $level, $stringy, $headline, $level);
+            return sprintf('<h%d id="%s">%s</h%d>', $level, $unicodeString, $headline, $level);
         });
     }
 

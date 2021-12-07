@@ -11,7 +11,7 @@ use TwitterAPIExchange;
 final class TwitterApiCaller
 {
     public function __construct(
-        private TwitterAPIExchange $twitterAPIExchange
+        private readonly TwitterAPIExchange $twitterAPIExchange
     ) {
     }
 

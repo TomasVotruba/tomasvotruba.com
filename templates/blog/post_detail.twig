@@ -29,7 +29,7 @@
                 {{ post.getDateTime|date('Y-m-d') }}
             </time>
 
-            {% if post.deprecated %}
+            {% if post.deprecatedAt is not null %}
                 <div class="card border-danger mt-4">
                     <div class="card-header text-white bg-danger">
                         This post is deprecated since {{ post.deprecatedAt|date("F Y") }}. Its knowledge is old and should not be used.
@@ -44,7 +44,7 @@
                 <br>
             {% endif %}
 
-            {% if post.updated %}
+            {% if post.updatedAt is not null %}
                 <div class="card border-success mt-4">
                     <div class="card-header text-white bg-success">
                         This post was updated at {{ post.updatedAt|date("F Y") }} with fresh know-how.

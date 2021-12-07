@@ -11,7 +11,7 @@ use Twig\TwigFilter;
 final class FiltersTwigExtension extends AbstractExtension
 {
     public function __construct(
-        private ParsedownExtra $parsedownExtra
+        private readonly ParsedownExtra $parsedownExtra
     ) {
     }
 

@@ -16,7 +16,7 @@ final class PostSnippetDecorator
     ];
 
     public function __construct(
-        private SmartFileSystem $smartFileSystem
+        private readonly SmartFileSystem $smartFileSystem
     ) {
     }
 

@@ -3,7 +3,7 @@
     "license": "MIT",
     "description": "Blog about hacking PHP, education and being the laziest PHP programmer in the world",
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.1",
         "erusev/parsedown-extra": "^0.8.1",
         "j7mbo/twitter-api-php": "^1.0.6",
         "nette/utils": "^3.2",

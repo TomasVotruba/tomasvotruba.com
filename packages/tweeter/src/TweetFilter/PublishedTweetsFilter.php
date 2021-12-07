@@ -10,7 +10,7 @@ use TomasVotruba\Tweeter\ValueObject\PostTweet;
 final class PublishedTweetsFilter
 {
     public function __construct(
-        private PublishedPostTweetsProvider $publishedPostTweetsProvider
+        private readonly PublishedPostTweetsProvider $publishedPostTweetsProvider
     ) {
     }
 

@@ -21,14 +21,14 @@ use TomasVotruba\Website\ValueObject\Option;
 
 final class TweetCommand extends Command
 {
-    private int $twitterMinimalGapInHours;
+    private readonly int $twitterMinimalGapInHours;
 
     public function __construct(
         ParameterProvider $parameterProvider,
-        private PostTweetsProvider $postTweetsProvider,
-        private TweetsFilter $tweetsFilter,
-        private TwitterPostApiWrapper $twitterPostApiWrapper,
-        private SymfonyStyle $symfonyStyle
+        private readonly PostTweetsProvider $postTweetsProvider,
+        private readonly TweetsFilter $tweetsFilter,
+        private readonly TwitterPostApiWrapper $twitterPostApiWrapper,
+        private readonly SymfonyStyle $symfonyStyle
     ) {
         $this->twitterMinimalGapInHours = $parameterProvider->provideIntParameter(
             Option::TWITTER_MINIMAL_GAP_IN_HOURS

@@ -9,5 +9,5 @@ final class Keys
     /**
      * @var string
      */
-    public const TWEET = 'tweet';
+    final public const TWEET = 'tweet';
 }

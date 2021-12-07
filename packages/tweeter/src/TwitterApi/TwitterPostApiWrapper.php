@@ -52,7 +52,7 @@ final class TwitterPostApiWrapper
         'since_id' => self::FIRST_TWEET_ID,
     ];
 
-    private string $twitterName;
+    private readonly string $twitterName;
 
     /**
      * @var PublishedTweet[]
@@ -61,10 +61,10 @@ final class TwitterPostApiWrapper
 
     public function __construct(
         ParameterProvider $parameterProvider,
-        private TwitterApiCaller $twitterApiCaller,
-        private TwitterImageApiWrapper $twitterImageApiWrapper,
-        private TweetEntityCompleter $tweetEntityCompleter,
-        private PublishedTweetFactory $publishedTweetFactory
+        private readonly TwitterApiCaller $twitterApiCaller,
+        private readonly TwitterImageApiWrapper $twitterImageApiWrapper,
+        private readonly TweetEntityCompleter $tweetEntityCompleter,
+        private readonly PublishedTweetFactory $publishedTweetFactory
     ) {
         $this->twitterName = $parameterProvider->provideStringParameter(Option::TWITTER_NAME);
     }
