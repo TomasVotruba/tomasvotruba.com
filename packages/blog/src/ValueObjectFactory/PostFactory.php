@@ -7,8 +7,8 @@ namespace TomasVotruba\Blog\ValueObjectFactory;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use ParsedownExtra;
-use Stringy\Stringy;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\Yaml\Yaml;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use Symplify\SmartFileSystem\FileSystemGuard;
@@ -153,11 +153,9 @@ final class PostFactory
             $headline = (string) $matches['headline'];
 
             $clearHeadline = strip_tags($headline);
-            $headlineStringy = new Stringy($clearHeadline);
 
-            $stringy = $headlineStringy->dasherize()
-                ->replace("'", '')
-                ->toLowerCase();
+            $asciiSlugger = new AsciiSlugger('en');
+            $stringy = $asciiSlugger->slug($clearHeadline);
 
             return sprintf('<h%d id="%s">%s</h%d>', $level, $stringy, $headline, $level);
         });

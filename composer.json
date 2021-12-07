@@ -4,7 +4,6 @@
     "description": "Blog about hacking PHP, education and being the laziest PHP programmer in the world",
     "require": {
         "php": ">=8.0",
-        "danielstjules/stringy": "^3.1",
         "erusev/parsedown-extra": "^0.8.1",
         "j7mbo/twitter-api-php": "^1.0.6",
         "nette/utils": "^3.2",
@@ -15,6 +14,7 @@
         "symfony/framework-bundle": "^5.4",
         "symfony/http-foundation": "^5.4",
         "symfony/http-kernel": "^5.4",
+        "symfony/string": "^6.0",
         "symfony/twig-bridge": "^5.4",
         "symfony/twig-bundle": "^5.4",
         "symfony/yaml": "^5.4",

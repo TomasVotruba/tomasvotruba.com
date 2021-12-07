@@ -36,5 +36,6 @@ return function (ContainerConfigurator $containerConfigurator): void {
         ->factory([service(TwitterApiFactory::class), 'create']);
 
     $services->set(FileSystemGuard::class);
-    $services->set(ParameterProvider::class);
+    $services->set(ParameterProvider::class)
+        ->arg('$container', service('service_container'));
 };
