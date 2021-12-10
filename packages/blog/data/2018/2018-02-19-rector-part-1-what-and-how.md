@@ -154,13 +154,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(RenameMethodRector::class)
-        ->call('configure', [[
-            RenameMethodRector::OLD_TO_NEW_METHODS_BY_CLASS => [
-                'Symfony\Component\HttpFoundation\Request' => [
-                    'isMethodSafe' => 'isMethodCacheable'
-                ]
-            ]
-        ]]);
+        ->configure([
+            new MethodCallRename('Symfony\Component\HttpFoundation\Request', 'isMethodSafe', 'isMethodCacheable')
+        ]);
 };
 ```
 
