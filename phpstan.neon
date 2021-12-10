@@ -20,7 +20,7 @@ services:
         class: Symplify\PHPStanRules\Rules\Enum\RequireConstantInMethodCallPositionRule
         tags: [phpstan.rules.rule]
         arguments:
-            constantArgByMethodByType:
+            requiredConstantInMethodCall:
                 Symfony\Component\DependencyInjection\Loader\Configurator\ParametersConfigurator:
                     set: [0]
                 Symplify\PackageBuilder\Parameter\ParameterProvider:
