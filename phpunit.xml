@@ -6,20 +6,9 @@
     colors="true"
     verbose="true"
 >
-    <php>
-        <ini name="error_reporting" value="-1" />
-        <server name="SHELL_VERBOSITY" value="-1" />
-    </php>
-
     <testsuites>
         <testsuite name="main">
             <directory>packages/*/tests</directory>
         </testsuite>
     </testsuites>
-
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix="*.php">src</directory>
-        </whitelist>
-    </filter>
 </phpunit>
