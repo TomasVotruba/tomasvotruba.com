@@ -9,9 +9,9 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: New in Rector: Asterisk Type Match"
 
-updated_since: "August 2020"
+updated_since: "December 2021"
 updated_message: |
-    Updated Rector YAML to PHP configuration, as current standard.
+    Updated Rector YAML to PHP configuration, as current standard. Use value object configuration and `configure()` method for code.
 ---
 
 MVC ([model-view-controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)) is wide-spread pattern across all PHP frameworks.
@@ -33,16 +33,11 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
+
     $services->set(RenameMethodRector::class)
-        ->call('configure', [[
-            RenameMethodRector::OLD_TO_NEW_METHODS_BY_CLASS => [
-                // match type
-                'SomeFramework\AbstractPresenter' => [
-                    // old method: new method
-                    'run' => '__invoke'
-                ]
-            ]
-        ]]);
+        ->configure([
+            new MethodCallRename('SomeFramework\AbstractPresenter', 'run', '__invoke')
+        ]);
 };
 ```
 
@@ -88,13 +83,9 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
     $services->set(RenameMethodRector::class)
-        ->call('configure', [[
-            RenameMethodRector::OLD_TO_NEW_METHODS_BY_CLASS => [
-                'App\*Module\Presenter\*Controller' => [
-                    'run' => '__invoke'
-                ]
-            ]
-        ]]);
+        ->configure([
+            new MethodCallRename('App\*Module\Presenter\*Controller', 'run', '__invoke')
+        ]);
 };
 ```
 
@@ -113,25 +104,21 @@ One more thing! You can use it on any type check:
 
  declare(strict_types=1);
 
- use Rector\Renaming\Rector\Constant\RenameClassConstantRector;use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
  use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+ use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
+ use Rector\Renaming\ValueObject\RenameClassConstFetch;
 
  return function (ContainerConfigurator $containerConfigurator): void {
      $services = $containerConfigurator->services();
-     $services->set(RenameClassConstantRector::class)
-         ->call('configure', [[
-             RenameClassConstantRector::OLD_TO_NEW_CONSTANTS_BY_CLASS => [
--                'Framework\Request' => [
-+                'Framework\Request*' => [
-                     200 => 'CODE_200',
-                     300 => 'CODE_300',
-                 ],
--                'Framework\RequestInterface' => [
--                    200 => 'CODE_200',
--                    300 => 'CODE_300',
--                ],
-            ]
-        ]]);
+     $services->set(RenameClassConstFetchRector::class)
+         ->configure([
+-            new RenameClassConstFetch('Framework\Request', 200, 'CODE_200'),
++            new RenameClassConstFetch('Framework\Request*', 200, 'CODE_200'),
+-            new RenameClassConstFetch('Framework\Request', 300, 'CODE_300'),
++            new RenameClassConstFetch('Framework\Request*', 300, 'CODE_300'),
+-            new RenameClassConstFetch('Framework\RequestInterface', 200, 'CODE_200'),
+-            new RenameClassConstFetch('Framework\RequestInterface', 300, 'CODE_300'),
+        ]);
 };
 ```
 

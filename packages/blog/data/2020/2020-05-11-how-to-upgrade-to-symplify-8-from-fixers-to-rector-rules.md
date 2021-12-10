@@ -8,9 +8,10 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: How to Upgrade to #symplify 8 - From Fixer to @rectorphp Rules"
 
-updated_since: "August 2020"
+updated_since: "December 2021"
 updated_message: |
     Updated Rector/ECS YAML to PHP configuration, as current standard.
+    The method order by interface Rector rule is removed now.
 ---
 
 When you run [ECS](https://github.com/symplify/easy-coding-standard) with version 7.3+:
@@ -357,53 +358,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
 
 ## 9. Specific Order By Parent Contract
 
-Do you implement one interface over and over? Do you have dozens of such classes and want their public methods to have a specific order?
-
-```diff
- final class SomeFixer implements FixerInterface
- {
--    public function isCandidate()
-+    public function getName()
-     {
-     }
-
--    public function getName()
-+    public function isCandidate()
-     {
-         // ...
-     }
- }
-```
-
-Instead of ~~`Symplify\CodingStandard\Fixer\Order\MethodOrderByTypeFixer`~~ Fixer:
-
-↓
-
-use Rector rule:
-
-```php
-<?php
-
-// rector.php
-
-declare(strict_types=1);
-
-use Rector\Order\Rector\Class_\OrderPublicInterfaceMethodRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(OrderPublicInterfaceMethodRector::class)
-        ->call('configure', [[
-            OrderPublicInterfaceMethodRector::METHOD_ORDER_BY_INTERFACES => [
-                'FixerInterface' => [
-                    'getName',
-                    'isCandidate',
-                ]
-            ]
-        ]]);
-};
-```
+*Update: this rule was removed since Rector 0.9+ as not very useful in everyday coding.
 
 ## 10. Make Classes `final`, if You Can
 
