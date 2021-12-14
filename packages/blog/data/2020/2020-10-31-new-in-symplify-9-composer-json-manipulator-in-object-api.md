@@ -2,7 +2,7 @@
 id: 285
 title: "New in Symplify 9: Composer Json Manipulator - In Object API"
 perex: |
-    Have you ever needed to modify `composer.json` with PHP code? Then you're family `$json['require']['php'] ?? null` structures.
+    Have you ever needed to modify `composer.json` with PHP code? Then you're familiar with `$json['require']['php'] ?? null` structures.
     They're hell to work with as any other array - verify the value if it's null, how deeply nested it is, etc.
     <br>
     <br>
