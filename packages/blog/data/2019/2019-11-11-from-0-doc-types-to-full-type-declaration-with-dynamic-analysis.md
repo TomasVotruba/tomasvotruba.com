@@ -13,6 +13,10 @@ perex: |
 tweet: "New Post on #php 🐘 blog: From 0 Doc Types to Full Type Declaration with Dynamic Analysis - Thank you @DaveLiddament for injecting the idea to my head"
 tweet_image: "/assets/images/posts/2019/dynamic-analysis/probe.png"
 
+deprecated_since: "November 2020"
+deprecated_message: |
+    `DynamicTypeAnalysis` was removed from Rector on November 30, 2020 as it was not alligned with Rector philosophy of instant refactoring and was way too theoretical.
+
 updated_since: "August 2020"
 updated_message: |
     Updated Rector YAML to PHP configuration, as current standard.
