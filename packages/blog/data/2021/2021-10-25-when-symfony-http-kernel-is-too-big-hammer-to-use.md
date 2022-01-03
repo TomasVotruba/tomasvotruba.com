@@ -2,11 +2,11 @@
 id: 337
 title: "When Symfony&nbsp;Http&nbsp;Kernel is a Too&nbsp;Big&nbsp;Hammer to&nbsp;Use"
 perex: |
-I've been a big fan of Symfony components for ages. I use them as core bricks of my projects [migrate other frameworks to it](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours), and every 6 months, I'm excited about what new features are coming in the next minor release.
-<br><br>
-But, one tough spot has been bothering me for the last 4 years. I tried to find my way out of it, hack around it or accept it. In March 2021, we [downgrade Rector 0.10 from PHP 8 to 7.1](https://getrector.org/blog/2021/03/22/rector-010-released-with-php71-support#rector-on-php-7-1-and-7-2-without-docker), and the issue became visible more than ever.
-<br><br>
-I knew there was a time for a change.
+    I've been a big fan of Symfony components for ages. I use them as core bricks of my projects [migrate other frameworks to it](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours), and every 6 months, I'm excited about what new features are coming in the next minor release.
+    <br><br>
+    But, one tough spot has been bothering me for the last 4 years. I tried to find my way out of it, hack around it or accept it. In March 2021, we [downgrade Rector 0.10 from PHP 8 to 7.1](https://getrector.org/blog/2021/03/22/rector-010-released-with-php71-support#rector-on-php-7-1-and-7-2-without-docker), and the issue became visible more than ever.
+    <br><br>
+    I knew there was a time for a change.
 
 tweet: "New Post on the 🐘 blog: When Symfony Http Kernel is a Too Big Hammer to Use"
 tweet_image: "/assets/images/posts/2021/symfony_kernel/composer_require.gif"
