@@ -33,7 +33,7 @@ final class PostDataProvider
         foreach ($fileInfos as $fileInfo) {
             $post = $this->postFactory->createFromFileInfo($fileInfo);
             if (isset($posts[$post->getId()])) {
-                $message = sprintf('Post with id "%d" is duplicated', $post->getId());
+                $message = sprintf('Post with id "%d" is duplicated. Increase it to higher one', $post->getId());
                 throw new ShouldNotHappenException($message);
             }
 
