@@ -27,6 +27,9 @@ return function (ContainerConfigurator $containerConfigurator): void {
 
     $parameters->set(Option::PATHS, [__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages']);
 
+    // experimental parallel boost
+    $parameters->set(Option::PARALLEL, true);
+
     $parameters->set(Option::SKIP, [
         RemoveExtraParametersRector::class,
         MoveCurrentDateTimeDefaultInEntityToConstructorRector::class,
