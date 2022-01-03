@@ -9,6 +9,7 @@ perex: |
     Today we'll look at 5 commands you can use in your CI. **They might save you from bugs that no other tool can check**.
 
 tweet: "New Post on the 🐘 blog: 5 Commands from Easy CI that makes your CI Stronger   #nettefw #neon #git #codereview"
+tweet_image: "/assets/images/posts/2021/easy_ci_report.png"
 ---
 
 To start, we first add the package:
