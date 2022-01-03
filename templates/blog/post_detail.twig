@@ -19,6 +19,12 @@
         {% include "_snippets/menu.twig" %}
 
         <div class="container-fluid post" id="content">
+            <div class="text-center book-banner">
+                <a href="https://leanpub.com/rector-the-power-of-automated-refactoring" target="blank" class="text-center">
+                    <img src="{{ asset('assets/images/banner-rector-book.png') }}" class="mb-2 ml-auto mr-auto rounded " style="max-height: 5em" alt="">
+                </a>
+            </div>
+
             <h1>{{ post.title|raw }}</h1>
 
             <div class="pull-right">
@@ -108,5 +114,16 @@
         <script src="{{ asset('assets/prism/prism.js') }}"></script>
 
         {% include "_snippets/google_analytics.twig" %}
+
+        <script type="text/javascript">
+            // @see https://stackoverflow.com/a/30776817/1348344
+            var date = new Date();
+            // display every 2nd hour, not to spam users
+            if (date.getHours() % 2 === 1) {
+                document.querySelector('.book-banner').style.display = 'visible';
+            } else {
+                document.querySelector('.book-banner').style.display = 'none';
+            }
+        </script>
     </body>
 </html>
