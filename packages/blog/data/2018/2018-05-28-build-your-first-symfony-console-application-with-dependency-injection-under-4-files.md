@@ -100,17 +100,23 @@ $application = $container->get(Application::class);
 $application->run();
 ```
 
+<br>
+
 So let's say we have a `App\Command\SomeCommand` with `some` name and we want to run it:
 
 ```bash
 bin/some-app some
 ```
 
+<br>
+
 But we get:
 
 ```bash
 Command "some" is not defined.
 ```
+
+<br>
 
 Why? We're sure that:
 
@@ -155,6 +161,8 @@ final class CommandsToApplicationCompilerPass implements CompilerPassInterface
 }
 ```
 
+<br>
+
 And make our `Kernel` aware of it:
 
 ```php
@@ -177,6 +185,8 @@ use Symfony\Component\Console\Command\Command;
     // ...
 }
 ```
+
+<br>
 
 This will compile to container to something like this:
 
