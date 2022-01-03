@@ -90,7 +90,10 @@ services:
     - App\SomeService([App\Level::TOPP])
 ```
 
-Do you understand this code? I'm not sure if it's interface, class, arguments of the method call. This also proven very hard to analyze with other tools, so we added a check to ensure our syntax is explicit and straightforward:
+Do you understand this code? I'm not sure if it's interface, class, arguments of the method call.
+<br>
+<br>
+This magic syntax also proven very hard to analyze with other tools. That's why we added a check to require explicit and straightforward code:
 
 ```yaml
 services:
@@ -147,17 +150,18 @@ vendor/bin/easy-ci check-conflicts .
 
 ## 5. Detect Commented Code
 
-Last but not least, sometimes, we temporarily comment out a chunk of code. We're testing something, or we don't need the method right now.
+Last but not least, sometimes, we temporarily comment out a chunk of code. We're testing something, or we don't need the method right now, so we comment it. Keeping commented code in main codebase is wrong for couple reasons:
 
-* First, we have git history and blame to work with old code.
-* Second, on merge, we don't remember some commented code we forgot to use or remove.
+* We have tools like `git history` and `git blame` to re-use old code.
+* When we merge the pull-request, we don't known if we've left some commented code we forgot to use or remove.
+* If the commented code is part of security layer, we might have a business chasing our tail.
 
 ### What does it do?
 
-It goes through all `*.php` files and looks for chunks of commented code:
+It goes through all `*.php` files and looks for lines of `//` commented code:
 
 ```php
-final class SomeClass
+final class MoneyTransferer
 {
     public function run()
     {
@@ -173,7 +177,6 @@ final class SomeClass
 
 If there are 3 and more commented lines in a row, it will let you know.
 
-
 ### How to Use it?
 
 ```bash
@@ -183,7 +186,11 @@ vendor/bin/easy-ci check-commented-code <paths>
 vendor/bin/easy-ci check-commented-code app src packages
 ```
 
-Is the line limit too strict? Use `--line-limit` option to modify it to your needs:
+<br>
+
+Is the line limit too strict for your project?
+<br>
+Use `--line-limit` option to modify it to your needs:
 
 ```bash
 vendor/bin/easy-ci check-commented-code app src packages --line-limit 6
