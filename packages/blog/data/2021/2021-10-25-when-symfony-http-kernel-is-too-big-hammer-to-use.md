@@ -38,11 +38,11 @@ $application->run();
 
 I grew up on DI containers, so I'm spoiled by the automatic injection and service management this pattern handle for me. That's why [I picked `symfony/http-kernel` to build console application](/blog/2018/05/28/build-your-first-symfony-console-application-with-dependency-injection-under-4-files/).
 
-## What about `symfony/dependency-injection?
+## What about `symfony/dependency-injection`?
 
 The name seems quite fitting, right? We could provide a single config file, and that's it. Unfortunately, the name is a bit misleading. It does not handle compiler passes, extensions, service autodiscovery, container cache, and container build. You'll find most of the building bricks there, **but the glue is missing**.
 
-There is no "container factory" class in `symfony/dependency-injection, that would handle even the simplest use case:
+There is no "container factory" class in `symfony/dependency-injection`, that would handle even the simplest use case:
 
 ```php
 use Symfony\Component\DependencyInjection\ContainerFactory;
@@ -80,13 +80,13 @@ composer require symfony/http-kernel --dev
 
 If there few more "http" classes we never use, we can live with that.
 
-But what do we get when we run the composer command above?
+But what do we get when we actually run the composer command above?
 
 <img src="/assets/images/posts/2021/symfony_kernel/composer_require.gif" class="img-thumbnail">
 
 <br>
 
-There are some packages related to http that's expected. But why is there debug package - `symfony/var-dumper` in our production tool?
+There are some packages related to http that's expected. But why is there debugging package in our production tool?
 
 <img src="/assets/images/posts/2021/symfony_kernel/symfony_dependent_var_dumper.gif" class="img-thumbnail">
 
@@ -125,11 +125,11 @@ What's the big deal?
 
 Let's get back to the start. In April 2021, we started to develop Rector on PHP 8 and [release PHP 7.1 downgraded version](https://getrector.org/blog/2021/03/22/rector-010-released-with-php71-support#rector-on-php-7-1-and-7-2-without-docker). Downgraded and scoped version means fully downgraded and scoped `/vendor`. Yes, including all Symfony components we use.
 
-The downgrade PHP market is still quite a niche, but **the Rector community is very interested in this field**. In December 2021, there have been over 20 brand new downgrade rules contributed from Rector users.
+The downgrade PHP market is still quite a niche, but **the community is interested more and more in this field**. In December 2021 alone, there have been over 20 brand new downgrade rules contributed from Rector users.
 
 ## Try to Downgrade Invalid Code with Invalid Types
 
-When we started to downgrade Rector, we often came to incompatible types in `FileLoader` classes. The [covariant parameters added in PHP 7.4](https://wiki.php.net/rfc/covariant-returns-and-contravariant-parameters) started to cause problems on PHP 7.3 and bellow.
+When we started downgrading Rector, we often came to incompatible types in `FileLoader` classes. The [covariant parameters added in PHP 7.4](https://wiki.php.net/rfc/covariant-returns-and-contravariant-parameters) started to cause problems on PHP 7.3 and bellow.
 
 The most problematic was a downgrade of `import()` methods.
 
