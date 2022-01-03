@@ -160,11 +160,11 @@ The problem is not about invalid contracts, and anyone could make a mistake in t
 I wish there were a more straightforward container factory service that we could add to the project:
 
 ```bash
-symfony/dependnecy-container-factory
+symfony/dependency-container-factory
 
 Installing...
-* symfony/dependnecy-container-factory
-* symfony/dependnecy-injection
+* symfony/dependency-container-factory
+* symfony/dependency-injection
 ```
 
 <br>
