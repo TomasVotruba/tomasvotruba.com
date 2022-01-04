@@ -2,20 +2,20 @@
 id: 338
 title: "Decomposing Symfony Kernel: What does Minimal Symfony Bundle Do"
 perex: |
-    In previous post, we looked at [When Symfony Http Kernel is a Too Big Hammer to Use](/blog/when-symfony-http-kernel-is-too-big-hammer-to-use). We talked about enormous content this package provides, but we don't really need.
+    In the previous post, we looked at [When Symfony Http Kernel is a Too Big Hammer to Use](/blog/when-symfony-http-kernel-is-too-big-hammer-to-use). We talked about the enormous content this package provides, but we don't need it.
     <br><br>
-    Today we'll have a little self-reflecting pause in the middle of the 4-post journey. We'll look at main glue in Symfony Kernel - the bundle. **Can we find a way to decompose it and use it without Kernel?**
+    Today we'll have a little self-reflecting pause in the middle of the 4-post journey. We'll look at the main glue in Symfony Kernel - the Bundle. **Can we find a way to decompose it and use it without Kernel?**
 
 tweet: "New Post on the 🐘 blog: Decomposing Symfony Kernel: What does Minimal Symfony Bundle Do"
 ---
 
-In previous post we described the problem: the Symfony Kernel requires lot of http-related code **that we don't need in command line applications**. We still have to maintain it, require dev dependencies in production and handle their downgrade.
+In the previous post, we described the problem: the Symfony Kernel requires a lot of http-related code **that we don't need in command line applications**. We still have to maintain it, require-dev dependencies in production, and handle their downgrade.
 
-When there was a pandemic hitting our world in 2020, we didn't think about our studies, where would we go for vacation or what car we'll buy. We cared about our family, what do we eat for dinner and where can we buy everyday life essentials. When we find ourselves in time of troubles we try to look at bare essentials.
+When a pandemic hit our world in 2020, we didn't think about our studies, where we would go for a vacation, or what car we'd buy. We care about our family, what we eat for dinner, and where we can buy everyday life essentials. When we find ourselves in times of trouble, we try to look at bare essentials.
 
 ## What are the Kernel Essentials?
 
-How can we use this approach in "my application kernel is way too big" situation?
+How can we use this approach in the "my application kernel is way too big" situation?
 
 <br>
 
@@ -25,25 +25,25 @@ How can we use this approach in "my application kernel is way too big" situation
 <br>
 
 **How can Kernel do that?**
-* It takes the main config, few bundles and loads them together.
+* It takes the main config, few bundles, and loads them together.
 
 <br>
 
-**What is the bundle class actually doing?**
-* It collects one PHP config, sometimes extension or compiler passes and passes it to kernel to process further.
+**What is the bundle class doing?**
+* It collects one PHP config, sometimes Extension or compiler passes, and passes it to Kernel to process further.
 
 <br>
 
 **Which do we need from those 3?**
-* The config, because it defines service autodiscovery, parameters and sometimes manual arguments.
-* The extension mostly refer the config, so we don't need that.
-* We need compiler passes, because they decorate service definitions and interact with each other.
+* The config, because it defines service autodiscovery, parameters, and sometimes manual arguments.
+* The Extension primarily refers to the config, so we don't need that.
+* We need compiler passes because they decorate service definitions and interact with each other.
 
 <br>
 
 ## 1. The Bundle
 
-Let's look at one of Symplify bundles to demonstrate on real code. This is `AstralBundle`, that allows other kernels to register `symplify/astral` service and use them:
+Let's look at one of the Symplify bundles to demonstrate actual code. This is `AstralBundle`, which allows other kernels to register `symplify/astral` service and use them:
 
 ```php
 namespace Symplify\Astral\Bundle;
@@ -88,7 +88,7 @@ final class AstralExtension extends Extension
 
 <br>
 
-It seems, it loads the `../../config/config.php`. There we define services and parameters.
+It seems it loads the `../../config/config.php`. There we define services and parameters.
 
 So we need:
 * a `*Bundle` class,
@@ -101,7 +101,7 @@ $fileLoader->load(__DIR__ . '/../../config.php');
 
 ## Where Else can we Load Configs?
 
-Does this look familiar? There at least 2 places that handle the same operation. Nothing special, they're quite common - you can see both in code of this website.
+Does this look familiar? There are at least 2 places that handle the same operation. Nothing special, and they're pretty standard - you can see both in the code of this website.
 
 One of them is `MicroKernelTrait::configureContainer()` method:
 
@@ -146,7 +146,7 @@ As you can see, we can replace Bundle + Extension classes with single-line impor
 
 <br>
 
-~~Extension~~ is gone and we can import config elsewhere. What about the compiler passes? We can [add them in the Kernel](https://symfony.com/doc/current/service_container/compiler_passes.html) in `build()` method:
+~~ Extension ~~ is gone, and we can import config elsewhere. What about the compiler passes? We can [add them in the Kernel](https://symfony.com/doc/current/service_container/compiler_passes.html) in `build()` method:
 
 ```php
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
