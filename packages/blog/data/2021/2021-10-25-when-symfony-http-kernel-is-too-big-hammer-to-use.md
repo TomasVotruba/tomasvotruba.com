@@ -10,6 +10,7 @@ perex: |
 
 tweet: "New Post on the 🐘 blog: When Symfony Http Kernel is a Too Big Hammer to Use"
 tweet_image: "/assets/images/posts/2021/symfony_kernel/composer_require.gif"
+next_post_id: 338
 ---
 
 ## Http Kernel and Console Applications
