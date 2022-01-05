@@ -146,7 +146,7 @@ As you can see, we can replace Bundle + Extension classes with single-line impor
 
 <br>
 
-~~ Extension ~~ is gone, and we can import config elsewhere. What about the compiler passes? We can [add them in the Kernel](https://symfony.com/doc/current/service_container/compiler_passes.html) in `build()` method:
+~~Extension~~ is gone, and we can import config elsewhere. What about the compiler passes? We can [add them in the Kernel](https://symfony.com/doc/current/service_container/compiler_passes.html) in `build()` method:
 
 ```php
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
