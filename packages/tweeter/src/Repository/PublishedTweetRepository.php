@@ -20,7 +20,7 @@ final class PublishedTweetRepository
     private array $publishedTweetIds = [];
 
     public function __construct(
-        private SmartFileSystem $smartFileSystem,
+        private readonly SmartFileSystem $smartFileSystem,
     ) {
         $this->publishedTweetIds = Yaml::parseFile(self::STORAGE_FILE);
     }

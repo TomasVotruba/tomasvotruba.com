@@ -50,3 +50,16 @@ jobs:
                     TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
                     TWITTER_OAUTH_ACCESS_TOKEN: ${{ secrets.TWITTER_OAUTH_ACCESS_TOKEN }}
                     TWITTER_OAUTH_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_OAUTH_ACCESS_TOKEN_SECRET }}
+
+            # update data with published id
+            - # commit only to core contributors who have repository access
+                uses: EndBug/add-and-commit@v7.5.0
+                with:
+                # The arguments for the `git add` command (see the paragraph below for more info)
+                    add: .
+                    message: "[tweeter] Add new id"
+                    author_name: "GitHub Action"
+                    author_email: "action@github.com"
+                env:
+                    # to get push access
+                    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}

@@ -10,7 +10,7 @@ use TomasVotruba\Tweeter\ValueObject\PostTweet;
 final class PublishedTweetsFilter
 {
     public function __construct(
-        private PublishedTweetRepository $publishedTweetIdsRepository
+        private readonly PublishedTweetRepository $publishedTweetRepository
     ) {
     }
 
@@ -20,7 +20,7 @@ final class PublishedTweetsFilter
      */
     public function filter(array $postTweets): array
     {
-        $publishedTweetIds = $this->publishedTweetIdsRepository->provideIds();
+        $publishedTweetIds = $this->publishedTweetRepository->provideIds();
 
         return array_filter(
             $postTweets,

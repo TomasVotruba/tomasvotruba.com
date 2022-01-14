@@ -29,7 +29,7 @@ final class TweetCommand extends Command
         private readonly SymfonyStyle $symfonyStyle,
         private readonly PublishedTweetsFilter $publishedTweetsFilter,
         private readonly PublishedTweetRepository $publishedTweetRepository,
-        private Randomizer $randomizer,
+        private readonly Randomizer $randomizer,
     ) {
         parent::__construct();
     }
