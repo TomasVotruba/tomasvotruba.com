@@ -8,6 +8,9 @@ use TomasVotruba\Blog\DataProvider\PostDataProvider;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
+/**
+ * @api
+ */
 final class PostRepository
 {
     /**

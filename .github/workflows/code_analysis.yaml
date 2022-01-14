@@ -22,8 +22,12 @@ jobs:
                         run: 'vendor/bin/phpunit'
 
                     -
-                        name: 'Check active classes'
+                        name: 'Check active classes in Tweeter'
                         run: 'vendor/bin/easy-ci check-active-class packages/tweeter/src --ansi'
+
+                    -
+                        name: 'Check active classes in Blog'
+                        run: 'vendor/bin/easy-ci check-active-class packages/blog/src --ansi'
 
         name: ${{ matrix.actions.name }}
         runs-on: ubuntu-latest
