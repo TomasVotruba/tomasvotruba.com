@@ -45,7 +45,7 @@ final class TweetReporter
     {
         // to soon to tweet after recent tweet
         $toSoonMessage = sprintf(
-            'There is %d hours since last. Gap of %d hours is required',
+            'There is %d days since last. Gap of %d days is required',
             $daysSinceLastTweet,
             $requiredDaysSinceLastTweet
         );
