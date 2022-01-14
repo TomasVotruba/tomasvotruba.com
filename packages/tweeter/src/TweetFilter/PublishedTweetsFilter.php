@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TweetFilter;
 
+use Symfony\Component\Yaml\Yaml;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
 
 final class PublishedTweetsFilter
@@ -14,7 +15,10 @@ final class PublishedTweetsFilter
      */
     public function filter(array $postTweets): array
     {
-        dump($postTweets);
+        $publishedTweetIds = Yaml::parseFile(__DIR__ . '/../../../../data/published_tweet_ids.yaml');
+
+        dump($publishedTweetIds);
+//        dump($postTweets);
         die;
 
         return $unpublishedPostTweets;

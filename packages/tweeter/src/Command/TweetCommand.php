@@ -9,9 +9,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symfony\Component\Yaml\Yaml;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
-use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Tweeter\Configuration\Keys;
 use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
@@ -19,20 +17,17 @@ use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
 use TomasVotruba\Website\ValueObject\Option;
 
+/**
+ * @api
+ */
 final class TweetCommand extends Command
 {
-    private readonly int $twitterMinimalGapInHours;
-
     public function __construct(
-        ParameterProvider $parameterProvider,
         private readonly PostTweetsProvider $postTweetsProvider,
         private readonly TwitterPostApiWrapper $twitterPostApiWrapper,
-        private readonly SymfonyStyle $symfonyStyle
+        private readonly SymfonyStyle $symfonyStyle,
+        private readonly \TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter $publishedTweetsFilter,
     ) {
-        $this->twitterMinimalGapInHours = $parameterProvider->provideIntParameter(
-            Option::TWITTER_MINIMAL_GAP_IN_HOURS
-        );
-
         parent::__construct();
     }
 
@@ -50,7 +45,7 @@ final class TweetCommand extends Command
 
         $postTweets = $this->postTweetsProvider->provide();
 
-        $unpublishedPostTweets = $this->tweetsFilter->filter($postTweets);
+        $unpublishedPostTweets = $this->publishedTweetsFilter->filter($postTweets);
 
         // no new tweets
         if ($unpublishedPostTweets === []) {
@@ -100,20 +95,6 @@ final class TweetCommand extends Command
         } else {
             $this->twitterPostApiWrapper->publishTweet($postTweet->getText());
         }
-    }
-
-    private function reportTooSoon(int $hoursSinceLastTweet): int
-    {
-        // to soon to tweet after recent tweet
-        $toSoonMessage = sprintf(
-            'There is %d hours since last. Gap of %d hours is required',
-            $hoursSinceLastTweet,
-            $this->twitterMinimalGapInHours
-        );
-
-        $this->symfonyStyle->warning($toSoonMessage);
-
-        return self::SUCCESS;
     }
 
     /**

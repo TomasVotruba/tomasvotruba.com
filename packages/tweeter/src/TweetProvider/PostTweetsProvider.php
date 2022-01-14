@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TweetProvider;
 
-use DateTimeInterface;
-use Nette\Utils\DateTime;
 use TomasVotruba\Blog\Repository\PostRepository;
 use TomasVotruba\Tweeter\Validation\TweetGuard;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;

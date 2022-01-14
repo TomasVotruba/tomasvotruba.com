@@ -9,6 +9,7 @@ use TomasVotruba\Website\ValueObject\Option;
 use TwitterAPIExchange;
 
 /**
+ * @api
  * This factory only allows to use ENV variable without any config dependency
  */
 final class TwitterApiFactory
