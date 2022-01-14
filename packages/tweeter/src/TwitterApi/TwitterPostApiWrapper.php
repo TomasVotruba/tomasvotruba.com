@@ -6,10 +6,7 @@ namespace TomasVotruba\Tweeter\TwitterApi;
 
 use Nette\Utils\DateTime;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
-use TomasVotruba\Tweeter\TweetEntityCompleter;
-use TomasVotruba\Tweeter\ValueObject\PublishedTweet;
 use TomasVotruba\Tweeter\ValueObject\TwitterApi;
-use TomasVotruba\Tweeter\ValueObjectFactory\PublishedTweetFactory;
 use TomasVotruba\Website\ValueObject\Option;
 
 final class TwitterPostApiWrapper
@@ -54,37 +51,12 @@ final class TwitterPostApiWrapper
 
     private readonly string $twitterName;
 
-    /**
-     * @var PublishedTweet[]
-     */
-    private array $publishedTweets = [];
-
     public function __construct(
         ParameterProvider $parameterProvider,
         private readonly TwitterApiCaller $twitterApiCaller,
         private readonly TwitterImageApiWrapper $twitterImageApiWrapper,
-        private readonly TweetEntityCompleter $tweetEntityCompleter,
-        private readonly PublishedTweetFactory $publishedTweetFactory
     ) {
         $this->twitterName = $parameterProvider->provideStringParameter(Option::TWITTER_NAME);
-    }
-
-    /**
-     * @return PublishedTweet[]
-     */
-    public function getPublishedTweets(): array
-    {
-        if ($this->publishedTweets !== []) {
-            return $this->publishedTweets;
-        }
-
-        $rawTweets = $this->getPublishedTweetsRaw();
-        $rawTweets = $this->tweetEntityCompleter->completeOriginalUrlsToText($rawTweets);
-
-        $tweets = $this->publishedTweetFactory->createFromRawTweets($rawTweets);
-        $tweets = $this->filterPostTweets($tweets);
-
-        return $this->publishedTweets = $tweets;
     }
 
     public function publishTweet(string $status): void
@@ -146,18 +118,6 @@ final class TwitterPostApiWrapper
         }
 
         return $result;
-    }
-
-    /**
-     * @param PublishedTweet[] $tweets
-     * @return PublishedTweet[]
-     */
-    private function filterPostTweets(array $tweets): array
-    {
-        return array_filter(
-            $tweets,
-            fn (PublishedTweet $publishedTweet): bool => str_contains($publishedTweet->getText(), 'tomasvotruba.com')
-        );
     }
 
     /**

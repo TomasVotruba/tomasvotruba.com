@@ -57,6 +57,11 @@ final class TweetCommand extends Command
         }
 
         $postTweets = $this->postTweetsProvider->provide();
+
+        // @todo skip post ids stored in yaml file
+        dump($postTweets);
+        die;
+
         $unpublishedPostTweets = $this->tweetsFilter->filter($postTweets);
 
         // no tweetable tweet
