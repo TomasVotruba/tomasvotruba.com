@@ -17,10 +17,9 @@ final class PublishedTweetsFilter
     {
         $publishedTweetIds = Yaml::parseFile(__DIR__ . '/../../../../data/published_tweet_ids.yaml');
 
-        dump($publishedTweetIds);
-//        dump($postTweets);
-        die;
-
-        return $unpublishedPostTweets;
+        return array_filter(
+            $postTweets,
+            fn (PostTweet $postTweet) => ! in_array($postTweet->getId(), $publishedTweetIds, true)
+        );
     }
 }

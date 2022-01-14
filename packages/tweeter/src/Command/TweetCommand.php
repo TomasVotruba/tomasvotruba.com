@@ -11,11 +11,12 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use TomasVotruba\Tweeter\Configuration\Keys;
-use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
+use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
 use TomasVotruba\Website\ValueObject\Option;
+use Webmozart\Assert\Assert;
 
 /**
  * @api
@@ -26,7 +27,7 @@ final class TweetCommand extends Command
         private readonly PostTweetsProvider $postTweetsProvider,
         private readonly TwitterPostApiWrapper $twitterPostApiWrapper,
         private readonly SymfonyStyle $symfonyStyle,
-        private readonly \TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter $publishedTweetsFilter,
+        private readonly PublishedTweetsFilter $publishedTweetsFilter,
     ) {
         parent::__construct();
     }
@@ -59,8 +60,6 @@ final class TweetCommand extends Command
             $this->symfonyStyle->writeln(' * ' . $unpublishedPostTweet->getText());
             $this->symfonyStyle->newLine();
         }
-
-        $this->symfonyStyle->newLine();
 
         $postTweet = $this->resolveRandomTweet($unpublishedPostTweets);
 
@@ -102,13 +101,10 @@ final class TweetCommand extends Command
      */
     private function resolveRandomTweet(array $tweets): PostTweet
     {
+        Assert::allIsAOf($tweets, PostTweet::class);
+
         $randomKey = array_rand($tweets);
 
-        $tweet = $tweets[$randomKey];
-        if (! $tweet instanceof PostTweet) {
-            throw new ShouldNotHappenException();
-        }
-
-        return $tweet;
+        return $tweets[$randomKey];
     }
 }
