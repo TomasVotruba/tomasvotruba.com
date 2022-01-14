@@ -10,13 +10,12 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
-use TomasVotruba\Tweeter\Configuration\Keys;
+use TomasVotruba\Tweeter\Randomizer;
 use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
 use TomasVotruba\Website\ValueObject\Option;
-use Webmozart\Assert\Assert;
 
 /**
  * @api
@@ -28,6 +27,7 @@ final class TweetCommand extends Command
         private readonly TwitterPostApiWrapper $twitterPostApiWrapper,
         private readonly SymfonyStyle $symfonyStyle,
         private readonly PublishedTweetsFilter $publishedTweetsFilter,
+        private Randomizer $randomizer,
     ) {
         parent::__construct();
     }
@@ -61,7 +61,7 @@ final class TweetCommand extends Command
             $this->symfonyStyle->newLine();
         }
 
-        $postTweet = $this->resolveRandomTweet($unpublishedPostTweets);
+        $postTweet = $this->randomizer->resolveRandomItem($unpublishedPostTweets);
 
         if ($isDryRun) {
             $message = sprintf('Tweet "%s" would be published.', $postTweet->getText());
@@ -78,11 +78,9 @@ final class TweetCommand extends Command
 
     private function reportNoNewTweet(): int
     {
-        $noTweetMessage = sprintf(
-            'There is no new tweet to publish. Add a new one to one of your post under "%s:" option.',
-            Keys::TWEET
+        $this->symfonyStyle->warning(
+            'There is no new tweet to publish. Add a new one to one of your post under "tweet:" option.'
         );
-        $this->symfonyStyle->warning($noTweetMessage);
 
         return self::SUCCESS;
     }
@@ -94,17 +92,5 @@ final class TweetCommand extends Command
         } else {
             $this->twitterPostApiWrapper->publishTweet($postTweet->getText());
         }
-    }
-
-    /**
-     * @param PostTweet[] $tweets
-     */
-    private function resolveRandomTweet(array $tweets): PostTweet
-    {
-        Assert::allIsAOf($tweets, PostTweet::class);
-
-        $randomKey = array_rand($tweets);
-
-        return $tweets[$randomKey];
     }
 }
