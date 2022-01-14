@@ -10,30 +10,27 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
-use Symplify\PackageBuilder\Parameter\ParameterProvider;
-use TomasVotruba\Tweeter\Configuration\Keys;
-use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
-use TomasVotruba\Tweeter\TweetFilter\TweetsFilter;
+use TomasVotruba\Tweeter\Randomizer;
+use TomasVotruba\Tweeter\Repository\PublishedTweetRepository;
+use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
 use TomasVotruba\Website\ValueObject\Option;
 
+/**
+ * @api
+ */
 final class TweetCommand extends Command
 {
-    private readonly int $twitterMinimalGapInHours;
-
     public function __construct(
-        ParameterProvider $parameterProvider,
         private readonly PostTweetsProvider $postTweetsProvider,
-        private readonly TweetsFilter $tweetsFilter,
         private readonly TwitterPostApiWrapper $twitterPostApiWrapper,
-        private readonly SymfonyStyle $symfonyStyle
+        private readonly SymfonyStyle $symfonyStyle,
+        private readonly PublishedTweetsFilter $publishedTweetsFilter,
+        private readonly PublishedTweetRepository $publishedTweetRepository,
+        private readonly Randomizer $randomizer,
     ) {
-        $this->twitterMinimalGapInHours = $parameterProvider->provideIntParameter(
-            Option::TWITTER_MINIMAL_GAP_IN_HOURS
-        );
-
         parent::__construct();
     }
 
@@ -49,17 +46,11 @@ final class TweetCommand extends Command
     {
         $isDryRun = (bool) $input->getOption(Option::DRY_RUN);
 
-        if (! $isDryRun) {
-            $hoursSinceLastTweet = $this->twitterPostApiWrapper->getHoursSinceLastTweet();
-            if ($hoursSinceLastTweet < $this->twitterMinimalGapInHours) {
-                return $this->reportTooSoon($hoursSinceLastTweet);
-            }
-        }
-
         $postTweets = $this->postTweetsProvider->provide();
-        $unpublishedPostTweets = $this->tweetsFilter->filter($postTweets);
 
-        // no tweetable tweet
+        $unpublishedPostTweets = $this->publishedTweetsFilter->filter($postTweets);
+
+        // no new tweets
         if ($unpublishedPostTweets === []) {
             return $this->reportNoNewTweet();
         }
@@ -72,15 +63,15 @@ final class TweetCommand extends Command
             $this->symfonyStyle->newLine();
         }
 
-        $this->symfonyStyle->newLine();
-
-        $postTweet = $this->resolveRandomTweet($unpublishedPostTweets);
+        /** @var PostTweet $postTweet */
+        $postTweet = $this->randomizer->resolveRandomItem($unpublishedPostTweets);
 
         if ($isDryRun) {
             $message = sprintf('Tweet "%s" would be published.', $postTweet->getText());
             $this->symfonyStyle->success($message);
         } else {
             $this->tweet($postTweet);
+            $this->publishedTweetRepository->saveId($postTweet->getId());
 
             $message = sprintf('Tweet "%s" was successfully published.', $postTweet->getText());
             $this->symfonyStyle->success($message);
@@ -91,11 +82,9 @@ final class TweetCommand extends Command
 
     private function reportNoNewTweet(): int
     {
-        $noTweetMessage = sprintf(
-            'There is no new tweet to publish. Add a new one to one of your post under "%s:" option.',
-            Keys::TWEET
+        $this->symfonyStyle->warning(
+            'There is no new tweet to publish. Add a new one to one of your post under "tweet:" option.'
         );
-        $this->symfonyStyle->warning($noTweetMessage);
 
         return self::SUCCESS;
     }
@@ -107,34 +96,5 @@ final class TweetCommand extends Command
         } else {
             $this->twitterPostApiWrapper->publishTweet($postTweet->getText());
         }
-    }
-
-    private function reportTooSoon(int $hoursSinceLastTweet): int
-    {
-        // to soon to tweet after recent tweet
-        $toSoonMessage = sprintf(
-            'There is %d hours since last. Gap of %d hours is required',
-            $hoursSinceLastTweet,
-            $this->twitterMinimalGapInHours
-        );
-
-        $this->symfonyStyle->warning($toSoonMessage);
-
-        return self::SUCCESS;
-    }
-
-    /**
-     * @param PostTweet[] $tweets
-     */
-    private function resolveRandomTweet(array $tweets): PostTweet
-    {
-        $randomKey = array_rand($tweets);
-
-        $tweet = $tweets[$randomKey];
-        if (! $tweet instanceof PostTweet) {
-            throw new ShouldNotHappenException();
-        }
-
-        return $tweet;
     }
 }

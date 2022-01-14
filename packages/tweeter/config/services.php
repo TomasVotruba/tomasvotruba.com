@@ -13,10 +13,6 @@ use TomasVotruba\Website\ValueObject\Option as OptionAlias;
 return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set(OptionAlias::TWITTER_NAME, env('TWEETER_NAME'));
-    $parameters->set(OptionAlias::TWITTER_MINIMAL_GAP_IN_HOURS, 48);
-    $parameters->set(OptionAlias::TWITTER_MAXIMAL_DAYS_IN_PAST, 150);
-
     $parameters->set(OptionAlias::TWITTER_CONSUMER_KEY, env('TWITTER_CONSUMER_KEY'));
     $parameters->set(OptionAlias::TWITTER_CONSUMER_SECRET, env('TWITTER_CONSUMER_SECRET'));
     $parameters->set(OptionAlias::TWITTER_OAUTH_ACCESS_TOKEN, env('TWITTER_OAUTH_ACCESS_TOKEN'));

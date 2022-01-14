@@ -4,21 +4,17 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\TweetProvider;
 
-use DateTimeInterface;
-use Nette\Utils\DateTime;
 use TomasVotruba\Blog\Repository\PostRepository;
+use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Tweeter\Validation\TweetGuard;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
 
 final class PostTweetsProvider
 {
-    private readonly DateTimeInterface $maximumDateTimeLimit;
-
     public function __construct(
         private readonly TweetGuard $tweetGuard,
         private readonly PostRepository $postRepository
     ) {
-        $this->maximumDateTimeLimit = DateTime::from('2019-01-01');
     }
 
     /**
@@ -26,34 +22,38 @@ final class PostTweetsProvider
      */
     public function provide(): array
     {
-        $tweets = [];
+        $postTweets = [];
 
         foreach ($this->postRepository->getPosts() as $post) {
             if (! $post->hasTweet()) {
                 continue;
             }
 
-            /** @var string $tweetText */
-            $tweetText = $post->getTweetText();
-            $this->tweetGuard->ensureTweetFitsAllowedLength($tweetText);
-            $tweetText .= PHP_EOL . $post->getAbsoluteUrl();
+            $tweetText = $this->resolveTweetText($post);
 
-            $tweetImage = $post->getTweetImage();
-
-            // skip way too old posts
-            if ($post->getDateTime() < $this->maximumDateTimeLimit) {
-                continue;
-            }
-
-            $tweets[] = new PostTweet(
-                $post->getId(),
-                $tweetText,
-                $post->getDateTime(),
-                $tweetImage,
-                $post->getAbsoluteUrl()
-            );
+            $postTweets[] = $this->createPostTweet($post, $tweetText, $post->getTweetImage());
         }
 
-        return $tweets;
+        return $postTweets;
+    }
+
+    private function createPostTweet(Post $post, string $tweetText, ?string $tweetImage): PostTweet
+    {
+        return new PostTweet(
+            $post->getId(),
+            $tweetText,
+            $post->getDateTime(),
+            $tweetImage,
+            $post->getAbsoluteUrl()
+        );
+    }
+
+    private function resolveTweetText(Post $post): string
+    {
+        /** @var string $tweetText */
+        $tweetText = $post->getTweetText();
+        $this->tweetGuard->ensureTweetFitsAllowedLength($tweetText);
+
+        return $tweetText . PHP_EOL . $post->getAbsoluteUrl();
     }
 }

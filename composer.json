@@ -26,17 +26,18 @@
         "twig/twig": "^3.3"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.4",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan": "^1.1.2",
         "phpunit/phpunit": "^10.0",
         "rector/rector": "dev-main",
         "symplify/coding-standard": "^10.0",
+        "symplify/easy-ci": "^10.0",
         "symplify/easy-coding-standard": "^10.0",
         "symplify/phpstan-extensions": "^10.0",
         "symplify/phpstan-rules": "^10.0",
         "symplify/phpstan-twig-rules": "^10.0",
-        "tracy/tracy": "^2.8",
-        "friendsofphp/php-cs-fixer": "dev-master as 3.3.2"
+        "tracy/tracy": "^2.8"
     },
     "autoload": {
         "psr-4": {
