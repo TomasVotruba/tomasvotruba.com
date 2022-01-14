@@ -64,4 +64,11 @@ final class PublishedTweetRepository
         $yamlContent = Yaml::dump($newPublishedPostTweets);
         $this->smartFileSystem->dumpFile(self::STORAGE_FILE, $yamlContent);
     }
+
+    public function fetchLatest(): PublishedPostTweet
+    {
+        $publishedPostTweets = $this->publishedPostTweets;
+        dump(array_shift($publishedPostTweets));
+        die;
+    }
 }

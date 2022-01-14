@@ -11,6 +11,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Tweeter\Repository\PublishedTweetRepository;
 use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
@@ -24,14 +25,18 @@ use TomasVotruba\Website\ValueObject\Option;
  */
 final class TweetCommand extends Command
 {
+    private readonly int $twitterMinimalGapInDays;
+
     public function __construct(
         private readonly PostTweetsProvider $postTweetsProvider,
         private readonly TwitterPostApiWrapper $twitterPostApiWrapper,
         private readonly SymfonyStyle $symfonyStyle,
         private readonly PublishedTweetsFilter $publishedTweetsFilter,
         private readonly PublishedTweetRepository $publishedTweetRepository,
+        ParameterProvider $parameterProvider,
     ) {
         parent::__construct();
+        $this->twitterMinimalGapInDays = $parameterProvider->provideIntParameter(Option::TWITTER_MINIMAL_GAP_IN_DAYS);
     }
 
     protected function configure(): void
@@ -45,6 +50,20 @@ final class TweetCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $isDryRun = (bool) $input->getOption(Option::DRY_RUN);
+
+        if (! $isDryRun) {
+            $lastPublishedPostTweet = $this->publishedTweetRepository->fetchLatest();
+
+            dump($lastPublishedPostTweet);
+            die;
+
+            $daysSinceLastTweet = $this->twitterPostApiWrapper->getHoursSinceLastTweet();
+            if ($daysSinceLastTweet < $this->twitterMinimalGapInHours) {
+                return $this->reportTooSoon($daysSinceLastTweet);
+            }
+        }
+
+        die;
 
         $postTweets = $this->postTweetsProvider->provide();
 

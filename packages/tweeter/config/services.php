@@ -8,15 +8,17 @@ use function Symplify\Amnesia\Functions\env;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use Symplify\SmartFileSystem\FileSystemGuard;
 use TomasVotruba\Tweeter\TwitterApi\TwitterApiFactory;
-use TomasVotruba\Website\ValueObject\Option as OptionAlias;
+use TomasVotruba\Website\ValueObject\Option;
 
 return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set(OptionAlias::TWITTER_CONSUMER_KEY, env('TWITTER_CONSUMER_KEY'));
-    $parameters->set(OptionAlias::TWITTER_CONSUMER_SECRET, env('TWITTER_CONSUMER_SECRET'));
-    $parameters->set(OptionAlias::TWITTER_OAUTH_ACCESS_TOKEN, env('TWITTER_OAUTH_ACCESS_TOKEN'));
-    $parameters->set(OptionAlias::TWITTER_OAUTH_ACCESS_TOKEN_SECRET, env('TWITTER_OAUTH_ACCESS_TOKEN_SECRET'));
+    $parameters->set(Option::TWITTER_MINIMAL_GAP_IN_DAYS, 2);
+
+    $parameters->set(Option::TWITTER_CONSUMER_KEY, env('TWITTER_CONSUMER_KEY'));
+    $parameters->set(Option::TWITTER_CONSUMER_SECRET, env('TWITTER_CONSUMER_SECRET'));
+    $parameters->set(Option::TWITTER_OAUTH_ACCESS_TOKEN, env('TWITTER_OAUTH_ACCESS_TOKEN'));
+    $parameters->set(Option::TWITTER_OAUTH_ACCESS_TOKEN_SECRET, env('TWITTER_OAUTH_ACCESS_TOKEN_SECRET'));
 
     $services = $containerConfigurator->services();
 

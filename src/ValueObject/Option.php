@@ -40,4 +40,9 @@ final class Option
      * @var string
      */
     final public const DRY_RUN = 'dry-run';
+
+    /**
+     * @var string
+     */
+    final public const TWITTER_MINIMAL_GAP_IN_DAYS = 'twitter_minimal_gap_in_days';
 }
