@@ -55,7 +55,7 @@ jobs:
                     TWITTER_OAUTH_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_OAUTH_ACCESS_TOKEN_SECRET }}
 
             # prepare to push to current main https://github.com/TomasVotruba/tomasvotruba.com/runs/4817071793?check_suite_focus=true#step:8:46
-#            - run: git branch --set-upstream-to=origin/main main
+            - run: git branch --set-upstream-to=origin/main main
 
             # update data with published id
             - # commit only to core contributors who have repository access
