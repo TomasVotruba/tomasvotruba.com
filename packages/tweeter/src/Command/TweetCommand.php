@@ -10,7 +10,6 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
-use TomasVotruba\Tweeter\Randomizer;
 use TomasVotruba\Tweeter\Repository\PublishedTweetRepository;
 use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
@@ -29,7 +28,6 @@ final class TweetCommand extends Command
         private readonly SymfonyStyle $symfonyStyle,
         private readonly PublishedTweetsFilter $publishedTweetsFilter,
         private readonly PublishedTweetRepository $publishedTweetRepository,
-        private readonly Randomizer $randomizer,
     ) {
         parent::__construct();
     }
@@ -55,26 +53,25 @@ final class TweetCommand extends Command
             return $this->reportNoNewTweet();
         }
 
-        $tweetCountMessage = sprintf('Picking from %d tweets', count($unpublishedPostTweets));
-        $this->symfonyStyle->title($tweetCountMessage);
+        // pick the oldest post, as there can be chronological order
+        $unpublishedPostTweet = array_pop($unpublishedPostTweets);
+
+        if ($isDryRun) {
+            $message = sprintf('Tweet "%s" would be published.', $unpublishedPostTweet->getText());
+            $this->symfonyStyle->success($message);
+        } else {
+            $this->tweet($unpublishedPostTweet);
+            $this->publishedTweetRepository->saveId($unpublishedPostTweet->getId());
+
+            $message = sprintf('Tweet "%s" was successfully published.', $unpublishedPostTweet->getText());
+            $this->symfonyStyle->success($message);
+        }
+
+        $this->symfonyStyle->title('Next Tweets to be Published');
 
         foreach ($unpublishedPostTweets as $unpublishedPostTweet) {
             $this->symfonyStyle->writeln(' * ' . $unpublishedPostTweet->getText());
             $this->symfonyStyle->newLine();
-        }
-
-        /** @var PostTweet $postTweet */
-        $postTweet = $this->randomizer->resolveRandomItem($unpublishedPostTweets);
-
-        if ($isDryRun) {
-            $message = sprintf('Tweet "%s" would be published.', $postTweet->getText());
-            $this->symfonyStyle->success($message);
-        } else {
-            $this->tweet($postTweet);
-            $this->publishedTweetRepository->saveId($postTweet->getId());
-
-            $message = sprintf('Tweet "%s" was successfully published.', $postTweet->getText());
-            $this->symfonyStyle->success($message);
         }
 
         return self::SUCCESS;
