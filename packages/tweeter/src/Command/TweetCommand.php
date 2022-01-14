@@ -11,6 +11,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use TomasVotruba\Tweeter\Randomizer;
+use TomasVotruba\Tweeter\Repository\PublishedTweetRepository;
 use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
@@ -27,6 +28,7 @@ final class TweetCommand extends Command
         private readonly TwitterPostApiWrapper $twitterPostApiWrapper,
         private readonly SymfonyStyle $symfonyStyle,
         private readonly PublishedTweetsFilter $publishedTweetsFilter,
+        private readonly PublishedTweetRepository $publishedTweetRepository,
         private Randomizer $randomizer,
     ) {
         parent::__construct();
@@ -61,6 +63,7 @@ final class TweetCommand extends Command
             $this->symfonyStyle->newLine();
         }
 
+        /** @var PostTweet $postTweet */
         $postTweet = $this->randomizer->resolveRandomItem($unpublishedPostTweets);
 
         if ($isDryRun) {
@@ -68,6 +71,7 @@ final class TweetCommand extends Command
             $this->symfonyStyle->success($message);
         } else {
             $this->tweet($postTweet);
+            $this->publishedTweetRepository->saveId($postTweet->getId());
 
             $message = sprintf('Tweet "%s" was successfully published.', $postTweet->getText());
             $this->symfonyStyle->success($message);
