@@ -9,11 +9,11 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Yaml\Yaml;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Tweeter\Configuration\Keys;
 use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
-use TomasVotruba\Tweeter\TweetFilter\TweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
@@ -26,7 +26,6 @@ final class TweetCommand extends Command
     public function __construct(
         ParameterProvider $parameterProvider,
         private readonly PostTweetsProvider $postTweetsProvider,
-        private readonly TweetsFilter $tweetsFilter,
         private readonly TwitterPostApiWrapper $twitterPostApiWrapper,
         private readonly SymfonyStyle $symfonyStyle
     ) {
@@ -49,22 +48,11 @@ final class TweetCommand extends Command
     {
         $isDryRun = (bool) $input->getOption(Option::DRY_RUN);
 
-        if (! $isDryRun) {
-            $hoursSinceLastTweet = $this->twitterPostApiWrapper->getHoursSinceLastTweet();
-            if ($hoursSinceLastTweet < $this->twitterMinimalGapInHours) {
-                return $this->reportTooSoon($hoursSinceLastTweet);
-            }
-        }
-
         $postTweets = $this->postTweetsProvider->provide();
-
-        // @todo skip post ids stored in yaml file
-        dump($postTweets);
-        die;
 
         $unpublishedPostTweets = $this->tweetsFilter->filter($postTweets);
 
-        // no tweetable tweet
+        // no new tweets
         if ($unpublishedPostTweets === []) {
             return $this->reportNoNewTweet();
         }

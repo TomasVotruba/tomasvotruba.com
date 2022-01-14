@@ -12,13 +12,10 @@ use TomasVotruba\Tweeter\ValueObject\PostTweet;
 
 final class PostTweetsProvider
 {
-    private readonly DateTimeInterface $maximumDateTimeLimit;
-
     public function __construct(
         private readonly TweetGuard $tweetGuard,
         private readonly PostRepository $postRepository
     ) {
-        $this->maximumDateTimeLimit = DateTime::from('2019-01-01');
     }
 
     /**
@@ -39,11 +36,6 @@ final class PostTweetsProvider
             $tweetText .= PHP_EOL . $post->getAbsoluteUrl();
 
             $tweetImage = $post->getTweetImage();
-
-            // skip way too old posts
-            if ($post->getDateTime() < $this->maximumDateTimeLimit) {
-                continue;
-            }
 
             $tweets[] = new PostTweet(
                 $post->getId(),
