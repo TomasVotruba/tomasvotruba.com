@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\Command;
 
+use Nette\Utils\DateTime;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -15,6 +16,7 @@ use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
 use TomasVotruba\Tweeter\TwitterApi\TwitterPostApiWrapper;
 use TomasVotruba\Tweeter\ValueObject\PostTweet;
+use TomasVotruba\Tweeter\ValueObject\PublishedPostTweet;
 use TomasVotruba\Website\ValueObject\Option;
 
 /**
@@ -61,17 +63,22 @@ final class TweetCommand extends Command
             $this->symfonyStyle->success($message);
         } else {
             $this->tweet($unpublishedPostTweet);
-            $this->publishedTweetRepository->saveId($unpublishedPostTweet->getId());
+
+            $publishedPostTweet = new PublishedPostTweet($unpublishedPostTweet->getId(), DateTime::from('now'));
+
+            $this->publishedTweetRepository->save($publishedPostTweet);
 
             $message = sprintf('Tweet "%s" was successfully published.', $unpublishedPostTweet->getText());
             $this->symfonyStyle->success($message);
         }
 
-        $this->symfonyStyle->title('Next Tweets to be Published');
+        if ($unpublishedPostTweets !== []) {
+            $this->symfonyStyle->title('Next Tweets to be Published');
 
-        foreach ($unpublishedPostTweets as $unpublishedPostTweet) {
-            $this->symfonyStyle->writeln(' * ' . $unpublishedPostTweet->getText());
-            $this->symfonyStyle->newLine();
+            foreach ($unpublishedPostTweets as $unpublishedPostTweet) {
+                $this->symfonyStyle->writeln(' * ' . $unpublishedPostTweet->getText());
+                $this->symfonyStyle->newLine();
+            }
         }
 
         return self::SUCCESS;

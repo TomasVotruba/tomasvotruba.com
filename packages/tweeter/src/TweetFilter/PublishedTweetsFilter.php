@@ -20,11 +20,11 @@ final class PublishedTweetsFilter
      */
     public function filter(array $postTweets): array
     {
-        $publishedTweetIds = $this->publishedTweetRepository->provideIds();
+        $publishedPostIds = $this->publishedTweetRepository->fetchIds();
 
         return array_filter(
             $postTweets,
-            fn (PostTweet $postTweet) => ! in_array($postTweet->getId(), $publishedTweetIds, true)
+            fn (PostTweet $postTweet) => ! in_array($postTweet->getId(), $publishedPostIds, true)
         );
     }
 }
