@@ -12,6 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symplify\PackageBuilder\Console\Command\CommandNaming;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
+use TomasVotruba\Tweeter\Output\TweetReporter;
 use TomasVotruba\Tweeter\Repository\PublishedTweetRepository;
 use TomasVotruba\Tweeter\TweetFilter\PublishedTweetsFilter;
 use TomasVotruba\Tweeter\TweetProvider\PostTweetsProvider;
@@ -33,6 +34,7 @@ final class TweetCommand extends Command
         private readonly SymfonyStyle $symfonyStyle,
         private readonly PublishedTweetsFilter $publishedTweetsFilter,
         private readonly PublishedTweetRepository $publishedTweetRepository,
+        private TweetReporter $tweetReporter,
         ParameterProvider $parameterProvider,
     ) {
         parent::__construct();
@@ -54,16 +56,14 @@ final class TweetCommand extends Command
         if (! $isDryRun) {
             $lastPublishedPostTweet = $this->publishedTweetRepository->fetchLatest();
 
-            dump($lastPublishedPostTweet);
-            die;
+            $lastPublishedPostPublishedAt = $lastPublishedPostTweet->getPublishedAt();
+            $diff = $lastPublishedPostPublishedAt->diff(DateTime::from('now'));
 
-            $daysSinceLastTweet = $this->twitterPostApiWrapper->getHoursSinceLastTweet();
-            if ($daysSinceLastTweet < $this->twitterMinimalGapInHours) {
-                return $this->reportTooSoon($daysSinceLastTweet);
+            $daysSinceLastTweet = (int) $diff->format('%a');
+            if ($daysSinceLastTweet < $this->twitterMinimalGapInDays) {
+                return $this->tweetReporter->reportTooSoon($daysSinceLastTweet, $this->twitterMinimalGapInDays);
             }
         }
-
-        die;
 
         $postTweets = $this->postTweetsProvider->provide();
 
@@ -71,7 +71,7 @@ final class TweetCommand extends Command
 
         // no new tweets
         if ($unpublishedPostTweets === []) {
-            return $this->reportNoNewTweet();
+            return $this->tweetReporter->reportNoNewTweet();
         }
 
         // pick the oldest post, as there can be chronological order
@@ -91,23 +91,7 @@ final class TweetCommand extends Command
             $this->symfonyStyle->success($message);
         }
 
-        if ($unpublishedPostTweets !== []) {
-            $this->symfonyStyle->title('Next Tweets to be Published');
-
-            foreach ($unpublishedPostTweets as $unpublishedPostTweet) {
-                $this->symfonyStyle->writeln(' * ' . $unpublishedPostTweet->getText());
-                $this->symfonyStyle->newLine();
-            }
-        }
-
-        return self::SUCCESS;
-    }
-
-    private function reportNoNewTweet(): int
-    {
-        $this->symfonyStyle->warning(
-            'There is no new tweet to publish. Add a new one to one of your post under "tweet:" option.'
-        );
+        $this->tweetReporter->reportNextUnpublishedTweets($unpublishedPostTweets);
 
         return self::SUCCESS;
     }

@@ -29,6 +29,7 @@
         "friendsofphp/php-cs-fixer": "^3.4",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan": "^1.1.2",
+        "phpstan/phpstan-webmozart-assert": "^1.0",
         "phpunit/phpunit": "^10.0",
         "rector/rector": "dev-main",
         "symplify/coding-standard": "^10.0",

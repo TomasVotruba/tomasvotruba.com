@@ -8,6 +8,7 @@ use Nette\Utils\DateTime;
 use Symfony\Component\Yaml\Yaml;
 use Symplify\SmartFileSystem\SmartFileSystem;
 use TomasVotruba\Tweeter\ValueObject\PublishedPostTweet;
+use Webmozart\Assert\Assert;
 
 final class PublishedTweetRepository
 {
@@ -68,7 +69,10 @@ final class PublishedTweetRepository
     public function fetchLatest(): PublishedPostTweet
     {
         $publishedPostTweets = $this->publishedPostTweets;
-        dump(array_shift($publishedPostTweets));
-        die;
+        $lastPublishedPostTweet = array_shift($publishedPostTweets);
+
+        Assert::isInstanceOf($lastPublishedPostTweet, PublishedPostTweet::class);
+
+        return $lastPublishedPostTweet;
     }
 }
