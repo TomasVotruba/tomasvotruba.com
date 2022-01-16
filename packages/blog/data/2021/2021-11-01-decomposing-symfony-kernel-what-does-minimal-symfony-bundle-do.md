@@ -62,7 +62,7 @@ final class AstralBundle extends Bundle
 
 ### 2. The Extension
 
-The Bundle class contains `createContainerExtension()` that further creates `AstralExtension`. What is that one doing?
+The Bundle class contains `createContainerExtension()` that further creates `AstralExtension`. What is that extension doing?
 
 ```php
 namespace Symplify\Astral\DependencyInjection\Extension;
@@ -126,7 +126,7 @@ final class TomasVotrubaKernel extends Kernel
 
 <br>
 
-The other is any `config/config.php` that we already load in our Kernel:
+The other is in any `config/config.php` that we already load in our Kernel:
 
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
@@ -164,7 +164,7 @@ class Kernel extends BaseKernel
 }
 ```
 
-We've managed to tidy up the Kernel a bit. With less code to work with, we might see the solution more easily... or **have we just moved the same problem with somewhere else**?
+We've managed to tidy up the Kernel a bit. With less code to work with, we might see the solution more easily... or **have we just moved the same problem to somewhere else**?
 
 We'll see about that next time.
 
