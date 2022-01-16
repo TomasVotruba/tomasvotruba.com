@@ -172,6 +172,7 @@ Let's put it into `setUp()` method. It seems like a good idea for these operatio
  }
 ```
 
+<br>
 
 And run tests again:
 
@@ -270,6 +271,8 @@ Then register listener it in `phpunit.xml`:
 </phpunit>
 ```
 
+<br>
+
 And run tests again:
 
 ```bash
@@ -296,7 +299,7 @@ After bit of Googling on PHPUnit Github and documentation I found something call
 
 ### 4. Single Hook
 
-You can read about them in the PHPUnit documentation](https://phpunit.readthedocs.io/en/9.5/extending-phpunit.html#extending-the-testrunner), but in short: they're the same as the listener, just **with 1 event**.
+You can read about them in [the PHPUnit documentation](https://phpunit.readthedocs.io/en/9.5/extending-phpunit.html#extending-the-testrunner), but in short: they're the same as the listener, just **with 1 event**.
 
 ```php
 <?php declare(strict_types=1);
