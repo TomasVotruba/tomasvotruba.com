@@ -63,7 +63,7 @@ Pretty cool, right? We don't have to care about string and documentation referen
 Don't forget to add [Amnesia](https://github.com/symplify/amnesia) to your project:
 
 ```bash
-compose require symplify/amnesia
+composer require symplify/amnesia
 ```
 
 And that's it!
