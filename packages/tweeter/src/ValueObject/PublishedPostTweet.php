@@ -29,7 +29,7 @@ final class PublishedPostTweet
     {
         return [
             'id' => $this->id,
-            'published_at' => $this->publishedAt,
+            'published_at' => $this->publishedAt->format('Y-m-d'),
         ];
     }
 }
