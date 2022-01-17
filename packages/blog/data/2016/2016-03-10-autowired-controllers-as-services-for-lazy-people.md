@@ -1,10 +1,12 @@
 ---
 id: 7
-title: Autowired controllers as services for lazy people
+title: Autowired&nbsp;Controllers as Services for&nbsp;Lazy&nbsp;People
 perex: "With new autowiring feature in Symfony 2.8+, it is now easier to manage dependencies for services. But what about for controllers? Unfortunately, there are 3 annoying steps you have to do. Today I will show you, how to reduce them to 0."
 
-deprecated_since: "May 2017"
-deprecated_message: |
+updated_since: "May 2017"
+updated_message: |
+    This post is valid only up to Symfony 3.2.
+
     Since **Symfony 3.3** you can use [PSR4-based service discovery and registration](https://github.com/symfony/symfony/pull/21289).
     It does pretty much the same thing - **registers autowired controllers** (and more) - and it has native support in Symfony.
 
@@ -107,11 +109,13 @@ Even if you do manage to finish these steps, **these issues will appear**:
 
 Author of autowiring feature and Symfony core contributor Kévin Dunglas [sees similar problem](https://github.com/symfony/symfony/pull/16863#issuecomment-162221353) and [proposes solution with ADR pattern](https://dunglas.fr/2016/01/dunglasactionbundle-symfony-controllers-redesigned). I think it's the right direction, but it bends controllers too much.
 
-But my goal is to keep controllers the same way they are now, and just add support for...
+But the goal is to keep controllers' code without touching.
 
-## Autowiring in controllers
+## Autowiring in Controllers
 
-So I made [Symplify\ControllerAutowire](https://github.com/Symplify/ControllerAutowire) bundle, that solves all problems that are mentioned above by following steps:
+This is wheremade [Symplify\ControllerAutowire](https://github.com/Symplify/ControllerAutowire) bundle helps. It solves problems mentioned above.
+
+How does it work?
 
 - find controllers in `/src` directory
 - register them as services
@@ -184,12 +188,6 @@ And that's it!
 
 For further use, **just check Readme for [Symplify/ControllerAutowire](https://github.com/Symplify/ControllerAutowire).**
 
+<br>
 
-## Best practise solution - proven in many PHP projects
-
-Check them out:
-
-- [Nette](https://nette.org) with [presenter autowire](https://github.com/nette/application/pull/56), based on [Filip Prochazka's extension](https://filip-prochazka.com/blog/presentery-v-di-containeru)
-- [PHP-DI](http://php-di.org/doc/frameworks/silex.html#controllers-as-services)
-- [Laravel with constructor injection support for controllers](https://laravel.com/docs/5.0/controllers#dependency-injection-and-controllers)
-- and [Auryn](https://github.com/J7mbo/Aurex) that adds this feature to Silex
+Happy coding!
