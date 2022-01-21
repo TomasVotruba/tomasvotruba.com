@@ -11,7 +11,7 @@ use TomasVotruba\Tweeter\ValueObject\PostTweet;
 final class TweetReporter
 {
     public function __construct(
-        private SymfonyStyle $symfonyStyle,
+        private readonly SymfonyStyle $symfonyStyle,
     ) {
     }
 

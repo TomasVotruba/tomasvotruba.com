@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\ValueObject;
 
+use DateTimeInterface;
+
 final class PublishedPostTweet
 {
     public function __construct(
-        private int $id,
-        private \DateTimeInterface $publishedAt,
+        private readonly int $id,
+        private readonly DateTimeInterface $dateTime,
     ) {
     }
 
@@ -19,17 +21,17 @@ final class PublishedPostTweet
 
     public function getPublishedAt(): \DateTimeInterface
     {
-        return $this->publishedAt;
+        return $this->dateTime;
     }
 
     /**
-     * @return array{id: int, published_at: \DateTimeInterface}
+     * @return array{id: int, published_at: string}
      */
     public function toArray(): array
     {
         return [
             'id' => $this->id,
-            'published_at' => $this->publishedAt->format('Y-m-d'),
+            'published_at' => $this->dateTime->format('Y-m-d'),
         ];
     }
 }
