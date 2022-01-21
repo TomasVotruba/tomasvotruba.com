@@ -56,13 +56,17 @@ final class PublishedTweetRepository
         return $this->publishedPostTweets;
     }
 
-    public function save(PublishedPostTweet $publishedPostTweet): void
+    public function save(PublishedPostTweet $newPublishedPostTweet): void
     {
-        $publishedTweetArray = $publishedPostTweet->toArray();
+        $this->publishedPostTweets[] = $newPublishedPostTweet;
 
-        $newPublishedPostTweets = array_merge([$publishedTweetArray], $this->publishedPostTweets);
+        $publishedPostTweetsArray = [];
+        foreach ($this->publishedPostTweets as $publishedPostTweets) {
+            $publishedPostTweetsArray[] = $publishedPostTweets->toArray();
+        }
 
-        $yamlContent = Yaml::dump($newPublishedPostTweets);
+
+        $yamlContent = Yaml::dump($publishedPostTweetsArray);
         $this->smartFileSystem->dumpFile(self::STORAGE_FILE, $yamlContent);
     }
 
