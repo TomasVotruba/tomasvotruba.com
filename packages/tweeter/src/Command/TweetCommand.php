@@ -34,7 +34,7 @@ final class TweetCommand extends Command
         private readonly SymfonyStyle $symfonyStyle,
         private readonly PublishedTweetsFilter $publishedTweetsFilter,
         private readonly PublishedTweetRepository $publishedTweetRepository,
-        private TweetReporter $tweetReporter,
+        private readonly TweetReporter $tweetReporter,
         ParameterProvider $parameterProvider,
     ) {
         parent::__construct();

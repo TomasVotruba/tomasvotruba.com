@@ -10,7 +10,7 @@ final class PublishedPostTweet
 {
     public function __construct(
         private readonly int $id,
-        private readonly DateTimeInterface $publishedAt,
+        private readonly DateTimeInterface $dateTime,
     ) {
     }
 
@@ -21,7 +21,7 @@ final class PublishedPostTweet
 
     public function getPublishedAt(): \DateTimeInterface
     {
-        return $this->publishedAt;
+        return $this->dateTime;
     }
 
     /**
@@ -31,7 +31,7 @@ final class PublishedPostTweet
     {
         return [
             'id' => $this->id,
-            'published_at' => $this->publishedAt->format('Y-m-d'),
+            'published_at' => $this->dateTime->format('Y-m-d'),
         ];
     }
 }
