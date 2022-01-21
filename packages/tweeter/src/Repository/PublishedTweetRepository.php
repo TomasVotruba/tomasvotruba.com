@@ -60,7 +60,7 @@ final class PublishedTweetRepository
     {
         $publishedTweetArray = $publishedPostTweet->toArray();
 
-        $newPublishedPostTweets = [$publishedTweetArray, ...$this->publishedPostTweets];
+        $newPublishedPostTweets = array_merge([$publishedTweetArray], $this->publishedPostTweets);
 
         $yamlContent = Yaml::dump($newPublishedPostTweets);
         $this->smartFileSystem->dumpFile(self::STORAGE_FILE, $yamlContent);
