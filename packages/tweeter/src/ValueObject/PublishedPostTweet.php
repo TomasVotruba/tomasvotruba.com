@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Tweeter\ValueObject;
 
+use DateTimeInterface;
+
 final class PublishedPostTweet
 {
     public function __construct(
-        private int $id,
-        private \DateTimeInterface $publishedAt,
+        private readonly int $id,
+        private readonly DateTimeInterface $publishedAt,
     ) {
     }
 
@@ -23,7 +25,7 @@ final class PublishedPostTweet
     }
 
     /**
-     * @return array{id: int, published_at: \DateTimeInterface}
+     * @return array{id: int, published_at: string}
      */
     public function toArray(): array
     {

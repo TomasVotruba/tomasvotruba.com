@@ -1,6 +1,6 @@
 ---
 id: 335
-title: "5 Commands from Easy CI that makes your CI Stronger"
+title: "5 Commands from Easy CI that&nbsp;Makes&nbsp;Your CI Stronger"
 perex: |
     Sometimes my clients need a specific CI check that spots tiny but annoying bugs, and they cannot be discovered by PHPStan, Rector, or coding standard tool. It can be unresolved conflict `<<<<<<`, invalid config syntax, or forgotten commented code.
     <br><br>
