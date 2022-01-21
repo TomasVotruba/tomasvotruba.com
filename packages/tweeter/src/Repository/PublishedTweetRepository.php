@@ -65,7 +65,6 @@ final class PublishedTweetRepository
             $publishedPostTweetsArray[] = $publishedPostTweets->toArray();
         }
 
-
         $yamlContent = Yaml::dump($publishedPostTweetsArray);
         $this->smartFileSystem->dumpFile(self::STORAGE_FILE, $yamlContent);
     }
