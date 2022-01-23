@@ -61,8 +61,8 @@ final class PublishedTweetRepository
         $this->publishedPostTweets[] = $newPublishedPostTweet;
 
         $publishedPostTweetsArray = [];
-        foreach ($this->publishedPostTweets as $publishedPostTweets) {
-            $publishedPostTweetsArray[] = $publishedPostTweets->toArray();
+        foreach ($this->publishedPostTweets as $publishedPostTweet) {
+            $publishedPostTweetsArray[] = $publishedPostTweet->toArray();
         }
 
         $yamlContent = Yaml::dump($publishedPostTweetsArray);
