@@ -16,7 +16,6 @@ final class TweetsProviderTest extends AbstractTwitterTestCase
         $this->bootKernel(TomasVotrubaKernel::class);
 
         $this->postTweetsProvider = $this->getService(PostTweetsProvider::class);
-        $this->ensureEnvVariablesAreSet();
     }
 
     public function test(): void
@@ -27,6 +26,6 @@ final class TweetsProviderTest extends AbstractTwitterTestCase
         $oldestPost = $postTweets[array_key_last($postTweets)];
 
         $postDate = $oldestPost->getPostDateTimeInFormat('Y-m-d');
-        $this->assertSame('2019-01-03', $postDate);
+        $this->assertSame('2016-09-09', $postDate);
     }
 }

@@ -15,7 +15,12 @@ perex: |
 tweet: "New Post on the 🐘 blog: How to Run Naked Unit Test in a New Legacy Project"
 ---
 
-*This technique allowed us to run 41 tests without extra manual steps. That's 41 more than we usually have before investing a lot of learning time. Maybe it will help your legacy project too.*
+<div class="card border-warning mt-4">
+    <div class="card-header text-black bg-warning shadow">
+        <strong>Proof over theory?</strong>
+        This technique allowed us to run 41 tests without any setup. That's 41&nbsp;more than we usually have before investing a lot of learning time. Maybe it will help your legacy project too.
+    </div>
+</div>
 
 <br>
 
