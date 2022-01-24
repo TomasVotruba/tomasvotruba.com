@@ -21,8 +21,6 @@ final class PublishedTweetsFilterTest extends AbstractTwitterTestCase
 
         $this->postTweetsProvider = $this->getService(PostTweetsProvider::class);
         $this->publishedTweetsFilter = $this->getService(PublishedTweetsFilter::class);
-
-        $this->ensureEnvVariablesAreSet();
     }
 
     public function test(): void
