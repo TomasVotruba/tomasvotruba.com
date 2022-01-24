@@ -19,6 +19,11 @@ final class RouteName
     /**
      * @var string
      */
+    final public const ABOUT = 'about';
+
+    /**
+     * @var string
+     */
     final public const HOMEPAGE = 'homepage';
 
     /**

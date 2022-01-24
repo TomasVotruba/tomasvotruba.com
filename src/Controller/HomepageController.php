@@ -33,10 +33,10 @@ final class HomepageController extends AbstractController
     #[Route(path: '/', name: RouteName::HOMEPAGE)]
     public function __invoke(): Response
     {
-        $lastThreePosts = $this->postRepository->fetchLast(3);
+        $lastPosts = $this->postRepository->fetchLast(5);
 
         return $this->render('homepage.twig', [
-            'last_three_posts' => $lastThreePosts,
+            'last_posts' => $lastPosts,
             'title' => 'Change Fast and Safe',
             'quote' => $this->getRandomQuote(),
             'next_month' => $this->getNextMonthName(),

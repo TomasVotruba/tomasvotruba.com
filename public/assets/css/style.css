@@ -344,8 +344,8 @@ a.btn {
 }
 
 .homepage-face {
-    width: 8em;
-    height: 8em;
+    width: 10em;
+    height: 10em;
 }
 
 .homepage-logo {
@@ -361,8 +361,8 @@ a.btn {
 /* mobile optimization */
 @media (max-width: 768px) {
     .homepage-face {
-        width: 5em;
-        height: 5em;
+        width: 7em;
+        height: 7em;
     }
 
     .homepage-logo {
