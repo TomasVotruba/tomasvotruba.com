@@ -56,14 +56,14 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 final class ContainerBuilderFactory
 {
     /**
-     * @param ExtensionInterface[] $extensions
-     * @param CompilerPassInterface[] $compilerPasses
      * @param string[] $configFiles
+     * @param CompilerPassInterface[] $compilerPasses
+     * @param ExtensionInterface[] $extensions
      */
     public function create(
-        array $extensions,
+        array $configFiles,
         array $compilerPasses,
-        array $configFiles
+        array $extensions
     ): ContainerBuilder {
         $containerBuilder = new ContainerBuilder();
 
@@ -108,7 +108,7 @@ final class MonorepoBuilderKernel
 
         $containerBuilderFactory = new ContainerBuilderFactory();
 
-        $containerBuilder = $containerBuilderFactory->create([], [], $configFiles);
+        $containerBuilder = $containerBuilderFactory->create($configFiles, [], []);
 
         // build the container
         $containerBuilder->compile();
