@@ -2,12 +2,17 @@
 id: 348
 title: "Not all Mixed Types are Equally Useless"
 perex: |
-    Do you have a big project where you try to raise PHPStan level as high as possible? Yet, you're stuck on level 4 or 5 with thousands of errors? We all have one and try to chip away few errors now and then.
+    Do you have a big project where you try to raise the PHPStan level as high as possible? Yet, you're stuck on level 4 or 5 with thousands of errors? We all have one and try to chip away a few errors now and then.
     <br><br>
-    The `mixed` type is the worst of all of them. Fixing them all to specific type is a nightmare for the REST of your life (pun intended). But what if there are places, where fixing `mixed` type **brings much more value than** in the others?
+    The `mixed` type is the worst of all of them. Fixing all `mixed` types to a specific type is a nightmare for the REST of your life (pun intended). But what if there are places where fixing `mixed` type **brings much more value than** in the others?
+
+tweet: "New Post on the 🐘 blog: Not all Mixed Types are Equally Useless"
+tweet_image: "/assets/images/posts/2021/equal_animals.png"
 ---
 
-We're in a state, where code is running, tests are passing and everything works. We can find snippet like this one:
+<img src="/assets/images/posts/2021/equal_animals.png" style="max-width: 32em" class="img-thumbnail mt-2 mb-5">
+
+We're in a state where code runs, tests pass, and everything works. We can find snippets like this one:
 
 ```php
 function printNames(array $names)
@@ -19,17 +24,17 @@ function printNames(array $names)
 }
 ```
 
-We know that the `$names` parameter is `mixed[]` type. It is probably a `string[]`, `int[]` or `StringableInterface` type. We could run the code, write the test, try to detect the type and complete it.
+We know that the `$names` parameter is `mixed[]` type. It is probably a `string[]`, `int[]` or `StringableInterface` type. We could run the code, write the test, detect the type and complete it.
 
-But by adding specific type here, **we will not get much new information**. The value will be still echoable and code will still work. We will have one less ignored error in `phpstan.neon`.
+But by adding a specific type here, **we will not get much new information**. The value will still be echo-able, and the code will still work. We will have one less ignored error in `phpstan.neon`.
 
 ## Business-Focused Low Hanging Fruit
 
-Maybe my boss would let me remove all the `mixed` types from the project, but it would make their expenses high enough to fire me. The coding must be economical and beneficial for the project future.
+Maybe my boss would let me remove all the `mixed` types from the project, but it would make their expenses high enough to fire me. The coding must be economical and beneficial for the project's future.
 
-So instead of looking for origin of all the `mixed` with attention of detective Colombo, we could do something better with our time. We could find those `mixed` type, that is now blocking PHPStan from further analysis. A `mixed` type that we do not have to test manually and hope for the use input.
+Instead of looking for the origin of `mixed` with the attention of detective Colombo, we could do something better with our time. We could find those `mixed` type that is now blocking PHPStan from further analysis. We do not have to test manually a `mixed` type and hope for the user input.
 
-In the same project, we find following code:
+In the same project, we find the following code:
 
 ```php
 function printNames(array $videos)
@@ -41,9 +46,9 @@ function printNames(array $videos)
 }
 ```
 
-From the PHPStan point of view, this snippet is identical to a previous one. There is some variable `$videos` with `mixed[]` type in it. **PHPStan can't do any analysis on the `mixed` type**, as it can be anything from scalar, `null`, `false`, object, collection of objects and nested array of all above etc.
+From the PHPStan point of view, this snippet is identical to the previous one. There is a variable `$videos` with `mixed[]` type. **PHPStan can't analyze the `mixed` type**, as it can be anything from scalar, `null`, `false`, object, collection of objects and nested array of all above, etc.
 
-What we can assume from this code?
+What can we assume from this code?
 
 ```php
 $video->getVideoUrl()
@@ -53,24 +58,24 @@ $video->getVideoUrl()
 * the `$video` is an object
 * the `$video` object has a `getVideoUrl()` method
 
-How can we deduct the type of the object here?
+How can we deduct the type of object here?
 
 ## PHPStorm Search to the Rescue
 
-Here you could read complex passage about types, abstract syntax tree, static analysis etc.
+Here you could read a complex passage about types, abstract syntax tree, static analysis, etc.
 
 <br>
 
 Instead, we'll be KISSing PHPStorm:
 
 * use *Find in files* action
-* search for "public function getVideoUrl()"
+* search for a "public function getVideoUrl()" string
 
 <img src="/assets/images/posts/2021/find_in.png" style="max-width: 32em" class="img-thumbnail mt-2 mb-2">
 
 <br>
 
-We see the responsible type is `Video` object and we can complete it to our code:
+We see the responsible type is `Video` object, and we can complete it to our code:
 
 ```diff
 +/**
@@ -100,7 +105,7 @@ That's how we can use a method call on `mixed` to our advantage.
 
 ## The "Object `mixed`" > any `mixed`
 
-Second use case for object `mixed` is similar, you can probably already guess it:
+The second use case for object `mixed` is similar. You can probably already guess it:
 
 ```php
 function collectIds(array $videos): array
@@ -115,12 +120,12 @@ function collectIds(array $videos): array
 }
 ```
 
-Yes, it's property fetch. We can fetch property only on specific object. Well, except `stdClass` that is typical for `json_decode()` return values. But apart that, property fetch is pretty sure sign of known object.
+Yes, it's property fetch. We can fetch property only on a specific object. Well, except `stdClass` that is typical for `json_decode()` return values. But apart from that, property fetch is a sure sign of a known object.
 
 Again, we'll be KISSing PHPStorm:
 
 * use *Find in files* action
-* search for "public $id;"
+* search for a "public $id;" string
 
 <br>
 
@@ -143,7 +148,9 @@ And complete the types based on found `Video` object:
  }
 ```
 
-Now our code it slightly more smarted and PHPStan now sees:
+<br>
+
+Our code is now slightly more intelligent, and PHPStan now sees:
 
 * if `$video` has property `$id`
 * the `@var`/strict type of `$id` property
@@ -152,9 +159,9 @@ Now our code it slightly more smarted and PHPStan now sees:
     ✅
 </p>
 
-## How detect Object `mixed` with PHPStan
+## How detect Object `mixed` with PHPStan?
 
-We can actually teach PHPStan to report these low hanging fruit cases. The conditions are very simple:
+We can teach PHPStan to report these low-hanging fruit cases. The conditions are straightforward:
 
 * the variable must be `Variable` (no magic)
 * the variable type must be `mixed`
@@ -168,19 +175,27 @@ $video->id;
 // property fetch → PropertyFetch node
 ```
 
-It would not be me, if you'd have to write those rules on your own. We've already included them in [symplify/phpstan-rules](https://github.com/symplify/phpstan-rules) ↓
+<br>
+
+You'd be surprised if you'd have to write those rules on your own.
+
+They're freshly included in [symplify/phpstan-rules](https://github.com/symplify/phpstan-rules) ↓
 
 * [NoMixedMethodCallerRule](https://github.com/symplify/symplify/pull/3913)
 * [NoMixedPropertyFetcherRule](https://github.com/symplify/symplify/pull/3912)
 
-The second one passed without any report, but the method call one **found over 20 cases of unknown type** even if we have PHPStan on level 8. Pretty neat, right?
+<br>
+
+How did the rule perform on Symplify itself? The property rule passed without any report, but the method called one **found over 20 cases of unknown type**. Despite the fact we have PHPStan on level 8. Pretty neat, right?
 
 <br>
 
-How many `object` mixed types has your code?
-Register them in your `phpstan.neon` and run it:
+## How "Equal" is Your Project?
+
+How many `object` mixed types do you have? Register rules and let PHPStan disclose the magic:
 
 ```yaml
+# phpstan.neon
 services:
     -
         class: Symplify\PHPStanRules\Rules\Explicit\NoMixedPropertyFetcherRule

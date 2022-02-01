@@ -10,5 +10,5 @@ final class TwitterApi
      * @var string
      * @see https://developer.twitter.com/en/docs/twitter-api/versioning
      */
-    final public const API_VERSION = '1.1';
+    public const API_VERSION = '1.1';
 }
