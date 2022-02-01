@@ -95,3 +95,7 @@ parameters:
 
         # false positive private \DateTimeInterface $publishedAt,
         - '#Class TomasVotruba\\Blog\\ValueObject\\Post has an uninitialized readonly property \$content\. Assign it in the constructor#'
+
+        -
+            message: '#Anonymous variables in a method call can lead to false dead methods\. Make sure the variable type is known#'
+            path: "src/Controller/*"
