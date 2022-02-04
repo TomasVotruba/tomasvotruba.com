@@ -51,12 +51,12 @@ From the PHPStan point of view, this snippet is identical to the previous one. T
 What can we assume from this code?
 
 ```php
-$video->getVideoUrl()
+$video->getUrl()
 ```
 
 * it's a method call
 * the `$video` is an object
-* the `$video` object has a `getVideoUrl()` method
+* the `$video` object has a `getUrl()` method
 
 How can we deduct the type of object here?
 
@@ -69,7 +69,7 @@ Here you could read a complex passage about types, abstract syntax tree, static 
 Instead, we'll be KISSing PHPStorm:
 
 * use *Find in files* action
-* search for a "public function getVideoUrl()" string
+* search for a "public function getUrl()" string
 
 <img src="/assets/images/posts/2021/find_in.png" style="max-width: 32em" class="img-thumbnail mt-2 mb-2">
 
