@@ -11,7 +11,7 @@ tweet: "New Post on the 🐘 blog: How to Create #Symfony Kernel for Tests with 
 
 In Symfony, we can use config to define almost any container change - from parameter, a specific implementation of service to extension configuration. That's why it's so easy to use them for tests.
 
-We'll go with the simplest difference - a bool parameter value to make the example simple.
+To make the example simple, we'll go with the simplest difference - a bool parameter value.
 
 <br>
 
