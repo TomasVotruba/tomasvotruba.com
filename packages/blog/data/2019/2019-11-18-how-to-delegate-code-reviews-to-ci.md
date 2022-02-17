@@ -154,8 +154,6 @@ code-review:
 Here are my favorite sets I apply first:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

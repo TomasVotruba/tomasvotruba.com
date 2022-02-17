@@ -444,8 +444,6 @@ vendor/bin/ecs check src tests
 **1. Configure Rector**
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

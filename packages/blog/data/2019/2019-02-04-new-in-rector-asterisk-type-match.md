@@ -22,8 +22,6 @@ Each PHP frameworks has its conventions and conventions are the main topics duri
 E.g. one framework has default method of controller named `run`, the other `__invoke`. How can Rector help us?
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -71,8 +69,6 @@ Do you have more classes? No troubles! Just put each class one by one carefully 
 Wait. What if you could use [`fnmatch`](http://php.net/manual/en/function.fnmatch.php) pattern?
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

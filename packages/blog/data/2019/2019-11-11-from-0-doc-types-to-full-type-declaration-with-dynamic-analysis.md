@@ -177,8 +177,6 @@ I've  [merged the PR into Rector](https://github.com/rectorphp/rector/pull/2264/
 ### Step 1 - Add Type Collector
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -201,8 +199,6 @@ vendor/bin/rector process src
 ### Step 3 - Complete Collected Types
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -223,8 +219,6 @@ vendor/bin/rector process src
 ### Step 4 - Remove Type Collector
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

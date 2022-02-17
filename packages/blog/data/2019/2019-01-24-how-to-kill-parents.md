@@ -28,8 +28,6 @@ But have you seen them in your favorite package?
 There are few cases the when parent class is **required** by 3rd party package or PHP code:
 
 ```php
-<?php
-
 use PHPUnit\Framework\TestCase;
 
 final class PrivatesCallerTest extends TestCase

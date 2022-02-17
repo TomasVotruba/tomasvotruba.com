@@ -173,8 +173,6 @@ Is one object or null?
 Just setup [Rector](https://github.com/rectorphp/rector) and upgrade your code:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -254,8 +252,6 @@ Quiz question: how would **you utilize AST to autocomplete all `@var` annotation
 That's it! Let's put this algorithm into Rector:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

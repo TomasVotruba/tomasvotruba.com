@@ -98,8 +98,6 @@ Instead of ~~`PhpCsFixer\Fixer\ControlStructure\PregDelimiterFixer`~~ fixer:
 use Rector rule:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -135,8 +133,6 @@ Instead of ~~`PhpCsFixer\Fixer\ControlStructure\RequireFollowedByAbsolutePathFix
 use Rector rule:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -175,8 +171,6 @@ Instead of ~~`PhpCsFixer\Fixer\Naming\CatchExceptionNameMatchingTypeFixer`~~ Fix
 use Rector rule:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -216,8 +210,6 @@ Instead of ~~`Symplify\CodingStandard\Fixer\Naming\PropertyNameMatchingTypeFixer
 use Rector rule:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -265,8 +257,6 @@ Instead of:
 use Rector rules:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -308,8 +298,6 @@ Instead of ~~`Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer`
 use Rector rule:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -339,8 +327,6 @@ Instead of:
 use Rector rules:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -373,8 +359,6 @@ Instead of ~~`Symplify\CodingStandard\Fixer\Solid\FinalInterfaceFixer`~~ Fixer:
 use Rector rule:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
