@@ -55,8 +55,6 @@ Of course there are cases when using absolute paths is not suitable, like templa
 And that's what this Rector rule does for you:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -173,8 +171,6 @@ final class SomeClass extends \SubNamespace\PartialNamespace\AnotherClass
 To enable this behavior, add one parameter to Rector config:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

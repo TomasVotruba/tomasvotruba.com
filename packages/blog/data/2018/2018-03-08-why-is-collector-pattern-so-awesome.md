@@ -23,8 +23,6 @@ Yesterday I worked on [Rector](https://github.com/rectorphp/rector) and **needed
 To give you a context, now you can register particular Rectors to config as in Symfony:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -76,8 +74,6 @@ final class SymfonyRectorProvider implements RectorInterface
 Such service is registered by user to the config:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -172,8 +168,6 @@ The same happened for Rector - **I need to add multiple Rectors in `RectorProvid
 Damn! Mmm, tell people to use one provider per Rector?
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

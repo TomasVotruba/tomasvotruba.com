@@ -205,8 +205,6 @@ The moment you realize:
 God, don't do this manually! Automate ↓
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -254,8 +252,6 @@ But there is even better one - [Nette\Utils](https://github.com/nette/utils):
 How to get it into your code? Easy:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
@@ -325,8 +321,6 @@ What now?
 Easy, we made a Rector rule for that:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

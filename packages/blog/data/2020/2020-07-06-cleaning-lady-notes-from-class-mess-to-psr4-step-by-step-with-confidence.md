@@ -278,8 +278,6 @@ For these, we have help of Rector with these 2 rules:
 Register them in `rector.php`:
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

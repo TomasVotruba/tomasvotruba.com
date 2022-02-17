@@ -343,8 +343,6 @@ composer require rector/rector --dev
 ### 2. Create Config
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);

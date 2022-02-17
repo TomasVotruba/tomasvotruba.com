@@ -142,8 +142,6 @@ Then it changes it into `isMethodCacheable()` (see [UPGRADE-4.0.md](https://gith
 Such a configuration looks like this (as shown in [`README`](https://github.com/rectorphp/rector#change-a-method-name)):
 
 ```php
-<?php
-
 // rector.php
 
 declare(strict_types=1);
