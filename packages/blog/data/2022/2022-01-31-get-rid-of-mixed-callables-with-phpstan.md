@@ -130,7 +130,7 @@ You can read more [in PHPStan docs](https://phpstan.org/writing-php-code/phpdoc-
 
 <img src="/assets/images/posts/2022/mixed_callable_rule.png" class="img-thumbnail" style="max-width: 35em">
 
-It's almost identical PHP code, you know, except union type has to be wrapped in brackets `()`:
+It's almost identical to PHP type declaration syntax, except union type has to be wrapped in brackets `()`:
 
 <br>
 
