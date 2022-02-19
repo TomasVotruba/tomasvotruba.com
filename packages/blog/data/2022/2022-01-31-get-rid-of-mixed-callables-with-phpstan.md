@@ -162,6 +162,13 @@ services:
         tags: [phpstan.rules.rule]
 ```
 
+Update: Ondra shared with me, that you can also [use parameter](https://twitter.com/OndrejMirtes/status/1495064465339039751) for similar check outside levels:
+
+```yaml
+parameters:
+    checkMissingCallableSignature: true
+```
+
 2. Run PHPStan:
 
 ```bash
