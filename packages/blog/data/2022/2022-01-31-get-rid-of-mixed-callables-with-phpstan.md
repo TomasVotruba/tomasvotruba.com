@@ -70,7 +70,7 @@ final class CovidRestrictionResolver implements RestrictionResolverInterface
 
 <br>
 
-Now we go one level lover, from class method to a function. We still have types and know what comes there:
+Now we go one level lower, from class method to a function. We still have types and know what comes there:
 
 ```php
 function resolve(Destination $destination): Restrictions
