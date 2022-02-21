@@ -25,13 +25,13 @@ Let's start with a simple docblock like this:
 If we parse it with `PhpDocParser`... you know what? Let's try this together:
 
 ```bash
-composer require symplify/simple-phpdoc-parser
+composer require symplify/astral
 ```
 
 <br>
 
 ```php
-use Symplify\SimplePhpDocParser\StaticFactory\SimplePhpDocParserStaticFactory;
+use Symplify\Astral\PhpDocParser\StaticFactory\SimplePhpDocParserStaticFactory;
 
 $values = <<<'PHPDOC'
 /**
@@ -208,7 +208,7 @@ Do you hear about it the first time? Think of it as an analogy to event dispatch
 In reality, we should run the traverse on `PhpDocNode` to get the result:
 
 ```php
-use Symplify\SimplePhpDocParser\PhpDocNodeTraverser;
+use Symplify\Astral\PhpDocParser\PhpDocNodeTraverser;
 
 $phpDocNodeTraverser = new PhpDocNodeTraverser();
 $phpDocNodeTraverser->traverse($phpDocNode);
@@ -221,7 +221,7 @@ Oh, we forgot to add the `NodeVisitor`:
 ```php
 use PHPStan\PhpDocParser\Ast\Node;
 use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
-use Symplify\SimplePhpDocParser\PhpDocNodeVisitor\AbstractPhpDocNodeVisitor;
+use Symplify\Astral\PhpDocParser\PhpDocNodeVisitor\AbstractPhpDocNodeVisitor;
 
 final class FirstNodeVisitor extends AbstractPhpDocNodeVisitor
 {
@@ -246,7 +246,7 @@ final class FirstNodeVisitor extends AbstractPhpDocNodeVisitor
 Now we only add `FirstNodeVisitor` to `PhpDocNodeTraverser` ↓
 
 ```php
-use Symplify\SimplePhpDocParser\PhpDocNodeTraverser;
+use Symplify\Astral\PhpDocParser\PhpDocNodeTraverser;
 
 $firstNodeVisitor = new FirstNodeVisitor();
 
@@ -291,6 +291,3 @@ Now you know: **how to rename the old class to the new class?**
 <br>
 
 Happy coding!
-
-
-
