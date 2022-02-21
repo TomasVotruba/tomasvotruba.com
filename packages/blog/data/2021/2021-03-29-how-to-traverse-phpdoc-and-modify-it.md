@@ -28,6 +28,8 @@ If we parse it with `PhpDocParser`... you know what? Let's try this together:
 composer require symplify/simple-phpdoc-parser
 ```
 
+<br>
+
 ```php
 use Symplify\SimplePhpDocParser\StaticFactory\SimplePhpDocParserStaticFactory;
 
