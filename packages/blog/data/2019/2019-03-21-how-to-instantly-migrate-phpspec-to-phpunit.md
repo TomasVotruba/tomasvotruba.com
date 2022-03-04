@@ -9,9 +9,9 @@ perex: |
 tweet: 'New Post on #php 🐘 blog: How to Instantly Migrate #PhpSpec to #phpunit'
 tweet_image: '/assets/images/posts/2019/unit-mig/phpunit.png'
 
-updated_since: "November 2020"
-updated_message: |
-    Switch from deprecated `--set` option to `rector.php` config.
+deprecated_since: "March 2022"
+deprecated_message: |
+    PhpSpec and PHPUnit are both valid alternatives, both in growing communities. This set was deprecated [in Rector](https://github.com/rectorphp/rector-src/pull/1901) as it was created as mostly experimental to test Rector features.
 ---
 
 <blockquote class="blockquote text-center">
@@ -33,6 +33,8 @@ That was my question to one of my clients when I saw both PhpSpec and PHPUnit te
 - "It tests the behavior."
 - "Well, what is the difference between `assertSame()` and `shouldBeEqualTo()`"?
 - "None really."
+
+<br>
 
 But before I noticed PhpSpec and asked about it, we had another chat:
 
@@ -68,6 +70,8 @@ Let's look at downloads:
 
 But 117 mil. downloads can be like "You should use Windows XP because it's the most used Windows version ever!" That's classic manipulation of dying dinosaur.
 
+<br>
+
 **Let's see the trends!** In the same order:
 
 <div class="row">
@@ -85,6 +89,8 @@ But 117 mil. downloads can be like "You should use Windows XP because it's the m
         </a>
     </div>
 </div>
+
+<br>
 
 Which one would you pick from this 2 information? I'd go for the last one, so did my client. **So that's why we agreed to migrate PhpSpec** (the middle one) **to PHPUnit**.
 
@@ -175,3 +181,4 @@ And what was the 2nd testing framework that Rector migrated? [Nette\Tester](/blo
 <br>
 
 Happy coding!
+
