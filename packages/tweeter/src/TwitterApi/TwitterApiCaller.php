@@ -38,7 +38,7 @@ final class TwitterApiCaller
     }
 
     /**
-     * @param mixed[] $data
+     * @param array<string, mixed> $data
      * @return mixed[]
      */
     public function callGet(string $endPoint, string $query, array $data): array

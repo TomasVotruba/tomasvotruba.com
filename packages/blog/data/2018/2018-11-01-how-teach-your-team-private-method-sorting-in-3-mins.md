@@ -9,6 +9,12 @@ perex:
     That's why effective learning is a killer skill. **Today we learn how to sort private methods in 2 mins**.
 tweet: "New Post on My Blog: How to Teach Your Team Private Method Sorting in 3 mins #rector #cleancode #martinfowler #automate #php"
 tweet_image: "/assets/images/posts/2018/private-method-order/example.png"
+
+deprecated_since: "March 2022"
+deprecated_message: |
+    We [removed the rule from Rector](https://github.com/rectorphp/rector-src/pull/1910) as it's mostly job of coding standard tool. Rector should narrow focus on automated refactoring and instant upgrades.
+
+    Use the `OrderedClassElementsFixer` from PHP CS Fixer instead.
 ---
 
 ## Why is Private Method Order so Important?
