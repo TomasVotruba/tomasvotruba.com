@@ -170,7 +170,10 @@ use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigura
 
 return function (ContainerConfigurator $containerConfigurator): void {
     $services = $containerConfigurator->services();
-    $services->set(TypedPropertyRector::class);
+    $services->set(TypedPropertyRector::class)
+    ->configure([
+            TypedPropertyRector::INLINE_PUBLIC => true,
+        ]);
 };
 ```
 
