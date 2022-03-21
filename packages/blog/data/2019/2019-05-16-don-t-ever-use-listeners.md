@@ -62,6 +62,8 @@ services:
             - { name: kernel.event_listener, event: kernel.view }
 ```
 
+<br>
+
 If it would be a subscriber, it would be very similar to this:
 
 ```php
