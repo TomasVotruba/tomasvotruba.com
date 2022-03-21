@@ -2,13 +2,14 @@
 id: 351
 title: "5 Constant Lists That Give&nbsp;Context to&nbsp;your Integers&nbsp;and&nbsp;Strings"
 perex: |
-    [Native enums](https://php.watch/versions/8.1/enums) is a new feature since PHP 8.1. This feature brings more focus on *what* enums are *where* we can use it.
+    [Native enums](https://php.watch/versions/8.1/enums) is a new PHP 8.1 feature. This feature focuses more on *what* enums are *where* we can use them.
 
-    **Not on PHP 8.1 yet?** Don't worry, before that enums were emulated by public constants. Few constant lists are already part of your favorite framework, ORM or utils package for years.
+    **Not on PHP 8.1 yet?** Don't worry, before that, enums were emulated by public constants. Few constant lists are already part of your favorite framework, ORM, or utils package for years.
     <br><br>
-    Today we look on 5 constant lists, that you can use today to replace that `int` or `string` and give it a context.
+    Today we look at 5 constant lists that you can use today to replace that `int` or `string` and give it a context.
 
-tweet: "New Post on the 🐘 blog: @todo"
+tweet: "New Post on the 🐘 blog: 5 Constant Lists That Give Context to your Integers and Strings        #nettefw #symfony #php"
+tweet_image: /assets/images/posts/2022/kernel_events_usage.png
 ---
 
 ## Why even Bother with Enums?
@@ -23,7 +24,7 @@ return 'later;
 
 <br>
 
-We might ask, why even bother using some constants? Everybody knows 14400 is number of minutes in a day, or is it seconds... or is it 1440?
+We might ask, why even bother using some constants? Everybody knows 14400 is the number of minutes in a day or is it seconds... or is it 1440?
 
 ```diff
 -if ($duration < 14400) {
@@ -34,7 +35,7 @@ We might ask, why even bother using some constants? Everybody knows 14400 is num
  return 'later;
 ```
 
-Using constant removes these questions. Somebody already did the calculation before me and was much better in the result. We avoid crash of [thinking fast and thinking slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555) at the same time - great book about how we think about others peoples' thinking.
+We are using constant removes these questions. Somebody already did the calculation before me and was much better at the result. We avoid the crash of [thinking fast and thinking slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555) at the same time - great book about how we think about others peoples' thinking.
 
 <br>
 
@@ -48,7 +49,7 @@ There is [more pratcical benefits in using constants over scalars](/blog/2020/07
 
 ---
 
-I've shared one such constant on a Twitter, and it so much traction and responses than I expected:
+I've shared one such constant on Twitter, and it so much traction and responses than I expected:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Did you know <a href="https://twitter.com/symfony?ref_src=twsrc%5Etfw">@symfony</a> offers constant codes for HTTP?<br><br>Since PHP 8.1 even more useful as enum! <a href="https://t.co/n1jpBYiu8i">pic.twitter.com/n1jpBYiu8i</a></p>&mdash; Tomas Votruba 🇺🇦 (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1502360490328080384?ref_src=twsrc%5Etfw">March 11, 2022</a></blockquote>
 
@@ -62,7 +63,7 @@ Ready for some hot constant code? Let's go:
 
 After calling outside API service, we have to verify the result or the reason why it failed. Codes like 404 and 200 are mainstream, but what about the less known ones?
 
-Can you tell me in 2 seconds, what is the condition checking here?
+Can you tell me in 2 seconds what is the condition checking here?
 
 ```php
 $response = $this->callExternalApi(...);
@@ -71,9 +72,9 @@ if ($response->getCode() === 403) {
 }
 ```
 
-We know something is wrong... maybe something was not found? Maybe the url is outdated?
+We know something is wrong... maybe something was not found? Maybe the URL is outdated?
 
-*Maybe* is not good enough and maybe, we can simply read it:
+*Maybe* is not good enough, and maybe, we can simply read it:
 
 ```diff
 +use Symfony\Component\HttpFoundation\Response;
@@ -85,7 +86,7 @@ We know something is wrong... maybe something was not found? Maybe the url is ou
  }
 ```
 
-This also makes clear, what is HTTP response value, what is [Calgary telephone code](https://en.wikipedia.org/wiki/Area_code_403#:~:text=Area%20code%20403%20is%20a,assigned%20by%20AT%26T%20in%201947) and what is made up integer id we use for test.
+The constant also differentiates HTTP response value, [Calgary telephone code](https://en.wikipedia.org/wiki/Area_code_403#:~:text=Area%20code%20403%20is%20a,assigned%20by%20AT%26T%20in%201947) and an integer id in a test.
 
 
 ### Where is the List?
@@ -102,9 +103,9 @@ Where is a response, there must be a request first:
 $response = $this->callExternalApi(..., 'get');
 ```
 
-We've all debugged an external API. If we're lucky, it has a documentation. **If we're not lucky, the documentation is outdated** and the endpoint silently fails (I look at you Twitter, Meetup.com...).
+We've all debugged an external API. If we're lucky, it has documentation. **If we're not lucky, the documentation is outdated** and the endpoint silently fails (I look at you Twitter, Meetup.com...).
 
-Few hours later we try the constant out of despair:
+A few hours later, we try the constant out of despair:
 
 ```diff
 +use Symfony\Component\HttpFoundation\Request;
@@ -145,13 +146,13 @@ final class PostController extends AbstractController
 ```
 
 
-## 3. An hour, a Month or a Year?
+## 3. An hour, a Month, or a Year?
 
 During my 19-years PHP developer career, I've used the calculator countless times just to produce correct *time numbers* like ~~`8640`~~... ehm, `86400`.
 
 <br>
 
-The moment I saw following constant list first time, it blew both my mind and calculator away:
+The moment I saw the following constant list first time, it blew both my mind and calculator away:
 
 ```diff
 +use Nette\Utils\DateTime;
@@ -164,11 +165,11 @@ The moment I saw following constant list first time, it blew both my mind and ca
  return 'keep waiting';
 ```
 
-The `DAY_IN_SECONDS` name would be better, but at least the constant has comment to clarify this.
+The `DAY_IN_SECONDS` name would be better, but at least the constant has a comment to clarify this.
 
 <br>
 
-These constants come very handy with header expiration or [*time to leave* (TTLs)](https://en.wikipedia.org/wiki/Time_to_live) in cache:
+These constants come very handily with header expiration or [*time to leave* (TTLs)](https://en.wikipedia.org/wiki/Time_to_live) in cache:
 
 ```php
 use Nette\Utils\DateTime;
@@ -184,7 +185,7 @@ $httpResponse->setHeader('Access-Control-Max-Age', 12 * DateTime::HOUR);
 
 ## 4. Accurate Event Subscribers
 
-In Symfony event system, there is probably dozens of event we can hook into. We already [use subscribers over listeners](/blog/2019/05/16/don-t-ever-use-listeners/) and the `getSubscribedEvents()` method:
+There are probably dozens of events in the Symfony event system we can hook into. We already [use subscribers over listeners](/blog/2019/05/16/don-t-ever-use-listeners/) and the `getSubscribedEvents()` method:
 
 ```php
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -228,36 +229,83 @@ Thanks to this constant, we **open previously hidden knowledge** = where is the 
 
 ## 5. Doctrine Column Types
 
-Back in the PHP 7.4-day we use to write Doctrine annotations in a weird string-like format, called comments, right above the property:
+Back in the PHP 7.4 days, we used to write Doctrine annotations in a weird string-like format, called comments, right above the property:
 
 ```php
+use Doctrine\ORM\Mapping as ORM;
 
+class Post
+{
+    /**
+     * @ORM\Column(type="int")
+     */
+    private $wordCount;
+}
 ```
 
+Based on the `type=` part, the Doctrine was able to with database column type. Now I'm now sure about my memory, was it "int" or "integer"? We now use "int" everywhere, even in native PHP type declarations, so that should be correct, right?
 
-### Where is the Lists?
+<br>
+
+Well, time flew by, and now we can use [PHP 8.0-native attributes](https://php.watch/versions/8.0/attributes):
+
+```php
+use Doctrine\ORM\Mapping as ORM;
+
+class Post
+{
+    #[ORM\Column(type: "integer")]
+    private $wordCount;
+}
+```
+
+<br>
+
+The syntax changed, PHPStan and Rector can work with these better, and PhpStorm autocomplete more reliable. **But my memory issue remains** - was it "int" or "integer"? Is there some solution for my memory leak?
+
+Fortunately, there is:
+
+```diff
+ use Doctrine\ORM\Mapping as ORM;
++use Doctrine\DBAL\Types\Types;
+
+ class Post
+ {
+-     #[ORM\Column(type: "int")]
++     #[ORM\Column(type: Types::INTEGER)]
+     private $wordCount;
+ }
+```
+
+Now we can state the intention - define a column to work with integer numbers,
+and the knowledge is safely delegated to the tool itself - a constant it uses.
+
+### Where is the List?
 
 * [`Doctrine\DBAL\Types\Types`](https://github.com/doctrine/dbal/blob/83f779beaea1893c0bece093ab2104c6d15a7f26/src/Types/Types.php#L12-L36)
+
+
+Thanks to [Alexander Schranz](https://twitter.com/alex_s_/status/1504064803719024645) for mentioning.
 
 ---
 
 ## Who do we Write Code For?
 
-Now we know *what* constant enum-like lists can we use, but I'd like to return back to *why* we use them. We all know that `200` is success code, and `301` is permanent redirect... but do we know how much bits is in 1024 bytes?
+Now we know *what* constant enum-like lists we can use, but I'd like to return to *why* we use them. We all know that `200` is success code, and `301` is a permanent redirect... but do we know how many bits are in 1024 bytes?
 
 <blockquote class="blockquote text-center">
-"We don't write the code for us at the present.<br>
+"We don't write the code for use at present.<br>
 We write for future fellow developers we'll never meet."
 </blockquote>
 
-If put more attention to write standardized code now, future developers will thank us for making their life easier. Maybe we will also thanks ourselves ;).
+If we pay more attention to writing standardized code now, future developers will thank us for making their lives easier. Maybe we will also thanks ourselves ;).
 
 ## Honorable Mentions
 
 * [`Symfony\Component\Console\Command\Command::SUCCESS|FAILURE`](https://github.com/symfony/symfony/blob/2f27b39add8c8cdf7c70f2acfe8c9905eb56dfcc/src/Symfony/Component/Console/Command/Command.php#L36-L39) for command line exit codes in `Command::execute()` and CLI apps
 * [`Psr\Log\LogLevel::*`](https://github.com/php-fig/log/blob/fe5ea303b0887d5caefd3d431c3e61ad47037001/src/LogLevel.php#L10-L17) for logging - thanks to [Oliver Nybroe](https://twitter.com/OliverNybroe/status/1503308677306011650)
 
-Have I missed constant list that you use daily and makes your life easier? Share in comments or on Twitter, so we can put it here too.
+Have I missed a constant list that you use daily and makes your life easier? Please share in the comments or on Twitter to put it here too.
 
 <br>
 
