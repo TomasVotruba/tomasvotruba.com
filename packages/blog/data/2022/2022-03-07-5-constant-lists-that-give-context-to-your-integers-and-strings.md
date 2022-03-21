@@ -2,7 +2,7 @@
 id: 351
 title: "5 Constant Lists That Give&nbsp;Context to&nbsp;your Integers&nbsp;and&nbsp;Strings"
 perex: |
-    [Native enums](https://php.watch/versions/8.1/enums) is a new PHP 8.1 feature. This feature focuses more on *what* enums are *where* we can use them.
+    [Native enums](https://php.watch/versions/8.1/enums) is a new PHP 8.1 feature. This feature brings more focus on *what* enums are *where* we can use them.
 
     **Not on PHP 8.1 yet?** Don't worry, before that, enums were emulated by public constants. Few constant lists are already part of your favorite framework, ORM, or utils package for years.
     <br><br>
@@ -35,7 +35,7 @@ We might ask, why even bother using some constants? Everybody knows 14400 is the
  return 'later;
 ```
 
-We are using constant removes these questions. Somebody already did the calculation before me and was much better at the result. We avoid the crash of [thinking fast and thinking slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555) at the same time - great book about how we think about others peoples' thinking.
+We are using constant to remove these questions. Somebody already did the calculation before me and was much better at the result. We avoid the crash of [thinking fast and thinking slow](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555) at the same time - great book about how we think about others peoples' thinking.
 
 <br>
 
@@ -254,7 +254,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 class Post
 {
-    #[ORM\Column(type: "integer")]
+    #[ORM\Column(type: "int")]
     private $wordCount;
 }
 ```
@@ -304,6 +304,7 @@ If we pay more attention to writing standardized code now, future developers wil
 
 * [`Symfony\Component\Console\Command\Command::SUCCESS|FAILURE`](https://github.com/symfony/symfony/blob/2f27b39add8c8cdf7c70f2acfe8c9905eb56dfcc/src/Symfony/Component/Console/Command/Command.php#L36-L39) for command line exit codes in `Command::execute()` and CLI apps
 * [`Psr\Log\LogLevel::*`](https://github.com/php-fig/log/blob/fe5ea303b0887d5caefd3d431c3e61ad47037001/src/LogLevel.php#L10-L17) for logging - thanks to [Oliver Nybroe](https://twitter.com/OliverNybroe/status/1503308677306011650)
+* [`Symfony\Component\Form\FormEvents`](https://github.com/symfony/symfony/blob/2f27b39add8c8cdf7c70f2acfe8c9905eb56dfcc/src/Symfony/Component/Form/FormEvents.php#L29-L95) - thanks to [Shyim](https://twitter.com/Shyim97/status/1503030223608107019)
 
 Have I missed a constant list that you use daily and makes your life easier? Please share in the comments or on Twitter to put it here too.
 
