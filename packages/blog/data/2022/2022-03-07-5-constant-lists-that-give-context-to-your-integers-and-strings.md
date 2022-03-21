@@ -243,7 +243,7 @@ class Post
 }
 ```
 
-Based on the `type=` part, the Doctrine was able to with database column type. Now I'm now sure about my memory, was it "int" or "integer"? We now use "int" everywhere, even in native PHP type declarations, so that should be correct, right?
+Based on the `type=` part, the Doctrine was able to with database column type. Now I'm not sure about my memory, was it "int" or "integer"? We use "int" everywhere, even in native PHP type declarations, so that should be correct, right?
 
 <br>
 
