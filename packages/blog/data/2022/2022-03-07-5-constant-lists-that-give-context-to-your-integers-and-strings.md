@@ -19,7 +19,7 @@ if ($duration < 14400) {
    return 'today';
 }
 
-return 'later;
+return 'later';
 ```
 
 <br>
@@ -49,7 +49,7 @@ There is [more pratcical benefits in using constants over scalars](/blog/2020/07
 
 ---
 
-I've shared one such constant on Twitter, and it so much traction and responses than I expected:
+I've shared one such constant on Twitter, and it got much more traction and responses than I expected:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Did you know <a href="https://twitter.com/symfony?ref_src=twsrc%5Etfw">@symfony</a> offers constant codes for HTTP?<br><br>Since PHP 8.1 even more useful as enum! <a href="https://t.co/n1jpBYiu8i">pic.twitter.com/n1jpBYiu8i</a></p>&mdash; Tomas Votruba 🇺🇦 (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1502360490328080384?ref_src=twsrc%5Etfw">March 11, 2022</a></blockquote>
 
