@@ -108,7 +108,7 @@ final class ChangeMethodNameNodeVisitor extends NodeVisitorAbstract
     public function enterNode(Node $node)
     {
         if (! $node instanceof ClassMethod) {
-            return false;
+            return null;
         }
 
         // so we got it, what now?
@@ -132,7 +132,7 @@ final class ChangeMethodNameNodeVisitor extends NodeVisitorAbstract
     public function enterNode(Node $node)
     {
         if (! $node instanceof ClassMethod) {
-            return false;
+            return null;
         }
 
         $node->name = new Name('newName');
