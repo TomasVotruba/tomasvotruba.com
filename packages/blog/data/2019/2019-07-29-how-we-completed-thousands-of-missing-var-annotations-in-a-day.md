@@ -70,7 +70,7 @@ class BuilderTest extends TestCase
 {
     private $factory;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         // ah, it's a "Builder"
         $this->factory = new Builder;

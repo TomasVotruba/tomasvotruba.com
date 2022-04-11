@@ -113,7 +113,7 @@ This is how 1 spec migration might look like:
 +    private $createMe;
 
 -    public function let()
-+    protected function setUp()
++    protected function setUp(): void
      {
 -        $this->beConstructedWith(5);
 +        $this->createMe = new \App\Product\Category(5);

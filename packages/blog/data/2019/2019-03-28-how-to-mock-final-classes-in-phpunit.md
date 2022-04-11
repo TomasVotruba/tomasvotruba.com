@@ -160,7 +160,7 @@ Let's put it into `setUp()` method. It seems like a good idea for these operatio
 
  final class FinalClassTest extends TestCase
  {
-+    public function setUp()
++    protected function setUp(): void
 +    {
 +        BypassFinals::enable();
 +    }
