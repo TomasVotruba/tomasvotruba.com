@@ -181,10 +181,11 @@ This technique can be applied to services, to PHPStan rules, to Rector rules, to
 The idea is comment out half of the configuration, run the tool and see if the bug still remains:
 
 ```diff
- // rector.php
- return function (ContainerConfigurator $containerConfigurator): void {
+ use Rector\Config\RectorConfig;
+
+ return function (RectorConfig $rectorConfig): void {
      $parameters = $containerConfigurator->parameters();
-     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
+     $rectorConfig->importNames();
 
      $containerConfigurator->import(SetList::PHP_74);
      $containerConfigurator->import(SetList::PHP_80);
@@ -198,32 +199,32 @@ The idea is comment out half of the configuration, run the tool and see if the b
 Is the bug still there? Remove the commended lines and repeated the half-commented/half-active process with the other half:
 
 ```diff
- // rector.php
- return function (ContainerConfigurator $containerConfigurator): void {
-     $parameters = $containerConfigurator->parameters();
-     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
+ use Rector\Config\RectorConfig;
 
-     $containerConfigurator->import(SetList::PHP_74);
--    $containerConfigurator->import(SetList::PHP_80);
-+//  $containerConfigurator->import(SetList::PHP_80);
--    $containerConfigurator->import(SetList::CODE_QUALITY);
--    $containerConfigurator->import(SetList::CODING_STYLE);
+ return function (RectorConfig $rectorConfig): void {
+     $rectorConfig->importNames();
+
+     $rectorConfig->import(SetList::PHP_74);
+-    $rectorConfig->import(SetList::PHP_80);
++//  $rectorConfig->import(SetList::PHP_80);
+-    $rectorConfig->import(SetList::CODE_QUALITY);
+-    $rectorConfig->import(SetList::CODING_STYLE);
  ]);
 ```
 
 Is the bug gone? It must be one of those commented sets, so comment out half of them and let the ofher half active:
 
 ```diff
- // rector.php
- return function (ContainerConfigurator $containerConfigurator): void {
-     $parameters = $containerConfigurator->parameters();
-     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
+ use Rector\Config\RectorConfig;
 
--    $containerConfigurator->import(SetList::PHP_74);
--    $containerConfigurator->import(SetList::PHP_80);
-     $containerConfigurator->import(SetList::CODE_QUALITY);
--    $containerConfigurator->import(SetList::CODING_STYLE);
-+//  $containerConfigurator->import(SetList::CODING_STYLE);
+ return function (RectorConfig $rectorConfig): void {
+     $rectorConfig->importNames();
+
+-    $rectorConfig->import(SetList::PHP_74);
+-    $rectorConfig->import(SetList::PHP_80);
+     $rectorConfig->import(SetList::CODE_QUALITY);
+-    $rectorConfig->import(SetList::CODING_STYLE);
++//  $rectorConfig->import(SetList::CODING_STYLE);
  ]);
 ```
 

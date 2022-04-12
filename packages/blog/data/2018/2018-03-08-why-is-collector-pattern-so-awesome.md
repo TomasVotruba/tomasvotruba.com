@@ -23,16 +23,11 @@ Yesterday I worked on [Rector](https://github.com/rectorphp/rector) and **needed
 To give you a context, now you can register particular Rectors to config as in Symfony:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Privatization\Rector\MethodCall\PrivatizeLocalGetterToPropertyRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(PrivatizeLocalGetterToPropertyRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(PrivatizeLocalGetterToPropertyRector::class);
 };
 ```
 
@@ -74,10 +69,6 @@ final class SymfonyRectorProvider implements RectorInterface
 Such service is registered by user to the config:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return function (ContainerConfigurator $containerConfigurator): void {
@@ -168,10 +159,6 @@ The same happened for Rector - **I need to add multiple Rectors in `RectorProvid
 Damn! Mmm, tell people to use one provider per Rector?
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return function (ContainerConfigurator $containerConfigurator): void {

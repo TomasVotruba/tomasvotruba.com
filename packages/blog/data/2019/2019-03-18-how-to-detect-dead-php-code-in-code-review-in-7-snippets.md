@@ -409,12 +409,11 @@ composer require rector/rector --dev
 2. Update `rector.php` with dead code set
 
 ```php
-use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::DEAD_CODE);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SetList::DEAD_CODE);
 };
 ```
 

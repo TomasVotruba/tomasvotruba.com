@@ -197,12 +197,11 @@ What now? Go to your code and check method one by one clicking on them in PHPSto
 *Just kidding*. Let Rector handle it with `PRIVATIZATION` set:
 
 ```php
-// rector.php
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::PRIVATIZATION);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SetList::PRIVATIZATION);
 };
 ```
 

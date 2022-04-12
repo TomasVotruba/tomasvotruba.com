@@ -2,35 +2,35 @@
 
 declare(strict_types=1);
 
-use Rector\CodingStyle\Rector\MethodCall\UseMessageVariableForSprintfInSymfonyStyleRector;
-use Rector\Core\Configuration\Option;
+use Rector\Config\RectorConfig;
 use Rector\Doctrine\Rector\Class_\MoveCurrentDateTimeDefaultInEntityToConstructorRector;
 use Rector\Doctrine\Set\DoctrineSetList;
 use Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector;
 use Rector\Nette\Set\NetteSetList;
 use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
+use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->autoImportNames();
 
-    $parameters->set(Option::AUTO_IMPORT_NAMES, true);
+    $rectorConfig->sets([
+        SetList::CODE_QUALITY,
+        SetList::CODING_STYLE,
+        SetList::NAMING,
+        SetList::TYPE_DECLARATION,
+        NetteSetList::NETTE_UTILS_CODE_QUALITY,
+        DoctrineSetList::DOCTRINE_CODE_QUALITY,
+        LevelSetList::UP_TO_PHP_81,
+    ]);
 
-    $containerConfigurator->import(\Rector\Set\ValueObject\LevelSetList::UP_TO_PHP_81);
-    $containerConfigurator->import(SetList::CODE_QUALITY);
-    $containerConfigurator->import(SetList::CODING_STYLE);
-    $containerConfigurator->import(SetList::NAMING);
-    $containerConfigurator->import(SetList::TYPE_DECLARATION);
-    $containerConfigurator->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
-    $containerConfigurator->import(DoctrineSetList::DOCTRINE_CODE_QUALITY);
 
-    $parameters->set(Option::PATHS, [__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages']);
+    $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages']);
 
     // experimental parallel boost
-    $parameters->set(Option::PARALLEL, true);
+    $rectorConfig->parallel();
 
-    $parameters->set(Option::SKIP, [
+    $rectorConfig->skip([
         RemoveExtraParametersRector::class,
         MoveCurrentDateTimeDefaultInEntityToConstructorRector::class,
 

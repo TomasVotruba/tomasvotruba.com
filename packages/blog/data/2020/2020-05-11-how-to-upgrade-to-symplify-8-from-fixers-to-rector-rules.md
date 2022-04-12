@@ -98,16 +98,11 @@ Instead of ~~`PhpCsFixer\Fixer\ControlStructure\PregDelimiterFixer`~~ fixer:
 use Rector rule:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\CodingStyle\Rector\FuncCall\ConsistentPregDelimiterRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(ConsistentPregDelimiterRector::class)
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->set(ConsistentPregDelimiterRector::class)
         // default
         ->arg('delimiter', '#');
 };
@@ -133,16 +128,11 @@ Instead of ~~`PhpCsFixer\Fixer\ControlStructure\RequireFollowedByAbsolutePathFix
 use Rector rule:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\CodingStyle\Rector\Include_\FollowRequireByDirRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(FollowRequireByDirRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(FollowRequireByDirRector::class);
 };
 ```
 
@@ -171,16 +161,11 @@ Instead of ~~`PhpCsFixer\Fixer\Naming\CatchExceptionNameMatchingTypeFixer`~~ Fix
 use Rector rule:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\CodingStyle\Rector\Catch_\CatchExceptionNameMatchingTypeRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(CatchExceptionNameMatchingTypeRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(CatchExceptionNameMatchingTypeRector::class);
 };
 ```
 
@@ -210,16 +195,11 @@ Instead of ~~`Symplify\CodingStandard\Fixer\Naming\PropertyNameMatchingTypeFixer
 use Rector rule:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(RenamePropertyToMatchTypeRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->set(RenamePropertyToMatchTypeRector::class);
 };
 ```
 
@@ -257,18 +237,13 @@ Instead of:
 use Rector rules:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\CodingStyle\Rector\Class_\AddArrayDefaultToArrayPropertyRector;
 use Rector\SOLID\Rector\Property\AddFalseDefaultToBoolPropertyRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(AddFalseDefaultToBoolPropertyRector::class);
-    $services->set(AddArrayDefaultToArrayPropertyRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(AddFalseDefaultToBoolPropertyRector::class);
+    $rectorConfig->rule(AddArrayDefaultToArrayPropertyRector::class);
 };
 ```
 
@@ -298,16 +273,11 @@ Instead of ~~`Symplify\CodingStandard\Fixer\Php\ClassStringToClassConstantFixer`
 use Rector rule:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(StringClassNameToClassConstantRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(StringClassNameToClassConstantRector::class);
 };
 ```
 
@@ -327,18 +297,13 @@ Instead of:
 use Rector rules:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Order\Rector\Class_\OrderPrivateMethodsByUseRector;
 use Rector\Order\Rector\Class_\OrderPropertyByComplexityRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(OrderPrivateMethodsByUseRector::class);
-    $services->set(OrderPropertyByComplexityRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->set(OrderPrivateMethodsByUseRector::class);
+    $rectorConfig->set(OrderPropertyByComplexityRector::class);
 };
 ```
 
@@ -359,16 +324,11 @@ Instead of ~~`Symplify\CodingStandard\Fixer\Solid\FinalInterfaceFixer`~~ Fixer:
 use Rector rule:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\SOLID\Rector\Class_\FinalizeClassesWithoutChildrenRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(FinalizeClassesWithoutChildrenRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(FinalizeClassesWithoutChildrenRector::class);
 };
 ```
 

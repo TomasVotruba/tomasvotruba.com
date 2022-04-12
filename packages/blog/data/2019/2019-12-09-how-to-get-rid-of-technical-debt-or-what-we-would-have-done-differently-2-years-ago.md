@@ -138,20 +138,15 @@ So that's what we did:
 This one requires lof ot manual configuration tweaking of [Rector](https://github.com/rectorphp/rector) rules, but you can run basic migration with following set:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Autodiscovery\Rector\FileSystem\MoveServicesBySuffixToDirectoryRector;
 use Rector\PSR4\Rector\Namespace_\NormalizeNamespaceByPSR4ComposerAutoloadRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(MoveServicesBySuffixToDirectoryRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(MoveServicesBySuffixToDirectoryRector::class);
 
     // configure `composer.json` to desired way
-    $services->set(NormalizeNamespaceByPSR4ComposerAutoloadRector::class);
+    $rectorConfig->rule(NormalizeNamespaceByPSR4ComposerAutoloadRector::class);
 };
 ```
 
@@ -205,20 +200,14 @@ The moment you realize:
 God, don't do this manually! Automate ↓
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
-use Rector\Core\Configuration\Option;
 use Rector\DeadCode\Rector\Class_\RemoveUnusedDoctrineEntityMethodAndPropertyRector;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::DEAD_CODE);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SetList::DEAD_CODE);
 
-    $services = $containerConfigurator->services();
-    $services->set(RemoveUnusedDoctrineEntityMethodAndPropertyRector::class);
+    $rectorConfig->rule(RemoveUnusedDoctrineEntityMethodAndPropertyRector::class);
     // + some extra private rules :)
 };
 ```
@@ -252,16 +241,11 @@ But there is even better one - [Nette\Utils](https://github.com/nette/utils):
 How to get it into your code? Easy:
 
 ```php
-// rector.php
+use Rector\Nette\Set\NetteSetList;
+use Rector\Config\RectorConfig;
 
-declare(strict_types=1);
-
-use Rector\Core\Configuration\Option;
-use Rector\Nette\Set\NetteSetList;use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-
-return function (ContainerConfigurator $containerConfigurator) : void {
-    $containerConfigurator->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
 };
 ```
 
@@ -321,15 +305,11 @@ What now?
 Easy, we made a Rector rule for that:
 
 ```php
-// rector.php
+use Rector\CodingStyle\Rector\String_\ManualJsonStringToJsonEncodeArrayRector;
+use Rector\Config\RectorConfig;
 
-declare(strict_types=1);
-
-use Rector\CodingStyle\Rector\String_\ManualJsonStringToJsonEncodeArrayRector;use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(ManualJsonStringToJsonEncodeArrayRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(ManualJsonStringToJsonEncodeArrayRector::class);
 };
 ```
 

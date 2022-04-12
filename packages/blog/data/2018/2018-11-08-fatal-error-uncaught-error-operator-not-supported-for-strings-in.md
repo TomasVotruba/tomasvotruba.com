@@ -145,16 +145,19 @@ I went full-time on writing PHP upgrade rules - in the train, in the buss, in th
 use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::PHP_54);
-    $containerConfigurator->import(SetList::PHP_55);
-    $containerConfigurator->import(SetList::PHP_56);
-    $containerConfigurator->import(SetList::PHP_70);
-    $containerConfigurator->import(SetList::PHP_71);
-    $containerConfigurator->import(SetList::PHP_72);
-    $containerConfigurator->import(SetList::PHP_73);
-    $containerConfigurator->import(SetList::PHP_74);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->sets([
+        SetList::PHP_54,
+        SetList::PHP_55,
+        SetList::PHP_56,
+        SetList::PHP_70,
+        SetList::PHP_71,
+        SetList::PHP_72,
+        SetList::PHP_73,
+        SetList::PHP_74,
+    ]);
 };
 ```
 

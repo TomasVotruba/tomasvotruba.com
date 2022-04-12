@@ -29,7 +29,7 @@
         "phpstan/phpstan": "^1.4",
         "phpstan/phpstan-webmozart-assert": "^1.0",
         "phpunit/phpunit": "^9.5",
-        "rector/rector": "^0.12",
+        "rector/rector": "dev-main",
         "symplify/coding-standard": "^10.1",
         "symplify/easy-ci": "^10.1",
         "symplify/easy-coding-standard": "^10.1",

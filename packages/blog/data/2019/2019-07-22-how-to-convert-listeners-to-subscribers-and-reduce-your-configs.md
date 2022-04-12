@@ -170,21 +170,18 @@ The latest [Rector v0.5.8 is shipped](https://twitter.com/rectorphp/status/11528
 Just register the rule in your `rector.php` config to start migration:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\SymfonyCodeQuality\Rector\Class_\EventListenerToEventSubscriberRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(EventListenerToEventSubscriberRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(EventListenerToEventSubscriberRector::class);
 
     // optional, when something fails
     $parameters = $containerConfigurator->parameters();
+
     // use explicit Kernel, if not discovered by Rector
     $parameters->set('kernel_class', 'App\Kernel');
+
     // use explicit environment, if not found by Rector
     $parameters->set('kernel_environment', 'test');
 };

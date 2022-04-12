@@ -641,13 +641,11 @@ composer require rector/rector --dev
 2. Add `rector.php` config
 
 ```php
-// rector.php
-use Rector\Core\Configuration\Option;
-use Rector\Doctrine\Set\DoctrineSetList;use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Doctrine\Set\DoctrineSetList;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(DoctrineSetList::DOCTRINE_GEDMO_TO_KNPLABS);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(DoctrineSetList::DOCTRINE_GEDMO_TO_KNPLABS);
 };
 ```
 

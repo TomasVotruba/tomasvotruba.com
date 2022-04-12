@@ -86,10 +86,10 @@ composer require rector/rector --dev
 
 ```php
 use Rector\Symfony\Set\TwigSetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(TwigSetList::TWIG_UNDERSCORE_TO_NAMESPACE);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(TwigSetList::TWIG_UNDERSCORE_TO_NAMESPACE);
 };
 ```
 

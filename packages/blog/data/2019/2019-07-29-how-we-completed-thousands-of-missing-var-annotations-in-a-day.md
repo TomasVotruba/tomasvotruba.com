@@ -444,16 +444,11 @@ vendor/bin/ecs check src tests
 **1. Configure Rector**
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\TypeDeclaration\Rector\Property\PropertyTypeDeclarationRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(PropertyTypeDeclarationRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(PropertyTypeDeclarationRector::class);
 };
 ```
 

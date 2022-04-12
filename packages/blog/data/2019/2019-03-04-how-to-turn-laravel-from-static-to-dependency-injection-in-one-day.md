@@ -130,12 +130,11 @@ composer require rector/rector --dev
 2. Create `rector.php` config with `SetList::LARAVEL_STATIC_TO_INJECTION` set
 
 ```php
-use Rector\Core\Configuration\Option;
 use Rector\Laravel\Set\LaravelSetList;use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(LaravelSetList::LARAVEL_STATIC_TO_INJECTION);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(LaravelSetList::LARAVEL_STATIC_TO_INJECTION);
 };
 ```
 

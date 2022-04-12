@@ -271,10 +271,10 @@ With `rector.php` config:
 
 ```php
 use Rector\Symfony\Set\SymfonySetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SymfonySetList::SYMFONY_43);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SymfonySetList::SYMFONY_43);
 };
 ```
 

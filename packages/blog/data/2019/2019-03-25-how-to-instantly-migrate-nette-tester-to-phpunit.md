@@ -151,13 +151,11 @@ composer require rector/rector --dev
 2. Add `rector.php` config:
 
 ```php
-// rector.php
-use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::NETTE_TESTER_TO_PHPUNIT);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SetList::NETTE_TESTER_TO_PHPUNIT);
 };
 ```
 

@@ -142,19 +142,13 @@ Then it changes it into `isMethodCacheable()` (see [UPGRADE-4.0.md](https://gith
 Such a configuration looks like this (as shown in [`README`](https://github.com/rectorphp/rector#change-a-method-name)):
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(RenameMethodRector::class)
-        ->configure([
-            new MethodCallRename('Symfony\Component\HttpFoundation\Request', 'isMethodSafe', 'isMethodCacheable')
-        ]);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->ruleWithConfiguration(RenameMethodRector::class, [
+        new MethodCallRename('Symfony\Component\HttpFoundation\Request', 'isMethodSafe', 'isMethodCacheable')
+    ]);
 };
 ```
 

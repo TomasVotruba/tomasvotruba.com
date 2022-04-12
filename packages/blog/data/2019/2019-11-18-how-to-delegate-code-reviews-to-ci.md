@@ -63,12 +63,11 @@ composer require rector/rector --dev
 2. Create `rector.php` config just for code-reviews
 
 ```php
-use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::DEAD_CODE);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SetList::DEAD_CODE);
 };
 ```
 
@@ -154,19 +153,15 @@ code-review:
 Here are my favorite sets I apply first:
 
 ```php
-// rector.php
+use Rector\Nette\Set\NetteSetList;
+use Rector\Set\ValueObject\SetList;
+use Rector\Config\RectorConfig;
 
-declare(strict_types=1);
-
-use Rector\Core\Configuration\Option;
-use Rector\Nette\Set\NetteSetList;use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::CODING_STYLE);
-    $containerConfigurator->import(SetList::CODE_QUALITY);
-    $containerConfigurator->import(SetList::DEAD_CODE);
-    $containerConfigurator->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SetList::CODING_STYLE);
+    $rectorConfig->import(SetList::CODE_QUALITY);
+    $rectorConfig->import(SetList::DEAD_CODE);
+    $rectorConfig->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
 };
 ```
 
