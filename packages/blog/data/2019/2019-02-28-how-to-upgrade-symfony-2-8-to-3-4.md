@@ -64,18 +64,17 @@ vendor/bin/rector init
 Add Symfony sets in it:
 
 ```php
-use Rector\Core\Configuration\Option;
 use Rector\Symfony\Set\SymfonySetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SymfonySetList::SYMFONY_28);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SymfonySetList::SYMFONY_28);
     // take it 1 set at a time to so next set works with output of the previous set; I do 1 set per pull-request
-    // $containerConfigurator->import(SymfonySetList::SYMFONY_30);
-    // $containerConfigurator->import(SymfonySetList::SYMFONY_31);
-    // $containerConfigurator->import(SymfonySetList::SYMFONY_32);
-    // $containerConfigurator->import(SymfonySetList::SYMFONY_33);
-    // $containerConfigurator->import(SymfonySetList::SYMFONY_34);
+    // $rectorConfig->import(SymfonySetList::SYMFONY_30);
+    // $rectorConfig->import(SymfonySetList::SYMFONY_31);
+    // $rectorConfig->import(SymfonySetList::SYMFONY_32);
+    // $rectorConfig->import(SymfonySetList::SYMFONY_33);
+    // $rectorConfig->import(SymfonySetList::SYMFONY_34);
 
     // set paths to directories with your code
     $parameters = $containerConfigurator->parameters();
@@ -90,16 +89,15 @@ return function (ContainerConfigurator $containerConfigurator): void {
 **Are you stuck on old PHP 5.3?** Rector got you covered:
 
 ```php
-use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::PHP_53);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SetList::PHP_53);
     // again 1 set at a time
-    // $containerConfigurator->import(SetList::PHP_54);
-    // $containerConfigurator->import(SetList::PHP_55);
-    // $containerConfigurator->import(SetList::PHP_56);
+    // $rectorConfig->import(SetList::PHP_54);
+    // $rectorConfig->import(SetList::PHP_55);
+    // $rectorConfig->import(SetList::PHP_56);
     // ...
 };
 ```
@@ -111,5 +109,7 @@ Upgrade to Symfony 3.3 shrunk my configs to 1/5 of its original size. That's the
 <br>
 
 And that's how we upgrade in 2019 :)
+
+<br>
 
 Happy coding!

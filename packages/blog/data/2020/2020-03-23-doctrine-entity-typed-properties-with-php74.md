@@ -288,15 +288,15 @@ composer require rector/rector --dev
 2. Create `rector.php` config
 
 ```php
-// rector.php
 use Rector\Doctrine\Set\DoctrineSetList;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::PHP_74);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SetList::PHP_74);
+
     // Protip: Do you want to update your `Collection` syntax for PHPStorm and PHPStan friendly?
-    $containerConfigurator->import(DoctrineSetList::DOCTRINE_CODE_QUALITY);
+    $rectorConfig->import(DoctrineSetList::DOCTRINE_CODE_QUALITY);
 };
 ```
 

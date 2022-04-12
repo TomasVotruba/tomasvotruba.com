@@ -173,16 +173,11 @@ Is one object or null?
 Just setup [Rector](https://github.com/rectorphp/rector) and upgrade your code:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\TypeDeclaration\Rector\FunctionLike\ReturnTypeDeclarationRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(ReturnTypeDeclarationRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(ReturnTypeDeclarationRector::class);
 };
 ```
 
@@ -252,16 +247,11 @@ Quiz question: how would **you utilize AST to autocomplete all `@var` annotation
 That's it! Let's put this algorithm into Rector:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\TypeDeclaration\Rector\Property\CompleteVarDocTypePropertyRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(CompleteVarDocTypePropertyRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(CompleteVarDocTypePropertyRector::class);
 };
 ```
 

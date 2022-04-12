@@ -164,7 +164,8 @@ The basic [ECS](https://github.com/symplify/easy-coding-standard) setup we use l
 
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+use Symplify\EasyCodingStandard\ValueObject\Option;
+use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 return function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(SetList::PSR_12);

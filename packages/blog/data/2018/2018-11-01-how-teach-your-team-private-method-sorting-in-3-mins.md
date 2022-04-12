@@ -127,17 +127,11 @@ composer require rector/rector --dev
 ```
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Order\Rector\Class_\OrderPrivateMethodsByUseRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-
-    $services->set(OrderPrivateMethodsByUseRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(OrderPrivateMethodsByUseRector::class);
 };
 ```
 

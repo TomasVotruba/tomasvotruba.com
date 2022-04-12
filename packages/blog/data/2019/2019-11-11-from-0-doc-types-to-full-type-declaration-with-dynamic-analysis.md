@@ -177,16 +177,11 @@ I've  [merged the PR into Rector](https://github.com/rectorphp/rector/pull/2264/
 ### Step 1 - Add Type Collector
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\DynamicTypeAnalysis\Rector\ClassMethod\DecorateMethodWithArgumentTypeProbeRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(DecorateMethodWithArgumentTypeProbeRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(DecorateMethodWithArgumentTypeProbeRector::class);
 };
 ```
 
@@ -199,16 +194,11 @@ vendor/bin/rector process src
 ### Step 3 - Complete Collected Types
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\DynamicTypeAnalysis\Rector\ClassMethod\AddArgumentTypeWithProbeDataRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(AddArgumentTypeWithProbeDataRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(AddArgumentTypeWithProbeDataRector::class);
 };
 ```
 
@@ -224,11 +214,10 @@ vendor/bin/rector process src
 declare(strict_types=1);
 
 use Rector\DynamicTypeAnalysis\Rector\StaticCall\RemoveArgumentTypeProbeRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(RemoveArgumentTypeProbeRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(RemoveArgumentTypeProbeRector::class);
 };
 ```
 

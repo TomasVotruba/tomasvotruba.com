@@ -125,12 +125,11 @@ composer require phpunit/phpunit "^5.0" --dev
 Update set in `rector.php`
 
 ```php
-// rector.php
 use Rector\PHPUnit\Set\PHPUnitSetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_50);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(PHPUnitSetList::PHPUNIT_50);
 };
 ```
 
@@ -237,12 +236,11 @@ composer require phpunit/phpunit "^6.0" --dev
 Update set in `rector.php`
 
 ```php
-// rector.php
 use Rector\PHPUnit\Set\PHPUnitSetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_60);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(PHPUnitSetList::PHPUNIT_60);
 };
 ```
 
@@ -348,13 +346,12 @@ composer require phpunit/phpunit "^7.0" --dev
 Update set in `rector.php`
 
 ```php
-// rector.php
 use Rector\PHPUnit\Set\PHPUnitSetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_70);
-    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_75);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(PHPUnitSetList::PHPUNIT_70);
+    $rectorConfig->import(PHPUnitSetList::PHPUNIT_75);
 };
 ```
 
@@ -487,12 +484,11 @@ composer require --dev dms/phpunit-arraysubset-asserts
 Update set in `rector.php`
 
 ```php
-// rector.php
 use Rector\PHPUnit\Set\PHPUnitSetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(PHPUnitSetList::PHPUNIT80_DMS);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(PHPUnitSetList::PHPUNIT80_DMS);
 };
 ```
 
@@ -538,12 +534,11 @@ That's it!
 Then back to Rector - Update set in `rector.php`
 
 ```php
-// rector.php
 use Rector\PHPUnit\Set\PHPUnitSetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(PHPUnitSetList::PHPUNIT_80);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(PHPUnitSetList::PHPUNIT_80);
 };
 ```
 

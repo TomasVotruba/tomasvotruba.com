@@ -132,19 +132,15 @@ I feel you, same here. If I were about to do it manually, I would not do it.
 Luckily, we **lazy people have tools to work for us**. Let [Rector](https://github.com/rectorphp/rector) handle it:
 
 ```php
-# rector.php
-
 use Rector\NetteCodeQuality\Rector\Assign\ArrayAccessGetControlToGetComponentMethodCallRector;
 use Rector\NetteCodeQuality\Rector\Assign\ArrayAccessSetControlToAddComponentMethodCallRector;
 use Rector\NetteCodeQuality\Rector\Assign\MakeGetComponentAssignAnnotatedRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-
-    $services->set(MakeGetComponentAssignAnnotatedRector::class);
-    $services->set(ArrayAccessSetControlToAddComponentMethodCallRector::class);
-    $services->set(ArrayAccessGetControlToGetComponentMethodCallRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(MakeGetComponentAssignAnnotatedRector::class);
+    $rectorConfig->rule(ArrayAccessSetControlToAddComponentMethodCallRector::class);
+    $rectorConfig->rule(ArrayAccessGetControlToGetComponentMethodCallRector::class);
 };
 ```
 
@@ -180,14 +176,11 @@ This makes code readable in the same points above - for IDE, PHPStan, and Rector
 "So much work?" Rector got you covered:
 
 ```php
-# rector.php
-
 use Rector\NetteCodeQuality\Rector\ArrayDimFetch\ChangeControlArrayAccessToAnnotatedControlVariableRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(ChangeControlArrayAccessToAnnotatedControlVariableRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(ChangeControlArrayAccessToAnnotatedControlVariableRector::class);
 };
 ```
 

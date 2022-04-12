@@ -22,20 +22,13 @@ Each PHP frameworks has its conventions and conventions are the main topics duri
 E.g. one framework has default method of controller named `run`, the other `__invoke`. How can Rector help us?
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-
-    $services->set(RenameMethodRector::class)
-        ->configure([
-            new MethodCallRename('SomeFramework\AbstractPresenter', 'run', '__invoke')
-        ]);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->ruleWithConfiguration(RenameMethodRector::class, [
+        new MethodCallRename('SomeFramework\AbstractPresenter', 'run', '__invoke')
+    ]);
 };
 ```
 
@@ -69,19 +62,13 @@ Do you have more classes? No troubles! Just put each class one by one carefully 
 Wait. What if you could use [`fnmatch`](http://php.net/manual/en/function.fnmatch.php) pattern?
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(RenameMethodRector::class)
-        ->configure([
-            new MethodCallRename('App\*Module\Presenter\*Controller', 'run', '__invoke')
-        ]);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->ruleWithConfiguration(RenameMethodRector::class, [
+        new MethodCallRename('App\*Module\Presenter\*Controller', 'run', '__invoke')
+    ]);
 };
 ```
 
@@ -94,27 +81,19 @@ Kittens will love you now!
 One more thing! You can use it on any type check:
 
 ```diff
- <?php
-
- // rector.php
-
- declare(strict_types=1);
-
- use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
  use Rector\Renaming\Rector\ClassConstFetch\RenameClassConstFetchRector;
  use Rector\Renaming\ValueObject\RenameClassConstFetch;
+ use Rector\Config\RectorConfig;
 
- return function (ContainerConfigurator $containerConfigurator): void {
-     $services = $containerConfigurator->services();
-     $services->set(RenameClassConstFetchRector::class)
-         ->configure([
--            new RenameClassConstFetch('Framework\Request', 200, 'CODE_200'),
-+            new RenameClassConstFetch('Framework\Request*', 200, 'CODE_200'),
--            new RenameClassConstFetch('Framework\Request', 300, 'CODE_300'),
-+            new RenameClassConstFetch('Framework\Request*', 300, 'CODE_300'),
--            new RenameClassConstFetch('Framework\RequestInterface', 200, 'CODE_200'),
--            new RenameClassConstFetch('Framework\RequestInterface', 300, 'CODE_300'),
-        ]);
+ return function (RectorConfig $rectorConfig): void {
+     $rectorConfig->ruleWithConfiguration(RenameClassConstFetchRector::class, [
+-        new RenameClassConstFetch('Framework\Request', 200, 'CODE_200'),
++        new RenameClassConstFetch('Framework\Request*', 200, 'CODE_200'),
+-        new RenameClassConstFetch('Framework\Request', 300, 'CODE_300'),
++        new RenameClassConstFetch('Framework\Request*', 300, 'CODE_300'),
+-        new RenameClassConstFetch('Framework\RequestInterface', 200, 'CODE_200'),
+-        new RenameClassConstFetch('Framework\RequestInterface', 300, 'CODE_300'),
+     ]);
 };
 ```
 

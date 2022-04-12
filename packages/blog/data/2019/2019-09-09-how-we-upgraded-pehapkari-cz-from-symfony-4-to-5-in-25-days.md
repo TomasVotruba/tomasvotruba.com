@@ -65,17 +65,17 @@ What does that mean? For upgrading from Symfony 4 to 5, you need to **run all th
 2. Update `rector.php` config
 
 ```php
-use Rector\Core\Configuration\Option;
-use Rector\Set\ValueObject\SetList;
-use Rector\Symfony\Set\SymfonySetList;use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Symfony\Set\SymfonySetList;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SymfonySetList::SYMFONY_41);
-        // take it 1 set at a time to so next set works with output of the previous set; I do 1 set per pull-request
-    // $containerConfigurator->import(SetList::SYMFONY_42);
-    // $containerConfigurator->import(SetList::SYMFONY_43);
-    // $containerConfigurator->import(SetList::SYMFONY_44);
-    // $containerConfigurator->import(SetList::SYMFONY_50);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SymfonySetList::SYMFONY_41);
+
+    // take it 1 set at a time, so next set works with output of the previous set; I do 1 set per pull-request
+    // $rectorConfig->import(SymfonySetList::SYMFONY_42);
+    // $rectorConfig->import(SymfonySetList::SYMFONY_43);
+    // $rectorConfig->import(SymfonySetList::SYMFONY_44);
+    // $rectorConfig->import(SymfonySetList::SYMFONY_50);
 };
 ```
 

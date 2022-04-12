@@ -278,18 +278,13 @@ For these, we have help of Rector with these 2 rules:
 Register them in `rector.php`:
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\PSR4\Rector\FileSystem\NormalizeNamespaceByPSR4ComposerAutoloadFileSystemRector;
 use Rector\PSR4\Rector\Namespace_\NormalizeNamespaceByPSR4ComposerAutoloadRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(NormalizeNamespaceByPSR4ComposerAutoloadRector::class);
-    $services->set(NormalizeNamespaceByPSR4ComposerAutoloadFileSystemRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(NormalizeNamespaceByPSR4ComposerAutoloadRector::class);
+    $rectorConfig->rule(NormalizeNamespaceByPSR4ComposerAutoloadFileSystemRector::class);
 };
 ```
 

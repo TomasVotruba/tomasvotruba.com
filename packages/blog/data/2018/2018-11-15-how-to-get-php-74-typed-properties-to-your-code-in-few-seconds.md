@@ -164,16 +164,13 @@ composer require rector/rector --dev
 2. Add `rector.php` config with `TypedPropertyRector` Rule
 
 ```php
-// rector.php
 use Rector\Php74\Rector\Property\TypedPropertyRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(TypedPropertyRector::class)
-        ->configure([
-            TypedPropertyRector::INLINE_PUBLIC => true,
-        ]);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->ruleWithConfiguration(TypedPropertyRector::class, [
+        TypedPropertyRector::INLINE_PUBLIC => true,
+    ]);
 };
 ```
 

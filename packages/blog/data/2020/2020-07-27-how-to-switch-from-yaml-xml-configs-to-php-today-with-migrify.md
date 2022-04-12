@@ -104,16 +104,14 @@ composer require rector/rector --dev
 Setup `rector.php`:
 
 ```php
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Rector\Symfony\Rector\Class_\ChangeFileLoaderInExtensionAndKernelRector;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(ChangeFileLoaderInExtensionAndKernelRector::class)
-        ->configure([
-            ChangeFileLoaderInExtensionAndKernelRector::FROM => 'yaml',
-            ChangeFileLoaderInExtensionAndKernelRector::TO => 'php',
-        ]);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->ruleWithConfiguration(ChangeFileLoaderInExtensionAndKernelRector::class, [
+        ChangeFileLoaderInExtensionAndKernelRector::FROM => 'yaml',
+        ChangeFileLoaderInExtensionAndKernelRector::TO => 'php',
+    ]);
 };
 ```
 

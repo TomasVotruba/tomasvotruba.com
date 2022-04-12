@@ -60,12 +60,10 @@ And that's what this Rector rule does for you:
 declare(strict_types=1);
 
 use Rector\CodingStyle\Rector\Include_\FollowRequireByDirRector;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-
-    $services->set(FollowRequireByDirRector::class);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->rule(FollowRequireByDirRector::class);
 };
 ```
 
@@ -175,12 +173,10 @@ To enable this behavior, add one parameter to Rector config:
 
 declare(strict_types=1);
 
-use Rector\CodingStyle\Rector\Include_\FollowRequireByDirRector;
-use Rector\Core\Configuration\Option;use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::AUTO_IMPORT_NAMES, true);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->importNames();
 };
 ```
 

@@ -108,21 +108,14 @@ composer install rector/rector --dev
 Add the `action-injection-to-constructor-injection` set and configure your Kernel class name.
 
 ```php
-<?php
-
-// rector.php
-
-
-declare(strict_types=1);
-
 use Rector\Core\Configuration\Option;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::ACTION_INJECTION_TO_CONSTRUCTOR_INJECTION);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(SetList::ACTION_INJECTION_TO_CONSTRUCTOR_INJECTION);
 
-    $parameters = $containerConfigurator->parameters();
+    $parameters = $rectorConfig->parameters();
 
     // the default value
     $parameters->set('kernel_class', 'App\Kernel');

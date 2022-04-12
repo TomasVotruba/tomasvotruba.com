@@ -81,22 +81,18 @@ composer install rector/rector --dev
 There you name all the changes you'd like to perform on you code:
 
 ```php
-<?php
-
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use Rector\Architecture\Rector\MethodCall\ReplaceParentRepositoryCallsByRepositoryPropertyRector;
 use Rector\Architecture\Rector\Class_\MoveRepositoryFromParentToConstructorRector;
+use Rector\Config\RectorConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-
+return function (RectorConfig $rectorConfig): void {
     // order matters, this needs to be first to correctly detect parent repository
 
     // this will replace parent calls by "$this->repository" property
-    $services->set(ReplaceParentRepositoryCallsByRepositoryPropertyRector::class);
+    $rectorConfig->rule(ReplaceParentRepositoryCallsByRepositoryPropertyRector::class);
 
     // this will move the repository from parent to constructor
-    $services->set(MoveRepositoryFromParentToConstructorRector::class);
+    $rectorConfig->rule(MoveRepositoryFromParentToConstructorRector::class);
 };
 ```
 
@@ -141,22 +137,20 @@ And register it:
 ```diff
  <?php
 
- use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
  use Rector\Rector\Architecture\RepositoryAsService\ReplaceParentRepositoryCallsByRepositoryPropertyRector;
  use Rector\Rector\Architecture\RepositoryAsService\MoveRepositoryFromParentToConstructorRector;
+ use Rector\Config\RectorConfig;
 
- return function (ContainerConfigurator $containerConfigurator): void {
-     $services = $containerConfigurator->services();
-
+ return function (RectorConfig $rectorConfigurator): void {
      // order matters, this needs to be first to correctly detect parent repository
 
      // this will replace parent calls by "$this->repository" property
-     $services->set(ReplaceParentRepositoryCallsByRepositoryPropertyRector::class);
+     $rectorConfigurator->rule(ReplaceParentRepositoryCallsByRepositoryPropertyRector::class);
 
      // this will move the repository from parent to constructor
-     $services->set(MoveRepositoryFromParentToConstructorRector::class);
+     $rectorConfigurator->rule(MoveRepositoryFromParentToConstructorRector::class);
 
-+    $services->set(\App\Rector\DoctrineEntityAndRepositoryMapper::class);
++    $rectorConfigurator->rule(\App\Rector\DoctrineEntityAndRepositoryMapper::class);
  };
 ```
 
