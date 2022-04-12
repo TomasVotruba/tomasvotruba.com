@@ -141,16 +141,16 @@ And register it:
  use Rector\Rector\Architecture\RepositoryAsService\MoveRepositoryFromParentToConstructorRector;
  use Rector\Config\RectorConfig;
 
- return function (RectorConfig $rectorConfigurator): void {
+ return function (RectorConfig $rectorConfig): void {
      // order matters, this needs to be first to correctly detect parent repository
 
      // this will replace parent calls by "$this->repository" property
-     $rectorConfigurator->rule(ReplaceParentRepositoryCallsByRepositoryPropertyRector::class);
+     $rectorConfig->rule(ReplaceParentRepositoryCallsByRepositoryPropertyRector::class);
 
      // this will move the repository from parent to constructor
-     $rectorConfigurator->rule(MoveRepositoryFromParentToConstructorRector::class);
+     $rectorConfig->rule(MoveRepositoryFromParentToConstructorRector::class);
 
-+    $rectorConfigurator->rule(\App\Rector\DoctrineEntityAndRepositoryMapper::class);
++    $rectorConfig->rule(\App\Rector\DoctrineEntityAndRepositoryMapper::class);
  };
 ```
 
