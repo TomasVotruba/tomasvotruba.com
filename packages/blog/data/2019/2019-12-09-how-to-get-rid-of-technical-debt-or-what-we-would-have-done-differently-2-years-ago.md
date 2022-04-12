@@ -241,16 +241,11 @@ But there is even better one - [Nette\Utils](https://github.com/nette/utils):
 How to get it into your code? Easy:
 
 ```php
-// rector.php
+use Rector\Nette\Set\NetteSetList;
+use Rector\Config\RectorConfig;
 
-declare(strict_types=1);
-
-use Rector\Core\Configuration\Option;
-use Rector\Nette\Set\NetteSetList;use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-
-return function (ContainerConfigurator $containerConfigurator) : void {
-    $containerConfigurator->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
+return function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(NetteSetList::NETTE_UTILS_CODE_QUALITY);
 };
 ```
 

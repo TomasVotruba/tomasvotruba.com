@@ -209,10 +209,6 @@ vendor/bin/rector process src
 ### Step 4 - Remove Type Collector
 
 ```php
-// rector.php
-
-declare(strict_types=1);
-
 use Rector\DynamicTypeAnalysis\Rector\StaticCall\RemoveArgumentTypeProbeRector;
 use Rector\Config\RectorConfig;
 
