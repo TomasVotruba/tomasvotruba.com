@@ -12,7 +12,7 @@ use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 
 return function (RectorConfig $rectorConfig): void {
-    $rectorConfig->autoImportNames();
+    $rectorConfig->importNames();
 
     $rectorConfig->sets([
         SetList::CODE_QUALITY,
