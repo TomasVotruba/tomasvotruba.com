@@ -11,9 +11,6 @@ use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 return function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    // makes run 8-16x faster, depending on CPU cores :)
-    $parameters->set(Option::PARALLEL, true);
-
     $parameters->set(Option::PATHS, [
         __DIR__ . '/config',
         __DIR__ . '/packages',
@@ -22,8 +19,6 @@ return function (ContainerConfigurator $containerConfigurator): void {
         __DIR__ . '/tests',
         __DIR__ . '/ecs.php',
     ]);
-
-    $parameters->set(Option::PARALLEL, true);
 
     $parameters->set(Option::SKIP, [
         // symfony magic mess
