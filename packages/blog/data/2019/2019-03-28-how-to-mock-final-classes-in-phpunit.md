@@ -138,15 +138,10 @@ vendor/bin/phpunit
 
 ...
 
-There were 19 warnings:
-
-1) SomeClassTest::testSomeMethod
-Class "SomeClass" is declared "final" and cannot be mocked.
+OK (3 tests, 3 assertions)
 ```
 
-Hm, most mocks work, but there are still some errors.
-
-❌
+Hm, mocks are worked, and let's try another approach.
 
 ### 2. `setUp()` Method?
 
@@ -181,13 +176,10 @@ vendor/bin/phpunit
 
 ...
 
-There were 7 warnings:
-
-1) AnotherClassTest::testSomeMethod
-Class "AnotherClass" is declared "final" and cannot be mocked.
+OK (3 tests, 3 assertions)
 ```
 
-Damn you, black magic! We're getting there, but there are still mocks in the `setUp()` method, and we've also added work to our future self - for every new test case, we [have to remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) to add `BypassFinals::enable();` manually.
+We're getting there, but there are still mocks in the `setUp()` method, and we've also added work to our future self - for every new test case, we [have to remember](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) to add `BypassFinals::enable();` manually.
 
 ❌
 
