@@ -76,15 +76,6 @@ parameters:
             message: '#Property TomasVotruba\\Blog\\ValueObject\\Post\:\:\$content is never written, only read#'
             path: packages/blog/src/ValueObject/Post.php
 
-        # unrelated twig phpstan reports
-        - '#Property __TwigTemplate(.*?)\:\:\$source has no type specified#'
-        - '#Property __TwigTemplate(.*?)\:\:\$macros has no type specified#'
-        - '#Non\-abstract class __TwigTemplate(.*?) contains abstract method (.*?)\(\) from class Twig\\Template#'
-        - '#Method __TwigTemplate(.*?)\:\:(.*?)\(\) has no return type specified#'
-        - '#Method __TwigTemplate(.*?)\:\:(.*?)\(\) has parameter \$(.*?) with no value type specified in iterable type array#'
-        - '#Method __TwigTemplate(.*?)\:\:block(.*?) has parameter (.*?) with no type specified#'
-        - '#Assign of void value is not allowed, as it can lead to unexpected results#'
-
         -
             message: '#Array with keys is not allowed\. Use value object to pass data instead#'
             path: packages/tweeter/src/ValueObject/PublishedPostTweet.php
