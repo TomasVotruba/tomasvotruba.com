@@ -28,4 +28,5 @@ return function (ECSConfig $ecsConfig): void {
     $ecsConfig->sets([SetList::PSR_12, SetList::COMMON, SetList::SYMPLIFY]);
 
     $ecsConfig->rule(LineLengthFixer::class);
+    $ecsConfig->ruleWithConfiguration(\PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer::class);
 };
