@@ -4,7 +4,7 @@ title: "New in ECS: Simpler Config"
 perex: |
     ECS runs on Symfony container configuration to build the service model. While it brings automated autowiring, array autowiring, and native container features, the downside is that ECS configuration syntax is complex and talkative.
     <br><br>
-    We decided to make it simpler, so ECS is truly easy to use.
+    We decided to simplify it so ECS is truly easy to use.
 
 tweet: "New Post on the 🐘 blog: New in Symplify 11: Simpler ECS Config"
 tweet_image: "/assets/images/posts/2022/ecs_warning.png"
@@ -32,11 +32,11 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 <br>
 
-Phew! Such complexity is confusing just to read and easy to make error in.
+Phew! Such complexity is confusing just to read and easy to make an error in.
 
 ## The new Way to Configure ECS
 
-New ECS version is introducing own `ECSConfig` that wraps around Symfony configuration and makes setup even easier. 
+The new ECS version introduces its own `ECSConfig`object that wraps around Symfony configuration and makes setup even more straightforward.
 
 <br>
 
@@ -45,7 +45,7 @@ It brings:
 * full IDE autocomplete,
 * isolation from Symfony - useful for Symfony projects
 * validation of configuration on entry
-* makes sure there are no duplicated rules in single config, that might lead to unexpected behaviour
+* makes sure there are no duplicated rules in a single config that might lead to unexpected behavior
 
 <br>
 
@@ -68,7 +68,7 @@ return static function (ECSConfig $ecsConfig): void {
 
 ## How to upgrade to `ECSConfig`?
 
-First, upgrade your ECS to 10.2 to enjoy this feature. Then, replace `ContainerConfigurator` in your `ecs.php` with `ECSConfig`. And then? Use you IDE - **autocomplete methods** will lead you:
+First, upgrade your ECS to 10.2 to enjoy this feature. Then, replace `ContainerConfigurator` in your `ecs.php` with `ECSConfig`. And then? Use your IDE - **autocomplete methods** will lead you:
 
 <img src="/assets/images/posts/2022/ecs_config.gif" class="img-thumbnail mb-2" style="max-width: 45em">
 
@@ -84,7 +84,7 @@ Do you configure your rules? Use `ruleWithConfiguration()` method:
 
 <br>
 
-What if you miss to upgrade an imported config? Don't worry. We've added **safe checker** that goes through provided configs and warns you about an old configuration. 
+What if you miss upgrading an imported config? Don't worry. We've added a **safe checker** that goes through provided configs and warns you about an old configuration.
 
 <img src="/assets/images/posts/2022/ecs_warning.png" class="img-thumbnail mb-2" style="max-width: 45em">
 
