@@ -77,7 +77,7 @@ First, upgrade your ECS to 10.2 to enjoy this feature. Then, replace `ContainerC
 Do you configure your rules? Use `ruleWithConfiguration()` method:
 
 ```php
-    $ecsConfig->ruleWithConfiguratoin(ArraySyntaxFixer::class, [
+    $ecsConfig->ruleWithConfiguration(ArraySyntaxFixer::class, [
         'syntax' => 'short',
     ]);
 ```
