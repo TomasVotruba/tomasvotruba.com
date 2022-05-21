@@ -70,7 +70,11 @@ Create parser and parse the file:
 use PhpParser\Parser;
 use PhpParser\ParserFactory;
 
-$parser = (new ParserFactory)->create(ParserFactory::PREFER_PHP7); # or PREFER_PHP5, if your code is older
+$parserFactory = new ParserFactory();
+
+// or PREFER_PHP5, if your code is older
+$parser = $parserFactory->create(ParserFactory::PREFER_PHP7); 
+
 $nodes = $parser->parse(file_get_contents(__DIR__ . '/SomeClass.php'));
 ```
 
@@ -81,6 +85,7 @@ The best way to work with Nodes is to **traverse them with [`PhpParser\NodeTrave
 
 ```php
 $nodeTraverser = new PhpParser\NodeTraverser;
+
 $traversedNodes = $nodeTraverser->traverse($nodes);
 ```
 
@@ -150,7 +155,8 @@ Oh, I almost forgot, we need to actually **invite visitor to the `NodeTraverser`
 
 ```php
 $nodeTraverser = new PhpParser\NodeTraverser;
-$traversedNodes->addVisitor(new ChangeMethodNameNodeVisitor);
+$nodeTraverser->addVisitor(new ChangeMethodNameNodeVisitor);
+
 $traversedNodes = $nodeTraverser->traverse($nodes);
 ```
 
