@@ -12,7 +12,17 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:creator" content="@votrubaT"/>
 
-<meta property="og:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
+{% if post is defined and post.tweetImage %}
+    <meta property="og:image" content="{{ post.tweetImage }}" />
+    <meta property="og:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
+    <meta property="og:url" content="{{ site_url}}{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" />
+
+    <meta name="twitter:image" content="{{ post.tweetImage }}"/>
+{% else %}
+    <meta property="og:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
+
+    <meta name="twitter:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
+{% endif %}
 
 <link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog RSS" href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">
 
