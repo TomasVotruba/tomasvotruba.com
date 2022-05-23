@@ -5,7 +5,6 @@
     "require": {
         "php": ">=8.1",
         "erusev/parsedown-extra": "^0.8.1",
-        "j7mbo/twitter-api-php": "^1.0.6",
         "nette/utils": "^3.2",
         "symfony/asset": "^6.0",
         "symfony/cache": "^6.0",
@@ -40,13 +39,7 @@
     "autoload": {
         "psr-4": {
             "TomasVotruba\\Website\\": "src",
-            "TomasVotruba\\Blog\\": "packages/blog/src",
-            "TomasVotruba\\Tweeter\\": "packages/tweeter/src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "TomasVotruba\\Tweeter\\Tests\\": "packages/tweeter/tests"
+            "TomasVotruba\\Blog\\": "packages/blog/src"
         }
     },
     "scripts": {
