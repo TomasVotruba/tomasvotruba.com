@@ -7,6 +7,7 @@ perex: |
     The night has come, and our group walks around the city and drinks beers, the groom wears baby piggy clothes, and we're happily celebrating. We're losing one more wingman that will settle down with a beautiful wife and soon-to-come child. It's fun and exciting. We've never been abroad before with so many friends to celebrate the next step in man's life.
 
 tweet: "New Post: How to Remove Dead Mock Calls from #PHPUnit tests"
+tweet_image: "/assets/images/posts/2022/cleaning_city.jpg"
 ---
 
 It's a Sunday morning, and we fly back home. Just a little hangover, but apart from that, the best party of this year!
