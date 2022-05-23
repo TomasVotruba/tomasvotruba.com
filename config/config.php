@@ -3,7 +3,9 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 use function Symplify\Amnesia\Functions\env;
+use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 use TomasVotruba\Website\ValueObject\Option;
 
@@ -24,4 +26,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
         ->exclude([__DIR__ . '/../src/HttpKernel', __DIR__ . '/../src/ValueObject', __DIR__ . '/../src/Exception']);
 
     $services->set(PrivatesAccessor::class);
+
+    $services->set(ParameterProvider::class)
+        ->arg('$container', service('service_container'));
 };
