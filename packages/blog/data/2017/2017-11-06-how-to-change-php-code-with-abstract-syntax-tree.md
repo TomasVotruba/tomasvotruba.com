@@ -73,7 +73,7 @@ use PhpParser\ParserFactory;
 $parserFactory = new ParserFactory();
 
 // or PREFER_PHP5, if your code is older
-$parser = $parserFactory->create(ParserFactory::PREFER_PHP7); 
+$parser = $parserFactory->create(ParserFactory::PREFER_PHP7);
 
 $nodes = $parser->parse(file_get_contents(__DIR__ . '/SomeClass.php'));
 ```
