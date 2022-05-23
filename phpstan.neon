@@ -60,13 +60,5 @@ parameters:
             message: '#Property TomasVotruba\\Blog\\ValueObject\\Post\:\:\$content is never written, only read#'
             path: packages/blog/src/ValueObject/Post.php
 
-        -
-            message: '#Array with keys is not allowed\. Use value object to pass data instead#'
-            path: packages/tweeter/src/ValueObject/PublishedPostTweet.php
-
-        -
-            message: '#Instead of array shape, use value object with specific types in constructor and getters#'
-            path: packages/tweeter/src/ValueObject/PublishedPostTweet.php
-
         # false positive private \DateTimeInterface $publishedAt,
         - '#Class TomasVotruba\\Blog\\ValueObject\\Post has an uninitialized readonly property \$content\. Assign it in the constructor#'

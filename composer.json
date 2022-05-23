@@ -40,13 +40,7 @@
     "autoload": {
         "psr-4": {
             "TomasVotruba\\Website\\": "src",
-            "TomasVotruba\\Blog\\": "packages/blog/src",
-            "TomasVotruba\\Tweeter\\": "packages/tweeter/src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "TomasVotruba\\Tweeter\\Tests\\": "packages/tweeter/tests"
+            "TomasVotruba\\Blog\\": "packages/blog/src"
         }
     },
     "scripts": {

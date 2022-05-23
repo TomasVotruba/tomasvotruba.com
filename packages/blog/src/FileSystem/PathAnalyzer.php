@@ -7,7 +7,7 @@ namespace TomasVotruba\Blog\FileSystem;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use Symplify\SmartFileSystem\SmartFileInfo;
-use TomasVotruba\Tweeter\Exception\ShouldNotHappenException;
+use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class PathAnalyzer
 {
