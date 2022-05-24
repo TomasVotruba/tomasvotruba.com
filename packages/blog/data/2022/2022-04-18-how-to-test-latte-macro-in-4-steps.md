@@ -160,4 +160,8 @@ Commit, push and merge. That's it!
 
 <br>
 
+*P.S.: Are interested in working with bleeding edge technologies and instant upgrades? [There is one chair left](https://www.startupjobs.cz/en/job/24580/hleda-se-senior-php-programator-se-zapalem-pro-vec) in Amateri.*
+
+<br>
+
 Happy coding!
