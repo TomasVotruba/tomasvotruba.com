@@ -151,6 +151,7 @@ The sooner these packages are ready and tagged, the sooner whole Latte 3 communi
 <br>
 
 How to upgrade a Latte extension to Latte 3? Stay tuned for the next post.
+If you want to know earlier, we [are looking for a new lazy and curious PHP colleague](https://www.startupjobs.cz/en/job/24580/hleda-se-senior-php-programator-se-zapalem-pro-vec).
 
 <br>
 
