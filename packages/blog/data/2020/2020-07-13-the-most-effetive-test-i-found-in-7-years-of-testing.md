@@ -1,6 +1,6 @@
 ---
 id: 268
-title: "The most Effective Test I found in 7 years of Testing"
+title: "The most Effective Test I found in 7&nbsp;years&nbsp;of&nbsp;Testing"
 perex: |
     Do you test your projects with automated tests? If not, would you like to start?
     Do you work with application, integration, functional, unit, and Selenium layers and drive you crazy? Do you spend more time writing tests than the actual code behind them?
