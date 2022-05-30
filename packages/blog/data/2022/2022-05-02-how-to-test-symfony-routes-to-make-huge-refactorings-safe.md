@@ -1,10 +1,12 @@
 ---
-id: 356
-title: "How to test Symfony Routes Before Huge Refactoring"
+id: 357
+title: "How to test Symfony Routes Before Huge&nbsp;Refactoring"
 perex: |
     The beauty of [pattern refactoring](/blog/2019/04/15/pattern-refactoring/) with Rector is transforming thousands of elements at once. Like nuclear chain reaction. But to do it safely, we need a high-quality test to ensure the code still works.
     <br><br>
     Does a high-quality test mean *a lot of* tests? Not necessarily. Instead of writing many tests to cover all our routes, we can write one smart one. How?
+
+
 ---
 
 I was working on routing refactoring the Symfony 2.8 project a month ago. The test for routing we had only was able to count the routes. That's it.
@@ -13,7 +15,7 @@ That's like assuming the nuclear reactor works because there is no fire in the v
 
 We needed a better test that covers the loading of every route, path, prefix, and everything that `@Route` can hold. This was a rough 10 line idea:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m refactoring configuration ~80 routes from YAML to PHP, but need them to work 😊<br><br>How would you test that all routes all still the same in <a href="https://twitter.com/hashtag/symfony?src=hash&amp;ref_src=twsrc%5Etfw">#symfony</a>?<br><br>This is my go ↓ <a href="https://t.co/hdqLDAEk3v">pic.twitter.com/hdqLDAEk3v</a></p>&mdash; Tomas Votruba 🇺🇦 (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1519201806819205120?ref_src=twsrc%5Etfw">April 27, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m refactoring configuration ~80 routes from YAML to PHP, but need them to work 😊<br><br>How would you test that all routes all still the same in <a href="https://twitter.com/hashtag/symfony?src=hash&amp;ref_src=twsrc%5Etfw">#symfony</a>?<br><br>This is my go ↓ <a href="https://t.co/hdqLDAEk3v">pic.twitter.com/hdqLDAEk3v</a></p>&mdash; Tomas Votruba 🇺🇦 (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1519201806819205120?ref_src=twsrc%5Etfw">April 27, 2022</a></blockquote>
 
 <br>
 
@@ -57,13 +59,13 @@ You can try this quickly in a controller or command. `dump($routeMap)` to see if
 
 All right! We have the data about routes our project has now. How do we turn it into a future-proof test to avoid nuclear core failure?
 
-## Persist Snapshot to File
+## 2. Persist Snapshot to File
 
 The following testing is sometimes called "snapshot", and is very useful for testing HTML outputs. We have data in an `array` with strings. How do we turn it into a snapshot stored in a file?
 
 Well, even more complex test [like Rector I/O](/blog/2020/07/13/the-most-effetive-test-i-found-in-7-years-of-testing) can be turned into snapshots.
 
-We can handle an `array`, right? We'll use the good old "what is an arrays, is a JSON; what is a JSON, is an array" axiom:
+We can handle an `array`, right? We'll use the good old "what is an array, is a JSON; what is a JSON, is an array" axiom:
 
 ```php
 use Nette\Utils\Json;
@@ -140,7 +142,10 @@ final class RoutingSnapshotTest extends TestCase
             FileSystem::write($expectedRouteMapFile, $currentRouteMapJson);
         }
 
-        $this->assertJsonStringEqualsJsonFile($expectedRouteMapFile, $currentRouteMapJson);
+        $this->assertJsonStringEqualsJsonFile(
+            $expectedRouteMapFile,
+            $currentRouteMapJson
+        );
     }
 
     private function createRouteMap(RouteCollection $routeCollection): array
@@ -160,6 +165,8 @@ final class RoutingSnapshotTest extends TestCase
 }
 ```
 
+<br>
+
 Let's add this test and run it... oh, it fails.
 First, we have to generate the fixture file with our little trick:
 
@@ -167,8 +174,12 @@ First, we have to generate the fixture file with our little trick:
 UT=1 vendor/bin/phpunit
 ```
 
+<br>
+
 That's it! Now you're testing all your routes, and you can be sure the nuclear power station is safe.
 
 <br>
 
 Happy coding!
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

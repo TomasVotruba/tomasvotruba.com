@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
-use function Symplify\Amnesia\Functions\env;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 use TomasVotruba\Website\ValueObject\Option;
@@ -14,7 +13,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/packages/*');
 
     $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SITE_URL, env('SITE_URL'));
+    $parameters->set(Option::SITE_URL, '%env(SITE_URL)%');
 
     $services = $containerConfigurator->services();
     $services->defaults()
