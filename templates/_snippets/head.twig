@@ -15,7 +15,7 @@
 {% if post is defined and post.tweetImage %}
     <meta property="og:image" content="{{ post.tweetImage }}" />
     <meta property="og:title" content="{{ post.title|replace({'&nbsp;':' '})|escape }}" />
-    <meta property="og:url" content="https://tomasvotruba.com/{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" />
+    <meta property="og:url" content="https://tomasvotruba.com{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" />
 
     <meta name="twitter:image" content="{{ post.tweetImage }}"/>
 {% else %}
