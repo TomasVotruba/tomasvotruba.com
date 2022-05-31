@@ -56,7 +56,7 @@ final class PostFactory
         $siteUrl = $parameterProvider->provideStringParameter(Option::SITE_URL);
         $this->siteUrl = rtrim($siteUrl, '/');
 
-        $this->projectDir = $parameterProvider->provideStringParameter(Option::KERNEL_PROJECT_DIR);
+        $this->projectDir = $parameterProvider->provideStringParameter('kernel.project_dir');
     }
 
     public function createFromFileInfo(SmartFileInfo $smartFileInfo): Post
