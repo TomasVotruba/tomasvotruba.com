@@ -8,7 +8,6 @@
         "nette/utils": "^3.2",
         "symfony/asset": "^6.1",
         "symfony/console": "^6.1",
-        "symfony/dotenv": "^6.1",
         "symfony/framework-bundle": "^6.1",
         "symfony/http-kernel": "^6.1",
         "symfony/string": "^6.1",
