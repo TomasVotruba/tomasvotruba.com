@@ -14,9 +14,6 @@ if (is_array(
     foreach ($env as $k => $v) {
         $_ENV[$k] = $_ENV[$k] ?? (isset($_SERVER[$k]) && strpos($k, 'HTTP_') !== 0 ? $_SERVER[$k] : $v);
     }
-} else {
-    // load all the .env files
-    (new Dotenv())->loadEnv(dirname(__DIR__) . '/.env');
 }
 
 $_SERVER += $_ENV;

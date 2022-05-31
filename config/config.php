@@ -12,7 +12,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/../packages/*/config/*.php');
 
     $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SITE_URL, '%env(SITE_URL)%');
+    $parameters->set(Option::SITE_URL, 'https://tomasvotruba.com');
 
     $services = $containerConfigurator->services();
     $services->defaults()
@@ -29,7 +29,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
         ->arg('$container', service('service_container'));
 
     $containerConfigurator->extension('framework', [
-        'secret' => '%env(APP_SECRET)%',
+        'secret' => '12345',
     ]);
 
     $containerConfigurator->extension('twig', [
@@ -37,7 +37,6 @@ return function (ContainerConfigurator $containerConfigurator): void {
         'globals' => [
             'google_analytics_tracking_id' => 'UA-46082345-1',
             'site_title' => 'Tomas Votruba',
-            'site_url' => '%env(SITE_URL)',
             'disqus_shortname' => 'itsworthsharing',
         ],
     ]);
