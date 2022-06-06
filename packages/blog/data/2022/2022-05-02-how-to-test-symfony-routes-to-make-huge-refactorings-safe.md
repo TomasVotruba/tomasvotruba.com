@@ -161,6 +161,8 @@ final class RoutingSnapshotTest extends TestCase
         }
 
         ksort($routeMap);
+        
+        return $routeMap;
     }
 }
 ```
