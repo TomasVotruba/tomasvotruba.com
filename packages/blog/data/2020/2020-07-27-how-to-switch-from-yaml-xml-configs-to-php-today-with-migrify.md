@@ -78,7 +78,7 @@ Again, it's valid to handle it manually with search & replace in PHPStorm.
  use Symfony\Component\Config\FileLocator;
  use Symfony\Component\DependencyInjection\ContainerBuilder;
 -use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-+use Symfony\Component\DependencyInjection\Loader\PhplFileLoader;
++use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
  use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
  final class SomeExtension extends Extension
@@ -86,7 +86,7 @@ Again, it's valid to handle it manually with search & replace in PHPStorm.
      public function load(array $configs, ContainerBuilder $container)
      {
 -        $loader = new YamlFileLoader($container, new FileLocator());
-+        $loader = new PhplFileLoader($container, new FileLocator());
++        $loader = new PhpFileLoader($container, new FileLocator());
 -        $loader->load(__DIR__ . '/../Resources/config/controller.yaml');
 +        $loader->load(__DIR__ . '/../Resources/config/controller.php');
 -        $loader->load(__DIR__ . '/../Resources/config/events.yaml');
