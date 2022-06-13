@@ -5,6 +5,9 @@ perex: |
     Native PHP Enums came almost a year ago in PHP 8.1. It's pretty easy to add a new enum. But how do we handle the old hacks we used to use before enums were legal in PHP land? MyCLabs, Spatie, or constants list.
     <br><br>
     Today we'll upgrade them all. Is it a simple constant to enum replace? Surprisingly, there are **few blind paths we have to be aware of**.
+
+# image by Gary https://unsplash.com/photos/J8sh37XZ8ww
+tweet_image: "/assets/images/posts/2022/pitfalls.jpg"
 ---
 
 ## The MyClabs or Spatie Early Access
