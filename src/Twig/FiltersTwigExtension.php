@@ -20,11 +20,8 @@ final class FiltersTwigExtension extends AbstractExtension
      */
     public function getFilters(): array
     {
-        $twigFilters = [];
-        $twigFilters[] = new TwigFilter('markdown', fn (?string $content): string => $this->parsedownExtra->parse(
-            $content
-        ));
-
-        return $twigFilters;
+        return [
+            new TwigFilter('markdown', fn (?string $content): string => $this->parsedownExtra->parse($content)),
+        ];
     }
 }
