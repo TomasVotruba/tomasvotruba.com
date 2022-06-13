@@ -1,6 +1,6 @@
 ---
 id: 359
-title: "5 Pitfalls of Upgrade to Native&nbsp;PHP&nbsp;Enums"
+title: "5 Pitfalls of Upgrade to Native PHP&nbsp;Enums and How&nbsp;to&nbsp;Avoid&nbsp;Them"
 perex: |
     Native PHP Enums came almost a year ago in PHP 8.1. It's pretty easy to add a new enum. But how do we handle the old hacks we used to use before enums were legal in PHP land? MyCLabs, Spatie, or constants list.
     <br><br>
@@ -25,7 +25,7 @@ final class PostStatusEnum extends Enum
 }
 ```
 
-We use a different approach for refactoring from "enums" from entities called constant list. It's enums for poor people that do not use any 3rd party package :)
+We can also use a different approach for refactoring from "enums" from entities called constant list. It's "enums for poor people" that do not depend on any 3rd party package:
 
 ```php
 final class PostStatusEnum
@@ -36,7 +36,8 @@ final class PostStatusEnum
 }
 ```
 
-The class has different parent classes, but how we use them is identical.
+The class has different parent classes, but the way we use them is identical.
+Let's dive into 5 pitfalls of upgrade to native enums. It is basically just 2 patterns to be careful about, but 5 places they can go wrong. If we miss just one of them, the whole upgrade can collapse. Let's dive in and get through.
 
 <br>
 
