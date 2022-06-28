@@ -119,10 +119,8 @@ composer require symplify/phpstan-rules --dev
 Then add the rule to your `phpstan.neon` config:
 
 ```yaml
-services:
-     -
-        class: Symplify\PHPStanRules\Rules\NoDependencyJugglingRule
-        tags: [phpstan.rules.rule]
+rules:
+     - Symplify\PHPStanRules\Rules\NoDependencyJugglingRule
 ```
 
 The rule looks for constructor dependencies that are juggled to method calls. Don't worry about it, and let your CI handle it.

@@ -4,12 +4,12 @@ title: "Twig Smoke Rendering - Journey&nbsp;of&nbsp;Fails"
 perex: |
     In previous post, we explored [the "whys" for Twig Smoke Rendering](/blog/twig-smoke-rendering-why-do-we-even-need-it).
     <br><br>
-    Today we will set on the journey towards this tool and mainly the beauty of failing on every single step.
+    Today we will set on the journey towards this tool and mainly. Get ready for failure, demotivation, and despair. As with every new invention, the fuel can make us faster or burn us to death.
 
-twitter_image: ""
+tweet_image: "/assets/images/posts/2022/gandalf_beaten.jpg"
 ---
 
-We need to be able to render any template and validate the code and its context work. To start, let's look at this first simple `homepage.twig` template:
+How did we define the goal of twig smoke rendering? We want to render any template and validate the code, and its context works. To start, let's look at this first simple `homepage.twig` template:
 
 ```twig
 {% include "snippet/menu.twig" %}
@@ -21,23 +21,28 @@ We need to be able to render any template and validate the code and its context 
 
 <br>
 
-What will happen if a native TWIG we use in controllers should render this?
+That's the goal. What is our starting point? The typical render we know is from a Symfony controller will process the template like this:
 
-* it will include the `snippet/menu.twig` loaded in TWIG loaders
-* it will render it to HTML
-* it iterates the `$items` array and renders each of them to string
+* include the `snippet/menu.twig` loaded in TWIG loaders
+* render it to HTML
+* iterates the `$items` array and renders each item to string
 
 ## 1. Naive Render First
 
-Before using my brain for thinking, I try to approach the code natively. Maybe the most straightforward solution will work right from the standard, and we can use willpower for the next step, right?
+This journey will be very long, so we have to save as much energy as possible. Before we use the brain for thinking, let's approach the code naively. Maybe [the most straightforward solution will work](https://fourweekmba.com/occams-razor/) right from the start.
 
-Let's render it with TWIG and see what happens:
+<br>
+
+First, we prepare a minimal setup of the TWIG environment with a template loader:
 
 ```php
+use Twig\Environment;
+use Twig\Loader\ArrayLoader;
+
 // here we load the "homepage.twig" template and all the TWIG files in our project
 $loader = new ArrayLoader(['homepage.twig']);
 
-$twigEnvironment = new Twig\Environment($loader);
+$twigEnvironment = new Environment($loader);
 $twigEnvironment->render('homepage.twig');
 ```
 
@@ -53,7 +58,7 @@ First, we get an error on the non-existing `$items` variable 🚫
 
 <br>
 
-There is an easy fix for that, right? We can see the template is foreaching an array of strings:
+Did we forget to provide it? There is an easy fix for that. We see the template is foreaching an array of strings. Let's pass some made-up value as 2nd parameter:
 
 ```php
 $twigEnvironment->render('homepage.twig', [
@@ -67,17 +72,17 @@ We re-run... and it works!
 
 ## Lure of Manual Thinking
 
-We've made a massive step back for any attempt to automate the process. We've just **used our brain for static analysis**:
+We made a single little template to render correctly. At the same time, we also made a massive step back from any attempt to automate the process. We've just **used our brain for static analysis**:
 
 * we looked into the code with our eyes,
-* and we assumed from `for` called on `$items`
-* that the value is an `array` of strings.
+* we deduce from the `for` tag called on `$items` that the value is an `array`
+* we deduced from writing the `item` to the output that it is an array of strings.
 
-It is correct that our brain works, but how long this process takes for all 3214 variables in all our templates? 🚫
+It is correct, but how long will it take us for all 3214 variables in all our templates? 🚫
 
 <br>
 
-This solution is not generic, and without us, the CI would fail. The CI has to run without us, **the same way we raise an adult from our child**. First, we can feed them manually, but in the long term, we teach them how to use their hands, what food is and how to put it in their mouth.
+This solution is not generic, and without us, the CI would fail. The CI has to run without any intervention, **the same way we raise an adult from our child**. First, we can feed them manually, but in the long term, we should teach them how to use their hands, what food is, and how to get and eat it.
 
 <br>
 
@@ -107,12 +112,12 @@ The variables are missing, but we can still render the file. That's fantastic!
 Well, until we use a filter or function:
 
 ```twig
-{{ login_name|size }}
+{{ login_name|length }}
 ```
 
 The `$login_name` is not there, but the filter/function still needs an argument 🚫.
 
-Ironically, if we care about code quality and strict type declaration, it is even worse. Filter **needs an argument of specific type**. The filter expects a `string` argument but gets `null`—fatal error 🚫
+Ironically, if we care about code quality and strict type declaration, it is even worse. Filter **needs an argument of specific type**. The filter expects a `string` argument but gets `null`—a fatal error 🚫
 
 <br>
 
@@ -129,53 +134,46 @@ That will turn into crazy regex depression, or we will remove too many templates
 
 <br>
 
-There is this moment in every journey towards automation that hasn't done before. The moment you stop and think - "Is this worth it? Is this even possible? Should I turn to manual work and accept the risk of bug? Should I lick my wounds and give up?"
+There is this moment in every journey towards automation that hasn't been done before. The moment you stop and think - "Is this worth it? Is this even possible? Should I turn to manual work and accept the risk of a bug? Should I lick my wounds and give up?"
 
 <img src="/assets/images/posts/2022/frodo_give_up.jpg" class="img-thumbnail" style="max-width: 30em">
 
 <br>
 
-### Let's Take a Break
+### Let's Take a Break and Think Different
 
-Hm, what if we could emulate something like the `'strict_variables'` option, just on another level.
+Hm, what if we could emulate something like the `'strict_variables'` option, just on another level. No idea how to do that.
 
-<br>
+<blockquote class="blockquote text-center">
+    "A big win is a summary of many small improvements."
+</blockquote>
 
-A big win is a summary of many small wins. Let's list what we already know and work with:
+Let's list what we already know and work with:
 
 * We accept the filter/function must exist, and that's ok.
 * We know it has to accept any number and types of arguments.
 * We know they're just simple callbacks:
 
 ```php
-public function getFunctions(): array
-{
-    return [
-        new TwigFunction('form_label', function (...) {
-            // ...
-        }),
-    ];
-}
-```
-
-<br>
-
-* Those callbacks are defined and tight to a filter/function name. If we know the filter name, we can override and make it **tolerant to any input**:
-
-```php
-public function getFunctions(): array
-{
-    return [
-        new TwigFunction('form_label', function () {
-            return '';
-        }),
-    ];
-}
+new TwigFunction('form_label', function ($value) {
+    // ...
+});
 ```
 
 <br>
 
 ## 4. Faking Tolerant Functions/Filters
+
+Those callbacks are defined and tight to a filter/function name. If we know the filter name, we can override and make it **tolerant to any input**:
+
+```diff
+-return new TwigFunction('form_label', function ($value) {
++return new TwigFunction('form_label', function () {
+     // ...
+ });
+```
+
+<br>
 
 Let's give it a try:
 
@@ -187,11 +185,11 @@ $environment->addFunction(new TwigFunction('form_label', function () {
 
 <br>
 
-Hm, it has already defined the `form_label` function... and crashes. That's a pity.
+Hm, it has already defined the `form_label` function... and crashes 🚫
 
 <br>
 
-Twig has an immutable extension design. Once it loads functions/filters, you cannot override it. I&nbsp;love this design because we know the `join` function will be the same and never change. But **how do we change an immutable object**? 🚫
+Twig has an immutable extension design. Once it loads functions/filters, we cannot override it. I&nbsp;love this design because we know the `join` function will be the same and never change. But **how do we change an immutable object**? 🚫
 
 <img src="/assets/images/posts/2022/frodo_and_troll.jpg" class="img-thumbnail" style="max-width: 30em">
 
@@ -209,15 +207,13 @@ Twig has an immutable extension design. Once it loads functions/filters, you can
 
 Let's step back. What else can we do? The filter/function cannot be changed once loaded. Maybe we could fake custom twig extensions that would get loaded instead of the core ones?
 
-<br>
-
-But we would have to **be responsible for manual work listing all the extensions**, functions, and filters from the core - e.g., CoreExtension, FormExtension, etc.
+But we would have to **be responsible for manual work listing all the extensions**, functions, and filters from the core - e.g., CoreExtension, FormExtension, etc. 🚫
 
 <br>
 
-**There must be a better way**. We don't want our children to starve when they're 10 years old, do we?
+There must be some better way.
 
-The environment is protected from change, but it was writable before... it means **there must be some lock mechanism**. Like entity manager has. If entity manager can be unlocked, so can this. New plan is getting shape:
+The environment is locked and protected from change, but it must have been writable at the start. Otherwise, the TWIG would not have the core functions and filters. That means **there must be some lock mechanism**. Like entity manager from Doctrine has. If we can unlock entity manager, we can un this.... new plan is getting shape:
 
 * we have to open the lock
 * detect core filter/function names
@@ -226,7 +222,7 @@ The environment is protected from change, but it was writable before... it means
 
 <br>
 
-That's the basic recipe, at least. We tried this path in one project... and it worked! After 2 more days of struggle we polished it to a working state. Now we can render any TWIG file, and it will pass!
+That's the basic plan. We tried to apply it in one project... and it worked! After 2 more days of struggle, we polished it to a working state. Now we can render a TWIG file with variables, functions, and filters, and it will pass!
 
 ## ✅
 
@@ -240,25 +236,29 @@ That's the basic recipe, at least. We tried this path in one project... and it w
     it is time to always look on the bright side of life."
 </blockquote>
 
-This rendering approach gives us control of filters and functions by default. The variables don't have to exist, but filters are still run on them:
+This achievement moves us light years ahead. The rendering checks filters/functions by default. Variables don't have to exist, but filters are still run on them. That way, we will know 3 invalid states that can happen to filter/function:
 
-* If **template uses filter/function that does not exist** we will know about it.
-* If the filter exists in PHP code, but extensions are loaded for missing tag, we will know about it.
-* If the filter exists, the extension is loaded, but the array object closure is missing, we will know about it:
+* if **template uses filter/function that does not exist** we will know about it ✅
+* if the filter exists in PHP code, but **extensions are not loaded for missing tag**, we will know about it ✅
+* if the filter exists, the extension is loaded, but the **array closure is missing**, we will know about it ✅
 
 ```php
 return [
-    new TwigFunction('some_function', [$this, 'some_function']);
+    new TwigFunction('some_function', [$this, 'some_method']);
 ];
 
-// ...
+// ... no "some_method" found here
 ```
 
 ## ✅
 
 <br>
 
-See you in the last episode of this series!
+We're getting close, but it still does not run in CI 🚫
+
+<br>
+
+Will we make it to the glory, or will we give up and walk in shame? Stay tuned for the next episode to find out.
 
 <br>
 

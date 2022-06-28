@@ -115,10 +115,8 @@ There is more than just a new kind of bug in your project... well, to be honest,
 In PHP we have a great team member that helps with details that matters - **a PHPStan rule**:
 
 ```yaml
-services:
-    -
-        class: Symplify\PHPStanRules\Rules\PreventDoubleSetParameterRule
-        tags: [phpstan.rules.rule]
+rules:
+    - Symplify\PHPStanRules\Rules\PreventDoubleSetParameterRule
 ```
 
 Now you can type configs as you like, and PHPStan will warn you about every duplicated param in your config!

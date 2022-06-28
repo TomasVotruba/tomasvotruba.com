@@ -56,10 +56,8 @@ As you can see, their rules are pretty strict, and in practice, that might be im
 
 ```yaml
 # phpstan.neon
-services:
-    -
-        class: Symplify\CodingStandard\ObjectCalisthenics\Rules\NoChainMethodCallRule
-        tags: [phpstan.rules.rule]
+rules:
+    - Symplify\CodingStandard\ObjectCalisthenics\Rules\NoChainMethodCallRule
 ```
 
 ### Rule 6: No Names Shorter than 3 Chars
