@@ -156,10 +156,8 @@ But how do we detect this in CI before merging them in our code base?
 
 ```yaml
 # phpstan.neon
-services:
-    -
-        class: Symplify\PHPStanRules\Rules\Explicit\NoMixedCallableRule
-        tags: [phpstan.rules.rule]
+rules:
+    - Symplify\PHPStanRules\Rules\Explicit\NoMixedCallableRule
 ```
 
 Update: Ondra shared with me, that you can also [use parameter](https://twitter.com/OndrejMirtes/status/1495064465339039751) for similar check outside levels:

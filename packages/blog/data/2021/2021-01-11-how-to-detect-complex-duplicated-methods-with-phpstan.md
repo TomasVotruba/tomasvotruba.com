@@ -202,10 +202,8 @@ includes:
     # set services that are needed by PHPStan rules
     - vendor/symplify/phpstan-rules/config/services/services.neon
 
-services:
-    -
-        class: Symplify\PHPStanRules\Rules\PreventDuplicateClassMethodRule
-        tags: [phpstan.rules.rule]
+rules:
+    -  Symplify\PHPStanRules\Rules\PreventDuplicateClassMethodRule
 ```
 
 ### 3. Run PHPStan

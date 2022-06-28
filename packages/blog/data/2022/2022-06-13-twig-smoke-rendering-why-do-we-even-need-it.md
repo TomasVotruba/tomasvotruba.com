@@ -1,6 +1,6 @@
 ---
 id: 362
-title: "Twig Smoke Rendering - Why do we Even Need it?"
+title: "Twig&nbsp;Smoke&nbsp;Rendering - Why&nbsp;do&nbsp;we&nbsp;Even&nbsp;Need&nbsp;it?"
 perex: |
     Two weeks ago [our upgrade team started](https://getrector.org/for-companies) to upgrade Twig 1 to 2 and Latte 2 to 3 for two clients. There was no test that covers the templates, just a few integration ones that might have invoked a few % of happy paths render. Not good enough.
     <br><br>
@@ -12,6 +12,8 @@ tweet_image: "/assets/images/posts/2022/fellowship.jpg"
 ## Why do we need Smoke Render all Templates?
 
 First, let me tell you about the **3 reasons** why we need smoke-render all TWIG templates:
+
+<br>
 
 1. Twig 1 and 2 contains a few BC breaks. Not only in Twig itself but also in related Twig Bundle. We're not interested in the complete list of BC breaks, but rather **if they break our templates** and **where exactly**.
 
@@ -59,7 +61,9 @@ That's why we don't use only `php -l`, but also PHPStan to check PHP code with c
 <br>
 <br>
 
-Now we have a Goal of Doom and a team of *why*s, we're ready to set on the journey!
+Now we have a Goal of Doom and a team of *why*s.
+
+We're ready to set on the journey!
 
 <img src="/assets/images/posts/2022/fellowship.jpg" class="img-thumbnail">
 

@@ -196,14 +196,9 @@ How many `object` mixed types do you have? Register rules and let PHPStan disclo
 
 ```yaml
 # phpstan.neon
-services:
-    -
-        class: Symplify\PHPStanRules\Rules\Explicit\NoMixedPropertyFetcherRule
-        tags: [phpstan.rules.rule]
-
-    -
-        class: Symplify\PHPStanRules\Rules\Explicit\NoMixedMethodCallerRule
-        tags: [phpstan.rules.rule]
+rules:
+    - Symplify\PHPStanRules\Rules\Explicit\NoMixedPropertyFetcherRule
+    - Symplify\PHPStanRules\Rules\Explicit\NoMixedMethodCallerRule
 ```
 
 <br>
