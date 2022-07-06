@@ -172,7 +172,7 @@ Are you willing to try this rule on your code base? Even if there will be false 
 You've been warned. There you go...
 
 ```bash
-composer require symplify/phsptan-rules --dev
+composer require symplify/phpstan-rules --dev
 ```
 
 <br>
