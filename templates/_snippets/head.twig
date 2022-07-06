@@ -20,8 +20,8 @@
         <meta property="og:image" content="{{ post.tweetImage }}" />
         <meta name="twitter:image" content="{{ post.tweetImage }}"/>
     {% else %}
-        <meta property="og:image" content="https://tomasvotruba.com/{{ asset('assets/images/tomas_votruba.jpg') }}"/>
-        <meta name="twitter:image" content="https://tomasvotruba.com/{{ asset('assets/images/tomas_votruba.jpg') }}"/>
+        <meta property="og:image" content="https://tomasvotruba.com{{ asset('assets/images/tomas_votruba.jpg') }}"/>
+        <meta name="twitter:image" content="https://tomasvotruba.com{{ asset('assets/images/tomas_votruba.jpg') }}"/>
     {% endif %}
 {% else %}
     <meta property="og:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
