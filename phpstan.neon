@@ -12,7 +12,6 @@ services:
                 'PhpCsFixer\Finder': 'Symfony\Component\Finder\Finder'
                 # smart file system
                 'Symfony\Component\Finder\SplFileInfo': 'Symplify\SmartFileSystem\SmartFileInfo'
-                'Nette\Utils\FileSystem': 'Symplify\SmartFileSystem\SmartFileSystem'
                 'Symfony\Component\Filesystem\Filesystem': 'Symplify\SmartFileSystem\SmartFileSystem'
 
     # require constant in argument position
@@ -45,9 +44,6 @@ parameters:
         -
             message: '#The path "/\.\./\.env\.local" was not found#'
             path: 'tests/bootstrap.php'
-
-        # bug on Symplify rule
-        - '#Do not use factory/method call in constructor\. Put factory in config and get service with dependency injection#'
 
         # required by Symfony setter
         -
