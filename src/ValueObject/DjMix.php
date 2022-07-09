@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\ValueObject;
 
+/**
+ * @api Getter methods are used in twig
+ */
 final class DjMix
 {
     public function __construct(
