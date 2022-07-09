@@ -9,11 +9,6 @@ final class RouteName
     /**
      * @var string
      */
-    public const CLUSTER_MONOREPO = 'cluster_monorepo';
-
-    /**
-     * @var string
-     */
     public const CONTACT = 'contact';
 
     /**

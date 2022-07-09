@@ -7,6 +7,9 @@ namespace TomasVotruba\Blog\ValueObject;
 use DateTimeInterface;
 use Nette\Utils\DateTime;
 
+/**
+ * @api Getter methods are used in twig
+ */
 final class Post
 {
     /**
