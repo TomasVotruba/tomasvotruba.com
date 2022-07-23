@@ -128,7 +128,7 @@ final class PostRepository
      */
     private function filterOutNonEnglish(array $posts): array
     {
-        return array_filter($posts, fn (Post $post): bool => $post->getLanguage() === null);
+        return array_filter($posts, static fn (Post $post): bool => $post->getLanguage() === null);
     }
 
     /**
@@ -137,6 +137,6 @@ final class PostRepository
      */
     private function filterOutFuture(array $posts): array
     {
-        return array_filter($posts, fn (Post $post): bool => ! $post->isFuture());
+        return array_filter($posts, static fn (Post $post): bool => ! $post->isFuture());
     }
 }

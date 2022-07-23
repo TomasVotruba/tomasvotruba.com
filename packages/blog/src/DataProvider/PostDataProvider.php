@@ -51,7 +51,7 @@ final class PostDataProvider
     {
         uasort(
             $posts,
-            fn (Post $firstPost, Post $secondPost): int => $secondPost->getDateTime() <=> $firstPost->getDateTime()
+            static fn (Post $firstPost, Post $secondPost): int => $secondPost->getDateTime() <=> $firstPost->getDateTime()
         );
 
         return $posts;
