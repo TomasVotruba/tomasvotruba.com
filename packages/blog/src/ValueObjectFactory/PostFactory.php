@@ -148,15 +148,12 @@ final class PostFactory
      */
     private function decorateHeadlineWithId(string $htmlContent): string
     {
-        return Strings::replace($htmlContent, self::HEADLINE_LEVEL_REGEX, function ($matches): string {
+        return Strings::replace($htmlContent, self::HEADLINE_LEVEL_REGEX, static function ($matches): string {
             $level = (int) $matches['level'];
             $headline = (string) $matches['headline'];
-
             $clearHeadline = strip_tags($headline);
-
             $asciiSlugger = new AsciiSlugger('en');
             $unicodeString = $asciiSlugger->slug($clearHeadline);
-
             return sprintf('<h%d id="%s">%s</h%d>', $level, $unicodeString, $headline, $level);
         });
     }
