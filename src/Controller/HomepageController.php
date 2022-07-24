@@ -37,7 +37,7 @@ final class HomepageController extends AbstractController
 
         return $this->render('homepage.twig', [
             'last_posts' => $lastPosts,
-            'title' => 'Change Fast and Safe',
+            'title' => 'Change Fast and Safely',
             'quote' => $this->getRandomQuote(),
             'next_month' => $this->getNextMonthName(),
         ]);
