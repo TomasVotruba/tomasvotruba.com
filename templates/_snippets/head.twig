@@ -17,8 +17,8 @@
     <meta property="og:url" content="https://tomasvotruba.com{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" />
 
     {% if post.tweetImage %}
-        <meta property="og:image" content="{{ post.tweetImage }}" />
-        <meta name="twitter:image" content="{{ post.tweetImage }}"/>
+        <meta property="og:image" content="{{ post.tweetImage }}?cache=123" />
+        <meta name="twitter:image" content="{{ post.tweetImage }}?cache=123"/>
     {% else %}
         <meta property="og:image" content="https://tomasvotruba.com{{ asset('assets/images/tomas_votruba.jpg') }}"/>
         <meta name="twitter:image" content="https://tomasvotruba.com{{ asset('assets/images/tomas_votruba.jpg') }}"/>
