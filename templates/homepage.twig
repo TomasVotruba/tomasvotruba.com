@@ -4,13 +4,15 @@
     <div class="container-fluid">
         <div class="text-center book-banner">
             <a href="https://leanpub.com/rector-the-power-of-automated-refactoring" target="blank" class="text-center">
-                <img src="{{ asset('assets/images/banner-rector-book.png') }}" class="mb-2 ml-auto mr-auto rounded " style="max-height: 5em" alt="">
+                <img src="{{ asset('assets/images/banner-rector-book.png') }}" class="mb-2 ml-auto mr-auto rounded mb-5" style="max-height: 5em" alt="">
             </a>
         </div>
 
         <div class="row">
             <div class="col-3">
-                <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="rounded-circle mt-2 ml-5 mb-5 shadow border border-light">
+                <a href="{{ path('about') }}">
+                    <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="rounded-circle mt-2 ml-5 mb-5 shadow border border-light">
+                </a>
             </div>
 
             <div class="col-9">
@@ -26,7 +28,7 @@
         <div class="card mb-4">
             <div class="card-body text-bigger">
                 <p class="mb-3">
-                    Latest posts from blog:
+                    Read the latest post from <a href="{{ path('blog') }}">weekly blog</a>:
                 </p>
 
 
