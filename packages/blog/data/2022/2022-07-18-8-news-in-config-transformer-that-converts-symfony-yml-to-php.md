@@ -212,6 +212,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
+As a bonus, it cut down the converting speed on one project from 3 seconds to 200 ms. That's **1500 % faster**.
+
 Thank you ✅
 
 <br>
