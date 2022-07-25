@@ -214,7 +214,11 @@ Thank you ✅
 
 <br>
 
-Among other news, we added default processing of `*.yaml` and `.yml` syntax at the same time and support for weird scalars like `::hi` and `'hello::'`.
+## Start Now to Save Work
+
+I'm proud of this leap forward and better support for older Symfony versions. It allows to convert configs **to a broader range of projects and start using PHP in earlier stages**. That brings Rector, ECS, and PHPStan to help as well, as they cover any PHP file, even configs.
+
+Now it's the best time to switch - [here is how](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/)
 
 <br>
 
