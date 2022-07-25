@@ -200,14 +200,13 @@ parameters:
 
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\ConfigTransformer\Tests\Converter\ConfigFormatConverter\YamlToPhp\YamlToPhpTest;
 
 return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set('class_constant', YamlToPhpTest::TEST);
-    $parameters->set('class', YamlToPhpTest::class);
-    $parameters->set('unexisting_constant', SomeClass::Constant);
+    $parameters->set('class_constant', App\SomeConst::TEST);
+    $parameters->set('class', App\SomeConst::class);
+    $parameters->set('unexisting_constant', App\MissingClass::NOT_HERE);
     $parameters->set('another_key', '%env(string:default::CODE_EDITOR)%');
 };
 ```
