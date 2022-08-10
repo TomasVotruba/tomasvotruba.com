@@ -15,7 +15,7 @@ final class AboutController extends AbstractController
     public function __invoke(): Response
     {
         return $this->render('about.twig', [
-            'title' => "Hi, I'm Tomas",
+            'title' => "Hi, I'm Tomas, and I love legacy",
         ]);
     }
 }
