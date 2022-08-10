@@ -2,12 +2,12 @@
 id: 368
 title: "How to Develop Sole Package in PHP 8.1 and Downgrade to PHP 7.2"
 perex: |
-The PHP downgrades are a thing. Most beneficial for package developers who want to move forward to the latest PHP features but also want to **keep easy access to the broad PHP community and legacy projects**.
-<br><br>
-The downgrade of a tool is a no-brainer - [we downgrade the whole tool](https://getrector.org/blog/how-to-bump-minimal-version-without-leaving-anyone-behind) including vendor, and we know it will run on PHP 7.2.
-<br>
-<br>
-But how to achieve the same with the package with separated dependencies?
+    The PHP downgrades are a thing. Most beneficial for package developers who want to move forward to the latest PHP features but also want to **keep easy access to the broad PHP community and legacy projects**.
+    <br><br>
+    The downgrade of a tool is a no-brainer - [we downgrade the whole tool](https://getrector.org/blog/how-to-bump-minimal-version-without-leaving-anyone-behind) including vendor, and we know it will run on PHP 7.2.
+    <br>
+    <br>
+    But how to achieve the same with the package with separated dependencies?
 
 ---
 
@@ -128,9 +128,15 @@ The last step we have to do is add the actual downgrade to the release step. We 
 And the result?
 We've already installed the package on the PHP 7.4 project, used it in CI, and discovered bugs with 110 new PHPStan rules. Life is great :)
 
+<br>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We needed Symplify <a href="https://twitter.com/phpstan?ref_src=twsrc%5Etfw">@phpstan</a> rules on PHP 7.4 project. But Sympilfy packages require PHP 8.0 🤔<br><br>...3 days later I&#39;m excited to share first downgraded package (not a tool! 😉) from PHP 8.0 to PHP 7.2 ↓ <a href="https://t.co/dtW1eWVe2T">https://t.co/dtW1eWVe2T</a><br><br>🎉🎉🎉 <a href="https://t.co/WZNGb4jnvc">pic.twitter.com/WZNGb4jnvc</a></p>&mdash; Tomas Votruba 🇺🇦 (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1556764939473326081?ref_src=twsrc%5Etfw">August 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We needed Symplify <a href="https://twitter.com/phpstan?ref_src=twsrc%5Etfw">@phpstan</a> rules on PHP 7.4 project. But Sympilfy packages require PHP 8.0 🤔<br><br>...3 days later I&#39;m excited to share first downgraded package (not a tool! 😉) from PHP 8.0 to PHP 7.2 ↓ <a href="https://t.co/dtW1eWVe2T">https://t.co/dtW1eWVe2T</a><br><br>🎉🎉🎉 <a href="https://t.co/WZNGb4jnvc">pic.twitter.com/WZNGb4jnvc</a></p>&mdash; Tomas Votruba 🇺🇦 (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1556764939473326081?ref_src=twsrc%5Etfw">August 8, 2022</a></blockquote>
+
+
 
 <br>
 
 Happy coding!
+
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
