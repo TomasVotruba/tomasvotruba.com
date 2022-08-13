@@ -39,7 +39,7 @@ We trust the IDE to handle renames for us, so we will not check any other files 
 
 <br>
 
-Since PHP 8.0, we would get a Fatal error on missing constant, but [PHP 7.4 and bellow is only warning](https://3v4l.org/NMPXC) 🚫
+Since PHP 8.0, we would get a Fatal error on missing constant, but [PHP 7.4 and below is only warning](https://3v4l.org/NMPXC) 🚫
 
 <br>
 
