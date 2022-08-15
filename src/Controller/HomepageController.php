@@ -24,6 +24,8 @@ final class HomepageController extends AbstractController
         // 'Clean code is a code, that junior and senior can understand in the same amount of time'
         // https://twitter.com/votrubat/status/1275863668878688257
         "If you can't explain it to a six-year-old,<br>you don't understand it yourself.",
+        // Rainer Maria Rilke
+        "Let everything happen to you<br>Beauty and terror<brJust keep going<br>No feeling is final"
     ];
 
     public function __construct(
