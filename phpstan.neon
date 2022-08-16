@@ -68,7 +68,7 @@ parameters:
             message: '#Relative file path "rss\.xml" is not allowed, use absolute one with __DIR__#'
             path: src/Controller/RssController.php
 
-        # fluent import
+        # used in twig
         -
-            message: '#Method call return value that should be used, but is not#'
-            path: src/HttpKernel/TomasVotrubaKernel.php
+            message: '#Class method "(.*?)" is never used#'
+            path: src/ValueObject/Book.php

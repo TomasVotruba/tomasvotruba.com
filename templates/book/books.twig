@@ -1,0 +1,24 @@
+{% extends "layout/layout_base.twig" %}
+
+{% block content %}
+    <div class="container-fluid" id="blog">
+        <h1>{{ title|raw }}</h1>
+
+        <div class="row">
+            {% for book in books %}
+                {# @var book \TomasVotruba\Website\ValueObject\Book #}
+                <div class="text-center col" >
+                    <a href="{{ path('book-detail', { slug: book.slug }) }}" target="blank">
+                        <img src="{{ book.coverImage }}" style="width: 15em; padding: .5em;margin:0 0 .5em 1em" class="shadow" alt="Rector book cover">
+                    </a>
+
+                    <br>
+
+                    <a href="..." target="blank" class="btn btn-success btn-lg mt-4 mb-2">
+                        Buy a copy
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

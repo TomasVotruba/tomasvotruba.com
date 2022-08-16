@@ -44,5 +44,10 @@ final class RouteName
     /**
      * @var string
      */
-    public const BOOK = 'book';
+    public const BOOKS = 'books';
+
+    /**
+     * @var string
+     */
+    public const BOOK_DETAIL = 'book-detail';
 }
