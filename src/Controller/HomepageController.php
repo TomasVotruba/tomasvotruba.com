@@ -25,7 +25,7 @@ final class HomepageController extends AbstractController
         // https://twitter.com/votrubat/status/1275863668878688257
         "If you can't explain it to a six-year-old,<br>you don't understand it yourself.",
         // Rainer Maria Rilke
-        "Let everything happen to you<br>Beauty and terror<brJust keep going<br>No feeling is final"
+        'Let everything happen to you<br>Beauty and terror<brJust keep going<br>No feeling is final',
     ];
 
     public function __construct(
