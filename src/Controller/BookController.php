@@ -13,7 +13,7 @@ use TomasVotruba\Website\ValueObject\RouteName;
 final class BookController extends AbstractController
 {
     public function __construct(
-        private BookRepository $bookRepository
+        private readonly BookRepository $bookRepository
     ) {
     }
 

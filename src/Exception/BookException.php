@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Exception;
 
-final class BookException extends \Exception
+use Exception;
+
+final class BookException extends Exception
 {
 }

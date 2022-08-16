@@ -6,14 +6,18 @@ namespace TomasVotruba\Website\ValueObject;
 
 use Symfony\Component\String\Slugger\AsciiSlugger;
 
+/**
+ * @see \TomasVotruba\Website\Tests\ValueObject\BookTest
+ */
 final class Book
 {
     public function __construct(
-        private string $title,
-        private string $description,
-        private string $coverImage,
-        private string $leanpubLink,
-        private bool $isFinished,
+        private readonly string $title,
+        private readonly string $description,
+        private readonly string $longDescription,
+        private readonly string $coverImage,
+        private readonly string $leanpubLink,
+        private readonly bool $isFinished,
     ) {
     }
 
@@ -49,5 +53,10 @@ final class Book
         return $asciiSlugger->slug($this->title)
             ->lower()
             ->toString();
+    }
+
+    public function getLongDescription(): string
+    {
+        return $this->longDescription;
     }
 }
