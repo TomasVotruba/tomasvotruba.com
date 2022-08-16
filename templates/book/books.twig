@@ -7,9 +7,9 @@
         <div class="row">
             {% for book in books %}
                 {# @var book \TomasVotruba\Website\ValueObject\Book #}
-                <div class="text-center col" >
+                <div class="text-center col-12 col-md-6 mb-5 mt-4">
                     <a href="{{ path('book-detail', { slug: book.slug }) }}" target="blank">
-                        <img src="{{ book.coverImage }}" style="width: 17em; padding: .5em;margin:0 0 .5em 1em" class="shadow" alt="Rector book cover">
+                        <img src="{{ book.coverImage }}" style="width: 17em; padding: .5em;margin:0 0 1em 0" class="shadow" alt="Rector book cover">
                     </a>
 
                     <br>
