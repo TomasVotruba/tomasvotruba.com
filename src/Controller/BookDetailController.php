@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use TomasVotruba\Website\Repository\BookRepository;
 use TomasVotruba\Website\ValueObject\RouteName;
 
-final class BookRectorController extends AbstractController
+final class BookDetailController extends AbstractController
 {
     public function __construct(
         private readonly BookRepository $bookRepository

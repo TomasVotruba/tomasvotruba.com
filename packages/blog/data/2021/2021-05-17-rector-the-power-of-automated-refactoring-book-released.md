@@ -21,7 +21,7 @@ updated_message: |
     <br>
 
     <a href="https://leanpub.com/rector-the-power-of-automated-refactoring" target="blank" class="btn btn-success btn-lg mt-4 mb-2">
-        Buy a copy
+        Buy a Copy
     </a>
 </div>
 
