@@ -21,8 +21,11 @@ final class BookRepository
                 'Upgrade Every Day',
                 'Contrary to common experience, upgrading is easy. Learn completely different approach to upgrading, based on daily little steps that accumulate to codebase that never ages.',
                 <<<'CODE_SAMPLE'
-<blockquote class="blockquote mt-2">
-"Upgrading software is like basic hygiene. Do it daily for 10 minutes, and you'll live a long and healthy life.
+<blockquote class="blockquote mt-2 blockquote-book">
+"Upgrading software is like basic hygiene.
+<br><br>
+Do it daily for 10 minutes, and you'll live a long and healthy life.
+<br><br>
 Skip it for a year or two, and you'll find yourself in a hospital."
 </blockquote>
 
