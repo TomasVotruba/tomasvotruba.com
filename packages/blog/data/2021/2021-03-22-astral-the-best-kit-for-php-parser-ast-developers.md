@@ -10,7 +10,7 @@ perex: |
 
 deprecated_since: "August 2022"
 deprecated_message: |
-    "This package showed as way to generic and specific at the same time. It not re-usable as every rule needs slightly different approach. Better use php-parser and PHPStan directly instead."
+    This package showed as way to generic and specific at the same time. It's not re-usable as every rule needs slightly different approach. **Use php-parser and PHPStan directly instead**.
 
 tweet: "New Post on #php 🐘 blog: Astral - The Best Kit for AST Developers    @rectorphp @phpstan"
 ---
