@@ -10,6 +10,12 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: New in #Symplify 9: Skipper - Skipping Files and Rules made Simple"
 tweet_image: "/assets/images/posts/2020/skipper-kangaroo.jpg"
+
+deprecated_since: "August 2022"
+deprecated_message: |
+    This package has shown as very specific and useful only for ECS and Rector. Instead of juggling single package to make both happy, we decided to merge this package into both and develop inside.
+    <br><br>
+    This package is now deprecated.
 ---
 
 When I started writing this post, I remembered a TV series from my childhood about the hero kangaroo:
