@@ -10,6 +10,12 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: How to make a Dynamic PHP Version Matrix in GitHub Actions"
 tweet_image: "/assets/images/posts/2020/php-json-useless.png"
+
+deprecated_since: "September 2022"
+deprecated_message: |
+    This command generates dynamic PHP list and starts to break the CI in times the upgrade is not in the plan. The idea of forced upgrade did not work.
+    <br><br>
+    That is the reason we deprecated this command.
 ---
 
 Do you know [memory locks](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/)? An "if this then that" code smell. E.g., you always have to put keys into your left pocket, after you lock your office door.
