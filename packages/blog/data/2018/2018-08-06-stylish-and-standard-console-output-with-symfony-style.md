@@ -25,7 +25,9 @@ try {
 }
 ```
 
-There is also a bit advanced use of native `OutputInterface` in command like [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/1c10240da97479274fd40a136c3857ff94f7f93f/src/Console/Command/FixCommand.php#L236-L239):
+<br>
+
+There is also a advanced use of native `OutputInterface` in command like [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/1c10240da97479274fd40a136c3857ff94f7f93f/src/Console/Command/FixCommand.php#L236-L239):
 
 ```php
 <?php
@@ -47,15 +49,21 @@ final class SomeCommand extends Command
 }
 ```
 
+<br>
+
 The advantage of these approaches is **they cannot be simpler and they're ready to be used**. I bet everyone can use `echo 'DONE';`:
 
-<img src="/assets/images/posts/2018/console-output/plain.png">
+<img src="/assets/images/posts/2018/console-output/plain.png" class="img-thumbnail">
 
 The second approach is not as easy, but if you're in a Symfony Command class using PHPStorm all you have to do is hit `Ctrl + Space` on an `$output` variable. And in their time they were good enough.
 
+<br>
+
 But we want more than a plain text. **If websites can have CSS, colors, and pictures, why not the CLI output?**
 
-<img src="/assets/images/posts/2018/console-output/console.png">
+<img src="/assets/images/posts/2018/console-output/console.png" class="img-thumbnail">
+
+<br>
 
 But it's not about colors, **it's about UX**. <em class="text-white bg-success p-2">Green</em> and <em class="text-white bg-danger p-2">red</em> lines instead of white on black spaghetti like on the first image.
 
@@ -75,6 +83,8 @@ $output->writeln('<info>foo</info>');
 $output->writeln('<error>foo</error>');
 ```
 
+<br>
+
 And also some colors and <strong><u>cool stuff</u></strong>:
 
 ```php
@@ -89,7 +99,7 @@ $output->writeln('<options=bold,underscore>foo</>');
 
 Which one do you like so far? So many colors, so many options... maybe too many.
 
-### United We Stand, Divided We Autumn
+### United We Stand, Divided We Fall
 
 Do you remember when there were [a dozen ways to create Dependency Injection Container](https://github.com/container-interop/container-interop)? Fortunately, the [PSR-11 was born](https://www.php-fig.org/psr/psr-11) to solve this and moved our focus to things that matter more.
 
@@ -135,7 +145,7 @@ PHPStan is [using it](https://github.com/phpstan/phpstan/blob/1e232b3da00671a578
 }
 ```
 
-### 2. Don't make User Think
+### 2. Don't Make the User Think
 
 When I was 13 years old I've accidentally read [*Don’t Make Me Think*](https://www.sensible.com/dmmt.html), amazing book about UX, programming and psychology for dummies (I'm about to read 2014-revised version). The main point of the book was the Apple, the UX, and the DX mantra - **create a design that users already expect, don't teach them doing common things differently**.
 
@@ -163,6 +173,8 @@ services:
     Symfony\Component\Console\Style\SymfonyStyle: ~
 ```
 
+<br>
+
 ```diff
  <?php
 
@@ -173,16 +185,11 @@ services:
 
  final class SomeCommand extends Command
  {
-+    /**
-+     * @var SymfonyStyle
-+     */
-+    private $symfonyStyle;
-+
-+    public function __construct(SymfonyStyle $symfonyStyle)
++    public function __construct(private SymfonyStyle $symfonyStyle)
 +    {
-+        $this->symfonyStyle = $symfonyStyle;
++         parent::__construct();
 +    }
-+
+
      protected function execute(InputInterface $input, OutputInterface $output)
      {
 -         $symfonyStyle = new SymfonyStyle($input, $output);
