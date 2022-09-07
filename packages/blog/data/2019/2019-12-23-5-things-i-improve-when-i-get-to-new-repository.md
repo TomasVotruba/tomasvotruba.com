@@ -225,6 +225,8 @@ ps
 pu
 ```
 
+<br>
+
 As a side benefit, continuous integration is easier to set up and maintain:
 
 ```yaml
@@ -243,7 +245,7 @@ jobs:
                 - composer phpstan
 ```
 
-Is there one new directory `utils` to check? Just update `composer.json`:
+Is there one new directory `tests` to check? Just update `composer.json`:
 
 ```diff
  {
@@ -253,10 +255,10 @@ Is there one new directory `utils` to check? Just update `composer.json`:
          "phpunit/phpunit": "^8.5"
      },
      "scripts": {
--        "fix-cs": "vendor/bin/ecs check bin src tests --fix --ansi",
-+        "fix-cs": "vendor/bin/ecs check bin src tests utils --fix --ansi",
--        "phpstan": "vendor/bin/phpstan analyse bin src tests --ansi --error-format symplify"
-+        "phpstan": "vendor/bin/phpstan analyse bin src tests utils --ansi --error-format symplify"
+-        "fix-cs": "vendor/bin/ecs check src --fix --ansi",
++        "fix-cs": "vendor/bin/ecs check src tests --fix --ansi",
+-        "phpstan": "vendor/bin/phpstan analyse src --ansi"
++        "phpstan": "vendor/bin/phpstan analyse src tests --ansi"
     }
 }
 ```
