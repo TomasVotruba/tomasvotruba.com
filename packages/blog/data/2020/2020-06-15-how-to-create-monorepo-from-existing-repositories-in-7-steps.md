@@ -277,7 +277,7 @@ The `replace` option tells the composer not to download anything because the `la
 
 All right, we have working `composer.json` with united versions. That was the most challenging part, so great job!
 
-No, we need to clean configs of tools that help us with daily development:
+Now we need to clean configs of tools that help us with daily development:
 
 - ECS
 - PHPStan
