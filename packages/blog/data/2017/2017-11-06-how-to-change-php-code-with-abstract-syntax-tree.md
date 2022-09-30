@@ -124,7 +124,7 @@ final class ChangeMethodNameNodeVisitor extends NodeVisitorAbstract
 
 ### 3. Change Method Name
 
-No we find it's name and change it!
+Now we find its name and change it!
 
 ```php
 use PhpParser\Node;
