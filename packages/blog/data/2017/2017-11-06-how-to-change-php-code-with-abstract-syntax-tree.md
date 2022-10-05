@@ -186,11 +186,8 @@ It requires more steps, but you will have output much more under control.
 Without our code, it would look like this:
 
 ```php
-use PhpParser\Lexer\Emulative;
 use PhpParser\NodeTraverser;
-use PhpParser\NodeVisitor;
 use PhpParser\NodeVisitor\CloningVisitor;
-use PhpParser\Parser\Php7;
 use PhpParser\PrettyPrinter\Standard;
 use PhpParser\ParserFactory;
 
@@ -206,7 +203,6 @@ $traverser = new NodeTraverser();
 $traverser->addVisitor(new CloningVisitor);
 
 $oldStmts = $parser->parse($code);
-$oldTokens = $parser->getLexer()->getTokens();
 
 $newStmts = $traverser->traverse($oldStmts);
 
@@ -221,6 +217,7 @@ $newStmts = $nodeTraverser->traverse($newStmts);
 
 $standardPrinter = new Standard();
 
+$oldTokens = $parser->getLexer()->getTokens();
 $newCode = $standardPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
 ```
 
