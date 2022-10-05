@@ -70,7 +70,6 @@ Create parser and parse the file:
 use PhpParser\ParserFactory;
 
 $parserFactory = new ParserFactory();
-
 $parser = $parserFactory->createForNewestSupportedVersion();
 
 $nodes = $parser->parse(file_get_contents(__DIR__ . '/SomeClass.php'));
