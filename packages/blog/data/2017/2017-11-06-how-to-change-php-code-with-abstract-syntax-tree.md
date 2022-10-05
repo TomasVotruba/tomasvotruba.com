@@ -1,17 +1,17 @@
 ---
 id: 63
-title: "How to change PHP code with Abstract Syntax Tree"
+title: "How to change PHP code with Abstract&nbsp;Syntax&nbsp;Tree"
 perex: |
     Today we can do amazing things with PHP. Thanks to AST and [nikic/php-parser](https://github.com/nikic/PHP-Parser) we can create very **narrow artificial intelligence, which can work for us**.
     <br><br>
     Let's create first its synapse!
 tweet: "Let AST change code for you #php #phpparser #ast #ai"
 
-
+updated_since: "October 2022"
+updated_message: "Updated to [php-parser 5](https://github.com/nikic/PHP-Parser/releases/tag/v5.0.0alpha1) syntax."
 ---
 
 We need to make clear what are we talking about right at the beginning. When we say "PHP AST", you can talk about 2 things:
-
 
 ### 1. php-ast
 
@@ -72,8 +72,7 @@ use PhpParser\ParserFactory;
 
 $parserFactory = new ParserFactory();
 
-// or PREFER_PHP5, if your code is older
-$parser = $parserFactory->create(ParserFactory::PREFER_PHP7);
+$parser = $parserFactory->createForNewestSupportedVersion();
 
 $nodes = $parser->parse(file_get_contents(__DIR__ . '/SomeClass.php'));
 ```
@@ -193,21 +192,21 @@ use PhpParser\NodeVisitor;
 use PhpParser\NodeVisitor\CloningVisitor;
 use PhpParser\Parser\Php7;
 use PhpParser\PrettyPrinter\Standard;
+use PhpParser\ParserFactory;
 
-$lexer = new Emulative([
+
+$parserFactory = new ParserFactory();
+$parser = $parserFactory->createForNewestSupportedVersion([
     'usedAttributes' => [
-        'comments',
-        'startLine', 'endLine',
-        'startTokenPos', 'endTokenPos',
-    ],
+        'comments', 'startLine', 'endLine', 'startTokenPos', 'endTokenPos',
+    ]
 ]);
 
-$parser = new Php7($lexer);
-$traverser = new NodeTraverser;
+$traverser = new NodeTraverser();
 $traverser->addVisitor(new CloningVisitor);
 
 $oldStmts = $parser->parse($code);
-$oldTokens = $lexer->getTokens();
+$oldTokens = $parser->getLexer()->getTokens();
 
 $newStmts = $traverser->traverse($oldStmts);
 
@@ -216,11 +215,13 @@ $newStmts = $traverser->traverse($oldStmts);
 $nodeTraverser = new NodeTraverser;
 $nodeTraverser->addVisitor($nodeVisitor);
 
-$newStmts = $traversedNodes = $nodeTraverser->traverse($newStmts);
+$newStmts = $nodeTraverser->traverse($newStmts);
 
 // our code end
 
-$newCode = (new Standard)->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
+$standardPrinter = new Standard();
+
+$newCode = $standardPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
 ```
 
 
