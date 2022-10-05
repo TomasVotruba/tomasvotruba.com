@@ -67,7 +67,6 @@ composer require nikic/php-parser
 Create parser and parse the file:
 
 ```php
-use PhpParser\Parser;
 use PhpParser\ParserFactory;
 
 $parserFactory = new ParserFactory();
