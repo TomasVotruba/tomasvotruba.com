@@ -64,6 +64,8 @@ It can do many things for you, depends on how much work you put in it. Today we 
 composer require nikic/php-parser
 ```
 
+<br>
+
 Create parser and parse the file:
 
 ```php
@@ -88,6 +90,8 @@ $traversedNodes = $nodeTraverser->traverse($nodes);
 
 Now we traversed all nodes, but nothing actually happened. Do you think we forgot to invite somebody in?
 
+<br>
+
 Yes, **we need [`PhpParser\NodeVisitor`](https://github.com/nikic/PHP-Parser/blob/master/lib/PhpParser/NodeVisitor.php)** - an interface with 4 methods. We can either implement all 4 of them, or use [`PhpParser\NodeVisitorAbstract`](https://github.com/nikic/PHP-Parser/blob/master/lib/PhpParser/NodeVisitorAbstract.php) to save some work:
 
 ```php
@@ -97,6 +101,8 @@ final class ChangeMethodNameNodeVisitor extends NodeVisitorAbstract
 {
 }
 ```
+
+<br>
 
 We need to find a `ClassMethod` node. I know that, because I use this package often, **but you can [find all nodes here](https://github.com/nikic/PHP-Parser/tree/master/lib/PhpParser/Node)**. To do that, we'll use `enterNode()` method:
 
@@ -147,6 +153,8 @@ final class ChangeMethodNameNodeVisitor extends NodeVisitorAbstract
 
 
 To work with **class names, interface names, method names** etc., we need to **use `PhpParser\Node\Name`**.
+
+<br>
 
 Oh, I almost forgot, we need to actually **invite visitor to the `NodeTraverser`** like this:
 
