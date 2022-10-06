@@ -72,9 +72,9 @@ use PhpParser\ParserFactory;
 $parserFactory = new ParserFactory();
 $parser = $parserFactory->createForNewestSupportedVersion();
 
-$nodes = $parser->parse(file_get_contents(__DIR__ . '/SomeClass.php'));
+$parsedFileContents = file_get_contents(__DIR__ . '/SomeClass.php');
+$astNodes = $parser->parse($parsedFileContents);
 ```
-
 
 ### 2. Find Method Node
 
@@ -152,9 +152,11 @@ Oh, I almost forgot, we need to actually **invite visitor to the `NodeTraverser`
 
 ```php
 $nodeTraverser = new PhpParser\NodeTraverser;
-$nodeTraverser->addVisitor(new ChangeMethodNameNodeVisitor);
+$nodeTraverser->addVisitor(new ChangeMethodNameNodeVisitor());
 
-$traversedNodes = $nodeTraverser->traverse($nodes);
+// here we parse the file to $astNodes
+
+$traversedAstNodes = $nodeTraverser->traverse($astNodes);
 ```
 
 ### 4. Save to File
@@ -166,10 +168,16 @@ Last step is saving the file ([see docs](https://github.com/nikic/PHP-Parser/blo
 **A. Dumb Saving**
 
 ```php
-$prettyPrinter = new PhpParser\PrettyPrinter\Standard;
-$newCode = $prettyPrinter->prettyPrintFile($traversedNodes);
+use PhpParser\PrettyPrinter\Standard;
 
-file_put_contents(__DIR__ . '/SomeClass.php', $newCode);
+$standardPrinter = new Standard();
+
+// here we parse the file to $astNodes
+// and traverse it with node visitors
+
+$newFileContents = $standardPrinter->prettyPrintFile($traversedNodes);
+
+file_put_contents(__DIR__ . '/SomeClass.php', $newFileContents);
 ```
 
 But this will actually **removes spaces and comments**. How to make it right?
@@ -190,6 +198,7 @@ use PhpParser\PrettyPrinter\Standard;
 use PhpParser\ParserFactory;
 
 
+// here we create format preserving parser
 $parserFactory = new ParserFactory();
 $parser = $parserFactory->createForNewestSupportedVersion([
     'usedAttributes' => [
@@ -197,36 +206,34 @@ $parser = $parserFactory->createForNewestSupportedVersion([
     ]
 ]);
 
+$originalAstNodes = $parser->parse($code);
+
+// to keep conections with original nodes
 $traverser = new NodeTraverser();
-$traverser->addVisitor(new CloningVisitor);
+$traverser->addVisitor(new CloningVisitor());
+$newStmts = $traverser->traverse($originalAstNodes);
 
-$oldStmts = $parser->parse($code);
 
-$newStmts = $traverser->traverse($oldStmts);
-
-// our code start
-
+// run our custom node visitors
 $nodeTraverser = new NodeTraverser;
 $nodeTraverser->addVisitor($nodeVisitor);
 
-$newStmts = $nodeTraverser->traverse($newStmts);
-
-// our code end
+$traversedAstNodes = $nodeTraverser->traverse($traversedAstNodes);
 
 $standardPrinter = new Standard();
 
-$oldTokens = $parser->getLexer()->getTokens();
-$newCode = $standardPrinter->printFormatPreserving($newStmts, $oldStmts, $oldTokens);
+$newFileContents = $standardPrinter->printFormatPreserving(
+    $traversedAstNodes,
+    $originalAstNodes,
+    $parser->getLexer()->getTokens()
+);
 ```
 
-
 Congrats, now you've successfully renamed method to `newName`!
-
 
 ## Advanced Changes? With Rector!
 
 Do you want to see more advanced operations, like those we [brainstormed in the beginning](#when-we-say-em-modify-em-and-em-ast-em-together-what-can-you-brainstorm)? Look at package I'm working on which should **automate application upgrades** - **[RectorPHP](https://github.com/RectorPHP/Rector)**.
-
 
 <br>
 
