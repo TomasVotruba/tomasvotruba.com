@@ -16,9 +16,9 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: Migrate Gedmo to KnpLabs"
 
-updated_since: "November 2020"
+updated_since: "November 2022"
 updated_message: |
-    Switched from deprecated `--set` option to `rector.php` config.
+    Switched from deprecated `--set` option to `rector.php` config. Removed Rector upgrade set, as outdated and could cause troubles. Better handled individually per project.
 ---
 
 Pick behavior your want to migrate from Gedmo to KnpLabs:
@@ -42,10 +42,6 @@ If you **use other Gedmo behavior that is not listed here**, you might request o
 ### Gedmo
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -68,10 +64,6 @@ class Meetup
 - Add `Knp\DoctrineBehaviors\Contract\Entity\TimestampableInterface` interface
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -94,10 +86,6 @@ class Meetup implements TimestampableInterface
 ### Gedmo
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -166,10 +154,6 @@ public function getSluggableFields(): array
 In full code:
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -209,10 +193,6 @@ The PHP migration looks like this:
 ### Gedmo
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -295,10 +275,6 @@ class Category
 - Remove Gedmo annotations
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -330,10 +306,6 @@ So even if you use Symfony 4 and **everything works well** for you, **consider c
 ### Gedmo
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -383,10 +355,6 @@ class Category implements Translatable
 - Remove Gedmo annotations
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Knp\DoctrineBehaviors\Model\Translatable\TranslatableTrait;
@@ -402,10 +370,6 @@ So, where is the *title* property we need to translate? Every translated propert
 This **approach makes sure that the complexity of 1 item with dozens of translation stays 1:1** = it's super fast!
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Knp\DoctrineBehaviors\Contract\Entity\TranslationInterface;
@@ -440,10 +404,6 @@ That's all for the migration. Oh, you're still reading? Are you waiting for some
 ### Gedmo
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -485,10 +445,6 @@ class Category
 - Remove Gedmo annotations
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -509,10 +465,6 @@ class Category implements BlameableInterface
 ### Gedmo
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -541,10 +493,6 @@ class Category
 - Remove Gedmo annotations
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -570,10 +518,6 @@ class Category implements LoggableInterface
 ### Gedmo
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -611,10 +555,6 @@ class Category
 - Remove Gedmo annotations
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 namespace App\Entity;
 
 use Knp\DoctrineBehaviors\Contract\Entity\SoftDeletableInterface;
@@ -625,42 +565,6 @@ class Category implements SoftDeletableInterface
     use SoftDeletableTrait;
 }
 ```
-
-Would you like to avoid doing this manually? Rector has a set just for you:
-
-## 3 Step to Migrate Gedmo to KnpLabs with Rector
-
-1. Install Rector
-
-```bash
-composer require rector/rector --dev
-````
-
-[link_rector_book]
-
-2. Add `rector.php` config
-
-```php
-use Rector\Doctrine\Set\DoctrineSetList;
-use Rector\Config\RectorConfig;
-
-return function (RectorConfig $rectorConfig): void {
-    $rectorConfig->import(DoctrineSetList::DOCTRINE_GEDMO_TO_KNPLABS);
-};
-```
-
-3. Run Rector
-
-```bash
-vendor/bin/rector process src
-```
-
-That's it!
-
-
-<br>
-
-Instant upgrades never cover the whole migration path - e.g., they lack database migrations - but they're are always **saving you 80 % of boring work**. If anything breaks, [create and issue on Github](https://github.com/rectorphp/rector/issues/new?template=1_Bug_report.md) so you can enjoy fixed version soon.
 
 <br>
 
