@@ -11,7 +11,7 @@ That's where **test coverage** gives us a hint. Which project would you join if 
 
 <br>
 
-Yet, tests are the only thing that can help us **access code quality quickly**.
+Yet, tests are not the only thing that can help us **access code quality quickly**.
 With PHP 7.0, 7.4, and 8.0, type declarations became a sign of project health. But how can we measure those?
 
 <br>
