@@ -2,17 +2,17 @@
 id: 369
 title: "How to Measure Your Type Coverage"
 perex: |
-    When we come a to a new code base, we look for a code quality metric that will tell us, how healthy the code-base is. We can have CI tools like PHPStan and PHPUnit. PHPStan reports missing types or method call on invalid types. PHPUnit reports failing tests.
+    When we come to a new code base, we look for a code quality metric that will tell us how healthy the code base is. We can have CI tools like PHPStan and PHPUnit. PHPStan reports missing or invalid types, and PHPUnit reports failing tests.
     <br><br>
-    But how do we know, if 10 passing or 100 passing tests is enough? What if there are over 10 000 cases we should test?
+    But how do we know if 10 passing or 100 passing tests is enough? What if there are over 10 000 cases we should test?
 ---
 
-That's where **test coverage** gives us a hint. Which project would you join if you could pick: the one with 20 % test coverage or the one with 80 % test coverage? I'd always go with the latter, as test give great confidence.
+That's where **test coverage** gives us a hint. Which project would you join if you could pick: the one with 20 % test coverage or the one with 80 % test coverage? I'd always go with the latter, as tests give great confidence.
 
 <br>
 
-Yet, tests are the only thing that can help us access the code quality quickly.
-With PHP 7.0, 7.4 and 8.0, type declarations became the sign of project health. But how can we measure those?
+Yet, tests are the only thing that can help us **access code quality quickly**.
+With PHP 7.0, 7.4, and 8.0, type declarations became a sign of project health. But how can we measure those?
 
 <br>
 
@@ -25,7 +25,7 @@ With PHP 7.0, 7.4 and 8.0, type declarations became the sign of project health. 
 
 ## What is the "Type Coverage"?
 
-If the test coverage is % of all possible code runs, what is the type coverage then?
+If the test coverage is % of all possible code runs, what is the "type coverage" then?
 
 ```php
 function run($name)
@@ -34,7 +34,7 @@ function run($name)
 }
 ```
 
-Here we have 1 param, and 1 function return. That's 2 possible type declarations that we're missing:
+Here we have 1 param and 1 function return. That's 2 possible type declarations that we're missing:
 
 * 0/2 = **0 % type coverage**
 
@@ -93,26 +93,26 @@ private ?string $surname = null;
 private $addressCallable;
 ```
 
-This code has 100 % type declaration coverage. How is that possible? Nullable, union and callable docblock type declarations are valid and the most strict types.
+This code has 100 % type declaration coverage. How is that possible? Nullable, union, and callable docblock type declarations are valid and the most strict types.
 
 Pretty simple, right?
 
 <br>
 
-We can run type coverage easily with PHPStan on any project, however legacy or magic - no autoloading needed.
+We can run the type coverage check quickly with PHPStan on any project. Even if it's legacy or full of magic - no autoloading is needed.
 
 <br>
 
 ## I love this Metric, Because...
 
-* it is **fast** - we known instantly the result
-* it is **simple** - we known the value is between 0-100
-* it is **explanatory** - we know the potential type is missing, and where exactly we can fix it
-* it is **code sustainability predictor** - based on this number, we know how easy or complicated will be to work with the codebase
+* it is **fast** - we know instantly the result
+* it is **simple** - we know the value is between 0-100
+* it is **explanatory** - we know the potential type is missing, and where exactly can we fix it
+* it is **code sustainability predictor** - based on this number, we know how easy or complicated it will be to work with the codebase
 
 ## 3 Steps to Measure it?
 
-There type coverage is measured by 3 custom PHPStan rules with 3 custom [collectors](https://phpstan.org/developing-extensions/collectors). They work exactly the same way as described above in the code sample.
+The type coverage is measured by 3 custom PHPStan rules with 3 custom [collectors](https://phpstan.org/developing-extensions/collectors). They work the same way as described above in the code sample.
 
 1. Install the `symplify/phpstan-rules` package
 
@@ -126,7 +126,7 @@ The package is available on PHP 7.2+, [as downgraded](/blog/how-to-develop-sole-
 
 2. Add Rules to `phpstan.neon`
 
-The most easiest type declaration to add is a return one, then the param one. The typed property on the other hand is available as late as PHP 7.4. That's why we have 3 different rules for them, with one collector per each:
+The easiest type declaration to add is a return one, then the param one. On the other hand, the typed property is available as late as PHP 7.4. That's why we have 3 different rules for them, with one collector per each:
 
 ```yaml
 services:
@@ -149,13 +149,13 @@ services:
             minimalLevel: 0.99
 ```
 
-The required level is defined with `minimalLevel` argument in every rule. Notice the value `0.99`, that's at least 99 % type coverage. We'll get back to that later.
+The `minimalLevel` argument defines minimal required type coverage in every rule. Notice the value `0.99`, meaning at least 99 % type coverage is required. We'll get back to that later.
 
 <br>
 
 3. Add Collectors to `phpstan.neon`
 
-At the moment, the rules are registered, but they do not have any effect. We have to add collector services too:
+At the moment, we've registered the rules, but they do not have any effect. We have to add collector services too:
 
 ```yaml
 services:
@@ -178,17 +178,17 @@ Now run to see the results:
 vendor/bin/phpstan
 ```
 
-The failed error message is more than meets the eye. It shows **you the places where you can complete the type declarations**, so you can just find them in the code and improve.
+The failed error message is more than meets the eye. It shows **you where you can complete the type declarations**, so you can find them in the code and improve.
 
 ## How to Find Your Current Type Coverage
 
-Now we get back to the `0.99`, resp. 99 % required type coverage. The CI fails on such a high value, but that's our intention. The error message actually tells us current type coverage value:
+Now we get back to the `0.99` resp. 99 % required type coverage. The CI fails on such a high value, but that's our intention. The error message actually tells us the current type coverage value:
 
 ```bash
 Out of 81 possible param types, only 60 % actually have it. Add more param types to get over 99 %
 ```
 
-In this case, we take current value of 60 and put it to the config, so our codebase will remain on this code coverage:
+In this case, we take the current value of `60` and put it into the config, so our codebase will remain on this code coverage:
 
 ```diff
  services:
@@ -200,15 +200,15 @@ In this case, we take current value of 60 and put it to the config, so our codeb
 +            minimalLevel: 0.60
 ```
 
-This value can be different for param, return and property, so adjust it accordingly to make the CI pass.
+This value can be different for param, return, and property, so adjust it accordingly to make the CI pass.
 
-Now we re-run PHPStan, everything is fine. We commit, open pull-request and merge.
+Now we re-run PHPStan, and everything is fine. We commit, open pull-request, and merge.
 
 ## Lean Type Coverage Improvement
 
-Once a week, we run the same command again, trying to bump it 2-3 % (depending on your code-base size) and open pull-request. This way, we can improve the codebase gradually, without any big bang.
+Once a week, we run the same command again, trying to bump it 2-3 % (depending on your codebase size) and open a pull request. This way, we can improve the codebase gradually, without any big bang.
 
-We also use these rules **to monitor type coverage improvement** on the project we work on. That way we as developers and the client knows, we're going the right direction.
+We also use these rules **to monitor type coverage improvement** on the project we work on. That way, both developers and the client knows we're going in the right direction.
 
 <br>
 
