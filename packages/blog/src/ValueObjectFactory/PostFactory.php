@@ -148,7 +148,7 @@ final class PostFactory
      */
     private function decorateHeadlineWithId(string $htmlContent): string
     {
-        return Strings::replace($htmlContent, self::HEADLINE_LEVEL_REGEX, static function ($matches): string {
+        return Strings::replace($htmlContent, self::HEADLINE_LEVEL_REGEX, static function (array $matches): string {
             $level = (int) $matches['level'];
             $headline = (string) $matches['headline'];
             $clearHeadline = strip_tags($headline);
