@@ -110,7 +110,14 @@ We can run the type coverage check quickly with PHPStan on any project. Even if 
 * it is **explanatory** - we know the potential type is missing, and where exactly can we fix it
 * it is **code sustainability predictor** - based on this number, we know how easy or complicated it will be to work with the codebase
 
-## 3 Steps to Measure it?
+<br>
+
+It's amazing to see it grow in time.
+This is how type coverage evolved in one project I work on:
+
+<img src="/assets/images/posts/2022/type_coverage.png" class="img-thumbnail">
+
+## 3 Steps to Measure it
 
 The type coverage is measured by 3 custom PHPStan rules with 3 custom [collectors](https://phpstan.org/developing-extensions/collectors). They work the same way as described above in the code sample.
 
