@@ -117,6 +117,8 @@ This is how type coverage evolved in one project I work on:
 
 <img src="/assets/images/posts/2022/type_coverage.png" class="img-thumbnail">
 
+<br>
+
 ## 3 Steps to Measure it
 
 The type coverage is measured by 3 custom PHPStan rules with 3 custom [collectors](https://phpstan.org/developing-extensions/collectors). They work the same way as described above in the code sample.
