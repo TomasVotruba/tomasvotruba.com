@@ -10,6 +10,9 @@ perex: |
 
 tweet: "New Post on My Blog: Do we Have more Than 1024 PHP Groups in The World?     #meet #travelling #phpfamily"
 tweet_image: "/assets/images/posts/2019/friends/preview.png"
+
+deprecated_since: "November 2022"
+deprecated_message: "The Meetup.com API has changed to a paywall now. Also the REST API was changed to GraphQL and there is no documentation about endpoints of meetups by groups. The visit rate of page is also 3-5 people a day. For there reasons, it does not make sense to maintain this page anymore, so I've sunset it."
 ---
 
 ...well, see for yourself:

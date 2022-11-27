@@ -7,6 +7,9 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: FriendsofPHP.org is Opening #API with 250 Meetups a Month"
 tweet_image: '/assets/images/posts/2019/fop/fop.png'
+
+deprecated_since: "November 2022"
+deprecated_message: "The Meetup.com API has changed to a paywall now. Also the REST API was changed to GraphQL and there is no documentation about endpoints of meetups by groups. The visit rate of page is also 3-5 people a day. For there reasons, it does not make sense to maintain this page anymore, so I've sunset it."
 ---
 
 If you want to organize meetups on Meetup.com, it will cost you 10 $/month. Not every organizer can afford that, mainly in starting or small communities.

@@ -10,6 +10,9 @@ perex: |
     <br>
     **Unless we use Oauth2 before August 15**. I never used it, but how hard that can be, right?
 tweet: "New Post on #php 🐘 blog: How to upgrade #Meetupcom API to #OAuth2 with #Guzzle"
+
+deprecated_since: "November 2022"
+deprecated_message: "The Meetup.com API has changed to a paywall now. Also the REST API was changed to GraphQL and there is no documentation about endpoints of meetups by groups. The visit rate of page is also 3-5 people a day. For there reasons, it does not make sense to maintain this page anymore, so I've sunset it."
 ---
 
 There is no information about Meetup.com API upgrade on [their blog](https://medium.com/meetup), so I'll share the email to give you an idea:
