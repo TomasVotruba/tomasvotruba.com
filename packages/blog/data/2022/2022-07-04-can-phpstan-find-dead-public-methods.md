@@ -118,7 +118,7 @@ function run(?Car $value) {
     $value->speedUp(); // $value is null|Car
 }
 
-/** @var Car $value;
+/** @var Car $value */
 $value->speedUp(); // $value is probably Car
 ```
 
