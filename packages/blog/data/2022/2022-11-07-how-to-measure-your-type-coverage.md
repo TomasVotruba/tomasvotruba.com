@@ -5,6 +5,10 @@ perex: |
     When we come to a new code base, we look for a code quality metric that will tell us how healthy the code base is. We can have CI tools like PHPStan and PHPUnit. PHPStan reports missing or invalid types, and PHPUnit reports failing tests.
     <br><br>
     But how do we know if 10 passing or 100 passing tests is enough? What if there are over 10 000 cases we should test?
+
+updated_since: "December 2022"
+updated_message: |
+    Update to new package with simple PHPStan configuration.
 ---
 
 That's where **test coverage** gives us a hint. Which project would you join if you could pick: the one with 20 % test coverage or the one with 80 % test coverage? I'd always go with the latter, as tests give great confidence.
@@ -123,61 +127,30 @@ This is how type coverage evolved in one project I work on:
 
 The type coverage is measured by 3 custom PHPStan rules with 3 custom [collectors](https://phpstan.org/developing-extensions/collectors). They work the same way as described above in the code sample.
 
-1. Install the `symplify/phpstan-rules` package
+1. Install the [`tomasvotruba/type-coverage`](https://github.com/TomasVotruba/type-coverage) package
 
 ```bash
-composer require symplify/phpstan-rules --dev
+composer require tomasvotruba/type-coverage --dev
 ```
 
 The package is available on PHP 7.2+, [as downgraded](/blog/how-to-develop-sole-package-in-php81-and-downgrade-to-php72/).
 
 <br>
 
-2. Add Rules to `phpstan.neon`
+2. With PHPStan extension installer, the rules are already installed.
 
-The easiest type declaration to add is a return one, then the param one. On the other hand, the typed property is available as late as PHP 7.4. That's why we have 3 different rules for them, with one collector per each:
-
-```yaml
-services:
-    -
-        class: Symplify\PHPStanRules\Rules\Explicit\PropertyTypeDeclarationSeaLevelRule
-        tags: [phpstan.rules.rule]
-        arguments:
-            minimalLevel: 0.99
-
-    -
-        class: Symplify\PHPStanRules\Rules\Explicit\ParamTypeDeclarationSeaLevelRule
-        tags: [phpstan.rules.rule]
-        arguments:
-            minimalLevel: 0.99
-
-    -
-        class: Symplify\PHPStanRules\Rules\Explicit\ReturnTypeDeclarationSeaLevelRule
-        tags: [phpstan.rules.rule]
-        arguments:
-            minimalLevel: 0.99
-```
-
-The `minimalLevel` argument defines minimal required type coverage in every rule. Notice the value `0.99`, meaning at least 99 % type coverage is required. We'll get back to that later.
-
-<br>
-
-3. Add Collectors to `phpstan.neon`
-
-At the moment, we've registered the rules, but they do not have any effect. We have to add collector services too:
+To enable them, increase the minimal coverage on particular location:
 
 ```yaml
-services:
-    -
-        class: Symplify\PHPStanRules\Collector\FunctionLike\ParamTypeSeaLevelCollector
-        tags: [phpstan.collector]
-    -
-        class: Symplify\PHPStanRules\Collector\FunctionLike\ReturnTypeSeaLevelCollector
-        tags: [phpstan.collector]
-    -
-        class: Symplify\PHPStanRules\Collector\ClassLike\PropertyTypeSeaLevelCollector
-        tags: [phpstan.collector]
+# phpstan.neon
+parameters:
+    type_coverage:
+        return_type: 50
+        param_type: 30
+        property_type: 70
 ```
+
+The number defines minimal required type coverage in particular group. E.g. 30 means at least 30 % type coverage is required.
 
 <br>
 
@@ -191,7 +164,7 @@ The failed error message is more than meets the eye. It shows **you where you ca
 
 ## How to Find Your Current Type Coverage
 
-Now we get back to the `0.99` resp. 99 % required type coverage. The CI fails on such a high value, but that's our intention. The error message actually tells us the current type coverage value:
+Now we get back to the `99` resp. 99 % required type coverage. The CI fails on such a high value, but that's our intention. The error message actually tells us the current type coverage value:
 
 ```bash
 Out of 81 possible param types, only 60 % actually have it. Add more param types to get over 99 %
@@ -200,18 +173,16 @@ Out of 81 possible param types, only 60 % actually have it. Add more param types
 In this case, we take the current value of `60` and put it into the config, so our codebase will remain on this code coverage:
 
 ```diff
- services:
-     -
-         class: Symplify\PHPStanRules\Rules\Explicit\ParamTypeDeclarationSeaLevelRule
-         tags: [phpstan.rules.rule]
-         arguments:
--            minimalLevel: 0.99
-+            minimalLevel: 0.60
+ # phpstan.neon
+ parameters:
+     type_coverage:
++        return_type: 99
+-        return_type: 60
 ```
 
-This value can be different for param, return, and property, so adjust it accordingly to make the CI pass.
+Adjust values accordingly to make the CI pass.
 
-Now we re-run PHPStan, and everything is fine. We commit, open pull-request, and merge.
+Then re-run PHPStan, and everything is fine. We commit, open pull-request, and merge.
 
 ## Lean Type Coverage Improvement
 
