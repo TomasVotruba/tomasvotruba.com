@@ -172,6 +172,8 @@ Now we get back to the `99` resp. 99 % required type coverage. The CI fails on s
 Out of 81 possible param types, only 60 % actually have it. Add more param types to get over 99 %
 ```
 
+<br>
+
 In this case, we take the current value of `60` and put it into the config, so our codebase will remain on this code coverage:
 
 ```diff
