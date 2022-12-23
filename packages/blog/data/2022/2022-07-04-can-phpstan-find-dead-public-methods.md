@@ -178,7 +178,7 @@ composer require tomasvotruba/unused-public --dev
 
 2. With PHPStan extension installer, the rules are already installed.
 
-To enable them, increase the minimal coverage on particular location:
+To enable them, use parameters:
 
 ```yaml
 # phpstan.neon
