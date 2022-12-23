@@ -164,24 +164,38 @@ Are you maintaining an open-source project with a method that is designed for ex
 Mark it with `@api` to make the rule skip it.
 
 
-## How to run it on Your Project
+## 3. Steps to run it on Your Project
 
-Are you willing to try this rule on your code base? Even if there will be lot of removal work?
-
-You've been warned. There you go...
+1. Install the [TomasVotruba/unused-public](https://github.com/TomasVotruba/unused-public) package
 
 ```bash
 composer require tomasvotruba/unused-public --dev
 ```
 
+*The package is available on PHP 7.2+, [as downgraded](/blog/how-to-develop-sole-package-in-php81-and-downgrade-to-php72/).*
 
-<br>
+
+2. With PHPStan extension installer, the rules are already installed.
+
+To enable them, increase the minimal coverage on particular location:
+
+```yaml
+# phpstan.neon
+parameters:
+    unused_public:
+        methods: true
+        properties: true
+        constants: true
+```
+
 
 <br>
 
 Run PHPStan and see the results.
 
-Do you have a tip to improve this rule or architecture? It's my 2nd collector rule, and it has flaws in the design, so don't hesitate and share it in the comments so that I can improve it. Thank you, good luck, and have fun!
+<br>
+
+Good luck, tidy up and have fun!
 
 <br>
 
