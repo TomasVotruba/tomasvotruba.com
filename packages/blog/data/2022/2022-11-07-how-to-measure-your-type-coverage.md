@@ -125,7 +125,9 @@ This is how type coverage evolved in one project I work on:
 
 ## 3 Steps to Measure it
 
-The type coverage is measured by 3 custom PHPStan rules with 3 custom [collectors](https://phpstan.org/developing-extensions/collectors). They work the same way as described above in the code sample.
+The type coverage is measured by 3 custom PHPStan rules. They work the same way as described above in the code sample.
+
+<br>
 
 1. Install the [`tomasvotruba/type-coverage`](https://github.com/TomasVotruba/type-coverage) package
 
@@ -133,7 +135,7 @@ The type coverage is measured by 3 custom PHPStan rules with 3 custom [collector
 composer require tomasvotruba/type-coverage --dev
 ```
 
-The package is available on PHP 7.2+, [as downgraded](/blog/how-to-develop-sole-package-in-php81-and-downgrade-to-php72/).
+*The package is available on PHP 7.2+, [as downgraded](/blog/how-to-develop-sole-package-in-php81-and-downgrade-to-php72/).*
 
 <br>
 
