@@ -174,6 +174,7 @@ composer require tomasvotruba/unused-public --dev
 
 *The package is available on PHP 7.2+, [as downgraded](/blog/how-to-develop-sole-package-in-php81-and-downgrade-to-php72/).*
 
+<br>
 
 2. With PHPStan extension installer, the rules are already installed.
 
