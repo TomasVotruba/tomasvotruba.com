@@ -66,7 +66,7 @@ function get_words_from_number(int $number): string
 }
 ```
 
-## Keep Cognitive Complexity Low with PHPStan
+## 3 Steps to Keep Cognitive Complexity Low with PHPStan
 
 1. Install the [TomasVotruba/cognitive-complexity](https://github.com/TomasVotruba/cognitive-complexity) package
 
@@ -80,13 +80,15 @@ If you don't use phpstan/extension-installer, [add it now](https://github.com/ph
 
 2. Setup PHPStan configuration:
 
-```neon
+```yaml
 # phpstan.neon
 parameters:
     cognitive_complexity:
         class: 50
         function: 8
 ```
+
+<br>
 
 3. Run PHPStan:
 
