@@ -10,6 +10,10 @@ perex: |
 
 tweet: "New Post on #php 🐘 blog: New in Symplify 9: Composer Json Manipulator - In Object API"
 tweet_image: "/assets/images/posts/2020/composer-json-manipulator-tested.png"
+
+deprecated_since: "December 2022"
+deprecated_message: "This package was way too generic abstraction for simple json array. It was not very used either, so I deprecated it. Use simple `json_decode()`/`json_encode()` functions and array access instead."
+
 ---
 
 With an array, it's mission impossible. What about intuitive methods on simple value object? You'd expect such package to exist in PHP world - but there [is none](https://packagist.org/?query=composer-json). So we made **an object wrapper that handles all your worries**:
