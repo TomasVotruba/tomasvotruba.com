@@ -28,15 +28,20 @@
         <div class="card mb-4">
             <div class="card-body text-bigger">
                 <p class="mb-3">
-                    Read the latest post from <a href="{{ path('blog') }}">weekly blog</a>:
+                    What I wrote recently?
                 </p>
 
 
                 {% for post in last_posts %}
                     {# @var post \TomasVotruba\Blog\ValueObject\Post #}
                     <p>
-                        •&nbsp;&nbsp;<a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
+                    <div class="small pull-right text-secondary">
+                        {{ post.getDateTime|date("Y-m-d") }}
+                    </div>
+
+                    •&nbsp;&nbsp;<a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
                     </p>
+
                 {% endfor %}
             </div>
         </div>
