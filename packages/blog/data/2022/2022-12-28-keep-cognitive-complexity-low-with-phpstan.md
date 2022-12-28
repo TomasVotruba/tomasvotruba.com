@@ -74,7 +74,9 @@ function get_words_from_number(int $number): string
 composer require tomasvotruba/cognitive-complexity --dev
 ```
 
-If you don't use phpstan/extension-installer, [add it now](https://github.com/phpstan/extension-installer) to enjoy the easy install without copying config paths.
+<br>
+
+*Not a phpstan/extension-installer user yet? [Add it now](https://github.com/phpstan/extension-installer) to enjoy the easy install without copying config paths.*
 
 <br>
 
