@@ -30,7 +30,7 @@
         "symplify/easy-coding-standard": "^11.1.16",
         "symplify/phpstan-extensions": "^11.1.16",
         "symplify/phpstan-rules": "^11.1.16",
-        "tomasvotruba/cognitive-complexity": "^0.1.0",
+        "tomasvotruba/cognitive-complexity": "^0.0.1",
         "tomasvotruba/type-coverage": "^0.0.1",
         "tracy/tracy": "^2.9"
     },
