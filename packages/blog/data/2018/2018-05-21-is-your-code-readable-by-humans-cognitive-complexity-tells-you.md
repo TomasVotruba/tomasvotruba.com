@@ -10,9 +10,9 @@ perex: |
 tweet: "New Post on My Blog: Is Your Code Readable By Humans? Cognitive Complexity Tells You #codingstandard #sonarcube #sniff #complexity #solid"
 tweet_image: "/assets/images/posts/2018/cognitive-complexity/tweet.png"
 
-updated_since: "May 2020"
-updated_message: |
-    Updated with **EasyCodingStandard 8**, with shift from [Sniffs to PHPStan rules](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/).
+deprecated_since: "December 2022"
+deprecated_message: |
+    The sniff and Symplify PHPStan rule is deprecated as very complex and hard to use. Use new [PHPStan package instead](/blog/keep-cognitive-complexity-low-with-phpstan/).
 ---
 
 ## What is Cognitive Complexity?
