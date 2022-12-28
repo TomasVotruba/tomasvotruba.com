@@ -116,7 +116,7 @@ Are there just 5 cases? Fix those to make CI pass again!
 
 This package turned out to be very helpful in 2 phases:
 
-At first, it helps to lower the hard spots. In sum, this makes the whole codebase easier to understand for fresh developer on the project.
+At first, it helps to lower the hard spots. In sum, this turn the codebase [into a senior codebase](https://tomasvotruba.com/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases/), it's easier to understand for fresh developer on the project and grow further.
 
 <br>
 
