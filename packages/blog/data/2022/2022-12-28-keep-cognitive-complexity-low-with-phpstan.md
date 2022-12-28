@@ -116,7 +116,7 @@ Are there just 5 cases? Fix those to make CI pass again!
 
 <br>
 
-## 2 Steps to Keep Cognitive Complexity Low
+## 2 Ares where Cognitive Complexity Rocks
 
 This package turned out to be very helpful in 2 phases:
 
