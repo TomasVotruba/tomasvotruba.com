@@ -28,6 +28,11 @@ services:
                     provideIntParameter: [0]
 
 parameters:
+    # see https://github.com/tomasvotruba/cognitive-complexity
+    cognitive_complexity:
+        class: 25
+        function: 5
+
     # see https://github.com/tomasvotruba/type-coverage
     type_coverage:
         param_type: 99
