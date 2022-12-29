@@ -29,22 +29,31 @@
 
         <div class="clearfix"></div>
 
-        <h3 class="mb-4">
+        <h2 class="mb-4">
             What I wrote recently?
-        </h3>
+        </h2>
 
-        {% for post in last_posts %}
-            {# @var post \TomasVotruba\Blog\ValueObject\Post #}
-            <p class="mb-3">
-                <div class="small pull-right text-secondary">
-                    {{ post.getDateTime|date("Y-m-d") }}
-                </div>
+        <div class="text-bigger">
+            {% for post in last_posts %}
+                {# @var post \TomasVotruba\Blog\ValueObject\Post #}
+                <p class="mb-3">
+                    <div class="small pull-right text-secondary">
+                        {{ post.getDateTime|date("Y-m-d") }}
+                    </div>
 
-                •&nbsp;&nbsp;<a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
-            </p>
+                    •&nbsp;&nbsp;<a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
+                </p>
+            {% endfor %}
 
-        {% endfor %}
 
+            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG')) }}" class="btn btn-warning pull-right mt-4">Discover more Posts </a>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
         <br>
 
         {# my dad raised me with quotes, at first I didn't understand them,
