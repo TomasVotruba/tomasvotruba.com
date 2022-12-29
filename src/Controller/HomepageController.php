@@ -17,7 +17,7 @@ final class HomepageController extends AbstractController
      */
     private const QUOTES = [
         "If you don't want to do something, you'll find an excuse.<br>If you really do, you'll find a way.",
-        'Every day is a new life to a wise man.',
+        'Every day is a new life<br>to a wise man.',
         'The cave you fear to enter<br>holds the treasure you seek.',
         "You can't wait until life isn't hard anymore<br>before you decide to be happy.",
         // source https://twitter.com/syaranza_/status/1403034104845660161
@@ -25,7 +25,7 @@ final class HomepageController extends AbstractController
         // https://twitter.com/votrubat/status/1275863668878688257
         "If you can't explain it to a six-year-old,<br>you don't understand it yourself.",
         // Rainer Maria Rilke
-        'Let everything happen to you<br>Beauty and terror<brJust keep going<br>No feeling is final',
+        'Let everything happen to you<br>Beauty and terror<br>Just keep going<br>No feeling is final',
         'If you live an ordinary life, all you have is ordinary stories.<br>You have to live a life of adventurer.',
         // sarcastic ones :)
         'Mistakes were made. Some of them, by me.',
@@ -39,7 +39,7 @@ final class HomepageController extends AbstractController
     #[Route(path: '/', name: RouteName::HOMEPAGE)]
     public function __invoke(): Response
     {
-        $lastPosts = $this->postRepository->fetchLast(5);
+        $lastPosts = $this->postRepository->fetchLast(3);
 
         return $this->render('homepage.twig', [
             'last_posts' => $lastPosts,
