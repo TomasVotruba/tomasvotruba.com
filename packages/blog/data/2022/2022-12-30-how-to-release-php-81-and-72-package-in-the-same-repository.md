@@ -75,6 +75,8 @@ Check the files directly in the repository in the [`/build`](https://github.com/
 
 You already know how to downgrade the code Rector. The trick here is we **downgrade the code in the same repository**, just the `/src` directory, to be exact. Because this is the only code, people use when they get the package via composer.
 
+<br>
+
 Here is the 1st part of the workflow, which downgrades the code and applies the coding standard:
 
 ```yaml
