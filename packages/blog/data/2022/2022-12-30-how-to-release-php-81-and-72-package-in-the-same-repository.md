@@ -2,15 +2,15 @@
 id: 372
 title: "How to release PHP 8.1 and 7.2 package in the Same Repository"
 perex: |
-    In a post from autumn, we looked at how to [develop packages in monorepo on PHP 8.1 and release downgraded version on PHP 7.2](/blog/how-to-develop-sole-package-in-php81-and-downgrade-to-php72/).
+    In a post from autumn, we looked at how to [develop packages in monorepo on PHP 8.1 and release a downgraded version on PHP 7.2](/blog/how-to-develop-sole-package-in-php81-and-downgrade-to-php72/).
     <br><br>
-    But having 2 repository to work with still feels crappy. Which one should we use? Where do people contribute? Where do report issues? Everyone is confused and **time is wasted on explaining complexity**.
+    But having 2 repositories to work with still feels crappy. Which one should we use? Where do people contribute? Where do we report issues? Everyone needs clarification, and **time is wasted on explaining complexity**.
     <br>
     <br>
-    I knew we can do better... we want **one repository**. Today I'll show you, how to get there with 39 lines of GitHub Action workflow (including comments).
+    I knew we could do better... we want **one repository**. Today I'll show you how to get there with 39 lines of GitHub Action workflow (including comments).
 ---
 
-When I created a minimal PHPStan packages with specialized rules, I wanted to use it on [every legacy project we upgrade](https://getrector.org/for-companies) we do with Rector upgrade team. The most common lowest PHP for these projects is **PHP 7.2**, so it has to be downgraded.
+When I created minimal PHPStan packages with specialized rules, I wanted to use them on [every legacy project we upgrade](https://getrector.org/for-companies) we do with the Rector upgrade team. The most common lowest PHP for these projects is **PHP 7.2**, so it has to be downgraded.
 
 <br>
 
@@ -25,7 +25,7 @@ Let's look at the package I published recently: [TomasVotruba/cognitive-complexi
 
 ## Prepare 2 Build Files
 
-The build files are files, that help use create the downgraded package.
+The build files are files that help us create the downgraded package.
 
 1. The PHP 7.2 `composer.json`
 
@@ -41,7 +41,7 @@ The main `composer.json` requires PHP 8.1, so we can develop with the newest fea
 ```
 
 
-The PHP 7.2 version is exactly the same, except it requires all the other PHP versions bellow:
+The PHP 7.2 version is precisely the same, except it requires all the other PHP versions below:
 
 ```json
 {
@@ -52,7 +52,7 @@ The PHP 7.2 version is exactly the same, except it requires all the other PHP ve
 }
 ```
 
-The reason is to make package tags idempotent. There must be exactly one tag to choose by composer for any PHP versions.
+The reason is to make package tags idempotent. There must be precisely one tag to choose from by the composer for any PHP version.
 
 <br>
 
@@ -69,13 +69,13 @@ return static function (RectorConfig $rectorConfig): void {
 
 <br>
 
-Check the files directly in repository in the [`/build`](https://github.com/TomasVotruba/cognitive-complexity/tree/main/build) directory.
+Check the files directly in the repository in the [`/build`](https://github.com/TomasVotruba/cognitive-complexity/tree/main/build) directory.
 
 ## Create GitHub Action Workflow
 
-You already know, how to downgraded the code Rector. The trick here is, we **downgrade the code in the same repository**, just the `/src` directory, to be exact. Because this is the only code people use, when they get the package via composer.
+You already know how to downgrade the code Rector. The trick here is we **downgrade the code in the same repository**, just the `/src` directory, to be exact. Because this is the only code, people use when they get the package via composer.
 
-Here is the 1st part of workflow, that downgrades the code and applies the coding standard:
+Here is the 1st part of the workflow, which downgrades the code and applies the coding standard:
 
 ```yaml
 name: Downgraded Release
@@ -114,13 +114,13 @@ jobs:
 
 <br>
 
-After this workflow is run, we have in the same repository a PHP 7.2 downgraded code. But how do **we release it, so it is available via composer on PHP 7.2 as well**?
+After GitHub runs this workflow, we have a PHP 7.2 downgraded code in the same repository. But how do **we release it so it is available via composer on PHP 7.2 as well**?
 
 <br>
 
 ## 3 Lines of Gold
 
-I've done few hours of experimenting and consulting with amazing [Jan Kuchar](https://jankuchar.cz/), till we get the sweet 3 lines, that handle all the job. You're gonna be surprised, how simple this is:
+I've spent a few hours experimenting and consulting with amazing [Jan Kuchar](https://jankuchar.cz/), till we get the sweet 3 lines that handle the job. You're going to be surprised how simple this is:
 
 ```yaml
             # publish to the same repository with a new tag
@@ -132,8 +132,8 @@ I've done few hours of experimenting and consulting with amazing [Jan Kuchar](ht
                     git push origin "${GITHUB_REF#refs/tags/}.72"
 ```
 
-* 1st line - we add and commit PHP 7.2 downgraded files; its still only local in the workflow container, not pushed back to the GitHub repository
-* 2nd line - we create a new that, that adds `.72` suffix to the original tag
+* 1st line - we add and commit PHP 7.2 downgraded files; it's still only local in the workflow container, not pushed back to the GitHub repository
+* 2nd line - we create a new that that adds a `.72` suffix to the original tag
 * 3rd line - we push this tag to the repository
 
 That's it!
@@ -144,31 +144,31 @@ Check the [`workflows/downgraded_release.yaml`](https://github.com/TomasVotruba/
 
 ### How does that look in Practise?
 
-* I push tag 0.1.0, it is released on PHP 8.1 immediately
-* The GitHub workflows notices, "oh there is a new tag, I got work to do"
-* The GitHub workflow downgrades the code to PHP 7.2, tags it and pushed it back to the repository - just the tag
+* I push tag 0.1.0. It is released on PHP 8.1 immediately
+* The GitHub workflows notices, "oh, there is a new tag, I got work to do."
+* The GitHub workflow downgrades the code to PHP 7.2, tags it, and pushes it back to the repository - just the tag
 * Then 0.1.0.72 tag is released with PHP 7.2 code
 
 ## Install Anywhere
 
-Now you can require the package on any of PHP 7.2-8.2 versions and get the right code:
+Now you can require the package on any of PHP 7.2-8.2 versions and get the correct code:
 
 ```bash
 # php 7.2
-composer require tomasvotruba/congnitive-complexity
+composer require tomasvotruba/cognitive-complexity
 
 # php 8.0
-composer require tomasvotruba/congnitive-complexity
+composer require tomasvotruba/cognitive-complexity
 
 # php 8.1
-composer require tomasvotruba/congnitive-complexity
+composer require tomasvotruba/cognitive-complexity
 ```
 
-For me, this is truly amazing! Few lines of code in a single Github Workflow file, and we've just made package available to the people, who need it the most.
+For me, this is truly amazing! Few lines of code in a single Github Workflow file, and we've just made the package available to the people who need it the most.
 
 <br>
 
-I'm using this technique in 3 packages and it works perfectly so far. Try it to too, to **get the most ouf ot newest PHP while not keeping any of your users behind**.
+I'm using this technique in 3 packages, and it works perfectly. Try it, too, to **get the most out of the newest PHP while not keeping any of your users behind**.
 
 <br>
 
