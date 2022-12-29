@@ -32,6 +32,7 @@
         "symplify/phpstan-rules": "^11.1.16",
         "tomasvotruba/cognitive-complexity": "^0.0.1",
         "tomasvotruba/type-coverage": "^0.0.1",
+        "tomasvotruba/unused-public": "^0.0.32",
         "tracy/tracy": "^2.9"
     },
     "autoload": {
