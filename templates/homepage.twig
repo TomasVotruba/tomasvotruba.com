@@ -23,28 +23,27 @@
             </div>
         </div>
 
+        <br>
+        <br>
+        <br>
+
         <div class="clearfix"></div>
 
-        <div class="card mb-4">
-            <div class="card-body text-bigger">
-                <p class="mb-3">
-                    What I wrote recently?
-                </p>
+        <h3 class="mb-4">
+            What I wrote recently?
+        </h3>
 
+        {% for post in last_posts %}
+            {# @var post \TomasVotruba\Blog\ValueObject\Post #}
+            <p class="mb-3">
+                <div class="small pull-right text-secondary">
+                    {{ post.getDateTime|date("Y-m-d") }}
+                </div>
 
-                {% for post in last_posts %}
-                    {# @var post \TomasVotruba\Blog\ValueObject\Post #}
-                    <p>
-                    <div class="small pull-right text-secondary">
-                        {{ post.getDateTime|date("Y-m-d") }}
-                    </div>
+                •&nbsp;&nbsp;<a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
+            </p>
 
-                    •&nbsp;&nbsp;<a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
-                    </p>
-
-                {% endfor %}
-            </div>
-        </div>
+        {% endfor %}
 
         <br>
 
@@ -56,19 +55,6 @@
         </blockquote>
 
         <br>
-
-        <div class="card border-warning mt-5">
-            <div class="card-body">
-                <p>
-                    <strong>{{ next_month }}, 2022</strong>: Do you want improve quality of your project and empower your developers to work faster with more joy?
-                </p>
-                <p>
-                    I'm open to a new opportunity for <strong>10-20 hours/week</strong>.<br>
-                    <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::CONTACT')) }}">Contact me</a>, maybe we'll have a match.
-                </p>
-            </div>
-        </div>
-
 
         <script type="text/javascript">
             // @see https://stackoverflow.com/a/30776817/1348344

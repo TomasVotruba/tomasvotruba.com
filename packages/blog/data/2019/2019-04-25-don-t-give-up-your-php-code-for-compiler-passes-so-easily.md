@@ -28,7 +28,7 @@ Let's look at an example that is not far from the reality of your work with. But
 
 ## Make Price Calculation easy to Extend and Maintain without Changing it
 
-Based on [my experience with my clients](/trainings), this is the biggest problem in e-commerce projects. The ideal wishes of company owners clash with limits programmers and architecture:
+Based on my experience with my clients, this is the biggest problem in e-commerce projects. The ideal wishes of company owners clash with limits programmers and architecture:
 
 - "The price calculation must be ready for use"
 - "I need to add different price to product B if they're in combination with product A"

@@ -94,7 +94,7 @@ In many projects I see, while consulting big companies, this pattern **would sav
 
 I miss an evolution with Doctrine. When some packages are stuck for 2-3 years in one place, there is probably already a better replacement. Either on Packagist or in your mind.
 
-As [I mentor and coach teams](/trainings) to write better code with less work, **I'd go against my own beliefs by putting a vendor lock-in their applications.**
+As I mentor and coach teams to write better code with less work, **I'd go against my own beliefs by putting a vendor lock-in their applications.**
 
 That's why I'm dropping support for my Zenify packages built for Doctrine.
 
