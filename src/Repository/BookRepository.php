@@ -19,7 +19,6 @@ final class BookRepository
         $this->books = [
             new Book(
                 'Upgrade Every Day',
-                'Contrary to common experience, upgrading is easy. Learn completely different approach to upgrading, based on daily little steps that accumulate to codebase that never ages.',
                 <<<'CODE_SAMPLE'
 <blockquote class="blockquote mt-2 blockquote-book">
 "Upgrading software is like basic hygiene.
@@ -74,7 +73,6 @@ CODE_SAMPLE
 
             new Book(
                 'Rector - The Power of Automated Refactoring',
-                'Learn to master Rector, to improve your everyday coding, and solving huge changes without effort',
                 <<<'CODE_SAMPLE'
 In 2021 I wrote my first book about <a href="https://github.com/rectorphp/rector">Rector</a> with my favorite PHP hero and renowned writer &ndash; <a href="https://matthiasnoback.nl/">Matthias Noback</a>. It's a practical book with step-by-step examples.
 

@@ -39,6 +39,13 @@ parameters:
         return_type: 99
         property_type: 99
 
+    unused_public:
+        methods: true
+        properties: true
+        constants: true
+        twig_template_paths:
+            - templates
+
     paths:
         - bin
         - src

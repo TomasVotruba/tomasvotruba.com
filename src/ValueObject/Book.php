@@ -13,7 +13,6 @@ final class Book
 {
     public function __construct(
         private readonly string $title,
-        private readonly string $description,
         private readonly string $longDescription,
         private readonly string $coverImage,
         private readonly string $leanpubLink,
@@ -39,11 +38,6 @@ final class Book
     public function isFinished(): bool
     {
         return $this->isFinished;
-    }
-
-    public function getDescription(): string
-    {
-        return $this->description;
     }
 
     public function getSlug(): string
