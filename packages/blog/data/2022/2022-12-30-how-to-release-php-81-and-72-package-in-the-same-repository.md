@@ -135,7 +135,7 @@ I've spent a few hours experimenting and consulting with amazing [Jan Kuchar](ht
 ```
 
 * 1st line - we add and commit PHP 7.2 downgraded files; it's still only local in the workflow container, not pushed back to the GitHub repository
-* 2nd line - we create a new that that adds a `.72` suffix to the original tag
+* 2nd line - we create a new tag that adds a `.72` suffix to the original tag
 * 3rd line - we push this tag to the repository
 
 That's it!
