@@ -129,14 +129,17 @@ I've spent a few hours experimenting and consulting with amazing [Jan Kuchar](ht
             -
                 name: "Tag Downgraded Code"
                 run: |
-                    git commit -a -m "release PHP 7.2 downgraded ${GITHUB_REF#refs/tags/}"
+                    # separate a "git add" to add untracked (new) files too
+                    git add --all
+                    git commit -m "release PHP 7.2 downgraded ${GITHUB_REF#refs/tags/}"
                     git tag "${GITHUB_REF#refs/tags/}.72"
                     git push origin "${GITHUB_REF#refs/tags/}.72"
 ```
 
-* 1st line - we add and commit PHP 7.2 downgraded files; it's still only local in the workflow container, not pushed back to the GitHub repository
-* 2nd line - we create a new tag that adds a `.72` suffix to the original tag
-* 3rd line - we push this tag to the repository
+* 1st line - we add and commit PHP 7.2 files, the `--all` will handle the new files too
+* 2nd line - we commit files (not pushed back yet)
+* 3rd line - we create a new tag that adds a `.72` suffix to the original tag
+* 4th line - we push this tag to the repository
 
 That's it!
 
