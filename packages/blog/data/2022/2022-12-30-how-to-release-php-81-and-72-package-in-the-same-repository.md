@@ -120,26 +120,31 @@ After GitHub runs this workflow, we have a PHP 7.2 downgraded code in the same r
 
 <br>
 
-## 3 Lines of Gold
+## 4 Lines of Gold
 
-I've spent a few hours experimenting and consulting with amazing [Jan Kuchar](https://jankuchar.cz/), till we get the sweet 3 lines that handle the job. You're going to be surprised how simple this is:
+I've spent a few hours experimenting and consulting with amazing [Jan Kuchar](https://jankuchar.cz/), till we got the minimal script that handles the job. You're going to be surprised how simple this is:
 
 ```yaml
             # publish to the same repository with a new tag
             -
                 name: "Tag Downgraded Code"
                 run: |
-                    # separate a "git add" to add untracked (new) files too
                     git add --all
-                    git commit -m "release PHP 7.2 downgraded ${GITHUB_REF#refs/tags/}"
+                    git commit -m "release PHP 7.2 downgraded version"
                     git tag "${GITHUB_REF#refs/tags/}.72"
                     git push origin "${GITHUB_REF#refs/tags/}.72"
 ```
+
+<br>
+
+### What each Lines does?
 
 * 1st line - we add and commit PHP 7.2 files, the `--all` will handle the new files too
 * 2nd line - we commit files (not pushed back yet)
 * 3rd line - we create a new tag that adds a `.72` suffix to the original tag
 * 4th line - we push this tag to the repository
+
+<br>
 
 That's it!
 
