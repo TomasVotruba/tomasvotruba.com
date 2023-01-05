@@ -2,12 +2,6 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="text-center book-banner">
-            <a href="https://leanpub.com/rector-the-power-of-automated-refactoring" target="blank" class="text-center">
-                <img src="{{ asset('assets/images/banner-rector-book.png') }}" class="mb-2 ml-auto mr-auto rounded mb-5" style="max-height: 5em" alt="">
-            </a>
-        </div>
-
         <div class="row">
             <div class="col-3">
                 <a href="{{ path('about') }}">
@@ -62,18 +56,5 @@
         <blockquote class="blockquote text-center">
             "{{ quote|raw }}"
         </blockquote>
-
-        <br>
-
-        <script type="text/javascript">
-            // @see https://stackoverflow.com/a/30776817/1348344
-            var date = new Date();
-            // display every 3rd hour, not to spam users
-            if (date.getHours() % 3 === 1) {
-                document.querySelector('.book-banner').style.display = 'visible';
-            } else {
-                document.querySelector('.book-banner').style.display = 'none';
-            }
-        </script>
     </div>
 {% endblock %}
