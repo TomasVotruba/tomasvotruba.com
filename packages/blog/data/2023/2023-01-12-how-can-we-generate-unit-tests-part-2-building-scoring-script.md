@@ -2,18 +2,18 @@
 id: 374
 title: "How can we Generate Unit Tests - Part 2: Building Scoring Script"
 perex: |
-    I have kicked of the [unit test generator](/blog/how-can-we-generate-unit-tests-part-1-testability-score) idea a with first post a week ago. It was a great [success on Reddit](https://www.reddit.com/r/PHP/comments/103vtkt/how_can_we_generate_unit_tests_part_1_testability/) and I'm happy there is interest in the PHP community.
+    I kicked off the [unit test generator](/blog/how-can-we-generate-unit-tests-part-1-testability-score) idea with the first post a week ago. It was a great [success on Reddit](https://www.reddit.com/r/PHP/comments/103vtkt/how_can_we_generate_unit_tests_part_1_testability/), and I'm happy there is interest in the PHP community.
     <br><br>
     I often got asked about the **testability score**.
-    How does it work and how it can be measured in real code. Well, let's find out.
+    How does it work, and how can it be measured in actual code? Well, let's find out.
 ---
 
 <blockquote class="blockquote text-center">
 "Any code you can share on how you find the methods<br>
-and give them score?"
+and give them a score?"
 </blockquote>
 
-The best way is to learn by example. Lets evaluate 2 methods with different testability score.
+The best way is to learn by example. Let's evaluate 2 methods with different testability scores.
 
 We're on a blog, so let's render a post and display it to the reader:
 
@@ -62,9 +62,9 @@ Which of those methods will be easier to test?
 
 <br>
 
-Let's forget we're human and we can easily *feel* the answer. But it will also take our attention and actually [suck our cognitive energy](/blog/keep-cognitive-complexity-low-with-phpstan/) to read the code.
+Let's forget we're human, and we can quickly *feel* the answer. But it will also take our attention and actually [suck our cognitive energy](/blog/keep-cognitive-complexity-low-with-phpstan/) to read the code.
 
-Instead, we build automated script that will evaluate it for us **for any given project in instant speed**.
+Instead, we build an automated script that will evaluate it for us **for any given project in instant speed**.
 
 <br>
 
@@ -72,7 +72,7 @@ Instead, we build automated script that will evaluate it for us **for any given 
 
 These 2 files are somewhere in our project. How do we get to them?
 
-First we find all PHP files in source code of project.
+First, we find all PHP files in the project's source code.
 
 ```php
 $phpFiles = glob('src/**/*.php');
@@ -109,7 +109,7 @@ $stmts = $phpParser->parse(file_get_contents($phpFile));
 
 ## 2. Get all Public Class Methods
 
-The best way to find all public methods is to use native NodeFinder service:
+The best way to find all public methods is to use the native NodeFinder service:
 
 ```php
 $nodeFinder = new PhpParser\NodeFinder();
@@ -132,22 +132,29 @@ Now that we have all the public class methods, we can evaluate their **testabili
 
 ## 3. Traverse With Node Visitors
 
-Now we have to determine first testability score hits, that will be red flag for testability of the public method.
+Now we have to determine score hits, which will be a red flag for the testability of the public method.
+
+<br>
 
 We have:
 
 * a controller that calls some helper method and internal services
-* a internal service that takes a value object and turns it into a string
+* an internal service that takes a value object and turns it into a string
 
-Would you test a controller action method? I don't know how about you, but I have never tested a controller with PHPUnit test. I think we should avoid it.
+Would you test a controller action method? I don't know about you, but I have never tested a controller with a PHPUnit test. Let's avoid it.
 
-We should mark such public method in a controller with high testability score. How?
+<br>
 
-We have nodes, so we can another php-parser service, a `NodeTraverser`:
+We mark **a public method in a controller with high testability score**. But how?
+
+We have nodes so that we can use another php-parser service, a `NodeTraverser`:
 
 ```php
+use PhpParser\NodeTraverser;
+
 foreach ($publicClassMethods as $publicClassMethod) {
-    $nodeTraverser = new PhpParser\NodeTraverser;
+    $nodeTraverser = new NodeTraverser;
+
     // add scoring node visitors
     $nodeTraverser->addVisitor(...);
 
@@ -155,7 +162,11 @@ foreach ($publicClassMethods as $publicClassMethod) {
 }
 ```
 
-Scoring node visitor has very simple if/else structure:
+<br>
+
+## 4. Add Scoring Node Visitor
+
+Scoring node visitor has a straightforward if/else structure:
 
 ```php
 use PhpParser\Node;
@@ -195,5 +206,53 @@ final class ActionControllerNodeVisitor extends NodeVisitorAbstract
 }
 ```
 
-This is one of possible scoring node visitors. In reality, we would also check for return nodes and class parents, to be sure we have a controller class here. But for practical reasons we keep it simple.
+This is our first scoring node visitor!
 
+In reality, we would also check for `return` inside the class method, which works without return type declaration. Also, we would check the parent class to be sure we have a controller class here. But for practical reasons, we keep it simple.
+
+
+## 5. Putting Node Traverser and Scoring Together
+
+```php
+use PhpParser\NodeTraverser;
+
+$testabilityScoreResults = [];
+
+foreach ($publicClassMethods as $publicClassMethod) {
+    $nodeTraverser = new NodeTraverser;
+
+    // add scoring node visitors
+    $testabilityScoreCounter = new TestabilityScoreCounter();
+
+    $nodeTraverser->addVisitor(new ActionControllerNodeVisitor($testabilityScoreCounter));
+    $nodeTraverser->traverse([$publicClassMethod]);
+
+
+    // here, we get a testability score for every public method
+    $methodName = $publicClassMethod->name->toString();
+    $testabilityScoreResults[$methodName] = $testabilityScoreCounter->getScore();
+}
+```
+
+<br>
+
+Now we have a complete script that:
+
+* finds all PHP files,
+* parses them to php-parser nodes,
+* finds public methods,
+* rates them by a set of testability node visitors
+
+✅
+
+## 6. Show Results for the Public Methods
+
+<img src="/assets/images/posts/2023/testability-score.png" class="mb-3 mt-3 shadow img-thumbnail">
+
+You can now use this script to find the easiest methods to test and also what methods to avoid better.
+
+This script already brings you to value, as **you can learn testing by taking on low-hanging fruit** first. It's handy to learn testing for anyone who still needs to try it. See you next week for another step.
+
+<br>
+
+Happy coding!
