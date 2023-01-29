@@ -50,7 +50,7 @@ Well, unless the GPT is down. Then it takes longer :)
 
 <br>
 
-**Using real-time does not make sense because the response could be faster.
+**Using real-time does not make sense because the response could be faster**.
 It's better to send the request to a background queue, let the worker handle it, and show the response when it's done.
 
 I want to refactor TestGen AI to Livewire to address this.
