@@ -87,7 +87,7 @@ In the next post, we'll look at the 2 different models and how to treat them rig
 * What is a blind way to go?
 * How do you use it via REST API?
 
-Let me know in the comments or share on Twitter with #GPTtips. I believe we can learn a lot from each other and reach our goals faster.
+Let me know in the comments or share on Twitter with <a href="https://twitter.com/search?q=%23gpttips">#GPTtips</a>. I believe we can learn a lot from each other and reach our goals faster.
 
 <br>
 
