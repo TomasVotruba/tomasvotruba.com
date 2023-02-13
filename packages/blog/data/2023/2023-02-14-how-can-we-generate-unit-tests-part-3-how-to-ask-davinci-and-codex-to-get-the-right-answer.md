@@ -3,17 +3,17 @@ id: 377
 title: "How can we Generate Unit Tests - Part 3: How to ask DaVinci and Codex to get the right answer"
 
 perex: |
-    Last week, I kicked of first post about [tips and tricks with GPT](/blog/lets-share-fails-and-tricks-with-gpt). In the meantime, Marcel posted a great practical piece on [GPT and solutions based on exception messages](https://beyondco.de/blog/ai-powered-error-solutions-for-laravel).
+    Last week, I kicked off the first post about [tips and tricks with GPT](/blog/lets-share-fails-and-tricks-with-gpt). In the meantime, Marcel posted a great practical piece on [GPT and solutions based on exception messages](https://beyondco.de/blog/ai-powered-error-solutions-for-laravel).
     <br><br>
-    Today, we look into 2 pre-trained models that GPT provides - DaVinci and Codex - and how to talk to them, to get what we need.
+    Today, we look into 2 pre-trained models that GPT provides - DaVinci and Codex - and how to talk to them to get what we need.
 ---
 
-First, lets define what pre-trained model will we talk about:
+First, let's define what pre-trained model we will talk about:
 
-* **DaVinci** is a text model that you know from [Chat GPT](https://chat.openai.com/). You can ask it question, it gives us an answer.
+* **DaVinci** is a text model you know from [Chat GPT](https://chat.openai.com/). You can ask it a question, and it gives us an answer.
 * **Codex** is a subset of DaVinci that is tailored for code-related prompts. It can help you fix, improve or complete code. This model is behind [Github Copilot](https://en.wikipedia.org/wiki/GitHub_Copilot#Implementation).
 
-Which one is better for generating unit tests? Intuitively, we'd say the second one, right? Let's try it out on practical example.
+Which one is better for generating unit tests? Intuitively, the second one, right? Let's try it out on a practical example.
 
 ## 1. Prepare the prompt script
 
@@ -25,7 +25,7 @@ composer require openai-php/client
 
 <br>
 
-Then we create a new file `generate-test.php` and initialize the OpenAI client there:
+Then we create a new file, `generate-test.php` and initialize the OpenAI client there:
 
 ```php
 <?php
@@ -39,7 +39,7 @@ How simple is that? Oh, where do you get the API key? [Right here](https://beta.
 
 <br>
 
-Last step is to ask the prompt. To keep it simple, we provide the desired model and our prompt:
+The last step is to ask the prompt. To keep it simple, we provide the desired model and our prompt:
 
 ```php
 $result = $client->completions()->create([
@@ -58,13 +58,13 @@ echo $result['choices'][0]['text'];
 
 <br>
 
-Great! Now that we have the bare code, let's **jump to the fun part - prompting** ↓
+Great! Now that we have the bare code, lets **jump to the fun part - prompting** ↓
 
 <br>
 
 ## 2. Asking DaVinci
 
-The prompt is a question - it can be short string like "What is the best way to learn Laravel 10", or in our case - long as the provided PHP code that we want to test. To keep our code clear, we'll add prompt contents to the `prompt.txt` file and load it's file contents:
+The prompt is a question - it can be a short string like "What is the best way to learn Laravel 10", or in our case - long as the provided PHP code that we want to test. To keep our code clear, we'll add prompt contents to the `prompt.txt` file and load its file contents:
 
 ```php
 $result = $client->completions()->create([
@@ -75,22 +75,23 @@ $result = $client->completions()->create([
 
 <br>
 
-So, what exactly we want from the GPT? Generate unit test. **It's better to ask for specific details**. Like testing framework ("PHPUnit), public method name we want to test ("someMagic"), that we want the data provider and how many cases it must contain.
+So, what exactly do we want from the GPT? Generate unit test. **It's better to ask for specific details**. Like testing framework ("PHPUnit), the public method name we want to test ("someMagic"), that we want the data provider, and how many cases it must contain.
 
 <br>
 
-### Rule of thumb: be specific, but not overly detailed
+### Rule of thumb: be specific but not overly detailed
 
-Imagine you're talking to a human. The more specific we are, the better the answer will be. But if we start a 5 minutes monolog, about how to write a test, the person will get bored and will stop listening. It will be very hard for them to see, what is important for us.
+Imagine you're talking to a human. The more specific we are, the better the answer will be. But if we start a 5 minutes monolog, about how to write a test, the person will get bored and stop listening. It will be tough for them to see what is essential for us.
 
-Use the same practical language as you would use in a real conversation. **Be specific, but not keep it to the point**.
+Use the same practical language as you would use in a real conversation. **Be specific, but keep it to the point**.
 
 <br>
 
-```bash
-Generate PHPUnit test for a "someMagic()" method with dataprovider of 4 use cases for this code:
+```anything
+Generate PHPUnit test for a "someMagic()" method with data provider of
+4 use cases for this code:
 
-```php
+'''php
 <?php
 
 class SomeClass
@@ -104,6 +105,7 @@ class SomeClass
       return $firstNumber + $secondNumber;
     }
 }
+'''
 ```
 
 <br>
@@ -116,7 +118,7 @@ php generate-test.php
 
 <br>
 
-In 2-5 seconds we should get an answer:
+In 2-5 seconds, we should get an answer:
 
 ```php
 <?php
@@ -124,7 +126,7 @@ In 2-5 seconds we should get an answer:
 use PHPUnit\Framework\TestCase;
 ```
 
-Oh, what is this? It starts as a test case, but I feel some crutial part is missing.
+Oh, what is this? It starts as a test case, but some crucial part is missing.
 
 <br>
 
@@ -142,7 +144,7 @@ $result = $client->completions()->create([
 
 <br>
 
-The response will be longer now. If we ever get a longer test case that won't fit, we'll just increase `max_tokens`.
+The response will be longer now. If we ever get a longer test case that won't fit, we'll increase `max_tokens`.
 
 
 ```bash
@@ -183,11 +185,11 @@ class SomeClassTest extends TestCase
 }
 ```
 
-At first sight, it looks like valid PHP code. We can use it as it is!
+At first sight, it looks like a valid PHP code. We can use it as it is!
 
 <br>
 
-Often, the output needs cleaning from comments, fixing text artefacts, adjusting to best practise like `setUp()`, using `yield`, the right namespace, adding strict types, removing pointless `@covers`, using PHP 8 attributes syntax and other boring steps that [testgenai.com](https://testgenai.com/) handles for you.
+Often, the output needs cleaning from comments, fixing text artifacts, adjusting to best practices like `setUp()`, using `yield`, the correct namespace, adding strict types, removing pointless `@covers`, using PHP 8 attributes syntax and other tedious steps that [testgenai.com](https://testgenai.com/) handles for you.
 
 
 <br>
@@ -196,7 +198,7 @@ Let's try the other model now ↓
 
 ## 2. Asking Codex
 
-We already have code ready, so we just change the model:
+We already have the code ready, so we only change the model:
 
 ```php
 $result = $client->completions()->create([
@@ -233,33 +235,34 @@ Data provider:
 
 <br>
 
-Oh, what is this mess? Does that look like PHPUnit test? I don't think so!
+Oh, what is this mess? Does that look like a PHPUnit test? I don't think so!
 
 <br>
 
-What is going on? The prompt is the same, everything it explained, but it seems the `code-davinci-002` model has no clue about what we want. It just generates a table (for me) or other mess, until the 1000 tokens are used.
+What is going on? The prompt is the same, we explained everything, but it seems the `code-davinci-002` model has no clue about what we want. It generates a table (for me) or another mess until the 1000 tokens are used.
 
 ### Finetuning the Codex Output
 
-This is trick I'm very grateful to [Marcel](https://twitter.com/marcelpociot) to share with me.
+I'm very grateful to [Marcel](https://twitter.com/marcelpociot) for sharing the following trick with me.
 
 <br>
 
-The DaVinci is rather generic and can figure out what we need. Yet when we go more complex, it return more unstable results.
+The DaVinci is rather generic and can figure out what we need. Yet when we go more complex, it returns more unstable results.
 
-The Codex on the contrary need more context - *context is everything*, right? We have to be even more specific and show **an example of what we want**.
+The Codex, on the contrary, needs more context - *context is everything*, right? We must be even more specific and show **an example of what we want**.
 
 <br>
 
-In practise, we'll hardcode 2 new snippets to the prompt:
+In practice, we'll hardcode 2 new snippets to the prompt:
 
-* the example input PHP code
-* the example output unit test code
+* The example input PHP code
+* The example output unit test code
 
-```php
-Generate PHPUnit test for a "someMagic()" method with dataprovider of 4 use cases for this code:
+```anything
+Generate PHPUnit test for a "someMagic()" method with data provider
+of 4 use cases for this code:
 
-'''php
+'''
 <?php
 
 class SomeClass
@@ -273,7 +276,7 @@ class SomeClass
 
 Output:
 
-'''php
+'''
 <?php
 
 use PHPUnit\Framework\TestCase
@@ -294,7 +297,7 @@ final class SomeTest extends TestCase
 
 Now generate a test for this code:
 
-'''php
+'''
 <?php
 
 class SomeClass
@@ -312,16 +315,16 @@ class SomeClass
 
 Result:
 
-'''php
+'''
 ```
 
 <br>
 
-Imagine we're teaching another human being and they need example. What is "generate unit test" mean exactly? Well, exactly this!
+Imagine we're teaching another human being, and they need an example. What is "generate unit test" mean exactly? Well, precisely this!
 
 <br>
 
-Now, I'll let you run the script for yourself to enjoy the surprise of result:
+Now, I'll let you run the script for yourself to enjoy the surprise of the result:
 
 ```bash
 php generate-test.php
@@ -329,35 +332,37 @@ php generate-test.php
 
 <br>
 
-Oh, in my case it generates the test, but keep looping with some markdown and mess until it reaches the 1000 tokens.
+Oh, in my case, it generates the test but keeps looping with some markdown and mess until it reaches the 1000 tokens.
 
 <br>
 
-Another tip from Marcel is to use a [`stop` parameter](https://platform.openai.com/docs/api-reference/completions/create#completions/create-stop). This parameter stops the generation when it is reached. We'll get only first generated test as a result ↓
+Another tip from Marcel is to use a [`stop` parameter](https://platform.openai.com/docs/api-reference/completions/create#completions/create-stop). This parameter stops the generation when it is reached. We'll get only the first generated test as a result ↓
 
 ```php
 $result = $client->completions()->create([
     'model' => 'code-davinci-002',
     'prompt' => file_get_contents(__DIR__ . '/prompt.txt'),
     'max_tokens' => 1000,
-    'stop' => '```'
+    'stop' => "'''"
 ]);
 ```
 
 
 <br>
 
-Now re-run and see:
+Now re-run and see for yourself:
 
 ```bash
 php generate-test.php
 ```
 
+
+
 <br>
 
-Play around, discover and share your experience.
+Play around, discover, and share your experience.
 
-Which one do you prefer? I like the first one at first, but with more complex code, the codex seems more stable. Run [testgenai.com](https://testgenai.com/) to try battle test the latter one.
+Which one do you prefer? I like the first one at first, but with more complex code, the codex seems more stable. Try [testgenai.com](https://testgenai.com/) to generated test faster on the fly.
 
 <br>
 
