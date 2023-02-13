@@ -3,22 +3,20 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3">
-                <a href="{{ path('about') }}">
-                    <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="rounded-circle mt-2 ml-5 mb-5 shadow border border-light">
-                </a>
-            </div>
-
-            <div class="col-9">
+            <div class="col-12 col-md-9">
                 <h1>
                     I help PHP Companies <br>
                     Change Fast&nbsp;and&nbsp;Safely
                 </h1>
             </div>
+
+            <div class="col-4 col-md-3">
+                <a href="{{ path('about') }}">
+                    <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="mt-auto rounded-circle shadow">
+                </a>
+            </div>
         </div>
 
-        <br>
-        <br>
         <br>
 
         <div class="clearfix"></div>
@@ -30,12 +28,12 @@
         <div class="text-bigger">
             {% for post in last_posts %}
                 {# @var post \TomasVotruba\Blog\ValueObject\Post #}
-                <div class="mb-3 row">
-                    <div class="col-12 col-md-9">
+                <div class="mb-4 row">
+                    <div class="col-12">
                         <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
                     </div>
 
-                    <div class="small text-secondary text-left text-md-right col-12 col-md-3 pt-2 pt-md-0">
+                    <div class="small text-secondary col-12 pt-2">
                         {{ post.getDateTime|date("Y-m-d") }}
                     </div>
                 </div>
