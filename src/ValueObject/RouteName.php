@@ -45,4 +45,9 @@ final class RouteName
      * @var string
      */
     public const BOOK_DETAIL = 'book-detail';
+
+    /**
+     * @var string
+     */
+    public const POST_IMAGE  = 'post-image';
 }
