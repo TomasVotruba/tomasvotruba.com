@@ -5,6 +5,15 @@
 
         {#  social tags based on https://www.phpied.com/minimum-viable-sharing-meta-tags/ #}
         <meta name="description" property="og:description" content="{{ post.perex|striptags }}" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="votrubaT" />
+        <meta name="twitter:creator" content="votrubaT" />
+        <meta name="twitter:title" content="{{ post.title }}" />
+
+        <meta property="og:image" content="{{ path('post-image', {'title': post.getTitle()}) }}" />
+        <meta name="twitter:image" content="{{ path('post-image', {'title': post.title }) }}" />
+
     </head>
 
     <body>
