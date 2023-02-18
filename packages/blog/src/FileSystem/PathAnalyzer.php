@@ -6,7 +6,6 @@ namespace TomasVotruba\Blog\FileSystem;
 
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
-use Symplify\SmartFileSystem\SmartFileInfo;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class PathAnalyzer
@@ -23,9 +22,9 @@ final class PathAnalyzer
      */
     private const NAME_REGEX = '(?<name>[\w\d-]*)';
 
-    public function resolveDateTime(SmartFileInfo $fileInfo): DateTime
+    public function resolveDateTime(string $filePath): DateTime
     {
-        $match = Strings::match($fileInfo->getFilename(), '#' . self::DATE_REGEX . '#');
+        $match = Strings::match($filePath, '#' . self::DATE_REGEX . '#');
         if ($match === null) {
             $message = sprintf('Date was not resolved correctly from "%s" file', $fileInfo->getFilename());
             throw new ShouldNotHappenException($message);
@@ -39,9 +38,9 @@ final class PathAnalyzer
         return DateTime::from($date);
     }
 
-    public function getSlug(SmartFileInfo $fileInfo): string
+    public function getSlug(string $filePath): string
     {
-        $dateTime = $this->resolveDateTime($fileInfo);
+        $dateTime = $this->resolveDateTime($filePath);
         $dateAndNamePattern = sprintf('#%s-%s#', self::DATE_REGEX, self::NAME_REGEX);
 
         $match = (array) Strings::match($fileInfo->getFilename(), $dateAndNamePattern);

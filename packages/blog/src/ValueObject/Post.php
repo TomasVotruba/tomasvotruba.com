@@ -24,11 +24,8 @@ final class Post
         private readonly DateTimeInterface $dateTime,
         private readonly string $perex,
         private readonly string $htmlContent,
-        private readonly ?string $tweetText,
-        private readonly ?string $tweetImage,
         private readonly ?DateTimeInterface $updatedAt,
         private readonly ?string $updatedMessage,
-        private readonly string $sourceRelativePath,
         private readonly ?DateTimeInterface $deprecatedAt,
         private readonly ?string $deprecatedMessage,
         private readonly ?string $language,
@@ -65,21 +62,6 @@ final class Post
         return $this->htmlContent;
     }
 
-    public function getTweetText(): ?string
-    {
-        return $this->tweetText;
-    }
-
-    public function hasTweet(): bool
-    {
-        return $this->tweetText !== null;
-    }
-
-    public function getTweetImage(): ?string
-    {
-        return $this->tweetImage;
-    }
-
     public function getSlug(): string
     {
         return $this->slug;
@@ -93,11 +75,6 @@ final class Post
     public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;
-    }
-
-    public function getGitHubEditUrl(): string
-    {
-        return 'https://github.com/tomasvotruba/tomasvotruba.com/edit/main/' . $this->sourceRelativePath;
     }
 
     public function getDeprecatedAt(): ?DateTimeInterface

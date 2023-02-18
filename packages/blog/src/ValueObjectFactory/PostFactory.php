@@ -5,14 +5,13 @@ declare(strict_types=1);
 namespace TomasVotruba\Blog\ValueObjectFactory;
 
 use Nette\Utils\DateTime;
+use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use ParsedownExtra;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\Yaml\Yaml;
 use Symplify\PackageBuilder\Parameter\ParameterProvider;
-use Symplify\SmartFileSystem\FileSystemGuard;
-use Symplify\SmartFileSystem\SmartFileInfo;
 use TomasVotruba\Blog\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
 use TomasVotruba\Blog\PostSnippetDecorator;
@@ -51,7 +50,6 @@ final class PostFactory
         private readonly PostGuard $postGuard,
         private readonly PostSnippetDecorator $postSnippetDecorator,
         ParameterProvider $parameterProvider,
-        private readonly FileSystemGuard $fileSystemGuard
     ) {
         $siteUrl = $parameterProvider->provideStringParameter(Option::SITE_URL);
         $this->siteUrl = rtrim($siteUrl, '/');
@@ -59,9 +57,11 @@ final class PostFactory
         $this->projectDir = $parameterProvider->provideStringParameter('kernel.project_dir');
     }
 
-    public function createFromFileInfo(SmartFileInfo $smartFileInfo): Post
+    public function createFromFilePath(string $filePath): Post
     {
-        $matches = Strings::match($smartFileInfo->getContents(), self::CONFIG_CONTENT_REGEX);
+        $fileContents = FileSystem::read($filePath);
+
+        $matches = Strings::match($fileContents, self::CONFIG_CONTENT_REGEX);
 
         if (! isset($matches['config'])) {
             throw new ShouldNotHappenException();
@@ -76,7 +76,7 @@ final class PostFactory
             throw new InvalidPostConfigurationException('Post content is missing');
         }
 
-        $slug = $this->pathAnalyzer->getSlug($smartFileInfo);
+        $slug = $this->pathAnalyzer->getSlug($filePath);
         $htmlContent = $this->parsedownExtra->parse($matches['content']);
 
         $htmlContent = $this->postSnippetDecorator->decorateHtmlContent($htmlContent);
@@ -86,20 +86,15 @@ final class PostFactory
             $configuration['deprecated_since']
         ) : null;
 
-        $tweetText = $configuration['tweet'] ?? null;
-
         $post = new Post(
             $id,
             $title,
             $slug,
-            $this->pathAnalyzer->resolveDateTime($smartFileInfo),
+            $this->pathAnalyzer->resolveDateTime($filePath),
             $configuration['perex'],
             $this->decorateHeadlineWithId($htmlContent),
-            $tweetText,
-            $this->resolveTweetImage($configuration),
             $updatedAt,
             $configuration['updated_message'] ?? null,
-            $this->getSourceRelativePath($smartFileInfo),
             $deprecatedAt,
             $configuration['deprecated_message'] ?? null,
             $configuration['lang'] ?? null,
@@ -110,33 +105,6 @@ final class PostFactory
         $this->postGuard->validate($post);
 
         return $post;
-    }
-
-    /**
-     * @param array<string, mixed> $configuration
-     */
-    private function resolveTweetImage(array $configuration): ?string
-    {
-        $tweetImage = $configuration['tweet_image'] ?? null;
-        if ($tweetImage === null) {
-            return null;
-        }
-
-        $tweetImage = ltrim((string) $tweetImage, '/');
-        if (\str_starts_with($tweetImage, 'https://')) {
-            return $tweetImage;
-        }
-
-        $localTweetImagePath = $this->projectDir . '/public/' . $tweetImage;
-        $this->fileSystemGuard->ensureFileExists($localTweetImagePath, __METHOD__);
-
-        return $this->siteUrl . '/' . $tweetImage;
-    }
-
-    private function getSourceRelativePath(SmartFileInfo $smartFileInfo): string
-    {
-        $relativeFilePath = $smartFileInfo->getRelativeFilePath();
-        return ltrim($relativeFilePath, './');
     }
 
     /**
