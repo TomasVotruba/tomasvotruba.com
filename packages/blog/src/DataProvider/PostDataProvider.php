@@ -24,10 +24,11 @@ final class PostDataProvider
         $posts = [];
 
         $markdownFileFinder = Finder::create()
-            ->name('.md')
+            ->name('*.md')
             ->in(__DIR__ . '/../../data');
 
-        $filePaths = iterator_to_array($markdownFileFinder->getIterator());
+        $fileInfos = iterator_to_array($markdownFileFinder->getIterator());
+        $filePaths = array_keys($fileInfos);
 
         foreach ($filePaths as $filePath) {
             $post = $this->postFactory->createFromFilePath($filePath);

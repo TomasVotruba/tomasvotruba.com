@@ -29,7 +29,6 @@ final class Post
         private readonly ?DateTimeInterface $deprecatedAt,
         private readonly ?string $deprecatedMessage,
         private readonly ?string $language,
-        private readonly string $absoluteUrl,
         private readonly ?int $nextPostId
     ) {
     }
@@ -115,11 +114,6 @@ final class Post
     public function isFuture(): bool
     {
         return $this->dateTime > DateTime::from('now');
-    }
-
-    public function getAbsoluteUrl(): string
-    {
-        return $this->absoluteUrl;
     }
 
     public function getNextPostId(): int|null

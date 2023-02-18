@@ -26,7 +26,7 @@ final class PathAnalyzer
     {
         $match = Strings::match($filePath, '#' . self::DATE_REGEX . '#');
         if ($match === null) {
-            $message = sprintf('Date was not resolved correctly from "%s" file', $fileInfo->getFilename());
+            $message = sprintf('Date was not resolved correctly from "%s" file', $filePath);
             throw new ShouldNotHappenException($message);
         }
 
@@ -43,7 +43,7 @@ final class PathAnalyzer
         $dateTime = $this->resolveDateTime($filePath);
         $dateAndNamePattern = sprintf('#%s-%s#', self::DATE_REGEX, self::NAME_REGEX);
 
-        $match = (array) Strings::match($fileInfo->getFilename(), $dateAndNamePattern);
+        $match = (array) Strings::match($filePath, $dateAndNamePattern);
 
         $dateLessBreakDateTime = DateTime::from('2021-02-22');
         if ($dateTime >= $dateLessBreakDateTime) {

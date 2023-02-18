@@ -8,18 +8,14 @@ use Nette\Utils\DateTime;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use ParsedownExtra;
-use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\Yaml\Yaml;
-use Symplify\PackageBuilder\Parameter\ParameterProvider;
 use TomasVotruba\Blog\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
 use TomasVotruba\Blog\PostSnippetDecorator;
 use TomasVotruba\Blog\Validation\PostGuard;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
-use TomasVotruba\Website\ValueObject\Option;
-use TomasVotruba\Website\ValueObject\RouteName;
 
 final class PostFactory
 {
@@ -39,22 +35,12 @@ final class PostFactory
      */
     private const HEADLINE_LEVEL_REGEX = '#<h(?<level>\d+)>(?<headline>.*?)<\/h\d+>#';
 
-    private readonly string $projectDir;
-
-    private readonly string $siteUrl;
-
     public function __construct(
         private readonly ParsedownExtra $parsedownExtra,
         private readonly PathAnalyzer $pathAnalyzer,
-        private readonly RouterInterface $router,
         private readonly PostGuard $postGuard,
         private readonly PostSnippetDecorator $postSnippetDecorator,
-        ParameterProvider $parameterProvider,
     ) {
-        $siteUrl = $parameterProvider->provideStringParameter(Option::SITE_URL);
-        $this->siteUrl = rtrim($siteUrl, '/');
-
-        $this->projectDir = $parameterProvider->provideStringParameter('kernel.project_dir');
     }
 
     public function createFromFilePath(string $filePath): Post
@@ -98,7 +84,6 @@ final class PostFactory
             $deprecatedAt,
             $configuration['deprecated_message'] ?? null,
             $configuration['lang'] ?? null,
-            $this->createAbsoluteUrl($slug),
             $configuration['next_post_id'] ?? null,
         );
 
@@ -124,14 +109,5 @@ final class PostFactory
             $unicodeString = $asciiSlugger->slug($clearHeadline);
             return sprintf('<h%d id="%s">%s</h%d>', $level, $unicodeString, $headline, $level);
         });
-    }
-
-    private function createAbsoluteUrl(string $slug): string
-    {
-        $siteUrl = rtrim($this->siteUrl, '/');
-
-        return $siteUrl . $this->router->generate(RouteName::POST_DETAIL, [
-            'slug' => $slug,
-        ]);
     }
 }
