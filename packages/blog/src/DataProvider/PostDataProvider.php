@@ -4,21 +4,15 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\DataProvider;
 
-use Symplify\SmartFileSystem\Finder\SmartFinder;
+use Symfony\Component\Finder\Finder;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Blog\ValueObjectFactory\PostFactory;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class PostDataProvider
 {
-    /**
-     * @var string
-     */
-    private const POST_DIRECTORY = __DIR__ . '/../../data';
-
     public function __construct(
         private readonly PostFactory $postFactory,
-        private readonly SmartFinder $smartFinder
     ) {
     }
 
@@ -29,9 +23,16 @@ final class PostDataProvider
     {
         $posts = [];
 
-        $fileInfos = $this->smartFinder->find([self::POST_DIRECTORY], '*.md');
-        foreach ($fileInfos as $fileInfo) {
-            $post = $this->postFactory->createFromFileInfo($fileInfo);
+        $markdownFileFinder = Finder::create()
+            ->name('*.md')
+            ->in(__DIR__ . '/../../data');
+
+        $fileInfos = iterator_to_array($markdownFileFinder->getIterator());
+        $filePaths = array_keys($fileInfos);
+
+        foreach ($filePaths as $filePath) {
+            $post = $this->postFactory->createFromFilePath($filePath);
+
             if (isset($posts[$post->getId()])) {
                 $message = sprintf('Post with id "%d" is duplicated. Increase it to higher one', $post->getId());
                 throw new ShouldNotHappenException($message);

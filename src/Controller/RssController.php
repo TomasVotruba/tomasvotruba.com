@@ -24,17 +24,16 @@ final class RssController extends AbstractController
     #[Route(path: 'rss-xml')]
     public function __invoke(): Response
     {
-
         $posts = $this->postRepository->fetchForRss();
 
         $response = $this->render('rss.twig', [
             'posts' => $posts,
             'most_recent_post_date_time' => $this->getMostRecentPostDateTime($posts),
-	]);
+        ]);
 
-	$response->headers->set("Content-type", "text/xml");
+        $response->headers->set('Content-type', 'text/xml');
 
-	return $response;
+        return $response;
     }
 
     /**
