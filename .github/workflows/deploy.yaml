@@ -29,15 +29,4 @@ jobs:
             # composer install cache - https://github.com/ramsey/composer-install
             -   uses: "ramsey/composer-install@v1"
 
-            # generate website to /output directory
-            -   run: bin/console dump-static-site --ansi
-
-            # see https://github.com/JamesIves/github-pages-deploy-action
-            -
-                name: Deploy 🚀
-                uses: JamesIves/github-pages-deploy-action@3.7.1
-                with:
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                    BRANCH: gh-pages
-                    FOLDER: output
-                    CLEAN: true
+            # @todo deploy to remote server
