@@ -1,27 +1,6 @@
 includes:
     - vendor/symplify/phpstan-rules/config/symplify-rules.neon
 
-services:
-    -
-        class: Symplify\PHPStanRules\Rules\PreferredClassRule
-        tags: [phpstan.rules.rule]
-        arguments:
-            oldToPreferredClasses:
-                'PhpCsFixer\Finder': 'Symfony\Component\Finder\Finder'
-
-    # require constant in argument position
-    -
-        class: Symplify\PHPStanRules\Rules\Enum\RequireConstantInMethodCallPositionRule
-        tags: [phpstan.rules.rule]
-        arguments:
-            requiredConstantInMethodCall:
-                Symfony\Component\DependencyInjection\Loader\Configurator\ParametersConfigurator:
-                    set: [0]
-                Symplify\PackageBuilder\Parameter\ParameterProvider:
-                    provideArrayParameter: [0]
-                    provideStringParameter: [0]
-                    provideIntParameter: [0]
-
 parameters:
     # see https://github.com/tomasvotruba/cognitive-complexity
     cognitive_complexity:
