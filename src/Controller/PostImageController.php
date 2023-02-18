@@ -20,7 +20,9 @@ use TomasVotruba\Website\ValueObject\RouteName;
  */
 final class PostImageController extends AbstractController
 {
-    #[Route(path: '/thumbnail/{title}', name: RouteName::POST_IMAGE)]
+    #[Route(path: '/thumbnail/{title}.png', name: RouteName::POST_IMAGE, requirements: [
+        'title' => '.+',
+    ])]
     public function __invoke(Request $request): BinaryFileResponse
     {
         // @see https://imagine.readthedocs.io/en/stable/

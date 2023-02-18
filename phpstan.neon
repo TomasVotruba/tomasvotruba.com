@@ -82,3 +82,6 @@ parameters:
 
         # invalid types
         - '#Parameter \#2 \$font of method Imagine\\Draw\\DrawerInterface\:\:text\(\) expects Imagine\\Image\\AbstractFont, Imagine\\Image\\FontInterface given#'
+
+        # part of route name
+        - '#Relative file path "/thumbnail/\{title\}\.png" is not allowed, use absolute one with __DIR__#'
