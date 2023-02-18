@@ -49,5 +49,5 @@ final class RouteName
     /**
      * @var string
      */
-    public const POST_IMAGE  = 'post-image';
+    public const POST_IMAGE = 'post-image';
 }

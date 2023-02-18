@@ -1,6 +1,6 @@
 ---
 id: 377
-title: "How can we Generate Unit Tests - Part 3: How to ask DaVinci and Codex to get the right answer"
+title: "How to ask DaVinci and Codex to get the right answer"
 
 perex: |
     Last week, I kicked off the first post about [tips and tricks with GPT](/blog/lets-share-fails-and-tricks-with-gpt). In the meantime, Marcel posted a great practical piece on [GPT and solutions based on exception messages](https://beyondco.de/blog/ai-powered-error-solutions-for-laravel).
