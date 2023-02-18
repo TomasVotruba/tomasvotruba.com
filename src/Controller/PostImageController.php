@@ -26,16 +26,16 @@ final class PostImageController extends AbstractController
         // @see https://imagine.readthedocs.io/en/stable/
         $title = $request->get('title');
 
-        $rbg = new RGB();
+        $rgb = new RGB();
         $imagine = new Imagine();
 
         $imageFilePath = __DIR__ . '/../../public/assets/images/posts/thumbnail/' . Strings::webalize($title) . '.png';
 
-        $size = new Box(2040, 1117);
-        $image = $imagine->create($size);
+        $box = new Box(2040, 1117);
+        $image = $imagine->create($box);
 
         // downloaded from https://fonts.google.com/specimen/Source+Sans+Pro?query=Source+Sans+Pro
-        $blackColor = $rbg->color('000000');
+        $blackColor = $rgb->color('000000');
         $blackHeadlineFont = $imagine->font(
             __DIR__ . '/../../public/assets/fonts/SourceSansPro-Bold.ttf',
             100,
@@ -43,9 +43,10 @@ final class PostImageController extends AbstractController
         );
 
         $drawer = $image->draw();
+
         $drawer->text($title, $blackHeadlineFont, new Point(130, 340), 0, 1800);
 
-        $greenColor = $rbg->color('1a8917');
+        $greenColor = $rgb->color('1a8917');
         $greenTextFont = $imagine->font(
             __DIR__ . '/../../public/assets/fonts/Inter-VariableFont_slnt,wght.ttf',
             40,
