@@ -23,9 +23,6 @@ return function (RectorConfig $rectorConfig): void {
 
     $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages']);
 
-    // experimental parallel boost
-    $rectorConfig->parallel();
-
     $rectorConfig->skip([
         RemoveExtraParametersRector::class,
         MoveCurrentDateTimeDefaultInEntityToConstructorRector::class,

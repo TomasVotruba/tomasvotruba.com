@@ -3,16 +3,9 @@
 declare(strict_types=1);
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
-use Symplify\PackageBuilder\Parameter\ParameterProvider;
-use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
-use TomasVotruba\Website\ValueObject\Option;
 
 return function (ContainerConfigurator $containerConfigurator): void {
     $containerConfigurator->import(__DIR__ . '/../packages/*/config/*.php');
-
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SITE_URL, 'https://tomasvotruba.com');
 
     $services = $containerConfigurator->services();
     $services->defaults()
@@ -23,10 +16,10 @@ return function (ContainerConfigurator $containerConfigurator): void {
     $services->load('TomasVotruba\Website\\', __DIR__ . '/../src')
         ->exclude([__DIR__ . '/../src/HttpKernel', __DIR__ . '/../src/ValueObject', __DIR__ . '/../src/Exception']);
 
-    $services->set(PrivatesAccessor::class);
+    $services->load('TomasVotruba\Blog\\', __DIR__ . '/../packages/blog/src')
+        ->exclude([__DIR__ . '/../packages/blog/src/ValueObject']);
 
-    $services->set(ParameterProvider::class)
-        ->arg('$container', service('service_container'));
+    $services->set(ParsedownExtra::class, ParsedownExtra::class);
 
     $containerConfigurator->extension('framework', [
         'secret' => '12345',

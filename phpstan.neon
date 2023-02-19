@@ -45,10 +45,6 @@ parameters:
         # false positive private \DateTimeInterface $publishedAt,
         - '#Class TomasVotruba\\Blog\\ValueObject\\Post has an uninitialized readonly property \$content\. Assign it in the constructor#'
 
-        -
-            path: packages/blog/src/ValueObjectFactory/PostFactory.php
-            message: '#Parameter argument on position 0 must use constant#'
-
         # part of route name
         -
             message: '#Relative file path "rss\.xml" is not allowed, use absolute one with __DIR__#'
