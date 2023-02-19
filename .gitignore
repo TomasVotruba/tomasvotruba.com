@@ -17,3 +17,5 @@ package-lock.json
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+
+/.env

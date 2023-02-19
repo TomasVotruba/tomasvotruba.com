@@ -79,10 +79,9 @@ final class PostRepository
 
     public function getBySlug(string $slug): Post
     {
-	$slug = rtrim($slug, '/');    
+        $slug = rtrim($slug, '/');
         foreach ($this->posts as $post) {
-	    $postSlug = rtrim($post->getSlug(), '/');
-             
+            $postSlug = rtrim($post->getSlug(), '/');
             if ($postSlug === $slug) {
                 return $post;
             }
