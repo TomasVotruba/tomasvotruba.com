@@ -8,13 +8,12 @@
 
         <div class="container-fluid">
             <div id="content">
-                @block('content')
-                @endblock
+                @yield('content')
             </div>
         </div>
 
-        @block('custom_footer')
-        @endblock
+        @section('custom_footer')
+        @endsection
 
         @include('_snippets/google_analytics')
     </body>

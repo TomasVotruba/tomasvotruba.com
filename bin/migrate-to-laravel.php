@@ -31,8 +31,8 @@ final class TwigToBladeConverter
     private const TWIG_TO_BLADE_REPLACE_REGEXES = [
         // layout
         '#{\% extends "(.*?)\.twig" \%\}#' => '@extends(\'$1\')',
-        '#{\% block (.*?) %}#' => '@block(\'$1\')',
-        '#{\% endblock \%}#' => '@endblock',
+        '#{\% block (.*?) %}#' => '@section(\'$1\')',
+        '#{\% endblock \%}#' => '@endsection',
         '#{\% include((\'|").*?\.twig(\'|")) %}#' => '@include(\'$1\')',
 
         // control structures

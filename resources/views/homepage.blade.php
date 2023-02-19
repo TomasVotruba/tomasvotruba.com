@@ -1,6 +1,6 @@
-@base('layout/layout_base')
+@extends('layout/layout_base')
 
-@block('content')
+@section('content')
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-9">
@@ -53,7 +53,7 @@
         as I was older, I realized the Truth - it's a coding standard for Life --}}
 
         <blockquote class="blockquote text-center">
-            "{{ $quote }}"
+            "{!! $quote !!}"
         </blockquote>
     </div>
-@endblock
+@endsection

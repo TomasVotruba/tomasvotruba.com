@@ -20,7 +20,6 @@ parameters:
         - src
         - tests
         - packages
-        - config/config.php
         - rector.php
         - utils
         - utils-tests

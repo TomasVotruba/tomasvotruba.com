@@ -1,6 +1,6 @@
-@base('layout/layout_base')
+@extends('layout/layout_base')
 
-@block('content')
+@section('content')
     <div class="container">
         <h1>{{ $title }}</h1>
 
@@ -14,15 +14,15 @@
 
         <div class="text-bigger">
             <p>
-                I'm a PHP trainer, legacy code cleaner, blogger and <a href="https://$github->blog/2020-09-03-introducing-the-github-stars-program" target="blank">open-source developer</a>.
+                I'm a PHP trainer, legacy code cleaner, blogger and <a href="https://github.blog/2020-09-03-introducing-the-github-stars-program" target="blank">open-source developer</a>.
             </p>
 
             <p>
-                <span class="magenta">I love to connect with people and improve their everyday $lives-></span>
+                <span class="magenta">I love to connect with people and improve their everyday lives.</span>
             </p>
 
             <p>
-                My passion and daily work is tidying up code and empowering weakest $parts-> By removing frictions, the code becomes stable, easy to understand and even self-repairing.
+                My passion and daily work is tidying up code and empowering weakest parts. By removing frictions, the code becomes stable, easy to understand and even self-repairing.
             </p>
 
             <br>
@@ -30,12 +30,11 @@
             <br>
 
             <div class="text-center">
-                <img src="{{ asset('assets/images/logo/$rector->svg' )}}" class="mb-5 margin-auto" alt="" style="max-width:
-                 5em">
+                <img src="{{ asset('assets/images/logo/rector.svg' )}}" class="mb-5 margin-auto" alt="" style="max-width: 5em">
             </div>
 
             <p>
-                To make this happen faster and in scale, I created <a href="http://$github->com/rectorphp/rector" target="blank">Rector</a> - a PHP CLI tool for instant upgrades and automated $refactoring-> It's catching up pretty well among PHP community around the world - from Symfony to Drupal.
+                To make this happen faster and in scale, I created <a href="http://github.com/rectorphp/rector" target="blank">Rector</a> - a PHP CLI tool for instant upgrades and automated refactoring. It's catching up pretty well among PHP community around the world - from Symfony to Drupal.
             </p>
             <p>
                 I connected with Matthias Noback and <strong>we wrote a book about Rector</strong>:<br>
@@ -51,18 +50,18 @@
             </div>
 
             <p>
-                I founded <a href="https://$pehapkari->cz/">Czech PHP community</a> in 2015 to connect Czech PHP groups into united one, where we organized 50+ meetups and 20+ trainings across 5 cities.
+                I founded <a href="https://pehapkari.cz/">Czech PHP community</a> in 2015 to connect Czech PHP groups into united one, where we organized 50+ meetups and 20+ trainings across 5 cities.
             </p>
 
             <p>
-                I love to share my experience in <a href="https://$joind->in/user/TomasVotruba"> conferences talks</a>. "The best way to learn is to teach others", I try my best in <a href="https://$stackoverflow->com/users/1348344/tomas-votruba">top 2 % in Stackoverflow</a>.
+                I love to share my experience in <a href="https://joind.in/user/TomasVotruba"> conferences talks</a>. "The best way to learn is to teach others", I try my best in <a href="https://stackoverflow.com/users/1348344/tomas-votruba">top 2 % in Stackoverflow</a>.
             </p>
             <p>
-                I'm main contributor to <a href="https://$github->com/nikic/PHP-Parser/graphs/contributors">nikic/php-parser</a>.
+                I'm main contributor to <a href="https://github.com/nikic/PHP-Parser/graphs/contributors">nikic/php-parser</a>.
             </p>
             <p>
-                For these efforts, <a href="https://$stars->$github->com/profiles/tomasvotruba/">GitHub awarded me</a> as one of 100 GitHub Stars based on PHP community nominations.
+                For these efforts, <a href="https://stars.github.com/profiles/tomasvotruba/">GitHub awarded me</a> as one of 100 GitHub Stars based on PHP community nominations.
             </p>
         </div>
     </div>
-@endblock
+@endsection

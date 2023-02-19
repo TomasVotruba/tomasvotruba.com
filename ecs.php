@@ -21,14 +21,7 @@ return function (ECSConfig $ecsConfig): void {
 
     $ecsConfig->import(SetList::SYMPLIFY);
 
-    $ecsConfig->skip([
-        '*/Fixture/*',
-        '*/Expected/*',
-        // symfony magic mess
-        __DIR__ . '/config/bootstrap.php',
-        __DIR__ . '/config/bundles.php',
-        UnaryOperatorSpacesFixer::class,
-    ]);
+    $ecsConfig->skip(['*/Fixture/*', '*/Expected/*', UnaryOperatorSpacesFixer::class]);
 
     $ecsConfig->sets([SetList::PSR_12, SetList::COMMON, SetList::SYMPLIFY]);
 

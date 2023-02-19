@@ -10,6 +10,7 @@ use TomasVotruba\Website\Controller\BooksController;
 use TomasVotruba\Website\Controller\ContactController;
 use TomasVotruba\Website\Controller\HomepageController;
 use TomasVotruba\Website\Controller\PostController;
+use TomasVotruba\Website\Controller\PostImageController;
 use TomasVotruba\Website\Controller\RssController;
 use TomasVotruba\Website\ValueObject\RouteName;
 
@@ -36,3 +37,6 @@ Route::get('/rss', RssController::class)
 
 Route::get('/contact', ContactController::class)
      ->name(RouteName::CONTACT);
+
+Route::get('/thumbnail/{title}.png', PostImageController::class)
+     ->name(RouteName::POST_IMAGE);

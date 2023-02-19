@@ -1,6 +1,6 @@
-@base('layout/layout_base')
+@extends('layout/layout_base')
 
-@block('content')
+@section('content')
     <div class="container-fluid" id="blog">
         <h1>{{ $title }}</h1>
 
@@ -34,4 +34,4 @@
             @endforeach
         </div>
     </div>
-@endblock
+@endsection

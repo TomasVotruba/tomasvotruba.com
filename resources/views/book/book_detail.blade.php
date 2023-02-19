@@ -1,10 +1,10 @@
-@base('layout/layout_base')
+@extends('layout/layout_base')
 
 @php /** @var $book \TomasVotruba\Website\ValueObject\Book */ @endphp
 
-@block('content')
+@section('content')
     <div class="container-fluid" id="blog">
-        <h1>{{ raw($title) }}</h1>
+        <h1>{{ $title }}</h1>
 
         <div class="float-right text-center ml-5">
             <a href="{{ $book->getLeanpubLink() }}" target="blank">
@@ -13,7 +13,15 @@
 
             <br>
 
-            <a href="{{ $book->getLeanpubLink() }}" target="blank" class="btn @if ($book->isFinished())btn-success@else btn-warning@endif btn-lg mt-4 mb-2">
+            <a
+                href="{{ $book->getLeanpubLink() }}"
+                target="blank"
+                @class([
+                    'btn btn-lg mt-4 mb-2',
+                    'btn-success' => $book->isFinished(),
+                    'btn-warning' => ! $book->isFinished(),
+                ])
+            >
                 @if ($book->isFinished())
                     Buy a Copy
                 @else
@@ -22,8 +30,6 @@
             </a>
         </div>
 
-        <div>
-            {{ $book->getLongDescription()|raw }}
-        </div>
+        <div>{!! $book->getLongDescription() !!}</div>
     </div>
-@endblock
+@endsection

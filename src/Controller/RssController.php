@@ -24,7 +24,8 @@ final class RssController extends Controller
 
         $contents = view('rss', [
             'posts' => $posts,
-            'most_recent_post_date_time' => $this->getMostRecentPostDateTime($posts),
+            'most_recent_post_date_time_stamp' => $this->getMostRecentPostDateTime($posts)
+                ->format('r'),
         ])->render();
 
         return response($contents, 200, [
