@@ -26,7 +26,7 @@ return function (RectorConfig $rectorConfig): void {
 
     $rectorConfig->ruleWithConfiguration(RenameClassRector::class, [
         'Symfony\Bundle\FrameworkBundle\Controller\AbstractController' => 'Illuminate\Routing\Controller',
-        'Symfony\Component\HttpFoundation\Response' => 'Illuminate\View\View',
+        'Symfony\Component\HttpFoundation\Response' => 'Illuminate\Contracts\View\View',
     ]);
 
     // in the making :)

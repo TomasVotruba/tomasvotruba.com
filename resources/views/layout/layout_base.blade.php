@@ -4,7 +4,7 @@
         @include('_snippets/head')
     </head>
     <body>
-        @include('snippets/menu')
+        @include('_snippets/menu')
 
         <div class="container-fluid">
             <div id="content">

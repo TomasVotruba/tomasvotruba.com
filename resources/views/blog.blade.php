@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @base('layout_base')
+=======
+@extends('layout/layout_base')
+>>>>>>> 99632fcba4 (fixup! fixup! misc)
 
 @block('content')
     <div class="container-fluid">

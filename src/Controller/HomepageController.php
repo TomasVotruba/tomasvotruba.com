@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Controller;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
-use Illuminate\View\View;
 use TomasVotruba\Blog\Repository\PostRepository;
 
 final class HomepageController extends Controller
@@ -37,6 +37,7 @@ final class HomepageController extends Controller
     public function __invoke(): View
     {
         $lastPosts = $this->postRepository->fetchLast(5);
+
         return \view('homepage', [
             'last_posts' => $lastPosts,
             'title' => 'Change Fast and Safely',

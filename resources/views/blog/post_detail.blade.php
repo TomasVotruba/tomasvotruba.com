@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        @include('_snippets.head')
+        @include('_snippets/head')
 
         @php /** @var $post \TomasVotruba\Blog\ValueObject\Post */ @endphp
 

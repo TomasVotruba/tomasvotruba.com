@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Controller;
 
 use DateTimeInterface;
+use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use Illuminate\View\View;
 use TomasVotruba\Blog\Repository\PostRepository;
 
 use TomasVotruba\Blog\ValueObject\Post;
@@ -18,15 +18,18 @@ final class RssController extends Controller
     ) {
     }
 
-    public function __invoke(): View
+    public function __invoke(): Response
     {
         $posts = $this->postRepository->fetchForRss();
-        $response = \view('rss', [
+
+        $contents = view('rss', [
             'posts' => $posts,
             'most_recent_post_date_time' => $this->getMostRecentPostDateTime($posts),
+        ])->render();
+
+        return response($contents, 200, [
+            'Content-type' => 'text/xml',
         ]);
-        $response->headers->set('Content-type', 'text/xml');
-        return $response;
     }
 
     /**

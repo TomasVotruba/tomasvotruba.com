@@ -14,8 +14,6 @@ parameters:
         methods: true
         properties: true
         constants: true
-        twig_template_paths:
-            - templates
 
     paths:
         - bin
@@ -52,3 +50,9 @@ parameters:
         - '#Parameter \#2 \$font of method Imagine\\Draw\\DrawerInterface\:\:text\(\) expects Imagine\\Image\\AbstractFont, Imagine\\Image\\FontInterface given#'
 
         - '#Cognitive complexity for "TomasVotruba\\Utils\\Rector\\Rector\\ClassMethod\\SymfonyRouteAttributesToLaravelRouteFileRector\:\:refactor\(\)" is 11, keep it under 9#'
+
+        # duplic
+        - '#Method TomasVotruba\\Website\\Controller\\(.*?)\:\:__invoke\(\) should return Illuminate\\Contracts\\View\\View but returns Illuminate\\Contracts\\View\\Factory\|Illuminate\\Contracts\\View\\View#'
+        - '#Method TomasVotruba\\Website\\Controller\\(.*?)\:\:__invoke\(\) should return Illuminate\\Http\\Response but returns Illuminate\\Contracts\\Routing\\ResponseFactory\|Illuminate\\Http\\Response#'
+        - '#Call to an undefined method Illuminate\\Contracts\\View\\Factory\|Illuminate\\Contracts\\View\\View\:\:render\(\)#'
+

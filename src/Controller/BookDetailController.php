@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Controller;
 
 use Illuminate\Routing\Controller;
-use Illuminate\View\View;
 use TomasVotruba\Website\Repository\BookRepository;
 
 final class BookDetailController extends Controller
@@ -15,9 +14,10 @@ final class BookDetailController extends Controller
     ) {
     }
 
-    public function __invoke(string $slug): View
+    public function __invoke(string $slug): \Illuminate\Contracts\View\View
     {
         $book = $this->bookRepository->getBySlug($slug);
+
         return \view('book/book_detail', [
             'title' => $book->getTitle(),
             'book' => $book,

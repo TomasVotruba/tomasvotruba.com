@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Controller;
 
 use Illuminate\Routing\Controller;
-use Illuminate\View\View;
 use TomasVotruba\Website\Repository\BookRepository;
 
 final class BooksController extends Controller
@@ -15,7 +14,7 @@ final class BooksController extends Controller
     ) {
     }
 
-    public function __invoke(): View
+    public function __invoke(): \Illuminate\Contracts\View\View
     {
         return \view('book/books', [
             'title' => 'Books',

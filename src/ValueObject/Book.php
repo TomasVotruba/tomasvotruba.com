@@ -7,6 +7,7 @@ namespace TomasVotruba\Website\ValueObject;
 use Symfony\Component\String\Slugger\AsciiSlugger;
 
 /**
+ * @api
  * @see \TomasVotruba\Website\Tests\ValueObject\BookTest
  */
 final class Book
