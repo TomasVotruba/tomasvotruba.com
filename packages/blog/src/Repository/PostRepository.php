@@ -79,16 +79,17 @@ final class PostRepository
 
     public function getBySlug(string $slug): Post
     {
+	$slug = rtrim($slug, '/');    
         foreach ($this->posts as $post) {
+	    $postSlug = rtrim($post->getSlug(), '/');
+             
             if ($post->getSlug() === $slug) {
                 return $post;
             }
         }
 
-        // extra dash
-        $slughWithoutDash = rtrim($slug, '/');
-        if (isset($this->posts[$slughWithoutDash])) {
-            return $this->posts[$slughWithoutDash];
+        if (isset($this->posts[$slug])) {
+            return $this->posts[$slug];
         }
 
         throw new ShouldNotHappenException(sprintf('Post for slug "%s" was not found.', $slug));
