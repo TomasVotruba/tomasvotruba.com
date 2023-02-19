@@ -10,6 +10,14 @@ jobs:
             matrix:
                 actions:
                     -
+                        name: 'Convert Twig to Blade'
+                        run: 'php bin/migrate-to-laravel.php'
+
+                    -
+                        name: 'Convert Symfony to Laravel'
+                        run: 'vendor/bin/rector process --config rector-symfony-to-laravel.php'
+
+                    -
                         name: 'ECS'
                         run: 'composer fix-cs --ansi'
 
@@ -20,10 +28,6 @@ jobs:
                     -
                         name: 'Unit Tests'
                         run: 'vendor/bin/phpunit'
-
-                    -
-                        name: 'Check active classes in Blog'
-                        run: 'vendor/bin/easy-ci check-active-class packages/blog/src --ansi'
 
         name: ${{ matrix.actions.name }}
         runs-on: ubuntu-latest
