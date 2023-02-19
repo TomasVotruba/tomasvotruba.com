@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 use TomasVotruba\Blog\Repository\PostRepository;
-use TomasVotruba\Website\ValueObject\RouteName;
 
-final class HomepageController extends AbstractController
+final class HomepageController extends Controller
 {
     /**
      * @var string[]
@@ -36,12 +34,10 @@ final class HomepageController extends AbstractController
     ) {
     }
 
-    #[Route(path: '/', name: RouteName::HOMEPAGE)]
-    public function __invoke(): Response
+    public function __invoke(): View
     {
         $lastPosts = $this->postRepository->fetchLast(5);
-
-        return $this->render('homepage.twig', [
+        return \view('homepage', [
             'last_posts' => $lastPosts,
             'title' => 'Change Fast and Safely',
             'quote' => $this->getRandomQuote(),

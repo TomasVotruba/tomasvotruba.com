@@ -1,6 +1,6 @@
-{% extends 'layout/layout_base.twig' %}
+@base('layout/layout_base')
 
-{% block content %}
+@block('content')
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-9">
@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-4 col-md-3">
-                <a href="{{ path('about') }}">
+                <a href="{{ route('about') }}">
                     <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="mt-auto rounded-circle shadow">
                 </a>
             </div>
@@ -26,21 +26,21 @@
         </h2>
 
         <div class="text-bigger">
-            {% for post in last_posts %}
-                {# @var post \TomasVotruba\Blog\ValueObject\Post #}
+            @foreach ($last_posts as $post)
+                @php /** @var $post \TomasVotruba\Blog\ValueObject\Post */ @endphp
                 <div class="mb-4 row">
                     <div class="col-12">
-                        <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::POST_DETAIL'), {slug: post.slug }) }}" class="pt-3 pr-3">{{ post.title|raw }}</a>
+                        <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' =>  $post->getSlug()]) }}" class="pt-3 pr-3">{{ $post->getTitle()|raw }}</a>
                     </div>
 
                     <div class="small text-secondary col-12 pt-2">
-                        {{ post.getDateTime|date("Y-m-d") }}
+                        {{ $post->getDateTime()->format("Y-m-d") }}
                     </div>
                 </div>
-            {% endfor %}
+            @endfor
 
 
-            <a href="{{ path(constant('TomasVotruba\\Website\\ValueObject\\RouteName::BLOG')) }}" class="btn btn-warning pull-right mt-4">Discover more Posts </a>
+            <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::BLOG) }}" class="btn btn-warning pull-right mt-4">Discover more Posts </a>
         </div>
 
         <br>
@@ -54,7 +54,7 @@
         as I was older, I ralized the Truth - it's a coding standard for Life #}
 
         <blockquote class="blockquote text-center">
-            "{{ quote|raw }}"
+            "{{ $quote->getContent()|raw }}"
         </blockquote>
     </div>
-{% endblock %}
+@endblock

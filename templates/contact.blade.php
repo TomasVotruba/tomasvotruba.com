@@ -1,8 +1,8 @@
-{% extends "layout/layout_base.twig" %}
+@base('layout/layout_base')
 
-{% block content %}
+@block('content')
     <div class="container">
-        <h1>{{ title }}</h1>
+        <h1>{{ $title }}</h1>
 
         <h2>Fast Check with Call</h2>
 
@@ -78,4 +78,4 @@
             </div>
         </div>
     </div>
-{% endblock %}
+@endblock

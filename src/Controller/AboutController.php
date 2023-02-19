@@ -4,17 +4,14 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-use TomasVotruba\Website\ValueObject\RouteName;
+use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 
-final class AboutController extends AbstractController
+final class AboutController extends Controller
 {
-    #[Route(path: 'about-me', name: RouteName::ABOUT)]
-    public function __invoke(): Response
+    public function __invoke(): View
     {
-        return $this->render('about.twig', [
+        return \view('about', [
             'title' => "Hi, I'm Tomas, and I love legacy",
         ]);
     }

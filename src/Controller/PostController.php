@@ -4,29 +4,22 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 use TomasVotruba\Blog\Repository\PostRepository;
 
-use TomasVotruba\Website\ValueObject\RouteName;
-
-final class PostController extends AbstractController
+final class PostController extends Controller
 {
     public function __construct(
         private readonly PostRepository $postRepository,
     ) {
     }
 
-    #[Route(path: '/blog/{slug}', name: RouteName::POST_DETAIL, requirements: [
-        'slug' => '(\d+\/\d+.+|[\w\-]+)',
-    ])]
-    public function __invoke(string $slug): Response
+    public function __invoke(string $slug): View
     {
         $post = $this->postRepository->getBySlug($slug);
         $previousPost = $this->postRepository->findPreviousPost($post);
-
-        return $this->render('blog/post_detail.twig', [
+        return \view('blog/post_detail', [
             'post' => $post,
             'previous_post' => $previousPost,
             'title' => $post->getTitle(),

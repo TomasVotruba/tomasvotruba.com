@@ -4,17 +4,14 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-use TomasVotruba\Website\ValueObject\RouteName;
+use Illuminate\Routing\Controller;
+use Illuminate\View\View;
 
-final class ContactController extends AbstractController
+final class ContactController extends Controller
 {
-    #[Route(path: 'contact', name: RouteName::CONTACT)]
-    public function __invoke(): Response
+    public function __invoke(): View
     {
-        return $this->render('contact.twig', [
+        return \view('contact', [
             'title' => 'Get in Touch',
         ]);
     }
