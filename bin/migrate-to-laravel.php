@@ -6,6 +6,10 @@ use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use Rector\Core\Console\Formatter\ColorConsoleDiffFormatter;
 use SebastianBergmann\Diff\Differ;
+use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
+use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
+use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Finder\Finder;
 use Webmozart\Assert\Assert;
 
@@ -40,16 +44,11 @@ final class TwigToBladeConverter
         '#{{ (?<variable>\w+)\|(?<filter>\w+) }}#' => '{{ $2($$1) }}',
     ];
 
-    private \Symfony\Component\Console\Style\SymfonyStyle $symfonyStyle;
-
     public function __construct(
-        private readonly Differ $differ = new Differ(),
+        private readonly Differ $differ = new Differ(new UnifiedDiffOutputBuilder()),
         private readonly ColorConsoleDiffFormatter $colorConsoleDiffFormatter = new ColorConsoleDiffFormatter(),
+        private readonly SymfonyStyle $symfonyStyle = new SymfonyStyle(new ArrayInput([]), new ConsoleOutput()),
     ) {
-        $this->symfonyStyle = new \Symfony\Component\Console\Style\SymfonyStyle(
-            new \Symfony\Component\Console\Input\ArrayInput([]),
-            new \Symfony\Component\Console\Output\ConsoleOutput()
-        );
     }
 
     public function run(string $templatesDirectory): void

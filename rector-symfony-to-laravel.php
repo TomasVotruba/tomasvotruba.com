@@ -11,11 +11,16 @@ use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 use Rector\Transform\Rector\MethodCall\MethodCallToFuncCallRector;
 use Rector\Transform\ValueObject\MethodCallToFuncCall;
+use TomasVotruba\Utils\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRouteFileRector;
 
 return function (RectorConfig $rectorConfig): void {
     $rectorConfig->importNames();
 
     $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages']);
+
+    $rectorConfig->rules([
+        SymfonyRouteAttributesToLaravelRouteFileRector::class
+    ]);
 
     $rectorConfig->ruleWithConfiguration(RenameClassRector::class, [
         'Symfony\Bundle\FrameworkBundle\Controller\AbstractController' => 'Illuminate\Routing\Controller',

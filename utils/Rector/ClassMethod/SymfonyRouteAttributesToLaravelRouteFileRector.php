@@ -3,6 +3,7 @@
 namespace TomasVotruba\Utils\Rector\ClassMethod;
 
 use PhpParser\Node;
+use PhpParser\Node\Stmt\ClassMethod;
 use Rector\Core\Rector\AbstractRector;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 
@@ -16,17 +17,34 @@ final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRecto
         // TODO: Implement getRuleDefinition() method.
     }
 
+    /**
+     * @return array<class-string<\PhpParser\Node>>
+     */
     public function getNodeTypes(): array
     {
-        return [Node\Stmt\ClassMethod::class];
+        return [ClassMethod::class];
     }
 
     /**
-     * @param Node\Stmt\ClassMethod $node
+     * @param ClassMethod $node
      */
     public function refactor(Node $node)
     {
-        dump($node);
+        if ($node->attrGroups === []) {
+            return null;
+        }
+
+        foreach ($node->attrGroups as $attrGroup) {
+            foreach ($attrGroup->attrs as $attr) {
+                if (! $this->isName($attr->name, 'Symfony\Component\Routing\Annotation\Route')) {
+                    continue;
+                }
+
+                dump($attr->args);
+                die;
+            }
+        }
+
         die;
     }
 }
