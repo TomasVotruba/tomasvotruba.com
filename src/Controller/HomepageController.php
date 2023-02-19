@@ -27,8 +27,8 @@ final class HomepageController extends AbstractController
         // Rainer Maria Rilke
         'Let everything happen to you<br>Beauty and terror<br>Just keep going<br>No feeling is final',
         'If you live an ordinary life, all you have is ordinary stories.<br>You have to live a life of adventurer.',
-        // sarcastic ones :)
-        'Mistakes were made. Some of them, by me.',
+        // bukowksi
+        'Find what you love and let it kill you. Let it drain you of your all. Let it cling onto your back and weigh you down into eventual nothingness. Let it kill you and let it devour your remains. For all things will kill you, both slowly and fastly, but it is much better to be killed by a lover.',
     ];
 
     public function __construct(
