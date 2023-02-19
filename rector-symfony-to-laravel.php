@@ -9,6 +9,8 @@ use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
 use Rector\Renaming\Rector\Name\RenameClassRector;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
+use Rector\Transform\Rector\MethodCall\MethodCallToFuncCallRector;
+use Rector\Transform\ValueObject\MethodCallToFuncCall;
 
 return function (RectorConfig $rectorConfig): void {
     $rectorConfig->importNames();
@@ -17,8 +19,12 @@ return function (RectorConfig $rectorConfig): void {
 
     $rectorConfig->ruleWithConfiguration(RenameClassRector::class, [
         'Symfony\Bundle\FrameworkBundle\Controller\AbstractController' => 'Illuminate\Routing\Controller',
+        'Symfony\Component\HttpFoundation\Response' => 'Illuminate\Http\Response',
     ]);
 
     // in the making :)
-    $rectorConfig->ruleWithConfiguration(MethodCallToFuncCallRector::class);
+    $rectorConfig->ruleWithConfiguration(MethodCallToFuncCallRector::class, [
+        // render() to view
+        new MethodCallToFuncCall('Symfony\Bundle\FrameworkBundle\Controller\AbstractController', 'render', 'view'),
+    ]);
 };

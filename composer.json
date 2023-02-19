@@ -15,23 +15,21 @@
         "symfony/http-kernel": "^6.2.6",
         "symfony/mime": "^6.2",
         "symfony/dotenv": "^6.2",
-        "symfony/string": "^6.2.5",
-        "symfony/twig-bundle": "^6.2.5",
-        "symfony/yaml": "^6.2.5",
-        "symplify/package-builder": "^11.1",
+        "symfony/string": "^6.2",
+        "symfony/twig-bundle": "^6.2",
+        "symfony/yaml": "^6.2",
         "twig/twig": "^3.5.1"
     },
     "require-dev": {
         "phpstan/extension-installer": "^1.2",
         "phpstan/phpstan": "^1.9.17",
         "phpstan/phpstan-webmozart-assert": "^1.2.2",
-        "phpunit/phpunit": "^9.6.3",
+        "phpunit/phpunit": "^10.0",
         "rector/rector": "dev-main",
-        "symplify/coding-standard": "^11.3",
-        "symplify/easy-ci": "^11.2.0",
-        "symplify/easy-coding-standard": "^11.2.8",
-        "symplify/phpstan-extensions": "^11.1.17",
-        "symplify/phpstan-rules": "^11.2.3",
+        "sebastian/diff": "^5.0",
+        "symplify/easy-coding-standard": "^11.2",
+        "symplify/package-builder": "^11.2",
+        "symplify/phpstan-extensions": "^11.2",
         "tomasvotruba/cognitive-complexity": "^0.0.1",
         "tomasvotruba/type-coverage": "^0.0.1",
         "tomasvotruba/unused-public": "^0.0.32",
@@ -41,6 +39,11 @@
         "psr-4": {
             "TomasVotruba\\Website\\": "src",
             "TomasVotruba\\Blog\\": "packages/blog/src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TomasVotruba\\Utils\\": "utils"
         }
     },
     "scripts": {

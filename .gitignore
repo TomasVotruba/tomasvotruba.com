@@ -3,15 +3,17 @@
 /node_modules
 composer.lock
 package-lock.json
-*.local.yaml
 
-.phpunit.result.cache
+# phpunit
+.phpunit.cache
+
 ###> symfony/framework-bundle ###
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+<<<<<<< HEAD
 
 ###> phpunit/phpunit ###
 /phpunit.xml
@@ -19,3 +21,5 @@ package-lock.json
 ###< phpunit/phpunit ###
 
 /.env
+=======
+>>>>>>> baebfcbbff (fill set)
