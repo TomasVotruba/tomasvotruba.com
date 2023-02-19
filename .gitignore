@@ -13,13 +13,5 @@ package-lock.json
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-<<<<<<< HEAD
-
-###> phpunit/phpunit ###
-/phpunit.xml
-.phpunit.result.cache
-###< phpunit/phpunit ###
 
 /.env
-=======
->>>>>>> baebfcbbff (fill set)

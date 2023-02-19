@@ -15,10 +15,15 @@ return function (ECSConfig $ecsConfig): void {
         __DIR__ . '/src',
         __DIR__ . '/tests',
         __DIR__ . '/ecs.php',
+        __DIR__ . '/utils',
+        __DIR__ . '/utils-tests',
     ]);
+
     $ecsConfig->import(SetList::SYMPLIFY);
 
     $ecsConfig->skip([
+        '*/Fixture/*',
+        '*/Expected/*',
         // symfony magic mess
         __DIR__ . '/config/bootstrap.php',
         __DIR__ . '/config/bundles.php',

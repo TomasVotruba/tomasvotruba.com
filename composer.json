@@ -43,7 +43,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\Utils\\": "utils"
+            "TomasVotruba\\Utils\\": "utils",
+            "TomasVotruba\\Utils\\Tests\\": "utils-tests"
         }
     },
     "scripts": {

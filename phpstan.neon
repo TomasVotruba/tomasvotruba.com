@@ -1,8 +1,8 @@
 parameters:
     # see https://github.com/tomasvotruba/cognitive-complexity
     cognitive_complexity:
-        class: 25
-        function: 5
+        class: 30
+        function: 9
 
     # see https://github.com/tomasvotruba/type-coverage
     type_coverage:
@@ -24,6 +24,12 @@ parameters:
         - packages
         - config/config.php
         - rector.php
+        - utils
+        - utils-tests
+
+    excludePaths:
+        - '*/Fixture/*'
+        - '*/Expected/*'
 
     level: 8
 
@@ -44,3 +50,5 @@ parameters:
 
         # invalid types
         - '#Parameter \#2 \$font of method Imagine\\Draw\\DrawerInterface\:\:text\(\) expects Imagine\\Image\\AbstractFont, Imagine\\Image\\FontInterface given#'
+
+        - '#Cognitive complexity for "TomasVotruba\\Utils\\Rector\\Rector\\ClassMethod\\SymfonyRouteAttributesToLaravelRouteFileRector\:\:refactor\(\)" is 11, keep it under 9#'

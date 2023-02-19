@@ -10,8 +10,12 @@ jobs:
             matrix:
                 actions:
                     -
-                        name: 'Convert Twig to Blade '
+                        name: 'Convert Twig to Blade'
                         run: 'php bin/migrate-to-laravel.php'
+
+                    -
+                        name: 'Convert Symfony to Laravel'
+                        run: 'vendor/bin/rector process --config rector-symfony-to-laravel.php'
 
                     -
                         name: 'ECS'
