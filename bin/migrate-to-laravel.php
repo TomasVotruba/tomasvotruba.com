@@ -1,5 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
+use Nette\Utils\FileSystem;
+use Nette\Utils\Strings;
+use Rector\Core\Console\Formatter\ColorConsoleDiffFormatter;
+use SebastianBergmann\Diff\Differ;
 use Symfony\Component\Finder\Finder;
 use Webmozart\Assert\Assert;
 
@@ -16,26 +22,61 @@ require __DIR__ . '/../vendor/autoload.php';
 final class TwigToBladeConverter
 {
     private const TWIG_TO_BLADE_REPLACE_REGEXES = [
+        // layout
+        '#{\% extends "(.*?)" \%\}#' => '@base(\'$1\')',
+        '#{\% block (.*?) %}#' => '@block(\'$1\')',
+        '#{\% endblock \%}#' => '@endblock',
+
+        // control structures
         '#{% if (?<condition>.*?) %}#' => '@if ($1)',
-        '#{% for (?<singular>.*?) in (?<pluar>.*?) %}#' => '@foreach ($2 as $1)',
+        '#{% for (?<singular>.*?) in (?<plural>.*?) %}#' => '@foreach ($$2 as $$1)',
+        '#{% else %}#' => '@else ',
+        '#{% (endif|endfor) %}#' => '@$1',
+        '#\{\# @var (?<variable>.*?) (?<type>.*?) \#\}#' => '@php /** @var $$1 $2 */ @endphp',
+        '#path\((.*?)\)#' => 'route($1)',
+        '#\{ (?<key>\w+)\: (?<value>.*?) \}#' => '[\'$1\' => $2]',
+        // variables
+        '#\b(?<variable>\w+)\.(?<fetcher>.*?)\b#' => '$$1->$2',
+        '#{{ (?<variable>\w+)\|(?<filter>\w+) }}#' => '{{ $2($$1) }}',
     ];
+
+    private \Symfony\Component\Console\Style\SymfonyStyle $symfonyStyle;
+
+    public function __construct(
+        private readonly Differ $differ = new Differ(),
+        private readonly ColorConsoleDiffFormatter $colorConsoleDiffFormatter = new ColorConsoleDiffFormatter(),
+    ) {
+        $this->symfonyStyle = new \Symfony\Component\Console\Style\SymfonyStyle(
+            new \Symfony\Component\Console\Input\ArrayInput([]),
+            new \Symfony\Component\Console\Output\ConsoleOutput()
+        );
+    }
 
     public function run(string $templatesDirectory): void
     {
         $twigFilePaths = $this->findTwigFilePaths($templatesDirectory);
 
         foreach ($twigFilePaths as $twigFilePath) {
-            $bladeFilePath = substr(realpath($twigFilePath), 0, -5) . '.blade.php';
+            $bladeFilePath = substr($twigFilePath, 0, -5) . '.blade.php';
 
-            $templateContents = \Nette\Utils\FileSystem::read($twigFilePath);
+            $twigFileContents = FileSystem::read($twigFilePath);
+            $bladeFileContents = $twigFileContents;
 
             foreach (self::TWIG_TO_BLADE_REPLACE_REGEXES as $twigRegex => $bladeReplacement) {
-                $templateContents = \Nette\Utils\Strings::replace($templateContents, $twigRegex, $bladeReplacement);
+                $bladeFileContents = Strings::replace($bladeFileContents, $twigRegex, $bladeReplacement);
             }
 
-            dump($templateContents);
+            // nothing to change
+            if ($twigFileContents === $bladeFileContents) {
+                continue;
+            }
 
-            // @todo differ?
+            $diff = $this->differ->diff($twigFileContents, $bladeFileContents);
+            $colorDiff = $this->colorConsoleDiffFormatter->format($diff);
+            $this->symfonyStyle->writeln($colorDiff);
+
+            // @todo later
+            // FileSystem::write($bladeFilePath, $bladeFileContents);
         }
     }
 
@@ -45,14 +86,22 @@ final class TwigToBladeConverter
     private function findTwigFilePaths(string $templatesDirectory): array
     {
         $twigFinder = Finder::create()
-              ->files()
-              ->name('*.twig')
-              ->in($templatesDirectory);
+            ->files()
+            ->name('*.twig')
+            ->in($templatesDirectory);
 
-        $twigFilePaths = array_keys(iterator_to_array($twigFinder->getIterator()));
+        $fileInfosByFilePaths = iterator_to_array($twigFinder->getIterator());
+        $twigFilePaths = array_keys($fileInfosByFilePaths);
         Assert::allString($twigFilePaths);
 
-        return $twigFilePaths;
+        // use realpaths
+        $twigFileRealPaths = array_map(function (string $twigFilePath) {
+            return realpath($twigFilePath);
+        }, $twigFilePaths);
+
+        Assert::allString($twigFileRealPaths);
+
+        return $twigFileRealPaths;
     }
 }
 
