@@ -23,3 +23,6 @@ $_SERVER['APP_DEBUG'] = $_ENV['APP_DEBUG'] = (int) $_SERVER['APP_DEBUG'] || filt
     $_SERVER['APP_DEBUG'],
     FILTER_VALIDATE_BOOLEAN
 ) ? '1' : '0';
+
+dump($_ENV['APP_ENV']);
+die;

@@ -25,6 +25,7 @@
         "phpstan/phpstan-webmozart-assert": "^1.2.2",
         "phpunit/phpunit": "^9.6.3",
         "rector/rector": "dev-main",
+        "symfony/dotenv": "^6.2",
         "symplify/coding-standard": "^11.3",
         "symplify/easy-ci": "^11.2.0",
         "symplify/easy-coding-standard": "^11.2.8",
