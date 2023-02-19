@@ -1,6 +1,3 @@
-includes:
-    - vendor/symplify/phpstan-rules/config/symplify-rules.neon
-
 parameters:
     # see https://github.com/tomasvotruba/cognitive-complexity
     cognitive_complexity:
@@ -45,18 +42,5 @@ parameters:
         # false positive private \DateTimeInterface $publishedAt,
         - '#Class TomasVotruba\\Blog\\ValueObject\\Post has an uninitialized readonly property \$content\. Assign it in the constructor#'
 
-        # part of route name
-        -
-            message: '#Relative file path "rss\.xml" is not allowed, use absolute one with __DIR__#'
-            path: src/Controller/RssController.php
-
-        # useleess fluent api
-        -
-            message: '#Method call return value that should be used, but is not#'
-            path: src/Controller/PostImageController.php
-
         # invalid types
         - '#Parameter \#2 \$font of method Imagine\\Draw\\DrawerInterface\:\:text\(\) expects Imagine\\Image\\AbstractFont, Imagine\\Image\\FontInterface given#'
-
-        # part of route name
-        - '#Relative file path "/thumbnail/\{title\}\.png" is not allowed, use absolute one with __DIR__#'

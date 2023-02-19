@@ -11,15 +11,22 @@ use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 use Rector\Transform\Rector\MethodCall\MethodCallToFuncCallRector;
 use Rector\Transform\ValueObject\MethodCallToFuncCall;
-use TomasVotruba\Utils\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRouteFileRector;
+use TomasVotruba\Utils\Rector\DataCollector\RouteDataCollector;
+use TomasVotruba\Utils\Rector\Rector\ClassMethod\SymfonyRouteAttributesToLaravelRouteFileRector;
+use TomasVotruba\Utils\Rector\Rector\PostRector\DumpRouteFilePostRector;
 
 return function (RectorConfig $rectorConfig): void {
     $rectorConfig->importNames();
 
+    $services = $rectorConfig->services();
+    $services->set(RouteDataCollector::class);
+
+    // $services->set(DumpRouteFilePostRector::class);
+
     $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages']);
 
     $rectorConfig->rules([
-        SymfonyRouteAttributesToLaravelRouteFileRector::class
+        SymfonyRouteAttributesToLaravelRouteFileRector::class,
     ]);
 
     $rectorConfig->ruleWithConfiguration(RenameClassRector::class, [
