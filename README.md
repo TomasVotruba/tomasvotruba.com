@@ -1,4 +1,8 @@
-# [tomasvotruba.com](https://tomasvotruba.com) - Personal Website running on Laravel 10
+# [tomasvotruba.com](https://tomasvotruba.com)
+
+Personal Website running on Laravel 10
+
+<br>
 
 ## Install & Run
 
