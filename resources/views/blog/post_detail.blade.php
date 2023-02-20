@@ -71,23 +71,9 @@
             </div>
         </div>
 
-        {{ $post->getHtmlContent() }}
+        {!! $post->getHtmlContent() !!}
 
         <br>
-
-
-        <div class="card mt-5 border-warning">
-            <div class="card-body text-center mt-2">
-                <p>
-                    Have you find this post useful? <strong>Do you want more?</strong>
-                </p>
-                <p>
-                    Follow me on <a href="https://twitter.com/votrubaT">Twitter</a>, <a
-                        href="{{ route(constant('TomasVotruba\\Website\\ValueObject\\RouteName::RSS')) }}">RSS</a> or
-                    support me on <a href="https://github.com/sponsors/TomasVotruba">GitHub Sponsors</a>.
-                </p>
-            </div>
-        </div>
 
         <div class="card mt-4">
             <div class="card-body text-white bg-success text-center">
