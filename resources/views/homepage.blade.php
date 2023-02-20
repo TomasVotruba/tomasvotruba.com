@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-4 col-md-3">
-                <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::ABOUT) }}>
+                <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::ABOUT) }}">
                     <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="mt-auto rounded-circle shadow">
                 </a>
             </div>
