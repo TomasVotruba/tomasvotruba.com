@@ -1,4 +1,4 @@
-# [tomasvotruba.com](https://tomasvotruba.com) - Personal Static Website Generated from Symfony App
+# [tomasvotruba.com](https://tomasvotruba.com) - Personal Website running on Laravel 10
 
 ## Install & Run
 
@@ -11,7 +11,7 @@ composer install
 - Run local server
 
 ```bash
-php -S localhost:8000 -t public
+php artisan serve
 ```
 
 And open [http://localhost:8000](localhost:8000) in your browser.
