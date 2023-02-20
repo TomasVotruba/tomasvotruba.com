@@ -58,6 +58,10 @@ final class TwigToBladeConverter
 
     public function run(string $templatesDirectory): void
     {
+        if (! file_exists($templatesDirectory)) {
+            return;
+        }
+
         $twigFilePaths = $this->findTwigFilePaths($templatesDirectory);
 
         foreach ($twigFilePaths as $twigFilePath) {
