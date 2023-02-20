@@ -19,10 +19,8 @@ return [
 
     'providers' => [
         // Laravel Framework Service Providers...
-        \Illuminate\Auth\AuthServiceProvider::class,
         \Illuminate\Cache\CacheServiceProvider::class,
         ConsoleSupportServiceProvider::class,
-        \Illuminate\Cookie\CookieServiceProvider::class,
         \Illuminate\Database\DatabaseServiceProvider::class,
         FilesystemServiceProvider::class,
         FoundationServiceProvider::class,
