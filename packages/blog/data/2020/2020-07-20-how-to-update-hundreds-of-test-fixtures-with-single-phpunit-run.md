@@ -3,9 +3,11 @@ id: 270
 title: "How to Update Hundreds of Test Fixtures with Single PHPUnit run"
 perex: |
     In [previous post](/blog/2020/07/13/the-most-effetive-test-i-found-in-7-years-of-testing/), we look at the benefits of visual snapshot testing for lazy people. How bare *input/output* code in a single file makes tests easy to read for new contributors.
-    <br><br>
+
+
     Today, we look at **how to maintain visual snapshot tests**.
-    <br><br>
+
+
     Let's say we need to add `declare(strict_types=1);` to output part of 100 test fixtures? Would you add it manually in every single file?
 
 tweet: "New Post on #php 🐘 blog: How to Update Hundreds of Test Fixtures with Single PHPUnit run"

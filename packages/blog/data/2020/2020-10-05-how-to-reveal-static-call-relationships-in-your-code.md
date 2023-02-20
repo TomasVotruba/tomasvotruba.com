@@ -3,11 +3,14 @@ id: 281
 title: "How to Reveal Static Call Relationships in Your Code"
 perex: |
     Static methods are easy to use. Have a guess. How long would it take to make 700 static methods in your code? 2-3 years? Now imagine you need a [replace one with dependency injection](/blog/2018/04/26/how-i-got-into-static-trap-and-made-fool-of-myself/).
-    <br><br>
+
+
     You're [dead](/blog/2020/08/31/how-static-methods-kills-you-like-corona/). Well, at first, it feels like it. Then you can start to [analyze the problem](/blog/2019/04/01/removing-static-there-and-back-again/) and make a refactoring plan. **To increase plan chances for success, we needed data.**
-    <br><br>
+
+
     How can we get more data about static in our code?
-    <br><br>
+
+
     Meet *Static Detector*.
 
 tweet: "New Post on #php 🐘 blog: How to Reveal Static Call Relationships in Your Code"

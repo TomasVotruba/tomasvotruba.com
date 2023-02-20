@@ -3,7 +3,8 @@ id: 251
 title: "How to Upgrade to Symplify 8 - From Fixers to Rector Rules"
 perex: |
     Symplify 8 is going to be released in the 2nd half of May. But as in Symfony, you can get ready for future version today.
-    <br><br>
+
+
     [In the previous post we upgraded Coding Standard from Sniffs to PHPStan](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/). Today we finish with 2nd half - **from Fixers to Rector rules**.
 
 tweet: "New Post on #php 🐘 blog: How to Upgrade to #symplify 8 - From Fixer to @rectorphp Rules"

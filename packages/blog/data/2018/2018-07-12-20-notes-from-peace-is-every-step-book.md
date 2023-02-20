@@ -3,9 +3,11 @@ id: 122
 title: "Notes from 'Peace is Every Step' Book"
 perex: |
     Zen To Done, Deep Work, ZenHabits... You've probably noticed I'm a fan of Leo Babauta. The first person I met on the Internet who explained to me that I'm not weird, but a minimalist.
-    <br><br>
+
+
     Leo [writes](https://zenhabits.net) minimalist tips from daily life that is easy to relate to. Thanks to quotes in his posts I got chance to meet *Thich Nhat Hanh*, a Buddhist monk who helped to restore peace between the USA and Vietnam...
-    <br><br>
+
+
     ...and recently I've finished reading his book *Peace Is Every Step: The Path of Mindfulness in Everyday Life*. What was it about?
 tweet: "New Post on my Blog: Notes from 'Peace is Every Step' Book #conflicts #community #anger #transform #joy"
 tweet_image: "/assets/images/posts/2018/peace/book.jpg"

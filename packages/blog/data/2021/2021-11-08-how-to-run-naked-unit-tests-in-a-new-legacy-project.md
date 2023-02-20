@@ -9,7 +9,8 @@ perex: |
     <br>
     <br>
     But the tests require this PHP extension, those environment variables, this external service, and these few Docker images to be running.
-    <br><br>
+
+
     What if we can **find the naked unit tests** and run them today by ourselves?
 
 tweet: "New Post on the 🐘 blog: How to Run Naked Unit Test in a New Legacy Project"

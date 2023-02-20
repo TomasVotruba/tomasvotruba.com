@@ -2,7 +2,8 @@ id: 179
 title: "FriendsofPHP.org is Opening API with&nbsp;250&nbsp;Meetups&nbsp;a&nbsp;Month"
 perex: |
     [Friendsofphp.org](https://friendsofphp.org) already checks **over 1 145 PHP groups** on meetup.com for new meetups every day. That's about 240 meetups in a single month - a great number, but some user groups don't use meetup.com.
-    <br><br>
+
+
     I spend last weekend adding 4 new sources for meetups... and while doing it, I thought: "why not make all that meetups and groups public in JSON"?
 
 tweet: "New Post on #php 🐘 blog: FriendsofPHP.org is Opening #API with 250 Meetups a Month"

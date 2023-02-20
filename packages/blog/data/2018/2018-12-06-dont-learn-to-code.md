@@ -3,7 +3,8 @@ id: 165
 title: "Don't Learn to Code"
 perex: |
     Do you know what each letter in S.O.L.I.D. means? Do you know commonly used design patterns? Do you know the most popular PHP frameworks? Do know what [cyclomatic complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) is?
-    <br><br>
+
+
     Don't learn to code. **Learn how to think.**
 tweet: "New post on my #php blog: Don't Learn to Code"
 ---

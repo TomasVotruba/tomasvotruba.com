@@ -3,7 +3,8 @@ id: 127
 title: "Hidden Gems of PHP Packages: Nette\\Utils"
 perex: |
     In this series, I will show you **not-so-known PHP packages, that I happily use in my daily workflow**. They're hard to describe in few words for their various features, but awesome and simple to use.
-    <br><br>
+
+
     Today we start with [Nette\Utils](https://github.com/nette/utils) package.
 tweet: "New Post on my Blog: Hidden Gems of PHP Packages: Nette\\Utils #nettefw #utils #php #regulars #fails #wtf"
 tweet_image: "/assets/images/posts/2018/nette-utils/warning.png"

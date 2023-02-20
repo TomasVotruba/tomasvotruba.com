@@ -3,9 +3,11 @@ id: 248
 title: "How to Hydrate Arrays to Objects via Constructor"
 perex: |
     One technology evolution sparks naturally another one. When electricity became accessible to masses, a huge industry of home-electric tools became possible. Like this tool, I currently write on.
-    <br><br>
+
+
     The same thing happens in software, just exponentially faster. Like tokens and AST sparked [tools that change your code](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/).
-    <br><br>
+
+
     Recently, I introduced [Symfony Static Dumper](/blog/2020/03/16/statie-is-dead-long-live-symfony-static-dumper/) that uses YAML to store data in your Symfony application. You where this goes... how can **we turn this YAML into objects**?
 
 tweet: "New Post on #php 🐘 blog: How to Hydrate Arrays to Objects via Constructor"

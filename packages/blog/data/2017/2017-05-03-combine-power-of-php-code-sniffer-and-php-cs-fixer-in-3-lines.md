@@ -4,7 +4,8 @@ title: "Combine power of PHP_CodeSniffer and PHP CS Fixer in 3 lines"
 perex: |
     PHP_CodeSniffer has over **5 381 stars** on Github and **210 default sniffs**,
     PHP CS Fixer with **6 467 stars** brings you **160 fixers**.
-    <br><br>
+
+
     Both powerful tools dealing with coding standards with **huge communities behind them**.
     Can you imagine using them both and actually enjoy it? Today I will show you how.
 tweet: "#ecs - tool to use both #phpCodeSniffer and #phpCsFixer in 3 lines #php #codingstandard"

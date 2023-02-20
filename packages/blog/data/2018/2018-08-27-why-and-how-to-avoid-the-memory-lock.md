@@ -3,7 +3,8 @@ id: 135
 title: "Why and How to Avoid the Memory Lock"
 perex: |
     When you close the door of my home, they're closed and you need a key to get in. But what if your door has door handle? You have to also lock them.
-    <br><br>
+
+
     Instead of just closing the door you have to close the door and *that one more thing*. Why is that a bad thing in the code and how to avoid it?
 tweet: "New Post on my Blog: Why and How to Avoid the Memory Lock #cleancode #safecode #php #solid"
 ---

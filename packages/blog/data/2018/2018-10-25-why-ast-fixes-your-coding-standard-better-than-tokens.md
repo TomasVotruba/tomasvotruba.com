@@ -3,7 +3,8 @@ id: 153
 title: "Why AST Fixes your Coding Standard Better than Tokens"
 perex:
     In the last post [*Brief History of Tools Watching and Changing Your PHP Code*](/blog/2018/10/22/brief-history-of-tools-watching-and-changing-your-php-code/) we saw there are over **dozen tools in PHP that can modify code**. So there is no surprise coding standard tools are "upgrading" code from PHP 5.6 to PHP 7.2 without knowing types and that AST is moving `false` to `!`.
-    <br><br>
+
+
     Should coding standard upgrade your code? Should AST make your code cleaner? Should AST take of coding standard changes?
     **Which is born for it?**
 tweet: "New Post on my Blog: Why #AST Fixes your Coding Standard Better than Tokens #php"

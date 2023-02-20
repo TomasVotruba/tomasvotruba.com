@@ -3,7 +3,8 @@ id: 319
 title: "How Exception to the Convention Does More Harm than Good"
 perex: |
     We have a project, and to make it easier, we use specific standards. E.g., we use spaces in every file.
-    <br><br>
+
+
     But sometimes, we get to a situation when these standards are stressful. We don't understand them and just want them to bend over. How does our short-term need for pleasure affects **long-term well-being** of the project?
 
 tweet: "New Post on #php 🐘 blog: How Exceptions for Conventions Do More Harm than Good"

@@ -3,7 +3,8 @@ id: 275
 title: "What if We Remove Strings from Symfony Extension Configuration"
 perex: |
     You can tell I'm a [huge fan PHP configs](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs/). To be honest, I don't care; I'm just extremely lazy.
-    <br><br>
+
+
     Yet, my laziness got me itching when I see **configuration of extensions**.
 
 tweet: "New Post on #php 🐘 blog: What if We Remove Strings from #symfony Extension Configuration"

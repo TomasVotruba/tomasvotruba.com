@@ -3,9 +3,11 @@ id: 332
 title: "Introducing up-to 16&nbsp;Times&nbsp;Faster Easy&nbsp;Coding&nbsp;Standard"
 perex: |
     Do you use [Easy Coding Standard](https://github.com/symplify/easy-coding-standard)? Do you find **extremely useful and easy to use, but a little slow on a huge code base**?
-    <br><br>
+
+
     If you [follow me carefully on Twitter](https://twitter.com/votrubaT), you already know that the ECS got a new parallel run feature. I wanted to test it in a circle of early adopters first, so we make the run as smooth as possible for you.
-    <br><br>
+
+
     Today, we're sharing the ECS Parallel run with the public, so you **can cut down ECS run times from minutes to seconds**.
 
 tweet: "New Post on the 🐘 blog: Introducing up-to 16-Times Faster Easy Coding Standard"

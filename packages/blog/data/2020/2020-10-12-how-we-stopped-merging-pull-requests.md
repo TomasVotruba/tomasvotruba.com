@@ -3,7 +3,8 @@ id: 282
 title: "How We Stopped Merging Pull&nbsp;Requests"
 perex: |
     What comes before merging a pull request? Code-review, feedback from developers, and fixes to make the reviewer happy. After that, we only need the tests, coding standard, PHPStan, and Rector to pass in the CI.
-    <br><br>
+
+
     Here is an idea - **don't merge any pull-request from now on**...
 
 tweet: "New Post on #php 🐘 blog: How We Stopped Merging Pull Requests    #cireview"

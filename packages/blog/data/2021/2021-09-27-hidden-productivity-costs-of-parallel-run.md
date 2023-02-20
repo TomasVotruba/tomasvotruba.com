@@ -3,7 +3,8 @@ id: 334
 title: "Hidden Productivity Costs of Parallel Run"
 perex: |
     Have you enabled parallel run in PHPStan and ECS? You know the speed gain is brutal. On the other hand, there are **few hidden costs in developer experience** I haven't faced before.
-    <br><br>
+
+
     What are they, and how to mitigate their impact?
 
 tweet: "New Post on the 🐘 blog: Hidden Productivity Cost of Parallel Run"

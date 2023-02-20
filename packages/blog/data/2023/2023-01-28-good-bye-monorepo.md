@@ -3,7 +3,8 @@ id: 375
 title: "Good Bye, Monorepo"
 perex: |
     I've been using monorepo for almost a decade, and I was thrilled with that. Yet, in recent years I've noticed a few glitches in the workflow. The more popular the package became, the more visible frictions were.
-    <br><br>
+
+
     How do I see the monorepo approach in 2023, and what do I want to do differently?
 ---
 

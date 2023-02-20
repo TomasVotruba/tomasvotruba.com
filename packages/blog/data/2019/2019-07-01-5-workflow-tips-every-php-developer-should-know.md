@@ -3,7 +3,8 @@ id: 216
 title: "5 Workflow Tips every PHP Developer Should Know"
 perex: |
     I was surprised, how much of your attention got [5 Tips to Effective Work with Github Repository](/blog/2019/02/25/5-tips-to-effective-work-with-github-repository/) post.
-    <br><br>
+
+
     So [I started to collect tips](https://github.com/TomasVotruba/tomasvotruba.com/issues/226) I use on training and mentoring that I don't even notice, but others find fascinating. Here is 5 of them.
 tweet: "New Post on #php 🐘 blog: 5 Workflow Tips every PHP Developer Should Know"
 ---

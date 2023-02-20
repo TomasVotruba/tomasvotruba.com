@@ -3,7 +3,8 @@ id: 331
 title: "How to Easily Protect your Code Base from Commented PHP Code"
 perex: |
     When it comes to merging huge pull-request, here and there, a bit of commented code slips to our codebase. Do you trust your reckless developers to check every single line? Are you sure?
-    <br><br>
+
+
     We **cherish our developers' attention** so we come with a simple solution that we added to our CI. Now we know for sure. Do you think you have 0 % unwanted commented code? I dare you to have more.
 
 tweet: "New Post on the 🐘 blog: How to Easily Protect your Code Base from Commented PHP Code"

@@ -3,7 +3,8 @@ id: 47
 title: "How to Write Custom Fixer for PHP CS Fixer 3"
 perex: |
     You already know [how coding standard tools work with tokens and how to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
-     <br><br>
+
+
      Today we'll explore another tool - [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and we get **from finding the smelly spot to fixing it**.
 
 tweet: "How to Write Custom Fixer for #phpcsfixer"

@@ -3,9 +3,11 @@ id: 329
 title: "Improve your Rector, PHPStan and CI Skills with 3 New Trainings"
 perex: |
     Do you have time to read a book now and then after work? Yes? Get [Rector - The Power of Automated Refactoring](/book/the-power-of-automated-refactoring) and practice AST katas daily.
-    <br><br>
+
+
     But not everyone has such a passion for technology and yet wants to get the work done with as few mistakes as possible. **Learning a new technology alone is hard.** There is too much edge-case to think about on every level of technology we use.
-    <br><br>
+
+
     What if there was someone to pull you through the steep learning curve?
 tweet: "New Post on the 🐘 blog: Improve your Rector, PHPStan and CI Skills with 3 New Trainings"
 ---

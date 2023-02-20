@@ -3,9 +3,11 @@ id: 232
 title: "Doctrine Behaviors 2.0 - Reloaded"
 perex: |
     In [How we Upgraded Pehapkari.cz from Symfony 4 to 5 in 25 days](/blog/2019/09/09/how-we-upgraded-pehapkari-cz-from-symfony-4-to-5-in-25-days//) post, there is a section about Doctrine Behaviors in Symfony 5.
-    <br><br>
+
+
     **None of stof, gedmo, nor KnpLabs is working with Symfony 5**. There are many issues in each of those projects asking for maintainers to merge PRs and tag it. One of those issues was heard, and the owner gave me maintainer access.
-    <br><br>
+
+
     How does it look 3 weeks later?
 
 tweet: "New Post on #php 🐘 blog: Doctrine Behaviors 2.0 - Reloaded"

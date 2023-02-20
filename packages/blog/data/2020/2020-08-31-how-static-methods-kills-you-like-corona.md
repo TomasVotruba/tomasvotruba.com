@@ -3,7 +3,8 @@ id: 276
 title: "How Static&nbsp;Methods Kill&nbsp;You Like&nbsp;Corona"
 perex: |
     Do you know [the Broken Window theory](https://blog.codinghorror.com/the-broken-window-theory/)? It's a social pattern in code, a great post written by a guy behind one small manual website - StackOverflow.
-    <br><br>
+
+
     If you combine this theory and Static Methods in Your code, you'll get Corona. As we already know, it might or might not be deadly. How it spreads, what are ways to protect, can we cure it?
 
 tweet: "New Post on #php 🐘 blog: How Static Methods Kill You Like Corona"

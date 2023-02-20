@@ -3,7 +3,8 @@ id: 185
 title: "Introducing Neon to YAML Converter"
 perex: |
     I wrote about [How to migrate between Neon to Yaml](/blog/2018/03/12/neon-vs-yaml-and-how-to-migrate-between-them/) almost a year ago. Recently we needed to migrate many files with parameters, imports, and mainly services.
-    <br><br>
+
+
     **Neon and YAML are basically arrays**, right? So why not let a tool let do the dirty work?
 
 tweet: "New Post on #php 🐘 blog: Introducing #Neon to #Yaml Converter   #symfony #nettefw"

@@ -3,7 +3,8 @@ id: 369
 title: "How to Measure Your Type Coverage"
 perex: |
     When we come to a new code base, we look for a code quality metric that will tell us how healthy the code base is. We can have CI tools like PHPStan and PHPUnit. PHPStan reports missing or invalid types, and PHPUnit reports failing tests.
-    <br><br>
+
+
     But how do we know if 10 passing or 100 passing tests is enough? What if there are over 10 000 cases we should test?
 
 updated_since: "December 2022"

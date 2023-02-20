@@ -4,7 +4,8 @@ title: "How to Box Symfony App to PHAR without Killing Yourself"
 perex: |
     Do you have a Symfony Application like Composer and you want to ship it as a PHAR?
     Composer is actually pretty simple - just see the [`Compiler`](https://github.com/composer/composer/blob/master/src/Composer/Compiler.php) class.
-    <br><br>
+
+
     **But what if** you use Symfony Dependency Injection with PSR-4 **autodiscovery** like [Rector](https://github.com/rectorphp/rector) does? Well, better be ready for **nasty traps**.
 tweet: "New Post on #php 🐘 blog: How to Box #Symfony App to PHAR without Killing Yourself"
 ---

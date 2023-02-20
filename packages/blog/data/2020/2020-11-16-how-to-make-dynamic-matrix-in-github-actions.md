@@ -4,7 +4,8 @@ title: "How to make a Dynamic Matrix in GitHub Actions"
 perex: |
     Do you want [split monorepo](/blog/2020/11/09/new-in-symplify-9-monorepo-split-with-github-action) for each package?
     Instead of 20 workflows with copy-paste steps, you can define **just one with a static matrix for packages**.
-    <br><br>
+
+
     Yet, nothing in real life is static but rather dynamic. A new package can be added, old can be removed.
     How could we automate this even more with a **dynamic matrix?**
 

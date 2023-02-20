@@ -3,10 +3,12 @@ id: 54
 title: "How to write Open-Source in PHP 3: Deprecating Code"
 perex: |
     Humans, world and PHP Frameworks constantly evolve - their code functionality changes. Class or method is renamed, method has 1 new argument or new class is decoupled.
-    <br><br>
+
+
     In Symfony world you probably know about <a href="https://symfony.com/doc/current/contributing/code/bc.html">Backward Compatibility Promise</a>.
     It <strong>prevents from unexpected and frustrating BC breaks</strong> and helps users to upgrade gradually thanks to deprecation messages.
-    <br><br>
+
+
     In this post I will show you <strong>how to work with deprecation messages</strong>.
 tweet: "How to deprecate your code without BC breaks? #php #oss"
 ---

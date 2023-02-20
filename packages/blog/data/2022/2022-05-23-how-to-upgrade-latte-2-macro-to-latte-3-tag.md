@@ -3,7 +3,8 @@ id: 354
 title: "How to Upgrade Latte&nbsp;2&nbsp;Macro to&nbsp;Latte&nbsp;3&nbsp;Tag"
 perex: |
     Latte 3 running on abstract syntax tree was released this week. Do you want to upgrade? First, check [5 steps to get ready](/blog/5-steps-to-get-ready-for-latte-3).
-    <br><br>
+
+
     Do you have any custom macros in your project? They're the biggest challenge of the Latte 3 upgrade. But don't worry, today we'll rewrite them together.
 
 tweet: "New Post on the 🐘 blog: How to Upgrade Latte 2 Macro to Latte 3 Tag      #nettefw"

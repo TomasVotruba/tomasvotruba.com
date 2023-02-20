@@ -3,7 +3,8 @@ id: 272
 title: "How to Give Away 1500&nbsp;€ in 1&nbsp;Tweet and Help 25&nbsp;People Learn Something New"
 perex: |
     What makes one give?
-    <br><br>
+
+
     For me, it's a combination of gratitude, abundance, and inspiration in the surrounding.
 
 tweet: "New Post on #php 🐘 blog: How to Give Away 1500 € in 1 Tweet and Help 25 People Learn Something New"

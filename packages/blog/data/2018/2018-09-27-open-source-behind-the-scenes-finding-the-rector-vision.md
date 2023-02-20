@@ -3,7 +3,8 @@ id: 147
 title: "Open-Source Behind The Scenes - Finding the Rector Vision"
 perex: |
     Open-source is not only about programming, maintaining, adding new features and spreading the word. It's also about other decisions of the maintainer, that are hidden from users.
-    <br><br>
+
+
     I often ask myself: What values should it spread around the world? Where do I take time and money to develop it? How should it scale? How to make it useful to both people and me?
 tweet: "New Post on my Blog: Open-Source Behind The Scenes - Finding the #Rector Vision"
 ---

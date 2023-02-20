@@ -3,7 +3,8 @@ id: 90
 title: "Try PSR-12 on Your Code Today"
 perex: |
     The standard is still behind the door, but feedback, before it gets accepted, is very important. After accepting it will be written down and it will be difficult to change anything.
-    <br><br>
+
+
     Try PSR-12 today and see, how it works for your code.
 tweet: "New Post on My Blog: Try PSR-12 on Your Code Today"
 tweet_image: "/assets/images/posts/2018/psr-12/preview.png"

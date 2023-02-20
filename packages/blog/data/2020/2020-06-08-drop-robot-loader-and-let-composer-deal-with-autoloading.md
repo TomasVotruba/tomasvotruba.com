@@ -3,7 +3,8 @@ id: 255
 title: "Drop RobotLoader and let Composer Deal with Autoloading"
 perex: |
     Using 2 tools for one thing, in this case 2 packages to autoload classes, are sign of an architecture smell. Many applications I see contain RobotLoader for historical reasons. I will borrow this from psychology: pathological behavioral patterns tear us down in the present, but were useful in past.
-    <br><br>
+
+
     The best way to deal with them is acknowledge their purpose and then, let them go and enjoy the gift of present.
 
 tweet: "New Post on #php 🐘 blog: Drop RobotLoader and let #composerphp Deal with Autoloading #nettefw #psr4 Dispatcher"

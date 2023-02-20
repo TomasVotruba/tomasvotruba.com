@@ -3,7 +3,8 @@ id: 365
 title: "Can PHPStan find Dead Public Methods?"
 perex: |
     This bold question has been around PHP Internet for many years... [at least since 2008](https://stackoverflow.com/questions/11532/how-can-i-find-unused-functions-in-a-php-project). In 2017 I added [dead public method sniff](https://github.com/symplify/symplify/pull/466) to Symplify Coding Standard.
-    <br><br>
+
+
     It runs on bare PHP tokens without any type or AST, so the capability was limited. Yet it was able to detect a few unused methods. Now, 5 years later, we maybe have a better solution.
 
 updated_since: "December 2022"

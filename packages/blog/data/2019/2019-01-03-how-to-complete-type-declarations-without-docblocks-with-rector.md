@@ -3,7 +3,8 @@ id: 173
 title: "How to Complete Type Declarations without Docblocks with Rector"
 perex: |
     In [previous post](/blog/2018/12/10/rocket-science-behind-migration-of-docblock-types-to-php-typehints/) we looked at how to migrate from docblocks to type declarations. From `@param Type $param` to `Type $param`. Even if it doesn't break code like coding standards do, works with inheritance, localized `self` and `static` and propagates types to all child classes, it's still not such a big deal.
-    <br><br>
+
+
     But **how do you complete type declarations if don't have any docblocks?**
 
 tweet: "New Post on #php 🐘 blog: How to Complete Type Declarations without Docblocks with #Rectorphp"

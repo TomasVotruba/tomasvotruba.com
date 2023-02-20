@@ -25,17 +25,22 @@ require __DIR__ . '/../vendor/autoload.php';
 
 final class TwigToBladeConverter
 {
+    /**
+     * @var array<string, string>
+     */
     private const TWIG_TO_BLADE_REPLACE_REGEXES = [
         // layout
-        '#{\% extends "(.*?)" \%\}#' => '@base(\'$1\')',
+        '#{\% extends "(.*?)\.twig" \%\}#' => '@extends(\'$1\')',
         '#{\% block (.*?) %}#' => '@block(\'$1\')',
         '#{\% endblock \%}#' => '@endblock',
+        '#{\% include((\'|").*?\.twig(\'|")) %}#' => '@include(\'$1\')',
 
         // control structures
         '#{% if (?<condition>.*?) %}#' => '@if ($1)',
         '#{% for (?<singular>.*?) in (?<plural>.*?) %}#' => '@foreach ($$2 as $$1)',
         '#{% else %}#' => '@else ',
-        '#{% (endif|endfor) %}#' => '@$1',
+        '#{% endif %}#' => '@endif',
+        '#{% endfor %}#' => '@endforeach',
         '#\{\# @var (?<variable>.*?) (?<type>.*?) \#\}#' => '@php /** @var $$1 $2 */ @endphp',
         '#path\((.*?)\)#' => 'route($1)',
         '#\{ (?<key>\w+)\: (?<value>.*?) \}#' => '[\'$1\' => $2]',
@@ -53,6 +58,10 @@ final class TwigToBladeConverter
 
     public function run(string $templatesDirectory): void
     {
+        if (! file_exists($templatesDirectory)) {
+            return;
+        }
+
         $twigFilePaths = $this->findTwigFilePaths($templatesDirectory);
 
         foreach ($twigFilePaths as $twigFilePath) {

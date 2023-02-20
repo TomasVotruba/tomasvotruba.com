@@ -3,9 +3,11 @@ id: 373
 title: "How can we Generate Unit Tests - Part 1: Testability Score"
 perex: |
     As you have noticed, apart from writing micro-packages for PHPStan, my passion is exploring the field of **generated unit tests**. I want to share my thoughts on this topic with you to get your feedback and find a path to the best solution.
-    <br><br>
+
+
     You will learn a lot about making man-like working/thinking tools.
-    <br><br>
+
+
     I am still determining where this goes, but I love the journey. Let's dive in.
 ---
 

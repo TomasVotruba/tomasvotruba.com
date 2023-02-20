@@ -5,7 +5,8 @@ perex: |
     [Native enums](https://php.watch/versions/8.1/enums) is a new PHP 8.1 feature. This feature brings more focus on *what* enums are *where* we can use them.
 
     **Not on PHP 8.1 yet?** Don't worry, before that, enums were emulated by public constants. Few constant lists are already part of your favorite framework, ORM, or utils package for years.
-    <br><br>
+
+
     Today we look at 5 constant lists that you can use today to replace that `int` or `string` and give it a context.
 
 tweet: "New Post on the 🐘 blog: 5 Constant Lists That Give Context to your Integers and Strings        #nettefw #symfony #php"

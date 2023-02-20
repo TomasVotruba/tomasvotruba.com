@@ -3,7 +3,8 @@ id: 192
 title: "Why we Migrated from Nette to Symfony in 3 Weeks - Part 2 - Escaping Semantic Hell"
 perex: |
     Do you want to **migrate your project from Nette to Symfony**? In [part 1](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1/) we showed you how to get your project ready, why it's important to make team commitment and what you can automate.
-    <br><br>
+
+
     Today we'll look on one of the core reasons for this migration - **escaping to semantic hell**.
 tweet: "New Post on #php 🐘 blog: Why we Migrated from #nettefw to #Symfony in 3 Weeks - Part 2 - Escaping Semantic Hell"
 tweet_image: "/assets/images/posts/2019/nette-to-symfony2/version-hell.png"

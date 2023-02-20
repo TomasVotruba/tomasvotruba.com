@@ -3,7 +3,8 @@ id: 162
 title: "14 Tips to Write PHP Code that is Hard to Maintain and Upgrade"
 perex: |
     Today I'll show you how to own your company. All you need to do is write code that no-one can read, is hard to refactor and creates technical debt. It's not easy, because if other programmers spot you're writing legacy code, you're busted.
-    <br><br>
+
+
     If you keep a low profile of very smart architect and do it right, you'll be the only one in the company who knows what is going on and you'll have a value of gold. Learn how to be **successful living vendor lock**!
 tweet: "New Post on My Blog: 14 Tips to Write #PHP Code that is Hard to Maintain and Upgrade (in Examples) #vendorlockin #ast #staticanalysis"
 tweet_image: "/assets/images/posts/2018/vendor/omg-naming.gif"

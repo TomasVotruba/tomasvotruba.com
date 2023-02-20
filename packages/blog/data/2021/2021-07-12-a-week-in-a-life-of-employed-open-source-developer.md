@@ -3,7 +3,8 @@ id: 328
 title: "A Week in a Life of Employed Open&#8209;Source&nbsp;Developer"
 perex: |
     Would you contribute an open-source project if it would help your private one? How do you measure such cost-effectiveness? Maybe it's better to fork the package to your own or create your single local service. But who will maintain it and write a test for it? Who will upgrade it when PHP 8 is in EOL?
-    <br><br>
+
+
     I want to share my point of view on prisoners' dilemma, which you maybe know from your daily work.
 
 tweet: "New Post on the 🐘 blog: A Week in a Life of Employed Open-Source Developer"

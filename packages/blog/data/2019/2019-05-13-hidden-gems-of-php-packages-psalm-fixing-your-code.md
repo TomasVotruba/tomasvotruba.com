@@ -3,7 +3,8 @@ id: 211
 title: "Hidden Gems of PHP Packages: Psalm Fixing Your Code"
 perex: |
     Psalm is a static analyzer of PHP code originated at Vimeo and developed by [Muglug](https://github.com/muglug). It can analyze your code for incorrect type declarations or unused code.
-    <br><br>
+
+
     But did you know it can automatically fix these issues?
 tweet: "New Post on #php 🐘 blog: Hidden Gems of PHP Packages: @psalmphp Fixing Your Code"
 

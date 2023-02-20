@@ -3,7 +3,8 @@ id: 277
 title: "Introducing Object Calisthenics Rules for PHPStan"
 perex: |
     For the last 2 years, I've maintained [Object Calisthenics Rules for PHP_CodeSniffer](https://github.com/object-calisthenics/phpcs-calisthenics-rules). In 2019 and 2020, there was a huge boom of custom PHPStan rulesets that make everyday development [easier and stronger](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/) at the same time.
-    <br><br>
+
+
     **Have you been waiting to put these rules into your `phpstan.neon`?**
     <br>
     <br>

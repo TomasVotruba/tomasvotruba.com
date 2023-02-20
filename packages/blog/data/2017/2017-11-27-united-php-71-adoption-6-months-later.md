@@ -4,7 +4,8 @@ title: "United PHP 7.1 Adoption 6 Months Later"
 perex: |
     A year since it's release and 6 months since GoPHP71 initiative.
     PHP 7.1 is **the fastest adopted** minor version of PHP already beating PHP 7.0.
-    <br><br>
+
+
     How is adoption going in open-source and why it should continue from bleeding-edge projects?
 tweet: "Is #PHP 7.1 the fastest version to be adopted by PHP community? And what projects are already requiring it as minimum version #symfony #doctrineORM #laravel #nettefw"
 tweet_image: "/assets/images/posts/2017/go-php-71-later/unity.jpg"

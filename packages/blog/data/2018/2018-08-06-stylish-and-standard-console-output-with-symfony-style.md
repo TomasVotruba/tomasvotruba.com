@@ -3,7 +3,8 @@ id: 129
 title: "Stylish and Standard Console Output with Symfony Style"
 perex: |
     Even if you don't use any component from Symfony or even installed one, you can use this trick in your PHP CLI App.
-    <br><br>
+
+
     It's simple, provides standard and makes your output look like a design from Apple - useful and nice at the same time.
 tweet: "New Post on my Blog: Stylish and Standard Console Output with #Symfony Style"
 ---

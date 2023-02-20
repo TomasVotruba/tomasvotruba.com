@@ -4,7 +4,8 @@ title: "How to Create Your First PHP Twig Static Website under 2 Minutes with St
 perex: |
     Do you like to write or create micro-sites? This post is for you.
     Statie is now [the most downloaded](https://packagist.org/packages/symplify/statie/stats) PHP Twig static site generators, even surpassing 7-years old [Sculpin](https://packagist.org/packages/sculpin/sculpin/stats) by 200 downloads a month. On the other hand, Sculpin is about to release [version 3](https://github.com/sculpin/sculpin/releases) creating healthy competition.
-    <br><br>
+
+
     As you can see, **Static websites are on the rise in PHP** and they were never used more than now. It's time to make creating a new static website simple for everyone.
 tweet: "New Post on #php 🐘 blog: How to Create Your First PHP #Twig Static Website under 2 Minutes with #Statie"
 

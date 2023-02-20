@@ -3,9 +3,11 @@ id: 297
 title: "PHPStan Abstract Parent Generics for Dummies"
 perex: |
     I'm trying to write code that is independent of abstract classes. Type-juggling can create n-matrix complexity in both directions and remind me of stringy static code where everything is one type - `mixed`.
-    <br><br>
+
+
     But we cannot always avoid it. Do you use repositories with one abstract repository? Projects [I upgrade](https://getrector.org/) do.
-    <br><br>
+
+
     So I tried to use [PHPStan generics](https://phpstan.org/blog/generics-in-php-using-phpdocs) and failed hard.
 
 tweet: "New Post on #php 🐘 blog: #phpstan Abstract Parent Generics for Dummies"

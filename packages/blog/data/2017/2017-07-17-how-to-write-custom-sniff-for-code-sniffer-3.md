@@ -3,9 +3,11 @@ id: 46
 title: "How to Write Custom Sniff for Code Sniffer 3.3"
 perex: |
     When I give talks about coding standards, I ask people 2 questions: do you use coding standards? Do you write your own sniffs? On average, above 50 % uses it, but only 1-2 people wrote their own sniff.
-    <br><br>
+
+
     PSR-2 is great for start, but main power is in those own sniffs. Every project has their own need, every person has different preferences.
-    <br><br>
+
+
     I Google then and found outdated or complicated sources, so I've decided to write down a reference post for those, who want to start with sniffs.
     Let's look what will show all you need (and nothing more) to <strong>know to write your first sniff</strong>.
 tweet: "How to Write Custom Sniff for #phpCodeSniffer 3"

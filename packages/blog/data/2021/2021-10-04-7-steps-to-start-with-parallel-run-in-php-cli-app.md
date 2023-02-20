@@ -3,9 +3,11 @@ id: 333
 title: "7 Steps to Start with Parallel&nbsp;Run in PHP&nbsp;CLI&nbsp;App"
 perex: |
     To be honest, I have no idea what I'm doing. I've read a couple of posts about parallel processes in PHP, but most got me confused even more than before. Too much vague theory links to dozens of open-source packages, 5 alternatives to one operation, and other education faults.
-    <br><br>
+
+
     What I missed **was a to-do list for a 6-year old PHP programmer**. Straightforward, with everyday terminology developers, already know.
-    <br><br>
+
+
     Do you want to have **a better idea of how to add a parallel run to one of PHP CLI apps**?<br>
     <br>
     This post will get you from 0 to padawan in a couple of minutes.

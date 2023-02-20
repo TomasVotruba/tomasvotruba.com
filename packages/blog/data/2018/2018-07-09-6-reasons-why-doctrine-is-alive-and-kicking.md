@@ -3,9 +3,11 @@ id: 121
 title: "6 Reasons Why Doctrine is Alive and Kicking"
 perex: |
     Almost 1,5 year ago I wrote [Why is Doctrine Dying](/blog/2017/03/27/why-is-doctrine-dying/). I didn't use *dead*, because it's is just state of time being. Open-source projects - like people - tend to find themselves on the top, being stuck or struggling with the right path from time to time. It's a completely normal process of evolution.
-    <br><br>
+
+
     I don't know if that post helped it, but since then many **things changed for better in Doctrine project**. Saying that this post deprecates my old view and celebrate changes.
-    <br><br>
+
+
     **May this be an inspiration for open-source projects that find themselves stuck and the maintainers that find themselves unhappy**.
 tweet: "New Post on my Blog: 6 Reasons Why is #Doctrine Alive and Kicking #orm #open-source #github #packagemanagement"
 tweet_image: "/assets/images/posts/2018/doctrine-alive/contrib.png"

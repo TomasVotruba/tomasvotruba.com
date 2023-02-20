@@ -4,7 +4,8 @@ title: "How to get a Dynamic PHP Version Matrix in GitHub Actions"
 perex: |
     Do you want to run your tests on each PHP version you support? PHP 7.3, 7.4 and 8.0?
     Instead of 3 workflows with copy-paste steps, you can define **just one with a matrix for PHP versions**.
-    <br><br>
+
+
     But PHP is released every year. The version constraints are already defined in `composer.json`.
     Hmm, how could we use this knowledge to provide a list of PHP version for a dynamic matrix?
 
@@ -14,7 +15,8 @@ tweet_image: "/assets/images/posts/2020/php-json-useless.png"
 deprecated_since: "September 2022"
 deprecated_message: |
     This command generates dynamic PHP list and starts to break the CI in times the upgrade is not in the plan. The idea of forced upgrade did not work.
-    <br><br>
+
+
     That is the reason we deprecated this command.
 ---
 

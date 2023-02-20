@@ -3,7 +3,8 @@ id: 357
 title: "How to test Symfony Routes to make Huge&nbsp;Refactoring&nbsp;Safe"
 perex: |
     The beauty of [pattern refactoring](/blog/2019/04/15/pattern-refactoring/) with Rector is transforming thousands of elements at once. Like nuclear chain reaction. But to do it safely, we need a high-quality test to ensure the code still works.
-    <br><br>
+
+
     Does a high-quality test mean *a lot of* tests? Not necessarily. Instead of writing many tests to cover all our routes, we can write one smart one. How?
 
 
@@ -161,7 +162,7 @@ final class RoutingSnapshotTest extends TestCase
         }
 
         ksort($routeMap);
-        
+
         return $routeMap;
     }
 }

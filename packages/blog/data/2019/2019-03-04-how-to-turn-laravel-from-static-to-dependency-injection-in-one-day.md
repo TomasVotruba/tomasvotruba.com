@@ -4,7 +4,8 @@ title: "How to turn Laravel from Static to Dependency Injection in one Day"
 perex: |
     A framework is just a tool. Each teaches you coding habits you need to use them effectively.
     Like Laravel gives you speed at prototyping with static "facades". But the applications grows, so does the team, so does your skill and **you start to prefer constructor injection**.
-    <br><br>
+
+
     What then? Switch framework or rewrite? But what if all you need is to **switch single pattern**?
 tweet: "New Post on #php 🐘 blog: How to turn #Laravel from Static to Dependency Injection in one Day"
 

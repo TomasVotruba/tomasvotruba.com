@@ -3,9 +3,11 @@ id: 347
 title: "Introducing Light Kernel for Symfony&nbsp;Console&nbsp;Apps"
 perex: |
     In the first post of this miniseries, we look at Symfony Http Kernel with a critical eye on [how it causes project overweight](/blog/when-symfony-http-kernel-is-too-big-hammer-to-use).
-    <br><br>
+
+
     In the second post, we [looked at bundles](/blog/decomposing-symfony-kernel-what-does-minimal-symfony-bundle-do) from a very raw point of view - what do we need from them?
-    <br><br>
+
+
     In the spirit of [thesis, antithesis, and synthesis](https://link.springer.com/referenceworkentry/10.1007%2F978-1-4020-8265-8_200183) philosophy, today, we'll combine both parts. We'll look for a solution to the original question: **How can we build Kernel in Console Application without the Http burden?**
 
 tweet: "New Post on the 🐘 blog: Introducing Light Kernel for #Symfony Console Apps"

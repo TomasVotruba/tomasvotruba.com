@@ -3,7 +3,8 @@ id: 156
 title: "Do you Autowire Services in Symfony? You can Autowire Parameters Too"
 perex: |
     I love how Symfony caught up late autowiring integration in since Symfony 2.8. Then set a trend in Symfony 3.3 with service autoregistration.
-    <br><br>
+
+
     That opens new possibilities to **almost config-less registration**, doesn't it?
 tweet: "New Post on My Blog: Do you Autowire Services in #Symfony? You can Autowire Parameters Too"
 

@@ -4,7 +4,8 @@ title: "How to Test Monorepo in 3 Layers"
 perex: |
     Do you have a monorepo, with 2 packages at least, autoloaded with composer and splitting works?
     Good! Now you're about to set up testing and code quality tools.
-    <br><br>
+
+
     How to make testing so tight no bug can escape?
 
 tweet: "New Post on My Blog: How to Test #Monorepo in 3 Layers"

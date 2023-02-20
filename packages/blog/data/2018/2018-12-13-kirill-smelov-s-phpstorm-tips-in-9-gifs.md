@@ -3,9 +3,11 @@ id: 167
 title: "Kirill Smelov's PHPStorm Tips in 9 Gifs"
 perex: |
     Last week we hosted [Kirill Smelov](https://twitter.com/wbasrs) in Friends of PHP meetup in Prague. Usually, I know most of tricks people show in PHPStorm talks or they pick too complicated cases - like SSH to Docker via PHPStorm GUI.
-    <br><br>
+
+
     Kirill's talk was completely different, **I could not stop taking notes** about simple yet less known features of PHPStorm.
-    <br><br>
+
+
     Instead of watching the 45-min talk, **enjoy 9 cherry picked tips in 4,5-min gifs**. I've dropped a few of my own daily habits. Enjoy!
 tweet: "New post on my  🐘 #php blog: Kirilli Smelov's #PHPStorm Tips in 9 #gifs 🚀 Thanks @wbasrs for sharing with us on #pehapkari meetup"
 tweet_image: "/assets/images/posts/2018/phpstorm-tips-in-gifs/no-this.gif"

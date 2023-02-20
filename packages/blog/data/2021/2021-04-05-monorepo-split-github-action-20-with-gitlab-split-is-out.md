@@ -3,7 +3,8 @@ id: 310
 title: "Monorepo Split GitHub Action 2.0 with Gitlab split is Out!"
 perex: |
     [The version 1.0 was released 6 months ago](/blog/2020/11/09/new-in-symplify-9-monorepo-split-with-github-action). Compared to its ancestors, it speed up the split from **2 minutes to 10 seconds**.
-    <br><br>
+
+
     After 6 months of collecting feedback and adding new features, version 2.0 is here!
     <br>
     <br>

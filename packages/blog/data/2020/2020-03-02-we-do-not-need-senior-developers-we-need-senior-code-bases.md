@@ -10,7 +10,8 @@ perex: |
     <br>
     <br>
     These and similar questions come to appear when you're looking for a job. The IT market says it needs more senior developers.
-    <br><br>
+
+
     I think there is more than enough. What we need are **senior codebases**.
 tweet: "New Post on #php 🐘 blog: We Do Not Need Senior Developers, We Need Senior Codebases"
 ---

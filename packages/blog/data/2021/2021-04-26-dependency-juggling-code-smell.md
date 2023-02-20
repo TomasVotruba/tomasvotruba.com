@@ -3,7 +3,8 @@ id: 313
 title: "Dependency Juggling Code Smell"
 perex: |
     The best way to pass dependencies is via constructor injection. Only in services, we need the dependency in. I've noticed that **sometimes the dependency is passed way too early**, just to be passed to another service as a method argument.
-    <br><br>
+
+
     Why is it a code smell, and how can we avoid it?
 
 tweet: "New Post on #php 🐘 blog: Dependency Juggling Code Smell"

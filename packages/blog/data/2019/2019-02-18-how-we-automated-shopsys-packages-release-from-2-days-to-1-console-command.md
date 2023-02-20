@@ -4,7 +4,8 @@ title: "How we Automated Shopsys Packages Release from 2 days to 1&nbsp;Console 
 perex: |
     Do you **release open-source**? Do you have **monorepo**? Do you release over **10 monorepo packages at once**?
     Do you still do it manually per package just to be sure?
-    <br><br>
+
+
     Good news, it's not a single day-task, but this whole process can be automated. Let's me show how we did it in Shopsys.
 
 tweet: "New Post on #php 🐘 blog: How we Automated @shopsysfw Packages Release from 2 days to 1 Console Command     #monorepo #symfony #git #semver #composer #symplify"

@@ -4,9 +4,11 @@ next_post_id: 340
 title: "STAMP #1: How to Compile Twig to PHP"
 perex: |
     In the previous post, we looked [at *why* and *when* static analysis of templates matter](/blog/stamp-static-analysis-of-templates). Today we look at how to prepare starting point for Twig templates.
-    <br><br>
+
+
     How can we analyze templates with PHPStan that understand only PHP? There are 2 ways: we could teach PHPStan the language of Twig - a new "TWIGStan" tool.
-    <br><br>
+
+
     The other option is to take it from the other end - convert Twig to PHP.
 
 tweet: "New Post on the 🐘 blog: Stamp #1: How to Compile Twig to PHP"

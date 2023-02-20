@@ -3,7 +3,8 @@ id: 51
 title: "5 Useful Rules From Symplify Coding Standard"
 perex: |
      <a href="https://github.com/symplify/coding-standard">Symplify Coding Standard</a> was born from Zenify, back from the days I was only Nette programmer. It focuses on <strong>maintainability and clean architecture</strong>. I try to make them simple: <strong>each of them does one job</strong>.
-     <br><br>
+
+
      With over 108 000 downloads I think I should write about 5 of them you can use in your projects today.
 tweet: "Add Final Interface, Class Constant fixer and more to your Coding Standard #php #architecture #php_codesniffer"
 

@@ -3,7 +3,8 @@ id: 318
 title: "Rector - The Power of Automated Refactoring Book Released"
 perex: |
     In October 2020, we had a short call about Rector with [Matthias Noback](https://matthiasnoback.nl/). He asked insightful questions to the bone of the Rector workflow, and we also had great fun chatting. Soon we started to talk more and more and decided to write a book about Rector together. With 2&nbsp;points of view - **the user and the maintainer**.
-    <br><br>
+
+
     It's been an adventurous journey for the past seven months, and today, we're proud to launch the first release of this book.
 
 tweet: "New Post on #php 🐘 blog: @rectorphp - The Power of Automated Refactoring Book Released"

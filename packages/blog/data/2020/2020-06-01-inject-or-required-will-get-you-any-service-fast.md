@@ -4,7 +4,8 @@ title: "@inject or @required will Get You Any Services Fast"
 perex: |
     It is official. Symfony 5.1 [adds property injection to public properties](https://symfony.com/blog/new-in-symfony-5-1-autowire-public-typed-properties).
     Now, `@inject` or `@required` annotation above property or setter method is the fastest way to get any dependency on any service in your Symfony or Nette project.
-    <br><br>
+
+
     Use it everywhere you can... or not?
 
 tweet: "New Post on #php 🐘 blog: @inject or @required will Get You Any Service Fast     #nettefw #symfony"

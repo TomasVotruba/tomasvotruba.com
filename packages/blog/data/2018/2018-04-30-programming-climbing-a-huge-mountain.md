@@ -3,7 +3,8 @@ id: 101
 title: "Programming = Climbing a Huge Mountain"
 perex: |
     Let's take a break after 2 long code-posts from last week and enjoy bit of philosophy. I apply *the mountain climber* in programming for last 2 years and it really helps me to overcome difficult spots.
-    <br><br>
+
+
     Today we'll climb together.
 tweet: "New Post on #lazyprogrammer Blog: Program Like Your Climb a Huge Mountain #craftsmanship"
 tweet_image: "/assets/images/posts/2018/climb/climb-7.jpg"
