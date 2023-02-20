@@ -89,7 +89,10 @@ final class SymfonyRouteAttributesToLaravelRouteFileRector extends AbstractRecto
                 $printedRouteGet = $this->betterStandardPrinter->print(new Expression($routeCall)) . PHP_EOL;
 
                 // ensure directory exists
-                FileSystem::createDir(dirname($this->routesFilePath));
+                $routesDirectory = dirname($this->routesFilePath);
+                if (! file_exists($routesDirectory)) {
+                    FileSystem::createDir($routesDirectory);
+                }
 
                 // open with a tag
                 if (! file_exists($this->routesFilePath)) {
