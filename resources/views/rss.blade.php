@@ -24,7 +24,7 @@
             @endphp
 
             <item>
-                <title><![CDATA[ {{ $post->getTitle() }} ]]></title>
+                <title><![CDATA[ {{ $post->getClearTitle() }} ]]></title>
                 <link>{{ $post_absolute_url }}</link>
                 <description><![CDATA[ {{ $post->getPerex() }} ]]></description>
                 <content:encoded><![CDATA[ {{ $post->getHtmlContent() }} ]]></content:encoded>
@@ -34,8 +34,6 @@
                 {{-- @see https://wordpress.stackexchange.com/a/229773 --}}
                 <pubDate>{{ $post->getDateTime()->format('D, d M Y H:i:s +0000') }}</pubDate>
                 <lastBuildDate>{{ $post->getDateTime()->format('D, d M Y H:i:s +0000') }}</lastBuildDate>
-
-                <comments>{{ $post_absolute_url }}#disqus_thread</comments>
             </item>
         @endforeach
     </channel>
