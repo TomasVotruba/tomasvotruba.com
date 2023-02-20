@@ -4,14 +4,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-9">
-                <h1>
+                <h1 class="text-left">
                     I help PHP Companies <br>
                     Change Fast&nbsp;and&nbsp;Safely
                 </h1>
             </div>
 
             <div class="col-4 col-md-3">
-                <a href="{{ route('about') }}">
+                <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::ABOUT) }}>
                     <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="mt-auto rounded-circle shadow">
                 </a>
             </div>
@@ -22,7 +22,7 @@
         <div class="clearfix"></div>
 
         <h2 class="mb-4">
-            What I wrote recently?
+            What can your learn about?
         </h2>
 
         <div class="text-bigger">

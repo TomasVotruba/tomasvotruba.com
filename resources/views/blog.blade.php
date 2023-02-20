@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <h1>Read about Bold Innovations in PHP</h1>
+        <h1>Read about upgrades, static analysis, GPT, Symfony and Laravel</h1>
 
         {{-- display posts with as few divs as possible, for DOM performance on mobile --}}
 
