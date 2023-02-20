@@ -98,7 +98,6 @@ That's one of legacy [code smells of tags](/blog/2017/02/12/drop-all-service-tag
 
 If **you're paid or motivated by productivity** like me and not by produced lines of code or wasted time with no output, you care about this.
 
-[link_rector_book]
 
 ## Automated Instant Migration
 

@@ -29,8 +29,6 @@ updated_message: |
     </ul>
 </div>
 
-[link_rector_book]
-
 ## Find and Replace?
 
 So all we need to do is replace `Twig_` with `Twig\`?

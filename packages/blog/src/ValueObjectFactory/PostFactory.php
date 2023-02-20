@@ -12,7 +12,6 @@ use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\Yaml\Yaml;
 use TomasVotruba\Blog\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
-use TomasVotruba\Blog\PostSnippetDecorator;
 use TomasVotruba\Blog\Validation\PostGuard;
 use TomasVotruba\Blog\ValueObject\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
@@ -39,7 +38,6 @@ final class PostFactory
         private readonly ParsedownExtra $parsedownExtra,
         private readonly PathAnalyzer $pathAnalyzer,
         private readonly PostGuard $postGuard,
-        private readonly PostSnippetDecorator $postSnippetDecorator,
     ) {
     }
 
@@ -64,8 +62,6 @@ final class PostFactory
 
         $slug = $this->pathAnalyzer->getSlug($filePath);
         $htmlContent = $this->parsedownExtra->parse($matches['content']);
-
-        $htmlContent = $this->postSnippetDecorator->decorateHtmlContent($htmlContent);
 
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
         $deprecatedAt = isset($configuration['deprecated_since']) ? DateTime::from(

@@ -74,7 +74,6 @@ One option is change pattern by **switching to another framework**, that already
 
 The second option is to try the approach in your framework, regardless of what is considered *best practice* or the *framework-way*.
 
-[link_rector_book]
 
 ## How move to Dependency Injection in Laravel?
 

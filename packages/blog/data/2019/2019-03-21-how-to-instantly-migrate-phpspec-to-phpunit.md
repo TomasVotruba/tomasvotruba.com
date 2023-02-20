@@ -141,7 +141,6 @@ Pretty clear, right?
 
 ## How to Instantly Migrate from PhpSpec to PHPUnit?
 
-[link_rector_book]
 
 First, take a 2-week paid vacation... Just kidding. Start with Rector which migrates ~95 % of code cases. It also renames `*Spec.php` to `*Test.php` and moves them from `/spec` to `/tests` directory:
 

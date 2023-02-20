@@ -28,7 +28,6 @@ It's a lot. But you want more laziness, right?
 
 **Rector can do much more without you even running it**.
 
-[link_rector_book]
 
 ## What do you Review in Code?
 
