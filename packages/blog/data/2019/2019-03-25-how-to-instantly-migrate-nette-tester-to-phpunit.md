@@ -57,7 +57,6 @@ Putting numbers and trends aside - **this is about your needs**. Do you need to 
 
 The guy in the pub that night needed this, so...  *challenge accepted*!
 
-[link_rector_book]
 
 ## Single Test Case
 

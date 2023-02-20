@@ -88,7 +88,6 @@ The same thing happens with upgrading code - we upgrade PHP and tests passes, gr
 
 This is the easiest way **to get stuck** in broken tests, with dug up pieces of code all over the project, overheat our brain in [huge cognitive complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) and ~~give up~~ rage quit the upgrade saying "it's hard as they say".
 
-[link_rector_book]
 
 ### The Golden Rule of Successful Upgrade
 

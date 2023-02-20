@@ -309,7 +309,6 @@ If the answer is not "at every commit", it's not good enough. You need to have C
 
 Why? It's not that Bitbucket CI is worse than Gitlab CI or GitHub actions. It's the ecosystem support. **The Gitlab CI has the longest support for CI of a private project there is.**
 
-[link_rector_book]
 
 That means:
 

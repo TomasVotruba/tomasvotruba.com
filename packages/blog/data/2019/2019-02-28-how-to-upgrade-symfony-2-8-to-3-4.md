@@ -38,7 +38,6 @@ I wrote about [PHP upgrades before](/blog/2018/11/08/fatal-error-uncaught-error-
 
 If you split each of these lines into standalone pull-requests, you're the best!
 
-[link_rector_book]
 
 ## Forget `UPGRADE.md`
 

@@ -66,7 +66,6 @@ The final size of migration pull-request
 
 We talked about migration at the beginning of 2017 because the Nette ecosystem wasn't developing, and Symfony was technologically skipping it. At that time, however, the transition would last at least 80-90 days for full-time, which is insane, so we didn't go into it.
 
-[link_rector_book]
 
 ## Tool Set
 

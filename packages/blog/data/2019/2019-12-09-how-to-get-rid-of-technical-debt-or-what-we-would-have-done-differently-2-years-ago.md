@@ -131,7 +131,6 @@ So that's what we did:
 <img src="/assets/images/posts/2019/spaceflow_10_points/09.png" class="img-thumbnail col-12 col-md-8">
 
 
-[link_rector_book]
 
 ### How to Apply?
 

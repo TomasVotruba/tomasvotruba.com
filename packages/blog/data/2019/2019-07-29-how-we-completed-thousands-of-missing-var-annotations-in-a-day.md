@@ -335,7 +335,6 @@ Ups, not so fast. Database types and PHP scalar types are not 1:1 compatible. To
   private $content;
 ```
 
-[link_rector_book]
 
 ### 9. From Doctrine Relation Annotations
 

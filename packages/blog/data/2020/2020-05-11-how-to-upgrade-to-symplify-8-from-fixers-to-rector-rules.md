@@ -31,7 +31,6 @@ PHP Notice:  Fixer "..." is deprecated. Use "..." instead
 
 You'll find answer to this question [in previous post](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/). To extend answer specifically for this post: Fixer and Rector do the same job - **they change code based on specific recipe**.
 
-[link_rector_book]
 
 
 ### What is the Difference?
