@@ -36,6 +36,7 @@ final class PostImageController extends Controller
         );
         $drawer = $image->draw();
         $drawer->text($title, $blackHeadlineFont, new Point(130, 340), 0, 1800);
+
         $greenColor = $rgb->color('1a8917');
         $greenTextFont = $imagine->font(
             __DIR__ . '/../../public/assets/fonts/Inter-VariableFont_slnt,wght.ttf',
@@ -47,6 +48,7 @@ final class PostImageController extends Controller
         // add my face :)
         $faceImage = $imagine->open(__DIR__ . '/../../public/assets/images/tomas_votruba_circle.jpg');
         $faceImage->resize(new Box(200, 200));
+
         $image->paste($faceImage, new Point(1700, 800));
         $image->save($imageFilePath);
         return new BinaryFileResponse($imageFilePath);
