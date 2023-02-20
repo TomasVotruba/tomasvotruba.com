@@ -3,8 +3,7 @@ id: 301
 title: "How to Prepare your Neon Configs for PHP 8 and Make them More Readable"
 perex: |
     Good coding habits share a single treat. **They all are ~~resistant~~ fluid to future changes**. You don't have to change them when new packages or PHP is released. One of them is explicit code.
-    <br>
-    <br>
+
     Do you use explicit NEON config syntax? Then upgrade to PHP 8, including deprecations, will not touch you.
     Do you use magic syntax sugar cream? Today we'll look at how to make it right.
 tweet: "New Post on #php 🐘 blog: How to Prepare your Neon Configs for PHP 8 and Make them More Readable       #nettefw"

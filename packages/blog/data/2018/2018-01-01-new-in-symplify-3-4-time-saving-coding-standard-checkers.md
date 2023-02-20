@@ -13,8 +13,7 @@ updated_message: |
     Updated with **ECS 5**, Neon to YAML migration and `checkers` to `services` migration.
 
     `ImportNamespacedNameFixer` [was removed](https://github.com/symplify/symplify/pull/1110) in favor of `ReferenceUsedNamesOnlySniff` from [slevomat/coding-standard](https://github.com/slevomat/coding-standard)
-    <br>
-    <br>
+
     Updated with ECS to Rector rules and PHP configuration. Removed UnusedPublicSniff, that does not exist anymore. Use Rector dead-code set instead.
 ---
 

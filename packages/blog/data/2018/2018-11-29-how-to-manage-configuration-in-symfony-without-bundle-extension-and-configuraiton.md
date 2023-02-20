@@ -3,8 +3,7 @@ id: 163
 title: "How to Manage Configuration in Symfony without Bundle, Extension, and Configuration?"
 perex: |
     Symfony Flex is moving towards of bundle-less applications. That doesn't mean you should create a monolith code in `/src` as fast as possible, but rather control everything via `.yaml` and `.env` files. It's takes [few steps](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#refactor-service-config-in-5-steps) to **remove extension and move to import** of `services.yaml`.
-    <br>
-    <br>
+
     But how would you approach a simple task **as *setup an account number* parameter**?
 tweet: "New post on my #php blog: How to Manage Configuration in #Symfony without Bundle, Extension, and Configuration?  #autowire #bind #cleanup"
 tweet_image: "/assets/images/posts/2018/bundle-less/bundle-less.png"

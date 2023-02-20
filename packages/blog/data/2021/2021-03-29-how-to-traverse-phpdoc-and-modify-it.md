@@ -3,8 +3,7 @@ id: 309
 title: "How to Traverse PHPDoc and Modify It"
 perex: |
     Traversing and modifying PHP code is possible thanks to the amazing tool [php-parser](https://github.com/nikic/PHP-Parser) written by Nikita Popov. Rector can work thanks to **node traverser**, which can get to any node abstract syntax tree. Do you want to replace all numbers with `1000`? I wrote about it in [How to change PHP code with Abstract Syntax Tree](/blog/2017/11/06/how-to-change-php-code-with-abstract-syntax-tree/).
-    <br>
-    <br>
+
     But what about docblocks - how **can we rename classes in `@var` annotation or replace `integer` with `int`**?
 
 

@@ -3,11 +3,9 @@ id: 324
 title: "How to make Upgrade Safe with Bridge&nbsp;Testing"
 perex: |
     Upgrading can go smooth without no bugs and just work. We can make our customer happy, even though we don't have any tests.
-    <br>
-    <br>
+
     **The older I am, the more I care about safety**. Not just for now, but for tomorrow and for my safety of my colleagues. Also for the developers, who will work on the project even though I'm long gone.
-    <br>
-    <br>
+
     That's why before I start upgrading one approach to another, I want to prepare a safe environment. No razors, no matches, and a couple of tests. The bridge testing technique is one of the safety nets I use while refactoring to new technology.
 
 tweet: "New Post on the 🐘 blog: How to make Upgrade Safe with Bridge Testing"

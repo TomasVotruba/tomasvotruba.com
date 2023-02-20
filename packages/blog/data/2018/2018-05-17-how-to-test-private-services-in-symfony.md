@@ -15,8 +15,7 @@ updated_message: |
     After trying all the options in this post I settled down with simple solution:
     <br>
     **`public: true` in all my configs.**
-    <br>
-    <br>
+
     The only approach that works out of the box and requires 0-setup.
 ---
 

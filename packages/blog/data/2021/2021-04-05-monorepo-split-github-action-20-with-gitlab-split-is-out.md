@@ -6,8 +6,7 @@ perex: |
 
 
     After 6 months of collecting feedback and adding new features, version 2.0 is here!
-    <br>
-    <br>
+
     **How to use it with GitLab split repositories and custom git hosting?**
 
 tweet: "New Post on #php 🐘 blog: Monorepo Split GitHub Action 2.0 with Gitlab split is Out!"

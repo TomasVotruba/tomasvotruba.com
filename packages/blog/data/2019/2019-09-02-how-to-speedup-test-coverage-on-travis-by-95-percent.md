@@ -3,11 +3,9 @@ id: 261
 title: "How to Speedup Test&nbsp;Coverage on Travis by&nbsp;95&nbsp;%"
 perex: |
     It was late in the night. He was looking at CI builds to make sure everything is ready for a morning presentation.
-    <br>
-    <br>
+
     **The build took over 45 minutes**. What was wrong? He was scared, took a deep breath, and looked at Travis build detail anyway.
-    <br>
-    <br>
+
     "What? Code coverage? All the stress for this?"
     <br>
     **"We should remove it,"** he thought, "CI should give fast feedback... or is there another way?"

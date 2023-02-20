@@ -3,8 +3,7 @@ id: 287
 title: "New in Symplify 9: Monorepo&nbsp;Split with GitHub&nbsp;Action"
 perex: |
     Until now, monorepo split in Symplify was [one big fractal of bad design](/blog/2020/11/02/symplify-monorepo-builder-split-fractal-of-bad-design/). In Symplify 9 and with technologies of 2020, we've decided to change that.
-    <br>
-    <br>
+
     **To simple setup in a single GitHub Action.**
 
 tweet: "New Post on #php 🐘 blog: New in Symplify 9: Monorepo Split With GitHub Action"

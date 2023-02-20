@@ -3,11 +3,9 @@ id: 234
 title: "Why is First Instant Feedback Crucial to Developers?"
 perex: |
     Do you *open-source*? Then you know that instant feedback is crucial to your contributors. The same applies to private companies.
-    <br>
-    <br>
+
     There are **2 types of feedback**: from human and machine.
-    <br>
-    <br>
+
     Which and how can we improve?
 
 tweet: "New Post on #php 🐘 blog: Why is First Instant Feedback Crucial to Developers?"

@@ -3,12 +3,10 @@ id: 284
 title: "The Bullet Proof Symfony&nbsp;Command&nbsp;Naming"
 perex: |
     How do you name your Symfony commands? `<Something>Commands` for the class. What about its console name?
-    <br>
-    <br>
+
     If you're like most people, you don't think about such details that at all.
     But that makes [you think twice every time you create a new command](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock).
-    <br>
-    <br>
+
     If you're lazy like me, you have a convention and create one command after another, knowing the naming is based on... we'll get to it.
 
 tweet: "New Post on #php 🐘 blog: The Bullet Proof Symfony Command Naming"

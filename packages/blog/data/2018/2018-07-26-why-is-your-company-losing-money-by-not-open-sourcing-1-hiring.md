@@ -4,11 +4,9 @@ title: "Why is Your Company Losing Money by not Open Sourcing: 1. Hiring"
 perex: |
     Do you want to hire developers? Do you want to hire those developers who help your company in the long term? Do you want to save money for random picks of *HR* agencies? Do you want to hire developers who already know your code before even meeting you?
     **Do you want to attract developers in the long term with zero investment?**
-    <br>
-    <br>
+
     Go Open-source!
-    <br>
-    <br>
+
     Did you miss my talk on [PHPPrague 2018](https://phpprague.cz) Conference about this topic? Read this post.
 tweet: "New Post on my Blog: Why is Your Company Losing Money by not #OpenSourcing: 1. Hiring #hr"
 tweet_image: "/assets/images/posts/2018/open-source-money/contributors.gif"

@@ -3,11 +3,9 @@ id: 264
 title: "Why Class&nbsp;Constants Should&nbsp;be&nbsp;Typed"
 perex: |
     Do you use PHP 7.4 [typed properties](/blog/2018/11/15/how-to-get-php-74-typed-properties-to-your-code-in-few-seconds/)? Do you know why?
-    <br>
-    <br>
+
     I use them, so **I don't have to think and validate the property type** every time. We just know its type or PHP would crash otherwise.
-    <br>
-    <br>
+
     Until PHP 7.4 this was not possible and code was kinda crappy.
     Where are we now with constant type? Do you trust your class constants type?
 

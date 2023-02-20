@@ -4,8 +4,7 @@ title: "Is Your Code Readable By Humans? Cognitive Complexity Tells You"
 perex: |
     Cyclomatic complexity is a static analysis measure of how difficult is code to test.
     **Cognitive complexity** tells us, how difficult code is to understand by a reader.
-    <br>
-    <br>
+
     Today, we'll see why is the later better and how to check it in your code with a Sniff.
 tweet: "New Post on My Blog: Is Your Code Readable By Humans? Cognitive Complexity Tells You #codingstandard #sonarcube #sniff #complexity #solid"
 tweet_image: "/assets/images/posts/2018/cognitive-complexity/tweet.png"

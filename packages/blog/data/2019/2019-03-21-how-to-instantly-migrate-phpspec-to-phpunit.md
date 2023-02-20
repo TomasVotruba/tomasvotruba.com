@@ -3,8 +3,7 @@ id: 196
 title: 'How to Instantly&nbsp;Migrate PhpSpec&nbsp;to&nbsp;PHPUnit'
 perex: |
     I'm happy that more and more people try to use Rector upgrade and migrate their code-bases to the ones they really want for a long time.
-    <br>
-    <br>
+
     Last week I was approached by 2 different people with single need - **migrate their tests to PHPUnit**.
 tweet: 'New Post on #php 🐘 blog: How to Instantly Migrate #PhpSpec to #phpunit'
 tweet_image: '/assets/images/posts/2019/unit-mig/phpunit.png'

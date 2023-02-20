@@ -3,11 +3,9 @@ id: 283
 title: "How to Split Test Monorepo with Composer 2"
 perex: |
     [Composer 2 was released](https://twitter.com/packagist/status/1319945203797708800) this week. It brings **massive `composer install/update` performance** improvement of [150-200 %](https://blog.packagist.com/composer-2-0-is-now-available).
-    <br>
-    <br>
+
     That means [faster feedback](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/) from CI and faster monorepo testing.
-    <br>
-    <br>
+
     Today, we'll look on how to use Composer in Github Actions with monorepo split testing and what to avoid.
 tweet: "New Post on #php 🐘 blog: How to Split Test Monorepo with #composer v2"
 ---

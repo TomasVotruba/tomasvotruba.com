@@ -3,8 +3,7 @@ id: 298
 title: "4 Ways Symplify makes Working With Symfony More Fun"
 perex: |
     Are you new to Symplify? In short, it's a set of packages I wrote that focuses on improving daily PHP development. It brings joy to the code, so you can focus more on what you love.
-    <br>
-    <br>
+
     Are you a Symplify power user? You still might find some new tricks you didn't know about.
 
 tweet: "New Post on #php 🐘 blog: 5 Ways Symplify makes Working With #symfony More Fun"

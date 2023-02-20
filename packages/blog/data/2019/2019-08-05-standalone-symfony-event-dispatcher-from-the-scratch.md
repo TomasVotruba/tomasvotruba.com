@@ -3,8 +3,7 @@ id: 257
 title: "Standalone&nbsp;Symfony Event&nbsp;Dispatcher from&nbsp;the&nbsp;Scratch"
 perex: |
     Have you ever used Symfony Event Dispatcher? No?
-    <br>
-    <br>
+
     This post is an introduction to Event Dispatcher, how to use it, and in the end, you'll be able to cover 90 % use cases you'll ever need.
 
 tweet: "New Post on #php 🐘 blog: #symfony Event Dispatcher from the Scratch"

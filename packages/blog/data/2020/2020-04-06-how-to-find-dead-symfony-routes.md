@@ -3,8 +3,7 @@ id: 246
 title: "How to Find Dead Symfony Routes"
 perex: |
     Almost half a year ago, I spotted a post called [Route Usage Package for Laravel](https://laravel-news.com/route-usage-package-for-laravel). It's nice to have to see what routes are used and how often.
-    <br>
-    <br>
+
     But when dealing with legacy code, knowing **dead routes will save you dozens of hours in refactoring**.
 tweet: "New Post on #php 🐘 blog: How to Find Dead #Symfony Routes"
 tweet_image: "/assets/images/posts/2019/spaceflow_10_points/13.png"

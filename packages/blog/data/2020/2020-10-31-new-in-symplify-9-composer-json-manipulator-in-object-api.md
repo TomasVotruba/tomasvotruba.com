@@ -4,8 +4,7 @@ title: "New in Symplify 9: Composer Json Manipulator - In Object API"
 perex: |
     Have you ever needed to modify `composer.json` with PHP code? Then you're familiar with `$json['require']['php'] ?? null` structures.
     They're hell to work with as any other array - verify the value if it's null, how deeply nested it is, etc.
-    <br>
-    <br>
+
     This is typical use case for [a monorepo](/blog/2019/10/28/all-you-always-wanted-to-know-about-monorepo-but-were-afraid-to-ask), where we need to **merge many nested `composer.json` files** into a root `composer.json`.
 
 tweet: "New Post on #php 🐘 blog: New in Symplify 9: Composer Json Manipulator - In Object API"

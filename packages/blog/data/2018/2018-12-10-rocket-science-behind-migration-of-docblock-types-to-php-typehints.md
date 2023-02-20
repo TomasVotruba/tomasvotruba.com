@@ -3,8 +3,7 @@ id: 166
 title: "The Rocket Science Behind Migration of Docblock Types to PHP Typehints"
 perex: |
     What if you could add scalar typehints `int`, `bool`, `string`, `null` to all parameter type and return type by running a CLI command? But also all classes, `parent`, `self` and `$this`?
-    <br>
-    <br>
+
     Do you think it's an easy task to move `@param int $number` to `(int $number)`?
 tweet: "New post on my #php blog: The Rocket Science Behind Migration of Docblock Types to PHP Typehints   #instantupgrade"
 tweet_image: "/assets/images/posts/2018/rocket-typehints/example.gif"

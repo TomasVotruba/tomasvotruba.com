@@ -5,8 +5,7 @@ perex: |
     We often read about best practices in coding, what framework has new features, or what is new in PHP X. How one can change this to that, why is this technique good or bad, or what new package you can download to your project.
     <br>
     That's only past or present.
-    <br>
-    <br>
+
     I'm just finishing the reading of [The Inevitable](https://www.amazon.com/The-Inevitable-Kevin-Kelly-audiobook/dp/B01EB3OR32), written by Wired magazine founder, that focuses solely on the future. Inspired by this book, today, **we look at the future of programming**.
 
 tweet: "New Post on #php 🐘 blog: How Will Programming look like in 2025?"

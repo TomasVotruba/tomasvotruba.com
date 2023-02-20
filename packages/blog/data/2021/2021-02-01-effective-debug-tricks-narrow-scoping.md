@@ -6,8 +6,7 @@ perex: |
 
 
     How hard is reading code that someone else wrote three months ago?
-    <br>
-    <br>
+
     But what about debugging code that someone wrote a year ago?
 tweet: "New Post on #php 🐘 blog: Effective Debug Tricks: Narrow Scoping"
 ---

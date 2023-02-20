@@ -23,8 +23,7 @@ In [the official post](https://www.doctrine-project.org/2017/07/25/php-7.1-requi
 
 <blockquote class="blockquote mt-5 mb-5">
     One question we frequently hear is, "isn't dropping support for a PHP version a BC break"? In a nutshell, no. <strong>A BC break happens when there is an incompatible change that your package manager can't handle</strong>. For example, changing a method signature in a minor version is a no-go, since the composer version constraints mentioned above assume any minor upgrade can safely be used.
-    <br>
-    <br>
+
 However, when we drop support for an older version of PHP, <strong>composer will not consider the new version if the PHP version requirement is no longer fulfilled</strong>. Thus, you won't end up with a fatal error due to a wrong method signature, you just won't get the new version.
 </blockquote>
 

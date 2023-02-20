@@ -5,8 +5,7 @@ perex: |
     We talked about cleaning legacy code with Rector 2 months ago on 40th meetup of PHP friends in Prague.
     <br>
     Who is *we*? Me and CTO of the [company I worked for](https://spaceflow.io/en), a great leader and technical expert who taught me a lot, [Milan Mimra](https://www.linkedin.com/in/milanmimra).
-    <br>
-    <br>
+
     The talk was not full of shallow tips, nor [about framework migration](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/). Instead, **we talked about small decisions that were made 2 years. Decisions, which took 3 months to get rid of**.
 
 tweet: "New Post on #php 🐘 blog: How to Get Rid of Technical Debt or What We Would Have Done Differently 2 Years ago        #symfony #rector #ecs @doctrineproject #uuid #legacycode"

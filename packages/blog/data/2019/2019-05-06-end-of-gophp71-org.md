@@ -3,8 +3,7 @@ id: 209
 title: "End of goPhp71.org"
 perex: |
     I [launched goPhp71.org](/blog/2017/06/05/go-php-71/) in June 2017, just 6 months after release of PHP 7.1. In those times nobody was sure what version to require - 7.1? 7.0? Or wait for 7.2?
-    <br>
-    <br>
+
     Future is now. There is no need for the initiative now and it's time to [let it go](https://zenhabits.net/letting-go).
     <br>
     **How much did it cost? What was the effect? Was it worth it?** I'll share answers to these question so you know what to expect when you start a similar project. Let's get numberz!

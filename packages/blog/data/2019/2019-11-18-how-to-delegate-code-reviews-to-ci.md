@@ -3,8 +3,7 @@ id: 226
 title: "How to Delegate Code&nbsp;Reviews&nbsp;to&nbsp;CI"
 perex: |
     Are you doing code reviews? No? Yes?
-    <br>
-    <br>
+
     **In both cases, you won't have too**. Just add a couple of YAML lines to your CI.
 
 tweet: "New Post on #php 🐘 blog: How to Delegate Code Reviews to CI"

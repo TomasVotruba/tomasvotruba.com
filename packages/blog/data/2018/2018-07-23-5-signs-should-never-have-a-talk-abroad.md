@@ -3,11 +3,9 @@ id: 125
 title: "5 Signs You Should Never Have a Talk Abroad"
 perex: |
     I find PHP meetups abroad more and more valuable to my programming life. They're the best place to diverse my skills and knowledge without eating dump and self-proclaiming Twitter feeds.
-    <br>
-    <br>
+
     Wait, don't rush to your train ticket so fast to enjoy the presence of great developers, interesting topic, surprisingly open-minded people and tasty beer afterward.
-    <br>
-    <br>
+
     I'm about to tell you why you should not do it.
 tweet: "New Post on my Blog: 5 Signs You Should Never Have a Talk Abroad #commnity #cfp #friendsofphp"
 tweet_image: "/assets/images/posts/2018/friends/homepage.png"

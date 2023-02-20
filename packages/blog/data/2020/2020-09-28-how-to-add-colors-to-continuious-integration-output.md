@@ -3,8 +3,7 @@ id: 280
 title: "How to Add Colors to Continuous Integration Output"
 perex: |
     Today I have a tip for your CI. I learned this tip from [Jan Mikes](https://github.com/JanMikes).
-    <br>
-    <br>
+
     A small tip that made my everyday work with CI more colorful.
 
 tweet: "New Post on #php 🐘 blog: How to Add Colors to Continuous Integration Output"

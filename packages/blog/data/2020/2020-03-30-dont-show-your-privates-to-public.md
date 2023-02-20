@@ -3,8 +3,7 @@ id: 245
 title: "Don't Show Your Privates to Public"
 perex: |
     With typed properties in PHP 7.4, there comes **a natural tendency for using properties as public**. The type check is already there, right? It's a dangerous path that opens the door to static code with public properties everywhere, that is asking for a change in any place.
-    <br>
-    <br>
+
 
     But is that ok to show privates to the public?
 

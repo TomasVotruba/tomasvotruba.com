@@ -7,8 +7,7 @@ perex: |
      "Are you a senior or a junior?"
 
      "How many senior developers does your company have?"
-    <br>
-    <br>
+
     These and similar questions come to appear when you're looking for a job. The IT market says it needs more senior developers.
 
 

@@ -3,8 +3,7 @@ id: 320
 title: "How to Refactor Custom Doctrine Annotations to Attributes"
 perex: |
     PHP 8 came with [attributes](https://php.watch/versions/8.0/attributes) 7 months ago. Symfony 5.2 now supports `#[Symfony\Component\Routing\Annotation\Route]` attribute, Nette 3.1 has `#[Nette\DI\Attributes\Inject]` attribute and Doctrine ORM 2.9 is now released with `#[Doctrine\ORM\Mapping\Entity]` attributes.
-    <br>
-    <br>
+
     You're probably already using those [thanks to Rector](https://github.com/rectorphp/rector/blob/main/docs/rector_rules_overview.md#annotationtoattributerector). That was the easy part. The more challenging part is **custom `@annotation` classes**. Last weekend I refactored a couple of those, and this is what I found out.
 
 tweet: "New Post on #php 🐘 blog: How to Refactor Custom Doctrine Annotations to Attributes"

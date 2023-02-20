@@ -3,11 +3,9 @@ id: 213
 title: "How to upgrade Meetup.com API to OAuth2 with Guzzle"
 perex: |
     I got an email from Meetup.com 5 days ago, that basically every API request will be paid since August 15, 2019. **$ 30/month**, that's like my phone bill.
-    <br>
-    <br>
+
      **95 % of data on [Friends Of Php](https://friendsofphp.org) depend on Meetup.com API** - updated daily. The website is free, so it might kill the content or I'd have to move to crawlers and hope for the lack of protection on Meetup.com against them.
-    <br>
-    <br>
+
     **Unless we use Oauth2 before August 15**. I never used it, but how hard that can be, right?
 tweet: "New Post on #php 🐘 blog: How to upgrade #Meetupcom API to #OAuth2 with #Guzzle"
 

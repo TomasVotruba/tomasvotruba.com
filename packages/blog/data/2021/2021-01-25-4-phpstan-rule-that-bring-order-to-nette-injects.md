@@ -3,8 +3,7 @@ id: 299
 title: "4 PHPStan Rules that Bring Order to Nette Injects"
 perex: |
     Do you have at least one `@inject` property or `inject*()` method in your Nette project? If no, stop reading and have fun with another post.
-    <br>
-    <br>
+
     If you do, you probably have some internal rules where what and how to use them and where to avoid them. But how do you keep order?
 
 tweet: "New Post on #php 🐘 blog: 4 PHPStan Rules that Bring Order to #nettefw Injects"

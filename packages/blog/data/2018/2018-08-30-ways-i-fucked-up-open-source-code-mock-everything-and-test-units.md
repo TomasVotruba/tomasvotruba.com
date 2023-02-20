@@ -3,8 +3,7 @@ id: 136
 title: "Ways I Fucked Up Open Source Code: Mock Everything and Test Units"
 perex: |
     In a normal job, decisions are made by those above you. They pay you and when it goes down, you leave in 2 months. Open-source code is different because **you're the one making choices but also the one who deals with results when it fails**. Moreover, if you love the project and want to spend years with it.
-    <br>
-    <br>
+
     Today I'll show you one of my many fuckups - let's mock units!
 tweet: "Ways I Fucked Up #opensource Code: Mock Everything and Test Units #php #phpunit #mocking #failfastfailsafe #learning"
 ---

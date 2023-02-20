@@ -3,12 +3,10 @@ id: 238
 title: "How to Test Monorepo After Split Before Actual Split"
 perex: |
     In 14 months old post [How to Test Monorepo in 3 Layers](/blog/2018/11/22/how-to-test-monorepo-in-3-layers/#3-after-split-testing) we talked about testing monorepo in 3 layers. So you can be sure every package works as it should.
-    <br>
-    <br>
+
     3 layers are testing in a monorepo, testing package directory, and testing after a split.
     **The latter takes a huge amount of time**. The time we don't have to spare in 2020.
-    <br>
-    <br>
+
     **How can we make it faster while keeping the test quality high?**
 tweet: "New Post on #php 🐘 blog: How to Test Monorepo After Split Before Actually Split"
 tweet_image: "/assets/images/posts/split_before_split.png"

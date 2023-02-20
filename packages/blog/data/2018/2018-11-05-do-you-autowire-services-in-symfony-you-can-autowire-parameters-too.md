@@ -11,8 +11,7 @@ tweet: "New Post on My Blog: Do you Autowire Services in #Symfony? You can Autow
 deprecated_since: "September 2020"
 deprecated_message: |
     The [AutoBindParameter](https://github.com/symplify/auto-bind-parameter) package is now deprecated. Parameter autowiring proven to be magical and cofusing approach.
-    <br>
-    <br>
+
     **Use [constant parameters](/blog/2020/09/21/symfony-autobind-parameter-is-dead-long-live-constant-parameters) instead**.
 ---
 

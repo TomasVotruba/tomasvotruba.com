@@ -3,8 +3,7 @@ id: 262
 title: "How we Upgraded Pehapkari.cz from Symfony 4 to 5 in 25 days"
 perex: |
     A month ago, Symfony 5 has been released. Upgrading of such a small web as our community website **must be easy**, right?
-    <br>
-    <br>
+
     Well, that's what we thought. **Were we right or wrong?**
 
 tweet: "New Post my Blog: How we Upgraded Pehapkari.cz from #symfony 4 to 5 in 25 days"

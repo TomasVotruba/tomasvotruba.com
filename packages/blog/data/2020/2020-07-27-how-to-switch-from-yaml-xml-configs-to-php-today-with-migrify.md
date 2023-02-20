@@ -9,8 +9,7 @@ perex: |
 
 
     But what if you have 10 or even 100 YAML/XML configs? Are you doing to close down for a weekend to switch your code base?
-    <br>
-    <br>
+
     Or maybe... **5 minute job**?
 
 tweet: "New Post on #php 🐘 blog: How to Switch from YAML/XML Configs to PHP Today with Symplify"

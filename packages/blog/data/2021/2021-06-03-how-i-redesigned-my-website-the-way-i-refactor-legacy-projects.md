@@ -4,11 +4,9 @@ id: 321
 title: "How I Redesigned my Website the Way I&nbsp;Refactor Legacy Projects"
 perex: |
     I have wanted to redesign my website since Autumn 2020. I felt it's overly detailed with attention shotgun feeling. Because of intensive && extensive work on Rector to make it better, I could not get to it on the book with Matthias and writing posts. With no deadline, there is no rush, right?
-    <br>
-    <br>
+
     I had to hack around my brain to make it happen. It would be a shame to release Rector book on the old design, so I took [the book release](/blog/rector-the-power-of-automated-refactoring-book-released/) as a co-task.
-    <br>
-    <br>
+
     The first hour I struggled with the redesign approach, I realized I could use the skill I use daily - refactoring legacy.
 tweet: "How I Redesigned my Website like Refactor Legacy Project"
 tweet_image: "/assets/images/posts/2021/redesign_simple.png"

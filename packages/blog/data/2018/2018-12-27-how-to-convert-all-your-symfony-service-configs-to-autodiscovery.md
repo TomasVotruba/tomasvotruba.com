@@ -4,8 +4,7 @@ title: "How To Convert All Your Symfony Service Configs to Autodiscovery"
 perex: |
     Do you use Symfony autodiscovery services registration everywhere and your configs have no extra lines?
     Skip this post and rather read another one.
-    <br>
-    <br>
+
     But if **you have many configs with manual service registration**, tagging, and autowiring, keep reading. I'll show you how you can convert them easily be new Symplify package.
 tweet: "🐘 New Post on #php blog: How To Convert All Your #Symfony Service Configs to Autodiscovery"
 tweet_image: "/assets/images/posts/2018/autodiscovery/demo.gif"

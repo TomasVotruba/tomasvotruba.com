@@ -5,8 +5,7 @@ perex: |
     Duplicated code is a code smell that hides the potential of better design.
     How can we find it? Is it 100 % identical code token by token?
     Are methods `getName()` and `getName()` on 2 entities duplicated?
-    <br>
-    <br>
+
     Today we look at PHPStan and how to use it to find duplicated class methods.
 
 tweet: "New Post on #php 🐘 blog: How to detect Complex Duplicated Methods With #phpstan"

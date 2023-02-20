@@ -3,8 +3,7 @@ id: 266
 title: "How to Patch a Package in Vendor, Yet&nbsp;Allow its Updates"
 perex: |
     While working with legacy code upgrades, we often need to fix a line or two in 3rd party package in `/vendor`.
-    <br>
-    <br>
+
     You can fork it, but by that, you **take manual responsibility** for all the package updates.
     You can copy a package locally, which is faster, but **disables package updates**.
 

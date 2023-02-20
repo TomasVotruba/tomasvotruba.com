@@ -3,8 +3,7 @@ id: 237
 title: "How to run Rector and PHPStan on Huge Project in 3 Seconds with PHPStorm"
 perex: |
     Today we'll look at the command line and run performance heavy dev tools like Rector or PHPStan on our projects. I'm guessing that it takes more than 10 seconds to run whatever project you use.
-    <br>
-    <br>
+
     How would you like it be **less than 3 seconds with just one click** in PHPStorm?
 
 tweet: "New Post on #php 🐘 blog: How to run Rector and PHPStan on Huge Project in 3 Seconds with PHPStorm"

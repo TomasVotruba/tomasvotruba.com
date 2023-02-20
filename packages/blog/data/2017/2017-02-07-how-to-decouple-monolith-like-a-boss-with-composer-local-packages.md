@@ -12,8 +12,7 @@ tweet: "Have you heard about local packages? Try them #composerPHP #monolith #ph
 deprecated_since: "May 2017"
 deprecated_message: |
     This approach is very limited and creates unexpected messy behavior.
-    <br>
-    <br>
+
     **Use [Composer Local Packages for Dummies](/blog/2017/12/25/composer-local-packages-for-dummies/) with [Symplify/MonorepoBuilder](https://github.com/symplify/monorepo-builder) instead.**
 ---
 

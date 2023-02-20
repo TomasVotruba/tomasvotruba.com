@@ -3,8 +3,7 @@ id: 315
 title: "Write GitHub&nbsp;Actions for Gitlab&nbsp;Too"
 perex: |
     In a recent post [How can We use GitHub Actions in Gitlab?](/blog/how-can-we-use-github-actions-in-gitlab), we looked at the idea, how both services could **the use same CI recipe**. As a Gitlab CI user, you can use some GitHub Actions to do the work for you.
-    <br>
-    <br>
+
     Today we look at **how to write such action** to provide an excellent developer experience for both.
 
 tweet: "New Post on #php 🐘 blog: How to Write @gitHub Actions for @gitlab Too"

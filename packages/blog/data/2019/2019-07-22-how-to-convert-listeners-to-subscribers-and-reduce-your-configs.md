@@ -3,8 +3,7 @@ id: 219
 title: "How to Convert Listeners to Subscribers and Reduce your Configs"
 perex: |
     I wrote [Don't Ever use Symfony Listeners](/blog/2019/05/16/don-t-ever-use-listeners/) 2 months ago (if you missed it, be sure to read it to better understand this 2nd part). It got many constructive comments, mostly focused on particular standalone sentences without context.
-    <br>
-    <br>
+
     To my surprise, **none of the comments shown that listener beats subscriber**.<br>
     But what can you do, if you'd like to try subscribers, but currently have over 100 listeners in your application?
 

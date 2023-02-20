@@ -6,8 +6,7 @@ perex: |
 
 
     The downgrade of a tool is a no-brainer - [we downgrade the whole tool](https://getrector.org/blog/how-to-bump-minimal-version-without-leaving-anyone-behind) including vendor, and we know it will run on PHP 7.2.
-    <br>
-    <br>
+
     But how to achieve the same with the package with separated dependencies?
 
 ---

@@ -6,8 +6,7 @@ perex: |
 
 
     But having 2 repositories to work with still feels crappy. Which one should we use? Where do people contribute? Where do we report issues? Everyone needs clarification, and **time is wasted on explaining complexity**.
-    <br>
-    <br>
+
     I knew we could do better... we want **one repository**. Today I'll show you how to get there with 39 lines of GitHub Action workflow (including comments).
 ---
 

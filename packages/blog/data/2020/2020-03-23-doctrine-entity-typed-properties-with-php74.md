@@ -4,8 +4,7 @@ title: "Doctrine Entity Typed Properties With PHP 7.4"
 perex: |
     Recently we've upgraded our [Czech PHP community website](https://pehapkari.cz) to PHP 7.4. As a side effect, it broke most of our entities.
     Do you love how making language more strict reveals weak points in your code just by using it?
-    <br>
-    <br>
+
     Today we'll look at **the impact of typed properties on weak points of Doctrine entities and how to solve them**.
 
 updated_since: "November 2020"

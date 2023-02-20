@@ -5,13 +5,11 @@ perex: |
     With [Symfony 5 upgrade](/blog/2019/09/09/how-we-upgraded-pehapkari-cz-from-symfony-4-to-5-in-25-days/), we need any *working* Doctrine behaviors.
     <br>
     Month later, we have [KnpLabs\DoctrineBehaviors 2.0](/blog/2019/12/30/doctrine-behaviors-2-0-reloaded/#how-do-you-migrate-from-gedmo-stof-to-knplabs-doctrinebehaviors) with full Symfony 5 support.
-    <br>
-    <br>
+
     If you used older Doctrine Behaviors, you're covered with Rector migration path.
     <br>
     But what if you're using old broken Gedmo?
-    <br>
-    <br>
+
     **I'll show you how you can migrate Gedmo to KnpLabs**.
 
 tweet: "New Post on #php 🐘 blog: Migrate Gedmo to KnpLabs"

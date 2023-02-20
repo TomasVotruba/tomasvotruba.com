@@ -3,11 +3,9 @@ id: 346
 title: "How to Run Naked Unit&nbsp;Tests in a&nbsp;New&nbsp;Legacy&nbsp;Project"
 perex: |
     You know the situation. You come to a new project that you should upgrade and refactor. It has some tests that ~~you~~ long-term developer can run locally. But the automated CI that runs tests on every commit is missing.
-    <br>
-    <br>
+
     Shall we start refactoring and adding CI tools like PHPStan or ECS? **How about using what is already there**? The tests.
-    <br>
-    <br>
+
     But the tests require this PHP extension, those environment variables, this external service, and these few Docker images to be running.
 
 

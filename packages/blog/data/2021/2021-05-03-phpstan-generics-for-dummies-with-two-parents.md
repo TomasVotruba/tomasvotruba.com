@@ -4,11 +4,9 @@ title: "PHPStan Generics for Dummies - With&nbsp;2&nbsp;Parents"
 perex: |
     In previous post we talked about how to [promote generics to parent class](/blog/2021/01/04/phpstan-abstract-parent-generics-dummies/).
     There we learned how to tell parent class what generic type we use (typically from `ProductRepository` and `AbstractRepository`).
-    <br>
-    <br>
+
     Today we take the same use case and **add one more parent class**.
-    <br>
-    <br>
+
     That must be easy, right?
 
 tweet: "New Post on #php 🐘 blog: #phpstan Generics for Dummies - With 2 Parents"

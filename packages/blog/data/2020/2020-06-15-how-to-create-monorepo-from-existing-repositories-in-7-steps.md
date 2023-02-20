@@ -3,11 +3,9 @@ id: 256
 title: "How to create&nbsp;a&nbsp;Monorepo from Existing&nbsp;Repositories in 7&nbsp;Steps"
 perex: |
     It seems like PHP companies are opening to **the most comfortable way to manage multiple projects and packages at once**.
-    <br>
-    <br>
+
     I've heard questions like "how do we make monorepo if have like 15 repositories?" **3 times just last month** - from the Czech Republic, Croatia, and the Netherlands.
-    <br>
-    <br>
+
     I'm so happy to see this because lazy dev = happy dev, happy dev = easy code to read.
     <br>
     So how to start a monorepo if you already have existing repositories?

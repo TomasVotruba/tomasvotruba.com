@@ -3,11 +3,9 @@ id: 269
 title: "10 Cool Features You Get after switching from YAML to PHP Configs"
 perex: |
     You've probably noticed [Symfony is moving towards PHP configuration](https://github.com/symfony/symfony/issues/37186). If you're on XML or YAML, you'll most likely migrate to PHP with upcoming Symfony 6.
-    <br>
-    <br>
+
     There are already tools that [can help you migrate today](https://twitter.com/VotrubaT/status/1283003111074922497) - **so it's not a matter of work, but a matter of choice**.
-    <br>
-    <br>
+
     Today we look at 10 cool features you get by switching to PHP configs that make you an even lazier programmer.
 
 tweet: "New Post on #php 🐘 blog: 10 Cool Features You Get after switching from YAML to PHP Configs    #symfony"

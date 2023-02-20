@@ -3,8 +3,7 @@ id: 305
 title: "The Best Time to Switch Gitlab&nbsp;to&nbsp;GitHub"
 perex: |
     I'm known for using GitHub, a true paradise for any open-source project. But I don't have much experience with private projects pricing for this and other services like GitLab or Bitbucket.
-    <br>
-    <br>
+
     I assumed they all were at a similar price layer. After today's call with one of my clients, I've learned about one benefit of GitHub Actions for private projects I didn't consider before. **So much it's worth the switch.**
 
 tweet: "New Post on #php 🐘 blog: The Best Time to Switch @gitlab to @github"

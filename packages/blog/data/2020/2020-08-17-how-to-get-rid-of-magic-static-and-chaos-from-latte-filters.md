@@ -3,8 +3,7 @@ id: 274
 title: "How to Get Rid of Magic, Static and Chaos from Latte Filters"
 perex: |
     [In the previous post](/blog/2020/08/10/4-ways-to-make-your-nette-project-more-readable/), we looked at how to avoid array magic and duplicates of Latte in Presenter and Components.
-    <br>
-    <br>
+
     Today we'll leverage those tips to make your code around Latte filters **easy and smooth to work with**.
 
 tweet: "New Post on #php 🐘 blog: How to Get Rid of Magic, Static and Chaos from Latte Filters #nettefw"

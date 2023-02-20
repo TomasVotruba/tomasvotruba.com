@@ -3,8 +3,7 @@ id: 148
 title: "Hi, my name is Tom - Concat vs. Sprintf vs. In-String Variable"
 perex: |
     My recent post about [lovely exceptions](/blog/2018/09/17/7-tips-to-write-exceptions-everyone-will-love/) opened very interesting question. [In comments bellow the post](/blog/2018/09/17/7-tips-to-write-exceptions-everyone-will-love/#comment-4100904216), [in Reddit thread](https://www.reddit.com/r/PHP/comments/9hehv6/7_tips_to_write_exceptions_everyone_will_love/e6d3hic) and [on  Twitter](https://mobile.twitter.com/geekovo/status/1043185111309713408).
-    <br>
-    <br>
+
     A questions about **connecting string with variables**.
     You have 3 options. Each has its strong and weak points. How do you pick the right one?
 tweet: "New Post on my Blog: Hi, my name is Tom - Contact vs. Sprintf vs. In-String Variable #php - in code examples"

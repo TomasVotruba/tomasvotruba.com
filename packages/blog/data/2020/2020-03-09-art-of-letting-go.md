@@ -49,8 +49,7 @@ The next sign came in the Autumn of 2019. [Statie dropped Latte support](https:/
 <blockquote class="blockquote text-center mb-5 mt-5">
     What you know you can't explain, but you feel it. You've felt it your entire life,<br>
     that there's something wrong with the world.
-    <br>
-    <br>
+
     You don't know what it is, but it's there,<br>
     like a splinter in your mind, driving you mad
 </blockquote>

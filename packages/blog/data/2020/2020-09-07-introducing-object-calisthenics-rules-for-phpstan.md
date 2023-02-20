@@ -6,8 +6,7 @@ perex: |
 
 
     **Have you been waiting to put these rules into your `phpstan.neon`?**
-    <br>
-    <br>
+
     Today you can!
 
 tweet: "New Post on #php 🐘 blog: Introducing Object Calisthenics Rules for @PHPStan"

@@ -40,8 +40,7 @@ Take following quotes as list of notes you'd make by reading the whole book. Sav
 
 <blockquote class="blockquote">
     "I'm the best. This is going to be a breeze," and that might give you a short-term emotional boost. <strong>But if you instead ask, "Can I make a great pitch?" the research has found that you provide yourself something that reaches deeper and lasts longer.</strong>
-    <br>
-    <br>
+
     You might respond to yourself "Well, yes, I can make a great pitch. In fact, I've probably pitched ideas at meetings two dozen times in my life." You might remind yourself of your preparation. "Sure, I can do this. I know this material inside out and I've got some great examples to persuade the people who might be skeptical." You might also give yourself specific tactical advice. "At the last meeting like this, I spoke too quickly - so this time I'll slow down."
 </blockquote>
 
@@ -99,8 +98,7 @@ A blind man was collecting money on the street with a sign: *I am blind*. A rese
 
 <blockquote class="blockquote">
     People often find potential more interesting than accomplishment because it's more uncertain, the researchers argue. That uncertainty can lead people to think more deeply about the person they're evaluating - and the more intensive processing that requires can lead to generating more and better reasons why the person is a good choice.
-    <br>
-    <br>
+
     So next time you're selling yourself, don't fixate only on what you achieved yesterday. Also, emphasize the promise.
 </blockquote>
 
@@ -124,8 +122,7 @@ You ask her: "On scale 1 to 10, how confident do you feel you'll make the test?"
 
 <blockquote class="blockquote">
     "Why didn't you pick a lower number?" This is the question that catches everybody off guard," Pantalon writes in his book Instant Influence.
-    <br>
-    <br>
+
     <strong>She moves from defending her current behavior to articulating why, at some level, she wants to behave differently</strong>. And that says Pantalon, allows her to clarify her personal, positive, and intrinsic motives for studying, which increases the chances she actually will. So, on a scale of 1 to 10, how ready are you to try Pantalon's two-question technique? And why isn't your number lower?"
 </blockquote>
 
@@ -137,8 +134,7 @@ You ask her: "On scale 1 to 10, how confident do you feel you'll make the test?"
 
 <blockquote class="blockquote">
     One afternoon, he gathered convention-goers for a demonstration. He climbed onto the platform and directed an assistant to hoist the elevator to its top height, about three stories off the ground. Then, as he stood and gazed down at the crowd, Otis took an ax and slashed the rope that was suspending the elevator in midair.
-    <br>
-    <br>
+
     The audience gasped. The platform fell. But in seconds, the safety brake engaged and halted the elevator's descent. Still alive and standing, Otis looked out at the shaken crowd and said, "All safe, gentlemen. All safe."
 </blockquote>
 

@@ -8,8 +8,7 @@ perex: |
 
     Coding standards are a matter of adding a few lines into `composer.json` and your favorite CI.
     **But what about `README.md` files?
-    <br>
-    <br>
+
     Who will take care of them?** Should we accept clean code in `/src`, but crap code in PHP snippets in Markdown? What if someone reading `README.md` will adopt its bad coding habits?
 
 

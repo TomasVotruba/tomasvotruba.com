@@ -3,8 +3,7 @@ id: 290
 title: "New in Symplify 9: Documentation Generator for PHP CS Fixer, Code Sniffer, PHPStan and Rector Rules"
 perex: |
     Rector is providing rules, so is PHPStan and PHP CS Fixer, and Code Sniffer. If you use only 5-10 rules and want to share them with the world, you create a README and describe them.
-    <br>
-    <br>
+
     In Rector, we now have over 640 rules, in Symplify 110 rules for PHPStan and 15 rules for PHP CS Fixer. **How can we handle documentation for this amount of rules without going crazy?**
 
 tweet: "New Post on #php 🐘 blog: New in #Symplify 9: Documentation Generator for PHP CS Fixer, Code Sniffer, @phpstan and @rectorphp Rules"

@@ -3,11 +3,9 @@ id: 164
 title: "IT Bloggers, Deprecate Your Posts to Stop Spreading Legacy"
 perex: |
     Do you blog about IT? Do you blog for more than a year? There is a big chance **you're spreading already outdated information**.
-    <br>
-    <br>
+
     The problem is, your readers see that as *the best practise*... did you know the Earth is flat?
-    <br>
-    <br>
+
     How to prevent that and keep your content quality high?
 tweet: "New post on my #php blog: IT Bloggers, Version Your Posts to Stop Spreading Legacy #mattstauffer #stackoverflow #symfony"
 tweet_image: "/assets/images/posts/2018/version-blog/symfony-warning.png"

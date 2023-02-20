@@ -4,8 +4,7 @@ next_post_id: 342
 title: "STAMP #3: How to Turn TWIG Helper Functions to Origin Object"
 perex: |
     In the previous post, we looked at [*how* to turn Messy TWIG PHP to something useful](/blog/stamp-2-how-to-turn-messy-twig-php-to-something-useful) in general.
-    <br>
-    <br>
+
     Today we'll look at how to **change TWIG helper functions to their original object form**.
 
 tweet: "New Post on the 🐘 blog: Stamp #3: How to Turn TWIG Helper Functions to Origin Object"
