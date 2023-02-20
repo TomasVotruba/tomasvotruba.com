@@ -12,11 +12,6 @@ use Nette\Utils\DateTime;
  */
 final class Post
 {
-    /**
-     * Seems like unused property, but used in twig actually with dot syntax.
-     */
-    private readonly string $content;
-
     public function __construct(
         private readonly int $id,
         private readonly string $title,
@@ -31,14 +26,6 @@ final class Post
         private readonly ?string $language,
         private readonly ?int $nextPostId
     ) {
-    }
-
-    /**
-     * @api
-     */
-    public function getContent(): string
-    {
-        return $this->content;
     }
 
     public function getId(): int

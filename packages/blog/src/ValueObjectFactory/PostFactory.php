@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Blog\ValueObjectFactory;
 
+use Illuminate\Support\Str;
 use Nette\Utils\DateTime;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use ParsedownExtra;
-use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\Yaml\Yaml;
 use TomasVotruba\Blog\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Blog\FileSystem\PathAnalyzer;
@@ -101,9 +101,9 @@ final class PostFactory
             $level = (int) $matches['level'];
             $headline = (string) $matches['headline'];
             $clearHeadline = strip_tags($headline);
-            $asciiSlugger = new AsciiSlugger('en');
-            $unicodeString = $asciiSlugger->slug($clearHeadline);
-            return sprintf('<h%d id="%s">%s</h%d>', $level, $unicodeString, $headline, $level);
+
+            $headlineSlug = Str::slug($clearHeadline);
+            return sprintf('<h%d id="%s">%s</h%d>', $level, $headlineSlug, $headline, $level);
         });
     }
 }
