@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\ValueObject;
 
-use Symfony\Component\String\Slugger\AsciiSlugger;
+use Illuminate\Support\Str;
 
 /**
  * @api
@@ -43,11 +43,7 @@ final class Book
 
     public function getSlug(): string
     {
-        $asciiSlugger = new AsciiSlugger();
-
-        return $asciiSlugger->slug($this->title)
-            ->lower()
-            ->toString();
+        return Str::slug($this->title);
     }
 
     public function getLongDescription(): string

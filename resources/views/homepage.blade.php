@@ -30,7 +30,9 @@
                 @php /** @var $post \TomasVotruba\Blog\ValueObject\Post */ @endphp
                 <div class="mb-4 row">
                     <div class="col-12">
-                        <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' =>  $post->getSlug()]) }}" class="pt-3 pr-3">{{ $post->getTitle() }}</a>
+                        <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' =>  $post->getSlug()]) }}" class="pt-3 pr-3">
+                            {{ $post->getClearTitle() }}
+                        </a>
                     </div>
 
                     <div class="small text-secondary col-12 pt-2">

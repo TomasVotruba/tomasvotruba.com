@@ -9,7 +9,7 @@
                 @php /** @var $book \TomasVotruba\Website\ValueObject\Book */ @endphp
 
                 <div class="text-center col-12 col-md-6 mb-5 mt-4">
-                    <a href="{{ route('book-detail', ['slug' => $book->getSlug()]) }}" target="blank">
+                    <a href="{{ route('book-detail', ['slug' => $book->getSlug()]) }}">
                         <img src="{{ $book->getCoverImage() }}" style="width: 17em; padding: .5em;margin:0 0 1em 0" class="shadow" alt="Rector book cover">
                     </a>
 
