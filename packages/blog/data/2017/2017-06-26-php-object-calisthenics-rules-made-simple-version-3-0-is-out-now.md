@@ -14,11 +14,6 @@ deprecated_message: |
     In time and after years of use, these rules seems rather "academic". They're not helpful and shifts developer's focus too close to each code character. **They need to have broader overview of code as whole instead.**
 
     **Nowadays I shifted to 1 much better metric - [Cognitive Complexity](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/).**
-
-updated_since: "August 2020"
-updated_message: |
-    Updated with **ECS 5**, Neon to YAML migration and `checkers` to `services` migration.<br>
-    Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 
 If you are a coding standard nerd like me, you'll probably have more than just PSR-2 standard in your ruleset. But even if you don't, [Object Calisthenics](https://github.com/object-calisthenics/phpcs-calisthenics-rules) is a developer-friendly game changer for your code.

@@ -5,12 +5,6 @@ perex: |
     I love to write about my packages. Why? The code you type **you know**, **you know** the name of variables, **you know** how to interface looks, you know the architecture. It's like raising your own child and **knowing** his favorite ice-cream...
 tweet: "New Post on #php 🐘 blog: How Writing Posts Helps you to Become Better Programmer"
 tweet_image: '/assets/images/posts/2019/write-to-code/autstin.gif'
-
-deprecated_since: "2020-03"
-deprecated_message: |
-    Statie was deprecated with last version 7, because 99 % of features are covered in Symfony application.<br>
-    <br>
-    To create static content, migrate to Symfony app and [SymfonyStaticDumper](https://github.com/symplify/symfony-static-dumper).
 ---
 
 ## What does Your Child Eat?

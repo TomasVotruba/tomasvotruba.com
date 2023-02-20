@@ -15,28 +15,29 @@ use TomasVotruba\Website\Controller\RssController;
 use TomasVotruba\Website\ValueObject\RouteName;
 
 Route::get('/', HomepageController::class)
-     ->name(RouteName::HOMEPAGE);
+    ->name(RouteName::HOMEPAGE);
 
 Route::get('/about', AboutController::class)
-     ->name(RouteName::ABOUT);
+    ->name(RouteName::ABOUT);
 
 Route::get('/book-detail/{slug}', BookDetailController::class)
-     ->name(RouteName::BOOK_DETAIL);
+    ->name(RouteName::BOOK_DETAIL);
 
 Route::get('/books', BooksController::class)
-     ->name(RouteName::BOOKS);
+    ->name(RouteName::BOOKS);
 
 Route::get('/post/{slug}', PostController::class)
-     ->name(RouteName::POST_DETAIL);
+    ->name(RouteName::POST_DETAIL)
+    ->where('slug', '.*');
 
 Route::get('/blog', BlogController::class)
-     ->name(RouteName::BLOG);
+    ->name(RouteName::BLOG);
 
 Route::get('/rss', RssController::class)
-     ->name(RouteName::RSS);
+    ->name(RouteName::RSS);
 
 Route::get('/contact', ContactController::class)
-     ->name(RouteName::CONTACT);
+    ->name(RouteName::CONTACT);
 
 Route::get('/thumbnail/{title}.png', PostImageController::class)
-     ->name(RouteName::POST_IMAGE);
+    ->name(RouteName::POST_IMAGE);

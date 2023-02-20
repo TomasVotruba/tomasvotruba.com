@@ -11,10 +11,6 @@ perex: |
     I'm about to tell you why you should not do it.
 tweet: "New Post on my Blog: 5 Signs You Should Never Have a Talk Abroad #commnity #cfp #friendsofphp"
 tweet_image: "/assets/images/posts/2018/friends/homepage.png"
-
-
-deprecated_since: "November 2022"
-deprecated_message: "The Meetup.com API has changed to a paywall now. Also the REST API was changed to GraphQL and there is no documentation about endpoints of meetups by groups. The visit rate of page is also 3-5 people a day. For there reasons, it does not make sense to maintain this page anymore, so I've sunset it."
 ---
 
 ## 1. You're not Famous Enough to be Accepted
