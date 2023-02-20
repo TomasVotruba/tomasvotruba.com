@@ -9,9 +9,7 @@
         "laravel/framework": "^10.0",
         "nette/utils": "^3.2.9",
         "spatie/laravel-markdown": "^2.2",
-        "symfony/dotenv": "^6.2",
         "symfony/mime": "^6.2",
-        "symfony/string": "^6.2",
         "symfony/yaml": "^6.2"
     },
     "require-dev": {
