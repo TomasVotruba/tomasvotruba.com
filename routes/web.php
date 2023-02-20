@@ -26,7 +26,7 @@ Route::get('/book-detail/{slug}', BookDetailController::class)
 Route::get('/books', BooksController::class)
     ->name(RouteName::BOOKS);
 
-Route::get('/post/{slug}', PostController::class)
+Route::get('/blog/{slug}', PostController::class)
     ->name(RouteName::POST_DETAIL)
     ->where('slug', '.*');
 
