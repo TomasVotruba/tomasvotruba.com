@@ -83,7 +83,7 @@
         @include('_snippets/disqus_comments')
     </div>
 
-    {{--    <script id="dsq-count-scr" src="https://itsworthsharing/disqus.com/count.js" async defer></script>--}}
+    <script id="dsq-count-scr" src="https://itsworthsharing/disqus.com/count.js" async defer></script>
 
     <link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css"/>
     <script src="{{ asset('assets/prism/prism.js') }}"></script>
