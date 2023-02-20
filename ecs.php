@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use PhpCsFixer\Fixer\Operator\UnaryOperatorSpacesFixer;
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
@@ -19,9 +18,7 @@ return function (ECSConfig $ecsConfig): void {
         __DIR__ . '/utils-tests',
     ]);
 
-    $ecsConfig->import(SetList::SYMPLIFY);
-
-    $ecsConfig->skip(['*/Fixture/*', '*/Expected/*', UnaryOperatorSpacesFixer::class]);
+    $ecsConfig->skip(['*/Fixture/*', '*/Expected/*']);
 
     $ecsConfig->sets([SetList::PSR_12, SetList::COMMON, SetList::SYMPLIFY]);
 
