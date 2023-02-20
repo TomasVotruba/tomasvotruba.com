@@ -20,14 +20,14 @@
             @php /** @var $post \TomasVotruba\Blog\ValueObject\Post */ @endphp
 
             @php
-                $post_absolute_url = 'https://tomasvotruba.com'. route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]);
+                $post_absolute_url = route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]);
             @endphp
 
             <item>
                 <title><![CDATA[ {{ $post->getClearTitle() }} ]]></title>
                 <link>{{ $post_absolute_url }}</link>
-                <description><![CDATA[ {{ $post->getPerex() }} ]]></description>
-                <content:encoded><![CDATA[ {{ $post->getHtmlContent() }} ]]></content:encoded>
+                <description><![CDATA[ {!! $post->getPerex() !!} ]]></description>
+                <content><![CDATA[ {!! $post->getHtmlContent() !!} ]]></content>
                 <guid isPermaLink="false">{{ $post_absolute_url }}</guid>
                 <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
 
