@@ -26,22 +26,24 @@
         </h2>
 
         <div class="text-bigger">
-            @foreach ($last_posts as $post)
-                @php /** @var $post \TomasVotruba\Blog\ValueObject\Post */ @endphp
+            @foreach ($last_posts as $current_post)
+                @php /** @var $current_post \TomasVotruba\Blog\ValueObject\Post */ @endphp
                 <div class="mb-4 row">
                     <div class="col-12">
-                        <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' =>  $post->getSlug()]) }}" class="pt-3 pr-3">
-                            {{ $post->getClearTitle() }}
+                        <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' =>  $current_post->getSlug()]) }}"
+                           class="pt-3 pr-3">
+                            {{ $current_post->getClearTitle() }}
                         </a>
                     </div>
 
                     <div class="small text-secondary col-12 pt-2">
-                        {{ $post->getDateTime()->format("Y-m-d") }}
+                        {{ $current_post->getDateTime()->format("Y-m-d") }}
                     </div>
                 </div>
             @endforeach
 
-            <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::BLOG) }}" class="btn btn-warning pull-right mt-4">Discover more Posts </a>
+            <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::BLOG) }}"
+               class="btn btn-warning pull-right mt-4">Discover more Posts </a>
         </div>
 
         <br>
