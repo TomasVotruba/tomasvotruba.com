@@ -51,6 +51,11 @@ final class Post
         return $this->title;
     }
 
+    public function getClearTitle(): string
+    {
+        return str_replace('&nbsp;', ' ', $this->title);
+    }
+
     public function getPerex(): string
     {
         return $this->perex;

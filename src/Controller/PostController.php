@@ -18,11 +18,9 @@ final class PostController extends Controller
     public function __invoke(string $slug): View
     {
         $post = $this->postRepository->getBySlug($slug);
-        $previousPost = $this->postRepository->findPreviousPost($post);
 
         return \view('blog/post_detail', [
             'post' => $post,
-            'previous_post' => $previousPost,
             'title' => $post->getTitle(),
         ]);
     }

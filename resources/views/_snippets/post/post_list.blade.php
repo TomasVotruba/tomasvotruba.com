@@ -9,7 +9,7 @@
         ])
     >
         <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}" class="post-list-title">
-            {{ $post->getTitle() }}
+            {{ $post->getClearTitle() }}
         </a>
 
         @if ($post->getDeprecatedAt())

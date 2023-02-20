@@ -13,10 +13,10 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="votrubaT"/>
     <meta name="twitter:creator" content="votrubaT"/>
-    <meta name="twitter:title" content="{{ $post->getTitle() }}"/>
+    <meta name="twitter:title" content="{{ $post->getClearTitle() }}"/>
 
-    <meta property="og:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getTitle()]) }}"/>
-    <meta name="twitter:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getTitle()]) }}"/>
+    <meta property="og:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getClearTitle()]) }}"/>
+    <meta name="twitter:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getClearTitle()]) }}"/>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
     @include('_snippets/menu')
 
     <div class="container-fluid post" id="content">
-        <h1>{{ $post->getTitle() }}</h1>
+        <h1>{!! $post->getTitle() !!}</h1>
 
         <time datetime="{{ $post->getDateTime()->format('Y-m-D') }}" class="text-muted">
             {{ $post->getDateTime()->format('Y-m-d') }}
@@ -74,21 +74,6 @@
         {!! $post->getHtmlContent() !!}
 
         <br>
-
-        <div class="card mt-4">
-            <div class="card-body text-white bg-success text-center">
-                @if ($previous_post instanceof \TomasVotruba\Blog\ValueObject\Post)
-                    <a
-                        href="{{ route(RouteName::POST_DETAIL, ['slug' => $previous_post->getSlug()]) }}"
-                        class="d-block"
-                    >
-                        <div>
-                            Read next → <strong>{{ $previous_post->getTitle() }}</strong>
-                        </div>
-                    </a>
-                @endif
-            </div>
-        </div>
 
         <br>
         <br>

@@ -10,10 +10,6 @@ perex: |
 tweet: "New Post on #php 🐘 blog: Introducing #Neon to #Yaml Converter   #symfony #nettefw"
 tweet_image: "/assets/images/posts/2019/neon-to-yaml/convert-neon-to-yaml.gif"
 
-updated_since: "July 2020"
-updated_message: |
-    Updated to Symplify package.
-
 deprecated_since: "June 2021"
 deprecated_message: |
     This package got only couple of downloads (2 exactly :)) in last years. That's why I decide to deprecate it. If you still need it, you can [find it here](https://github.com/deprecated-packages/neon-to-yaml-converter).
