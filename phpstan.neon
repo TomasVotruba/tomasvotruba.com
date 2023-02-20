@@ -1,4 +1,6 @@
 parameters:
+    reportUnmatchedIgnoredErrors: false
+
     # see https://github.com/tomasvotruba/cognitive-complexity
     cognitive_complexity:
         class: 30
@@ -30,13 +32,8 @@ parameters:
 
     level: 8
 
-    reportUnmatchedIgnoredErrors: false
 
     ignoreErrors:
-        -
-            message: '#The path "/\.\./\.env\.local" was not found#'
-            path: 'tests/bootstrap.php'
-
         # false positive - read in twig template
         -
             message: '#Property TomasVotruba\\Blog\\ValueObject\\Post\:\:\$content is never written, only read#'
@@ -49,9 +46,3 @@ parameters:
         - '#Parameter \#2 \$font of method Imagine\\Draw\\DrawerInterface\:\:text\(\) expects Imagine\\Image\\AbstractFont, Imagine\\Image\\FontInterface given#'
 
         - '#Cognitive complexity for "TomasVotruba\\Utils\\Rector\\Rector\\ClassMethod\\SymfonyRouteAttributesToLaravelRouteFileRector\:\:refactor\(\)" is 11, keep it under 9#'
-
-        # duplic
-        - '#Method TomasVotruba\\Website\\Controller\\(.*?)\:\:__invoke\(\) should return Illuminate\\Contracts\\View\\View but returns Illuminate\\Contracts\\View\\Factory\|Illuminate\\Contracts\\View\\View#'
-        - '#Method TomasVotruba\\Website\\Controller\\(.*?)\:\:__invoke\(\) should return Illuminate\\Http\\Response but returns Illuminate\\Contracts\\Routing\\ResponseFactory\|Illuminate\\Http\\Response#'
-        - '#Call to an undefined method Illuminate\\Contracts\\View\\Factory\|Illuminate\\Contracts\\View\\View\:\:render\(\)#'
-
