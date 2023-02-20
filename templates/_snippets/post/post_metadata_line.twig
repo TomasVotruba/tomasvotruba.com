@@ -1,9 +1,0 @@
-<div>
-    <time datetime="{{ post.getDateTime|date('Y-m-D') }}">
-        {% if post.updatedAt is null %}
-            {{ post.getDateTime|date('Y-m-d') }}
-        {% else %}
-            Updated {{ post.updatedAt|date('Y-m-d') }}
-        {% endif %}
-    </time>
-</div>

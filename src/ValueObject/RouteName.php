@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\ValueObject;
 
+/**
+ * @api
+ * @todo make unused public cost work with Laravel and PHPStan
+ */
 final class RouteName
 {
     /**

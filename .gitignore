@@ -15,3 +15,8 @@ package-lock.json
 ###< symfony/framework-bundle ###
 
 /.env
+
+storage/framework/views/*
+!storage/framework/views/.gitignore
+
+bootstrap/cache/*

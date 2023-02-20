@@ -4,23 +4,19 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Illuminate\Routing\Controller;
 use TomasVotruba\Website\Repository\BookRepository;
-use TomasVotruba\Website\ValueObject\RouteName;
 
-final class BooksController extends AbstractController
+final class BooksController extends Controller
 {
     public function __construct(
         private readonly BookRepository $bookRepository
     ) {
     }
 
-    #[Route(path: 'books', name: RouteName::BOOKS)]
-    public function __invoke(): Response
+    public function __invoke(): \Illuminate\Contracts\View\View
     {
-        return $this->render('book/books.twig', [
+        return \view('book/books', [
             'title' => 'Books',
             'books' => $this->bookRepository->fetchAll(),
         ]);
