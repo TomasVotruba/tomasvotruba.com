@@ -83,7 +83,7 @@ final class TwigToBladeConverter
             $colorDiff = $this->colorConsoleDiffFormatter->format($diff);
             $this->symfonyStyle->writeln($colorDiff);
 
-            FileSystem::write($bladeFilePath, $bladeFileContents);
+            file_put_contents($bladeFilePath, $bladeFileContents, FILE_APPEND);
         }
     }
 
