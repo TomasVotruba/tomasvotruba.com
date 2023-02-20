@@ -15,7 +15,7 @@
 @if (isset($post))
     @php /** @var $post \TomasVotruba\Blog\ValueObject\Post */ @endphp
 
-    <meta property="og:title" content="{{ $post->getTitle() }}" />
+    <meta property="og:title" content="{{ $post->getClearTitle() }}" />
     <meta property="og:url" content="https://tomasvotruba.com{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}" />
 
     {{-- @todo replace with automatically generated preview PNG --}}

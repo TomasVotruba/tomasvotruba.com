@@ -21,7 +21,7 @@ final class PostController extends Controller
 
         return \view('blog/post_detail', [
             'post' => $post,
-            'title' => $post->getTitle(),
+            'title' => $post->getClearTitle(),
         ]);
     }
 }
