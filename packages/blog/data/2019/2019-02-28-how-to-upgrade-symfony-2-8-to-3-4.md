@@ -4,7 +4,8 @@ title: "How to Upgrade Symfony&nbsp;2.8&nbsp;to&nbsp;3.4"
 perex: |
     Are you Symfony programmer? Do you work on a successful project? Then upgrading the Symfony project is a work you can't avoid.
     Almost a year ago I wrote about [Five and Half Steps to Migrate from Symfony 2.8 LTS to Symfony 3.4 LTS in Real PRs](https://blog.shopsys.com/5-5-steps-to-migrate-from-symfony-2-8-lts-to-symfony-3-4-lts-in-real-prs-50c98eb0e9f6).
-    <br><br>
+
+
     Now it's much easier to jump from one LTS to another - with **instant upgrades**.
 tweet: "New Post on #php 🐘 blog: How to Upgrade #Symfony 2.8 to 3.4"
 

@@ -3,7 +3,8 @@ id: 140
 title: "Your Brain is Your Garden"
 perex: |
     After a few technical and open-source posts, it's time [for brain hacking](/blog/2018/05/03/how-do-you-treat-your-own-first-ai/). Thanks to the recent boom of AI, neuroscience starts to overlap with human psychology. When it comes to learning methods, humans and computers are more alike than ever before.
-    <br><br>
+
+
     To overcome [AI disruption](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/), you'll be valuable by actually making AI or by hacking your brain to be super-adaptable and irreplaceable.
 tweet: "New Post on my Blog: Your Brain is Your Garden   #eduhacking #ai #hi #learning "
 ---

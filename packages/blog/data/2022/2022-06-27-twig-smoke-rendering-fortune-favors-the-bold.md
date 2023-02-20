@@ -3,7 +3,8 @@ id: 364
 title: "Twig Smoke Rendering - Fortune&nbsp;Favors&nbsp;the&nbsp;Bold"
 perex: |
     In the previous post, we set on [journey of fails](/blog/twig-smoke-rendering-journey-of-fails) with ups and downs. Well, mostly downs. I'm trying to be honest about the blind path process behind the final published work.
-    <br><br>
+
+
     We made it through heaven and hell. Now we're rested and back to continue. Can we smoke render twig templates, or shall we give up?
 
 tweet_image: "/assets/images/posts/2022/frodo_end.jpg"

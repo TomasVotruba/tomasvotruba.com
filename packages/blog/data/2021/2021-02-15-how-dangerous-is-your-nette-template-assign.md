@@ -3,7 +3,8 @@ id: 303
 title: "How Dangerous is Your Nette Template&nbsp;Assign"
 perex: |
     Symfony documentation contains a few ["best practices" that teach people to create bad code](https://matthiasnoback.nl/2014/10/unnecessary-contrapositions-in-the-new-symfony-best-practices/). It's important to talk about them so the framework can improve and thus its community can improve. Do you remember GitHub discussions about autowiring before it became part of Symfony?
-    <br><br>
+
+
     Nette documentation is no different. **Today, we'll look at configuring templates and how to use them better and safer**.
 
 tweet: "New Post on #php 🐘 blog: How Dangerous is Your #nettefw Template Assign"

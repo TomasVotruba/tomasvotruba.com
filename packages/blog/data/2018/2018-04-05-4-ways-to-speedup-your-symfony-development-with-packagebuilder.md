@@ -3,7 +3,8 @@ id: 89
 title: "4 Ways to Speedup Your Symfony Development with PackageBuilder"
 perex: |
     Symplify 4 was released and with it also one package, that contains all the Symfony tweaks that Symplify packages use.
-    <br><br>
+
+
     Throwable render? Test services without public violation? Load parameters with glob? We got you covered!
 tweet: "New Post on My Blog: 4 Ways to Speedup Your Symfony Development with PackageBuilder"
 tweet_image: "/assets/images/posts/2018/symplify-4-pb/error.png"

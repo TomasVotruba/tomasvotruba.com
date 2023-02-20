@@ -3,9 +3,11 @@ id: 327
 title: "How to Scope Your PHP Tool in 10&nbsp;Steps"
 perex: |
     Do you know PHPStan, ECS, [Monorepo Builder](https://github.com/symplify/monorepo-builder), PHPUnit, [Config Transformer](https://github.com/symplify/config-transformer) or Rector?
-    <br><br>
+
+
     In the previous post, we explored [why are these tools scoped](/blog/why-do-we-scope-php-tools), where scoping makes sense and where not so much.
-    <br><br>
+
+
     **Do you maintain a PHP tool that runs in the command line**? Today we'll look at 10 steps on how you can scope it too.
 
 tweet: "New Post on the 🐘 blog: How to Scope Your PHP Tool in 10 Steps"

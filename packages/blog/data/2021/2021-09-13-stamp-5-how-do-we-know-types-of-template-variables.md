@@ -3,7 +3,8 @@ id: 345
 title: "STAMP #5: How do we Know Types of Template Variables"
 perex: |
     In the previous post, we finished the conversion of [TWIG to PHP, run PHPStan on temporary PHP file and got list of found errors](/blog/stamp-4-how-to-run-phpstan-rules-on-temporary-php-file). We've done a full circle, and PHPStan analyses our TWIG templates.
-    <br><br>
+
+
     I've shared the intro post [on Reddit](https://www.reddit.com/r/PHP/comments/qbwudj/stamp_0_static_analysis_of_templates), that sparked many exciting questions.<br>
     Today we'll answer one of them.
 

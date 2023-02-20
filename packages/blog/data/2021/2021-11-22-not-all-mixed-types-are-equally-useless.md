@@ -3,7 +3,8 @@ id: 348
 title: "Not all Mixed Types are Equally Useless"
 perex: |
     Do you have a big project where you try to raise the PHPStan level as high as possible? Yet, you're stuck on level 4 or 5 with thousands of errors? We all have one and try to chip away a few errors now and then.
-    <br><br>
+
+
     The `mixed` type is the worst of all of them. Fixing all `mixed` types to a specific type is a nightmare for the REST of your life (pun intended). But what if there are places where fixing `mixed` type **brings much more value than** in the others?
 
 tweet: "New Post on the 🐘 blog: Not all Mixed Types are Equally Useless"

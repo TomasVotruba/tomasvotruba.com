@@ -3,7 +3,8 @@ id: 186
 title: "Why Config Coding Sucks"
 perex: |
     Rector and static analysis help us to work with code better, but it also helps us spot new weak-points of our PHP code.
-    <br><br>
+
+
     One of the biggest evils is *config coding*. **How it can hurt you and how get rid of it**?
 tweet: 'New Post on my  🐘 #php blog: Why Config Coding Sucks  #symfony #nettefw #laravel'
 tweet_image: '/assets/images/posts/2019/config-evil/rename.gif'

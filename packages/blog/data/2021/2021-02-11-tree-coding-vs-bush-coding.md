@@ -3,7 +3,8 @@ id: 302
 title: "Tree Coding vs. Bush Coding"
 perex: |
     How does circular reference look like? It is a point where you wait for your doctor; they wait for a state to accept the vaccine, and the state waits on people like you to come to the doctor. **Who has the responsibility?** Who can change the state?
-    <br><br>
+
+
     In the past, we used singletons and static calls to get anything anywhere instantly. But soon, we got into the circular references trap. Now **we moved to dependency injection** and this problem does not exist anymore... or does it?
 
 tweet: "New Post on #php 🐘 blog: Tree Coding vs. Bush Coding"

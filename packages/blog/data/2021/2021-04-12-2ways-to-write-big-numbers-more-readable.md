@@ -3,7 +3,8 @@ id: 311
 title: "2 Ways to Write Big Numbers More Readable"
 perex: |
     Have you seen a number in your code that does not make any sense? We don't talk about 1, 2, or 3. I mean big numbers like 965039008. How would you spell it when support asks you for your account ID?
-    <br><br>
+
+
     **There are two ways to make big numbers more readable**. Instant and easy ways that I found mostly by accident. We use them both in one big project, and it makes our daily number work so much easier I want to share them with you.
 
 tweet: "New Post on #php 🐘 blog: 2 Ways to Write Big Numbers more Readable"

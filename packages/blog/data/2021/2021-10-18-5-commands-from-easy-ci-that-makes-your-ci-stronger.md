@@ -3,9 +3,11 @@ id: 335
 title: "5 Commands from Easy CI that&nbsp;Makes&nbsp;Your CI Stronger"
 perex: |
     Sometimes my clients need a specific CI check that spots tiny but annoying bugs, and they cannot be discovered by PHPStan, Rector, or coding standard tool. It can be unresolved conflict `<<<<<<`, invalid config syntax, or forgotten commented code.
-    <br><br>
+
+
     Usually, we write specific PHP commands just for the particular project and let them rotten in spaghetti time. Instead, I cherry-pick those commands to **a package called `symplify/easy-ci`**. That way, I can use them in any project and improve them.
-    <br><br>
+
+
     Today we'll look at 5 commands you can use in your CI. **They might save you from bugs that no other tool can check**.
 
 tweet: "New Post on the 🐘 blog: 5 Commands from Easy CI that makes your CI Stronger   #nettefw #neon #git #codereview"

@@ -3,9 +3,11 @@ id: 94
 title: "How to Slowly Turn your Symfony Project to Legacy with Action Injection"
 perex: |
     The other day I saw the question on Reddit about [Symfony's controller action dependency injection](https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection). More people around me are hyped about [this new feature in Symfony 3.3](https://symfony.com/doc/current/service_container/3.3-di-changes.html#controllers-are-registered-as-services) that allows to autowire services via action argument typehints. It's new, it's cool and no one has a bad experience with it. The ideal candidate for any code you write today.
-    <br><br>
+
+
     Since [Nette](https://forum.nette.org/en/19365-nette-framework-2-1-0-finally-released) and [Laravel introduced](https://mattstauffer.com/blog/laravel-5.0-method-injection) a similar feature in 2014, there are empirical data that we learn from.
-    <br><br>
+
+
     **Today I'll share the experience I have from consulting few Nette applications with dangerous overuse of this pattern and how this one thing turned the code to complete mess.**
 
 tweet: "New Post on My Blog: How Quickly Turn #Symfony Project to Legacy With Action Injection #adr #invokable #methodinjection #laravel"

@@ -4,7 +4,8 @@ title: "Never Forget Symfony Config Options Again"
 perex: |
     Have you switched your Symfony configs from **stringy YAML to typed PHP**? If not, [do it now](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/). Here is [at least 10 reasons why](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs/).
     Only then you'll start to notice a code smell that was there in every YAML configs.
-    <br><br>
+
+
     Just now, the code smell is too smelly to ignore.
 
 tweet: "New Post on #php 🐘 blog: How to Never Forget #symfony Config Options Again"

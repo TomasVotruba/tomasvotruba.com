@@ -4,7 +4,8 @@ title: "The Boss vs. The Masseuse Way to Add Coding Standards to a Big Project"
 perex: |
     Do you prefer a **boss who's watching you** how you sit at the desk telling how to sit right
     or a **masseuse who's taking care of your hands** tired from programming with her gentle hands?
-    <br><br>
+
+
     When it comes to coding standards, the love and fun is the best experience with it. Let's look how such "masseuse" can be added to your big project.
 
 tweet: "New Post on My Blog: Boss vs. Masseuse Way How to Add Coding Standards to a Big Project #php #kaizen #fromzerotohero"

@@ -3,9 +3,11 @@ id: 259
 title: "Do We Have More than 1024 PHP Groups in The World?"
 perex: |
     In April 2018, I started a side project to list meetups in Europe near Prague. **PHP meetups are so much fun**, and I didn't find any single-page with a map that would list them. At the start, this site had a small table, with 10 meetups a month, very *modern* black/white Times New Roman design, and *advanced* human-manual updating.
-    <br><br>
+
+
     Since then, I got feedback from dozens of friends and users with these WTFs and ideas - they helped me add a feature now and then, polish design with emoji and Bootstrap, **automate everything and even crawl over 150 URLs**. I bought [friendsofphp.org](https://friendsofphp.org) domain, and the project became a single standalone page.
-    <br><br>
+
+
     Today, it's a much bigger project with over...
 
 tweet: "New Post on My Blog: Do we Have more Than 1024 PHP Groups in The World?     #meet #travelling #phpfamily"

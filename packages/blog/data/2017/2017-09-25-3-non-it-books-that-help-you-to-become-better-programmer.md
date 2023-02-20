@@ -3,9 +3,11 @@ id: 56
 title: "3 non-IT Books That Help you to Become Better Programmer"
 perex: |
     I love reading books. It helps me to create much deeper and persistent neural connections than any other form of self-education.
-    <br><br>
+
+
     These books accidentally help me to **write more readable code, create understandable and smart architecture** or **manage open-source in more polite and leading way**.
-    <br><br>
+
+
     Are you tired of reading technical books? Take a rest with these 3.
 tweet: "3 books by @austinkleon, Cal Newport and @dr_r_glover to better code #php #cleancode"
 tweet_image: "/assets/images/posts/2017/non-it-books/deep.jpg"

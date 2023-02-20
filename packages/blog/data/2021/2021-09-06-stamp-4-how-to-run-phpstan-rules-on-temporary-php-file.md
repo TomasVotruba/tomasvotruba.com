@@ -3,7 +3,8 @@ id: 342
 title: "STAMP #4: How to Run PHPStan Rules on Temporary PHP File"
 perex: |
     In the previous post, we finished the conversion of [TWIG template to clean and objective PHP](/blog/stamp-3-how-to-turn-twig-helper-functions-to-origin-object) that PHPStan can analyze.
-    <br><br>
+
+
     Today, we'll discover the last missing pieces of the puzzle. How to run PHPStan rules in temporarily compiled PHP code.
 
 tweet: "New Post on the 🐘 blog: Stamp #4: How to Run PHPStan Rules on Temporary PHP File"

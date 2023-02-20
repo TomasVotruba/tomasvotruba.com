@@ -3,7 +3,8 @@ id: 312
 title: "How can We use GitHub&nbsp;Actions in&nbsp;Gitlab?"
 perex: |
     One of my customers is building a monorepo, so we prepared a prototype on GitHub to test it out. It uses [Monorepo Split GitHub Action](/blog/monorepo-split-github-action-20-with-gitlab-split-is-out/) and works well.
-    <br><br>
+
+
     You know [I'm a big fan of GitHub](/blog/best-time-to-switch-gitlab-to-github), so when client asked me: **"how can we do it in Gitlab?"**
     <br>
     I was like: "that's not possible... you need to switch to GitHub".

@@ -3,7 +3,8 @@ id: 110
 title: "Symfony vs Laravel vs Nette - Which PHP Framework Should You Choose"
 perex: |
     I have been asked this question over hundred times, in person, as [a post request](https://github.com/TomasVotruba/tomasvotruba.com/issues/278). When to use Symfony? How is Laravel better than Symfony? What are Nette killer features compared to Symfony and Laravel?
-    <br><br>
+
+
     Today, we look on the answer.
 tweet: "New Post on my Blog: #symfony vs #laravel vs #nettefw - Which PHP Framework Should You Choose #php #community"
 tweet_image: "/assets/images/posts/2018/frameworks/community.jpg"

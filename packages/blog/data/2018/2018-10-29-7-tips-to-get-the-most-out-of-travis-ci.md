@@ -3,7 +3,8 @@ id: 154
 title: "7 Tips to Get the Most out of Travis CI"
 perex:
     Travis CI is the most spread CI in checking open-source projects.
-    <br><br>
+
+
     Do you want to know how to use it **3x faster**?
     <br>
     How to make Travis **generate code for you**?

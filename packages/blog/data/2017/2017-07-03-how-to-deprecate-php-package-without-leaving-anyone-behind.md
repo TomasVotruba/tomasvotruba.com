@@ -4,7 +4,8 @@ title: "How to Deprecate PHP Package Without Leaving Anyone Behind"
 perex: |
     You create PHP open-source packages because you personally use them in your projects. <strong>And you take care of them.</strong>
     In time you change a job or switch a programming language and you don't have time to take care of them properly. Number of issues and PRs grows and <strong>package is getting obsolete</strong>.
-    <br><br>
+
+
     You can do 2 things in this situation: nothing like most people do or <strong>take responsibility, deprecate package and inform your users about better alternative</strong>.
 tweet: "Deprecating #github #php package? This is safe and kind way to do it"
 ---

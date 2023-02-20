@@ -3,11 +3,14 @@ id: 120
 title: "How to Convert Latte Templates to Twig in 27 Regular Expressions"
 perex: |
     Statie - a tool for generating static open-sourced website like this blog or [Pehapkari.cz](https://github.com/pehapkari/pehapkari.cz) - runs on YAML and Symfony DI Container. That way it's easy to understand by the PHP community worldwide.
-    <br><br>
+
+
     But there are some pitfalls left. Like templates - being Latte the only one is a pity. Twig is often requested feature and one of the last big reasons not to use Statie.
-    <br><br>
+
+
     Well, **it was**. Statie now supports [Twig](https://github.com/symplify/symplify/pull/892).
-    <br><br>
+
+
     **Are you a Twig fan? As a side effect, I made 27 regular expression to handle 80 % of the Latte to Twig migration for you.**
 tweet: "New Post on my Blog: How to Convert #Latte to #Twig in 27 Regular Expressions #nettefw #symfony"
 tweet_image: "/assets/images/posts/2018/latte-twig/diff.png"

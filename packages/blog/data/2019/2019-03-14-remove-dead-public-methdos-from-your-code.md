@@ -3,7 +3,8 @@ id: 194
 title: "Remove Dead Public Methods from Your Code"
 perex: |
     We already have sniffs and rectors to remove unused private methods. But what about public methods? If you're creating open-source packages, public methods might be used by anyone.
-    <br><br>
+
+
     But what if you're creating an application - you can remove unused with peace in mind.
     There is only one problem to resolve - **find public unused methods**.
 

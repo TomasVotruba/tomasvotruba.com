@@ -3,9 +3,11 @@ id: 114
 title: "Collector Pattern for Dummies"
 perex: |
     I wrote *[Why is Collector Pattern so Awesome](/blog/2018/03/08/why-is-collector-pattern-so-awesome/)* a while ago, but I got feeling and feedback that it's way too complicated.
-    <br><br>
+
+
     The pattern itself is simple, but put in framework context, it might be too confusing to understand.
-    <br><br>
+
+
     That's why we look on collector pattern in minimalistic plain PHP way today.
 tweet: "New Post on my Blog: Collector Pattern for Dummies"
 ---

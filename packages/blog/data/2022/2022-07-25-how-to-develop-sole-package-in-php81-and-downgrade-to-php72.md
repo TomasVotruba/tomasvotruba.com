@@ -3,7 +3,8 @@ id: 368
 title: "How to Develop Sole Package in PHP 8.1 and Downgrade to PHP 7.2"
 perex: |
     The PHP downgrades are a thing. Most beneficial for package developers who want to move forward to the latest PHP features but also want to **keep easy access to the broad PHP community and legacy projects**.
-    <br><br>
+
+
     The downgrade of a tool is a no-brainer - [we downgrade the whole tool](https://getrector.org/blog/how-to-bump-minimal-version-without-leaving-anyone-behind) including vendor, and we know it will run on PHP 7.2.
     <br>
     <br>

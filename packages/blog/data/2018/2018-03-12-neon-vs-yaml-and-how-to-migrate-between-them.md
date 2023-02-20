@@ -3,9 +3,11 @@ id: 83
 title: "NEON vs. YAML and How to Migrate Between Them"
 perex: |
     Do you know `*.neon` format? It's config file format created in Czech Republic by [David Grudl](https://davidgrudl.com) (author of [Nette](https://github.com/nette/nette)) and if you're foreigner, you might know it from or [EasyCodingStandard](https://github.com/symplify/easy-coding-standard) and [PHPStan](https://github.com/phpstan/phpstan). Even suggested as [`composer.neon`](https://github.com/composer/composer/issues/3228).
-    <br><br>
+
+
     And `*.yaml` is similar format used almost everywhere else.
-    <br><br>
+
+
     **You spot the suffix is different, but what about syntax differences? And which one is better?**
 tweet: "New post on my blog: Neon vs. Yaml and How to Migrate Between Them"
 tweet_image: "/assets/images/posts/2018/neon-yaml/standards.png"

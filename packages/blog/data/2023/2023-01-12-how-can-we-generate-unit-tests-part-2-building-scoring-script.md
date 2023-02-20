@@ -3,7 +3,8 @@ id: 374
 title: "How can we Generate Unit Tests - Part 2: Building Scoring Script"
 perex: |
     I kicked off the [unit test generator](/blog/how-can-we-generate-unit-tests-part-1-testability-score) idea with the first post a week ago. It was a great [success on Reddit](https://www.reddit.com/r/PHP/comments/103vtkt/how_can_we_generate_unit_tests_part_1_testability/), and I'm happy there is interest in the PHP community.
-    <br><br>
+
+
     I often got asked about the **testability score**.
     How does it work, and how can it be measured in actual code? Well, let's find out.
 ---

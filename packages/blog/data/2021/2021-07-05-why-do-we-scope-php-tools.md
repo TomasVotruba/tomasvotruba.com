@@ -3,9 +3,11 @@ id: 326
 title: "Why do we Scope PHP Tools"
 perex: |
     Do you know PHPStan, ECS, [Monorepo Builder](https://github.com/symplify/monorepo-builder), PHPUnit, [Config Transformer](https://github.com/symplify/config-transformer) or Rector?
-    <br><br>
+
+
     What do they have in common? They're PHP tools you install with composer and then run in your command line. Hm, what else? **They're all scoped with help of [php-scoper](https://github.com/humbug/php-scoper).**
-    <br><br>
+
+
     Do you want to make your tool resistant to any conflict with any project dependencies? Today I'll show you how.
 
 tweet: "New Post on the 🐘 blog: Why do We PHP Scope Tools"

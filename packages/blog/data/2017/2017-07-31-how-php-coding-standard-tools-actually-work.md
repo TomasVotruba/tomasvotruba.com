@@ -3,7 +3,8 @@ id: 48
 title: "How PHP Coding Standard Tools Actually Work"
 perex: |
     Do you use <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer">PHP CS Fixer</a> or <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>? Do you know the way they work is ~80 % the same? Do you wonder how they work under the hood?
-    <br><br>
+
+
     Today I will share <strong>3 main pillars of their architecture</strong>.
 tweet: "How #php #codingstandard Tools Actually Works #tokens"
 ---

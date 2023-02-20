@@ -3,7 +3,8 @@ id: 316
 title: "Introducing ECS Prefixed and Downgraded to PHP 7.1"
 perex: |
     ECS is part of Symplify that requires PHP 7.3 version as minimal. That cuts down options for you as an end-user. And that's not the only problem. Do you require Symfony 2.8 or 3.4? You're blocked.
-    <br><br>
+
+
     How can we **improve your experience while keeping the latest features**?
 tweet: "New Post on #php 🐘 blog: Introducing #ecs Prefixed and Downgrade to PHP 7.1"
 ---

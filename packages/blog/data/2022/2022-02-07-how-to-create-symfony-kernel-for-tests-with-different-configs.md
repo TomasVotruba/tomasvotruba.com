@@ -3,7 +3,8 @@ id: 349
 title: "How to Create Symfony Kernel for Tests with Different Configs"
 perex: |
     How can we create 2 tests scenarios for the Symfony Kernel project with 2 different parameters? How can we inject 2 different instances of the same interface? How can we do it in the same way we already configure both of them?
-    <br><br>
+
+
     Today we'll look at a little trick that allows us to create Symfony Kernel with different configs.
 
 tweet: "New Post on the 🐘 blog: How to Create #Symfony Kernel for Tests with Different Configs"

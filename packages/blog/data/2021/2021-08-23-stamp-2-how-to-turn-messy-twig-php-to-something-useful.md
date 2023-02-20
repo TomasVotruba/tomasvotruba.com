@@ -4,7 +4,8 @@ next_post_id: 341
 title: "STAMP #2: How to Turn Messy TWIG PHP to Something Useful"
 perex: |
     In the previous post, we looked [at *how* to compile TWIG to raw PHP](/blog/stamp-1-how-to-compile-twig-to-php). It's one step forward, but it's not enough.
-    <br><br>
+
+
     Today we look at *how* we turn **the raw PHP code to the code PHPStan understands**.
 tweet: "New Post on the 🐘 blog: Stamp #2: How to Turn Messy TWIG PHP to Something Useful"
 ---

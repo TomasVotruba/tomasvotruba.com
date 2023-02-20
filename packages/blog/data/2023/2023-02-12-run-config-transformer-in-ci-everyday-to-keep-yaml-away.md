@@ -3,7 +3,8 @@ id: 378
 title: "Run Config Transformer Everyday to&nbsp;keep YAML Away"
 perex: |
     Have you moved your Symfony configs from YAML to PHP with the help of [Config Transformer](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/)? Do you use [the PHP benefits daily](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs)?
-    <br><br>
+
+
     But how do you **make sure no YAML is leaking**  from a new developer or in test configs?
 ---
 

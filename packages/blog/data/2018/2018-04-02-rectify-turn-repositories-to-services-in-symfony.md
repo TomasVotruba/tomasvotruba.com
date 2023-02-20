@@ -3,9 +3,11 @@ id: 88
 title: "Rectify: Turn All Doctrine Repositories From Inheritance To Composition in Seconds"
 perex: |
     Today I start new series called *Rectify*. It will be about **instant refactoring** to better code not manually, but with Rector.
-    <br><br>
+
+
     That way there is no excuse left to change your legacy application to clean code you'll love to extend.
-    <br><br>
+
+
     We'll start with very popular post - [Repository with Doctrine as Service in Symfony](/blog/2017/10/16/how-to-use-repository-with-doctrine-as-service-in-symfony/).
 
 tweet: "New Post on my Blog: Rectify: Turn All Doctrine Repositories From Composition To Inheritance in Seconds"

@@ -3,7 +3,8 @@ id: 200
 title: "How to Upgrade Twig from Underscored to Namespaces"
 perex: |
     Symfony [recently announced a new version of Twig](https://symfony.com/blog/new-in-twig-namespaced-classes) with namespaces as we know it. Before PHP 5.2 there was `Underscored_Namespace` - I remember because that was the first version I used.
-    <br><br>
+
+
     Today I'll show you how to upgrade from `_` to `\\` in few ~~minutes~~ seconds.
 
 tweet: "New Post on #php 🐘 blog: How to Upgrade #twig from Underscored to Namespaces"

@@ -3,7 +3,8 @@ id: 206
 title: "Don't Give Up Your PHP Code for Compiler Passes so Easily"
 perex: |
     Sometimes you need to achieve very simple operation - e.g. get all services of a certain type in a certain order or key name. When we start to use a PHP framework, we tend to underestimate our PHP skills and look for *the framework* way.
-    <br><br>
+
+
     **Who cares if we use 50 lines in 3 files PHP files and 1 YAML file instead of 1 factory in 20 lines.** We're cool!
 tweet: "New Post on #php 🐘 blog: Don't Give up Your PHP Code for Compiler Passes so Easily      #symfony #laravel #nettfw"
 ---

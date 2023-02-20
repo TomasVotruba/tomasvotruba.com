@@ -3,9 +3,11 @@ id: 350
 title: "Get Rid of Mixed Callables with PHPStan"
 perex: |
     Working with PHPStan on level 8 is a luxury, at least for a project where you've just introduced it. To give you a practical non-open-source perspective: **we're at level 5 after 2 years of hard work**.
-    <br><br>
+
+
     In this level, we've noticed that PHPStan skips expression on variables that it resolved as `mixed`. Level 5 already provides valuable checks that we wanted for all **method calls and property fetches**. So [we added custom rule to report those](/blog/not-all-mixed-types-are-equally-useless).
-    <br><br>
+
+
     After we cut the low-hanging fruit, we discovered the same way are skipped all *callable* types. How to deal with those?
 
 tweet: "New Post on the 🐘 blog: Get rid of Mixed Callables with PHPStan"

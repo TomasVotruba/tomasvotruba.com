@@ -4,13 +4,15 @@ title: "How to Apply Coding&nbsp;Standard on PHP&nbsp;Snippets in Markdown&nbsp;
 perex: |
     Have you been asking this question since the inventions of coding standards? Do you write `README.md`?
     If you maintain an open-source project, you do.
-    <br><br>
+
+
     Coding standards are a matter of adding a few lines into `composer.json` and your favorite CI.
     **But what about `README.md` files?
     <br>
     <br>
     Who will take care of them?** Should we accept clean code in `/src`, but crap code in PHP snippets in Markdown? What if someone reading `README.md` will adopt its bad coding habits?
-    <br><br>
+
+
     I say: "We shall not!"
 
 tweet: "New Post on #php 🐘 blog: How to Apply Coding Standards for PHP Snippets in Markdown files?   Thanks to @samsonasik"

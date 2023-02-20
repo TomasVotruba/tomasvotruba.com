@@ -3,7 +3,8 @@ id: 151
 title: "How I Almost Missed My Talk in PHP Asia Conference"
 perex:
     Last month you could not call me, cause I was on a month trip to Asia. For fun? Of course, ~~but also~~ for [PHP Conference Asia](https://2018.phpconf.asia) where I talked about [Rector](https://github.com/rectorphp/rector).
-    <br><br>
+
+
     It was my first trip to Asia ever, so obviously, it went wrong...
 tweet: "New Post on my Blog: ✈ How I Almost Missed My Talk in @phpconfasia 🤦🤦🤦🤦   #php #phpasia #friendsofphp    Thank you @coderkungfu ❤️️"
 tweet_image: "/assets/images/posts/2018/phpasia/mefie.jpg"

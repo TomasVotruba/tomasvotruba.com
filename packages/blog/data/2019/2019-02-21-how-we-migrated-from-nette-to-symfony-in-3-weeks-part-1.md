@@ -3,7 +3,8 @@ id: 188
 title: "How we Migrated from Nette to Symfony in 3 Weeks - Part 1"
 perex: |
     On the break of January/February 2019, we **migrated whole [Entrydo](https://entry.do) project from Nette to Symfony**. It was API backend with no templates, but still, it wasn't as easy as I expected.
-    <br><br>
+
+
     Many ☕ and 🍺 were drunk during this migration. 0 programmers were too frustrated to give up.
     <br>
     Yet, you'd laugh if you knew what took us the most time.

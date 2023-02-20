@@ -3,7 +3,8 @@ id: 300
 title: "Effective Debug Tricks: Narrow Scoping"
 perex: |
     Writing code that only you work with is easy. Debugging such code is a bit harder. Writing code for someone else review is quite hard. The code must be understandable to the other reader to pass the code review.
-    <br><br>
+
+
     How hard is reading code that someone else wrote three months ago?
     <br>
     <br>

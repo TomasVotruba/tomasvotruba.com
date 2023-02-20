@@ -3,10 +3,12 @@ id: 61
 title: "What can You Learn from Menstruation and Symfony Releases"
 perex: |
     I [wrote about monorepo and how it turned me into lazy programmer](/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/) before.
-    <br><br>
+
+
     As monorepo is use [more and more](https://blog.shopsys.com/how-to-maintain-multiple-git-repositories-with-ease-61a5e17152e0), we should look at it again.
     Today from a bit atypical point of view: **combined with bit of blood and sunshine**.
-    <br><br>
+
+
     Are you ready?
 tweet: "What can we learn from nature cycles that #symfony and #php already naturally did? #monorepo #nature"
 tweet_image: "/assets/images/posts/2017/menstruation/together.png"

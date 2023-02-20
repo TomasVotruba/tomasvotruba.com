@@ -3,7 +3,8 @@ id: 139
 title: "5 Advices I Would Love to Get Before Starting to Maintain an Open Source"
 perex: |
     I wasn't always confident while making public every single line of PHP code I write. I had to take many blind paths, spend a night full of stress coding in unknown waters and make a lot of over-complicated code that backfired to me months later.
-    <br><br>
+
+
     They say "experience cannot be passed and it must be experienced" and I agree with that, but still **there are some shortcuts that would speed-up my path to joyful open-source coding** I have today. Here are 5 of them.
 tweet: "New Post on my Blog: 5 Advises I Would Love to Get Before Starting to Maintain #OpenSource    #php #fuckups"
 ---

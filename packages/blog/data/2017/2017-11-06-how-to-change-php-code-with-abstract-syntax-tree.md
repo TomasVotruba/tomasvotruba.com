@@ -3,7 +3,8 @@ id: 63
 title: "How to change PHP code with Abstract&nbsp;Syntax&nbsp;Tree"
 perex: |
     Today we can do amazing things with PHP. Thanks to AST and [nikic/php-parser](https://github.com/nikic/PHP-Parser) we can create very **narrow artificial intelligence, which can work for us**.
-    <br><br>
+
+
     Let's create first its synapse!
 tweet: "Let AST change code for you #php #phpparser #ast #ai"
 

@@ -3,7 +3,8 @@ id: 372
 title: "How to release PHP 8.1 and 7.2 package in the Same Repository"
 perex: |
     In a post from autumn, we looked at how to [develop packages in monorepo on PHP 8.1 and release a downgraded version on PHP 7.2](/blog/how-to-develop-sole-package-in-php81-and-downgrade-to-php72/).
-    <br><br>
+
+
     But having 2 repositories to work with still feels crappy. Which one should we use? Where do people contribute? Where do we report issues? Everyone needs clarification, and **time is wasted on explaining complexity**.
     <br>
     <br>

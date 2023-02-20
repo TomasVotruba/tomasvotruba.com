@@ -3,7 +3,8 @@ id: 184
 title: "What I Learned by Using thecodingmachine/safe"
 perex: |
       [*Safe*](https://thecodingmachine.io/introducing-safe-php) replaces PHP native functions like `file_get_contents` with `Safe\file_get_contents`. Native functions return `false` on fail, but *Safe* throw exception instead.
-      <br><br>
+
+
       "Good idea", I though, so I tried the package myself in Symplify and Rector.
 
 tweet: "New Post on #php 🐘 blog: What I Learned by Using thecodingmachine/safe #php #phpgems #nettefw #symfony"

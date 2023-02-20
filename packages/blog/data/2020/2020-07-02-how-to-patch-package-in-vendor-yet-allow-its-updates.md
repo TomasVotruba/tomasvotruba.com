@@ -7,7 +7,8 @@ perex: |
     <br>
     You can fork it, but by that, you **take manual responsibility** for all the package updates.
     You can copy a package locally, which is faster, but **disables package updates**.
-    <br><br>
+
+
     Or... you can use "composer patches"?
 
 tweet: "New Post on #php 🐘 blog: How to Patch a Package in Vendor, Yet Allow its Updates"

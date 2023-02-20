@@ -3,9 +3,11 @@ id: 58
 title: "How to Get the Most Valuable Feedback You Can Get"
 perex: |
     Feedback is one of the best way to improve yourself. To make it really work it have to be able to get to you. "That's wrong" usually doesn't work as the person giving the feedback intended.
-    <br><br>
+
+
     If the feedback is **honest, understandable, from trustful person who knows your history and values** it can make your mind shine for the brighter future with gratitude.
-    <br><br>
+
+
     How to get such feedback?
 tweet: "How to Get the Most Valuable Feedback You Can Ever Have? Only from your @futureme #selfdevelopment #feedback"
 tweet_image: "/assets/images/posts/2017/futureme/example.png"

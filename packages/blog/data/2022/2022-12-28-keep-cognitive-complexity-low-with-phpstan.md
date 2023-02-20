@@ -3,7 +3,8 @@ id: 370
 title: "Keep Cognitive Complexity Low&nbsp;with&nbsp;PHPStan"
 perex: |
     It seems specialized PHPStan packages are fun and easy to use. I made one to keep code readable and avoid piling up legacy code nobody wants to touch.
-    <br><br>
+
+
     Why is cognitive complexity such a powerful predictor of readable or unreadable code?
 ---
 

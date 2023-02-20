@@ -3,7 +3,8 @@ id: 210
 title: "Is Rector Saving you Time? Support it on&nbsp;GitHub&nbsp;Sponsors"
 perex: |
     Rector's mission is to upgrade anything you want. It already can upgrade PHP 5.3 all the way to PHP 7.4 (we've added arrow functions yesterday to php-parser and today to Rector), Symfony from 2.8 to 4.3, remove code that does nothing, import namespaces in a smart way and 29 more levels.
-    <br><br>
+
+
     I've started project 2 years ago as a small idea challenge and I'm creating Rector in my free time. I think every Rector rule ever created should be free for everyone and for a that I need your help.
 
 tweet: "New Post on a #php 🐘 blog: Is Rector Saving you Time? Support it on Patreon! → https://www.patreon.com/rectorphp"

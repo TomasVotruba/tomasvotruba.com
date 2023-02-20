@@ -4,7 +4,8 @@ title: "9 Steps to Migrate From Jekyll to Statie"
 perex: |
     Jekyll is great a way to start static website on Github Pages. But Jekyll has one big problem - the language.
     How would you add custom Twig or Latte filter to Jekyll?
-    <br><br>
+
+
     I wanted to migrate my static websites from Jekyll to Statie. Can new `init` command make this piece of cake? And what needs to be done next?
 tweet: "New Post on #php 🐘 blog: 9 Steps to Migrate from #Jekyll to #Statie"
 ---

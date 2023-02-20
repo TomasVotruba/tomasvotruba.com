@@ -3,7 +3,8 @@ id: 172
 title: "Your Most Favorite Posts in 2018"
 perex: |
     It's a holiday, we want to rest and enjoy time with our families. Hence I won't bother you with a complex topic, but finish this year with the simple post instead. A post about the most read post in 2018.
-    <br><br>
+
+
     **Was it Symfony? Doctrine? PHP or...**
 tweet: "New Post on #php 🐘 blog: Your Most Favorite Posts in 2018 ... and Happy New Year 2019! 🚀 🎆🎆🎆"
 tweet_image: "/assets/images/posts/2018/top-posts/pie.png"

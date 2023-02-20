@@ -3,7 +3,8 @@ id: 304
 title: "It's not Null, it's Enum"
 perex: |
     Last weekend I got into reading a good old post [Null Hell](https://afilina.com/null-hell) by Afilina, a fellow legacy archeologist. Null parameters are evil, which turns code into "maybe" and "just in case" conditions with ifs everywhere.
-    <br><br>
+
+
     I was wondering how difficult it is to get rid of nullable parameters in a project. I made myself a challenge: **get rid of nullable params over the weekend**. This is what happened.
 
 tweet: "New Post on #php 🐘 blog: It's not Null, it's Enum"

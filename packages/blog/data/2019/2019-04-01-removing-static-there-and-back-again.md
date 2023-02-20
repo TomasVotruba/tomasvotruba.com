@@ -3,7 +3,8 @@ id: 199
 title: "Removing Static - There and Back Again"
 perex: |
     The more companies I meet, the more I see `static` and `new` everywhere. Not like `new Product`, but rather `new ProductRepository(new Database())`. Not just Laravel, but across all PHP frameworks. I wish frameworks could prevent antipatterns, but they don't, do they?
-    <br><br>
+
+
     Instead of "refactor all the things" step by step, class by class, I'd **like share my thoughts when exploring full automated path**. I look for feedback to improve this process.
 tweet: "New Post on #php 🐘 blog: Removing Static - There and Back Again"
 tweet_image: "/assets/images/posts/2019/removing-static/there.jpg"

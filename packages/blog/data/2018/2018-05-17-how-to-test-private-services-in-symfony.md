@@ -4,7 +4,8 @@ title: "How to Test Private Services in Symfony"
 perex: |
     2 versions of Symfony are affected by this dissonance between services and tests.
     **Do you use Symfony 3.4 or 4.0? Do you want to test your services, but struggle to get them in a clean way?**
-    <br><br>
+
+
     Today we look at possible solutions.
 tweet: "New Post on My Blog: How to Test Private Services in #Symfony #phpunit"
 tweet_image: "/assets/images/posts/2018/private-services/gone.png"

@@ -3,9 +3,11 @@ id: 59
 title: "How to use Repository with Doctrine as Service in Symfony"
 perex: |
     Dependency injection with autowiring is super easy [since Symfony 3.3](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/). Yet on my mentoring I still meet service locators.
-    <br><br>
+
+
     Mostly due to traditional registration of Doctrine repositories.
-    <br><br>
+
+
     The way out from *service locators* to *repository as service* was [described](https://matthiasnoback.nl/2014/05/inject-a-repository-instead-of-an-entity-manager) by many [before](https://medium.com/@adamquaile/composition-over-inheritance-in-doctrine-repositories-f6a53a026f60) and **now we put it into Symfony 3.3 context**.
 
 tweet: "How to use repository with #dotrine in #symfony as #autowired service? #di"

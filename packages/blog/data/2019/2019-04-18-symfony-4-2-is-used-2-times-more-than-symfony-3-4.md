@@ -3,7 +3,8 @@ id: 204
 title: "Symfony 4.2 is used Twice More than Symfony 3.4"
 perex: |
     PHP itself is very quickly adopted. Last Packagist stats from 2018/11 [report 32,6 %](https://blog.packagist.com/php-versions-stats-2018-2-edition) people are using PHP 7.2. That's a very nice number, great job y' all!
-    <br><br>
+
+
     But most of our code is not just plain PHP. **It's framework-locked PHP**. How is framework adoption?
 
 tweet: "New Post on #php 🐘 blog: Symfony 4.2 is used 2 times More than #symfony 3.4 ... Includes also #laravel #zend #yii #nettefw and #cakephp download stats by version"

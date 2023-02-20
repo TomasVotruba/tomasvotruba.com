@@ -3,7 +3,8 @@ id: 181
 title: "2 Files that Your Symfony Application Misses"
 perex: |
     Following files are supported by PHPStorm and Symfony plugin for years (since 2016) and they make working with a code so elegant. **Yet, I came across them just recently.**
-    <br><br>
+
+
     They immediately became must-have of each repository with Symfony code.
 
 tweet: "New Post on #php 🐘 blog: 2 Files that Your #Symfony Application Misses     #phpstorm #ide #twig"

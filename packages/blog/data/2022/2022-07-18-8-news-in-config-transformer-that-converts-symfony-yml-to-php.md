@@ -3,9 +3,11 @@ id: 367
 title: "8 News in Config Transformer that Converts Symfony YML to PHP"
 perex: |
     If you have not switched your [Symfony configs from YAML to PHP](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/), there no better time like present.
-    <br><br>
+
+
     This month we tested the ConfigTransformer to its limit. It had to deal with edge-cases from Symfony 2.8 all the way through Symfony 3.4. With features that were removed for years. As a result, we added default processing of `*.yaml` and `.yml` syntax at the same time and support for scalars like `::hi` and `'hello::'`.
-    <br><br>
+
+
     That's just the tip of the iceberg. **What are the 5 new features you'll be able to enjoy in the upcoming release**?
 
 tweet_image: "/assets/images/posts/2022/config_trans_after.png"

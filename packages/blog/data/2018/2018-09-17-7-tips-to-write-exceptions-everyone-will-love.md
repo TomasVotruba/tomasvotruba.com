@@ -3,9 +3,11 @@ id: 141
 title: "7 Tips to Write Exceptions Everyone Will Love"
 perex: |
     `InvalidArgumentException`, `FileNotFoundException`, `InternalException`.
-    <br><br>
+
+
     Have you ever had that feeling, that **you've seen that exception before and you know what it means and how to solve?** What if that would be clear even for those who see it for the first time? It would save yours and their time.
-    <br><br>
+
+
     Exceptions are not just error state. **Exceptions are the new documentation**.
 tweet: "New Post on my Blog: 7 Tips to Write #Exceptions Everyone Will Love    #tracy #donotmakemethink #php #exceptions"
 

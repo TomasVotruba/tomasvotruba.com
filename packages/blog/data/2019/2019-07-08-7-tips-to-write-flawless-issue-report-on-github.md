@@ -3,7 +3,8 @@ id: 217
 title: "7 Tips to Write Flawless Issue Reports on Github"
 perex: |
     Reporting issue is important for both you and the maintainer of the project. It can be a private issue in your local Gitlab repository, but open-source issues on Github have a much higher volume (obviously).
-    <br><br>
+
+
     Do you want to be clear to the maintainer, be understood and resolve your issue quickly?
     Here is how to write.
 

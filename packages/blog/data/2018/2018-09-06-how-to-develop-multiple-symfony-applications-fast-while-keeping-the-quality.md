@@ -4,7 +4,8 @@ title: "How to Develop Multiple Symfony Applications Fast while Keeping the Qual
 perex: |
     Do you take care of 2 or more projects on the same framework? Do you upgrade them both to the newest version of the framework from time to time?
     Or maybe you're successful, you grow and have 10 such projects.
-    <br><br>
+
+
     **Today I'll show you how to maintain speed while keeping the maintenance cost low**.
 tweet: "New Post on my Blog: How to Develop Multiple #Symfony Applications Fast while Keeping the Quality  #git"
 tweet_image: "/assets/images/posts/2018/multi-symfony/replace.png"

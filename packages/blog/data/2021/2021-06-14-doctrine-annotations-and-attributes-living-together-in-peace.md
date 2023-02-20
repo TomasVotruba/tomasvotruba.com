@@ -3,9 +3,11 @@ id: 323
 title: "Doctrine Annotations and Attributes Living Together in Peace"
 perex: |
     In previous post [How to Refactor Custom Doctrine Annotations to Attributes](/blog/how-to-refactor-custom-doctrine-annotations-to-attributes) we looked on how to make the `@annotation` to `#[Attribute]` transition.
-    <br><br>
+
+
     Last week, we started refactoring in [my favorite long-term project](https://www.startupjobs.cz/startup/scrumworks-s-r-o), and we came to a challenging situation. When we started to move all annotations to attributes at once, we lost control over the results. It was also impossible because 3rd party annotations were not attributes ready.
-    <br><br>
+
+
     We had to **support annotations and attributes at the same time**. Do you have plenty of custom annotations yourself? In this post, you'll learn to build a bridge with both annotations and attributes on board.
 
 tweet: "New Post on the 🐘 blog: Doctrine Annotations and Attributes Living Together in Peace"

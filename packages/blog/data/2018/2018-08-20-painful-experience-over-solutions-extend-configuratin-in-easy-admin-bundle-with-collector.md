@@ -5,7 +5,8 @@ perex: |
     *Use SOLID to write Clean Code...* Are you tired of theoretical post about how to do achieve some therm? So am I.
     <br>
     Instead, let's **dive into real problems I came across while coding and let the code speak the theory between lines**.
-    <br><br>
+
+
     Today we try to add own config option to YAML of Easy Admin Bundle (without pull-request to the package).
 tweet: "New Post on my Blog: Painful Experience over Solutions: Extend Configuration in Easy Admin Bundle #symfony #easyadminbundle #phpstorm #collector #php #solid"
 tweet_image: "/assets/images/posts/2018/collector-easy-admin-bundle/random.png"

@@ -3,7 +3,8 @@ id: 325
 title: "How to Replace Single&nbsp;Node with Two&nbsp;Nodes in Abstract Syntax Tree"
 perex: |
     Already over 120 people bought [the Rector book](/blog/rector-the-power-of-automated-refactoring-book-released) that we released just a month ago. The continuously growing interest in abstract syntax technology makes me very happy.
-    <br><br>
+
+
     It leads to more developers **who can write their own custom Rector rules to improve their specific projects**. That leads to more "how-to" questions in the Rector repository. I've decided to answer one of the frequent ones today.
 
 tweet: "New Post on the 🐘 blog: How to Replace Single Node with Two Nodes in Abstract Syntax Tree"

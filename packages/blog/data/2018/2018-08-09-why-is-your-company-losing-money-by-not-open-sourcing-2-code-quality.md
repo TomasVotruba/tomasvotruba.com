@@ -3,7 +3,8 @@ id: 130
 title: "Why is Your Company Losing Money By Not Open Sourcing 2: Code Quality"
 perex: |
     There is more high-quality code in open-source than in closed-source. Open-source code is rarely rewritten from the scratch investing loads of time and effort - [apart 1st version because it's designed to be dropped](https://blog.codinghorror.com/version-1-sucks-but-ship-it-anyway). This case is not so rare in the private sector in long-term projects.
-    <br><br>
+
+
     **Rubber ducking. Standard-bias of public behavior. Social learning. Embodied know-how.** Values natural for open-source, yet seen only in high-standard private coding. Why is that? And **how to make your project benefit from these values**?
 tweet: "New Post on my Blog: Why is Your Company Losing Money By Not Open Sourcing 2: Code Quality #symfony #nakedman #rubberducking #psr #fig #github #free"
 ---

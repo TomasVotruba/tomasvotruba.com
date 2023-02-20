@@ -6,7 +6,8 @@ perex: |
     <br>
     <br>
     But what about docblocks - how **can we rename classes in `@var` annotation or replace `integer` with `int`**?
-    <br><br>
+
+
     Is that even possible without using complex nested structures or regular expressions?
 tweet: "New Post on #php 🐘 blog: How to Traverse PHPDoc and Modify It"
 tweet_image: "/assets/images/posts/2021/phpdoc_traverser_tweet.png"

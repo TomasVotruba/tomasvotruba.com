@@ -3,9 +3,11 @@ id: 322
 title: "Why Should We Talk about Our Mistakes in PHP Community?"
 perex: |
     Sometimes we fell in love with technology or a tool. We see only the best in it, and we want everyone to know it. We're spreading the love on a wave of serotonin. We're spreading the knowledge and helping others.
-    <br><br>
+
+
     As we grow and learn, we realize the path we took is not as epic as we thought. We change a direction and pick a better alternative. That's how we learn in everyday life, and it's only natural.
-    <br><br>
+
+
     But what if we promote technology in a post, and that post is still out there? Readers learn from it and follow the path, even though we know it's two years old and a blind road to station frustration. What then?
 
 tweet: "New Post on 🐘 blog: Why Should We Talk about Our Mistakes in #PHP Community?"

@@ -3,7 +3,8 @@ id: 239
 title: "Local Packages 3 Years Later"
 perex: |
     The first public idea about local packages was [published over 3 years ago](/blog/2017/12/25/composer-local-packages-for-dummies/) after 1 year of internal testing.
-    <br><br>
+
+
     **How do they stand in 2020? How people use it wrong?** Are they still the best option to keep low complexity in huge projects?
 tweet: "New Post on #php 🐘 blog: Local Packages 3 Years Later"
 ---

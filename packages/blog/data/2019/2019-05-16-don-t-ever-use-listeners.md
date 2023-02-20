@@ -3,7 +3,8 @@ id: 212
 title: "Don't Ever use Symfony Listeners"
 perex: |
     Another anti-pattern that deserves more attention than it has. I often see this in Symfony projects I consult and when I ask the dev *why* did he or she choose listener over subscriber, they don't really know - "it was in the Symfony documentation, you can read it there".
-    <br><br>
+
+
     Not good enough. **So why you should never use a listener?**
 tweet: "New Post on #php 🐘 blog: Don't Ever use #Symfony Listeners"
 tweet_image: ""

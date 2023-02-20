@@ -3,7 +3,8 @@ id: 352
 title: "New in ECS: Simpler Config"
 perex: |
     ECS runs on Symfony container configuration to build the service model. While it brings automated autowiring, array autowiring, and native container features, the downside is that ECS configuration syntax is complex and talkative.
-    <br><br>
+
+
     We decided to simplify it so ECS is truly easy to use.
 
 tweet: "New Post on the 🐘 blog: New in Symplify 11: Simpler ECS Config"

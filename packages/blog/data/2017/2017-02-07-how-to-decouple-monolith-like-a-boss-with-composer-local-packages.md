@@ -3,9 +3,11 @@ id: 26
 title: "How to Decouple Monolith like a Boss with Composer Local Packages"
 perex: |
     While building PHP applications that grows and grows, you often get to the situation when there is too much code. You get easily lost, duplicate and code smells and rottens. The cognitive upkeep to add a new class is bigger every day.
-    <br><br>
+
+
 There are 3 solutions: put code `/libs` subdirectories, decouple to private packages using Satis or (the best) create an open-source packages.
-    <br><br>
+
+
     **All of them are overkill to the solution I will show you to day - composer local packages.**
 tweet: "Have you heard about local packages? Try them #composerPHP #monolith #php"
 

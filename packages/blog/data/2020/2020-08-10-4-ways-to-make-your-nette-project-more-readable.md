@@ -3,7 +3,8 @@ id: 273
 title: "4&nbsp;Ways to Make Your&nbsp;Nette&nbsp;Project More&nbsp;Readable"
 perex: |
     You can [switch PHP framework you use in a month](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours/). Yet, **80 % of work lays before the migration** itself, is to take unreliable PHP code structures and **make [it readable](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases/) for developers**.
-    <br><br>
+
+
     What belongs to these 80 % when it comes to Nette-specific code?
 tweet: "New Post on #php 🐘 blog: 4 Ways to Make Your #nettefw Project More Readable"
 ---

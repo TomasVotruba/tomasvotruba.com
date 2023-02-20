@@ -3,7 +3,8 @@ id: 363
 title: "Twig Smoke Rendering - Journey&nbsp;of&nbsp;Fails"
 perex: |
     In previous post, we explored [the "whys" for Twig Smoke Rendering](/blog/twig-smoke-rendering-why-do-we-even-need-it).
-    <br><br>
+
+
     Today we will set on the journey towards this tool and mainly. Get ready for failure, demotivation, and despair. As with every new invention, the fuel can make us faster or burn us to death.
 
 tweet_image: "/assets/images/posts/2022/gandalf_beaten.jpg"

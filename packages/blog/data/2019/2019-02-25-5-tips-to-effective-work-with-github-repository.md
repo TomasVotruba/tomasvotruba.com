@@ -3,7 +3,8 @@ id: 189
 title: "5 Tips to Effective Work with Github Repository"
 perex: |
     The best programmers aren't the smartest in the field. They're lazy, **they know their tools well** and **they know good tools** other programmers don't.
-    <br><br>
+
+
     Do you know the following tips?
 tweet: "New Post on #php 🐘 blog: 5 Tips to Effective Work with #Github Repository - with #gifs!        #composerphp #console #symfony"
 tweet_image: "/assets/images/posts/2019/github-tips/list.gif"

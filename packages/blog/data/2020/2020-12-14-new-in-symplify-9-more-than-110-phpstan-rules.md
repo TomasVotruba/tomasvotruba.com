@@ -4,9 +4,11 @@ title: "New in Symplify 9: More than 110 PHPStan Rules"
 perex: |
     In Symplify 8, a bunch of PHP rules was part of the symplify/coding-standard package.
     It was a mix of too many tools, so we decided to **decouple a new package - symplify/phpstan-rules**.
-    <br><br>
+
+
     During summer 2020, our Rector team grew from 1 member to 4. To keep onboarding smooth, we started to use PHPStan **to help with code-reviews in Rector**. We got obsessed with [moving human code-reviews to CI](/blog/2019/11/18/how-to-delegate-code-reviews-to-ci/).
-    <br><br>
+
+
     Was it worth it? Hell yea!
 
 tweet: "New Post on #php 🐘 blog: New in #Symplify 9: PHPStan Rules - More than 110"

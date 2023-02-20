@@ -3,7 +3,8 @@ id: 358
 title: "How to Remove Dead&nbsp;Mock&nbsp;Calls from&nbsp;PHPUnit&nbsp;Tests"
 perex: |
     We're going to visit a foreign country where living costs are just 1/3 of ours. Let's say from UK or Germany to Brno, Czechia. We're organizing a bachelor party for our best friend.
-    <br><br>
+
+
     The night has come, and our group walks around the city and drinks beers, the groom wears baby piggy clothes, and we're happily celebrating. We're losing one more wingman that will settle down with a beautiful wife and soon-to-come child. It's fun and exciting. We've never been abroad before with so many friends to celebrate the next step in man's life.
 
 tweet: "New Post: How to Remove Dead Mock Calls from #PHPUnit tests"

@@ -3,9 +3,11 @@ id: 227
 title: "The Single Best Skill to Master Command Line"
 perex: |
     I have a confession to make. I'm very poor with memory stuff. My brain is using neurons to mostly process data, instead of keeping them.
-    <br><br>
+
+
     I'm very poor with memory stuff. So I use shortcuts, both in brain and code, that make me look smart. I don't like remember stuff, **I won't enjoy them and use them**.
-    <br><br>
+
+
     Accidentally, **my poor memory makes me the most productive programmer in the room**. And you can be too. How?
 tweet: "New Post on #php 🐘 blog: 'Shortcuts are like cocaine. They can make you ultimately faster in small doses, but if you take too much of them, your brain will fall apart' - The Single Best Skill to Master Command Line"
 ---

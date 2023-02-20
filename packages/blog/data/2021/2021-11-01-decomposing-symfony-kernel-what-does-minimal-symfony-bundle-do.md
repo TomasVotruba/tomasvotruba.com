@@ -3,7 +3,8 @@ id: 338
 title: "Decomposing Symfony Kernel: What does Minimal Symfony Bundle Do"
 perex: |
     In the previous post, we looked at [When Symfony Http Kernel is a Too Big Hammer to Use](/blog/when-symfony-http-kernel-is-too-big-hammer-to-use). We talked about the enormous content this package provides, but we don't need it.
-    <br><br>
+
+
     Today we'll have a little self-reflecting pause in the middle of the 4-post journey. We'll look at the main glue in Symfony Kernel - the Bundle. **Can we find a way to decompose it and use it without Kernel?**
 
 tweet: "New Post on the 🐘 blog: Decomposing Symfony Kernel: What does Minimal Symfony Bundle Do"

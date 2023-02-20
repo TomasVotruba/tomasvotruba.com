@@ -3,7 +3,8 @@ id: 115
 title: "14 Surprising Tips from Selling is Human to Influence Others"
 perex: |
     Recently, I've read [Selling is Human](https://www.youtube.com/watch?v=nKrBitIQrgo&feature=youtu.be&t=290) by Daniel Pink. He's famous for [Pinkcast](https://www.danpink.com/pinkcast) - an espresso of knowledge. I like him, because he's often right to the point, with examples, stories, and science.
-    <br><br>
+
+
     What can we learn about selling?
     Lucky for you, you don't have to read the whole book - here are the top 10 points I found very useful.
 tweet: "New Post on my Blog: 14 Surprising Tips from Selling is Human to Influence Others by @DanielPink"

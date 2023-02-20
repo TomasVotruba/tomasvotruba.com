@@ -3,9 +3,11 @@ id: 267
 title: "Cleaning Lady Notes: From Class Mess to PSR-4 Step by Step With Confidence"
 perex: |
     Today I'm starting a new post series - *Cleaning Notes*. These posts are for people who are [aspiring legacy migrators](/blog/2020/06/29/how-will-programming-look-like-in-2025/) with a vision to improve private PHP ecosystem and bring joy to coding with gigantic applications again. The same vision we have in the Rector team.
-    <br><br>
+
+
     In this series, you can learn about my experience, tricks, tips, and what fucked me up. So you **save some frustration, where is not needed, discover hidden shortcuts and cool tools you never saw before**.
-    <br><br>
+
+
     We start with the most problematic topic in PHP legacy, that every project needs, but almost none has - **transition to [PSR-4](https://www.php-fig.org/psr/psr-4)**.
 
 tweet: "New Post on #php 🐘 blog: Cleaning Lady Notes: From Class Mess to PSR-4 Step by Step With Confidence"

@@ -3,7 +3,8 @@ id: 295
 title: "Why Coding Standards Should Not Be Part of CI"
 perex: |
     Why do you use coding standards? To standardize the design of your code so that any contributor will produce somewhat similar PHP code.
-    <br><br>
+
+
     Where do we use it? In CI pipelines on every pull-request, locally in a command line or within PHPStorm.
     **Now take these 3 places and drop coding standard from them.**
 tweet: "New Post on #php 🐘 blog: Why Coding Standard Should Not Be Part of CI"
