@@ -10,13 +10,22 @@
     {{--  social tags based on https://www.phpied.com/minimum-viable-sharing-meta-tags/ --}}
     <meta name="description" property="og:description" content="{{ $post->getPerex() }}"/>
 
+    <meta property="og:title" content="{{ $post->getClearTitle() }}" />
+    <meta property="og:description" content="{{ $post->getPerex() }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getClearTitle()]) }}"/>
+
+    <meta
+        property="og:url"
+        content="{{ route(RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
+    />
+
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="votrubaT"/>
     <meta name="twitter:creator" content="votrubaT"/>
     <meta name="twitter:title" content="{{ $post->getClearTitle() }}"/>
-
-    <meta property="og:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getClearTitle()]) }}"/>
     <meta name="twitter:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getClearTitle()]) }}"/>
+    <meta name="twitter:description" content="{{ $post->getPerex() }}"/>
 </head>
 
 <body>
