@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
+use App\Http\Controller\AboutController;
+use App\Http\Controller\BlogController;
+use App\Http\Controller\BookDetailController;
+use App\Http\Controller\BooksController;
+use App\Http\Controller\ContactController;
+use App\Http\Controller\HomepageController;
+use App\Http\Controller\PostController;
+use App\Http\Controller\PostImageController;
+use App\Http\Controller\RssController;
 use Illuminate\Support\Facades\Route;
-use TomasVotruba\Website\Controller\AboutController;
-use TomasVotruba\Website\Controller\BlogController;
-use TomasVotruba\Website\Controller\BookDetailController;
-use TomasVotruba\Website\Controller\BooksController;
-use TomasVotruba\Website\Controller\ContactController;
-use TomasVotruba\Website\Controller\HomepageController;
-use TomasVotruba\Website\Controller\PostController;
-use TomasVotruba\Website\Controller\PostImageController;
-use TomasVotruba\Website\Controller\RssController;
 use TomasVotruba\Website\ValueObject\RouteName;
 
 Route::get('/', HomepageController::class)

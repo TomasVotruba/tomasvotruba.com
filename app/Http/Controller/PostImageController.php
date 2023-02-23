@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Controller;
+namespace App\Http\Controller;
 
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Imagine\Gd\Imagine;
 use Imagine\Image\Box;
@@ -22,7 +21,7 @@ final class PostImageController extends Controller
     /**
      * @var string
      */
-    private const INTER_FONT = __DIR__ . '/../../public/assets/fonts/Inter-VariableFont_slnt,wght.ttf';
+    private const INTER_FONT_FILE = __DIR__ . '/../../public/assets/fonts/Inter-VariableFont_slnt,wght.ttf';
 
     /**
      * Downloaded from https://fonts.google.com/specimen/Source+Sans+Pro?query=Source+Sans+Pro
@@ -47,7 +46,7 @@ final class PostImageController extends Controller
         $blackFont = $this->createFont(self::SOURCE_FONT_FILE, '000000', 100);
         $drawer->text($title, $blackFont, new Point(130, 340), 0, 1800);
 
-        $greenFont = $this->createFont(self::INTER_FONT, '1a8917', 40);
+        $greenFont = $this->createFont(self::INTER_FONT_FILE, '1a8917', 40);
         $drawer->text('Written by Tomas Votruba', $greenFont, new Point(130, 870), 0, 400);
 
         // add my face :)
