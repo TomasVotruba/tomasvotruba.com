@@ -31,5 +31,6 @@ return [
         ViewServiceProvider::class,
         TranslationServiceProvider::class,
         RouteServiceProvider::class,
+        \Illuminate\Queue\QueueServiceProvider::class,
     ],
 ];
