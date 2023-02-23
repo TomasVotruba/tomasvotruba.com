@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Controller;
+namespace App\Http\Controller;
 
 use DateTimeInterface;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use TomasVotruba\Blog\Repository\PostRepository;
-
 use TomasVotruba\Blog\ValueObject\Post;
 
 final class RssController extends Controller

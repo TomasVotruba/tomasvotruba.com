@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Controller;
+namespace App\Http\Controller;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;

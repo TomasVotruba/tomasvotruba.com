@@ -4,11 +4,10 @@
 
 {{-- mobile --}}
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-{{-- social sharing --}}
+{{-- socials --}}
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:creator" content="@votrubaT"/>
 
@@ -16,11 +15,21 @@
     @php /** @var $post \TomasVotruba\Blog\ValueObject\Post */ @endphp
 
     <meta property="og:title" content="{{ $post->getClearTitle() }}" />
-    <meta property="og:url" content="https://tomasvotruba.com{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}" />
 
-    {{-- @todo replace with automatically generated preview PNG --}}
-    <meta property="og:image" content="https://tomasvotruba.com{{ asset('assets/images/tomas_votruba.jpg') }}"/>
-    <meta name="twitter:image" content="https://tomasvotruba.com{{ asset('assets/images/tomas_votruba.jpg') }}"/>
+    <meta
+        property="og:url"
+        content="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
+    />
+
+    <meta
+        property="og:image"
+        content="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_IMAGE, ['title' => $post->getTitle()])  }}"
+    />
+    <meta
+        name="twitter:image"
+        content="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_IMAGE, ['title' => $post->getTitle()])  }}"
+    />
+
 @else
     <meta property="og:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
     <meta name="twitter:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
