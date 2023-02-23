@@ -11,6 +11,7 @@ use Imagine\Image\Box;
 use Imagine\Image\FontInterface;
 use Imagine\Image\Palette\RGB;
 use Imagine\Image\Point;
+use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Webmozart\Assert\Assert;
@@ -29,7 +30,16 @@ final class ThumbnailController extends Controller
     public function __invoke(string $title): BinaryFileResponse
     {
         // @see https://imagine.readthedocs.io/en/stable/
-        $imageFilePath = __DIR__ . '/../../../public/assets/thumbnail/' . Strings::webalize($title) . '.png';
+        $thumbnailDirectory = __DIR__ . '/../../../public/assets/thumbnail/';
+
+        // ensure directory exists
+        if (! is_dir($thumbnailDirectory)) {
+            FileSystem::createDir($thumbnailDirectory);
+        }
+
+        Assert::directory($thumbnailDirectory);
+
+        $imageFilePath = $thumbnailDirectory . '/' . Strings::webalize($title) . '.png';
 
         // on the fly
         if (! file_exists($imageFilePath)) {
