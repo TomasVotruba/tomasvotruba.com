@@ -2,9 +2,13 @@
 
 declare(strict_types=1);
 
+use App\Providers\RouteServiceProvider;
+use Illuminate\Cache\CacheServiceProvider;
+use Illuminate\Database\DatabaseServiceProvider;
 use Illuminate\Filesystem\FilesystemServiceProvider;
 use Illuminate\Foundation\Providers\ConsoleSupportServiceProvider;
 use Illuminate\Foundation\Providers\FoundationServiceProvider;
+use Illuminate\Translation\TranslationServiceProvider;
 use Illuminate\View\ViewServiceProvider;
 
 return [
@@ -19,13 +23,13 @@ return [
 
     'providers' => [
         // Laravel Framework Service Providers...
-        \Illuminate\Cache\CacheServiceProvider::class,
+        CacheServiceProvider::class,
         ConsoleSupportServiceProvider::class,
-        \Illuminate\Database\DatabaseServiceProvider::class,
+        DatabaseServiceProvider::class,
         FilesystemServiceProvider::class,
         FoundationServiceProvider::class,
         ViewServiceProvider::class,
-        \Illuminate\Translation\TranslationServiceProvider::class,
-        \App\Providers\RouteServiceProvider::class,
+        TranslationServiceProvider::class,
+        RouteServiceProvider::class,
     ],
 ];
