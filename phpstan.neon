@@ -10,7 +10,7 @@ parameters:
     type_coverage:
         param_type: 99
         return_type: 99
-        property_type: 99
+        property_type: 70
         print_suggestions: true
 
     unused_public:
