@@ -18,7 +18,7 @@ use Webmozart\Assert\Assert;
 /**
  * @see Inspiration https://og.beyondco.de/Fix%20your%20Laravel%20exceptions%20with%20AI.png?theme=light&md=1&body=Take%20advantage%20of%20OpenAI%20to%20enhance%20your%20Laravel%20error%20pages%20with%20AI-powered%20solutions.&fontSize=125px&isPost=1&author=Marcel%20Pociot&authorAvatar=https%3A%2F%2Fbeyondco.de%2Fimg%2Fmarcel.jpg&readDuration=11%20minute%20read
  */
-final class PostImageController extends Controller
+final class ThumbnailController extends Controller
 {
 
     public function __construct(

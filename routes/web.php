@@ -9,7 +9,7 @@ use App\Http\Controller\BooksController;
 use App\Http\Controller\ContactController;
 use App\Http\Controller\HomepageController;
 use App\Http\Controller\PostController;
-use App\Http\Controller\PostImageController;
+use App\Http\Controller\ThumbnailController;
 use App\Http\Controller\RssController;
 use Illuminate\Support\Facades\Route;
 use TomasVotruba\Website\ValueObject\RouteName;
@@ -39,5 +39,5 @@ Route::get('/rss', RssController::class)
 Route::get('/contact', ContactController::class)
     ->name(RouteName::CONTACT);
 
-Route::get('/thumbnail/{title}.png', PostImageController::class)
+Route::get('/thumbnail/{title}.png', ThumbnailController::class)
     ->name(RouteName::POST_IMAGE);
