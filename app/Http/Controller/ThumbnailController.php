@@ -30,7 +30,7 @@ final class ThumbnailController extends Controller
     public function __invoke(string $title): BinaryFileResponse
     {
         // @see https://imagine.readthedocs.io/en/stable/
-        $thumbnailDirectory = __DIR__ . '/../../../public/assets/thumbnail/';
+        $thumbnailDirectory = __DIR__ . '/../../../storage/app/public/thumbnail/';
 
         // ensure directory exists
         if (! is_dir($thumbnailDirectory)) {
