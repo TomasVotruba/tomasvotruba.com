@@ -25,6 +25,7 @@ return [
         FilesystemServiceProvider::class,
         FoundationServiceProvider::class,
         ViewServiceProvider::class,
+        \Illuminate\Translation\TranslationServiceProvider::class,
         \App\Providers\RouteServiceProvider::class,
     ],
 ];

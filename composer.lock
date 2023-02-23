@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a76eb83364d638be9bf3a762c515b6a3",
+    "content-hash": "28dbe5438b27c538261f92977eb19e39",
     "packages": [
         {
             "name": "brick/math",
@@ -814,16 +814,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.0.3",
+            "version": "v10.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0bd303853444de33f4fcb16d13bd7574030aa3d4"
+                "reference": "12256504186326a9d02b2ab3b43a4031a59b52d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0bd303853444de33f4fcb16d13bd7574030aa3d4",
-                "reference": "0bd303853444de33f4fcb16d13bd7574030aa3d4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/12256504186326a9d02b2ab3b43a4031a59b52d1",
+                "reference": "12256504186326a9d02b2ab3b43a4031a59b52d1",
                 "shasum": ""
             },
             "require": {
@@ -926,7 +926,7 @@
                 "pda/pheanstalk": "^4.0",
                 "phpstan/phpdoc-parser": "^1.15",
                 "phpstan/phpstan": "^1.4.7",
-                "phpunit/phpunit": "^9.6.0 || ^10.0.7",
+                "phpunit/phpunit": "^10.0.7",
                 "predis/predis": "^2.0.2",
                 "symfony/cache": "^6.2",
                 "symfony/http-client": "^6.2.4"
@@ -957,7 +957,7 @@
                 "mockery/mockery": "Required to use mocking (^1.5.1).",
                 "nyholm/psr7": "Required to use PSR-7 bridging features (^1.2).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (^4.0).",
-                "phpunit/phpunit": "Required to use assertions and run tests (^9.5.8).",
+                "phpunit/phpunit": "Required to use assertions and run tests (^9.5.8|^10.0.7).",
                 "predis/predis": "Required to use the predis connector (^2.0.2).",
                 "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^6.0|^7.0).",
@@ -1010,7 +1010,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-02-16T22:03:27+00:00"
+            "time": "2023-02-22T14:38:35+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -6459,16 +6459,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.9.18",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "f2d5cf71be91172a57c649770b73c20ebcffb0bf"
+                "reference": "1cd5fc530a8b68702f3733ad64294b2a39564198"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f2d5cf71be91172a57c649770b73c20ebcffb0bf",
-                "reference": "f2d5cf71be91172a57c649770b73c20ebcffb0bf",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1cd5fc530a8b68702f3733ad64294b2a39564198",
+                "reference": "1cd5fc530a8b68702f3733ad64294b2a39564198",
                 "shasum": ""
             },
             "require": {
@@ -6498,7 +6498,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.9.18"
+                "source": "https://github.com/phpstan/phpstan/tree/1.10.1"
             },
             "funding": [
                 {
@@ -6514,29 +6514,30 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-17T15:01:27+00:00"
+            "time": "2023-02-21T21:57:23+00:00"
         },
         {
             "name": "phpstan/phpstan-webmozart-assert",
-            "version": "1.2.2",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-webmozart-assert.git",
-                "reference": "01259f5c85d175cbd380d91789ed80602c870ce9"
+                "reference": "d1ff28697bd4e1c9ef5d3f871367ce9092871fec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-webmozart-assert/zipball/01259f5c85d175cbd380d91789ed80602c870ce9",
-                "reference": "01259f5c85d175cbd380d91789ed80602c870ce9",
+                "url": "https://api.github.com/repos/phpstan/phpstan-webmozart-assert/zipball/d1ff28697bd4e1c9ef5d3f871367ce9092871fec",
+                "reference": "d1ff28697bd4e1c9ef5d3f871367ce9092871fec",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.9.0"
+                "phpstan/phpstan": "^1.10"
             },
             "require-dev": {
                 "nikic/php-parser": "^4.13.0",
                 "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/phpstan-deprecation-rules": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
                 "phpstan/phpstan-strict-rules": "^1.0",
                 "phpunit/phpunit": "^9.5",
@@ -6562,9 +6563,9 @@
             "description": "PHPStan webmozart/assert extension",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-webmozart-assert/issues",
-                "source": "https://github.com/phpstan/phpstan-webmozart-assert/tree/1.2.2"
+                "source": "https://github.com/phpstan/phpstan-webmozart-assert/tree/1.2.4"
             },
-            "time": "2022-11-03T15:12:25+00:00"
+            "time": "2023-02-21T20:34:19+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -6886,16 +6887,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.0.9",
+            "version": "10.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b027e0e266b2e51bb74d5050ff5b1304c40ea209"
+                "reference": "d18a18b07e7a9ad52d994b1785f9e301fc84b616"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b027e0e266b2e51bb74d5050ff5b1304c40ea209",
-                "reference": "b027e0e266b2e51bb74d5050ff5b1304c40ea209",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d18a18b07e7a9ad52d994b1785f9e301fc84b616",
+                "reference": "d18a18b07e7a9ad52d994b1785f9e301fc84b616",
                 "shasum": ""
             },
             "require": {
@@ -6966,7 +6967,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.9"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.11"
             },
             "funding": [
                 {
@@ -6982,7 +6983,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-19T07:11:46+00:00"
+            "time": "2023-02-20T16:39:36+00:00"
         },
         {
             "name": "psr/cache",
@@ -7039,17 +7040,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "f913db606919b017aea8a79d4cbbc759e47cf3d8"
+                "reference": "20cb65540b91af18302f49fbc6701654941ccc31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/f913db606919b017aea8a79d4cbbc759e47cf3d8",
-                "reference": "f913db606919b017aea8a79d4cbbc759e47cf3d8",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/20cb65540b91af18302f49fbc6701654941ccc31",
+                "reference": "20cb65540b91af18302f49fbc6701654941ccc31",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2|^8.0",
-                "phpstan/phpstan": "^1.9.14"
+                "phpstan/phpstan": "^1.10.1"
             },
             "conflict": {
                 "rector/rector-doctrine": "*",
@@ -7087,7 +7088,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-19T17:53:18+00:00"
+            "time": "2023-02-23T11:35:10+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -8300,16 +8301,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "11.2.8",
+            "version": "11.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/easy-coding-standard/easy-coding-standard.git",
-                "reference": "012d68b5cad4a5e3a6ccd99571209142b87491f5"
+                "reference": "947267668efb055bf78c7b68416cb206285f21d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/012d68b5cad4a5e3a6ccd99571209142b87491f5",
-                "reference": "012d68b5cad4a5e3a6ccd99571209142b87491f5",
+                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/947267668efb055bf78c7b68416cb206285f21d4",
+                "reference": "947267668efb055bf78c7b68416cb206285f21d4",
                 "shasum": ""
             },
             "require": {
@@ -8335,7 +8336,7 @@
             "description": "Use Coding Standard with 0-knowledge of PHP-CS-Fixer and PHP_CodeSniffer",
             "support": {
                 "issues": "https://github.com/easy-coding-standard/easy-coding-standard/issues",
-                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/11.2.8"
+                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/11.2.9"
             },
             "funding": [
                 {
@@ -8347,20 +8348,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-05T15:08:01+00:00"
+            "time": "2023-02-21T11:31:15+00:00"
         },
         {
             "name": "symplify/package-builder",
-            "version": "11.3.1",
+            "version": "11.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/package-builder.git",
-                "reference": "82c4af217a93a640f4cbdba5a6a1f828039591e7"
+                "reference": "4a29cf0bc3ab6dfa0b3316fedf2fdd2a88d04a06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/package-builder/zipball/82c4af217a93a640f4cbdba5a6a1f828039591e7",
-                "reference": "82c4af217a93a640f4cbdba5a6a1f828039591e7",
+                "url": "https://api.github.com/repos/symplify/package-builder/zipball/4a29cf0bc3ab6dfa0b3316fedf2fdd2a88d04a06",
+                "reference": "4a29cf0bc3ab6dfa0b3316fedf2fdd2a88d04a06",
                 "shasum": ""
             },
             "require": {
@@ -8370,7 +8371,8 @@
                 "symfony/config": "^6.2",
                 "symfony/console": "^6.2",
                 "symfony/dependency-injection": "^6.2",
-                "symfony/finder": "^6.2"
+                "symfony/finder": "^6.2",
+                "symfony/http-kernel": "^6.2"
             },
             "require-dev": {
                 "php-parallel-lint/php-parallel-lint": "^1.3",
@@ -8401,7 +8403,7 @@
             ],
             "description": "Dependency Injection, Console and Kernel toolkit for Symplify packages.",
             "support": {
-                "source": "https://github.com/symplify/package-builder/tree/11.3.1"
+                "source": "https://github.com/symplify/package-builder/tree/11.3.2"
             },
             "funding": [
                 {
@@ -8413,7 +8415,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-19T13:57:42+00:00"
+            "time": "2023-02-22T19:16:30+00:00"
         },
         {
             "name": "symplify/phpstan-extensions",
@@ -8785,7 +8787,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.1"
+        "php": ">=8.1",
+        "ext-gd": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
