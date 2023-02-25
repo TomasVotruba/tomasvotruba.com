@@ -6,7 +6,6 @@ perex: |
 
     A small tip that made my everyday work with CI more colorful.
 
-tweet_image: "/assets/images/posts/2020/ansi_no_mix_colors.png"
 ---
 
 - Do you use Travis, Github Actions, or Gitlab CI?

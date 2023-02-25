@@ -7,7 +7,6 @@ perex: |
 
     I'll show you how we completed them without any manual change of the code and how you can do the same... today.
 
-tweet_image: "/assets/images/posts/2019/var/doctrine.png"
 
 updated_since: "August 2020"
 updated_message: |

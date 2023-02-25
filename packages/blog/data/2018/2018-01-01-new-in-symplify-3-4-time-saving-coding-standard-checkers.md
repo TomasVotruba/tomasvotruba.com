@@ -5,7 +5,6 @@ perex: |
     Coding Standard in Symplify 3 brings **checkers build from practical use in PHPStorm**. It can do lot of work for you, like add getters, remove trailing spaces, but has still some room for automation and improvement.
 
     I already wrote about [doc block cleaner fixer](/blog/2017/12/17/new-in-symplify-3-doc-block-cleaner-fixer/) and here 4 more checkers, **that saves you from monkey-typing and let you focus on algorithms**.
-tweet_image: "/assets/images/posts/2018/symplify-3-checkers/import-fixer.png"
 
 updated_since: "August 2020"
 updated_message: |

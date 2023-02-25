@@ -6,7 +6,6 @@ perex: |
     <br>
     **What will replace it? How do you migrate?**
 
-tweet_image: "/assets/images/posts/2020/dump_static_site_demo.gif"
 ---
 
 Deprecations without replacements are like nails in the coffin of your forehead while reciting a poem about the beauty of life.

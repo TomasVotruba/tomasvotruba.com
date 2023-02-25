@@ -6,7 +6,6 @@ perex: |
 
     Well, that's what we thought. **Were we right or wrong?**
 
-tweet_image: "/assets/images/posts/2019/symfony5_pr.png"
 
 updated_since: "November 2020"
 updated_message: |

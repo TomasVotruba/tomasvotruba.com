@@ -7,7 +7,6 @@ perex: |
 
     If you combine this theory and Static Methods in Your code, you'll get Corona. As we already know, it might or might not be deadly. How it spreads, what are ways to protect, can we cure it?
 
-tweet_image: "/assets/images/posts/static_corona_grand_parents.jpg"
 ---
 
 ## Single Child in Classroom Problem

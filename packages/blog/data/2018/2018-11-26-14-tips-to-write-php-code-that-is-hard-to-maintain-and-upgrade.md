@@ -6,7 +6,6 @@ perex: |
 
 
     If you keep a low profile of very smart architect and do it right, you'll be the only one in the company who knows what is going on and you'll have a value of gold. Learn how to be **successful living vendor lock**!
-tweet_image: "/assets/images/posts/2018/vendor/omg-naming.gif"
 ---
 
 ### 3 Signs of Living Vendor Lock-In

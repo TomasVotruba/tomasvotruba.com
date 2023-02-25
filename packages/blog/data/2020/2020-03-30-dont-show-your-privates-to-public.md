@@ -7,7 +7,6 @@ perex: |
 
     But is that ok to show privates to the public?
 
-tweet_image: "/assets/images/posts/2020/privates_meme.jpg"
 ---
 
 Last week you probably spotted **[RFC: Constructor Promotion](https://wiki.php.net/rfc/constructor_promotion)** proposed by my favorite mentor [Nikita Popov](https://github.com/nikic). This RFC counters *public property by default* approach and **reduces the redundant code at the same time**.

@@ -7,7 +7,6 @@ perex: |
 
     And what are they? Neon to YAML, semi-static to Services, customizable caching, even simpler skipper, short bin and more.
 
-tweet_image: "/assets/images/posts/2018/symplify-4-ecs/yaml-autocomplete.gif"
 
 updated_since: "August 2020"
 updated_message: |

@@ -8,7 +8,6 @@ perex: |
     **The latter takes a huge amount of time**. The time we don't have to spare in 2020.
 
     **How can we make it faster while keeping the test quality high?**
-tweet_image: "/assets/images/posts/split_before_split.png"
 ---
 
 Do you use Github Actions on your Github projects? Well, if you do, **[it might cut your commit feedback loop](/blog/2020/01/27/switch-travis-to-github-actions-to-reduce-stress/) from 17 minutes to just 3** and make you super productive by accident.

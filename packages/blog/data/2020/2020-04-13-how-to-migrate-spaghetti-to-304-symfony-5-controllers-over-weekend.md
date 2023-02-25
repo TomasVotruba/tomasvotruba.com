@@ -7,7 +7,6 @@ perex: |
 
     Me in my colleague in the migrated project accepted the challenge. We got into many minds and code-traps. We'd like to share this experience with you and **inspire those who are still stuck on non-MVC code** and think it might take weeks or even months to switch to a framework.
 
-tweet_image: "/assets/images/posts/2020/symfonize_merged.png"
 ---
 
 

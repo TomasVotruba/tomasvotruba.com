@@ -9,7 +9,6 @@ perex: |
 
 
     **May this be an inspiration for open-source projects that find themselves stuck and the maintainers that find themselves unhappy**.
-tweet_image: "/assets/images/posts/2018/doctrine-alive/contrib.png"
 ---
 
 What's new in Doctrine and what might help you and your project to restart?

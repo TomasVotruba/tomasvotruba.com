@@ -6,7 +6,6 @@ perex: |
 
 
     Is this **the best time to upgrade your code to PHP 7.4**?
-tweet_image: "/assets/images/posts/2018/php74-typed/v2.png"
 
 updated_since: "November 2020"
 updated_message: |

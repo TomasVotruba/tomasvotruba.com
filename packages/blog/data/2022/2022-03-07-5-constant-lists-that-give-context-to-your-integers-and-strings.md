@@ -9,7 +9,6 @@ perex: |
 
     Today we look at 5 constant lists that you can use today to replace that `int` or `string` and give it a context.
 
-tweet_image: /assets/images/posts/2022/kernel_events_usage.png
 ---
 
 ## Why even Bother with Enums?

@@ -7,7 +7,6 @@ perex: |
 
 
     Today we look at possible solutions.
-tweet_image: "/assets/images/posts/2018/private-services/gone.png"
 
 updated_since: "April 2019"
 updated_message: |

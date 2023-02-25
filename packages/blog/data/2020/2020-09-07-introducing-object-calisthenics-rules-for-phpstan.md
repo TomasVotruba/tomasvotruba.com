@@ -9,7 +9,6 @@ perex: |
 
     Today you can!
 
-tweet_image: "/assets/images/posts/object_calisthenics_phpstan.jpg"
 ---
 
 Object Calisthenics is about SOLID rules and code architecture more than spaces and bracket positions, maybe [PHPStan and AST](/blog/2018/10/25/why-ast-fixes-your-coding-standard-better-than-tokens/) are better to handle it?

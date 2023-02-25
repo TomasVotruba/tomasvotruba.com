@@ -9,7 +9,6 @@ perex: |
 
 
     Are you tired of reading technical books? Take a rest with these 3.
-tweet_image: "/assets/images/posts/2017/non-it-books/deep.jpg"
 ---
 
 

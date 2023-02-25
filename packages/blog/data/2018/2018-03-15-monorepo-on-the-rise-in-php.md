@@ -3,7 +3,6 @@ id: 82
 title: "Monorepo on the Rise in PHP"
 perex: |
     Do you know what a monorepo is? How to start with it? What you need and do even other programming languages use it? And what about Facebook and Google think about it?
-tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
 ---
 
 ## Javascript, Java, C++, Android, iOS, Facebook, Google? Monorepo is Standard

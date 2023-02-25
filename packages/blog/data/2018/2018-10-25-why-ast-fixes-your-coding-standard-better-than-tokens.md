@@ -7,7 +7,6 @@ perex:
 
     Should coding standard upgrade your code? Should AST make your code cleaner? Should AST take of coding standard changes?
     **Which is born for it?**
-tweet_image: "/assets/images/posts/2018/ast-tokens/scope.png"
 ---
 
 ## Tokens

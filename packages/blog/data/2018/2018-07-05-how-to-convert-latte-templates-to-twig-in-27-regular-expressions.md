@@ -12,7 +12,6 @@ perex: |
 
 
     **Are you a Twig fan? As a side effect, I made 27 regular expression to handle 80 % of the Latte to Twig migration for you.**
-tweet_image: "/assets/images/posts/2018/latte-twig/diff.png"
 
 updated_since: "March 2019"
 updated_message: |

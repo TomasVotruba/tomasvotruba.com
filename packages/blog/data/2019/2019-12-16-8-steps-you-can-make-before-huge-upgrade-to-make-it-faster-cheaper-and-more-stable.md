@@ -10,7 +10,6 @@ perex: |
 
     Yet, I've discovered there are few repeated patterns, that make the upgrade easier and that **most projects can do by themselves** before migration starts.
 
-tweet_image: "/assets/images/posts/2019/before/time.png"
 ---
 
 These points make any code migration faster and easier. It also **decreases the time required to understand the code** by a person who sees the code for the very first time.

@@ -7,7 +7,6 @@ perex: |
 
 
     Artificial Intelligence is now in same level as mobile phones playing mp3s. Or **maybe it already took over the world without knowing us**, as *Life 3.0* story unveils...
-tweet_image: "/assets/images/posts/2017/life30/life30.jpg"
 ---
 
 <br>

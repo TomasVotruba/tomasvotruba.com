@@ -6,7 +6,6 @@ perex: |
 
     In Rector, we now have over 640 rules, in Symplify 110 rules for PHPStan and 15 rules for PHP CS Fixer. **How can we handle documentation for this amount of rules without going crazy?**
 
-tweet_image: "/assets/images/posts/2020/rules-nesting-full.png"
 ---
 
 This post is for rules-based package maintainers.

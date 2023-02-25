@@ -10,7 +10,6 @@ perex: |
 
     Recently, I introduced [Symfony Static Dumper](/blog/2020/03/16/statie-is-dead-long-live-symfony-static-dumper/) that uses YAML to store data in your Symfony application. You where this goes... how can **we turn this YAML into objects**?
 
-tweet_image: "/assets/images/posts/2020/easy_hydrator_twig.png"
 ---
 
 *Disclaimer: this post is not about array vs. object performance. If you still prefer arrays, check this [talk by Nikita Popov](https://www.slideshare.net/nikita_ppv/php-performance-trivia/31) that changed my mind.*

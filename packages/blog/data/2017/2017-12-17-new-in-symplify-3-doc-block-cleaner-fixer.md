@@ -6,7 +6,6 @@ perex: |
 
 
     Symplify 3 introduces a new help hand - **fixer that cleans doc block noise for you and makes your code more valuable to the reader**.
-tweet_image: "/assets/images/posts/2017/doc-block-cleaner/diff.png"
 
 deprecated_since: "March 2019"
 deprecated_message: |

@@ -10,7 +10,6 @@ perex: |
 
     Today we'll look at 5 commands you can use in your CI. **They might save you from bugs that no other tool can check**.
 
-tweet_image: "/assets/images/posts/2021/easy_ci_report.png"
 ---
 
 To start, we first add the package:

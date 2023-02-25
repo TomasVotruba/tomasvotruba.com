@@ -10,7 +10,6 @@ perex: |
 
 
     Are you ready?
-tweet_image: "/assets/images/posts/2017/menstruation/together.png"
 ---
 
 *Disclaimer: this post has no intention to put menstruation into any bad light. Exactly the opposite - I admire women and love to learn from them.*

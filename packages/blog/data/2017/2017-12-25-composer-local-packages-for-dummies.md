@@ -3,7 +3,6 @@ id: 69
 title: "Composer Local Packages for Dummies"
 perex: |
     This is the simplest way to start using `/packages` directory in your application, that **leads to cleaner code, maintainable architecture** and is **the best to start testing**.
-tweet_image: "/assets/images/posts/2017/composer-local-packages/composer.png"
 ---
 
 

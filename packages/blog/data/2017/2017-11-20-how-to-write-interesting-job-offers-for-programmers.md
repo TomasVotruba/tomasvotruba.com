@@ -7,7 +7,6 @@ perex: |
 
     I gave feedback on Jobs.cz, Skrz.cz and few more ads and this is **summary of tips, which I want to share with every company trying to hire programmer**.
 
-tweet_image: "/assets/images/posts/2017/job-offers/attitude.jpg"
 ---
 
 

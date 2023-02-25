@@ -7,7 +7,6 @@ perex: |
 
     **I recently talked with one high-school guy and I realized that college is still seen as something sacred, important and mostly from no other than teachers and parents**. I told myself that I'll write down my insights and advice that I would give my 8 years younger self. **If you are 18-19 years're considering what to do next, go ahead**.
 
-tweet_image: "/assets/images/posts/2017/university/procrastination.png"
 ---
 
 **Disclaimer: these is my personal experience with universities in Brno, Czech Republic between 2008 and 2013. It can differ for your country, your city, your year spend on collage, your field etc. Please consider that while reading. Well, if you are already on university. The main goal of this post to start discussion and challenge you and your personal experiences.**

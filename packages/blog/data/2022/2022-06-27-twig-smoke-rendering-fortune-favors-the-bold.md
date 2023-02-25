@@ -7,7 +7,6 @@ perex: |
 
     We made it through heaven and hell. Now we're rested and back to continue. Can we smoke render twig templates, or shall we give up?
 
-tweet_image: "/assets/images/posts/2022/frodo_end.jpg"
 ---
 
 After 5 challenging steps we made last time, we need to recharge our fuel. This episode will be more relaxing and more fun.

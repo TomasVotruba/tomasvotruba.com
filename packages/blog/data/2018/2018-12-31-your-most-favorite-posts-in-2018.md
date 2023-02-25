@@ -6,7 +6,6 @@ perex: |
 
 
     **Was it Symfony? Doctrine? PHP or...**
-tweet_image: "/assets/images/posts/2018/top-posts/pie.png"
 ---
 
 Without further ado, these are stats **for unique readers** from Google Analytics for 2018:

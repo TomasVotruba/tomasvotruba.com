@@ -10,7 +10,6 @@ perex: |
 
     I knew there was a time for a change.
 
-tweet_image: "/assets/images/posts/2021/symfony_kernel/composer_require.gif"
 next_post_id: 338
 ---
 

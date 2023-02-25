@@ -13,7 +13,6 @@ perex: |
 
     Meet *Static Detector*.
 
-tweet_image: "/assets/images/posts/2020/static_detector_result.png"
 
 updated_since: "August 2021"
 updated_message: |

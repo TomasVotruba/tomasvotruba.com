@@ -7,7 +7,6 @@ perex: |
 
     It leads to more developers **who can write their own custom Rector rules to improve their specific projects**. That leads to more "how-to" questions in the Rector repository. I've decided to answer one of the frequent ones today.
 
-tweet_image: "/assets/images/posts/2021/replace_two_nodes_stmt.png"
 ---
 
 Standard rules usually replace one node with another, or change it. There are three operations you can make. Let's take them one by one, starting from the simplest.

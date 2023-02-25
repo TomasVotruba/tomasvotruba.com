@@ -6,7 +6,6 @@ perex: |
 
 
     Today, we look on the answer.
-tweet_image: "/assets/images/posts/2018/frameworks/community.jpg"
 ---
 
 ## So Which PHP Framework is the Silver Bullet?

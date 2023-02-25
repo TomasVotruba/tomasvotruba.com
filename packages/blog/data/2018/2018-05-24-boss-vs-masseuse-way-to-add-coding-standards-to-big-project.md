@@ -8,7 +8,6 @@ perex: |
 
     When it comes to coding standards, the love and fun is the best experience with it. Let's look how such "masseuse" can be added to your big project.
 
-tweet_image: "/assets/images/posts/2018/cs-masseuce/unknown-error.png"
 
 updated_since: "February 2021"
 updated_message: |

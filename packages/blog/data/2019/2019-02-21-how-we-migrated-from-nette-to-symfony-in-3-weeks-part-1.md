@@ -9,7 +9,6 @@ perex: |
     <br>
     Yet, you'd laugh if you knew what took us the most time.
 
-tweet_image: "/assets/images/posts/2019/nette-to-symfony/nette-to-symfony.png"
 ---
 
 And when I write we and 3 weeks, I mean myself and [Jan Mikeš](https://janmikes.cz) and **3 weeks of occasional codding**, not full-time. In total, we **spent around 30-40 hours** each on this migration.

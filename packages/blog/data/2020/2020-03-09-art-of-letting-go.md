@@ -3,7 +3,6 @@ id: 242
 title: "Art of Letting Go"
 perex: |
     Recently I come to a dead end with one of my projects. I felt it doesn't bring value to me, to people that use it, and to neither to the open-source community. I felt sour about it for the last 3 months, confused about what to do next.
-tweet_image: "/assets/images/posts/2020/letting_go_double.jpg"
 ---
 
 ## It Works... For a Time

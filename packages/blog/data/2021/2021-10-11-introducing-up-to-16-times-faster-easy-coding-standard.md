@@ -10,7 +10,6 @@ perex: |
 
     Today, we're sharing the ECS Parallel run with the public, so you **can cut down ECS run times from minutes to seconds**.
 
-tweet_image: "/assets/images/posts/2021/ecs_before_now.png"
 ---
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Have you already updated <a href="https://twitter.com/hashtag/ecs?src=hash&amp;ref_src=twsrc%5Etfw">#ecs</a> to parallel run? ☺️<br><br>This is what you&#39;re missing out ↓ <a href="https://t.co/fuBKMpl8ID">pic.twitter.com/fuBKMpl8ID</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1446065404976279558?ref_src=twsrc%5Etfw">October 7, 2021</a></blockquote>

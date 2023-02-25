@@ -6,7 +6,6 @@ perex: |
 
 
     Today we'll look on one of the core reasons for this migration - **escaping to semantic hell**.
-tweet_image: "/assets/images/posts/2019/nette-to-symfony2/version-hell.png"
 ---
 
 [Semantic versioning](https://semver.org) aka *semver* tells you there is a BC break between `nette/di` in version 2.5 and 3.0. That's all you need to know as a web developer.

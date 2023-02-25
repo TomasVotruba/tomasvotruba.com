@@ -10,7 +10,6 @@ perex: |
 
     Welcome **constant parameters**.
 
-tweet_image: "/assets/images/posts/2020/constant_parameter_locations.gif"
 ---
 
 In the past, we used YAML to define parameters for Symfony application:

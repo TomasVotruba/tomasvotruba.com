@@ -6,7 +6,6 @@ perex: |
 
 
     Ops, I forgot to tell you. Let's fix it because I'd love to meet you and hear about your pain points.
-tweet_image: "/assets/images/posts/2019/tour/rector-daily.png"
 ---
 
 **I'd love to thank all people that support Rector, use it in their daily work and continuous integration**. It took a while to get the attention of everyday use. I visited only 1 conference with Rector in 2018, but now **it seems the side is turning**.

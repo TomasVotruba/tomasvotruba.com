@@ -8,7 +8,6 @@ perex: |
     Go Open-source!
 
     Did you miss my talk on [PHPPrague 2018](https://phpprague.cz) Conference about this topic? Read this post.
-tweet_image: "/assets/images/posts/2018/open-source-money/contributors.gif"
 ---
 
 As a PHP meetup organizer in the Czech Republic, I'm in contact with many companies and HR agencies that try to hire PHP developers. I used *try* because the most of them use old-school methods, [boring job offers](/blog/2017/11/20/how-to-write-interesting-job-offers-for-programmers/), employees benefits like meal vouchers, possibility to work from home for only 1 day a week. They often end-up in giving up or using body shopping of random programmers for huge amounts of money.

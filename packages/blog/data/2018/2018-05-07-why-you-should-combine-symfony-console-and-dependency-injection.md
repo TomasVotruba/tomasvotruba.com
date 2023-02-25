@@ -6,7 +6,6 @@ perex: |
     There are plenty of such posts out there, even in Pehapkari community blog: [Best Practice for Symfony Console in Nette](https://pehapkari.cz/blog/2017/06/02/best-practice-for-symfony-console-in-nette) or [Symfony Console from the Scratch](/blog/2019/08/12/standalone-symfony-console-from-scratch/).
 
     But nobody seems to write about **the greatest bottleneck of Console applications - static cancer**. Why is that?
-tweet_image: "/assets/images/posts/2018/cli-app-di/cli-app-di.png"
 ---
 
 ## 1. Current Status in PHP Console Applications

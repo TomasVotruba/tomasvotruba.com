@@ -6,7 +6,6 @@ perex:
 
 
     It was my first trip to Asia ever, so obviously, it went wrong...
-tweet_image: "/assets/images/posts/2018/phpasia/mefie.jpg"
 ---
 
 ## Complex over Simple

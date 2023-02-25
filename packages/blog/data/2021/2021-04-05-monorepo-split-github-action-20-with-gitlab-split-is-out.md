@@ -9,7 +9,6 @@ perex: |
 
     **How to use it with GitLab split repositories and custom git hosting?**
 
-tweet_image: "/assets/images/posts/2021/split_news.png"
 ---
 
 <img src="/assets/images/posts/2021/split_news.png" class="img-thumbnail">

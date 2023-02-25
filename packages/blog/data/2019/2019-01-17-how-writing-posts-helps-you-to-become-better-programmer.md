@@ -3,7 +3,6 @@ id: 178
 title: "How Writing Posts Helps you to Become Better Programmer"
 perex: |
     I love to write about my packages. Why? The code you type **you know**, **you know** the name of variables, **you know** how to interface looks, you know the architecture. It's like raising your own child and **knowing** his favorite ice-cream...
-tweet_image: '/assets/images/posts/2019/write-to-code/autstin.gif'
 ---
 
 ## What does Your Child Eat?

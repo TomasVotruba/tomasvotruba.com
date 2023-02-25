@@ -8,7 +8,6 @@ perex: |
 
     This is story about the whole journey of ups and downs.
 
-tweet_image: "/assets/images/posts/2017/apigen-revival/apigen.png"
 
 updated_since: "December 2018"
 updated_message: |

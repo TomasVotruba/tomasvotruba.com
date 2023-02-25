@@ -6,7 +6,6 @@ perex: |
 
 
     Do you know the following tips?
-tweet_image: "/assets/images/posts/2019/github-tips/list.gif"
 ---
 
 ## 1. Single-Char Console Commands for Your Tired Fingers

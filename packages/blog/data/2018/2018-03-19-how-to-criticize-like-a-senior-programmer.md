@@ -5,7 +5,6 @@ perex: |
     As I spend most of my socials online time on Github and PHP-related discussion, I've noticed **many people do so many wrong things** while giving critics.
 
     I want to **correct this** once and for all, so I've prepared a guide for you.
-tweet_image: "/assets/images/posts/2018/critic/shout.jpg"
 ---
 
 ## 1. Find an Error

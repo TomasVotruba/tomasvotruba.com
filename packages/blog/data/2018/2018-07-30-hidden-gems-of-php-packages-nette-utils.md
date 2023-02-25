@@ -6,7 +6,6 @@ perex: |
 
 
     Today we start with [Nette\Utils](https://github.com/nette/utils) package.
-tweet_image: "/assets/images/posts/2018/nette-utils/warning.png"
 ---
 
 ## Why I Use it

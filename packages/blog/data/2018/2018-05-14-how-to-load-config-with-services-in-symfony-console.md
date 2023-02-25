@@ -10,7 +10,6 @@ perex: |
 
     Today we look on the first barrier that leads most people to prefer static over DI - **how to load config with services**.
 
-tweet_image: "/assets/images/posts/2018/config-di-console/chicken-egg.jpg"
 
 updated_since: "November 2020"
 updated_message: |

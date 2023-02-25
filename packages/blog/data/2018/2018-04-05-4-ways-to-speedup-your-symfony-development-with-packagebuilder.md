@@ -6,7 +6,6 @@ perex: |
 
 
     Throwable render? Test services without public violation? Load parameters with glob? We got you covered!
-tweet_image: "/assets/images/posts/2018/symplify-4-pb/error.png"
 ---
 
 Here are 4 news that were added in Symplify 4 and that you can use in your application right away.

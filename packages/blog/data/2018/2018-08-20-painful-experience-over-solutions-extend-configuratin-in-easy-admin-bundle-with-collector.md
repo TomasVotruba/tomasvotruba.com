@@ -8,7 +8,6 @@ perex: |
 
 
     Today we try to add own config option to YAML of Easy Admin Bundle (without pull-request to the package).
-tweet_image: "/assets/images/posts/2018/collector-easy-admin-bundle/random.png"
 ---
 
 <blockquote class="blockquote text-center">

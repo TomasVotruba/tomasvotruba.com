@@ -12,7 +12,6 @@ perex: |
 
     Or maybe... **5 minute job**?
 
-tweet_image: "/assets/images/posts/2020/yaml_to_php.png"
 
 updated_since: "June 2021"
 updated_message: |

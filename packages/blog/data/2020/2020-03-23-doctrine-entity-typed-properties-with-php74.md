@@ -12,7 +12,6 @@ updated_message: |
     Switch from deprecated `--set` option to `rector.php` config.
     Updated with **PHPStorm and PHPStan friendly** `Collection` syntax and [Rector rule](https://github.com/rectorphp/rector/pull/4442) that handles the change for you.
 
-tweet_image: "/assets/images/posts/2020/typed_doctrine_properties_collection.png"
 ---
 
 ## The Collections

@@ -9,7 +9,6 @@ perex: |
     Until PHP 7.4 this was not possible and code was kinda crappy.
     Where are we now with constant type? Do you trust your class constants type?
 
-tweet_image: "/assets/images/posts/2020/typed_constants.png"
 ---
 
 With typed properties, the incorrect type-bug was completely removed:

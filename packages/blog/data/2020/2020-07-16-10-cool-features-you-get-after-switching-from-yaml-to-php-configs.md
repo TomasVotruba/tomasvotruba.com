@@ -8,7 +8,6 @@ perex: |
 
     Today we look at 10 cool features you get by switching to PHP configs that make you an even lazier programmer.
 
-tweet_image: "/assets/images/posts/2020/yaml_php_constants.gif"
 ---
 
 Do you **care why** this begun? Be sure to read [Symfony issue](https://github.com/symfony/symfony/issues/37186):

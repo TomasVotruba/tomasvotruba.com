@@ -7,7 +7,6 @@ perex: |
 
     What can we learn about selling?
     Lucky for you, you don't have to read the whole book - here are the top 10 points I found very useful.
-tweet_image: "/assets/images/posts/2018/selling/logo.jpg"
 ---
 
 ## How is Selling Useful to Programmers?

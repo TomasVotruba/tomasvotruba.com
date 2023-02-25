@@ -4,7 +4,6 @@ title: "How to Mock Final Classes in PHPUnit"
 perex: |
     Do you prefer composition over inheritance? Yes, that's great. Why aren't your classes `final` then? Oh, you have tests and you mock your classes. **But why is that a problem?**
 
-tweet_image: "/assets/images/posts/2019/mocking-final/final-case.png"
 
 
 ---

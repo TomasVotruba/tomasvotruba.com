@@ -6,7 +6,6 @@ perex: |
 
 
     Try PSR-12 today and see, how it works for your code.
-tweet_image: "/assets/images/posts/2018/psr-12/preview.png"
 
 
 ---

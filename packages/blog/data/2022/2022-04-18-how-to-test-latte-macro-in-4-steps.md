@@ -7,7 +7,6 @@ perex: |
 
     To get ready, we want to prepare tests first. Although writing Latte macros is the most complicated feature in Latte, testing is easier than you think.
 
-tweet_image: "/assets/images/posts/2022/latte_macro_test.png"
 ---
 
 In another post, we focused on how to change the macro contents from Latte 2 to Latte 3 syntax. Today we'll see how to **prepare a test that helps you upgrade easily**. I never wrote any Latte macro in my life, but tests proved very helpful.

@@ -4,7 +4,6 @@ title: "Rectify: Turn All Action Injects to Constructor Injection in Your Symfon
 perex: |
     Action Injections are much fun, but it can turn your project to legacy very fast. How to **refactor out of the legacy back to constructor injection** and still keep that smile on your face?
 
-tweet_image: "/assets/images/posts/2018/rectify-action-injection/show.png"
 
 updated_since: "August 2020"
 updated_message: |

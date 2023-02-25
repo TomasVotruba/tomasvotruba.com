@@ -5,7 +5,6 @@ perex: |
     I'm happy that more and more people try to use Rector upgrade and migrate their code-bases to the ones they really want for a long time.
 
     Last week I was approached by 2 different people with single need - **migrate their tests to PHPUnit**.
-tweet_image: '/assets/images/posts/2019/unit-mig/phpunit.png'
 
 deprecated_since: "March 2022"
 deprecated_message: |

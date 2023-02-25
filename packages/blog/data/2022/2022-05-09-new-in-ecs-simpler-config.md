@@ -7,7 +7,6 @@ perex: |
 
     We decided to simplify it so ECS is truly easy to use.
 
-tweet_image: "/assets/images/posts/2022/ecs_warning.png"
 ---
 
 How do we configure ECS now?

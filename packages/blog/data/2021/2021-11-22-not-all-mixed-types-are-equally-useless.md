@@ -7,7 +7,6 @@ perex: |
 
     The `mixed` type is the worst of all of them. Fixing all `mixed` types to a specific type is a nightmare for the REST of your life (pun intended). But what if there are places where fixing `mixed` type **brings much more value than** in the others?
 
-tweet_image: "/assets/images/posts/2021/equal_animals.png"
 ---
 
 <img src="/assets/images/posts/2021/equal_animals.png" style="max-width: 32em" class="img-thumbnail mt-2 mb-5">

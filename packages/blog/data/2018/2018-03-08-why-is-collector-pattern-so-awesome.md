@@ -6,7 +6,6 @@ perex: |
 
     Why Collector pattern beats config tagging? How to use the in Symfony application? How it turns locked architecture into scaling one?
 
-tweet_image: "/assets/images/posts/2018/collector/quote.jpg"
 
 deprecated_since: "August 2020"
 deprecated_message: |

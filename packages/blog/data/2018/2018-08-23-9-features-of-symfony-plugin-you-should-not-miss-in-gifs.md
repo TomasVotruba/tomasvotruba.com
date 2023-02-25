@@ -3,7 +3,6 @@ id: 134
 title: "9 Features of PHPStorm Symfony Plugin You Should Not Miss in Gifs"
 perex: |
     After very successful [PHP 7.3 diffs post](/blog/2018/08/16/whats-new-in-php-73-in-30-seconds-in-diffs/), let's dive to gifs of [Symfony Plugin for PHPStorm](https://plugins.jetbrains.com/plugin/7219-symfony-plugin). You might know them, but they **might surprise you like they did surprise me**. Let's go!
-tweet_image: "/assets/images/posts/2018/symfony-plugin/doctrine-query-autocomplete.gif"
 ---
 
 ## 0. Be Grateful ❤️️

@@ -10,7 +10,6 @@ perex: |
 
     We had to **support annotations and attributes at the same time**. Do you have plenty of custom annotations yourself? In this post, you'll learn to build a bridge with both annotations and attributes on board.
 
-tweet_image: "/assets/images/posts/2021/named_argument_constructor.png"
 ---
 
 <blockquote class="blockquote text-center">

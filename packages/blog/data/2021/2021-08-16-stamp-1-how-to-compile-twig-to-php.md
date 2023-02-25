@@ -11,7 +11,6 @@ perex: |
 
     The other option is to take it from the other end - convert Twig to PHP.
 
-tweet_image: "/assets/images/posts/2021/stamp_twig_simple.png"
 ---
 
 In the previous post we worked with `templates/meal.twig` with single method call:

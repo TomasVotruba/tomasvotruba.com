@@ -6,7 +6,6 @@ perex: |
 
 
     This post is *the best of* selection just for you and if you feel you like it, you can buy it and read as a whole.
-tweet_image: "/assets/images/posts/2018/bloghacks/book.png"
 ---
 
 I came across this book [in the review by Vojta Růžička](https://www.vojtechruzicka.com/book-review-256-bloghacks) on [devblogy.cz](http://devblogy.tk) (the best place to follow Czech it bloggers by [kaja47](https://twitter.com/kaja47) whom I'm very thankful for it). You might know [Yegor](http://www.yegor256.com) from Java world or from

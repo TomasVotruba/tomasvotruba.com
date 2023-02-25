@@ -8,7 +8,6 @@ perex: |
 
 
     Is that even possible without using complex nested structures or regular expressions?
-tweet_image: "/assets/images/posts/2021/phpdoc_traverser_tweet.png"
 ---
 
 Today we look at how to modify docblocks easily. But first, we must learn how [`phpstan/phpdoc-parser`](https://github.com/phpstan/phpdoc-parser) works under the hood.

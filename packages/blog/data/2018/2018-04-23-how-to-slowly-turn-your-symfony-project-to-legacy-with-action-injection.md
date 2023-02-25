@@ -10,7 +10,6 @@ perex: |
 
     **Today I'll share the experience I have from consulting few Nette applications with dangerous overuse of this pattern and how this one thing turned the code to complete mess.**
 
-tweet_image: "/assets/images/posts/2018/action-injection/everywhere.jpg"
 ---
 
 *Disclaimer: this post is not about Symfony, nor critics of its feature. It's rather about teaching, thinking about knowledge embodied in the code, an aware approach of critical thinking to information from authorities.*

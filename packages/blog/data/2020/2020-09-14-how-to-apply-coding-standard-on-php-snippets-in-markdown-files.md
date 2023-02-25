@@ -14,7 +14,6 @@ perex: |
 
     I say: "We shall not!"
 
-tweet_image: "/assets/images/posts/2020/check_markdown.gif"
 ---
 
 **This feature [was contributed](https://github.com/symplify/symplify/pull/2118) to ECS 8.3 by [samsonasik](https://github.com/samsonasik). Thank you!**

@@ -6,7 +6,6 @@ perex: |
 
 
     Instead of "refactor all the things" step by step, class by class, I'd **like share my thoughts when exploring full automated path**. I look for feedback to improve this process.
-tweet_image: "/assets/images/posts/2019/removing-static/there.jpg"
 ---
 
 ## 1. Show Code

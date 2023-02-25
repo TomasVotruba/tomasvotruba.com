@@ -7,7 +7,6 @@ perex: |
     Future is now. There is no need for the initiative now and it's time to [let it go](https://zenhabits.net/letting-go).
     <br>
     **How much did it cost? What was the effect? Was it worth it?** I'll share answers to these question so you know what to expect when you start a similar project. Let's get numberz!
-tweet_image: "/assets/images/posts/2019/go-php-die/symfony_pool.png"
 ---
 
 When I bought the `gophp71.org` domain, I had no idea what it will become. You know, try to tell the whole PHP open-source community what min version should they use in `composer.json`, right? Explain why it's a good idea to work as a community to people you've never met. **But when I saw [Go PHP 5](https://www.garfieldtech.com/blog/go-php-5-go) I felt it's my duty to give back to PHP community and help with PHP 7.1.**

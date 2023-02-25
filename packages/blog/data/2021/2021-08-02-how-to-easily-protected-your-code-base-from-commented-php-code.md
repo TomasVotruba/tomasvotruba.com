@@ -7,7 +7,6 @@ perex: |
 
     We **cherish our developers' attention** so we come with a simple solution that we added to our CI. Now we know for sure. Do you think you have 0 % unwanted commented code? I dare you to have more.
 
-tweet_image: "/assets/images/posts/2021/quick-easy-commented-code-detection.png"
 ---
 
 With following approach, [we've discovered more than 150 commented out PHP lines](https://github.com/rectorphp/rector-src/commit/37b06023b666cac8ec2997e8e1605f93c25d3b6f) in Rector code today:

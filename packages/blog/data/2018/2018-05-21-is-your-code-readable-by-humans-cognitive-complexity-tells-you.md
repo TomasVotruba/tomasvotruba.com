@@ -6,7 +6,6 @@ perex: |
     **Cognitive complexity** tells us, how difficult code is to understand by a reader.
 
     Today, we'll see why is the later better and how to check it in your code with a Sniff.
-tweet_image: "/assets/images/posts/2018/cognitive-complexity/tweet.png"
 
 deprecated_since: "December 2022"
 deprecated_message: |

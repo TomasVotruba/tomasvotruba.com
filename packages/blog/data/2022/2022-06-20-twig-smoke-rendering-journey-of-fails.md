@@ -7,7 +7,6 @@ perex: |
 
     Today we will set on the journey towards this tool and mainly. Get ready for failure, demotivation, and despair. As with every new invention, the fuel can make us faster or burn us to death.
 
-tweet_image: "/assets/images/posts/2022/gandalf_beaten.jpg"
 ---
 
 How did we define the goal of twig smoke rendering? We want to render any template and validate the code, and its context works. To start, let's look at this first simple `homepage.twig` template:

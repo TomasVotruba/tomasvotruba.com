@@ -10,7 +10,6 @@ perex: |
 
     New Skipper component prevents this and allows **you to use standardized syntax in a single `skip` parameters**.
 
-tweet_image: "/assets/images/posts/2020/skipper-kangaroo.jpg"
 
 deprecated_since: "August 2022"
 deprecated_message: |

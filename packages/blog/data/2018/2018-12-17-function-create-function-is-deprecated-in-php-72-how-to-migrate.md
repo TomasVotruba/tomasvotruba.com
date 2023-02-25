@@ -7,7 +7,6 @@ perex: |
 
     Do you have over 5 `create_function()` pieces in your code? Let's see how to migrate them.
 
-tweet_image: "/assets/images/posts/2018/create-function/sonic.png"
 
 updated_since: "August 2020"
 updated_message: |

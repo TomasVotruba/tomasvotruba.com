@@ -8,7 +8,6 @@ perex: |
 
     Use it everywhere you can... or not?
 
-tweet_image: "/assets/images/posts/2020/inject_required_fail.png"
 ---
 
 This post is about one of the practices that give me work as a legacy cleaning lady. Read carefully - you can decide if your project will be the next client or you'll build reliable code that is fun to work with.

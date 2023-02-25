@@ -10,7 +10,6 @@ perex: |
 
     Are you interested in a better developer experience for your Symfony project? Keep reading.
 
-tweet_image: "/assets/images/posts/2022/custom_config_symfony.png"
 ---
 
 This is `ECSConfig` in action:

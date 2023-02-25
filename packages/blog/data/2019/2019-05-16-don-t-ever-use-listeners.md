@@ -6,7 +6,6 @@ perex: |
 
 
     Not good enough. **So why you should never use a listener?**
-tweet_image: ""
 ---
 
 When we look into Symfony [EventDispatcher documentation](https://symfony.com/doc/current/event_dispatcher.html), this is the first YAML code we see:

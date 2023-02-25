@@ -8,7 +8,6 @@ perex: |
 
     Are you curious what work will now these 4 news fixers handle for you? Look inside.
 
-tweet_image: "/assets/images/posts/2018/symplify-4-cs/tweet.png"
 
 updated_since: "August 2020"
 updated_message: |

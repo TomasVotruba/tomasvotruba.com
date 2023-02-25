@@ -5,7 +5,6 @@ perex: |
     Symfony Flex is moving towards of bundle-less applications. That doesn't mean you should create a monolith code in `/src` as fast as possible, but rather control everything via `.yaml` and `.env` files. It's takes [few steps](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/#refactor-service-config-in-5-steps) to **remove extension and move to import** of `services.yaml`.
 
     But how would you approach a simple task **as *setup an account number* parameter**?
-tweet_image: "/assets/images/posts/2018/bundle-less/bundle-less.png"
 
 ---
 

@@ -6,7 +6,6 @@ perex: |
 
     **In both cases, you won't have too**. Just add a couple of YAML lines to your CI.
 
-tweet_image: "/assets/images/posts/2019/rector-ci-code-review/result.png"
 
 updated_since: "December 2020"
 updated_message: |
