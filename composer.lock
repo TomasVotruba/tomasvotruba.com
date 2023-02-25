@@ -4948,12 +4948,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/punchcard.git",
-                "reference": "292b78daf31e30bf07732ebe7336f535f24accba"
+                "reference": "85692962a06584d086015d776e8d8280c1fbf5fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/punchcard/zipball/292b78daf31e30bf07732ebe7336f535f24accba",
-                "reference": "292b78daf31e30bf07732ebe7336f535f24accba",
+                "url": "https://api.github.com/repos/TomasVotruba/punchcard/zipball/85692962a06584d086015d776e8d8280c1fbf5fc",
+                "reference": "85692962a06584d086015d776e8d8280c1fbf5fc",
                 "shasum": ""
             },
             "require": {
@@ -5004,7 +5004,7 @@
                 "issues": "https://github.com/TomasVotruba/punchcard/issues",
                 "source": "https://github.com/TomasVotruba/punchcard/tree/0.0.3"
             },
-            "time": "2023-02-25T20:35:10+00:00"
+            "time": "2023-02-25T20:45:24+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
