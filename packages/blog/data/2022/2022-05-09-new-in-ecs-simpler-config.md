@@ -7,8 +7,6 @@ perex: |
 
     We decided to simplify it so ECS is truly easy to use.
 
-tweet: "New Post on the 🐘 blog: New in Symplify 11: Simpler ECS Config"
-tweet_image: "/assets/images/posts/2022/ecs_warning.png"
 ---
 
 How do we configure ECS now?

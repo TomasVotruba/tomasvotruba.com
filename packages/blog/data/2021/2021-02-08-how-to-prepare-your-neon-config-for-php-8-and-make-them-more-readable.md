@@ -6,7 +6,6 @@ perex: |
 
     Do you use explicit NEON config syntax? Then upgrade to PHP 8, including deprecations, will not touch you.
     Do you use magic syntax sugar cream? Today we'll look at how to make it right.
-tweet: "New Post on #php 🐘 blog: How to Prepare your Neon Configs for PHP 8 and Make them More Readable       #nettefw"
 ---
 
 "The OP neurons aligned in OD pattern suggest better space orientation empowered to MDS usage."

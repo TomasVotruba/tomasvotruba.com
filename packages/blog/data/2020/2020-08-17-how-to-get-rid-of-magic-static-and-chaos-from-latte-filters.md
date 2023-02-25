@@ -6,7 +6,6 @@ perex: |
 
     Today we'll leverage those tips to make your code around Latte filters **easy and smooth to work with**.
 
-tweet: "New Post on #php 🐘 blog: How to Get Rid of Magic, Static and Chaos from Latte Filters #nettefw"
 
 updated_since: "September 2020"
 updated_message: |

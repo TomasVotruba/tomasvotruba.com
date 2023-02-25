@@ -6,8 +6,6 @@ perex: |
 
 
     Ops, I forgot to tell you. Let's fix it because I'd love to meet you and hear about your pain points.
-tweet: "New Post on #php 🐘 blog: #rectorphp European Tour in May & June 2019 - I'll see you at @phpday @PHP_Russia @fwdays @phpconference and @dpcon - Thanks for having me ❤️️❤️️❤️️"
-tweet_image: "/assets/images/posts/2019/tour/rector-daily.png"
 ---
 
 **I'd love to thank all people that support Rector, use it in their daily work and continuous integration**. It took a while to get the attention of everyday use. I visited only 1 conference with Rector in 2018, but now **it seems the side is turning**.

@@ -10,7 +10,6 @@ perex: |
 
 
     I'd like to express <strong>my gratitude and tribute for you, <a href="https://davidgrudl.com/">David</a> - you made my programming life very joyful and curious experience</strong>.
-tweet: "Open thank-you letter to @geekovo for all his positive influence #php #community #nettefw #notgay"
 ---
 
 A great friend of mine [Honza Černý](http://honzacerny.com) lend me a book *[Steal Like An Artist](http://austinkleon.com/steal)* few months ago. I'm very grateful for that, because I don't have much art-people in my social circle. You may think, it's about art (so did I), but it's **more about relationships, sharing, caring, showing your vulnerability and cooperation**. And open-source software!

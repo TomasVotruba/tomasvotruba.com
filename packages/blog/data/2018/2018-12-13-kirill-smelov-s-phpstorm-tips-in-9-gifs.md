@@ -9,8 +9,6 @@ perex: |
 
 
     Instead of watching the 45-min talk, **enjoy 9 cherry picked tips in 4,5-min gifs**. I've dropped a few of my own daily habits. Enjoy!
-tweet: "New post on my  🐘 #php blog: Kirilli Smelov's #PHPStorm Tips in 9 #gifs 🚀 Thanks @wbasrs for sharing with us on #pehapkari meetup"
-tweet_image: "/assets/images/posts/2018/phpstorm-tips-in-gifs/no-this.gif"
 ---
 
 ## 1. Ctor - when you add a property via constructor

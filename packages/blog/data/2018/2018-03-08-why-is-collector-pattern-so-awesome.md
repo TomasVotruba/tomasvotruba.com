@@ -4,11 +4,8 @@ title: "Why is Collector Pattern so Awesome"
 perex: |
     How to achieve *open for extension* and *closed for modification* [one of sOlid principals](https://github.com/jupeter/clean-code-php#openclosed-principle-ocp)?
 
-
     Why Collector pattern beats config tagging? How to use the in Symfony application? How it turns locked architecture into scaling one?
 
-tweet: "New post on my blog: Why is Collector Pattern so Awesome #symfony #colletor #compilerpass #rector #solid #decoupling"
-tweet_image: "/assets/images/posts/2018/collector/quote.jpg"
 
 deprecated_since: "August 2020"
 deprecated_message: |

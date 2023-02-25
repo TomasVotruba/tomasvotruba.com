@@ -6,8 +6,6 @@ perex: |
 
     Now we'll try to look a bit closer. Not in time, but in space. Take a look around you, what do you see?
     Do you see *your own first* AI already? And how do you treat it?
-tweet: "A new post on my blog: How Do You Treat Your Own First AI #programming #unschooling #ai #human"
-tweet_image: "/assets/images/posts/2018/ai/kaizen.jpg"
 ---
 
 Artificial intelligence is in its very basic form just a network of neurons connected in a specific way.

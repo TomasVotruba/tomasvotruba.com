@@ -13,8 +13,6 @@ perex: |
 
     Meet *Static Detector*.
 
-tweet: "New Post on #php 🐘 blog: How to Reveal Static Call Relationships in Your Code"
-tweet_image: "/assets/images/posts/2020/static_detector_result.png"
 
 updated_since: "August 2021"
 updated_message: |

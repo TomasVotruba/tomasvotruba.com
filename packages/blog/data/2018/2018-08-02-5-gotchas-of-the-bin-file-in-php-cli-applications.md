@@ -6,7 +6,6 @@ perex: |
 
 
     Yet, there are still a few blind paths you can struggle with. I'll drop a few extra tricks to make your bin file clean and easy to maintain.
-tweet: "New Post on my Blog: 5 Gotchas of the #Bin #File in PHP CLI Applications  #symfony #composerphp"
 ---
 
 ## What is the Bin File?

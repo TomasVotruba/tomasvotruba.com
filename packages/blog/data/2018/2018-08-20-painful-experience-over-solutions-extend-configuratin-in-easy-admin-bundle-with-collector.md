@@ -8,8 +8,6 @@ perex: |
 
 
     Today we try to add own config option to YAML of Easy Admin Bundle (without pull-request to the package).
-tweet: "New Post on my Blog: Painful Experience over Solutions: Extend Configuration in Easy Admin Bundle #symfony #easyadminbundle #phpstorm #collector #php #solid"
-tweet_image: "/assets/images/posts/2018/collector-easy-admin-bundle/random.png"
 ---
 
 <blockquote class="blockquote text-center">

@@ -9,7 +9,6 @@ perex: |
 
     If you're lazy like me, you have a convention and create one command after another, knowing the naming is based on... we'll get to it.
 
-tweet: "New Post on #php 🐘 blog: The Bullet Proof Symfony Command Naming"
 ---
 
 Today I was making a new package that handles 1-click scoping for monorepo packages. I created this command:

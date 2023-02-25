@@ -8,7 +8,6 @@ perex: |
 
     Today we look at PHPStan and how to use it to find duplicated class methods.
 
-tweet: "New Post on #php 🐘 blog: How to detect Complex Duplicated Methods With #phpstan"
 ---
 
 ## Why even Care about Duplicated Code?

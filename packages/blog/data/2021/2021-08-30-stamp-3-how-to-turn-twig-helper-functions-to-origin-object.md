@@ -7,8 +7,6 @@ perex: |
 
     Today we'll look at how to **change TWIG helper functions to their original object form**.
 
-tweet: "New Post on the 🐘 blog: Stamp #3: How to Turn TWIG Helper Functions to Origin Object"
-tweet_image: "/assets/images/posts/2021/stamp_3.png"
 ---
 
 Have you joined our "STAMP" series just in this post? We're trying to convert the TWIG file. In the TWIG template, we use the single variable `meal`, an `App\Meal` type object.

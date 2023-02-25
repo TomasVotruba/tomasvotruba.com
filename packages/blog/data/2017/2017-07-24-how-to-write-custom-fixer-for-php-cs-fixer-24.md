@@ -7,8 +7,6 @@ perex: |
 
      Today we'll explore another tool - [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and we get **from finding the smelly spot to fixing it**.
 
-tweet: "How to Write Custom Fixer for #phpcsfixer"
-tweet_image: "/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png"
 
 updated_since: "October 2021"
 updated_message: |

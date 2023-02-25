@@ -8,7 +8,6 @@ updated_since: "February 2021"
 updated_message: |
     Updated with **Symfony Static Dumper**, YAML → PHP, Symfony configs syntax and PHP 8.
 
-tweet: "New Tweet on Lazy Blog: #symfony Static Dumper - part 2: How to add Contact Page With Data"
 ---
 
 ## Contact Page with Socials Accounts Data Separated

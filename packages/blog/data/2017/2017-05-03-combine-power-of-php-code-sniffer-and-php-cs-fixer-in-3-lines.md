@@ -8,7 +8,6 @@ perex: |
 
     Both powerful tools dealing with coding standards with **huge communities behind them**.
     Can you imagine using them both and actually enjoy it? Today I will show you how.
-tweet: "#ecs - tool to use both #phpCodeSniffer and #phpCsFixer in 3 lines #php #codingstandard"
 
 updated_since: "August 2020"
 updated_message: |

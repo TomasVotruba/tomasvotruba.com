@@ -8,7 +8,6 @@ perex: |
 
     How to make testing so tight no bug can escape?
 
-tweet: "New Post on My Blog: How to Test #Monorepo in 3 Layers"
 
 updated_since: "February 2021"
 updated_message: "Changed from Travis to GitHub Actions, from post-split testing to local split testing."

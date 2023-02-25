@@ -9,7 +9,6 @@ perex: |
     <br>
     I was like: "that's not possible... you need to switch to GitHub".
 
-tweet: "New Post on #php 🐘 blog: How can we use @github Actions in @gitlab"
 ---
 
 ...or was I?

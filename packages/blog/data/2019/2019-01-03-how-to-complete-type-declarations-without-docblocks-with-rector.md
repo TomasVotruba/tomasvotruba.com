@@ -6,8 +6,6 @@ perex: |
 
     But **how do you complete type declarations if don't have any docblocks?**
 
-tweet: "New Post on #php 🐘 blog: How to Complete Type Declarations without Docblocks with #Rectorphp"
-tweet_image: "/assets/images/posts/2019/type-declarations/peek.gif"
 
 deprecated_since: "November 2020"
 deprecated_message: |

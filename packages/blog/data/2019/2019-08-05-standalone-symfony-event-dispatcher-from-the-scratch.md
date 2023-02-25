@@ -6,8 +6,6 @@ perex: |
 
     This post is an introduction to Event Dispatcher, how to use it, and in the end, you'll be able to cover 90 % use cases you'll ever need.
 
-tweet: "New Post on #php 🐘 blog: #symfony Event Dispatcher from the Scratch"
-tweet_image: "/assets/images/posts/2019/event_dispatcher_tweet.png"
 
 updated_since: "June 2020"
 updated_message: |

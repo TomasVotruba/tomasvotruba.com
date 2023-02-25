@@ -7,8 +7,6 @@ perex: |
 
 
     How is adoption going in open-source and why it should continue from bleeding-edge projects?
-tweet: "Is #PHP 7.1 the fastest version to be adopted by PHP community? And what projects are already requiring it as minimum version #symfony #doctrineORM #laravel #nettefw"
-tweet_image: "/assets/images/posts/2017/go-php-71-later/unity.jpg"
 ---
 
 <br>

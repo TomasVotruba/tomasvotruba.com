@@ -6,7 +6,6 @@ perex: |
 
     I'm very happy to see that collectors are getting to the core of DI components of PHP frameworks. Tags, extensions, compiler passes and `autoconfigure` now became workarounds. Collectors are now in the best place they can... **the PHP code**.
 
-tweet: "New Post on My Blog: Can Autowired Arrays Finally Deprecate Tags in #symfony and #nettefw?    #collector #nettefw30 #php #simplestupid"
 
 updated_since: "February 2021"
 updated_message: |

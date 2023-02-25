@@ -7,8 +7,6 @@ perex: |
 
     What are they, and how to mitigate their impact?
 
-tweet: "New Post on the 🐘 blog: Hidden Productivity Cost of Parallel Run"
-tweet_image: "/assets/images/posts/2021/cores.jpg"
 ---
 
 ## All CPUs are Fully Used

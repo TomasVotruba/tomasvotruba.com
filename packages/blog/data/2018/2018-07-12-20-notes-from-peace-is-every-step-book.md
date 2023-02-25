@@ -9,8 +9,6 @@ perex: |
 
 
     ...and recently I've finished reading his book *Peace Is Every Step: The Path of Mindfulness in Everyday Life*. What was it about?
-tweet: "New Post on my Blog: Notes from 'Peace is Every Step' Book #conflicts #community #anger #transform #joy"
-tweet_image: "/assets/images/posts/2018/peace/book.jpg"
 
 ---
 

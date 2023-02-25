@@ -5,7 +5,6 @@ perex: |
     Do you have 2 class with the same name? `App\Entity\Product` and `App\Entity\Product`? Of course not. But **I bet you have at least 2 classes with the same *short name* `*\Product` and `*\Product`**.
 
     And that smells... Why?
-tweet: "New Post on #php 🐘 blog: Alias as a Code Smell"
 
 updated_since: "August 2020"
 updated_message: |

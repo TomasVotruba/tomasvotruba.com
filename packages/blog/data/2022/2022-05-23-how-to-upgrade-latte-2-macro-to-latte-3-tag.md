@@ -7,7 +7,6 @@ perex: |
 
     Do you have any custom macros in your project? They're the biggest challenge of the Latte 3 upgrade. But don't worry, today we'll rewrite them together.
 
-tweet: "New Post on the 🐘 blog: How to Upgrade Latte 2 Macro to Latte 3 Tag      #nettefw"
 ---
 
 ## For Early Adopters

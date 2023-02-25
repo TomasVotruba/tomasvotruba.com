@@ -5,7 +5,6 @@ perex: |
     Coding Standard 5 replaced fixers that renamed classes with more tolerant sniffs. What else is there?
     <br>
     New config options **that shorten your config file** and **2 new checkers to keep your code in order**.
-tweet: "New in Symplify 5: Public Method Order and External Final in CodingStandard     #php #git #split #easy"
 
 updated_since: "August 2020"
 updated_message: |

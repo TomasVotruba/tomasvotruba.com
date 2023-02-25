@@ -6,7 +6,6 @@ perex: |
 
 
     So [I started to collect tips](https://github.com/TomasVotruba/tomasvotruba.com/issues/226) I use on training and mentoring that I don't even notice, but others find fascinating. Here is 5 of them.
-tweet: "New Post on #php 🐘 blog: 5 Workflow Tips every PHP Developer Should Know"
 ---
 
 ## 1. Find any file in Github Repository within a Second

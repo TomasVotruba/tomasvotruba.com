@@ -6,7 +6,6 @@ perex: |
 
 
     **Who cares if we use 50 lines in 3 files PHP files and 1 YAML file instead of 1 factory in 20 lines.** We're cool!
-tweet: "New Post on #php 🐘 blog: Don't Give up Your PHP Code for Compiler Passes so Easily      #symfony #laravel #nettfw"
 ---
 
 This mini-series started in [Why Config Coding Sucks](/blog/2019/02/14/why-config-coding-sucks/). **There we learned to move ~~weakly~~ un-typed strings to strict-typed PHP code**. It's not only about YAML or NEON files, but about any config-like syntax in general (XML, in...).

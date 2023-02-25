@@ -7,7 +7,6 @@ perex: |
 
     The best way to deal with them is acknowledge their purpose and then, let them go and enjoy the gift of present.
 
-tweet: "New Post on #php 🐘 blog: Drop RobotLoader and let #composerphp Deal with Autoloading #nettefw #psr4 Dispatcher"
 ---
 
 ## Where is RobotLoader Useful

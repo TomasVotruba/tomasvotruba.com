@@ -7,8 +7,6 @@ perex: |
 
     Yet, my laziness got me itching when I see **configuration of extensions**.
 
-tweet: "New Post on #php 🐘 blog: What if We Remove Strings from #symfony Extension Configuration"
-tweet_image: "/assets/images/posts/2020/remove_string_extension.png"
 ---
 
 I like the service configuration provided by Symfony. Typo-proof, everything is autocompleted by IDE, hard to put the wrong argument or make a typo.

@@ -9,7 +9,6 @@ perex: |
 
 
     Accidentally, **my poor memory makes me the most productive programmer in the room**. And you can be too. How?
-tweet: "New Post on #php 🐘 blog: 'Shortcuts are like cocaine. They can make you ultimately faster in small doses, but if you take too much of them, your brain will fall apart' - The Single Best Skill to Master Command Line"
 ---
 
 I had the Symfony & Git training last Friday. We were using a single `master` branch on Gitlab and multiple programmers send their pull-requests into. We needed to pull and rebase after the feature was merged into the `master`.

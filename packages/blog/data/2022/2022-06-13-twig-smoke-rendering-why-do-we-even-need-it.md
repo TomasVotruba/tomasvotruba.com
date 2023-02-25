@@ -7,7 +7,6 @@ perex: |
 
     We **need a CI test to be sure** templates are working. I had an initial idea, but knowing the value of external input, I asked on [Twitter for brainstorming](https://twitter.com/VotrubaT/status/1537029650379116544). I'm happy I did. Alexander Schranz came with [a tip](https://twitter.com/alex_s_/status/1537030374651572225) that led me on a 2-week journey, and I would love to share it with you today.
 
-tweet_image: "/assets/images/posts/2022/fellowship.jpg"
 ---
 
 ## Why do we need Smoke Render all Templates?

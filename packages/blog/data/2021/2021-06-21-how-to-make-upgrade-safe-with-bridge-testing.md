@@ -8,7 +8,6 @@ perex: |
 
     That's why before I start upgrading one approach to another, I want to prepare a safe environment. No razors, no matches, and a couple of tests. The bridge testing technique is one of the safety nets I use while refactoring to new technology.
 
-tweet: "New Post on the 🐘 blog: How to make Upgrade Safe with Bridge Testing"
 ---
 
 The idea is simple - in total, we should have 3 tests:

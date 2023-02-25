@@ -7,8 +7,6 @@ perex: |
     Wait, don't rush to your train ticket so fast to enjoy the presence of great developers, interesting topic, surprisingly open-minded people and tasty beer afterward.
 
     I'm about to tell you why you should not do it.
-tweet: "New Post on my Blog: 5 Signs You Should Never Have a Talk Abroad #commnity #cfp #friendsofphp"
-tweet_image: "/assets/images/posts/2018/friends/homepage.png"
 ---
 
 ## 1. You're not Famous Enough to be Accepted

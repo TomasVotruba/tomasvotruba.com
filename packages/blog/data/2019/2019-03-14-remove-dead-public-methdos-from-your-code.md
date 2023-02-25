@@ -8,8 +8,6 @@ perex: |
     But what if you're creating an application - you can remove unused with peace in mind.
     There is only one problem to resolve - **find public unused methods**.
 
-tweet: "New Post on #php 🐘 blog: Remove Dead Public Methods from Your Code"
-tweet_image: "/assets/images/posts/2019/dead-public/usages.png"
 
 deprecated_since: "2020-04"
 deprecated_message: |

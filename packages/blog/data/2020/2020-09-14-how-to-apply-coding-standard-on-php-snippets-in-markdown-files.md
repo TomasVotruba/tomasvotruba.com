@@ -14,8 +14,6 @@ perex: |
 
     I say: "We shall not!"
 
-tweet: "New Post on #php 🐘 blog: How to Apply Coding Standards for PHP Snippets in Markdown files?   Thanks to @samsonasik"
-tweet_image: "/assets/images/posts/2020/check_markdown.gif"
 ---
 
 **This feature [was contributed](https://github.com/symplify/symplify/pull/2118) to ECS 8.3 by [samsonasik](https://github.com/samsonasik). Thank you!**

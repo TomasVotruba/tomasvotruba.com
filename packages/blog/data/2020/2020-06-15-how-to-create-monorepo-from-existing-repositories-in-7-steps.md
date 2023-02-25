@@ -10,8 +10,6 @@ perex: |
     <br>
     So how to start a monorepo if you already have existing repositories?
 
-tweet: "New Post on #php 🐘 blog: How to create Monorepo from Existing Repositories in 7 Steps"
-tweet_image: "assets/images/posts/2020/monorepo_builder_merge.png"
 
 updated_since: "August 2020"
 updated_message: |

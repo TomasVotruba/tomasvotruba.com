@@ -7,7 +7,6 @@ perex: |
     "We don't use Nette, but we still have many tests in Tester. Can Rector migrate them to PHPUnit?"
     <br>
     "Hold my 🍺"
-tweet: "A new Post on #php 🐘 blog: How to Instantly Migrate #nettefw Tester to #phpunit"
 
 updated_since: "November 2020"
 updated_message: |

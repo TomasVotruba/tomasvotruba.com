@@ -10,7 +10,6 @@ perex:
     How to make Travis **generate code for you**?
     <br>
     And how to make your **tokens safe**?
-tweet: "New Post on my Blog: 7 Tips to Get Most Out of #TravisCI"
 ---
 
 ## 1. Skip x-debug

@@ -6,8 +6,6 @@ perex: |
 
 
     Today we'll look on **package vendor-locks** caused by brain drain.
-tweet: "New Post on #php 🐘 blog: Why we Migrated from #nettefw to #symfony in 3 Weeks - Part 3"
-tweet_image: "/assets/images/posts/2019/nette-to-symfony3/nette-object-your-code.png"
 ---
 
 *This post will be a bit harder for me because I'm part of this problem. I'm a former Nette activist and open-source hyper. I created many open-source packages Nette developers use, but those are not actively maintained nor developed for the last couple of years. I'm sorry about that.*

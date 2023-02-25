@@ -7,8 +7,6 @@ perex: |
      <br>
      Today, I'd like to share secrets behind **biggest WTF** that monorepo composer setup has.
 
-tweet: "New Post on #php 🐘 blog: Monorepo #Composer Magic     #symfony #symplify #sylius #shopsys"
-tweet_image: "/assets/images/posts/2019/dev-alias/root-only.png"
 ---
 
 In each Symplify, Symfony, Shopsys or Sylius package `composer.json`, you'll find:

@@ -6,8 +6,6 @@ perex: |
 
 
     Symplify 3 introduces a new help hand - **fixer that cleans doc block noise for you and makes your code more valuable to the reader**.
-tweet: "Do you use PHP 7 and scalar types? Do you still see value in your docblocks? Which is useful and which is legacy? Symplify 3 introduces a new fixer, that helps you to clean the later! #codingstandard #phpcsfixer"
-tweet_image: "/assets/images/posts/2017/doc-block-cleaner/diff.png"
 
 deprecated_since: "March 2019"
 deprecated_message: |

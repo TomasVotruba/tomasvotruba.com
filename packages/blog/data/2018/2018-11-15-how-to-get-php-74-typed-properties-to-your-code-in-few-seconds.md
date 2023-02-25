@@ -6,8 +6,6 @@ perex: |
 
 
     Is this **the best time to upgrade your code to PHP 7.4**?
-tweet: "New Post on My Blog: How to Get #PHP 7.4 Typed Properties to Your Code in Few Seconds   #futurecompatibility #codequality #symfony"
-tweet_image: "/assets/images/posts/2018/php74-typed/v2.png"
 
 updated_since: "November 2020"
 updated_message: |

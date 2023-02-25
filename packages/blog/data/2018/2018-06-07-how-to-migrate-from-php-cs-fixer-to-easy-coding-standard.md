@@ -3,9 +3,8 @@ id: 112
 title: "How to Migrate From PHP&nbsp;CS&nbsp;Fixer to ECS&nbsp;in&nbsp;6&nbsp;Steps"
 perex: |
     We looked at how to migrate from PHP_CodeSniffer to Easy Coding Standard on Monday. But what if your weapon of choice is PHP CS Fixer and you'd to run also some sniffs?
-    <br>
+
     There are **a few simple A → B changes**, but one has to know about them or will get stuck. Let's learn about them.
-tweet: "New Post on my Blog: How to Migrate From PHP CS Fixer to ECS in 6 Steps #ecs #codingstandard #ci"
 
 updated_since: "November 2020"
 updated_message: |

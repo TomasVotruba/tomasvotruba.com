@@ -6,7 +6,6 @@ perex: |
 
     The positive side effect of Rector helping to migrate real commercial project **are new features in its core** that is free and open-source Today with little, yet powerful *asterisk type match*.
 
-tweet: "New Post on #php 🐘 blog: New in Rector: Asterisk Type Match"
 
 updated_since: "December 2021"
 updated_message: |

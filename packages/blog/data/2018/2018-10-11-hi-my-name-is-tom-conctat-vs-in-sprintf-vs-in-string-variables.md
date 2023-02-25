@@ -6,8 +6,6 @@ perex: |
 
     A questions about **connecting string with variables**.
     You have 3 options. Each has its strong and weak points. How do you pick the right one?
-tweet: "New Post on my Blog: Hi, my name is Tom - Contact vs. Sprintf vs. In-String Variable #php - in code examples"
-tweet_image: "/assets/images/posts/2018/connect-strings/dual.png"
 ---
 
 In how many ways you can register a service in Symfony or call a service method in Laravel?

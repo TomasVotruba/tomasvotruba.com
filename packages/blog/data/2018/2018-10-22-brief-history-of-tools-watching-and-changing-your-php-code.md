@@ -5,7 +5,6 @@ perex:
     From coding standard tools, over static analysis to instant upgrade tools. This post is going to be a geeky history trip.
 
     Which tool was first? How they **build on shoulders of each other**?
-tweet: "New Post on my Blog: Brief History of Tools Watching and Changing PHP Code #phpcsfixer #phpcodesniffer @phpstan #psalm #symfony #rector"
 
 updated_since: "December 2020"
 updated_message: "Removed deprecated and unused tools, to keep focus on relevant ones."

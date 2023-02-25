@@ -6,7 +6,6 @@ perex: |
 
     Today we look at **how to write such action** to provide an excellent developer experience for both.
 
-tweet: "New Post on #php 🐘 blog: How to Write @gitHub Actions for @gitlab Too"
 ---
 
 <div class="text-center">

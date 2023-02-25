@@ -6,7 +6,6 @@ perex: |
 
 
     To overcome [AI disruption](/blog/2017/12/04/life30-what-will-you-do-when-ai-takes-over-the-world/), you'll be valuable by actually making AI or by hacking your brain to be super-adaptable and irreplaceable.
-tweet: "New Post on my Blog: Your Brain is Your Garden   #eduhacking #ai #hi #learning "
 ---
 
 *This post consists of my personal experience and few books with research background. If you feel you need more science behind this, you can read [The Happiness Advantage](https://www.amazon.com/gp/product/B00435DZ7S), [Deep Work](http://calnewport.com/books/deep-work) and [Life 3.0](https://www.amazon.com/Life-3-0-Being-Artificial-Intelligence-ebook-dp-B07474JB3Q/dp/B07474JB3Q).*

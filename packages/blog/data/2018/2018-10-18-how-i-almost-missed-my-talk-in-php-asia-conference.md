@@ -6,8 +6,6 @@ perex:
 
 
     It was my first trip to Asia ever, so obviously, it went wrong...
-tweet: "New Post on my Blog: ✈ How I Almost Missed My Talk in @phpconfasia 🤦🤦🤦🤦   #php #phpasia #friendsofphp    Thank you @coderkungfu ❤️️"
-tweet_image: "/assets/images/posts/2018/phpasia/mefie.jpg"
 ---
 
 ## Complex over Simple

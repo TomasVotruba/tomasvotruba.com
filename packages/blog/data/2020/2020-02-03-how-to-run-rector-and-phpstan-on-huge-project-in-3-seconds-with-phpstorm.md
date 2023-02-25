@@ -6,8 +6,6 @@ perex: |
 
     How would you like it be **less than 3 seconds with just one click** in PHPStorm?
 
-tweet: "New Post on #php 🐘 blog: How to run Rector and PHPStan on Huge Project in 3 Seconds with PHPStorm"
-tweet_image: "/assets/images/posts/2020/external_tools_rector.gif"
 ---
 
 Let's say we have a reasonably big codebase, like Rector, with over 70 000 lines of code. Projects I consult lately usually fit into 200-600 000 lines of code, though. But let's take Rector as the baseline, as that's the project we have data for.

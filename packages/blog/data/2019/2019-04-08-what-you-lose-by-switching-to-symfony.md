@@ -6,8 +6,6 @@ perex: |
 
     "Ok, we get it, it's simple. But why, what is the gain?"
 
-tweet: "New Post on #php 🐘 blog: What You Lose by Switching to #symfony"
-tweet_image: "/assets/images/posts/2017/symplify-deprecations/pr-notes.png"
 ---
 
 I'm not writing this post because I use Symfony in my projects and love the community around it. I write this because in the last 2 weeks people around me asked me for help with Rector:

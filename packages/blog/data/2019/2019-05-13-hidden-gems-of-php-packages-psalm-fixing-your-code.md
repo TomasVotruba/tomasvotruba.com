@@ -6,7 +6,6 @@ perex: |
 
 
     But did you know it can automatically fix these issues?
-tweet: "New Post on #php 🐘 blog: Hidden Gems of PHP Packages: @psalmphp Fixing Your Code"
 
 updated_since: "June 2019"
 updated_message: "A new option `--issues=all` is added in Psalm 3.3.1"

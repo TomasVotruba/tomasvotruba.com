@@ -5,8 +5,6 @@ perex: |
     After few long Nette to Symfony migration series, it's time for relax.
     <br>
     Let's look at 7 snippets of PHP code, that [happily takes your attention](/blog/2018/05/21/is-your-code-readable-by-humans-cognitive-complexity-tells-you/) but **is never run**.
-tweet: "New Post on #php 🐘 blog: How to Detect Dead PHP Code in Code Review in 7 Snippets"
-tweet_image: "/assets/images/posts/2019/dead-code/fine.jpg"
 
 updated_since: "November 2020"
 updated_message: |

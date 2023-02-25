@@ -6,8 +6,6 @@ perex: |
 
 
     Try PSR-12 today and see, how it works for your code.
-tweet: "New Post on My Blog: Try PSR-12 on Your Code Today"
-tweet_image: "/assets/images/posts/2018/psr-12/preview.png"
 
 
 ---

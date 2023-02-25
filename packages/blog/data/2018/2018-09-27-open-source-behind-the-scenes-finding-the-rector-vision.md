@@ -6,7 +6,6 @@ perex: |
 
 
     I often ask myself: What values should it spread around the world? Where do I take time and money to develop it? How should it scale? How to make it useful to both people and me?
-tweet: "New Post on my Blog: Open-Source Behind The Scenes - Finding the #Rector Vision"
 ---
 
 It's not always easy to work with community feedback, as opinions and needs are often unique, sometimes contradictory. Sometimes clean-code kills growth, sometimes it's the legacy.

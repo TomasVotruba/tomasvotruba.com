@@ -7,8 +7,6 @@ perex: |
 
     Nette documentation is no different. **Today, we'll look at configuring templates and how to use them better and safer**.
 
-tweet: "New Post on #php 🐘 blog: How Dangerous is Your #nettefw Template Assign"
-tweet_image: "/assets/images/posts/2021/override_evil.png"
 ---
 
 ## What is the Main Purpose of Template?

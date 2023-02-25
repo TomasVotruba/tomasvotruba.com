@@ -6,8 +6,6 @@ perex: |
     Skip this post and rather read another one.
 
     But if **you have many configs with manual service registration**, tagging, and autowiring, keep reading. I'll show you how you can convert them easily be new Symplify package.
-tweet: "🐘 New Post on #php blog: How To Convert All Your #Symfony Service Configs to Autodiscovery"
-tweet_image: "/assets/images/posts/2018/autodiscovery/demo.gif"
 
 ---
 

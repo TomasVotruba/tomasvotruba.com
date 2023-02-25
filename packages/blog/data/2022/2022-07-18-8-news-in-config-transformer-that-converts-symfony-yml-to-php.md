@@ -10,7 +10,6 @@ perex: |
 
     That's just the tip of the iceberg. **What are the 5 new features you'll be able to enjoy in the upcoming release**?
 
-tweet_image: "/assets/images/posts/2022/config_trans_after.png"
 ---
 
 ## 1. New Support for Directory Loader

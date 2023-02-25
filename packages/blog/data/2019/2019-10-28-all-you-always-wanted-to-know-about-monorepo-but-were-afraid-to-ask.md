@@ -6,7 +6,6 @@ perex: |
     Do you look for brief source that will answer your questions in simple and understandable manner?
     <br>
     This is it.
-tweet: "New Post on #php 🐘 blog: All You Always Wanted to Know About #Monorepo But Were Afraid To Ask"
 ---
 
 ## What is Monorepo?

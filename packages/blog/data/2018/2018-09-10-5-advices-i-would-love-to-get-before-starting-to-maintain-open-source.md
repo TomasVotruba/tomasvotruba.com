@@ -6,7 +6,6 @@ perex: |
 
 
     They say "experience cannot be passed and it must be experienced" and I agree with that, but still **there are some shortcuts that would speed-up my path to joyful open-source coding** I have today. Here are 5 of them.
-tweet: "New Post on my Blog: 5 Advises I Would Love to Get Before Starting to Maintain #OpenSource    #php #fuckups"
 ---
 
 <img src="/assets/images/posts/2018/advices-open-source/father-son.jpg" class="img-thumbnail">

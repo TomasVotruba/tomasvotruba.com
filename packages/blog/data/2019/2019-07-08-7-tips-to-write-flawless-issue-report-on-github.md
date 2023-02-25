@@ -8,7 +8,6 @@ perex: |
     Do you want to be clear to the maintainer, be understood and resolve your issue quickly?
     Here is how to write.
 
-tweet: "New Post on #php 🐘 blog: 7 Tips to Write Flawless Issue Reports on Github"
 
 updated_since: "November 2020"
 updated_message: |

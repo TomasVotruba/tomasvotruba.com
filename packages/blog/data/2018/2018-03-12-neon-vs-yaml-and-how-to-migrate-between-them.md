@@ -9,8 +9,6 @@ perex: |
 
 
     **You spot the suffix is different, but what about syntax differences? And which one is better?**
-tweet: "New post on my blog: Neon vs. Yaml and How to Migrate Between Them"
-tweet_image: "/assets/images/posts/2018/neon-yaml/standards.png"
 
 
 updated_since: "December 2018"

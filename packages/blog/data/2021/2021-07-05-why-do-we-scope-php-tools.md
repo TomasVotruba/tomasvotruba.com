@@ -10,7 +10,6 @@ perex: |
 
     Do you want to make your tool resistant to any conflict with any project dependencies? Today I'll show you how.
 
-tweet: "New Post on the 🐘 blog: Why do We PHP Scope Tools"
 ---
 
 Let's say you want to install `symplify/monorepo-builder` to any of your projects with composer:

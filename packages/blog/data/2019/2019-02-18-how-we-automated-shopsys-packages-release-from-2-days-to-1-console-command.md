@@ -8,8 +8,6 @@ perex: |
 
     Good news, it's not a single day-task, but this whole process can be automated. Let's me show how we did it in Shopsys.
 
-tweet: "New Post on #php 🐘 blog: How we Automated @shopsysfw Packages Release from 2 days to 1 Console Command     #monorepo #symfony #git #semver #composer #symplify"
-tweet_image: '/assets/images/posts/2019/release/pr.png'
 ---
 
 Monorepo release management has ~~few~~ many gotchas. The one that requires most of your attention I described in [Monorepo Composer Magic](/blog/2019/01/31/monorepo-composer-magic/) post. **1 missed commit or forgotten version change** in `composer.json` of your package and **you've just released a broken package**!

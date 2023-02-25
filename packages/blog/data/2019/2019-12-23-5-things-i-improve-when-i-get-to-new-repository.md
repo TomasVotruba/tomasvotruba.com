@@ -7,7 +7,6 @@ perex: |
     Imagine it like a working desk. But not your usual stable place where you work every day. **Instead, you are assigned to a new desk of a former employee, who worked in the company for 5 years and as a bonus - it was the CTO**. For you, it's a mess.
 
     What is the first thing we do? We'll **prepare it for hard work**.
-tweet: "New Post on #php 🐘 blog: 5 Things I Improve when I Get to new Repository"
 ---
 
 I get to 2-3 new projects/week and during the last couple of years I've noticed **I repeat the same preparing process before work itself**. It makes me much more effective and creates a very intuitive environment to work in.

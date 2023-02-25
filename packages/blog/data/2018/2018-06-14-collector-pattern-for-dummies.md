@@ -9,7 +9,6 @@ perex: |
 
 
     That's why we look on collector pattern in minimalistic plain PHP way today.
-tweet: "New Post on my Blog: Collector Pattern for Dummies"
 ---
 
 Let's say you have a simple `PriceCalculator` class that calculates a price for a product with a VAT:

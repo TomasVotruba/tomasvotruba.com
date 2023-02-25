@@ -7,7 +7,6 @@ perex: |
 
     Here is an idea - **don't merge any pull-request from now on**...
 
-tweet: "New Post on #php 🐘 blog: How We Stopped Merging Pull Requests    #cireview"
 
 updated_since: "February 2021"
 updated_message: "From Kodiak to native [GitHub Auto-merge](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/automatically-merging-a-pull-request)"

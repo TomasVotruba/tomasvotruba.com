@@ -3,9 +3,8 @@ id: 93
 title: "4 Tips To Get Emotions to Your Blogging About Programming"
 perex: |
     Last week I wrote about [top 5 bloghacks](/blog/2018/04/12/the-best-5-of-256-bloghacks-book/) I found in this book.
-    <br>
+
     Today I'll share with you **5 tips that proven useful during my programming/self-education career**.
-tweet: "New Post on My Blog: 4 Tips To Get Emotions to Your Blogging About Programming #empathy #symfony #passion"
 ---
 
 ## 1. Make Your Post Ideas Public

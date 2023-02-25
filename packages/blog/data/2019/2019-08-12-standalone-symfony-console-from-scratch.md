@@ -8,8 +8,6 @@ perex: |
 
     Why? You **only create Application class, add 1 Command class, and you are ready to go**.
 
-tweet: "New Post on my Blog: Standalone #symfony Console from the Scratch"
-tweet_image: "/assets/images/posts/2019/symfony_console_standalone.png"
 
 updated_since: "June 2020"
 updated_message: |

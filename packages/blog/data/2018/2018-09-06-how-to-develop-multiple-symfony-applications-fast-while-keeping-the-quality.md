@@ -7,8 +7,6 @@ perex: |
 
 
     **Today I'll show you how to maintain speed while keeping the maintenance cost low**.
-tweet: "New Post on my Blog: How to Develop Multiple #Symfony Applications Fast while Keeping the Quality  #git"
-tweet_image: "/assets/images/posts/2018/multi-symfony/replace.png"
 ---
 
 This idea came originally from tech companies with large code bases and constantly growing products:

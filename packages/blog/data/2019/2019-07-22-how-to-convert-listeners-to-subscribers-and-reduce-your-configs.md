@@ -7,7 +7,6 @@ perex: |
     To my surprise, **none of the comments shown that listener beats subscriber**.<br>
     But what can you do, if you'd like to try subscribers, but currently have over 100 listeners in your application?
 
-tweet: "New Post on the #php 🐘 blog: How to Convert Listeners to Subscribers and Reduce your Configs          #symfony @rectorphp"
 
 updated_since: "August 2020"
 updated_message: |

@@ -8,7 +8,6 @@ perex: |
     Today we'll upgrade them all. Is it a simple constant to enum replace? Surprisingly, there are **few blind paths we have to be aware of**.
 
 # image by Gary https://unsplash.com/photos/J8sh37XZ8ww
-tweet_image: "/assets/images/posts/2022/pitfalls.jpg"
 ---
 
 ## The MyClabs or Spatie Early Access

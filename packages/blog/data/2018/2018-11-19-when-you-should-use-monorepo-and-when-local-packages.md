@@ -6,7 +6,6 @@ perex: |
 
 
     Before monorepo hype takes over private PHP projects, I think **you should know about its limits**: When is the best time for you to go monorepo? When you gain less complexity while integrating it? How can you make the transition better? Is it really needed?
-tweet: "New Post on My Blog: When You Should Use #Monorepo and When Local Packages    #maturity #transition #balls @LekarnaNovinky #lekarnacz"
 ---
 
 Today we'll not focus on open-source projects, but **rather on your private code**. All from point of **timing and transition**. Let me show you the architecture that [Lekarna.cz](https://www.lekarna.cz) uses to this day and how did we get there despite very chaotic start.

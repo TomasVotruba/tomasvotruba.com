@@ -10,8 +10,6 @@ perex: |
 
     In the spirit of [thesis, antithesis, and synthesis](https://link.springer.com/referenceworkentry/10.1007%2F978-1-4020-8265-8_200183) philosophy, today, we'll combine both parts. We'll look for a solution to the original question: **How can we build Kernel in Console Application without the Http burden?**
 
-tweet: "New Post on the 🐘 blog: Introducing Light Kernel for #Symfony Console Apps"
-tweet_image: "/assets/images/posts/2021/ecs_light_commit.png"
 ---
 
 <div class="card border-warning mt-4">

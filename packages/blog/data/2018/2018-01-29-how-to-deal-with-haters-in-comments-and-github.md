@@ -3,8 +3,6 @@ id: 74
 title: "How to Deal With Haters in Comments and Github"
 perex: |
     That's what I was asked yesterday for about 5th person already. How do I deal with that when I write an article, when I tweet or comment on Github and someone is throwing dirt on me?
-tweet: "New post on my blog: How to Deal With #Haters in Comments and #Github #compassion #communication"
-tweet_image: "/assets/images/posts/2017/feedback/feedback.jpg"
 ---
 
 I learned this process while being a maintainer of [ApiGen](/blog/2017/09/04/how-apigen-survived-its-own-death/) for 1 year and then 6 months again, where I got to dozens of online-hate-wars and found that it leads nowhere.

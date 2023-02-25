@@ -4,7 +4,6 @@ title: "New in Symplify 9: Markdown Diff"
 perex: |
     When we maintain a package docs or generate documentation in Markdown, we write a code snippet from time to time.
     The clearest way to show what you exactly mean is a diff. That's why diff is used in GitHub commit suggestions.
-tweet: "New Post on #php 🐘 blog: New in #Symplify 9: Markdown Diff"
 ---
 
 <blockquote class="blockquote text-center">

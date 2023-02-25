@@ -5,8 +5,6 @@ perex: |
     Would you like to **understand parallel in PHP apps**?
     <br>
     Do you have just **60 seconds**?
-tweet: "New Post on the 🐘 blog: Parallel in PHP for Dummies? Cooking a Family Dinner"
-tweet_image: "/assets/images/posts/2021/dinner_cooking.jpg"
 ---
 
 Imagine you're cooking dinner for your family, and you **miss 4 ingredients** to make the meal tasty.

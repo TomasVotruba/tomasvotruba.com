@@ -102,7 +102,9 @@
 
     <div class="card card-bigger mb-5">
         <div class="card-body pb-2">
-            <x-markdown>{{ $post->getPerex() }}</x-markdown>
+            <x-markdown>
+                {{ $post->getPerex() }}
+            </x-markdown>
         </div>
     </div>
 

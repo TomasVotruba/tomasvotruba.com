@@ -7,7 +7,6 @@ perex: |
 
 
     What then? Switch framework or rewrite? But what if all you need is to **switch single pattern**?
-tweet: "New Post on #php 🐘 blog: How to turn #Laravel from Static to Dependency Injection in one Day"
 
 updated_since: "November 2020"
 updated_message: |

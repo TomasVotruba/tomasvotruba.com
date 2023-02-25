@@ -7,8 +7,6 @@ perex: |
 
     I gave feedback on Jobs.cz, Skrz.cz and few more ads and this is **summary of tips, which I want to share with every company trying to hire programmer**.
 
-tweet: "How to write job advertisement every programmer will read? #php #job #copywriting"
-tweet_image: "/assets/images/posts/2017/job-offers/attitude.jpg"
 ---
 
 

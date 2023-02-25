@@ -4,8 +4,6 @@ title: "Symplify Monorepo&nbsp;Builder Split - Fractal of Bad&nbsp;Design"
 perex: |
     Splitting monorepo is a trivial operation of getting some code to some repository. Unless your take into rocket science like Symplify does. It is slow, complicated, and doesn't work on GitHub, where the open-source lives.
 
-tweet: "New Post on #php 🐘 blog: Symplify Monorepo Builder Split - Fractal of Bad Design"
-tweet_image: "/assets/images/posts/2020/symplify_monorepo_split.jpg"
 ---
 
 ## 1. It's Super Slow

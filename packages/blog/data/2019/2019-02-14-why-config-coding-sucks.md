@@ -6,8 +6,6 @@ perex: |
 
 
     One of the biggest evils is *config coding*. **How it can hurt you and how get rid of it**?
-tweet: 'New Post on my  🐘 #php blog: Why Config Coding Sucks  #symfony #nettefw #laravel'
-tweet_image: '/assets/images/posts/2019/config-evil/rename.gif'
 ---
 
 Many frameworks propagate config coding over PHP code. It's cool, it's easy to type, short and we have a feeling we learned something new.

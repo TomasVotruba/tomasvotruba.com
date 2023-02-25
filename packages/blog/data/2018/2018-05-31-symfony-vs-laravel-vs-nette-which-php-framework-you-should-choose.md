@@ -6,8 +6,6 @@ perex: |
 
 
     Today, we look on the answer.
-tweet: "New Post on my Blog: #symfony vs #laravel vs #nettefw - Which PHP Framework Should You Choose #php #community"
-tweet_image: "/assets/images/posts/2018/frameworks/community.jpg"
 ---
 
 ## So Which PHP Framework is the Silver Bullet?

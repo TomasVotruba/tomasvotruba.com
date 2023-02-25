@@ -7,8 +7,6 @@ perex: |
     The problem is, your readers see that as *the best practise*... did you know the Earth is flat?
 
     How to prevent that and keep your content quality high?
-tweet: "New post on my #php blog: IT Bloggers, Version Your Posts to Stop Spreading Legacy #mattstauffer #stackoverflow #symfony"
-tweet_image: "/assets/images/posts/2018/version-blog/symfony-warning.png"
 ---
 
 ## The *Long-Tail* Effect...

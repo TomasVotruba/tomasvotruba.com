@@ -9,7 +9,6 @@ perex: |
 
 
     I never did. Today I will show you <strong>why I see monorepo approach in open-source so awesome</strong>.
-tweet: "How #symfony and #laravel can manage so many packages with ease? #composerPHP #monolith #php"
 ---
 
 If you don't have 50 minutes to watch the talk (my case), here are **[40 slides](https://speakerdeck.com/fabpot/a-monorepo-vs-manyrepos)** from it.

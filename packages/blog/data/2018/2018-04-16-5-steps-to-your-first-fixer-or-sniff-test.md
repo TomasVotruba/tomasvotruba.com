@@ -9,8 +9,6 @@ perex: |
 
 
     **Since I use both of them and I want to motivate people to write their own sniffs and fixers, I turned this barrier to just 5 short steps** for both of them.
-tweet: "New post on my blog: 5 Steps to Your First Fixer or Sniff Test #php #codingstandard #phpcodesniffer #phpcsfixer #phpunit"
-tweet_image: "/assets/images/posts/2018/ecs-tester/test-case.png"
 ---
 
 Imagine you have a `LowerBoolConstantsFixer` that fixes all uppercase bool constants to lowercase ones:

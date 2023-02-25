@@ -6,7 +6,6 @@ perex: |
 
 
     And now there is a **tool that will handle these steps for you**.
-tweet: "New Post on my Blog: New in Symplify 5: Create, Merge and Split #Monorepo with 1 Command"
 
 updated_since: "December 2020"
 updated_message: |

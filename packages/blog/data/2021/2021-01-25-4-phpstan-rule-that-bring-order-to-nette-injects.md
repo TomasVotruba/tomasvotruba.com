@@ -6,7 +6,6 @@ perex: |
 
     If you do, you probably have some internal rules where what and how to use them and where to avoid them. But how do you keep order?
 
-tweet: "New Post on #php 🐘 blog: 4 PHPStan Rules that Bring Order to #nettefw Injects"
 ---
 
 If you talk about your project's standards that everyone *should* follow, remember the old lazy programmer's saying:

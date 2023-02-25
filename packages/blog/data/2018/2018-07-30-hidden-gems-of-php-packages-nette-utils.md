@@ -6,8 +6,6 @@ perex: |
 
 
     Today we start with [Nette\Utils](https://github.com/nette/utils) package.
-tweet: "New Post on my Blog: Hidden Gems of PHP Packages: Nette\\Utils #nettefw #utils #php #regulars #fails #wtf"
-tweet_image: "/assets/images/posts/2018/nette-utils/warning.png"
 ---
 
 ## Why I Use it

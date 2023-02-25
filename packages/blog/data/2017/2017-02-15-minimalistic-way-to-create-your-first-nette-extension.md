@@ -7,7 +7,6 @@ perex: |
 
     Open-source extensions are more complex using many Nette\DI features, but today I will show you, how to <strong>start with one Nette\DI method and one service only</strong>.
 
-tweet: "How to create your first #nettefw extension? #minimalism #php"
 ---
 
 I consider [Nette Sandbox](https://github.com/nette/sandbox) the best way to show learn any Nette feature. Let's use it.

@@ -6,7 +6,6 @@ perex: |
 
 
     **Rubber ducking. Standard-bias of public behavior. Social learning. Embodied know-how.** Values natural for open-source, yet seen only in high-standard private coding. Why is that? And **how to make your project benefit from these values**?
-tweet: "New Post on my Blog: Why is Your Company Losing Money By Not Open Sourcing 2: Code Quality #symfony #nakedman #rubberducking #psr #fig #github #free"
 ---
 
 ## 1. Cheap Standards vs. Expensive Private Few-Person-Based Solutions

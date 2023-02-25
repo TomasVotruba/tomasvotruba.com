@@ -7,7 +7,6 @@ perex: |
 
 
     Today I will show you what code can you drop and how to migrate it.
-tweet: "Learn new  🐘 hack: How to refactor to new #symfony 3.3 DI features? #examples #php #yaml #tool"
 ---
 
 ## What is New?

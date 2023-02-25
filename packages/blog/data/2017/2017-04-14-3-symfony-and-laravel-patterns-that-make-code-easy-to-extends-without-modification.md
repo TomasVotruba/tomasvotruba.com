@@ -7,7 +7,6 @@ perex: |
     You can add them and increase project complexity or deny them and increase people's frustration. Both sucks for somebody. I prefer win-win situations: <strong>keep complexity low and add new features</strong>.
 
     Magic? No, <strong>just patterns</strong>! Today we look on 3 of them I found and fond in Symfony and Laravel world.
-tweet: "3 #symfony and #laravel patterns to make your code #SOLID #php"
 ---
 
 

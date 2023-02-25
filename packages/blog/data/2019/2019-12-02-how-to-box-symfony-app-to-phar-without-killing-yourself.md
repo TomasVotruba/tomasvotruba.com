@@ -7,7 +7,6 @@ perex: |
 
 
     **But what if** you use Symfony Dependency Injection with PSR-4 **autodiscovery** like [Rector](https://github.com/rectorphp/rector) does? Well, better be ready for **nasty traps**.
-tweet: "New Post on #php 🐘 blog: How to Box #Symfony App to PHAR without Killing Yourself"
 ---
 
 *Note: all these tips take 5 minutes to apply (in total), but took us ~6 hours to discover. I'd like to thank Jan Linhart from Mautic, Kerrial Becket Newham and Ivan Kvasnica for cooperation that made [this happen](https://github.com/rectorphp/rector/pull/2373).*

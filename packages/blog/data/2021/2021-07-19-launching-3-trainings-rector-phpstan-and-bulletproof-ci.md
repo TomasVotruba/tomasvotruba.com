@@ -9,7 +9,6 @@ perex: |
 
 
     What if there was someone to pull you through the steep learning curve?
-tweet: "New Post on the 🐘 blog: Improve your Rector, PHPStan and CI Skills with 3 New Trainings"
 ---
 
 I believe code automation has been changing the world as we know it. From automated deploys, through coding with CI, to self-repairing systems and GitHub Co-Pilot working for you.

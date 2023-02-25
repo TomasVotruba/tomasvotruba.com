@@ -11,8 +11,6 @@ perex: |
 
     Was it worth it? Hell yea!
 
-tweet: "New Post on #php 🐘 blog: New in #Symplify 9: PHPStan Rules - More than 110"
-tweet_image: "/assets/images/posts/2020/phpstan-rules-sets.png"
 ---
 
 That's how we grew from 20 rules to 110 PHPStan Rules in ~3 months. I'd say we are barely **scratching the surface of what CI can handle** for us in code-reviews, but 110 rules is a solid base to start from.

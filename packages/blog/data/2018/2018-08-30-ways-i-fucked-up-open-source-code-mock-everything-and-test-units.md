@@ -5,7 +5,6 @@ perex: |
     In a normal job, decisions are made by those above you. They pay you and when it goes down, you leave in 2 months. Open-source code is different because **you're the one making choices but also the one who deals with results when it fails**. Moreover, if you love the project and want to spend years with it.
 
     Today I'll show you one of my many fuckups - let's mock units!
-tweet: "Ways I Fucked Up #opensource Code: Mock Everything and Test Units #php #phpunit #mocking #failfastfailsafe #learning"
 ---
 
 I was using [ApiGen](https://github.com/apigen/apigen) back in 2014. I had no commit for past 2 years so no surprise it didn't work for PHP 5.5+. I was young inexperienced... *a complainer* in that time, so I created issues and I blamed every contributor for creating such a bad project.

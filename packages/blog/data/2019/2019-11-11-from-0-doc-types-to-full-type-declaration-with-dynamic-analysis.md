@@ -8,8 +8,6 @@ perex: |
 
     Are these projects lost? Do you have to quit them? And what if the annotations are lying?
 
-tweet: "New Post on #php 🐘 blog: From 0 Doc Types to Full Type Declaration with Dynamic Analysis - Thank you @DaveLiddament for injecting the idea to my head"
-tweet_image: "/assets/images/posts/2019/dynamic-analysis/probe.png"
 
 updated_since: "August 2020"
 updated_message: |

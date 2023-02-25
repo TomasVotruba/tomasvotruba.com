@@ -5,7 +5,6 @@ perex: |
     After extensive cooperation with [David Grudl on Nette\CodingStandard](https://twitter.com/geekovo/status/885152407948333056) ECS got new features with **focus on developer experience**. Smart experience.
 
     Prepared configs, reduction of config to few lines, `--config` option and more.
-tweet: "7 New Features in Easy Coding Standard #codingStandard #php #solid"
 
 updated_since: "November 2020"
 updated_message: |

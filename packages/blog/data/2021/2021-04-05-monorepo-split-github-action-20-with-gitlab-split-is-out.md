@@ -9,8 +9,6 @@ perex: |
 
     **How to use it with GitLab split repositories and custom git hosting?**
 
-tweet: "New Post on #php 🐘 blog: Monorepo Split GitHub Action 2.0 with Gitlab split is Out!"
-tweet_image: "/assets/images/posts/2021/split_news.png"
 ---
 
 <img src="/assets/images/posts/2021/split_news.png" class="img-thumbnail">

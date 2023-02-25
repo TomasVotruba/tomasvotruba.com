@@ -9,7 +9,6 @@ perex: |
 
 
     **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
-tweet: "New Post on my Blog: How to Migrate From #PHP_CodeSniffer to ECS in 7 Step #ecs #codingstandard #ci"
 
 updated_since: "November 2020"
 updated_message: |

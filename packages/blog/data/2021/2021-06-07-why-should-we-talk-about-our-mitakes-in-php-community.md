@@ -10,8 +10,6 @@ perex: |
 
     But what if we promote technology in a post, and that post is still out there? Readers learn from it and follow the path, even though we know it's two years old and a blind road to station frustration. What then?
 
-tweet: "New Post on 🐘 blog: Why Should We Talk about Our Mistakes in #PHP Community?"
-tweet_image: "https://user-images.githubusercontent.com/924196/121019604-e1fb4380-c79f-11eb-95ec-3ca5a77b8598.png"
 ---
 
 <blockquote class="blockquote text-center">

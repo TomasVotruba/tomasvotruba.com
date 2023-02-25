@@ -7,7 +7,6 @@ perex: |
 
 
     With all this power and utils having our back, we can see templates as the next low-hanging fruit that needs our attention.
-tweet: "New Post on the 🐘 blog: STAMP - Static Analysis of Templates     #phpstan #twig #nettefw #latte"
 ---
 
 Are you hungry? I hope so. Let's cook some dinner for our whole family.

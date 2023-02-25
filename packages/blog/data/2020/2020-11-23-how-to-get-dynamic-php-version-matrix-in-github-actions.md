@@ -9,8 +9,6 @@ perex: |
     But PHP is released every year. The version constraints are already defined in `composer.json`.
     Hmm, how could we use this knowledge to provide a list of PHP version for a dynamic matrix?
 
-tweet: "New Post on #php 🐘 blog: How to make a Dynamic PHP Version Matrix in GitHub Actions"
-tweet_image: "/assets/images/posts/2020/php-json-useless.png"
 
 deprecated_since: "September 2022"
 deprecated_message: |

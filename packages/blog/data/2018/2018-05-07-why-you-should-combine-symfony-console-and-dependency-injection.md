@@ -4,10 +4,8 @@ title: "Why You Should Combine Symfony Console and Dependency Injection"
 perex: |
     I saw 2 links to Symfony\Console in [today's Week of Symfony](http://symfony.com/blog/a-week-of-symfony-592-30-april-6-may-2018) (what a time reference, huh?).
     There are plenty of such posts out there, even in Pehapkari community blog: [Best Practice for Symfony Console in Nette](https://pehapkari.cz/blog/2017/06/02/best-practice-for-symfony-console-in-nette) or [Symfony Console from the Scratch](/blog/2019/08/12/standalone-symfony-console-from-scratch/).
-    <br>
+
     But nobody seems to write about **the greatest bottleneck of Console applications - static cancer**. Why is that?
-tweet: "A new post on my blog: Why You Should Combine Symfony Console and Dependency Injection"
-tweet_image: "/assets/images/posts/2018/cli-app-di/cli-app-di.png"
 ---
 
 ## 1. Current Status in PHP Console Applications
