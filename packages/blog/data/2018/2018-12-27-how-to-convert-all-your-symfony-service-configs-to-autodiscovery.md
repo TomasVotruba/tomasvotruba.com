@@ -9,9 +9,6 @@ perex: |
 tweet: "🐘 New Post on #php blog: How To Convert All Your #Symfony Service Configs to Autodiscovery"
 tweet_image: "/assets/images/posts/2018/autodiscovery/demo.gif"
 
-deprecated_since: "January 2021"
-deprecated_message: |
-    Autodiscovery package was deprecated, because Symfony is moving towards [united PHP configs](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/). They make more sense and use united syntax in Kernel, Extension and configs. Use PHP configs with configurators instead.
 ---
 
 I've been consulting a few Symfony e-commerce projects recently that all have `service.yml`. Big configs with manual service registration:
