@@ -3,10 +3,11 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Str;
+use TomasVotruba\PunchCard\CacheConfig;
 
-return [
-    'default' => env('CACHE_DRIVER', 'file'),
-    'stores' => [
+return CacheConfig::make()
+    ->default(env('CACHE_DRIVER', 'file'))
+    ->stores([
         'array' => [
             'driver' => 'array',
             'serialize' => false,
@@ -15,7 +16,6 @@ return [
             'driver' => 'file',
             'path' => storage_path('framework/cache/data'),
         ],
-    ],
-
-    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_cache_'),
-];
+    ])
+    ->prefix(env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_cache_'))
+    ->toArray();
