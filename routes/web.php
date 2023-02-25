@@ -33,7 +33,9 @@ Route::get('/blog/{slug}', PostController::class)
 Route::get('/blog', BlogController::class)
     ->name(RouteName::BLOG);
 
-Route::get('/rss', RssController::class)
+Route::get('/rss', RssController::class);
+
+Route::get('/rss.xml', RssController::class)
     ->name(RouteName::RSS);
 
 Route::get('/contact', ContactController::class)
