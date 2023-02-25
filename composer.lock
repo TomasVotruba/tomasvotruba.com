@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86a01fb3da82ec190881cef41f018b57",
+    "content-hash": "90b9ef0040a00246c856f9e1031e76f5",
     "packages": [
         {
             "name": "brick/math",
@@ -606,24 +606,24 @@
         },
         {
             "name": "graham-campbell/result-type",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Result-Type.git",
-                "reference": "a878d45c1914464426dc94da61c9e1d36ae262a8"
+                "reference": "672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/a878d45c1914464426dc94da61c9e1d36ae262a8",
-                "reference": "a878d45c1914464426dc94da61c9e1d36ae262a8",
+                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831",
+                "reference": "672eff8cf1d6fe1ef09ca0f89c4b287d6a3eb831",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0",
-                "phpoption/phpoption": "^1.9"
+                "phpoption/phpoption": "^1.9.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5.28 || ^9.5.21"
+                "phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
             },
             "type": "library",
             "autoload": {
@@ -652,7 +652,7 @@
             ],
             "support": {
                 "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
-                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.0"
+                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.1"
             },
             "funding": [
                 {
@@ -664,7 +664,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-30T15:56:11+00:00"
+            "time": "2023-02-25T20:23:15+00:00"
         },
         {
             "name": "guzzlehttp/uri-template",
@@ -1902,24 +1902,24 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "dc5ff11e274a90cc1c743f66c9ad700ce50db9ab"
+                "reference": "dd3a383e599f49777d8b628dadbb90cae435b87e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/dc5ff11e274a90cc1c743f66c9ad700ce50db9ab",
-                "reference": "dc5ff11e274a90cc1c743f66c9ad700ce50db9ab",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/dd3a383e599f49777d8b628dadbb90cae435b87e",
+                "reference": "dd3a383e599f49777d8b628dadbb90cae435b87e",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0"
             },
             "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8",
-                "phpunit/phpunit": "^8.5.28 || ^9.5.21"
+                "bamarni/composer-bin-plugin": "^1.8.2",
+                "phpunit/phpunit": "^8.5.32 || ^9.6.3 || ^10.0.12"
             },
             "type": "library",
             "extra": {
@@ -1961,7 +1961,7 @@
             ],
             "support": {
                 "issues": "https://github.com/schmittjoh/php-option/issues",
-                "source": "https://github.com/schmittjoh/php-option/tree/1.9.0"
+                "source": "https://github.com/schmittjoh/php-option/tree/1.9.1"
             },
             "funding": [
                 {
@@ -1973,7 +1973,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-30T15:51:26+00:00"
+            "time": "2023-02-25T19:38:58+00:00"
         },
         {
             "name": "psr/container",
@@ -4944,16 +4944,16 @@
         },
         {
             "name": "tomasvotruba/punchcard",
-            "version": "0.0.1",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/punchcard.git",
-                "reference": "788a6fdfd0d2882b4cfa655895c698d78bec8c9d"
+                "reference": "85692962a06584d086015d776e8d8280c1fbf5fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/punchcard/zipball/788a6fdfd0d2882b4cfa655895c698d78bec8c9d",
-                "reference": "788a6fdfd0d2882b4cfa655895c698d78bec8c9d",
+                "url": "https://api.github.com/repos/TomasVotruba/punchcard/zipball/85692962a06584d086015d776e8d8280c1fbf5fc",
+                "reference": "85692962a06584d086015d776e8d8280c1fbf5fc",
                 "shasum": ""
             },
             "require": {
@@ -4979,7 +4979,7 @@
                 "symplify/phpstan-extensions": "^11.2"
             },
             "bin": [
-                "bin/punchcard.php"
+                "bin/punchcard"
             ],
             "type": "library",
             "autoload": {
@@ -5002,9 +5002,9 @@
             ],
             "support": {
                 "issues": "https://github.com/TomasVotruba/punchcard/issues",
-                "source": "https://github.com/TomasVotruba/punchcard/tree/0.0.1"
+                "source": "https://github.com/TomasVotruba/punchcard/tree/0.0.3"
             },
-            "time": "2023-02-25T11:23:10+00:00"
+            "time": "2023-02-25T20:45:24+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -6523,16 +6523,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.2",
+            "version": "1.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "a2ffec7db373d8da4973d1d62add872db5cd22dd"
+                "reference": "5419375b5891add97dc74be71e6c1c34baaddf64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/a2ffec7db373d8da4973d1d62add872db5cd22dd",
-                "reference": "a2ffec7db373d8da4973d1d62add872db5cd22dd",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/5419375b5891add97dc74be71e6c1c34baaddf64",
+                "reference": "5419375b5891add97dc74be71e6c1c34baaddf64",
                 "shasum": ""
             },
             "require": {
@@ -6562,7 +6562,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.10.2"
+                "source": "https://github.com/phpstan/phpstan/tree/1.10.3"
             },
             "funding": [
                 {
@@ -6578,7 +6578,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-23T14:36:46+00:00"
+            "time": "2023-02-25T14:47:13+00:00"
         },
         {
             "name": "phpstan/phpstan-webmozart-assert",
@@ -7104,12 +7104,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "105747beb9866f1d31bb476a3e9db6f2db1a0540"
+                "reference": "ddf1288090f86c4444257c0d78a7184c0dcdbd14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/105747beb9866f1d31bb476a3e9db6f2db1a0540",
-                "reference": "105747beb9866f1d31bb476a3e9db6f2db1a0540",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/ddf1288090f86c4444257c0d78a7184c0dcdbd14",
+                "reference": "ddf1288090f86c4444257c0d78a7184c0dcdbd14",
                 "shasum": ""
             },
             "require": {
@@ -7152,7 +7152,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-25T02:42:36+00:00"
+            "time": "2023-02-25T18:43:49+00:00"
         },
         {
             "name": "sebastian/cli-parser",
