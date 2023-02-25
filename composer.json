@@ -11,7 +11,7 @@
         "nette/utils": "^3.2",
         "spatie/laravel-markdown": "^2.2",
         "symfony/yaml": "^6.2",
-        "tomasvotruba/punchcard": "^0.0.1"
+        "tomasvotruba/punchcard": "^0.0.3"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.13",
