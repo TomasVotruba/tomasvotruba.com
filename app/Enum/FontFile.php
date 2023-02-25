@@ -11,6 +11,7 @@ final class FontFile
      * @var string
      */
     public const SOURCE_SANS = __DIR__ . '/../../public/assets/fonts/SourceSansPro-Bold.ttf';
+
     /**
      * @var string
      */
