@@ -90,7 +90,9 @@
             </div>
             @if ($post->getUpdatedMessage())
                 <div class="card-body pb-2">
-                    {{ $post->getUpdatedMessage() }}
+                    <x-markdown>
+                        {{ $post->getUpdatedMessage() }}
+                    </x-markdown>
                 </div>
             @endif
         </div>
