@@ -12,7 +12,6 @@ perex: |
 
     Or maybe... **5 minute job**?
 
-tweet: "New Post on #php 🐘 blog: How to Switch from YAML/XML Configs to PHP Today with Symplify"
 tweet_image: "/assets/images/posts/2020/yaml_to_php.png"
 
 updated_since: "June 2021"

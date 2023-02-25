@@ -4,7 +4,6 @@ title: "Do you use PHP_CodeSniffer and PHP&nbsp;CS&nbsp;Fixer PHPStorm Plugin? Y
 perex: |
     People keep asking me about IDE plugins [for Rector](https://www.reddit.com/r/phpstorm/comments/am1qzv/update_phpdoc_comment_action/efqpv8o) and Easy Coding Standard.
     Do you want it too? Do you use one for PHP_CodeSniffer of PHP CS Fixer? Have you ever thought about the benefits and costs of them?
-tweet: "New Post on #php 🐘 blog: Do you use #php_codesniffer and PHP CS Fixer @PHPStorm Plugin? You are Slow and Expensive         #phpcs"
 tweet_image: '/assets/images/posts/2019/plugin/addict.jpg'
 ---
 

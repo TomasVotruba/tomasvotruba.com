@@ -6,7 +6,6 @@ perex: |
 
 
     Don't learn to code. **Learn how to think.**
-tweet: "New post on my #php blog: Don't Learn to Code"
 ---
 
 **Ask more different people on the same topic**. It's very easy to have [confirmation bias](https://en.wikipedia.org/wiki/Confirmation_bias) if you're in a team. In time, everyone tends to think the same and it's very difficult to get creative or critical thinking. Go to [meetup](https://friendsofphp.org) and ask what advantages has Docker in your situation. Go to [reddit](https://www.reddit.com/r/PHP) and ask for other projects that sell tickets online. Go to Slack, [Pehapkari](https://pehapkari.herokuapp.com) or [Symfony](https://symfony.com/slack-invite) one and ask for tips to migrate to Symfony 4.2 and PHP 7.3. There is a huge chance you're not the first who has this idea.

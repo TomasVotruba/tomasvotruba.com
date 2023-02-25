@@ -6,7 +6,6 @@ perex: |
 
 
     Not good enough. **So why you should never use a listener?**
-tweet: "New Post on #php 🐘 blog: Don't Ever use #Symfony Listeners"
 tweet_image: ""
 ---
 

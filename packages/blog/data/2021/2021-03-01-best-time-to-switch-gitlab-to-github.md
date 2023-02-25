@@ -6,7 +6,6 @@ perex: |
 
     I assumed they all were at a similar price layer. After today's call with one of my clients, I've learned about one benefit of GitHub Actions for private projects I didn't consider before. **So much it's worth the switch.**
 
-tweet: "New Post on #php 🐘 blog: The Best Time to Switch @gitlab to @github"
 ---
 
 Let's take typical arguments why Gitlab CI is not better than GitHub, one by one.

@@ -7,7 +7,6 @@ perex: |
 
     But is that ok to show privates to the public?
 
-tweet: "New Post on #php 🐘 blog: Don't Show Your Privates to Public"
 tweet_image: "/assets/images/posts/2020/privates_meme.jpg"
 ---
 

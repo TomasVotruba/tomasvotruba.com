@@ -6,7 +6,6 @@ perex: |
 
 
     What belongs to these 80 % when it comes to Nette-specific code?
-tweet: "New Post on #php 🐘 blog: 4 Ways to Make Your #nettefw Project More Readable"
 ---
 
 Each framework has its documentation. The developers take it and test it in practice, how good the examples stand in real life. Sometimes **the practical experience goes against the documentation primary choice**, like using [dependency injection in Laravel](/blog/2019/03/04/how-to-turn-laravel-from-static-to-dependency-injection-in-one-day/).

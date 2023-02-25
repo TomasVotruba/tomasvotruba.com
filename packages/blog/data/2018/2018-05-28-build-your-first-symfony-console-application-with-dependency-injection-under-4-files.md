@@ -3,9 +3,8 @@ id: 109
 title: "Build Your First Symfony Console Application with Dependency Injection Under 4 Files"
 perex: |
     Series about PHP CLI Apps continues with 3rd part about writing Symfony Console Application with Dependency Injection in the first place. Not last, not second, **but the first**.
-    <br>
+
     Luckily, is easy to start using it and very difficult to
-tweet: "New Post on My Blog: Build Your First #Symfony Console Application with Dependency Injection Under 4 Files #cli #php"
 tweet_image: "/assets/images/posts/2018/console-di/thumbnail.png"
 ---
 

@@ -4,7 +4,6 @@ title: "New in Symplify 5: 3 News in EasyCodingStandard to Smoother Your Experie
 perex: |
     Let's get lazier and lazier.
 
-tweet: "New Post on My Blog: New in #Symplify 5 - 3 News in #EasyCodingStandard to Smoother Your Experience    #php #ecs #phpcsfixer #phpcodesniffer"
 
 updated_since: "August 2020"
 updated_message: |

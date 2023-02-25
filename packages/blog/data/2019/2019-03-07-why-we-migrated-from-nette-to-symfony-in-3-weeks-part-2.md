@@ -6,7 +6,6 @@ perex: |
 
 
     Today we'll look on one of the core reasons for this migration - **escaping to semantic hell**.
-tweet: "New Post on #php 🐘 blog: Why we Migrated from #nettefw to #Symfony in 3 Weeks - Part 2 - Escaping Semantic Hell"
 tweet_image: "/assets/images/posts/2019/nette-to-symfony2/version-hell.png"
 ---
 

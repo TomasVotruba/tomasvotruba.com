@@ -9,7 +9,6 @@ perex: |
 
     That must be easy, right?
 
-tweet: "New Post on #php 🐘 blog: #phpstan Generics for Dummies - With 2 Parents"
 ---
 
 Let's start where we ended last time:

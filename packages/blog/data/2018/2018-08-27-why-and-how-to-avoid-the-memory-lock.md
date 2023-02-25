@@ -6,7 +6,6 @@ perex: |
 
 
     Instead of just closing the door you have to close the door and *that one more thing*. Why is that a bad thing in the code and how to avoid it?
-tweet: "New Post on my Blog: Why and How to Avoid the Memory Lock #cleancode #safecode #php #solid"
 ---
 
 I started [refactoring *easybook* package](https://github.com/javiereguiluz/easybook/pull/185) last week and I found a few interesting snippets there.

@@ -9,7 +9,6 @@ perex: |
 
 
     How to get such feedback?
-tweet: "How to Get the Most Valuable Feedback You Can Ever Have? Only from your @futureme #selfdevelopment #feedback"
 tweet_image: "/assets/images/posts/2017/futureme/example.png"
 ---
 

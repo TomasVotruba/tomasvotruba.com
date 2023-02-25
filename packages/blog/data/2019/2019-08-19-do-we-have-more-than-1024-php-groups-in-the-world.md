@@ -10,7 +10,6 @@ perex: |
 
     Today, it's a much bigger project with over...
 
-tweet: "New Post on My Blog: Do we Have more Than 1024 PHP Groups in The World?     #meet #travelling #phpfamily"
 tweet_image: "/assets/images/posts/2019/friends/preview.png"
 
 deprecated_since: "November 2022"

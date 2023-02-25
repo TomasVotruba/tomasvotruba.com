@@ -7,7 +7,6 @@ perex: |
 
     Today we'll have a little self-reflecting pause in the middle of the 4-post journey. We'll look at the main glue in Symfony Kernel - the Bundle. **Can we find a way to decompose it and use it without Kernel?**
 
-tweet: "New Post on the 🐘 blog: Decomposing Symfony Kernel: What does Minimal Symfony Bundle Do"
 ---
 
 In the previous post, we described the problem: the Symfony Kernel requires a lot of http-related code **that we don't need in command line applications**. We still have to maintain it, require-dev dependencies in production, and handle their downgrade.

@@ -10,7 +10,6 @@ perex: |
 
 
     In this post I will show you <strong>how to work with deprecation messages</strong>.
-tweet: "How to deprecate your code without BC breaks? #php #oss"
 ---
 
 This technique is quite rare to see (apart PHP frameworks). It's very simple to add to your open-source code workflow though - let me convince you.

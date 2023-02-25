@@ -6,7 +6,6 @@ perex: |
 
     A small tip that made my everyday work with CI more colorful.
 
-tweet: "New Post on #php 🐘 blog: How to Add Colors to Continuous Integration Output"
 tweet_image: "/assets/images/posts/2020/ansi_no_mix_colors.png"
 ---
 

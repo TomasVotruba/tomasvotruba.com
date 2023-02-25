@@ -5,7 +5,6 @@ perex: |
     In [Removing Static - There and Back Again](/blog/2019/04/01/removing-static-there-and-back-again/) post we tried looked at anti-patterns in legacy code from a new point of view. It can be static in your code, it can be active record pattern you needed for fast bootstrapping of your idea, it can be moving from the code in controllers to command bus.
 
     **They can be coupled in your code in hundreds of classes. That's a big problem, you might think, but it's only single pattern**.
-tweet: "New Post on #php 🐘 blog: Pattern Refactoring"
 ---
 
 ## Use Your Personal Preferences

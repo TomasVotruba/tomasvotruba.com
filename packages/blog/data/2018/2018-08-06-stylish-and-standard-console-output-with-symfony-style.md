@@ -6,7 +6,6 @@ perex: |
 
 
     It's simple, provides standard and makes your output look like a design from Apple - useful and nice at the same time.
-tweet: "New Post on my Blog: Stylish and Standard Console Output with #Symfony Style"
 ---
 
 We want to **report various states** in PHP CLI Apps. Success message on the finish, errors message in case of failure or just simple note so users know that command is not stuck but working.

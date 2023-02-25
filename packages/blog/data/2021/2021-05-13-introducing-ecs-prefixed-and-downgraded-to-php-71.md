@@ -6,7 +6,6 @@ perex: |
 
 
     How can we **improve your experience while keeping the latest features**?
-tweet: "New Post on #php 🐘 blog: Introducing #ecs Prefixed and Downgrade to PHP 7.1"
 ---
 
 When we try to install ECS with miss conflicting dependency...

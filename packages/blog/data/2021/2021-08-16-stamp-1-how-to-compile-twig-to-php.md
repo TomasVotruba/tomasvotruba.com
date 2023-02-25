@@ -11,7 +11,6 @@ perex: |
 
     The other option is to take it from the other end - convert Twig to PHP.
 
-tweet: "New Post on the 🐘 blog: Stamp #1: How to Compile Twig to PHP"
 tweet_image: "/assets/images/posts/2021/stamp_twig_simple.png"
 ---
 

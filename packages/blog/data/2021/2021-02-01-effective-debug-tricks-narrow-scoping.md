@@ -8,7 +8,6 @@ perex: |
     How hard is reading code that someone else wrote three months ago?
 
     But what about debugging code that someone wrote a year ago?
-tweet: "New Post on #php 🐘 blog: Effective Debug Tricks: Narrow Scoping"
 ---
 
 Effective debugging is not about finding the responsible line, nor about fixing the bug.

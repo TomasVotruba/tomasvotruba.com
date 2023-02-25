@@ -11,7 +11,6 @@ perex: |
 
     Was it worth it? Hell yea!
 
-tweet: "New Post on #php 🐘 blog: New in #Symplify 9: PHPStan Rules - More than 110"
 tweet_image: "/assets/images/posts/2020/phpstan-rules-sets.png"
 ---
 

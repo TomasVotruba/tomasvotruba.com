@@ -8,7 +8,6 @@ perex: |
     I've shared the intro post [on Reddit](https://www.reddit.com/r/PHP/comments/qbwudj/stamp_0_static_analysis_of_templates), that sparked many exciting questions.<br>
     Today we'll answer one of them.
 
-tweet: "New Post on the 🐘 blog: Stamp #5: How do we Know Types of Template Variables"
 ---
 
 <div class="pl-4">

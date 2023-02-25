@@ -7,7 +7,6 @@ perex: |
     That means [faster feedback](/blog/2020/01/13/why-is-first-instant-feedback-crucial-to-developers/) from CI and faster monorepo testing.
 
     Today, we'll look on how to use Composer in Github Actions with monorepo split testing and what to avoid.
-tweet: "New Post on #php 🐘 blog: How to Split Test Monorepo with #composer v2"
 ---
 
 Monorepo split testing is made easier by [`symplify/monorepo-builder` package](https://github.com/symplify/monorepo-builder). This is how it ["works" for Composer 1](/blog/2020/02/10/how-to-test-monorepo-after-split-before-actual-split/). Why "works"? There are 2 problems, that we fix during upgrade to Composer 2.

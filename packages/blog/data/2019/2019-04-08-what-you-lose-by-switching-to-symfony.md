@@ -6,7 +6,6 @@ perex: |
 
     "Ok, we get it, it's simple. But why, what is the gain?"
 
-tweet: "New Post on #php 🐘 blog: What You Lose by Switching to #symfony"
 tweet_image: "/assets/images/posts/2017/symplify-deprecations/pr-notes.png"
 ---
 

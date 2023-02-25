@@ -8,7 +8,6 @@ perex: |
 
     Use it everywhere you can... or not?
 
-tweet: "New Post on #php 🐘 blog: @inject or @required will Get You Any Service Fast     #nettefw #symfony"
 tweet_image: "/assets/images/posts/2020/inject_required_fail.png"
 ---
 

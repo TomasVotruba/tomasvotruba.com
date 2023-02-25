@@ -10,7 +10,6 @@ perex: |
 
     Let's say we need to add `declare(strict_types=1);` to output part of 100 test fixtures? Would you add it manually in every single file?
 
-tweet: "New Post on #php 🐘 blog: How to Update Hundreds of Test Fixtures with Single PHPUnit run"
 tweet_image: "/assets/images/posts/2020/update_tests_example.gif"
 ---
 

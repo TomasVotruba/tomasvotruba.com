@@ -6,7 +6,6 @@ perex: |
 
 
     This post is *the best of* selection just for you and if you feel you like it, you can buy it and read as a whole.
-tweet: "New Post on My Blog: The Best 5 of 256 Bloghacks Book"
 tweet_image: "/assets/images/posts/2018/bloghacks/book.png"
 ---
 

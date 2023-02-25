@@ -3,7 +3,6 @@ id: 82
 title: "Monorepo on the Rise in PHP"
 perex: |
     Do you know what a monorepo is? How to start with it? What you need and do even other programming languages use it? And what about Facebook and Google think about it?
-tweet: "New post on my blog: State of Monorepo in PHP"
 tweet_image: "/assets/images/posts/2018/monorepo/monorepo-website.png"
 ---
 

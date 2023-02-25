@@ -6,7 +6,6 @@ perex: |
 
 
     Let's create first its synapse!
-tweet: "Let AST change code for you #php #phpparser #ast #ai"
 
 updated_since: "October 2022"
 updated_message: "Updated to [php-parser 5](https://github.com/nikic/PHP-Parser/releases/tag/v5.0.0alpha1) syntax."

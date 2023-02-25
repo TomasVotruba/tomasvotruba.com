@@ -9,7 +9,6 @@ perex: |
 
 
     Exceptions are not just error state. **Exceptions are the new documentation**.
-tweet: "New Post on my Blog: 7 Tips to Write #Exceptions Everyone Will Love    #tracy #donotmakemethink #php #exceptions"
 
 updated_since: "November 2020"
 updated_message: |

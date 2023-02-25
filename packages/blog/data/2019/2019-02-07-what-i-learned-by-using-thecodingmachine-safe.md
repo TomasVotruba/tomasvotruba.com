@@ -7,7 +7,6 @@ perex: |
 
       "Good idea", I though, so I tried the package myself in Symplify and Rector.
 
-tweet: "New Post on #php 🐘 blog: What I Learned by Using thecodingmachine/safe #php #phpgems #nettefw #symfony"
 ---
 
 I'm a big fan of [instant personal experience](/blog/2018/12/06/dont-learn-to-code/) over over-thinking. I didn't know if this package would be useful for me, so I tried it. My code is different from yours, so your experience might be different.

@@ -10,7 +10,6 @@ perex: |
 
     After we cut the low-hanging fruit, we discovered the same way are skipped all *callable* types. How to deal with those?
 
-tweet: "New Post on the 🐘 blog: Get rid of Mixed Callables with PHPStan"
 tweet_image: "/assets/images/posts/2022/mixed_callable_rule.png"
 ---
 

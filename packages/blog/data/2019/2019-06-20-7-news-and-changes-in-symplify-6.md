@@ -5,7 +5,6 @@ perex: |
     Do you use Easy Coding Standard, Package Builder or Statie? Do you need to upgrade safely? **Do you want to benefit from new features?**
 
     This post shows 7 news and changes, that might affect you (in a good way).
-tweet: "New Post on #php 🐘 blog: 7 News and Changes in #symplify 6  #ecs"
 
 updated_since: "November 2020"
 updated_message: |

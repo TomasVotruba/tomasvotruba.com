@@ -7,7 +7,6 @@ perex: |
 
     But when it comes to dispatching events, you can choose from 4 different ways. Which one to choose and why? Today I will show you pros and cons of them to make it easier for you.
 
-tweet: "New Post on #php 🐘 blog: The Bulletproof Event Naming For #Symfony Event Dispatcher"
 
 updated_since: "May 2020"
 updated_message: "Updated with Symfony 4.3 syntax, that supports class-name events out of the box."

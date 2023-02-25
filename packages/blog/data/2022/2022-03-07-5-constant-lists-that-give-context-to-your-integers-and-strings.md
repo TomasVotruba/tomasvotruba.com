@@ -9,7 +9,6 @@ perex: |
 
     Today we look at 5 constant lists that you can use today to replace that `int` or `string` and give it a context.
 
-tweet: "New Post on the 🐘 blog: 5 Constant Lists That Give Context to your Integers and Strings        #nettefw #symfony #php"
 tweet_image: /assets/images/posts/2022/kernel_events_usage.png
 ---
 

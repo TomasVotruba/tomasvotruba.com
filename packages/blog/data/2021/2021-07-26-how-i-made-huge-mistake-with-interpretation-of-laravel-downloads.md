@@ -7,7 +7,6 @@ perex: |
 
     Also, monorepo and split packages downloads lead to a problem when one monorepo download has hidden 10-30 package downloads. **There is no way to detect what packages are downloaded or used exactly**, so [this project should be stopped to avoid showing miss-leading](/blog/2020/03/09/art-of-letting-go/) data far from reality.
 
-tweet: "New Post on the 🐘 blog: How I made Huge Mistake with Interpretation of Laravel Downloads"
 ---
 
 This project had some controversial feedback, mainly because the numbers put some frameworks into a lower position than framework communities expected.

@@ -7,7 +7,6 @@ perex: |
 
     [In the previous post we upgraded Coding Standard from Sniffs to PHPStan](/blog/2020/05/04/how-to-upgrade-to-symplify-8-from-sniffs-to-phpstan-rules/). Today we finish with 2nd half - **from Fixers to Rector rules**.
 
-tweet: "New Post on #php 🐘 blog: How to Upgrade to #symplify 8 - From Fixer to @rectorphp Rules"
 
 updated_since: "December 2021"
 updated_message: |

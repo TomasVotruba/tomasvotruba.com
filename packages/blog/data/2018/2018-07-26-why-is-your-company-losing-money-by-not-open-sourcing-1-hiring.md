@@ -8,7 +8,6 @@ perex: |
     Go Open-source!
 
     Did you miss my talk on [PHPPrague 2018](https://phpprague.cz) Conference about this topic? Read this post.
-tweet: "New Post on my Blog: Why is Your Company Losing Money by not #OpenSourcing: 1. Hiring #hr"
 tweet_image: "/assets/images/posts/2018/open-source-money/contributors.gif"
 ---
 

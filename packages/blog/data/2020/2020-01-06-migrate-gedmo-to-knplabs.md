@@ -12,7 +12,6 @@ perex: |
 
     **I'll show you how you can migrate Gedmo to KnpLabs**.
 
-tweet: "New Post on #php 🐘 blog: Migrate Gedmo to KnpLabs"
 
 updated_since: "November 2022"
 updated_message: |

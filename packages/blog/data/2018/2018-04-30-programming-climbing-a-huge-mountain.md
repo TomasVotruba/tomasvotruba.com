@@ -6,7 +6,6 @@ perex: |
 
 
     Today we'll climb together.
-tweet: "New Post on #lazyprogrammer Blog: Program Like Your Climb a Huge Mountain #craftsmanship"
 tweet_image: "/assets/images/posts/2018/climb/climb-7.jpg"
 ---
 

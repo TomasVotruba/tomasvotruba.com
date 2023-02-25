@@ -7,7 +7,6 @@ perex: |
 
     But most of our code is not just plain PHP. **It's framework-locked PHP**. How is framework adoption?
 
-tweet: "New Post on #php 🐘 blog: Symfony 4.2 is used 2 times More than #symfony 3.4 ... Includes also #laravel #zend #yii #nettefw and #cakephp download stats by version"
 ---
 
 <div class="alert alert-success mt-3">

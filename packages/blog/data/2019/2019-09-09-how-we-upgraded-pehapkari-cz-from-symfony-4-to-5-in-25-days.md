@@ -6,7 +6,6 @@ perex: |
 
     Well, that's what we thought. **Were we right or wrong?**
 
-tweet: "New Post my Blog: How we Upgraded Pehapkari.cz from #symfony 4 to 5 in 25 days"
 tweet_image: "/assets/images/posts/2019/symfony5_pr.png"
 
 updated_since: "November 2020"

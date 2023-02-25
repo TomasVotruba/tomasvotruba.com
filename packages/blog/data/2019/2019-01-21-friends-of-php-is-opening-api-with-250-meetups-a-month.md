@@ -6,7 +6,6 @@ perex: |
 
     I spend last weekend adding 4 new sources for meetups... and while doing it, I thought: "why not make all that meetups and groups public in JSON"?
 
-tweet: "New Post on #php 🐘 blog: FriendsofPHP.org is Opening #API with 250 Meetups a Month"
 tweet_image: '/assets/images/posts/2019/fop/fop.png'
 
 deprecated_since: "November 2022"

@@ -12,7 +12,6 @@ perex: |
     <br>
     This post will get you from 0 to padawan in a couple of minutes.
 
-tweet: "New Post on the 🐘 blog: How to Implement Parallel Run in CLI PHP App from a Dummy"
 tweet_image: "/assets/images/posts/2021/parallel_dummy.jpg"
 ---
 

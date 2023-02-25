@@ -10,7 +10,6 @@ perex: |
     <br>
     **"We should remove it,"** he thought, "CI should give fast feedback... or is there another way?"
 
-tweet: "New Post on my Blog: How to Speedup Test Coverage on Travis by 95 %"
 tweet_image: "/assets/images/posts/2019/faster-coverage/coverage_fast.png"
 ---
 

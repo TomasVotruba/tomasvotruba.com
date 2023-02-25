@@ -7,7 +7,6 @@ perex: |
 
     Today I'll show you how to upgrade from `_` to `\\` in few ~~minutes~~ seconds.
 
-tweet: "New Post on #php 🐘 blog: How to Upgrade #twig from Underscored to Namespaces"
 tweet_image: "/assets/images/posts/2019/twig-under/twig-image.png"
 
 updated_since: "November 2020"

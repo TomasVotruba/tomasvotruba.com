@@ -7,7 +7,6 @@ perex: |
 
 
     Now it's much easier to jump from one LTS to another - with **instant upgrades**.
-tweet: "New Post on #php 🐘 blog: How to Upgrade #Symfony 2.8 to 3.4"
 
 updated_since: "November 2020"
 updated_message: |

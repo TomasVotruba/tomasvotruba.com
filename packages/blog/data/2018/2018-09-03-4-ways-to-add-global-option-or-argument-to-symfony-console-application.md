@@ -3,7 +3,6 @@ id: 137
 title: "4 Ways to Add Global Option or Argument to Symfony Console Application"
 perex: |
     I'm working on [ChangelogLinker](https://github.com/symplify/changeloglinker), a package that makes managing `CHANGELOG.md` very easy - it generates it. It a CLI Application with a [3 Console Commands](https://github.com/Symplify/ChangelogLinker/tree/master/src/Console/Command). All was good, until **I needed to add an argument to all commands at once**... and in lazy, extensible, maintainable way.
-tweet: "..."
 ---
 
 Why? Symplify `CHANGELOG.md` was growing and growing, keeping upgrade data about 3 major versions. Then I realized there can be more `CHANGELOG.md` files, right?

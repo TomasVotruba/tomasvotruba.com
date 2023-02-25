@@ -6,7 +6,6 @@ perex: |
 
 
     **How do they stand in 2020? How people use it wrong?** Are they still the best option to keep low complexity in huge projects?
-tweet: "New Post on #php 🐘 blog: Local Packages 3 Years Later"
 ---
 
 Just a reminder: *what are local packages*?

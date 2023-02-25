@@ -7,7 +7,6 @@ perex: |
 
     Why is it a code smell, and how can we avoid it?
 
-tweet: "New Post on #php 🐘 blog: Dependency Juggling Code Smell"
 ---
 
 Because constructor injection has good karma, we automatically assume that everything in `__construct(...)` is correct. That's why we can easily miss it.

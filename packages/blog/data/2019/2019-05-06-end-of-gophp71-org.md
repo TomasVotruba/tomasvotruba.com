@@ -7,7 +7,6 @@ perex: |
     Future is now. There is no need for the initiative now and it's time to [let it go](https://zenhabits.net/letting-go).
     <br>
     **How much did it cost? What was the effect? Was it worth it?** I'll share answers to these question so you know what to expect when you start a similar project. Let's get numberz!
-tweet: "New Post on #php 🐘 blog: End of GoPHP71.org"
 tweet_image: "/assets/images/posts/2019/go-php-die/symfony_pool.png"
 ---
 

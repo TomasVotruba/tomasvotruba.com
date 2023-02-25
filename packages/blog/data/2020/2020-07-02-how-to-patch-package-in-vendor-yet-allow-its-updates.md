@@ -10,7 +10,6 @@ perex: |
 
     Or... you can use "composer patches"?
 
-tweet: "New Post on #php 🐘 blog: How to Patch a Package in Vendor, Yet Allow its Updates"
 ---
 
 I'm currently working on one Nette project as [a cleaning lady](/blog/2020/04/27/forget-complex-migrations-use-cleaning-lady-checklist/). After making code nice & shiny clean, we'll move from Nette 2.4 to Nette 3.0. During the cleaning process, we got into one delicate issue I'd love to share with you.

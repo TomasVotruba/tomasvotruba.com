@@ -8,7 +8,6 @@ perex: |
 
     Which and how can we improve?
 
-tweet: "New Post on #php 🐘 blog: Why is First Instant Feedback Crucial to Developers?"
 ---
 
 ## <Faster|Slow> Reaction → <T>Result

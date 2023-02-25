@@ -9,7 +9,6 @@ perex: |
 
 
     Yes, in code samples :)
-tweet: "New Post on #php 🐘 blog: Switch Travis to GitHub Actions to Reduce Stress."
 ---
 
 In this post, we'll look at examples of migration. I'll share my good and bad times with GitHub Action for my last 3 weeks using it on 5 open-source repositories with over 25 packages.

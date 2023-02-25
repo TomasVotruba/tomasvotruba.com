@@ -9,7 +9,6 @@ perex: |
 
     Today you can!
 
-tweet: "New Post on #php 🐘 blog: Introducing Object Calisthenics Rules for @PHPStan"
 tweet_image: "/assets/images/posts/object_calisthenics_phpstan.jpg"
 ---
 

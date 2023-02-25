@@ -7,7 +7,6 @@ perex: |
 
     **I recently talked with one high-school guy and I realized that college is still seen as something sacred, important and mostly from no other than teachers and parents**. I told myself that I'll write down my insights and advice that I would give my 8 years younger self. **If you are 18-19 years're considering what to do next, go ahead**.
 
-tweet: "7 Tips You Should Know Before Going To University #studying #unschooling #education #eduhacking"
 tweet_image: "/assets/images/posts/2017/university/procrastination.png"
 ---
 

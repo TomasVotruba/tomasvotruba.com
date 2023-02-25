@@ -7,7 +7,6 @@ perex: |
 
     I've started project 2 years ago as a small idea challenge and I'm creating Rector in my free time. I think every Rector rule ever created should be free for everyone and for a that I need your help.
 
-tweet: "New Post on a #php 🐘 blog: Is Rector Saving you Time? Support it on Patreon! → https://www.patreon.com/rectorphp"
 tweet_image: "/assets/images/posts/2019/patreon/rector_and_patreon.png"
 
 updated_since: "May 2021"

@@ -5,7 +5,6 @@ perex: |
     I see too many skilled developers missing `final` in every class they use. So I reposed [When to declare classes final](http://ocramius.github.io/blog/when-to-declare-classes-final) - 4 years old post that shows you *why*. If you should learn just one skill this year, read and learn this one.
 
     It's easier said than done, but the more parents you kill, the better you get at it. Today, we look on 3 effective ways to kill them.
-tweet: "New Post on #php 🐘 blog: How to Kill Parents    #phpstan #solid #final"
 ---
 
 <blockquote class="blockquote text-center mt-5 mb-5" markdown=1>

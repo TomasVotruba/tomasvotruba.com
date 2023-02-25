@@ -6,7 +6,6 @@ perex: |
 
 
     *Psychological Impacts of Polyphasic Sleep* is the topic of my [bachelor thesis](https://is.muni.cz/th/363896/fss_b/Tomas-Votruba-Psychological-Impacts-of-Polyphasic-Sleep.pdf) I wrote in 2012. In the end it gave me clear answer to question: **can we sleep less than 4,5 hours a night to get smarter?**
-tweet: "New post on my blog: Research: How To Sleep Shorter to Get Twice Smarter #polyphasic #sleep #thesis #results"
 tweet_image: "/assets/images/posts/2018/polyphasic/short-term-linear-regression.png"
 ---
 

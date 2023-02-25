@@ -7,7 +7,6 @@ perex: |
 
     Do you have over 5 `create_function()` pieces in your code? Let's see how to migrate them.
 
-tweet: "New Post on my  🐘 #php blog: Function create_function() is Deprecated in #PHP 7.2 - How to Migrate?"
 tweet_image: "/assets/images/posts/2018/create-function/sonic.png"
 
 updated_since: "August 2020"

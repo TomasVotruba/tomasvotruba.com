@@ -4,7 +4,7 @@ title: "Rector: Part 3 - Why Instant Upgrades"
 perex: |
     Why are instant upgrades better than old school *manual upgrades*? Why is the path to find exact before/after like hell-road?
     Why you should use Rector and when?
-todo_tweet: "New post on my blog: "
+
 ---
 
 *Read also:*

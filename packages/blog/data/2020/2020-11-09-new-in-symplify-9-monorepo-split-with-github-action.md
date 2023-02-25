@@ -6,7 +6,6 @@ perex: |
 
     **To simple setup in a single GitHub Action.**
 
-tweet: "New Post on #php 🐘 blog: New in Symplify 9: Monorepo Split With GitHub Action"
 ---
 
 In past years, the `split` command was one of the poorest part of whole Symplify code base. [Here is why](/blog/2020/11/02/symplify-monorepo-builder-split-fractal-of-bad-design/).

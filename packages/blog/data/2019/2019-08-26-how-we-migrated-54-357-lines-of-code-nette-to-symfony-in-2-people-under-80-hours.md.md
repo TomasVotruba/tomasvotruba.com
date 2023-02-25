@@ -4,7 +4,6 @@ title: "How we Migrated 54 357-lines Application from Nette to Symfony in 2 Peop
 perex: |
     It would take us **3 full-time months** to rewrite this code in 2017. In February 2019, we did it **in less than 3 weeks** with the help of automated tools. Why and how?
 
-tweet: "New Post on my Blog: How we Migrated 54 357 Lines of Code from #nettefw to #symfony in 2 People under 80 Hours   #casestudy"
 twee_image: "/assets/images/posts/2019/fw-migration/pull-request.png"
 
 updated_since: "June 2020"

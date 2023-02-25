@@ -7,7 +7,6 @@ perex: |
 
 
     Today we look at *how* we turn **the raw PHP code to the code PHPStan understands**.
-tweet: "New Post on the 🐘 blog: Stamp #2: How to Turn Messy TWIG PHP to Something Useful"
 ---
 
 In the previous post, we successfully ~~rendered~~ compiled `templates/meal.twig` template:

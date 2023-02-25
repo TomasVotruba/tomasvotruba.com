@@ -7,7 +7,6 @@ perex: |
 
     Today, we'll discover the last missing pieces of the puzzle. How to run PHPStan rules in temporarily compiled PHP code.
 
-tweet: "New Post on the 🐘 blog: Stamp #4: How to Run PHPStan Rules on Temporary PHP File"
 tweet_image: "/assets/images/posts/2021/twig_final_example.gif"
 
 updated_since: "November 2021"

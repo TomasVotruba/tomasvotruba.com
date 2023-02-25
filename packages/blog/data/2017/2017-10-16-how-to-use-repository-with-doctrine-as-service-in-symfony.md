@@ -10,7 +10,6 @@ perex: |
 
     The way out from *service locators* to *repository as service* was [described](https://matthiasnoback.nl/2014/05/inject-a-repository-instead-of-an-entity-manager) by many [before](https://medium.com/@adamquaile/composition-over-inheritance-in-doctrine-repositories-f6a53a026f60) and **now we put it into Symfony 3.3 context**.
 
-tweet: "How to use repository with #dotrine in #symfony as #autowired service? #di"
 tweet_image: "/assets/images/posts/2017/repository-as-service/autowire-fail.png"
 
 updated_since: "February 2021"

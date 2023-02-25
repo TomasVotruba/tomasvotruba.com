@@ -12,7 +12,6 @@ updated_message: |
     It does pretty much the same, so package ServiceDefinitionDecorator for Symfony was deprecated.
 
     It is still available [here for inspiration](https://github.com/DeprecatedPackages/ServiceDefinitionDecorator) though.
-tweet: "Why are service tags useless in most of #symfony and #nettefw apps? #di"
 ---
 
 This post is follow up to *[How to Avoid Inject Thanks to Decorator feature in Nette](/blog/2016/12/24/how-to-avoid-inject-thanks-to-decorator-feature-in-nette/)*. Go read it if you missed it.

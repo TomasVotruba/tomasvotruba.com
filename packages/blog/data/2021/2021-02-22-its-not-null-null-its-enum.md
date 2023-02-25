@@ -7,7 +7,6 @@ perex: |
 
     I was wondering how difficult it is to get rid of nullable parameters in a project. I made myself a challenge: **get rid of nullable params over the weekend**. This is what happened.
 
-tweet: "New Post on #php 🐘 blog: It's not Null, it's Enum"
 tweet_image: "/assets/images/posts/2021/priority_enum.gif"
 ---
 

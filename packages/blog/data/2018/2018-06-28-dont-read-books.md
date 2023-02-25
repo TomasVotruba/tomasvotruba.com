@@ -7,7 +7,6 @@ perex: |
     **No, I really don't think we should read books nor feel bad for not reading them**. And now talk about those non-fiction books with the knowledge that readers want to use in their lives.
 
     Do you still think this is sarcasm? Keep on reading.
-tweet: "New Post on my Blog: Don't Read Books #education #books #reading #ai #neuralnetworks"
 tweet_image: "/assets/images/posts/2018/no-books/fahrenheit-book.jpg"
 ---
 

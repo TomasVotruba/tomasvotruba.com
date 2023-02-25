@@ -6,7 +6,6 @@ perex: |
 
 
     **Was it Symfony? Doctrine? PHP or...**
-tweet: "New Post on #php 🐘 blog: Your Most Favorite Posts in 2018 ... and Happy New Year 2019! 🚀 🎆🎆🎆"
 tweet_image: "/assets/images/posts/2018/top-posts/pie.png"
 ---
 

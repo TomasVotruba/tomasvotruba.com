@@ -8,7 +8,6 @@ perex: |
     **The latter takes a huge amount of time**. The time we don't have to spare in 2020.
 
     **How can we make it faster while keeping the test quality high?**
-tweet: "New Post on #php 🐘 blog: How to Test Monorepo After Split Before Actually Split"
 tweet_image: "/assets/images/posts/split_before_split.png"
 ---
 

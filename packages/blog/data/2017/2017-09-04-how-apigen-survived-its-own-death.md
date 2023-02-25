@@ -8,7 +8,6 @@ perex: |
 
     This is story about the whole journey of ups and downs.
 
-tweet: "How ApiGen Survived its Death #php #apigen #phpdoc #teamwork"
 tweet_image: "/assets/images/posts/2017/apigen-revival/apigen.png"
 
 updated_since: "December 2018"

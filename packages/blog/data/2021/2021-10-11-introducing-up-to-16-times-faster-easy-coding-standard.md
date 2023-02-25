@@ -10,7 +10,6 @@ perex: |
 
     Today, we're sharing the ECS Parallel run with the public, so you **can cut down ECS run times from minutes to seconds**.
 
-tweet: "New Post on the 🐘 blog: Introducing up-to 16-Times Faster Easy Coding Standard"
 tweet_image: "/assets/images/posts/2021/ecs_before_now.png"
 ---
 

@@ -7,7 +7,6 @@ perex: |
 
     In the past, we used singletons and static calls to get anything anywhere instantly. But soon, we got into the circular references trap. Now **we moved to dependency injection** and this problem does not exist anymore... or does it?
 
-tweet: "New Post on #php 🐘 blog: Tree Coding vs. Bush Coding"
 ---
 
 With dependency injection, dependencies grow naturally into the form of a tree:

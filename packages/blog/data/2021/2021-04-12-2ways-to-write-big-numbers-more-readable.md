@@ -7,7 +7,6 @@ perex: |
 
     **There are two ways to make big numbers more readable**. Instant and easy ways that I found mostly by accident. We use them both in one big project, and it makes our daily number work so much easier I want to share them with you.
 
-tweet: "New Post on #php 🐘 blog: 2 Ways to Write Big Numbers more Readable"
 ---
 
 ## 1. Context-Aware Spaces

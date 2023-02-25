@@ -11,7 +11,6 @@ perex: |
 
     What if we can **find the naked unit tests** and run them today by ourselves?
 
-tweet: "New Post on the 🐘 blog: How to Run Naked Unit Test in a New Legacy Project"
 ---
 
 <div class="card border-warning mt-4">

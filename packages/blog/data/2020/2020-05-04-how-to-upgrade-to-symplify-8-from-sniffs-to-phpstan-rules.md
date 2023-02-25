@@ -5,7 +5,6 @@ perex: |
     Since Symplify 7.3, you might notice a few deprecation notices in your coding standards. As Symplify 8 release is [synced with Symfony cycle](/blog/2017/10/30/what-can-you-learn-from-menstruation-and-symfony-releases/), both will be released at the end of May.
 
     What to do with these deprecations? Why were these sniffs dropped? How to handle upgrades in 1 hour?
-tweet: "New Post on #php 🐘 blog: How to Upgrade to #symplify 8 - From Sniffs to #phpstan Rules"
 
 updated_since: "August 2020"
 updated_message: |

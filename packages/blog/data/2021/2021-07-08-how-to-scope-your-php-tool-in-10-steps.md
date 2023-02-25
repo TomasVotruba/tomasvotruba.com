@@ -10,7 +10,6 @@ perex: |
 
     **Do you maintain a PHP tool that runs in the command line**? Today we'll look at 10 steps on how you can scope it too.
 
-tweet: "New Post on the 🐘 blog: How to Scope Your PHP Tool in 10 Steps"
 ---
 
 ## 1. Add php-scoper

@@ -8,7 +8,6 @@ perex: |
 
     Just now, the code smell is too smelly to ignore.
 
-tweet: "New Post on #php 🐘 blog: How to Never Forget #symfony Config Options Again"
 tweet_image: "https://user-images.githubusercontent.com/924196/110403041-b8d1f680-807c-11eb-9767-ddf6a8631594.png"
 ---
 

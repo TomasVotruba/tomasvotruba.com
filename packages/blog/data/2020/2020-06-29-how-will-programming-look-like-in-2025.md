@@ -8,7 +8,6 @@ perex: |
 
     I'm just finishing the reading of [The Inevitable](https://www.amazon.com/The-Inevitable-Kevin-Kelly-audiobook/dp/B01EB3OR32), written by Wired magazine founder, that focuses solely on the future. Inspired by this book, today, **we look at the future of programming**.
 
-tweet: "New Post on #php 🐘 blog: How Will Programming look like in 2025?"
 tweet_image: "/assets/images/posts/2020/how_will_2025.png"
 ---
 

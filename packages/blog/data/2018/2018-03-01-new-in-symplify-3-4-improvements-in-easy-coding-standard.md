@@ -4,12 +4,12 @@ title: "New in Symplify&nbsp;3: 4&nbsp;Improvements in EasyCodingStandard"
 perex: |
     What is new in Easy Coding Standard 3?
     Nice diffs for fixable sniffs, smart excluding, support for sniff warnings and one more...
-tweet: "New post on my blog: New in Symplify 3: 4 Improvements in EasyCodingStandard #codingstandard php"
 tweet_image: "/assets/images/posts/2018/symplify-3-ecs/exclude-files.png"
 
 updated_since: "August 2020"
 updated_message: |
-    Updated with **ECS 5**, Neon to YAML migration and new simplified `skip` parameter syntax.<br>
+    Updated with **ECS 5**, Neon to YAML migration and new simplified `skip` parameter syntax.
+
     Updated ECS YAML to PHP configuration since **ECS 8**.
 ---
 

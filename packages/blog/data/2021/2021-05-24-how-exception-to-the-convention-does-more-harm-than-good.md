@@ -7,7 +7,6 @@ perex: |
 
     But sometimes, we get to a situation when these standards are stressful. We don't understand them and just want them to bend over. How does our short-term need for pleasure affects **long-term well-being** of the project?
 
-tweet: "New Post on #php 🐘 blog: How Exceptions for Conventions Do More Harm than Good"
 tweet_image: "https://user-images.githubusercontent.com/924196/120189092-338f5580-c217-11eb-86f4-2022102c3f7a.jpg"
 ---
 

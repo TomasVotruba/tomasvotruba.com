@@ -8,7 +8,6 @@ perex: |
     I had to hack around my brain to make it happen. It would be a shame to release Rector book on the old design, so I took [the book release](/blog/rector-the-power-of-automated-refactoring-book-released/) as a co-task.
 
     The first hour I struggled with the redesign approach, I realized I could use the skill I use daily - refactoring legacy.
-tweet: "How I Redesigned my Website like Refactor Legacy Project"
 tweet_image: "/assets/images/posts/2021/redesign_simple.png"
 ---
 

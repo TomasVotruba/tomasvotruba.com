@@ -8,7 +8,6 @@ perex: |
 
     Are you curious what work will now these 4 news fixers handle for you? Look inside.
 
-tweet: "New in Coding Standard 4: Long Line Breaks Automated and 3 Legacy Prevention Fixers"
 tweet_image: "/assets/images/posts/2018/symplify-4-cs/tweet.png"
 
 updated_since: "August 2020"

@@ -9,7 +9,6 @@ perex: |
 
 
     Did you know there is easier and more clear way to do "mocking"?
-tweet: "New Post on my Blog: How to Turn Mocks to Readable Tests #phpunit #mocking"
 
 updated_since: "August 2020"
 updated_message: |

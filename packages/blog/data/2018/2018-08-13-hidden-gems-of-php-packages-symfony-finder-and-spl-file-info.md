@@ -4,7 +4,6 @@ title: "Hidden Gems of PHP Packages: Symfony\\Finder and SplFileInfo"
 perex: |
     The series on not-so-well-known packages that might save your ass more than you think continues.
     Today we look on **files as objects**.
-tweet: "New Post on my Blog: Hidden Gems of PHP Packages: Symfony\\Finder and SplFileInfo #symfony #filesystem #php #spl"
 
 
 ---

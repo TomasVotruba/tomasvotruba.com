@@ -7,7 +7,6 @@ perex: |
 
     For me, it's a combination of gratitude, abundance, and inspiration in the surrounding.
 
-tweet: "New Post on #php 🐘 blog: How to Give Away 1500 € in 1 Tweet and Help 25 People Learn Something New"
 ---
 
 I love helping others in a way that helps them grow. In a feedback loop, their growth helps me to grow... recursive. Yet, I rarely touched the financial part. Still, **I wanted to share gratitude with the community, that helps me every day to get where I am now**. I'm very grateful to be part of it.

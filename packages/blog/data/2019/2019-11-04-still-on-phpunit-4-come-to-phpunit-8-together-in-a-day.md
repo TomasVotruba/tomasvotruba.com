@@ -7,7 +7,6 @@ perex: |
 
     To my surprise, **upgrading PHPUnit tests was**. So I was thinking, let's take it from the floor in one go, from PHPUnit 4 to the latest PHPUnit 8.
 
-tweet: "New Post on #php 🐘 blog: Still on #PHPUnit 4? Come to @PHPUnit 8 Together in a Day"
 tweet_image: "/assets/images/posts/2019/phpunit/tweet.png"
 
 updated_since: "November 2020"

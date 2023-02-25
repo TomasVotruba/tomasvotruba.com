@@ -10,7 +10,6 @@ perex: |
 
     So I tried to use [PHPStan generics](https://phpstan.org/blog/generics-in-php-using-phpdocs) and failed hard.
 
-tweet: "New Post on #php 🐘 blog: #phpstan Abstract Parent Generics for Dummies"
 
 updated_since: "May 2021"
 updated_message: |

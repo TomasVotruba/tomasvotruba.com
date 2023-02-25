@@ -9,7 +9,6 @@ perex: |
     Yet, nothing in real life is static but rather dynamic. A new package can be added, old can be removed.
     How could we automate this even more with a **dynamic matrix?**
 
-tweet: "New Post on #php 🐘 blog: How to make a Dynamic Matrix in GitHub Actions"
 ---
 
 In the last post we talked about [monorepo split](/blog/2020/11/09/new-in-symplify-9-monorepo-split-with-github-action) with GitHub Actions.

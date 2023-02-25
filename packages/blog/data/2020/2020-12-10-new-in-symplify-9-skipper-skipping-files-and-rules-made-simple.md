@@ -10,7 +10,6 @@ perex: |
 
     New Skipper component prevents this and allows **you to use standardized syntax in a single `skip` parameters**.
 
-tweet: "New Post on #php 🐘 blog: New in #Symplify 9: Skipper - Skipping Files and Rules made Simple"
 tweet_image: "/assets/images/posts/2020/skipper-kangaroo.jpg"
 
 deprecated_since: "August 2022"

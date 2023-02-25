@@ -3,7 +3,6 @@ id: 353
 title: "5 Steps to Get Ready for Latte 3"
 perex: |
     After 3 months of intensive testing, David released [Latte 3.0](https://github.com/nette/latte/releases/tag/v3.0.0) two days ago, with massive evolution under the hood. We've been using it [in Amateri](https://www.startupjobs.cz/nabidka/24580/hleda-se-senior-php-programator-se-zapalem-pro-vec) past weeks, and today I will share our experience with you about how **to get prepared for it**.
-tweet: "New Post on the 🐘 blog: 5 steps to Get Ready for Latte 3    #nettefw"
 ---
 
 Today, our goal is not to get your project to Latte 3. Developers of Latte Extensions will need a few weeks to catch up with the upgrade and test it, as macros have entirely new syntax.

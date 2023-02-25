@@ -7,7 +7,6 @@ perex: |
     There are 3 solutions: put code `/libs` subdirectories, decouple to private packages using Satis or (the best) create an open-source packages.
 
     **All of them are overkill to the solution I will show you to day - composer local packages.**
-tweet: "Have you heard about local packages? Try them #composerPHP #monolith #php"
 
 deprecated_since: "May 2017"
 deprecated_message: |

@@ -7,7 +7,6 @@ perex: |
 
     I want to share my point of view on prisoners' dilemma, which you maybe know from your daily work.
 
-tweet: "New Post on the 🐘 blog: A Week in a Life of Employed Open-Source Developer"
 ---
 
 We are almost finished with upgrade to PHP 8. We already [migrated our custom](/blog/how-to-refactor-custom-doctrine-annotations-to-attributes) `@annotations` classes to `#[attributes]` classes and upgrade whole code base to new PHP 8 syntax.

@@ -6,7 +6,6 @@ perex: |
     <br>
     **What will replace it? How do you migrate?**
 
-tweet: "New Post on #php 🐘 blog: Statie is Dead, Long live #Symfony Static Dumper"
 tweet_image: "/assets/images/posts/2020/dump_static_site_demo.gif"
 ---
 

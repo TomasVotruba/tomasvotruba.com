@@ -8,7 +8,6 @@ perex: |
 
     I want my **tests to be simple, effective, and fun to write and maintain**. Today, we look at one approach used by [PHP itself](https://github.com/php/php-src), `nikic/php-parser`. It's so good I'm surprised not everyone is using it.
 
-tweet: "New Post on #php 🐘 blog: The most Effective Test I found in 7 years of Testing"
 ---
 
 ## The Bigger the Scope, the Greater the Teacher

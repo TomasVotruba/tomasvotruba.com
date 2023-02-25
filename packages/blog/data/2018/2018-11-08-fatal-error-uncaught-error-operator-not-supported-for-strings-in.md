@@ -6,7 +6,6 @@ perex: |
 
 
     For the rest of you, what will you do when PHP will tell you the message in the title?
-tweet: "New Post on My Blog: Fatal error: Uncaught Error: [] operator not supported for strings in #php56 #php70 #eol #rector"
 tweet_image: "/assets/images/posts/2018/upgrade-php/swap.png"
 
 updated_since: "November 2020"

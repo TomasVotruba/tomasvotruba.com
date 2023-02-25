@@ -6,7 +6,6 @@ perex: |
 
 
     Today we'll look on **package vendor-locks** caused by brain drain.
-tweet: "New Post on #php 🐘 blog: Why we Migrated from #nettefw to #symfony in 3 Weeks - Part 3"
 tweet_image: "/assets/images/posts/2019/nette-to-symfony3/nette-object-your-code.png"
 ---
 

@@ -6,7 +6,6 @@ perex: |
 
     Are you a Symplify power user? You still might find some new tricks you didn't know about.
 
-tweet: "New Post on #php 🐘 blog: 5 Ways Symplify makes Working With #symfony More Fun"
 tweet_image: "/assets/images/posts/2021/doctrine_host.gif"
 ---
 

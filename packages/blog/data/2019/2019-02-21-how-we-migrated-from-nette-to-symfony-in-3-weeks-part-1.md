@@ -9,7 +9,6 @@ perex: |
     <br>
     Yet, you'd laugh if you knew what took us the most time.
 
-tweet: "New Post on #php 🐘 blog: How we Migrated from #nettefw to #symfony in 3 Weeks - Part 1"
 tweet_image: "/assets/images/posts/2019/nette-to-symfony/nette-to-symfony.png"
 ---
 

@@ -10,7 +10,6 @@ perex: |
 
     Welcome **constant parameters**.
 
-tweet: "New Post on #php 🐘 blog: #symfony AutoBind Parameter is Dead, Long live Constant Parameters"
 tweet_image: "/assets/images/posts/2020/constant_parameter_locations.gif"
 ---
 

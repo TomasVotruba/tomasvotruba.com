@@ -7,7 +7,6 @@ perex: |
 
 
     I wanted to migrate my static websites from Jekyll to Statie. Can new `init` command make this piece of cake? And what needs to be done next?
-tweet: "New Post on #php 🐘 blog: 9 Steps to Migrate from #Jekyll to #Statie"
 ---
 
 ## 1. Create Basic Statie Structure

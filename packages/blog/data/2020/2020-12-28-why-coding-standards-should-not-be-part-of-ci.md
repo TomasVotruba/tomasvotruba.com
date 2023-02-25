@@ -7,7 +7,6 @@ perex: |
 
     Where do we use it? In CI pipelines on every pull-request, locally in a command line or within PHPStorm.
     **Now take these 3 places and drop coding standard from them.**
-tweet: "New Post on #php 🐘 blog: Why Coding Standard Should Not Be Part of CI"
 ---
 
 "What?" Wait a sec. We'll get to that.

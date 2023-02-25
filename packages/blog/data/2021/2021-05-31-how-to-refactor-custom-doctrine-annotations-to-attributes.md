@@ -6,7 +6,6 @@ perex: |
 
     You're probably already using those [thanks to Rector](https://github.com/rectorphp/rector/blob/main/docs/rector_rules_overview.md#annotationtoattributerector). That was the easy part. The more challenging part is **custom `@annotation` classes**. Last weekend I refactored a couple of those, and this is what I found out.
 
-tweet: "New Post on #php 🐘 blog: How to Refactor Custom Doctrine Annotations to Attributes"
 ---
 
 **tl;dr;** Do you want to get the job done? Use [`DoctrineAnnotationClassToAttributeRector`](https://github.com/rectorphp/rector/blob/main/docs/rector_rules_overview.md#doctrineannotationclasstoattributerector). Do you want to understand the step-by-step process of refactoring? Read on.

@@ -7,7 +7,6 @@ perex: |
 
     Today I will show you solution that will **keep your code both small and clean** - **Decorator feature in Nette**.
 
-tweet: "How to avoid @inject by using Decorator in #nettefw?"
 ---
 
 As [Derek Simons says](https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action) says...

@@ -14,7 +14,6 @@ perex: |
 
     I say: "We shall not!"
 
-tweet: "New Post on #php 🐘 blog: How to Apply Coding Standards for PHP Snippets in Markdown files?   Thanks to @samsonasik"
 tweet_image: "/assets/images/posts/2020/check_markdown.gif"
 ---
 

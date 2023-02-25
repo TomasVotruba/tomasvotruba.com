@@ -6,7 +6,6 @@ perex: |
 
 
     What exactly Rector does and how does it work?
-tweet: "New post on my blog: Rector: Part 1 - What and How #php #ast #refactoring #instantupgrades"
 
 updated_since: "November 2020"
 updated_message: "Switch from deprecated `--set` option to `rector.php` config."

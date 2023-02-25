@@ -7,7 +7,6 @@ perex: |
 
     Today we'll look at a little trick that allows us to create Symfony Kernel with different configs.
 
-tweet: "New Post on the 🐘 blog: How to Create #Symfony Kernel for Tests with Different Configs"
 ---
 
 In Symfony, we can use config to define almost any container change - from parameter, a specific implementation of service to extension configuration. That's why it's so easy to use them for tests.
