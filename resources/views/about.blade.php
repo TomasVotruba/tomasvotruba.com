@@ -60,7 +60,7 @@
                 I'm main contributor to <a href="https://github.com/nikic/PHP-Parser/graphs/contributors">nikic/php-parser</a>.
             </p>
             <p>
-                For these efforts, <a href="https://stars.github.com/profiles/tomasvotruba/">GitHub awarded me</a> as one of 100 GitHub Stars based on PHP community nominations.
+                For these efforts, GitHub awarded me as one of 100 GitHub Stars based on PHP community nominations.
             </p>
         </div>
     </div>
