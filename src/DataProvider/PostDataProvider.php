@@ -25,7 +25,7 @@ final class PostDataProvider
 
         $markdownFileFinder = Finder::create()
             ->name('*.md')
-            ->in(__DIR__ . '/../../data');
+            ->in(__DIR__ . '/../../resources/posts');
 
         $fileInfos = iterator_to_array($markdownFileFinder->getIterator());
         $filePaths = array_keys($fileInfos);
