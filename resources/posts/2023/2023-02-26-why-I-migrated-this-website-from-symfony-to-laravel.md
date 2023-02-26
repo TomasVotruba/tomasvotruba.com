@@ -18,7 +18,7 @@ perex: |
 
 <br>
 
-## How I came to Portugal to Rest
+## How I came to Portugal to have a rest
 
 I came to Portugal in the middle of January to get a bit of travelling, bit of sun and have a focused time for my work. I though I'll spend most time alone, or with short chats in the coffee.
 
@@ -100,9 +100,14 @@ I still follow these code-quality criteria:
 
 So where this leads me so far? I want to explore the ecosystem, make the leaky parts more solid and contribute to the community. Learn by doing.
 
+
+* I want to teach [PHPStan to run on Blade templates](https://twitter.com/VotrubaT/status/1625925547464196109).
+
 * Yesterday, I've leaked a new package on [my Twitter](https://twitter.com/votrubat) , that helps to manage configs.
 
 * I'm about to convert getrector.com website, so far the biggest project, from Symfony to Laravel. The configs are solved, so the hardest part will be probably the Javascript to highlight the textarea (yes, the PHP framework part is easy to convert).
+
+* I want to automate 99 % of the [Twig to Blade](https://twitter.com/VotrubaT/status/1627277318254100482) conversion.
 
 * I'll write a technical post soon, about what I like about Laravel and what I don't.
 
