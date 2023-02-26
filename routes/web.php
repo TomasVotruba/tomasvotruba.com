@@ -34,7 +34,6 @@ Route::get('/blog', BlogController::class)
     ->name(RouteName::BLOG);
 
 Route::get('/rss', RssController::class);
-
 Route::get('/rss.xml', RssController::class)
     ->name(RouteName::RSS);
 

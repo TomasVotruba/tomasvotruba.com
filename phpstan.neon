@@ -24,7 +24,6 @@ parameters:
         - src
         - config
         - tests
-        - packages
         - rector.php
 
     excludePaths:

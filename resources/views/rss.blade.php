@@ -10,14 +10,14 @@
         <link>https://tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
         <pubDate>{{ "now"|date('r') }}</pubDate>
-        <atom:link href="https://tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml"/>
 
         <lastBuildDate>{{ $most_recent_post_date_time_stamp }}</lastBuildDate>
 
         {{-- https://stackoverflow.com/a/29161205/1348344 --}}
 
         @foreach($posts as $post)
-            @php /** @var $post \TomasVotruba\Blog\ValueObject\Post */ @endphp
+            @php /** @var $post \TomasVotruba\Website\ValueObject\Post */ @endphp
 
             @php
                 $post_absolute_url = route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]);

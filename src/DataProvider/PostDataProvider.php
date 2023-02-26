@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Blog\DataProvider;
+namespace TomasVotruba\Website\DataProvider;
 
 use Symfony\Component\Finder\Finder;
-use TomasVotruba\Blog\ValueObject\Post;
-use TomasVotruba\Blog\ValueObjectFactory\PostFactory;
+use TomasVotruba\Website\EntityFactory\PostFactory;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
+use TomasVotruba\Website\ValueObject\Post;
 
 final class PostDataProvider
 {
@@ -25,7 +25,7 @@ final class PostDataProvider
 
         $markdownFileFinder = Finder::create()
             ->name('*.md')
-            ->in(__DIR__ . '/../../data');
+            ->in(__DIR__ . '/../../resources/posts');
 
         $fileInfos = iterator_to_array($markdownFileFinder->getIterator());
         $filePaths = array_keys($fileInfos);

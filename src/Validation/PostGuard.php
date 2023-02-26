@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Blog\Validation;
+namespace TomasVotruba\Website\Validation;
 
 use DateTimeInterface;
-use TomasVotruba\Blog\Exception\InvalidPostConfigurationException;
-use TomasVotruba\Blog\ValueObject\Post;
+use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
+use TomasVotruba\Website\ValueObject\Post;
 
 final class PostGuard
 {

@@ -27,7 +27,7 @@
 
         <div class="text-bigger">
             @foreach ($last_posts as $current_post)
-                @php /** @var $current_post \TomasVotruba\Blog\ValueObject\Post */ @endphp
+                @php /** @var $current_post \TomasVotruba\Website\ValueObject\Post */ @endphp
                 <div class="mb-4 row">
                     <div class="col-12">
                         <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' =>  $current_post->getSlug()]) }}"

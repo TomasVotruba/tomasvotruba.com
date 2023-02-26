@@ -6,7 +6,7 @@ namespace App\Http\Controller;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
-use TomasVotruba\Blog\Repository\PostRepository;
+use TomasVotruba\Website\Repository\PostRepository;
 
 final class BlogController extends Controller
 {
