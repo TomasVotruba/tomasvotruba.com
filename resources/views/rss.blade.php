@@ -1,4 +1,4 @@
-<? xml version = "1.0" encoding = "UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <rss version="2.0"
      xmlns:content="https://purl.org/rss/1.0/modules/content/"
@@ -7,8 +7,7 @@
 >
     <channel>
         <title>Tomas Votruba writes about PHP and education</title>
-        <link>
-        https://tomasvotruba.com/</link>
+        <link>https://tomasvotruba.com/</link>
         <description>PHP, Communities and Communication posts by Tomas Votruba</description>
         <pubDate>{{ "now"|date('r') }}</pubDate>
         <atom:link href="https://tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml"/>
