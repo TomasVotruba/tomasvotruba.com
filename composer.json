@@ -39,12 +39,6 @@
             "TomasVotruba\\Blog\\": "packages/blog/src"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "TomasVotruba\\Utils\\": "utils",
-            "TomasVotruba\\Utils\\Tests\\": "utils-tests"
-        }
-    },
     "scripts": {
         "phpstan": "vendor/bin/phpstan analyse --ansi --error-format symplify",
         "check-cs": "vendor/bin/ecs check --ansi",
