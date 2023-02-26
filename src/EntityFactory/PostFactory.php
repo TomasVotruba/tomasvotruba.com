@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Blog\ValueObjectFactory;
+namespace TomasVotruba\Website\EntityFactory;
 
 use Illuminate\Support\Str;
 use Nette\Utils\DateTime;
@@ -10,11 +10,11 @@ use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use ParsedownExtra;
 use Symfony\Component\Yaml\Yaml;
-use TomasVotruba\Blog\Exception\InvalidPostConfigurationException;
-use TomasVotruba\Blog\FileSystem\PathAnalyzer;
-use TomasVotruba\Blog\Validation\PostGuard;
-use TomasVotruba\Blog\ValueObject\Post;
+use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
+use TomasVotruba\Website\FileSystem\PathAnalyzer;
+use TomasVotruba\Website\Validation\PostGuard;
+use TomasVotruba\Website\ValueObject\Post;
 
 final class PostFactory
 {

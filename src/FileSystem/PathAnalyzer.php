@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Blog\FileSystem;
+namespace TomasVotruba\Website\FileSystem;
 
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;

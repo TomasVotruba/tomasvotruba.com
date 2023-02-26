@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Blog\ValueObject;
+namespace TomasVotruba\Website\ValueObject;
 
 use DateTimeInterface;
 use Nette\Utils\DateTime;

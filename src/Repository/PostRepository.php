@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Blog\Repository;
+namespace TomasVotruba\Website\Repository;
 
-use TomasVotruba\Blog\DataProvider\PostDataProvider;
-use TomasVotruba\Blog\ValueObject\Post;
+use TomasVotruba\Website\DataProvider\PostDataProvider;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
+use TomasVotruba\Website\ValueObject\Post;
 
 /**
  * @api

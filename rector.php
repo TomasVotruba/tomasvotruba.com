@@ -20,7 +20,7 @@ return function (RectorConfig $rectorConfig): void {
         LevelSetList::UP_TO_PHP_81,
     ]);
 
-    $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/packages', __DIR__ . '/app']);
+    $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/app']);
 
     $rectorConfig->skip([
         // broken for DateTime interface

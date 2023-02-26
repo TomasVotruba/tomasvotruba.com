@@ -1,6 +1,6 @@
 @php use TomasVotruba\Website\ValueObject\RouteName; @endphp
 
-    <!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>{{ $title }} | Tomas Votruba</title>
@@ -12,7 +12,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    @php /** @var $post \TomasVotruba\Blog\ValueObject\Post */ @endphp
+    @php /** @var $post \TomasVotruba\Website\ValueObject\Post */ @endphp
 
     {{--  social tags based on https://www.phpied.com/minimum-viable-sharing-meta-tags/ --}}
     <meta name="description" property="og:description" content="{{ $post->getPerex() }}"/>
@@ -23,8 +23,8 @@
     <meta property="og:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getClearTitle()]) }}"/>
 
     <meta
-        property="og:url"
-        content="{{ route(RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
+            property="og:url"
+            content="{{ route(RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
     />
 
     <meta name="twitter:card" content="summary_large_image"/>
