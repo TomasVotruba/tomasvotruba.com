@@ -71,7 +71,9 @@ So we took a working project written in Symfony and tried to mimic the behavior 
 
 **The queues are excellent** - I can run them with bare PHP, and the worker calls the GPT in the background. This is now part of testgenai.com and allows you to submit many tests simultaneously and get a response without stale or waiting.
 
-Later, I had 3 more calls with [Patricio](https://twitter.com/ijpatricio), and he's helping me to this day. With deploying a staging server in Laravel, a transition from Webpack to Vite, debugging on the server, Livewire components, explaining the magic of models, and much more.
+<br>
+
+So far we've had 3 more calls with [Patricio](https://twitter.com/ijpatricio), and he's helping me to this day. With deploying a staging server in Laravel, a transition from Webpack to Vite, debugging on the server, Livewire components, explaining the magic of models, and much more.
 
 He's one of the best teachers I've met in past 5 years. If you're looking to improve your life, contact him.
 
@@ -103,6 +105,10 @@ What I enjoy the most so far is the general approach of Laravel people. If I don
 
 Thank you for all being there and making this exciting and warm experience!
 
+<br>
+
+Thank you Nuno, Patricio, Francisco, Marcel, Lucas, Freek and Taylor for great personal chats and on-going support! 🧡
+
 ## Little experiements
 
 When facing an unclear decision that might have broad consequences, I always tell my clients:
@@ -129,9 +135,13 @@ Switching this website and testgenai.com is an experiment for me. I have no idea
 
 <br>
 
-## Learn by doing
+## Learn by doing... and enjoy the process
 
 Where does this lead me so far? I want to explore the ecosystem, make the leaky parts more solid and contribute to the community.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">in a week 🤣 <a href="https://t.co/eoIusDIZtw">pic.twitter.com/eoIusDIZtw</a></p>&mdash; Adrian Nürnberger 🐙 (@nuernberger_me) <a href="https://twitter.com/nuernberger_me/status/1620354616734121984?ref_src=twsrc%5Etfw">January 31, 2023</a></blockquote>
+
+<br>
 
 * I want to teach [PHPStan to run on Blade templates](https://twitter.com/VotrubaT/status/1625925547464196109).
 
