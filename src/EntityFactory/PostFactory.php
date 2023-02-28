@@ -14,7 +14,7 @@ use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\FileSystem\PathAnalyzer;
 use TomasVotruba\Website\Validation\PostGuard;
-use TomasVotruba\Website\ValueObject\Post;
+use TomasVotruba\Website\Entity\Post;
 
 final class PostFactory
 {

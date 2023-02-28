@@ -6,7 +6,7 @@ namespace TomasVotruba\Website\Repository;
 
 use TomasVotruba\Website\DataProvider\PostDataProvider;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
-use TomasVotruba\Website\ValueObject\Post;
+use TomasVotruba\Website\Entity\Post;
 
 /**
  * @api

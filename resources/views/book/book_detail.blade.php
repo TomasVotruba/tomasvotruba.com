@@ -1,6 +1,6 @@
 @extends('layout/layout_base')
 
-@php /** @var $book \TomasVotruba\Website\ValueObject\Book */ @endphp
+@php /** @var $book \TomasVotruba\Website\Entity\Book */ @endphp
 
 @section('content')
     <div class="container-fluid" id="blog">

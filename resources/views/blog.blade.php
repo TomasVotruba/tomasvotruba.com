@@ -20,7 +20,7 @@
             <a href="https://twitter.com/votrubaT" target="blank">Twitter</a>
             <span class="pl-2 pr-2">•</span>
 
-            <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::RSS) }}" target="blank">RSS</a>
+            <a href="{{ route(\TomasVotruba\Website\Enum\RouteName::RSS) }}" target="blank">RSS</a>
         </div>
     </div>
 @endsection

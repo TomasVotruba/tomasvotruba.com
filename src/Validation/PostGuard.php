@@ -6,7 +6,7 @@ namespace TomasVotruba\Website\Validation;
 
 use DateTimeInterface;
 use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
-use TomasVotruba\Website\ValueObject\Post;
+use TomasVotruba\Website\Entity\Post;
 
 final class PostGuard
 {

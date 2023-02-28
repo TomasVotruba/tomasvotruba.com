@@ -1,5 +1,5 @@
 @foreach ($posts as $post)
-    @php /** @var $post \TomasVotruba\Website\ValueObject\Post */ @endphp
+    @php /** @var $post \TomasVotruba\Website\Entity\Post */ @endphp
 
     <div
             @class([
@@ -8,7 +8,7 @@
                 'bg-success text-white pt-3 pb-4 pl-4 pr-4 mb-4 rounded shadow' => $post->isUpdated(),
             ])
     >
-        <a href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
+        <a href="{{ route(\TomasVotruba\Website\Enum\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
            class="post-list-title">
             {{ $post->getClearTitle() }}
         </a>

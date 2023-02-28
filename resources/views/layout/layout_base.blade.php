@@ -17,7 +17,7 @@
         <meta property="og:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
         <meta name="twitter:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
 
-        <link rel="alternate" type="application/rss+xml" title="Tomas Votruba Blog RSS" href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::RSS) }}">
+        <link rel="alternate" type="application/rss+xml" title="Tomas Votruba Blog RSS" href="{{ route(\TomasVotruba\Website\Enum\RouteName::RSS) }}">
 
         {{-- !!! Twitter Bootstrap - keep the local copy css classes autocomplete --}}
         {{-- to speed-up delivery https://stackoverflow.com/a/46142270/1348344 --}}

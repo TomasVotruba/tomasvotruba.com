@@ -7,7 +7,8 @@ namespace TomasVotruba\Website\DataProvider;
 use Symfony\Component\Finder\Finder;
 use TomasVotruba\Website\EntityFactory\PostFactory;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
-use TomasVotruba\Website\ValueObject\Post;
+use TomasVotruba\Website\Entity\Post;
+use Webmozart\Assert\Assert;
 
 final class PostDataProvider
 {
@@ -23,15 +24,11 @@ final class PostDataProvider
     {
         $posts = [];
 
-        $markdownFileFinder = Finder::create()
-            ->name('*.md')
-            ->in(__DIR__ . '/../../resources/posts');
+        $markdownFilePaths = glob(__DIR__ . '/../../resources/posts/*/*.md');
+        Assert::allString($markdownFilePaths);
 
-        $fileInfos = iterator_to_array($markdownFileFinder->getIterator());
-        $filePaths = array_keys($fileInfos);
-
-        foreach ($filePaths as $filePath) {
-            $post = $this->postFactory->createFromFilePath($filePath);
+        foreach ($markdownFilePaths as $markdownFilePath) {
+            $post = $this->postFactory->createFromFilePath($markdownFilePath);
 
             if (isset($posts[$post->getId()])) {
                 $message = sprintf('Post with id "%d" is duplicated. Increase it to higher one', $post->getId());

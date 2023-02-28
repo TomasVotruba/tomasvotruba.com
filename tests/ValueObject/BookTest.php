@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Tests\ValueObject;
 
 use PHPUnit\Framework\TestCase;
-use TomasVotruba\Website\ValueObject\Book;
+use TomasVotruba\Website\Entity\Book;
 
 final class BookTest extends TestCase
 {

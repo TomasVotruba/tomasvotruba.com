@@ -1,4 +1,4 @@
-@php use TomasVotruba\Website\ValueObject\RouteName; @endphp
+@php use TomasVotruba\Website\Enum\RouteName; @endphp
 
         <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    @php /** @var $post \TomasVotruba\Website\ValueObject\Post */ @endphp
+    @php /** @var $post \TomasVotruba\Website\Entity\Post */ @endphp
 
     {{--  social tags based on https://www.phpied.com/minimum-viable-sharing-meta-tags/ --}}
     <meta name="description" property="og:description" content="{{ $post->getPerex() }}"/>
@@ -35,7 +35,7 @@
     <meta name="twitter:description" content="{{ $post->getPerex() }}"/>
 
     <link rel="alternate" type="application/rss+xml" title="Tomas Votruba Blog RSS"
-          href="{{ route(\TomasVotruba\Website\ValueObject\RouteName::RSS) }}">
+          href="{{ route(\TomasVotruba\Website\Enum\RouteName::RSS) }}">
 
     {{-- !!! Twitter Bootstrap - keep the local copy css classes autocomplete --}}
     {{-- to speed-up delivery https://stackoverflow.com/a/46142270/1348344 --}}

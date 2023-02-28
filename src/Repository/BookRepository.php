@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Repository;
 
 use TomasVotruba\Website\Exception\BookException;
-use TomasVotruba\Website\ValueObject\Book;
+use TomasVotruba\Website\Entity\Book;
 
 final class BookRepository
 {

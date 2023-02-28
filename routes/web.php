@@ -12,7 +12,7 @@ use App\Http\Controller\PostController;
 use App\Http\Controller\ThumbnailController;
 use App\Http\Controller\RssController;
 use Illuminate\Support\Facades\Route;
-use TomasVotruba\Website\ValueObject\RouteName;
+use TomasVotruba\Website\Enum\RouteName;
 
 Route::get('/', HomepageController::class)
     ->name(RouteName::HOMEPAGE);

@@ -8,7 +8,7 @@ use DateTimeInterface;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use TomasVotruba\Website\Repository\PostRepository;
-use TomasVotruba\Website\ValueObject\Post;
+use TomasVotruba\Website\Entity\Post;
 
 final class RssController extends Controller
 {

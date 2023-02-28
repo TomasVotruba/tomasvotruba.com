@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\ValueObject;
+namespace TomasVotruba\Website\Entity;
 
 use Illuminate\Support\Str;
 

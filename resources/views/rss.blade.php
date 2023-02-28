@@ -17,10 +17,10 @@
         {{-- https://stackoverflow.com/a/29161205/1348344 --}}
 
         @foreach($posts as $post)
-            @php /** @var $post \TomasVotruba\Website\ValueObject\Post */ @endphp
+            @php /** @var $post \TomasVotruba\Website\Entity\Post */ @endphp
 
             @php
-                $post_absolute_url = route(\TomasVotruba\Website\ValueObject\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]);
+                $post_absolute_url = route(\TomasVotruba\Website\Enum\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]);
             @endphp
 
             <item>

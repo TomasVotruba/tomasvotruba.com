@@ -6,7 +6,7 @@
 
         <div class="row">
             @foreach ($books as $book)
-                @php /** @var $book \TomasVotruba\Website\ValueObject\Book */ @endphp
+                @php /** @var $book \TomasVotruba\Website\Entity\Book */ @endphp
 
                 <div class="text-center col-12 col-md-6 mb-5 mt-4">
                     <a href="{{ route('book-detail', ['slug' => $book->getSlug()]) }}">
