@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Repository;
 
 use TomasVotruba\Website\DataProvider\PostDataProvider;
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\Entity\Post;
+use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 /**
  * @api

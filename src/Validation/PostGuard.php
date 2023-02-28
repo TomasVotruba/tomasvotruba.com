@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Validation;
 
 use DateTimeInterface;
-use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Website\Entity\Post;
+use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
 
 final class PostGuard
 {

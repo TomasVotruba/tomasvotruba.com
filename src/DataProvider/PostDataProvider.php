@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\DataProvider;
 
-use Symfony\Component\Finder\Finder;
+use TomasVotruba\Website\Entity\Post;
 use TomasVotruba\Website\EntityFactory\PostFactory;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
-use TomasVotruba\Website\Entity\Post;
 use Webmozart\Assert\Assert;
 
 final class PostDataProvider
