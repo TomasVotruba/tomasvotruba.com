@@ -7,9 +7,9 @@ perex: |
 
     Today, we'll see why is the later better and how to check it in your code with a Sniff.
 
-deprecated_since: "December 2022"
-deprecated_message: |
-    The sniff and Symplify PHPStan rule is deprecated as very complex and hard to use. Use new [PHPStan package instead](/blog/keep-cognitive-complexity-low-with-phpstan/).
+updated_since: "March 2023"
+updated_message: |
+    Use new PHPStan micro-package that deals with cognitive complexity - [TomasVotruba/cognitive-complexity](https://github.com/TomasVotruba/cognitive-complexity).
 ---
 
 ## What is Cognitive Complexity?
@@ -109,30 +109,29 @@ Today, I'm happy to show you the first version of `CognitiveComplexitySniff`.
 
 ## 3 Steps to Check Cognitive Complexity of Your Code
 
-**1. Install Symplify\CodingStandard**
+**1. Install package**
 
 ```bash
-composer require symplify/coding-standard symplify/easy-coding-standard --dev
+composer require tomas-votruba/cognitive-complexity --dev
 ```
 
-**2. Create `phpstan.neon`**
+**2. Configure your `phpstan.neon`**
 
 ```yaml
 # phpstan.neon
-includes:
-    - vendor/symplify/coding-standard/packages/cognitive-complexity/config/cognitive-complexity-rules.neon
-
 parameters:
-    symplify:
-        max_cognitive_complexity: 8 # default
-        max_class_cognitive_complexity: 50 # default
+    cognitive_complexity:
+        class: 50
+        function: 8
 ```
 
-**3. Run it**
+**3. Run PHPStan**
 
 ```bash
-vendor/bin/phpstan analyse src
+vendor/bin/phpstan
 ```
+
+<br>
 
 ## Refactor to Lower Cognitive Complexity in Examples
 
