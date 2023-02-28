@@ -5,11 +5,6 @@ perex: |
     How to achieve *open for extension* and *closed for modification* [one of sOlid principals](https://github.com/jupeter/clean-code-php#openclosed-principle-ocp)?
 
     Why Collector pattern beats config tagging? How to use the in Symfony application? How it turns locked architecture into scaling one?
-
-
-deprecated_since: "August 2020"
-deprecated_message: |
-    The feature is not in Rector any more, yet the collector is still valid to SOLID code extending.
 ---
 
 I already [wrote about Collector pattern as one we can learn from Symfony or Laravel](/blog/2017/04/14/3-symfony-and-laravel-patterns-that-make-code-easy-to-extends-without-modification/#3-like-collecting-stamps-just-on-steroids). But they're so useful and underused I have need to write a more about them.
@@ -352,29 +347,7 @@ We forget tagging, right? The most [spread useless code in Symfony configs](/blo
 
 Why would you add it and where? I don't take arguments like "well, it's historical reasons" and [`!tagged`](https://symfony.com/blog/new-in-symfony-3-4-simpler-injection-of-tagged-services), since it add more coupling.
 
-Try to convince me though if you're sure about its advantages.
-
-### How was our Path from the End?
-
-✅ Add provider
-
-❌ Use expression language?
-
-✅ Does collector scale?
-
-❌ Add tagging
-
-## "Git Story" over git history
-
-I want to share with you one last idea. I could show you the final commit - or even worse - just the final versions of `RectorProviderInterface`, `RectorCollector` and `RectorProvidersCompilerPass`. But what could you take from such a code? **Nothing, because only when we fail, we learn something new.**
-
-**Same can be applied to git history. When I see 2 final files with 2 commits, I learn nothing new.** And pose questions and comments on blind paths, that author already took (and explains me again in words to my comments).
-
-Next time you squash 20 commits to 1, remember:
-
-<blockquote class="blockquote text-center">
-    Git should tell the story, as the human history does.
-</blockquote>
+That's it for today!
 
 <br><br>
 
