@@ -14,6 +14,7 @@
         "tomasvotruba/punchcard": "^0.0.3"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.8",
         "barryvdh/laravel-ide-helper": "^2.13",
         "nunomaduro/collision": "^7.0",
         "nunomaduro/larastan": "^2.4",
@@ -59,5 +60,5 @@
         "allow-plugins": {
             "phpstan/extension-installer": true
         }
-    },
+    }
 }

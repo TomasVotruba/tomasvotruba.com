@@ -28,6 +28,7 @@ return AppConfig::make()
         FilesystemServiceProvider::class,
         FoundationServiceProvider::class,
         ViewServiceProvider::class,
+        \Illuminate\Session\SessionServiceProvider::class,
         TranslationServiceProvider::class,
         RouteServiceProvider::class,
         QueueServiceProvider::class,
