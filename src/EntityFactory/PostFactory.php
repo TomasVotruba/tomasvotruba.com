@@ -64,9 +64,6 @@ final class PostFactory
         $htmlContent = $this->parsedownExtra->parse($matches['content']);
 
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
-        $deprecatedAt = isset($configuration['deprecated_since']) ? DateTime::from(
-            $configuration['deprecated_since']
-        ) : null;
 
         $post = new Post(
             $id,
@@ -77,8 +74,6 @@ final class PostFactory
             $this->decorateHeadlineWithId($htmlContent),
             $updatedAt,
             $configuration['updated_message'] ?? null,
-            $deprecatedAt,
-            $configuration['deprecated_message'] ?? null,
             $configuration['lang'] ?? null,
             $configuration['next_post_id'] ?? null,
         );

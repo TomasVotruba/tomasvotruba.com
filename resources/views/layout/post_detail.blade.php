@@ -63,24 +63,6 @@
         {{ $post->getDateTime()->format('Y-m-d') }}
     </time>
 
-    @if ($post->getDeprecatedAt())
-        <div class="card border-danger mt-4">
-            <div class="card-header text-white bg-danger">
-                This post is deprecated since {{ $post->getDeprecatedAt()->format("F Y") }}. Its knowledge is old and
-                should not be used.
-                <br>
-                <strong>Why?</strong>
-            </div>
-            <div class="card-body pb-2">
-                <x-markdown>
-                    {{ $post->getDeprecatedMessage() }}
-                </x-markdown>
-            </div>
-        </div>
-
-        <br>
-    @endif
-
     @if ($post->getUpdatedAt())
         <div class="card border-success mt-4">
             <div class="card-header text-white bg-success">

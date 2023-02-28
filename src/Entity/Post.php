@@ -21,8 +21,6 @@ final class Post
         private readonly string $htmlContent,
         private readonly ?DateTimeInterface $updatedAt,
         private readonly ?string $updatedMessage,
-        private readonly ?DateTimeInterface $deprecatedAt,
-        private readonly ?string $deprecatedMessage,
         private readonly ?string $language,
         private readonly ?int $nextPostId
     ) {
@@ -68,24 +66,9 @@ final class Post
         return $this->updatedAt;
     }
 
-    public function getDeprecatedAt(): ?DateTimeInterface
-    {
-        return $this->deprecatedAt;
-    }
-
-    public function isDeprecated(): bool
-    {
-        return $this->deprecatedAt !== null;
-    }
-
     public function isUpdated(): bool
     {
         return $this->updatedAt !== null;
-    }
-
-    public function getDeprecatedMessage(): ?string
-    {
-        return $this->deprecatedMessage;
     }
 
     public function getUpdatedMessage(): ?string

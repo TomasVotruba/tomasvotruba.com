@@ -4,7 +4,6 @@
     <div
             @class([
                 'article-row',
-                'border opacity-70 border-danger text-danger rounded shadow-danger pt-3 pb-4 pl-4 pr-4 mb-4' => $post->getDeprecatedAt(),
                 'bg-success text-white pt-3 pb-4 pl-4 pr-4 mb-4 rounded shadow' => $post->isUpdated(),
             ])
     >
@@ -13,9 +12,7 @@
             {{ $post->getClearTitle() }}
         </a>
 
-        @if ($post->getDeprecatedAt())
-            <div class="text-danger">Deprecated {{ $post->getDeprecatedAt()->format('Y-m-d') }}</div>
-        @elseif ($post->getUpdatedAt())
+        @if ($post->getUpdatedAt())
             <div>
                 Updated {{ $post->getUpdatedAt()->format('Y-m-d') }}
             </div>

@@ -12,27 +12,6 @@ final class PostGuard
 {
     public function validate(Post $post): void
     {
-        $this->ensureDeprecatedHasMessage($post);
-        $this->ensureUpdatedHasMessage($post);
-    }
-
-    private function ensureDeprecatedHasMessage(Post $post): void
-    {
-        if (! $post->getDeprecatedAt() instanceof DateTimeInterface) {
-            return;
-        }
-
-        $deprecatedMessage = $post->getDeprecatedMessage();
-        if ($deprecatedMessage) {
-            return;
-        }
-
-        $message = sprintf('"deprecated_message" is missing in post %d', $post->getId());
-        throw new InvalidPostConfigurationException($message);
-    }
-
-    private function ensureUpdatedHasMessage(Post $post): void
-    {
         if (! $post->getUpdatedAt() instanceof DateTimeInterface) {
             return;
         }
