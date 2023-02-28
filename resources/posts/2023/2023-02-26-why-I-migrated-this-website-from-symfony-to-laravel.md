@@ -50,6 +50,18 @@ Important note: **I'm an experience-driven person**. You can tell me stories all
 
 I need to experience these things firsthand and see how it feels for me. That's where Patricio and I clicked perfectly to fit my natural way of learning.
 
+
+<br>
+
+<blockquote class="blockquote text-center">
+"The best teachers are those who show you where to look,<br>
+but don't tell you what to see."
+<br>
+<div class="blockquote-footer text-right">
+Alexandra K. Trenfor
+</div>
+</blockquote>
+
 <br>
 
 We met in a restaurant a day before the conference, and Patricio encouraged me: "Tomas, do you still want to try Laravel?".
