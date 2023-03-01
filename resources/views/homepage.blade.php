@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-4 col-md-3">
-                <a href="{{ route(\TomasVotruba\Website\Enum\RouteName::ABOUT) }}">
+                <a href="{{ route(\App\Enum\RouteName::ABOUT) }}">
                     <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="mt-auto rounded-circle shadow">
                 </a>
             </div>
@@ -30,7 +30,7 @@
                 @php /** @var $current_post \TomasVotruba\Website\Entity\Post */ @endphp
                 <div class="mb-4 row">
                     <div class="col-12">
-                        <a href="{{ route(\TomasVotruba\Website\Enum\RouteName::POST_DETAIL, ['slug' =>  $current_post->getSlug()]) }}"
+                        <a href="{{ route(\App\Enum\RouteName::POST_DETAIL, ['slug' =>  $current_post->getSlug()]) }}"
                            class="pt-3 pr-3">
                             {{ $current_post->getClearTitle() }}
                         </a>
@@ -42,7 +42,7 @@
                 </div>
             @endforeach
 
-            <a href="{{ route(\TomasVotruba\Website\Enum\RouteName::BLOG) }}"
+            <a href="{{ route(\App\Enum\RouteName::BLOG) }}"
                class="btn btn-warning pull-right mt-4">Discover more Posts </a>
         </div>
 

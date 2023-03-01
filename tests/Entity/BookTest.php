@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Tests\ValueObject;
+namespace TomasVotruba\Website\Tests\Entity;
 
 use PHPUnit\Framework\TestCase;
 use TomasVotruba\Website\Entity\Book;

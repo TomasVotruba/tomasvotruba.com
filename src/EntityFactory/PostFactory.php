@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\EntityFactory;
 
-use Illuminate\Support\Str;
 use Nette\Utils\DateTime;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
-use ParsedownExtra;
 use Symfony\Component\Yaml\Yaml;
 use TomasVotruba\Website\Entity\Post;
-use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\FileSystem\PathAnalyzer;
 use TomasVotruba\Website\Validation\PostGuard;
@@ -28,14 +25,7 @@ final class PostFactory
      */
     private const CONFIG_CONTENT_REGEX = '#^\s*' . self::SLASHES_WITH_SPACES_REGEX . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_REGEX . '(?<content>.*?)$#s';
 
-    /**
-     * @see https://regex101.com/r/9xssch/1
-     * @var string
-     */
-    private const HEADLINE_LEVEL_REGEX = '#<h(?<level>\d+)>(?<headline>.*?)<\/h\d+>#';
-
     public function __construct(
-        private readonly ParsedownExtra $parsedownExtra,
         private readonly PathAnalyzer $pathAnalyzer,
         private readonly PostGuard $postGuard,
     ) {
@@ -57,12 +47,10 @@ final class PostFactory
         $title = $configuration['title'];
 
         if (! isset($matches['content'])) {
-            throw new InvalidPostConfigurationException('Post content is missing');
+            throw new ShouldNotHappenException('Post content is missing');
         }
 
         $slug = $this->pathAnalyzer->getSlug($filePath);
-        $htmlContent = $this->parsedownExtra->parse($matches['content']);
-
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
 
         $post = new Post(
@@ -71,34 +59,13 @@ final class PostFactory
             $slug,
             $this->pathAnalyzer->resolveDateTime($filePath),
             $configuration['perex'],
-            $this->decorateHeadlineWithId($htmlContent),
+            $matches['content'],
             $updatedAt,
             $configuration['updated_message'] ?? null,
-            $configuration['lang'] ?? null,
-            $configuration['next_post_id'] ?? null,
         );
 
         $this->postGuard->validate($post);
 
         return $post;
-    }
-
-    /**
-     * Before: <h1>Hey</h1>
-     *
-     * After: <h1 id="hey">Hey</h1>
-     *
-     * Then the headline can be anchored in url as "#hey"
-     */
-    private function decorateHeadlineWithId(string $htmlContent): string
-    {
-        return Strings::replace($htmlContent, self::HEADLINE_LEVEL_REGEX, static function (array $matches): string {
-            $level = (int) $matches['level'];
-            $headline = (string) $matches['headline'];
-            $clearHeadline = strip_tags($headline);
-
-            $headlineSlug = Str::slug($clearHeadline);
-            return sprintf('<h%d id="%s">%s</h%d>', $level, $headlineSlug, $headline, $level);
-        });
     }
 }

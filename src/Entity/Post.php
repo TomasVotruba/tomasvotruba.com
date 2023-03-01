@@ -5,10 +5,9 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Entity;
 
 use DateTimeInterface;
-use Nette\Utils\DateTime;
 
 /**
- * @api Getter methods are used in twig
+ * @api Getter methods are used in templates
  */
 final class Post
 {
@@ -18,11 +17,9 @@ final class Post
         private readonly string $slug,
         private readonly DateTimeInterface $dateTime,
         private readonly string $perex,
-        private readonly string $htmlContent,
+        private readonly string $content,
         private readonly ?DateTimeInterface $updatedAt,
         private readonly ?string $updatedMessage,
-        private readonly ?string $language,
-        private readonly ?int $nextPostId
     ) {
     }
 
@@ -44,11 +41,6 @@ final class Post
     public function getPerex(): string
     {
         return $this->perex;
-    }
-
-    public function getHtmlContent(): string
-    {
-        return $this->htmlContent;
     }
 
     public function getSlug(): string
@@ -76,23 +68,13 @@ final class Post
         return $this->updatedMessage;
     }
 
-    public function getLanguage(): ?string
-    {
-        return $this->language;
-    }
-
     public function getYear(): int
     {
         return (int) $this->dateTime->format('Y');
     }
 
-    public function isFuture(): bool
+    public function getContent(): string
     {
-        return $this->dateTime > DateTime::from('now');
-    }
-
-    public function getNextPostId(): int|null
-    {
-        return $this->nextPostId;
+        return $this->content;
     }
 }

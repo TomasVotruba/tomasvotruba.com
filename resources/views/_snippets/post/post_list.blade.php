@@ -2,12 +2,12 @@
     @php /** @var $post \TomasVotruba\Website\Entity\Post */ @endphp
 
     <div
-            @class([
-                'article-row',
-                'bg-success text-white pt-3 pb-4 ps-4 pe-4 mb-4 rounded shadow' => $post->isUpdated(),
-            ])
+        @class([
+            'article-row',
+            'bg-success text-white pt-3 pb-4 ps-4 pe-4 mb-4 rounded shadow' => $post->isUpdated(),
+        ])
     >
-        <a href="{{ route(\TomasVotruba\Website\Enum\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
+        <a href="{{ route(\App\Enum\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
            class="post-list-title">
             {{ $post->getClearTitle() }}
         </a>

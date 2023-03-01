@@ -9,8 +9,6 @@ perex: |
 
 
     I knew there was a time for a change.
-
-next_post_id: 338
 ---
 
 ## Http Kernel and Console Applications

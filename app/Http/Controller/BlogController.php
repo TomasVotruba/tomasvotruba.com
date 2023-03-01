@@ -19,7 +19,7 @@ final class BlogController extends Controller
     {
         return \view('blog', [
             'title' => 'Blog',
-            'posts' => $this->postRepository->fetchAllEnglish(),
+            'posts' => $this->postRepository->fetchAll(),
         ]);
     }
 }

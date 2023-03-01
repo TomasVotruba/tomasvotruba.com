@@ -11,6 +11,7 @@
 
 @import "bootstrap/scss/bootstrap";
 
+
 body {
     font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 
@@ -27,10 +28,6 @@ html, body {
 
 .magenta {
     color: #f10ab1;
-}
-
-.opacity-70 {
-    opacity: 0.7;
 }
 
 /*!* Typography *!*/
@@ -118,28 +115,11 @@ ul {
     }
 }
 
-pre {
-    border: none;
-    border-radius: 2px;
-}
-
 .card-bigger {
     font-size: 1.1em;
     margin-top: .8em;
     margin-bottom: .8em;
     line-height: 1.6em;
-}
-
-code {
-    font-size: .9em;
-    color: #07a;
-}
-
-code[class*="language-"],
-pre[class*="language-"] {
-    margin-top: .8em;
-    margin-bottom: 1.4em;
-    font-size: 1em;
 }
 
 /* article helpers */
@@ -156,40 +136,8 @@ img {
     margin-bottom: .7em;
 }
 
-pre {
-    font-size: 1em;
-    background-color: #fdf6e3;
-    padding-bottom: 1em;
-    padding-left: 1em;
-    overflow: auto;
-    word-wrap: normal;
-    white-space: pre;
-    border-radius: 6px;
-}
-
 .shadow {
     box-shadow: 1px 2px 15px -2px rgb(0 0 0/20%);
-}
-
-.shadow-danger {
-    /* color "darkred" */
-    box-shadow: 1px 2px 15px -2px rgb(139 0 0/20%);
-}
-
-/* prism remove color in diff */
-.token.deleted {
-    color: #980707;
-    background: #fdd;
-    display: inline-block;
-    width: 100%;
-}
-
-/* prism remove color in diff */
-.token.inserted {
-    color: #488b3a;
-    background: #dfd;
-    display: inline-block;
-    width: 100%;
 }
 
 .blockquote {
@@ -419,10 +367,18 @@ a.btn {
     }
 }
 
-#trainings .blockquote {
-    font-size: 1.2em;
-}
-
 .blockquote-book {
     line-height: 1.4em;
+}
+
+
+pre {
+    font-size: 1em;
+    background-color: #fdf6e3;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+    border-radius: 6px;
 }
