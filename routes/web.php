@@ -33,8 +33,12 @@ Class Car {
 ```
 EOT;
 
+    $nodePath = app()->environment('production')
+        ? '/root/.nvm/versions/node/v14.21.2/bin/node'
+        : '/usr/local/bin/node';
+
     $command = [
-          0 => "/usr/local/bin/node",
+          0 => $nodePath,
           1 => "shiki.js",
           2 => '["<?php\n\nClass Bike {\n    \/\/\/\n}\n","php","github-dark",{"addLines":[],"deleteLines":[],"highlightLines":[],"focusLines":[]}]',
         ];
