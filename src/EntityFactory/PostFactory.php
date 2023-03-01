@@ -44,6 +44,12 @@ final class PostFactory
         $configuration = Yaml::parse($matches['config']);
 
         $id = $configuration['id'];
+
+        if (!isset($configuration['title'])) {
+            $errorMessage = sprintf('"title" is missing in post: %d', $id);
+            throw new ShouldNotHappenException($errorMessage);
+        }
+
         $title = $configuration['title'];
 
         if (! isset($matches['content'])) {
