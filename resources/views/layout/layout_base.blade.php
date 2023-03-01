@@ -13,7 +13,7 @@
     <meta name="twitter:site" content="votrubaT"/>
     <meta name="twitter:creator" content="votrubaT"/>
 
-    @if (\Illuminate\Support\Facades\View::hasSection('post_social_tags'))
+    @hasSection('post_social_tags')
         @yield('post_social_tags')
     @else
         {{-- default social --}}
