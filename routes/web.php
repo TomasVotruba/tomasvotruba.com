@@ -36,8 +36,6 @@ EOT;
 
     dump($app);
 
-    dump(getenv());
-
     return $app
         ->highlightTheme('github-dark')
         ->toHtml($markdown);
