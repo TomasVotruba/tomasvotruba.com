@@ -13,6 +13,8 @@ use App\Http\Controller\PostController;
 use App\Http\Controller\RssController;
 use App\Http\Controller\ThumbnailController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process;
 
 Route::get('/test/shiki', function () {
     $date = now()->format('Y-m-d H:i:s');
@@ -31,15 +33,31 @@ Class Car {
 ```
 EOT;
 
-    /** @var \Spatie\LaravelMarkdown\MarkdownRenderer $app */
-    $app = app(\Spatie\LaravelMarkdown\MarkdownRenderer::class);
+    $command = [
+          0 => "/usr/local/bin/node",
+          1 => "shiki.js",
+          2 => '["<?php\n\nClass Bike {\n    \/\/\/\n}\n","php","github-dark",{"addLines":[],"deleteLines":[],"highlightLines":[],"focusLines":[]}]',
+        ];
 
-    dump($app);
+        $process = new Process(
+            $command,
+            '/var/www/tomasvotruba.com/vendor/spatie/shiki-php/bin'
+        );
+
+        $process->run();
+
+        if (! $process->isSuccessful()) {
+            throw new ProcessFailedException($process);
+        }
+
+        return $process->getOutput();
 
     return $app
         ->highlightTheme('github-dark')
         ->toHtml($markdown);
 });
+
+
 
 Route::get('/', HomepageController::class)
     ->name(RouteName::HOMEPAGE);
