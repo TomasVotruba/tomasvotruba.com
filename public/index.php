@@ -9,10 +9,10 @@ define('LARAVEL_START', microtime(true));
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = require_once __DIR__ . '/../bootstrap/app.php';
+$application = require_once __DIR__ . '/../bootstrap/app.php';
 
 /** @var Kernel $kernel */
-$kernel = $app->make(Kernel::class);
+$kernel = $application->make(Kernel::class);
 
 $request = Request::capture();
 $response = $kernel->handle($request)->send();
