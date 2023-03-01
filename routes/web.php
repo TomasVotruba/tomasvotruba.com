@@ -13,56 +13,6 @@ use App\Http\Controller\PostController;
 use App\Http\Controller\RssController;
 use App\Http\Controller\ThumbnailController;
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\Process\Exception\ProcessFailedException;
-use Symfony\Component\Process\Process;
-
-Route::get('/test/shiki', function () {
-    $date = now()->format('Y-m-d H:i:s');
-
-    $markdown = <<<EOT
-# foo
-
-$date
-
-```php
-<?php
-
-Class Car {
-    ///
-}
-```
-EOT;
-
-    $nodePath = app()->environment('production')
-        ? '/root/.nvm/versions/node/v18.14.2/bin/node'
-        : '/usr/local/bin/node';
-    // which node
-
-    $command = [
-          0 => $nodePath,
-          1 => "shiki.js",
-          2 => '["<?php\n\nClass Bike {\n    \/\/\/\n}\n","php","github-dark",{"addLines":[],"deleteLines":[],"highlightLines":[],"focusLines":[]}]',
-        ];
-
-        $process = new Process(
-            $command,
-            base_path('/vendor/spatie/shiki-php/bin')
-        );
-
-        $process->run();
-
-        if (! $process->isSuccessful()) {
-            throw new ProcessFailedException($process);
-        }
-
-        return $process->getOutput();
-
-    return $app
-        ->highlightTheme('github-dark')
-        ->toHtml($markdown);
-});
-
-
 
 Route::get('/', HomepageController::class)
     ->name(RouteName::HOMEPAGE);
