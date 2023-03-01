@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <h1>Read about upgrades, static analysis, GPT, Symfony and Laravel</h1>
+        <h1>{{ \App\Enum\Design::BLOG_TITLE }} </h1>
 
         {{-- display posts with as few divs as possible, for DOM performance on mobile --}}
 

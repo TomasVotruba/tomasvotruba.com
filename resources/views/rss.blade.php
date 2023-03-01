@@ -1,5 +1,8 @@
-<? xml version = "1.0" encoding = "UTF-8" ?>
+@php
+    /** @var $posts \TomasVotruba\Website\Entity\Post[] */
+@endphp
 
+<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0"
      xmlns:content="https://purl.org/rss/1.0/modules/content/"
      xmlns:dc="https://purl.org/dc/elements/1.1/"
@@ -7,19 +10,14 @@
 >
     <channel>
         <title>Tomas Votruba writes about PHP and education</title>
-        <link>
-        https://tomasvotruba.com/</link>
-        <description>PHP, Communities and Communication posts by Tomas Votruba</description>
+        <link>https://tomasvotruba.com/</link>
+        <description>{{ \App\Enum\Design::BLOG_TITLE }}</description>
         <pubDate>{{ "now"|date('r') }}</pubDate>
         <atom:link href="https://tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml"/>
 
         <lastBuildDate>{{ $most_recent_post_date_time_stamp }}</lastBuildDate>
 
-        {{-- https://stackoverflow.com/a/29161205/1348344 --}}
-
-        @foreach($posts as $post)
-            @php /** @var $post \TomasVotruba\Website\Entity\Post */ @endphp
-
+        @foreach ($posts as $post)
             @php
                 $post_absolute_url = route(\App\Enum\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]);
             @endphp
@@ -28,7 +26,7 @@
                 <title><![CDATA[ {{ $post->getClearTitle() }} ]]></title>
                 <link>{{ $post_absolute_url }}</link>
                 <description><![CDATA[ {!! $post->getPerex() !!} ]]></description>
-                <content><![CDATA[ {!! $post->getHtmlContent() !!} ]]></content>
+                <content><![CDATA[ {!! $post->getContent() !!} ]]></content>
                 <guid isPermaLink="false">{{ $post_absolute_url }}</guid>
                 <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
 

@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
-use Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector;
 use Rector\PHPUnit\Set\PHPUnitSetList;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
@@ -21,11 +20,4 @@ return function (RectorConfig $rectorConfig): void {
     ]);
 
     $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/app']);
-
-    $rectorConfig->skip([
-        // broken for DateTime interface
-        RenamePropertyToMatchTypeRector::class => [
-            __DIR__  . '/packages/blog/src/ValueObject/Post.php',
-        ],
-    ]);
 };

@@ -28,6 +28,7 @@ Route::get('/books', BooksController::class)
 
 Route::get('/blog/{slug}', PostController::class)
     ->name(RouteName::POST_DETAIL)
+    // include dots and slahes as well
     ->where('slug', '.*');
 
 Route::get('/blog', BlogController::class)

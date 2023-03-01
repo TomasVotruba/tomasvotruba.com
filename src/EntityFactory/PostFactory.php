@@ -70,7 +70,7 @@ final class PostFactory
             $configuration['updated_message'] ?? null,
         );
 
-        $this->postGuard->validate($post);
+        $this->postGuard->ensureUpdatedMessageIsPresent($post);
 
         return $post;
     }

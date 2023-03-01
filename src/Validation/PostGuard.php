@@ -10,7 +10,7 @@ use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class PostGuard
 {
-    public function validate(Post $post): void
+    public function ensureUpdatedMessageIsPresent(Post $post): void
     {
         if (! $post->getUpdatedAt() instanceof DateTimeInterface) {
             return;
