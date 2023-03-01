@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TomasVotruba\Website\EntityFactory;
 
-use Illuminate\Support\Str;
 use Nette\Utils\DateTime;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
@@ -27,12 +26,6 @@ final class PostFactory
      * @var string
      */
     private const CONFIG_CONTENT_REGEX = '#^\s*' . self::SLASHES_WITH_SPACES_REGEX . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_REGEX . '(?<content>.*?)$#s';
-
-    /**
-     * @see https://regex101.com/r/9xssch/1
-     * @var string
-     */
-    private const HEADLINE_LEVEL_REGEX = '#<h(?<level>\d+)>(?<headline>.*?)<\/h\d+>#';
 
     public function __construct(
         private readonly ParsedownExtra $parsedownExtra,
@@ -71,7 +64,7 @@ final class PostFactory
             $slug,
             $this->pathAnalyzer->resolveDateTime($filePath),
             $configuration['perex'],
-            $this->decorateHeadlineWithId($htmlContent),
+            $htmlContent,
             $updatedAt,
             $configuration['updated_message'] ?? null,
             $configuration['lang'] ?? null,
@@ -81,24 +74,5 @@ final class PostFactory
         $this->postGuard->validate($post);
 
         return $post;
-    }
-
-    /**
-     * Before: <h1>Hey</h1>
-     *
-     * After: <h1 id="hey">Hey</h1>
-     *
-     * Then the headline can be anchored in url as "#hey"
-     */
-    private function decorateHeadlineWithId(string $htmlContent): string
-    {
-        return Strings::replace($htmlContent, self::HEADLINE_LEVEL_REGEX, static function (array $matches): string {
-            $level = (int) $matches['level'];
-            $headline = (string) $matches['headline'];
-            $clearHeadline = strip_tags($headline);
-
-            $headlineSlug = Str::slug($clearHeadline);
-            return sprintf('<h%d id="%s">%s</h%d>', $level, $headlineSlug, $headline, $level);
-        });
     }
 }
