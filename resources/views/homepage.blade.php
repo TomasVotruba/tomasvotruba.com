@@ -17,34 +17,13 @@
             </div>
         </div>
 
-        <br>
-
-        <div class="clearfix"></div>
-
-        <h2 class="mb-4">
+        <h2 class="mb-5">
             What can your learn about?
         </h2>
 
-        <div class="text-bigger">
-            @foreach ($last_posts as $current_post)
-                @php /** @var $current_post \App\Entity\Post */ @endphp
-                <div class="mb-4 row">
-                    <div class="col-12">
-                        <a href="{{ route(\App\Enum\RouteName::POST_DETAIL, ['slug' =>  $current_post->getSlug()]) }}"
-                           class="pt-3 pr-3">
-                            {{ $current_post->getClearTitle() }}
-                        </a>
-                    </div>
+        @include('_snippets/post/post_list', ['posts' => $last_posts])
 
-                    <div class="small text-secondary col-12 pt-2">
-                        {{ $current_post->getDateTime()->format("Y-m-d") }}
-                    </div>
-                </div>
-            @endforeach
-
-            <a href="{{ route(\App\Enum\RouteName::BLOG) }}"
-               class="btn btn-warning pull-right mt-4">Discover more Posts </a>
-        </div>
+        <a href="{{ route(\App\Enum\RouteName::BLOG) }}" class="btn btn-warning pull-right mt-4">Discover more Posts</a>
 
         <br>
         <br>
