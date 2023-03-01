@@ -1,6 +1,11 @@
-@php use TomasVotruba\Website\Enum\RouteName; @endphp
+@php
+    use TomasVotruba\Website\Enum\RouteName;
 
-        <!DOCTYPE html>
+    /** type declarations */
+    /** @var $post \TomasVotruba\Website\Entity\Post */
+@endphp
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>{{ $title }} | Tomas Votruba</title>
@@ -12,8 +17,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    @php /** @var $post \TomasVotruba\Website\Entity\Post */ @endphp
-
     {{--  social tags based on https://www.phpied.com/minimum-viable-sharing-meta-tags/ --}}
     <meta name="description" property="og:description" content="{{ $post->getPerex() }}"/>
 
@@ -23,8 +26,8 @@
     <meta property="og:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getClearTitle()]) }}"/>
 
     <meta
-            property="og:url"
-            content="{{ route(RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
+        property="og:url"
+        content="{{ route(RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
     />
 
     <meta name="twitter:card" content="summary_large_image"/>
@@ -34,8 +37,7 @@
     <meta name="twitter:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getClearTitle()]) }}"/>
     <meta name="twitter:description" content="{{ $post->getPerex() }}"/>
 
-    <link rel="alternate" type="application/rss+xml" title="Tomas Votruba Blog RSS"
-          href="{{ route(\TomasVotruba\Website\Enum\RouteName::RSS) }}">
+    <link rel="alternate" type="application/rss+xml" title="Tomas Votruba Blog RSS"  href="{{ route(RouteName::RSS) }}">
 
     {{-- !!! Twitter Bootstrap - keep the local copy css classes autocomplete --}}
     {{-- to speed-up delivery https://stackoverflow.com/a/46142270/1348344 --}}
@@ -44,9 +46,9 @@
     <link rel="stylesheet" rel="preload" as="style"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap"/>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"
-          media="print" onload="this.media='all'">
+{{--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"--}}
+{{--          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"--}}
+{{--          media="print" onload="this.media='all'">--}}
 
     {{-- this is the last, so prism can be overriden here --}}
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css"/>

@@ -4,7 +4,7 @@
     <div
             @class([
                 'article-row',
-                'bg-success text-white pt-3 pb-4 pl-4 pr-4 mb-4 rounded shadow' => $post->isUpdated(),
+                'bg-success text-white pt-3 pb-4 ps-4 pe-4 mb-4 rounded shadow' => $post->isUpdated(),
             ])
     >
         <a href="{{ route(\TomasVotruba\Website\Enum\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]) }}"
