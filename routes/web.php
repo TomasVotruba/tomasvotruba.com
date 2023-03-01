@@ -14,6 +14,28 @@ use App\Http\Controller\RssController;
 use App\Http\Controller\ThumbnailController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/test/shiki', function () {
+    $date = now()->format('Y-m-d H:i:s');
+
+    $markdown = <<<EOT
+# foo
+
+$date
+
+```php
+<?php
+
+Class Car {
+    ///
+}
+```
+EOT;
+
+    return app(\Spatie\LaravelMarkdown\MarkdownRenderer::class)
+        ->highlightTheme('github-dark')
+        ->toHtml($markdown);
+});
+
 Route::get('/', HomepageController::class)
     ->name(RouteName::HOMEPAGE);
 
