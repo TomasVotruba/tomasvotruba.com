@@ -45,7 +45,7 @@ final class PostFactory
 
         $id = $configuration['id'];
 
-        if (!isset($configuration['title'])) {
+        if (! isset($configuration['title'])) {
             $errorMessage = sprintf('"title" is missing in post: %d', $id);
             throw new ShouldNotHappenException($errorMessage);
         }
