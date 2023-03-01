@@ -155,11 +155,8 @@ Where does this lead me so far? I want to explore the ecosystem, make the leaky 
 <br>
 
 * I want to teach [PHPStan to run on Blade templates](https://twitter.com/VotrubaT/status/1625925547464196109).
-
 * Yesterday, I leaked [my first Laravel package on Twitter](https://twitter.com/votrubat) that helps to manage configs.
-
 * I'll convert the getrector.com website to Laravel, the most complex project so far. This will set grounds for a package to handle such migrations, including [Twig to Blade conversion](https://twitter.com/VotrubaT/status/1627277318254100482).
-
 * **I'll write a technical post soon about what surprises me about Laravel** (in a good way)
 
 <br><br>
