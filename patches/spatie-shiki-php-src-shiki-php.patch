@@ -1,10 +1,11 @@
 --- /dev/null
 +++ ../src/Shiki.php
-@@ -97,6 +97,7 @@
+@@ -95,6 +95,8 @@
+     {
+         $command = [
              (new ExecutableFinder())->find('node', 'node', [
++                '/root/.nvm/versions/node/v18.14.2/bin',
++                '/root/.nvm/versions/node/v14.21.2/bin',
                  '/usr/local/bin',
                  '/opt/homebrew/bin',
-+                '/root/.nvm/versions/node/v14.21.2/bin',
              ]),
-             'shiki.js',
-             json_encode(array_values($arguments)),
