@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Validation;
+namespace App\Validation;
 
+use App\Entity\Post;
+use App\Exception\ShouldNotHappenException;
 use DateTimeInterface;
-use TomasVotruba\Website\Entity\Post;
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class PostGuard
 {

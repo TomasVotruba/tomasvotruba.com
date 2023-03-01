@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controller;
 
+use App\Repository\PostRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
-use TomasVotruba\Website\Repository\PostRepository;
 
 final class PostController extends Controller
 {

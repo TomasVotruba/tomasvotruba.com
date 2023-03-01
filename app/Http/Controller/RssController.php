@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Http\Controller;
 
+use App\Entity\Post;
+use App\Repository\PostRepository;
 use DateTimeInterface;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use TomasVotruba\Website\Repository\PostRepository;
-use TomasVotruba\Website\Entity\Post;
 
 final class RssController extends Controller
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Repository;
+namespace App\Repository;
 
-use TomasVotruba\Website\DataProvider\PostDataProvider;
-use TomasVotruba\Website\Entity\Post;
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
+use App\DataProvider\PostDataProvider;
+use App\Entity\Post;
+use App\Exception\ShouldNotHappenException;
 
 final class PostRepository
 {

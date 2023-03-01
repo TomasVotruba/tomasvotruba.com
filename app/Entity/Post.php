@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Entity;
+namespace App\Entity;
 
 use DateTimeInterface;
 

@@ -30,13 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app",
-            "TomasVotruba\\Website\\": "src"
+            "App\\": "app"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TomasVotruba\\Website\\Tests\\": "tests"
+            "App\\Tests\\": "tests"
         }
     },
     "scripts": {

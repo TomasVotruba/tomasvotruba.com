@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controller;
 
+use App\Repository\BookRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
-use TomasVotruba\Website\Repository\BookRepository;
 
 final class BookDetailController extends Controller
 {
