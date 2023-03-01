@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-9">
-                <h1 class="text-left">
+                <h1 class="text-start">
                     I help PHP Companies <br>
                     Change Fast&nbsp;and&nbsp;Safely
                 </h1>

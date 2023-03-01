@@ -6,9 +6,11 @@ package-lock.json
 # phpunit
 .phpunit.cache
 
+
+
 ###> symfony/framework-bundle ###
 /config/secrets/prod/prod.decrypt.private.php
-/public/bundles/
+/public/build/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
@@ -19,3 +21,7 @@ storage/framework/views/*
 !storage/framework/views/.gitignore
 
 bootstrap/cache/*
+
+# frontend
+yarn.lock
+yarn-error.log
