@@ -34,8 +34,9 @@ Class Car {
 EOT;
 
     $nodePath = app()->environment('production')
-        ? '/root/.nvm/versions/node/v14.21.2/bin/node'
+        ? '/root/.nvm/versions/node/v18.14.2/bin/node'
         : '/usr/local/bin/node';
+    // which node
 
     $command = [
           0 => $nodePath,
