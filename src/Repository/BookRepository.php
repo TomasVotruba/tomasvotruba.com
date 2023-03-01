@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Repository;
 
 use TomasVotruba\Website\Entity\Book;
-use TomasVotruba\Website\Exception\BookException;
+use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class BookRepository
 {
@@ -127,6 +127,6 @@ CODE_SAMPLE
         }
 
         $errorMessage = sprintf('Book slug "%s" was not found', $slug);
-        throw new BookException($errorMessage);
+        throw new ShouldNotHappenException($errorMessage);
     }
 }

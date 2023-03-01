@@ -15,7 +15,6 @@ parameters:
 
     paths:
         - app
-        - bin
         - src
         - config
         - tests

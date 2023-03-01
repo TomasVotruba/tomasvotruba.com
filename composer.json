@@ -34,6 +34,11 @@
             "TomasVotruba\\Website\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "TomasVotruba\\Website\\Tests\\": "tests"
+        }
+    },
     "scripts": {
         "phpstan": "vendor/bin/phpstan analyse --ansi --error-format symplify",
         "check-cs": "vendor/bin/ecs check --ansi",

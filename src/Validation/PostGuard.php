@@ -6,7 +6,7 @@ namespace TomasVotruba\Website\Validation;
 
 use DateTimeInterface;
 use TomasVotruba\Website\Entity\Post;
-use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
+use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class PostGuard
 {
@@ -22,6 +22,6 @@ final class PostGuard
         }
 
         $message = sprintf('"updated_message" is missing in post %d', $post->getId());
-        throw new InvalidPostConfigurationException($message);
+        throw new ShouldNotHappenException($message);
     }
 }

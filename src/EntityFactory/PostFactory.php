@@ -9,7 +9,6 @@ use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use Symfony\Component\Yaml\Yaml;
 use TomasVotruba\Website\Entity\Post;
-use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 use TomasVotruba\Website\FileSystem\PathAnalyzer;
 use TomasVotruba\Website\Validation\PostGuard;
@@ -48,7 +47,7 @@ final class PostFactory
         $title = $configuration['title'];
 
         if (! isset($matches['content'])) {
-            throw new InvalidPostConfigurationException('Post content is missing');
+            throw new ShouldNotHappenException('Post content is missing');
         }
 
         $slug = $this->pathAnalyzer->getSlug($filePath);

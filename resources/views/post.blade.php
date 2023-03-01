@@ -1,7 +1,7 @@
 @extends('layout.layout_base')
 
 @php
-    use TomasVotruba\Website\Enum\RouteName;
+    use App\Enum\RouteName;
 
     /** type declarations */
     /** @var $post \TomasVotruba\Website\Entity\Post */

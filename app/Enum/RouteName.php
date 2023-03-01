@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Enum;
+namespace App\Enum;
 
 /**
  * @api

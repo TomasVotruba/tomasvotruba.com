@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Enum\RouteName;
 use App\Http\Controller\AboutController;
 use App\Http\Controller\BlogController;
 use App\Http\Controller\BookDetailController;
@@ -9,10 +10,9 @@ use App\Http\Controller\BooksController;
 use App\Http\Controller\ContactController;
 use App\Http\Controller\HomepageController;
 use App\Http\Controller\PostController;
-use App\Http\Controller\ThumbnailController;
 use App\Http\Controller\RssController;
+use App\Http\Controller\ThumbnailController;
 use Illuminate\Support\Facades\Route;
-use TomasVotruba\Website\Enum\RouteName;
 
 Route::get('/', HomepageController::class)
     ->name(RouteName::HOMEPAGE);
