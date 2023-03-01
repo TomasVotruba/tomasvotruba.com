@@ -25,3 +25,5 @@ bootstrap/cache/*
 # frontend
 yarn.lock
 yarn-error.log
+
+public/hot
