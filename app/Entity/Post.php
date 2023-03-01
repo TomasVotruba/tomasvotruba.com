@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use App\Enum\RouteName;
 use DateTimeInterface;
 
 /**
@@ -76,5 +77,10 @@ final class Post
     public function getContent(): string
     {
         return $this->content;
+    }
+
+    public function getAbsoluteUrl(): string
+    {
+        return route(RouteName::POST_DETAIL, ['slug' => $this->slug]);
     }
 }

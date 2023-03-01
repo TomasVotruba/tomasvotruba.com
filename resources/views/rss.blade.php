@@ -1,7 +1,3 @@
-@php
-    /** @var $posts \App\Entity\Post[] */
-@endphp
-
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0"
      xmlns:content="https://purl.org/rss/1.0/modules/content/"
@@ -10,25 +6,24 @@
 >
     <channel>
         <title>Tomas Votruba writes about PHP and education</title>
-        <link>
-        https://tomasvotruba.com/</link>
+        <link>https://tomasvotruba.com/</link>
         <description>{{ \App\Enum\Design::BLOG_TITLE }}</description>
         <pubDate>{{ "now"|date('r') }}</pubDate>
         <atom:link href="https://tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml"/>
 
         <lastBuildDate>{{ $most_recent_post_date_time_stamp }}</lastBuildDate>
 
-        @foreach ($posts as $post)
-            @php
-                $post_absolute_url = route(\App\Enum\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]);
-            @endphp
+        @php
+            /** @var $posts \App\Entity\Post[] */
+        @endphp
 
+        @foreach ($posts as $post)
             <item>
                 <title><![CDATA[ {{ $post->getClearTitle() }} ]]></title>
-                <link>{{ $post_absolute_url }}</link>
+                <link>{{ $post->getAbsoluteUrl() }}</link>
                 <description><![CDATA[ {!! $post->getPerex() !!} ]]></description>
                 <content><![CDATA[ {!! $post->getContent() !!} ]]></content>
-                <guid isPermaLink="false">{{ $post_absolute_url }}</guid>
+                <guid isPermaLink="false">{{ $post->getAbsoluteUrl() }}</guid>
                 <dc:creator><![CDATA[ Tomas Votruba ]]></dc:creator>
 
                 {{-- @see https://wordpress.stackexchange.com/a/229773 --}}
