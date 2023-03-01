@@ -38,7 +38,7 @@ I thought, "that was nice. I've met a few people, we had a good laugh and tasty 
 
 But 3 things happened that changed the direction of my life:
 
-* a guy looking like an established businessman, [Patricio](https://twitter.´com/ijpatricio), invited me to his town for a weekend
+* a guy looking like an established businessman, [Patricio](https://twitter.com/ijpatricio), invited me to his town for a weekend
 * there was a PHP meetup in Lisbon on Tuesday next week
 * there was a conference for PHP devs Thursday next week, also in Lisbon
 
