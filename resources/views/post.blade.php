@@ -30,58 +30,62 @@
 @endsection
 
 @section('content')
-    <h1>{!! $post->getTitle() !!}</h1>
+    <div id="post">
+        <h1>{!! $post->getTitle() !!}</h1>
 
-    <time datetime="{{ $post->getDateTime()->format('Y-m-D') }}" class="text-muted">
-        {{ $post->getDateTime()->format('Y-m-d') }}
-    </time>
+        <time datetime="{{ $post->getDateTime()->format('Y-m-D') }}" class="text-muted">
+            {{ $post->getDateTime()->format('Y-m-d') }}
+        </time>
 
-    @if ($post->getUpdatedAt())
-        <div class="card border-success mt-4">
-            <div class="card-header text-white bg-success">
-                This post was updated at {{ $post->getUpdatedAt()->format("F Y") }} with fresh know-how.
-                <br>
-                <strong>What is new?</strong>
-            </div>
-            @if ($post->getUpdatedMessage())
-                <div class="card-body pb-2">
-                    <x-markdown>
-                        {{ $post->getUpdatedMessage() }}
-                    </x-markdown>
+        @if ($post->getUpdatedAt())
+            <div class="card border-success mt-4">
+                <div class="card-header text-white bg-success">
+                    This post was updated at {{ $post->getUpdatedAt()->format("F Y") }} with fresh know-how.
+                    <br>
+                    <strong>What is new?</strong>
                 </div>
-            @endif
+                @if ($post->getUpdatedMessage())
+                    <div class="card-body pb-2">
+                        <x-markdown>
+                            {{ $post->getUpdatedMessage() }}
+                        </x-markdown>
+                    </div>
+                @endif
+            </div>
+
+            <br>
+        @endif
+
+        <div class="card card-bigger mb-5">
+            <div class="card-body p-4">
+                <x-markdown>
+                    {{ $post->getPerex() }}
+                </x-markdown>
+            </div>
         </div>
+
+        <x-markdown>
+            {!! $post->getContent() !!}
+        </x-markdown>
 
         <br>
-    @endif
 
-    <div class="card card-bigger mb-5">
-        <div class="card-body pb-2">
-            <x-markdown>
-                {{ $post->getPerex() }}
-            </x-markdown>
-        </div>
+        <br>
+        <br>
+
+        <a name="comments"></a>
+
+        <div id="disqus_thread"></div>
+
+        <script>
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://itsworthsharing.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+
+        <script id="dsq-count-scr" src="https://itsworthsharing/disqus.com/count.js" async defer></script>
     </div>
-
-    <x-markdown>{!! $post->getContent() !!}</x-markdown>
-
-    <br>
-
-    <br>
-    <br>
-
-    <a name="comments"></a>
-
-    <div id="disqus_thread"></div>
-
-    <script>
-        (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://itsworthsharing.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-
-    <script id="dsq-count-scr" src="https://itsworthsharing/disqus.com/count.js" async defer></script>
 @endsection
