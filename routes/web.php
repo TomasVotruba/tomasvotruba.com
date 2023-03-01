@@ -41,7 +41,7 @@ EOT;
 
         $process = new Process(
             $command,
-            '/var/www/tomasvotruba.com/vendor/spatie/shiki-php/bin'
+            base_path('/vendor/spatie/shiki-php/bin')
         );
 
         $process->run();
