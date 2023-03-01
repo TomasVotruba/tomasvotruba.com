@@ -5,14 +5,8 @@
         "build": "vite build"
     },
     "dependencies": {
-        "@babel/core": "^7.20.7",
-        "@babel/preset-env": "^7.20.2",
         "ajv": "^6.10.1",
-        "bootstrap": "^6.2",
-        "caniuse-lite": "^1.0.30001419",
-        "codemirror": "^5.0.1",
-        "jquery": "^3.4.1",
-        "tar": "^6.1.11"
+        "bootstrap": "5.3.0-alpha1"
     },
     "devDependencies": {
         "axios": "^1.1.2",

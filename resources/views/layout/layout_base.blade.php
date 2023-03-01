@@ -25,11 +25,6 @@
         {{-- next attempts https://stackoverflow.com/a/64439406/1348344 --}}
         <link rel="stylesheet" rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap" />
 
-{{--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" media="print" onload="this.media='all'">--}}
-
-        {{-- this is the last, so prism can be overriden here --}}
-{{--        <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />--}}
-
         @vite(['resources/css/app.scss', 'resources/js/app.js'])
     </head>
     <body>
