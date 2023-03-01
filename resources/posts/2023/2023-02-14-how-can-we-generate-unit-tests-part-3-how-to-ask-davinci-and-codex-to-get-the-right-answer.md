@@ -88,7 +88,7 @@ Use the same practical language as you would use in a real conversation. **Be sp
 
 <br>
 
-```anything
+```
 Generate PHPUnit test for a "someMagic()" method with data provider of
 4 use cases for this code:
 
@@ -259,7 +259,7 @@ In practice, we'll hardcode 2 new snippets to the prompt:
 * The example input PHP code
 * The example output unit test code
 
-```anything
+```
 Generate PHPUnit test for a "someMagic()" method with data provider
 of 4 use cases for this code:
 

@@ -10,7 +10,6 @@ perex: |
      **You kept me asking "why", so here it is.**
 ---
 
-
 *Disclaimer: If you expect this post to be technical, or code quality analysis, it will not. It's my personal experience. Also, this is not comparison or shaming post, I use Symfony and Laravel on daily basis and enjoy working with both of them.*
 
 <br>

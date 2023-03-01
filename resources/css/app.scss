@@ -207,11 +207,20 @@ table ul {
     cursor: pointer;
 }
 
-#post p.text-muted {
-    font-size: 0.9em;
-    padding-top: .6em;
-    padding-bottom: .2em;
+#post {
+    p, li {
+        font-size: 1.2em;
+        line-height: 1.7em;
+    }
+
+    p.text-muted {
+        font-size: 0.9em;
+        padding-top: .6em;
+        padding-bottom: .2em;
+    }
 }
+
+
 
 .thead-inverse th h3 {
     color: #DDD;
@@ -369,4 +378,11 @@ a.btn {
 
 .blockquote-book {
     line-height: 1.4em;
+}
+
+pre.shiki {
+    margin: 1.5em 0 1em;
+    border-radius: .3rem;
+    padding: 1.5em 1.2em;
+    border: 2px solid #ffe294;
 }
