@@ -63,7 +63,6 @@ final class PostFactory
             $matches['content'],
             $updatedAt,
             $configuration['updated_message'] ?? null,
-            $configuration['next_post_id'] ?? null,
         );
 
         $this->postGuard->validate($post);

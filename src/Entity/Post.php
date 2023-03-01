@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace TomasVotruba\Website\Entity;
 
 use DateTimeInterface;
-use Nette\Utils\DateTime;
 
 /**
  * @api Getter methods are used in templates
@@ -21,7 +20,6 @@ final class Post
         private readonly string $content,
         private readonly ?DateTimeInterface $updatedAt,
         private readonly ?string $updatedMessage,
-        private readonly ?int $nextPostId
     ) {
     }
 
@@ -73,16 +71,6 @@ final class Post
     public function getYear(): int
     {
         return (int) $this->dateTime->format('Y');
-    }
-
-    public function isFuture(): bool
-    {
-        return $this->dateTime > DateTime::from('now');
-    }
-
-    public function getNextPostId(): int|null
-    {
-        return $this->nextPostId;
     }
 
     public function getContent(): string

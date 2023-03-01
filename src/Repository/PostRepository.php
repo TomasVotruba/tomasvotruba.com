@@ -20,22 +20,6 @@ final class PostRepository
         $this->posts = $postDataProvider->provide();
     }
 
-    ///**
-    // * @return Post[]
-    // */
-    //public function getPosts(): array
-    //{
-    //    return $this->posts;
-    //}
-
-    /**
-     * @return Post[]
-     */
-    public function fetchForRss(): array
-    {
-        return $this->filterOutFuture($this->posts);
-    }
-
     /**
      * @return Post[]
      */
@@ -43,20 +27,6 @@ final class PostRepository
     {
         return $this->posts;
     }
-
-    //public function get(int $id): Post
-    //{
-    //    foreach ($this->getPosts() as $post) {
-    //        if ($post->getId() !== $id) {
-    //            continue;
-    //        }
-    //
-    //        return $post;
-    //    }
-    //
-    //    $message = sprintf('Post with id "%d" was not found', $id);
-    //    throw new ShouldNotHappenException($message);
-    //}
 
     public function getBySlug(string $slug): Post
     {
@@ -81,14 +51,5 @@ final class PostRepository
     public function fetchLast(int $limit): array
     {
         return array_slice($this->fetchAll(), 0, $limit);
-    }
-
-    /**
-     * @param Post[] $posts
-     * @return Post[]
-     */
-    private function filterOutFuture(array $posts): array
-    {
-        return array_filter($posts, static fn (Post $post): bool => ! $post->isFuture());
     }
 }

@@ -10,7 +10,8 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
 
-        <meta name="twitter:creator" content="@votrubaT"/>
+        <meta name="twitter:site" content="votrubaT"/>
+        <meta name="twitter:creator" content="votrubaT"/>
 
         @if (\Illuminate\Support\Facades\View::hasSection('post_social_tags'))
             @yield('social_tags')

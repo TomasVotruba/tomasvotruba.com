@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import hljs from 'highlight.js';
 
 export default defineConfig({
     plugins: [

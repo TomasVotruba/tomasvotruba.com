@@ -19,7 +19,7 @@ final class RssController extends Controller
 
     public function __invoke(): Response
     {
-        $posts = $this->postRepository->fetchForRss();
+        $posts = $this->postRepository->fetchAll();
 
         $contents = view('rss', [
             'posts' => $posts,

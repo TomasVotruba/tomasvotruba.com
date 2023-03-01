@@ -1,7 +1,6 @@
 ---
 id: 339
-next_post_id: 340
-title: "STAMP #1: How to Compile Twig to PHP"
+gtitle: "STAMP #1: How to Compile Twig to PHP"
 perex: |
     In the previous post, we looked [at *why* and *when* static analysis of templates matter](/blog/stamp-static-analysis-of-templates). Today we look at how to prepare starting point for Twig templates.
 

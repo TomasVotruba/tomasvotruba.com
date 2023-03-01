@@ -1,6 +1,5 @@
  ---
 id: 341
-next_post_id: 342
 title: "STAMP #3: How to Turn TWIG Helper Functions to Origin Object"
 perex: |
     In the previous post, we looked at [*how* to turn Messy TWIG PHP to something useful](/blog/stamp-2-how-to-turn-messy-twig-php-to-something-useful) in general.
