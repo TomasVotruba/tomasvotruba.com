@@ -12,6 +12,7 @@
         "nette/utils": "^3.2",
         "spatie/laravel-markdown": "^2.2",
         "symfony/yaml": "^6.2",
+        "symplify/vendor-patches": "^11.2",
         "tomasvotruba/punchcard": "^0.0.3"
     },
     "require-dev": {
@@ -61,7 +62,15 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "cweagans/composer-patches": true
+        }
+    },
+    "extra": {
+        "patches": {
+            "spatie/shiki-php": [
+                "patches/spatie-shiki-php-src-shiki-php.patch"
+            ]
         }
     }
 }
