@@ -10,17 +10,19 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
 
-        {{-- socials --}}
-        <meta name="twitter:card" content="summary"/>
         <meta name="twitter:creator" content="@votrubaT"/>
 
-        <meta property="og:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
-        <meta name="twitter:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
+        @if (\Illuminate\Support\Facades\View::hasSection('post_social_tags'))
+            @yield('social_tags')
+        @else
+            {{-- default social --}}
+            <meta name="twitter:card" content="summary"/>
+
+            <meta property="og:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
+            <meta name="twitter:image" content="{{ asset('assets/images/tomas_votruba.jpg') }}"/>
+       @endif
 
         <link rel="alternate" type="application/rss+xml" title="Tomas Votruba Blog RSS" href="{{ route(\TomasVotruba\Website\Enum\RouteName::RSS) }}">
-
-        {{-- !!! Twitter Bootstrap - keep the local copy css classes autocomplete --}}
-        {{-- to speed-up delivery https://stackoverflow.com/a/46142270/1348344 --}}
 
         {{-- next attempts https://stackoverflow.com/a/64439406/1348344 --}}
         <link rel="stylesheet" rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap" />
@@ -35,9 +37,6 @@
                 @yield('content')
             </div>
         </div>
-
-        @section('custom_footer')
-        @endsection
 
         @include('_snippets/google_analytics')
     </body>

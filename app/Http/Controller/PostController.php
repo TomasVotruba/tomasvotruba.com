@@ -19,7 +19,7 @@ final class PostController extends Controller
     {
         $post = $this->postRepository->getBySlug($slug);
 
-        return \view('layout/post_detail', [
+        return \view('post', [
             'post' => $post,
             'title' => $post->getClearTitle(),
         ]);

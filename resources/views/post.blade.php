@@ -1,3 +1,5 @@
+@extends('layout.layout_base')
+
 @php
     use TomasVotruba\Website\Enum\RouteName;
 
@@ -5,18 +7,7 @@
     /** @var $post \TomasVotruba\Website\Entity\Post */
 @endphp
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>{{ $title }} | Tomas Votruba</title>
-    <meta charset="utf-8">
-    <meta name="robots" content="index, follow">
-
-    {{-- mobile --}}
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-
+@section('post_social_tags')
     {{--  social tags based on https://www.phpied.com/minimum-viable-sharing-meta-tags/ --}}
     <meta name="description" property="og:description" content="{{ $post->getPerex() }}"/>
 
@@ -31,26 +22,14 @@
     />
 
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:site" content="votrubaT"/>
-    <meta name="twitter:creator" content="votrubaT"/>
     <meta name="twitter:title" content="{{ $post->getClearTitle() }}"/>
     <meta name="twitter:image" content="{{ route(RouteName::POST_IMAGE, ['title' => $post->getClearTitle()]) }}"/>
     <meta name="twitter:description" content="{{ $post->getPerex() }}"/>
 
-    <link rel="alternate" type="application/rss+xml" title="Tomas Votruba Blog RSS"  href="{{ route(RouteName::RSS) }}">
+    <!-- post_id: {{ $post->getId() }} -->
+@endsection
 
-    {{-- next attempts https://stackoverflow.com/a/64439406/1348344 --}}
-    <link rel="stylesheet" rel="preload" as="style"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap"/>
-
-    @vite(['resources/css/app.scss', 'resources/js/app.js'])
-</head>
-
-<body>
-<!-- post_id: {{ $post->getId() }} -->
-@include('_snippets.menu')
-
-<div class="container-fluid post" id="content">
+@section('content')
     <h1>{!! $post->getTitle() !!}</h1>
 
     <time datetime="{{ $post->getDateTime()->format('Y-m-D') }}" class="text-muted">
@@ -94,13 +73,17 @@
     <a name="comments"></a>
 
     @include('_snippets.disqus_comments')
-</div>
 
-<script id="dsq-count-scr" src="https://itsworthsharing/disqus.com/count.js" async defer></script>
+    <script id="dsq-count-scr" src="https://itsworthsharing/disqus.com/count.js" async defer></script>
 
-<link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css"/>
-<script src="{{ asset('assets/prism/prism.js') }}"></script>
+    {{--<link href="{{ asset('assets/prism/prism.css') }}" rel="stylesheet" type="text/css"/>--}}
+    {{--<script src="{{ asset('assets/prism/prism.js') }}"></script>--}}
 
-@include('_snippets.google_analytics')
-</body>
-</html>
+    <script type="text/javascript">
+        document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
+
+    </script>
+
+@endsection
