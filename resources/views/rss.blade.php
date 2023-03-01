@@ -8,9 +8,8 @@
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://tomasvotruba.com/</link>
         <description>{{ \App\Enum\Design::BLOG_TITLE }}</description>
-        <pubDate>{{ "now"|date('r') }}</pubDate>
+        <pubDate>{{ date('r') }}</pubDate>
         <atom:link href="https://tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml"/>
-
         <lastBuildDate>{{ $most_recent_post_date_time_stamp }}</lastBuildDate>
 
         @php
