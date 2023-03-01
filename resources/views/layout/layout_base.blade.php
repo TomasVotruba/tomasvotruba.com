@@ -13,7 +13,11 @@
         <meta name="twitter:creator" content="@votrubaT"/>
 
         @if (\Illuminate\Support\Facades\View::hasSection('post_social_tags'))
+        <!-- better -->
+        @ifHasSection
             @yield('social_tags')
+
+
         @else
             {{-- default social --}}
             <meta name="twitter:card" content="summary"/>
@@ -28,13 +32,6 @@
         <link rel="stylesheet" rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap" />
 
         @vite(['resources/css/app.scss', 'resources/js/app.js'])
-
-        <script type="text/javascript">
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-        </script>
-
     </head>
     <body>
         @include('_snippets/menu')
