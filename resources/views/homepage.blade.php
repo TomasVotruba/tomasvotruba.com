@@ -27,7 +27,7 @@
 
         <div class="text-bigger">
             @foreach ($last_posts as $current_post)
-                @php /** @var $current_post \TomasVotruba\Website\Entity\Post */ @endphp
+                @php /** @var $current_post \App\Entity\Post */ @endphp
                 <div class="mb-4 row">
                     <div class="col-12">
                         <a href="{{ route(\App\Enum\RouteName::POST_DETAIL, ['slug' =>  $current_post->getSlug()]) }}"

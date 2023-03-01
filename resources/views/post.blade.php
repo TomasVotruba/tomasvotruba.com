@@ -4,7 +4,7 @@
     use App\Enum\RouteName;
 
     /** type declarations */
-    /** @var $post \TomasVotruba\Website\Entity\Post */
+    /** @var $post \App\Entity\Post */
 @endphp
 
 @section('post_social_tags')

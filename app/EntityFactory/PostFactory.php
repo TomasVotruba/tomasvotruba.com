@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\EntityFactory;
+namespace App\EntityFactory;
 
+use App\Entity\Post;
+use App\Exception\ShouldNotHappenException;
+use App\FileSystem\PathAnalyzer;
+use App\Validation\PostGuard;
 use Nette\Utils\DateTime;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use Symfony\Component\Yaml\Yaml;
-use TomasVotruba\Website\Entity\Post;
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
-use TomasVotruba\Website\FileSystem\PathAnalyzer;
-use TomasVotruba\Website\Validation\PostGuard;
 
 final class PostFactory
 {

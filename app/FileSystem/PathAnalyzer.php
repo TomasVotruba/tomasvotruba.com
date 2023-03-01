@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\FileSystem;
+namespace App\FileSystem;
 
+use App\Exception\ShouldNotHappenException;
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
 final class PathAnalyzer
 {

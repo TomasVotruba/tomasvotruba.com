@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\DataProvider;
+namespace App\DataProvider;
 
-use TomasVotruba\Website\Entity\Post;
-use TomasVotruba\Website\EntityFactory\PostFactory;
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
+use App\Entity\Post;
+use App\EntityFactory\PostFactory;
+use App\Exception\ShouldNotHappenException;
 use Webmozart\Assert\Assert;
 
 final class PostDataProvider

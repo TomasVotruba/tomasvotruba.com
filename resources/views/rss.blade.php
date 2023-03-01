@@ -1,5 +1,5 @@
 @php
-    /** @var $posts \TomasVotruba\Website\Entity\Post[] */
+    /** @var $posts \App\Entity\Post[] */
 @endphp
 
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -10,7 +10,8 @@
 >
     <channel>
         <title>Tomas Votruba writes about PHP and education</title>
-        <link>https://tomasvotruba.com/</link>
+        <link>
+        https://tomasvotruba.com/</link>
         <description>{{ \App\Enum\Design::BLOG_TITLE }}</description>
         <pubDate>{{ "now"|date('r') }}</pubDate>
         <atom:link href="https://tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml"/>

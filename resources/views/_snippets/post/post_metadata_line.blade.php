@@ -1,5 +1,5 @@
 <div>
-    @php /** @var $post \TomasVotruba\Website\Entity\Post */ @endphp
+    @php /** @var $post \App\Entity\Post */ @endphp
 
     <time datetime="{{ $post->getDateTime()|date('Y-m-D') }}">
         @if ($post->getUpdatedAt())

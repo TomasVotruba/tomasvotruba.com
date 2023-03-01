@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Repository;
+namespace App\Repository;
 
-use TomasVotruba\Website\Entity\Book;
-use TomasVotruba\Website\Exception\ShouldNotHappenException;
+use App\Entity\Book;
+use App\Exception\ShouldNotHappenException;
 
 final class BookRepository
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Entity;
+namespace App\Entity;
 
 use Illuminate\Support\Str;
 
 /**
  * @api
- * @see \TomasVotruba\Website\Tests\ValueObject\BookTest
+ * @see \App\Tests\Entity\BookTest
  */
 final class Book
 {

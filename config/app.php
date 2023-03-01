@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+use Illuminate\Session\SessionServiceProvider;
 
 use App\Providers\RouteServiceProvider;
 use Illuminate\Cache\CacheServiceProvider;
@@ -28,7 +29,7 @@ return AppConfig::make()
         FilesystemServiceProvider::class,
         FoundationServiceProvider::class,
         ViewServiceProvider::class,
-        \Illuminate\Session\SessionServiceProvider::class,
+        SessionServiceProvider::class,
         TranslationServiceProvider::class,
         RouteServiceProvider::class,
         QueueServiceProvider::class,

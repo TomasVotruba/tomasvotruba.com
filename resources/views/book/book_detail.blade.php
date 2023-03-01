@@ -1,6 +1,6 @@
 @extends('layout/layout_base')
 
-@php /** @var $book \TomasVotruba\Website\Entity\Book */ @endphp
+@php /** @var $book \App\Entity\Book */ @endphp
 
 @section('content')
     <div class="container-fluid" id="blog">
@@ -8,19 +8,20 @@
 
         <div class="float-right text-center ml-5">
             <a href="{{ $book->getLeanpubLink() }}" target="blank">
-                <img src="{{ $book->getCoverImage() }}" style="width: 16em; padding: .5em;margin:0 0 .5em 0" class="shadow" alt="{{ $book->getTitle() }} Book Cover">
+                <img src="{{ $book->getCoverImage() }}" style="width: 16em; padding: .5em;margin:0 0 .5em 0"
+                     class="shadow" alt="{{ $book->getTitle() }} Book Cover">
             </a>
 
             <br>
 
             <a
-                href="{{ $book->getLeanpubLink() }}"
-                target="blank"
-                @class([
-                    'btn btn-lg mt-4 mb-2',
-                    'btn-success' => $book->isFinished(),
-                    'btn-warning' => ! $book->isFinished(),
-                ])
+                    href="{{ $book->getLeanpubLink() }}"
+                    target="blank"
+                    @class([
+                        'btn btn-lg mt-4 mb-2',
+                        'btn-success' => $book->isFinished(),
+                        'btn-warning' => ! $book->isFinished(),
+                    ])
             >
                 @if ($book->isFinished())
                     Buy a Copy

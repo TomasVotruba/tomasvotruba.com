@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace TomasVotruba\Website\Tests\Entity;
+namespace App\Tests\Entity;
 
+use App\Entity\Book;
 use PHPUnit\Framework\TestCase;
-use TomasVotruba\Website\Entity\Book;
 
 final class BookTest extends TestCase
 {

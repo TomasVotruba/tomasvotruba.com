@@ -19,5 +19,9 @@ return function (RectorConfig $rectorConfig): void {
         LevelSetList::UP_TO_PHP_81,
     ]);
 
-    $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/app']);
+    $rectorConfig->paths([
+        __DIR__ . '/app',
+        __DIR__ . '/config',
+        __DIR__ . '/tests'
+    ]);
 };

@@ -1,5 +1,5 @@
 @foreach ($posts as $post)
-    @php /** @var $post \TomasVotruba\Website\Entity\Post */ @endphp
+    @php /** @var $post \App\Entity\Post */ @endphp
 
     <div
         @class([
