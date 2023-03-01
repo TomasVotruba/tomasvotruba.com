@@ -31,9 +31,12 @@ Class Car {
 ```
 EOT;
 
+    /** @var \Spatie\LaravelMarkdown\MarkdownRenderer $app */
     $app = app(\Spatie\LaravelMarkdown\MarkdownRenderer::class);
 
     dump($app);
+
+    dump(getenv());
 
     return $app
         ->highlightTheme('github-dark')
