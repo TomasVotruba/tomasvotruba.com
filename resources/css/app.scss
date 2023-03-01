@@ -10,6 +10,7 @@
 */
 
 @import "bootstrap/scss/bootstrap";
+@import "highlight.js/styles/default.css";
 
 body {
     font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
@@ -174,22 +175,6 @@ pre {
 .shadow-danger {
     /* color "darkred" */
     box-shadow: 1px 2px 15px -2px rgb(139 0 0/20%);
-}
-
-/* prism remove color in diff */
-.token.deleted {
-    color: #980707;
-    background: #fdd;
-    display: inline-block;
-    width: 100%;
-}
-
-/* prism remove color in diff */
-.token.inserted {
-    color: #488b3a;
-    background: #dfd;
-    display: inline-block;
-    width: 100%;
 }
 
 .blockquote {
