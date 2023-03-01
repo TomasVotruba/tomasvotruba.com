@@ -3,7 +3,6 @@
 @endphp
 
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <rss version="2.0"
      xmlns:content="https://purl.org/rss/1.0/modules/content/"
      xmlns:dc="https://purl.org/dc/elements/1.1/"
@@ -12,15 +11,13 @@
     <channel>
         <title>Tomas Votruba writes about PHP and education</title>
         <link>https://tomasvotruba.com/</link>
-        <description>PHP, Communities  posts by Tomas Votruba</description>
+        <description>{{ \App\Enum\Design::BLOG_TITLE }}</description>
         <pubDate>{{ "now"|date('r') }}</pubDate>
         <atom:link href="https://tomasvotruba.com/rss.xml" rel="self" type="application/rss+xml"/>
 
         <lastBuildDate>{{ $most_recent_post_date_time_stamp }}</lastBuildDate>
 
-        {{-- https://stackoverflow.com/a/29161205/1348344 --}}
-
-        @foreach($posts as $post)
+        @foreach ($posts as $post)
             @php
                 $post_absolute_url = route(\App\Enum\RouteName::POST_DETAIL, ['slug' => $post->getSlug()]);
             @endphp
