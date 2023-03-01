@@ -75,11 +75,4 @@
     @include('_snippets.disqus_comments')
 
     <script id="dsq-count-scr" src="https://itsworthsharing/disqus.com/count.js" async defer></script>
-
-    <script type="text/javascript">
-        document.querySelectorAll('pre code').forEach((block) => {
-              hljs.highlightBlock(block);
-        });
-    </script>
-
 @endsection
