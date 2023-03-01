@@ -14,7 +14,7 @@
     <meta name="twitter:creator" content="votrubaT"/>
 
     @if (\Illuminate\Support\Facades\View::hasSection('post_social_tags'))
-        @yield('social_tags')
+        @yield('post_social_tags')
     @else
         {{-- default social --}}
         <meta name="twitter:card" content="summary"/>
