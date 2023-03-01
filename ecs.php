@@ -15,8 +15,6 @@ return function (ECSConfig $ecsConfig): void {
         __DIR__ . '/ecs.php',
     ]);
 
-    $ecsConfig->skip(['*/Fixture/*', '*/Expected/*']);
-
     $ecsConfig->sets([SetList::PSR_12, SetList::COMMON, SetList::SYMPLIFY]);
 
     $ecsConfig->rule(LineLengthFixer::class);
