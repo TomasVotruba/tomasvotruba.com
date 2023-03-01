@@ -63,7 +63,7 @@
         </div>
     </div>
 
-    {!! $post->getHtmlContent() !!}
+    <x-markdown>{!! $post->getContent() !!}</x-markdown>
 
     <br>
 

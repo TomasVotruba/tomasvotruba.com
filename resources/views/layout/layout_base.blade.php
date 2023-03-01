@@ -13,11 +13,7 @@
         <meta name="twitter:creator" content="@votrubaT"/>
 
         @if (\Illuminate\Support\Facades\View::hasSection('post_social_tags'))
-        <!-- better -->
-        @ifHasSection
             @yield('social_tags')
-
-
         @else
             {{-- default social --}}
             <meta name="twitter:card" content="summary"/>
@@ -33,15 +29,21 @@
 
         @vite(['resources/css/app.scss', 'resources/js/app.js'])
     </head>
+
     <body>
         @include('_snippets/menu')
 
-        <div class="container-fluid">
-            <div id="content">
-                @yield('content')
-            </div>
+        <div class="container-fluid" id="content">
+            @yield('content')
         </div>
-
-        @include('_snippets/google_analytics')
     </body>
+
+    <script>
+        ga=function(){ ga.q.push(arguments) };
+        ga.q=[];
+        ga.l=+new Date;
+        ga('create', 'UA-46082345-1', 'auto');
+        ga('send','pageview');
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </html>

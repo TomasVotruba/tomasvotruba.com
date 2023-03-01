@@ -7,7 +7,6 @@ namespace TomasVotruba\Website\EntityFactory;
 use Nette\Utils\DateTime;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
-use ParsedownExtra;
 use Symfony\Component\Yaml\Yaml;
 use TomasVotruba\Website\Entity\Post;
 use TomasVotruba\Website\Exception\InvalidPostConfigurationException;
@@ -28,7 +27,6 @@ final class PostFactory
     private const CONFIG_CONTENT_REGEX = '#^\s*' . self::SLASHES_WITH_SPACES_REGEX . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_REGEX . '(?<content>.*?)$#s';
 
     public function __construct(
-        private readonly ParsedownExtra $parsedownExtra,
         private readonly PathAnalyzer $pathAnalyzer,
         private readonly PostGuard $postGuard,
     ) {
@@ -54,8 +52,6 @@ final class PostFactory
         }
 
         $slug = $this->pathAnalyzer->getSlug($filePath);
-        $htmlContent = $this->parsedownExtra->parse($matches['content']);
-
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
 
         $post = new Post(
@@ -64,10 +60,9 @@ final class PostFactory
             $slug,
             $this->pathAnalyzer->resolveDateTime($filePath),
             $configuration['perex'],
-            $htmlContent,
+            $matches['content'],
             $updatedAt,
             $configuration['updated_message'] ?? null,
-            $configuration['lang'] ?? null,
             $configuration['next_post_id'] ?? null,
         );
 

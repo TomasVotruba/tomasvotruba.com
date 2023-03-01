@@ -8,9 +8,6 @@ use TomasVotruba\Website\DataProvider\PostDataProvider;
 use TomasVotruba\Website\Entity\Post;
 use TomasVotruba\Website\Exception\ShouldNotHappenException;
 
-/**
- * @api
- */
 final class PostRepository
 {
     /**
@@ -23,59 +20,43 @@ final class PostRepository
         $this->posts = $postDataProvider->provide();
     }
 
-    /**
-     * @return Post[]
-     */
-    public function getPosts(): array
-    {
-        return $this->posts;
-    }
+    ///**
+    // * @return Post[]
+    // */
+    //public function getPosts(): array
+    //{
+    //    return $this->posts;
+    //}
 
     /**
      * @return Post[]
      */
     public function fetchForRss(): array
     {
-        $posts = $this->filterOutNonEnglish($this->posts);
-        return $this->filterOutFuture($posts);
+        return $this->filterOutFuture($this->posts);
     }
 
     /**
      * @return Post[]
      */
-    public function fetchAllEnglish(): array
+    public function fetchAll(): array
     {
-        return $this->filterOutNonEnglish($this->posts);
+        return $this->posts;
     }
 
-    /**
-     * @param int[] $ids
-     * @return Post[]
-     */
-    public function findByIds(array $ids): array
-    {
-        $posts = [];
-
-        foreach ($ids as $id) {
-            $posts[] = $this->get($id);
-        }
-
-        return $posts;
-    }
-
-    public function get(int $id): Post
-    {
-        foreach ($this->getPosts() as $post) {
-            if ($post->getId() !== $id) {
-                continue;
-            }
-
-            return $post;
-        }
-
-        $message = sprintf('Post with id "%d" was not found', $id);
-        throw new ShouldNotHappenException($message);
-    }
+    //public function get(int $id): Post
+    //{
+    //    foreach ($this->getPosts() as $post) {
+    //        if ($post->getId() !== $id) {
+    //            continue;
+    //        }
+    //
+    //        return $post;
+    //    }
+    //
+    //    $message = sprintf('Post with id "%d" was not found', $id);
+    //    throw new ShouldNotHappenException($message);
+    //}
 
     public function getBySlug(string $slug): Post
     {
@@ -99,16 +80,7 @@ final class PostRepository
      */
     public function fetchLast(int $limit): array
     {
-        return array_slice($this->fetchAllEnglish(), 0, $limit);
-    }
-
-    /**
-     * @param Post[] $posts
-     * @return Post[]
-     */
-    private function filterOutNonEnglish(array $posts): array
-    {
-        return array_filter($posts, static fn (Post $post): bool => $post->getLanguage() === null);
+        return array_slice($this->fetchAll(), 0, $limit);
     }
 
     /**

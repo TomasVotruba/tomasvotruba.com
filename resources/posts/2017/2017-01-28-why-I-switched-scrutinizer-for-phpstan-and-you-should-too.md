@@ -12,10 +12,7 @@ perex: |
 **PHPStan is a tool for static analysis of PHP code**. It's open source and free to use.
 You can read more about it in this post with very true title - [PHPStan: Find Bugs In Your Code Without Writing Tests!](https://medium.com/@ondrejmirtes/phpstan-2939cd0ad0e3)
 
-<img src="https://raw.githubusercontent.com/phpstan/phpstan/master/build/phpstan.gif" alt="PHPStan in action" class="img-thumbnail">
-
-
-## Why I Prefer It over Scrutinizer (and You Should Too)
+## Why I Prefer It over Scrutinizer
 
 ### It Is Open-Source
 
@@ -67,13 +64,13 @@ composer phpstan
 
 ### 4. Setup you CI
 
-```yml
+```yaml
 # .travis.yml
 script:
     - composer phpstan
 ```
 
-Commit and... push! Now you are running PHPStan on your open-source project. Congrats!
+Commit and push! Now you are running PHPStan on your open-source project. Congrats!
 
 ## The One Thing I Love About PHPStan
 
