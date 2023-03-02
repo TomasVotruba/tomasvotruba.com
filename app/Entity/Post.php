@@ -81,6 +81,8 @@ final class Post
 
     public function getAbsoluteUrl(): string
     {
-        return route(RouteName::POST_DETAIL, ['slug' => $this->slug]);
+        return route(RouteName::POST_DETAIL, [
+            'slug' => $this->slug,
+        ]);
     }
 }

@@ -1,19 +1,14 @@
-/output
+# composer deps
 /vendor
+
+# node deps
 /node_modules
 package-lock.json
 
 # phpunit
 .phpunit.cache
 
-
-
-###> symfony/framework-bundle ###
-/config/secrets/prod/prod.decrypt.private.php
 /public/build/
-/var/
-/vendor/
-###< symfony/framework-bundle ###
 
 /.env
 
