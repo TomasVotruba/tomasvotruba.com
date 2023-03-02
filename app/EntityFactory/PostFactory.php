@@ -7,7 +7,6 @@ namespace App\EntityFactory;
 use App\Entity\Post;
 use App\Exception\ShouldNotHappenException;
 use App\FileSystem\PathAnalyzer;
-use App\Validation\PostGuard;
 use Nette\Utils\DateTime;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
@@ -27,7 +26,6 @@ final class PostFactory
 
     public function __construct(
         private readonly PathAnalyzer $pathAnalyzer,
-        private readonly PostGuard $postGuard,
     ) {
     }
 
@@ -59,7 +57,7 @@ final class PostFactory
         $slug = $this->pathAnalyzer->getSlug($filePath);
         $updatedAt = isset($configuration['updated_since']) ? DateTime::from($configuration['updated_since']) : null;
 
-        $post = new Post(
+        return new Post(
             $id,
             $title,
             $slug,
@@ -69,9 +67,5 @@ final class PostFactory
             $updatedAt,
             $configuration['updated_message'] ?? null,
         );
-
-        $this->postGuard->ensureUpdatedMessageIsPresent($post);
-
-        return $post;
     }
 }

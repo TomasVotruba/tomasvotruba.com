@@ -23,3 +23,6 @@ parameters:
     ignoreErrors:
         # invalid types
         - '#Parameter \#2 \$font of method Imagine\\Draw\\DrawerInterface\:\:text\(\) expects Imagine\\Image\\AbstractFont, Imagine\\Image\\FontInterface given#'
+
+        # false positive
+        - '#Access to an uninitialized readonly property App\\Repository\\PostRepository\:\:\$postFactory#'

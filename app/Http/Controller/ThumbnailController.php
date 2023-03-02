@@ -21,7 +21,6 @@ use Webmozart\Assert\Assert;
  */
 final class ThumbnailController extends Controller
 {
-
     public function __construct(
         private readonly Imagine $imagine
     ) {
@@ -56,17 +55,13 @@ final class ThumbnailController extends Controller
         $rgb = new RGB();
         $color = $rgb->color($hexColor);
 
-        return $this->imagine->font(
-            $fontFamilyFile,
-            $fontSize,
-            $color
-        );
+        return $this->imagine->font($fontFamilyFile, $fontSize, $color);
     }
 
     private function createImage(string $title, string $imageFilePath): void
     {
-        $box    = new Box(2040, 1117);
-        $image  = $this->imagine->create($box);
+        $box = new Box(2040, 1117);
+        $image = $this->imagine->create($box);
         $drawer = $image->draw();
 
         $blackFont = $this->createFont(FontFile::SOURCE_SANS, '000000', 100);

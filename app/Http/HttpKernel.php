@@ -14,9 +14,7 @@ final class HttpKernel extends Kernel
      * @var array<string, array<int, class-string|string>>
      */
     protected $middlewareGroups = [
-        'web' => [
-        ],
-        'admin' => [
-        ],
+        'web' => [],
+        'admin' => [],
     ];
 }
