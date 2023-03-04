@@ -29,6 +29,7 @@ final class HomepageController extends Controller
         'Find what you love and let it kill you. Let it drain you of your all. Let it cling onto your back and weigh you down into eventual nothingness. Let it kill you and let it devour your remains. For all things will kill you, both slowly and fastly, but it is much better to be killed by a lover.',
         // Thomas A. Edison
         "Many of Life's Failures are People Who did not Realize How close they were to Success when they gave up",
+        "Do what you feel in your heart to be right. For you'll be criticized anyway",
     ];
 
     public function __construct(
