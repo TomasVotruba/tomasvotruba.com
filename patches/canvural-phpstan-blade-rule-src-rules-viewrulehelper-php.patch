@@ -1,6 +1,30 @@
 --- /dev/null
 +++ ../src/Rules/ViewRuleHelper.php
-@@ -91,7 +91,7 @@
+@@ -5,6 +5,7 @@
+ namespace Vural\PHPStanBladeRule\Rules;
+ 
+ use PhpParser\Node;
++use PHPStan\Analyser\Error;
+ use PHPStan\Analyser\Scope;
+ use PHPStan\Rules\Registry;
+ use PHPStan\Rules\RuleError;
+@@ -24,6 +25,15 @@
+ 
+ final class ViewRuleHelper
+ {
++    /**
++     * @var string[]
++     */
++    private const EXPECTED_ERRORS = [
++        'Anonymous function has an unused use',
++        'Variable $loop in PHPDoc tag @var does not exist',
++        'Call to function unset() contains undefined variable $loop',
++    ];
++
+     private Registry $registry;
+ 
+     public function __construct(
+@@ -91,12 +101,24 @@
  
          $fileAnalyser = $this->fileAnalyserProvider->provide();
  
@@ -9,3 +33,21 @@
  
          $ruleErrors = $fileAnalyserResult->getErrors();
  
++        // filter out expected errors
++        $relevantRuleErrors = array_filter($ruleErrors, function (Error $ruleError) {
++            foreach (self::EXPECTED_ERRORS as $expectedErrors) {
++                if (str_contains($ruleError->getMessage(), $expectedErrors)) {
++                    return false;
++                }
++            }
++
++            return true;
++        });
++
++
+         return $this->templateErrorsFactory->createErrors(
+-            $ruleErrors,
++            $relevantRuleErrors,
+             $phpLine,
+             $scope->getFile(),
+             $phpFileContentsWithLineMap,
