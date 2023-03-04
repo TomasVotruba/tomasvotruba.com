@@ -1,5 +1,13 @@
-@extends('errors::minimal')
+@extends('layout/layout_base')
 
-@section('title', __('Server Error'))
-@section('code', '500')
-@section('message', __('Server Error'))
+@php
+    $title = __('Server Error');
+@endphp
+
+@section('content')
+    <h1>Something went wrong...</h1>
+
+    <p>
+        You looked for: <code>{{ url()->full() }}</code>
+    </p>
+@endsection
