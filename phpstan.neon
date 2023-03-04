@@ -18,6 +18,10 @@ parameters:
         - config
         - tests
 
+    # phpstan for blade
+    templatePaths:
+        - resources/views
+
     level: 8
 
     ignoreErrors:

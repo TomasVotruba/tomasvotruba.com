@@ -26,10 +26,10 @@ final class HomepageController extends Controller
         'Let everything happen to you<br>Beauty and terror<br>Just keep going<br>No feeling is final',
         'If you live an ordinary life, all you have is ordinary stories.<br>You have to live a life of adventurer.',
         // bukowksi
-        'Find what you love and let it kill you. Let it drain you of your all. Let it cling onto your back and weigh you down into eventual nothingness. Let it kill you and let it devour your remains. For all things will kill you, both slowly and fastly, but it is much better to be killed by a lover.',
+        'Find what you love and let it kill you. Let it drain you of your all. Let it cling onto your back and weigh you down into eventual nothingness.<br>Let it kill you and let it devour your remains. For all things will kill you,<br>both slowly and fastly, but it is much better to be killed by a lover.',
         // Thomas A. Edison
-        "Many of Life's Failures are People Who did not Realize How close they were to Success when they gave up",
-        "Do what you feel in your heart to be right. For you'll be criticized anyway",
+        "Many of Life's failures<br>are people who did not realize<br>how close they were to success<br>when they gave up",
+        "Do what you feel in your heart to be right.<br>For you'll be criticized anyway",
     ];
 
     public function __construct(
@@ -45,7 +45,6 @@ final class HomepageController extends Controller
             'last_posts' => $lastPosts,
             'title' => 'Change Fast and Safely',
             'quote' => $this->getRandomQuote(),
-            'next_month' => $this->getNextMonthName(),
         ]);
     }
 
@@ -53,11 +52,5 @@ final class HomepageController extends Controller
     {
         $randomQuoteKey = array_rand(self::QUOTES);
         return self::QUOTES[$randomQuoteKey];
-    }
-
-    private function getNextMonthName(): string
-    {
-        $nextMonthTime = strtotime('+50 days');
-        return date('F', $nextMonthTime);
     }
 }
