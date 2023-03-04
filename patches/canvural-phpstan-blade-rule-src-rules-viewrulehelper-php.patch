@@ -1,0 +1,11 @@
+--- /dev/null
++++ ../src/Rules/ViewRuleHelper.php
+@@ -91,7 +91,7 @@
+ 
+         $fileAnalyser = $this->fileAnalyserProvider->provide();
+ 
+-        $fileAnalyserResult = $fileAnalyser->analyseFile($tmpFilePath, [], $this->registry, /* TODO set collector registry */, null);
++        $fileAnalyserResult = $fileAnalyser->analyseFile($tmpFilePath, [], $this->registry, new \PHPStan\Collectors\Registry([]), null);
+ 
+         $ruleErrors = $fileAnalyserResult->getErrors();
+ 

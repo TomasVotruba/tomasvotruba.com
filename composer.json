@@ -64,6 +64,9 @@
     },
     "extra": {
         "patches": {
+            "canvural/phpstan-blade-rule": [
+                "patches/canvural-phpstan-blade-rule-src-rules-viewrulehelper-php.patch"
+            ],
             "spatie/shiki-php": [
                 "patches/spatie-shiki-php-src-shiki-php.patch"
             ]
