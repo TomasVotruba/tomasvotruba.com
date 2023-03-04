@@ -17,6 +17,7 @@
         "tomasvotruba/punchcard": "^0.0.3"
     },
     "require-dev": {
+        "canvural/phpstan-blade-rule": "dev-feature/laravel-upgrade",
         "barryvdh/laravel-debugbar": "^3.8",
         "barryvdh/laravel-ide-helper": "^2.13",
         "nunomaduro/collision": "^7.0",
@@ -67,5 +68,11 @@
                 "patches/spatie-shiki-php-src-shiki-php.patch"
             ]
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "github",
+            "url": "https://github.com/alexander-schranz/phpstan-blade-rule"
+        }
+    ]
 }
