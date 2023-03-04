@@ -23,7 +23,7 @@
 
         @include('_snippets/post/post_list', ['posts' => $last_posts])
 
-        <a href="{{ route(\App\Enum\RouteName::BLOG) }}" class="btn btn-warning pull-right mt-4">Discover more Posts</a>
+        <a href="{{ route(\Appinator\Enum\RouteName::BLOG) }}" class="btn btn-warning pull-right mt-4">Discover more Posts</a>
 
         <br>
         <br>
