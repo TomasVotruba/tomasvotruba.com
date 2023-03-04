@@ -45,7 +45,6 @@ final class HomepageController extends Controller
             'last_posts' => $lastPosts,
             'title' => 'Change Fast and Safely',
             'quote' => $this->getRandomQuote(),
-            'next_month' => $this->getNextMonthName(),
         ]);
     }
 
@@ -53,11 +52,5 @@ final class HomepageController extends Controller
     {
         $randomQuoteKey = array_rand(self::QUOTES);
         return self::QUOTES[$randomQuoteKey];
-    }
-
-    private function getNextMonthName(): string
-    {
-        $nextMonthTime = strtotime('+50 days');
-        return date('F', $nextMonthTime);
     }
 }
