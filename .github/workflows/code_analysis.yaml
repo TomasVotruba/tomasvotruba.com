@@ -1,42 +1,78 @@
-name: Code Analysis
+name: "Code Analysis"
 
 on:
     pull_request: null
 
+permissions:
+    contents: "read"
+
+concurrency:
+    group: "${{ github.workflow }}-${{ github.ref }}"
+    cancel-in-progress: true
+
 jobs:
-    code_analysis:
-        strategy:
-            fail-fast: false
-            matrix:
-                actions:
-                    -
-                        name: 'ECS'
-                        run: 'composer fix-cs --ansi'
-
-                    -
-                        name: 'PHPStan'
-                        run: 'composer phpstan --ansi'
-
-                    -
-                        name: 'Unit Tests'
-                        run: |
-                            cp .env.local .env
-                            vendor/bin/phpunit
-
-        name: ${{ matrix.actions.name }}
-        runs-on: ubuntu-latest
-
+    coding_standards:
+        name: "Coding Standards"
+        runs-on: "ubuntu-latest"
         steps:
-            -   uses: actions/checkout@v2
-
-            # see https://github.com/shivammathur/setup-php
-            -   uses: shivammathur/setup-php@v2
+            -
+                name: "Checkout repository"
+                uses: "actions/checkout@v3"
+            -
+                name: "Set up PHP"
+                uses: "shivammathur/setup-php@v2"
                 with:
-                    php-version: 8.1
-                    # needed by phpunit
-                    extensions: mbstring
+                    php-version: "8.1"
+                    extensions: "mbstring"
+                    coverage: "none"
+            -
+                name: "Install dependencies"
+                uses: "ramsey/composer-install@v2"
+            -
+                name: "ECS"
+                run: "composer run fix-cs --ansi"
 
-            # composer install cache - https://github.com/ramsey/composer-install
-            -   uses: "ramsey/composer-install@v2"
+    static_analysis:
+        name: "Static Analysis"
+        runs-on: "ubuntu-latest"
+        steps:
+            -
+                name: "Checkout repository"
+                uses: "actions/checkout@v3"
+            -
+                name: "Set up PHP"
+                uses: "shivammathur/setup-php@v2"
+                with:
+                    php-version: "8.1"
+                    extensions: "mbstring"
+                    coverage: "none"
+            -
+                name: "Install dependencies"
+                uses: "ramsey/composer-install@v2"
+            -
+                name: "Perform static analysis"
+                run: "composer run phpstan --ansi"
 
-            -   run: ${{ matrix.actions.run }}
+    unit_tests:
+        name: "Unit tests"
+        runs-on: "ubuntu-latest"
+        steps:
+            -
+                name: "Checkout repository"
+                uses: "actions/checkout@v3"
+            -
+                name: "Set up PHP"
+                uses: "shivammathur/setup-php@v2"
+                with:
+                    php-version: "8.1"
+                    extensions: "mbstring"
+                    coverage: "xdebug"
+            -
+                name: "Install dependencies"
+                uses: "ramsey/composer-install@v2"
+            -
+                name: "Set up environment variables"
+                run: "cp .env.local .env"
+            -
+                name: "Execute unit tests"
+                run: "composer exec -- phpunit"
