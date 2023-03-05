@@ -19,8 +19,10 @@ parameters:
         - tests
 
     # phpstan for blade
-    templatePaths:
-        - resources/views
+    bladestan:
+        # @todo use defaults
+        template_paths:
+            - resources/views
 
     level: 8
 
