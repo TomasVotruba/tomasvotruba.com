@@ -17,6 +17,7 @@
         "tomasvotruba/punchcard": "^0.0.3"
     },
     "require-dev": {
+        "tomasvotruba/bladestan": "dev-main",
         "barryvdh/laravel-debugbar": "^3.8",
         "barryvdh/laravel-ide-helper": "^2.13",
         "nunomaduro/collision": "^7.0",
