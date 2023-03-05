@@ -17,7 +17,6 @@
         "tomasvotruba/punchcard": "^0.0.3"
     },
     "require-dev": {
-        "canvural/phpstan-blade-rule": "dev-feature/laravel-upgrade",
         "barryvdh/laravel-debugbar": "^3.8",
         "barryvdh/laravel-ide-helper": "^2.13",
         "nunomaduro/collision": "^7.0",
@@ -64,9 +63,6 @@
     },
     "extra": {
         "patches": {
-            "canvural/phpstan-blade-rule": [
-                "patches/canvural-phpstan-blade-rule-src-rules-viewrulehelper-php.patch"
-            ],
             "spatie/shiki-php": [
                 "patches/spatie-shiki-php-src-shiki-php.patch"
             ]
