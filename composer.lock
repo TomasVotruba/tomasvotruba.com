@@ -7463,16 +7463,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.15.19",
+            "version": "0.15.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "4b3a85382e890963a6d00e0ace8d09465f96e370"
+                "reference": "c3c4fb38255a671c4854846dce08a059c76f358a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/4b3a85382e890963a6d00e0ace8d09465f96e370",
-                "reference": "4b3a85382e890963a6d00e0ace8d09465f96e370",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/c3c4fb38255a671c4854846dce08a059c76f358a",
+                "reference": "c3c4fb38255a671c4854846dce08a059c76f358a",
                 "shasum": ""
             },
             "require": {
@@ -7504,9 +7504,15 @@
                 "MIT"
             ],
             "description": "Instant Upgrade and Automated Refactoring of any PHP code",
+            "keywords": [
+                "automation",
+                "dev",
+                "migration",
+                "refactoring"
+            ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.15.19"
+                "source": "https://github.com/rectorphp/rector/tree/0.15.20"
             },
             "funding": [
                 {
@@ -7514,7 +7520,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-28T10:47:53+00:00"
+            "time": "2023-03-05T11:25:23+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -8956,12 +8962,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/bladestan.git",
-                "reference": "eca913ed10156155b45c3af0561307f1c3f15a48"
+                "reference": "632d21bfce2fce0a4358a24ea3708cf86bcd534f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/bladestan/zipball/eca913ed10156155b45c3af0561307f1c3f15a48",
-                "reference": "eca913ed10156155b45c3af0561307f1c3f15a48",
+                "url": "https://api.github.com/repos/TomasVotruba/bladestan/zipball/632d21bfce2fce0a4358a24ea3708cf86bcd534f",
+                "reference": "632d21bfce2fce0a4358a24ea3708cf86bcd534f",
                 "shasum": ""
             },
             "require": {
@@ -8974,7 +8980,8 @@
             "require-dev": {
                 "laravel/framework": "^10.2",
                 "phpunit/phpunit": "^10.0",
-                "rector/rector": "^0.15.19",
+                "rector/rector": "^0.15.20",
+                "symplify/easy-ci": "^11.2",
                 "symplify/easy-coding-standard": "^11.2",
                 "symplify/easy-testing": "^10.0"
             },
@@ -9003,15 +9010,15 @@
             },
             "funding": [
                 {
-                    "url": "https://www.paypal.me/canvural",
+                    "url": "https://www.paypal.me/rectorphp",
                     "type": "custom"
                 },
                 {
-                    "url": "https://github.com/canvural",
+                    "url": "https://github.com/tomasvotruba",
                     "type": "github"
                 }
             ],
-            "time": "2023-03-05T09:57:04+00:00"
+            "time": "2023-03-05T11:48:28+00:00"
         },
         {
             "name": "tomasvotruba/type-coverage",

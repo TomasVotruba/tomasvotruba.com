@@ -18,12 +18,6 @@ parameters:
         - config
         - tests
 
-    # phpstan for blade
-    bladestan:
-        # @todo use defaults
-        template_paths:
-            - resources/views
-
     level: 8
 
     ignoreErrors:
