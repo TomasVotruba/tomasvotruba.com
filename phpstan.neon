@@ -1,5 +1,5 @@
 parameters:
-    # reportUnmatchedIgnoredErrors: false
+    reportUnmatchedIgnoredErrors: false
 
     # see https://github.com/tomasvotruba/type-coverage
     type_coverage:

@@ -8962,12 +8962,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/bladestan.git",
-                "reference": "882b4421cbba4360faf940cf6184b59dea6d6bc4"
+                "reference": "359a329813d653456f012ceb6082d6ce025a2ef4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/bladestan/zipball/882b4421cbba4360faf940cf6184b59dea6d6bc4",
-                "reference": "882b4421cbba4360faf940cf6184b59dea6d6bc4",
+                "url": "https://api.github.com/repos/TomasVotruba/bladestan/zipball/359a329813d653456f012ceb6082d6ce025a2ef4",
+                "reference": "359a329813d653456f012ceb6082d6ce025a2ef4",
                 "shasum": ""
             },
             "require": {
@@ -8982,7 +8982,8 @@
                 "phpunit/phpunit": "^10.0",
                 "rector/rector": "^0.15.20",
                 "symplify/easy-ci": "^11.2",
-                "symplify/easy-coding-standard": "^11.2"
+                "symplify/easy-coding-standard": "^11.2",
+                "tracy/tracy": "^2.9"
             },
             "default-branch": true,
             "type": "phpstan-extension",
@@ -9017,7 +9018,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-05T23:29:54+00:00"
+            "time": "2023-03-06T10:21:13+00:00"
         },
         {
             "name": "tomasvotruba/type-coverage",
