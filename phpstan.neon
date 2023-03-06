@@ -6,7 +6,6 @@ parameters:
         param_type: 99
         return_type: 99
         property_type: 99
-        print_suggestions: true
 
     unused_public:
         methods: true
@@ -18,15 +17,8 @@ parameters:
         - config
         - tests
 
-    # phpstan for blade
-    templatePaths:
-        - resources/views
-
     level: 8
 
     ignoreErrors:
         # invalid types
         - '#Parameter \#2 \$font of method Imagine\\Draw\\DrawerInterface\:\:text\(\) expects Imagine\\Image\\AbstractFont, Imagine\\Image\\FontInterface given#'
-
-        # false positive
-        - '#Access to an uninitialized readonly property App\\Repository\\PostRepository\:\:\$postFactory#'
