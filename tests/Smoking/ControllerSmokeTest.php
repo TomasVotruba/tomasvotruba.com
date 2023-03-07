@@ -17,9 +17,7 @@ final class ControllerSmokeTest extends AbstractTestCase
     {
         $response = $this->get($route->uri);
 
-        dump($response);
-
-        // $response->assertSuccessful();
+        $response->assertSuccessful();
     }
 
     public static function provideRoutes(): Iterator

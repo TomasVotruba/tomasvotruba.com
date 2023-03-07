@@ -21,6 +21,10 @@ jobs:
                         name: 'Unit Tests'
                         run: |
                             cp .env.local .env
+
+                            # fixes missing vite manifest error
+                            yarn build
+
                             vendor/bin/phpunit
 
         name: ${{ matrix.actions.name }}
