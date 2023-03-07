@@ -38,10 +38,10 @@ final class PostRepositoryTest extends AbstractTestCase
 
     public function testPostRoutes(): void
     {
-        $ciDetector = new CiDetector();
-        if ($ciDetector->isCiDetected()) {
-            $this->markTestSkipped('Works only locally for now, ask Patricio for help');
-        }
+        //$ciDetector = new CiDetector();
+        //if ($ciDetector->isCiDetected()) {
+        //    $this->markTestSkipped('Works only locally for now, ask Patricio for help');
+        //}
 
         // limit the amount of posts, as the route tests are slow
         $posts = $this->postRepository->fetchLast(20);

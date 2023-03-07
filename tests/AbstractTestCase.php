@@ -22,15 +22,8 @@ abstract class AbstractTestCase extends TestCase
         $application = require __DIR__ . '/../bootstrap/app.php';
 
         /** @var Kernel $kernel */
-        $kernel = $application->make(Kernel::class);
+        $kernel = $application->make(\Illuminate\Contracts\Console\Kernel::class);
         $kernel->bootstrap();
-
-        // @todo ask patricio if this can be done simpler
-        // @todo set host to localhsot:8000 for test :)
-
-        // setup for route, see https://chat.openai.com/chat/2535e131-d527-42f6-b7f4-a45fd951095
-        $request = new Request();
-        $application->instance('request', $request);
 
         return $application;
     }
