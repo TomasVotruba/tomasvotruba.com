@@ -5,9 +5,7 @@ declare(strict_types=1);
 namespace App\Tests;
 
 use Illuminate\Foundation\Application;
-use Illuminate\Foundation\Http\Kernel;
 use Illuminate\Foundation\Testing\TestCase;
-use Illuminate\Http\Request;
 use Webmozart\Assert\Assert;
 
 abstract class AbstractTestCase extends TestCase
@@ -18,14 +16,7 @@ abstract class AbstractTestCase extends TestCase
      */
     public function createApplication(): Application
     {
-        /** @var Application $application */
-        $application = require __DIR__ . '/../bootstrap/app.php';
-
-        /** @var Kernel $kernel */
-        $kernel = $application->make(\Illuminate\Contracts\Console\Kernel::class);
-        $kernel->bootstrap();
-
-        return $application;
+        return createApplication();
     }
 
     /**

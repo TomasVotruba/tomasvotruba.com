@@ -7,7 +7,6 @@ namespace App\Tests\Repository;
 use App\Entity\Post;
 use App\Repository\PostRepository;
 use App\Tests\AbstractTestCase;
-use OndraM\CiDetector\CiDetector;
 
 final class PostRepositoryTest extends AbstractTestCase
 {
@@ -38,11 +37,6 @@ final class PostRepositoryTest extends AbstractTestCase
 
     public function testPostRoutes(): void
     {
-        //$ciDetector = new CiDetector();
-        //if ($ciDetector->isCiDetected()) {
-        //    $this->markTestSkipped('Works only locally for now, ask Patricio for help');
-        //}
-
         // limit the amount of posts, as the route tests are slow
         $posts = $this->postRepository->fetchLast(20);
 
@@ -51,6 +45,9 @@ final class PostRepositoryTest extends AbstractTestCase
             $postTestUrl = 'https://localhost:8000/blog/' . $post->getSlug();
 
             $response = $this->get($postTestUrl);
+
+            var_dump($response->getContent());
+
             $response->assertSuccessful();
 
             // detail of the post
