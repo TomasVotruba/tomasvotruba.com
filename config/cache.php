@@ -14,7 +14,7 @@ return CacheConfig::make()
         ],
         'file' => [
             'driver' => 'file',
-            'path' => storage_path('framework/cache/data'),
+            'path' => __DIR__ . '/../storage/framework/cache/data',
         ],
     ])
     ->prefix(env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_cache_'))
