@@ -3,12 +3,12 @@ id: 380
 title: "Introducing Punchcard - Object Configs for Laravel"
 
 perex: |
-    What would you like to ride on a higway: a city bike or a Tesla car? **To move fast, we have to feel safe**.
+    What would you like to ride on a highway: a city bike or a Tesla car? **To move fast, we have to feel safe**.
 
-    Last month I've [made a head jump to to Laravel](/blog/why-I-migrated-this-website-from-symfony-to-laravel) ecosystem.  The migration itself went very well, as most of the code is inutitive. There was just one clear bottle-neck: the array configs.
+    Last month I had [made a head jump to Laravel](/blog/why-I-migrated-this-website-from-symfony-to-laravel) ecosystem. The migration went very well, as most of the code is intuitive. There was just one clear bottle-neck: the array configs.
 ---
 
-Sometimes, I remove config that were not needed. But sometimes a crucial line was missing and Laravel throws error about missing service.
+Sometimes, I remove config that was not needed. But sometimes, a crucial line is missing, and Laravel throws an error about missing service.
 
 <br>
 
@@ -55,24 +55,24 @@ return [
 
 ## Problems with array configs
 
-* There is too much comments to read the code between lines.
+* There are too many comments to read the code between the lines.
 
-* It's not clear what is **a parameter name** and what **is used-defined values**. Both of them look like strings.
+* It's unclear what is **a parameter name** and what **is used-defined values**. Both of them look like strings.
 
 * The `env()` hides the type of the value. Is it a string? Is it an array or a boolean? We have to open the file and read the comment to know.
 
-* What other options we can use in this config?
+* What other options can we use in this config?
 
-The rest of framework is quite polished for developer experience, so these arrays stand out of the crowd.
+The rest of the framework is quite polished for developer experience, so these arrays stand out.
 
 <br>
 
-## What we need for config speed?
+## What do we need for config speed?
 
 * strict-typed configs
 * autocomplete with IDE
 * class-based arguments so PHPStan and Rector can help
-* e.g. services providers are not just `string[]`, but
+* e.g., services providers are not just `string[]`, but
 
 ```php
 /**
@@ -82,25 +82,25 @@ The rest of framework is quite polished for developer experience, so these array
 
 <br>
 
-I had clear idea for fluent config builder, that would be generated based on [`/config` directory](https://github.com/laravel/laravel/tree/10.x/config)
- from Laravel skeleton. I asked on Twitter to avoid the wheel invention: "has someone build this?"
+I had a clear idea for a fluent config builder that would be generated based on [`/config` directory](https://github.com/laravel/laravel/tree/10.x/config)
+from Laravel skeleton. I asked on Twitter to avoid the wheel invention: "has someone built this?"
 
-I got a tip for **must-read [What about config builders?](https://stitcher.io/blog/what-about-config-builders) post** by Brent Roose.
+I got a tip for the **must-read [What about config builders?](https://stitcher.io/blog/what-about-config-builders) post** by Brent Roose.
 
 <br>
 
 Wow, that's it! Where can I download it?
 
-But when I reached Brent, I got reply: "it's just an idea, no package".
+But when I reached Brent, I got a reply: "it's just an idea, no package".
 
 <br>
 
-Yet I was very happy to see that established Laravel developer has similar opinion on this topic. It's time to build it!
+Yet I was thrilled that an established Laravel developer has a similar opinion. It's time to build it!
 
 
 ## Introducing Punchcard
 
-1. Install package to your project:
+### 1. Install package to your project:
 
 ```bash
 composer require tomasvotruba/punchcard
@@ -108,9 +108,9 @@ composer require tomasvotruba/punchcard
 
 <br>
 
-2. Use it instead of arrays in your `/config` directory
+### 2. Use it instead of arrays in your `/config` directory
 
-Following code provides the same configuration as above. We use it on this very website for over a week.
+The following code provides the same configuration as above. I've been using it on this very website for over a week.
 
 ```php
 // config/view.php
@@ -118,13 +118,14 @@ use TomasVotruba\PunchCard\ViewConfig;
 
 return ViewConfig::make()
     ->paths([__DIR__ . '/../resources/views'])
-    ->compiled(__DIR__ . '/../storage/framework/views')
+    ->compiled(__DIR__ . '/../storage/framework/views)
     ->toArray();
 ```
 
 <br>
+<br>
 
-The `ViewConfig` is very simple class, but very powerful thanks to all the type declarations:
+The `ViewConfig` is a very simple class but very powerful thanks to all the type declarations:
 
 ```php
 <?php
@@ -173,14 +174,14 @@ final class ViewConfig
 }
 ```
 
-The configs are geneated on package release, so they're always up-to-date with Laravel and available to your autoload and IDE. No magic or fake `@methods` just pure PHP.
+The configs are generated on package release, so they're always up-to-date with Laravel and available to your autoload and IDE. No magic or fake `@methods`, **just pure PHP**.
 
 ## Looking for feedback
 
-This is my first Laravel package, so I want to hear your feedback: How can I make it better? More practical with less code? More strict when it comes to nested object?
+This is my first Laravel package, so I want your feedback: How can I improve it? More practical with less code? More strict when it comes to nested objects?
 
 The repository is here: [TomasVotruba/punchcard](https://github.com/TomasVotruba/punchcard)
 
 <br>
 
-Thank you and happy coding!
+Thank you, and happy coding!
