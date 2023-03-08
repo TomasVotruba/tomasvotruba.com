@@ -6,5 +6,5 @@ use TomasVotruba\PunchCard\ViewConfig;
 
 return ViewConfig::make()
     ->paths([__DIR__ . '/../resources/views'])
-    ->compiled(env('VIEW_COMPILED_PATH', realpath(storage_path('framework/views'))))
+    ->compiled(__DIR__ . '/../storage/framework/views')
     ->toArray();

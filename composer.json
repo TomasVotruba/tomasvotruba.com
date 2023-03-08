@@ -13,7 +13,7 @@
         "spatie/laravel-markdown": "^2.2",
         "symfony/yaml": "^6.2",
         "symplify/vendor-patches": "^11.2",
-        "tomasvotruba/punchcard": "^0.0.3"
+        "tomasvotruba/punchcard": "^0.1.1"
     },
     "require-dev": {
         "tomasvotruba/bladestan": "dev-main",

@@ -208,14 +208,10 @@ table ul {
 }
 
 #post {
-    p, li {
-        font-size: 1.2em;
-        line-height: 1.5em;
-    }
+    font-size: 1.2em;
 
-    li {
-        font-size: 1.2em;
-        line-height: 2em;
+    p, li {
+        line-height: 1.5em;
     }
 
     p.text-muted {
