@@ -57,7 +57,7 @@ return [
 
 * There are too many comments to read the code between the lines.
 
-* It's unclear what is **a parameter name** and what **is used-defined values**. Both of them look like strings.
+* It's unclear what is **a parameter name** and what **is a user-defined value**. Both of them look like strings.
 
 * The `env()` hides the type of the value. Is it a string? Is it an array or a boolean? We have to open the file and read the comment to know.
 
@@ -72,7 +72,7 @@ The rest of the framework is quite polished for developer experience, so these a
 * strict-typed configs
 * autocomplete with IDE
 * class-based arguments so PHPStan and Rector can help
-* e.g., services providers are not just `string[]`, but
+* e.g. services providers are not just `string[]`, but
 
 ```php
 /**
