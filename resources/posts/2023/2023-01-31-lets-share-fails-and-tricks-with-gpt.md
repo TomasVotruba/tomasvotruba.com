@@ -55,6 +55,14 @@ echo $result['choices'][0]['text'];
 
 <br>
 
+## How much tokens is this post long?
+
+Exactly 1 267. Every model has different limits on input content. You cannot past a whole book and expect a summary.
+
+You can check your prompt size with official Tokenizer page: [platform.openai.com/tokenizer](https://platform.openai.com/tokenizer)
+
+<br>
+
 ## How fast is the Response from REST GPT API?
 
 It depends. The shorter the prompt, the faster the response. To give you an idea, the typical [TestGen AI](http://testgenai.com/) **response time is 6-10 seconds**.
