@@ -4,9 +4,7 @@ title: "Lets Share Fails and Tricks with GPT"
 perex: |
     Last week, I had many interesting discussions about OpenAI and GPT on [Laracon in Porto](https://laracon.eu/). Especially with [Marcel Pociot](https://twitter.com/marcelpociot).
 
-
     I've learned much more in 2 days than on the Internet since December.
-
 
     That feels great, and tips seem basic but effective. But as in any other fresh area, finding out about them takes a lot of work. I want to embrace sharing in the GPT community, so here is cherry-pick list of failures and tricks from people **who were generous to share it with me**.
 ---
@@ -41,6 +39,19 @@ composer require openai-php/client
 ```
 
 It's a wrapper around the REST API.
+
+```php
+$yourApiKey = getenv('YOUR_API_KEY');
+$client = OpenAI::client($yourApiKey);
+
+$result = $client->completions()->create([
+    'model' => 'text-davinci-003',
+    'prompt' => 'PHP is',
+]);
+
+// "an open-source, widely-used, server-side scripting language"
+echo $result['choices'][0]['text'];
+```
 
 <br>
 
