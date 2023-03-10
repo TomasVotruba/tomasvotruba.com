@@ -55,6 +55,12 @@ echo $result['choices'][0]['text'];
 
 <br>
 
+## Where can I get the API token?
+
+After you login in Openai.com, you can get the token here [platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys).
+
+<br>
+
 ## How much tokens is this post long?
 
 Exactly 1 267. Every model has different limits on input content. You cannot past a whole book and expect a summary.
@@ -86,7 +92,7 @@ There is a website that tells you the answer: [status.openai.com](https://status
 
 <img src="/assets/images/posts/2023/open_ai_status.png" class="img-thumbnail mt-3" style="max-width: 30rem">
 
-
+<br>
 
 ## How does Copilot work with Context Files?
 
