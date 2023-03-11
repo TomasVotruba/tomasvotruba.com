@@ -1,4 +1,8 @@
-# install dependnencies
+#!/bin/bash
+
+set -e
+
+# install dependencies
 composer install
 yarn install
 
