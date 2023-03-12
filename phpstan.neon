@@ -1,12 +1,6 @@
 parameters:
     reportUnmatchedIgnoredErrors: false
 
-    # see https://github.com/tomasvotruba/type-coverage
-    type_coverage:
-        param_type: 99
-        return_type: 99
-        property_type: 99
-
     paths:
         - app
         - config
