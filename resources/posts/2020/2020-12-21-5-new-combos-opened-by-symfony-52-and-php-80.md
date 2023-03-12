@@ -275,7 +275,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-❌ string `"some_param"` can create typeos, use constant instead
+❌ string `"some_param"` can create typoes, use constant instead
 
 <br>
 
