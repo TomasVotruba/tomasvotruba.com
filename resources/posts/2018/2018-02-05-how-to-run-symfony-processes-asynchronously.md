@@ -37,7 +37,7 @@ foreach ($splitConfiguration as $directory => $repository) {
 
 ## How to Go Async in PHP?
 
-We tried [spatie/async](https://github.com/spatie/async) which has very nice README at first sight and works probably very well for simple functions. But it turned out to be rather magic [by passing service as serialized string](https://github.com/spatie/async/blob/master/src/Runtime/ParentRuntime.php) to [CLI that desirializes it and runs on own thread](https://github.com/spatie/async/blob/master/src/Runtime/ChildRuntime.php). It also caused other process commands fail on success message. It is probably good enought for Laravel, but not for my [SOLID standards](https://github.com/jupeter/clean-code-php#solid).
+We tried [spatie/async](https://github.com/spatie/async) which has very nice README at first sight and works probably very well for simple functions. But it turned out to be rather magic [by passing service as serialized string](https://github.com/spatie/async/blob/master/src/Runtime/ParentRuntime.php) to [CLI that desirializes it and runs on own thread](https://github.com/spatie/async/blob/master/src/Runtime/ChildRuntime.php). It also caused other process commands fail on success message. It is probably good enough for Laravel, but not for my [SOLID standards](https://github.com/jupeter/clean-code-php#solid).
 
 
 ### What are the Other options?

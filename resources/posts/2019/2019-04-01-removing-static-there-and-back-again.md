@@ -225,7 +225,7 @@ Instead, I ask myself: "how would I describe the process step by step to a machi
 
 If we're able to describe the process, **we'll turn billions of use cases to 1 pattern transformation**.
 
-Imagine you try to fix typoes one-by-one manually. Or you could write a function, that fixes 5 most common typos for the user and hooks it on the Internet and SMS network (regardless of security) - to process every electronic message in the world. Just like that, the world became smarter thanks to you single function.
+Imagine you try to fix typos one-by-one manually. Or you could write a function, that fixes 5 most common typos for the user and hooks it on the Internet and SMS network (regardless of security) - to process every electronic message in the world. Just like that, the world became smarter thanks to you single function.
 
 I disagree with Martin's statement: "Its essence is applying a series of small behavior-preserving transformations". It's not about the behavior of code anymore. Much more important is the pattern in the code. We don't care about `Price`, nor `Currency` (it could be also called `Name` and `Invoice`).
 

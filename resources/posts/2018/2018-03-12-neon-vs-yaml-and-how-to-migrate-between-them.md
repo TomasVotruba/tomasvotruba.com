@@ -258,7 +258,7 @@ But EasyCodingStandard was running on Neon that was loaded by my few classes to 
 
 ```diff
  services:
-     # class should be Abstact or Final
+     # class should be Abstract or Final
 -    - SlamCsFixer\FinalInternalClassFixer
 +    SlamCsFixer\FinalInternalClassFixer: ~
      ArrayFixer: ~

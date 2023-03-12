@@ -244,7 +244,7 @@ WTF? After 15 minutes we figured it out - Kdyby\Translation wrapped the variable
  {
      public function someAction()
      {
-         // Kdyby/Translation differnce to native Symfony/Translation
+         // Kdyby/Translation difference to native Symfony/Translation
          $this->translations->translate('Hi, my name is %name%', [
 -            'name' => 'Tom',
 +            '%name%' => 'Tom'

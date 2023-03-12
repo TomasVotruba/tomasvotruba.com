@@ -38,7 +38,7 @@ We need to add global file argument. So, what option do we have?
      protected function configure(): void
      {
          // ...
-+        $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
++        $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work with');
      }
  }
 
@@ -48,7 +48,7 @@ We need to add global file argument. So, what option do we have?
      protected function configure(): void
      {
          // ...
-+        $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
++        $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work with');
      }
  }
 
@@ -57,7 +57,7 @@ We need to add global file argument. So, what option do we have?
      protected function configure(): void
      {
          // ...
-+        $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
++        $this->addArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work with');
      }
  }
 ```
@@ -69,7 +69,7 @@ We need to add global file argument. So, what option do we have?
 
 ### ❌ Disadvantages
 
-- Well, have you noticed the "wiht" typo? Now I have to **fix it in every single class**.
+- Well, have you noticed the "with" typo? Now I have to **fix it in every single class**.
 - For every change, we have to find and modify every single place this **duplicated code** is in.
 - When a new command is added, you have to remember to **add exactly this line there** - you already know [how memory-locks backfire](/blog/2018/08/27/why-and-how-to-avoid-the-memory-lock/), right?
 
@@ -90,7 +90,7 @@ The first simple & short solution you'd [Googled up](https://gist.github.com/dhr
  $application = $container->get(Application::class);
 +$applicationDefinition = $application->getDefinition();
 +$applicationDefinition->addArguments([
-+    new InputArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work wiht');
++    new InputArgument('file', InputArgument::OPTIONAL, 'Path to changelog file to work with');
 +]);
  $application->run();
 ```

@@ -39,7 +39,7 @@ What is `1`?
 var_dump($items[1]);
 ```
 
-"A" or "C"? Or Array with all fo them?
+"A" or "C"? Or Array with all of them?
 
 <a class="btn btn-success mt-2 mb-2" href="https://3v4l.org/cjNWO">See Result</a>
 

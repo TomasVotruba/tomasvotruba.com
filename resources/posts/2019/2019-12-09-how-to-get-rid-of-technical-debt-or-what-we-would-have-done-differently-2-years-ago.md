@@ -111,7 +111,7 @@ This all helps a lot to messy applications. As basic as this rule seems, I must 
 
 To add more salt into the wound, now imagine **you want to use some sort of services autoregistration** (and you should, unless you want to kill your project slowly). That means you tell your dependency injection container "load these services from this directory".
 
-One of such [implementaions is PSR-4 autodiscovery in Symfony](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/):
+One of such [implementations is PSR-4 autodiscovery in Symfony](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/):
 
 <a href="/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/">
 <img src="/assets/images/posts/2019/spaceflow_10_points/08.png" class="img-thumbnail col-12 col-md-8">
@@ -131,7 +131,7 @@ So that's what we did:
 
 ### How to Apply?
 
-This one requires lof ot manual configuration tweaking of [Rector](https://github.com/rectorphp/rector) rules, but you can run basic migration with following set:
+This one requires lof of manual configuration tweaking of [Rector](https://github.com/rectorphp/rector) rules, but you can run basic migration with following set:
 
 ```php
 use Rector\Autodiscovery\Rector\FileSystem\MoveServicesBySuffixToDirectoryRector;

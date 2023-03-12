@@ -103,7 +103,7 @@ I have come around some bushes in my code before:
 
 <br>
 
-Today we look on 3 more examples that can be easily missed while slowly poluting your code:
+Today we look on 3 more examples that can be easily missed while slowly polluting your code:
 
 ## 1. Service Inside Value Object
 

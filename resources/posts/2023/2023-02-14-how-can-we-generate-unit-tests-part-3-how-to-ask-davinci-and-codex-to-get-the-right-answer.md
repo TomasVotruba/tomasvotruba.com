@@ -226,7 +226,7 @@ Voilá the response:
 
 Data provider:
 
-| firstNumber | secondNumber | retruned value | message          |
+| firstNumber | secondNumber | returned value | message          |
 | ----------- | :----------- | -------------- | ---------------- |
 | 5           | 3            | 3              | less than 10     |
 | 5           | 15           | 35             | more than 10     |

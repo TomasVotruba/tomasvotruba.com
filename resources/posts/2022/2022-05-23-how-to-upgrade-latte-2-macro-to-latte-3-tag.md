@@ -56,7 +56,7 @@ if (version_compare(Latte\Engine::VERSION, '3', '<')) {
 }
 ```
 
-## 1. From DI extension ot Latte Extension
+## 1. From DI extension to Latte Extension
 
 Huh, what is this `addExtension()` method? Latte 3 uses its own extensions. No, it is not a usual a`CompilerExtension` as we know it.
 

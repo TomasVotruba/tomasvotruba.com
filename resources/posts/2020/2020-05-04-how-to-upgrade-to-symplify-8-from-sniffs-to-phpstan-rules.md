@@ -115,7 +115,7 @@ The orifinal sniffs were removed:
 - ~~`Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff`~~
 - ~~`Symplify\CodingStandard\Sniffs\CleanCode\ClassCognitiveComplexitySniff`~~
 
-and replaced by more avanced AST in form of PHPStan rules:
+and replaced by more advanced AST in form of PHPStan rules:
 
 ↓
 
@@ -203,7 +203,7 @@ rules:
 # phpstan.neon
 parameters:
     symplify:
-        old_to_preffered_classes:
+        old_to_preferred_classes:
             DateTime: 'Nette\Utils\DateTime'
 
 rules:

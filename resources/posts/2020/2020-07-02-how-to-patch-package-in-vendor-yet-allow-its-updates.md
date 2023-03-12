@@ -21,7 +21,7 @@ We used [inject properties](/blog/2020/06/01/inject-or-required-will-get-you-any
 ```php
 <?php
 
-abstract class AbstactSomePresenter
+abstract class AbstractSomePresenter
 {
     /**
      * @inject
@@ -36,7 +36,7 @@ But since PHP 7.4, we could drop the `@var` annotation:
 ```php
 <?php
 
-abstract class AbstactSomePresenter
+abstract class AbstractSomePresenter
 {
     /**
      * @inject

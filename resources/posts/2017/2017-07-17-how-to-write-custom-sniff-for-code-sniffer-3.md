@@ -220,7 +220,7 @@ final class ExceptionNameSniff implements Sniff
 
         // Does it ends with "Exception"?
         if (! $this->stringEndsWith($parentClassNameToken['content'], 'Exception')) {
-            // The parent class it not and exception, neiter it this
+            // The parent class it not and exception, neither it this
             return;
         }
 

@@ -216,7 +216,7 @@ $parser = $parserFactory->createForNewestSupportedVersion([
 
 $originalAstNodes = $parser->parse($code);
 
-// to keep conections with original nodes
+// to keep connections with original nodes
 $traverser = new NodeTraverser();
 $traverser->addVisitor(new CloningVisitor());
 $newStmts = $traverser->traverse($originalAstNodes);

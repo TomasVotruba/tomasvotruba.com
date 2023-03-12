@@ -106,7 +106,7 @@ Twig autocomplete - kind of crappy now...
 
 Wait, why should we ever rename a route? That's a good question. But a better question is: why should we think about route names at all? We'll get into that.
 
-## 3. Property Promotion empowers Invokable Controllers
+## 3. Property Promotion empowers Invocable Controllers
 
 What is property promotion? It's a PHP 8 feature that does this:
 
@@ -132,9 +132,9 @@ Note: Are you using action injection? Migrate to promoted properties and [stop n
 
 <br>
 
-What is an invokable controller? It's a form of Symfony controller that is impossible to turn into a huge legacy controller with 50 actions.
+What is an invocable controller? It's a form of Symfony controller that is impossible to turn into a huge legacy controller with 50 actions.
 
-**Invokable controller has exactly 1 action called `__invoke()`**. We only think about the controller name and what it should do. It's like CQRS on the controller level.
+**Invocable controller has exactly 1 action called `__invoke()`**. We only think about the controller name and what it should do. It's like CQRS on the controller level.
 
 <br>
 
@@ -275,7 +275,7 @@ return function (ContainerConfigurator $containerConfigurator): void {
 };
 ```
 
-❌ string `"some_param"` can create typoes, use constant instead
+❌ string `"some_param"` can create typos, use constant instead
 
 <br>
 

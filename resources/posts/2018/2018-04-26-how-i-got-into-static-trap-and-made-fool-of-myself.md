@@ -123,7 +123,7 @@ class DocBlockFactory
 
         $phpDocumentorDocBlockFactory = new DocBlockFactory($descriptionFactory, $tagFactory);
 
-        return $phpDocumentorDocBlockFactory->create($docBlockPositoin);
+        return $phpDocumentorDocBlockFactory->create($docBlockPosition);
     }
 }
 ```
@@ -157,7 +157,7 @@ class DocBlockFactory
 }
 ```
 
-### Adding Depedency to Static Hell Tree
+### Adding Dependency to Static Hell Tree
 
 Do you need to add whitespace config? Just add it in every layer... or make it also static.
 

@@ -161,7 +161,7 @@ Nette\Utils\FileSystem::read($accidentallyMissingFile);
 Do you want to create a directory for your cache?
 
 ```php
-mkdir($cacheDiretory);
+mkdir($cacheDirectory);
 ```
 
 Oh, but what if that already exists?
@@ -171,7 +171,7 @@ Oh, but what if that already exists?
 Ok, let's say you're lucky, your hard drive was wiped out and it doesn't exist yet.
 
 ```php
-mkdir($cacheDiretory);
+mkdir($cacheDirectory);
 ```
 
 But what if the directory is `some/cache`?

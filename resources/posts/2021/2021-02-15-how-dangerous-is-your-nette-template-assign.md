@@ -359,7 +359,7 @@ public function render(): void
 
 The condition is obviously a `true`, right?
 
-Well, the second variable *bitcoin**t**Count* does not exists, so we're now `-10` bitcoints.
+Well, the second variable *bitcoin**t**Count* does not exists, so we're now `-10` bitcoins.
 
 ❌
 
