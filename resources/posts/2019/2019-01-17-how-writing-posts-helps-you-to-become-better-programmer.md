@@ -15,7 +15,7 @@ Luckily for us, a code is a bit different - when it eats something different tha
 
 ## Why you Should Yourself to One's Shoes?
 
-If you learn how to think like somebody you're not, you get into [begginers mind](http://www.agillo.net/zen-and-the-art-of-programming-beginners-mind).
+If you learn how to think like somebody you're not, you get into [beginners mind](http://www.agillo.net/zen-and-the-art-of-programming-beginners-mind).
 It might save a life of a child and also - in your case - you'll be able to write code not only you but **also other people understand**.
 
 You'll get many benefits over your peers, just to name a few:

@@ -305,7 +305,7 @@ public function refactor(Node $node)
 ```
 
 
-And that's it! Now we've replaced the `Assign` node with two different `Assing`s ✅ .
+And that's it! Now we've replaced the `Assign` node with two different `Assign`s ✅ .
 
 <br>
 

@@ -23,7 +23,7 @@ I wrote about [How to Slowly Turn your Symfony Project to Legacy with Action Inj
 </blockquote>
 
 <blockquote class="blockquote">
-    I'm working on a Project that uses action injection pattern and I hate it. I like autowiring but the whole idea about action injection is broken. And this project is in sf28 do we don't use autowiring. Maintainance and development with this pattern is a total nightmare.
+    I'm working on a Project that uses action injection pattern and I hate it. I like autowiring but the whole idea about action injection is broken. And this project is in sf28 do we don't use autowiring. Maintenance and development with this pattern is a total nightmare.
     <footer class="blockquote-footer text-right">A</footer>
 </blockquote>
 

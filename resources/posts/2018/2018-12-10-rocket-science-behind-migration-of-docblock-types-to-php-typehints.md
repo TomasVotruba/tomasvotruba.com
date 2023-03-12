@@ -205,7 +205,7 @@ You need to update all its children:
 Don't forget the interface too:
 
 ```diff
- interface CacheableWorkerIntreface extends WorkerInterface
+ interface CacheableWorkerInterface extends WorkerInterface
  {
       /**
        * @param string $version

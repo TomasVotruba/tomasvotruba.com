@@ -128,7 +128,7 @@ Here is where *best practices* become defaults. Do you know the "[initialize col
 
 <img src="/assets/images/posts/2020/typed_doctrine_properties_best_practise.png" class="img-thumbnail">
 
-This was an optional improvement to help Doctrine work in a more realiable way. Well, it *was*.
+This was an optional improvement to help Doctrine work in a more reliable way. Well, it *was*.
 Now we **have to use it** to make our code work:
 
 ```diff

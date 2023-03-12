@@ -136,7 +136,7 @@ final class GenerateWorkflowCommand extends Command
 {
     public function configure(): void
     {
-        $this->setName('generate-worfklow');
+        $this->setName('generate-workflow');
     }
 }
 ```
@@ -146,7 +146,7 @@ Pretty clear, right?
 *"But wait, Tomas! You still need to think about the name. Also, you've just made a typo, lol."*
 
 ```diff
--       $this->setName('generate-worfklow');
+-       $this->setName('generate-workflow');
 +       $this->setName('generate-workflow');
 ```
 
@@ -224,7 +224,7 @@ That's it!
  {
      public function configure(): void
      {
--        $this->setName('generate-worfklow');
+-        $this->setName('generate-workflow');
      }
  }
 ```

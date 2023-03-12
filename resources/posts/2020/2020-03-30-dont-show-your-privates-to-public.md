@@ -50,7 +50,7 @@ This **is 3 500 children**:
 
 <img src="/assets/images/posts/2020/privates_3500_children.jpg" class="img-thumbnail">
 
-There is [~480 Rector rules](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md), each has 3 public methods required by interface contract. That's 1 500 public contract methods. Even if we remove thos, 3 500 - 1 500, we still have **over 2 000 public methods**:
+There is [~480 Rector rules](https://github.com/rectorphp/rector/blob/master/docs/rector_rules_overview.md), each has 3 public methods required by interface contract. That's 1 500 public contract methods. Even if we remove those, 3 500 - 1 500, we still have **over 2 000 public methods**:
 
 <img src="/assets/images/posts/2020/privates_2000_children.jpg" class="img-thumbnail">
 
@@ -154,7 +154,7 @@ It's easy to spot now because we focus on ten lines of code, we knew that's a co
 
 <br>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">10 lines of code = 10 issues.<br><br>500 lines of code = &quot;looks fine.&quot;<br><br>Code reviews.</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/status/397664295875805184?ref_src=twsrc%5Etfw">November 5, 2013</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">10 lines of code = 10 issues.<br><br>500 lines of code = &quot;looks fine.&quot;<br><br>Code reviews.</p>&mdash; I Am Developer (@iamdevloper) <a href="https://twitter.com/iamdevloper/status/397664295875805184?ref_src=twsrc%5Etfw">November 5, 2013</a></blockquote>
 
 <br>
 

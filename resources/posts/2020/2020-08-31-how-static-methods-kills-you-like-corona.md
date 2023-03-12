@@ -166,7 +166,7 @@ And also...
 +
 +    InfectedYoungParent $infectedYoungParent
 +
-+    public fuction __construct(
++    public function __construct(
 +        InfectedYoungChild $infectedYoungChild,
 +        InfectedYoungParent $infectedYoungParent
 +    ) {
@@ -213,7 +213,7 @@ they live for [the top of the mountain](/blog/2018/04/30/programming-climbing-a-
 ```php
 $coronaCure = new CoronaCure();
 
-$infectables = $container->getByType(InfectableInteface::class);
+$infectables = $container->getByType(InfectableInterface::class);
 
 foreach ($infectables as $infectable) {
     if (! $infectable->isInfected()) {

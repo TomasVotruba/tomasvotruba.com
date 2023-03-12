@@ -59,7 +59,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 // 1. create the Dispatcher
 $eventDispatcher = new Symfony\Component\EventDispatcher\EventDispatcher;
 
-// 2. some event happend, we dispatch it
+// 2. some event happened, we dispatch it
 $eventDispatcher->dispatch('youtube.newVideoPublished'); // oh: event is just a string
 ```
 

@@ -138,7 +138,7 @@ You ask her: "On scale 1 to 10, how confident do you feel you'll make the test?"
 
 <br>
 
-## 10. Langauge Hacking
+## 10. Language Hacking
 
 Daniel shares a link to [Get ready for your pitch](http://www.danpink.com/pitch) and also talks about **1-word pitch**. What's that?
 

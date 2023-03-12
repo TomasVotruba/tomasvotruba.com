@@ -113,7 +113,7 @@ I need to take a break, my brain is tired just **by making up this complicated a
 
 ## Keep Simple Things Simple
 
-Now imagine you've ended in a train crash, hit your head and forget all the frameworks you know. All you have left is actually the best you can achieve in any mastery - a [mind of the begginer](https://zenhabits.net/beginner).
+Now imagine you've ended in a train crash, hit your head and forget all the frameworks you know. All you have left is actually the best you can achieve in any mastery - a [mind of the beginner](https://zenhabits.net/beginner).
 
 - "How would you get all services of a certain type in a certain order or key name?"
 

@@ -95,8 +95,8 @@ Luckily, last 2 operations are subtractions, so we can just remove them.
 -        Assert::false(5);
 +        $this->assertFalse(5);
 
--        Assert::falsey('value', 'some messsage');
-+        $this->assertFalse((bool) 'value', 'some messsage');
+-        Assert::falsey('value', 'some message');
++        $this->assertFalse((bool) 'value', 'some message');
 
 -        Assert::truthy(true);
 +        $this->assertTrue(true);

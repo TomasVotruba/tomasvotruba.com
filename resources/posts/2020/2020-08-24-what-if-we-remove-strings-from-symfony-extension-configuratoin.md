@@ -88,7 +88,7 @@ return static function (DoctrineConfigurator $doctrineConfigurator): void {
 };
 ```
 
-Slightly less space fo bug... Still, I managed to split one there. It can cause a "connection to database rejected" error.
+Slightly less space for a bug... Still, I managed to split one there. It can cause a "connection to database rejected" error.
 
 ## Environment Variables for Everyone
 
@@ -139,7 +139,7 @@ In what cases is this the most useful?
 
 <br>
 
-Common key for the "database name" is never the same across database platforms and language integration. Imagine the saved hours and lifes on Docker/Doctrine/CI typos:
+Common key for the "database name" is never the same across database platforms and language integration. Imagine the saved hours and lives on Docker/Doctrine/CI typos:
 
 ```php
 return static function (DoctrineConfigurator $doctrineConfigurator): void {

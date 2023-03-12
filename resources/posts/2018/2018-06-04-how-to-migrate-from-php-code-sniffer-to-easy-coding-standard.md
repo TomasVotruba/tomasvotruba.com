@@ -49,13 +49,13 @@ You probably use string references to sniffs in your `*.xml` configuration for P
 
 ```xml
 <!-- phpcs.xml -->
-<rule ref="Generic.Comenting.DocComment"/>
+<rule ref="Generic.Commenting.DocComment"/>
 ```
 
 That can actually cause typos like:
 
 ```diff
--<rule ref="Generic.Comenting.DocComment"/>
+-<rule ref="Generic.Commenting.DocComment"/>
 +<rule ref="Generic.Commenting.DocComment"/>
 ```
 

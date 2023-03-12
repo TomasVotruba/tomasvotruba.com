@@ -63,7 +63,7 @@ What I try to do, **is to express that**. It's the last and least I can do:
 
 - "Let's agree we disagree."
 - "I think we both tried to understand each other but I was not enough"
-- "I'm sorry, I still don't understand your points and I don't want to put more energy into thi"
+- "I'm sorry, I still don't understand your points and I don't want to put more energy into this"
 
 Next time, this person might realize it's not personal attack similar to his childhood experience in school or with his parents, but it's **only about miss interpretation** of words. And he or she might **call you** to express it better, like I do when I feel keyboard doesn't *work*. After all, [only 7 % of communication is verbal](http://ubiquity.acm.org/article.cfm?id=2043156).
 

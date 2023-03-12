@@ -136,7 +136,7 @@ It's **2017** and Rector still had to wait many months to be born. For what?
 
 Well, it's built on php-parser and as it modifies the code and prints it back, it **needed to keep spacing**. That's one of AST drawbacks - it doesn't care about all that coding standards spacings.
 
-They say "history repeats", but I never trusted that. Untill I saw that similar need Fabien had while making the PHP CS Fixer in 2012 - [Optionally add nodes for whitespace](https://github.com/nikic/PHP-Parser/issues/41). More **people wanted AST-based coding standards**:
+They say "history repeats", but I never trusted that. Until I saw that similar need Fabien had while making the PHP CS Fixer in 2012 - [Optionally add nodes for whitespace](https://github.com/nikic/PHP-Parser/issues/41). More **people wanted AST-based coding standards**:
 
 <blockquote class="twitter-tweet" data-lang="cs"><p lang="en" dir="ltr"><a href="https://twitter.com/fabpot?ref_src=twsrc%5Etfw">@fabpot</a> zendframework, though we are moving afay from php-cs-fixer because it is not AST-based</p>&mdash; Supervising Program (@Ocramius) <a href="https://twitter.com/Ocramius/status/532622405290971136?ref_src=twsrc%5Etfw">12. listopadu 2014</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

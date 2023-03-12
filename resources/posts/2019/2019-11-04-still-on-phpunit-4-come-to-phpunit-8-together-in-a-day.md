@@ -27,7 +27,7 @@ What does that mean?
         <tr>
             <th>PHPUnit</th>
             <th>Required PHP version</th>
-            <th>Relase Year</th>
+            <th>Release Year</th>
         </tr>
     </thead>
     <tr>

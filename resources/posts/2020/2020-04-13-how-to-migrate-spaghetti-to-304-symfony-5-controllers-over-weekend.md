@@ -358,7 +358,7 @@ And that's it!
 - do [8 Steps You Can Make Before Huge Upgrade to Make it Faster, Cheaper and More Stable](/blog/2019/12/16/8-steps-you-can-make-before-huge-upgrade-to-make-it-faster-cheaper-and-more-stable/) first
 - **have a strict deadline** - our original plan was the end of May, but when Easter came, we couldn't resist
 - **don't fall in the bait of manual refactoring** of that one thing in the code you don't like - **stay focused on the migration** and improve code when the 1st step is finished and merged
-- **have a buddy**, that helps you psychically when you're stuck - without a friend, this might turn into a nightmare of being stuck in circles; even only talking about the problem helps - it's better if it's somebody outside your normal work (consultant, old collegaue), so they're not stuck in your legacy project mindset
+- **have a buddy**, that helps you psychically when you're stuck - without a friend, this might turn into a nightmare of being stuck in circles; even only talking about the problem helps - it's better if it's somebody outside your normal work (consultant, old colleague), so they're not stuck in your legacy project mindset
 - **be ok with broken code** for a while, it's normal even with small changes
 - don't deploy code to the production, merge the PR as soon as possible, but test the application on a separate server at least for a week
 

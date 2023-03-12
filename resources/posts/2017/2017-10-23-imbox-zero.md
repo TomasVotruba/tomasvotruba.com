@@ -30,7 +30,7 @@ This applies to email.
 ## What is Zero IM-box then?
 
 Ever since smartphones went viral, it is common to have **7 SMS on single display. 1 new, 6 already resolved**.
-That would be ok, if you're used to full inbox, where your brain is programmed to filter the noise. **But not if you're appling inbox zero method**.
+That would be ok, if you're used to full inbox, where your brain is programmed to filter the noise. **But not if you're applying inbox zero method**.
 
 That is my case too and **I was tired of having 2 contradictive approaches** in my brain.
 
