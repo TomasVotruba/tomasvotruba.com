@@ -31,7 +31,7 @@
         "symplify/easy-coding-standard": "^11.2",
         "symplify/phpstan-extensions": "^11.2",
         "tomasvotruba/type-coverage": "^0.0.10",
-        "tomasvotruba/unused-public": "^0.0.32"
+        "tomasvotruba/unused-public": "^0.1.8"
     },
     "autoload": {
         "psr-4": {

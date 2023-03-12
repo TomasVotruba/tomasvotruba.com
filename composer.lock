@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "deeba2828b6f7a55e2dfb8a36bab409f",
+    "content-hash": "8d4c11aa1e4de81dac7eab972aa63c83",
     "packages": [
         {
             "name": "brick/math",
@@ -9064,16 +9064,16 @@
         },
         {
             "name": "tomasvotruba/unused-public",
-            "version": "0.0.32",
+            "version": "0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/unused-public.git",
-                "reference": "08adc3506ffa8adb45bfe2986eae0c33c5d208cf"
+                "reference": "560ec577f67c3a6f6b1530f2a91aa64d0acaae75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/unused-public/zipball/08adc3506ffa8adb45bfe2986eae0c33c5d208cf",
-                "reference": "08adc3506ffa8adb45bfe2986eae0c33c5d208cf",
+                "url": "https://api.github.com/repos/TomasVotruba/unused-public/zipball/560ec577f67c3a6f6b1530f2a91aa64d0acaae75",
+                "reference": "560ec577f67c3a6f6b1530f2a91aa64d0acaae75",
                 "shasum": ""
             },
             "require": {
@@ -9085,12 +9085,11 @@
             "require-dev": {
                 "php-parallel-lint/php-parallel-lint": "^1.3",
                 "phpstan/extension-installer": "^1.2",
-                "phpunit/phpunit": "^9.5",
+                "phpunit/phpunit": "^10.0",
                 "rector/rector": "^0.15.1",
-                "symplify/easy-ci": "^11.1",
-                "symplify/easy-coding-standard": "^11.1",
-                "symplify/monorepo-builder": "^11.1",
-                "tomasvotruba/type-coverage": "^0.0.1",
+                "symplify/easy-ci": "^11.2",
+                "symplify/easy-coding-standard": "^11.2",
+                "tomasvotruba/type-coverage": "^0.0.10",
                 "tracy/tracy": "^2.9"
             },
             "type": "phpstan-extension",
@@ -9111,11 +9110,25 @@
                 "MIT"
             ],
             "description": "Detect unused public properties, constants and methods in your code",
+            "keywords": [
+                "phpstan-extension",
+                "static analysis"
+            ],
             "support": {
                 "issues": "https://github.com/TomasVotruba/unused-public/issues",
-                "source": "https://github.com/TomasVotruba/unused-public/tree/0.0.32"
+                "source": "https://github.com/TomasVotruba/unused-public/tree/0.1.8"
             },
-            "time": "2022-12-29T18:36:14+00:00"
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/rectorphp",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-03-12T01:29:42+00:00"
         }
     ],
     "aliases": [],
