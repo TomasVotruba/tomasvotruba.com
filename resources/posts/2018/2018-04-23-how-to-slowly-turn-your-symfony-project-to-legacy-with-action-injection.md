@@ -347,7 +347,7 @@ There are 2 ways ho to avoid this completely and still use your framework:
 -
 Paul M. Jones has written [many posts about Action-Domain-Responder](https://paul-m-jones.com/adr)
 - another approach is [RequestHandler](https://jenssegers.com/goodbye-controllers-hello-request-handlers)
-- my favorite approach that [Symfony](https://symfony.com/doc/current/controller/service.html#invokable-controllers) and [Laravel](https://dyrynda.com.au/blog/single-action-controllers-in-laravel) support by default for a long time are **invocable controllers**, also called *single action controllers*
+- my favorite approach that [Symfony](https://symfony.com/doc/current/controller/service.html#invokable-controllers) and [Laravel](https://dyrynda.com.au/blog/single-action-controllers-in-laravel) support by default for a long time are **invokable controllers**, also called *single action controllers*
 
 ## What is Your Experience with Action Injects?
 

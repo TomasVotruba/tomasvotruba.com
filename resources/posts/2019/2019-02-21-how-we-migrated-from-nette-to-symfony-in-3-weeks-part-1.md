@@ -57,7 +57,7 @@ In the end, [Rector](https://getrector.org) helped us with many following change
 
 - Response and Request ✅
 - Presenter to Controller ✅
-- RouterFactory to Controller Annotation ✅ - REST Routes and Invocable Controllers included
+- RouterFactory to Controller Annotation ✅ - REST Routes and Invokable Controllers included
 - Kdyby/Events and Contributte/Events to Symfony/EventDispatcher ✅
 - Kdyby/Doctrine to Doctrine/DoctrineBundle ✅
 - Kdyby/Events to Symfony/EventDispatcher ✅

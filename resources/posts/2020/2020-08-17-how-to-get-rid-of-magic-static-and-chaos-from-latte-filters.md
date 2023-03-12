@@ -9,7 +9,7 @@ perex: |
 
 updated_since: "September 2020"
 updated_message: |
-    Added options 6 - **invocable filter providers**.
+    Added options 6 - **invokable filter providers**.
 ---
 
 Do you have your `LatteFactory` service ready? If not, [create it first](/blog/2020/08/10/4-ways-to-make-your-nette-project-more-readable#4-move-latte-engine-tuning-from-presenter-control-to-lattefactory), because we'll build on it.
@@ -413,7 +413,7 @@ My question is: can we do better...?
 
 **Update 1 month later with new option:**
 
-## 6. Invocable Filter Providers
+## 6. Invokable Filter Providers
 
 In fashion of [single-action controller](https://symfony.com/doc/current/controller/service.html#invokable-controllers) a tip from [@FrantisekMasa](https://twitter.com/FrantisekMasa) and [@dada_amater](https://twitter.com/dada_amater) for similar approach in filters. It look weird, new... so I had to try it in practise to see for myself.
 
