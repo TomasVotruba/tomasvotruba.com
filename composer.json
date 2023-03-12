@@ -68,11 +68,5 @@
                 "patches/spatie-shiki-php-src-shiki-php.patch"
             ]
         }
-    },
-    "repositories": [
-        {
-            "type": "github",
-            "url": "https://github.com/alexander-schranz/phpstan-blade-rule"
-        }
-    ]
+    }
 }
