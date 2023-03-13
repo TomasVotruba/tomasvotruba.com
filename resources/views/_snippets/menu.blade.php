@@ -6,7 +6,10 @@
         <a href="{{ action(\App\Http\Controller\BlogController::class) }}">Blog</a>
         <span class="ps-2 pe-2">•</span>
 
-        <a href="{{ action(\App\Http\Controller\BooksController::class) }}">Books</a>
+        <a href="{{ action(\App\Http\Controller\BookDetailController::class, [
+            'slug' => 'rector-the-power-of-automated-refactoring',
+        ]) }}">Book</a>
+
         <span class="ps-2 pe-2">•</span>
 
         <a href="{{ action(\App\Http\Controller\ContactController::class) }}">Contact</a>

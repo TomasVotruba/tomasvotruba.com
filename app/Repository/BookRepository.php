@@ -18,60 +18,6 @@ final class BookRepository
     {
         $this->books = [
             new Book(
-                'Upgrade Every Day',
-                <<<'CODE_SAMPLE'
-<blockquote class="blockquote mt-2 blockquote-book">
-"Upgrading software is like basic hygiene.
-<br><br>
-Do it daily for 10 minutes, and you'll live a long and healthy life.
-<br><br>
-Skip it for a year or two, and you'll find yourself in a hospital."
-</blockquote>
-
-<p>
-Yet, we see software upgrades as something to avoid and postpone as long as possible. We think it's a large operation, so we'll have to stop everything we do and deep dive into the risky process of upgrading that might take years to handle. Don't touch it if it works, right?
- </p>
-
-<br>
-
-<h2>What if we take the opposite approach?</h2>
-
-<p>
-    Instead of postponing the problem as an acceptable risk, whilte it piles up slowly to mission-impossible size, we face it right away! We tackle it the moment it is created - now.
-</p>
-
-<h2>We Upgrade Every Day</h2>
-
-<br>
-
-<p>
-    I've used this approach for the last 8 years with hands-on upgrades and clients worldwide. This book distills the approaches that are time-tested and proven by practice.
-</p>
-
-<h2>What will You Learn?</h2>
-
-<ul>
-    <li class="mb-2">Why upgrading is easy, but refactoring not?</li>
-    <li class="mb-2">How to approach a legacy project you've never seen before?</li>
-    <li class="mb-2">How to prevent your current project from ever becoming a legacy code base and avoid issues piling up quietly but steadily?</li>
-    <li class="mb-2">How to use Occam's razor to a problem of any size?</li>
-    <li class="mb-2">What is the "touch the ceiling" technique, and how to use it in desperate situations where there is no possible way to continue the upgrade?</li>
-    <li class="mb-2">Set of go-to solutions to the vast scale of problems - from a PHP library that has been removed from Packagist, a project that has no type declarations whatsoever, to major framework upgrades</li>
-</ul>
-
-<br>
-
-<p>
-Every upgrade has its low-hanging fruit. This book shows you how to find it, start slowly, and climb high with confidence. The next time you'll do the upgrade, it will be as easy as taking a shower.
-</p>
-CODE_SAMPLE
-                ,
-                'https://d2sofvawe08yqg.cloudfront.net/upgrade-every-day/s_hero2x?1660495665',
-                'https://leanpub.com/upgrade-every-day',
-                false
-            ),
-
-            new Book(
                 'Rector - The Power of Automated Refactoring',
                 <<<'CODE_SAMPLE'
 In 2021 I wrote my first book about <a href="https://github.com/rectorphp/rector">Rector</a> with my favorite PHP hero and renowned writer &ndash; <a href="https://matthiasnoback.nl/">Matthias Noback</a>. It's a practical book with step-by-step examples.
