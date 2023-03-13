@@ -11,7 +11,7 @@
             </div>
 
             <div class="col-4 col-md-3">
-                <a href="{{ route(\App\Enum\RouteName::ABOUT) }}">
+                <a href="{{ action(\App\Http\Controller\RssController::class) }}">
                     <img src="{{ asset('assets/images/tomas_votruba.jpg') }}" class="mt-auto rounded-circle shadow">
                 </a>
             </div>
@@ -23,7 +23,7 @@
 
         @include('_snippets/post/post_list', ['posts' => $last_posts])
 
-        <a href="{{ route(\App\Enum\RouteName::BLOG) }}" class="btn btn-warning pull-right mt-4">Discover more Posts</a>
+        <a href="{{ action(\App\Http\Controller\BlogController::class) }}" class="btn btn-warning pull-right mt-4">Discover more Posts</a>
 
         <br>
         <br>

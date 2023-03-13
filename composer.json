@@ -13,11 +13,10 @@
         "spatie/laravel-markdown": "^2.2",
         "symfony/yaml": "^6.2",
         "symplify/vendor-patches": "^11.2",
+        "tomasvotruba/lavarle": "^0.1",
         "tomasvotruba/punchcard": "^0.1.1"
     },
     "require-dev": {
-        "tomasvotruba/bladestan": "dev-main",
-        "tomasvotruba/laratyped": "dev-main",
         "barryvdh/laravel-debugbar": "^3.8",
         "barryvdh/laravel-ide-helper": "^2.13",
         "nunomaduro/collision": "^7.0",
@@ -30,8 +29,10 @@
         "spatie/laravel-ignition": "^2.0",
         "symplify/easy-coding-standard": "^11.2",
         "symplify/phpstan-extensions": "^11.2",
-        "tomasvotruba/type-coverage": "^0.0.10",
-        "tomasvotruba/unused-public": "^0.1.8"
+        "tomasvotruba/bladestan": "dev-main",
+        "tomasvotruba/laratyped": "dev-main",
+        "tomasvotruba/type-coverage": "^0.1",
+        "tomasvotruba/unused-public": "^0.1"
     },
     "autoload": {
         "psr-4": {
