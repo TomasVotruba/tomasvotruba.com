@@ -46,7 +46,7 @@
             </p>
             <p>
                 I connected with Matthias Noback and <strong>we wrote a book about Rector</strong>:<br>
-                <a href="{{ route(\App\Enum\RouteName::BOOK_DETAIL,  ['slug' => 'rector-the-power-of-automated-refactoring']) }}">Rector
+                <a href="{{ action(\App\Http\Controller\BookDetailController::class,  ['slug' => 'rector-the-power-of-automated-refactoring']) }}">Rector
                     - The Power of Automated Refactoring</a>
             </p>
 
