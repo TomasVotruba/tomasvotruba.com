@@ -56,14 +56,6 @@ CODE_SAMPLE
         ];
     }
 
-    /**
-     * @return Book[]
-     */
-    public function fetchAll(): array
-    {
-        return $this->books;
-    }
-
     public function getBySlug(string $slug): Book
     {
         foreach ($this->books as $book) {
