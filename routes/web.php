@@ -10,6 +10,7 @@ use App\Http\Controller\HomepageController;
 use App\Http\Controller\PostController;
 use App\Http\Controller\RssController;
 use App\Http\Controller\ThumbnailController;
+use App\Http\Controllers\PostCodexController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomepageController::class);
@@ -25,5 +26,7 @@ Route::get('/blog', BlogController::class);
 Route::get('/rss', RssController::class);
 Route::get('/rss.xml', RssController::class);
 Route::get('/contact', ContactController::class);
+
+Route::get('/codex/posts', PostCodexController::class);
 
 Route::get('/thumbnail/{title}.png', ThumbnailController::class);
