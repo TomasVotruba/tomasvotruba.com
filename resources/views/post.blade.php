@@ -14,16 +14,18 @@
     <meta property="og:title" content="{{ $post->getClearTitle() }}"/>
     <meta property="og:description" content="{{ $post->getPerex() }}"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:image" content="{{ action(\App\Http\Controller\ThumbnailController::class, ['title' => $post->getClearTitle()]) }}"/>
+    <meta property="og:image"
+          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getClearTitle()]) }}"/>
 
     <meta
         property="og:url"
-        content="{{ action(\App\Http\Controller\PostController::class, ['slug' => $post->getSlug()]) }}"
+        content="{{ action(\App\Http\Controllers\PostController::class, ['slug' => $post->getSlug()]) }}"
     />
 
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="{{ $post->getClearTitle() }}"/>
-    <meta name="twitter:image" content="{{ action(\App\Http\Controller\ThumbnailController::class, ['title' => $post->getClearTitle()]) }}"/>
+    <meta name="twitter:image"
+          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getClearTitle()]) }}"/>
     <meta name="twitter:description" content="{{ $post->getPerex() }}"/>
 
     <!-- post_id: {{ $post->getId() }} -->
@@ -78,7 +80,7 @@
         <div id="disqus_thread"></div>
 
         <script>
-            (function() { // DON'T EDIT BELOW THIS LINE
+            (function () { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
                 s.src = 'https://itsworthsharing.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());

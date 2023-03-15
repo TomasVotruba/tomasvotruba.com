@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use App\Enum\FontFile;
 use Illuminate\Routing\Controller;

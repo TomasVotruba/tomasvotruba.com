@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use App\Repository\PostRepository;
 use Illuminate\Contracts\View\View;

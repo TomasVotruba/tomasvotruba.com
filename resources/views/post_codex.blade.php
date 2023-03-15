@@ -8,15 +8,11 @@
         <h1>{{ $post->getClearTitle() }}</h1>
 
         <p>
-            <x-markdown highlightCode=false>
-                {{ $post->getPerex() }}
-            </x-markdown>
+            {{ fast_markdown($post->getPerex()) }}
         </p>
 
         <p>
-            <x-markdown highlightCode=false>
-                {{ $post->getContent() }}
-            </x-markdown>
+            {{ fast_markdown($post->getContent()) }}
         </p>
 
         <hr>
