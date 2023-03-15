@@ -8,14 +8,24 @@
         <h1>{{ $post->getClearTitle() }}</h1>
 
         <p>
-            {{ fast_markdown($post->getPerex()) }}
+            {!! fast_markdown($post->getPerex()) !!}
         </p>
 
         <p>
-            {{ fast_markdown($post->getContent()) }}
+            {!! fast_markdown($post->getContent()) !!}
         </p>
 
+        <br>
+        <br>
+        <br>
+        <br>
+
         <hr>
+
+        <br>
+        <br>
+        <br>
+        <br>
 
     @endforeach
 </div>
