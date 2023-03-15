@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use App\Http\Controller\PostController;
+use App\Http\Controllers\PostController;
 use DateTimeInterface;
 
 /**
