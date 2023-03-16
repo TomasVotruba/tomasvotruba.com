@@ -5,10 +5,10 @@ title: "To Route or To Action? That's&nbsp;the&nbsp;Question"
 perex: |
     This week I've been working a lot on GPT in [Testgenai.com](https://testgenai.com/). I am learning more and more about Laravel as a side effect.
 
-    During browsing open-source projects written in Laravel, I've noticed the syntax I have been dreaming of since I started to use invokable controllers. What was it? Can it help or make the code more complex?
+    During browsing open-source projects written in Laravel, I've noticed the syntax I have been dreaming of since I started to use invokable controllers. What was it? Can it make code cleaner or more complex? [I asked on Twitter](https://twitter.com/VotrubaT/status/1635401027171287041) and got such a variety of replies, that it deserves a blog post.
 ---
 
-The following feature is not exclusive to Laravel. Symfony has them, and Nette allows them too - **single action controllers**:
+The following architecture makes entry points much clearer - **single action controllers**:
 
 ```php
 final class ProcessPhpFormController extends Controller
@@ -110,7 +110,7 @@ final class ProcessPhpFormController extends Controller
 }
 ```
 
-Now we have 2 strings that we made up "process_form" and "homepage". Beware, it's not "process-form" with a `-`, but with `_`.
+Now we have 2 made up strings: "homepage" and "process_form"... or was it "process-form"?
 
 This approach can lead to typos, but you can avoid that [by using constants](/blog/2020/12/21/5-new-combos-opened-by-symfony-52-and-php-80/#2-route-names-can-be-constants):
 
@@ -132,12 +132,12 @@ That's a lot of code for a single redirect to a single controller. Where are we 
 * We maintain a `RouteName` references that refer to strings
 * We have to constantly make up a new, unique string to avoid conflicts
 
-I've been in this situation for years because of confirmation bias. I like what I use because I have used it for a long time and I like it.
+I've been in this situation for years because of confirmation bias: "I like what I use because I have used it for a long time and I like it."
 
 **There is no comparison, A-B testing, or rational thinking**. My brain is lazy and comfortable and chooses a known path over anything else.
 
 <blockquote class="blockquote text-center mt-5 mb-5">
-    When we face unknown new ways and known comfortable suffering,
+    When we face unknown new way and known comfortable suffering,
     <br>
     we often choose to suffer because we are used to it.
 </blockquote>
@@ -147,13 +147,8 @@ I've been in this situation for years because of confirmation bias. I like what 
 Just a friendly reminder - *service name* was once in the past a *reference to class*:
 
 ```diff
- // in Laravel
 -$securityGuard = app()->make('security_guard');
 +$securityGuard = app()->make(\App\Security\SecurityGuard::class);
-
- // or in Symfony
--$securityGuard = $this->get('security_guard');
-+$securityGuard = $this->get(\App\Security\SecurityGuard::class);
 ```
 
 ## 2. `to_action()`
@@ -167,7 +162,7 @@ It allows using the controller directly instead of a middleman string:
 +<form action="{{ action(\App\Controllers\ProcessPhpFormController::class) }}" method="post">
 ```
 
-<br>
+## The Power of Blade
 
 This is **where Blade design becomes super helpful** - it's a PHP code, so we can:
 
@@ -190,17 +185,21 @@ final class ProcessPhpFormController extends Controller
 }
 ```
 
-Easy! Last but not least, we can drop the whole `RouteName` and named routes mechanism:
+That was easy!
+
+<br>
+
+Last but not least, we can drop the whole `RouteName` and named routes mechanism:
 
 ```diff
  use Illuminate\Support\Facades\Route;
 
--Route::post('/process-php-form', ProcessPhpFormController::class)
 +Route::post('/process-php-form', ProcessPhpFormController::class);
+-Route::post('/process-php-form', ProcessPhpFormController::class)
 -    ->name(RouteName::PROCESS_FORM);
 
--Route::post('/', HomepageController::class)
-+Route::post('/', HomepageController::class);
++Route::get('/', HomepageController::class);
+-Route::get('/', HomepageController::class)
 -    ->name(RouteName::HOMEPAGE);
 ```
 
@@ -212,16 +211,6 @@ By moving from reference to an exact value, we can drop a whole 1/3 of complexit
 * references are explicit in both templates and the controller
 * **we can easily read the code without** jumping to `routes.php` - super useful for code reviews or reading an open-source code
 
-
-<br>
-
-## Which method do you use and why?
-
-Be sure to follow wide-range replies on Twitter:
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Which redirect in <a href="https://twitter.com/hashtag/laravel?src=hash&amp;ref_src=twsrc%5Etfw">#laravel</a> controllers do you prefer and why? <a href="https://t.co/9n0kCdXLNs">pic.twitter.com/9n0kCdXLNs</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1635401027171287041?ref_src=twsrc%5Etfw">March 13, 2023</a></blockquote>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
 
