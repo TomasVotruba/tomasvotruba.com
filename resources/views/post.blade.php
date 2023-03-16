@@ -15,7 +15,7 @@
     <meta property="og:description" content="{{ $post->getPerex() }}"/>
     <meta property="og:type" content="article"/>
     <meta property="og:image"
-          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getClearTitle()]) }}"/>
+          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getUrlSafeTitle()]) }}"/>
 
     <meta
         property="og:url"

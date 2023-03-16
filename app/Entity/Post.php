@@ -8,7 +8,7 @@ use App\Http\Controllers\PostController;
 use DateTimeInterface;
 
 /**
- * @api Getter methods are used in templates
+ * @api used in blade templates = @todo fix in tomasvotruba/unused-public
  */
 final class Post
 {
@@ -32,6 +32,11 @@ final class Post
     public function getTitle(): string
     {
         return $this->title;
+    }
+
+    public function getUrlSafeTitle(): string
+    {
+        return urlencode($this->getClearTitle());
     }
 
     public function getClearTitle(): string
