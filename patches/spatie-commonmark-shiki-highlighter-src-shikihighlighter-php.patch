@@ -1,0 +1,20 @@
+--- /dev/null
++++ ../src/ShikiHighlighter.php
+@@ -71,6 +71,8 @@
+ 
+     private function parseAddedAndDeletedLines(string $contents): array
+     {
++        $originalContents = $contents;
++
+         $addLines = [];
+         $deleteLines = [];
+ 
+@@ -90,7 +92,7 @@
+         }, $contentLines, array_keys($contentLines));
+ 
+         return [
+-            implode("\n", $contentLines),
++            $originalContents,
+             $addLines,
+             $deleteLines,
+         ];
