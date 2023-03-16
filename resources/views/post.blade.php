@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="{{ $post->getClearTitle() }}"/>
     <meta name="twitter:image"
-          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getClearTitle()]) }}"/>
+          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getUrlSafeTitle()]) }}"/>
     <meta name="twitter:description" content="{{ $post->getPerex() }}"/>
 
     <!-- post_id: {{ $post->getId() }} -->
