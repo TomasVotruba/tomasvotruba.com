@@ -1,8 +1,6 @@
 @extends('layout.layout_base')
 
 @php
-    use App\Enum\RouteName;
-
     /** type declarations */
     /** @var $post \App\Entity\Post */
 @endphp
