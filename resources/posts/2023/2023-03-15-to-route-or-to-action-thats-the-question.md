@@ -1,6 +1,6 @@
 ---
 id: 381
-title: "To Route or To Action? That's&nbsp;the&nbsp;Question"
+title: "To Route or To Action - That's&nbsp;the&nbsp;Question"
 
 perex: |
     This week I've been working a lot on GPT in [Testgenai.com](https://testgenai.com/). I am learning more and more about Laravel as a side effect.
