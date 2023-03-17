@@ -34,11 +34,6 @@ final class Post
         return $this->title;
     }
 
-    public function getUrlSafeTitle(): string
-    {
-        return urlencode($this->getClearTitle());
-    }
-
     public function getClearTitle(): string
     {
         return str_replace('&nbsp;', ' ', $this->title);

@@ -13,7 +13,7 @@
     <meta property="og:description" content="{{ $post->getPerex() }}"/>
     <meta property="og:type" content="article"/>
     <meta property="og:image"
-          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getUrlSafeTitle()]) }}"/>
+          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getClearTitle()]) }}"/>
 
     <meta
         property="og:url"
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="{{ $post->getClearTitle() }}"/>
     <meta name="twitter:image"
-          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getUrlSafeTitle()]) }}"/>
+          content="{{ action(\App\Http\Controllers\ThumbnailController::class, ['title' => $post->getClearTitle()]) }}"/>
     <meta name="twitter:description" content="{{ $post->getPerex() }}"/>
 
     <!-- post_id: {{ $post->getId() }} -->

@@ -28,8 +28,6 @@ final class ThumbnailController extends Controller
 
     public function __invoke(string $title): BinaryFileResponse
     {
-        $title = str_replace('+', ' ', $title);
-
         // @see https://imagine.readthedocs.io/en/stable/
         $thumbnailDirectory = __DIR__ . '/../../../storage/app/public/thumbnail/';
 
