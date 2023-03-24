@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9eee77d4fdf31d7da29ad681cbdd356",
+    "content-hash": "12a65ec097a20a640157531699a9aeef",
     "packages": [
         {
             "name": "brick/math",
@@ -812,16 +812,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v10.3.3",
+            "version": "v10.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "90f24d9e2860ecf6b5492e966956270ceb98c03d"
+                "reference": "7d15f7eef442633cff108f83d9fe43d8c3b8b76f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/90f24d9e2860ecf6b5492e966956270ceb98c03d",
-                "reference": "90f24d9e2860ecf6b5492e966956270ceb98c03d",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7d15f7eef442633cff108f83d9fe43d8c3b8b76f",
+                "reference": "7d15f7eef442633cff108f83d9fe43d8c3b8b76f",
                 "shasum": ""
             },
             "require": {
@@ -920,7 +920,7 @@
                 "league/flysystem-read-only": "^3.3",
                 "league/flysystem-sftp-v3": "^3.0",
                 "mockery/mockery": "^1.5.1",
-                "orchestra/testbench-core": "^8.0",
+                "orchestra/testbench-core": "^8.1",
                 "pda/pheanstalk": "^4.0",
                 "phpstan/phpdoc-parser": "^1.15",
                 "phpstan/phpstan": "^1.4.7",
@@ -1008,7 +1008,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-03-09T14:00:53+00:00"
+            "time": "2023-03-18T11:34:02+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2381,16 +2381,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.12",
+            "version": "v0.11.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "52cb7c47d403c31c0adc9bf7710fc355f93c20f7"
+                "reference": "722317c9f5627e588788e340f29b923e58f92f54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/52cb7c47d403c31c0adc9bf7710fc355f93c20f7",
-                "reference": "52cb7c47d403c31c0adc9bf7710fc355f93c20f7",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/722317c9f5627e588788e340f29b923e58f92f54",
+                "reference": "722317c9f5627e588788e340f29b923e58f92f54",
                 "shasum": ""
             },
             "require": {
@@ -2451,9 +2451,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.12"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.13"
             },
-            "time": "2023-01-29T21:24:40+00:00"
+            "time": "2023-03-21T14:22:44+00:00"
         },
         {
             "name": "ramsey/collection",
@@ -6510,16 +6510,16 @@
         },
         {
             "name": "nunomaduro/collision",
-            "version": "v7.1.2",
+            "version": "v7.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "f502ff3b2051124c89b4dd3a8a497ca65f3ce26c"
+                "reference": "c680af93e414110b36056029f63120e6bc78f6e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/f502ff3b2051124c89b4dd3a8a497ca65f3ce26c",
-                "reference": "f502ff3b2051124c89b4dd3a8a497ca65f3ce26c",
+                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/c680af93e414110b36056029f63120e6bc78f6e3",
+                "reference": "c680af93e414110b36056029f63120e6bc78f6e3",
                 "shasum": ""
             },
             "require": {
@@ -6529,19 +6529,19 @@
                 "symfony/console": "^6.2.7"
             },
             "conflict": {
-                "phpunit/phpunit": "<10.0.16"
+                "phpunit/phpunit": "<10.0.17"
             },
             "require-dev": {
-                "brianium/paratest": "^7.1.1",
-                "laravel/framework": "^10.3.3",
-                "laravel/pint": "^1.6.0",
+                "brianium/paratest": "^7.1.2",
+                "laravel/framework": "^10.4.1",
+                "laravel/pint": "^1.7.0",
                 "laravel/sail": "^1.21.2",
                 "laravel/sanctum": "^3.2.1",
                 "laravel/tinker": "^2.8.1",
                 "nunomaduro/larastan": "^2.5.1",
-                "orchestra/testbench-core": "^8.0.5",
-                "pestphp/pest": "^2.0.0",
-                "phpunit/phpunit": "^10.0.16",
+                "orchestra/testbench-core": "^8.1.1",
+                "pestphp/pest": "^2.0.2",
+                "phpunit/phpunit": "^10.0.17",
                 "sebastian/environment": "^6.0.0",
                 "spatie/laravel-ignition": "^2.0.0"
             },
@@ -6602,7 +6602,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-03-14T14:34:49+00:00"
+            "time": "2023-03-23T21:41:35+00:00"
         },
         {
             "name": "nunomaduro/larastan",
@@ -6866,24 +6866,27 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.6.2",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "48f445a408c131e38cab1c235aa6d2bb7a0bb20d"
+                "reference": "1534aea9bde19a5c85c5d1e1f834ab63f4c5dcf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/48f445a408c131e38cab1c235aa6d2bb7a0bb20d",
-                "reference": "48f445a408c131e38cab1c235aa6d2bb7a0bb20d",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/1534aea9bde19a5c85c5d1e1f834ab63f4c5dcf5",
+                "reference": "1534aea9bde19a5c85c5d1e1f834ab63f4c5dcf5",
                 "shasum": ""
             },
             "require": {
+                "doctrine/deprecations": "^1.0",
                 "php": "^7.4 || ^8.0",
-                "phpdocumentor/reflection-common": "^2.0"
+                "phpdocumentor/reflection-common": "^2.0",
+                "phpstan/phpdoc-parser": "^1.13"
             },
             "require-dev": {
                 "ext-tokenizer": "*",
+                "phpbench/phpbench": "^1.2",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^1.8",
                 "phpstan/phpstan-phpunit": "^1.1",
@@ -6915,9 +6918,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.2"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.7.0"
             },
-            "time": "2022-10-14T12:47:21+00:00"
+            "time": "2023-03-12T10:13:29+00:00"
         },
         {
             "name": "phpmyadmin/sql-parser",
@@ -7051,17 +7054,62 @@
             "time": "2022-10-17T12:59:16+00:00"
         },
         {
-            "name": "phpstan/phpstan",
-            "version": "1.10.6",
+            "name": "phpstan/phpdoc-parser",
+            "version": "1.16.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "50d089a3e0904b0fe7e2cf2d4fd37d427d64235a"
+                "url": "https://github.com/phpstan/phpdoc-parser.git",
+                "reference": "e27e92d939e2e3636f0a1f0afaba59692c0bf571"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/50d089a3e0904b0fe7e2cf2d4fd37d427d64235a",
-                "reference": "50d089a3e0904b0fe7e2cf2d4fd37d427d64235a",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/e27e92d939e2e3636f0a1f0afaba59692c0bf571",
+                "reference": "e27e92d939e2e3636f0a1f0afaba59692c0bf571",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "require-dev": {
+                "php-parallel-lint/php-parallel-lint": "^1.2",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.5",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.0",
+                "phpunit/phpunit": "^9.5",
+                "symfony/process": "^5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPStan\\PhpDocParser\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPDoc parser with support for nullable, intersection and generic types",
+            "support": {
+                "issues": "https://github.com/phpstan/phpdoc-parser/issues",
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.16.1"
+            },
+            "time": "2023-02-07T18:11:17+00:00"
+        },
+        {
+            "name": "phpstan/phpstan",
+            "version": "1.10.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "0166aef76e066f0dd2adc2799bdadfa1635711e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0166aef76e066f0dd2adc2799bdadfa1635711e9",
+                "reference": "0166aef76e066f0dd2adc2799bdadfa1635711e9",
                 "shasum": ""
             },
             "require": {
@@ -7090,8 +7138,11 @@
                 "static analysis"
             ],
             "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.10.6"
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
             },
             "funding": [
                 {
@@ -7107,7 +7158,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-09T16:55:12+00:00"
+            "time": "2023-03-24T10:28:16+00:00"
         },
         {
             "name": "phpstan/phpstan-webmozart-assert",
@@ -7480,16 +7531,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.0.16",
+            "version": "10.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "07d386a11ac7094032900f07cada1c8975d16607"
+                "reference": "582563ed2edc62d1455cdbe00ea49fe09428eef3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/07d386a11ac7094032900f07cada1c8975d16607",
-                "reference": "07d386a11ac7094032900f07cada1c8975d16607",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/582563ed2edc62d1455cdbe00ea49fe09428eef3",
+                "reference": "582563ed2edc62d1455cdbe00ea49fe09428eef3",
                 "shasum": ""
             },
             "require": {
@@ -7560,7 +7611,8 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.16"
+                "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.18"
             },
             "funding": [
                 {
@@ -7576,7 +7628,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-13T09:02:40+00:00"
+            "time": "2023-03-22T06:15:31+00:00"
         },
         {
             "name": "psr/cache",
@@ -7629,16 +7681,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.15.21",
+            "version": "0.15.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "1cee8cc5d6d836e1bf9a3006d7b062adde3a6022"
+                "reference": "f4984ebd62b3613002869b0ddd6868261d62819e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/1cee8cc5d6d836e1bf9a3006d7b062adde3a6022",
-                "reference": "1cee8cc5d6d836e1bf9a3006d7b062adde3a6022",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/f4984ebd62b3613002869b0ddd6868261d62819e",
+                "reference": "f4984ebd62b3613002869b0ddd6868261d62819e",
                 "shasum": ""
             },
             "require": {
@@ -7678,7 +7730,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.15.21"
+                "source": "https://github.com/rectorphp/rector/tree/0.15.23"
             },
             "funding": [
                 {
@@ -7686,7 +7738,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-06T11:44:29+00:00"
+            "time": "2023-03-22T15:22:45+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -7990,16 +8042,16 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "5.0.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "70dd1b20bc198da394ad542e988381b44e64e39f"
+                "reference": "aae9a0a43bff37bd5d8d0311426c87bf36153f02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/70dd1b20bc198da394ad542e988381b44e64e39f",
-                "reference": "70dd1b20bc198da394ad542e988381b44e64e39f",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/aae9a0a43bff37bd5d8d0311426c87bf36153f02",
+                "reference": "aae9a0a43bff37bd5d8d0311426c87bf36153f02",
                 "shasum": ""
             },
             "require": {
@@ -8044,7 +8096,8 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/diff/issues",
-                "source": "https://github.com/sebastianbergmann/diff/tree/5.0.0"
+                "security": "https://github.com/sebastianbergmann/diff/security/policy",
+                "source": "https://github.com/sebastianbergmann/diff/tree/5.0.1"
             },
             "funding": [
                 {
@@ -8052,7 +8105,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-03T07:00:31+00:00"
+            "time": "2023-03-23T05:12:41+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -8955,16 +9008,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "11.2.10",
+            "version": "11.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/easy-coding-standard/easy-coding-standard.git",
-                "reference": "5fc343df9b86e154516ddf506f7fe0b421d7d5ef"
+                "reference": "d4159e06c0970e71a2a58d350160241e7cb3994b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/5fc343df9b86e154516ddf506f7fe0b421d7d5ef",
-                "reference": "5fc343df9b86e154516ddf506f7fe0b421d7d5ef",
+                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/d4159e06c0970e71a2a58d350160241e7cb3994b",
+                "reference": "d4159e06c0970e71a2a58d350160241e7cb3994b",
                 "shasum": ""
             },
             "require": {
@@ -8972,7 +9025,8 @@
             },
             "conflict": {
                 "friendsofphp/php-cs-fixer": "<3.0",
-                "squizlabs/php_codesniffer": "<3.6"
+                "squizlabs/php_codesniffer": "<3.6",
+                "symplify/coding-standard": "<11.3"
             },
             "bin": [
                 "bin/ecs"
@@ -8988,9 +9042,15 @@
                 "MIT"
             ],
             "description": "Use Coding Standard with 0-knowledge of PHP-CS-Fixer and PHP_CodeSniffer",
+            "keywords": [
+                "Code style",
+                "automation",
+                "fixer",
+                "static analysis"
+            ],
             "support": {
                 "issues": "https://github.com/easy-coding-standard/easy-coding-standard/issues",
-                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/11.2.10"
+                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/11.3.2"
             },
             "funding": [
                 {
@@ -9002,7 +9062,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-27T10:00:30+00:00"
+            "time": "2023-03-22T15:28:51+00:00"
         },
         {
             "name": "symplify/phpstan-extensions",
@@ -9124,16 +9184,16 @@
         },
         {
             "name": "tomasvotruba/bladestan",
-            "version": "dev-main",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/bladestan.git",
-                "reference": "9e96f38047720658b9ad635662daaea0dcb8d0be"
+                "reference": "b1e4a45d9180b743e74b439bf6ddb6e063986f9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/bladestan/zipball/9e96f38047720658b9ad635662daaea0dcb8d0be",
-                "reference": "9e96f38047720658b9ad635662daaea0dcb8d0be",
+                "url": "https://api.github.com/repos/TomasVotruba/bladestan/zipball/b1e4a45d9180b743e74b439bf6ddb6e063986f9c",
+                "reference": "b1e4a45d9180b743e74b439bf6ddb6e063986f9c",
                 "shasum": ""
             },
             "require": {
@@ -9151,7 +9211,6 @@
                 "symplify/easy-coding-standard": "^11.2",
                 "tracy/tracy": "^2.9"
             },
-            "default-branch": true,
             "type": "phpstan-extension",
             "extra": {
                 "phpstan": {
@@ -9170,9 +9229,13 @@
                 "MIT"
             ],
             "description": "PHPStan rule for static analysis of Blade templates",
+            "keywords": [
+                "phpstan-extension",
+                "static analysis"
+            ],
             "support": {
                 "issues": "https://github.com/TomasVotruba/bladestan/issues",
-                "source": "https://github.com/TomasVotruba/bladestan/tree/main"
+                "source": "https://github.com/TomasVotruba/bladestan/tree/0.1.0"
             },
             "funding": [
                 {
@@ -9184,7 +9247,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-13T21:24:14+00:00"
+            "time": "2023-03-16T10:25:33+00:00"
         },
         {
             "name": "tomasvotruba/laratyped",
@@ -9248,30 +9311,22 @@
         },
         {
             "name": "tomasvotruba/type-coverage",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/type-coverage.git",
-                "reference": "730325dee3c9527429d2060d8a61aceb13d91ce5"
+                "reference": "3a4061029c845ebecffe360efab5ecd706018ca0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/type-coverage/zipball/730325dee3c9527429d2060d8a61aceb13d91ce5",
-                "reference": "730325dee3c9527429d2060d8a61aceb13d91ce5",
+                "url": "https://api.github.com/repos/TomasVotruba/type-coverage/zipball/3a4061029c845ebecffe360efab5ecd706018ca0",
+                "reference": "3a4061029c845ebecffe360efab5ecd706018ca0",
                 "shasum": ""
             },
             "require": {
                 "nette/utils": "^3.2",
-                "php": "^8.1",
+                "php": "^7.2 || ^8.0",
                 "phpstan/phpstan": "^1.9.3"
-            },
-            "require-dev": {
-                "php-parallel-lint/php-parallel-lint": "^1.3",
-                "phpstan/extension-installer": "^1.2",
-                "phpunit/phpunit": "^10.0",
-                "rector/rector": "^0.15.18",
-                "symplify/easy-coding-standard": "^11.2",
-                "tracy/tracy": "^2.9"
             },
             "type": "phpstan-extension",
             "extra": {
@@ -9297,7 +9352,7 @@
             ],
             "support": {
                 "issues": "https://github.com/TomasVotruba/type-coverage/issues",
-                "source": "https://github.com/TomasVotruba/type-coverage/tree/0.1.0"
+                "source": "https://github.com/TomasVotruba/type-coverage/tree/0.1.1"
             },
             "funding": [
                 {
@@ -9309,26 +9364,26 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-12T01:42:07+00:00"
+            "time": "2023-03-17T19:31:37+00:00"
         },
         {
             "name": "tomasvotruba/unused-public",
-            "version": "0.1.8",
+            "version": "0.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/unused-public.git",
-                "reference": "560ec577f67c3a6f6b1530f2a91aa64d0acaae75"
+                "reference": "9a958698fd5c13eb10cf6bc4152e22686403cd8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/unused-public/zipball/560ec577f67c3a6f6b1530f2a91aa64d0acaae75",
-                "reference": "560ec577f67c3a6f6b1530f2a91aa64d0acaae75",
+                "url": "https://api.github.com/repos/TomasVotruba/unused-public/zipball/9a958698fd5c13eb10cf6bc4152e22686403cd8d",
+                "reference": "9a958698fd5c13eb10cf6bc4152e22686403cd8d",
                 "shasum": ""
             },
             "require": {
                 "nette/utils": "^3.2",
                 "php": "^8.1",
-                "phpstan/phpstan": "^1.9.3",
+                "phpstan/phpstan": "^1.10.0",
                 "webmozart/assert": "^1.11"
             },
             "require-dev": {
@@ -9365,7 +9420,7 @@
             ],
             "support": {
                 "issues": "https://github.com/TomasVotruba/unused-public/issues",
-                "source": "https://github.com/TomasVotruba/unused-public/tree/0.1.8"
+                "source": "https://github.com/TomasVotruba/unused-public/tree/0.1.9"
             },
             "funding": [
                 {
@@ -9377,13 +9432,12 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-12T01:29:42+00:00"
+            "time": "2023-03-16T10:30:38+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "tomasvotruba/bladestan": 20,
         "tomasvotruba/laratyped": 20
     },
     "prefer-stable": false,
