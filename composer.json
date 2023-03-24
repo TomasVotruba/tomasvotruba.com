@@ -30,7 +30,7 @@
         "spatie/laravel-ignition": "^2.0",
         "symplify/easy-coding-standard": "^11.2",
         "symplify/phpstan-extensions": "^11.2",
-        "tomasvotruba/bladestan": "dev-main",
+        "tomasvotruba/bladestan": "^0.1",
         "tomasvotruba/laratyped": "dev-main",
         "tomasvotruba/type-coverage": "^0.1",
         "tomasvotruba/unused-public": "^0.1"
