@@ -15,9 +15,9 @@ final class ControllerSmokeTest extends AbstractTestCase
     #[DataProvider('provideRoutes')]
     public function testGetRoutesRender(Route $route): void
     {
-        $response = $this->get($route->uri);
+        $testResponse = $this->get($route->uri);
 
-        $response->assertSuccessful();
+        $testResponse->assertSuccessful();
     }
 
     public static function provideRoutes(): Iterator
