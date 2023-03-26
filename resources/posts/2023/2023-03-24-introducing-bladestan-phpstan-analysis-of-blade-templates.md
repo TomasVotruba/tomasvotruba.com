@@ -53,7 +53,7 @@ Let's say we make a typo and call a **non-existing method** in our Blade templat
 
 ```php
 @foreach($posts as $post)
-    {{ $post->getConten() }}
+    {{ $post->getContet() }}
 @endforeach
 ```
 
