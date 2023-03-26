@@ -5,7 +5,6 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>{{ action(\App\Http\Controllers\RssController::class) }}</id>
     <link href="{{ action(\App\Http\Controllers\HomepageController::class) }}" />
-    <link href="{{ action(\App\Http\Controllers\RssController::class) }}" rel="self" />
     <title>
         <![CDATA[ {{ \App\Enum\Design::BLOG_TITLE }} ]]>
     </title>
