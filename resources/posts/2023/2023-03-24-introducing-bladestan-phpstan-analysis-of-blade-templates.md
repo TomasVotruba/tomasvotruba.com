@@ -89,7 +89,7 @@ rendered in: app/Http/Controllers/BlogController.php:20
 
 We could also discover these errors using our browser and go through all possible if/else template paths.
 
-The most fantastic feature of Bladestan is that **everything happens without any Blade compilation** - in the static analysis made by PHPStan. It also uses your full PHPStan setup, including Larastan and all extensions.
+The most fantastic feature of Bladestan is that **everything happens automatically** -- Bladestan compiles the Blade template to PHP for you, then PHPStan does the static analysis on the compiled PHP. It also uses your full PHPStan setup, including Larastan and all extensions.
 
 <br>
 
