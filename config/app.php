@@ -16,14 +16,9 @@ use Illuminate\View\ViewServiceProvider;
 use TomasVotruba\PunchCard\AppConfig;
 
 return AppConfig::make()
-    ->key(env('APP_KEY'))
+    ->defaults()
     ->name(env('APP_NAME', 'TomasVotruba'))
-    ->env(env('APP_ENV', 'production'))
-    ->debug((bool) env('APP_DEBUG', false))
-    ->url(env('APP_URL', 'http://localhost'))
-    ->timezone('UTC')
     ->providers([
-        // Laravel Framework Service Providers...
         CacheServiceProvider::class,
         ConsoleSupportServiceProvider::class,
         DatabaseServiceProvider::class,
@@ -31,8 +26,6 @@ return AppConfig::make()
         FoundationServiceProvider::class,
         ViewServiceProvider::class,
         SessionServiceProvider::class,
-        TranslationServiceProvider::class,
         RouteServiceProvider::class,
-        QueueServiceProvider::class,
     ])
     ->toArray();
