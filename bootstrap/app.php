@@ -9,7 +9,7 @@ use Illuminate\Foundation\Exceptions\Handler;
 
 $application = new Application(__DIR__ . '/..');
 
-$application->singleton(Kernel::class,App\Http\HttpKernel::class);
+$application->singleton(Kernel::class, App\Http\HttpKernel::class);
 
 $application->singleton(Illuminate\Contracts\Console\Kernel::class,\Illuminate\Foundation\Console\Kernel::class);
 
