@@ -10,6 +10,10 @@ perex: |
     Then I remembered a wise saying: "There are no best solutions, only trade-offs."
 ---
 
+*Disclaimer: I'll write more about Laravel DI features and how I approach it, but there is single one that stands out for me and I wanted to share it with you.*
+
+<br>
+
 Let's start with what most of my readers and I know well - Symfony.
 
 <br>
