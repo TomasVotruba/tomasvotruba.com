@@ -169,6 +169,16 @@ img {
         text-align: center;
         margin: .5em auto 1.5em auto;
     }
+
+    ol {
+        margin-top: 1.5rem;
+        margin-left: 1.5rem;
+        padding-left: 0;
+
+        li {
+            margin-top: 2rem;
+        }
+    }
 }
 /* @see https://stackoverflow.com/a/50174132/1348344 */
 .container li {
