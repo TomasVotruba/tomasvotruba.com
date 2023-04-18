@@ -14,8 +14,6 @@ use Illuminate\View\ViewServiceProvider;
 use TomasVotruba\PunchCard\AppConfig;
 
 return AppConfig::make()
-    ->defaults()
-    ->name(env('APP_NAME', 'TomasVotruba'))
     ->providers([
         CacheServiceProvider::class,
         ConsoleSupportServiceProvider::class,
