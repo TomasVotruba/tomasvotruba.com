@@ -36,7 +36,7 @@ final class Post
 
     public function getClearTitle(): string
     {
-        return str_replace('&nbsp;', ' ', $this->title);
+        return str_replace(['&nbsp;', '?'], [' ', ''], $this->title);
     }
 
     public function getPerex(): string
