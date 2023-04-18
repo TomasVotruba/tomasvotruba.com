@@ -61,7 +61,7 @@ final class Post
 
     public function isUpdated(): bool
     {
-        return $this->updatedAt !== null;
+        return $this->updatedAt instanceof DateTimeInterface;
     }
 
     public function getUpdatedMessage(): ?string
