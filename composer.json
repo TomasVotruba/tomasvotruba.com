@@ -15,11 +15,10 @@
         "symfony/yaml": "^6.2",
         "symplify/vendor-patches": "^11.2",
         "tomasvotruba/lavarle": "^0.1",
-        "tomasvotruba/punchcard": "^0.1.1"
+        "tomasvotruba/punchcard": "^0.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8",
-        "barryvdh/laravel-ide-helper": "^2.13",
         "nunomaduro/collision": "^7.0",
         "nunomaduro/larastan": "^2.4",
         "phpstan/extension-installer": "^1.2",
