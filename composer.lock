@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14fb28af36e97cc314243506bf56db0d",
+    "content-hash": "42e2b570392e202d2b7d3e5a690e281a",
     "packages": [
         {
             "name": "brick/math",
@@ -8115,66 +8115,6 @@
             "time": "2023-03-16T10:25:33+00:00"
         },
         {
-            "name": "tomasvotruba/laratyped",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TomasVotruba/laratyped.git",
-                "reference": "7fa64bd92f4ed8811fa68284ffe1f46cc1d63197"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/laratyped/zipball/7fa64bd92f4ed8811fa68284ffe1f46cc1d63197",
-                "reference": "7fa64bd92f4ed8811fa68284ffe1f46cc1d63197",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^8.8 || ^9.0 || ^10.3",
-                "php": "^8.1",
-                "phpstan/phpstan": "^1.10"
-            },
-            "require-dev": {
-                "laravel/framework": "^10.3",
-                "phpunit/phpunit": "^10.0",
-                "rector/rector": "^0.15.21",
-                "symplify/easy-ci": "11.2.0.72",
-                "symplify/easy-coding-standard": "^11.2"
-            },
-            "default-branch": true,
-            "type": "phpstan-extension",
-            "extra": {
-                "phpstan": {
-                    "includes": [
-                        "config/extension.neon"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tomasvotruba\\Laratyped\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "support": {
-                "issues": "https://github.com/TomasVotruba/laratyped/issues",
-                "source": "https://github.com/TomasVotruba/laratyped/tree/main"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/rectorphp",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/tomasvotruba",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-03-08T13:01:32+00:00"
-        },
-        {
             "name": "tomasvotruba/type-coverage",
             "version": "0.1.3",
             "source": {
@@ -8302,9 +8242,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "tomasvotruba/laratyped": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
