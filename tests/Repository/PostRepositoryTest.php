@@ -45,9 +45,6 @@ final class PostRepositoryTest extends AbstractTestCase
             $postTestUrl = 'https://localhost:8000/blog/' . $post->getSlug();
 
             $response = $this->get($postTestUrl);
-
-            var_dump($response->getContent());
-
             $response->assertSuccessful();
 
             // detail of the post
