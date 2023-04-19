@@ -70,7 +70,21 @@
 
         <br>
 
+        <hr style="height: 1px; border: none; background-color: black" class="mt-5 mb-5">
+
         <br>
+
+        <p>
+            Do you learn from my contents or use open-souce packages like Rector every day?
+            <br>
+
+            <strong>
+                <a href="https://github.com/sponsors/tomasvotruba">Consider supporting it on GitHub Sponsors</a>.
+            </strong>
+
+            I'd really appreciate it!
+        </p>
+
         <br>
 
 {{--        <a name="comments"></a>--}}
