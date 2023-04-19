@@ -5,7 +5,7 @@ title: "Moving from Disqus to Twitter to make Know-how Sharing Easier"
 perex: |
     Discussion were always important part of my blog. To share know-how with you, my reader, learn something new and look for better solution. Last few years the main "fire chat" place moves from private channels like comments under post, to public ones like Twitter and Reddit.
 
-    This knowledge is spread into too many places and comments often repeat and disolve. Not to mention Disqus has some user-tracking issues. How can we change that?
+    As knowledge becomes dispersed across various platforms, comments often become repetitive and diluted. Furthermore, Disqus has its own set of user-tracking issues. So, how can we make a change for the better?
 ---
 
 You can see there are different groups expressing opinions under blog posts here. Disqus attracted users in very start, many years ago, when Twitter and other social networks were one-way sharing channels. This has changed. **Twitter is becoming a public place, to share ideas, give feedback and to learn about new technology or approaches to coding.**
@@ -34,7 +34,7 @@ Instead, there should be single place:
 
 Majority of PHP bloggers have removed comments completely and moved to Twitter or other public channels years ago. I'm joning them today.
 
-Twitter seems the right place, I use it daily and reply to you much faster. One less social network to worry about and more focus on what is important - **collective community of PHP developers, cooperating with each other**.
+Twitter seems like the perfect choice, as I use it daily and can respond to you much more quickly. With one less social network to manage, I can focus on what truly matters - **nurturing a collaborative community of PHP developers working together**.
 
 <br>
 
