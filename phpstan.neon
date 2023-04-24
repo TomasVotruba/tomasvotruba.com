@@ -5,6 +5,8 @@ parameters:
         - app
         - config
         - tests
+        - packages
+        - tests-packages
 
     level: 8
 

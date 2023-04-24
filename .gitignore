@@ -20,4 +20,6 @@ bootstrap/cache/*
 # frontend
 yarn-error.log
 
-public/hot
+
+# private data
+resources/invoices
