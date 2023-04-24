@@ -23,5 +23,6 @@ return AppConfig::make()
         ViewServiceProvider::class,
         SessionServiceProvider::class,
         RouteServiceProvider::class,
+        \Illuminate\Queue\QueueServiceProvider::class,
     ])
     ->toArray();
