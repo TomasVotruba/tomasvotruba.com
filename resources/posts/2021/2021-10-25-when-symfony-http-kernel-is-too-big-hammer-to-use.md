@@ -5,7 +5,7 @@ perex: |
     I've been a big fan of Symfony components for ages. I use them as core bricks of my projects [migrate other frameworks to it](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours), and every 6 months, I'm excited about what new features are coming in the next minor release.
 
 
-    But, one tough spot has been bothering me for the last 4 years. I tried to find my way out of it, hack around it or accept it. In March 2021, we [downgrade Rector 0.10 from PHP 8 to 7.1](https://getrector.org/blog/2021/03/22/rector-010-released-with-php71-support#rector-on-php-7-1-and-7-2-without-docker), and the issue became visible more than ever.
+    But, one tough spot has been bothering me for the last 4 years. I tried to find my way out of it, hack around it or accept it. In March 2021, we [downgrade Rector 0.10 from PHP 8 to 7.1](https://getrector.com/blog/2021/03/22/rector-010-released-with-php71-support#rector-on-php-7-1-and-7-2-without-docker), and the issue became visible more than ever.
 
 
     I knew there was a time for a change.
@@ -122,7 +122,7 @@ that we'll never use and just take little space on a disk.
 What's the big deal?
 </blockquote>
 
-Let's get back to the start. In April 2021, we started to develop Rector on PHP 8 and [release PHP 7.1 downgraded version](https://getrector.org/blog/2021/03/22/rector-010-released-with-php71-support#rector-on-php-7-1-and-7-2-without-docker). Downgraded and scoped version means fully downgraded and scoped `/vendor`. Yes, including all Symfony components we use.
+Let's get back to the start. In April 2021, we started to develop Rector on PHP 8 and [release PHP 7.1 downgraded version](https://getrector.com/blog/2021/03/22/rector-010-released-with-php71-support#rector-on-php-7-1-and-7-2-without-docker). Downgraded and scoped version means fully downgraded and scoped `/vendor`. Yes, including all Symfony components we use.
 
 The downgrade PHP market is still quite a niche, but **the community is interested more and more in this field**. In December 2021 alone, there have been over 20 brand new downgrade rules contributed from Rector users.
 

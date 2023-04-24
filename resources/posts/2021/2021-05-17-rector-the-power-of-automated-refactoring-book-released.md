@@ -15,7 +15,7 @@ updated_message: |
 
 <div class="float-right text-center">
     <a href="https://leanpub.com/rector-the-power-of-automated-refactoring" target="blank">
-        <img src="https://getrector.org/assets/images/logo/logo_bigger/rector_book.png" style="max-width: 15em; padding: .5em;margin:0 0 .5em 1em" class="shadow" alt="Rector book cover">
+        <img src="https://getrector.com/assets/images/logo/logo_bigger/rector_book.png" style="max-width: 15em; padding: .5em;margin:0 0 .5em 1em" class="shadow" alt="Rector book cover">
     </a>
 
     <br>

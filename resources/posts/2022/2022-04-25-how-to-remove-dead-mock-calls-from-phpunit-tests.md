@@ -75,7 +75,7 @@ We need easy to maintain tests, to move move fast and safely. The last thing we 
 
 ## Taking Dead Mocks First to Lower Complexity
 
-This year, [with Rector cleaning services](https://getrector.org/for-companies), we're cleaning 2 projects from mock jungle.
+This year, [with Rector cleaning services](https://getrector.com/hire-team), we're cleaning 2 projects from mock jungle.
 
 <br>
 

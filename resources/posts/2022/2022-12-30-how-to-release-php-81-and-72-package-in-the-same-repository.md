@@ -10,7 +10,7 @@ perex: |
     I knew we could do better... we want **one repository**. Today I'll show you how to get there with 39 lines of GitHub Action workflow (including comments).
 ---
 
-When I created minimal PHPStan packages with specialized rules, I wanted to use them on [every legacy project we upgrade](https://getrector.org/for-companies) we do with the Rector upgrade team. The most common lowest PHP for these projects is **PHP 7.2**, so it has to be downgraded.
+When I created minimal PHPStan packages with specialized rules, I wanted to use them on [every legacy project we upgrade](https://getrector.com/hire-team) we do with the Rector upgrade team. The most common lowest PHP for these projects is **PHP 7.2**, so it has to be downgraded.
 
 <br>
 

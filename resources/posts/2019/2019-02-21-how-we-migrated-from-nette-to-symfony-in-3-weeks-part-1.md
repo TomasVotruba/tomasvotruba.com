@@ -53,7 +53,7 @@ We quickly discovered, it's better to use [PHP factories over config coding](/bl
 
 In the start, we run **Rector with generic rules with brute-force way**. Don't think, just try it. That gave us more idea about the code - we started to spot places we can write in Rector rule.
 
-In the end, [Rector](https://getrector.org) helped us with many following changes:
+In the end, [Rector](https://getrector.com) helped us with many following changes:
 
 - Response and Request ✅
 - Presenter to Controller ✅

@@ -24,7 +24,7 @@ I'm not sure who bribed all these folks, **but this year I got accepted to 6 ama
 I already missed a flight this year, so let's hope it will not [happen again](/blog/2018/10/18/how-i-almost-missed-my-talk-in-php-asia-conference/).
 
 <div class="text-center">
-    <img src="http://getrector.org/assets/images/logo/rector-no_frame_vector.svg" style="width: 7em" class="mt-5">
+    <img src="http://getrector.com/assets/images/logo/rector-no_frame_vector.svg" style="width: 7em" class="mt-5">
 </div>
 
 ## Where Exactly?

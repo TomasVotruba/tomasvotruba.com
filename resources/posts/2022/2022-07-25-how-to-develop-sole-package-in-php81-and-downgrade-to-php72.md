@@ -5,7 +5,7 @@ perex: |
     The PHP downgrades are a thing. Most beneficial for package developers who want to move forward to the latest PHP features but also want to **keep easy access to the broad PHP community and legacy projects**.
 
 
-    The downgrade of a tool is a no-brainer - [we downgrade the whole tool](https://getrector.org/blog/how-to-bump-minimal-version-without-leaving-anyone-behind) including vendor, and we know it will run on PHP 7.2.
+    The downgrade of a tool is a no-brainer - [we downgrade the whole tool](https://getrector.com/blog/how-to-bump-minimal-version-without-leaving-anyone-behind) including vendor, and we know it will run on PHP 7.2.
 
     But how to achieve the same with the package with separated dependencies?
 
@@ -121,7 +121,7 @@ It looks great - all our dependencies require PHP 7.2 at least, so this package 
 
 ## 4. Add the Downgrade Step
 
-The last step we have to do is add the actual downgrade to the release step. We have our PHP 8.1 `composer.json` for development and the one above for PHP 7.2+. This process is the same for all the downgrades. Do you want to learn more about it? [I wrote about it here](https://getrector.org/blog/how-to-bump-minimal-version-without-leaving-anyone-behind).
+The last step we have to do is add the actual downgrade to the release step. We have our PHP 8.1 `composer.json` for development and the one above for PHP 7.2+. This process is the same for all the downgrades. Do you want to learn more about it? [I wrote about it here](https://getrector.com/blog/how-to-bump-minimal-version-without-leaving-anyone-behind).
 
 <br>
 

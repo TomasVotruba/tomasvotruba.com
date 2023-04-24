@@ -23,7 +23,7 @@ perex: |
 
 What do designer and legacy cleaner have in common? The final product must work, be intuitive and bring value to the user. I realized the old design had many spaces to improve, and a lot of ~~code~~ text and "cool features" should be removed.
 
-When we [get a project to refactor](https://getrector.org/for-companies) in Rector company, the first 1-2 months we don't do any PHP or framework upgrades at all. We focus on preparing the environment, remove everything that is not needed for developers and business to grow. At first, it looks like we come to destroy the project by removing 30 % of it. But in the end, after solid and reliable code remains, we can move unbelievably fast with upgrades and pattern refactoring.
+When we [get a project to refactor](https://getrector.com/hire-team) in Rector company, the first 1-2 months we don't do any PHP or framework upgrades at all. We focus on preparing the environment, remove everything that is not needed for developers and business to grow. At first, it looks like we come to destroy the project by removing 30 % of it. But in the end, after solid and reliable code remains, we can move unbelievably fast with upgrades and pattern refactoring.
 
 ## Deprecating Clusters - Use Words People Understand
 

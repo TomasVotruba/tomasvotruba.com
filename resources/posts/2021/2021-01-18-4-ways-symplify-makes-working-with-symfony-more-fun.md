@@ -221,7 +221,7 @@ and more.
 
 <br>
 
-This is how we use it on [getrector.org configs](https://github.com/rectorphp/getrector.org/blob/master/config/packages/doctrine.php):
+This is how we use it on [getrector.com configs](https://github.com/rectorphp/getrector.com/blob/master/config/packages/doctrine.php):
 
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;

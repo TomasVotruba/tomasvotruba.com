@@ -273,7 +273,7 @@ Do you prefer code over text? [Here is the PHP 7.4 upgrade pull-request](https:/
 
 ## Upgrade Instantly with Rector
 
-I did not do the upgrade pull-request myself (I'm way too lazy for that), [Rector](https://getrector.org) did. Thanks to testing out Rector on Doctrine entities, its PHP 7.4 set got much more precise.
+I did not do the upgrade pull-request myself (I'm way too lazy for that), [Rector](https://getrector.com) did. Thanks to testing out Rector on Doctrine entities, its PHP 7.4 set got much more precise.
 
 **Do you want to see how Rector can upgrade your code?**
 

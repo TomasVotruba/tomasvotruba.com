@@ -100,4 +100,4 @@ After all:
 
 <br>
 
-Do you think it's impossible change for your project? Drop us a [message at Rector](https://getrector.org). We'll help you.
+Do you think it's impossible change for your project? Drop us a [message at Rector](https://getrector.com). We'll help you.

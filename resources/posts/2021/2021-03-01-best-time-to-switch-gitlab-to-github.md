@@ -29,7 +29,7 @@ That was a breaking point for me to give GitHub Actions a try and switch all my 
 ## 3. GitLab has Faster CI
 
 I'm not sure how about 2019 and before because I was not using GitHub.
-Actions yet. We run GetRector.org on Gitlab in 2018 because Gitlab had better Docker support in CI... and it had a CI :)
+Actions yet. We run getrector.com on Gitlab in 2018 because Gitlab had better Docker support in CI... and it had a CI :)
 
 Since the switch from Travis/Gitlab to GitHub Actions, we've experienced much faster CI reactions. When a new commit was pushed on the former, it took 20-40 seconds until the CI server noticed. But on GitHub Actions, it's a matter of 5-10 seconds. That's blazing fast.
 

@@ -2,7 +2,7 @@
 id: 356
 title: "How to Make Configs like RectorConfig or ECSConfig for your Symfony Project"
 perex: |
-    We've introduced a new way to configure PHP tools on Symfony DI. A way that is decoupled brings new methods with autocomplete and validates your input. I talk about [RectorConfig](https://getrector.org/blog/new-in-rector-012-introducing-rector-config-with-autocomplete) and [ECSConfig](https://tomasvotruba.com/blog/new-in-ecs-simpler-config/).
+    We've introduced a new way to configure PHP tools on Symfony DI. A way that is decoupled brings new methods with autocomplete and validates your input. I talk about [RectorConfig](https://getrector.com/blog/new-in-rector-012-introducing-rector-config-with-autocomplete) and [ECSConfig](https://tomasvotruba.com/blog/new-in-ecs-simpler-config/).
 
 
     At first, I thought it was not possible. Symfony is very strict about this and does not allow any extensions. After a few days of hacking Symfony, I found a space to squash `<x>Config` class. After meeting with [Sebastian Schreiber](https://twitter.com/schreiberten) last week, we found an even better generic solution.
@@ -22,7 +22,7 @@ This is `ECSConfig` in action:
 
 ### 1. Isolate from Framework
 
-This is very important for projects like [Rector](https://getrector.org/) or [ECS](https://github.com/symplify/easy-coding-standard/), as you'll use them to analyze or refactor code that uses Symfony.
+This is very important for projects like [Rector](https://getrector.com/) or [ECS](https://github.com/symplify/easy-coding-standard/), as you'll use them to analyze or refactor code that uses Symfony.
 
 <br>
 

@@ -40,7 +40,7 @@ If you split each of these lines into standalone pull-requests, you're the best!
 
 ## Forget `UPGRADE.md`
 
-You probably know I work almost part-time on [the Rector project](https://getrector.org). I gather feedback from conferences and meetups all over Europe and try to make Rector better every day. Recently he also migrated between [2 PHP frameworks](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1), because why not?
+You probably know I work almost part-time on [the Rector project](https://getrector.com). I gather feedback from conferences and meetups all over Europe and try to make Rector better every day. Recently he also migrated between [2 PHP frameworks](/blog/2019/02/21/how-we-migrated-from-nette-to-symfony-in-3-weeks-part-1), because why not?
 
 The PHP community gives me positive vibes about going the right direction. It helps me to make PHP and Symfony **sets more and more complete**.
 
