@@ -7,7 +7,6 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookDetailController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomepageController;
-use App\Http\Controllers\PostCodexController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RssController;
 use App\Http\Controllers\ThumbnailController;
@@ -27,6 +26,8 @@ Route::get('/rss', RssController::class);
 Route::get('/rss.xml', RssController::class);
 Route::get('/contact', ContactController::class);
 
-Route::get('/codex/posts', PostCodexController::class);
-
 Route::get('/thumbnail/{title}.png', ThumbnailController::class);
+
+// invoices
+Route::get('/helinvoice', \App\Http\Controllers\Helinvoice\InvoiceController::class);
+Route::post('/process-invoice-form', \App\Http\Controllers\Helinvoice\ProcessInvoiceFormController::class);

@@ -10,6 +10,7 @@ use Webmozart\Assert\Assert;
 final class CarsTableFactory
 {
     /**
+     * @api
      * @param CarReport[] $carReports
      * @return array<mixed[]>
      */

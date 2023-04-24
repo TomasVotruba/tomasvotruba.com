@@ -8,6 +8,9 @@ parameters:
         - packages
         - tests-packages
 
+    excludePaths:
+        - config/filesystems.php
+
     level: 8
 
     ignoreErrors:

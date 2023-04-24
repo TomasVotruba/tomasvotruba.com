@@ -18,7 +18,7 @@
         "tomasvotruba/punchcard": "^0.2"
     },
     "require-dev": {
-        "nunomaduro/larastan": "^2.5",
+        "nunomaduro/larastan": "^2.6",
         "phpstan/extension-installer": "^1.2",
         "phpstan/phpstan": "^1.10",
         "phpstan/phpstan-webmozart-assert": "^1.2",
