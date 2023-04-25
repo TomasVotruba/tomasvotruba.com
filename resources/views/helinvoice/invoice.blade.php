@@ -88,13 +88,13 @@
                 @endforeach
 
                 <tr>
-                    <th colspan="4" class="bg-gradient bg-black text-white" >Summary</th>
+                    <th colspan="4" class="bg-gradient bg-warning-subtle text-black-50">Summary Check</th>
 
-                    <th class="text-end">
+                    <th class="text-end bg-gradient bg-warning-subtle text-black-50">
                         {{ nice_number($invoice_total_price) }}
                         €
                     </th>
-                    <td class="text-end">
+                    <td class="text-end bg-gradient bg-warning-subtle text-black-50">
                         {{ nice_number($invoice_total_price_after_discount) }}
                         €
                     </td>

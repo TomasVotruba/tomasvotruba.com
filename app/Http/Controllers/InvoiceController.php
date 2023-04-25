@@ -26,23 +26,15 @@ final class InvoiceController extends Controller
     public function __invoke(Request $request): View
     {
         $carReports = $this->processRequestToCarReports($request);
-
-        //$invoiceTotalPrice = 0.0;
-        //$invoiceTotalPriceAfterDiscount = 0.0;
-        //foreach ($carReports as $carReport) {
-        //    $invoiceTotalPrice += $carReport->getTotalPrice();
-        //    $invoiceTotalPriceAfterDiscount += $carReport->getTotalPriceAfterDiscount();
-        //}
-
         $carReportsCollection = collect($carReports);
 
-        $invoiceTotalPrice = $carReportsCollection->sum(function (CarReport $carReport): float {
-            return $carReport->getTotalPrice();
-        });
+        $invoiceTotalPrice = $carReportsCollection->sum(
+            static fn (CarReport $carReport): float => $carReport->getTotalPrice()
+        );
 
-        $invoiceTotalPriceAfterDiscount = $carReportsCollection->sum(function (CarReport $carReport): float {
-            return $carReport->getTotalPriceAfterDiscount();
-        });
+        $invoiceTotalPriceAfterDiscount = $carReportsCollection->sum(
+            static fn (CarReport $carReport): float => $carReport->getTotalPriceAfterDiscount()
+        );
 
         return view('helinvoice/invoice', [
             'title' => 'Invoice Converter',
@@ -67,7 +59,7 @@ final class InvoiceController extends Controller
         $carReports = $this->carReportExtractor->resolve($document);
 
         // sort from newest date time to the oldest, logically :)
-        usort($carReports, function (CarReport $firstCarReport, CarReport $secondCarReport): int {
+        usort($carReports, static function (CarReport $firstCarReport, CarReport $secondCarReport): int {
             if ($firstCarReport->getFirstFuelPurchaseDate() === $secondCarReport->getFirstFuelPurchaseDate()) {
                 return $firstCarReport->getLastFuelPurchaseDate() <=> $secondCarReport->getLastFuelPurchaseDate();
             }
