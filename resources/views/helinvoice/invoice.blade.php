@@ -1,5 +1,5 @@
 @php
-    /** @var \App\Helinvoice\ValueObject\CarReport[]|null $car_reports */
+    /** @var \App\ValueObject\CarReport[]|null $car_reports */
 @endphp
 
 
@@ -46,19 +46,19 @@
         @if ($car_reports !== null)
             <table class="table table-bordered table-responsive">
                 <thead class="table-dark">
-                <tr>
-                    <th>#</th>
-                    <th class="text-center">Car Plate</th>
-                    <th class="text-center">Date Period</th>
-                    <th class="text-center">Volume</th>
-                    <th class="text-center w-25">Total Price</th>
-                    <th class="text-center w-25">After Discount</th>
-                </tr>
+                    <tr>
+                        <th>#</th>
+                        <th class="text-center">Car Plate</th>
+                        <th class="text-center">Date Period</th>
+                        <th class="text-center">Volume</th>
+                        <th class="text-center w-25">Total Price</th>
+                        <th class="text-center w-25">After Discount</th>
+                    </tr>
                 </thead>
 
                 @foreach ($car_reports as $car_report)
                     <tr>
-                        <td>
+                        <td class="text-end">
                             {{ $loop->index + 1 }}
                         </td>
                         <td>
@@ -70,15 +70,36 @@
                         <td class="text-end">
                             {{ number_format($car_report->getTotalVolume(), 2, ',') }} l
                         </td>
+
                         <td class="text-end">
-                            {{ number_format($car_report->getTotalPrice(), 2, ',') }} €
+                            <strong>
+                                {{ number_format($car_report->getTotalPrice(), 2, ',') }} €
+                            </strong>
                         </td>
 
                         <td class="text-end">
-                            {{ number_format($car_report->getTotalPriceAfterDiscount(), 2, ',') }} €
+                            @if ($car_report->hasDiscounts())
+                                {{ number_format($car_report->getTotalPriceAfterDiscount(), 2, ',') }} €
+                            @else
+                                -
+                            @endif
                         </td>
                     </tr>
                 @endforeach
+
+                <tr>
+                    <th colspan="4" class="bg-gradient bg-black text-white" >Summary</th>
+
+                    <th class="text-end">
+
+                        one
+                        €
+                    </th>
+                    <td class="text-end">
+                        two
+                        €
+                    </td>
+                </tr>
             </table>
         @endif
     </div>

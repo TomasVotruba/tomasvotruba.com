@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Helinvoice\ValueObject;
+namespace App\ValueObject;
 
 use Nette\Utils\DateTime;
 use Nette\Utils\Strings;

@@ -11,7 +11,7 @@
 
                 <form
                     method="POST"
-                    action="{{ action(\App\Http\Controllers\Helinvoice\ProcessInvoiceFormController::class) }}"
+                    action="{{ action(\App\Http\Controllers\InvoiceController::class) }}"
                     enctype="multipart/form-data"
                 >
                     @csrf

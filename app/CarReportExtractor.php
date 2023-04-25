@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Helinvoice;
+namespace App;
 
-use App\Helinvoice\ValueObject\CarReport;
-use App\Helinvoice\ValueObject\FuelPurchase;
+use App\ValueObject\CarReport;
+use App\ValueObject\FuelPurchase;
 use Nette\Utils\Strings;
 use Smalot\PdfParser\Document;
 use Smalot\PdfParser\Page;

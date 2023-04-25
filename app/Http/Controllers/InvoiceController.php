@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\CarReportExtractor;
 use App\Enum\InputName;
-use App\Helinvoice\CarReportExtractor;
-use App\Helinvoice\ValueObject\CarReport;
+use App\ValueObject\CarReport;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
@@ -25,11 +25,7 @@ final class InvoiceController extends Controller
 
     public function __invoke(Request $request): View
     {
-        $carReports = null;
-
-        if ($request->isMethod(Request::METHOD_POST)) {
-            $carReports = $this->processRequest($request);
-        }
+        $carReports = $this->processRequestToCarReports($request);
 
         return view('helinvoice/invoice', [
             'title' => 'Invoice Converter',
@@ -40,12 +36,27 @@ final class InvoiceController extends Controller
     /**
      * @return CarReport[]
      */
-    private function processRequest(Request $request): array
+    private function processRequestToCarReports(Request $request): array
     {
+        if (! $request->isMethod(Request::METHOD_POST)) {
+            return [];
+        }
+
         $fullTemporaryFilePath = $this->storeFileAndProvideFilePath($request, InputName::INVOICE_PDF);
 
         $document = $this->pdfParser->parseFile($fullTemporaryFilePath);
-        return $this->carReportExtractor->resolve($document);
+        $carReports = $this->carReportExtractor->resolve($document);
+
+        // sort from newest date time to the oldest, logically :)
+        usort($carReports, function (CarReport $firstCarReport, CarReport $secondCarReport): int {
+            if ($firstCarReport->getFirstFuelPurchaseDate() === $secondCarReport->getFirstFuelPurchaseDate()) {
+                return $firstCarReport->getLastFuelPurchaseDate() <=> $secondCarReport->getLastFuelPurchaseDate();
+            }
+
+            return $firstCarReport->getFirstFuelPurchaseDate() <=> $secondCarReport->getFirstFuelPurchaseDate();
+        });
+
+        return $carReports;
     }
 
     /**
