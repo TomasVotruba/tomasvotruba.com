@@ -23,8 +23,9 @@
 
         @include('_snippets/post/post_list', ['posts' => $last_posts])
 
-        <a href="{{ action(\App\Http\Controllers\BlogController::class) }}" class="btn btn-warning pull-right mt-4">Discover
-            more Posts</a>
+        <a href="{{ action(\App\Http\Controllers\BlogController::class) }}" class="btn btn-warning pull-right mt-4">
+            Discover more Posts
+        </a>
 
         <br>
         <br>

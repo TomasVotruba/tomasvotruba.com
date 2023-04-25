@@ -31,4 +31,9 @@ return function (RectorConfig $rectorConfig): void {
         __DIR__ . '/config',
         __DIR__ . '/tests'
     ]);
+
+    $rectorConfig->skip([
+        // fails on laravel collections
+        \Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector::class,
+    ]);
 };
