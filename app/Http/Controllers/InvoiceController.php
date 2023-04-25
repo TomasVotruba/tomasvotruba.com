@@ -27,9 +27,28 @@ final class InvoiceController extends Controller
     {
         $carReports = $this->processRequestToCarReports($request);
 
+        //$invoiceTotalPrice = 0.0;
+        //$invoiceTotalPriceAfterDiscount = 0.0;
+        //foreach ($carReports as $carReport) {
+        //    $invoiceTotalPrice += $carReport->getTotalPrice();
+        //    $invoiceTotalPriceAfterDiscount += $carReport->getTotalPriceAfterDiscount();
+        //}
+
+        $carReportsCollection = collect($carReports);
+
+        $invoiceTotalPrice = $carReportsCollection->sum(function (CarReport $carReport): float {
+            return $carReport->getTotalPrice();
+        });
+
+        $invoiceTotalPriceAfterDiscount = $carReportsCollection->sum(function (CarReport $carReport): float {
+            return $carReport->getTotalPriceAfterDiscount();
+        });
+
         return view('helinvoice/invoice', [
             'title' => 'Invoice Converter',
             'car_reports' => $carReports,
+            'invoice_total_price' => $invoiceTotalPrice,
+            'invoice_total_price_after_discount' => $invoiceTotalPriceAfterDiscount,
         ]);
     }
 

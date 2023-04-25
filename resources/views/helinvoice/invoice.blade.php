@@ -68,18 +68,18 @@
                             {{ $car_report->getDateRange() }}
                         </td>
                         <td class="text-end">
-                            {{ number_format($car_report->getTotalVolume(), 2, ',') }} l
+                            {{ nice_number($car_report->getTotalVolume()) }} l
                         </td>
 
                         <td class="text-end">
                             <strong>
-                                {{ number_format($car_report->getTotalPrice(), 2, ',') }} €
+                                {{ nice_number($car_report->getTotalPrice()) }} €
                             </strong>
                         </td>
 
                         <td class="text-end">
                             @if ($car_report->hasDiscounts())
-                                {{ number_format($car_report->getTotalPriceAfterDiscount(), 2, ',') }} €
+                                {{ nice_number($car_report->getTotalPriceAfterDiscount()) }} €
                             @else
                                 -
                             @endif
@@ -91,12 +91,11 @@
                     <th colspan="4" class="bg-gradient bg-black text-white" >Summary</th>
 
                     <th class="text-end">
-
-                        one
+                        {{ nice_number($invoice_total_price) }}
                         €
                     </th>
                     <td class="text-end">
-                        two
+                        {{ nice_number($invoice_total_price_after_discount) }}
                         €
                     </td>
                 </tr>
