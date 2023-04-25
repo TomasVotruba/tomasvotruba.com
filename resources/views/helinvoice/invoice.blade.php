@@ -82,10 +82,16 @@
                     </tr>
                 @endforeach
 
-                <tr>
-                    <th colspan="5" class="bg-gradient bg-warning-subtle text-black-50">Summary Check</th>
+                <tr
+                    @class([
+                        'bg-success-subtle' => $fuel_invoice->areTotalPricesMatching(),
+                        'bg-error-subtle' => ! $fuel_invoice->areTotalPricesMatching(),
+                        'text-black-50'
+                    ])
+                >
+                    <th colspan="5">Summary Check</th>
 
-                    <td class="text-end bg-gradient bg-warning-subtle text-black-50">
+                    <td class="text-end">
                         <strong>
                             {{ nice_number($fuel_invoice->getCarReportsTotalPriceAfterDiscount()) }} €
                         </strong>
