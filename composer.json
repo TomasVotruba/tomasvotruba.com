@@ -27,7 +27,7 @@
         "spatie/laravel-ignition": "^2.0",
         "symplify/easy-coding-standard": "^11.2",
         "symplify/phpstan-extensions": "^11.2",
-        "tomasvotruba/bladestan": "^0.1",
+        "tomasvotruba/bladestan": "^0.2.1",
         "tomasvotruba/type-coverage": "^0.1",
         "tomasvotruba/unused-public": "^0.1"
     },
@@ -41,7 +41,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": ["tests", "tests-packages"]
+            "App\\Tests\\": "tests"
         }
     },
     "scripts": {

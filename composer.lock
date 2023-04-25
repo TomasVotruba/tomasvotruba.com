@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b78f3895cfa1efc195275ce13fd0dade",
+    "content-hash": "909fe103aaba3793d51d4c342e5b1e3b",
     "packages": [
         {
             "name": "brick/math",
@@ -7908,16 +7908,16 @@
         },
         {
             "name": "tomasvotruba/bladestan",
-            "version": "0.1.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/bladestan.git",
-                "reference": "b1e4a45d9180b743e74b439bf6ddb6e063986f9c"
+                "reference": "e29778e4d7fbe3e82032e4194e280acb4e1f55cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/bladestan/zipball/b1e4a45d9180b743e74b439bf6ddb6e063986f9c",
-                "reference": "b1e4a45d9180b743e74b439bf6ddb6e063986f9c",
+                "url": "https://api.github.com/repos/TomasVotruba/bladestan/zipball/e29778e4d7fbe3e82032e4194e280acb4e1f55cf",
+                "reference": "e29778e4d7fbe3e82032e4194e280acb4e1f55cf",
                 "shasum": ""
             },
             "require": {
@@ -7959,7 +7959,7 @@
             ],
             "support": {
                 "issues": "https://github.com/TomasVotruba/bladestan/issues",
-                "source": "https://github.com/TomasVotruba/bladestan/tree/0.1.0"
+                "source": "https://github.com/TomasVotruba/bladestan/tree/0.2.1"
             },
             "funding": [
                 {
@@ -7971,7 +7971,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-16T10:25:33+00:00"
+            "time": "2023-03-26T11:00:30+00:00"
         },
         {
             "name": "tomasvotruba/type-coverage",

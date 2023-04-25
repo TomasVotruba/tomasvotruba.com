@@ -30,7 +30,7 @@ final class ControllerSmokeTest extends AbstractTestCase
             }
 
             // system routes
-            if (str_starts_with($getRoute->uri, '_')) {
+            if (str_starts_with((string) $getRoute->uri, '_')) {
                 continue;
             }
 

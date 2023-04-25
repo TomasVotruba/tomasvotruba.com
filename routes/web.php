@@ -6,11 +6,13 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookDetailController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RssController;
 use App\Http\Controllers\ThumbnailController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 Route::get('/', HomepageController::class);
 Route::get('/about', AboutController::class);
@@ -29,5 +31,6 @@ Route::get('/contact', ContactController::class);
 Route::get('/thumbnail/{title}.png', ThumbnailController::class);
 
 // invoices
-Route::get('/helinvoice', \App\Http\Controllers\Helinvoice\InvoiceController::class);
-Route::post('/process-invoice-form', \App\Http\Controllers\Helinvoice\ProcessInvoiceFormController::class);
+Route::match([
+     Request::METHOD_GET, Request::METHOD_POST
+], '/helinvoice', InvoiceController::class);

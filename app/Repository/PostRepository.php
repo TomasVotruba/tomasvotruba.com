@@ -55,7 +55,7 @@ final class PostRepository
      */
     public function fetchLast(int $limit): array
     {
-        return array_slice($this->fetchAll(), 0, $limit);
+        return array_slice($this->posts, 0, $limit);
     }
 
     /**
