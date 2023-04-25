@@ -30,7 +30,7 @@
     <link rel="stylesheet" rel="preload" as="style"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&amp;display=swap"/>
 
-    @vite(['resources/css/app.scss', 'resources/js/app.js'])
+    @vite(['resources/css/app.scss'])
 </head>
 
 <body>

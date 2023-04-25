@@ -22,19 +22,19 @@ final class ControllerSmokeTest extends AbstractTestCase
 
     public static function provideRoutes(): Iterator
     {
-        $routeCollection = RouteFacade::getRoutes();
+        $getRoutes = RouteFacade::getRoutes()->getRoutesByMethod()['GET'];
 
-        foreach ($routeCollection->getRoutes() as $route) {
-            if ($route->parameterNames() !== []) {
+        foreach ($getRoutes as $getRoute) {
+            if ($getRoute->parameterNames() !== []) {
                 continue;
             }
 
             // system routes
-            if (str_starts_with($route->uri, '_')) {
+            if (str_starts_with((string) $getRoute->uri, '_')) {
                 continue;
             }
 
-            yield [$route];
+            yield [$getRoute];
         }
     }
 }

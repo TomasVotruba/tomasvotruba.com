@@ -6,6 +6,9 @@ parameters:
         - config
         - tests
 
+    excludePaths:
+        - config/filesystems.php
+
     level: 8
 
     ignoreErrors:
