@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Invoicing;
 
 use App\ValueObject\CarReport;
 use App\ValueObject\FuelPurchase;
+use Illuminate\Support\Collection;
 use Nette\Utils\Strings;
 use Smalot\PdfParser\Document;
 use Smalot\PdfParser\Page;
@@ -39,9 +40,9 @@ final class CarReportExtractor
     #x';
 
     /**
-     * @return CarReport[]
+     * @return Collection<int, CarReport>
      */
-    public function resolve(Document $document): array
+    public function resolve(Document $document): Collection
     {
         $carReports = [];
 
@@ -71,7 +72,8 @@ final class CarReportExtractor
                     $plateId = $match['plate_id'];
                     Assert::string($plateId);
 
-                    $carReports[] = new CarReport($plateId, $fuelPurchases);
+                    $fuelPurchasesCollection = new Collection($fuelPurchases);
+                    $carReports[] = new CarReport($plateId, $fuelPurchasesCollection);
 
                     // reset for the next car
                     $fuelPurchases = [];
@@ -81,7 +83,9 @@ final class CarReportExtractor
 
         Assert::allIsInstanceOf($carReports, CarReport::class);
 
-        return $carReports;
+        $this->sortCarReportsByDate($carReports);
+
+        return new Collection($carReports);
     }
 
     private function createFullPurchaseIfMatch(string $lineContents): ?FuelPurchase
@@ -98,6 +102,24 @@ final class CarReportExtractor
             $this->convertStringToFloat($match['price']),
             $this->convertStringToFloat($match['price_total']),
         );
+    }
+
+    /**
+     * @param CarReport[] $carReports
+     * @return CarReport[]
+     */
+    private function sortCarReportsByDate(array $carReports): array
+    {
+        // sort from newest date time to the oldest, logically :)
+        usort($carReports, static function (CarReport $firstCarReport, CarReport $secondCarReport): int {
+            if ($firstCarReport->getFirstFuelPurchaseDate() === $secondCarReport->getFirstFuelPurchaseDate()) {
+                return $firstCarReport->getLastFuelPurchaseDate() <=> $secondCarReport->getLastFuelPurchaseDate();
+            }
+
+            return $firstCarReport->getFirstFuelPurchaseDate() <=> $secondCarReport->getFirstFuelPurchaseDate();
+        });
+
+        return $carReports;
     }
 
     private function convertStringToFloat(string $amount): float

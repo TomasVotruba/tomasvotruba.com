@@ -1,5 +1,5 @@
 @php
-    /** @var \App\ValueObject\CarReport[]|null $car_reports */
+    /** @var \App\ValueObject\FuelInvoice|null $fuel_invoice */
 @endphp
 
 
@@ -7,12 +7,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <h1>Convert PDF invoice to Nice Clean Table</h1>
-
-        <p class="text-secondary">Made for my Love, so she has more time for what matters the most to her (taking care
-            of me :P)</p>
-
-        <br>
+        <h1>Convert PDF Invoice to Clean Table 🧼️️</h1>
 
         <div class="row">
             <div class="col-6 d-block">
@@ -43,7 +38,7 @@
         <br>
         <br>
 
-        @if ($car_reports !== null)
+        @if ($fuel_invoice instanceof \App\ValueObject\FuelInvoice)
             <table class="table table-bordered table-responsive">
                 <thead class="table-dark">
                     <tr>
@@ -56,7 +51,7 @@
                     </tr>
                 </thead>
 
-                @foreach ($car_reports as $car_report)
+                @foreach ($fuel_invoice->getCarReports() as $car_report)
                     <tr>
                         <td class="text-end">
                             {{ $loop->index + 1 }}
@@ -88,18 +83,58 @@
                 @endforeach
 
                 <tr>
-                    <th colspan="4" class="bg-gradient bg-warning-subtle text-black-50">Summary Check</th>
+                    <th colspan="5" class="bg-gradient bg-warning-subtle text-black-50">Summary Check</th>
 
-                    <th class="text-end bg-gradient bg-warning-subtle text-black-50">
-                        {{ nice_number($invoice_total_price) }}
-                        €
-                    </th>
                     <td class="text-end bg-gradient bg-warning-subtle text-black-50">
-                        {{ nice_number($invoice_total_price_after_discount) }}
-                        €
+                        <strong>
+                            {{ nice_number($fuel_invoice->getCarReportsTotalPriceAfterDiscount()) }} €
+                        </strong>
                     </td>
                 </tr>
             </table>
+
+            <br>
+            <br>
+
+            @if ($fuel_invoice->areTotalPricesMatching())
+                <div class="card bg-success text-white border-5">
+                    <div class="card-body">
+                        <div style="font-size: 3rem" class="float-end mt-3 me-2">🥳️</div>
+
+                        <p>
+                            The table records <strong>total price MATCHES</strong> the invoice total:
+                            <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }} €</strong>
+                        </p>
+
+                        <p>
+                            Good job!
+                        </p>
+
+                    </div>
+                </div>
+            @else
+                <div class="card bg-danger text-white border-5">
+                    <div class="card-body">
+                        <div style="font-size: 3rem" class="float-end mt-3 me-2">😿️</div>
+
+                        <p>
+                            The table records <strong>total price DOES NOT match</strong> the invoice total:
+                            <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }} €</strong>
+                        </p>
+
+                        <p>
+                            Nooooooo!
+                        </p>
+
+                    </div>
+                </div>
+            @endif
+
+            <br>
+            <br>
+
+            <p class="text-secondary">❤ Made for my Love️️, so she has more time for what matters the most to her... (taking care
+                of me 😸)</p>
         @endif
     </div>
 @endsection

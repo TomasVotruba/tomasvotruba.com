@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\ValueObject;
 
+use Illuminate\Support\Collection;
 use Nette\Utils\DateTime;
 use Webmozart\Assert\Assert;
 
@@ -13,15 +14,13 @@ use Webmozart\Assert\Assert;
 final class CarReport
 {
     /**
-     * @param FuelPurchase[] $fuelPurchases
+     * @param Collection<int, FuelPurchase> $fuelPurchases
      */
     public function __construct(
         private readonly string $plateId,
-        private readonly array $fuelPurchases,
+        private readonly Collection $fuelPurchases,
     ) {
-        // at least 1 record is required
-        Assert::notEmpty($fuelPurchases);
-        Assert::allIsInstanceOf($fuelPurchases, FuelPurchase::class);
+        Assert::false($fuelPurchases->isEmpty());
     }
 
     public function getPlateId(): string
@@ -31,48 +30,44 @@ final class CarReport
 
     public function getTotalVolume(): float
     {
-        $amount = 0.0;
-        foreach ($this->fuelPurchases as $fuelPurchase) {
-            $amount += $fuelPurchase->getVolume();
-        }
-
-        return $amount;
+        return $this->fuelPurchases->sum(static fn (FuelPurchase $fuelPurchase): float => $fuelPurchase->getVolume());
     }
 
+    /**
+     * @api used in blade
+     */
     public function hasDiscounts(): bool
     {
         return $this->getTotalPrice() !== $this->getTotalPriceAfterDiscount();
     }
 
+    /**
+     * @api used in blade
+     */
     public function getTotalPrice(): float
     {
-        $amount = 0.0;
-        foreach ($this->fuelPurchases as $fuelPurchase) {
-            $amount += $fuelPurchase->getPrice();
-        }
-
-        return $amount;
+        return $this->fuelPurchases->sum(static fn (FuelPurchase $fuelPurchase): float => $fuelPurchase->getPrice());
     }
 
+    /**
+     * @api used in blade
+     */
     public function getTotalPriceAfterDiscount(): float
     {
-        $amount = 0.0;
-        foreach ($this->fuelPurchases   as $fuelPurchase) {
-            $amount += $fuelPurchase->getPriceAfterDiscount();
-        }
-
-        return $amount;
+        return $this->fuelPurchases->sum(
+            static fn (FuelPurchase $fuelPurchase): float => $fuelPurchase->getPriceAfterDiscount()
+        );
     }
 
     public function getFirstFuelPurchaseDate(): DateTime
     {
-        return $this->getFirstFuelPurchase()
+        return $this->fuelPurchases->first()
             ->getDate();
     }
 
     public function getLastFuelPurchaseDate(): DateTime
     {
-        return $this->getLastFuelPurchase()
+        return $this->fuelPurchases->last()
             ->getDate();
     }
 
@@ -86,17 +81,5 @@ final class CarReport
         return $this->getFirstFuelPurchaseDate()
             ->format('Y-m-d')
             . '—' . $this->getLastFuelPurchaseDate()->format('d');
-    }
-
-    private function getLastFuelPurchase(): FuelPurchase
-    {
-        $lastKey = array_key_last($this->fuelPurchases);
-        return $this->fuelPurchases[$lastKey];
-    }
-
-    private function getFirstFuelPurchase(): FuelPurchase
-    {
-        $firstKey = array_key_first($this->fuelPurchases);
-        return $this->fuelPurchases[$firstKey];
     }
 }
