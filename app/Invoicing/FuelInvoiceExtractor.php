@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Invoicing;
 
+use App\Utils\Numberic;
 use App\ValueObject\FuelInvoice;
 use Nette\Utils\Strings;
 use Smalot\PdfParser\Document;
@@ -22,10 +23,11 @@ final class FuelInvoiceExtractor
         $carReports = $this->carReportExtractor->resolve($document);
 
         // @todo resolve
+        [$totalBase, $totalTax] = $this->resolveTotalBaseAndTotalTax($document);
 
         [$invoiceNumber, $invoiceDate] = $this->resolveInvoiceNumberAndDate($document);
 
-        return new FuelInvoice($invoiceTotalAmount, $invoiceNumber, $invoiceDate, $carReports);
+        return new FuelInvoice($invoiceNumber, $invoiceDate, $totalBase, $totalTax, $invoiceTotalAmount, $carReports);
     }
 
     private function resolveTotalPrice(Document $document): float
@@ -36,8 +38,7 @@ final class FuelInvoiceExtractor
                 continue;
             }
 
-            $numericValue = str_replace(['.', ','], ['', '.'], (string) $match['total_price']);
-            return (float) $numericValue;
+            return Numberic::stringToFloat($match['total_price']);
         }
 
         throw new ShouldNotHappenException('Total invoice amount was not found');
@@ -61,5 +62,29 @@ final class FuelInvoiceExtractor
         }
 
         throw new ShouldNotHappenException('Invoice number and date was not found');
+    }
+
+    /**
+     * @return array{float, float}
+     */
+    private function resolveTotalBaseAndTotalTax(Document $document): array
+    {
+        foreach ($document->getPages() as $page) {
+            if (! str_contains($page->getText(), 'RIEPILOGO IVA')) {
+                continue;
+            }
+
+            $match = Strings::match($page->getText(), '#IMPONIBILE\s+(?<base_total>.*?)\s+(?<tax_total>.*?)\s+#');
+            if (! is_array($match)) {
+                continue;
+            }
+
+            $baseTotal = Numberic::stringToFloat($match['base_total']);
+            $taxTotal = Numberic::stringToFloat($match['tax_total']);
+
+            return [$baseTotal, $taxTotal];
+        }
+
+        throw new ShouldNotHappenException('Invoice base and tax was not found');
     }
 }

@@ -55,32 +55,37 @@
                             Ordine: <strong>4222131633</strong>
                         </div>
 
-                        @if ($fuel_invoice->areTotalPricesMatching())
-                            <div class="col-6 text-success">
-                                <div style="font-size: 2.3rem" class="float-end mt-1 me-2">🥳️</div>
+                        <div class="col-6">
+                            <p>
+                                Table records match invoice base?
+                                @if ($fuel_invoice->areBasePriceMatching())
+                                    <span class="text-success"><strong>Yes 🥳</strong></span>
+                                @else
+                                    😿
+                                    !== {{ nice_number($fuel_invoice->getTotalBase()) }}&nbsp;€
+                                @endif
+                            </p>
 
-                                <p>
-                                    Table records match invoice total:
-                                    <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }}&nbsp;€</strong>
-                                </p>
-                            </div>
-                        @else
-                            <div class="col-6 bg-danger text-white border-5">
-                                <div class="card-body">
-                                    <div style="font-size: 3rem" class="float-end mt-3 me-2">😿️</div>
+                            <p>
+                                Table records match invoice tax?
+                                @if ($fuel_invoice->areTaxPriceMatching())
+                                    <span class="text-success"><strong>Yes 🥳</strong></span>
+                                @else
+                                    😿
+                                    !== {{ nice_number($fuel_invoice->getTotalTax()) }}&nbsp;€
+                                @endif
+                            </p>
 
-                                    <p>
-                                        The table records <strong>total price DOES NOT match</strong> the invoice total:
-                                        <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }} €</strong>
-                                    </p>
-
-                                    <p>
-                                        Nooooooo!
-                                    </p>
-
-                                </div>
-                            </div>
-                        @endif
+                            <p>
+                                Table records match invoice total?
+                                @if ($fuel_invoice->areTotalPricesMatching())
+                                    <span class="text-success"><strong>Yes 🥳</strong></span>
+                                @else
+                                    😿
+                                    !== {{ nice_number($fuel_invoice->getTotalPrice()) }}&nbsp;€
+                                @endif
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,12 +159,11 @@
 
                 <tr
                     @class([
-                        'bg-success-subtle' => $fuel_invoice->areTotalPricesMatching(),
-                        'bg-error-subtle' => ! $fuel_invoice->areTotalPricesMatching(),
+                        'bg-warning-subtle',
                         'text-black-50',
                     ])
                 >
-                    <th colspan="4">Summary Cross-Check</th>
+                    <th colspan="4">Table Records Cross-Check</th>
 
                     <td class="text-end nobr">
                         {{ nice_number($fuel_invoice->getCarReportsBasePriceTotal()) }}&nbsp;€
@@ -172,6 +176,26 @@
                     <td class="text-end nobr">
                         <strong>
                             {{ nice_number($fuel_invoice->getCarReportsTotalPrice()) }}&nbsp;€
+                        </strong>
+                    </td>
+
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr class="bg-info-subtle text-black-50 text-end nobr">
+                    <th colspan="4" class="text-start">Invoice Totals Cross-Check</th>
+
+                    <td>
+                        {{ nice_number($fuel_invoice->getTotalBase()) }} €
+                    </td>
+
+                    <td>
+                        {{ nice_number($fuel_invoice->getTotalTax()) }} €
+                    </td>
+
+                    <td>
+                        <strong>
+                            {{ nice_number($fuel_invoice->getTotalPrice()) }} €
                         </strong>
                     </td>
 
