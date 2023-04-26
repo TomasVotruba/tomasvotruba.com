@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Invoicing;
 
 use App\Repository\CarRepository;
+use App\Utils\Numberic;
 use App\ValueObject\CarReport;
 use App\ValueObject\FuelPurchase;
 use Illuminate\Support\Collection;
@@ -104,14 +105,9 @@ final class CarReportExtractor
         return new FuelPurchase(
             $match['date'],
             (int) $match['kilometres'],
-            $this->convertStringToFloat($match['volume']),
-            $this->convertStringToFloat($match['price_total']),
+            Numberic::stringToFloat($match['volume']),
+            Numberic::stringToFloat($match['price_total']),
         );
-    }
-
-    private function convertStringToFloat(string $amount): float
-    {
-        return (float) str_replace(',', '.', $amount);
     }
 
     private function isInvoiceTable(Page $page): bool
