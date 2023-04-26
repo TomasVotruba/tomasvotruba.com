@@ -47,11 +47,6 @@
                 Ordine: 4222131633
             </p>
 
-            @todo přidat jména k SPZ - číslník
-
-            @todo přidat osučet daně :)
-            @todo součet základ + ověřit s fakturou :)
-
             @todo add invoice number PJxxx
             @todo invoice date n PJ.... del 31/03/2022
 
@@ -62,8 +57,8 @@
                     <tr class="text-center align-middle">
                         <th>#</th>
                         <th>Car Plate</th>
+                        <th>Driver</th>
                         <th>Date</th>
-                        <th>Volume</th>
                         <th>Base Price</th>
                         <th>Tax<br>(22 %)</th>
                         <th>Price with Tax</th>
@@ -84,33 +79,40 @@
                                 Telepass
                             </span>
                         </td>
-                        <td>
+                        <td style="font-size: .8rem">
+                            {{ $car_report->getDriverName() }}
+
+                            <br>
+
+                            <span class="text-secondary">
+                                {{ $car_report->getCarName() }}
+                            </span>
+                        </td>
+
+                        <td style="font-size: .8rem">
                             {{ $car_report->getDateRange() }}
                         </td>
+
                         <td class="text-end">
-                            {{ nice_number($car_report->getTotalVolume()) }} l
+                            {{ nice_number($car_report->getBasePrice()) }}&nbsp;€
                         </td>
 
-                        <td style="white-space: nowrap" class="text-end">
-                            {{ nice_number($car_report->getBasePrice()) }} €
-                        </td>
-
-                        <td style="white-space: nowrap" class="text-end">
+                        <td class="text-end">
                             {{ nice_number($car_report->getTax()) }} €
                         </td>
 
                         <td class="text-end">
                             <strong>
-                                {{ nice_number($car_report->getTotalPrice()) }} €
+                                {{ nice_number($car_report->getTotalPrice()) }}&nbsp;€
                             </strong>
                         </td>
 
                         <td class="text-end">
-                            {{ nice_number($car_report->getFB()) }} €
+                            {{ nice_number($car_report->getFB()) }}&nbsp;€
                         </td>
 
                         <td class="text-end">
-                            {{ nice_number($car_report->getFD()) }} €
+                            {{ nice_number($car_report->getFD()) }}&nbsp;€
                         </td>
                     </tr>
                 @endforeach
@@ -125,16 +127,16 @@
                     <th colspan="4">Summary Check</th>
 
                     <td class="text-end">
-                        {{ nice_number($fuel_invoice->getCarReportsBasePriceTotal()) }} €
+                        {{ nice_number($fuel_invoice->getCarReportsBasePriceTotal()) }}&nbsp;€
                     </td>
 
                     <td class="text-end">
-                        {{ nice_number($fuel_invoice->getCarReportsTaxTotal()) }} €
+                        {{ nice_number($fuel_invoice->getCarReportsTaxTotal()) }}&nbsp;€
                     </td>
 
                     <td class="text-end">
                         <strong>
-                            {{ nice_number($fuel_invoice->getCarReportsTotalPrice()) }} €
+                            {{ nice_number($fuel_invoice->getCarReportsTotalPrice()) }}&nbsp;€
                         </strong>
                     </td>
 
@@ -152,7 +154,7 @@
 
                         <p>
                             The table records <strong>total price MATCHES</strong> the invoice total:
-                            <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }} €</strong>
+                            <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }}&nbsp;€</strong>
                         </p>
 
                         <p>

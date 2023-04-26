@@ -24,6 +24,7 @@ final class CarReport
     public function __construct(
         private readonly string $plateId,
         private readonly Collection $fuelPurchases,
+        private readonly ?Car $car
     ) {
         Assert::false($fuelPurchases->isEmpty());
     }
@@ -97,5 +98,23 @@ final class CarReport
     public function getFD(): float
     {
         return $this->getBasePrice() * .6;
+    }
+
+    public function getCarName(): ?string
+    {
+        if (! $this->car instanceof Car) {
+            return null;
+        }
+
+        return $this->car->getCarName();
+    }
+
+    public function getDriverName(): ?string
+    {
+        if (! $this->car instanceof Car) {
+            return null;
+        }
+
+        return $this->car->getDriverName();
     }
 }

@@ -18,7 +18,7 @@ final class Car
 
     public function getPlate(): string
     {
-        return $this->plate;
+        return str_replace(' ', '', $this->plate);
     }
 
     public function getDriverName(): string

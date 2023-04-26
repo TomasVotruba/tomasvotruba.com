@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Invoicing;
 
+use App\Repository\CarRepository;
 use App\ValueObject\CarReport;
 use App\ValueObject\FuelPurchase;
 use Illuminate\Support\Collection;
@@ -39,6 +40,11 @@ final class CarReportExtractor
         (?<price_total>\d+,\d+)
     #x';
 
+    public function __construct(
+        private readonly CarRepository $carRepository
+    ) {
+    }
+
     /**
      * @return Collection<int, CarReport>
      */
@@ -73,7 +79,9 @@ final class CarReportExtractor
                     Assert::string($plateId);
 
                     $fuelPurchasesCollection = new Collection($fuelPurchases);
-                    $carReports[] = new CarReport($plateId, $fuelPurchasesCollection);
+
+                    $car = $this->carRepository->getCarByPlate($plateId);
+                    $carReports[] = new CarReport($plateId, $fuelPurchasesCollection, $car);
 
                     // reset for the next car
                     $fuelPurchases = [];

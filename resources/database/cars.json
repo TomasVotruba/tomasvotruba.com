@@ -1,0 +1,167 @@
+[
+    {
+        "driver_name": "Pool",
+        "car_name": "Prod.Doblo' Fiat Doblò Cargo 1.3 Mjt",
+        "car_plate": "DE 620 VD"
+    },
+    {
+        "driver_name": "Pool - Qualita - Qubo",
+        "car_name": "Fiat Qubo 1.3 Mjet / Pool - Qualità",
+        "car_plate": "EG 932 FE"
+    },
+    {
+        "driver_name": "Angelo Mores",
+        "car_name": "Kia Niro 1.6 PHEV GDI - 520330",
+        "car_plate": "GC 989 JS"
+    },
+    {
+        "driver_name": "M.Albani",
+        "car_name": "JEEP RENEGADE",
+        "car_plate": "GJ 117 JJ"
+    },
+    {
+        "driver_name": "Colombo P.",
+        "car_name": "MERCEDES-BENZ GLB",
+        "car_plate": "GD 636 BH"
+    },
+    {
+        "driver_name": "Andreetta G.",
+        "car_name": "VOLKSWAGEN T-ROC",
+        "car_plate": "GB 354 PH"
+    },
+    {
+        "driver_name": "Agosto G.",
+        "car_name": "CITROEN C5 Aircross",
+        "car_plate": "GK492FN"
+    },
+    {
+        "driver_name": "Mores A.",
+        "car_name": "SEAT ALTEA XL 1.6 TDI",
+        "car_plate": "FA 249 CC"
+    },
+    {
+        "driver_name": "F. Manfredda",
+        "car_name": null,
+        "car_plate": "GK 642 RM"
+    },
+    {
+        "driver_name": "Innamorati C.",
+        "car_name": "E130P",
+        "car_plate": "GL 512 HV"
+    },
+    {
+        "driver_name": "Mandelli P.",
+        "car_name": "Ford Kuga 2.0 Tdci 120cv S&s 2wd Titaniu m FP",
+        "car_plate": "FC 037 VN"
+    },
+    {
+        "driver_name": "Manfredda F.",
+        "car_name": "Mercedes Glc 250 D 4mati c Exclusive",
+        "car_plate": "FD 308 DW"
+    },
+    {
+        "driver_name": "Albani M.",
+        "car_name": "JEEP RENEGADE 1.3 T4 PHEV 190cv Limited 4xe - 681018",
+        "car_plate": "GJ 117 JJ"
+    },
+    {
+        "driver_name": "Pool. Agosto",
+        "car_name": "Jeep Renegade 1.6 Mjet DDCT 120cv Lmd",
+        "car_plate": "FJ 342 EE"
+    },
+    {
+        "driver_name": "Innamorati C.",
+        "car_name": "Mercedes CLA Shooting Brake",
+        "car_plate": "FJ 503 MJ"
+    },
+    {
+        "driver_name": "Pool - Tagliabue",
+        "car_name": "Alfa Romeo Giulia 2.2 Turbo MT6",
+        "car_plate": "FJ 581 VC"
+    },
+    {
+        "driver_name": "Riva C.",
+        "car_name": "Reanult Grand Scénic 1,5 dCi 110cv E.I.",
+        "car_plate": "FK 112 PV"
+    },
+    {
+        "driver_name": "Demarte D.",
+        "car_name": "Audi A3 Sportback 2.0 TDI",
+        "car_plate": "FK 244 AX"
+    },
+    {
+        "driver_name": "Gori",
+        "car_name": "Seat ATECA 2.0 TDI Business 4DRIVE",
+        "car_plate": "FK 976 TP"
+    },
+    {
+        "driver_name": "Tortorelli",
+        "car_name": "Peugeot 3008 GT Line 1.6 BlueHDi 120cv",
+        "car_plate": "FN 652 MN"
+    },
+    {
+        "driver_name": "Pool - Sales Tipo",
+        "car_name": "Fiat Tipo 5P 1.3 Mjt 95cv Easy Business",
+        "car_plate": "FR 934 AS"
+    },
+    {
+        "driver_name": "Fanelli V.",
+        "car_name": "Jeep Compass 2.0 Mjet 103kW ",
+        "car_plate": "FR 531 JD"
+    },
+    {
+        "driver_name": "Ancilotti F.",
+        "car_name": "Jeep Compass 2.0 Mjet 103kW",
+        "car_plate": "FR 240 SZ"
+    },
+    {
+        "driver_name": "Mandelli P.",
+        "car_name": "Peugeot 3008 GT Line 1.6 BlueHDi 120cv",
+        "car_plate": "FS612SN"
+    },
+    {
+        "driver_name": "Pool - PR",
+        "car_name": "Fiat Qubo 1.3 Mjet",
+        "car_plate": "FS 918 DH"
+    },
+    {
+        "driver_name": "F. Martorella",
+        "car_name": "Fiat Tipo 5P SW",
+        "car_plate": "FT 945 YV"
+    },
+    {
+        "driver_name": "Mellano E.",
+        "car_name": "",
+        "car_plate": "FT 489 ZB"
+    },
+    {
+        "driver_name": "Tagliabue C.",
+        "car_name": "",
+        "car_plate": "FV 540 ST"
+    },
+    {
+        "driver_name": "Pool - Viaggi 500X",
+        "car_name": "",
+        "car_plate": "FW 464 EG"
+    },
+    {
+        "driver_name": "Pool - M. Sozzi",
+        "car_name": "",
+        "car_plate": "GB013PK"
+    },
+    {
+        "driver_name": "DEMARTE",
+        "car_name": "",
+        "car_plate": "GL227XF"
+    },
+    {
+        "driver_name": "C. Riva",
+        "car_name": "",
+        "car_plate": "GM 574 NV"
+    },
+    {
+        "driver_name": "Gori",
+        "car_name": "",
+        "car_plate": "GM 370 PJ"
+    }
+]
