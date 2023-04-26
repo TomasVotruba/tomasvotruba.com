@@ -14,11 +14,17 @@ use Webmozart\Assert\Assert;
 final class CarReport
 {
     /**
+     * @var float
+     */
+    private const PRICE_WITH_TAX_RATE = 1.22;
+
+    /**
      * @param Collection<int, FuelPurchase> $fuelPurchases
      */
     public function __construct(
         private readonly string $plateId,
         private readonly Collection $fuelPurchases,
+        private readonly ?Car $car
     ) {
         Assert::false($fuelPurchases->isEmpty());
     }
@@ -26,6 +32,13 @@ final class CarReport
     public function getPlateId(): string
     {
         return $this->plateId;
+    }
+
+    public function getReadablePlateId(): string
+    {
+        return substr($this->plateId, 0, 2) . ' ' .
+            substr($this->plateId, 2, 3) . ' ' .
+            substr($this->plateId, 5, 2);
     }
 
     public function getTotalVolume(): float
@@ -36,26 +49,10 @@ final class CarReport
     /**
      * @api used in blade
      */
-    public function hasDiscounts(): bool
-    {
-        return $this->getTotalPrice() !== $this->getTotalPriceAfterDiscount();
-    }
-
-    /**
-     * @api used in blade
-     */
     public function getTotalPrice(): float
     {
-        return $this->fuelPurchases->sum(static fn (FuelPurchase $fuelPurchase): float => $fuelPurchase->getPrice());
-    }
-
-    /**
-     * @api used in blade
-     */
-    public function getTotalPriceAfterDiscount(): float
-    {
         return $this->fuelPurchases->sum(
-            static fn (FuelPurchase $fuelPurchase): float => $fuelPurchase->getPriceAfterDiscount()
+            static fn (FuelPurchase $fuelPurchase): float => $fuelPurchase->getPrice()
         );
     }
 
@@ -81,5 +78,43 @@ final class CarReport
         return $this->getFirstFuelPurchaseDate()
             ->format('Y-m-d')
             . '—' . $this->getLastFuelPurchaseDate()->format('d');
+    }
+
+    public function getTax(): float
+    {
+        return $this->getTotalPrice() - $this->getBasePrice();
+    }
+
+    public function getBasePrice(): float
+    {
+        return $this->getTotalPrice() / self::PRICE_WITH_TAX_RATE;
+    }
+
+    public function getFB(): float
+    {
+        return $this->getBasePrice() * .4;
+    }
+
+    public function getFD(): float
+    {
+        return $this->getBasePrice() * .6;
+    }
+
+    public function getCarName(): ?string
+    {
+        if (! $this->car instanceof Car) {
+            return null;
+        }
+
+        return $this->car->getCarName();
+    }
+
+    public function getDriverName(): ?string
+    {
+        if (! $this->car instanceof Car) {
+            return null;
+        }
+
+        return $this->car->getDriverName();
     }
 }

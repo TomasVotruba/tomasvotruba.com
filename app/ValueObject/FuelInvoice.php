@@ -33,7 +33,7 @@ final class FuelInvoice
      */
     public function areTotalPricesMatching(): bool
     {
-        return $this->totalPriceAfterDiscount === $this->getCarReportsTotalPriceAfterDiscount();
+        return $this->totalPriceAfterDiscount === $this->getCarReportsTotalPrice();
     }
 
     /**
@@ -48,10 +48,36 @@ final class FuelInvoice
     /**
      * @api used in blade
      */
-    public function getCarReportsTotalPriceAfterDiscount(): float
+    public function getCarReportsBasePriceTotal(): float
     {
-        return $this->carReports->sum(
-            static fn (CarReport $carReport): float => $carReport->getTotalPriceAfterDiscount()
+        $carReportsBasePriceTotal = $this->carReports->sum(
+            static fn (CarReport $carReport): float => $carReport->getBasePrice()
         );
+
+        return round($carReportsBasePriceTotal, 2);
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function getCarReportsTaxTotal(): float
+    {
+        $carReportsTotalTax = $this->carReports->sum(
+            static fn (CarReport $carReport): float => $carReport->getTax()
+        );
+
+        return round($carReportsTotalTax, 2);
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function getCarReportsTotalPrice(): float
+    {
+        $carReportsTotalPrice = $this->carReports->sum(
+            static fn (CarReport $carReport): float => $carReport->getTotalPrice()
+        );
+
+        return round($carReportsTotalPrice, 2);
     }
 }

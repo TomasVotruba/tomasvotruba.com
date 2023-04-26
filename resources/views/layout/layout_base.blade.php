@@ -34,11 +34,16 @@
 </head>
 
 <body>
-@include('_snippets/menu')
+    @include('_snippets/menu')
 
-<div class="container-fluid" id="content">
-    @yield('content')
-</div>
+    @hasSection('wide_content')
+        @yield('wide_content')
+    @else
+        <div class="container-fluid">
+            @yield('content')
+        </div>
+   @endif
+
 </body>
 
 <script>

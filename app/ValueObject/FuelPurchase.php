@@ -14,7 +14,6 @@ final class FuelPurchase
         private readonly string $date,
         private readonly int $kilometres,
         private readonly float $volume,
-        private readonly float $price,
         private readonly float $priceAfterDiscount
     ) {
     }
@@ -43,11 +42,6 @@ final class FuelPurchase
     }
 
     public function getPrice(): float
-    {
-        return $this->price;
-    }
-
-    public function getPriceAfterDiscount(): float
     {
         return $this->priceAfterDiscount;
     }
