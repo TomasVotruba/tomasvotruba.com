@@ -50,8 +50,10 @@ final class FuelInvoice
      */
     public function getCarReportsTotalPriceAfterDiscount(): float
     {
-        return $this->carReports->sum(
+        $carReportsTotalPriceAfterDiscount = $this->carReports->sum(
             static fn (CarReport $carReport): float => $carReport->getTotalPriceAfterDiscount()
         );
+
+        return round($carReportsTotalPriceAfterDiscount, 2);
     }
 }
