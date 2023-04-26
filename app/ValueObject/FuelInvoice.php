@@ -13,19 +13,23 @@ final class FuelInvoice
      * @param Collection<int, CarReport> $carReports
      */
     public function __construct(
-        private readonly float $totalPriceAfterDiscount,
-        private readonly Collection $carReports
+        private readonly string $invoiceNumber,
+        private readonly string $invoiceDate,
+        private readonly float $totalBase,
+        private readonly float $totalTax,
+        private readonly float $totalPrice,
+        private readonly Collection $carReports,
     ) {
         // meaningful check :)
-        Assert::greaterThan($totalPriceAfterDiscount, 100);
+        Assert::greaterThan($totalPrice, 100);
     }
 
     /**
      * @api used in blade
      */
-    public function getTotalPriceAfterDiscount(): float
+    public function getTotalPrice(): float
     {
-        return $this->totalPriceAfterDiscount;
+        return $this->totalPrice;
     }
 
     /**
@@ -33,7 +37,23 @@ final class FuelInvoice
      */
     public function areTotalPricesMatching(): bool
     {
-        return $this->totalPriceAfterDiscount === $this->getCarReportsTotalPrice();
+        return $this->totalPrice === $this->getCarReportsTotalPrice();
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function areBasePriceMatching(): bool
+    {
+        return $this->totalBase === $this->getCarReportsBasePriceTotal();
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function areTaxPriceMatching(): bool
+    {
+        return $this->totalTax === $this->getCarReportsTaxTotal();
     }
 
     /**
@@ -79,5 +99,37 @@ final class FuelInvoice
         );
 
         return round($carReportsTotalPrice, 2);
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function getInvoiceNumber(): string
+    {
+        return $this->invoiceNumber;
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function getInvoiceDate(): string
+    {
+        return $this->invoiceDate;
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function getTotalBase(): float
+    {
+        return $this->totalBase;
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function getTotalTax(): float
+    {
+        return $this->totalTax;
     }
 }

@@ -35,5 +35,6 @@ return function (RectorConfig $rectorConfig): void {
     $rectorConfig->skip([
         // fails on laravel collections
         \Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector::class,
+        \Rector\Naming\Rector\Assign\RenameVariableToMatchMethodCallReturnTypeRector::class,
     ]);
 };
