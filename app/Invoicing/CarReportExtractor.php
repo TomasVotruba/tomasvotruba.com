@@ -83,8 +83,6 @@ final class CarReportExtractor
 
         Assert::allIsInstanceOf($carReports, CarReport::class);
 
-        $this->sortCarReportsByDate($carReports);
-
         return new Collection($carReports);
     }
 
@@ -99,27 +97,8 @@ final class CarReportExtractor
             $match['date'],
             (int) $match['kilometres'],
             $this->convertStringToFloat($match['volume']),
-            $this->convertStringToFloat($match['price']),
             $this->convertStringToFloat($match['price_total']),
         );
-    }
-
-    /**
-     * @param CarReport[] $carReports
-     * @return CarReport[]
-     */
-    private function sortCarReportsByDate(array $carReports): array
-    {
-        // sort from newest date time to the oldest, logically :)
-        usort($carReports, static function (CarReport $firstCarReport, CarReport $secondCarReport): int {
-            if ($firstCarReport->getFirstFuelPurchaseDate() === $secondCarReport->getFirstFuelPurchaseDate()) {
-                return $firstCarReport->getLastFuelPurchaseDate() <=> $secondCarReport->getLastFuelPurchaseDate();
-            }
-
-            return $firstCarReport->getFirstFuelPurchaseDate() <=> $secondCarReport->getFirstFuelPurchaseDate();
-        });
-
-        return $carReports;
     }
 
     private function convertStringToFloat(string $amount): float

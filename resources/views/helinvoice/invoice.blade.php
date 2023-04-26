@@ -48,8 +48,10 @@
             </p>
 
             @todo přidat jména k SPZ - číslník
+
             @todo přidat osučet daně :)
             @todo součet základ + ověřit s fakturou :)
+
             @todo add invoice number PJxxx
             @todo invoice date n PJ.... del 31/03/2022
 
@@ -57,7 +59,7 @@
 
             <table class="table table-bordered table-responsive table-striped">
                 <thead class="table-dark">
-                    <tr class="text-center">
+                    <tr class="text-center align-middle">
                         <th>#</th>
                         <th>Car Plate</th>
                         <th>Date</th>
@@ -76,10 +78,7 @@
                             {{ $loop->index + 1 }}
                         </td>
                         <td style="white-space: nowrap">
-                            {{ substr($car_report->getPlateId(), 0, 2) }}
-                             {{ substr($car_report->getPlateId(), 2, 3) }}
-                             {{ substr($car_report->getPlateId(), 5, 2) }}
-
+                            {{ $car_report->getReadablePlateId() }}
                             <br>
                             <span class="text-secondary">
                                 Telepass
@@ -92,29 +91,26 @@
                             {{ nice_number($car_report->getTotalVolume()) }} l
                         </td>
 
-                        @php
-                            $basePrice = $car_report->getTotalPriceAfterDiscount() / 1.22;
-                        @endphp
-
                         <td style="white-space: nowrap" class="text-end">
-                            {{ nice_number($basePrice) }} €
+                            {{ nice_number($car_report->getBasePrice()) }} €
                         </td>
 
                         <td style="white-space: nowrap" class="text-end">
-                            {{ nice_number($car_report->getTotalPriceAfterDiscount() - ($basePrice)) }} €
+                            {{ nice_number($car_report->getTax()) }} €
                         </td>
 
                         <td class="text-end">
                             <strong>
-                                {{ nice_number($car_report->getTotalPriceAfterDiscount()) }} €
+                                {{ nice_number($car_report->getTotalPrice()) }} €
                             </strong>
                         </td>
 
-                        <td style="white-space: nowrap" class="text-end">
-                            {{ nice_number($basePrice * .40) }} €
+                        <td class="text-end">
+                            {{ nice_number($car_report->getFB()) }} €
                         </td>
-                        <td style="white-space: nowrap" class="text-end">
-                            {{ nice_number($basePrice * .60) }} €
+
+                        <td class="text-end">
+                            {{ nice_number($car_report->getFD()) }} €
                         </td>
                     </tr>
                 @endforeach
@@ -123,16 +119,26 @@
                     @class([
                         'bg-success-subtle' => $fuel_invoice->areTotalPricesMatching(),
                         'bg-error-subtle' => ! $fuel_invoice->areTotalPricesMatching(),
-                        'text-black-50'
+                        'text-black-50',
                     ])
                 >
-                    <th colspan="6">Summary Check</th>
+                    <th colspan="4">Summary Check</th>
+
+                    <td class="text-end">
+                        {{ nice_number($fuel_invoice->getCarReportsBasePriceTotal()) }} €
+                    </td>
+
+                    <td class="text-end">
+                        {{ nice_number($fuel_invoice->getCarReportsTaxTotal()) }} €
+                    </td>
 
                     <td class="text-end">
                         <strong>
-                            {{ nice_number($fuel_invoice->getCarReportsTotalPriceAfterDiscount()) }} €
+                            {{ nice_number($fuel_invoice->getCarReportsTotalPrice()) }} €
                         </strong>
                     </td>
+
+                    <td colspan="2"></td>
                 </tr>
             </table>
 
@@ -176,7 +182,8 @@
             <br>
             <br>
 
-            <p class="text-secondary">❤ Made for my Love️️, so she has more time for what matters the most to her... (taking care
+            <p class="text-secondary">❤ Made for my Love️️, so she has more time for what matters the most to her...
+                (taking care
                 of me 😸)</p>
         @else
             <p>
