@@ -12,7 +12,7 @@
             <div class="col-12 col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <p class="mb-2">1. Pick PDF Invoice from your computer ↓</p>
+                        <p class="mb-2">1. Pick PDF Invoice File from your computer ↓ 😹</p>
 
                         <form
                             method="POST"

@@ -21,6 +21,8 @@ final class FuelInvoiceExtractor
         $invoiceTotalAmount = $this->resolveTotalPrice($document);
         $carReports = $this->carReportExtractor->resolve($document);
 
+        // @todo resolve
+
         [$invoiceNumber, $invoiceDate] = $this->resolveInvoiceNumberAndDate($document);
 
         return new FuelInvoice($invoiceTotalAmount, $invoiceNumber, $invoiceDate, $carReports);
