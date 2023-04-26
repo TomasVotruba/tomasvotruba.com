@@ -19,18 +19,16 @@ final class FuelInvoiceExtractor
     public function resolve(Document $document): FuelInvoice
     {
         $invoiceTotalAmount = $this->resolveTotalPrice($document);
-        $collection = $this->carReportExtractor->resolve($document);
+        $carReports = $this->carReportExtractor->resolve($document);
 
-        return new FuelInvoice($invoiceTotalAmount, $collection);
+        [$invoiceNumber, $invoiceDate] = $this->resolveInvoiceNumberAndDate($document);
+
+        return new FuelInvoice($invoiceTotalAmount, $invoiceNumber, $invoiceDate, $carReports);
     }
 
     private function resolveTotalPrice(Document $document): float
     {
         foreach ($document->getPages() as $page) {
-            if (! str_contains($page->getText(), 'TOTALE FATTURA')) {
-                continue;
-            }
-
             $match = Strings::match($page->getText(), '#TOTALE\s+([\d\.]+,\d+)\s+(?<total_price>[\d\.]+,\d+)#');
             if (! is_array($match)) {
                 continue;
@@ -41,5 +39,25 @@ final class FuelInvoiceExtractor
         }
 
         throw new ShouldNotHappenException('Total invoice amount was not found');
+    }
+
+    /**
+     * @return array{string, string}
+     */
+    private function resolveInvoiceNumberAndDate(Document $document): array
+    {
+        foreach ($document->getPages() as $page) {
+            $match = Strings::match($page->getText(), '#FATTURA N. (?<invoice_number>.*?) del (?<invoice_date>.*?)\s#');
+            if (! is_array($match)) {
+                continue;
+            }
+
+            $invoiceNumber = (string) $match['invoice_number'];
+            $invoiceDate = (string) $match['invoice_date'];
+
+            return [$invoiceNumber, $invoiceDate];
+        }
+
+        throw new ShouldNotHappenException('Invoice number and date was not found');
     }
 }

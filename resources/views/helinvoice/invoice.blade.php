@@ -9,7 +9,7 @@
         <h1>Convert PDF Invoice to Clean Table 🧼️️</h1>
 
         <div class="row">
-            <div class="col-12 col-md-6 d-block">
+            <div class="col-12 col-md-6">
                 <div class="card">
                     <div class="card-body">
                         <p class="mb-2">1. Pick PDF Invoice from your computer ↓</p>
@@ -40,17 +40,52 @@
 
         <br>
         <br>
-        <br>
 
         @if ($fuel_invoice instanceof \App\ValueObject\FuelInvoice)
-            <p>
-                Ordine: 4222131633
-            </p>
+            <div class="card mb-4">
+                <div class="card-header text-center">
+                    <h3 class="mt-1 mb-1">Invoice no. {{ $fuel_invoice->getInvoiceNumber() }}</h3>
+                </div>
+                <div class="card-body text-center">
+                    <div class="row ">
+                        <div class="col-3">
+                            Date: <strong>{{ $fuel_invoice->getInvoiceDate() }}</strong>
+                        </div>
+                        <div class="col-3">
+                            Ordine: <strong>4222131633</strong>
+                        </div>
 
-            @todo add invoice number PJxxx
-            @todo invoice date n PJ.... del 31/03/2022
+                        @if ($fuel_invoice->areTotalPricesMatching())
+                            <div class="col-6 text-success">
+                                <div style="font-size: 2.3rem" class="float-end mt-1 me-2">🥳️</div>
 
-            @importo - total price with tax
+                                <p>
+                                    Table records match invoice total:
+                                    <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }}&nbsp;€</strong>
+                                </p>
+                            </div>
+                        @else
+                            <div class="col-6 bg-danger text-white border-5">
+                                <div class="card-body">
+                                    <div style="font-size: 3rem" class="float-end mt-3 me-2">😿️</div>
+
+                                    <p>
+                                        The table records <strong>total price DOES NOT match</strong> the invoice total:
+                                        <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }} €</strong>
+                                    </p>
+
+                                    <p>
+                                        Nooooooo!
+                                    </p>
+
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+
+{{--            @importo - total price with tax--}}
 
             <table class="table table-bordered table-responsive table-striped">
                 <thead class="table-dark">
@@ -124,17 +159,17 @@
                         'text-black-50',
                     ])
                 >
-                    <th colspan="4">Summary Check</th>
+                    <th colspan="4">Summary Cross-Check</th>
 
-                    <td class="text-end">
+                    <td class="text-end nobr">
                         {{ nice_number($fuel_invoice->getCarReportsBasePriceTotal()) }}&nbsp;€
                     </td>
 
-                    <td class="text-end">
+                    <td class="text-end nobr">
                         {{ nice_number($fuel_invoice->getCarReportsTaxTotal()) }}&nbsp;€
                     </td>
 
-                    <td class="text-end">
+                    <td class="text-end nobr">
                         <strong>
                             {{ nice_number($fuel_invoice->getCarReportsTotalPrice()) }}&nbsp;€
                         </strong>
@@ -143,43 +178,6 @@
                     <td colspan="2"></td>
                 </tr>
             </table>
-
-            <br>
-            <br>
-
-            @if ($fuel_invoice->areTotalPricesMatching())
-                <div class="card bg-success text-white border-5">
-                    <div class="card-body">
-                        <div style="font-size: 3rem" class="float-end mt-3 me-2">🥳️</div>
-
-                        <p>
-                            The table records <strong>total price MATCHES</strong> the invoice total:
-                            <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }}&nbsp;€</strong>
-                        </p>
-
-                        <p>
-                            Good job!
-                        </p>
-
-                    </div>
-                </div>
-            @else
-                <div class="card bg-danger text-white border-5">
-                    <div class="card-body">
-                        <div style="font-size: 3rem" class="float-end mt-3 me-2">😿️</div>
-
-                        <p>
-                            The table records <strong>total price DOES NOT match</strong> the invoice total:
-                            <strong>{{ nice_number($fuel_invoice->getTotalPriceAfterDiscount()) }} €</strong>
-                        </p>
-
-                        <p>
-                            Nooooooo!
-                        </p>
-
-                    </div>
-                </div>
-            @endif
 
             <br>
             <br>

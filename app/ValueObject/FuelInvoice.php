@@ -14,7 +14,9 @@ final class FuelInvoice
      */
     public function __construct(
         private readonly float $totalPriceAfterDiscount,
-        private readonly Collection $carReports
+        private readonly string $invoiceNumber,
+        private readonly string $invoiceDate,
+        private readonly Collection $carReports,
     ) {
         // meaningful check :)
         Assert::greaterThan($totalPriceAfterDiscount, 100);
@@ -79,5 +81,21 @@ final class FuelInvoice
         );
 
         return round($carReportsTotalPrice, 2);
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function getInvoiceNumber(): string
+    {
+        return $this->invoiceNumber;
+    }
+
+    /**
+     * @api used in blade
+     */
+    public function getInvoiceDate(): string
+    {
+        return $this->invoiceDate;
     }
 }
