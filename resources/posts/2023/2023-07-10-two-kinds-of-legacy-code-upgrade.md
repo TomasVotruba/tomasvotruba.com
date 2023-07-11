@@ -103,7 +103,13 @@ Still, you can tell your boss, who doesn't understand the complexity of the upgr
 
 The other way is like reconstructing a **house for you and your family to live in for at least the next 20 years**.
 
-You care about the usability of the house. These new windows will make the noise and temperature changes under control, noise isolation, cheap energy use during winter, warm water for the shower, and enough storage space.
+You care about the usability of the house:
+
+* new windows will make the noise and
+* temperature changes under control, noise isolation,
+* cheap energy use during winter,
+* warm water for the shower,
+* and enough storage space for 4-seasons of belongings.
 
 <img src="https://user-images.githubusercontent.com/924196/252729834-a174bb1a-e5f9-403f-be38-250a00608ff2.png" class="img-thumbnail" style="width: 20em">
 
