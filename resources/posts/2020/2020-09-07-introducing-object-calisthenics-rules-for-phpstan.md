@@ -43,7 +43,7 @@ composer require symplify/coding-standard --dev
 And update `phpstan.neon`:
 
 ```yaml
-# phsptan.neon
+# phpstan.neon
 includes:
     - vendor/symplify/coding-standard/packages/object-calisthenics/config/object-calisthenics-rules.neon
 ```

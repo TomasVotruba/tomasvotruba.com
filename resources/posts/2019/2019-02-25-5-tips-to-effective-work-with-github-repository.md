@@ -28,8 +28,8 @@ vendor/bin/rector p
 Works every-time there is no command named with that letter:
 
 ```diff
--vendor/bin/phsptan analyse
-+vendor/bin/phsptan a
+-vendor/bin/phpstan analyse
++vendor/bin/phpstan a
 ```
 
 ```diff
