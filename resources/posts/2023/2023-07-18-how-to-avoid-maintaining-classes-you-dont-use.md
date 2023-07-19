@@ -1,6 +1,6 @@
 ---
 id: 386
-title: "How to avoid Maintaning Classes you Don't Use"
+title: "How to avoid Maintaining Classes you Don't Use"
 
 perex: |
     PHPStan and static analysis help us with detect unused private methods. I also made a package to handle [unused public methods](/blog/can-phpstan-find-dead-public-methods).
