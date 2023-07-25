@@ -21,7 +21,7 @@ I'm not much fan of "best practices", Tweets by authorities, or "this works for 
 
 The projects I work with are typically CLI PHP applications. They use Symfony DI and Symfony Console. They are not web applications, so I don't need to care about HTTP requests, sessions, or cookies.
 
-**Unfortunately, the `symfony/dependency-injection is tightly coupled with `symfony/HTTP-kernel`** as I already wrote in "[What I prefer about Laravel Dependency Injection over Symfony](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony)". This and another complexity leads to **slow container compilation and unnecessary complexity we have to learn, counteract in case of parameter invalidation, downgrade and maintain**.
+**Unfortunately, the `symfony/dependency-injection is tightly coupled with `symfony/http-kernel`** as I already wrote in "[What I prefer about Laravel Dependency Injection over Symfony](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony)". This and another complexity leads to **slow container compilation and unnecessary complexity we have to learn, counteract in case of parameter invalidation, downgrade and maintain**.
 
 Also, CLI tools are stuck with Symfony 6.1 because Symfony 6.2 uses complex PHP features (some reflection + attributes combo, not sure exactly) that Rector fails to downgrade to PHP 7.2 without breaking it.
 
@@ -55,7 +55,7 @@ Nothing more, nothing less. If this goes well, I want to try and measure a simil
 
 ## The Main Difference between Symfony and Laravel Container
 
-One of the often-mentioned differences is that Symfony compiles containers and Laravel creates services on the fly. But that was never a problem or benefit for me.
+One of the often-mentioned differences is that Symfony compiles container and Laravel creates services on the fly. But that was never a problem or benefit for me.
 
 A more practical difference is that:
 
@@ -254,7 +254,7 @@ That's it! From now on, the `SomeStrictFixer` will not be anywhere in our applic
 
 <br>
 
-**In Laravel**, this became quite a challenge. Instead of adding a compiler pass, we run the `before resolving ()` method. This method is run before every service is resolved, so we pick one of those that will get initialized at the start.
+**In Laravel**, this became quite a challenge. Instead of adding a compiler pass, we run the `beforeResolving()` method. This method is run before every service is resolved, so we pick one of those that will get initialized at the start.
 
 Removing service from the container is easy. But there is **a catch for tagged services** - if we don't remove it from tagged services, it will still get injected via `$container->tagged()`. Here is the solution I came up with (I'm sure there is a better way):
 
@@ -369,7 +369,7 @@ That's it!
 
 What has changed? I really enjoy working with DI now. We don't have to include any configs nor configure directory to load services from. Everything default is created for us; everything **non-standard or weird is explicitly defined in the container**.
 
-The speed is amazing, and it will get only better once we figure out Laravel container bottlenecks. Thanks to GPT and a very neat tests suite that reported issues down to specific services, **I made the switch in under 6 hours** (removing tags took the longest).
+The speed is amazing, and it will get only better once we figure out Laravel container bottlenecks. Thanks to GPT and a neat tests suite that reported broken places, I was able to make the switch **under 6 hours**.
 
 I really look for the next ideas once the dust settles.
 
