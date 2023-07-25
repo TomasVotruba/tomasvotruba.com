@@ -3,7 +3,7 @@ id: 387
 title: "Experiment: How I replaced Symfony DI with Laravel&nbsp;Container in ECS"
 
 perex: |
-    This year I've been learning Laravel and quickly adapting to most of my tools. I've made 2 packages - [Punchcard](/blog/introducing-punchcard-object-configs-for-laravel) to handle configs, and [Bladestan](/blog/introducing-bladestan-phpstan-analysis-of-blade-templates) for static analysis of Blade templates using PHPStan.
+    This year I've been learning Laravel and quickly adapting to most of my tools. I've made 2 packages - [Punchcard](/blog/introducing-punchcard-object-configs-for-laravel) to handle configs and [Bladestan](/blog/introducing-bladestan-phpstan-analysis-of-blade-templates) for static analysis of Blade templates using PHPStan.
 
     The component I wanted to put in tests was [Laravel Container](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony). Everything went well on small projects, but what about packages with 10 000 000+ downloads?
 
@@ -21,7 +21,7 @@ I'm not much fan of "best practices", Tweets by authorities, or "this works for 
 
 The projects I work with are typically CLI PHP applications. They use Symfony DI and Symfony Console. They are not web applications, so I don't need to care about HTTP requests, sessions, or cookies.
 
-**Unfortunately, the `symfony/dependency-injection is tightly coupled with `symfony/http-kernel`** as I already wrote in "[What I prefer about Laravel Dependency Injection over Symfony](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony)". This and another complexity leads to **slow container compilation and unnecessary complexity we have to learn, counteract in case of parameter invalidation, downgrade and maintain**.
+**Unfortunately, the `symfony/dependency-injection is tightly coupled with `symfony/http-kernel`** as I already wrote in "[What I prefer about Laravel Dependency Injection over Symfony](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony)". This and another complexity leads to **slow container compilation and unnecessary complexity we have to learn, counteract in case of parameter invalidation, downgrade, and maintain**.
 
 Also, CLI tools are stuck with Symfony 6.1 because Symfony 6.2 uses complex PHP features (some reflection + attributes combo, not sure exactly) that Rector fails to downgrade to PHP 7.2 without breaking it.
 
@@ -55,20 +55,20 @@ Nothing more, nothing less. If this goes well, I want to try and measure a simil
 
 ## The Main Difference between Symfony and Laravel Container
 
-One of the often-mentioned differences is that Symfony compiles container and Laravel creates services on the fly. But that was never a problem or benefit for me.
+One of the often-mentioned differences is that Symfony compiles container, and Laravel creates services on the fly. But that was never a problem or benefit for me.
 
 A more practical difference is that:
 
 * Laravel tries to create every service for you without any configuration,
 * Symfony only creates services you explicitly configure
 
-But there is a catch - Laravel creates everything from scratch, so I you require a service 2 times, you'll get 2 different instances. To avoid that, you have to **explicitly register this service**.
+But there is a catch - Laravel creates everything from scratch, so if you require a service 2 times, you'll get 2 different instances. To avoid that, you have to **explicitly register this service**.
 
-I personally find **this very useful because it forces me to write clean stateless services** - once a service depends on a state, e.g., I have to set some configuration at a random point of time except the constructor, then it's not really a service design and should be refactored.
+I find **this very useful because it forces me to write clean stateless services** - once a service depends on a state, e.g., I have to set some configuration at a random point of time except the constructor, then it's not a service design and should be refactored.
 
 <br>
 
-All clear? **Let's deep dive into the experiment**. I'll share the pull-request link at the end, so you can review all the changes step by step yourself.
+All clear? **Let's deep dive into the experiment**. I'll share the pull request link at the end so you can review all the changes yourself.
 
 <br>
 
@@ -112,7 +112,7 @@ This is typically part of the `bin/ecs` file, where we create a container and fe
 
 ## Step 2: Let's Register Commands
 
-**In Symfony**, we have to register commands in `services.php` explicitly or with PSR-4 autodiscovery, autowire and autoconfigure. Then we also depend on Kernel correctly injecting commands:
+**In Symfony**, we must explicitly register commands in `services.php` or with PSR-4 autodiscovery, autowire, and autoconfigure. Then we also depend on Kernel correctly injecting commands:
 
 ```php
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
@@ -129,7 +129,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 <br>
 
-**In Laravel**, I've decided to avoid configs completely and require commands explicitly via constructor:
+**In Laravel**, I've decided to avoid configs altogether and require commands explicitly via the constructor:
 
 ```php
 use Symfony\Component\Console\Application;
@@ -154,7 +154,7 @@ Thanks to automated service creation, I don't have to worry about registering `C
 
 ## Step 3: Registering a Simple Service
 
-In the previous step, we skipped an important part, how to register a simple service.
+In the previous step, we skipped an important part: registering a simple service.
 
 **In Symfony**:
 
@@ -187,9 +187,9 @@ $container->tag(ConsoleFormatter::class, FormatterInterface::class);
 
 <br>
 
-## Step 4: A Service that Requires collection of other Services
+## Step 4: A service that requires a collection of other services
 
-A typical example of this is a `SniffFileProcessor` or `FixerFileProcessor` that collects all sniffers or fixers and runs them on a file. Both frameworks use tagged services, so we only collect them and pass them along.
+A typical example is a `SniffFileProcessor` or `FixerFileProcessor` that collects and runs all sniffers or fixers on a file. Both frameworks use tagged services, so we only collect them and pass them along.
 
 **In Symfony**, we only set specific arguments with tagged services:
 
@@ -212,7 +212,7 @@ $container->singleton(FileProcessor::class, function (Container $container) {
 });
 ```
 
-(Do you know a better way how to handle this in Laravel? Please let me know; maybe I'm doing it long.)
+(Do you know a better way how to handle this in Laravel? Please let me know.)
 
 <br>
 
@@ -220,7 +220,7 @@ $container->singleton(FileProcessor::class, function (Container $container) {
 
 So far, we only handled simple steps such as registration of services. Let's level up a bit.
 
-In ECS, sometimes we want to skip a fixer/sniff completely because it doesn't fit our preference:
+In ECS, sometimes we want to skip a fixer/sniff entirely because it doesn't fit our preference:
 
 ```php
 use Symplify\EasyCodingStandard\Config\ECSConfig;
@@ -254,9 +254,9 @@ That's it! From now on, the `SomeStrictFixer` will not be anywhere in our applic
 
 <br>
 
-**In Laravel**, this became quite a challenge. Instead of adding a compiler pass, we run the `beforeResolving()` method. This method is run before every service is resolved, so we pick one of those that will get initialized at the start.
+**In Laravel**, this became quite a challenge. Instead of adding a compiler pass, we run the `beforeResolving()` method. This method runs before every service is resolved, so we pick one of those that will get initialized at the start.
 
-Removing service from the container is easy. But there is **a catch for tagged services** - if we don't remove it from tagged services, it will still get injected via `$container->tagged()`. Here is the solution I came up with (I'm sure there is a better way):
+Removing service from the container is straightforward. But there is **a catch for tagged services** - if we don't remove it from tagged services, it will still get injected via `$container->tagged()`. Here is the solution I came up with (I'm sure there is a better way):
 
 ```php
 use Illuminate\Container\Container;
@@ -273,7 +273,7 @@ private function removeServiceFromContainer(Container $container): void
     // resolve excluded class from skip() parameter
     $excludedClass = '...';
 
-    // remove instance
+    // remove the instance
     $container->offsetUnset($excludedClass);
 
     $tags = PrivatesAccessorHelper::getPropertyValue($container, 'tags');
@@ -295,7 +295,7 @@ private function removeServiceFromContainer(Container $container): void
 
 I feared the migration of compiler passes the most, but ChatGPT showed me [one more method: `afterResolving()`](https://github.com/illuminate/container/blob/7ebfc9acfd5d5c7dda1ff5975927c6569651857f/Container.php#L1184-L1202). With these 2 methods replacing compiler passed was easy.
 
-*Fun fact: these 2 methods are not documented in official Laravel documentation.*
+*Fun fact: I didn't find these 2 methods in official Laravel documentation.*
 
 <br>
 
@@ -340,7 +340,7 @@ return function (ECSConfig $ecsConfig): void {
 
 <br>
 
-**In Symfony**, we use `import()` method in combination with PHP or YAML file loader:
+**In Symfony**, we use the `import()` method in combination with PHP or YAML file loader:
 
 ```php
 $containerBuilder->import($filePath);
@@ -365,17 +365,19 @@ That's it!
 
 <br>
 
-## First Results: Developers Experience and Performance
+## First Results: Developers' Experience and Performance
 
-What has changed? I really enjoy working with DI now. We don't have to include any configs nor configure directory to load services from. Everything default is created for us; everything **non-standard or weird is explicitly defined in the container**.
+What has changed? I enjoy working with DI again. I don't have to include any configs nor configure a directory to load services from.
 
-The speed is amazing, and it will get only better once we figure out Laravel container bottlenecks. Thanks to GPT and a neat tests suite that reported broken places, I was able to make the switch **under 6 hours**.
+The services are created for me. Is there some **non-standard or weird situation? Define it explicitly in the container**.
 
-I really look for the next ideas once the dust settles.
+The speed is fantastic and will improve once we figure out Laravel container bottlenecks. Thanks to GPT and a neat tests suite that reported broken places, I was able to make the switch **under 6 hours**.
+
+I look for the following ideas once the dust settles.
 
 <br>
 
-I didn't expect this, but happy to see that tests run 3-4 times faster with Laravel container:
+I didn't expect this, but happy to see that tests run 3-4 times faster with the Laravel container:
 
 <br>
 
@@ -383,7 +385,7 @@ I didn't expect this, but happy to see that tests run 3-4 times faster with Lara
 
 <br>
 
-For more performance testing, I'll release a new ECS version and try it out in the wild. I also want to check how the `/vendor` size changed, as that's crucial in CLI tools that include downgraded and scoped `/vendor`.
+I'll release a new ECS version for more performance testing and try it out in the wild. I also want to check how the `/vendor` size changed, as that's crucial in CLI tools that include downgraded and scoped `/vendor`.
 
 <br>
 
@@ -391,7 +393,7 @@ You **can review these changes in detail yourself a [single pull-request in ECS 
 
 <br>
 
-I'm a Laravel-beginner, so if you see a much better way to achieve some goal, **let me know in the pull-request**. Thank you!
+I'm a Laravel-beginner, so if you see a better way to achieve some goal, **let me know in the pull request**. Thank you!
 
 <br>
 
