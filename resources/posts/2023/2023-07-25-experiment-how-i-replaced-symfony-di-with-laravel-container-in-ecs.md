@@ -200,19 +200,17 @@ $services->set(FileProcessor::class)
 
 <br>
 
-**In Laravel**, this is a bit more complicated, as there are no abstract definitions and we create services directly. As far as I know, we have to pass all other services too:
+**In Laravel**, there is a similar way:
 
 ```php
-$container->singleton(FileProcessor::class, function (Container $container) {
-    return new FileProcessor(
-        $container->make(Filesystem::class),
-        $container->make(FileDiffFactory::class),
-        $container->tagged(Sniff::class),
-    );
+$container->singleton(FileProcessor::class, FileProcessor::class);
+$container->when(FileProcessor::class)
+    ->needs('$sniffs')
+    ->giveTagged(Sniff::class);
 });
 ```
 
-(Do you know a better way how to handle this in Laravel? Please let me know.)
+*Update: Thanks Martin for [the tip](https://twitter.com/pionl/status/1683870134887235586)!*
 
 <br>
 
