@@ -3,14 +3,14 @@ id: 387
 title: "Experiment: How I replaced Symfony DI with Laravel&nbsp;Container in ECS"
 
 perex: |
-    This year I've been learning Laravel and quickly adopting to most of my tools. I've made 2 packages - [Punchcard](/blog/introducing-punchcard-object-configs-for-laravel) to handle configs, and [Bladestan](/blog/introducing-bladestan-phpstan-analysis-of-blade-templates) for static analysis of Blade templates using PHPStan.
+    This year I've been learning Laravel and quickly adapting to most of my tools. I've made 2 packages - [Punchcard](/blog/introducing-punchcard-object-configs-for-laravel) to handle configs, and [Bladestan](/blog/introducing-bladestan-phpstan-analysis-of-blade-templates) for static analysis of Blade templates using PHPStan.
 
     The component I wanted to put in tests was [Laravel Container](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony). Everything went well on small projects, but what about packages with 10 000 000+ downloads?
 
-    This week, I gave it a try on ECS and this is how it went.
+    This week, I gave it a try on ECS, and this is how it went.
 ---
 
-I'm not much fan of "best practises", Tweets by authorities or "this works for everyone" claims. What works for you doesn't have to work for me and vice versa. Instead I prefer controller experiments where **I can see real numbers on single real project**.
+I'm not much fan of "best practices", Tweets by authorities, or "this works for everyone" claims. What works for you doesn't have to work for me and vice versa. Instead, I prefer controller experiments where **I can see real numbers on a single real project**.
 
 <br>
 
@@ -21,9 +21,9 @@ I'm not much fan of "best practises", Tweets by authorities or "this works for e
 
 The projects I work with are typically CLI PHP applications. They use Symfony DI and Symfony Console. They are not web applications, so I don't need to care about HTTP requests, sessions, or cookies.
 
-**Unfortunately, the `symfony/dependency-injection` is tightly coupled with `symfony/http-kernel`** as I already wrote in "[What I prefer about Laravel Dependency Injection over Symfony](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony)". This and another complexity leads to **slow container compilation and unnecessary complexity we have to learn, counteract in case of parameter invalidation, downgrade and maintain**.
+**Unfortunately, the `symfony/dependency-injection is tightly coupled with `symfony/HTTP-kernel`** as I already wrote in "[What I prefer about Laravel Dependency Injection over Symfony](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony)". This and another complexity leads to **slow container compilation and unnecessary complexity we have to learn, counteract in case of parameter invalidation, downgrade and maintain**.
 
-Also, CLI tools are stuck with Symfony 6.1, because Symfony 6.2 uses complex PHP features (some reflection + attributes combo, not sure exactly) that Rector fails to downgrade to PHP 7.2 without breaking it.
+Also, CLI tools are stuck with Symfony 6.1 because Symfony 6.2 uses complex PHP features (some reflection + attributes combo, not sure exactly) that Rector fails to downgrade to PHP 7.2 without breaking it.
 
 <br>
 
@@ -43,38 +43,38 @@ It has no external dependencies, except contracts packages:
 }
 ```
 
-This seems as a good candidate for DI container, where all you need is getting a service with injected dependencies, right?
+This seems like a good candidate for a DI container, where all you need is to get a service with injected dependencies, right?
 
 <br>
 
-Today we'll focus on **practical drop-in replacement** of `symfony/dependency-injection` with `illuminate/container` in [Easy Coding Standard](https://github.com/easy-coding-standard/easy-coding-standard), how I've done with help of Chat GPT and what are the results.
+Today we'll focus on **practical drop-in replacement** of `symfony/dependency-injection with `illuminate/container` in [Easy Coding Standard](https://github.com/easy-coding-standard/easy-coding-standard), how I've done with the help of Chat GPT and what are the results.
 
-Nothing more, nothing less. If this goes well, I want to try and measure similar experiment on Rector or [legacy projects we upgrade](https://github.com/easy-coding-standard/easy-coding-standard).
+Nothing more, nothing less. If this goes well, I want to try and measure a similar experiment on Rector or [legacy projects we upgrade](https://github.com/easy-coding-standard/easy-coding-standard).
 
 <br>
 
 ## The Main Difference between Symfony and Laravel Container
 
-One of often mentioned differences is that Symfony compiles container and Laravel creates services on the fly. But that was never a problem nor benefit for me.
+One of the often-mentioned differences is that Symfony compiles containers and Laravel creates services on the fly. But that was never a problem or benefit for me.
 
-More practical difference is that:
+A more practical difference is that:
 
 * Laravel tries to create every service for you without any configuration,
-* Symfony only create services you explicitly configure
+* Symfony only creates services you explicitly configure
 
 But there is a catch - Laravel creates everything from scratch, so I you require a service 2 times, you'll get 2 different instances. To avoid that, you have to **explicitly register this service**.
 
-I personally find **this very useful, because it forces me to write clean stateless-services** - once service depends on a state, e.g. I have to set some configuration in a random point of time except constructor, then it's not really a service design and should be refactored.
+I personally find **this very useful because it forces me to write clean stateless services** - once a service depends on a state, e.g., I have to set some configuration at a random point of time except the constructor, then it's not really a service design and should be refactored.
 
 <br>
 
-All clear? **Let's deep dive to the experiment**. I'll share the pull-request link in the end, so you can review all the changes step by step yourself.
+All clear? **Let's deep dive into the experiment**. I'll share the pull-request link at the end, so you can review all the changes step by step yourself.
 
 <br>
 
 ## Step 1: Let's create a Laravel Container
 
-**In Symfony**, we create Kernel, there we register service configs and compiler passes. Using container builder, we build a container that we fetch from container:
+**In Symfony**, we create Kernel, where we register service configs and compiler passes. Using container builder, we build a container that we fetch from the container:
 
 ```php
 $kernel = new Kernel();
@@ -106,7 +106,7 @@ That's it!
 
 <br>
 
-This is typically part of `bin/ecs` file, where we create container and fetch console application to run a console command, e.g.: `bin/ecs check src`.
+This is typically part of the `bin/ecs` file, where we create a container and fetch a console application to run a console command, e.g., `bin/ecs check src`.
 
 <br>
 
@@ -154,7 +154,7 @@ Thanks to automated service creation, I don't have to worry about registering `C
 
 ## Step 3: Registering a Simple Service
 
-In previous step we skipped and important part, how to register simple service?
+In the previous step, we skipped an important part, how to register a simple service.
 
 **In Symfony**:
 
@@ -187,11 +187,11 @@ $container->tag(ConsoleFormatter::class, FormatterInterface::class);
 
 <br>
 
-## Step 4: A Service that Require collection of other Services
+## Step 4: A Service that Requires collection of other Services
 
-Typical example of this is a `SniffFileProcessor` or `FixerFileProcessor` that collects all sniffers or fixers and runs them on a file. Both framework use tagged services, so we only collect them and pass them along.
+A typical example of this is a `SniffFileProcessor` or `FixerFileProcessor` that collects all sniffers or fixers and runs them on a file. Both frameworks use tagged services, so we only collect them and pass them along.
 
-**In Symfony**, we only set specific argument with tagged services:
+**In Symfony**, we only set specific arguments with tagged services:
 
 ```php
 $services->set(FileProcessor::class)
@@ -212,15 +212,15 @@ $container->singleton(FileProcessor::class, function (Container $container) {
 });
 ```
 
-(Do you know a better way how to handle this in Laravel? Please let me know, maybe I'm doing it long.)
+(Do you know a better way how to handle this in Laravel? Please let me know; maybe I'm doing it long.)
 
 <br>
 
 ## Step 5: From Compiler Pass to...?
 
-So far, we only handled simple steps as registration of services. Let's level up a bit.
+So far, we only handled simple steps such as registration of services. Let's level up a bit.
 
-In ECS, sometimes we want to skip a fixer/sniff completely, because it doesn't fit our preference:
+In ECS, sometimes we want to skip a fixer/sniff completely because it doesn't fit our preference:
 
 ```php
 use Symplify\EasyCodingStandard\Config\ECSConfig;
@@ -232,7 +232,7 @@ return function (ECSConfig $ecsConfig): void {
 };
 ```
 
-How do we remove a service from the container? **In Symfony** we have compiler passes that run before container is compiled:
+How do we remove a service from the container? **In Symfony**, we have compiler passes that run before the container is compiled:
 
 ```php
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
@@ -254,9 +254,9 @@ That's it! From now on, the `SomeStrictFixer` will not be anywhere in our applic
 
 <br>
 
-**In Laravel**, this became quite a challenge. Instead of adding compiler pass, we run `beforeResolving()` method. This method is run before every service is resolved, so we pick one of those will get initialized at start.
+**In Laravel**, this became quite a challenge. Instead of adding a compiler pass, we run the `before resolving ()` method. This method is run before every service is resolved, so we pick one of those that will get initialized at the start.
 
-Removing service from container is easy. But there is **a catch for tagged services** - if we don't remove it from tagged services, it will still get injected via `$container->tagged()`. Here is the solution I came up with (I'm sure there is a better way):
+Removing service from the container is easy. But there is **a catch for tagged services** - if we don't remove it from tagged services, it will still get injected via `$container->tagged()`. Here is the solution I came up with (I'm sure there is a better way):
 
 ```php
 use Illuminate\Container\Container;
@@ -301,7 +301,7 @@ I feared the migration of compiler passes the most, but ChatGPT showed me [one m
 
 ## Step 6: Add extra call or parameters to a Service
 
-**In Symfony**, when we want to add a call or property, we use `call()` or `property()` method:
+**In Symfony**, when we want to add a call or property, we use the `call()` or `property()` method:
 
 ```php
 $definition = $services->set($checkerClass);
@@ -327,7 +327,7 @@ $container->extend($checkerClass, function (CheckerClass $checkerClass) {
 
 ## Step 7: Import Configuration Files
 
-Last but not least, sometimes we need to import external configuration. E.g. in ECS we want to import a set or rules (services):
+Last but not least, sometimes we need to import external configuration. E.g., in ECS, we want to import a set of rules (services):
 
 ```php
 use Symplify\EasyCodingStandard\Config\ECSConfig;
@@ -350,11 +350,11 @@ $containerBuilder->import($filePath);
 
 What actually "importing a new file" does?
 
-* We pass container/container builder class somewhere,
-* there is a closure that accept is as parameter
+* We pass the container/container builder class somewhere,
+* There is a closure that accepts it as a parameter
 * it decorates the passed container with more services and parameters.
 
-Saying that, **in Laravel** we pass this container to the included file closure:
+Saying that **in Laravel**, we pass this container to the included file closure:
 
 ```php
 $closureFilePath = require $filePath;
@@ -367,11 +367,11 @@ That's it!
 
 ## First Results: Developers Experience and Performance
 
-What has changed? I really enjoy working with DI now. We don't have to include any configs nor configure directory to load services from. Everything default is created for us, everything **non-standard or weird is explicitly defined in the container**.
+What has changed? I really enjoy working with DI now. We don't have to include any configs nor configure directory to load services from. Everything default is created for us; everything **non-standard or weird is explicitly defined in the container**.
 
-The speed is amazing and it will get only better once we figure Laravel container bottlenecks. Thanks to GPT and very neat tests suite that reported issues down to specific service, **I made the switch under 6 hours** (removing tags took the longest).
+The speed is amazing, and it will get only better once we figure out Laravel container bottlenecks. Thanks to GPT and a very neat tests suite that reported issues down to specific services, **I made the switch in under 6 hours** (removing tags took the longest).
 
-I really look for next ides, once the dust settles.
+I really look for the next ideas once the dust settles.
 
 <br>
 
@@ -383,7 +383,7 @@ I didn't expect this, but happy to see that tests run 3-4 times faster with Lara
 
 <br>
 
-For more performance testing, I'll release a new ECS version and try it out in the wild. I also want to check how `/vendor` size changed, as that's crucial in CLI tools that include downgraded and scoped `/vendor`.
+For more performance testing, I'll release a new ECS version and try it out in the wild. I also want to check how the `/vendor` size changed, as that's crucial in CLI tools that include downgraded and scoped `/vendor`.
 
 <br>
 
@@ -391,7 +391,7 @@ You **can review these changes in detail yourself a [single pull-request in ECS 
 
 <br>
 
-I'm a Laravel-beginner, so if you see much better way to achieve some goal, **let me know in the pull-request**. Thank you!
+I'm a Laravel-beginner, so if you see a much better way to achieve some goal, **let me know in the pull-request**. Thank you!
 
 <br>
 
