@@ -56,15 +56,16 @@ Here are results:
 ```json
 {
     "filesystem": {
-    "directories": 123,
-    "files": 773
-},
-"lines_of_code": {
-    "code": 85586,
-    "code_relative": 78.7,
-    "comments": 23144,
-    "comments_relative": 21.3,
-    "total": 108730
+        "directories": 123,
+        "files": 773
+    },
+    "lines_of_code": {
+        "code": 85586,
+        "code_relative": 78.7,
+        "comments": 23144,
+        "comments_relative": 21.3,
+        "total": 108730
+    }
 }
 ```
 
