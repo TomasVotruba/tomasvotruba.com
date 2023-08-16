@@ -1,9 +1,9 @@
 ---
 id: 389
-title: "How to Remove Transitional Dependencies you don't&nbsp;Need"
+title: "How to Remove Transitional Dependencies You don't&nbsp;Need"
 
 perex: |
-    In the last post [I shared a trick](/blog/unleash-the-power-of-simplicity-php-cli-app-with-minimal-dependencies) how to drop your CLI project /vendor size by 70%. Today we'll trim of a bit more with no-so-knonw composer feature.
+    In the last post [I shared a trick](/blog/unleash-the-power-of-simplicity-php-cli-app-with-minimal-dependencies) on how to drop your CLI project /vendor size by 70%. Today we'll trim off a bit more with the no-so-known composer feature.
 ---
 
 <blockquote class="blockquote mt-5 mb-5 text-center">
@@ -11,11 +11,11 @@ perex: |
     but when there is nothing left to take away."
 </blockquote>
 
-Some packages require another set of packages to delegate responsibility to external source. As in any other dependency in life, that could be helpful and save time, but also requires attention and care - it *depends*.
+Some packages require another set of packages to delegate responsibility to an external source. Like any other dependency in life, that could be helpful and save time, but it also requires attention and care - it *depends*.
 
 <br>
 
-Following applies to any package that is bloated with transitional dependencies we don't use. But I'll use the one I work with daily as an example.
+The following applies to *any package that is bloated with transitional dependencies* we don't use. But I'll use the one I work with daily as an example.
 
 <br>
 
@@ -44,13 +44,13 @@ symfony/string                   v6.3.2
 
 Wow, **9 in total**.
 
-Briefly looking at the list, 5 of them deal with strings and language. These packages bring value in case we use non-standard language operations - but for native English those are redundant.
+Briefly looking at the list, 5 packages deal with strings and language. These packages bring value if we use non-standard language operations - but for native English, those are redundant.
 
-We also use `symfony/console` just to invoke an PHP method call render the output. Nothing fancy like console forms or dynamic game in command line.
+We also use `symfony/console` just to invoke a PHP method called to render the output. Nothing fancy like console forms or dynamic games in the command line.
 
 <br>
 
-That means we don't need following packages:
+That means we don't need the following packages:
 
 * symfony/polyfill-ctype
 * symfony/polyfill-intl-grapheme
@@ -60,35 +60,35 @@ That means we don't need following packages:
 
 <br>
 
-## Little Experiment beats Complex Assumptions
+## Little Experiment Beats Complex Assumptions
 
-How do we know these packages are not really needed? Let's verify our thesis.
+How do we know these packages are not needed? Let's verify our thesis.
 
 We check for a "Symfony\Component\String\" string in the `symfony/console` Github repository [in search](https://github.com/search?q=repo%3Asymfony%2Fconsole%20Symfony%5CComponent%5CString&type=code)
 
 <br>
 
-We can see 4 cases - mostly to measure width of terminal window:
+We can see 4 cases - primarily to measure the width of the terminal window:
 
 <img src="https://github.com/TomasVotruba/tomasvotruba.com/assets/924196/96de05cb-f3f3-41dc-882f-7dbe1715825c" class="img-thumbnail">
 
 <br>
 
-We try to comment those cases and run code. All good? We can remove it.
+We try to comment out those cases and run code. All good? We can remove it.
 
 ## Why Even Bother... and When?
 
-If you use this package locally in single project and have enough space and devops taking care of PHP extensions, there is not much value in removing it.
+If you use this package locally in a single project and have enough space and DevOps take care of PHP extensions, there is little value in removing it.
 
 But if the package:
 
-* is open-source project,
+* is an open-source project,
 * has [nearly 2 000 000 downloads/month](https://packagist.org/packages/rector/rector/stats),
 * is designed to run on the worst PHP code bases in the world,
 * has reported bugs because of missing intl extension,
 * and its killer feature is to deal with legacy code,
 
-... maybe it could be useful for the developers that use it to make it easier to run and install.
+... maybe it could be helpful for the developers that use it to make it easier to run and install.
 
 <br>
 
@@ -111,35 +111,35 @@ vendor/bin/lines measure vendor/symfony/string/ --short --json
 }
 ```
 
-That's **5 561 lines of PHP code with every download** and [4 intl/mbstring packages](https://packagist.org/packages/symfony/string) in transition for 4 simple method calls. Those packages can make prevent crash run or install on some nasty legacy project code, so if get rid of them, we'll make our product more usable and cheaper to maintain.
+That's **5 561 lines of PHP code with every download** and [4 intl/mbstring packages](https://packagist.org/packages/symfony/string) in transition for 4 simple method calls. Those packages can prevent crash runs or installation on some nasty legacy project code, so if we get rid of them, we'll make our product more usable and cheaper to maintain.
 
 <br>
 
 ## "Replace" as in "Remove"
 
-Let's remove it then. The first solution is using `remove` command in composer:
+Let's remove it. The first solution is using the `remove` command in Composer:
 
 ```bash
 composer remove symfony/string
 ```
 
-And composer replies in big red letters:
+And Composer replies in big red letters:
 
 ```bash
-Removal failed, symfony/string is still present, it may be required by another package. See `composer why symfony/string`.
+Removal failed; symfony/string is still present; another package may require it. See `composer why symfony/string`.
 ```
 
 Damn... We don't have it in our `composer.json`, so we can't really remove it, can we?
 
 <br>
 
-What other options we have? Run `rm -rf /vendor/symfony/string` might help, but we'd have to put it in some weird bash script and it seems like code smell.
+What other options do we have? Run `rm -rf /vendor/symfony/string` might help, but we'd have to put it in some weird bash script, which seems like a code smell.
 
 <br>
 
-How we use composer to actually help us?
+How do we use Composer to help us?
 
-Composer has this special section called "replace":
+The Composer has this special section called "replace":
 
 ```json
 {
@@ -149,12 +149,6 @@ Composer has this special section called "replace":
 }
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-@todo
-=======
-=======
->>>>>>> d678b2bd (misc)
 Now run `composer update` and see what happens:
 
 ```bash
@@ -166,34 +160,29 @@ Lock file operations: 0 installs, 0 updates, 4 removals
   - Removing symfony/string (v6.3.2)
 ```
 
-<<<<<<< HEAD
 **The packages we don't use are gone, yay!**
 
 <br>
 
-Wow, looks like magic! It is, until we read [the "replace" documentation](https://getcomposer.org/doc/04-schema.md#replace).
+Wow, it looks like magic! It is, until we read [the "replace" documentation](https://getcomposer.org/doc/04-schema.md#replace).
 
-In shot what it does is telling the composer: "this root package has same features as `symfony/string`". The composer then sees your root package and the `symfony/string` package and decides "hm, there are 2 packages with same name, lets use the root one and remove the dependency from vendor".
+In short, it tells the Composer: "This root package has the same features as `symfony/string`".
+
+The Composer then sees your root package and the `symfony/string` package and decides: "Hm, there are 2 packages with the same name. Let's use the root one and remove the dependency from vendor".
 
 <br>
 
 ## Think Critically
 
-Simple but effective solution. It's not for everyone, but if you care about it and having less dependencies brings your project more value and less code to worry about, then:.
+Simple but effective solution. It's not for everyone, but if you care about it and having fewer dependencies brings your project more value and less code to worry about, then:
 
 * pose a thesis
-* check the real usage
+* check the actual usage
 * measure the package size
 * remove the package
 * test your project without it
-* if it's success, repeat
+* if it's a success, repeat
 
 <br>
 
 Happy coding!
->>>>>>> 1d52840b (fixup! misc)
-=======
-The packages we don't use are gone, yay!
-
-
->>>>>>> d678b2bd (misc)
