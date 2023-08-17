@@ -19,7 +19,7 @@ final class InvoiceController extends Controller
 {
     public function __construct(
         private readonly Parser $pdfParser,
-        private readonly FuelInvoiceExtractor $invoiceSummaryExtractor,
+        private readonly FuelInvoiceExtractor $fuelInvoiceExtractor,
     ) {
     }
 
@@ -42,7 +42,7 @@ final class InvoiceController extends Controller
         $fullTemporaryFilePath = $this->storeFileAndProvideFilePath($request, InputName::INVOICE_PDF);
 
         $document = $this->pdfParser->parseFile($fullTemporaryFilePath);
-        return $this->invoiceSummaryExtractor->resolve($document);
+        return $this->fuelInvoiceExtractor->resolve($document);
     }
 
     /**

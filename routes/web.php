@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\BookDetailController;
+use App\Http\Controllers\RectorBookController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\HomepageController;
@@ -17,10 +17,11 @@ use Symfony\Component\HttpFoundation\Request;
 Route::get('/', HomepageController::class);
 Route::get('/about', AboutController::class);
 
-Route::get('/book-detail/{slug}', BookDetailController::class);
+Route::get('/book-detail/rector-the-power-of-automated-refactoring', RectorBookController::class);
 
+// blog
 Route::get('/blog/{slug}', PostController::class)
-    // include dots and slahes as well
+    // include dots and slashes as well
     ->where('slug', '.*');
 
 Route::get('/blog', BlogController::class);

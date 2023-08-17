@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace App\Tests;
 
-use Illuminate\Foundation\Application;
+use App\DependencyInjection\ContainerFactory;
+use Illuminate\Container\Container;
 use Illuminate\Foundation\Testing\TestCase;
 use Webmozart\Assert\Assert;
 
@@ -14,9 +15,10 @@ abstract class AbstractTestCase extends TestCase
      * This is magically invoked by parent setUp() call
      * @see \Illuminate\Foundation\Testing\TestCase::refreshApplication
      */
-    public function createApplication(): Application
+    public function createApplication(): Container
     {
-        return createApplication();
+        $containerFactory = new ContainerFactory();
+        return $containerFactory->create();
     }
 
     /**

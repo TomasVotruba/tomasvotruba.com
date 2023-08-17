@@ -9,6 +9,10 @@ parameters:
     excludePaths:
         - config/filesystems.php
 
+    unused_public:
+        template_paths:
+            - resources/views
+
     level: 8
 
     ignoreErrors:

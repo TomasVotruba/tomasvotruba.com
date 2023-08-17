@@ -69,10 +69,10 @@ final class Post
         return $this->updatedMessage;
     }
 
-    public function getYear(): int
-    {
-        return (int) $this->dateTime->format('Y');
-    }
+    //    public function getYear(): int
+    //    {
+    //        return (int) $this->dateTime->format('Y');
+    //    }
 
     public function getContent(): string
     {
