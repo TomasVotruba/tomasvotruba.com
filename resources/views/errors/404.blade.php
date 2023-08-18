@@ -1,7 +1,7 @@
 @extends('layout/layout_base')
 
 @php
-    $title = __('Not Found');
+    $title = 'Not Found';
 @endphp
 
 @section('content')

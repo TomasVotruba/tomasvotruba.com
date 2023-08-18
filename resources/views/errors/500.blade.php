@@ -1,7 +1,7 @@
 @extends('layout/layout_base')
 
 @php
-    $title = __('Server Error');
+    $title = 'Server Error';
 @endphp
 
 @section('content')
