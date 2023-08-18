@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20062d493e6aa449bc84a50e5cab2e6d",
+    "content-hash": "dc7824602b88701f90516b5b543131cb",
     "packages": [
         {
             "name": "brick/math",
@@ -2571,16 +2571,16 @@
         },
         {
             "name": "spatie/laravel-markdown",
-            "version": "2.3.1",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-markdown.git",
-                "reference": "1cdde7aafd638c6df2ee12868635399968035b08"
+                "reference": "38d11c666ccdbf111535677c1d927b349b64aca4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-markdown/zipball/1cdde7aafd638c6df2ee12868635399968035b08",
-                "reference": "1cdde7aafd638c6df2ee12868635399968035b08",
+                "url": "https://api.github.com/repos/spatie/laravel-markdown/zipball/38d11c666ccdbf111535677c1d927b349b64aca4",
+                "reference": "38d11c666ccdbf111535677c1d927b349b64aca4",
                 "shasum": ""
             },
             "require": {
@@ -2635,7 +2635,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/laravel-markdown/tree/2.3.1"
+                "source": "https://github.com/spatie/laravel-markdown/tree/2.4.0"
             },
             "funding": [
                 {
@@ -2643,7 +2643,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-05T08:09:13+00:00"
+            "time": "2023-08-17T06:59:15+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -6454,16 +6454,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.17.13",
+            "version": "0.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "e2003ba7c5bda06d7bb419cf4be8dae5f8672132"
+                "reference": "758ada29b5c80d933f906735d3026520390a2a1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/e2003ba7c5bda06d7bb419cf4be8dae5f8672132",
-                "reference": "e2003ba7c5bda06d7bb419cf4be8dae5f8672132",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/758ada29b5c80d933f906735d3026520390a2a1d",
+                "reference": "758ada29b5c80d933f906735d3026520390a2a1d",
                 "shasum": ""
             },
             "require": {
@@ -6498,7 +6498,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.17.13"
+                "source": "https://github.com/rectorphp/rector/tree/0.18.0"
             },
             "funding": [
                 {
@@ -6506,7 +6506,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-14T16:33:29+00:00"
+            "time": "2023-08-17T12:53:22+00:00"
         },
         {
             "name": "sebastian/cli-parser",
