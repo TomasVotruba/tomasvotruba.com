@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc7824602b88701f90516b5b543131cb",
+    "content-hash": "76fcc50cb766370847ff1d2702f58034",
     "packages": [
         {
             "name": "brick/math",
@@ -6454,16 +6454,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.18.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "758ada29b5c80d933f906735d3026520390a2a1d"
+                "reference": "ca844057bcb6c096d4380a4a1624914a90b7de4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/758ada29b5c80d933f906735d3026520390a2a1d",
-                "reference": "758ada29b5c80d933f906735d3026520390a2a1d",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/ca844057bcb6c096d4380a4a1624914a90b7de4b",
+                "reference": "ca844057bcb6c096d4380a4a1624914a90b7de4b",
                 "shasum": ""
             },
             "require": {
@@ -6476,6 +6476,7 @@
                 "rector/rector-phpunit": "*",
                 "rector/rector-symfony": "*"
             },
+            "default-branch": true,
             "bin": [
                 "bin/rector"
             ],
@@ -6498,7 +6499,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.18.0"
+                "source": "https://github.com/rectorphp/rector/tree/main"
             },
             "funding": [
                 {
@@ -6506,7 +6507,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-17T12:53:22+00:00"
+            "time": "2023-08-18T12:48:45+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -7666,49 +7667,6 @@
             "time": "2023-08-12T10:34:57+00:00"
         },
         {
-            "name": "tomasvotruba/lines",
-            "version": "0.3.1.72",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TomasVotruba/lines.git",
-                "reference": "d3ddca3499a0452df29ed8c1de89a8cfda9ee28b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/lines/zipball/d3ddca3499a0452df29ed8c1de89a8cfda9ee28b",
-                "reference": "d3ddca3499a0452df29ed8c1de89a8cfda9ee28b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "bin": [
-                "bin/lines",
-                "bin/lines.php"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Measuring the size of PHP project",
-            "support": {
-                "issues": "https://github.com/TomasVotruba/lines/issues",
-                "source": "https://github.com/TomasVotruba/lines/tree/0.3.1.72"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/rectorphp",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/tomasvotruba",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-08-04T13:10:30+00:00"
-        },
-        {
             "name": "tomasvotruba/type-coverage",
             "version": "0.2.0",
             "source": {
@@ -7825,7 +7783,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "rector/rector": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

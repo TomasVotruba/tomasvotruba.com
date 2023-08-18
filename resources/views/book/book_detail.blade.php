@@ -15,19 +15,13 @@
             <br>
 
             <a
-                    href="{{ $book->getLeanpubLink() }}"
-                    target="blank"
-                    @class([
-                        'btn btn-lg mt-4 mb-2',
-                        'btn-success' => $book->isFinished(),
-                        'btn-warning' => ! $book->isFinished(),
-                    ])
+                href="{{ $book->getLeanpubLink() }}"
+                target="blank"
+                @class([
+                    'btn btn-lg mt-5 mb-5 btn-success',
+                ])
             >
-                @if ($book->isFinished())
-                    Buy a Copy
-                @else
-                    Become Early Adopter
-                @endif
+                Buy a Copy
             </a>
         </div>
 

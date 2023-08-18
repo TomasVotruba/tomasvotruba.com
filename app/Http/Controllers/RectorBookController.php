@@ -2,24 +2,19 @@
 
 declare(strict_types=1);
 
-namespace App\Repository;
+namespace App\Http\Controllers;
 
 use App\Entity\Book;
-use App\Exception\ShouldNotHappenException;
+use Illuminate\Contracts\View\View;
+use Illuminate\Routing\Controller;
 
-final class BookRepository
+final class RectorBookController extends Controller
 {
-    /**
-     * @var Book[]
-     */
-    private array $books = [];
-
-    public function __construct()
+    public function __invoke(): View
     {
-        $this->books = [
-            new Book(
-                'Rector - The Power of Automated Refactoring',
-                <<<'CODE_SAMPLE'
+        $rectorBook = new Book(
+            'Rector - The Power of Automated Refactoring',
+            <<<'CODE_SAMPLE'
 In 2021 I wrote my first book about <a href="https://github.com/rectorphp/rector">Rector</a> with my favorite PHP hero and renowned writer &ndash; <a href="https://matthiasnoback.nl/">Matthias Noback</a>. It's a practical book with step-by-step examples.
 
         <h2>Dialog of Founder and First-Time User</h2>
@@ -48,23 +43,14 @@ In 2021 I wrote my first book about <a href="https://github.com/rectorphp/rector
             Let us know in <a href="https://github.com/rectorphp/the-power-of-automated-refactoring-feedback">special GitHub repository we created for your feedback</a>. Your contributions will be included in next book release.
         </p>
 CODE_SAMPLE
-                ,
-                'https://d2sofvawe08yqg.cloudfront.net/rector-the-power-of-automated-refactoring/s_hero2x?1651754329',
-                'https://leanpub.com/rector-the-power-of-automated-refactoring',
-                true
-            ),
-        ];
-    }
+            ,
+            'https://d2sofvawe08yqg.cloudfront.net/rector-the-power-of-automated-refactoring/s_hero2x?1651754329',
+            'https://leanpub.com/rector-the-power-of-automated-refactoring',
+        );
 
-    public function getBySlug(string $slug): Book
-    {
-        foreach ($this->books as $book) {
-            if ($book->getSlug() === $slug) {
-                return $book;
-            }
-        }
-
-        $errorMessage = sprintf('Book slug "%s" was not found', $slug);
-        throw new ShouldNotHappenException($errorMessage);
+        return \view('book/book_detail', [
+            'title' => $rectorBook->getTitle(),
+            'book' => $rectorBook,
+        ]);
     }
 }

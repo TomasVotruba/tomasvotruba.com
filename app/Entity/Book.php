@@ -7,7 +7,6 @@ namespace App\Entity;
 use Illuminate\Support\Str;
 
 /**
- * @api
  * @see \App\Tests\Entity\BookTest
  */
 final class Book
@@ -17,7 +16,6 @@ final class Book
         private readonly string $longDescription,
         private readonly string $coverImage,
         private readonly string $leanpubLink,
-        private readonly bool $isFinished,
     ) {
     }
 
@@ -34,11 +32,6 @@ final class Book
     public function getLeanpubLink(): string
     {
         return $this->leanpubLink;
-    }
-
-    public function isFinished(): bool
-    {
-        return $this->isFinished;
     }
 
     public function getSlug(): string
