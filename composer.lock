@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76fcc50cb766370847ff1d2702f58034",
+    "content-hash": "70e35627d81175bb0fb942db9215a6a0",
     "packages": [
         {
             "name": "brick/math",
@@ -7665,6 +7665,49 @@
                 }
             ],
             "time": "2023-08-12T10:34:57+00:00"
+        },
+        {
+            "name": "tomasvotruba/lines",
+            "version": "0.4.0.72",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TomasVotruba/lines.git",
+                "reference": "0c7ce053ebea263af77f76a3f5eb4f0dc7ed178a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TomasVotruba/lines/zipball/0c7ce053ebea263af77f76a3f5eb4f0dc7ed178a",
+                "reference": "0c7ce053ebea263af77f76a3f5eb4f0dc7ed178a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "bin": [
+                "bin/lines",
+                "bin/lines.php"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Measuring the size of PHP project",
+            "support": {
+                "issues": "https://github.com/TomasVotruba/lines/issues",
+                "source": "https://github.com/TomasVotruba/lines/tree/0.4.0.72"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/rectorphp",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-08-19T15:30:54+00:00"
         },
         {
             "name": "tomasvotruba/type-coverage",
