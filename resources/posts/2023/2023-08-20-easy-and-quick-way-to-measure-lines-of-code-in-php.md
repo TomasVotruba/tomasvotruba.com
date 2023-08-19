@@ -1,6 +1,6 @@
 ---
 id: 391
-title: "Easy and Quick way to Measure lines of Code in PHP"
+title: "Easy and Quick way to Measure&nbsp;lines&nbsp;of&nbsp;Code in&nbsp;PHP"
 
 perex: |
     The famous [phploc](https://github.com/sebastianbergmann/phploc) package to measure project size was archived by Sebastian on Jan 10, 2023. I used this package to get feedback on [CLI apps vendor shrink](/blog/unleash-the-power-of-simplicity-php-cli-app-with-minimal-dependencies) and for [fast estimation of project size in Rector upgrades](https://getrector.com/hire-team).
@@ -8,25 +8,25 @@ perex: |
     **That's why I needed a replacement**. Fast!
 ---
 
-There are few forks *kind of* working, but they don't provide enum support, rely on tokens and conflict on installing.
+There are a few forks *kind of* working, but they don't provide enum support, rely on tokens, and conflict with installation.
 
-I told to myself: "maybe we can use some more reliable tooling to handle this, like php-parser"... and I didn't stop there. I shared my idea on Twitter and the feedback gave me energy to thing more deeply about this.
+I told myself, "Maybe we can use more reliable tooling to handle this, like php-parser," and I didn't stop there. I shared my idea on Twitter, and the feedback gave me the energy to think more deeply about this.
 
 ## What do we Need?
 
-When we look at "why" such a package is used and what people need from it, we come to few key points:
+When we look at "why" such a package is used and what people need from it, we come to a few key points:
 
-* there must be a **json output format**, for easy piping to next tool
+* there must be a **JSON output format**, for easy piping to next tool
 * it must be **easy to install on PHP 7.2+**
 * it must use standard dependencies like symfony/console, to make contributions effortless
-* it must have scoped `/vendor`, so **anyone can install it any project with `composer require`**
-* it should have short and pretty output, so we can use it in posts
+* it must have scoped `/vendor`, so **anyone can install it on any project with `composer require`**
+* it should have a short and pretty output so that we can use it in posts
 
 <br>
 
-Few days later, the prototype package was born:
+A few days later, the prototype package was born:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Using lines first time for writing a post with real data:<br><br>What is a quick size of vendor?<br><br>* Too long? Make it short 😉<br><br>* Too verbose? Make it json 😉 <a href="https://t.co/FRsqsNXUJE">pic.twitter.com/FRsqsNXUJE</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1686671043677523968?ref_src=twsrc%5Etfw">August 2, 2023</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Using lines the first time for writing a post with real data:<br><br>What is a quick size of the vendor?<br><br>* Too long? Make it short 😉<br><br>* Too verbose? Make it json 😉 <a href="https://t.co/FRsqsNXUJE">pic.twitter.com/FRsqsNXUJE</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1686671043677523968?ref_src=twsrc%5Etfw">August 2, 2023</a></blockquote>
 
 <br>
 
@@ -44,7 +44,7 @@ composer require tomasvotruba/lines --dev
 2. Run bin with paths to measure
 
 ```bash
-vendor/bin/lines measure vendor/tomasvotruba
+vendor/bin/lines measure src
 ```
 
 <br>
@@ -52,7 +52,7 @@ vendor/bin/lines measure vendor/tomasvotruba
 3. Adjust the output to fit your needs
 
 ```bash
-vendor/bin/lines measure vendor/tomasvotruba --json --short
+vendor/bin/lines measure src --json --short
 ```
 
 To get ↓
@@ -73,7 +73,7 @@ To get ↓
 }
 ```
 
-*This command is perfect for blog posts, as it give you a **idea about the size** without the clutter.*
+*This command is perfect for blog posts, as it gives you a **idea about the size** without the clutter.*
 
 <br>
 
@@ -83,7 +83,7 @@ That's it!
 
 ## Termwind on Board
 
-Before I even managed to launch the package, Francisco jumped in and give the CLI output fresh and sexy look ↓
+Before I even managed to launch the package, Francisco jumped in and gave the CLI output a fresh and sexy look ↓
 
 <br>
 
@@ -91,7 +91,7 @@ Before I even managed to launch the package, Francisco jumped in and give the CL
 
 <br>
 
-The package is ready to go now. Give it a try and if you want to improve the package, [just go for it](https://github.com/tomasVotruba/lines)!
+Give the *lines* a try, and if you want to improve the package, [just go for it](https://github.com/tomasVotruba/lines)!
 
 <br>
 
