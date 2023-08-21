@@ -8,9 +8,9 @@ perex: |
     **That's why I needed a replacement**. Fast!
 ---
 
-There are a few forks *kind of* working, but they don't provide enum support, rely on tokens, and conflict with installation. and You might suggest generic Linux tools like `cloc`, but it requires specific operation system, thus different installation etc.
+There are a few forks *kind of* working, but they don't provide enum support, rely on PHP tokens, and conflict with installation.
 
-Also the **phploc provided PHP-only and important metrics like** that will give [you better idea about project code quality](https://matthiasnoback.nl/2019/09/using-phploc-for-quick-code-quality-estimation-part-1/) :
+You might also suggest generic Linux tools like `cloc`, but it requires specific operation system, thus different installation etc.  Also it doesn't provide **PHP-specific** metrics that will give [you better idea about project code quality](https://matthiasnoback.nl/2019/09/using-phploc-for-quick-code-quality-estimation-part-1/) :
 
 * number of classes
 * number of global functions
