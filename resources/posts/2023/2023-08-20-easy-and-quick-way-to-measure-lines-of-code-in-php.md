@@ -8,7 +8,17 @@ perex: |
     **That's why I needed a replacement**. Fast!
 ---
 
-There are a few forks *kind of* working, but they don't provide enum support, rely on tokens, and conflict with installation.
+There are a few forks *kind of* working, but they don't provide enum support, rely on tokens, and conflict with installation. and You might suggest generic Linux tools like `cloc`, but it requires specific operation system, thus different installation etc.
+
+Also the **phploc provided PHP-only and important metrics like** that will give [you better idea about project code quality](https://matthiasnoback.nl/2019/09/using-phploc-for-quick-code-quality-estimation-part-1/) :
+
+* number of classes
+* number of global functions
+* number of public methods
+* number of static methods
+* interface and trait count etc.
+
+<br>
 
 I told myself, "Maybe we can use more reliable tooling to handle this, like php-parser," and I didn't stop there. I shared my idea on Twitter, and the feedback gave me the energy to think more deeply about this.
 
