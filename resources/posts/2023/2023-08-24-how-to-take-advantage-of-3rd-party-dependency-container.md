@@ -1,65 +1,73 @@
 ---
 id: 392
-title: "How take Advantage of 3rd party Dependency Injection Container
+title: "How to take Advantage of 3rd party Dependency Injection Container"
 perex: |
-    When Nuno send me a Pest plugin for type coverage that simply runs [TomasVotruba/type-coverage](https://github.com/TomasVotruba/type-coverage), I looked for the PHPStan container use.
+    When Nuno sent me a Pest plugin for type coverage that runs [TomasVotruba/type-coverage](https://github.com/TomasVotruba/type-coverage), I looked for the PHPStan container use.
 
-    Why? Because the type-coverage package are PHPStan rules that easily plugin into PHPStan. But what if you want to use them in a tool that has a different container?
+    Why? Because the type-coverage package is PHPStan rules that easily plugin into PHPStan. But what if you want to use them in a tool that has a different container?
 
-    I've found the solution the hard way - so I though it might be useful to share it with you to save you the troubles.
+    I've found the solution the hard way - so it might be useful to share it with you to save you the trouble.
 ---
 
-In the example above, there was no PHPStan container. The PHPStan services are made of scratch, which is painful process and can lead to [bugs in next PHPStan patch version](https://github.com/pestphp/pest-plugin-type-coverage/pull/12).
-
-But don't narrow your focus only on this specific situation. It can be anything from:
-
-* using PHPStan services in Rector container
-* using Laravel container in a Symfony project
-* using Blade compiler in PHPStan rule for [template static analysis](https://tomasvotruba.com/blog/introducing-bladestan-phpstan-analysis-of-blade-templates/)
-* using php-cs-fixer and PHP CodeSniffer container (if they compatible one) in [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/)
-* using PHPStan container in tool for [Smoke Twig template testing](/blog/twig-smoke-rendering-why-do-we-even-need-it/)
-
-...and so on.
+In the example above, there was no PHPStan container. The PHPStan services are made from scratch, which is a painful process and can lead to [bugs in the next PHPStan patch version](https://github.com/pestphp/pest-plugin-type-coverage/pull/12).
 
 <br>
 
-It's not universal. You can't connect every PHP container into another container. Some project even don't have container and are made manually with `new` instances.
+But don't narrow your focus only on this specific situation. It can be anything from:
+
+* using PHPStan services in the Rector container
+* using Laravel container in a Symfony project
+* using Blade compiler in PHPStan rule for [template static analysis](https://tomasvotruba.com/blog/introducing-bladestan-phpstan-analysis-of-blade-templates/)
+* using php-cs-fixer and PHP CodeSniffer container (if they are compatible) in [EasyCodingStandard](https://github.com/symplify/easy-coding-standard/)
+* using PHPStan container in a tool for [Smoke Twig template testing](/blog/twig-smoke-rendering-why-do-we-even-need-it/)
+
+...and so on.
+
+<img src="https://github.com/TomasVotruba/tomasvotruba.com/assets/924196/4fb5af38-99dd-4319-904e-59ceb3454b58" class="img-thumbnail" style="max-width: 35em">
+
+<br>
+
+It's not universal. You can't connect every PHP container into another container.
+
+<br>
+
+Some projects even don't have containers and are made manually with `new` instances.
 
 <br>
 
 ## Minimal Requirements
 
-Despite messy complexity and wide variety of PHP containers, there are **compatibility requirements** to be able to connect 2 containers:
+Despite the messy complexity and wide variety of PHP containers, there are **compatibility requirements** to be able to connect 2 containers:
 
-* they both use PSR method) called `get()` or similar
-* your main container support factories
-* the external container can be created easily or with help of `ContainerFactory` object
+* they both use the PSR method called `get()` or a similar
+* our main container support factories
+* the external container can be created easily or with the help of the `ContainerFactory` object
 
 Have you met these conditions? We're good to go.
 
 <br>
 
-From my experience, Laravel, Symfony and Nette containers fit perfectly and are mutually reusable.
+From my experience, Laravel, Symfony, and Nette containers fit perfectly and are mutually reusable.
 
 <br>
 
-## Practical use Case
+## Practical Use Case: We need PHPStan service in Rector
 
-Let's look at practical example - we need a PHPStan `PHPStan\Analyser\NodeScopeResolver` service inside a Rector container.
-
-<br>
-
-How does injecting from another container works?
-
-* our service will require a PHPStan service in constructor
-* our container will check, if it's already created
-* if not, it create PHPStan container using *container factory*
-* then it asks PHPStan container for the service
-* then our container will return given service
+Let's look at a practical example - we need a PHPStan `PHPStan\Analyser\NodeScopeResolver` service inside a Rector container.
 
 <br>
 
-Rector uses Laravel container since 0.18 (but the same pseudo-code works for Symfony too):
+How does injecting from another container work?
+
+* our service will require a PHPStan service in the constructor,
+* our container will check if the service has already been created,
+* if not, it creates a PHPStan container using *container factory*,
+* then it asks the PHPStan container for the service,
+* then our container will return, given the service
+
+<br>
+
+Rector uses Laravel container since 0.18, so we build the example using [illuminate/container](https://laravel.com/docs/10.x/container) package (same pseudo-code works for Symfony, too):
 
 ```php
 new Illuminate\Container\Container;
@@ -71,7 +79,7 @@ $container = new Container();
 
 // we register a service from PHPStan that we want in our project
 $container->singleton(NodeScopeResolver::class, function (Container $container) {
-    // we ask for PHPStan container
+    // we ask for the PHPStan container
     $phpstanContainer = $container->make(PHPStanContainer::class);
 
     return $phpstanContainer->getByType(NodeScopeResolver::class);
@@ -80,7 +88,9 @@ $container->singleton(NodeScopeResolver::class, function (Container $container) 
 
 <br>
 
-The asked for `PHPStanContainer`, but how do we make it? Fortunately, PHPStan has its own [`ContainerFactory`](https://github.com/phpstan/phpstan-src/blob/1.11.x/src/DependencyInjection/ContainerFactory.php):
+We asked for `PHPStanContainer` service, but where does it come from?
+
+Fortunately, PHPStan has a [`ContainerFactory`](https://github.com/phpstan/phpstan-src/blob/1.11.x/src/DependencyInjection/ContainerFactory.php), so we register it and create PHPStan container:
 
 ```php
 use PHPStan\DependencyInjection\ContainerFactory as PHPStanContainerFactory;
@@ -99,9 +109,9 @@ $container->singleton(PHPStanContainer::class, function (Con) {
 });
 ```
 
-Now when we ask for `PHPStanContainer` it will be created just once and stored in our container.
+Now, when we ask for `PHPStanContainer`, it will be created once and stored in our container.
 
-Then PHPStan container will provide any service we need!
+**Then PHPStan container will provide any service we need!**
 
 <br>
 
@@ -111,13 +121,15 @@ For more inspiration, [check this pattern in Rector](https://github.com/rectorph
 
 ## Make your Tools with Usability in Mind
 
-This is not standard though - not every tool ships with container factory. That means we have to dig in and construct the whole service and its tree manually with `new` instances.
+However, this is not standard - not every tool ships with a container factory class. That means we have to manually dig in and construct the whole service and its tree with `new` instances.
 
 PHPStan, ECS, Rector and [all](https://github.com/TomasVotruba/type-coverage) [the](https://github.com/TomasVotruba/lines) [tools](https://github.com/TomasVotruba/class-leak) [I make](https://github.com/TomasVotruba/bladestan) have a container factory as first class citizens.
 
-You can require them in your project and build on top of their features easily.
+You can require them in your project and build on top of their features quickly.
 
-Next time you'll be making a tool, consider **dropping in a container factory class** too. Even it if will be bare `new` instances with single `get()` method, it will give your fellow PHP developers option to use them easily.
+<br>
+
+Next time you make a tool, consider **dropping in a container factory class** too. Even if it is bare `new` instances with a single `get()` method, it will allow your fellow PHP developers to use them easily.
 
 <br>
 
