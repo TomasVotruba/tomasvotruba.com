@@ -291,7 +291,7 @@ private function removeServiceFromContainer(Container $container): void
 }
 ```
 
-I feared the migration of compiler passes the most, but ChatGPT showed me [one more method: `afterResolving()`](https://github.com/illuminate/container/blob/7ebfc9acfd5d5c7dda1ff5975927c6569651857f/Container.php#L1184-L1202). With these 2 methods replacing compiler passed was easy.
+I feared the migration of compiler passes the most, but ChatGPT showed me [one more method: `afterResolving()`](https://github.com/illuminate/container/blob/7ebfc9acfd5d5c7dda1ff5975927c6569651857f/Container.php#L1184-L1202). With these 2 methods [replacing compiler passed is easy](/blog/from-symfony-to-laravel-compiler-passes).
 
 *Fun fact: I didn't find these 2 methods in official Laravel documentation.*
 
