@@ -2,9 +2,9 @@
 id: 394
 title: "From Symfony to Laravel - 5 Steps to Prepare your Symfony Project"
 perex: |
-    Framework migration challange few choose take - yet in some cases, it makes sense for business, for project health and pure joy from coding. Once you know [the recipe](https://getrector.com/blog/how-to-migrate-legacy-php-applications-without-stopping-development-of-new-features), it clear the switch [is doable](https://getrector.com/blog/success-story-of-automated-framework-migration-from-fuelphp-to-laravel-of-400k-lines-application).
+    Framework migration is a challenge few choose to take - yet in some cases, it makes sense for business, for project health, and pure joy from coding. Once you know [the recipe](https://getrector.com/blog/how-to-migrate-legacy-php-applications-without-stopping-development-of-new-features), it clear the switch [is doable](https://getrector.com/blog/success-story-of-automated-framework-migration-from-fuelphp-to-laravel-of-400k-lines-application).
 
-    Today we look on steps that will prepare your Symfony project for future Laravel migration.
+    Today, we'll look at steps to prepare your Symfony project for future Laravel migration.
 ---
 
 <blockquote class="blockquote mt-4 mb-4 text-center">
@@ -12,30 +12,32 @@ perex: |
 </blockquote>
 
 
-We start with steps that makes Symfony project easier to maintain in general, than move to more Symfony-Laravel bridge topics.
+We start with steps that make the Symfony project easier to maintain, then move to more Symfony-Laravel bridge topics.
 
 <br>
 
 ## 1. Make sure your Configs are *.php
 
-At first, we make sure our `/config` directory contains only PHP files. This will help tools like ECS, PHPStan and Rector to see the PHP configs, check them for erros like missing class and automate any migration.
+At first, we make sure our `/config` directory contains only PHP files. This will help tools like ECS, PHPStan, and Rector to see the PHP configs, check them for erros like missing classes and automate any migration.
 
-Nowadays we can **migrate YAML configs to PHP effortlessly** with single CLI command run - using [symplify/config-transformer](https://github.com/symplify/config-transformer).
+We can **migrate YAML configs to PHP effortlessly** with single CLI command run - using [symplify/config-transformer](https://github.com/symplify/config-transformer).
 
 ```bash
 composer require symplify/config-transformer --dev
 vendor/bin/config-transformer switch-format config
 ```
 
-Don't forget to [update your Kernel loader](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/) to seek PHP files and your done.
+Don't forget to [update your Kernel loader](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/) to seek PHP files and you're done.
 
 <br>
 
 ## 2. Prepare custom script for TWIG to Blade conversion
 
-I've learned this trick from [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X). Sometimes we need process high volume of data, in reliable and verifiable way. We could rewrite templates manually - in fact, if our project has 10 TWIG files, that's the saint way.
+I've learned this trick from [Pragmatic Programmer](https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X). What if we need to process a high volume of data in a reliable and verifiable way?
 
-For higher volume of data, we should take a different path - **create a one time script to do one job and then perish.**
+We could rewrite templates manually - in fact, if our project has 10 TWIG files, that's the saint way.
+
+For higher volume of data, we should take a different path - **create a one-time script to do one job and then perish.**
 
 <br>
 
@@ -49,28 +51,28 @@ Here is [the script I used](https://github.com/TomasVotruba/tomasvotruba.com/pul
 
 <br>
 
-## 3. Understand differences between Symfony and Laravel container
+## 3. Understand the differences between Symfony and Laravel container
 
-I wrote about this topic before, so I refer posts in here to learn from. There **are 2 important difference** between these 2 containers:
+I wrote about this topic before, so I refer posts here to learn from. There **are 2 important difference** between these 2 containers:
 
-**First is Symfony container is compiled** to huge PHP file and then dumped for caching purposes. This allows performance heavy operations like service decoration, autowired setters and compiler passes. **The Laravel container is build on the fly** - it's lighter and faster. I've never noticed any difference in developer experience in this point to be honest.
+First - **Symfony container is compiled** into a huge PHP file and then dumped for caching purposes. This allows performance-heavy operations like service decoration, autowired setters, and compiler passes. **The Laravel container is built on the fly** - it's lighter and faster. I've never noticed any difference in developer experience at this point, to be honest.
 
 <br>
 
-The 2nd difference I've actually noticed is:
+The 2nd difference I've noticed is:
 
 * that **Symfony registers every service in the config** and nothing else,
-* **Laravel registers everything automatically as a singleton, unless config defines it otherwise**
+* **Laravel registers everything automatically as a singleton unless config defines it otherwise**
 
-You can read about upsides, downsides and how to deal with them in [What I prefer about Laravel Dependency Injection over Symfony](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony)
-
-<br>
-
-I was worried about lack of compiler passes the most. In Symfony, they allows post-build operations around every service. But Laravel docs doesn't mention them at all. I've learned the reason is [different naming](/blog/from-symfony-to-laravel-can-laravel-even-compiler-pass) - **Laravel is compiler passes-ready**.
+You can read about the upsides, downsides and how to deal with them in [What I prefer about Laravel Dependency Injection over Symfony](/blog/what-i-prefer-about-laravel-dependency-injection-over-symfony)
 
 <br>
 
-## 4. Create parallel Laravel container
+I was worried about lack of compiler passes the most. In Symfony, they allow post-build operations around every service. But Laravel docs doesn't mention them at all. I've learned the reason is [different naming](/blog/from-symfony-to-laravel-can-laravel-even-compiler-pass) - **Laravel is compiler passes-ready**.
+
+<br>
+
+## 4. Create a parallel Laravel container
 
 Would you try to cross this bridge to the other side?
 
@@ -78,15 +80,15 @@ Would you try to cross this bridge to the other side?
 
 <br>
 
-Success of every greater migration is based on stability. That's why:
+Success of every more significant migration is based on stability. That's why:
 
-* we should never drop the old version unless we run stable on a the next one
-* we should have a fallback in case something goes wrong,
+* We should never drop the old version unless we run stable on a the next one
+* We should have a fallback in case something goes wrong,
 * and stable testing environment to be sure our project keeps running flawlessly
 
 <br>
 
-First, we make sure our project has Symfony container factory in place. This will make flipping container later on possible with single line:
+First, we make sure our project has a Symfony container factory in place. This will make flipping containers later on possible with single line:
 
 ```php
 use Psr\Container\ContainerInterface;
@@ -103,13 +105,13 @@ final class SymfonyContainerFactory
 }
 ```
 
-Notice the use of PSR container contract.
+Notice the use of the PSR container contract.
 
-This Symfony container factory is used in entrypoint level like `bin/console`, `public/index.php` or abstract test case.
+We use this Symfony container factory at entry-point levels like `bin/console`, `public/index.php` or abstract test cases.
 
 <br>
 
-Then we create `LaravelContainerFactory` to handle services for Laravel context. We create this container **in parallel** to Symfony container and **keep the Symfony untouched**:
+Then, we create `LaravelContainerFactory` to handle services for the Laravel context. We create this container **in parallel** to Symfony container and **keep the Symfony untouched**:
 
 ```php
 use Psr\Container\ContainerInterface;
@@ -127,22 +129,22 @@ final class LaravelContainerFactory
 }
 ```
 
-We register every **non-standard service to the `LaravelContainerFactory::create()` method**. This way we can easily see what services are not registered in Laravel container and add them later on.
+We register every **non-standard service to the `LaravelContainerFactory::create()` method**. This way, we can easily see what services are not registered in Laravel container and add them later.
 
 <br>
 
-Now we have 2 containers and one of them is not used. One could call [that a dead-code](https://github.com/TomasVotruba/unused-public), right?
+Now we have 2 containers - yay! But one of them is not used. One could call [that's a dead-code](https://github.com/TomasVotruba/unused-public), right?
 
-Not really, I'll show you how to use the other container in a next step.
+I'll show you how to use the other container in the next step.
 
 <br>
 
-## 5. Try Laravel container in your tests
+## 5. Try the Laravel container in your tests
 
-This is where fast feedback loop kicks-in. We'll be able to:
+**This is where fast feedback loop kicks in**. We'll be able to:
 
-* **debug Laravel migration on the fly and quickly**,
-* keep the production codebase running on original Symfony container.
+* debug Laravel **migration on the fly, safely and quickly**,
+* Keep the production codebase running on the original Symfony container.
 
 Fastly and safe.
 
