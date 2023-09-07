@@ -212,7 +212,7 @@ abstract class AbstractLaravelTestCase extends TestCase
 {
     protected function setUp(): void
     {
-        $laravelContainerFactory = new LaraveContainerFactory();
+        $laravelContainerFactory = new LaravelContainerFactory();
 
         // add static caching if needed
         $this->container = $laravelContainerFactory->create();
@@ -240,7 +240,7 @@ We will not change any other line because that **would turn our migration** into
 
 <br>
 
-We run the tests, see what fails, fix it, iterate the feedback loop, and create pull-request for our single test. Merge and repeat. Again, we should not touch the original source code, only the `LaraveContainerFactory`.
+We run the tests, see what fails, fix it, iterate the feedback loop, and create pull-request for our single test. Merge and repeat. Again, we should not touch the original source code, only the `LaravelContainerFactory`.
 
 That's it!
 
