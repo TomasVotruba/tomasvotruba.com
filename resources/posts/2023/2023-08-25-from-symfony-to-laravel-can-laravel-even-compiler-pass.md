@@ -2,9 +2,9 @@
 id: 393
 title: "From Symfony to Laravel - Can Laravel even Compiler&nbsp;Pass?"
 perex: |
-    Do you want to migrate your Symfony project to Laravel and not sure if it "handles it"? Switching containers is pretty [straighfowrad](/blog/experiment-how-i-replaced-symfony-di-with-laravel-container-in-ecs) for the most parts.
+    Do you want to migrate your Symfony project to Laravel and not sure if it "handles it"? Switching containers is pretty [straightforward](/blog/experiment-how-i-replaced-symfony-di-with-laravel-container-in-ecs) for the most parts.
 
-    But can Laravel handle as advanced features as compiler passes?
+    But can Laravel handle advanced features such as compiler passes?
 ---
 
 Let's take it step by step and list the Symfony container life-cycle. It has 3 separate steps that run one after another:
@@ -71,7 +71,7 @@ $container->beforeResolving(SomeType::class, function () {
 });
 ```
 
-The callback in 2nd argument will be run before resolving of `SomeType` service. This means when a project needs `SomeType`, it will invoke this closure. But **we don't want to wait for a specific type; we want to call closure before resolving *any type***.
+The callback in the 2nd argument will be run before the resolving of `SomeType` service. This means when a project needs `SomeType`, it will invoke this closure. But **we don't want to wait for a specific type; we want to call closure before resolving *any type***.
 
 <br>
 
