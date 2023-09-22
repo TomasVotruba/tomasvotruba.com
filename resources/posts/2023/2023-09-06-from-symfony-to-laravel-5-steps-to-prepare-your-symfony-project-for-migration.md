@@ -246,7 +246,7 @@ That's it!
 
 <br>
 
-Thanks to this technique, we made [Rector tests 7x faster](/blog/rector-018-how-we-made-tests-seven-times-faster) before we made the container switch. To give you perspective, the whole migration was finished within a week.
+Thanks to this technique, we made [Rector tests 7x faster](https://getrector.com/blog/rector-018-how-we-made-tests-seven-times-faster) before we made the container switch. To give you perspective, the whole migration was finished within a week.
 
 <br>
 
