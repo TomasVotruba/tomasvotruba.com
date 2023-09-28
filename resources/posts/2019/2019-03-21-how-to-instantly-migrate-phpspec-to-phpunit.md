@@ -1,6 +1,6 @@
 ---
 id: 196
-title: 'How to Instantly&nbsp;Migrate PhpSpec&nbsp;to&nbsp;PHPUnit'
+title: 'How to Migrate PhpSpec&nbsp;to&nbsp;PHPUnit'
 perex: |
     I'm happy that more and more people try to use Rector upgrade and migrate their code-bases to the ones they really want for a long time.
 
@@ -157,7 +157,7 @@ This is how 1 spec migration might look like:
 
 Pretty clear, right?
 
-## How to Instantly Migrate from PhpSpec to PHPUnit?
+## How to Migrate from PhpSpec to PHPUnit?
 
 First, take a 2-week paid vacation... Just kidding. Start with Rector which migrates ~95 % of code cases. It also renames `*Spec.php` to `*Test.php` and moves them from `/spec` to `/tests` directory:
 
