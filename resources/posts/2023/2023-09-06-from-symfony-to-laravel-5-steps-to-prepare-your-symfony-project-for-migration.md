@@ -57,7 +57,7 @@ Here is [the script I used](https://github.com/TomasVotruba/tomasvotruba.com/pul
 
 There **are 2 important difference** between these 2 containers:
 
-First - the Symfony container is compiled** into a huge PHP file and then dumped for caching purposes. This allows performance-heavy operations like service decoration, autowired setters, and compiler passes. **The Laravel container is built on the fly** - it's lighter and faster.
+First - the Symfony container is compiled into a huge PHP file and then dumped for caching purposes. This allows performance-heavy operations like service decoration, autowired setters, and compiler passes. **The Laravel container is built on the fly** - it's lighter and faster.
 
 I've never noticed any difference in developer experience regarding this point.
 
