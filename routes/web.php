@@ -6,7 +6,6 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\RectorBookController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RssController;
@@ -30,8 +29,3 @@ Route::get('/rss.xml', RssController::class);
 Route::get('/contact', ContactController::class);
 
 Route::get('/thumbnail/{title}.png', ThumbnailController::class);
-
-// invoices
-Route::match([
-     Request::METHOD_GET, Request::METHOD_POST
-], '/helinvoice', InvoiceController::class);
