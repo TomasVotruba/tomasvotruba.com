@@ -1,6 +1,6 @@
 ---
 id: 396
-title: "How to Autowire of Multiple-Instances Effortlessly in Symfony/Laravel"
+title: "How to Autowire Multiple Instances of Same Type in Symfony/Laravel"
 perex: |
     Do you work with Symfony since 2 through 7? Then you know the main challange in the upgrade path is to trim your YAML configs to minimum.
 
