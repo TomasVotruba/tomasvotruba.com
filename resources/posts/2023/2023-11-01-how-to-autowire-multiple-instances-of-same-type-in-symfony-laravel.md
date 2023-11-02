@@ -117,7 +117,7 @@ That's it!
 
 We can now:
 
-* easily use functions like `env()` and
+* easily use functions like `getenv()` and
 * run PHPStan to ensure the values `BANK_NAME` and `BANK_PASSWORD` are defined in our `.env` files
 
 ```php
@@ -125,7 +125,7 @@ final class BankHttpClient extends HttpClient
 {
     public function __construct()
     {
-        parent::__construct(env('BANK_NAME'), env('BANK_PASSWORD'));
+        parent::__construct(getenv('BANK_NAME'), getenv('BANK_PASSWORD'));
     }
 }
 ```
