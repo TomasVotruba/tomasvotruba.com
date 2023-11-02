@@ -19,7 +19,7 @@ but now is just **2 pieces** with one smart machine press.
 
 <br>
 
-Narrowing YAML or array dinosaur files to few lines [is an area](https://tomasvotruba.com/blog/run-config-transformer-in-ci-everyday-to-keep-yaml-away) [I wrote](https://tomasvotruba.com/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify) [many times](https://tomasvotruba.com/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs) [before](http://localhost:8000/blog/2019/07/22/how-to-convert-listeners-to-subscribers-and-reduce-your-configs).
+Narrowing YAML or array dinosaur files to few lines [is an area](/blog/run-config-transformer-in-ci-everyday-to-keep-yaml-away) [I wrote](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify) [many times](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs) [before](/blog/2019/07/22/how-to-convert-listeners-to-subscribers-and-reduce-your-configs).
 
 <br>
 
