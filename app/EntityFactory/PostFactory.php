@@ -31,6 +31,8 @@ final class PostFactory
 
     public function createFromFilePath(string $filePath): Post
     {
+
+
         $fileContents = FileSystem::read($filePath);
 
         $matches = Strings::match($fileContents, self::CONFIG_CONTENT_REGEX);
