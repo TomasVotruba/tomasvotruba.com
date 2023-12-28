@@ -75,17 +75,18 @@ After 2 hours of digging into code, we learn that:
 * in another `array<string|null>`
 * and in another `array<string|false>`
 
-You want to quit such a project, right? There is a way out.
+You want to quit such a project, right? Wait, there is another a way out.
 
 <br>
 
 You might be thinking, "Let's refactor the array to collections." It is also a way, but it takes more energy, more studying, and most importantly - much more than 1 line.
 
-Our job is to deliver for a reasonable price, so I always aim for cost-effective solutions.
+**Our job is to deliver for a reasonable price, so I always aim for cost-effective solutions.**
+
 
 ## The Single Line
 
-I learned the following approach from a friend of mine about 10 years ago, way before PHP 7.0 with type declarations was released. Simple but effective.
+I learned the following approach from a [friend of mine](https://www.outofdark.com/) about 10 years ago, way before PHP 7.0 with type declarations was released. Simple but effective.
 
 **Validate with assert**. I don't mean the native `assert()` native function that is often disabled in php config. I mean assert PHP package, like `webmozart/assert`, that fails hard with an exception not correct:
 
@@ -99,14 +100,13 @@ public function __construct(array $codes)
 }
 ```
 
-They used this approach 10 years and I was thinking "lol, what an anxious approach to coding, they're so afraid they have to check everything".
+They used this approach 10 years ago and I was thinking "lol, what an anxious approach to coding, they're so afraid they have to check everything".
 
-Little did I know, nowadays, with similar projects, **I'm the one who checks everything because I have to manually verify the exact type of each variable. Those guys are already working on the 20th project and keep delivering.
+Little did I know, nowadays, with similar projects, **I'm the one who checks everything because I have to manually verify the exact type of each variable**. Those guys are already working on the 20th project and keep delivering.
 
 This takes about **half of our focus while working with projects** in [Rector upgrade team](https://getrector.com/hire-team) projects.
 
 <br>
-
 
 <div class="text-center mt-5 mb-5">
 <img src="https://pbs.twimg.com/media/FH83m_aX0AIjFAX?format=jpg&name=medium" class="img-thumbnail">
@@ -117,25 +117,12 @@ This takes about **half of our focus while working with projects** in [Rector up
 
 ## Compound Benefits
 
-You can also add an object type and build from there:
-
-```php
-use Wemozzars\Assert;
-
-public function __construct(array $codes)
-{
-    Assert::allInstancesof($codes, CountryCode::class);
-    $this->codes = $codes;
-}
-```
-
-
-What benefits do we get from this single line? Our IDE is now smarter and can suggest method calls if we iterate through the `$codes` property`.
+What benefits do we get from this single line? Our IDE is now smarter and can suggest method calls if we iterate through the `$codes` property.
 
 There is more:
 
-* our PHPStan got smarter because it can pick up the type while used later in the class - just add [phpstan webmozart extension](https://packagist.org/packages/phpstan/phpstan-webmozart-assert)
-* our Rector run got **more powerful**, as it can complete further type with 100 % accuracy
+* our PHPStan got smarter - it can pick up the type thanks to [webmozart extension](https://packagist.org/packages/phpstan/phpstan-webmozart-assert)
+* our Rector run got **more powerful**, as it can complete further type declarations with 100 % accuracy
 
 ```diff
 -public function getFirst()
@@ -146,9 +133,7 @@ There is more:
  }
 ```
 
-* Rector can now infer strict type declarations in any place the `string $code` is passed to.
-
-The compound effect for us developers is that **we know now we're on the highway and go straight ahead to create the feature we want**.
+What about us, developers? Now **we know now we're on the highway and go ahead to create the feature we want**.
 
 <br>
 
@@ -160,7 +145,7 @@ In house construction, when you extend a 5-floor building with 2 more floors, yo
 Or you risk it will all collapse on your head.
 </blockquote>
 
-**Don't be greedy and rush. Be safe and robust**. Apply the same for the code.
+**Don't be greedy and rush - be safe and robust**. Apply the same for the code.
 
 <blockquote class="blockquote mt-5 mb-5 text-center">
 As your project grows, make the basis - not the business layer - stronger to support the growth.
@@ -170,7 +155,7 @@ As your project grows, make the basis - not the business layer - stronger to sup
 
 ## Real-life Examples
 
-I'll share a few code snippets we meet every week while working with legacy projects, and we have turned them into safe and joyful code.
+I'll share a few code snippets we meet every week while working with our clients, and how we turn them into safe and joyful code.
 
 <br>
 
@@ -189,7 +174,7 @@ public function calculateTripPrice(array $visitors): float
 
 <br>
 
-Our company grows and becomes a VAT payer, and we need to include VAT and the price with VAT and VAT itself as well.
+Our company grows and becomes a VAT payer. Now we need to include the price with VAT and VAT itself as well.
 
 ```php
 public function calculateTripPrice(array $visitors): array
@@ -210,6 +195,8 @@ We've just turned a single `float` type we could 100 % trust into a `mixed[]` ar
 ```
 
 <br>
+
+### How to improve the code?
 
 To save the hope and other wishful thinking, we can use a **result value object**:
 
@@ -244,13 +231,15 @@ public function calculateTripPrice(array $visitors): CalculationResult
 
 ```php
 $calculationResult = $this->calculateTripPrice($visitors);
+
+// all of these are 100 % floats
+$calculationResult->getPrice();
+$calculationResult->getPriceWithVat();
+$calculationResult->getPriceVat();
+
 ```
 
 ## 👍
-
-<br>
-
-It's quite a common practice in analysis tools like Rector and PHPStan, so we don't have to worry about dozens of array metadata but have a single object with 3 typed properties.
 
 <br>
 
@@ -261,6 +250,8 @@ If we have `string` names of GPT models, it would be easy to validate it:
 ```php
 \Webmozart\Assert\Assert::allString($gptModels);
 ```
+
+<br>
 
 As the project grows, we want to add their release date and company:
 
@@ -291,11 +282,15 @@ Assert::allDate($gptModels['release_date']);
 
  <br>
 
-That's a mess, and we must repeat it every time we use the `$gptModels` array. I'll do this once to make my IDE happy and then ignore errors in PHPStan.
+**That's a mess**, and we must repeat it every time we use the `$gptModels` array. I'll do this once to make my IDE happy and then ignore errors in PHPStan.
+
+<br>
 
 The solution must be **reliable and simple at the same time**.
 
 <br>
+
+### How to improve the code?
 
 Let's switch to a value object:
 
@@ -363,13 +358,16 @@ We can't be sure what we get back when we call the method:
 $routeData = $this->routeMapper->crateRouteData();
 ```
 
-We have to check it every time we use it, and anyone can break the code anytime as it's always an `array`.
+We have to check it every time we use it.
 
 **This creates a problem** for you, PHP tooling, and IDE. We work again with the `mixed[]` type in the place where the result is returned. We've just removed all the traffic signs from our codebase.
 
 <br>
 
+### How to improve the code?
+
 Let's avoid these problems once and for all. It's clear that we don't work with *a list of single-type items*, e.g., route names, but **with a data structure**.
+
 This is a great candidate to **switch to strict-typed value object**:
 
 ```php

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "138e6355a354d64f302e286f7ddd2ece",
+    "content-hash": "a96d9fb5c599a38f230b687975be5054",
     "packages": [
         {
             "name": "brick/math",
@@ -7708,63 +7708,6 @@
                 }
             ],
             "time": "2023-08-12T10:34:57+00:00"
-        },
-        {
-            "name": "tomasvotruba/unused-public",
-            "version": "0.3.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TomasVotruba/unused-public.git",
-                "reference": "8b603471fe55d1082aa6201471c6b76146c27cdc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/unused-public/zipball/8b603471fe55d1082aa6201471c6b76146c27cdc",
-                "reference": "8b603471fe55d1082aa6201471c6b76146c27cdc",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.10.19",
-                "webmozart/assert": "^1.11"
-            },
-            "type": "phpstan-extension",
-            "extra": {
-                "phpstan": {
-                    "includes": [
-                        "config/extension.neon"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TomasVotruba\\UnusedPublic\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Detect unused public properties, constants and methods in your code",
-            "keywords": [
-                "phpstan-extension",
-                "static analysis"
-            ],
-            "support": {
-                "issues": "https://github.com/TomasVotruba/unused-public/issues",
-                "source": "https://github.com/TomasVotruba/unused-public/tree/0.3.5"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/rectorphp",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/tomasvotruba",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-09-21T20:46:14+00:00"
         }
     ],
     "aliases": [],
