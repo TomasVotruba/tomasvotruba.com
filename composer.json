@@ -20,13 +20,11 @@
         "phpstan/extension-installer": "^1.3",
         "phpstan/phpstan": "^1.10",
         "phpstan/phpstan-webmozart-assert": "^1.2",
-        "phpunit/phpunit": "^10.3",
+        "phpunit/phpunit": "^10.5",
         "rector/rector": "dev-main",
         "symplify/easy-coding-standard": "^12.0",
         "symplify/phpstan-extensions": "^11.3",
         "tomasvotruba/bladestan": "^0.4.1",
-        "tomasvotruba/lines": "^0.5",
-        "tomasvotruba/type-coverage": "^0.2",
         "tomasvotruba/unused-public": "^0.3"
     },
     "autoload": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73b993b8ef85308202237710cfa31ecf",
+    "content-hash": "138e6355a354d64f302e286f7ddd2ece",
     "packages": [
         {
             "name": "brick/math",
@@ -7708,106 +7708,6 @@
                 }
             ],
             "time": "2023-08-12T10:34:57+00:00"
-        },
-        {
-            "name": "tomasvotruba/lines",
-            "version": "0.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TomasVotruba/lines.git",
-                "reference": "2a57d3dd7614f926dc84b04bcb6eb72141d89aaa"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/lines/zipball/2a57d3dd7614f926dc84b04bcb6eb72141d89aaa",
-                "reference": "2a57d3dd7614f926dc84b04bcb6eb72141d89aaa",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "bin": [
-                "bin/lines",
-                "bin/lines.php"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Measuring the size of PHP project",
-            "support": {
-                "issues": "https://github.com/TomasVotruba/lines/issues",
-                "source": "https://github.com/TomasVotruba/lines/tree/0.5.0"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/rectorphp",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/tomasvotruba",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-08-23T07:55:53+00:00"
-        },
-        {
-            "name": "tomasvotruba/type-coverage",
-            "version": "0.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/TomasVotruba/type-coverage.git",
-                "reference": "a152ac431b2312ec173f3093a628ff988b7ed10f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/type-coverage/zipball/a152ac431b2312ec173f3093a628ff988b7ed10f",
-                "reference": "a152ac431b2312ec173f3093a628ff988b7ed10f",
-                "shasum": ""
-            },
-            "require": {
-                "nette/utils": "^3.2 || ^4.0",
-                "php": "^7.2 || ^8.0",
-                "phpstan/phpstan": "^1.9.3"
-            },
-            "type": "phpstan-extension",
-            "extra": {
-                "phpstan": {
-                    "includes": [
-                        "config/extension.neon"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TomasVotruba\\TypeCoverage\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Measure type coverage of your project",
-            "keywords": [
-                "phpstan-extension",
-                "static analysis"
-            ],
-            "support": {
-                "issues": "https://github.com/TomasVotruba/type-coverage/issues",
-                "source": "https://github.com/TomasVotruba/type-coverage/tree/0.2.1"
-            },
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/rectorphp",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/tomasvotruba",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-08-27T10:33:51+00:00"
         },
         {
             "name": "tomasvotruba/unused-public",
