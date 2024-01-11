@@ -70,7 +70,7 @@ This book shares a few stories that I could personally relate to. I felt great t
 
 I've enjoyed this book so much. Walter keeps his high standard of great investigative stories I know from *Innovators*. The third of this book is about childhood challenges with the leading role of an abusive father, the other third is about coaching and mentoring people around, and the last third is another point of view on what we know from the media. As Lex often states, childhood trauma makes great leaders.
 
-Looking for an effective solution is a matter of will, focus, and emotional challenges: what you believe in wh, at is possible, and what matters. It's state-of-the-art coaching. What is our goal, how can we get there as fast as possible, and how can we make it cheap and easy to replicate in the future?
+Looking for an effective solution is a matter of will, focus, and emotional challenges: what you believe in what is possible, and what matters. It's state-of-the-art coaching. What is our goal, how can we get there as fast as possible, and how can we make it cheap and easy to replicate in the future?
 
 Nevertheless, it's a fantastic journey, and I'm eager to see what Elon is bringing to the world table next year.
 

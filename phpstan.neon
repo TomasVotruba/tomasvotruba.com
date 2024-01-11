@@ -19,3 +19,6 @@ parameters:
         -
             message: '#Cannot call method getDate\(\) on App\\ValueObject\\FuelPurchase\|null#'
             path: app/ValueObject/CarReport.php
+
+        # will be solved most likely once Larastan is updated to Laravel 11 conventions
+        - '#Call to an undefined method Illuminate\\Contracts\\(.*?)|Illuminate\\#'
