@@ -26,6 +26,8 @@ jobs:
                             yarn install
                             yarn build
 
+                            php artisan migrate --force
+
                             vendor/bin/phpunit
 
         name: ${{ matrix.actions.name }}
