@@ -16,4 +16,4 @@ yarn build
 # since Laravel 11 ↓
 
 # needed for clear:cache to work
-php artisan migrate --database=sqlite
+php artisan migrate --force

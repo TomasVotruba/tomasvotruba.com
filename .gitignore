@@ -19,3 +19,5 @@ bootstrap/cache/*
 
 # frontend
 yarn-error.log
+
+database/database.sqlite
