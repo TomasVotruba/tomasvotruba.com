@@ -46,9 +46,7 @@
                 </div>
                 @if ($post->getUpdatedMessage())
                     <div class="card-body pb-2">
-                        <x-markdown>
-                            {{ $post->getUpdatedMessage() }}
-                        </x-markdown>
+                        {!! markdown($post->getUpdatedMessage()) !!}
                     </div>
                 @endif
             </div>
@@ -58,15 +56,11 @@
 
         <div class="card card-bigger mb-5">
             <div class="card-body p-4">
-                <x-markdown>
-                    {{ $post->getPerex() }}
-                </x-markdown>
+                {!! markdown($post->getPerex()) !!}
             </div>
         </div>
 
-        <x-markdown>
-            {!! $post->getContent() !!}
-        </x-markdown>
+        {!! markdown($post->getContent()) !!}
 
         <br>
 

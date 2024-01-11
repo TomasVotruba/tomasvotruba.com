@@ -2,15 +2,16 @@
 
 declare(strict_types=1);
 
-function fast_markdown(string $markdownContents): string
-{
-    /** @var Parsedown $parsedown */
-    $parsedown = app(Parsedown::class);
+// @see https://github.com/thephpleague/commonmark
 
-    return $parsedown->parse($markdownContents);
-}
+use League\CommonMark\GithubFlavoredMarkdownConverter;
 
-function nice_number(float $number): string
+function markdown(string $contents): Stringable
 {
-    return number_format($number, 2, ',', ' ');
+    $markdownConverter = new GithubFlavoredMarkdownConverter([
+        'html_input' => 'strip',
+        'allow_unsafe_links' => false,
+    ]);
+
+    return $markdownConverter->convert($contents);
 }
