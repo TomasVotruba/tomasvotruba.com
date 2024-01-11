@@ -8,7 +8,7 @@ composer install
 yarn install
 
 # create env file
-cp .env.local.dist .env
+cp .env.local .env
 
 # create the manifest.json file
 yarn build
