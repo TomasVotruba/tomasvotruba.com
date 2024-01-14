@@ -40,6 +40,7 @@
         pre code.hljs {
             border-radius: .6em;
             line-height: 1.6em;
+            margin: 1.2em 0;
         }
     </style>
 
