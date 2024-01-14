@@ -2,46 +2,43 @@
 id: 111
 title: "How to Migrate From PHP_CodeSniffer to ECS in 7 Steps"
 perex: |
-    Last year, I helped [Shopsys Coding Standards](https://github.com/shopsys/coding-standards) and [LMC PHP Coding Standard](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to ECS.
+    Last year, I helped [Shopsys CS](https://github.com/shopsys/coding-standards) and [LMC CS](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to ECS.
 
+    There are a few simple A → B changes, but one has to know about them or will get stuck.
 
-    There are **a few simple A → B changes**, but one has to know about them or will get stuck.
+    Do you also use PHP_CodeSniffer and give it ECS a try? Today we look at how to migrate step by step.
 
-
-    **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
-
-updated_since: "November 2020"
+updated_since: "January 2023"
 updated_message: |
-    Switch from deprecated `--set` option to `ecs.php` config.
-    Switch **YAML** to **PHP** configuration.
+    Updated with ECS 12 and `ECSConfig::configure()` simple way to work with configs.
 ---
 
-ECS is a tool build on Symfony components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's easy to use from scratch:
+ECS is a PHP CLI tool that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's easy to use from scratch:
 
 ```bash
 composer require symplify/easy-coding-standard --dev
 ```
 
-ECS uses standard Symfony PHP config:
+ECS uses simple PHP config format:
 
 ```php
 // ecs.php
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;
-use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::PSR_12);
-};
+return ECSConfig::configure()
+    ->withPaths([__DIR__ . '/src');
+    ->withPreparedSets(psr12: true);
 ```
 
 And runs as CLI command:
 
 ```bash
-vendor/bin/ecs check src
+vendor/bin/ecs
 ```
 
-But what if you already have PHP_CodeSniffer on your project and want to switch?
+<br>
+
+Do you already have PHP_CodeSniffer on your project and want to switch? Let's jump right into it:
 
 ## 1. From String Codes to Autocompleted Classes
 
@@ -63,20 +60,20 @@ How to do that in EasyCodingStandard? Copy paste the last name `DocComment` and 
 
 ```php
 // ecs.php
-use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symplify\EasyCodingStandard\Config\ECSConfig;
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff::class;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(DocCommentSniff::class);
-};
+return ECSConfig::configure()
+    ->withRules([
+        DocCommentSniff::class
+    ]);
 ```
 
 No more typos with strong over string typing.
 
-## 2. From `@codingStandardsIgnoreStart` to `skip` Parameter
+## 2. From `@codingStandardsIgnoreStart` to `withSkip()` Method
 
-If you'd like to skip nasty code from being analyzed, you'd use `@codingStandardsIgnoreStart` in PHP_CodeSniffer.
+If you'd like to skip some code from being analyzed, you'd use `@codingStandardsIgnoreStart` in PHP_CodeSniffer.
 
 ```php
 #  packages/framework/src/Component/Constraints/EmailValidator.php
@@ -91,19 +88,17 @@ private function isEmail($value)
 
 One big cons of this is **that all sniffs will skip this code**, not just one. So even if here we need to only allow double quotes `"`, all other checks will miss it.
 
-To skip this in EasyCodingStandard just use `skip` parameter:
+In ECS put this into `withSkip()` method:
 
 ```php
 // ecs.php
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 use PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SKIP, [
+return ECSConfig::configure()
+    ->withSkip([
         DoubleQuoteUsageSniff::class => [
-            __DIR__ . '/packages/framework/src/Component/Constraints/EmailValidator.php',
+            __DIR__ . '/src/Component/Constraints/EmailValidator.php',
 
             // or whole directory
             __DIR__ . '/packages/framework/src/Component',
@@ -112,7 +107,6 @@ return function (ContainerConfigurator $containerConfigurator): void {
             __DIR__ . '/packages/*/src/Component',
         ]
     ]);
-};
 ```
 
 ## 3. From `<severity>0</severity>` and `<exclude name="...">` to `skip` Parameter
@@ -133,26 +127,24 @@ or
 </rule>
 ```
 
-In EasyCodingStandard, we put that again under `skip` parameter in format `<Sniff>.<CodeName>`:
+In ECS, we put that again under `skip()` parameter in format `<Sniff>.<CodeName>`:
 
 ```php
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;
+// ecs.php
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-    $parameters->set(Option::SKIP, [
-        DocCommentSniff::class . '.ContentAfterOpen' => null,
+return ECSConfig::configure()
+    ->withSkip([
+        DocCommentSniff::class . '.ContentAfterOpen'
     ]);
-};
 ```
 
-For all other `skip` options, [see README](https://github.com/symplify/easy-coding-standard/#ignore-what-you-cant-fix).
+[Check README](https://github.com/easy-coding-standard/easy-coding-standard#less-common-options) for more options to use in skip.
 
 <br>
 
-In case you need to **skip the whole sniff**:
+Do you **skip the whole sniff**?
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -160,48 +152,42 @@ In case you need to **skip the whole sniff**:
     <rule ref="Generic.Commenting.DocComment">
         <severity>0</severity>
     </rule>
-</ruleset>
-```
 
-or
+    <!-- or -->
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="ruleset">
     <rule ref="ruleset.xml">
         <exclude name="Generic.Commenting.DocComment"/>
     </rule>
 </ruleset>
 ```
 
-**Put it under `skip` parameter:**
+**Put it under `withSkip()` method:**
 
 ```php
+// ecs.php
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\DocCommentSniff;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $parameters = $containerConfigurator->parameters();
-
-    $parameters->set(Option::SKIP, [
-        DocCommentSniff::class => null,
+return ECSConfig::configure()
+    ->withSkip([
+        DocCommentSniff::class,
     ]);
-};
 ```
 
 ## 4. From XML to PHP Config Paths
 
 These names are looked for in the root directory by PHP_CodeSniffer:
 
-```bash
-- .phpcs.xml
-- phpcs.xml
-- .phpcs.xml.dist
-- phpcs.xml.dist
-```
+- `.phpcs.xml`
+- `phpcs.xml`
+- `.phpcs.xml.dist`
+- `phpcs.xml.dist`
 
-**And by ECS just plain `ecs.php` PHP file**
+<br>
+
+**In ECS we use single `ecs.php` file**
+
+<br>
 
 What about non-default locations or names?
 
@@ -227,31 +213,22 @@ From XML configuration in PHP_CodeSniffer:
     <rule ref="Generic.Metrics.CyclomaticComplexity">
         <properties>
             <property name="complexity" value="13"/>
-            <property name="absoluteComplexity" value="13"/>
         </properties>
     </rule>
 </ruleset>
 ```
 
-**to PHP parameters in ECS:**
+**to `withConfiguredRule()` method in ECS:**
 
 ```php
-<?php
-
-declare(strict_types=1);
-
 // ecs.php
-
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Metrics\CyclomaticComplexitySniff;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-
-    $services->set(CyclomaticComplexitySniff::class)
-        ->property('complexity', 13)
-        ->property('absoluteComplexity', 13);
-};
+return ECSConfig::configure()
+    ->withConfiguredRule(CyclomaticComplexitySniff::class, [
+        'complexity' => 13,
+    ]);
 ```
 
 ## 6. From Severity and Warning to Just Errors
@@ -285,28 +262,19 @@ Saying that you don't need to fill values for warning properties.
 Do you need to fix the code? From 2 commands in PHP_CodeSniffer:
 
 ```bash
-vendor/bin/phpcs /path/to/project --standard=custom/location.xml
-vendor/bin/phpcbf /path/to/project --standard=custom/location.xml
+vendor/bin/phpcs /path/to/project
+vendor/bin/phpcbf /path/to/project
 ```
 
-to 1 in EasyCodingStandard:
+...to 1 in ECS:
 
 ```bash
-vendor/bin/ecs check /path/to/project --config custom/location.php
-vendor/bin/ecs check /path/to/project --config custom/location.php --fix
+vendor/bin/ecs check /path/to/project
+vendor/bin/ecs check /path/to/project --fix
 ```
 
-<br>
-
-## Give it a Try...
-
-...and you won't regret it. Sylius, [PestPHP](https://github.com/pestphp/drift), LMC, Shopsys, Nette did and never came back.
+That's it!
 
 <br>
 
-Did I forget a step that you had to fight with? **Please, let me know in the comments or just send PR to this post to add it**, so we help other readers.
-
-<br>
-<br>
-
-In the next post we look on [how to migrate from PHP CS Fixer](/blog/2018/06/07/how-to-migrate-from-php-cs-fixer-to-easy-coding-standard/)!
+Happy coding!
