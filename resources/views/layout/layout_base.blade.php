@@ -47,6 +47,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/diff.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
@@ -60,6 +61,9 @@
                 hljs.highlightBlock(block);
             });
             document.querySelectorAll('pre code.language-diff').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+            document.querySelectorAll('pre code.language-xml').forEach((block) => {
                 hljs.highlightBlock(block);
             });
         });

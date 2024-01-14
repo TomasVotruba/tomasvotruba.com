@@ -2,26 +2,24 @@
 id: 111
 title: "How to Migrate From PHP_CodeSniffer to ECS in 7 Steps"
 perex: |
-    Last year, I helped [Shopsys Coding Standards](https://github.com/shopsys/coding-standards) and [LMC PHP Coding Standard](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to ECS.
+    Last year, I helped [Shopsys CS](https://github.com/shopsys/coding-standards) and [LMC CS](https://github.com/lmc-eu/php-coding-standard) to migrate from PHP_CodeSniffer to ECS.
 
+    There are a few simple A → B changes, but one has to know about them or will get stuck.
 
-    There are **a few simple A → B changes**, but one has to know about them or will get stuck.
-
-
-    **Do you also use PHP_CodeSniffer and give it EasyCodingStandard a try**? Today we look at how to migrate step by step.
+    Do you also use PHP_CodeSniffer and give it ECS a try? Today we look at how to migrate step by step.
 
 updated_since: "January 2023"
 updated_message: |
     Updated with ECS 12 and `ECSConfig::configure()` simple way to work with configs.
 ---
 
-ECS is a tool build on Symfony components that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's easy to use from scratch:
+ECS is a PHP CLI tool that [combines PHP_CodeSniffer and PHP CS Fixer](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). It's easy to use from scratch:
 
 ```bash
 composer require symplify/easy-coding-standard --dev
 ```
 
-ECS uses simple config:
+ECS uses simple PHP config format:
 
 ```php
 // ecs.php
@@ -38,7 +36,9 @@ And runs as CLI command:
 vendor/bin/ecs
 ```
 
-But what if you already have PHP_CodeSniffer on your project and want to switch?
+<br>
+
+Do you already have PHP_CodeSniffer on your project and want to switch? Let's jump right into it:
 
 ## 1. From String Codes to Autocompleted Classes
 
@@ -98,7 +98,7 @@ use PHP_CodeSniffer\Standards\Squiz\Sniffs\Strings\DoubleQuoteUsageSniff;
 return ECSConfig::configure()
     ->withSkip([
         DoubleQuoteUsageSniff::class => [
-            __DIR__ . '/packages/framework/src/Component/Constraints/EmailValidator.php',
+            __DIR__ . '/src/Component/Constraints/EmailValidator.php',
 
             // or whole directory
             __DIR__ . '/packages/framework/src/Component',
@@ -178,14 +178,16 @@ return ECSConfig::configure()
 
 These names are looked for in the root directory by PHP_CodeSniffer:
 
-```bash
-- .phpcs.xml
-- phpcs.xml
-- .phpcs.xml.dist
-- phpcs.xml.dist
-```
+- `.phpcs.xml`
+- `phpcs.xml`
+- `.phpcs.xml.dist`
+- `phpcs.xml.dist`
 
-**And by ECS just plain `ecs.php` PHP file**
+<br>
+
+**In ECS we use single `ecs.php` file**
+
+<br>
 
 What about non-default locations or names?
 
