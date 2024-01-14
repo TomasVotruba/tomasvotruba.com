@@ -1,6 +1,6 @@
 # [tomasvotruba.com](https://tomasvotruba.com)
 
-Personal Website running on Laravel 10
+Personal Website running on Laravel 11
 
 <br>
 
@@ -18,6 +18,6 @@ composer install
 php artisan serve
 ```
 
-And open [http://localhost:8000](localhost:8000) in your browser.
+And open [`http://localhost:8000`](localhost:8000) in your browser.
 
 That's all!
