@@ -11,9 +11,7 @@ use Rector\TypeDeclaration\Rector\StmtsAwareInterface\DeclareStrictTypesRector;
 return function (RectorConfig $rectorConfig): void {
     $rectorConfig->importNames();
 
-    $rectorConfig->rules([
-        DeclareStrictTypesRector::class,
-    ]);
+    $rectorConfig->rules([DeclareStrictTypesRector::class]);
 
     $rectorConfig->sets([
         PHPUnitSetList::PHPUNIT_100,
@@ -26,9 +24,5 @@ return function (RectorConfig $rectorConfig): void {
         LevelSetList::UP_TO_PHP_81,
     ]);
 
-    $rectorConfig->paths([
-        __DIR__ . '/app',
-        __DIR__ . '/config',
-        __DIR__ . '/tests'
-    ]);
+    $rectorConfig->paths([__DIR__ . '/app', __DIR__ . '/config', __DIR__ . '/tests']);
 };
