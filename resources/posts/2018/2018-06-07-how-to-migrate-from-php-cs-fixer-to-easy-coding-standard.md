@@ -38,7 +38,7 @@ Do you use PHP-CS-Fixer on your project and want to switch? Let's jump right int
 
 ## 1. From String Codes to Autocompleted Classes
 
-You use string references like `strict_types` in your `.php_cs` file. You need to remember them, [copy paste them from README](https://github.com/friendsofphp/php-cs-fixer) and copy-paste them correctly.
+You use string references like `strict_types` in your `.php_cs` file. You need to remember them, [copy paste them from README](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/master/doc/rules/index.rst) and copy-paste them correctly.
 
 ```php
 return PhpCsFixer\Config::create()
