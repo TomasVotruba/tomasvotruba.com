@@ -84,7 +84,7 @@ We had to automate it.
 
 The first step to automation is to merge rule documentation and rule into a single place. There is no markdown file, just a PHP code rule.
 
-We got inspired in [php-cs-fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/ae6fceca37615fcd08183e9c3cfb8f296d2de8c2/src/Fixer/Phpdoc/PhpdocTypesFixer.php#L87) where `RuleDefinition` is part of every rule.
+We got inspired in [php-cs-fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/ae6fceca37615fcd08183e9c3cfb8f296d2de8c2/src/Fixer/Phpdoc/PhpdocTypesFixer.php#L87) where `RuleDefinition` is part of every rule.
 
 <br>
 

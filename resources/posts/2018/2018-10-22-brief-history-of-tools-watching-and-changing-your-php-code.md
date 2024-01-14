@@ -21,7 +21,7 @@ The first tool that made it to the mainstream of coding standard tools was creat
 
 Greg has been maintaining the repository for last **11 years** (at least). I don't know anyone else who would take care of his project for such a long time without stepping back - **much respect**!
 
-### [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) from Symfony
+### [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) from Symfony
 
 <span class="badge badge-light">Tokens</span>
 <span class="badge badge-success">Modifies Code</span>

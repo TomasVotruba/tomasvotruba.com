@@ -68,7 +68,7 @@ return function (RectorConfig $rectorConfig): void {
     Check the pull-request
 </a>
 
-The next one started as issue [PHP CS Fixer in January 2016 (if not earlier)](https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/1793). The story [continues in next issue](https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/2062), but final fixer is not in near sight.
+The next one started as issue [PHP CS Fixer in January 2016 (if not earlier)](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues/1793). The story [continues in next issue](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues/2062), but final fixer is not in near sight.
 
 <img src="/assets/images/posts/2018/symplify-3-checkers/long-time.png" class="img-thumbnail">
 

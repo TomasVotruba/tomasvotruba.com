@@ -33,7 +33,7 @@ There are tools that convert `@param` and `@return` doc to types today - like co
 
 But its **breaks your code** because it **only works with tokens of the current file**. It's like robot seeing the text by *e a c h c h a r* instead of understanding a sentence in a paragraph context.
 
-<a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/4056#issuecomment-442264393" class="text-center">
+<a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/pull/4056#issuecomment-442264393" class="text-center">
     <img src="/assets/images/posts/2018/rocket-typehints/break.png" class="img-thumbnail">
 </a>
 

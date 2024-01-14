@@ -1,6 +1,6 @@
 ---
 id: 46
-title: "How to Write Custom Sniff for Code Sniffer 3.3"
+title: "How to Write Custom Sniff for Code&nbsp;Sniffer 3+"
 perex: |
     When I give talks about coding standards, I ask people 2 questions: do you use coding standards? Do you write your own sniffs? On average, above 50 % uses it, but only 1-2 people wrote their own sniff.
 
@@ -11,10 +11,9 @@ perex: |
     I Google then and found outdated or complicated sources, so I've decided to write down a reference post for those, who want to start with sniffs.
     Let's look what will show all you need (and nothing more) to <strong>know to write your first sniff</strong>.
 
-updated_since: "August 2020"
+updated_since: "January 2023"
 updated_message: |
-    Updated with **EasyCodingStandard 5**, Neon to YAML migration and `checkers` to `services` migration.<br>
-    Updated ECS YAML to PHP configuration since **ECS 8**.
+    Updated with ECS 12 and `ECSConfig::configure()` simple way to work with configs.
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
@@ -247,16 +246,17 @@ You can find [final Sniff on Github](https://github.com/symplify/symplify/blob/e
 
 ## How to run it?
 
-With [ECS](https://github.com/symplify/easy-coding-standard) put the class to `ecs.php`:
+With [ECS](https://github.com/symplify/easy-coding-standard) register the checker class in `ecs.php`:
 
 ```php
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+// ecs.php
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 use Symplify\CodingStandard\Sniffs\Naming\ExceptionNameSniff;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(ExceptionNameSniff::class);
-};
+return ECSConfig::configure()
+    ->withRules([
+        ExceptionNameSniff::class,
+    ]);
 ```
 
 And run:

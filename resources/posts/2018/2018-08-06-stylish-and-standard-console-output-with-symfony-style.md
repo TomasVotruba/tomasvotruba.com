@@ -27,7 +27,7 @@ try {
 
 <br>
 
-There is also a advanced use of native `OutputInterface` in command like [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/1c10240da97479274fd40a136c3857ff94f7f93f/src/Console/Command/FixCommand.php#L236-L239):
+There is also a advanced use of native `OutputInterface` in command like [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/1c10240da97479274fd40a136c3857ff94f7f93f/src/Console/Command/FixCommand.php#L236-L239):
 
 ```php
 <?php

@@ -23,7 +23,7 @@ It's not that PHP projects didn't need to be updated until 2017. I surely could 
 
 **Many years ago [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) was born** by [Greg Sherwood](https://gregsherwood.blogspot.cz/search/label/PHP_CodeSniffer) from Australia. Guess how long ago? [In 2006](https://gregsherwood.blogspot.cz/2006/12/if-not-test-first-then-test-really-soon.html)! Tool that checks your coding standard, tabs and spaces, brackets and quotes. First of it's kind to be mainstream in PHP community.
 
-**It was followed by [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer)** with [it's first release in 2014](http://fabien.potencier.org/php-cs-fixer-finally-reaches-version-1-0.html) by [Fabien Potencier](http://fabien.potencier.org). Did you know the first script [had only 106 lines](https://gist.github.com/fabpot/3f25555dce956accd4dd)?
+**It was followed by [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer)** with [it's first release in 2014](http://fabien.potencier.org/php-cs-fixer-finally-reaches-version-1-0.html) by [Fabien Potencier](http://fabien.potencier.org). Did you know the first script [had only 106 lines](https://gist.github.com/fabpot/3f25555dce956accd4dd)?
 
 I use daily both of these tools, [they're both awesome and work best together](/blog/2017/05/03/combine-power-of-php-code-sniffer-and-php-cs-fixer-in-3-lines/). Both of them fix the code for you, so you can sleep or have a coffee instead.
 

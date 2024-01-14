@@ -50,7 +50,7 @@ That changed. New property [`$reportWarningsSniffs` in `Symplify\EasyCodingStand
     Check the PR #474
 </a>
 
-Inspired by [PHP CS Fixer](https://github.com/friendsofphp/php-cs-fixer) we've decided to **use files diffs everywhere wherever it saves user daunting reading**.
+Inspired by [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) we've decided to **use files diffs everywhere wherever it saves user daunting reading**.
 
 When a **fixable sniff found an error**, ECS reported it like this:
 

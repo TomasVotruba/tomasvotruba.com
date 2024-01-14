@@ -1,16 +1,16 @@
 ---
 id: 47
-title: "How to Write Custom Fixer for PHP CS Fixer 3"
+title: "How to Write Custom Fixer for PHP&nbsp;CS&nbsp;Fixer 3"
 perex: |
     You already know [how coding standard tools work with tokens and how to write a Sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/).
 
 
-     Today we'll explore another tool - [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and we get **from finding the smelly spot to fixing it**.
+     Today we'll explore another tool - [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) and we get **from finding the smelly spot to fixing it**.
 
 
-updated_since: "October 2021"
+updated_since: "January 2023"
 updated_message: |
-    Updated ECS PHP configuration since **ECS 8** and PHP CS Fixer 3.
+    Updated with ECS 12 and `ECSConfig::configure()` simple way to work with configs.
 ---
 
 **Are you new to PHP Coding Standard Tools**? You can read intro [How PHP Coding Standard Tools Actually Work](/blog/2017/07/31/how-php-coding-standard-tools-actually-work/) to grasp the idea behind them. Or [just go on](https://www.youtube.com/watch?v=t99KH0TR-J4&feature=youtu.be&t=16) if you're ready to start...
@@ -28,7 +28,7 @@ Personally I like PHP CS Fixer a bit more, **because of more friendlier API, act
 <div class="text-center">
     <img src="/assets/images/posts/2017/php-cs-fixer-intro/php-cs-fixer-require.png" class="img-thumbnail">
     <br>
-    <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/1c10240da97479274fd40a136c3857ff94f7f93f/composer.json#L16-L33">
+    <a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/1c10240da97479274fd40a136c3857ff94f7f93f/composer.json#L16-L33">
         <code>composer.json</code> from PHP CS Fixer
     </a>
 </div>
@@ -396,14 +396,16 @@ final class ExceptionNameFixer extends FixerInterface
 
 Register fixer in `ecs.php`:
 
-```php
-use App\CodingStandard\Fixer\ExceptionNameFixer;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(ExceptionNameFixer::class);
-};
+```php
+// ecs.php
+use Symplify\EasyCodingStandard\Config\ECSConfig;
+use App\CodingStandard\Fixer\ExceptionNameFixer;
+
+return ECSConfig::configure()
+    ->withRules([
+        ExceptionNameFixer::class,
+    ]);
 ```
 
 And run:
@@ -414,6 +416,6 @@ vendor/bin/ecs check src
 
 That was your first fixer.
 
-Happy fixing!
+<br>
 
-And if you want **more detailed tutorial**, there is one in [official cookbook](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/cookbook_fixers.rst).
+Happy coding!

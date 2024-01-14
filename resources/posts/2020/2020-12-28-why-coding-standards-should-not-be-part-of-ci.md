@@ -82,7 +82,7 @@ Same applies for coding standard:
 +];
 ```
 
-That's why every coding standard rule **should be fixable by default**. Actually, [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) is built on this premise, and each rule is a fixer by default. Good job!
+That's why every coding standard rule **should be fixable by default**. Actually, [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) is built on this premise, and each rule is a fixer by default. Good job!
 
 If it's impossible to come up with a fixable version, a PHPStan rule should handle this case.
 
