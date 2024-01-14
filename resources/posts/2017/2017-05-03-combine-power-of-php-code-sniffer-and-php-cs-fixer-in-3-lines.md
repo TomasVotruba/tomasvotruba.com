@@ -2,17 +2,15 @@
 id: 37
 title: "Combine power of PHP_CodeSniffer and PHP CS Fixer in 3 lines"
 perex: |
-    PHP_CodeSniffer has over **5 381 stars** on Github and **210 default sniffs**,
+    At time of publishing this article, PHP_CodeSniffer has over **5 381 stars** on Github and **210 default sniffs**,
     PHP CS Fixer with **6 467 stars** brings you **160 fixers**.
-
 
     Both powerful tools dealing with coding standards with **huge communities behind them**.
     Can you imagine using them both and actually enjoy it? Today I will show you how.
 
-updated_since: "August 2020"
+updated_since: "January 2023"
 updated_message: |
-    Updated with **ECS 5**, Neon to YAML migration and `checkers` to `services` migration.<br>
-    Updated ECS YAML to PHP configuration since **ECS 8**.
+    Updated with ECS 12 and `ECSConfig::configure()` simple way to work with configs.
 ---
 
 <div class="text-center">
@@ -24,31 +22,31 @@ updated_message: |
 Let's say we want to check arrays. We add first *checker* that requires short PHP 5.4 `[]` syntax:
 
 ```php
+// ecs.php
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(DisallowLongArraySyntaxSniff::class);
-};
-
+return ECSConfig::configure()
+    ->withRules([
+        DisallowLongArraySyntaxSniff::class,
+    ]);
 ```
-
 
 Great start. Then we want to check for trailing commas, so every line has them.
 
 So add one more checker:
 
 ```php
+// ecs.php
+use Symplify\EasyCodingStandard\Config\ECSConfig;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff;
 use PhpCsFixer\Fixer\ArrayNotation\TrailingCommaInMultilineArrayFixer;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $services = $containerConfigurator->services();
-    $services->set(DisallowLongArraySyntaxSniff::class);
-    $services->set(TrailingCommaInMultilineArrayFixer::class);
-};
+return ECSConfig::configure()
+    ->withRules([
+        DisallowLongArraySyntaxSniff::class,
+        TrailingCommaInMultilineArrayFixer::class,
+    ]);
 ```
 
 Great job! **You have just combined PHP_CodeSniffer and PHP CS Fixer in 3 lines.**
@@ -75,13 +73,16 @@ Do you use PHPStorm? Just use PHP to autocomplete everything as you're used to s
 
 **No more looking to documentation**, what string matches what sniff or fixer, if there are any checkers for arrays or debugging typos.
 
-### 3. Run it & Fix it
+### 3. Run it
 
 ```bash
 vendor/bin/ecs check src
+```
 
-# ...
+### 4. Fix it
 
+
+```bash
 vendor/bin/ecs check src --fix
 ```
 
@@ -90,6 +91,8 @@ vendor/bin/ecs check src --fix
 </div>
 
 That's all for short ECS intro.
+
+<br>
 
 Do you want to know more? Learn [how to write own sniff](/blog/2017/07/17/how-to-write-custom-sniff-for-code-sniffer-3/) or [even better - a fixer](/blog/2017/07/24/how-to-write-custom-fixer-for-php-cs-fixer-24/).
 

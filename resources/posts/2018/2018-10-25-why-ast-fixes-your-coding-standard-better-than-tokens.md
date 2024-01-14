@@ -16,7 +16,7 @@ PHP CS Fixer can upgrade to few features of new PHP using just `token_get_all()`
 <div class="text-center">
     <img src="/assets/images/posts/2018/ast-tokens/php-cs-fixer-migrate.png" class="img-thumbnail">
 
-    <p><a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/03e13fb91c775a151dc57ae51e80ba3f2abe7da6/src/RuleSet.php#L209-L240"><code>RuleSet.php</code></a></p>
+    <p><a href="https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/blob/03e13fb91c775a151dc57ae51e80ba3f2abe7da6/src/RuleSet.php#L209-L240"><code>RuleSet.php</code></a></p>
 </div>
 
 

@@ -171,7 +171,7 @@ So instead, *Symplify 6* adds better system to pass collected services of certai
 
 ### 7. ~~RemoveUselessDocBlockFixer~~ → `NoSuperfluousPhpdocTagsFixer`
 
-`RemoveUselessDocBlockFixer` was removed, since [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) now provides `NoSuperfluousPhpdocTagsFixer` with similar features:
+`RemoveUselessDocBlockFixer` was removed, since [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) now provides `NoSuperfluousPhpdocTagsFixer` with similar features:
 
 ```diff
  // ecs.php

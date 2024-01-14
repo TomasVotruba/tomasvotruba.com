@@ -78,7 +78,7 @@ class RemoveUselessDocBlockFixer
 }
 ```
 
-That's a basic workflow. In Easy Coding Standard 3 and below, checkers have no constructor injection, only `new` and `::static` methods were allowed. I took this inspiration from [PHP CS Fixer where `new` is a first class citizen](https://github.com/FriendsOfPHP/PHP-CS-Fixer/search?utf8=%E2%9C%93&q=new+TokensAnalyzer&type=). There is no DI container, just static instantiations. Maybe that should warn me, but I said to myself "it's a popular package, it has new fixers from time to time and it's tagged once a while, it must be good and they know what they're doing".
+That's a basic workflow. In Easy Coding Standard 3 and below, checkers have no constructor injection, only `new` and `::static` methods were allowed. I took this inspiration from [PHP CS Fixer where `new` is a first class citizen](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/search?utf8=%E2%9C%93&q=new+TokensAnalyzer&type=). There is no DI container, just static instantiations. Maybe that should warn me, but I said to myself "it's a popular package, it has new fixers from time to time and it's tagged once a while, it must be good and they know what they're doing".
 
 So back to the code:
 

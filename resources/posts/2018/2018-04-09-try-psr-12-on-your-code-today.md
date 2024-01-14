@@ -7,24 +7,24 @@ perex: |
 
     Try PSR-12 today and see, how it works for your code.
 
-
+updated_since: "January 2023"
+updated_message: |
+    Updated with ECS 12 and `ECSConfig::configure()` simple way to work with configs.
 ---
 
 ## PSR-12 meets ECS
 
 Someone on [Reddit referred a PSR Google Group](https://www.reddit.com/r/PHP/comments/84vafc/phpfig_psr_status_update), where they **asked for real-life PSR-12 ruleset implementation in a coding standard tool**. Korvin Szanto already prepared 1st implementation for PHP CS Fixer, at the moment [only as a commit in](https://github.com/KorvinSzanto/PHP-CS-Fixer/commit/c0b642c186d8f666a64937c2d37442dc77f6f393) the fork.
 
-I put the ruleset to `PSR_12` set in ECS, so you can use it:
+I've added PSR 12 set to ECS, so you can use it:
 
 ```php
 // ecs.php
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use Symplify\EasyCodingStandard\ValueObject\Option;
-use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+use Symplify\EasyCodingStandard\Config\ECSConfig;
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Arrays\DisallowLongArraySyntaxSniff;
 
-return function (ContainerConfigurator $containerConfigurator): void {
-    $containerConfigurator->import(SetList::PSR_12);
-};
+return ECSConfig::configure()
+    ->withPreparedSets(psr12: true);
 ```
 
 ## Do You Agree or Disagree with PSR12?
