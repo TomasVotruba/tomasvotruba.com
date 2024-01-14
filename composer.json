@@ -19,7 +19,7 @@
         "phpstan/phpstan-webmozart-assert": "^1.2",
         "phpunit/phpunit": "^10.5",
         "rector/rector": "dev-main",
-        "symplify/easy-coding-standard": "^12.1.4",
+        "symplify/easy-coding-standard": "^12.1.7",
         "symplify/phpstan-extensions": "^11.4",
         "tomasvotruba/bladestan": "^0.5"
     },

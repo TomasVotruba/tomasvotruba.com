@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94dcb59cf8a4ebf84f721759ca75e57b",
+    "content-hash": "5e929ab657b7ec5bf1877bf0b03567e7",
     "packages": [
         {
             "name": "brick/math",
@@ -5853,12 +5853,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "02f3386770cf2d8b028f1aa58747cea72c1ba49c"
+                "reference": "bc8f465840d5704cd6f4bcb82eb2aa4d133a0016"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/02f3386770cf2d8b028f1aa58747cea72c1ba49c",
-                "reference": "02f3386770cf2d8b028f1aa58747cea72c1ba49c",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/bc8f465840d5704cd6f4bcb82eb2aa4d133a0016",
+                "reference": "bc8f465840d5704cd6f4bcb82eb2aa4d133a0016",
                 "shasum": ""
             },
             "require": {
@@ -5902,7 +5902,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-14T00:30:50+00:00"
+            "time": "2024-01-14T17:53:17+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -6821,16 +6821,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "12.1.4",
+            "version": "12.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/easy-coding-standard/easy-coding-standard.git",
-                "reference": "22bf2e05921de7f3092fc4036a12bdd6f18f68b2"
+                "reference": "f23626aba4f103a09c7e33f74f6995d844d63bf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/22bf2e05921de7f3092fc4036a12bdd6f18f68b2",
-                "reference": "22bf2e05921de7f3092fc4036a12bdd6f18f68b2",
+                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/f23626aba4f103a09c7e33f74f6995d844d63bf3",
+                "reference": "f23626aba4f103a09c7e33f74f6995d844d63bf3",
                 "shasum": ""
             },
             "require": {
@@ -6863,7 +6863,7 @@
             ],
             "support": {
                 "issues": "https://github.com/easy-coding-standard/easy-coding-standard/issues",
-                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/12.1.4"
+                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/12.1.7"
             },
             "funding": [
                 {
@@ -6875,7 +6875,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-14T08:46:54+00:00"
+            "time": "2024-01-14T17:55:27+00:00"
         },
         {
             "name": "symplify/phpstan-extensions",
