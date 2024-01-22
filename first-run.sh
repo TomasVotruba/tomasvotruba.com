@@ -10,6 +10,10 @@ yarn install
 # create env file
 cp .env.local .env
 
+chgrp -R www-data database
+chmod -R g+rw database
+mkdir -p storage/framework/{cache,sessions,views}
+
 # create the manifest.json file
 yarn build
 
