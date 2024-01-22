@@ -94,32 +94,6 @@ Again, it's valid to handle it manually with search & replace in PHPStorm.
  }
 ```
 
-But in case your code is not standard and can't be bothered with correct regular expressions, Rector got you covered:
-
-```bash
-composer require rector/rector --dev
-```
-
-Setup `rector.php`:
-
-```php
-use Rector\Symfony\Rector\Class_\ChangeFileLoaderInExtensionAndKernelRector;
-use Rector\Config\RectorConfig;
-
-return function (RectorConfig $rectorConfig): void {
-    $rectorConfig->ruleWithConfiguration(ChangeFileLoaderInExtensionAndKernelRector::class, [
-        ChangeFileLoaderInExtensionAndKernelRector::FROM => 'yaml',
-        ChangeFileLoaderInExtensionAndKernelRector::TO => 'php',
-    ]);
-};
-```
-
-And let Rector handle the boring work:
-
-```bash
-vendor/bin/rector process app src
-```
-
 <br>
 
 That's it! One little tool for you, one big leap for a PHP programmer-kind.
