@@ -8,14 +8,14 @@ perex: |
     If you have 1 config file, you already are on PHP side now. Close this post and enjoy life.
 
 
-    But what if you have 10 or even 100 YAML/XML configs? Are you doing to close down for a weekend to switch your code base?
+    But what if you have 10 or even 100 YAML configs? Are you doing to close down for a weekend to switch your code base?
 
     Or maybe... **5 minute job**?
 
 
-updated_since: "June 2021"
+updated_since: "January 2024"
 updated_message: |
-    Updated Rector YAML to PHP configuration, as current standard. With automated input types.
+    Updated with latest symplify/config-transformer.
 ---
 
 ## Break-Even Automation
@@ -92,32 +92,6 @@ Again, it's valid to handle it manually with search & replace in PHPStorm.
 +        $loader->load(__DIR__ . '/../Resources/config/events.php');
      }
  }
-```
-
-But in case your code is not standard and can't be bothered with correct regular expressions, Rector got you covered:
-
-```bash
-composer require rector/rector --dev
-```
-
-Setup `rector.php`:
-
-```php
-use Rector\Symfony\Rector\Class_\ChangeFileLoaderInExtensionAndKernelRector;
-use Rector\Config\RectorConfig;
-
-return function (RectorConfig $rectorConfig): void {
-    $rectorConfig->ruleWithConfiguration(ChangeFileLoaderInExtensionAndKernelRector::class, [
-        ChangeFileLoaderInExtensionAndKernelRector::FROM => 'yaml',
-        ChangeFileLoaderInExtensionAndKernelRector::TO => 'php',
-    ]);
-};
-```
-
-And let Rector handle the boring work:
-
-```bash
-vendor/bin/rector process app src
 ```
 
 <br>
