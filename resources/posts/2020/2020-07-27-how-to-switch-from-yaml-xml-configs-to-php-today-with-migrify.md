@@ -8,14 +8,14 @@ perex: |
     If you have 1 config file, you already are on PHP side now. Close this post and enjoy life.
 
 
-    But what if you have 10 or even 100 YAML/XML configs? Are you doing to close down for a weekend to switch your code base?
+    But what if you have 10 or even 100 YAML configs? Are you doing to close down for a weekend to switch your code base?
 
     Or maybe... **5 minute job**?
 
 
-updated_since: "June 2021"
+updated_since: "January 2024"
 updated_message: |
-    Updated Rector YAML to PHP configuration, as current standard. With automated input types.
+    Updated with latest symplify/config-transformer.
 ---
 
 ## Break-Even Automation
