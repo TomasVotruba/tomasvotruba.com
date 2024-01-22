@@ -1,6 +1,6 @@
 ---
 id: 271
-title: "How to Switch from YAML/XML Configs to PHP Today with Symplify"
+title: "How to Switch from YAML Configs to PHP Today with Symplify"
 perex: |
     In [previous post](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs/), we looked 10 reasons to switch from YAML to PHP configs. Still asking *why*? I dare you to [disagree with 1 reason there](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs/).
 
