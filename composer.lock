@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e929ab657b7ec5bf1877bf0b03567e7",
+    "content-hash": "8091948690f71efbd6aef327ac0ef950",
     "packages": [
         {
             "name": "brick/math",
@@ -1113,12 +1113,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d7d19b28e2d096ded382cab55e7ce7a5ece98a41"
+                "reference": "a387d12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d7d19b28e2d096ded382cab55e7ce7a5ece98a41",
-                "reference": "d7d19b28e2d096ded382cab55e7ce7a5ece98a41",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a387d12",
+                "reference": "a387d12",
                 "shasum": ""
             },
             "require": {
@@ -1307,7 +1307,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-01-22T22:39:29+00:00"
+            "time": "2024-01-23T00:53:22+00:00"
         },
         {
             "name": "laravel/prompts",
