@@ -96,9 +96,6 @@ That's it!
 Before I even managed to launch the package, Francisco jumped in and gave the CLI output a fresh and sexy look ↓
 
 <br>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just did a PR to add 🍃 Termwind styling to the lines package made by <a href="https://twitter.com/VotrubaT?ref_src=twsrc%5Etfw">@VotrubaT</a> <br><br>Let me know what do you think! 👊<a href="https://t.co/fFRVYbpzj5">https://t.co/fFRVYbpzj5</a> <a href="https://t.co/Og9LrDUHSP">pic.twitter.com/Og9LrDUHSP</a></p>&mdash; Francisco Madeira (@xiCO2k) <a href="https://twitter.com/xiCO2k/status/1689052931125854208?ref_src=twsrc%5Etfw">August 8, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <br>
 
 Give the *lines* a try, and if you want to improve the package, [just go for it](https://github.com/tomasVotruba/lines)!

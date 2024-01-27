@@ -120,5 +120,3 @@ I spent some money, but I got much more joy, a feeling of community, and fantast
 <br>
 
 Happy giving!
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

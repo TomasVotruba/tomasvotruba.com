@@ -141,7 +141,6 @@ I realized I made the project that worked before, **but doesn't anymore**. And t
 Before all this really happened and I made sense to it, we have to **test the assumption**:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Talking about Occam&#39;s razor... this is how Statie 20-lines implementation looks like in normal Symfony app 😱<br><br>Time to let go? <a href="https://t.co/1Fxk31wWaf">pic.twitter.com/1Fxk31wWaf</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1237437559254417408?ref_src=twsrc%5Etfw">March 10, 2020</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
 

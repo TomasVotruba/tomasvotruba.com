@@ -31,8 +31,6 @@ I got one question about the architecture:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Blog post coming on how you achieved it? It would be good to have blog post on how to do parallel run efficiently in PHP.</p>&mdash; Ishan Vyas (@Ishanvyas22) <a href="https://twitter.com/Ishanvyas22/status/1446085620535758850?ref_src=twsrc%5Etfw">October 7, 2021</a></blockquote>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 Today I'll share my limited experience with parallel **CLI PHP Apps**. It's an experience I got by exploring PHPStan code and hundreds of trials and errors. What is CLI PHP App? **A PHP tools that you run in command line** - ECS, php-cs-fixer, PHP_CodeSniffer, PHPStan, Rector, PHPUnit, Composer etc.
 
 Is all clear? Let's start.

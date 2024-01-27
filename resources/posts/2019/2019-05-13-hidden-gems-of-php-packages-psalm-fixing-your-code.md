@@ -183,7 +183,6 @@ Personally, I use PHPStan because I'm not good with XML. But even if I should **
 You don't have to take my word for it:
 
 <blockquote class="twitter-tweet mt-5 mb-5" data-lang="en"><p lang="en" dir="ltr">Damn, <a href="https://twitter.com/psalmphp?ref_src=twsrc%5Etfw">@psalmphp</a> type declarations are saving me *TONS* of time and testing.</p>&mdash; null (@Ocramius) <a href="https://twitter.com/Ocramius/status/1120797947921350656?ref_src=twsrc%5Etfw">April 23, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
 

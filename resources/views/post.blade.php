@@ -66,6 +66,11 @@
 
         <hr style="height: 1px; border: none; background-color: black" class="mt-5 mb-5">
 
+
+        @if ($post->hasTweets())
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        @endif
+
         <br>
 
         <p>
@@ -80,20 +85,5 @@
         </p>
 
         <br>
-
-{{--        <a name="comments"></a>--}}
-
-{{--        <div id="disqus_thread"></div>--}}
-
-{{--        <script>--}}
-{{--            (function () { // DON'T EDIT BELOW THIS LINE--}}
-{{--                var d = document, s = d.createElement('script');--}}
-{{--                s.src = 'https://itsworthsharing.disqus.com/embed.js';--}}
-{{--                s.setAttribute('data-timestamp', +new Date());--}}
-{{--                (d.head || d.body).appendChild(s);--}}
-{{--            })();--}}
-{{--        </script>--}}
-
-{{--        <script id="dsq-count-scr" src="https://itsworthsharing/disqus.com/count.js" async defer></script>--}}
     </div>
 @endsection

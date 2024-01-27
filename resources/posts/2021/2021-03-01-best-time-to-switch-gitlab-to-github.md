@@ -107,8 +107,6 @@ I think GitHub might take advantage of this an go from *21 $* to *69 $* without 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">In a world where rich companies take more and more, this is an amazing move by <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> <br><br>Thank you for taking whole open-source community to a brand new level for last 5 years ❤️️<br><br>I'm very happy to be one of your customers <a href="https://t.co/RbtpdA9s9W">pic.twitter.com/RbtpdA9s9W</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1360353684396380171?ref_src=twsrc%5Etfw">February 12, 2021</a></blockquote>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <br>
 
 

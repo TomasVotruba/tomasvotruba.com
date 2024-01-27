@@ -23,9 +23,6 @@ With PHP 7.0, 7.4, and 8.0, type declarations became a sign of project health. B
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Do you measure your type declaration completeness with <a href="https://twitter.com/phpstan?ref_src=twsrc%5Etfw">@phpstan</a> already? <br><br>You should 😉<br><br>It&#39;s such a great and safe feeling to see 99 % type-coverage 😎 <a href="https://t.co/cYyDVYKqG8">pic.twitter.com/cYyDVYKqG8</a></p>&mdash; Tomas Votruba 🇺🇦 (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1585255758303825922?ref_src=twsrc%5Etfw">October 26, 2022</a></blockquote>
 
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <br>
 
 ## What is the "Type Coverage"?

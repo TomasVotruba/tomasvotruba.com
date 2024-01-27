@@ -14,9 +14,6 @@ I'm not much fan of "best practices", Tweets by authorities, or "this works for 
 
 <br>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">What are you working on today? 🤗<br><br>I&#39;m currently migrating the biggest <a href="https://twitter.com/symfony?ref_src=twsrc%5Etfw">@symfony</a> DI container to <a href="https://twitter.com/laravelphp?ref_src=twsrc%5Etfw">@laravelphp</a> so far... the Easy Coding Standard. <br><br>I&#39;m curious about results 🙏 <a href="https://t.co/kzrRpLHi3x">pic.twitter.com/kzrRpLHi3x</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1683456457633669122?ref_src=twsrc%5Etfw">July 24, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
 ## The Scope
 
 The projects I work with are typically CLI PHP applications. They use Symfony DI and Symfony Console. They are not web applications, so I don't need to care about HTTP requests, sessions, or cookies.
@@ -378,9 +375,6 @@ I look for the following ideas once the dust settles.
 I didn't expect this, but happy to see that tests run 3-4 times faster with the Laravel container:
 
 <br>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m rethinking the way I approached <a href="https://twitter.com/laravelphp?ref_src=twsrc%5Etfw">@laravelphp</a> performance in past years 🤔 Why?<br><br>This is ECS test-suite:<br><br>1) On the left, Symfony 6 - 0,759 ms<br>2) On the right, Laravel 10 - 0,179 ms<br><br>That&#39;s 370 % faster 😲 😍 <a href="https://t.co/cbXTZ3MUVn">pic.twitter.com/cbXTZ3MUVn</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1683576139049058304?ref_src=twsrc%5Etfw">July 24, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <br>
 
 I'll release a new ECS version for more performance testing and try it out in the wild. I also want to check how the `/vendor` size changed, as that's crucial in CLI tools that include downgraded and scoped `/vendor`.

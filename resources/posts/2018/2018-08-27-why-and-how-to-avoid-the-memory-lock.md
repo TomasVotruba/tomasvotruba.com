@@ -367,7 +367,6 @@ Do you know any other *memory locks* we should watch out for? Share them in the 
 <br>
 
 <blockquote class="twitter-tweet" data-lang="cs"><p lang="en" dir="ltr">&quot;90% of the bugs I produced were for one of the two reasons:<br>1. Doing multiple things at one place<br>2. Doing one thing at multiple places&quot; - <a href="https://twitter.com/pseudo_coder?ref_src=twsrc%5Etfw">@pseudo_coder</a></p>&mdash; Programming Wisdom (@CodeWisdom) <a href="https://twitter.com/CodeWisdom/status/998180793385209856?ref_src=twsrc%5Etfw">20. května 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
 

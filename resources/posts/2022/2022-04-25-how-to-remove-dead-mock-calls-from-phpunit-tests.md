@@ -169,6 +169,3 @@ Do you know **another pattern refactoring to reduce mocks we should include here
 <br>
 
 Happy coding!
-
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -137,6 +137,3 @@ We've already installed the package on the PHP 7.4 project, used it in CI, and d
 <br>
 
 Happy coding!
-
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

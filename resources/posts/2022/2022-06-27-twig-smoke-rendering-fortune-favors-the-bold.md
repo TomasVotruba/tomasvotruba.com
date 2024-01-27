@@ -138,8 +138,6 @@ After 2 weeks of hard work, but mainly counter-intuitive thinking and countless 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We&#39;ve just added our latest toy to CI😋 with ✅<br><br>Tolerant <a href="https://twitter.com/hashtag/twig?src=hash&amp;ref_src=twsrc%5Etfw">#twig</a> renderer 🎉🎉🎉<br><br>* covers all TWIG files<br>* dynamic rendering<br>* finds non-existing filters + functions + tags<br>* even wrong constants!<br>* blazing fast ⚡️<br>* no php-parser, no magic transform<br>* fun to make 😎 <a href="https://t.co/5H8iXVNyGS">pic.twitter.com/5H8iXVNyGS</a></p>&mdash; Tomas Votruba 🇺🇦 (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1540004210888040452?ref_src=twsrc%5Etfw">June 23, 2022</a></blockquote>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <br>
 
 Based on this 3-post series, you can build your own tailored TWIG, Latte, or Blade Smoke Renderer. It might not be easy at the start, but if you make it, **you'll enjoy sweet fruits**.
