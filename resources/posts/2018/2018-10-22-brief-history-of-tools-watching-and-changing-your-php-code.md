@@ -139,7 +139,6 @@ Well, it's built on php-parser and as it modifies the code and prints it back, i
 They say "history repeats", but I never trusted that. Until I saw that similar need Fabien had while making the PHP CS Fixer in 2012 - [Optionally add nodes for whitespace](https://github.com/nikic/PHP-Parser/issues/41). More **people wanted AST-based coding standards**:
 
 <blockquote class="twitter-tweet" data-lang="cs"><p lang="en" dir="ltr"><a href="https://twitter.com/fabpot?ref_src=twsrc%5Etfw">@fabpot</a> zendframework, though we are moving afay from php-cs-fixer because it is not AST-based</p>&mdash; Supervising Program (@Ocramius) <a href="https://twitter.com/Ocramius/status/532622405290971136?ref_src=twsrc%5Etfw">12. listopadu 2014</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 php-parser `4.0-dev` already had this feature, so Rector ran on it since the very start. It was not until [**February 2018**](https://github.com/nikic/PHP-Parser/releases/tag/v4.0.0) when it was finally released.
 

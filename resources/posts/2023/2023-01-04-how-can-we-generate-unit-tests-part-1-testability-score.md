@@ -191,6 +191,3 @@ I love that even if we stop the work here, we already have a lot of value. We ha
 <br>
 
 But we're lazier than that, right? We want to automate it. We want to generate tests for the methods we found. Stay tuned for the next part to see how we do that.
-
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

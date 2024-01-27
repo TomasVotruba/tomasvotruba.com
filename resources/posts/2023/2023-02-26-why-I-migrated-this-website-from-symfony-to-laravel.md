@@ -16,9 +16,6 @@ perex: |
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">How I migrated my blog from Symfony to <a href="https://twitter.com/laravelphp?ref_src=twsrc%5Etfw">@laravelphp</a> in 4 hours?<br><br>✅ regex Twig to Blade, syntax is 99 % similar <br>✅ 2 custom <a href="https://twitter.com/rectorphp?ref_src=twsrc%5Etfw">@rectorphp</a> rules for controller class names, view() and routes<br>✅ copy configs from raw project<br>✅ tidy details<br><br>Here is result 🥳<a href="https://t.co/vmMbZMIHEI">https://t.co/vmMbZMIHEI</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1627606800760438784?ref_src=twsrc%5Etfw">February 20, 2023</a></blockquote>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
 <br>
 
 ## How I came to Portugal to have a rest

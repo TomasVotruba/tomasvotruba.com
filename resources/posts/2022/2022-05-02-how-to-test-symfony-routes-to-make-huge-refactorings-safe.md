@@ -184,5 +184,3 @@ That's it! Now you're testing all your routes, and you can be sure the nuclear p
 <br>
 
 Happy coding!
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -310,5 +310,3 @@ Have I missed a constant list that you use daily and makes your life easier? Ple
 <br>
 
 Happy coding!
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

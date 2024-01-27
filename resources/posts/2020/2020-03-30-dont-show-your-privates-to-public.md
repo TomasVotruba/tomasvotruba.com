@@ -220,5 +220,3 @@ Stay lazy and alive!
 <br>
 
 Happy coding!
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
