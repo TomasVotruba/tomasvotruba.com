@@ -37,7 +37,7 @@ After that experience, **creating a PHPUnit JSON result printer extension was a 
 composer require --dev tomasvotruba/phpunit-json-result-printer
 ```
 
-2. Register extension in `phpnit.xml`
+2. Register extension in `phpunit.xml`
 
 ```xml
 <extensions>
