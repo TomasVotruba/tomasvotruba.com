@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8091948690f71efbd6aef327ac0ef950",
+    "content-hash": "f8b726b29b9679206549e995a530ff7f",
     "packages": [
         {
             "name": "brick/math",
@@ -6380,16 +6380,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "dev-main",
+            "version": "0.19.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "0301d3f4008cc05c5d12f0a45d69ae62e095598f"
+                "reference": "89c895d127b9d248d2af007068a824b5348ef81f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/0301d3f4008cc05c5d12f0a45d69ae62e095598f",
-                "reference": "0301d3f4008cc05c5d12f0a45d69ae62e095598f",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/89c895d127b9d248d2af007068a824b5348ef81f",
+                "reference": "89c895d127b9d248d2af007068a824b5348ef81f",
                 "shasum": ""
             },
             "require": {
@@ -6402,7 +6402,6 @@
                 "rector/rector-phpunit": "*",
                 "rector/rector-symfony": "*"
             },
-            "default-branch": true,
             "bin": [
                 "bin/rector"
             ],
@@ -6425,7 +6424,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/main"
+                "source": "https://github.com/rectorphp/rector/tree/0.19.5"
             },
             "funding": [
                 {
@@ -6433,7 +6432,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-30T10:08:17+00:00"
+            "time": "2024-01-29T23:53:47+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -7587,8 +7586,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "laravel/framework": 20,
-        "rector/rector": 20
+        "laravel/framework": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
