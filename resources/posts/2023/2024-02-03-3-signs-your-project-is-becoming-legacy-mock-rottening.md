@@ -104,7 +104,7 @@ return RectorConfig::configure()
 vendor/bin/rector p
 ```
 
-With mocks, this is not possible. ** It can take 2-3 months**, as every mocked test must be done manually. Why? The PHPStan cannot read mocks, as the code is artificial and does not reflect reality. In one line, `getName()` can return a `string`, in another, it can return a `Name` object. It's a mess.
+With mocks, this is not possible. **It can take 2-3 months**, as every mocked test must be done manually. Why? The PHPStan cannot read mocks, as the code is artificial and does not reflect reality. In one line, `getName()` can return a `string`, in another, it can return a `Name` object. It's a mess.
 
 If PHPStan can't read the types of code, Rector can't be used to automate the upgrade. Saying that, this sounds like a good use case for GPT.
 
