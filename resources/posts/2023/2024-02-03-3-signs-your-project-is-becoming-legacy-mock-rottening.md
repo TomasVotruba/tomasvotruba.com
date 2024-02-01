@@ -75,6 +75,17 @@ $userMock->method('getName')
 Until we add a strict type declaration, the content above is allowed.
 If we use native PHP, the PHPStan would at least warn us about the type mismatch. But mocks are too magic to handle.
 
+## Mock External Services, not Value Objects
+
+@todo
+
+E.g. do not mock Request, create it.
+do no mock parameter provider, create it
+
+
+@todo servier provider or data collectors - use them directly as well,
+e.g. RequestStack define in setup and use directly
+
 
 ## Longterm Benefits
 
