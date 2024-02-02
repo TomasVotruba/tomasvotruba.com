@@ -9,13 +9,13 @@ use Illuminate\Support\Str;
 /**
  * @see \App\Tests\Entity\BookTest
  */
-final class Book
+final readonly class Book
 {
     public function __construct(
-        private readonly string $title,
-        private readonly string $longDescription,
-        private readonly string $coverImage,
-        private readonly string $leanpubLink,
+        private string $title,
+        private string $longDescription,
+        private string $coverImage,
+        private string $leanpubLink,
     ) {
     }
 

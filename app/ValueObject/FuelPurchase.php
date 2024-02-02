@@ -8,13 +8,13 @@ use Nette\Utils\DateTime;
 use Nette\Utils\Strings;
 use Webmozart\Assert\Assert;
 
-final class FuelPurchase
+final readonly class FuelPurchase
 {
     public function __construct(
-        private readonly string $date,
-        private readonly int $kilometres,
-        private readonly float $volume,
-        private readonly float $priceAfterDiscount
+        private string $date,
+        private int $kilometres,
+        private float $volume,
+        private float $priceAfterDiscount
     ) {
     }
 

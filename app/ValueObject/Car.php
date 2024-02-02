@@ -7,12 +7,12 @@ namespace App\ValueObject;
 /**
  * @api used in blade
  */
-final class Car
+final readonly class Car
 {
     public function __construct(
-        private readonly string $plate,
-        private readonly string $driverName,
-        private readonly string $carName,
+        private string $plate,
+        private string $driverName,
+        private string $carName,
     ) {
     }
 

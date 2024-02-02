@@ -10,17 +10,17 @@ use DateTimeInterface;
 /**
  * @api used in blade templates = @todo fix in tomasvotruba/unused-public
  */
-final class Post
+final readonly class Post
 {
     public function __construct(
-        private readonly int $id,
-        private readonly string $title,
-        private readonly string $slug,
-        private readonly DateTimeInterface $dateTime,
-        private readonly string $perex,
-        private readonly string $content,
-        private readonly ?DateTimeInterface $updatedAt,
-        private readonly ?string $updatedMessage,
+        private int $id,
+        private string $title,
+        private string $slug,
+        private DateTimeInterface $dateTime,
+        private string $perex,
+        private string $content,
+        private ?DateTimeInterface $updatedAt,
+        private ?string $updatedMessage,
     ) {
     }
 

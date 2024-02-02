@@ -12,7 +12,7 @@ use Nette\Utils\FileSystem;
 use Nette\Utils\Strings;
 use Symfony\Component\Yaml\Yaml;
 
-final class PostFactory
+final readonly class PostFactory
 {
     /**
      * @var string
@@ -25,7 +25,7 @@ final class PostFactory
     private const CONFIG_CONTENT_REGEX = '#^\s*' . self::SLASHES_WITH_SPACES_REGEX . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_REGEX . '(?<content>.*?)$#s';
 
     public function __construct(
-        private readonly PathAnalyzer $pathAnalyzer,
+        private PathAnalyzer $pathAnalyzer,
     ) {
     }
 

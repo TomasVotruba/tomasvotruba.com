@@ -11,7 +11,7 @@ use Webmozart\Assert\Assert;
 /**
  * @api used in blade templates @todo fix in tomasvotruba/unused-public
  */
-final class CarReport
+final readonly class CarReport
 {
     /**
      * @var float
@@ -22,9 +22,9 @@ final class CarReport
      * @param Collection<int, FuelPurchase> $fuelPurchases
      */
     public function __construct(
-        private readonly string $plateId,
-        private readonly Collection $fuelPurchases,
-        private readonly ?Car $car
+        private string $plateId,
+        private Collection $fuelPurchases,
+        private ?Car $car
     ) {
         Assert::false($fuelPurchases->isEmpty());
     }
