@@ -272,6 +272,7 @@ You'll have a codebase that is easy to upgrade, maintain, and test.
 ### Want to read more about this topic?
 
 * Check out practical write-up with examples by Frank de Jonge - [Testing without mocking frameworks](https://blog.frankdejonge.nl/testing-without-mocking-frameworks/)
+* Are you mocking event dispatcher? [Stop mocking it](https://doeken.org/blog/stop-mocking-about-event-dispatcher) with Doeke Norg
 
 ## One Step at a Time
 
