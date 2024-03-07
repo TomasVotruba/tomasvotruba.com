@@ -189,7 +189,7 @@ to ECS equivalent:
 ```bash
 vendor/bin/ecs check
 vendor/bin/ecs check --fix
-``
+```
 
 ## 6. From `@Rules` to `withPhpCsFixerSets()` Method
 
