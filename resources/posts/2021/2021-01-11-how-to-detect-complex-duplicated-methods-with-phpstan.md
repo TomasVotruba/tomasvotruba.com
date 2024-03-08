@@ -8,6 +8,11 @@ perex: |
 
     Today we look at PHPStan and how to use it to find duplicated class methods.
 
+updated_since: 2023-07
+updated_message: |
+    This PHPStan rule shown as error prone and did not bring more value than false positives, so I deprecated and removed this rule.
+
+    I moved to use [cognitive-complexity](https://github.com/tomasVotruba/cognitive-complexity), [type-coverage](https://github.com/tomasVotruba/type-coverage) and [unused-public](https://github.com/tomasVotruba/unused-public) rules instead.
 ---
 
 ## Why even Care about Duplicated Code?
