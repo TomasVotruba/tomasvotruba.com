@@ -4,7 +4,7 @@ title: "From Symfony to Laravel - 5 Steps to Prepare your Symfony Project for Mi
 perex: |
     Framework migration is a challenge few choose to take - yet in some cases, it makes sense for business, project health, and pure joy from coding.
 
-    Once you know [the recipe](https://getrector.com/blog/how-to-migrate-legacy-php-applications-without-stopping-development-of-new-features), it clear the switch [is doable](https://getrector.com/blog/success-story-of-automated-framework-migration-from-fuelphp-to-laravel-of-400k-lines-application).
+    Once you know [the recipe](https://getrector.com/blog/how-to-migrate-legacy-php-applications-without-stopping-development-of-new-features), it's clear the switch [is doable](https://getrector.com/blog/success-story-of-automated-framework-migration-from-fuelphp-to-laravel-of-400k-lines-application).
 
     Today, we'll look at the steps to prepare your Symfony project for future Laravel migration.
 ---
