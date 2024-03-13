@@ -2,9 +2,9 @@
 id: 351
 title: "5 Constant Lists That Give&nbsp;Context to&nbsp;your Integers&nbsp;and&nbsp;Strings"
 perex: |
-    [Native enums](https://php.watch/versions/8.1/enums) is a new PHP 8.1 feature. This feature brings more focus on *what* enums are *where* we can use them.
+    [Native enums](https://php.watch/versions/8.1/enums) is a new PHP 8.1 feature. This feature brings more focus on *what* enums are and *where* we can use them.
 
-    **Not on PHP 8.1 yet?** Don't worry, before that, enums were emulated by public constants. Few constant lists are already part of your favorite framework, ORM, or utils package for years.
+    **Not on PHP 8.1 yet?** Don't worry, before that, enums were emulated by public constants. Some constant lists are already part of your favorite framework, ORM, or utils package for years.
 
 
     Today we look at 5 constant lists that you can use today to replace that `int` or `string` and give it a context.
