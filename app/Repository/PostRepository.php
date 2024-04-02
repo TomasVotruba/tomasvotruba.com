@@ -43,10 +43,6 @@ final class PostRepository
             }
         }
 
-        if (isset($this->posts[$slug])) {
-            return $this->posts[$slug];
-        }
-
         throw new ShouldNotHappenException(sprintf('Post for slug "%s" was not found.', $slug));
     }
 
