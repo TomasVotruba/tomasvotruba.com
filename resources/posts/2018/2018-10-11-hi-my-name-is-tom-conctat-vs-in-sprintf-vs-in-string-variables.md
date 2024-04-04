@@ -11,7 +11,7 @@ perex: |
 In how many ways you can register a service in Symfony or call a service method in Laravel?
 PHP and PHP frameworks are so free, that you often have 3+ ways to do one 1 thing. But that comes with a price.
 
-**The more approaches you use, the more has to the reader learn about rules of coding and the less space he or she has for real algorithms**. You can be really cool by using marginal PHP features, but if nobody except you understands it, you only hurt your code.
+**The more approaches you use, the more the reader has to learn about rules of coding and the less space he or she has for real algorithms**. You can be really cool by using marginal PHP features, but if nobody except you understands it, you only hurt your code.
 
 ## How to Pick The Best Solution?
 
