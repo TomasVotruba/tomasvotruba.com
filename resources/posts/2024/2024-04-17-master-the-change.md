@@ -2,53 +2,53 @@
 id: 406
 title: "Master the Change"
 perex: |
-    When we upgrade a new project to the best version possible, the latest PHP version and framework version, it's not only about changing syntax sugar to more fancy one.
+    When we upgrade a new project to the best version possible, the latest PHP and framework versions, it's not only about changing syntax sugar to a more fancy one.
 
     It's about huge focus shift in project management so far. It's a change to master. I want to share the basic rules we apply to make the "impossible" upgrades successful and steady path.
 ---
 
-## How does legacy projects look like
+## How do legacy projects look like
 
-The legacy project is rarely about having old PHP version. It's usually the surrounding ecosystem that keeps the project having the old version, despite many efforts by the programmers to change it. The project lead or owner already invested usually around 1-2 years to change it, but **there are counter forces that keep the project unchanged**.
+The legacy project is rarely about having an old PHP version. It's usually the surrounding ecosystem that keeps the project having the old version, despite many efforts by the programmers to change it. The project lead or owner already invested usually around 1-2 years to change it, but **there are counter forces that keep the project unchanged**.
 
-It's frustrating and only dig us deeper to the ground.
+It's frustrating and only dig us more profound to the ground.
 
-The same way we approach our health. Eating a burger once a month for lunch won't most likely affect our health. But if we in the range of obesity, we won't get out of it by excluding burgers. We have to change our pre-sleep-eating habit, include daily exercise, possibly change our social group, and more.
+The same way we approach our health. Eating a burger once a month for lunch won't most likely affect our health. But if we are in the range of obesity, we won't get out of it by excluding burgers. We have to change our pre-sleep-eating habits, include daily exercise, change our social group, and more.
 
 ## Feel the forces
 
-The same way we approach legacy projects. We have to detect, what are the blocking forces that keep project in the old version. It can be *learned helplessness*, as term from psychology that describes situation when we tried over 10 times and always got a negative response. Why should it work for the 11th time? We learned not to try.
+The same way we approach legacy projects. We have to detect, what are the blocking forces that keep the project in the old version. It can be *learned helplessness*, as term from psychology that describes situation when we tried over 10 times and always got a negative response. Why should it work for the 11th time? We learned not to try.
 
-It can be also *fear of unknown*. In some cases it is the team leader who keeps us from moving. They don't want to change the codebase because theÿ́'re the ones who **bear full know-how of the project in their head**. They're precious to the project and they know it. What would happen if the project would be in a great shape and no longer depend them? Maybe they would get fired as no longer needed.
+It can also be a fear of the unknown. In some cases, it is the team leader who keeps us from moving. They don't want to change the codebase because they're the ones who **bear full know-how of the project in their head**. They're precious to the project, and they know it. What would happen if the project was in great shape and no longer depended on them? Maybe they would get fired as they were no longer needed.
 
 ## Measure everything...?
 
-One of the approaches that I see to deal with legacy codebase is to **apply lots of metrics**. It gives an impression that once we know how "much" of "X" the codebase has, we'll be able to deal with it "somehow".
+One of the attempts to deal with legacy codebase in the wild is to **apply lots of metrics**. It gives an impression that once we know how "much" of "X" the codebase has, we'll be able to deal with it "somehow".
 
 It's like trying to get your body into shape by hourly measuring your weight, recoding fat/sugar/protein in every meal you eat and in every liquid you drink. It give you lot of various data that can lead to various conclusions. Yet, **nothing changes unless you change** the way you eat.
 
 <br>
 
-Same applies to codebases. I've seen Sonarcube, phpmd and similar providing over 100 various metrics over span of 36 months.
+The same applies to codebases. I've seen Sonarcube, PHPmd, and similar programs provide over 100 various metrics over a 36-month span.
 
-* "What is the conclusion" I asked the project owner.
+* "What is the conclusion?" I asked the project owner.
 * "We are in bad shape for past 36 month, plus/minus around the same".
 
-Another way to complicate situation even more is to apply PHPStan baselines that record every possible static analysis violation we can have. It's like having a personal trainer that tells you every day, what you've done wrong since the moment you've hired them.
+Another way to complicate the situation, even more, is to apply PHPStan baselines that record every possible static analysis violation we can have. It's like having a personal trainer that tells you every day what you've done wrong since the moment you've hired them.
 
-This force helps to keep situation the same and prevents us from making the change happen.
+This force helps to keep the situation the same and prevents us from making the change happen.
 
 ## Choice Paralysis
 
-It's easier to pick from [3 ice creams flavors, but quite impossible from 25](https://medium.com/age-of-awareness/heres-what-you-should-do-when-you-can-t-decide-according-to-science-484026c1eeca). The overwhelming CI report information flood reminds choice paralysis.
+It's easier to pick from [3 ice cream flavors, but quite impossible from 25](https://medium.com/age-of-awareness/heres-what-you-should-do-when-you-can-t-decide-according-to-science-484026c1eeca). The overwhelming CI report information flood reminds choice paralysis.
 
 * Proposal: "We could increase PHPStan level from 3 to 4"
-* Fear: "But that could take months and break the rest of codebase"
+* Fear: "But that could take months and break the rest of the codebase."
 
 <br>
 
-* Proposal: "We could add more unite tests to have more reliable code"
-* Fear: "But we'd have to actually understand the code first"
+* Proposal: "We could add more unite tests to have more reliable code."
+* Fear: "But we'd have to understand the code first."
 
 <br>
 
@@ -57,7 +57,7 @@ It's easier to pick from [3 ice creams flavors, but quite impossible from 25](ht
 
 <br>
 
-**The final decision is often the same** - "if it works, don't touch it".
+**The final decision is often the same—"if it works, don't touch it."
 
 And just to be sure, add one more metric to the CI pipeline of analysis checks.
 
@@ -73,23 +73,23 @@ If we jump to the upgrade on similar note, we'll take 12 months budget, add few 
 
 ## From milestones to baby steps
 
-How do we approach the change in the project to make it successful then? Some fancy AI software? Lot of computation power? Team of top 20 seniors developers in the industry?
+How do we approach the change in the project to make it successful, then? Some fancy AI software? Lot of computation power? Team of top 20 senior developers in the industry?
 
 <blockquote class="blockquote text-center">
 "A journey of a thousand miles<br>
 begins with a single step"
 </blockquote>
 
-No, we just keep it simple. We take 2-3 months milestones and split it into the smallest baby steps possible. But not smaller. We pick any topic that has a tendency to paralyse us while coding and make it so easy that we can't say no to it.
+No, we just keep it simple. We take 2-3 month milestones and split them into the smallest baby steps possible—but not smaller. We pick any topic that tends to paralyze us while coding and make it so easy that we can't say no.
 
 Instead of milestones like "stop eating burgers for a whole year",
-we go with babystep: "what I want to eat now for breakfast to feel good in my body?"
+we go with baby steps: "What do I want to eat for breakfast to feel good in my body?"
 
 ## Rule of thumb
 
-In my experience, if we pick a goal that **takes more than 2 weeks**, it will become snowball that stops the upgrade. That's why do an [Intro analysis battle plan](https://getrector.com/hire-team#process) that targets as small task as 1-2 days.
+In my experience, if we pick a goal that **takes more than 2 weeks**, it will become a snowball that stops the upgrade. That's why we do an [Intro analysis battle plan](https://getrector.com/hire-team#process) that targets tasks as small as 1-2 days.
 
-Do you need more practical example? I'll share the exact steps we've applied in 2023/2024 upgrades.
+Do you need a more practical example? I'll share the exact steps we've applied in 2023/2024 upgrades.
 
 ## From PHPStan 8 levels to 330 easy levels
 
@@ -163,7 +163,7 @@ That allows you to adjust to your paste, project size, while still seeing progre
          property: 70
 ```
 
-Does it seems too slow to you? Make no mistake, the compound effect will kick in:
+Does it seem too slow to you? Make no mistake, the compound effect will kick in:
 
 <img src="https://jamesclear.com/wp-content/uploads/2015/08/tiny-gains-graph-700x700.jpg" class="img-thumbnail" style="max-width: 22em">
 
@@ -173,7 +173,7 @@ Does it seems too slow to you? Make no mistake, the compound effect will kick in
 
 Last but not least, we use PHPStan extension that detects unused [public method/properties/constants](https://github.com/tomasVotruba/unused-public). At first, this might seem pointless to check, as most of the developers will tell you all the code is used. But in reality, we found out that 15-20 % of the code is not used at all. That means the company wastes 15-20 % extra money on nothing.
 
-The main goal of this package is to spot and eliminate unused public methods. Yet, it's also all-or-nothing approach. Either we enable the rule and fix everything, or we remove the package.
+The main goal of this package is to spot and eliminate unused public methods. Yet, it's also an all-or-nothing approach. Either we enable the rule and fix everything, or we remove the package.
 
 But what about using the same step-by-step approach that works so well? So we introduced maximum relavite amount feature:
 
@@ -183,7 +183,7 @@ parameters:
         methods: 2.5
 ```
 
-This way we can go 1 % at a time and take the pace we feel comfortable with.
+This way, we can go 1 % at a time and take the pace we feel comfortable with.
 
 ## Kaizen, Upgrade everyday
 
