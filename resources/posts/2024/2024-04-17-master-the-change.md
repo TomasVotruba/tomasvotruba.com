@@ -4,39 +4,50 @@ title: "Master the Change"
 perex: |
     When we upgrade a new project to the best version possible, the latest PHP and framework versions, it's not only about changing syntax sugar to a more fancy one.
 
-    It's about the vast focus shift in project management so far. It's a chance to master. I want to share the basic rules we apply to make the "impossible" upgrades successful and steady.
+    It's about the vast focus shift in project management so far. It's a change to master. I want to share the basic rules we apply to make the "impossible" upgrades successful and steady.
 ---
 
 ## How do legacy projects look like
 
 The legacy project is rarely about having an old PHP version. It's usually the surrounding ecosystem that keeps the project having the old version, despite many efforts by the programmers to change it. The project lead or owner already invested usually around 1-2 years to change it, but **there are counter forces that keep the project unchanged**.
 
-It's frustrating and only dig us more profound to the ground.
+It's frustrating and only dig us deeper under the ground.
 
-The same way we approach our health. Eating a burger once a month for lunch won't most likely affect our health. But if we are in the range of obesity, we won't get out of it by excluding burgers. We have to change our pre-sleep-eating habits, include daily exercise, change our social group, and more.
+The same way we approach our health. Eating a burger once a month for lunch won't most likely affect our health. But if we are in the range of obesity, we won't get out of it by excluding burgers. We have to change our pre-sleep-eating habits, include daily exercise, change our social group that encourages such habits, and more.
 
 ## Feel the forces
 
-The same way we approach legacy projects. We have to detect, what are the blocking forces that keep the project in the old version. It can be *learned helplessness*, a term from psychology that describes the situation when we try over 10 times and always get a negative response. Why should it work for the 11th time? We learned not to try.
+The same way we approach legacy projects. We have to detect, what are the blocking forces that keep the project in the old version. It can be *learned helplessness*, a term that describes the situation when we try over 10 times and always get a negative response. Why should it work for the 11th time? We learned not to try.
 
 It can also be a fear of the unknown. In some cases, it is the team leader who keeps us from moving. They want to keep the codebase the same because they're the ones who **bear complete know-how of the project in their head**. They're precious to the project, and they know it. What would happen if the project was in great shape and no longer depended on them? They may get fired as they are no longer needed.
 
 ## Measure everything...?
 
-One attempt to deal with legacy codebases in the wild is to apply lots of metrics. This gives the impression that once we know how "much" of "X" the codebase has, we'll be able to deal with it "somehow."
+One attempt I saw to deal with legacy codebases in the wild is to "report all possible code metrics". This gives the impression that once we know how "much" of "X" the codebase has, we'll be able to address it. But in reality it has quite negative effect.
 
-It's like trying to get your body into shape by hourly measuring your weight and recording fat/sugar/protein in every meal you eat and in every liquid you drink. This method gives you a lot of data that can lead to various conclusions. Yet, nothing changes unless you change the way you eat.
+It's like trying to get your body into shape by hourly measuring your weight and recording fat/sugar/protein in every meal you eat and in every liquid you drink. This method gives you a lot of data that can lead to various conclusions. Yet, nothing changes unless you *actually change* the way you eat.
 
 <br>
 
-The same applies to codebases. Let's say our legacy project use services like Sonarcube, Scrutinizer, Healthchecks, and to report code quality metrics. The project has been collecting data for past 36 months.
+The same applies to codebases. Let's say our legacy project use services like Sonarcube, Scrutinizer, Healthchecks, and to report 500+ code quality metrics on every commit. The project has been collecting data for past 36 months.
 
-* "What is the conclusion?" I asked the project owner.
-* "We are in bad shape for the past 36 months, plus/minus around the same".
+I ask the project owner:
 
-Another way to complicate the situation, even more, is to apply PHPStan baselines that record every possible static analysis violation. It's like having a personal trainer who tells you every day what you've done wrong since you hired them.
+* "What is the conclusion from these data?"
 
-This force helps to keep the situation the same and prevents us from making the change happen.
+They reply:
+
+* "We are in a bad shape for the past 36 months and not improving".
+
+That's usually pretty clear to the whole team even without these metrics. What is worse, that it takes focus and power from actually making the change.
+
+<br>
+
+## From joy to shame
+
+Another way to distract team from change is to create huge PHPStan baseline files that record every possible static analysis violation. It's like having a personal trainer who tells you every day what you've done wrong since you hired them.
+
+What is the effect of constantly reminding mistakes over celebrating success? It shifts our focus from "we made a change for better" to "this is every mistake we made", from joy to shame.
 
 ## Choice Paralysis
 
@@ -89,17 +100,17 @@ we go with baby steps: "What do I want to eat for breakfast to feel good in my b
 
 In my experience, if we pick a goal that **takes more than 2 weeks**, it will become a snowball that stops the upgrade. That's why we do an [Intro analysis battle plan](https://getrector.com/hire-team#process) that targets tasks as small as 1-2 days.
 
-Do you need a more practical example? I'll share the steps we've applied in the 2023/2024 upgrades.
+Do you need a more practical example? I'll share the steps we've applied in the 2022-2024 upgrades with success.
 
 ## From PHPStan 8 levels to 330 easy levels
 
 The typical goal is to "reach PHPStan level 8." On the projects I've seen, this can take 2-5 years or more often, never at all. The problem is that levels are hugely disproportional and include many rules at once. Going from level 2 to 3 can take 3 % of effort while going from 5 to 6 % will take 95 % of effort.
 
-Typically, we enable the following rule in PHPStan: see 3000 errors, fix 10 of them, create a pull request, and go to the old level. We kept the bar the same; we didn't improve much. This is a problem typical for all static analysis tools, so we try to make it more fun by turning it into a game:
+How does a typical workflow look like? We enable next PHPStan level, see 3000 errors, fix 10 of them, create a pull request, and revert to the old level. **We kept the bar the same; we didn't improve much**. This is a problem typical for all static analysis tools, so we try to make it more fun by turning it into a game:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Crazy idea to share...<br><br>In <a href="https://twitter.com/rectorphp?ref_src=twsrc%5Etfw">@rectorphp</a> 1.0 we&#39;ve introduced 1 rule = 1 level approach to ease integration to any project, however old or complex. And you love it 😍 <br><br>PHPStan has ~268 rules in its core, but only 10 levels to enable/disable them. <br><br>This makes integration quite… <a href="https://t.co/RTnXL4jOvz">pic.twitter.com/RTnXL4jOvz</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1759617297453302183?ref_src=twsrc%5Etfw">February 19, 2024</a></blockquote>
 
-If we look closer and split PHPStan levels into more granular ones, it has around 330 various rule configurations or manageable levels. This **way can always go and stay** - that's important - one easy level at a time. We have a custom PHPStan extension that generates these configs on the fly and our customers love it. They can finally see progress and feel the change.
+If we look closer and split PHPStan levels into more granular ones, it has around 330 various rule configurations or easy levels. This **way can always increase the quality bar** - one easy level at a time. We have a custom PHPStan extension that generates these configs on the fly and our customers love it. They can finally see progress and feel the change.
 
 ## From Rector sets to set levels
 
@@ -140,7 +151,7 @@ That's too demanding and somewhat annoying. Let's turn off the rules.
 
 <br>
 
-How can we make it more straightforward and doable for junior developers?
+How can we make it more straightforward and doable even for junior developers?
 
 We've introduced an open-source PHPStan package called [type coverage](https://github.com/TomasVotruba/type-coverage). Instead of an *all-or-nothing* approach, it lets you choose a percentage of required type coverage. If it's above the value, your CI is green. If it's below, it will fail.
 
@@ -171,7 +182,7 @@ Does it seem too slow to you? The compound effect will kick in:
 
 ## From unused public methods to unused coverage limit
 
-Last, we use the PHPStan extension that detects unused [public method/properties/constants](https://github.com/tomasVotruba/unused-public). At first, this might seem pointless to check, as most developers will tell you all the code is used. But in reality, we discovered that 15-20 % of the code is not used. That means the company wastes 15-20 % extra money on nothing.
+Last, we use the PHPStan extension that detects unused [public method/properties/constants](https://github.com/tomasVotruba/unused-public). At first, this might seem pointless to check, as most developers will tell you all the code is used. But in reality, we discovered that 15-20 % of the code is not used. That means the company wastes 15-20 %  money on maintain code that doesn't generate any profit.
 
 This package's primary goal is to spot and eliminate unused public methods. Yet, it's also an all-or-nothing approach: Either enable the rule and fix everything or remove the package.
 
