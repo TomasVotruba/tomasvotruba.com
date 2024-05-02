@@ -124,7 +124,7 @@ If your project has 1000 files, this work requires to:
 * find only those that miss the declare,
 * and edit them one by one.
 
-That might be quite a lot of tedious work, right?
+That might be quite a **lot of tedious work**, right?
 
 <br>
 
