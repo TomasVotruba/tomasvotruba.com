@@ -150,7 +150,16 @@ Then push, create pull-request, see what fails on CI, fix type errors, and merge
 
 <br>
 
-With this PHPStan and Rector combo, you'll quickly increase your type coverage and safety against typecasting.
+With this PHPStan and Rector combo, you'll quickly increase your type coverage and safety against typecasting:
+
+```yaml
+parameters:
+    type_coverage:
+        return: 99
+        param: 99
+        property: 99
+        declare: 99
+```
 
 <br>
 
