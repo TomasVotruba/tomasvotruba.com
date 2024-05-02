@@ -16,14 +16,18 @@ Imagine we have the following PHP 8.2 code with 100 % type coverage:
 
 final readonly class Price
 {
-    public function __construct(private int $price, private int $decimalCount)
-    {
+    public function __construct(
+        private int $price,
+        private int $decimalCount
+    ) {
         // ...
     }
 }
 ```
 
-It looks like very modern PHP, right? But what if we pass some values:
+It looks like very modern PHP, right?
+
+But what if we pass values via controller route params or external service API?
 
 ```php
 $price = new Price('100.82', '2');
