@@ -1,7 +1,9 @@
 ---
 id: 407
-title: "From Type Coverage to Strict Types"
+title: "How adding Type Declarations makes Your Code Dangerous"
 perex: |
+    ...and how to avoid it.
+
     [Type coverage](/blog/how-to-measure-your-type-coverage) is a way to gradually add type declarations to your PHP project—step by step, one by one. It's a PHPStan package that helps you maintain a specific minimal level from 0 % to 100 %.
     <br><br>
     Once we reach high coverage of 80-90 %, we feel safer. But our code can actually be in worse, even dangerous, shape.
@@ -27,7 +29,7 @@ It looks like very modern PHP, right? But what if we pass some values:
 $price = new Price('100.82', '2');
 ```
 
-What will be the price's first value? We'd love to see `100.82` float, right?
+What will be the price value? We'd love to see `100.82` float, right?
 
 This is what our code really does ([see 3v4l.org](https://3v4l.org/lKgfG)):
 
@@ -46,7 +48,7 @@ return (int) $value + (string) $anotherValue + (float) $thirdValue;
 Seeing it like this is an obvious red flag, but without using `declare(strict_types=1)`, PHP will silently continue. If we're lucky and we have enabled deprecation warning to trigger errors, we might see:
 
 ```bash
-Deprecated: Implicit conversion from float-string "100.82" to int loses precision in /in/lKgfG on line 5
+Deprecated: Implicit conversion from float-string "100.82" to int loses precision on line 5
 ```
 
 But this is usually lost because we must run our tests with enabled deprecation warnings.
@@ -96,7 +98,7 @@ Again, like the type coverage on property, return, and param, the declare featur
 +        declare: 7
 ```
 
-PHPStan says we should increase our `declare(strict_types=1)` usage to 7 %. Let's add it to a bunch of files:
+PHPStan says we should increase our `declare(strict_types=1)` usage from 5 % to 7 %. Let's add it to a bunch of files:
 
 ```diff
  <?php
