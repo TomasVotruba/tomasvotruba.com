@@ -75,24 +75,24 @@ Those numbers were once `0`s. We've gradually increased them to `90` with the ka
 
 What if we do a similar measurement in CI for strict types?
 
-```yaml
-parameters:
-    type_coverage:
-        return: 90
-        param: 90
-        property: 90
-        declare: 5
+```diff
+ parameters:
+     type_coverage:
+         return: 90
+         param: 90
+         property: 90
++        declare: 5
 ```
 
-The new `declare` parameter will ensure that at least 5 % of your files use `declare(strict_types=1)`. If it's below, PHPStan will tell you. This has been available since version 0.2.7.
+The new `declare` parameter will ensure that at least 5 % of your files use `declare(strict_types=1)`. If it's below 5 %, PHPStan will tell us and fail in CI. This has been available since version 0.2.7.
 
 <br>
 
 ## Copy-paste? Automate!
 
-Again, like the type coverage on property, return, and param, the declare feature is best used with small steps:
+Similar to increasing the type coverage of property, return, and param, the declare feature is **done best in small steps**:
 
-```yaml
+```diff
  parameters:
      type_coverage:
          return: 90
@@ -118,17 +118,17 @@ PHPStan says we should increase our `declare(strict_types=1)` usage from 5 % to 
  }
 ```
 
-If your project has 1000 files, that's:
+If your project has 1000 files, this work requires to:
 
-* 20 files to go through manually,
+* go through at least 20 files,
 * find only those that miss the declare,
-* and add them one by one.
+* and edit them one by one.
 
 That might be quite a lot of tedious work, right?
 
 <br>
 
-We apply these techniques to PHP project upgrades, so after a few manual rounds, we felt frustrated and made a [Rector rule](https://github.com/rectorphp/rector-src/pull/5849) work for us. This rule is now being tested on the dev and will be released sometime next week.
+We apply this technique during PHP project upgrades. After a few manual rounds, we felt frustrated and made a [Rector rule](https://github.com/rectorphp/rector-src/pull/5849) work for us. This rule is now being tested on the dev branch and will be released sometime next week.
 
 ```php
 use Rector\TypeDeclaration\Rector\StmtsAwareInterface\IncreaseDeclareStrictTypesRector;
