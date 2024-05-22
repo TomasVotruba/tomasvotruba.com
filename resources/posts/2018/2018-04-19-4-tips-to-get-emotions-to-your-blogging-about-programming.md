@@ -63,7 +63,7 @@ But thanks to all the coding, programming, and algorithms we almost forgot about
 <blockquote class="blockquote text-center mt-5 mb-5">
     "You can have everything in life you want,<br>
     if you will just help other people get what they want."
-    <footer class="blockquote-footer">Zig Ziglar</footer>
+<footer class="blockquote-footer">Zig Ziglar</footer>
 </blockquote>
 
 This quote gets truer every year I get older.

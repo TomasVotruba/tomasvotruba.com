@@ -19,7 +19,7 @@ updated_message: |
 <blockquote class="blockquote text-center">
     "If you can't explain it to a six-year-old,<br>
     you don't understand it yourself."
-    <footer class="blockquote-footer">Albert Einstein</footer>
+<footer class="blockquote-footer">Albert Einstein</footer>
 </blockquote>
 
 The documentation [barely scratches this topic](https://phpstan.org/blog/generics-in-php-using-phpdocs) and examples are not very clear. Neither were responses on GitHub issues.

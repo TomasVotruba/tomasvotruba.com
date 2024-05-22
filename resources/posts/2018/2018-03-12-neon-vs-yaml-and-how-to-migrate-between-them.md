@@ -20,7 +20,7 @@ None of them is perfect, they both have strong parts and weak parts. But the mor
 
 <blockquote class="blockquote text-center mt-lg-5 mb-lg-5">
     <a href="https://www.youtube.com/watch?v=3_EtIWmja-4">There are no solutions. There are only trade-offs.</a>
-    <footer class="blockquote-footer">
+<footer class="blockquote-footer">
         Thomas Sowell, author of A Conflict of Visions: Ideological Origins of Political Struggles
     </footer>
 </blockquote>

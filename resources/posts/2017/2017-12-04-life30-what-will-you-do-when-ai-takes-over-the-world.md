@@ -13,7 +13,7 @@ perex: |
 
 <blockquote class="blockquote text-center">
     "The poorest 50 % of Earth's population had earned only about 4 % of the global income, enabling the Omega-controller companies to win their hearts (and votes) by sharing only a modest fraction of their profits with them."
-    <footer class="blockquote-footer">Life 3.0, The Omega Team</footer>
+<footer class="blockquote-footer">Life 3.0, The Omega Team</footer>
 </blockquote>
 
 <br>
@@ -52,7 +52,7 @@ I knew Elon Musk is making cars and rockets, but I didn't knew he supported non-
 
 <blockquote class="blockquote text-center">
     "What we really need to do is make sure that life continues into the future. […] It’s best to try to prevent a negative circumstance from occurring than to wait for it to occur and then be reactive."
-    <footer class="blockquote-footer">Elon Musk on keeping AI safe and beneficial</footer>
+<footer class="blockquote-footer">Elon Musk on keeping AI safe and beneficial</footer>
 </blockquote>
 
 

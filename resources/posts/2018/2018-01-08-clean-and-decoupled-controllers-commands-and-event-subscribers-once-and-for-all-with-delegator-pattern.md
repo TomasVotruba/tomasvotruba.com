@@ -161,7 +161,7 @@ So far so good?
 
 <blockquote class="blockquote text-center mt-5 mb-5">
     "Change is the only constant."
-    <footer class="blockquote-footer">John Candee Dean</footer>
+<footer class="blockquote-footer">John Candee Dean</footer>
 </blockquote>
 
 New owner with technical skills comes the the play. And he wants to finally use `VueJs`, the company is now big enough to use Docker as standards and **there are more programmers that know [Eloquent](https://laravel.com/docs/eloquent) than [Doctrine](/blog/2017/03/27/why-is-doctrine-dying/) in his country**:
@@ -188,7 +188,7 @@ No. You think for **the future** with prevention!
 
 <blockquote class="blockquote text-center mt-5 mb-5">
     "Plan like you will live forever, and then live like there is no tomorrow."
-    <footer class="blockquote-footer"> Mahatma Gandhi</footer>
+<footer class="blockquote-footer"> Mahatma Gandhi</footer>
 </blockquote>
 
 Same can be applied to your code.

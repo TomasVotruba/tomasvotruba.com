@@ -14,17 +14,17 @@ I wrote about [How to Slowly Turn your Symfony Project to Legacy with Action Inj
 
 <blockquote class="blockquote">
     Couldn't agree more with pretty much everything said! Action injection makes it really confusing on whether an object is treated stateful or stateless (very grey area with the Session for example).
-    <footer class="blockquote-footer text-right">Iltar van der Berg</footer>
+<footer class="blockquote-footer text-right">Iltar van der Berg</footer>
 </blockquote>
 
 <blockquote class="blockquote">
     I'm a Symfony trainer and I'm told to teach people how to use Symfony and talk about this injection pattern. Sob.
-    <footer class="blockquote-footer text-right">Alex Rock</footer>
+<footer class="blockquote-footer text-right">Alex Rock</footer>
 </blockquote>
 
 <blockquote class="blockquote">
     I'm working on a Project that uses action injection pattern and I hate it. I like autowiring but the whole idea about action injection is broken. And this project is in sf28 do we don't use autowiring. Maintenance and development with this pattern is a total nightmare.
-    <footer class="blockquote-footer text-right">A</footer>
+<footer class="blockquote-footer text-right">A</footer>
 </blockquote>
 
 <br>

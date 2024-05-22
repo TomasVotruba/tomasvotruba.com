@@ -22,7 +22,7 @@ perex: |
     Complain about the way other people make software<br>
     by making software.</a>"
 
-    <footer class="blockquote-footer text-right">
+<footer class="blockquote-footer text-right">
         Antoine de Saint-Exupery
     </footer>
 </blockquote>

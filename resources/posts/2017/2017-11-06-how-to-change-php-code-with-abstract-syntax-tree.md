@@ -28,7 +28,7 @@ Nikita explains [differences between those 2 in more detailed technical way](htt
 
 <blockquote class="blockquote">
     "Why would I want to have a PHP parser written in PHP? Well, PHP might not be a language especially suited for fast parsing, but processing the AST is much easier in PHP than it would be in other, faster languages like C. Furthermore the people most probably wanting to do programmatic PHP code analysis are incidentally PHP developers, not C developers."
-    <footer class="blockquote-footer text-right">Nikita Popov</footer>
+<footer class="blockquote-footer text-right">Nikita Popov</footer>
 </blockquote>
 
 <br>

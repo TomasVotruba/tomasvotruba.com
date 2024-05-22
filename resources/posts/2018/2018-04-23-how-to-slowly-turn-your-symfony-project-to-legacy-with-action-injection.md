@@ -355,7 +355,7 @@ I really recommend checking the [Reddit thread](https://www.reddit.com/r/PHP/com
 
 <blockquote class="blockquote">
 I've abandoned this [action inject] approach because it makes it harder to differentiate request parameters from services. It also makes this method definition in most cases spread to multiple lines. And it makes it harder to inject non-autowirable services
-    <footer class="blockquote-footer text-right">
+<footer class="blockquote-footer text-right">
         <a href="https://www.reddit.com/r/PHP/comments/8dw8x5/symfonys_controller_action_dependency_injection/dxsauf2/">gadelat</a>
     </footer>
 </blockquote>

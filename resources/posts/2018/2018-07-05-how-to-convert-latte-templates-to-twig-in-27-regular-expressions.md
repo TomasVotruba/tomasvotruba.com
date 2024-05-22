@@ -28,7 +28,7 @@ After the 5th change of code from `{$value}` to `{{ value }}` I started to have 
 
 <blockquote class="blockquote text-center">
     "The question you should be asking isn't, "What do I want?" or "What are my goals?" but "What would excite me?"
-    <footer class="blockquote-footer">Tim Ferriss</footer>
+<footer class="blockquote-footer">Tim Ferriss</footer>
 </blockquote>
 
 And what excites me? **Investing 5 hours to automate 30-minutes manual work under 10 seconds, so no-one else will have to do that ever again.**

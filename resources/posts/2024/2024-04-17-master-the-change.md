@@ -207,7 +207,7 @@ Going to the gym daily for a month will not make you a strong human. But exercis
 <blockquote class="blockquote text-center">
     "Most people overestimate what they can do in one year<br>
     and underestimate what they can do in ten years."
-    <footer class="blockquote-footer">Bill Gates</footer>
+<footer class="blockquote-footer">Bill Gates</footer>
 </blockquote>
 
 <br>

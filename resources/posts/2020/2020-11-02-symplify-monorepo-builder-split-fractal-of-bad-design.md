@@ -18,7 +18,7 @@ But the split operation itself is not really Usain Bolt among [instant feedbacks
 
 <blockquote class="blockquote text-center" markdown="1">
 "...symplify/monorepo-builder ... **takes ~20 minutes** to go through and roll out all packages, one by one"
-    <footer class="blockquote-footer">
+<footer class="blockquote-footer">
         <cite><a href="https://github.com/zf1s/zf1/issues/33#issuecomment-732113017">Zend Framework split</a></cite>
     </footer>
 </blockquote>

@@ -13,7 +13,7 @@ perex: |
 <blockquote class="blockquote">
     "Perfection is achieved, not when there is nothing more to add,<br>
     but when there is nothing left to take away."
-    <footer class="blockquote-footer text-right">Antoine de Saint-Exupery</footer>
+<footer class="blockquote-footer text-right">Antoine de Saint-Exupery</footer>
 </blockquote>
 
 

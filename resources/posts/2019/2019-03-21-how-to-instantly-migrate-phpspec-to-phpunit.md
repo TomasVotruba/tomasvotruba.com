@@ -14,7 +14,7 @@ updated_message: |
     "Nobody believes in anything without an inner feeling that it can be realized.
     <br>
     This is the only source of dreamlike powers."
-    <footer class="blockquote-footer">Peter Altenberg</a>
+<footer class="blockquote-footer">Peter Altenberg</a>
 </blockquote>
 
 *Disclaimer: I never saw PhpSpec code before this mentoring session. All I learned was from my client and their needs (and bit of reading the documentation)*.
@@ -49,7 +49,7 @@ Then I explored PhpSpec and found out, it's **basically PHPUnit with different n
     "It looks like Y, a variant of X, could be done in
     <br>
     about half the time, and you lose only one feature."
-    <footer class="blockquote-footer">The Pragmatic Programmer book</a>
+<footer class="blockquote-footer">The Pragmatic Programmer book</a>
 </blockquote>
 
 ## Trends over Long-Tail Effect

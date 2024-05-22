@@ -68,7 +68,7 @@ I don't see the end, only the next step. Same is for climbing, I don't see the t
     The present moment contains past and future.
     <br>
     The secret of transformation is in the way we handle this very moment.
-    <footer class="blockquote-footer">Thích Nhất Hạnh</footer>
+<footer class="blockquote-footer">Thích Nhất Hạnh</footer>
 </blockquote>
 
 One [Peace Step](https://www.amazon.com/Peace-Every-Step-Mindfulness-Everyday/dp/0553351397) at a Time  (great book, just reading it). One commit at a time. One merged pull-request at a time. Not 2, just 1.

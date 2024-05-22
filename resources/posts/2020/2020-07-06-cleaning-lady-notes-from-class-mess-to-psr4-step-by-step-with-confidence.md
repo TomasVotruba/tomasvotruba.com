@@ -79,7 +79,7 @@ But all those 9 steps are now 10 % less complicated.
 
 <blockquote class="blockquote text-center mt-5 mb-5">
     "Even if you die, the code you wrote is merged."
-    <footer class="blockquote-footer text-center">Bus Boy Scout Factor</footer>
+<footer class="blockquote-footer text-center">Bus Boy Scout Factor</footer>
 </blockquote>
 
 I love this coding principle. Why? Because it takes minimalism and productivity to the practical world. It narrows our focus, so any developer becomes a 10x programmer effortlessly.

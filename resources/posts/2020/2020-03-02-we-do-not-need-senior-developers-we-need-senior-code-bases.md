@@ -46,7 +46,7 @@ I have no idea. Fortunately, *Bruce Lee* is here to help us:
     "It's like a finger pointing away to the moon.<br>
     Don't concentrate on the finger or you will miss all that heavenly glory."
 
-    <footer class="blockquote-footer">Bruce Lee</footer>
+<footer class="blockquote-footer">Bruce Lee</footer>
 </blockquote>
 
 

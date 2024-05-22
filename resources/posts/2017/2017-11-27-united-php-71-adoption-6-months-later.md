@@ -13,7 +13,7 @@ perex: |
 
 <blockquote class="blockquote text-center">
     "United we stand, divided we fall."
-    <footer class="blockquote-footer">ancient Greek storyteller Aesop</footer>
+<footer class="blockquote-footer">ancient Greek storyteller Aesop</footer>
 </blockquote>
 
 <br>

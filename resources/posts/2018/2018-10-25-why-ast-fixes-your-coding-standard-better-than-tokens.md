@@ -61,7 +61,7 @@ If there would be no AST, this all could be handled by `token_get_all` ([like PH
 
 <blockquote class="blockquote text-center pb-5 pt-5">
     "I really don't like programming. I built this tool to program less so that I could just reuse code."
-    <footer class="blockquote-footer">Rasmus Lerdorf</a>
+<footer class="blockquote-footer">Rasmus Lerdorf</a>
 </blockquote>
 
 ## Shifting the Scope

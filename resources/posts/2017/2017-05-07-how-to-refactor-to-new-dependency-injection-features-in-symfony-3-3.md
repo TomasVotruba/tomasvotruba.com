@@ -24,7 +24,7 @@ You can click read post/PR in detail, but you take **this shortcut to learn them
 
 <blockquote class="blockquote text-center">
     "A full code example is worth ten thousand words of explanation."
-    <footer class="blockquote-footer">Stephen P. Thomas</footer>
+<footer class="blockquote-footer">Stephen P. Thomas</footer>
 </blockquote>
 
 <br>

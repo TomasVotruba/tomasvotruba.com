@@ -100,7 +100,7 @@ What is our plan for today? Somehow "transform" this code so **PHPStan can analy
 <blockquote class="blockquote mt-5 mb-5 text-center">
     "Perfection is achieved not when there is nothing more to add,<br>
     but when there is nothing left to take away"
-    <footer class="blockquote-footer">Antoine de Saint-Exupery</footer>
+<footer class="blockquote-footer">Antoine de Saint-Exupery</footer>
 </blockquote>
 
 ## Keep only the Necessary Code

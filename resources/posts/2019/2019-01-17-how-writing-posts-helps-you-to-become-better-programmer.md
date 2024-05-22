@@ -72,7 +72,7 @@ Btw, if missed Social Psychology 101 on the university, [Thinking, Fast and Slow
 <blockquote class="blockquote text-center">
     "Indeed, the ratio of time spent reading versus writing is well over 10 to 1. We are constantly reading old code as part of the effort to write new code. ...[Therefore,] making it easy to read makes it easier to write."
 
-    <footer class="blockquote-footer">Robert C. Martin, <cite>author of Clean Code</cite></footer>
+<footer class="blockquote-footer">Robert C. Martin, <cite>author of Clean Code</cite></footer>
 </blockquote>
 
 ...and we don't talk about open source here, where the ratio might be way over 1000 views per year even in small packages.

@@ -78,7 +78,7 @@ Do you buy "a Symfony book" and read it? And then you know Symfony? You might an
 
 <blockquote class="blockquote text-center">
     "It's interesting how the brain works when you have no clue."
-    <footer class="blockquote-footer">Jakob Oberhummer at <a href="https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/">Vienna PHP</a></footer>
+<footer class="blockquote-footer">Jakob Oberhummer at <a href="https://www.meetup.com/viennaphp/events/djtpjpyxjbcc/">Vienna PHP</a></footer>
 </blockquote>
 
 But what do so much of random education (it has its meaning, but not here) if your first task is to create a contact form? Maybe there are [posts about writing forms that go beyond the documentation](https://github.com/pehapkari/awesome-symfony-education#forms) that take you 20 minutes to read.

@@ -31,7 +31,7 @@ In reality, most people prefer flowers because they're easier to take care of no
 
 <blockquote class="blockquote text-center">
     "Dream as if you will live forever. Live as if you will die today."
-    <footer class="blockquote-footer">James Dean</footer>
+<footer class="blockquote-footer">James Dean</footer>
 </blockquote>
 
 But instant gratification doesn't work very well for a long term. You might learn a lot on a shallow level, but you'd not understand much in depth. One example for all, I went to school for 9 + 4 + [4 years](/blog/2017/11/13/7-tips-you-should-know-before-going-to-university/) and I learned about somewhat 40 subjects. I **would not dare to ask for a job in any of that**. Luckily, my parent taught me to *learn what you want* principle so I grew my 5 trees that hold my back now outside the school myself.
