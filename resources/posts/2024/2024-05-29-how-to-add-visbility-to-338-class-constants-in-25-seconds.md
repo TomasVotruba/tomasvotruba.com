@@ -28,7 +28,11 @@ class SomeConstants
 
 While upgrading with ~~legacy~~ successful projects, I only come across projects with all constants `public` by default. It's either a lack of PHP 7.1 feature awareness or avoiding the pain of adding `private` and `protected` manually to every single constant. If it's 10 class constants to handle, it is easy. But going through 50+ constants or even 338 constants is pain.
 
-The downside of this default is the unclear architecture, which allows constants to be used anywhere in the project. New developers who come to the project and don't know the architecture are most likely to use constants all over the project.
+<br>
+
+## Why is "Public by default" wrong
+
+The downside of "public by default" is the unclear architecture, which allows constants to be used anywhere in the project. New developers who come to the project and don't know the architecture are most likely to use constants all over the project.
 
 Imagine the same area of problems as with public methods. It's like injecting a controller to get access to the Doctrine repository of the `User` class:
 
@@ -42,19 +46,22 @@ $userRepository = $doctrine->getRepository(User::class);
 
 ## Private or Protected?
 
-The easy question is: how to decide if the constant is `private` or `protected`? The private constant is used solely by the class it's being defined in. Not anywhere else.
+The easy question is: **how to decide if the constant is `private` or `protected`?**
 
-The protected constant can be used by the class, the child, or the parent (not the best practice).
+* The private constant is used solely by the class it's being defined in. Not anywhere else.
+* The protected constant can be used by the class, the child, or the parent (not the best practice).
 
 <br>
 
-Once we have this straightforward algorithm to decide on, we only have to apply it to 338 constants in our project. The hard question is: How can we automate this to apply it to any project with any number of constants?
+Once we have this straightforward algorithm to decide on, we only have to apply it to 338 constants in our project.
+
+The hard question is: **How can we automate this to apply it to any project with any number of constants?**
 
 <br>
 
 ## Rule of Thumb: private by default
 
-My approach is straightforward - battle-testing. I go to the project, make all constants `private` with PHPStorm Find & Replace, and see what goes wrong. In production? No, I take the safe path instead. I run PHPStan and see reported errors like:
+My approach is straightforward: battle-testing. I go to the project, make all constants `private` with PHPStorm Find & Replace, and see what goes wrong. In the production? No, I take the safe path instead. I **run PHPStan and see reported errors** like:
 
 ```bash
 Access to private constant SOME_CONSTANT of class App\SomeClass.
@@ -147,13 +154,19 @@ So that's what we did.
 
 <br>
 
+## New tool in Swiss knife
+
 You can find a new command in the [swiss-knife](https://github.com/rectorphp/swiss-knife) tool:
 
 ```bash
 vendor/bin/swiss-knife privatize-constants src tests
 ```
 
-It performs all the steps above in 25 seconds. Give it a try to tighten your class constants instantly.
+It performs all the steps above in 25 seconds. Tested on a project with 338 public constants, including the `static` case, with **1-shot and no manual fixes needed**. CI is passing and ready to merge.
+
+<br>
+
+Give it a try to tighten your class constants instantly.
 
 <br>
 
