@@ -4,10 +4,10 @@ title: "How to add visibility to 338&nbsp;Class&nbsp;Constants in 25&nbsp;second
 perex: |
     In PHP, we have classes with methods inside them. Would making all your methods `public` be a good idea? No, because some of them should be used only by the class they're in and not anywhere else.
 
-    What about class constants? PHP 7.1 introduced three types of a class constant visibility: `public`, `protected`, and `private`. We want some constants, such as the client hostname, to be used only in the class, but others, like parameter names, to be used anywhere.
-
-    What if your project has 338 constants without visibility, and you don't want to do them one by one?
+    What about class constants?
 ---
+
+[PHP 7.1 introduced 3 types of a class constant visibility](https://wiki.php.net/rfc/class_const_visibility): `public`, `protected`, and `private`. We want some constants, such as the client hostname, to be used only in the class, but others, like parameter names, to be used anywhere.
 
 The class constant's visibility comes in handy to make your code as tight as possible and keep your design clean. These are the options we have:
 
