@@ -2,14 +2,14 @@
 id: 410
 title: "How to add visibility to 338 constants in 25 seconds"
 perex: |
-    In PHP we have classes with methods inside them. Would make all your methods `public`? No, because some of them should be used only by the class they're in, and not anywhere else.
+    In PHP, we have classes with methods inside them. Would making all your methods `public` be a good idea? No, because some of them should be used only by the class they're in and not anywhere else.
 
-    What about class constants? PHP 7.1 introduced class constant visibility - `public`, `protected` and `private`. We want some constants, e.g. client hostname, to be used only in the class, but other like parameter names to be used anywhere.
+    What about class constants? PHP 7.1 introduced three types of a class constant visibility: `public`, `protected`, and `private`. We want some constants, such as the client hostname, to be used only in the class, but others, like parameter names, to be used anywhere.
 
-    What if your project has 338 constants without visibility, and you don't want to do one by one?
+    What if your project has 338 constants without visibility, and you don't want to do them one by one?
 ---
 
-The class constant visibility comes handy to make your code as tight as possible and keep your design clean. These are the options we have:
+The class constant's visibility comes in handy to make your code as tight as possible and keep your design clean. These are the options we have:
 
 ```php
 class SomeConstants
@@ -26,11 +26,11 @@ class SomeConstants
 }
 ```
 
-While upgrading with ~~legacy~~ successful projects, I only come across projects that have all constants `public` by default. It's either lack of PHP 7.1 feature awareness or avoiding pain of adding `private` and `protected` manually to every single constant. If it's 10 class constants to handle, is easy. But going through 50+ constants or even 338 constants is pain.
+While upgrading with ~~legacy~~ successful projects, I only come across projects with all constants `public` by default. It's either a lack of PHP 7.1 feature awareness or avoiding the pain of adding `private` and `protected` manually to every single constant. If it's 10 class constants to handle, it is easy. But going through 50+ constants or even 338 constants is pain.
 
-The downside of this default is unclear architecture that allows to use of constants anywhere in the project. It's often missued by new developers that come to project and don't know the architecture well.
+The downside of this default is the unclear architecture, which allows constants to be used anywhere in the project. New developers who come to the project and don't know the architecture are most likely to use constants all over the project.
 
-Imagine the same area of problems as with public methods. It's like injecting controller to get access to Doctrine repository of `User` class:
+Imagine the same area of problems as with public methods. It's like injecting a controller to get access to the Doctrine repository of the `User` class:
 
 ```php
 $homepageController = $container->get(HomepageController::class);
@@ -42,19 +42,19 @@ $userRepository = $doctrine->getRepository(User::class);
 
 ## Private or Protected?
 
-The easy question is: how to decide if constant is `private` or `protected`? The private constant is used solely by the class it's being defined in. Not anywhere else.
+The easy question is: how to decide if the constant is `private` or `protected`? The private constant is used solely by the class it's being defined in. Not anywhere else.
 
-The protected constant can be used by the class, the child or the parent one (not the best practise).
+The protected constant can be used by the class, the child, or the parent (not the best practice).
 
 <br>
 
-Once we have this clear algorithm to decide, we only have to apply it to 338 constants in our project. The hard question is: how to **automate this to apply it on any project with any amount of constants**?
+Once we have this straightforward algorithm to decide on, we only have to apply it to 338 constants in our project. The hard question is: How can we automate this to apply it to any project with any number of constants?
 
 <br>
 
 ## Rule of Thumb: private by default
 
-My approach is really simple - battle-testing. I go to the project, make all constants `private` with PHPStorm Find & Replace and see what goes wrong. In production? No, I take the safe path instead. I run PHPStan and see reported errors like:
+My approach is straightforward - battle-testing. I go to the project, make all constants `private` with PHPStorm Find & Replace, and see what goes wrong. In production? No, I take the safe path instead. I run PHPStan and see reported errors like:
 
 ```bash
 Access to private constant SOME_CONSTANT of class App\SomeClass.
@@ -102,7 +102,7 @@ That's it!
 
 ## Beware this False Positive
 
-Well, there is one more case that is missed by PHPStan. That's using a special keyword that allows parent classes to get their child values:
+Well, there is one more case missed by PHPStan. That's using a particular keyword that allows parent classes to get their child values:
 
 ```php
 abstract class AbstractRepository
@@ -122,22 +122,22 @@ final class TripRepository extends AbstractRepository
 }
 ```
 
-Why is this missed? Because the `AbstractRepository` calls its own default constant value, so it's valid, just wrong. We have to check all the `static::<CONSTANT_NAME>` overloaded by child classes as well.
+Why is this missed? Because the `AbstractRepository` calls its default constant value, so it's valid - just wrong. We also have to check all the `static::<CONSTANT_NAME>` overloaded by child classes.
 
 <br>
 
 ## 25 Seconds to Apply
 
-Now that we have the formula to success, we look for a way to apply it at scale:
+Now that we have the formula for success, we look for a way to apply it at scale:
 
 * make all constants `private` by default
 * run PHPStan and fix visibility to `public` and `protected` where needed
 * check `static::<CONSTANT_NAME>` separately and make these `protected`
-* commit, push and create pull-request
+* commit, push, and create pull-request
 
 <br>
 
-How can we to this with automated tools?
+How can we do this with automated tools?
 
 * We can use PHP `str_replace()` to find & replace,
 * then we can run PHPStan to get the report with errors,
@@ -147,13 +147,13 @@ So that's what we did.
 
 <br>
 
-You can find a new command in [swiss-knife](https://github.com/rectorphp/swiss-knife) tool:
+You can find a new command in the [swiss-knife](https://github.com/rectorphp/swiss-knife) tool:
 
 ```bash
 vendor/bin/swiss-knife privatize-constants src tests
 ```
 
-It does all the steps above in 25 seconds. Give it a go to make your class constants tight in instant.
+It performs all the steps above in 25 seconds. Give it a try to tighten your class constants instantly.
 
 <br>
 
