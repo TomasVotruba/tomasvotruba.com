@@ -1,6 +1,6 @@
 ---
 id: 410
-title: "How to add visibility to 338 constants in 25 seconds"
+title: "How to add visibility to 338&nbsp;Class&nbsp;Constants in 25&nbsp;seconds"
 perex: |
     In PHP, we have classes with methods inside them. Would making all your methods `public` be a good idea? No, because some of them should be used only by the class they're in and not anywhere else.
 
