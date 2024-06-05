@@ -1,6 +1,6 @@
 ---
 id: 412
-title: "How to reload code highlight on Livewire&nbsp;3 component&nbsp;update"
+title: "How to reload code highlighter on Livewire&nbsp;3 component&nbsp;update"
 perex: |
     I use Livewire 3 for interactive forms and fast clickable maps. Last week, I worked on a filter page for the Rector website, where you can use text input to search for core and community rules.
 
@@ -13,7 +13,7 @@ perex: |
 
 I use Javascript code highlighter and am very happy with its simple use and maintenance in the community. *It just works* for many years straight, and I appreciate this type of feature more and more.
 
-Whether it's highlight.js, CodeMirror, or any other similar package, they all provide simple configuration: It says, "highlight everything with class X":
+Whether it's [highlight.js](https://highlightjs.org/), [CodeMirror](https://codemirror.net/), or other similar package, they all provide simple configuration - "highlight everything with class X":
 
 ```javascript
 document.querySelectorAll('pre code.language-diff').forEach((element) => {
@@ -135,7 +135,7 @@ That's it!
 
 <br>
 
-Mind the [`requestAnimationFrame()`](https://github.com/rectorphp/getrector-com/pull/2300/files#r1626252225). It solves the blinking between bare black and white code and the highlighted code. The HTML will be only rendered once it's fully highlighted. Fancy!
+Mind the [`requestAnimationFrame()`](https://github.com/rectorphp/getrector-com/pull/2300/files#r1626252225). It **solves the blinking** between bare black/white code and the highlighted code. The HTML will be only rendered once it's fully highlighted. Fancy!
 
 <br>
 
