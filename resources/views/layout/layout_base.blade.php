@@ -48,28 +48,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/php.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/diff.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code.language-php').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-            document.querySelectorAll('pre code.language-yaml').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-            document.querySelectorAll('pre code.language-bash').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-            document.querySelectorAll('pre code.language-diff').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-            document.querySelectorAll('pre code.language-xml').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-            document.querySelectorAll('pre code.language-json').forEach((block) => {
+            document.querySelectorAll('pre code.language-php, pre code.language-html, pre code.language-yaml, pre code.language-bash, pre code.language-diff, pre code.language-xml, pre code.language-json, pre code.language-javascript' ).forEach((block) => {
                 hljs.highlightBlock(block);
             });
         });
