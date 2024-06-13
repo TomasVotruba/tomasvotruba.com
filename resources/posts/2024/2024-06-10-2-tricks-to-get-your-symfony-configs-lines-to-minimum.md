@@ -167,7 +167,7 @@ $services->set(DataAnalyser::class)
 
 For every single scalar line, our config is 1 line longer. 1 dangerous line that depends on vague argument order or name.
 
-## Attributes to the Rescue
+## PHP 8.0 Attributes to the Rescue
 
 Following feature, is a recent addition at [Symfony 6.1](https://symfony.com/blog/new-in-symfony-6-1-service-autowiring-attributes). At first, I was hesitant to move the logic to the service itself. The configuration should be in the config file, right?
 
