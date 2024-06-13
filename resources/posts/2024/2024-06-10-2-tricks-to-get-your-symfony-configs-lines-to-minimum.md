@@ -169,7 +169,7 @@ For every single scalar line, our config is 1 line longer. 1 dangerous line that
 
 ## PHP 8.0 Attributes to the Rescue
 
-Following feature, is a recent addition at [Symfony 6.1](https://symfony.com/blog/new-in-symfony-6-1-service-autowiring-attributes). At first, I was hesitant to move the logic to the service itself. The configuration should be in the config file, right?
+The `#[Autowire]` feature was added in [Symfony 6.1](https://symfony.com/blog/new-in-symfony-6-1-service-autowiring-attributes). At first, I was hesitant to move the logic to the service itself. The configuration should be in the config file, right?
 
 After few experiments, I changed my mind. Services now clearly define their dependencies; we don't have to jump back and forth to the config file to learn about them.
 
