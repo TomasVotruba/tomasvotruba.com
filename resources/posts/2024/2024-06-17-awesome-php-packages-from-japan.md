@@ -74,11 +74,19 @@ Japan seems like **an ideal pond for the birth of technical talents**. That's wh
 
 Tokyo is a highly effective PHP think tank that **generates robust solutions to hard problems**. It has yet to be discovered.
 
-If you should take away one idea from this post, it would be this: **Not every useful tool is popular**. Not every great developer writes articles and speaks at conferences. There is so much to discover to save work, learn from each other and grow together.
+
+<blockquote class="blockquote text-center">
+"Life moves pretty fast.<br>
+If you don't stop and look around once in a while, you could miss it."
+</blockquote>
+
+If you should take away one idea from this post, it would be this:<br>**Not every useful tool is popular.**
+
+Not every great developer writes articles and speaks at conferences. There is so much to discover to save work, learn from each other and grow together.
 
 <br>
 
-I hope to see more PHP conferences in English there. I would love to come and learn more.
+I hope to see more PHP conferences in English in Japan! I would love to come and learn more.
 
 <br>
 
