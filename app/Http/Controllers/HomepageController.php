@@ -14,6 +14,9 @@ final class HomepageController extends Controller
      * @var string[]
      */
     private const QUOTES = [
+        // 2024
+        "He who blames others has a long way to go on his journey. He who blames himself is halfway there. He who blames no one has arrived.",
+        "A seed grows with no sound, but a tree falls with a huge noise. Destruction has noise, but creation is quiet. This is the power of silence. Grow Silently",
         "If you don't want to do something, you'll find an excuse.<br>If you really do, you'll find a way.",
         'Every day is a new life<br>to a wise man.',
         'The cave you fear to enter<br>holds the treasure you seek.',
