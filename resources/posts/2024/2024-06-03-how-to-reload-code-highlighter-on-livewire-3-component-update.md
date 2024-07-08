@@ -68,14 +68,7 @@ final class RectorFilterComponent extends Component
 
 <br>
 
-It works well, but the code **highlighter is turned off on refresh**:
-
-<video controls width="600" class="img-thumbnail">
-    <source src="https://github-production-user-asset-6210df.s3.amazonaws.com/924196/336463733-74aaff55-ea27-473f-900f-b42b53c0dfac.webm?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240605%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240605T064416Z&X-Amz-Expires=300&X-Amz-Signature=8563f2836fbd96576e541b5d3d518c84923d3933802f2e0373b1c597e1ad78fe&X-Amz-SignedHeaders=host&actor_id=924196&key_id=0&repo_id=108684833" type="video/webm">
-            Your browser does not support the video tag.
-</video>
-
-<br>
+It works well, but the code **highlighter is turned off on refresh**.
 
 We want it to keep the code highlighted as we type, not only after page refresh.
 
