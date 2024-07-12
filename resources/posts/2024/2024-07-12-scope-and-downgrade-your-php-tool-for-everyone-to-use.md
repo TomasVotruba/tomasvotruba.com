@@ -13,7 +13,7 @@ This is a tiny part of `composer.json` that shows the point:
 {
     "require": {
         "php": "^7.4|^8.0",
-        "laravel/container": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/container": "^8.0|^9.0|^10.0|^11.0",
         "symfony/console": "^5.4|^6.4|^7.0",
         "symfony/finder": "^5.4|^6.0|^7.0"
     }
@@ -31,8 +31,8 @@ What happens in the next 2 years?
      "require": {
 -        "php": "^7.4|^8.0",
 +        "php": "^7.4|^8.0|^9.0",
--        "laravel/container": "^8.0|^9.0|^10.0|^11.0",
-+        "laravel/container": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
+-        "illuminate/container": "^8.0|^9.0|^10.0|^11.0",
++        "illuminate/container": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
 -        "symfony/console": "^5.4|^6.4|^7.0",
 +        "symfony/console": "^5.4|^6.4|^7.0|^8.0|^9.0",
 -        "symfony/finder": "^5.4|^6.0|^7.0"
@@ -193,8 +193,8 @@ Plug this process into your tool and make it fun to maintain and easy to install
      "require": {
 -       "php": "^7.4|^8.0",
 +       "php": "^8.2",
--       "laravel/container": "^8.0|^9.0|^10.0|^11.0",
-+       "laravel/container": "^11.0",
+-       "illuminate/container": "^8.0|^9.0|^10.0|^11.0",
++       "illuminate/container": "^11.0",
 -       "symfony/console": "^5.4|^6.4|^7.0",
 +       "symfony/console": "^7.1",
 -       "symfony/finder": "^5.4|^6.0|^7.0"
