@@ -1,10 +1,10 @@
 ---
 id: 415
-title: "Scope and Downgrade your PHP Tools for Everyone&nbsp;to Use"
+title: "Scope and Downgrade your PHP Tools for&nbsp;Everyone&nbsp; to Use"
 perex: |
-    Yesterday I came across a cool PHP tool. I wanted to try it, but the install instructions were a bit tricky. Tool required specific PHP version and specific version of each its dependency. E.g. it requires Symfony 5.4+, so if I have 5.3, I won't be able to use it.
+    Yesterday, I came across a cool PHP tool. I wanted to try it, but the installation instructions were a bit tricky. The tool required a specific PHP version and a specific version of each dependency. It required Symfony 5.4+, but our project has Symfony 3.3. I was unable to use it.
 
-    Many of PHP tools suffer from the same issue, so I though I'll share a way to do it better.
+    Many PHP tools suffer from the same issue, so I thought I'd share a way to do it better.
 ---
 
 This is a tiny part of `composer.json` that shows the point:
@@ -20,7 +20,7 @@ This is a tiny part of `composer.json` that shows the point:
 }
 ```
 
-The tool has to allow every version of every package, just so people can install it. It doesn't bring any value to the package. You might suggest "use a PHAR" - that won't work, as it has the same PHP and version requirements. Just in a single "ZIP file".
+The tool has to **allow every version of every package** so that people can install it. It doesn't bring any value to the package. You might suggest "use a PHAR" - that won't work, as it has the same PHP and version requirements. Just in a single "ZIP file".
 
 <br>
 
@@ -43,35 +43,35 @@ What happens in the next 2 years?
 <blockquote class="blockquote text-center">
 When we sweep it under the rug, it doesn't work.
 <br>
-The rug will eventually start to raise.
+The rug will eventually start to rise.
 </blockquote>
 
 ## Limit for Tool Maintainer
 
 If you decide to maintain your package this way, you put a lock on your utils code:
 
-* You can't use promoted properties from PHP 8.0, because code has to work on PHP 7.4.
-* You can use union types, you can use new `str_*()` functions and so on.
+* You can't use promoted properties from PHP 8.0 because code has to work on PHP 7.4.
+* You can use union types, new `str_*()` functions and so on
 * Your code becomes more and more obsolete with every new PHP version.
 
-Same goes for packages you use. Once you use Symfony 5.4, 6, 7 at the same time, you have to look for features that are available in Symfony 5.4, but also in Symfony 7.0. You can use new features, you can use deprecated and removed features.
+The same goes for packages you use. Once you use Symfony 5.4, 6, and 7 at the same time, you have to look for features that are available in Symfony 5.4 but also in Symfony 7.0. You cannot use new features, you cannot use deprecated and removed features either.
 
-Soon you **support everything for everyone**.
+Soon, you **support everything for everyone**.
 
 <img src="/assets/images/posts/2024/interconnected.jpg" class="img-thumbnail" style="max-width: 30em">
 
 They joy of fresh coding is slowly going away.
 
 <blockquote class="blockquote text-center">
-It's like driving a Tesla car. But instead of electricity-powered engine,
+It's like driving a Tesla car. But instead of an electricity-powered engine,
 <br>you'd have to use your legs and bike pedals.
 </blockquote>
 
 ## Result? Abandoned Packages
 
-Frustrations from struggling with legacy code is reasons developers leave their paid jobs. No surprise these packages - once cool and useful tools - are now slowly abandoned and forgotten. Even merging PRs with diff like above take months to merge. Few more months to tag and release new version.
+Frustrations from struggling with legacy code are among the reasons developers leave their paid jobs. It's no surprise that these packages—once cool and useful tools—are now slowly abandoned and forgotten. Even merging PRs with diffs like above takes months. It takes a few more months to tag and release a new version.
 
-It's a pity, because these PHP tools are often very useful and well-written. They help you improve code, monitor code quality or make your code style consistent.
+It's a pity because these PHP tools are often handy and well-written. They help you improve code, monitor code quality, or make your code style consistent.
 
 <br>
 
@@ -95,23 +95,22 @@ E.g. check this `composer.json` snippet from [php-cs-fixer](https://github.com/P
 
 ## New major dependency version? = Unable to install
 
-The php-cs-fixer uses roughly 20 dependencies. The moment a major version of any of those 20 dependencies is out and your projects starts to use it, you're unable to install the tool. That's 20 possible BC breaks your tools users can experience.
+The php-cs-fixer uses roughly 20 dependencies. The moment a major version of any of those 20 dependencies is out, and your projects start to use it, you're unable to install the tool. That's 20 possible BC breaks your tools users can experience.
 
 <br>
 
-## Where these tools bring the greatest benefit? Legacy projects
+## Where do these tools bring the most impact?
 
-The irony is the older project is, the more helpful these tools are. It's quite easy to have a high quality code on PHP 8.2+ project. Running coding standard tool is nice but it would not bring the codebase to another level.
+The irony is that the older the project, the more helpful these tools are. It's quite easy to have high-quality code on a PHP 8.2+ project. Running a standard coding tool is nice, but it does not elevate the codebase to another level.
 
-On the other hand, if your project uses PHP 5.4, using a tool to just fix all spaces and indents will move it light years ahead.
+On the other hand, if your project uses PHP 5.4, using a tool just to fix all spaces and indents will move it light-years ahead.
 
-
-<blockquote class="blockquote text-center">
-If your old bike gets GPS and electric power engine with battery,<br>
-you'll notice it more than your car's Bluetooth firmware upgrade.
+<blockquote class="blockquote text-center mt-5 mb-5">
+"If your old bike gets GPS and an electric power engine with battery,<br>
+you'll notice it more than your car's Bluetooth firmware upgrade."
 </blockquote>
 
-The older project is, the more value from such tooling gets.
+The older the project is, the more value from such tooling gets.
 
 <br>
 
@@ -121,36 +120,40 @@ As **maintainers**, we want to:
 
 * use the latest PHP
 * use the latest *favorite framework*
-* deliver tool to as much developers as possible
-* make it fun to create, but also easy to maintain in years to come
-* make it easy to contribute by others
+* deliver the tool to as many developers as possible
+* make it fun to create but also easy to maintain in years to come
+* make it easy to contribute to others
 * **have fun** in long term
 
 <br>
 
-As **developers who wants to use a tool**, we want to:
+As **developers who want to use a tool**, we want to:
 
 * install the package with `composer require x/y`
 * use it on my project
 
 <br>
 
-In e-commerce, the solution is called *omnichannel*. Shops are selling all kind of good, you can buy it and choose your way to deliver. Do you prefer post office? It's there. Do you fancy DHL with driver calling you? We got it covered. Do you want to pick it up in your country's standard boxes?
+In e-commerce, the solution is called **omnichannel**. Shops sell all kinds of goods; you can buy them and choose your way to deliver. Do you prefer the post office? It's there. Do you fancy DHL with a driver calling you? We got it covered. Do you want to pick it up in your country's standard boxes?
 
 
 <img src="/assets/images/posts/2024/delivery.jpg" class="img-thumbnail" style="max-width: 15em">
 
 <br>
 
-Is the e-commerce limited by the size of boxes post office can deliver? No.
+Does the size of post office boxes limit the goods e-commerce can deliver?
 
-The sold goods is **completely separated from they means od delivery**.
+No.
 
 <br>
 
-* What if the tool development process and the package delivery to users would be completely separated too?
-* What if you could create PHP tools in PHP 9.x-dev, but even users on PHP 7.3 could enjoy it since day one?
-* What if you would not have to invest any time in dealing release with this?
+The sold goods are **completely separated from the means of delivery**.
+
+<br>
+
+* What if the tool development process and the package delivery to users were wholly separated, too?
+* What if you could create PHP tools in PHP 9.x-dev, but even users on PHP 7.3 could enjoy it from day one?
+* What if you did not have to invest any time in dealing release with this?
 
 You'd be free to create and innovate, while users would be free to use your tool.
 
@@ -158,15 +161,19 @@ You'd be free to create and innovate, while users would be free to use your tool
 
 ## Separate Development and Delivery
 
-This is no idea juggling in the air. We use this approach for years for [Easy Coding Standard](https://github.com/easy-coding-standard/easy-coding-standard), for [Rector](http://github.com/rectorphp/rector-src), and PHPStan uses it too.
-Many Wordpress plugins [are on board](https://leoloso.com/) as well.
+This is not an idea in the air. We have used this approach for years for [Easy Coding Standard](https://github.com/easy-coding-standard/easy-coding-standard), for [Rector](http://github.com/rectorphp/rector-src), and PHPStan uses it too.
+Many WordPress plugins [are on board](https://leoloso.com/) as well.
 
-That's why these tools are so popular, because it's easy to install them.
+<br>
 
-In software world, the process is called **downgrade and scope**.
+That's why these tools are so popular, because it's easy to install them on any kind of project.
 
-* **Downgrade** is narrowing down features from latest PHP to the lowest PHP you want to support, typically PHP 7.2
-* **Scope** is allowing to install Symfony 7.1 code, on projects with Symfony 3 by prefixing your classes in their own vendor
+<br>
+
+In the software world, the process is called **downgrade and scope**.
+
+* **Downgrade** is narrowing down features from the latest PHP to the lowest PHP you want to support, typically PHP 7.2
+* **Scope** allows to install Symfony 7.1 code on a project running Symfony 3 by prefixing tool classes in their vendor
 
 <br>
 
@@ -177,8 +184,9 @@ You can read more about the technical process here:
 * [How to Develop Sole Package in PHP 8.1 and Downgrade to PHP 7.2](https://tomasvotruba.com/blog/how-to-develop-sole-package-in-php81-and-downgrade-to-php72/)
 
 <br>
+<br>
 
-Plug this process to your tool and make it fun to maintain and easy to install again:
+Plug this process into your tool and make it fun to maintain and easy to install again:
 
 ```diff
  {
@@ -196,6 +204,5 @@ Plug this process to your tool and make it fun to maintain and easy to install a
 ```
 
 <br>
-
 
 Happy coding!
