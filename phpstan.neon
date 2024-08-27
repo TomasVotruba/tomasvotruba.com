@@ -1,6 +1,8 @@
 parameters:
     reportUnmatchedIgnoredErrors: false
 
+    errorFormat: symplify
+
     paths:
         - app
         - config
