@@ -27,14 +27,6 @@ final class PostRepositoryTest extends AbstractTestCase
         $this->assertContainsOnlyInstancesOf(Post::class, $posts);
     }
 
-    public function testLast(): void
-    {
-        $lastPosts = $this->postRepository->fetchLast(5);
-
-        $this->assertCount(5, $lastPosts);
-        $this->assertContainsOnlyInstancesOf(Post::class, $lastPosts);
-    }
-
     public function testPostRoutes(): void
     {
         // limit the amount of posts, as the route tests are slow

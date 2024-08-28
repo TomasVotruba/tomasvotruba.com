@@ -16,7 +16,6 @@ Route::get('/blog/{slug}', PostController::class)
     // include dots and slashes as well
     ->where('slug', '.*');
 
-Route::get('/blog', BlogController::class);
 
 Route::redirect('/rss.xml', '/rss');
 Route::get('/rss', RssController::class);
@@ -32,5 +31,8 @@ Route::get('/bank',  function () {
 // redirects
 Route::redirect('/contact', '/');
 Route::redirect('/about', '/');
+Route::redirect('/blog', '/#posts');
+
+
 Route::redirect('/book-detail/rector-the-power-of-automated-refactoring', 'https://leanpub.com/rector-the-power-of-automated-refactoring');
 

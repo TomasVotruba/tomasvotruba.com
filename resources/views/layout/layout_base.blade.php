@@ -69,7 +69,7 @@
     @hasSection('wide_content')
         @yield('wide_content')
     @else
-        <div class="container-fluid">
+        <div class="container">
             @yield('content')
         </div>
    @endif

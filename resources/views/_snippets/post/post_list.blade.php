@@ -17,7 +17,7 @@
                 Updated {{ $post->getUpdatedAt()->format('Y-m-d') }}
             </div>
         @else
-            <div class="text-muted">{{ $post->getDateTime()->format('Y-m-d') }}</div>
+            <div class="highlight-date">{{ $post->getDateTime()->format('m-d') }}</div>
         @endif
     </div>
 @endforeach

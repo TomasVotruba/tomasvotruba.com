@@ -89,21 +89,15 @@ ul {
 }
 
 #menu {
-    /*background-color: #24292e;*/
     font-size: 1.1em;
-    padding: 1.5em 1em;
+    padding: 1.3em 1em;
     margin-bottom: 2em;
-    /*color: #ddd;*/
-    border-bottom: 5px solid #333;
+    border-bottom: 7px solid rgba(51, 51, 51, 0.68);
 }
 
 @media (min-width: 992px) {
     .container {
-        max-width: 960px;
-    }
-
-    .container-fluid {
-        max-width: 960px;
+        max-width: 1000px;
     }
 }
 
@@ -283,8 +277,8 @@ a.btn {
 }
 
 .text-bigger {
-    font-size: 1.3em;
-    line-height: 1.6em;
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
 
 .text-bigger {
@@ -305,7 +299,7 @@ a.btn {
 }
 
 .article-row {
-    border-bottom: 1px solid #DDD;
+    padding-top: 1.2em;
     margin-bottom: 1.2em;
     padding-bottom: 1.3em;
 }
@@ -339,6 +333,7 @@ a.btn {
 
     #menu {
         font-size: 1.1rem;
+        line-height: 2.2em;
     }
 
     .text-bigger {
@@ -348,14 +343,6 @@ a.btn {
 
     .container {
         max-width: 100%;
-    }
-
-    .container-fluid {
-        max-width: 100%;
-    }
-
-    #menu {
-        line-height: 2.2em;
     }
 
     h1 {
@@ -397,4 +384,19 @@ pre.shiki {
 
 .nobr {
     white-space: nowrap;
+}
+
+// hightlight date, stolen from https://honzajavorek.cz/ :)
+.highlight-date {
+    float: left;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #DDD;
+    font-size: 1rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
 }
