@@ -9,7 +9,7 @@
     >
         <a href="{{ action(\App\Http\Controllers\PostController::class, ['slug' => $post->getSlug()]) }}"
            class="post-list-title">
-            {{ $post->getClearTitle() }}
+            {!! $post->getClearTitle() !!}
         </a>
 
         @if ($post->getUpdatedAt())
