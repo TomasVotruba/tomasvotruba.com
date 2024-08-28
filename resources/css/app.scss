@@ -272,8 +272,10 @@ a.btn {
 }
 
 .post-list-title {
+    padding-top: .2em;
     font-size: 1.4em;
     line-height: 1.8em;
+    padding-left: .4em;
 }
 
 .text-bigger {
@@ -300,7 +302,6 @@ a.btn {
 
 .article-row {
     padding-top: 1.2em;
-    margin-bottom: 1.2em;
     padding-bottom: 1.3em;
 }
 
@@ -395,7 +396,7 @@ pre.shiki {
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    background-color: #DDD;
+    background-color: #EEE;
     font-size: 1rem;
     margin-right: 1rem;
     flex-shrink: 0;

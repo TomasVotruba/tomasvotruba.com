@@ -62,10 +62,10 @@
         <a name="posts"></a>
 
         <h2 class="mb-5">
-            Sharing knowledge in Posts
+            Learn about PHP in Posts
         </h2>
 
-        @include('_snippets/post/post_list', ['posts' => $last_posts])
+        @include('_snippets/post/post_list', ['posts' => $posts])
 
 
     </div>

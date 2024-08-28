@@ -54,6 +54,11 @@ final readonly class Post
         return $this->dateTime;
     }
 
+    public function getYear(): int
+    {
+        return (int) $this->dateTime->format('Y');
+    }
+
     public function getUpdatedAt(): ?DateTimeInterface
     {
         return $this->updatedAt;

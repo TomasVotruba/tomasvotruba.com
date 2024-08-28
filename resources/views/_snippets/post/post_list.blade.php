@@ -1,23 +1,24 @@
 @foreach ($posts as $post)
     @php /** @var $post \App\Entity\Post */ @endphp
 
-    <div
-            @class([
-                'article-row',
-                'bg-success text-white pt-3 pb-4 ps-4 pe-4 mb-4 rounded shadow' => $post->isUpdated(),
-            ])
-    >
-        <a href="{{ action(\App\Http\Controllers\PostController::class, ['slug' => $post->getSlug()]) }}"
-           class="post-list-title">
-            {!! $post->getClearTitle() !!}
-        </a>
+    @if ($latestYear !== $post->getYear())
+        <h3 class="mt-5">{{ $post->getYear() }}</h3>
+        @php $latestYear = $post->getYear() @endphp
+    @endif
+
+    <div class="article-row d-flex">
 
         @if ($post->getUpdatedAt())
-            <div>
-                Updated {{ $post->getUpdatedAt()->format('Y-m-d') }}
+            <div class="highlight-date bg-success text-white">
+                {{ $post->getUpdatedAt()->format('m-d') }}
             </div>
         @else
             <div class="highlight-date">{{ $post->getDateTime()->format('m-d') }}</div>
         @endif
+
+        <a href="{{ action(\App\Http\Controllers\PostController::class, ['slug' => $post->getSlug()]) }}"
+           class="post-list-title">
+            {!! $post->getClearTitle() !!}
+        </a>
     </div>
 @endforeach

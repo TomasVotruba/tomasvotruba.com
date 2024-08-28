@@ -30,13 +30,13 @@ final class HomepageController extends Controller
 
     public function __invoke(): View
     {
-        $lastPosts = $this->postRepository->fetchAll();
         $randomQuote = self::QUOTES[array_rand(self::QUOTES)];
 
         return \view('homepage', [
-            'last_posts' => $lastPosts,
+            'posts' => $this->postRepository->fetchAll(),
             'title' => 'Change Fast and Safely',
             'quote' => $randomQuote,
+            'latestYear' => date('Y'),
         ]);
     }
 }
