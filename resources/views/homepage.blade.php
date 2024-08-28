@@ -66,7 +66,5 @@
         </h2>
 
         @include('_snippets/post/post_list', ['posts' => $posts])
-
-
     </div>
 @endsection
