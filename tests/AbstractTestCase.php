@@ -7,7 +7,6 @@ namespace App\Tests;
 use App\DependencyInjection\ContainerFactory;
 use Illuminate\Container\Container;
 use Illuminate\Foundation\Testing\TestCase;
-use Webmozart\Assert\Assert;
 
 abstract class AbstractTestCase extends TestCase
 {
@@ -28,9 +27,6 @@ abstract class AbstractTestCase extends TestCase
      */
     protected function make(string $type): object
     {
-        $service = $this->app->make($type);
-        Assert::isInstanceOf($service, $type);
-
-        return $service;
+        return $this->app->make($type);
     }
 }
