@@ -29,10 +29,12 @@ final class PostRepositoryTest extends AbstractTestCase
 
     public function testPostRoutes(): void
     {
-        // limit the amount of posts, as the route tests are slow
-        $posts = $this->postRepository->fetchLast(20);
+        $posts = $this->postRepository->fetchAll();
 
-        foreach ($posts as $post) {
+        // limit the amount of posts, as the route tests are slow
+        $last20Posts = array_slice($posts, 0, 20);
+
+        foreach ($last20Posts as $post) {
             // the url must be with localhost:8000
             $postTestUrl = 'https://localhost:8000/blog/' . $post->getSlug();
 
