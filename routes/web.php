@@ -34,5 +34,6 @@ Route::redirect('/about', '/');
 Route::redirect('/blog', '/#posts');
 
 
+Route::redirect('/book', 'https://leanpub.com/rector-the-power-of-automated-refactoring');
 Route::redirect('/book-detail/rector-the-power-of-automated-refactoring', 'https://leanpub.com/rector-the-power-of-automated-refactoring');
 
