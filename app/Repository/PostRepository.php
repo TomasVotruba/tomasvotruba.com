@@ -50,14 +50,6 @@ final class PostRepository
     /**
      * @return Post[]
      */
-    public function fetchLast(int $limit): array
-    {
-        return array_slice($this->posts, 0, $limit);
-    }
-
-    /**
-     * @return Post[]
-     */
     private function loadPostsFromStorage(): array
     {
         $posts = [];

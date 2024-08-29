@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Tests\Smoking;
 
 use App\Tests\AbstractTestCase;
+use Illuminate\Routing\RedirectController;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Route as RouteFacade;
 use Iterator;
@@ -22,9 +23,14 @@ final class ControllerSmokeTest extends AbstractTestCase
 
     public static function provideRoutes(): Iterator
     {
+        /** @var Route[] $getRoutes */
         $getRoutes = RouteFacade::getRoutes()->getRoutesByMethod()['GET'];
 
         foreach ($getRoutes as $getRoute) {
+            if (self::isRedirectRoute($getRoute)) {
+                continue;
+            }
+
             if ($getRoute->parameterNames() !== []) {
                 continue;
             }
@@ -36,5 +42,15 @@ final class ControllerSmokeTest extends AbstractTestCase
 
             yield [$getRoute];
         }
+    }
+
+    private static function isRedirectRoute(Route $route): bool
+    {
+        $controllerClass = $route->getControllerClass();
+        if (! is_string($controllerClass)) {
+            return false;
+        }
+
+        return ltrim($controllerClass, '\\') === RedirectController::class;
     }
 }

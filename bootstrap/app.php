@@ -11,10 +11,10 @@ return Application::configure()
     ->withRouting(
         web: __DIR__.'/../routes/web.php',
     )
-    ->withMiddleware(function (Middleware $middleware) {
+    ->withMiddleware(function (Middleware $middleware): void {
         //
     })
-    ->withExceptions(function (Exceptions $exceptions) {
+    ->withExceptions(function (Exceptions $exceptions): void {
         //
     })
     ->create();
