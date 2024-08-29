@@ -49,7 +49,7 @@ Both are time-tested, community-driven, and, most importantly, still being used 
 
 **We have 1 new PHP version released every year**, with a clear release path ahead:
 
-* 4 patch versions (e.g. 8.1, 8.2, 8.3, 8.4)
+* 4 minor versions (e.g. 8.1, 8.2, 8.3, 8.4)
 * followed by a new major release with BC breaks (e.g. 9.0)
 
 ## PHP has Pro-Growth Competition
