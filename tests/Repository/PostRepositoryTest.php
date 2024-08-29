@@ -34,9 +34,9 @@ final class PostRepositoryTest extends AbstractTestCase
         // limit the amount of posts, as the route tests are slow
         $last20Posts = array_slice($posts, 0, 20);
 
-        foreach ($last20Posts as $post) {
+        foreach ($last20Posts as $last20Post) {
             // the url must be with localhost:8000
-            $postTestUrl = 'https://localhost:8000/blog/' . $post->getSlug();
+            $postTestUrl = 'https://localhost:8000/blog/' . $last20Post->getSlug();
 
             $response = $this->get($postTestUrl);
             $response->assertSuccessful();
