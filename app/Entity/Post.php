@@ -21,6 +21,7 @@ final readonly class Post
         private string $content,
         private ?DateTimeInterface $updatedAt,
         private ?string $updatedMessage,
+        private ?string $alias,
     ) {
     }
 
@@ -74,11 +75,6 @@ final readonly class Post
         return $this->updatedMessage;
     }
 
-    //    public function getYear(): int
-    //    {
-    //        return (int) $this->dateTime->format('Y');
-    //    }
-
     public function getContent(): string
     {
         return $this->content;
@@ -94,5 +90,10 @@ final readonly class Post
     public function hasTweets(): bool
     {
         return str_contains($this->content, 'class="twitter-tweet"');
+    }
+
+    public function getAlias(): ?string
+    {
+        return $this->alias;
     }
 }
