@@ -6,6 +6,8 @@ perex: |
 
 
     Today we start with [Nette\Utils](https://github.com/nette/utils) package.
+
+alias: "php-gems-nette-utils"
 ---
 
 ## Why I Use it

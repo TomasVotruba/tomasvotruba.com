@@ -66,6 +66,7 @@ final readonly class PostFactory
             $matches['content'],
             $updatedAt,
             $configuration['updated_message'] ?? null,
+            $configuration['alias'] ?? null,
         );
     }
 }

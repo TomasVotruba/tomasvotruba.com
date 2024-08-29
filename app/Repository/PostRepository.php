@@ -38,6 +38,10 @@ final class PostRepository
     {
         $slug = rtrim($slug, '/');
         foreach ($this->posts as $post) {
+            if ($post->getAlias() === $slug) {
+                return $post;
+            }
+
             $postSlug = rtrim($post->getSlug(), '/');
             if ($postSlug === $slug) {
                 return $post;

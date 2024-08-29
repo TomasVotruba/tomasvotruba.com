@@ -5,6 +5,7 @@ perex: |
     The series on not-so-well-known packages that might save your ass more than you think continues.
     Today we look on **files as objects**.
 
+alias: php-gems-symfony-finder
 
 ---
 
