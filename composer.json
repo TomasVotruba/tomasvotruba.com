@@ -12,6 +12,7 @@
         "league/commonmark": "^2.4.1",
         "nesbot/carbon": "^2.8",
         "nette/utils": "^4.0",
+        "openai-php/client": "^0.10.1",
         "symfony/yaml": "^6.4"
     },
     "require-dev": {
@@ -53,7 +54,8 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         }
     }
 }

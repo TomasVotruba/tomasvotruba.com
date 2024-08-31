@@ -18,7 +18,7 @@ final class ControllerSmokeTest extends AbstractTestCase
     {
         $testResponse = $this->get($route->uri);
 
-        $testResponse->assertSuccessful();
+        $this->assertTrue($testResponse->isSuccessful(), (string) $testResponse->getContent());
     }
 
     public static function provideRoutes(): Iterator
@@ -32,6 +32,11 @@ final class ControllerSmokeTest extends AbstractTestCase
             }
 
             if ($getRoute->parameterNames() !== []) {
+                continue;
+            }
+
+            if ($getRoute->uri === 'share-board') {
+                // skip as required GPT
                 continue;
             }
 

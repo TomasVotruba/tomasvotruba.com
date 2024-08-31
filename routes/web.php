@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RssController;
+use App\Http\Controllers\ShareBoardController;
 use App\Http\Controllers\ThumbnailController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +20,8 @@ Route::redirect('/rss.xml', '/rss');
 Route::get('/rss', RssController::class);
 
 Route::get('/thumbnail/{title}.png', ThumbnailController::class);
+
+Route::get('/share-board', ShareBoardController::class);
 
 Route::get('/bank',  function () {
     return view('bank', [
