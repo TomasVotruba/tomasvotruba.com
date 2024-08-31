@@ -17,9 +17,11 @@ final class ShareBoardController extends Controller
 
     public function __invoke(): View
     {
+        $posts = $this->postRepository->fetchAll();
+
         return \view('share_board', [
             'title' => 'Share board',
-            'posts' => $this->postRepository->fetchAll(),
+            'randomPosts' => $posts,
         ]);
     }
 }
