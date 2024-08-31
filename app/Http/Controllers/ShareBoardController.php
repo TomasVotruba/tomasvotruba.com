@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use OpenAI\Client;
 use App\Entity\Post;
 use App\Repository\PostRepository;
 use App\ValueObject\PostTweet;
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
+use OpenAI\Client;
 
 final class ShareBoardController extends Controller
 {
