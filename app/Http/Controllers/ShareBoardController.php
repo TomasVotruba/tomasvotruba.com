@@ -4,15 +4,18 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use OpenAI\Client;
 use App\Entity\Post;
 use App\Repository\PostRepository;
+use App\ValueObject\PostTweet;
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
 
 final class ShareBoardController extends Controller
 {
     public function __construct(
-        private PostRepository $postRepository
+        private readonly PostRepository $postRepository,
+        private readonly Client $client
     ) {
     }
 
@@ -20,38 +23,32 @@ final class ShareBoardController extends Controller
     {
         $randomPosts = $this->postRepository->fetchRandom(2);
 
-        // @todo use GPT to create a tweet post suggestions
-        // @todo use Parlalel run from Laravel new
-
-        $yourApiKey = getenv('OPEN_AI_API_KEY');
-
-        $client = \OpenAI::client($yourApiKey);
-
-        // @todo do parlalel :)
-        $tweets = [];
+        // @todo do parallel :)
+        $postTweets = [];
         foreach ($randomPosts as $randomPost) {
-            $tweets[] = $this->createTweetForPost($client, $randomPost);
+            $tweet = $this->createTweetForPost($randomPost);
+            $postTweets[] = new PostTweet($tweet, $randomPost);
         }
 
         return \view('share_board', [
             'title' => 'Share board',
-            'randomPosts' => $randomPosts,
+            'postTweets' => $postTweets,
         ]);
     }
 
-    private function createTweetForPost(\OpenAI\Client $client, Post $randomPost)
+    private function createTweetForPost(Post $post): string
     {
-        /** @var Post $randomPost */
-        $result = $client->chat()->create([
-            'model' => 'gpt-4',
+        $createResponse = $this->client->chat()->create([
+            // @see https://platform.openai.com/docs/models
+            'model' => 'gpt-4o-mini',
             'messages' => [
                 [
                     'role' => 'user',
-                    'content' => 'Hello! I need help making a short engaging tweet for a blog post. Also add an emoji. No hash tags. Include link to the post in the end. Fit it 100-120 chars. Here is a blog post: ' . PHP_EOL . PHP_EOL . $randomPost->getContent() . PHP_EOL . PHP_EOL . 'Link: https://tomasvotruba.com/blog/' . $randomPost->getSlug(),
+                    'content' => 'Hello! I need help making a short engaging tweet for a blog post. Also add an emoji. No hash tags, no links, no quotes. Fit it 100-120 chars. Here is a blog post: ' . PHP_EOL . PHP_EOL . $post->getContent(),
                 ],
             ],
         ]);
 
-        return $result->choices[0]->message->content;
+        return (string) $createResponse->choices[0]->message->content;
     }
 }
