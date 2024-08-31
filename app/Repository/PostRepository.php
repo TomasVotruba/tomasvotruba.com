@@ -7,6 +7,7 @@ namespace App\Repository;
 use App\Entity\Post;
 use App\EntityFactory\PostFactory;
 use App\Exception\ShouldNotHappenException;
+use Illuminate\Support\Collection;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Webmozart\Assert\Assert;
 
@@ -24,6 +25,15 @@ final class PostRepository
         private readonly PostFactory $postFactory
     ) {
         $this->posts = $this->loadPostsFromStorage();
+    }
+
+    /**
+     * @return Collection<Post>
+     */
+    public function fetchRandom(int $count): Collection
+    {
+        $postsCollection = new Collection($this->posts);
+        return $postsCollection->random($count);
     }
 
     /**

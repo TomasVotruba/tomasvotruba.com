@@ -40,6 +40,10 @@
                                 <span class="ps-2 pe-2">•</span>
 
                                 <a href="https://github.com/tomasVotruba/">GitHub</a>
+
+                                <span class="ps-2 pe-2">•</span>
+
+                                <a href="https://getrector.com">Rector</a>
                             </div>
                         </div>
                     </div>
