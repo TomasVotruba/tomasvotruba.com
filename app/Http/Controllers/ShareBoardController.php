@@ -15,13 +15,13 @@ final class ShareBoardController extends Controller
 {
     public function __construct(
         private readonly PostRepository $postRepository,
-        private readonly Client $client
+        private readonly Client $client,
     ) {
     }
 
     public function __invoke(): View
     {
-        $randomPosts = $this->postRepository->fetchRandom(2);
+        $randomPosts = $this->postRepository->fetchRandom(4);
 
         // @todo do parallel :)
         $postTweets = [];

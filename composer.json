@@ -12,6 +12,7 @@
         "league/commonmark": "^2.4.1",
         "nesbot/carbon": "^2.8",
         "nette/utils": "^4.0",
+        "noweh/twitter-api-v2-php": "^3.5",
         "openai-php/client": "^0.10.1",
         "symfony/yaml": "^6.4"
     },

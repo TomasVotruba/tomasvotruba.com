@@ -2,11 +2,9 @@
 id: 121
 title: "6 Reasons Why Doctrine is Alive and Kicking"
 perex: |
-    Almost 1,5 year ago I wrote [Why is Doctrine Dying](/blog/2017/03/27/why-is-doctrine-dying/). I didn't use *dead*, because it's is just state of time being. Open-source projects - like people - tend to find themselves on the top, being stuck or struggling with the right path from time to time. It's a completely normal process of evolution.
-
+    Almost 1,5 year ago I wrote *Why is Doctrine Dying*. I didn't use *dead*, because it's is just state of time being. Open-source projects - like people - tend to find themselves on the top, being stuck or struggling with the right path from time to time. It's a completely normal process of evolution.
 
     I don't know if that post helped it, but since then many **things changed for better in Doctrine project**. Saying that this post deprecates my old view and celebrate changes.
-
 
     **May this be an inspiration for open-source projects that find themselves stuck and the maintainers that find themselves unhappy**.
 ---
@@ -107,4 +105,3 @@ Packages **tagging** is like [publishing a book](https://www.doctrine-project.or
 And that's all folks. **I'm happy Doctrine is moving forward to the version 3.0 and I really look forward to it** - it will run on PHP 7.2, one more sandbag dropped to make code better.
 
 How is your project doing? What do you do when you feel stuck for a while? Let me know in the comments.
-
