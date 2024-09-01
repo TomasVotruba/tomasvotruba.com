@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomepageController::class);
 
+// old posts with redirect
+Route::redirect('/blog/2020/03/30/dont-show-your-privates-to-public', '/blog/how-to-avoid-maintaining-classes-you-dont-use');
+
 // blog
 Route::get('/blog/{slug}', PostController::class)
     // include dots and slashes as well
