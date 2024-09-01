@@ -15,12 +15,16 @@ final class AppServiceProvider extends ServiceProvider
     {
         $this->app->singleton(Client::class, function (): Client {
             $openApiKey = getenv('OPENAI_API_KEY');
-            Assert::string($openApiKey);
+            // dev only
+            if ($openApiKey === null) {
+                $openApiKey = 'random_key';
+            }
 
             return OpenAI::client($openApiKey);
         });
 
         $this->app->singleton(\Noweh\TwitterApi\Client::class, function (): \Noweh\TwitterApi\Client {
+
             $twitterAppId = getenv('TWITTER_APP_ID');
             $twitterApiKey = getenv('TWITTER_API_KEY');
             $twitterApiSecret = getenv('TWITTER_API_SECRET');
@@ -43,7 +47,7 @@ final class AppServiceProvider extends ServiceProvider
                 'consumer_secret' => $twitterApiSecret,
                 'bearer_token' => $twitterBearerToken,
                 // Optional
-                'free_mode' => false,
+                // 'free_mode' => false,
             ]);
         });
     }
