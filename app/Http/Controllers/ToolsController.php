@@ -11,7 +11,7 @@ use Illuminate\Routing\Controller;
 final class ToolsController extends Controller
 {
     public function __construct(
-        private ToolRepository $toolRepository
+        private readonly ToolRepository $toolRepository
     ) {
 
     }

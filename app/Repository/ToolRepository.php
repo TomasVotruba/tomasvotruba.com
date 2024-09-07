@@ -13,9 +13,7 @@ final class ToolRepository
      */
     public function fetchAll(): array
     {
-        $tools = [];
-
-        $tools[] = new Tool(
+        return [new Tool(
             'Easy Coding Standard',
             'First week when you come to a new project',
             'Adds advanced coding standard fast',
@@ -26,9 +24,7 @@ final class ToolRepository
                 'First run or dry-run' => 'vendor/bin/ecs',
                 'Fix coding standdard' => 'vendor/bin/ecs --fix',
             ],
-        );
-
-        $tools[] = new Tool(
+        ), new Tool(
             'Type Coverage',
             'When you reach PHP 7.0+ with scalar types',
             'Helps you add type declarations 1 % at a time',
@@ -47,9 +43,7 @@ parameters:
         # enable on PHP 8.3+
         # constant: 5
 PHPSTAN
-        );
-
-        $tools[] = new Tool(
+        ), new Tool(
             'Class Leak',
             'When you reach PHPStan level 2',
             'Spots unused classes',
@@ -59,9 +53,7 @@ PHPSTAN
             [
                 'Detect unused classes' => 'vendor/bin/class-leak check /src /tests',
             ]
-        );
-
-        $tools[] = new Tool(
+        ), new Tool(
             'Unused public',
             'When you reach PHPStan level 3/4',
             'Removes unused public code you maintain',
@@ -78,10 +70,7 @@ parameters:
         # properties: true
         # methods: true
 PHPSTAN
-
-        );
-
-        $tools[] = new Tool(
+        ), new Tool(
             'Swiss Knife',
             'When you reach PHPStan level 3/4',
             'Finalizes classes without children, makes class constants private and more',
@@ -92,9 +81,7 @@ PHPSTAN
                 'Finalize classes without children' => 'vendor/bin/swiss-knife finalize-classes /src /tests',
                 'Privatize local class constants' => 'vendor/bin/swiss-knife privatize-constants /src /tests',
             ]
-        );
-
-        $tools[] = new Tool(
+        ), new Tool(
             'Type Perfect',
             'When you reach PHPStan level 6',
             'Help you remove mixed types from obviously known code',
@@ -112,10 +99,7 @@ parameters:
         # narrow_param: true
         # narrow_return: true
 PHPSTAN
-
-        );
-
-        $tools[] = new Tool(
+        ), new Tool(
             'Config Transformer',
             'When you have Symfony configs in YAML',
             'Converts YAML configs to PHP for you',
@@ -125,8 +109,6 @@ PHPSTAN
             [
                 'Transform' => 'vendor/bin/config-transformer convert /config',
             ]
-        );
-
-        return $tools;
+        )];
     }
 }
