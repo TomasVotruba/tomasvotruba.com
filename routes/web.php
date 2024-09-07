@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\RssController;
 use App\Http\Controllers\ShareBoardController;
 use App\Http\Controllers\ThumbnailController;
+use App\Http\Controllers\ToolsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomepageController::class);
@@ -23,6 +24,7 @@ Route::redirect('/rss.xml', '/rss');
 Route::get('/rss', RssController::class);
 
 Route::get('/thumbnail/{title}.png', ThumbnailController::class);
+Route::get('/tools', ToolsController::class);
 
 Route::get('/share-board', ShareBoardController::class);
 

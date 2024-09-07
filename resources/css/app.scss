@@ -334,7 +334,7 @@ a.btn {
 
     .text-bigger {
         font-size: 1.3rem;
-        line-height: 1.3em;
+        line-height: 1.6em;
     }
 
     .container {
@@ -395,4 +395,13 @@ pre.shiki {
     font-size: 1rem;
     margin-right: 1rem;
     flex-shrink: 0;
+}
+
+// hover of badge
+a > .text-bg-dark {
+    background-color: rgba(77, 81, 84, 0.82) !important;
+
+    &:hover {
+        background-color: #4d5154 !important;
+    }
 }
