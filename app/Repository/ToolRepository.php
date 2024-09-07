@@ -36,7 +36,17 @@ final class ToolRepository
             'https://tomasvotruba.com/blog/how-to-measure-your-type-coverage',
             'composer require tomasvotruba/type-coverage --dev',
             [],
-            true
+            true,
+            <<<'PHPSTAN'
+parameters:
+    type_coverage:
+        return: 5
+        param: 5
+        # enable on PHP 7.4+
+        # property: 5
+        # enable on PHP 8.3+
+        # constant: 5
+PHPSTAN
         );
 
         $tools[] = new Tool(
@@ -59,7 +69,16 @@ final class ToolRepository
             'https://tomasvotruba.com/blog/can-phpstan-find-dead-public-methods/',
             'composer require tomasvotruba/unused-public --dev',
             [],
-            true
+            true,
+            <<<'PHPSTAN'
+parameters:
+    unused_public:
+        constants: true
+        # handle one by one
+        # properties: true
+        # methods: true
+PHPSTAN
+
         );
 
         $tools[] = new Tool(
@@ -83,7 +102,17 @@ final class ToolRepository
             'https://getrector.com/blog/introducing-type-perfect-for-extra-safety',
             'composer require rector/type-perfect --dev',
             [],
-            true
+            true,
+            <<<'PHPSTAN'
+parameters:
+    type_perfect:
+        null_over_false: true
+        # enable one a by one
+        # no_mixed: true
+        # narrow_param: true
+        # narrow_return: true
+PHPSTAN
+
         );
 
         $tools[] = new Tool(

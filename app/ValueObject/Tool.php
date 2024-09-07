@@ -20,6 +20,7 @@ final readonly class Tool
         private string $composer,
         private array $tryCommands = [],
         private bool $isPhpstanExtension = false,
+        private ?string $phpstanContents = null,
     ) {
         Assert::allString(array_keys($tryCommands));
         Assert::allString($tryCommands);
@@ -50,7 +51,7 @@ final readonly class Tool
         return $this->post;
     }
 
-    public function getComposer(): ?string
+    public function getComposer(): string
     {
         return $this->composer;
     }
@@ -71,5 +72,10 @@ final readonly class Tool
     public function getSlug(): string
     {
         return str($this->name)->slug()->toString();
+    }
+
+    public function getPhpstanContents(): ?string
+    {
+        return $this->phpstanContents;
     }
 }
