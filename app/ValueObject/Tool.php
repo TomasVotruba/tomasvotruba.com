@@ -67,4 +67,9 @@ final readonly class Tool
     {
         return $this->isPhpstanExtension;
     }
+
+    public function getSlug(): string
+    {
+        return str($this->name)->slug()->toString();
+    }
 }
