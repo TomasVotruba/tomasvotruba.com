@@ -12,7 +12,7 @@
                             </div>
 
                             <div class="d-block ms-4 mt-4">
-                                <h2 class="mt-0" style="letter-spacing: .02em; font-size: 2em">Tomas Votruba</h2>
+                                <h2 class="mt-0" style="letter-spacing: .02em; font-size: 2em">Hi, I'm Tomas Votruba</h2>
                             </div>
                         </div>
 
