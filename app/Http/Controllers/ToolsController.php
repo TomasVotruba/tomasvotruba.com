@@ -4,82 +4,23 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\ValueObject\Tool;
+use App\Repository\ToolRepository;
 use Illuminate\Contracts\View\View;
 use Illuminate\Routing\Controller;
 
 final class ToolsController extends Controller
 {
+    public function __construct(
+        private ToolRepository $toolRepository
+    ) {
+
+    }
+
     public function __invoke(): View
     {
-        $tools = [];
-
-        $tools[] = new Tool(
-            'Easy Coding Standard',
-            'First week when you come to a new project',
-            'Adds advanced coding standard fast',
-            'https://github.com/easy-coding-standard/easy-coding-standard',
-            'https://tomasvotruba.com/blog/introducing-up-to-16-times-faster-easy-coding-standard',
-            'composer require symplify/easy-coding-standard --dev'
-        );
-
-        $tools[] = new Tool(
-            'Type Coverage',
-            'When you reach PHP 7.0+ with scalar types',
-            'Helps you add type declarations 1 % at a time',
-            'https://github.com/TomasVotruba/type-coverage',
-            'https://tomasvotruba.com/blog/how-to-measure-your-type-coverage',
-            'composer require tomasvotruba/type-coverage --dev'
-        );
-
-        $tools[] = new Tool(
-            'Class Leak',
-            'When you reach PHPStan level 2',
-            'Spots unused classes',
-            'https://github.com/TomasVotruba/class-leak',
-            'https://tomasvotruba.com/blog/how-to-avoid-maintaining-classes-you-dont-use',
-            'composer require tomasvotruba/class-leak --dev'
-        );
-
-        $tools[] = new Tool(
-            'Unused public',
-            'When you reach PHPStan level 3/4',
-            'Removes unused public code you maintain',
-            'https://github.com/TomasVotruba/unused-public',
-            'https://tomasvotruba.com/blog/can-phpstan-find-dead-public-methods/',
-            'composer require tomasvotruba/unused-public --dev'
-        );
-
-        $tools[] = new Tool(
-            'Swiss Knife',
-            'When you reach PHPStan level 3/4',
-            'Finalizes classes without children, makes class constants private and more',
-            'https://github.com/rectorphp/swiss-knife',
-            'https://tomasvotruba.com/blog/cool-features-of-swiss-knife',
-            'composer require rector/swiss-knife --dev'
-        );
-
-        $tools[] = new Tool(
-            'Type Perfect',
-            'When you reach PHPStan level 6',
-            'Help you remove mixed types from obviously known code',
-            'https://github.com/rectorphp/type-perfect',
-            'https://getrector.com/blog/introducing-type-perfect-for-extra-safety',
-            'composer require rector/type-perfect --dev'
-        );
-
-        $tools[] = new Tool(
-            'Config Transformer',
-            'When you have Symfony configs in YAML',
-            'Converts YAML configs to PHP for you',
-            'https://github.com/symplify/config-transformer',
-            'https://tomasvotruba.com/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/',
-            'composer require symplify/config-transformer --dev'
-        );
-
         return \view('tools', [
             'title' => 'Tools - What & when to use',
-            'tools' => $tools,
+            'tools' => $this->toolRepository->fetchAll(),
         ]);
     }
 }

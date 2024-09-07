@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace App\ValueObject;
 
-final class Tool
+use Webmozart\Assert\Assert;
+
+final readonly class Tool
 {
+    /**
+     * @param array<string, string> $tryCommands
+     */
     public function __construct(
         private string $name,
         private string $when,
@@ -13,7 +18,11 @@ final class Tool
         private string $link,
         private string $post,
         private string $composer,
+        private array $tryCommands = [],
+        private bool $isPhpstanExtension = false,
     ) {
+        Assert::allString(array_keys($tryCommands));
+        Assert::allString($tryCommands);
     }
 
     public function getName(): string
@@ -44,5 +53,18 @@ final class Tool
     public function getComposer(): ?string
     {
         return $this->composer;
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    public function getTryCommands(): array
+    {
+        return $this->tryCommands;
+    }
+
+    public function isPhpstanExtension(): bool
+    {
+        return $this->isPhpstanExtension;
     }
 }
