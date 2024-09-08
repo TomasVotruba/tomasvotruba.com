@@ -11,7 +11,7 @@
         <div class="row">
             @foreach ($postTweets as $postTweet)
                 <div class="col-6">
-                    <div class="card">
+                    <div class="card mb-4">
                         <div class="card-body">
                             <img src="{{ $postTweet->getPostThumbnail() }}" class="img-fluid mb-4" alt="">
 

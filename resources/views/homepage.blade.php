@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-10 offset-0 offset-md-1">
-                <div class="card">
+                <div class="card" id="welcome_card">
                     <div class="card-body p-5 shadow">
                         <div class="d-flex mb-5">
                             <div style="max-width: 5.5em">
@@ -12,7 +12,7 @@
                             </div>
 
                             <div class="d-block ms-4 mt-4">
-                                <h2 class="mt-0" style="letter-spacing: .02em; font-size: 2em">Hi, I'm Tomas Votruba</h2>
+                                <h2 class="mt-0">Hi, I'm Tomas Votruba</h2>
                             </div>
                         </div>
 

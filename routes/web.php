@@ -26,7 +26,10 @@ Route::get('/rss', RssController::class);
 Route::get('/thumbnail/{title}.png', ThumbnailController::class);
 Route::get('/tools', ToolsController::class);
 
-Route::get('/share-board', ShareBoardController::class);
+// use only development environment
+if (app()->environment() === 'dev') {
+    Route::get('/share-board', ShareBoardController::class);
+}
 
 Route::get('/bank',  function () {
     return view('bank', [

@@ -300,31 +300,22 @@ a.btn {
     padding-bottom: 1.3em;
 }
 
-.homepage-face {
-    width: 10em;
-    height: 10em;
-}
-
-.homepage-logo {
-    width: 5em;
-    height: 5em;
-}
-
 .post-snippet {
     font-size: 1.05rem;
     line-height: 1.6rem;
 }
 
+#welcome_card {
+    h2 {
+        letter-spacing: .02em;
+        font-size: 2em;
+    }
+}
+
 /* mobile optimization */
 @media (max-width: 768px) {
-    .homepage-face {
-        width: 7em;
-        height: 7em;
-    }
-
-    .homepage-logo {
-        width: 3em;
-        height: 3em;
+    #welcome_card h2 {
+        font-size: 1.6em;
     }
 
     #menu {

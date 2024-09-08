@@ -12,6 +12,15 @@ cd tomasvotruba.com
 composer install
 ```
 
+- Build assets
+
+```bash
+yarn build
+
+# or to watch files and reload on scss change
+yarn dev
+```
+
 - Run local server
 
 ```bash
