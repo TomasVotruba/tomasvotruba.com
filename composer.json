@@ -29,10 +29,10 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app"
+            "App\\": "src"
         },
         "files": [
-            "app/functions.php"
+            "src/functions.php"
         ]
     },
     "autoload-dev": {
