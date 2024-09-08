@@ -19,7 +19,6 @@ final class AppServiceProvider extends ServiceProvider
             return OpenAI::client($openApiKey);
         });
 
-
         $this->app->singleton(\Noweh\TwitterApi\Client::class, function (): \Noweh\TwitterApi\Client {
             $twitterAppId = env('TWITTER_APP_ID');
             $twitterApiKey = env('TWITTER_API_KEY');

@@ -305,12 +305,17 @@ a.btn {
     line-height: 1.6rem;
 }
 
+#welcome_card {
+    h2 {
+        letter-spacing: .02em;
+        font-size: 2em;
+    }
+}
+
 /* mobile optimization */
 @media (max-width: 768px) {
-    .welcome_card {
-        h2 {
-            font-size: 1.3em;
-        }
+    #welcome_card h2 {
+        font-size: 1.6em;
     }
 
     #menu {
