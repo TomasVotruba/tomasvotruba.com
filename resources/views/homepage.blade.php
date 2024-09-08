@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-10 offset-0 offset-md-1">
-                <div class="card">
+                <div class="card welcome_card">
                     <div class="card-body p-5 shadow">
                         <div class="d-flex mb-5">
                             <div style="max-width: 5.5em">
