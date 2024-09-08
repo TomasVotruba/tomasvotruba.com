@@ -6,7 +6,7 @@ use Rector\Config\RectorConfig;
 use Rector\TypeDeclaration\Rector\StmtsAwareInterface\DeclareStrictTypesRector;
 
 return RectorConfig::configure()
-    ->withPaths([__DIR__ . '/app', __DIR__ . '/bootstrap/app.php', __DIR__ . '/config', __DIR__ . '/tests'])
+    ->withPaths([__DIR__ . '/src', __DIR__ . '/bootstrap/app.php', __DIR__ . '/config', __DIR__ . '/tests'])
     ->withImportNames(removeUnusedImports: true)
     ->withRules([DeclareStrictTypesRector::class])
     ->withPreparedSets(
