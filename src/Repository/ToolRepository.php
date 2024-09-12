@@ -85,7 +85,7 @@ PHPSTAN
             'When you reach PHPStan level 2/3',
             'Detect unused dependencies, transitional dependencies, missing classes and more',
             'https://github.com/shipmonk-rnd/composer-dependency-analyser',
-            'vendor/bin/composer-dependency-analyser',
+            '',
             'composer require shipmonk/composer-dependency-analyser --dev',
             [
                 'Run' => 'vendor/bin/composer-dependency-analyser',

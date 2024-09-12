@@ -33,6 +33,12 @@
                         <div class="badge text-bg-dark">GitHub</div>
                     </a>
 
+                    @if ($tool->getPost())
+                        <div class="badge text-bg-success me-2">
+                            <a href="{{ $tool->getPost() }}" style="color: white">Read Blog Post</a>
+                        </div>
+                    @endif
+
                     @if ($tool->isPhpstanExtension())
                         <div class="badge text-bg-warning">PHPStan extension</div>
                     @endif
