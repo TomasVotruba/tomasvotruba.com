@@ -13,7 +13,9 @@ final class ToolRepository
      */
     public function fetchAll(): array
     {
-        return [new Tool(
+        $tools = [];
+
+        $tools[] = new Tool(
             'Easy Coding Standard',
             'First week when you come to a new project',
             'Adds advanced coding standard fast',
@@ -24,7 +26,9 @@ final class ToolRepository
                 'First run or dry-run' => 'vendor/bin/ecs',
                 'Fix coding standdard' => 'vendor/bin/ecs --fix',
             ],
-        ), new Tool(
+        );
+
+        $tools[] = new Tool(
             'Type Coverage',
             'When you reach PHP 7.0+ with scalar types',
             'Helps you add type declarations 1 % at a time',
@@ -43,7 +47,9 @@ parameters:
         # enable on PHP 8.3+
         # constant: 5
 PHPSTAN
-        ), new Tool(
+        );
+
+        $tools[] = new Tool(
             'Class Leak',
             'When you reach PHPStan level 2',
             'Spots unused classes',
@@ -53,7 +59,9 @@ PHPSTAN
             [
                 'Detect unused classes' => 'vendor/bin/class-leak check /src /tests',
             ]
-        ), new Tool(
+        );
+
+        $tools[] = new Tool(
             'Unused public',
             'When you reach PHPStan level 3/4',
             'Removes unused public code you maintain',
@@ -70,7 +78,21 @@ parameters:
         # properties: true
         # methods: true
 PHPSTAN
-        ), new Tool(
+        );
+
+        $tools[] = new Tool(
+                'Composer Dependency Analyser',
+                'When you reach PHPStan level 2/3',
+                'Detect unused dependencies, transitional dependencies, missing classes and more',
+                'https://github.com/shipmonk-rnd/composer-dependency-analyser',
+                'vendor/bin/composer-dependency-analyser',
+                'composer require shipmonk/composer-dependency-analyser --dev',
+                [
+                    'Run' => 'vendor/bin/composer-dependency-analyser',
+                ]
+            );
+
+        $tools[] = new Tool(
             'Swiss Knife',
             'When you reach PHPStan level 3/4',
             'Finalizes classes without children, makes class constants private and more',
@@ -81,7 +103,9 @@ PHPSTAN
                 'Finalize classes without children' => 'vendor/bin/swiss-knife finalize-classes /src /tests',
                 'Privatize local class constants' => 'vendor/bin/swiss-knife privatize-constants /src /tests',
             ]
-        ), new Tool(
+        );
+
+        $tools[] = new Tool(
             'Type Perfect',
             'When you reach PHPStan level 6',
             'Help you remove mixed types from obviously known code',
@@ -99,7 +123,9 @@ parameters:
         # narrow_param: true
         # narrow_return: true
 PHPSTAN
-        ), new Tool(
+        );
+
+        $tools[] = new Tool(
             'Config Transformer',
             'When you have Symfony configs in YAML',
             'Converts YAML configs to PHP for you',
@@ -109,6 +135,8 @@ PHPSTAN
             [
                 'Transform' => 'vendor/bin/config-transformer convert /config',
             ]
-        )];
+        );
+
+        return $tools;
     }
 }
