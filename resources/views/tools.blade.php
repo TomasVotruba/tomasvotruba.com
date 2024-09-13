@@ -20,87 +20,94 @@
         </div>
 
         <br>
+        <br>
 
         <div class="row">
 
         @foreach ($tools as $tool)
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-md-8 offset-md-2">
                 <div class="card mb-5 shadow">
-                <div class="card-body ps-4 pe-4">
-                    <a name="{{ $tool->getSlug() }}"></a>
+                    <div class="card-body ps-4 pe-4">
+                        <a name="{{ $tool->getSlug() }}"></a>
 
-                    <a href="{{ $tool->getLink() }}" class="me-2" style="text-decoration: none;">
-                        <div class="badge text-bg-dark">GitHub</div>
-                    </a>
-
-                    @if ($tool->getPost())
-                        <div class="badge text-bg-success me-2">
-                            <a href="{{ $tool->getPost() }}" style="color: white">Read Blog Post</a>
-                        </div>
-                    @endif
-
-                    @if ($tool->isPhpstanExtension())
-                        <div class="badge text-bg-warning">PHPStan extension</div>
-                    @endif
-
-                    <h2 class="mt-5" style="font-size: 2em; margin-bottom: 1.1em">{{ $tool->getName() }}</h2>
-
-                    <p class="mt-5">
-                        <em class="text-secondary">Why use?</em>
-                    </p>
-                    <p>
-                        {{ $tool->getWhy() }}
-                    </p>
-
-                    <br>
-
-                    <p>
-                        <em class="text-secondary">Best time to start using?</em>
-                    </p>
-                    <p>
-                        {{ $tool->getWhen() }}
-                    </p>
-                </div>
-
-                    <div class="card-body border-top border-primary border-bottom bg-primary-subtle">
-                        <div class="form-floating m-2">
-                            <textarea class="form-control border border-primary">{{ $tool->getComposer() }}</textarea>
-                            <label>Install</label>
-                        </div>
-                    </div>
-
-                    @if ($tool->getTryCommands())
-                        <div class="card-body mt-2 mb-2 ms-2">
-                            <em class="text-secondary">First commands to try</em>
+                        <div style="float: left; margin-top: .2em" class="text-secondary">
+                            <a href="#{{ $tool->getSlug() }}">
+                                #{{ $loop->index + 1 }}
+                            </a>
                         </div>
 
-                        @foreach ($tool->getTryCommands() as $label => $tryCommand)
-                            <div class="card-body border-top border-success bg-success-subtle">
-                                <div class="form-floating m-2">
-                                    <textarea class="form-control border border-success">{{ $tryCommand }}</textarea>
-                                    <label>{{ $label }}</label>
+                        <div class="text-end">
+                            @if ($tool->isPhpstanExtension())
+                                <div class="badge text-bg-warning">PHPStan extension</div>
+                            @else
+                                <div class="badge text-bg-primary">Standalone CLI tool</div>
+                            @endif
+                        </div>
+
+
+
+                        <h2 class="text-center" style="font-size: 2em; margin: 2.5em 0;">{{ $tool->getName() }}</h2>
+
+                        <p class="mt-5">
+                            <em class="text-secondary">Why use?</em>
+                        </p>
+                        <p>
+                            {{ $tool->getWhy() }}
+
+                            @if ($tool->getPost())
+                                <span class="ps-2 pe-2">•</span>
+                                <a href="{{ $tool->getPost() }}">Read&nbsp;more in a post</a>
+                            @endif
+                        </p>
+
+                        <br>
+
+                        <p>
+                            <em class="text-secondary">Best time to start using?</em>
+                        </p>
+                        <p>
+                            {{ $tool->getWhen() }}
+                        </p>
+
+                        <br>
+
+                        <p>
+                            <em class="text-secondary">How to install?</em>
+                            <textarea class="form-control mt-2" style="height: 2.5em; max-width: 40em">{{ $tool->getComposer() }}</textarea>
+                        </p>
+
+                        <br>
+
+                        @if ($tool->getTryCommands())
+                            <p>
+                                <em class="text-secondary">First commands to try</em>
+
+                                <div class="card-body rounded bg-light border" style="border-color: #DDD;">
+                                    @foreach ($tool->getTryCommands() as $label => $tryCommand)
+                                        <div class="form-floating m-2">
+                                            <textarea class="form-control">{{ $tryCommand }}</textarea>
+                                            <label>{{ $label }}</label>
+
+                                            @if (! $loop->last)<br>@endif
+                                        </div>
+                                    @endforeach
                                 </div>
-                            </div>
-                        @endforeach
-                    @endif
+                            </p>
+                        @endif
 
-                    @if ($tool->getPhpstanContents())
-                        <div class="card-body mt-2 mb-2 ms-2">
-                            <em class="text-secondary">Copy-paste to <code>phpstan.neon</code></em>
-                        </div>
+                        @if ($tool->getPhpstanContents())
+                            <p>
+                                <em class="text-secondary">Copy-paste to <code>phpstan.neon</code></em>
 
-                        <div class="card-body border-top border-success bg-success-subtle">
-                            <div class="m-2">
-                                <textarea class="form-control border border-success autoresize">{{ $tool->getPhpstanContents() }}</textarea>
-                            </div>
-                        </div>
-                    @endif
+                                <div class="card-body rounded bg-light border" style="border-color: #DDD;">
+                                    <textarea class="form-control border autoresize m-2" style="max-width: 32.8em">{{ $tool->getPhpstanContents() }}</textarea>
+                                </div>
+                            </p>
+                        @endif
+                    </div>
                 </div>
             </div>
-
         @endforeach
-
-        </div>
     </div>
 
     <script>

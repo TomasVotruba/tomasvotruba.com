@@ -19,7 +19,6 @@ final class ToolRepository
             'Easy Coding Standard',
             'First week when you come to a new project',
             'Adds advanced coding standard fast',
-            'https://github.com/easy-coding-standard/easy-coding-standard',
             'https://tomasvotruba.com/blog/introducing-up-to-16-times-faster-easy-coding-standard',
             'composer require symplify/easy-coding-standard --dev',
             [
@@ -32,7 +31,6 @@ final class ToolRepository
             'Type Coverage',
             'When you reach PHP 7.0+ with scalar types',
             'Helps you add type declarations 1 % at a time',
-            'https://github.com/TomasVotruba/type-coverage',
             'https://tomasvotruba.com/blog/how-to-measure-your-type-coverage',
             'composer require tomasvotruba/type-coverage --dev',
             [],
@@ -52,8 +50,7 @@ PHPSTAN
         $tools[] = new Tool(
             'Class Leak',
             'When you reach PHPStan level 2',
-            'Spots unused classes',
-            'https://github.com/TomasVotruba/class-leak',
+            'Spots unused classes you can remove',
             'https://tomasvotruba.com/blog/how-to-avoid-maintaining-classes-you-dont-use',
             'composer require tomasvotruba/class-leak --dev',
             [
@@ -65,7 +62,6 @@ PHPSTAN
             'Unused public',
             'When you reach PHPStan level 3/4',
             'Removes unused public code you maintain',
-            'https://github.com/TomasVotruba/unused-public',
             'https://tomasvotruba.com/blog/can-phpstan-find-dead-public-methods/',
             'composer require tomasvotruba/unused-public --dev',
             [],
@@ -84,7 +80,6 @@ PHPSTAN
             'Composer Dependency Analyser',
             'When you reach PHPStan level 2/3',
             'Detect unused dependencies, transitional dependencies, missing classes and more',
-            'https://github.com/shipmonk-rnd/composer-dependency-analyser',
             '',
             'composer require shipmonk/composer-dependency-analyser --dev',
             [
@@ -96,7 +91,6 @@ PHPSTAN
             'Swiss Knife',
             'When you reach PHPStan level 3/4',
             'Finalizes classes without children, makes class constants private and more',
-            'https://github.com/rectorphp/swiss-knife',
             'https://tomasvotruba.com/blog/cool-features-of-swiss-knife',
             'composer require rector/swiss-knife --dev',
             [
@@ -109,7 +103,6 @@ PHPSTAN
             'Type Perfect',
             'When you reach PHPStan level 6',
             'Help you remove mixed types from obviously known code',
-            'https://github.com/rectorphp/type-perfect',
             'https://getrector.com/blog/introducing-type-perfect-for-extra-safety',
             'composer require rector/type-perfect --dev',
             [],
@@ -129,7 +122,6 @@ PHPSTAN
             'Config Transformer',
             'When you have Symfony configs in YAML',
             'Converts YAML configs to PHP for you',
-            'https://github.com/symplify/config-transformer',
             'https://tomasvotruba.com/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/',
             'composer require symplify/config-transformer --dev',
             [
