@@ -52,7 +52,7 @@ PHPSTAN
         $tools[] = new Tool(
             'Class Leak',
             'When you reach PHPStan level 2',
-            'Spots unused classes',
+            'Spots unused classes you can remove',
             'https://github.com/TomasVotruba/class-leak',
             'https://tomasvotruba.com/blog/how-to-avoid-maintaining-classes-you-dont-use',
             'composer require tomasvotruba/class-leak --dev',
