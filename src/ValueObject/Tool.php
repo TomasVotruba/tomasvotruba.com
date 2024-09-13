@@ -15,7 +15,6 @@ final readonly class Tool
         private string $name,
         private string $when,
         private string $why,
-        private string $link,
         private string $post,
         private string $composer,
         private array $tryCommands = [],
@@ -39,11 +38,6 @@ final readonly class Tool
     public function getWhy(): string
     {
         return $this->why;
-    }
-
-    public function getLink(): string
-    {
-        return $this->link;
     }
 
     public function getPost(): ?string
