@@ -19,7 +19,7 @@ final class ToolsController extends Controller
     public function __invoke(): View
     {
         return \view('tools', [
-            'title' => 'Tools - What & when to use',
+            'title' => 'Tools - What and When to use',
             'tools' => $this->toolRepository->fetchAll(),
         ]);
     }
