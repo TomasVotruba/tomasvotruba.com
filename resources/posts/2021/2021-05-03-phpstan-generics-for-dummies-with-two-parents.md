@@ -1,6 +1,6 @@
 ---
 id: 314
-title: "PHPStan Generics for Dummies - With&nbsp;2&nbsp;Parents"
+title: "PHPStan Generics for Dummies - With 2 Parents"
 perex: |
     In previous post we talked about how to [promote generics to parent class](/blog/2021/01/04/phpstan-abstract-parent-generics-dummies/).
     There we learned how to tell parent class what generic type we use (typically from `ProductRepository` and `AbstractRepository`).

@@ -1,6 +1,6 @@
 ---
 id: 412
-title: "How to reload code highlighter on Livewire&nbsp;3 component&nbsp;update"
+title: "How to reload code highlighter on Livewire 3 component update"
 perex: |
     I use Livewire 3 for interactive forms and fast clickable maps. Last week, I worked on a filter page for the Rector website, where you can use text input to search for core and community rules.
 

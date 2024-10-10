@@ -1,6 +1,6 @@
 ---
 id: 389
-title: "How to Remove Transitional Dependencies You don't&nbsp;Need"
+title: "How to Remove Transitional Dependencies You don't Need"
 
 perex: |
     In the last post [I shared a trick](/blog/unleash-the-power-of-simplicity-php-cli-app-with-minimal-dependencies) on how to **reduce CLI project /vendor size by 70 %**. Today we'll trim off a bit more with the no-so-known composer feature.

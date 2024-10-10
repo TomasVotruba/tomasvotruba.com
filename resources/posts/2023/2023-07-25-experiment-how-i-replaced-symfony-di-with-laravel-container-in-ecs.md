@@ -1,6 +1,6 @@
 ---
 id: 387
-title: "Experiment: How I replaced Symfony DI with Laravel&nbsp;Container in ECS"
+title: "Experiment: How I replaced Symfony DI with Laravel Container in ECS"
 
 perex: |
     This year I've been learning Laravel and quickly adapting to most of my tools. I've made 2 packages - [Punchcard](/blog/introducing-punchcard-object-configs-for-laravel) to handle configs and [Bladestan](/blog/introducing-bladestan-phpstan-analysis-of-blade-templates) for static analysis of Blade templates using PHPStan.

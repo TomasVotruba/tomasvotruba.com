@@ -1,7 +1,7 @@
 
 ---
 id: 321
-title: "How I Redesigned my Website the Way I&nbsp;Refactor Legacy Projects"
+title: "How I Redesigned my Website the Way I Refactor Legacy Projects"
 perex: |
     I have wanted to redesign my website since Autumn 2020. I felt it's overly detailed with attention shotgun feeling. Because of intensive && extensive work on Rector to make it better, I could not get to it on the book with Matthias and writing posts. With no deadline, there is no rush, right?
 

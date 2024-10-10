@@ -1,6 +1,6 @@
 ---
 id: 359
-title: "5 Pitfalls of Upgrade to Native PHP&nbsp;Enums and How&nbsp;to&nbsp;Avoid&nbsp;Them"
+title: "5 Pitfalls of Upgrade to Native PHP Enums and How to Avoid Them"
 perex: |
     Native PHP Enums came almost a year ago in PHP 8.1. It's pretty easy to add a new enum. But how do we handle the old hacks we used to use before enums were legal in PHP land? MyCLabs, Spatie, or constants list.
 

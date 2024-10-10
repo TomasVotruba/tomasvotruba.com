@@ -1,6 +1,6 @@
 ---
 id: 294
-title: "5 New Combos opened by Symfony&nbsp;5.2&nbsp;and PHP&nbsp;8.0"
+title: "5 New Combos opened by Symfony 5.2 and PHP 8.0"
 perex: |
     Conjunction of 2 releases came in December 2020, Symfony 5.2 and [PHP 8.0](https://getrector.com/blog/2020/11/30/smooth-upgrade-to-php-8-in-diffs).
     I wanted to give them a fresh try, so I've updated `composer.json` in 3 projects, run the Rector upgrade set, and this happened...

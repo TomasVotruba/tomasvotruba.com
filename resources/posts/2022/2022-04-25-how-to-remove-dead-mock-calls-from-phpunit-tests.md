@@ -1,6 +1,6 @@
 ---
 id: 358
-title: "How to Remove Dead&nbsp;Mock&nbsp;Calls from&nbsp;PHPUnit&nbsp;Tests"
+title: "How to Remove Dead Mock Calls from PHPUnit Tests"
 perex: |
     We're going to visit a foreign country where living costs are just 1/3 of ours. Let's say from UK or Germany to Brno, Czechia. We're organizing a bachelor party for our best friend.
 

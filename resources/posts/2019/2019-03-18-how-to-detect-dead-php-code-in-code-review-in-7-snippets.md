@@ -1,6 +1,6 @@
 ---
 id: 195
-title: "How to Detect Dead PHP Code in Code Review in 7&nbsp;Snippets"
+title: "How to Detect Dead PHP Code in Code Review in 7 Snippets"
 perex: |
     After few long Nette to Symfony migration series, it's time for relax.
     <br>

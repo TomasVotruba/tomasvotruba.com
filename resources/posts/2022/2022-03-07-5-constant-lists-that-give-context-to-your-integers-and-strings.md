@@ -1,6 +1,6 @@
 ---
 id: 351
-title: "5 Constant Lists That Give&nbsp;Context to&nbsp;your Integers&nbsp;and&nbsp;Strings"
+title: "5 Constant Lists That Give Context to your Integers and Strings"
 perex: |
     [Native enums](https://php.watch/versions/8.1/enums) is a new PHP 8.1 feature. This feature brings more focus on *what* enums are and *where* we can use them.
 

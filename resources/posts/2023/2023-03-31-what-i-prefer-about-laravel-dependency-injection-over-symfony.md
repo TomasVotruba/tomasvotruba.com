@@ -1,6 +1,6 @@
 ---
 id: 383
-title: "What I prefer about Laravel Dependency&nbsp;Injection over Symfony"
+title: "What I prefer about Laravel Dependency Injection over Symfony"
 
 perex: |
     Regarding Laravel, one of the biggest "no"s in 2022 was how it handles passing services around the project. I'm not talking about the facades or active records but **the static reflection container**.

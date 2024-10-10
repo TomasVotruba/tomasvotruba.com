@@ -1,6 +1,6 @@
 ---
 id: 391
-title: "Easy and Quick way to Measure&nbsp;lines&nbsp;of&nbsp;Code in&nbsp;PHP"
+title: "Easy and Quick way to Measure lines of Code in PHP"
 
 perex: |
     The famous [phploc](https://github.com/sebastianbergmann/phploc) package to measure project size was archived by Sebastian on Jan 10, 2023. I used this package to get feedback on [CLI apps vendor shrink](/blog/unleash-the-power-of-simplicity-php-cli-app-with-minimal-dependencies) and for [fast estimation of project size in Rector upgrades](https://getrector.com/hire-team).

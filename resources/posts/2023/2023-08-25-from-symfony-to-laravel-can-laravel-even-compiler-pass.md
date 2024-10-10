@@ -1,6 +1,6 @@
 ---
 id: 393
-title: "From Symfony to Laravel - Can Laravel even Compiler&nbsp;Pass?"
+title: "From Symfony to Laravel - Can Laravel even Compiler Pass?"
 perex: |
     Do you want to migrate your Symfony project to Laravel and not sure if it "handles it"? Switching containers is pretty [straightforward](/blog/experiment-how-i-replaced-symfony-di-with-laravel-container-in-ecs) for the most parts.
 

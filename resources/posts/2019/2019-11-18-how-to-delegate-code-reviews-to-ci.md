@@ -1,6 +1,6 @@
 ---
 id: 226
-title: "How to Delegate Code&nbsp;Reviews&nbsp;to&nbsp;CI"
+title: "How to Delegate Code Reviews to CI"
 perex: |
     Are you doing code reviews? No? Yes?
 

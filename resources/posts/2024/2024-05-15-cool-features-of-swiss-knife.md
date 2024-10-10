@@ -1,6 +1,6 @@
 ---
 id: 409
-title: "Cool features of Swiss&nbsp;Knife"
+title: "Cool features of Swiss Knife"
 perex: |
     When using a Swiss knife, we think of a tool with many practical abilities.
 

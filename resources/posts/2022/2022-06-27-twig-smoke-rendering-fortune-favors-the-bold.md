@@ -1,6 +1,6 @@
 ---
 id: 364
-title: "Twig Smoke Rendering - Fortune&nbsp;Favors&nbsp;the&nbsp;Bold"
+title: "Twig Smoke Rendering - Fortune Favors the Bold"
 perex: |
     In the previous post, we set on [journey of fails](/blog/twig-smoke-rendering-journey-of-fails) with ups and downs. Well, mostly downs. I'm trying to be honest about the blind path process behind the final published work.
 

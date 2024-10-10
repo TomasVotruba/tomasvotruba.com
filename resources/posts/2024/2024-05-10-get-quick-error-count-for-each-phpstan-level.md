@@ -1,6 +1,6 @@
 ---
 id: 408
-title: "Get Quick Error Count for each&nbsp;PHPStan&nbsp;level"
+title: "Get Quick Error Count for each PHPStan level"
 perex: |
     When I come to a new project, I want to make a rough idea of what I'm dealing with in a few minutes. I usually check `composer.json` and [measure the lines](/blog/easy-and-quick-way-to-measure-lines-of-code-in-php).
 

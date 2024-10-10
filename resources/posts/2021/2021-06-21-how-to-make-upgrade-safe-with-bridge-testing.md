@@ -1,6 +1,6 @@
 ---
 id: 324
-title: "How to make Upgrade Safe with Bridge&nbsp;Testing"
+title: "How to make Upgrade Safe with Bridge Testing"
 perex: |
     Upgrading can go smooth without no bugs and just work. We can make our customer happy, even though we don't have any tests.
 

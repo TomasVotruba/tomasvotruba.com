@@ -1,6 +1,6 @@
 ---
 id: 332
-title: "Introducing up-to 16&nbsp;Times&nbsp;Faster Easy&nbsp;Coding&nbsp;Standard"
+title: "Introducing up-to 16 Times Faster Easy Coding Standard"
 perex: |
     Do you use [Easy Coding Standard](https://github.com/symplify/easy-coding-standard)? Do you find **extremely useful and easy to use, but a little slow on a huge code base**?
 

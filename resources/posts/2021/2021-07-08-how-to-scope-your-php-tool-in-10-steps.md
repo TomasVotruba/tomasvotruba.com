@@ -1,6 +1,6 @@
 ---
 id: 327
-title: "How to Scope Your PHP Tool in 10&nbsp;Steps"
+title: "How to Scope Your PHP Tool in 10 Steps"
 perex: |
     Do you know PHPStan, ECS, [Monorepo Builder](https://github.com/symplify/monorepo-builder), PHPUnit, [Config Transformer](https://github.com/symplify/config-transformer) or Rector?
 

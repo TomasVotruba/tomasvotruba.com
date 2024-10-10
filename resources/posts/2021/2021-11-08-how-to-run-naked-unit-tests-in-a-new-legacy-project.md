@@ -1,6 +1,6 @@
 ---
 id: 346
-title: "How to Run Naked Unit&nbsp;Tests in a&nbsp;New&nbsp;Legacy&nbsp;Project"
+title: "How to Run Naked Unit Tests in a New Legacy Project"
 perex: |
     You know the situation. You come to a new project that you should upgrade and refactor. It has some tests that ~~you~~ long-term developer can run locally. But the automated CI that runs tests on every commit is missing.
 

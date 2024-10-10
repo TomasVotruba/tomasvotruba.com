@@ -1,6 +1,6 @@
 ---
 id: 276
-title: "How Static&nbsp;Methods Kill&nbsp;You Like&nbsp;Corona"
+title: "How Static Methods Kill You Like Corona"
 perex: |
     Do you know [the Broken Window theory](https://blog.codinghorror.com/the-broken-window-theory/)? It's a social pattern in code, a great post written by a guy behind one small manual website - StackOverflow.
 
