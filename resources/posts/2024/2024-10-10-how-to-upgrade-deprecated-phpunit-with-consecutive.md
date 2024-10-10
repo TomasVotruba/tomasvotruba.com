@@ -215,7 +215,7 @@ We can just write plain PHP code:
 * We can return values we need
 
 
-What if, in the upcoming PHPUnit 12, 13, and 14... versions, remove or change more mocking methods? This code will work, as it's just plain PHP.
+What if upcoming PHPUnit 12, 13... versions, removes or changes more mocking methods? This code will work, as it's just plain PHP.
 
 <br>
 
