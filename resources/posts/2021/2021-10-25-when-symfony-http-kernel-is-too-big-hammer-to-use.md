@@ -1,6 +1,6 @@
 ---
 id: 337
-title: "When Symfony&nbsp;Http&nbsp;Kernel is a Too&nbsp;Big&nbsp;Hammer to&nbsp;Use"
+title: "When Symfony Http Kernel is a Too Big Hammer to Use"
 perex: |
     I've been a big fan of Symfony components for ages. I use them as core bricks of my projects [migrate other frameworks to it](/blog/2019/08/26/how-we-migrated-54-357-lines-of-code-nette-to-symfony-in-2-people-under-80-hours), and every 6 months, I'm excited about what new features are coming in the next minor release.
 

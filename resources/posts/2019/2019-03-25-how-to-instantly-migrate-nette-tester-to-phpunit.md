@@ -1,6 +1,6 @@
 ---
 id: 197
-title: 'How to Instantly Migrate Nette\Tester&nbsp;to&nbsp;PHPUnit'
+title: 'How to Instantly Migrate Nette\Tester to PHPUnit'
 perex: |
     We had 🍺 after PHP meetup in Prague and Tomas asked me:
     <br>

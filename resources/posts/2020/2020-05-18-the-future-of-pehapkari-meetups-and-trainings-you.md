@@ -1,6 +1,6 @@
 ---
 id: 252
-title: "The Future of&nbsp;Pehapkari Meetups&nbsp;and&nbsp;Training - You"
+title: "The Future of Pehapkari Meetups and Training - You"
 perex: |
     Last 2 months gave lot of time to reflect my activities, work and hobbies. One of the topic I think about a lot is our Czech PHP Community - [Pehapkari](https://pehapkari.cz). I felt like last year I'm not giving it as much energy as before. But why?
 ---

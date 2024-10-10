@@ -1,6 +1,6 @@
 ---
 id: 416
-title: "PHP is the Best Choice for Long&#8209;Term&nbsp;Business"
+title: "PHP is the Best Choice for Long&#8209;Term Business"
 perex: |
     Recently, I listened to Lex Friedman's [podcast with Pieter Levels](https://open.spotify.com/episode/6KBpL2XfR9VdojbKNpE7cX). Pieter talked about his technology stack for building startups: vanilla PHP, jQuery, and SQLite.
 

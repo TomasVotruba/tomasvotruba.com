@@ -1,6 +1,6 @@
 ---
 id: 278
-title: "How to Apply Coding&nbsp;Standard on PHP&nbsp;Snippets in Markdown&nbsp;Files?"
+title: "How to Apply Coding Standard on PHP Snippets in Markdown Files?"
 perex: |
     Have you been asking this question since the inventions of coding standards? Do you write `README.md`?
     If you maintain an open-source project, you do.

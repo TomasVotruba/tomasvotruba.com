@@ -1,6 +1,6 @@
 ---
 id: 265
-title: "How Will&nbsp;Programming look&nbsp;like&nbsp;in&nbsp;2025?"
+title: "How Will Programming look like in 2025?"
 perex: |
     We often read about best practices in coding, what framework has new features, or what is new in PHP X. How one can change this to that, why is this technique good or bad, or what new package you can download to your project.
     <br>

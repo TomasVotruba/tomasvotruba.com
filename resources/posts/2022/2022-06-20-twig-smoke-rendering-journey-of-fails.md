@@ -1,6 +1,6 @@
 ---
 id: 363
-title: "Twig Smoke Rendering - Journey&nbsp;of&nbsp;Fails"
+title: "Twig Smoke Rendering - Journey of Fails"
 perex: |
     In previous post, we explored [the "whys" for Twig Smoke Rendering](/blog/twig-smoke-rendering-why-do-we-even-need-it).
 

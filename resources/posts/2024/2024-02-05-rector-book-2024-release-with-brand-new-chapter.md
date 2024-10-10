@@ -1,6 +1,6 @@
 ---
 id: 404
-title: "Rector Book 2024 Release with Brand&nbsp;new&nbsp;Chapter"
+title: "Rector Book 2024 Release with Brand new Chapter"
 perex: |
     I'm happy to introduce the latest update to our book - *Rector, the Power of Automated Refactoring*, along with Rector version 0.19.5 from this week.
 

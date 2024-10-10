@@ -1,6 +1,6 @@
 ---
 id: 207
-title: "Rector European Tour in May&nbsp;&&nbsp;June&nbsp;2019"
+title: "Rector European Tour in May & June 2019"
 perex: |
     I asked Łukasz Chruściel if we see each other on one of the conferences I'm coming with Rector and he's like: "I haven't noticed any announcements that you will talk somewhere. Did you set up any long distance trip?"
 

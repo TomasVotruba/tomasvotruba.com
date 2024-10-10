@@ -1,6 +1,6 @@
 ---
 id: 196
-title: 'How to Migrate PhpSpec&nbsp;to&nbsp;PHPUnit'
+title: 'How to Migrate PhpSpec to PHPUnit'
 perex: |
     I'm happy that more and more people try to use Rector upgrade and migrate their code-bases to the ones they really want for a long time.
 

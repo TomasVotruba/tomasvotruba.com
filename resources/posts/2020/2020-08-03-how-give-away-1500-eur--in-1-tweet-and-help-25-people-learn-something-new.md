@@ -1,6 +1,6 @@
 ---
 id: 272
-title: "How to Give Away 1500&nbsp;€ in 1&nbsp;Tweet and Help 25&nbsp;People Learn Something New"
+title: "How to Give Away 1500 € in 1 Tweet and Help 25 People Learn Something New"
 perex: |
     What makes one give?
 

@@ -1,6 +1,6 @@
 ---
 id: 362
-title: "Twig&nbsp;Smoke&nbsp;Rendering - Why&nbsp;do&nbsp;we&nbsp;Even&nbsp;Need&nbsp;it?"
+title: "Twig Smoke Rendering - Why do we Even Need it?"
 perex: |
     Two weeks ago [our upgrade team started](https://getrector.com/hire-team) to upgrade Twig 1 to 2 and Latte 2 to 3 for two clients. There was no test that covers the templates, just a few integration ones that might have invoked a few % of happy paths render. Not good enough.
 

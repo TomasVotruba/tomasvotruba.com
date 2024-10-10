@@ -1,6 +1,6 @@
 ---
 id: 415
-title: "Scope and Downgrade your PHP Tools for&nbsp;Everyone&nbsp; to Use"
+title: "Scope and Downgrade your PHP Tools for Everyone  to Use"
 perex: |
     Yesterday, I came across a cool PHP tool. I wanted to try it, but the installation instructions were a bit tricky. The tool required a specific PHP version and a specific version of each dependency. It required Symfony 5.4+, but our project has Symfony 3.3. I was unable to use it.
 

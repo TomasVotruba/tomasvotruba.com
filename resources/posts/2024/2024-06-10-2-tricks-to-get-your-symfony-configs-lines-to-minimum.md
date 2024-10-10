@@ -1,6 +1,6 @@
 ---
 id: 413
-title: "2 Tricks to get your Symfony configs&nbsp;lines&nbsp;to&nbsp;minimum"
+title: "2 Tricks to get your Symfony configs lines to minimum"
 perex: |
     I believe that every Symfony app can fit service config under 5 lines.
 
