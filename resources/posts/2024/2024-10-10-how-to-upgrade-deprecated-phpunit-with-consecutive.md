@@ -47,15 +47,15 @@ $mock->expects($this->exactly(2))
 But it's not.
 
 
-## `withCallable()` to the Rescue
+## `willReturnCallback()` to the Rescue
 
-Instead, we use the `withCallable()` trick. This method accepts the called parameters, which we can assert inside.
+Instead, we use the `willReturnCallback()` trick. This method accepts the called parameters, which we can assert inside.
 
 ```php
 $mock = $this->createMock(MyClass::class);
 $mock->expects($this->exactly(2))
     ->method('someMethod')
-    ->withCallable(function ($parameters) {
+    ->willReturnCallback(function ($parameters) {
         // check the parameters here
     });
  ```
@@ -68,7 +68,7 @@ $invokedCount = $this->exactly(2);
 $mock = $this->createMock(MyClass::class);
 $mock->expects($invokedCount)
     ->method('someMethod')
-    ->withCallable(function ($parameters) use ($invokedCount) {
+    ->willReturnCallback(function ($parameters) use ($invokedCount) {
         // check the parameters here
     });
 ```
@@ -85,7 +85,7 @@ $invokedCount = $this->exactly(2);
 $mock = $this->createMock(MyClass::class);
 $mock->expects($invokedCount)
     ->method('someMethod')
-    ->withCallable(function ($parameters) use ($invokedCount) {
+    ->willReturnCallback(function ($parameters) use ($invokedCount) {
         if ($invokedCount->getInvocationCount() === 1) {
             // check the 1st round here
         }
@@ -101,7 +101,7 @@ Now we include the original parameters we needed:
 ```php
 // ...
 
-    ->withCallable(function ($parameters) use ($invokedCount) {
+    ->willReturnCallback(function ($parameters) use ($invokedCount) {
         if ($invokedCount->getInvocationCount() === 1) {
             $this->assertSame(['first'], $parameters);
         }
@@ -118,7 +118,7 @@ We could create a `$product` object and do `assertSame()`. But what if we only c
 
 ```php
 // ...
-    ->withCallable(function ($parameters) use ($invokedCount) {
+    ->willReturnCallback(function ($parameters) use ($invokedCount) {
         if ($invokedCount->getInvocationCount() === 1) {
             $product = $parameter[0];
             $this->assertInstanceof(Product::class, $product);
@@ -168,7 +168,7 @@ How do we upgrade any returned value? We just return it:
 ```php
 // ...
 
-    ->withCallable(function ($parameters) use ($invokedCount) {
+    ->willReturnCallback(function ($parameters) use ($invokedCount) {
         if ($invokedCount->getInvocationCount() === 1) {
             $this->assertSame(['first'], $parameters);
             return 1;
@@ -196,7 +196,7 @@ We can just write plain PHP code:
 ```php
 // ...
 
-    ->withCallable(function ($parameters) use ($invokedCount) {
+    ->willReturnCallback(function ($parameters) use ($invokedCount) {
         if ($invokedCount->getInvocationCount() === 1) {
             return $parameters[0];
             // or
