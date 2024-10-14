@@ -207,6 +207,7 @@ We can just write plain PHP code:
     });
 ```
 
+
 ## More Readable and Easier to Maintain
 
 * We don't have to learn special PHPUnit mock method naming and can understand the code.
@@ -214,6 +215,7 @@ We can just write plain PHP code:
 * We can easily add a new assertion line
 * We can return values we need
 
+<br>
 
 What if upcoming PHPUnit 12, 13... versions, removes or changes more mocking methods? This code will work, as it's just plain PHP.
 
@@ -224,6 +226,21 @@ This is how we can upgrade the `withConsecutive()` method in PHPUnit 9 or earlie
 <br>
 
 Last but not least, here is [the Rector rule](https://getrector.com/rule-detail/with-consecutive-rector) that automated this process.
+
+<br>
+
+
+## Next Upgrade in PHPUnit 10
+
+In PHPUnit 10, the `getInvocationCount()` got renamed to `numberOfInvocations()`. Make sure you upgrade the method name, once you go to PHPUnit 10:
+
+```diff
+-if ($invokedCount->getInvocationCount() === 1) {
++if ($invokedCount->numberOfInvocations() === 1) {
+     $this->assertSame(['first'], $parameters);
+     return 1;
+ }
+```
 
 <br>
 
