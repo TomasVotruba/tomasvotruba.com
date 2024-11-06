@@ -47,10 +47,7 @@ Symfony 1 was released in 2007, and Laravel 1 was released in 2011.
 
 Both are time-tested, community-driven, and, most importantly, still being used by businesses. At least based on the dozens projects we've helped to upgrade.
 
-**We have 1 new PHP version released every year**, with a clear release path ahead:
-
-* 4 minor versions (e.g. 8.1, 8.2, 8.3, 8.4)
-* followed by a new major release with BC breaks (e.g. 9.0)
+**We have 1 new PHP version released every year**
 
 ## PHP has Pro-Growth Competition
 
