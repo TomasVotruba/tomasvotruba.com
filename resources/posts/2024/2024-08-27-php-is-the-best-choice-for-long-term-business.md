@@ -31,15 +31,15 @@ In 2018, Vue became the new competition. Another rewrite would be required to at
 
 Next, Alpine... there are dozens of new tutorials on YouTube on *the brand new JS framework*. They have 90 % feature overlap, just slightly different syntax sugar.
 
-**This is a great fun for developers to learn and try new shiny things,<br>but a big problem for business costs**.
+**This is great fun for developers to learn and try new shiny things,<br>but a big problem for business costs**.
 
-Imagine having a house where you have to replace all windows every winter. There are new standards, new dimensions and a style that doesn't fit the whole building.
+Imagine having a house where you have to replace all windows every winter. There are new standards, new dimensions and a style that doesn't fit the entire building.
 
 ## PHP has Long-term Stability you can Rely on
 
 Now, let's examine the same situation from the side bank of the fence.
 
-**What frameworks are used by majority of PHP developers?**
+**Which frameworks are used by the majority of PHP developers?**
 <br>
 Symfony and Laravel.
 <br>
@@ -70,13 +70,13 @@ This healthy competition has positive side effects in the community. Both organi
 
 If you're working in vanilla PHP like Pieter, there are [dozens of conferences](https://www.php.net/conferences/index.php) a year across Europe, America, Asia, and Australia.
 
-The PHP ecosystem didn't get stuck on bare websites in a browser. You can build APIs, [desktop apps](https://nativephp.com/), [machine learning](https://php-ml.readthedocs.io/en/latest/), static analysis, and tools that improve the code for you. It's full circle.
+The PHP ecosystem didn't get stuck on bare websites in a browser. You can build APIs, [desktop apps](https://nativephp.com/), [machine learning](https://php-ml.readthedocs.io/en/latest/), static analysis, and tools that improve the code for you. It's a full circle.
 
 ## Self-reflecting Technology
 
 Last but not least, other languages lack advanced technology.
 
-[Nikita Popov](https://www.npopov.com/) came to PHP core in 2014 and [brought AST](https://wiki.php.net/rfc/abstract_syntax_tree) to PHP 7.0 core. It's not a PHP new feature we can use, but it made PHP core codebase (written in C) much simpler to work with. It's a similar jump to moving from HDD to SSD drive or from a button phone to a smartphone.
+[Nikita Popov](https://www.npopov.com/) came to PHP core in 2014 and [brought AST](https://wiki.php.net/rfc/abstract_syntax_tree) to PHP 7.0 core. It's not a new PHP feature we can use, but it made the PHP core codebase (written in C) much simpler to work with. It's a similar jump like moving from HDD to SSD drive or from a button phone to a smartphone.
 
 The problem is that PHP itself is written in C. Even the best PHP developer cannot code in C at a world language level. **If PHP stopped here, it would still be as good as its best C developer**.
 
@@ -93,11 +93,11 @@ or robots as advanced to build better versions of themselves.
 
 I call this self-reflection technology. **It's an evolutionary level when a programming language can improve itself**. PHP is unique in this matter.
 
-Javascript has a few such tools but are inconsistent because of many language dialects.
+JavasSript has a few such tools but they are inconsistent because of many language dialects.
 
 In the PHP community, **we have PHPStan, a tool that can find bugs in your code without running it**. Is there a new bug in your project that we missed? Add a new PHPStan rule, and it will never happen again. Never. It's a read-only tool, like the GPTs we have now. It doesn't work for us, but it's helpful at any moment we ask for help.
 
-We also **have Rector, a tool that can improve and upgrade our code**. Most importantly, it can use the best current knowledge. Has someone in India come up with a better way to write a controller in PHP 9? They can create a Rector rule that anyone in the world can use without any knowledge about controllers or PHP 9.
+We also **have Rector, a tool that can improve and upgrade our code**. Most importantly, it can use the best current knowledge. Has someone in India came up with a better way to write a controller in PHP 9? They can create a Rector rule that anyone in the world can use without any knowledge about controllers or PHP 9.
 
 <br>
 
@@ -111,7 +111,7 @@ There is no tool you could run from CI to convert your Python 2 project to Pytho
 
 ## Open-source Adaptation to the Future
 
-I'm not saying PHP has the best syntax, generics support or CPU-level speed. It's about the whole package that business builds upon.
+I'm not saying PHP has the best syntax, generics support or CPU-level speed. It's about the whole package that a business builds upon.
 
 All of the **PHP tools mentioned are open-sourced** and not under commercial or benevolent dictatorship. If something changes&ndash;and it will&ndash;, we can adapt.
 
