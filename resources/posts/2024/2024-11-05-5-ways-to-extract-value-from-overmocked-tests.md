@@ -2,35 +2,36 @@
 id: 418
 title: "5 Ways to Extract Value from Overmocked Tests"
 perex: |
-    The legacy projects I work with are often flooded with mocks and hard to upgrade. I already wrote [How to Remove Dead Mock Calls from PHPUnit Tests](/blog/how-to-remove-dead-mock-calls-from-phpunit-tests), that focuses on dealing with PHPUnit bloated syntax.
+    The legacy projects we work with are often flooded with mocks. I already wrote [How to Remove Dead Mock Calls from PHPUnit Tests](/blog/how-to-remove-dead-mock-calls-from-phpunit-tests), which focuses on dealing with PHPUnit bloated syntax.
 
-    Today we look on next wave of improvements, that make tests more valuable, easier to upgrade and read and even avoid false types.
+    Today, we look at the next wave of improvements that make tests more valuable, more accessible to upgrade and read, and even avoid false types.
 ---
 
-Mocking comes useful, if you want to unit test a method, that depends on complex external factors. Like database response, GPT API response, AWS file storage and so on.
-Mocking is also one of main factors, that make upgrade of tests very slow and expensive. During Rector upgrades, we often get to a project, that has 300+ tests classes that use mocks for its own classes.
+Mocking is helpful if you want to unit test a method that depends on complex external factors. Like database response, GPT API response, AWS file storage, etc.
 
-We want to give objects in those mocks PHP 7.0 types, and have Rector and PHPStan our back in case we change those objects. How do avoid manual work and maintenance?
+Mocking is also one of the main factors that make upgrading tests prolonged and expensive. During Rector upgrades, we often get to a project that has 300+ test classes that use mocks for project classes.
+
+We want to give mocked objects PHP 7.0 types and have Rector and PHPStan on our back. How do we avoid manual work and maintenance?
 
 <br>
 
-I'll share approach we use to get the most out of mocks, drop dead code and make tests more valuable.
+I'll share our approach to get the most out of mocks, drop dead code, and make tests more valuable.
 
 ## Our goals
 
-* get as much **native PHP code** as possible, so IDE, Rector and PHPStan can check it easily
+* get as much **native PHP code** as possible so IDE, Rector, and PHPStan can check it easily
 * remove any unnecessary dependency on the mocking framework, so **any PHP developer can read code**
 * **make test fun to work with**, not a burden that we have to update with every change of native code
 
 <br>
 
-Read following examples with *your mocking tool* in mind. Not just PHPUnit, but also Prophecy, Phpspec, Mockery and so on. The syntax sugar of these tool are different, but principles are the same.
+Read the following examples with *your mocking tool* in mind. Not just PHPUnit but also Prophecy, Phpspec, Mockery, and so on. The syntax sugar of these tools is different, but the principles are the same.
 
 <br>
 
-## 1. Test case, where every property is a mock
+## 1. A test case where every Property is a Mock
 
-Let's start with simple question: what does this test case verify?
+Let's start with a simple question: what does this test case verify?
 
 ```php
 use PHPUnit\Framework\TestCase;
@@ -59,13 +60,13 @@ final class SomeTest extends TestCase
 }
 ```
 
-Does it verify, that `ApiClient::get()` method returns `Response` object? What if we change the `get` method body? Nothing will happen, because this test only **check that our mocking framework works**.
+Does it verify that the `ApiClient::get()` method returns the `Response` object? What if we change the `get` method body? Nothing will happen because this test only **checks that our mocking framework works**.
 
 ## ❌
 
 <br>
 
-This test case **doesn't test our code at all**, because it overrides our code with made up behavior. It's like reading a news headline about "thousands of dead", before learning it's only a prediction if we get hit by a meteorite in a movie.
+This test case **doesn't test our code at all** because it overrides our code with made-up behavior. It's like reading a news headline about "thousands of dead" before learning it's only a prediction if we get hit by a meteorite in a movie.
 
 <br>
 
@@ -82,17 +83,17 @@ Every single test case should have at least<br>
 
 There is [a PHPStan rule](https://github.com/TomasVotruba/handyman/blob/main/src/PHPStan/Rule/NoMockOnlyTestRule.php) to discover these.
 
-Add PHPStan rule, spot those classes and make sure the expected service is tested.
+Add the PHPStan rule, spot those classes, and ensure the expected service is tested.
 
 <br>
 
 ## 2. Global Mock Property That is Never Modified
 
-The first rule demands some manual work and care. So we'll take a rest with next one - an easy pick, to make our tests more readable.
+The first rule demands some manual work and care. So we'll take a rest with the next one - an easy pick to make our tests more readable.
 
-I've just used this approach to remove 1000 lines from tests in couple seconds:
+I've just used this approach to remove 1000 lines from tests in a couple of seconds:
 
-<img src="https://pbs.twimg.com/media/Gbs08uUWoA0aBQ_?format=png&name=240x240" class="img-thumbnail">
+<img src="https://pbs.twimg.com/media/Gbs08uUWoA0aBQ_?format=png&name=240x240" class="image-thumbnail">
 
 What is the use case?
 
@@ -120,13 +121,13 @@ final class SmarterTest extends TestCase
 }
 ```
 
-This has nothing to do with mocking, but it's a **visual clutter** that makes **code harder to read and more expensive to maintain**.
+It has nothing to do with mocking, but it's a **visual clutter** that makes **code more challenging to read and more expensive to maintain**.
 
 Can you spot it?
 
 <br>
 
-Yes, the `$databaseMock` **property is only written**, but never used later on. We can refactor it to direct variable in `setUp()` method:
+Yes, the `$databaseMock` **Property is only written**, but never used later. We can refactor it to a direct variable in the `setUp()` method:
 
 ```diff
  use PHPUnit\Framework\TestCase;
@@ -158,15 +159,15 @@ We use [a Rector rule](https://getrector.com/rule-detail/narrow-unused-set-up-de
 
 <br>
 
-## 3. Use single Mocking tool
+## 3. Use a single Mocking tool
 
-The next step might be a bit advanced, but it's worth the work. In PHP projects that were developed during times of PHPUnit 4-9 (2014-2020), we can see **2+ different mocking frameworks**. Not rarely.
+The next step may be advanced, but it's worth the work. In PHP projects developed during PHPUnit 4-9 (2014-2020), we can see **2+ different mocking frameworks**. Not rarely.
 
-At start, PHPUnit didn't have a decent way to mock object. So PhpSpec was integrated in PHPUnit. As time went by, PHPUnit improved mocking features and eventually [removes in-house support for PhpSpec](https://github.com/sebastianbergmann/phpunit/issues/4141) in PHPUnit 9.
+PHPUnit didn't have a decent way to mock objects at the start. So, PhpSpec was integrated into PHPUnit. As time went by, PHPUnit improved mocking features and eventually [removes in-house support for PhpSpec](https://github.com/sebastianbergmann/phpunit/issues/4141) in PHPUnit 9.
 
 <br>
 
-That's why tests upgrade can lead to exponentially expensive process. Instead of upgrading PHPUnit, we have to upgrade Prophecy and Mockery at the same time.
+That's why test upgrades can lead to exponentially expensive processes. Instead of upgrading PHPUnit, we have to upgrade Prophecy and Mockery at the same time.
 
 That is a waste of time and mental energy.
 
@@ -193,13 +194,13 @@ That is a waste of time and mental energy.
 
 <br>
 
-I wrote about [PhpSpec to PHPUnit migration in separate post](/blog/2019/03/21/how-to-instantly-migrate-phpspec-to-phpunit). You can use this [secret standalone Rector set](https://github.com/rectorphp/custom-phpspec-to-phpunit) to automate most of it.
+I wrote about [PhpSpec to PHPUnit migration in a separate post](/blog/2019/03/21/how-to-instantly-migrate-phpspec-to-phpunit). To automate most of it, you can use this [secret standalone Rector set](https://github.com/rectorphp/custom-phpspec-to-phpunit).
 
 <br>
 
 ## 4. Either mock or a Real service
 
-What type is mocked object? That is the question.
+What type is a mocked object? That is the question.
 
 If we mock a `Product` class, it will become:
 
@@ -208,23 +209,23 @@ If we mock a `Product` class, it will become:
 * c) `MockObjet`
 * d) `Product`
 
-The *technical answer* is *b)* because a new proxy mock object will extend `MockObject`, that will extend `Product`.
+The *technical answer* is *b)* because a new proxy mock object will extend `MockObject`, which will extend `Product`.
 
 <br>
 
-But **how does it help IDE, Rector and PHPStan**?
+But **how does it help IDE, Rector, and PHPStan**?
 
 ```php
 $productMock = $this->createMock(Product::class);
 ```
 
-Do we really call real methods on mock directly?
+Do we need to call actual methods on mock directly?
 
 ```php
 $productMock->getName();
 ```
 
-No, we setup mocks and pass mocks object into the real object we test:
+No, we set mocks and pass mocks object into the real object we test:
 
 ```php
 $productMock->expects($this->once())
@@ -234,13 +235,13 @@ $productMock->expects($this->once())
 $productRepository = new ProductRepository([$productMock]);
 ```
 
-If IDE autocompletes `$product->getName()` it might lead us astray the object is real `Product` object. We want to avoid ambiguity and always separate `MockObject` properties from real classes.
+If IDE autocompletes `$product->getName()`, it might lead us astray as the object is a real `Product` object. We want to avoid ambiguity and separate `MockObject` properties from real classes.
 
-To add more fuel ot the fire, PHPStan fails to resolve type, if [tested `Product` class is `final`](/blog/2019/03/28/how-to-mock-final-classes-in-phpunit).
+To add fuel to the fire, PHPStan fails to resolve type if [tested `Product` class is `final`](/blog/2019/03/28/how-to-mock-final-classes-in-phpunit).
 
 <br>
 
-Separate `MockObject`s and real classes to give our tests clarity:
+Separate `MockObjects and real classes to give our tests clarity:
 
 ```diff
 -private MockObject|Product $product;
@@ -253,17 +254,17 @@ Separate `MockObject`s and real classes to give our tests clarity:
 +private MockObject $database;
 ```
 
-Now we see right from the properties, which object is being tested.
+Now we see right from the properties which object is being tested.
 
 <br>
 
-There is [a Rector rule](https://getrector.com/rule-detail/single-mock-property-type-rector) we use to handle this.
+We use [a Rector rule](https://getrector.com/rule-detail/single-mock-property-type-rector) to handle this.
 
 <br>
 
 ## 5. Use Entity Objects Directly
 
-Last but not least is mocking of simple objects. Let me give you an example:
+Last but not least is the mocking of simple objects. Let me give you an example:
 
 ```php
 use PHPUnit\Framework\TestCase;
@@ -285,7 +286,7 @@ final class ProductRepositoryTest extends TestCase
 }
 ```
 
-Let's recall one of our goals defined at start of this post:
+Let's recall one of our goals defined at the start of this post:
 
 * remove any unnecessary dependency on the mocking framework, so **any PHP developer can read code**
 
@@ -318,11 +319,11 @@ What can be improved there? We can use the `Product` object directly:
 This code is more intuitive to read and cheaper to maintain:
 
 * we have type control on `getName()` input
-* i we change the method in the future, IDE will update it here as well
+* if we change the method in the future, IDE will update it here as well
 
 <br>
 
-But **how do we know** we can replace the mock with real object here? What if we have another mock line like:
+But **how do we know** we can replace the mock with a real object here? What if we have another mock line like:
 
 ```php
        $resolverMock = $this->createMock(ComplicatedProductNameResolver::class);
@@ -360,7 +361,7 @@ We use PHPUnit Rector [rule to handle this case](/https://getrector.com/rule-det
 
 <br>
 
-That's all for today. Get PHPStan and Rector rules on board, and let them work for you. There is more than meets the eyes when it comes to mocks. We'll tackle automated refactoring of simple services in next part.
+That's all for today. Get PHPStan and Rector rules on board, and let them work for you. There is more than meets the eye when it comes to mocks. We'll tackle automated refactoring of simple services in the next part.
 
 <br>
 
