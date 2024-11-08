@@ -357,7 +357,7 @@ Use them directly.
 </blockquote>
 
 
-We use PHPUnit Rector [rule to handle this case](/https://getrector.com/rule-detail/entity-document-create-mock-to-direct-new-rector).
+We use PHPUnit Rector [rule to handle this case](https://getrector.com/rule-detail/entity-document-create-mock-to-direct-new-rector).
 
 <br>
 
