@@ -38,9 +38,9 @@ use PHPUnit\Framework\TestCase;
 
 final class SomeTest extends TestCase
 {
-    private MockObjet $apiClientMock;
+    private MockObject $apiClientMock;
 
-    private MockObjet $responseMock;
+    private MockObject $responseMock;
 
     protected function setUp(): void
     {
@@ -206,7 +206,7 @@ If we mock a `Product` class, it will become:
 
 * a) `Product|MockObject`
 * b) `Product&MockObject`
-* c) `MockObjet`
+* c) `MockObject`
 * d) `Product`
 
 The *technical answer* is *b)* because a new proxy mock object will extend `MockObject`, which will extend `Product`.
