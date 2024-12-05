@@ -22,5 +22,4 @@ return RectorConfig::configure()
         typeDeclarations: true,
         instanceOf: true
     )
-    ->withAttributesSets()
     ->withPhpSets();
