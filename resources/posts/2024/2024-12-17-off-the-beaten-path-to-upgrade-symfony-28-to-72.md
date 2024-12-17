@@ -66,7 +66,7 @@ For example, let's say we're upgrading the project from Symfony 4 to 7 and runni
 
 ## Symfony 3
 
-### Leaner Directory Structure
+### 1. Leaner Directory Structure
 
 The main change in Symfony 3 was the directory structure. In short, everything used to be placed in the `/app` and `/Resources` directories. Now, everything is directly in the root directory.
 
@@ -76,7 +76,7 @@ Give the `/Resources` directory some love, as most of the templates, translation
 
 <br>
 
-### From named Services to Constructor Injection
+### 2. From named Services to Constructor Injection
 
 The 2nd important change is moving from a string-named service to and global container...
 
@@ -117,7 +117,7 @@ In short, the change is:
 * The controller class must extend the `Symfony\Bundle\FrameworkBundle\Controller\AbstractController` class
 * all the injected services must be explicitly registered in `services.yml`, too
 
-### From Explicit Service Arguments to Autowire
+### 3. From Explicit Service Arguments to Autowire
 
 Also, you can clean your service configs:
 
@@ -135,7 +135,7 @@ Also, you can clean your service configs:
 
 I wrote a [dedicated post about configs upgrade](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/), so you won't miss any line you can remove.
 
-### Do the Monorepo Split
+### 4. Do the Monorepo Split
 
 Is your project still using the following dependency in `composer.json`?
 
@@ -199,7 +199,7 @@ Packages that are hard to bump and should go the last:
 
 You can upgrade to Symfony 4 while handling named services upgrades, but Symfony 4.4 is the last one to allow it. Symfony 5 would crash.
 
-### PSR-4 Autodiscovery
+### 5. PSR-4 Autodiscovery
 
 Symfony 3.3 introduced [PSR-4-based service discovery](https://symfony.com/blog/new-in-symfony-3-3-psr-4-based-service-discovery). It was slightly buggy until Symfony 4.0, so I would first upgrade to Symfony 4 before using it.
 
@@ -226,7 +226,7 @@ $services->load('App\\Repository\\', __DIR__ . '/../src/Repository')
 If we add a new `*Repository` class, Symfony will automatically pick it up.
 
 
-### From YAML to PHP configs
+### 6. From YAML to PHP configs
 
 You've noticed we're not using the YAML syntax anymore. Why? Symfony 3.4 has added a [PHP fluent syntax](https://symfony.com/blog/new-in-symfony-3-4-php-based-configuration-for-services-and-routes) for configs. Again, we better wait for Symfony 4 to make it reliable.
 
@@ -242,7 +242,7 @@ Last, but not least, I wrote a [dedicated post about the benefits of modern PHP 
 
 <br>
 
-### Ultimate Config Goal
+### 7. Ultimate Config Goal
 
 <blockquote class="blockquote">
 "Perfection is achieved, not when there is nothing more to add,<br>
@@ -277,7 +277,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 ## Symfony 5
 
-### From Annotations to Attributes
+### 8. From Annotations to Attributes
 
 Symfony 5.2 added [# [Route] and # [Required] attributes] (https://symfony.com/blog/new-in-symfony-5-2-php-8-attributes). As I've said above, we should first upgrade to Symfony 5.4 while still on PHP 7.4 and then to PHP 8.0.
 
@@ -297,7 +297,7 @@ The `->withAttributesSets()` method enables all relevant attribute sets in your 
 
 <br>
 
-## Security Back and Forth - Skip the Guard
+### 9. Security Back and Forth - Skip the Guard
 
 Symfony 3 introduced a new way to handle authentication - Guard. It got [further improved](https://symfony.com/blog/new-in-symfony-3-4-guard-authentication-improvements) and promoted. Then [deprecated in Symfony 5.3](https://symfony.com/blog/new-in-symfony-5-3-guard-component-deprecation) to be replaced with [new authentication system](https://symfony.com/blog/new-in-symfony-5-1-updated-security-system).
 
@@ -311,7 +311,7 @@ Security upgrade depends on each specific project, but it's worth skipping the S
 
 ## Symfony 6 and 7
 
-### Attributes Everywhere
+### 10. Attributes Everywhere
 
 When we reach PHP 8.0 and Symfony 6.0, **95 % of the work is already behind us**. Symfony 6 and 7 are stabilizing and relaxing releases. They're mostly about syntax sugar and more attributes. I would not recommend using them all blindly just because it's PHP 8.0 syntax, though.
 
