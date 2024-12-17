@@ -23,7 +23,9 @@ Route::get('/blog/{slug}', PostController::class)
 Route::redirect('/rss.xml', '/rss');
 Route::get('/rss', RssController::class);
 
-Route::get('/thumbnail/{title}.png', ThumbnailController::class);
+Route::get('/thumbnail/{title}.png', ThumbnailController::class)
+    ->where('title', '.*');
+
 Route::get('/tools', ToolsController::class);
 
 // use only development environment
