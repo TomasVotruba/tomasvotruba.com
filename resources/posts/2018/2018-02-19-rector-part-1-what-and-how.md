@@ -46,7 +46,7 @@ composer require rector/rector --dev
 2. Then create `rector.php`
 
 ```bash
-vendor/bin/rector init
+vendor/bin/rector
 ```
 
 3. Configure it with set:

@@ -12,6 +12,7 @@ return RectorConfig::configure()
             __DIR__ . '/src/Repository/ToolRepository.php',
         ],
     ])
+    ->withAttributesSets()
     ->withImportNames(removeUnusedImports: true)
     ->withRules([DeclareStrictTypesRector::class])
     ->withPreparedSets(
