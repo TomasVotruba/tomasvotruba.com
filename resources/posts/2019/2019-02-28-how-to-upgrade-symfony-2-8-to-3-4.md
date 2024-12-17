@@ -57,7 +57,7 @@ composer require rector/rector --dev
 Create `rector.php` config:
 
 ```bash
-vendor/bin/rector init
+vendor/bin/rector
 ```
 
 Add Symfony sets in it:
