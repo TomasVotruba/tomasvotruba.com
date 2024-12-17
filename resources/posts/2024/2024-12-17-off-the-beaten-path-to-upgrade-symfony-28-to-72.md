@@ -2,25 +2,25 @@
 id: 421
 title: "Off the Beaten Path to Upgrade Symfony 2.8 to 7.2"
 perex: |
-    There are 2 types of upgrades - one follows only `UPGRADE.md` files on every release, replace what has been removed with new alternatives. It works and we could say that codebase will be "up-to-date".
+    There are two types of upgrades. One follows only `UPGRADE.md` files on every release, replacing what has been removed with new alternatives. It works, and we could say that the codebase will be "up-to-date."
 
-    The other upgrade doesn't stop at required minimum, but **makes use of all modern features the framework provides**. It will be faster, easier to understand and easier to upgrade to the next versions. I [wrote a post](/blog/two-kinds-of-legacy-code-upgrade) that explains why latter is better.
+    The other upgrade doesn't stop at the required minimum but **makes use of all modern features the framework provides**. It will be faster, easier to understand, and easier to upgrade to the next version. I [wrote a post](/blog/two-kinds-of-legacy-code-upgrade) that explains why the latter is better.
 
-    There are no sources about Symfony upgrade spanning multiple major versions. Time to fix that.
+    There are no sources about Symfony upgrades spanning multiple major versions—time to fix that.
 ---
 
-This was a reply to [question on Reddit](https://www.reddit.com/r/PHP/comments/1hfjn89/good_strategy_when_upgrading_php_symfony_apps/) that grew into a post. Today we look at what less spoken steps, that bring the real value of modern Symfony. If you do them, a new Symfony develop that joins your team will have good times onboarding and working with your code.
+This was a reply to [question on Reddit](https://www.reddit.com/r/PHP/comments/1hfjn89/good_strategy_when_upgrading_php_symfony_apps/) that grew into a post. Today, we look at the less-spoken steps that bring the real value of modern Symfony. If you do them, a new Symfony developer who joins your team will have a good time onboarding and working with your code.
 
 ## Happy Path
 
 For the happy path upgrade:
 
 * see [Rector Symfony upgrade sets](https://getrector.com/find-rule?activeRectorSetGroup=symfony)
-* an `UPGRADE.md` files in Symfony Github repository
+* See `UPGRADE.md` files in the Symfony Github repository
 
 <br>
 
-Here is a full list of `UPGRADE.md` files: [2.8](https://github.com/symfony/symfony/blob/2.8/UPGRADE-2.8.md), [3.0](https://github.com/symfony/symfony/blob/3.0/UPGRADE-3.0.md),
+Here is a complete list of `UPGRADE.md` files: [2.8](https://github.com/symfony/symfony/blob/2.8/UPGRADE-2.8.md), [3.0](https://github.com/symfony/symfony/blob/3.0/UPGRADE-3.0.md),
 [3.1](https://github.com/symfony/symfony/blob/3.1/UPGRADE-3.1.md),
 [3.2](https://github.com/symfony/symfony/blob/3.2/UPGRADE-3.2.md),
 [3.3](https://github.com/symfony/symfony/blob/3.3/UPGRADE-3.3.md),
@@ -45,46 +45,46 @@ Here is a full list of `UPGRADE.md` files: [2.8](https://github.com/symfony/symf
 
 <br>
 
-## Can I skip first steps, when we're on Symfony 5?
+## Can I skip the first steps when we're on Symfony 5?
 
-In case you're using later version like Symfony 4, 5 or 6, **still check previous steps**. Some projects have Symfony 7 in their `composer.json`, but their syntax and architecture is stuck on Symfony 3 times. Imagine the surprise when they're hiring for a modern Symfony 7 codebase, but then devs sees a code fossil.
+If you're using a later version like Symfony 4, 5, or 6, **still check previous steps**. Some projects have Symfony 7 in their `composer.json`, but their syntax and architecture are stuck on Symfony 3 times. Imagine the surprise when they're hiring for a modern Symfony 7 codebase, but then the developers see a code fossil.
 
 ## PHP or Symfony first?
 
 Should we upgrade first to PHP 8, then start with Symfony 3 to 4 to 5, or vise versa? This is a legit question and one path might lead you to serious turmoil if PHP bugs (don't always trust composer requirements in the past).
 
-Here is a simple table of minimal PHP version required by various Symfony versions:
+Here is a simple table of minimal PHP versions required by various Symfony versions:
 
 <img src="/assets/images/posts/2024/symfony-upgrade-2.png">
 
-Symfony 4 or 5 was not tested on PHP 8.0. It should work, but I've experience few bugs when it crashes on invalid internal type or return value. Those are unfixable, as we'd have to change PHP itself.
+Symfony 4 or 5 was not tested on PHP 8.0. It should work, but I've experienced a few bugs when it crashes on an invalid internal type or return value. Those are unfixable, as we'd have to change PHP itself.
 
-In my experience it's best to reach the highest Symfony version possible, and if our PHP version blocks us from going further - then upgrade PHP version by single minor step.
+In my experience, it's best to reach the highest Symfony version possible. If our PHP version blocks us from going further, then upgrade the PHP version by a single minor step.
 
-E.g. let's say we're upgrading project from Symfony 4 to 7 and we're running PHP 7.4. First we upgrade 4 to 5.0, then to 5.4. Why? Because **Symfony 5.4 is the last version** that runs on PHP 7.4. Symfony 6.0 require us to upgrade the PHP to  8.0. Only then we upgrade PHP 7.4 to 8.0.
+For example, let's say we're upgrading the project from Symfony 4 to 7 and running PHP 7.4. First, we upgrade 4 to 5.0, then to 5.4. Why? Because Symfony 5.4 is the last version** that runs on PHP 7.4. Symfony 6.0 requires us to upgrade PHP to  8.0. Only then do we upgrade PHP 7.4 to 8.0.
 
 
 ## Symfony 3
 
 ### Leaner Directory Structure
 
-Main change in Symfony 3 was a directory structure. In short, everything used to be placed in `/app` and `/Resources` directory. Now everything is directly in the root directory.
+The main change in Symfony 3 was the directory structure. In short, everything used to be placed in the `/app` and `/Resources` directories. Now, everything is directly in the root directory.
 
 <img src="/assets/images/posts/2024/symfony-upgrade-3.png" class="img-thumbnail">
 
-Give the `/Resources` directory a good care, as most of templates, translations, tests, configs etc. are nested there. It will make working with Symfony project easier - not just for you, but also to linters, static analyser and Rector.
+Give the `/Resources` directory some love, as most of the templates, translations, tests, configs, etc., are nested there. It will make working with the Symfony project easier—not just for you but also for linters, static analyzers, and Rector.
 
 <br>
 
 ### From named Services to Constructor Injection
 
-The 2nd important change is moving from string-named service and global container:
+The 2nd important change is moving from a string-named service to and global container...
 
 ```php
 $someService = $this->get('some_service');
 ```
 
-to a typed constructor injection:
+...to a typed constructor injection:
 
 ```php
 /**
@@ -98,28 +98,28 @@ public function __construct(SomeService $someService)
 }
 ```
 
-This is mostly spread in:
+This is mainly spread in:
 
 * controllers
 * commands
 * even subscribers
-* anywhere where container is available
+* anywhere where a container is available
 
-This sole change consumes **~40 % of all upgrade time**. But the value increase is hundred-fold. Constructor injection is one of the best patterns that lead to clean and adaptable architecture.
+This sole change consumes **~40 % of all upgrade time**, but the value increase is a hundredfold. Constructor injection is one of the best patterns for creating clean and adaptable architecture.
 
-There is a [special Rector set](https://github.com/rectorphp/rector-symfony/blob/main/config/sets/symfony/symfony-constructor-injection.php) to help with upgrade. Use one rule at a time, refactor your code, send pull-request, merge then add the next rule.
+There is a [special Rector set](https://github.com/rectorphp/rector-symfony/blob/main/config/sets/symfony/symfony-constructor-injection.php) to help with the upgrade. Use one rule at a time, refactor your code, send a pull request, merge, and then add the next rule.
 
 <br>
 
 In short, the change is:
 
-* to use constructor injection, service must be explicitly registered in `services.yml`
-* the controller class must extend `Symfony\Bundle\FrameworkBundle\Controller\AbstractController` class
-* all the injected services must be explicitly registered in `services.yml` too
+* to use constructor injection, the service must be explicitly registered in `services.yml`
+* The controller class must extend the `Symfony\Bundle\FrameworkBundle\Controller\AbstractController` class
+* all the injected services must be explicitly registered in `services.yml`, too
 
 ### From Explicit Service Arguments to Autowire
 
-Also, you can cleanup your service configs:
+Also, you can clean your service configs:
 
 ```diff
  # services.yml
@@ -133,11 +133,11 @@ Also, you can cleanup your service configs:
 -            $someArgument: '@AnotherType'
 ```
 
-I wrote a [dedicated post about configs upgrade](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/), so you wont miss any line you can remove.
+I wrote a [dedicated post about configs upgrade](/blog/2017/05/07/how-to-refactor-to-new-dependency-injection-features-in-symfony-3-3/), so you won't miss any line you can remove.
 
 ### Do the Monorepo Split
 
-Is your project still using follwing dependency in `composer.json`?
+Is your project still using the following dependency in `composer.json`?
 
 ```json
 {
@@ -147,7 +147,7 @@ Is your project still using follwing dependency in `composer.json`?
 }
 ```
 
-Flip this to a monorepo split. Instead require each package separatelly:
+Flip this to a monorepo split. Instead, require each package separately:
 
 ```json
 {
@@ -197,11 +197,11 @@ Packages that are hard to bump and should go the last:
 
 ## Symfony 4
 
-You can upgrade to Symfony 4 while handling named services upgrade, but Symfony 4.4 is a last one that allow it. Symfony 5 would crash.
+You can upgrade to Symfony 4 while handling named services upgrades, but Symfony 4.4 is the last one to allow it. Symfony 5 would crash.
 
 ### PSR-4 Autodiscovery
 
-Symfony 3.3 introduced [PSR-4 based service discovery](https://symfony.com/blog/new-in-symfony-3-3-psr-4-based-service-discovery). It was slightly buggy till Symfony 4.0, so I would first upgrade to Symfony 4 before starting using it.
+Symfony 3.3 introduced [PSR-4-based service discovery](https://symfony.com/blog/new-in-symfony-3-3-psr-4-based-service-discovery). It was slightly buggy until Symfony 4.0, so I would first upgrade to Symfony 4 before using it.
 
 What is it? Before, we had to register each service manually - one by one:
 
@@ -228,9 +228,9 @@ If we add a new `*Repository` class, Symfony will automatically pick it up.
 
 ### From YAML to PHP configs
 
-You've noticed we're not using the YAML syntax anymore. Why? Symfony 3.4 has added a [PHP fluent syntax](https://symfony.com/blog/new-in-symfony-3-4-php-based-configuration-for-services-and-routes) for configs. Again, better wait for Symfony 4 to make it work well.
+You've noticed we're not using the YAML syntax anymore. Why? Symfony 3.4 has added a [PHP fluent syntax](https://symfony.com/blog/new-in-symfony-3-4-php-based-configuration-for-services-and-routes) for configs. Again, we better wait for Symfony 4 to make it reliable.
 
-First, let me give you [10 reasons, why PHP beats YAML](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs/).
+First, let me give you [10 reasons why PHP beats YAML](/blog/2020/07/16/10-cool-features-you-get-after-switching-from-yaml-to-php-configs/).
 
 "But we have over 50 configs", you say.
 
@@ -238,7 +238,7 @@ No worries, **there is a [migration tool that automates 99 % of the process](/bl
 
 <br>
 
-Last but not least, I wrote a [dedicated post about benefits modern PHP Symfony configs](https://getrector.com/blog/modernize-symfony-configs), how works perfectly with PHPStan deprecation rules to **get warnings about deprecated config methods**. This is not possible with YAML.
+Last, but not least, I wrote a [dedicated post about the benefits of modern PHP Symfony configs](https://getrector.com/blog/modernize-symfony-configs), how it works perfectly with PHPStan deprecation rules to **get warnings about deprecated config methods**. This is not possible with YAML.
 
 <br>
 
@@ -279,9 +279,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
 ### From Annotations to Attributes
 
-Symfony 5.2 added [`#[Route]` and `#[Required]` attributes](https://symfony.com/blog/new-in-symfony-5-2-php-8-attributes). As I've said above, first we should upgrade to Symfony 5.4 while still on PHP 7.4. Only then we should upgrade to PHP 8.0.
+Symfony 5.2 added [# [Route] and # [Required] attributes] (https://symfony.com/blog/new-in-symfony-5-2-php-8-attributes). As I've said above, we should first upgrade to Symfony 5.4 while still on PHP 7.4 and then to PHP 8.0.
 
-You can prepare early with in Rector config:
+You can prepare early within the Rector config:
 
 ```php
 # rector.php
@@ -292,7 +292,7 @@ return RectorConfig::configure()
     ->withAttributesSets()
 ```
 
-The `->withAttributesSets()` method enables all attributes sets that are relevant to your project. But don't worry, it will not start upgrading until we're on PHP 8.0. Once we're on PHP 8.0, it will only upgrade those attributes that really exists.
+The `->withAttributesSets()` method enables all relevant attribute sets in your project. But don't worry; it will only start upgrading once we're on PHP 8.0. Once we're on PHP 8.0, it will only upgrade those attributes that really exist.
 
 
 <br>
@@ -301,9 +301,9 @@ The `->withAttributesSets()` method enables all attributes sets that are relevan
 
 Symfony 3 introduced a new way to handle authentication - Guard. It got [further improved](https://symfony.com/blog/new-in-symfony-3-4-guard-authentication-improvements) and promoted. Then [deprecated in Symfony 5.3](https://symfony.com/blog/new-in-symfony-5-3-guard-component-deprecation) to be replaced with [new authentication system](https://symfony.com/blog/new-in-symfony-5-1-updated-security-system).
 
-This is the most dynamic component in Symfony that keeps changing every major version. It's like the oposite of Form component.
+This is the most dynamic component in Symfony, changing with every major version. It's like the opposite of the Form component.
 
-I've had the fortune to work with projects that were not coupled to Symfony security. If that was the case, we **slowly decoupled authentication logic from Symfony security to our own**. It made and will our migration much easier.
+I've had the fortune to work with projects that were not coupled with Symfony security. If that was the case, we **slowly decoupled authentication logic from Symfony security to our own**. It made and will make our migration much easier.
 
 Security upgrade depends on each specific project, but it's worth skipping the Security Guard completely. It's a dead end.
 
@@ -313,11 +313,11 @@ Security upgrade depends on each specific project, but it's worth skipping the S
 
 ### Attributes Everywhere
 
-When we reach PHP 8.0 and Symfony 6.0, **95 % work is already behind us**. Symfony 6 and 7 are stabilazing and relaxing releases. They're mostly about syntax sugar and more attributes. I would not recommend using them all blindly, just because it's PHP 8.0 syntax though.
+When we reach PHP 8.0 and Symfony 6.0, **95 % of the work is already behind us**. Symfony 6 and 7 are stabilizing and relaxing releases. They're mostly about syntax sugar and more attributes. I would not recommend using them all blindly just because it's PHP 8.0 syntax, though.
 
 <br>
 
-But there are few worth mentioning that bring a value:
+But there are a few worth mentioning that bring a value:
 
 * [#[TaggedIterator]](https://symfony.com/blog/new-in-symfony-5-3-service-autowiring-with-attributes)
 
@@ -355,7 +355,7 @@ They both allow to drop even more config blurbs and make them more leaner.
 
 <br>
 
-This would be the off the beaten path to Symfony 2.8 to 7.2 upgrade. It's a lot of work, but with the right tools and mindset, it can be done in a months. Final result is worth it! Good luck and have fun.
+This would be the off-the-beaten path to upgrading Symfony 2.8 to 7.2. It's a lot of work, but with the right tools and mindset, it can be done in months. The final result is worth it! Good luck and have fun.
 
 <br>
 
