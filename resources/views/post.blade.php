@@ -74,7 +74,7 @@
         <br>
 
         <p>
-            Do you learn from my contents or use open-souce packages like Rector every day?
+            Do you learn from my contents or use open-source packages like Rector every day?
             <br>
 
             <strong>
