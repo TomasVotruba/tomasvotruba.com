@@ -56,7 +56,7 @@ Should we upgrade first to PHP 8, then start with Symfony 3 to 4 to 5, or vise v
 
 Here is a simple table of minimal PHP versions required by various Symfony versions:
 
-<img src="/assets/images/posts/2024/symfony-upgrade-2.png">
+
 
 Symfony 4 or 5 was not tested on PHP 8.0. It should work, but I've experienced a few bugs when it crashes on an invalid internal type or return value. Those are unfixable, as we'd have to change PHP itself.
 
