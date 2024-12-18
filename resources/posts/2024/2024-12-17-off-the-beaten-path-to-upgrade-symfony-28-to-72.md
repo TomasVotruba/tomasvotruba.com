@@ -39,6 +39,7 @@ Here is a complete list of `UPGRADE.md` files: [2.8](https://github.com/symfony/
 [6.1](https://github.com/symfony/symfony/blob/6.1/UPGRADE-6.1.md),
 [6.2](https://github.com/symfony/symfony/blob/6.2/UPGRADE-6.2.md),
 [6.3](https://github.com/symfony/symfony/blob/6.3/UPGRADE-6.3.md),
+[6.4](https://github.com/symfony/symfony/blob/6.4/UPGRADE-6.4.md),
 [7.0](https://github.com/symfony/symfony/blob/7.0/UPGRADE-7.0.md),
 [7.1](https://github.com/symfony/symfony/blob/7.1/UPGRADE-7.1.md),
 [7.2](https://github.com/symfony/symfony/blob/7.2/UPGRADE-7.2.md)
