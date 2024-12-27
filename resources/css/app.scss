@@ -225,21 +225,26 @@ table ul {
     h1 {
         margin: 6rem 0 3rem;
     }
+
+    // avoid huge spaces in numberec lists
+    ol li {
+        margin-top: 0;
+    }
 }
 
 
 
 .thead-inverse th h3 {
-    color: #DDD;
-    margin: 0;
-    font-size: 2em;
-    line-height: 1.7em;
+color: #DDD;
+margin: 0;
+font-size: 2em;
+line-height: 1.7em;
 }
 
 .thead-inverse a, .thead-inverse a:visited, #content .thead-inverse a:visited:not(.btn):not(.badge), .badge-info a, .badge-info a:visited {
-    color: #DDD;
-    text-decoration: underline;
-    /*font-weight: normal;*/
+color: #DDD;
+text-decoration: underline;
+/*font-weight: normal;*/
 }
 
 .thead-inverse a:hover, .badge-info a:hover {
