@@ -55,7 +55,7 @@ This is a bit too verbose and ugly. But it's just one step from the second tempt
 
 ## 2. `@required` is not for "Handy Traits"
 
-If we combine 2 cool features in the way nobody expected them to use, we'll get the following:
+If we combine 2 cool features in the way nobody expected them to use, like an ice-cream and a hamburger, we'll get the following:
 
 ```php
 trait ProductRepositoryTrait
@@ -261,6 +261,8 @@ final class RestProductController extends AbstractController
 
 ## 👍
 
+<br>
+
 **Rule of thumb**: If we use an `abstract` class with a couple of services, and we need to add one more service to its children, we use `@required`.
 
 <br>
@@ -309,6 +311,8 @@ abstract class AbstractController
 ```
 
 ## 👍
+
+<br>
 
 **Rule of the thumb**: Use single autowire method and name it `autowire` + name of the calls. It prevents the `autowire()` method override bugs in case of multiple inheritance.
 
