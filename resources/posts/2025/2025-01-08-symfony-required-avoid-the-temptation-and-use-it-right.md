@@ -2,9 +2,9 @@
 id: 424
 title: "Symfony @required - Avoid the Temptation and Use it Right"
 perex: |
-    Symfony 3 introduced a [`@required` annotation](https://symfony.com/doc/3.x/service_container/calls.html) (now also an attribute), that allows to inject more services via setter method apart constructor. In that time, it was good.
+    Symfony 3 introduced a [`@required` annotation](https://symfony.com/doc/3.x/service_container/calls.html) (now also an attribute) that allows injecting more services via the setter method apart constructor. At the time, it was good.
 
-    The goal was to solve circular dependencies: when A needs B, B needs C and C needs A.
+    The goal was to solve circular dependencies: when A needs B, B needs C, and C needs A.
 
     But more often than not, I see PHP projects where it got completely out of hand.
 
@@ -16,7 +16,7 @@ perex: |
     but a bad master."
 </blockquote>
 
-The Symfony docs is not much verbose about *how not to use it*, so this my attempt to fill missing piece. Similar to static methods, it's easy to use everywhere instantly, but very hard to revert the change to clean constructor injection.
+The official documentation is not very verbose about how not to use it, so this is my attempt to fill in the missing piece. Similar to static methods, it's easy to use everywhere instantly, but it's very hard to revert the change to clean constructor injection.
 
 <br>
 
@@ -24,7 +24,7 @@ The Symfony docs is not much verbose about *how not to use it*, so this my attem
 
 ## 1. `@Required` is not "a way to get a service"
 
-This annotation was introduced in times of static containers, where we could get a service by using global container,e. g. `$this->get(ServiceWeNeed::class)`.
+This annotation was introduced in times of static containers, where we could get a service by using a global container,e. g. `$this->get(ServiceWeNeed::class)`.
 
 Let's replace that, shall we?
 
@@ -49,13 +49,13 @@ final class HomepageController
 
 <br>
 
-This is bit too verbose and ugly, isn't it? But it's just one step from second temptation.
+This is a bit too verbose and ugly. But it's just one step from the second temptation.
 
 <br>
 
 ## 2. `@required` is not for "Handy Traits"
 
-If we combine 2 cools features in the way nobody expected them to use, we'll get following:
+If we combine 2 cool features in the way nobody expected them to use, we'll get the following:
 
 ```php
 trait ProductRepositoryTrait
@@ -74,7 +74,7 @@ trait ProductRepositoryTrait
 }
 ```
 
-Now we can finally have 1-line solution to inject any service anywhere:
+Now we can finally have a 1-line solution to inject any service anywhere:
 
 ```php
 final class HomepageController
@@ -112,17 +112,17 @@ I've seen this in 3 projects recently and it makes any changes very slow and sti
 
 The original idea of `trait` was to **re-use shared and diverse logic in value objects/entities**, to avoid bloated abstract classes.
 
-If we want to use a service anywhere, we inject it via constructor.
+If we want to use a service anywhere, we inject it via the constructor.
 
 <br>
 
-This setter method also opens possibility **to override service from the outside**. You thought this the only `ProductRepository` service instance in whole project? It could be, or maybe not. We're only one tiny step away from next temptation.
+This setter method also opens the possibility **to override service from the outside**. You thought this was the only `ProductRepository` service instance in the whole project? It could be, or maybe not. We're only one tiny step away from the next temptation.
 
 <br>
 
 ## 3. `@required` is not to make mocking and tests easier
 
-Last but not least, there setters allow us to change service in tests:
+Last but not least, these setters allow anyone to replace service in tests on the fly:
 
 ```php
 final class HomepageControllerTest extends TestCase
@@ -168,29 +168,29 @@ final readonly class HomepageController
     }
 }
 ```
-Clean and reliable. We can build trust in our codebase, as it has single `ProductRepository` instance.
+Clean and reliable. We can build trust in our codebase, as it has a single `ProductRepository` instance.
 
 <br>
 
-The `@required` annotation should **be the last solution**, if there is no any better way to inject a service.
+The `@required` annotation should **be the last solution**, if there is no better way to inject a service.
 
 <br>
 
 ## 1. Prevent Circular Dependency
 
-As stated, the original idea that sparked this feature was to prevent circular dependencies. This could happen if there are complex service structures, e.g. `PriceResolved` service that depends on 10 different `PriceModifier` that depend mutually on each other.
+As stated, the original idea that sparked this feature was to prevent circular dependencies. This could happen if there are complex service structures, e.g. `PriceResolved` service that depends on 10 different `PriceModifier` implementations that depend mutually on each other.
 
 ## 👍
 
 <br>
 
-**Rule of the thumb**: If Symfony container gives us "circular dependency" exception, and it's not easy to handle this in main service by using `->set($this)` on `foreach` loop, we use `@required`.
+**Rule of thumb**: If the Symfony container gives us a "circular dependency" exception, and it's not easy to handle this in the main service by using `->set($this)` on `foreach` loop, we use `@required`.
 
 <br>
 
 ## 2. Prevent Dependency hell with Abstract Class
 
-Let's say we have an abstract controller with couple services useful in the controller itself and all its children:
+Let's say we have an abstract controller with a couple of services useful in the controller itself and all its children:
 
 ```php
 abstract AbstractProductController
@@ -220,11 +220,11 @@ final class RestProductController extends AbstractController
 }
 ```
 
-All this just to get `EntitySerializer` here. Now imagine parent `__construct()` of `AbstractController` will change. We have to update all its children.
+All this is just to get `EntitySerializer` here. Now imagine parent `__construct()` of `AbstractController` will change. We have to update all its children.
 
 <br>
 
-This is where `@required` becomes useful. It a little more verbose, but only in single parent class. There rest of children will become more clean:
+This is where `@required` becomes useful. It is a little more verbose, but only in single parent class. The rest of the children will become cleaner:
 
 
 ```php
@@ -261,11 +261,11 @@ final class RestProductController extends AbstractController
 
 ## 👍
 
-**Rule of the thumb**: If we use an `abstract` class with couple services, and we need to add one more service to its children, we use `@required`.
+**Rule of thumb**: If we use an `abstract` class with a couple of services, and we need to add one more service to its children, we use `@required`.
 
 <br>
 
-## 3. Make autowire method single and unique
+## 3. Make the autowire method single and unique
 
 Avoid using multiple `@required` methods in a single class:
 
@@ -289,11 +289,11 @@ abstract class AbstractController
 }
 ```
 
-It might lead to forgotten `@required` annotation above one of method (see the 2nd one), or even mutual override by slightly different type. We've seen both of bugs.
+It might lead to a forgotten `@required` annotation above one of the methods (see the 2nd one), or even mutual override by a slightly different type. We've seen both bugs.
 
 <br>
 
-Use single autowire method to be safe:
+Use a single autowire method to be safe:
 
 ```php
 abstract class AbstractController
@@ -310,13 +310,13 @@ abstract class AbstractController
 
 ## 👍
 
-**Rule of the thumb**: Use single autowire method and name it `autowire` + name of the calls. It prevents `autowire()` method override bugs in case of multiple inheritance.
+**Rule of the thumb**: Use single autowire method and name it `autowire` + name of the calls. It prevents the `autowire()` method override bugs in case of multiple inheritance.
 
 <br>
 
 ## How to spot all these problems?
 
-That's a lot tiny code smells to worry about, right? Are you curious about your project `@required` health check?
+That's a lot of tiny code smells to worry about, right? Are you curious about your project `@required` health check?
 
 PHPStan to the rescue - check these [custom PHPStan rules](https://github.com/symplify/phpstan-rules#3-symfony-specific-rules) that watch our back on our projects:
 
@@ -324,7 +324,9 @@ PHPStan to the rescue - check these [custom PHPStan rules](https://github.com/sy
 * `RequiredOnlyInAbstractRule`
 * `SingleRequiredMethodRule`
 
-Add them to your `phpstan.neon` and see what `vendor/bin/phsptan` tells you.
+<br>
+
+Add them to your `phpstan.neon` and see what they found.
 
 <br>
 
