@@ -18,3 +18,8 @@ parameters:
 
         # will be solved most likely once Larastan is updated to Laravel 11 conventions
         - '#Call to an undefined method Illuminate\\Contracts\\(.*?)|Illuminate\\#'
+
+        # assert to be sure
+        -
+            message: '#Call to static method Webmozart\\Assert\\Assert\:\:allString\(\) with (.*?) will always evaluate to true#'
+            identifier: staticMethod.alreadyNarrowedType

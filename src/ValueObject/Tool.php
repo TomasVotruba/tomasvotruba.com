@@ -40,7 +40,7 @@ final readonly class Tool
         return $this->why;
     }
 
-    public function getPost(): ?string
+    public function getPost(): string
     {
         return $this->post;
     }
