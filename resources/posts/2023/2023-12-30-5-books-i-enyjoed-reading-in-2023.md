@@ -91,6 +91,7 @@ I looked forward to each new chapter, diving into inner deep dialog with the aut
 
 <div class="clearfix"></div>
 
+<br>
 
 That's all for this year, and I'll see you in 2024.
 
