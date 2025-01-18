@@ -16,11 +16,13 @@ Without further ado, in random order:
 <img src="https://m.media-amazon.com/images/I/51PewKKRQRL._SL500_.jpg" style="float: left; max-width: 10em" class="me-3 mb-3 img-thumbnail">
 </a>
 
-A great friend had recommend me this book and at first, I wasn't really into it. I thought, it's another "you'll die soon, so do what that matters" shallow book.
+A great friend had recommended this book and at first, I wasn't really into it. I thought: 'It will be another shallow "you'll die soon, so do what matters" book.
 
 I gave it an hour and I was proven wrong.
 
-This book is somewhere between *Atomic Habits*,  *Deep Work* and *The Third Door*. It entertaining, yet deep and practical. It written in very practical and human language, that gave me feeling I understand everything clearly. It helped me to cleanup some dead-code from my personal life that I was dragging with me for wrong reasons. If you feel stuck, I recommend this book.
+This book is somewhere between *Atomic Habits*,  *Deep Work* and *The Third Door*. It entertaining, yet deep and practical.
+
+It's written in very practical and human language, which gave me the feeling I understand everything clearly. It helped me to clean up some dead code from my personal life that I was dragging with me for the wrong reasons. If you feel stuck, I recommend this book.
 
 
 <div class="clearfix"></div>
@@ -33,9 +35,11 @@ This book is somewhere between *Atomic Habits*,  *Deep Work* and *The Third Door
 <img src="https://m.media-amazon.com/images/I/51bCgl4RT5L._SL500_.jpg" style="float: left; max-width: 10em" class="me-3 mb-3 img-thumbnail">
 </a>
 
-This is a first fiction I've enjoyed in the past decade. It first of 3 books that take you to China 1970s and stretch to the end of times. It jump between timelines that slowly get closer to each other, and made me curious until the end. It challenged my views on interstellar communication and what happens when we find one.
+This is the first fiction I've enjoyed in the past decade. It first of 3 books that take you to China 1970s and stretch to the end of times.
 
-I won't share more no to spoil the fun, but if you're into well written sci-fi trilogy, where all the book are great read, start here.
+It jumps between timelines that slowly get closer to each other and make me excited until the end. No blind spots! It challenged my views on interstellar communication and what happens when we find one.
+
+I won't share more to spoil the fun, but if you're into well well-written sci-fi trilogy, where all the books are great to read, start here.
 
 <div class="clearfix"></div>
 
@@ -49,11 +53,11 @@ I won't share more no to spoil the fun, but if you're into well written sci-fi t
 <img src="https://m.media-amazon.com/images/I/41hpOy-Pp1L._SL500_.jpg" style="float: left; max-width: 10em" class="me-3 mb-3 img-thumbnail">
 </a>
 
-First time I've read this book before covid times of 2019. I was going through series of failed breakups, business wasn't working very well and I was living in a rented place I didn't like. This book gave me kick to face my fears, deal with stress and take actions steps to improve my life. It worked.
+First time I've read this book before COVID-19 times of 2019. I was going through a series of failed breakups, my business wasn't working very well and I was living in a rented place I didn't like. This book gave me a kick to face my fears, deal with stress, and take action steps to improve my life. It worked.
 
-End of 2024 was also full of challenges and hard first-time decisions, so I though I'd re-read this book. The contents nailed it. It helps me shift my "be victim and wait" default approach and again, take actions steps to make my vission happen.
+The end of 2024 was also full of challenges and hard first-time decisions, so I thought I'd re-read this book. The contents nailed it. It helps me shift my "be a victim and wait" default approach and again, take action steps to make my vision happen.
 
-This book is timeless mediation written already in 1948, yet its stories can be found in everyday life in 2024. If you'd only one book from this list, I recommend this one. The Audible has a great uplifting yet strict voice that perfectly fits the narrative.
+This book is a timeless meditation written already in 1948, yet its stories can be found in everyday life in 2024. If you'd only one book from this list, I recommend this one. The Audible has a great uplifting yet strict voice that perfectly fits the narrative.
 
 <div class="clearfix"></div>
 
@@ -66,11 +70,11 @@ This book is timeless mediation written already in 1948, yet its stories can be 
     <img src="https://m.media-amazon.com/images/I/51oxcVZd66L._SL500_.jpg" style="float: left; max-width: 10em" class="me-3 mb-3 img-thumbnail">
 </a>
 
-I've read [Arnold's biography](https://www.amazon.com/Total-Recall-Unbelievably-True-Story/dp/1451662440) that was about everything but the fake picture from private medias. Then I saw this book... another biography?
+I've read [Arnold's biography](https://www.amazon.com/Total-Recall-Unbelievably-True-Story/dp/1451662440) which was about everything but the fake picture from private media. Then I saw this book... another biography?
 
-After closer look, I'd say it's a mindset toolkit to **achieve what you want in live, while helping others to grow and playing your role in society to improve**. Deep Ikigai sense meets Arnold's ballsy stories about driving a tank and destroying wall during his army service.
+After a closer look, I'd say it's a mindset toolkit to **achieve what you want in life while helping others to grow and playing your role in society to improve**. Deep Ikigai sense meets Arnold's ballsy stories about driving a tank and destroying a wall during his army service.
 
-It reminded my the way *Ryan Holiday* writes. Cheering and friendly coach, that tells you the truth. Book's short and fun, so I've bough this book for my mum and 2 more friends.
+It reminded me of the way *Ryan Holiday* writes. Cheering and friendly coach, that tells you the truth. The book's short and fun, so I've bought this book for my mum and 2 more friends.
 
 
 <div class="clearfix"></div>
@@ -83,9 +87,9 @@ It reminded my the way *Ryan Holiday* writes. Cheering and friendly coach, that 
     <img src="https://m.media-amazon.com/images/I/51iHEBvsyqL._SL500_.jpg" style="float: left; max-width: 10em" class="me-3 mb-3 img-thumbnail">
 </a>
 
-Last year I've kicked off with *Ego is The Enemy*. Little did I know, there are +5 more books that Ryan wrote as about merge of ancient wisdom and modern life. This book is focusing on *what matters* over what *impresses other people*. Picking up trash in the nature and taking into trash bin (as I do with love) over complaining and doing nothing.
+Last year I kicked off with *Ego is The Enemy*. Little did I know, there are +5 more books that Ryan wrote about the merge of ancient wisdom and modern life. This book focuses on *what matters* over what *impresses other people*. Picking up trash in nature and taking it into the trash bin (as I do with love) over complaining and doing nothing.
 
-I love how Ryan manages to share personal stories, blends them with wisdom and sets them in a young person's daily life. I often relate to his situation and try to reflect my behavior, what I've done just to boost my ego and how to improve it next time I face similar same situation.
+I love how Ryan manages to share personal stories, blends them with wisdom, and sets them in a young person's daily life. I often relate to his situation and try to reflect on my behavior, what I've done just to boost my ego, and how to improve it the next time I face a similar situation.
 
 I don't follow many people on X to keep focused, but I do [follow Ryan](https://x.com/RyanHoliday), because he shares stoic wisdom reminders in a moderate amount.
 
