@@ -20,9 +20,9 @@ A great friend had recommended this book and at first, I wasn't really into it. 
 
 I gave it an hour and I was proven wrong.
 
-This book is somewhere between *Atomic Habits*,  *Deep Work* and *The Third Door*. It entertaining, yet deep and practical.
+This book is somewhere between *Atomic Habits*,  *Deep Work* and *The Third Door*. It's entertaining, yet deep and practical.
 
-It's written in very practical and human language, which gave me the feeling I understand everything clearly. It helped me to clean up some dead code from my personal life that I was dragging with me for the wrong reasons. If you feel stuck, I recommend this book.
+Written in very practical and human language, it gave me the feeling I understand everything clearly. It helped me to clean up some dead code from my personal life that I was dragging for the wrong reasons. If you feel stuck, I recommend this book.
 
 
 <div class="clearfix"></div>
