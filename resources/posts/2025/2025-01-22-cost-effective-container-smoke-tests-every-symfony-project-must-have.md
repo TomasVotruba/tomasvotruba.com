@@ -11,11 +11,11 @@ perex: |
 
 ## Why container smoke tests?
 
-Just this week container smoke tests saved me from 2 hard-to-find bugs. Every unit, integration and e2e test was passing, but this one did not. These bugs are impossible to spot, because they're not exclusive business logic we typically test. They're a **blend of business logic and Symfony glue**. We kind of hope Symfony did work, but it doesn't have to always be the case.
+Just this week container smoke tests saved me from 2 hard-to-find bugs. Every unit, integration, and e2e test was passing, but this one did not. These bugs are impossible to spot because they're not the exclusive business logic we typically test. They're a **blend of business logic and Symfony glue**. We kind of hope Symfony did work, but it doesn't have to always be the case.
 
 * These tests also **increase confidence in our project**.
-* They give us robust notion: if we move something to the other side or repository, it will still work.
-* We can add them all a in **single working day** and they work for us for the rest of project life.
+* They give us a robust notion: if we move something to the other side or repository, it will still work.
+* We can add them all a in **single working day** and they work for us for the rest of the project life.
 
 ## Smoke tests without Complexity
 
@@ -36,9 +36,9 @@ The following tests must run on any of [Symfony 2.8-7.2](/blog/off-the-beaten-pa
 
 Saying that we create **a simple container test case**.
 
-Why not re-use `KernelTestCase` or `WebTestCase`? They lead to heavy loading and are very slow. Moreover, they change a lot in Symfony 3-5 and take even more maintenance costs we want to avoid. We **want timeless reliable test working for us**.
+Why not re-use `KernelTestCase` or `WebTestCase`? They lead to heavy loading and are very slow. Moreover, they change a lot in Symfony 3-5 and take even more maintenance costs we want to avoid. We **want timeless reliable tests working for us**.
 
-Simple container test case boots Kernel, creates a container, and sets it up - just once, so we can reuse it in all tests with speed:
+Simple container test case boots Kernel creates a container, and sets it up - just once, so we can reuse it in all tests with speed:
 
 ```php
 <?php
@@ -83,7 +83,7 @@ $productRepository = self::$container->get('product_repository');
 $productRepository = self::$container->get(ProductRepository::class);
 ```
 
-There was no need for this paragraph til Symfony 3.3. Unfortunately, [Symfony 3.4](https://dev.to/mainick/how-to-test-a-private-service-in-symfony-2m91) made all services `private` by default to improve migration to `__construct()` in services. As unexpected side effect, all tests calls stopped working too:
+There was no need for this paragraph til Symfony 3.3. Unfortunately, [Symfony 3.4](https://dev.to/mainick/how-to-test-a-private-service-in-symfony-2m91) made all services `private` by default to improve migration to `__construct()` in services. As an unexpected side effect, all test calls stopped working too:
 
 ```php
 self::$container->get('product_repository');
@@ -101,22 +101,22 @@ This mess made a lot of developers:
 
 <br>
 
-This makes me deeply sad, as testing services in Symfony was otherwise very easy, fast and fun.
+This makes me deeply sad, as testing services in Symfony was otherwise very easy, fast, and fun.
 
 <br>
 
-As reaction, various Symfony version have their weird temporary ways to make services testable:
+As a reaction, various Symfony version have their weird temporary ways of making services testable:
 
 * [custom compiler pass](https://stackoverflow.com/questions/46677535/running-symfony-dic-smoke-tests-in-sf3-4-and-above), but it's not a reliable way
  * [public aliases](https://github.com/symfony/symfony-docs/issues/8097)
 
-But again, these change across major version. We'd have to worry about breaks during upgrades, instead of working on the upgrade itself.
+But again, these change across the major versions. We'd have to worry about breaks during upgrades, instead of working on the upgrade itself.
 
 ## How to make internal services `public` again?
 
 It's easy to make our own services public, but in smoke tests, we work exclusively with Symfony or Doctrine internal ones.
 
-After couple dozen Symfony upgrades, **the most cost-effective path** points to [vendor patches](/blog/2020/07/02/how-to-patch-package-in-vendor-yet-allow-its-updates). Don't worry, we'll not rewrite `/vendor` configs with huge files. We usually create 5-7 patches per project, each changing single line. If the line moves, we simply regenerate the patch file.
+After couple dozen Symfony upgrades, **the most cost-effective path** points to [vendor patches](/blog/2020/07/02/how-to-patch-package-in-vendor-yet-allow-its-updates). Don't worry, we'll not rewrite `/vendor` configs with huge files. We usually create 5-7 patches per project, each changing a single line. If the line moves, we simply regenerate the patch file.
 
 ## What is ideal smoke-test candidate?
 
@@ -127,18 +127,18 @@ Okay, now we know how to make services we need `public` and allow testing them. 
 First, we define **generic description** of a service to smoke test:
 
 * it's an internal Symfony/Doctrine service
-* it collects many services of specific type - usually an interface, e. g. `Symfony\Component\EventDispatcher\EventSubscriberInterface`
+* it collects many services of a specific type - usually an interface, e. g. `Symfony\Component\EventDispatcher\EventSubscriberInterface`
 * this specific type is implemented by our services (e.g. event subscriber) - we make sure our services are picked up
 
 <br>
 
-Here is list of services we test, so you have better idea:
+Here is a list of services we test, so you have a better idea:
 
 * the Symfony `EventDispatcher` picks up all [event subscribers](/blog/2019/05/16/don-t-ever-use-listeners)
 * the container picks up all our `*Controller` services
 * all our `*Controller` services are instantiable and autowirable
 * the container picks up all our configs and registers all services - important for [YAML configs to PHP upgrade](/blog/2020/07/27/how-to-switch-from-yaml-xml-configs-to-php-today-with-migrify/)
-* the router loads all Controller annotations/attributes - the route prefixes are correct, the controller paths and correct - great use for json snapshot testing
+* the router loads all Controller annotations/attributes - the route prefixes are correct, and the controller paths and correct - great use for JSON snapshot testing
 * the Doctrine ORM finds and loads all our entities
 * all Doctrine entities have valid mappings
 * the Doctrine `EventManager` picks up all listeners
@@ -146,15 +146,15 @@ Here is list of services we test, so you have better idea:
 
 <br>
 
-It depends on they way *you use* Symfony and Doctrine, but first 4 items we test everywhere.
+It depends on the way *you use* Symfony and Doctrine, but the first 4 items test everywhere.
 
 <br>
 
 Behind each of these points is a smoke test case. They're so similar across various Symfony projects, you could almost copy-paste (we do apart the namespace name).
 
-This article explains the idea behind container smoke testing and would not fit 10 PHP files. By now you already know what your project need to smoke test.
+This article explains the idea behind container smoke testing and would not fit 10 PHP files. By now you already know what your project needs to smoke test.
 
-To give you head start, we show you 2 typical smoke tests - **Event Subscribers** and **Controller instantiation**.
+To give you a head start, we show you 2 typical smoke tests - **Event Subscribers** and **Controller instantiation**.
 
 ## A. Event Subscribers Smoke Test
 
@@ -162,7 +162,7 @@ The test has 3 steps:
 
 * first, we fetch the main service - event dispatcher here
 * then we add dummy **count-picked-services** test - here **we count all our custom event subscribers** - we skip internal Symfony/Sensio ones, as they can change across versions and we want to test only our code
-* last but not least, if we want to be really sure and improve code feedback later, we add narrow counter tests - e.g. how many listeners are on `KernelEvents::RESPONSE` or `KernelEvents::REQUEST`
+* last but not least, if we want to be sure and improve code feedback later, we add narrow counter tests - e.g. how many listeners are on `KernelEvents::RESPONSE` or `KernelEvents::REQUEST`
 
 ```php
 namespace Test\Unit\Smoke;
@@ -224,13 +224,14 @@ That's it!
 
 This test is the most generic one, we can put in every Symfony project.
 
-It simply loads all controllers and checks if they are still instantiable. We also check their absolute count, so we know we didn't miss any of them. How many times it happened, we moved controller outside PSR-4 load() paths or we used wrong parent class - this test saved us instantly.
+It simply loads all controllers and checks if they are still instantiable. We also check their absolute count, so we know we didn't miss any of them.
+
+How many times did it happen, that we moved the controller outside PSR-4 load() paths or we used the wrong parent class - this test saved us instantly.
 
 ```php
 namespace Test\Unit\Smoke;
 
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 final class EventSubscribersTest extends AbstractContainerTestCase
 {
@@ -250,7 +251,7 @@ final class EventSubscribersTest extends AbstractContainerTestCase
 
             // make sure all controllers are still instantiated
             $controller = self::$container->get($serviceId);
-            $this->assertTrue($controller instanceof AbstractController);
+            $this->assertInstanceOf(AbstractController::class, $controller);
 
             ++$controllerCount;
         }
@@ -262,14 +263,14 @@ final class EventSubscribersTest extends AbstractContainerTestCase
 
 That's it! Just 2 simple tests and we know that:
 
-* event subscribers area loaded - in correct amount, hooked to correct events
+* event subscribers are loaded - in the correct amount, hooked to correct events
 * autoconfigure works as expected
-* controller are loaded - in correct amount
-* all controllers are instantiable - constructor is correctly autowired and parameters are passed
+* controllers are loaded - in the correct amount
+* all controllers are instantiable - the constructor is correctly autowired and parameters are passed
 
 <br>
 
-What else do you smoke test in our Symfony projects? Let me know in socials.
+What else do you smoke test in our Symfony projects? Let me know on socials.
 
 <br>
 
