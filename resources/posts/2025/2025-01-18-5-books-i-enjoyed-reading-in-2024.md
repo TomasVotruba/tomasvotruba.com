@@ -97,7 +97,7 @@ I don't follow many people on X to keep focused, but I do [follow Ryan](https://
 
 <br>
 
-That's all for this year, and I'll see you in 2024.
+That's all for this year, and I'll see you in 2025.
 
 <br>
 
