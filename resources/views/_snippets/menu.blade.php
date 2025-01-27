@@ -17,7 +17,7 @@
 
             <span class="ps-2 pe-2">•</span>
 
-            <a href="tel:+420776778332">420&nbsp;776&nbsp;778&nbsp;332</a>
+            <a href="https://twitter.com/votrubaT">@votrubaT</a>
         </div>
 
         <div class="clearfix"></div>
