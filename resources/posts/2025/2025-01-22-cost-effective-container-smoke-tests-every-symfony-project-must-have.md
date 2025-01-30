@@ -256,7 +256,7 @@ final class EventSubscribersTest extends AbstractContainerTestCase
             ++$controllerCount;
         }
 
-        $this->assertCount(420, $controllerCount);
+        $this->assertSame(420, $controllerCount);
     }
 }
 ```
