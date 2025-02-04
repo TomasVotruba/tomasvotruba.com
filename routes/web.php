@@ -5,7 +5,6 @@ declare(strict_types=1);
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RssController;
-use App\Http\Controllers\ShareBoardController;
 use App\Http\Controllers\ThumbnailController;
 use App\Http\Controllers\ToolsController;
 use Illuminate\Support\Facades\Route;
@@ -27,11 +26,6 @@ Route::get('/thumbnail/{title}.png', ThumbnailController::class)
     ->where('title', '.*');
 
 Route::get('/tools', ToolsController::class);
-
-// use only development environment
-if (app()->environment() === 'dev') {
-    Route::get('/share-board', ShareBoardController::class);
-}
 
 Route::get('/bank',  function () {
     return view('bank', [

@@ -1,6 +1,4 @@
 parameters:
-    reportUnmatchedIgnoredErrors: false
-
     errorFormat: symplify
 
     paths:

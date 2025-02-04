@@ -12,8 +12,6 @@
         "league/commonmark": "^2.6",
         "nesbot/carbon": "^2.72",
         "nette/utils": "^4.0",
-        "noweh/twitter-api-v2-php": "^3.6",
-        "openai-php/client": "^0.10.3",
         "symfony/yaml": "^6.4"
     },
     "require-dev": {
@@ -23,9 +21,8 @@
         "phpunit/phpunit": "^11.5",
         "rector/rector": "^2.0",
         "rector/swiss-knife": "^1.0",
-        "symplify/easy-coding-standard": "^12.5",
-        "symplify/phpstan-extensions": "^12.0",
-        "tomasvotruba/bladestan": "^0.7"
+        "phpecs/phpecs": "^2.0",
+        "symplify/phpstan-extensions": "^12.0"
     },
     "autoload": {
         "psr-4": {
