@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37fadd921cc894e64b1552d398117580",
+    "content-hash": "2f9e73f449814f50a10b03107e8eb1cf",
     "packages": [
         {
             "name": "brick/math",
@@ -768,65 +768,6 @@
                 }
             ],
             "time": "2024-07-24T11:22:20+00:00"
-        },
-        {
-            "name": "guzzlehttp/oauth-subscriber",
-            "version": "0.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/oauth-subscriber.git",
-                "reference": "8d6cab29f8397e5712d00a383eeead36108a3c1f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/oauth-subscriber/zipball/8d6cab29f8397e5712d00a383eeead36108a3c1f",
-                "reference": "8d6cab29f8397e5712d00a383eeead36108a3c1f",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.5|^7.2",
-                "guzzlehttp/psr7": "^1.7|^2.0",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0|^9.3.3"
-            },
-            "suggest": {
-                "ext-openssl": "Required to sign using RSA-SHA1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Subscriber\\Oauth\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Guzzle OAuth 1.0 subscriber",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "Guzzle",
-                "oauth"
-            ],
-            "support": {
-                "issues": "https://github.com/guzzle/oauth-subscriber/issues",
-                "source": "https://github.com/guzzle/oauth-subscriber/tree/0.6.0"
-            },
-            "time": "2021-07-13T12:01:32+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2417,65 +2358,6 @@
                 "source": "https://github.com/nette/utils/tree/v4.0.5"
             },
             "time": "2024-08-07T15:39:19+00:00"
-        },
-        {
-            "name": "noweh/twitter-api-v2-php",
-            "version": "3.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/noweh/twitter-api-v2-php.git",
-                "reference": "60be5fe4edda0935552848718aefb45221a0fa3f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/noweh/twitter-api-v2-php/zipball/60be5fe4edda0935552848718aefb45221a0fa3f",
-                "reference": "60be5fe4edda0935552848718aefb45221a0fa3f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "guzzlehttp/guzzle": "^7.5.0",
-                "guzzlehttp/oauth-subscriber": "^0.6.0",
-                "php": ">=7.4"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^1.9.14",
-                "phpunit/php-code-coverage": "^9.2.24",
-                "phpunit/phpunit": "^9.6.3",
-                "vlucas/phpdotenv": "^v5.5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Noweh\\TwitterApi\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Julien Schmitt",
-                    "email": "jschmitt95@protonmail.com"
-                },
-                {
-                    "name": "Martin Zeitler",
-                    "homepage": "https://github.com/syslogic"
-                }
-            ],
-            "description": "This library provides methods for sending messages to Twitter and receiving statuses.",
-            "keywords": [
-                "api",
-                "php",
-                "twitter"
-            ],
-            "support": {
-                "issues": "https://github.com/noweh/twitter-api-v2-php/issues",
-                "source": "https://github.com/noweh/twitter-api-v2-php/tree/3.6.1"
-            },
-            "time": "2024-12-09T16:00:28+00:00"
         },
         {
             "name": "nunomaduro/termwind",
