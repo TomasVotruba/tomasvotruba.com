@@ -2,9 +2,9 @@
 id: 428
 title: "Custom PHPStan Rules to Improve Every Symfony project"
 perex: |
-    Using PHPStan is not just about getting to level 8 with less than 100 ignored cases. Yes, there are also [official extensions](https://packagist.org/?query=phpstan%2Fphpstan-) that improve type support of e.g. Symfony, Doctrine and Laravel projects.
+    Using PHPStan is not just about getting to level 8 with less than 100 ignored cases. Yes, there are also [official extensions](https://packagist.org/?query=phpstan%2Fphpstan-) that improve the type support of Symfony, Doctrine, and Laravel projects.
 
-    But there are more rules needed to get our PHP project into future proof state.
+    But more rules are needed to get our PHP project into a future-proof state.
 
     **It takes less effort than getting to level 5 and we can use them since day one**. That's why I love them so much.
 ---
@@ -14,11 +14,11 @@ perex: |
 the less you bleed in combat."
 </blockquote>
 
-## What is "future-proof" state?
+## What is a "future-proof" state?
 
-I use this term to define [project code quality](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases), on its own, without developers. I think you, my reader, have a your own idea of what *good code quality* is. If you're with the project and have time to review pull-requests, it's good.
+I use this term to define [project code quality](/blog/2020/03/02/we-do-not-need-senior-developers-we-need-senior-code-bases), on its own, without developers. I think you, my reader, have your own idea of what *good code quality* is. If you're with the project and have time to review pull requests, it's good.
 
-But what happens when we leave the project? Or we get promoted to a manager position and don't have time to review PRs anymore?
+But what happens when we leave the project? Or do we get promoted to a manager position and don't have time to review PRs anymore?
 
 That's when the real code quality shows. The project should be able to survive without us. Not just survive, but prosper and teach others to take good care of it.
 
@@ -38,7 +38,7 @@ Today we look closely at the last item.
 
 ## Improve Codebase, one Rule at a Time
 
-Symfony framework offers 50+ packages we can use. It's challenging to understand them all and use them correctly without many years of experience. I've seen very poorly written codebases in Symfony 7 and on the other hand, very well written Symfony 3 codebases.
+Symfony framework offers 50+ packages we can use. It's challenging to understand them all and use them correctly without many years of experience. I've seen very poorly written codebases in Symfony 7 and on the other hand, very well-written Symfony 3 codebases.
 
 <br>
 
@@ -48,7 +48,7 @@ Symfony framework offers 50+ packages we can use. It's challenging to understand
 
 <br>
 
-The goal of these rules is to improve the codebase and **keep it that way even if we leave the project** (by leaving company or selling it).
+The goal of these rules is to improve the codebase and **keep it that way even if we leave the project** (by leaving the company or selling it).
 
 <br>
 
@@ -61,8 +61,8 @@ rules:
     - Symplify\PHPStanRules\Rules\Symfony\NoRequiredOutsideClassRule
 ```
 
-The `#[Require]`/`@required` is great feature to prevent dependency hell. They should be used exclusively in classes.
-Why? Using required on traits can lead to highly coupled and hard to read code:
+The `#[Require]`/`@required` is a great feature to prevent dependency hell. They should be used exclusively in classes.
+Why? Using required in traits can lead to highly coupled and hard-to-read code:
 
 ```php
 use Symfony\Component\DependencyInjection\Attribute\Required;
@@ -81,7 +81,7 @@ trait SomeTrait
 final class SomeController
 {
     // these traits are autowired, and inject 10 different services
-    // some of them with same name, but different type
+    // some of them with the same name, but a different type
     use SomeTrait;
     use AnotherTrait;
     use YetAnotherTrait;
@@ -99,7 +99,7 @@ rules:
     - Symplify\PHPStanRules\Rules\Symfony\NoAbstractControllerConstructorRule
 ```
 
-Abstract controller should not have constructor, as it can lead to tight coupling and multi-level parent constructor parsing.
+The abstract controller should not have a constructor, as it can lead to tight coupling and multi-level parent constructor parsing.
 
 ```php
 abstract class AbstractController extends Controller
@@ -113,7 +113,7 @@ abstract class AbstractController extends Controller
 }
 ```
 
-Then every single child class has to pass these services into parent constructor:
+Then every single child class has to pass these services into the parent constructor:
 
 ```php
 final class ProjectController extends AbstractController
@@ -130,11 +130,11 @@ final class ProjectController extends AbstractController
 }
 ```
 
-What a mess, right? Actually, we have 40+ of such child controllers classes. Then we add/remove single service in the `AbstractController::__construct()` method... and **we have to update all 40+ child classes**.
+What a mess, right? Actually, we have 40+ of such child controller classes. Then we add/remove a single service in the `AbstractController::__construct()` method... and **we have to update all 40+ child classes**.
 
 <br>
 
-Instead, the abstract class should use `#[Require]`, `@required` autowire to promote clear and easy to use constructor injection in child classes with isolated dependencies:
+Instead, the abstract class should use `#[Require]`, and `@required` autowire to promote clear and easy-to-use constructor injection in child classes with isolated dependencies:
 
 ```php
 final class ProjectController extends AbstractController
@@ -156,7 +156,7 @@ rules:
     - Symplify\PHPStanRules\Rules\Symfony\NoConstructorAndRequiredTogetherRule
 ```
 
-Frameworks are very open and tolerate many ways to do one thing. Like using `#[Require]` and `__construct()` in single class together. It can happen, so we have PHPStan rule to have our back and prevent this. Use one or the other, not both.
+Frameworks are very open and tolerate many ways to do one thing. Like using `#[Require]` and `__construct()` in single class together. It can happen, so we have the PHPStan rule to have our back and prevent this. Use one or the other, not both.
 
 <br>
 
@@ -169,9 +169,9 @@ rules:
 
 Using `findTaggedServiceIds()` is a historical feature to collect many services of one type and add them to another collector service. e.g. adding all `EventSubscriberInterface` to `EventDispatcher`.
 
-For many years, we have now autowire tags and attributes to handle same operation in configs without compiler passes. Unfortunately, its [still promoted in docs](https://symfony.com/doc/current/service_container/tags.html).
+For many years, we have now autowire tags and attributes to handle the same operation in configs without compiler passes. Unfortunately, it's [still promoted in docs](https://symfony.com/doc/current/service_container/tags.html).
 
-This rule warn about this method and promotes [single-line in configs instead](https://symfony.com/doc/current/service_container/tags.html#reference-tagged-services).
+This rule warns about this method and promotes [single-line in configs instead](https://symfony.com/doc/current/service_container/tags.html#reference-tagged-services).
 
 <br>
 
@@ -186,7 +186,7 @@ This rule prevents service locator anti-pattern `$this->get(...)` in controllers
 
 <br>
 
-Same rule, just for console commands:
+The same rule, just for console commands:
 
 ```yaml
 rules:
@@ -215,7 +215,7 @@ return static function (RoutingConfigurator $routingConfigurator): void {
 };
 ```
 
-Why? This makes it hard to find the actual route path. If we look at at a controller and see:
+Why? This makes it hard to find the actual route path. If we look at a controller and see:
 
 ```php
 /**
@@ -224,7 +224,7 @@ Why? This makes it hard to find the actual route path. If we look at at a contro
 ```
 
 Is it really the path or is there some magic prefix elsewhere?
-Use single place for paths in `@Route`/`#[Route]`. This also open path to PHPStan rules that work with routes to work in reliable way.
+Use a single place for paths in `@Route`/`#[Route]`. This also opens a path to PHPStan rules that work with routes in a reliable way.
 
 <br>
 
@@ -235,7 +235,7 @@ rules:
     - Symplify\PHPStanRules\Rules\Symfony\NoClassLevelRouteRule
 ```
 
-Same as above, only in different location. Avoid class-level route prefixing:
+Same as above, only in different locations. Avoid class-level route prefixing:
 
 ```php
 use Symfony\Component\Routing\Attribute\Route;
@@ -250,17 +250,17 @@ class SomeController
 }
 ```
 
-It's easy to get lost in 200+ lines controller and jump back and forth. Use single place in `#[Route]`/`@Route` to keep single source of truth and focus. Also helps PHPStan to work with routes in reliable way.
+It's easy to get lost in 200+ lines controller and jump back and forth. Use a single place in `#[Route]`/`@Route` to keep a single source of truth and focus. Also helps PHPStan to work with routes in a reliable way.
 
-To add more value in single source of truth: if we use [FOSRestBundle](https://github.com/FriendsOfSymfony/FOSRestBundle), the global file/controller prefixes are sometimes included, sometimes ignored.
-
-<br>
-
-Are you afraid of bugs in routes during this refactoring? Get cover with [route smoke testing](/blog/cost-effective-container-smoke-tests-every-symfony-project-must-have) before doing anything. We use it and it works great.
+To add more value to a single source of truth: if we use [FOSRestBundle](https://github.com/FriendsOfSymfony/FOSRestBundle), the global file/controller prefixes are sometimes included, and sometimes ignored.
 
 <br>
 
-## C. Event Subccribers
+Are you afraid of bugs in routes during this refactoring? Get covered with [route smoke testing](/blog/cost-effective-container-smoke-tests-every-symfony-project-must-have) before doing anything. We use it and it works great.
+
+<br>
+
+## C. Event Subscribers
 
 ### 9. NoListenerWithoutContractRule
 
@@ -269,7 +269,7 @@ rules:
     - Symplify\PHPStanRules\Rules\Symfony\NoListenerWithoutContractRule
 ```
 
-If we use listeners over subscribers, we have to do more config coding. Instead `EventSubscriberInterface` contract and store all metadata in the class itself. Here is [how to upgrade](/blog/2019/07/22/how-to-convert-listeners-to-subscribers-and-reduce-your-configs).
+If we use listeners over subscribers, we have to do more config coding. Instead `EventSubscriberInterface` contract stores all metadata in the class itself. Here is [how to upgrade](/blog/2019/07/22/how-to-convert-listeners-to-subscribers-and-reduce-your-configs).
 
 <br>
 
@@ -288,8 +288,7 @@ Symfony `getSubscribedEvents()` method must contain only event class references,
 
 <br>
 
-
-That was 10 rules we use in every Symfony project. You can [the full Symfony list here](https://github.com/symplify/phpstan-rules#3-symfony-specific-rules).
+That was a selection of 10 rules we use in every Symfony project. You can [the full Symfony list here](https://github.com/symplify/phpstan-rules#3-symfony-specific-rules).
 
 <br>
 
@@ -304,7 +303,7 @@ composer require symplify/phpstan-rules --dev
 
 <br>
 
-2. Add first rule and fix the spotted cases. Good first pick rule is `NoGetInControllerRule`.
+2. Add the first rule and fix the spotted cases. A good first pick rule is `NoGetInControllerRule`.
 
 It prevents using `$this->get(...)` in controllers, to promote dependency injection instead.
 
@@ -315,7 +314,7 @@ rules:
 
 <br>
 
-3. Once you've covered most of the rules, replace them with single ruleset import to keep your `phpstan.neon` clean:
+3. Once you've covered most of the rules, replace them with a single ruleset import to keep your `phpstan.neon` clean:
 
 ```yaml
 # phpstan.neon
