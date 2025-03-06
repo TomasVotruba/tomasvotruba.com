@@ -239,10 +239,6 @@ $newFileContents = $standardPrinter->printFormatPreserving(
 
 Congrats, now you've successfully renamed method to `newName`!
 
-## Advanced Changes? With Rector!
-
-Do you want to see more advanced operations, like those we [brainstormed in the beginning](#when-we-say-em-modify-em-and-em-ast-em-together-what-can-you-brainstorm)? Look at package I'm working on which should **automate application upgrades** - **[RectorPHP](https://github.com/RectorPHP/Rector)**.
-
 <br>
 
 Let me know in the comments, what would you like to read about AST and its Traversing and Modification. I might inspire by your ideas.
