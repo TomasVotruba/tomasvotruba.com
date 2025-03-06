@@ -8,9 +8,9 @@
         "ext-gd": "*",
         "ext-mbstring": "*",
         "imagine/imagine": "^1.5",
-        "laravel/framework": "^11.38",
+        "laravel/framework": "^12.0",
         "league/commonmark": "^2.6",
-        "nesbot/carbon": "^2.72",
+        "nesbot/carbon": "^3.8",
         "nette/utils": "^4.0",
         "symfony/yaml": "^6.4"
     },
