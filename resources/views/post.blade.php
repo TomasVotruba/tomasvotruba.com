@@ -72,18 +72,5 @@
         @endif
 
         <br>
-
-        <p>
-            Do you learn from my contents or use open-source packages like Rector every day?
-            <br>
-
-            <strong>
-                <a href="https://github.com/sponsors/tomasvotruba">Consider supporting it on GitHub Sponsors</a>.
-            </strong>
-
-            I'd really appreciate it!
-        </p>
-
-        <br>
     </div>
 @endsection
