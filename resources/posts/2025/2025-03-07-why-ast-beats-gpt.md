@@ -310,7 +310,7 @@ In my opinion, the GPTs fail here for both developer groups.
 
 ### Developers who don't know AST
 
-If would were a developer who has little or no AST knowledge, I would get lost as GPT gives them only half-baked cake. Some parts will not work because code is outdated. If after 6 years we're unable to use PHP 7.0 strict type declarations in PHP projects, not sure how many years it will take GPTs to start using Rector 2.0 syntax.
+If I was a developer who has little or no AST knowledge, I would get lost as GPT gives them only half-baked cake. Some parts will not work because code is outdated. If after 6 years we're unable to use PHP 7.0 strict type declarations in PHP projects, not sure how many years it will take GPTs to start using Rector 2.0 syntax.
 
 This is the innovation propagation lag in practice. By the time Rector 3.0 is out, GPTs will still be using Rector 2.0 syntax, and so on. It forces us to stop the innovation and go for BC compatibility forever, creating an even more coupled legacy that we actually try to get rid of.
 
