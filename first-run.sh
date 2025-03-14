@@ -12,7 +12,9 @@ cp .env.local .env
 
 chgrp -R www-data database
 chmod -R g+rw database
-mkdir -p storage/framework/{cache,sessions,views}
+mkdir -p storage/framework/cache
+mkdir -p storage/framework/sessions
+mkdir -p storage/framework/views
 
 # create the manifest.json file
 yarn build
