@@ -19,7 +19,9 @@ Route::get('/blog/{slug}', PostController::class)
     // include dots and slashes as well
     ->where('slug', '.*');
 
+Route::get('llms.txt', \App\Http\Controllers\LlmsTxtController::class);
 Route::redirect('/rss.xml', '/rss');
+
 Route::get('/rss', RssController::class);
 
 Route::get('/thumbnail/{title}.png', ThumbnailController::class)

@@ -11,14 +11,9 @@ use Illuminate\Routing\Controller;
 
 final class PostController extends Controller
 {
-    public function __construct(
-        private readonly PostRepository $postRepository,
-    ) {
-    }
-
-    public function __invoke(string $slug): View|RedirectResponse
+    public function __invoke(string $slug, PostRepository $postRepository): View|RedirectResponse
     {
-        $post = $this->postRepository->getBySlug($slug);
+        $post = $postRepository->getBySlug($slug);
 
         if ($post->getAlias() && $post->getAlias() !== $slug) {
             return redirect('/blog/' . $post->getAlias());
