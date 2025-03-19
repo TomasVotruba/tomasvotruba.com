@@ -12,14 +12,9 @@ use Illuminate\Routing\Controller;
 
 final class RssController extends Controller
 {
-    public function __construct(
-        private readonly PostRepository $postRepository,
-    ) {
-    }
-
-    public function __invoke(): Response
+    public function __invoke(PostRepository $postRepository): Response
     {
-        $posts = $this->postRepository->fetchAll();
+        $posts = $postRepository->fetchAll();
 
         $contents = view('rss', [
             'posts' => $posts,
