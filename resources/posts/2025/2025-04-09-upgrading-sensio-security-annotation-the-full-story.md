@@ -2,11 +2,11 @@
 id: 431
 title: "Upgrading Sensio Security Annotation: The Full Story"
 perex: |
-    The `@Security` annotation, that originated in Sensio extra bundle, comes a long way. The official upgrade docs has few miss-leading pointers, that force you to use unnecessary verbose language.
+    The `@Security` annotation, which originated in the Sensio extra bundle, goes a long way. The official upgrade docs have a few misleading pointers, that force you to use unnecessary verbose language.
 
-    Fortunately, there are few hidden levels that make code much less verbose and more readable.
+    Fortunately, few hidden levels make code much less verbose and more readable.
 
-    This post sums-up upgrading the Sensio `@Security` annotation to Symfony `#[IsGranted()]` attribute in one place.
+    This post sums up upgrading the Sensio `@Security` annotation to Symfony `#[IsGranted()]` attribute in one place.
 ---
 
 *Note: If you already use the native Symfony attributes, scroll down to find syntax tips.*
@@ -15,7 +15,7 @@ perex: |
 
 ## Starting point
 
-We have a Symfony project that uses `sensio/framework-extra-bundle` to define security rules above controller class or method:
+We have a Symfony project that uses `sensio/framework-extra-bundle` to define security rules above the controller class or method:
 
 ```php
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -31,7 +31,7 @@ class SomeController
 
 We want to:
 
-* get rid of `sensio/framework-extra-bundle` package
+* get rid of the `sensio/framework-extra-bundle` package
 * upgrade annotations to PHP 8.0 attributes
 * use Symfony core native `#[IsGranted()]` attribute
 * use the best syntax possible
@@ -40,13 +40,13 @@ We want to:
 
 ## Evolution Timeline
 
-To give you a better context, here is a evolution of the `@Security` annotation across 2 packages:
+To give you a better context, here is an evolution of the `@Security` annotation across 2 packages:
 
 * `sensio/framework-extra-bundle`
     * 3.0 [introduced](https://github.com/sensiolabs/SensioFrameworkExtraBundle/commit/82182d14d573b5132180f0a355d7ce9b4a81a84e) `@Security` annotation
     * 4.0 [introduced](https://github.com/sensiolabs/SensioFrameworkExtraBundle/commit/cc49d26a3d75f14f0fee731cade925238f7a4199) `@IsGranted` annotation
     * 6.0 brings **PHP 8.0** attributes `#[Security]` and `'#[IsGranted]`
-    * 6.2 (Feb 2023) is the last release, then repository was archived = no more fixes
+    * 6.2 (Feb 2023) is the last release, then the repository was archived = no more fixes
 
 <br>
 
@@ -55,13 +55,13 @@ To give you a better context, here is a evolution of the `@Security` annotation 
 
 <br>
 
-**What the best way to start?** Should be go directly from Sensio annotations to Symfony attributes? Is the syntax the same? But what about `@Security` annotation? It doesn't have any native Symfony equivalent.
+**What is the best way to start?** Should we go directly from Sensio annotations to Symfony attributes? Is the syntax the same? But what about the `@Security` annotation? It doesn't have any native Symfony equivalent.
 
-There are many paths to start this migration. We're lazy devs working on huge project, so we'll pick the smallest step possible.
+There are many paths to start this migration. We're lazy devs working on a huge project, so we'll pick the smallest step possible.
 
 ## 1. Upgrade Sensio from Annotations to Attributes
 
-We'll start with upgrade of annotations to attribute for one simple reason: **abstract syntax tree (technology used by Rector) **works better with native PHP attributes** than with lousy docblocks. Once we have native PHP 8.0 attributes, we can start using Rector to help us with the rest of the upgrade.
+We'll start with the upgrade of annotations to attribute for one simple reason: **abstract syntax tree (technology used by Rector) **works better with native PHP attributes** than with lousy docblocks. Once we have native PHP 8.0 attributes, we can start using Rector to help us with the rest of the upgrade.
 
 First, we upgrade at least to `sensio/framework-extra-bundle` 6.0. Then we use Rector to handle the upgrade. We update the config:
 
@@ -96,7 +96,7 @@ class SomeController
 
 ## 2. Fix the Security Attribute
 
-Ideally, we could switch directly to `symfony/security-http` package, but there are 2 small problems:
+Ideally, we could switch directly to the `symfony/security-http` package, but there are 2 small problems:
 
 * there is no `#[Security]` attribute in Symfony core
 * and there is a bug in *the Sensio* `#[Security]` attribute:
@@ -107,7 +107,7 @@ Ideally, we could switch directly to `symfony/security-http` package, but there 
 
 
 
-Someone forgot to add allow the attribute to be used multiple times. That means code above will throw native PHP error, because we're using two `#[Security]` attributes on the same place.
+Someone forgot to allow the attribute to be used multiple times. That means the code above will throw a native PHP error because we're using two `#[Security]` attributes in the same place.
 
 <br>
 
@@ -138,7 +138,7 @@ There are 3 steps we can achieve that: we change `is_granted()` to `#[IsGranted(
  }
 ```
 
-Less strings, more native code, better code resiliance. Now we can instantly see, that "listen" is our custom value.
+Fewer strings, more native code, better code resilience. Now we can instantly see, that "listen" is our custom value.
 
 <br>
 
@@ -148,7 +148,7 @@ How about the `has_role`? Do we have to keep this string or can we improve it so
 
 Actually, the `is_granted()` deprecated and replaced `has_role()` in [Symfony 4.2](https://github.com/symfony/symfony/pull/27305/).
 
-We can replace the role check directly with `#[IsGranted()]` attribute:
+We can replace the role check directly with the `#[IsGranted()]` attribute:
 
 ```diff
 -use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -165,9 +165,9 @@ Nice and clean!
 
 ## 5. Hidden level 2: and == multiple items
 
-When I was debugging Sensio to fix the attribute, I've discovered the attributes stack on each other. It means **all of the attributes must pass**, or the access will be denied.
+When I was debugging Sensio to fix the attribute, I discovered the attributes stacked on each other. It means **all of the attributes must pass**, or the access will be denied.
 
-Saying that, we can split "and" expression to standalone attributes:
+Saying that we can split "and" expressions into standalone attributes:
 
 ```diff
 -use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -185,7 +185,7 @@ Voilá!
 
 <br>
 
-You can do changes manually, or be lazy like me and let Rector handle steps 3, 4 and 5 for you:
+You can do changes manually, or be lazy like me and let Rector handle steps 3, 4, and 5 for you:
 
 ```php
 # rector.php
@@ -199,7 +199,7 @@ return RectorConfig::configure()
 
 Now we can build on the steps we've made before. We got from magic verbose definitions in docblock, to neat and tight single-word attributes.
 
-The "read" is not some technical keyword from PHP. It's **a made-up string we use here and most-likely somewhere else**. It's an enum we use over and over.
+The "read" is not some technical keyword from PHP. It's **a made-up string we use here and most likely somewhere else**. It's an enum we use over and over.
 
 <br>
 
@@ -212,7 +212,7 @@ So let's extract it:
  }
 ```
 
-And replace it here and in the other place - voter, security PHP config etc.:
+And replace it here and in the other place - voter, security PHP config, etc.:
 
 ```diff
 -#[IsGranted('read')]
@@ -222,11 +222,11 @@ And replace it here and in the other place - voter, security PHP config etc.:
  }
 ```
 
-Now we can easily jump back and forth between place the `Permission::READ` is used thanks to IDE.
+Now we can easily jump back and forth between places where the `Permission::READ` is used thanks to IDE.
 
 <br>
 
-To align our codebase to this rule in present and in the future, we add simple custom PHPStan rule:
+To align our codebase to this rule in the present and the future, we add a simple custom PHPStan rule:
 
 ```php
 use PhpParser\Node;
@@ -285,9 +285,9 @@ So we get a nice warning in our CI:
 
 ## 7. Final step: Flip from Sensio to Symfony
 
-Now we have our Sensio attributes in the best shape possible. We use strings only in place where really necessary. We use enum constant list for easier jumping back and forth and we have a custom PHPStan rule to enforce it.
+Now we have our Sensio attributes in the best shape possible. We use strings only in the place where really necessary. We use an enum constant list for easier jumping back and forth and we have a custom PHPStan rule to enforce it.
 
-First, we make use we use `symfony/security-http` 6.2 where `#[IsGranted()]` attribute is available.
+First, we make use we use `symfony/security-http` 6.2 where the `#[IsGranted()]` attribute is available.
 
 
 Then we enable the [`SecurityAttributeToIsGrantedAttributeRector` rule](https://getrector.com/rule-detail/security-attribute-to-is-granted-attribute-rector) in our `rector.php` config:
@@ -307,7 +307,7 @@ And run Rector:
 vendor/bin/rector
 ```
 
-That's it, now we have native Symfony PHP attributes and also, best available syntax possible. Yay!
+That's it, now we have native Symfony PHP attributes and also, the best available syntax possible. Yay!
 
 <br>
 
