@@ -307,7 +307,8 @@ And run Rector:
 vendor/bin/rector
 ```
 
-That's it, now we have native Symfony PHP attributes and also, the best available syntax possible. Yay!
+That's it, now we have native Symfony PHP attributes and also,<br>
+the best available syntax possible. Yay!
 
 <br>
 
