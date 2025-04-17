@@ -292,3 +292,66 @@ $containerConfigurator->extension('framework', [
 
 And also, we miss validation to check if there is at least 1 transition. Hm, how do we solve this?
 
+We add simple `build()` method in the end of chain, that creates the array for us. We hide all the validation inside as well:
+
+```php
+// app/config/workflows.php
+return function (ContainerConfigurator $containerConfigurator): void {
+    $workflows = [
+        ...WorkflowDefinition::create('post_publishing', 'draft', Post::class, 'state')
+            ->addTransition('to_publish', from: 'reviewed', to: 'published')
+            ->build();
+    ];
+
+    $containerConfigurator->extension('framework', [
+        'workflows' => $workflows,
+    ]);
+};
+```
+
+<br>
+
+The `build()` method can look like this:
+
+```php
+    public function build(): array
+    {
+        $places = [];
+        foreach ($this->transitions as $transition) {
+            $places = array_merge($places, $transition['from'], $transition['to']);
+        }
+
+        $places = array_unique($places);
+
+        Assert::notEmpty($this->transitions, sprintf('No transitions found for "%s" workflow definition', $this->name));
+
+        return [
+            $this->name => [
+                'type' => $this->type,
+                'marking_store' => $this->markingStore,
+                'initial_marking' => $this->initialMarking,
+                'supports' => $this->supports,
+                'places' => $places,
+                'transitions' => $this->transitions,
+            ],
+        ];
+    }
+```
+
+I'll leave the exact contents of your `WorkflowBuilder` up to you, to fit your specific project's needs. E.g. we always use one type of marking store, so we can remove it from the constructor.
+
+<br>
+
+## Final Result - Nice and clean!
+
+Now we have much less code to maintain, we see instantly what is required and what is optional, and we have peace of mind that we won't break anything:
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m still working on the <a href="https://twitter.com/symfony?ref_src=twsrc%5Etfw">@symfony</a> workflow configs improvements.<br><br>I want an intuitive code that will tell me (throw exception), if I&#39;ve use wrong/not enough/too much configuration.<br><br>Right in the workflows.php config, but smarter than me 🤩<br><br>Getting closer today 😎<br><br>How do you… <a href="https://t.co/LYFypYww7j">pic.twitter.com/LYFypYww7j</a></p>&mdash; Tomas Votruba (@VotrubaT) <a href="https://twitter.com/VotrubaT/status/1912081913080131851?ref_src=twsrc%5Etfw">April 15, 2025</a></blockquote>
+
+
+<br>
+
+Happy coding!
+
