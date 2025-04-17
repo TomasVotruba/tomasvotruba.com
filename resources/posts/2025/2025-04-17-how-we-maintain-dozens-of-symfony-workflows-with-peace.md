@@ -1,6 +1,6 @@
 ---
 id: 432
-title: "How we Maintain Dozens of Symfony Workflows with Ease"
+title: "How we Maintain Dozens of Symfony Workflows with Peace"
 perex: |
     There are dozens of posts and talks about how Symfony Workflows work and what are they for. To give you simplest example, if you have a post - it can be draft, reviewed or published. Workflow components makes sure the transitions between these states are valid. That's it.
 
@@ -11,7 +11,7 @@ perex: |
     How can we do it better?
 ---
 
-*Disclaimer: goal is this post is not only to give a solution to a problem. But also to show a way to think about problems, that have easy but wrong solutions. How to find a better way, if there is none in Google nor GPT. If we feel there is a better way, we have to find it ourselves. With our brains and skills. Have fun!*
+*Hint: goal is this post is not only to give a solution to a problem. But also to show a way to think about problems, that have easy but wrong solutions. How to find a better way, if there is none in Google nor GPT. If we feel there is a better way, we have to find it ourselves. With our brains and skills. Have fun!*
 
 <br>
 
