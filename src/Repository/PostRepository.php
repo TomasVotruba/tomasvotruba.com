@@ -8,6 +8,7 @@ use App\Entity\Post;
 use App\EntityFactory\PostFactory;
 use App\Exception\ShouldNotHappenException;
 use Illuminate\Support\Collection;
+use Nette\Utils\Strings;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Webmozart\Assert\Assert;
 
@@ -74,9 +75,16 @@ final class PostRepository
         foreach ($markdownFilePaths as $markdownFilePath) {
             $post = $this->postFactory->createFromFilePath($markdownFilePath);
 
+            // ensure ids are unique
             if (isset($posts[$post->getId()])) {
-                $message = sprintf('Post with id "%d" is duplicated. Increase it to higher one', $post->getId());
-                throw new ShouldNotHappenException($message);
+                $errorMessage = sprintf(
+                    'Post id "%d" already exists.
+                    Check "%s" and increase it to "%d"',
+                    $post->getId(),
+                    Strings::after($markdownFilePath, '/', -1),
+                    $post->getId() + 1
+                );
+                throw new ShouldNotHappenException($errorMessage);
             }
 
             $posts[$post->getId()] = $post;
