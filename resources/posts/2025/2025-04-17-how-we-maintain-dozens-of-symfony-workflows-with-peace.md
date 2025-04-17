@@ -39,7 +39,7 @@ Also, couple of replies like:
 
 <em>"This is cool. I always use YAML and I am always extra careful when defining the workflow"</em>
 
-Framework should not add cost extra attention while working with it. Quite the contrary: it should improve our work,  save us attention, so we can be careful about the work we love do to. That's why it's called "framework" and not "longitudinal academic research study" :)
+Framework should not **steal more attention from us while working with it**. Quite the contrary: it **should improve our work**, save us attention, so we can be focus about the work we love. That's why it's called "framework" and not "longitudinal academic research study" :)
 
 <br>
 
