@@ -22,6 +22,7 @@ Where to find me:
 
 @foreach ($posts as $post)
 * [{{ $post->getTitle() }}]({{ action(\App\Http\Controllers\PostController::class, ['slug' => $post->getSlug()]) }})
+* [markdown version]({{ action(\App\Http\Controllers\PostMdController::class, ['slug' => $post->getSlug()]) }})
 * published on {{ $post->getDateTime()->format('Y-m-d') }}
 * perex: {!! $post->getPerex() !!}
 

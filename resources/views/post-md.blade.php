@@ -9,13 +9,3 @@
 {!! $post->getPerex() !!}
 
 {!! $post->getContent() !!}
-
-        <br>
-
-        @if ($post->hasTweets())
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        @endif
-
-        <br>
-    </div>
-@endsection
