@@ -3,7 +3,7 @@
 @endphp
 
 [site]
-name: Tomas Votruba's Blog
+name: Personal site and blog of Tomas Votruba
 url: https://tomasvotruba.com
 description: Personal blog and professional site of Tomas Votruba, focusing on modernizing PHP codebases, Symfony, automated refactoring with Rector, and static analysis with PHPStan.
 
