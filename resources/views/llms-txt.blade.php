@@ -2,28 +2,22 @@
     /** @var \App\Entity\Post[] $posts */
 @endphp
 
+[site]
+name: Tomas Votruba's Blog
+url: https://tomasvotruba.com
+description: Personal blog and professional site of Tomas Votruba, focusing on modernizing PHP codebases, Symfony, automated refactoring with Rector, and static analysis with PHPStan.
 
-# Tomas Votruba
-
-I help PHP companies to modernize their codebase,
-increase profits and attract new talent.
-
-To make this happen faster and at scale, I made Rector - software that handles instant upgrades and automated refactoring.
-
-We provide an [upgrade service](https://getrector.com/hire-team) to save you time and money.
-
-
-You can find me on:
-
+[self]
+name: Tomas Votruba
+bio: I help PHP companies modernize their codebases, increase profits, and attract talent using Rector, an automated refactoring tool I created to handle instant upgrades and code improvements. We provide an [upgrade service](https://getrector.com/hire-team) to save you time and money.
+links:
 - [LinkedIn](https://www.linkedin.com/in/tomas-votruba/)
 - [Twitter](https://x.com/votrubaT)
 - [GitHub](https://github.com/tomasVotruba/)
 - [Rector](https://getrector.com)
 
 
------------------------------------------------
-
-
+[content]
 # Blog posts
 
 @foreach ($posts as $post)
