@@ -18,6 +18,10 @@ jobs:
                         run: 'composer phpstan --ansi'
 
                     -
+                        name: 'Major Outdated Dependencies'
+                        run: 'vendor/bin/jack breakpoint --limit 3'
+
+                    -
                         name: 'Unit Tests'
                         run: |
                             cp .env.local .env
