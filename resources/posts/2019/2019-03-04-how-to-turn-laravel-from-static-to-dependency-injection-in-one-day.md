@@ -8,9 +8,9 @@ perex: |
 
     What then? Switch framework or rewrite? But what if all you need is to **switch single pattern**?
 
-updated_since: "November 2020"
+updated_since: "June 2025"
 updated_message: |
-    Switched deprecated `--set` option to `ecs.php` config.
+    Use new Laravel Rector repository and new Rector 2.0 config.
 ---
 
 I don't use Laravel in my own life, but I follow the community closely. It likes the idea of Contracts from day 1 and it's also part of Rector upgrade set.
@@ -116,31 +116,32 @@ But what if your project is commercially successful and there are 100+ cases lik
 
 ## Rector to the Rescue
 
-These kinds of problems are *so 2018*. Recently Rector got on board [Laravel instant upgrades](https://github.com/rectorphp/rector/pulls?utf8=%E2%9C%93&q=laravel), first with Laravel 5.8.
+Rector has a standalone repository for [Laravel upgrades](https://github.com/driftingly/rector-laravel/), starting with Laravel 5.0 upgrade set.
 
-Next impulse was the post by Niklas, so I've **converted his idea to Rector rule**. The change from facades to constructor injection can be done with new `laravel-static-to-injection`:
+Niklas's post was impulse to create a Rector rule to handle it. The change from facades to constructor injection can be done with new `laravel-static-to-injection`:
 
-1. Install Rector
+1. Install Rector and Laravel Rector package
 
 ```bash
 composer require rector/rector --dev
+composer require --dev driftingly/rector-laravel
 ```
 
 2. Create `rector.php` config with `SetList::LARAVEL_STATIC_TO_INJECTION` set
 
 ```php
-use Rector\Laravel\Set\LaravelSetList;use Rector\Set\ValueObject\SetList;
+use RectorLaravel\Set\LaravelSetList;
 use Rector\Config\RectorConfig;
 
-return function (RectorConfig $rectorConfig): void {
-    $rectorConfig->import(LaravelSetList::LARAVEL_STATIC_TO_INJECTION);
-};
+return RectorConfig::configure()
+    ->withPaths([__DIR__ . '/src'])
+    ->withSets([LaravelSetList::LARAVEL_STATIC_TO_INJECTION]);
 ```
 
 3. Run Rector
 
 ```bash
-vendor/bin/rector process /src
+vendor/bin/rector /src
 ```
 
 No need to switch framework and you can enjoy new constructor injection in your Laravel application matter of minutes.
