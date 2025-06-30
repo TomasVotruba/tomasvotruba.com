@@ -167,21 +167,31 @@ First, take a 2-week paid vacation... Just kidding. Start with Rector which migr
 composer require rector/rector --dev
 ```
 
-2. Create `rector.php` config
+2. Add the specific rule
+
+```bash
+composer require rector/custom-phpspec-to-phpunit --dev
+```
+
+3. Create `rector.php` config
 
 ```php
-use Rector\Set\ValueObject\SetList;
+<?php
+
+declare(strict_types=1);
+
 use Rector\Config\RectorConfig;
+use Rector\PhpSpecToPHPUnit\Set\MigrationSetList;
 
 return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->sets([SetList::PHPSPEC_TO_PHPUNIT]);
+    $rectorConfig->sets([MigrationSetList::PHPSPEC_TO_PHPUNIT]);
 };
 ```
 
-3. Run Rector on your tests directories
+4. Run Rector on your spec directories
 
 ```bash
-vendor/bin/rector process tests
+vendor/bin/rector process spec
 ```
 
 <br>
