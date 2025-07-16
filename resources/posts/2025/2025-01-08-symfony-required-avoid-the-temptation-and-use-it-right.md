@@ -330,7 +330,7 @@ PHPStan to the rescue - check these [custom PHPStan rules](https://github.com/sy
 
 <br>
 
-Add them to your `phpstan.neon` and see what they found.
+Add them to your `phpstan.neon` and see what they find.
 
 <br>
 
