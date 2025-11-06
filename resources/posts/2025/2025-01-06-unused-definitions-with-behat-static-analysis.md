@@ -7,6 +7,9 @@ perex: |
     I accidentally noticed that one of the definitions is not used at all and could be removed. This would result in less code to maintain, less code to read, and less code to upgrade.
 
     But I thought, "That's weird." **Why did not Behat report this definition** in our CI? Oh, because there is no Behat static analysis report out of the box. Let's fix that.
+
+updated_since: "November 2025"
+updated_message: "Updated to new package name and command names."
 ---
 
 Behat definitions are marked with annotations:
@@ -101,17 +104,15 @@ Instead of adding yet another CLI tool you have to update, we made it part of [R
 It's a tool that can [do many useful things](/blog/cool-features-of-swiss-knife), but it's not a jack of all trades. It's a master of one - maintainable code.
 
 ```bash
-composer require rector/swiss-knife --dev
+composer require rector/behastan --dev
 ```
-
-It's downgraded to **PHP 7.2**, so even older projects can use it.
 
 <br>
 
 To run static analysis on your Behat definitions, just provide a directory with your Behat definitions and feature files:
 
 ```bash
-vendor/bin/swiss-knife behastan tests
+vendor/bin/behastan unused-definitions tests
 ```
 
 That's it!
