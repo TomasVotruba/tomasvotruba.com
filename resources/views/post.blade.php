@@ -40,7 +40,7 @@
         @if ($post->getUpdatedAt())
             <div class="card border-success mt-4">
                 <div class="card-header text-white bg-success">
-                    This post was updated at {{ $post->getUpdatedAt()->format("F Y") }} with fresh know-how.
+                    This post was updated in {{ $post->getUpdatedAt()->format("F Y") }} with fresh know-how.
                     <br>
                     <strong>What is new?</strong>
                 </div>

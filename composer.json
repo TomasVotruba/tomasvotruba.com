@@ -12,7 +12,8 @@
         "league/commonmark": "^2.6",
         "nesbot/carbon": "^3.8",
         "nette/utils": "^4.0",
-        "symfony/yaml": "^6.4"
+        "symfony/yaml": "^6.4",
+        "webmozart/assert": "^1.12"
     },
     "require-dev": {
         "phpecs/phpecs": "^2.1.2",
