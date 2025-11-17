@@ -68,40 +68,36 @@ The process is simple:
 
 * we collect all definitions from PHP files, both annotations and attributes
 * we separate full string match, regex, and :mask
-* we look into `*.feature` files and check if the definition is still used
+* we look into `*.feature` files and
+
+Then there are 3 rules:
+
+* check if the definition is still used
+* find definitions that have same method body, but different masks - either make them different or merge them and use one
+* find masks that are duplicated - pick one or rename the mask to match definition contents
+
+<br>
+
+The tool output looks like this:
 
 ```bash
-Checking static, named, and regex masks from 100 *Feature files
-==============================================================
+Found 127 Context and 225 feature files
+Extracting definitions masks...
 
-Found 1036 masks:
+Found 1367 masks:
+ * 863 exact
+ * 204 /regex/
+ * 298 :named
 
- * 747 exact
- * 106 /regex/
- * 181 :named
-
- 1036/1036 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
-
-the product price is :value
-tests/Behat/ProductContext.php
-
-/^I submit order form and see payment page$/
-tests/Behat/OrderContext.php
-
-
- [ERROR] Found 2 unused definitions
+Running analysis...
 ```
 
+Then you can cleanup unused definitions and keep tests codebase clean without constant supervision.
 
-That's it! We can now remove the unused definitions and keep the codebase clean.
+*Protip:* Add this command to your CI and you'll never have to worry about unused Behat definitions again. "What command?" you ask.
 
-Add this command to your CI and you'll never have to worry about unused Behat definitions again. "What command?" you ask.
 
 ## Add Behastan to your Project
-
-Instead of adding yet another CLI tool you have to update, we made it part of [Rector Swiss Knife](https://github.com/rectorphp/swiss-knife/).
-
-It's a tool that can [do many useful things](/blog/cool-features-of-swiss-knife), but it's not a jack of all trades. It's a master of one - maintainable code.
 
 ```bash
 composer require rector/behastan --dev
@@ -109,10 +105,10 @@ composer require rector/behastan --dev
 
 <br>
 
-To run static analysis on your Behat definitions, just provide a directory with your Behat definitions and feature files:
+To run static analysis on your Behat definitions, just provide a directory with your Behat PHP definitions and feature files:
 
 ```bash
-vendor/bin/behastan unused-definitions tests
+vendor/bin/behastan analyse tests
 ```
 
 That's it!
