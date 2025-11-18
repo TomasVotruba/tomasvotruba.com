@@ -66,11 +66,11 @@ We're lazy. We want to run a single command on any Behat version and **get fast 
 
 The process is simple:
 
-* we collect all definitions from PHP files, both annotations and attributes
-* we separate full string match, regex, and :mask
-* we look into `*.feature` files and
+* it collects all definitions from PHP files, both annotations and attributes
+* it separate full string match, regex, and :mask with matching variables
+* we look into `*.feature` files to find all used definitions
 
-Then there are 3 rules:
+Then there are 3 rules that it checks:
 
 * check if the definition is still used
 * find definitions that have same method body, but different masks - either make them different or merge them and use one
