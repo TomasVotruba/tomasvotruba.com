@@ -20,6 +20,7 @@ final readonly class Tool
         private array $tryCommands = [],
         private bool $isPhpstanExtension = false,
         private ?string $phpstanContents = null,
+        private bool $isNew = false,
     ) {
         Assert::allString(array_keys($tryCommands));
         Assert::allString($tryCommands);
@@ -68,8 +69,13 @@ final readonly class Tool
         return str($this->name)->slug()->toString();
     }
 
-    public function getPhpstanContents(): ?string
+    public function getPHPStanContents(): ?string
     {
         return $this->phpstanContents;
+    }
+
+    public function isNew(): bool
+    {
+        return $this->isNew;
     }
 }

@@ -139,7 +139,8 @@ PHPSTAN
                 'Bump to installed' => 'vendor/bin/jack raise',
                 'Open to next existing version' => 'vendor/bin/jack open',
                 'Check too many outdated dependencies (run in CI)' => 'vendor/bin/jack breakpoint',
-            ]
+            ],
+            isNew: true
         );
 
         $tools[] = new Tool(
@@ -147,12 +148,11 @@ PHPSTAN
             'When you use Behat',
             'Checks Behat definitions for unused definitions and for duplicated definitions',
             null,
-            'composer require rector/jack --dev',
+            'composer require rector/behastan --dev',
             [
-                'Bump to installed' => 'vendor/bin/jack raise',
-                'Open to next existing version' => 'vendor/bin/jack open',
-                'Check too many outdated dependencies (run in CI)' => 'vendor/bin/jack breakpoint',
-            ]
+                'Analyse' => 'vendor/bin/behastan analyze',
+            ],
+            isNew: true
         );
 
         return $tools;
