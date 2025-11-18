@@ -15,11 +15,12 @@ final readonly class Tool
         private string $name,
         private string $when,
         private string $why,
-        private string $post,
+        private ?string $post,
         private string $composer,
         private array $tryCommands = [],
         private bool $isPhpstanExtension = false,
         private ?string $phpstanContents = null,
+        private bool $isNew = false,
     ) {
         Assert::allString(array_keys($tryCommands));
         Assert::allString($tryCommands);
@@ -40,7 +41,7 @@ final readonly class Tool
         return $this->why;
     }
 
-    public function getPost(): string
+    public function getPost(): ?string
     {
         return $this->post;
     }
@@ -68,8 +69,13 @@ final readonly class Tool
         return str($this->name)->slug()->toString();
     }
 
-    public function getPhpstanContents(): ?string
+    public function getPHPStanContents(): ?string
     {
         return $this->phpstanContents;
+    }
+
+    public function isNew(): bool
+    {
+        return $this->isNew;
     }
 }
