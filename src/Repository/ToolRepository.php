@@ -129,6 +129,32 @@ PHPSTAN
             ]
         );
 
+        $tools[] = new Tool(
+            'Jack',
+            'When you upgrade your dependencies',
+            'Increases composer.json version to installed, opens requirements to next one, checks too old dependencies in CI',
+            'https://getrector.com/blog/introducing-rector-jack-raise-your-dependencies-safely',
+            'composer require rector/jack --dev',
+            [
+                'Bump to installed' => 'vendor/bin/jack raise',
+                'Open to next existing version' => 'vendor/bin/jack open',
+                'Check too many outdated dependencies (run in CI)' => 'vendor/bin/jack breakpoint',
+            ]
+        );
+
+        $tools[] = new Tool(
+            'Behastan',
+            'When you use Behat',
+            'Checks Behat definitions for unused definitions and for duplicated definitions',
+            null,
+            'composer require rector/jack --dev',
+            [
+                'Bump to installed' => 'vendor/bin/jack raise',
+                'Open to next existing version' => 'vendor/bin/jack open',
+                'Check too many outdated dependencies (run in CI)' => 'vendor/bin/jack breakpoint',
+            ]
+        );
+
         return $tools;
     }
 }

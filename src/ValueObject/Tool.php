@@ -15,7 +15,7 @@ final readonly class Tool
         private string $name,
         private string $when,
         private string $why,
-        private string $post,
+        private ?string $post,
         private string $composer,
         private array $tryCommands = [],
         private bool $isPhpstanExtension = false,
@@ -40,7 +40,7 @@ final readonly class Tool
         return $this->why;
     }
 
-    public function getPost(): string
+    public function getPost(): ?string
     {
         return $this->post;
     }
