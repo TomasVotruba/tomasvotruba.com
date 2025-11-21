@@ -21,6 +21,7 @@ final readonly class Tool
         private bool $isPhpstanExtension = false,
         private ?string $phpstanContents = null,
         private bool $isNew = false,
+        private ?string $repositoryLink = null,
     ) {
         Assert::allString(array_keys($tryCommands));
         Assert::allString($tryCommands);
@@ -77,5 +78,10 @@ final readonly class Tool
     public function isNew(): bool
     {
         return $this->isNew;
+    }
+
+    public function getRepositoryLink(): ?string
+    {
+        return $this->repositoryLink;
     }
 }

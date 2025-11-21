@@ -64,6 +64,11 @@
                                     <span class="ps-2 pe-2">•</span>
                                     <a href="{{ $tool->getPost() }}">Read&nbsp;more in a post</a>
                                 @endif
+
+                                @if ($tool->getRepositoryLink())
+                                    <span class="ps-2 pe-2">•</span>
+                                    <a href="{{ $tool->getRepositoryLink() }}">Checkout repository</a>
+                                @endif
                             </p>
 
                             <br>
