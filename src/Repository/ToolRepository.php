@@ -80,11 +80,12 @@ PHPSTAN
             'Composer Dependency Analyser',
             'When you reach PHPStan level 2/3',
             'Detect unused dependencies, transitional dependencies, missing classes and more',
-            '',
+            null,
             'composer require shipmonk/composer-dependency-analyser --dev',
             [
                 'Run' => 'vendor/bin/composer-dependency-analyser',
-            ]
+            ],
+            repositoryLink: 'https://github.com/shipmonk-rnd/composer-dependency-analyser',
         );
 
         $tools[] = new Tool(
@@ -152,7 +153,8 @@ PHPSTAN
             [
                 'Analyse' => 'vendor/bin/behastan analyze',
             ],
-            isNew: true
+            isNew: true,
+            repositoryLink: 'https://github.com/rectorphp/behastan',
         );
 
         return $tools;
