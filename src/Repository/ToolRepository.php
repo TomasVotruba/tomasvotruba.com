@@ -125,8 +125,8 @@ PHPSTAN
             'Spot always called setters (causing nullability), that should be required in constrctor instead (without null)',
             null,
             'composer require tomasvotruba/ctor --dev',
-            isNew: true,
             isPhpstanExtension: true,
+            isNew: true,
             repositoryLink: 'https://github.com/TomasVotruba/ctor'
         );
 
