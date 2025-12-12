@@ -120,6 +120,17 @@ PHPSTAN
         );
 
         $tools[] = new Tool(
+            'Ctor',
+            'When you PHPStan level 5',
+            'Spot always called setters (causing nullability), that should be required in constrctor instead (without null)',
+            null,
+            'composer require tomasvotruba/ctor --dev',
+            isNew: true,
+            isPhpstanExtension: true,
+            repositoryLink: 'https://github.com/TomasVotruba/ctor'
+        );
+
+        $tools[] = new Tool(
             'Config Transformer',
             'When you have Symfony configs in YAML',
             'Converts YAML configs to PHP for you',
