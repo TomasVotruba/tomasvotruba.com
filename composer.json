@@ -5,26 +5,26 @@
     "description": "Blog about hacking PHP, education and being the laziest PHP programmer in the world",
     "require": {
         "php": "^8.2",
-        "ext-gd": "*",
-        "ext-mbstring": "*",
         "imagine/imagine": "^1.5",
         "laravel/framework": "^12.0",
         "league/commonmark": "^2.6",
-        "nesbot/carbon": "^3.8",
-        "nette/utils": "^4.0",
-        "symfony/yaml": "^6.4|7.0.*",
+        "nette/utils": "^4.1",
+        "symfony/yaml": "7.4",
         "webmozart/assert": "^1.12"
     },
     "require-dev": {
         "phpecs/phpecs": "^2.2",
         "phpstan/extension-installer": "^1.4.3",
-        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan": "^2.1.33",
         "phpstan/phpstan-webmozart-assert": "^2.0",
         "phpunit/phpunit": "^11.5",
-        "rector/jack": "^0.2",
-        "rector/rector": "^2.0",
+        "rector/jack": "^0.4",
+        "rector/rector": "^2.2",
         "rector/swiss-knife": "^2.2",
-        "symplify/phpstan-extensions": "^12.0"
+        "shipmonk/composer-dependency-analyser": "^1.8",
+        "symplify/phpstan-extensions": "^12.0",
+        "tomasvotruba/type-coverage": "^2.1",
+        "tomasvotruba/unused-public": "^2.1"
     },
     "autoload": {
         "psr-4": {
@@ -59,4 +59,3 @@
         }
     }
 }
-

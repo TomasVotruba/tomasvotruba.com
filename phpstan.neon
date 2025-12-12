@@ -10,8 +10,11 @@ parameters:
         - ecs.php
 
     level: 8
-
     treatPhpDocTypesAsCertain: false
+
+    unused_public:
+        template_paths:
+            - resources/views
 
     ignoreErrors:
         # invalid types
