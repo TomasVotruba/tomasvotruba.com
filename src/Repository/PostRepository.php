@@ -8,7 +8,6 @@ use App\Entity\Post;
 use App\EntityFactory\PostFactory;
 use App\Exception\ShouldNotHappenException;
 use Nette\Utils\Strings;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Webmozart\Assert\Assert;
 
 /**
@@ -49,7 +48,7 @@ final class PostRepository
             }
         }
 
-        throw new NotFoundHttpException(sprintf('Post for slug "%s" was not found.', $slug));
+        throw new ShouldNotHappenException(sprintf('Post for slug "%s" was not found.', $slug));
     }
 
     /**

@@ -5,8 +5,6 @@
     "description": "Blog about hacking PHP, education and being the laziest PHP programmer in the world",
     "require": {
         "php": "^8.2",
-        "ext-gd": "*",
-        "ext-mbstring": "*",
         "imagine/imagine": "^1.5",
         "laravel/framework": "^12.0",
         "league/commonmark": "^2.6",
