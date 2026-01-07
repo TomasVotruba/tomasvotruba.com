@@ -13,7 +13,7 @@ final class HomepageController extends Controller
     /**
      * @var string[]
      */
-    private const QUOTES = [
+    private const array QUOTES = [
         'A seed grows with no sound, but a tree falls with a huge noise. Destruction has noise, but creation is quiet. This is the power of silence. Grow Silently',
         "If you don't want to do something, you'll find an excuse.<br>If you really do, you'll find a way.",
         'Every day is a new life to a wise man.',

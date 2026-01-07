@@ -7,6 +7,7 @@ namespace App\Tests;
 use App\DependencyInjection\ContainerFactory;
 use Illuminate\Container\Container;
 use Illuminate\Foundation\Testing\TestCase;
+use Override;
 
 abstract class AbstractTestCase extends TestCase
 {
@@ -14,6 +15,7 @@ abstract class AbstractTestCase extends TestCase
      * This is magically invoked by parent setUp() call
      * @see \Illuminate\Foundation\Testing\TestCase::refreshApplication
      */
+    #[Override]
     public function createApplication(): Container
     {
         $containerFactory = new ContainerFactory();

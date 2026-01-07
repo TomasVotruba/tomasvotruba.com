@@ -7,11 +7,13 @@ namespace App\Tests\Repository;
 use App\Entity\Post;
 use App\Repository\PostRepository;
 use App\Tests\AbstractTestCase;
+use Override;
 
 final class PostRepositoryTest extends AbstractTestCase
 {
     private PostRepository $postRepository;
 
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();
