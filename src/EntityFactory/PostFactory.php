@@ -17,12 +17,12 @@ final readonly class PostFactory
     /**
      * @var string
      */
-    private const SLASHES_WITH_SPACES_REGEX = '(?:---[\s]*[\r\n]+)';
+    private const string SLASHES_WITH_SPACES_REGEX = '(?:---[\s]*[\r\n]+)';
 
     /**
      * @var string
      */
-    private const CONFIG_CONTENT_REGEX = '#^\s*' . self::SLASHES_WITH_SPACES_REGEX . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_REGEX . '(?<content>.*?)$#s';
+    private const string CONFIG_CONTENT_REGEX = '#^\s*' . self::SLASHES_WITH_SPACES_REGEX . '?(?<config>.*?)' . self::SLASHES_WITH_SPACES_REGEX . '(?<content>.*?)$#s';
 
     public function __construct(
         private PathAnalyzer $pathAnalyzer,
