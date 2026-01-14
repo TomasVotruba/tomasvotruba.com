@@ -14,6 +14,7 @@ final class HomepageController extends Controller
      * @var string[]
      */
     private const array QUOTES = [
+        'The crooked tree lives long,<br>while the straight tree becomes lumber',
         'A seed grows with no sound, but a tree falls with a huge noise. Destruction has noise, but creation is quiet. This is the power of silence. Grow Silently',
         "If you don't want to do something, you'll find an excuse.<br>If you really do, you'll find a way.",
         'Every day is a new life to a wise man.',
