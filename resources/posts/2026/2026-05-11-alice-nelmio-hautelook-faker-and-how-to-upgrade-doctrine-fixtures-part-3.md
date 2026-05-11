@@ -7,6 +7,9 @@ perex: |
     This is the final part. **The upgrade is finished and closed for the time being**. In an unexpected way, it was fast, easy to migrate to, and will be even easier to maintain. It took me a couple of months of deep thinking and experiments, because there was a trap solution that would take us 6-8 months of hard work and would create even more legacy code. Lesson learned: don't fall for marketing and GPT answers.
 
     Let's look into it.
+
+human_gpt_mins: 90
+ai_gpt_mins: 5
 ---
 
 In [part 1](/blog/alice-nelmio-hautelook-faker-and-how-to-upgrade-doctrine-fixtures-part-1) we looked at the current situation of our legacy project. In [part 2](/blog/alice-nelmio-hautelook-faker-and-how-to-upgrade-doctrine-fixtures-part-2) we took the low-hanging fruit first:
@@ -223,7 +226,7 @@ $currentPost->setAuthor($this->getReference('user' . $i, User::class));
 
 Of course, there are some edge cases that use deep Alice magic features, but we can easily fix them by using simple PHP. In our case, it was about 5 % of fixtures - nothing weird that we could not solve comes to mind.
 
-Now we have ~100 PHP Alice fixture files to convert to native Doctrine fixtures. With GPTs and Rector, it's doable in under a full-time month. **The trick is to start with the Alice fixtures with the least amount of references (dependencies) and convert those first.**
+Now we have ~100 PHP Alice fixture files to convert to native Doctrine fixtures. With GPTs and Rector, it's doable in under a full-time month for a first timer. **The trick is to start with the Alice fixtures with the least amount of references (dependencies) and convert those first.**
 
 In the end, we're left with 3-4 files that need extra care, but we had enough experience and courage to deal with those as well.
 
@@ -257,5 +260,8 @@ All we need now are 3 custom PHP classes that load our fixtures and:
 
 - `doctrine/data-fixtures` (last major release in 2024, actively maintained, 3.x around the corner)
 
-I have never dreamed of such a slim upgrade - our initial Intro Analysis missed this nice and clear path.
+I have never dreamed of such a slim upgrade - our initial Intro Analysis missed this nice and clear path. If you're in the same mess, I hope this story will make it walk in the park for you.
 
+<br>
+
+Happy coding!

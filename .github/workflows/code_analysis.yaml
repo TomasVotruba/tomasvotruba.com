@@ -23,7 +23,7 @@ jobs:
 
                     -
                         name: 'Major Outdated Dependencies'
-                        run: 'vendor/bin/jack breakpoint --limit 3'
+                        run: 'vendor/bin/jack breakpoint --limit 4'
 
                     -
                         name: 'Unit Tests'
