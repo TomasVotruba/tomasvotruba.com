@@ -4,27 +4,27 @@
     "license": "MIT",
     "description": "Blog about hacking PHP, education and being the laziest PHP programmer in the world",
     "require": {
-        "php": "^8.3",
+        "php": "^8.4",
         "imagine/imagine": "^1.5",
-        "laravel/framework": "^12.45",
+        "laravel/framework": "^12.61",
         "league/commonmark": "^2.8",
         "nette/utils": "^4.1",
         "symfony/yaml": "^7.4",
-        "webmozart/assert": "^1.12|^2.0"
+        "webmozart/assert": "^2.4"
     },
     "require-dev": {
-        "symplify/easy-coding-standard": "^13.0",
+        "symplify/easy-coding-standard": "^13.1",
         "phpstan/extension-installer": "^1.4.3",
         "phpstan/phpstan": "^2.1.33",
         "phpstan/phpstan-webmozart-assert": "^2.0",
         "phpunit/phpunit": "^12.5",
         "rector/jack": "^1.0",
-        "rector/rector": "^2.3",
-        "rector/swiss-knife": "^2.3",
+        "rector/rector": "^2.4",
+        "rector/swiss-knife": "^2.4",
         "shipmonk/composer-dependency-analyser": "^1.8",
         "symplify/phpstan-extensions": "^12.0",
-        "tomasvotruba/type-coverage": "^2.1",
-        "tomasvotruba/unused-public": "^2.1"
+        "tomasvotruba/type-coverage": "^2.2",
+        "tomasvotruba/unused-public": "^2.2"
     },
     "autoload": {
         "psr-4": {
