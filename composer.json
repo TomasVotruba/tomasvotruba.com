@@ -14,6 +14,9 @@
     },
     "require-dev": {
         "symplify/easy-coding-standard": "^13.1",
+        "ekino/phpstan-banned-code": "^3.2",
+        "ergebnis/phpstan-rules": "^2.13",
+        "larastan/larastan": "^3.9",
         "phpstan/extension-installer": "^1.4.3",
         "phpstan/phpstan": "^2.2",
         "phpstan/phpstan-webmozart-assert": "^2.0",
@@ -24,7 +27,10 @@
         "shipmonk/composer-dependency-analyser": "^1.8",
         "symplify/phpstan-extensions": "^12.0",
         "tomasvotruba/type-coverage": "^2.2",
-        "tomasvotruba/unused-public": "^2.2"
+        "tomasvotruba/unused-public": "^2.2",
+        "symplify/phpstan-rules": "^14.10",
+        "tomasvotruba/cognitive-complexity": "^1.1",
+        "voku/phpstan-rules": "^3.7"
     },
     "autoload": {
         "psr-4": {

@@ -6,6 +6,10 @@
 
         <a href="{{ action(\App\Http\Controllers\ToolsController::class) }}">Tools</a>
 
+        <span class="ps-2 pe-2">•</span>
+
+        <a href="{{ action(\App\Http\Controllers\DiscoverPhpstanRulesController::class) }}">PHPStan Rules</a>
+
 
         <div class="float-none float-sm-end">
             Reach me:
