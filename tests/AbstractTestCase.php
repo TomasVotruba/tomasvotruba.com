@@ -16,7 +16,7 @@ abstract class AbstractTestCase extends TestCase
      * @see \Illuminate\Foundation\Testing\TestCase::refreshApplication
      */
     #[Override]
-    public function createApplication(): Container
+    final public function createApplication(): Container
     {
         $containerFactory = new ContainerFactory();
         return $containerFactory->create();
@@ -27,7 +27,7 @@ abstract class AbstractTestCase extends TestCase
      * @param class-string<TType> $type
      * @return TType
      */
-    protected function make(string $type): object
+    final protected function make(string $type): object
     {
         return $this->app->make($type);
     }

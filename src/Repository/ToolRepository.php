@@ -25,6 +25,7 @@ final class ToolRepository
                 'First run or dry-run' => 'vendor/bin/ecs',
                 'Fix coding standdard' => 'vendor/bin/ecs --fix',
             ],
+            repositoryLink: 'https://github.com/easy-coding-standard/ecs'
         );
 
         $tools[] = new Tool(
@@ -45,6 +46,8 @@ parameters:
         # enable on PHP 8.3+
         # constant: 5
 PHPSTAN
+            ,
+            repositoryLink: 'https://github.com/tomasVotruba/type-coverage'
         );
 
         $tools[] = new Tool(
@@ -55,7 +58,8 @@ PHPSTAN
             'composer require tomasvotruba/class-leak --dev',
             [
                 'Detect unused classes' => 'vendor/bin/class-leak check /src /tests',
-            ]
+            ],
+            repositoryLink: 'https://github.com/TomasVotruba/class-leak/',
         );
 
         $tools[] = new Tool(
@@ -74,6 +78,8 @@ parameters:
         # properties: true
         # methods: true
 PHPSTAN
+            ,
+            repositoryLink: 'https://github.com/TomasVotruba/unused-public',
         );
 
         $tools[] = new Tool(
@@ -97,7 +103,8 @@ PHPSTAN
             [
                 'Finalize classes without children' => 'vendor/bin/swiss-knife finalize-classes /src /tests',
                 'Privatize local class constants' => 'vendor/bin/swiss-knife privatize-constants /src /tests',
-            ]
+            ],
+            repositoryLink: 'https://github.com/rectorphp/swiss-knife'
         );
 
         $tools[] = new Tool(
@@ -117,6 +124,8 @@ parameters:
         # narrow_param: true
         # narrow_return: true
 PHPSTAN
+            ,
+            repositoryLink: 'https://github.com/rectorphp/type-perfect',
         );
 
         $tools[] = new Tool(
@@ -138,7 +147,8 @@ PHPSTAN
             'composer require symplify/config-transformer --dev',
             [
                 'Transform' => 'vendor/bin/config-transformer convert /config',
-            ]
+            ],
+            repositoryLink: 'https://github.com/symplify/config-transformer',
         );
 
         $tools[] = new Tool(
@@ -152,7 +162,8 @@ PHPSTAN
                 'Open to next existing version' => 'vendor/bin/jack open',
                 'Check too many outdated dependencies (run in CI)' => 'vendor/bin/jack breakpoint',
             ],
-            isNew: true
+            isNew: true,
+            repositoryLink: 'https://github.com/rectorphp/jack',
         );
 
         $tools[] = new Tool(
@@ -166,6 +177,17 @@ PHPSTAN
             ],
             isNew: true,
             repositoryLink: 'https://github.com/rectorphp/behastan',
+        );
+
+        $tools[] = new Tool(
+            'Mockstan',
+            'When you use PHPUnit mocks',
+            'Keeps your PHPUnit mocks under strict eye of static analysis to make tests clean and maintainable',
+            null,
+            'composer require rector/mockstan --dev',
+            isPhpstanExtension: true,
+            isNew: true,
+            repositoryLink: 'https://github.com/rectorphp/mockstan',
         );
 
         return $tools;

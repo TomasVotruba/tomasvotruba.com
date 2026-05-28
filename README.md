@@ -1,6 +1,6 @@
 # [tomasvotruba.com](https://tomasvotruba.com)
 
-Personal Website running on Laravel 11
+Personal Website running on Laravel
 
 <br>
 

@@ -1,0 +1,82 @@
+{
+    "repositories": [
+        {
+            "package": "larastan/larastan",
+            "description": "Discover bugs in your code without running it. A phpstan/phpstan extension for Laravel.",
+            "url": "https://github.com/larastan/larastan",
+            "keep": false
+        },
+        {
+            "package": "spaze/phpstan-disallowed-calls",
+            "description": "PHPStan rules to detect disallowed method & function calls, constants, namespaces, attributes, properties & superglobal usages, with powerful rules to re-allow a call or a usage in places where it should be allowed.",
+            "url": "https://github.com/spaze/phpstan-disallowed-calls",
+            "keep": false
+        },
+        {
+            "package": "symplify/phpstan-rules",
+            "description": "Set of Symplify rules for PHPStan.",
+            "url": "https://github.com/symplify/phpstan-rules",
+            "keep": true
+        },
+        {
+            "package": "tomasvotruba/type-coverage",
+            "description": "Measure type coverage of your project.",
+            "url": "https://github.com/TomasVotruba/type-coverage",
+            "keep": true
+        },
+        {
+            "package": "ergebnis/phpstan-rules",
+            "description": "Provides rules for phpstan/phpstan.",
+            "url": "https://github.com/ergebnis/phpstan-rules",
+            "keep": false
+        },
+        {
+            "package": "ekino/phpstan-banned-code",
+            "description": "Detect banned code using PHPStan.",
+            "url": "https://github.com/ekino/phpstan-banned-code",
+            "keep": false
+        },
+        {
+            "package": "tomasvotruba/cognitive-complexity",
+            "description": "PHPStan rules to measure cognitive complexity of your classes and methods.",
+            "url": "https://github.com/TomasVotruba/cognitive-complexity",
+            "keep": true
+        },
+        {
+            "package": "tomasvotruba/unused-public",
+            "description": "Detect unused public properties, constants and methods in your code.",
+            "url": "https://github.com/TomasVotruba/unused-public",
+            "keep": true
+        },
+        {
+            "package": "shipmonk/dead-code-detector",
+            "description": "Dead code detector to find unused PHP code via PHPStan extension. Can automatically remove dead PHP code. Supports libraries like Symfony, Doctrine, PHPUnit. Detects dead cycles, and code that is only reached by tests.",
+            "url": "https://github.com/shipmonk-rnd/dead-code-detector",
+            "keep": false
+        },
+        {
+            "package": "slam/phpstan-extensions",
+            "description": "Slam extension of phpstan.",
+            "url": "https://github.com/Slamdunk/phpstan-extensions",
+            "keep": false
+        },
+        {
+            "package": "staabm/phpstan-dba",
+            "description": "PHPStan based SQL static analysis and type inference for the database access layer.",
+            "url": "https://github.com/staabm/phpstan-dba",
+            "keep": false
+        },
+        {
+            "package": "shipmonk/phpstan-rules",
+            "description": "Various extra strict PHPStan rules we found useful at ShipMonk.",
+            "url": "https://github.com/shipmonk-rnd/phpstan-rules",
+            "keep": false
+        },
+        {
+            "package": "voku/phpstan-rules",
+            "description": "Provides additional rules for phpstan/phpstan.",
+            "url": "https://github.com/voku/phpstan-rules",
+            "keep": false
+        }
+    ]
+}
