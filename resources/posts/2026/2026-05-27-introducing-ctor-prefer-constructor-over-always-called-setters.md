@@ -14,7 +14,8 @@ Yet in PHP, we sometimes do exactly the opposite:
 ```php
 $human = new Human();
 $human->setName('Tomas');
-$human->setCountry('Czech Republic');
+$human->setAge(36);
+$human->setEmail('tomas@example.com');
 ```
 
 Three lines, and only the first one is enforced by the language. The other two? A polite suggestion. Forget one, and `$human` quietly walks around half-built until something explodes deep inside a service three layers down.
@@ -31,13 +32,14 @@ Ctor adds a PHPStan rule that looks for this exact shape:
 ```php
 $human = new Human();
 $human->setName('Tomas');
-$human->setCountry('Czech Republic');
+$human->setAge(36);
+$human->setEmail('tomas@example.com');
 ```
 
 ...and suggests turning it into this:
 
 ```php
-$human = new Human('Tomas', 'Czech Republic');
+$human = new Human('Tomas', 35, 'tomas@example.com');
 ```
 
 That's it. No magic, no codemod, no auto-fix. Just a clear nudge from PHPStan: "hey, these setters look suspiciously mandatory - have you considered the constructor?"
