@@ -15,7 +15,7 @@
     "require-dev": {
         "symplify/easy-coding-standard": "^13.1",
         "phpstan/extension-installer": "^1.4.3",
-        "phpstan/phpstan": "^2.1.33",
+        "phpstan/phpstan": "^2.2",
         "phpstan/phpstan-webmozart-assert": "^2.0",
         "phpunit/phpunit": "^12.5",
         "rector/jack": "^1.0",
