@@ -15,7 +15,6 @@
     "require-dev": {
         "symplify/easy-coding-standard": "^13.1",
         "ekino/phpstan-banned-code": "^3.2",
-        "ergebnis/phpstan-rules": "^2.13",
         "larastan/larastan": "^3.9",
         "phpstan/extension-installer": "^1.4.3",
         "phpstan/phpstan": "^2.2",

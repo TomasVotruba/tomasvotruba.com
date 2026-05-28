@@ -25,6 +25,7 @@ final class ToolRepository
                 'First run or dry-run' => 'vendor/bin/ecs',
                 'Fix coding standdard' => 'vendor/bin/ecs --fix',
             ],
+            repositoryLink: 'https://github.com/easy-coding-standard/ecs'
         );
 
         $tools[] = new Tool(
@@ -45,6 +46,8 @@ parameters:
         # enable on PHP 8.3+
         # constant: 5
 PHPSTAN
+            ,
+            repositoryLink: 'https://github.com/tomasVotruba/type-coverage'
         );
 
         $tools[] = new Tool(
@@ -55,7 +58,8 @@ PHPSTAN
             'composer require tomasvotruba/class-leak --dev',
             [
                 'Detect unused classes' => 'vendor/bin/class-leak check /src /tests',
-            ]
+            ],
+            repositoryLink: 'https://github.com/TomasVotruba/class-leak/',
         );
 
         $tools[] = new Tool(
@@ -74,6 +78,8 @@ parameters:
         # properties: true
         # methods: true
 PHPSTAN
+            ,
+            repositoryLink: 'https://github.com/TomasVotruba/unused-public',
         );
 
         $tools[] = new Tool(
@@ -97,7 +103,8 @@ PHPSTAN
             [
                 'Finalize classes without children' => 'vendor/bin/swiss-knife finalize-classes /src /tests',
                 'Privatize local class constants' => 'vendor/bin/swiss-knife privatize-constants /src /tests',
-            ]
+            ],
+            repositoryLink: 'https://github.com/rectorphp/swiss-knife'
         );
 
         $tools[] = new Tool(
@@ -117,6 +124,8 @@ parameters:
         # narrow_param: true
         # narrow_return: true
 PHPSTAN
+            ,
+            repositoryLink: 'https://github.com/rectorphp/type-perfect',
         );
 
         $tools[] = new Tool(
