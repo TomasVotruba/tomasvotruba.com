@@ -9,56 +9,64 @@ perex: |
 
 When you build a house, you don't pour the foundation first and then hope someone remembers to add the load-bearing walls a week later. You build the structure that *has to be there* at the start.
 
-Yet in PHP, we sometimes do exactly the opposite:
+Yet in PHP, we sometimes do the opposite:
 
 ```php
-$human = new Human();
-$human->setName('Tomas');
-$human->setAge(36);
-$human->setEmail('tomas@example.com');
+$tomasHuman = new Human();
+$tomasHuman->setName('Tomas');
+$tomasHuman->setAge(36);
+$tomasHuman->setEmail('tomas@example.com');
 ```
 
-Three lines, and only the first one is enforced by the language. The other two? A polite suggestion. Forget one, and `$human` quietly walks around half-built until something explodes deep inside a service three layers down.
+Three lines, and only the first one is required. The other two? A polite suggestion. Forget one of those setters, and `$tomasHuman` quietly walks around half-built until something explodes deep inside project three layers down.
 
-I've been bumping into this pattern on legacy codebases for years. Most of the time, those setters are not optional - they're **always called right after `new`**. They pretend to be flexible, but in practice they are required dependencies wearing a fluent disguise.
+I've been bumping into this pattern on legacy codebases for years. Most of the time, those setters are not optional - they're **always called right after `new`** (in different order or much later though).
+
+They pretend to be flexible, but in practice they are required dependencies.
 
 So I made a small PHPStan extension to find them.
 
 
 ## What does the package do?
 
-Ctor adds a PHPStan rule that looks for this exact shape:
+Ctor adds a PHPStan rule that looks for this exact shape, repeated all over the codebase:
 
 ```php
-$human = new Human();
-$human->setName('Tomas');
-$human->setAge(36);
-$human->setEmail('tomas@example.com');
+$tomasHuman = new Human();
+$tomasHuman->setName('Tomas');
+$tomasHuman->setAge(36);
+$tomasHuman->setEmail('tomas@example.com');
+
+// another file
+$johnHuman = new Human();
+$johnHuman->setName('John');
+$johnHuman->setAge(23);
+$johnHuman->setEmail('john@example.com');
 ```
 
 ...and suggests turning it into this:
 
 ```php
-$human = new Human('Tomas', 35, 'tomas@example.com');
+$tomasHuman = new Human('Tomas', 35, 'tomas@example.com');
+
+$johnHuman = new Human('John', 23, 'john@example.com');
 ```
 
-That's it. No magic, no codemod, no auto-fix. Just a clear nudge from PHPStan: "hey, these setters look suspiciously mandatory - have you considered the constructor?"
+That's it. A clear nudge from PHPStan:
 
+* "hey, these setters look suspiciously mandatory - have you considered the constructor?"
 
-## Why?
+## Why Constructor over Setters?
 
 Chained setters after `new` are often **implicit required dependencies** in disguise.
 
 - The object is never used between `new` and the last setter call - it's not really "configurable", it's "incomplete"
 - Forget a single setter, and the object goes into the world in a half-valid state
-- You can't `readonly` the properties, because they have to be writable from outside
-- Tests have to repeat the same setter sequence in every fixture
 - IDE and PHPStan can't tell you *which* setters are required, because the constructor signature says "I need nothing"
 
+<br>
+
 Move it all to the constructor and every one of these problems disappears. The object becomes **valid from the moment it exists** - which is the whole point of having a constructor in the first place.
-
-I wrote about this idea years ago in [How to Hydrate Arrays to Objects via Constructor](https://tomasvotruba.com/blog/2020/04/20/how-to-hydrate-arrays-to-objects-via-constructor), but back then I had to grep for these patterns by hand. Now PHPStan does it for me.
-
 
 ## 2 steps to install
 
@@ -79,6 +87,8 @@ vendor/bin/phpstan
 <br>
 
 The repository is here: [TomasVotruba/ctor](https://github.com/TomasVotruba/ctor)
+
+<br>
 
 If you spot a false positive, a missed case, or a related smell you'd like the rule to catch - open an issue, I'd love to hear it.
 
