@@ -49,6 +49,8 @@ final class PhpstanRuleRepository
                 nodeType: (string) ($entry['node_type'] ?? ''),
                 wrongCode: (string) ($entry['wrong_code'] ?? ''),
                 correctCode: (string) ($entry['correct_code'] ?? ''),
+                identifier: (string) ($entry['identifier'] ?? ''),
+                tip: (string) ($entry['tip'] ?? ''),
             );
         }
 

@@ -11,6 +11,9 @@ final readonly class ParsedRuleClass
         private string $fullyQualifiedName,
         private string $message,
         private string $nodeType,
+        private string $identifier,
+        private string $tip,
+        private string $docComment,
     ) {
     }
 
@@ -32,5 +35,20 @@ final readonly class ParsedRuleClass
     public function getNodeType(): string
     {
         return $this->nodeType;
+    }
+
+    public function getIdentifier(): string
+    {
+        return $this->identifier;
+    }
+
+    public function getTip(): string
+    {
+        return $this->tip;
+    }
+
+    public function getDocComment(): string
+    {
+        return $this->docComment;
     }
 }

@@ -84,6 +84,8 @@ final class ScanPhpstanRulesCommand extends Command
             'node_type' => $rule->getNodeType(),
             'wrong_code' => $rule->getWrongCode(),
             'correct_code' => $rule->getCorrectCode(),
+            'identifier' => $rule->getIdentifier(),
+            'tip' => $rule->getTip(),
         ];
     }
 }

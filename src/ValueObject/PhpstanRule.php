@@ -16,6 +16,8 @@ final readonly class PhpstanRule
         private string $nodeType,
         private string $wrongCode,
         private string $correctCode,
+        private string $identifier = '',
+        private string $tip = '',
     ) {
     }
 
@@ -62,6 +64,44 @@ final readonly class PhpstanRule
     public function getCorrectCode(): string
     {
         return $this->correctCode;
+    }
+
+    public function getIdentifier(): string
+    {
+        return $this->identifier;
+    }
+
+    public function getTip(): string
+    {
+        return $this->tip;
+    }
+
+    /**
+     * Keywords derived from the rule name + group (CamelCase split, lowercased, de-duped).
+     * Used as extra signal for the search index.
+     *
+     * @return list<string>
+     */
+    public function getTags(): array
+    {
+        $source = preg_replace('/Rule$/', '', $this->name) . ' ' . $this->group;
+        $spaced = preg_replace('/(?<=[a-z0-9])(?=[A-Z])/', ' ', $source) ?? $source;
+        $words = preg_split('/[^A-Za-z0-9]+/', strtolower($spaced)) ?: [];
+
+        $stopWords = ['rule', 'the', 'and', 'for', 'with', 'that', 'this', 'php', 'phpstan'];
+
+        $tags = [];
+        foreach ($words as $word) {
+            if (strlen($word) < 2) {
+                continue;
+            }
+            if (in_array($word, $stopWords, true)) {
+                continue;
+            }
+            $tags[$word] = true;
+        }
+
+        return array_keys($tags);
     }
 
     public function getSlug(): string

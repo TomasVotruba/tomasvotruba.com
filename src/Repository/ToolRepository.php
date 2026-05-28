@@ -147,7 +147,8 @@ PHPSTAN
             'composer require symplify/config-transformer --dev',
             [
                 'Transform' => 'vendor/bin/config-transformer convert /config',
-            ]
+            ],
+            repositoryLink: 'https://github.com/symplify/config-transformer',
         );
 
         $tools[] = new Tool(
@@ -161,7 +162,8 @@ PHPSTAN
                 'Open to next existing version' => 'vendor/bin/jack open',
                 'Check too many outdated dependencies (run in CI)' => 'vendor/bin/jack breakpoint',
             ],
-            isNew: true
+            isNew: true,
+            repositoryLink: 'https://github.com/rectorphp/jack',
         );
 
         $tools[] = new Tool(
@@ -175,6 +177,17 @@ PHPSTAN
             ],
             isNew: true,
             repositoryLink: 'https://github.com/rectorphp/behastan',
+        );
+
+        $tools[] = new Tool(
+            'Mockstan',
+            'When you use PHPUnit mocks',
+            'Keeps your PHPUnit mocks under strict eye of static analysis to make tests clean and maintainable',
+            null,
+            'composer require rector/mockstan --dev',
+            isPhpstanExtension: true,
+            isNew: true,
+            repositoryLink: 'https://github.com/rectorphp/mockstan',
         );
 
         return $tools;

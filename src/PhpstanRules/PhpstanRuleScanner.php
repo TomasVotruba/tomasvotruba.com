@@ -31,7 +31,7 @@ final readonly class PhpstanRuleScanner
             $sections = $this->readmeSectionParser->parseSections($packageDir);
 
             foreach ($this->ruleFileFinder->findInPackage($packageDir) as $file) {
-                $parsed = $this->ruleClassParser->parse($file);
+                $parsed = $this->ruleClassParser->parse($file, $packageDir);
                 if ($parsed === null) {
                     continue;
                 }
@@ -44,10 +44,12 @@ final readonly class PhpstanRuleScanner
                     class: $parsed->getFullyQualifiedName(),
                     name: $parsed->getShortName(),
                     message: $parsed->getMessage(),
-                    description: $snippets->getDescription(),
+                    description: $snippets->getDescription() !== '' ? $snippets->getDescription() : $parsed->getDocComment(),
                     nodeType: $parsed->getNodeType(),
                     wrongCode: $snippets->getWrongCode(),
                     correctCode: $snippets->getCorrectCode(),
+                    identifier: $parsed->getIdentifier(),
+                    tip: $parsed->getTip(),
                 );
             }
         }

@@ -8,6 +8,20 @@
 @endphp
 
 @section('content')
+    <style>
+        .rule-pkg-label { display: none; }
+        #ranked-view .rule-pkg-label { display: block; }
+        .rule-tag {
+            display: inline-block;
+            background: #eef1f4;
+            color: #495057;
+            border-radius: .25em;
+            padding: .1em .5em;
+            margin: 0 .35em .35em 0;
+            font-size: .78em;
+        }
+    </style>
+
     <div class="container">
         <h1>Discover PHPStan Rules</h1>
 
@@ -30,7 +44,7 @@
                 type="search"
                 id="rule-search"
                 class="form-control form-control-lg shadow-sm"
-                placeholder="Search rules by class, message, package... (e.g. forbidCast, ergebnis, mixed)"
+                placeholder="Search rules by class, message, identifier, tag... (e.g. forbidCast, symplify.noDynamicName, mixed)"
                 autocomplete="off"
             >
             <div id="search-match-count" class="text-secondary mt-2" style="font-size: .9em; display: none;"></div>
@@ -55,122 +69,212 @@
             No rules match your search.
         </p>
 
-        @foreach ($groupedRules as $package => $rules)
-            @php $packageInfo = $packagesByName[$package] ?? null; @endphp
-            <div class="rule-group" data-package="{{ strtolower($package) }}">
-                <a name="pkg-{{ str($package)->slug() }}"></a>
-                <h2 class="mt-5 mb-2" style="border-bottom: 2px solid #eee; padding-bottom: .3em; color: #333;">
-                    {{ $package }}
-                    <small class="text-secondary" style="font-size: .55em; font-weight: normal;">
-                        {{ count($rules) }} rule{{ count($rules) > 1 ? 's' : '' }}
-                    </small>
-                </h2>
+        @php $searchIndex = []; @endphp
 
-                <div class="mb-3" style="font-size: .95em;">
-                    @if ($packageInfo && $packageInfo->getDescription())
-                        <p class="mb-1 text-secondary">{{ $packageInfo->getDescription() }}</p>
-                    @endif
-                    <pre class="mb-2" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: .3em; padding: .5em .8em; font-size: .85em; margin: 0;"><code>composer require --dev {{ $package }}</code></pre>
-                    <div style="font-size: .9em;">
-                        @if ($packageInfo && $packageInfo->getUrl())
-                            <a href="{{ $packageInfo->getUrl() }}" rel="noopener" target="_blank" class="text-decoration-none">GitHub</a>
-                            <span class="text-secondary mx-1">&middot;</span>
+        <div id="grouped-view">
+            @foreach ($groupedRules as $package => $rules)
+                @php $packageInfo = $packagesByName[$package] ?? null; @endphp
+                <div class="rule-group" data-package="{{ strtolower($package) }}">
+                    <a name="pkg-{{ str($package)->slug() }}"></a>
+                    <h2 class="mt-5 mb-2" style="border-bottom: 2px solid #eee; padding-bottom: .3em; color: #333;">
+                        {{ $package }}
+                        <small class="text-secondary" style="font-size: .55em; font-weight: normal;">
+                            {{ count($rules) }} rule{{ count($rules) > 1 ? 's' : '' }}
+                        </small>
+                    </h2>
+
+                    <div class="mb-3" style="font-size: .95em;">
+                        @if ($packageInfo && $packageInfo->getDescription())
+                            <p class="mb-1 text-secondary">{{ $packageInfo->getDescription() }}</p>
                         @endif
-                        <a href="https://packagist.org/packages/{{ $package }}" rel="noopener" target="_blank" class="text-decoration-none">Packagist</a>
-                    </div>
-                </div>
-
-                @foreach ($rules as $rule)
-                    @php
-                        $haystackParts = array_filter([
-                            $rule->getClass(),
-                            $rule->getName(),
-                            $rule->getMessage(),
-                            $rule->getDescription(),
-                            $rule->getPackage(),
-                            $rule->getGroup(),
-                            $rule->getNodeType(),
-                            // split camelCase so per-token fuzzy can match "forbid cast" inside "ForbidCastRule"
-                            preg_replace('/(?<=[a-z0-9])(?=[A-Z])/', ' ', $rule->getClass() . ' ' . $rule->getName()),
-                        ]);
-                        $searchHaystack = strtolower(implode(' ', $haystackParts));
-                        $hasSnippet = $rule->getWrongCode() !== '' || $rule->getCorrectCode() !== '';
-                    @endphp
-
-                    <div class="rule-item card mb-3 shadow-sm"
-                         data-search="{{ $searchHaystack }}">
-                        <div class="card-body p-4">
-                            <a name="{{ $rule->getSlug() }}"></a>
-
-                            <div class="d-flex justify-content-between align-items-start mb-2 flex-wrap">
-                                <h3 class="mt-0 mb-1" style="font-size: 1.2em;">
-                                    {{ $rule->getName() }}
-                                </h3>
-                                @if ($rule->getNodeType())
-                                    <span class="badge text-bg-light text-secondary" style="font-weight: normal;">
-                                        Node: <code>{{ $rule->getNodeType() }}</code>
-                                    </span>
-                                @endif
-                            </div>
-
-                            <p class="mb-2" style="font-family: monospace; font-size: .85em; color: #666; word-break: break-all;">
-                                {{ $rule->getClass() }}
-                            </p>
-
-                            @if ($rule->getDescription())
-                                <p class="mb-2">{{ $rule->getDescription() }}</p>
+                        <pre class="mb-2" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: .3em; padding: .5em .8em; font-size: .85em; margin: 0;"><code>composer require --dev {{ $package }}</code></pre>
+                        <div style="font-size: .9em;">
+                            @if ($packageInfo && $packageInfo->getUrl())
+                                <a href="{{ $packageInfo->getUrl() }}" rel="noopener" target="_blank" class="text-decoration-none">GitHub</a>
+                                <span class="text-secondary mx-1">&middot;</span>
                             @endif
-
-                            @if ($rule->getMessage())
-                                <p class="mb-3" style="font-size: .95em;">
-                                    <em class="text-secondary">Reports:</em>
-                                    <code style="background: #f8f9fa; padding: .15em .4em; border-radius: 3px;">{{ $rule->getMessage() }}</code>
-                                </p>
-                            @endif
-
-                            @if ($hasSnippet)
-                                <div class="row mt-3">
-                                    @if ($rule->getWrongCode())
-                                        <div class="col-12 {{ $rule->getCorrectCode() ? 'col-md-6' : '' }}">
-                                            <div class="text-danger mb-1" style="font-size: .9em;">
-                                                <strong>&#x2717; Wrong</strong>
-                                            </div>
-                                            <pre style="background: #fff5f5; border: 1px solid #f5c2c7; border-radius: .3em; padding: .8em; font-size: .85em; overflow-x: auto; max-height: 18em;"><code>{{ $rule->getWrongCode() }}</code></pre>
-                                        </div>
-                                    @endif
-                                    @if ($rule->getCorrectCode())
-                                        <div class="col-12 {{ $rule->getWrongCode() ? 'col-md-6' : '' }}">
-                                            <div class="text-success mb-1" style="font-size: .9em;">
-                                                <strong>&#x2713; Correct</strong>
-                                            </div>
-                                            <pre style="background: #f0fdf4; border: 1px solid #badbcc; border-radius: .3em; padding: .8em; font-size: .85em; overflow-x: auto; max-height: 18em;"><code>{{ $rule->getCorrectCode() }}</code></pre>
-                                        </div>
-                                    @endif
-                                </div>
-                            @endif
+                            <a href="https://packagist.org/packages/{{ $package }}" rel="noopener" target="_blank" class="text-decoration-none">Packagist</a>
                         </div>
                     </div>
-                @endforeach
-            </div>
-        @endforeach
+
+                    @foreach ($rules as $rule)
+                        @php
+                            $tags = $rule->getTags();
+                            $hasSnippet = $rule->getWrongCode() !== '' || $rule->getCorrectCode() !== '';
+                            $searchIndex[] = [
+                                'slug' => $rule->getSlug(),
+                                'name' => $rule->getName(),
+                                'identifier' => $rule->getIdentifier(),
+                                'tip' => $rule->getTip(),
+                                'tags' => $tags,
+                                'message' => $rule->getMessage(),
+                                'description' => $rule->getDescription(),
+                                'class' => $rule->getClass(),
+                                'nodeType' => $rule->getNodeType(),
+                                'package' => $rule->getPackage(),
+                                'group' => $rule->getGroup(),
+                            ];
+                        @endphp
+
+                        <div class="rule-item card mb-3 shadow-sm" data-slug="{{ $rule->getSlug() }}">
+                            <div class="card-body p-4">
+                                <a name="{{ $rule->getSlug() }}"></a>
+
+                                <div class="rule-pkg-label text-secondary mb-2" style="font-size: .8em;">
+                                    <strong>{{ $package }}</strong>
+                                    <span class="mx-1">&middot;</span>{{ $rule->getGroup() }}
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-start mb-2 flex-wrap">
+                                    <h3 class="mt-0 mb-1" style="font-size: 1.2em;">
+                                        {{ $rule->getName() }}
+                                    </h3>
+                                    @if ($rule->getNodeType())
+                                        <span class="badge text-bg-light text-secondary" style="font-weight: normal;">
+                                            Node: <code>{{ $rule->getNodeType() }}</code>
+                                        </span>
+                                    @endif
+                                </div>
+
+                                <p class="mb-2" style="font-family: monospace; font-size: .85em; color: #666; word-break: break-all;">
+                                    {{ $rule->getClass() }}
+                                </p>
+
+                                @if ($rule->getIdentifier())
+                                    <p class="mb-2" style="font-size: .9em;">
+                                        <em class="text-secondary">Identifier:</em>
+                                        <code style="background: #f8f9fa; padding: .15em .4em; border-radius: 3px;">{{ $rule->getIdentifier() }}</code>
+                                    </p>
+                                @endif
+
+                                @if ($rule->getDescription())
+                                    <p class="mb-2">{{ $rule->getDescription() }}</p>
+                                @endif
+
+                                @if ($rule->getMessage())
+                                    <p class="mb-2" style="font-size: .95em;">
+                                        <em class="text-secondary">Reports:</em>
+                                        <code style="background: #f8f9fa; padding: .15em .4em; border-radius: 3px;">{{ $rule->getMessage() }}</code>
+                                    </p>
+                                @endif
+
+                                @if ($rule->getTip())
+                                    <p class="mb-2 text-secondary" style="font-size: .9em;">
+                                        &#x1F4A1; {{ $rule->getTip() }}
+                                    </p>
+                                @endif
+
+                                @if ($tags !== [])
+                                    <div class="mb-2">
+                                        @foreach ($tags as $tag)
+                                            <span class="rule-tag">{{ $tag }}</span>
+                                        @endforeach
+                                    </div>
+                                @endif
+
+                                @if ($hasSnippet)
+                                    <div class="row mt-3">
+                                        @if ($rule->getWrongCode())
+                                            <div class="col-12 {{ $rule->getCorrectCode() ? 'col-md-6' : '' }}">
+                                                <div class="text-danger mb-1" style="font-size: .9em;">
+                                                    <strong>&#x2717; Wrong</strong>
+                                                </div>
+                                                <pre style="background: #fff5f5; border: 1px solid #f5c2c7; border-radius: .3em; padding: .8em; font-size: .85em; overflow-x: auto; max-height: 18em;"><code>{{ $rule->getWrongCode() }}</code></pre>
+                                            </div>
+                                        @endif
+                                        @if ($rule->getCorrectCode())
+                                            <div class="col-12 {{ $rule->getWrongCode() ? 'col-md-6' : '' }}">
+                                                <div class="text-success mb-1" style="font-size: .9em;">
+                                                    <strong>&#x2713; Correct</strong>
+                                                </div>
+                                                <pre style="background: #f0fdf4; border: 1px solid #badbcc; border-radius: .3em; padding: .8em; font-size: .85em; overflow-x: auto; max-height: 18em;"><code>{{ $rule->getCorrectCode() }}</code></pre>
+                                            </div>
+                                        @endif
+                                    </div>
+                                @endif
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @endforeach
+        </div>
+
+        <div id="ranked-view" style="display: none;"></div>
+
+        <script type="application/json" id="rules-index">{!! json_encode($searchIndex, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}</script>
 
         <script>
             (function () {
                 const searchInput = document.getElementById('rule-search');
-                const ruleItems = document.querySelectorAll('.rule-item');
-                const ruleGroups = document.querySelectorAll('.rule-group');
+                const groupedView = document.getElementById('grouped-view');
+                const rankedView = document.getElementById('ranked-view');
+                const packageNav = document.getElementById('package-nav');
                 const noResults = document.getElementById('no-results');
                 const matchCount = document.getElementById('search-match-count');
+                const rawIndex = JSON.parse(document.getElementById('rules-index').textContent || '[]');
 
-                // pre-compute per-item search data once
-                const items = Array.from(ruleItems).map(function (el) {
-                    const haystack = el.getAttribute('data-search') || '';
-                    return {
-                        el: el,
-                        haystack: haystack,
-                        compact: haystack.replace(/\s+/g, ''),       // "arra y" -> "array" matches
-                        tokens: haystack.match(/[a-z0-9]+/g) || [],  // for per-word fuzzy
-                    };
+                // slug -> card element
+                const cardBySlug = {};
+                document.querySelectorAll('.rule-item').forEach(function (el) {
+                    cardBySlug[el.getAttribute('data-slug')] = el;
+                });
+
+                // snapshot the original grouped layout so we can restore it after a search
+                const originalLayout = Array.from(document.querySelectorAll('.rule-group')).map(function (group) {
+                    return { group: group, cards: Array.from(group.querySelectorAll('.rule-item')) };
+                });
+
+                function tokenize(text) {
+                    if (!text) return [];
+                    const spaced = String(text).replace(/([a-z0-9])([A-Z])/g, '$1 $2');
+                    return spaced.toLowerCase().match(/[a-z0-9]+/g) || [];
+                }
+
+                // higher weight = stronger signal in the vector
+                const fieldWeights = {
+                    name: 3, identifier: 3, tags: 2, message: 1,
+                    description: 1, class: 1, tip: 1, nodeType: 1, package: 1, group: 1,
+                };
+
+                // --- build the TF-IDF model ---
+                const N = rawIndex.length;
+                const df = Object.create(null);
+
+                const docs = rawIndex.map(function (entry) {
+                    const tf = Object.create(null);
+                    Object.keys(fieldWeights).forEach(function (field) {
+                        let value = entry[field];
+                        if (Array.isArray(value)) value = value.join(' ');
+                        tokenize(value).forEach(function (tok) {
+                            tf[tok] = (tf[tok] || 0) + fieldWeights[field];
+                        });
+                    });
+                    const terms = Object.keys(tf);
+                    terms.forEach(function (t) { df[t] = (df[t] || 0) + 1; });
+
+                    const compact = [entry.name, entry.identifier, entry.class]
+                        .concat(entry.tags || [])
+                        .join('')
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '');
+
+                    return { slug: entry.slug, tf: tf, terms: terms, compact: compact };
+                });
+
+                const idf = Object.create(null);
+                Object.keys(df).forEach(function (t) { idf[t] = Math.log(1 + N / df[t]); });
+
+                docs.forEach(function (doc) {
+                    const vec = Object.create(null);
+                    let norm = 0;
+                    doc.terms.forEach(function (t) {
+                        const w = doc.tf[t] * idf[t];
+                        vec[t] = w;
+                        norm += w * w;
+                    });
+                    norm = Math.sqrt(norm) || 1;
+                    doc.terms.forEach(function (t) { vec[t] = vec[t] / norm; });
+                    doc.vec = vec;
                 });
 
                 function levenshtein(a, b) {
@@ -192,65 +296,114 @@
                     return prev[n];
                 }
 
-                // typo tolerance scales with word length
                 function fuzzyThreshold(len) {
                     if (len <= 3) return 0;
                     if (len <= 5) return 1;
                     return 2;
                 }
 
-                function tokenMatches(qt, tokens) {
-                    // substring against any haystack token (handles "forbid cast" inside "forbidcast")
-                    for (let i = 0; i < tokens.length; i++) {
-                        if (tokens[i].indexOf(qt) !== -1) return true;
+                // contribution of one query token to a document's score, or null if no match
+                function bestContribution(doc, qt) {
+                    if (doc.vec[qt] !== undefined) return doc.vec[qt];
+
+                    let best = 0, found = false;
+                    for (let i = 0; i < doc.terms.length; i++) {
+                        const t = doc.terms[i];
+                        const pos = t.indexOf(qt);
+                        if (pos === 0) {
+                            const v = doc.vec[t] * 0.85;       // term starts with query ("forbid" <- "forb")
+                            if (v > best) { best = v; found = true; }
+                        } else if (pos !== -1) {
+                            const v = doc.vec[t] * 0.6;        // query is inside term
+                            if (v > best) { best = v; found = true; }
+                        } else if (t.length >= 3 && qt.indexOf(t) === 0) {
+                            const v = doc.vec[t] * 0.7;        // stem: query starts with term ("forbid" -> "forbidden")
+                            if (v > best) { best = v; found = true; }
+                        }
                     }
+                    if (found) return best;
+
+                    // token spanning multiple words ("noreturn" -> "no" "return")
+                    if (qt.length > 2 && doc.compact.indexOf(qt) !== -1) return 0.05;
+
                     const threshold = fuzzyThreshold(qt.length);
-                    if (threshold === 0) return false;
-                    for (let i = 0; i < tokens.length; i++) {
-                        const t = tokens[i];
-                        if (Math.abs(t.length - qt.length) > threshold) continue;
-                        if (levenshtein(qt, t) <= threshold) return true;
+                    if (threshold > 0) {
+                        for (let i = 0; i < doc.terms.length; i++) {
+                            const t = doc.terms[i];
+                            if (Math.abs(t.length - qt.length) > threshold) continue;
+                            if (levenshtein(qt, t) <= threshold) {
+                                const v = doc.vec[t] * 0.4;    // fuzzy
+                                if (v > best) { best = v; found = true; }
+                            }
+                        }
                     }
-                    return false;
+                    return found ? best : null;
                 }
 
-                function matches(item, query, compactQuery, queryTokens) {
-                    if (query === '') return true;
-                    if (item.haystack.indexOf(query) !== -1) return true;
-                    if (compactQuery.length > 1 && item.compact.indexOf(compactQuery) !== -1) return true;
-                    if (queryTokens.length === 0) return false;
+                function scoreDoc(doc, queryTokens) {
+                    let score = 0;
                     for (let i = 0; i < queryTokens.length; i++) {
-                        if (!tokenMatches(queryTokens[i], item.tokens)) return false;
+                        const c = bestContribution(doc, queryTokens[i]);
+                        if (c === null) return null;   // AND semantics: every token must match
+                        score += c;
                     }
-                    return true;
+                    return score;
+                }
+
+                function showGrouped() {
+                    originalLayout.forEach(function (entry) {
+                        entry.cards.forEach(function (card) {
+                            card.style.display = '';
+                            entry.group.appendChild(card);
+                        });
+                    });
+                    rankedView.innerHTML = '';
+                    rankedView.style.display = 'none';
+                    groupedView.style.display = '';
+                    packageNav.style.display = '';
                 }
 
                 function applyFilter() {
-                    const query = searchInput.value.trim().toLowerCase();
-                    const compactQuery = query.replace(/\s+/g, '');
-                    const queryTokens = query.match(/[a-z0-9]+/g) || [];
-                    let totalVisible = 0;
-
-                    for (let i = 0; i < items.length; i++) {
-                        const item = items[i];
-                        const visible = matches(item, query, compactQuery, queryTokens);
-                        item.el.style.display = visible ? '' : 'none';
-                        if (visible) totalVisible++;
-                    }
-
-                    ruleGroups.forEach(function (group) {
-                        const visible = group.querySelectorAll('.rule-item:not([style*="display: none"])');
-                        group.style.display = visible.length === 0 ? 'none' : '';
-                    });
-
-                    noResults.style.display = totalVisible === 0 ? '' : 'none';
+                    const query = searchInput.value.trim();
 
                     if (query === '') {
+                        showGrouped();
+                        noResults.style.display = 'none';
                         matchCount.style.display = 'none';
-                    } else {
-                        matchCount.textContent = totalVisible + ' of ' + items.length + ' rules match';
-                        matchCount.style.display = '';
+                        return;
                     }
+
+                    const queryTokens = tokenize(query);
+                    if (queryTokens.length === 0) {
+                        showGrouped();
+                        noResults.style.display = 'none';
+                        matchCount.style.display = 'none';
+                        return;
+                    }
+
+                    const scored = [];
+                    for (let i = 0; i < docs.length; i++) {
+                        const s = scoreDoc(docs[i], queryTokens);
+                        if (s !== null) scored.push({ slug: docs[i].slug, score: s });
+                    }
+                    scored.sort(function (a, b) { return b.score - a.score; });
+
+                    rankedView.innerHTML = '';
+                    scored.forEach(function (item) {
+                        const card = cardBySlug[item.slug];
+                        if (card) {
+                            card.style.display = '';
+                            rankedView.appendChild(card);
+                        }
+                    });
+
+                    groupedView.style.display = 'none';
+                    packageNav.style.display = 'none';
+                    rankedView.style.display = '';
+
+                    noResults.style.display = scored.length === 0 ? '' : 'none';
+                    matchCount.textContent = scored.length + ' of ' + docs.length + ' rules match';
+                    matchCount.style.display = '';
                 }
 
                 function syncUrl() {

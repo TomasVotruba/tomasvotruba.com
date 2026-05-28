@@ -1,5 +1,5 @@
 {
-    "generated_at": "2026-05-27T14:15:05+00:00",
+    "generated_at": "2026-05-28T08:37:08+00:00",
     "count": 266,
     "rules": [
         {
@@ -11,7 +11,9 @@
             "description": "",
             "node_type": "",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Banned Code",
@@ -22,7 +24,9 @@
             "description": "",
             "node_type": "",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Cognitive Complexity",
@@ -30,10 +34,12 @@
             "class": "TomasVotruba\\CognitiveComplexity\\Rules\\ClassDependencyTreeRule",
             "name": "ClassDependencyTreeRule",
             "message": "Dependency tree complexity %d is over %d. Refactor __construct() dependencies or split up.",
-            "description": "",
+            "description": "Find classes with complex constructor dependency tree = current class complexity + complexity of all __construct() dependencies.",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "complexity.dependencyTree",
+            "tip": ""
         },
         {
             "group": "Cognitive Complexity",
@@ -44,7 +50,9 @@
             "description": "",
             "node_type": "",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "complexity.classLike",
+            "tip": ""
         },
         {
             "group": "Cognitive Complexity",
@@ -52,10 +60,12 @@
             "class": "TomasVotruba\\CognitiveComplexity\\Rules\\FunctionLikeCognitiveComplexityRule",
             "name": "FunctionLikeCognitiveComplexityRule",
             "message": "Cognitive complexity for \"%s\" is %d, keep it under %d",
-            "description": "",
+            "description": "Based on https://www.sonarsource.com/docs/CognitiveComplexity.pdf",
             "node_type": "",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "complexity.functionLike",
+            "tip": ""
         },
         {
             "group": "DBA",
@@ -66,7 +76,9 @@
             "description": "",
             "node_type": "CallLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "dba.keyValue",
+            "tip": ""
         },
         {
             "group": "DBA",
@@ -77,7 +89,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "dba.unresolvableQuery",
+            "tip": ""
         },
         {
             "group": "DBA",
@@ -88,7 +102,9 @@
             "description": "",
             "node_type": "CallLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "dba.unresolvableQuery",
+            "tip": "see Mysql Docs https://dev.mysql.com/doc/refman/8.0/en/select-optimization.html"
         },
         {
             "group": "DBA",
@@ -99,7 +115,9 @@
             "description": "",
             "node_type": "CallLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "dba.placeholderMismatch",
+            "tip": ""
         },
         {
             "group": "DBA",
@@ -110,7 +128,9 @@
             "description": "",
             "node_type": "CallLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "dba.unresolvableQuery",
+            "tip": ""
         },
         {
             "group": "DBA",
@@ -121,7 +141,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "dba.syntaxError",
+            "tip": ""
         },
         {
             "group": "DBA",
@@ -132,7 +154,9 @@
             "description": "",
             "node_type": "CallLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "dba.syntaxError",
+            "tip": ""
         },
         {
             "group": "Dead Code",
@@ -143,7 +167,9 @@
             "description": "",
             "node_type": "CollectedDataNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -154,7 +180,9 @@
             "description": "",
             "node_type": "Node",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -162,10 +190,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\BreakControlStructure",
             "name": "BreakControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the break control structure.",
             "node_type": "Break_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -173,10 +203,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\ClassConstantUsages",
             "name": "ClassConstantUsages",
             "message": "",
-            "description": "",
+            "description": "Reports on class constant usage.",
             "node_type": "ClassConstFetch",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -184,10 +216,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\ConstantUsages",
             "name": "ConstantUsages",
             "message": "",
-            "description": "",
+            "description": "Reports on constant usage.",
             "node_type": "ConstFetch",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -195,10 +229,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ContinueControlStructure",
             "name": "ContinueControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the continue control structure.",
             "node_type": "Continue_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -206,10 +242,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\DeclareControlStructure",
             "name": "DeclareControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the declare control structure.",
             "node_type": "Declare_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -217,10 +255,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\DoWhileControlStructure",
             "name": "DoWhileControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the do-while loop.",
             "node_type": "Do_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -228,10 +268,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\EchoCalls",
             "name": "EchoCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically calling echo().",
             "node_type": "Echo_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -239,10 +281,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ElseControlStructure",
             "name": "ElseControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the else control structure.",
             "node_type": "Else_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -250,10 +294,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ElseIfControlStructure",
             "name": "ElseIfControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the elseif control structure. But not the \"else if\" as that's parsed as \"else\" followed by \"if\".",
             "node_type": "ElseIf_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -261,10 +307,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\EmptyCalls",
             "name": "EmptyCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically calling empty().",
             "node_type": "Empty_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -272,10 +320,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\EvalCalls",
             "name": "EvalCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically calling eval().",
             "node_type": "Eval_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -283,10 +333,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\ExitDieCalls",
             "name": "ExitDieCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically calling exit() & die().",
             "node_type": "Exit_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -294,10 +346,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ForControlStructure",
             "name": "ForControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the for loop.",
             "node_type": "For_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -305,10 +359,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ForeachControlStructure",
             "name": "ForeachControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the foreach loop.",
             "node_type": "Foreach_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -316,10 +372,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\FunctionCalls",
             "name": "FunctionCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically calling a disallowed function.",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -327,10 +385,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\FunctionFirstClassCallables",
             "name": "FunctionFirstClassCallables",
             "message": "",
-            "description": "",
+            "description": "Reports on first class callable syntax for a disallowed method.",
             "node_type": "FunctionCallableNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -338,10 +398,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Keywords\\GlobalKeyword",
             "name": "GlobalKeyword",
             "message": "",
-            "description": "",
+            "description": "Reports on using the global keyword.",
             "node_type": "Global_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -349,10 +411,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\GotoControlStructure",
             "name": "GotoControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the goto control structure.",
             "node_type": "Goto_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -360,10 +424,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\IfControlStructure",
             "name": "IfControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the if control structure.",
             "node_type": "If_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -371,10 +437,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\InstancePropertyUsages",
             "name": "InstancePropertyUsages",
             "message": "",
-            "description": "",
+            "description": "Reports on an instance property usage.",
             "node_type": "PropertyFetch",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -382,10 +450,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\IssetCalls",
             "name": "IssetCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically calling isset().",
             "node_type": "Isset_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -393,10 +463,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\MatchControlStructure",
             "name": "MatchControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the match control structure.",
             "node_type": "Match_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -404,10 +476,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\MethodCalls",
             "name": "MethodCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically calling a disallowed method or two.",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -415,10 +489,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\MethodFirstClassCallables",
             "name": "MethodFirstClassCallables",
             "message": "",
-            "description": "",
+            "description": "Reports on first class callable syntax for a disallowed method.",
             "node_type": "MethodCallableNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -429,7 +505,9 @@
             "description": "",
             "node_type": "Node",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -437,10 +515,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\NewCalls",
             "name": "NewCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on creating objects (calling constructors).",
             "node_type": "New_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -448,10 +528,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\PrintCalls",
             "name": "PrintCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically calling print().",
             "node_type": "Print_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -459,10 +541,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\RequireIncludeControlStructure",
             "name": "RequireIncludeControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the foreach loop.",
             "node_type": "Include_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -470,10 +554,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ReturnControlStructure",
             "name": "ReturnControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the return control structure.",
             "node_type": "Return_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -481,10 +567,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\ShellExecCalls",
             "name": "ShellExecCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically using the execution backtick operator (<code>`ls`</code>).",
             "node_type": "ShellExec",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -492,10 +580,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\StaticCalls",
             "name": "StaticCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on statically calling a disallowed method or two.",
             "node_type": "StaticCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -503,10 +593,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\StaticFirstClassCallables",
             "name": "StaticFirstClassCallables",
             "message": "",
-            "description": "",
+            "description": "Reports on first class callable syntax for a disallowed static method.",
             "node_type": "StaticMethodCallableNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -514,10 +606,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\StaticPropertyUsages",
             "name": "StaticPropertyUsages",
             "message": "",
-            "description": "",
+            "description": "Reports on a static property usage.",
             "node_type": "StaticPropertyFetch",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -525,10 +619,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\SwitchControlStructure",
             "name": "SwitchControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the switch control structure.",
             "node_type": "Switch_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -536,10 +632,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\UnsetCalls",
             "name": "UnsetCalls",
             "message": "",
-            "description": "",
+            "description": "Reports on dynamically calling unset().",
             "node_type": "Unset_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -547,10 +645,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\VariableUsages",
             "name": "VariableUsages",
             "message": "",
-            "description": "",
+            "description": "Reports on a variable name usage.",
             "node_type": "Variable",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Disallowed Calls",
@@ -558,10 +658,12 @@
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\WhileControlStructure",
             "name": "WhileControlStructure",
             "message": "",
-            "description": "",
+            "description": "Reports on using the while loop.",
             "node_type": "While_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -572,7 +674,9 @@
             "description": "This rule reports an error when a non-empty file does not contain a declare(strict_types=1) declaration.",
             "node_type": "FileNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "declarestricttypes",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -583,7 +687,9 @@
             "description": "This rule reports an error when a concrete public or protected method in an abstract class is not final.",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "finalinabstractclass",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -594,7 +700,9 @@
             "description": "This rule reports an error when a non-anonymous class is not final.",
             "node_type": "Node\\Stmt\\Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "final",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -605,7 +713,9 @@
             "description": "This rule reports an error when a hook method that overrides a hook method in a parent class does not invoke the overridden hook method in the expected order.",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "invokeparenthookmethod",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -616,7 +726,9 @@
             "description": "This rule reports an error when a variable is assigned by reference.",
             "node_type": "Node\\Expr\\AssignRef",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noassignbyreference",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -627,7 +739,9 @@
             "description": "This rule reports an error when the function compact() is used.",
             "node_type": "Node\\Expr\\FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "nocompact",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -638,7 +752,9 @@
             "description": "This rule reports an error when a constructor declared in",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noconstructorparameterwithdefaultvalue",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -649,7 +765,9 @@
             "description": "This rule reports an error when @ is used to suppress errors.",
             "node_type": "Node\\Expr\\ErrorSuppress",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noerrorsuppression",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -660,7 +778,9 @@
             "description": "This rule reports an error when the language construct eval() is used.",
             "node_type": "Node\\Expr\\Eval_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noeval",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -671,7 +791,9 @@
             "description": "This rule reports an error when a class extends another class.",
             "node_type": "Node\\Stmt\\Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noextends",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -682,7 +804,9 @@
             "description": "This rule reports an error when the language construct isset() is used.",
             "node_type": "Node\\Expr\\Isset_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noisset",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -693,7 +817,9 @@
             "description": "This rule reports an error when an anonymous function, a function, or a method is invoked using a named argument.",
             "node_type": "Node\\Expr\\CallLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "nonamedargument",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -704,7 +830,9 @@
             "description": "This rule reports an error when a method declared in",
             "node_type": "Node\\Expr\\Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "nonullablereturntypedeclaration",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -715,7 +843,9 @@
             "description": "This rule reports an error when a method declared in",
             "node_type": "Node\\Stmt\\Function_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "nonullablereturntypedeclaration",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -726,7 +856,9 @@
             "description": "This rule reports an error when a method declared in",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "nonullablereturntypedeclaration",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -737,7 +869,9 @@
             "description": "This rule reports an error when a method has a parameter that is passed by reference.",
             "node_type": "Node\\Expr\\Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterpassedbyreference",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -748,7 +882,9 @@
             "description": "This rule reports an error when a method has a parameter that is passed by reference.",
             "node_type": "Node\\Stmt\\Function_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterwithnulldefaultvalue",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -759,7 +895,9 @@
             "description": "This rule reports an error when a method has a parameter that is passed by reference.",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterpassedbyreference",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -770,7 +908,9 @@
             "description": "This rule reports an error when a method has a type declaration for a known dependency injection container or service locator.",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterwithcontainertypedeclaration",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -781,7 +921,9 @@
             "description": "This rule reports an error when a method declared in",
             "node_type": "Node\\Expr\\Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterwithnulldefaultvalue",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -792,7 +934,9 @@
             "description": "This rule reports an error when a method declared in",
             "node_type": "Node\\Stmt\\Function_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterwithnulldefaultvalue",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -803,7 +947,9 @@
             "description": "This rule reports an error when a method declared in",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterwithnulldefaultvalue",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -814,7 +960,9 @@
             "description": "This rule reports an error when a method declared in",
             "node_type": "Node\\Expr\\Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterwithnullabletypedeclaration",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -825,7 +973,9 @@
             "description": "This rule reports an error when a method declared in",
             "node_type": "Node\\Stmt\\Function_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterwithnullabletypedeclaration",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -836,7 +986,9 @@
             "description": "This rule reports an error when a method declared in",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noparameterwithnullabletypedeclaration",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -847,7 +999,9 @@
             "description": "This rule reports an error when a @phpstan-ignore, @phpstan-ignore-line, or @phpstan-ignore-next-line tag is used to ignore errors reported by phpstan/phpstan.",
             "node_type": "FileNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "nophpstanignore",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -858,7 +1012,9 @@
             "description": "This rule reports an error when a method returns by reference.",
             "node_type": "Node\\Stmt\\Function_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noreturnbyreference",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -869,7 +1025,9 @@
             "description": "This rule reports an error when a method returns by reference.",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noreturnbyreference",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -880,7 +1038,9 @@
             "description": "This rule reports an error when the statement switch() is used.",
             "node_type": "Node\\Stmt\\Switch_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "noswitch",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -891,7 +1051,9 @@
             "description": "This rule reports an error when a method in a final class is protected but could be private.",
             "node_type": "Node\\Stmt\\ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "privateinfinalclass",
+            "tip": ""
         },
         {
             "group": "Ergebnis",
@@ -902,7 +1064,9 @@
             "description": "This rule reports an error when a concrete class is a sub-class of PHPUnit\\Framework\\TestCase but does not have a Test suffix.",
             "node_type": "Node\\Stmt\\Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "testcasewithsuffix",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -913,7 +1077,9 @@
             "description": "",
             "node_type": "StaticCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -924,7 +1090,9 @@
             "description": "",
             "node_type": "StaticCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.configCollection",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -935,7 +1103,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.deferrableServiceProvider.missingProvides",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -943,10 +1113,12 @@
             "class": "Larastan\\Larastan\\Rules\\ModelAppendsRule",
             "name": "ModelAppendsRule",
             "message": "Property '%s' is not a computed property, remove from \\$appends.",
-            "description": "",
+            "description": "This rule validates that properties in the $appends array both exist in the model and are computed properties.",
             "node_type": "Property",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rules.modelAppends",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -957,7 +1129,9 @@
             "description": "",
             "node_type": "StaticCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.noAuthFacadeInRequestScope",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -968,7 +1142,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.noAuthHelperInRequestScope",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -976,10 +1152,12 @@
             "class": "Larastan\\Larastan\\Rules\\NoEnvCallsOutsideOfConfigRule",
             "name": "NoEnvCallsOutsideOfConfigRule",
             "message": "Called 'env' outside of the config directory which returns null when the config is cached, use 'config'.",
-            "description": "",
+            "description": "Catches `env()` calls outside of the config directory.",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.noEnvCallsOutsideOfConfig",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -990,7 +1168,9 @@
             "description": "",
             "node_type": "CollectedDataNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.missingTranslations",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -998,10 +1178,12 @@
             "class": "Larastan\\Larastan\\Rules\\NoModelMakeRule",
             "name": "NoModelMakeRule",
             "message": "Called 'Model::make()' which performs unnecessary work, use 'new Model()'.",
-            "description": "",
+            "description": "Catches inefficient instantiation of models using Model::make().",
             "node_type": "StaticCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.noModelMake",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -1012,7 +1194,9 @@
             "description": "",
             "node_type": "InClassMethodNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.noPublicModelScopeMethod",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -1020,10 +1204,12 @@
             "class": "Larastan\\Larastan\\Rules\\NoUnnecessaryCollectionCallRule",
             "name": "NoUnnecessaryCollectionCallRule",
             "message": "Called '%s' on Laravel collection, but could have been retrieved as a query.",
-            "description": "",
+            "description": "This rule checks for unnecessary heavy operations on the Collection class that could have instead been performed on the Builder class.",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.noUnnecessaryCollectionCall",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -1031,10 +1217,12 @@
             "class": "Larastan\\Larastan\\Rules\\NoUnnecessaryEnumerableToArrayCallsRule",
             "name": "NoUnnecessaryEnumerableToArrayCallsRule",
             "message": "Called [toArray()] on an Enumerable which does not contain any Arrayables.",
-            "description": "",
+            "description": "This rule checks for unnecessary calls `Enumerable::toArray()` that could have used `all()` instead. The `toArray()` method recursively converts all Arrayable items in the Enumerable to an array and if none of the items are Arrayable, it is unnecessary map call.",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.unnecessaryEnumerableToArrayCall",
+            "tip": "Use [all()] to get the items as an array."
         },
         {
             "group": "Larastan",
@@ -1045,7 +1233,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.uselessConstructs.value",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -1056,7 +1246,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.uselessConstructs.with",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -1067,7 +1259,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.octaneCompatibility",
+            "tip": "See: https://laravel.com/docs/octane#dependency-injection-and-octane"
         },
         {
             "group": "Larastan",
@@ -1078,7 +1272,9 @@
             "description": "",
             "node_type": "Node\\Expr\\CallLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.relationExistence",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -1089,7 +1285,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.console.undefinedArgument",
+            "tip": ""
         },
         {
             "group": "Larastan",
@@ -1100,7 +1298,9 @@
             "description": "",
             "node_type": "CollectedDataNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "larastan.unusedViews",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1111,7 +1311,9 @@
             "description": "- Denies using comparison operators >,<,<=,>=,<=> over anything other than int|string|float|DateTimeInterface|BcMath\\Number or same size tuples containing comparable types. Null is not allowed. - Mixing different types in those operators is also forbidden, only exception is comparing floats with integers and integers with BcMath\\Number - Mainly targets to accidental comparisons of objects, enums or arrays which is valid in PHP, but very tricky",
             "node_type": "BinaryOp",
             "wrong_code": "function example1(Money $fee1, Money $fee2) {\n    if ($fee1 > $fee2) {} // comparing objects is denied\n}\n\nnew DateTime() > '2040-01-02'; // comparing different types is denied\n200 > '1e2'; // comparing different types is denied",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.comparingNonComparableTypes",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1122,7 +1324,9 @@
             "description": "- Ensures that every BackedEnum child defines generic type - This rule makes sense only when BackedEnum was hacked to be generic by stub as described in this article - This rule does nothing if BackedEnum is not set to be generic, which is a default setup. Use following config to really start using it:",
             "node_type": "InClassNode",
             "wrong_code": "enum MyEnum: string { // missing @implements tag\n    case MyCase = 'case1';\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.missingImplementsOnBackedEnum",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1133,7 +1337,9 @@
             "description": "- Allows you to enforce class name suffix for subclasses of configured superclass - Checks nothing by default, configure it by passing superclass => suffix mapping - Passed superclass is not expected to have such suffix, only subclasses are - You can use interface as superclass",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.invalidClassSuffix",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1144,7 +1350,9 @@
             "description": "- Enforces usage of native typehints for closure & arrow function parameters - Does nothing on PHP 7.4 and below as native mixed is not available there - Can be configured by allowMissingTypeWhenInferred: true to allow missing typehint when it can be inferred from the context",
             "node_type": "Node",
             "wrong_code": "/**\n * @param list<Entity> $entities\n * @return list<Uuid>\n */\npublic function getIds(array $entities): array {\n    return array_map(\n        function ($entity) { // missing native typehint; not reported with allowMissingTypeWhenInferred: true\n            return $entity->id;\n        },\n        $entities\n    );\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.unknownClosureParamType",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1155,7 +1363,9 @@
             "description": "- Enforces usage of match ($enum) instead of exhaustive conditions like if ($enum === Enum::One) elseif ($enum === Enum::Two) - This rule aims to \"fix\" a bit problematic behaviour of PHPStan (introduced at 1.10.0 and fixed in 1.10.34). It understands enum cases very well and forces you to adjust following code:",
             "node_type": "BinaryOp",
             "wrong_code": "enum MyEnum {\n    case Foo;\n    case Bar;\n}\n\nif ($enum === MyEnum::Foo) {\n    // ...\n} elseif ($enum === MyEnum::Bar) { // always true reported by phpstan (for versions 1.10.0 - 1.10.34)\n    // ...\n} else {\n    throw new LogicException('Unknown case'); // phpstan knows it cannot happen\n}",
-            "correct_code": "if ($enum === MyEnum::Foo) {\n    // ...\n} elseif ($enum === MyEnum::Bar) {\n    // ...\n}"
+            "correct_code": "if ($enum === MyEnum::Foo) {\n    // ...\n} elseif ($enum === MyEnum::Bar) {\n    // ...\n}",
+            "identifier": "shipmonk.enumMatchNotUsed",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1166,7 +1376,9 @@
             "description": "- Enforces presence of second parameter in iterator_to_array call ($preserve_keys) as the default value true is generally dangerous (risk of data loss / failure) - You can use both true and false there, but doing so is intentional choice now",
             "node_type": "FuncCall",
             "wrong_code": "$fn = function () {\n    yield new stdClass => 1;\n};\n\niterator_to_array($fn()); // denied, would fail",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.iteratorToArrayWithoutPreserveKeys",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1177,7 +1389,9 @@
             "description": "- Enforces usage of list<T> when list is always returned from a class method or function - When only single return with empty array is present in the method, it is not considered as list - Does nothing when list types are disabled in PHPStan - Consider enabling also reportAnyTypeWideningInVarTag in native PHPStan as it mostly affects lists",
             "node_type": "ReturnStatementsNode",
             "wrong_code": "/**\n * @return array<string>\n */\npublic function returnList(): array // error, return phpdoc is generic array, but list is always returned\n{\n    return ['item'];\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.returnListNotUsed",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1188,7 +1402,9 @@
             "description": "- Enforces usage of native return typehints if supported by your PHP version - If PHPDoc is present, it deduces needed typehint from that, if not, deduction is performed based on real types returned - Applies to class methods, closures and functions - Is disabled, if you have PHPStan set up with treatPhpDocTypesAsCertain: false - Limitations: - Does not suggest parent typehint - Ignores trait methods",
             "node_type": "ReturnStatementsNode",
             "wrong_code": "class NoNativeReturnTypehint {\n    /**\n     * @return list<string>\n     */\n    public function returnList() // error, missing array typehint\n    {\n        return ['item'];\n    }\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.missingNativeReturnTypehint",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1199,7 +1415,9 @@
             "description": "- Ensures immutability of all public properties by enforcing readonly modifier - No modifier needed for readonly classes in PHP 8.2 - Does nothing if PHP version does not support readonly properties (PHP 8.0 and below) - Can be configured to exclude properties with a default value",
             "node_type": "ClassPropertyNode",
             "wrong_code": "class EnforceReadonlyPublicPropertyRule {\n    public int $foo; // fails, no readonly modifier\n    public readonly int $bar;\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.publicPropertyNotReadonly",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1210,7 +1428,9 @@
             "description": "- Disallows using arithmetic operators with non-numeric types (only float, int and BcMath\\Number is allowed) - You can allow numeric-string by using allowNumericString: true configuration - Modulo operator (%) allows only integers as it emits deprecation otherwise - Plus operator is allowed for merging arrays - float and BcMath\\Number cannot be combined as it emits deprecations",
             "node_type": "Node",
             "wrong_code": "function add(string $a, string $b) {\n    return $a + $b; // denied, non-numeric types are allowed\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.arithmeticOnNonNumber",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1221,7 +1441,9 @@
             "description": "- Deny casting you configure - Possible values to use: - (array) - denied by default - (object) - denied by default - (unset) - denied by default - (bool) - (int) - (string) - (float) - forbids using also (double) and (real)",
             "node_type": "Cast",
             "wrong_code": "$empty = (array) null; // denied cast\n$notEmpty = (array) 0; // denied cast",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.forbiddenCast",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1232,7 +1454,9 @@
             "description": "- Denies throwing checked exception in callables (Closures, Arrow functions and First class callables) as those cannot be tracked as checked by PHPStan analysis, because it is unknown when the callable is about to be called - It is allowed to throw checked exceptions in immediately called callables (e.g. params marked by @param-immediately-invoked-callable, see docs) - It allows configuration of functions/methods, where the callable is handling all thrown exceptions and it is safe to throw anything from there; this basically makes such calls ignored by this rule - It ignores implicitly thrown Throwable - Learn more in \ud83c\udde8\ud83c\uddff talk about checked exceptions in general (\ud83c\uddfa\ud83c\uddf8 slides)",
             "node_type": "Node",
             "wrong_code": "class TransactionManager {\n    /**\n     * @param-immediately-invoked-callable $callback\n     */\n    public function transactional(callable $callback): void {\n        // ...\n        $callback();\n        // ...\n    }\n}\n\nclass UserEditFacade\n{\n    /**\n     * @throws UserNotFoundException\n     */\n    public function updateUserEmail(UserId $userId, Email $email): void\n    {\n        $this->transactionManager->transactional(function () use ($userId, $email) {\n            $user = $this->userRepository->get($userId); // can throw checked UserNotFoundException\n            $user->updateEmail($email);\n        })\n    }\n\n    public function getUpdateEmailCallback(UserId $userId, Email $email): callable\n    {\n        return function () use ($userId, $email) {\n            $user = $this->userRepository->get($userId); // this usage is denied, it throws checked exception, but you don't know when, thus it cannot be tracked by phpstan\n            $user->updateEmail($email);\n        };\n    }\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.checkedExceptionInCallable",
+            "tip": "If this callable is immediately called within '$usedAsArgumentOfMethodName', you should add @param-immediately-invoked-callable there. Then this error disappears and the exception will be properly propagated."
         },
         {
             "group": "ShipMonk",
@@ -1243,7 +1467,9 @@
             "description": "- Denies throwing checked exception within yielding methods as those exceptions are not throw upon method call, but when generator gets iterated. - This behaviour cannot be easily reflected within PHPStan exception analysis and may cause false negatives. - Make sure you have enabled checked exceptions, otherwise, this rule does nothing",
             "node_type": "ReturnStatementsNode",
             "wrong_code": "class Provider {\n    /** @throws CheckedException */\n    public static function generate(): iterable\n    {\n        yield 1;\n        throw new CheckedException(); // denied, gets thrown once iterated\n    }\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.checkedExceptionInYieldingMethod",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1254,7 +1480,9 @@
             "description": "- Allows you to easily deny some approaches within your codebase by denying classes, methods and functions - Configuration syntax is array where key is method name and value is reason used in error message - Works even with interfaces, constructors and some dynamic class/method names like $fn = 'sleep'; $fn();",
             "node_type": "Node",
             "wrong_code": "new SomeClass(); // Class SomeClass is forbidden. Please use different class\n(new AnotherClass())->someMethod(); // Method AnotherClass::someMethod() is forbidden. Please use anotherMethod",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.methodCallDenied",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1265,7 +1493,9 @@
             "description": "- Guards passing native enums to native functions where it fails / produces warning or does unexpected behaviour - Most of the array manipulation functions does not work with enums as they do implicit __toString conversion inside, but that is not possible to do with enums - See test for all functions and their problems",
             "node_type": "",
             "wrong_code": "enum MyEnum: string {\n    case MyCase = 'case1';\n}\n\nimplode('', [MyEnum::MyCase]); // denied, would fail on implicit toString conversion",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.dangerousEnumArgument",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1276,7 +1506,9 @@
             "description": "- Denies constant/property fetch on unknown type. - Any property fetch assumes the caller is an object with such property and therefore, the typehint/phpdoc should be fixed. - Similar to forbidMethodCallOnMixed - Makes sense only on PHPStan level 8 or below, gets autodisabled on level 9",
             "node_type": "Node",
             "wrong_code": "function example($unknown) {\n    $unknown->property; // cannot fetch property on mixed\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.propertyFetchOnMixed",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1287,7 +1519,9 @@
             "description": "- Denies comparing configured classes by === or !== - Default configuration contains only DateTimeInterface - You may want to add more classes from your codebase or vendor",
             "node_type": "BinaryOp",
             "wrong_code": "function isEqual(DateTimeImmutable $a, DateTimeImmutable $b): bool {\n    return $a === $b;  // comparing denied classes\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.deniedClassComparison",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1298,7 +1532,9 @@
             "description": "- Denies using $i++, $i--, ++$i, --$i with any non-integer - PHP itself is leading towards stricter behaviour here and soft-deprecated **some** non-integer usages in 8.3, see RFC",
             "node_type": "Node",
             "wrong_code": "$value = '2e0';\n$value++; // would be float(3), denied",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.incrementDecrementOnNonInteger",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1309,7 +1545,9 @@
             "description": "- Denies using default arm in match() construct when native enum is passed as subject - This rules makes sense only as a complement of native phpstan rule that guards that all enum cases are handled in match arms - As a result, you are forced to add new arm when new enum case is added. That brings up all the places in your codebase that needs new handling.",
             "node_type": "MatchExpressionNode",
             "wrong_code": "match ($enum) {\n    MyEnum::Case: 1;\n    default: 2; // default arm forbidden\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.defaultMatchArmWithEnum",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1320,7 +1558,9 @@
             "description": "- Denies calling methods on unknown type. - Any method call assumes the caller is an object with such method and therefore, the typehint/phpdoc should be fixed. - Similar to forbidFetchOnMixed - Makes sense only on PHPStan level 8 or below, gets autodisabled on level 9",
             "node_type": "CallLike",
             "wrong_code": "function example($unknown) {\n    $unknown->call(); // cannot call method on mixed\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.methodCallOnMixed",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1331,7 +1571,9 @@
             "description": "- Reports PhpDoc or native type that is not normalized, which can be: - when child and parent appears in its union or intersection - when same type appears multiple times in its union or intersection - when DNF is not used - configurable by checkDisjunctiveNormalForm - supports: - parameter typehints & @param phpdoc - return typehint & @return phpdoc - property typehint & @var phpdoc - inline @var phpdoc - @throws phpdoc - multi-catch statements - Main motivation here is that PHPStan normalizes all types before analysis, so it is better to see it in codebase the same way PHPStan does",
             "node_type": "PhpParserNode",
             "wrong_code": "/**\n * @return mixed|false   // denied, this is still just mixed\n */\npublic function getAttribute(string $name)\n{\n    return $this->attributes[$name] ?? false;\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.nonNormalizedType",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1342,7 +1584,9 @@
             "description": "- Denies using assign operators if null is involved on right side - You can configure which operators are ignored, by default only ??= is excluded",
             "node_type": "AssignOp",
             "wrong_code": "function getCost(int $cost, ?int $surcharge): int {\n    $cost += $surcharge;  // denied, adding possibly-null value\n    return $cost;\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.assignmentWithNull",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1353,7 +1597,9 @@
             "description": "- Denies using binary operators if null is involved on either side - You can configure which operators are ignored. Default ignore is excluding only ===, !==, ?? - Following custom setup is recommended when using latest phpstan-strict-rules and allowComparingOnlyComparableTypes is enabled",
             "node_type": "BinaryOp",
             "wrong_code": "function getFullName(?string $firstName, string $lastName): string {\n    return $firstName . ' ' . $lastName; // denied, null involved in binary operation\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.binaryOperationWithNull",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1364,7 +1610,9 @@
             "description": "- Disallows using nullable expressions within double-quoted strings - This should probably comply with setup of concat operator (.) in forbidNullInBinaryOperations so if you blacklisted it there, you might want to disable this rule",
             "node_type": "InterpolatedString",
             "wrong_code": "public function output(?string $name) {\n    echo \"Hello $name!\"; // denied, possibly null value\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.stringInterpolationWithNull",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1375,7 +1623,9 @@
             "description": "- Disallows having nullable native typehint while using non-nullable phpdoc - Checks @return and @param over methods and @var over properties - PHPStan itself allows using subtype of native type in phpdoc, but resolves overall type as union of those types making such phpdoc actually invalid",
             "node_type": "Node",
             "wrong_code": "/**\n * @param string $param\n */\npublic function sayHello(?string $param) {} // invalid phpdoc not containing null",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.phpDocNullabilityMismatch",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1386,7 +1636,9 @@
             "description": "- Disallows protected method within enums as those are not extendable anyway - Ignore method declared in traits as those might be reused in regular classes",
             "node_type": "ClassMethodsNode",
             "wrong_code": "enum MyEnum {\n    protected function isOpen(): bool {} // protected enum method denied\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.protectedEnumMethod",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1397,7 +1649,9 @@
             "description": "",
             "node_type": "Return_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.returnInConstructor",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1408,7 +1662,9 @@
             "description": "- Disallows returning values in yielding methods unless marked to return Generator as the value is accessible only via Generator::getReturn - To prevent misuse, this rule can be configured to even stricter mode where it reports such returns regardless of return type declared",
             "node_type": "ReturnStatementsNode",
             "wrong_code": "class Get {\n    public static function oneTwoThree(): iterable { // marked as iterable, caller cannot access the return value by Generator::getReturn\n        yield 1;\n        yield 2;\n        return 3;\n    }\n}\n\niterator_to_array(Get::oneTwoThree()); // [1, 2] - see https://3v4l.org/Leu9j",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.returnValueFromYieldingMethod",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1419,7 +1675,9 @@
             "description": "- Denies non-int non-string array keys - PHP casts null, float and bool to some nearest int/string - You should rather do that intentionally and explicitly - Those types are the main difference to default PHPStan behaviour which allows using them as array keys - You can exclude reporting mixed keys via reportMixed configuration - You can exclude reporting isset($array[$invalid]) and $array[$invalid] ?? null via reportInsideIsset configuration",
             "node_type": "Node",
             "wrong_code": "$taxRates = [ // denied, float key gets casted to int (causing $taxRates to contain one item)\n    1.15 => 'reduced',\n    1.21 => 'standard',\n];",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.unsafeArrayKey",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1430,7 +1688,9 @@
             "description": "- Denies calling unset over class field as it causes un-initialization, see https://3v4l.org/V8uuP - Null assignment should be used instead",
             "node_type": "Unset_",
             "wrong_code": "function example(MyClass $class) {\n    unset($class->field); // denied\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.unsettingClassProperty",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1441,7 +1701,9 @@
             "description": "- Reports unused parameters in closures and arrow functions - Only reports trailing unused parameters (parameters that are unused and all parameters after them are also unused)",
             "node_type": "Expr",
             "wrong_code": "fn (int $key, Item $item, string $unused) => $item->ok(); // unused parameter $unused is reported, $key not",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.unusedParameter",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1452,7 +1714,9 @@
             "description": "- Reports forgotten exception throw (created or returned from function, but not used in any way)",
             "node_type": "Expr",
             "wrong_code": "function validate(): void {\n    new Exception(); // forgotten throw\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.unusedException",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1463,7 +1727,9 @@
             "description": "- Reports forgotten usage of match result - Any match with at least one arm returning a value is checked",
             "node_type": "Match_",
             "wrong_code": "match ($foo) { // unused match result\n    case 'foo' => 1;\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.unusedMatchResult",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1474,7 +1740,9 @@
             "description": "- Denies marking closure/function/method return type as nullable when null is never returned - Recommended to be used together with uselessPrivatePropertyDefaultValue",
             "node_type": "ReturnStatementsNode",
             "wrong_code": "public function example(int $foo): ?int { // null never returned\n    if ($foo < 0) {\n        return 0;\n    }\n    return $foo;\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.uselessNullableReturn",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1485,7 +1753,9 @@
             "description": "- Restricts variable assignment to those that does not change its type - Array append $array[] = 1; not yet supported - Null and mixed are not taken into account, advanced phpstan types like non-empty-X are trimmed before comparison - Rule allows type generalization and type narrowing (parent <-> child)",
             "node_type": "Assign",
             "wrong_code": "function example(OrderId $id) {\n    $id = $id->getStringValue(); // denied, type changed from object to string\n}",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.variableTypeOverwritten",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1496,7 +1766,9 @@
             "description": "- Detects forgotten exception pass-as-previous when re-throwing - Checks if caught exception can be passed as argument to the call (including constructor call) in throw node inside the catch block - You may encounter false-positives in some edge-cases, where you do not want to pass exception as previous, feel free to ignore those",
             "node_type": "TryCatch",
             "wrong_code": "try {\n    // some code\n} catch (RuntimeException $e) {\n    throw new LogicException('Cannot happen'); // $e not passed as previous\n}",
-            "correct_code": "class MyException extends RuntimeException {\n    public function __construct() {\n        parent::__construct('My error');\n    }\n}\n\ntry {\n    // some code\n} catch (RuntimeException $e) {\n    throw new MyException(); // reported even though MyException cannot accept it yet\n}"
+            "correct_code": "class MyException extends RuntimeException {\n    public function __construct() {\n        parent::__construct('My error');\n    }\n}\n\ntry {\n    // some code\n} catch (RuntimeException $e) {\n    throw new MyException(); // reported even though MyException cannot accept it yet\n}",
+            "identifier": "shipmonk.missingPreviousException",
+            "tip": ""
         },
         {
             "group": "ShipMonk",
@@ -1507,7 +1779,9 @@
             "description": "",
             "node_type": "ClassPropertiesNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "shipmonk.uselessPrivatePropertyDefaultValue",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1518,7 +1792,9 @@
             "description": "",
             "node_type": "Variable",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "globalAccess.outOfContext",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1529,7 +1805,9 @@
             "description": "",
             "node_type": "StaticPropertyFetch",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "singletonAccess.outOfContext",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1540,7 +1818,9 @@
             "description": "",
             "node_type": "ClassLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "classNotation",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1551,7 +1831,9 @@
             "description": "",
             "node_type": "Goto_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "goto.forbidden",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1562,7 +1844,9 @@
             "description": "",
             "node_type": "Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "typehintMissing.anonymousFunction",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1573,7 +1857,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "datecall.implicitTime.forbidden",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1584,7 +1870,9 @@
             "description": "",
             "node_type": "New_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "newdate.implicitTime.forbidden",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1595,7 +1883,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "strtotimecall.implicitTime.forbidden",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1606,7 +1896,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "timecall.forbidden",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1617,7 +1909,9 @@
             "description": "",
             "node_type": "Node",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "phpunit.annotationClassNotFound",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1628,7 +1922,9 @@
             "description": "",
             "node_type": "String_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "stringToClassNotation",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1639,7 +1935,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "filesystemcall.unsafe",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1650,7 +1948,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "syscall.unsafe",
+            "tip": ""
         },
         {
             "group": "Slam",
@@ -1661,7 +1961,9 @@
             "description": "",
             "node_type": "FunctionLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "variable.unused",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1672,7 +1974,9 @@
             "description": "",
             "node_type": "Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.alreadyRegisteredAutodiscoveryService",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1683,7 +1987,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rector.avoidFeatureSetAttributeInRector",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1694,7 +2000,9 @@
             "description": "",
             "node_type": "Interface_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.requiredInterfaceContractNamespace",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1705,7 +2013,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.classNameRespectsParentSuffix",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1716,7 +2026,9 @@
             "description": "",
             "node_type": "ClassLike",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.explicitTraitSuffixName",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1727,7 +2039,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "phpunit.noAssertFuncCallInTests",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1738,7 +2052,9 @@
             "description": "",
             "node_type": "Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.fileNameMatchesExtension",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1749,7 +2065,9 @@
             "description": "",
             "node_type": "Array_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.forbiddenArrayMethodCall",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1760,7 +2078,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.forbiddenExtendOfNonAbstractClass",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1771,7 +2091,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.forbiddenFuncCall",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1782,7 +2104,9 @@
             "description": "",
             "node_type": "FileNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.multipleClassLikeInFile",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1793,7 +2117,9 @@
             "description": "",
             "node_type": "New_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.forbiddenNewInstance",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1804,7 +2130,9 @@
             "description": "",
             "node_type": "Node",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.forbiddenNode",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1815,7 +2143,9 @@
             "description": "",
             "node_type": "ClassConstFetch",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.forbiddenStaticClassConstFetch",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1826,7 +2156,9 @@
             "description": "",
             "node_type": "Foreach_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.foreachCeption",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1837,7 +2169,9 @@
             "description": "",
             "node_type": "Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.formTypeClassName",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1848,7 +2182,9 @@
             "description": "",
             "node_type": "CollectedDataNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.maximumIgnoredErrorCount",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1856,10 +2192,12 @@
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoAbstractControllerConstructorRule",
             "name": "NoAbstractControllerConstructorRule",
             "message": "Abstract controller should not have constructor, to avoid override by child classes. Use #[Require] or @require and autowire() method instead",
-            "description": "",
+            "description": "Check if abstract controller has constructor, as it should use #[Require] instead to avoid parent constructor override",
             "node_type": "Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noAbstractControllerConstructor",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1870,7 +2208,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noArrayMapWithArrayCallable",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1881,7 +2221,9 @@
             "description": "",
             "node_type": "FuncCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "phpunit.noAssertFuncCallInTests",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1892,7 +2234,9 @@
             "description": "",
             "node_type": "Attribute",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.requiredIsGrantedEnum",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1903,7 +2247,9 @@
             "description": "",
             "node_type": "Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noBundleResourceConfig",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1914,7 +2260,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noClassLevelRoute",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1925,7 +2273,9 @@
             "description": "",
             "node_type": "New_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rector.noClassReflectionStaticReflection",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1936,7 +2286,9 @@
             "description": "",
             "node_type": "Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noConstructAndRequired",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1947,7 +2299,9 @@
             "description": "",
             "node_type": "ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noConstructorOverride",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1958,7 +2312,9 @@
             "description": "",
             "node_type": "Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noControllerMethodInjection",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1966,10 +2322,12 @@
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoDoctrineListenerWithoutContractRule",
             "name": "NoDoctrineListenerWithoutContractRule",
             "message": "There should be no Doctrine listeners modified in config. Implement \"Document\\Event\\EventSubscriber\" to provide events in the class itself",
-            "description": "",
+            "description": "Based on https://tomasvotruba.com/blog/2019/07/22/how-to-convert-listeners-to-subscribers-and-reduce-your-configs Subscribers have much better PHP support - IDE, PHPStan + Rector - than simple yaml files",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "doctrine.noListenerWithoutContract",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1980,7 +2338,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "phpunit.noDocumentMocking",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1991,7 +2351,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "phpunit.noDoubleConsecutiveTestMock",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -1999,10 +2361,12 @@
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\NoDuplicateArgAutowireByTypeRule",
             "name": "NoDuplicateArgAutowireByTypeRule",
             "message": "Instead of passing \"%s\" to arg(), remove the line and let autowiring handle it",
-            "description": "",
+            "description": "Spot pointless explicit services:",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noDuplicateArgAutowireByType",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2010,10 +2374,12 @@
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\NoDuplicateArgsAutowireByTypeRule",
             "name": "NoDuplicateArgsAutowireByTypeRule",
             "message": "Instead of passing \"%s\" to args(), remove the line and let autowiring handle it",
-            "description": "",
+            "description": "Spot pointless explicit services:",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noDuplicateArgsAutowireByType",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2024,7 +2390,9 @@
             "description": "",
             "node_type": "Node",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noDynamicName",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2032,10 +2400,12 @@
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoEntityMockingRule",
             "name": "NoEntityMockingRule",
             "message": "Instead of entity or document mocking, create object directly to get better type support",
-            "description": "",
+            "description": "The ORM entities and ODM documents should never be mocked, as it leads to typeless code. Use them directly instead.",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "doctrine.noEntityMocking",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2046,7 +2416,9 @@
             "description": "",
             "node_type": "Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noEntityOutsideEntityNamespace",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2057,7 +2429,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noFindTaggedServiceIdsCall",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2068,7 +2442,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noGetDoctrineInController",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2079,7 +2455,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noGetInCommand",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2090,7 +2468,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noGetInController",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2101,7 +2481,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "doctrine.injectServiceRepository",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2112,7 +2494,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "doctrine.noGetRepositoryOutsideService",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2123,7 +2507,9 @@
             "description": "",
             "node_type": "Const_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noGlobalConst",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2134,7 +2520,9 @@
             "description": "",
             "node_type": "Expr",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rector.noInstanceOfStaticReflection",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2145,7 +2533,9 @@
             "description": "",
             "node_type": "ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rector.noIntegerRefactorReturn",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2156,7 +2546,9 @@
             "description": "",
             "node_type": "Expression",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noJustPropertyAssign",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2167,7 +2559,9 @@
             "description": "",
             "node_type": "New_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "phpParser.noLeadingBackslashInName",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2175,10 +2569,12 @@
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoListenerWithoutContractRule",
             "name": "NoListenerWithoutContractRule",
             "message": "There should be no listeners modified in config. Use EventSubscriberInterface contract or #[AsEventListener] attribute and native PHP instead",
-            "description": "",
+            "description": "Based on https://tomasvotruba.com/blog/2019/07/22/how-to-convert-listeners-to-subscribers-and-reduce-your-configs Subscribers have much better PHP support - IDE, PHPStan + Rector - than simple yaml files",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noListenerWithoutContract",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2189,7 +2585,9 @@
             "description": "",
             "node_type": "Assign",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noMissingVariableDimFetch",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2200,7 +2598,9 @@
             "description": "",
             "node_type": "Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noMissnamedDocTag",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2211,7 +2611,9 @@
             "description": "",
             "node_type": "Property",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "phpunit.noMockObjectAndRealObjectProperty",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2222,7 +2624,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "phpunit.noMockOnly",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2233,7 +2637,9 @@
             "description": "",
             "node_type": "ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rector.noOnlyNullReturnInRefactor",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2241,10 +2647,12 @@
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoParentRepositoryRule",
             "name": "NoParentRepositoryRule",
             "message": "Extending EntityRepository is not allowed, use constructor injection and pass entity manager instead",
-            "description": "",
+            "description": "Check if class extends repository class, the entity manager should be injected via constructor instead",
             "node_type": "Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "doctrine.noParentRepository",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2255,7 +2663,9 @@
             "description": "",
             "node_type": "Assign",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rector.noPropertyNodeAssign",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2266,7 +2676,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noProtectedClassStmt",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2277,7 +2689,9 @@
             "description": "",
             "node_type": "Node",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noReference",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2288,7 +2702,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "doctrine.noRepositoryCallInDataFixtures",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2299,7 +2715,9 @@
             "description": "",
             "node_type": "Trait_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noRequiredOutsideClass",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2310,7 +2728,9 @@
             "description": "",
             "node_type": "ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noReturnSetterMethod",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2321,7 +2741,9 @@
             "description": "",
             "node_type": "ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noRouteTrailingSlashPath",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2332,7 +2754,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noRoutingPrefix",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2343,7 +2767,9 @@
             "description": "",
             "node_type": "Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noServiceAutowireDuplicate",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2354,7 +2780,9 @@
             "description": "",
             "node_type": "Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noServiceSameNameSetClass",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2365,7 +2793,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noSetClassServiceDuplicate",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2376,7 +2806,9 @@
             "description": "",
             "node_type": "ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.noStringInGetSubscribedEvents",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2387,7 +2819,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noTestMocks",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2398,7 +2832,9 @@
             "description": "",
             "node_type": "ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.noValueObjectInServiceConstructor",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2409,7 +2845,9 @@
             "description": "",
             "node_type": "Param",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.conventionParamNameToType",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2420,7 +2858,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rector.upgradeDowngradeRegisteredInSet",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2431,7 +2871,9 @@
             "description": "",
             "node_type": "Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rector.phpRuleImplementsMinVersion",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2442,7 +2884,9 @@
             "description": "",
             "node_type": "Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.preferAutowireAttributeOverConfigParam",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2453,7 +2897,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "rector.preferDirectIsName",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2464,7 +2910,9 @@
             "description": "",
             "node_type": "Node",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.preferredClass",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2475,7 +2923,9 @@
             "description": "",
             "node_type": "ClassMethod",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.parentMethodVisibilityOverride",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2483,10 +2933,12 @@
             "class": "Symplify\\PHPStanRules\\Rules\\PHPUnit\\PublicStaticDataProviderRule",
             "name": "PublicStaticDataProviderRule",
             "message": "",
-            "description": "",
+            "description": "PHPUnit data provider have to be public and static",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "phpunit.staticDataProvider",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2497,7 +2949,9 @@
             "description": "",
             "node_type": "AttributeGroup",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.requireAttributeName",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2508,7 +2962,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.requireAttributeNamespace",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2519,7 +2975,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.requireExceptionNamespace",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2530,7 +2988,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.requireInvokableController",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2541,7 +3001,9 @@
             "description": "",
             "node_type": "Attribute",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.requiredIsGrantedEnum",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2552,7 +3014,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "doctrine.requireQueryBuilderOnRepository",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2560,10 +3024,12 @@
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\RequireRouteNameToGenerateControllerRouteRule",
             "name": "RequireRouteNameToGenerateControllerRouteRule",
             "message": "To pass a controller class to generate() method, the controller must have \"#[Route(name: self::class)]\" above the __invoke() method",
-            "description": "",
+            "description": "To pass a controller class in $this->router->generate(SomeController::class), the controller must be present #[Route(name:: self::class)",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.requireRouteNameToGenerateControllerRoute",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2574,7 +3040,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "doctrine.requireServiceParentRepository",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2585,7 +3053,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.requireUniqueEnumConstant",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2596,7 +3066,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.requiredOnlyInAbstract",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2607,7 +3079,9 @@
             "description": "",
             "node_type": "InClassNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.seeAnnotationToTest",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2618,7 +3092,9 @@
             "description": "",
             "node_type": "Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.servicesExcludedDirectoryMustExist",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2629,7 +3105,9 @@
             "description": "",
             "node_type": "MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.singleArgEventDispatch",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2640,7 +3118,9 @@
             "description": "",
             "node_type": "Class_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.singleRequiredMethod",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2651,7 +3131,9 @@
             "description": "",
             "node_type": "Concat",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.stringFileAbsolutePathExists",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2662,7 +3144,9 @@
             "description": "",
             "node_type": "Closure",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symfony.taggedIteratorOverRepeatedServiceCall",
+            "tip": ""
         },
         {
             "group": "Symplify",
@@ -2673,7 +3157,9 @@
             "description": "",
             "node_type": "ClassConst",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "symplify.uppercaseConstant",
+            "tip": ""
         },
         {
             "group": "Type Coverage",
@@ -2684,7 +3170,9 @@
             "description": "",
             "node_type": "CollectedDataNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Type Coverage",
@@ -2695,7 +3183,9 @@
             "description": "",
             "node_type": "CollectedDataNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "typeCoverage.declareCoverage",
+            "tip": ""
         },
         {
             "group": "Type Coverage",
@@ -2706,7 +3196,9 @@
             "description": "",
             "node_type": "CollectedDataNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Type Coverage",
@@ -2717,7 +3209,9 @@
             "description": "",
             "node_type": "CollectedDataNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Type Coverage",
@@ -2728,7 +3222,9 @@
             "description": "",
             "node_type": "CollectedDataNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Unused Public",
@@ -2739,7 +3235,9 @@
             "description": "",
             "node_type": "",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "public.method.unused",
+            "tip": ""
         },
         {
             "group": "Unused Public",
@@ -2750,7 +3248,9 @@
             "description": "",
             "node_type": "",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "public.method.unused",
+            "tip": ""
         },
         {
             "group": "Unused Public",
@@ -2761,7 +3261,9 @@
             "description": "",
             "node_type": "",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "public.classConstant.unused",
+            "tip": ""
         },
         {
             "group": "Unused Public",
@@ -2772,7 +3274,9 @@
             "description": "",
             "node_type": "",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "public.method.unused",
+            "tip": ""
         },
         {
             "group": "Unused Public",
@@ -2783,7 +3287,9 @@
             "description": "",
             "node_type": "",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "public.property.unused",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2794,7 +3300,9 @@
             "description": "This code is copy&pasted from [phpstan/phpstan-src] and I used it to prevent Call to a member function on null errors while I wasn't already on level 8 where all kind of \"NULL\" checks are already covered by default.",
             "node_type": "Node\\Expr\\MethodCall",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "voku.callMethodOnNull",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2805,7 +3313,9 @@
             "description": "",
             "node_type": "Node\\Stmt\\ElseIf_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2816,7 +3326,9 @@
             "description": "",
             "node_type": "Node\\Expr",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2827,7 +3339,9 @@
             "description": "This rule will check \"+\", \"*\", \"/\", \"-\", ... (operators) and \".\" (concatenation) for compatible types.",
             "node_type": "Node\\Expr",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2838,7 +3352,9 @@
             "description": "",
             "node_type": "Node\\Stmt\\If_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2849,7 +3365,9 @@
             "description": "",
             "node_type": "PHPStan\\Node\\BooleanAndNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2860,7 +3378,9 @@
             "description": "",
             "node_type": "Node\\Expr\\BooleanNot",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2871,7 +3391,9 @@
             "description": "",
             "node_type": "PHPStan\\Node\\BooleanOrNode",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2882,7 +3404,9 @@
             "description": "",
             "node_type": "Node\\Expr\\Match_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2893,7 +3417,9 @@
             "description": "",
             "node_type": "Node\\Expr\\BinaryOp",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2904,7 +3430,9 @@
             "description": "",
             "node_type": "Node\\Stmt\\Switch_",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2915,7 +3443,9 @@
             "description": "",
             "node_type": "Node\\Expr\\Ternary",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "",
+            "tip": ""
         },
         {
             "group": "Voku",
@@ -2926,7 +3456,9 @@
             "description": "",
             "node_type": "Node\\Expr\\Cast",
             "wrong_code": "",
-            "correct_code": ""
+            "correct_code": "",
+            "identifier": "voku.wrongCast",
+            "tip": ""
         }
     ]
 }
