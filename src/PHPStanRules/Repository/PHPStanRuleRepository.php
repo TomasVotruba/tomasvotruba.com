@@ -40,7 +40,6 @@ final class PHPStanRuleRepository
         $rules = [];
         foreach ($payload['rules'] ?? [] as $entry) {
             $rules[] = new PHPStanRule(
-                group: (string) ($entry['group'] ?? ''),
                 package: (string) ($entry['package'] ?? ''),
                 class: (string) ($entry['class'] ?? ''),
                 name: (string) ($entry['name'] ?? ''),

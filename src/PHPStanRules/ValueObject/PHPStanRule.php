@@ -7,7 +7,6 @@ namespace App\PHPStanRules\ValueObject;
 final readonly class PHPStanRule
 {
     public function __construct(
-        private string $group,
         private string $package,
         private string $class,
         private string $name,
@@ -17,11 +16,6 @@ final readonly class PHPStanRule
         private string $correctCode,
         private string $tip = '',
     ) {
-    }
-
-    public function getGroup(): string
-    {
-        return $this->group;
     }
 
     public function getPackage(): string

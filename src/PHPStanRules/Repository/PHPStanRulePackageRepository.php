@@ -43,7 +43,6 @@ final class PHPStanRulePackageRepository
 
             $packages[$package] = new PHPStanRulePackage(
                 package: $package,
-                group: (string) ($entry['group'] ?? ''),
                 description: (string) ($entry['description'] ?? ''),
                 url: (string) ($entry['url'] ?? ''),
             );

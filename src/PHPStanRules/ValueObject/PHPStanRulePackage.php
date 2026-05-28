@@ -8,7 +8,6 @@ final readonly class PHPStanRulePackage
 {
     public function __construct(
         private string $package,
-        private string $group,
         private string $description,
         private string $url,
     ) {
@@ -17,11 +16,6 @@ final readonly class PHPStanRulePackage
     public function getPackage(): string
     {
         return $this->package;
-    }
-
-    public function getGroup(): string
-    {
-        return $this->group;
     }
 
     public function getDescription(): string

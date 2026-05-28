@@ -14,7 +14,7 @@
     </style>
 
     <div class="container">
-        <h1>Discover PHPStan Rules</h1>
+        <h1>PHPStan Rules Beyond Core</h1>
 
         <div class="mt-4 mb-4">
             <p>
@@ -41,17 +41,16 @@
             <div id="search-match-count" class="text-secondary mt-2" style="font-size: .9em; display: none;"></div>
         </div>
 
-        <div class="mb-4" id="package-nav">
+        <div class="mb-4" id="package-nav" style="column-count: 2; column-gap: 2em;">
             @foreach ($groupedRules as $package => $rules)
                 @php $navInfo = $packagesByName[$package] ?? null; @endphp
                 <a
                     href="#pkg-{{ str($package)->slug() }}"
-                    class="badge text-bg-dark text-decoration-none me-2 mb-2"
-                    style="font-size: .9em; padding: .55em .8em;"
+                    class="d-block mb-1 text-decoration-none"
                     @if ($navInfo && $navInfo->getDescription()) title="{{ $navInfo->getDescription() }}" @endif
                 >
                     {{ $package }}
-                    <span class="opacity-75">({{ count($rules) }})</span>
+                    <span class="text-secondary">({{ count($rules) }})</span>
                 </a>
             @endforeach
         </div>
@@ -67,24 +66,36 @@
                 @php $packageInfo = $packagesByName[$package] ?? null; @endphp
                 <div class="rule-group" data-package="{{ strtolower($package) }}">
                     <a name="pkg-{{ str($package)->slug() }}"></a>
-                    <h2 class="mt-5 mb-2" style="border-bottom: 2px solid #eee; padding-bottom: .3em; color: #333;">
-                        {{ $package }}
-                        <small class="text-secondary" style="font-size: .55em; font-weight: normal;">
-                            {{ count($rules) }} rule{{ count($rules) > 1 ? 's' : '' }}
-                        </small>
+                    <h2 class="mt-5 mb-2 d-flex flex-wrap align-items-baseline" style="border-bottom: 2px solid #eee; padding-bottom: .3em; color: #333;">
+                        <span>
+                            @if ($packageInfo && $packageInfo->getUrl())
+                                <a href="{{ $packageInfo->getUrl() }}" rel="noopener" target="_blank">{{ $package }}</a>
+                            @else
+                                {{ $package }}
+                            @endif
+                            <small class="text-secondary" style="font-size: .55em; font-weight: normal;">
+                                {{ count($rules) }} rule{{ count($rules) > 1 ? 's' : '' }}
+                            </small>
+                        </span>
+                        <span class="ms-auto" style="font-size: .5em; font-weight: normal;">
+                            <a href="https://packagist.org/packages/{{ $package }}" rel="noopener" target="_blank" class="text-decoration-none">Packagist</a>
+                        </span>
                     </h2>
 
                     <div class="mb-3" style="font-size: .95em;">
                         @if ($packageInfo && $packageInfo->getDescription())
                             <p class="mb-1 text-secondary">{{ $packageInfo->getDescription() }}</p>
                         @endif
-                        <pre class="mb-2" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: .3em; padding: .5em .8em; font-size: .85em; margin: 0;"><code>composer require --dev {{ $package }}</code></pre>
-                        <div style="font-size: .9em;">
-                            @if ($packageInfo && $packageInfo->getUrl())
-                                <a href="{{ $packageInfo->getUrl() }}" rel="noopener" target="_blank" class="text-decoration-none">GitHub</a>
-                                <span class="text-secondary mx-1">&middot;</span>
-                            @endif
-                            <a href="https://packagist.org/packages/{{ $package }}" rel="noopener" target="_blank" class="text-decoration-none">Packagist</a>
+                        <div class="input-group shadow-sm" style="margin: 1.5em 0; max-width: 40em;">
+                            <input
+                                type="text"
+                                class="form-control"
+                                readonly
+                                value="composer require --dev {{ $package }}"
+                                onclick="this.select();"
+                                style="font-family: monospace; font-size: .85em; background: #f8f9fa;"
+                            >
+                            <button type="button" class="btn btn-outline-secondary copy-cmd-btn" style="font-size: .85em;">Copy</button>
                         </div>
                     </div>
 
@@ -99,7 +110,6 @@
                                 'description' => $rule->getDescription(),
                                 'class' => $rule->getClass(),
                                 'package' => $rule->getPackage(),
-                                'group' => $rule->getGroup(),
                             ];
                         @endphp
 
@@ -109,7 +119,6 @@
 
                                 <div class="rule-pkg-label text-secondary mb-2" style="font-size: .8em;">
                                     <strong>{{ $package }}</strong>
-                                    <span class="mx-1">&middot;</span>{{ $rule->getGroup() }}
                                 </div>
 
                                 <h3 class="mt-0 mb-2" style="font-size: 1.2em;">
@@ -198,7 +207,7 @@
                 // higher weight = stronger signal in the vector
                 const fieldWeights = {
                     name: 3, message: 1,
-                    description: 1, class: 1, tip: 1, package: 1, group: 1,
+                    description: 1, class: 1, tip: 1, package: 1,
                 };
 
                 // --- build the TF-IDF model ---
@@ -393,5 +402,32 @@
                     applyFilter();
                 }
             })();
+        </script>
+
+        <script>
+            document.addEventListener('click', function (e) {
+                const btn = e.target.closest('.copy-cmd-btn');
+                if (!btn) return;
+
+                const input = btn.closest('.input-group').querySelector('input');
+                if (!input) return;
+
+                input.select();
+                const flash = function () {
+                    const original = btn.textContent;
+                    btn.textContent = 'Copied!';
+                    setTimeout(function () { btn.textContent = original; }, 1500);
+                };
+
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(input.value).then(flash, function () {
+                        try { document.execCommand('copy'); } catch (err) {}
+                        flash();
+                    });
+                } else {
+                    try { document.execCommand('copy'); } catch (err) {}
+                    flash();
+                }
+            });
         </script>
 @endsection

@@ -40,7 +40,6 @@ final readonly class PHPStanRuleScanner
                 $snippets = $this->codeSnippetExtractor->extractFor($parsed->getShortName(), $sections);
 
                 $rules[] = new PHPStanRule(
-                    group: $package->getGroup(),
                     package: $package->getPackage(),
                     class: $parsed->getFullyQualifiedName(),
                     name: $parsed->getShortName(),
@@ -56,7 +55,7 @@ final readonly class PHPStanRuleScanner
         usort(
             $rules,
             static fn (PHPStanRule $a, PHPStanRule $b): int =>
-                $a->getGroup() <=> $b->getGroup() ?: $a->getName() <=> $b->getName()
+                $a->getPackage() <=> $b->getPackage() ?: $a->getName() <=> $b->getName()
         );
 
         return $rules;

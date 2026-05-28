@@ -22,7 +22,7 @@ final class DiscoverPHPStanRulesController extends Controller
         $groupedRules = $this->phpstanRuleRepository->fetchGroupedByPackage();
 
         return \view('discover-phpstan-rules', [
-            'title' => 'Discover PHPStan Rules',
+            'title' => 'PHPStan Rules Beyond Core',
             'groupedRules' => $groupedRules,
             'totalCount' => array_sum(array_map(count(...), $groupedRules)),
             'generatedAt' => $this->phpstanRuleRepository->getGeneratedAt(),

@@ -75,7 +75,6 @@ final class ScanPHPStanRulesCommand extends Command
     private function toJsonShape(PHPStanRule $phpStanRule): array
     {
         return [
-            'group' => $phpStanRule->getGroup(),
             'package' => $phpStanRule->getPackage(),
             'class' => $phpStanRule->getClass(),
             'name' => $phpStanRule->getName(),

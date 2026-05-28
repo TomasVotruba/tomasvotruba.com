@@ -3,7 +3,6 @@
     "count": 266,
     "rules": [
         {
-            "group": "Banned Code",
             "package": "ekino/phpstan-banned-code",
             "class": "Ekino\\PHPStanBannedCode\\Rules\\BannedNodesRule",
             "name": "BannedNodesRule",
@@ -14,7 +13,6 @@
             "tip": ""
         },
         {
-            "group": "Banned Code",
             "package": "ekino/phpstan-banned-code",
             "class": "Ekino\\PHPStanBannedCode\\Rules\\BannedUseTestRule",
             "name": "BannedUseTestRule",
@@ -25,7 +23,6 @@
             "tip": ""
         },
         {
-            "group": "Cognitive Complexity",
             "package": "tomasvotruba/cognitive-complexity",
             "class": "TomasVotruba\\CognitiveComplexity\\Rules\\ClassDependencyTreeRule",
             "name": "ClassDependencyTreeRule",
@@ -36,7 +33,6 @@
             "tip": ""
         },
         {
-            "group": "Cognitive Complexity",
             "package": "tomasvotruba/cognitive-complexity",
             "class": "TomasVotruba\\CognitiveComplexity\\Rules\\ClassLikeCognitiveComplexityRule",
             "name": "ClassLikeCognitiveComplexityRule",
@@ -47,7 +43,6 @@
             "tip": ""
         },
         {
-            "group": "Cognitive Complexity",
             "package": "tomasvotruba/cognitive-complexity",
             "class": "TomasVotruba\\CognitiveComplexity\\Rules\\FunctionLikeCognitiveComplexityRule",
             "name": "FunctionLikeCognitiveComplexityRule",
@@ -58,7 +53,6 @@
             "tip": ""
         },
         {
-            "group": "DBA",
             "package": "staabm/phpstan-dba",
             "class": "staabm\\PHPStanDba\\Rules\\DoctrineKeyValueStyleRule",
             "name": "DoctrineKeyValueStyleRule",
@@ -69,7 +63,6 @@
             "tip": ""
         },
         {
-            "group": "DBA",
             "package": "staabm/phpstan-dba",
             "class": "staabm\\PHPStanDba\\Rules\\PdoStatementExecuteMethodRule",
             "name": "PdoStatementExecuteMethodRule",
@@ -80,7 +73,6 @@
             "tip": ""
         },
         {
-            "group": "DBA",
             "package": "staabm/phpstan-dba",
             "class": "staabm\\PHPStanDba\\Rules\\QueryPlanAnalyzerRule",
             "name": "QueryPlanAnalyzerRule",
@@ -91,7 +83,6 @@
             "tip": "see Mysql Docs https://dev.mysql.com/doc/refman/8.0/en/select-optimization.html"
         },
         {
-            "group": "DBA",
             "package": "staabm/phpstan-dba",
             "class": "staabm\\PHPStanDba\\Rules\\SyntaxErrorInDibiPreparedStatementMethodRule",
             "name": "SyntaxErrorInDibiPreparedStatementMethodRule",
@@ -102,7 +93,6 @@
             "tip": ""
         },
         {
-            "group": "DBA",
             "package": "staabm/phpstan-dba",
             "class": "staabm\\PHPStanDba\\Rules\\SyntaxErrorInPreparedStatementMethodRule",
             "name": "SyntaxErrorInPreparedStatementMethodRule",
@@ -113,7 +103,6 @@
             "tip": ""
         },
         {
-            "group": "DBA",
             "package": "staabm/phpstan-dba",
             "class": "staabm\\PHPStanDba\\Rules\\SyntaxErrorInQueryFunctionRule",
             "name": "SyntaxErrorInQueryFunctionRule",
@@ -124,7 +113,6 @@
             "tip": ""
         },
         {
-            "group": "DBA",
             "package": "staabm/phpstan-dba",
             "class": "staabm\\PHPStanDba\\Rules\\SyntaxErrorInQueryMethodRule",
             "name": "SyntaxErrorInQueryMethodRule",
@@ -135,7 +123,6 @@
             "tip": ""
         },
         {
-            "group": "Dead Code",
             "package": "shipmonk/dead-code-detector",
             "class": "ShipMonk\\PHPStan\\DeadCode\\Rule\\DeadCodeRule",
             "name": "DeadCodeRule",
@@ -146,7 +133,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\AttributeUsages",
             "name": "AttributeUsages",
@@ -157,7 +143,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\BreakControlStructure",
             "name": "BreakControlStructure",
@@ -168,7 +153,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\ClassConstantUsages",
             "name": "ClassConstantUsages",
@@ -179,7 +163,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\ConstantUsages",
             "name": "ConstantUsages",
@@ -190,7 +173,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ContinueControlStructure",
             "name": "ContinueControlStructure",
@@ -201,7 +183,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\DeclareControlStructure",
             "name": "DeclareControlStructure",
@@ -212,7 +193,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\DoWhileControlStructure",
             "name": "DoWhileControlStructure",
@@ -223,7 +203,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\EchoCalls",
             "name": "EchoCalls",
@@ -234,7 +213,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ElseControlStructure",
             "name": "ElseControlStructure",
@@ -245,7 +223,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ElseIfControlStructure",
             "name": "ElseIfControlStructure",
@@ -256,7 +233,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\EmptyCalls",
             "name": "EmptyCalls",
@@ -267,7 +243,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\EvalCalls",
             "name": "EvalCalls",
@@ -278,7 +253,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\ExitDieCalls",
             "name": "ExitDieCalls",
@@ -289,7 +263,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ForControlStructure",
             "name": "ForControlStructure",
@@ -300,7 +273,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ForeachControlStructure",
             "name": "ForeachControlStructure",
@@ -311,7 +283,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\FunctionCalls",
             "name": "FunctionCalls",
@@ -322,7 +293,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\FunctionFirstClassCallables",
             "name": "FunctionFirstClassCallables",
@@ -333,7 +303,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Keywords\\GlobalKeyword",
             "name": "GlobalKeyword",
@@ -344,7 +313,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\GotoControlStructure",
             "name": "GotoControlStructure",
@@ -355,7 +323,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\IfControlStructure",
             "name": "IfControlStructure",
@@ -366,7 +333,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\InstancePropertyUsages",
             "name": "InstancePropertyUsages",
@@ -377,7 +343,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\IssetCalls",
             "name": "IssetCalls",
@@ -388,7 +353,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\MatchControlStructure",
             "name": "MatchControlStructure",
@@ -399,7 +363,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\MethodCalls",
             "name": "MethodCalls",
@@ -410,7 +373,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\MethodFirstClassCallables",
             "name": "MethodFirstClassCallables",
@@ -421,7 +383,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\NamespaceUsages",
             "name": "NamespaceUsages",
@@ -432,7 +393,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\NewCalls",
             "name": "NewCalls",
@@ -443,7 +403,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\PrintCalls",
             "name": "PrintCalls",
@@ -454,7 +413,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\RequireIncludeControlStructure",
             "name": "RequireIncludeControlStructure",
@@ -465,7 +423,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\ReturnControlStructure",
             "name": "ReturnControlStructure",
@@ -476,7 +433,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\ShellExecCalls",
             "name": "ShellExecCalls",
@@ -487,7 +443,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\StaticCalls",
             "name": "StaticCalls",
@@ -498,7 +453,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\StaticFirstClassCallables",
             "name": "StaticFirstClassCallables",
@@ -509,7 +463,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\StaticPropertyUsages",
             "name": "StaticPropertyUsages",
@@ -520,7 +473,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\SwitchControlStructure",
             "name": "SwitchControlStructure",
@@ -531,7 +483,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Calls\\UnsetCalls",
             "name": "UnsetCalls",
@@ -542,7 +493,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\Usages\\VariableUsages",
             "name": "VariableUsages",
@@ -553,7 +503,6 @@
             "tip": ""
         },
         {
-            "group": "Disallowed Calls",
             "package": "spaze/phpstan-disallowed-calls",
             "class": "Spaze\\PHPStan\\Rules\\Disallowed\\ControlStructures\\WhileControlStructure",
             "name": "WhileControlStructure",
@@ -564,7 +513,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Files\\DeclareStrictTypesRule",
             "name": "DeclareStrictTypesRule",
@@ -575,7 +523,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\FinalInAbstractClassRule",
             "name": "FinalInAbstractClassRule",
@@ -586,7 +533,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Classes\\FinalRule",
             "name": "FinalRule",
@@ -597,7 +543,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\InvokeParentHookMethodRule",
             "name": "InvokeParentHookMethodRule",
@@ -608,7 +553,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Expressions\\NoAssignByReferenceRule",
             "name": "NoAssignByReferenceRule",
@@ -619,7 +563,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Expressions\\NoCompactRule",
             "name": "NoCompactRule",
@@ -630,7 +573,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\NoConstructorParameterWithDefaultValueRule",
             "name": "NoConstructorParameterWithDefaultValueRule",
@@ -641,7 +583,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Expressions\\NoErrorSuppressionRule",
             "name": "NoErrorSuppressionRule",
@@ -652,7 +593,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Expressions\\NoEvalRule",
             "name": "NoEvalRule",
@@ -663,7 +603,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Classes\\NoExtendsRule",
             "name": "NoExtendsRule",
@@ -674,7 +613,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Expressions\\NoIssetRule",
             "name": "NoIssetRule",
@@ -685,7 +623,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\CallLikes\\NoNamedArgumentRule",
             "name": "NoNamedArgumentRule",
@@ -696,7 +633,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Closures\\NoNullableReturnTypeDeclarationRule",
             "name": "NoNullableReturnTypeDeclarationRule",
@@ -707,7 +643,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Functions\\NoNullableReturnTypeDeclarationRule",
             "name": "NoNullableReturnTypeDeclarationRule",
@@ -718,7 +653,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\NoNullableReturnTypeDeclarationRule",
             "name": "NoNullableReturnTypeDeclarationRule",
@@ -729,7 +663,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Closures\\NoParameterPassedByReferenceRule",
             "name": "NoParameterPassedByReferenceRule",
@@ -740,7 +673,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Functions\\NoParameterPassedByReferenceRule",
             "name": "NoParameterPassedByReferenceRule",
@@ -751,7 +683,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\NoParameterPassedByReferenceRule",
             "name": "NoParameterPassedByReferenceRule",
@@ -762,7 +693,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\NoParameterWithContainerTypeDeclarationRule",
             "name": "NoParameterWithContainerTypeDeclarationRule",
@@ -773,7 +703,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Closures\\NoParameterWithNullDefaultValueRule",
             "name": "NoParameterWithNullDefaultValueRule",
@@ -784,7 +713,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Functions\\NoParameterWithNullDefaultValueRule",
             "name": "NoParameterWithNullDefaultValueRule",
@@ -795,7 +723,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\NoParameterWithNullDefaultValueRule",
             "name": "NoParameterWithNullDefaultValueRule",
@@ -806,7 +733,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Closures\\NoParameterWithNullableTypeDeclarationRule",
             "name": "NoParameterWithNullableTypeDeclarationRule",
@@ -817,7 +743,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Functions\\NoParameterWithNullableTypeDeclarationRule",
             "name": "NoParameterWithNullableTypeDeclarationRule",
@@ -828,7 +753,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\NoParameterWithNullableTypeDeclarationRule",
             "name": "NoParameterWithNullableTypeDeclarationRule",
@@ -839,7 +763,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Files\\NoPhpstanIgnoreRule",
             "name": "NoPhpstanIgnoreRule",
@@ -850,7 +773,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Functions\\NoReturnByReferenceRule",
             "name": "NoReturnByReferenceRule",
@@ -861,7 +783,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\NoReturnByReferenceRule",
             "name": "NoReturnByReferenceRule",
@@ -872,7 +793,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Statements\\NoSwitchRule",
             "name": "NoSwitchRule",
@@ -883,7 +803,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Methods\\PrivateInFinalClassRule",
             "name": "PrivateInFinalClassRule",
@@ -894,7 +813,6 @@
             "tip": ""
         },
         {
-            "group": "Ergebnis",
             "package": "ergebnis/phpstan-rules",
             "class": "Ergebnis\\PHPStan\\Rules\\Classes\\PHPUnit\\Framework\\TestCaseWithSuffixRule",
             "name": "TestCaseWithSuffixRule",
@@ -905,7 +823,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\CheckDispatchArgumentTypesCompatibleWithClassConstructorRule",
             "name": "CheckDispatchArgumentTypesCompatibleWithClassConstructorRule",
@@ -916,7 +833,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\ConfigCollectionRule",
             "name": "ConfigCollectionRule",
@@ -927,7 +843,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\DeferrableServiceProviderMissingProvidesRule",
             "name": "DeferrableServiceProviderMissingProvidesRule",
@@ -938,7 +853,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\ModelAppendsRule",
             "name": "ModelAppendsRule",
@@ -949,7 +863,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\NoAuthFacadeInRequestScopeRule",
             "name": "NoAuthFacadeInRequestScopeRule",
@@ -960,7 +873,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\NoAuthHelperInRequestScopeRule",
             "name": "NoAuthHelperInRequestScopeRule",
@@ -971,7 +883,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\NoEnvCallsOutsideOfConfigRule",
             "name": "NoEnvCallsOutsideOfConfigRule",
@@ -982,7 +893,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\NoMissingTranslationsRule",
             "name": "NoMissingTranslationsRule",
@@ -993,7 +903,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\NoModelMakeRule",
             "name": "NoModelMakeRule",
@@ -1004,7 +913,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\NoPublicModelScopeAndAccessorRule",
             "name": "NoPublicModelScopeAndAccessorRule",
@@ -1015,7 +923,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\NoUnnecessaryCollectionCallRule",
             "name": "NoUnnecessaryCollectionCallRule",
@@ -1026,7 +933,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\NoUnnecessaryEnumerableToArrayCallsRule",
             "name": "NoUnnecessaryEnumerableToArrayCallsRule",
@@ -1037,7 +943,6 @@
             "tip": "Use [all()] to get the items as an array."
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\UselessConstructs\\NoUselessValueFunctionCallsRule",
             "name": "NoUselessValueFunctionCallsRule",
@@ -1048,7 +953,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\UselessConstructs\\NoUselessWithFunctionCallsRule",
             "name": "NoUselessWithFunctionCallsRule",
@@ -1059,7 +963,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\OctaneCompatibilityRule",
             "name": "OctaneCompatibilityRule",
@@ -1070,7 +973,6 @@
             "tip": "See: https://laravel.com/docs/octane#dependency-injection-and-octane"
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\RelationExistenceRule",
             "name": "RelationExistenceRule",
@@ -1081,7 +983,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\ConsoleCommand\\UndefinedArgumentOrOptionRule",
             "name": "UndefinedArgumentOrOptionRule",
@@ -1092,7 +993,6 @@
             "tip": ""
         },
         {
-            "group": "Larastan",
             "package": "larastan/larastan",
             "class": "Larastan\\Larastan\\Rules\\UnusedViewsRule",
             "name": "UnusedViewsRule",
@@ -1103,7 +1003,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\AllowComparingOnlyComparableTypesRule",
             "name": "AllowComparingOnlyComparableTypesRule",
@@ -1114,7 +1013,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\BackedEnumGenericsRule",
             "name": "BackedEnumGenericsRule",
@@ -1125,7 +1023,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ClassSuffixNamingRule",
             "name": "ClassSuffixNamingRule",
@@ -1136,7 +1033,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\EnforceClosureParamNativeTypehintRule",
             "name": "EnforceClosureParamNativeTypehintRule",
@@ -1147,7 +1043,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\EnforceEnumMatchRule",
             "name": "EnforceEnumMatchRule",
@@ -1158,7 +1053,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\EnforceIteratorToArrayPreserveKeysRule",
             "name": "EnforceIteratorToArrayPreserveKeysRule",
@@ -1169,7 +1063,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\EnforceListReturnRule",
             "name": "EnforceListReturnRule",
@@ -1180,7 +1073,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\EnforceNativeReturnTypehintRule",
             "name": "EnforceNativeReturnTypehintRule",
@@ -1191,7 +1083,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\EnforceReadonlyPublicPropertyRule",
             "name": "EnforceReadonlyPublicPropertyRule",
@@ -1202,7 +1093,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidArithmeticOperationOnNonNumberRule",
             "name": "ForbidArithmeticOperationOnNonNumberRule",
@@ -1213,7 +1103,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidCastRule",
             "name": "ForbidCastRule",
@@ -1224,7 +1113,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidCheckedExceptionInCallableRule",
             "name": "ForbidCheckedExceptionInCallableRule",
@@ -1235,7 +1123,6 @@
             "tip": "If this callable is immediately called within '$usedAsArgumentOfMethodName', you should add @param-immediately-invoked-callable there. Then this error disappears and the exception will be properly propagated."
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidCheckedExceptionInYieldingMethodRule",
             "name": "ForbidCheckedExceptionInYieldingMethodRule",
@@ -1246,7 +1133,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidCustomFunctionsRule",
             "name": "ForbidCustomFunctionsRule",
@@ -1257,7 +1143,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidEnumInFunctionArgumentsRule",
             "name": "ForbidEnumInFunctionArgumentsRule",
@@ -1268,7 +1153,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidFetchOnMixedRule",
             "name": "ForbidFetchOnMixedRule",
@@ -1279,7 +1163,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidIdenticalClassComparisonRule",
             "name": "ForbidIdenticalClassComparisonRule",
@@ -1290,7 +1173,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidIncrementDecrementOnNonIntegerRule",
             "name": "ForbidIncrementDecrementOnNonIntegerRule",
@@ -1301,7 +1183,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidMatchDefaultArmForEnumsRule",
             "name": "ForbidMatchDefaultArmForEnumsRule",
@@ -1312,7 +1193,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidMethodCallOnMixedRule",
             "name": "ForbidMethodCallOnMixedRule",
@@ -1323,7 +1203,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidNotNormalizedTypeRule",
             "name": "ForbidNotNormalizedTypeRule",
@@ -1334,7 +1213,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidNullInAssignOperationsRule",
             "name": "ForbidNullInAssignOperationsRule",
@@ -1345,7 +1223,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidNullInBinaryOperationsRule",
             "name": "ForbidNullInBinaryOperationsRule",
@@ -1356,7 +1233,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidNullInInterpolatedStringRule",
             "name": "ForbidNullInInterpolatedStringRule",
@@ -1367,7 +1243,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidPhpDocNullabilityMismatchWithNativeTypehintRule",
             "name": "ForbidPhpDocNullabilityMismatchWithNativeTypehintRule",
@@ -1378,7 +1253,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidProtectedEnumMethodRule",
             "name": "ForbidProtectedEnumMethodRule",
@@ -1389,7 +1263,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidReturnInConstructorRule",
             "name": "ForbidReturnInConstructorRule",
@@ -1400,7 +1273,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidReturnValueInYieldingMethodRule",
             "name": "ForbidReturnValueInYieldingMethodRule",
@@ -1411,7 +1283,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidUnsafeArrayKeyRule",
             "name": "ForbidUnsafeArrayKeyRule",
@@ -1422,7 +1293,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidUnsetClassFieldRule",
             "name": "ForbidUnsetClassFieldRule",
@@ -1433,7 +1303,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidUnusedClosureParametersRule",
             "name": "ForbidUnusedClosureParametersRule",
@@ -1444,7 +1313,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidUnusedExceptionRule",
             "name": "ForbidUnusedExceptionRule",
@@ -1455,7 +1323,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidUnusedMatchResultRule",
             "name": "ForbidUnusedMatchResultRule",
@@ -1466,7 +1333,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidUselessNullableReturnRule",
             "name": "ForbidUselessNullableReturnRule",
@@ -1477,7 +1343,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\ForbidVariableTypeOverwritingRule",
             "name": "ForbidVariableTypeOverwritingRule",
@@ -1488,7 +1353,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\RequirePreviousExceptionPassRule",
             "name": "RequirePreviousExceptionPassRule",
@@ -1499,7 +1363,6 @@
             "tip": ""
         },
         {
-            "group": "ShipMonk",
             "package": "shipmonk/phpstan-rules",
             "class": "ShipMonk\\PHPStan\\Rule\\UselessPrivatePropertyDefaultValueRule",
             "name": "UselessPrivatePropertyDefaultValueRule",
@@ -1510,7 +1373,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\AccessGlobalVariableWithinContextRule",
             "name": "AccessGlobalVariableWithinContextRule",
@@ -1521,7 +1383,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\AccessStaticPropertyWithinModelContextRule",
             "name": "AccessStaticPropertyWithinModelContextRule",
@@ -1532,7 +1393,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\ClassNotationRule",
             "name": "ClassNotationRule",
@@ -1543,7 +1403,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\GotoRule",
             "name": "GotoRule",
@@ -1554,7 +1413,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\MissingClosureParameterTypehintRule",
             "name": "MissingClosureParameterTypehintRule",
@@ -1565,7 +1423,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\NotNow\\NoDateWithoutSecondArgumentRule",
             "name": "NoDateWithoutSecondArgumentRule",
@@ -1576,7 +1433,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\NotNow\\NoRelativeDateTimeInterfaceRule",
             "name": "NoRelativeDateTimeInterfaceRule",
@@ -1587,7 +1443,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\NotNow\\NoRelativeStrtotimeRule",
             "name": "NoRelativeStrtotimeRule",
@@ -1598,7 +1453,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\NotNow\\NoTimeRule",
             "name": "NoTimeRule",
@@ -1609,7 +1463,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\PhpUnitFqcnAnnotationRule",
             "name": "PhpUnitFqcnAnnotationRule",
@@ -1620,7 +1473,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\StringToClassRule",
             "name": "StringToClassRule",
@@ -1631,7 +1483,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\SymfonyFilesystemRule",
             "name": "SymfonyFilesystemRule",
@@ -1642,7 +1493,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\SymfonyProcessRule",
             "name": "SymfonyProcessRule",
@@ -1653,7 +1503,6 @@
             "tip": ""
         },
         {
-            "group": "Slam",
             "package": "slam/phpstan-extensions",
             "class": "SlamPhpStan\\UnusedVariableRule",
             "name": "UnusedVariableRule",
@@ -1664,7 +1513,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\AlreadyRegisteredAutodiscoveryServiceRule",
             "name": "AlreadyRegisteredAutodiscoveryServiceRule",
@@ -1675,7 +1523,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\AvoidFeatureSetAttributeInRectorRule",
             "name": "AvoidFeatureSetAttributeInRectorRule",
@@ -1686,7 +1533,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\CheckRequiredInterfaceInContractNamespaceRule",
             "name": "CheckRequiredInterfaceInContractNamespaceRule",
@@ -1697,7 +1543,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\ClassNameRespectsParentSuffixRule",
             "name": "ClassNameRespectsParentSuffixRule",
@@ -1708,7 +1553,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Explicit\\ExplicitClassPrefixSuffixRule",
             "name": "ExplicitClassPrefixSuffixRule",
@@ -1719,7 +1563,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\PHPUnit\\ExplicitExpectsMockMethodRule",
             "name": "ExplicitExpectsMockMethodRule",
@@ -1730,7 +1573,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\FileNameMatchesExtensionRule",
             "name": "FileNameMatchesExtensionRule",
@@ -1741,7 +1583,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Complexity\\ForbiddenArrayMethodCallRule",
             "name": "ForbiddenArrayMethodCallRule",
@@ -1752,7 +1593,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\ForbiddenExtendOfNonAbstractClassRule",
             "name": "ForbiddenExtendOfNonAbstractClassRule",
@@ -1763,7 +1603,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\ForbiddenFuncCallRule",
             "name": "ForbiddenFuncCallRule",
@@ -1774,7 +1613,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\ForbiddenMultipleClassLikeInOneFileRule",
             "name": "ForbiddenMultipleClassLikeInOneFileRule",
@@ -1785,7 +1623,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Complexity\\ForbiddenNewArgumentRule",
             "name": "ForbiddenNewArgumentRule",
@@ -1796,7 +1633,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\ForbiddenNodeRule",
             "name": "ForbiddenNodeRule",
@@ -1807,7 +1643,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\ForbiddenStaticClassConstFetchRule",
             "name": "ForbiddenStaticClassConstFetchRule",
@@ -1818,7 +1653,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Complexity\\ForeachCeptionRule",
             "name": "ForeachCeptionRule",
@@ -1829,7 +1663,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\FormTypeClassNameRule",
             "name": "FormTypeClassNameRule",
@@ -1840,7 +1673,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\MaximumIgnoredErrorCountRule",
             "name": "MaximumIgnoredErrorCountRule",
@@ -1851,7 +1683,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoAbstractControllerConstructorRule",
             "name": "NoAbstractControllerConstructorRule",
@@ -1862,7 +1693,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Complexity\\NoArrayMapWithArrayCallableRule",
             "name": "NoArrayMapWithArrayCallableRule",
@@ -1873,7 +1703,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\PHPUnit\\NoAssertFuncCallInTestsRule",
             "name": "NoAssertFuncCallInTestsRule",
@@ -1884,7 +1713,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoBareAndSecurityIsGrantedContentsRule",
             "name": "NoBareAndSecurityIsGrantedContentsRule",
@@ -1895,7 +1723,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\NoBundleResourceConfigRule",
             "name": "NoBundleResourceConfigRule",
@@ -1906,7 +1733,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoClassLevelRouteRule",
             "name": "NoClassLevelRouteRule",
@@ -1917,7 +1743,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\NoClassReflectionStaticReflectionRule",
             "name": "NoClassReflectionStaticReflectionRule",
@@ -1928,7 +1753,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoConstructorAndRequiredTogetherRule",
             "name": "NoConstructorAndRequiredTogetherRule",
@@ -1939,7 +1763,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Complexity\\NoConstructorOverrideRule",
             "name": "NoConstructorOverrideRule",
@@ -1950,7 +1773,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoControllerMethodInjectionRule",
             "name": "NoControllerMethodInjectionRule",
@@ -1961,7 +1783,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoDoctrineListenerWithoutContractRule",
             "name": "NoDoctrineListenerWithoutContractRule",
@@ -1972,7 +1793,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoDocumentMockingRule",
             "name": "NoDocumentMockingRule",
@@ -1983,7 +1803,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\PHPUnit\\NoDoubleConsecutiveTestMockRule",
             "name": "NoDoubleConsecutiveTestMockRule",
@@ -1994,7 +1813,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\NoDuplicateArgAutowireByTypeRule",
             "name": "NoDuplicateArgAutowireByTypeRule",
@@ -2005,7 +1823,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\NoDuplicateArgsAutowireByTypeRule",
             "name": "NoDuplicateArgsAutowireByTypeRule",
@@ -2016,7 +1833,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\NoDynamicNameRule",
             "name": "NoDynamicNameRule",
@@ -2027,7 +1843,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoEntityMockingRule",
             "name": "NoEntityMockingRule",
@@ -2038,7 +1853,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\NoEntityOutsideEntityNamespaceRule",
             "name": "NoEntityOutsideEntityNamespaceRule",
@@ -2049,7 +1863,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoFindTaggedServiceIdsCallRule",
             "name": "NoFindTaggedServiceIdsCallRule",
@@ -2060,7 +1873,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoGetDoctrineInControllerRule",
             "name": "NoGetDoctrineInControllerRule",
@@ -2071,7 +1883,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoGetInCommandRule",
             "name": "NoGetInCommandRule",
@@ -2082,7 +1893,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoGetInControllerRule",
             "name": "NoGetInControllerRule",
@@ -2093,7 +1903,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoGetRepositoryOnServiceRepositoryEntityRule",
             "name": "NoGetRepositoryOnServiceRepositoryEntityRule",
@@ -2104,7 +1913,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoGetRepositoryOutsideServiceRule",
             "name": "NoGetRepositoryOutsideServiceRule",
@@ -2115,7 +1923,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\NoGlobalConstRule",
             "name": "NoGlobalConstRule",
@@ -2126,7 +1933,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\NoInstanceOfStaticReflectionRule",
             "name": "NoInstanceOfStaticReflectionRule",
@@ -2137,7 +1943,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\NoIntegerRefactorReturnRule",
             "name": "NoIntegerRefactorReturnRule",
@@ -2148,7 +1953,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Complexity\\NoJustPropertyAssignRule",
             "name": "NoJustPropertyAssignRule",
@@ -2159,7 +1963,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\NoLeadingBackslashInNameRule",
             "name": "NoLeadingBackslashInNameRule",
@@ -2170,7 +1973,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoListenerWithoutContractRule",
             "name": "NoListenerWithoutContractRule",
@@ -2181,7 +1983,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Explicit\\NoMissingVariableDimFetchRule",
             "name": "NoMissingVariableDimFetchRule",
@@ -2192,7 +1993,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\NoMissnamedDocTagRule",
             "name": "NoMissnamedDocTagRule",
@@ -2203,7 +2003,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\PHPUnit\\NoMockObjectAndRealObjectPropertyRule",
             "name": "NoMockObjectAndRealObjectPropertyRule",
@@ -2214,7 +2013,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\PHPUnit\\NoMockOnlyTestRule",
             "name": "NoMockOnlyTestRule",
@@ -2225,7 +2023,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\NoOnlyNullReturnInRefactorRule",
             "name": "NoOnlyNullReturnInRefactorRule",
@@ -2236,7 +2033,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoParentRepositoryRule",
             "name": "NoParentRepositoryRule",
@@ -2247,7 +2043,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\NoPropertyNodeAssignRule",
             "name": "NoPropertyNodeAssignRule",
@@ -2258,7 +2053,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Explicit\\NoProtectedClassStmtRule",
             "name": "NoProtectedClassStmtRule",
@@ -2269,7 +2063,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\NoReferenceRule",
             "name": "NoReferenceRule",
@@ -2280,7 +2073,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\NoRepositoryCallInDataFixtureRule",
             "name": "NoRepositoryCallInDataFixtureRule",
@@ -2291,7 +2083,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoRequiredOutsideClassRule",
             "name": "NoRequiredOutsideClassRule",
@@ -2302,7 +2093,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\NoReturnSetterMethodRule",
             "name": "NoReturnSetterMethodRule",
@@ -2313,7 +2103,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoRouteTrailingSlashPathRule",
             "name": "NoRouteTrailingSlashPathRule",
@@ -2324,7 +2113,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoRoutingPrefixRule",
             "name": "NoRoutingPrefixRule",
@@ -2335,7 +2123,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoServiceAutowireDuplicateRule",
             "name": "NoServiceAutowireDuplicateRule",
@@ -2346,7 +2133,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\NoServiceSameNameSetClassRule",
             "name": "NoServiceSameNameSetClassRule",
@@ -2357,7 +2143,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\NoSetClassServiceDuplicationRule",
             "name": "NoSetClassServiceDuplicationRule",
@@ -2368,7 +2153,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\NoStringInGetSubscribedEventsRule",
             "name": "NoStringInGetSubscribedEventsRule",
@@ -2379,7 +2163,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\PHPUnit\\NoTestMocksRule",
             "name": "NoTestMocksRule",
@@ -2390,7 +2173,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\NoValueObjectInServiceConstructorRule",
             "name": "NoValueObjectInServiceConstructorRule",
@@ -2401,7 +2183,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Convention\\ParamNameToTypeConventionRule",
             "name": "ParamNameToTypeConventionRule",
@@ -2412,7 +2193,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\PhpUpgradeDowngradeRegisteredInSetRule",
             "name": "PhpUpgradeDowngradeRegisteredInSetRule",
@@ -2423,7 +2203,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\PhpUpgradeImplementsMinPhpVersionInterfaceRule",
             "name": "PhpUpgradeImplementsMinPhpVersionInterfaceRule",
@@ -2434,7 +2213,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\PreferAutowireAttributeOverConfigParamRule",
             "name": "PreferAutowireAttributeOverConfigParamRule",
@@ -2445,7 +2223,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Rector\\PreferDirectIsNameRule",
             "name": "PreferDirectIsNameRule",
@@ -2456,7 +2233,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\PreferredClassRule",
             "name": "PreferredClassRule",
@@ -2467,7 +2243,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\PreventParentMethodVisibilityOverrideRule",
             "name": "PreventParentMethodVisibilityOverrideRule",
@@ -2478,7 +2253,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\PHPUnit\\PublicStaticDataProviderRule",
             "name": "PublicStaticDataProviderRule",
@@ -2489,7 +2263,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\RequireAttributeNameRule",
             "name": "RequireAttributeNameRule",
@@ -2500,7 +2273,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Domain\\RequireAttributeNamespaceRule",
             "name": "RequireAttributeNamespaceRule",
@@ -2511,7 +2283,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Domain\\RequireExceptionNamespaceRule",
             "name": "RequireExceptionNamespaceRule",
@@ -2522,7 +2293,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\RequireInvokableControllerRule",
             "name": "RequireInvokableControllerRule",
@@ -2533,7 +2303,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\RequireIsGrantedEnumRule",
             "name": "RequireIsGrantedEnumRule",
@@ -2544,7 +2313,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\RequireQueryBuilderOnRepositoryRule",
             "name": "RequireQueryBuilderOnRepositoryRule",
@@ -2555,7 +2323,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\RequireRouteNameToGenerateControllerRouteRule",
             "name": "RequireRouteNameToGenerateControllerRouteRule",
@@ -2566,7 +2333,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Doctrine\\RequireServiceRepositoryParentRule",
             "name": "RequireServiceRepositoryParentRule",
@@ -2577,7 +2343,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Enum\\RequireUniqueEnumConstantRule",
             "name": "RequireUniqueEnumConstantRule",
@@ -2588,7 +2353,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\RequiredOnlyInAbstractRule",
             "name": "RequiredOnlyInAbstractRule",
@@ -2599,7 +2363,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\SeeAnnotationToTestRule",
             "name": "SeeAnnotationToTestRule",
@@ -2610,7 +2373,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\ServicesExcludedDirectoryMustExistRule",
             "name": "ServicesExcludedDirectoryMustExistRule",
@@ -2621,7 +2383,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\SingleArgEventDispatchRule",
             "name": "SingleArgEventDispatchRule",
@@ -2632,7 +2393,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\SingleRequiredMethodRule",
             "name": "SingleRequiredMethodRule",
@@ -2643,7 +2403,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\StringFileAbsolutePathExistsRule",
             "name": "StringFileAbsolutePathExistsRule",
@@ -2654,7 +2413,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\Symfony\\ConfigClosure\\TaggedIteratorOverRepeatedServiceCallRule",
             "name": "TaggedIteratorOverRepeatedServiceCallRule",
@@ -2665,7 +2423,6 @@
             "tip": ""
         },
         {
-            "group": "Symplify",
             "package": "symplify/phpstan-rules",
             "class": "Symplify\\PHPStanRules\\Rules\\UppercaseConstantRule",
             "name": "UppercaseConstantRule",
@@ -2676,7 +2433,6 @@
             "tip": ""
         },
         {
-            "group": "Type Coverage",
             "package": "tomasvotruba/type-coverage",
             "class": "TomasVotruba\\TypeCoverage\\Rules\\ConstantTypeCoverageRule",
             "name": "ConstantTypeCoverageRule",
@@ -2687,7 +2443,6 @@
             "tip": ""
         },
         {
-            "group": "Type Coverage",
             "package": "tomasvotruba/type-coverage",
             "class": "TomasVotruba\\TypeCoverage\\Rules\\DeclareCoverageRule",
             "name": "DeclareCoverageRule",
@@ -2698,7 +2453,6 @@
             "tip": ""
         },
         {
-            "group": "Type Coverage",
             "package": "tomasvotruba/type-coverage",
             "class": "TomasVotruba\\TypeCoverage\\Rules\\ParamTypeCoverageRule",
             "name": "ParamTypeCoverageRule",
@@ -2709,7 +2463,6 @@
             "tip": ""
         },
         {
-            "group": "Type Coverage",
             "package": "tomasvotruba/type-coverage",
             "class": "TomasVotruba\\TypeCoverage\\Rules\\PropertyTypeCoverageRule",
             "name": "PropertyTypeCoverageRule",
@@ -2720,7 +2473,6 @@
             "tip": ""
         },
         {
-            "group": "Type Coverage",
             "package": "tomasvotruba/type-coverage",
             "class": "TomasVotruba\\TypeCoverage\\Rules\\ReturnTypeCoverageRule",
             "name": "ReturnTypeCoverageRule",
@@ -2731,7 +2483,6 @@
             "tip": ""
         },
         {
-            "group": "Unused Public",
             "package": "tomasvotruba/unused-public",
             "class": "TomasVotruba\\UnusedPublic\\Rules\\LocalOnlyPublicClassMethodRule",
             "name": "LocalOnlyPublicClassMethodRule",
@@ -2742,7 +2493,6 @@
             "tip": ""
         },
         {
-            "group": "Unused Public",
             "package": "tomasvotruba/unused-public",
             "class": "TomasVotruba\\UnusedPublic\\Rules\\RelativeUnusedPublicClassMethodRule",
             "name": "RelativeUnusedPublicClassMethodRule",
@@ -2753,7 +2503,6 @@
             "tip": ""
         },
         {
-            "group": "Unused Public",
             "package": "tomasvotruba/unused-public",
             "class": "TomasVotruba\\UnusedPublic\\Rules\\UnusedPublicClassConstRule",
             "name": "UnusedPublicClassConstRule",
@@ -2764,7 +2513,6 @@
             "tip": ""
         },
         {
-            "group": "Unused Public",
             "package": "tomasvotruba/unused-public",
             "class": "TomasVotruba\\UnusedPublic\\Rules\\UnusedPublicClassMethodRule",
             "name": "UnusedPublicClassMethodRule",
@@ -2775,7 +2523,6 @@
             "tip": ""
         },
         {
-            "group": "Unused Public",
             "package": "tomasvotruba/unused-public",
             "class": "TomasVotruba\\UnusedPublic\\Rules\\UnusedPublicPropertyRule",
             "name": "UnusedPublicPropertyRule",
@@ -2786,7 +2533,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\DisallowedCallMethodOnNullRule",
             "name": "DisallowedCallMethodOnNullRule",
@@ -2797,7 +2543,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\ElseIfConditionBasicRule",
             "name": "ElseIfConditionBasicRule",
@@ -2808,7 +2553,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\ExtendedAssignOpRule",
             "name": "ExtendedAssignOpRule",
@@ -2819,7 +2563,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\ExtendedBinaryOpRule",
             "name": "ExtendedBinaryOpRule",
@@ -2830,7 +2573,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\IfConditionBasicRule",
             "name": "IfConditionBasicRule",
@@ -2841,7 +2583,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\IfConditionBooleanAndRule",
             "name": "IfConditionBooleanAndRule",
@@ -2852,7 +2593,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\IfConditionBooleanNotRule",
             "name": "IfConditionBooleanNotRule",
@@ -2863,7 +2603,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\IfConditionBooleanOrRule",
             "name": "IfConditionBooleanOrRule",
@@ -2874,7 +2613,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\IfConditionMatchRule",
             "name": "IfConditionMatchRule",
@@ -2885,7 +2623,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\IfConditionRule",
             "name": "IfConditionRule",
@@ -2896,7 +2633,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\IfConditionSwitchCaseRule",
             "name": "IfConditionSwitchCaseRule",
@@ -2907,7 +2643,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\IfConditionTernaryOperatorRule",
             "name": "IfConditionTernaryOperatorRule",
@@ -2918,7 +2653,6 @@
             "tip": ""
         },
         {
-            "group": "Voku",
             "package": "voku/phpstan-rules",
             "class": "voku\\PHPStan\\Rules\\WrongCastRule",
             "name": "WrongCastRule",
