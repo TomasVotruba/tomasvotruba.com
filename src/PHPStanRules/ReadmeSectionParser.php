@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\PhpstanRules;
+namespace App\PHPStanRules;
 
 final class ReadmeSectionParser
 {
@@ -53,6 +53,7 @@ final class ReadmeSectionParser
                 return (string) file_get_contents($path);
             }
         }
+
         return '';
     }
 
@@ -67,6 +68,7 @@ final class ReadmeSectionParser
         if ($parts === false || $parts === []) {
             return strtolower($h);
         }
+
         return strtolower((string) end($parts));
     }
 }

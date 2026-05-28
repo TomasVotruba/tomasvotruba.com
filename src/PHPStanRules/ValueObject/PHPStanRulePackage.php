@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\ValueObject;
+namespace App\PHPStanRules\ValueObject;
 
-final readonly class PhpstanRulePackage
+final readonly class PHPStanRulePackage
 {
     public function __construct(
         private string $package,

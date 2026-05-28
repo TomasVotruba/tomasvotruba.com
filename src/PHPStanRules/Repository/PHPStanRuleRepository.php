@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace App\Repository;
+namespace App\PHPStanRules\Repository;
 
-use App\ValueObject\PhpstanRule;
+use App\PHPStanRules\ValueObject\PHPStanRule;
 use RuntimeException;
 
-final class PhpstanRuleRepository
+final class PHPStanRuleRepository
 {
-    private const JSON_FILENAME = 'discover-phpstan-rules.json';
+    private const string JSON_FILENAME = 'discover-phpstan-rules.json';
 
-    private const MIN_RULES_PER_PACKAGE = 3;
+    private const int MIN_RULES_PER_PACKAGE = 3;
 
     /**
-     * @var PhpstanRule[]|null
+     * @var PHPStanRule[]|null
      */
     private ?array $cache = null;
 
     /**
-     * @return PhpstanRule[]
+     * @return PHPStanRule[]
      */
     public function fetchAll(): array
     {
@@ -39,17 +39,15 @@ final class PhpstanRuleRepository
 
         $rules = [];
         foreach ($payload['rules'] ?? [] as $entry) {
-            $rules[] = new PhpstanRule(
+            $rules[] = new PHPStanRule(
                 group: (string) ($entry['group'] ?? ''),
                 package: (string) ($entry['package'] ?? ''),
                 class: (string) ($entry['class'] ?? ''),
                 name: (string) ($entry['name'] ?? ''),
                 message: (string) ($entry['message'] ?? ''),
                 description: (string) ($entry['description'] ?? ''),
-                nodeType: (string) ($entry['node_type'] ?? ''),
                 wrongCode: (string) ($entry['wrong_code'] ?? ''),
                 correctCode: (string) ($entry['correct_code'] ?? ''),
-                identifier: (string) ($entry['identifier'] ?? ''),
                 tip: (string) ($entry['tip'] ?? ''),
             );
         }
@@ -58,14 +56,15 @@ final class PhpstanRuleRepository
     }
 
     /**
-     * @return array<string, PhpstanRule[]>
+     * @return array<string, PHPStanRule[]>
      */
     public function fetchGroupedByPackage(): array
     {
         $grouped = [];
-        foreach ($this->fetchAll() as $rule) {
-            $grouped[$rule->getPackage()][] = $rule;
+        foreach ($this->fetchAll() as $phpStanRule) {
+            $grouped[$phpStanRule->getPackage()][] = $phpStanRule;
         }
+
         $grouped = array_filter(
             $grouped,
             static fn (array $rules): bool => count($rules) >= self::MIN_RULES_PER_PACKAGE,
@@ -83,6 +82,7 @@ final class PhpstanRuleRepository
         if (! is_file($path)) {
             return null;
         }
+
         $payload = json_decode((string) file_get_contents($path), true);
         return $payload['generated_at'] ?? null;
     }

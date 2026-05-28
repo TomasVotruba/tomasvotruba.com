@@ -1,25 +1,16 @@
 @extends('layout/layout_base')
 
 @php
-    /** @var array<string, \App\ValueObject\PhpstanRule[]> $groupedRules */
+    /** @var array<string, \App\PHPStanRules\ValueObject\PHPStanRule[]> $groupedRules */
     /** @var int $totalCount */
     /** @var string|null $generatedAt */
-    /** @var array<string, \App\ValueObject\PhpstanRulePackage> $packagesByName */
+    /** @var array<string, \App\PHPStanRules\ValueObject\PHPStanRulePackage> $packagesByName */
 @endphp
 
 @section('content')
     <style>
         .rule-pkg-label { display: none; }
         #ranked-view .rule-pkg-label { display: block; }
-        .rule-tag {
-            display: inline-block;
-            background: #eef1f4;
-            color: #495057;
-            border-radius: .25em;
-            padding: .1em .5em;
-            margin: 0 .35em .35em 0;
-            font-size: .78em;
-        }
     </style>
 
     <div class="container">
@@ -44,7 +35,7 @@
                 type="search"
                 id="rule-search"
                 class="form-control form-control-lg shadow-sm"
-                placeholder="Search rules by class, message, identifier, tag... (e.g. forbidCast, symplify.noDynamicName, mixed)"
+                placeholder="Search rules by class, message, description... (e.g. forbidCast, noDynamicName, mixed)"
                 autocomplete="off"
             >
             <div id="search-match-count" class="text-secondary mt-2" style="font-size: .9em; display: none;"></div>
@@ -99,18 +90,14 @@
 
                     @foreach ($rules as $rule)
                         @php
-                            $tags = $rule->getTags();
                             $hasSnippet = $rule->getWrongCode() !== '' || $rule->getCorrectCode() !== '';
                             $searchIndex[] = [
                                 'slug' => $rule->getSlug(),
                                 'name' => $rule->getName(),
-                                'identifier' => $rule->getIdentifier(),
                                 'tip' => $rule->getTip(),
-                                'tags' => $tags,
                                 'message' => $rule->getMessage(),
                                 'description' => $rule->getDescription(),
                                 'class' => $rule->getClass(),
-                                'nodeType' => $rule->getNodeType(),
                                 'package' => $rule->getPackage(),
                                 'group' => $rule->getGroup(),
                             ];
@@ -125,27 +112,13 @@
                                     <span class="mx-1">&middot;</span>{{ $rule->getGroup() }}
                                 </div>
 
-                                <div class="d-flex justify-content-between align-items-start mb-2 flex-wrap">
-                                    <h3 class="mt-0 mb-1" style="font-size: 1.2em;">
-                                        {{ $rule->getName() }}
-                                    </h3>
-                                    @if ($rule->getNodeType())
-                                        <span class="badge text-bg-light text-secondary" style="font-weight: normal;">
-                                            Node: <code>{{ $rule->getNodeType() }}</code>
-                                        </span>
-                                    @endif
-                                </div>
+                                <h3 class="mt-0 mb-2" style="font-size: 1.2em;">
+                                    {{ $rule->getName() }}
+                                </h3>
 
                                 <p class="mb-2" style="font-family: monospace; font-size: .85em; color: #666; word-break: break-all;">
                                     {{ $rule->getClass() }}
                                 </p>
-
-                                @if ($rule->getIdentifier())
-                                    <p class="mb-2" style="font-size: .9em;">
-                                        <em class="text-secondary">Identifier:</em>
-                                        <code style="background: #f8f9fa; padding: .15em .4em; border-radius: 3px;">{{ $rule->getIdentifier() }}</code>
-                                    </p>
-                                @endif
 
                                 @if ($rule->getDescription())
                                     <p class="mb-2">{{ $rule->getDescription() }}</p>
@@ -162,14 +135,6 @@
                                     <p class="mb-2 text-secondary" style="font-size: .9em;">
                                         &#x1F4A1; {{ $rule->getTip() }}
                                     </p>
-                                @endif
-
-                                @if ($tags !== [])
-                                    <div class="mb-2">
-                                        @foreach ($tags as $tag)
-                                            <span class="rule-tag">{{ $tag }}</span>
-                                        @endforeach
-                                    </div>
                                 @endif
 
                                 @if ($hasSnippet)
@@ -232,8 +197,8 @@
 
                 // higher weight = stronger signal in the vector
                 const fieldWeights = {
-                    name: 3, identifier: 3, tags: 2, message: 1,
-                    description: 1, class: 1, tip: 1, nodeType: 1, package: 1, group: 1,
+                    name: 3, message: 1,
+                    description: 1, class: 1, tip: 1, package: 1, group: 1,
                 };
 
                 // --- build the TF-IDF model ---
@@ -252,8 +217,7 @@
                     const terms = Object.keys(tf);
                     terms.forEach(function (t) { df[t] = (df[t] || 0) + 1; });
 
-                    const compact = [entry.name, entry.identifier, entry.class]
-                        .concat(entry.tags || [])
+                    const compact = [entry.name, entry.class]
                         .join('')
                         .toLowerCase()
                         .replace(/[^a-z0-9]+/g, '');

@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace App\Repository;
+namespace App\PHPStanRules\Repository;
 
-use App\ValueObject\PhpstanRulePackage;
+use App\PHPStanRules\ValueObject\PHPStanRulePackage;
 use RuntimeException;
 
-final class PhpstanRulePackageRepository
+final class PHPStanRulePackageRepository
 {
-    private const JSON_FILENAME = 'discover-phpstan-rule-repositories.json';
+    private const string JSON_FILENAME = 'discover-phpstan-rule-repositories.json';
 
     /**
-     * @var array<string, PhpstanRulePackage>|null
+     * @var array<string, PHPStanRulePackage>|null
      */
     private ?array $cache = null;
 
     /**
      * Keyed by composer package name (e.g. "shipmonk/phpstan-rules").
      *
-     * @return array<string, PhpstanRulePackage>
+     * @return array<string, PHPStanRulePackage>
      */
     public function fetchAllByPackage(): array
     {
@@ -40,7 +40,8 @@ final class PhpstanRulePackageRepository
             if ($package === '') {
                 continue;
             }
-            $packages[$package] = new PhpstanRulePackage(
+
+            $packages[$package] = new PHPStanRulePackage(
                 package: $package,
                 group: (string) ($entry['group'] ?? ''),
                 description: (string) ($entry['description'] ?? ''),

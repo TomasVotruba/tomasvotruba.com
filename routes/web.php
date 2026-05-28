@@ -35,7 +35,7 @@ Route::get('/thumbnail/{title}.png', ThumbnailController::class)
 
 Route::get('/tools', ToolsController::class);
 
-Route::get('/discover-phpstan-rules', \App\Http\Controllers\DiscoverPhpstanRulesController::class);
+Route::get('/discover-phpstan-rules', \App\Http\Controllers\DiscoverPHPStanRulesController::class);
 
 Route::get('/bank',  function () {
     return view('bank', [

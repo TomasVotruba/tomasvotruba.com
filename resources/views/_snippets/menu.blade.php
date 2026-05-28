@@ -8,7 +8,7 @@
 
         <span class="ps-2 pe-2">•</span>
 
-        <a href="{{ action(\App\Http\Controllers\DiscoverPhpstanRulesController::class) }}">Discover PHPStan Rules</a>
+        <a href="{{ action(\App\Http\Controllers\DiscoverPHPStanRulesController::class) }}">Discover PHPStan Rules</a>
 
 
         <div class="float-none float-sm-end">

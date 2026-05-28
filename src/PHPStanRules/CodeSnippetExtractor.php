@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\PhpstanRules;
+namespace App\PHPStanRules;
 
-use App\ValueObject\RuleSnippets;
+use App\PHPStanRules\ValueObject\RuleSnippets;
 
 final class CodeSnippetExtractor
 {
@@ -52,10 +52,13 @@ final class CodeSnippetExtractor
                 if ($paragraph !== []) {
                     break;
                 }
+
                 continue;
             }
+
             $paragraph[] = $trimmed;
         }
+
         return $paragraph;
     }
 
@@ -91,7 +94,7 @@ final class CodeSnippetExtractor
             lcfirst($shortName),
         ];
 
-        return array_values(array_unique(array_map('strtolower', $variants)));
+        return array_values(array_unique(array_map(strtolower(...), $variants)));
     }
 
     /**
@@ -129,6 +132,7 @@ final class CodeSnippetExtractor
                 $correct[] = $line;
             }
         }
+
         return [
             'wrong' => trim(implode("\n", $wrong)),
             'correct' => trim(implode("\n", $correct)),
@@ -147,7 +151,7 @@ final class CodeSnippetExtractor
             ];
         }
 
-        $blocks = array_map('trim', $matches[1]);
+        $blocks = array_map(trim(...), $matches[1]);
         return [
             'wrong' => $blocks[0] ?? '',
             'correct' => $blocks[1] ?? '',

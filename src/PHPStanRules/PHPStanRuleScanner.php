@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\PhpstanRules;
+namespace App\PHPStanRules;
 
-use App\ValueObject\PhpstanRule;
-use App\ValueObject\PhpstanRulePackage;
+use App\PHPStanRules\ValueObject\ParsedRuleClass;
+use App\PHPStanRules\ValueObject\PHPStanRule;
+use App\PHPStanRules\ValueObject\PHPStanRulePackage;
 
-final readonly class PhpstanRuleScanner
+final readonly class PHPStanRuleScanner
 {
     public function __construct(
         private RuleFileFinder $ruleFileFinder,
@@ -18,8 +19,8 @@ final readonly class PhpstanRuleScanner
     }
 
     /**
-     * @param list<PhpstanRulePackage> $packages
-     * @return list<PhpstanRule>
+     * @param list<PHPStanRulePackage> $packages
+     * @return list<PHPStanRule>
      */
     public function scan(array $packages): array
     {
@@ -31,24 +32,22 @@ final readonly class PhpstanRuleScanner
             $sections = $this->readmeSectionParser->parseSections($packageDir);
 
             foreach ($this->ruleFileFinder->findInPackage($packageDir) as $file) {
-                $parsed = $this->ruleClassParser->parse($file, $packageDir);
-                if ($parsed === null) {
+                $parsed = $this->ruleClassParser->parse($file);
+                if (! $parsed instanceof ParsedRuleClass) {
                     continue;
                 }
 
                 $snippets = $this->codeSnippetExtractor->extractFor($parsed->getShortName(), $sections);
 
-                $rules[] = new PhpstanRule(
+                $rules[] = new PHPStanRule(
                     group: $package->getGroup(),
                     package: $package->getPackage(),
                     class: $parsed->getFullyQualifiedName(),
                     name: $parsed->getShortName(),
                     message: $parsed->getMessage(),
                     description: $snippets->getDescription() !== '' ? $snippets->getDescription() : $parsed->getDocComment(),
-                    nodeType: $parsed->getNodeType(),
                     wrongCode: $snippets->getWrongCode(),
                     correctCode: $snippets->getCorrectCode(),
-                    identifier: $parsed->getIdentifier(),
                     tip: $parsed->getTip(),
                 );
             }
@@ -56,7 +55,7 @@ final readonly class PhpstanRuleScanner
 
         usort(
             $rules,
-            static fn (PhpstanRule $a, PhpstanRule $b): int =>
+            static fn (PHPStanRule $a, PHPStanRule $b): int =>
                 $a->getGroup() <=> $b->getGroup() ?: $a->getName() <=> $b->getName()
         );
 

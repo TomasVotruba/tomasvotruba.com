@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Console\Commands;
+namespace App\PHPStanRules\Command;
 
-use App\PhpstanRules\InstalledRulePackageFilter;
-use App\PhpstanRules\PhpstanRuleScanner;
-use App\Repository\PhpstanRulePackageRepository;
-use App\ValueObject\PhpstanRule;
+use App\PHPStanRules\InstalledRulePackageFilter;
+use App\PHPStanRules\PHPStanRuleScanner;
+use App\PHPStanRules\Repository\PHPStanRulePackageRepository;
+use App\PHPStanRules\ValueObject\PHPStanRule;
 use Illuminate\Console\Command;
 use RuntimeException;
 
-final class ScanPhpstanRulesCommand extends Command
+final class ScanPHPStanRulesCommand extends Command
 {
     private const string OUTPUT_FILENAME = 'discover-phpstan-rules.json';
 
@@ -20,9 +20,9 @@ final class ScanPhpstanRulesCommand extends Command
     protected $description = 'Scan installed PHPStan rule packages and write resources/discover-phpstan-rules.json';
 
     public function __construct(
-        private readonly PhpstanRulePackageRepository $phpstanRulePackageRepository,
+        private readonly PHPStanRulePackageRepository $phpstanRulePackageRepository,
         private readonly InstalledRulePackageFilter $installedRulePackageFilter,
-        private readonly PhpstanRuleScanner $phpstanRuleScanner,
+        private readonly PHPStanRuleScanner $phpstanRuleScanner,
     ) {
         parent::__construct();
     }
@@ -31,8 +31,8 @@ final class ScanPhpstanRulesCommand extends Command
     {
         try {
             $packages = $this->phpstanRulePackageRepository->fetchAllByPackage();
-        } catch (RuntimeException $exception) {
-            $this->error($exception->getMessage());
+        } catch (RuntimeException $runtimeException) {
+            $this->error($runtimeException->getMessage());
             return self::FAILURE;
         }
 
@@ -54,7 +54,7 @@ final class ScanPhpstanRulesCommand extends Command
 
         $withSnippets = count(array_filter(
             $rules,
-            static fn (PhpstanRule $rule): bool => $rule->getWrongCode() !== '' || $rule->getCorrectCode() !== '',
+            static fn (PHPStanRule $phpStanRule): bool => $phpStanRule->getWrongCode() !== '' || $phpStanRule->getCorrectCode() !== '',
         ));
 
         $this->info(sprintf(
@@ -72,20 +72,18 @@ final class ScanPhpstanRulesCommand extends Command
     /**
      * @return array<string, string>
      */
-    private function toJsonShape(PhpstanRule $rule): array
+    private function toJsonShape(PHPStanRule $phpStanRule): array
     {
         return [
-            'group' => $rule->getGroup(),
-            'package' => $rule->getPackage(),
-            'class' => $rule->getClass(),
-            'name' => $rule->getName(),
-            'message' => $rule->getMessage(),
-            'description' => $rule->getDescription(),
-            'node_type' => $rule->getNodeType(),
-            'wrong_code' => $rule->getWrongCode(),
-            'correct_code' => $rule->getCorrectCode(),
-            'identifier' => $rule->getIdentifier(),
-            'tip' => $rule->getTip(),
+            'group' => $phpStanRule->getGroup(),
+            'package' => $phpStanRule->getPackage(),
+            'class' => $phpStanRule->getClass(),
+            'name' => $phpStanRule->getName(),
+            'message' => $phpStanRule->getMessage(),
+            'description' => $phpStanRule->getDescription(),
+            'wrong_code' => $phpStanRule->getWrongCode(),
+            'correct_code' => $phpStanRule->getCorrectCode(),
+            'tip' => $phpStanRule->getTip(),
         ];
     }
 }

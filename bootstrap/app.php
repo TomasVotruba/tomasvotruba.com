@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\PHPStanRules\Command\ScanPHPStanRulesCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -12,7 +13,7 @@ $applicationBuilder = Application::configure()
         web: __DIR__.'/../routes/web.php',
     )
     ->withCommands([
-        \App\Console\Commands\ScanPhpstanRulesCommand::class,
+        ScanPHPStanRulesCommand::class,
     ])
     ->withSchedule(function (Schedule $schedule): void {
         $schedule->command('app:scan-phpstan-rules')->daily();

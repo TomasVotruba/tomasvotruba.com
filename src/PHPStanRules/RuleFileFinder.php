@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\PhpstanRules;
+namespace App\PHPStanRules;
 
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -31,9 +31,11 @@ final class RuleFileFinder
                 if (! $file instanceof SplFileInfo) {
                     continue;
                 }
+
                 if ($file->getExtension() !== 'php') {
                     continue;
                 }
+
                 yield $file;
             }
         }
