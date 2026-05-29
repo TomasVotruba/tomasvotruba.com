@@ -118,7 +118,11 @@
                                 <a name="{{ $rule->getSlug() }}"></a>
 
                                 <div class="rule-pkg-label text-secondary mb-2" style="font-size: .8em;">
-                                    <strong>{{ $package }}</strong>
+                                    @if ($packageInfo && $packageInfo->getUrl())
+                                        <strong><a href="{{ $packageInfo->getUrl() }}" rel="noopener" target="_blank">{{ $package }}</a></strong>
+                                    @else
+                                        <strong>{{ $package }}</strong>
+                                    @endif
                                 </div>
 
                                 <h3 class="mt-0 mb-2" style="font-size: 1.2em;">
