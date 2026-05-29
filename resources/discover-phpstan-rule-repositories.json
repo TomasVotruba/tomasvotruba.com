@@ -77,6 +77,12 @@
             "description": "Provides additional rules for phpstan/phpstan.",
             "url": "https://github.com/voku/phpstan-rules",
             "keep": false
+        },
+        {
+            "package": "kayw-geek/phpstan-type-trace",
+            "description": "See the full type-inference chain of any value in PHPStan, not just a single snapshot.",
+            "url": "https://github.com/kayw-geek/phpstan-type-trace",
+            "keep": false
         }
     ]
 }
