@@ -15,8 +15,6 @@ Route::get('/', HomepageController::class);
 // old posts with redirect
 Route::redirect('/blog/2020/03/30/dont-show-your-privates-to-public', '/blog/how-to-avoid-maintaining-classes-you-dont-use');
 
-// for llms
-Route::get('llms.txt', \App\Http\Controllers\LlmsTxtController::class);
 Route::get('/blog/{slug}.md', PostMdController::class)
     // include dots and slashes as well
     ->where('slug', '.*');
