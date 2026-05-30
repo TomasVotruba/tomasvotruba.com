@@ -190,6 +190,25 @@ PHPSTAN
             repositoryLink: 'https://github.com/rectorphp/mockstan',
         );
 
+        $tools[] = new Tool(
+            'Symplify PHPStan Rules',
+            'When you reach PHPStan level 1/2',
+            'Set of strict rules to keep naming, complexity and architecture consistent across your project',
+            null,
+            'composer require symplify/phpstan-rules --dev',
+            [],
+            true,
+            <<<'PHPSTAN'
+includes:
+    - vendor/symplify/phpstan-rules/config/symplify-rules.neon
+    # or pick individual sets
+    # - vendor/symplify/phpstan-rules/config/naming-rules.neon
+    # - vendor/symplify/phpstan-rules/config/code-complexity-rules.neon
+PHPSTAN
+            ,
+            repositoryLink: 'https://github.com/symplify/phpstan-rules',
+        );
+
         return $tools;
     }
 }
