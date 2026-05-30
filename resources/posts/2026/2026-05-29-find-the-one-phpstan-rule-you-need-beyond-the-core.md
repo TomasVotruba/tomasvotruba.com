@@ -7,7 +7,7 @@ perex: |
     I got tired of hunting through GitHub READMEs to find "is there a rule for this?", so I built a single searchable page that indexes 11 custom PHPStan rules packages.
 ---
 
-You know the feeling. You spot the same code smell in pull request after pull request - a `static` method here, a forbidden `dd()` left in production code there - and you think:
+You spot the same code smell in pull request after pull request - a `static` method here, a forbidden `dd()` in production there - and you think:
 
 <blockquote class="blockquote text-center">
 "Surely someone already wrote a PHPStan rule for this?"
@@ -15,14 +15,15 @@ You know the feeling. You spot the same code smell in pull request after pull re
 
 They probably did. The problem is finding it.
 
-We had similar problem with [Rector](http://github.com/rectorphp/rector) rules.
-There is so many that some people requested or even made a copy of a rule that already exists. I created ["Find rule" page](https://getrector.com/find-rule) to fix that.
+<div class="note-box">
+    <p>We had the same problem with <a href="http://github.com/rectorphp/rector">Rector</a> rules - so many that people kept re-implementing ones that already existed. I built the <a href="https://getrector.com/find-rule">"Find rule" page</a> to fix it.</p>
+</div>
 
 <br>
 
-The rules that catch project-specific patterns live in community packages: `symplify/phpstan-rules`, `shipmonk/phpstan-rules`, `ergebnis/phpstan-rules`, `spaze/phpstan-disallowed-calls`, and a long tail of smaller ones.
+These project-specific rules live in community packages: `symplify/phpstan-rules`, `shipmonk/phpstan-rules`, `ergebnis/phpstan-rules`, `spaze/phpstan-disallowed-calls`, and a long tail of smaller ones.
 
-Each ships its own README, its own naming, configuration, or only generic descsription of what the whole package does. To answer "is there a rule for X?", you'd have to open a dozen tabs and skim each one. Nobody does that. **So great rules sit unused, only their authors know about them, and we keep eyeballing the same problems by hand in code-review comments**.
+Each ships its own README and naming, often with just a generic package description. To answer "is there a rule for X?", you'd open a dozen tabs - nobody does that. **So great rules sit unused, only their authors know about them, and we keep eyeballing the same problems by hand in code review**.
 
 ## One page, Every rule
 
@@ -30,42 +31,40 @@ So I made a single page that indexes them all: **[PHPStan Rules Beyond Core](/ph
 
 <br>
 
-It's a searchable index of **260+ individual rules** scraped from **11 of the most popular community packages**. Each entry shows you:
+A searchable index of **260+ rules** from **11 popular community packages**. Each entry shows:
 
 * the rule class you drop into `phpstan.neon`
 * a plain-English description of what it does
 * the message it reports when it fires
-* and - where the package documents it - a wrong/correct code example side by side
+* and - where documented - a wrong/correct code example side by side
 
 <br>
 
 ## Search the way you think
 
-The whole point is discovery, so the search is built for it. Type what's on your mind, no need for exact class name:
+Discovery is the point, so type what's on your mind - no exact class name needed:
 
-* search "forbidCast" and it ranks the casting rules first
+* search "forbidCast" and casting rules rank first
 * mistype "noreturn" as one word and it still finds "No" + "return"
 
 
 <br>
 
-...or ["final abstract"](https://tomasvotruba.com/phpstan-rules-beyond-core?q=final+abstract) - I found this rule thanks to this mini project and it's surprisingly useful: marking all `abstract` classes' non-abstract methods with `final`. Never though of that, but that's how I want to use `abstract` classes. Fixed 2 cases on my website.
+...or ["final abstract"](https://tomasvotruba.com/phpstan-rules-beyond-core?q=final+abstract) - it marks all non-abstract methods of `abstract` classes as `final`. Surprisingly useful; fixed 2 cases on my own site.
 
 <br>
 
 ## From "I wish" to installed in one click
 
-Found a rule you want? Each package block has a ready-to-copy install line:
+Found one? Each package block has a ready-to-copy install line:
 
 ```bash
 composer require --dev symplify/phpstan-rules
 ```
 
-Copy the line and install the package.
-
 <br>
 
-Then register the rule to your `phpstan.neon`:
+Then register the rule in your `phpstan.neon`:
 
 ```yaml
 rules:
@@ -78,11 +77,11 @@ rules:
 vendor/bin/phpstan
 ```
 
-If this rule got you interested, explore the full package the rule comes from. Or just stay with this one and get back to work. That's how PHPStan rules should work - **to solve single specific issue and catch it in CI sooner than we tell our agent**.
+Keep this one or explore the full package. That's how PHPStan rules should work - **solve one specific issue and catch it in CI before we even tell our agent**.
 
 <br>
 
-Missing a package you love? Do you see and improvement? Open [an issue](https://github.com/TomasVotruba/tomasvotruba.com/issues) or [send a PR](https://github.com/TomasVotruba/tomasvotruba.com/pull/1540) (this website is 100 % open source) - I'd love to make the index better.
+Missing a package? Open [an issue](https://github.com/TomasVotruba/tomasvotruba.com/issues) or [send a PR](https://github.com/TomasVotruba/tomasvotruba.com/pull/1540) (this site is 100 % open source) - I'd love to improve the index.
 
 <br>
 
