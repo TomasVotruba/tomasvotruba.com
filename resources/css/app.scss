@@ -138,6 +138,19 @@ img {
     font-size: 1.6rem;
 }
 
+.note-box {
+    border: 1px solid #dee2e6;
+    border-radius: .5rem;
+    padding: 1.25rem 1.5rem 1.30rem;
+    background-color: #f8f9fa;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.note-box p:last-child {
+    margin-bottom: 0;
+}
+
 /* style in cards */
 .pull-right {
     float: right;
