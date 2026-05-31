@@ -194,7 +194,15 @@ How did the rule perform on Symplify itself? The property rule passed without an
 
 ## How "Equal" is Your Project?
 
-How many `object` mixed types do you have? Enable the options and let PHPStan disclose the magic:
+How many `object` mixed types do you have? First, install the package:
+
+```bash
+composer require rector/type-perfect --dev
+```
+
+<br>
+
+Then enable the options and let PHPStan disclose the magic:
 
 ```yaml
 # phpstan.neon
