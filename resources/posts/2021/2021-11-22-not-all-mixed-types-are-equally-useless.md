@@ -7,6 +7,9 @@ perex: |
 
     The `mixed` type is the worst of all of them. Fixing all `mixed` types to a specific type is a nightmare for the REST of your life (pun intended). But what if there are places where fixing `mixed` type **brings much more value than** in the others?
 
+updated_since: "May 2026"
+updated_message: |
+    The rules moved from `symplify/phpstan-rules` to [rector/type-perfect](https://github.com/rectorphp/type-perfect). They're now enabled via the `no_mixed_caller` and `no_mixed_property` options instead of registered rule classes. Links and config below are updated.
 ---
 
 <img src="/assets/images/posts/2021/equal_animals.png" style="max-width: 32em" class="img-thumbnail mt-2 mb-5">
