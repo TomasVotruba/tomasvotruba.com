@@ -178,10 +178,10 @@ $video->id;
 
 You'd be surprised if you'd have to write those rules on your own.
 
-They're freshly included in [symplify/phpstan-rules](https://github.com/symplify/phpstan-rules) ↓
+They're freshly included in [rector/type-perfect](https://github.com/rectorphp/type-perfect) ↓
 
-* [NoMixedMethodCallerRule](https://github.com/symplify/symplify/pull/3913)
-* [NoMixedPropertyFetcherRule](https://github.com/symplify/symplify/pull/3912)
+* [no_mixed_caller](https://github.com/rectorphp/type-perfect#3-no-mixed-caller)
+* [no_mixed_property](https://github.com/rectorphp/type-perfect#2-no-mixed-property)
 
 <br>
 
@@ -191,13 +191,17 @@ How did the rule perform on Symplify itself? The property rule passed without an
 
 ## How "Equal" is Your Project?
 
-How many `object` mixed types do you have? Register rules and let PHPStan disclose the magic:
+How many `object` mixed types do you have? Enable the options and let PHPStan disclose the magic:
 
 ```yaml
 # phpstan.neon
-rules:
-    - Symplify\PHPStanRules\Rules\Explicit\NoMixedPropertyFetcherRule
-    - Symplify\PHPStanRules\Rules\Explicit\NoMixedMethodCallerRule
+includes:
+    - vendor/rector/type-perfect/config/extension.neon
+
+parameters:
+    type_perfect:
+        no_mixed_property: true
+        no_mixed_caller: true
 ```
 
 <br>
