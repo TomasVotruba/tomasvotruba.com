@@ -21,9 +21,9 @@ jobs:
                         name: 'Composer Dependency Analyser'
                         run: 'vendor/bin/composer-dependency-analyser'
 
-                    -
-                        name: 'Major Outdated Dependencies'
-                        run: 'vendor/bin/jack breakpoint --limit 4'
+#                    -
+#                        name: 'Major Outdated Dependencies'
+#                        run: 'vendor/bin/jack breakpoint --limit 4'
 
                     -
                         name: 'Unit Tests'

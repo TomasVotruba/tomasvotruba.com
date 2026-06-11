@@ -12,6 +12,14 @@ parameters:
     level: 8
     treatPhpDocTypesAsCertain: false
 
+    # @see https://github.com/symplify/phpstan-rules
+    symfonyReturnType: true
+    laravelReturnType: true
+    pathStrings: true
+
+    ctor: true
+    mocks: true
+
     unused_public:
         template_paths:
             - resources/views

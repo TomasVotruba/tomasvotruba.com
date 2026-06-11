@@ -60,6 +60,8 @@ final readonly class PHPStanRule
 
     public function getSlug(): string
     {
-        return str($this->class)->replace('\\', '-')->slug()->toString();
+        return str($this->class)->replace('\\', '-')
+            ->slug()
+            ->toString();
     }
 }
