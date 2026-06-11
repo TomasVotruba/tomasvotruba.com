@@ -67,7 +67,8 @@ final readonly class Tool
 
     public function getSlug(): string
     {
-        return str($this->name)->slug()->toString();
+        return str($this->name)->slug()
+            ->toString();
     }
 
     public function getPHPStanContents(): ?string

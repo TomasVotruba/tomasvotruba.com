@@ -21,6 +21,8 @@ return RectorConfig::configure()
         naming: true,
         privatization: true,
         typeDeclarations: true,
-        instanceOf: true
+        instanceOf: true,
+        deadCode: true,
+        phpunitCodeQuality: true
     )
     ->withPhpSets();

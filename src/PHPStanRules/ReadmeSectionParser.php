@@ -69,6 +69,6 @@ final class ReadmeSectionParser
             return strtolower($h);
         }
 
-        return strtolower((string) end($parts));
+        return strtolower(end($parts));
     }
 }
