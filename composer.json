@@ -6,7 +6,7 @@
     "require": {
         "php": "^8.4",
         "imagine/imagine": "^1.5",
-        "laravel/framework": "^13.12",
+        "laravel/framework": "^13.15",
         "league/commonmark": "^2.8",
         "nette/utils": "^4.1",
         "symfony/yaml": "^7.4",
@@ -21,9 +21,8 @@
         "rector/rector": "^2.4",
         "rector/swiss-knife": "^2.4",
         "shipmonk/composer-dependency-analyser": "^1.8",
-        "symplify/easy-coding-standard": "^13.1",
-        "symplify/phpstan-extensions": "^12.0",
-        "symplify/phpstan-rules": "^14.10",
+        "symplify/easy-coding-standard": "^13.2",
+        "symplify/phpstan-rules": "^14.11",
         "tomasvotruba/type-coverage": "^2.2",
         "tomasvotruba/unused-public": "^2.2"
     },
